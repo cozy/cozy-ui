@@ -1,10 +1,22 @@
 exports.config =
+    paths:
+        watched: ['app', 'test', 'vendor', 'node_modules/cozy-ui/lib/cozy-ui']
     files:
         javascripts:
-            joinTo: 'javascripts/app.js'
+            joinTo: 'scripts/app.js'
 
         stylesheets:
-            joinTo: 'stylesheets/app.css'
+            joinTo: 'styles/app.css'
+            order:
+                before: [
+                    'vendor/styles/normalize.css'
+                ]
 
         templates:
-            joinTo: 'javascripts/app.js'
+            joinTo: 'scripts/app.js'
+
+    plugins:
+        stylus:
+            plugins: [
+                'cozy-ui'
+            ]

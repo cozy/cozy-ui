@@ -4,7 +4,7 @@
   "description": "Cozy-Ui SDK demo app",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "brunch watch --server"
   },
   "repository": {
     "type": "git",
