@@ -1,0 +1,29 @@
+{
+  "name": "cozy-ui-demo",
+  "version": "0.1.0",
+  "description": "Cozy-Ui SDK demo app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m4dz/cozy-ui.git"
+  },
+  "author": "m4dz <code@m4dz.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/m4dz/cozy-ui/issues"
+  },
+  "homepage": "https://github.com/m4dz/cozy-ui",
+  "devDependencies": {
+    "browser-sync-brunch": "0.0.8",
+    "clean-css-brunch": "^1.7.1",
+    "coffee-script-brunch": "^1.8.1",
+    "css-brunch": "^1.7.0",
+    "jade-brunch": "^1.8.1",
+    "javascript-brunch": "^1.7.1",
+    "stylus-brunch": "^1.8.1",
+    "uglify-js-brunch": "^1.7.7"
+  }
+}
