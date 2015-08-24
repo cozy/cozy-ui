@@ -53,6 +53,9 @@ _Nicolas Gallagher_ as a reset styles process. The CSS file is embedded directly
 by the Cozy Ui Stylus plugin, using the stylus `include css` statement to
 inline the CSS in the output instead of using a native CSS `@import`.
 
+Then, you just need to add a `@import 'cozy-ui'` statement at top of your main
+stylus file.
+
 
 ## Development
 
