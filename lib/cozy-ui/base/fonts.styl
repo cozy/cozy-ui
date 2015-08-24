@@ -1,0 +1,26 @@
+/*!
+ * FONTS
+ * =====
+ *
+ * This file contains fonts concerns:
+ * - font utils
+ * - base fonts declarations
+ */
+
+$font-title
+    font-family "Maven Pro", sans-serif
+
+
+$font-labor
+    font-family "Source Sans Pro", sans-serif
+
+
+// We need a base font-size for _px to em_ computation. We assume those size to
+// be 16px (as default desktop browsers), but it really don't care as well as
+// all relative units should be expressed in `em`
+basefont = 16px
+
+
+body
+    font 1em/1.5
+    @extend $font-labor

@@ -1,0 +1,13 @@
+/*!
+ * BASIC TOOLS
+ * ===========
+ *
+ * This file contains basic tools for everyday use :).
+ */
+
+ em(n)
+     if unit(n) is 'px'
+         val = n / basefont
+     else
+         val = n
+     unit(val, 'em')
