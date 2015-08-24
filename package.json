@@ -8,8 +8,11 @@
     "type": "git",
     "url": "https://github.com/m4dz/cozy-ui.git"
   },
-  "author": "m4dz <code@m4dz.net>",
-  "license": "MIT",
+  "author": "Cozy Cloud <contact@cozycloud.cc> (http://cozycloud.cc)",
+  "contributors": [
+    "m4dz <code@m4dz.net>"
+  ],
+  "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/m4dz/cozy-ui/issues"
   },
