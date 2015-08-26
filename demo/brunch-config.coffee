@@ -23,3 +23,4 @@ exports.config =
             imports: [
                 '../node_modules/normalize.css/normalize.css'
             ]
+            includeCss: true
