@@ -20,6 +20,7 @@ to embed it in your project:
 ```sh
 $ git clone https://github.com/m4dz/cozy-ui.git
 $ cd cozy-ui
+$ npm install
 $ npm link cozy-ui
 ```
 

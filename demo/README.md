@@ -21,6 +21,8 @@ To work onto the demo app with the live reload, you need brunch installed on
 your system:
 
 ```sh
+$ npm install
+# if brunch is not already installed on your system
 $ npm install -g brunch
 ```
 
