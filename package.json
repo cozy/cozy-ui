@@ -19,6 +19,7 @@
   "homepage": "https://github.com/m4dz/cozy-ui",
   "devDependencies": {},
   "dependencies": {
+    "md5": "^2.0.0",
     "normalize.css": "^3.0.3"
   }
 }

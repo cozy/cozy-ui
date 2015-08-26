@@ -5,26 +5,20 @@
  * Contains all tools for spacing / padding on elements.
  */
 
-top-padded(n)
-    n ?= 1em
-    padding-top n
+top-padded(n = 1em)
+    padding-top em(n)
 
 bottom-padded(n)
-    n ?= 1em
-    padding-bottom n
+    padding-bottom em(n)
 
 left-padded(n)
-    n ?= 1em
-    padding-left n
+    padding-left em(n)
 
 right-padded(n)
-    n ?= 1em
-    padding-right n
+    padding-right em(n)
 
 vertically-padded(n)
-    n ?= 1em
-    padding n 0
+    padding em(n) 0
 
 horizontally-padded(n)
-    n ?= 1em
-    padding 0 n
+    padding 0 em(n)
