@@ -28,7 +28,7 @@ Then simply add it to your plugins stack:
 
 ```js
 var stylus  = require('stylus')
-  , cozyui = require('cozy-ui');
+  , cozyui = require('cozy-ui/lib/stylus');
 
 
 function compile(str, path) {
@@ -45,7 +45,7 @@ With Brunch, you can declare directly your plugin in your `brunch-config` file:
 plugins:
       stylus:
           plugins: [
-              'cozy-ui'
+              'cozy-ui/lib/stylus'
           ]
 ```
 

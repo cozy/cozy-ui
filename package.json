@@ -2,8 +2,9 @@
   "name": "cozy-ui",
   "version": "0.1.0",
   "description": "Cozy apps Ui SDK",
-  "main": "lib/cozy-ui.js",
-  "scripts": {},
+  "scripts": {
+    "prepublish": "rm -rf lib && coffee -cb -o lib src && rsync -a --prune-empty-dirs --include '*/' --include '*.styl' --exclude '*' src/ lib/"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/m4dz/cozy-ui.git"
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/m4dz/cozy-ui",
   "devDependencies": {
+    "coffee-script": "^1.9.3",
     "stylus": "^0.52.0"
   },
   "dependencies": {
