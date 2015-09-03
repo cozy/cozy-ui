@@ -8,17 +8,44 @@
 top-padded(n = 1em)
     padding-top em(n)
 
-bottom-padded(n)
+bottom-padded(n = 1em)
     padding-bottom em(n)
 
-left-padded(n)
+left-padded(n = 1em)
     padding-left em(n)
 
-right-padded(n)
+right-padded(n = 1em)
     padding-right em(n)
 
-vertically-padded(n)
-    padding em(n) 0
+vertically-padded(n = 1em)
+    top-padded    n
+    bottom-padded n
 
-horizontally-padded(n)
-    padding 0 em(n)
+horizontally-padded(n = 1em)
+    left-padded  n
+    right-padded n
+
+top-spaced(n = 1em)
+    margin-top em(n)
+
+bottom-spaced(n = 1em)
+    margin-bottom em(n)
+
+left-spaced(n = 1em)
+    margin-left em(n)
+
+right-spaced(n = 1em)
+    margin-right em(n)
+
+vertically-spaced(n = 1em)
+    top-spaced    n
+    bottom-spaced n
+
+horizontally-spaced(n = 1em)
+    left-spaced  n
+    right-spaced n
+
+reset()
+    margin  0
+    padding 0
+    border  none
