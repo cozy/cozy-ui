@@ -13,15 +13,10 @@ your project to use it out-of-the-box.
 
 ## Use
 
-Cozy Ui is distributed as a [Stylus][stylus] plugin. At this time, it is _not_
-considered as stable, so it isn't available directly on npm. So, use `npm link`
-to embed it in your project:
+Cozy Ui is distributed as a [Stylus][stylus] plugin.
 
 ```sh
-$ git clone https://github.com/m4dz/cozy-ui.git
-$ cd cozy-ui
-$ npm install
-$ npm link cozy-ui
+$ npm install --save-dev cozy-ui
 ```
 
 Then simply add it to your plugins stack:
