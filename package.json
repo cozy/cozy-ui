@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/m4dz/cozy-ui.git"
+    "url": "https://github.com/cozy/cozy-ui.git"
   },
   "author": "Cozy Cloud <contact@cozycloud.cc> (http://cozycloud.cc)",
   "contributors": [
@@ -15,9 +15,9 @@
   ],
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/m4dz/cozy-ui/issues"
+    "url": "https://github.com/cozy/cozy-ui/issues"
   },
-  "homepage": "https://github.com/m4dz/cozy-ui",
+  "homepage": "https://github.com/cozy/cozy-ui",
   "devDependencies": {
     "coffee-script": "^1.9.3",
     "stylus": "^0.52.0"
@@ -27,3 +27,4 @@
     "normalize.css": "^3.0.3"
   }
 }
+
