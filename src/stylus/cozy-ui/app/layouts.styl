@@ -1,3 +1,16 @@
+$centerized
+    position  absolute
+    top       50%
+    left      50%
+    transform translateX(-50%) translateY(-50%)
+
+
+$content-center
+    display         flex
+    align-items     center
+    justify-content center
+
+
 $app-2panes-toolbar
     display flex
     width   100vw
@@ -17,22 +30,28 @@ $app-2panes-toolbar
 
 
 $fullbleed
-    display  block
     position fixed
-    top      0
     bottom   0
+    top      0
     left     0
     right    0
 
 
-$centerized
-    position  absolute
-    top       50%
-    left      50%
-    transform translateX(-50%) translateY(-50%)
+$dialog
+    @extend    $fullbleed
+    overflow-y auto
 
+    [role=separator]
+        z-index 1
+        @extend $fullbleed
 
-$content-center
-    display         flex
-    align-items     center
-    justify-content center
+    .wrapper
+        @extend    $content-center
+        min-height 100vh
+        padding    3em 1em
+        box-sizing border-box
+
+    [role=contentinfo]
+        z-index  2
+        position relative
+        flex 0 1 em(960px)
