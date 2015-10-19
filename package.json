@@ -1,6 +1,6 @@
 {
   "name": "cozy-ui",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Cozy apps Ui SDK",
   "scripts": {
     "prepublish": "rm -rf lib && coffee -cb -o lib src && rsync -a --prune-empty-dirs --include '*/' --include '*.styl' --exclude '*' src/ lib/"
