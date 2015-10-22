@@ -17,16 +17,15 @@ $app-2panes-toolbar
     height  100vh
 
     main
-        flex     1
-        height   auto
-        overflow auto
-        display  flex
-        flex-direction column
-
     [role=contentinfo]
         flex     1
         height   auto
-        overflow auto
+        overflow-x hidden
+        overflow-y auto
+
+    main
+        display  flex
+        flex-direction column
 
 
 $fullbleed
@@ -35,23 +34,3 @@ $fullbleed
     top      0
     left     0
     right    0
-
-
-$dialog
-    @extend    $fullbleed
-    overflow-y auto
-
-    [role=separator]
-        z-index 1
-        @extend $fullbleed
-
-    .wrapper
-        @extend    $content-center
-        min-height 100vh
-        padding    3em 1em
-        box-sizing border-box
-
-    [role=contentinfo]
-        z-index  2
-        position relative
-        flex 0 1 em(960px)

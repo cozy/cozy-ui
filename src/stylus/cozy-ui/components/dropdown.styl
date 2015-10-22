@@ -1,0 +1,27 @@
+$dropdown
+    position relative
+
+    > :nth-child(1)
+        cursor: pointer
+
+    > :nth-child(2)
+        z-index 1
+        position absolute
+        padding em(8px) 0
+        min-width 100%
+
+    &[data-position*=top] > :nth-child(2)
+        bottom 100%
+    &[data-position*=bottom] > :nth-child(2)
+        top 100%
+    &[data-position*=left] > :nth-child(2)
+        left 0
+    &[data-position*=right] > :nth-child(2)
+        right 0
+
+    &[aria-expanded=false]
+        > :nth-child(2)
+            hide()
+
+    .fa-caret-down
+        margin 0 .3em
