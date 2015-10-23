@@ -27,6 +27,27 @@ $app-2panes-toolbar
         display  flex
         flex-direction column
 
+    @media (max-width: (1023/basefont)rem)
+        toggle-width = em(44px)
+
+        .drawer
+            z-index       1
+            position      absolute
+            top           0
+            left          0
+            width         100vw
+            height        100vh
+            padding-right toggle-width
+
+            &[aria-expanded=true] + main
+                transform translateX("calc(100vw - %s)" % toggle-width)
+
+        main
+            z-index    2
+            position   relative
+            transform  translateX(0)
+            transition transform 350ms ease-out
+
 
 $fullbleed
     position fixed

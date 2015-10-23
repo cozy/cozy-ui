@@ -19,10 +19,14 @@ $dialog
 
     [role=contentinfo]
         z-index    2
-        flex       0 1 em(960px)
+        flex       0 1 (960/basefont)rem
         position   relative
-        display    flex
         box-sizing border-box
+        display    flex
+
+        @media (max-width: (800/basefont)rem)
+            flex-direction column
+            height 90vh
 
         background-color white
         border           em(1px) solid grey-01
@@ -34,8 +38,8 @@ $alertdialog
     @extend $dialog
 
     [role=contentinfo]
-        flex-basis em(420px)
-        padded     30px
+        flex-basis (420/basefont)rem
+        padded     20px
 
         flex-direction column
 
