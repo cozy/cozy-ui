@@ -24,3 +24,6 @@ exports.config =
                 '../node_modules/normalize.css/normalize.css'
             ]
             includeCss: true
+            plugins: [
+                'cozy-ui/lib/stylus'
+            ]

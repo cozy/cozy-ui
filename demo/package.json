@@ -7,6 +7,7 @@
   },
   "devDependencies": {
     "browser-sync-brunch": "0.0.8",
+    "cozy-ui": "^0.1.4",
     "css-brunch": "^1.7.0",
     "javascript-brunch": "^1.7.1",
     "stylus-brunch": "^1.8.1"
