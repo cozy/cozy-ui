@@ -27,6 +27,15 @@ $app-2panes-toolbar
         display  flex
         flex-direction column
 
+    .drawer
+        display flex
+        flex-direction column
+        padded .5em
+
+    @media (min-width: (1023/basefont)rem)
+        .drawer-toggle
+            hide()
+
     @media (max-width: (1023/basefont)rem)
         toggle-width = em(44px)
 

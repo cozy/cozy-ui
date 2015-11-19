@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Cozy Ui - Demo app</title>
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="stylesheet" href="styles/app.css">
+    <meta charset="utf-8">
+    <title>Cozy Ui - Demo app</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles/app.css">
 </head>
 <body>
-	<div class="main-container">
-		<h1>Demo App</h1>
-	</div>
-	<script src="scripts/app.js"></script>
+    <aside class="drawer">
+        <div>I am the drawer</div>
+    </aside>
+    <main>
+    <div role="toolbar"><a class="drawer-toggle" href="#">Show menu</a> I am the toolbar</div>
+        <div role="contentinfo">
+            I am the contentinfo
+            <h1>Demo App</h1>
+        </div>
+    </main>
+    <script src="scripts/app.js"></script>
+    <script>
+        document.querySelector(".drawer-toggle").addEventListener("click", function(){
+            var $drawer = document.querySelector(".drawer");
+            var value = $drawer.getAttribute("aria-expanded") === "true" ? "false" : "true";
+            document.querySelector(".drawer").setAttribute("aria-expanded", value);
+        });
+    </script>
 </body>
 </html>
