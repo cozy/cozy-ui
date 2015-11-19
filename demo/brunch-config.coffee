@@ -17,12 +17,6 @@ exports.config =
 
     plugins:
         stylus:
-            # As long as the Normalize.css file is included by the plugin, but
-            # this last isn't directly used in demo, we include it manually
-            # here.
-            imports: [
-                '../node_modules/normalize.css/normalize.css'
-            ]
             includeCss: true
             plugins: [
                 'cozy-ui/lib/stylus'

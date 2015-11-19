@@ -1,13 +1,23 @@
 @import 'cozy-ui'
 
-body
+[role=application]
     @extend $app-2panes-toolbar
 
-.drawer
-    background-color red
+    > aside
+    [role=toolbar] > div
+    [role=contentinfo]
+        padding .5em
 
-[role=toolbar]
-    background-color green
+    > aside
+        background-color red
 
-[role=contentinfo]
-    background-color blue
+    [role=toolbar]
+        background-color green
+        display flex
+
+        [formaction="drawer/toggle"]
+            padding    0
+            flex-basis 2.25em
+
+    [role=contentinfo]
+        background-color blue

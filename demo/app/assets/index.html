@@ -7,23 +7,22 @@
     <link rel="stylesheet" href="styles/app.css">
 </head>
 <body>
-    <aside class="drawer">
-        <div>I am the drawer</div>
-    </aside>
-    <main>
-    <div role="toolbar"><a class="drawer-toggle" href="#">Show menu</a> I am the toolbar</div>
-        <div role="contentinfo">
-            I am the contentinfo
-            <h1>Demo App</h1>
-        </div>
-    </main>
-    <script src="scripts/app.js"></script>
-    <script>
-        document.querySelector(".drawer-toggle").addEventListener("click", function(){
-            var $drawer = document.querySelector(".drawer");
-            var value = $drawer.getAttribute("aria-expanded") === "true" ? "false" : "true";
-            document.querySelector(".drawer").setAttribute("aria-expanded", value);
-        });
-    </script>
+    <div role="application">
+        <aside>
+            <div>I am the drawer</div>
+        </aside>
+        <main>
+            <div role="toolbar">
+                <button formaction="drawer/toggle">☰</button>
+                <div>I am the toolbar</div>
+            </div>
+            <div role="contentinfo">
+                I am the contentinfo
+                <h1>Demo App</h1>
+            </div>
+        </main>
+    </div>
+
+    <script src="scripts/app.js" onload="require('initialize').drawer()"></script>
 </body>
 </html>
