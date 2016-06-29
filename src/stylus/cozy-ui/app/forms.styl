@@ -68,7 +68,10 @@ input[type=password]
                 box-shadow inset 0 0 0 2px blue
 
         &::after
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 10.019l4.523 4.523 9.541-9.541' stroke='%23fff' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D%2720%27%20height%3D%2720%27%20viewBox%3D%270%200%2020%2020%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%0D%0A%20%20%20%20%3Cpath%20d%3D%27M3%2010.019l4.523%204.523%209.541-9.541%27%20stroke%3D%27%23fff%27%20stroke-width%3D%272%27%20fill%3D%27none%27%2F%3E%0D%0A%3C%2Fsvg%3E%0D%0A")
+
+    &[aria-checked="mixed"] label::after
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20d%3D%22M3.497%2010h13.006%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E")
 
     input[type=checkbox]
         &:checked
