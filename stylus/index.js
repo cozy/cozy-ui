@@ -10,18 +10,18 @@
 'use strict'
 
 var path = require('path')
-var __base = path.resolve(__dirname, '../..')
 
 var plugin = function () {
   return function (style) {
     style.set('include css', true)
     style.import(require.resolve('normalize.css'))
+    style.import('./index.styl')
     style.include(__dirname)
     return style
   }
 }
 
-plugin.version = require(path.join(__base, 'package.json')).version
+plugin.version = require(path.join(__dirname, '../package.json')).version
 plugin.path = __dirname
 
 module.exports = plugin
