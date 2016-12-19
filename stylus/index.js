@@ -15,8 +15,7 @@ var plugin = function () {
   return function (style) {
     style.set('include css', true)
     style.import(require.resolve('normalize.css'))
-    style.import('./index.styl')
-    style.include(__dirname)
+    style.import(path.join(__dirname, './index.styl'))
     return style
   }
 }
