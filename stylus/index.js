@@ -10,10 +10,14 @@
 'use strict'
 
 var path = require('path')
+var stylus = require('stylus')
 
 var plugin = function () {
   return function (style) {
     style.set('include css', true)
+    style.define('embed', stylus.url({
+      paths: [path.join(__dirname, '../assets')]
+    }))
     style.import(require.resolve('normalize.css'))
     style.import(path.join(__dirname, './index.styl'))
     return style
