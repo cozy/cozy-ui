@@ -3,6 +3,13 @@
 @import '../ui-base/animations'
 
 
+// UTILS
+@import '../ui-base/mixins'
+:global
+    .coz-hidden
+        @extend $hidden
+
+
 // BOXES
 @import '../ui-base/boxes'
 [aria-hidden=true]
@@ -41,14 +48,14 @@ body
     .coz-btn
         @extend $button
 
-    .coz-btn.coz-btn--regular
-        @extend $button--regular
+        &.coz-btn--regular
+            @extend $button--regular
 
-    .coz-btn.coz-btn--upload
-        @extend $button--upload
+        &.coz-btn--upload
+            @extend $button--upload
 
-    .coz-btn.coz-btn--more
-        @extend $button--more
+        &.coz-btn--more
+            @extend $button--more
 
 
 // FORMS
