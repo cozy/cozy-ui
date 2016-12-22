@@ -35,6 +35,21 @@ body
     color            black
 
 
+// BUTTONS
+@import '../ui-components/button'
+:global
+    .coz-btn
+        @extend $button
+
+    .coz-btn.coz-btn--regular
+        @extend $button--regular
+
+    .coz-btn.coz-btn--upload
+        @extend $button--upload
+
+    .coz-btn.coz-btn--more
+        @extend $button--more
+
 
 // FORMS
 @import '../ui-app/forms'
