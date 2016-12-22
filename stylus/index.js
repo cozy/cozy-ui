@@ -19,7 +19,6 @@ var plugin = function () {
     style.define('embed', stylus.url({
       paths: [path.join(__dirname, '../assets')]
     }))
-    style.import(require.resolve('normalize.css'))
     return style
   }
 }

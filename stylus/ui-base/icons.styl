@@ -42,19 +42,12 @@ $spin
     transform translateX(-50%) translateY(-50%)
     animation 1s linear infinite spin
 
-@keyframes spin
-    from
-        transform rotate(0deg)
-
-    to
-        transform rotate(359deg)
-
 $icon-spinner-grey
     @extend $icon
     @extend $spin
-    background-image url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='12' height='12' fill='rgb(146,160,178)'><path opacity='.25' d='M16 0a16 16 0 0 0 0 32 16 16 0 0 0 0-32m0 4a12 12 0 0 1 0 24 12 12 0 0 1 0-24'/><path d='M16 0a16 16 0 0 1 16 16h-4a12 12 0 0 0-12-12z'/></svg>")
+    background-image embed('../../assets/icons/spinner-grey.svg')
 
 $icon-spinner-white
     @extend $icon
     @extend $spin
-    background-image url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='12' height='12' fill='white'><path opacity='.25' d='M16 0a16 16 0 0 0 0 32 16 16 0 0 0 0-32m0 4a12 12 0 0 1 0 24 12 12 0 0 1 0-24'/><path d='M16 0a16 16 0 0 1 16 16h-4a12 12 0 0 0-12-12z'/></svg>")
+    background-image embed('../../assets/icons/spinner-white.svg')
