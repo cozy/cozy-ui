@@ -10,17 +10,6 @@
 use('../utils/checksum.js')
 use('../utils/split.js')
 
-@font-face
-   font-family Lato
-   font-style  normal
-   font-weight normal
-   src         embedurl('../../assets/fonts/Lato-Regular.woff2') format('woff2')
-
-@font-face
-   font-family Lato
-   font-style  normal
-   font-weight bold
-   src         embedurl('../../assets/fonts/Lato-Bold.woff2') format('woff2')
 
 // Fonts stacks
 $font-title
@@ -89,7 +78,3 @@ em(n, base = null)
 // all relative units should be expressed in `em`
 basefont = 16px
 
-
-body
-    font 1em/1.5
-    @extend $font-labor
