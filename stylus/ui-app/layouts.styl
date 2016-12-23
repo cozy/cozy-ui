@@ -12,14 +12,14 @@ $content-center
     align-items     center
     justify-content center
 
-
-$app-2panes-toolbar
+// NB: Not to be used on it's own. Use one of the others placeholders below (with drawer or sticky sidebar)
+$app-2panes
     display flex
     width   100vw
     height  100vh
 
     main
-    > aside
+    & > aside
         display        flex
         flex-direction column
 
@@ -29,6 +29,24 @@ $app-2panes-toolbar
         height     auto
         overflow-x hidden
         overflow-y auto
+
+// STICKY layout
+// When you want the sidebar to act like a sticky footer
+$app-2panes-sticky
+    @extend $app-2panes
+
+    @media (max-width: (1023/basefont)rem)
+        height "calc(100vh - %s)" % em(50px)
+        > aside
+            position fixed
+            left 0
+            bottom 0
+            width 100%
+
+// DRAWER layout
+// When you want the sidebar to act like a drawer
+$app-2panes-drawer
+    @extend $app-2panes
 
     @media (min-width: (1024/basefont)rem)
         [formaction="drawer/toggle"]
