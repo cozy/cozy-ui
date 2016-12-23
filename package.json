@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "md5": "^2.2.0",
-    "normalize.css": "^5.0.0",
+    "normalize.css": "5.0.0",
     "stylus": "^0.54.0"
   }
 }
