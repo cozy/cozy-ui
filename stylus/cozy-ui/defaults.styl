@@ -5,9 +5,8 @@
 
 // UTILS
 @import '../ui-base/mixins'
-:global
-    .coz-hidden
-        @extend $hidden
+:global .coz-hidden
+    @extend $hidden
 
 
 // BOXES
@@ -19,16 +18,16 @@
 // FONTS
 @import '../ui-base/fonts'
 @font-face
-   font-family Lato
-   font-style normal
-   font-weight normal
-   src embedurl('../../assets/fonts/Lato-Regular.woff2') format('woff2')
+    font-family Lato
+    font-style normal
+    font-weight normal
+    src embedurl('../../assets/fonts/Lato-Regular.woff2') format('woff2')
 
 @font-face
-   font-family Lato
-   font-style normal
-   font-weight bold
-   src embedurl('../../assets/fonts/Lato-Bold.woff2') format('woff2')
+    font-family Lato
+    font-style normal
+    font-weight bold
+    src embedurl('../../assets/fonts/Lato-Bold.woff2') format('woff2')
 
 body
     font 1em/1.5
@@ -44,18 +43,17 @@ body
 
 // BUTTONS
 @import '../ui-components/button'
-:global
-    .coz-btn
-        @extend $button
+:global .coz-btn
+    @extend $button
 
-        &.coz-btn--regular
-            @extend $button--regular
+    &.coz-btn--regular
+        @extend $button--regular
 
-        &.coz-btn--upload
-            @extend $button--upload
+    &.coz-btn--upload
+        @extend $button--upload
 
-        &.coz-btn--more
-            @extend $button--more
+    &.coz-btn--more
+        @extend $button--more
 
 
 // FORMS
