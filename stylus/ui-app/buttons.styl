@@ -1,0 +1,69 @@
+$buttons
+    [role=button],
+    button
+        // mutualize behavior between button and a
+        box-sizing        border-box
+        border            0
+        display           block
+        padding           .9em .75em
+        min-height        em(30px)
+        border-radius     3px
+        font-family       Lato, sans-serif
+        text-align        center
+        text-transform    uppercase
+        text-decoration   none
+        cursor            pointer
+
+        &.primary
+            background-color  dodger-blue
+            color             white
+            &:active
+            &:hover
+                background-color    #0b61d6
+
+        &.secondary
+            background-color  white
+            color             black
+            border            1px solid grey-09
+            &:active
+            &:hover
+                background-color    grey-09
+
+        &.danger
+            background-color  red
+            color             white
+            &:active
+            &:hover
+                background-color    #dd0505
+
+        &.danger-outline
+            background-color  white
+            color             red
+            border            1px solid #fdcbcb
+            &:active
+            &:hover
+                background-color    #fdcbcb
+
+        &.hightlight
+            background-color  green
+            color             white
+            &:active
+            &:hover
+                background-color    #08b442
+
+
+        &[disabled]
+        &[aria-disabled=true]
+            opacity .5
+            cursor  default
+
+        &[aria-busy=true]
+            position relative
+
+            &::after
+                position     static
+                width        em(16px)
+                height       em(16px)
+                margin-left  em(8px)
+                margin-right em(-24px)
+                @extend      $icon-spinner-white
