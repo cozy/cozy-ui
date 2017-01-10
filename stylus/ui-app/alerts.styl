@@ -2,16 +2,16 @@
  * NOTIFICATIONS
  * =============
  *
- * This file contains all needs for notifications
+ * This file contains all needs for alerts
  */
 
 
-$notifications
-    notification-width = em(546px)
-    .coz-notifier
+$alerts
+    alert-width = em(546px)
+    .coz-alerter
         z-index 100
 
-    .coz-notification
+    .coz-alert
         display          block
         position         absolute
         top              em(16px)
@@ -31,20 +31,20 @@ $notifications
         transition                 top .5s ease-out
         cursor                     pointer
 
-        .coz-notification-title
+        .coz-alert-title
             font-weight bold
 
-    .coz-notification--error
+    .coz-alert--error
         background-color pomegranate
         background-image embedurl('../../assets/icons/icon-warn.svg')
 
-    .coz-notification--closing
+    .coz-alert--closing
         top                        -25%
         transition-timing-function ease-in
 
-    @media all and (min-width notification-width)
-        .coz-notification
+    @media all and (min-width alert-width)
+        .coz-alert
             left        50%
-            max-width   notification-width
-            margin-left -(notification-width/2)
+            max-width   alert-width
+            margin-left -(alert-width/2)
             width       100%
