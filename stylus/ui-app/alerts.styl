@@ -1,0 +1,50 @@
+/*!
+ * NOTIFICATIONS
+ * =============
+ *
+ * This file contains all needs for alerts
+ */
+
+
+$alerts
+    alert-width = em(546px)
+    .coz-alerter
+        z-index 100
+
+    .coz-alert
+        display          block
+        position         absolute
+        top              em(16px)
+        left             0
+        margin           0 em(16px)
+        border-radius    em(10px)
+        background-color emerald
+        box-shadow       0 em(6px) em(18px) 0 rgba(50, 54, 63, .23)
+        box-sizing       border-box
+        padding          1em
+        color            white
+
+        //                  When only a title is displayed
+        min-height          em(96px)
+        padding-left        em(96px)
+        background          embedurl('../../assets/icons/icon-check.svg') no-repeat em(24px) center
+        transition                 top .5s ease-out
+        cursor                     pointer
+
+        .coz-alert-title
+            font-weight bold
+
+    .coz-alert--error
+        background-color pomegranate
+        background-image embedurl('../../assets/icons/icon-warn.svg')
+
+    .coz-alert--closing
+        top                        -25%
+        transition-timing-function ease-in
+
+    @media all and (min-width alert-width)
+        .coz-alert
+            left        50%
+            max-width   alert-width
+            margin-left -(alert-width/2)
+            width       100%
