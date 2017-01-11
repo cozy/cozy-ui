@@ -1,3 +1,5 @@
+@import 'animations'
+
 /*!
  * ICONS
  * ================
@@ -35,19 +37,31 @@ $icon-36
 
 // icon's properties
 // ========================================================
-$spin
+$icon-centered
     position absolute
     top 50%
     left 50%
     transform translateX(-50%) translateY(-50%)
-    animation 1s linear infinite spin
+
+$spin-anim
+    // arguments' order is important: the animation name must stay first
+    // so that scoping works
+    animation spin 1s linear infinite
 
 $icon-spinner-grey
     @extend $icon
-    @extend $spin
+    @extend $icon-centered
+    @extend $spin-anim
     background-image embed('../../assets/icons/spinner-grey.svg')
 
 $icon-spinner-white
     @extend $icon
-    @extend $spin
+    @extend $icon-centered
+    @extend $spin-anim
     background-image embed('../../assets/icons/spinner-white.svg')
+
+$icon-spinner-small-blue
+    @extend $icon
+    @extend $icon-16
+    @extend $spin-anim
+    background-image embed('../../assets/icons/spinner-blue.svg')
