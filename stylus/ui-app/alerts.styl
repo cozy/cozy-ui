@@ -60,6 +60,17 @@ $alerts
           &:hover
             color       darken(pomegranate, 25%)
 
+    &.coz-alerter--hidden
+      .coz-alert
+        top                        -25%
+        opacity                    0
+        transition-timing-function ease-in
+
+      .coz-overlay
+        opacity 0
+
+    // Deprecated update existing code and remove
+    // User .coz-alerter--hidden on .coz-alerter instead
     .coz-alert--closing
         top                        -25%
         transition-timing-function ease-in
