@@ -19,7 +19,15 @@ $alerts
         left       0
         background white
         opacity    .6
-        transition opacity ease-out .3s
+        visibility visible
+        transition opacity .3s, visibility 0s ease-out
+
+        &.coz-overlay--hidden
+            opacity          0
+            visibility       hidden
+            transition       opacity .3s, visibility 0s ease-in
+            transition-delay 0s, .3s
+
 
     .coz-alert
         display          block
@@ -45,17 +53,20 @@ $alerts
         .coz-alert-title
             font-weight bold
 
-    .coz-alert--error
-        background-color pomegranate
-
-    &.coz-alerter--hidden
-        .coz-alert
+        &.coz-alert--hidden
             top                        -25%
             opacity                    0
             transition-timing-function ease-in
 
-        .coz-overlay
-            opacity 0
+    .coz-alert--error
+        background-color pomegranate
+
+    .coz-alert--success
+        background-color emerald
+
+    .coz-alert--info
+        background-color grey-12
+
 
     @media all and (min-width alert-width)
         .coz-alert
