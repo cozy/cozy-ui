@@ -7,9 +7,19 @@
 
 
 $alerts
-    alert-width = em(546px)
+    alert-width = em(480px)
     .coz-alerter
         z-index 100
+
+    .coz-overlay
+        position   absolute
+        height     100%
+        width      100%
+        top        0
+        left       0
+        background white
+        opacity    .6
+        transition opacity ease-out .3s
 
     .coz-alert
         display          block
@@ -21,26 +31,31 @@ $alerts
         background-color emerald
         box-shadow       0 em(6px) em(18px) 0 rgba(50, 54, 63, .23)
         box-sizing       border-box
-        padding          1em
+        padding          1em 1.5em
         color            white
+        opacity          1
 
-        //                  When only a title is displayed
-        min-height          em(96px)
-        padding-left        em(96px)
-        background          embedurl('../../assets/icons/icon-check.svg') no-repeat em(24px) center
-        transition                 top .5s ease-out
-        cursor                     pointer
+        transition       top .5s ease-out, opacity .2s ease-out
+        cursor           pointer
+
+        p
+            margin      0
+            line-height 1.5
 
         .coz-alert-title
             font-weight bold
 
     .coz-alert--error
         background-color pomegranate
-        background-image embedurl('../../assets/icons/icon-warn.svg')
 
-    .coz-alert--closing
-        top                        -25%
-        transition-timing-function ease-in
+    &.coz-alerter--hidden
+        .coz-alert
+            top                        -25%
+            opacity                    0
+            transition-timing-function ease-in
+
+        .coz-overlay
+            opacity 0
 
     @media all and (min-width alert-width)
         .coz-alert
