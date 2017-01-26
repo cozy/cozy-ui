@@ -1,3 +1,9 @@
+[![Travis build status shield](https://img.shields.io/travis/cozy/<SLUG_GH>.svg?branch=master)](https://travis-ci.org/cozy/cozy-ui)
+[![NPM release version shield](https://img.shields.io/npm/v/<SLUG_NPM>.svg)](https://www.npmjs.com/package/cozy-ui)
+[![Github Release version shield](https://img.shields.io/github/tag/cozy/cozy-ui.svg)](https://github.com/cozy/cozy-ui/releases)
+[![NPM Licence shield](https://img.shields.io/npm/l/<SLUG_NPM>.svg)](https://github.com/cozy/cozy-ui/blob/master/LICENSE)
+
+
 Cozy Ui
 =======
 
