@@ -10,7 +10,7 @@
   "contributors": [
     "m4dz <code@m4dz.net>"
   ],
-  "license": "AGPL-3.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/cozy/cozy-ui/issues"
   },
