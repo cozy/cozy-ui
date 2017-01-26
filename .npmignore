@@ -1,6 +1,4 @@
-demo
-src
 test
 
 .editorconfig
-coffeelint.json
+yarn.lock
