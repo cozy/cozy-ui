@@ -1,0 +1,7 @@
+{
+  "colons": {
+    "expect": "never",
+    "error": true
+  },
+  "depthLimit": 3
+}
