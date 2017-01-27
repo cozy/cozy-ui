@@ -1,3 +1,4 @@
+// @stylint off
 // DEFINITIONS
 @import '../../node_modules/normalize.css/normalize.css'
 @import '../ui-base/animations'
@@ -107,7 +108,7 @@ input[type=password]
         &::after
             background-image embedurl('../../assets/icons/check.svg')
 
-    &[aria-checked="mixed"] label::after
+    &[aria-checked='mixed'] label::after
             background-image embedurl('../../assets/icons/dash.svg')
 
     input[type=checkbox]
@@ -122,3 +123,4 @@ input[type=password]
         &:not(:checked) + label::after
             opacity   0
             transform scale(0)
+// @stylint on
