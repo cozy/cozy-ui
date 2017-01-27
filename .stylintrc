@@ -67,7 +67,7 @@
     "expect": true,
     "error": true
   },
-  "mixins": [],
+  "mixins": ["top-padded","right-padded","bottom-padded","left-padded","vertically-padded","horizontally-padded","padded","top-spaced","right-spaced","bottom-spaced","left-spaced","vertically-spaced","horizontally-spaced","spaced","hide","reset"],
   "namingConvention": {
     "expect": "lowercase-dash",
     "error": true
@@ -89,10 +89,7 @@
     "expect": "always",
     "error": true
   },
-  "prefixVarsWithDollar": {
-    "expect": "always",
-    "error": true
-  },
+  "prefixVarsWithDollar": false,
   "quotePref": {
     "expect": "single",
     "error": true
@@ -107,10 +104,7 @@
     "expect": "never",
     "error": true
   },
-  "sortOrder": {
-    "expect": "grouped",
-    "error": true
-  },
+  "sortOrder": false,
   "stackedProperties": {
     "expect": "never",
     "error": true
@@ -132,7 +126,7 @@
     "error": true
   },
   "zIndexNormalize": {
-    "expect": 5,
+    "expect": 1,
     "error": true
   }
 }
