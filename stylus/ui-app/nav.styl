@@ -6,15 +6,14 @@ $navigation
     .coz-nav-item
         position    relative
         z-index     1
-        &:hover
-            &::before
-                content         ''
-                position        absolute
-                background      grey-09
-                height          3em
-                width           90%
-                z-index         -1
-                border-radius   0 3px 3px 0
+        &:hover::before
+            content         ''
+            position        absolute
+            background      grey-09
+            height          3em
+            width           90%
+            z-index         -1
+            border-radius   0 3px 3px 0
         a
             display         block
             left-padded     50px
@@ -37,9 +36,8 @@ $navigation
             margin          em(11px) 0 em(6px)
 
         .coz-nav-item
-            &:hover
-                &::before
-                    content    none
+            &:hover::before
+                content    none
             a
                 min-width           em(100px)
                 padding             em(35px) 0 0

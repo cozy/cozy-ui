@@ -1,8 +1,5 @@
 {
-  "blocks": {
-    "expect": "never",
-    "error": false
-  },
+  "blocks": "never",
   "brackets": {
     "expect": "never",
     "error": true
@@ -23,15 +20,9 @@
     "expect": "always",
     "error": true
   },
-  "cssLiteral": {
-    "expect": "never",
-    "error": false
-  },
+  "cssLiteral": "never",
   "customProperties": [],
-  "depthLimit": {
-    "expect": 3,
-    "error": false
-  },
+  "depthLimit": 4,
   "duplicates": {
     "expect": true,
     "error": true
@@ -41,10 +32,7 @@
     "error": true
   },
   "exclude": [],
-  "extendPref": {
-    "expect": "@extend",
-    "error": false
-  },
+  "extendPref": "@extend",
   "globalDupe": {
     "expect": true,
     "error": true
