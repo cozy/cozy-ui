@@ -14,6 +14,11 @@ $button
     font-size(14px)
     text-transform   uppercase
 
+    &[disabled]
+    &[aria-disabled=true]
+        opacity .5
+        cursor  default
+
 $button--regular
     border-color     dodger-blue
     background-color dodger-blue
@@ -21,13 +26,13 @@ $button--regular
 
 $button--upload
     padding-left        em(44px, 16px)
-    background-image    embedurl('../assets/icons/icon-upload.svg')
+    background-image    embedurl('../assets/icons/ui/icon-upload.svg')
     background-position em(17px, 16px) center
     background-repeat   no-repeat
 
 $button--more
     width      em(46px)
-    background embedurl('../assets/icons/icon-dots.svg') center center no-repeat
+    background embedurl('../assets/icons/ui/icon-dots.svg') center center no-repeat
 
 // Button in alert
 $button--alert-error
