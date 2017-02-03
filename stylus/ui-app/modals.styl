@@ -13,37 +13,37 @@ $modals
 
     .coz-overlay
         position   absolute
-        height     100%
-        width      100%
         top        0
         left       0
+        height     100%
+        width      100%
         background rgba(grey-08, .5)
         visibility visible
         transition opacity .3s, visibility 0s ease-out
 
         &.coz-overlay--hidden
-            opacity          0
-            visibility       hidden
-            transition       opacity .3s 0s, visibility 0s ease-in .3s
+            opacity    0
+            visibility hidden
+            transition opacity .3s 0s, visibility 0s ease-in .3s
 
 
     .coz-modal
-        display          block
         position         fixed
         top              50%
         left             50%
+        display          block
+        box-sizing       border-box
         min-width        modal-width
         height           auto
-        transform        translateX(-50%) translateY(-50%)
+        padding          1em 1.5em
         border-radius    em(8px)
         background-color white
-        box-sizing       border-box
-        padding          1em 1.5em
         color            grey-08
+        transform        translateX(-50%) translateY(-50%)
 
         .coz-modal-title
-            font-weight bold
             bottom-spaced(1.8em)
+            font-weight bold
 
         .coz-modal-close
             position        absolute
