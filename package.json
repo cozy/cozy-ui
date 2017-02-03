@@ -8,18 +8,23 @@
   },
   "author": "Cozy Cloud <contact@cozycloud.cc> (http://cozycloud.cc)",
   "contributors": [
-    "m4dz <code@m4dz.net>"
+    "m4dz <code@m4dz.net>",
+    "GoOz"
   ],
-  "license": "AGPL-3.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/cozy/cozy-ui/issues"
   },
   "homepage": "https://github.com/cozy/cozy-ui",
   "scripts": {
-    "test": "standard"
+    "lint": "npm-run-all 'lint:*'",
+    "lint:js": "standard 'stylus/**/*.js'",
+    "lint:stylus": "stylint stylus --config .stylintrc"
   },
   "devDependencies": {
-    "standard": "^8.6.0"
+    "npm-run-all": "^4.0.1",
+    "standard": "^8.6.0",
+    "stylint": "^1.5.9"
   },
   "dependencies": {
     "md5": "^2.2.0",
