@@ -22,7 +22,11 @@
     "lint:stylus": "stylint stylus --config .stylintrc"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.1.8",
+    "babel-preset-react": "^6.22.0",
     "npm-run-all": "^4.0.1",
+    "preact": "^7.1.0",
+    "preact-compat": "^3.13.1",
     "standard": "^8.6.0",
     "stylint": "^1.5.9"
   },
