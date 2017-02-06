@@ -1,39 +1,109 @@
 
 @import '../ui-base/icons'
 
-// Buttons of any kind
+/*------------------------------------*\
+  Buttons of any kind
+\*------------------------------------*/
+
+/**
+ * 1. `font-size` calls the font-size function in ui-components/fonts.styl
+      and replaces px value by an em value. Don't be scared by this. :)
+ */
+
 $button
     box-sizing       border-box
     display          inline-block
+    margin           0 em(8px, 14px)
+    border-radius    3px
+    height           em(40px, 14px)
+    padding          1em em(15px, 14px) em(10px, 14px)
     vertical-align   top
-    margin           0 em(8px)
-    border           1px solid grey-09
-    height           em(43px)
-    padding          em(11px) em(15px) em(10px)
-    background-color white
-    font-size(14px)
+    text-align       center
+    font-size        14px /* [1] */
+    line-height      1
     text-transform   uppercase
+    text-decoration  none
     cursor           pointer
 
     &[disabled]
     &[aria-disabled=true]
-        opacity .5
-        cursor  default
+        opacity  .5
+        cursor   default
+
+    &[aria-busy=true]
+        position relative
+
+        &::after
+            @extend       $icon-spinner-white
+            margin-left   em(8px)
+            margin-right  em(-24px)
+            width         em(16px)
+            height        em(16px)
 
 $button--regular
-    border-color     dodger-blue
-    background-color dodger-blue
-    color            white
+    border-color      dodger-blue
+    background-color  dodger-blue
+    color             white
+
+    &:active
+    &:hover
+    &:focus
+        border-color      science-blue
+        background-color  science-blue
+
+$button--secondary
+    background-color  white
+    color             black
+    border            1px solid grey-09
+
+    &:active
+    &:hover
+    &:focus
+        background-color  grey-09
+
+$button--danger
+    border-color      pomegranate
+    background-color  pomegranate
+    color             white
+
+    &:active
+    &:hover
+    &:focus
+        border-color      monza
+        background-color  monza
+
+$button--danger-outline
+    background-color  white
+    color             pomegranate
+    border            1px solid your-pink
+
+    &:active
+    &:hover
+    &:focus
+        background-color  your-pink
+
+$button--highlight
+    border-color      emerald
+    background-color  emerald
+    color             white
+
+    &:active
+    &:hover
+    &:focus
+        border-color      malachite
+        background-color  malachite
 
 $button--upload
-    padding-left        em(44px, 16px)
-    background-image    embedurl('../assets/icons/ui/icon-upload.svg')
-    background-position em(17px, 16px) center
-    background-repeat   no-repeat
+    padding-left         em(44px, 16px)
+    background-image     embedurl('../assets/icons/ui/icon-upload.svg')
+    background-position  em(17px, 16px) center
+    background-repeat    no-repeat
 
 $button--more
-    width      em(46px)
-    background embedurl('../assets/icons/ui/icon-dots.svg') center center no-repeat
+    width                em(46px)
+    background-image     embedurl('../assets/icons/ui/icon-dots.svg')
+    background-position  center center
+    background-repeat    no-repeat
 
 $button--extra
     width       em(46px)
@@ -45,114 +115,47 @@ $button--extra-white
     background-image  embedurl('../assets/icons/ui/icon-dots-white.svg')
 
 $button--close
-    width      em(46px)
-    background embedurl('../assets/icons/ui/icon-cross.svg') center center no-repeat
-    border     0
+    border               0
+    width                em(46px)
+    background-image     embedurl('../assets/icons/ui/icon-cross.svg')
+    background-position  center center
+    background-repeat    no-repeat
 
-// Button in alert
-$button--alert-error
-    color         pomegranate
-    border        0
-    font-weight   bold
-    margin        .5rem 0 0
-    padding       .5rem 1rem
-    height        auto
-    border-radius em(3px)
 
+/*------------------------------------*\
+  Alert's specific buttons
+\*------------------------------------*/
+$button-alert
+    margin       .5rem 0 0
+    border       0
+    height       auto
+    padding      .5rem 1rem
+    font-weight  bold
+
+$button-alert--error
+    @extend $button-alert
+    color   pomegranate
+
+    &:active
     &:hover
-        color darken(pomegranate, 25%)
+    &:focus
+        color  darken(pomegranate, 25%)
 
-$button--alert-info
-    color               white
-    background-color    grey-11
-    border              0
-    font-weight         bold
-    margin              .5rem 0 0
-    padding             .5rem 1rem
-    height              auto
-    border-radius       em(3px)
+$button-alert--info
+    @extend           $button-alert
+    background-color  grey-11
+    color             white
 
+    &:active
     &:hover
-        color darken(white, 10%)
+    &:focus
+        color  darken(white, 10%)
 
-$button--alert-success
-    color         emerald
-    border        0
-    font-weight   bold
-    margin        .5rem 0 0
-    padding       .5rem 1rem
-    height        auto
-    border-radius em(3px)
+$button-alert--success
+    @extend $button-alert
+    color   emerald
 
+    &:active
     &:hover
+    &:focus
         color darken(emerald, 25%)
-
-$buttons
-    [role=button],
-    button
-        // mutualize behavior between button and a
-        box-sizing        border-box
-        border            0
-        display           block
-        padding           .9em .75em
-        min-height        em(30px)
-        border-radius     3px
-        font-family       Lato, sans-serif
-        text-align        center
-        text-transform    uppercase
-        text-decoration   none
-        cursor            pointer
-
-        &.primary
-            background-color  dodger-blue
-            color             white
-            &:active
-            &:hover
-                background-color    science-blue
-
-        &.secondary
-            background-color  white
-            color             black
-            border            1px solid grey-09
-            &:active
-            &:hover
-                background-color    grey-09
-
-        &.danger
-            background-color  pomegranate
-            color             white
-            &:active
-            &:hover
-                background-color    monza
-
-        &.danger-outline
-            background-color  white
-            color             pomegranate
-            border            1px solid your-pink
-            &:active
-            &:hover
-                background-color    your-pink
-
-        &.hightlight
-            background-color  emerald
-            color             white
-            &:active
-            &:hover
-                background-color    malachite
-
-
-        &[disabled]
-        &[aria-disabled=true]
-            opacity .5
-            cursor  default
-
-        &[aria-busy=true]
-            position relative
-
-            &::after
-                position     static
-                width        em(16px)
-                height       em(16px)
-                margin-left  em(8px)
-                margin-right em(-24px)
-                @extend      $icon-spinner-white
