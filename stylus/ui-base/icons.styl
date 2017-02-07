@@ -1,70 +1,74 @@
 @import 'animations'
 
-/*!
- * ICONS
- * ================
- *
- * This file contains icons coded in data:uri
- */
+/*------------------------------------*\
+  Icons
+  ================
+
+  This file contains icons coded in data:uri
+\*------------------------------------*/
 
 $icon
-    content ''
-    display inline-block
-    vertical-align middle
-    background-position center
-    background-repeat no-repeat
-    background-size cover
+    content              ''
+    display              inline-block
+    vertical-align       middle
+    margin-left          .5em
+    background-position  center
+    background-repeat    no-repeat
+    background-size      cover
 
 
-// icon's sizes
-// ========================================================
+/*------------------------------------*\
+  Icon's sizes
+\*------------------------------------*/
+
 $icon-12
-    width em(12px)
-    height em(12px)
+    width   em(12px)
+    height  em(12px)
 
 $icon-16
-    width em(16px)
-    height em(16px)
+    width   em(16px)
+    height  em(16px)
 
 $icon-24
-    width em(24px)
-    height em(24px)
+    width   em(24px)
+    height  em(24px)
 
 $icon-36
-    width em(36px)
-    height em(36px)
+    width   em(36px)
+    height  em(36px)
 
 
-// icon's properties
-// ========================================================
+/*------------------------------------*\
+  Icon's properties
+\*------------------------------------*/
+
 $icon-centered
-    position absolute
-    top 50%
-    left 50%
-    transform translateX(-50%) translateY(-50%)
+    position   absolute
+    top        50%
+    left       50%
+    transform  translateX(-50%) translateY(-50%)
 
 $spin-anim
     // arguments' order is important: the animation name must stay first
     // so that scoping works
-    animation spin 1s linear infinite
+    animation  spin 1s linear infinite
+
+
+/*------------------------------------*\
+  Spinners
+\*------------------------------------*/
 
 $icon-spinner-grey
-    @extend $icon
-    @extend $icon-centered
-    @extend $spin-anim
-    background-image embedurl('../../assets/icons/ui/spinner-grey.svg')
+    @extend           $icon
+    @extend           $spin-anim
+    background-image  embedurl('../../assets/icons/ui/spinner-grey.svg')
 
 $icon-spinner-white
-    @extend $icon
-    @extend $icon-centered
-    @extend $spin-anim
-    background-image embedurl('../../assets/icons/ui/spinner-white.svg')
+    @extend           $icon
+    @extend           $spin-anim
+    background-image  embedurl('../../assets/icons/ui/spinner-white.svg')
 
 $icon-spinner-blue
-    @extend $icon
-    @extend $spin-anim
-    background-image embedurl('../../assets/icons/ui/spinner-blue.svg')
-
-$icon-spinner-small-blue
-    @extend $icon-16
-    @extend $icon-spinner-blue
+    @extend           $icon
+    @extend           $spin-anim
+    background-image  embedurl('../../assets/icons/ui/spinner-blue.svg')
