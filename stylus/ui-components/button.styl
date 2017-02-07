@@ -26,18 +26,23 @@ $button--regular
 
 $button--upload
     padding-left        em(44px, 16px)
-    background-image    embedurl("../assets/icons/icon-upload.svg")
+    background-image    embedurl('../assets/icons/ui/icon-upload.svg')
     background-position em(17px, 16px) center
     background-repeat   no-repeat
 
 $button--more
     width      em(46px)
-    background embedurl("../assets/icons/icon-dots.svg") center center no-repeat
+    background embedurl('../assets/icons/ui/icon-dots.svg') center center no-repeat
+
+$button--close
+    width      em(46px)
+    background embedurl('../assets/icons/ui/icon-cross.svg') center center no-repeat
+    border     0
 
 // Button in alert
 $button--alert-error
     color         pomegranate
-    border        none
+    border        0
     font-weight   bold
     margin        .5rem 0 0
     padding       .5rem 1rem
@@ -50,7 +55,7 @@ $button--alert-error
 $button--alert-info
     color               white
     background-color    grey-11
-    border              none
+    border              0
     font-weight         bold
     margin              .5rem 0 0
     padding             .5rem 1rem
@@ -62,7 +67,7 @@ $button--alert-info
 
 $button--alert-success
     color         emerald
-    border        none
+    border        0
     font-weight   bold
     margin        .5rem 0 0
     padding       .5rem 1rem

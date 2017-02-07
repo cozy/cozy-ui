@@ -1,6 +1,6 @@
 {
   "name": "cozy-ui",
-  "version": "3.0.0-beta4",
+  "version": "3.0.0-beta5",
   "description": "Cozy apps Ui SDK",
   "repository": {
     "type": "git",
@@ -8,22 +8,37 @@
   },
   "author": "Cozy Cloud <contact@cozycloud.cc> (http://cozycloud.cc)",
   "contributors": [
-    "m4dz <code@m4dz.net>"
+    "m4dz <code@m4dz.net>",
+    "GoOz"
   ],
-  "license": "AGPL-3.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/cozy/cozy-ui/issues"
   },
   "homepage": "https://github.com/cozy/cozy-ui",
   "scripts": {
-    "test": "standard"
+    "lint": "npm-run-all 'lint:*'",
+    "lint:js": "standard 'stylus/**/*.js'",
+    "lint:stylus": "stylint stylus --config .stylintrc"
   },
   "devDependencies": {
-    "standard": "^8.6.0"
+    "babel-preset-env": "^1.1.8",
+    "babel-preset-react": "^6.22.0",
+    "npm-run-all": "^4.0.1",
+    "preact": "^7.1.0",
+    "preact-compat": "^3.13.1",
+    "standard": "^8.6.0",
+    "stylint": "^1.5.9"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
+    "css-loader": "^0.26.1",
     "md5": "^2.2.0",
     "normalize.css": "5.0.0",
-    "stylus": "^0.54.0"
+    "postcss-loader": "^1.2.2",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.4.0",
+    "webpack": "^2.2.1"
   }
 }

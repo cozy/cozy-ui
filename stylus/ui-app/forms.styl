@@ -43,7 +43,7 @@ $form
 
 
 $form-button
-    @extends    $buttons
+    @extend    $buttons
     .coz-form-controls
         width      70%
         padding    0 15%
@@ -72,6 +72,7 @@ $form-text
         &:focus
             border     1px solid dodger-blue
             background none
+            outline    0
         &:hover
             border 1px solid grey-11
         &.error
@@ -114,6 +115,9 @@ $form-checkbox
 
     label
         position    relative
+        display     inline-block
+        width       checkbox-size
+        height      checkbox-size
         left-padded checkbox-size * 1.4
         cursor      pointer
 
@@ -142,7 +146,7 @@ $form-progress
         height        .5em
         color         dodger-blue
         background    grey-10
-        border        none
+        border        0
         border-radius em(20px)
 
         // chrome and safari
