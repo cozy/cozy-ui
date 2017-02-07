@@ -31,8 +31,14 @@
     "stylint": "^1.5.9"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
+    "css-loader": "^0.26.1",
     "md5": "^2.2.0",
     "normalize.css": "5.0.0",
-    "stylus": "^0.54.0"
+    "postcss-loader": "^1.2.2",
+    "style-loader": "^0.13.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.4.0",
+    "webpack": "^2.2.1"
   }
 }
