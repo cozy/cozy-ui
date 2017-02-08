@@ -1,52 +1,63 @@
+/*------------------------------------*\
+  Navigation
+\*------------------------------------*/
+
 $navigation
     .coz-nav
         margin     em(24px) 0
         padding    0
         list-style none
+
     .coz-nav-item
-        position    relative
-        z-index     1
+        position  relative
+        z-index   1
+
         &:hover::before
-            content         ''
-            position        absolute
-            background      grey-09
-            height          3em
-            width           90%
-            z-index         -1
-            border-radius   0 3px 3px 0
-        a
-            display         block
-            left-padded     50px
-            line-height     em(48px)
-            text-decoration none
-            color           grey-11
-            &.active
-            &:hover
-            &:visited
-                color       grey-08
-            &.active
-                font-weight bold
-                box-shadow  inset 4px 0 0 0 dodger-blue
+            content        ''
+            position       absolute
+            z-index        -1
+            border-radius  0 3px 3px 0
+            height         3em
+            width          90%
+            background     grey-09
+
+    .coz-nav-link
+        display          block
+        left-padded      50px
+        line-height      em(48px)
+        text-decoration  none
+        color            grey-11
+
+        &.active
+        &:hover
+        &:visited
+            color  grey-08
+
+        &.active
+            box-shadow   inset 4px 0 0 0 dodger-blue
+            font-weight  bold
 
 
     @media (max-width: (1023/basefont)rem)
         .coz-nav
-            display         flex
-            justify-content space-around
-            margin          em(11px) 0 em(6px)
+            display          flex
+            justify-content  space-around
+            margin           em(11px) 0 em(6px)
 
         .coz-nav-item
             &:hover::before
-                content    none
-            a
-                min-width           em(100px)
-                padding             em(35px) 0 0
-                text-align          center
-                color               grey-11
-                font-size           10px
-                line-height         1
-                &.active
-                &:hover
-                    box-shadow  none
-                    font-weight normal
-                    color       grey-08
+                content  none
+
+        .coz-nav-link
+            min-width    em(100px)
+            padding      em(35px) 0 0
+            text-align   center
+            color        grey-11
+            font-size    10px
+            line-height  1
+
+            &.active
+            &:hover
+                box-shadow   none
+                font-weight  normal
+                color        grey-08

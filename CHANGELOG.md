@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Renamed alert buttons
 - Spinners are not centered by default anymore
 - Moved forms.styl from ui-app folder to ui-components for more consistency
+- depthlimit increase to 4 because Stylint treats its depth oddly
 
 ### Removed
 - Removed buttons classes .primary, .secondary, .danger, .danger-outline, .hightlight
