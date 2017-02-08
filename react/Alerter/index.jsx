@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 import styles from './index.styl'
 
-const AUTOCLOSE_DELAY = 2000
+const DEFAULT_AUTOCLOSE_DELAY = 3000
 
 class Alerter extends Component {
 
@@ -18,10 +18,12 @@ class Alerter extends Component {
 
   componentDidMount () {
     if (this.shouldAutoClose) {
+      const closeDelay = this.props.duration ? parseInt(this.props.duration) : DEFAULT_AUTOCLOSE_DELAY;
+
       this.closeTimer = setTimeout(() => {
         this.setState({ hidden: true })
         if (this.props.onClose && typeof this.props.onClose === 'function') this.props.onClose()
-      }, AUTOCLOSE_DELAY)
+      }, closeDelay)
     }
     // Delay to trigger CSS transition after the first render.
     // Totally open for a better way to achieve this.
