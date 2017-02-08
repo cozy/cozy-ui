@@ -1,9 +1,9 @@
-/*!
- * FORMS
- * =====
- *
- * This file contains all needs for forms, inputs, labels...
- */
+/*------------------------------------*\
+    Forms
+    =====
+
+    This file contains all needs for forms, inputs, labels...
+\*------------------------------------*/
 
 @import '../ui-components/button'
 
@@ -11,103 +11,118 @@ checkbox-size = 20px
 
 $form
     .coz-form
-        margin   1em 0 .5em
+        margin  1em 0 .5em
 
     .coz-form
     .coz-form-group
-        position relative
+        position        relative
         // Managing input width with flex
         display         flex
         flex-direction  column
 
     .coz-desc
-        margin-bottom .5em
-        line-height   1.5
+        margin-bottom  .5em
+        line-height    1.5
 
     .coz-label
-        display        block
-        text-transform uppercase
-        color          grey-11
-        font-size      .9em
-        padding        .55em 0
-        margin-top     1em
+        display         block
+        text-transform  uppercase
+        color           grey-11
+        font-size       .9em
+        padding         .55em 0
+        margin-top      1em
 
     .coz-error-label
-        display none
-        color   pomegranate
+        display  none
+        color    pomegranate
 
     .coz-errors
-        color pomegranate
+        color  pomegranate
 
-    a, a:visited
-        color               dodger-blue
-        text-decoration     none
+    a,
+    a:visited
+        color            dodger-blue
+        text-decoration  none
+
+    a:hover,
+    a:active
+        text-decoration  underline
 
 
 $form-button
-    @extend    $button
+    @extend  $button
+
     .coz-form-controls
-        width      70%
-        padding    0 15%
-        display    flex
-        margin-top 1.5em
+        width       70%
+        padding     0 15%
+        display     flex
+        margin-top  1.5em
 
         button
-            width       100%
-            margin      .4em
+            width   100%
+            margin  .4em
 
 
 $form-text
     input[type=text]
     input[type=password]
     input[type=email]
-        display       inline-block
-        padding       .9em .75em .75em .9em
-        border-radius 4px
-        box-sizing    border-box
-        border        1px solid grey-03
-        background    grey-10
-        color         black
+        display        inline-block
+        padding        .9em .75em .75em .9em
+        box-sizing     border-box
+        border-radius  4px
+        border         1px solid grey-03
+        background     grey-10
+        color          black
+
         &::placeholder
-            color     grey-06
-            font-size 1em
+            color      grey-06
+            font-size  1em
+
         &:focus
-            border     1px solid dodger-blue
-            background none
-            outline    0
+            border      1px solid dodger-blue
+            background  none
+            outline     0
+
         &:hover
-            border 1px solid grey-11
+            border  1px solid grey-11
+
         &.error
-            border     1px solid pomegranate
-            background none
+            border      1px solid pomegranate
+            background  none
 
 
 $form-select
     select
-        display       inline-block
-        padding       .75em .75em .9em
-        border-radius 4px
-        box-sizing    border-box
-        border        1px solid grey-03
-        background    grey-10
-        color         black
-        appearance          none
-        background-image    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16px' height='16px'><polyline points='14.764,4.966 8.053,11.677 1.342,4.966'/></svg>")
-        background-position right 8px center
-        background-repeat   no-repeat
+        display              inline-block
+        padding              .75em .75em .9em
+        border-radius        4px
+        box-sizing           border-box
+        border               1px solid grey-03
+        background           grey-10
+        color                black
+        appearance           none
+        background-image     embedurl('../../assets/icons/ui/arrow.svg')
+        background-position  right 8px center
+        background-repeat    no-repeat
+
         &::-ms-expand
-            display none
+            display  none
+
         &::placeholder
-            color     grey-07
-            font-size 1.05em
+            color      grey-07
+            font-size  1.05em
+
         &:focus
-            border     1px solid dodger-blue
-            background none
+            border      1px solid dodger-blue
+            background  none
+
         &:hover
-            border 1px solid grey-06
+            border  1px solid grey-06
+
         &.error
-            border     1px solid pomegranate
-            background none
+            border      1px solid pomegranate
+            background  none
 
 
 $form-checkbox
@@ -116,51 +131,51 @@ $form-checkbox
         hide()
 
     label
-        position    relative
-        display     inline-block
-        width       checkbox-size
-        height      checkbox-size
-        left-padded checkbox-size * 1.4
-        cursor      pointer
+        position     relative
+        display      inline-block
+        width        checkbox-size
+        height       checkbox-size
+        left-padded  checkbox-size * 1.4
+        cursor       pointer
 
         &::before
         &::after
-            content    ''
-            position   absolute
-            left       0
-            top        0
-            box-sizing border-box
-            width      checkbox-size
-            height     checkbox-size
+            content     ''
+            position    absolute
+            left        0
+            top         0
+            box-sizing  border-box
+            width       checkbox-size
+            height      checkbox-size
 
         &::before
-            transition box-shadow 350ms cubic-bezier(0, .89, .44, 1)
+            transition  box-shadow 350ms cubic-bezier(0, .89, .44, 1)
 
         &::after
-            transition-duration .2s
-            transition-property opacity, transform
+            transition-duration  .2s
+            transition-property  opacity, transform
 
 
 $form-progress
     progress
-        margin        .5em 0
-        width         100%
-        height        .5em
-        color         dodger-blue
-        background    grey-10
-        border        0
-        border-radius em(20px)
+        margin         .5em 0
+        width          100%
+        height         .5em
+        color          dodger-blue
+        background     grey-10
+        border         0
+        border-radius  em(20px)
 
         // chrome and safari
         &::-webkit-progress-bar
-            background    grey-10
-            border-radius em(20px)
+            background     grey-10
+            border-radius  em(20px)
 
         &::-webkit-progress-value
-            background    grey-08
-            border-radius em(20px)
+            background     grey-08
+            border-radius  em(20px)
 
         // firefox
         &::-moz-progress-bar
-            background    grey-08
-            border-radius em(20px)
+            background     grey-08
+            border-radius  em(20px)
