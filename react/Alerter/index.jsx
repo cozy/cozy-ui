@@ -20,6 +20,7 @@ class Alerter extends Component {
     if (this.shouldAutoClose) {
       this.closeTimer = setTimeout(() => {
         this.setState({ hidden: true })
+        if (this.props.onClose && typeof this.props.onClose === 'function') this.props.onClose()
       }, AUTOCLOSE_DELAY)
     }
     // Delay to trigger CSS transition after the first render.
