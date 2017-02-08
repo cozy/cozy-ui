@@ -1,35 +1,48 @@
 @import '../ui-base/boxes'
 
+/*------------------------------------*\
+  Layouts
+\*------------------------------------*/
+
 $centerized
-    position  absolute
-    top       50%
-    left      50%
-    transform translateX(-50%) translateY(-50%)
+    position   absolute
+    top        50%
+    left       50%
+    transform  translateX(-50%) translateY(-50%)
 
 
 $content-center
-    display         flex
-    align-items     center
-    justify-content center
+    display          flex
+    align-items      center
+    justify-content  center
 
-// NB: Not to be used on it's own. Use one of the others placeholders below (with drawer or sticky sidebar)
+
+$fullbleed
+    position  fixed
+    bottom    0
+    top       0
+    left      0
+    right     0
+
+
+// NB: Not to be used on it's own. Use one of the others placeholders below (sticky sidebar only yet)
 $app-2panes
-    box-sizing border-box
-    display    flex
-    width      100%
-    height     100%
+    box-sizing  border-box
+    display     flex
+    width       100%
+    height      100%
 
     main
     & > aside
-        display        flex
-        flex-direction column
+        display         flex
+        flex-direction  column
 
     main,
     main > [role=contentinfo]
-        flex       1
-        height     auto
-        overflow-x hidden
-        overflow-y auto
+        flex        1
+        height      auto
+        overflow-x  hidden
+        overflow-y  auto
 
 // STICKY layout
 // When you want the sidebar to act like a sticky footer
@@ -38,47 +51,10 @@ $app-2panes-sticky
 
     @media (max-width: (1023/basefont)rem)
         height 'calc(100vh - %s)' % em(50px)
+
         > aside
             position fixed
             left 0
             bottom 0
             width 100%
             z-index 10
-
-// DRAWER layout
-// When you want the sidebar to act like a drawer
-$app-2panes-drawer
-    @extend $app-2panes
-
-    @media (min-width: (1024/basefont)rem)
-        [formaction='drawer/toggle']
-            hide()
-
-    @media (max-width: (1023/basefont)rem)
-        toggle-width = em(44px)
-
-        > aside
-            z-index       1
-            position      absolute
-            top           0
-            left          0
-            width         100vw
-            height        100vh
-            padding-right toggle-width
-
-            &[aria-expanded=true] + main
-                transform translateX('calc(100vw - %s)' % toggle-width)
-
-        main
-            z-index    2
-            position   relative
-            transform  translateX(0)
-            transition transform 350ms ease-out
-
-
-$fullbleed
-    position fixed
-    bottom   0
-    top      0
-    left     0
-    right    0

@@ -16,6 +16,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 - Removed buttons classes .primary, .secondary, .danger, .danger-outline, .hightlight
 - Removed placeholders $icon-spinner-small-blue, build your own options instead
+- Removed Drawer layout that wasn't functional anyway
 
 ## [3.0.0-beta6] - 2017-02-07
 ### Added
