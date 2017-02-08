@@ -22,23 +22,26 @@
     "lint:stylus": "stylint stylus --config .stylintrc"
   },
   "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
     "babel-preset-env": "^1.1.8",
     "babel-preset-react": "^6.22.0",
+    "css-loader": "^0.26.1",
     "npm-run-all": "^4.0.1",
+    "postcss-loader": "^1.2.2",
     "preact": "^7.1.0",
     "preact-compat": "^3.13.1",
     "standard": "^8.6.0",
-    "stylint": "^1.5.9"
+    "style-loader": "^0.13.1",
+    "stylint": "^1.5.9",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.4.0",
+    "svg-sprite-loader": "^0.2.0",
+    "webpack": "^2.2.1"
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "css-loader": "^0.26.1",
     "md5": "^2.2.0",
-    "normalize.css": "5.0.0",
-    "postcss-loader": "^1.2.2",
-    "style-loader": "^0.13.1",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^2.4.0",
-    "webpack": "^2.2.1"
+    "normalize.css": "5.0.0"
   }
 }
