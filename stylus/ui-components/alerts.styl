@@ -1,0 +1,75 @@
+/*!
+ * NOTIFICATIONS
+ * =============
+ *
+ * This file contains all needs for alerts
+ */
+
+$alerts
+    alert-width = em(480px)
+    .coz-alerter
+        z-index 100
+
+    .coz-overlay
+        position   absolute
+        height     100%
+        width      100%
+        top        0
+        left       0
+        background white
+        opacity    .6
+        visibility visible
+        transition opacity .3s, visibility 0s ease-out
+
+        &.coz-overlay--hidden
+            opacity          0
+            visibility       hidden
+            transition       opacity .3s 0s, visibility 0s ease-in .3s
+
+
+    .coz-alert
+        display          block
+        z-index          100
+        position         absolute
+        top              em(16px)
+        left             0
+        margin           0 em(16px)
+        border-radius    em(10px)
+        background-color emerald
+        box-shadow       0 em(6px) em(18px) 0 rgba(50, 54, 63, .23)
+        box-sizing       border-box
+        padding          1em 1.5em
+        color            white
+        opacity          1
+
+        transition       top .5s ease-out, opacity .2s ease-out
+        cursor           pointer
+
+        p
+            margin      0
+            line-height 1.5
+
+        .coz-alert-title
+            font-weight bold
+
+        &.coz-alert--hidden
+            top                        -25%
+            opacity                    0
+            transition-timing-function ease-in
+
+    .coz-alert--error
+        background-color pomegranate
+
+    .coz-alert--success
+        background-color emerald
+
+    .coz-alert--info
+        background-color grey-12
+
+
+    @media all and (min-width alert-width)
+        .coz-alert
+            left        50%
+            max-width   alert-width
+            margin-left -(alert-width/2)
+            width       100%
