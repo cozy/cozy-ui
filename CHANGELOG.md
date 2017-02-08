@@ -18,6 +18,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Removed placeholders $icon-spinner-small-blue, build your own options instead
 - Removed Drawer layout that wasn't functional anyway
 
+## [3.0.0-beta7] - 2017-02-08
+### Added
+- Added a coz-form-group selector for group of elements constituting a single field
+- Made autoclose delay configurable
+- Added modal close button cursor
+- Added optional alerter close callback
+
+## Changed
+- Fixed withState react import
+- Bumped default notification delay
+- Adjusted modal's width for mobile
+
+
 ## [3.0.0-beta6] - 2017-02-07
 ### Added
 - Added alerter component!
@@ -41,6 +54,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta6...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta7...HEAD
+[3.0.0-beta7]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta6...3.0.0-beta7
 [3.0.0-beta6]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta5...3.0.0-beta6
 [3.0.0-beta5]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta4...3.0.0-beta5
