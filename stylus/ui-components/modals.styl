@@ -12,6 +12,7 @@ $modals
         z-index 100
 
     .coz-overlay
+        z-index    1100
         position   absolute
         top        0
         left       0
@@ -51,6 +52,16 @@ $modals
             right           1.8em
             background-size 22px
             cursor          pointer
+
+        .coz-modal-buttons
+            @extends $buttons
+            top-spaced(2em)
+            text-align      right
+
+            button
+                display     inline-block
+                font-size   .9em
+                left-spaced(10px)
 
         &.coz-modal--hidden
             top                        -25%
