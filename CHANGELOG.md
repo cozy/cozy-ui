@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Renamed alert buttons
 - Spinners are not centered by default anymore
+- Moved forms.styl from ui-app folder to ui-components for more consistency
 
 ### Removed
 - Removed buttons classes .primary, .secondary, .danger, .danger-outline, .hightlight
@@ -22,10 +23,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added embedded cross icon
 - Added Modals
 - Added Linter
+- Added babel config for exported components
 
 ### Changed
 - Moved alert and modal styles to components
-- Add babel config for exported components
 - Moved icons
 
 ### Fixed
