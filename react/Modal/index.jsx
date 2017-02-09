@@ -35,12 +35,12 @@ const Modal = ({
 Modal.propTypes = {
   title: React.PropTypes.string.isRequired,
   description: React.PropTypes.string.isRequired,
-  cancelType: React.PropsTypes.string,
-  cancelText: React.PropsTypes.string.isRequired,
-  cancelAction: React.PropsTypes.func.isRequired,
-  validateType: React.PropsTypes.string,
-  validateText: React.PropsTypes.string.isRequired,
-  validateAction: React.PropsTypes.func.isRequired
+  cancelType: React.PropTypes.string,
+  cancelText: React.PropTypes.string.isRequired,
+  cancelAction: React.PropTypes.func.isRequired,
+  validateType: React.PropTypes.string,
+  validateText: React.PropTypes.string.isRequired,
+  validateAction: React.PropTypes.func.isRequired
 }
 
 Modal.defaultProps = {
