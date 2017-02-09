@@ -1,48 +1,48 @@
-/*!
- * NOTIFICATIONS
- * =============
- *
- * This file contains all needs for modals
- */
+/*------------------------------------*\
+  Modals
+  ======
 
+  This file contains all needs for modals
+\*------------------------------------*/
 
 $modals
     modal-width = em(480px)
+
     .coz-modal
-        z-index 100
+        z-index  100
 
     .coz-overlay
         z-index    1100
-        position   absolute
-        top        0
-        left       0
-        height     100%
-        width      100%
-        background rgba(grey-08, .5)
-        visibility visible
-        transition opacity .3s, visibility 0s ease-out
+        position    absolute
+        top         0
+        left        0
+        height      100%
+        width       100%
+        background  rgba(grey-08, .5)
+        visibility  visible
+        transition  opacity .3s, visibility 0s ease-out
 
         &.coz-overlay--hidden
-            opacity    0
-            visibility hidden
-            transition opacity .3s 0s, visibility 0s ease-in .3s
+            opacity     0
+            visibility  hidden
+            transition  opacity .3s 0s, visibility 0s ease-in .3s
 
 
     .coz-modal
-        position         fixed
-        top              50%
-        left             50%
-        display          block
-        box-sizing       border-box
-        width            90%
-        height           auto
+        position          fixed
+        top               50%
+        left              50%
+        display           block
+        box-sizing        border-box
+        border-radius     em(8px)
+        width             90%
+        height            auto
         // Padding is set by inner element,
         // to be able to get horizontal separators.
-        padding          1em 0
-        border-radius    em(8px)
-        background-color white
-        color            grey-08
-        transform        translateX(-50%) translateY(-50%)
+        padding           1em 0
+        background-color  white
+        color             grey-08
+        transform         translateX(-50%) translateY(-50%)
 
         .coz-modal-content
             padding 0 1.5em
@@ -51,10 +51,10 @@ $modals
             border-top 1px solid grey-09
 
         .coz-modal-title
-            font-weight bold
-            margin      .33em 0 1em
+            margin       .33em 0 1em
             // font is 1.5em
-            padding     0 1em
+            padding      0 1em
+            font-weight  bold
 
         .coz-btn-modal-close
             position        absolute
@@ -66,7 +66,7 @@ $modals
             cursor          pointer
 
         .coz-modal-buttons
-            @extends $buttons
+            @extend $buttons
             top-spaced(2em)
             text-align      right
 
@@ -76,9 +76,9 @@ $modals
                 left-spaced(10px)
 
         &.coz-modal--hidden
-            top                        -25%
-            opacity                    0
-            transition-timing-function ease-in
+            top                         -25%
+            opacity                     0
+            transition-timing-function  ease-in
 
 
     @media all and (min-width modal-width)
