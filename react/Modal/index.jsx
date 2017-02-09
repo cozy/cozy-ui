@@ -34,7 +34,7 @@ const Modal = ({
 
 Modal.propTypes = {
   title: React.PropTypes.string.isRequired,
-  description: React.PropTypes.string.isRequired,
+  description: React.PropTypes.node.isRequired,
   cancelType: React.PropTypes.string,
   cancelText: React.PropTypes.string.isRequired,
   cancelAction: React.PropTypes.func.isRequired,
