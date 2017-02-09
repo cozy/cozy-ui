@@ -9,3 +9,11 @@ cache:
   - node_modules
 script:
 - yarn lint
+deploy:
+  provider: npm
+  email: npm@cozycloud.cc
+  api_key:
+    secure: eAJXf3L6DM6HNPzHs27PquK/HVIfE0T+lsM/7E6pFu5dL3q0X6A7cPE0bZ8U1VES+gie3HVxcTcNRG1sCkZJE85kqOhqj8IkFvzfD//5jObhET6JauA7xHUBR5JDhYmPNmrixGpIZpgCkc2UTmgngUQxY0zvQWtImZkgLtvzb5Q=
+  on:
+    tags: true
+    repo: cozy/cozy-ui
