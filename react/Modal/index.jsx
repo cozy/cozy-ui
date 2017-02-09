@@ -3,13 +3,9 @@ import classNames from 'classnames'
 
 import styles from './index.styl'
 
-export default (props) => {
-  const {
-    title, description,
-    cancelType, cancelText, cancelAction,
-    validateType, validateText, validateAction
-  } = props
-
+export default ({ title, description,
+                  cancelType, cancelText, cancelAction,
+                  validateType, validateText, validateAction }) => {
   const cancelTypeDefault = cancelType || 'secondary'
   const validateTypeDefault = validateType || 'primary'
 
