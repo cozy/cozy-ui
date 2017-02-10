@@ -1,3 +1,5 @@
+@import '../ui-base/z-index'
+
 /*------------------------------------*\
   Navigation
 \*------------------------------------*/
@@ -10,12 +12,12 @@ $navigation
 
     .coz-nav-item
         position  relative
-        z-index   1
+        z-index   $app-index
 
         &:hover::before
             content        ''
             position       absolute
-            z-index        -1
+            z-index        $below-index
             border-radius  0 3px 3px 0
             height         3em
             width          90%

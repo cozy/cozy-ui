@@ -1,3 +1,5 @@
+@import '../ui-base/z-index'
+
 /*------------------------------------*\
   Alerts
   ======
@@ -9,7 +11,7 @@ $alerts
     alert-width = em(480px)
 
     .coz-alerter
-        z-index  100
+        z-index  $alert-index
 
     .coz-overlay
         position    absolute
@@ -29,7 +31,7 @@ $alerts
 
     .coz-alert
         position          fixed
-        z-index           5
+        z-index           $alert-index
         top               em(16px)
         right             0
         bottom            em(50px)
