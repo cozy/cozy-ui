@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 - New placeholders for buttons : $button--secondary, $button--danger, $button--danger-outline, $button--highlight
+- z-index manager in ui-base/z-index.styl
 
 ### Changed
 - Renamed alert buttons
@@ -17,6 +18,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Removed buttons classes .primary, .secondary, .danger, .danger-outline, .hightlight
 - Removed placeholders $icon-spinner-small-blue, build your own options instead
 - Removed Drawer layout that wasn't functional anyway
+- Removed dialog, background, foreground, dropdown files
+
+## [3.0.0-beta9] - 2017-02-09
+### Changed
+- Updated Modal JSX component
+
+## [3.0.0-beta8] - 2017-02-09
+### Added
+- test NPM's autopublishing
 
 ## [3.0.0-beta7] - 2017-02-08
 ### Added
@@ -54,7 +64,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta7...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta9...HEAD
+[3.0.0-beta7]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta8...3.0.0-beta9
+[3.0.0-beta7]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta7...3.0.0-beta8
 [3.0.0-beta7]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta6...3.0.0-beta7
 [3.0.0-beta6]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta5...3.0.0-beta6
 [3.0.0-beta5]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta4...3.0.0-beta5
