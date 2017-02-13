@@ -20,7 +20,7 @@ $alerts
         background-color emerald
         box-shadow       0 em(6px) em(18px) 0 rgba(50, 54, 63, .23)
         box-sizing       border-box
-        padded(.8em, 1em)
+        padded           .8em, 1em
         color            white
         opacity          1
         transition       bottom .5s ease-out, top .5s ease-out, opacity .2s ease-out
@@ -50,14 +50,14 @@ $alerts
 
     @media all and (min-width alert-width)
         .coz-alert
-            top              em(16px)
-            bottom           auto
-            left             50%
-            margin-left      -(alert-width / 2)
-            max-width        alert-width
-            padded(1em, 1.5em)
-            width            100%
-            border-radius    em(10px)
+            top           em(16px)
+            bottom        auto
+            left          50%
+            margin-left   -(alert-width / 2)
+            max-width     alert-width
+            padded        1em, 1.5em
+            width         100%
+            border-radius em(10px)
 
             &.coz-alert--hidden
                 top -25%
