@@ -7,12 +7,9 @@
 
 $alerts
     alert-width = em(480px)
-    .coz-alerter
-        z-index 100
-
     .coz-alert
         display          block
-        z-index          100
+        z-index          5
         position         fixed
         bottom           50px
         left             0
@@ -50,6 +47,7 @@ $alerts
 
     @media all and (min-width alert-width)
         .coz-alert
+            z-index       100
             top           em(16px)
             bottom        auto
             left          50%
