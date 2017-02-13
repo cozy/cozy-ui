@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 import styles from './index.styl'
 
-const DEFAULT_AUTOCLOSE_DELAY = 5000
+const DEFAULT_AUTOCLOSE_DELAY = 3500
 
 class Alerter extends Component {
 
