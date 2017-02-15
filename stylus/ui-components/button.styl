@@ -13,6 +13,7 @@ $button
     background-color white
     font-size(14px)
     text-transform   uppercase
+    cursor           pointer
 
     &[disabled]
     &[aria-disabled=true]
@@ -33,6 +34,15 @@ $button--upload
 $button--more
     width      em(46px)
     background embedurl('../assets/icons/ui/icon-dots.svg') center center no-repeat
+
+$button--extra
+    width       em(46px)
+    background  embedurl('../assets/icons/ui/icon-dots.svg') center center no-repeat
+    border      0
+    opacity     .5
+
+$button--extra-white
+    background-image  embedurl('../assets/icons/ui/icon-dots-white.svg')
 
 $button--close
     width      em(46px)
