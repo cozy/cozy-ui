@@ -36,15 +36,22 @@ $modals
         box-sizing       border-box
         width            90%
         height           auto
-        padding          1em 1.5em
+        // Padding is set by inner element,
+        // to be able to get horizontal separators.
+        padding          1em 0em
         border-radius    em(8px)
         background-color white
         color            grey-08
         transform        translateX(-50%) translateY(-50%)
 
+        & > *
+            padding 0 1.5em
+
         .coz-modal-title
             font-weight bold
             margin 0.33em 0 1em
+            // font is 1.5em
+            padding     0 1em
 
         .coz-btn-modal-close
             position        absolute

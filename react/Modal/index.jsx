@@ -22,10 +22,7 @@ const Modal = ({
             {description}
           </div>
         }
-        { children && <div classNames={styles['coz-modal-content']}>
-          {children}
-          </div>
-        }
+        { children }
         <div className={styles['coz-modal-buttons']}>
           { (cancelText || validateAction) && <button className={styles[cancelType]} onClick={cancelAction}>
             {cancelText}
