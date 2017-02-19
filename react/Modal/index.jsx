@@ -6,26 +6,35 @@ import styles from './index.styl'
 const Modal = ({
   title, description,
   cancelType, cancelText, cancelAction,
-  validateType, validateText, validateAction
+  validateType, validateText, validateAction, children
 }) => (
   <div className={styles['coz-modal-container']}>
     <div className={styles['coz-overlay']}>
       <div className={styles['coz-modal']}>
         <h2 className={styles['coz-modal-title']}>{title}</h2>
         <button
-          className={classNames('coz-btn', 'coz-btn--close', styles['coz-modal-close'])}
+          className={classNames('coz-btn', 'coz-btn--close', styles['coz-btn-modal-close'])}
           onClick={cancelAction}
           >
           <span className='coz-hidden'>{cancelText}</span>
         </button>
-        {description}
+        { description && <div className={classNames(styles['coz-modal-content'], styles['coz-description'])}>
+            {description}
+          </div>
+        }
+        { children && <div classNames={styles['coz-modal-content']}>
+          {children}
+          </div>
+        }
         <div className={styles['coz-modal-buttons']}>
-          <button className={styles[cancelType]} onClick={cancelAction}>
+          { (cancelText || validateAction) && <button className={styles[cancelType]} onClick={cancelAction}>
             {cancelText}
           </button>
-          <button className={styles[validateType]} onClick={validateAction}>
+          }
+          { (validateText || validateAction) && <button className={styles[validateType]} onClick={validateAction}>
             {validateText}
           </button>
+          }
         </div>
       </div>
     </div>
@@ -34,13 +43,13 @@ const Modal = ({
 
 Modal.propTypes = {
   title: React.PropTypes.string.isRequired,
-  description: React.PropTypes.node.isRequired,
+  description: React.PropTypes.node,
   cancelType: React.PropTypes.string,
-  cancelText: React.PropTypes.string.isRequired,
-  cancelAction: React.PropTypes.func.isRequired,
+  cancelText: React.PropTypes.string,
+  cancelAction: React.PropTypes.func,
   validateType: React.PropTypes.string,
-  validateText: React.PropTypes.string.isRequired,
-  validateAction: React.PropTypes.func.isRequired
+  validateText: React.PropTypes.string,
+  validateAction: React.PropTypes.func
 }
 
 Modal.defaultProps = {
