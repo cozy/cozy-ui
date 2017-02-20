@@ -1,0 +1,58 @@
+slate-grey = #5d6165
+
+$selectionbar
+    .coz-selectionbar
+        position fixed
+        z-index  1000
+        top      0
+        left     0
+        display         flex
+        justify-content center
+        align-items     center
+        width           100%
+        height          em(56px)
+        color white
+        background-color slate-grey
+        font-weight bold
+
+        .coz-selectionbar-separator
+            width            4px
+            height           4px
+            margin           0 0.5em 0 2em
+            background-color black
+            border-radius    50%
+
+        button
+            left-padded(50px)
+            border              none
+            color               white
+            background-color    transparent
+            background-position em(24px) center
+            background-repeat   no-repeat
+            line-height         em(48px)
+            font-size(14px)
+            font-weight         bold
+            text-transform      uppercase
+            cursor              pointer
+
+            &.coz-action-close
+              position         absolute
+              top              50%
+              right            0
+              transform        translateY(-50%)
+              background-image embedurl("../assets/icons/ui/icon-cross-white.svg")
+              text-indent      -9999px
+
+    @media (max-width: (1023/basefont)rem)
+        .coz-selectionbar
+            height em(48px)
+            justify-content flex-start
+
+            .coz-selectionbar-count
+            .coz-selectionbar-separator
+                display none
+
+            button
+                padding-left 0
+                color transparent
+                width em(68px)
