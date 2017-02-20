@@ -18,13 +18,13 @@ $selectionbar
         .coz-selectionbar-separator
             width            4px
             height           4px
-            margin           0 0.5em 0 2em
+            margin           0 .5em 0 2em
             background-color black
             border-radius    50%
 
         button
             left-padded(50px)
-            border              none
+            border              0
             color               white
             background-color    transparent
             background-position em(24px) center
@@ -36,12 +36,12 @@ $selectionbar
             cursor              pointer
 
             &.coz-action-close
-              position         absolute
-              top              50%
-              right            0
-              transform        translateY(-50%)
-              background-image embedurl("../assets/icons/ui/icon-cross-white.svg")
-              text-indent      -9999px
+                position         absolute
+                top              50%
+                right            0
+                transform        translateY(-50%)
+                background-image embedurl("../assets/icons/ui/icon-cross-white.svg")
+                text-indent      -9999px
 
     @media (max-width: (1023/basefont)rem)
         .coz-selectionbar
