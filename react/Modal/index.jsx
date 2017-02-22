@@ -24,11 +24,11 @@ const Modal = ({
         }
         { children }
         <div className={styles['coz-modal-buttons']}>
-          { (cancelText || cancelAction) && <button className={styles[cancelType]} onClick={cancelAction}>
+          { (cancelText && cancelAction) && <button className={styles[cancelType]} onClick={cancelAction}>
             {cancelText}
           </button>
           }
-          { (validateText || validateAction) && <button className={styles[validateType]} onClick={validateAction}>
+          { (validateText && validateAction) && <button className={styles[validateType]} onClick={validateAction}>
             {validateText}
           </button>
           }
