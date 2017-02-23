@@ -23,16 +23,18 @@ const Modal = ({
           </div>
         }
         { children }
-        <div className={styles['coz-modal-buttons']}>
-          { (cancelText && cancelAction) && <button className={styles[cancelType]} onClick={cancelAction}>
-            {cancelText}
-          </button>
-          }
-          { (validateText && validateAction) && <button className={styles[validateType]} onClick={validateAction}>
-            {validateText}
-          </button>
-          }
-        </div>
+        { ((cancelText && cancelAction) || (validateText && validateAction)) &&
+          <div className={styles['coz-modal-buttons']}>
+            { (cancelText && cancelAction) && <button className={styles[cancelType]} onClick={cancelAction}>
+              {cancelText}
+            </button>
+            }
+            { (validateText && validateAction) && <button className={styles[validateType]} onClick={validateAction}>
+              {validateText}
+            </button>
+            }
+          </div>
+        }
       </div>
     </div>
   </div>
