@@ -10,28 +10,9 @@
 $alerts
     alert-width = em(480px)
 
-    .coz-alerter
-        z-index  $alert-index
-
-    .coz-overlay
-        position    absolute
-        top         0
-        left        0
-        height      100%
-        width       100%
-        background  white
-        opacity     .6
-        visibility  visible
-        transition  opacity .3s, visibility 0s ease-out
-
-        &.coz-overlay--hidden
-            opacity     0
-            visibility  hidden
-            transition  opacity .3s 0s, visibility 0s ease-in .3s
-
     .coz-alert
         position          fixed
-        z-index           $alert-index
+        z-index           $alert-index-mobile
         top               em(16px)
         right             0
         bottom            em(50px)
@@ -72,7 +53,7 @@ $alerts
 
     @media all and (min-width alert-width)
         .coz-alert
-            z-index       100
+            z-index       $alert-index
             top           em(16px)
             bottom        auto
             left          50%

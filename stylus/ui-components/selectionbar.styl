@@ -1,32 +1,41 @@
+@import '../ui-base/z-index'
+
+/*------------------------------------*\
+  Pop over
+  ======
+
+  This file contains all needs for popover
+\*------------------------------------*/
+
 $selectionbar
     .coz-selectionbar
-        position         fixed
-        z-index          1000
-        top              0
-        left             0
-        display          flex
-        justify-content  center
-        align-items      center
-        width            100%
-        height           em(56px)
-        color            white
-        background-color grey-12
-        font-weight      bold
+        position          fixed
+        z-index           $selection-index
+        top               0
+        left              0
+        display           flex
+        justify-content   center
+        align-items       center
+        width             100%
+        height            em(56px)
+        background-color  grey-12
+        color             white
+        font-weight       bold
 
         .coz-selectionbar-separator
-            width            4px
-            height           4px
-            margin           0 .5em 0 2em
-            background-color black
-            border-radius    50%
+            margin            0 .5em 0 2em
+            width             4px
+            height            4px
+            border-radius     50%
+            background-color  black
 
         button
-            left-padded         50px
             border              0
-            color               white
+            left-padded         50px
             background-color    transparent
             background-position em(24px) center
             background-repeat   no-repeat
+            color               white
             line-height         em(48px)
             font-size           14px
             font-weight         bold
@@ -43,14 +52,14 @@ $selectionbar
 
     @media (max-width: (1023/basefont)rem)
         .coz-selectionbar
-            height em(48px)
-            justify-content flex-start
+            height           em(48px)
+            justify-content  flex-start
 
             .coz-selectionbar-count
             .coz-selectionbar-separator
                 display none
 
             button
-                width        em(68px)
-                padding-left 0
-                color        transparent
+                width         em(68px)
+                padding-left  0
+                color         transparent
