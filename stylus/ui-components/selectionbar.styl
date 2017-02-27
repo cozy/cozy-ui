@@ -1,10 +1,10 @@
 @import '../ui-base/z-index'
 
 /*------------------------------------*\
-  Pop over
+  Selection Bar
   ======
 
-  This file contains all needs for popover
+  This file contains all needs for Selection Bar
 \*------------------------------------*/
 
 $selectionbar
@@ -13,6 +13,7 @@ $selectionbar
         z-index           $selection-index
         top               0
         left              0
+        box-sizing        border-box
         display           flex
         justify-content   center
         align-items       center
@@ -42,24 +43,55 @@ $selectionbar
             text-transform      uppercase
             cursor              pointer
 
-            &.coz-action-close
-                position         absolute
-                top              50%
-                right            0
-                transform        translateY(-50%)
-                background-image embedurl('../assets/icons/ui/icon-cross-white.svg')
-                text-indent      -9999px
+        .coz-action-share
+            background embedurl('../assets/icons/ui/icon-share.svg') em(24px) center no-repeat
+
+        .coz-action-download
+            background embedurl('../assets/icons/ui/icon-download.svg') em(24px) center no-repeat
+
+        .coz-action-delete
+            background embedurl('../assets/icons/ui/icon-delete.svg') em(24px) center no-repeat
+
+        .coz-action-moveto
+            background embedurl('../assets/icons/ui/icon-moveto.svg') em(24px) center no-repeat
+
+        .coz-action-rename
+            background embedurl('../assets/icons/ui/icon-rename.svg') em(24px) center no-repeat
+
+        .coz-action-restore
+            background embedurl('../assets/icons/ui/icon-restore-white.svg') em(24px) center no-repeat
+
+        .coz-action-close
+            position     absolute
+            top          50%
+            right        0
+            background   embedurl('../assets/icons/ui/icon-cross-white.svg') em(24px) center no-repeat
+            text-indent  -9999px
+            transform    translateY(-50%)
 
     @media (max-width: (1023/basefont)rem)
         .coz-selectionbar
-            height           em(48px)
+            top              auto
+            bottom           em(50px)
             justify-content  flex-start
+            height           em(48px)
+            padding-left     1em
+            padding-right    1em
 
-            .coz-selectionbar-count
-            .coz-selectionbar-separator
+            .coz-selectionbar-count span
+            .coz-action-share
+            .coz-action-moveto
+            .coz-action-rename
                 display none
 
+            .coz-selectionbar-separator
+                margin   0 0 0 1em
+
             button
-                width         em(68px)
+                width         em(48px)
                 padding-left  0
                 color         transparent
+
+            .coz-action-download
+            .coz-action-delete
+                opacity .5
