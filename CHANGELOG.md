@@ -1,10 +1,23 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-This project adheres to [Semantic Versioning](http://semver.org/).
+The format is based on [Keep a Changelog](http://keepachangelog.com/)
+and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- none yet
 
+### Fixed
+- none yet
+
+### Added
+- none yet
+
+### Removed
+- none yet
+
+## [3.0.0-beta12] - 2017-02-27
 ### Changed
 - Enhance modal header margins
 - Modal : do not display the button panel if there is no button
@@ -64,7 +77,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Added modal close button cursor
 - Added optional alerter close callback
 
-## Changed
+### Changed
 - Fixed withState react import
 - Bumped default notification delay
 - Adjusted modal's width for mobile
@@ -93,7 +106,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta11...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta12...HEAD
+[3.0.0-beta12]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta11...3.0.0-beta12
 [3.0.0-beta11]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta10...3.0.0-beta11
 [3.0.0-beta10]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta9...3.0.0-beta10
 [3.0.0-beta9]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta8...3.0.0-beta9
