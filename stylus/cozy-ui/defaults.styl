@@ -4,25 +4,6 @@
 @import '../ui-base/animations'
 
 
-// UTILS
-@import '../ui-base/mixins'
-:global .coz-hidden
-    @extend $hidden
-
-
-// LAYOUT
-[role=application]
-    width      100vw
-    height     100vh
-    overflow-x hidden
-
-
-// BOXES
-@import '../ui-base/boxes'
-[aria-hidden=true]
-    hide()
-
-
 // FONTS
 @import '../ui-base/fonts'
 @font-face
@@ -40,6 +21,34 @@
 body
     font 1em/1.5
     @extend $font-labor
+
+
+// UTILS
+@import '../ui-base/mixins'
+:global
+    .coz-hidden
+        @extend $hidden
+
+    .coz-desktop
+        @media (max-width: (1023/basefont)rem)
+            display none !important
+
+    .coz-mobile
+        @media (min-width: (1024/basefont)rem)
+            display none !important
+
+
+// LAYOUT
+[role=application]
+    width      100vw
+    height     100vh
+    overflow-x hidden
+
+
+// BOXES
+@import '../ui-base/boxes'
+[aria-hidden=true]
+    hide()
 
 
 // COLORS
