@@ -51,7 +51,9 @@ $app-2panes-sticky
     @extend $app-2panes
 
     @media (max-width: (1023/basefont)rem)
-        height 'calc(100vh - %s)' % em(50px)
+        height 'calc(100vh - %s)' % em(102px)
+        // Occupy all the available height minus the heights of the Cozy-bar
+        // (52px) on top & the navigation (50px) on bottom
 
         > aside
             position fixed

@@ -7,7 +7,7 @@
 
 @import '../ui-components/button'
 
-checkbox-size = 20px
+checkbox-size = 16px
 
 $form
     .coz-form
@@ -126,6 +126,9 @@ $form-select
 
 
 $form-checkbox
+    // To make sure that checkbox's wrapper have the height of the checkbox
+    display flex
+
     input[type=radio]
     input[type=checkbox]
         hide()
