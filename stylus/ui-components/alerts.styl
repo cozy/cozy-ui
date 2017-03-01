@@ -1,15 +1,12 @@
-@import '../ui-base/z-index'
-
-/*------------------------------------*\
-  Alerts
-  ======
-
-  This file contains all needs for alerts
-\*------------------------------------*/
+/*!
+ * NOTIFICATIONS
+ * =============
+ *
+ * This file contains all needs for alerts
+ */
 
 $alerts
     alert-width = em(480px)
-
     .coz-alert
         position          fixed
         z-index           $alert-index-mobile
@@ -30,30 +27,31 @@ $alerts
         cursor            pointer
 
         p
-            margin       0
-            line-height  1.5
+            margin      0
+            line-height 1.5
 
         .coz-alert-title
-            font-weight  bold
+            font-weight bold
 
         &.coz-alert--hidden
-            bottom                      -25%
-            opacity                     0
-            transition-timing-function  ease-in
+            bottom                     -25%
+            top                        auto
+            opacity                    0
+            transition-timing-function ease-in
 
     .coz-alert--error
-        background-color  pomegranate
+        background-color pomegranate
 
     .coz-alert--success
-        background-color  emerald
+        background-color emerald
 
     .coz-alert--info
-        background-color  grey-12
+        background-color grey-12
 
 
     @media all and (min-width alert-width)
         .coz-alert
-            z-index       $alert-index
+            z-index       100
             top           em(16px)
             bottom        auto
             left          50%
@@ -64,4 +62,5 @@ $alerts
             border-radius em(10px)
 
             &.coz-alert--hidden
-                top -25%
+                top     -25%
+                bottom  auto
