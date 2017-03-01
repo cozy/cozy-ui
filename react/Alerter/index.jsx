@@ -18,7 +18,7 @@ class Alerter extends Component {
 
   componentDidMount () {
     if (this.shouldAutoClose) {
-      const closeDelay = this.props.duration ? parseInt(this.props.duration) : DEFAULT_AUTOCLOSE_DELAY;
+      const closeDelay = this.props.duration ? parseInt(this.props.duration) : DEFAULT_AUTOCLOSE_DELAY
 
       this.closeTimer = setTimeout(() => {
         this.setState({ hidden: true })
