@@ -9,13 +9,29 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Fixed
-- Alerter height on mobile (#64)
+- none yet
 
 ### Added
 - none yet
 
 ### Removed
 - none yet
+
+## [3.0.0-beta13] - 2017-03-03
+### Changed
+- Rendering on Checkboxes
+- Z-indexes all over
+- Updated selectionbar component's style
+
+### Fixed
+- Alerter height on mobile
+- Modal component's mayhem after refactoring
+- Layout's height fixed after adding Cozy-bar
+- Various micro rendering fix
+
+### Added
+- Utils classes .coz-mobile & .coz-desktop to show/hide elements
+on desktop or mobile view
 
 ## [3.0.0-beta12] - 2017-02-27
 ### Changed
@@ -107,6 +123,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 [Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta12...HEAD
+[3.0.0-beta13]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta12...3.0.0-beta13
 [3.0.0-beta12]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta11...3.0.0-beta12
 [3.0.0-beta11]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta10...3.0.0-beta11
 [3.0.0-beta10]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta9...3.0.0-beta10
