@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Added
-- none yet
+- Class .coz-btn--upload-menu-item to use for an upload button in a menu
 
 ### Removed
 - none yet
