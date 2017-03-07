@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Fixed
-- none yet
+- Avoid hover effect on disabled buttons
 
 ### Added
 - Class .coz-link--upload to use for an upload button in a menu
