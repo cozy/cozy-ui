@@ -9,14 +9,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Fixed
+- none yet
+
+### Added
+- none yet
+
+### Removed
+- none yet
+
+## [3.0.0-beta14] - 2017-03-07
+### Fixed
 - Avoid hover effect on disabled buttons
 - Improve sidebar height on mobile, to be equal to selection bottom offset
 
 ### Added
 - Class .coz-link--upload to use for an upload button in a menu
-
-### Removed
-- none yet
 
 ## [3.0.0-beta13] - 2017-03-03
 ### Changed
@@ -123,7 +130,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta13...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta14...HEAD
+[3.0.0-beta14]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta13...3.0.0-beta14
 [3.0.0-beta13]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta12...3.0.0-beta13
 [3.0.0-beta12]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta11...3.0.0-beta12
 [3.0.0-beta11]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta10...3.0.0-beta11
