@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Avoid hover effect on disabled buttons
+- Improve sidebar height on mobile, to be equal to selection bottom offset
 
 ### Added
 - Class .coz-link--upload to use for an upload button in a menu
