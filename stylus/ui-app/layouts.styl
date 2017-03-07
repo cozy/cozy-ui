@@ -42,8 +42,9 @@ $app-2panes
     main > [role=contentinfo]
         display         flex
         flex-direction  column
-        flex            1
-        height          auto
+        flex            1 1 auto
+        box-sizing      border-box
+        height          100%
         overflow-x      hidden
         overflow-y      auto
 
@@ -53,9 +54,9 @@ $app-2panes-sticky
     @extend $app-2panes
 
     @media (max-width: (1023/basefont)rem)
-        height 'calc(100vh - %s)' % em(102px)
+        height 'calc(100vh - %s)' % em(90px, 16px)
         // Occupy all the available height minus the heights of the Cozy-bar
-        // (52px) on top & the navigation (50px) on bottom
+        // (40px) on top & the navigation (50px) on bottom
 
         > aside
             position fixed
