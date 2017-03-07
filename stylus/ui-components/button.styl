@@ -45,7 +45,7 @@ $button--regular
     color             white
 
     &:active
-    &:hover
+    &:not([disabled]):not([aria-disabled=true]):hover
     &:focus
         border-color      science-blue
         background-color  science-blue
@@ -60,7 +60,7 @@ $button--secondary
     border            1px solid grey-09
 
     &:active
-    &:hover
+    &:not([disabled]):not([aria-disabled=true]):hover
     &:focus
         background-color  grey-09
 
