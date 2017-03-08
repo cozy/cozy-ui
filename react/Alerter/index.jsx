@@ -1,12 +1,86 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
+import { connect } from 'react-redux'
 
-import styles from './index.styl'
+import { translate } from '../helpers/i18n'
+
+import styles from './styles'
+
+const ALERT_SHOW = 'ALERT_SHOW'
+const ALERT_DISMISS = 'ALERT_DISMISS'
+const ALERT_CLEAR = 'ALERT_CLEAR'
 
 const DEFAULT_AUTOCLOSE_DELAY = 3500
+const DEFAULT_ALERT_LEVEL = 'info'
+const DISMISS_DELAY = 500
 
-class Alerter extends Component {
+const reducer = (state = [], action) => {
+  if (action.alert) {
+    if (!action.alert.id) {
+      action.alert.id = new Date().getTime()
+    }
+    return [action.alert, ...state]
+  }
+  switch (action.type) {
+    case ALERT_SHOW:
+      return [action.alert, ...state.filter(a => a.id !== action.id)]
+    case ALERT_DISMISS:
+      return state.filter(a => a.id !== action.id)
+    case ALERT_CLEAR:
+      return []
+    default:
+      return state
+  }
+}
 
+export default reducer
+
+// Action creators
+export const alertShow = (message, messageData = null, level = DEFAULT_ALERT_LEVEL) => ({
+  type: ALERT_SHOW,
+  id: new Date().getTime(),
+  message,
+  messageData,
+  level
+})
+
+export const alertDismiss = id => ({
+  type: ALERT_DISMISS,
+  id
+})
+
+export const alertClear = () => ({
+  type: ALERT_CLEAR
+})
+
+// Dumb component that wraps the alerts
+const Wrapper = ({ t, alerts, dismiss }) => (
+  <div className={styles['coz-alerter']}>
+    {alerts.map(alert =>
+      <Alert
+        id={alert.id}
+        message={t(alert.message, alert.messageData)}
+        level={alert.level || DEFAULT_ALERT_LEVEL}
+        buttonText={alert.buttonText}
+        buttonAction={alert.buttonAction}
+        onClose={dismiss}
+      />
+    )}
+  </div>
+)
+
+const mapStateToProps = state => ({
+  alerts: state.alerts
+})
+const mapDispatchToProps = dispatch => ({
+  dismiss: id => dispatch(alertDismiss(id))
+})
+
+// Connected & exported JSX component
+export const Alerter = translate()(connect(mapStateToProps, mapDispatchToProps)(Wrapper))
+
+// Handles the fade-in/fade-out effect of each indiviual alert
+class Alert extends Component {
   constructor (props) {
     super()
     this.state = {
@@ -14,6 +88,7 @@ class Alerter extends Component {
     }
     this.shouldAutoClose = !props.buttonText
     this.closeTimer = null
+    this.dismissTimer = null
   }
 
   componentDidMount () {
@@ -22,7 +97,9 @@ class Alerter extends Component {
 
       this.closeTimer = setTimeout(() => {
         this.setState({ hidden: true })
-        if (this.props.onClose && typeof this.props.onClose === 'function') this.props.onClose()
+        this.dismissTimer = setTimeout(() => {
+          this.props.onClose(this.props.id)
+        }, DISMISS_DELAY)
       }, closeDelay)
     }
     // Delay to trigger CSS transition after the first render.
@@ -37,17 +114,19 @@ class Alerter extends Component {
     if (this.closeTimer) {
       clearTimeout(this.closeTimer)
     }
+    if (this.dismissTimer) {
+      clearTimeout(this.dismissTimer)
+    }
   }
 
   render () {
-    const { message, type, buttonText, buttonAction } = this.props
+    const { message, level, buttonText, buttonAction } = this.props
     const { hidden } = this.state
-
-    return (<div className={styles['coz-alerter']}>
+    return (
       <div
         className={classNames(
           styles['coz-alert'],
-          styles[`coz-alert--${type}`],
+          styles[`coz-alert--${level}`],
           hidden ? styles['coz-alert--hidden'] : ''
         )}
       >
@@ -58,8 +137,6 @@ class Alerter extends Component {
           </button>
         }
       </div>
-    </div>)
+    )
   }
 }
-
-export default Alerter
