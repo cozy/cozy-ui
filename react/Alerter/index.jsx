@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 import { translate } from '../helpers/i18n'
 
-import styles from './index.styl'
+import styles from './styles'
 
 const ALERT_SHOW = 'ALERT_SHOW'
 const ALERT_DISMISS = 'ALERT_DISMISS'
