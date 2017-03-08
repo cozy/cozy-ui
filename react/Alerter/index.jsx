@@ -97,11 +97,9 @@ class Alert extends Component {
 
       this.closeTimer = setTimeout(() => {
         this.setState({ hidden: true })
-        if (this.props.onClose && typeof this.props.onClose === 'function') {
-          this.dismissTimer = setTimeout(() => {
-            this.props.onClose(this.props.id)
-          }, DISMISS_DELAY)
-        }
+        this.dismissTimer = setTimeout(() => {
+          this.props.onClose(this.props.id)
+        }, DISMISS_DELAY)
       }, closeDelay)
     }
     // Delay to trigger CSS transition after the first render.
