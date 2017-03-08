@@ -6,13 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Changed
-- none yet
+- Sticky layout management (flexbox-only)
 
 ### Fixed
-- none yet
+- Lots of minor UI fixes
 
 ### Added
-- none yet
+- Fixed table header on scroll
 
 ### Removed
 - none yet

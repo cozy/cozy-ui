@@ -40,10 +40,13 @@ $app-2panes
 
     main,
     main > [role=contentinfo]
-        flex        1
-        height      auto
-        overflow-x  hidden
-        overflow-y  auto
+        display         flex
+        flex-direction  column
+        flex            1 1 auto
+        box-sizing      border-box
+        height          100%
+        overflow-x      hidden
+        overflow-y      auto
 
 // STICKY layout
 // When you want the sidebar to act like a sticky footer
@@ -51,13 +54,9 @@ $app-2panes-sticky
     @extend $app-2panes
 
     @media (max-width: (1023/basefont)rem)
-        height 'calc(100vh - %s)' % em(102px)
-        // Occupy all the available height minus the heights of the Cozy-bar
-        // (52px) on top & the navigation (50px) on bottom
+        flex-direction column-reverse
 
         > aside
-            position fixed
-            left 0
-            bottom 0
+            flex 0 0 em(50px, 16px)
             width 100%
             z-index $nav-index
