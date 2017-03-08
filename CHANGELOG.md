@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Changed
+- none yet
+
+### Fixed
+- none yet
+
+### Added
+- none yet
+
+### Removed
+- none yet
+
+## [3.0.0-beta15] - 2017-03-08
+### Changed
 - Sticky layout management (flexbox-only)
 
 ### Fixed
@@ -13,9 +26,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - Fixed table header on scroll
-
-### Removed
-- none yet
 
 ## [3.0.0-beta14] - 2017-03-07
 ### Fixed
@@ -130,7 +140,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta14...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta15...HEAD
+[3.0.0-beta15]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta14...3.0.0-beta15
 [3.0.0-beta14]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta13...3.0.0-beta14
 [3.0.0-beta13]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta12...3.0.0-beta13
 [3.0.0-beta12]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta11...3.0.0-beta12
