@@ -9,10 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Fixed
-- none yet
+- Lots of minor UI fixes
 
 ### Added
-- none yet
+- Fixed table header on scroll
 
 ### Removed
 - none yet
