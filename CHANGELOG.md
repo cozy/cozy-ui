@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Changed
-- none yet
+- Sticky layout management (flexbox-only)
 
 ### Fixed
 - Lots of minor UI fixes
