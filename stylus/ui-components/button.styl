@@ -120,13 +120,17 @@ $button--more
     background-position  center center
     background-repeat    no-repeat
 
-$button--extra
+$extra
     width       em(46px)
-    background  embedurl('../assets/icons/ui/icon-dots.svg') center center no-repeat
     border      0
+
+$button--extra
+    @extend $extra
+    background  embedurl('../assets/icons/ui/icon-dots.svg') center center no-repeat
     opacity     .5
 
 $button--extra-white
+    @extend $extra
     background-image  embedurl('../assets/icons/ui/icon-dots-white.svg')
 
 $button--close
