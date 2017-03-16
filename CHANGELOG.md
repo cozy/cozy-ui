@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Changed
-- none yet
+- Nav height on mobile is now 48px which is what it was supposed to be in the first place.
 
 ### Fixed
 - none yet
