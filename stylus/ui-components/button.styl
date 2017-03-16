@@ -1,0 +1,180 @@
+
+@import '../ui-base/icons'
+
+/*------------------------------------*\
+  Buttons of any kind
+\*------------------------------------*/
+
+/**
+ * 1. `font-size` calls the font-size function in ui-components/fonts.styl
+      and replaces px value by an em value. Don't be scared by this. :)
+ */
+
+$button
+    box-sizing       border-box
+    display          inline-block
+    margin           0 .25em
+    border           1px solid white
+    border-radius    2px
+    height           em(40px, 14px)
+    padding          em(13px, 14px) em(15px, 14px) em(11px, 14px)
+    background       transparent
+    vertical-align   top
+    text-align       center
+    font-size        14px /* [1] */
+    line-height      1
+    text-transform   uppercase
+    text-decoration  none
+    cursor           pointer
+
+    &[disabled]
+    &[aria-disabled=true]
+        opacity  .5
+        cursor   default
+
+    &[aria-busy=true]
+        &::after
+            @extend    $icon-16
+            position   relative
+            top        em(-1px)
+
+
+$button--regular
+    border-color      dodger-blue
+    background-color  dodger-blue
+    color             white
+
+    &:active
+    &:not([disabled]):not([aria-disabled=true]):hover
+    &:focus
+        border-color      science-blue
+        background-color  science-blue
+
+    &[aria-busy=true]
+        &::after
+            @extend  $icon-spinner-white
+
+$button--secondary
+    background-color  white
+    color             black
+    border            1px solid grey-09
+
+    &:active
+    &:not([disabled]):not([aria-disabled=true]):hover
+    &:focus
+        background-color  grey-09
+
+    &[aria-busy=true]
+        &::after
+            @extend  $icon-spinner-blue
+
+$button--danger
+    border-color      pomegranate
+    background-color  pomegranate
+    color             white
+
+    &:active
+    &:hover
+    &:focus
+        border-color      monza
+        background-color  monza
+
+$button--danger-outline
+    background-color  white
+    color             pomegranate
+    border            1px solid your-pink
+
+    &:active
+    &:hover
+    &:focus
+        background-color  your-pink
+
+$button--highlight
+    border-color      emerald
+    background-color  emerald
+    color             white
+
+    &:active
+    &:hover
+    &:focus
+        border-color      malachite
+        background-color  malachite
+
+$button--upload
+    padding-left         em(44px, 16px)
+    background-image     embedurl('../assets/icons/ui/icon-upload.svg')
+    background-position  em(17px, 16px) center
+    background-repeat    no-repeat
+
+    input
+        cursor pointer
+
+$link--upload
+    background-image     embedurl('../assets/icons/ui/icon-upload-grey08.svg')
+    background-position  em(16px) center
+    background-repeat    no-repeat
+
+$button--more
+    width                em(46px)
+    background-image     embedurl('../assets/icons/ui/icon-dots.svg')
+    background-position  center center
+    background-repeat    no-repeat
+
+$extra
+    width       em(46px)
+    border      0
+
+$button--extra
+    @extend $extra
+    background  embedurl('../assets/icons/ui/icon-dots.svg') center center no-repeat
+    opacity     .5
+
+$button--extra-white
+    @extend $extra
+    background-image  embedurl('../assets/icons/ui/icon-dots-white.svg')
+
+$button--close
+    border               0
+    width                em(46px)
+    background-image     embedurl('../assets/icons/ui/icon-cross.svg')
+    background-position  center center
+    background-repeat    no-repeat
+
+
+/*------------------------------------*\
+  Alert's specific buttons
+\*------------------------------------*/
+$button-alert
+    margin       .5rem 0 0
+    border       0
+    height       auto
+    padding      .5rem 1rem
+    font-weight  bold
+
+$button-alert--error
+    @extend $button-alert
+    color   pomegranate
+
+    &:active
+    &:hover
+    &:focus
+        color  darken(pomegranate, 25%)
+
+$button-alert--info
+    @extend           $button-alert
+    background-color  grey-11
+    color             white
+
+    &:active
+    &:hover
+    &:focus
+        color  darken(white, 10%)
+
+$button-alert--success
+    @extend $button-alert
+    color   emerald
+
+    &:active
+    &:hover
+    &:focus
+        color darken(emerald, 25%)

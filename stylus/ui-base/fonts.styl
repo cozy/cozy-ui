@@ -1,0 +1,82 @@
+/*------------------------------------*\
+  Fonts
+  =====
+
+  This file contains fonts concerns:
+  - font utils
+  - base fonts declarations
+\*------------------------------------*/
+
+// @stylint off
+use('../utils/checksum.js')
+use('../utils/split.js')
+
+
+// Fonts stacks
+$font-title
+    font-family  Lato, sans-serif
+    font-weight  bold
+
+$font-labor
+    font-family  Lato, sans-serif
+
+
+// Contextual fonts store, based on the selector checksum hash
+basefonts = {}
+
+// contextual-basefont takes a selector string as input, and try to get the
+// basefont in this context. If it doesn't explcitely exists, it checks its
+// parent, etc, and fallback to the global basefont.
+context-basefont(selector)
+    parent = split(' ', selector)
+    pop(parent)
+    if length(parent) > 1
+        parent = join(' ', parent)
+
+    if length(parent) is 0
+        basefont
+    else if (_parentId = checksum(parent)) in basefonts
+        basefonts[_parentId]
+    else
+        context-basefont(unquote(parent))
+
+
+// A handy replacement for the `font-size` property. Just use it as usual:
+// `font-size: <n>` (colon is optionnal). It applies the font-size property in
+// _EM_ and stores the font-size base for this context.
+font-size(n)
+    currentBasefont = context-basefont(selector())
+    font-size em(n, currentBasefont)
+
+    _id = checksum(selector())
+    if unit(n) is 'em'
+        currentBasefont = context-basefont(selector())
+        n = unit(n * currentBasefont, 'px')
+    basefonts[_id] = n
+
+
+// Returns the given value in _EM_. If the inital value is given in _PX_, it
+//  applies a conversion to _EM_ based on the contextual basefont size.
+em(n, base = null)
+    if base is not null
+        basefont = base
+    else
+        _id = checksum(selector())
+        if _id in basefonts
+            basefont = basefonts[_id]
+        else
+            basefont = context-basefont(selector())
+
+    if unit(n) is 'px'
+        val = round(n / basefont, 5)
+    else
+        val = n
+    unit(val, 'em')
+
+
+// We need a base font-size for _px to em_ computation. We assume those size to
+// be 16px (as default desktop browsers), but it really don't care as well as
+// all relative units should be expressed in `em`
+basefont = 16px
+
+// @stylint on

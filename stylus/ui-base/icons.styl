@@ -1,0 +1,74 @@
+@import 'animations'
+
+/*------------------------------------*\
+  Icons
+  ================
+
+  This file contains icons coded in data:uri
+\*------------------------------------*/
+
+$icon
+    content              ''
+    display              inline-block
+    vertical-align       middle
+    margin-left          .5em
+    background-position  center
+    background-repeat    no-repeat
+    background-size      cover
+
+
+/*------------------------------------*\
+  Icon's sizes
+\*------------------------------------*/
+
+$icon-12
+    width   .75rem // 12px
+    height  .75rem
+
+$icon-16
+    width   1rem // 16px
+    height  1rem
+
+$icon-24
+    width   1.5rem // 24px
+    height  1.5rem
+
+$icon-36
+    width   2.25rem // 36px
+    height  2.25rem
+
+
+/*------------------------------------*\
+  Icon's properties
+\*------------------------------------*/
+
+$icon-centered
+    position   absolute
+    top        50%
+    left       50%
+    transform  translateX(-50%) translateY(-50%)
+
+$spin-anim
+    // arguments' order is important: the animation name must stay first
+    // so that scoping works
+    animation  spin 1s linear infinite
+
+
+/*------------------------------------*\
+  Spinners
+\*------------------------------------*/
+
+$icon-spinner-grey
+    @extend           $icon
+    @extend           $spin-anim
+    background-image  embedurl('../../assets/icons/ui/spinner-grey.svg')
+
+$icon-spinner-white
+    @extend           $icon
+    @extend           $spin-anim
+    background-image  embedurl('../../assets/icons/ui/spinner-white.svg')
+
+$icon-spinner-blue
+    @extend           $icon
+    @extend           $spin-anim
+    background-image  embedurl('../../assets/icons/ui/spinner-blue.svg')
