@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-import styles from './index.styl'
+import styles from './styles.styl'
 
 const ModalTitle = ({ title }) =>
   (
