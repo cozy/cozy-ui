@@ -6,16 +6,45 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Changed
-- Nav height on mobile is now 48px which is what it was supposed to be in the first place.
+- none yet
 
 ### Fixed
 - none yet
 
 ### Added
+- none yet
+
+### Removed
+- none yet
+
+### Deprecated
+- none yet
+
+### Security
+- none yet
+
+## [3.0.0-beta16] - 2017-03-17
+### Changed
+- Change icons placeholders dimensions with rem instead of em so it doesn't grow with the font-size of an element
+- Separate extra and extra--white buttons
+- Refactoring modal component
+
+### Fixed
+- Nav height on mobile is now 48px which is what it was supposed to be in the first place.
+- selectionbar's height wasn't right according to the mockups
+- Fix sidebar width on Chrome when resizing
+- Nav height on mobile was bigger than it was supposed to
+
+### Added
 - Empty component style
+- add position relative on contentinfo so we can position absolutely the loading spinner
+- Add disabled button style in selection bar
 
 ### Removed
 - remove agressive `!important` on all `[aria-hidden=true]` elements
+
+### Deprecated
+- Modal props `cancelType` & `validateType`. See refactoring
 
 ## [3.0.0-beta15] - 2017-03-08
 ### Changed
@@ -140,7 +169,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta15...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta16...HEAD
+[3.0.0-beta16]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta15...3.0.0-beta16
 [3.0.0-beta15]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta14...3.0.0-beta15
 [3.0.0-beta14]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta13...3.0.0-beta14
 [3.0.0-beta13]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta12...3.0.0-beta13
