@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Removed
-- none yet
+- remove agressive `!important` on all `[aria-hidden=true]` elements
 
 ## [3.0.0-beta15] - 2017-03-08
 ### Changed
