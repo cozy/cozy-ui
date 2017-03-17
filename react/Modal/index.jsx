@@ -54,6 +54,7 @@ const Modal = (props) => {
   props.secondaryType = props.secondaryType || props.cancelType
   props.secondaryText = props.secondaryText || props.cancelText
   props.secondaryAction = props.secondaryAction || props.cancelAction
+  const children = props.children
   return (
     <div className={styles['coz-modal-container']}>
       <div className={styles['coz-overlay']}>
@@ -61,7 +62,7 @@ const Modal = (props) => {
           <ModalTitle {...props} />
           <ModalCross {...props} />
           <ModalDescription {...props} />
-          { props.children }
+          { children }
           <ModalButtons {...props} />
         </div>
       </div>
@@ -69,7 +70,7 @@ const Modal = (props) => {
   )
 }
 
-function deprecated(arg) {
+function deprecated (arg) {
   console.warn(`[Modal] ${arg} is deprecated, please upgrade your Modal component.`)
 }
 
