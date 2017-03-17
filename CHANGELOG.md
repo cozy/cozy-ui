@@ -23,7 +23,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
-## [3.0.0-beta16] - 2017-03-17
+## [3.0.0-beta17] - 2017-03-17
+### Fixed
+- Overlay should take all the space in the viewport now
+- Put back children nodes removed by spread operator usage on props (modal component)
+
+## [3.0.0-beta16] - 2017-03-17 [YANKED]
 ### Changed
 - Change icons placeholders dimensions with rem instead of em so it doesn't grow with the font-size of an element
 - Separate extra and extra--white buttons
@@ -169,7 +174,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta16...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta17...HEAD
+[3.0.0-beta17]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta16...3.0.0-beta17
 [3.0.0-beta16]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta15...3.0.0-beta16
 [3.0.0-beta15]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta14...3.0.0-beta15
 [3.0.0-beta14]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta13...3.0.0-beta14
