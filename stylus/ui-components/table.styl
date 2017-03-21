@@ -59,10 +59,20 @@ $table
         font-size       12px
         text-transform  uppercase
 
-@media (max-width: (1024/basefont)rem)
-    .coz-table-row
-        max-width  100vw
+    @media (max-width: (1024/basefont)rem)
+        .coz-table-row
+            max-width  100vw
 
-@media (max-width: (768/basefont)rem)
-    .coz-table-body
-        max-height  100%
+    @media (max-width: (768/basefont)rem)
+        .coz-table-head
+            display none
+
+        .coz-table-body
+            max-height  100%
+
+        .coz-table-primary
+            flex 1 1 auto
+
+        .coz-table-cell.coz-table-primary
+            left-padded(61px)
+            background-position em(16px) center
