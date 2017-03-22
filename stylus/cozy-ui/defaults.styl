@@ -32,7 +32,20 @@ textarea
 
 // UTILS
 @import '../ui-base/mixins'
+@import '../ui-base/palette'
 :global
+    .coz-error
+        color  pomegranate
+
+        &.coz-error--warning:before
+            content         ''
+            display         inline-block
+            margin-right    .5rem
+            width           1rem
+            height          .875rem
+            background      embedurl('../assets/icons/ui/icon-warning.svg') center center / contain no-repeat
+            vertical-align  text-bottom
+
     .coz-hidden
         @extend $hidden
 
@@ -59,7 +72,6 @@ textarea
 
 
 // COLORS
-@import '../ui-base/palette'
 body
     background-color white
     color            black
