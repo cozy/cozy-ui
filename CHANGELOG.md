@@ -23,6 +23,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [3.0.0-beta18] - 2017-03-22
+### Changed
+- form classes changed for BEM consistency:
+  - `.coz-desc` becomes `.coz-form-desc`
+  - `.coz-label` becomes `.coz-form-label`
+  - `.coz-error-label` becomes `.coz-form-label--error`
+  - `.coz-errors` becomes `.coz-form-errors`
+
+### Added
+- New utility classes `.coz-error` and variant `.coz-error--warning` to display error text, without or with a warning sign
+- Added table default style
+
 ## [3.0.0-beta17] - 2017-03-17
 ### Fixed
 - Overlay should take all the space in the viewport now
@@ -174,7 +186,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta17...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta18...HEAD
+[3.0.0-beta18]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta17...3.0.0-beta18
 [3.0.0-beta17]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta16...3.0.0-beta17
 [3.0.0-beta16]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta15...3.0.0-beta16
 [3.0.0-beta15]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta14...3.0.0-beta15
