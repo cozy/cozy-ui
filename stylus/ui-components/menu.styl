@@ -1,0 +1,28 @@
+@require './popover'
+
+$menu
+    // These styles are needed for the menu to work and come directly from bosonic's source
+    // TODO: find a better way for bosonic to share its styling
+    // @stylint off
+    // because styling doesn't support custom elements
+    b-menu-button
+        position relative
+
+    b-menu-button > b-listbox
+        display none
+        position absolute
+
+    b-menu-button[open] > b-listbox
+        display block
+
+    b-item
+        display block
+    // @stylint on
+
+    .coz-menu
+        @extend $popover
+        right 0
+        padding 5px 0
+        margin 0
+        margin-top 1px
+        min-width 220px

@@ -1,0 +1,78 @@
+
+$table
+    .coz-table
+        position        relative
+        display         flex
+        flex-direction  column
+        flex            1 1 100%
+        height          100%
+        text-align      left
+        color           grey-11
+
+    .coz-table-head
+        flex 0 0 em(31px, 16px)
+
+        &.coz-table-row:hover
+            background-color white
+
+    .coz-table-body
+        flex      1 1 auto
+        display   flex
+        flex-direction column
+        // Because it needs a height to be scrollable. Don't ask.
+        height    1px
+        overflow  auto
+
+    .coz-table-header
+    .coz-table-cell
+        box-sizing  border-box
+        padding     em(15px, 14px) em(32px, 14px) // @stylint ignore
+        font-size   14px
+
+    .coz-table-row
+        display         flex
+        flex-direction  row
+        align-items     center
+        flex            0 0 auto
+        width           100%
+        border-bottom   1px solid grey-09
+
+        &:hover
+            background-color grey-10
+
+    .coz-table-cell.coz-table-primary
+        padding-left   em(45px)
+        font-size      16px
+        line-height    1.3
+        white-space    nowrap
+        overflow       hidden
+        text-overflow  ellipsis
+
+    .coz-table-primary
+        color grey-08
+
+    .coz-table-ext
+        color grey-11
+
+    .coz-table-header
+        padding         em(8px, 12px) em(32px, 12px) // @stylint ignore
+        font-size       12px
+        text-transform  uppercase
+
+    @media (max-width: (1024/basefont)rem)
+        .coz-table-row
+            max-width  100vw
+
+    @media (max-width: (768/basefont)rem)
+        .coz-table-head
+            display none
+
+        .coz-table-body
+            max-height  100%
+
+        .coz-table-primary
+            flex 1 1 auto
+
+        .coz-table-cell.coz-table-primary
+            left-padded(61px)
+            background-position em(16px) center

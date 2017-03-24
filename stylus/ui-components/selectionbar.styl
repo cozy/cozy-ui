@@ -1,0 +1,103 @@
+@import '../ui-base/z-index'
+
+/*------------------------------------*\
+  Selection Bar
+  ======
+
+  This file contains all needs for Selection Bar
+\*------------------------------------*/
+
+$selectionbar
+    .coz-selectionbar
+        position          fixed
+        z-index           $selection-index
+        top               0
+        left              0
+        box-sizing        border-box
+        display           flex
+        justify-content   center
+        align-items       center
+        width             100%
+        height            em(52px, 16px)
+        background-color  grey-12
+        color             white
+        font-weight       bold
+
+        .coz-selectionbar-separator
+            margin            0 .5em 0 2em
+            width             4px
+            height            4px
+            border-radius     50%
+            background-color  black
+
+        button
+            border              0
+            left-padded         50px
+            background-color    transparent
+            background-position em(24px) center
+            background-repeat   no-repeat
+            color               white
+            line-height         em(48px)
+            font-size           14px
+            text-transform      uppercase
+            cursor              pointer
+
+        .coz-action-share
+            background embedurl('../assets/icons/ui/icon-share.svg') em(24px) center no-repeat
+
+        .coz-action-download
+            background embedurl('../assets/icons/ui/icon-download.svg') em(24px) center no-repeat
+
+        .coz-action-delete
+            background embedurl('../assets/icons/ui/icon-delete.svg') em(24px) center no-repeat
+
+        .coz-action-moveto
+            background embedurl('../assets/icons/ui/icon-moveto.svg') em(24px) center no-repeat
+
+        .coz-action-rename
+            background embedurl('../assets/icons/ui/icon-rename.svg') em(24px) center no-repeat
+
+        .coz-action-restore
+            background embedurl('../assets/icons/ui/icon-restore-white.svg') em(24px) center no-repeat
+
+        .coz-action-extra
+            display none
+
+        .coz-action-close
+            position     absolute
+            top          50%
+            right        0
+            background   embedurl('../assets/icons/ui/icon-cross-white.svg') em(24px) center no-repeat
+            text-indent  -9999px
+            transform    translateY(-50%)
+
+    @media (max-width: (1023/basefont)rem)
+        .coz-selectionbar
+            top              auto
+            bottom           em(48px, 16px)
+            justify-content  flex-start
+            height           em(48px, 16px)
+            padding-left     1em
+            padding-right    1em
+
+            .coz-selectionbar-count span
+            .coz-action-share
+            .coz-action-moveto
+            .coz-action-rename
+                display none
+
+            .coz-action-extra
+                display block
+
+            .coz-selectionbar-separator
+                margin   0 0 0 1em
+
+            button
+                width         em(48px)
+                padding-left  0
+                color         transparent
+
+            .coz-action-download:disabled
+            .coz-action-delete:disabled
+            .coz-action-restore:disabled
+                opacity .5
