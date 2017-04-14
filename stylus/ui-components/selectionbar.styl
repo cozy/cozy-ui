@@ -37,28 +37,30 @@ $selectionbar
             background-position em(24px) center
             background-repeat   no-repeat
             color               white
-            line-height         em(48px)
+            line-height         em(40px)
             font-size           14px
             text-transform      uppercase
             cursor              pointer
 
         .coz-action-share
-            background embedurl('../assets/icons/ui/icon-share.svg') em(24px) center no-repeat
+            background-image embedurl('../assets/icons/ui/icon-share.svg')
 
         .coz-action-download
-            background embedurl('../assets/icons/ui/icon-download.svg') em(24px) center no-repeat
+            background-image embedurl('../assets/icons/ui/icon-download.svg')
 
+        .coz-action-trash
+        .coz-action-destroy
         .coz-action-delete
-            background embedurl('../assets/icons/ui/icon-delete.svg') em(24px) center no-repeat
+            background-image embedurl('../assets/icons/ui/icon-delete.svg')
 
         .coz-action-moveto
-            background embedurl('../assets/icons/ui/icon-moveto.svg') em(24px) center no-repeat
+            background-image embedurl('../assets/icons/ui/icon-moveto.svg')
 
         .coz-action-rename
-            background embedurl('../assets/icons/ui/icon-rename.svg') em(24px) center no-repeat
+            background-image embedurl('../assets/icons/ui/icon-rename.svg')
 
         .coz-action-restore
-            background embedurl('../assets/icons/ui/icon-restore-white.svg') em(24px) center no-repeat
+            background-image embedurl('../assets/icons/ui/icon-restore-white.svg')
 
         .coz-action-extra
             display none
@@ -67,7 +69,7 @@ $selectionbar
             position     absolute
             top          50%
             right        0
-            background   embedurl('../assets/icons/ui/icon-cross-white.svg') em(24px) center no-repeat
+            background-image   embedurl('../assets/icons/ui/icon-cross-white.svg')
             text-indent  -9999px
             transform    translateY(-50%)
 
@@ -96,8 +98,11 @@ $selectionbar
                 width         em(48px)
                 padding-left  0
                 color         transparent
+                background-position em(12px)
 
             .coz-action-download:disabled
+            .coz-action-trash:disabled
+            .coz-action-destroy:disabled
             .coz-action-delete:disabled
             .coz-action-restore:disabled
                 opacity .5
