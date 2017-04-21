@@ -23,10 +23,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+
+## [3.0.0-beta20] - 2017-04-21
+### Changed
+- Center icons in responsive view
+- SelectionBar overhead than above for responsive
+
+### Added
+- Add a "openWith" icon
+- Add a default value to Modal secondaryType
+
+### Removed
+- Remove unnecessary deprecated message on Modal component
+
+
 ## [3.0.0-beta19] - 2017-03-24
 ### Changed
 V3 branch merge into master as it is the codebase we're all working on now.
 Nothing else has changed.
+
 
 ## [3.0.0-beta18] - 2017-03-22
 ### Changed
@@ -44,6 +59,7 @@ Nothing else has changed.
 ### Fixed
 - Overlay should take all the space in the viewport now
 - Put back children nodes removed by spread operator usage on props (modal component)
+
 
 ## [3.0.0-beta16] - 2017-03-17 [YANKED]
 ### Changed
@@ -68,6 +84,7 @@ Nothing else has changed.
 ### Deprecated
 - Modal props `cancelType` & `validateType`. See refactoring
 
+
 ## [3.0.0-beta15] - 2017-03-08
 ### Changed
 - Sticky layout management (flexbox-only)
@@ -78,6 +95,7 @@ Nothing else has changed.
 ### Added
 - Fixed table header on scroll
 
+
 ## [3.0.0-beta14] - 2017-03-07
 ### Fixed
 - Avoid hover effect on disabled buttons
@@ -85,6 +103,7 @@ Nothing else has changed.
 
 ### Added
 - Class .coz-link--upload to use for an upload button in a menu
+
 
 ## [3.0.0-beta13] - 2017-03-03
 ### Changed
@@ -101,6 +120,7 @@ Nothing else has changed.
 ### Added
 - Utils classes .coz-mobile & .coz-desktop to show/hide elements
 on desktop or mobile view
+
 
 ## [3.0.0-beta12] - 2017-02-27
 ### Changed
@@ -126,6 +146,7 @@ on desktop or mobile view
 - Removed Drawer layout that wasn't functional anyway
 - Removed dialog, background, foreground, dropdown files
 
+
 ## [3.0.0-beta11] - 2017-02-21
 ### Changed
 - Extracted the 'more' menu styling
@@ -134,6 +155,7 @@ on desktop or mobile view
 - Add more button with dots only
 - Adds support for formatting i18n function
 - Added SelectionBar styling
+
 
 ## [3.0.0-beta10] - 2017-02-14
 ### Added
@@ -147,13 +169,16 @@ on desktop or mobile view
 ### Fixed
 - import on react components
 
+
 ## [3.0.0-beta9] - 2017-02-09
 ### Changed
 - Updated Modal JSX component
 
+
 ## [3.0.0-beta8] - 2017-02-09
 ### Added
 - test NPM's autopublishing
+
 
 ## [3.0.0-beta7] - 2017-02-08
 ### Added
@@ -187,12 +212,14 @@ on desktop or mobile view
 ### Removed
 - Removed input css outline on focus
 
+
 ## [3.0.0-beta5] - 2017-02-01
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta19...HEAD
-[3.0.0-beta18]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta18...3.0.0-beta19
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta20...HEAD
+[3.0.0-beta20]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta19...3.0.0-beta20
+[3.0.0-beta19]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta18...3.0.0-beta19
 [3.0.0-beta18]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta17...3.0.0-beta18
 [3.0.0-beta17]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta16...3.0.0-beta17
 [3.0.0-beta16]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta15...3.0.0-beta16
