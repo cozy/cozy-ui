@@ -78,6 +78,7 @@ Modal.propTypes = {
 
 Modal.defaultProps = {
   primaryType: 'secondary',
+  secondaryType: 'primary',
   withCross: true
 }
 
