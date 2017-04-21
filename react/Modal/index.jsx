@@ -48,12 +48,6 @@ const ModalButtons = ({ secondaryText, secondaryAction, secondaryType, primaryTe
 }
 
 const Modal = (props) => {
-  props.primaryType = props.primaryType || props.validateType
-  props.primaryText = props.primaryText || props.validateText
-  props.primaryAction = props.primaryAction || props.validateAction
-  props.secondaryType = props.secondaryType || props.cancelType
-  props.secondaryText = props.secondaryText || props.cancelText
-  props.secondaryAction = props.secondaryAction || props.cancelAction
   const children = props.children
   return (
     <div className={styles['coz-modal-container']}>
@@ -70,10 +64,6 @@ const Modal = (props) => {
   )
 }
 
-function deprecated (arg) {
-  console.warn(`[Modal] ${arg} is deprecated, please upgrade your Modal component.`)
-}
-
 Modal.propTypes = {
   title: React.PropTypes.string.isRequired,
   description: React.PropTypes.node,
@@ -83,18 +73,12 @@ Modal.propTypes = {
   primaryType: React.PropTypes.string,
   primaryText: React.PropTypes.string,
   primaryAction: React.PropTypes.func,
-  cancelType: deprecated('cancelType') || React.PropTypes.string,
-  cancelText: deprecated('cancelText') || React.PropTypes.string,
-  cancelAction: deprecated('cancelAction') || React.PropTypes.func,
-  validateType: deprecated('validateType') || React.PropTypes.string,
-  validateText: deprecated('validateText') || React.PropTypes.string,
-  validateAction: deprecated('validateAction') || React.PropTypes.func,
   withCross: React.PropTypes.bool
 }
 
 Modal.defaultProps = {
-  cancelType: 'secondary',
   primaryType: 'secondary',
+  secondaryType: 'primary',
   withCross: true
 }
 
