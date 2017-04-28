@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Added
-- none yet
+- Added Tabs component
 
 ### Removed
 - none yet
