@@ -10,17 +10,17 @@ export const Tab = function ({ name, children, className, active, activeClass, c
     activeStyle[activeClass] = active
   }
   return <div
-    className={classnames([
+    className={classnames(
       styles['coz-tab'],
       className,
-      activeStyle ])}
+      activeStyle)}
     onClick={() => changeTab(name)}>{
     children
   }</div>
 }
 
 export const TabList = function ({ children, activeTab, changeTab, className }) {
-  return <div className={classnames([ styles['coz-tab-list'], className ])}>{
+  return <div className={classnames(styles['coz-tab-list'], className)}>{
     React.Children.map(children, child =>
       React.cloneElement(child, {
         active: child.props.name === activeTab,
@@ -30,14 +30,14 @@ export const TabList = function ({ children, activeTab, changeTab, className }) 
 }
 
 export const TabPanel = function ({ children, activeTab, name, changeTab, className }) {
-  return activeTab === name ? <div className={classnames([ styles['coz-tab-panel'], className ])}>{
+  return activeTab === name ? <div className={classnames(styles['coz-tab-panel'], className)}>{
     children
   }</div> : null
 }
 
 export const TabPanels = function ({ children, activeTab, name, changeTab, className }) {
   const extra = { activeTab, changeTab }
-  return <div className={classnames([ styles['coz-tab-panels'], className ])}>{
+  return <div className={classnames(styles['coz-tab-panels'], className)}>{
     React.Children.map(children, child => React.cloneElement(child, extra))
   }</div>
 }
