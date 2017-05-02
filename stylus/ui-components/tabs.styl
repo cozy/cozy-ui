@@ -1,16 +1,10 @@
 @import '../ui-base/palette'
 
 $tabs-base
-    .coz-tabs-links
-        margin         0
-        padding        0
+    .coz-tab-list
         border-bottom  1px solid grey-09
-        list-style     none
 
-        li
-            display inline-block
-
-    .coz-tabs-link
+    .coz-tab
         display        inline-block
         padding        10px 15px
         text-transform uppercase
@@ -21,9 +15,9 @@ $tabs-base
         &:hover
             text-decoration none
 
-        &.active
-            border-bottom 2px solid dodger-blue
-            color         dodger-blue
+    .coz-tab--active
+        border-bottom 2px solid dodger-blue
+        color         dodger-blue
 
-    .coz-tabs-tab
+    .coz-tab-panel
         padding-top 20px

@@ -1,44 +1,66 @@
-import classNames from 'classnames'
-
 import React, { Component } from 'react'
+import styles from './styles.styl'
+import classnames from 'classnames'
 
-class Tabs extends Component {
-  constructor (props) {
-    super(props)
-    let defaultTabIndex = props.default ? parseInt(props.default) : 0
-    this.state = {
-      activeTabIndex: defaultTabIndex
-    }
+export const Tab = function ({ name, children, className, active, activeClass, changeTab }) {
+  const activeStyle = {
+    [styles['coz-tab--active']]: active
   }
-  goToTab (tabIndex) {
-    if (tabIndex !== this.state.activeTabIndex) this.setState({activeTabIndex: tabIndex})
+  if (activeClass) {
+    activeStyle[activeClass] = active
   }
-  render () {
-    const { tabs } = this.props
-    const { activeTabIndex } = this.state
-
-    const styles = (this.props.styles) ? this.props.styles : require('./styles')
-
-    const tabNames = Object.keys(tabs)
-    const tabContents = Object.values(tabs)
-
-    return (
-      <div className={styles['coz-tabs']}>
-        <ul className={styles['coz-tabs-links']}>
-          { tabNames.map((tabName, index) => (
-            <li>
-              <a onClick={() => this.goToTab(index)} className={classNames(styles['coz-tabs-link'], {[styles['active']]: index === activeTabIndex})}>
-                { tabName }
-              </a>
-            </li>
-          )) }
-        </ul>
-        <div className={styles['coz-tabs-tab']}>
-          { tabContents[activeTabIndex] }
-        </div>
-      </div>
-    )
-  }
+  return <div
+    className={classnames([
+      styles['coz-tab'],
+      className,
+      activeStyle ])}
+    onClick={() => changeTab(name)}>{
+    children
+  }</div>
 }
 
-export default Tabs
+export const TabList = function ({ children, activeTab, changeTab, className }) {
+  return <div className={classnames([ styles['coz-tab-list'], className ])}>{
+    React.Children.map(children, child =>
+      React.cloneElement(child, {
+        active: child.props.name === activeTab,
+        changeTab
+      }))
+  }</div>
+}
+
+export const TabPanel = function ({ children, activeTab, name, changeTab, className }) {
+  return activeTab === name ? <div className={classnames([ styles['coz-tab-panel'], className ])}>{
+    children
+  }</div> : null
+}
+
+export const TabPanels = function ({ children, activeTab, name, changeTab, className }) {
+  const extra = { activeTab, changeTab }
+  return <div className={classnames([ styles['coz-tab-panels'], className ])}>{
+    React.Children.map(children, child => React.cloneElement(child, extra))
+  }</div>
+}
+
+export class Tabs extends Component {
+  constructor (props) {
+    super(props)
+    this.changeTab = this.changeTab.bind(this)
+  }
+  getInitialState () {
+    return { activeTab: this.props.initialActiveTab }
+  }
+
+  changeTab (tabName) {
+    this.setState({ activeTab: tabName })
+  }
+
+  render ({ children, className }, { activeTab }) {
+    const changeTab = this.changeTab
+    return <div className={classnames(styles['coz-tabs'], className)}>{
+      React.Children.map(children, child =>
+        React.cloneElement(child, { activeTab, changeTab })
+      )
+    }</div>
+  }
+}
