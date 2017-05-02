@@ -12,8 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Added
-- Added Tabs component
-- Added a new toggle component
+- none yet
 
 ### Removed
 - none yet
@@ -23,6 +22,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Security
 - none yet
+
+## [3.0.0-beta21] - 2017-05-02
+### Added
+- Added a Tabs component
+- Added a Toggle component
 
 
 ## [3.0.0-beta20] - 2017-04-21
@@ -219,6 +223,7 @@ on desktop or mobile view
 
 
 [Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta20...HEAD
+[3.0.0-beta21]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta20...3.0.0-beta21
 [3.0.0-beta20]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta19...3.0.0-beta20
 [3.0.0-beta19]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta18...3.0.0-beta19
 [3.0.0-beta18]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta17...3.0.0-beta18
