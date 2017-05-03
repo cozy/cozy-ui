@@ -23,6 +23,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [3.0.0-beta22] - 2017-05-03
+### Changed
+- Change more-button's background-color from white to transparent
+
+
 ## [3.0.0-beta21] - 2017-05-02
 ### Added
 - Added a Tabs component
@@ -222,7 +227,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta20...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta22...HEAD
+[3.0.0-beta22]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta21...3.0.0-beta22
 [3.0.0-beta21]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta20...3.0.0-beta21
 [3.0.0-beta20]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta19...3.0.0-beta20
 [3.0.0-beta19]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta18...3.0.0-beta19
