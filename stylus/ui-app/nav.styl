@@ -9,26 +9,36 @@ $navigation
         margin     em(24px) 0
         padding    0
         list-style none
+        padding-right 10%
 
     .coz-nav-item
-        position  relative
-        z-index   $app-index
+        position        relative
+        z-index         $app-index
+        height          3em
+        display         flex
+        align-items     center
+        padding-right   .5em
 
         &:hover::before
             content        ''
             position       absolute
             z-index        $below-index
             border-radius  0 3px 3px 0
-            height         3em
-            width          90%
+            top 0
+            left 0
+            right 0
+            bottom 0
             background     grey-09
 
     .coz-nav-link
-        display          block
+        display          flex
         left-padded      50px
-        line-height      em(48px)
+        line-height      1.5
         text-decoration  none
         color            grey-11
+        height           100%
+        align-items      center
+        flex             1
 
         &:visited
             color  grey-11
