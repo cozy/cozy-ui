@@ -59,10 +59,23 @@ textarea
 
 
 // LAYOUT
+html
+  height  100%
+
+body
+  display         flex
+  flex-direction  column
+  align-items     stretch
+  width           100vw
+  height          100%
+  overflow        hidden
+
 [role=application]
-    width      100vw
-    height     100vh
-    overflow-x hidden
+    display     flex
+    height      inherit
+    flex        1 1 100%
+    overflow-x  hidden
+    overflow-y  auto
 
 
 // BOXES
