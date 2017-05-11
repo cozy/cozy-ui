@@ -23,6 +23,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+
+## [3.0.0-beta24] - 2017-05-11
+### Changed
+- Display rename button on responsive page
+
+
 ## [3.0.0-beta23] - 2017-05-11
 ### Added
 - Better handling of long nav items
@@ -233,8 +239,9 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta23...HEAD
-[3.0.0-beta23]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta21...3.0.0-beta23
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta24...HEAD
+[3.0.0-beta24]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta23...3.0.0-beta24
+[3.0.0-beta23]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta22...3.0.0-beta23
 [3.0.0-beta22]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta21...3.0.0-beta22
 [3.0.0-beta21]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta20...3.0.0-beta21
 [3.0.0-beta20]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta19...3.0.0-beta20
