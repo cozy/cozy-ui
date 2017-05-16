@@ -34,7 +34,7 @@ $modals
         display           block
         box-sizing        border-box
         border-radius     em(8px)
-        width             90%
+        max-width         90%
         height            auto
         // Padding is set by inner element,
         // to be able to get horizontal separators.
@@ -56,13 +56,14 @@ $modals
             font-weight  bold
 
         .coz-btn-modal-close
-            position        absolute
-            top             1.3em
-            right           1em
-            margin          0
-            padding         0
-            background-size 2em
-            cursor          pointer
+            position         absolute
+            top              1.3em
+            right            1em
+            margin           0
+            padding          0
+            background-size  2em
+            background-color transparent
+            cursor           pointer
 
         .coz-modal-buttons
             top-spaced  2em
@@ -79,7 +80,7 @@ $modals
             transition-timing-function  ease-in
 
 
-    @media all and (min-width modal-width)
+    @media (max-width modal-width)
         .coz-modal
             max-width   modal-width
             width       100%
