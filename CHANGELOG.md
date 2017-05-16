@@ -24,6 +24,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [3.0.0-beta25] - 2017-05-16
+### Changed
+- Modal now adapts from content width
+
+### Added
+- Sharing button
+- Button component
+- ModalContent component
+
+
 ## [3.0.0-beta24] - 2017-05-11
 ### Changed
 - Display rename button on responsive page
@@ -239,7 +249,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta24...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta25...HEAD
+[3.0.0-beta25]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta24...3.0.0-beta25
 [3.0.0-beta24]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta23...3.0.0-beta24
 [3.0.0-beta23]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta22...3.0.0-beta23
 [3.0.0-beta22]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta21...3.0.0-beta22
