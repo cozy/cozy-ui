@@ -49,9 +49,14 @@ const ModalButtons = ({ secondaryText, secondaryAction, secondaryType, primaryTe
 
 const Modal = (props) => {
   const children = props.children
+
+  const onOutsideClick = (event) => {
+    if (event.target.className === styles['coz-overlay']) props.secondaryAction()
+  }
+
   return (
     <div className={styles['coz-modal-container']}>
-      <div className={styles['coz-overlay']}>
+      <div onClick={onOutsideClick} className={styles['coz-overlay']}>
         <div className={styles['coz-modal']}>
           <ModalTitle {...props} />
           <ModalCross {...props} />
