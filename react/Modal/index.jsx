@@ -82,4 +82,5 @@ Modal.defaultProps = {
   withCross: true
 }
 
+export { styles }
 export default Modal
