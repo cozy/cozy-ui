@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 
 import styles from './styles.styl'
@@ -47,21 +47,56 @@ const ModalButtons = ({ secondaryText, secondaryAction, secondaryType, primaryTe
     )
 }
 
-const Modal = (props) => {
-  const children = props.children
-  return (
-    <div className={styles['coz-modal-container']}>
-      <div className={styles['coz-overlay']}>
-        <div className={styles['coz-modal']}>
-          <ModalTitle {...props} />
-          <ModalCross {...props} />
-          <ModalDescription {...props} />
-          { children }
-          <ModalButtons {...props} />
+const ESC_KEYCODE = 27
+
+class Modal extends Component {
+  constructor (props) {
+    super(props)
+    this.handleKeydown = this.handleKeydown.bind(this)
+    this.handleOutsideClick = this.handleOutsideClick.bind(this)
+  }
+
+  componentDidMount () {
+    if (this.props.withCross) {
+      document.addEventListener('keydown', this.handleKeydown)
+    }
+  }
+
+  componentWillUnmount () {
+    if (this.props.withCross) {
+      document.removeEventListener('keydown', this.handleKeydown)
+    }
+  }
+
+  handleKeydown (e) {
+    if (e.keyCode === ESC_KEYCODE) {
+      this.props.secondaryAction()
+    }
+  }
+
+  handleOutsideClick (e) {
+    if (e.target === e.currentTarget) this.props.secondaryAction()
+  }
+
+  render () {
+    const { children, withCross } = this.props
+    return (
+      <div className={styles['coz-modal-container']}>
+        <div
+          onClick={withCross && this.handleOutsideClick}
+          className={styles['coz-overlay']}
+        >
+          <div className={styles['coz-modal']}>
+            <ModalTitle {...this.props} />
+            <ModalCross {...this.props} />
+            <ModalDescription {...this.props} />
+            { children }
+            <ModalButtons {...this.props} />
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 Modal.propTypes = {
