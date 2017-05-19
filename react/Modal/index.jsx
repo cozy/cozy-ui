@@ -57,11 +57,15 @@ class Modal extends Component {
   }
 
   componentDidMount () {
-    document.addEventListener('keydown', this.handleKeydown)
+    if (this.props.withCross) {
+      document.addEventListener('keydown', this.handleKeydown)
+    }
   }
 
   componentWillUnmount () {
-    document.removeEventListener('keydown', this.handleKeydown)
+    if (this.props.withCross) {
+      document.removeEventListener('keydown', this.handleKeydown)
+    }
   }
 
   handleKeydown (e) {
@@ -75,11 +79,11 @@ class Modal extends Component {
   }
 
   render () {
-    const { children } = this.props
+    const { children, withCross } = this.props
     return (
       <div className={styles['coz-modal-container']}>
         <div
-          onClick={this.handleOutsideClick}
+          onClick={withCross && this.handleOutsideClick}
           className={styles['coz-overlay']}
         >
           <div className={styles['coz-modal']}>
