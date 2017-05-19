@@ -47,16 +47,34 @@ const ModalButtons = ({ secondaryText, secondaryAction, secondaryType, primaryTe
     )
 }
 
+const ESC_KEYCODE = 27
+
 const Modal = (props) => {
   const children = props.children
+  const overlayClassName = styles['coz-overlay']
 
-  const onOutsideClick = (event) => {
-    if (event.target.className === styles['coz-overlay']) props.secondaryAction()
+  const handleKeyUp = (event) => {
+    if (document.querySelector(`.${overlayClassName}`)) {
+      if (event.keyCode === ESC_KEYCODE) {
+        props.secondaryAction()
+        document.removeEventListener('keyup', handleKeyUp)
+      }
+    } else { // if modal already closed by other ways
+      document.removeEventListener('keyup', handleKeyUp)
+    }
+  }
+  document.addEventListener('keyup', handleKeyUp)
+
+  const handleOutsideClick = (event) => {
+    if (event.target.className === overlayClassName) {
+      props.secondaryAction()
+      document.removeEventListener('keyup', handleKeyUp)
+    }
   }
 
   return (
     <div className={styles['coz-modal-container']}>
-      <div onClick={onOutsideClick} className={styles['coz-overlay']}>
+      <div onClick={handleOutsideClick} className={overlayClassName}>
         <div className={styles['coz-modal']}>
           <ModalTitle {...props} />
           <ModalCross {...props} />
