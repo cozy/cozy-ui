@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Changed
-- The Toggle component's `name` prop has been renamed to `id` and the appropriated depreciation warnings have been added.
+- none yet
 
 ### Fixed
 - none yet
@@ -22,6 +22,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Security
 - none yet
+
+
+## [3.0.0-beta26] - 2017-05-19
+### Changed
+- The Toggle component's `name` prop has been renamed to `id` and the appropriated depreciation warnings have been added.
+
+### Added
+- Added spinner on react Button component with parameter `busy`.
+- Handle closing modal by outside click and escape key
 
 
 ## [3.0.0-beta25] - 2017-05-16
@@ -250,10 +259,11 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta25...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta26...HEAD
+[3.0.0-beta25]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta25...v3.0.0-beta26
 [3.0.0-beta25]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta24...v3.0.0-beta25
-[3.0.0-beta24]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta23...v3.0.0-beta24
-[3.0.0-beta23]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta22...3.0.0-beta23
+[3.0.0-beta24]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta23...v3.0.0-beta24
+[3.0.0-beta23]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta22...v3.0.0-beta23
 [3.0.0-beta22]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta21...v3.0.0-beta22
 [3.0.0-beta21]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta20...v3.0.0-beta21
 [3.0.0-beta20]: https://github.com/cozy/cozy-ui/compare/3.0.0-beta19...v3.0.0-beta20
