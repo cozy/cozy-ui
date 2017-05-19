@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import classNames from 'classnames'
 
 import styles from './styles.styl'
@@ -49,42 +49,51 @@ const ModalButtons = ({ secondaryText, secondaryAction, secondaryType, primaryTe
 
 const ESC_KEYCODE = 27
 
-const Modal = (props) => {
-  const children = props.children
-  const overlayClassName = styles['coz-overlay']
-
-  const handleKeyUp = (event) => {
-    if (document.querySelector(`.${overlayClassName}`)) {
-      if (event.keyCode === ESC_KEYCODE) {
-        props.secondaryAction()
-        document.removeEventListener('keyup', handleKeyUp)
-      }
-    } else { // if modal already closed by other ways
-      document.removeEventListener('keyup', handleKeyUp)
-    }
-  }
-  document.addEventListener('keyup', handleKeyUp)
-
-  const handleOutsideClick = (event) => {
-    if (event.target.className === overlayClassName) {
-      props.secondaryAction()
-      document.removeEventListener('keyup', handleKeyUp)
-    }
+class Modal extends Component {
+  constructor (props) {
+    super(props)
+    this.handleKeydown = this.handleKeydown.bind(this)
+    this.handleOutsideClick = this.handleOutsideClick.bind(this)
   }
 
-  return (
-    <div className={styles['coz-modal-container']}>
-      <div onClick={handleOutsideClick} className={overlayClassName}>
-        <div className={styles['coz-modal']}>
-          <ModalTitle {...props} />
-          <ModalCross {...props} />
-          <ModalDescription {...props} />
-          { children }
-          <ModalButtons {...props} />
+  componentDidMount () {
+    document.addEventListener('keydown', this.handleKeydown)
+  }
+
+  componentWillUnmount () {
+    document.removeEventListener('keydown', this.handleKeydown)
+  }
+
+  handleKeydown (e) {
+    if (e.keyCode === ESC_KEYCODE) {
+      this.props.secondaryAction()
+    }
+  }
+
+  handleOutsideClick (e) {
+    if (e.target === this.overlay) this.props.secondaryAction()
+  }
+
+  render () {
+    const { children } = this.props
+    return (
+      <div className={styles['coz-modal-container']}>
+        <div
+          onClick={this.handleOutsideClick}
+          className={styles['coz-overlay']}
+          ref={(overlay) => { this.overlay = overlay }}
+        >
+          <div className={styles['coz-modal']}>
+            <ModalTitle {...this.props} />
+            <ModalCross {...this.props} />
+            <ModalDescription {...this.props} />
+            { children }
+            <ModalButtons {...this.props} />
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 Modal.propTypes = {
