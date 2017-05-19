@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Changed
-- none yet
+- The Toggle component's `name` prop has been renamed to `id` and the appropriated depreciation warnings have been added.
 
 ### Fixed
 - none yet
