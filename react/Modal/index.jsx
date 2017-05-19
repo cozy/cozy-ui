@@ -71,7 +71,7 @@ class Modal extends Component {
   }
 
   handleOutsideClick (e) {
-    if (e.target === this.overlay) this.props.secondaryAction()
+    if (e.target === e.currentTarget) this.props.secondaryAction()
   }
 
   render () {
@@ -81,7 +81,6 @@ class Modal extends Component {
         <div
           onClick={this.handleOutsideClick}
           className={styles['coz-overlay']}
-          ref={(overlay) => { this.overlay = overlay }}
         >
           <div className={styles['coz-modal']}>
             <ModalTitle {...this.props} />
