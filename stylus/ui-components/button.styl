@@ -204,6 +204,8 @@ $button-alert--success
   Special buttons
 \*------------------------------------*/
 $button-client
+    @extend $button
+    @extend $button--secondary
     display           flex
     justify-content   center
     align-items       center
@@ -211,7 +213,6 @@ $button-client
     padding-left      em(16px, 13px)
     padding-right     em(16px, 13px)
     background-color  transparent
-    border-color      grey-09
     text-align        left
     font-size         13px
     font-weight       bold
