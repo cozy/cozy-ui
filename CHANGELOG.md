@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Added
-- none yet
+- Special button for client downloading
 
 ### Removed
 - none yet
