@@ -260,7 +260,7 @@ on desktop or mobile view
 
 
 [Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta26...HEAD
-[3.0.0-beta25]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta25...v3.0.0-beta26
+[3.0.0-beta26]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta25...v3.0.0-beta26
 [3.0.0-beta25]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta24...v3.0.0-beta25
 [3.0.0-beta24]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta23...v3.0.0-beta24
 [3.0.0-beta23]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta22...v3.0.0-beta23
