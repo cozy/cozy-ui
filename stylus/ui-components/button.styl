@@ -199,3 +199,31 @@ $button-alert--success
     &:hover
     &:focus
         color darken(emerald, 25%)
+
+/*------------------------------------*\
+  Special buttons
+\*------------------------------------*/
+$button-client
+    display           flex
+    justify-content   center
+    align-items       center
+    height            auto
+    padding-left      em(16px, 13px)
+    padding-right     em(16px, 13px)
+    background-color  transparent
+    border-color      grey-09
+    text-align        left
+    font-size         13px
+    font-weight       bold
+    line-height       1.3
+    color             grey-12
+
+    &:before
+        content           ''
+        flex              0 0 em(32px, 13px)
+        height            em(32px, 13px)
+        margin-right      em(12px, 13px)
+        background        embedurl('../assets/icons/ui/icon-device-laptop.svg') 0 0 / contain no-repeat
+
+    span
+        flex  0 1 auto
