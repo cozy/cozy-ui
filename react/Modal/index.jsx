@@ -79,7 +79,7 @@ class Modal extends Component {
   }
 
   render () {
-    const { children, withCross } = this.props
+    const { children, title, withCross } = this.props
     return (
       <div className={styles['coz-modal-container']}>
         <div
@@ -87,7 +87,7 @@ class Modal extends Component {
           className={styles['coz-overlay']}
         >
           <div className={styles['coz-modal']}>
-            <ModalTitle {...this.props} />
+            {title && <ModalTitle {...this.props} />}
             <ModalCross {...this.props} />
             <ModalDescription {...this.props} />
             { children }
@@ -100,7 +100,7 @@ class Modal extends Component {
 }
 
 Modal.propTypes = {
-  title: React.PropTypes.string.isRequired,
+  title: React.PropTypes.string,
   description: React.PropTypes.node,
   secondaryType: React.PropTypes.string,
   secondaryText: React.PropTypes.string,

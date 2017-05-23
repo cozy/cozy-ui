@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Removed
-- none yet
+- Modal title is no more required
 
 ### Deprecated
 - none yet
