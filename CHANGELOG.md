@@ -12,10 +12,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Added
-- Special button for client downloading
+- none yet
 
 ### Removed
-- Modal title is no more required
+- none yet
 
 ### Deprecated
 - none yet
@@ -23,6 +23,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+
+## [3.0.0-beta27] - 2017-05-23
+### Added
+- Special button for client downloading
+
+### Removed
+- Modal title is no more required
 
 ## [3.0.0-beta26] - 2017-05-19
 ### Changed
@@ -259,7 +266,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta26...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta27...HEAD
+[3.0.0-beta27]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta26...v3.0.0-beta27
 [3.0.0-beta26]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta25...v3.0.0-beta26
 [3.0.0-beta25]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta24...v3.0.0-beta25
 [3.0.0-beta24]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta23...v3.0.0-beta24
