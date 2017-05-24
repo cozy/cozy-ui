@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import classNames from 'classnames'
 
 import styles from './styles.styl'
+import Content from './Content'
 
 const ModalTitle = ({ title }) =>
   (
@@ -117,4 +118,5 @@ Modal.defaultProps = {
   withCross: true
 }
 
+export { Content }
 export default Modal
