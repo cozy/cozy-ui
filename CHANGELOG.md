@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Fixed
-- none yet
+- Remove deprecated message when we used Toggle
 
 ### Added
 - none yet
