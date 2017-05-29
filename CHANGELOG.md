@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Fixed
-- Remove deprecated message when we used Toggle
+- none yet
 
 ### Added
 - none yet
@@ -22,6 +22,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Security
 - none yet
+
+
+## [3.0.0-beta28] - 2017-05-29
+
+### Fixed
+- Remove deprecated message when we used Toggle
+- Modal sticks to viewport and does not overflow anymore
 
 
 ## [3.0.0-beta27] - 2017-05-23
@@ -266,7 +273,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta27...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta28...HEAD
+[3.0.0-beta28]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta27...v3.0.0-beta28
 [3.0.0-beta27]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta26...v3.0.0-beta27
 [3.0.0-beta26]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta25...v3.0.0-beta26
 [3.0.0-beta25]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta24...v3.0.0-beta25
