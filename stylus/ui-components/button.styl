@@ -74,10 +74,14 @@ $button--danger
     color             white
 
     &:active
-    &:hover
+    &:not([disabled]):not([aria-disabled=true]):hover
     &:focus
         border-color      monza
         background-color  monza
+
+    &[aria-busy=true]
+        &::after
+            @extend  $icon-spinner-white
 
 $button--danger-outline
     background-color  white
@@ -85,9 +89,13 @@ $button--danger-outline
     border            1px solid your-pink
 
     &:active
-    &:hover
+    &:not([disabled]):not([aria-disabled=true]):hover
     &:focus
         background-color  your-pink
+
+    &[aria-busy=true]
+        &::after
+            @extend  $icon-spinner-red
 
 $button--highlight
     border-color      emerald
@@ -95,10 +103,14 @@ $button--highlight
     color             white
 
     &:active
-    &:hover
+    &:not([disabled]):not([aria-disabled=true]):hover
     &:focus
         border-color      malachite
         background-color  malachite
+
+    &[aria-busy=true]
+        &::after
+            @extend  $icon-spinner-white
 
 $button--share
     padding-left         em(44px, 16px)

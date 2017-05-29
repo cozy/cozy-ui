@@ -23,6 +23,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [3.0.0-beta29] - 2017-XX-XX
+
+### Fixed
+- Remove hover style on `[disabled]` and `[aria-disabled=true]` attribute for buttons: `$button--danger`, `$button--danger-outline` and `$button--highlight`
+
+### Added
+- Add a new icon variable: `$icon-spinner-red`
+- Add white spinner on buttons `$button--danger` and `$button--highlight` with `[aria-busy=true]` attribute
+- Add red spinner on `$button--danger-outline` with `[aria-busy=true]` attribute
 
 ## [3.0.0-beta28] - 2017-05-29
 
