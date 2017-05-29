@@ -27,12 +27,20 @@ $modals
             transition  opacity .3s 0s, visibility 0s ease-in .3s
 
 
-    .coz-modal
+    .coz-modal-wrapper
         position          fixed
-        top               50%
-        left              50%
-        display           block
+        top               0
+        left              0
         box-sizing        border-box
+        width             100vw
+        height            100vh
+        overflow-y        scroll
+        display           flex
+        padding           (16/basefont)em
+
+    .coz-modal
+        position          relative
+        margin            auto
         border-radius     em(8px)
         max-width         90%
         height            auto
@@ -41,8 +49,6 @@ $modals
         padding           1.5em 0
         background-color  white
         color             grey-08
-        transform         translateX(-50%) translateY(-50%)
-
         .coz-modal-content
             padding 0 1.5em
 
