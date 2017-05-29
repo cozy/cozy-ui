@@ -44,9 +44,6 @@ $modals
         border-radius     em(8px)
         max-width         90%
         height            auto
-        // Padding is set by inner element,
-        // to be able to get horizontal separators.
-        padding           1.5em 0
         background-color  white
         color             grey-08
 
@@ -59,6 +56,13 @@ $modals
 
         .coz-modal-section
             border-top 1px solid grey-09
+
+        .coz-modal-content,
+        .coz-modal-section
+            &:first-of-type
+                padding-top    1.5em
+            &:last-of-type
+                padding-bottom 1.5em
 
         .coz-modal-title
             margin       .33em 0 1em
