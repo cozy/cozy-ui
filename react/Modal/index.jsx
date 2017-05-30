@@ -4,12 +4,12 @@ import Content from './Content'
 import styles from './styles.styl'
 
 const ModalContent = ({children, className}) =>
-  (<div className={className ? classNames(styles['coz-modal-content'], className) : styles['coz-modal-content']}>
+  (<div className={classNames(styles['coz-modal-content'], className)}>
     {children}
   </div>)
 
 const ModalSection = ({children, className}) =>
-  (<div className={className ? classNames(styles['coz-modal-section'], className) : styles['coz-modal-section']}>
+  (<div className={classNames(styles['coz-modal-section'], className)}>
     {children}
   </div>)
 
