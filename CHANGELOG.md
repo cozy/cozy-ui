@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
-## [3.0.0-beta29] - 2017-XX-XX
+## [3.0.0-beta29] - 2017-05-30
 ### Changed
 - Modal now has no padding by default. Padding are added in children or using `ModalContent` or `ModalSection` components.
 
@@ -287,7 +287,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta28...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta29...HEAD
+[3.0.0-beta29]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta28...v3.0.0-beta29
 [3.0.0-beta28]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta27...v3.0.0-beta28
 [3.0.0-beta27]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta26...v3.0.0-beta27
 [3.0.0-beta26]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta25...v3.0.0-beta26
