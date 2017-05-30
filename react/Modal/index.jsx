@@ -8,6 +8,11 @@ const ModalContent = ({children}) =>
     {children}
   </div>)
 
+const ModalSection = ({children}) =>
+  (<div className={styles['coz-modal-section']}>
+    {children}
+  </div>)
+
 const ModalTitle = ({ title }) =>
   (
     <h2 className={styles['coz-modal-title']}>{title}</h2>
@@ -126,4 +131,5 @@ Modal.defaultProps = {
 export { ModalContent }
  // deprecated, for retro-compatibilty only.
 export { Content }
+export { ModalSection }
 export default Modal
