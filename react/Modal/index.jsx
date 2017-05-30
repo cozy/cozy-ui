@@ -1,8 +1,17 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-
-import styles from './styles.styl'
 import Content from './Content'
+import styles from './styles.styl'
+
+const ModalContent = ({children, className}) =>
+  (<div className={classNames(styles['coz-modal-content'], className)}>
+    {children}
+  </div>)
+
+const ModalSection = ({children, className}) =>
+  (<div className={classNames(styles['coz-modal-section'], className)}>
+    {children}
+  </div>)
 
 const ModalTitle = ({ title }) =>
   (
@@ -88,8 +97,8 @@ class Modal extends Component {
             className={styles['coz-modal-wrapper']}
             onClick={withCross && this.handleOutsideClick}>
             <div className={styles['coz-modal']}>
-              {title && <ModalTitle {...this.props} />}
               <ModalCross {...this.props} />
+              {title && <ModalTitle {...this.props} />}
               <ModalDescription {...this.props} />
               { children }
               <ModalButtons {...this.props} />
@@ -119,5 +128,8 @@ Modal.defaultProps = {
   withCross: true
 }
 
+export { ModalContent }
+ // deprecated, for retro-compatibilty only.
 export { Content }
+export { ModalSection }
 export default Modal
