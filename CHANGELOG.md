@@ -24,6 +24,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ## [3.0.0-beta29] - 2017-XX-XX
+### Changed
+- Modal now has no padding by default. Padding are added in children or using `ModalContent` or `ModalSection` components.
 
 ### Fixed
 - Remove hover style on `[disabled]` and `[aria-disabled=true]` attribute for buttons: `$button--danger`, `$button--danger-outline` and `$button--highlight`
@@ -32,6 +34,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Add a new icon variable: `$icon-spinner-red`
 - Add white spinner on buttons `$button--danger` and `$button--highlight` with `[aria-busy=true]` attribute
 - Add red spinner on `$button--danger-outline` with `[aria-busy=true]` attribute
+
+### Deprecated
+- The use of `Content` component in modals is deprecated and replaced by `ModalContent`.
 
 ## [3.0.0-beta28] - 2017-05-29
 
