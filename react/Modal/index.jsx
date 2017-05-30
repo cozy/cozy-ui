@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-
-import styles from './styles.styl'
 import Content from './Content'
+import styles from './styles.styl'
+
+const ModalContent = ({children}) =>
+  (<div className={styles['coz-modal-content']}>
+    {children}
+  </div>)
 
 const ModalTitle = ({ title }) =>
   (
@@ -119,5 +123,7 @@ Modal.defaultProps = {
   withCross: true
 }
 
+export { ModalContent }
+ // deprecated, for retro-compatibilty only.
 export { Content }
 export default Modal
