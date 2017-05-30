@@ -88,8 +88,8 @@ class Modal extends Component {
             className={styles['coz-modal-wrapper']}
             onClick={withCross && this.handleOutsideClick}>
             <div className={styles['coz-modal']}>
-              {title && <ModalTitle {...this.props} />}
               <ModalCross {...this.props} />
+              {title && <ModalTitle {...this.props} />}
               <ModalDescription {...this.props} />
               { children }
               <ModalButtons {...this.props} />

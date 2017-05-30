@@ -67,8 +67,12 @@ $modals
         .coz-modal-title
             margin       .33em 0 1em
             // font is 1.5em
-            padding      0 1em
+            padding      1em 1em 0
             font-weight  bold
+
+            & + .coz-modal-content:first-of-type,
+            & + .coz-modal-section:first-of-type
+                padding-top 0
 
         .coz-btn-modal-close
             position         absolute
