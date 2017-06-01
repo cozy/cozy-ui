@@ -240,3 +240,28 @@ $button-client
 
     span
         flex  0 1 auto
+
+$button-client-mobile
+    @extend $button-client
+    justify-content  flex-start
+    background-color dodger-blue
+    border           0
+    border-radius    0
+    padding          .5em 3em .5em 1em
+    font-size        16px
+    font-weight      normal
+    color            white
+    text-decoration  none
+    text-transform   none
+
+    &:active
+    &:not([disabled]):not([aria-disabled=true]):hover
+    &:focus
+        background-color dodger-blue
+
+    &:before
+        flex                0 0 em(44px)
+        height              em(44px)
+        border-radius       .5em
+        border              .3em solid white
+        background          white embedurl('../assets/icons/ui/icon-cozy.svg') 0 0 / contain no-repeat
