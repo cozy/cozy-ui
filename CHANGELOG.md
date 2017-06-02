@@ -23,6 +23,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [3.0.0-beta30] - 2017-06-02
+### Added
+- Add special button App download for both desktop and mobile
+
+
 ## [3.0.0-beta29] - 2017-05-30
 ### Changed
 - Modal now has no padding by default. Padding are added in children or using `ModalContent` or `ModalSection` components.
@@ -38,8 +43,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Deprecated
 - The use of `Content` component in modals is deprecated and replaced by `ModalContent`.
 
-## [3.0.0-beta28] - 2017-05-29
 
+## [3.0.0-beta28] - 2017-05-29
 ### Fixed
 - Remove deprecated message when we used Toggle
 - Modal sticks to viewport and does not overflow anymore
@@ -287,7 +292,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta29...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta30...HEAD
+[3.0.0-beta30]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta29...v3.0.0-beta30
 [3.0.0-beta29]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta28...v3.0.0-beta29
 [3.0.0-beta28]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta27...v3.0.0-beta28
 [3.0.0-beta27]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta26...v3.0.0-beta27
