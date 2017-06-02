@@ -42,14 +42,23 @@ context-basefont(selector)
 
 
 // A handy replacement for the `font-size` property. Just use it as usual:
-// `font-size: <n>` (colon is optionnal). It applies the font-size property in
-// _EM_ and stores the font-size base for this context.
+// `font-size: <n>` (colon is optionnal). It converts pixels to `em`.
+// To achieve this magic, it stores the font-size base for each context
+// so that it can revert the `em` cascade when converting.
+
+// It bails out if you use `rem` as you do not need to revert the cascade with
+// rem as it refers already to the root font-size.
 font-size(n)
     currentBasefont = context-basefont(selector())
-    font-size em(n, currentBasefont)
+
+    unitName=unit(n)
+    if unitName is 'px'
+        font-size em(n, currentBasefont)
+    else
+        font-size n
 
     _id = checksum(selector())
-    if unit(n) is 'em'
+    if unitName is 'em'
         currentBasefont = context-basefont(selector())
         n = unit(n * currentBasefont, 'px')
     basefonts[_id] = n
