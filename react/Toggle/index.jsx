@@ -11,7 +11,7 @@ class Toggle extends Component {
   render (props, state) {
     return (
       <span className={styles['toggle']}>
-        <input type="checkbox" id={props.id} className={styles['checkbox']} checked={props.checked} onChange={this.onChange.bind(this)} />
+        <input type='checkbox' id={props.id} className={styles['checkbox']} checked={props.checked} onChange={this.onChange.bind(this)} />
         <label for={props.id} className={styles['label']} />
       </span>
     )
