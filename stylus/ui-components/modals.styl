@@ -52,17 +52,23 @@ $modals
         // hide the border-radius
         overflow          hidden
 
-        .coz-modal-content,
-        .coz-modal-section
+        .coz-modal-content
             padding 0 1.5em
+
+        .coz-modal-section
+            padding 1.5em
 
         .coz-modal-section
             border-top 1px solid grey-09
 
+        .coz-modal-content:first-of-type
+                padding-top    1.5em
+
+        .coz-modal-section:first-of-type
+                padding-top    1em
+
         .coz-modal-content,
         .coz-modal-section
-            &:first-of-type
-                padding-top    1.5em
             &:last-of-type
                 padding-bottom 1.5em
 
@@ -72,8 +78,7 @@ $modals
             padding      1em 1em 0
             font-weight  bold
 
-            & + .coz-modal-content:first-of-type,
-            & + .coz-modal-section:first-of-type
+            & + .coz-modal-content:first-of-type
                 padding-top 0
 
         .coz-btn-modal-close
