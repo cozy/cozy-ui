@@ -14,7 +14,7 @@ const allIcons = (ctx => {
     o[normalize(k)] = values[i]
     return o
   }, {})
-})(require.context('../../assets/icons/ui', true, /.*/))
+})(require.context('!!svg-sprite?name=[name]_[hash]!./strip-fill-loader!../../assets/icons/ui', true, /icon-/))
 
 const Icon = function ({ icon }) {
   const hash = allIcons[icon]
