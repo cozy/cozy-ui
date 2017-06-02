@@ -24,7 +24,7 @@ const Icon = function ({ icon }) {
   }
 
   return <svg className={ styles['icon'] } width='1em' height='1em'>
-    <use href={allIcons[icon]} />
+    <use xlinkHref={allIcons[icon]} />
   </svg>
 }
 
