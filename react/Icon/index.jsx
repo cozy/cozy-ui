@@ -1,20 +1,7 @@
 import React from 'react'
 import styles from './styles.styl'
+import icons from '../../src/icons'
 
-const normalize = function (k) {
-  return k.replace('icon-', '').replace(/\.svg$/, '').replace(/^\.\//, '')
-}
-
-const allIcons = (ctx => {
-  let keys = ctx.keys()
-    .filter(x => x.indexOf('./icon-') === 0)
-    .filter(x => x.indexOf('-white') === -1)
-  let values = keys.map(ctx)
-  return keys.reduce((o, k, i) => {
-    o[normalize(k)] = values[i]
-    return o
-  }, {})
-})(require.context('!!svg-sprite?name=[name]_[hash]!./strip-fill-loader!../../assets/icons/ui', true, /icon-/))
 
 const Icon = function ({ icon }) {
   const hash = allIcons[icon]
