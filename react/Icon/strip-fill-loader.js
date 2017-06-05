@@ -3,6 +3,7 @@ const isIcon = function (resourcePath) {
 }
 
 module.exports = function (source) {
+  this.cacheable(true)
   if (!isIcon(this.resourcePath)) {
     // Bail out if it is not an icon
     return source
