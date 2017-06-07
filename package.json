@@ -19,9 +19,13 @@
   "scripts": {
     "lint": "npm-run-all 'lint:*'",
     "lint:js": "standard 'stylus/**/*.js'",
-    "lint:stylus": "stylint stylus --config .stylintrc"
+    "lint:stylus": "stylint stylus --config .stylintrc",
+    "storybook": "start-storybook -p 9001 -c docs/react/.storybook"
   },
   "devDependencies": {
+    "@storybook/addon-info": "^3.0.1",
+    "@storybook/cli": "^3.0.1",
+    "@storybook/react": "^3.0.1",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",
     "babel-preset-env": "^1.1.8",
@@ -33,13 +37,14 @@
     "postcss-loader": "^1.2.2",
     "preact": "^7.1.0",
     "preact-compat": "^3.13.1",
+    "react": "^15.5.4",
     "react-redux": "^5.0.3",
     "redux": "^3.6.0",
     "standard": "^8.6.0",
     "style-loader": "^0.13.1",
     "stylint": "^1.5.9",
     "stylus": "^0.54.5",
-    "stylus-loader": "^2.4.0",
+    "stylus-loader": "^3.0.1",
     "svg-sprite-loader": "^0.2.0",
     "webpack": "^2.2.1"
   },
