@@ -12,7 +12,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Added
-- none yet
+
+- `<Icon />` component to use cozy-ui icons easily à la [FontAwesome](http://fontawesome.io/). `Icon`s can be styled with CSS.
+
+```jsx
+import Icon from 'cozy-ui/react/Icon'
+<Icon icon='warn' width='2rem' height='2rem' color='red' />
+```
 
 ### Removed
 - none yet
