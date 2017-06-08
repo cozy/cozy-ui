@@ -23,6 +23,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [3.0.0-beta31] - 2017-06-08
+### Added
+- Added usage tracking helpers
+
 ## [3.0.0-beta30] - 2017-06-02
 ### Added
 - Add special button App download for both desktop and mobile
@@ -293,6 +297,7 @@ on desktop or mobile view
 
 
 [Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta30...HEAD
+[3.0.0-beta31]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta30...v3.0.0-beta31
 [3.0.0-beta30]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta29...v3.0.0-beta30
 [3.0.0-beta29]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta28...v3.0.0-beta29
 [3.0.0-beta28]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta27...v3.0.0-beta28
