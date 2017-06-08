@@ -86,13 +86,12 @@ export const configureTracker = (options = {}) => {
   }
 
   // merge default options with what has been provided
-  options = {
+  options = Object.assign({
     userId: userId,
     appDimensionId: __PIWIK_DIMENSION_ID_APP__,
     app: appName,
     heartbeat: 15,
-    ...options
-  }
+  }, options)
 
   // apply them
   if (parseInt(options.heartbeat) > 0) trackerInstance.push(['enableHeartBeatTimer', parseInt(options.heartbeat)])
