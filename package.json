@@ -47,5 +47,8 @@
     "classnames": "^2.2.5",
     "md5": "^2.2.0",
     "normalize.css": "5.0.0"
+  },
+  "peerDependencies": {
+    "piwik-react-router": "^0.8.2"
   }
 }
