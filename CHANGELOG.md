@@ -24,6 +24,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [3.0.0-beta35] - 2017-06-09
+### Fixed
+- Update album icon to fix selectionbar.styl
+
+
 ## [3.0.0-beta34] - 2017-06-09
 ### Fixed
 - Add .jsx extension on i18n import
@@ -316,7 +321,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta34...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta35...HEAD
+[3.0.0-beta33]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta34...v3.0.0-beta35
 [3.0.0-beta33]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta33...v3.0.0-beta34
 [3.0.0-beta33]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta32...v3.0.0-beta33
 [3.0.0-beta32]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta31...v3.0.0-beta32
