@@ -9,13 +9,13 @@ const ModalContent = ({children, className}) =>
   </div>)
 
 const ModalSection = ({children, className}) =>
-  (<div className={classNames(styles['coz-modal-section'], className)}>
+  (<div className={classNames(styles['coz-modal-content'], styles['coz-modal-section'], className)}>
     {children}
   </div>)
 
 const ModalTitle = ({ title }) =>
   (
-    <h2 className={styles['coz-modal-title']}>{title}</h2>
+    <h2 className={classNames(styles['coz-modal-content'], styles['coz-modal-title'])}>{title}</h2>
   )
 
 const ModalCross = ({ withCross, secondaryAction, secondaryText }) =>
