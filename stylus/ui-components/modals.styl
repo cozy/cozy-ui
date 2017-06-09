@@ -31,50 +31,45 @@ $modals
         position          fixed
         top               0
         left              0
+        display           flex
+        flex-direction    row
         box-sizing        border-box
         width             100vw
         height            100vh
         overflow-y        scroll
-        display           flex
         padding           (16/basefont)em
 
     .coz-modal
         position          relative
-        margin            auto
+        margin            2em auto auto
         border-radius     em(8px)
         max-width         90%
         height            auto
         background-color  white
         color             grey-08
-
         // The content of the modal should manage its
         // overflow settings as overflowing here may
         // hide the border-radius
         overflow          hidden
 
-        .coz-modal-content,
-        .coz-modal-section
+        .coz-modal-content:first-child
+        .coz-btn-modal-close + .coz-modal-content
+            padding-top    1.5em
+
+        .coz-modal-content:last-child
+            padding-bottom    1.5em
+
+        .coz-modal-content
             padding 0 1.5em
 
         .coz-modal-section
             border-top 1px solid grey-09
 
-        .coz-modal-content,
-        .coz-modal-section
-            &:first-of-type
-                padding-top    1.5em
-            &:last-of-type
-                padding-bottom 1.5em
-
-        .coz-modal-title
-            margin       .33em 0 1em
+        .coz-modal-content.coz-modal-title
+            margin       0 0 1em
             // font is 1.5em
-            padding      1em 1em 0
+            padding      1em 3em 0 1em
             font-weight  bold
-
-            & + .coz-modal-content:first-of-type,
-            & + .coz-modal-section:first-of-type
-                padding-top 0
 
         .coz-btn-modal-close
             position         absolute
