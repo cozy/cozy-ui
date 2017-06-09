@@ -23,13 +23,24 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+
+## [3.0.0-beta33] - 2017-06-09
+### Fixed
+- Add .jsx extension on i18n component
+
+### Added
+- Add SelectionBar component
+
+
 ## [3.0.0-beta32] - 2017-06-08
 ### Fixed
 - The previously added usage-tracking helper had the wrong file format for usage in our project configurations
 
+
 ## [3.0.0-beta31] - 2017-06-08
 ### Added
 - Added usage tracking helpers
+
 
 ## [3.0.0-beta30] - 2017-06-02
 ### Added
@@ -300,7 +311,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta30...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta33...HEAD
+[3.0.0-beta33]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta32...v3.0.0-beta33
 [3.0.0-beta32]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta31...v3.0.0-beta32
 [3.0.0-beta31]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta30...v3.0.0-beta31
 [3.0.0-beta30]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta29...v3.0.0-beta30
