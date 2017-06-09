@@ -89,6 +89,14 @@ $selectionbar
             text-indent  -9999px
             transform    translateY(-50%)
 
+        .coz-action-download:disabled
+        .coz-action-trash:disabled
+        .coz-action-destroy:disabled
+        .coz-action-delete:disabled
+        .coz-action-restore:disabled
+        .coz-action-openwith:disabled
+            opacity .5
+
     @media (max-width: (1023/basefont)rem)
         .coz-selectionbar
             top              auto
@@ -114,11 +122,3 @@ $selectionbar
                 padding-left  0
                 color         transparent
                 background-position em(12px)
-
-            .coz-action-download:disabled
-            .coz-action-trash:disabled
-            .coz-action-destroy:disabled
-            .coz-action-delete:disabled
-            .coz-action-restore:disabled
-            .coz-action-openwith:disabled
-                opacity .5
