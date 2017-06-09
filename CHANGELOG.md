@@ -6,7 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Changed
-- none yet
+- Stick the modal on top juuuuust a lil' bit hover the cozy-bar
+- Aligned modal title with the closing cross button
+- Refactored how the modal handle the flow of its content, for the padding mostly
+- Disabled buttons have now a `not-allowed` cursor when hovered
+- Disabled buttons in selection bar have now `opacity: .5` even on desktop
 
 ### Fixed
 - none yet
@@ -15,7 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Removed
-- none yet
+- removed inputs' grey `background-color`
 
 ### Deprecated
 - none yet
@@ -33,15 +37,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - Add .jsx extension on i18n import
 
-
 ## [3.0.0-beta33] - 2017-06-09
 ### Fixed
 - Add .jsx extension on i18n component
 
 ### Added
 - Add SelectionBar component
-
-
+-
 ## [3.0.0-beta32] - 2017-06-08
 ### Fixed
 - The previously added usage-tracking helper had the wrong file format for usage in our project configurations
