@@ -30,7 +30,7 @@ $button
     &[disabled]
     &[aria-disabled=true]
         opacity  .5
-        cursor   default
+        cursor   not-allowed
 
     &[aria-busy=true]
         &::after
@@ -123,6 +123,11 @@ $button--upload
     background-image     embedurl('../assets/icons/ui/icon-upload.svg')
     background-position  em(17px, 16px) center
     background-repeat    no-repeat
+
+    &[disabled]
+    &[aria-disabled=true]
+        input
+            cursor not-allowed
 
     input
         cursor pointer
