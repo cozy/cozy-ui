@@ -6,8 +6,8 @@
 
 import React, { Component } from 'react'
 
-import { initTranslation } from './translation'
-import { initFormat } from './format'
+import { initTranslation } from './translation.jsx'
+import { initFormat } from './format.jsx'
 
 export const DEFAULT_LANG = 'en'
 

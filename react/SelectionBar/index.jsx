@@ -4,7 +4,6 @@ import { translate } from '../I18n'
 import classNames from 'classnames'
 
 import styles from './styles.styl'
-import { getSelectedIds, hideSelectionBar } from '.'
 
 /*
 
