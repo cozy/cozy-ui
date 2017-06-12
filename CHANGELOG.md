@@ -11,9 +11,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Refactored how the modal handle the flow of its content, for the padding mostly
 - Disabled buttons have now a `not-allowed` cursor when hovered
 - Disabled buttons in selection bar have now `opacity: .5` even on desktop
+- Update cross icon
+- Greys vars names are now consistent with the other color vars
 
 ### Fixed
-- none yet
+- Selection bar classes were not consistent
+- Height of items in selection bar on mobile were way bigger than it should
 
 ### Added
 - none yet
@@ -22,7 +25,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - removed inputs' grey `background-color`
 
 ### Deprecated
-- none yet
+- Formers greys from previous identity are depreciated but with a fallback to the nearest grey of the new identity
 
 ### Security
 - none yet
