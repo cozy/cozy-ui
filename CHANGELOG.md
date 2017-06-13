@@ -6,6 +6,26 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Changed
+- none yet
+
+### Fixed
+- none yet
+
+### Added
+- none yet
+
+### Removed
+- none yet
+
+### Deprecated
+- none yet
+
+### Security
+- none yet
+
+
+## [3.0.0-beta36] - 2017-06-13
+### Changed
 - Stick the modal on top juuuuust a lil' bit hover the cozy-bar
 - Aligned modal title with the closing cross button
 - Refactored how the modal handle the flow of its content, for the padding mostly
@@ -18,18 +38,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Selection bar classes were not consistent
 - Height of items in selection bar on mobile were way bigger than it should
 
-### Added
-- none yet
-
 ### Removed
 - removed inputs' grey `background-color`
 
 ### Deprecated
 - Formers greys from previous identity are depreciated but with a fallback to the nearest grey of the new identity
-
-### Security
-- none yet
-
+-
 
 ## [3.0.0-beta35] - 2017-06-09
 ### Fixed
@@ -326,9 +340,10 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta35...HEAD
-[3.0.0-beta33]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta34...v3.0.0-beta35
-[3.0.0-beta33]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta33...v3.0.0-beta34
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta36...HEAD
+[3.0.0-beta36]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta35...v3.0.0-beta36
+[3.0.0-beta35]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta34...v3.0.0-beta35
+[3.0.0-beta34]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta33...v3.0.0-beta34
 [3.0.0-beta33]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta32...v3.0.0-beta33
 [3.0.0-beta32]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta31...v3.0.0-beta32
 [3.0.0-beta31]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta30...v3.0.0-beta31
