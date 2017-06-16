@@ -1,12 +1,9 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { Toggle } from '../../../react/Toggle'
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
+import Toggle from '../../../react/Toggle'
 
 storiesOf('Toggle')
-  .addWithInfo(
-    'simple usage',
-    `This is the basic usage with the button with providing a label to show the text.`,
-    () => (
-      <Toggle />
-    ),
-  );
+  .add('simple usage', () => (
+      <Toggle id="storybook-toggle" checked={true} onToggle={action('toggled')} />
+  ))

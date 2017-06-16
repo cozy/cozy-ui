@@ -1,16 +1,15 @@
 module.exports = {
   resolve: {
-    extensions: ['.styl'],
-    extensions: ['.jsx'],
-    alias: {
-      'react': 'preact-compat',
-      'react-dom': 'preact-compat'
-    }
+    extensions: ['.jsx', '.js', '.json', '.styl']
   },
   module: {
-    loaders: [{
+    rules: [{
       test: /\.styl$/,
-      loader: 'css-loader!stylus-loader?paths=node_modules/bootstrap-stylus/stylus/'
+      use: [
+        'style-loader',
+        'css-loader',
+        'stylus-loader'
+      ]
     }]
   }
 }
