@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Added
-
+- <Spinner /> component with several options like color, size, Box-model…
 - `<Icon />` component to use cozy-ui icons easily à la [FontAwesome](http://fontawesome.io/). `Icon`s can be styled with CSS.
 
 ```jsx
