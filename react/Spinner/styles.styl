@@ -1,0 +1,60 @@
+@import '../../stylus/ui-base/palette'
+@import '../../stylus/ui-base/icons'
+
+.coz-spinner
+    display inline-block
+
+    &:before
+        content ''
+
+    p
+        margin-top  em(15px)
+        color       grey-11
+        line-height 1.5
+
+// === Modifiers ===
+
+// Box-model
+.coz-spinner--middle
+    position   absolute
+    top        50%
+    left       50%
+    transform  translateX(-50%) translateY(-50%)
+
+.coz-spinner--center:before
+    display     block
+    margin      0 auto
+    text-align  center
+
+
+// Colors
+.coz-spinner--blue:before
+    @extend $icon-spinner-blue
+
+.coz-spinner--grey:before
+    @extend $icon-spinner-grey
+
+.coz-spinner--white:before
+    @extend $icon-spinner-white
+
+.coz-spinner--red:before
+    @extend $icon-spinner-red
+
+// Sizes
+.coz-spinner--tiny:before
+    @extend $icon-8
+
+.coz-spinner--small:before
+    @extend $icon-12
+
+.coz-spinner--medium:before
+    @extend $icon-16
+
+.coz-spinner--large:before
+    @extend $icon-24
+
+.coz-spinner--xlarge:before
+    @extend $icon-36
+
+.coz-spinner--xxlarge:before
+    @extend $icon-80
