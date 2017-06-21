@@ -3,9 +3,13 @@
 
 .coz-spinner
     display inline-block
+    margin 0 .5rem
 
     &:before
         content ''
+        // Default setup
+        @extend $icon-spinner-blue
+        @extend $icon-16
 
     p
         margin-top  em(15px)
@@ -20,12 +24,14 @@
     top        50%
     left       50%
     transform  translateX(-50%) translateY(-50%)
-
-.coz-spinner--center:before
-    display     block
-    margin      0 auto
     text-align  center
 
+    &:before
+        display     block
+        margin      0 auto
+
+.coz-spinner--nomargin
+    margin 0
 
 // Colors
 .coz-spinner--blue:before
