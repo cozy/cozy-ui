@@ -4,10 +4,10 @@ import icons from '../../src/icons'
 
 
 const Icon = function ({ icon, width, height, style, color, className }) {
-  const hash = icons[icon]
+  const anchor = icon[0] === '#' ? icon : icons[icon]
 
-  if (!hash) {
-    throw new Error('Icon not found ' + icon + '\nAvailable icons :' + Object.keys(icons))
+  if (!anchor) {
+    throw new Error(`Icon not found ${icon}.\nAvailable icons : ${Object.keys(icons)}`)
   }
 
   style = Object.assign({}, style)
@@ -20,7 +20,7 @@ const Icon = function ({ icon, width, height, style, color, className }) {
       style={style}
       width={width || '1em'}
       height={height || '1em'}>
-    <use xlinkHref={icons[icon]} />
+    <use xlinkHref={anchor} />
   </svg>
 }
 
