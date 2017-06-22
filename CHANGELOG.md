@@ -12,13 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Added
-- <Spinner /> component with several options like color, size, Box-model…
-- `<Icon />` component to use cozy-ui icons easily à la [FontAwesome](http://fontawesome.io/). `Icon`s can be styled with CSS.
-
-```jsx
-import Icon from 'cozy-ui/react/Icon'
-<Icon icon='warn' width='2rem' height='2rem' color='red' />
-```
+- none yet
 
 ### Removed
 - none yet
@@ -29,6 +23,25 @@ import Icon from 'cozy-ui/react/Icon'
 ### Security
 - none yet
 
+
+## [3.0.0-beta37] - 2017-06-22
+### Changed
+- Position of the modal is now relative to the viewport's height
+- Modal has now a min-width so it's not too narrow with tiny content
+- Refactored form controls such as submit buttons
+
+### Fixed
+- Closing cross size in modals
+- Select element has now its arrow when on focus
+
+### Added
+- `<Spinner />` component with several options like color, size, Box-model…
+- `<Icon />` component to use cozy-ui icons easily à la [FontAwesome](http://fontawesome.io/). `Icon`s can be styled with CSS.
+
+```jsx
+import Icon from 'cozy-ui/react/Icon'
+<Icon icon='warn' width='2rem' height='2rem' color='red' />
+```
 
 ## [3.0.0-beta36] - 2017-06-13
 ### Changed
@@ -346,7 +359,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta36...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta37...HEAD
+[3.0.0-beta37]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta36...v3.0.0-beta37
 [3.0.0-beta36]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta35...v3.0.0-beta36
 [3.0.0-beta35]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta34...v3.0.0-beta35
 [3.0.0-beta34]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta33...v3.0.0-beta34
