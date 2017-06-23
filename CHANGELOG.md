@@ -24,6 +24,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [3.0.0-beta38] - 2017-06-23
+### Fixed
+- wrong file name when importing i18n in Spinner component prevented apps from buidling
+
 ## [3.0.0-beta37] - 2017-06-22
 ### Changed
 - Position of the modal is now relative to the viewport's height
@@ -359,7 +363,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta37...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta38...HEAD
+[3.0.0-beta38]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta37...v3.0.0-beta38
 [3.0.0-beta37]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta36...v3.0.0-beta37
 [3.0.0-beta36]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta35...v3.0.0-beta36
 [3.0.0-beta35]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta34...v3.0.0-beta35
