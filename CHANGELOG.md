@@ -24,6 +24,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [3.0.0-beta39] - 2017-06-27
+### Changed
+- Tabs units from `px` to `rem`
+
+### Fixed
+- Alert position on mobile
+- Modal responsiveness
+
+### Removed
+- Content component in Modal Component
+
 ## [3.0.0-beta38] - 2017-06-23
 ### Fixed
 - wrong file name when importing i18n in Spinner component prevented apps from buidling
@@ -363,7 +374,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta38...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta39...HEAD
+[3.0.0-beta39]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta38...v3.0.0-beta39
 [3.0.0-beta38]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta37...v3.0.0-beta38
 [3.0.0-beta37]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta36...v3.0.0-beta37
 [3.0.0-beta36]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta35...v3.0.0-beta36
