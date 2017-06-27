@@ -8,6 +8,11 @@ const ModalContent = ({children, className}) =>
     {children}
   </div>)
 
+const ModalContentOffset = ({children, className}) =>
+  (<div className={classNames(styles['coz-modal-content'], styles['coz-modal-content--offset'], className)}>
+    {children}
+  </div>)
+
 const ModalSection = ({children, className}) =>
   (<div className={classNames(styles['coz-modal-content'], styles['coz-modal-section'], className)}>
     {children}
@@ -129,7 +134,8 @@ Modal.defaultProps = {
 }
 
 export { ModalContent }
- // deprecated, for retro-compatibilty only.
+export { ModalContentOffset }
+ // Content is deprecated, for retro-compatibilty only.
 export { Content }
 export { ModalSection }
 export default Modal

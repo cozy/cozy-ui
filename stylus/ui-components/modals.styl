@@ -63,6 +63,9 @@ $modals
         .coz-modal-content
             padding 0 1.5em
 
+        .coz-modal-content--offset
+            padding 0
+
         .coz-modal-section
             border-top 1px solid grey-09
 
@@ -97,7 +100,7 @@ $modals
             transition-timing-function  ease-in
 
 
-    @media (max-width modal-width)
+    @media (max-width (modal-width + 2em))
         .coz-modal
             max-width   modal-width
             min-width   auto
