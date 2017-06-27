@@ -1,15 +1,9 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import Content from './Content'
 import styles from './styles.styl'
 
 const ModalContent = ({children, className}) =>
   (<div className={classNames(styles['coz-modal-content'], className)}>
-    {children}
-  </div>)
-
-const ModalContentOffset = ({children, className}) =>
-  (<div className={classNames(styles['coz-modal-content'], styles['coz-modal-content--offset'], className)}>
     {children}
   </div>)
 
@@ -134,8 +128,5 @@ Modal.defaultProps = {
 }
 
 export { ModalContent }
-export { ModalContentOffset }
- // Content is deprecated, for retro-compatibilty only.
-export { Content }
 export { ModalSection }
 export default Modal
