@@ -1,3 +1,5 @@
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
+
 module.exports = {
   resolve: {
     alias: {
@@ -9,11 +11,22 @@ module.exports = {
   module: {
     rules: [{
       test: /\.styl$/,
-      use: [
-        'style-loader',
-        'css-loader',
-        'stylus-loader'
-      ]
+      use: ExtractTextPlugin.extract({
+        fallbackLoader: 'style-loader',
+        use: [
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[local]--[hash:base64:5]'
+            }
+          },
+          { loader: 'stylus-loader' }
+        ]
+      })
     }]
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin("[name].css"),
+  ]
 }
