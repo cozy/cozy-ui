@@ -5,5 +5,5 @@ import Toggle from '../../../react/Toggle'
 
 storiesOf('Toggle')
   .add('simple usage', () => (
-      <Toggle id="storybook-toggle" checked={true} onToggle={action('toggled')} />
+    <Toggle id='storybook-toggle' checked onToggle={action('toggled')} />
   ))

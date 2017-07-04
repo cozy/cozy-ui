@@ -18,7 +18,7 @@
   "homepage": "https://github.com/cozy/cozy-ui",
   "scripts": {
     "lint": "npm-run-all 'lint:*'",
-    "lint:js": "standard 'stylus/**/*.js'",
+    "lint:js": "standard '**/*.js'",
     "lint:stylus": "stylint stylus --config .stylintrc",
     "storybook": "start-storybook -p 9001 -c docs/react/.storybook"
   },
