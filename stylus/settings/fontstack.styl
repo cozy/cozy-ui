@@ -1,0 +1,24 @@
+// Fonts Stack
+//
+// There's only one font available, Lato, which is used on body, so basically everywhere. It's also available in bold.
+//
+// Markup:
+// <p>This is basic text</p>
+// <p><strong>And this is bold text</strong></p>
+//
+// Styleguide Settings.fonts
+
+@font-face
+    font-family Lato
+    font-style normal
+    font-weight normal
+    src embedurl('../../assets/fonts/Lato-Regular.woff2') format('woff2')
+
+@font-face
+    font-family Lato
+    font-style normal
+    font-weight bold
+    src embedurl('../../assets/fonts/Lato-Bold.woff2') format('woff2')
+
+$font-labor
+    font-family Lato, sans-serif

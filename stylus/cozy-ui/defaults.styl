@@ -6,19 +6,7 @@
 
 // FONTS
 @import '../ui-base/fonts'
-@font-face
-    font-family Lato
-    font-style normal
-    font-weight normal
-    src embedurl('../../assets/fonts/Lato-Regular.woff2') format('woff2'),
-        embedurl('../../assets/fonts/Lato-Regular.woff') format('woff')
-
-@font-face
-    font-family Lato
-    font-style normal
-    font-weight bold
-    src embedurl('../../assets/fonts/Lato-Bold.woff2') format('woff2'),
-        embedurl('../../assets/fonts/Lato-Bold.woff') format('woff')
+@import '../settings/fontstack'
 
 body
     font 1em/1.5
@@ -36,7 +24,7 @@ textarea
 
 // UTILS
 @import '../ui-base/mixins'
-@import '../ui-base/palette'
+@import '../settings/palette'
 :global
     .coz-error
         color  pomegranate
