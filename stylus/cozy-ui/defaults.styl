@@ -1,11 +1,11 @@
 // @stylint off
 // DEFINITIONS
-@import '~normalize.css/normalize.css'
-@import '../ui-base/animations'
+@import '../generic/normalize'
+@import '../generic/animations'
 
 
 // FONTS
-@import '../ui-base/fonts'
+@import '../tools/mixins'
 @import '../settings/fontstack'
 
 body
@@ -23,7 +23,6 @@ textarea
     @extend $font-labor
 
 // UTILS
-@import '../ui-base/mixins'
 @import '../settings/palette'
 :global
     .coz-error
@@ -37,9 +36,6 @@ textarea
             height          .875rem
             background      embedurl('../assets/icons/ui/icon-warning.svg') center center / contain no-repeat
             vertical-align  text-bottom
-
-    .coz-hidden
-        @extend $hidden
 
     .coz-desktop
         @media (max-width: (1023/basefont)rem)
@@ -74,7 +70,6 @@ body
 
 
 // BOXES
-@import '../ui-base/boxes'
 [aria-hidden=true]
     hide()
 
