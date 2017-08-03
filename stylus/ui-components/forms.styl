@@ -109,6 +109,31 @@ $form-text
             border      1px solid pomegranate
 
 
+$form-textarea
+    textarea
+        display        inline-block
+        padding        .9em .75em .75em .9em
+        box-sizing     border-box
+        border-radius  2px
+        border         1px solid grey-03
+        background     white
+        color          black
+
+        &::placeholder
+            color      grey-06
+            font-size  1em
+
+        &:focus
+            border      1px solid dodger-blue
+            outline     0
+
+        &:hover
+            border  1px solid grey-11
+
+        &.error
+            border      1px solid pomegranate
+
+
 $form-select
     select
         display              inline-block
