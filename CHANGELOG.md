@@ -24,7 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
-## [3.0.0-beta40] - 2017-07-07
+## [3.0.0-beta40] - 2017-08-07
 
 ### Added
 - Styles for textarea element (same styles than other inputs)
