@@ -96,14 +96,31 @@ As we use Stylus as preprocessor, I recommend the use of `//` for inline but CSS
 
 You should always comment what you code, especially when what you coded isn't obvious, and nothing is obvious.
 
-**@TODO Insert instructions on KSS guidelines**
+### KSS Comments
+
+In order to populate the styleguide you need to use specific comments, KSS comments.
+It basically, very basically, looks like that.
+```
+// Title
+//
+// Description
+//
+// Markup:
+// <button class="button {{modifier_class}}">Button</button>
+//
+// modifier_class - class description
+//
+// Reference
+```  
+
+Please follow the [KSS specs](https://github.com/kss-node/kss/blob/spec/SPEC.md) for more details.
 
 ## Naming Conventions
 
 * **Classes should always written in lowercase**
 * **All strings in classes are delimited with a hyphen (-)**
 
-**@TODO Insert instructions on BEM convention**
+We use [BEM naming convention](http://getbem.com/naming/) but with a slight difference, we use this syntax `block-element--modifier`.
 
 ## Selectors
 
