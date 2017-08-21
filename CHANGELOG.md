@@ -24,12 +24,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
-## [3.0.0-beta40] - 2017-08-07
+## [3.0.0-beta41] - 2017-08-21
+### Fixed
+- Made normalize.css import absolute
 
+## [3.0.0-beta40] - 2017-08-07
 ### Added
 - Styles for textarea element (same styles than other inputs)
 - `$button--send` class for button with paperplan icon
-
 
 ## [3.0.0-beta39] - 2017-06-27
 ### Changed
@@ -381,7 +383,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta40...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta41...HEAD
+[3.0.0-beta41]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta40...v3.0.0-beta41
 [3.0.0-beta40]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta39...v3.0.0-beta40
 [3.0.0-beta39]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta38...v3.0.0-beta39
 [3.0.0-beta38]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta37...v3.0.0-beta38
