@@ -1,10 +1,4 @@
 /*------------------------------------*\
-  Z-Index
-  ================
-
-  This file contains every z-index related to components
-  in order to keep a clean & maintainable order of indexes
-
   Please, edit this file properly, with a 10 based incrementation,
   and keep things in order so it remains easily readable.
 
@@ -14,6 +8,27 @@
   .my-app
       z-index  $app-index
 \*------------------------------------*/
+
+// Z-Index
+//
+// List of every z-index related to components in order to keep a clean
+// & maintainable order of indexes.
+//
+// Those indexes are 10 based so you can deal with extra layers using `$index + 1`
+//
+// $below-index        - **index -1** Layer below the app, mostly for hiding purpose
+// $app-index          - **index 0** App index, the ground zero.
+// $alert-index-mobile - **index 10** Alert index like success, errors, infos *mobile only*
+// $bar-index          - **index 20** Bar index, not actually used, just as reference
+// $nav-index          - **index 20** Nav index
+// $selection-index    - **index 30** Selection bar index, with actions for selected items
+// $popover-index      - **index 40** Popover index used by dropdown menu for example
+// $overlay            - **index 50** Overlay index for modals background
+// $file-action-menu   - **index 60** File action menu index *mobile only*
+// $modal-index        - **index 70** Modal index
+// $alert-index        - **index 80** Alert index such as success, errors, infos
+//
+// Styleguide Settings.z-index
 
 $below-index        = -1
 $app-index          = 0
