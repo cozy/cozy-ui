@@ -88,14 +88,14 @@ class Modal extends Component {
   }
 
   render () {
-    const { children, title, withCross } = this.props
+    const { children, title, withCross, overflowHidden } = this.props
     return (
       <div className={styles['coz-modal-container']}>
         <div className={styles['coz-overlay']}>
           <div
             className={styles['coz-modal-wrapper']}
             onClick={withCross && this.handleOutsideClick}>
-            <div className={styles['coz-modal']}>
+            <div className={classNames(styles['coz-modal'], { [styles['coz-modal--fullbleed']]: overflowHidden })}>
               <ModalCross {...this.props} />
               {title && <ModalTitle {...this.props} />}
               <ModalDescription {...this.props} />
@@ -118,13 +118,15 @@ Modal.propTypes = {
   primaryType: React.PropTypes.string,
   primaryText: React.PropTypes.string,
   primaryAction: React.PropTypes.func,
-  withCross: React.PropTypes.bool
+  withCross: React.PropTypes.bool,
+  overflowHidden: React.PropTypes.bool
 }
 
 Modal.defaultProps = {
   primaryType: 'secondary',
   secondaryType: 'regular',
-  withCross: true
+  withCross: true,
+  overflowHidden: false
 }
 
 export { ModalContent }
