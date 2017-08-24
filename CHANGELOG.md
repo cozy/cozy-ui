@@ -27,18 +27,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [3.0.0-beta42] - 2017-08-24
 ### Removed
 - Modal doesn't have `overflow: hidden` property by default anymore
--
+
 ### Added
 - Modal component's new boolean option `overflowHidden`
+
 
 ## [3.0.0-beta41] - 2017-08-21
 ### Fixed
 - Made normalize.css import absolute
 
+
 ## [3.0.0-beta40] - 2017-08-07
 ### Added
 - Styles for textarea element (same styles than other inputs)
 - `$button--send` class for button with paperplan icon
+
 
 ## [3.0.0-beta39] - 2017-06-27
 ### Changed
@@ -51,9 +54,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 - Content component in Modal Component
 
+
 ## [3.0.0-beta38] - 2017-06-23
 ### Fixed
 - wrong file name when importing i18n in Spinner component prevented apps from buidling
+
 
 ## [3.0.0-beta37] - 2017-06-22
 ### Changed
@@ -74,6 +79,7 @@ import Icon from 'cozy-ui/react/Icon'
 <Icon icon='warn' width='2rem' height='2rem' color='red' />
 ```
 
+
 ## [3.0.0-beta36] - 2017-06-13
 ### Changed
 - Stick the modal on top juuuuust a lil' bit hover the cozy-bar
@@ -93,7 +99,7 @@ import Icon from 'cozy-ui/react/Icon'
 
 ### Deprecated
 - Formers greys from previous identity are depreciated but with a fallback to the nearest grey of the new identity
--
+
 
 ## [3.0.0-beta35] - 2017-06-09
 ### Fixed
@@ -104,13 +110,15 @@ import Icon from 'cozy-ui/react/Icon'
 ### Fixed
 - Add .jsx extension on i18n import
 
+
 ## [3.0.0-beta33] - 2017-06-09
 ### Fixed
 - Add .jsx extension on i18n component
 
 ### Added
 - Add SelectionBar component
--
+
+
 ## [3.0.0-beta32] - 2017-06-08
 ### Fixed
 - The previously added usage-tracking helper had the wrong file format for usage in our project configurations
@@ -227,6 +235,7 @@ Nothing else has changed.
 ### Added
 - New utility classes `.coz-error` and variant `.coz-error--warning` to display error text, without or with a warning sign
 - Added table default style
+
 
 ## [3.0.0-beta17] - 2017-03-17
 ### Fixed
