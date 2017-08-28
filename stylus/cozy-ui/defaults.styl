@@ -63,6 +63,9 @@ textarea
 // LAYOUT
 html
   height  100%
+  // Necessary not to have broken layout on iOS
+  // https://github.com/cozy/cozy-ui/issues/161
+  overflow hidden
 
 body
   display         flex
