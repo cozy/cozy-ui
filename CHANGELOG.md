@@ -24,6 +24,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [3.0.0-beta43] - 2017-08-30
+### Fixed
+- layout broken on scroll (iOS)
+
 ## [3.0.0-beta42] - 2017-08-24
 ### Removed
 - Modal doesn't have `overflow: hidden` property by default anymore
@@ -399,7 +403,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta42...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta43...HEAD
+[3.0.0-beta43]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta42...v3.0.0-beta43
 [3.0.0-beta42]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta41...v3.0.0-beta42
 [3.0.0-beta41]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta40...v3.0.0-beta41
 [3.0.0-beta40]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta39...v3.0.0-beta40
