@@ -129,6 +129,9 @@ Modal.defaultProps = {
   overflowHidden: false
 }
 
-export { ModalContent }
-export { ModalSection }
+export {
+  ModalContent,
+  ModalSection,
+  ModalButtons
+}
 export default Modal
