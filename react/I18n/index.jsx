@@ -28,7 +28,8 @@ export class I18n extends Component {
   getChildContext () {
     return {
       t: this.translation.t.bind(this.translation),
-      f: this.format
+      f: this.format,
+      lang: this.props.lang
     }
   }
 
@@ -52,14 +53,15 @@ I18n.propTypes = {
 
 I18n.childContextTypes = {
   t: React.PropTypes.func,
-  f: React.PropTypes.func
+  f: React.PropTypes.func,
+  lang: React.PropTypes.string
 }
 
 // higher order decorator for components that need `t` and/or `f`
 export const translate = () => {
   return (WrappedComponent) => {
     const _translate = (props, context) => (
-      <WrappedComponent {...props} t={context.t} f={context.f} />
+      <WrappedComponent {...props} t={context.t} f={context.f} lang={context.lang} />
     )
     return _translate
   }
