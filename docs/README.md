@@ -2,10 +2,10 @@
 [![NPM release version shield](https://img.shields.io/npm/v/cozy-ui.svg)](https://www.npmjs.com/package/cozy-ui)
 [![Github Release version shield](https://img.shields.io/github/tag/cozy/cozy-ui.svg)](https://github.com/cozy/cozy-ui/releases)
 [![NPM Licence shield](https://img.shields.io/npm/l/cozy-ui.svg)](https://github.com/cozy/cozy-ui/blob/master/LICENSE)
+[![Storybook](https://img.shields.io/badge/react-storybook-green.svg?style=flat)](https://cozy.github.io/cozy-ui/react/)
 
 
-Cozy Ui
-=======
+# Cozy Ui
 
 A clean Ui SDK designed to build [Cozy](https://cozy.io/) apps.
 
@@ -40,6 +40,11 @@ return stylus(str)
 _:pushpin: NOTE_: Cozy Ui uses [normalize.css](https://necolas.github.io/normalize.css/) by _Nicolas Gallagher_ as a reset styles process. The CSS file is embedded directlyby the Cozy Ui Stylus plugin, using the stylus `include css` statement to inline the CSS in the output instead of using a native CSS `@import`.
 
 Then, you just need to add a `@import 'cozy-ui'` statement at top of your main stylus file.
+
+
+## React components
+
+You can see react components in storybook [here](https://cozy.github.io/cozy-ui/react/).
 
 
 ## License

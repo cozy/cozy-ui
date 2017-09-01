@@ -1,4 +1,5 @@
 node_modules
+build
 
 # Users Environment Variables
 .lock-wscript
