@@ -23,6 +23,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [3.0.0-beta44] - 2017-09-01
+### Added
+- Ability to import components directly from `cozy-ui/react`
 
 ## [3.0.0-beta43] - 2017-08-30
 ### Fixed
