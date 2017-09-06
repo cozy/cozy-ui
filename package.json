@@ -22,7 +22,7 @@
     "lint:stylus": "stylint stylus --config .stylintrc",
     "storybook": "start-storybook -p 9001 -c docs/react/.storybook",
     "build:doc": "copyfiles -u 1 docs/*.* build && build-storybook -c docs/react/.storybook -o build/react",
-    "deploy:doc": "git-directory-deploy --username Cozy --email contact@cozycloud.cc --directory build/ --branch gh-pages"
+    "deploy:doc": "git-directory-deploy --directory build/ --branch gh-pages"
   },
   "devDependencies": {
     "@storybook/addon-info": "^3.1.6",
