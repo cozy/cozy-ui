@@ -21,4 +21,4 @@ deploy:
     repo: cozy/cozy-ui
 env:
   global:
-    secure: PHiyG4tAClhkEozcVAJH9j27+RBOJ7qGHGC5eXUJADa6pT2VLqKOwERIgoma4nTMzK+Le3E3aIhKOyjj9jlbhPKutu6w8AZLGNrtB8xDjQqYOOqlehjGdk+L/iAjPxiDAYZtEsnmZdmFMDgyPxaxc/yzt74zsajNhlRvlfkWABk=
+    secure: R3CSBrSNdBrL27FaZLw8KyshNreI9eArdXksT7Zf3oms/88mivudD0rSt5jYodPcMWF6IJtJ6xqqpJRbb/CH7eY7TOPoM9A2mhjxjy/tyk+UN4ieh75clCo/eMt89Zx6aJ72VZ0NsQAQHcOjA9UUm463HYpsGzzkc9dNGAM5F30=
