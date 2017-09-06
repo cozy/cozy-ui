@@ -20,7 +20,9 @@
     "lint": "npm-run-all 'lint:*'",
     "lint:js": "standard '**/*.js'",
     "lint:stylus": "stylint stylus --config .stylintrc",
-    "storybook": "start-storybook -p 9001 -c docs/react/.storybook"
+    "storybook": "start-storybook -p 9001 -c docs/react/.storybook",
+    "build:doc": "copyfiles -u 1 docs/*.* build && build-storybook -c docs/react/.storybook -o build/react",
+    "deploy:doc": "git-directory-deploy --username Cozy --email contact@cozycloud.cc --directory build/ --branch gh-pages"
   },
   "devDependencies": {
     "@storybook/addon-info": "^3.1.6",
@@ -30,9 +32,11 @@
     "babel-loader": "^6.2.10",
     "babel-preset-env": "^1.1.8",
     "babel-preset-react": "^6.22.0",
+    "copyfiles": "^1.2.0",
     "css-loader": "^0.28.4",
     "date-fns": "^1.28.5",
     "extract-text-webpack-plugin": "^2.1.2",
+    "git-directory-deploy": "^1.5.1",
     "node-polyglot": "^2.2.2",
     "npm-run-all": "^4.0.1",
     "postcss-loader": "^1.2.2",

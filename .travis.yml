@@ -9,6 +9,8 @@ cache:
   - node_modules
 script:
 - yarn lint
+after_success:
+- test $TRAVIS_BRANCH = "master" && test $TRAVIS_REPO_SLUG = "cozy/cozy-ui" && yarn build:doc && yarn deploy:doc
 deploy:
   provider: npm
   email: npm@cozycloud.cc
