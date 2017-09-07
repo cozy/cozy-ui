@@ -2,21 +2,36 @@ import React, { Component } from 'react'
 import styles from './styles.styl'
 import classnames from 'classnames'
 
-export const Tab = function ({ name, children, className, active, activeClass, changeTab }) {
-  const activeStyle = {
-    [styles['coz-tab--active']]: active
+export class Tab extends Component {
+  constructor (props) {
+    super(props)
+    this.onClick = this.onClick.bind(this)
   }
-  if (activeClass) {
-    activeStyle[activeClass] = active
+
+  render ({ name, children, className, active, activeClass, changeTab, onClick }) {
+    const activeStyle = {
+      [styles['coz-tab--active']]: active
+    }
+    if (activeClass) {
+      activeStyle[activeClass] = active
+    }
+    return <div
+      className={classnames(
+        styles['coz-tab'],
+        className,
+        activeStyle)}
+      onClick={this.onClick}>{
+      children
+    }</div>
   }
-  return <div
-    className={classnames(
-      styles['coz-tab'],
-      className,
-      activeStyle)}
-    onClick={() => changeTab(name)}>{
-    children
-  }</div>
+
+  onClick () {
+    const { changeTab, name, onClick } = this.props
+    changeTab(name)
+    if (onClick) {
+      onClick()
+    }
+  }
 }
 
 export const TabList = function ({ children, activeTab, changeTab, className }) {
