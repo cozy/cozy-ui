@@ -8,9 +8,10 @@ setDefaults({
   source: true
 });
 
+const req = require.context('../stories', true, /\.js$/)
+
 function loadStories() {
-  require('../stories/Toggle.js')
-  // You can require as many stories as you need.
+  req.keys().forEach((filename) => req(filename))
 }
 
 configure(loadStories, module)
