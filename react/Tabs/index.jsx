@@ -29,16 +29,18 @@ export const TabList = function ({ children, activeTab, changeTab, className }) 
   }</div>
 }
 
-export const TabPanel = function ({ children, activeTab, name, changeTab, className }) {
-  return activeTab === name ? <div className={classnames(styles['coz-tab-panel'], className)}>{
+export const TabPanel = function ({ children, active, changeTab, className }) {
+  return active ? <div className={classnames(styles['coz-tab-panel'], className)}>{
     children
   }</div> : null
 }
 
 export const TabPanels = function ({ children, activeTab, name, changeTab, className }) {
-  const extra = { activeTab, changeTab }
   return <div className={classnames(styles['coz-tab-panels'], className)}>{
-    React.Children.map(children, child => React.cloneElement(child, extra))
+    React.Children.map(children, child => React.cloneElement(child, {
+      active: child.props.active || activeTab == child.props.name,
+      changeTab
+    }))
   }</div>
 }
 
