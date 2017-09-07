@@ -12,7 +12,7 @@ module.exports = {
     rules: [{
       test: /\.styl$/,
       use: ExtractTextPlugin.extract({
-        fallbackLoader: 'style-loader',
+        fallback: 'style-loader',
         use: [
           {
             loader: 'css-loader',
