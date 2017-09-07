@@ -2,21 +2,36 @@ import React, { Component } from 'react'
 import styles from './styles.styl'
 import classnames from 'classnames'
 
-export const Tab = function ({ name, children, className, active, activeClass, changeTab }) {
-  const activeStyle = {
-    [styles['coz-tab--active']]: active
+export class Tab extends Component {
+  constructor (props) {
+    super(props)
+    this.onClick = this.onClick.bind(this)
   }
-  if (activeClass) {
-    activeStyle[activeClass] = active
+
+  render ({ name, children, className, active, activeClass, changeTab, onClick }) {
+    const activeStyle = {
+      [styles['coz-tab--active']]: active
+    }
+    if (activeClass) {
+      activeStyle[activeClass] = active
+    }
+    return <div
+      className={classnames(
+        styles['coz-tab'],
+        className,
+        activeStyle)}
+      onClick={this.onClick}>{
+      children
+    }</div>
   }
-  return <div
-    className={classnames(
-      styles['coz-tab'],
-      className,
-      activeStyle)}
-    onClick={() => changeTab(name)}>{
-    children
-  }</div>
+
+  onClick () {
+    const { changeTab, name, onClick } = this.props
+    changeTab(name)
+    if (onClick) {
+      onClick()
+    }
+  }
 }
 
 export const TabList = function ({ children, activeTab, changeTab, className }) {
@@ -29,16 +44,18 @@ export const TabList = function ({ children, activeTab, changeTab, className }) 
   }</div>
 }
 
-export const TabPanel = function ({ children, activeTab, name, changeTab, className }) {
-  return activeTab === name ? <div className={classnames(styles['coz-tab-panel'], className)}>{
+export const TabPanel = function ({ children, active, changeTab, className }) {
+  return active ? <div className={classnames(styles['coz-tab-panel'], className)}>{
     children
   }</div> : null
 }
 
 export const TabPanels = function ({ children, activeTab, name, changeTab, className }) {
-  const extra = { activeTab, changeTab }
   return <div className={classnames(styles['coz-tab-panels'], className)}>{
-    React.Children.map(children, child => React.cloneElement(child, extra))
+    React.Children.map(children, child => React.cloneElement(child, {
+      active: child.props.active || activeTab == child.props.name,
+      changeTab
+    }))
   }</div>
 }
 
