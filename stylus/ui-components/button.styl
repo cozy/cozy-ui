@@ -21,6 +21,7 @@ $button
     background       transparent
     vertical-align   top
     text-align       center
+    color            white
     font-size        14px /* [1] */
     line-height      1
     text-transform   uppercase
@@ -32,11 +33,14 @@ $button
         opacity  .5
         cursor   not-allowed
 
+    &:active
+    &:not([disabled]):not([aria-disabled=true]):hover
+    &:focus
+        background-color  science-blue
+
     &[aria-busy=true]
         &::after
-            @extend    $icon-16
-            position   relative
-            top        em(-1px)
+            @extend  $icon-spinner-white
 
 
 $button--regular
@@ -189,6 +193,11 @@ $button--close
     background-image     embedurl('../assets/icons/ui/icon-cross.svg')
     background-position  center center
     background-repeat    no-repeat
+
+    &:active
+    &:not([disabled]):not([aria-disabled=true]):hover
+    &:focus
+        background-color     transparent
 
 
 /*------------------------------------*\
