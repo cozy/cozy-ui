@@ -23,6 +23,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [3.0.0-beta45] - 2017-09-08
+### Changed
+- Default button `.coz-btn` now has white text color and blue background on `:hover`
+
 ## [3.0.0-beta44] - 2017-09-01
 ### Added
 - Ability to import components directly from `cozy-ui/react`
@@ -406,7 +410,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta44...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta45...HEAD
+[3.0.0-beta45]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta44...v3.0.0-beta45
 [3.0.0-beta44]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta43...v3.0.0-beta44
 [3.0.0-beta43]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta42...v3.0.0-beta43
 [3.0.0-beta42]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta41...v3.0.0-beta42
