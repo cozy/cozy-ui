@@ -13,8 +13,5 @@ module.exports = function (source) {
     .replace('fill="#FFFFFF"', '')
     .replace('fill=\'#FFF\'', '')
     .replace('fill=\'#FFFFFF\'', '')
-  if (replaced.length !== source.length) {
-    this.emitWarning('Deprecation warning: you have a fill attribute in your SVG icon file')
-  }
   return replaced
 }
