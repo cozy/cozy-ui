@@ -21,7 +21,7 @@
     "lint:js": "standard '**/*.js'",
     "lint:stylus": "stylint stylus --config .stylintrc",
     "styleguide": "styleguidist server --config docs/styleguide.config.js",
-    "build:doc": "styleguidist build --config docs/styleguide.config.js",
+    "build:doc": "copyfiles -u 1 docs/*.md docs/_config.yml build && styleguidist build --config docs/styleguide.config.js",
     "deploy:doc": "git-directory-deploy --directory build/ --branch gh-pages"
   },
   "devDependencies": {
