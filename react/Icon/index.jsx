@@ -4,7 +4,14 @@ import icons from '../../src/icons'
 
 
 const Icon = function ({ icon, width, height, style, color, className }) {
-  const anchor = icon[0] === '#' ? icon : icons[icon]
+  let anchor
+  if (icon.id) {
+    anchor = `#${icon.id}`
+  } else if (icon[0] == '#') {
+    anchor = icon
+  } else {
+    anchor = icons[icon]
+  }
 
   if (!anchor) {
     throw new Error(`Icon not found ${icon}.\nAvailable icons : ${Object.keys(icons)}`)
