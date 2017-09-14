@@ -40,7 +40,10 @@ $button
 
     &[aria-busy=true]
         &::after
-            @extend  $icon-spinner-white
+            @extend    $icon-16
+            @extend    $icon-spinner-white
+            position   relative
+            top        em(-1px)
 
 
 $button--regular
