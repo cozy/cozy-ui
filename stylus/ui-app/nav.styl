@@ -31,17 +31,19 @@ $navigation
             background     silver
 
     .coz-nav-link
-        display          flex
-        left-padded      50px
-        line-height      1.5
-        text-decoration  none
-        color            cool-grey
-        height           100%
-        align-items      center
-        flex             1
+        display              flex
+        left-padded          50px
+        line-height          1.5
+        text-decoration      none
+        color                slate-grey
+        height               100%
+        align-items          center
+        flex                 1
+        background-repeat    no-repeat
+        background-position  em(24px) center
 
         &:visited
-            color  cool-grey
+            color  slate-grey
 
         &.active
         &:hover
@@ -56,7 +58,7 @@ $navigation
         .coz-nav
             display          flex
             justify-content  space-around
-            margin           em(10px) 0 em(5px)
+            margin           em(5px) 0 em(4px)
             padding-right    0
 
         .coz-nav-item
@@ -66,14 +68,16 @@ $navigation
                 content  none
 
         .coz-nav-link
-            display      block
-            height       auto
-            min-width    em(100px)
-            padding      em(35px) 0 0
-            text-align   center
-            color        cool-grey
-            font-size    10px
-            line-height  1
+            display              block
+            height               auto
+            min-width            em(100px, 10px)
+            padding              em(29px, 10px) 0 0
+            text-align           center
+            color                slate-grey
+            font-size            10px
+            line-height          1
+            background-position  center top
+            background-size      em(24px, 10px)
 
             &.active
             &:hover
