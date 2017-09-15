@@ -1,3 +1,4 @@
+@import '../settings/breakpoints'
 @import '../settings/z-index'
 
 /*------------------------------------*\
@@ -95,7 +96,7 @@ $selectionbar
             opacity  .5
             cursor   not-allowed
 
-    @media (max-width: (1023/basefont)rem)
+    +medium-screen()
         .coz-selectionbar
             top              auto
             bottom           0

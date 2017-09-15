@@ -2,7 +2,7 @@
 // DEFINITIONS
 @import '../generic/normalize'
 @import '../generic/animations'
-
+@import '../settings/breakpoints'
 
 // FONTS
 @import '../tools/mixins'
@@ -38,11 +38,11 @@ textarea
             vertical-align  text-bottom
 
     .coz-desktop
-        @media (max-width: (1023/basefont)rem)
+        +no-desktop()
             display none !important
 
     .coz-mobile
-        @media (min-width: (1024/basefont)rem)
+        +no-mobile()
             display none !important
 
 
