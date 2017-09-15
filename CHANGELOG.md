@@ -23,17 +23,36 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+
+## [3.0.0-beta46] - 2017-09-15
+### Changed
+- Mobile nav has bigger icons
+- Modal on Mobile are now vertically centered
+
+### Added
+- Woff font for IE11 support
+- `.coz-btn--download` class
+- use styleguidist to generate react styleguide
+
+### Fixed
+- handle new svg-sprite-loader format
+- Spinner in buttons was broken
+
+
 ## [3.0.0-beta45] - 2017-09-08
 ### Changed
 - Default button `.coz-btn` now has white text color and blue background on `:hover`
+
 
 ## [3.0.0-beta44] - 2017-09-01
 ### Added
 - Ability to import components directly from `cozy-ui/react`
 
+
 ## [3.0.0-beta43] - 2017-08-30
 ### Fixed
 - layout broken on scroll (iOS)
+
 
 ## [3.0.0-beta42] - 2017-08-24
 ### Removed
@@ -410,7 +429,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta45...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta46...HEAD
+[3.0.0-beta45]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta45...v3.0.0-beta46
 [3.0.0-beta45]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta44...v3.0.0-beta45
 [3.0.0-beta44]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta43...v3.0.0-beta44
 [3.0.0-beta43]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta42...v3.0.0-beta43
