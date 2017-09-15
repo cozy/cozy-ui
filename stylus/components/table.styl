@@ -1,3 +1,4 @@
+@import '../settings/breakpoints'
 
 $table
     .coz-table
@@ -59,11 +60,11 @@ $table
         font-size       12px
         text-transform  uppercase
 
-    @media (max-width: (1024/basefont)rem)
+    +medium-screen()
         .coz-table-row
             max-width  100vw
 
-    @media (max-width: (768/basefont)rem)
+    +small-screen()
         .coz-table-head
             display none
 
