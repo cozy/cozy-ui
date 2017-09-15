@@ -1,3 +1,4 @@
+@import '../settings/breakpoints'
 @import '../settings/z-index'
 
 /*------------------------------------*\
@@ -54,7 +55,7 @@ $navigation
             font-weight  bold
 
 
-    @media (max-width: (1023/basefont)rem)
+    +medium-screen()
         .coz-nav
             display          flex
             justify-content  space-around

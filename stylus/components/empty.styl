@@ -1,3 +1,5 @@
+@import '../settings/breakpoints'
+
 $empty
     display          flex
     flex-direction   column
@@ -28,7 +30,7 @@ $empty
         color        cool-grey
         line-height  1.5
 
-    @media (max-width: (1023/basefont)rem)
+    +medium-screen()
         &:before
             width   em(120px)
             height  em(105px)
