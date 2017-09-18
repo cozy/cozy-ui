@@ -186,9 +186,19 @@ $button--extra
     background  embedurl('../assets/icons/ui/icon-dots.svg') center center no-repeat
     opacity     .5
 
+    &:active
+    &:not([disabled]):not([aria-disabled=true]):hover
+    &:focus
+        background-color  transparent
+
 $button--extra-white
     @extend $extra
     background-image  embedurl('../assets/icons/ui/icon-dots-white.svg')
+
+    &:active
+    &:not([disabled]):not([aria-disabled=true]):hover
+    &:focus
+        background-color  transparent
 
 $button--close
     border               0
@@ -200,7 +210,7 @@ $button--close
     &:active
     &:not([disabled]):not([aria-disabled=true]):hover
     &:focus
-        background-color     transparent
+        background-color  transparent
 
 
 /*------------------------------------*\
