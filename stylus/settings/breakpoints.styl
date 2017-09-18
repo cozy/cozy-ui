@@ -12,45 +12,46 @@ large       = 1200
 extra-large = 1439
 
 // mixins
-
+// @stylint off
 tiny-screen()
     @media (max-width: (tiny/basefont)rem)
-        {block} // @stylint ignore
+        {block}
 
 small-screen()
     @media (max-width: (small/basefont)rem)
-        {block} // @stylint ignore
+        {block}
 
 medium-screen()
     @media (max-width: (medium/basefont)rem)
-        {block} // @stylint ignore
+        {block}
 
 large-screen()
     @media (max-width: (large/basefont)rem)
-        {block} // @stylint ignore
+        {block}
 
 extra-large-screen()
     @media (max-width: (extra-large/basefont)rem)
-        {block} // @stylint ignore
+        {block}
 
 // mixins named
 
 desktop()
     @media (min-width: ((medium + 1)/basefont)rem)
-        {block} // @stylint ignore
+        {block}
 
 tablet()
     @media (min-width: ((small + 1)/basefont)rem) and (max-width: (medium/basefont)rem)
-        {block} // @stylint ignore
+        {block}
 
 mobile()
-    small-screen()
-        {block} // @stylint ignore
+    +small-screen()
+        {block}
 
 no-mobile()
     @media (min-width: ((small + 1)/basefont)rem)
-        {block} // @stylint ignore
+        {block}
 
 no-desktop()
-    medium-screen()
-        {block} // @stylint ignore
+    +medium-screen()
+        {block}
+// @stylint on
