@@ -9,7 +9,7 @@ const Icon = function ({ icon, width, height, style, color, className, preserveC
   } else if (icon[0] === '#') {
     anchor = icon
   } else {
-    anchor = icons[icon]
+    anchor = icons[icon].id ? `#${icons[icon].id}` : icons[icon]
   }
 
   if (!anchor) {
