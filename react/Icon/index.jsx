@@ -21,13 +21,10 @@ const Icon = function ({ icon, width, height, style, color, className, preserveC
     style['fill'] = color
   }
 
+  const iconClassName = preserveColor ? 'icon--preserveColor' : 'icon'
   const iconClass = className
-    ? preserveColor
-      ? `${className}`
-      : `${styles['icon']} ${className}`
-    : preserveColor
-      ? ''
-      : styles['icon']
+    ? `${styles[iconClassName]} ${className}`
+    : styles[iconClassName]
 
   return <svg
     className={iconClass}
