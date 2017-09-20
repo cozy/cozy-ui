@@ -11,38 +11,124 @@ medium      = 1023
 large       = 1200
 extra-large = 1439
 
+/*
+    Media Queries mixins
+
+    Those mixins don't take parameters, but use those variables.
+
+    tiny          -  543px
+    small         -  768px
+    medium        -  1023px
+    large         -  1200px
+    extra-large   -  1439px
+
+    Styleguide Settings.breakpoints
+*/
+
 // mixins
 // @stylint off
+/*
+    tiny-screen()
+
+    Refers to (max-width: 543px)
+
+    Weight: -5
+
+    Styleguide Settings.breakpoints.tiny
+*/
 tiny-screen()
     @media (max-width: (tiny/basefont)rem)
         {block}
 
+/*
+    small-screen()
+
+    Refers to (max-width: 768px)
+
+    Weight: -4
+
+    Styleguide Settings.breakpoints.small
+*/
 small-screen()
     @media (max-width: (small/basefont)rem)
         {block}
 
+/*
+    medium-screen()
+
+    Refers to (max-width: 1023px)
+
+    Weight: -3
+
+    Styleguide Settings.breakpoints.medium
+*/
 medium-screen()
     @media (max-width: (medium/basefont)rem)
         {block}
 
+/*
+    large-screen()
+
+    Refers to (max-width: 1200px)
+
+    Weight: -2
+
+    Styleguide Settings.breakpoints.large
+*/
 large-screen()
     @media (max-width: (large/basefont)rem)
         {block}
 
+/*
+    extra-large-screen()
+
+    Refers to (max-width: 1439px)
+
+    Weight: -1
+
+    Styleguide Settings.breakpoints.extra-large
+*/
 extra-large-screen()
     @media (max-width: (extra-large/basefont)rem)
         {block}
 
 // mixins named
 
+/*
+    desktop()
+
+    Refers to (min-width: 1024px)
+
+    Weight: 0
+
+    Styleguide Settings.breakpoints.desktop
+*/
 desktop()
     @media (min-width: ((medium + 1)/basefont)rem)
         {block}
 
+/*
+    tablet()
+
+    Refers to (min-width: 769px) and (max-width: 1023px)
+
+    Weight: 1
+
+    Styleguide Settings.breakpoints.tablet
+*/
 tablet()
     @media (min-width: ((small + 1)/basefont)rem) and (max-width: (medium/basefont)rem)
         {block}
 
+/*
+    mobile()
+
+    Refers to small-screen() which is (max-width: 768px)
+
+    Weight: 2
+
+    Styleguide Settings.breakpoints.mobile
+*/
 mobile()
     +small-screen()
         {block}

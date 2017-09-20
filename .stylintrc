@@ -55,7 +55,7 @@
     "expect": true,
     "error": true
   },
-  "mixins": ["top-padded","right-padded","bottom-padded","left-padded","vertically-padded","horizontally-padded","padded","top-spaced","right-spaced","bottom-spaced","left-spaced","vertically-spaced","horizontally-spaced","spaced","hide","reset"],
+  "mixins": ["hide","reset"],
   "namingConvention": {
     "expect": "lowercase-dash",
     "error": true

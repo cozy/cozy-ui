@@ -1,0 +1,32 @@
+/*
+    Display
+
+    Utilities that change the box model of an element or its visibility.
+
+    Styleguide utilities.display
+*/
+
+/*
+    Visibility
+
+    Utilities that show or hide an element for a giving viewport size.
+
+    Markup:
+    <p class="{{modifier_class}}">I'm visible! 🎉</p>
+
+    .u-hide--desk - Element is hidden on desktop (>768px)
+    .u-hide--mob - Element is hidden on mobile (<1023px)
+
+    Styleguide utilities.visibility
+*/
+@import '../settings/breakpoints'
+
+.coz-desktop // depreciated
+.u-hide--mob
+    +no-desktop()
+        display none !important // @stylint ignore
+
+.coz-mobile // depreciated
+.u-hide--desk
+    +no-mobile()
+        display none !important // @stylint ignore

@@ -6,36 +6,38 @@
   - font-size()
   - em()
 \*------------------------------------*/
+/*
+    Tools
 
-// Tools
-//
-// Weight: -9
-//
-// Styleguide Tools
+    Weight: -9
 
-// Mixins
-//
-// Available mixins
-//
-// Styleguide Tools.mixins
+    Styleguide Tools
+*/
+/*
+    Mixins
 
-// font-size($size)
-//
-// font-size() mixin allows you to write font-size in pixels and get the
-// equivalent size in em.
-//
-// You can even skip the parenthesis and write it as basic font-size
-// declaration.
-//
-// N.B: If you write rem instead of px, the mixin won't trigger and the basic
-// font-size declaration will apply.
-//
-// $size - The size en pixel you want your text in
-//
-// Weight: 1
-//
-// Styleguide Tools.mixins.fontsize
+    Available mixins
 
+    Styleguide Tools.mixins
+*/
+/*
+    font-size($size)
+
+    font-size() mixin allows you to write font-size in pixels and get the
+    equivalent size in em.
+
+    You can even skip the parenthesis and write it as basic font-size
+    declaration.
+
+    N.B: If you write rem instead of px, the mixin won't trigger and the basic
+    font-size declaration will apply.
+
+    $size - The size en pixel you want your text in
+
+    Weight: 1
+
+    Styleguide Tools.mixins.fontsize
+*/
 // @stylint off
 use('../scripts/checksum.js')
 use('../scripts/split.js')
@@ -82,18 +84,18 @@ font-size(n)
         n = unit(n * currentBasefont, 'px')
     basefonts[_id] = n
 
+/*
+    em($size)
 
-// em($size)
-//
-// em() mixin basically converts pixel sizes in em according to its context.
-// More generic mixin than font-size() but it does exactly the same job.
-//
-// $size - The size in pixel you want to be converted in em
-//
-// Weight: 0
-//
-// Styleguide Tools.mixins.em
+    em() mixin basically converts pixel sizes in em according to its context.
+    More generic mixin than font-size() but it does exactly the same job.
 
+    $size - The size in pixel you want to be converted in em
+
+    Weight: 0
+
+    Styleguide Tools.mixins.em
+*/
 // Returns the given value in _EM_. If the inital value is given in _PX_, it
 //  applies a conversion to _EM_ based on the contextual basefont size.
 em(n, base = null)
@@ -118,111 +120,32 @@ em(n, base = null)
 // all relative units should be expressed in `em`
 basefont = 16px
 
-// hide()
-//
-// hide() mixin definitely hides an element. This mixin doesn't take parameters.
-//
-// Weight: 2
-//
-// Styleguide Tools.mixins.hide
+/*
+    hide()
+
+    hide() mixin definitely hides an element. This mixin doesn't take parameters.
+
+    Weight: 2
+
+    Styleguide Tools.mixins.hide
+*/
 hide()
     display     none
     visibility  hidden
 
+/*
+    reset()
 
-// reset()
-//
-// reset() mixin removes every padding, margin and border of an element.
-// This mixin doesn't take parameters.
-//
-// Weight: 3
-//
-// Styleguide Tools.mixins.reset
+    reset() mixin removes every padding, margin and border of an element.
+    This mixin doesn't take parameters.
+
+    Weight: 3
+
+    Styleguide Tools.mixins.reset
+*/
 reset()
     margin  0
     padding 0
     border  0
-
-// (x-)padded($p1, $p2)
-//
-// (x-)padded() mixin adds a padding to an element according to the direction
-// you choose where 'x' is the direction.
-//
-// Available direction are : 'top', 'bottom', 'left', 'right', 'vertically'
-// (top & bottom), 'horizontally' (left & right) or if you don't specify
-// direction the size will be set on all sides (top, left, bottom, right)
-//
-// $p1 - Padding size in pixel you want that will be converted in em
-// $p2 - (optional) Needed for horizontally-padded, it refers to the size
-// in pixel you want that will be converted in em
-//
-// Weight: 4
-//
-// Styleguide Tools.mixins.padded
-
-top-padded(n = 1em)
-    padding-top em(n)
-
-bottom-padded(n = 1em)
-    padding-bottom em(n)
-
-left-padded(n = 1em)
-    padding-left em(n)
-
-right-padded(n = 1em)
-    padding-right em(n)
-
-vertically-padded(n = 1em)
-    top-padded    n
-    bottom-padded n
-
-horizontally-padded(n = 1em)
-    left-padded  n
-    right-padded n
-
-padded(n = 1em, h = n)
-    vertically-padded   n
-    horizontally-padded h
-
-// (x-)spaced($m1, $m2)
-//
-// (x-)padded() mixin adds a margin to an element according to the direction
-// you choose where 'x' is the direction.
-//
-// Available direction are : 'top', 'bottom', 'left', 'right', 'vertically'
-// (top & bottom), 'horizontally' (left & right) or if you don't specify
-// direction the size will be set on all sides (top, left, bottom, right)
-//
-// $m1 - Margin size in pixel you want that will be converted in em
-// $m2 - (optional) Needed for horizontally-spaced, it refers to the size
-// in pixel you want that will be converted in em
-//
-// Weight: 5
-//
-// Styleguide Tools.mixins.spaced
-
-top-spaced(n = 1em)
-    margin-top em(n)
-
-bottom-spaced(n = 1em)
-    margin-bottom em(n)
-
-left-spaced(n = 1em)
-    margin-left em(n)
-
-right-spaced(n = 1em)
-    margin-right em(n)
-
-vertically-spaced(n = 1em)
-    top-spaced    n
-    bottom-spaced n
-
-horizontally-spaced(n = 1em)
-    left-spaced  n
-    right-spaced n
-
-spaced(n = 1em, h = n)
-    vertically-spaced   n
-    horizontally-spaced h
 
 // @stylint on
