@@ -24,6 +24,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [4.0.0-beta] - 2017-09-20
+### Fixed
+- Toggle component has cursor pointer now 👆
+- Font Lota for IE11 by adding woff format 🐒
+- btn--extra buttons' hover state 🐦
+
+### Changed
+- 🔥 Files architecture completely changed to [ITCSS](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) methodology
+
+### Added
+- CSS Styleguide with KSS 🎉
+- Breakpoints mixins + HOC 👪
+- Added preserveColor property to Icon component ✨
+- Spacers utility classes for quick & easy padding/margin 😍
+
+### Removed
+- Depreciated greys ☠
+
+
 ## [3.0.0-beta46] - 2017-09-15
 ### Changed
 - Mobile nav has bigger icons
