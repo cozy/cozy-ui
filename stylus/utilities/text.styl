@@ -1,0 +1,75 @@
+/*
+    Text
+
+    Utilities that mess only with with wild texts.
+
+    Styleguide utilities.text
+*/
+
+/*
+    Error
+
+    Utilities that give text some semantic color in case of error.
+
+    Markup: <p class="{{modifier_class}}">Somehow you messed up somewhere.</p>
+
+    .u-error - simple error text
+
+    Styleguide utilities.text.error
+*/
+
+/*
+    Error with warning icon
+
+    Utilities that give text some semantic color in case of important error.
+
+    Markup: <p class="u-error {{modifier_class}}">You really missed, badly.</p>
+
+    .u-error--warning - error with warning icon
+
+    Styleguide utilities.text.errorWarn
+*/
+
+@import '../settings/palette'
+
+.coz-error // depreciated
+.u-error
+    color  pomegranate
+
+    &.coz-error--warning:before // depreciated
+    &.u-error--warning:before
+        content         ''
+        display         inline-block
+        margin-right    .5rem
+        width           1rem
+        height          .875rem
+        background      embedurl('../assets/icons/ui/icon-warning.svg') center center / contain no-repeat
+        vertical-align  text-bottom
+
+/*
+ Valid
+
+ Utilities that give text some semantic color in case of success.
+
+ Markup: <p class="{{modifier_class}}">Yay, you did it!</p>
+
+ .u-valid - simple valid text
+
+ Styleguide utilities.text.valid
+*/
+.u-valid
+    color  malachite
+
+/*
+ Warning
+
+ Utilities that give text some semantic color in case of warning.
+
+ Markup: <p class="{{modifier_class}}">Ok, something went wrong but it's not that bad.</p>
+
+ .u-warn - simple warning text
+
+ Styleguide utilities.text.warn
+*/
+.u-warn
+    color  texas-rose
