@@ -2,15 +2,14 @@ import React from 'react'
 import styles from './styles.styl'
 import icons from '../../src/icons'
 
-
-const Icon = function ({ icon, width, height, style, color, className }) {
+const Icon = function ({ icon, width, height, style, color, className, preserveColor }) {
   let anchor
   if (icon.id) {
     anchor = `#${icon.id}`
-  } else if (icon[0] == '#') {
+  } else if (icon[0] === '#') {
     anchor = icon
   } else {
-    anchor = icons[icon]
+    anchor = icons[icon].id ? `#${icons[icon].id}` : icons[icon]
   }
 
   if (!anchor) {
@@ -22,11 +21,16 @@ const Icon = function ({ icon, width, height, style, color, className }) {
     style['fill'] = color
   }
 
+  const iconClassName = preserveColor ? 'icon--preserveColor' : 'icon'
+  const iconClass = className
+    ? `${styles[iconClassName]} ${className}`
+    : styles[iconClassName]
+
   return <svg
-      className={ className ? `${styles['icon']} ${className}` : styles['icon'] }
-      style={style}
-      width={width || '1em'}
-      height={height || '1em'}>
+    className={iconClass}
+    style={style}
+    width={width || '1em'}
+    height={height || '1em'}>
     <use xlinkHref={anchor} />
   </svg>
 }
