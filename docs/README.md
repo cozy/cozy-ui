@@ -3,20 +3,21 @@
 [![Github Release version shield](https://img.shields.io/github/tag/cozy/cozy-ui.svg)](https://github.com/cozy/cozy-ui/releases)
 [![NPM Licence shield](https://img.shields.io/npm/l/cozy-ui.svg)](https://github.com/cozy/cozy-ui/blob/master/LICENSE)
 [![Storybook](https://img.shields.io/badge/react-storybook-green.svg?style=flat)](https://cozy.github.io/cozy-ui/react/)
+[![Styleguide](https://img.shields.io/badge/KSS-styleguide-green.svg?style=flat)](https://cozy.github.io/cozy-ui/styleguide/)
 
 
-# Cozy Ui
+# Cozy UI
 
 A clean Ui SDK designed to build [Cozy](https://cozy.io/) apps.
 
-If you plan to build a webapp to run on Cozy, you'll probably want to use a simple and elegant solution to build your interfaces without the mess of dealing with complex markup and CSS. Then Cozy Ui is here for you!
+If you plan to build a webapp to run on Cozy, you'll probably want to use a simple and elegant solution to build your interfaces without the mess of dealing with complex markup and CSS. Then Cozy UI is here for you!
 
 It relies on [Stylus][stylus] as preprocessor. You can add it as a library in your project to use it out-of-the-box.
 
 
 ## Use
 
-Cozy Ui is distributed as a [Stylus][stylus] plugin.
+Cozy UI is distributed as a [Stylus][stylus] plugin.
 
 ```sh
 $ yarn add -D cozy-ui
@@ -37,19 +38,22 @@ return stylus(str)
 }
 ```
 
-_:pushpin: NOTE_: Cozy Ui uses [normalize.css](https://necolas.github.io/normalize.css/) by _Nicolas Gallagher_ as a reset styles process. The CSS file is embedded directlyby the Cozy Ui Stylus plugin, using the stylus `include css` statement to inline the CSS in the output instead of using a native CSS `@import`.
+_:pushpin: NOTE_: Cozy UI uses [normalize.css](https://necolas.github.io/normalize.css/) by _Nicolas Gallagher_ as a reset styles process. The CSS file is embedded directly by the Cozy UI Stylus plugin, using the stylus `include css` statement to inline the CSS in the output instead of using a native CSS `@import`.
 
 Then, you just need to add a `@import 'cozy-ui'` statement at top of your main stylus file.
 
+## CSS Styleguide
+
+You can see all vars, mixins, classes, utilities and their usage in the [styleguide](https://cozy.github.io/cozy-ui/styleguide).
 
 ## React components
 
-You can see react components in storybook [here](https://cozy.github.io/cozy-ui/react/).
+You can see react components in [storybook](https://cozy.github.io/cozy-ui/react/).
 
 
 ## License
 
-Cozy Ui is developed by Cozy Cloud and distributed under the AGPL-3.0 license.
+Cozy UI is developed by Cozy Cloud and distributed under the AGPL-3.0 license.
 
 
 ## What is Cozy?
