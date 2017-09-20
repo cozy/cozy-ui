@@ -448,8 +448,9 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta46...HEAD
-[3.0.0-beta45]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta45...v3.0.0-beta46
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v4.0.0-beta...HEAD
+[4.0.0-beta]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta46...v4.0.0-beta
+[3.0.0-beta46]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta45...v3.0.0-beta46
 [3.0.0-beta45]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta44...v3.0.0-beta45
 [3.0.0-beta44]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta43...v3.0.0-beta44
 [3.0.0-beta43]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta42...v3.0.0-beta43
