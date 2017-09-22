@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './styles.styl'
-import icons from '../../src/icons'
+import icons from './icons'
 
 const Icon = function ({ icon, width, height, style, color, className, preserveColor }) {
   let anchor
