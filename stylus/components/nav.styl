@@ -13,8 +13,8 @@
     Markup:
     <nav style="width: 220px">
         <ul class="c-nav">
-            <li class="c-nav-item is-active">
-                <a class="c-nav-link" href="#">Link 1</a>
+            <li class="c-nav-item">
+                <a class="c-nav-link is-active" href="#">Link 1</a>
             </li>
             <li class="c-nav-item">
                 <a class="c-nav-link" href="#">Link 2</a>
@@ -28,14 +28,12 @@
     Styleguide Components.nav
 */
 
-.coz-nav // depreciated
 .c-nav
     margin     em(24px) 0
     padding    0
     list-style none
     padding-right 10%
 
-.coz-nav-item // depreciated
 .c-nav-item
     position        relative
     z-index         $app-index
@@ -55,7 +53,6 @@
         bottom 0
         background     silver
 
-.coz-nav-link // depreciated
 .c-nav-link
     display              flex
     padding-left         em(50px)
@@ -71,33 +68,30 @@
     &:visited
         color  slate-grey
 
-    &.active // depreciated
-    &.is-active
+    .active // depreciated
+    .is-active
     &:hover
         color  charcoal-grey
 
-    &.is-active // depreciated
-    &.active
+    .active // depreciated
+    .is-active
         box-shadow   inset 4px 0 0 0 dodger-blue
         font-weight  bold
 
 
 +medium-screen()
-    .coz-nav // depreciated
     .c-nav
         display          flex
         justify-content  space-around
         margin           em(5px) 0 em(4px)
         padding-right    0
 
-    .coz-nav-item // depreciated
     .c-nav-item
         height    auto
         display   block
         &:hover::before
             content  none
 
-    .coz-nav-link // depreciated
     .c-nav-link
         display              block
         height               auto
@@ -110,8 +104,8 @@
         background-position  center top
         background-size      em(24px, 10px)
 
-        &.active // depreciated
-        &.is-active
+        .active // depreciated
+        .is-active
         &:hover
             box-shadow   none
             font-weight  normal

@@ -9,8 +9,29 @@
  * 1. `font-size` calls the font-size function in ui-components/fonts.styl
       and replaces px value by an em value. Don't be scared by this. :)
  */
+/*
+ Buttons
 
-$button
+ Buttons in different flavour
+
+ Markup:
+ <div class="u-p-1" style=" background-color: darkgrey">
+     <button class="c-btn {{modifier_class}}">Click me, I'm a button!</button>
+     <a hre="#" class="c-btn {{modifier_class}}">Click me, I'm a link!</a>
+ </div>
+
+ .c-btn--regular - Regular
+ .c-btn--secondary - Regular alternative
+ .c-btn--danger - Danger
+ .c-btn--danger-outline - Danger outlined
+ .c-btn--highlight - Highlighted button to catch the eye
+
+ Weight: -1
+
+ Styleguide Components.buttons
+*/
+$button // depreciated
+.c-btn
     box-sizing       border-box
     display          inline-block
     margin           0 .25em
@@ -46,7 +67,8 @@ $button
             top        em(-1px)
 
 
-$button--regular
+$button--regular // depreciated
+.c-btn--regular
     border-color      dodger-blue
     background-color  dodger-blue
     color             white
@@ -61,7 +83,8 @@ $button--regular
         &::after
             @extend  $icon-spinner-white
 
-$button--secondary
+$button--secondary // depreciated
+.c-btn--secondary
     background-color  white
     color             black
     border            1px solid silver
@@ -75,7 +98,8 @@ $button--secondary
         &::after
             @extend  $icon-spinner-blue
 
-$button--danger
+$button--danger // depreciated
+.c-btn--danger
     border-color      pomegranate
     background-color  pomegranate
     color             white
@@ -90,7 +114,8 @@ $button--danger
         &::after
             @extend  $icon-spinner-white
 
-$button--danger-outline
+$button--danger-outline // depreciated
+.c-btn--danger-outline
     background-color  white
     color             pomegranate
     border            1px solid your-pink
@@ -104,7 +129,8 @@ $button--danger-outline
         &::after
             @extend  $icon-spinner-red
 
-$button--highlight
+$button--highlight // depreciated
+.c-btn--highlight
     border-color      emerald
     background-color  emerald
     color             white
@@ -119,25 +145,50 @@ $button--highlight
         &::after
             @extend  $icon-spinner-white
 
-$button--share
+/*
+ Buttons with icons
+
+ Those buttons can inherit any flavour of buttons described above.
+
+ For this example, we use `.c-btn--regular` but choose the one you want.
+
+ Markup:
+ <div class="u-p-1" style=" background-color: darkgrey">
+     <button class="c-btn c-btn--regular {{modifier_class}}">Click me, I'm a button!</button>
+     <a hre="#" class="c-btn c-btn--regular {{modifier_class}}">Click me, I'm a link!</a>
+ </div>
+
+ .c-btn--share - Share
+ .c-btn--send - Send
+ .c-btn--download - Download
+ .c-btn--upload - Upload
+ .c-btn--delete - Delete
+
+ Styleguide Components.buttons.icons
+*/
+$button--share // depreciated
+.c-btn--share
     padding-left         em(44px, 16px)
     background-image     embedurl('../assets/icons/ui/icon-share-grey08.svg')
     background-position  em(17px, 16px) center
     background-repeat    no-repeat
 
-$button--send
+$button--send // depreciated
+.c-btn--send
     padding-left         em(44px, 16px)
     background-image     embedurl('../assets/icons/ui/icon-paperplane.svg')
     background-position  em(17px, 16px) center
     background-repeat    no-repeat
 
-$button--download
+$button--download // depreciated
+.c-btn--download
     padding-left         em(44px, 16px)
     background-image     embedurl('../assets/icons/ui/icon-download.svg')
     background-position  em(17px, 16px) center
     background-repeat    no-repeat
 
-$button--upload
+$button--upload // depreciated
+.c-btn--upload
     padding-left         em(44px, 16px)
     background-image     embedurl('../assets/icons/ui/icon-upload.svg')
     background-position  em(17px, 16px) center
@@ -151,12 +202,8 @@ $button--upload
     input
         cursor pointer
 
-$link--upload
-    background-image     embedurl('../assets/icons/ui/icon-upload-grey08.svg')
-    background-position  em(16px) center
-    background-repeat    no-repeat
-
-$button--delete
+$button--delete // depreciated
+.c-btn--delete
     padding-left         em(44px, 16px)
     background-image     embedurl('../assets/icons/ui/icon-delete.svg')
     background-position  em(17px, 16px) center
@@ -165,24 +212,63 @@ $button--delete
     input
         cursor pointer
 
-$link--delete
+/*
+ Buttons link shaped with icons
+
+ Buttons that look like links, with icons
+
+ Markup:
+ <div class="u-p-1" style=" background-color: darkgrey">
+     <button class="{{modifier_class}}">Click me, I'm a button!</button>
+     <a hre="#" class="{{modifier_class}}">Click me, I'm a link!</a>
+ </div>
+
+ .c-link--upload - Upload
+ .c-link--delete - Delete
+
+ Styleguide Components.buttons.link
+*/
+$link--upload // depreciated
+.c-link--upload
+    background-image     embedurl('../assets/icons/ui/icon-upload-grey08.svg')
+    background-position  em(16px) center
+    background-repeat    no-repeat
+
+$link--delete // depreciated
+.c-link--delete
     background-image     embedurl('../assets/icons/ui/icon-delete-grey08.svg')
     background-position  em(16px) center
     background-repeat    no-repeat
 
-$button--more
+/*
+ Button More
+
+ Button to display more information
+
+ Markup:
+ <div class="u-p-1" style=" background-color: darkgrey">
+    <button class="c-btn {{modifier_class}}"><span class="u-hidden">Click me, I'm a button!</span></button>
+    <a hre="#" class="c-btn {{modifier_class}}"><span class="u-hidden">Click me, I'm a link!</span></a>
+ </div>
+
+ .c-btn--more - Classic more button
+ .c-btn-extra - Extra button, much like More button but lighter, without border
+ .c-btn-extra--white - Extra button with white icon
+
+ Styleguide Components.buttons.more
+*/
+$button--more // depreciated
+.c-btn--more
     width                em(46px)
     background-color     transparent
     background-image     embedurl('../assets/icons/ui/icon-dots.svg')
     background-position  center center
     background-repeat    no-repeat
 
-$extra
+$button--extra // depreciated
+.c-btn-extra
     width       em(46px)
     border      0
-
-$button--extra
-    @extend $extra
     background  embedurl('../assets/icons/ui/icon-dots.svg') center center no-repeat
     opacity     .5
 
@@ -191,8 +277,9 @@ $button--extra
     &:focus
         background-color  transparent
 
-$button--extra-white
-    @extend $extra
+$button--extra-white // depreciated
+.c-btn-extra--white
+    @extend .c-btn-extra
     background-image  embedurl('../assets/icons/ui/icon-dots-white.svg')
 
     &:active
@@ -200,7 +287,8 @@ $button--extra-white
     &:focus
         background-color  transparent
 
-$button--close
+$button--close // depreciated
+.c-btn--close
     border               0
     width                em(46px)
     background-image     embedurl('../assets/icons/ui/icon-cross.svg')
@@ -216,15 +304,36 @@ $button--close
 /*------------------------------------*\
   Alert's specific buttons
 \*------------------------------------*/
-$button-alert
+/*
+ Alert's buttons
+
+ Buttons that look like links, with icons
+
+ Markup:
+ <div class="u-p-1" style=" background-color: darkgrey">
+     <button class="c-btn--alert {{modifier_class}}">Click me, I'm a button!</button>
+     <a hre="#" class="c-btn--alert {{modifier_class}}">Click me, I'm a link!</a>
+ </div>
+
+ .c-btn-alert--error - Error button
+ .c-btn-alert--info - Information button
+ .c-btn-alert--success - Success button
+
+ Weight: 10
+
+ Styleguide Components.buttons.alert
+*/
+$button-alert // depreciated
+.c-btn-alert
     margin       .5rem 0 0
     border       0
     height       auto
     padding      .5rem 1rem
     font-weight  bold
 
-$button-alert--error
-    @extend $button-alert
+$button-alert--error // depreciated
+.c-btn-alert--error
+    @extend .c-btn-alert
     color   pomegranate
 
     &:active
@@ -232,8 +341,9 @@ $button-alert--error
     &:focus
         color  darken(pomegranate, 25%)
 
-$button-alert--info
-    @extend           $button-alert
+$button-alert--info // depreciated
+.c-btn-alert--info
+    @extend           .c-btn-alert
     background-color  cool-grey
     color             white
 
@@ -242,8 +352,9 @@ $button-alert--info
     &:focus
         color  darken(white, 10%)
 
-$button-alert--success
-    @extend $button-alert
+$button-alert--success // depreciated
+.c-btn-alert--success
+    @extend .c-btn-alert
     color   emerald
 
     &:active
@@ -254,9 +365,28 @@ $button-alert--success
 /*------------------------------------*\
   Special buttons
 \*------------------------------------*/
-$button-client
-    @extend $button
-    @extend $button--secondary
+/*
+ Special buttons
+
+ Buttons that look like links, with icons
+
+ Markup:
+ <div class="u-p-1" style=" background-color: darkgrey">
+     <button class="{{modifier_class}}">Click me, I'm a button!</button>
+     <a hre="#" class="{{modifier_class}}">Click me, I'm a link!</a>
+ </div>
+
+ .c-btn-client - Button to download Cozy client app
+ .c-btn-client-mobile - Button to download Cozy client app on mobile
+
+ Weight: 20
+
+ Styleguide Components.buttons.special
+*/
+$button-client // depreciated
+.c-btn-client
+    @extend .c-btn
+    @extend .c-btn--secondary
     display           flex
     justify-content   center
     align-items       center
@@ -280,8 +410,9 @@ $button-client
     span
         flex  0 1 auto
 
-$button-client-mobile
-    @extend $button-client
+$button-client-mobile // depreciated
+.c-btn-client-mobile
+    @extend .c-btn-client
     justify-content  flex-start
     background-color dodger-blue
     border           0
