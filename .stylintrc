@@ -74,7 +74,7 @@
     "error": true
   },
   "placeholders": {
-    "expect": "always",
+    "expect": false,
     "error": true
   },
   "prefixVarsWithDollar": false,
