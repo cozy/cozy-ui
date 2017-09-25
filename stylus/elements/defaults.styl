@@ -1,11 +1,6 @@
 // @stylint off
-// DEFINITIONS
-// @import '../generic/normalize'
-// @import '../generic/animations'
-// @import '../settings/breakpoints'
 
 // FONTS
-// @import '../tools/mixins'
 @import '../settings/fontstack'
 
 body
@@ -22,6 +17,20 @@ select,
 textarea
     @extend $font-labor
 
+// UTILS
+@import '../utilities/display'
+@import '../utilities/text'
+:global(.coz-error)
+    @extend .u-error
+
+:global(.coz-hidden)
+    @extend .u-hidden
+
+:global(.coz-desktop)
+    @extend .u-hide--mob
+
+:global(.coz-mobile)
+    @extend .u-hide--desk
 
 // LAYOUT
 html
@@ -46,11 +55,6 @@ body
     overflow-y  auto
 
 
-// BOXES
-[aria-hidden=true]
-    hide()
-
-
 // COLORS
 body
     background-color white
@@ -59,60 +63,60 @@ body
 
 // BUTTONS
 @import '../components/button'
-:global .coz-btn
+:global(.coz-btn)
     @extend $button
 
-    &.coz-btn--regular
-        @extend $button--regular
+:global(.coz-btn--regular)
+    @extend $button--regular
 
-    &.coz-btn--secondary
-        @extend $button--secondary
+:global(.coz-btn--secondary)
+    @extend $button--secondary
 
-    &.coz-btn--danger
-        @extend $button--danger
+:global(.coz-btn--danger)
+    @extend $button--danger
 
-    &.coz-btn--danger-outline
-        @extend $button--danger-outline
+:global(.coz-btn--danger-outline)
+    @extend $button--danger-outline
 
-    &.coz-btn--highlight
-        @extend $button--highlight
+:global(.coz-btn--highlight)
+    @extend $button--highlight
 
-    &.coz-btn--share
-        @extend $button--share
+:global(.coz-btn--share)
+    @extend $button--share
 
-    &.coz-btn--upload
-        @extend $button--upload
+:global(.coz-btn--upload)
+    @extend $button--upload
 
-    &.coz-btn--download
-        @extend $button--download
+:global(.coz-btn--download)
+    @extend $button--download
 
-    &.coz-btn--delete
-        @extend $button--delete
+:global(.coz-btn--delete)
+    @extend $button--delete
 
-    &.coz-btn--more
-        @extend $button--more
+:global(.coz-btn--more)
+    @extend $button--more
 
-    &.coz-btn--close
-        @extend $button--close
+:global(.coz-btn--close)
+    @extend $button--close
 
-    &.coz-btn--extra
-        @extend $button--extra
+:global(.coz-btn--extra)
+    @extend $button--extra
 
-    &.coz-btn--extra-white
-        @extend $button--extra-white
+:global(.coz-btn--extra-white)
+    @extend $button--extra-white
 
-    &.coz-btn-alert--error
-        @extend $button-alert--error
+:global(.coz-btn-alert--error)
+    @extend $button-alert--error
 
-    &.coz-btn-alert--info
-        @extend $button-alert--info
+:global(.coz-btn-alert--info)
+    @extend $button-alert--info
 
-    &.coz-btn-alert--success
-        @extend $button-alert--success
+:global(.coz-btn-alert--success)
+    @extend $button-alert--success
 
 
 // LINKS
-:global .coz-link--upload
+:global(.coz-link--upload)
     @extend $link--upload
 
 
