@@ -24,6 +24,24 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [4.0.0] - 2017-09-26
+### Changed
+- Clean up comments & typos ✨
+
+### Fixed
+- Fix modal position on desktop 🔧
+- Fixed Nav items position on mobile 👷
+
+### Added
+- Added buttons global classes (without CSS Modules) 🎉
+- Ensure retro-compatibility for previous global classes with CSS Modules ⚙
+- Added Nav component 🗞
+
+### Removed
+- Removed mixins `padded` and `spaced` ♻
+- Removed Lato font from UI & moved to the stack (you'll need to add a `<link>` tag to your app `<link rel="stylesheet" type="text/css" href="//{{.Domain}}/assets/fonts/fonts.css">` 🔀
+
+
 ## [4.0.0-beta] - 2017-09-20
 ### Fixed
 - Toggle component has cursor pointer now 👆
@@ -448,7 +466,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v4.0.0-beta...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v4.0.0...HEAD
+[4.0.0]: https://github.com/cozy/cozy-ui/compare/v4.0.0-beta...v4.0.0
 [4.0.0-beta]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta46...v4.0.0-beta
 [3.0.0-beta46]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta45...v3.0.0-beta46
 [3.0.0-beta45]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta44...v3.0.0-beta45
