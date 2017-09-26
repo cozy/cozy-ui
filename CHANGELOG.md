@@ -40,7 +40,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Spacers utility classes for quick & easy padding/margin 😍
 
 ### Removed
-- Depreciated greys ☠
+- Deprecated greys ☠
 
 
 ## [3.0.0-beta46] - 2017-09-15
@@ -147,7 +147,7 @@ import Icon from 'cozy-ui/react/Icon'
 - removed inputs' grey `background-color`
 
 ### Deprecated
-- Formers greys from previous identity are depreciated but with a fallback to the nearest grey of the new identity
+- Formers greys from previous identity are deprecated but with a fallback to the nearest grey of the new identity
 
 
 ## [3.0.0-beta35] - 2017-06-09
