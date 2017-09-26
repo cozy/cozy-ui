@@ -1,5 +1,5 @@
-import Alerter from './Alerter'
-import I18n, { translate } from './I18n'
+import alerterReducer, { Alerter } from './Alerter'
+import { I18n, translate } from './I18n'
 import Icon from './Icon'
 import Modal, { ModalContent, ModalSection, ModalButtons } from './Modal'
 import SelectionBar from './SelectionBar'
@@ -11,6 +11,7 @@ import Markdown from './Markdown'
 
 export {
   Alerter,
+  alerterReducer,
   Button,
   I18n,
   translate,
