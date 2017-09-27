@@ -7,6 +7,6 @@ module.exports = {
   skipComponentsWithoutExample: true,
   styleguideDir: path.resolve(__dirname, '../build/react'),
   require: [
-    path.join(__dirname, './style.styl'),
+    path.join(__dirname, './style.styl')
   ]
 }
