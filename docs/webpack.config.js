@@ -27,7 +27,12 @@ module.exports = {
                 localIdentName: '[local]--[hash:base64:5]'
               }
             },
-            { loader: 'stylus-loader' }
+            {
+              loader: 'stylus-loader',
+              options: {
+                use: [ require('../stylus')() ]
+              }
+            }
           ]
         })
       }
