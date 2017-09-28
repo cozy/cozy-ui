@@ -97,6 +97,17 @@ import { Toggle } from 'cozy-ui/react'
 <Toggle checked={ true } onToggle={checked => alert(checked) } />
 ```
 
+### Markdown
+
+A wrapper using [react-markdown](https://github.com/rexxars/react-markdown)
+
+```jsx
+import { Markdown } from 'cozy-ui/react'
+<Markdown source='A __markdown__ element' renderers={
+  Link: props => <a href={props.href} target='_blank'>{props.children}</a>
+} />
+```
+
 ### ModalContent
 
 ```jsx
@@ -132,4 +143,3 @@ class HelloWorld extends Component {
 
 export default translate()(HelloWorld)
 ```
-

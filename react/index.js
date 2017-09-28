@@ -7,6 +7,7 @@ import Spinner from './Spinner'
 import {Tabs, TabPanels, TabPanel, TabList, Tab} from './Tabs'
 import Toggle from './Toggle'
 import Button from './Button'
+import Markdown from './Markdown'
 
 export {
   Alerter,
@@ -23,6 +24,7 @@ export {
   TabList,
   Tab,
   Toggle,
+  Markdown,
   ModalContent,
   ModalSection,
   ModalButtons
