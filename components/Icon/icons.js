@@ -10,13 +10,13 @@ const importIcons = function () {
     'icon-cozy',
     'icon-cross',
     'icon-delete',
-    'icon-device-laptop',
     'icon-dots',
     'icon-download',
     'icon-moveto',
     'icon-openwith',
     'icon-paperplane',
     'icon-rename',
+    'icon-restore',
     'icon-share',
     'icon-upload',
     'icon-warn',
@@ -24,7 +24,7 @@ const importIcons = function () {
   ]
   let icons = {}
   names.map(n => {
-    const icon = require('!!svg-sprite-loader?symbolId=cozyu[name]!../loaders/strip-fill-loader!../assets/icons/ui/' + n + '.svg')
+    const icon = require('../../assets/icons/base/' + n + '.svg')
     icons[normalize(n)] = icon.default || icon
   })
   return icons
