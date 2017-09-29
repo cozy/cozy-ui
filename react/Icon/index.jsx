@@ -1,8 +1,11 @@
 import React from 'react'
+import Types from 'prop-types'
 import styles from './styles.styl'
 import icons from '../../src/icons'
 
-const Icon = function ({ icon, width, height, style, color, className, preserveColor }) {
+function Icon (props) {
+  const { icon, width, height, color, className, preserveColor } = props
+  let style = props.style
   let anchor
   if (icon.id) {
     anchor = `#${icon.id}`
@@ -35,8 +38,14 @@ const Icon = function ({ icon, width, height, style, color, className, preserveC
   </svg>
 }
 
+
 Icon.propTypes = {
-  icon: React.PropTypes.string.isRequired
+  icon: Types.oneOfType([Types.string, Types.object]).isRequired,
+  width: Types.oneOfType([Types.string, Types.number]),
+  height: Types.oneOfType([Types.string, Types.number]),
+  color: Types.oneOfType([Types.string, Types.object]),
+  className: Types.string,
+  preserveColor: Types.bool
 }
 
 export default Icon
