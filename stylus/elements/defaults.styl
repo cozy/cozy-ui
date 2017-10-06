@@ -1,7 +1,7 @@
 // @stylint off
 
 // FONTS
-@import '../settings/fontstack'
+@require '../settings/fontstack'
 
 body
     font 1em/1.5
@@ -18,8 +18,8 @@ textarea
     @extend $font-labor
 
 // UTILS
-@import '../utilities/display'
-@import '../utilities/text'
+@require '../utilities/display'
+@require '../utilities/text'
 :global(.coz-error)
     @extend .u-error
 
@@ -62,7 +62,7 @@ body
 
 
 // BUTTONS
-@import '../components/button'
+@require '../components/button'
 :global(.coz-btn)
     @extend $button
 
@@ -121,7 +121,7 @@ body
 
 
 // FORMS
-@import '../components/forms'
+@require '../components/forms'
 
 [data-input=radio]
     @extend $form-checkbox
