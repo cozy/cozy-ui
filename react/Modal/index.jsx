@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styles from './styles.styl'
 
@@ -110,16 +111,16 @@ class Modal extends Component {
 }
 
 Modal.propTypes = {
-  title: React.PropTypes.string,
-  description: React.PropTypes.node,
-  secondaryType: React.PropTypes.string,
-  secondaryText: React.PropTypes.string,
-  secondaryAction: React.PropTypes.func,
-  primaryType: React.PropTypes.string,
-  primaryText: React.PropTypes.string,
-  primaryAction: React.PropTypes.func,
-  withCross: React.PropTypes.bool,
-  overflowHidden: React.PropTypes.bool
+  title: PropTypes.string,
+  description: PropTypes.node,
+  secondaryType: PropTypes.string,
+  secondaryText: PropTypes.string,
+  secondaryAction: PropTypes.func,
+  primaryType: PropTypes.string,
+  primaryText: PropTypes.string,
+  primaryAction: PropTypes.func,
+  withCross: PropTypes.bool,
+  overflowHidden: PropTypes.bool
 }
 
 Modal.defaultProps = {

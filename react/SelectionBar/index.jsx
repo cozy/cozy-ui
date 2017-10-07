@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import { translate } from '../I18n'
 import classNames from 'classnames'
 
@@ -51,10 +52,10 @@ const SelectionBar = ({ t, actions, selected, hideSelectionBar }) => {
 }
 
 SelectionBar.propTypes = {
-  t: React.PropTypes.func.isRequired,               // translate action name.
-  actions: React.PropTypes.object.isRequired,       // An object with actions
-  selected: React.PropTypes.array.isRequired,       // selected items id.
-  hideSelectionBar: React.PropTypes.func.isRequired // function to close SelectionBar.
+  t: PropTypes.func.isRequired,               // translate action name.
+  actions: PropTypes.object.isRequired,       // An object with actions
+  selected: PropTypes.array.isRequired,       // selected items id.
+  hideSelectionBar: PropTypes.func.isRequired // function to close SelectionBar.
 }
 
 export default translate()(SelectionBar)

@@ -7,7 +7,7 @@ export const initFormat = (lang, defaultLang = DEFAULT_LANG) => {
   }
   if (lang && lang !== defaultLang) {
     try {
-        locales[lang] = require(`date-fns/locale/${lang}/index`)
+      locales[lang] = require(`date-fns/locale/${lang}/index`)
     } catch (e) {
       console.warn(`The "${lang}" locale isn't supported by date-fns`)
     }

@@ -5,6 +5,7 @@
 'use strict'
 
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 // Provider root component
 export class I18nProvider extends Component {
@@ -21,8 +22,8 @@ export class I18nProvider extends Component {
 }
 
 I18nProvider.childContextTypes = {
-  t: React.PropTypes.func,
-  f: React.PropTypes.func
+  t: PropTypes.func,
+  f: PropTypes.func
 }
 
 // higher order decorator for components that need `t` and/or `f`
