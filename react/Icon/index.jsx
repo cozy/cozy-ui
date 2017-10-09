@@ -1,5 +1,5 @@
 import React from 'react'
-import Types from 'prop-types'
+import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import icons from '../../src/icons'
 
@@ -38,14 +38,13 @@ function Icon (props) {
   </svg>
 }
 
-
 Icon.propTypes = {
-  icon: Types.oneOfType([Types.string, Types.object]).isRequired,
-  width: Types.oneOfType([Types.string, Types.number]),
-  height: Types.oneOfType([Types.string, Types.number]),
-  color: Types.oneOfType([Types.string, Types.object]),
-  className: Types.string,
-  preserveColor: Types.bool
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  color: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  className: PropTypes.string,
+  preserveColor: PropTypes.bool
 }
 
 export default Icon

@@ -5,6 +5,7 @@
 'use strict'
 
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import { initTranslation } from './translation.jsx'
 import { initFormat } from './format.jsx'
@@ -45,16 +46,16 @@ export class I18n extends Component {
 }
 
 I18n.propTypes = {
-  lang: React.PropTypes.string.isRequired,      // current language.
-  dictRequire: React.PropTypes.func.isRequired, // A callback to load locales.
-  context: React.PropTypes.string,              // current context.
-  defaultLang: React.PropTypes.string           // default language. By default is 'en'
+  lang: PropTypes.string.isRequired,      // current language.
+  dictRequire: PropTypes.func.isRequired, // A callback to load locales.
+  context: PropTypes.string,              // current context.
+  defaultLang: PropTypes.string           // default language. By default is 'en'
 }
 
 I18n.childContextTypes = {
-  t: React.PropTypes.func,
-  f: React.PropTypes.func,
-  lang: React.PropTypes.string
+  t: PropTypes.func,
+  f: PropTypes.func,
+  lang: PropTypes.string
 }
 
 // higher order decorator for components that need `t` and/or `f`

@@ -1,6 +1,7 @@
 import styles from './styles'
 
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class Toggle extends Component {
   onChange () {
@@ -19,9 +20,9 @@ class Toggle extends Component {
 }
 
 Toggle.propTypes = {
-  id: React.PropTypes.string.isRequired,  // A unique id for the toggle, used internally.
-  checked: React.PropTypes.bool,          // The state of the toggle
-  onToggle: React.PropTypes.func          // A callback when the state of the toggle changes. Called with the new state as argument.
+  id: PropTypes.string.isRequired,  // A unique id for the toggle, used internally.
+  checked: PropTypes.bool,          // The state of the toggle
+  onToggle: PropTypes.func          // A callback when the state of the toggle changes. Called with the new state as argument.
 }
 
 export default Toggle
