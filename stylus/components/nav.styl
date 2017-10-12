@@ -85,21 +85,23 @@
         padding-right    0
 
     .c-nav-item
-        height    auto
-        display   block
+        height        auto
+        display       block
+        flex          0 0 2.5em
+        padding-right 0
         &:hover::before
             content  none
 
     .c-nav-link
         display              block
         height               auto
+        padding              em(29px, 10px) 0 0
         text-align           center
         color                slate-grey
         font-size            10px
         line-height          1
         background-position  center top
         background-size      em(24px, 10px)
-        flex                 0 0 2.5em
 
         &.active // deprecated
         &.is-active
