@@ -22,7 +22,7 @@ const ModalCross = ({ withCross, secondaryAction, secondaryText }) =>
   withCross &&
   (
     <button
-      className={classNames('coz-btn', 'coz-btn--close', styles['coz-btn-modal-close'])}
+      className={classNames(styles['coz-btn'], styles['coz-btn--close'], styles['coz-btn-modal-close'])}
       onClick={secondaryAction}
       >
       <span className='coz-hidden'>{secondaryText}</span>
@@ -44,12 +44,12 @@ const ModalButtons = ({ secondaryText, secondaryAction, secondaryType, primaryTe
     (
       <div className={classNames(styles['coz-modal-content'], styles['coz-modal-buttons'])}>
         { displaySecondary &&
-          <button className={classNames('coz-btn', 'coz-btn--' + secondaryType)} onClick={secondaryAction}>
+          <button className={classNames(styles['coz-btn'], styles['coz-btn--' + secondaryType])} onClick={secondaryAction}>
             {secondaryText}
           </button>
         }
         { displayPrimary &&
-          <button className={classNames('coz-btn', 'coz-btn--' + primaryType)} onClick={primaryAction}>
+          <button className={classNames(styles['coz-btn'], styles['coz-btn--' + primaryType])} onClick={primaryAction}>
             {primaryText}
           </button>
         }

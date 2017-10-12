@@ -17,21 +17,6 @@ select,
 textarea
     @extend $font-labor
 
-// UTILS
-@require '../utilities/display'
-@require '../utilities/text'
-:global(.coz-error)
-    @extend .u-error
-
-:global(.coz-hidden)
-    @extend .u-hidden
-
-:global(.coz-desktop)
-    @extend .u-hide--mob
-
-:global(.coz-mobile)
-    @extend .u-hide--desk
-
 // LAYOUT
 html
   height  100%
@@ -54,71 +39,10 @@ body
     overflow-x  hidden
     overflow-y  auto
 
-
 // COLORS
 body
     background-color white
     color            black
-
-
-// BUTTONS
-@require '../components/button'
-:global(.coz-btn)
-    @extend $button
-
-:global(.coz-btn--regular)
-    @extend $button--regular
-
-:global(.coz-btn--secondary)
-    @extend $button--secondary
-
-:global(.coz-btn--danger)
-    @extend $button--danger
-
-:global(.coz-btn--danger-outline)
-    @extend $button--danger-outline
-
-:global(.coz-btn--highlight)
-    @extend $button--highlight
-
-:global(.coz-btn--share)
-    @extend $button--share
-
-:global(.coz-btn--upload)
-    @extend $button--upload
-
-:global(.coz-btn--download)
-    @extend $button--download
-
-:global(.coz-btn--delete)
-    @extend $button--delete
-
-:global(.coz-btn--more)
-    @extend $button--more
-
-:global(.coz-btn--close)
-    @extend $button--close
-
-:global(.coz-btn--extra)
-    @extend $button--extra
-
-:global(.coz-btn--extra-white)
-    @extend $button--extra-white
-
-:global(.coz-btn-alert--error)
-    @extend $button-alert--error
-
-:global(.coz-btn-alert--info)
-    @extend $button-alert--info
-
-:global(.coz-btn-alert--success)
-    @extend $button-alert--success
-
-
-// LINKS
-:global(.coz-link--upload)
-    @extend $link--upload
-
 
 // FORMS
 @require '../components/forms'
