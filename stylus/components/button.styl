@@ -212,34 +212,6 @@ $button--delete // deprecated
         cursor pointer
 
 /*
- Buttons link shaped with icons
-
- Buttons that look like links, with icons
-
- Markup:
- <div class="u-p-1" style=" background-color: darkgrey">
-     <button class="{{modifier_class}}">Click me, I'm a button!</button>
-     <a hre="#" class="{{modifier_class}}">Click me, I'm a link!</a>
- </div>
-
- .c-link--upload - Upload
- .c-link--delete - Delete
-
- Styleguide Components.buttons.link
-*/
-$link--upload // deprecated
-.c-link--upload
-    background-image     embedurl('../assets/icons/ui/icon-upload-grey08.svg')
-    background-position  em(16px) center
-    background-repeat    no-repeat
-
-$link--delete // deprecated
-.c-link--delete
-    background-image     embedurl('../assets/icons/ui/icon-delete-grey08.svg')
-    background-position  em(16px) center
-    background-repeat    no-repeat
-
-/*
  Button More
 
  Button to display more information
@@ -309,9 +281,9 @@ $button--close // deprecated
  Buttons that look like links, with icons
 
  Markup:
- <div class="u-p-1" style=" background-color: darkgrey">
-     <button class="c-btn--alert {{modifier_class}}">Click me, I'm a button!</button>
-     <a hre="#" class="c-btn--alert {{modifier_class}}">Click me, I'm a link!</a>
+ <div class="u-p-1">
+     <button class="c-btn--alert {{modifier_class}} u-m-1">Click me, I'm a button!</button>
+     <a hre="#" class="c-btn--alert {{modifier_class}} u-m-1">Click me, I'm a link!</a>
  </div>
 
  .c-btn-alert--error - Error button
@@ -328,7 +300,9 @@ $button-alert // deprecated
     border       0
     height       auto
     padding      .5rem 1rem
+    background-color transparent
     font-weight  bold
+    font-size 1em
 
 $button-alert--error // deprecated
 .c-btn-alert--error
@@ -367,12 +341,11 @@ $button-alert--success // deprecated
 /*
  Special buttons
 
- Buttons that look like links, with icons
+ Special link that look like buttons (<a> only)
 
  Markup:
- <div class="u-p-1" style=" background-color: darkgrey">
-     <button class="{{modifier_class}}">Click me, I'm a button!</button>
-     <a hre="#" class="{{modifier_class}}">Click me, I'm a link!</a>
+ <div class="u-p-1" style="background-color: darkgrey; width: 50%;">
+     <a hre="#" class="{{modifier_class}} u-mb-1">Click me, I'm a link!</a>
  </div>
 
  .c-btn-client - Button to download Cozy client app
@@ -390,6 +363,7 @@ $button-client // deprecated
     justify-content   center
     align-items       center
     height            auto
+    margin            0
     padding-left      em(16px, 13px)
     padding-right     em(16px, 13px)
     background-color  transparent
@@ -412,6 +386,7 @@ $button-client // deprecated
 $button-client-mobile // deprecated
 .c-btn-client-mobile
     @extend .c-btn-client
+    display          flex
     justify-content  flex-start
     background-color dodger-blue
     border           0
