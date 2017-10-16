@@ -1,6 +1,7 @@
 @require '../../stylus/tools/mixins'
 @require '../../stylus/settings/palette'
 @require '../../stylus/components/button'
+@require '../../stylus/utilities/display'
 @require '../../stylus/components/modals'
 
 .coz-modal-container
@@ -15,5 +16,29 @@
 .coz-btn--secondary
     @extends .c-btn--secondary
 
+.coz-btn--danger
+    @extend .c-btn--danger
+
+.coz-btn--danger-outline
+    @extend .c-btn--danger-outline
+
+.coz-btn--highlight
+    @extend .c-btn--highlight
+
+.coz-btn--share
+    @extend .c-btn--share
+
+.coz-btn--upload
+    @extend .c-btn--upload
+
+.coz-btn--download
+    @extend .c-btn--download
+
+.coz-btn--delete
+    @extend .c-btn--delete
+
 .coz-btn--close
     @extends .c-btn--close
+
+.coz-hidden
+    @extends .u-visuallyhidden

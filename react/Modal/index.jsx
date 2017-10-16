@@ -25,7 +25,7 @@ const ModalCross = ({ withCross, secondaryAction, secondaryText }) =>
       className={classNames(styles['coz-btn'], styles['coz-btn--close'], styles['coz-btn-modal-close'])}
       onClick={secondaryAction}
       >
-      <span className='coz-hidden'>{secondaryText}</span>
+      <span className={styles['coz-hidden']}>{secondaryText}</span>
     </button>
 )
 
