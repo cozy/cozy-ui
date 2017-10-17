@@ -24,6 +24,23 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [4.0.1] - 2017-10-17
+### Changed
+- 📝 Changed some `em` to `rem`
+- 🐎 Use `@require` instead of `@import`
+- 🔥 React components don't use global classes anymore
+- 📝 Renamed `.u-hidden`class to `.u-visuallyhidden`
+
+### Fixed
+- 🚑 Fixed active links in main nav
+- 🚑 Items on mobile nav weren't using the available space smartly
+- 🚑 Fixed some buttons to make sure it goes well in any situation
+- 🍎 Fixed the annoying double tap on nav links on iPad
+
+### Added
+- 📚 Added Icon, Button & Spinner react component to the React Styleguide
+
+
 ## [4.0.0] - 2017-09-26
 ### Changed
 - Clean up comments & typos ✨
@@ -466,7 +483,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v4.0.0...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v4.0.1...HEAD
+[4.0.1]: https://github.com/cozy/cozy-ui/compare/v4.0.0...v4.0.1
 [4.0.0]: https://github.com/cozy/cozy-ui/compare/v4.0.0-beta...v4.0.0
 [4.0.0-beta]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta46...v4.0.0-beta
 [3.0.0-beta46]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta45...v3.0.0-beta46
