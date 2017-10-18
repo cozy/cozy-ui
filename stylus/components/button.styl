@@ -214,6 +214,36 @@ $button--delete // deprecated
         cursor pointer
 
 /*
+ Buttons link shaped with icons
+
+ Buttons that look like links, with icons
+
+ Markup:
+ <div class="u-p-1" style=" background-color: darkgrey">
+     <button class="{{modifier_class}}">Click me, I'm a button!</button>
+     <a hre="#" class="{{modifier_class}}">Click me, I'm a link!</a>
+ </div>
+
+ .c-link--upload - Upload
+ .c-link--delete - Delete
+
+ Styleguide Components.buttons.link
+*/
+$link--upload // deprecated
+.c-link--upload
+    background-image     embedurl('../assets/icons/ui/icon-upload-grey08.svg')
+    background-position  em(16px) center
+    background-repeat    no-repeat
+
+$link--delete // deprecated
+.c-link--delete
+    background-image     embedurl('../assets/icons/ui/icon-delete-grey08.svg')
+    background-position  em(16px) center
+    background-repeat    no-repeat
+
+/*
+
+/*
  Button More
 
  Button to display more information
