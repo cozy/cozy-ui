@@ -24,6 +24,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [4.0.2] - 2017-10-19
+### Fixed
+-  🚒 Reinstated .c-link--upload & .c-link--delete that were actually needed, sorry 😅
+
+### Added
+-  🚑 Explicitely import palette.styl & mixins.styl in button.styl so you can use button on its own
+
+
 ## [4.0.1] - 2017-10-17
 ### Changed
 - 📝 Changed some `em` to `rem`
@@ -483,7 +491,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v4.0.1...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v4.0.2...HEAD
+[4.0.2]: https://github.com/cozy/cozy-ui/compare/v4.0.1...v4.0.2
 [4.0.1]: https://github.com/cozy/cozy-ui/compare/v4.0.0...v4.0.1
 [4.0.0]: https://github.com/cozy/cozy-ui/compare/v4.0.0-beta...v4.0.0
 [4.0.0-beta]: https://github.com/cozy/cozy-ui/compare/v3.0.0-beta46...v4.0.0-beta
