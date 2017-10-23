@@ -5,36 +5,19 @@
   Navigation
 \*------------------------------------*/
 
-/*
-    Navigation
-
-    Navigation component that displays a list of item link to other pages
-
-    Markup:
-    <nav style="width: 220px">
-        <ul class="c-nav">
-            <li class="c-nav-item">
-                <a class="c-nav-link is-active" href="#">Link 1</a>
-            </li>
-            <li class="c-nav-item">
-                <a class="c-nav-link" href="#">Link 2</a>
-            </li>
-            <li class="c-nav-item">
-                <a class="c-nav-link" href="#">Link 3</a>
-            </li>
-        </ul>
-    </nav>
-
-    Styleguide Components.nav
-*/
-
-.c-nav
+$nav
     margin     em(24px) 0
     padding    0
     list-style none
     padding-right 10%
 
-.c-nav-item
+    +medium-screen()
+        display          flex
+        justify-content  space-around
+        margin           em(5px) 0 em(4px)
+        padding-right    0
+
+$nav-item
     position        relative
     z-index         $app-index
     height          3em
@@ -53,7 +36,20 @@
         bottom 0
         background     silver
 
-.c-nav-link
+    +medium-screen()
+        height        auto
+        display       block
+        flex          0 0 2.5em
+        padding-right 0
+        &:hover::before
+            content  none
+
+    // Prevent double tap on tablets
+    @media not all and (pointer: fine)
+        &:hover::before
+            content none
+
+$nav-link
     display              flex
     padding-left         em(50px)
     line-height          1.5
@@ -76,23 +72,7 @@
         box-shadow   inset 4px 0 0 0 dodger-blue
         font-weight  bold
 
-
-+medium-screen()
-    .c-nav
-        display          flex
-        justify-content  space-around
-        margin           em(5px) 0 em(4px)
-        padding-right    0
-
-    .c-nav-item
-        height        auto
-        display       block
-        flex          0 0 2.5em
-        padding-right 0
-        &:hover::before
-            content  none
-
-    .c-nav-link
+    +medium-screen()
         display              block
         height               auto
         padding              em(29px, 10px) 0 0
@@ -110,10 +90,7 @@
             font-weight  normal
             color        charcoal-grey
 
-// Prevent double tap on tablets
-@media not all and (pointer: fine)
-    .coz-nav-item:hover::before
-        content none
-
-    .c-nav-link:hover
-        color slate-grey
+    // Prevent double tap on tablets
+    @media not all and (pointer: fine)
+        &:hover
+            color slate-grey

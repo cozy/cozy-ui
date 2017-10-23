@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Removed
-- none yet
+- Removed deprecated classes `.coz-sidebar`, `coz-error`, `coz-error--warning`, `coz-hidden`, `coz-desktop`, `coz-mobile`
 
 ### Deprecated
 - none yet

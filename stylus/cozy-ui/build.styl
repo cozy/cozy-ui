@@ -1,0 +1,628 @@
+/*------------------------------------*\
+  CSS classes for those who want the
+  full library loaded kinda like
+  Bootstrap.
+\*------------------------------------*/
+
+/*------------------------------------*\
+  Required dependencies
+\*------------------------------------*/
+@require '../settings/*'
+@require '../tools/*'
+@require '../generic/animations'
+@require '../../node_modules/normalize.css/normalize.css'
+@require '../elements/*'
+@require '../objects/*'
+@require '../components/button'
+@require '../utilities/*'
+
+/*------------------------------------*\
+  Objects
+\*------------------------------------*/
+
+// Layout
+.o-layout--2panes
+    @extend $app-2panes-sticky
+
+// Sidebar
+.o-sidebar
+    @extend $sidebar
+
+/*------------------------------------*\
+  Components
+\*------------------------------------*/
+/*
+ Buttons
+
+ Buttons in different flavour
+
+ Markup:
+ <div class="u-p-1" style=" background-color: darkgrey">
+     <button class="c-btn {{modifier_class}}">Click me, I'm a button!</button>
+     <a hre="#" class="c-btn {{modifier_class}}">Click me, I'm a link!</a>
+ </div>
+
+ .c-btn--regular - Regular
+ .c-btn--secondary - Regular alternative
+ .c-btn--danger - Danger
+ .c-btn--danger-outline - Danger outlined
+ .c-btn--highlight - Highlighted button to catch the eye
+
+ Weight: -1
+
+ Styleguide Components.buttons
+*/
+.c-btn
+    @extend $button
+
+.c-btn--regular
+    @extend $button--regular
+
+.c-btn--secondary
+    @extend $button--secondary
+
+.c-btn--danger
+    @extend $button--danger
+
+.c-btn--danger-outline
+    @extend $button--danger-outline
+
+.c-btn--highlight
+    @extend $button--highlight
+
+/*
+ Buttons with icons
+
+ Those buttons can inherit any flavour of buttons described above.
+
+ For this example, we use `.c-btn--regular` but choose the one you want.
+
+ Markup:
+ <div class="u-p-1" style=" background-color: darkgrey">
+     <button class="c-btn c-btn--regular {{modifier_class}}">Click me, I'm a button!</button>
+     <a hre="#" class="c-btn c-btn--regular {{modifier_class}}">Click me, I'm a link!</a>
+ </div>
+
+ .c-btn--share - Share
+ .c-btn--send - Send
+ .c-btn--download - Download
+ .c-btn--upload - Upload
+ .c-btn--delete - Delete
+
+ Styleguide Components.buttons.icons
+*/
+.c-btn--share
+    @extend $button--share
+
+.c-btn--send
+    @extend $button--send
+
+.c-btn--download
+    @extend $button--download
+
+.c-btn--upload
+    @extend $button--upload
+
+.c-btn--delete
+    @extend $button--delete
+
+/*
+ Buttons link shaped with icons
+
+ Buttons that look like links, with icons
+
+ Markup:
+ <div class="u-p-1" style=" background-color: darkgrey">
+     <button class="{{modifier_class}}">Click me, I'm a button!</button>
+     <a hre="#" class="{{modifier_class}}">Click me, I'm a link!</a>
+ </div>
+
+ .c-link--upload - Upload
+ .c-link--delete - Delete
+
+ Styleguide Components.buttons.link
+*/
+.c-link--upload
+    @extend $link--upload
+
+.c-link--delete
+    @extend $link--delete
+
+/*
+ Button More
+
+ Button to display more information
+
+ Markup:
+ <div class="u-p-1" style=" background-color: darkgrey">
+    <button class="c-btn {{modifier_class}}"><span class="u-visuallyhidden">Click me, I'm a button!</span></button>
+    <a hre="#" class="c-btn {{modifier_class}}"><span class="u-visuallyhidden">Click me, I'm a link!</span></a>
+ </div>
+
+ .c-btn--more - Classic more button
+ .c-btn-extra - Extra button, much like More button but lighter, without border
+ .c-btn-extra--white - Extra button with white icon
+
+ Styleguide Components.buttons.more
+*/
+.c-btn--more
+    @extend $button--more
+
+.c-btn-extra
+    @extend $button-extra
+
+.c-btn-extra--white
+    @extend $button-extra--white
+
+.c-btn--close
+    @extend $button--close
+
+/*------------------------------------*\
+  Alert's specific buttons
+\*------------------------------------*/
+/*
+ Alert's buttons
+
+ Buttons that look like links, with icons
+
+ Markup:
+ <div class="u-p-1">
+     <button class="c-btn--alert {{modifier_class}} u-m-1">Click me, I'm a button!</button>
+     <a hre="#" class="c-btn--alert {{modifier_class}} u-m-1">Click me, I'm a link!</a>
+ </div>
+
+ .c-btn-alert--error - Error button
+ .c-btn-alert--info - Information button
+ .c-btn-alert--success - Success button
+
+ Weight: 10
+
+ Styleguide Components.buttons.alert
+*/
+.c-btn-alert
+    @extend $button-alert
+
+.c-btn-alert--error
+    @extend $button-alert--error
+
+.c-btn-alert--info
+    @extend $button-alert--info
+
+.c-btn-alert--success
+    @extend $button-alert--success
+
+/*------------------------------------*\
+  Special buttons
+\*------------------------------------*/
+/*
+ Special buttons
+
+ Special link that look like buttons (<a> only)
+
+ Markup:
+ <div class="u-p-1" style="background-color: darkgrey; width: 50%;">
+     <a hre="#" class="{{modifier_class}} u-mb-1">Click me, I'm a link!</a>
+ </div>
+
+ .c-btn-client - Button to download Cozy client app
+ .c-btn-client-mobile - Button to download Cozy client app on mobile
+
+ Weight: 20
+
+ Styleguide Components.buttons.special
+*/
+.c-btn-client
+    @extend $button-client
+
+.c-btn-client-mobile
+    @extend $button-client-mobile
+
+/*
+    Navigation
+
+    Navigation component that displays a list of item link to other pages
+
+    Markup:
+    <nav style="width: 220px">
+        <ul class="c-nav">
+            <li class="c-nav-item">
+                <a class="c-nav-link is-active" href="#">Link 1</a>
+            </li>
+            <li class="c-nav-item">
+                <a class="c-nav-link" href="#">Link 2</a>
+            </li>
+            <li class="c-nav-item">
+                <a class="c-nav-link" href="#">Link 3</a>
+            </li>
+        </ul>
+    </nav>
+
+    Styleguide Components.nav
+*/
+.c-nav
+    $nav
+
+.c-nav-item
+    $nav-item
+
+.c-nav-link
+    $nav-link
+
+/*------------------------------------*\
+  Utilities
+\*------------------------------------*/
+/*
+    Utilities
+
+    Ready-to-use utility classes
+
+    Weight: -4
+
+    Styleguide utilities
+*/
+
+/*
+    Display
+
+    Utilities that change the box model of an element or its visibility.
+
+    Styleguide utilities.display
+*/
+
+/*
+    Visibility
+
+    Utilities that show or hide an element for a giving viewport size.
+
+    Markup:
+    <p class="{{modifier_class}}">I'm visible! 🎉</p>
+
+    .u-hidden - Element is visually hidden but still readable by screen-readers
+    .u-hide - Element is totally hidden (even for screen readers)
+    .u-hide--desk - Element is hidden on desktop (>768px)
+    .u-hide--mob - Element is hidden on mobile (<1023px)
+
+    Styleguide utilities.visibility
+*/
+.u-visuallyhidden
+    @extend $visuallyHidden
+
+.u-hide
+    @extend $hide
+
+.u-hide--mob
+    @extend $hide--mob
+
+.u-hide--desk
+    @extend $hide--desk
+
+/*
+    Text
+
+    Utilities that mess only with with wild texts.
+
+    Styleguide utilities.text
+*/
+
+/*
+    Error
+
+    Utilities that give text some semantic color in case of error.
+
+    Markup: <p class="{{modifier_class}}">Somehow you messed up somewhere.</p>
+
+    .u-error - simple error text
+
+    Styleguide utilities.text.error
+*/
+
+/*
+    Error with warning icon
+
+    Utilities that give text some semantic color in case of important error.
+
+    Markup: <p class="u-error {{modifier_class}}">You really missed, badly.</p>
+
+    .u-error--warning - error with warning icon
+
+    Styleguide utilities.text.errorWarn
+*/
+
+.u-error
+    @extend $error
+
+.u-error--warning
+    @extend $error-warning
+
+/*
+ Valid
+
+ Utilities that give text some semantic color in case of success.
+
+ Markup: <p class="{{modifier_class}}">Yay, you did it!</p>
+
+ .u-valid - simple valid text
+
+ Styleguide utilities.text.valid
+*/
+.u-valid
+    @extend $valid
+
+/*
+ Warning
+
+ Utilities that give text some semantic color in case of warning.
+
+ Markup: <p class="{{modifier_class}}">Ok, something went wrong but it's not that bad.</p>
+
+ .u-warn - simple warning text
+
+ Styleguide utilities.text.warn
+*/
+.u-warn
+    @extend $warn
+
+/*
+    Margins
+
+    Classes to add margins on top, bottom, right, left or all of them based on
+    default font-size (16px)
+
+    .u-m-half - Margins on all sides with half a line (8px)
+    .u-m-1 - Margins on all sides with 1 line (16px)
+    .u-m-1-half - Margins on all sides with 1 line an a half (24px)
+    .u-m-2 - Margins on all sides with 2 lines (32px)
+    .u-m-2-half - Margins on all sides with 1 line an a half (40px)
+    .u-m-3 - Margins on all sides with 2 lines (48px)
+    .u-mt-half - Margin Top with half a line (8px)
+    .u-mt-1 - Margin Top with 1 line (16px)
+    .u-mt-1-half - Margin Top with 1 line an a half (24px)
+    .u-mt-2 - Margin Top with 2 lines (32px)
+    .u-mt-2-half - Margin Top with 1 line an a half (40px)
+    .u-mt-3 - Margin Top with 2 lines (48px)
+    .u-mb-half - Margin Bottom with half a line (8px)
+    .u-mb-1 - Margin Bottom with 1 line (16px)
+    .u-mb-1-half - Margin Bottom with 1 line an a half (24px)
+    .u-mb-2 - Margin Bottom with 2 lines (32px)
+    .u-mb-2-half - Margin Bottom with 1 line an a half (40px)
+    .u-mb-3 - Margin Bottom with 2 lines (48px)
+    .u-ml-half - Margin Left with half a line (8px)
+    .u-ml-1 - Margin Left with 1 line (16px)
+    .u-ml-1-half - Margin Left with 1 line an a half (24px)
+    .u-ml-2 - Margin Left with 2 lines (32px)
+    .u-ml-2-half - Margin Left with 1 line an a half (40px)
+    .u-ml-3 - Margin Left with 2 lines (48px)
+    .u-mr-half - Margin Right with half a line (8px)
+    .u-mr-1 - Margin Right with 1 line (16px)
+    .u-mr-1-half - Margin Right with 1 line an a half (24px)
+    .u-mr-2 - Margin Right with 2 lines (32px)
+    .u-mr-2-half - Margin Right with 1 line an a half (40px)
+    .u-mr-3 - Margin Right with 2 lines (48px)
+
+    Markup:
+    <div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="{{modifier_class}}">🎶 Gimme some margin 🎵 </div></div>
+
+    Styleguide utilities.margins
+*/
+.u-m-half
+    @extend $m-half
+
+.u-m-1
+    @extend $m-1
+
+.u-m-1-half
+    @extend $m-1-half
+
+.u-m-2
+    @extend $m-2
+
+.u-m-2-half
+    @extend $m-2-half
+
+.u-m-3
+    @extend $m-3
+
+.u-mt-half
+    @extend $mt-half
+
+.u-mt-1
+    @extend $mt-1
+
+.u-mt-1-half
+    @extend $mt-1-half
+
+.u-mt-2
+    @extend $mt-2
+
+.u-mt-2-half
+    @extend $mt-2-half
+
+.u-mt-3
+    @extend $mt-3
+
+.u-mb-half
+    @extend $mb-half
+
+.u-mb-1
+    @extend $mb-1
+
+.u-mb-1-half
+    @extend $mb-1-half
+
+.u-mb-2
+    @extend $mb-2
+
+.u-mb-2-half
+    @extend $mb-2-half
+
+.u-mb-3
+    @extend $mb-3
+
+.u-ml-half
+    @extend $ml-half
+
+.u-ml-1
+    @extend $ml-1
+
+.u-ml-1-half
+    @extend $ml-1-half
+
+.u-ml-2
+    @extend $ml-2
+
+.u-ml-2-half
+    @extend $ml-2-half
+
+.u-ml-3
+    @extend $ml-3
+
+.u-mr-half
+    @extend $mr-half
+
+.u-mr-1
+    @extend $mr-1
+
+.u-mr-1-half
+    @extend $mr-1-half
+
+.u-mr-2
+    @extend $mr-2
+
+.u-mr-2-half
+    @extend $mr-2-half
+
+.u-mr-3
+    @extend $mr-3
+
+/*
+    Paddings
+
+    Classes to add paddings on top, bottom, right, left or all of them based on
+    default font-size (16px)
+
+    .u-p-half - Paddings on all sides with half a line (8px)
+    .u-p-1 - Paddings on all sides with 1 line (16px)
+    .u-p-1-half - Paddings on all sides with 1 line an a half (24px)
+    .u-p-2 - Paddings on all sides with 2 lines (32px)
+    .u-p-2-half - Paddings on all sides with 1 line an a half (40px)
+    .u-p-3 - Paddings on all sides with 2 lines (48px)
+    .u-pt-half - Padding Top with half a line (8px)
+    .u-pt-1 - Padding Top with 1 line (16px)
+    .u-pt-1-half - Padding Top with 1 line an a half (24px)
+    .u-pt-2 - Padding Top with 2 lines (32px)
+    .u-pt-2-half - Padding Top with 1 line an a half (40px)
+    .u-pt-3 - Padding Top with 2 lines (48px)
+    .u-pb-half - Padding Bottom with half a line (8px)
+    .u-pb-1 - Padding Bottom with 1 line (16px)
+    .u-pb-1-half - Padding Bottom with 1 line an a half (24px)
+    .u-pb-2 - Padding Bottom with 2 lines (32px)
+    .u-pb-2-half - Padding Bottom with 1 line an a half (40px)
+    .u-pb-3 - Padding Bottom with 2 lines (48px)
+    .u-pl-half - Padding Left with half a line (8px)
+    .u-pl-1 - Padding Left with 1 line (16px)
+    .u-pl-1-half - Padding Left with 1 line an a half (24px)
+    .u-pl-2 - Padding Left with 2 lines (32px)
+    .u-pl-2-half - Padding Left with 1 line an a half (40px)
+    .u-pl-3 - Padding Left with 2 lines (48px)
+    .u-pr-half - Padding Right with half a line (8px)
+    .u-pr-1 - Padding Right with 1 line (16px)
+    .u-pr-1-half - Padding Right with 1 line an a half (24px)
+    .u-pr-2 - Padding Right with 2 lines (32px)
+    .u-pr-2-half - Padding Right with 1 line an a half (40px)
+    .u-pr-3 - Padding Right with 2 lines (48px)
+
+    Markup:
+    <div style="background-color:gainsboro; display: inline-block;" class="{{modifier_class}}"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div>
+
+    Styleguide utilities.paddings
+*/
+.u-p-half
+    @extend $m-half
+
+.u-p-1
+    @extend $m-1
+
+.u-p-1-half
+    @extend $m-1-half
+
+.u-p-2
+    @extend $m-2
+
+.u-p-2-half
+    @extend $m-2-half
+
+.u-p-3
+    @extend $m-3
+
+.u-pt-half
+    @extend $mt-half
+
+.u-pt-1
+    @extend $mt-1
+
+.u-pt-1-half
+    @extend $mt-1-half
+
+.u-pt-2
+    @extend $mt-2
+
+.u-pt-2-half
+    @extend $mt-2-half
+
+.u-pt-3
+    @extend $mt-3
+
+.u-pb-half
+    @extend $mb-half
+
+.u-pb-1
+    @extend $mb-1
+
+.u-pb-1-half
+    @extend $mb-1-half
+
+.u-pb-2
+    @extend $mb-2
+
+.u-pb-2-half
+    @extend $mb-2-half
+
+.u-pb-3
+    @extend $mb-3
+
+.u-pl-half
+    @extend $ml-half
+
+.u-pl-1
+    @extend $ml-1
+
+.u-pl-1-half
+    @extend $ml-1-half
+
+.u-pl-2
+    @extend $ml-2
+
+.u-pl-2-half
+    @extend $ml-2-half
+
+.u-pl-3
+    @extend $ml-3
+
+.u-pr-half
+    @extend $mr-half
+
+.u-pr-1
+    @extend $mr-1
+
+.u-pr-1-half
+    @extend $mr-1-half
+
+.u-pr-2
+    @extend $mr-2
+
+.u-pr-2-half
+    @extend $mr-2-half
+
+.u-pr-3
+    @extend $mr-3
+
