@@ -7,19 +7,22 @@ const small = 768
 const tiny = 543
 
 const breakpoints = {
-  extraLarge: [large + 1],
-  large: [medium + 1, large],
-  medium: [small + 1, medium],
-  small: [tiny + 1, small],
-  tiny: [0, tiny],
-  desktop: [medium + 1],
-  tablet: [small + 1, medium],
-  mobile: [0, small]
+  isExtraLarge: [large + 1],
+  isLarge: [medium + 1, large],
+  isMedium: [small + 1, medium],
+  isSmall: [tiny + 1, small],
+  isTiny: [0, tiny],
+  isDesktop: [medium + 1],
+  isTablet: [small + 1, medium],
+  isMobile: [0, small]
 }
 
 const getBreakpointsStatus = breakpoints => {
   const width = window.innerWidth
-  return mapValues(breakpoints, ([min, max]) => width > min && (max === undefined || width < max))
+  return mapValues(
+    breakpoints,
+    ([min, max]) => width > min && (max === undefined || width < max)
+  )
 }
 
 /**
@@ -39,23 +42,29 @@ const getBreakpointsStatus = breakpoints => {
  */
 const breakpointsAware = (bp = breakpoints) => Wrapped =>
   class Aware extends Component {
-    state = {
-      breakpoints: getBreakpointsStatus(bp)
+    constructor(props) {
+      super(props)
+      this.state = {
+        breakpoints: getBreakpointsStatus(bp)
+      }
+      this.checkBreakpoints = throttle(
+        () => {
+          this.setState({ breakpoints: getBreakpointsStatus(bp) })
+        },
+        100,
+        { trailing: true }
+      )
     }
 
-    componentDidMount () {
+    componentDidMount() {
       window.addEventListener('resize', this.checkBreakpoints)
     }
 
-    componentWillUnmount () {
+    componentWillUnmount() {
       window.removeEventListener('resize', this.checkBreakpoints)
     }
 
-    checkBreakpoints = throttle(() => {
-      this.setState({ breakpoints: getBreakpointsStatus(bp) })
-    }, 100, { trailing: true })
-
-    render (props, { breakpoints }) {
+    render(props, { breakpoints }) {
       return <Wrapped {...props} breakpoints={breakpoints} />
     }
   }
@@ -64,21 +73,22 @@ const breakpointsAware = (bp = breakpoints) => Wrapped =>
  * HOC that tries a predicate on props + state and
  * renders a component only if the predicate returns true
  */
-export const renderOnlyIf = predicate => Wrapped => class extends Component {
-  render (props, state) {
-    if (predicate(props, state)) {
-      return <Wrapped {...props} />
+export const renderOnlyIf = predicate => Wrapped =>
+  class extends Component {
+    render(props, state) {
+      if (predicate(props, state)) {
+        return <Wrapped {...props} />
+      }
     }
   }
-}
 
 /**
  * Use this HOC if you only want your component to be
  * rendered on mobile
  */
 export const onlyMobile = compose(
-  breakpointsAware(pick(breakpoints, 'mobile')),
-  renderOnlyIf(props => props.breakpoints.mobile)
+  breakpointsAware(pick(breakpoints, 'isMobile')),
+  renderOnlyIf(props => props.breakpoints.isMobile)
 )
 
 /**
@@ -86,8 +96,8 @@ export const onlyMobile = compose(
  * rendered on tablet
  */
 export const onlyTablet = compose(
-  breakpointsAware(pick(breakpoints, 'tablet')),
-  renderOnlyIf(props => props.breakpoints.tablet)
+  breakpointsAware(pick(breakpoints, 'isTablet')),
+  renderOnlyIf(props => props.breakpoints.isTablet)
 )
 
 /**
@@ -95,8 +105,8 @@ export const onlyTablet = compose(
  * rendered on desktop
  */
 export const onlyDesktop = compose(
-  breakpointsAware(pick(breakpoints, 'desktop')),
-  renderOnlyIf(props => props.breakpoints.desktop)
+  breakpointsAware(pick(breakpoints, 'isDesktop')),
+  renderOnlyIf(props => props.breakpoints.isDesktop)
 )
 
 export default breakpointsAware
