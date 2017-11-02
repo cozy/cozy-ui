@@ -23,9 +23,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+
+## [4.0.4] - 2017-11-2
+### Fixed
+-  🚑 Breakpoint helper should works now 😅
+
+
 ## [4.0.3] - 2017-10-25
 ### Fixed
 -  🚑 Alert's padding are now back in the game, sorry, some commas were well hidden.
+
 
 ## [4.0.2] - 2017-10-19
 ### Fixed
@@ -494,7 +501,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v4.0.3...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v4.0.4...HEAD
+[4.0.4]: https://github.com/cozy/cozy-ui/compare/v4.0.3...v4.0.4
 [4.0.3]: https://github.com/cozy/cozy-ui/compare/v4.0.2...v4.0.3
 [4.0.2]: https://github.com/cozy/cozy-ui/compare/v4.0.1...v4.0.2
 [4.0.1]: https://github.com/cozy/cozy-ui/compare/v4.0.0...v4.0.1
