@@ -24,6 +24,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [4.0.5] - 2017-11-16
+### Fixed
+- 🎨 Fixing default html element's background color
+
+### Added
+- ✨ Add input[type=url] as default themed input
+
+
 ## [4.0.4] - 2017-11-2
 ### Fixed
 -  🚑 Breakpoint helper should works now 😅
@@ -501,7 +509,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v4.0.4...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v4.0.5...HEAD
+[4.0.5]: https://github.com/cozy/cozy-ui/compare/v4.0.4...v4.0.5
 [4.0.4]: https://github.com/cozy/cozy-ui/compare/v4.0.3...v4.0.4
 [4.0.3]: https://github.com/cozy/cozy-ui/compare/v4.0.2...v4.0.3
 [4.0.2]: https://github.com/cozy/cozy-ui/compare/v4.0.1...v4.0.2
