@@ -10,12 +10,14 @@ cache:
 script:
 - yarn lint
 after_success:
-- test $TRAVIS_BRANCH = "master" && test $TRAVIS_REPO_SLUG = "cozy/cozy-ui" && yarn build:doc && yarn deploy:doc -- --username cozycloud --email contact@cozycloud.cc --repo=https://$GITHUB_TOKEN@github.com/cozy/cozy-ui.git
+- test $TRAVIS_BRANCH = "master" && test $TRAVIS_REPO_SLUG = "cozy/cozy-ui" && yarn
+  build:doc && yarn deploy:doc -- --username cozycloud --email contact@cozycloud.cc
+  --repo=https://$GITHUB_TOKEN@github.com/cozy/cozy-ui.git
 deploy:
   provider: npm
   email: npm@cozycloud.cc
   api_key:
-    secure: eAJXf3L6DM6HNPzHs27PquK/HVIfE0T+lsM/7E6pFu5dL3q0X6A7cPE0bZ8U1VES+gie3HVxcTcNRG1sCkZJE85kqOhqj8IkFvzfD//5jObhET6JauA7xHUBR5JDhYmPNmrixGpIZpgCkc2UTmgngUQxY0zvQWtImZkgLtvzb5Q=
+    secure: uokfYWTnA3SEyueZ7NsSdLM6oX9MHEcK+YpR6yj91kieU4B07fyXYyTfLND6oHcZZa9rVPK3aQ525oG/3/dLxeI6026agE4f+71V1Y/PLiUvcHbCHhcQ4mHrRtZvaEbb+Qa6THNBxvpgNQgtmhLm0hPFTDpulZ1Z0fmMNQ6Yyd0=
   on:
     tags: true
     repo: cozy/cozy-ui
