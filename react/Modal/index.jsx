@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styles from './styles.styl'
+import Overlay from '../Overlay'
 
 const ModalContent = ({children, className}) =>
   (<div className={classNames(styles['coz-modal-content'], className)}>
@@ -57,34 +58,8 @@ const ModalButtons = ({ secondaryText, secondaryAction, secondaryType, primaryTe
     )
 }
 
-const ESC_KEYCODE = 27
-
 class Modal extends Component {
-  constructor (props) {
-    super(props)
-    this.handleKeydown = this.handleKeydown.bind(this)
-    this.handleOutsideClick = this.handleOutsideClick.bind(this)
-  }
-
-  componentDidMount () {
-    if (this.props.withCross) {
-      document.addEventListener('keydown', this.handleKeydown)
-    }
-  }
-
-  componentWillUnmount () {
-    if (this.props.withCross) {
-      document.removeEventListener('keydown', this.handleKeydown)
-    }
-  }
-
-  handleKeydown (e) {
-    if (e.keyCode === ESC_KEYCODE) {
-      this.props.secondaryAction()
-    }
-  }
-
-  handleOutsideClick (e) {
+  handleOutsideClick = (e) => {
     if (e.target === e.currentTarget) this.props.secondaryAction()
   }
 
@@ -92,10 +67,8 @@ class Modal extends Component {
     const { children, title, withCross, overflowHidden } = this.props
     return (
       <div className={styles['coz-modal-container']}>
-        <div className={styles['coz-overlay']}>
-          <div
-            className={styles['coz-modal-wrapper']}
-            onClick={withCross && this.handleOutsideClick}>
+        <Overlay onEscape={withCross && this.props.secondaryAction}>
+          <div className={styles['coz-modal-wrapper']} onClick={withCross && this.handleOutsideClick}>
             <div className={classNames(styles['coz-modal'], { [styles['coz-modal--fullbleed']]: overflowHidden })}>
               <ModalCross {...this.props} />
               {title && <ModalTitle {...this.props} />}
@@ -104,7 +77,7 @@ class Modal extends Component {
               <ModalButtons {...this.props} />
             </div>
           </div>
-        </div>
+        </Overlay>
       </div>
     )
   }
@@ -130,9 +103,19 @@ Modal.defaultProps = {
   overflowHidden: false
 }
 
+export default Modal
+
+// to be able to use them in Styleguidist
+Object.assign(Modal, {
+  ModalContent,
+  ModalSection,
+  ModalButtons,
+  ModalTitle,
+  ModalDescription
+})
+
 export {
   ModalContent,
   ModalSection,
   ModalButtons
 }
-export default Modal
