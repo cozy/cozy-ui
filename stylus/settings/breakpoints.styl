@@ -16,7 +16,9 @@ extra-large = 1439
 /*
     Media Queries mixins
 
-    Those mixins don't take parameters, but use those variables.
+    You can use these mixins with no arguments and they will output
+    the desired a `max-width` media-query. Use the direction argument
+    to set it to `min`.
 
     tiny          -  543px
     small         -  768px
@@ -38,8 +40,8 @@ extra-large = 1439
 
     Styleguide Settings.breakpoints.tiny
 */
-tiny-screen()
-    @media (max-width: (tiny/basefont)rem)
+tiny-screen(direction='max')
+    @media ({direction}-width: (tiny/basefont)rem)
         {block}
 
 /*
@@ -51,8 +53,8 @@ tiny-screen()
 
     Styleguide Settings.breakpoints.small
 */
-small-screen()
-    @media (max-width: (small/basefont)rem)
+small-screen(direction='max')
+    @media ({direction}-width: (small/basefont)rem)
         {block}
 
 /*
@@ -64,8 +66,8 @@ small-screen()
 
     Styleguide Settings.breakpoints.medium
 */
-medium-screen()
-    @media (max-width: (medium/basefont)rem)
+medium-screen(direction='max')
+    @media ({direction}-width: (medium/basefont)rem)
         {block}
 
 /*
@@ -77,8 +79,8 @@ medium-screen()
 
     Styleguide Settings.breakpoints.large
 */
-large-screen()
-    @media (max-width: (large/basefont)rem)
+large-screen(direction='max')
+    @media ({direction}-width: (large/basefont)rem)
         {block}
 
 /*
@@ -90,8 +92,8 @@ large-screen()
 
     Styleguide Settings.breakpoints.extra-large
 */
-extra-large-screen()
-    @media (max-width: (extra-large/basefont)rem)
+extra-large-screen(direction='max')
+    @media ({direction}-width: (extra-large/basefont)rem)
         {block}
 
 // mixins named
