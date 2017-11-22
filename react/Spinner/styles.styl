@@ -16,51 +16,45 @@
         color       cool-grey
         line-height 1.5
 
-// === Modifiers ===
+    // === Modifiers ===
 
-// Box-model
-.coz-spinner--middle
-    position   absolute
-    top        50%
-    left       50%
-    transform  translateX(-50%) translateY(-50%)
-    text-align  center
+    // Box-model
+    &.coz-spinner--middle
+        position   absolute
+        top        50%
+        left       50%
+        transform  translateX(-50%) translateY(-50%)
+        text-align  center
 
-    &:before
-        display     block
-        margin      0 auto
+        &:before
+            display     block
+            margin      0 auto
 
-.coz-spinner--nomargin
-    margin 0
+    &.coz-spinner--nomargin
+        margin 0
 
-// Colors
-.coz-spinner--blue:before
-    @extend $icon-spinner-blue
+    // Colors
+    &.coz-spinner--grey:before
+        @extend $icon-spinner-grey
 
-.coz-spinner--grey:before
-    @extend $icon-spinner-grey
+    &.coz-spinner--white:before
+        @extend $icon-spinner-white
 
-.coz-spinner--white:before
-    @extend $icon-spinner-white
+    &.coz-spinner--red:before
+        @extend $icon-spinner-red
 
-.coz-spinner--red:before
-    @extend $icon-spinner-red
+    // Sizes
+    &.coz-spinner--tiny:before
+        @extend $icon-8
 
-// Sizes
-.coz-spinner--tiny:before
-    @extend $icon-8
+    &.coz-spinner--small:before
+        @extend $icon-12
 
-.coz-spinner--small:before
-    @extend $icon-12
+    &.coz-spinner--large:before
+        @extend $icon-24
 
-.coz-spinner--medium:before
-    @extend $icon-16
+    &.coz-spinner--xlarge:before
+        @extend $icon-36
 
-.coz-spinner--large:before
-    @extend $icon-24
-
-.coz-spinner--xlarge:before
-    @extend $icon-36
-
-.coz-spinner--xxlarge:before
-    @extend $icon-80
+    &.coz-spinner--xxlarge:before
+        @extend $icon-80

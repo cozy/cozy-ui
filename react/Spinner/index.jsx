@@ -10,7 +10,7 @@ export const Spinner = ({ t, loadingType, middle, noMargin, color, size }) => {
       className={classNames(
         styles['coz-spinner'], {
           [styles['coz-spinner--middle']]: middle,
-          [styles['coz-spinner--no-margin']]: noMargin,
+          [styles['coz-spinner--nomargin']]: noMargin,
           [styles[`coz-spinner--${color}`]]: color,
           [styles[`coz-spinner--${size}`]]: size
         }
