@@ -4,13 +4,13 @@ import classNames from 'classnames'
 
 import styles from './styles'
 
-export const Spinner = ({ t, loadingType, middle, noMargin, color = 'blue', size }) => {
+export const Spinner = ({ t, loadingType, middle, noMargin, color, size }) => {
   return (
     <div
       className={classNames(
         styles['coz-spinner'], {
           [styles['coz-spinner--middle']]: middle,
-          [styles['coz-spinner--no-margin']]: noMargin,
+          [styles['coz-spinner--nomargin']]: noMargin,
           [styles[`coz-spinner--${color}`]]: color,
           [styles[`coz-spinner--${size}`]]: size
         }
