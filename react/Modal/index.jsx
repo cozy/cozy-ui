@@ -64,12 +64,12 @@ class Modal extends Component {
   }
 
   render () {
-    const { children, description, title, withCross, overflowHidden } = this.props
+    const { children, description, title, withCross, overflowHidden, className } = this.props
     return (
       <div className={styles['coz-modal-container']}>
         <Overlay onEscape={withCross && this.props.secondaryAction}>
           <div className={styles['coz-modal-wrapper']} onClick={withCross && this.handleOutsideClick}>
-            <div className={classNames(styles['coz-modal'], { [styles['coz-modal--overflowHidden']]: overflowHidden })}>
+            <div className={classNames(styles['coz-modal'], className, { [styles['coz-modal--overflowHidden']]: overflowHidden })}>
               <ModalCross {...this.props} />
               { title && <ModalTitle>{ title }</ModalTitle> }
               { description && <ModalDescription>{ description }</ModalDescription> }
