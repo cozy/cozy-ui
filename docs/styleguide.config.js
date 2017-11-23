@@ -8,5 +8,9 @@ module.exports = {
   styleguideDir: path.resolve(__dirname, '../build/react'),
   require: [
     path.join(__dirname, './style.styl')
-  ]
+  ],
+  showCode: true,
+  context: {
+    content: path.resolve(__dirname, 'fixtures/content')
+  }
 }

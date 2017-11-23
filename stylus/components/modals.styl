@@ -1,4 +1,6 @@
+@require '../settings/palette'
 @require '../settings/z-index'
+@require '../settings/breakpoints'
 
 /*------------------------------------*\
   Modals
@@ -8,24 +10,7 @@
 \*------------------------------------*/
 
 $modals
-    modal-width = em(480px)
-
-    .coz-overlay
-        z-index     $modal-index
-        position    fixed
-        top         0
-        left        0
-        height      100%
-        width       100%
-        background  rgba(charcoal-grey, .5)
-        visibility  visible
-        transition  opacity .3s, visibility 0s ease-out
-
-        &.coz-overlay--hidden
-            opacity     0
-            visibility  hidden
-            transition  opacity .3s 0s, visibility 0s ease-in .3s
-
+    modal-width = 30rem
 
     .coz-modal-wrapper
         position          fixed
@@ -33,66 +18,86 @@ $modals
         left              0
         display           flex
         flex-direction    row
+        align-items       start
         box-sizing        border-box
         width             100vw
         height            100vh
         overflow-y        scroll
-        padding           (16/basefont)em
+        padding           1rem
 
     .coz-modal
         position          relative
-        margin            5vh auto auto
-        border-radius     em(8px)
-        max-width         90%
+        margin            0 auto
+        max-width         modal-width
+        border-radius     .5rem
         min-width         modal-width
-        height            auto
+        max-height        100%
+
         background-color  white
         color             charcoal-grey
+        display           flex
+        flex-direction    column
 
-        .coz-modal-content:first-child
-        .coz-btn-modal-close + .coz-modal-content
-            padding-top    1.5em
+    .coz-modal-content:first-child
+    .coz-btn-modal-close + .coz-modal-content
+        padding-top    1.5em
 
-        .coz-modal-content:last-child
-            padding-bottom    1.5em
+    .coz-modal-content:last-child
+        padding-bottom    1.5em
 
-        .coz-modal-content
-            padding 0 1.5em
+    .coz-modal-content
+        padding 0 1.5em
+        overflow auto
 
-        .coz-modal-section
-            border-top 1px solid silver
+    .coz-modal-section
+        border-top 1px solid silver
 
-        .coz-modal-content.coz-modal-title
-            margin       0 0 1em
-            // font is 1.5em
-            padding      1em 3em 0 1em
-            font-weight  bold
+    .coz-modal-content.coz-modal-title
+        margin       0 0 1em
+        // font is 1.5em
+        padding      1em 3em 0 1em
+        font-weight  bold
+        overflow     visible
 
-        .coz-btn-modal-close
-            position         absolute
-            top              1.3em
-            right            1em
-            margin           0
-            padding          0
-            background-size  2em
-            background-color transparent
-            cursor           pointer
+    .coz-btn-modal-close
+        position         absolute
+        top              1.3em
+        right            1em
+        margin           0
+        padding          0
+        background-size  2em
+        background-color transparent
+        cursor           pointer
 
-        .coz-modal-buttons
-            margin-top  2em
-            text-align  right
+    .coz-modal-buttons
+        margin-top  2em
+        text-align  right
+        overflow    visible
 
-            button
-                margin-right  0
-                margin-left   em(10px)
-                font-size     .9em
+        button
+            margin-right  0
+            margin-left   .625rem
+            font-size     .9em
+
+        +small-screen()
+            &
+                display flex
+                flex-direction column-reverse
+                flex-shrink 0
+                button
+                    width 100%
+                    margin-left 0
+                // since the order is reverse we target the first-child
+                button:not(:first-child)
+                    margin-bottom .25rem
 
         &.coz-modal--hidden
             top                         -25%
             opacity                     0
             transition-timing-function  ease-in
 
-    .coz-modal--fullbleed
+    .coz-modal--fullscreen
+    .coz-modal--overflowHidden
         overflow hidden
 
     @media (max-width (modal-width + 2em))
