@@ -14,9 +14,11 @@ const ModalSection = ({children, className}) =>
     {children}
   </div>)
 
-const ModalTitle = ({ title }) =>
+const ModalTitle = ({ children, className }) =>
   (
-    <h2 className={classNames(styles['coz-modal-content'], styles['coz-modal-title'])}>{title}</h2>
+    <h2 className={classNames(styles['coz-modal-content'], styles['coz-modal-title'], className)}>
+      {children}
+    </h2>
   )
 
 const ModalCross = ({ withCross, secondaryAction, secondaryText }) =>
@@ -30,13 +32,11 @@ const ModalCross = ({ withCross, secondaryAction, secondaryText }) =>
     </button>
 )
 
-const ModalDescription = ({ description }) =>
-  description &&
-  (
-    <div className={classNames(styles['coz-modal-content'], styles['coz-description'])}>
-      {description}
-    </div>
-  )
+const ModalDescription = ({ children, className }) => (
+  <div className={classNames(styles['coz-modal-content'], styles['coz-description'], className)}>
+    {children}
+  </div>
+)
 
 const ModalButtons = ({ secondaryText, secondaryAction, secondaryType, primaryText, primaryAction, primaryType }) => {
   const displayPrimary = primaryText && primaryAction
@@ -64,15 +64,15 @@ class Modal extends Component {
   }
 
   render () {
-    const { children, title, withCross, overflowHidden } = this.props
+    const { children, description, title, withCross, overflowHidden } = this.props
     return (
       <div className={styles['coz-modal-container']}>
         <Overlay onEscape={withCross && this.props.secondaryAction}>
           <div className={styles['coz-modal-wrapper']} onClick={withCross && this.handleOutsideClick}>
             <div className={classNames(styles['coz-modal'], { [styles['coz-modal--fullbleed']]: overflowHidden })}>
               <ModalCross {...this.props} />
-              {title && <ModalTitle {...this.props} />}
-              <ModalDescription {...this.props} />
+              { title && <ModalTitle>{ title }</ModalTitle> }
+              { description && <ModalDescription>{ description }</ModalDescription> }
               { children }
               <ModalButtons {...this.props} />
             </div>
@@ -117,5 +117,7 @@ Object.assign(Modal, {
 export {
   ModalContent,
   ModalSection,
-  ModalButtons
+  ModalButtons,
+  ModalTitle,
+  ModalDescription
 }
