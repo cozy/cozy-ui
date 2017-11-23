@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import classNames from 'classnames'
 import { connect } from 'react-redux'
 
-import { translate } from '../helpers/i18n'
+import { translate } from '../I18n'
 
 import styles from './styles'
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { translate } from '../helpers/i18n'
+import { translate } from '../I18n'
 import classNames from 'classnames'
 
 import styles from './styles'
