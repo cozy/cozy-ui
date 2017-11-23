@@ -7,10 +7,6 @@
     "url": "https://github.com/cozy/cozy-ui.git"
   },
   "author": "Cozy Cloud <contact@cozycloud.cc> (http://cozycloud.cc)",
-  "contributors": [
-    "m4dz <code@m4dz.net>",
-    "GoOz"
-  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cozy/cozy-ui/issues"
