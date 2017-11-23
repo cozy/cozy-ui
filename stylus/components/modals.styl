@@ -17,6 +17,7 @@ $modals
         left              0
         display           flex
         flex-direction    row
+        align-items       start
         box-sizing        border-box
         width             100vw
         height            100vh
@@ -29,9 +30,12 @@ $modals
         border-radius     em(8px)
         max-width         90%
         min-width         modal-width
-        height            auto
+        max-height        100%
+
         background-color  white
         color             charcoal-grey
+        display           flex
+        flex-direction    column
 
         .coz-modal-content:first-child
         .coz-btn-modal-close + .coz-modal-content
@@ -42,6 +46,7 @@ $modals
 
         .coz-modal-content
             padding 0 1.5em
+            overflow auto
 
         .coz-modal-section
             border-top 1px solid silver
@@ -51,6 +56,7 @@ $modals
             // font is 1.5em
             padding      1em 3em 0 1em
             font-weight  bold
+            overflow     visible
 
         .coz-btn-modal-close
             position         absolute
@@ -65,6 +71,7 @@ $modals
         .coz-modal-buttons
             margin-top  2em
             text-align  right
+            overflow    visible
 
             button
                 margin-right  0
