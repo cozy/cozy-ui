@@ -9,6 +9,7 @@ module.exports = {
   require: [
     path.join(__dirname, './style.styl')
   ],
+  showCode: true,
   context: {
     content: path.resolve(__dirname, 'fixtures/content')
   }
