@@ -1,5 +1,6 @@
 @require '../settings/palette'
 @require '../settings/z-index'
+@require '../settings/breakpoints'
 
 /*------------------------------------*\
   Modals
@@ -28,7 +29,7 @@ $modals
         position          relative
         margin            0 auto
         max-width         modal-width
-        border-radius     0.5rem
+        border-radius     .5rem
         min-width         modal-width
         max-height        100%
 
@@ -37,46 +38,58 @@ $modals
         display           flex
         flex-direction    column
 
-        .coz-modal-content:first-child
-        .coz-btn-modal-close + .coz-modal-content
-            padding-top    1.5em
+    .coz-modal-content:first-child
+    .coz-btn-modal-close + .coz-modal-content
+        padding-top    1.5em
 
-        .coz-modal-content:last-child
-            padding-bottom    1.5em
+    .coz-modal-content:last-child
+        padding-bottom    1.5em
 
-        .coz-modal-content
-            padding 0 1.5em
-            overflow auto
+    .coz-modal-content
+        padding 0 1.5em
+        overflow auto
 
-        .coz-modal-section
-            border-top 1px solid silver
+    .coz-modal-section
+        border-top 1px solid silver
 
-        .coz-modal-content.coz-modal-title
-            margin       0 0 1em
-            // font is 1.5em
-            padding      1em 3em 0 1em
-            font-weight  bold
-            overflow     visible
+    .coz-modal-content.coz-modal-title
+        margin       0 0 1em
+        // font is 1.5em
+        padding      1em 3em 0 1em
+        font-weight  bold
+        overflow     visible
 
-        .coz-btn-modal-close
-            position         absolute
-            top              1.3em
-            right            1em
-            margin           0
-            padding          0
-            background-size  2em
-            background-color transparent
-            cursor           pointer
+    .coz-btn-modal-close
+        position         absolute
+        top              1.3em
+        right            1em
+        margin           0
+        padding          0
+        background-size  2em
+        background-color transparent
+        cursor           pointer
 
-        .coz-modal-buttons
-            margin-top  2em
-            text-align  right
-            overflow    visible
+    .coz-modal-buttons
+        margin-top  2em
+        text-align  right
+        overflow    visible
 
-            button
-                margin-right  0
-                margin-left   0.625rem
-                font-size     .9em
+        button
+            margin-right  0
+            margin-left   .625rem
+            font-size     .9em
+
+        +small-screen()
+            &
+                display flex
+                flex-direction column-reverse
+                flex-shrink 0
+                button
+                    width 100%
+                    margin-left 0
+                // since the order is reverse we target the first-child
+                button:not(:first-child)
+                    margin-bottom .25rem
 
         &.coz-modal--hidden
             top                         -25%
