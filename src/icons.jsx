@@ -6,6 +6,7 @@ const importIcons = function () {
   const names = [
     'icon-album-add',
     'icon-album-remove',
+    'icon-back',
     'icon-check',
     'icon-cozy',
     'icon-cross',
@@ -13,6 +14,7 @@ const importIcons = function () {
     'icon-device-laptop',
     'icon-dots',
     'icon-download',
+    'icon-forward',
     'icon-moveto',
     'icon-openwith',
     'icon-paperplane',
