@@ -32,7 +32,7 @@ const getBreakpointsStatus = breakpoints => {
  *
  * @Example
  * ````
- * const B = breakpointsAware({ toto: 1000 })(A)
+ * const B = withBreakpoints({ toto: 1000 })(A)
  * ````
  *
  * A will passed { breakpoints: { toto: $T }} as prop
@@ -87,7 +87,7 @@ export const renderOnlyIf = predicate => Wrapped =>
  * rendered on mobile
  */
 export const onlyMobile = compose(
-  breakpointsAware(pick(breakpoints, 'isMobile')),
+  withBreakpoints(pick(breakpoints, 'isMobile')),
   renderOnlyIf(props => props.breakpoints.isMobile)
 )
 
@@ -96,7 +96,7 @@ export const onlyMobile = compose(
  * rendered on tablet
  */
 export const onlyTablet = compose(
-  breakpointsAware(pick(breakpoints, 'isTablet')),
+  withBreakpoints(pick(breakpoints, 'isTablet')),
   renderOnlyIf(props => props.breakpoints.isTablet)
 )
 
@@ -105,7 +105,7 @@ export const onlyTablet = compose(
  * rendered on desktop
  */
 export const onlyDesktop = compose(
-  breakpointsAware(pick(breakpoints, 'isDesktop')),
+  withBreakpoints(pick(breakpoints, 'isDesktop')),
   renderOnlyIf(props => props.breakpoints.isDesktop)
 )
 
