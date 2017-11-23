@@ -1,31 +1,10 @@
-import Alerter from './Alerter'
-import I18n, { translate } from './I18n'
-import Icon from './Icon'
-import Modal, { ModalContent, ModalSection, ModalButtons } from './Modal'
-import SelectionBar from './SelectionBar'
-import Spinner from './Spinner'
-import {Tabs, TabPanels, TabPanel, TabList, Tab} from './Tabs'
-import Toggle from './Toggle'
-import Button from './Button'
-import breakpoints from './helpers/breakpoints'
-
-export {
-  Alerter,
-  Button,
-  withBreakpoints,
-  I18n,
-  translate,
-  Icon,
-  Modal,
-  SelectionBar,
-  Spinner,
-  Tabs,
-  TabPanels,
-  TabPanel,
-  TabList,
-  Tab,
-  Toggle,
-  ModalContent,
-  ModalSection,
-  ModalButtons
-}
+export {default as Alerter} from './Alerter'
+export {default as Button} from './Button'
+export {default as I18n, translate} from './I18n'
+export {default as Icon} from './Icon'
+export {default as Modal, ModalContent, ModalSection, ModalButtons} from './Modal'
+export {default as SelectionBar} from './SelectionBar'
+export {default as Spinner} from './Spinner'
+export {Tabs, TabPanels, TabPanel, TabList, Tab} from './Tabs'
+export {default as Toggle} from './Toggle'
+export {default as withBreakpoints} from './helpers/withBreakpoints'
