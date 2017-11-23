@@ -40,7 +40,7 @@ const getBreakpointsStatus = breakpoints => {
  * under 1000px
  *
  */
-const breakpointsAware = (bp = breakpoints) => Wrapped =>
+const withBreakpoints = (bp = breakpoints) => Wrapped =>
   class Aware extends Component {
     constructor(props) {
       super(props)
@@ -109,4 +109,4 @@ export const onlyDesktop = compose(
   renderOnlyIf(props => props.breakpoints.isDesktop)
 )
 
-export default breakpointsAware
+export default withBreakpoints
