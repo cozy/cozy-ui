@@ -22,7 +22,7 @@ class Overlay extends Component {
     this.restoreScrollBody = disableScroll(document.body)
     this.restoreScrollHtml = disableScroll(document.body.parentNode)
     if (this.props.onEscape) {
-      document.addEventListener('keydown', this.props.onEscape)
+      document.addEventListener('keydown', this.handleKeydown)
     }
   }
 
@@ -36,7 +36,7 @@ class Overlay extends Component {
     this.restoreScrollBody()
     this.restoreScrollHtml()
     if (this.props.onEscape) {
-      document.removeEventListener('keydown', this.props.onEscape)
+      document.removeEventListener('keydown', this.handleKeydown)
     }
   }
 
