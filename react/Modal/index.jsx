@@ -84,7 +84,7 @@ class Modal extends Component {
 }
 
 Modal.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.node,
   description: PropTypes.node,
   secondaryType: PropTypes.string,
   secondaryText: PropTypes.string,
