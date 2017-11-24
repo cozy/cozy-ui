@@ -1,5 +1,3 @@
-An `<Overlay />` hides the screen. It can be used for modals.
-
 ```
 initialState={ overlayShown: false}
 const showOverlay = () => setState({overlayShown: true})
