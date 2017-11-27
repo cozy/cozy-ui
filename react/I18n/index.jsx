@@ -35,7 +35,7 @@ export class I18n extends Component {
   }
 
   componentWillReceiveProps (newProps) {
-    if (newProps.locale !== this.props.locale) {
+    if (newProps.lang !== this.props.lang) {
       this.init(newProps)
     }
   }
@@ -67,3 +67,5 @@ export const translate = () => {
     return _translate
   }
 }
+
+export default I18n
