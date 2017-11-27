@@ -50,6 +50,9 @@ $button // deprecated
     text-decoration  none
     cursor           pointer
 
+    &:visited
+        color white
+
     &[disabled]
     &[aria-disabled=true]
         opacity  .5
@@ -74,6 +77,9 @@ $button--regular // deprecated
     background-color  dodger-blue
     color             white
 
+    &:visited
+        color white
+
     &:active
     &:not([disabled]):not([aria-disabled=true]):hover
     &:focus
@@ -90,6 +96,9 @@ $button--secondary // deprecated
     color             black
     border            1px solid silver
 
+    &:visited
+        color black
+
     &:active
     &:not([disabled]):not([aria-disabled=true]):hover
     &:focus
@@ -104,6 +113,9 @@ $button--danger // deprecated
     border-color      pomegranate
     background-color  pomegranate
     color             white
+
+    &:visited
+        color white
 
     &:active
     &:not([disabled]):not([aria-disabled=true]):hover
@@ -121,6 +133,9 @@ $button--danger-outline // deprecated
     color             pomegranate
     border            1px solid your-pink
 
+    &:visited
+        color pomegranate
+
     &:active
     &:not([disabled]):not([aria-disabled=true]):hover
     &:focus
@@ -135,6 +150,9 @@ $button--highlight // deprecated
     border-color      emerald
     background-color  emerald
     color             white
+
+    &:visited
+        color white
 
     &:active
     &:not([disabled]):not([aria-disabled=true]):hover
@@ -341,6 +359,9 @@ $button-alert--error // deprecated
     @extend .c-btn-alert
     color   pomegranate
 
+    &:visited
+        color pomegranate
+
     &:active
     &:hover
     &:focus
@@ -352,6 +373,9 @@ $button-alert--info // deprecated
     background-color  cool-grey
     color             white
 
+    &:visited
+        color white
+
     &:active
     &:hover
     &:focus
@@ -361,6 +385,9 @@ $button-alert--success // deprecated
 .c-btn-alert--success
     @extend .c-btn-alert
     color   emerald
+
+    &:visited
+        color emerald
 
     &:active
     &:hover
@@ -405,6 +432,9 @@ $button-client // deprecated
     line-height       1.3
     color             slate-grey
 
+    &:visited
+        color slate-grey
+
     &:before
         content           ''
         flex              0 0 em(32px, 13px)
@@ -429,6 +459,9 @@ $button-client-mobile // deprecated
     color            white
     text-decoration  none
     text-transform   none
+
+    &:visited
+        color white
 
     &:active
     &:not([disabled]):not([aria-disabled=true]):hover
