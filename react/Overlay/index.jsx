@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styles from './styles'
+import cx from 'classnames'
 
 const disableScroll = node => {
   const previousOverflow = node.style.overflow
@@ -50,7 +51,7 @@ class Overlay extends Component {
     const { children, className, onClick, ...rest } = this.props
 
     return (
-      <div onClick={this.handleClick} className={styles['c-overlay']} {...rest}>
+      <div onClick={this.handleClick} className={cx(styles['c-overlay'], className)} {...rest}>
         { children }
       </div>
     )
