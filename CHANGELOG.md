@@ -24,6 +24,31 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [4.1.0] - 2017-11-28
+### Changed
+- Use babel-preset-cozy-app in .babelrc
+- Modal improvements:
+  - Cannot scroll while Modal is opened
+  - Modal content is scrollable
+  - Buttons are correctly displayed on mobile
+  - Exports <ModalDescription/> and <ModalTitle /> for complex usages
+  - Modal title can be a node
+
+### Fixed
+- Default Spinner color prevented other colors to be used
+- Visited links color
+
+### Added
+- Add direction parameter to breakpoints
+- Add shortcut to access breakpoints helper
+- Add back & forward icons
+- Add `<ActionMenu />` component: see on [style guide](https://cozy.github.io/cozy-ui/react/#actionmenu)
+- Add `<Overlay />` component: see on [style guide](https://cozy.github.io/cozy-ui/react/#overlay)
+
+### Removed
+- Remove i18n duplicate file
+
+
 ## [4.0.5] - 2017-11-16
 ### Fixed
 - 🎨 Fixing default html element's background color
@@ -509,7 +534,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v4.0.5...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v4.1.0...HEAD
+[4.1.0]: https://github.com/cozy/cozy-ui/compare/v4.0.5...v4.1.0
 [4.0.5]: https://github.com/cozy/cozy-ui/compare/v4.0.4...v4.0.5
 [4.0.4]: https://github.com/cozy/cozy-ui/compare/v4.0.3...v4.0.4
 [4.0.3]: https://github.com/cozy/cozy-ui/compare/v4.0.2...v4.0.3

@@ -61,10 +61,9 @@ I18n.childContextTypes = {
 // higher order decorator for components that need `t` and/or `f`
 export const translate = () => {
   return (WrappedComponent) => {
-    const _translate = (props, context) => (
+    return (props, context) => (
       <WrappedComponent {...props} t={context.t} f={context.f} lang={context.lang} />
     )
-    return _translate
   }
 }
 
