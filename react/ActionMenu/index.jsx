@@ -41,7 +41,7 @@ class ActionMenu extends Component {
   }
 
   turnTransitionsOff (cb) {
-    this.menuNode.classList.add(styles['with-transition'])
+    this.menuNode.classList.remove(styles['with-transition'])
   }
 
   attachEvents () {
