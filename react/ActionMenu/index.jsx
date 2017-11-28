@@ -117,8 +117,6 @@ class ActionMenu extends Component {
 
   close = () => {
     this.setState({ closing: true })
-    // Remove the event handler so subsequent transitions don't trigger dismissals
-    this.applyTransformation(0)
     this.props.onClose()
   }
 
