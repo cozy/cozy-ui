@@ -100,6 +100,8 @@ class ActionMenu extends Component {
   }
 
   animateClose = () => {
+    this.setState({ closing: true })
+
     // we need to transition the menu to the bottom before dismissing it
     const close = once(() => {
       this.menuNode.removeEventListener('transitionend', close)
@@ -114,6 +116,7 @@ class ActionMenu extends Component {
   }
 
   close = () => {
+    this.setState({ closing: true })
     // Remove the event handler so subsequent transitions don't trigger dismissals
     this.applyTransformation(0)
     this.props.onClose()
@@ -125,9 +128,10 @@ class ActionMenu extends Component {
 
   render () {
     const props = this.props
+    const { closing } = this.state
     return (
       <div className={styles.ActionMenu}>
-        <Overlay onClick={this.animateClose} onEscape={this.animateClose}>
+        <Overlay style={{ opacity: closing ? 0 : 1 }} onClick={this.animateClose} onEscape={this.animateClose}>
           <Menu className={styles['c-actionmenu']} {...props} ref={this.handleMenuRef} />
         </Overlay>
       </div>
