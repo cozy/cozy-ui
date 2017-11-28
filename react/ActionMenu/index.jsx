@@ -70,7 +70,6 @@ class ActionMenu extends Component {
     })
 
     this.gesturesHandler.on('panend', e => {
-      this.turnTransitionsOn()
       // Dismiss the menu if the swipe pan was bigger than the treshold,
       // or if it was a fast, downward gesture
       let shouldDismiss = e.deltaY / maximumGestureDistance >= minimumCloseDistance ||
@@ -81,9 +80,11 @@ class ActionMenu extends Component {
           // Menu is already hidden, close it right away
           this.close()
         } else {
+          this.turnTransitionsOn()
           this.animateClose()
         }
       } else {
+        this.turnTransitionsOn()
         this.applyTransformation(0)
       }
     })
