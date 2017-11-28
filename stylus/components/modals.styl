@@ -42,28 +42,31 @@ $modals
 
     .coz-modal-content:first-child
     .coz-btn-modal-close + .coz-modal-content
-        padding-top    1.5em
+        padding-top    1.5rem
 
     .coz-modal-content:last-child
-        padding-bottom    1.5em
+        padding-bottom    1.5rem
 
     .coz-modal-content
-        padding 0 1.5em
+        padding 0 1.5rem
         overflow auto
 
     .coz-modal-section
         border-top 1px solid silver
 
     .coz-modal-content.coz-modal-title
-        margin       0 0 1em
+        margin       0 0 1rem
         // font is 1.5em
-        padding      1em 3em 0 1em
+        padding      1.5rem 3rem 0 1.5rem
         font-weight  bold
         overflow     visible
 
+        +small-screen()
+            font-size 1.25rem
+
     .coz-btn-modal-close
         position         absolute
-        top              1.3em
+        top              1.125rem
         right            1em
         margin           0
         padding          0
@@ -72,14 +75,14 @@ $modals
         cursor           pointer
 
     .coz-modal-buttons
-        margin-top  2em
+        margin-top  2rem
         text-align  right
         overflow    visible
 
         button
             margin-right  0
             margin-left   .625rem
-            font-size     .9em
+            font-size     .9rem
 
         +small-screen()
             &
@@ -102,7 +105,7 @@ $modals
     .coz-modal--overflowHidden
         overflow hidden
 
-    @media (max-width (modal-width + 2em))
+    @media (max-width (modal-width + 2rem))
         .coz-modal
             margin      auto
             max-width   modal-width
