@@ -70,9 +70,15 @@ $modals
         right            1em
         margin           0
         padding          0
-        background-size  2em
+        background-size  1.75rem
         background-color transparent
         cursor           pointer
+        display block
+        width 2.5rem
+        height 2.5rem
+
+        +small-screen()
+            background-size 1.5rem
 
     .coz-modal-buttons
         margin-top  1.5rem
