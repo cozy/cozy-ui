@@ -4,6 +4,9 @@ import Hammer from 'hammerjs'
 import Menu from '../Menu'
 import styles from './styles.styl'
 import Overlay from '../Overlay'
+import { once } from 'lodash'
+
+const TRANSITION_DURATION = 100 // need to be kept in sync with css
 
 /**
  * Use an ActionMenu to show the user possible actions to the user
@@ -98,13 +101,19 @@ class ActionMenu extends Component {
 
   animateClose = () => {
     // we need to transition the menu to the bottom before dismissing it
-    this.menuNode.addEventListener('transitionend', this.close, false)
     this.applyTransformation(1)
+    const close = once(() => {
+      this.menuNode.removeEventListener('transitionend', close)
+      this.close()
+    })
+
+    this.menuNode.addEventListener('transitionend', close, false)
+   // in case transitionend is not called, for example if the element is removed
+    setTimeout(close, TRANSITION_DURATION)
   }
 
   close = () => {
     // Remove the event handler so subsequent transitions don't trigger dismissals
-    this.menuNode.removeEventListener('transitionend', this.close)
     this.applyTransformation(0)
     this.props.onClose()
   }
