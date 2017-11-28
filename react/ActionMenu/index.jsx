@@ -94,14 +94,13 @@ class ActionMenu extends Component {
    * @param  {Float} progress - Amount of progress between 0 and 1
    */
   applyTransformation (progress) {
-    // constrain between 0 and 1
-    progress = Math.min(1, Math.max(0, progress))
+    // constrain between 0 and 1.1 (go a bit further than 1 to be hidden completely)
+    progress = Math.min(1.1, Math.max(0, progress))
     this.menuNode.style.transform = 'translateY(' + (progress * 100) + '%)'
   }
 
   animateClose = () => {
     // we need to transition the menu to the bottom before dismissing it
-    this.applyTransformation(1)
     const close = once(() => {
       this.menuNode.removeEventListener('transitionend', close)
       this.close()
@@ -110,6 +109,8 @@ class ActionMenu extends Component {
     this.menuNode.addEventListener('transitionend', close, false)
    // in case transitionend is not called, for example if the element is removed
     setTimeout(close, TRANSITION_DURATION)
+
+    this.applyTransformation(1.1)
   }
 
   close = () => {
