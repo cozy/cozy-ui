@@ -31,69 +31,77 @@ extra-large = 1439
 
 // mixins
 // @stylint off
+size-helper(direction, size)
+    direction == 'min' ? size + 1 : size
+
 /*
     tiny-screen()
 
-    Refers to (max-width: 543px)
+    tiny-screen() Refers to (max-width: 543px)
+    tiny-screen('min') Refers to (min-width: 544px)
 
     Weight: -5
 
     Styleguide Settings.breakpoints.tiny
 */
 tiny-screen(direction='max')
-    @media ({direction}-width: (tiny/basefont)rem)
+    @media ({direction}-width: (size-helper(direction, tiny)/basefont)rem)
         {block}
 
 /*
     small-screen()
 
-    Refers to (max-width: 768px)
+    small-screen() Refers to (max-width: 768px)
+    small-screen('min') Refers to (min-width: 769px)
 
     Weight: -4
 
     Styleguide Settings.breakpoints.small
 */
 small-screen(direction='max')
-    @media ({direction}-width: (small/basefont)rem)
+    @media ({direction}-width: (size-helper(direction, small)/basefont)rem)
         {block}
 
 /*
     medium-screen()
 
-    Refers to (max-width: 1023px)
+    medium-screen() Refers to (max-width: 1023px)
+    medium-screen('min') Refers to (min-width: 1024px)
 
     Weight: -3
 
     Styleguide Settings.breakpoints.medium
 */
 medium-screen(direction='max')
-    @media ({direction}-width: (medium/basefont)rem)
+    @media ({direction}-width: (size-helper(direction, medium)/basefont)rem)
         {block}
 
 /*
     large-screen()
 
-    Refers to (max-width: 1200px)
+    large-screen() Refers to (max-width: 1200px)
+    large-screen('min') Refers to (max-width: 1201px)
 
     Weight: -2
 
     Styleguide Settings.breakpoints.large
 */
 large-screen(direction='max')
-    @media ({direction}-width: (large/basefont)rem)
+    @media ({direction}-width: (size-helper(direction, large)/basefont)rem)
         {block}
 
 /*
     extra-large-screen()
 
-    Refers to (max-width: 1439px)
+    extra-large-screen() Refers to (max-width: 1439px)
+    extra-large-screen('min') Refers to (min-width: 1440px)
 
     Weight: -1
 
     Styleguide Settings.breakpoints.extra-large
 */
 extra-large-screen(direction='max')
-    @media ({direction}-width: (extra-large/basefont)rem)
+    @media ({direction}-width: (size-helper(direction, extra-large)/basefont)rem)
         {block}
 
 // mixins named
@@ -108,7 +116,7 @@ extra-large-screen(direction='max')
     Styleguide Settings.breakpoints.desktop
 */
 desktop()
-    @media (min-width: ((medium + 1)/basefont)rem)
+    @media (min-width: (size-helper('min', medium)/basefont)rem)
         {block}
 
 /*
@@ -121,7 +129,7 @@ desktop()
     Styleguide Settings.breakpoints.tablet
 */
 tablet()
-    @media (min-width: ((small + 1)/basefont)rem) and (max-width: (medium/basefont)rem)
+    @media (min-width: (size-helper('min', small)/basefont)rem) and (max-width: (size-helper('max', medium)/basefont)rem)
         {block}
 
 /*
@@ -137,10 +145,28 @@ mobile()
     +small-screen()
         {block}
 
+/*
+    np-mobile()
+
+    Refers to (min-width: 769px)
+
+    Weight: 3
+
+    Styleguide Settings.breakpoints.no-mobile
+*/
 no-mobile()
-    @media (min-width: ((small + 1)/basefont)rem)
+    @media (min-width: (size-helper('min', small)/basefont)rem)
         {block}
 
+/*
+    no-desktop()
+
+    Refers to medium-screen() which is (max-width: 1023px)
+
+    Weight: 4
+
+    Styleguide Settings.breakpoints.no-desktop
+*/
 no-desktop()
     +medium-screen()
         {block}
