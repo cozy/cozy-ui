@@ -17,24 +17,22 @@ module.exports = {
       },
       {
         test: /\.styl$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                modules: true,
-                localIdentName: '[local]--[hash:base64:5]'
-              }
-            },
-            {
-              loader: 'stylus-loader',
-              options: {
-                use: [ require('../stylus')() ]
-              }
+        loader: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[local]--[hash:base64:5]'
             }
-          ]
-        })
+          },
+          {
+            loader: 'stylus-loader',
+            options: {
+              use: [ require('../stylus')() ]
+            }
+          }
+        ]
       }
     ]
   },
