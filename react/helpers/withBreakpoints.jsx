@@ -21,7 +21,7 @@ const getBreakpointsStatus = breakpoints => {
   const width = window.innerWidth
   return mapValues(
     breakpoints,
-    ([min, max]) => width > min && (max === undefined || width < max)
+    ([min, max]) => width >= min && (max === undefined || width <= max)
   )
 }
 
