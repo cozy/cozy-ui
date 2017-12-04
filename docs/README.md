@@ -5,17 +5,23 @@
 [![Storybook](https://img.shields.io/badge/react-storybook-green.svg?style=flat)](https://cozy.github.io/cozy-ui/react/)
 [![Styleguide](https://img.shields.io/badge/KSS-styleguide-green.svg?style=flat)](https://cozy.github.io/cozy-ui/styleguide/)
 
-
 # Cozy UI
 
-A clean Ui SDK designed to build [Cozy](https://cozy.io/) apps.
+CSS classes and React components designed to build [Cozy](https://cozy.io/) apps. 
 
 If you plan to build a webapp to run on Cozy, you'll probably want to use a simple and elegant solution to build your interfaces without the mess of dealing with complex markup and CSS. Then Cozy UI is here for you!
 
-It relies on [Stylus][stylus] as preprocessor. You can add it as a library in your project to use it out-of-the-box.
+## CSS Styleguide
 
+Check the [styleguide](https://cozy.github.io/cozy-ui/styleguide) to see all the variables, mixins, classes, utilities and how to use them.
 
-## Use
+## React components
+
+Check [storybook](https://cozy.github.io/cozy-ui/react/) to see how to use ready made components.
+
+## Usage
+
+[Stylus][stylus] is used as a preprocessor. You can add it as a library in your project to use it out-of-the-box.
 
 Cozy UI is distributed as a [Stylus][stylus] plugin.
 
@@ -42,15 +48,6 @@ _:pushpin: NOTE_: Cozy UI uses [normalize.css](https://necolas.github.io/normali
 
 Then, you just need to add a `@import 'cozy-ui'` statement at top of your main stylus file.
 
-## CSS Styleguide
-
-You can see all vars, mixins, classes, utilities and their usage in the [styleguide](https://cozy.github.io/cozy-ui/styleguide).
-
-## React components
-
-You can see react components in [storybook](https://cozy.github.io/cozy-ui/react/).
-
-
 ## License
 
 Cozy UI is developed by Cozy Cloud and distributed under the AGPL-3.0 license.
@@ -74,6 +71,5 @@ You can reach the Cozy Community by:
 * Posting on our [Forum](https://forum.cozy.io)
 * Posting issues on the [Github repos](https://github.com/cozy/)
 * Mentioning us on [Twitter](https://twitter.com/mycozycloud)
-
 
 [stylus]: http://stylus-lang.com/
