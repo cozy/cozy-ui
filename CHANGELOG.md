@@ -24,6 +24,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [4.1.1] - 2017-12-05
+## Changed
+- Color palette is now a json to ease JS use.
+- Lower margins for modals header & footer
+
+## Added
+- Default theme for the `<button />` component
+
+
 ## [4.1.0] - 2017-11-28
 ### Changed
 - Use babel-preset-cozy-app in .babelrc
@@ -534,7 +543,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v4.1.0...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v4.1.1...HEAD
+[4.1.1]: https://github.com/cozy/cozy-ui/compare/v4.1.0...v4.1.1
 [4.1.0]: https://github.com/cozy/cozy-ui/compare/v4.0.5...v4.1.0
 [4.0.5]: https://github.com/cozy/cozy-ui/compare/v4.0.4...v4.0.5
 [4.0.4]: https://github.com/cozy/cozy-ui/compare/v4.0.3...v4.0.4
