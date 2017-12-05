@@ -6,7 +6,7 @@
 \*------------------------------------*/
 
 $nav
-    margin     em(24px) 0
+    margin     1.5rem 0
     padding    0
     list-style none
     padding-right 10%
@@ -14,16 +14,16 @@ $nav
     +medium-screen()
         display          flex
         justify-content  space-around
-        margin           em(5px) 0 em(4px)
+        margin           .3125rem 0 .25rem
         padding-right    0
 
 $nav-item
     position        relative
     z-index         $app-index
-    height          3em
+    height          3rem
     display         flex
     align-items     center
-    padding-right   .5em
+    padding-right   .5rem
 
     &:hover::before
         content        ''
@@ -39,7 +39,7 @@ $nav-item
     +medium-screen()
         height        auto
         display       block
-        flex          0 0 2.5em
+        flex          0 0 2.5rem
         padding-right 0
         &:hover::before
             content  none
@@ -51,7 +51,7 @@ $nav-item
 
 $nav-link
     display              flex
-    padding-left         em(50px)
+    padding-left         3.125rem
     line-height          1.5
     text-decoration      none
     color                slate-grey
@@ -59,7 +59,7 @@ $nav-link
     align-items          center
     flex                 1
     background-repeat    no-repeat
-    background-position  em(24px) center
+    background-position  1.5rem center
 
     &:visited
         color  slate-grey
@@ -75,13 +75,13 @@ $nav-link
     +medium-screen()
         display              block
         height               auto
-        padding              em(29px, 10px) 0 0
+        padding              1.8125rem 0 0
         text-align           center
         color                slate-grey
         font-size            10px
         line-height          1
         background-position  center top
-        background-size      em(24px, 10px)
+        background-size      1.5rem
 
         &.active // deprecated
         &.is-active
