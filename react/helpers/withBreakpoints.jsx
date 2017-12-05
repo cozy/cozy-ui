@@ -26,18 +26,24 @@ const getBreakpointsStatus = breakpoints => {
 }
 
 /**
- * HOC to provide breakpoints property to its children
- * that will reflect if the window.innerWidth are under
- * those breakpoints
+ * HOC providing the `breakpoints` property to its children to help
+ * with responsive web design.
+ * 
+ * `breakpoints` values will reflect if the window.innerWidth is under
+ * those breakpoints.
  *
  * @Example
  * ````
- * const B = withBreakpoints({ toto: 1000 })(A)
+ * // here we define `mobile` as a screen under 1000px
+ * const B = withBreakpoints({ mobile: 1000 })(A)
  * ````
  *
- * A will passed { breakpoints: { toto: $T }} as prop
- * $T will be true/false depending if the window size is
- * under 1000px
+ * `A` will receive `{ breakpoints: { mobile: true }}` if the screen
+ * width is under 1000px.
+ *
+ * `A` will receive `{ breakpoints: { mobile: false }}` if the screen
+ * width is over 1000px;
+ *
  *
  */
 const withBreakpoints = (bp = breakpoints) => Wrapped =>
