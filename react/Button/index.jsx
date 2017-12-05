@@ -1,9 +1,10 @@
 import React from 'react'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
 import styles from './styles'
 
-export default (props) => {
-  const { theme = 'regular', busy, className, children, onClick } = props
+const Button = (props) => {
+  const { theme = 'regular', busy = false, className = '', children, onClick = null } = props
   return <button
     aria-busy={busy}
     role='button'
@@ -12,3 +13,13 @@ export default (props) => {
     {children}
   </button>
 }
+
+Button.propTypes = {
+  children: PropTypes.string.isRequired,
+  theme: PropTypes.string,
+  busy: PropTypes.bool,
+  className: PropTypes.string,
+  onClick: PropTypes.func
+}
+
+export default Button
