@@ -27,6 +27,11 @@ all utilities classes
 - none yet
 
 
+## [5.0.1] - 2017-12-06
+## Fixed
+- Fix normalize node_modules path
+
+
 ## [5.0.0] - 2017-12-06
 ## Added
 - Standalone compiled CSS
@@ -578,7 +583,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v5.0.0...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v5.0.1...HEAD
+[5.0.1]: https://github.com/cozy/cozy-ui/compare/v5.0.0...v5.0.1
 [5.0.0]: https://github.com/cozy/cozy-ui/compare/v4.1.1...v5.0.0
 [4.1.1]: https://github.com/cozy/cozy-ui/compare/v4.1.0...v4.1.1
 [4.1.0]: https://github.com/cozy/cozy-ui/compare/v4.0.5...v4.1.0
