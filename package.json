@@ -22,7 +22,7 @@
     "build:doc:react": "styleguidist build --config docs/styleguide.config.js",
     "deploy:doc": "git-directory-deploy --directory build/ --branch gh-pages",
     "prebuild:css:app": "mkdir -p build/styleguide",
-    "build:css:app": "stylus --include stylus -o build/styleguide/app.css stylus/cozy-ui/index.styl",
+    "build:css:app": "stylus --include stylus -o build/styleguide/app.css stylus/cozy-ui/build.styl",
     "clean:doc:kss": "rm -rf build/styleguide",
     "prebuild:doc:kss": "run-s clean:doc:kss build:css:app",
     "build:doc:kss": "kss --destination build/styleguide --title 'Cozy-UI Styleguide' --source stylus --builder node_modules/michelangelo/kss_styleguide/custom-template --homepage styleguide.md --css app.css"

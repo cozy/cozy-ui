@@ -1,46 +1,17 @@
-/*
-    Utilities
-
-    Ready-to-use utility classes
-
-    Weight: -4
-
-    Styleguide utilities
-*/
-
-/*
-    Display
-
-    Utilities that change the box model of an element or its visibility.
-
-    Styleguide utilities.display
-*/
-
-/*
-    Visibility
-
-    Utilities that show or hide an element for a giving viewport size.
-
-    Markup:
-    <p class="{{modifier_class}}">I'm visible! 🎉</p>
-
-    .u-hidden - Element is visually hidden but still readable by screen-readers
-    .u-hide - Element is totally hidden (even for screen readers)
-    .u-hide--desk - Element is hidden on desktop (>768px)
-    .u-hide--mob - Element is hidden on mobile (<1023px)
-
-    Styleguide utilities.visibility
-*/
 @require '../settings/breakpoints'
 @require '../tools/mixins'
+
+/*------------------------------------*\
+  Display utilities
+\*------------------------------------*/
 
 /*
     Visually hidden element but still readable by screen-readers
     FR : http://www.ffoodd.fr/cache-cache-css/
     EN : http://hugogiraudel.com/2016/10/13/css-hide-and-seek/
 */
-.coz-hidden // deprecated
-.u-visuallyhidden
+
+$visuallyhidden
 // @stylint off
     position     absolute !important
     border       0 !important
@@ -53,17 +24,15 @@
     clip-path    inset(50%) !important
 // @stylint on
 
-.u-hide
+$hide
 [aria-hidden=true]
     hide()
 
-.coz-desktop // deprecated
-.u-hide--mob
+$hide--mob
     +no-desktop()
         display none !important // @stylint ignore
 
-.coz-mobile // deprecated
-.u-hide--desk
+$hide--desk
     +no-mobile()
         display none !important // @stylint ignore
 
