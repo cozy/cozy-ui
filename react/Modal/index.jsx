@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styles from './styles.styl'
 import Overlay from '../Overlay'
+import migrateProps from '../helpers/migrateProps'
 
 const ModalContent = ({children, className}) =>
   (<div className={classNames(styles['coz-modal-content'], className)}>
@@ -21,14 +22,14 @@ const ModalTitle = ({ children, className }) =>
     </h2>
   )
 
-const ModalCross = ({ withCross, secondaryAction, secondaryText }) =>
-  withCross &&
+const ModalCross = ({ closable, dismissAction, secondaryText }) =>
+  closable &&
   (
     <button
       className={classNames(styles['coz-btn'], styles['coz-btn--close'], styles['coz-btn-modal-close'])}
-      onClick={secondaryAction}
+      onClick={dismissAction}
       >
-      <span className={styles['coz-hidden']}>{secondaryText}</span>
+      <span className={styles['coz-hidden']}></span>
     </button>
 )
 
@@ -60,15 +61,15 @@ const ModalButtons = ({ secondaryText, secondaryAction, secondaryType, primaryTe
 
 class Modal extends Component {
   handleOutsideClick = (e) => {
-    if (e.target === e.currentTarget) this.props.secondaryAction()
+    if (e.target === e.currentTarget) this.props.dismissAction()
   }
 
   render () {
-    const { children, description, title, withCross, overflowHidden, className } = this.props
+    const { children, description, title, closable, dismissAction, overflowHidden, className } = this.props
     return (
       <div className={styles['coz-modal-container']}>
-        <Overlay onEscape={withCross && this.props.secondaryAction}>
-          <div className={styles['coz-modal-wrapper']} onClick={withCross && this.handleOutsideClick}>
+        <Overlay onEscape={closable && dismissAction}>
+          <div className={styles['coz-modal-wrapper']} onClick={closable && this.handleOutsideClick}>
             <div className={classNames(styles['coz-modal'], className, { [styles['coz-modal--overflowHidden']]: overflowHidden })}>
               <ModalCross {...this.props} />
               { title && <ModalTitle>{ title }</ModalTitle> }
@@ -92,18 +93,34 @@ Modal.propTypes = {
   primaryType: PropTypes.string,
   primaryText: PropTypes.string,
   primaryAction: PropTypes.func,
-  withCross: PropTypes.bool,
+  closable: PropTypes.bool,
   overflowHidden: PropTypes.bool
 }
 
 Modal.defaultProps = {
   primaryType: 'secondary',
   secondaryType: 'regular',
-  withCross: true,
+  closable: true,
   overflowHidden: false
 }
 
-export default Modal
+export default migrateProps([
+  { src: 'withCross', dest: 'closable' }, // withCross -> closable
+  {
+    fn: props => {
+      let newProps
+      if (props.secondaryAction && !props.dismissAction) {
+        newProps = {...props}
+        newProps.dismissAction = props.secondaryAction
+        const msg =
+          'In the future, `secondaryAction` will not be bound to closing actions (clicking on cross, clicking outside), please use `dismissAction` for that'
+        return [newProps, msg]
+      } else {
+        return [props, null]
+      }
+    }
+  }
+])(Modal)
 
 // to be able to use them in Styleguidist
 Object.assign(Modal, {
