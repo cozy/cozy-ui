@@ -7,9 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
 ### Changed
-
-- Modal : `withCross` is now `closable`. Deprecation warning. [#237](https://github.com/cozy/cozy-ui/pull/237)
-- Modal : `dismissAction` property has been added and will be called when clicking outside or on the cross. For now, secondaryAction will be copied into it if it is undefined. Deprecation warning. [#237](https://github.com/cozy/cozy-ui/pull/237)
+- none yet
 
 ### Fixed
 - none yet
@@ -18,16 +16,31 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Removed
-
-## Changed 
-`c-btn` and all button classes
-all utilities classes
+- none yet
 
 ### Deprecated
 - none yet
 
 ### Security
 - none yet
+
+
+## [5.0.2] - 2017-12-07
+### Changed
+- Modal : `withCross` is now `closable`. Deprecation warning. [#237](https://github.com/cozy/cozy-ui/pull/237)
+- Modal : `dismissAction` property has been added and will be called when clicking outside or on the cross. For now, secondaryAction will be copied into it if it is undefined. Deprecation warning. [#237](https://github.com/cozy/cozy-ui/pull/237)
+- Colors variable:
+    ```
+    pale-grey -> paleGrey
+    cool-grey -> coolGrey
+    slate-grey -> slateGrey
+    charcoal-grey -> charcoalGrey
+    dodger-blue -> dodgerBlue
+    science-blue -> scienceBlue
+    puerto-rico -> puertoRico
+    texas-rose -> texasRose
+    your-pink -> yourPink
+    ```
 
 
 ## [5.0.1] - 2017-12-06
@@ -586,7 +599,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v5.0.1...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v5.0.2...HEAD
+[5.0.2]: https://github.com/cozy/cozy-ui/compare/v5.0.1...v5.0.2
 [5.0.1]: https://github.com/cozy/cozy-ui/compare/v5.0.0...v5.0.1
 [5.0.0]: https://github.com/cozy/cozy-ui/compare/v4.1.1...v5.0.0
 [4.1.1]: https://github.com/cozy/cozy-ui/compare/v4.1.0...v4.1.1
