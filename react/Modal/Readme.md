@@ -11,16 +11,16 @@ initialState = { modalDisplayed: false};
 </div>
 ```
 
-### No cross
+### Closable
 
-With `withCross` set to `false`, the user will not be able to close the modal, even by clicking outside the modal. You must manage the modal's closing by yourself.
+With `closable` set to `false`, the user will not be able to close the modal, even by clicking outside the modal. You must manage the modal's closing by yourself.
 
 ```
 <div>
   <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
     Toggle modal
   </button>
-  {state.modalDisplayed && <Modal withCross={false}
+  {state.modalDisplayed && <Modal closable={false}
   title='Ada Lovelace' description={<div>
     <button onClick={()=>setState({modalDisplayed: false})}>Close the modal</button><br/>
     { content.ada.short }
