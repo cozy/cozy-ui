@@ -53,11 +53,11 @@ body
 
     label::before
         border-radius 50%
-        border        2px solid cool-grey
+        border        2px solid coolGrey
         box-shadow    inset 0 0 0 checkbox-size transparent
 
     input[type=radio]:checked + label::before
-        box-shadow inset 0 0 0 3px pale-grey, inset 0 0 0 checkbox-size dodger-blue
+        box-shadow inset 0 0 0 3px paleGrey, inset 0 0 0 checkbox-size dodgerBlue
 
 
 [data-input=checkbox]
@@ -69,11 +69,11 @@ body
             border-radius 2px
 
         &::before
-            box-shadow        inset 0 0 0 2px alpha(charcoal-grey, 0.25)
+            box-shadow        inset 0 0 0 2px alpha(charcoalGrey, 0.25)
             background-color  white
 
             &:hover
-                box-shadow inset 0 0 0 2px dodger-blue
+                box-shadow inset 0 0 0 2px dodgerBlue
 
         &::after
             background-image  embedurl('../../assets/icons/ui/check.svg')
@@ -86,7 +86,7 @@ body
     input[type=checkbox]
         &:checked
             & + label::before
-                box-shadow inset 0 0 0 checkbox-size dodger-blue
+                box-shadow inset 0 0 0 checkbox-size dodgerBlue
 
             & + label::after
                 opacity   1
