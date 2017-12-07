@@ -22,14 +22,14 @@ const ModalTitle = ({ children, className }) =>
     </h2>
   )
 
-const ModalCross = ({ closable, secondaryAction, secondaryText }) =>
+const ModalCross = ({ closable, dismissAction, secondaryText }) =>
   closable &&
   (
     <button
       className={classNames(styles['coz-btn'], styles['coz-btn--close'], styles['coz-btn-modal-close'])}
-      onClick={secondaryAction}
+      onClick={dismissAction}
       >
-      <span className={styles['coz-hidden']}>{secondaryText}</span>
+      <span className={styles['coz-hidden']}></span>
     </button>
 )
 
@@ -61,14 +61,14 @@ const ModalButtons = ({ secondaryText, secondaryAction, secondaryType, primaryTe
 
 class Modal extends Component {
   handleOutsideClick = (e) => {
-    if (e.target === e.currentTarget) this.props.secondaryAction()
+    if (e.target === e.currentTarget) this.props.dismissAction()
   }
 
   render () {
-    const { children, description, title, closable, overflowHidden, className } = this.props
+    const { children, description, title, closable, dismissAction, overflowHidden, className } = this.props
     return (
       <div className={styles['coz-modal-container']}>
-        <Overlay onEscape={closable && this.props.secondaryAction}>
+        <Overlay onEscape={closable && dismissAction}>
           <div className={styles['coz-modal-wrapper']} onClick={closable && this.handleOutsideClick}>
             <div className={classNames(styles['coz-modal'], className, { [styles['coz-modal--overflowHidden']]: overflowHidden })}>
               <ModalCross {...this.props} />
@@ -106,6 +106,20 @@ Modal.defaultProps = {
 
 export default migrateProps([
   { src: 'withCross', dest: 'closable' }, // withCross -> closable
+  {
+    fn: props => {
+      let newProps
+      if (props.secondaryAction && !props.dismissAction) {
+        newProps = {...props}
+        newProps.dismissAction = props.secondaryAction
+        const msg =
+          'In the future, `secondaryAction` will not be bound to closing actions (clicking on cross, clicking outside), please use `dismissAction` for that'
+        return [newProps, msg]
+      } else {
+        return [props, null]
+      }
+    }
+  }
 ])(Modal)
 
 // to be able to use them in Styleguidist

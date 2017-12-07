@@ -7,7 +7,7 @@ initialState = { modalDisplayed: false};
   <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
     Toggle modal
   </button>
-  {state.modalDisplayed && <Modal title='Ada Lovelace' description={content.ada.short} secondaryAction={() => setState({ modalDisplayed: false })} /> }
+  {state.modalDisplayed && <Modal title='Ada Lovelace' description={content.ada.short} dismissAction={() => setState({ modalDisplayed: false })} /> }
 </div>
 ```
 
@@ -38,7 +38,7 @@ If you have a long content, the modal's content will scroll. For the scrollbars 
     Toggle modal
   </button>
   {state.modalDisplayed && <Modal
-    secondaryAction={()=>setState({ modalDisplayed: false})}
+    dismissAction={()=>setState({ modalDisplayed: false})}
     overflowHidden={true}
     title='Ada Lovelace'
     description={ content.ada.long } />}
@@ -63,6 +63,7 @@ const hideModal = () => setState({ modalDisplayed: false });
       primaryAction={hideModal}
       secondaryText='Touch me'
       secondaryAction={hideModal}
+      dismissAction={hideModal}
       overflowHidden={true}
       title='Ada Lovelace'
       description={ content.ada.short } /> }
@@ -83,7 +84,7 @@ const { ModalDescription, ModalTitle } = Modal;
   {state.modalDisplayed &&
     <Modal
         overflowHidden={true}
-        secondaryAction={()=>setState({ modalDisplayed: false})} >
+        dismissAction={()=>setState({ modalDisplayed: false})} >
       <div style={{background: 'red', color: 'white'}}>
         <ModalTitle>Yo ho ho !</ModalTitle>
       </div>
