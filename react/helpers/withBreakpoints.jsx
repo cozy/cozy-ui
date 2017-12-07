@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import { throttle, mapValues, flowRight as compose, pick } from 'lodash'
+import pick from 'lodash/pick'
+import compose from 'lodash/flowRight'
+import mapValues from 'lodash/mapValues'
+import throttle from 'lodash/throttle'
 
 const large = 1200
 const medium = 1023
@@ -28,7 +31,7 @@ const getBreakpointsStatus = breakpoints => {
 /**
  * HOC providing the `breakpoints` property to its children to help
  * with responsive web design.
- * 
+ *
  * `breakpoints` values will reflect if the window.innerWidth is under
  * those breakpoints.
  *
