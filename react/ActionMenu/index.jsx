@@ -4,7 +4,7 @@ import Hammer from 'hammerjs'
 import Menu from '../Menu'
 import styles from './styles.styl'
 import Overlay from '../Overlay'
-import { once } from 'lodash'
+import once from 'lodash/once'
 
 const TRANSITION_DURATION = 100 // need to be kept in sync with css
 
