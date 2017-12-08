@@ -26,6 +26,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 ## [5.0.2] - 2017-12-07
+### Added
+- Add a minified version of cozy-ui styles in `dist/cozy-ui.min.css` (built before publishing on npm)
+
 ### Changed
 - Modal : `withCross` is now `closable`. Deprecation warning. [#237](https://github.com/cozy/cozy-ui/pull/237)
 - Modal : `dismissAction` property has been added and will be called when clicking outside or on the cross. For now, secondaryAction will be copied into it if it is undefined. Deprecation warning. [#237](https://github.com/cozy/cozy-ui/pull/237)
