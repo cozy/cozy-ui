@@ -17,6 +17,7 @@ $nav
         margin           .3125rem 0 .25rem
         padding-right    0
 
+
 $nav-item
     position        relative
     z-index         $app-index
@@ -37,6 +38,7 @@ $nav-item
         background     silver
 
     +medium-screen()
+        margin 0 .75rem
         height        auto
         display       block
         flex          0 0 2.5rem
@@ -48,6 +50,23 @@ $nav-item
     @media not all and (pointer: fine)
         &:hover::before
             content none
+
+$nav-item-icon
+    display inline-block
+    margin-right 1rem
+    color coolGrey
+
+    +medium-screen()
+        display block
+        font-size 1.5rem
+        margin-right 0
+        text-align center
+
+$nav-item-text
+    +medium-screen()
+        display block
+        text-align center
+        white-space nowrap
 
 $nav-link
     display              flex
@@ -71,6 +90,9 @@ $nav-link
     &.is-active
         box-shadow   inset 4px 0 0 0 dodgerBlue
         font-weight  bold
+
+        .nav-link__icon
+            color dodgerBlue
 
     +medium-screen()
         display              block
