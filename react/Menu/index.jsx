@@ -3,9 +3,10 @@ import classNames from 'classnames'
 import styles from './styles.styl'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
+import { Media, Bd, Img } from '../Media'
 
 class MenuItem extends Component {
-  render ({ disabled, className, onClick, children }) {
+  render ({ disabled, className, onClick, children, icon }) {
     return (
       <div
           className={
@@ -14,7 +15,14 @@ class MenuItem extends Component {
             }, className)
           }
           onClick={onClick}>
-        {children}
+        { !icon ? children : (
+          <Media>
+            <Img className={styles['c-menu__item-icon']}>
+              { icon }
+            </Img>
+            <Bd>{ children }</Bd>
+          </Media>
+        )}
       </div>
     )
   }

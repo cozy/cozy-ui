@@ -13,7 +13,7 @@ const showWarning = itemData => alert(itemData + ' is disabled');
   <MenuItem data='hello'>Hello !</MenuItem>
   <MenuItem disabled data='bonjour'>Bonjour !</MenuItem>
   <hr />
-  <MenuItem data='hola'>¡Hola!</MenuItem>
+  <MenuItem icon={<Icon icon='paperplane'/>} data='hola'>¡Hola!</MenuItem>
 </Menu>
 ```
 
@@ -21,6 +21,7 @@ Use the `position` attribute to put the menu to the right.
 
 ```
 const { MenuItem } = require('.');
+const { Icon } = require('../Icon');
 
 <Menu position='right' text='Click me !' onSelect={ itemData => alert(JSON.stringify(itemData)) }>
   <MenuItem data='hello'>Hello !</MenuItem>
