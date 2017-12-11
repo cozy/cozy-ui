@@ -36,12 +36,18 @@
 .c-menu__btn:not([disabled]):not([aria-disabled=true]):focus
     background transparent
 
+$paddingItem = .5rem
+
 .c-menu__item
     cursor pointer
-    padding   .5rem .5rem
+    padding   $paddingItem
 
 .c-menu__item-icon
-    margin-right 0.5rem
+    $marginIcon = .75rem
+    margin-right $marginIcon
+    // we need to compensate for the already present margin
+    margin-left $marginIcon - $paddingItem
+    font-size 1.0625rem
 
 .c-menu__item:hover
 .c-menu__item:focus
