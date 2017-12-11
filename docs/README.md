@@ -17,7 +17,7 @@ Check the [styleguide](https://cozy.github.io/cozy-ui/styleguide) to see all the
 
 ## React components
 
-Check [storybook](https://cozy.github.io/cozy-ui/react/) to see how to use ready made components.
+Check our [UI components](https://cozy.github.io/cozy-ui/react/) to see how to use ready made components.
 
 ## Usage
 
