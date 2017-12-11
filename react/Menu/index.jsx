@@ -9,12 +9,12 @@ class MenuItem extends Component {
   render ({ disabled, className, onClick, children, icon }) {
     return (
       <div
+          onClick={ onClick }
           className={
             cx(styles['c-menu__item'], {
               [styles['c-menu__item--disabled']]: disabled
             }, className)
-          }
-          onClick={onClick}>
+          }>
         { !icon ? children : (
           <Media>
             <Img className={styles['c-menu__item-icon']}>
@@ -40,9 +40,10 @@ class Menu extends Component {
     }
   }
 
-  handleSelect = (item, e) => {
+  handleClick = (item, e) => {
     const isDisabled = item.props.disabled
-    const handler = this.props[!isDisabled ? 'onSelect' : 'onSelectDisabled']
+    const itemHandler = isDisabled ? null : item.props.onSelect
+    const handler = itemHandler || this.props[!isDisabled ? 'onSelect' : 'onSelectDisabled']
     if (handler) {
       const res = handler(item.props.data)
       if (res !== false) {
@@ -74,10 +75,10 @@ class Menu extends Component {
       // type === Item, but for some reason, preact vnodes don't have this property
       if (item.nodeName !== 'hr') {
         return React.cloneElement(item, {
-          onClick: this.handleSelect.bind(this, item)
+          onClick: this.handleClick.bind(this, item)
         })
       }
-      return React.cloneElement(item)
+      return item
     })
   }
 

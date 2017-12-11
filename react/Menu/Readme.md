@@ -3,6 +3,10 @@ A menu to display choices to the user.
 Pass data to the `MenuItem`s and use `onSelect` to handle user selecting
 an item in the `Menu`.
 
+`MenuItem`s can also have their own `onSelect`, in this case, the global
+`onSelect` will not be called. `MenuItem`s `onSelect` is not called if
+the item is `disabled`.
+
 ```
 const { MenuItem } = require('.');
 const Button = require('../Button').default;
@@ -13,7 +17,7 @@ const showWarning = itemData => alert(itemData + ' is disabled');
   <MenuItem data='hello'>Hello !</MenuItem>
   <MenuItem disabled data='bonjour'>Bonjour !</MenuItem>
   <hr />
-  <MenuItem icon={<Icon icon='paperplane'/>} data='hola'>¡Hola!</MenuItem>
+  <MenuItem icon={<Icon icon='paperplane'/>} onSelect={x => alert('You clicked hola')} data='hola'>¡Hola!</MenuItem>
 </Menu>
 ```
 
