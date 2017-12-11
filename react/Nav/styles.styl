@@ -1,0 +1,24 @@
+@require 'settings/palette'
+@require 'tools/mixins'
+@require 'settings/breakpoints'
+@require 'components/nav'
+
+.c-nav
+    @extend $nav
+
+.c-nav-item
+    @extend $nav-item
+
+.c-nav-link
+    @extend $nav-link
+     // we use an icon inside
+    padding-left 1.5rem
+
+    +medium-screen()
+        padding-top 0 // icon is there
+
+.c-nav-item__icon
+    @extend $nav-item-icon
+
+.c-nav-item__text
+    @extend $nav-item-text

@@ -14,6 +14,7 @@
 @require '../elements/*'
 @require '../objects/*'
 @require '../components/button'
+@require '../components/nav'
 @require '../utilities/*'
 
 /*------------------------------------*\
@@ -240,13 +241,13 @@
     Styleguide Components.nav
 */
 .c-nav
-    $nav
+    @extend $nav
 
 .c-nav-item
-    $nav-item
+    @extend $nav-item
 
 .c-nav-link
-    $nav-link
+    @extend $nav-link
 
 /*------------------------------------*\
   Utilities
