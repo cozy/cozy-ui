@@ -34,8 +34,10 @@ class Overlay extends Component {
   }
 
   componentWillUnmount () {
-    this.restoreScrollBody()
-    this.restoreScrollHtml()
+    // restauration function can be undefined if there was
+    // an error during mounting/rendering
+    this.restoreScrollBody && this.restoreScrollBody()
+    this.restoreScrollBody && this.restoreScrollHtml()
     if (this.props.onEscape) {
       document.removeEventListener('keydown', this.handleKeydown)
     }
