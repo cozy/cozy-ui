@@ -2,6 +2,20 @@
 @require '../settings/breakpoints'
 @require '../settings/z-index'
 
+// To move to Cozy-bar
+// Double the selector to increase specificity since
+// media queries do not increase specificity and we want
+// to override the position: relative
+[role=banner][role=banner]
+    +small-screen()
+        position fixed
+        top 0
+        left 0
+        width 100%
+        background-color white
+        box-sizing border-box
+// END Cozy-Bar
+
 /*------------------------------------*\
   Layouts
 \*------------------------------------*/
@@ -64,9 +78,19 @@ $app-2panes-sticky
         height auto
 
     +medium-screen()
-        flex-direction column-reverse
+        display block
+
+        // Those pseudo-elements are "ghost" elements replacing bar and nav
+        &:before
+        &:after
+            content ''
+            display block
+            height 3rem
 
         > aside
-            flex 0 0 em(47px, 16px)
-            width 100%
+            position fixed
+            bottom 0
+            left 0
+            display block
             z-index $nav-index
+            width 100%
