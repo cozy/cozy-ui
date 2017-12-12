@@ -1,7 +1,32 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 import classNames from 'classnames'
 import styles from './styles.styl'
+import cx from 'classnames'
+import PropTypes from 'prop-types'
+import { Media, Bd, Img } from '../Media'
+
+class MenuItem extends Component {
+  render ({ disabled, className, onClick, children, icon }) {
+    return (
+      <div
+          onClick={ onClick }
+          className={
+            cx(styles['c-menu__item'], {
+              [styles['c-menu__item--disabled']]: disabled
+            }, className)
+          }>
+        { !icon ? children : (
+          <Media>
+            <Img className={styles['c-menu__item-icon']}>
+              { icon }
+            </Img>
+            <Bd>{ children }</Bd>
+          </Media>
+        )}
+      </div>
+    )
+  }
+}
 
 class Menu extends Component {
   state = { opened: false }
@@ -9,15 +34,24 @@ class Menu extends Component {
   toggle = () => this.state.opened ? this.close() : this.open()
 
   handleClickOutside = e => {
-    const node = ReactDOM.findDOMNode(this)
-    if (!node.contains(e.target)) {
+    if (!this.container.contains(e.target)) {
       e.stopPropagation()
       this.close()
     }
   }
 
-  handleSelect = (item, e) => {
-    this.close()
+  handleClick = (item, e) => {
+    const isDisabled = item.props.disabled
+    const itemHandler = isDisabled ? null : item.props.onSelect
+    const handler = itemHandler || this.props[!isDisabled ? 'onSelect' : 'onSelectDisabled']
+    if (handler) {
+      const res = handler(item.props.data)
+      if (res !== false) {
+        this.close()
+      }
+    } else if (!isDisabled) {
+      this.close()
+    }
   }
 
   open () {
@@ -30,6 +64,10 @@ class Menu extends Component {
     document.removeEventListener('click', this.handleClickOutside, true)
   }
 
+  componentWillUnmount () {
+    document.removeEventListener('click', this.handleClickOutside, true)
+  }
+
   renderItems () {
     return React.Children.map(this.props.children, item => {
       if (!item) return item
@@ -37,37 +75,65 @@ class Menu extends Component {
       // type === Item, but for some reason, preact vnodes don't have this property
       if (item.nodeName !== 'hr') {
         return React.cloneElement(item, {
-          onClick: this.handleSelect.bind(this, item)
+          onClick: this.handleClick.bind(this, item)
         })
       }
-      return React.cloneElement(item)
+      return item
     })
   }
 
   render () {
-    const { title, disabled, className, buttonClassName } = this.props
+    const { text, disabled, className, buttonClassName, position, component } = this.props
     const { opened } = this.state
     return (
       <div
-        className={classNames(styles['c-menu-wrapper'], className)}
+        className={classNames(styles['c-menu'], className, {
+          [styles['c-menu--left']]: position == 'left',
+          [styles['c-menu--right']]: position == 'right'
+        })}
+        ref={ref => { this.container = ref }}
       >
-        { title ? <button
+        { !component ? <button
           role='button'
           className={classNames('c-btn', styles['c-menu__btn'], buttonClassName)}
           disabled={disabled}
           onClick={this.toggle}
         >
-          {title}
-        </button> : null }
-        <div className={classNames(
-          styles['c-menu-inner'],
+          {text}
+        </button> : React.cloneElement(component, { disabled, onClick: this.toggle}) }
+        { opened ? <div className={classNames(
+          styles['c-menu__inner'],
           { [styles['c-menu__inner--opened']]: opened }
         )}>
           {this.renderItems()}
-        </div>
+        </div> : null }
       </div>
     )
   }
 }
 
+Menu.defaultProps = {
+  position: 'left',
+  disabled: false,
+  component: null,
+  onSelect: null,
+  onSelectDisabled: null
+}
+
+Menu.propTypes = {
+  /** Use position='right' to display the menu to the right */
+  position: PropTypes.string,
+  /** Disables the menu */
+  disabled: PropTypes.bool,
+  /** Specifies a custom component for the opener */
+  component: PropTypes.element,
+  /** `onClick` handler for non disabled items */
+  onSelect: PropTypes.func,
+  /** `onClick` handler for disabled items */
+  onSelectDisabled: PropTypes.func,
+}
+
+Menu.MenuItem = MenuItem
 export default Menu
+
+export { MenuItem }

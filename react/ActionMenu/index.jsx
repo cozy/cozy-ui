@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import Hammer from 'hammerjs'
-import Menu from '../Menu'
 import styles from './styles.styl'
 import Overlay from '../Overlay'
 import once from 'lodash/once'
@@ -126,12 +125,14 @@ class ActionMenu extends Component {
   }
 
   render () {
-    const props = this.props
+    const { children } = this.props
     const { closing } = this.state
     return (
       <div className={styles.ActionMenu}>
         <Overlay style={{ opacity: closing ? 0 : 1 }} onClick={this.animateClose} onEscape={this.animateClose}>
-          <Menu className={styles['c-actionmenu']} {...props} ref={this.handleMenuRef} />
+          <div className={styles['c-actionmenu']} ref={this.handleMenuRef}>
+            { children }
+          </div>
         </Overlay>
       </div>
     )
