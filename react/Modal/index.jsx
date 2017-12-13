@@ -83,16 +83,28 @@ class Modal extends Component {
 }
 
 Modal.propTypes = {
+  /** Modal title */
   title: PropTypes.node,
+  /** Content for simple modals */
   description: PropTypes.node,
+  /** Secondary button type */
   secondaryType: PropTypes.string,
+  /** Secondary button text*/
   secondaryText: PropTypes.string,
+  /** Secondary button callback */
   secondaryAction: PropTypes.func,
+  /** Primary button type */
   primaryType: PropTypes.string,
+  /** Primary button text*/
   primaryText: PropTypes.string,
+  /** Primary button callback */
   primaryAction: PropTypes.func,
+  /** Display the cross and enable click outside and escape key to close */
   closable: PropTypes.bool,
-  overflowHidden: PropTypes.bool
+  /** Use overflowHidden when your content may overflow of your modal */
+  overflowHidden: PropTypes.bool,
+  /** `className` used on the modal, useful if you want to custom its CSS */
+  className: PropTypes.string,
   /** `className` used on the cross, useful if you want to custom its CSS */
   crossClassName: PropTypes.string
 }
