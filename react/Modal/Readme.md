@@ -72,7 +72,7 @@ const hideModal = () => setState({ modalDisplayed: false });
 
 ### Complex modals
 
-For more complex modals, you can use individual components
+For more complex modals, you can use individual components.
 
 ```
 const { ModalDescription, ModalTitle } = Modal;

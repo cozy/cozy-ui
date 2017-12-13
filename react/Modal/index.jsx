@@ -22,15 +22,13 @@ const ModalTitle = ({ children, className }) =>
     </h2>
   )
 
-const ModalCross = ({ closable, dismissAction, secondaryText }) =>
-  closable &&
-  (
-    <button
-      className={classNames(styles['coz-btn'], styles['coz-btn--close'], styles['coz-btn-modal-close'])}
-      onClick={dismissAction}
-      >
-      <span className={styles['coz-hidden']}></span>
-    </button>
+const ModalCross = ({ onClick, className }) => (
+  <button
+    className={classNames(styles['coz-btn'], styles['coz-btn--close'], styles['coz-btn-modal-close'], className)}
+    onClick={onClick}
+    >
+    <span className={styles['coz-hidden']}></span>
+  </button>
 )
 
 const ModalDescription = ({ children, className }) => (
@@ -65,13 +63,13 @@ class Modal extends Component {
   }
 
   render () {
-    const { children, description, title, closable, dismissAction, overflowHidden, className } = this.props
+    const { children, description, title, closable, dismissAction, overflowHidden, className, crossClassName } = this.props
     return (
       <div className={styles['coz-modal-container']}>
         <Overlay onEscape={closable && dismissAction}>
           <div className={styles['coz-modal-wrapper']} onClick={closable && this.handleOutsideClick}>
             <div className={classNames(styles['coz-modal'], className, { [styles['coz-modal--overflowHidden']]: overflowHidden })}>
-              <ModalCross {...this.props} />
+              { closable && <ModalCross className={crossClassName} onClick={dismissAction} /> }
               { title && <ModalTitle>{ title }</ModalTitle> }
               { description && <ModalDescription>{ description }</ModalDescription> }
               { children }
@@ -85,16 +83,30 @@ class Modal extends Component {
 }
 
 Modal.propTypes = {
+  /** Modal title */
   title: PropTypes.node,
+  /** Content for simple modals */
   description: PropTypes.node,
+  /** Secondary button type */
   secondaryType: PropTypes.string,
+  /** Secondary button text*/
   secondaryText: PropTypes.string,
+  /** Secondary button callback */
   secondaryAction: PropTypes.func,
+  /** Primary button type */
   primaryType: PropTypes.string,
+  /** Primary button text*/
   primaryText: PropTypes.string,
+  /** Primary button callback */
   primaryAction: PropTypes.func,
+  /** Display the cross and enable click outside and escape key to close */
   closable: PropTypes.bool,
-  overflowHidden: PropTypes.bool
+  /** Use overflowHidden when your content may overflow of your modal */
+  overflowHidden: PropTypes.bool,
+  /** `className` used on the modal, useful if you want to custom its CSS */
+  className: PropTypes.string,
+  /** `className` used on the cross, useful if you want to custom its CSS */
+  crossClassName: PropTypes.string
 }
 
 Modal.defaultProps = {
