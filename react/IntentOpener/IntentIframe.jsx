@@ -4,6 +4,13 @@ import PropTypes from 'prop-types'
 import Spinner from '../Spinner'
 import styles from './styles.styl'
 
+const DEFAULT_OPTIONS = {
+  // TODO remove `closeable` since it is only there for backward compatibility
+  // https://mattermost.cozycloud.cc/test-team/pl/t1iagfhqp3n8mqf3nchp6bxsur
+  closeable: false,
+  exposeIntentFrameRemoval: true
+}
+
 class IntentIframe extends React.Component {
   state = { loading: false }
 
@@ -14,7 +21,7 @@ class IntentIframe extends React.Component {
 
     this.setState({ loading: true })
     create(action, doctype, {
-        exposeIntentFrameRemoval: true,
+        ...DEFAULT_OPTIONS,
         ...options
       })
       .start(this.intentViewer, this.onFrameLoaded)
