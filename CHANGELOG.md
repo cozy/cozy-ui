@@ -25,6 +25,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [6.0.0] - 2017-12-13
+### Changed
+- Change global layout on mobile to enable browsers' minimal UI
+
+### Fixed
+- Nav classes were broken in dist version
+
+### Added
+- `<Nav />` component
+- `<Sidebar />` component
+- `<Menu />` component
+- `<IntentOpener />` component
+- `<Media />`object
+
+
 ## [5.0.2] - 2017-12-07
 ### Added
 - Add a minified version of cozy-ui styles in `dist/cozy-ui.min.css` (built before publishing on npm)
@@ -602,7 +617,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v5.0.2...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v6.0.0...HEAD
+[6.0.0]: https://github.com/cozy/cozy-ui/compare/v5.0.2...v6.0.0
 [5.0.2]: https://github.com/cozy/cozy-ui/compare/v5.0.1...v5.0.2
 [5.0.1]: https://github.com/cozy/cozy-ui/compare/v5.0.0...v5.0.1
 [5.0.0]: https://github.com/cozy/cozy-ui/compare/v4.1.1...v5.0.0
