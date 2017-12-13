@@ -53,7 +53,13 @@ class IntentOpener extends React.Component {
 
     if (modalOpened) {
       elements.push(
-        <Modal key='modal' closable={closable} overflowHidden className={styles.intentModal} dismissAction={this.handleDismiss}>
+        <Modal
+            key='modal'
+            closable={closable}
+            overflowHidden
+            className={styles.intentModal}
+            crossClassName={styles.intentModal__cross}
+            dismissAction={this.handleDismiss}>
           <IntentIframe
             action={action}
             doctype={doctype}
