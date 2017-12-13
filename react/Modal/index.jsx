@@ -32,7 +32,7 @@ const ModalCross = ({ onClick, className }) => (
 )
 
 const ModalDescription = ({ children, className }) => (
-  <div className={classNames(styles['coz-modal-content'], styles['coz-description'])}>
+  <div className={classNames(styles['coz-modal-content'], styles['coz-description'], className)}>
     {children}
   </div>
 )
