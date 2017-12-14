@@ -12,6 +12,10 @@ const disableScroll = node => {
 
 const ESC_KEYCODE = 27
 
+const bodyTallerThanWindow = () => {
+  return document.body.getBoundingClientRect().height > window.innerHeight
+}
+
 /**
  * Display a black overlay on the screen. Stops
  * scrolling on the html/body while displayed.
@@ -20,8 +24,13 @@ const ESC_KEYCODE = 27
  */
 class Overlay extends Component {
   componentDidMount () {
-    this.restoreScrollBody = disableScroll(document.body)
-    this.restoreScrollHtml = disableScroll(document.body.parentNode)
+    if (bodyTallerThanWindow()) {
+      this.restoreScrollBody = disableScroll(document.body)
+      this.restoreScrollHtml = disableScroll(document.body.parentNode)
+      console.log('Overflow hidden')
+    } else {
+      console.log('No overflow hidden')
+    }
     if (this.props.onEscape) {
       document.addEventListener('keydown', this.handleKeydown)
     }
