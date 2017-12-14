@@ -25,6 +25,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [6.0.1] - 2017-12-14
+### Fixed
+- Fixed new layout mobile on Safari iOS 9-10
+
+### Added
+- Ability to pass a class to ModalCross
+
+
 ## [6.0.0] - 2017-12-13
 ### Changed
 - Change global layout on mobile to enable browsers' minimal UI
@@ -617,7 +625,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v6.0.0...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v6.0.1...HEAD
+[6.0.1]: https://github.com/cozy/cozy-ui/compare/v6.0.0...v6.0.1
 [6.0.0]: https://github.com/cozy/cozy-ui/compare/v5.0.2...v6.0.0
 [5.0.2]: https://github.com/cozy/cozy-ui/compare/v5.0.1...v5.0.2
 [5.0.1]: https://github.com/cozy/cozy-ui/compare/v5.0.0...v5.0.1
