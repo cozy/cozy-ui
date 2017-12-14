@@ -27,9 +27,6 @@ class Overlay extends Component {
     if (bodyTallerThanWindow()) {
       this.restoreScrollBody = disableScroll(document.body)
       this.restoreScrollHtml = disableScroll(document.body.parentNode)
-      console.log('Overflow hidden')
-    } else {
-      console.log('No overflow hidden')
     }
     if (this.props.onEscape) {
       document.addEventListener('keydown', this.handleKeydown)
