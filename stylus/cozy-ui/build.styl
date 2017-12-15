@@ -227,13 +227,19 @@
     <nav style="width: 220px">
         <ul class="c-nav">
             <li class="c-nav-item">
-                <a class="c-nav-link is-active" href="#">Link 1</a>
+                <a class="c-nav-link is-active" href="#">
+                    <span class="c-nav-text">Link 1</span>
+                </a>
             </li>
             <li class="c-nav-item">
-                <a class="c-nav-link" href="#">Link 2</a>
+                <a class="c-nav-link" href="#">
+                    <span class="c-nav-text">Link 2</span>
+                </a>
             </li>
             <li class="c-nav-item">
-                <a class="c-nav-link" href="#">Link 3</a>
+                <a class="c-nav-link" href="#">
+                    <span class="c-nav-text">Link 3</span>
+                </a>
             </li>
         </ul>
     </nav>
@@ -248,6 +254,12 @@
 
 .c-nav-link
     @extend $nav-link
+
+.c-nav-icon
+    @extend $nav-item-icon
+
+.c-nav-text
+    @extend $nav-item-text
 
 /*------------------------------------*\
   Utilities
@@ -626,4 +638,3 @@
 
 .u-pr-3
     @extend $mr-3
-
