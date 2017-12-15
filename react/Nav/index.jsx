@@ -25,7 +25,7 @@ Object.assign(NavLink, {
 })
 
 export const NavIcon = ({ icon }) => (
-  <span className={cx(styles['c-nav-item__icon'], styles['nav-link__icon'])}>
+  <span className={cx(styles['c-nav-item__icon'], styles['c-nav-icon'])}>
     <Icon icon={icon} />
   </span>
 )
