@@ -25,6 +25,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [6.0.3] - 2017-12-15
+### Fixed
+- Sidebar doesn't scroll with content anymore on desktop
+
+
 ## [6.0.2] - 2017-12-14
 ### Fixed
 - Removed old layout styles that broke Mobile app
@@ -631,7 +636,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v6.0.2...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v6.0.3...HEAD
+[6.0.3]: https://github.com/cozy/cozy-ui/compare/v6.0.2...v6.0.3
 [6.0.2]: https://github.com/cozy/cozy-ui/compare/v6.0.1...v6.0.2
 [6.0.1]: https://github.com/cozy/cozy-ui/compare/v6.0.0...v6.0.1
 [6.0.0]: https://github.com/cozy/cozy-ui/compare/v5.0.2...v6.0.0
