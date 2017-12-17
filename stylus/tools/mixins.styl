@@ -105,16 +105,16 @@ font-size(n)
 //  applies a conversion to _EM_ based on the contextual basefont size.
 em(n, base = null)
     if base is not null
-        basefont = base
+        ctx_font = base
     else
         _id = checksum(selector())
         if _id in basefonts
-            basefont = basefonts[_id]
+            ctx_font = basefonts[_id]
         else
-            basefont = context-basefont(selector())
+            ctx_font = context-basefont(selector())
 
     if unit(n) is 'px'
-        val = round(n / basefont, 5)
+        val = round(n / ctx_font, 5)
     else
         val = n
     unit(val, 'em')
