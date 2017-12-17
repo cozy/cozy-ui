@@ -45,6 +45,11 @@ use('../scripts/split.js')
 // Contextual fonts store, based on the selector checksum hash
 basefonts = {}
 
+// We need a base font-size for _px to em_ computation. We assume those size to
+// be 16px (as default desktop browsers), but it really don't care as well as
+// all relative units should be expressed in `em`
+basefont = 16px
+
 // contextual-basefont takes a selector string as input, and try to get the
 // basefont in this context. If it doesn't explcitely exists, it checks its
 // parent, etc, and fallback to the global basefont.
@@ -113,12 +118,6 @@ em(n, base = null)
     else
         val = n
     unit(val, 'em')
-
-
-// We need a base font-size for _px to em_ computation. We assume those size to
-// be 16px (as default desktop browsers), but it really don't care as well as
-// all relative units should be expressed in `em`
-basefont = 16px
 
 /*
     hide()
