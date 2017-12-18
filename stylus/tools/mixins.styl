@@ -41,12 +41,18 @@
 // @stylint off
 use('../scripts/checksum.js')
 use('../scripts/split.js')
+use('../scripts/deprecate.js')
 
 // Contextual fonts store, based on the selector checksum hash
 basefonts = {}
 
+// We need a base font-size for _px to em_ computation. We assume those size to
+// be 16px (as default desktop browsers), but it really don't care as well as
+// all relative units should be expressed in `em`
+basefont = 16px
+
 // contextual-basefont takes a selector string as input, and try to get the
-// basefont in this context. If it doesn't explcitely exists, it checks its
+// basefont in this context. If it doesn't explicitely exists, it checks its
 // parent, etc, and fallback to the global basefont.
 context-basefont(selector)
     parent = split(' ', selector)
@@ -74,7 +80,10 @@ font-size(n)
 
     unitName=unit(n)
     if unitName is 'px'
-        font-size em(n, currentBasefont)
+        res=em(n, currentBasefont)
+        res_rem=unit(em(res/basefont), 'rem')
+        deprecate('font-size will no longer convert px to em, use rem. Replace font-size: ' + n + ' by font-size: ' + res_rem + ' (ctx_font: ' + currentBasefont +')')
+        font-size res
     else
         font-size n
 
@@ -100,25 +109,22 @@ font-size(n)
 //  applies a conversion to _EM_ based on the contextual basefont size.
 em(n, base = null)
     if base is not null
-        basefont = base
+        ctx_font = base
     else
         _id = checksum(selector())
         if _id in basefonts
-            basefont = basefonts[_id]
+            ctx_font = basefonts[_id]
         else
-            basefont = context-basefont(selector())
+            ctx_font = context-basefont(selector())
 
     if unit(n) is 'px'
-        val = round(n / basefont, 5)
+        val = round(n / ctx_font, 5)
+        em_val = unit(val, 'em')
+        rem_val = unit(round(n / basefont, 5), 'rem')
+        deprecate('Do not use em() : replace ' + n + ' by ' + rem_val + ' (output em: ' + em_val + ', ctx_font: ' + ctx_font + ')')
     else
         val = n
     unit(val, 'em')
-
-
-// We need a base font-size for _px to em_ computation. We assume those size to
-// be 16px (as default desktop browsers), but it really don't care as well as
-// all relative units should be expressed in `em`
-basefont = 16px
 
 /*
     hide()
