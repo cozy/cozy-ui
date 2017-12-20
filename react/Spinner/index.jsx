@@ -1,5 +1,6 @@
 import React from 'react'
 import { translate } from '../I18n'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles'
@@ -8,11 +9,11 @@ export const Spinner = ({ t, loadingType, middle, noMargin, color, size, classNa
   return (
     <div
       className={classNames(
-        styles['coz-spinner'], {
-          [styles['coz-spinner--middle']]: middle,
-          [styles['coz-spinner--nomargin']]: noMargin,
-          [styles[`coz-spinner--${color}`]]: color,
-          [styles[`coz-spinner--${size}`]]: size
+        styles['c-spinner'], {
+          [styles['c-spinner--middle']]: middle,
+          [styles['c-spinner--nomargin']]: noMargin,
+          [styles[`c-spinner--${color}`]]: color,
+          [styles[`c-spinner--${size}`]]: size
         }
       ), className}
     >

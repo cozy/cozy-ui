@@ -1,7 +1,7 @@
 @import '../../stylus/settings/palette'
 @import '../../stylus/settings/icons'
 
-.coz-spinner
+.c-spinner
     display inline-block
     margin 0 .5rem
 
@@ -19,7 +19,7 @@
     // === Modifiers ===
 
     // Box-model
-    &.coz-spinner--middle
+    &.c-spinner--middle
         position   absolute
         top        50%
         left       50%
@@ -30,31 +30,31 @@
             display     block
             margin      0 auto
 
-    &.coz-spinner--nomargin
+    &.c-spinner--nomargin
         margin 0
 
     // Colors
-    &.coz-spinner--grey:before
+    &.c-spinner--grey:before
         @extend $icon-spinner-grey
 
-    &.coz-spinner--white:before
+    &.c-spinner--white:before
         @extend $icon-spinner-white
 
-    &.coz-spinner--red:before
+    &.c-spinner--red:before
         @extend $icon-spinner-red
 
     // Sizes
-    &.coz-spinner--tiny:before
+    &.c-spinner--tiny:before
         @extend $icon-8
 
-    &.coz-spinner--small:before
+    &.c-spinner--small:before
         @extend $icon-12
 
-    &.coz-spinner--large:before
+    &.c-spinner--large:before
         @extend $icon-24
 
-    &.coz-spinner--xlarge:before
+    &.c-spinner--xlarge:before
         @extend $icon-36
 
-    &.coz-spinner--xxlarge:before
+    &.c-spinner--xxlarge:before
         @extend $icon-80
