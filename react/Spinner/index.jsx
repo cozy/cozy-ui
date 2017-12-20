@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 import styles from './styles'
 
-export const Spinner = ({ t, loadingType, middle, noMargin, color, size }) => {
+export const Spinner = ({ t, loadingType, middle, noMargin, color, size, className }) => {
   return (
     <div
       className={classNames(
@@ -14,7 +14,7 @@ export const Spinner = ({ t, loadingType, middle, noMargin, color, size }) => {
           [styles[`coz-spinner--${color}`]]: color,
           [styles[`coz-spinner--${size}`]]: size
         }
-      )}
+      ), className}
     >
       {loadingType && <p>{t(`loading.${loadingType}`)}</p>}
     </div>
