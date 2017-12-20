@@ -2,8 +2,8 @@
 [![NPM release version shield](https://img.shields.io/npm/v/cozy-ui.svg)](https://www.npmjs.com/package/cozy-ui)
 [![Github Release version shield](https://img.shields.io/github/tag/cozy/cozy-ui.svg)](https://github.com/cozy/cozy-ui/releases)
 [![NPM Licence shield](https://img.shields.io/npm/l/cozy-ui.svg)](https://github.com/cozy/cozy-ui/blob/master/LICENSE)
-[![Storybook](https://img.shields.io/badge/react-storybook-green.svg?style=flat)](https://cozy.github.io/cozy-ui/react/)
-[![Styleguide](https://img.shields.io/badge/KSS-styleguide-green.svg?style=flat)](https://cozy.github.io/cozy-ui/styleguide/)
+[![Styleguidist](https://img.shields.io/badge/react-Styleguidist-green.svg?style=flat)](https://cozy.github.io/cozy-ui/react/)
+[![Styleguide](https://img.shields.io/badge/KSS-Styleguide-green.svg?style=flat)](https://cozy.github.io/cozy-ui/styleguide/)
 
 # Cozy UI
 
@@ -13,17 +13,18 @@ If you plan to build a webapp to run on Cozy, you'll probably want to use a simp
 
 ## CSS Styleguide
 
-Check the [styleguide](https://cozy.github.io/cozy-ui/styleguide) to see all the variables, mixins, classes, utilities and how to use them.
+Check the [styleguide](https://cozy.github.io/cozy-ui/styleguide) to see all the variables, mixins, classes, utilities and how to use them with only CSS classes.
 
 ## React components
 
-Check our [UI components](https://cozy.github.io/cozy-ui/react/) to see how to use ready made components.
+Check out [UI components](https://cozy.github.io/cozy-ui/react/) to see how to use ready made (p)React components.
 
 ## Usage
 
+### As a Stylus plugin
 [Stylus][stylus] is used as a preprocessor. You can add it as a library in your project to use it out-of-the-box.
 
-Cozy UI is distributed as a [Stylus][stylus] plugin.
+Cozy UI can be distributed as a plugin.
 
 ```sh
 $ yarn add -D cozy-ui
@@ -44,9 +45,15 @@ return stylus(str)
 }
 ```
 
-_:pushpin: NOTE_: Cozy UI uses [normalize.css](https://necolas.github.io/normalize.css/) by _Nicolas Gallagher_ as a reset styles process. The CSS file is embedded directly by the Cozy UI Stylus plugin, using the stylus `include css` statement to inline the CSS in the output instead of using a native CSS `@import`.
-
 Then, you just need to add a `@import 'cozy-ui'` statement at top of your main stylus file.
+
+### As a vanilla CSS library
+
+The entire library is also available as a good ol’ CSS library. You can simply add it to your app by linking the distributed minified file.
+```html
+<link media="all" rel="stylesheet" href=“cozy-ui/dist/cozy-ui.min.css" />
+```
+
 
 ## License
 
