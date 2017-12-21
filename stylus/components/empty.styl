@@ -6,39 +6,40 @@ $empty
     justify-content  center
     flex             1 0 auto
     align-self       center
-    padding          1em 0
+    padding          1rem 0
     text-align       center
 
     &:before
         content              ''
         display              block
         margin               0 auto
-        width                em(160px)
-        height               em(140px)
+        width                16rem
+        height               8.75rem
         background-position  center center
         background-repeat    no-repeat
         background-size      contain
 
     h2
-        font-size(24px)
-        margin          em(33px) auto 0
+        font-size       1.5rem
+        margin          2rem auto 0
         line-height     1.3
         color           charcoalGrey
         letter-spacing  -.2px
     p
-        margin-top   em(5px)
+        margin-top   .3125rem
         color        coolGrey
         line-height  1.5
 
     +medium-screen()
         height 100%
+        width 100%
         position fixed
         top 0
         left 0
         &:before
-            width   em(120px)
-            height  em(105px)
+            width   7.5rem
+            height  6.5625rem
         h2
-            margin  em(33px) 1.5em 0
+            margin  2rem 1.5em 0
         p
-            margin  em(5px) 1.5em 0
+            margin  .3125rem 1.5em 0
