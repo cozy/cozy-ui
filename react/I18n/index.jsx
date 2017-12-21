@@ -41,7 +41,7 @@ export class I18n extends Component {
   }
 
   render () {
-    return (this.props.children && this.props.children[0]) || null
+    return React.Children.only(this.props.children)
   }
 }
 
@@ -52,19 +52,21 @@ I18n.propTypes = {
   defaultLang: PropTypes.string           // default language. By default is 'en'
 }
 
-I18n.childContextTypes = {
+const i18nContextTypes = {
   t: PropTypes.func,
   f: PropTypes.func,
   lang: PropTypes.string
 }
 
+I18n.childContextTypes = i18nContextTypes
+
 // higher order decorator for components that need `t` and/or `f`
-export const translate = () => {
-  return (WrappedComponent) => {
-    return (props, context) => (
-      <WrappedComponent {...props} t={context.t} f={context.f} lang={context.lang} />
-    )
-  }
+export const translate = () => WrappedComponent => {
+  const Wrapper = (props, context) => (
+    <WrappedComponent {...props} t={context.t} f={context.f} lang={context.lang} />
+  )
+  Wrapper.contextTypes = i18nContextTypes
+  return Wrapper
 }
 
 export default I18n
