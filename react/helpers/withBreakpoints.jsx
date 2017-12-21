@@ -73,7 +73,9 @@ const withBreakpoints = (bp = breakpoints) => Wrapped =>
       window.removeEventListener('resize', this.checkBreakpoints)
     }
 
-    render(props, { breakpoints }) {
+    render() {
+      const props = this.props
+      const { breakpoints } = this.state
       return <Wrapped {...props} breakpoints={breakpoints} />
     }
   }
@@ -84,7 +86,9 @@ const withBreakpoints = (bp = breakpoints) => Wrapped =>
  */
 export const renderOnlyIf = predicate => Wrapped =>
   class extends Component {
-    render(props, state) {
+    render() {
+      const props = this.props
+      const state = this.state
       if (predicate(props, state)) {
         return <Wrapped {...props} />
       }

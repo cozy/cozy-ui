@@ -36,7 +36,9 @@ class IntentIframe extends React.Component {
     this.setState({ loading: false })
   }
 
-  render (props, { loading }) {
+  render () {
+    const props = this.props
+    const { loading } = this.state
     return (
       <div ref={intentViewer => (this.intentViewer = intentViewer)}>
         { loading ? <div className={styles.intentModal__loading}>
