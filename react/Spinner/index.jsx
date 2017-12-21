@@ -1,6 +1,5 @@
 import React from 'react'
 import { translate } from '../I18n'
-import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles'
@@ -14,8 +13,9 @@ export const Spinner = ({ t, loadingType, middle, noMargin, color, size, classNa
           [styles['c-spinner--nomargin']]: noMargin,
           [styles[`c-spinner--${color}`]]: color,
           [styles[`c-spinner--${size}`]]: size
-        }
-      ), className}
+        },
+        className
+      )}
     >
       {loadingType && <p>{t(`loading.${loadingType}`)}</p>}
     </div>
@@ -26,9 +26,18 @@ Spinner.propTypes = {
   loadingType: PropTypes.string,
   middle: PropTypes.boolean,
   noMargin: PropTypes.boolean,
-  color: PropTypes.oneOf(['grey', 'white', 'red']),
-  size: PropTypes.oneOf(['tiny', 'small', 'large', 'xlarge', 'xxlarge']),
+  color: PropTypes.oneOf(['blue', 'grey', 'white', 'red']),
+  size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'xlarge', 'xxlarge']),
   className: PropTypes.string
+}
+
+Spinner.defaultProps = {
+  loadingType: '',
+  middle: false,
+  noMargin: false,
+  color: 'blue',
+  size: 'medium',
+  className: ''
 }
 
 export default translate()(Spinner)

@@ -7,54 +7,57 @@
 
     &:before
         content ''
-        // Default setup
-        @extend $icon-spinner-blue
-        @extend $icon-16
 
     p
         margin-top  em(15px)
         color       coolGrey
         line-height 1.5
 
-    // === Modifiers ===
+// === Modifiers ===
 
-    // Box-model
-    &.c-spinner--middle
-        position   absolute
-        top        50%
-        left       50%
-        transform  translateX(-50%) translateY(-50%)
-        text-align  center
+// Box-model
+.c-spinner--middle
+    position   absolute
+    top        50%
+    left       50%
+    transform  translateX(-50%) translateY(-50%)
+    text-align  center
 
-        &:before
-            display     block
-            margin      0 auto
+    &:before
+        display     block
+        margin      0 auto
 
-    &.c-spinner--nomargin
-        margin 0
+.c-spinner--nomargin
+    margin 0
 
-    // Colors
-    &.c-spinner--grey:before
-        @extend $icon-spinner-grey
+// Colors
+.c-spinner--blue:before
+    @extend $icon-spinner-blue
 
-    &.c-spinner--white:before
-        @extend $icon-spinner-white
+.c-spinner--grey:before
+    @extend $icon-spinner-grey
 
-    &.c-spinner--red:before
-        @extend $icon-spinner-red
+.c-spinner--white:before
+    @extend $icon-spinner-white
 
-    // Sizes
-    &.c-spinner--tiny:before
-        @extend $icon-8
+.c-spinner--red:before
+    @extend $icon-spinner-red
 
-    &.c-spinner--small:before
-        @extend $icon-12
+// Sizes
+.c-spinner--tiny:before
+    @extend $icon-8
 
-    &.c-spinner--large:before
-        @extend $icon-24
+.c-spinner--small:before
+    @extend $icon-12
 
-    &.c-spinner--xlarge:before
-        @extend $icon-36
+.c-spinner--medium:before
+    @extend $icon-16
 
-    &.c-spinner--xxlarge:before
-        @extend $icon-80
+.c-spinner--large:before
+    @extend $icon-24
+
+.c-spinner--xlarge:before
+    @extend $icon-36
+
+.c-spinner--xxlarge:before
+    @extend $icon-80
