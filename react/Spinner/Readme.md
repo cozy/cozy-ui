@@ -10,7 +10,7 @@ Show a spinner when loading something.
 
 ```
 <div>
-  (default): <Spinner />
+  blue (default): <Spinner /> or <Spinner color='blue' />
   grey: <Spinner color='grey' />
   white: <Spinner color='white' />
   red: <Spinner color='red' />
@@ -31,7 +31,7 @@ Show a spinner when loading something.
 <div>
   tiny: <Spinner size='tiny' /><br/>
   small: <Spinner size='small' /><br/>
-  (default): <Spinner /><br/>
+  medium (default): <Spinner /> or <Spinner size='medium' /><br/>
   large: <Spinner size='large' /><br/>
   xlarge: <Spinner size='xlarge' /><br/>
   xxlarge: <Spinner size='xxlarge' />
