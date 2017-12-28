@@ -3,7 +3,7 @@
 ```
 <div>
   <div>
-    <Button theme='regular'>normal action</Button>
+    <Button>normal action</Button>
     <Button theme='danger'>erase or destroy</Button>
     <Button theme='highlight'>events communication</Button>
   </div>
@@ -34,9 +34,11 @@ initialState = { busy:false };
 
 #### Create a button with an icon
 
+The color of the icon is taken care of by the button style, there's no need to specify it.
+
 ```
 const icons = require('../../src/icons');
 <div>
-  <Button theme="danger"><Icon icon={ icons['delete'] } color="white" />delete</Button>
+  <Button theme="danger"><Icon icon={ icons['delete'] } />delete</Button>
 </div>
 ```

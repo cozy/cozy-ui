@@ -19,59 +19,37 @@ $selectionbar
         justify-content   center
         align-items       center
         width             100%
-        height            em(52px, 16px)
+        height            3.25rem
         background-color  slateGrey
         color             white
         font-weight       bold
 
         .coz-selectionbar-separator
-            margin            0 .5em 0 2em
-            width             4px
-            height            4px
+            margin            0 .5rem 0 2rem
+            width             .25rem
+            height            .25rem
             border-radius     50%
             background-color  black
 
         button
             border              0
-            padding-left        em(50px)
-            background-color    transparent
-            background-position em(24px) center
-            background-repeat   no-repeat
+            padding-left        1rem
             color               white
-            line-height         em(40px)
-            font-size           14px
+            background-color    transparent
+            line-height         2.5rem
+            font-size           .875rem
             text-transform      uppercase
             cursor              pointer
 
-        .coz-action-share
-            background-image embedurl('../assets/icons/ui/icon-share.svg')
+            svg
+                position relative
+                top .125rem
+                margin-right .5rem
+                fill currentColor
 
-        .coz-action-download
-            background-image embedurl('../assets/icons/ui/icon-download.svg')
-
-        .coz-action-trash
-        .coz-action-destroy
-        .coz-action-delete
-            background-image embedurl('../assets/icons/ui/icon-delete.svg')
-
-        .coz-action-openwith
-            background-image embedurl('../assets/icons/ui/icon-openwith.svg')
-
-        .coz-action-moveto
-            background-image embedurl('../assets/icons/ui/icon-moveto.svg')
-
-        .coz-action-rename
-            background-image embedurl('../assets/icons/ui/icon-rename.svg')
-
-        .coz-action-restore
-            background-image embedurl('../assets/icons/ui/icon-restore-white.svg')
-
-        .coz-action-album-add
-            background-image embedurl('../assets/icons/ui/icon-album-add.svg')
-
-        .coz-action-album-remove
-            background-image embedurl('../assets/icons/ui/icon-album-remove.svg')
-
+            &:disabled
+                opacity  .5
+                cursor   not-allowed
 
         .coz-action-extra
             display none
@@ -80,30 +58,17 @@ $selectionbar
             position          absolute
             top               50%
             right             0
-            background-image  embedurl('../assets/icons/ui/icon-cross-white.svg')
-            background-size   1em 1em
-            text-indent       -9999px
             transform         translateY(-50%)
 
-        .coz-action-download:disabled
-        .coz-action-trash:disabled
-        .coz-action-destroy:disabled
-        .coz-action-delete:disabled
-        .coz-action-restore:disabled
-        .coz-action-openwith:disabled
-        .coz-action-album-add:disabled
-        .coz-action-album-remove:disabled
-            opacity  .5
-            cursor   not-allowed
 
     +medium-screen()
         .coz-selectionbar
             top              auto
             bottom           0
             justify-content  flex-start
-            height           em(48px, 16px)
-            padding-left     1em
-            padding-right    1em
+            height           3rem
+            padding-left     1rem
+            padding-right    1rem
 
             .coz-selectionbar-count span
             .coz-action-moveto
@@ -113,12 +78,11 @@ $selectionbar
                 display block
 
             .coz-selectionbar-separator
-                margin   0 0 0 1em
+                margin   0 0 0 1rem
 
             button
-                width         em(48px)
+                width         3rem
                 overflow      hidden
                 text-indent   -5000px
                 padding-left  0
                 color         transparent
-                background-position em(12px)

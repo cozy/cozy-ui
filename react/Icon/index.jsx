@@ -32,8 +32,8 @@ function Icon (props) {
   return <svg
     className={iconClass}
     style={style}
-    width={width || '1em'}
-    height={height || '1em'}>
+    width={width || '16'}
+    height={height || '16'}>
     <use xlinkHref={anchor} />
   </svg>
 }

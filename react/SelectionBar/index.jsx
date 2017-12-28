@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { translate } from '../I18n'
+import { Button, Icon } from '../index'
 import classNames from 'classnames'
 
 import styles from './styles.styl'
@@ -37,16 +38,20 @@ const SelectionBar = ({ t, actions, selected, hideSelectionBar }) => {
       <span className={styles['coz-selectionbar-separator']} />
       {actionNames.map(actionName => (
         <button
-          className={styles['coz-action-' + actionName.toLowerCase()]}
           disabled={selectedCount < 1}
           onClick={() => actions[actionName].action(selected)}
         >
+          <Icon icon={actionName.toLowerCase()} />
           {t('SelectionBar.' + actionName)}
         </button>
       ))}
-      <button className={styles['coz-action-close']} onClick={hideSelectionBar}>
-        {t('SelectionBar.close')}
-      </button>
+      <Button
+        theme='close'
+        className={styles['coz-action-close']}
+        onClick={hideSelectionBar}
+      >
+        <Icon icon='cross' />
+      </Button>
     </div>
   )
 }
