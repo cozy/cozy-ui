@@ -6,36 +6,43 @@
   Buttons of any kind
 \*------------------------------------*/
 
-/**
- * 1. `font-size` calls the font-size function in ui-components/fonts.styl
-      and replaces px value by an em value. Don't be scared by this. :)
- */
-
 $button
     box-sizing       border-box
-    display          inline-block
+    display          inline-flex
+    align-items      center
+    justify-content  center
     margin           0 .25em
-    border           1px solid white
+    border           1px solid dodgerBlue
     border-radius    2px
-    min-height       em(40px, 14px)
-    padding          em(13px, 14px) em(15px, 14px) em(11px, 14px)
-    background       transparent
+    min-height       2.5rem
+    padding          .5rem .9375rem
+    background       dodgerBlue
     vertical-align   top
     text-align       center
     color            white
-    font-size        14px /* [1] */
+    font-size        .875rem
     line-height      1
     text-transform   uppercase
     text-decoration  none
     cursor           pointer
 
+    svg
+        fill         currentColor
+        margin-right .4rem
+
+    input
+        cursor pointer
+
     &:visited
-        color white
+        color currentColor
 
     &[disabled]
     &[aria-disabled=true]
         opacity  .5
         cursor   not-allowed
+
+        input
+            cursor not-allowed
 
     &:active
     &:not([disabled]):not([aria-disabled=true]):hover
@@ -47,34 +54,22 @@ $button
             @extend    $icon-16
             @extend    $icon-spinner-white
             position   relative
-            top        em(-1px)
+            top        -.0625rem
 
 
-$button--regular
-    border-color      dodgerBlue
-    background-color  dodgerBlue
-    color             white
-
-    &:visited
-        color white
-
-    &:active
-    &:not([disabled]):not([aria-disabled=true]):hover
-    &:focus
-        border-color      scienceBlue
-        background-color  scienceBlue
-
-    &[aria-busy=true]
-        &::after
-            @extend  $icon-spinner-white
+$button--regular  // Deprecated
+    @extend $button
 
 $button--secondary
     background-color  white
     color             black
-    border            1px solid silver
+    border-color      silver
+
+    svg
+        fill currentColor
 
     &:visited
-        color black
+        color currentColor
 
     &:active
     &:not([disabled]):not([aria-disabled=true]):hover
@@ -88,10 +83,6 @@ $button--secondary
 $button--danger
     border-color      pomegranate
     background-color  pomegranate
-    color             white
-
-    &:visited
-        color white
 
     &:active
     &:not([disabled]):not([aria-disabled=true]):hover
@@ -99,17 +90,16 @@ $button--danger
         border-color      monza
         background-color  monza
 
-    &[aria-busy=true]
-        &::after
-            @extend  $icon-spinner-white
-
 $button--danger-outline
     background-color  white
     color             pomegranate
-    border            1px solid yourPink
+    border-color      yourPink
+
+    svg
+        fill currentColor
 
     &:visited
-        color pomegranate
+        color currentColor
 
     &:active
     &:not([disabled]):not([aria-disabled=true]):hover
@@ -123,10 +113,6 @@ $button--danger-outline
 $button--highlight
     border-color      emerald
     background-color  emerald
-    color             white
-
-    &:visited
-        color white
 
     &:active
     &:not([disabled]):not([aria-disabled=true]):hover
@@ -134,50 +120,14 @@ $button--highlight
         border-color      malachite
         background-color  malachite
 
-    &[aria-busy=true]
-        &::after
-            @extend  $icon-spinner-white
+$button--alpha
+    border-color      white
+    background-color  transparent
 
-$button--share
-    padding-left         em(44px, 16px)
-    background-image     embedurl('../assets/icons/ui/icon-share-grey08.svg')
-    background-position  em(17px, 16px) center
-    background-repeat    no-repeat
-
-$button--send
-    padding-left         em(44px, 16px)
-    background-image     embedurl('../assets/icons/ui/icon-paperplane.svg')
-    background-position  em(17px, 16px) center
-    background-repeat    no-repeat
-
-$button--download
-    padding-left         em(44px, 16px)
-    background-image     embedurl('../assets/icons/ui/icon-download.svg')
-    background-position  em(17px, 16px) center
-    background-repeat    no-repeat
-
-$button--upload
-    padding-left         em(44px, 16px)
-    background-image     embedurl('../assets/icons/ui/icon-upload.svg')
-    background-position  em(17px, 16px) center
-    background-repeat    no-repeat
-
-    &[disabled]
-    &[aria-disabled=true]
-        input
-            cursor not-allowed
-
-    input
-        cursor pointer
-
-$button--delete
-    padding-left         em(44px, 16px)
-    background-image     embedurl('../assets/icons/ui/icon-delete.svg')
-    background-position  em(17px, 16px) center
-    background-repeat    no-repeat
-
-    input
-        cursor pointer
+    &:active
+    &:not([disabled]):not([aria-disabled=true]):hover
+    &:focus
+        background-color  scienceBlue
 
 $link--upload
     background-image     embedurl('../assets/icons/ui/icon-upload-grey08.svg')
@@ -189,27 +139,14 @@ $link--delete
     background-position  em(16px) center
     background-repeat    no-repeat
 
-$button--more
-    width                em(46px)
-    background-color     transparent
-    background-image     embedurl('../assets/icons/ui/icon-dots.svg')
-    background-position  center center
-    background-repeat    no-repeat
-
-$button-extra
-    width       em(46px)
-    border      0
-    background  embedurl('../assets/icons/ui/icon-dots.svg') center center no-repeat
+$button--action
+    @extend $button--alpha
+    border-color transparent
+    padding .5rem
     opacity     .5
 
-    &:active
-    &:not([disabled]):not([aria-disabled=true]):hover
-    &:focus
-        background-color  transparent
-
-$button-extra--white
-    @extend $button-extra
-    background-image  embedurl('../assets/icons/ui/icon-dots-white.svg')
+    svg
+        margin 0
 
     &:active
     &:not([disabled]):not([aria-disabled=true]):hover
@@ -217,11 +154,12 @@ $button-extra--white
         background-color  transparent
 
 $button--close
-    border               0
-    width                em(46px)
-    background-image     embedurl('../assets/icons/ui/icon-cross.svg')
-    background-position  center center
-    background-repeat    no-repeat
+    @extend $button--alpha
+    border-color transparent
+    padding .5rem
+
+    svg
+        margin 0
 
     &:active
     &:not([disabled]):not([aria-disabled=true]):hover

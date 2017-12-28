@@ -38,13 +38,11 @@
  Buttons in different flavour
 
  Markup:
- <div class="u-p-1" style=" background-color: darkgrey">
+ <div class="u-p-1">
      <button class="c-btn {{modifier_class}}">Click me, I'm a button!</button>
-     <a hre="#" class="c-btn {{modifier_class}}">Click me, I'm a link!</a>
  </div>
 
- .c-btn--regular - Regular
- .c-btn--secondary - Regular alternative
+ .c-btn--secondary - Basic alternative
  .c-btn--danger - Danger
  .c-btn--danger-outline - Danger outlined
  .c-btn--highlight - Highlighted button to catch the eye
@@ -56,7 +54,7 @@
 .c-btn
     @extend $button
 
-.c-btn--regular
+.c-btn--regular // Deprecated in favour of just .c-btn
     @extend $button--regular
 
 .c-btn--secondary
@@ -76,84 +74,34 @@
 
  Those buttons can inherit any flavour of buttons described above.
 
- For this example, we use `.c-btn--regular` but choose the one you want.
+ The SVG icon is filled with a color consistent with the theme of its button.
 
  Markup:
- <div class="u-p-1" style=" background-color: darkgrey">
-     <button class="c-btn c-btn--regular {{modifier_class}}">Click me, I'm a button!</button>
-     <a hre="#" class="c-btn c-btn--regular {{modifier_class}}">Click me, I'm a link!</a>
+ <div class="u-p-1">
+    <button class="c-btn {{modifier_class}}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+        </svg>
+        Click me, I'm a button!
+    </button>
  </div>
 
- .c-btn--share - Share
- .c-btn--send - Send
- .c-btn--download - Download
- .c-btn--upload - Upload
- .c-btn--delete - Delete
+ .c-btn--secondary - Basic alternative
+ .c-btn--danger - Danger
+ .c-btn--danger-outline - Danger outlined
+ .c-btn--highlight - Highlighted button to catch the eye
 
  Styleguide Components.buttons.icons
 */
-.c-btn--share
-    @extend $button--share
 
-.c-btn--send
-    @extend $button--send
-
-.c-btn--download
-    @extend $button--download
-
-.c-btn--upload
-    @extend $button--upload
-
-.c-btn--delete
-    @extend $button--delete
-
-/*
- Buttons link shaped with icons
-
- Buttons that look like links, with icons
-
- Markup:
- <div class="u-p-1" style=" background-color: darkgrey">
-     <button class="{{modifier_class}}">Click me, I'm a button!</button>
-     <a hre="#" class="{{modifier_class}}">Click me, I'm a link!</a>
- </div>
-
- .c-link--upload - Upload
- .c-link--delete - Delete
-
- Styleguide Components.buttons.link
-*/
 .c-link--upload
     @extend $link--upload
 
 .c-link--delete
     @extend $link--delete
 
-/*
- Button More
-
- Button to display more information
-
- Markup:
- <div class="u-p-1" style=" background-color: darkgrey">
-    <button class="c-btn {{modifier_class}}"><span class="u-visuallyhidden">Click me, I'm a button!</span></button>
-    <a hre="#" class="c-btn {{modifier_class}}"><span class="u-visuallyhidden">Click me, I'm a link!</span></a>
- </div>
-
- .c-btn--more - Classic more button
- .c-btn-extra - Extra button, much like More button but lighter, without border
- .c-btn-extra--white - Extra button with white icon
-
- Styleguide Components.buttons.more
-*/
-.c-btn--more
-    @extend $button--more
-
-.c-btn-extra
-    @extend $button-extra
-
-.c-btn-extra--white
-    @extend $button-extra--white
+.c-btn--action
+    @extend $button--action
 
 .c-btn--close
     @extend $button--close

@@ -11,6 +11,7 @@ const importIcons = function () {
     'icon-cozy',
     'icon-cross',
     'icon-delete',
+    'icon-destroy',
     'icon-device-laptop',
     'icon-dots',
     'icon-download',
@@ -20,6 +21,7 @@ const importIcons = function () {
     'icon-paperplane',
     'icon-rename',
     'icon-share',
+    'icon-trash',
     'icon-upload',
     'icon-warn',
     'icon-warning'
