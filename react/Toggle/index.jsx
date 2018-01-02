@@ -9,7 +9,9 @@ class Toggle extends Component {
       this.props.onToggle(!this.props.checked)
     }
   }
-  render (props, state) {
+  render () {
+    const props = this.props
+    const state = this.state
     return (
       <span className={styles['toggle']}>
         <input type='checkbox' id={props.id} className={styles['checkbox']} checked={props.checked} onChange={this.onChange.bind(this)} />

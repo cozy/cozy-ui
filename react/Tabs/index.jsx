@@ -8,7 +8,8 @@ export class Tab extends Component {
     this.onClick = this.onClick.bind(this)
   }
 
-  render ({ name, children, className, active, activeClass, changeTab, onClick }) {
+  render () {
+    const { name, children, className, active, activeClass, changeTab, onClick } = this.props
     const activeStyle = {
       [styles['coz-tab--active']]: active
     }
@@ -72,7 +73,9 @@ export class Tabs extends Component {
     this.setState({ activeTab: tabName })
   }
 
-  render ({ children, className }, { activeTab }) {
+  render () {
+    const { children, className } = this.props
+    const { activeTab } = this.state
     const changeTab = this.changeTab
     return <div className={classnames(styles['coz-tabs'], className)}>{
       React.Children.map(children, child =>

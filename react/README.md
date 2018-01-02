@@ -125,7 +125,8 @@ const example = () =>
 
 ```jsx
 class HelloWorld extends Component {
-  render ({t}) {
+  render () {
+    const {t} = this.props
     return <div>{t('hello-world')}</div>
   }
 }
