@@ -24,7 +24,7 @@ $form
         margin-bottom  .5em
         line-height    1.5
 
-    .coz-form-label
+    .coz-form-label // Deprecated
         display         block
         text-transform  uppercase
         color           coolGrey
@@ -32,7 +32,7 @@ $form
         padding         .55em 0
         margin-top      1em
 
-    .coz-form-label--error
+    .coz-form-label--error // Deprecated
         display  none
         color    pomegranate
 
@@ -224,3 +224,15 @@ $form-progress
         &::-moz-progress-bar
             background     charcoalGrey
             border-radius  em(20px)
+
+// New styles
+$label
+    display block
+    text-transform uppercase
+    color coolGrey
+    font-size .75rem
+    padding .55em 0
+    margin-top 1em
+
+    &.is-error
+        color pomegranate
