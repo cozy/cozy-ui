@@ -258,6 +258,36 @@
 .c-label
     @extend $label
 
+/*
+ Input text
+
+ Input element for text but also password, url, email
+
+ Markup:
+ <form>
+    <div class="u-mb-1">
+        <input type="text" class="c-input-text {{modifier_class}}" placeholder="I'm an input[type=text]" value="" />
+    </div>
+    <div class="u-mb-1">
+        <input type="password" class="c-input-text {{modifier_class}}" placeholder="I'm an input[type=password]" value="" />
+    </div>
+    <div class="u-mb-1">
+        <input type="url" class="c-input-text {{modifier_class}}" placeholder="I'm an input[type=url]" value="" />
+    </div>
+    <div class="u-mb-1">
+        <input type="email" class="c-input-text {{modifier_class}}" placeholder="I'm an input[type=email]" value="" />
+    </div>
+ </form>
+
+ .is-error - Error variant
+
+ Weight: 2
+
+ Styleguide Components.form.input-text
+*/
+.c-input-text
+    @extend $input-text
+
 /*------------------------------------*\
   Utilities
 \*------------------------------------*/
