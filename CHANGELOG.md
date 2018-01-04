@@ -25,6 +25,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [7.0.0] - 2018-01-04
+### Changed
+- Default theme for `<Button />` is now `regular`
+- Made default size of <Icon /> 16px instead of 1em to avoid font-size inheritance
+
+### Added
+- Added `<ButtonLink />` component, same as `<Button />` but with a `<a>` tag
+- Added `disabled` parameter for  `<Button />`
+- Icon's color is by default the currentColor of its button parent.
+
+### Removed
+- Some icons `fill` attribute
+- Removed classes for button w/ icons, to be replaced by the use of SVG instead
+
+
 ## [6.0.3] - 2017-12-15
 ### Fixed
 - Sidebar doesn't scroll with content anymore on desktop
@@ -636,7 +651,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v6.0.3...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.0.0...HEAD
+[7.0.0]: https://github.com/cozy/cozy-ui/compare/v6.0.3...v7.0.0
 [6.0.3]: https://github.com/cozy/cozy-ui/compare/v6.0.2...v6.0.3
 [6.0.2]: https://github.com/cozy/cozy-ui/compare/v6.0.1...v6.0.2
 [6.0.1]: https://github.com/cozy/cozy-ui/compare/v6.0.0...v6.0.1
