@@ -5,6 +5,7 @@
     This file contains all needs for forms, inputs, labels...
 \*------------------------------------*/
 
+@require '../settings/palette'
 @require '../components/button'
 
 checkbox-size = 16px
@@ -263,3 +264,10 @@ $input-text
     &.is-error
     &:invalid
         border .0625rem solid pomegranate
+
+$textarea
+    @extend $input-text
+    display block
+    width 100%
+    min-height 7.5rem
+    resize vertical
