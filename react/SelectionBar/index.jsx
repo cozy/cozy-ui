@@ -42,7 +42,7 @@ const SelectionBar = ({ t, actions, selected, hideSelectionBar }) => {
           onClick={() => actions[actionName].action(selected)}
         >
           <Icon icon={actionName.toLowerCase()} />
-          {t('SelectionBar.' + actionName)}
+          <span>{t('SelectionBar.' + actionName)}</span>
         </button>
       ))}
       <Button
