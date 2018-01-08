@@ -46,7 +46,7 @@ const ModalButtons = ({ secondaryText, secondaryAction, secondaryType, primaryTe
     (
       <div className={classNames(styles['coz-modal-content'], styles['coz-modal-buttons'])}>
         { displaySecondary &&
-          <button className={styles['c-btn']} onClick={secondaryAction}>
+          <button className={classNames(styles['c-btn'], styles['c-btn--' + secondaryType])} onClick={secondaryAction}>
             {secondaryText}
           </button>
         }
@@ -112,8 +112,8 @@ Modal.propTypes = {
 }
 
 Modal.defaultProps = {
-  primaryType: 'secondary',
-  secondaryType: 'regular',
+  primaryType: 'regular',
+  secondaryType: 'secondary',
   closable: true,
   overflowHidden: false
 }
