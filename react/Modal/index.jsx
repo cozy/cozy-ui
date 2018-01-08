@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styles from './styles.styl'
 import Overlay from '../Overlay'
+import Icon from '../Icon'
 import migrateProps from '../helpers/migrateProps'
+import palette from '../../stylus/settings/palette.json'
 
 const ModalContent = ({children, className}) =>
   (<div className={classNames(styles['coz-modal-content'], className)}>
@@ -24,10 +26,10 @@ const ModalTitle = ({ children, className }) =>
 
 const ModalCross = ({ onClick, className }) => (
   <button
-    className={classNames(styles['coz-btn'], styles['coz-btn--close'], styles['coz-btn-modal-close'], className)}
+    className={classNames(styles['c-btn'], styles['c-btn--close'], styles['coz-btn-modal-close'], className)}
     onClick={onClick}
     >
-    <span className={styles['coz-hidden']}></span>
+    <Icon icon='cross' width='24' height='24' color={palette['coolGrey']} />
   </button>
 )
 
@@ -44,12 +46,12 @@ const ModalButtons = ({ secondaryText, secondaryAction, secondaryType, primaryTe
     (
       <div className={classNames(styles['coz-modal-content'], styles['coz-modal-buttons'])}>
         { displaySecondary &&
-          <button className={classNames(styles['coz-btn'], styles['coz-btn--' + secondaryType])} onClick={secondaryAction}>
+          <button className={styles['c-btn']} onClick={secondaryAction}>
             {secondaryText}
           </button>
         }
         { displayPrimary &&
-          <button className={classNames(styles['coz-btn'], styles['coz-btn--' + primaryType])} onClick={primaryAction}>
+          <button className={classNames(styles['c-btn'], styles['c-btn--' + primaryType])} onClick={primaryAction}>
             {primaryText}
           </button>
         }
