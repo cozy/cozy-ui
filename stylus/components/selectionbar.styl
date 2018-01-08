@@ -1,5 +1,6 @@
 @require '../settings/breakpoints'
 @require '../settings/z-index'
+@require '../utilities/display'
 
 /*------------------------------------*\
   Selection Bar
@@ -81,8 +82,5 @@ $selectionbar
                 margin   0 0 0 1rem
 
             button
-                width         3rem
-                overflow      hidden
-                text-indent   -5000px
-                padding-left  0
-                color         transparent
+                span
+                    @extend $visuallyhidden
