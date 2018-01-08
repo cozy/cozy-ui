@@ -25,6 +25,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [7.0.1] - 2018-01-08
+### Fixed
+- Modal and its buttons were broken
+- Selection bar's icons on mobile were hidden
+
+
 ## [7.0.0] - 2018-01-04
 ### Changed
 - Default theme for `<Button />` is now `regular`
@@ -651,7 +657,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.0.0...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.0.1...HEAD
+[7.0.1]: https://github.com/cozy/cozy-ui/compare/v7.0.0...v7.0.1
 [7.0.0]: https://github.com/cozy/cozy-ui/compare/v6.0.3...v7.0.0
 [6.0.3]: https://github.com/cozy/cozy-ui/compare/v6.0.2...v6.0.3
 [6.0.2]: https://github.com/cozy/cozy-ui/compare/v6.0.1...v6.0.2
