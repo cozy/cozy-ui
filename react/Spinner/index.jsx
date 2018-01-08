@@ -24,8 +24,8 @@ export const Spinner = ({ t, loadingType, middle, noMargin, color, size, classNa
 
 Spinner.propTypes = {
   loadingType: PropTypes.string,
-  middle: PropTypes.boolean,
-  noMargin: PropTypes.boolean,
+  middle: PropTypes.bool,
+  noMargin: PropTypes.bool,
   color: PropTypes.oneOf(['blue', 'grey', 'white', 'red']),
   size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'xlarge', 'xxlarge']),
   className: PropTypes.string
