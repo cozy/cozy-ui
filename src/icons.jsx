@@ -20,6 +20,7 @@ const importIcons = function () {
     'icon-openwith',
     'icon-paperplane',
     'icon-rename',
+    'icon-restore',
     'icon-share',
     'icon-trash',
     'icon-upload',
