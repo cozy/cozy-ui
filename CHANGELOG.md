@@ -25,6 +25,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [7.0.2] - 2018-01-09
+### Fixed
+- wrong colors by default for modal's buttons
+- Fix selectionbar's buttons label on desktop
+
+
 ## [7.0.1] - 2018-01-08
 ### Fixed
 - Modal and its buttons were broken
@@ -657,7 +663,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.0.1...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.0.2...HEAD
+[7.0.2]: https://github.com/cozy/cozy-ui/compare/v7.0.1...v7.0.2
 [7.0.1]: https://github.com/cozy/cozy-ui/compare/v7.0.0...v7.0.1
 [7.0.0]: https://github.com/cozy/cozy-ui/compare/v6.0.3...v7.0.0
 [6.0.3]: https://github.com/cozy/cozy-ui/compare/v6.0.2...v6.0.3
