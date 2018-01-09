@@ -2,6 +2,7 @@
 @require '../settings/z-index'
 @require '../utilities/display'
 
+
 /*------------------------------------*\
   Selection Bar
   ======
@@ -82,16 +83,5 @@ $selectionbar
                 margin   0 0 0 1rem
 
             button
-                // I know, it's a duplicate, but I can't figure out why Stylus takes this selector out of the MQ when you @extend a placeholder… yet.
                 span
-                    // @stylint off
-                    position     absolute !important
-                    border       0 !important
-                    width        1px !important
-                    height       1px !important
-                    overflow     hidden !important
-                    padding      0 !important
-                    white-space  nowrap !important
-                    clip         rect(1px, 1px, 1px, 1px) !important
-                    clip-path    inset(50%) !important
-                    // @stylint on
+                    @extend $visuallyhidden-mobile

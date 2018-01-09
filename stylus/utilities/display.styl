@@ -24,6 +24,21 @@ $visuallyhidden
     clip-path    inset(50%) !important
 // @stylint on
 
+// Because Stylus doesn't allow me to @extend inside @media… yeah… that sucks
++medium-screen()
+    $visuallyhidden-mobile
+    // @stylint off
+        position     absolute !important
+        border       0 !important
+        width        1px !important
+        height       1px !important
+        overflow     hidden !important
+        padding      0 !important
+        white-space  nowrap !important
+        clip         rect(1px, 1px, 1px, 1px) !important
+        clip-path    inset(50%) !important
+    // @stylint on
+
 $hide
 [aria-hidden=true]
     hide()
