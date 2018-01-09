@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
 ### Changed
-- none yet
+- removed duplication of code for `$visuallyhidden` by using a mixin instead
 
 ### Fixed
 - none yet
