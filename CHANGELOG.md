@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
 ### Changed
-- removed duplication of code for `$visuallyhidden` by using a mixin instead
+- none yet
 
 ### Fixed
 - none yet
@@ -25,10 +25,27 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [7.0.3] - 2018-01-10
+### Changed
+- removed duplication of code for `$visuallyhidden` by using a mixin instead
+
+### Added
+- `<Textarea />` React component [see](https://cozy.github.io/cozy-ui/react/#textarea)
+- `<Field />` React component [see](https://cozy.github.io/cozy-ui/react/#field)
+
+### Fixed
+- Alerts rendering on desktop
+- React Styleguide was broken
+
+
 ## [7.0.2] - 2018-01-09
 ### Fixed
 - wrong colors by default for modal's buttons
 - Fix selectionbar's buttons label on desktop
+
+### Added
+- `<Label />` React component [see](https://cozy.github.io/cozy-ui/react/#label)
+- `<Input />` React component [see](https://cozy.github.io/cozy-ui/react/#input)
 
 
 ## [7.0.1] - 2018-01-08
@@ -663,7 +680,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.0.2...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.0.3...HEAD
+[7.0.3]: https://github.com/cozy/cozy-ui/compare/v7.0.2...v7.0.3
 [7.0.2]: https://github.com/cozy/cozy-ui/compare/v7.0.1...v7.0.2
 [7.0.1]: https://github.com/cozy/cozy-ui/compare/v7.0.0...v7.0.1
 [7.0.0]: https://github.com/cozy/cozy-ui/compare/v6.0.3...v7.0.0
