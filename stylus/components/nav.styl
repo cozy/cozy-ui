@@ -9,7 +9,6 @@ $nav
     margin     1.5rem 0
     padding    0
     list-style none
-    padding-right 10%
 
     +medium-screen()
         display          flex
@@ -22,9 +21,6 @@ $nav-item
     position        relative
     z-index         $app-index
     height          3rem
-    display         flex
-    align-items     center
-    padding-right   .5rem
 
     &:hover::before
         content        ''
@@ -33,7 +29,7 @@ $nav-item
         border-radius  0 3px 3px 0
         top 0
         left 0
-        right 0
+        right 1rem
         bottom 0
         background     silver
 
@@ -70,7 +66,8 @@ $nav-item-text
 
 $nav-link
     display              flex
-    padding-left         3.125rem
+    padding-left         1.5rem
+    padding-right        1rem
     line-height          1.5
     text-decoration      none
     color                slateGrey
