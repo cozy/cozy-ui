@@ -39,6 +39,7 @@ opener.
 
 ```
 const { MenuItem } = require('.');
+const { Button } = require('../Button');
 
 <Menu component={<Button>Greetings with custom component</Button>} onSelect={ itemData => alert(JSON.stringify(itemData)) }>
   <MenuItem data='hello'>Hello !</MenuItem>
