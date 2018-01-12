@@ -3,8 +3,8 @@
   =====
 
   This file contains mixins:
-  - font-size()
-  - em()
+  - hide()
+  - reset()
 \*------------------------------------*/
 /*
     Tools
@@ -20,111 +20,17 @@
 
     Styleguide Tools.mixins
 */
-/*
-    font-size($size)
-
-    font-size() mixin allows you to write font-size in pixels and get the
-    equivalent size in em.
-
-    You can even skip the parenthesis and write it as basic font-size
-    declaration.
-
-    N.B: If you write rem instead of px, the mixin won't trigger and the basic
-    font-size declaration will apply.
-
-    $size - The size en pixel you want your text in
-
-    Weight: 1
-
-    Styleguide Tools.mixins.fontsize
-*/
 // @stylint off
 use('../scripts/checksum.js')
 use('../scripts/split.js')
 use('../scripts/deprecate.js')
+// @stylint on
 
-// Contextual fonts store, based on the selector checksum hash
-basefonts = {}
 
 // We need a base font-size for _px to em_ computation. We assume those size to
 // be 16px (as default desktop browsers), but it really don't care as well as
 // all relative units should be expressed in `em`
 basefont = 16px
-
-// contextual-basefont takes a selector string as input, and try to get the
-// basefont in this context. If it doesn't explicitely exists, it checks its
-// parent, etc, and fallback to the global basefont.
-context-basefont(selector)
-    parent = split(' ', selector)
-    pop(parent)
-    if length(parent) > 1
-        parent = join(' ', parent)
-
-    if length(parent) is 0
-        basefont
-    else if (_parentId = checksum(parent)) in basefonts
-        basefonts[_parentId]
-    else
-        context-basefont(unquote(parent))
-
-
-// A handy replacement for the `font-size` property. Just use it as usual:
-// `font-size: <n>` (colon is optionnal). It converts pixels to `em`.
-// To achieve this magic, it stores the font-size base for each context
-// so that it can revert the `em` cascade when converting.
-
-// It bails out if you use `rem` as you do not need to revert the cascade with
-// rem as it refers already to the root font-size.
-font-size(n)
-    currentBasefont = context-basefont(selector())
-
-    unitName=unit(n)
-    if unitName is 'px'
-        res=em(n, currentBasefont)
-        res_rem=unit(em(res/basefont), 'rem')
-        deprecate('font-size will no longer convert px to em, use rem. Replace font-size: ' + n + ' by font-size: ' + res_rem + ' (ctx_font: ' + currentBasefont +')')
-        font-size res
-    else
-        font-size n
-
-    _id = checksum(selector())
-    if unitName is 'em'
-        currentBasefont = context-basefont(selector())
-        n = unit(n * currentBasefont, 'px')
-    basefonts[_id] = n
-
-/*
-    em($size)
-
-    em() mixin basically converts pixel sizes in em according to its context.
-    More generic mixin than font-size() but it does exactly the same job.
-
-    $size - The size in pixel you want to be converted in em
-
-    Weight: 0
-
-    Styleguide Tools.mixins.em
-*/
-// Returns the given value in _EM_. If the inital value is given in _PX_, it
-//  applies a conversion to _EM_ based on the contextual basefont size.
-em(n, base = null)
-    if base is not null
-        ctx_font = base
-    else
-        _id = checksum(selector())
-        if _id in basefonts
-            ctx_font = basefonts[_id]
-        else
-            ctx_font = context-basefont(selector())
-
-    if unit(n) is 'px'
-        val = round(n / ctx_font, 5)
-        em_val = unit(val, 'em')
-        rem_val = unit(round(n / basefont, 5), 'rem')
-        deprecate('Do not use em() : replace ' + n + ' by ' + rem_val + ' (output em: ' + em_val + ', ctx_font: ' + ctx_font + ')')
-    else
-        val = n
-    unit(val, 'em')
 
 /*
     hide()
