@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
 ### Changed
-- none yet
+- Nav in Sidebar layout changes, <Icon /> are now mandatory in Nav's items
 
 ### Fixed
 - none yet
