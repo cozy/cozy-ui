@@ -4,6 +4,7 @@ const normalize = function (k) {
 
 const importIcons = function () {
   const names = [
+    'icon-album',
     'icon-album-add',
     'icon-album-remove',
     'icon-back',
@@ -19,6 +20,7 @@ const importIcons = function () {
     'icon-folder',
     'icon-forward',
     'icon-gear',
+    'icon-image',
     'icon-moveto',
     'icon-openwith',
     'icon-paperplane',

@@ -1,5 +1,6 @@
 @require '../settings/breakpoints'
 @require '../settings/z-index'
+@require '../settings/palette'
 
 /*------------------------------------*\
   Navigation
@@ -49,8 +50,14 @@ $nav-item
 
 $nav-item-icon
     display inline-block
-    margin-right 1rem
+    margin-right .6875rem
     color coolGrey
+
+    .is-active &
+        color dodgerBlue
+
+    :hover > &
+        color charcoalGrey
 
     +medium-screen()
         display block
