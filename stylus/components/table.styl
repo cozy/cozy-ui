@@ -1,79 +1,78 @@
 @require '../settings/breakpoints'
+@require '../settings/palette'
 
 $table
-    .coz-table
-        position        relative
-        display         flex
-        flex-direction  column
-        flex            1 1 100%
-        height          100%
-        text-align      left
-        color           coolGrey
+    position relative
+    display flex
+    flex-direction column
+    flex 1 1 100%
+    height 100%
+    text-align left
+    color coolGrey
 
-    .coz-table-head
-        flex 0 0 1.9375rem
-
-        &.coz-table-row:hover
-            background-color white
-
-    .coz-table-body
-        flex      1 1 auto
-        display   flex
-        flex-direction column
-        // Because it needs a height to be scrollable. Don't ask.
-        height    1px
-        overflow  auto
-
-    .coz-table-header
-    .coz-table-cell
-        box-sizing  border-box
-        padding     .9375rem 2rem
-        font-size   .875rem
-
-    .coz-table-row
-        display         flex
-        flex-direction  row
-        align-items     center
-        flex            0 0 auto
-        width           100%
-        border-bottom   1px solid silver
-
-        &:hover
-            background-color paleGrey
-
-    .coz-table-cell.coz-table-primary
-        padding-left   2.8125rem
-        font-size      1rem
-        line-height    1.3
-        white-space    nowrap
-        overflow       hidden
-        text-overflow  ellipsis
-
-    .coz-table-primary
-        color charcoalGrey
-
-    .coz-table-ext
-        color coolGrey
-
-    .coz-table-header
-        padding         .5rem 2rem
-        font-size       .75rem
-        text-transform  uppercase
-
-    +medium-screen()
-        .coz-table-row
-            max-width  100vw
+$table-head
+    flex 0 0 2rem
 
     +small-screen()
-        .coz-table-head
-            display none
+        display none
 
-        .coz-table-body
-            max-height  100%
+$table-body
+    flex 1 1 auto
+    display flex
+    flex-direction column
+    overflow auto
 
-        .coz-table-primary
-            flex 1 1 auto
+    +small-screen()
+        max-height 100%
 
-        .coz-table-cell.coz-table-primary
-            padding-left 3.8125rem
-            background-position 1rem center
+$table-row
+    box-sizing border-box
+    display flex
+    flex-direction row
+    align-items center
+    flex 0 0 auto
+    height 3rem
+    width 100%
+    border-bottom 1px solid silver
+
+    &:hover
+        background-color paleGrey
+
+    +medium-screen()
+        max-width 100vw
+
+$table-row-head
+    @extend $table-row
+
+    &:hover
+        background-color transparent
+
+$table-row-selected
+    &
+    &:hover
+        background-color alpha(dodgerBlue, .1)
+
+$table-cell
+    box-sizing border-box
+    padding .875rem 2rem
+    font-size .875rem
+    line-height 1.3
+
+
+$table-header
+    @extend $table-cell
+    padding .5rem 2rem
+    font-size .75rem
+    font-weight bold
+    text-transform uppercase
+
+$table-cell--primary
+    font-size 1rem
+    line-height 1.15
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+    color charcoalGrey
+
+    +small-screen()
+        flex 1 1 auto

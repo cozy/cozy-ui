@@ -15,6 +15,7 @@
 @require '../objects/*'
 @require '../components/button'
 @require '../components/nav'
+@require '../components/table'
 @require '../utilities/*'
 
 /*------------------------------------*\
@@ -310,6 +311,88 @@
 */
 .c-textarea
     @extend $textarea
+
+/*
+ Table
+
+ You should decide by yourself the sizes of the columns. In those examples we use the style tag but you definitely should use CSS classes.
+
+ Markup:
+ <div>
+    <h2>Table with table element</h2>
+    <table class="c-table">
+        <thead class="c-table-head">
+            <tr class="c-table-row-head">
+                <th class="c-table-header" style="width:50%">Header 1</th>
+                <th class="c-table-header" style="width:25%">Header 2</th>
+                <th class="c-table-header" style="width:25%">Header 3</th>
+            </tr>
+        </thead>
+        <tbody class="c-table-body">
+            <tr class="c-table-row is-selected">
+                <td class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet</td>
+                <td class="c-table-cell" style="width:25%">lorem</td>
+                <td class="c-table-cell" style="width:25%">ipsum</td>
+            </tr>
+            <tr class="c-table-row">
+                <td class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</td>
+                <td class="c-table-cell" style="width:25%">corporis</td>
+                <td class="c-table-cell" style="width:25%">placeat</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Table with div element</h2>
+    <div class="c-table">
+        <div class="c-table-head">
+            <div class="c-table-row-head">
+                <div class="c-table-header" style="width:50%">Header 1</div>
+                <div class="c-table-header" style="width:25%">Header 2</div>
+                <div class="c-table-header" style="width:25%">Header 3</div>
+            </div>
+        </div>
+        <div class="c-table-body">
+            <div class="c-table-row is-selected">
+                <div class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet</div>
+                <div class="c-table-cell" style="width:25%">lorem</div>
+                <div class="c-table-cell" style="width:25%">ipsum</div>
+            </div>
+            <div class="c-table-row">
+                <div class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</div>
+                <div class="c-table-cell" style="width:25%">corporis</div>
+                <div class="c-table-cell" style="width:25%">placeat</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ Styleguide Components.table
+*/
+.c-table
+    @extend $table
+
+.c-table-head
+    @extend $table-head
+
+.c-table-body
+    @extend $table-body
+
+.c-table-row
+    @extend $table-row
+
+    &.is-selected
+        @extend $table-row-selected
+
+.c-table-row-head
+    @extend $table-row-head
+
+.c-table-cell
+    @extend $table-cell
+
+.c-table-cell--primary
+    @extend $table-cell--primary
+
+.c-table-header
+    @extend $table-header
 
 /*------------------------------------*\
   Utilities
