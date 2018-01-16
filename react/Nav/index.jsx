@@ -15,14 +15,16 @@ export const NavText = ({ children }) => (
   </span>
 )
 
-export const NavLink = ({ children }) => (
-  <div className={styles['c-nav-link']}>{ children }</div>
-)
-
-Object.assign(NavLink, {
+export const NavLink = {
   className: styles['c-nav-link'],
   activeClassName: styles['is-active']
-})
+}
+
+export const genNavLink = RRNavLink => ({ to, children }) => (
+  <RRNavLink to={to} className={NavLink.className} activeClassName={NavLink.activeClassName}>
+    {children}
+  </RRNavLink>
+)
 
 export const NavIcon = ({ icon }) => (
   <span className={cx(styles['c-nav-item__icon'], styles['c-nav-icon'])}>

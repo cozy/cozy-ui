@@ -5,11 +5,10 @@ horizontal bottom nav.
 used as follows.
 
 ```jsx static
-import { NavLink as UINavLink } from 'cozy-ui/react'
+import { NavLink as RRNavLink } from 'react-router'
+import { genNavLink } from 'cozy-ui/react/Nav'
 
-<NavLink to={to} activeClassName={UINavLink.activeClassName} className={UINavLink.className}>
-  {children}
-</NavLink>
+const NavLink = genNavLink(RRNavLink)
 ```
 
 In action : 
