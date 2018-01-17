@@ -25,6 +25,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 
+## [7.1.0] - 2018-01-17
+### Changed
+- Nav now requires SVG icons, not in CSS background anymore, using `<Icon />` for instance
+- `<Nav />` component generate NavLink with a function in order to works better with react-Router's `Link`
+- Table styles are not global anmore, you must specifically `@extend` every bit you need, like `$table-head`, `$table-cell`, `$table-row`, etc
+- Removed all `em()`
+
+### Added
+- One column layout
+
+
 ## [7.0.3] - 2018-01-10
 ### Changed
 - removed duplication of code for `$visuallyhidden` by using a mixin instead
@@ -680,7 +691,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.0.3...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.1.0...HEAD
+[7.1.0]: https://github.com/cozy/cozy-ui/compare/v7.0.3...v7.1.0
 [7.0.3]: https://github.com/cozy/cozy-ui/compare/v7.0.2...v7.0.3
 [7.0.2]: https://github.com/cozy/cozy-ui/compare/v7.0.1...v7.0.2
 [7.0.1]: https://github.com/cozy/cozy-ui/compare/v7.0.0...v7.0.1
