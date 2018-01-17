@@ -21,57 +21,61 @@
 \*------------------------------------*/
 
 $centerized
-    position   absolute
-    top        50%
-    left       50%
-    transform  translateX(-50%) translateY(-50%)
+    position absolute
+    top 50%
+    left 50%
+    transform translateX(-50%) translateY(-50%)
 
 
 $content-center
-    display          flex
-    align-items      center
-    justify-content  center
+    display flex
+    align-items center
+    justify-content center
 
 
 $fullbleed
-    position  fixed
-    bottom    0
-    top       0
-    left      0
-    right     0
+    position fixed
+    bottom 0
+    top 0
+    left 0
+    right 0
 
-
-// NB: Not to be used on it's own. Use one of the others placeholders below (sticky sidebar only yet)
-$app-2panes
-    box-sizing  border-box
-    display     flex
-    max-width       100%
-    height      100%
+// One column layout
+$app
+    box-sizing border-box
+    display flex
+    max-width 100%
+    width 100%
+    height 100%
 
     main
-    & > aside
-        display         flex
-        flex-direction  column
-        flex            0 0 auto
+        display flex
+        flex-direction column
+        flex 0 0 auto
 
     main,
     main > [role=contentinfo]
-        position        relative
-        display         flex
-        flex-direction  column
-        flex            1 1 auto
-        box-sizing      border-box
-        height          100%
-        overflow-x      hidden
-        overflow-y      auto
+        position relative
+        display flex
+        flex-direction column
+        flex 1 1 auto
+        box-sizing border-box
+        height 100%
+        overflow-x hidden
+        overflow-y auto
 
 // STICKY layout
-// When you want the sidebar to act like a sticky footer
+// When you want a sidebar and you want it to act like a sticky footer on mobile
 $app-2panes-sticky
-    @extend     $app-2panes
-    flex        0 0 100%
-    height      auto
+    @extend $app
+    flex 0 0 100%
+    height auto
     align-items stretch
+
+    & > aside
+        display flex
+        flex-direction column
+        flex 0 0 auto
 
     main,
     main > [role=contentinfo]
