@@ -15,8 +15,11 @@ In action :
 
 ```
 const _Nav = require('../Nav')
-const { NavItem, NavIcon, NavText, NavLink } = _Nav
-const Nav = _Nav.default;
+const { NavItem, NavIcon, NavText, genNavLink } = _Nav
+const Nav = _Nav.default
+
+const NavLink = genNavLink(({ children, className }) =>
+  <a className={className}>{ children }</a>);
 
 <Sidebar>
   <Nav>
