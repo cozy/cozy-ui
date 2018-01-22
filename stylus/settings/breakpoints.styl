@@ -146,7 +146,7 @@ mobile()
         {block}
 
 /*
-    np-mobile()
+    no-mobile()
 
     Refers to (min-width: 769px)
 
@@ -159,11 +159,24 @@ no-mobile()
         {block}
 
 /*
+    no-tablet()
+
+    Refers to (min-width: 1024px)
+
+    Weight: 4
+
+    Styleguide Settings.breakpoints.no-tablet
+*/
+no-tablet()
+    @media (min-width: (size-helper('min', medium)/basefont)rem)
+        {block}
+
+/*
     no-desktop()
 
     Refers to medium-screen() which is (max-width: 1023px)
 
-    Weight: 4
+    Weight: 5
 
     Styleguide Settings.breakpoints.no-desktop
 */
