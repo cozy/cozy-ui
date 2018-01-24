@@ -94,3 +94,18 @@ const { ModalDescription, ModalTitle } = Modal;
     </Modal>}
 </div>
 ```
+
+### Portal modals
+
+You can use the `into` prop to wrap the `Modal` in a `Portal`. This `prop` will be set to `"body"` in future versions so try to put it now to check if your Modal does not break when rendered in a Portal.
+
+```jsx
+initialState = { modalDisplayed: false};
+
+<div>
+  <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
+    Toggle modal
+  </button>
+  {state.modalDisplayed && <Modal into='body' title='Ada Lovelace' description={content.ada.short} dismissAction={() => setState({ modalDisplayed: false })} /> }
+</div>
+```

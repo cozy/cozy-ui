@@ -6,6 +6,7 @@ import Overlay from '../Overlay'
 import Icon from '../Icon'
 import migrateProps from '../helpers/migrateProps'
 import palette from '../../stylus/settings/palette.json'
+import Portal from 'preact-portal'
 
 const ModalContent = ({children, className}) =>
   (<div className={classNames(styles['coz-modal-content'], className)}>
@@ -65,8 +66,9 @@ class Modal extends Component {
   }
 
   render () {
-    const { children, description, title, closable, dismissAction, overflowHidden, className, crossClassName } = this.props
-    return (
+    const { children, description, title, closable, dismissAction, overflowHidden, className, crossClassName, into } = this.props
+    const maybeWrapInPortal = children => into ? <Portal into={into}>{ children }</Portal> : children
+    return maybeWrapInPortal(
       <div className={styles['coz-modal-container']}>
         <Overlay onEscape={closable && dismissAction}>
           <div className={styles['coz-modal-wrapper']} onClick={closable && this.handleOutsideClick}>
@@ -108,7 +110,10 @@ Modal.propTypes = {
   /** `className` used on the modal, useful if you want to custom its CSS */
   className: PropTypes.string,
   /** `className` used on the cross, useful if you want to custom its CSS */
-  crossClassName: PropTypes.string
+  crossClassName: PropTypes.string,
+  /** If has a value, the modal will be rendered inside a portal and its value will be passed to Portal
+  to control the rendering destination of the Modal */
+  into: PropTypes.string
 }
 
 Modal.defaultProps = {
@@ -120,6 +125,15 @@ Modal.defaultProps = {
 
 export default migrateProps([
   { src: 'withCross', dest: 'closable' }, // withCross -> closable
+  {
+    fn: props => {
+      let msg = null
+      if (!props.into) {
+        msg = 'In the future, `into` default value will be "body" : Modals will be rendered inside a <Portal />. Try to render your Modal with into=`body`'
+      }
+      return [props, msg]
+    }
+  },
   {
     fn: props => {
       let newProps
