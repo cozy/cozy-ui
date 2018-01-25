@@ -146,41 +146,41 @@ mobile()
         {block}
 
 /*
-    no-mobile()
+    gt-mobile()
 
     Refers to (min-width: 769px)
 
     Weight: 3
 
-    Styleguide Settings.breakpoints.no-mobile
+    Styleguide Settings.breakpoints.gt-mobile
 */
-no-mobile()
+gt-mobile()
     @media (min-width: (size-helper('min', small)/basefont)rem)
         {block}
 
 /*
-    no-tablet()
+    gt-tablet()
 
     Refers to (min-width: 1024px)
 
     Weight: 4
 
-    Styleguide Settings.breakpoints.no-tablet
+    Styleguide Settings.breakpoints.gt-tablet
 */
-no-tablet()
+gt-tablet()
     @media (min-width: (size-helper('min', medium)/basefont)rem)
         {block}
 
 /*
-    no-desktop()
+    lt-desktop()
 
     Refers to medium-screen() which is (max-width: 1023px)
 
     Weight: 5
 
-    Styleguide Settings.breakpoints.no-desktop
+    Styleguide Settings.breakpoints.lt-desktop
 */
-no-desktop()
+lt-desktop()
     +medium-screen()
         {block}
 // @stylint on
