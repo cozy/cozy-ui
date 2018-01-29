@@ -24,6 +24,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [7.2.0] - 2018-01-29
+### Fixed
+- Nav icon on mobile
+
+### Added
+- Add new breakpoint for tablet
+- Add Portal for Modal so you can decide where in the DOM it pops
+
+### Deprecated
+- Breakpoint functions `no-mobile()` & `no-desktop()` renamed respectively `gt-mobile()` & `lt-desktop()` for more clarity
+
 
 ## [7.1.0] - 2018-01-17
 ### Changed
@@ -691,7 +702,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.1.0...HEAD
+[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.2.0...HEAD
+[7.2.0]: https://github.com/cozy/cozy-ui/compare/v7.1.0...v7.2.0
 [7.1.0]: https://github.com/cozy/cozy-ui/compare/v7.0.3...v7.1.0
 [7.0.3]: https://github.com/cozy/cozy-ui/compare/v7.0.2...v7.0.3
 [7.0.2]: https://github.com/cozy/cozy-ui/compare/v7.0.1...v7.0.2
