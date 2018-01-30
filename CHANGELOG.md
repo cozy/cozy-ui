@@ -24,6 +24,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [7.2.1] - 2018-01-30
+### Fixed
+- Wide buttons on Safari 10 have now their content centered
+
+
 ## [7.2.0] - 2018-01-29
 ### Fixed
 - Nav icon on mobile
@@ -702,7 +707,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.2.0...HEAD
+[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.2.1...HEAD
+[7.2.1]: https://github.com/cozy/cozy-ui/compare/v7.2.0...v7.2.1
 [7.2.0]: https://github.com/cozy/cozy-ui/compare/v7.1.0...v7.2.0
 [7.1.0]: https://github.com/cozy/cozy-ui/compare/v7.0.3...v7.1.0
 [7.0.3]: https://github.com/cozy/cozy-ui/compare/v7.0.2...v7.0.3
