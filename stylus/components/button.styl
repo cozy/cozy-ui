@@ -56,6 +56,12 @@ $button
             position   relative
             top        -.0625rem
 
+    // Trick for Safari 10 to ensure that
+    // button's text is horizontally centered
+    &::before
+    &::after
+        content ''
+        flex 1 0 auto
 
 $button--regular  // Deprecated
     @extend $button
