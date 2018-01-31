@@ -31,7 +31,8 @@ module.exports = {
       name: 'Content',
       components: () => [
         '../react/Media/Media.jsx',
-        '../react/Modal/index.jsx'
+        '../react/Modal/index.jsx',
+        '../react/Avatar/index.jsx'
       ]
     },
     {
