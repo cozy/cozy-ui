@@ -54,14 +54,14 @@ $table-row-selected
 
 $table-cell
     box-sizing border-box
-    padding .875rem 2rem
+    padding .875rem 1rem
     font-size .875rem
     line-height 1.3
 
 
 $table-header
     @extend $table-cell
-    padding .5rem 2rem
+    padding .5rem 1rem
     font-size .75rem
     font-weight bold
     text-transform uppercase
@@ -76,3 +76,26 @@ $table-cell--primary
 
     +small-screen()
         flex 1 1 auto
+
+$table-divider
+    position sticky
+    top 0
+    background-color white
+    text-indent 2rem
+    font-weight bold
+    font-size .75rem
+    line-height 1.33
+    color coolGrey
+
+    &::before
+        content ''
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+        background-color alpha(dodgerBlue, .05)
+
+
+    +small-screen()
+        text-indent 1rem
