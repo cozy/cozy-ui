@@ -77,6 +77,6 @@ You can reach the Cozy Community by:
 * Chatting with us on IRC [#cozycloud](http://webchat.freenode.net/?channels=%23cozycloud) on irc.freenode.net
 * Posting on our [Forum](https://forum.cozy.io)
 * Posting issues on the [Github repos](https://github.com/cozy/)
-* Mentioning us on [Twitter](https://twitter.com/mycozycloud)
+* Mentioning us on [Twitter](https://twitter.com/cozycloud)
 
 [stylus]: http://stylus-lang.com/
