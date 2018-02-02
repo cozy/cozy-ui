@@ -75,6 +75,52 @@
     @extend $button--highlight
 
 /*
+ Button sizes
+
+ Different sizes of buttons
+
+ Markup:
+ <div class="u-p-1">
+     <button class="c-btn {{modifier_class}}"><span>Click me</span></button>
+ </div>
+
+ .c-btn--tiny - Tiny button (for Alerts mostly)
+ .c-btn--small - Small button
+ .c-btn--large - Large button
+
+ Styleguide Components.buttons.sizes
+*/
+.c-btn--tiny
+    @extend $button--tiny
+
+.c-btn--small
+    @extend $button--small
+
+.c-btn--large
+    @extend $button--large
+
+/*
+ Button extensions
+
+ Different extensions of buttons
+
+ Markup:
+ <div class="u-p-1">
+     <button class="c-btn {{modifier_class}}"><span>Click</span></button>
+ </div>
+
+ .c-btn--narrow - Narrow button (ignore button's min-width)
+ .c-btn--full - Full button
+
+ Styleguide Components.buttons.extension
+*/
+.c-btn--narrow
+    @extend $button--narrow
+
+.c-btn--full
+    @extend $button--full
+
+/*
  Buttons with icons
 
  Those buttons can inherit any flavour of buttons described above.

@@ -3,16 +3,18 @@
 @require '../tools/mixins'
 
 /*------------------------------------*\
-  Buttons of any kind
+  Button
 \*------------------------------------*/
 
 $button
     box-sizing       border-box
+    display          inline-block
     margin           0 .25em
     border           1px solid dodgerBlue
     border-radius    2px
     min-height       2.5rem
-    padding          .5rem .9375rem
+    min-width        7rem
+    padding          .8125rem 1rem
     background       dodgerBlue
     vertical-align   top
     text-align       center
@@ -59,7 +61,9 @@ $button
             position   relative
             top        -.0625rem
 
-
+/*------------------------------------*\
+  Variants
+\*------------------------------------*/
 $button--regular  // Deprecated
     @extend $button
 
@@ -273,3 +277,31 @@ $button-client-mobile
         border-radius       .5em
         border              .3em solid white
         background          white embedurl('../assets/icons/ui/icon-cozy.svg') 0 0 / contain no-repeat
+
+/*------------------------------------*\
+  Sizes
+\*------------------------------------*/
+$button--tiny
+    min-height 1.5rem
+    min-width 5rem
+    padding .3125rem 1rem
+
+$button--small
+    min-height 2rem
+    min-width 6rem
+    padding .5rem
+
+$button--large
+    min-height 3rem
+    min-width 10rem
+    padding 1rem 1.5rem
+    font-size 1rem
+
+/*------------------------------------*\
+  Extensions
+\*------------------------------------*/
+$button--full
+    width 100%
+
+$button--narrow
+    min-width auto
