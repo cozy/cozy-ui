@@ -21,7 +21,7 @@ export const Button = props => {
       className={btnClass(theme, className)}
       onClick={onClick}
     >
-      {children}
+      <span>{children}</span>
     </button>
   )
 }
@@ -35,7 +35,7 @@ export const ButtonLink = props => {
       className={btnClass(theme, className)}
       onClick={onClick}
     >
-      {children}
+      <span>{children}</span>
     </a>
   )
 }
