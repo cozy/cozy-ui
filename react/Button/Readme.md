@@ -23,6 +23,31 @@ const { Button } = require('./index');
 </div>
 ```
 
+#### Different sizes from the default one (tiny, small, large):
+
+```
+const { Button } = require('./index');
+
+<div>
+  <p><Button size='tiny'>Tiny</Button></p>
+  <p><Button size='small'>Small</Button></p>
+  <p><Button>Normal</Button></p>
+  <p><Button size='large'>Large</Button></p>
+</div>
+```
+
+### Different width, `narrow` to ignore Button's `min-width`  & `full` to enable full width:
+
+```
+const { Button } = require('./index');
+
+<div>
+  <p><Button>Normal</Button></p>
+  <p><Button extension="narrow">N…</Button></p>
+  <p><Button extension="full">Full width</Button></p>
+</div>
+```
+
 #### Add a action on click
 
 ```
@@ -66,5 +91,18 @@ const icons = require('../../src/icons');
 
 ```
 const { ButtonLink } = require('./index');
-<ButtonLink href="https://cozy.io" target>Link to Cozy.io</ButtonLink>
+<div>
+  <p>
+    <ButtonLink size="tiny" href="https://cozy.io" target>Link to Cozy.io</ButtonLink>
+  </p>
+  <p>
+    <ButtonLink size="small" href="https://cozy.io" target>Link to Cozy.io</ButtonLink>
+  </p>
+  <p>
+    <ButtonLink href="https://cozy.io" target>Link to Cozy.io</ButtonLink>
+  </p>
+  <p>
+    <ButtonLink size="large" href="https://cozy.io" target>Link to Cozy.io</ButtonLink>
+  </p>
+</div>
 ```
