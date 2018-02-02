@@ -44,7 +44,7 @@
 
  Markup:
  <div class="u-p-1">
-     <button class="c-btn {{modifier_class}}">Click me, I'm a button!</button>
+     <button class="c-btn {{modifier_class}}"><span>Click me, I'm a button!</span></button>
  </div>
 
  .c-btn--secondary - Basic alternative
@@ -84,10 +84,12 @@
  Markup:
  <div class="u-p-1">
     <button class="c-btn {{modifier_class}}">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-            <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
-        </svg>
-        Click me, I'm a button!
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+            </svg>
+            Click me, I'm a button!
+        </span>
     </button>
  </div>
 
@@ -121,8 +123,8 @@
 
  Markup:
  <div class="u-p-1">
-     <button class="c-btn--alert {{modifier_class}} u-m-1">Click me, I'm a button!</button>
-     <a hre="#" class="c-btn--alert {{modifier_class}} u-m-1">Click me, I'm a link!</a>
+     <button class="c-btn--alert {{modifier_class}} u-m-1"><span>Click me, I'm a button!</span></button>
+     <a hre="#" class="c-btn--alert {{modifier_class}} u-m-1"><span>Click me, I'm a link!</span></a>
  </div>
 
  .c-btn-alert--error - Error button
@@ -155,7 +157,7 @@
 
  Markup:
  <div class="u-p-1" style="background-color: darkgrey; width: 50%;">
-     <a hre="#" class="{{modifier_class}} u-mb-1">Click me, I'm a link!</a>
+     <a hre="#" class="{{modifier_class}} u-mb-1"><span>Click me, I'm a link!</span></a>
  </div>
 
  .c-btn-client - Button to download Cozy client app

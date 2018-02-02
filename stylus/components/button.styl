@@ -8,9 +8,6 @@
 
 $button
     box-sizing       border-box
-    display          inline-flex
-    align-items      center
-    justify-content  center
     margin           0 .25em
     border           1px solid dodgerBlue
     border-radius    2px
@@ -33,6 +30,12 @@ $button
     input
         cursor pointer
 
+    > span
+        display          flex
+        align-items      center
+        justify-content  center
+        width            100%
+
     &:visited
         color white
 
@@ -50,18 +53,12 @@ $button
         background-color  scienceBlue
 
     &[aria-busy=true]
-        &::after
+        span::after
             @extend    $icon-16
             @extend    $icon-spinner-white
             position   relative
             top        -.0625rem
 
-    // Trick for Safari 10 to ensure that
-    // button's text is horizontally centered
-    &::before
-    &::after
-        content ''
-        flex 1 0 auto
 
 $button--regular  // Deprecated
     @extend $button
