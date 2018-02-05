@@ -27,12 +27,14 @@ const ModalTitle = ({ children, className }) =>
   )
 
 const ModalCross = ({ onClick, className }) => (
-  <button
-    className={classNames(styles['c-btn'], styles['c-btn--close'], styles['coz-btn-modal-close'], className)}
+  <Button
+    theme="secondary"
+    className={classNames(styles['c-btn--close'], styles['coz-btn-modal-close'], className)}
     onClick={onClick}
+    extension='narrow'
     >
     <Icon icon='cross' width='24' height='24' color={palette['coolGrey']} />
-  </button>
+  </Button>
 )
 
 const ModalDescription = ({ children, className }) => (
