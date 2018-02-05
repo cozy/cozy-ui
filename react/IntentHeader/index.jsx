@@ -4,13 +4,13 @@ import styles from './styles'
 
 export const IntentHeader = ({ appName, appEditor, appIcon }) =>
   (
-    <h2 className={styles['intentHeader']}>
-      <div className={styles['intentHeader-title']}>
+    <div className={styles['intentHeader']}>
+      <h1 className={styles['intentHeader-title']}>
         <img className={styles['intentHeader-icon']} src={appIcon} />
         {appEditor && <span>{appEditor}&nbsp;</span> }
         {appName}
-      </div>
-    </h2>
+      </h1>
+    </div>
   )
 
 IntentHeader.propTypes = {
