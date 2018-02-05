@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-import styles from './styles'
+import styles from './styles.styl'
 
 const Label = props => {
   const { htmlFor, className, children, error } = props

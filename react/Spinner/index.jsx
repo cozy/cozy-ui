@@ -2,7 +2,7 @@ import React from 'react'
 import { translate } from '../I18n'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import styles from './styles'
+import styles from './styles.styl'
 
 export const Spinner = ({ t, loadingType, middle, noMargin, color, size, className }) => {
   return (

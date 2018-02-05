@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-import styles from './styles'
+import styles from './styles.styl'
 
 const Input = props => {
   const { type, id, className, value, placeholder, error } = props
