@@ -24,6 +24,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [7.3.0] - 2018-02-5
+### Added
+- Divider style for table
+- Sizes for buttons (tiny, small, large)
+- Extensions for buttons (full width or narrow)
+- `<Avatar />` component
+- `<IntentHeader />` component for intent modal
+
+### Changed
+- Button now should have their content wrapped inside a span
+
+### Fixed
+- Really fixed buttons on Safari 10
+
+
 ## [7.2.1] - 2018-01-30
 ### Fixed
 - Wide buttons on Safari 10 have now their content centered
@@ -707,7 +722,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.2.1...HEAD
+[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.3.0...HEAD
+[7.3.0]: https://github.com/cozy/cozy-ui/compare/v7.2.1...v7.3.0
 [7.2.1]: https://github.com/cozy/cozy-ui/compare/v7.2.0...v7.2.1
 [7.2.0]: https://github.com/cozy/cozy-ui/compare/v7.1.0...v7.2.0
 [7.1.0]: https://github.com/cozy/cozy-ui/compare/v7.0.3...v7.1.0
