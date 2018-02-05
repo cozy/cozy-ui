@@ -1,6 +1,6 @@
 ### Simple
 
-```jsx
+```
 initialState = { modalDisplayed: false};
 
 <div>
@@ -8,6 +8,29 @@ initialState = { modalDisplayed: false};
     Toggle modal
   </button>
   {state.modalDisplayed && <Modal title='Ada Lovelace' description={content.ada.short} dismissAction={() => setState({ modalDisplayed: false })} /> }
+</div>
+```
+
+### Size
+
+Several sizes avalaible: `small`, `medium`, `large`, `xlarge`, `xxlarge`.
+`small` being the default one.
+
+```
+initialState = { modalDisplayed: false};
+const sizes = [
+  'small',
+  'medium',
+  'large',
+  'xlarge',
+  'xxlarge'
+];
+
+<div>
+  {sizes.map(size => <button onClick={()=>setState({ size, modalDisplayed: !state.modalDisplayed, })}>
+    { size }
+  </button>)}
+  {state.modalDisplayed && <Modal title={ state.size + ' modal'} size={state.size} description={content.ada.short} dismissAction={() => setState({ modalDisplayed: false })} /> }
 </div>
 ```
 
