@@ -1,26 +1,16 @@
+@require '../../stylus/components/avatar'
+
 .c-avatar
-    display inline-block
-    border-radius 50%
-    text-align center
-    overflow hidden
+    @extend $avatar
 
 .c-avatar--small
-    width 2rem
-    height 2rem
-
-    .c-avatar-initials
-        font-size 1rem
+    @extend $avatar--small
 
 .c-avatar--medium
-    width 4rem
-    height 4rem
-
-    .c-avatar-initials
-        font-size 2rem
+    @extend $avatar--medium
 
 .c-avatar-initials
-    font-weight bold
-    line-height 2.2
+    @extend $avatar-initials
 
 .c-avatar-image
-    width 100%
+    @extend $avatar-image
