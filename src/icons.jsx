@@ -24,6 +24,7 @@ const importIcons = function () {
     'icon-moveto',
     'icon-openwith',
     'icon-paperplane',
+    'icon-people',
     'icon-rename',
     'icon-restore',
     'icon-share',
