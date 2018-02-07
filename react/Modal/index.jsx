@@ -28,8 +28,8 @@ const ModalTitle = ({ children, className }) =>
 
 const ModalCross = ({ onClick, className }) => (
   <Button
-    theme="secondary"
-    className={classNames(styles['c-btn--close'], styles['coz-btn-modal-close'], className)}
+    theme="close"
+    className={classNames(styles['coz-btn-modal-close'], className)}
     onClick={onClick}
     extension='narrow'
     >
