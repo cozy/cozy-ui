@@ -17,6 +17,13 @@ export const fakeIntentCreate = (action, doctype, options) => {
         node.removeChild(iframe)
         res({ result: 'OK' })
       }
+
+      // Copy all styles to the iframe
+      Array.from(document.querySelectorAll('style')).forEach(node => {
+        const copy = node.cloneNode(true)
+        iframe.contentDocument.head.appendChild(copy)
+      })
+
       ReactDOM.render(
         React.createElement(IntentExample, { onClick, action, doctype, options }),
         iframe.contentDocument.body
