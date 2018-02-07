@@ -1,22 +1,26 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
+import IntentExample from '../react/IntentOpener/IntentExample'
+
 /** Fake cozy.client.intents.create to demonstrate features in Styleguide */
 export const fakeIntentCreate = (action, doctype, options) => {
   let res
   const p = new Promise(resolve => {
     res = resolve
   })
-  p.start = node => {
+  p.start = (node, onFrameLoaded) => {
     const iframe = document.createElement('iframe')
     iframe.onload = () => {
-      iframe.contentDocument.body.innerHTML = `
-        Action: ${action}<br/>
-        Doctype: ${doctype}<br/>
-        options: ${JSON.stringify(options)}<br/>
-        <br/>
-        Click to complete intent`
-      iframe.contentDocument.addEventListener('click', () => {
+      onFrameLoaded()
+
+      const onClick = () => {
         node.removeChild(iframe)
         res({ result: 'OK' })
-      })
+      }
+      ReactDOM.render(
+        React.createElement(IntentExample, { onClick, action, doctype, options }),
+        iframe.contentDocument.body
+      )
     }
     node.appendChild(iframe)
     return p
