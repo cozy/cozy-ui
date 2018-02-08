@@ -24,6 +24,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [7.4.0] - 2018-02-8
+### Changed
+- ButtonLink's target attribute becomes a string instead of a boolean 
+- Increase alert size
+
+### Fixed
+- Better behaviour for hover effects on some element on mobile
+- Made selection bar's close button narrow
+- Modal cross button's size
+- Vertical alignment of initials
+
+### Added
+- Add Modal size option
+- Empty avatar view
+
+
 ## [7.3.0] - 2018-02-5
 ### Added
 - Divider style for table
@@ -722,7 +738,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.3.0...HEAD
+[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.4.0...HEAD
+[7.4.0]: https://github.com/cozy/cozy-ui/compare/v7.3.0...v7.4.0
 [7.3.0]: https://github.com/cozy/cozy-ui/compare/v7.2.1...v7.3.0
 [7.2.1]: https://github.com/cozy/cozy-ui/compare/v7.2.0...v7.2.1
 [7.2.0]: https://github.com/cozy/cozy-ui/compare/v7.1.0...v7.2.0
