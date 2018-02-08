@@ -7,7 +7,7 @@ Both look exactly the same, they share the same `theme`, `className` & `onClick`
 
 when `<ButtonLink>` has:
 - `href` to add an URL (default `''`)
-- `target` to enable `target="_blank"` (default `false`)
+- `target` to pass the link's `target` value (default `''`)
 
 #### Different themes:
 
@@ -93,16 +93,16 @@ const icons = require('../../src/icons');
 const { ButtonLink } = require('./index');
 <div>
   <p>
-    <ButtonLink size="tiny" href="https://cozy.io" target>Link to Cozy.io</ButtonLink>
+    <ButtonLink size="tiny" href="https://cozy.io" target="_blank">Link to Cozy.io</ButtonLink>
   </p>
   <p>
-    <ButtonLink size="small" href="https://cozy.io" target>Link to Cozy.io</ButtonLink>
+    <ButtonLink size="small" href="https://cozy.io" target="_blank">Link to Cozy.io</ButtonLink>
   </p>
   <p>
-    <ButtonLink href="https://cozy.io" target>Link to Cozy.io</ButtonLink>
+    <ButtonLink href="https://cozy.io" target="_blank">Link to Cozy.io</ButtonLink>
   </p>
   <p>
-    <ButtonLink size="large" href="https://cozy.io" target>Link to Cozy.io</ButtonLink>
+    <ButtonLink size="large" href="https://cozy.io" target="_blank">Link to Cozy.io</ButtonLink>
   </p>
 </div>
 ```
