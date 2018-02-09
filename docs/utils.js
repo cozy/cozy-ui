@@ -13,7 +13,7 @@ export const fakeIntentCreate = (action, doctype, options) => {
     iframe.onload = () => {
       onFrameLoaded()
 
-      const onClick = () => {
+      const onComplete = () => {
         node.removeChild(iframe)
         res({ result: 'OK' })
       }
@@ -25,7 +25,7 @@ export const fakeIntentCreate = (action, doctype, options) => {
       })
 
       ReactDOM.render(
-        React.createElement(IntentExample, { onClick, action, doctype, options }),
+        React.createElement(IntentExample, { onComplete, action, doctype, options }),
         iframe.contentDocument.body
       )
     }
