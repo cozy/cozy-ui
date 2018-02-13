@@ -7,9 +7,10 @@ Show an avatar with initials
 ```
 
 ### with initials only
+#### with name
 
 ```
-<Avatar firstname="Claude" lastname="Douillet" />
+<Avatar text="CD" />
 ```
 
 ### with image instead of initials
@@ -23,12 +24,12 @@ Show an avatar with initials
 <div>
   <div>
     <Avatar size="small" />
-    <Avatar firstname="Claude" lastname="Douillet" size="small" />
+    <Avatar text="CD" size="small" />
     <Avatar image="https://cozy.io/fr/images/cozy-logo_white.png" size="small" />
   </div>
   <div>
     <Avatar size="medium" />
-    <Avatar firstname="Claude" lastname="Douillet" size="medium" />
+    <Avatar text="CD" size="medium" />
     <Avatar image="https://cozy.io/fr/images/cozy-logo_white.png" size="medium" />
   </div>
 </div>
