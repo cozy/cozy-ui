@@ -24,7 +24,8 @@ module.exports = {
     {
       name: 'Layout',
       components: () => [
-        '../react/Sidebar/index.jsx'
+        '../react/Sidebar/index.jsx',
+        '../react/Hero/index.jsx'
       ]
     },
     {

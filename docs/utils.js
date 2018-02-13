@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import IntentExample from '../react/IntentOpener/IntentExample'
+import translations from './fixtures/en.json'
+import get from 'lodash/get'
 
 /** Fake cozy.client.intents.create to demonstrate features in Styleguide */
 export const fakeIntentCreate = (action, doctype, options) => {
@@ -33,4 +35,8 @@ export const fakeIntentCreate = (action, doctype, options) => {
     return p
   }
   return p
+}
+
+export const t = (path) => {
+  return get(translations, path)
 }
