@@ -1,4 +1,4 @@
-#### Input's available types (text, password, email, url)
+### Input's available types (text, password, email, url)
 
 ```
 <form>
@@ -9,8 +9,19 @@
 </form>
 ```
 
-#### Input when there's an error
+### Input when there's an error
 
 ```
 <Input error placeholder="This is a input[type=text] with error" />
+```
+
+### Props forwarding
+
+`Input` forwards unknown props to the underlying `<input />` element.
+
+```
+<div>
+  <Input placeholder='Type to see changes' value={state.value} onChange={ev => setState({value: ev.target.value})} />&nbsp;&nbsp;
+  Value: { state.value }
+</div>
 ```

@@ -31,3 +31,13 @@ import myIcon from 'my-icon.svg'
 
 <Icon icon={ myIcon } width='2rem' height='2rem' color='purple' />
 ```
+
+### Props forwarding
+
+Icon forwards unknown props to the underlying `<svg />` element.
+
+```
+<div>
+  <Icon icon='warning' onClick={() => alert('Be careful !')} width='2rem' height='2rem' color='purple' /><span>← Click it</span>
+</div>
+```

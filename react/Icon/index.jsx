@@ -4,7 +4,7 @@ import styles from './styles.styl'
 import icons from '../../src/icons'
 
 function Icon (props) {
-  const { icon, width, height, color, className, preserveColor } = props
+  const { icon, width, height, color, className, preserveColor, ...restProps } = props
   let style = props.style
   let anchor
   if (icon.id) {
@@ -28,12 +28,13 @@ function Icon (props) {
   const iconClass = className
     ? `${styles[iconClassName]} ${className}`
     : styles[iconClassName]
-
   return <svg
     className={iconClass}
     style={style}
     width={width || '16'}
-    height={height || '16'}>
+    height={height || '16'}
+    {...restProps}
+  >
     <use xlinkHref={anchor} />
   </svg>
 }
