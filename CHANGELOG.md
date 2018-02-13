@@ -24,6 +24,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [7.4.2] - 2018-02-13
+### Fixed
+- Enforce Button's modifier classes specificity to avoid conflicts when classes are not in order
+
+
 ## [7.4.1] - 2018-02-12
 ### Fixed
 - Cross button in Intent Modal was misplaced
@@ -744,7 +749,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.4.1...HEAD
+[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.4.2...HEAD
+[7.4.2]: https://github.com/cozy/cozy-ui/compare/v7.4.1...v7.4.2
 [7.4.1]: https://github.com/cozy/cozy-ui/compare/v7.4.0...v7.4.1
 [7.4.0]: https://github.com/cozy/cozy-ui/compare/v7.3.0...v7.4.0
 [7.3.0]: https://github.com/cozy/cozy-ui/compare/v7.2.1...v7.3.0
