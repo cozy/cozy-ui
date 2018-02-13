@@ -28,11 +28,12 @@ const nameToColor = (name = "") => {
 };
 
 
-export const Avatar = ({ firstname, lastname, image, size, className }) => {
+export const Avatar = ({ text, image, size, className }) => {
   const colored = {
-    backgroundColor: `${nameToColor(firstname)}`,
+    backgroundColor: `${nameToColor(text)}`,
     color: "white"
   };
+
   return (
     <div
       className={classNames(
@@ -41,7 +42,7 @@ export const Avatar = ({ firstname, lastname, image, size, className }) => {
         },
         className
       )}
-      {...{style: firstname ? colored : undefined}}
+      {...{style: text ? colored : undefined}}
     >
       {image &&
         <img
@@ -50,15 +51,12 @@ export const Avatar = ({ firstname, lastname, image, size, className }) => {
           alt=''
         />
       }
-      {!image && firstname && lastname &&
+      {!image && text &&
         <span className={styles["c-avatar-initials"]}>
-          {[
-            (firstname[0] || "").toUpperCase(),
-            (lastname[0] || "").toUpperCase()
-          ].join("")}
+          {text}
         </span>
       }
-      {!image && !firstname && !lastname &&
+      {!image && !text &&
         <Icon icon='people' />
       }
     </div>
@@ -66,16 +64,14 @@ export const Avatar = ({ firstname, lastname, image, size, className }) => {
 }
 
 Avatar.propTypes = {
-  firstname: PropTypes.string,
-  lastname: PropTypes.string,
+  text: PropTypes.string,
   image: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium']),
   className: PropTypes.string
 }
 
 Avatar.defaultProps = {
-  firstname: '',
-  lastname: '',
+  text: '',
   image: '',
   size: 'medium',
   className: ''
