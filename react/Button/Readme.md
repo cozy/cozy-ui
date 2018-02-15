@@ -15,11 +15,10 @@ when `<ButtonLink>` has:
 const { Button } = require('./index');
 
 <div>
-  <p><Button>normal action</Button></p>
-  <p><Button theme='danger'>erase or destroy</Button></p>
-  <p><Button theme='highlight'>events communication</Button></p>
-  <p><Button theme='secondary'>cancel or second option</Button></p>
-  <p><Button theme='danger-outline'>erase but not in danger</Button></p>
+  <p><Button label='normal action' /></p>
+  <p><Button theme='danger' label='erase or destroy' /></p>
+  <p><Button theme='highlight' label='events communication' /></p>
+  <p><Button theme='secondary' label='cancel or second option' /></p>
 </div>
 ```
 
@@ -29,10 +28,10 @@ const { Button } = require('./index');
 const { Button } = require('./index');
 
 <div>
-  <p><Button size='tiny'>Tiny</Button></p>
-  <p><Button size='small'>Small</Button></p>
-  <p><Button>Normal</Button></p>
-  <p><Button size='large'>Large</Button></p>
+  <p><Button size='tiny' label='Tiny' /></p>
+  <p><Button size='small' label='Small' /></p>
+  <p><Button label='Normal' /></p>
+  <p><Button size='large' label='Large' /></p>
 </div>
 ```
 
@@ -42,9 +41,9 @@ const { Button } = require('./index');
 const { Button } = require('./index');
 
 <div>
-  <p><Button>Normal</Button></p>
-  <p><Button extension="narrow">N…</Button></p>
-  <p><Button extension="full">Full width</Button></p>
+  <p><Button label='Normal'/></p>
+  <p><Button extension="narrow" label='N…'/></p>
+  <p><Button extension="full" label='Full width'/></p>
 </div>
 ```
 
@@ -52,27 +51,27 @@ const { Button } = require('./index');
 
 ```
 const { Button } = require('./index');
-<Button theme='danger-outline' onClick={ () => alert('yay !') }>Show alert</Button>
+<Button theme='danger-outline' onClick={ () => alert('yay !') } label='Show alert' />
 ```
 
 #### When loading, put a spinner
 
 ```
 const { Button } = require('./index');
-<Button busy>Loading</Button>
+<Button busy label='Loading'/>
 ```
 
 ```
 const { Button } = require('./index');
 initialState = { busy:false };
-<Button onClick={() => {setState(state => ({busy: !state.busy}))}} busy={state.busy}>Toggle busy</Button>
+<Button onClick={() => {setState(state => ({busy: !state.busy}))}} busy={state.busy} label='Toggle busy'/>
 ```
 
 #### To disable a button
 
 ```
 const { Button } = require('./index');
-<Button disabled>Loading</Button>
+<Button disabled label='Loading' />
 ```
 
 #### Create a button with an icon
@@ -83,7 +82,8 @@ The color of the icon is taken care of by the button style, there's no need to s
 const { Button } = require('./index');
 const icons = require('../../src/icons');
 <div>
-  <Button theme="danger"><Icon icon={ icons['delete'] } />delete</Button>
+  <Button theme="danger" icon={ icons['delete'] } label='delete' />
+  <Button theme="secondary" icon={ icons['dots'] } extension='narrow' />
 </div>
 ```
 
@@ -93,16 +93,16 @@ const icons = require('../../src/icons');
 const { ButtonLink } = require('./index');
 <div>
   <p>
-    <ButtonLink size="tiny" href="https://cozy.io" target="_blank">Link to Cozy.io</ButtonLink>
+    <ButtonLink size="tiny" href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
   </p>
   <p>
-    <ButtonLink size="small" href="https://cozy.io" target="_blank">Link to Cozy.io</ButtonLink>
+    <ButtonLink size="small" href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
   </p>
   <p>
-    <ButtonLink href="https://cozy.io" target="_blank">Link to Cozy.io</ButtonLink>
+    <ButtonLink href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
   </p>
   <p>
-    <ButtonLink size="large" href="https://cozy.io" target="_blank">Link to Cozy.io</ButtonLink>
+    <ButtonLink size="large" href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
   </p>
 </div>
 ```
