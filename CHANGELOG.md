@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Added
-- none yet
+- `<Button />` & `<ButtonLink />` take `label` and/or `icon` instead of `basic children`
 
 ### Removed
 - none yet

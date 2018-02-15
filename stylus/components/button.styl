@@ -29,6 +29,9 @@ $button
         fill         currentColor
         margin-right .4rem
 
+        &:only-child
+            margin 0
+
     input
         cursor pointer
 
@@ -55,7 +58,7 @@ $button
         background-color  scienceBlue
 
     &[aria-busy=true]
-        span::after
+        > span::after
             @extend    $icon-16
             @extend    $icon-spinner-white
             position   relative
