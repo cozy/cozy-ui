@@ -28,6 +28,8 @@ export const Button = props => {
   )
 }
 
+export default Button
+
 export const ButtonLink = props => {
   const { theme, size, extension, href, target, className, children, onClick } = props
   return (
