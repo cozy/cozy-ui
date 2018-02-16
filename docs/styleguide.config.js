@@ -52,6 +52,12 @@ module.exports = {
     }
   ],
   components: '../react/**/*.jsx',
+  template: 'template.html',
+  theme: {
+    fontFamily: {
+      base: 'Lato, sans-serif'
+    }
+  },
   webpackConfig: require('./webpack.config.js'),
   serverPort: 6161,
   skipComponentsWithoutExample: true,
