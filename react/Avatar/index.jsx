@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import palette from '../../stylus/settings/palette.json'
-import styles from './styles'
+import styles from './styles.styl'
 import Icon from '../Icon'
 
 const nameToColor = (name = "") => {

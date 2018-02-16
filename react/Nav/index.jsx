@@ -1,6 +1,6 @@
 import React from 'react'
 import Icon from '../Icon'
-import styles from './styles'
+import styles from './styles.styl'
 import cx from 'classnames'
 
 export const NavItem = ({ children }) => (
