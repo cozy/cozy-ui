@@ -10,7 +10,7 @@
 \*------------------------------------*/
 
 $modals
-    modal-width = 30rem
+    modal-width = 34rem
     position relative
     z-index $modal-index
 
@@ -30,7 +30,6 @@ $modals
     .coz-modal
         position          relative
         margin            auto
-        max-width         modal-width
         border-radius     .5rem
         min-width         modal-width
         max-height        100%
@@ -39,6 +38,21 @@ $modals
         color             charcoalGrey
         display           flex
         flex-direction    column
+
+    .coz-modal--small
+        max-width 34rem
+
+    .coz-modal--medium
+        max-width 36rem
+
+    .coz-modal--large
+        max-width 40rem
+
+    .coz-modal--xlarge
+        max-width 50rem
+
+    .coz-modal--xxlarge
+        max-width 60rem
 
     .coz-modal-content:first-child
     .coz-btn-modal-close + .coz-modal-content

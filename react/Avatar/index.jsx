@@ -3,6 +3,7 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import palette from '../../stylus/settings/palette.json'
 import styles from './styles.styl'
+import Icon from '../Icon'
 
 const nameToColor = (name = "") => {
   const colors = [
@@ -28,7 +29,7 @@ const nameToColor = (name = "") => {
 
 
 export const Avatar = ({ firstname, lastname, image, size, className }) => {
-  const bgColor = {
+  const colored = {
     backgroundColor: `${nameToColor(firstname)}`,
     color: "white"
   };
@@ -40,9 +41,16 @@ export const Avatar = ({ firstname, lastname, image, size, className }) => {
         },
         className
       )}
-      style={bgColor}
+      {...{style: firstname ? colored : undefined}}
     >
-      {!image &&
+      {image &&
+        <img
+          src={image}
+          className={styles["c-avatar-image"]}
+          alt=''
+        />
+      }
+      {!image && firstname && lastname &&
         <span className={styles["c-avatar-initials"]}>
           {[
             (firstname[0] || "").toUpperCase(),
@@ -50,12 +58,8 @@ export const Avatar = ({ firstname, lastname, image, size, className }) => {
           ].join("")}
         </span>
       }
-      {image &&
-        <img
-          src={image}
-          className={styles["c-avatar-image"]}
-          alt=''
-        />
+      {!image && !firstname && !lastname &&
+        <Icon icon='people' />
       }
     </div>
   )

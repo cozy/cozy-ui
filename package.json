@@ -1,6 +1,6 @@
 {
   "name": "cozy-ui",
-  "version": "7.2.1",
+  "version": "7.4.2",
   "description": "Cozy apps Ui SDK",
   "repository": {
     "type": "git",
@@ -40,6 +40,7 @@
     "git-directory-deploy": "^1.5.1",
     "kss": "^3.0.0-beta.18",
     "kss-webpack-plugin": "^1.2.0",
+    "lodash": "^4.17.5",
     "michelangelo": "https://github.com/cozy/michelangelo.git",
     "node-polyglot": "^2.2.2",
     "npm-run-all": "^4.0.1",

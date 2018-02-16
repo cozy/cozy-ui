@@ -33,7 +33,7 @@ export const ButtonLink = props => {
   return (
     <a
       href={href}
-      target={target ? '_blank' : undefined}
+      target={target}
       className={btnClass(theme, size, extension, className)}
       onClick={onClick}
     >
@@ -61,7 +61,7 @@ Button.PropTypes = {
 ButtonLink.PropTypes = {
    ...commonPropTypes,
   href: PropTypes.string.isRequired,
-  target: PropTypes.bool,
+  target: PropTypes.string,
 }
 
 // DefaultProps
@@ -81,7 +81,7 @@ Button.defaultProps = {
 
 ButtonLink.defaultProps = {
   ...commonDefaultProps,
-  target: false,
+  target: '',
   href: ''
 }
 

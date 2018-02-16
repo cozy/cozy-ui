@@ -34,6 +34,10 @@ $nav-item
         bottom 0
         background     silver
 
+        // Prevent double tap on tablets
+        @media (hover: none)
+            content none
+
     +medium-screen()
         margin 0 .75rem
         height        auto
@@ -43,10 +47,6 @@ $nav-item
         &:hover::before
             content  none
 
-    // Prevent double tap on tablets
-    @media not all and (pointer: fine)
-        &:hover::before
-            content none
 
 $nav-item-icon
     display inline-block

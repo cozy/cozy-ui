@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styles from './styles.styl'
 import Overlay from '../Overlay'
+import { Button} from '../Button'
 import Icon from '../Icon'
 import migrateProps from '../helpers/migrateProps'
 import palette from '../../stylus/settings/palette.json'
@@ -26,12 +27,14 @@ const ModalTitle = ({ children, className }) =>
   )
 
 const ModalCross = ({ onClick, className }) => (
-  <button
-    className={classNames(styles['c-btn'], styles['c-btn--close'], styles['coz-btn-modal-close'], className)}
+  <Button
+    theme="close"
+    className={classNames(styles['coz-btn-modal-close'], className)}
     onClick={onClick}
+    extension='narrow'
     >
     <Icon icon='cross' width='24' height='24' color={palette['coolGrey']} />
-  </button>
+  </Button>
 )
 
 const ModalDescription = ({ children, className }) => (
@@ -66,13 +69,21 @@ class Modal extends Component {
   }
 
   render () {
-    const { children, description, title, closable, dismissAction, overflowHidden, className, crossClassName, into } = this.props
+    const { children, description, title, closable, dismissAction, overflowHidden, className, crossClassName, into, size } = this.props
     const maybeWrapInPortal = children => into ? <Portal into={into}>{ children }</Portal> : children
     return maybeWrapInPortal(
       <div className={styles['coz-modal-container']}>
         <Overlay onEscape={closable && dismissAction}>
           <div className={styles['coz-modal-wrapper']} onClick={closable && this.handleOutsideClick}>
-            <div className={classNames(styles['coz-modal'], className, { [styles['coz-modal--overflowHidden']]: overflowHidden })}>
+            <div className={
+              classNames(
+                styles['coz-modal'],
+                styles[`coz-modal--${size}`],
+                className,
+                {
+                  [styles['coz-modal--overflowHidden']]: overflowHidden
+                }
+              )}>
               { closable && <ModalCross className={crossClassName} onClick={dismissAction} /> }
               { title && <ModalTitle>{ title }</ModalTitle> }
               { description && <ModalDescription>{ description }</ModalDescription> }
@@ -113,14 +124,16 @@ Modal.propTypes = {
   crossClassName: PropTypes.string,
   /** If has a value, the modal will be rendered inside a portal and its value will be passed to Portal
   to control the rendering destination of the Modal */
-  into: PropTypes.string
+  into: PropTypes.string,
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge', 'xxlarge'])
 }
 
 Modal.defaultProps = {
   primaryType: 'regular',
   secondaryType: 'secondary',
   closable: true,
-  overflowHidden: false
+  overflowHidden: false,
+  size: 'small'
 }
 
 export default migrateProps([

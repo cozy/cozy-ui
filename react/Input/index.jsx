@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
 const Input = props => {
-  const { type, id, className, value, placeholder, error } = props
+  const { type, id, className, value, placeholder, error, ...restProps } = props
   return (
     <input
       type={type}
@@ -16,6 +16,7 @@ const Input = props => {
         className)}
       placeholder={placeholder}
       value={value}
+      {...restProps}
     />
   )
 }
