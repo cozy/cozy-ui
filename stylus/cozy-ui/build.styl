@@ -17,6 +17,7 @@
 @require '../components/nav'
 @require '../components/table'
 @require '../components/avatar'
+@require '../components/alerts'
 @require '../utilities/*'
 
 /*------------------------------------*\
@@ -495,6 +496,46 @@ Display an avatar of a user or contact with initials or an image
 
 .c-avatar-image
     @extend $avatar-image
+
+
+/*
+ Alerts
+
+Display an alert at the top of the app on desktop and docked at the bottom on mobile. (I'm overwriting the fixed position for the sake of this example only)
+
+ Markup:
+<div class="c-alert" style="position: static;">
+    <div class="c-alert-wrapper {{modifier_class}}">
+        This is an alert
+    </div>
+</div>
+
+.c-alert--error - displays a warning/error alert
+.c-alert--success - displays a success alert (by default)
+.c-alert--info - displays a neutral info alert
+
+ Styleguide Components.alerts
+*/
+.c-alert
+    @extend $alert
+
+.c-alert-wrapper
+    @extend $alert-wrapper
+
+.c-alert-title
+    @extend $alert-title
+
+.c-alert--hidden
+    @extend $alert--hidden
+
+.c-alert--error
+    @extend $alert--error
+
+.c-alert--success
+    @extend $alert--success
+
+.c-alert--info
+    @extend $alert--info
 
 
 /*------------------------------------*\

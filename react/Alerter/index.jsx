@@ -55,7 +55,7 @@ export const alertClear = () => ({
 
 // Dumb component that wraps the alerts
 const Wrapper = ({ t, alerts, dismiss }) => (
-  <div className={styles['coz-alerter']}>
+  <div>
     {alerts.map(alert =>
       <Alert
         id={alert.id}
@@ -125,17 +125,21 @@ class Alert extends Component {
     return (
       <div
         className={classNames(
-          styles['coz-alert'],
-          styles[`coz-alert--${level}`],
-          hidden ? styles['coz-alert--hidden'] : ''
+          styles['c-alert'],
+          hidden ? styles['c-alert--hidden'] : ''
         )}
       >
-        <p>{message}</p>
-        {buttonText &&
-          <button onClick={buttonAction} className={classNames(styles['coz-btn'], styles[`coz-btn--alert-${type}`])}>
-            {buttonText}
-          </button>
-        }
+        <div className={classNames(
+          styles['c-alert-wrapper'],
+          styles[`c-alert--${level}`]
+        )}>
+          <p>{message}</p>
+          {buttonText &&
+            <button onClick={buttonAction} className={classNames(styles['c-btn'], styles[`c-btn--alert-${type}`])}>
+              {buttonText}
+            </button>
+          }
+        </div>
       </div>
     )
   }
