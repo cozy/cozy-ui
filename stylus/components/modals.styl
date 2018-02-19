@@ -10,7 +10,15 @@
 \*------------------------------------*/
 
 $modals
-    modal-width = 34rem
+    small = 34rem
+    medium = 36rem
+    large = 40rem
+    xlarge = 50rem
+    xxlarge = 60rem
+    small-padding = .5rem
+    medium-padding = 1.5rem
+    large-padding = 3rem
+
     position relative
     z-index $modal-index
 
@@ -19,19 +27,23 @@ $modals
         top               0
         left              0
         display           flex
-        flex-direction    row
-        align-items       start
+        flex-direction    column
+        align-items       center
         box-sizing        border-box
         width             100vw
         height            100vh
         overflow-y        scroll
-        padding           1rem
+        padding           large-padding
+
+        +small-screen()
+            padding medium-padding
+
+        +tiny-screen()
+            padding small-padding
 
     .coz-modal
         position          relative
-        margin            auto
         border-radius     .5rem
-        min-width         modal-width
         max-height        100%
 
         background-color  white
@@ -40,19 +52,34 @@ $modals
         flex-direction    column
 
     .coz-modal--small
-        max-width 34rem
+        width small
+
+        @media (max-width: small + small-padding * 2)
+            width auto
 
     .coz-modal--medium
-        max-width 36rem
+        width medium
+
+        @media (max-width: medium + medium-padding * 2)
+            width auto
 
     .coz-modal--large
-        max-width 40rem
+        width large
+
+        @media (max-width: large + medium-padding * 2)
+            width auto
 
     .coz-modal--xlarge
-        max-width 50rem
+        width xlarge
+
+        @media (max-width: xlarge + large-padding * 2)
+            width auto
 
     .coz-modal--xxlarge
-        max-width 60rem
+        width xxlarge
+
+        @media (max-width: xxlarge + large-padding * 2)
+            width auto
 
     .coz-modal-content:first-child
     .coz-btn-modal-close + .coz-modal-content
@@ -70,7 +97,6 @@ $modals
 
     .coz-modal-content.coz-modal-title
         margin       0 0 1rem
-        // font is 1.5em
         padding      1.5rem 3rem 0 1.5rem
         font-weight  bold
         overflow     visible
@@ -126,10 +152,3 @@ $modals
     .coz-modal--fullscreen
     .coz-modal--overflowHidden
         overflow hidden
-
-    @media (max-width (modal-width + 2rem))
-        .coz-modal
-            margin      auto
-            max-width   modal-width
-            min-width   auto
-            width       100%
