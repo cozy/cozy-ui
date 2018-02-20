@@ -54,13 +54,13 @@ const commonPropTypes = {
   onClick: PropTypes.func
 }
 
-Button.PropTypes = {
+Button.propTypes = {
    ...commonPropTypes,
   busy: PropTypes.bool,
   disabled: PropTypes.bool
 }
 
-ButtonLink.PropTypes = {
+ButtonLink.propTypes = {
    ...commonPropTypes,
   href: PropTypes.string.isRequired,
   target: PropTypes.string,
