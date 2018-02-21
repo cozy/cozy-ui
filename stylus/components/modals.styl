@@ -1,6 +1,7 @@
 @require '../settings/palette'
 @require '../settings/z-index'
 @require '../settings/breakpoints'
+@require '../objects/layouts'
 
 /*------------------------------------*\
   Modals
@@ -42,14 +43,13 @@ $modals
             padding small-padding
 
     .coz-modal
+        @extend           $elastic
         position          relative
         border-radius     .5rem
         max-height        100%
 
         background-color  white
         color             charcoalGrey
-        display           flex
-        flex-direction    column
 
     .coz-modal--small
         width small
@@ -89,6 +89,7 @@ $modals
         padding-bottom    1.5rem
 
     .coz-modal-content
+        @extend $elastic-content
         padding 0 1.5rem
         overflow auto
 
@@ -96,6 +97,7 @@ $modals
         border-top 1px solid silver
 
     .coz-modal-content.coz-modal-title
+        @extend      $elastic-bar
         margin       0 0 1rem
         padding      1.5rem 3rem 0 1.5rem
         font-weight  bold
@@ -122,6 +124,7 @@ $modals
             background-size 1.5rem
 
     .coz-modal-buttons
+        @extend     $elastic-bar
         margin-top  1.5rem
         text-align  right
         overflow    visible
