@@ -89,7 +89,7 @@ const hideModal = () => setState({ modalDisplayed: false });
       dismissAction={hideModal}
       overflowHidden={true}
       title='Ada Lovelace'
-      description={ content.ada.short } /> }
+      description={ content.ada.long } /> }
 </div>
 ```
 
