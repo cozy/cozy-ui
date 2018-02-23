@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
 ### Changed
-- Nav in Sidebar layout changes, <Icon /> are now mandatory in Nav's items
+- none yet
 
 ### Fixed
 - none yet
@@ -23,6 +23,22 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Security
 - none yet
+
+## [7.5.0] - 2018-02-23
+### Changed
+- Nav in Sidebar layout changes, <Icon /> are now mandatory in Nav's items
+- `<Avatar />` waits for any string now and doesn't process initials anymore
+
+### Fixed
+- Modals keep their set size unless there's no room for it anymore
+- `<ButtonLink />` on normal size is now vertically centered
+- Added `.styl` extensions to import to avoid resolving issues
+- `<Icon />`'s SVGs where sometimes blurry on Firefox
+
+### Added
+- Forwarding props to `<Icon />`, `<Input />` & `<Textarea />`
+- `<Hero />` component
+
 
 ## [7.4.2] - 2018-02-13
 ### Fixed
@@ -749,7 +765,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.4.2...HEAD
+[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.5.0...HEAD
+[7.5.0]: https://github.com/cozy/cozy-ui/compare/v7.4.2...v7.5.0
 [7.4.2]: https://github.com/cozy/cozy-ui/compare/v7.4.1...v7.4.2
 [7.4.1]: https://github.com/cozy/cozy-ui/compare/v7.4.0...v7.4.1
 [7.4.0]: https://github.com/cozy/cozy-ui/compare/v7.3.0...v7.4.0
