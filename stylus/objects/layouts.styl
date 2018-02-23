@@ -64,6 +64,20 @@ $app
         overflow-x hidden
         overflow-y auto
 
+    +medium-screen()
+        display block
+
+        main,
+        main > [role=contentinfo]
+            display block
+            overflow visible
+
+        // This pseudo-element is a "ghost" element replacing bar
+        &:before
+            content ''
+            display block
+            height 3rem
+
 // STICKY layout
 // When you want a sidebar and you want it to act like a sticky footer on mobile
 $app-2panes-sticky
@@ -82,15 +96,7 @@ $app-2panes-sticky
         height auto
 
     +medium-screen()
-        display block
-
-        main,
-        main > [role=contentinfo]
-            display block
-            overflow visible
-
-        // Those pseudo-elements are "ghost" elements replacing bar and nav
-        &:before
+        // This pseudo-element is a "ghost" element replacing nav
         &:after
             content ''
             display block
