@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
 const Textarea = props => {
-  const { className, placeholder, children, error } = props
+  const { className, placeholder, children, error, ...restProps } = props
   return (
     <textarea
       placeholder={placeholder}
@@ -13,6 +13,7 @@ const Textarea = props => {
           [styles[`is-error`]] : error
         },
         className)}
+      {...restProps}
     >
       {children}
     </textarea>
