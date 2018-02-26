@@ -10,148 +10,190 @@
   This file contains all needs for modals
 \*------------------------------------*/
 
-$modals
-    small = 34rem
-    medium = 36rem
-    large = 40rem
-    xlarge = 50rem
-    xxlarge = 60rem
-    small-padding = .5rem
-    medium-padding = 1.5rem
-    large-padding = 3rem
+// Modal sizes (width/margin/padding)
+small-width = 34rem
+medium-width = 36rem
+large-width = 40rem
+xlarge-width = 50rem
+xxlarge-width = 60rem
+small-margin = .5rem
+medium-margin = 1.5rem
+large-margin = 3rem
 
+$modals
     position relative
     z-index $modal-index
 
-    .coz-modal-wrapper
-        position          fixed
-        top               0
-        left              0
-        display           flex
-        flex-direction    column
-        align-items       center
-        box-sizing        border-box
-        width             100vw
-        height            100vh
-        overflow-y        scroll
-        padding           large-padding
+$modal-wrapper
+    position fixed
+    top 0
+    left 0
+    display flex
+    flex-direction column
+    align-items center
+    box-sizing border-box
+    width 100vw
+    height 100vh
+    overflow-y scroll
+    padding large-margin
 
-        +small-screen()
-            padding medium-padding
+    +small-screen()
+        padding medium-margin
 
-        +tiny-screen()
-            padding small-padding
+    +tiny-screen()
+        padding small-margin
 
-    .coz-modal
-        @extend           $elastic
-        position          relative
-        border-radius     .5rem
-        max-height        100%
+$modal
+    @extend $elastic
+    position relative
+    border-radius .5rem
+    max-height 100%
+    background-color white
+    color charcoalGrey
 
-        background-color  white
-        color             charcoalGrey
+$modal--small
+    width small-width
 
-    .coz-modal--small
-        width small
+    @media (max-width: small-width + small-margin * 2)
+        width auto
 
-        @media (max-width: small + small-padding * 2)
-            width auto
+$modal--medium
+    width medium-width
 
-    .coz-modal--medium
-        width medium
+    @media (max-width: medium-width + medium-margin * 2)
+        width auto
 
-        @media (max-width: medium + medium-padding * 2)
-            width auto
+$modal--large
+    width large-width
 
-    .coz-modal--large
-        width large
+    @media (max-width: large-width + medium-margin * 2)
+        width auto
 
-        @media (max-width: large + medium-padding * 2)
-            width auto
+$modal--xlarge
+    width xlarge-width
 
-    .coz-modal--xlarge
-        width xlarge
+    @media (max-width: xlarge-width + large-margin * 2)
+        width auto
 
-        @media (max-width: xlarge + large-padding * 2)
-            width auto
+$modal--xxlarge
+    width xxlarge-width
 
-    .coz-modal--xxlarge
-        width xxlarge
+    @media (max-width: xxlarge-width + large-margin * 2)
+        width auto
 
-        @media (max-width: xxlarge + large-padding * 2)
-            width auto
+$modal-header
+    @extend $elastic-bar
+    margin 0 0 1rem
+    padding 1.5rem 3rem 0 1.5rem
+    font-weight bold
+    overflow visible
 
-    .coz-modal-content:first-child
-    .coz-btn-modal-close + .coz-modal-content
-        padding-top    1.5rem
+    +small-screen()
+        font-size 1.25rem
+        margin-bottom .5rem
 
-    .coz-modal-content:last-child
-        padding-bottom    1.5rem
+$modal-content
+    @extend $elastic-content
+    padding 0 1.5rem
 
-    .coz-modal-content
-        @extend $elastic-content
-        padding 0 1.5rem
-        overflow auto
+    &:last-child
+        padding-bottom 1.5rem
+    &:first-child
+        padding-top 1.5rem
 
-    .coz-modal-section
-        border-top 1px solid silver
+$modal-footer
+    @extend $elastic-bar
+    padding 1.5rem
+    text-align right
 
-    .coz-modal-content.coz-modal-title
-        @extend      $elastic-bar
-        margin       0 0 1rem
-        padding      1.5rem 3rem 0 1.5rem
-        font-weight  bold
-        overflow     visible
+    button:last-child
+        margin-right 0
 
-        +small-screen()
-            font-size 1.25rem
-            margin-bottom .5rem
-
-    .coz-btn-modal-close
-        position         absolute
-        top              1.125rem
-        right            1em
-        margin           0
-        padding          0
-        background-size  1.75rem
-        background-color transparent
-        cursor           pointer
-        display block
-        width 2.5rem
-        height 2.5rem
-
-        +small-screen()
-            background-size 1.5rem
-
-    .coz-modal-buttons
-        @extend     $elastic-bar
-        margin-top  1.5rem
-        text-align  right
-        overflow    visible
+    +small-screen()
+        display flex
+        flex-direction column-reverse
 
         button
-            margin-right  0
-            margin-left   .625rem
-            font-size     .9rem
+            width 100%
+            margin 0
+            // since the order is reverse we target the first-child
+            &:not(:first-child)
+                margin-bottom .25rem
 
-        +small-screen()
-            &
-                display flex
-                flex-direction column-reverse
-                flex-shrink 0
-                margin-top .5rem
-                button
-                    width 100%
-                    margin-left 0
-                // since the order is reverse we target the first-child
-                button:not(:first-child)
-                    margin-bottom .25rem
+$modal-section
+    border-top 1px solid silver
 
-        &.coz-modal--hidden
-            top                         -25%
-            opacity                     0
-            transition-timing-function  ease-in
+$modal-close
+    position         absolute
+    top              1.125rem
+    right            1em
+    margin           0
+    padding          0
+    background-size  1.75rem
+    background-color transparent
+    cursor           pointer
+    display block
+    width 2.5rem
+    height 2.5rem
 
-    .coz-modal--fullscreen
-    .coz-modal--overflowHidden
-        overflow hidden
+    +small-screen()
+        width 1.5rem
+        height 1.5rem
+
+// .coz-btn-modal-close + .coz-modal-content
+//     padding-top    1.5rem
+
+
+
+
+
+
+
+
+
+
+
+
+// $modals
+
+
+//     .coz-modal-content:first-child
+//     .coz-btn-modal-close + .coz-modal-content
+//         padding-top    1.5rem
+
+
+
+
+
+//     .coz-modal-buttons
+//         @extend     $elastic-bar
+//         margin-top  1.5rem
+//         text-align  right
+//         overflow    visible
+
+//         button
+//             margin-right  0
+//             margin-left   .625rem
+//             font-size     .9rem
+
+//         +small-screen()
+//             &
+//                 display flex
+//                 flex-direction column-reverse
+//                 flex-shrink 0
+//                 margin-top .5rem
+//                 button
+//                     width 100%
+//                     margin-left 0
+//                 // since the order is reverse we target the first-child
+//                 button:not(:first-child)
+//                     margin-bottom .25rem
+
+//         &.coz-modal--hidden
+//             top                         -25%
+//             opacity                     0
+//             transition-timing-function  ease-in
+
+//     .coz-modal--fullscreen
+//     .coz-modal--overflowHidden
+//         overflow hidden
