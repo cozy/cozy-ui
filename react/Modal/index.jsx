@@ -3,25 +3,25 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styles from './styles.styl'
 import Overlay from '../Overlay'
-import { Button} from '../Button'
+import { Button } from '../Button'
 import Icon from '../Icon'
 import migrateProps from '../helpers/migrateProps'
 import palette from '../../stylus/settings/palette.json'
 import Portal from 'preact-portal'
 
 const ModalContent = ({children, className}) =>
-  (<div className={classNames(styles['coz-modal-content'], className)}>
+  (<div className={classNames(styles['c-modal-content'], className)}>
     {children}
   </div>)
 
 const ModalSection = ({children, className}) =>
-  (<div className={classNames(styles['coz-modal-content'], styles['coz-modal-section'], className)}>
+  (<div className={classNames(styles['c-modal-content'], styles['c-modal-section'], className)}>
     {children}
   </div>)
 
-const ModalTitle = ({ children, className }) =>
+const ModalHeader = ({ children, className }) =>
   (
-    <h2 className={classNames(styles['coz-modal-content'], styles['coz-modal-title'], className)}>
+    <h2 className={classNames(styles['c-modal-header'], className)}>
       {children}
     </h2>
   )
@@ -29,7 +29,7 @@ const ModalTitle = ({ children, className }) =>
 const ModalCross = ({ onClick, className }) => (
   <Button
     theme="close"
-    className={classNames(styles['coz-btn-modal-close'], className)}
+    className={classNames(styles['c-modal-close'], className)}
     onClick={onClick}
     extension='narrow'
     >
@@ -38,26 +38,26 @@ const ModalCross = ({ onClick, className }) => (
 )
 
 const ModalDescription = ({ children, className }) => (
-  <div className={classNames(styles['coz-modal-content'], styles['coz-description'], className)}>
+  <div className={classNames(styles['c-modal-content'], className)}>
     {children}
   </div>
 )
 
-const ModalButtons = ({ secondaryText, secondaryAction, secondaryType, primaryText, primaryAction, primaryType }) => {
+const ModalFooter = ({ secondaryText, secondaryAction, secondaryType, primaryText, primaryAction, primaryType }) => {
   const displayPrimary = primaryText && primaryAction
   const displaySecondary = secondaryText && secondaryAction
   return (displaySecondary || displayPrimary) &&
     (
-      <div className={classNames(styles['coz-modal-content'], styles['coz-modal-buttons'])}>
+      <div className={classNames(styles['c-modal-footer'])}>
         { displaySecondary &&
-          <button className={classNames(styles['c-btn'], styles['c-btn--' + secondaryType])} onClick={secondaryAction}>
+          <Button theme={secondaryType} onClick={secondaryAction}>
             {secondaryText}
-          </button>
+          </Button>
         }
         { displayPrimary &&
-          <button className={classNames(styles['c-btn'], styles['c-btn--' + primaryType])} onClick={primaryAction}>
+          <Button theme={primaryType} onClick={primaryAction}>
             {primaryText}
-          </button>
+          </Button>
         }
       </div>
     )
@@ -72,23 +72,23 @@ class Modal extends Component {
     const { children, description, title, closable, dismissAction, overflowHidden, className, crossClassName, into, size } = this.props
     const maybeWrapInPortal = children => into ? <Portal into={into}>{ children }</Portal> : children
     return maybeWrapInPortal(
-      <div className={styles['coz-modal-container']}>
+      <div className={styles['c-modal-container']}>
         <Overlay onEscape={closable && dismissAction}>
-          <div className={styles['coz-modal-wrapper']} onClick={closable && this.handleOutsideClick}>
+          <div className={styles['c-modal-wrapper']} onClick={closable && this.handleOutsideClick}>
             <div className={
               classNames(
-                styles['coz-modal'],
-                styles[`coz-modal--${size}`],
+                styles['c-modal'],
+                styles[`c-modal--${size}`],
                 className,
                 {
-                  [styles['coz-modal--overflowHidden']]: overflowHidden
+                  [styles['c-modal--overflowHidden']]: overflowHidden
                 }
               )}>
               { closable && <ModalCross className={crossClassName} onClick={dismissAction} /> }
-              { title && <ModalTitle>{ title }</ModalTitle> }
+              { title && <ModalHeader>{ title }</ModalHeader> }
               { description && <ModalDescription>{ description }</ModalDescription> }
               { children }
-              <ModalButtons {...this.props} />
+              <ModalFooter {...this.props} />
             </div>
           </div>
         </Overlay>
@@ -167,15 +167,15 @@ export default migrateProps([
 Object.assign(Modal, {
   ModalContent,
   ModalSection,
-  ModalButtons,
-  ModalTitle,
+  ModalFooter,
+  ModalHeader,
   ModalDescription
 })
 
 export {
   ModalContent,
   ModalSection,
-  ModalButtons,
-  ModalTitle,
+  ModalFooter,
+  ModalHeader,
   ModalDescription
 }
