@@ -7,11 +7,11 @@
 
 // variables
 
-tiny        =  543
-small       =  768
-medium      = 1023
-large       = 1200
-extra-large = 1439
+BP-tiny        =  543
+BP-small       =  768
+BP-medium      = 1023
+BP-large       = 1200
+BP-extra-large = 1439
 
 /*
     Media Queries mixins
@@ -45,7 +45,7 @@ size-helper(direction, size)
     Styleguide Settings.breakpoints.tiny
 */
 tiny-screen(direction='max')
-    @media ({direction}-width: (size-helper(direction, tiny)/basefont)rem)
+    @media ({direction}-width: (size-helper(direction, BP-tiny)/basefont)rem)
         {block}
 
 /*
@@ -59,7 +59,7 @@ tiny-screen(direction='max')
     Styleguide Settings.breakpoints.small
 */
 small-screen(direction='max')
-    @media ({direction}-width: (size-helper(direction, small)/basefont)rem)
+    @media ({direction}-width: (size-helper(direction, BP-small)/basefont)rem)
         {block}
 
 /*
@@ -73,7 +73,7 @@ small-screen(direction='max')
     Styleguide Settings.breakpoints.medium
 */
 medium-screen(direction='max')
-    @media ({direction}-width: (size-helper(direction, medium)/basefont)rem)
+    @media ({direction}-width: (size-helper(direction, BP-medium)/basefont)rem)
         {block}
 
 /*
@@ -87,7 +87,7 @@ medium-screen(direction='max')
     Styleguide Settings.breakpoints.large
 */
 large-screen(direction='max')
-    @media ({direction}-width: (size-helper(direction, large)/basefont)rem)
+    @media ({direction}-width: (size-helper(direction, BP-large)/basefont)rem)
         {block}
 
 /*
@@ -101,7 +101,7 @@ large-screen(direction='max')
     Styleguide Settings.breakpoints.extra-large
 */
 extra-large-screen(direction='max')
-    @media ({direction}-width: (size-helper(direction, extra-large)/basefont)rem)
+    @media ({direction}-width: (size-helper(direction, BP-extra-large)/basefont)rem)
         {block}
 
 // mixins named
@@ -116,7 +116,7 @@ extra-large-screen(direction='max')
     Styleguide Settings.breakpoints.desktop
 */
 desktop()
-    @media (min-width: (size-helper('min', medium)/basefont)rem)
+    @media (min-width: (size-helper('min', BP-medium)/basefont)rem)
         {block}
 
 /*
@@ -129,7 +129,7 @@ desktop()
     Styleguide Settings.breakpoints.tablet
 */
 tablet()
-    @media (min-width: (size-helper('min', small)/basefont)rem) and (max-width: (size-helper('max', medium)/basefont)rem)
+    @media (min-width: (size-helper('min', BP-small)/basefont)rem) and (max-width: (size-helper('max', BP-medium)/basefont)rem)
         {block}
 
 /*
@@ -155,7 +155,7 @@ mobile()
     Styleguide Settings.breakpoints.gt-mobile
 */
 gt-mobile()
-    @media (min-width: (size-helper('min', small)/basefont)rem)
+    @media (min-width: (size-helper('min', BP-small)/basefont)rem)
         {block}
 
 /*
@@ -168,7 +168,7 @@ gt-mobile()
     Styleguide Settings.breakpoints.gt-tablet
 */
 gt-tablet()
-    @media (min-width: (size-helper('min', medium)/basefont)rem)
+    @media (min-width: (size-helper('min', BP-medium)/basefont)rem)
         {block}
 
 /*
