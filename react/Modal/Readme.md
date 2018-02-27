@@ -11,6 +11,19 @@ initialState = { modalDisplayed: false};
 </div>
 ```
 
+### Simple with no title
+
+```
+initialState = { modalDisplayed: false};
+
+<div>
+  <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
+    Toggle modal
+  </button>
+  {state.modalDisplayed && <Modal  description={content.ada.short} dismissAction={() => setState({ modalDisplayed: false })} /> }
+</div>
+```
+
 ### Size
 
 Several sizes avalaible: `small`, `medium`, `large`, `xlarge`, `xxlarge`.
@@ -31,6 +44,25 @@ const sizes = [
     { size }
   </button>)}
   {state.modalDisplayed && <Modal title={ state.size + ' modal'} size={state.size} description={content.ada.short} dismissAction={() => setState({ modalDisplayed: false })} /> }
+</div>
+```
+
+### Space
+
+Besides the default spacing inside a Modal, you can choose another type from this two avalaible: `compressed` and `spacious`
+
+```
+initialState = { modalDisplayed: false};
+const spaces = [
+  'compressed',
+  'spacious',
+];
+
+<div>
+  {spaces.map(space => <button onClick={()=>setState({ space, modalDisplayed: !state.modalDisplayed, })}>
+    { space }
+  </button>)}
+  {state.modalDisplayed && <Modal title={ state.space + ' modal'} space={state.space} description={content.ada.short} dismissAction={() => setState({ modalDisplayed: false })} /> }
 </div>
 ```
 
@@ -89,7 +121,7 @@ const hideModal = () => setState({ modalDisplayed: false });
       dismissAction={hideModal}
       overflowHidden={true}
       title='Ada Lovelace'
-      description={ content.ada.long } /> }
+      description={ content.ada.short } /> }
 </div>
 ```
 
@@ -98,7 +130,7 @@ const hideModal = () => setState({ modalDisplayed: false });
 For more complex modals, you can use individual components.
 
 ```
-const { ModalDescription, ModalTitle } = Modal;
+const { ModalDescription, ModalHeader } = Modal;
 
 <div>
   <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
@@ -109,7 +141,7 @@ const { ModalDescription, ModalTitle } = Modal;
         overflowHidden={true}
         dismissAction={()=>setState({ modalDisplayed: false})} >
       <div style={{background: 'red', color: 'white'}}>
-        <ModalTitle>Yo ho ho !</ModalTitle>
+        <ModalHeader>Yo ho ho !</ModalHeader>
       </div>
       <ModalDescription className='u-mt-half'>
         { content.ada.short }

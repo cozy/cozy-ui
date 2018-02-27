@@ -40,5 +40,27 @@
 .c-modal-content
     @extend $modal-content
 
+.c-modal--compressed
+    .c-modal-header
+        @extend $modal-header--compressed
+    .c-modal-content
+        @extend $modal-content--compressed
+    .c-modal-footer
+        @extend $modal-footer--compressed
+
+.c-modal--spacious
+    .c-modal-header
+        @extend $modal-header--spacious
+    .c-modal-content
+        @extend $modal-content--spacious
+    .c-modal-footer
+        @extend $modal-footer--spacious
+
 .c-modal-close
     @extend $modal-close
+
+.c-modal--overflowHidden
+    @extend $modal--hidden
+
+.c-modal-close + .c-modal-content
+    margin-top 4rem

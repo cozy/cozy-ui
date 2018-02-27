@@ -10,15 +10,24 @@
   This file contains all needs for modals
 \*------------------------------------*/
 
-// Modal sizes (width/margin/padding)
+// Modal sizes
 small-width = 34rem
 medium-width = 36rem
 large-width = 40rem
 xlarge-width = 50rem
 xxlarge-width = 60rem
+
+// Modal margins
 small-margin = .5rem
 medium-margin = 1.5rem
 large-margin = 3rem
+
+// Modal paddings
+tiny-padding = 1rem
+small-padding = 1.5rem
+medium-padding = 2rem
+large-padding = 3rem
+
 
 $modals
     position relative
@@ -84,26 +93,70 @@ $modal--xxlarge
 $modal-header
     @extend $elastic-bar
     margin 0 0 1rem
-    padding 1.5rem 3rem 0 1.5rem
+    padding medium-padding 3rem 0 medium-padding
     font-weight bold
     overflow visible
+    min-height 2.5rem
+
+    +tiny-screen()
+        margin-bottom .5rem
+        padding small-padding 2rem 0 small-padding
+        font-size 1.25rem
+
+$modal-header--compressed
+    padding small-padding 3rem 0 small-padding
+
+    +tiny-screen()
+        padding tiny-padding 2rem 0 tiny-padding
+
+$modal-header--spacious
+    padding large-padding 3rem 0 large-padding
 
     +small-screen()
-        font-size 1.25rem
-        margin-bottom .5rem
+        padding medium-padding 2rem 0 medium-padding
 
 $modal-content
     @extend $elastic-content
-    padding 0 1.5rem
+    padding 0 medium-padding
 
     &:last-child
-        padding-bottom 1.5rem
-    &:first-child
-        padding-top 1.5rem
+        padding-bottom medium-padding
+        border-bottom-right-radius .5rem
+        border-bottom-left-radius .5rem
+
+    +tiny-screen()
+        padding 0 small-padding
+
+        &:last-child
+            padding-bottom small-padding
+
+$modal-content--compressed
+    padding 0 small-padding
+
+    &:last-child
+        padding-bottom small-padding
+
+    +tiny-screen()
+        padding 0 tiny-padding
+
+        &:last-child
+            padding-bottom tiny-padding
+
+$modal-content--spacious
+    padding 0 large-padding
+
+    &:last-child
+        padding-bottom large-padding
+
+    +small-screen()
+        padding 0 medium-padding
+
+        &:last-child
+            padding-bottom medium-padding
 
 $modal-footer
     @extend $elastic-bar
-    padding 1.5rem
+    padding medium-padding
     text-align right
 
     button:last-child
@@ -116,9 +169,26 @@ $modal-footer
         button
             width 100%
             margin 0
+
             // since the order is reverse we target the first-child
             &:not(:first-child)
                 margin-bottom .25rem
+
+    +tiny-screen()
+        padding small-padding
+
+$modal-footer--compressed
+    padding small-padding
+
+    +tiny-screen()
+        padding tiny-padding
+
+$modal-footer--spacious
+    padding large-padding
+
+    +tiny-screen()
+        padding medium-padding
+
 
 $modal-section
     border-top 1px solid silver
@@ -140,60 +210,5 @@ $modal-close
         width 1.5rem
         height 1.5rem
 
-// .coz-btn-modal-close + .coz-modal-content
-//     padding-top    1.5rem
-
-
-
-
-
-
-
-
-
-
-
-
-// $modals
-
-
-//     .coz-modal-content:first-child
-//     .coz-btn-modal-close + .coz-modal-content
-//         padding-top    1.5rem
-
-
-
-
-
-//     .coz-modal-buttons
-//         @extend     $elastic-bar
-//         margin-top  1.5rem
-//         text-align  right
-//         overflow    visible
-
-//         button
-//             margin-right  0
-//             margin-left   .625rem
-//             font-size     .9rem
-
-//         +small-screen()
-//             &
-//                 display flex
-//                 flex-direction column-reverse
-//                 flex-shrink 0
-//                 margin-top .5rem
-//                 button
-//                     width 100%
-//                     margin-left 0
-//                 // since the order is reverse we target the first-child
-//                 button:not(:first-child)
-//                     margin-bottom .25rem
-
-//         &.coz-modal--hidden
-//             top                         -25%
-//             opacity                     0
-//             transition-timing-function  ease-in
-
-//     .coz-modal--fullscreen
-//     .coz-modal--overflowHidden
-//         overflow hidden
+$modal--hidden
+    overflow hidden
