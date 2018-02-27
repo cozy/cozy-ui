@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Added
-- `<Button />` & `<ButtonLink />` take `label` and/or `icon` instead of `basic children`
+- `<Button />` & `<ButtonLink />` take `label` and/or `icon` instead of `basic children`. A [codeshift](http://astexplorer.net/#/gist/cc94c9c4cc446d1958729300581bb250/2daaa0365e0424e191250f888704b1d9fc551fe9) is available for easier transition.
 
 ### Removed
 - none yet
