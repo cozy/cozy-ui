@@ -26,6 +26,11 @@ const ModalHeader = ({ children, className }) =>
     </h2>
   )
 
+const ModalTitle = () => {
+  console.log('ModalTitle is a deprecated composant, use ModalHeader instead')
+  return <ModalHeader {...props } />
+}
+
 const ModalCross = ({ onClick, className }) => (
   <Button
     theme="close"
@@ -50,17 +55,18 @@ const ModalFooter = ({ secondaryText, secondaryAction, secondaryType, primaryTex
     (
       <div className={classNames(styles['c-modal-footer'])}>
         { displaySecondary &&
-          <Button theme={secondaryType} onClick={secondaryAction}>
-            {secondaryText}
-          </Button>
+          <Button theme={secondaryType} onClick={secondaryAction} label={secondaryText} />
         }
         { displayPrimary &&
-          <Button theme={primaryType} onClick={primaryAction}>
-            {primaryText}
-          </Button>
+          <Button theme={primaryType} onClick={primaryAction} label={primaryText} />
         }
       </div>
     )
+}
+
+const ModalButtons = () => {
+  console.log('ModalButtons is a deprecated composant, use Modalfooter instead')
+  return <ModalFooter {...props } />
 }
 
 class Modal extends Component {
@@ -69,7 +75,7 @@ class Modal extends Component {
   }
 
   render () {
-    const { children, description, title, closable, dismissAction, overflowHidden, className, crossClassName, into, size } = this.props
+    const { children, description, title, closable, dismissAction, overflowHidden, className, crossClassName, into, size, space } = this.props
     const maybeWrapInPortal = children => into ? <Portal into={into}>{ children }</Portal> : children
     return maybeWrapInPortal(
       <div className={styles['c-modal-container']}>
@@ -81,13 +87,14 @@ class Modal extends Component {
                 styles[`c-modal--${size}`],
                 className,
                 {
-                  [styles['c-modal--overflowHidden']]: overflowHidden
+                  [styles['c-modal--overflowHidden']]: overflowHidden,
+                  [styles[`c-modal--${space}`]]: space
                 }
               )}>
               { closable && <ModalCross className={crossClassName} onClick={dismissAction} /> }
-              { title && <ModalHeader>{ title }</ModalHeader> }
+              { title && <ModalHeader>{title}</ModalHeader> }
               { description && <ModalDescription>{ description }</ModalDescription> }
-              { children }
+              {children}
               <ModalFooter {...this.props} />
             </div>
           </div>
@@ -125,7 +132,8 @@ Modal.propTypes = {
   /** If has a value, the modal will be rendered inside a portal and its value will be passed to Portal
   to control the rendering destination of the Modal */
   into: PropTypes.string,
-  size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge', 'xxlarge'])
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge', 'xxlarge']),
+  space: PropTypes.oneOf(['compressed', 'spacious'])
 }
 
 Modal.defaultProps = {
@@ -133,10 +141,10 @@ Modal.defaultProps = {
   secondaryType: 'secondary',
   closable: true,
   overflowHidden: false,
-  size: 'small'
+  size: 'small',
 }
 
-export default migrateProps([
+const EnhancedModal = migrateProps([
   { src: 'withCross', dest: 'closable' }, // withCross -> closable
   {
     fn: props => {
@@ -164,13 +172,15 @@ export default migrateProps([
 ])(Modal)
 
 // to be able to use them in Styleguidist
-Object.assign(Modal, {
+Object.assign(EnhancedModal, {
   ModalContent,
   ModalSection,
   ModalFooter,
   ModalHeader,
   ModalDescription
 })
+
+export default EnhancedModal
 
 export {
   ModalContent,
