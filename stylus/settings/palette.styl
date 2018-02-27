@@ -1,4 +1,9 @@
 json('palette.json')
+colors=json('palette.json', { hash: true })
+
+for color in keys(colors)
+    .u--{color}
+        color: lookup(color) !important // @stylint ignore
 
 /*------------------------------------*\
   Palette
