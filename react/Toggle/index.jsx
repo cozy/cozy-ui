@@ -10,12 +10,18 @@ class Toggle extends Component {
     }
   }
   render () {
-    const props = this.props
-    const state = this.state
+    const { id, checked = false, disabled = false} = this.props
     return (
       <span className={styles['toggle']}>
-        <input type='checkbox' id={props.id} className={styles['checkbox']} checked={props.checked} onChange={this.onChange.bind(this)} />
-        <label htmlFor={props.id} className={styles['label']} />
+        <input
+          type='checkbox'
+          id={id}
+          className={styles['checkbox']}
+          checked={checked}
+          disabled={disabled}
+          onChange={this.onChange.bind(this)}
+        />
+        <label htmlFor={id} className={styles['label']} />
       </span>
     )
   }
@@ -24,6 +30,7 @@ class Toggle extends Component {
 Toggle.propTypes = {
   id: PropTypes.string.isRequired,  // A unique id for the toggle, used internally.
   checked: PropTypes.bool,          // The state of the toggle
+  disabled: PropTypes.bool,         // Guess what...
   onToggle: PropTypes.func          // A callback when the state of the toggle changes. Called with the new state as argument.
 }
 

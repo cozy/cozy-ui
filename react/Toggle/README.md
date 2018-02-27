@@ -13,9 +13,14 @@
 ```
 
 - Toggle is **off** by default:
-  
+
 ```js
 <Toggle id="toggle" checked={false} />
+```
+
+#### Disabled
+```js
+<Toggle id="toggle" disabled={false} />
 ```
 
 ### More complex example
