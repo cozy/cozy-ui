@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Added
-- `<Button />` & `<ButtonLink />` take `label` and/or `icon` instead of `basic children`. A [codeshift](http://astexplorer.net/#/gist/cc94c9c4cc446d1958729300581bb250/2daaa0365e0424e191250f888704b1d9fc551fe9) is available for easier transition.
+- none yet
 
 ### Removed
 - none yet
@@ -23,6 +23,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Security
 - none yet
+
+## [7.6.0] - 2018-02-27
+### Changed
+- Renamed breakpoints sizes variable with prefix to avoid potential conflicts
+
+### Added
+- Added disabled prop to Toggle
+- Added utility classes for colors
+- `<Button />` & `<ButtonLink />` take `label` and/or `icon` instead of `basic children` but `children` is still available to build complex buttons A [codeshift](http://astexplorer.net/#/gist/cc94c9c4cc446d1958729300581bb250/2daaa0365e0424e191250f888704b1d9fc551fe9) is available for easier transition.
+
 
 ## [7.5.0] - 2018-02-23
 ### Changed
@@ -765,7 +775,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.5.0...HEAD
+[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.6.0...HEAD
+[7.6.0]: https://github.com/cozy/cozy-ui/compare/v7.5.0...v7.6.0
 [7.5.0]: https://github.com/cozy/cozy-ui/compare/v7.4.2...v7.5.0
 [7.4.2]: https://github.com/cozy/cozy-ui/compare/v7.4.1...v7.4.2
 [7.4.1]: https://github.com/cozy/cozy-ui/compare/v7.4.0...v7.4.1
