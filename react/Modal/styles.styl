@@ -40,21 +40,25 @@
 .c-modal-content
     @extend $modal-content
 
-.c-modal--compressed
+.c-modal--small-spacing
+    .c-modal-close
+        @extend $modal-close--small
     .c-modal-header
-        @extend $modal-header--compressed
+        @extend $modal-header--small
     .c-modal-content
-        @extend $modal-content--compressed
+        @extend $modal-content--small
     .c-modal-footer
-        @extend $modal-footer--compressed
+        @extend $modal-footer--small
 
-.c-modal--spacious
+.c-modal--large-spacing
+    .c-modal-close
+        @extend $modal-close--large
     .c-modal-header
-        @extend $modal-header--spacious
+        @extend $modal-header--large
     .c-modal-content
-        @extend $modal-content--spacious
+        @extend $modal-content--large
     .c-modal-footer
-        @extend $modal-footer--spacious
+        @extend $modal-footer--large
 
 .c-modal-close
     @extend $modal-close

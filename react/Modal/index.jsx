@@ -27,7 +27,7 @@ const ModalHeader = ({ children, className }) =>
   )
 
 const ModalTitle = () => {
-  console.log('ModalTitle is a deprecated composant, use ModalHeader instead')
+  console.log('ModalTitle is a deprecated component, use ModalHeader instead')
   return <ModalHeader {...props } />
 }
 
@@ -65,7 +65,7 @@ const ModalFooter = ({ secondaryText, secondaryAction, secondaryType, primaryTex
 }
 
 const ModalButtons = () => {
-  console.log('ModalButtons is a deprecated composant, use Modalfooter instead')
+  console.log('ModalButtons is a deprecated component, use Modalfooter instead')
   return <ModalFooter {...props } />
 }
 
@@ -75,7 +75,7 @@ class Modal extends Component {
   }
 
   render () {
-    const { children, description, title, closable, dismissAction, overflowHidden, className, crossClassName, into, size, space } = this.props
+    const { children, description, title, closable, dismissAction, overflowHidden, className, crossClassName, into, size, spacing } = this.props
     const maybeWrapInPortal = children => into ? <Portal into={into}>{ children }</Portal> : children
     return maybeWrapInPortal(
       <div className={styles['c-modal-container']}>
@@ -88,7 +88,7 @@ class Modal extends Component {
                 className,
                 {
                   [styles['c-modal--overflowHidden']]: overflowHidden,
-                  [styles[`c-modal--${space}`]]: space
+                  [styles[`c-modal--${spacing}-spacing`]]: spacing
                 }
               )}>
               { closable && <ModalCross className={crossClassName} onClick={dismissAction} /> }
@@ -133,7 +133,7 @@ Modal.propTypes = {
   to control the rendering destination of the Modal */
   into: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge', 'xxlarge']),
-  space: PropTypes.oneOf(['compressed', 'spacious'])
+  spacing: PropTypes.oneOf(['small', 'large'])
 }
 
 Modal.defaultProps = {
