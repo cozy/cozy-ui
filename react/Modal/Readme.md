@@ -150,6 +150,55 @@ const { ModalDescription, ModalHeader } = Modal;
 </div>
 ```
 
+### Branded modals
+
+For modals with a special branded header
+
+#### with a background color
+
+```
+const { ModalDescription, ModalBrandedHeader } = Modal;
+
+<div>
+  <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
+    Toggle modal
+  </button>
+  {state.modalDisplayed &&
+    <Modal
+        overflowHidden={true}
+        crossColor="white"
+        dismissAction={()=>setState({ modalDisplayed: false})} >
+      <ModalBrandedHeader bg="#FF0000" logo="https://cozy.io/fr/images/cozy-logo_white.png" />
+      <ModalDescription className='u-mt-half'>
+        { content.ada.short }
+      </ModalDescription>
+    </Modal>}
+</div>
+```
+
+#### with a background gradient
+
+```
+const { ModalDescription, ModalBrandedHeader } = Modal;
+
+<div>
+  <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
+    Toggle modal
+  </button>
+  {state.modalDisplayed &&
+    <Modal
+        overflowHidden={true}
+        crossColor="white"
+        dismissAction={()=>setState({ modalDisplayed: false})} >
+      <ModalBrandedHeader bg="linear-gradient(to bottom, rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%);" logo="https://cozy.io/fr/images/cozy-logo_white.png" />
+      <ModalDescription className='u-mt-half'>
+        { content.ada.short }
+      </ModalDescription>
+    </Modal>}
+</div>
+```
+
+
 ### Portal modals
 
 You can use the `into` prop to wrap the `Modal` in a `Portal`. This `prop` will be set to `"body"` in future versions so try to put it now to check if your Modal does not break when rendered in a Portal.

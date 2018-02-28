@@ -19,6 +19,19 @@ const ModalSection = ({children, className}) =>
     {children}
   </div>)
 
+const ModalBrandedHeader = ({ logo, bg, className }) =>
+  (
+    <h2
+      className={classNames(
+        styles['c-modal-header--branded'],
+        className
+      )}
+      style={`background: ${bg}`}
+      >
+      <img src={logo} alt="" />
+    </h2>
+  )
+
 const ModalHeader = ({ children, className }) =>
   (
     <h2 className={classNames(styles['c-modal-header'], className)}>
@@ -31,14 +44,14 @@ const ModalTitle = () => {
   return <ModalHeader {...props } />
 }
 
-const ModalCross = ({ onClick, className }) => (
+const ModalCross = ({ onClick, crossColor, className }) => (
   <Button
     theme="close"
     className={classNames(styles['c-modal-close'], className)}
     onClick={onClick}
     extension='narrow'
     >
-    <Icon icon='cross' width='24' height='24' color={palette['coolGrey']} />
+    <Icon icon='cross' width='24' height='24' color={crossColor || palette['coolGrey']} />
   </Button>
 )
 
@@ -75,7 +88,7 @@ class Modal extends Component {
   }
 
   render () {
-    const { children, description, title, closable, dismissAction, overflowHidden, className, crossClassName, into, size, spacing } = this.props
+    const { children, description, title, closable, dismissAction, overflowHidden, className, crossClassName, crossColor, into, size, spacing } = this.props
     const maybeWrapInPortal = children => into ? <Portal into={into}>{ children }</Portal> : children
     return maybeWrapInPortal(
       <div className={styles['c-modal-container']}>
@@ -91,7 +104,7 @@ class Modal extends Component {
                   [styles[`c-modal--${spacing}-spacing`]]: spacing
                 }
               )}>
-              { closable && <ModalCross className={crossClassName} onClick={dismissAction} /> }
+              { closable && <ModalCross className={crossClassName} onClick={dismissAction} crossColor={crossColor} /> }
               { title && <ModalHeader>{title}</ModalHeader> }
               { description && <ModalDescription>{ description }</ModalDescription> }
               {children}
@@ -129,6 +142,8 @@ Modal.propTypes = {
   className: PropTypes.string,
   /** `className` used on the cross, useful if you want to custom its CSS */
   crossClassName: PropTypes.string,
+  /** `crossColor` to overwrite the default color of the cross button */
+  crossColor: PropTypes.string,
   /** If has a value, the modal will be rendered inside a portal and its value will be passed to Portal
   to control the rendering destination of the Modal */
   into: PropTypes.string,
@@ -142,6 +157,13 @@ Modal.defaultProps = {
   closable: true,
   overflowHidden: false,
   size: 'small',
+}
+
+ModalBrandedHeader.propTypes = {
+  /** `bg` can be any type of color Hexa, RGB(A), HSL(A), gradient… anything that CSS allows for a color really */
+  bg: PropTypes.string.required,
+  /** `logo` should be a path to any type of image file supported by browsers */
+  logo: PropTypes.string.required
 }
 
 const EnhancedModal = migrateProps([
@@ -177,6 +199,7 @@ Object.assign(EnhancedModal, {
   ModalSection,
   ModalFooter,
   ModalHeader,
+  ModalBrandedHeader,
   ModalDescription
 })
 
@@ -187,5 +210,6 @@ export {
   ModalSection,
   ModalFooter,
   ModalHeader,
+  ModalBrandedHeader,
   ModalDescription
 }

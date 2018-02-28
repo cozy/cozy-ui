@@ -103,6 +103,17 @@ $modal-header
         padding 'calc(%s - .3rem)' % small-padding 2rem 0 small-padding
         font-size 1.25rem
 
+$modal-header--branded
+    @extend $modal-header
+    border-top-right-radius .5rem
+    border-top-left-radius .5rem
+    padding 1rem 3rem
+
+    img
+        display block
+        max-height 3.5rem
+        margin 0 auto
+
 $modal-header--small
     padding 'calc(%s - .3rem)' % small-padding 3rem 0 small-padding
 
