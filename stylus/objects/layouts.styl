@@ -42,15 +42,13 @@ $fullbleed
     right 0
 
 // Elastic Layout — Usually with fixed header and/or fixed footer and an extensible content zone with scrolling inside
-
-               // linear-gradient(alpha(coolGrey,.2) 25%, alpha(white,0)),
-               // linear-gradient(alpha(white,0), alpha(coolGrey,.2) 75%) 0 100%,
 $elastic
     display flex
     flex-flow column nowrap
     align-items stretch
 
 $elastic-content
+    // Those backgrounds give a visual information that the content is scrollable
     background  linear-gradient(white 30%, alpha(black, 0)),
                 linear-gradient(alpha(black, 0), white 70%) 0 100%,
                 linear-gradient(alpha(coolGrey, .25) 0, alpha(coolGrey, .25) 25%, alpha(white, 0) 26%, alpha(white, 0) 100%),

@@ -93,27 +93,27 @@ $modal--xxlarge
 $modal-header
     @extend $elastic-bar
     margin 0 0 1rem
-    padding medium-padding 3rem 0 medium-padding
+    padding 'calc(%s - .3rem)' % medium-padding 3rem 0 medium-padding
     font-weight bold
     overflow visible
     min-height 2.5rem
 
     +tiny-screen()
         margin-bottom .5rem
-        padding small-padding 2rem 0 small-padding
+        padding 'calc(%s - .3rem)' % small-padding 2rem 0 small-padding
         font-size 1.25rem
 
-$modal-header--compressed
-    padding small-padding 3rem 0 small-padding
+$modal-header--small
+    padding 'calc(%s - .3rem)' % small-padding 3rem 0 small-padding
 
     +tiny-screen()
-        padding tiny-padding 2rem 0 tiny-padding
+        padding 'calc(%s - .3rem)' % tiny-padding 2rem 0 tiny-padding
 
-$modal-header--spacious
-    padding large-padding 3rem 0 large-padding
+$modal-header--large
+    padding 'calc(%s - .3rem)' % large-padding 3rem 0 large-padding
 
     +small-screen()
-        padding medium-padding 2rem 0 medium-padding
+        padding 'calc(%s - .3rem)' % medium-padding 2rem 0 medium-padding
 
 $modal-content
     @extend $elastic-content
@@ -130,7 +130,7 @@ $modal-content
         &:last-child
             padding-bottom small-padding
 
-$modal-content--compressed
+$modal-content--small
     padding 0 small-padding
 
     &:last-child
@@ -142,7 +142,7 @@ $modal-content--compressed
         &:last-child
             padding-bottom tiny-padding
 
-$modal-content--spacious
+$modal-content--large
     padding 0 large-padding
 
     &:last-child
@@ -177,13 +177,13 @@ $modal-footer
     +tiny-screen()
         padding small-padding
 
-$modal-footer--compressed
+$modal-footer--small
     padding small-padding
 
     +tiny-screen()
         padding tiny-padding
 
-$modal-footer--spacious
+$modal-footer--large
     padding large-padding
 
     +tiny-screen()
@@ -194,21 +194,38 @@ $modal-section
     border-top 1px solid silver
 
 $modal-close
-    position         absolute
-    top              1.125rem
-    right            1em
-    margin           0
-    padding          0
-    background-size  1.75rem
+    position absolute
+    top 1.5rem
+    right 1.5rem
+    margin 0
+    padding 0
+    background-size 1.75rem
     background-color transparent
-    cursor           pointer
+    cursor pointer
     display block
     width 2.5rem
     height 2.5rem
 
+    +tiny-screen()
+        top .8rem
+        right 1rem
+
+$modal-close--small
+    top 1rem
+    right 1rem
+
+    +tiny-screen()
+        top .3rem
+        right .5rem
+
+
+$modal-close--large
+    top 2.5rem
+    right 2.5rem
+
     +small-screen()
-        width 1.5rem
-        height 1.5rem
+        top 1.3rem
+        right 1.5rem
 
 $modal--hidden
     overflow hidden

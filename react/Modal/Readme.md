@@ -47,22 +47,22 @@ const sizes = [
 </div>
 ```
 
-### Space
+### Spacing
 
-Besides the default spacing inside a Modal, you can choose another type from this two avalaible: `compressed` and `spacious`
+Besides the default spacing inside a Modal, you can choose another type from this two available: `small` and `large`
 
 ```
 initialState = { modalDisplayed: false};
-const spaces = [
-  'compressed',
-  'spacious',
+const spacings = [
+  'small',
+  'large',
 ];
 
 <div>
-  {spaces.map(space => <button onClick={()=>setState({ space, modalDisplayed: !state.modalDisplayed, })}>
-    { space }
+  {spacings.map(spacing => <button onClick={()=>setState({ spacing, modalDisplayed: !state.modalDisplayed, })}>
+    { spacing }
   </button>)}
-  {state.modalDisplayed && <Modal title={ state.space + ' modal'} space={state.space} description={content.ada.short} dismissAction={() => setState({ modalDisplayed: false })} /> }
+  {state.modalDisplayed && <Modal title={ state.spacing + ' modal'} spacing={state.spacing} description={content.ada.short} dismissAction={() => setState({ modalDisplayed: false })} /> }
 </div>
 ```
 
