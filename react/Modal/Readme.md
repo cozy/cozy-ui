@@ -152,7 +152,7 @@ const { ModalDescription, ModalHeader } = Modal;
 
 ### Branded modals
 
-For modals with a special branded header
+If you need a modal with a branded header when you have a brand related content
 
 #### with a background color
 
@@ -166,9 +166,9 @@ const { ModalDescription, ModalBrandedHeader } = Modal;
   {state.modalDisplayed &&
     <Modal
         overflowHidden={true}
-        crossColor="white"
+        crossColor="#297ef2"
         dismissAction={()=>setState({ modalDisplayed: false})} >
-      <ModalBrandedHeader bg="#FF0000" logo="https://cozy.io/fr/images/cozy-logo_white.png" />
+      <ModalBrandedHeader bg="#f5f6f7" logo="https://cozy.io/fr/images/cozy-logo-name-horizontal-blue.svg" />
       <ModalDescription className='u-mt-half'>
         { content.ada.short }
       </ModalDescription>
@@ -188,9 +188,9 @@ const { ModalDescription, ModalBrandedHeader } = Modal;
   {state.modalDisplayed &&
     <Modal
         overflowHidden={true}
-        crossColor="white"
+        crossColor="#297ef2"
         dismissAction={()=>setState({ modalDisplayed: false})} >
-      <ModalBrandedHeader bg="linear-gradient(to bottom, rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%);" logo="https://cozy.io/fr/images/cozy-logo_white.png" />
+      <ModalBrandedHeader bg="linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(236,233,230,1) 100%);" logo="https://cozy.io/fr/images/cozy-logo-name-horizontal-blue.svg" />
       <ModalDescription className='u-mt-half'>
         { content.ada.short }
       </ModalDescription>
