@@ -44,14 +44,14 @@ const ModalTitle = () => {
   return <ModalHeader {...props } />
 }
 
-const ModalCross = ({ onClick, crossColor, className }) => (
+const ModalCross = ({ onClick, color, className }) => (
   <Button
     theme="close"
     className={classNames(styles['c-modal-close'], className)}
     onClick={onClick}
     extension='narrow'
     >
-    <Icon icon='cross' width='24' height='24' color={crossColor || palette['coolGrey']} />
+    <Icon icon='cross' width='24' height='24' color={color || palette['coolGrey']} />
   </Button>
 )
 
@@ -104,7 +104,7 @@ class Modal extends Component {
                   [styles[`c-modal--${spacing}-spacing`]]: spacing
                 }
               )}>
-              { closable && <ModalCross className={crossClassName} onClick={dismissAction} crossColor={crossColor} /> }
+              { closable && <ModalCross className={crossClassName} onClick={dismissAction} color={crossColor} /> }
               { title && <ModalHeader>{title}</ModalHeader> }
               { description && <ModalDescription>{ description }</ModalDescription> }
               {children}
