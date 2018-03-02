@@ -24,6 +24,23 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [7.7.0] - 2018-03-02
+### Changed
+- Refactoring `Modal` component using Elastic layout
+
+### Fixed
+- `Button` now use flexbox to deal with vertical centering of its content
+
+### Added
+- Elastic layout with fixed header and/or footer and scrollable content
+- Modal has now a compressed and a wide rendering with `spacing` props with two available values : `small` & `large`
+- Modal has a new Branded header component `ModalBrandedHeader` which allows a background and a logo with `bg` & `logo` props
+
+### Deprecated
+- `ModalTitle` is replaced by `ModalHeader`
+- `ModalButtons` is replaced by `ModalFooter`
+
+
 ## [7.6.0] - 2018-02-27
 ### Changed
 - Renamed breakpoints sizes variable with prefix to avoid potential conflicts
@@ -775,7 +792,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.6.0...HEAD
+[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.7.0...HEAD
+[7.7.0]: https://github.com/cozy/cozy-ui/compare/v7.6.0...v7.7.0
 [7.6.0]: https://github.com/cozy/cozy-ui/compare/v7.5.0...v7.6.0
 [7.5.0]: https://github.com/cozy/cozy-ui/compare/v7.4.2...v7.5.0
 [7.4.2]: https://github.com/cozy/cozy-ui/compare/v7.4.1...v7.4.2
