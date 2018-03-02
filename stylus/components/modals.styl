@@ -156,7 +156,7 @@ $modal-content--large
 
 $modal-footer
     @extend $elastic-bar
-    padding medium-padding
+    padding tiny-padding small-padding small-padding
     text-align right
 
     button:last-child
@@ -173,22 +173,6 @@ $modal-footer
             // since the order is reverse we target the first-child
             &:not(:first-child)
                 margin-bottom .25rem
-
-    +tiny-screen()
-        padding small-padding
-
-$modal-footer--small
-    padding small-padding
-
-    +tiny-screen()
-        padding tiny-padding
-
-$modal-footer--large
-    padding large-padding
-
-    +tiny-screen()
-        padding medium-padding
-
 
 $modal-section
     border-top 1px solid silver
