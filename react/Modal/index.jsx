@@ -14,6 +14,8 @@ const ModalContent = ({children, className}) =>
     {children}
   </div>)
 
+const ModalDescription = ModalContent
+
 const ModalSection = ({children, className}) =>
   (<div className={cx(styles['c-modal-content'], styles['c-modal-section'], className)}>
     {children}
@@ -55,11 +57,6 @@ const ModalCross = ({ onClick, color, className }) => (
   </Button>
 )
 
-const ModalDescription = ({ children, className }) => (
-  <div className={cx(styles['c-modal-content'], className)}>
-    {children}
-  </div>
-)
 
 const ModalFooter = ({ secondaryText, secondaryAction, secondaryType, primaryText, primaryAction, primaryType }) => {
   const displayPrimary = primaryText && primaryAction
