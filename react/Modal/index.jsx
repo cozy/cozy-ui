@@ -21,18 +21,17 @@ const ModalSection = ({children, className}) =>
     {children}
   </div>)
 
-const ModalBrandedHeader = ({ logo, bg, className }) =>
-  (
-    <h2
-      className={cx(
-        styles['c-modal-header--branded'],
-        className
-      )}
-      style={`background: ${bg}`}
-      >
-      <img src={logo} alt="" />
-    </h2>
-  )
+const ModalBrandedHeader = ({ logo, bg, className, style={}}) => (
+  <h2
+    className={cx(
+      styles['c-modal-header--branded'],
+      className
+    )}
+    style={{background: bg, ...style}}
+    >
+    <img src={logo} alt="" />
+  </h2>
+)
 
 const ModalHeader = ({ children, className }) =>
   (
@@ -42,7 +41,6 @@ const ModalHeader = ({ children, className }) =>
   )
 
 const ModalTitle = () => {
-  console.log('ModalTitle is a deprecated component, use ModalHeader instead')
   return <ModalHeader {...props } />
 }
 
