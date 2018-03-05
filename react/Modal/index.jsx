@@ -161,9 +161,9 @@ Modal.defaultProps = {
 
 ModalBrandedHeader.propTypes = {
   /** `bg` can be any type of color Hexa, RGB(A), HSL(A), gradient… anything that CSS allows for a color really */
-  bg: PropTypes.string.required,
+  bg: PropTypes.string.isRequired,
   /** `logo` should be a path to any type of image file supported by browsers */
-  logo: PropTypes.string.required
+  logo: PropTypes.string.isRequired
 }
 
 const EnhancedModal = migrateProps([
