@@ -28,7 +28,7 @@ export const Button = props => {
       <span>
         {icon && <Icon icon={icon} />}
         {label && <span>{label}</span>}
-        {children && {children}}
+        {children}
       </span>
     </button>
   )
