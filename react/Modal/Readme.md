@@ -152,7 +152,7 @@ const { ModalDescription, ModalHeader } = Modal;
 
 ### Branded modals
 
-If you need a modal with a branded header when you have a brand related content
+If you need a modal with a branded header when you have a brand related content.
 
 #### with a background color
 
