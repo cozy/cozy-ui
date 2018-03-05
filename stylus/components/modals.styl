@@ -21,12 +21,16 @@ xxlarge-width = 60rem
 small-margin = .5rem
 medium-margin = 1.5rem
 large-margin = 3rem
+xlarge-margin = 3rem
+xxlarge-margin = 3rem
 
 // Modal paddings
 tiny-padding = 1rem
 small-padding = 1.5rem
 medium-padding = 2rem
 large-padding = 3rem
+xlarge-padding = 3rem
+xxlarge-padding = 3rem
 
 
 $modals
@@ -60,35 +64,13 @@ $modal
     background-color white
     color charcoalGrey
 
-$modal--small
-    width small-width
+for size in 'small' 'medium' 'large' 'xlarge' 'xxlarge'
+    $modal--{size}
+        width lookup(size + '-width')
 
-    @media (max-width: small-width + small-margin * 2)
-        width auto
-
-$modal--medium
-    width medium-width
-
-    @media (max-width: medium-width + medium-margin * 2)
-        width auto
-
-$modal--large
-    width large-width
-
-    @media (max-width: large-width + medium-margin * 2)
-        width auto
-
-$modal--xlarge
-    width xlarge-width
-
-    @media (max-width: xlarge-width + large-margin * 2)
-        width auto
-
-$modal--xxlarge
-    width xxlarge-width
-
-    @media (max-width: xxlarge-width + large-margin * 2)
-        width auto
+        $max-width=lookup(size + '-width') + lookup(size + '-margin') * 2
+        @media (max-width: $max-width)
+            width auto
 
 $modal-header
     @extend $elastic-bar
