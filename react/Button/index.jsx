@@ -15,11 +15,12 @@ const btnClass = function (theme, size, extension, className) {
 }
 
 export const Button = props => {
-  const { theme, size, extension, busy, disabled, className, children, label, icon, onClick } = props
+  const { theme, size, extension, busy, disabled, className, children, label, icon, onClick, type } = props
   return (
     <button
       aria-busy={busy}
       disabled={disabled}
+      type={type}
       role="button"
       className={btnClass(theme, size, extension, className)}
       onClick={onClick}
@@ -68,7 +69,8 @@ const commonPropTypes = {
 Button.propTypes = {
    ...commonPropTypes,
   busy: PropTypes.bool,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  type: PropTypes.string
 }
 
 ButtonLink.propTypes = {
@@ -91,7 +93,8 @@ const commonDefaultProps = {
 Button.defaultProps = {
   ...commonDefaultProps,
   busy: false,
-  disabled: false
+  disabled: false,
+  type: 'submit'
 }
 
 ButtonLink.defaultProps = {
