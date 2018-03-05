@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import cx from 'classnames'
 import styles from './styles.styl'
 import Overlay from '../Overlay'
 import { Button } from '../Button'
@@ -10,19 +10,19 @@ import palette from '../../stylus/settings/palette.json'
 import Portal from 'preact-portal'
 
 const ModalContent = ({children, className}) =>
-  (<div className={classNames(styles['c-modal-content'], className)}>
+  (<div className={cx(styles['c-modal-content'], className)}>
     {children}
   </div>)
 
 const ModalSection = ({children, className}) =>
-  (<div className={classNames(styles['c-modal-content'], styles['c-modal-section'], className)}>
+  (<div className={cx(styles['c-modal-content'], styles['c-modal-section'], className)}>
     {children}
   </div>)
 
 const ModalBrandedHeader = ({ logo, bg, className }) =>
   (
     <h2
-      className={classNames(
+      className={cx(
         styles['c-modal-header--branded'],
         className
       )}
@@ -34,7 +34,7 @@ const ModalBrandedHeader = ({ logo, bg, className }) =>
 
 const ModalHeader = ({ children, className }) =>
   (
-    <h2 className={classNames(styles['c-modal-header'], className)}>
+    <h2 className={cx(styles['c-modal-header'], className)}>
       {children}
     </h2>
   )
@@ -47,7 +47,7 @@ const ModalTitle = () => {
 const ModalCross = ({ onClick, color, className }) => (
   <Button
     theme="close"
-    className={classNames(styles['c-modal-close'], className)}
+    className={cx(styles['c-modal-close'], className)}
     onClick={onClick}
     extension='narrow'
     >
@@ -56,7 +56,7 @@ const ModalCross = ({ onClick, color, className }) => (
 )
 
 const ModalDescription = ({ children, className }) => (
-  <div className={classNames(styles['c-modal-content'], className)}>
+  <div className={cx(styles['c-modal-content'], className)}>
     {children}
   </div>
 )
@@ -66,7 +66,7 @@ const ModalFooter = ({ secondaryText, secondaryAction, secondaryType, primaryTex
   const displaySecondary = secondaryText && secondaryAction
   return (displaySecondary || displayPrimary) &&
     (
-      <div className={classNames(styles['c-modal-footer'])}>
+      <div className={cx(styles['c-modal-footer'])}>
         { displaySecondary &&
           <Button theme={secondaryType} onClick={secondaryAction} label={secondaryText} />
         }
@@ -95,7 +95,7 @@ class Modal extends Component {
         <Overlay onEscape={closable && dismissAction}>
           <div className={styles['c-modal-wrapper']} onClick={closable && this.handleOutsideClick}>
             <div className={
-              classNames(
+              cx(
                 styles['c-modal'],
                 styles[`c-modal--${size}`],
                 className,
