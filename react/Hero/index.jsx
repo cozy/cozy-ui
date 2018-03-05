@@ -1,10 +1,7 @@
 import React from 'react'
 import BaseIcon from '../Icon'
 import styles from './styles.styl'
-
-const mkComponent = (Tag, extra = {}) => ({children, ...props}) => (
-  <Tag {...extra} {...props}>{children}</Tag>
-)
+import { mkComponent } from '../utils'
 
 // Cannot use mkComponent since it is not picked up by styleguidist
 export const Hero = ({children, ...props}) =>

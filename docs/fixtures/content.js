@@ -1,4 +1,9 @@
 export const ada = {
+  facts: [
+    {title: 'Date of birth', 'description': '10 December 1815'},
+    {title: 'Date of death', 'description': '27 November 1852'},
+    {title: 'Nationality', 'description': 'British'}
+  ],
   short: `
     Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an
     English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical
