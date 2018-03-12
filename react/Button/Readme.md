@@ -81,10 +81,9 @@ The color of the icon is taken care of by the button style, there's no need to s
 
 ```
 const { Button } = require('./index');
-const icons = require('../../src/icons');
 <div>
-  <Button theme="danger" icon={ icons['delete'] } label='delete' />
-  <Button theme="secondary" icon={ icons['dots'] } extension='narrow' />
+  <Button theme="danger" icon='delete' label='delete' />
+  <Button theme="secondary" icon='dots' extension='narrow' />
 </div>
 ```
 
