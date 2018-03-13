@@ -242,13 +242,14 @@ $input-text
     display inline-block
     width 100%
     max-width 30rem
-    padding .9rem .75rem .75rem .9rem
+    padding .8125rem .75rem .8125rem .9rem
     box-sizing border-box
     border-radius .1875rem
     border .0625rem solid silver
     background white
     font-size 1rem
     color black
+    outline 0
 
     &::placeholder
         color coolGrey
@@ -271,6 +272,14 @@ $textarea
     width 100%
     min-height 7.5rem
     resize vertical
+
+$select
+    @extend $input-text
+    appearance none
+    background embedurl('../../assets/icons/ui/icon-bottom-select.svg') right 1.25rem center / .875rem no-repeat
+
+    &::-ms-expand
+        display  none
 
 $field
     position relative

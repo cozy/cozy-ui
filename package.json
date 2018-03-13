@@ -23,13 +23,14 @@
     "deploy:doc": "git-directory-deploy --directory build/ --branch gh-pages",
     "prebuild:css": "mkdir dist/",
     "prebuild:css:app": "mkdir -p build/styleguide",
-    "build:css": "stylus -c --include stylus -o dist/cozy-ui.min.css stylus/cozy-ui/build.styl",
-    "build:css:app": "stylus --include stylus -o build/styleguide/app.css stylus/cozy-ui/build.styl",
+    "build:css": "stylus -c --include stylus -o dist/cozy-ui.min.css stylus/cozy-ui/build.styl --use ./node_modules/autoprefixer-stylus --with \"{ browsers: ['last 2 versions'] }\"",
+    "build:css:app": "stylus --include stylus -o build/styleguide/app.css stylus/cozy-ui/build.styl --use ./node_modules/autoprefixer-stylus --with \"{ browsers: ['last 2 versions'] }\"",
     "clean:doc:kss": "rm -rf build/styleguide",
     "prebuild:doc:kss": "run-s clean:doc:kss build:css:app",
     "build:doc:kss": "kss --destination build/styleguide --title 'Cozy-UI Styleguide' --source stylus --builder node_modules/michelangelo/kss_styleguide/custom-template --homepage styleguide.md --css app.css"
   },
   "devDependencies": {
+    "autoprefixer-stylus": "^0.14.0",
     "babel-core": "^6.22.1",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.1.8",
