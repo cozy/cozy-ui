@@ -38,8 +38,8 @@ const { Button } = require('./index');
 
 #### Width
 
-* `narrow` to ignore Button's
-* `min-width`  & `full` to enable full width
+* `narrow` to ignore Button's `min-width`
+* `full` to enable full width
 
 ```
 const { Button } = require('./index');
