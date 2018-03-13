@@ -66,6 +66,7 @@ module.exports = {
     path.join(__dirname, './style.styl')
   ],
   showCode: true,
+  showUsage: true,
   context: {
     utils: path.resolve(__dirname, 'utils'),
     content: path.resolve(__dirname, 'fixtures/content')
