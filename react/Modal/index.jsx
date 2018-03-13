@@ -40,7 +40,8 @@ const ModalHeader = ({ children, className }) =>
     </h2>
   )
 
-const ModalTitle = (props) => {
+const ModalTitle = props => {
+  console.log('ModalTitle is a deprecated component, use ModalHeader instead')
   return <ModalHeader {...props } />
 }
 
@@ -72,8 +73,8 @@ const ModalFooter = ({ secondaryText, secondaryAction, secondaryType, primaryTex
     )
 }
 
-const ModalButtons = () => {
-  console.log('ModalButtons is a deprecated component, use Modalfooter instead')
+const ModalButtons = props => {
+  console.log('ModalButtons is a deprecated component, use ModalFooter instead')
   return <ModalFooter {...props } />
 }
 
@@ -206,6 +207,7 @@ export {
   ModalFooter,
   ModalHeader,
   ModalTitle,
+  ModalButtons,
   ModalBrandedHeader,
   ModalDescription
 }
