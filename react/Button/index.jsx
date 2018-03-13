@@ -47,8 +47,8 @@ export const ButtonLink = props => {
     >
       <span>
         {icon && <Icon icon={icon} />}
-        {label && <span>label</span>}
-        {children && {children}}
+        {label && <span>{label}</span>}
+        {children}
       </span>
     </a>
   )
