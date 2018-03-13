@@ -1,5 +1,5 @@
 There's two kinds of Button at your disposal : `<Button />` & `<ButtonLink />`.
-The First is a basic `<button>` for a click event, the second is a `<a>` a link.  
+The first is a basic `<button>` for a click event, the second is a `<a>`, a link.
 Both look exactly the same, they share the same `theme`, `className` & `onClick` parameters but `<Button>` has also: 
 
 - `busy` that adds a spinner (default `false`)
@@ -10,7 +10,7 @@ when `<ButtonLink>` has:
 - `href` to add an URL (default `''`)
 - `target` to pass the link's `target` value (default `''`)
 
-#### Different themes:
+#### Themes
 
 ```
 const { Button } = require('./index');
@@ -23,7 +23,7 @@ const { Button } = require('./index');
 </div>
 ```
 
-#### Different sizes from the default one (tiny, small, large):
+#### Sizes
 
 ```
 const { Button } = require('./index');
@@ -36,7 +36,10 @@ const { Button } = require('./index');
 </div>
 ```
 
-### Different width, `narrow` to ignore Button's `min-width`  & `full` to enable full width:
+#### Width
+
+* `narrow` to ignore Button's `min-width`
+* `full` to enable full width
 
 ```
 const { Button } = require('./index');
@@ -68,7 +71,7 @@ initialState = { busy:false };
 <Button onClick={() => {setState(state => ({busy: !state.busy}))}} busy={state.busy} label='Toggle busy'/>
 ```
 
-#### To disable a button
+#### Disable a button
 
 ```
 const { Button } = require('./index');
@@ -84,6 +87,15 @@ const { Button } = require('./index');
 <div>
   <Button theme="danger" icon='delete' label='delete' />
   <Button theme="secondary" icon='dots' extension='narrow' />
+</div>
+```
+
+You can also pass an Icon directly if you need more flexibility.
+
+```
+const { Button } = require('./index');
+<div>
+  <Button theme="danger" icon={ <Icon icon='delete' color='yellow' /> } label='delete' />
 </div>
 ```
 
