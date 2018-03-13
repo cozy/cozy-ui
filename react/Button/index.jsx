@@ -25,7 +25,7 @@ export const Button = props => {
       onClick={onClick}
     >
       <span>
-        {icon && <Icon icon={icon} />}
+        {typeof icon === 'string' ? <Icon icon={icon} /> : icon}
         {label && <span>{label}</span>}
         {children && {children}}
       </span>
@@ -45,9 +45,9 @@ export const ButtonLink = props => {
       onClick={onClick}
     >
       <span>
-        {icon && <Icon icon={icon} />}
         {label && <span>label</span>}
         {children && {children}}
+        {typeof icon === 'string' ? <Icon icon={icon} /> : icon}
       </span>
     </a>
   )
@@ -57,7 +57,7 @@ export const ButtonLink = props => {
 const commonPropTypes = {
   children: PropTypes.node,
   label: PropTypes.string,
-  icon: PropTypes.string,
+  icon: PropTypes.node,
   theme: PropTypes.string,
   size: PropTypes.oneOf(['tiny','small','large']),
   extension: PropTypes.oneOf(['narrow','full']),
