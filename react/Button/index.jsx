@@ -45,8 +45,8 @@ export const ButtonLink = props => {
       onClick={onClick}
     >
       <span>
-        {label && <span>label</span>}
         {typeof icon === 'string' ? <Icon icon={icon} /> : icon}
+        {label && <span>{label}</span>}
         {children}
       </span>
     </a>
