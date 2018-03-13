@@ -15,7 +15,7 @@ const btnClass = function (theme, size, extension, className) {
 }
 
 const usableByIcon = icon => {
-  const isSvgSymbol = !!icon.id
+  const isSvgSymbol = icon && !!icon.id
   const isIconIdentifier = typeof icon === 'string'
   return isSvgSymbol || isIconIdentifier
 }
