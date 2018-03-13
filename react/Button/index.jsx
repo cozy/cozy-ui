@@ -84,7 +84,7 @@ ButtonLink.propTypes = {
   children: PropTypes.node,
   /** Label of the button */
   label: PropTypes.node,
-  /** Icon of the button */
+  /** Icon identifier or `<Icon />` */
   icon: PropTypes.node,
   theme: PropTypes.string,
   size: PropTypes.oneOf(['tiny','small','large']),
