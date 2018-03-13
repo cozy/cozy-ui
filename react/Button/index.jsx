@@ -52,7 +52,7 @@ export const ButtonLink = props => {
       onClick={onClick}
     >
       <span>
-        { usableByIcon(icon) ? <Icon icon={icon} /> : icon}
+        {usableByIcon(icon) ? <Icon icon={icon} /> : icon}
         {label && <span>{label}</span>}
         {children}
       </span>
