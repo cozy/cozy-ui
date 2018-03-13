@@ -24,6 +24,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [7.7.1] - 2018-03-13
+### Changed
+- `<Button />`'s `Icon` props can get a string or `<Icon />
+
+### Added
+- Added Panel layout for Modals
+- Added `style` props to `ModalBrandedHeader` to pass some style
+- Added `type` props to `<Button />`
+
+### Fixed
+- Support deprecated `ModalTitle` & `ModalButtons`
+- Use of children in `<Button />`
+
 ## [7.7.0] - 2018-03-02
 ### Changed
 - Refactoring `Modal` component using Elastic layout
@@ -792,7 +805,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.7.0...HEAD
+[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.7.1...HEAD
+[7.7.1]: https://github.com/cozy/cozy-ui/compare/v7.7.0...v7.7.1
 [7.7.0]: https://github.com/cozy/cozy-ui/compare/v7.6.0...v7.7.0
 [7.6.0]: https://github.com/cozy/cozy-ui/compare/v7.5.0...v7.6.0
 [7.5.0]: https://github.com/cozy/cozy-ui/compare/v7.4.2...v7.5.0
