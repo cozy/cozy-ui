@@ -27,7 +27,7 @@ export const Button = props => {
       <span>
         {typeof icon === 'string' ? <Icon icon={icon} /> : icon}
         {label && <span>{label}</span>}
-        {children && {children}}
+        {children}
       </span>
     </button>
   )
@@ -46,8 +46,8 @@ export const ButtonLink = props => {
     >
       <span>
         {label && <span>label</span>}
-        {children && {children}}
         {typeof icon === 'string' ? <Icon icon={icon} /> : icon}
+        {children}
       </span>
     </a>
   )
