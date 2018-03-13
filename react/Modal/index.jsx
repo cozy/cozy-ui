@@ -40,7 +40,7 @@ const ModalHeader = ({ children, className }) =>
     </h2>
   )
 
-const ModalTitle = () => {
+const ModalTitle = (props) => {
   return <ModalHeader {...props } />
 }
 
@@ -205,6 +205,7 @@ export {
   ModalSection,
   ModalFooter,
   ModalHeader,
+  ModalTitle,
   ModalBrandedHeader,
   ModalDescription
 }

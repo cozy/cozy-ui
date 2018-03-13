@@ -15,11 +15,12 @@ const btnClass = function (theme, size, extension, className) {
 }
 
 export const Button = props => {
-  const { theme, size, extension, busy, disabled, className, children, label, icon, onClick } = props
+  const { theme, size, extension, busy, disabled, className, children, label, icon, onClick, type } = props
   return (
     <button
       aria-busy={busy}
       disabled={disabled}
+      type={type}
       role="button"
       className={btnClass(theme, size, extension, className)}
       onClick={onClick}
@@ -76,7 +77,9 @@ Button.propTypes = {
   /** Will display a spinner if true */
   busy: PropTypes.bool,
   /** Disables the button */
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+   /** Type of the underlying `<button />` */
+  type: PropTypes.oneOf(['reset', 'submit'])
 }
 
 ButtonLink.propTypes = {
@@ -117,7 +120,8 @@ const commonDefaultProps = {
 Button.defaultProps = {
   ...commonDefaultProps,
   busy: false,
-  disabled: false
+  disabled: false,
+  type: 'submit'
 }
 
 ButtonLink.defaultProps = {

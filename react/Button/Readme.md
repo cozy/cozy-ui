@@ -4,6 +4,7 @@ Both look exactly the same, they share the same `theme`, `className` & `onClick`
 
 - `busy` that adds a spinner (default `false`)
 - `disabled` that disable the click event (default `false`)
+- `type`, eg. `submit` or `reset` (default `submit`)
 
 when `<ButtonLink>` has:
 - `href` to add an URL (default `''`)
