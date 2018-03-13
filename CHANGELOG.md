@@ -24,6 +24,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [7.7.2] - 2018-03-13
+### Fixed 
+- `<Button />` without icons don't break anymore
+
 ## [7.7.1] - 2018-03-13
 ### Changed
 - `<Button />`'s `Icon` props can get a string or `<Icon />
@@ -805,7 +809,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.7.1...HEAD
+[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.7.2...HEAD
+[7.7.2]: https://github.com/cozy/cozy-ui/compare/v7.7.1...v7.7.2
 [7.7.1]: https://github.com/cozy/cozy-ui/compare/v7.7.0...v7.7.1
 [7.7.0]: https://github.com/cozy/cozy-ui/compare/v7.6.0...v7.7.0
 [7.6.0]: https://github.com/cozy/cozy-ui/compare/v7.5.0...v7.6.0
