@@ -56,7 +56,7 @@ export const ButtonLink = props => {
 // Proptypes
 const commonPropTypes = {
   children: PropTypes.node,
-  label: PropTypes.string,
+  label: PropTypes.node,
   icon: PropTypes.node,
   theme: PropTypes.string,
   size: PropTypes.oneOf(['tiny','small','large']),
