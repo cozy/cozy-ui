@@ -65,7 +65,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Added disabled prop to Toggle
 - Added utility classes for colors
-- `<Button />` & `<ButtonLink />` take `label` and/or `icon` instead of `basic children` but `children` is still available to build complex buttons A [codeshift](http://astexplorer.net/#/gist/cc94c9c4cc446d1958729300581bb250/2daaa0365e0424e191250f888704b1d9fc551fe9) is available for easier transition.
+- `<Button />` & `<ButtonLink />` take `label` and/or `icon` instead of `basic children` but `children` is still available to build complex buttons A [codeshift](http://astexplorer.net/#/gist/cc94c9c4cc446d1958729300581bb250/6bf37610671a21717f53623367e0f755f506301b) is available for easier transition.
 
 
 ## [7.5.0] - 2018-02-23
