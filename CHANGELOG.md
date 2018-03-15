@@ -24,8 +24,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [7.7.3] - 2018-03-15
+### Added
+- New `<IntentModal />` component
+
+### Changed
+- `<IntentOpener />` internally uses now the new `<IntentModal />` component
+
 ## [7.7.2] - 2018-03-13
-### Fixed 
+### Fixed
 - `<Button />` without icons don't break anymore
 
 ## [7.7.1] - 2018-03-13
@@ -97,7 +104,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [7.4.0] - 2018-02-8
 ### Changed
-- ButtonLink's target attribute becomes a string instead of a boolean 
+- ButtonLink's target attribute becomes a string instead of a boolean
 - Increase alert size
 
 ### Fixed
@@ -261,23 +268,23 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [5.0.0] - 2017-12-06
 ## Added
 - Standalone compiled CSS
-  If you do not want to use the library as Stylus placeholders and prefer using one compiled CSS with every available classes, yoou can do so.  
+  If you do not want to use the library as Stylus placeholders and prefer using one compiled CSS with every available classes, yoou can do so.
   In your terminal, type the following command (with `yarn` or `npm`):
   ```
   $ yarn build:css:app
-  ```  
+  ```
   It will compile the CSS file `app.css` into `build/styleguide/` folder.
 
 ## Removed
 - Removed deprecated classes `.coz-sidebar`, `coz-error`, `coz-error--warning`, `coz-hidden`, `coz-desktop`, `coz-mobile`
 - Removed exported classes like `.o-sidebar` & `.c-nav`
-  You can't `@extend` classes as it doesn't exist anymore but you can `@extend` the equivalent placeholder. Just replace by the occurence you need and you're done! :)  
-  `.o-sidebar` => `$sidebar`  
-  `.c-nav` => `$nav`  
-  `.c-nav-item` => `$nav-item`  
+  You can't `@extend` classes as it doesn't exist anymore but you can `@extend` the equivalent placeholder. Just replace by the occurence you need and you're done! :)
+  `.o-sidebar` => `$sidebar`
+  `.c-nav` => `$nav`
+  `.c-nav-item` => `$nav-item`
   `.c-nav-link` => `$nav-link`
 - Removed global classes like buttons & utilities
-  You have to declare explicitly button & utility classes.  
+  You have to declare explicitly button & utility classes.
   If you use React, the best way is to use the `<Button />` [component](https://github.com/cozy/cozy-ui/tree/master/react/Button).
   If not, you should manually `@extend` those components like any other CSS components with their `$placeholder`.
   ```
@@ -809,7 +816,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: h2t0s://github.com/cozy/cozy-ui/compare/v7.7.2...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.7.3...HEAD
+[7.7.3]: https://github.com/cozy/cozy-ui/compare/v7.7.2...v7.7.3
 [7.7.2]: https://github.com/cozy/cozy-ui/compare/v7.7.1...v7.7.2
 [7.7.1]: https://github.com/cozy/cozy-ui/compare/v7.7.0...v7.7.1
 [7.7.0]: https://github.com/cozy/cozy-ui/compare/v7.6.0...v7.7.0
