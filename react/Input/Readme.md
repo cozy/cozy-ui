@@ -15,6 +15,19 @@
 <Input error placeholder="This is a input[type=text] with error" />
 ```
 
+### Alternative input sizes
+
+```
+<div>
+  <p>
+    <Input placeholder="I have a tiny size" size="tiny" />
+  </p>
+  <p>
+    <Input placeholder="I have a medium size" size="medium" />
+  </p>
+</div>
+```
+
 ### Props forwarding
 
 `Input` forwards unknown props to the underlying `<input />` element.
