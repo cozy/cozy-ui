@@ -4,14 +4,15 @@ import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
 const Input = props => {
-  const { type, id, className, value, placeholder, error, ...restProps } = props
+  const { type, id, className, value, placeholder, error, size, ...restProps } = props
   return (
     <input
       type={type}
       id={id}
       className={cx(
         styles['c-input-text'], {
-          [styles[`is-error`]] : error
+          [styles[`is-error`]] : error,
+          [styles[`c-input-text--${size}`]] : size
         },
         className)}
       placeholder={placeholder}
@@ -27,7 +28,8 @@ Input.propTypes = {
   className: PropTypes.string,
   value: PropTypes.string,
   placeholder: PropTypes.string,
-  error: PropTypes.bool
+  error: PropTypes.bool,
+  size: PropTypes.oneOf(['tiny','medium'])
 }
 
 Input.defaultProps = {

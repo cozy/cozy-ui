@@ -242,12 +242,13 @@ $input-text
     display inline-block
     width 100%
     max-width 30rem
-    padding .8125rem .75rem .8125rem .9rem
+    padding .8125rem 1rem
     box-sizing border-box
     border-radius .1875rem
     border .0625rem solid silver
     background white
     font-size 1rem
+    line-height 1.25
     color black
     outline 0
 
@@ -266,12 +267,28 @@ $input-text
     &:invalid
         border .0625rem solid pomegranate
 
+$input-text--tiny
+    border-radius .125rem
+    padding .225rem .5rem .4rem
+
+$input-text--medium
+    border-radius .125rem
+    padding .485rem 1rem .64rem
+
 $textarea
     @extend $input-text
     display block
     width 100%
     min-height 7.5rem
     resize vertical
+
+$textarea--tiny
+    @extend $input-text--tiny
+    min-height 3rem
+
+$textarea--medium
+    @extend $input-text--medium
+    min-height 5rem
 
 $select
     @extend $input-text
