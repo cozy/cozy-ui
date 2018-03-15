@@ -1,7 +1,6 @@
 import React from 'react'
 import Modal from '../Modal'
-import IntentIframe from './IntentIframe'
-import styles from './styles.styl'
+import IntentModal from '../IntentModal'
 import PropTypes from 'prop-types'
 
 /**
@@ -53,21 +52,17 @@ class IntentOpener extends React.Component {
 
     if (modalOpened) {
       elements.push(
-        <Modal
-            key='modal'
-            closable={closable}
-            overflowHidden
-            className={styles.intentModal}
-            crossClassName={styles.intentModal__cross}
-            dismissAction={this.handleDismiss}>
-          <IntentIframe
-            action={action}
-            doctype={doctype}
-            options={options}
-            onComplete={this.handleComplete}
-            create={create}
-          />
-        </Modal>
+        <IntentModal
+          key='intent-modal'
+          closable={closable}
+          overflowHidden
+          dismissAction={this.handleDismiss}
+          action={action}
+          doctype={doctype}
+          options={options}
+          onComplete={this.handleComplete}
+          create={create}
+        />
       )
     }
 

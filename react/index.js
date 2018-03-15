@@ -7,6 +7,7 @@ export {default as Nav, NavItem, NavIcon, NavText, NavLink, genNavLink} from './
 export {default as Modal, ModalContent, ModalSection, ModalFooter, ModalDescription, ModalHeader, ModalBrandedHeader} from './Modal'
 export {default as SelectionBar} from './SelectionBar'
 export {default as IntentOpener} from './IntentOpener'
+export {default as IntentModal} from './IntentModal'
 export {default as Spinner} from './Spinner'
 export {Tabs, TabPanels, TabPanel, TabList, Tab} from './Tabs'
 export {default as Toggle} from './Toggle'

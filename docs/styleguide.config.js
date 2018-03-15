@@ -47,6 +47,7 @@ module.exports = {
       name: 'Special',
       components: () => [
         '../react/Overlay/index.jsx',
+        '../react/IntentModal/IntentModal.jsx',
         '../react/IntentOpener/IntentOpener.jsx'
       ]
     }
