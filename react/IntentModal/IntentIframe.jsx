@@ -26,8 +26,8 @@ class IntentIframe extends React.Component {
       })
       .start(this.intentViewer, this.onFrameLoaded)
       .then(result => {
-        if (this.props.onComplete) {
-          this.props.onComplete(result)
+        if (onComplete) {
+          onComplete(result)
         }
       })
   }
@@ -37,7 +37,6 @@ class IntentIframe extends React.Component {
   }
 
   render () {
-    const props = this.props
     const { loading } = this.state
     return (
       <div ref={intentViewer => (this.intentViewer = intentViewer)}>

@@ -10,7 +10,7 @@ class Toggle extends Component {
     }
   }
   render () {
-    const { id, checked = false, disabled = false} = this.props
+    const {id, checked = false, disabled = false} = this.props
     return (
       <span className={styles['toggle']}>
         <input

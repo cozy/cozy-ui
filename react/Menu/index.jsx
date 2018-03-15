@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import classNames from 'classnames'
 import styles from './styles.styl'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
@@ -10,8 +9,8 @@ class MenuItem extends Component {
     const { disabled, className, onClick, children, icon } = this.props
     return (
       <div
-          onClick={ onClick }
-          className={
+        onClick={onClick}
+        className={
             cx(styles['c-menu__item'], {
               [styles['c-menu__item--disabled']]: disabled
             }, className)
@@ -88,21 +87,21 @@ class Menu extends Component {
     const { opened } = this.state
     return (
       <div
-        className={classNames(styles['c-menu'], className, {
-          [styles['c-menu--left']]: position == 'left',
-          [styles['c-menu--right']]: position == 'right'
+        className={cx(styles['c-menu'], className, {
+          [styles['c-menu--left']]: position === 'left',
+          [styles['c-menu--right']]: position === 'right'
         })}
         ref={ref => { this.container = ref }}
       >
         { !component ? <button
           role='button'
-          className={classNames('c-btn', styles['c-menu__btn'], buttonClassName)}
+          className={cx('c-btn', styles['c-menu__btn'], buttonClassName)}
           disabled={disabled}
           onClick={this.toggle}
         >
           {text}
-        </button> : React.cloneElement(component, { disabled, onClick: this.toggle}) }
-        { opened ? <div className={classNames(
+        </button> : React.cloneElement(component, { disabled, onClick: this.toggle }) }
+        { opened ? <div className={cx(
           styles['c-menu__inner'],
           { [styles['c-menu__inner--opened']]: opened }
         )}>

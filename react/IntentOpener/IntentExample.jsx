@@ -9,10 +9,10 @@ const IntentExample  = function ({ onComplete, action, doctype, options }) {
         appName='IntentExample'
         appEditor='EditorExample' />
       <p style={{ margin: '1rem' }}>
-        Action: {action}<br/>
-        Doctype: {doctype}<br/>
-        Options: <pre>{JSON.stringify(options, null, 2)}</pre><br/>
-        <br/>
+        Action: {action}<br />
+        Doctype: {doctype}<br />
+        Options: <pre>{JSON.stringify(options, null, 2)}</pre><br />
+        <br />
         <button onClick={onComplete}>Click to complete intent</button>
       </p>
     </div>

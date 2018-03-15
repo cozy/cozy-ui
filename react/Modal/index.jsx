@@ -21,7 +21,7 @@ const ModalSection = ({children, className}) =>
     {children}
   </div>)
 
-const ModalBrandedHeader = ({ logo, bg, className, style={}}) => (
+const ModalBrandedHeader = ({logo, bg, className, style={}}) => (
   <h2
     className={cx(
       styles['c-modal-header--branded'],
@@ -42,7 +42,7 @@ const ModalHeader = ({ children, className }) =>
 
 const ModalTitle = props => {
   console.log('ModalTitle is a deprecated component, use ModalHeader instead')
-  return <ModalHeader {...props } />
+  return <ModalHeader {...props} />
 }
 
 const ModalCross = ({ onClick, color, className }) => (
@@ -75,7 +75,7 @@ const ModalFooter = ({ secondaryText, secondaryAction, secondaryType, primaryTex
 
 const ModalButtons = props => {
   console.log('ModalButtons is a deprecated component, use ModalFooter instead')
-  return <ModalFooter {...props } />
+  return <ModalFooter {...props} />
 }
 
 class Modal extends Component {
@@ -120,13 +120,13 @@ Modal.propTypes = {
   description: PropTypes.node,
   /** Secondary button type */
   secondaryType: PropTypes.string,
-  /** Secondary button text*/
+  /** Secondary button text */
   secondaryText: PropTypes.string,
   /** Secondary button callback */
   secondaryAction: PropTypes.func,
   /** Primary button type */
   primaryType: PropTypes.string,
-  /** Primary button text*/
+  /** Primary button text */
   primaryText: PropTypes.string,
   /** Primary button callback */
   primaryAction: PropTypes.func,

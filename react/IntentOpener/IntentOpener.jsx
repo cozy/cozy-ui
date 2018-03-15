@@ -1,5 +1,4 @@
 import React from 'react'
-import Modal from '../Modal'
 import IntentModal from '../IntentModal'
 import PropTypes from 'prop-types'
 

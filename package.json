@@ -14,7 +14,7 @@
   "homepage": "https://github.com/cozy/cozy-ui",
   "scripts": {
     "lint": "npm-run-all 'lint:*'",
-    "lint:js": "standard '**/*.js'",
+    "lint:js": "eslint --fix 'react/**/*.jsx' 'react/**/*.js'",
     "lint:stylus": "stylint stylus --config .stylintrc",
     "watch:doc:react": "styleguidist server --config docs/styleguide.config.js",
     "build:doc": "npm-run-all 'build:doc:*'",
@@ -36,6 +36,8 @@
     "babel-preset-react": "^6.22.0",
     "copyfiles": "^1.2.0",
     "css-loader": "^0.28.4",
+    "eslint": "^4.18.2",
+    "eslint-config-cozy-app": "^0.4.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "git-directory-deploy": "^1.5.1",
     "kss": "^3.0.0-beta.18",
@@ -53,7 +55,6 @@
     "react-redux": "^5.0.3",
     "react-styleguidist": "^6.0.24",
     "redux": "^3.6.0",
-    "standard": "^10.0.2",
     "style-loader": "^0.18.2",
     "stylint": "^1.5.9",
     "stylus-loader": "^3.0.1",
@@ -72,5 +73,10 @@
   },
   "peerDependencies": {
     "piwik-react-router": "^0.8.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint-config-cozy-app"
+    ]
   }
 }
