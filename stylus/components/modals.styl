@@ -51,6 +51,7 @@ $modal-wrapper
     padding large-margin
 
     +small-screen()
+        justify-content center
         padding medium-margin
 
     +tiny-screen()
@@ -71,6 +72,16 @@ for size in 'small' 'medium' 'large' 'xlarge' 'xxlarge'
         $max-width=lookup(size + '-width') + lookup(size + '-margin') * 2
         @media (max-width: $max-width)
             width auto
+
+$modal-wrapper--fullscreen
+    +small-screen()
+        padding 0
+
+$modal--fullscreen
+    +small-screen()
+        height 100%
+        width 100%
+        border-radius 0
 
 $modal-header
     @extend $elastic-bar
