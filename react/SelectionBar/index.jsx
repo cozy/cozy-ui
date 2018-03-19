@@ -1,9 +1,7 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { translate } from '../I18n'
 import { Button, Icon } from '../index'
-import classNames from 'classnames'
 
 import styles from './styles.styl'
 

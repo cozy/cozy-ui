@@ -34,7 +34,7 @@ const Field = props => {
           />
         )
       default:
-        throw new Exception('type must be text, password, email, url or textarea, got ' + type)
+        throw new Error('type must be text, password, email, url or textarea, got ' + type)
     }
   }
 

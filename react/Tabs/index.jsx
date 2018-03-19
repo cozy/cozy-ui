@@ -9,7 +9,7 @@ export class Tab extends Component {
   }
 
   render () {
-    const { name, children, className, active, activeClass, changeTab, onClick } = this.props
+    const { children, className, active, activeClass } = this.props
     const activeStyle = {
       [styles['coz-tab--active']]: active
     }
@@ -54,7 +54,7 @@ export const TabPanel = function ({ children, active, changeTab, className }) {
 export const TabPanels = function ({ children, activeTab, name, changeTab, className }) {
   return <div className={classnames(styles['coz-tab-panels'], className)}>{
     React.Children.map(children, child => React.cloneElement(child, {
-      active: child.props.active || activeTab == child.props.name,
+      active: child.props.active || activeTab === child.props.name,
       changeTab
     }))
   }</div>

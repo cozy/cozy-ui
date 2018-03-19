@@ -120,7 +120,7 @@ class Alert extends Component {
   }
 
   render () {
-    const { message, level, buttonText, buttonAction } = this.props
+    const { message, level, buttonText, buttonAction, type } = this.props
     const { hidden } = this.state
     return (
       <div

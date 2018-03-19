@@ -20,11 +20,10 @@ const nameToColor = (name = "") => {
     palette["puertoRico"],
     palette["emerald"]
   ];
-  return colors[
-    Array.from(name.toUpperCase())
-      .map(letter => letter.charCodeAt(0))
-      .reduce((sum, number) => sum + number, 0) % colors.length
-  ];
+  const key = Array.from(name.toUpperCase())
+    .map(letter => letter.charCodeAt(0))
+    .reduce((sum, number) => sum + number, 0) % colors.length
+  return colors[key];
 };
 
 
