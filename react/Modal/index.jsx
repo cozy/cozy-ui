@@ -33,12 +33,12 @@ const ModalBrandedHeader = ({logo, bg, className, style={}}) => (
   </h2>
 )
 
-const ModalHeader = ({ children, className }) =>
-  (
-    <h2 className={cx(styles['c-modal-header'], className)}>
-      {children}
-    </h2>
-  )
+const ModalHeader = ({ title, children, className }) => (
+  <div className={cx(styles['c-modal-header'], className)}>
+    {title && <h2>{title}</h2>}
+    {children}
+  </div>
+)
 
 const ModalTitle = props => {
   console.log('ModalTitle is a deprecated component, use ModalHeader instead')
@@ -101,7 +101,7 @@ class Modal extends Component {
                 }
               )}>
               { closable && <ModalCross className={crossClassName} onClick={dismissAction} color={crossColor} /> }
-              { title && <ModalHeader>{title}</ModalHeader> }
+              { title && <ModalHeader title={title}></ModalHeader> }
               { description && <ModalDescription>{ description }</ModalDescription> }
               {children}
               <ModalFooter {...this.props} />

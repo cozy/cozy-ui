@@ -76,14 +76,19 @@ $modal-header
     @extend $elastic-bar
     margin 0 0 1rem
     padding 'calc(%s - .3rem)' % medium-padding 3rem 0 medium-padding
-    font-weight bold
     overflow visible
     min-height 2.5rem
+
+    h2
+        margin 0
+        font-weight bold
 
     +tiny-screen()
         margin-bottom .5rem
         padding 'calc(%s - .3rem)' % small-padding 2rem 0 small-padding
-        font-size 1.25rem
+
+        h2
+            font-size 1.25rem
 
 $modal-header--branded
     @extend $modal-header
