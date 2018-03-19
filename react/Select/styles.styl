@@ -1,0 +1,27 @@
+@require '../../stylus/settings/palette'
+
+.select-control__input
+    width 0
+    height 0
+    overflow hidden
+
+.select-option
+    display block
+    padding .5rem
+    border-left 4px solid transparent
+    color charcoalGrey
+
+    &:hover
+        background-color paleGrey
+        cursor pointer
+
+.select-option--selected
+    background-color paleGrey
+    border-left-color dodgerBlue
+
+.select-option__checkbox
+    margin-right .5rem
+    vertical-align top
+
+.select-option--checkmark
+    float right
