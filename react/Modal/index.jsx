@@ -33,12 +33,15 @@ const ModalBrandedHeader = ({logo, bg, className, style={}}) => (
   </h2>
 )
 
-const ModalHeader = ({ title, children, className }) => (
-  <div className={cx(styles['c-modal-header'], className)}>
-    {title && <h2>{title}</h2>}
-    {children}
-  </div>
-)
+const ModalHeader = ({ title, children, className }) => {
+  const isTitle = typeof children === 'string'
+  return (
+    <div className={cx(styles['c-modal-header'], className)}>
+      {title && <h2>{title}</h2>}
+      {isTitle ? <h2>{children}</h2> : children}
+    </div>
+  )
+}
 
 const ModalTitle = props => {
   console.log('ModalTitle is a deprecated component, use ModalHeader instead')
