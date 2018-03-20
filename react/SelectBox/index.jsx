@@ -28,10 +28,7 @@ const Option = ({ label, isSelected, innerProps, withCheckbox }) => (
 );
 
 Option.propTypes = {
-  label: PropTypes.string.isRequired,
-  isSelected: PropTypes.bool.isRequired,
-  innerProps: PropTypes.object.isRequired,
-  withCheckbox: PropTypes.bool,
+  withCheckbox: PropTypes.bool
 }
 
 Option.defaultProps = {
