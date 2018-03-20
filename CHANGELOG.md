@@ -24,6 +24,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [7.8.0] - 2018-03-20
+
+### Added
+- Styles for `select` elements
+- The `SelectBox` component, based on `react-select`
+
+
 ## [7.7.3] - 2018-03-15
 ### Added
 - New `<IntentModal />` component
@@ -816,7 +823,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.7.3...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.8.0...HEAD
+[7.8.0]: https://github.com/cozy/cozy-ui/compare/v7.7.3...v7.8.0
 [7.7.3]: https://github.com/cozy/cozy-ui/compare/v7.7.2...v7.7.3
 [7.7.2]: https://github.com/cozy/cozy-ui/compare/v7.7.1...v7.7.2
 [7.7.1]: https://github.com/cozy/cozy-ui/compare/v7.7.0...v7.7.1
