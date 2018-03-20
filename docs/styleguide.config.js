@@ -18,7 +18,8 @@ module.exports = {
         '../react/Textarea/index.jsx',
         '../react/Label/index.jsx',
         '../react/Toggle/index.jsx',
-        '../react/Field/index.jsx'
+        '../react/Field/index.jsx',
+        '../react/SelectBox/index.jsx'
       ]
     },
     {

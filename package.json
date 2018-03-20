@@ -70,6 +70,7 @@
     "md5": "^2.2.0",
     "normalize.css": "^7.0.0",
     "preact-portal": "^1.1.2",
+    "react-select": "2.0.0-alpha.7",
     "stylus": "^0.54.5"
   },
   "peerDependencies": {
