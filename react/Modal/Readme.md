@@ -141,7 +141,7 @@ const { ModalDescription, ModalHeader } = Modal;
         overflowHidden={true}
         dismissAction={()=>setState({ modalDisplayed: false})} >
       <div style={{background: 'red', color: 'white'}}>
-        <ModalHeader title="Yo ho ho !"></ModalHeader>
+        <ModalHeader title="Yo ho ho !" />
       </div>
       <ModalDescription className='u-mt-half'>
         { content.ada.short }
