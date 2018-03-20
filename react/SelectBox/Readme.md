@@ -1,4 +1,4 @@
-A combo box for more advanced use cases, based on [`react-select` v2](https://deploy-preview-2289--react-select.netlify.com/home).
+A select box for more advanced use cases, based on [`react-select` v2](https://deploy-preview-2289--react-select.netlify.com/home).
 
 ### Simple use case
 
@@ -11,7 +11,7 @@ const options = [
   { value: 'vanilla', label: 'Vanilla' }
 ];
 
-<Select options={options} />
+<SelectBox options={options} />
 ```
 
 ### Custom control component
@@ -19,7 +19,7 @@ const options = [
 You can use the `reactSelectControl` HOC to turn an existing, custom component into the control button for the `Select`:
 
 ```
-const reactSelectControl = require('../Select').reactSelectControl;
+const reactSelectControl = require('../SelectBox').reactSelectControl;
 const MyControl = (<button>toggle options</button>);
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
@@ -27,7 +27,7 @@ const options = [
   { value: 'vanilla', label: 'Vanilla' }
 ];
 
-<Select 
+<SelectBox 
   options={options}
   components={{
     Control: reactSelectControl(MyControl)
@@ -40,14 +40,14 @@ const options = [
 There is a `CheckboxOption` component that can be used as an `Option`, and renders like this:
 
 ```
-const CheckboxOption = require('../Select').CheckboxOption;
+const CheckboxOption = require('../SelectBox').CheckboxOption;
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry' },
   { value: 'vanilla', label: 'Vanilla' }
 ];
 
-<Select 
+<SelectBox 
   options={options}
   isMulti
   components={{

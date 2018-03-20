@@ -19,7 +19,7 @@ module.exports = {
         '../react/Label/index.jsx',
         '../react/Toggle/index.jsx',
         '../react/Field/index.jsx',
-        '../react/Select/index.jsx'
+        '../react/SelectBox/index.jsx'
       ]
     },
     {

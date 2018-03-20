@@ -44,21 +44,21 @@ const CheckboxOption = ({ ...props }) => (
 
 CheckboxOption.propTypes = {}
 
-const Select = ({ components, ...props }) => (
+const SelectBox = ({ components, ...props }) => (
   <ReactSelect
     components={{ Option, ...components }}
     {...props}
     />
 )
 
-Select.propTypes = {
+SelectBox.propTypes = {
   components: PropTypes.object
 }
 
-Select.defaultProps = {
+SelectBox.defaultProps = {
   components: {}
 }
 
 export * from 'react-select'
-export default Select
+export default SelectBox
 export { Option, CheckboxOption, reactSelectControl }
