@@ -66,6 +66,21 @@ const spacings = [
 </div>
 ```
 
+### mobileFullscreen
+
+If you want the modal to fill all the available space, without margin, on mobile screen.
+
+```
+initialState = { modalDisplayed: false};
+
+<div>
+  <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
+    Toggle modal
+  </button>
+  {state.modalDisplayed && <Modal title='Ada Lovelace' description={content.ada.long} mobileFullscreen dismissAction={() => setState({ modalDisplayed: false })} /> }
+</div>
+```
+
 ### Closable
 
 With `closable` set to `false`, the user will not be able to close the modal, even by clicking outside the modal. You must manage the modal's closing by yourself.
