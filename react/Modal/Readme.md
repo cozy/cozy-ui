@@ -68,7 +68,7 @@ const spacings = [
 
 ### mobileFullscreen
 
-If you have a modal filled with content and want it to occupy all the available space on mobile screen.
+If you want the modal to fill all the available space, without margin, on mobile screen.
 
 ```
 initialState = { modalDisplayed: false};
