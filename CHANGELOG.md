@@ -24,6 +24,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [7.9.0] - 2018-03-21
+
+### Added
+
+- Different sizes for inputs and textareas
+
+### Fixed
+
+`IntentHeader` styles are not imported with the file extension
+- ModalHeaders that are not simple text won't be wrapped in a `<h2>` element and won't inherit styles from it
+
+
 ## [7.8.0] - 2018-03-20
 
 ### Added
@@ -823,7 +835,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.8.0...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.9.0...HEAD
+[7.9.0]: https://github.com/cozy/cozy-ui/compare/v7.8.0...v7.9.0
 [7.8.0]: https://github.com/cozy/cozy-ui/compare/v7.7.3...v7.8.0
 [7.7.3]: https://github.com/cozy/cozy-ui/compare/v7.7.2...v7.7.3
 [7.7.2]: https://github.com/cozy/cozy-ui/compare/v7.7.1...v7.7.2
