@@ -6,6 +6,44 @@ import styles from './styles.styl'
 import Icon from '../Icon'
 import palette from '../../stylus/settings/palette.json'
 
+const customStyles = {
+  container: (base, state) => ({
+    ...base,
+    maxWidth: '30rem',
+  }),
+  control: (base, state) => ({
+    ...base,
+    backgroundColor: 'white',
+    border: state.isFocused ? `.0625rem solid ${palette['dodgerBlue']}` : `.0625rem solid ${palette['silver']}`,
+    ':hover': {
+      borderColor: palette['coolGrey'],
+    },
+    borderRadius: '.1875rem',
+    boxShadow: 'unset',
+    padding: '.503rem .5rem',
+  }),
+  dropdownIndicator: (base, state) => ({
+    ...base,
+    backgroundImage: state.menuIsOpen ? 'url("../../assets/icons/ui/icon-top-select.svg")' : 'url("../../assets/icons/ui/icon-bottom-select.svg")',
+    backgroundSize: '.875rem',
+    height: '.875rem',
+    marginRight: '.75rem',
+    padding: 0,
+    width: '.875rem',
+  }),
+  indicatorSeparator: () => ({
+    display: 'none'
+  }),
+  valueContainer: (base, state) => ({
+    ...base,
+    color: 'black'
+  }),
+  menu: (base, state) => ({
+    ...base,
+    zIndex: 10
+  })
+};
+
 const reactSelectControl = CustomControl => ({ innerProps, children }) => (
   <div {...innerProps}>
     {CustomControl}
@@ -41,19 +79,22 @@ const CheckboxOption = ({ ...props }) => (
 
 CheckboxOption.propTypes = {}
 
-const SelectBox = ({ components, ...props }) => (
+const SelectBox = ({ components, styles, ...props }) => (
   <ReactSelect
     components={{ Option, ...components }}
+    styles={{...customStyles, ...styles}}
     {...props}
     />
 )
 
 SelectBox.propTypes = {
-  components: PropTypes.object
+  components: PropTypes.object,
+  styles: PropTypes.object
 }
 
 SelectBox.defaultProps = {
-  components: {}
+  components: {},
+  styles: {}
 }
 
 export * from 'react-select'
