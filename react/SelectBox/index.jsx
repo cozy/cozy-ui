@@ -13,8 +13,8 @@ const reactSelectControl = CustomControl => ({ innerProps, children }) => (
   </div>
 );
 
-const Option = ({ label, isSelected, innerProps, withCheckbox }) => (
-  <div {...innerProps} className={classNames(styles['select-option'], { [styles['select-option--selected']]: isSelected && !withCheckbox })}>
+const Option = ({ children, isSelected, isFocused, innerProps, withCheckbox }) => (
+  <div {...innerProps} className={classNames(styles['select-option'], { [styles['select-option--selected']]: isSelected && !withCheckbox, [styles['select-option--focused']]: isFocused })}>
     { withCheckbox &&
         <input
         type="checkbox"
@@ -22,7 +22,7 @@ const Option = ({ label, isSelected, innerProps, withCheckbox }) => (
         className={styles['select-option__checkbox']}
       />
     }
-    {label}
+    {children}
     { (isSelected && !withCheckbox) && <Icon icon="check-circleless" color={palette['dodgerBlue']} className={styles['select-option--checkmark']} /> }
   </div>
 );
