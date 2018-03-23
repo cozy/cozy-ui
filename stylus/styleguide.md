@@ -41,7 +41,7 @@ div
     // Borders and padding
     border        1px solid
     border-radius 50%
-    padding       1em
+    padding       1rem
 
     // Colors
     background-color black
@@ -49,7 +49,7 @@ div
 
     // Typo
     font-family MavenPro
-    font-size   1em
+    font-size   1rem
     line-height 1.5em
 ```
 
@@ -120,7 +120,7 @@ Please follow the [KSS specs](https://github.com/kss-node/kss/blob/spec/SPEC.md)
 * **Classes should always written in lowercase**
 * **All strings in classes are delimited with a hyphen (-)**
 
-We use [BEM naming convention](http://getbem.com/naming/) but with a slight difference, we use this syntax `block-element--modifier`.
+We use [SuitCSS naming convention](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) which in kinda like BEM but with a slightly different syntax.
 
 ## Selectors
 
