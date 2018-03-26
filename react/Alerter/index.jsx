@@ -35,7 +35,9 @@ class Alert extends Component {
     }, 2000)
     // Delay to trigger CSS transition after the first render.
     // Totally open for a better way to achieve this.
-    this.setState({ hidden: false })
+    setTimeout(() => {
+      this.setState({ hidden: false })
+    }, 20)
   }
 
   beginClosing() {
@@ -111,19 +113,37 @@ Alert.defaultProps = {
   buttonAction: () => {}
 }
 
-export default class Alerter extends Component {
+class Alerter extends Component {
   state = {
     notifications: []
   }
 
+  /**
+   * @param {string} message
+   * @param {object} options
+   * @public
+   * @static
+   */
   static info(msg, options) {
     store.dispatch({ type: 'info', msg, options })
   }
 
+  /**
+   * @param {string} msg
+   * @param {object} options
+   * @public
+   * @static
+   */
   static success(msg, options) {
     store.dispatch({ type: 'success', msg, options })
   }
 
+  /**
+   * @param {string} msg
+   * @param {object} options
+   * @public
+   * @static
+   */
   static error(msg, options) {
     store.dispatch({ type: 'error', msg, options })
   }
@@ -170,10 +190,14 @@ export default class Alerter extends Component {
 }
 
 Alerter.propTypes = {
+  /** A translation function. If ommited, messages are left intact */
   t: PropTypes.func,
+  /** A selector to target a DOM node where alerts will be rendered */
   into: PropTypes.string
 }
 
 Alerter.defaultProps = {
   into: 'body'
 }
+
+export default Alerter
