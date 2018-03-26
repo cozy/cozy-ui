@@ -24,10 +24,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [7.9.2] - 2018-03-26
+### Added
+- Utility classes to cancel margin/padding `.u-m-0`, `.u-p-0`, etc
+
+### Fixed
+- Scrolling modal on Safari
+
+
 ## [7.9.1] - 2018-03-21
-###Added
+### Added
 - focus style on SelectBox's options
 - Cozy style for SelectBox
+
 
 ## [7.9.0] - 2018-03-21
 ### Added
@@ -55,6 +64,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - `<Button />` without icons don't break anymore
 
+
 ## [7.7.1] - 2018-03-13
 ### Changed
 - `<Button />`'s `Icon` props can get a string or `<Icon />
@@ -67,6 +77,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - Support deprecated `ModalTitle` & `ModalButtons`
 - Use of children in `<Button />`
+
 
 ## [7.7.0] - 2018-03-02
 ### Changed
@@ -836,7 +847,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.9.1...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.9.2...HEAD
+[7.9.2]: https://github.com/cozy/cozy-ui/compare/v7.9.1...v7.9.2
 [7.9.1]: https://github.com/cozy/cozy-ui/compare/v7.9.0...v7.9.1
 [7.9.0]: https://github.com/cozy/cozy-ui/compare/v7.8.0...v7.9.0
 [7.8.0]: https://github.com/cozy/cozy-ui/compare/v7.7.3...v7.8.0
