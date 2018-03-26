@@ -15,6 +15,7 @@ module.exports = {
       name: 'Forms',
       components: () => [
         '../react/Input/index.jsx',
+        '../react/Checkbox/index.jsx',
         '../react/Textarea/index.jsx',
         '../react/Label/index.jsx',
         '../react/Toggle/index.jsx',
