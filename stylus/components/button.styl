@@ -206,8 +206,10 @@ $button-alert--info
 
     &:active
     &:hover
+    &:not([disabled]):not([aria-disabled=true]):hover
     &:focus
         color  darken(white, 10%)
+        background-color  darken(coolGrey, 10%)
 
 $button-alert--success
     @extend $button-alert
