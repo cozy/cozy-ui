@@ -174,7 +174,7 @@ class Alerter extends Component {
     const { notifications } = this.state
     return (
       <Portal into={into}>
-        {this.state.notifications.map(notif => (
+        {notifications.map(notif => (
           <Alert
             type={notif.type}
             key={notif.id}
