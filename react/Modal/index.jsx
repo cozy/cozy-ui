@@ -111,7 +111,7 @@ class Modal extends Component {
                 }
               )}>
               { closable && <ModalCross className={crossClassName} onClick={dismissAction} color={crossColor} /> }
-              { title && <ModalHeader title={title}></ModalHeader> }
+              { title && <ModalHeader title={title} /> }
               { description && <ModalDescription>{ description }</ModalDescription> }
               {children}
               <ModalFooter {...this.props} />

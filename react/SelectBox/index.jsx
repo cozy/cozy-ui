@@ -54,10 +54,10 @@ const reactSelectControl = CustomControl => ({ innerProps, children }) => (
 const Option = ({ children, isSelected, isFocused, innerProps, withCheckbox }) => (
   <div {...innerProps} className={classNames(styles['select-option'], { [styles['select-option--selected']]: isSelected && !withCheckbox, [styles['select-option--focused']]: isFocused })}>
     { withCheckbox &&
-        <input
-        type="checkbox"
-        checked={isSelected}
-        className={styles['select-option__checkbox']}
+    <input
+      type="checkbox"
+      checked={isSelected}
+      className={styles['select-option__checkbox']}
       />
     }
     {children}

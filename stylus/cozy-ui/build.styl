@@ -351,6 +351,37 @@
     @extend $input-text--medium
 
 /*
+ Input Checkbox
+
+ Markup:
+ <form>
+    <h3>Standard checkbox</h3>
+    <div>
+        <label class="c-input-checkbox {{modifier_class}}">
+            <input type="checkbox" />
+            <span>I'm a checkbox</span>
+        </label>
+    </div>
+    <h3>Mixed checkbox</h3>
+    <div>
+        <label class="c-input-checkbox {{modifier_class}}" aria-checked="mixed">
+            <input type="checkbox" />
+            <span>I'm a checkbox</span>
+        </label>
+    </div>
+ </form>
+
+ .is-error - Error variant
+
+ Weight: 3
+
+ Styleguide Components.form.input-checkbox
+*/
+.c-input-checkbox
+    @extend $checkbox
+
+
+/*
  Textarea
 
  Markup:
@@ -364,7 +395,7 @@
  .c-textarea--tiny - Tiny size variant
  .c-textarea--medium - Medium size variant
 
- Weight: 3
+ Weight: 4
 
  Styleguide Components.form.textarea
 */
@@ -395,7 +426,7 @@
 
  .is-error - Error variant
 
- Weight: 4
+ Weight: 5
 
  Styleguide Components.form.select
 */
