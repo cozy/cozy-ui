@@ -1,142 +1,179 @@
 import React, { Component } from 'react'
-import classNames from 'classnames'
-import { connect } from 'react-redux'
-
-import { translate } from '../I18n'
+import PropTypes from 'prop-types'
+import Portal from 'preact-portal'
 
 import styles from './styles.styl'
+import classNames from 'classnames'
 
-const ALERT_SHOW = 'ALERT_SHOW'
-const ALERT_DISMISS = 'ALERT_DISMISS'
-const ALERT_CLEAR = 'ALERT_CLEAR'
+const createStore = () => {
+  const notifications = []
+  const listeners = []
 
-const DEFAULT_AUTOCLOSE_DELAY = 3500
-const DEFAULT_ALERT_LEVEL = 'info'
-const DISMISS_DELAY = 500
-
-const reducer = (state = [], action) => {
-  if (action.alert) {
-    if (!action.alert.id) {
-      action.alert.id = new Date().getTime()
-    }
-    return [action.alert, ...state]
+  const dispatch = notification => {
+    notification.id = notifications.length
+    notifications.push(notification)
+    listeners.forEach(listener => listener(notification))
   }
-  switch (action.type) {
-    case ALERT_SHOW:
-      return [action.alert, ...state.filter(a => a.id !== action.id)]
-    case ALERT_DISMISS:
-      return state.filter(a => a.id !== action.id)
-    case ALERT_CLEAR:
-      return []
-    default:
-      return state
+
+  const subscribe = listener => {
+    listeners.push(listener)
   }
+
+  return { dispatch, subscribe }
 }
 
-export default reducer
+const store = createStore()
 
-// Action creators
-export const alertShow = (message, messageData = null, level = DEFAULT_ALERT_LEVEL) => ({
-  type: ALERT_SHOW,
-  id: new Date().getTime(),
-  message,
-  messageData,
-  level
-})
-
-export const alertDismiss = id => ({
-  type: ALERT_DISMISS,
-  id
-})
-
-export const alertClear = () => ({
-  type: ALERT_CLEAR
-})
-
-// Dumb component that wraps the alerts
-const Wrapper = ({ t, alerts, dismiss }) => (
-  <div className={styles['coz-alerter']}>
-    {alerts.map(alert =>
-      <Alert
-        id={alert.id}
-        message={t(alert.message, alert.messageData)}
-        level={alert.level || DEFAULT_ALERT_LEVEL}
-        buttonText={alert.buttonText}
-        buttonAction={alert.buttonAction}
-        onClose={dismiss}
-      />
-    )}
-  </div>
-)
-
-const mapStateToProps = state => ({
-  alerts: state.alerts
-})
-const mapDispatchToProps = dispatch => ({
-  dismiss: id => dispatch(alertDismiss(id))
-})
-
-// Connected & exported JSX component
-export const Alerter = translate()(connect(mapStateToProps, mapDispatchToProps)(Wrapper))
-
-// Handles the fade-in/fade-out effect of each indiviual alert
 class Alert extends Component {
-  constructor (props) {
-    super()
-    this.state = {
-      hidden: true
-    }
-    this.shouldAutoClose = !props.buttonText
-    this.closeTimer = null
-    this.dismissTimer = null
+  state = {
+    hidden: true
   }
 
-  componentDidMount () {
-    if (this.shouldAutoClose) {
-      const closeDelay = this.props.duration ? parseInt(this.props.duration, 10) : DEFAULT_AUTOCLOSE_DELAY
-
-      this.closeTimer = setTimeout(() => {
-        this.setState({ hidden: true })
-        this.dismissTimer = setTimeout(() => {
-          this.props.onClose(this.props.id)
-        }, DISMISS_DELAY)
-      }, closeDelay)
-    }
+  componentDidMount() {
+    this.closeTimer = setTimeout(() => {
+      this.beginClosing()
+    }, 2000)
     // Delay to trigger CSS transition after the first render.
     // Totally open for a better way to achieve this.
-    setTimeout(() => {
-      this.setState({ hidden: false })
-    }, 20)
+    this.setState({ hidden: false })
   }
 
-  componentWillUnmount () {
+  beginClosing() {
+     this.base.addEventListener('transitionend', this.notifyClosed, false)
+    this.setState({ hidden: true })
+  }
+
+  notifyClosed = () => {
+    this.props.onClose()
+  }
+
+  componentWillUnmount() {
+     this.base.removeEventListener('transitionend', this.notifyClosed, false)
     this.setState({ hidden: false })
     if (this.closeTimer) {
       clearTimeout(this.closeTimer)
     }
-    if (this.dismissTimer) {
-      clearTimeout(this.dismissTimer)
-    }
   }
 
-  render () {
-    const { message, level, buttonText, buttonAction, type } = this.props
+  render() {
+    const { message, type, buttonText, buttonAction } = this.props
     const { hidden } = this.state
     return (
-      <div
-        className={classNames(
-          styles['coz-alert'],
-          styles[`coz-alert--${level}`],
-          hidden ? styles['coz-alert--hidden'] : ''
+      <div className={styles['coz-alerter']}>
+        <div
+          className={classNames(
+            styles['coz-alert'],
+            styles[`coz-alert--${type}`],
+            hidden ? styles['coz-alert--hidden'] : ''
+          )}
+        >
+          <p>{message}</p>
+          {buttonText && (
+            <button
+              onClick={buttonAction}
+              className={classNames(
+                styles['coz-btn'],
+                styles[`coz-btn--alert-${type}`]
+              )}
+            >
+              <span>
+                {buttonText}
+              </span>
+            </button>
+          )}
+        </div>
+        {type === 'error' && (
+          <div
+            className={classNames(
+              styles['coz-overlay'],
+              hidden ? styles['coz-overlay--hidden'] : ''
+            )}
+          />
         )}
-      >
-        <p>{message}</p>
-        {buttonText &&
-          <button onClick={buttonAction} className={classNames(styles['coz-btn'], styles[`coz-btn--alert-${type}`])}>
-            {buttonText}
-          </button>
-        }
       </div>
     )
   }
+}
+
+Alert.propTypes = {
+  type: PropTypes.string,
+  message: PropTypes.string,
+  onClose: PropTypes.func,
+  buttonText: PropTypes.string,
+  buttonAction: PropTypes.func
+}
+
+Alert.defaultProps = {
+  type: 'info',
+  message: '',
+  onClose: () => {},
+  buttonText: undefined,
+  buttonAction: () => {}
+}
+
+export default class Alerter extends Component {
+  state = {
+    notifications: []
+  }
+
+  static info(msg, options) {
+    store.dispatch({ type: 'info', msg, options })
+  }
+
+  static success(msg, options) {
+    store.dispatch({ type: 'success', msg, options })
+  }
+
+  static error(msg, options) {
+    store.dispatch({ type: 'error', msg, options })
+  }
+
+  componentDidMount() {
+    this.setState({ mounted: true })
+    store.subscribe(this.notify)
+  }
+
+  notify = notification => {
+    this.setState({
+      notifications: [...this.state.notifications, notification]
+    })
+  }
+
+  handleClose = (id) => {
+    let idx = this.state.notifications.findIndex(n => n.id === id)
+    this.setState({
+      notifications: [
+        ...this.state.notifications.slice(0, idx),
+        ...this.state.notifications.slice(idx + 1)
+      ]
+    })
+  }
+
+  render() {
+    const { t, into } = this.props
+    const { notifications } = this.state
+    return (
+      <Portal into={into}>
+        {this.state.notifications.map(notif => (
+          <Alert
+            type={notif.type}
+            key={notif.id}
+            message={t ? t(notif.msg, notif.options) : notif.msg}
+            onClose={() => this.handleClose(notif.id)}
+            buttonText={notif.options && notif.options.buttonText}
+            buttonAction={notif.options && notif.options.buttonAction}
+          />
+        ))}
+      </Portal>
+    )
+  }
+}
+
+Alerter.propTypes = {
+  t: PropTypes.func,
+  into: PropTypes.string
+}
+
+Alerter.defaultProps = {
+  into: 'body'
 }
