@@ -24,6 +24,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 - none yet
 
+## [7.10.0] - 2018-03-27
+
+### Added
+- Added an Alerter component
+- Added a Checkbox component
+
 ## [7.9.2] - 2018-03-26
 ### Added
 - Utility classes to cancel margin/padding `.u-m-0`, `.u-p-0`, etc
@@ -847,7 +853,8 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.9.2...HEAD
+[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.10.0...HEAD
+[7.10.0]: https://github.com/cozy/cozy-ui/compare/v7.9.2...v7.10.0
 [7.9.2]: https://github.com/cozy/cozy-ui/compare/v7.9.1...v7.9.2
 [7.9.1]: https://github.com/cozy/cozy-ui/compare/v7.9.0...v7.9.1
 [7.9.0]: https://github.com/cozy/cozy-ui/compare/v7.8.0...v7.9.0
