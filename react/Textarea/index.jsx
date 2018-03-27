@@ -22,7 +22,7 @@ const Textarea = props => {
 }
 
 Textarea.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node,
   placeholder: PropTypes.string,
   className: PropTypes.string,
   error: PropTypes.bool,
