@@ -41,7 +41,7 @@ class Alert extends Component {
   }
 
   beginClosing() {
-     this.base.addEventListener('transitionend', this.notifyClosed, false)
+    this.base.addEventListener('transitionend', this.notifyClosed, false)
     this.setState({ hidden: true })
   }
 
