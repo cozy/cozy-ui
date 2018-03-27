@@ -29,7 +29,7 @@ to load your SVG (either explicitly or, better, implicitly in your `webpack.conf
 
 import myIcon from 'my-icon.svg' 
 
-<Icon icon={ myIcon } width='2rem' height='2rem' color='purple' />
+<Icon icon={ myIcon } width={32} height={32} color='purple' />
 ```
 
 ### Props forwarding
@@ -38,6 +38,6 @@ Icon forwards unknown props to the underlying `<svg />` element.
 
 ```
 <div>
-  <Icon icon='warning' onClick={() => alert('Be careful !')} width='2rem' height='2rem' color='purple' /><span>← Click it</span>
+  <Icon icon='warning' onClick={() => alert('Be careful !')} width={32} height={32} color='purple' /><span>← Click it</span>
 </div>
 ```

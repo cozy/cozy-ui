@@ -15,7 +15,7 @@ export const Sections = mkComponent('div', {className: styles['Hero-sections']})
 export const Paragraph = mkComponent('p', {})
 export const CTA = mkComponent('p', {className: styles['Hero-cta']})
 export const Icon = ({ color, icon }) => (
-  <BaseIcon width='auto' height='5rem' style={{ color }} icon={icon} />
+  <BaseIcon width={80} height={80} style={{ color }} icon={icon} />
 )
 
 Hero.Title = Title

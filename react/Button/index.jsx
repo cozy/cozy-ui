@@ -117,8 +117,6 @@ const commonDefaultProps = {
   label: null,
   icon: null,
   theme: '',
-  size: '',
-  extension: '',
   className: '',
   onClick: null
 }
