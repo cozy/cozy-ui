@@ -145,7 +145,7 @@ const hideModal = () => setState({ modalDisplayed: false });
 For more complex modals, you can use individual components.
 
 ```
-const { ModalDescription, ModalHeader } = Modal;
+const { ModalDescription, ModalHeader, ModalFooter } = Modal;
 
 <div>
   <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
@@ -161,6 +161,7 @@ const { ModalDescription, ModalHeader } = Modal;
       <ModalDescription className='u-mt-half'>
         { content.ada.short }
       </ModalDescription>
+      <ModalFooter>Pouet</ModalFooter>
     </Modal>}
 </div>
 ```
