@@ -9,6 +9,7 @@
 @require '../components/button'
 
 checkbox-size = 1rem
+radio-size = .8125rem
 
 $form
     .coz-form
@@ -278,6 +279,7 @@ $input-text--medium
 $checkbox
     // To make sure that checkbox's wrapper have the height of the checkbox
     display flex
+    margin-bottom .5rem
 
     span
         position relative
@@ -316,7 +318,7 @@ $checkbox
             background-image embedurl('../../assets/icons/ui/dash.svg')
             background-size contain
 
-    input[type=checkbox]
+    input
         hide()
 
         &:checked
@@ -337,6 +339,26 @@ $checkbox
         &::before
             box-shadow inset 0 0 0 .125rem pomegranate
             background-color alpha(pomegranate, .25)
+
+$radio
+    @extend $checkbox
+    span
+        &::before
+        &::after
+            top .15rem
+            width radio-size
+            height radio-size
+
+        &::before
+            border-radius 50%
+
+        &::after
+            background none
+            content '•'
+            color white
+            text-align center
+            font-size .7rem
+            line-height .7rem
 
 
 

@@ -16,6 +16,7 @@ module.exports = {
       components: () => [
         '../react/Input/index.jsx',
         '../react/Checkbox/index.jsx',
+        '../react/Radio/index.jsx',
         '../react/Textarea/index.jsx',
         '../react/Label/index.jsx',
         '../react/Toggle/index.jsx',
