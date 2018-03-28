@@ -60,20 +60,27 @@ const ModalCross = ({ onClick, color, className }) => (
 )
 
 
-const ModalFooter = ({ secondaryText, secondaryAction, secondaryType, primaryText, primaryAction, primaryType }) => {
-  const displayPrimary = primaryText && primaryAction
-  const displaySecondary = secondaryText && secondaryAction
-  return (displaySecondary || displayPrimary) &&
-    (
-      <div className={cx(styles['c-modal-footer'])}>
-        { displaySecondary &&
-          <Button theme={secondaryType} onClick={secondaryAction} label={secondaryText} />
-        }
-        { displayPrimary &&
-          <Button theme={primaryType} onClick={primaryAction} label={primaryText} />
-        }
-      </div>
-    )
+// const ModalFooter = ({ secondaryText, secondaryAction, secondaryType, primaryText, primaryAction, primaryType, children }) => {
+//   const displayPrimary = primaryText && primaryAction
+//   const displaySecondary = secondaryText && secondaryAction
+//   return (
+//     <div className={cx(styles['c-modal-footer'])}>
+//       { displaySecondary &&
+//         <Button theme={secondaryType} onClick={secondaryAction} label={secondaryText} />
+//       }
+//       { displayPrimary &&
+//         <Button theme={primaryType} onClick={primaryAction} label={primaryText} />
+//       }
+//     </div>
+//   )
+// }
+
+const ModalFooter = ({ children }) => {
+  return (
+    <div className={cx(styles['c-modal-footer'])}>
+      { children }
+    </div>
+  )
 }
 
 const ModalButtons = props => {
