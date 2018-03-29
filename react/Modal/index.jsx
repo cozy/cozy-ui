@@ -60,25 +60,24 @@ const ModalCross = ({ onClick, color, className }) => (
 )
 
 
-// const ModalFooter = ({ secondaryText, secondaryAction, secondaryType, primaryText, primaryAction, primaryType, children }) => {
-//   const displayPrimary = primaryText && primaryAction
-//   const displaySecondary = secondaryText && secondaryAction
-//   return (
-//     <div className={cx(styles['c-modal-footer'])}>
-//       { displaySecondary &&
-//         <Button theme={secondaryType} onClick={secondaryAction} label={secondaryText} />
-//       }
-//       { displayPrimary &&
-//         <Button theme={primaryType} onClick={primaryAction} label={primaryText} />
-//       }
-//     </div>
-//   )
-// }
-
-const ModalFooter = ({ children }) => {
+const ModalFooter = ({ secondaryText, secondaryAction, secondaryType, primaryText, primaryAction, primaryType, children, className }) => {
+  const displayPrimary = primaryText && primaryAction
+  const displaySecondary = secondaryText && secondaryAction
   return (
-    <div className={cx(styles['c-modal-footer'])}>
-      { children }
+    <div className={cx(
+      styles['c-modal-footer'],
+        {
+          [styles['c-modal-footer--button']]: (displayPrimary || displaySecondary)
+        },
+      className)}
+    >
+      {children}
+      { displaySecondary &&
+        <Button theme={secondaryType} onClick={secondaryAction} label={secondaryText} />
+      }
+      { displayPrimary &&
+        <Button theme={primaryType} onClick={primaryAction} label={primaryText} />
+      }
     </div>
   )
 }
@@ -95,6 +94,14 @@ class Modal extends Component {
 
   render () {
     const { children, description, title, closable, dismissAction, overflowHidden, className, crossClassName, crossColor, into, size, spacing, mobileFullscreen } = this.props
+    const {
+      primaryText,
+      primaryAction,
+      primaryType,
+      secondaryText,
+      secondaryAction,
+      secondaryType
+    } = this.props
     const maybeWrapInPortal = children => into ? <Portal into={into}>{ children }</Portal> : children
     return maybeWrapInPortal(
       <div className={styles['c-modal-container']}>
@@ -121,7 +128,14 @@ class Modal extends Component {
               { title && <ModalHeader title={title} /> }
               { description && <ModalDescription>{ description }</ModalDescription> }
               {children}
-              <ModalFooter {...this.props} />
+              { (primaryText && primaryAction || secondaryText && secondaryAction) ?
+                <ModalFooter
+                  primaryText={primaryText}
+                  primaryAction={primaryAction}
+                  primaryType={primaryType}
+                  secondaryText={secondaryText}
+                  secondaryAction={secondaryAction}
+                  secondaryType={secondaryType} /> : null }
             </div>
           </div>
         </Overlay>
