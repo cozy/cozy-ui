@@ -155,13 +155,13 @@ const { ModalDescription, ModalHeader, ModalFooter } = Modal;
     <Modal
         overflowHidden={true}
         dismissAction={()=>setState({ modalDisplayed: false})} >
-      <div style={{background: 'red', color: 'white'}}>
+      <div style={{background: 'black', color: 'white'}}>
         <ModalHeader title="Yo ho ho !" />
       </div>
       <ModalDescription className='u-mt-half'>
         { content.ada.short }
       </ModalDescription>
-      <ModalFooter>Pouet</ModalFooter>
+      <ModalFooter><strong>This a custom footer</strong></ModalFooter>
     </Modal>}
 </div>
 ```
