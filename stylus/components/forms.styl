@@ -9,7 +9,6 @@
 @require '../components/button'
 
 checkbox-size = 1rem
-radio-size = .8125rem
 
 $form
     .coz-form
@@ -344,12 +343,6 @@ $radio
     @extend $checkbox
     span
         &::before
-        &::after
-            top .15rem
-            width radio-size
-            height radio-size
-
-        &::before
             border-radius 50%
 
         &::after
@@ -357,8 +350,8 @@ $radio
             content '•'
             color white
             text-align center
-            font-size .7rem
-            line-height .7rem
+            font-size 1rem
+            line-height .8125rem
 
 
 
