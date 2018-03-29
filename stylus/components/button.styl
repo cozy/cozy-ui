@@ -52,10 +52,14 @@ $button
         input
             cursor not-allowed
 
+        &:hover
+            background-color dodgerBlue
+
     &:active
-    &:not([disabled]):not([aria-disabled=true]):hover
+    &:hover
     &:focus
         background-color  scienceBlue
+
 
     &[aria-busy=true]
         > span::after
@@ -78,11 +82,16 @@ $button--secondary
     svg
         fill currentColor
 
+    &[disabled]
+    &[aria-disabled=true]
+        &:hover
+            background-color white
+
     &:visited
         color black
 
     &:active
-    &:not([disabled]):not([aria-disabled=true]):hover
+    &:hover
     &:focus
         background-color  silver
 
@@ -94,8 +103,13 @@ $button--danger
     border-color      pomegranate
     background-color  pomegranate
 
+    &[disabled]
+    &[aria-disabled=true]
+        &:hover
+            background-color pomegranate
+
     &:active
-    &:not([disabled]):not([aria-disabled=true]):hover
+    &:hover
     &:focus
         border-color      monza
         background-color  monza
@@ -108,11 +122,16 @@ $button--danger-outline
     svg
         fill currentColor
 
+    &[disabled]
+    &[aria-disabled=true]
+        &:hover
+            background-color white
+
     &:visited
         color pomegranate
 
     &:active
-    &:not([disabled]):not([aria-disabled=true]):hover
+    &:hover
     &:focus
         background-color  yourPink
 
@@ -124,8 +143,13 @@ $button--highlight
     border-color      emerald
     background-color  emerald
 
+    &[disabled]
+    &[aria-disabled=true]
+        &:hover
+            background-color emerald
+
     &:active
-    &:not([disabled]):not([aria-disabled=true]):hover
+    &:hover
     &:focus
         border-color      malachite
         background-color  malachite
@@ -134,8 +158,13 @@ $button--alpha
     border-color      white
     background-color  transparent
 
+    &[disabled]
+    &[aria-disabled=true]
+        &:hover
+            background-color transparent
+
     &:active
-    &:not([disabled]):not([aria-disabled=true]):hover
+    &:hover
     &:focus
         background-color  scienceBlue
 
@@ -159,7 +188,7 @@ $button--action
         margin 0
 
     &:active
-    &:not([disabled]):not([aria-disabled=true]):hover
+    &:hover
     &:focus
         background-color  transparent
 
@@ -172,7 +201,7 @@ $button--close
         margin 0
 
     &:active
-    &:not([disabled]):not([aria-disabled=true]):hover
+    &:hover
     &:focus
         background-color  transparent
 
@@ -201,12 +230,17 @@ $button-alert--info
     background-color  coolGrey
     color             white
 
+    &[disabled]
+    &[aria-disabled=true]
+        &:hover
+            background-color coolGrey
+
     &:visited
         color white
 
     &:active
     &:hover
-    &:not([disabled]):not([aria-disabled=true]):hover
+    &:hover
     &:focus
         color  darken(white, 10%)
         background-color  darken(coolGrey, 10%)
@@ -267,11 +301,16 @@ $button-client-mobile
     text-decoration  none
     text-transform   none
 
+    &[disabled]
+    &[aria-disabled=true]
+        &:hover
+            background-color dodgerBlue
+
     &:visited
         color white
 
     &:active
-    &:not([disabled]):not([aria-disabled=true]):hover
+    &:hover
     &:focus
         background-color dodgerBlue
 
