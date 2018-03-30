@@ -1,9 +1,8 @@
 There's two kinds of Button at your disposal : `<Button />` & `<ButtonLink />`.
 The first is a basic `<button>` for a click event, the second is a `<a>`, a link.
-Both look exactly the same, they share the same `theme`, `className` & `onClick` parameters but `<Button>` has also: 
+Both look exactly the same, they share the same `className`, `disabled`, `onClick` & `theme` parameters but `<Button>` has also:
 
 - `busy` that adds a spinner (default `false`)
-- `disabled` that disable the click event (default `false`)
 - `type`, eg. `submit` or `reset` (default `submit`)
 
 when `<ButtonLink>` has:
@@ -74,8 +73,9 @@ initialState = { busy:false };
 #### Disable a button
 
 ```
-const { Button } = require('./index');
+const { Button, ButtonLink } = require('./index');
 <Button disabled label='Loading' />
+<ButtonLink disabled href='http://cozy.io' label='Go to Cozy website' />
 ```
 
 #### Create a button with an icon

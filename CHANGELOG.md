@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Added
-- none yet
+- `disabled` attribute for `<ButtonLink />` component
 
 ### Removed
 - none yet
