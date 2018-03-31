@@ -7,7 +7,7 @@
 
 # Cozy UI
 
-CSS classes and React components designed to build [Cozy](https://cozy.io/) apps. 
+CSS classes and React components designed to build [Cozy](https://cozy.io/) apps.
 
 If you plan to build a webapp to run on Cozy, you'll probably want to use a simple and elegant solution to build your interfaces without the mess of dealing with complex markup and CSS. Then Cozy UI is here for you!
 
@@ -20,6 +20,15 @@ Check the [styleguide](https://cozy.github.io/cozy-ui/styleguide) to see all the
 Check out [UI components](https://cozy.github.io/cozy-ui/react/) to see how to use ready made (p)React components.
 
 ## Usage
+
+### As a Components library
+
+Use [`yarn`](https://yarnpkg.com/) to add Cozy UI to a dependency to your project.
+```
+yarn add cozy-ui
+```
+
+You're now ready to use [Cozy UI's (p)React components](https://cozy.github.io/cozy-ui/react/)
 
 ### As a Stylus plugin
 [Stylus][stylus] is used as a preprocessor. You can add it as a library in your project to use it out-of-the-box.
@@ -54,6 +63,24 @@ The entire library is also available as a good ol’ CSS library. You can simply
 <link media="all" rel="stylesheet" href=“cozy-ui/dist/cozy-ui.min.css" />
 ```
 
+## Hack Cozy UI
+
+If you want to customize or improve a Cozy UI Component, you need to clone a local version of the library, and declare it as a local symlink with `yarn link`.
+
+```
+git clone git@github.com:cozy/cozy-ui.git
+cd cozy-ui
+yarn link
+```
+
+Then in your application folder, you can link to your local Cozy UI
+
+```
+yarn link cozy-ui
+yarn watch
+```
+
+All your modification in your local Cozy UI will now be visible in your application!
 
 ## License
 
