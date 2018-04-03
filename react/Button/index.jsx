@@ -43,13 +43,14 @@ export const Button = props => {
 export default Button
 
 export const ButtonLink = props => {
-  const { theme, size, extension, href, target, className, children, label, icon, onClick } = props
+  const { disabled, theme, size, extension, href, target, className, children, label, icon, onClick } = props
   return (
     <a
+      aria-disabled={disabled}
       href={href}
       target={target}
       className={btnClass(theme, size, extension, className)}
-      onClick={onClick}
+      onClick={disabled ? (event) => event.preventDefault() : onClick}
     >
       <span>
         {usableByIcon(icon) ? <Icon icon={icon} /> : icon}
@@ -91,6 +92,8 @@ Button.propTypes = {
 ButtonLink.propTypes = {
   /** DEPRECATED: please use label and icon */
   children: PropTypes.node,
+  /** Disables the button */
+  disabled: PropTypes.bool,
   /** Label of the button */
   label: PropTypes.node,
   /** Icon identifier or `<Icon />` */
@@ -130,6 +133,7 @@ Button.defaultProps = {
 
 ButtonLink.defaultProps = {
   ...commonDefaultProps,
+  disabled: false,
   target: '',
   href: ''
 }
