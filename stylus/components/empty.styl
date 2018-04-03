@@ -1,3 +1,4 @@
+@require '../settings/palette'
 @require '../settings/breakpoints'
 
 $empty
@@ -9,27 +10,6 @@ $empty
     padding          1rem 0
     text-align       center
 
-    &:before
-        content              ''
-        display              block
-        margin               0 auto
-        width                16rem
-        height               8.75rem
-        background-position  center center
-        background-repeat    no-repeat
-        background-size      contain
-
-    h2
-        font-size       1.5rem
-        margin          2rem auto 0
-        line-height     1.3
-        color           charcoalGrey
-        letter-spacing  -.2px
-    p
-        margin-top   .3125rem
-        color        coolGrey
-        line-height  1.5
-
     +medium-screen()
         height 100%
         width 100%
@@ -37,10 +17,29 @@ $empty
         top 0
         left 0
         pointer-events none
-        &:before
-            width   7.5rem
-            height  6.5625rem
-        h2
-            margin  2rem 1.5em 0
-        p
-            margin  .3125rem 1.5em 0
+
+$empty-img
+    display              block
+    margin               0 auto
+    height               8.75rem
+
+    +medium-screen()
+        height  6.5625rem
+
+$empty-title
+    font-size       1.5rem
+    margin          2rem auto 0
+    line-height     1.3
+    color           charcoalGrey
+    letter-spacing  -.2px
+
+    +medium-screen()
+        margin  2rem 1.5em 0
+
+$empty-text
+    margin-top   .3125rem
+    color        coolGrey
+    line-height  1.5
+
+    +medium-screen()
+        margin  .3125rem 1.5em 0
