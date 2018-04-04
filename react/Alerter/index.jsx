@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Portal from 'preact-portal'
+import Button from '../Button'
 
 import styles from './styles.styl'
 import classNames from 'classnames'
@@ -68,35 +69,26 @@ class Alert extends Component {
     const { message, type, buttonText, buttonAction } = this.props
     const { hidden } = this.state
     return (
-      <div className={styles['coz-alerter']}>
-        <div
-          className={classNames(
-            styles['coz-alert'],
-            styles[`coz-alert--${type}`],
-            hidden ? styles['coz-alert--hidden'] : ''
-          )}
-        >
+      <div
+        className={classNames(
+          styles['c-alert'],
+          hidden ? styles['c-alert--hidden'] : ''
+        )}
+      >
+        <div className={classNames(
+          styles['c-alert-wrapper'],
+          styles[`c-alert--${type}`]
+        )}>
           <p>{message}</p>
           {buttonText && (
-            <button
+            <Button
               onClick={buttonAction}
-              className={classNames(
-                styles['coz-btn'],
-                styles[`coz-btn--alert-${type}`]
-              )}
-            >
-              <span>{buttonText}</span>
-            </button>
+              className={styles[`c-btn--alert-${type}`]}
+              label={buttonText}
+              size="tiny"
+            />
           )}
         </div>
-        {type === 'error' && (
-          <div
-            className={classNames(
-              styles['coz-overlay'],
-              hidden ? styles['coz-overlay--hidden'] : ''
-            )}
-          />
-        )}
       </div>
     )
   }

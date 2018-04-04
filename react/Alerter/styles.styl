@@ -3,18 +3,33 @@
 @require '../../stylus/components/alerts'
 @require '../../stylus/components/button'
 
-.coz-alerter
-    @extend $alerts
+.c-alert
+    @extend $alert
 
-.coz-btn
-    @extend $button
+.c-alert-wrapper
+    @extend $alert-wrapper
 
-.coz-btn--alert-error
+.c-alert-title
+    @extend $alert-title
+
+.c-alert--error
+    @extend $alert--error
+
+.c-alert--success
+    @extend $alert--success
+
+.c-alert--info
+    @extend $alert--info
+
+.c-alert--hidden
+    @extend $alert--hidden
+
+.c-btn--alert-error
     @extend $button-alert--error
 
-.coz-btn--alert-info
+.c-btn--alert-info
     @extend $button-alert--info
 
-.coz-btn--alert-success
+.c-btn--alert-success
     @extend $button-alert--success
 
