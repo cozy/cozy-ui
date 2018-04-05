@@ -5,6 +5,8 @@ import Portal from 'preact-portal'
 import styles from './styles.styl'
 import classNames from 'classnames'
 
+const MINIMUM_ALERT_DURATION = 2000
+
 const createStore = () => {
   const notifications = []
   const listeners = []
@@ -31,7 +33,7 @@ class Alert extends Component {
 
   computeDuration () {
     const words = this.props.message.split(/\W/).filter(Boolean)
-    return Math.max(2000, words.length / 3 * 1000)
+    return Math.max(MINIMUM_ALERT_DURATION, words.length / 3 * 1000)
   }
 
   componentDidMount() {
