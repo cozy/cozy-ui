@@ -57,7 +57,14 @@ module.exports = {
     }
   ],
   components: '../react/**/*.jsx',
-  template: 'template.html',
+  template: {
+    head: {
+      links: [{
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css?family=Lato:400,700,300'
+      }]
+    }
+  },
   theme: {
     fontFamily: {
       base: 'Lato, sans-serif'
