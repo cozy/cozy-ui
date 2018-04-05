@@ -29,10 +29,15 @@ class Alert extends Component {
     hidden: true
   }
 
+  computeDelay () {
+    const words = this.props.message.split(/\W/).filter(Boolean)
+    return Math.max(2000, words.length / 3 * 1000)
+  }
+
   componentDidMount() {
     this.closeTimer = setTimeout(() => {
       this.beginClosing()
-    }, 2000)
+    }, this.props.delay === 'auto' ? this.computeDelay() : this.props.delay)
     // Delay to trigger CSS transition after the first render.
     // Totally open for a better way to achieve this.
     setTimeout(() => {
@@ -110,7 +115,8 @@ Alert.defaultProps = {
   message: '',
   onClose: () => {},
   buttonText: undefined,
-  buttonAction: () => {}
+  buttonAction: () => {},
+  delay: 'auto'
 }
 
 class Alerter extends Component {
@@ -182,6 +188,7 @@ class Alerter extends Component {
             onClose={() => this.handleClose(notif.id)}
             buttonText={notif.options && notif.options.buttonText}
             buttonAction={notif.options && notif.options.buttonAction}
+            delay={notif.options && notif.options.delay}
           />
         ))}
       </Portal>
