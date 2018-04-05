@@ -28,3 +28,10 @@ colors=json('../settings/palette.json', { hash: true })
 for color in keys(colors)
     $color-{color}
         color: lookup(color) !important // @stylint ignore
+
+$ellipsis
+    display block
+    width 100%
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis

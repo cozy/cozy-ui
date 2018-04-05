@@ -34,6 +34,8 @@ module.exports = {
     {
       name: 'Content',
       components: () => [
+        '../react/Text/index.jsx',
+        '../react/TextNote/index.jsx',
         '../react/Media/Media.jsx',
         '../react/Modal/index.jsx',
         '../react/Avatar/index.jsx'
