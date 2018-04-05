@@ -40,6 +40,12 @@ module.exports = {
       ]
     },
     {
+      name: 'List',
+      components: () => [
+        '../react/ListItemText/index.jsx',
+      ]
+    },
+    {
       name: 'Navigation',
       components: () => [
         '../react/ActionMenu/index.jsx',
