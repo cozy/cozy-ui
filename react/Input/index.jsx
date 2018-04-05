@@ -34,10 +34,6 @@ Input.propTypes = {
 
 Input.defaultProps = {
   type: 'text',
-  id: '',
-  className: '',
-  value: '',
-  placeholder: '',
   error: false
 }
 
