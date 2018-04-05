@@ -105,16 +105,20 @@ class Alert extends Component {
 }
 
 Alert.propTypes = {
-  type: PropTypes.string,
-  message: PropTypes.string,
+  /** @type string - Controls the style of the error */
+  type: PropTypes.oneOf(['success', 'info', 'error']),
+  /** @type {string} - Message to display */
+  message: PropTypes.string.isRequired,
+  /** @type {function} - Callback when is dismissed */
   onClose: PropTypes.func,
+  /** @type {function} - Text of the button, if absent, no button is displayed */
   buttonText: PropTypes.string,
+  /** @type {function} - Callback when clicking on the button */
   buttonAction: PropTypes.func
 }
 
 Alert.defaultProps = {
   type: 'info',
-  message: '',
   onClose: () => {},
   buttonText: undefined,
   buttonAction: () => {},
