@@ -5,6 +5,8 @@ import Portal from 'preact-portal'
 import styles from './styles.styl'
 import classNames from 'classnames'
 
+const MINIMUM_ALERT_DURATION = 2000
+
 const createStore = () => {
   const notifications = []
   const listeners = []
@@ -29,10 +31,15 @@ class Alert extends Component {
     hidden: true
   }
 
+  computeDuration () {
+    const words = this.props.message.split(/\W/).filter(Boolean)
+    return Math.max(MINIMUM_ALERT_DURATION, words.length / 3 * 1000)
+  }
+
   componentDidMount() {
     this.closeTimer = setTimeout(() => {
       this.beginClosing()
-    }, 2000)
+    }, this.props.duration === 'auto' ? this.computeDuration() : this.props.duration)
     // Delay to trigger CSS transition after the first render.
     // Totally open for a better way to achieve this.
     setTimeout(() => {
@@ -98,19 +105,24 @@ class Alert extends Component {
 }
 
 Alert.propTypes = {
-  type: PropTypes.string,
-  message: PropTypes.string,
+  /** @type string - Controls the style of the error */
+  type: PropTypes.oneOf(['success', 'info', 'error']),
+  /** @type {string} - Message to display */
+  message: PropTypes.string.isRequired,
+  /** @type {function} - Callback when is dismissed */
   onClose: PropTypes.func,
+  /** @type {function} - Text of the button, if absent, no button is displayed */
   buttonText: PropTypes.string,
+  /** @type {function} - Callback when clicking on the button */
   buttonAction: PropTypes.func
 }
 
 Alert.defaultProps = {
   type: 'info',
-  message: '',
   onClose: () => {},
   buttonText: undefined,
-  buttonAction: () => {}
+  buttonAction: () => {},
+  duration: 'auto'
 }
 
 class Alerter extends Component {
@@ -182,6 +194,7 @@ class Alerter extends Component {
             onClose={() => this.handleClose(notif.id)}
             buttonText={notif.options && notif.options.buttonText}
             buttonAction={notif.options && notif.options.buttonAction}
+            duration={notif.options && notif.options.duration}
           />
         ))}
       </Portal>
