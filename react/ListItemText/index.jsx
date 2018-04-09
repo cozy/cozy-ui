@@ -6,7 +6,7 @@ import TextNote from '../TextNote'
 import styles from './styles.styl'
 
 const ListItemText = props => {
-  const { primaryText, secondaryText, className, ellipsis } = props
+  const { primaryText, secondaryText, className, ellipsis, children } = props
   return (
     <div className={cx(
       styles['c-list-text'],
@@ -14,13 +14,14 @@ const ListItemText = props => {
     >
       <Text ellipsis={ellipsis}>{primaryText}</Text>
       <TextNote ellipsis={ellipsis}>{secondaryText}</TextNote>
+      {children}
     </div>
   )
 }
 
 ListItemText.propTypes = {
   children: PropTypes.node,
-  primaryText: PropTypes.string.isRequired,
+  primaryText: PropTypes.string,
   secondaryText: PropTypes.string,
   className: PropTypes.string,
   ellipsis: PropTypes.bool

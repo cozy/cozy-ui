@@ -3,31 +3,51 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
-const Text = props => {
-  const { className, children, tag, ellipsis } = props
+const mkText = baseClass => props => {
+  const { className, children, tag, ellipsis, ...restProps } = props
   const Tag = tag
   return (
     <Tag className={cx(
-      styles['g-text'], {
+      baseClass, {
         [styles['u-ellipsis']] : ellipsis
       },
       className)}
+      {...restProps}
     >
       {children}
     </Tag>
   )
 }
 
-Text.propTypes = {
+export const Text = mkText(styles['g-text'])
+export const TextNote = mkText(styles['g-text-note'])
+
+// Props
+const commonProps = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   tag: PropTypes.string,
   ellipsis: PropTypes.bool
 }
 
-Text.defaultProps = {
+Text.propTypes = {
+  ...commonProps
+}
+TextNote.propTypes = {
+  ...commonProps
+}
+
+// Default Props
+const commonDefaultProps = {
   tag: 'div',
   ellipsis: false
+}
+
+Text.defaultProps = {
+  ...commonDefaultProps
+}
+TextNote.defaultProps = {
+  ...commonDefaultProps
 }
 
 export default Text
