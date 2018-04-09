@@ -9,9 +9,6 @@ module.exports = function (source) {
     return source
   }
   const replaced = source
-    .replace('fill="#FFF"', '')
-    .replace('fill="#FFFFFF"', '')
-    .replace('fill=\'#FFF\'', '')
-    .replace('fill=\'#FFFFFF\'', '')
+    .replace(/fill=["']#f{3,6}["']/gi, '')
   return replaced
 }
