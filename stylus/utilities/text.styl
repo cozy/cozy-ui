@@ -35,3 +35,24 @@ $ellipsis
     white-space nowrap
     overflow hidden
     text-overflow ellipsis
+
+$midellipsis
+    display flex
+    flex-wrap nowrap
+
+    > * // @stylint ignore
+        display inline-block
+        max-width 50%
+        overflow hidden
+        white-space pre
+
+    > :first-child
+        text-overflow ellipsis
+
+    > :last-child
+        text-overflow clip
+        direction rtl
+
+    @supports(text-overflow: '[...]')
+        > :first-child
+            text-overflow '[...]'
