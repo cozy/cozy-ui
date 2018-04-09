@@ -37,7 +37,8 @@ module.exports = {
         '../react/Text/index.jsx',
         '../react/Media/Media.jsx',
         '../react/Modal/index.jsx',
-        '../react/Avatar/index.jsx'
+        '../react/Avatar/index.jsx',
+        '../react/MidEllipsis/index.jsx'
       ]
     },
     {
