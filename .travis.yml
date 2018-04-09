@@ -10,7 +10,7 @@ cache:
 script:
 - yarn lint
 - yarn build:css
-after_deploy:
+after_success:
 - test $TRAVIS_BRANCH = "master" && test $TRAVIS_REPO_SLUG = "cozy/cozy-ui" && yarn
   build:doc && yarn deploy:doc -- --username cozycloud --email contact@cozycloud.cc
   --repo=https://$GITHUB_TOKEN@github.com/cozy/cozy-ui.git
