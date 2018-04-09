@@ -54,7 +54,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.3",
-    "react-styleguidist": "^7.0.4",
+    "react-styleguidist": "^6.0.24",
     "redux": "^3.6.0",
     "style-loader": "^0.18.2",
     "stylint": "^1.5.9",
