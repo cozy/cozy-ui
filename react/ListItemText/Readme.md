@@ -14,9 +14,12 @@
 
 ```
 const { Text, Caption } = require('../Text');
+const MidEllipsis = require('../MidEllipsis').default;
 
 <ListItemText>
   <Text>I'm a primary text</Text>
-  <Caption tag="a" href="http://cozy.io">I'm a clickable secondary text</Caption>
+  <Caption tag="a" href="http://cozy.io">
+    <MidEllipsis text={content.ada.short} />
+  </Caption>
 </ListItemText>
 ```

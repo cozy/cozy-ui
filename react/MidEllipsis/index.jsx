@@ -23,7 +23,7 @@ const MidEllipsis = props => {
 
 MidEllipsis.propTypes = {
   text: PropTypes.string.isRequired,
-  className: PropTypes.string,
+  className: PropTypes.string
 }
 
 export default MidEllipsis

@@ -74,8 +74,10 @@ initialState = { busy:false };
 
 ```
 const { Button, ButtonLink } = require('./index');
-<Button disabled label='Loading' />
-<ButtonLink disabled href='http://cozy.io' label='Go to Cozy website' />
+<div>
+  <Button disabled label='Loading' />
+  <ButtonLink disabled href='http://cozy.io' label='Go to Cozy website' />
+</div>
 ```
 
 #### Create a button with an icon
