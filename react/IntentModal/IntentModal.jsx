@@ -1,6 +1,6 @@
 import React from 'react'
 import Modal from '../Modal'
-import IntentIframe from './IntentIframe'
+import IntentIframe from '../IntentIframe'
 import styles from './styles.styl'
 import PropTypes from 'prop-types'
 

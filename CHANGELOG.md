@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
 ### Changed
-- none yet
+- `<IntentIframe />` has been extracted from `<IntentModal />` and it is now a standalone component.
 
 ### Fixed
 - none yet

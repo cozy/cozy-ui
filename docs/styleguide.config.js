@@ -58,6 +58,7 @@ module.exports = {
       components: () => [
         '../react/Overlay/index.jsx',
         '../react/Alerter/index.jsx',
+        '../react/IntentIframe/IntentIframe.jsx',
         '../react/IntentModal/IntentModal.jsx',
         '../react/IntentOpener/IntentOpener.jsx'
       ]
