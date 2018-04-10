@@ -7,7 +7,7 @@
 #### Note text
 
 ```
-const { TextNote } = require('./index');
+const { Caption } = require('./index');
 
-<TextNote>This a note text</TextNote>
+<Caption>This a note text</Caption>
 ```

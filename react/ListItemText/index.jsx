@@ -1,8 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-import Text from '../Text'
-import TextNote from '../TextNote'
+import { Text, Caption } from '../Text'
 import styles from './styles.styl'
 
 const ListItemText = props => {
@@ -13,7 +12,7 @@ const ListItemText = props => {
       className)}
     >
       <Text ellipsis={ellipsis}>{primaryText}</Text>
-      <TextNote ellipsis={ellipsis}>{secondaryText}</TextNote>
+      <Caption ellipsis={ellipsis}>{secondaryText}</Caption>
       {children}
     </div>
   )

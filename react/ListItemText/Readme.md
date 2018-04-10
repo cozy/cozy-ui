@@ -13,10 +13,10 @@
 #### Custom List item
 
 ```
-const { Text, TextNote } = require('../Text');
+const { Text, Caption } = require('../Text');
 
 <ListItemText>
   <Text>I'm a primary text</Text>
-  <TextNote tag="a" href="http://cozy.io" className="u-reverselink">I'm a clickable secondary text</TextNote>
+  <Caption tag="a" href="http://cozy.io">I'm a clickable secondary text</Caption>
 </ListItemText>
 ```
