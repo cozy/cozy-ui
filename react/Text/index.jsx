@@ -20,7 +20,7 @@ const mkText = baseClass => props => {
 }
 
 export const Text = mkText(styles['g-text'])
-export const TextNote = mkText(styles['g-text-note'])
+export const Caption = mkText(styles['g-caption'])
 
 // Props
 const commonProps = {
@@ -33,7 +33,7 @@ const commonProps = {
 Text.propTypes = {
   ...commonProps
 }
-TextNote.propTypes = {
+Caption.propTypes = {
   ...commonProps
 }
 
@@ -46,7 +46,7 @@ const commonDefaultProps = {
 Text.defaultProps = {
   ...commonDefaultProps
 }
-TextNote.defaultProps = {
+Caption.defaultProps = {
   ...commonDefaultProps
 }
 
