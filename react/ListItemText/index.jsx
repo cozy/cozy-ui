@@ -11,8 +11,8 @@ const ListItemText = props => {
       styles['c-list-text'],
       className)}
     >
-      <Text ellipsis={ellipsis}>{primaryText}</Text>
-      <Caption ellipsis={ellipsis}>{secondaryText}</Caption>
+      {primaryText && <Text ellipsis={ellipsis}>{primaryText}</Text>}
+      {secondaryText && <Caption ellipsis={ellipsis}>{secondaryText}</Caption>}
       {children}
     </div>
   )
