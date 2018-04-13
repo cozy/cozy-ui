@@ -1,5 +1,6 @@
 @require '../settings/palette'
 @require '../settings/icons'
+@require '../utilities/text'
 @require '../tools/mixins'
 
 /*------------------------------------*\
@@ -348,3 +349,70 @@ $button--full
 
 $button--narrow
     min-width auto
+
+/*------------------------------------*\
+  Operation button
+\*------------------------------------*/
+$actionbtn
+    @extend $button
+    border-color silver
+    text-transform none
+    max-width 12.5rem
+    min-height 2rem
+    width 100%
+    padding-right .5rem
+    text-align left
+
+    > span
+        justify-content flex-start
+        flex-wrap nowrap
+
+    [data-icon='action']
+        border-left .0625rem solid silver
+
+    &:not([disabled]):hover
+        [data-icon='action']
+            border-color currentColor
+
+$actionbtn--new
+    border .0625rem dashed frenchPass
+    background-color zircon
+    color dodgerBlue
+
+    &:hover
+        border-style solid
+        background-color frenchPass
+
+$actionbtn--normal
+    background-color paleGrey
+    color charcoalGrey
+
+    &:hover
+        background-color silver
+
+    &[disabled]:hover
+    &[aria-disabled=true]:hover
+        background-color paleGrey
+
+$actionbtn--error
+    border-color yourPink
+    background-color chablis
+    color pomegranate
+
+    [data-icon='action']
+        border-color yourPink
+
+    &:hover
+        background-color yourPink
+
+$actionbtn-label
+    @extend $ellipsis
+    padding-right .5rem
+
+$actionbtn-icon
+    display block
+    margin-left auto
+    padding-left .5rem
+
+    svg
+        display block
