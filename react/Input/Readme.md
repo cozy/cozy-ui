@@ -28,6 +28,12 @@
 </div>
 ```
 
+### Full width inputs
+
+```
+<Input placeholder="I'm full width" fullwidth />
+```
+
 ### Props forwarding
 
 `Input` forwards unknown props to the underlying `<input />` element.
