@@ -11,7 +11,7 @@ const usableByIcon = icon => {
 }
 
 const ButtonAction = props => {
-  const { type, disabled, children, label, leftIcon, rightIcon, className, onClick, ...rest } = props
+  const { type, disabled, children, label, leftIcon, rightIcon, compact, className, onClick, ...restProps } = props
   return (
     <button
       disabled={disabled}
@@ -19,16 +19,25 @@ const ButtonAction = props => {
       role="button"
       className={cx(
         styles['c-actionbtn'], {
-          [styles[`c-actionbtn--${type}`]] : type
+          [styles[`c-actionbtn--${type}`]] : type,
+          [styles[`c-actionbtn--compact`]] : compact
         },
         className)}
       onClick={onClick}
+      title={compact ? label : undefined}
+      {...restProps}
     >
       <span>
         {usableByIcon(leftIcon) ? <Icon icon={leftIcon} /> : leftIcon}
-        {label && <span className={styles['c-actionbtn-label']}>{label}</span>}
+        {label &&
+          <span
+            data-action="label"
+            className={styles['c-actionbtn-label']}>{label}
+          </span>}
         {rightIcon &&
-          <span data-icon="action" className={styles['c-actionbtn-icon']}>
+          <span
+            data-action="icon"
+            className={styles['c-actionbtn-icon']}>
             {usableByIcon(rightIcon) ? <Icon icon={rightIcon} /> : rightIcon}
           </span>
         }
@@ -43,12 +52,14 @@ ButtonAction.propTypes = {
   label: PropTypes.node,
   leftIcon: PropTypes.node,
   rightIcon: PropTypes.node,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  compact: PropTypes.bool
 }
 
 ButtonAction.defaultProps = {
   type: 'normal',
-  disabled: false
+  disabled: false,
+  compact: false
 }
 
 export default ButtonAction
