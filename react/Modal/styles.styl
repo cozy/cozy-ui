@@ -10,11 +10,14 @@
 .c-modal-wrapper
     @extend $modal-wrapper
 
-.c-modal-wrapper--fullscreen
-    @extend $modal-wrapper--fullscreen
+    &.c-modal-wrapper--fullscreen
+        @extend $modal-wrapper--fullscreen
 
 .c-modal
     @extend $modal
+
+    &.c-modal--fullscreen
+        @extend $modal--fullscreen
 
 .c-modal--small
     @extend $modal--small
@@ -31,8 +34,6 @@
 .c-modal--xxlarge
     @extend $modal--xxlarge
 
-.c-modal--fullscreen
-    @extend $modal--fullscreen
 
 .c-modal-header
     @extend $modal-header
