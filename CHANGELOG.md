@@ -7,7 +7,28 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
 ### Changed
+- none yet
+
+### Fixed
+- none yet
+
+### Added
+- none yet
+
+### Removed
+- none yet
+
+### Deprecated
+- none yet
+
+### Security
+- none yet
+
+## [7.12.0] - 2018-04-13
+
+### Changed
 - `<IntentIframe />` has been extracted from `<IntentModal />` and it is now a standalone component.
+- `<Bd />` now hides its overflowing content
 
 ### Fixed
 - none yet
@@ -872,6 +893,7 @@ on desktop or mobile view
 
 
 [Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.11.0...HEAD
+[7.12.0]: https://github.com/cozy/cozy-ui/compare/v7.11.0...v7.12.0
 [7.11.0]: https://github.com/cozy/cozy-ui/compare/v7.10.0...v7.11.0
 [7.10.0]: https://github.com/cozy/cozy-ui/compare/v7.9.2...v7.10.0
 [7.9.2]: https://github.com/cozy/cozy-ui/compare/v7.9.1...v7.9.2
