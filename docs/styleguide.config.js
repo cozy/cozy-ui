@@ -7,6 +7,7 @@ module.exports = {
       name: 'Basics',
       components: () => [
         '../react/Button/index.jsx',
+        '../react/ButtonAction/index.jsx',
         '../react/Spinner/index.jsx',
         '../react/Icon/index.jsx'
       ]
