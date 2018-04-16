@@ -39,6 +39,12 @@ function Icon (props) {
   </svg>
 }
 
+Icon.isProperIcon = icon => {
+  const isSvgSymbol = icon && !!icon.id
+  const isIconIdentifier = typeof icon === 'string'
+  return isSvgSymbol || isIconIdentifier
+}
+
 Icon.propTypes = {
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
