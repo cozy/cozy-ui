@@ -1,6 +1,6 @@
 export {default as Alerter} from './Alerter'
 export { Button, ButtonLink } from './Button'
-export { default } from './ButtonAction'
+export { default as ButtonAction } from './ButtonAction'
 export {default as I18n, translate} from './I18n'
 export {default as Icon} from './Icon'
 export {default as Sidebar} from './Sidebar'
