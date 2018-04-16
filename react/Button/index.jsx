@@ -14,12 +14,6 @@ const btnClass = function (theme, size, extension, className) {
     className)
 }
 
-const usableByIcon = icon => {
-  const isSvgSymbol = icon && !!icon.id
-  const isIconIdentifier = typeof icon === 'string'
-  return isSvgSymbol || isIconIdentifier
-}
-
 export const Button = props => {
   const { theme, size, extension, busy, disabled, className, children, label, icon, onClick, type } = props
   return (
@@ -32,7 +26,7 @@ export const Button = props => {
       onClick={onClick}
     >
       <span>
-        {usableByIcon(icon) ? <Icon icon={icon} /> : icon}
+        {Icon.isProperIcon(icon) ? <Icon icon={icon} /> : icon}
         {label && <span>{label}</span>}
         {children}
       </span>
@@ -53,7 +47,7 @@ export const ButtonLink = props => {
       onClick={disabled ? (event) => event.preventDefault() : onClick}
     >
       <span>
-        {usableByIcon(icon) ? <Icon icon={icon} /> : icon}
+        {Icon.isProperIcon(icon) ? <Icon icon={icon} /> : icon}
         {label && <span>{label}</span>}
         {children}
       </span>

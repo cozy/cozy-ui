@@ -4,12 +4,6 @@ import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import Icon from '../Icon'
 
-const usableByIcon = icon => {
-  const isSvgSymbol = icon && !!icon.id
-  const isIconIdentifier = typeof icon === 'string'
-  return isSvgSymbol || isIconIdentifier
-}
-
 const ButtonAction = props => {
   const { type, disabled, children, label, leftIcon, rightIcon, compact, className, onClick, ...restProps } = props
   return (
@@ -28,7 +22,7 @@ const ButtonAction = props => {
       {...restProps}
     >
       <span>
-        {usableByIcon(leftIcon) ? <Icon icon={leftIcon} /> : leftIcon}
+        {Icon.isProperIcon(leftIcon) ? <Icon icon={leftIcon} /> : leftIcon}
         {label &&
           <span
             data-action="label"
@@ -38,7 +32,7 @@ const ButtonAction = props => {
           <span
             data-action="icon"
             className={styles['c-actionbtn-icon']}>
-            {usableByIcon(rightIcon) ? <Icon icon={rightIcon} /> : rightIcon}
+            {Icon.isProperIcon(rightIcon) ? <Icon icon={rightIcon} /> : rightIcon}
           </span>
         }
         {children}
