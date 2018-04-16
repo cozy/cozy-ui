@@ -48,7 +48,7 @@ const ButtonAction = props => {
 }
 
 ButtonAction.propTypes = {
-  type: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['new', 'normal', 'error']).isRequired,
   label: PropTypes.node,
   leftIcon: PropTypes.node,
   rightIcon: PropTypes.node,
