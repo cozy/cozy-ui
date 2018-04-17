@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IntentModal component renders as expected 1`] = `
+<Unknown
+  className="intentModal"
+  closable={true}
+  crossClassName="intentModal__cross"
+  dismissAction={[MockFunction onDismissMock]}
+  overflowHidden={true}
+>
+  <IntentIframe
+    action="ANY"
+    create={[MockFunction createMock]}
+    data={
+      Object {
+        "key": "value",
+      }
+    }
+    onCancel={[MockFunction onDismissMock]}
+    onError={[MockFunction onErrorMock]}
+    onTerminate={[MockFunction onCompleteMock]}
+    type="io.cozy.whatever"
+  />
+</Unknown>
+`;
