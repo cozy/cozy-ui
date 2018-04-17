@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
 ### Changed
-- none yet
+- `<ActionMenu />` now accepts a `className` prop
 
 ### Fixed
 - `<IntentModal />` is no more broken
