@@ -1,28 +1,16 @@
 # Change Log
 All notable changes to this project will be documented in this file.
+We use lerna-changelog to generate the changelog based on the PRs.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [7.13.0] (2018-04-17)
 
-### Changed
-- `<ActionMenu />` now accepts a `className` prop
+#### :rocket: Enhancement
+* [#426](https://github.com/cozy/cozy-ui/pull/426) Added support for className prop to ActionMenu. ([@goldoraf](https://github.com/goldoraf))
 
-### Fixed
-- `<IntentModal />` is no more broken
-
-### Added
-- Jest tests :tada:
-
-### Removed
-- none yet
-
-### Deprecated
-- none yet
-
-### Security
-- none yet
+#### :bug: Bug Fix
+* [#425](https://github.com/cozy/cozy-ui/pull/425) fix: fix IntentModal API and add Jest tests ✨. ([@gregorylegarec](https://github.com/gregorylegarec))
 
 ## [7.12.0] - 2018-04-13
 
