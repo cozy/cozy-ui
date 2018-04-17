@@ -43,6 +43,14 @@ module.exports = {
       ]
     },
     {
+      name: 'Intents',
+      components: () => [
+        '../react/IntentIframe/IntentIframe.jsx',
+        '../react/IntentModal/IntentModal.jsx',
+        '../react/IntentOpener/IntentOpener.jsx'
+      ]
+    },
+    {
       name: 'List',
       components: () => [
         '../react/ListItemText/index.jsx',
@@ -59,10 +67,7 @@ module.exports = {
       name: 'Special',
       components: () => [
         '../react/Overlay/index.jsx',
-        '../react/Alerter/index.jsx',
-        '../react/IntentIframe/IntentIframe.jsx',
-        '../react/IntentModal/IntentModal.jsx',
-        '../react/IntentOpener/IntentOpener.jsx'
+        '../react/Alerter/index.jsx'
       ]
     }
   ],
