@@ -43,12 +43,14 @@ class IntentIframe extends React.Component {
     return (
       <div
         ref={intentViewer => (this.intentViewer = intentViewer)}
-        className={styles.intentIframe}
+        className={styles.intentContainer}
+        aria-busy={loading}
       >
         {loading && <Spinner size="xxlarge" />}
         {error && (
-          <div className={styles.intentIframe__error}>{error.message}</div>
+          <div className={styles.intentContainer__error}>{error.message}</div>
         )}
+        {/* intent iframe will be appended here */}
       </div>
     )
   }
