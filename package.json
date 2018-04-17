@@ -23,6 +23,7 @@
     "deploy:doc": "git-directory-deploy --directory build/ --branch gh-pages",
     "prebuild:css": "mkdir dist/",
     "prebuild:css:app": "mkdir -p build/styleguide",
+    "test": "jest --verbose --coverage",
     "build:css": "stylus -c --include stylus -o dist/cozy-ui.min.css stylus/cozy-ui/build.styl --use ./node_modules/autoprefixer-stylus --with \"{ browsers: ['last 2 versions'] }\"",
     "build:css:app": "stylus --include stylus -o build/styleguide/app.css stylus/cozy-ui/build.styl --use ./node_modules/autoprefixer-stylus --with \"{ browsers: ['last 2 versions'] }\"",
     "clean:doc:kss": "rm -rf build/styleguide",
@@ -37,10 +38,14 @@
     "babel-preset-react": "^6.22.0",
     "copyfiles": "^1.2.0",
     "css-loader": "^0.28.4",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-15": "^1.0.5",
     "eslint": "^4.18.2",
     "eslint-config-cozy-app": "^0.4.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "git-directory-deploy": "^1.5.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^22.4.3",
     "kss": "^3.0.0-beta.18",
     "kss-webpack-plugin": "^1.2.0",
     "lodash": "^4.17.5",
@@ -55,6 +60,7 @@
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.3",
     "react-styleguidist": "^6.0.24",
+    "react-test-renderer": "15.6.1",
     "redux": "^3.6.0",
     "style-loader": "^0.18.2",
     "stylint": "^1.5.9",
@@ -80,5 +86,26 @@
     "extends": [
       "eslint-config-cozy-app"
     ]
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "styl"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "moduleNameMapper": {
+      "\\.(png|gif|jpe?g|svg)$": "<rootDir>/test/__mocks__/fileMock.js",
+      "styles": "identity-obj-proxy"
+    },
+    "globals": {
+      "__ALLOW_HTTP__": false,
+      "__TARGET__": "browser",
+      "cozy": {}
+    }
   }
 }

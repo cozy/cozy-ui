@@ -10,10 +10,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - none yet
 
 ### Fixed
-- none yet
+- `<IntentModal />` is no more broken
 
 ### Added
-- none yet
+- Jest tests :tada:
 
 ### Removed
 - none yet

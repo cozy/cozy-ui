@@ -17,6 +17,7 @@ const IntentModal = ({
   doctype,
   options,
   onComplete,
+  onError,
   create
 }) => (
   <Modal
@@ -29,10 +30,12 @@ const IntentModal = ({
   >
     <IntentIframe
       action={action}
-      doctype={doctype}
-      options={options}
-      onComplete={onComplete}
       create={create}
+      data={options}
+      onCancel={dismissAction}
+      onError={onError}
+      onTerminate={onComplete}
+      type={doctype}
     />
   </Modal>
 )
@@ -40,6 +43,8 @@ const IntentModal = ({
 IntentModal.propTypes = {
   /** What should happen when the intent has completed */
   onComplete: PropTypes.func.isRequired,
+  /** What should happen if an intent error occurs */
+  onError: PropTypes.func,
   /** What to do to dismiss the modal */
   dismissAction: PropTypes.func.isRequired,
   /** Action you want to execute */
