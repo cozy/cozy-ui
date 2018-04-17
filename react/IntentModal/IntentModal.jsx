@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Modal from '../Modal'
 import IntentIframe from '../IntentIframe'
 import styles from './styles.styl'
@@ -9,36 +9,42 @@ import PropTypes from 'prop-types'
  *
  * The modal for an intent takes the majority of the viewport.
  */
-const IntentModal = ({
-  closable,
-  overflowHidden,
-  dismissAction,
-  action,
-  doctype,
-  options,
-  onComplete,
-  onError,
-  create
-}) => (
-  <Modal
-    key='modal'
-    closable={closable}
-    overflowHidden
-    className={styles.intentModal}
-    crossClassName={styles.intentModal__cross}
-    dismissAction={dismissAction}
-  >
-    <IntentIframe
-      action={action}
-      create={create}
-      data={options}
-      onCancel={dismissAction}
-      onError={onError}
-      onTerminate={onComplete}
-      type={doctype}
-    />
-  </Modal>
-)
+class IntentModal extends Component {
+  render() {
+    const {
+      closable,
+      overflowHidden,
+      dismissAction,
+      action,
+      doctype,
+      options,
+      onComplete,
+      onError,
+      create
+    } = this.props
+
+    return (
+      <Modal
+        key="modal"
+        closable={closable}
+        overflowHidden={overflowHidden}
+        className={styles.intentModal}
+        crossClassName={styles.intentModal__cross}
+        dismissAction={dismissAction}
+      >
+        <IntentIframe
+          action={action}
+          create={create}
+          data={options}
+          onCancel={dismissAction}
+          onError={onError}
+          onTerminate={onComplete}
+          type={doctype}
+        />
+      </Modal>
+    )
+  }
+}
 
 IntentModal.propTypes = {
   /** What should happen when the intent has completed */
