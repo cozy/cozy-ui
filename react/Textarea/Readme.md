@@ -23,6 +23,16 @@
 </div>
 ```
 
+#### Full width textarea
+
+```
+<div>
+  <p>
+    <Textarea placeholder="I'm full width" fullwidth></Textarea>
+  </p>
+</div>
+```
+
 ### Props forwarding
 
 `Textarea` forwards unknown props to the underlying `<textarea />` element.
