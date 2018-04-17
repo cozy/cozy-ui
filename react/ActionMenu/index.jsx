@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import cx from 'classnames'
 import Hammer from 'hammerjs'
 import styles from './styles.styl'
 import Overlay from '../Overlay'
@@ -130,7 +130,7 @@ class ActionMenu extends Component {
     const { children, className } = this.props
     const { closing } = this.state
     return (
-      <div className={classNames(styles.ActionMenu, className)}>
+      <div className={cx(styles.ActionMenu, className)}>
         <Overlay style={{ opacity: closing ? 0 : 1 }} onClick={this.animateClose} onEscape={this.animateClose}>
           <div className={styles['c-actionmenu']} ref={this.handleMenuRef}>
             { children }
