@@ -881,6 +881,7 @@ on desktop or mobile view
 
 
 [Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.11.0...HEAD
+[7.13.0]: https://github.com/cozy/cozy-ui/compare/v7.12.0...v7.13.0
 [7.12.0]: https://github.com/cozy/cozy-ui/compare/v7.11.0...v7.12.0
 [7.11.0]: https://github.com/cozy/cozy-ui/compare/v7.10.0...v7.11.0
 [7.10.0]: https://github.com/cozy/cozy-ui/compare/v7.9.2...v7.10.0
