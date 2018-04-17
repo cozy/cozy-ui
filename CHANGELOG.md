@@ -1,8 +1,7 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 We use lerna-changelog to generate the changelog based on the PRs.
-
-and this project adheres to [Semantic Versioning](http://semver.org/).
+This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [7.13.0] (2018-04-17)
 
