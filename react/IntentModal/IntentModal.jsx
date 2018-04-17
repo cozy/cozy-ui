@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
-import Modal from '../Modal'
-import IntentIframe from '../IntentIframe'
 import styles from './styles.styl'
 import PropTypes from 'prop-types'
+
+import once from 'lodash/once'
+
+import IntentIframe from '../IntentIframe'
+import Modal from '../Modal'
 
 /**
  * Render a modal for the specified intent.
@@ -10,11 +13,22 @@ import PropTypes from 'prop-types'
  * The modal for an intent takes the majority of the viewport.
  */
 class IntentModal extends Component {
+
+  // As dismissAction is passed twice to the modal, both for closing and for
+  // intent cancellation, we need to ensure that it is only actually
+  // called once.
+  // FIXME: this should be fixed by diferenciating dismissAction (for closing
+  // modal) and onCancel (for intent cancellation), but it implies deprecating
+  // dismissAction first, ensure legacy, prevent regressions, etc.
+  dismiss = once(() => {
+    const { dismissAction } = this.props
+    dismissAction && dismissAction()
+  })
+
   render() {
     const {
       closable,
       overflowHidden,
-      dismissAction,
       action,
       doctype,
       options,
@@ -30,13 +44,13 @@ class IntentModal extends Component {
         overflowHidden={overflowHidden}
         className={styles.intentModal}
         crossClassName={styles.intentModal__cross}
-        dismissAction={dismissAction}
+        dismissAction={this.dismiss}
       >
         <IntentIframe
           action={action}
           create={create}
           data={options}
-          onCancel={dismissAction}
+          onCancel={this.dismiss}
           onError={onError}
           onTerminate={onComplete}
           type={doctype}
