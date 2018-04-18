@@ -6,6 +6,7 @@ exports[`IntentModal component renders as expected 1`] = `
   closable={true}
   crossClassName="intentModal__cross"
   dismissAction={[Function]}
+  into={undefined}
   overflowHidden={true}
 >
   <IntentIframe

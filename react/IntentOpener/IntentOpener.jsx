@@ -40,7 +40,7 @@ class IntentOpener extends React.Component {
   }
 
   render () {
-    const { options, action, doctype, children, closable, create, tag } = this.props
+    const { options, action, doctype, children, closable, create, tag, into } = this.props
     const { modalOpened } = this.state
 
     const Tag = tag // React needs uppercase element names
@@ -61,6 +61,7 @@ class IntentOpener extends React.Component {
           options={options}
           onComplete={this.handleComplete}
           create={create}
+          into={into}
         />
       )
     }
@@ -80,7 +81,9 @@ IntentOpener.propTypes = {
   /** Action you want to execute */
   action: PropTypes.string.isRequired,
   /** Doctype on which you want to execute the action */
-  doctype: PropTypes.string.isRequired
+  doctype: PropTypes.string.isRequired,
+  /** Where the modal should be rendered in the DOM */
+  into: PropTypes.string
 }
 
 IntentOpener.defaultProps = {
