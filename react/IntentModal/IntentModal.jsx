@@ -34,7 +34,8 @@ class IntentModal extends Component {
       options,
       onComplete,
       onError,
-      create
+      create,
+      into
     } = this.props
 
     return (
@@ -45,6 +46,7 @@ class IntentModal extends Component {
         className={styles.intentModal}
         crossClassName={styles.intentModal__cross}
         dismissAction={this.dismiss}
+        into={into}
       >
         <IntentIframe
           action={action}
@@ -72,7 +74,9 @@ IntentModal.propTypes = {
   /** Doctype on which you want to execute the action */
   doctype: PropTypes.string.isRequired,
   /** Display the cross and enable click outside and escape key to close */
-  closable: PropTypes.bool
+  closable: PropTypes.bool,
+  /** Where the modal should be rendered in the DOM */
+  into: PropTypes.string
 }
 
 IntentModal.defaultProps = {
