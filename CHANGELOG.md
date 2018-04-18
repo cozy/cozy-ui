@@ -3,12 +3,25 @@ All notable changes to this project will be documented in this file.
 We use lerna-changelog to generate the changelog based on the PRs.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+
+## [7.14.0] (2018-04-18)
+
+### :rocket: Enhancement
+* [#429](https://github.com/cozy/cozy-ui/pull/429) enhancement: Better spinner centering during intent loading. ([@gregorylegarec](https://github.com/gregorylegarec))
+* [#427](https://github.com/cozy/cozy-ui/pull/427) enhancement: Add `fullwidth` props on `Input` & `Textarea` ([@GoOz](https://github.com/GoOz))
+* [#427](https://github.com/cozy/cozy-ui/pull/427) enhancement: Add `fullwidth` styles for select element ([@GoOz](https://github.com/GoOz))
+
+### :bug: Bug Fix
+* [#428](https://github.com/cozy/cozy-ui/pull/428) 🚑  fix: avoid IntentModal dismissAction to be called twice. ([@gregorylegarec](https://github.com/gregorylegarec))
+* [#427](https://github.com/cozy/cozy-ui/pull/427) fix: Ensure font-family on form elements is respected ([@GoOz](https://github.com/GoOz))
+* [#427](https://github.com/cozy/cozy-ui/pull/427) fix: Increase modal fullscreen's selector specificity ([@GoOz](https://github.com/GoOz))
+
 ## [7.13.0] (2018-04-17)
 
-#### :rocket: Enhancement
+### :rocket: Enhancement
 * [#426](https://github.com/cozy/cozy-ui/pull/426) Added support for className prop to ActionMenu. ([@goldoraf](https://github.com/goldoraf))
 
-#### :bug: Bug Fix
+### :bug: Bug Fix
 * [#425](https://github.com/cozy/cozy-ui/pull/425) fix: fix IntentModal API and add Jest tests ✨. ([@gregorylegarec](https://github.com/gregorylegarec))
 
 ## [7.12.0] - 2018-04-13
@@ -868,7 +881,6 @@ on desktop or mobile view
 - Everything we did before adopting CHANGELOG…
 
 
-[Unreleased]: https://github.com/cozy/cozy-ui/compare/v7.11.0...HEAD
 [7.13.0]: https://github.com/cozy/cozy-ui/compare/v7.12.0...v7.13.0
 [7.12.0]: https://github.com/cozy/cozy-ui/compare/v7.11.0...v7.12.0
 [7.11.0]: https://github.com/cozy/cozy-ui/compare/v7.10.0...v7.11.0
