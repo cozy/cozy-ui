@@ -63,7 +63,7 @@ The entire library is also available as a good ol’ CSS library. You can simply
 <link media="all" rel="stylesheet" href=“cozy-ui/dist/cozy-ui.min.css" />
 ```
 
-## Hack Cozy UI
+## Develop on Cozy UI
 
 If you want to customize or improve a Cozy UI Component, you need to clone a local version of the library, and declare it as a local symlink with `yarn link`.
 
@@ -81,6 +81,14 @@ yarn watch
 ```
 
 All your modification in your local Cozy UI will now be visible in your application!
+
+When sending a PR, if your changes have graphic impacts, it is useful for the reviewers if
+you have deployed a version of the styleguidist containing your changes to your repository.
+
+```
+yarn build:doc:react
+yarn deploy:doc --repo git@github.com:USERNAME/cozy-ui.git
+```
 
 ## License
 
