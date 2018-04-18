@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 We use lerna-changelog to generate the changelog based on the PRs.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.15.0] (2018-04-18)
+
+#### :rocket: Enhancement
+* [#435](https://github.com/cozy/cozy-ui/pull/435) feat: add top/bottom icon. ([@ptbrowne](https://github.com/ptbrowne))
+* [#434](https://github.com/cozy/cozy-ui/pull/434) feat: remove dimensions and border on compact version of ButtonAction. ([@drazik](https://github.com/drazik))
+* [#431](https://github.com/cozy/cozy-ui/pull/431) feat: add 'into' prop on IntentOpener and IntentModal. ([@drazik](https://github.com/drazik))
 
 ## [7.14.0] (2018-04-18)
 
@@ -880,7 +886,8 @@ on desktop or mobile view
 ## [3.0.0-beta5] - 2017-02-01
 - Everything we did before adopting CHANGELOG…
 
-
+[7.15.0]: https://github.com/cozy/cozy-ui/compare/v7.14.0...v7.15.0
+[7.14.0]: https://github.com/cozy/cozy-ui/compare/v7.13.0...v7.14.0
 [7.13.0]: https://github.com/cozy/cozy-ui/compare/v7.12.0...v7.13.0
 [7.12.0]: https://github.com/cozy/cozy-ui/compare/v7.11.0...v7.12.0
 [7.11.0]: https://github.com/cozy/cozy-ui/compare/v7.10.0...v7.11.0
