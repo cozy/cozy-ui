@@ -46,7 +46,7 @@ class ActionMenu extends Component {
   }
 
   attachEvents () {
-    this.gesturesHandler = new Hammer.Manager(this.menuNode, {
+    this.gesturesHandler = new Hammer.Manager(this.wrapperNode, {
       recognizers: [[Hammer.Pan, { direction: Hammer.DIRECTION_VERTICAL }]]
     })
 
@@ -126,11 +126,15 @@ class ActionMenu extends Component {
     this.menuNode = ReactDOM.findDOMNode(menu)
   }
 
+  handleWrapperRef = wrapper => {
+    this.wrapperNode = ReactDOM.findDOMNode(wrapper)
+  }
+
   render () {
     const { children, className } = this.props
     const { closing } = this.state
     return (
-      <div className={cx(styles.ActionMenu, className)}>
+      <div className={cx(styles.ActionMenu, className)} ref={this.handleWrapperRef}>
         <Overlay style={{ opacity: closing ? 0 : 1 }} onClick={this.animateClose} onEscape={this.animateClose}>
           <div className={styles['c-actionmenu']} ref={this.handleMenuRef}>
             { children }
