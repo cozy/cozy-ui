@@ -17,20 +17,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - `<IntentIframe />` has been extracted from `<IntentModal />` and it is now a standalone component.
 - `<Bd />` now hides its overflowing content
 
-### Fixed
-- none yet
-
 ### Added
 - `disabled` attribute for `<ButtonLink />` component
 
-### Removed
-- none yet
-
-### Deprecated
-- none yet
-
-### Security
-- none yet
 
 ## [7.11.0] - 2018-04-11
 ### Fixed
