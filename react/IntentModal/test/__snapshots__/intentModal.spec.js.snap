@@ -5,7 +5,7 @@ exports[`IntentModal component renders as expected 1`] = `
   className="intentModal"
   closable={true}
   crossClassName="intentModal__cross"
-  dismissAction={[MockFunction onDismissMock]}
+  dismissAction={[Function]}
   overflowHidden={true}
 >
   <IntentIframe
@@ -16,7 +16,7 @@ exports[`IntentModal component renders as expected 1`] = `
         "key": "value",
       }
     }
-    onCancel={[MockFunction onDismissMock]}
+    onCancel={[Function]}
     onError={[MockFunction onErrorMock]}
     onTerminate={[MockFunction onCompleteMock]}
     type="io.cozy.whatever"

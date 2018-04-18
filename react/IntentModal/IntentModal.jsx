@@ -1,44 +1,64 @@
-import React from 'react'
-import Modal from '../Modal'
-import IntentIframe from '../IntentIframe'
+import React, { Component } from 'react'
 import styles from './styles.styl'
 import PropTypes from 'prop-types'
+
+import once from 'lodash/once'
+
+import IntentIframe from '../IntentIframe'
+import Modal from '../Modal'
 
 /**
  * Render a modal for the specified intent.
  *
  * The modal for an intent takes the majority of the viewport.
  */
-const IntentModal = ({
-  closable,
-  overflowHidden,
-  dismissAction,
-  action,
-  doctype,
-  options,
-  onComplete,
-  onError,
-  create
-}) => (
-  <Modal
-    key='modal'
-    closable={closable}
-    overflowHidden
-    className={styles.intentModal}
-    crossClassName={styles.intentModal__cross}
-    dismissAction={dismissAction}
-  >
-    <IntentIframe
-      action={action}
-      create={create}
-      data={options}
-      onCancel={dismissAction}
-      onError={onError}
-      onTerminate={onComplete}
-      type={doctype}
-    />
-  </Modal>
-)
+class IntentModal extends Component {
+
+  // As dismissAction is passed twice to the modal, both for closing and for
+  // intent cancellation, we need to ensure that it is only actually
+  // called once.
+  // FIXME: this should be fixed by diferenciating dismissAction (for closing
+  // modal) and onCancel (for intent cancellation), but it implies deprecating
+  // dismissAction first, ensure legacy, prevent regressions, etc.
+  dismiss = once(() => {
+    const { dismissAction } = this.props
+    dismissAction && dismissAction()
+  })
+
+  render() {
+    const {
+      closable,
+      overflowHidden,
+      action,
+      doctype,
+      options,
+      onComplete,
+      onError,
+      create
+    } = this.props
+
+    return (
+      <Modal
+        key="modal"
+        closable={closable}
+        overflowHidden={overflowHidden}
+        className={styles.intentModal}
+        crossClassName={styles.intentModal__cross}
+        dismissAction={this.dismiss}
+      >
+        <IntentIframe
+          action={action}
+          create={create}
+          data={options}
+          onCancel={this.dismiss}
+          onError={onError}
+          onTerminate={onComplete}
+          type={doctype}
+        />
+      </Modal>
+    )
+  }
+}
 
 IntentModal.propTypes = {
   /** What should happen when the intent has completed */
