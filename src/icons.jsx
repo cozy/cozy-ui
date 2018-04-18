@@ -8,6 +8,7 @@ const importIcons = function () {
     'icon-album-add',
     'icon-album-remove',
     'icon-back',
+    'icon-bottom',
     'icon-check',
     'icon-check-circleless',
     'icon-clock',
