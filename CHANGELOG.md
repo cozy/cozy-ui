@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 We use lerna-changelog to generate the changelog based on the PRs.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.17.0] (2018-04-19)
+
+#### :rocket: Enhancement
+* [#442](https://github.com/cozy/cozy-ui/pull/442) feat: ListItemText forward its props. ([@ptbrowne](https://github.com/ptbrowne))
+* [#441](https://github.com/cozy/cozy-ui/pull/441) feat: add ...rest prop to Bd. ([@drazik](https://github.com/drazik))
+
 ## [7.16.0] (2018-04-19)
 
 #### :rocket: Enhancement
@@ -891,6 +897,7 @@ on desktop or mobile view
 ## [3.0.0-beta5] - 2017-02-01
 - Everything we did before adopting CHANGELOG…
 
+[7.17.0]: https://github.com/cozy/cozy-ui/compare/v7.16.0...v7.17.0
 [7.16.0]: https://github.com/cozy/cozy-ui/compare/v7.15.0...v7.16.0
 [7.15.0]: https://github.com/cozy/cozy-ui/compare/v7.14.0...v7.15.0
 [7.14.0]: https://github.com/cozy/cozy-ui/compare/v7.13.0...v7.14.0
