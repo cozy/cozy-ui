@@ -70,11 +70,16 @@ $button
             position   relative
             top        -.0625rem
 
+
 /*------------------------------------*\
-  Variants
+  Themes
 \*------------------------------------*/
 $button--regular  // Deprecated
     @extend $button
+
+regularTheme = {
+    primaryColor: dodgerBlue, secondaryColor: dodgerBlue, activeColor: scienceBlue, contrastColor: white
+}
 
 highlightTheme = {
     primaryColor: emerald, secondaryColor: emerald, activeColor: malachite, contrastColor: white
@@ -422,3 +427,113 @@ $actionbtn-icon
 
     svg
         display block
+
+/*------------------------------------*\
+  Variants
+\*------------------------------------*/
+// We turn stylint off since without semicolons, stylus fails to
+// parse the following code block.
+// @stylint off
+themedBtnSubtle(theme)
+    color: theme['secondaryColor']
+
+    &:active
+    &:focus
+    &:hover
+        color: theme['activeColor']
+
+sizedBtnSubtle(size)
+    sizes = {
+        tiny: .6rem, small: .75rem, large: 1rem
+    }
+
+    min-height 0
+    min-width 0
+    padding 0
+    font-size sizes[size]
+
+$button-subtle
+    themedBtnSubtle(regularTheme)
+    min-height auto
+    min-width auto
+    border 0
+    margin 1rem 0
+    padding 0
+    vertical-align baseline
+    background transparent
+    cursor pointer
+    font-size .875rem
+    font-weight bold
+    text-transform uppercase
+
+    svg
+        fill         currentColor
+        margin-right .4rem
+
+        &:only-child
+            margin 0
+
+    > span
+        display          flex
+        align-items      center
+        justify-content  center
+        width            100%
+
+    &[disabled]
+    &[aria-disabled=true]
+        opacity  .5
+        cursor   not-allowed
+
+        &:hover
+            background transparent
+
+    &:active
+    &:hover
+    &:focus
+        color scienceBlue
+        background transparent
+
+    &[aria-busy=true] > span::after
+        @extend $icon-16
+        @extend $icon-spinner-blue
+        position relative
+        top -.0625rem
+
+    * + &
+        margin-left 1em
+
+$button-subtle--tiny
+    sizedBtnSubtle('tiny')
+
+$button-subtle--small
+    sizedBtnSubtle('small')
+
+$button-subtle--large
+    sizedBtnSubtle('large')
+
+$button-subtle--danger
+    themedBtnSubtle(dangerTheme)
+
+    &[aria-busy=true] > span::after
+        @extend $icon-spinner-red
+
+$button-subtle--highlight
+    themedBtnSubtle(highlightTheme)
+
+    &[aria-busy=true] > span::after
+        @extend $icon-spinner-grey
+
+$button-subtle--regular
+    themedBtnSubtle(regularTheme)
+
+$button-subtle--secondary
+    themedBtnSubtle(secondaryTheme)
+
+    &[aria-busy=true] > span::after
+        @extend $icon-spinner-grey
+
+    &:active
+    &:focus
+    &:hover
+        color coolGrey
+// @stylint on
