@@ -25,17 +25,23 @@ const SelectionBar = ({ t, actions, selected, hideSelectionBar }) => {
   const selectedCount = selected.length
   const actionNames = Object.keys(actions).filter(actionName => {
     const action = actions[actionName]
-    return action.displayCondition === undefined || action.displayCondition(selected)
+    return (
+      action.displayCondition === undefined || action.displayCondition(selected)
+    )
   })
   return (
-    <div className={styles['coz-selectionbar']} role='toolbar'>
+    <div className={styles['coz-selectionbar']} role="toolbar">
       <span className={styles['coz-selectionbar-count']}>
         {selectedCount}
-        <span> {t('SelectionBar.selected_count', { smart_count: selectedCount })}</span>
+        <span>
+          {' '}
+          {t('SelectionBar.selected_count', { smart_count: selectedCount })}
+        </span>
       </span>
       <span className={styles['coz-selectionbar-separator']} />
-      {actionNames.map(actionName => (
+      {actionNames.map((actionName, index) => (
         <button
+          key={index}
           disabled={selectedCount < 1}
           onClick={() => actions[actionName].action(selected)}
         >
@@ -44,21 +50,21 @@ const SelectionBar = ({ t, actions, selected, hideSelectionBar }) => {
         </button>
       ))}
       <Button
-        theme='close'
+        theme="close"
         className={styles['coz-action-close']}
         onClick={hideSelectionBar}
         extension="narrow"
       >
-        <Icon icon='cross' />
+        <Icon icon="cross" />
       </Button>
     </div>
   )
 }
 
 SelectionBar.propTypes = {
-  t: PropTypes.func.isRequired,               // translate action name.
-  actions: PropTypes.object.isRequired,       // An object with actions
-  selected: PropTypes.array.isRequired,       // selected items id.
+  t: PropTypes.func.isRequired, // translate action name.
+  actions: PropTypes.object.isRequired, // An object with actions
+  selected: PropTypes.array.isRequired, // selected items id.
   hideSelectionBar: PropTypes.func.isRequired // function to close SelectionBar.
 }
 

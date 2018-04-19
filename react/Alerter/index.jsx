@@ -31,7 +31,7 @@ class Alert extends Component {
     hidden: true
   }
 
-  computeDuration () {
+  computeDuration() {
     const words = this.props.message.split(/\W/).filter(Boolean)
     return Math.max(MINIMUM_ALERT_DURATION, words.length / 3 * 1000)
   }
@@ -57,7 +57,7 @@ class Alert extends Component {
   }
 
   componentWillUnmount() {
-     this.base.removeEventListener('transitionend', this.notifyClosed, false)
+    this.base.removeEventListener('transitionend', this.notifyClosed, false)
     this.setState({ hidden: false })
     if (this.closeTimer) {
       clearTimeout(this.closeTimer)
@@ -85,9 +85,7 @@ class Alert extends Component {
                 styles[`coz-btn--alert-${type}`]
               )}
             >
-              <span>
-                {buttonText}
-              </span>
+              <span>{buttonText}</span>
             </button>
           )}
         </div>
@@ -171,7 +169,7 @@ class Alerter extends Component {
     })
   }
 
-  handleClose = (id) => {
+  handleClose = id => {
     let idx = this.state.notifications.findIndex(n => n.id === id)
     this.setState({
       notifications: [

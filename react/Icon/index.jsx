@@ -3,8 +3,16 @@ import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import icons from '../../src/icons'
 
-function Icon (props) {
-  const { icon, width, height, color, className, preserveColor, ...restProps } = props
+function Icon(props) {
+  const {
+    icon,
+    width,
+    height,
+    color,
+    className,
+    preserveColor,
+    ...restProps
+  } = props
   let style = props.style
   let anchor
   if (icon.id) {
@@ -16,7 +24,9 @@ function Icon (props) {
   }
 
   if (!anchor) {
-    throw new Error(`Icon not found ${icon}.\nAvailable icons : ${Object.keys(icons)}`)
+    throw new Error(
+      `Icon not found ${icon}.\nAvailable icons : ${Object.keys(icons)}`
+    )
   }
 
   style = Object.assign({}, style)
@@ -28,15 +38,17 @@ function Icon (props) {
   const iconClass = className
     ? `${styles[iconClassName]} ${className}`
     : styles[iconClassName]
-  return <svg
-    className={iconClass}
-    style={style}
-    width={width || '16'}
-    height={height || '16'}
-    {...restProps}
-  >
-    <use xlinkHref={anchor} />
-  </svg>
+  return (
+    <svg
+      className={iconClass}
+      style={style}
+      width={width || '16'}
+      height={height || '16'}
+      {...restProps}
+    >
+      <use xlinkHref={anchor} />
+    </svg>
+  )
 }
 
 Icon.isProperIcon = icon => {

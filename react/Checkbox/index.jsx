@@ -8,11 +8,12 @@ const Checkbox = props => {
   return (
     <label
       className={cx(
-        styles['c-input-checkbox'], {
-          [styles['is-error']] : error,
+        styles['c-input-checkbox'],
+        {
+          [styles['is-error']]: error
         },
-        className)
-      }
+        className
+      )}
       aria-checked={mixed ? 'mixed' : ''}
     >
       <input type="checkbox" value={value} name={name} {...restProps} />

@@ -5,9 +5,9 @@
 let trackerInstance = null
 
 /**
-* Tries to detect if tracking should be enabled or not, based on a `cozyTracking` attribute in the root dataset.
-* @returns {boolean} Undefined if it can't find the information, true/false otherwise.
-*/
+ * Tries to detect if tracking should be enabled or not, based on a `cozyTracking` attribute in the root dataset.
+ * @returns {boolean} Undefined if it can't find the information, true/false otherwise.
+ */
 export const shouldEnableTracking = () => {
   const root = document.querySelector('[role=application]')
 
@@ -22,14 +22,19 @@ export const shouldEnableTracking = () => {
 }
 
 /**
-* Returns the instance of the piwik tracker, creating it on thee fly if required. All parameters are optionnal.
-* @param   {string}  trackerUrl             The URL of the piwik instance, without the php file name
-* @param   {number}  siteId                 The siteId to use for piwik
-* @param   {boolean} automaticallyConfigure = true Pass false to skip the automatic configuration
-* @param   {boolean} injectScript = false Whether or not the Piwik tracking script should be injected
-* @returns {object}  An instance of `PiwikReactRouter` on success, `null` if the creation fails (usually because of adblockers)
-*/
-export const getTracker = (trackerUrl, siteId, automaticallyConfigure = true, injectScript = false) => {
+ * Returns the instance of the piwik tracker, creating it on thee fly if required. All parameters are optionnal.
+ * @param   {string}  trackerUrl             The URL of the piwik instance, without the php file name
+ * @param   {number}  siteId                 The siteId to use for piwik
+ * @param   {boolean} automaticallyConfigure = true Pass false to skip the automatic configuration
+ * @param   {boolean} injectScript = false Whether or not the Piwik tracking script should be injected
+ * @returns {object}  An instance of `PiwikReactRouter` on success, `null` if the creation fails (usually because of adblockers)
+ */
+export const getTracker = (
+  trackerUrl,
+  siteId,
+  automaticallyConfigure = true,
+  injectScript = false
+) => {
   if (trackerInstance !== null) return trackerInstance
 
   try {
@@ -58,13 +63,13 @@ export const getTracker = (trackerUrl, siteId, automaticallyConfigure = true, in
 }
 
 /**
-* Configures the base options for the tracker which will persist during the session.
-* @param   {object} options A map of options that can be configured.
-*                         {string} options.userId
-*                         {number} options.appDimensionId
-*                         {string} options.app
-*                         {number} options.heartbeat
-*/
+ * Configures the base options for the tracker which will persist during the session.
+ * @param   {object} options A map of options that can be configured.
+ *                         {string} options.userId
+ *                         {number} options.appDimensionId
+ *                         {string} options.app
+ *                         {number} options.heartbeat
+ */
 export const configureTracker = (options = {}) => {
   // early out in case the tracker is not available
   if (trackerInstance === null) {
@@ -86,27 +91,46 @@ export const configureTracker = (options = {}) => {
   }
 
   // merge default options with what has been provided
-  options = Object.assign({
-    userId: userId,
-    appDimensionId: __PIWIK_DIMENSION_ID_APP__,
-    app: appName,
-    heartbeat: 15,
-  }, options)
+  options = Object.assign(
+    {
+      userId: userId,
+      appDimensionId: __PIWIK_DIMENSION_ID_APP__,
+      app: appName,
+      heartbeat: 15
+    },
+    options
+  )
 
   // apply them
-  if (parseInt(options.heartbeat) > 0) trackerInstance.push(['enableHeartBeatTimer', parseInt(options.heartbeat)])
+  if (parseInt(options.heartbeat) > 0)
+    trackerInstance.push(['enableHeartBeatTimer', parseInt(options.heartbeat)])
   trackerInstance.push(['setUserId', options.userId])
-  trackerInstance.push(['setCustomDimension', options.appDimensionId, options.app])
+  trackerInstance.push([
+    'setCustomDimension',
+    options.appDimensionId,
+    options.app
+  ])
 }
 
 /**
-* Returns a new middleware for redux, which will track events if the action has an `trackEvent` field, containing at least `category` and `action` fields.
-* @returns {function}
-*/
+ * Returns a new middleware for redux, which will track events if the action has an `trackEvent` field, containing at least `category` and `action` fields.
+ * @returns {function}
+ */
 export const createTrackerMiddleware = () => {
-  return store => next => action => {
-    if (trackerInstance && action.trackEvent && action.trackEvent.category && action.trackEvent.action) {
-      trackerInstance.push(['trackEvent', action.trackEvent.category, action.trackEvent.action, action.trackEvent.name, action.trackEvent.value])
+  return () => next => action => {
+    if (
+      trackerInstance &&
+      action.trackEvent &&
+      action.trackEvent.category &&
+      action.trackEvent.action
+    ) {
+      trackerInstance.push([
+        'trackEvent',
+        action.trackEvent.category,
+        action.trackEvent.action,
+        action.trackEvent.name,
+        action.trackEvent.value
+      ])
     }
 
     return next(action)
@@ -114,8 +138,8 @@ export const createTrackerMiddleware = () => {
 }
 
 /**
-* Resets the tracker; disconnecting it from history and the middleware, if it was attached. *Please be aware*: if the tracker instance had been used outside of this library (in another middleware for example), further calls to the tracking server may still work.
-*/
+ * Resets the tracker; disconnecting it from history and the middleware, if it was attached. *Please be aware*: if the tracker instance had been used outside of this library (in another middleware for example), further calls to the tracking server may still work.
+ */
 export const resetTracker = () => {
   if (trackerInstance) {
     // stop tracking the history, if we were doing that

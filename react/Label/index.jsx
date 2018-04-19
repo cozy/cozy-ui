@@ -7,12 +7,14 @@ const Label = props => {
   const { htmlFor, className, children, error } = props
   return (
     <label
-      for={htmlFor}
+      htmlFor={htmlFor}
       className={cx(
-        styles['c-label'], {
-          [styles[`is-error`]] : error
+        styles['c-label'],
+        {
+          [styles[`is-error`]]: error
         },
-        className)}
+        className
+      )}
     >
       {children}
     </label>

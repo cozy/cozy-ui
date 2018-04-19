@@ -1,23 +1,32 @@
 import React from 'react'
 
-const migrate = (oldProps, options, Component) => {
+const migrate = (oldProps, options) => {
   let newProps, msg
   for (let option of options) {
-    if (option.src && option.dest) { // simple mode
+    if (option.src && option.dest) {
+      // simple mode
       const src = option.src
       const dest = option.dest
       const oldProp = oldProps[src]
-      if (oldProp === undefined) { continue }
-      newProps = newProps || {...oldProps} // copy props only if we change them
+      if (oldProp === undefined) {
+        continue
+      }
+      newProps = newProps || { ...oldProps } // copy props only if we change them
       newProps[dest] = oldProps[src]
       delete newProps[src]
       msg = `\`${src}\` is deprecated and has been migrated automatically, you should use \`${dest}\` now`
-    } else if (option.fn) { // advanced mode
+    } else if (option.fn) {
+      // advanced mode
       const res = option.fn(newProps || oldProps)
-      if (res.length !== 2) { throw new Error('migrateOption `fn` should return [newProps, msg].') }
-      [newProps, msg] = res
+      if (res.length !== 2) {
+        throw new Error('migrateOption `fn` should return [newProps, msg].')
+      }
+      ;[newProps, msg] = res
     } else {
-      console.warn('migrateProps option is not valid, valid properties are `src`, `dest`, `fn`. You passed', option)
+      console.warn(
+        'migrateProps option is not valid, valid properties are `src`, `dest`, `fn`. You passed',
+        option
+      )
     }
     if (process.env.NODE_ENV !== 'production' && msg) {
       console.warn(`Deprecation: ${msg}`)

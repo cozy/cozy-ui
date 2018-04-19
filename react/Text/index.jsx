@@ -7,11 +7,14 @@ const mkText = baseClass => props => {
   const { className, children, tag, ellipsis, ...restProps } = props
   const Tag = tag
   return (
-    <Tag className={cx(
-      baseClass, {
-        [styles['u-ellipsis']] : ellipsis
-      },
-      className)}
+    <Tag
+      className={cx(
+        baseClass,
+        {
+          [styles['u-ellipsis']]: ellipsis
+        },
+        className
+      )}
       {...restProps}
     >
       {children}

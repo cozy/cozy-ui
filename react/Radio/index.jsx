@@ -8,11 +8,12 @@ const Radio = props => {
   return (
     <label
       className={cx(
-        styles['c-input-radio'], {
-          [styles['is-error']] : error,
+        styles['c-input-radio'],
+        {
+          [styles['is-error']]: error
         },
-        className)
-      }
+        className
+      )}
     >
       <input type="radio" value={value} name={name} {...restProps} />
       <span>{label}</span>

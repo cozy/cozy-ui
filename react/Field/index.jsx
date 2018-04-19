@@ -9,8 +9,8 @@ import Textarea from '../Textarea'
 const Field = props => {
   const { className, label, id, type, value, placeholder, error } = props
 
-  const inputType = (type) => {
-    switch(type) {
+  const inputType = type => {
+    switch (type) {
       case 'textarea':
         return (
           <Textarea
@@ -34,18 +34,14 @@ const Field = props => {
           />
         )
       default:
-        throw new Error('type must be text, password, email, url or textarea, got ' + type)
+        throw new Error(
+          'type must be text, password, email, url or textarea, got ' + type
+        )
     }
   }
 
-
-
   return (
-    <div
-      className={cx(
-        styles['o-field'],
-        className)}
-      >
+    <div className={cx(styles['o-field'], className)}>
       <Label forID={id}>{label}</Label>
       {inputType(type)}
     </div>
@@ -55,7 +51,7 @@ const Field = props => {
 Field.propTypes = {
   label: PropTypes.string.isRequired,
   id: PropTypes.string,
-  type: PropTypes.oneOf(['text','password','email','url','textarea']),
+  type: PropTypes.oneOf(['text', 'password', 'email', 'url', 'textarea']),
   value: PropTypes.string,
   placeholder: PropTypes.string,
   error: PropTypes.bool

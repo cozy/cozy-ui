@@ -19,16 +19,16 @@ const TRANSITION_DURATION = 100 // need to be kept in sync with css
  * - Reacts to gestures with HammerJS
  */
 class ActionMenu extends Component {
-  componentDidMount () {
+  componentDidMount() {
     this.initialAppear()
     this.attachEvents()
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     this.gesturesHandler.destroy()
   }
 
-  initialAppear () {
+  initialAppear() {
     this.turnTransitionsOff()
     this.applyTransformation(1)
     requestAnimationFrame(() => {
@@ -37,15 +37,15 @@ class ActionMenu extends Component {
     })
   }
 
-  turnTransitionsOn () {
+  turnTransitionsOn() {
     this.menuNode.classList.add(styles['with-transition'])
   }
 
-  turnTransitionsOff (cb) {
+  turnTransitionsOff() {
     this.menuNode.classList.remove(styles['with-transition'])
   }
 
-  attachEvents () {
+  attachEvents() {
     this.gesturesHandler = new Hammer.Manager(this.wrapperNode, {
       recognizers: [[Hammer.Pan, { direction: Hammer.DIRECTION_VERTICAL }]]
     })
@@ -60,7 +60,7 @@ class ActionMenu extends Component {
 
     let currentGestureProgress = null
 
-    this.gesturesHandler.on('panstart', e => {
+    this.gesturesHandler.on('panstart', () => {
       this.turnTransitionsOff()
       currentGestureProgress = 0
     })
@@ -73,8 +73,9 @@ class ActionMenu extends Component {
     this.gesturesHandler.on('panend', e => {
       // Dismiss the menu if the swipe pan was bigger than the treshold,
       // or if it was a fast, downward gesture
-      let shouldDismiss = e.deltaY / maximumGestureDistance >= minimumCloseDistance ||
-                          (e.deltaY > 0 && e.velocity >= minimumCloseVelocity)
+      let shouldDismiss =
+        e.deltaY / maximumGestureDistance >= minimumCloseDistance ||
+        (e.deltaY > 0 && e.velocity >= minimumCloseVelocity)
 
       if (shouldDismiss) {
         if (currentGestureProgress >= 1) {
@@ -95,10 +96,10 @@ class ActionMenu extends Component {
    * Applies a css trasnform to the element, based on the progress of the gesture
    * @param  {Float} progress - Amount of progress between 0 and 1
    */
-  applyTransformation (progress) {
+  applyTransformation(progress) {
     // constrain between 0 and 1.1 (go a bit further than 1 to be hidden completely)
     progress = Math.min(1.1, Math.max(0, progress))
-    this.menuNode.style.transform = 'translateY(' + (progress * 100) + '%)'
+    this.menuNode.style.transform = 'translateY(' + progress * 100 + '%)'
   }
 
   animateClose = () => {
@@ -111,7 +112,7 @@ class ActionMenu extends Component {
     })
 
     this.menuNode.addEventListener('transitionend', close, false)
-   // in case transitionend is not called, for example if the element is removed
+    // in case transitionend is not called, for example if the element is removed
     setTimeout(close, TRANSITION_DURATION)
 
     this.applyTransformation(1.1)
@@ -123,21 +124,30 @@ class ActionMenu extends Component {
   }
 
   handleMenuRef = menu => {
-    this.menuNode = ReactDOM.findDOMNode(menu)
+    // FIXME
+    this.menuNode = ReactDOM.findDOMNode(menu) // eslint-disable-line react/no-find-dom-node
   }
 
   handleWrapperRef = wrapper => {
-    this.wrapperNode = ReactDOM.findDOMNode(wrapper)
+    // FIXME
+    this.wrapperNode = ReactDOM.findDOMNode(wrapper) // eslint-disable-line react/no-find-dom-node
   }
 
-  render () {
+  render() {
     const { children, className } = this.props
     const { closing } = this.state
     return (
-      <div className={cx(styles.ActionMenu, className)} ref={this.handleWrapperRef}>
-        <Overlay style={{ opacity: closing ? 0 : 1 }} onClick={this.animateClose} onEscape={this.animateClose}>
+      <div
+        className={cx(styles.ActionMenu, className)}
+        ref={this.handleWrapperRef}
+      >
+        <Overlay
+          style={{ opacity: closing ? 0 : 1 }}
+          onClick={this.animateClose}
+          onEscape={this.animateClose}
+        >
           <div className={styles['c-actionmenu']} ref={this.handleMenuRef}>
-            { children }
+            {children}
           </div>
         </Overlay>
       </div>

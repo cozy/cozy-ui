@@ -10,11 +10,7 @@ const MidEllipsis = props => {
   const lastPart = text.substr(partLength, text.length)
 
   return (
-    <div
-      className={cx(
-        styles['u-midellipsis'],
-        className)}
-    >
+    <div className={cx(styles['u-midellipsis'], className)}>
       <span>{firstPart}</span>
       <span>{lastPart}</span>
     </div>

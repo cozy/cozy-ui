@@ -13,7 +13,6 @@ import Modal from '../Modal'
  * The modal for an intent takes the majority of the viewport.
  */
 class IntentModal extends Component {
-
   // As dismissAction is passed twice to the modal, both for closing and for
   // intent cancellation, we need to ensure that it is only actually
   // called once.
