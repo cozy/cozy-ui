@@ -9,7 +9,8 @@ module.exports = {
         '../react/Button/index.jsx',
         '../react/ButtonAction/index.jsx',
         '../react/Spinner/index.jsx',
-        '../react/Icon/index.jsx'
+        '../react/Icon/index.jsx',
+        '../react/Badge/index.jsx'
       ]
     },
     {
