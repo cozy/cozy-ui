@@ -1,6 +1,6 @@
 @require '../settings/palette'
 
-radius = .4375rem
+size = .875rem
 
 $badge-root
     position relative
@@ -8,10 +8,10 @@ $badge-root
 
 $badge
     position absolute
-    bottom - radius
-    right - radius
-    width radius * 2
-    height radius * 2
+    bottom - size / 2
+    right - size / 2
+    width size
+    height size
     border-radius 50%
     background-color black
     color white
@@ -23,7 +23,7 @@ $badge
     align-content center
     align-items center
     font-size .625rem
-    border 1px solid white
+    border .0625rem solid white
 
 $badge--new
     color zircon
