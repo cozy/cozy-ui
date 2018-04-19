@@ -4,15 +4,11 @@ import styles from './styles.styl'
 import cx from 'classnames'
 
 export const NavItem = ({ children }) => (
-  <li className={styles['c-nav-item']}>
-    { children }
-  </li>
+  <li className={styles['c-nav-item']}>{children}</li>
 )
 
 export const NavText = ({ children }) => (
-  <span className={styles['c-nav-item__text']}>
-    { children }
-  </span>
+  <span className={styles['c-nav-item__text']}>{children}</span>
 )
 
 export const NavLink = {
@@ -21,7 +17,11 @@ export const NavLink = {
 }
 
 export const genNavLink = RRNavLink => ({ to, children }) => (
-  <RRNavLink to={to} className={NavLink.className} activeClassName={NavLink.activeClassName}>
+  <RRNavLink
+    to={to}
+    className={NavLink.className}
+    activeClassName={NavLink.activeClassName}
+  >
     {children}
   </RRNavLink>
 )
@@ -35,9 +35,7 @@ export const NavIcon = ({ icon }) => (
 const Nav = ({ children }) => {
   return (
     <nav>
-      <ul className={styles['c-nav']}>
-        { children }
-      </ul>
+      <ul className={styles['c-nav']}>{children}</ul>
     </nav>
   )
 }
