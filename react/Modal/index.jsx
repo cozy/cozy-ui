@@ -9,26 +9,29 @@ import migrateProps from '../helpers/migrateProps'
 import palette from '../../stylus/settings/palette.json'
 import Portal from 'preact-portal'
 
-const ModalContent = ({children, className}) =>
-  (<div className={cx(styles['c-modal-content'], className)}>
-    {children}
-  </div>)
+const ModalContent = ({ children, className }) => (
+  <div className={cx(styles['c-modal-content'], className)}>{children}</div>
+)
 
 const ModalDescription = ModalContent
 
-const ModalSection = ({children, className}) =>
-  (<div className={cx(styles['c-modal-content'], styles['c-modal-section'], className)}>
-    {children}
-  </div>)
-
-const ModalBrandedHeader = ({logo, bg, className, style={}}) => (
-  <h2
+const ModalSection = ({ children, className }) => (
+  <div
     className={cx(
-      styles['c-modal-header--branded'],
+      styles['c-modal-content'],
+      styles['c-modal-section'],
       className
     )}
-    style={{background: bg, ...style}}
-    >
+  >
+    {children}
+  </div>
+)
+
+const ModalBrandedHeader = ({ logo, bg, className, style = {} }) => (
+  <h2
+    className={cx(styles['c-modal-header--branded'], className)}
+    style={{ background: bg, ...style }}
+  >
     <img src={logo} alt="" />
   </h2>
 )
@@ -53,31 +56,54 @@ const ModalCross = ({ onClick, color, className }) => (
     theme="close"
     className={cx(styles['c-modal-close'], className)}
     onClick={onClick}
-    extension='narrow'
-    >
-    <Icon icon='cross' width='24' height='24' color={color || palette['coolGrey']} />
+    extension="narrow"
+  >
+    <Icon
+      icon="cross"
+      width="24"
+      height="24"
+      color={color || palette['coolGrey']}
+    />
   </Button>
 )
 
-
-const ModalFooter = ({ secondaryText, secondaryAction, secondaryType, primaryText, primaryAction, primaryType, children, className }) => {
+const ModalFooter = ({
+  secondaryText,
+  secondaryAction,
+  secondaryType,
+  primaryText,
+  primaryAction,
+  primaryType,
+  children,
+  className
+}) => {
   const displayPrimary = primaryText && primaryAction
   const displaySecondary = secondaryText && secondaryAction
   return (
-    <div className={cx(
-      styles['c-modal-footer'],
+    <div
+      className={cx(
+        styles['c-modal-footer'],
         {
-          [styles['c-modal-footer--button']]: (displayPrimary || displaySecondary)
+          [styles['c-modal-footer--button']]: displayPrimary || displaySecondary
         },
-      className)}
+        className
+      )}
     >
       {children}
-      { displaySecondary &&
-        <Button theme={secondaryType} onClick={secondaryAction} label={secondaryText} />
-      }
-      { displayPrimary &&
-        <Button theme={primaryType} onClick={primaryAction} label={primaryText} />
-      }
+      {displaySecondary && (
+        <Button
+          theme={secondaryType}
+          onClick={secondaryAction}
+          label={secondaryText}
+        />
+      )}
+      {displayPrimary && (
+        <Button
+          theme={primaryType}
+          onClick={primaryAction}
+          label={primaryText}
+        />
+      )}
     </div>
   )
 }
@@ -88,12 +114,26 @@ const ModalButtons = props => {
 }
 
 class Modal extends Component {
-  handleOutsideClick = (e) => {
+  handleOutsideClick = e => {
     if (e.target === e.currentTarget) this.props.dismissAction()
   }
 
-  render () {
-    const { children, description, title, closable, dismissAction, overflowHidden, className, crossClassName, crossColor, into, size, spacing, mobileFullscreen } = this.props
+  render() {
+    const {
+      children,
+      description,
+      title,
+      closable,
+      dismissAction,
+      overflowHidden,
+      className,
+      crossClassName,
+      crossColor,
+      into,
+      size,
+      spacing,
+      mobileFullscreen
+    } = this.props
     const {
       primaryText,
       primaryAction,
@@ -102,19 +142,19 @@ class Modal extends Component {
       secondaryAction,
       secondaryType
     } = this.props
-    const maybeWrapInPortal = children => into ? <Portal into={into}>{ children }</Portal> : children
+    const maybeWrapInPortal = children =>
+      into ? <Portal into={into}>{children}</Portal> : children
     return maybeWrapInPortal(
       <div className={styles['c-modal-container']}>
         <Overlay onEscape={closable && dismissAction}>
-          <div className={
-            cx(
-              styles['c-modal-wrapper'],
-              {
-                [styles['c-modal-wrapper--fullscreen']]: mobileFullscreen
-              }
-          )} onClick={closable && this.handleOutsideClick}>
-            <div className={
-              cx(
+          <div
+            className={cx(styles['c-modal-wrapper'], {
+              [styles['c-modal-wrapper--fullscreen']]: mobileFullscreen
+            })}
+            onClick={closable && this.handleOutsideClick}
+          >
+            <div
+              className={cx(
                 styles['c-modal'],
                 styles[`c-modal--${size}`],
                 className,
@@ -123,19 +163,31 @@ class Modal extends Component {
                   [styles[`c-modal--${spacing}-spacing`]]: spacing,
                   [styles['c-modal--fullscreen']]: mobileFullscreen
                 }
-              )}>
-              { closable && <ModalCross className={crossClassName} onClick={dismissAction} color={crossColor} /> }
-              { title && <ModalHeader title={title} /> }
-              { description && <ModalDescription>{ description }</ModalDescription> }
+              )}
+            >
+              {closable && (
+                <ModalCross
+                  className={crossClassName}
+                  onClick={dismissAction}
+                  color={crossColor}
+                />
+              )}
+              {title && <ModalHeader title={title} />}
+              {description && (
+                <ModalDescription>{description}</ModalDescription>
+              )}
               {children}
-              { (primaryText && primaryAction || secondaryText && secondaryAction) ?
+              {(primaryText && primaryAction) ||
+              (secondaryText && secondaryAction) ? (
                 <ModalFooter
                   primaryText={primaryText}
                   primaryAction={primaryAction}
                   primaryType={primaryType}
                   secondaryText={secondaryText}
                   secondaryAction={secondaryAction}
-                  secondaryType={secondaryType} /> : null }
+                  secondaryType={secondaryType}
+                />
+              ) : null}
             </div>
           </div>
         </Overlay>
@@ -172,7 +224,7 @@ Modal.propTypes = {
   /** `crossColor` to overwrite the default color of the cross button */
   crossColor: PropTypes.string,
   /** If has a value, the modal will be rendered inside a portal and its value will be passed to Portal
-  to control the rendering destination of the Modal */
+   to control the rendering destination of the Modal */
   into: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge', 'xxlarge']),
   spacing: PropTypes.oneOf(['small', 'large']),
@@ -202,7 +254,8 @@ const EnhancedModal = migrateProps([
     fn: props => {
       let msg = null
       if (!props.into) {
-        msg = 'In the future, `into` default value will be "body" : Modals will be rendered inside a <Portal />. Try to render your Modal with into=`body`'
+        msg =
+          'In the future, `into` default value will be "body" : Modals will be rendered inside a <Portal />. Try to render your Modal with into=`body`'
       }
       return [props, msg]
     }
@@ -211,7 +264,7 @@ const EnhancedModal = migrateProps([
     fn: props => {
       let newProps
       if (props.secondaryAction && !props.dismissAction) {
-        newProps = {...props}
+        newProps = { ...props }
         newProps.dismissAction = props.secondaryAction
         const msg =
           'In the future, `secondaryAction` will not be bound to closing actions (clicking on cross, clicking outside), please use `dismissAction` for that'

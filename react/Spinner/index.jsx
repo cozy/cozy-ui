@@ -4,11 +4,20 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
-export const Spinner = ({ t, loadingType, middle, noMargin, color, size, className }) => {
+export const Spinner = ({
+  t,
+  loadingType,
+  middle,
+  noMargin,
+  color,
+  size,
+  className
+}) => {
   return (
     <div
       className={classNames(
-        styles['c-spinner'], {
+        styles['c-spinner'],
+        {
           [styles['c-spinner--middle']]: middle,
           [styles['c-spinner--nomargin']]: noMargin,
           [styles[`c-spinner--${color}`]]: color,
@@ -27,7 +36,14 @@ Spinner.propTypes = {
   middle: PropTypes.bool,
   noMargin: PropTypes.bool,
   color: PropTypes.oneOf(['blue', 'grey', 'white', 'red']),
-  size: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'xlarge', 'xxlarge']),
+  size: PropTypes.oneOf([
+    'tiny',
+    'small',
+    'medium',
+    'large',
+    'xlarge',
+    'xxlarge'
+  ]),
   className: PropTypes.string
 }
 

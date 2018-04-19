@@ -29,7 +29,7 @@ class IntentIframe extends React.Component {
         result ? onTerminate && onTerminate(result) : onCancel()
       })
       .catch(error => {
-        (onError && onError(error)) ||
+        ;(onError && onError(error)) ||
           this.setState({ error: error, loading: false })
       })
   }

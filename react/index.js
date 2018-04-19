@@ -1,21 +1,36 @@
-export {default as Alerter} from './Alerter'
+export { default as Alerter } from './Alerter'
 export { default as Badge } from './Badge'
 export { Button, ButtonLink } from './Button'
 export { default as ButtonAction } from './ButtonAction'
-export {default as I18n, translate} from './I18n'
-export {default as Icon} from './Icon'
-export {default as Sidebar} from './Sidebar'
-export {default as Nav, NavItem, NavIcon, NavText, NavLink, genNavLink} from './Nav'
-export {default as ListItemText} from './ListItemText'
-export {default as Modal, ModalContent, ModalSection, ModalFooter, ModalDescription, ModalHeader, ModalBrandedHeader} from './Modal'
-export {default as SelectionBar} from './SelectionBar'
-export {default as IntentIframe} from './IntentIframe'
-export {default as IntentOpener} from './IntentOpener'
-export {default as IntentModal} from './IntentModal'
-export {default as Spinner} from './Spinner'
-export {Tabs, TabPanels, TabPanel, TabList, Tab} from './Tabs'
-export {default as Toggle} from './Toggle'
-export {default as withBreakpoints} from './helpers/withBreakpoints'
+export { default as I18n, translate } from './I18n'
+export { default as Icon } from './Icon'
+export { default as Sidebar } from './Sidebar'
+export {
+  default as Nav,
+  NavItem,
+  NavIcon,
+  NavText,
+  NavLink,
+  genNavLink
+} from './Nav'
+export { default as ListItemText } from './ListItemText'
+export {
+  default as Modal,
+  ModalContent,
+  ModalSection,
+  ModalFooter,
+  ModalDescription,
+  ModalHeader,
+  ModalBrandedHeader
+} from './Modal'
+export { default as SelectionBar } from './SelectionBar'
+export { default as IntentIframe } from './IntentIframe'
+export { default as IntentOpener } from './IntentOpener'
+export { default as IntentModal } from './IntentModal'
+export { default as Spinner } from './Spinner'
+export { Tabs, TabPanels, TabPanel, TabList, Tab } from './Tabs'
+export { default as Toggle } from './Toggle'
+export { default as withBreakpoints } from './helpers/withBreakpoints'
 export { Media, Img, Bd } from './Media'
 export { default as MidEllipsis } from './MidEllipsis'
 export { default as ActionMenu } from './ActionMenu'

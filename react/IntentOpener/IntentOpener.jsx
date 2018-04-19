@@ -39,8 +39,17 @@ class IntentOpener extends React.Component {
     }
   }
 
-  render () {
-    const { options, action, doctype, children, closable, create, tag, into } = this.props
+  render() {
+    const {
+      options,
+      action,
+      doctype,
+      children,
+      closable,
+      create,
+      tag,
+      into
+    } = this.props
     const { modalOpened } = this.state
 
     const Tag = tag // React needs uppercase element names
@@ -52,7 +61,7 @@ class IntentOpener extends React.Component {
     if (modalOpened) {
       elements.push(
         <IntentModal
-          key='intent-modal'
+          key="intent-modal"
           closable={closable}
           overflowHidden
           dismissAction={this.handleDismiss}
@@ -66,8 +75,7 @@ class IntentOpener extends React.Component {
       )
     }
 
-
-    return <Tag>{ elements }</Tag>
+    return <Tag>{elements}</Tag>
   }
 }
 
@@ -88,7 +96,7 @@ IntentOpener.propTypes = {
 
 IntentOpener.defaultProps = {
   tag: 'span',
-  closable: true,
+  closable: true
 }
 
 export default IntentOpener

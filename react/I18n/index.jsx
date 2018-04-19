@@ -14,19 +14,19 @@ export const DEFAULT_LANG = 'en'
 
 // Provider root component
 export class I18n extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.init(this.props)
   }
 
-  init (props) {
+  init(props) {
     const { lang, dictRequire, context, defaultLang } = props
 
     this.translation = initTranslation(lang, dictRequire, context, defaultLang)
     this.format = initFormat(lang, defaultLang)
   }
 
-  getChildContext () {
+  getChildContext() {
     return {
       t: this.translation.t.bind(this.translation),
       f: this.format,
@@ -34,22 +34,22 @@ export class I18n extends Component {
     }
   }
 
-  componentWillReceiveProps (newProps) {
+  componentWillReceiveProps(newProps) {
     if (newProps.lang !== this.props.lang) {
       this.init(newProps)
     }
   }
 
-  render () {
+  render() {
     return React.Children.only(this.props.children)
   }
 }
 
 I18n.propTypes = {
-  lang: PropTypes.string.isRequired,      // current language.
+  lang: PropTypes.string.isRequired, // current language.
   dictRequire: PropTypes.func.isRequired, // A callback to load locales.
-  context: PropTypes.string,              // current context.
-  defaultLang: PropTypes.string           // default language. By default is 'en'
+  context: PropTypes.string, // current context.
+  defaultLang: PropTypes.string // default language. By default is 'en'
 }
 
 const i18nContextTypes = {
@@ -63,7 +63,12 @@ I18n.childContextTypes = i18nContextTypes
 // higher order decorator for components that need `t` and/or `f`
 export const translate = () => WrappedComponent => {
   const Wrapper = (props, context) => (
-    <WrappedComponent {...props} t={context.t} f={context.f} lang={context.lang} />
+    <WrappedComponent
+      {...props}
+      t={context.t}
+      f={context.f}
+      lang={context.lang}
+    />
   )
   Wrapper.contextTypes = i18nContextTypes
   return Wrapper
