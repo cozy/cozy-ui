@@ -28,9 +28,9 @@ export const Img = ({ children, className, style, ...rest }) => {
   )
 }
 
-export const Bd = ({ children, className, style }) => {
+export const Bd = ({ children, className, style, ...rest }) => {
   return (
-    <div className={cx(styles.bd, className)} style={style}>
+    <div className={cx(styles.bd, className)} style={style} {...rest}>
       {children}
     </div>
   )
