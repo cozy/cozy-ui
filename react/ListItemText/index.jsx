@@ -5,9 +5,9 @@ import { Text, Caption } from '../Text'
 import styles from './styles.styl'
 
 const ListItemText = props => {
-  const { primaryText, secondaryText, className, ellipsis, children } = props
+  const { primaryText, secondaryText, className, ellipsis, children, ...rest } = props
   return (
-    <div className={cx(styles['c-list-text'], className)}>
+    <div className={cx(styles['c-list-text'], className)} {...rest}>
       {primaryText && <Text ellipsis={ellipsis}>{primaryText}</Text>}
       {secondaryText && <Caption ellipsis={ellipsis}>{secondaryText}</Caption>}
       {children}
