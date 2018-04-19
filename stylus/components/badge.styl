@@ -1,0 +1,38 @@
+@require '../settings/palette'
+
+size = .875rem
+
+$badge-root
+    position relative
+    display inline-flex
+
+$badge
+    position absolute
+    bottom - size / 2
+    right - size / 2
+    width size
+    height size
+    border-radius 50%
+    background-color black
+    color white
+    z-index 1
+    display flex
+    flex-direction row
+    flex-wrap wrap
+    justify-content center
+    align-content center
+    align-items center
+    font-size .625rem
+    border .0625rem solid white
+
+$badge--new
+    color zircon
+    background-color dodgerBlue
+
+$badge--normal
+    color paleGrey
+    background-color charcoalGrey
+
+$badge--error
+    color chablis
+    background-color pomegranate
