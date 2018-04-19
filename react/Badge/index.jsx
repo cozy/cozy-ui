@@ -5,18 +5,12 @@ import styles from './styles.styl'
 
 export const Badge = ({ children, content, type, ...props }) => {
   return (
-    <span
-      className={styles['c-badge-root']}
-      {...props}
-    >
+    <span className={styles['c-badge-root']} {...props}>
       {children}
       <span
-        className={classNames(
-          styles['c-badge'],
-          {
-            [styles[`c-badge--${type}`]]: type
-          }
-        )}
+        className={classNames(styles['c-badge'], {
+          [styles[`c-badge--${type}`]]: type
+        })}
       >
         {content}
       </span>

@@ -5,7 +5,7 @@ import styles from './styles.styl'
 
 const Sidebar = ({ children, className }) => (
   <aside className={classNames(styles['o-sidebar'], className)}>
-    { children }
+    {children}
   </aside>
 )
 

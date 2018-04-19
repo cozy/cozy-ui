@@ -23,7 +23,7 @@ const bodyTallerThanWindow = () => {
  * Can react to Escape key
  */
 class Overlay extends Component {
-  componentDidMount () {
+  componentDidMount() {
     if (bodyTallerThanWindow()) {
       this.restoreScrollBody = disableScroll(document.body)
       this.restoreScrollHtml = disableScroll(document.body.parentNode)
@@ -33,13 +33,13 @@ class Overlay extends Component {
     }
   }
 
-  handleKeydown = (e) => {
+  handleKeydown = e => {
     if (e.keyCode === ESC_KEYCODE) {
       this.props.onEscape()
     }
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     // restauration function can be undefined if there was
     // an error during mounting/rendering
     this.restoreScrollBody && this.restoreScrollBody()
@@ -55,12 +55,16 @@ class Overlay extends Component {
     }
   }
 
-  render () {
-    const { children, className, onClick, ...rest } = this.props
+  render() {
+    const { children, className, ...rest } = this.props
 
     return (
-      <div onClick={this.handleClick} className={cx(styles['c-overlay'], className)} {...rest}>
-        { children }
+      <div
+        onClick={this.handleClick}
+        className={cx(styles['c-overlay'], className)}
+        {...rest}
+      >
+        {children}
       </div>
     )
   }

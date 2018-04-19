@@ -3,7 +3,12 @@ import { DEFAULT_LANG } from '.'
 
 export let _polyglot
 
-export const initTranslation = (lang, dictRequire, context, defaultLang = DEFAULT_LANG) => {
+export const initTranslation = (
+  lang,
+  dictRequire,
+  context,
+  defaultLang = DEFAULT_LANG
+) => {
   _polyglot = new Polyglot({
     phrases: dictRequire(defaultLang),
     locale: defaultLang

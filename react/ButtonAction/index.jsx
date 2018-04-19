@@ -5,36 +5,51 @@ import styles from './styles.styl'
 import Icon from '../Icon'
 
 const ButtonAction = props => {
-  const { type, disabled, children, label, leftIcon, rightIcon, compact, className, onClick, ...restProps } = props
+  const {
+    type,
+    disabled,
+    children,
+    label,
+    leftIcon,
+    rightIcon,
+    compact,
+    className,
+    onClick,
+    ...restProps
+  } = props
   return (
     <button
       disabled={disabled}
       type="button"
       role="button"
       className={cx(
-        styles['c-actionbtn'], {
-          [styles[`c-actionbtn--${type}`]] : type,
-          [styles[`c-actionbtn--compact`]] : compact
+        styles['c-actionbtn'],
+        {
+          [styles[`c-actionbtn--${type}`]]: type,
+          [styles[`c-actionbtn--compact`]]: compact
         },
-        className)}
+        className
+      )}
       onClick={onClick}
       title={compact ? label : undefined}
       {...restProps}
     >
       <span>
         {Icon.isProperIcon(leftIcon) ? <Icon icon={leftIcon} /> : leftIcon}
-        {label &&
-          <span
-            data-action="label"
-            className={styles['c-actionbtn-label']}>{label}
-          </span>}
-        {rightIcon &&
-          <span
-            data-action="icon"
-            className={styles['c-actionbtn-icon']}>
-            {Icon.isProperIcon(rightIcon) ? <Icon icon={rightIcon} /> : rightIcon}
+        {label && (
+          <span data-action="label" className={styles['c-actionbtn-label']}>
+            {label}
           </span>
-        }
+        )}
+        {rightIcon && (
+          <span data-action="icon" className={styles['c-actionbtn-icon']}>
+            {Icon.isProperIcon(rightIcon) ? (
+              <Icon icon={rightIcon} />
+            ) : (
+              rightIcon
+            )}
+          </span>
+        )}
         {children}
       </span>
     </button>
