@@ -348,40 +348,35 @@ $actionbtn--compact
         background-color paleGrey
         border 0
 
+actionbtnVariant(bgColor, txtColor, bdColor)
+    background-color bgColor
+    color txtColor
+    border-color bdColor
 
-$actionbtn--new
-    border .0625rem dashed frenchPass
-    background-color zircon
-    color dodgerBlue
-
-    &:hover
-    &:focus
-        border-style solid
-        background-color frenchPass
-
-$actionbtn--normal
-    background-color paleGrey
-    color charcoalGrey
+    [data-action='icon']
+        border-color bdColor
 
     &:hover
-    &:focus
-        background-color silver
+        background-color bdColor
 
     &[disabled]:hover
     &[aria-disabled=true]:hover
-        background-color paleGrey
+        background-color bgColor
+
+$actionbtn--normal
+    actionbtnVariant(paleGrey, charcoalGrey, silver)
 
 $actionbtn--error
-    border-color yourPink
-    background-color chablis
-    color pomegranate
+    actionbtnVariant(chablis, pomegranate, yourPink)
 
-    [data-action='icon']
-        border-color yourPink
+$actionbtn--new
+    actionbtnVariant(zircon, dodgerBlue, frenchPass)
+    border-width .0625rem // specific
+    border-style dashed// specific
 
-    &:hover
-    &:focus
-        background-color yourPink
+    &:hover:not([disabled])
+    &:focus:not([disabled])
+        border-style solid // specific
 
 $actionbtn-label
     @extend $ellipsis
