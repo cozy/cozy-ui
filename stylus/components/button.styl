@@ -82,6 +82,9 @@ alpha = { name: 'alpha', bgColor: transparent, bdColor: white, focusColor: scien
 secondary = { name: 'secondary', bgColor: white, bdColor: silver, focusColor: silver, txtColor: black}
 danger-outline = { name: 'danger-outline', bgColor: white, bdColor: yourPink, focusColor: yourPink, txtColor: pomegranate}
 
+// We turn stylint off since without semicolons, stylus fails to
+// parse the following code block.
+// @stylint off
 for theme in highlight danger alpha secondary danger-outline
     $button--{theme['name']}
         background-color: theme['bgColor']
@@ -101,6 +104,7 @@ for theme in highlight danger alpha secondary danger-outline
 
         svg
             fill currentColor
+// @stylint on
 
 /* specific case for spinner */
 $button--danger-outline
