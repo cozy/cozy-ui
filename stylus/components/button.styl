@@ -76,99 +76,43 @@ $button
 $button--regular  // Deprecated
     @extend $button
 
-$button--secondary
-    background-color  white
-    color             black
-    border-color      silver
+highlight = { name: 'highlight', bgColor: emerald, bdColor: emerald, focusColor: malachite, txtColor: white}
+danger = { name: 'danger', bgColor: pomegranate, bdColor: pomegranate, focusColor: monza, txtColor: white}
+alpha = { name: 'alpha', bgColor: transparent, bdColor: white, focusColor: scienceBlue, txtColor: white}
+secondary = { name: 'secondary', bgColor: white, bdColor: silver, focusColor: silver, txtColor: black}
+danger-outline = { name: 'danger-outline', bgColor: white, bdColor: yourPink, focusColor: yourPink, txtColor: pomegranate}
 
-    svg
-        fill currentColor
+for theme in highlight danger alpha secondary danger-outline
+    $button--{theme['name']}
+        background-color: theme['bgColor']
+        color: theme['txtColor']
+        border-color: theme['bdColor']
 
-    &[disabled]
-    &[aria-disabled=true]
+        &:active
         &:hover
-            background-color white
+        &:focus
+            border-color:      theme['focusColor']
+            background-color:  theme['focusColor']
 
-    &:visited
-        color black
+        &[disabled]
+        &[aria-disabled=true]
+            &:hover
+                background-color: theme['bgColor']
 
-    &:active
-    &:hover
-    &:focus
-        background-color  silver
+        svg
+            fill currentColor
 
-    &[aria-busy=true]
-        &::after
-            @extend  $icon-spinner-blue
-
-$button--danger
-    border-color      pomegranate
-    background-color  pomegranate
-
-    &[disabled]
-    &[aria-disabled=true]
-        &:hover
-            background-color pomegranate
-
-    &:active
-    &:hover
-    &:focus
-        border-color      monza
-        background-color  monza
-
+/* specific case for spinner */
 $button--danger-outline
-    background-color  white
-    color             pomegranate
-    border-color      yourPink
-
-    svg
-        fill currentColor
-
-    &[disabled]
-    &[aria-disabled=true]
-        &:hover
-            background-color white
-
-    &:visited
-        color pomegranate
-
-    &:active
-    &:hover
-    &:focus
-        background-color  yourPink
-
     &[aria-busy=true]
         &::after
             @extend  $icon-spinner-red
 
-$button--highlight
-    border-color      emerald
-    background-color  emerald
-
-    &[disabled]
-    &[aria-disabled=true]
-        &:hover
-            background-color emerald
-
-    &:active
-    &:hover
-    &:focus
-        border-color      malachite
-        background-color  malachite
-
-$button--alpha
-    border-color      white
-    background-color  transparent
-
-    &[disabled]
-    &[aria-disabled=true]
-        &:hover
-            background-color transparent
-
-    &:active
-    &:hover
-    &:focus
-        background-color  scienceBlue
+$button--secondary
+    &[aria-busy=true]
+        &::after
+            @extend  $icon-spinner-blue
+/* end specific case for spinner */
 
 $link--upload
     background-image     embedurl('../assets/icons/ui/icon-upload-grey08.svg')
