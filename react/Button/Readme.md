@@ -13,12 +13,17 @@ when `<ButtonLink>` has:
 
 ```
 const { Button } = require('./index');
+const props = [{}, { disabled: true}, { busy: true }];
+const themes = ['regular', 'danger', 'highlight', 'secondary', 'danger-outline', 'alpha'];
 
 <div>
-  <p><Button label='normal action' /></p>
-  <p><Button theme='danger' label='erase or destroy' /></p>
-  <p><Button theme='highlight' label='events communication' /></p>
-  <p><Button theme='secondary' label='cancel or second option' /></p>
+  {themes.map(theme => 
+    <p>{
+      props.map(
+        props => <Button label={theme} theme={theme} {...props} />
+      )
+    }</p>
+  )}
 </div>
 ```
 
