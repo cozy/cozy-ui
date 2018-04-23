@@ -12,14 +12,12 @@ alert-width = 40rem
 $alert
     position fixed
     z-index $alert-index-mobile
-    top auto
     right 0
     bottom 3rem
     left 0
-    display block
     color white
     opacity 1
-    transition transform .5s ease-out, opacity .2s ease-out
+    transition transform .3s ease-out, opacity .2s ease-out
     cursor pointer
 
     @media all and (min-width alert-width)
@@ -56,7 +54,7 @@ $alert-wrapper
 $alert--hidden
     transform translateY(5rem)
     opacity 0
-    transition-timing-function ease-in
+    transition-timing-function ease-out
 
     @media all and (min-width alert-width)
         transform translateY(-5rem)
