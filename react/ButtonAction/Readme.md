@@ -5,14 +5,22 @@ Default type is `normal`
 
 ```
 <div>
-  <p><ButtonAction label='Normal' rightIcon='openwith' /></p>
-  <p><ButtonAction disabled label='Disabled' rightIcon='hourglass' /></p>
-  <p><ButtonAction type='new' leftIcon="plus" label='New' /></p>
-  <p><ButtonAction type='error' label='Error' rightIcon='file-none' /></p>
+  <p>
+    <ButtonAction label='Normal' rightIcon='openwith' />
+    <ButtonAction label='Normal' rightIcon='openwith' disabled />
+  </p>
+  <p>
+    <ButtonAction type='new' leftIcon="plus" label='New' />
+    <ButtonAction type='new' leftIcon="plus" label='New' disabled />
+  </p>
+  <p>
+    <ButtonAction type='error' label='Error' rightIcon='file-none' />
+    <ButtonAction type='error' label='Error' rightIcon='file-none' disabled />
+  </p>
 </div>
 ```
 
-#### Long label are troncated by default
+#### Long labels are troncated by default
 
 ```
 <div>

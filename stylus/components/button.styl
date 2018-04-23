@@ -76,99 +76,72 @@ $button
 $button--regular  // Deprecated
     @extend $button
 
-$button--secondary
-    background-color  white
-    color             black
-    border-color      silver
+highlightTheme = {
+    primaryColor: emerald, secondaryColor: emerald, activeColor: malachite, contrastColor: white
+}
+dangerTheme = {
+    primaryColor: pomegranate, secondaryColor: pomegranate, activeColor: monza, contrastColor: white
+}
+alphaTheme = {
+    primaryColor: transparent, secondaryColor: white, activeColor: scienceBlue, contrastColor: white
+}
+secondaryTheme = {
+    primaryColor: white, secondaryColor: silver, activeColor: silver, contrastColor: black
+}
+dangerOutlineTheme = {
+    primaryColor: white, secondaryColor: yourPink, activeColor: yourPink, contrastColor: pomegranate
+}
+
+// We turn stylint off since without semicolons, stylus fails to
+// parse the following code block.
+// @stylint off
+themedBtn(theme)
+    background-color: theme['primaryColor']
+    color: theme['contrastColor']
+    border-color: theme['secondaryColor']
+
+    &:active
+    &:hover
+    &:focus
+        border-color:      theme['activeColor']
+        background-color:  theme['activeColor']
+
+    &[disabled]
+    &[aria-disabled=true]
+        &:hover
+            background-color: theme['primaryColor']
 
     svg
         fill currentColor
-
-    &[disabled]
-    &[aria-disabled=true]
-        &:hover
-            background-color white
-
-    &:visited
-        color black
-
-    &:active
-    &:hover
-    &:focus
-        background-color  silver
-
-    &[aria-busy=true]
-        &::after
-            @extend  $icon-spinner-blue
-
-$button--danger
-    border-color      pomegranate
-    background-color  pomegranate
-
-    &[disabled]
-    &[aria-disabled=true]
-        &:hover
-            background-color pomegranate
-
-    &:active
-    &:hover
-    &:focus
-        border-color      monza
-        background-color  monza
-
-$button--danger-outline
-    background-color  white
-    color             pomegranate
-    border-color      yourPink
-
-    svg
-        fill currentColor
-
-    &[disabled]
-    &[aria-disabled=true]
-        &:hover
-            background-color white
-
-    &:visited
-        color pomegranate
-
-    &:active
-    &:hover
-    &:focus
-        background-color  yourPink
-
-    &[aria-busy=true]
-        &::after
-            @extend  $icon-spinner-red
 
 $button--highlight
-    border-color      emerald
-    background-color  emerald
-
-    &[disabled]
-    &[aria-disabled=true]
-        &:hover
-            background-color emerald
-
-    &:active
-    &:hover
-    &:focus
-        border-color      malachite
-        background-color  malachite
+    themedBtn(highlightTheme)
 
 $button--alpha
-    border-color      white
-    background-color  transparent
+    themedBtn(alphaTheme)
 
-    &[disabled]
-    &[aria-disabled=true]
-        &:hover
-            background-color transparent
+$button--danger
+    themedBtn(dangerTheme)
 
-    &:active
-    &:hover
-    &:focus
-        background-color  scienceBlue
+$button--secondary
+    themedBtn(secondaryTheme)
+
+$button--danger-outline
+    themedBtn(dangerOutlineTheme)
+
+// @stylint on
+
+/* specific case for spinner */
+$button--danger-outline
+    &[aria-busy=true]
+        > span::after
+            @extend  $icon-spinner-red
+
+$button--secondary
+    &[aria-busy=true]
+        > span::after
+            @extend  $icon-spinner-blue
+/* end specific case for spinner */
 
 $link--upload
     background-image     embedurl('../assets/icons/ui/icon-upload-grey08.svg')
@@ -405,40 +378,35 @@ $actionbtn--compact
         background-color paleGrey
         border 0
 
+actionbtnVariant(bgColor, txtColor, bdColor)
+    background-color bgColor
+    color txtColor
+    border-color bdColor
 
-$actionbtn--new
-    border .0625rem dashed frenchPass
-    background-color zircon
-    color dodgerBlue
-
-    &:hover
-    &:focus
-        border-style solid
-        background-color frenchPass
-
-$actionbtn--normal
-    background-color paleGrey
-    color charcoalGrey
+    [data-action='icon']
+        border-color bdColor
 
     &:hover
-    &:focus
-        background-color silver
+        background-color bdColor
 
     &[disabled]:hover
     &[aria-disabled=true]:hover
-        background-color paleGrey
+        background-color bgColor
+
+$actionbtn--normal
+    actionbtnVariant(paleGrey, charcoalGrey, silver)
 
 $actionbtn--error
-    border-color yourPink
-    background-color chablis
-    color pomegranate
+    actionbtnVariant(chablis, pomegranate, yourPink)
 
-    [data-action='icon']
-        border-color yourPink
+$actionbtn--new
+    actionbtnVariant(zircon, dodgerBlue, frenchPass)
+    border-width .0625rem
+    border-style dashed
 
-    &:hover
-    &:focus
-        background-color yourPink
+    &:hover:not([disabled])
+    &:focus:not([disabled])
+        border-style solid
 
 $actionbtn-label
     @extend $ellipsis
