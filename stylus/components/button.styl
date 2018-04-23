@@ -76,34 +76,59 @@ $button
 $button--regular  // Deprecated
     @extend $button
 
-highlight = { name: 'highlight', bgColor: emerald, bdColor: emerald, focusColor: malachite, txtColor: white}
-danger = { name: 'danger', bgColor: pomegranate, bdColor: pomegranate, focusColor: monza, txtColor: white}
-alpha = { name: 'alpha', bgColor: transparent, bdColor: white, focusColor: scienceBlue, txtColor: white}
-secondary = { name: 'secondary', bgColor: white, bdColor: silver, focusColor: silver, txtColor: black}
-danger-outline = { name: 'danger-outline', bgColor: white, bdColor: yourPink, focusColor: yourPink, txtColor: pomegranate}
+highlightTheme = {
+    bgColor: emerald, bdColor: emerald, focusColor: malachite, txtColor: white
+}
+dangerTheme = {
+    bgColor: pomegranate, bdColor: pomegranate, focusColor: monza, txtColor: white
+}
+alphaTheme = {
+    bgColor: transparent, bdColor: white, focusColor: scienceBlue, txtColor: white
+}
+secondaryTheme = {
+    bgColor: white, bdColor: silver, focusColor: silver, txtColor: black
+}
+dangerOutlineTheme = {
+    bgColor: white, bdColor: yourPink, focusColor: yourPink, txtColor: pomegranate
+}
 
 // We turn stylint off since without semicolons, stylus fails to
 // parse the following code block.
 // @stylint off
-for theme in highlight danger alpha secondary danger-outline
-    $button--{theme['name']}
-        background-color: theme['bgColor']
-        color: theme['txtColor']
-        border-color: theme['bdColor']
+themedBtn(theme)
+    background-color: theme['bgColor']
+    color: theme['txtColor']
+    border-color: theme['bdColor']
 
-        &:active
+    &:active
+    &:hover
+    &:focus
+        border-color:      theme['focusColor']
+        background-color:  theme['focusColor']
+
+    &[disabled]
+    &[aria-disabled=true]
         &:hover
-        &:focus
-            border-color:      theme['focusColor']
-            background-color:  theme['focusColor']
+            background-color: theme['bgColor']
 
-        &[disabled]
-        &[aria-disabled=true]
-            &:hover
-                background-color: theme['bgColor']
+    svg
+        fill currentColor
 
-        svg
-            fill currentColor
+$button--highlight
+    themedBtn(highlightTheme)
+
+$button--alpha
+    themedBtn(alphaTheme)
+
+$button--danger
+    themedBtn(dangerTheme)
+
+$button--secondary
+    themedBtn(secondaryTheme)
+
+$button--danger-outline
+    themedBtn(dangerOutlineTheme)
+
 // @stylint on
 
 /* specific case for spinner */
