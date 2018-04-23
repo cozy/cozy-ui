@@ -109,12 +109,12 @@ for theme in highlight danger alpha secondary danger-outline
 /* specific case for spinner */
 $button--danger-outline
     &[aria-busy=true]
-        &::after
+        > span::after
             @extend  $icon-spinner-red
 
 $button--secondary
     &[aria-busy=true]
-        &::after
+        > span::after
             @extend  $icon-spinner-blue
 /* end specific case for spinner */
 
