@@ -7,61 +7,66 @@
  * This file contains all needs for alerts
  */
 
-$alerts
-    alert-width = 40rem
-    .coz-alert
-        position          fixed
-        z-index           $alert-index-mobile
-        top               auto
-        right             0
-        bottom            3rem
-        left              0
-        display           flex
-        justify-content   space-between
-        align-items       center
-        box-sizing        border-box
-        box-shadow        0 .375rem 1.125rem 0 rgba(50, 54, 63, .23)
-        background-color  emerald
-        padding           .8rem 1rem
-        color             white
-        opacity           1
-        transition        transform .5s ease-out, opacity .2s ease-out
-        cursor            pointer
+alert-width = 40rem
 
-        p
-            margin      0
-            line-height 1.5
-
-        .coz-alert-title
-            font-weight bold
-
-        &.coz-alert--hidden
-            transform translateY(5rem)
-            opacity                    0
-            transition-timing-function ease-in
-
-    .coz-alert--error
-        background-color pomegranate
-
-    .coz-alert--success
-        background-color emerald
-
-    .coz-alert--info
-        background-color slateGrey
-
+$alert
+    position fixed
+    z-index $alert-index-mobile
+    right 0
+    bottom 3rem
+    left 0
+    color white
+    opacity 1
+    transition transform .3s ease-out, opacity .2s ease-out
+    cursor pointer
 
     @media all and (min-width alert-width)
-        .coz-alert
-            z-index       $alert-index
-            top           1rem
-            bottom        auto
-            left          0
-            right         0
-            margin        auto
-            max-width     alert-width
-            padding       1rem 1.5rem
-            width         100%
-            border-radius .625rem
+        z-index $alert-index
+        top 1rem
+        bottom auto
+        text-align center
 
-            &.coz-alert--hidden
-                transform translateY(-5rem)
+$alert-wrapper
+    display inline-flex
+    flex-wrap nowrap
+    align-items center
+    justify-content center
+    box-sizing border-box
+    width 100%
+    box-shadow 0 .375rem 1.125rem 0 rgba(50, 54, 63, .23)
+    background-color emerald
+    padding .8rem 1rem
+
+    p
+        margin 0
+        line-height 1.5
+
+    p + button
+        margin-left 1.5rem
+
+    @media all and (min-width alert-width)
+        width auto
+        max-width alert-width
+        padding 1rem 1.5rem
+        border-radius .625rem
+        text-align left
+
+$alert--hidden
+    transform translateY(5rem)
+    opacity 0
+    transition-timing-function ease-out
+
+    @media all and (min-width alert-width)
+        transform translateY(-5rem)
+
+$alert-title
+    font-weight bold
+
+$alert--error
+    background-color pomegranate
+
+$alert--success
+    background-color emerald
+
+$alert--info
+    background-color slateGrey
