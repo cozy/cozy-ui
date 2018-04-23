@@ -3,6 +3,12 @@ All notable changes to this project will be documented in this file.
 We use lerna-changelog to generate the changelog based on the PRs.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.18.0] (2018-04-23)
+
+#### :rocket: Enhancement
+* [#446](https://github.com/cozy/cozy-ui/pull/446) feat: add width and height to compact ButtonAction. ([@drazik](https://github.com/drazik))
+* [#445](https://github.com/cozy/cozy-ui/pull/445) feat: add 3px margin on caption inside ListItemText. ([@drazik](https://github.com/drazik))
+
 ## [7.17.0] (2018-04-19)
 
 #### :rocket: Enhancement
@@ -897,6 +903,7 @@ on desktop or mobile view
 ## [3.0.0-beta5] - 2017-02-01
 - Everything we did before adopting CHANGELOG…
 
+[7.18.0]: https://github.com/cozy/cozy-ui/compare/v7.17.0...v7.18.0
 [7.17.0]: https://github.com/cozy/cozy-ui/compare/v7.16.0...v7.17.0
 [7.16.0]: https://github.com/cozy/cozy-ui/compare/v7.15.0...v7.16.0
 [7.15.0]: https://github.com/cozy/cozy-ui/compare/v7.14.0...v7.15.0
