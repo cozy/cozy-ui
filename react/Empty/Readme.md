@@ -13,7 +13,7 @@ Empty (or error) view in a listing container
 ```
 const { Button } = require('../Button');
 <div style="position: relative; transform: translateZ(0); height: 500px; display: flex;">
-  <Empty icon="https://cozy.io/fr/images/cozy-logo_white.png" title="An error occured">
+  <Empty icon="https://cozy.io/fr/images/cozy-logo_white.png" title="An error occured" text="It's maybe nothing, just refresh to be sure">
     <Button label="Try refreshing" />
   </Empty>
 </div>
