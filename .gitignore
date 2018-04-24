@@ -3,6 +3,7 @@ package-lock.json
 build
 dist
 .changelog
+yarn-error.log
 
 # Users Environment Variables
 .lock-wscript
