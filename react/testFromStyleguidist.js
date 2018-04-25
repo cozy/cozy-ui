@@ -154,7 +154,7 @@ const testFromStyleguidist = (name, markdown, require) => {
       const rendered = []
       const finish = () => {
         rendered.forEach(rendered => {
-          expect(rendered).toMatchSnapshot()
+          expect(rendered).toMatchSnapshot(name)
         })
         done()
       }
