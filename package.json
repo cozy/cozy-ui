@@ -111,7 +111,7 @@
     ],
     "moduleNameMapper": {
       "\\.(png|gif|jpe?g|svg)$": "<rootDir>/test/__mocks__/fileMock.js",
-      "styles": "identity-obj-proxy",
+      "\\.styl$": "identity-obj-proxy",
       "react-styleguidist.+\\.jsx?$": "babel-jest"
     },
     "globals": {

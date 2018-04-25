@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label should render examples 1`] = `
+"<div>
+  <div>
+    <form>
+      <div>
+        <label for=\\"idInput\\" class=\\"c-label\\">This is a label</label>
+        <input type=\\"text\\" id=\\"idInput\\" class=\\"c-input-text\\" placeholder=\\"Recherche\\">
+      </div>
+    </form>
+  </div>
+</div>"
+`;
+
+exports[`Label should render examples 2`] = `
+"<div>
+  <div>
+    <form>
+      <div>
+        <label for=\\"idInput\\" class=\\"c-label\\">This is a label</label>
+        <input type=\\"text\\" id=\\"idInput\\" class=\\"c-input-text\\" placeholder=\\"Recherche\\">
+      </div>
+    </form>
+  </div>
+</div>"
+`;
