@@ -3,5 +3,9 @@
   "rules": {
     "no-console": "off",
     "react/display-name": "off"
+  },
+  "globals": {
+    "mount": true,
+    "shallow": true
   }
 }

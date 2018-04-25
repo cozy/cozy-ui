@@ -79,6 +79,7 @@
     "md5": "^2.2.0",
     "normalize.css": "^7.0.0",
     "preact-portal": "^1.1.2",
+    "pretty": "^2.0.0",
     "react-select": "2.0.0-alpha.7",
     "stylus": "^0.54.5"
   },
@@ -91,6 +92,9 @@
     ]
   },
   "jest": {
+    "setupFiles": [
+      "./test/jestsetup.js"
+    ],
     "moduleFileExtensions": [
       "js",
       "jsx",
@@ -99,11 +103,16 @@
     ],
     "moduleDirectories": [
       "node_modules",
-      "src"
+      "src",
+      "react-styleguidist/lib"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-styleguidist)/)"
     ],
     "moduleNameMapper": {
       "\\.(png|gif|jpe?g|svg)$": "<rootDir>/test/__mocks__/fileMock.js",
-      "styles": "identity-obj-proxy"
+      "\\.styl$": "identity-obj-proxy",
+      "react-styleguidist.+\\.jsx?$": "babel-jest"
     },
     "globals": {
       "__ALLOW_HTTP__": false,
