@@ -74,6 +74,24 @@ exports[`Avatar should render examples: Avatar 4`] = `
 </div>"
 `;
 
+exports[`Badge should render examples: Badge 1`] = `
+"<div>
+  <div>
+    <div>
+      <p><span class=\\"c-badge-root\\"><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal c-actionbtn--compact\\" title=\\"Normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button><span class=\\"c-badge c-badge--normal\\">2</span></span>
+      </p>
+      <p><span class=\\"c-badge-root\\"><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new c-actionbtn--compact\\" title=\\"New\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span>
+        </button><span class=\\"c-badge c-badge--new\\">2</span></span>
+      </p>
+      <p><span class=\\"c-badge-root\\"><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error c-actionbtn--compact\\" title=\\"Error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button><span class=\\"c-badge c-badge--error\\">2</span></span>
+      </p>
+    </div>
+  </div>
+</div>"
+`;
+
 exports[`Button should render examples: Button 1`] = `
 "<div>
   <div>
@@ -644,6 +662,152 @@ exports[`Button should render examples: Button 10`] = `
 </div>"
 `;
 
+exports[`ButtonAction should render examples: ButtonAction 1`] = `
+"<div>
+  <div>
+    <div>
+      <p>
+        <button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button>
+        <button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button>
+      </p>
+      <p>
+        <button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span>
+        </button>
+        <button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span>
+        </button>
+      </p>
+      <p>
+        <button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button>
+        <button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button>
+      </p>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`ButtonAction should render examples: ButtonAction 2`] = `
+"<div>
+  <div>
+    <div>
+      <p>
+        <button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button>
+        <button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button>
+      </p>
+      <p>
+        <button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span>
+        </button>
+        <button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span>
+        </button>
+      </p>
+      <p>
+        <button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button>
+        <button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button>
+      </p>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`ButtonAction should render examples: ButtonAction 3`] = `
+"<div>
+  <div>
+    <div>
+      <p>
+        <button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button>
+        <button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button>
+      </p>
+      <p>
+        <button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span>
+        </button>
+        <button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span>
+        </button>
+      </p>
+      <p>
+        <button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button>
+        <button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button>
+      </p>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Checkbox should render examples: Checkbox 1`] = `
+"<div>
+  <div>
+    <form>
+      <div>
+        <label class=\\"c-input-checkbox\\" aria-checked=\\"\\">
+          <input type=\\"checkbox\\" value=\\"\\" name=\\"\\"><span>This is a checkbox</span></label>
+      </div>
+    </form>
+  </div>
+</div>"
+`;
+
+exports[`Checkbox should render examples: Checkbox 2`] = `
+"<div>
+  <div>
+    <form>
+      <div>
+        <label class=\\"c-input-checkbox\\" aria-checked=\\"\\">
+          <input type=\\"checkbox\\" value=\\"\\" name=\\"\\"><span>This is a checkbox</span></label>
+      </div>
+    </form>
+  </div>
+</div>"
+`;
+
+exports[`Checkbox should render examples: Checkbox 3`] = `
+"<div>
+  <div>
+    <form>
+      <div>
+        <label class=\\"c-input-checkbox\\" aria-checked=\\"\\">
+          <input type=\\"checkbox\\" value=\\"\\" name=\\"\\"><span>This is a checkbox</span></label>
+      </div>
+    </form>
+  </div>
+</div>"
+`;
+
+exports[`Field should render examples: Field 1`] = `
+"<div>
+  <div>
+    <form>
+      <div class=\\"o-field\\">
+        <label for=\\"\\" class=\\"c-label\\">I'm a label</label>
+        <textarea placeholder=\\"I'm a textarea\\" class=\\"c-textarea\\" id=\\"idField\\"></textarea>
+      </div>
+    </form>
+  </div>
+</div>"
+`;
+
+exports[`Field should render examples: Field 2`] = `
+"<div>
+  <div>
+    <form>
+      <div class=\\"o-field\\">
+        <label for=\\"\\" class=\\"c-label\\">I'm a label</label>
+        <textarea placeholder=\\"I'm a textarea\\" class=\\"c-textarea\\" id=\\"idField\\"></textarea>
+      </div>
+    </form>
+  </div>
+</div>"
+`;
+
 exports[`Hero should render examples: Hero 1`] = `
 "<div>
   <div>
@@ -680,6 +844,22 @@ exports[`Hero should render examples: Hero 1`] = `
 </div>"
 `;
 
+exports[`Icon should render examples: Icon 1`] = `
+"<div>
+  <div>
+    <div style=\\"background: rgb(204, 204, 204);\\"><span><!-- react-text: 3 -->album<!-- /react-text --><!-- react-text: 4 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 9 -->album-add<!-- /react-text --><!-- react-text: 10 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 15 -->album-remove<!-- /react-text --><!-- react-text: 16 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 21 -->back<!-- /react-text --><!-- react-text: 22 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 27 -->bottom<!-- /react-text --><!-- react-text: 28 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 33 -->check<!-- /react-text --><!-- react-text: 34 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 39 -->check-circleless<!-- /react-text --><!-- react-text: 40 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 45 -->clock<!-- /react-text --><!-- react-text: 46 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 51 -->cozy<!-- /react-text --><!-- react-text: 52 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 57 -->cross<!-- /react-text --><!-- react-text: 58 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 63 -->delete<!-- /react-text --><!-- react-text: 64 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 69 -->destroy<!-- /react-text --><!-- react-text: 70 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 75 -->device-laptop<!-- /react-text --><!-- react-text: 76 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 81 -->dots<!-- /react-text --><!-- react-text: 82 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 87 -->download<!-- /react-text --><!-- react-text: 88 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 93 -->file<!-- /react-text --><!-- react-text: 94 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 99 -->file-none<!-- /react-text --><!-- react-text: 100 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 105 -->folder<!-- /react-text --><!-- react-text: 106 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 111 -->forward<!-- /react-text --><!-- react-text: 112 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 117 -->gear<!-- /react-text --><!-- react-text: 118 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 123 -->hourglass<!-- /react-text --><!-- react-text: 124 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 129 -->image<!-- /react-text --><!-- react-text: 130 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 135 -->moveto<!-- /react-text --><!-- react-text: 136 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 141 -->openwith<!-- /react-text --><!-- react-text: 142 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 147 -->paperplane<!-- /react-text --><!-- react-text: 148 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 153 -->people<!-- /react-text --><!-- react-text: 154 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 159 -->plus<!-- /react-text --><!-- react-text: 160 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 165 -->rename<!-- /react-text --><!-- react-text: 166 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 171 -->restore<!-- /react-text --><!-- react-text: 172 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 177 -->share<!-- /react-text --><!-- react-text: 178 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 183 -->top<!-- /react-text --><!-- react-text: 184 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 189 -->trash<!-- /react-text --><!-- react-text: 190 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 195 -->upload<!-- /react-text --><!-- react-text: 196 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 201 -->warn<!-- /react-text --><!-- react-text: 202 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 207 -->warning<!-- /react-text --><!-- react-text: 208 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span></div>
+  </div>
+</div>"
+`;
+
+exports[`Icon should render examples: Icon 2`] = `
+"<div>
+  <div>
+    <div style=\\"background: rgb(204, 204, 204);\\"><span><!-- react-text: 3 -->album<!-- /react-text --><!-- react-text: 4 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 9 -->album-add<!-- /react-text --><!-- react-text: 10 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 15 -->album-remove<!-- /react-text --><!-- react-text: 16 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 21 -->back<!-- /react-text --><!-- react-text: 22 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 27 -->bottom<!-- /react-text --><!-- react-text: 28 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 33 -->check<!-- /react-text --><!-- react-text: 34 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 39 -->check-circleless<!-- /react-text --><!-- react-text: 40 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 45 -->clock<!-- /react-text --><!-- react-text: 46 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 51 -->cozy<!-- /react-text --><!-- react-text: 52 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 57 -->cross<!-- /react-text --><!-- react-text: 58 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 63 -->delete<!-- /react-text --><!-- react-text: 64 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 69 -->destroy<!-- /react-text --><!-- react-text: 70 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 75 -->device-laptop<!-- /react-text --><!-- react-text: 76 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 81 -->dots<!-- /react-text --><!-- react-text: 82 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 87 -->download<!-- /react-text --><!-- react-text: 88 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 93 -->file<!-- /react-text --><!-- react-text: 94 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 99 -->file-none<!-- /react-text --><!-- react-text: 100 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 105 -->folder<!-- /react-text --><!-- react-text: 106 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 111 -->forward<!-- /react-text --><!-- react-text: 112 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 117 -->gear<!-- /react-text --><!-- react-text: 118 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 123 -->hourglass<!-- /react-text --><!-- react-text: 124 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 129 -->image<!-- /react-text --><!-- react-text: 130 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 135 -->moveto<!-- /react-text --><!-- react-text: 136 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 141 -->openwith<!-- /react-text --><!-- react-text: 142 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 147 -->paperplane<!-- /react-text --><!-- react-text: 148 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 153 -->people<!-- /react-text --><!-- react-text: 154 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 159 -->plus<!-- /react-text --><!-- react-text: 160 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 165 -->rename<!-- /react-text --><!-- react-text: 166 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 171 -->restore<!-- /react-text --><!-- react-text: 172 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 177 -->share<!-- /react-text --><!-- react-text: 178 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 183 -->top<!-- /react-text --><!-- react-text: 184 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 189 -->trash<!-- /react-text --><!-- react-text: 190 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 195 -->upload<!-- /react-text --><!-- react-text: 196 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 201 -->warn<!-- /react-text --><!-- react-text: 202 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 207 -->warning<!-- /react-text --><!-- react-text: 208 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span></div>
+  </div>
+</div>"
+`;
+
 exports[`Label should render examples: Label 1`] = `
 "<div>
   <div>
@@ -702,6 +882,290 @@ exports[`Label should render examples: Label 2`] = `
         <input type=\\"text\\" id=\\"idInput\\" class=\\"c-input-text\\" placeholder=\\"Recherche\\">
       </div>
     </form>
+  </div>
+</div>"
+`;
+
+exports[`ListItemText should render examples: ListItemText 1`] = `
+"<div>
+  <div>
+    <div class=\\"c-list-text\\">
+      <div class=\\"g-text u-ellipsis\\">I'm a list item text</div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`ListItemText should render examples: ListItemText 2`] = `
+"<div>
+  <div>
+    <div class=\\"c-list-text\\">
+      <div class=\\"g-text u-ellipsis\\">I'm a list item text</div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`ListItemText should render examples: ListItemText 3`] = `
+"<div>
+  <div>
+    <div class=\\"c-list-text\\">
+      <div class=\\"g-text u-ellipsis\\">I'm a list item text</div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Menu should render examples: Menu 1`] = `
+"<div>
+  <div>
+    <div class=\\"c-menu c-menu--left\\">
+      <button role=\\"button\\" class=\\"c-btn c-menu__btn\\">Click me !</button>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Menu should render examples: Menu 2`] = `
+"<div>
+  <div>
+    <div class=\\"c-menu c-menu--left\\">
+      <button role=\\"button\\" class=\\"c-btn c-menu__btn\\">Click me !</button>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Menu should render examples: Menu 3`] = `
+"<div>
+  <div>
+    <div class=\\"c-menu c-menu--left\\">
+      <button role=\\"button\\" class=\\"c-btn c-menu__btn\\">Click me !</button>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Radio should render examples: Radio 1`] = `
+"<div>
+  <div>
+    <form>
+      <div>
+        <label class=\\"c-input-radio\\">
+          <input type=\\"radio\\" value=\\"radioValue1\\" name=\\"radioForm\\"><span>This is a radio button</span></label>
+        <label class=\\"c-input-radio\\">
+          <input type=\\"radio\\" value=\\"radioValue2\\" name=\\"radioForm\\"><span>This is also a radio button</span></label>
+      </div>
+    </form>
+  </div>
+</div>"
+`;
+
+exports[`Radio should render examples: Radio 2`] = `
+"<div>
+  <div>
+    <form>
+      <div>
+        <label class=\\"c-input-radio\\">
+          <input type=\\"radio\\" value=\\"radioValue1\\" name=\\"radioForm\\"><span>This is a radio button</span></label>
+        <label class=\\"c-input-radio\\">
+          <input type=\\"radio\\" value=\\"radioValue2\\" name=\\"radioForm\\"><span>This is also a radio button</span></label>
+      </div>
+    </form>
+  </div>
+</div>"
+`;
+
+exports[`SelectBox should render examples: SelectBox 1`] = `
+"<div>
+  <div>
+    <div class=\\"react-select__container css-13t81xe\\"><span aria-atomic=\\"true\\" aria-live=\\"polite\\" role=\\"status\\" class=\\"css-17l7ekz\\">3 results available.</span>
+      <div class=\\"react-select__control css-a83eig\\">
+        <div class=\\"react-select__value-container css-12sevwg\\">
+          <div class=\\"react-select__placeholder css-16ucli7\\">Select...</div>
+          <div class=\\"css-16n6ap7\\">
+            <div class=\\"react-select__input\\" style=\\"display: inline-block;\\">
+              <input type=\\"text\\" autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-2--input\\" spellcheck=\\"false\\" tabindex=\\"0\\" value=\\"\\" aria-autocomplete=\\"list\\" aria-busy=\\"false\\" aria-expanded=\\"false\\" aria-haspopup=\\"false\\" role=\\"combobox\\"
+                style=\\"box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;\\">
+              <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
+            </div>
+          </div>
+        </div>
+        <div class=\\"react-select__indicators css-1lfa1d8\\"><span role=\\"presentation\\" class=\\"react-select__indicator-separator css-1hq2z0s\\"></span>
+          <div role=\\"button\\" class=\\"react-select__indicator react-select__dropdown-indicator css-1k2060c\\">
+            <svg height=\\"20\\" width=\\"20\\" viewBox=\\"0 0 20 20\\" focusable=\\"false\\" role=\\"presentation\\" class=\\"react-select__icon react-select__down-icon css-qyb9b\\">
+              <path d=\\"M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z\\"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`SelectBox should render examples: SelectBox 2`] = `
+"<div>
+  <div>
+    <div class=\\"react-select__container css-13t81xe\\"><span aria-atomic=\\"true\\" aria-live=\\"polite\\" role=\\"status\\" class=\\"css-17l7ekz\\">3 results available.</span>
+      <div class=\\"react-select__control css-a83eig\\">
+        <div class=\\"react-select__value-container css-12sevwg\\">
+          <div class=\\"react-select__placeholder css-16ucli7\\">Select...</div>
+          <div class=\\"css-16n6ap7\\">
+            <div class=\\"react-select__input\\" style=\\"display: inline-block;\\">
+              <input type=\\"text\\" autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-3--input\\" spellcheck=\\"false\\" tabindex=\\"0\\" value=\\"\\" aria-autocomplete=\\"list\\" aria-busy=\\"false\\" aria-expanded=\\"false\\" aria-haspopup=\\"false\\" role=\\"combobox\\"
+                style=\\"box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;\\">
+              <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
+            </div>
+          </div>
+        </div>
+        <div class=\\"react-select__indicators css-1lfa1d8\\"><span role=\\"presentation\\" class=\\"react-select__indicator-separator css-1hq2z0s\\"></span>
+          <div role=\\"button\\" class=\\"react-select__indicator react-select__dropdown-indicator css-1k2060c\\">
+            <svg height=\\"20\\" width=\\"20\\" viewBox=\\"0 0 20 20\\" focusable=\\"false\\" role=\\"presentation\\" class=\\"react-select__icon react-select__down-icon css-qyb9b\\">
+              <path d=\\"M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z\\"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`SelectBox should render examples: SelectBox 3`] = `
+"<div>
+  <div>
+    <div class=\\"react-select__container css-13t81xe\\"><span aria-atomic=\\"true\\" aria-live=\\"polite\\" role=\\"status\\" class=\\"css-17l7ekz\\">3 results available.</span>
+      <div class=\\"react-select__control css-a83eig\\">
+        <div class=\\"react-select__value-container css-12sevwg\\">
+          <div class=\\"react-select__placeholder css-16ucli7\\">Select...</div>
+          <div class=\\"css-16n6ap7\\">
+            <div class=\\"react-select__input\\" style=\\"display: inline-block;\\">
+              <input type=\\"text\\" autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-4--input\\" spellcheck=\\"false\\" tabindex=\\"0\\" value=\\"\\" aria-autocomplete=\\"list\\" aria-busy=\\"false\\" aria-expanded=\\"false\\" aria-haspopup=\\"false\\" role=\\"combobox\\"
+                style=\\"box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;\\">
+              <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
+            </div>
+          </div>
+        </div>
+        <div class=\\"react-select__indicators css-1lfa1d8\\"><span role=\\"presentation\\" class=\\"react-select__indicator-separator css-1hq2z0s\\"></span>
+          <div role=\\"button\\" class=\\"react-select__indicator react-select__dropdown-indicator css-1k2060c\\">
+            <svg height=\\"20\\" width=\\"20\\" viewBox=\\"0 0 20 20\\" focusable=\\"false\\" role=\\"presentation\\" class=\\"react-select__icon react-select__down-icon css-qyb9b\\">
+              <path d=\\"M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z\\"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Sidebar should render examples: Sidebar 1`] = `
+"<div>
+  <div>
+    <aside class=\\"o-sidebar\\">
+      <nav>
+        <ul class=\\"c-nav\\">
+          <li class=\\"c-nav-item\\">
+            <a class=\\"c-nav-link\\"><span class=\\"c-nav-item__icon c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-item__text\\">Warn</span></a>
+          </li>
+          <li class=\\"c-nav-item\\">
+            <a class=\\"c-nav-link\\"><span class=\\"c-nav-item__icon c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-item__text\\">Check</span></a>
+          </li>
+          <li class=\\"c-nav-item\\">
+            <a class=\\"c-nav-link\\"><span class=\\"c-nav-item__icon c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-item__text\\">Download</span></a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</div>"
+`;
+
+exports[`Spinner should render examples: Spinner 1`] = `
+"<div>
+  <div>
+    <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div>
+  </div>
+</div>"
+`;
+
+exports[`Spinner should render examples: Spinner 2`] = `
+"<div>
+  <div>
+    <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div>
+  </div>
+</div>"
+`;
+
+exports[`Spinner should render examples: Spinner 3`] = `
+"<div>
+  <div>
+    <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div>
+  </div>
+</div>"
+`;
+
+exports[`Spinner should render examples: Spinner 4`] = `
+"<div>
+  <div>
+    <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div>
+  </div>
+</div>"
+`;
+
+exports[`Text should render examples: Text 1`] = `
+"<div>
+  <div>
+    <div class=\\"g-text\\">This a standard text</div>
+  </div>
+</div>"
+`;
+
+exports[`Text should render examples: Text 2`] = `
+"<div>
+  <div>
+    <div class=\\"g-text\\">This a standard text</div>
+  </div>
+</div>"
+`;
+
+exports[`Textarea should render examples: Textarea 1`] = `
+"<div>
+  <div>
+    <textarea placeholder=\\"Once upon a time…\\" class=\\"c-textarea\\"></textarea>
+  </div>
+</div>"
+`;
+
+exports[`Textarea should render examples: Textarea 2`] = `
+"<div>
+  <div>
+    <textarea placeholder=\\"Once upon a time…\\" class=\\"c-textarea\\"></textarea>
+  </div>
+</div>"
+`;
+
+exports[`Textarea should render examples: Textarea 3`] = `
+"<div>
+  <div>
+    <textarea placeholder=\\"Once upon a time…\\" class=\\"c-textarea\\"></textarea>
+  </div>
+</div>"
+`;
+
+exports[`Textarea should render examples: Textarea 4`] = `
+"<div>
+  <div>
+    <textarea placeholder=\\"Once upon a time…\\" class=\\"c-textarea\\"></textarea>
+  </div>
+</div>"
+`;
+
+exports[`Textarea should render examples: Textarea 5`] = `
+"<div>
+  <div>
+    <textarea placeholder=\\"Once upon a time…\\" class=\\"c-textarea\\"></textarea>
   </div>
 </div>"
 `;
