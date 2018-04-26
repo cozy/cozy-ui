@@ -1,7 +1,7 @@
 import testFromStyleguidist from './testFromStyleguidist'
 import path from 'path'
 
-const r = subpath => m => {
+const makeRequire = subpath => m => {
   if (m.indexOf('.') === 0) {
     return require('./' + path.join(subpath, m))
   } else {
@@ -11,7 +11,7 @@ const r = subpath => m => {
 
 const testComponent = ComponentName => {
   testFromStyleguidist(
-    ComponentName, __dirname + `/${ComponentName}/Readme.md`, r(ComponentName))
+    ComponentName, __dirname + `/${ComponentName}/Readme.md`, makeRequire(ComponentName))
 }
 
 testComponent('ActionMenu')
