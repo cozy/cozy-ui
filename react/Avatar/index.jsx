@@ -27,9 +27,9 @@ const nameToColor = (name = '') => {
   return colors[key]
 }
 
-export const Avatar = ({ text, image, size, className, style }) => {
+export const Avatar = ({ text, textId, image, size, className, style }) => {
   const colored = {
-    backgroundColor: `${nameToColor(text)}`,
+    backgroundColor: `${nameToColor(textId || text)}`,
     color: 'white'
   }
 
