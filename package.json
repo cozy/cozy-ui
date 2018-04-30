@@ -14,7 +14,7 @@
   "homepage": "https://github.com/cozy/cozy-ui",
   "scripts": {
     "lint": "npm-run-all 'lint:*'",
-    "lint:js": "eslint --fix 'react/**/*.jsx' 'react/**/*.js'",
+    "lint:js": "eslint 'react/**/*.jsx' 'react/**/*.js'",
     "lint:stylus": "stylint stylus --config .stylintrc",
     "watch:doc:react": "styleguidist server --config docs/styleguide.config.js",
     "build:doc": "npm-run-all 'build:doc:*'",
