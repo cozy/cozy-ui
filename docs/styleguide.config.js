@@ -6,41 +6,42 @@ module.exports = {
     {
       name: 'Basics',
       components: () => [
+        '../react/Badge/index.jsx',
         '../react/Button/index.jsx',
         '../react/ButtonAction/index.jsx',
-        '../react/Spinner/index.jsx',
+        '../react/Chip/index.jsx',
         '../react/Icon/index.jsx',
-        '../react/Badge/index.jsx'
+        '../react/Spinner/index.jsx'
       ]
     },
     {
       name: 'Forms',
       components: () => [
-        '../react/Input/index.jsx',
         '../react/Checkbox/index.jsx',
-        '../react/Radio/index.jsx',
-        '../react/Textarea/index.jsx',
-        '../react/Label/index.jsx',
-        '../react/Toggle/index.jsx',
         '../react/Field/index.jsx',
-        '../react/SelectBox/index.jsx'
+        '../react/Input/index.jsx',
+        '../react/Label/index.jsx',
+        '../react/Radio/index.jsx',
+        '../react/SelectBox/index.jsx',
+        '../react/Textarea/index.jsx',
+        '../react/Toggle/index.jsx'
       ]
     },
     {
       name: 'Layout',
       components: () => [
-        '../react/Sidebar/index.jsx',
-        '../react/Hero/index.jsx'
+        '../react/Hero/index.jsx',
+        '../react/Sidebar/index.jsx'
       ]
     },
     {
       name: 'Content',
       components: () => [
-        '../react/Text/index.jsx',
-        '../react/Media/Media.jsx',
-        '../react/Modal/index.jsx',
         '../react/Avatar/index.jsx',
-        '../react/MidEllipsis/index.jsx'
+        '../react/Media/Media.jsx',
+        '../react/MidEllipsis/index.jsx',
+        '../react/Modal/index.jsx',
+        '../react/Text/index.jsx'
       ]
     },
     {
