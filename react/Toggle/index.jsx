@@ -4,9 +4,9 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 class Toggle extends Component {
-  onChange() {
+  onChange(e) {
     if (this.props.onToggle) {
-      this.props.onToggle(!this.props.checked)
+      this.props.onToggle(e.target.checked)
     }
   }
   render() {
