@@ -3,13 +3,13 @@ import React from 'react'
 import styles from './styles.styl'
 
 class Chip extends React.Component {
-  render ({ children, className, ...props }) {
+  render({ children, className, ...props }) {
     return (
-      <div className={
-          cx(styles.Chip, className, this.constructor.className)}
-          {...props}
+      <div
+        className={cx(styles.Chip, className, this.constructor.className)}
+        {...props}
       >
-        { children }
+        {children}
       </div>
     )
   }
@@ -18,5 +18,8 @@ class Chip extends React.Component {
 export class RoundChip extends Chip {
   static className = styles.RoundChip
 }
+
+Chip.Round = RoundChip
+Chip.Separator = () => <span className={styles.ChipSeparator} />
 
 export default Chip

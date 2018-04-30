@@ -23,9 +23,17 @@ const ContactChip = ({ contact }) => (
 ### Round chip
 
 ```
-const RoundChip = require('.').RoundChip;
-
-<RoundChip>
+<Chip.Round>
   <Icon icon='forward'/>
-</RoundChip>
+</Chip.Round>
+```
+
+### Chip separator
+
+```
+<Chip>
+  Something
+  <Chip.Separator />
+  Something else
+</Chip>
 ```
