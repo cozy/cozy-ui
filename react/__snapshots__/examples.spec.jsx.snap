@@ -847,7 +847,224 @@ exports[`Hero should render examples: Hero 1`] = `
 exports[`Icon should render examples: Icon 1`] = `
 "<div>
   <div>
-    <div style=\\"background: rgb(204, 204, 204);\\"><span><!-- react-text: 3 -->album<!-- /react-text --><!-- react-text: 4 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 9 -->album-add<!-- /react-text --><!-- react-text: 10 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 15 -->album-remove<!-- /react-text --><!-- react-text: 16 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 21 -->back<!-- /react-text --><!-- react-text: 22 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 27 -->bottom<!-- /react-text --><!-- react-text: 28 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 33 -->check<!-- /react-text --><!-- react-text: 34 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 39 -->check-circleless<!-- /react-text --><!-- react-text: 40 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 45 -->clock<!-- /react-text --><!-- react-text: 46 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 51 -->cozy<!-- /react-text --><!-- react-text: 52 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 57 -->cross<!-- /react-text --><!-- react-text: 58 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 63 -->delete<!-- /react-text --><!-- react-text: 64 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 69 -->destroy<!-- /react-text --><!-- react-text: 70 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 75 -->device-laptop<!-- /react-text --><!-- react-text: 76 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 81 -->dots<!-- /react-text --><!-- react-text: 82 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 87 -->download<!-- /react-text --><!-- react-text: 88 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 93 -->file<!-- /react-text --><!-- react-text: 94 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 99 -->file-none<!-- /react-text --><!-- react-text: 100 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 105 -->folder<!-- /react-text --><!-- react-text: 106 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 111 -->forward<!-- /react-text --><!-- react-text: 112 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 117 -->gear<!-- /react-text --><!-- react-text: 118 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 123 -->hourglass<!-- /react-text --><!-- react-text: 124 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 129 -->image<!-- /react-text --><!-- react-text: 130 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 135 -->moveto<!-- /react-text --><!-- react-text: 136 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 141 -->openwith<!-- /react-text --><!-- react-text: 142 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 147 -->paperplane<!-- /react-text --><!-- react-text: 148 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 153 -->people<!-- /react-text --><!-- react-text: 154 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 159 -->plus<!-- /react-text --><!-- react-text: 160 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 165 -->rename<!-- /react-text --><!-- react-text: 166 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 171 -->restore<!-- /react-text --><!-- react-text: 172 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 177 -->share<!-- /react-text --><!-- react-text: 178 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 183 -->top<!-- /react-text --><!-- react-text: 184 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 189 -->trash<!-- /react-text --><!-- react-text: 190 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 195 -->upload<!-- /react-text --><!-- react-text: 196 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 201 -->warn<!-- /react-text --><!-- react-text: 202 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 207 -->warning<!-- /react-text --><!-- react-text: 208 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span></div>
+    <div style=\\"font-size: 2rem; display: grid;\\">
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">album</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">album-add</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">album-remove</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">back</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">bottom</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">check</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">check-circleless</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">clock</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">cozy</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">cross</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">delete</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">destroy</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">device-laptop</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">dots</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">download</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">file</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">file-none</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">folder</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">forward</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">gear</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">hourglass</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">image</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">moveto</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">openwith</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">paperplane</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">people</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">plus</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">rename</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">restore</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">share</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">small-arrow</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">top</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">trash</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">upload</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">warn</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">warning</p>
+      </div>
+    </div>
   </div>
 </div>"
 `;
@@ -855,7 +1072,224 @@ exports[`Icon should render examples: Icon 1`] = `
 exports[`Icon should render examples: Icon 2`] = `
 "<div>
   <div>
-    <div style=\\"background: rgb(204, 204, 204);\\"><span><!-- react-text: 3 -->album<!-- /react-text --><!-- react-text: 4 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 9 -->album-add<!-- /react-text --><!-- react-text: 10 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 15 -->album-remove<!-- /react-text --><!-- react-text: 16 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 21 -->back<!-- /react-text --><!-- react-text: 22 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 27 -->bottom<!-- /react-text --><!-- react-text: 28 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 33 -->check<!-- /react-text --><!-- react-text: 34 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 39 -->check-circleless<!-- /react-text --><!-- react-text: 40 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 45 -->clock<!-- /react-text --><!-- react-text: 46 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 51 -->cozy<!-- /react-text --><!-- react-text: 52 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 57 -->cross<!-- /react-text --><!-- react-text: 58 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 63 -->delete<!-- /react-text --><!-- react-text: 64 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 69 -->destroy<!-- /react-text --><!-- react-text: 70 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 75 -->device-laptop<!-- /react-text --><!-- react-text: 76 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 81 -->dots<!-- /react-text --><!-- react-text: 82 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 87 -->download<!-- /react-text --><!-- react-text: 88 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 93 -->file<!-- /react-text --><!-- react-text: 94 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 99 -->file-none<!-- /react-text --><!-- react-text: 100 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 105 -->folder<!-- /react-text --><!-- react-text: 106 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 111 -->forward<!-- /react-text --><!-- react-text: 112 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 117 -->gear<!-- /react-text --><!-- react-text: 118 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 123 -->hourglass<!-- /react-text --><!-- react-text: 124 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 129 -->image<!-- /react-text --><!-- react-text: 130 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 135 -->moveto<!-- /react-text --><!-- react-text: 136 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 141 -->openwith<!-- /react-text --><!-- react-text: 142 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 147 -->paperplane<!-- /react-text --><!-- react-text: 148 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 153 -->people<!-- /react-text --><!-- react-text: 154 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 159 -->plus<!-- /react-text --><!-- react-text: 160 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 165 -->rename<!-- /react-text --><!-- react-text: 166 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 171 -->restore<!-- /react-text --><!-- react-text: 172 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 177 -->share<!-- /react-text --><!-- react-text: 178 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 183 -->top<!-- /react-text --><!-- react-text: 184 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 189 -->trash<!-- /react-text --><!-- react-text: 190 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: green;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 195 -->upload<!-- /react-text --><!-- react-text: 196 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: red;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 201 -->warn<!-- /react-text --><!-- react-text: 202 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: blue;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span><span><!-- react-text: 207 -->warning<!-- /react-text --><!-- react-text: 208 --> : <!-- /react-text --><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><br></span></div>
+    <div style=\\"font-size: 2rem; display: grid;\\">
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">album</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">album-add</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">album-remove</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">back</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">bottom</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">check</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">check-circleless</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">clock</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">cozy</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">cross</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">delete</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">destroy</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">device-laptop</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">dots</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">download</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">file</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">file-none</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">folder</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">forward</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">gear</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">hourglass</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">image</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">moveto</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">openwith</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">paperplane</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">people</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">plus</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">rename</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">restore</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">share</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">small-arrow</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">top</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">trash</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">upload</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">warn</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">warning</p>
+      </div>
+    </div>
   </div>
 </div>"
 `;
