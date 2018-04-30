@@ -75,10 +75,12 @@ class Alert extends Component {
           hidden ? styles['c-alert--hidden'] : ''
         )}
       >
-        <div className={classNames(
-          styles['c-alert-wrapper'],
-          styles[`c-alert--${type}`]
-        )}>
+        <div
+          className={classNames(
+            styles['c-alert-wrapper'],
+            styles[`c-alert--${type}`]
+          )}
+        >
           <p>{message}</p>
           {buttonText && (
             <Button

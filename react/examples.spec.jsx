@@ -11,7 +11,10 @@ const makeRequire = subpath => m => {
 
 const testComponent = ComponentName => {
   testFromStyleguidist(
-    ComponentName, __dirname + `/${ComponentName}/Readme.md`, makeRequire(ComponentName))
+    ComponentName,
+    __dirname + `/${ComponentName}/Readme.md`,
+    makeRequire(ComponentName)
+  )
 }
 
 testComponent('ActionMenu')
