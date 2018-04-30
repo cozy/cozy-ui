@@ -50,8 +50,8 @@ import Toggle from './Toggle'
 
 // Mock error otherwise there are errors with the createStylesheet function
 jest.mock('react-styleguidist/lib/rsg-components/PlaygroundError', () => {
-  return function (props) {
-    return <div>{ props.message }</div>
+  return function(props) {
+    return <div>{props.message}</div>
   }
 })
 
@@ -98,7 +98,9 @@ const testFromStyleguidist = (name, markdown, require) => {
       'setState',
       `const React = require("react");
       ` + a
-    ).bind(null, require,
+    ).bind(
+      null,
+      require,
       ActionMenu,
       Alerter,
       Avatar,

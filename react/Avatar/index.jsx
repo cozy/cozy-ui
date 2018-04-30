@@ -33,7 +33,9 @@ export const Avatar = ({ text, textId, image, size, className, style }) => {
     color: 'white'
   }
 
-  if (style) { Object.assign(colored, style) }
+  if (style) {
+    Object.assign(colored, style)
+  }
 
   return (
     <div
@@ -44,7 +46,7 @@ export const Avatar = ({ text, textId, image, size, className, style }) => {
         },
         className
       )}
-      style={text ? colored : style }
+      style={text ? colored : style}
     >
       {image && <img src={image} className={styles['c-avatar-image']} alt="" />}
       {!image &&
