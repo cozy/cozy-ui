@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import icons from '../../src/icons'
+import cx from 'classnames'
 
 function Icon(props) {
   const {
@@ -11,6 +12,8 @@ function Icon(props) {
     color,
     className,
     preserveColor,
+    rotate,
+    spin,
     ...restProps
   } = props
   let style = props.style
@@ -33,11 +36,19 @@ function Icon(props) {
   if (color) {
     style['fill'] = color
   }
+  if (rotate) {
+    style['transform'] = `rotate(${rotate}deg)`
+  }
 
   const iconClassName = preserveColor ? 'icon--preserveColor' : 'icon'
-  const iconClass = className
-    ? `${styles[iconClassName]} ${className}`
-    : styles[iconClassName]
+  const iconClass = cx(
+    className,
+    styles[iconClassName],
+    {
+      [styles['icon--spin']]: spin
+    }
+  )
+
   return (
     <svg
       className={iconClass}
@@ -63,7 +74,12 @@ Icon.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   color: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   className: PropTypes.string,
-  preserveColor: PropTypes.bool
+  preserveColor: PropTypes.bool,
+  spin: PropTypes.bool
+}
+
+Icon.defaultProps = {
+  spin: false
 }
 
 export default Icon

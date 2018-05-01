@@ -35,6 +35,7 @@ const importIcons = function () {
     'icon-restore',
     'icon-share',
     'icon-small-arrow',
+    'icon-spinner',
     'icon-top',
     'icon-trash',
     'icon-upload',

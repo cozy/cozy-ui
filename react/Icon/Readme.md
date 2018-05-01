@@ -17,6 +17,17 @@ let i = 0;
 </div>
 ```
 
+### Transform properties
+
+User `spin` and `rotate` if you want you to turn your icons upside down 🙃.
+
+```
+<div>
+  <Icon icon='spinner' color='#0bda51' spin/>{'\u00A0'}
+  <Icon icon='forward' color='#c30017' rotate={45}/>
+</div>
+```
+
 ### Custom icons
 
 You can also directly import an SVG to use it. You MUST use svg-sprite-loader

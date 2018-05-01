@@ -1038,28 +1038,34 @@ exports[`Icon should render examples: Icon 1`] = `
         <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
-        <p style=\\"font-size: 1rem;\\">top</p>
+        <p style=\\"font-size: 1rem;\\">spinner</p>
       </div>
       <div style=\\"text-align: center;\\">
         <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
-        <p style=\\"font-size: 1rem;\\">trash</p>
+        <p style=\\"font-size: 1rem;\\">top</p>
       </div>
       <div style=\\"text-align: center;\\">
         <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
-        <p style=\\"font-size: 1rem;\\">upload</p>
+        <p style=\\"font-size: 1rem;\\">trash</p>
       </div>
       <div style=\\"text-align: center;\\">
         <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
-        <p style=\\"font-size: 1rem;\\">warn</p>
+        <p style=\\"font-size: 1rem;\\">upload</p>
       </div>
       <div style=\\"text-align: center;\\">
         <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">warn</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
         <p style=\\"font-size: 1rem;\\">warning</p>
@@ -1263,28 +1269,265 @@ exports[`Icon should render examples: Icon 2`] = `
         <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
-        <p style=\\"font-size: 1rem;\\">top</p>
+        <p style=\\"font-size: 1rem;\\">spinner</p>
       </div>
       <div style=\\"text-align: center;\\">
         <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
-        <p style=\\"font-size: 1rem;\\">trash</p>
+        <p style=\\"font-size: 1rem;\\">top</p>
       </div>
       <div style=\\"text-align: center;\\">
         <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
-        <p style=\\"font-size: 1rem;\\">upload</p>
+        <p style=\\"font-size: 1rem;\\">trash</p>
       </div>
       <div style=\\"text-align: center;\\">
         <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
-        <p style=\\"font-size: 1rem;\\">warn</p>
+        <p style=\\"font-size: 1rem;\\">upload</p>
       </div>
       <div style=\\"text-align: center;\\">
         <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">warn</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">warning</p>
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Icon should render examples: Icon 3`] = `
+"<div>
+  <div>
+    <div style=\\"font-size: 2rem; display: grid;\\">
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">album</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">album-add</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">album-remove</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">back</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">bottom</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">check</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">check-circleless</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">clock</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">cozy</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">cross</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">delete</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">destroy</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">device-laptop</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">dots</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">download</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">file</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">file-none</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">folder</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">forward</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">gear</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">hourglass</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">image</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">moveto</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">openwith</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">paperplane</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">people</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">plus</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">rename</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">restore</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">share</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">small-arrow</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">spinner</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">top</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">trash</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">upload</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">warn</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
         <p style=\\"font-size: 1rem;\\">warning</p>
