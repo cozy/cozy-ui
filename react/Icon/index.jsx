@@ -43,13 +43,9 @@ function Icon(props) {
   }
 
   const iconClassName = preserveColor ? 'icon--preserveColor' : 'icon'
-  const iconClass = cx(
-    className,
-    styles[iconClassName],
-    {
-      [styles['icon--spin']]: spin
-    }
-  )
+  const iconClass = cx(className, styles[iconClassName], {
+    [styles['icon--spin']]: spin
+  })
 
   return (
     <svg
