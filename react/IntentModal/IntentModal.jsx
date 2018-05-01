@@ -34,7 +34,8 @@ class IntentModal extends Component {
       onComplete,
       onError,
       create,
-      into
+      into,
+      mobileFullscreen
     } = this.props
 
     return (
@@ -46,6 +47,7 @@ class IntentModal extends Component {
         crossClassName={styles.intentModal__cross}
         dismissAction={this.dismiss}
         into={into}
+        mobileFullscreen={mobileFullscreen}
       >
         <IntentIframe
           action={action}
@@ -75,7 +77,9 @@ IntentModal.propTypes = {
   /** Display the cross and enable click outside and escape key to close */
   closable: PropTypes.bool,
   /** Where the modal should be rendered in the DOM */
-  into: PropTypes.string
+  into: PropTypes.string,
+  /** If you want your modal taking all the screen on mobile */
+  mobileFullscreen: PropTypes.bool
 }
 
 IntentModal.defaultProps = {
