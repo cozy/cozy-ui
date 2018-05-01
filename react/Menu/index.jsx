@@ -6,10 +6,10 @@ import { Media, Bd, Img } from '../Media'
 
 class MenuItem extends Component {
   render() {
-    const { disabled, className, onClick, children, icon } = this.props
+    const { disabled, className, children, icon, ...props } = this.props
     return (
       <div
-        onClick={onClick}
+        {...props}
         className={cx(
           styles['c-menu__item'],
           {
