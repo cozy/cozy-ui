@@ -4,6 +4,8 @@ import styles from './styles.styl'
 import icons from '../../src/icons'
 import cx from 'classnames'
 
+const DEFAULT_SIZE = '16'
+
 function Icon(props) {
   const {
     icon,
@@ -53,8 +55,8 @@ function Icon(props) {
     <svg
       className={iconClass}
       style={style}
-      width={width || '16'}
-      height={height || '16'}
+      width={width || DEFAULT_SIZE}
+      height={height || DEFAULT_SIZE}
       {...restProps}
     >
       <use xlinkHref={anchor} />
