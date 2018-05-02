@@ -15,6 +15,7 @@ function Icon(props) {
     className,
     preserveColor,
     rotate,
+    size,
     spin,
     ...restProps
   } = props
@@ -51,8 +52,8 @@ function Icon(props) {
     <svg
       className={iconClass}
       style={style}
-      width={width || DEFAULT_SIZE}
-      height={height || DEFAULT_SIZE}
+      width={width || size || DEFAULT_SIZE}
+      height={height || size || DEFAULT_SIZE}
       {...restProps}
     >
       <use xlinkHref={anchor} />
@@ -73,6 +74,8 @@ Icon.propTypes = {
   color: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   className: PropTypes.string,
   preserveColor: PropTypes.bool,
+  /** Shorthand for both width and height */
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   spin: PropTypes.bool
 }
 
