@@ -3,6 +3,22 @@ All notable changes to this project will be documented in this file.
 We use lerna-changelog to generate the changelog based on the PRs.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.19.0] (2018-05-02)
+
+#### :rocket: Enhancement
+* [#461](https://github.com/cozy/cozy-ui/pull/461) Add mobileFullscreen on IntentModal. ([@CPatchane](https://github.com/CPatchane))
+* [#459](https://github.com/cozy/cozy-ui/pull/459) ✨ feat: pass props down in MenuItem. ([@ptbrowne](https://github.com/ptbrowne))
+* [#460](https://github.com/cozy/cozy-ui/pull/460) feat: spin/rotate for icons. ([@ptbrowne](https://github.com/ptbrowne))
+* [#455](https://github.com/cozy/cozy-ui/pull/455) Add chip. ([@ptbrowne](https://github.com/ptbrowne))
+* [#443](https://github.com/cozy/cozy-ui/pull/443) enhancement: Adds "subtle" <Button /> variant. ([@gregorylegarec](https://github.com/gregorylegarec))
+* [#454](https://github.com/cozy/cozy-ui/pull/454) ✨ feat: add small-arrow icon. ([@ptbrowne](https://github.com/ptbrowne))
+* [#414](https://github.com/cozy/cozy-ui/pull/414) feat: Elastic alerts + use of Button component. ([@GoOz](https://github.com/GoOz))
+
+#### :bug: Bug Fix
+* [#456](https://github.com/cozy/cozy-ui/pull/456) Fix toggle state return from onToggle + add tests. ([@CPatchane](https://github.com/CPatchane))
+* [#449](https://github.com/cozy/cozy-ui/pull/449) Fix/minorfixes. ([@GoOz](https://github.com/GoOz))
+* [#448](https://github.com/cozy/cozy-ui/pull/448) fix: buttonAction line height. ([@GoOz](https://github.com/GoOz))
+
 ## [7.18.0] (2018-04-23)
 
 #### :rocket: Enhancement
@@ -903,6 +919,7 @@ on desktop or mobile view
 ## [3.0.0-beta5] - 2017-02-01
 - Everything we did before adopting CHANGELOG…
 
+[7.19.0]: https://github.com/cozy/cozy-ui/compare/v7.18.0...v7.19.0
 [7.18.0]: https://github.com/cozy/cozy-ui/compare/v7.17.0...v7.18.0
 [7.17.0]: https://github.com/cozy/cozy-ui/compare/v7.16.0...v7.17.0
 [7.16.0]: https://github.com/cozy/cozy-ui/compare/v7.15.0...v7.16.0
