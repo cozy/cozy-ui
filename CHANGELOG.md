@@ -3,6 +3,15 @@ All notable changes to this project will be documented in this file.
 We use lerna-changelog to generate the changelog based on the PRs.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.20.0] (2018-05-02)
+
+#### :rocket: Enhancement
+* [#470](https://github.com/cozy/cozy-ui/pull/470) Adds `size` prop for <Icon /> component. ([@gregorylegarec](https://github.com/gregorylegarec))
+* [#466](https://github.com/cozy/cozy-ui/pull/466) Expose I18n extend() method. ([@gregorylegarec](https://github.com/gregorylegarec))
+
+#### :bug: Bug Fix
+* [#467](https://github.com/cozy/cozy-ui/pull/467) Fix visited button overwritting styles. ([@CPatchane](https://github.com/CPatchane))
+
 ## [7.19.0] (2018-05-02)
 
 #### :rocket: Enhancement
@@ -919,6 +928,7 @@ on desktop or mobile view
 ## [3.0.0-beta5] - 2017-02-01
 - Everything we did before adopting CHANGELOG…
 
+[7.20.0]: https://github.com/cozy/cozy-ui/compare/v7.19.0...v7.20.0
 [7.19.0]: https://github.com/cozy/cozy-ui/compare/v7.18.0...v7.19.0
 [7.18.0]: https://github.com/cozy/cozy-ui/compare/v7.17.0...v7.18.0
 [7.17.0]: https://github.com/cozy/cozy-ui/compare/v7.16.0...v7.17.0
