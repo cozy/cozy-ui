@@ -33,3 +33,5 @@ export const initTranslation = (
 
   return _polyglot
 }
+
+export const extend = dict => _polyglot && _polyglot.extend(dict)

@@ -74,4 +74,6 @@ export const translate = () => WrappedComponent => {
   return Wrapper
 }
 
+export { extend } from './translation'
+
 export default I18n
