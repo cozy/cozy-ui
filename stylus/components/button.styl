@@ -5,78 +5,8 @@
 @require '../tools/mixins'
 
 /*------------------------------------*\
-  Button
+  Variants
 \*------------------------------------*/
-
-$button
-    box-sizing       border-box
-    display          inline-flex
-    margin           0 .25em
-    border           1px solid dodgerBlue
-    border-radius    2px
-    min-height       2.5rem
-    min-width        7rem
-    padding          .2rem 1rem
-    background       dodgerBlue
-    vertical-align   top
-    text-align       center
-    color            white
-    font-size        .875rem
-    line-height      1
-    text-transform   uppercase
-    text-decoration  none
-    cursor           pointer
-
-    svg
-        fill         currentColor
-        margin-right .4rem
-
-        &:only-child
-            margin 0
-
-    input
-        cursor pointer
-
-    > span
-        display          flex
-        align-items      center
-        justify-content  center
-        width            100%
-
-    &:visited
-        color white
-
-    &[disabled]
-    &[aria-disabled=true]
-        opacity  .5
-        cursor   not-allowed
-
-        input
-            cursor not-allowed
-
-        &:hover
-            background-color dodgerBlue
-
-    &:active
-    &:hover
-    &:focus
-        background-color  scienceBlue
-
-
-    &[aria-busy=true]
-        > span::after
-            @extend    $icon-16
-            @extend    $icon-spinner-white
-            position   relative
-            top        -.0625rem
-
-
-/*------------------------------------*\
-  Themes
-\*------------------------------------*/
-$button--regular  // Deprecated
-    @extend $button
-
 regularTheme = {
     primaryColor: dodgerBlue, secondaryColor: dodgerBlue, activeColor: scienceBlue, contrastColor: white
 }
@@ -106,9 +36,7 @@ themedBtn(theme)
     border-color: theme['secondaryColor']
 
     &:visited
-        background-color: theme['primaryColor']
         color: theme['contrastColor']
-        border-color: theme['secondaryColor']
 
     &:active
     &:hover
@@ -121,8 +49,63 @@ themedBtn(theme)
         &:hover
             background-color: theme['primaryColor']
 
+/*------------------------------------*\
+  Button
+\*------------------------------------*/
+
+$button
+    box-sizing       border-box
+    display          inline-flex
+    margin           0 .25em
+    border-width     1px
+    border-style     solid
+    border-radius    2px
+    min-height       2.5rem
+    min-width        7rem
+    padding          .2rem 1rem
+    vertical-align   top
+    text-align       center
+    font-size        .875rem
+    line-height      1
+    text-transform   uppercase
+    text-decoration  none
+    cursor           pointer
+
     svg
-        fill currentColor
+        fill         currentColor
+        margin-right .4rem
+
+        &:only-child
+            margin 0
+
+    input
+        cursor pointer
+
+    > span
+        display          flex
+        align-items      center
+        justify-content  center
+        width            100%
+
+    &[disabled]
+    &[aria-disabled=true]
+        opacity  .5
+        cursor   not-allowed
+
+        input
+            cursor not-allowed
+
+    &[aria-busy=true]
+        > span::after
+            @extend    $icon-16
+            @extend    $icon-spinner-white
+            position   relative
+            top        -.0625rem
+
+    themedBtn(regularTheme)
+
+$button--regular  // Deprecated
+    @extend $button
 
 $button--highlight
     themedBtn(highlightTheme)
