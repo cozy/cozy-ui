@@ -19,7 +19,7 @@ let i = 0;
 
 ### Transform properties
 
-User `spin` and `rotate` if you want you to turn your icons upside down 🙃.
+Use `spin` and `rotate` if you want you to turn your icons upside down 🙃.
 
 ```
 <div>
