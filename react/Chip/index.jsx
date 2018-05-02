@@ -3,7 +3,8 @@ import React from 'react'
 import styles from './styles.styl'
 
 class Chip extends React.Component {
-  render({ children, className, ...props }) {
+  render() {
+    const { children, className, ...props } = this.props
     return (
       <div
         className={cx(styles.Chip, className, this.constructor.className)}
