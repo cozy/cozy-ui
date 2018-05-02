@@ -8,12 +8,23 @@ const icons = require('../../src/icons');
 const colors = ['#297EF2', '#08b442', '#B449E7', '#F52D2D', '#FF962F']
 let i = 0;
 
-<div style={{ fontSize: '2rem', display: 'grid', 'grid-template-columns': 'repeat(6, 1fr)' }}>{
+<div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>{
   Object.keys(icons).map(icon => <div style={{ textAlign: 'center'}}>
       <Icon icon={ icon } color={ colors[i++ % colors.length] }/>
       <p style={{ fontSize: '1rem', marginTop: '0.5rem', marginBottom: '1rem' }}>{ icon }</p>
     </div>
   )}
+</div>
+```
+
+### Transform properties
+
+Use `spin` and `rotate` if you want you to turn your icons upside down 🙃.
+
+```
+<div>
+  <Icon icon='spinner' color='#0bda51' spin/>{'\u00A0'}
+  <Icon icon='forward' color='#c30017' rotate={45}/>
 </div>
 ```
 

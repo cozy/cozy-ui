@@ -1,3 +1,5 @@
+@require 'settings/icons.styl'
+
 .icon
     fill currentColor
     // Fix blurry icons on Firefox
@@ -5,3 +7,6 @@
 
 .icon--preserveColor
     fill inherit
+
+.icon--spin
+    @extend $icon-spin
