@@ -21,15 +21,25 @@ directions = {
     t: top,
     b: bottom,
     l: left,
-    r: right
+    r: right,
+    v: vertical,
+    h: horizontal
 }
 for kType, vType in types
     for kSize, vSize in sizes
         for kDir, vDir in directions
-            if vDir != all
-                ${kType}{kDir}-{kSize}
-                    {vType}-{vDir}: vSize
-            else
+            if vDir == all
                 ${kType}-{kSize}
                     {vType}: vSize
+            else if vDir == vertical
+                ${kType}{kDir}-{kSize}
+                    {vType}-top: vSize
+                    {vType}-bottom: vSize
+            else if vDir == horizontal
+                ${kType}{kDir}-{kSize}
+                    {vType}-left: vSize
+                    {vType}-right: vSize
+            else
+                ${kType}{kDir}-{kSize}
+                    {vType}-{vDir}: vSize
 // @stylint on
