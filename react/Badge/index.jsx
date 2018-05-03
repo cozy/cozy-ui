@@ -20,7 +20,7 @@ export const Badge = ({ children, content, type, ...props }) => {
 
 Badge.propTypes = {
   /** The content of the badge */
-  content: PropTypes.string,
+  content: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   /** The type of the badge */
   type: PropTypes.oneOf(['normal', 'new', 'error'])
 }
