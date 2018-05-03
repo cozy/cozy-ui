@@ -24,7 +24,7 @@ export default Chip
 
 const disabledChipButtonStyle = styles['ChipButton--disabled']
 export class ChipButton extends React.PureComponent {
-  render ({ children, className, disabled, ...props }) {
+  render({ children, className, disabled, ...props }) {
     return (
       <RoundChip
         className={cx(styles.ChipButton, className, {
@@ -41,4 +41,3 @@ export class ChipButton extends React.PureComponent {
 Chip.Button = ChipButton
 Chip.Round = RoundChip
 Chip.Separator = () => <span className={styles.ChipSeparator} />
-
