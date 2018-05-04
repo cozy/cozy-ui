@@ -276,6 +276,9 @@ const EnhancedModal = migrateProps([
   }
 ])(Modal)
 
+EnhancedModal.propTypes = Modal.propTypes
+EnhancedModal.defaultProps = Modal.defaultProps
+
 // to be able to use them in Styleguidist
 Object.assign(EnhancedModal, {
   ModalContent,

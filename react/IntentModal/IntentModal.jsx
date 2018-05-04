@@ -25,29 +25,17 @@ class IntentModal extends Component {
   })
 
   render() {
-    const {
-      closable,
-      overflowHidden,
-      action,
-      doctype,
-      options,
-      onComplete,
-      onError,
-      create,
-      into,
-      mobileFullscreen
-    } = this.props
-
+    const { action, doctype, options, onComplete, onError, create } = this.props
+    const modalProps = Object.keys(Modal.propTypes).reduce((props, key) => {
+      return { ...props, [key]: this.props[key] }
+    }, {})
     return (
       <Modal
+        {...modalProps}
         key="modal"
-        closable={closable}
-        overflowHidden={overflowHidden}
         className={styles.intentModal}
         crossClassName={styles.intentModal__cross}
         dismissAction={this.dismiss}
-        into={into}
-        mobileFullscreen={mobileFullscreen}
       >
         <IntentIframe
           action={action}
@@ -64,26 +52,17 @@ class IntentModal extends Component {
 }
 
 IntentModal.propTypes = {
+  ...Modal.propTypes,
   /** What should happen when the intent has completed */
   onComplete: PropTypes.func.isRequired,
   /** What should happen if an intent error occurs */
   onError: PropTypes.func,
-  /** What to do to dismiss the modal */
-  dismissAction: PropTypes.func.isRequired,
   /** Action you want to execute */
   action: PropTypes.string.isRequired,
   /** Doctype on which you want to execute the action */
-  doctype: PropTypes.string.isRequired,
-  /** Display the cross and enable click outside and escape key to close */
-  closable: PropTypes.bool,
-  /** Where the modal should be rendered in the DOM */
-  into: PropTypes.string,
-  /** If you want your modal taking all the screen on mobile */
-  mobileFullscreen: PropTypes.bool
+  doctype: PropTypes.string.isRequired
 }
 
-IntentModal.defaultProps = {
-  closable: true
-}
+IntentModal.defaultProps = { ...Modal.defaultProps }
 
 export default IntentModal
