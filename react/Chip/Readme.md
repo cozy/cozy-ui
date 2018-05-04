@@ -37,3 +37,12 @@ const ContactChip = ({ contact }) => (
   Something else
 </Chip>
 ```
+
+### Chip buttons
+
+```
+<div>
+  <Chip.Button><Icon icon='forward' /></Chip.Button>
+  <Chip.Button disabled><Icon icon='back' /></Chip.Button>
+</div>
+```

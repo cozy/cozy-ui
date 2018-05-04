@@ -12,7 +12,7 @@ const makeRequire = subpath => m => {
 const testComponent = ComponentName => {
   testFromStyleguidist(
     ComponentName,
-    __dirname + `/${ComponentName}/Readme.md`,
+    path.join(__dirname, ComponentName, 'Readme.md'),
     makeRequire(ComponentName)
   )
 }

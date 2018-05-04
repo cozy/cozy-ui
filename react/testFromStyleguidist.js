@@ -169,7 +169,7 @@ const testFromStyleguidist = (name, markdown, require) => {
           root.update()
           rendered.push(pretty(root.html()))
           doneCounter++
-          if (doneCounter == codes.length) {
+          if (doneCounter === codes.length) {
             finish()
           }
         })
