@@ -9,6 +9,7 @@ const importIcons = function () {
     'icon-album-remove',
     'icon-back',
     'icon-bottom',
+    'icon-calendar',
     'icon-check',
     'icon-check-circleless',
     'icon-clock',
