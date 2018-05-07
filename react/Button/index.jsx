@@ -19,20 +19,7 @@ const btnClass = function(options) {
 }
 
 export const Button = props => {
-  const {
-    theme,
-    size,
-    extension,
-    busy,
-    disabled,
-    className,
-    children,
-    label,
-    icon,
-    onClick,
-    type,
-    subtle
-  } = props
+  const { busy, children, disabled, label, icon, onClick, subtle, type } = props
   return (
     <button
       aria-busy={busy}
@@ -40,10 +27,7 @@ export const Button = props => {
       type={type}
       role="button"
       className={btnClass({
-        className,
-        extension,
-        size,
-        theme,
+        ...props,
         variant: subtle && 'subtle'
       })}
       onClick={onClick}
