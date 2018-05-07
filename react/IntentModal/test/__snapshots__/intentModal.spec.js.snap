@@ -5,10 +5,21 @@ exports[`IntentModal component renders as expected 1`] = `
   className="intentModal"
   closable={true}
   crossClassName="intentModal__cross"
+  crossColor={undefined}
+  description={undefined}
   dismissAction={[Function]}
   into={undefined}
-  mobileFullscreen={undefined}
+  mobileFullscreen={false}
   overflowHidden={true}
+  primaryAction={undefined}
+  primaryText={undefined}
+  primaryType="regular"
+  secondaryAction={undefined}
+  secondaryText={undefined}
+  secondaryType="secondary"
+  size="small"
+  spacing={undefined}
+  title={undefined}
 >
   <IntentIframe
     action="ANY"
