@@ -154,3 +154,18 @@ const { Button } = require('./index');
   </p>
 </div>
 ```
+
+### AsButton
+
+The `<AsButton />` component allow to pass button properties and behavior to a child component. This component is useful when we aim to use another component as button. A common case is for example when using `react-router`'s `<NavLink />` component. `<AsButton />` works as a <acronym title="High Order Component">HOC</acronym>. Only the child is rendered.
+
+```
+const { AsButton } = require('./index');
+<div>
+  <AsButton isLink>
+    <a href='#'>
+      <span>Child component</span>
+    </a>
+  </AsButton>
+</div>
+```

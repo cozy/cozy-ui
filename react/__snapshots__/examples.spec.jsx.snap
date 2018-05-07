@@ -337,6 +337,16 @@ exports[`Button should render examples: Button 11`] = `
 </div>"
 `;
 
+exports[`Button should render examples: Button 12`] = `
+"<div>
+  <div>
+    <div>
+      <a href=\\"#\\" class=\\"c-btn\\" target=\\"\\"></a>
+    </div>
+  </div>
+</div>"
+`;
+
 exports[`ButtonAction should render examples: ButtonAction 1`] = `
 "<div>
   <div>

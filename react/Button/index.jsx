@@ -18,6 +18,14 @@ const btnClass = function(options) {
   )
 }
 
+const actualProps = (propTypes, props) => {
+  return Object.keys(props).reduce((filteredProps, key) => {
+    return propTypes[key]
+      ? { ...filteredProps, [key]: props[key] }
+      : filteredProps
+  }, {})
+}
+
 export const Button = props => {
   const { busy, children, disabled, label, icon, onClick, subtle, type } = props
   return (
@@ -42,6 +50,29 @@ export const Button = props => {
 }
 
 export default Button
+
+export const AsButton = props => {
+  const { children } = props
+  const Wrapped = React.Children.only(children)
+  const buttonProps = props.isLink
+    ? {
+        ...ButtonLink.defaultProps,
+        ...actualProps(ButtonLink.propTypes, props)
+      }
+    : { ...Button.defaultProps, ...actualProps(Button.propTypes, props) }
+  return React.cloneElement(
+    Wrapped,
+    {
+      ...buttonProps,
+      ...Wrapped.props,
+      className: btnClass({
+        ...buttonProps,
+        variant: buttonProps.subtle && 'subtle'
+      })
+    },
+    Wrapped.children
+  )
+}
 
 export const ButtonLink = props => {
   const {
@@ -159,3 +190,9 @@ ButtonLink.defaultProps = {
   target: '',
   href: ''
 }
+
+AsButton.propTypes = {
+  ...ButtonLink.propTypes,
+  isLink: PropTypes.bool
+}
+AsButton.defaultProps = Button.defaultProps
