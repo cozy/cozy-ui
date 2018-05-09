@@ -71,14 +71,21 @@ export const ButtonLink = props => {
     children,
     label,
     icon,
-    onClick
+    onClick,
+    subtle
   } = props
   return (
     <a
       aria-disabled={disabled}
       href={href}
       target={target}
-      className={btnClass(theme, size, extension, className)}
+      className={btnClass({
+        className,
+        extension,
+        size,
+        theme,
+        variant: subtle && 'subtle'
+      })}
       onClick={disabled ? event => event.preventDefault() : onClick}
     >
       <span>
