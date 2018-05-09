@@ -40,4 +40,6 @@ export class ChipButton extends React.PureComponent {
 
 Chip.Button = ChipButton
 Chip.Round = RoundChip
-Chip.Separator = () => <span className={styles.ChipSeparator} />
+Chip.Separator = ({ className }) => (
+  <span className={cx(styles.ChipSeparator, className)} />
+)
