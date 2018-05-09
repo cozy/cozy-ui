@@ -3,6 +3,15 @@ All notable changes to this project will be documented in this file.
 We use lerna-changelog to generate the changelog based on the PRs.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v7.22.0 (2018-05-09)
+
+#### :rocket: Enhancement
+* [#484](https://github.com/cozy/cozy-ui/pull/484) Add <AsButton /> wrapper. ([@gregorylegarec](https://github.com/gregorylegarec))
+* [#479](https://github.com/cozy/cozy-ui/pull/479) <IntentHeader /> little improvements. ([@gregorylegarec](https://github.com/gregorylegarec))
+
+#### :bug: Bug Fix
+* [#485](https://github.com/cozy/cozy-ui/pull/485) Fix examples jest and snapshots. ([@gregorylegarec](https://github.com/gregorylegarec))
+
 ## v7.21.0 (2018-05-09)
 
 #### :rocket: Enhancement
@@ -939,6 +948,7 @@ on desktop or mobile view
 ## [3.0.0-beta5] - 2017-02-01
 - Everything we did before adopting CHANGELOG…
 
+[7.22.0]: https://github.com/cozy/cozy-ui/compare/v7.21.0...v7.22.0
 [7.21.0]: https://github.com/cozy/cozy-ui/compare/v7.20.0...v7.21.0
 [7.20.0]: https://github.com/cozy/cozy-ui/compare/v7.19.0...v7.20.0
 [7.19.0]: https://github.com/cozy/cozy-ui/compare/v7.18.0...v7.19.0
