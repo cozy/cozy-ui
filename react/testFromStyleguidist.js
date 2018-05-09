@@ -160,9 +160,9 @@ const testFromStyleguidist = (name, markdown, require) => {
         })
         done()
       }
-      codes.forEach(() => {
+      codes.forEach(code => {
         const root = mount(
-          <Preview code={codes[0].content} evalInContext={evalInContext} />,
+          <Preview code={code.content} evalInContext={evalInContext} />,
           options
         )
         requestAnimationFrame(() => {
