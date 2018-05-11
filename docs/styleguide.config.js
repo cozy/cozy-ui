@@ -42,8 +42,6 @@ module.exports = {
         '../react/MidEllipsis/index.jsx',
         '../react/Modal/index.jsx',
         '../react/Text/index.jsx',
-        '../react/Avatar/index.jsx',
-        '../react/MidEllipsis/index.jsx',
         '../react/Empty/index.jsx'
       ]
     },
