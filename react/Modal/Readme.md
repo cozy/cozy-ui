@@ -146,6 +146,11 @@ For more complex modals, you can use individual components.
 
 ```
 const { ModalDescription, ModalHeader, ModalFooter } = Modal;
+const headerStyle = {
+  background: 'linear-gradient(to right, #005c97, #363795)',
+  color: 'white',
+  paddingBottom: '1.5rem'
+};
 
 <div>
   <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
@@ -153,11 +158,10 @@ const { ModalDescription, ModalHeader, ModalFooter } = Modal;
   </button>
   {state.modalDisplayed &&
     <Modal
+        crossColor='white'
         overflowHidden={true}
         dismissAction={()=>setState({ modalDisplayed: false})} >
-      <div style={{background: 'black', color: 'white'}}>
-        <ModalHeader title="Yo ho ho !" />
-      </div>
+      <ModalHeader style={headerStyle} title="Augusta Ada King-Noel, Countess of Lovelace" />
       <ModalDescription className='u-mt-half'>
         { content.ada.short }
       </ModalDescription>

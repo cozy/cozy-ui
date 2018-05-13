@@ -36,10 +36,10 @@ const ModalBrandedHeader = ({ logo, bg, className, style = {} }) => (
   </h2>
 )
 
-const ModalHeader = ({ title, children, className }) => {
+const ModalHeader = ({ title, children, className, style }) => {
   const isTitle = typeof children === 'string'
   return (
-    <div className={cx(styles['c-modal-header'], className)}>
+    <div className={cx(styles['c-modal-header'], className)} style={style}>
       {title && <h2>{title}</h2>}
       {isTitle ? <h2>{children}</h2> : children}
     </div>
