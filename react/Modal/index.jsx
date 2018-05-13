@@ -161,7 +161,8 @@ class Modal extends Component {
                 {
                   [styles['c-modal--overflowHidden']]: overflowHidden,
                   [styles[`c-modal--${spacing}-spacing`]]: spacing,
-                  [styles['c-modal--fullscreen']]: mobileFullscreen
+                  [styles['c-modal--fullscreen']]: mobileFullscreen,
+                  [styles['c-modal--closable']]: closable
                 }
               )}
             >
