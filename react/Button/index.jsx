@@ -137,7 +137,7 @@ Button.propTypes = {
   /** Disables the button */
   disabled: PropTypes.bool,
   /** Type of the underlying `<button />` */
-  type: PropTypes.oneOf(['reset', 'submit']),
+  type: PropTypes.oneOf(['button', 'reset', 'submit']),
   /** Use the `subtle` alternative look for the Button  */
   subtle: PropTypes.bool
 }
