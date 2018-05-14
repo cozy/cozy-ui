@@ -72,7 +72,10 @@ const extractTitle = markdownChunk => {
   if (!markdownChunk) {
     return ''
   }
-  const title = find(markdownChunk.content.split('\n'), x => x.indexOf('#') > -1)
+  const title = find(
+    markdownChunk.content.split('\n'),
+    x => x.indexOf('#') > -1
+  )
   return title ? title.replace(/^#+\s/, '') : ''
 }
 
@@ -184,21 +187,20 @@ const testFromStyleguidist = (name, markdown, require) => {
       const finish = () => {
         rendered.forEach(([title, rendered]) => {
           const filename = title ? `${name} > ${title}` : name
-          expect(rendered).toMatchSpecificSnapshot(`__snapshots__/${filename}.snap`)
+          expect(rendered).toMatchSpecificSnapshot(
+            `__snapshots__/${filename}.snap`
+          )
         })
         done()
       }
-      codes.forEach(([codeChunk, title])  => {
+      codes.forEach(([codeChunk, title]) => {
         const root = mount(
           <Preview code={codeChunk.content} evalInContext={evalInContext} />,
           options
         )
         requestAnimationFrame(() => {
           root.update()
-          rendered.push([
-            title,
-            pretty(root.html())
-          ])
+          rendered.push([title, pretty(root.html())])
           doneCounter++
           if (doneCounter === codes.length) {
             finish()
