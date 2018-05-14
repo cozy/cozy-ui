@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero should render examples 1`] = `
+"<div>
+  <div>
+    <div class=\\"Hero\\">
+      <h2 class=\\" Hero-title\\">Connect your bank accounts</h2>
+      <div class=\\" Hero-sections\\">
+        <div class=\\" Hero-section\\">
+          <svg class=\\"icon\\" width=\\"80\\" height=\\"80\\" style=\\"color: rgb(245, 45, 45);\\">
+            <use xlink:href=\\"test-file-stub\\"></use>
+          </svg>
+          <h3 class=\\" Hero-subtitle\\">Control your budget</h3>
+          <p class=\\" \\">Summary of all your accounts at a glance</p>
+        </div>
+        <div class=\\" Hero-section\\">
+          <svg class=\\"icon\\" width=\\"80\\" height=\\"80\\" style=\\"color: rgb(167, 91, 203);\\">
+            <use xlink:href=\\"test-file-stub\\"></use>
+          </svg>
+          <h3 class=\\" Hero-subtitle\\">Save Time</h3>
+          <p class=\\" \\">Your invoices at your fingertips directly from your statements</p>
+        </div>
+        <div class=\\" Hero-section\\">
+          <svg class=\\"icon\\" width=\\"80\\" height=\\"80\\" style=\\"color: rgb(45, 138, 242);\\">
+            <use xlink:href=\\"test-file-stub\\"></use>
+          </svg>
+          <h3 class=\\" Hero-subtitle\\">Cozy is working for you</h3>
+          <p class=\\" \\">Automatic follow-up of your medical expenses</p>
+        </div>
+      </div>
+      <p class=\\" Hero-cta\\">
+        <button aria-busy=\\"false\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn\\"><span><!-- react-text: 22 -->Connect your bank accounts<!-- /react-text --></span></button>
+      </p>
+    </div>
+  </div>
+</div>"
+`;

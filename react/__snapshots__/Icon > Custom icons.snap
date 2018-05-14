@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon should render examples 1`] = `
+"<div>
+  <div>
+    <div>
+      <svg class=\\"icon\\" width=\\"32\\" height=\\"32\\" style=\\"fill: purple;\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg><span>← Click it</span></div>
+  </div>
+</div>"
+`;

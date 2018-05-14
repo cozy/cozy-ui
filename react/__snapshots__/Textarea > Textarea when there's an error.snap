@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Textarea should render examples 1`] = `
+"<div>
+  <div>
+    <textarea placeholder=\\"Once upon a time, there was an error…\\" class=\\"c-textarea is-error\\"></textarea>
+  </div>
+</div>"
+`;

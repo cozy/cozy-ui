@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toggle should render examples 1`] = `
+"<div>
+  <div>
+    <div>
+      <label for=\\"0\\" style=\\"margin-right: 15px; color: gray;\\">Toggle is controlled and off</label><span class=\\"toggle\\"><input type=\\"checkbox\\" id=\\"0\\" class=\\"checkbox\\" value=\\"on\\"><label for=\\"0\\" class=\\"label\\"></label></span></div>
+  </div>
+</div>"
+`;

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner should render examples 1`] = `
+"<div>
+  <div>
+    <div>
+      <!-- react-text: 2 -->blue (default):
+      <!-- /react-text -->
+      <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div>
+      <!-- react-text: 4 -->or
+      <!-- /react-text -->
+      <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div>
+      <!-- react-text: 6 -->grey:
+      <!-- /react-text -->
+      <div class=\\"c-spinner c-spinner--grey c-spinner--medium\\"></div>
+      <!-- react-text: 8 -->white:
+      <!-- /react-text -->
+      <div class=\\"c-spinner c-spinner--white c-spinner--medium\\"></div>
+      <!-- react-text: 10 -->red:
+      <!-- /react-text -->
+      <div class=\\"c-spinner c-spinner--red c-spinner--medium\\"></div>
+    </div>
+  </div>
+</div>"
+`;

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render examples 1`] = `
+"<div>
+  <div>
+    <div>
+      <p>
+        <a aria-disabled=\\"false\\" href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--tiny\\"><span><span>Link to Cozy.io</span></span>
+        </a>
+      </p>
+      <p>
+        <a aria-disabled=\\"false\\" href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--small\\"><span><span>Link to Cozy.io</span></span>
+        </a>
+      </p>
+      <p>
+        <a aria-disabled=\\"false\\" href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn\\"><span><span>Link to Cozy.io</span></span>
+        </a>
+      </p>
+      <p>
+        <a aria-disabled=\\"false\\" href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--large\\"><span><span>Link to Cozy.io</span></span>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>"
+`;

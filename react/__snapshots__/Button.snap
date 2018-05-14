@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render examples 1`] = `
+"<div>
+  <div>
+    <div>
+      <button aria-busy=\\"false\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--danger\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>delete</span></span>
+      </button>
+    </div>
+  </div>
+</div>"
+`;

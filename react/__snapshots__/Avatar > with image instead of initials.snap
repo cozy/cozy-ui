@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar should render examples 1`] = `
+"<div>
+  <div>
+    <div class=\\"c-avatar c-avatar--medium\\">
+      <img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"c-avatar-image\\" alt=\\"\\">
+    </div>
+  </div>
+</div>"
+`;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar should render examples 1`] = `
+"<div>
+  <div>
+    <div class=\\"c-avatar c-avatar--medium\\" style=\\"background-color: rgb(245, 45, 45); color: white;\\">
+      <!-- react-text: 2 -->
+      <!-- /react-text --><span class=\\"c-avatar-initials\\">CD</span></div>
+  </div>
+</div>"
+`;

@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItemText should render examples 1`] = `
+"<div>
+  <div></div>
+  <div>ReferenceError: content is not defined</div>
+</div>"
+`;

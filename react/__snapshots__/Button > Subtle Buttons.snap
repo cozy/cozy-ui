@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render examples 1`] = `
+"<div>
+  <div>
+    <div>
+      <p>
+        <button aria-busy=\\"false\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--tiny c-btn--subtle\\"><span><span>Tiny text</span></span>
+        </button>
+        <button aria-busy=\\"false\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--small c-btn--subtle\\"><span><span>Small text</span></span>
+        </button>
+        <button aria-busy=\\"false\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--subtle\\"><span><span>Regular text</span></span>
+        </button>
+        <button aria-busy=\\"false\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--large c-btn--subtle\\"><span><span>Large text</span></span>
+        </button>
+      </p>
+      <p>
+        <button aria-busy=\\"false\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--secondary c-btn--subtle\\"><span><span>Secondary theme</span></span>
+        </button>
+        <button aria-busy=\\"false\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--highlight c-btn--subtle\\"><span><span>Highlight theme</span></span>
+        </button>
+        <button aria-busy=\\"false\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--danger c-btn--subtle\\"><span><span>DANGER theme</span></span>
+        </button>
+      </p>
+      <p>
+        <button aria-busy=\\"false\\" disabled=\\"\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--subtle\\"><span><span>Disabled</span></span>
+        </button>
+      </p>
+      <p>
+        <button aria-busy=\\"true\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--subtle\\"><span><span>Busy</span></span>
+        </button>
+        <button aria-busy=\\"true\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--secondary c-btn--subtle\\"><span><span>Busy secondary</span></span>
+        </button>
+        <button aria-busy=\\"true\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--highlight c-btn--subtle\\"><span><span>Busy highlight</span></span>
+        </button>
+        <button aria-busy=\\"true\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--danger c-btn--subtle\\"><span><span>Busy danger</span></span>
+        </button>
+      </p>
+    </div>
+  </div>
+</div>"
+`;

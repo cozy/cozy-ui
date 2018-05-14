@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Field should render examples 1`] = `
+"<div>
+  <div>
+    <form>
+      <div class=\\"o-field\\">
+        <label for=\\"\\" class=\\"c-label\\">I'm an error label</label>
+        <input type=\\"text\\" id=\\"idFieldError\\" class=\\"c-input-text is-error\\" placeholder=\\"I'm an error input[type=text]\\" value=\\"\\">
+      </div>
+    </form>
+  </div>
+</div>"
+`;

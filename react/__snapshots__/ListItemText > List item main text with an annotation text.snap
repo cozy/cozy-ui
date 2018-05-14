@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItemText should render examples 1`] = `
+"<div>
+  <div>
+    <div class=\\"c-list-text\\">
+      <div class=\\"g-text u-ellipsis\\">I'm a primary text</div>
+      <div class=\\"g-caption u-ellipsis\\">I'm a secondary text</div>
+    </div>
+  </div>
+</div>"
+`;

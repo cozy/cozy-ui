@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toggle should render examples 1`] = `
+"<div>
+  <div><span class=\\"toggle\\"><input type=\\"checkbox\\" id=\\"simple-toggle\\" class=\\"checkbox\\" value=\\"on\\"><label for=\\"simple-toggle\\" class=\\"label\\"></label></span></div>
+</div>"
+`;

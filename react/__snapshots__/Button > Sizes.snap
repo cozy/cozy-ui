@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render examples 1`] = `
+"<div>
+  <div>
+    <div>
+      <p>
+        <button aria-busy=\\"false\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--tiny\\"><span><span>Tiny</span></span>
+        </button>
+      </p>
+      <p>
+        <button aria-busy=\\"false\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--small\\"><span><span>Small</span></span>
+        </button>
+      </p>
+      <p>
+        <button aria-busy=\\"false\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn\\"><span><span>Normal</span></span>
+        </button>
+      </p>
+      <p>
+        <button aria-busy=\\"false\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--large\\"><span><span>Large</span></span>
+        </button>
+      </p>
+    </div>
+  </div>
+</div>"
+`;

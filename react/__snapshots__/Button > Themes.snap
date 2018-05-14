@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render examples 1`] = `
+"<div>
+  <div>
+    <div>
+      <p>
+        <button aria-busy=\\"false\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--regular\\"><span><span>regular</span></span>
+        </button>
+        <button aria-busy=\\"false\\" disabled=\\"\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--regular\\"><span><span>regular</span></span>
+        </button>
+        <button aria-busy=\\"true\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--regular\\"><span><span>regular</span></span>
+        </button>
+      </p>
+      <p>
+        <button aria-busy=\\"false\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--danger\\"><span><span>danger</span></span>
+        </button>
+        <button aria-busy=\\"false\\" disabled=\\"\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--danger\\"><span><span>danger</span></span>
+        </button>
+        <button aria-busy=\\"true\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--danger\\"><span><span>danger</span></span>
+        </button>
+      </p>
+      <p>
+        <button aria-busy=\\"false\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--highlight\\"><span><span>highlight</span></span>
+        </button>
+        <button aria-busy=\\"false\\" disabled=\\"\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--highlight\\"><span><span>highlight</span></span>
+        </button>
+        <button aria-busy=\\"true\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--highlight\\"><span><span>highlight</span></span>
+        </button>
+      </p>
+      <p>
+        <button aria-busy=\\"false\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--secondary\\"><span><span>secondary</span></span>
+        </button>
+        <button aria-busy=\\"false\\" disabled=\\"\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--secondary\\"><span><span>secondary</span></span>
+        </button>
+        <button aria-busy=\\"true\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--secondary\\"><span><span>secondary</span></span>
+        </button>
+      </p>
+      <p>
+        <button aria-busy=\\"false\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>danger-outline</span></span>
+        </button>
+        <button aria-busy=\\"false\\" disabled=\\"\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>danger-outline</span></span>
+        </button>
+        <button aria-busy=\\"true\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>danger-outline</span></span>
+        </button>
+      </p>
+      <p>
+        <button aria-busy=\\"false\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--alpha\\"><span><span>alpha</span></span>
+        </button>
+        <button aria-busy=\\"false\\" disabled=\\"\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--alpha\\"><span><span>alpha</span></span>
+        </button>
+        <button aria-busy=\\"true\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--alpha\\"><span><span>alpha</span></span>
+        </button>
+      </p>
+    </div>
+  </div>
+</div>"
+`;

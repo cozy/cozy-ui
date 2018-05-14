@@ -4,6 +4,8 @@ import fs from 'fs'
 import chunkify from 'react-styleguidist/loaders/utils/chunkify'
 import pretty from 'pretty'
 
+import 'jest-specific-snapshot'
+
 /*
   Styleguidist does some black magic with AST to automatically provide
   components to the code in the README ([examples-loader]).
@@ -47,6 +49,7 @@ import Tabs from './Tabs'
 import Text from './Text'
 import Textarea from './Textarea'
 import Toggle from './Toggle'
+import find from 'lodash/find'
 
 // Mock error otherwise there are errors with the createStylesheet function
 jest.mock('react-styleguidist/lib/rsg-components/PlaygroundError', () => {
@@ -54,6 +57,30 @@ jest.mock('react-styleguidist/lib/rsg-components/PlaygroundError', () => {
     return <div>{props.message}</div>
   }
 })
+
+const withLastMatching = (arr, predicate) => {
+  let last = null
+  return arr.map(item => {
+    if (predicate(item)) {
+      last = item
+    }
+    return [item, last]
+  })
+}
+
+const extractTitle = markdownChunk => {
+  if (!markdownChunk) {
+    return ''
+  }
+  const title = find(markdownChunk.content.split('\n'), x => x.indexOf('#') > -1)
+  return title ? title.replace(/^#+\s/, '') : ''
+}
+
+const codeAndTitle = chunks => {
+  return withLastMatching(chunks, chunk => chunk.type == 'markdown')
+    .filter(([chunk]) => chunk.type === 'code')
+    .map(([chunk, prevMarkdown]) => [chunk, extractTitle(prevMarkdown)])
+}
 
 const testFromStyleguidist = (name, markdown, require) => {
   const evalInContext = a =>
@@ -152,22 +179,26 @@ const testFromStyleguidist = (name, markdown, require) => {
       let doneCounter = 0
       const Readme = fs.readFileSync(markdown)
       const chunks = chunkify(Readme)
-      const codes = chunks.filter(x => x.type === 'code')
+      const codes = codeAndTitle(chunks)
       const rendered = []
       const finish = () => {
-        rendered.forEach(rendered => {
-          expect(rendered).toMatchSnapshot(name)
+        rendered.forEach(([title, rendered]) => {
+          const filename = title ? `${name} > ${title}` : name
+          expect(rendered).toMatchSpecificSnapshot(`__snapshots__/${filename}.snap`)
         })
         done()
       }
-      codes.forEach(code => {
+      codes.forEach(([codeChunk, title])  => {
         const root = mount(
-          <Preview code={code.content} evalInContext={evalInContext} />,
+          <Preview code={codeChunk.content} evalInContext={evalInContext} />,
           options
         )
         requestAnimationFrame(() => {
           root.update()
-          rendered.push(pretty(root.html()))
+          rendered.push([
+            title,
+            pretty(root.html())
+          ])
           doneCounter++
           if (doneCounter === codes.length) {
             finish()

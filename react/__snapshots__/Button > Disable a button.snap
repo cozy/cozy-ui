@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render examples 1`] = `
+"<div>
+  <div>
+    <div>
+      <button aria-busy=\\"false\\" disabled=\\"\\" type=\\"submit\\" role=\\"button\\" class=\\"c-btn\\"><span><span>Loading</span></span>
+      </button>
+      <a aria-disabled=\\"true\\" href=\\"http://cozy.io\\" target=\\"\\" class=\\"c-btn\\"><span><span>Go to Cozy website</span></span>
+      </a>
+    </div>
+  </div>
+</div>"
+`;

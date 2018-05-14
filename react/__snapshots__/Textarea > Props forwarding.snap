@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Textarea should render examples 1`] = `
+"<div>
+  <div>
+    <div>
+      <textarea placeholder=\\"\\" class=\\"c-textarea\\" name=\\"my-field\\"></textarea>
+    </div>
+  </div>
+</div>"
+`;

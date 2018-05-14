@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text should render examples 1`] = `
+"<div>
+  <div>
+    <div class=\\"g-caption\\">This a note text</div>
+  </div>
+</div>"
+`;

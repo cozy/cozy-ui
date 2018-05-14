@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge should render examples 1`] = `
+"<div>
+  <div>
+    <div>
+      <p><span class=\\"c-badge-root\\"><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal c-actionbtn--compact\\" title=\\"Normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button><span class=\\"c-badge c-badge--normal\\">2</span></span>
+      </p>
+      <p><span class=\\"c-badge-root\\"><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new c-actionbtn--compact\\" title=\\"New\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span>
+        </button><span class=\\"c-badge c-badge--new\\">2</span></span>
+      </p>
+      <p><span class=\\"c-badge-root\\"><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error c-actionbtn--compact\\" title=\\"Error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button><span class=\\"c-badge c-badge--error\\">2</span></span>
+      </p>
+    </div>
+  </div>
+</div>"
+`;

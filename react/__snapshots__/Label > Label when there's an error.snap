@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label should render examples 1`] = `
+"<div>
+  <div>
+    <form>
+      <div>
+        <label for=\\"idInput2\\" class=\\"c-label is-error\\">This is an error label</label>
+        <input type=\\"text\\" id=\\"idInput2\\" class=\\"c-input-text is-error\\" placeholder=\\"Recherche\\">
+      </div>
+    </form>
+  </div>
+</div>"
+`;

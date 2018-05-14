@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner should render examples 1`] = `
+"<div>
+  <div>
+    <div>
+      <div class=\\"c-spinner c-spinner--nomargin c-spinner--blue c-spinner--medium\\"></div>
+    </div>
+  </div>
+</div>"
+`;

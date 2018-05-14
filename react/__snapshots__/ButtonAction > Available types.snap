@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonAction should render examples 1`] = `
+"<div>
+  <div>
+    <div>
+      <p>
+        <button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button>
+        <button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button>
+      </p>
+      <p>
+        <button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span>
+        </button>
+        <button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span>
+        </button>
+      </p>
+      <p>
+        <button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button>
+        <button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
+        </button>
+      </p>
+    </div>
+  </div>
+</div>"
+`;

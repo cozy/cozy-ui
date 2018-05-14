@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox should render examples 1`] = `
+"<div>
+  <div>
+    <div>
+      <label class=\\"c-input-checkbox\\" aria-checked=\\"mixed\\">
+        <input type=\\"checkbox\\" value=\\"\\" name=\\"\\"><span>This is a mixed checkbox</span></label>
+    </div>
+  </div>
+</div>"
+`;

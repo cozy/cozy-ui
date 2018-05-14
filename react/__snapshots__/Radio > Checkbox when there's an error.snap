@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio should render examples 1`] = `
+"<div>
+  <div>
+    <div>
+      <label class=\\"c-input-radio is-error\\">
+        <input type=\\"radio\\" value=\\"radioValue1\\" name=\\"radioForm\\"><span>This is a radio button</span></label>
+    </div>
+  </div>
+</div>"
+`;

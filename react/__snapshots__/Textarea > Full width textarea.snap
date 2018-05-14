@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Textarea should render examples 1`] = `
+"<div>
+  <div>
+    <div>
+      <p>
+        <textarea placeholder=\\"I'm full width\\" class=\\"c-textarea c-textarea--fullwidth\\"></textarea>
+      </p>
+    </div>
+  </div>
+</div>"
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar should render examples 1`] = `
+"<div>
+  <div>
+    <div class=\\"c-avatar c-avatar--medium\\">
+      <!-- react-text: 2 -->
+      <!-- /react-text -->
+      <!-- react-text: 3 -->
+      <!-- /react-text -->
+      <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+    </div>
+  </div>
+</div>"
+`;

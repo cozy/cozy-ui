@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon should render examples 1`] = `
+"<div>
+  <div>
+    <div>
+      <svg class=\\"icon icon--spin\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #0bda51;\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <!-- react-text: 4 -->&nbsp;
+      <!-- /react-text -->
+      <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #c30017;\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+    </div>
+  </div>
+</div>"
+`;

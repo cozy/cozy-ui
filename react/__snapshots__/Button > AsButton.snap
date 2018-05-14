@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render examples 1`] = `
+"<div>
+  <div>
+    <div>
+      <a href=\\"#\\" class=\\"c-btn\\" target=\\"\\"></a>
+    </div>
+  </div>
+</div>"
+`;
