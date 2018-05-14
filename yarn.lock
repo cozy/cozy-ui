@@ -430,6 +430,12 @@ async-limiter@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/async-limiter/-/async-limiter-1.0.0.tgz#78faed8c3d074ab81f22b4e985d79e8738f720f8"
 
+async-stream-flow@~1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/async-stream-flow/-/async-stream-flow-1.0.2.tgz#42db63525c5d116267ea68b0369d9b35caa384db"
+  dependencies:
+    through3 "~1.1.5"
+
 async@1.5.2, async@^1.4.0, async@^1.5.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
@@ -3391,6 +3397,13 @@ fs-extra@^2.0.0:
     graceful-fs "^4.1.2"
     jsonfile "^2.1.0"
 
+fs-flow@~1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/fs-flow/-/fs-flow-1.0.2.tgz#6b7133d1435a4a94f3dca624d086df2936a533e7"
+  dependencies:
+    async-stream-flow "~1.0.1"
+    through3 "~1.1.5"
+
 fs-write-stream-atomic@^1.0.8:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/fs-write-stream-atomic/-/fs-write-stream-atomic-1.0.10.tgz#b47df53493ef911df75731e70a9ded0189db40c9"
@@ -3961,6 +3974,53 @@ humanize-ms@^1.2.1:
   resolved "https://registry.yarnpkg.com/humanize-ms/-/humanize-ms-1.2.1.tgz#c46e3159a293f6b896da29316d8b6fe8bb79bbed"
   dependencies:
     ms "^2.0.0"
+
+husk-async@~1.0.2:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/husk-async/-/husk-async-1.0.3.tgz#b5a5cae27b3e2641126de07b246ae2a6477fa382"
+  dependencies:
+    async-stream-flow "~1.0.1"
+
+husk-core@~1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/husk-core/-/husk-core-1.0.4.tgz#870b2619c0283d6a1262b98a9a4b76612292e47d"
+  dependencies:
+    husk-print "~1.0.2"
+    husk-through "~1.0.2"
+
+husk-exec@~1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/husk-exec/-/husk-exec-1.0.4.tgz#f81eaffd1580b91da3a13c07ce568fc8a72ce9b4"
+  dependencies:
+    process-flow "~1.0.2"
+
+husk-fs@~1.0.2:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/husk-fs/-/husk-fs-1.0.3.tgz#3c32a96e561753d631b1a8ee5c4a236d1d89e138"
+  dependencies:
+    fs-flow "~1.0.1"
+
+husk-print@~1.0.2:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/husk-print/-/husk-print-1.0.3.tgz#3dd134b46bc701ccbe8113c8d6cbeb8305656697"
+  dependencies:
+    print-flow "~1.0.2"
+
+husk-through@~1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/husk-through/-/husk-through-1.0.2.tgz#f7d668be267e1deeb8e285a8687bef391695cabc"
+  dependencies:
+    through-flow "~1.0.1"
+
+husk@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/husk/-/husk-0.5.3.tgz#8693aa0b164ccb6314dc7cd3478de4f796691458"
+  dependencies:
+    husk-async "~1.0.2"
+    husk-core "~1.0.4"
+    husk-exec "~1.0.4"
+    husk-fs "~1.0.2"
+    zephyr "~1.2.6"
 
 hyphenate-style-name@^1.0.2:
   version "1.0.2"
@@ -6693,9 +6753,21 @@ pretty@^2.0.0:
     extend-shallow "^2.0.1"
     js-beautify "^1.6.12"
 
+print-flow@~1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/print-flow/-/print-flow-1.0.2.tgz#28753a4e6aea5122397bb5bc85b67f50548b9c67"
+  dependencies:
+    through3 "~1.1.5"
+
 private@^0.1.6, private@^0.1.7, private@~0.1.5:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.7.tgz#68ce5e8a1ef0a23bb570cc28537b5332aba63ef1"
+
+process-flow@~1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/process-flow/-/process-flow-1.0.2.tgz#ed024b2cdf7004193d46103650ca9393067e7ec0"
+  dependencies:
+    through3 "~1.1.5"
 
 process-nextick-args@~1.0.6:
   version "1.0.7"
@@ -8301,12 +8373,22 @@ throat@^4.0.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/throat/-/throat-4.1.0.tgz#89037cbc92c56ab18926e6ba4cbb200e15672a6a"
 
+through-flow@~1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/through-flow/-/through-flow-1.0.2.tgz#3e47b310257762e3e9e0f97137432fbe7893bc0c"
+  dependencies:
+    through3 "~1.1.5"
+
 through2@^2.0.0, through2@^2.0.1:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.3.tgz#0004569b37c7c74ba39c43f3ced78d1ad94140be"
   dependencies:
     readable-stream "^2.1.5"
     xtend "~4.0.1"
+
+through3@~1.1.5:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/through3/-/through3-1.1.6.tgz#504aa5175efd54d9c6957784c890664b8685cf77"
 
 through@2, through@^2.3.6, through@~2.3, through@~2.3.1:
   version "2.3.8"
@@ -9139,3 +9221,7 @@ yargs@~3.10.0:
     cliui "^2.1.0"
     decamelize "^1.0.0"
     window-size "0.1.0"
+
+zephyr@~1.2.6:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/zephyr/-/zephyr-1.2.8.tgz#af734a97dbbd368e2b73597c7e6054dbcbd69a6c"

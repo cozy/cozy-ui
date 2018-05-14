@@ -28,6 +28,7 @@
     "prebuild:css": "mkdir dist/",
     "prebuild:css:app": "mkdir -p build/styleguide",
     "prebuild:doc:kss": "run-s clean:doc:kss build:css:app",
+    "prepush": "yarn lint",
     "test": "npm-run-all --serial lint test:jest",
     "test:jest": "jest --verbose --coverage",
     "watch:doc:react": "styleguidist server --config docs/styleguide.config.js"
