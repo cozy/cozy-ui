@@ -22,7 +22,7 @@ module.exports = {
         '../react/Input/index.jsx',
         '../react/Label/index.jsx',
         '../react/Radio/index.jsx',
-        '../react/SelectBox/index.jsx',
+        '../react/SelectBox/SelectBox.jsx',
         '../react/Textarea/index.jsx',
         '../react/Toggle/index.jsx'
       ]
@@ -84,9 +84,7 @@ module.exports = {
   serverPort: 6161,
   skipComponentsWithoutExample: true,
   styleguideDir: path.resolve(__dirname, '../build/react'),
-  require: [
-    path.join(__dirname, './style.styl')
-  ],
+  require: [path.join(__dirname, './style.styl')],
   showCode: true,
   showUsage: true,
   context: {

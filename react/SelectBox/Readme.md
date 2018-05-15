@@ -20,7 +20,7 @@ You can use the `reactSelectControl` HOC to turn an existing, custom component i
 
 ```
 const reactSelectControl = require('../SelectBox').reactSelectControl;
-const MyControl = (<button>toggle options</button>);
+const MyControl = <button>toggle options</button>;
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry' },
@@ -54,4 +54,16 @@ const options = [
     Option: CheckboxOption
   }}
 />
+```
+
+### Fixed options
+
+```
+const { SelectBoxWithFixedOptions } = require('.')
+const options = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(x => ({ value:x, label: x }));
+
+options[0].fixed = true
+options[options.length - 1].fixed = true;
+
+<SelectBoxWithFixedOptions options={options} />
 ```

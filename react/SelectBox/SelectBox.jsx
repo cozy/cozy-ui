@@ -50,7 +50,7 @@ const customStyles = {
 
 const reactSelectControl = CustomControl => ({ innerProps, children }) => (
   <div {...innerProps}>
-    <CustomControl />
+    {CustomControl}
     <div className={styles['select-control__input']}>{children}</div>
   </div>
 )
