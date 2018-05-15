@@ -3,6 +3,17 @@ All notable changes to this project will be documented in this file.
 We use lerna-changelog to generate the changelog based on the PRs.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v8.0.0 (2018-05-15)
+
+#### :rocket: Enhancement
+* [#501](https://github.com/cozy/cozy-ui/pull/501) feat: add SelectBoxWithFixedOptions. ([@ptbrowne](https://github.com/ptbrowne))
+* [#488](https://github.com/cozy/cozy-ui/pull/488) feat: Button can render with a different Tag [breaking]. ([@ptbrowne](https://github.com/ptbrowne))
+
+#### :bug: Bug Fix
+* [#499](https://github.com/cozy/cozy-ui/pull/499) Remove IntentModal width CSS property. ([@gregorylegarec](https://github.com/gregorylegarec))
+* [#502](https://github.com/cozy/cozy-ui/pull/502) 🐝 fix: use oneOfType. ([@ptbrowne](https://github.com/ptbrowne))
+* [#497](https://github.com/cozy/cozy-ui/pull/497) fix: close button in selection bar. ([@y-lohse](https://github.com/y-lohse))
+
 ## v7.22.0 (2018-05-09)
 
 #### :rocket: Enhancement
