@@ -80,7 +80,7 @@ const extractTitle = markdownChunk => {
 }
 
 const codeAndTitle = chunks => {
-  return withLastMatching(chunks, chunk => chunk.type == 'markdown')
+  return withLastMatching(chunks, chunk => chunk.type === 'markdown')
     .filter(([chunk]) => chunk.type === 'code')
     .map(([chunk, prevMarkdown]) => [chunk, extractTitle(prevMarkdown)])
 }
