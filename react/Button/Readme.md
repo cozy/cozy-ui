@@ -144,28 +144,33 @@ const { Button } = require('./index');
     <Button subtle theme='danger' label='DANGER theme' onClick={() => alert('Clicked on DANGER theme')} />
   </p>
   <p>
-    <Button subtle disabled='true' label='Disabled'  onClick={() => alert('Clicked on Disabled')} />
+    <Button subtle disabled label='Disabled'  onClick={() => alert('Clicked on Disabled')} />
   </p>
   <p>
-    <Button subtle busy='true' label='Busy'  onClick={() => alert('Clicked on Busy')} />
-    <Button subtle busy='true' theme='secondary' label='Busy secondary'  onClick={() => alert('Clicked on Busy secondary')} />
-    <Button subtle busy='true' theme='highlight' label='Busy highlight'  onClick={() => alert('Clicked on Busy highlight')} />
-    <Button subtle busy='true' theme='danger' label='Busy danger'  onClick={() => alert('Clicked on Busy danger')} />
+    <Button subtle busy label='Busy'  onClick={() => alert('Clicked on Busy')} />
+    <Button subtle busy theme='secondary' label='Busy secondary'  onClick={() => alert('Clicked on Busy secondary')} />
+    <Button subtle busy theme='highlight' label='Busy highlight'  onClick={() => alert('Clicked on Busy highlight')} />
+    <Button subtle busy theme='danger' label='Busy danger'  onClick={() => alert('Clicked on Busy danger')} />
   </p>
 </div>
 ```
 
-### AsButton
+### Changing the tag
 
-The `<AsButton />` component allow to pass button properties and behavior to a child component. This component is useful when we aim to use another component as button. A common case is for example when using `react-router`'s `<NavLink />` component. `<AsButton />` works as a <acronym title="High Order Component">HOC</acronym>. Only the child is rendered.
+Sometimes you want to change the tag or component used to render the Button. For example, when using `NavLinks` to get the `onClick` behavior.
+
+You can pass `tag={NavLink}` and `NavLink` will be used. Any props that you
+pass to the `Button` will be passed down to the component.
 
 ```
-const { AsButton } = require('./index');
+const Button = require('./').default
+const NavLink = props => (
+  <span onClick={() => alert(`Navigating to ${props.to}`)} {...props}>{
+    props.children
+  }</span>
+);
+
 <div>
-  <AsButton isLink>
-    <a href='#'>
-      <span>Child component</span>
-    </a>
-  </AsButton>
+  <Button tag={NavLink} to='/destination'>I'm a (false) NavLink</Button>
 </div>
 ```
