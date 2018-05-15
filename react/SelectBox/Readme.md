@@ -65,5 +65,7 @@ const options = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(x => ({ value:x, labe
 options[0].fixed = true
 options[options.length - 1].fixed = true;
 
-<SelectBoxWithFixedOptions options={options} />
+<SelectBoxWithFixedOptions 
+  menuIsOpen={isTesting ? true : undefined}
+  options={options} />
 ```

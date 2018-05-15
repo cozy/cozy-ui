@@ -94,6 +94,7 @@ const testFromStyleguidist = (name, markdown, require) => {
       'Text',
       'Textarea',
       'Toggle',
+      'isTesting',
       'state',
       'setState',
       `const React = require("react");
@@ -134,7 +135,8 @@ const testFromStyleguidist = (name, markdown, require) => {
       Tabs,
       Text,
       Textarea,
-      Toggle
+      Toggle,
+      true
     )
 
   const options = {

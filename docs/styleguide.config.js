@@ -89,6 +89,7 @@ module.exports = {
   showUsage: true,
   context: {
     utils: path.resolve(__dirname, 'utils'),
+    isTesting: path.resolve(__dirname, 'false'),
     content: path.resolve(__dirname, 'fixtures/content')
   }
 }
