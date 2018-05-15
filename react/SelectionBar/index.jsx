@@ -46,7 +46,9 @@ const SelectionBar = ({ t, actions, selected, hideSelectionBar }) => {
           onClick={() => actions[actionName].action(selected)}
         >
           <Icon icon={actionName.toLowerCase()} />
-          <span>{t('SelectionBar.' + actionName)}</span>
+          <span className={styles['coz-selectionbar-label']}>
+            {t('SelectionBar.' + actionName)}
+          </span>
         </button>
       ))}
       <Button
