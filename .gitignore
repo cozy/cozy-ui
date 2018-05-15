@@ -4,6 +4,7 @@ build
 dist
 .changelog
 yarn-error.log
+coverage
 
 # Users Environment Variables
 .lock-wscript
