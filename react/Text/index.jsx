@@ -23,6 +23,10 @@ const mkText = baseClass => props => {
 }
 
 export const Text = mkText(styles['g-text'])
+export const MainTitle = mkText(styles['g-title-h1'])
+export const Title = mkText(styles['g-title-h2'])
+export const SubTitle = mkText(styles['g-title-h3'])
+export const Bold = mkText(styles['g-title-h4'])
 export const Caption = mkText(styles['g-caption'])
 
 // Props
@@ -36,6 +40,18 @@ const commonProps = {
 Text.propTypes = {
   ...commonProps
 }
+MainTitle.propTypes = {
+  ...commonProps
+}
+Title.propTypes = {
+  ...commonProps
+}
+SubTitle.propTypes = {
+  ...commonProps
+}
+Bold.propTypes = {
+  ...commonProps
+}
 Caption.propTypes = {
   ...commonProps
 }
@@ -47,6 +63,18 @@ const commonDefaultProps = {
 }
 
 Text.defaultProps = {
+  ...commonDefaultProps
+}
+MainTitle.defaultProps = {
+  ...commonDefaultProps
+}
+Title.defaultProps = {
+  ...commonDefaultProps
+}
+SubTitle.defaultProps = {
+  ...commonDefaultProps
+}
+Bold.defaultProps = {
   ...commonDefaultProps
 }
 Caption.defaultProps = {

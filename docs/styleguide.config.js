@@ -41,7 +41,8 @@ module.exports = {
         '../react/Media/Media.jsx',
         '../react/MidEllipsis/index.jsx',
         '../react/Modal/index.jsx',
-        '../react/Text/index.jsx'
+        '../react/Text/index.jsx',
+        '../react/Empty/index.jsx'
       ]
     },
     {
@@ -55,7 +56,7 @@ module.exports = {
     {
       name: 'List',
       components: () => [
-        '../react/ListItemText/index.jsx',
+        '../react/ListItemText/index.jsx'
       ]
     },
     {
