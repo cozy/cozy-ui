@@ -36,6 +36,7 @@ class IntentModal extends Component {
         className={styles.intentModal}
         crossClassName={styles.intentModal__cross}
         dismissAction={this.dismiss}
+        overflowHidden
       >
         <IntentIframe
           action={action}
