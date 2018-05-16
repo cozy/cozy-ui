@@ -3,6 +3,17 @@ All notable changes to this project will be documented in this file.
 We use lerna-changelog to generate the changelog based on the PRs.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v[9.0.0] (2018-05-16)
+
+#### :rocket: Enhancement
+* [#498](https://github.com/cozy/cozy-ui/pull/498) Set intent modal overflow to 'hidden' to preserve border radius. ([@gregorylegarec](https://github.com/gregorylegarec))
+* [#413](https://github.com/cozy/cozy-ui/pull/413) feat: add Empty component. **BREAKING** ([@GoOz](https://github.com/GoOz))
+
+#### :bug: Bug Fix
+* [#505](https://github.com/cozy/cozy-ui/pull/505) fix: renamed SelectBoxWithFixedOptions file from js to jsx. ([@GoOz](https://github.com/GoOz))
+* [#504](https://github.com/cozy/cozy-ui/pull/504) fix: Mono-Column layout have a padding at the end of page on mobile. ([@GoOz](https://github.com/GoOz))
+
+
 ## v[8.0.0] (2018-05-15)
 
 #### :rocket: Enhancement
@@ -959,6 +970,7 @@ on desktop or mobile view
 ## [3.0.0-beta5] - 2017-02-01
 - Everything we did before adopting CHANGELOG…
 
+[9.0.0]: https://github.com/cozy/cozy-ui/compare/v8.0.0...v9.0.0
 [8.0.0]: https://github.com/cozy/cozy-ui/compare/v7.22.0...v8.0.0
 [7.22.0]: https://github.com/cozy/cozy-ui/compare/v7.21.0...v7.22.0
 [7.21.0]: https://github.com/cozy/cozy-ui/compare/v7.20.0...v7.21.0
