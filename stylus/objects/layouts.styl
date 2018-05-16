@@ -95,8 +95,9 @@ $app
             display block
             overflow visible
 
-        // This pseudo-element is a "ghost" element replacing bar
+        // These pseudo-element are "ghost" elements replacing bar and nav
         &:before
+        &:after
             content ''
             display block
             height 3rem
@@ -119,12 +120,6 @@ $app-2panes-sticky
         height auto
 
     +medium-screen()
-        // This pseudo-element is a "ghost" element replacing nav
-        &:after
-            content ''
-            display block
-            height 3rem
-
         > aside
             position fixed
             bottom 0
