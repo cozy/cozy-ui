@@ -3,6 +3,13 @@ All notable changes to this project will be documented in this file.
 We use lerna-changelog to generate the changelog based on the PRs.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v[9.0.1] (2018-05-22)
+
+#### :bug: Bug Fix
+* [#506](https://github.com/cozy/cozy-ui/pull/506) Fixes link styles inside forms
+* [#507](https://github.com/cozy/cozy-ui/pull/507) Fixes select box indicator in firefox
+* [#508](https://github.com/cozy/cozy-ui/pull/508) Hides selection bar labels on mobile
+
 ## v[9.0.0] (2018-05-16)
 
 #### :rocket: Enhancement
@@ -970,6 +977,7 @@ on desktop or mobile view
 ## [3.0.0-beta5] - 2017-02-01
 - Everything we did before adopting CHANGELOG…
 
+[9.0.1]: https://github.com/cozy/cozy-ui/compare/v9.0.0...v9.0.1
 [9.0.0]: https://github.com/cozy/cozy-ui/compare/v8.0.0...v9.0.0
 [8.0.0]: https://github.com/cozy/cozy-ui/compare/v7.22.0...v8.0.0
 [7.22.0]: https://github.com/cozy/cozy-ui/compare/v7.21.0...v7.22.0
