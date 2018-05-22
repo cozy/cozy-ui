@@ -28,7 +28,11 @@ const migrate = (oldProps, options) => {
         option
       )
     }
-    if (process.env.NODE_ENV !== 'production' && msg) {
+    if (
+      (process.env.NODE_ENV != 'production' ||
+        window.SHOW_DEPRECATION_WARNINGS) &&
+      msg
+    ) {
       console.warn(`Deprecation: ${msg}`)
       msg = null
     }
