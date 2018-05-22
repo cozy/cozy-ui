@@ -85,7 +85,10 @@ module.exports = {
   serverPort: 6161,
   skipComponentsWithoutExample: true,
   styleguideDir: path.resolve(__dirname, '../build/react'),
-  require: [path.join(__dirname, './style.styl')],
+  require: [
+    path.join(__dirname, './style.styl'),
+    path.join(__dirname, './styleguide.setup')
+  ],
   showCode: true,
   showUsage: true,
   context: {
