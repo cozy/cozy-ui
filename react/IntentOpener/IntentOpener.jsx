@@ -48,7 +48,8 @@ class IntentOpener extends React.Component {
       closable,
       create,
       tag,
-      into
+      into,
+      ...modalProps
     } = this.props
     const { modalOpened } = this.state
 
@@ -71,6 +72,7 @@ class IntentOpener extends React.Component {
           onComplete={this.handleComplete}
           create={create}
           into={into}
+          {...modalProps}
         />
       )
     }

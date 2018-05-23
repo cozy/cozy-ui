@@ -7,6 +7,8 @@
   // you would not pass create normally as it defaults to
   // cozy.client.intents.create
   create={utils.fakeIntentCreate}
+  //extra props will be passed to the modal
+  size={'xlarge'}
 >
   <button>Launch Intent OPEN for doctype io.cozy.files</button>
 </IntentOpener>
