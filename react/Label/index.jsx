@@ -29,7 +29,6 @@ Label.propTypes = {
 }
 
 Label.defaultProps = {
-  htmlFor: '',
   className: '',
   error: false
 }

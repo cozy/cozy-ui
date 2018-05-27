@@ -451,7 +451,7 @@ exports[`Field should render examples: Field 1`] = `
   <div>
     <form>
       <div class=\\"o-field\\">
-        <label for=\\"\\" class=\\"c-label\\">I'm a label</label>
+        <label class=\\"c-label\\">I'm a label</label>
         <textarea placeholder=\\"I'm a textarea\\" class=\\"c-textarea\\" id=\\"idField\\"></textarea>
       </div>
     </form>
@@ -464,7 +464,7 @@ exports[`Field should render examples: Field 2`] = `
   <div>
     <form>
       <div class=\\"o-field\\">
-        <label for=\\"\\" class=\\"c-label\\">I'm an error label</label>
+        <label class=\\"c-label\\">I'm an error label</label>
         <input type=\\"text\\" id=\\"idFieldError\\" class=\\"c-input-text is-error\\" placeholder=\\"I'm an error input[type=text]\\" value=\\"\\">
       </div>
     </form>
