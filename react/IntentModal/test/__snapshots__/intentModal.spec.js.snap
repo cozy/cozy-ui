@@ -11,6 +11,7 @@ exports[`IntentModal component renders as expected 1`] = `
   into={undefined}
   mobileFullscreen={false}
   overflowHidden={true}
+  overlayClassName={undefined}
   primaryAction={undefined}
   primaryText={undefined}
   primaryType="regular"
@@ -20,6 +21,7 @@ exports[`IntentModal component renders as expected 1`] = `
   size="small"
   spacing={undefined}
   title={undefined}
+  wrapperClassName={undefined}
 >
   <IntentIframe
     action="ANY"
