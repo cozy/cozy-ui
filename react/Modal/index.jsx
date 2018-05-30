@@ -132,7 +132,9 @@ class Modal extends Component {
       into,
       size,
       spacing,
-      mobileFullscreen
+      mobileFullscreen,
+      overlayClassName,
+      wrapperClassName
     } = this.props
     const {
       primaryText,
@@ -146,11 +148,18 @@ class Modal extends Component {
       into ? <Portal into={into}>{children}</Portal> : children
     return maybeWrapInPortal(
       <div className={styles['c-modal-container']}>
-        <Overlay onEscape={closable && dismissAction}>
+        <Overlay
+          onEscape={closable && dismissAction}
+          className={overlayClassName}
+        >
           <div
-            className={cx(styles['c-modal-wrapper'], {
-              [styles['c-modal-wrapper--fullscreen']]: mobileFullscreen
-            })}
+            className={cx(
+              styles['c-modal-wrapper'],
+              {
+                [styles['c-modal-wrapper--fullscreen']]: mobileFullscreen
+              },
+              wrapperClassName
+            )}
             onClick={closable && this.handleOutsideClick}
           >
             <div
@@ -230,7 +239,11 @@ Modal.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge', 'xxlarge']),
   spacing: PropTypes.oneOf(['small', 'large']),
   /** If you want your modal taking all the screen on mobile */
-  mobileFullscreen: PropTypes.bool
+  mobileFullscreen: PropTypes.bool,
+  /** className to apply to Overlay component */
+  overlayClassName: PropTypes.string,
+  /** className to apply to wrapper element */
+  wrapperClassName: PropTypes.string
 }
 
 Modal.defaultProps = {
