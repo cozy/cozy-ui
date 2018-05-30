@@ -3,6 +3,16 @@ All notable changes to this project will be documented in this file.
 We use lerna-changelog to generate the changelog based on the PRs.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## v[9.1.0] (2018-05-30)
+#### :bug: Bug Fix
+* [#516](https://github.com/cozy/cozy-ui/pull/516) Remove default `htmlFor` for `<Label/>`. ([@CPatchane](https://github.com/CPatchane))
+
+#### :rocket: Enhancement
+* [#509](https://github.com/cozy/cozy-ui/pull/509) Show deprecation warnings in the styleguide in production. ([@ptbrowne](https://github.com/ptbrowne))
+* [#511](https://github.com/cozy/cozy-ui/pull/511) Expose all palette colors as css variables. ([@CPatchane](https://github.com/CPatchane))
+* [#512](https://github.com/cozy/cozy-ui/pull/512) Configure modal through IntentOpener. ([@y-lohse](https://github.com/y-lohse))
+* [#517](https://github.com/cozy/cozy-ui/pull/517) Add overlayClassName and wrapperClassName props. ([@drazik](https://github.com/drazik))
+
 ## v[9.0.1] (2018-05-22)
 
 #### :bug: Bug Fix
@@ -977,6 +987,7 @@ on desktop or mobile view
 ## [3.0.0-beta5] - 2017-02-01
 - Everything we did before adopting CHANGELOG…
 
+[9.1.0]: https://github.com/cozy/cozy-ui/compare/v9.0.1...v9.1.0
 [9.0.1]: https://github.com/cozy/cozy-ui/compare/v9.0.0...v9.0.1
 [9.0.0]: https://github.com/cozy/cozy-ui/compare/v8.0.0...v9.0.0
 [8.0.0]: https://github.com/cozy/cozy-ui/compare/v7.22.0...v8.0.0
