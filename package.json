@@ -1,6 +1,6 @@
 {
   "name": "cozy-ui",
-  "version": "9.1.0",
+  "version": "0.0.0-development",
   "description": "Cozy apps Ui SDK",
   "repository": {
     "type": "git",
@@ -32,7 +32,9 @@
     "prepush": "yarn lint",
     "test": "npm-run-all --serial lint test:jest",
     "test:jest": "jest --verbose --coverage",
-    "watch:doc:react": "styleguidist server --config docs/styleguide.config.js"
+    "watch:doc:react": "styleguidist server --config docs/styleguide.config.js",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
     "@commitlint/cli": "^6.2.0",
@@ -75,7 +77,9 @@
     "stylint": "^1.5.9",
     "stylus-loader": "^3.0.1",
     "svg-sprite-loader": "^3.2.5",
-    "webpack": "^3.5.6"
+    "webpack": "^3.5.6",
+    "travis-deploy-once": "^5.0.0",
+    "semantic-release": "^15.5.0"
   },
   "dependencies": {
     "babel-preset-cozy-app": "^0.3.1",
