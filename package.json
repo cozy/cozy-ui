@@ -13,8 +13,8 @@
   },
   "homepage": "https://github.com/cozy/cozy-ui",
   "scripts": {
-    "build:css": "stylus -c --include stylus -o dist/cozy-ui.min.css stylus/cozy-ui/build.styl --use ./node_modules/autoprefixer-stylus --with \"{ browsers: ['last 2 versions'] }\"",
-    "build:css:app": "stylus --include stylus -o build/styleguide/app.css stylus/cozy-ui/build.styl --use ./node_modules/autoprefixer-stylus --with \"{ browsers: ['last 2 versions'] }\"",
+    "build:css": "stylus -c --include stylus -o dist/cozy-ui.min.css stylus/cozy-ui/build.styl --use ./node_modules/autoprefixer-stylus --with \"{ browsers: ['last 2 versions'] }\" --include-css",
+    "build:css:app": "stylus --include stylus -o build/styleguide/app.css stylus/cozy-ui/build.styl --use ./node_modules/autoprefixer-stylus --with \"{ browsers: ['last 2 versions'] }\" --include-css",
     "build:doc": "npm-run-all 'build:doc:*'",
     "build:doc:config": "copyfiles -u 1 docs/*.md docs/_config.yml build",
     "build:doc:kss": "kss --destination build/styleguide --title 'Cozy-UI Styleguide' --source stylus --builder node_modules/michelangelo/kss_styleguide/custom-template --homepage styleguide.md --css app.css",
