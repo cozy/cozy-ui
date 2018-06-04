@@ -1,4 +1,5 @@
 @require '../../stylus/settings/palette'
+@require '../../stylus/settings/z-index'
 
 .select-control__input
     width 0
@@ -30,3 +31,10 @@
 
 .select-option--checkmark
     float right
+
+.select__overlay
+    background-color transparent
+
+:export {
+    focusedZIndex: $overlay-index + 1
+}

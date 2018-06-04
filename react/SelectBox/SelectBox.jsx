@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import ReactSelect from 'react-select'
 import styles from './styles.styl'
 import Icon from '../Icon'
 import palette from '../../stylus/settings/palette.json'
+import Overlay from '../Overlay'
+import withBreakpoints from '../helpers/withBreakpoints'
 
 const customStyles = {
-  container: base => ({
+  container: (base, state) => ({
     ...base,
-    maxWidth: '30rem'
+    maxWidth: '30rem',
+    zIndex: state.isFocused ? styles.focusedZIndex : 10
   }),
   control: (base, state) => ({
     ...base,
@@ -42,9 +45,9 @@ const customStyles = {
     ...base,
     color: 'black'
   }),
-  menu: base => ({
+  menu: (base, state) => ({
     ...base,
-    zIndex: 10
+    zIndex: state.isFocused ? styles.focusedZIndex : 10
   })
 }
 
@@ -100,13 +103,64 @@ const CheckboxOption = ({ ...props }) => <Option {...props} withCheckbox />
 
 CheckboxOption.propTypes = {}
 
-const SelectBox = ({ components, styles, ...props }) => (
-  <ReactSelect
-    components={{ Option, ...components }}
-    styles={{ ...customStyles, ...styles }}
-    {...props}
-  />
-)
+class SelectBox extends Component {
+  state = {
+    isOverlayVisible: false
+  }
+
+  hideOverlay() {
+    this.setState({ isOverlayVisible: false })
+  }
+
+  onBlur = event => {
+    this.hideOverlay()
+
+    if (typeof this.props.onChange === 'function') {
+      this.props.onChange(event)
+    }
+  }
+
+  onChange = event => {
+    this.hideOverlay()
+
+    if (typeof this.props.onChange === 'function') {
+      this.props.onChange(event)
+    }
+  }
+
+  onFocus = event => {
+    this.setState({ isOverlayVisible: true })
+
+    if (typeof this.props.onFocus === 'function') {
+      this.props.onFocus(event)
+    }
+  }
+
+  render() {
+    const {
+      className,
+      components,
+      styles: reactSelectStyles,
+      breakpoints: { isMobile },
+      ...props
+    } = this.props
+    const showOverlay = this.state.isOverlayVisible && isMobile
+
+    return (
+      <div className={className}>
+        {showOverlay && <Overlay className={styles.select__overlay} />}
+        <ReactSelect
+          components={{ Option, ...components }}
+          styles={{ ...customStyles, ...reactSelectStyles }}
+          {...props}
+          onBlur={this.onBlur}
+          onFocus={this.onFocus}
+          onChange={this.onChange}
+        />
+      </div>
+    )
+  }
+}
 
 SelectBox.propTypes = {
   components: PropTypes.object,
@@ -118,5 +172,5 @@ SelectBox.defaultProps = {
   styles: {}
 }
 
-export default SelectBox
+export default withBreakpoints()(SelectBox)
 export { Option, CheckboxOption, reactSelectControl }
