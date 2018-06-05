@@ -15,16 +15,8 @@ after_success:
 - test $TRAVIS_BRANCH = "master" && test $TRAVIS_REPO_SLUG = "cozy/cozy-ui" && yarn
   build:doc && yarn deploy:doc -- --username cozycloud --email contact@cozycloud.cc
   --repo=https://$GITHUB_TOKEN@github.com/cozy/cozy-ui.git
+- test $TRAVIS_BRANCH = "master" && test $TRAVIS_REPO_SLUG = "cozy/cozy-ui" && yarn travis-deploy-once "yarn semantic-release"
 
-deploy:
-  provider: npm
-  email: npm@cozycloud.cc
-  skip_cleanup: true
-  api_key:
-    secure: uokfYWTnA3SEyueZ7NsSdLM6oX9MHEcK+YpR6yj91kieU4B07fyXYyTfLND6oHcZZa9rVPK3aQ525oG/3/dLxeI6026agE4f+71V1Y/PLiUvcHbCHhcQ4mHrRtZvaEbb+Qa6THNBxvpgNQgtmhLm0hPFTDpulZ1Z0fmMNQ6Yyd0=
-  on:
-    tags: true
-    repo: cozy/cozy-ui
 env:
   global:
     secure: R3CSBrSNdBrL27FaZLw8KyshNreI9eArdXksT7Zf3oms/88mivudD0rSt5jYodPcMWF6IJtJ6xqqpJRbb/CH7eY7TOPoM9A2mhjxjy/tyk+UN4ieh75clCo/eMt89Zx6aJ72VZ0NsQAQHcOjA9UUm463HYpsGzzkc9dNGAM5F30=
