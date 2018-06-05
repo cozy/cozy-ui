@@ -1,3 +1,11 @@
+<a name="9.1.1"></a>
+## [9.1.1](https://github.com/cozy/cozy-ui/compare/v9.1.0...v9.1.1) (2018-06-05)
+
+
+### Bug Fixes
+
+* enables only overflow-y on small screen ([370bb69](https://github.com/cozy/cozy-ui/commit/370bb69))
+
 # Change Log
 All notable changes to this project will be documented in this file.
 We use lerna-changelog to generate the changelog based on the PRs.
