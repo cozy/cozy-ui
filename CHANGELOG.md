@@ -1,3 +1,11 @@
+<a name="9.2.0"></a>
+# [9.2.0](https://github.com/cozy/cozy-ui/compare/v9.1.2...v9.2.0) (2018-06-06)
+
+
+### Features
+
+* add global utility classes ([47fad03](https://github.com/cozy/cozy-ui/commit/47fad03))
+
 <a name="9.1.2"></a>
 ## [9.1.2](https://github.com/cozy/cozy-ui/compare/v9.1.1...v9.1.2) (2018-06-06)
 
