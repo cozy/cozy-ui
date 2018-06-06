@@ -1,3 +1,11 @@
+<a name="9.1.2"></a>
+## [9.1.2](https://github.com/cozy/cozy-ui/compare/v9.1.1...v9.1.2) (2018-06-06)
+
+
+### Bug Fixes
+
+* **action button:** fix focus styles ([1b01831](https://github.com/cozy/cozy-ui/commit/1b01831))
+
 <a name="9.1.1"></a>
 ## [9.1.1](https://github.com/cozy/cozy-ui/compare/v9.1.0...v9.1.1) (2018-06-05)
 
