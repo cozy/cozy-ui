@@ -56,10 +56,7 @@
     "error": true
   },
   "mixins": ["hide","reset"],
-  "namingConvention": {
-    "expect": "lowercase-dash",
-    "error": true
-  },
+  "namingConvention": false,
   "namingConventionStrict": false,
   "none": {
     "expect": "never",

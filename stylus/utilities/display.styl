@@ -48,3 +48,19 @@ $hide--desk
     +gt-mobile()
         display none !important // @stylint ignore
 
+
+// Global classes
+:global(.u-visuallyhidden)
+    @extend $visuallyhidden
+
+:global(.u-hide)
+    @extend $hide
+
+:global(.u-hide--mob)
+    @extend $hide--mob
+
+:global(.u-hide--tablet)
+    @extend $hide--tablet
+
+:global(.u-hide--desk)
+    @extend $hide--desk
