@@ -31,6 +31,7 @@ const importIcons = function () {
     'icon-openwith',
     'icon-paperplane',
     'icon-people',
+    'icon-phone-download',
     'icon-plus',
     'icon-rename',
     'icon-restore',

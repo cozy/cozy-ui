@@ -678,64 +678,70 @@ exports[`Icon should render examples: Icon 1`] = `
         <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
-        <p style=\\"font-size: 1rem;\\">plus</p>
+        <p style=\\"font-size: 1rem;\\">phone-download</p>
       </div>
       <div style=\\"text-align: center;\\">
         <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <p style=\\"font-size: 1rem;\\">plus</p>
+      </div>
+      <div style=\\"text-align: center;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
         <p style=\\"font-size: 1rem;\\">rename</p>
       </div>
       <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
         <p style=\\"font-size: 1rem;\\">restore</p>
       </div>
       <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
         <p style=\\"font-size: 1rem;\\">share</p>
       </div>
       <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
         <p style=\\"font-size: 1rem;\\">small-arrow</p>
       </div>
       <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
         <p style=\\"font-size: 1rem;\\">spinner</p>
       </div>
       <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
         <p style=\\"font-size: 1rem;\\">top</p>
       </div>
       <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
         <p style=\\"font-size: 1rem;\\">trash</p>
       </div>
       <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
         <p style=\\"font-size: 1rem;\\">upload</p>
       </div>
       <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
         <p style=\\"font-size: 1rem;\\">warn</p>
       </div>
       <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
+        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
           <use xlink:href=\\"test-file-stub\\"></use>
         </svg>
         <p style=\\"font-size: 1rem;\\">warning</p>
