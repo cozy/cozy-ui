@@ -1,3 +1,11 @@
+<a name="9.3.0"></a>
+# [9.3.0](https://github.com/cozy/cozy-ui/compare/v9.2.0...v9.3.0) (2018-06-06)
+
+
+### Features
+
+* added download icon ([1ef0ade](https://github.com/cozy/cozy-ui/commit/1ef0ade))
+
 <a name="9.2.0"></a>
 # [9.2.0](https://github.com/cozy/cozy-ui/compare/v9.1.2...v9.2.0) (2018-06-06)
 
