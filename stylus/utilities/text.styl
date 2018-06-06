@@ -29,6 +29,9 @@ for color in keys(colors)
     $color-{color}
         color: lookup(color) !important // @stylint ignore
 
+    :global(.u-{color})
+        color: lookup(color) !important // @stylint ignore
+
 $ellipsis
     display block
     width 100%
@@ -56,3 +59,22 @@ $midellipsis
     @supports(text-overflow: '[...]')
         > :first-child
             text-overflow '[...]'
+
+// Global classes
+:global(.u-error)
+    @extend $error
+
+:global(.u-error--warning)
+    @extend $error-warning
+
+:global(.u-valid)
+    @extend $valid
+
+:global(.u-warn)
+    @extend $warn
+
+:global(.u-ellipsis)
+    @extend $ellipsis
+
+:global(.u-midellipsis)
+    @extend $midellipsis

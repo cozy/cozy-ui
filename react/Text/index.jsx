@@ -11,7 +11,7 @@ const mkText = baseClass => props => {
       className={cx(
         baseClass,
         {
-          [styles['u-ellipsis']]: ellipsis
+          ['u-ellipsis']: ellipsis
         },
         className
       )}
