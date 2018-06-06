@@ -5,3 +5,403 @@
 @require '../objects/*'
 @require '../components/*'
 @require '../utilities/*'
+
+// Global classes
+:global(.u-visuallyhidden)
+    @extend $visuallyhidden
+
+:global(.u-hide)
+    @extend $hide
+
+:global(.u-hide--mob)
+    @extend $hide--mob
+
+:global(.u-hide--tablet)
+    @extend $hide--tablet
+
+:global(.u-hide--desk)
+    @extend $hide--desk
+
+:global(.u-ellipsis)
+    @extend $ellipsis
+
+:global(.u-midellipsis)
+    @extend $midellipsis
+
+:global(.u-error)
+    @extend $error
+
+:global(.u-error--warning)
+    @extend $error-warning
+
+:global(.u-valid)
+    @extend $valid
+
+:global(.u-warn)
+    @extend $warn
+
+:global(.u-paleGrey)
+    @extend $color-paleGrey
+
+:global(.u-silver)
+    @extend $color-silver
+
+:global(.u-coolGrey)
+    @extend $color-coolGrey
+
+:global(.u-slateGrey)
+    @extend $color-slateGrey
+
+:global(.u-charcoalGrey)
+    @extend $color-charcoalGrey
+
+:global(.u-dodgerBlue)
+    @extend $color-dodgerBlue
+
+:global(.u-scienceBlue)
+    @extend $color-scienceBlue
+
+:global(.u-puertoRico)
+    @extend $color-puertoRico
+
+:global(.u-emerald)
+    @extend $color-emerald
+
+:global(.u-malachite)
+    @extend $color-malachite
+
+:global(.u-texasRose)
+    @extend $color-texasRose
+
+:global(.u-yourPink)
+    @extend $color-yourPink
+
+:global(.u-pomegranate)
+    @extend $color-pomegranate
+
+:global(.u-monza)
+    @extend $color-monza
+
+:global(.u-portage)
+    @extend $color-portage
+
+:global(.u-azure)
+    @extend $color-azure
+
+:global(.u-melon)
+    @extend $color-melon
+
+:global(.u-blazeOrange)
+    @extend $color-blazeOrange
+
+:global(.u-mango)
+    @extend $color-mango
+
+:global(.u-pumpkinOrange)
+    @extend $color-pumpkinOrange
+
+:global(.u-darkPeriwinkle)
+    @extend $color-darkPeriwinkle
+
+:global(.u-purpley)
+    @extend $color-purpley
+
+:global(.u-lightishPurple)
+    @extend $color-lightishPurple
+
+:global(.u-weirdGreen)
+    @extend $color-weirdGreen
+
+:global(.u-m-0)
+    @extend $m-0
+
+:global(.u-m-half)
+    @extend $m-half
+
+:global(.u-m-1)
+    @extend $m-1
+
+:global(.u-m-1-half)
+    @extend $m-1-half
+
+:global(.u-m-2)
+    @extend $m-2
+
+:global(.u-m-2-half)
+    @extend $m-2-half
+
+:global(.u-m-3)
+    @extend $m-3
+
+:global(.u-mv-0)
+    @extend $mv-0
+
+:global(.u-mv-half)
+    @extend $mv-half
+
+:global(.u-mv-1)
+    @extend $mv-1
+
+:global(.u-mv-1-half)
+    @extend $mv-1-half
+
+:global(.u-mv-2)
+    @extend $mv-2
+
+:global(.u-mv-2-half)
+    @extend $mv-2-half
+
+:global(.u-mv-3)
+    @extend $mv-3
+
+:global(.u-mh-0)
+    @extend $mh-0
+
+:global(.u-mh-half)
+    @extend $mh-half
+
+:global(.u-mh-1)
+    @extend $mh-1
+
+:global(.u-mh-1-half)
+    @extend $mh-1-half
+
+:global(.u-mh-2)
+    @extend $mh-2
+
+:global(.u-mh-2-half)
+    @extend $mh-2-half
+
+:global(.u-mh-3)
+    @extend $mh-3
+
+:global(.u-mt-0)
+    @extend $mt-0
+
+:global(.u-mt-half)
+    @extend $mt-half
+
+:global(.u-mt-1)
+    @extend $mt-1
+
+:global(.u-mt-1-half)
+    @extend $mt-1-half
+
+:global(.u-mt-2)
+    @extend $mt-2
+
+:global(.u-mt-2-half)
+    @extend $mt-2-half
+
+:global(.u-mt-3)
+    @extend $mt-3
+
+:global(.u-mb-0)
+    @extend $mb-0
+
+:global(.u-mb-half)
+    @extend $mb-half
+
+:global(.u-mb-1)
+    @extend $mb-1
+
+:global(.u-mb-1-half)
+    @extend $mb-1-half
+
+:global(.u-mb-2)
+    @extend $mb-2
+
+:global(.u-mb-2-half)
+    @extend $mb-2-half
+
+:global(.u-mb-3)
+    @extend $mb-3
+
+:global(.u-ml-0)
+    @extend $ml-0
+
+:global(.u-ml-half)
+    @extend $ml-half
+
+:global(.u-ml-1)
+    @extend $ml-1
+
+:global(.u-ml-1-half)
+    @extend $ml-1-half
+
+:global(.u-ml-2)
+    @extend $ml-2
+
+:global(.u-ml-2-half)
+    @extend $ml-2-half
+
+:global(.u-ml-3)
+    @extend $ml-3
+
+:global(.u-mr-0)
+    @extend $mr-0
+
+:global(.u-mr-half)
+    @extend $mr-half
+
+:global(.u-mr-1)
+    @extend $mr-1
+
+:global(.u-mr-1-half)
+    @extend $mr-1-half
+
+:global(.u-mr-2)
+    @extend $mr-2
+
+:global(.u-mr-2-half)
+    @extend $mr-2-half
+
+:global(.u-mr-3)
+    @extend $mr-3
+
+:global(.u-p-0)
+    @extend $p-0
+
+:global(.u-p-half)
+    @extend $p-half
+
+:global(.u-p-1)
+    @extend $p-1
+
+:global(.u-p-1-half)
+    @extend $p-1-half
+
+:global(.u-p-2)
+    @extend $p-2
+
+:global(.u-p-2-half)
+    @extend $p-2-half
+
+:global(.u-p-3)
+    @extend $p-3
+
+:global(.u-pv-0)
+    @extend $pv-0
+
+:global(.u-pv-half)
+    @extend $pv-half
+
+:global(.u-pv-1)
+    @extend $pv-1
+
+:global(.u-pv-1-half)
+    @extend $pv-1-half
+
+:global(.u-pv-2)
+    @extend $pv-2
+
+:global(.u-pv-2-half)
+    @extend $pv-2-half
+
+:global(.u-pv-3)
+    @extend $pv-3
+
+:global(.u-ph-0)
+    @extend $ph-0
+
+:global(.u-ph-half)
+    @extend $ph-half
+
+:global(.u-ph-1)
+    @extend $ph-1
+
+:global(.u-ph-1-half)
+    @extend $ph-1-half
+
+:global(.u-ph-2)
+    @extend $ph-2
+
+:global(.u-ph-2-half)
+    @extend $ph-2-half
+
+:global(.u-ph-3)
+    @extend $ph-3
+
+:global(.u-pt-0)
+    @extend $pt-0
+
+:global(.u-pt-half)
+    @extend $pt-half
+
+:global(.u-pt-1)
+    @extend $pt-1
+
+:global(.u-pt-1-half)
+    @extend $pt-1-half
+
+:global(.u-pt-2)
+    @extend $pt-2
+
+:global(.u-pt-2-half)
+    @extend $pt-2-half
+
+:global(.u-pt-3)
+    @extend $pt-3
+
+:global(.u-pb-0)
+    @extend $pb-0
+
+:global(.u-pb-half)
+    @extend $pb-half
+
+:global(.u-pb-1)
+    @extend $pb-1
+
+:global(.u-pb-1-half)
+    @extend $pb-1-half
+
+:global(.u-pb-2)
+    @extend $pb-2
+
+:global(.u-pb-2-half)
+    @extend $pb-2-half
+
+:global(.u-pb-3)
+    @extend $pb-3
+
+:global(.u-pl-0)
+    @extend $pl-0
+
+:global(.u-pl-half)
+    @extend $pl-half
+
+:global(.u-pl-1)
+    @extend $pl-1
+
+:global(.u-pl-1-half)
+    @extend $pl-1-half
+
+:global(.u-pl-2)
+    @extend $pl-2
+
+:global(.u-pl-2-half)
+    @extend $pl-2-half
+
+:global(.u-pl-3)
+    @extend $pl-3
+
+:global(.u-pr-0)
+    @extend $pr-0
+
+:global(.u-pr-half)
+    @extend $pr-half
+
+:global(.u-pr-1)
+    @extend $pr-1
+
+:global(.u-pr-1-half)
+    @extend $pr-1-half
+
+:global(.u-pr-2)
+    @extend $pr-2
+
+:global(.u-pr-2-half)
+    @extend $pr-2-half
+
+:global(.u-pr-3)
+    @extend $pr-3
