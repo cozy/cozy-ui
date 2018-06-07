@@ -1,3 +1,12 @@
+<a name="9.3.1"></a>
+## [9.3.1](https://github.com/cozy/cozy-ui/compare/v9.3.0...v9.3.1) (2018-06-07)
+
+
+### Bug Fixes
+
+* **action button:** fix hover/focus colors ([e71115d](https://github.com/cozy/cozy-ui/commit/e71115d))
+* **action button:** remove outline ([83eade9](https://github.com/cozy/cozy-ui/commit/83eade9))
+
 <a name="9.3.0"></a>
 # [9.3.0](https://github.com/cozy/cozy-ui/compare/v9.2.0...v9.3.0) (2018-06-06)
 
