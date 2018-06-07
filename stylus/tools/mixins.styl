@@ -60,4 +60,12 @@ reset()
     padding 0
     border  0
 
+global(selector, placeholder)
+    if cssmodules == true
+        :global({selector})
+            @extend {placeholder} // @stylint ignore
+    else
+        {selector}
+            @extend {placeholder} // @stylint ignore
+
 // @stylint on
