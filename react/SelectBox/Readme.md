@@ -69,3 +69,29 @@ options[options.length - 1].fixed = true;
   menuIsOpen={isTesting ? true : undefined}
   options={options} />
 ```
+
+### Customize ReactSelect components
+
+Do not directly install another version of react-select, cozy-ui exports the components
+from `react-select` for you to further customize the components.
+
+Here a custom class is applied to the `ValueContainer`.
+
+```
+const { default: SelectBox, components } = require('.')
+
+const ValueContainer = props => {
+  return (
+    <components.ValueContainer {...props} className='needsclick' />
+  );
+};
+
+<SelectBox
+  components={{ ValueContainer }}
+  options={[
+    {value: 1, label: 1},
+    {value: 2, label: 2},
+    {value: 3, label: 3}]}
+
+/>
+```

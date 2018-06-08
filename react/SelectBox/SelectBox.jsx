@@ -118,5 +118,7 @@ SelectBox.defaultProps = {
   styles: {}
 }
 
+const components = ReactSelect.components
+
 export default SelectBox
-export { Option, CheckboxOption, reactSelectControl }
+export { Option, CheckboxOption, reactSelectControl, components }
