@@ -1,3 +1,11 @@
+<a name="9.4.0"></a>
+# [9.4.0](https://github.com/cozy/cozy-ui/compare/v9.3.2...v9.4.0) (2018-06-08)
+
+
+### Features
+
+* add cursor utility classes ([36caee2](https://github.com/cozy/cozy-ui/commit/36caee2)), closes [#478](https://github.com/cozy/cozy-ui/issues/478)
+
 <a name="9.3.2"></a>
 ## [9.3.2](https://github.com/cozy/cozy-ui/compare/v9.3.1...v9.3.2) (2018-06-08)
 
