@@ -19,35 +19,11 @@
 /*------------------------------------*\
   Palette: expose all as css variables
 \*------------------------------------*/
-
+colors=json('../settings/palette.json', { hash: true })
 :root
-    --paleGrey paleGrey
-    --silver silver
-    --coolGrey coolGrey
-    --slateGrey slateGrey
-    --charcoalGrey charcoalGrey
-    --zircon zircon
-    --frenchPass frenchPass
-    --dodgerBlue dodgerBlue
-    --scienceBlue scienceBlue
-    --puertoRico puertoRico
-    --emerald emerald
-    --malachite malachite
-    --texasRose texasRose
-    --chablis chablis
-    --yourPink yourPink
-    --pomegranate pomegranate
-    --monza monza
-    --portage portage
-    --azure azure
-    --melon melon
-    --blazeOrange blazeOrange
-    --mango mango
-    --pumpkinOrange pumpkinOrange
-    --darkPeriwinkle darkPeriwinkle
-    --purpley purpley
-    --lightishPurple lightishPurple
-    --weirdGreen weirdGreen
+    for color in keys(colors)
+        colorName = '--' + color
+        {colorName} lookup(color)
 
 /*------------------------------------*\
   Objects
@@ -87,23 +63,6 @@
 
  Styleguide Components.buttons
 */
-.c-btn
-    @extend $button
-
-.c-btn--regular // Deprecated in favour of just .c-btn
-    @extend $button--regular
-
-.c-btn--secondary
-    @extend $button--secondary
-
-.c-btn--danger
-    @extend $button--danger
-
-.c-btn--danger-outline
-    @extend $button--danger-outline
-
-.c-btn--highlight
-    @extend $button--highlight
 
 /*
  Button sizes
@@ -121,14 +80,6 @@
 
  Styleguide Components.buttons.sizes
 */
-.c-btn--tiny
-    @extend $button--tiny
-
-.c-btn--small
-    @extend $button--small
-
-.c-btn--large
-    @extend $button--large
 
 /*
  Button extensions
@@ -145,11 +96,6 @@
 
  Styleguide Components.buttons.extension
 */
-.c-btn--narrow
-    @extend $button--narrow
-
-.c-btn--full
-    @extend $button--full
 
 /*
  Buttons with icons
@@ -177,18 +123,13 @@
 
  Styleguide Components.buttons.icons
 */
+@require '../../react/Button/styles.styl'
 
 .c-link--upload
     @extend $link--upload
 
 .c-link--delete
     @extend $link--delete
-
-.c-btn--action
-    @extend $button--action
-
-.c-btn--close
-    @extend $button--close
 
 /*------------------------------------*\
   Alert's specific buttons
@@ -212,17 +153,6 @@
 
  Styleguide Components.buttons.alert
 */
-.c-btn-alert
-    @extend $button-alert
-
-.c-btn-alert--error
-    @extend $button-alert--error
-
-.c-btn-alert--info
-    @extend $button-alert--info
-
-.c-btn-alert--success
-    @extend $button-alert--success
 
 /*------------------------------------*\
   Special buttons
@@ -260,32 +190,32 @@
         <ul class="c-nav">
             <li class="c-nav-item">
                 <a class="c-nav-link is-active" href="#">
-                    <span class="c-nav-icon">
+                    <span class="c-nav-item__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
                         </svg>
                     </span>
-                    <span class="c-nav-text">Link 1</span>
+                    <span class="c-nav-item__text">Link 1</span>
                 </a>
             </li>
             <li class="c-nav-item">
                 <a class="c-nav-link" href="#">
-                    <span class="c-nav-icon">
+                    <span class="c-nav-item__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
                         </svg>
                     </span>
-                    <span class="c-nav-text">Link 2</span>
+                    <span class="c-nav-item__text">Link 2</span>
                 </a>
             </li>
             <li class="c-nav-item">
                 <a class="c-nav-link" href="#">
-                    <span class="c-nav-icon">
+                    <span class="c-nav-item__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
                         </svg>
                     </span>
-                    <span class="c-nav-text">Link 3</span>
+                    <span class="c-nav-item__text">Link 3</span>
                 </a>
             </li>
         </ul>
@@ -293,21 +223,7 @@
 
     Styleguide Components.nav
 */
-.c-nav
-    @extend $nav
-
-.c-nav-item
-    @extend $nav-item
-
-.c-nav-link
-    @extend $nav-link
-
-.c-nav-icon
-    @extend $nav-item-icon
-    fill currentColor
-
-.c-nav-text
-    @extend $nav-item-text
+@require '../../react/Nav/styles.styl'
 
 /*------------------------------------*\
   Forms
@@ -339,8 +255,7 @@
 
  Styleguide Components.form.label
 */
-.c-label
-    @extend $label
+@require '../../react/Label/styles.styl'
 
 /*
  Input text
@@ -372,17 +287,7 @@
 
  Styleguide Components.form.input-text
 */
-.c-input-text
-    @extend $input-text
-
-.c-input-text--tiny
-    @extend $input-text--tiny
-
-.c-input-text--medium
-    @extend $input-text--medium
-
-.c-input-text--fullwidth
-    @extend $input-text--fullwidth
+@require '../../react/Input/styles.styl'
 
 /*
  Input Checkbox
@@ -411,8 +316,7 @@
 
  Styleguide Components.form.input-checkbox
 */
-.c-input-checkbox
-    @extend $checkbox
+@require '../../react/Checkbox/styles.styl'
 
 /*
  Input Checkbox
@@ -437,8 +341,7 @@
 
  Styleguide Components.form.input-radio
 */
-.c-input-radio
-    @extend $radio
+@require '../../react/Radio/styles.styl'
 
 
 /*
@@ -460,17 +363,7 @@
 
  Styleguide Components.form.textarea
 */
-.c-textarea
-    @extend $textarea
-
-.c-textarea--tiny
-    @extend $textarea--tiny
-
-.c-textarea--medium
-    @extend $textarea--medium
-
-.c-textarea--fullwidth
-    @extend $textarea--fullwidth
+@require '../../react/Textarea/styles.styl'
 
 /*
  Select
@@ -629,20 +522,7 @@ Display an avatar of a user or contact with initials or an image
 
  Styleguide Components.avatar
 */
-.c-avatar
-    @extend $avatar
-
-.c-avatar--small
-    @extend $avatar--small
-
-.c-avatar--medium
-    @extend $avatar--medium
-
-.c-avatar-initials
-    @extend $avatar-initials
-
-.c-avatar-image
-    @extend $avatar-image
+@require '../../react/Avatar/styles.styl'
 
 
 /*------------------------------------*\
