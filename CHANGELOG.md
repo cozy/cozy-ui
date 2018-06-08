@@ -1,3 +1,11 @@
+<a name="9.3.2"></a>
+## [9.3.2](https://github.com/cozy/cozy-ui/compare/v9.3.1...v9.3.2) (2018-06-08)
+
+
+### Bug Fixes
+
+* global styles are compiled only when used with CSS-modules ([71c5c81](https://github.com/cozy/cozy-ui/commit/71c5c81))
+
 <a name="9.3.1"></a>
 ## [9.3.1](https://github.com/cozy/cozy-ui/compare/v9.3.0...v9.3.1) (2018-06-07)
 
