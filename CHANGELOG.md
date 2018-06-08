@@ -1,3 +1,12 @@
+<a name="9.5.0"></a>
+# [9.5.0](https://github.com/cozy/cozy-ui/compare/v9.4.0...v9.5.0) (2018-06-08)
+
+
+### Features
+
+* **SelectBox:** bump react-select version ([539ca4d](https://github.com/cozy/cozy-ui/commit/539ca4d))
+* **SelectBox:** export react-select components ([0f4fda7](https://github.com/cozy/cozy-ui/commit/0f4fda7))
+
 <a name="9.4.0"></a>
 # [9.4.0](https://github.com/cozy/cozy-ui/compare/v9.3.2...v9.4.0) (2018-06-08)
 
