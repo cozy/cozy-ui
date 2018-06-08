@@ -91,7 +91,7 @@
     "normalize.css": "^7.0.0",
     "preact-portal": "^1.1.2",
     "pretty": "^2.0.0",
-    "react-select": "2.0.0-alpha.7",
+    "react-select": "^2.0.0-beta.6",
     "stylus": "^0.54.5"
   },
   "peerDependencies": {
