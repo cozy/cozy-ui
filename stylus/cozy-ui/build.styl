@@ -674,24 +674,13 @@ Display an avatar of a user or contact with initials or an image
     Markup:
     <p class="{{modifier_class}}">I'm visible! 🎉</p>
 
-    .u-hidden - Element is visually hidden but still readable by screen-readers
+    .u-visuallyhidden - Element is visually hidden but still readable by screen-readers
     .u-hide - Element is totally hidden (even for screen readers)
     .u-hide--desk - Element is hidden on desktop (>768px)
     .u-hide--mob - Element is hidden on mobile (<1023px)
 
     Styleguide utilities.visibility
 */
-.u-visuallyhidden
-    @extend $visuallyhidden
-
-.u-hide
-    @extend $hide
-
-.u-hide--mob
-    @extend $hide--mob
-
-.u-hide--desk
-    @extend $hide--desk
 
 /*
     Text
@@ -725,11 +714,6 @@ Display an avatar of a user or contact with initials or an image
     Styleguide utilities.text.errorWarn
 */
 
-.u-error
-    @extend $error
-
-.u-error--warning
-    @extend $error-warning
 
 /*
  Valid
@@ -742,8 +726,6 @@ Display an avatar of a user or contact with initials or an image
 
  Styleguide utilities.text.valid
 */
-.u-valid
-    @extend $valid
 
 /*
  Warning
@@ -756,9 +738,6 @@ Display an avatar of a user or contact with initials or an image
 
  Styleguide utilities.text.warn
 */
-.u-warn
-    @extend $warn
-
 
 /*
  Middle Ellipsis
@@ -774,8 +753,6 @@ Display an avatar of a user or contact with initials or an image
 
  Styleguide utilities.text.midellipsis
 */
-.u-midellipsis
-    @extend $midellipsis
 
 /*
  Colored text
@@ -811,79 +788,6 @@ Display an avatar of a user or contact with initials or an image
 
  Styleguide utilities.text.colors
 */
-
-.u-paleGrey
-    @extend $color-paleGrey
-
-.u-silver
-    @extend $color-silver
-
-.u-coolGrey
-    @extend $color-coolGrey
-
-.u-slateGrey
-    @extend $color-slateGrey
-
-.u-charcoalGrey
-    @extend $color-charcoalGrey
-
-.u-dodgerBlue
-    @extend $color-dodgerBlue
-
-.u-scienceBlue
-    @extend $color-scienceBlue
-
-.u-puertoRico
-    @extend $color-puertoRico
-
-.u-emerald
-    @extend $color-emerald
-
-.u-malachite
-    @extend $color-malachite
-
-.u-texasRose
-    @extend $color-texasRose
-
-.u-yourPink
-    @extend $color-yourPink
-
-.u-pomegranate
-    @extend $color-pomegranate
-
-.u-monza
-    @extend $color-monza
-
-.u-portage
-    @extend $color-portage
-
-.u-azure
-    @extend $color-azure
-
-.u-melon
-    @extend $color-melon
-
-.u-blazeOrange
-    @extend $color-blazeOrange
-
-.u-mango
-    @extend $color-mango
-
-.u-pumpkinOrange
-    @extend $color-pumpkinOrange
-
-.u-darkPeriwinkle
-    @extend $color-darkPeriwinkle
-
-.u-purpley
-    @extend $color-purpley
-
-.u-lightishPurple
-    @extend $color-lightishPurple
-
-.u-weirdGreen
-    @extend $color-weirdGreen
-
 
 /*
     Margins
@@ -932,110 +836,6 @@ Display an avatar of a user or contact with initials or an image
 
     Styleguide utilities.margins
 */
-.u-m-0
-    @extend $m-0
-
-.u-m-half
-    @extend $m-half
-
-.u-m-1
-    @extend $m-1
-
-.u-m-1-half
-    @extend $m-1-half
-
-.u-m-2
-    @extend $m-2
-
-.u-m-2-half
-    @extend $m-2-half
-
-.u-m-3
-    @extend $m-3
-
-.u-mt-0
-    @extend $mt-0
-
-.u-mt-half
-    @extend $mt-half
-
-.u-mt-1
-    @extend $mt-1
-
-.u-mt-1-half
-    @extend $mt-1-half
-
-.u-mt-2
-    @extend $mt-2
-
-.u-mt-2-half
-    @extend $mt-2-half
-
-.u-mt-3
-    @extend $mt-3
-
-.u-mb-0
-    @extend $mb-0
-
-.u-mb-half
-    @extend $mb-half
-
-.u-mb-1
-    @extend $mb-1
-
-.u-mb-1-half
-    @extend $mb-1-half
-
-.u-mb-2
-    @extend $mb-2
-
-.u-mb-2-half
-    @extend $mb-2-half
-
-.u-mb-3
-    @extend $mb-3
-
-.u-ml-0
-    @extend $ml-0
-
-.u-ml-half
-    @extend $ml-half
-
-.u-ml-1
-    @extend $ml-1
-
-.u-ml-1-half
-    @extend $ml-1-half
-
-.u-ml-2
-    @extend $ml-2
-
-.u-ml-2-half
-    @extend $ml-2-half
-
-.u-ml-3
-    @extend $ml-3
-
-.u-mr-0
-    @extend $mr-0
-
-.u-mr-half
-    @extend $mr-half
-
-.u-mr-1
-    @extend $mr-1
-
-.u-mr-1-half
-    @extend $mr-1-half
-
-.u-mr-2
-    @extend $mr-2
-
-.u-mr-2-half
-    @extend $mr-2-half
-
-.u-mr-3
-    @extend $mr-3
 
 /*
     Paddings
@@ -1084,107 +884,3 @@ Display an avatar of a user or contact with initials or an image
 
     Styleguide utilities.paddings
 */
-.u-p-0
-    @extend $p-0
-
-.u-p-half
-    @extend $p-half
-
-.u-p-1
-    @extend $p-1
-
-.u-p-1-half
-    @extend $p-1-half
-
-.u-p-2
-    @extend $p-2
-
-.u-p-2-half
-    @extend $p-2-half
-
-.u-p-3
-    @extend $p-3
-
-.u-pt-0
-    @extend $pt-0
-
-.u-pt-half
-    @extend $pt-half
-
-.u-pt-1
-    @extend $pt-1
-
-.u-pt-1-half
-    @extend $pt-1-half
-
-.u-pt-2
-    @extend $pt-2
-
-.u-pt-2-half
-    @extend $pt-2-half
-
-.u-pt-3
-    @extend $pt-3
-
-.u-pb-0
-    @extend $pb-0
-
-.u-pb-half
-    @extend $pb-half
-
-.u-pb-1
-    @extend $pb-1
-
-.u-pb-1-half
-    @extend $pb-1-half
-
-.u-pb-2
-    @extend $pb-2
-
-.u-pb-2-half
-    @extend $pb-2-half
-
-.u-pb-3
-    @extend $pb-3
-
-.u-pl-0
-    @extend $pl-0
-
-.u-pl-half
-    @extend $pl-half
-
-.u-pl-1
-    @extend $pl-1
-
-.u-pl-1-half
-    @extend $pl-1-half
-
-.u-pl-2
-    @extend $pl-2
-
-.u-pl-2-half
-    @extend $pl-2-half
-
-.u-pl-3
-    @extend $pl-3
-
-.u-pr-0
-    @extend $pr-0
-
-.u-pr-half
-    @extend $pr-half
-
-.u-pr-1
-    @extend $pr-1
-
-.u-pr-1-half
-    @extend $pr-1-half
-
-.u-pr-2
-    @extend $pr-2
-
-.u-pr-2-half
-    @extend $pr-2-half
-
-.u-pr-3
-    @extend $pr-3

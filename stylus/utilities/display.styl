@@ -50,17 +50,8 @@ $hide--desk
 
 
 // Global classes
-:global(.u-visuallyhidden)
-    @extend $visuallyhidden
-
-:global(.u-hide)
-    @extend $hide
-
-:global(.u-hide--mob)
-    @extend $hide--mob
-
-:global(.u-hide--tablet)
-    @extend $hide--tablet
-
-:global(.u-hide--desk)
-    @extend $hide--desk
+global('.u-visuallyhidden', $visuallyhidden)
+global('.u-hide', $hide)
+global('.u-hide--mob', $hide--mob)
+global('.u-hide--tablet', $hide--tablet)
+global('.u-hide--desk', $hide--desk)
