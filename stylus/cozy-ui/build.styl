@@ -19,35 +19,11 @@
 /*------------------------------------*\
   Palette: expose all as css variables
 \*------------------------------------*/
-
+colors=json('../settings/palette.json', { hash: true })
 :root
-    --paleGrey paleGrey
-    --silver silver
-    --coolGrey coolGrey
-    --slateGrey slateGrey
-    --charcoalGrey charcoalGrey
-    --zircon zircon
-    --frenchPass frenchPass
-    --dodgerBlue dodgerBlue
-    --scienceBlue scienceBlue
-    --puertoRico puertoRico
-    --emerald emerald
-    --malachite malachite
-    --texasRose texasRose
-    --chablis chablis
-    --yourPink yourPink
-    --pomegranate pomegranate
-    --monza monza
-    --portage portage
-    --azure azure
-    --melon melon
-    --blazeOrange blazeOrange
-    --mango mango
-    --pumpkinOrange pumpkinOrange
-    --darkPeriwinkle darkPeriwinkle
-    --purpley purpley
-    --lightishPurple lightishPurple
-    --weirdGreen weirdGreen
+    for color in keys(colors)
+        colorName = '--' + color
+        {colorName} lookup(color)
 
 /*------------------------------------*\
   Objects
@@ -76,6 +52,7 @@
  Markup:
  <div class="u-p-1">
      <button class="c-btn {{modifier_class}}"><span>Click me, I'm a button!</span></button>
+     <button class="c-btn c-btn--subtle {{modifier_class}}"><span>Click me, I'm a button!</span></button>
  </div>
 
  .c-btn--secondary - Basic alternative
@@ -83,27 +60,10 @@
  .c-btn--danger-outline - Danger outlined
  .c-btn--highlight - Highlighted button to catch the eye
 
- Weight: -1
+ Weight: 1
 
  Styleguide Components.buttons
 */
-.c-btn
-    @extend $button
-
-.c-btn--regular // Deprecated in favour of just .c-btn
-    @extend $button--regular
-
-.c-btn--secondary
-    @extend $button--secondary
-
-.c-btn--danger
-    @extend $button--danger
-
-.c-btn--danger-outline
-    @extend $button--danger-outline
-
-.c-btn--highlight
-    @extend $button--highlight
 
 /*
  Button sizes
@@ -113,22 +73,17 @@
  Markup:
  <div class="u-p-1">
      <button class="c-btn {{modifier_class}}"><span>Click me</span></button>
+     <button class="c-btn c-btn--subtle {{modifier_class}}"><span>Click me</span></button>
  </div>
 
  .c-btn--tiny - Tiny button (for Alerts mostly)
  .c-btn--small - Small button
  .c-btn--large - Large button
 
+ Weight: 2
+
  Styleguide Components.buttons.sizes
 */
-.c-btn--tiny
-    @extend $button--tiny
-
-.c-btn--small
-    @extend $button--small
-
-.c-btn--large
-    @extend $button--large
 
 /*
  Button extensions
@@ -138,18 +93,16 @@
  Markup:
  <div class="u-p-1">
      <button class="c-btn {{modifier_class}}"><span>Click</span></button>
+     <button class="c-btn c-btn--subtle {{modifier_class}}"><span>Click</span></button>
  </div>
 
  .c-btn--narrow - Narrow button (ignore button's min-width)
  .c-btn--full - Full button
 
+ Weight: 3
+
  Styleguide Components.buttons.extension
 */
-.c-btn--narrow
-    @extend $button--narrow
-
-.c-btn--full
-    @extend $button--full
 
 /*
  Buttons with icons
@@ -168,6 +121,14 @@
             <span>Click me, I'm a button!</span>
         </span>
     </button>
+    <button class="c-btn c-btn--subtle {{modifier_class}}">
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+            </svg>
+            <span>Click me, I'm a button!</span>
+        </span>
+    </button>
  </div>
 
  .c-btn--secondary - Basic alternative
@@ -175,20 +136,17 @@
  .c-btn--danger-outline - Danger outlined
  .c-btn--highlight - Highlighted button to catch the eye
 
+ Weight: 4
+
  Styleguide Components.buttons.icons
 */
+@require '../../react/Button/styles.styl'
 
 .c-link--upload
     @extend $link--upload
 
 .c-link--delete
     @extend $link--delete
-
-.c-btn--action
-    @extend $button--action
-
-.c-btn--close
-    @extend $button--close
 
 /*------------------------------------*\
   Alert's specific buttons
@@ -200,8 +158,8 @@
 
  Markup:
  <div class="u-p-1">
-     <button class="c-btn--alert {{modifier_class}} u-m-1"><span>Click me, I'm a button!</span></button>
-     <a hre="#" class="c-btn--alert {{modifier_class}} u-m-1"><span>Click me, I'm a link!</span></a>
+     <button class="c-btn-alert {{modifier_class}} u-m-1"><span>Click me, I'm a button!</span></button>
+     <a href="#" class="c-btn-alert {{modifier_class}} u-m-1"><span>Click me, I'm a link!</span></a>
  </div>
 
  .c-btn-alert--error - Error button
@@ -260,32 +218,32 @@
         <ul class="c-nav">
             <li class="c-nav-item">
                 <a class="c-nav-link is-active" href="#">
-                    <span class="c-nav-icon">
+                    <span class="c-nav-item__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
                         </svg>
                     </span>
-                    <span class="c-nav-text">Link 1</span>
+                    <span class="c-nav-item__text">Link 1</span>
                 </a>
             </li>
             <li class="c-nav-item">
                 <a class="c-nav-link" href="#">
-                    <span class="c-nav-icon">
+                    <span class="c-nav-item__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
                         </svg>
                     </span>
-                    <span class="c-nav-text">Link 2</span>
+                    <span class="c-nav-item__text">Link 2</span>
                 </a>
             </li>
             <li class="c-nav-item">
                 <a class="c-nav-link" href="#">
-                    <span class="c-nav-icon">
+                    <span class="c-nav-item__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                             <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
                         </svg>
                     </span>
-                    <span class="c-nav-text">Link 3</span>
+                    <span class="c-nav-item__text">Link 3</span>
                 </a>
             </li>
         </ul>
@@ -293,21 +251,7 @@
 
     Styleguide Components.nav
 */
-.c-nav
-    @extend $nav
-
-.c-nav-item
-    @extend $nav-item
-
-.c-nav-link
-    @extend $nav-link
-
-.c-nav-icon
-    @extend $nav-item-icon
-    fill currentColor
-
-.c-nav-text
-    @extend $nav-item-text
+@require '../../react/Nav/styles.styl'
 
 /*------------------------------------*\
   Forms
@@ -339,8 +283,7 @@
 
  Styleguide Components.form.label
 */
-.c-label
-    @extend $label
+@require '../../react/Label/styles.styl'
 
 /*
  Input text
@@ -372,17 +315,7 @@
 
  Styleguide Components.form.input-text
 */
-.c-input-text
-    @extend $input-text
-
-.c-input-text--tiny
-    @extend $input-text--tiny
-
-.c-input-text--medium
-    @extend $input-text--medium
-
-.c-input-text--fullwidth
-    @extend $input-text--fullwidth
+@require '../../react/Input/styles.styl'
 
 /*
  Input Checkbox
@@ -411,8 +344,7 @@
 
  Styleguide Components.form.input-checkbox
 */
-.c-input-checkbox
-    @extend $checkbox
+@require '../../react/Checkbox/styles.styl'
 
 /*
  Input Checkbox
@@ -437,8 +369,7 @@
 
  Styleguide Components.form.input-radio
 */
-.c-input-radio
-    @extend $radio
+@require '../../react/Radio/styles.styl'
 
 
 /*
@@ -460,17 +391,7 @@
 
  Styleguide Components.form.textarea
 */
-.c-textarea
-    @extend $textarea
-
-.c-textarea--tiny
-    @extend $textarea--tiny
-
-.c-textarea--medium
-    @extend $textarea--medium
-
-.c-textarea--fullwidth
-    @extend $textarea--fullwidth
+@require '../../react/Textarea/styles.styl'
 
 /*
  Select
@@ -629,20 +550,48 @@ Display an avatar of a user or contact with initials or an image
 
  Styleguide Components.avatar
 */
-.c-avatar
-    @extend $avatar
+@require '../../react/Avatar/styles.styl'
 
-.c-avatar--small
-    @extend $avatar--small
+/*
+ Chip
 
-.c-avatar--medium
-    @extend $avatar--medium
+Display an chip that represents complex identity
 
-.c-avatar-initials
-    @extend $avatar-initials
+ Markup:
+<div>
+    <div class="c-chip">
+        <svg class="u-mr-half" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+        </svg>
+        File
+    </div>
+</div>
+<div>
+    <div class="c-chip">
+        <div class="c-avatar c-avatar--small u-mr-half">
+            <img src="https://cozy.io/fr/images/cozy-logo_white.png" class="c-avatar-image" alt="">
+        </div>
+        Ada Lovelace
+    </div>
+</div>
+<div>
+    <div class="c-chip">
+        Developer
+        <span class="c-chip-separator"></span>
+        Ada Lovelace
+    </div>
+</div>
+<div>
+    <div class="c-chip c-chip--round">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+        </svg>
+    </div>
+</div>
 
-.c-avatar-image
-    @extend $avatar-image
+ Styleguide Components.chip
+*/
+@require '../../react/Chip/styles.styl'
 
 
 /*------------------------------------*\
@@ -686,6 +635,7 @@ Display an avatar of a user or contact with initials or an image
     .u-visuallyhidden - Element is visually hidden but still readable by screen-readers
     .u-hide - Element is totally hidden (even for screen readers)
     .u-hide--desk - Element is hidden on desktop (>768px)
+    .u-hide--tablet - Element is hidden on tablet (>1024px)
     .u-hide--mob - Element is hidden on mobile (<1023px)
 
     Styleguide utilities.display
@@ -697,70 +647,6 @@ Display an avatar of a user or contact with initials or an image
     Utilities that mess only with with wild texts.
 
     Styleguide utilities.text
-*/
-
-/*
-    Error
-
-    Utilities that give text some semantic color in case of error.
-
-    Markup: <p class="{{modifier_class}}">Somehow you messed up somewhere.</p>
-
-    .u-error - simple error text
-
-    Styleguide utilities.text.error
-*/
-
-/*
-    Error with warning icon
-
-    Utilities that give text some semantic color in case of important error.
-
-    Markup: <p class="u-error {{modifier_class}}">You really missed, badly.</p>
-
-    .u-error--warning - error with warning icon
-
-    Styleguide utilities.text.errorWarn
-*/
-
-
-/*
- Valid
-
- Utilities that give text some semantic color in case of success.
-
- Markup: <p class="{{modifier_class}}">Yay, you did it!</p>
-
- .u-valid - simple valid text
-
- Styleguide utilities.text.valid
-*/
-
-/*
- Warning
-
- Utilities that give text some semantic color in case of warning.
-
- Markup: <p class="{{modifier_class}}">Ok, something went wrong but it's not that bad.</p>
-
- .u-warn - simple warning text
-
- Styleguide utilities.text.warn
-*/
-
-/*
- Middle Ellipsis
-
- Allows some text to have the ellipsis right in the middle
-
- Markup: <p class="{{modifier_class}}">
-    <span>Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise</span>
-    <span>that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a "computing machine" and the first computer programmer.</span>
- </p>
-
- .u-midellipsis - Ellipsis in the middle
-
- Styleguide utilities.text.midellipsis
 */
 
 /*
@@ -795,7 +681,99 @@ Display an avatar of a user or contact with initials or an image
  .u-lightishPurple - lightishPurple color
  .u-weirdGreen - weirdGreen color
 
+ Weight: 1
+
  Styleguide utilities.text.colors
+*/
+
+/*
+    Error
+
+    Utilities that give text some semantic color in case of error.
+
+    Markup: <p class="{{modifier_class}}">Somehow you messed up somewhere.</p>
+
+    .u-error - simple error text
+
+    Weight: 2
+
+    Styleguide utilities.text.error
+*/
+
+/*
+    Error with warning icon
+
+    Utilities that give text some semantic color in case of important error.
+
+    Markup: <p class="u-error {{modifier_class}}">You really missed, badly.</p>
+
+    .u-error--warning - error with warning icon
+
+    Weight: 3
+
+    Styleguide utilities.text.errorWarn
+*/
+
+
+/*
+ Valid
+
+ Utilities that give text some semantic color in case of success.
+
+ Markup: <p class="{{modifier_class}}">Yay, you did it!</p>
+
+ .u-valid - simple valid text
+
+ Weight: 4
+
+ Styleguide utilities.text.valid
+*/
+
+/*
+ Warning
+
+ Utilities that give text some semantic color in case of warning.
+
+ Markup: <p class="{{modifier_class}}">Ok, something went wrong but it's not that bad.</p>
+
+ .u-warn - simple warning text
+
+ Weight: 5
+
+ Styleguide utilities.text.warn
+*/
+
+/*
+ Ellipsis
+
+ Adds ellipsis to a long text
+
+ Markup: <p class="{{modifier_class}}">
+    Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise
+ </p>
+
+ .u-ellipsis - Ellipsis at the end
+
+ Weight: 6
+
+ Styleguide utilities.text.ellipsis
+*/
+
+/*
+ Middle Ellipsis
+
+ Allows some text to have the ellipsis right in the middle
+
+ Markup: <p class="{{modifier_class}}">
+    <span>Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise</span>
+    <span>that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a "computing machine" and the first computer programmer.</span>
+ </p>
+
+ .u-midellipsis - Ellipsis in the middle
+
+ Weight: 7
+
+ Styleguide utilities.text.midellipsis
 */
 
 /*
@@ -811,6 +789,20 @@ Display an avatar of a user or contact with initials or an image
     .u-m-2 - Margins on all sides with 2 lines (32px)
     .u-m-2-half - Margins on all sides with 1 line an a half (40px)
     .u-m-3 - Margins on all sides with 2 lines (48px)
+    .u-mv-0 - No vertically margins
+    .u-mv-half - Vertically margins with half a line (8px)
+    .u-mv-1 - Vertically margins with 1 line (16px)
+    .u-mv-1-half - Vertically margins with 1 line an a half (24px)
+    .u-mv-2 - Vertically margins with 2 lines (32px)
+    .u-mv-2-half - Vertically margins with 1 line an a half (40px)
+    .u-mv-3 - Vertically margins with 2 lines (48px)
+    .u-mh-0 - No horizontally margins
+    .u-mh-half - Horizontally margins with half a line (8px)
+    .u-mh-1 - Horizontally margins with 1 line (16px)
+    .u-mh-1-half - Horizontally margins with 1 line an a half (24px)
+    .u-mh-2 - Horizontally margins with 2 lines (32px)
+    .u-mh-2-half - Horizontally margins with 1 line an a half (40px)
+    .u-mh-3 - Horizontally margins with 2 lines (48px)
     .u-mt-0 - No margin Top
     .u-mt-half - Margin Top with half a line (8px)
     .u-mt-1 - Margin Top with 1 line (16px)
@@ -859,6 +851,20 @@ Display an avatar of a user or contact with initials or an image
     .u-p-2 - Paddings on all sides with 2 lines (32px)
     .u-p-2-half - Paddings on all sides with 1 line an a half (40px)
     .u-p-3 - Paddings on all sides with 2 lines (48px)
+    .u-pv-0 - No vertically paddings
+    .u-pv-half - Vertically paddings with half a line (8px)
+    .u-pv-1 - Vertically paddings with 1 line (16px)
+    .u-pv-1-half - Vertically paddings with 1 line an a half (24px)
+    .u-pv-2 - Vertically paddings with 2 lines (32px)
+    .u-pv-2-half - Vertically paddings with 1 line an a half (40px)
+    .u-pv-3 - Vertically paddings with 2 lines (48px)
+    .u-ph-0 - No horizontally paddings
+    .u-ph-half - Horizontally paddings with half a line (8px)
+    .u-ph-1 - Horizontally paddings with 1 line (16px)
+    .u-ph-1-half - Horizontally paddings with 1 line an a half (24px)
+    .u-ph-2 - Horizontally paddings with 2 lines (32px)
+    .u-ph-2-half - Horizontally paddings with 1 line an a half (40px)
+    .u-ph-3 - Horizontally paddings with 2 lines (48px)
     .u-pt-0 - No padding Top
     .u-pt-half - Padding Top with half a line (8px)
     .u-pt-1 - Padding Top with 1 line (16px)

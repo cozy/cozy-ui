@@ -7,7 +7,7 @@ class Chip extends React.PureComponent {
     const { children, className, ...props } = this.props
     return (
       <div
-        className={cx(styles.Chip, className, this.constructor.className)}
+        className={cx(styles['c-chip'], className, this.constructor.className)}
         {...props}
       >
         {children}
@@ -17,17 +17,17 @@ class Chip extends React.PureComponent {
 }
 
 export class RoundChip extends Chip {
-  static className = styles.RoundChip
+  static className = styles['c-chip--round']
 }
 
 export default Chip
 
-const disabledChipButtonStyle = styles['ChipButton--disabled']
+const disabledChipButtonStyle = styles['c-chip-button--disabled']
 export class ChipButton extends React.PureComponent {
   render({ children, className, disabled, ...props }) {
     return (
       <RoundChip
-        className={cx(styles.ChipButton, className, {
+        className={cx(styles['c-chip-button'], className, {
           [disabledChipButtonStyle]: disabled
         })}
         {...props}
@@ -41,5 +41,5 @@ export class ChipButton extends React.PureComponent {
 Chip.Button = ChipButton
 Chip.Round = RoundChip
 Chip.Separator = ({ className }) => (
-  <span className={cx(styles.ChipSeparator, className)} />
+  <span className={cx(styles['c-chip-separator'], className)} />
 )
