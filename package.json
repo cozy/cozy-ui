@@ -22,7 +22,7 @@
     "clean:doc:kss": "rm -rf build/styleguide",
     "deploy:doc": "git-directory-deploy --directory build/ --branch gh-pages",
     "lint": "npm-run-all 'lint:*'",
-    "lint:commit": "commitlint --from=$(git merge-base HEAD master) --to=HEAD",
+    "lint:commit": "git merge-base HEAD master && commitlint --from=$(git merge-base HEAD master) --to=HEAD || true",
     "lint:js": "eslint 'react/**/*.jsx' 'react/**/*.js'",
     "lint:stylus": "stylint stylus --config .stylintrc",
     "prebuild:css": "mkdir dist/",
