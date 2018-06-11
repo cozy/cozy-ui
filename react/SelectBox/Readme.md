@@ -7,7 +7,7 @@ You can use this exactly like you would use `react-select`. See the [official do
 ```
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'strawberry', label: 'Strawberry', isDisabled: true },
   { value: 'vanilla', label: 'Vanilla' }
 ];
 

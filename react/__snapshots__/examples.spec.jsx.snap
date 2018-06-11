@@ -892,7 +892,7 @@ exports[`Radio should render examples: Radio 2`] = `
 exports[`SelectBox should render examples: SelectBox 1`] = `
 "<div>
   <div>
-    <div class=\\"css-1h8pu2y\\"><span class=\\"css-1uvvha\\" aria-atomic=\\"true\\" aria-live=\\"polite\\" role=\\"status\\">3 results available.</span>
+    <div class=\\"css-1h8pu2y\\"><span class=\\"css-1uvvha\\" aria-atomic=\\"true\\" aria-live=\\"polite\\" role=\\"status\\">2 results available.</span>
       <div class=\\"css-1scqv3c\\">
         <div class=\\"css-nfppcf\\">
           <div class=\\"css-1492t68\\">Select...</div>
