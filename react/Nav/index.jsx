@@ -8,7 +8,7 @@ export const NavItem = ({ children }) => (
 )
 
 export const NavText = ({ children }) => (
-  <span className={styles['c-nav-item__text']}>{children}</span>
+  <span className={styles['c-nav-text']}>{children}</span>
 )
 
 export const NavLink = {
@@ -27,7 +27,7 @@ export const genNavLink = RRNavLink => ({ to, children }) => (
 )
 
 export const NavIcon = ({ icon }) => (
-  <span className={cx(styles['c-nav-item__icon'], styles['c-nav-icon'])}>
+  <span className={cx(styles['c-nav-icon'])}>
     <Icon icon={icon} />
   </span>
 )

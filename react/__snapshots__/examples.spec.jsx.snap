@@ -1122,13 +1122,13 @@ exports[`Sidebar should render examples: Sidebar 1`] = `
       <nav>
         <ul class=\\"c-nav\\">
           <li class=\\"c-nav-item\\">
-            <a class=\\"c-nav-link\\"><span class=\\"c-nav-item__icon c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-item__text\\">Warn</span></a>
+            <a class=\\"c-nav-link\\"><span class=\\"c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-text\\">Warn</span></a>
           </li>
           <li class=\\"c-nav-item\\">
-            <a class=\\"c-nav-link\\"><span class=\\"c-nav-item__icon c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-item__text\\">Check</span></a>
+            <a class=\\"c-nav-link\\"><span class=\\"c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-text\\">Check</span></a>
           </li>
           <li class=\\"c-nav-item\\">
-            <a class=\\"c-nav-link\\"><span class=\\"c-nav-item__icon c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-item__text\\">Download</span></a>
+            <a class=\\"c-nav-link\\"><span class=\\"c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-text\\">Download</span></a>
           </li>
         </ul>
       </nav>
