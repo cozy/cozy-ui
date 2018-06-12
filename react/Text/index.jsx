@@ -22,12 +22,12 @@ const mkText = baseClass => props => {
   )
 }
 
-export const Text = mkText(styles['g-text'])
-export const MainTitle = mkText(styles['g-title-h1'])
-export const Title = mkText(styles['g-title-h2'])
-export const SubTitle = mkText(styles['g-title-h3'])
-export const Bold = mkText(styles['g-title-h4'])
-export const Caption = mkText(styles['g-caption'])
+export const Text = mkText(styles['u-text'])
+export const MainTitle = mkText(styles['u-title-h1'])
+export const Title = mkText(styles['u-title-h2'])
+export const SubTitle = mkText(styles['u-title-h3'])
+export const Bold = mkText(styles['u-title-h4'])
+export const Caption = mkText(styles['u-caption'])
 
 // Props
 const commonProps = {

@@ -809,7 +809,7 @@ exports[`ListItemText should render examples: ListItemText 1`] = `
 "<div>
   <div>
     <div class=\\"c-list-text\\">
-      <div class=\\"g-text u-ellipsis\\">I'm a list item text</div>
+      <div class=\\"u-text u-ellipsis\\">I'm a list item text</div>
     </div>
   </div>
 </div>"
@@ -819,8 +819,8 @@ exports[`ListItemText should render examples: ListItemText 2`] = `
 "<div>
   <div>
     <div class=\\"c-list-text\\">
-      <div class=\\"g-text u-ellipsis\\">I'm a primary text</div>
-      <div class=\\"g-caption u-ellipsis\\">I'm a secondary text</div>
+      <div class=\\"u-text u-ellipsis\\">I'm a primary text</div>
+      <div class=\\"u-caption u-ellipsis\\">I'm a secondary text</div>
     </div>
   </div>
 </div>"
@@ -1247,7 +1247,7 @@ exports[`Spinner should render examples: Spinner 4`] = `
 exports[`Text should render examples: Text 1`] = `
 "<div>
   <div>
-    <div class=\\"g-text\\">This a standard text</div>
+    <div class=\\"u-text\\">This a standard text</div>
   </div>
 </div>"
 `;
@@ -1255,7 +1255,7 @@ exports[`Text should render examples: Text 1`] = `
 exports[`Text should render examples: Text 2`] = `
 "<div>
   <div>
-    <div class=\\"g-caption\\">This a note text</div>
+    <div class=\\"u-caption\\">This a note text</div>
   </div>
 </div>"
 `;
