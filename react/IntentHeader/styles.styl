@@ -1,10 +1,11 @@
 @require 'settings/palette.styl'
+@require 'tools/mixins'
 
 .intentHeader
     display flex
     align-items center
-    height 2rem
-    padding .5rem 1rem
+    height rem(32)
+    padding rem(8 16)
     background-color paleGrey
     margin 0
     // Keep its height in a flex configuration
@@ -14,12 +15,12 @@
 .intentHeader-title
     display flex
     align-items center
-    font-size 1.25rem
+    font-size rem(20)
     color charcoalGrey
 
     span
         font-weight normal
 
 .intentHeader-icon
-    height 1.125rem
-    margin-right .5rem
+    height rem(18)
+    margin-right rem(8)

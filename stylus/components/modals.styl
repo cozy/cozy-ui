@@ -2,6 +2,7 @@
 @require '../settings/z-index'
 @require '../settings/breakpoints'
 @require '../objects/layouts'
+@require '../tools/mixins'
 
 /*------------------------------------*\
   Modals
@@ -11,26 +12,26 @@
 \*------------------------------------*/
 
 // Modal sizes
-small-width = 34rem
-medium-width = 36rem
-large-width = 40rem
-xlarge-width = 50rem
-xxlarge-width = 60rem
+small-width = rem(544)
+medium-width = rem(576)
+large-width = rem(640)
+xlarge-width = rem(800)
+xxlarge-width = rem(960)
 
 // Modal margins
-small-margin = .5rem
-medium-margin = 1.5rem
-large-margin = 3rem
-xlarge-margin = 3rem
-xxlarge-margin = 3rem
+small-margin = rem(8)
+medium-margin = rem(24)
+large-margin = rem(48)
+xlarge-margin = rem(48)
+xxlarge-margin = rem(48)
 
 // Modal paddings
-tiny-padding = 1rem
-small-padding = 1.5rem
-medium-padding = 2rem
-large-padding = 3rem
-xlarge-padding = 3rem
-xxlarge-padding = 3rem
+tiny-padding = rem(16)
+small-padding = rem(24)
+medium-padding = rem(32)
+large-padding = rem(48)
+xlarge-padding = rem(48)
+xxlarge-padding = rem(48)
 
 
 $modals
@@ -60,7 +61,7 @@ $modal-wrapper
 $modal
     @extend $elastic
     position relative
-    border-radius .5rem
+    border-radius rem(8)
     max-height 100%
     background-color white
     color charcoalGrey
@@ -85,42 +86,42 @@ $modal--fullscreen
 
 $modal-header
     @extend $elastic-bar
-    margin 0 0 1rem
-    padding 'calc(%s - .3rem)' % medium-padding 3rem 0 medium-padding
+    margin 0 0 rem(16)
+    padding 'calc(%s - rem(5))' % medium-padding rem(48) 0 medium-padding
     overflow visible
-    min-height 2.5rem
+    min-height rem(40)
 
     h2
         margin 0
         font-weight bold
 
     +tiny-screen()
-        margin-bottom .5rem
-        padding 'calc(%s - .3rem)' % small-padding 2rem 0 small-padding
+        margin-bottom rem(8)
+        padding 'calc(%s - rem(5))' % small-padding rem(32) 0 small-padding
 
         h2
-            font-size 1.25rem
+            font-size rem(20)
 
 $modal-header--branded
     @extend $modal-header
-    padding 1rem 3rem
+    padding rem(16 48)
 
     img
         display block
-        max-height 3.5rem
+        max-height rem(56)
         margin 0 auto
 
 $modal-header--small
-    padding 'calc(%s - .3rem)' % small-padding 3rem 0 small-padding
+    padding 'calc(%s - rem(5))' % small-padding rem(48) 0 small-padding
 
     +tiny-screen()
-        padding 'calc(%s - .3rem)' % tiny-padding 2rem 0 tiny-padding
+        padding 'calc(%s - rem(5))' % tiny-padding rem(32) 0 tiny-padding
 
 $modal-header--large
-    padding 'calc(%s - .3rem)' % large-padding 3rem 0 large-padding
+    padding 'calc(%s - rem(5))' % large-padding rem(48) 0 large-padding
 
     +small-screen()
-        padding 'calc(%s - .3rem)' % medium-padding 2rem 0 medium-padding
+        padding 'calc(%s - rem(5))' % medium-padding rem(32) 0 medium-padding
 
 $modal-content
     @extend $elastic-content
@@ -128,8 +129,8 @@ $modal-content
 
     &:last-child
         padding-bottom medium-padding
-        border-bottom-right-radius .5rem
-        border-bottom-left-radius .5rem
+        border-bottom-right-radius rem(8)
+        border-bottom-left-radius rem(8)
 
     +tiny-screen()
         padding 0 small-padding
@@ -181,20 +182,20 @@ $modal-footer--button
 
             // since the order is reverse we target the first-child
             &:not(:first-child)
-                margin-bottom .25rem
+                margin-bottom rem(4)
 
 $modal-section
-    border-top 1px solid silver
+    border-top rem(1) solid silver
 
-cross-size=2.5rem
+cross-size=rem(40)
 
 $modal-close
     position absolute
-    top 1.5rem
-    right 1.5rem
+    top rem(24)
+    right rem(24)
     margin 0
     padding 0
-    background-size 1.75rem
+    background-size rem(28)
     background-color transparent
     cursor pointer
     display block
@@ -202,28 +203,28 @@ $modal-close
     height cross-size
 
     +tiny-screen()
-        top .8rem
-        right 1rem
+        top rem(13)
+        right rem(16)
 
 $modal-close--small
-    top 1rem
-    right 1rem
+    top rem(16)
+    right rem(16)
 
     +tiny-screen()
-        top .3rem
-        right .5rem
+        top rem(5)
+        right rem(8)
 
 $modal-header--closable
-    padding-right cross-size + 2rem
+    padding-right cross-size + rem(32)
 
 
 $modal-close--large
-    top 2.5rem
-    right 2.5rem
+    top rem(40)
+    right rem(40)
 
     +small-screen()
-        top 1.3rem
-        right 1.5rem
+        top rem(21)
+        right rem(24)
 
 $modal--hidden
     overflow hidden

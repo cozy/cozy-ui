@@ -1,36 +1,37 @@
 @require '../settings/breakpoints'
 @require '../settings/z-index'
 @require '../settings/palette'
+@require '../tools/mixins'
 
 /*------------------------------------*\
   Navigation
 \*------------------------------------*/
 
 $nav
-    margin     1.5rem 0
+    margin     rem(24) 0
     padding    0
     list-style none
 
     +medium-screen()
         display          flex
         justify-content  space-around
-        margin           .3125rem 0 .25rem
+        margin           rem(5 0 4)
         padding-right    0
 
 
 $nav-item
     position        relative
     z-index         $app-index
-    height          3rem
+    height          rem(48)
 
     &:hover::before
         content        ''
         position       absolute
         z-index        $below-index
-        border-radius  0 3px 3px 0
+        border-radius  rem(0 3 3 0)
         top 0
         left 0
-        right 1rem
+        right rem(16)
         bottom 0
         background     silver
 
@@ -39,10 +40,10 @@ $nav-item
             content none
 
     +medium-screen()
-        margin 0 .75rem
+        margin 0 rem(12)
         height        auto
         display       block
-        flex          0 0 2.5rem
+        flex          0 0 rem(40)
         padding-right 0
         &:hover::before
             content  none
@@ -50,7 +51,7 @@ $nav-item
 
 $nav-item-icon
     display inline-block
-    margin-right .6875rem
+    margin-right rem(11)
     color coolGrey
     fill currentColor
 
@@ -62,13 +63,13 @@ $nav-item-icon
 
     +medium-screen()
         display block
-        font-size 1.5rem
+        font-size rem(24)
         margin-right 0
         text-align center
 
         svg
-            width 1.5rem
-            height 1.5rem
+            width rem(24)
+            height rem(24)
 
 $nav-item-text
     +medium-screen()
@@ -78,8 +79,8 @@ $nav-item-text
 
 $nav-link
     display              flex
-    padding-left         1.5rem
-    padding-right        1rem
+    padding-left         rem(24)
+    padding-right        rem(16)
     line-height          1.5
     text-decoration      none
     color                slateGrey
@@ -87,7 +88,7 @@ $nav-link
     align-items          center
     flex                 1
     background-repeat    no-repeat
-    background-position  1.5rem center
+    background-position  rem(24) center
 
     &:visited
         color  slateGrey
@@ -97,7 +98,7 @@ $nav-link
 
     &.active // deprecated
     &.is-active
-        box-shadow   inset 4px 0 0 0 dodgerBlue
+        box-shadow   inset rem(4) 0 0 0 dodgerBlue
         font-weight  bold
 
         .c-nav-icon
@@ -109,10 +110,10 @@ $nav-link
         padding              0
         text-align           center
         color                slateGrey
-        font-size            .625rem
+        font-size            rem(10)
         line-height          1
         background-position  center top
-        background-size      1.5rem
+        background-size      rem(24)
 
         &.active // deprecated
         &.is-active

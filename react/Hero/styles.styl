@@ -1,4 +1,5 @@
 @require 'settings/breakpoints.styl'
+@require 'tools/mixins'
 
 .Hero
     margin-left auto
@@ -6,13 +7,13 @@
 
     &-title
         text-align center
-        margin 3rem 0
+        margin rem(48) 0
 
     &-subtitle
         margin-bottom 0
 
         +small-screen()
-            margin-top .5rem
+            margin-top rem(8)
 
     p
         line-height 1.25
@@ -26,12 +27,12 @@
             align-items center
 
     &-section
-        max-width 18.75rem
+        max-width rem(300)
         text-align center
 
         +small-screen()
             max-width auto
-            margin-bottom 2rem
+            margin-bottom rem(32)
 
     &-cta
         text-align center

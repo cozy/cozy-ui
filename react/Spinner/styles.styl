@@ -1,15 +1,16 @@
 @require '../../stylus/settings/palette'
 @require '../../stylus/settings/icons'
+@require '../../stylus/tools/mixins'
 
 .c-spinner
     display inline-block
-    margin 0 .5rem
+    margin 0 rem(8)
 
     &:before
         content ''
 
     p
-        margin-top  .9375rem
+        margin-top  rem(15)
         color       coolGrey
         line-height 1.5
 

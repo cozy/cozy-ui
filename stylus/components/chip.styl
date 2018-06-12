@@ -1,7 +1,8 @@
 @require 'settings/palette'
+@require 'tools/mixins'
 
-$chip-height=2.5rem
-$chip-font-size=1rem
+$chip-height = rem(40)
+$chip-font-size = rem(16)
 
 $chip
     border-radius ($chip-height / 2)
@@ -12,8 +13,8 @@ $chip
     line-height 1
     display inline-flex
     align-items center
-    margin-right .25rem
-    margin-bottom .25rem
+    margin-right rem(4)
+    margin-bottom rem(4)
 
 $round-chip
     width $chip-height
@@ -21,12 +22,12 @@ $round-chip
     justify-content center
 
 $chip-separator
-    width 1px
-    border-left 1px solid silver
+    width rem(1)
+    border-left rem(1) solid silver
     display inline-block
     height 100%
-    margin-left .5rem
-    margin-right .5rem
+    margin-left rem(8)
+    margin-right rem(8)
 
 $chip-button
     cursor pointer
