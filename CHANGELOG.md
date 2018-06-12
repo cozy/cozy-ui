@@ -1,3 +1,11 @@
+<a name="9.7.0"></a>
+# [9.7.0](https://github.com/cozy/cozy-ui/compare/v9.6.0...v9.7.0) (2018-06-12)
+
+
+### Features
+
+* bad icon does not throw an error ([9df4f3b](https://github.com/cozy/cozy-ui/commit/9df4f3b))
+
 <a name="9.6.0"></a>
 # [9.6.0](https://github.com/cozy/cozy-ui/compare/v9.5.0...v9.6.0) (2018-06-12)
 
