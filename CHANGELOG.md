@@ -1,3 +1,11 @@
+<a name="9.6.0"></a>
+# [9.6.0](https://github.com/cozy/cozy-ui/compare/v9.5.0...v9.6.0) (2018-06-12)
+
+
+### Features
+
+* add disabled option style ([739087b](https://github.com/cozy/cozy-ui/commit/739087b))
+
 <a name="9.5.0"></a>
 # [9.5.0](https://github.com/cozy/cozy-ui/compare/v9.4.0...v9.5.0) (2018-06-08)
 
