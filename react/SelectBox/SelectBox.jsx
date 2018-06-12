@@ -59,6 +59,7 @@ const Option = ({
   children,
   isSelected,
   isFocused,
+  isDisabled,
   innerProps,
   withCheckbox
 }) => (
@@ -66,7 +67,8 @@ const Option = ({
     {...innerProps}
     className={classNames(styles['select-option'], {
       [styles['select-option--selected']]: isSelected && !withCheckbox,
-      [styles['select-option--focused']]: isFocused
+      [styles['select-option--focused']]: isFocused,
+      [styles['select-option--disabled']]: isDisabled
     })}
   >
     {withCheckbox && (

@@ -13,16 +13,20 @@
     transition all .2s ease-out
     white-space normal /* otherwise the tick can be wrongly placed in Firefox */
 
-    &:hover
+    &:hover:not(.select-option--disabled)
         background-color paleGrey
         cursor pointer
 
-.select-option--focused
+.select-option--focused:not(.select-option--disabled)
     background-color paleGrey
 
 .select-option--selected
     background-color paleGrey
     border-left-color dodgerBlue
+
+.select-option--disabled
+    color silver
+    cursor not-allowed
 
 .select-option__checkbox
     margin-right .5rem
