@@ -25,14 +25,13 @@ function Icon(props) {
     anchor = `#${icon.id}`
   } else if (icon[0] === '#') {
     anchor = icon
-  } else {
+  } else if (icons[icon]) {
     anchor = icons[icon].id ? `#${icons[icon].id}` : icons[icon]
   }
 
   if (!anchor) {
-    throw new Error(
-      `Icon not found ${icon}.\nAvailable icons : ${Object.keys(icons)}`
-    )
+    console.warn(`Icon not found ${icon}.`)
+    return null
   }
 
   style = Object.assign({}, style)
