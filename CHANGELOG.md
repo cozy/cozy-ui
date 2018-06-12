@@ -1,3 +1,11 @@
+<a name="9.8.0"></a>
+# [9.8.0](https://github.com/cozy/cozy-ui/compare/v9.7.0...v9.8.0) (2018-06-12)
+
+
+### Features
+
+* add title classes ([8808a72](https://github.com/cozy/cozy-ui/commit/8808a72))
+
 <a name="9.7.0"></a>
 # [9.7.0](https://github.com/cozy/cozy-ui/compare/v9.6.0...v9.7.0) (2018-06-12)
 
