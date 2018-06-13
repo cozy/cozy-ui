@@ -1,3 +1,11 @@
+<a name="9.10.0"></a>
+# [9.10.0](https://github.com/cozy/cozy-ui/compare/v9.9.1...v9.10.0) (2018-06-13)
+
+
+### Features
+
+* Exposed initTranslation() and allowed polyglot prop for I18n ([45f4824](https://github.com/cozy/cozy-ui/commit/45f4824))
+
 <a name="9.9.1"></a>
 ## [9.9.1](https://github.com/cozy/cozy-ui/compare/v9.9.0...v9.9.1) (2018-06-13)
 
