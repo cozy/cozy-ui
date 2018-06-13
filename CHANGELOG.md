@@ -1,3 +1,16 @@
+<a name="9.9.0"></a>
+# [9.9.0](https://github.com/cozy/cozy-ui/compare/v9.8.1...v9.9.0) (2018-06-13)
+
+
+### Bug Fixes
+
+* modal width which can exceed the window 🌽 ([5511af1](https://github.com/cozy/cozy-ui/commit/5511af1))
+
+
+### Features
+
+* add rem() mixin ([ca262a3](https://github.com/cozy/cozy-ui/commit/ca262a3))
+
 <a name="9.8.1"></a>
 ## [9.8.1](https://github.com/cozy/cozy-ui/compare/v9.8.0...v9.8.1) (2018-06-13)
 
