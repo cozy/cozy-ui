@@ -1,3 +1,11 @@
+<a name="9.9.1"></a>
+## [9.9.1](https://github.com/cozy/cozy-ui/compare/v9.9.0...v9.9.1) (2018-06-13)
+
+
+### Bug Fixes
+
+* border on table divider ([d5840e2](https://github.com/cozy/cozy-ui/commit/d5840e2))
+
 <a name="9.9.0"></a>
 # [9.9.0](https://github.com/cozy/cozy-ui/compare/v9.8.1...v9.9.0) (2018-06-13)
 
