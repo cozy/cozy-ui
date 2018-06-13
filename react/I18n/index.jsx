@@ -20,9 +20,10 @@ export class I18n extends Component {
   }
 
   init(props) {
-    const { lang, dictRequire, context, defaultLang } = props
+    const { polyglot, lang, dictRequire, context, defaultLang } = props
 
-    this.translation = initTranslation(lang, dictRequire, context, defaultLang)
+    this.translation =
+      polyglot || initTranslation(lang, dictRequire, context, defaultLang)
     this.format = initFormat(lang, defaultLang)
   }
 
@@ -47,9 +48,14 @@ export class I18n extends Component {
 
 I18n.propTypes = {
   lang: PropTypes.string.isRequired, // current language.
-  dictRequire: PropTypes.func.isRequired, // A callback to load locales.
+  polyglot: PropTypes.object, // A polyglot instance.
+  dictRequire: PropTypes.func, // A callback to load locales.
   context: PropTypes.string, // current context.
   defaultLang: PropTypes.string // default language. By default is 'en'
+}
+
+I18n.defaultProps = {
+  defaultLang: DEFAULT_LANG
 }
 
 const i18nContextTypes = {
@@ -74,6 +80,6 @@ export const translate = () => WrappedComponent => {
   return Wrapper
 }
 
-export { extend } from './translation'
+export { initTranslation, extend } from './translation'
 
 export default I18n
