@@ -8,6 +8,8 @@ import { silver } from '../../stylus/settings/palette.json'
 const optionPadding = 0.25
 
 const fixedOptionsStyle = {
+  borderBottomLeftRadius: '4px',
+  borderBottomRightRadius: '4px',
   paddingTop: optionPadding + 'rem',
   paddingBottom: optionPadding + 'rem',
   borderTop: `1px solid ${silver}`,
