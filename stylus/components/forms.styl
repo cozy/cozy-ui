@@ -7,12 +7,13 @@
 
 @require '../settings/palette'
 @require '../components/button'
+@require '../tools/mixins'
 
-checkbox-size = 1rem
+checkbox-size = rem(16)
 
 $form
     .coz-form
-        margin  1em 0 .5em
+        margin  rem(16 0 8)
 
         a,
         a:visited
@@ -31,16 +32,16 @@ $form
         flex-direction  column
 
     .coz-form-desc
-        margin-bottom  .5em
+        margin-bottom  rem(8)
         line-height    1.5
 
     .coz-form-label // Deprecated
         display         block
         text-transform  uppercase
         color           coolGrey
-        font-size       .75rem
-        padding         .55em 0
-        margin-top      1em
+        font-size       rem(12)
+        padding         rem(9) 0
+        margin-top      rem(16)
 
     .coz-form-label--error // Deprecated
         display  none
@@ -54,20 +55,20 @@ $form-button
         display          flex
         flex-direction   row
         justify-content  flex-end
-        margin           1em 0 .5em
+        margin           rem(16 0 8)
 
         a
         button
         input[type=submit]
             flex    0 0 auto
-            margin  0 0 .5em .5em
+            margin  rem(0 0 8 8)
 
     .coz-form-controls--full
         a
         button
         input[type=submit]
             flex           0 0 100%
-            margin-bottom  .5em
+            margin-bottom  rem(8)
 
     .coz-form-controls--dispatch
         justify-content  space-between
@@ -76,7 +77,7 @@ $form-button
         button
         input[type=submit]
             flex  0 0 49%
-            margin 0 0 .5em
+            margin 0 0 rem(8)
 
             &:last-child
                 margin-left auto
@@ -88,65 +89,65 @@ $form-text
     input[type=email]
     input[type=url]
         display        inline-block
-        padding        .9em .75em .75em .9em
+        padding        rem(14) rem(12) rem(12) rem(14)
         box-sizing     border-box
-        border-radius  2px
-        border         1px solid silver
+        border-radius  rem(2)
+        border         rem(1) solid silver
         background     white
         color          black
 
         &::placeholder
             color      coolGrey
-            font-size  1rem
+            font-size  rem(16)
 
         &:focus
-            border      1px solid dodgerBlue
+            border      rem(1) solid dodgerBlue
             outline     0
 
         &:hover
-            border  1px solid coolGrey
+            border  rem(1) solid coolGrey
 
         &.error
-            border      1px solid pomegranate
+            border      rem(1) solid pomegranate
 
 
 $form-textarea
     textarea
         display        inline-block
-        padding        .9em .75em .75em .9em
+        padding        rem(14 12 12 14)
         box-sizing     border-box
-        border-radius  2px
-        border         1px solid silver
+        border-radius  rem(2)
+        border         rem(1) solid silver
         background     white
         color          black
 
         &::placeholder
             color      coolGrey
-            font-size  1rem
+            font-size  rem(16)
 
         &:focus
-            border      1px solid dodgerBlue
+            border      rem(1) solid dodgerBlue
             outline     0
 
         &:hover
-            border  1px solid coolGrey
+            border  rem(1) solid coolGrey
 
         &.error
-            border      1px solid pomegranate
+            border      rem(1) solid pomegranate
 
 
 $form-select
     select
         display              inline-block
-        padding              .75em .75em .9em
-        border-radius        4px
+        padding              rem(12 12 14)
+        border-radius        rem(4)
         box-sizing           border-box
-        border               1px solid silver
+        border               rem(1) solid silver
         background           white
         color                black
         appearance           none
         background-image     embedurl('../../assets/icons/ui/arrow.svg')
-        background-position  right 8px center
+        background-position  right rem(8) center
         background-repeat    no-repeat
 
         &::-ms-expand
@@ -154,16 +155,16 @@ $form-select
 
         &::placeholder
             color      slateGrey
-            font-size  1.05rem
+            font-size  rem(17)
 
         &:focus
-            border      1px solid dodgerBlue
+            border      rem(1) solid dodgerBlue
 
         &:hover
-            border  1px solid coolGrey
+            border  rem(1) solid coolGrey
 
         &.error
-            border      1px solid pomegranate
+            border      rem(1) solid pomegranate
             background  none
 
 
@@ -203,36 +204,36 @@ $form-checkbox
 
 $form-progress
     progress
-        margin         .5em 0
+        margin         rem(8) 0
         width          100%
-        height         .5em
+        height         rem(8)
         color          dodgerBlue
         background     paleGrey
         border         0
-        border-radius  1.25rem
+        border-radius  rem(18)
 
         // chrome and safari
         &::-webkit-progress-bar
             background     paleGrey
-            border-radius  1.25rem
+            border-radius  rem(18)
 
         &::-webkit-progress-value
             background     charcoalGrey
-            border-radius  1.25rem
+            border-radius  rem(18)
 
         // firefox
         &::-moz-progress-bar
             background     charcoalGrey
-            border-radius  1.25rem
+            border-radius  rem(18)
 
 // New styles
 $label
     display block
     text-transform uppercase
     color coolGrey
-    font-size .75rem
-    padding .55em 0
-    margin-top 1em
+    font-size rem(12)
+    padding rem(9) 0
+    margin-top rem(16)
 
     &.is-error
         color pomegranate
@@ -240,39 +241,39 @@ $label
 $input-text
     display inline-block
     width 100%
-    max-width 30rem
-    padding .8125rem 1rem
+    max-width rem(480)
+    padding rem(13 16)
     box-sizing border-box
-    border-radius .1875rem
-    border .0625rem solid silver
+    border-radius rem(3)
+    border rem(1) solid silver
     background white
-    font-size 1rem
+    font-size rem(16)
     line-height 1.25
     color black
     outline 0
 
     &::placeholder
         color coolGrey
-        font-size 1rem
+        font-size rem(16)
 
     &:focus
-        border .0625rem solid dodgerBlue
+        border rem(1) solid dodgerBlue
         outline 0
 
     &:hover
-        border .0625rem solid coolGrey
+        border rem(1) solid coolGrey
 
     &.is-error
     &:invalid
-        border .0625rem solid pomegranate
+        border rem(1) solid pomegranate
 
 $input-text--tiny
-    border-radius .125rem
-    padding .225rem .5rem .4rem
+    border-radius rem(2)
+    padding rem(4 8 6)
 
 $input-text--medium
-    border-radius .125rem
-    padding .485rem 1rem .64rem
+    border-radius rem(2)
+    padding rem(8 16 10)
 
 $input-text--fullwidth
     max-width 100%
@@ -280,14 +281,14 @@ $input-text--fullwidth
 $checkbox
     // To make sure that checkbox's wrapper have the height of the checkbox
     display flex
-    margin-bottom .5rem
+    margin-bottom rem(8)
 
     span
         position relative
         display inline-block
         height checkbox-size
         padding-left checkbox-size * 1.4
-        line-height 1rem
+        line-height rem(16)
         cursor pointer
 
         &::before
@@ -299,15 +300,15 @@ $checkbox
             box-sizing border-box
             width checkbox-size
             height checkbox-size
-            border-radius .125rem
+            border-radius rem(2)
 
         &::before
             transition box-shadow 350ms cubic-bezier(0, .89, .44, 1)
-            box-shadow inset 0 0 0 .125rem alpha(charcoalGrey, .25)
+            box-shadow inset 0 0 0 rem(2) alpha(charcoalGrey, .25)
             background-color white
 
         &:hover::before
-            box-shadow inset 0 0 0 .125rem dodgerBlue
+            box-shadow inset 0 0 0 rem(2) dodgerBlue
 
         &::after
             background-image embedurl('../../assets/icons/ui/check.svg')
@@ -338,7 +339,7 @@ $checkbox
         color pomegranate
 
         &::before
-            box-shadow inset 0 0 0 .125rem pomegranate
+            box-shadow inset 0 0 0 rem(2) pomegranate
             background-color alpha(pomegranate, .25)
 
 $radio
@@ -352,8 +353,8 @@ $radio
             content '•'
             color white
             text-align center
-            font-size 1rem
-            line-height .8125rem
+            font-size rem(16)
+            line-height rem(13)
 
 
 
@@ -361,16 +362,16 @@ $textarea
     @extend $input-text
     display block
     width 100%
-    min-height 7.5rem
+    min-height rem(120)
     resize vertical
 
 $textarea--tiny
     @extend $input-text--tiny
-    min-height 3rem
+    min-height rem(48)
 
 $textarea--medium
     @extend $input-text--medium
-    min-height 5rem
+    min-height rem(80)
 
 $textarea--fullwidth
     @extend $input-text--fullwidth
@@ -378,7 +379,8 @@ $textarea--fullwidth
 $select
     @extend $input-text
     appearance none
-    background embedurl('../../assets/icons/ui/icon-bottom-select.svg') right 1.25rem center / .875rem no-repeat
+    background embedurl('../../assets/icons/ui/icon-bottom-select.svg') right rem(20) center no-repeat
+    background-size rem(14)
 
     &::-ms-expand
         display  none
@@ -396,4 +398,4 @@ $field
     position relative
     display flex
     flex-direction column
-    margin .5rem 0 1rem
+    margin rem(8 0 16)

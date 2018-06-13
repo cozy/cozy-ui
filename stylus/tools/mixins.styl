@@ -26,11 +26,39 @@ use('../scripts/split.js')
 use('../scripts/deprecate.js')
 // @stylint on
 
+// Default Font-size
+$basefont ?= 16px
 
-// We need a base font-size for _px to em_ computation. We assume those size to
-// be 16px (as default desktop browsers), but it really don't care as well as
-// all relative units should be expressed in `em`
-basefont = 16px
+rem($value, $base = $basefont)
+    $max = length($value)
+
+    $remValues = ()
+    for $i in (0...$max)
+        push($remValues, _convert-to-rem($value[$i], $base))
+
+    return $remValues
+
+_convert-to-rem($px, $base)
+    if (typeof($px) == 'unit')
+        if ((unit($px) == '' || unit($px) == 'px') && ($px != 0))
+            return (round($px / $base, 3))rem
+        else
+            return 0
+
+/*
+    rem($value, $basefont)
+
+    rem() takes one or more numeric values in pixel and calculates the rem values from it.
+
+    NB: you don't have to explicitly write the `px` unit.
+
+    $value - The value in pixel you want to translate in rem. For multiple values you can use `rem(14 12)` for shorthand properties such as `margin`. ⚠ Multiples values should be separated by spaces.
+    $basefont - If you need to overwrite the default `$basefont` value of `16`
+
+    Weight: 1
+
+    Styleguide Tools.mixins.rem
+*/
 
 /*
     hide()

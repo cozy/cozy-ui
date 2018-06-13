@@ -1,5 +1,6 @@
 @require 'settings/palette.styl'
 @require 'components/popover.styl'
+@require 'tools/mixins'
 
 .c-menu
     position relative
@@ -10,8 +11,8 @@
     display    none
     position   absolute
     margin     0
-    margin-top 1px
-    min-width  220px
+    margin-top rem(1)
+    min-width  rem(220)
     // cuts the hover background properly (border-radius)
     overflow   hidden
     border     0
@@ -29,7 +30,7 @@
     display block
 
 .c-menu__btn
-    font-size 1rem
+    font-size rem(16)
     border 0
     cursor pointer
 
@@ -38,18 +39,18 @@
 .c-menu__btn:not([disabled]):not([aria-disabled=true]):focus
     background transparent
 
-$paddingItem = .5rem
+$paddingItem = rem(8)
 
 .c-menu__item
     cursor pointer
     padding   $paddingItem
 
 .c-menu__item-icon
-    $marginIcon = .75rem
+    $marginIcon = rem(12)
     margin-right $marginIcon
     // we need to compensate for the already present margin
     margin-left $marginIcon - $paddingItem
-    font-size 1.0625rem
+    font-size rem(17)
 
 .c-menu__item:hover
 .c-menu__item:focus

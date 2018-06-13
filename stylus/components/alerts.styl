@@ -1,5 +1,6 @@
 @require '../settings/z-index'
 @require '../components/button'
+@require '../tools/mixins'
 /*!
  * NOTIFICATIONS
  * =============
@@ -7,13 +8,13 @@
  * This file contains all needs for alerts
  */
 
-alert-width = 40rem
+alert-width = rem(640)
 
 $alert
     position fixed
     z-index $alert-index-mobile
     right 0
-    bottom 3rem
+    bottom rem(48)
     left 0
     color white
     opacity 1
@@ -22,7 +23,7 @@ $alert
 
     @media all and (min-width alert-width)
         z-index $alert-index
-        top 1rem
+        top rem(16)
         bottom auto
         text-align center
 
@@ -33,31 +34,31 @@ $alert-wrapper
     justify-content center
     box-sizing border-box
     width 100%
-    box-shadow 0 .375rem 1.125rem 0 rgba(50, 54, 63, .23)
+    box-shadow 0 rem(6) rem(18) 0 rgba(50, 54, 63, .23)
     background-color emerald
-    padding .8rem 1rem
+    padding rem(13 16)
 
     p
         margin 0
         line-height 1.5
 
     p + button
-        margin-left 1.5rem
+        margin-left rem(24)
 
     @media all and (min-width alert-width)
         width auto
         max-width alert-width
-        padding 1rem 1.5rem
-        border-radius .625rem
+        padding rem(16 24)
+        border-radius rem(10)
         text-align left
 
 $alert--hidden
-    transform translateY(5rem)
+    transform translateY(rem(80))
     opacity 0
     transition-timing-function ease-out
 
     @media all and (min-width alert-width)
-        transform translateY(-5rem)
+        transform translateY(rem(-80))
 
 $alert-title
     font-weight bold

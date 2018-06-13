@@ -1,4 +1,5 @@
 @require '../../stylus/settings/palette'
+@require '../../stylus/tools/mixins'
 
 .select-control__input
     width 0
@@ -7,8 +8,8 @@
 
 .select-option
     display block
-    padding .5rem
-    border-left 4px solid transparent
+    padding rem(8)
+    border-left rem(4) solid transparent
     color charcoalGrey
     transition all .2s ease-out
     white-space normal /* otherwise the tick can be wrongly placed in Firefox */
@@ -29,7 +30,7 @@
     cursor not-allowed
 
 .select-option__checkbox
-    margin-right .5rem
+    margin-right rem(8)
     vertical-align top
 
 .select-option--checkmark

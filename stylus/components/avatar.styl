@@ -1,4 +1,6 @@
+@require '../tools/mixins'
 @require '../settings/palette'
+@require '../tools/mixins'
 
 $avatar
     display inline-flex
@@ -10,18 +12,18 @@ $avatar
     color silver
 
 $avatar--small
-    width 2rem
-    height 2rem
-    font-size 1rem
+    width rem(32)
+    height rem(32)
+    font-size rem(16)
 
 $avatar--medium
-    width 4rem
-    height 4rem
-    font-size 2rem
+    width rem(64)
+    height rem(64)
+    font-size rem(32)
 
     svg
-        width 1.5rem
-        height 1.5rem
+        width rem(24)
+        height rem(24)
 
 $avatar-initials
     font-weight bold

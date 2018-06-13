@@ -1,4 +1,5 @@
 @require './popover'
+@require '../tools/mixins'
 
 $menu
     // These styles are needed for the menu to work and come directly from bosonic's source
@@ -22,7 +23,7 @@ $menu
     .coz-menu
         @extend $popover
         right 0
-        padding 5px 0
+        padding rem(5) 0
         margin 0
-        margin-top 1px
-        min-width 220px
+        margin-top rem(1)
+        min-width rem(220)
