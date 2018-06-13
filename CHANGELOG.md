@@ -1,3 +1,11 @@
+<a name="9.8.1"></a>
+## [9.8.1](https://github.com/cozy/cozy-ui/compare/v9.8.0...v9.8.1) (2018-06-13)
+
+
+### Bug Fixes
+
+* select box bottom border on fixed element 🐛 ([5c44e29](https://github.com/cozy/cozy-ui/commit/5c44e29))
+
 <a name="9.8.0"></a>
 # [9.8.0](https://github.com/cozy/cozy-ui/compare/v9.7.0...v9.8.0) (2018-06-12)
 
