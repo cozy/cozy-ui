@@ -70,7 +70,8 @@ module.exports = {
       name: 'Special',
       components: () => [
         '../react/Overlay/index.jsx',
-        '../react/Alerter/index.jsx'
+        '../react/Alerter/index.jsx',
+        '../react/PopupOpener/index.jsx'
       ]
     }
   ],
