@@ -88,7 +88,7 @@ $modal--fullscreen
 $modal-header
     @extend $elastic-bar
     margin 0 0 rem(16)
-    padding 'calc(%s - rem(5))' % medium-padding rem(48) 0 medium-padding
+    padding (medium-padding - rem(5)) rem(48) 0 medium-padding
     overflow visible
     min-height rem(40)
 
@@ -98,7 +98,7 @@ $modal-header
 
     +tiny-screen()
         margin-bottom rem(8)
-        padding 'calc(%s - rem(5))' % small-padding rem(32) 0 small-padding
+        padding (small-padding - rem(5)) rem(32) 0 small-padding
 
         h2
             font-size rem(20)
@@ -113,16 +113,16 @@ $modal-header--branded
         margin 0 auto
 
 $modal-header--small
-    padding 'calc(%s - rem(5))' % small-padding rem(48) 0 small-padding
+    padding (small-padding - rem(5)) rem(48) 0 small-padding
 
     +tiny-screen()
-        padding 'calc(%s - rem(5))' % tiny-padding rem(32) 0 tiny-padding
+        padding (tiny-padding - rem(5)) rem(32) 0 tiny-padding
 
 $modal-header--large
-    padding 'calc(%s - rem(5))' % large-padding rem(48) 0 large-padding
+    padding (large-padding - rem(5)) rem(48) 0 large-padding
 
     +small-screen()
-        padding 'calc(%s - rem(5))' % medium-padding rem(32) 0 medium-padding
+        padding (medium-padding - rem(5)) rem(32) 0 medium-padding
 
 $modal-content
     @extend $elastic-content
