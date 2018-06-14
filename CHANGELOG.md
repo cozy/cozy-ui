@@ -1,3 +1,11 @@
+<a name="9.10.1"></a>
+## [9.10.1](https://github.com/cozy/cozy-ui/compare/v9.10.0...v9.10.1) (2018-06-14)
+
+
+### Bug Fixes
+
+* cannot have stylus expression in css calc ([60dc2f1](https://github.com/cozy/cozy-ui/commit/60dc2f1))
+
 <a name="9.10.0"></a>
 # [9.10.0](https://github.com/cozy/cozy-ui/compare/v9.9.1...v9.10.0) (2018-06-13)
 
