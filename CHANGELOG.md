@@ -1,3 +1,11 @@
+<a name="9.11.0"></a>
+# [9.11.0](https://github.com/cozy/cozy-ui/compare/v9.10.1...v9.11.0) (2018-06-14)
+
+
+### Features
+
+* **IntentModal:** set height to 90vh ([7de2492](https://github.com/cozy/cozy-ui/commit/7de2492))
+
 <a name="9.10.1"></a>
 ## [9.10.1](https://github.com/cozy/cozy-ui/compare/v9.10.0...v9.10.1) (2018-06-14)
 
