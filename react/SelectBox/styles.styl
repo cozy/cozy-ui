@@ -35,3 +35,16 @@
 
 .select-option--checkmark
     float right
+
+.select__overlay
+    // Covers all the app so that clicking outside ends up
+    // not on an option (hence not selecting) but on the select
+    // so that anything under does not get clicked.
+    &::before
+        content '\00a0'
+        width 200vw
+        height 200vh
+        top -50vh
+        left -50vh
+        display block
+        position fixed
