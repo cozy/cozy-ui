@@ -1,3 +1,11 @@
+<a name="9.12.0"></a>
+# [9.12.0](https://github.com/cozy/cozy-ui/compare/v9.11.0...v9.12.0) (2018-06-15)
+
+
+### Features
+
+* add popup opener :sparkles: ([0a359f3](https://github.com/cozy/cozy-ui/commit/0a359f3))
+
 <a name="9.11.0"></a>
 # [9.11.0](https://github.com/cozy/cozy-ui/compare/v9.10.1...v9.11.0) (2018-06-14)
 
