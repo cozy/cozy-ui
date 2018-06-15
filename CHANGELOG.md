@@ -1,3 +1,11 @@
+<a name="9.12.1"></a>
+## [9.12.1](https://github.com/cozy/cozy-ui/compare/v9.12.0...v9.12.1) (2018-06-15)
+
+
+### Bug Fixes
+
+* IntentModal Cross position ([a2763a3](https://github.com/cozy/cozy-ui/commit/a2763a3)), closes [#545](https://github.com/cozy/cozy-ui/issues/545)
+
 <a name="9.12.0"></a>
 # [9.12.0](https://github.com/cozy/cozy-ui/compare/v9.11.0...v9.12.0) (2018-06-15)
 
