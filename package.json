@@ -130,23 +130,5 @@
       "__TARGET__": "browser",
       "cozy": {}
     }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
-    "rules": {
-      "scope-case": [0]
-    }
-  },
-  "release": {
-    "prepare": [
-      {
-        "path": "@semantic-release/changelog",
-        "changelogFile": "CHANGELOG.md"
-      },
-      "@semantic-release/git",
-      "@semantic-release/npm"
-    ]
   }
 }
