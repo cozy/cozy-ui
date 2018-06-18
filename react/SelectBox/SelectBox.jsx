@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import ReactSelect from 'react-select'
 import styles from './styles.styl'
 import Icon from '../Icon'
 import palette from '../../stylus/settings/palette.json'
+import withBreakpoints from '../helpers/withBreakpoints'
+import cx from 'classnames'
 
 const customStyles = {
   container: base => ({
@@ -102,13 +104,47 @@ const CheckboxOption = ({ ...props }) => <Option {...props} withCheckbox />
 
 CheckboxOption.propTypes = {}
 
-const SelectBox = ({ components, styles, ...props }) => (
-  <ReactSelect
-    components={{ Option, ...components }}
-    styles={{ ...customStyles, ...styles }}
-    {...props}
-  />
-)
+class SelectBox extends Component {
+  state = { isOpen: false }
+  handleOpen = () => {
+    this.setState({ isOpen: true })
+  }
+
+  handleClose = () => {
+    this.setState({ isOpen: false })
+  }
+
+  render() {
+    const {
+      className,
+      components,
+      styles: reactSelectStyles,
+      breakpoints: { isMobile },
+      ...props
+    } = this.props
+    const showOverlay = this.state.isOpen && isMobile
+    return (
+      <ReactSelect
+        components={{ Option, ...components }}
+        styles={{ ...customStyles, ...reactSelectStyles }}
+        onMenuOpen={this.handleOpen}
+        onMenuClose={this.handleClose}
+        {...props}
+        onBlur={this.onBlur}
+        onFocus={this.onFocus}
+        onChange={this.onChange}
+        className={cx(
+          className,
+          showOverlay ? styles['select__overlay'] : null
+        )}
+        // react-select temporarily adds className to its innerComponents
+        // but this behavior will soon be removed. For the moment, we
+        // cancel it by setting it to empty string
+        classNamePrefix=""
+      />
+    )
+  }
+}
 
 SelectBox.propTypes = {
   components: PropTypes.object,
@@ -122,5 +158,5 @@ SelectBox.defaultProps = {
 
 const components = ReactSelect.components
 
-export default SelectBox
+export default withBreakpoints()(SelectBox)
 export { Option, CheckboxOption, reactSelectControl, components }
