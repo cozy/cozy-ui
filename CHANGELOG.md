@@ -1,3 +1,11 @@
+<a name="9.13.0"></a>
+# [9.13.0](https://github.com/cozy/cozy-ui/compare/v9.12.1...v9.13.0) (2018-06-18)
+
+
+### Features
+
+* **selectbox:** adds overlay for outside clicks not to trigger anything ([9c9dc0b](https://github.com/cozy/cozy-ui/commit/9c9dc0b))
+
 <a name="9.12.1"></a>
 ## [9.12.1](https://github.com/cozy/cozy-ui/compare/v9.12.0...v9.12.1) (2018-06-15)
 
