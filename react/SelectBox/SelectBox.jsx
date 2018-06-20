@@ -131,9 +131,6 @@ class SelectBox extends Component {
         onMenuOpen={this.handleOpen}
         onMenuClose={this.handleClose}
         {...props}
-        onBlur={this.onBlur}
-        onFocus={this.onFocus}
-        onChange={this.onChange}
         className={cx(
           className,
           showOverlay ? styles['select__overlay'] : null
