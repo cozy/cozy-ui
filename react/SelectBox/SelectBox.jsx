@@ -120,6 +120,7 @@ class SelectBox extends Component {
       components,
       styles: reactSelectStyles,
       breakpoints: { isMobile },
+      classNamePrefix,
       ...props
     } = this.props
     const showOverlay = this.state.isOpen && isMobile
@@ -140,7 +141,7 @@ class SelectBox extends Component {
         // react-select temporarily adds className to its innerComponents
         // but this behavior will soon be removed. For the moment, we
         // cancel it by setting it to empty string
-        classNamePrefix=""
+        classNamePrefix={classNamePrefix || ""}
       />
     )
   }
