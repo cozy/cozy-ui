@@ -69,9 +69,13 @@ $selectionbar
             top              auto
             bottom           0
             justify-content  flex-start
+            box-sizing       content-box
+            width            calc(100% - 2rem)
             height           rem(48)
             padding-left     rem(16)
             padding-right    rem(16)
+            // iPhone X environment tweak
+            padding-bottom env(safe-area-inset-bottom)
 
             .coz-selectionbar-count span
             .coz-action-moveto
@@ -83,6 +87,9 @@ $selectionbar
             .coz-selectionbar-separator
                 margin   0 0 0 rem(16)
 
-
             .coz-selectionbar-label
                 @extend $visuallyhidden-mobile
+
+            .coz-action-close
+                top auto
+                transform none
