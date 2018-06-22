@@ -77,7 +77,8 @@ $app
         flex 0 0 auto
 
     main,
-    main > [role=contentinfo]
+    main > [role=contentinfo], // Deprecated
+    main > [role=main]
         position relative
         display flex
         flex-direction column
@@ -90,8 +91,14 @@ $app
     +medium-screen()
         display block
 
+        // iPhone X environment tweak
+        main
+            padding-left env(safe-area-inset-left)
+            padding-right env(safe-area-inset-right)
+
         main,
-        main > [role=contentinfo]
+        main > [role=contentinfo], // Deprecated
+        main > [role=main]
             display block
             overflow visible
 
@@ -116,7 +123,8 @@ $app-2panes-sticky
         flex 0 0 auto
 
     main,
-    main > [role=contentinfo]
+    main > [role=contentinfo], // Deprecated
+    main > [role=main]
         height auto
 
     +medium-screen()

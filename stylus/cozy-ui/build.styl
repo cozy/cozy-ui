@@ -28,14 +28,11 @@ colors=json('../settings/palette.json', { hash: true })
 /*------------------------------------*\
   Objects
 \*------------------------------------*/
-
 // Layout
-.o-layout--2panes
-    @extend $app-2panes-sticky
+@require '../../react/Layout/Layout.styl'
 
 // Sidebar
-.o-sidebar
-    @extend $sidebar
+@require '../../react/Sidebar/styles.styl'
 
 // Form field
 .o-field
