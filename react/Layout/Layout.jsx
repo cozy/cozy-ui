@@ -7,7 +7,7 @@ export const Layout = ({ children, className, monoColumn, ...rest }) => {
   return (
     <div
       className={cx(
-        monoColumn ? styles['o-layout'] : styles['o-layout--2panes'],
+        monoColumn ? styles['o-layout'] : styles['o-layout-2panes'],
         className
       )}
       {...rest}
