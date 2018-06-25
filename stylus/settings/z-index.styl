@@ -20,8 +20,8 @@
     $below-index        - **index -1** Layer below the app, mostly for hiding purpose
     $app-index          - **index 0** App index, the ground zero.
     $alert-index-mobile - **index 10** Alert index like success, errors, infos *mobile only*
-    $bar-index          - **index 20** Bar index, not actually used, just as reference
     $nav-index          - **index 20** Nav index
+    $bar-index          - **index 21** Bar index equals Nav index + 1, not actually used, just as reference.
     $selection-index    - **index 30** Selection bar index, with actions for selected items
     $popover-index      - **index 40** Popover index used by dropdown menu for example
     $overlay            - **index 50** Overlay index for modals background
@@ -35,8 +35,8 @@
 $below-index        = -1
 $app-index          = 0
 $alert-index-mobile = 10
-$bar-index          = 20 // Not actually used, just as reference
 $nav-index          = 20
+$bar-index          = $nav-index + 1 // Not actually used, just as reference
 $selection-index    = 30
 $popover-index      = 40
 $overlay-index      = 50
