@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './Layout.styl'
+import styles from './styles.styl'
 import cx from 'classnames'
 
 export const Layout = ({ children, className, monoColumn, ...rest }) => {
