@@ -106,26 +106,6 @@ const { Button } = require('./index');
 </div>
 ```
 
-#### Using Links
-
-```
-const { ButtonLink } = require('./index');
-<div>
-  <p>
-    <ButtonLink size="tiny" href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
-  </p>
-  <p>
-    <ButtonLink size="small" href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
-  </p>
-  <p>
-    <ButtonLink href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
-  </p>
-  <p>
-    <ButtonLink size="large" href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
-  </p>
-</div>
-```
-
 ### Subtle Buttons
 Subtle buttons are buttons without background and borders, wich look "inverted" compared to the basic Buttons.
 
@@ -151,6 +131,32 @@ const { Button } = require('./index');
     <Button subtle busy theme='secondary' label='Busy secondary'  onClick={() => alert('Clicked on Busy secondary')} />
     <Button subtle busy theme='highlight' label='Busy highlight'  onClick={() => alert('Clicked on Busy highlight')} />
     <Button subtle busy theme='danger' label='Busy danger'  onClick={() => alert('Clicked on Busy danger')} />
+  </p>
+  <p>
+    <Button subtle icon='cozy' label='Cozy' />
+  </p>
+</div>
+```
+
+#### Using Links
+
+```
+const { ButtonLink } = require('./index');
+<div>
+  <p>
+    <ButtonLink size="tiny" href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
+  </p>
+  <p>
+    <ButtonLink size="small" href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
+  </p>
+  <p>
+    <ButtonLink href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
+  </p>
+  <p>
+    <ButtonLink size="large" href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
+  </p>
+  <p>
+    <ButtonLink subtle icon='cozy' href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
   </p>
 </div>
 ```
