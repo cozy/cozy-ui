@@ -14,6 +14,7 @@ const importIcons = function () {
     'icon-check-circleless',
     'icon-clock',
     'icon-cozy',
+    'icon-cozy-negative',
     'icon-cross',
     'icon-delete',
     'icon-destroy',
