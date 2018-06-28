@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Media.styl'
+import styles from './styles.styl'
 import cx from 'classnames'
 
 /**
