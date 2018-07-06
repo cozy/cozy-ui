@@ -42,6 +42,7 @@ module.exports = {
         '../react/Media/Media.jsx',
         '../react/MidEllipsis/index.jsx',
         '../react/Modal/index.jsx',
+        '../react/Accordion/index.jsx',
         '../react/Text/index.jsx',
         '../react/Empty/index.jsx'
       ]
