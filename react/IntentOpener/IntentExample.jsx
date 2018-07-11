@@ -1,15 +1,14 @@
 import React from 'react'
-import IntentHeader from '../IntentHeader'
+import IntentWrapper from '../IntentWrapper'
 
 const IntentExample = function({ onComplete, action, doctype, options }) {
   return (
-    <div>
-      <IntentHeader
-        appIcon={'http://lorempixel.com/90/90/cats'}
-        appName="IntentExample"
-        appEditor="EditorExample"
-      />
-      <p style={{ margin: '1rem' }}>
+    <IntentWrapper
+      appIcon={'http://lorempixel.com/90/90/cats'}
+      appName="IntentExample"
+      appEditor="EditorExample"
+    >
+      <p>
         Action: {action}
         <br />
         Doctype: {doctype}
@@ -19,7 +18,7 @@ const IntentExample = function({ onComplete, action, doctype, options }) {
         <br />
         <button onClick={onComplete}>Click to complete intent</button>
       </p>
-    </div>
+    </IntentWrapper>
   )
 }
 

@@ -218,6 +218,25 @@ const { ModalDescription, ModalBrandedHeader } = Modal;
 </div>
 ```
 
+#### Header Icon
+
+```
+const { ModalContent } = Modal;
+
+<div>
+  <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
+    Toggle modal
+  </button>
+  {state.modalDisplayed &&
+    <Modal
+        dismissAction={()=>setState({ modalDisplayed: false})} >
+      <ModalContent className="u-mt-half" iconSrc="cozy" iconDest="cozy-negative" service="true">
+        { content.ada.long }
+      </ModalContent>
+    </Modal>}
+</div>
+```
+
 ### Panes
 
 ```

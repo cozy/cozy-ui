@@ -112,6 +112,64 @@ $modal-header--branded
         max-height rem(56)
         margin 0 auto
 
+$modal-header-icon
+    display flex
+    align-items center
+    justify-content center
+    margin 0 0 rem(16)
+
+$modal-header-icon--ghost
+    @extend $modal-header-icon
+    position absolute
+    left 0
+    right 0
+    top rem(24)
+    margin rem(8) 0
+    opacity 0
+    transition all 200ms ease-in
+
+$modal-header-icon--ghost-active
+    top rem(8)
+    opacity 1
+
+$header-icon
+    width rem(56)
+    height rem(56)
+    margin 0 rem(16)
+
+$header-icon--ghost
+    width rem(32)
+    height rem(32)
+    margin 0 rem(8)
+
+$header-exchange
+    width rem(20)
+    height rem(20)
+
+$header-exchange--ghost
+    width rem(12)
+    height rem(12)
+
+$header-icon-service
+    box-sizing border-box
+    position relative
+    bottom rem(-12)
+    margin 0 rem(16) 0 rem(-32)
+    box-shadow 0 0 0 rem(2) white
+    border rem(2) solid silver
+    border-radius 50%
+    width rem(28)
+    height rem(28)
+    padding rem(2)
+    background-color white
+
+$header-icon-service--ghost
+    @extend $header-icon-service
+    bottom rem(-8)
+    margin 0 rem(8) 0 rem(-19)
+    width rem(16)
+    height rem(16)
+
 $modal-header--small
     padding (small-padding - rem(5)) rem(48) 0 small-padding
 
@@ -123,6 +181,19 @@ $modal-header--large
 
     +small-screen()
         padding (medium-padding - rem(5)) rem(32) 0 medium-padding
+
+$modal-header-app
+    display flex
+    align-items center
+    font-size rem(20)
+    color charcoalGrey
+
+$modal-header-app-editor
+    font-weight normal
+
+$modal-header-app-icon
+    height rem(18)
+    margin-right rem(8)
 
 $modal-content
     @extend $elastic-content
@@ -226,6 +297,10 @@ $modal-close--large
     +small-screen()
         top rem(21)
         right rem(24)
+
+$modal-close--notitle
+    top rem(12)
+    right rem(12)
 
 $modal--hidden
     overflow hidden

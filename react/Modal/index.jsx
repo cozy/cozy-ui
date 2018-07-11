@@ -9,9 +9,94 @@ import migrateProps from '../helpers/migrateProps'
 import palette from '../../stylus/settings/palette.json'
 import Portal from 'preact-portal'
 
-const ModalContent = ({ children, className }) => (
-  <div className={cx(styles['c-modal-content'], className)}>{children}</div>
-)
+class ModalContent extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { displayGhostHeader: false }
+  }
+
+  componentDidMount() {
+    this.scrollingContent.addEventListener('scroll', this.handleScroll, {
+      passive: true
+    })
+  }
+
+  componentWillUnmount() {
+    this.scrollingContent.removeEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll = () => {
+    if (
+      !this.state.displayGhostHeader &&
+      this.scrollingContent.scrollTop > 56
+    ) {
+      this.setState(() => ({ displayGhostHeader: true }))
+    } else if (
+      this.state.displayGhostHeader &&
+      this.scrollingContent.scrollTop < 56
+    ) {
+      this.setState(() => ({ displayGhostHeader: false }))
+    }
+  }
+
+  render() {
+    const { iconSrc, iconDest, service, children, className } = this.props
+
+    const { displayGhostHeader } = this.state
+
+    return (
+      <div
+        className={cx(styles['c-modal-content'], className)}
+        ref={div => {
+          this.scrollingContent = div
+        }}
+      >
+        {iconSrc &&
+          iconDest && (
+            <div>
+              <h2 className={cx(styles['c-modal-header--icon'], className)}>
+                <Icon icon={iconSrc} className={styles['c-header-icon']} />
+                {service && (
+                  <Icon
+                    icon="connector"
+                    color={palette['silver']}
+                    className={styles['c-header-service']}
+                  />
+                )}
+                <Icon
+                  icon="exchange"
+                  className={styles['c-header-exchange']}
+                  color={palette['coolGrey']}
+                />
+                <Icon icon={iconDest} className={styles['c-header-icon']} />
+              </h2>
+              <div
+                className={cx(styles['c-header-icon--ghost'], {
+                  [styles['is-active']]: displayGhostHeader
+                })}
+              >
+                <Icon icon={iconSrc} className={styles['c-header-icon']} />
+                {service && (
+                  <Icon
+                    icon="connector"
+                    color={palette['silver']}
+                    className={styles['c-header-service']}
+                  />
+                )}
+                <Icon
+                  icon="exchange"
+                  className={styles['c-header-exchange']}
+                  color={palette['coolGrey']}
+                />
+                <Icon icon={iconDest} className={styles['c-header-icon']} />
+              </div>
+            </div>
+          )}
+        {children}
+      </div>
+    )
+  }
+}
 
 const ModalDescription = ModalContent
 
@@ -36,12 +121,29 @@ const ModalBrandedHeader = ({ logo, bg, className, style = {} }) => (
   </h2>
 )
 
-const ModalHeader = ({ title, children, className, style }) => {
+const ModalHeader = ({
+  title,
+  children,
+  className,
+  appIcon,
+  appName,
+  appEditor,
+  style
+}) => {
   const isTitle = typeof children === 'string'
   return (
     <div className={cx(styles['c-modal-header'], className)} style={style}>
       {title && <h2>{title}</h2>}
       {isTitle ? <h2>{children}</h2> : children}
+      {appName && (
+        <h2 className={styles['c-modal-app']}>
+          {appIcon && <img className={styles['c-app-icon']} src={appIcon} />}
+          {appEditor && (
+            <span className={styles['c-app-editor']}>{appEditor}&nbsp;</span>
+          )}
+          {appName}
+        </h2>
+      )}
     </div>
   )
 }
@@ -177,7 +279,9 @@ class Modal extends Component {
             >
               {closable && (
                 <ModalCross
-                  className={crossClassName}
+                  className={cx(crossClassName, {
+                    [styles['c-modal-close--notitle']]: !title
+                  })}
                   onClick={dismissAction}
                   color={crossColor}
                 />
@@ -260,6 +364,17 @@ ModalBrandedHeader.propTypes = {
   bg: PropTypes.string.isRequired,
   /** `logo` should be a path to any type of image file supported by browsers */
   logo: PropTypes.string.isRequired
+}
+
+ModalHeader.propTypes = {
+  appIcon: PropTypes.string,
+  appEditor: PropTypes.string,
+  appName: PropTypes.string
+}
+
+ModalContent.propTypes = {
+  iconSrc: PropTypes.node,
+  iconDest: PropTypes.node
 }
 
 const EnhancedModal = migrateProps([
