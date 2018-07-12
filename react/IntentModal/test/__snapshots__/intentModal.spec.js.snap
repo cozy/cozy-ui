@@ -8,6 +8,7 @@ exports[`IntentModal component renders as expected 1`] = `
   crossColor={undefined}
   description={undefined}
   dismissAction={[Function]}
+  height={undefined}
   into={undefined}
   mobileFullscreen={false}
   overflowHidden={true}
@@ -21,6 +22,7 @@ exports[`IntentModal component renders as expected 1`] = `
   size="small"
   spacing={undefined}
   title={undefined}
+  width={undefined}
   wrapperClassName={undefined}
 >
   <IntentIframe

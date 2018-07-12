@@ -131,6 +131,8 @@ class Modal extends Component {
       crossColor,
       into,
       size,
+      height,
+      width,
       spacing,
       mobileFullscreen,
       overlayClassName,
@@ -144,6 +146,7 @@ class Modal extends Component {
       secondaryAction,
       secondaryType
     } = this.props
+    const style = Object.assign({}, height && { height }, width && { width })
     const maybeWrapInPortal = children =>
       into ? <Portal into={into}>{children}</Portal> : children
     return maybeWrapInPortal(
@@ -160,6 +163,7 @@ class Modal extends Component {
               },
               wrapperClassName
             )}
+            style={style}
             onClick={closable && this.handleOutsideClick}
           >
             <div
@@ -237,6 +241,8 @@ Modal.propTypes = {
    to control the rendering destination of the Modal */
   into: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge', 'xxlarge']),
+  height: PropTypes.string,
+  width: PropTypes.string,
   spacing: PropTypes.oneOf(['small', 'large']),
   /** If you want your modal taking all the screen on mobile */
   mobileFullscreen: PropTypes.bool,
