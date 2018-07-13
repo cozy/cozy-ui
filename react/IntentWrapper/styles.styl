@@ -1,0 +1,15 @@
+@require 'settings/palette.styl'
+@require 'tools/mixins'
+@require 'components/modals'
+
+.intentWrapper
+    @extend $modal
+
+    .intentHeader
+        display flex
+        align-items center
+        padding rem(4 16)
+        margin 0
+
+    .intentContent [class^='c-header-icon--ghost']
+        margin 0
