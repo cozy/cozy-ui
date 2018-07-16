@@ -124,13 +124,15 @@ class ActionMenu extends Component {
   }
 
   handleMenuRef = menu => {
-    // FIXME
     this.menuNode = ReactDOM.findDOMNode(menu) // eslint-disable-line react/no-find-dom-node
   }
 
   handleWrapperRef = wrapper => {
-    // FIXME
     this.wrapperNode = ReactDOM.findDOMNode(wrapper) // eslint-disable-line react/no-find-dom-node
+  }
+
+  handleOverlayRef = overlay => {
+    this.overlayNode = ReactDOM.findDOMNode(overlay) // eslint-disable-line react/no-find-dom-node
   }
 
   render() {
@@ -143,7 +145,8 @@ class ActionMenu extends Component {
       >
         <Overlay
           style={{ opacity: closing ? 0 : 1 }}
-          onClick={this.animateClose}
+          ref={this.handleOverlayRef}
+          onClick={e => e.target === this.overlayNode && this.animateClose()}
           onEscape={this.animateClose}
         >
           <div className={styles['c-actionmenu']} ref={this.handleMenuRef}>
