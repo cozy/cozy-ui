@@ -218,10 +218,13 @@ const { ModalDescription, ModalBrandedHeader } = Modal;
 </div>
 ```
 
-#### Header Icon
+#### Animated Content Header
 
 ```
-const { ModalContent } = Modal;
+const { ModalContent, AnimatedContentHeader } = Modal;
+
+// heigth 128px
+const animatedHeader = <img src="https://cozy.io/fr/images/cozy-logo-name-horizontal-blue.svg" />;
 
 <div>
   <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
@@ -229,8 +232,11 @@ const { ModalContent } = Modal;
   </button>
   {state.modalDisplayed &&
     <Modal
-        dismissAction={()=>setState({ modalDisplayed: false})} >
-      <ModalContent className="u-mt-half" iconSrc="cozy" iconDest="cozy-negative" service="true">
+        dismissAction={()=>setState({ modalDisplayed: false})} mobileFullscreen >
+      <ModalContent className="u-mt-half">
+        <AnimatedContentHeader>
+          { animatedHeader }
+        </AnimatedContentHeader>
         { content.ada.long }
       </ModalContent>
     </Modal>}

@@ -9,10 +9,28 @@ import migrateProps from '../helpers/migrateProps'
 import palette from '../../stylus/settings/palette.json'
 import Portal from 'preact-portal'
 
+class AnimatedContentHeader extends Component {
+  render() {
+    return this.props.children
+  }
+}
+
 class ModalContent extends Component {
   constructor(props) {
     super(props)
     this.state = { displayGhostHeader: false }
+
+    const { children } = this.props
+    // extract the animated header component
+    this.animatedHeader = React.Children.toArray(children).find(
+      child => child.nodeName === AnimatedContentHeader
+    )
+    this.childrenToRender = this.animatedHeader
+      ? React.Children.map(
+          children,
+          child => (child.nodeName !== AnimatedContentHeader ? child : null)
+        )
+      : children
   }
 
   componentDidMount() {
@@ -26,21 +44,26 @@ class ModalContent extends Component {
   }
 
   handleScroll = () => {
+    const { headerHeight } = this
+    if (!headerHeight && this.contentHeader.clientHeight) {
+      this.headerHeight = this.contentHeader.clientHeight
+      return
+    }
     if (
       !this.state.displayGhostHeader &&
-      this.scrollingContent.scrollTop > 56
+      this.scrollingContent.scrollTop > headerHeight - 20
     ) {
       this.setState(() => ({ displayGhostHeader: true }))
     } else if (
       this.state.displayGhostHeader &&
-      this.scrollingContent.scrollTop < 56
+      this.scrollingContent.scrollTop < headerHeight - 20
     ) {
       this.setState(() => ({ displayGhostHeader: false }))
     }
   }
 
   render() {
-    const { iconSrc, iconDest, service, children, className } = this.props
+    const { className } = this.props
 
     const { displayGhostHeader } = this.state
 
@@ -51,48 +74,26 @@ class ModalContent extends Component {
           this.scrollingContent = div
         }}
       >
-        {iconSrc &&
-          iconDest && (
-            <div>
-              <h2 className={cx(styles['c-modal-header--icon'], className)}>
-                <Icon icon={iconSrc} className={styles['c-header-icon']} />
-                {service && (
-                  <Icon
-                    icon="connector"
-                    color={palette['silver']}
-                    className={styles['c-header-service']}
-                  />
-                )}
-                <Icon
-                  icon="exchange"
-                  className={styles['c-header-exchange']}
-                  color={palette['coolGrey']}
-                />
-                <Icon icon={iconDest} className={styles['c-header-icon']} />
-              </h2>
-              <div
-                className={cx(styles['c-header-icon--ghost'], {
-                  [styles['is-active']]: displayGhostHeader
-                })}
-              >
-                <Icon icon={iconSrc} className={styles['c-header-icon']} />
-                {service && (
-                  <Icon
-                    icon="connector"
-                    color={palette['silver']}
-                    className={styles['c-header-service']}
-                  />
-                )}
-                <Icon
-                  icon="exchange"
-                  className={styles['c-header-exchange']}
-                  color={palette['coolGrey']}
-                />
-                <Icon icon={iconDest} className={styles['c-header-icon']} />
-              </div>
+        {this.animatedHeader && (
+          <div
+            className={this.animatedHeader.className}
+            ref={div => {
+              this.contentHeader = div
+            }}
+          >
+            <h2 className={styles['c-modal-illu-header']}>
+              {this.animatedHeader.children}
+            </h2>
+            <div
+              className={cx(styles['c-modal-illu-header--ghost'], {
+                [styles['is-active']]: displayGhostHeader
+              })}
+            >
+              {this.animatedHeader.children}
             </div>
-          )}
-        {children}
+          </div>
+        )}
+        {this.childrenToRender}
       </div>
     )
   }
@@ -420,6 +421,7 @@ Object.assign(EnhancedModal, {
   ModalSection,
   ModalFooter,
   ModalHeader,
+  AnimatedContentHeader,
   ModalBrandedHeader,
   ModalDescription
 })
@@ -431,6 +433,7 @@ export {
   ModalSection,
   ModalFooter,
   ModalHeader,
+  AnimatedContentHeader,
   ModalTitle,
   ModalButtons,
   ModalBrandedHeader,
