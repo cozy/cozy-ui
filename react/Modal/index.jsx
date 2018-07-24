@@ -90,7 +90,7 @@ class ModalContent extends Component {
       >
         {this.animatedHeader && (
           <div
-            className={this.animatedHeader.className}
+            className={this.animatedHeader.attributes.className}
             ref={div => {
               this.contentHeader = div
             }}
@@ -99,9 +99,13 @@ class ModalContent extends Component {
               {this.animatedHeader.children}
             </h2>
             <div
-              className={cx(styles['c-modal-illu-header--ghost'], {
-                [styles['is-active']]: displayGhostHeader
-              })}
+              className={cx(
+                styles['c-modal-illu-header--ghost'],
+                this.animatedHeader.attributes.activeClassName,
+                {
+                  [styles['is-active']]: displayGhostHeader
+                }
+              )}
             >
               {this.animatedHeader.children}
             </div>
