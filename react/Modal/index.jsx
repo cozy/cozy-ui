@@ -15,6 +15,19 @@ class AnimatedContentHeader extends Component {
   }
 }
 
+function _getChildrenToRender(children) {
+  return React.Children.map(
+    children,
+    child => (child && child.nodeName !== AnimatedContentHeader ? child : null)
+  )
+}
+
+function _getAnimatedHeader(children) {
+  return React.Children.toArray(children).find(
+    child => child && child.nodeName === AnimatedContentHeader
+  )
+}
+
 class ModalContent extends Component {
   constructor(props) {
     super(props)
@@ -22,28 +35,18 @@ class ModalContent extends Component {
 
     const { children } = this.props
     // extract the animated header component
-    this.animatedHeader = React.Children.toArray(children).find(
-      child => child.nodeName === AnimatedContentHeader
-    )
+    this.animatedHeader = _getAnimatedHeader(children)
     this.childrenToRender = this.animatedHeader
-      ? React.Children.map(
-          children,
-          child => (child.nodeName !== AnimatedContentHeader ? child : null)
-        )
+      ? _getChildrenToRender(children)
       : children
   }
 
   componentWillUpdate() {
     const { children } = this.props
     // extract the animated header component
-    this.animatedHeader = React.Children.toArray(children).find(
-      child => child.nodeName === AnimatedContentHeader
-    )
+    this.animatedHeader = _getAnimatedHeader(children)
     this.childrenToRender = this.animatedHeader
-      ? React.Children.map(
-          children,
-          child => (child.nodeName !== AnimatedContentHeader ? child : null)
-        )
+      ? _getChildrenToRender(children)
       : children
   }
 
