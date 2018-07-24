@@ -33,6 +33,20 @@ class ModalContent extends Component {
       : children
   }
 
+  componentWillUpdate() {
+    const { children } = this.props
+    // extract the animated header component
+    this.animatedHeader = React.Children.toArray(children).find(
+      child => child.nodeName === AnimatedContentHeader
+    )
+    this.childrenToRender = this.animatedHeader
+      ? React.Children.map(
+          children,
+          child => (child.nodeName !== AnimatedContentHeader ? child : null)
+        )
+      : children
+  }
+
   componentDidMount() {
     this.scrollingContent.addEventListener('scroll', this.handleScroll, {
       passive: true
