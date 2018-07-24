@@ -31,23 +31,27 @@ function _getAnimatedHeader(children) {
 class ModalContent extends Component {
   constructor(props) {
     super(props)
-    this.state = { displayGhostHeader: false }
-
     const { children } = this.props
-    // extract the animated header component
-    this.animatedHeader = _getAnimatedHeader(children)
-    this.childrenToRender = this.animatedHeader
-      ? _getChildrenToRender(children)
-      : children
+    const animatedHeader = _getAnimatedHeader(children)
+    this.state = {
+      displayGhostHeader: false,
+      animatedHeader,
+      childrenToRender: animatedHeader
+        ? _getChildrenToRender(children)
+        : children
+    }
   }
 
   componentWillUpdate() {
     const { children } = this.props
     // extract the animated header component
-    this.animatedHeader = _getAnimatedHeader(children)
-    this.childrenToRender = this.animatedHeader
-      ? _getChildrenToRender(children)
-      : children
+    const animatedHeader = _getAnimatedHeader(children)
+    this.setState(() => ({
+      animatedHeader,
+      childrenToRender: animatedHeader
+        ? _getChildrenToRender(children)
+        : children
+    }))
   }
 
   componentDidMount() {
@@ -82,7 +86,7 @@ class ModalContent extends Component {
   render() {
     const { className } = this.props
 
-    const { displayGhostHeader } = this.state
+    const { displayGhostHeader, animatedHeader, childrenToRender } = this.state
 
     return (
       <div
@@ -91,30 +95,30 @@ class ModalContent extends Component {
           this.scrollingContent = div
         }}
       >
-        {this.animatedHeader && (
+        {animatedHeader && (
           <div
-            className={this.animatedHeader.attributes.className}
+            className={animatedHeader.attributes.className}
             ref={div => {
               this.contentHeader = div
             }}
           >
             <h2 className={styles['c-modal-illu-header']}>
-              {this.animatedHeader.children}
+              {animatedHeader.children}
             </h2>
             <div
               className={cx(
                 styles['c-modal-illu-header--ghost'],
-                this.animatedHeader.attributes.activeClassName,
+                animatedHeader.attributes.activeClassName,
                 {
                   [styles['is-active']]: displayGhostHeader
                 }
               )}
             >
-              {this.animatedHeader.children}
+              {animatedHeader.children}
             </div>
           </div>
         )}
-        {this.childrenToRender}
+        {childrenToRender}
       </div>
     )
   }
