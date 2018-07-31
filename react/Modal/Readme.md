@@ -226,20 +226,48 @@ const { ModalContent, AnimatedContentHeader } = Modal;
 // heigth 128px
 const animatedHeader = <img src="https://cozy.io/fr/images/cozy-logo-name-horizontal-blue.svg" />;
 
+class ModalCounterWithAnimatedHeader extends React.Component {
+ constructor () {
+     super()
+     this.state = { counter: 0 }
+   }
+
+   componentDidMount () {
+     this.timeout = setTimeout(() => {
+       this.increment()
+     }, 1000)
+   }
+
+   increment () {
+    this.setState({ counter: this.state.counter + 1 })
+   }
+   
+   componentWillUnmount() {
+     clearTimeout(this.timeout)
+   }
+   
+  render () {
+    return (
+      <Modal
+          dismissAction={()=>setState({ modalDisplayed: false})} mobileFullscreen >
+        <ModalContent className="u-mt-half">
+          <AnimatedContentHeader>
+            { animatedHeader }
+          </AnimatedContentHeader>
+          Counter : { this.state.counter + "" } <button onClick={() => this.increment()}>increment</button><br/>
+          { content.ada.long }
+        </ModalContent>
+      </Modal>
+    )
+  }
+}
+
 <div>
   <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
     Toggle modal
   </button>
   {state.modalDisplayed &&
-    <Modal
-        dismissAction={()=>setState({ modalDisplayed: false})} mobileFullscreen >
-      <ModalContent className="u-mt-half">
-        <AnimatedContentHeader>
-          { animatedHeader }
-        </AnimatedContentHeader>
-        { content.ada.long }
-      </ModalContent>
-    </Modal>}
+  <ModalCounterWithAnimatedHeader />}
 </div>
 ```
 
