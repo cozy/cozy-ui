@@ -32,11 +32,7 @@ class ModalContent extends Component {
   constructor(props) {
     super(props)
     const { children } = this.props
-    const animatedHeader = _getAnimatedHeader(children)
-    this.animatedHeader = animatedHeader
-    this.childrenToRender = animatedHeader
-      ? _getChildrenToRender(children)
-      : children
+    this.refreshComputedParts(children)
     this.state = {
       displayGhostHeader: false
     }
@@ -44,12 +40,15 @@ class ModalContent extends Component {
 
   componentWillUpdate(nextProps) {
     const { children } = nextProps
-    // extract the animated header component
-    const animatedHeader = _getAnimatedHeader(children)
+    this.refreshComputedParts(children)
+  }
 
+  refreshComputedParts(children) {
+    const animatedHeader = _getAnimatedHeader(children)
     this.animatedHeader = animatedHeader
-    this.childrenToRender = animatedHeader ?
-      _getChildrenToRender(children) : children
+    this.childrenToRender = animatedHeader
+      ? _getChildrenToRender(children)
+      : children
   }
 
   componentDidMount() {
