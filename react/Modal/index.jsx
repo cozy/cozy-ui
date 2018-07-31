@@ -42,8 +42,8 @@ class ModalContent extends Component {
     }
   }
 
-  componentWillUpdate() {
-    const { children } = this.props
+  componentWillUpdate(nextProps) {
+    const { children } = nextProps
     // extract the animated header component
     const animatedHeader = _getAnimatedHeader(children)
     this.setState(() => ({
