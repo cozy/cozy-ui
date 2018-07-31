@@ -33,12 +33,12 @@ class ModalContent extends Component {
     super(props)
     const { children } = this.props
     const animatedHeader = _getAnimatedHeader(children)
+    this.animatedHeader = animatedHeader
+    this.childrenToRender = animatedHeader
+      ? _getChildrenToRender(children)
+      : children
     this.state = {
-      displayGhostHeader: false,
-      animatedHeader,
-      childrenToRender: animatedHeader
-        ? _getChildrenToRender(children)
-        : children
+      displayGhostHeader: false
     }
   }
 
@@ -46,12 +46,10 @@ class ModalContent extends Component {
     const { children } = nextProps
     // extract the animated header component
     const animatedHeader = _getAnimatedHeader(children)
-    this.setState(() => ({
-      animatedHeader,
-      childrenToRender: animatedHeader
-        ? _getChildrenToRender(children)
-        : children
-    }))
+
+    this.animatedHeader = animatedHeader
+    this.childrenToRender = animatedHeader ?
+      _getChildrenToRender(children) : children
   }
 
   componentDidMount() {
@@ -86,8 +84,8 @@ class ModalContent extends Component {
   render() {
     const { className } = this.props
 
-    const { displayGhostHeader, animatedHeader, childrenToRender } = this.state
-
+    const { displayGhostHeader } = this.state
+    const { animatedHeader, childrenToRender } = this
     return (
       <div
         className={cx(styles['c-modal-content'], className)}
