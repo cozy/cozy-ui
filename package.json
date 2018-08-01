@@ -68,8 +68,8 @@
     "preact-compat": "^3.13.1",
     "prettier": "^1.12.1",
     "prop-types": "^15.6.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "16.4.1",
+    "react-dom": "16.4.1",
     "react-redux": "^5.0.3",
     "react-styleguidist": "^6.0.24",
     "react-test-renderer": "15.6.1",
@@ -83,6 +83,7 @@
     "webpack": "^3.5.6"
   },
   "dependencies": {
+    "@material-ui/core": "1.4.2",
     "babel-preset-cozy-app": "^0.3.1",
     "classnames": "^2.2.5",
     "date-fns": "^1.28.5",
