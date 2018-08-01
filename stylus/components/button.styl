@@ -521,7 +521,9 @@ $button-subtle--regular
     themedBtnSubtle(regularTheme)
 
 $button-subtle--secondary
-    themedBtnSubtle(secondaryTheme)
+    // Not using themedBtnSubtle(secondaryTheme) because
+    // silver color for a single text was too bright
+    color coolGrey
 
     &[aria-busy=true] > span::after
         @extend $icon-spinner-grey
@@ -529,5 +531,5 @@ $button-subtle--secondary
     &:active
     &:focus
     &:hover
-        color coolGrey
+        color slateGrey
 // @stylint on
