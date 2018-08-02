@@ -1,7 +1,7 @@
 Un test simple
 
 ```js
-const Simple = require('./Simple');
+const Simple = require('./Simple').default;
 
 <Simple />
 ```
@@ -9,9 +9,10 @@ const Simple = require('./Simple');
 Un composant de material-ui
 
 ```js
-const CssBaseline = require('@material-ui/core/CssBaseline');
+const CssBaseline = require('@material-ui/core/CssBaseline').default;
 const { MuiThemeProvider } = require('@material-ui/core/styles');
-const SimpleMenu = require('./SimpleMenu');
+
+const SimpleMenu = require('.').default;
 const { theme } = require('../cozy-theme');
 
 <MuiThemeProvider theme={theme}>
