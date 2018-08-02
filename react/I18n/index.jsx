@@ -30,6 +30,11 @@ export class I18n extends Component {
   getChildContext() {
     return {
       t: this.translation.t.bind(this.translation),
+      tn: (key, options, fallback = null) => {
+        return this.translation.has(key)
+          ? this.translation.t(key, options)
+          : fallback || ''
+      },
       f: this.format,
       lang: this.props.lang
     }
@@ -72,6 +77,7 @@ export const translate = () => WrappedComponent => {
     <WrappedComponent
       {...props}
       t={context.t}
+      tn={context.tn}
       f={context.f}
       lang={context.lang}
     />
