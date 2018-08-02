@@ -66,7 +66,7 @@ module.exports = {
       components: () => [
         '../react/ActionMenu/index.jsx',
         '../react/Menu/index.jsx',
-        '../material-ui/Menu/Simple.jsx'
+        '../material-ui/Menu/index.jsx'
       ]
     },
     {
