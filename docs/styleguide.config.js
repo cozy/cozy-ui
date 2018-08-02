@@ -92,8 +92,8 @@ module.exports = {
     path.join(__dirname, './style.styl'),
     path.join(__dirname, './styleguide.setup')
   ],
-  showCode: true,
-  showUsage: true,
+  showCode: false,
+  showUsage: false,
   context: {
     utils: path.resolve(__dirname, 'utils'),
     isTesting: path.resolve(__dirname, 'false'),
