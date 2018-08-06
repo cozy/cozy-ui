@@ -55,10 +55,12 @@ class ModalContent extends Component {
     this.scrollingContent.addEventListener('scroll', this.handleScroll, {
       passive: true
     })
+    document.body.classList.add('has-modal')
   }
 
   componentWillUnmount() {
     this.scrollingContent.removeEventListener('scroll', this.handleScroll)
+    document.body.classList.remove('has-modal')
   }
 
   handleScroll = () => {
