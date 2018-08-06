@@ -20,6 +20,7 @@ $alert
     opacity 1
     transition transform .2s ease-out, opacity .2s ease-out
     cursor pointer
+    pointer-events none
 
     @media all and (min-width alert-width)
         z-index $alert-index
@@ -37,6 +38,7 @@ $alert-wrapper
     box-shadow 0 rem(6) rem(18) 0 rgba(50, 54, 63, .23)
     background-color emerald
     padding rem(13 16)
+    pointer-events auto
 
     p
         margin 0
