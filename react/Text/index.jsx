@@ -3,13 +3,12 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
-const mkText = baseClass => props => {
+const BaseText = props => {
   const { className, children, tag, ellipsis, ...restProps } = props
   const Tag = tag
   return (
     <Tag
       className={cx(
-        baseClass,
         {
           ['u-ellipsis']: ellipsis
         },
@@ -22,12 +21,24 @@ const mkText = baseClass => props => {
   )
 }
 
-export const Text = mkText(styles['u-text'])
-export const MainTitle = mkText(styles['u-title-h1'])
-export const Title = mkText(styles['u-title-h2'])
-export const SubTitle = mkText(styles['u-title-h3'])
-export const Bold = mkText(styles['u-title-h4'])
-export const Caption = mkText(styles['u-caption'])
+export const Text = ({ className, ...restProps }) => (
+  <BaseText className={cx(className, styles['u-text'])} {...restProps} />
+)
+export const MainTitle = ({ className, ...restProps }) => (
+  <BaseText className={cx(className, styles['u-title-h1'])} {...restProps} />
+)
+export const Title = ({ className, ...restProps }) => (
+  <BaseText className={cx(className, styles['u-title-h2'])} {...restProps} />
+)
+export const SubTitle = ({ className, ...restProps }) => (
+  <BaseText className={cx(className, styles['u-title-h3'])} {...restProps} />
+)
+export const Bold = ({ className, ...restProps }) => (
+  <BaseText className={cx(className, styles['u-title-h4'])} {...restProps} />
+)
+export const Caption = ({ className, ...restProps }) => (
+  <BaseText className={cx(className, styles['u-caption'])} {...restProps} />
+)
 
 // Props
 const commonProps = {

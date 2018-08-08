@@ -2,6 +2,7 @@
 
 ```
 const { AccordionItem } = Accordion;
+
 <div>
   <Accordion>
     <AccordionItem label="Ada Lovelace">

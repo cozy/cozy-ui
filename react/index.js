@@ -49,5 +49,12 @@ export { default as IntentHeader } from './IntentHeader'
 export { default as Panel } from './Panel'
 export { default as SelectBox, SelectBoxWithFixedOptions } from './SelectBox'
 export { default as Chip } from './Chip'
-export { Text, MainTitle, Title, SubTitle, Bold, Caption } from './Text'
+export {
+  default as Text,
+  MainTitle,
+  Title,
+  SubTitle,
+  Bold,
+  Caption
+} from './Text'
 export { default as Empty } from './Empty'
