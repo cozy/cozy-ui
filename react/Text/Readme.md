@@ -41,7 +41,7 @@ const { Bold } = require('./index');
 #### Note text
 
 ```
-const { Caption } = require('./index');
+const { Caption } = require('./index.jsx');
 
 <Caption>This a note text</Caption>
 ```
