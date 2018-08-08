@@ -64,6 +64,7 @@ class ModalContent extends Component {
   }
 
   handleScroll = () => {
+    if (!this.contentHeader) return
     const { headerHeight } = this
     if (!headerHeight && this.contentHeader.clientHeight) {
       this.headerHeight = this.contentHeader.clientHeight
