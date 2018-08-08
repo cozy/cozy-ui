@@ -835,7 +835,7 @@ exports[`ListItemText should render examples: ListItemText 1`] = `
 "<div>
   <div>
     <div class=\\"c-list-text\\">
-      <div class=\\"u-text u-ellipsis\\">I'm a list item text</div>
+      <div class=\\"u-ellipsis u-text\\">I'm a list item text</div>
     </div>
   </div>
 </div>"
@@ -845,8 +845,8 @@ exports[`ListItemText should render examples: ListItemText 2`] = `
 "<div>
   <div>
     <div class=\\"c-list-text\\">
-      <div class=\\"u-text u-ellipsis\\">I'm a primary text</div>
-      <div class=\\"u-caption u-ellipsis\\">I'm a secondary text</div>
+      <div class=\\"u-ellipsis u-text\\">I'm a primary text</div>
+      <div class=\\"u-ellipsis u-caption\\">I'm a secondary text</div>
     </div>
   </div>
 </div>"
@@ -1279,6 +1279,38 @@ exports[`Text should render examples: Text 1`] = `
 `;
 
 exports[`Text should render examples: Text 2`] = `
+"<div>
+  <div>
+    <div class=\\"u-title-h1\\">This a main title text</div>
+  </div>
+</div>"
+`;
+
+exports[`Text should render examples: Text 3`] = `
+"<div>
+  <div>
+    <div class=\\"u-title-h2\\">This a title text</div>
+  </div>
+</div>"
+`;
+
+exports[`Text should render examples: Text 4`] = `
+"<div>
+  <div>
+    <div class=\\"u-title-h3\\">This a subtitle text</div>
+  </div>
+</div>"
+`;
+
+exports[`Text should render examples: Text 5`] = `
+"<div>
+  <div>
+    <div class=\\"u-title-h4\\">This a bold text</div>
+  </div>
+</div>"
+`;
+
+exports[`Text should render examples: Text 6`] = `
 "<div>
   <div>
     <div class=\\"u-caption\\">This a note text</div>
