@@ -275,6 +275,17 @@ exports[`Button should render examples: Button 10`] = `
 "<div>
   <div>
     <div>
+      <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--round\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></button>
+      <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--secondary c-btn--round\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></button>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Button should render examples: Button 11`] = `
+"<div>
+  <div>
+    <div>
       <p>
         <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--tiny c-btn--subtle\\"><span><span>Tiny text</span></span>
         </button>
@@ -316,7 +327,7 @@ exports[`Button should render examples: Button 10`] = `
 </div>"
 `;
 
-exports[`Button should render examples: Button 11`] = `
+exports[`Button should render examples: Button 12`] = `
 "<div>
   <div>
     <div>
@@ -345,7 +356,7 @@ exports[`Button should render examples: Button 11`] = `
 </div>"
 `;
 
-exports[`Button should render examples: Button 12`] = `
+exports[`Button should render examples: Button 13`] = `
 "<div>
   <div>
     <div><span to=\\"/destination\\" role=\\"button\\" class=\\"c-btn\\"><span><!-- react-text: 4 -->I'm a (false) NavLink<!-- /react-text --></span></span>

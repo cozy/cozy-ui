@@ -5,12 +5,13 @@ import styles from './styles.styl'
 import Icon from '../Icon'
 
 const btnClass = function(options) {
-  const { className, extension, size, theme, variant } = options
+  const { className, extension, size, theme, variant, round } = options
   return cx(className, styles['c-btn'], {
     [styles[`c-btn--${theme}`]]: theme,
     [styles[`c-btn--${size}`]]: size,
     [styles[`c-btn--${variant}`]]: variant,
-    [styles[`c-btn--${extension}`]]: extension
+    [styles[`c-btn--${extension}`]]: extension,
+    [styles[`c-btn--round`]]: round
   })
 }
 
@@ -45,6 +46,7 @@ const BaseButton = props => {
     subtle,
     className,
     extension,
+    round,
     size,
     theme,
     tag: Tag,
@@ -57,6 +59,7 @@ const BaseButton = props => {
       {...transformProps(restProps)}
       className={btnClass({
         extension,
+        round,
         size,
         theme,
         className,
@@ -101,6 +104,8 @@ Button.propTypes = {
   size: PropTypes.oneOf(['tiny', 'small', 'large']),
   /** Spacing of the button */
   extension: PropTypes.oneOf(['narrow', 'full']),
+  /** Will make the button round */
+  round: PropTypes.bool,
   /** Extra class */
   className: PropTypes.string,
   /** What to do on click */
