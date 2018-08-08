@@ -27,6 +27,7 @@ const importIcons = function () {
     'icon-file-none',
     'icon-folder',
     'icon-forward',
+    'icon-help',
     'icon-gear',
     'icon-hourglass',
     'icon-image',
