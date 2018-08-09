@@ -106,6 +106,16 @@ const { Button } = require('./index');
 </div>
 ```
 
+#### Create a round button with an icon
+
+```
+const { Button } = require('.');
+<div>
+  <Button icon='plus' round />
+  <Button theme="secondary" icon='cross' round />
+</div>
+```
+
 ### Subtle Buttons
 Subtle buttons are buttons without background and borders, wich look "inverted" compared to the basic Buttons.
 
