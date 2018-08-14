@@ -33,11 +33,11 @@
     "test:jest": "jest --verbose --coverage",
     "watch:doc:react": "styleguidist server --config docs/styleguide.config.js",
     "travis-deploy-once": "travis-deploy-once",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
     "@commitlint/cli": "^6.2.0",
-    "@commitlint/config-conventional": "^6.1.3",
     "@semantic-release/changelog": "^2.0.2",
     "@semantic-release/git": "^5.0.0",
     "@semantic-release/npm": "^3.3.1",
@@ -46,6 +46,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.1.8",
     "babel-preset-react": "^6.22.0",
+    "commitlint-config-cozy": "0.2.2",
     "copyfiles": "^1.2.0",
     "css-loader": "^0.28.4",
     "enzyme": "^3.3.0",
@@ -100,6 +101,11 @@
   "eslintConfig": {
     "extends": [
       "eslint-config-cozy-app"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "cozy"
     ]
   },
   "jest": {
