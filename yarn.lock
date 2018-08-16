@@ -122,10 +122,6 @@
     lodash.pick "4.4.0"
     meow "4.0.0"
 
-"@commitlint/config-conventional@^6.1.3":
-  version "6.1.3"
-  resolved "https://registry.yarnpkg.com/@commitlint/config-conventional/-/config-conventional-6.1.3.tgz#6c06eeae04c5ac789c3618df4d52aeda89ffb810"
-
 "@commitlint/ensure@^6.1.3":
   version "6.1.3"
   resolved "https://registry.yarnpkg.com/@commitlint/ensure/-/ensure-6.1.3.tgz#813b58c9fdfae15351b72fe646a162ebdb71ea2a"
@@ -2286,6 +2282,10 @@ commander@2.11.0, commander@2.11.x, commander@^2.9.0, commander@~2.11.0:
 commander@~2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.1.0.tgz#d121bbae860d9992a3d517ba96f56588e47c6781"
+
+commitlint-config-cozy@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/commitlint-config-cozy/-/commitlint-config-cozy-0.2.2.tgz#e87331ef4ec39931ad99f80f42065b7b2d43e838"
 
 common-dir@^1.0.1:
   version "1.0.1"
