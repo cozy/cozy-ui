@@ -67,7 +67,6 @@
     "postcss-loader": "^2.0.6",
     "preact": "^8.1.0",
     "preact-compat": "^3.13.1",
-    "prettier": "^1.12.1",
     "prop-types": "^15.6.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
