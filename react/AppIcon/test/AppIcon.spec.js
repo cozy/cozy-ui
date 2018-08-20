@@ -32,14 +32,14 @@ describe('AppIcon component', () => {
     expect(component).toMatchSnapshot()
   })
 
-  it('renders app icon after fetching', done => {
-    const wrapper = shallow(<AppIcon app={app} fetchIcon={successFetchIcon} />)
-
-    setTimeout(() => {
-      wrapper.update()
-      const component = wrapper.getElement()
-      expect(component).toMatchSnapshot()
-      done()
-    }, 10)
+  it('renders app icon after fetching', async () => {
+    const successFetchPromise = successFetchIcon()
+    const wrapper = shallow(
+      <AppIcon app={app} fetchIcon={() => successFetchPromise} />
+    )
+    await successFetchPromise
+    wrapper.update()
+    const component = wrapper.getElement()
+    expect(component).toMatchSnapshot()
   })
 })
