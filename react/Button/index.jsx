@@ -122,10 +122,6 @@ Button.propTypes = {
   subtle: PropTypes.bool
 }
 
-BaseButton.defaultProps = {
-  role: 'button'
-}
-
 Button.defaultProps = {
   type: 'submit',
   tag: 'button'
