@@ -26,6 +26,7 @@ class ActionMenu extends Component {
 
   componentWillUnmount() {
     this.gesturesHandler.destroy()
+    this.menuNode.style = '' // Drops the node style in case it gets recycled, see https://github.com/cozy/cozy-ui/pull/602
   }
 
   initialAppear() {
