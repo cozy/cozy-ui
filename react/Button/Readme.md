@@ -88,12 +88,13 @@ const { Button, ButtonLink } = require('./index');
 #### Create a button with an icon
 
 The color of the icon is taken care of by the button style, there's no need to specify it.
+If you want a button with only an icon as content, you must set the `iconOnly` prop.
 
 ```
 const { Button } = require('./index');
 <div>
   <Button theme="danger" icon='delete' label='delete' />
-  <Button theme="secondary" icon='dots' extension='narrow' />
+  <Button theme="secondary" icon='dots' iconOnly label="See more" extension='narrow' />
 </div>
 ```
 
@@ -111,8 +112,8 @@ const { Button } = require('./index');
 ```
 const { Button } = require('.');
 <div>
-  <Button icon='plus' round />
-  <Button theme="secondary" icon='cross' round />
+  <Button icon='plus' label='Add' iconOnly round />
+  <Button theme="secondary" icon='cross' label='Delete' iconOnly round />
 </div>
 ```
 

@@ -42,6 +42,7 @@ const BaseButton = props => {
   const {
     children,
     icon,
+    iconOnly,
     label,
     subtle,
     className,
@@ -54,6 +55,9 @@ const BaseButton = props => {
   } = props
 
   const transformProps = tagToTransformProps[Tag] || identity
+  const tooltip = iconOnly ? label : null
+  const iconOnlyClass = iconOnly ? 'u-visuallyhidden' : null
+
   return (
     <Tag
       {...transformProps(restProps)}
@@ -65,10 +69,15 @@ const BaseButton = props => {
         className,
         variant: subtle && 'subtle'
       })}
+      title={tooltip}
     >
       <span>
-        {Icon.isProperIcon(icon) ? <Icon icon={icon} /> : icon}
-        {label && <span>{label}</span>}
+        {Icon.isProperIcon(icon) ? (
+          <Icon icon={icon} aria-hidden focusable="false" />
+        ) : (
+          icon
+        )}
+        {label && <span className={iconOnlyClass}>{label}</span>}
         {children}
       </span>
     </Tag>
@@ -97,9 +106,11 @@ Button.propTypes = {
   /** DEPRECATED: please use label and icon */
   children: PropTypes.node,
   /** Label of the button */
-  label: PropTypes.node,
+  label: PropTypes.node.isRequired,
   /** Icon of the button */
   icon: PropTypes.node,
+  /** Displays only the icon, not the label */
+  iconOnly: PropTypes.bool,
   theme: PropTypes.string,
   size: PropTypes.oneOf(['tiny', 'small', 'large']),
   /** Spacing of the button */
