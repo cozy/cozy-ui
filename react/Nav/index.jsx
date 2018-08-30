@@ -34,7 +34,7 @@ export const NavIcon = ({ icon }) => (
 
 const Nav = ({ children }) => {
   return (
-    <nav>
+    <nav role="navigation">
       <ul className={styles['c-nav']}>{children}</ul>
     </nav>
   )
