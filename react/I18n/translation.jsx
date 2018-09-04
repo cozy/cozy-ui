@@ -27,8 +27,12 @@ export const initTranslation = (
 
   // Load context locales
   if (context) {
-    const dict = dictRequire(lang, context)
-    _polyglot.extend(dict)
+    try {
+      const dict = dictRequire(lang, context)
+      _polyglot.extend(dict)
+    } catch (e) {
+      console.warn(`The context ${context} cannot be loaded for lang ${lang}`)
+    }
   }
 
   return _polyglot
