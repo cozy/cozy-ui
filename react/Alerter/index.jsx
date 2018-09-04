@@ -74,6 +74,7 @@ class Alert extends Component {
           styles['c-alert'],
           hidden ? styles['c-alert--hidden'] : ''
         )}
+        role="alert"
       >
         <div
           className={classNames(
