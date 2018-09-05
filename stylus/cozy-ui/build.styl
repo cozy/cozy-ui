@@ -430,40 +430,14 @@ colors=json('../settings/palette.json', { hash: true })
 /*
  Table
 
- You should decide by yourself the sizes of the columns. In those examples we use the style tag but you definitely should use CSS classes.
+ For a flexibility purpose, complex tables use `<div>` element instead of `<table>` but you still can use `<table>` for simpler tables, see **table-legacy** below.
+
+ By default, only `.c-table-cell--primary` has an ellipsis effect, but you can have it on any cell by applying the `.c-table-ellipsis` class.
+
+ NB: You should decide by yourself the sizes of the columns. In those examples we use the style tag but you definitely should use CSS classes.
 
  Markup:
  <div>
-    <h2>Table with table element</h2>
-    <table class="c-table">
-        <thead class="c-table-head">
-            <tr class="c-table-row-head">
-                <th class="c-table-header" style="width:50%">Header 1</th>
-                <th class="c-table-header" style="width:25%">Header 2</th>
-                <th class="c-table-header" style="width:25%">Header 3</th>
-            </tr>
-        </thead>
-        <tbody class="c-table-body">
-            <tr class="c-table-row is-selected">
-                <td class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet</td>
-                <td class="c-table-cell" style="width:25%">lorem</td>
-                <td class="c-table-cell" style="width:25%">ipsum</td>
-            </tr>
-            <tr class="c-table-row">
-                <td class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</td>
-                <td class="c-table-cell" style="width:25%">corporis</td>
-                <td class="c-table-cell" style="width:25%">placeat</td>
-            </tr>
-            <tr class="c-table-divider">
-                <td colspan="3">Divider</td>
-            </tr>
-            <tr class="c-table-row">
-                <td class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</td>
-                <td class="c-table-cell" style="width:25%">corporis</td>
-                <td class="c-table-cell" style="width:25%">placeat</td>
-            </tr>
-        </tbody>
-    </table>
     <h2>Table with div element</h2>
     <div class="c-table">
         <div class="c-table-head">
@@ -477,7 +451,7 @@ colors=json('../settings/palette.json', { hash: true })
             <div class="c-table-row is-selected">
                 <div class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet</div>
                 <div class="c-table-cell" style="width:25%">lorem</div>
-                <div class="c-table-cell" style="width:25%">ipsum</div>
+                <div class="c-table-cell c-table-ellipsis" style="width:25%">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
             </div>
             <div class="c-table-row">
                 <div class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</div>
@@ -496,7 +470,7 @@ colors=json('../settings/palette.json', { hash: true })
 
  Styleguide Components.table
 */
-.c-table
+div.c-table
     @extend $table
 
 .c-table-head
@@ -510,6 +484,7 @@ colors=json('../settings/palette.json', { hash: true })
 
     &.is-selected
         @extend $table-row-selected
+
 
 .c-table-row-head
     @extend $table-row-head
@@ -525,6 +500,85 @@ colors=json('../settings/palette.json', { hash: true })
 
 .c-table-divider
     @extend $table-divider
+
+.c-table-ellipsis
+    @extend $table-ellipsis
+
+/*
+ Table legacy
+
+ You also can use the `<table>` if you want although it could be tricky for complex tables.
+
+ List of utility classes for table
+
+ - `.is-selected` on a `<tr>` to highlight an entire line
+ - `.c-table-divider` on a `<tr>` to create a divider in your data table
+ - `.c-table-cell--primary` on a `<td>` to bring out a cell
+ - `.c-table-ellipsis` on a `<td>` to add an ellipsis effect without adding `table-layout: fixed` property to the table. In order for this to work you **MUST** have **2** `<div>` nested inside you `<td>`. *See example*
+
+ NB: Unlike the `<div>` table, the cell with `.c-table-cell--primary` does **not** have an ellipsis effect by default, if you want it must you add the `.c-table-ellipsis` class and the needed DOM.
+
+ Markup:
+ <div>
+    <h2>Table with table element</h2>
+    <table class="c-table">
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="is-selected">
+                <td class="c-table-cell--primary">Lorem ipsum dolor sit amet</td>
+                <td>lorem</td>
+                <td>ipsum</td>
+            </tr>
+            <tr>
+                <td class="c-table-cell--primary c-table-ellipsis">
+                    <div>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</div>
+                    </div>
+                </td>
+                <td>corporis</td>
+                <td>placeat</td>
+            </tr>
+            <tr class="c-table-divider">
+                <td colspan="3">Divider</td>
+            </tr>
+            <tr>
+                <td class="c-table-cell--primary c-table-ellipsis">
+                     <div>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</div>
+                    </div>
+                </td>
+                <td>corporis</td>
+                <td>placeat</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+ Styleguide Components.table-legacy
+*/
+
+table.c-table
+    @extend $table--legacy
+
+    tr.c-table-divider
+        @extend $table-divider--legacy
+
+    tr.is-selected
+        @extend $table-row-selected
+
+    td.c-table-cell--primary
+        @extend $table-cell--primary
+
+    td.c-table-ellipsis
+        @extend $table-ellipsis--legacy
+
+
 
 /*
  Accordion
