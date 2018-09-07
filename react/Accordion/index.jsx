@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import uniqueId from 'lodash/uniqueId'
 import cx from 'classnames'
 import Icon from '../Icon'
 import styles from './styles.styl'
@@ -8,16 +9,16 @@ class AccordionItem extends Component {
   constructor(props) {
     super(props)
     this.state = { selected: false }
+    this.headingID = uniqueId('accordion_header_')
+    this.contentID = uniqueId('accordion_content_')
   }
 
   render() {
     const { children, label, className } = this.props
 
+    const { headingID, contentID } = this
+
     const { selected } = this.state
-
-    const removeSpaceCharacters = str => str.replace(/\s+/g, '')
-
-    const bodyName = removeSpaceCharacters(label)
 
     return (
       <div className={cx(styles['c-accordion-item'], className)}>
@@ -29,14 +30,19 @@ class AccordionItem extends Component {
             },
             className
           )}
-          aria-selected={selected}
-          aria-controls={bodyName}
-          role="tab"
-          tabIndex="0"
+          role="heading"
+          aria-level="3"
           onClick={() => this.toggleSelection()}
         >
-          <Icon icon="forward" />
-          {label}
+          <div
+            id={headingID}
+            role="button"
+            aria-expanded={selected}
+            aria-controls={contentID}
+          >
+            <Icon icon="forward" />
+            {label}
+          </div>
         </div>
         <div
           className={cx(
@@ -46,9 +52,10 @@ class AccordionItem extends Component {
             },
             className
           )}
+          id={contentID}
+          role="region"
+          aria-labelledby={headingID}
           aria-hidden={!selected}
-          aria-labelledby={bodyName}
-          role="tabpanel"
         >
           {children}
         </div>
