@@ -20,7 +20,7 @@ initialState = { modalDisplayed: false};
   <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
     Toggle modal
   </button>
-  {state.modalDisplayed && <Modal  description={content.ada.short} dismissAction={() => setState({ modalDisplayed: false })} /> }
+  {state.modalDisplayed && <Modal description={content.ada.short} aria-label="Accessible title" dismissAction={() => setState({ modalDisplayed: false })} /> }
 </div>
 ```
 

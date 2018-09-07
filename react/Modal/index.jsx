@@ -8,6 +8,7 @@ import Icon from '../Icon'
 import migrateProps from '../helpers/migrateProps'
 import palette from '../../stylus/settings/palette.json'
 import Portal from 'preact-portal'
+import uniqueId from 'lodash/uniqueId'
 
 class AnimatedContentHeader extends Component {
   render() {
@@ -154,11 +155,17 @@ const ModalHeader = ({
   appIcon,
   appName,
   appEditor,
-  style
+  style,
+  id
 }) => {
   const isTitle = typeof children === 'string'
   return (
-    <div className={cx(styles['c-modal-header'], className)} style={style}>
+    <div
+      className={cx(styles['c-modal-header'], className)}
+      style={style}
+      id={id}
+      tabIndex="-1"
+    >
       {title && <h2>{title}</h2>}
       {isTitle ? <h2>{children}</h2> : children}
       {appName && (
@@ -185,6 +192,7 @@ const ModalCross = ({ onClick, color, className }) => (
     className={cx(styles['c-modal-close'], className)}
     onClick={onClick}
     extension="narrow"
+    type="button"
   >
     <Icon
       icon="cross"
@@ -242,8 +250,21 @@ const ModalButtons = props => {
 }
 
 class Modal extends Component {
+  constructor(props) {
+    super(props)
+    this.titleID = uniqueId('modal_')
+  }
+
   handleOutsideClick = e => {
     if (e.target === e.currentTarget) this.props.dismissAction()
+  }
+
+  componentDidMount() {
+    if (!this.props.title) {
+      console.warn(
+        'If your modal has not label you should add an invisible one with `aria-label` props for a11y purposes.'
+      )
+    }
   }
 
   render() {
@@ -264,16 +285,16 @@ class Modal extends Component {
       spacing,
       mobileFullscreen,
       overlayClassName,
-      wrapperClassName
-    } = this.props
-    const {
+      wrapperClassName,
       primaryText,
       primaryAction,
       primaryType,
       secondaryText,
       secondaryAction,
-      secondaryType
+      secondaryType,
+      ...restProps
     } = this.props
+    const { titleID } = this
     const style = Object.assign({}, height && { height }, width && { width })
     const maybeWrapInPortal = children =>
       into ? <Portal into={into}>{children}</Portal> : children
@@ -306,6 +327,10 @@ class Modal extends Component {
                   [styles['c-modal--closable']]: closable
                 }
               )}
+              role="dialog"
+              aria-modal="true"
+              aria-labelledBy={title ? titleID : null}
+              {...restProps}
             >
               {closable && (
                 <ModalCross
@@ -316,7 +341,7 @@ class Modal extends Component {
                   color={crossColor}
                 />
               )}
-              {title && <ModalHeader title={title} />}
+              {title && <ModalHeader title={title} id={titleID} />}
               {description && (
                 <ModalDescription>{description}</ModalDescription>
               )}
