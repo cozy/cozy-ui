@@ -55,6 +55,9 @@ $table-row-head
     &:hover
         background-color transparent
 
+    &:last-child
+        border-bottom 0
+
 $table-row-selected
     &
     &:hover
@@ -74,12 +77,15 @@ $table-header
     font-weight bold
     text-transform uppercase
 
-$table-cell--primary
-    font-size rem(16)
-    line-height 1.15
+$table-ellipsis
     white-space nowrap
     overflow hidden
     text-overflow ellipsis
+
+$table-cell--primary
+    @extend $table-ellipsis
+    font-size rem(16)
+    line-height 1.15
     color charcoalGrey
 
     +small-screen()
@@ -105,8 +111,67 @@ $table-divider
         background-color alpha(dodgerBlue, .05)
 
     & + * // @stylint ignore
-        border 0
+        border-top 0
 
 
     +small-screen()
         text-indent rem(16)
+
+// Legacy table
+$table--legacy
+    width 100%
+    border 0
+    text-align left
+    color coolGrey
+    border-collapse collapse
+
+    tr
+        @extend $table-row
+        display table-row
+
+    thead tr
+        @extend $table-row-head
+        display table-row
+
+    th
+        @extend $table-header
+
+    td
+        @extend $table-cell
+
+$table-divider--legacy
+    border 0
+    width auto
+    height auto
+    background-color alpha(dodgerBlue, .05)
+
+    &::before
+        content none
+
+    td
+        font-weight bold
+        color coolGrey
+        padding 0
+        font-size rem(12)
+        line-height 1.33
+
+    & + * // @stylint ignore
+        border-top 0
+
+$table-ellipsis--legacy
+    position relative
+
+    > div
+        box-sizing border-box
+        position absolute
+        top rem(14)
+        right rem(16)
+        bottom rem(14)
+        left rem(16)
+        display block
+        width calc(100% - rem(32))
+        > div
+            box-sizing border-box
+            white-space nowrap
+            overflow hidden
+            text-overflow ellipsis
