@@ -112,51 +112,51 @@ exports[`Button should render examples: Button 1`] = `
   <div>
     <div>
       <p>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--regular\\"><span><span>regular</span></span>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--regular\\"><span><span>regular</span></span>
         </button>
-        <button type=\\"submit\\" role=\\"button\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--regular\\"><span><span>regular</span></span>
+        <button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--regular\\"><span><span>regular</span></span>
         </button>
-        <button type=\\"submit\\" role=\\"button\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--regular\\"><span><span>regular</span></span>
-        </button>
-      </p>
-      <p>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--danger\\"><span><span>danger</span></span>
-        </button>
-        <button type=\\"submit\\" role=\\"button\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--danger\\"><span><span>danger</span></span>
-        </button>
-        <button type=\\"submit\\" role=\\"button\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--danger\\"><span><span>danger</span></span>
+        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--regular\\"><span><span>regular</span></span>
         </button>
       </p>
       <p>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--highlight\\"><span><span>highlight</span></span>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--danger\\"><span><span>danger</span></span>
         </button>
-        <button type=\\"submit\\" role=\\"button\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--highlight\\"><span><span>highlight</span></span>
+        <button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--danger\\"><span><span>danger</span></span>
         </button>
-        <button type=\\"submit\\" role=\\"button\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--highlight\\"><span><span>highlight</span></span>
-        </button>
-      </p>
-      <p>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--secondary\\"><span><span>secondary</span></span>
-        </button>
-        <button type=\\"submit\\" role=\\"button\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--secondary\\"><span><span>secondary</span></span>
-        </button>
-        <button type=\\"submit\\" role=\\"button\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--secondary\\"><span><span>secondary</span></span>
+        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--danger\\"><span><span>danger</span></span>
         </button>
       </p>
       <p>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>danger-outline</span></span>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--highlight\\"><span><span>highlight</span></span>
         </button>
-        <button type=\\"submit\\" role=\\"button\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>danger-outline</span></span>
+        <button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--highlight\\"><span><span>highlight</span></span>
         </button>
-        <button type=\\"submit\\" role=\\"button\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>danger-outline</span></span>
+        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--highlight\\"><span><span>highlight</span></span>
         </button>
       </p>
       <p>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--alpha\\"><span><span>alpha</span></span>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--secondary\\"><span><span>secondary</span></span>
         </button>
-        <button type=\\"submit\\" role=\\"button\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--alpha\\"><span><span>alpha</span></span>
+        <button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--secondary\\"><span><span>secondary</span></span>
         </button>
-        <button type=\\"submit\\" role=\\"button\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--alpha\\"><span><span>alpha</span></span>
+        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--secondary\\"><span><span>secondary</span></span>
+        </button>
+      </p>
+      <p>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>danger-outline</span></span>
+        </button>
+        <button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>danger-outline</span></span>
+        </button>
+        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>danger-outline</span></span>
+        </button>
+      </p>
+      <p>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--alpha\\"><span><span>alpha</span></span>
+        </button>
+        <button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--alpha\\"><span><span>alpha</span></span>
+        </button>
+        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--alpha\\"><span><span>alpha</span></span>
         </button>
       </p>
     </div>
@@ -169,19 +169,19 @@ exports[`Button should render examples: Button 2`] = `
   <div>
     <div>
       <p>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--tiny\\"><span><span>Tiny</span></span>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--tiny\\"><span><span>Tiny</span></span>
         </button>
       </p>
       <p>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--small\\"><span><span>Small</span></span>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--small\\"><span><span>Small</span></span>
         </button>
       </p>
       <p>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn\\"><span><span>Normal</span></span>
+        <button type=\\"submit\\" class=\\"c-btn\\"><span><span>Normal</span></span>
         </button>
       </p>
       <p>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--large\\"><span><span>Large</span></span>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--large\\"><span><span>Large</span></span>
         </button>
       </p>
     </div>
@@ -194,15 +194,15 @@ exports[`Button should render examples: Button 3`] = `
   <div>
     <div>
       <p>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn\\"><span><span>Normal</span></span>
+        <button type=\\"submit\\" class=\\"c-btn\\"><span><span>Normal</span></span>
         </button>
       </p>
       <p>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--narrow\\"><span><span>N…</span></span>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--narrow\\"><span><span>N…</span></span>
         </button>
       </p>
       <p>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--full\\"><span><span>Full width</span></span>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--full\\"><span><span>Full width</span></span>
         </button>
       </p>
     </div>
@@ -213,7 +213,7 @@ exports[`Button should render examples: Button 3`] = `
 exports[`Button should render examples: Button 4`] = `
 "<div>
   <div>
-    <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>Show alert</span></span>
+    <button type=\\"submit\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>Show alert</span></span>
     </button>
   </div>
 </div>"
@@ -222,7 +222,7 @@ exports[`Button should render examples: Button 4`] = `
 exports[`Button should render examples: Button 5`] = `
 "<div>
   <div>
-    <button type=\\"submit\\" role=\\"button\\" aria-busy=\\"true\\" class=\\"c-btn\\"><span><span>Loading</span></span>
+    <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn\\"><span><span>Loading</span></span>
     </button>
   </div>
 </div>"
@@ -239,9 +239,9 @@ exports[`Button should render examples: Button 7`] = `
 "<div>
   <div>
     <div>
-      <button type=\\"submit\\" role=\\"button\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn\\"><span><span>Loading</span></span>
+      <button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn\\"><span><span>Loading</span></span>
       </button>
-      <a href=\\"http://cozy.io\\" role=\\"button\\" aria-disabled=\\"true\\" class=\\"c-btn\\"><span><span>Go to Cozy website</span></span>
+      <a href=\\"http://cozy.io\\" aria-disabled=\\"true\\" class=\\"c-btn\\"><span><span>Go to Cozy website</span></span>
       </a>
     </div>
   </div>
@@ -252,9 +252,9 @@ exports[`Button should render examples: Button 8`] = `
 "<div>
   <div>
     <div>
-      <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--danger\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>delete</span></span>
+      <button type=\\"submit\\" class=\\"c-btn c-btn--danger\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>delete</span></span>
       </button>
-      <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--secondary c-btn--narrow\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></button>
+      <button type=\\"submit\\" class=\\"c-btn c-btn--secondary c-btn--narrow\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></button>
     </div>
   </div>
 </div>"
@@ -264,7 +264,7 @@ exports[`Button should render examples: Button 9`] = `
 "<div>
   <div>
     <div>
-      <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--danger\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>delete</span></span>
+      <button type=\\"submit\\" class=\\"c-btn c-btn--danger\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>delete</span></span>
       </button>
     </div>
   </div>
@@ -275,8 +275,8 @@ exports[`Button should render examples: Button 10`] = `
 "<div>
   <div>
     <div>
-      <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--round\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></button>
-      <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--secondary c-btn--round\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></button>
+      <button type=\\"submit\\" class=\\"c-btn c-btn--round\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></button>
+      <button type=\\"submit\\" class=\\"c-btn c-btn--secondary c-btn--round\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></button>
     </div>
   </div>
 </div>"
@@ -287,39 +287,39 @@ exports[`Button should render examples: Button 11`] = `
   <div>
     <div>
       <p>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--tiny c-btn--subtle\\"><span><span>Tiny text</span></span>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--tiny c-btn--subtle\\"><span><span>Tiny text</span></span>
         </button>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--small c-btn--subtle\\"><span><span>Small text</span></span>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--small c-btn--subtle\\"><span><span>Small text</span></span>
         </button>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--subtle\\"><span><span>Regular text</span></span>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--subtle\\"><span><span>Regular text</span></span>
         </button>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--large c-btn--subtle\\"><span><span>Large text</span></span>
-        </button>
-      </p>
-      <p>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--secondary c-btn--subtle\\"><span><span>Secondary theme</span></span>
-        </button>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--highlight c-btn--subtle\\"><span><span>Highlight theme</span></span>
-        </button>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--danger c-btn--subtle\\"><span><span>DANGER theme</span></span>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--large c-btn--subtle\\"><span><span>Large text</span></span>
         </button>
       </p>
       <p>
-        <button type=\\"submit\\" role=\\"button\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--subtle\\"><span><span>Disabled</span></span>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--secondary c-btn--subtle\\"><span><span>Secondary theme</span></span>
+        </button>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--highlight c-btn--subtle\\"><span><span>Highlight theme</span></span>
+        </button>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--danger c-btn--subtle\\"><span><span>DANGER theme</span></span>
         </button>
       </p>
       <p>
-        <button type=\\"submit\\" role=\\"button\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--subtle\\"><span><span>Busy</span></span>
-        </button>
-        <button type=\\"submit\\" role=\\"button\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--secondary c-btn--subtle\\"><span><span>Busy secondary</span></span>
-        </button>
-        <button type=\\"submit\\" role=\\"button\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--highlight c-btn--subtle\\"><span><span>Busy highlight</span></span>
-        </button>
-        <button type=\\"submit\\" role=\\"button\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--danger c-btn--subtle\\"><span><span>Busy danger</span></span>
+        <button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--subtle\\"><span><span>Disabled</span></span>
         </button>
       </p>
       <p>
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn c-btn--subtle\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>Cozy</span></span>
+        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--subtle\\"><span><span>Busy</span></span>
+        </button>
+        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--secondary c-btn--subtle\\"><span><span>Busy secondary</span></span>
+        </button>
+        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--highlight c-btn--subtle\\"><span><span>Busy highlight</span></span>
+        </button>
+        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--danger c-btn--subtle\\"><span><span>Busy danger</span></span>
+        </button>
+      </p>
+      <p>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--subtle\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>Cozy</span></span>
         </button>
       </p>
     </div>
@@ -332,23 +332,23 @@ exports[`Button should render examples: Button 12`] = `
   <div>
     <div>
       <p>
-        <a href=\\"https://cozy.io\\" target=\\"_blank\\" role=\\"button\\" class=\\"c-btn c-btn--tiny\\"><span><span>Link to Cozy.io</span></span>
+        <a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--tiny\\"><span><span>Link to Cozy.io</span></span>
         </a>
       </p>
       <p>
-        <a href=\\"https://cozy.io\\" target=\\"_blank\\" role=\\"button\\" class=\\"c-btn c-btn--small\\"><span><span>Link to Cozy.io</span></span>
+        <a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--small\\"><span><span>Link to Cozy.io</span></span>
         </a>
       </p>
       <p>
-        <a href=\\"https://cozy.io\\" target=\\"_blank\\" role=\\"button\\" class=\\"c-btn\\"><span><span>Link to Cozy.io</span></span>
+        <a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn\\"><span><span>Link to Cozy.io</span></span>
         </a>
       </p>
       <p>
-        <a href=\\"https://cozy.io\\" target=\\"_blank\\" role=\\"button\\" class=\\"c-btn c-btn--large\\"><span><span>Link to Cozy.io</span></span>
+        <a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--large\\"><span><span>Link to Cozy.io</span></span>
         </a>
       </p>
       <p>
-        <a href=\\"https://cozy.io\\" target=\\"_blank\\" role=\\"button\\" class=\\"c-btn c-btn--subtle\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>Link to Cozy.io</span></span>
+        <a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--subtle\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>Link to Cozy.io</span></span>
         </a>
       </p>
     </div>
@@ -359,7 +359,7 @@ exports[`Button should render examples: Button 12`] = `
 exports[`Button should render examples: Button 13`] = `
 "<div>
   <div>
-    <div><span to=\\"/destination\\" role=\\"button\\" class=\\"c-btn\\"><span><!-- react-text: 4 -->I'm a (false) NavLink<!-- /react-text --></span></span>
+    <div><span to=\\"/destination\\" class=\\"c-btn\\"><span><!-- react-text: 4 -->I'm a (false) NavLink<!-- /react-text --></span></span>
     </div>
   </div>
 </div>"
@@ -520,7 +520,7 @@ exports[`Hero should render examples: Hero 1`] = `
         </div>
       </div>
       <p class=\\" Hero-cta\\">
-        <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn\\"><span><!-- react-text: 22 -->Connect your bank accounts<!-- /react-text --></span></button>
+        <button type=\\"submit\\" class=\\"c-btn\\"><span><!-- react-text: 22 -->Connect your bank accounts<!-- /react-text --></span></button>
       </p>
     </div>
   </div>
@@ -900,7 +900,7 @@ exports[`Menu should render examples: Menu 3`] = `
 "<div>
   <div>
     <div class=\\"c-menu c-menu--left\\">
-      <button type=\\"submit\\" role=\\"button\\" class=\\"c-btn\\"><span><!-- react-text: 4 -->Greetings with custom component<!-- /react-text --></span></button>
+      <button type=\\"submit\\" class=\\"c-btn\\"><span><!-- react-text: 4 -->Greetings with custom component<!-- /react-text --></span></button>
     </div>
   </div>
 </div>"
