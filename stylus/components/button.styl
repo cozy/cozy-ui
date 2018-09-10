@@ -73,10 +73,9 @@ $button
 
     svg
         fill         currentColor
-        margin-right rem(6)
 
-        &:only-child
-            margin 0
+        & + span
+            margin-left rem(6)
 
     input
         cursor pointer
@@ -152,9 +151,6 @@ $button--action
     padding rem(8)
     opacity     .5
 
-    svg
-        margin 0
-
     &:active
     &:hover
     &:focus
@@ -165,9 +161,6 @@ $button--close
     @extend $button--alpha
     border-color transparent
     padding rem(8)
-
-    svg
-        margin 0
 
     &:active
     &:hover
@@ -374,9 +367,6 @@ $actionbtn--compact
     > span
         justify-content center
 
-    svg
-        margin 0
-
     [data-action='label']
         @extend $hide
 
@@ -471,13 +461,6 @@ $button-subtle
     font-size rem(14)
     font-weight bold
     text-transform uppercase
-
-    svg
-        fill         currentColor
-        margin-right rem(6)
-
-        &:only-child
-            margin 0
 
     > span
         display          flex

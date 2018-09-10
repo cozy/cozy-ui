@@ -252,9 +252,10 @@ exports[`Button should render examples: Button 8`] = `
 "<div>
   <div>
     <div>
-      <button type=\\"submit\\" class=\\"c-btn c-btn--danger\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>delete</span></span>
+      <button type=\\"submit\\" class=\\"c-btn c-btn--danger\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>delete</span></span>
       </button>
-      <button type=\\"submit\\" class=\\"c-btn c-btn--secondary c-btn--narrow\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></button>
+      <button type=\\"submit\\" class=\\"c-btn c-btn--secondary c-btn--narrow\\" title=\\"See more\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span class=\\"u-visuallyhidden\\">See more</span></span>
+      </button>
     </div>
   </div>
 </div>"
@@ -275,8 +276,10 @@ exports[`Button should render examples: Button 10`] = `
 "<div>
   <div>
     <div>
-      <button type=\\"submit\\" class=\\"c-btn c-btn--round\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></button>
-      <button type=\\"submit\\" class=\\"c-btn c-btn--secondary c-btn--round\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></button>
+      <button type=\\"submit\\" class=\\"c-btn c-btn--round\\" title=\\"Add\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span class=\\"u-visuallyhidden\\">Add</span></span>
+      </button>
+      <button type=\\"submit\\" class=\\"c-btn c-btn--secondary c-btn--round\\" title=\\"Delete\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span class=\\"u-visuallyhidden\\">Delete</span></span>
+      </button>
     </div>
   </div>
 </div>"
@@ -319,7 +322,7 @@ exports[`Button should render examples: Button 11`] = `
         </button>
       </p>
       <p>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--subtle\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>Cozy</span></span>
+        <button type=\\"submit\\" class=\\"c-btn c-btn--subtle\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>Cozy</span></span>
         </button>
       </p>
     </div>
@@ -348,7 +351,7 @@ exports[`Button should render examples: Button 12`] = `
         </a>
       </p>
       <p>
-        <a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--subtle\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>Link to Cozy.io</span></span>
+        <a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--subtle\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>Link to Cozy.io</span></span>
         </a>
       </p>
     </div>
