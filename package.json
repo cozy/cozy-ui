@@ -78,7 +78,7 @@
     "style-loader": "^0.18.2",
     "stylint": "^1.5.9",
     "stylus-loader": "^3.0.1",
-    "svg-sprite-loader": "^3.2.5",
+    "svg-sprite-loader": "^3.9.2",
     "travis-deploy-once": "^5.0.0",
     "webpack": "^3.5.6"
   },

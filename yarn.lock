@@ -1645,7 +1645,7 @@ braces@^1.8.2:
     preserve "^0.2.0"
     repeat-element "^1.1.2"
 
-braces@^2.3.1:
+braces@^2.2.2, braces@^2.3.1:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/braces/-/braces-2.3.2.tgz#5979fd3f14cd531565e5fa2df1abfff1dfaee729"
   dependencies:
@@ -3744,7 +3744,7 @@ extglob@^0.3.1:
   dependencies:
     is-extglob "^1.0.0"
 
-extglob@^2.0.4:
+extglob@^2.0.2, extglob@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/extglob/-/extglob-2.0.4.tgz#ad00fe4dc612a9232e8718711dc5cb5ab0285543"
   dependencies:
@@ -5900,7 +5900,7 @@ kind-of@^4.0.0:
   dependencies:
     is-buffer "^1.1.5"
 
-kind-of@^5.0.0:
+kind-of@^5.0.0, kind-of@^5.0.2:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-5.1.0.tgz#729c91e2d857b7a419a1f9aa65685c4c33f5845d"
 
@@ -6396,6 +6396,24 @@ methods@~1.1.2:
   version "0.5.1"
   resolved "https://github.com/cozy/michelangelo.git#91d931606074386fcf7f482faf2a1a754aa5bc2b"
 
+micromatch@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-3.1.0.tgz#5102d4eaf20b6997d6008e3acfe1c44a3fa815e2"
+  dependencies:
+    arr-diff "^4.0.0"
+    array-unique "^0.3.2"
+    braces "^2.2.2"
+    define-property "^1.0.0"
+    extend-shallow "^2.0.1"
+    extglob "^2.0.2"
+    fragment-cache "^0.2.1"
+    kind-of "^5.0.2"
+    nanomatch "^1.2.1"
+    object.pick "^1.3.0"
+    regex-not "^1.0.0"
+    snapdragon "^0.8.1"
+    to-regex "^3.0.1"
+
 micromatch@^2.1.5, micromatch@^2.3.11:
   version "2.3.11"
   resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-2.3.11.tgz#86677c97d1720b363431d04d0d15293bd38c1565"
@@ -6608,6 +6626,22 @@ mute-stream@0.0.7:
 nan@^2.3.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.7.0.tgz#d95bf721ec877e08db276ed3fc6eb78f9083ad46"
+
+nanomatch@^1.2.1:
+  version "1.2.13"
+  resolved "https://registry.yarnpkg.com/nanomatch/-/nanomatch-1.2.13.tgz#b87a8aa4fc0de8fe6be88895b38983ff265bd119"
+  dependencies:
+    arr-diff "^4.0.0"
+    array-unique "^0.3.2"
+    define-property "^2.0.2"
+    extend-shallow "^3.0.2"
+    fragment-cache "^0.2.1"
+    is-windows "^1.0.2"
+    kind-of "^6.0.2"
+    object.pick "^1.3.0"
+    regex-not "^1.0.0"
+    snapdragon "^0.8.1"
+    to-regex "^3.0.1"
 
 nanomatch@^1.2.9:
   version "1.2.9"
@@ -9418,7 +9452,7 @@ svg-baker-runtime@^1.3.3:
     mitt "1.1.2"
     svg-baker "^1.2.0"
 
-svg-baker@^1.2.0, svg-baker@^1.2.13:
+svg-baker@^1.2.0:
   version "1.2.13"
   resolved "https://registry.yarnpkg.com/svg-baker/-/svg-baker-1.2.13.tgz#becbc503921a813a0668034f5bed5e491b41dc01"
   dependencies:
@@ -9435,16 +9469,34 @@ svg-baker@^1.2.0, svg-baker@^1.2.13:
     query-string "^4.3.2"
     traverse "^0.6.6"
 
-svg-sprite-loader@^3.2.5:
-  version "3.2.5"
-  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-3.2.5.tgz#a5bc0c761fea5bfbe8268921f018dfdef26fabdb"
+svg-baker@^1.2.17:
+  version "1.2.17"
+  resolved "https://registry.yarnpkg.com/svg-baker/-/svg-baker-1.2.17.tgz#452ceaa604f784e4b864740e4b6b3faf6458d016"
+  dependencies:
+    bluebird "^3.5.0"
+    clone "^2.1.1"
+    he "^1.1.1"
+    image-size "^0.5.1"
+    loader-utils "^1.1.0"
+    merge-options "0.0.64"
+    micromatch "3.1.0"
+    postcss "^5.2.17"
+    postcss-prefix-selector "^1.6.0"
+    posthtml-rename-id "^1.0"
+    posthtml-svg-mode "^1.0"
+    query-string "^4.3.2"
+    traverse "^0.6.6"
+
+svg-sprite-loader@^3.9.2:
+  version "3.9.2"
+  resolved "https://registry.yarnpkg.com/svg-sprite-loader/-/svg-sprite-loader-3.9.2.tgz#9208e58855504767a4cfc66f7fec8acf10b56a37"
   dependencies:
     bluebird "^3.5.0"
     deepmerge "1.3.2"
     domready "1.0.8"
     escape-string-regexp "1.0.5"
     loader-utils "^1.1.0"
-    svg-baker "^1.2.13"
+    svg-baker "^1.2.17"
     svg-baker-runtime "^1.3.3"
     url-slug "2.0.0"
 
