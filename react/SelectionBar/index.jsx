@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { translate } from '../I18n'
 import { Button, Icon } from '../index'
+import withBreakpoints from '../helpers/withBreakpoints'
 
 import styles from './styles.styl'
 
@@ -21,7 +22,13 @@ actions = {
 
 */
 
-const SelectionBar = ({ t, actions, selected, hideSelectionBar }) => {
+const SelectionBar = ({
+  t,
+  actions,
+  selected,
+  hideSelectionBar,
+  breakpoints: { isMobile, isTablet }
+}) => {
   const selectedCount = selected.length
   const actionNames = Object.keys(actions).filter(actionName => {
     const action = actions[actionName]
@@ -40,18 +47,19 @@ const SelectionBar = ({ t, actions, selected, hideSelectionBar }) => {
       </span>
       <span className={styles['coz-selectionbar-separator']} />
       {actionNames.map((actionName, index) => (
-        <button
+        <Button
+          type="button"
           key={index}
           disabled={selectedCount < 1}
           onClick={() => actions[actionName].action(selected)}
-        >
-          <Icon icon={actionName.toLowerCase()} />
-          <span className={styles['coz-selectionbar-label']}>
-            {t('SelectionBar.' + actionName)}
-          </span>
-        </button>
+          icon={actionName.toLowerCase()}
+          label={t('SelectionBar.' + actionName)}
+          iconOnly={isMobile || isTablet ? true : false}
+          subtle
+        />
       ))}
       <Button
+        type="button"
         theme="close"
         className={styles['coz-action-close']}
         onClick={hideSelectionBar}
@@ -70,4 +78,4 @@ SelectionBar.propTypes = {
   hideSelectionBar: PropTypes.func.isRequired // function to close SelectionBar.
 }
 
-export default translate()(SelectionBar)
+export default withBreakpoints()(translate()(SelectionBar))
