@@ -35,24 +35,8 @@ $selectionbar
             background-color  black
 
         button
-            border              0
-            padding-left        rem(16)
-            color               white
-            background-color    transparent
-            line-height         rem(40)
-            font-size           rem(14)
-            text-transform      uppercase
-            cursor              pointer
-
-            svg
-                position relative
-                top rem(2)
-                margin-right rem(8)
-                fill currentColor
-
-            &:disabled
-                opacity  .5
-                cursor   not-allowed
+            padding 0 rem(16)
+            color   white
 
         .coz-action-extra
             display none
@@ -86,9 +70,6 @@ $selectionbar
 
             .coz-selectionbar-separator
                 margin   0 0 0 rem(16)
-
-            .coz-selectionbar-label
-                @extend $visuallyhidden-mobile
 
             .coz-action-close
                 top auto
