@@ -1,26 +1,26 @@
 ### Simple
 
 ```
-initialState = { modalDisplayed: false};
+initialState = { modalOpened: false};
 
 <div>
-  <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
+  <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
   </button>
-  {state.modalDisplayed && <Modal title='Ada Lovelace' description={content.ada.short} dismissAction={() => setState({ modalDisplayed: false })} /> }
+  {state.modalOpened && <Modal title='Ada Lovelace' description={content.ada.short} dismissAction={() => setState({ modalOpened: false })} /> }
 </div>
 ```
 
 ### Simple with no title
 
 ```
-initialState = { modalDisplayed: false};
+initialState = { modalOpened: false};
 
 <div>
-  <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
+  <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
   </button>
-  {state.modalDisplayed && <Modal description={content.ada.short} aria-label="Accessible title" dismissAction={() => setState({ modalDisplayed: false })} /> }
+  {state.modalOpened && <Modal description={content.ada.short} aria-label="Accessible title" dismissAction={() => setState({ modalOpened: false })} /> }
 </div>
 ```
 
@@ -30,7 +30,7 @@ Several sizes avalaible: `small`, `medium`, `large`, `xlarge`, `xxlarge`.
 `small` being the default one.
 
 ```
-initialState = { modalDisplayed: false};
+initialState = { modalOpened: false};
 const sizes = [
   'small',
   'medium',
@@ -40,10 +40,10 @@ const sizes = [
 ];
 
 <div>
-  {sizes.map(size => <button onClick={()=>setState({ size, modalDisplayed: !state.modalDisplayed, })}>
+  {sizes.map(size => <button onClick={()=>setState({ size, modalOpened: !state.modalOpened, })}>
     { size }
   </button>)}
-  {state.modalDisplayed && <Modal title={ state.size + ' modal'} size={state.size} description={content.ada.short} dismissAction={() => setState({ modalDisplayed: false })} /> }
+  {state.modalOpened && <Modal title={ state.size + ' modal'} size={state.size} description={content.ada.short} dismissAction={() => setState({ modalOpened: false })} /> }
 </div>
 ```
 
@@ -52,17 +52,17 @@ const sizes = [
 Besides the default spacing inside a Modal, you can choose another type from this two available: `small` and `large`
 
 ```
-initialState = { modalDisplayed: false};
+initialState = { modalOpened: false};
 const spacings = [
   'small',
   'large',
 ];
 
 <div>
-  {spacings.map(spacing => <button onClick={()=>setState({ spacing, modalDisplayed: !state.modalDisplayed, })}>
+  {spacings.map(spacing => <button onClick={()=>setState({ spacing, modalOpened: !state.modalOpened, })}>
     { spacing }
   </button>)}
-  {state.modalDisplayed && <Modal title={ state.spacing + ' modal'} spacing={state.spacing} description={content.ada.short} dismissAction={() => setState({ modalDisplayed: false })} /> }
+  {state.modalOpened && <Modal title={ state.spacing + ' modal'} spacing={state.spacing} description={content.ada.short} dismissAction={() => setState({ modalOpened: false })} /> }
 </div>
 ```
 
@@ -71,13 +71,13 @@ const spacings = [
 If you want the modal to fill all the available space, without margin, on mobile screen.
 
 ```
-initialState = { modalDisplayed: false};
+initialState = { modalOpened: false};
 
 <div>
-  <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
+  <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
   </button>
-  {state.modalDisplayed && <Modal title='Ada Lovelace' description={content.ada.long} mobileFullscreen dismissAction={() => setState({ modalDisplayed: false })} /> }
+  {state.modalOpened && <Modal title='Ada Lovelace' description={content.ada.long} mobileFullscreen dismissAction={() => setState({ modalOpened: false })} /> }
 </div>
 ```
 
@@ -87,12 +87,12 @@ With `closable` set to `false`, the user will not be able to close the modal, ev
 
 ```
 <div>
-  <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
+  <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
   </button>
-  {state.modalDisplayed && <Modal closable={false}
+  {state.modalOpened && <Modal closable={false}
   title='Ada Lovelace' description={<div>
-    <button onClick={()=>setState({modalDisplayed: false})}>Close the modal</button><br/>
+    <button onClick={()=>setState({modalOpened: false})}>Close the modal</button><br/>
     { content.ada.short }
     </div>}  /> }
 </div>
@@ -104,11 +104,11 @@ If you have a long content, the modal's content will scroll. For the scrollbars 
 
 ```
 <div>
-  <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
+  <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
   </button>
-  {state.modalDisplayed && <Modal
-    dismissAction={()=>setState({ modalDisplayed: false})}
+  {state.modalOpened && <Modal
+    dismissAction={()=>setState({ modalOpened: false})}
     overflowHidden={true}
     title='Ada Lovelace'
     description={ content.ada.long } />}
@@ -120,14 +120,14 @@ If you have a long content, the modal's content will scroll. For the scrollbars 
 You can specify primary and secondary actions. Use `primaryType` and `secondaryType` to choose the types of the buttons
 
 ```
-const showModal = () => setState({ modalDisplayed: true })
-const hideModal = () => setState({ modalDisplayed: false });
+const showModal = () => setState({ modalOpened: true })
+const hideModal = () => setState({ modalOpened: false });
 
 <div>
   <button onClick={showModal}>
     Toggle modal
   </button>
-  {state.modalDisplayed && <Modal
+  {state.modalOpened && <Modal
       primaryText='Close modal'
       primaryType='danger'
       primaryAction={hideModal}
@@ -153,14 +153,14 @@ const headerStyle = {
 };
 
 <div>
-  <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
+  <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
   </button>
-  {state.modalDisplayed &&
+  {state.modalOpened &&
     <Modal
-        crossColor='white'
+        closeBtnColor='white'
         overflowHidden={true}
-        dismissAction={()=>setState({ modalDisplayed: false})} >
+        dismissAction={()=>setState({ modalOpened: false})} >
       <ModalHeader style={headerStyle} title="Augusta Ada King-Noel, Countess of Lovelace" />
       <ModalDescription className='u-mt-half'>
         { content.ada.short }
@@ -180,14 +180,14 @@ If you need a modal with a branded header when you have a brand related content.
 const { ModalDescription, ModalBrandedHeader } = Modal;
 
 <div>
-  <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
+  <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
   </button>
-  {state.modalDisplayed &&
+  {state.modalOpened &&
     <Modal
         overflowHidden={true}
-        crossColor="#297ef2"
-        dismissAction={()=>setState({ modalDisplayed: false})} >
+        closeBtnColor="#297ef2"
+        dismissAction={()=>setState({ modalOpened: false})} >
       <ModalBrandedHeader bg="#f5f6f7" logo="https://cozy.io/fr/images/cozy-logo-name-horizontal-blue.svg" />
       <ModalDescription className='u-mt-half'>
         { content.ada.short }
@@ -202,14 +202,14 @@ const { ModalDescription, ModalBrandedHeader } = Modal;
 const { ModalDescription, ModalBrandedHeader } = Modal;
 
 <div>
-  <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
+  <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
   </button>
-  {state.modalDisplayed &&
+  {state.modalOpened &&
     <Modal
         overflowHidden={true}
-        crossColor="#297ef2"
-        dismissAction={()=>setState({ modalDisplayed: false})} >
+        closeBtnColor="#297ef2"
+        dismissAction={()=>setState({ modalOpened: false})} >
       <ModalBrandedHeader bg="linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(236,233,230,1) 100%);" logo="https://cozy.io/fr/images/cozy-logo-name-horizontal-blue.svg" />
       <ModalDescription className='u-mt-half'>
         { content.ada.short }
@@ -249,7 +249,7 @@ class ModalCounterWithAnimatedHeader extends React.Component {
   render () {
     return (
       <Modal
-          dismissAction={()=>setState({ modalDisplayed: false})} mobileFullscreen >
+          dismissAction={()=>setState({ modalOpened: false})} mobileFullscreen >
         <ModalContent className="u-mt-half">
           <AnimatedContentHeader>
             { animatedHeader }
@@ -263,10 +263,10 @@ class ModalCounterWithAnimatedHeader extends React.Component {
 }
 
 <div>
-  <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
+  <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
   </button>
-  {state.modalDisplayed &&
+  {state.modalOpened &&
   <ModalCounterWithAnimatedHeader />}
 </div>
 ```
@@ -276,13 +276,13 @@ class ModalCounterWithAnimatedHeader extends React.Component {
 ```
 const { ModalDescription, ModalBrandedHeader } = Modal;
 const Panel = require('../Panel');
-const toggle = () => setState({ modalDisplayed: !state.modalDisplayed });
+const toggle = () => setState({ modalOpened: !state.modalOpened });
 
 <div>
   <button onClick={toggle}>
     Toggle modal
   </button>
-  { state.modalDisplayed ? <Modal
+  { state.modalOpened ? <Modal
       dismissAction={toggle}
       size='xxlarge' overflowHidden={true}>
       <ModalBrandedHeader bg="linear-gradient(to right, #3c3b3f 0%,#605c3c 100%)" logo="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_80%2Cw_300/MTE4MDAzNDEwODQwOTQ2MTkw/ada-lovelace-20825279-1-402.jpg" style={{ marginBottom: 0 }}/>
@@ -310,12 +310,12 @@ const toggle = () => setState({ modalDisplayed: !state.modalDisplayed });
 You can use the `into` prop to wrap the `Modal` in a `Portal`. This `prop` will be set to `"body"` in future versions so try to put it now to check if your Modal does not break when rendered in a Portal.
 
 ```jsx
-initialState = { modalDisplayed: false};
+initialState = { modalOpened: false};
 
 <div>
-  <button onClick={()=>setState({ modalDisplayed: !state.modalDisplayed })}>
+  <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
   </button>
-  {state.modalDisplayed && <Modal into='body' title='Ada Lovelace' description={content.ada.short} dismissAction={() => setState({ modalDisplayed: false })} /> }
+  {state.modalOpened && <Modal into='body' title='Ada Lovelace' description={content.ada.short} dismissAction={() => setState({ modalOpened: false })} /> }
 </div>
 ```
