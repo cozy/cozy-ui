@@ -276,8 +276,8 @@ class Modal extends Component {
       dismissAction,
       overflowHidden,
       className,
-      crossClassName,
-      crossColor,
+      closeBtnClassName,
+      closeBtnColor,
       into,
       size,
       height,
@@ -334,11 +334,11 @@ class Modal extends Component {
             >
               {closable && (
                 <ModalCross
-                  className={cx(crossClassName, {
+                  className={cx(closeBtnClassName, {
                     [styles['c-modal-close--notitle']]: !title
                   })}
                   onClick={dismissAction}
-                  color={crossColor}
+                  color={closeBtnColor}
                 />
               )}
               {title && <ModalHeader title={title} id={titleID} />}
@@ -389,9 +389,9 @@ Modal.propTypes = {
   /** `className` used on the modal, useful if you want to custom its CSS */
   className: PropTypes.string,
   /** `className` used on the cross, useful if you want to custom its CSS */
-  crossClassName: PropTypes.string,
-  /** `crossColor` to overwrite the default color of the cross button */
-  crossColor: PropTypes.string,
+  closeBtnClassName: PropTypes.string,
+  /** `closeBtnColor` to overwrite the default color of the cross button */
+  closeBtnColor: PropTypes.string,
   /** If has a value, the modal will be rendered inside a portal and its value will be passed to Portal
    to control the rendering destination of the Modal */
   into: PropTypes.string,
@@ -436,6 +436,8 @@ ModalContent.propTypes = {
 
 const EnhancedModal = migrateProps([
   { src: 'withCross', dest: 'closable' }, // withCross -> closable
+  { src: 'crossClassName', dest: 'closeBtnClassName' }, // withCross -> closable
+  { src: 'crossColor', dest: 'closeBtnColor' }, // withCross -> closable
   {
     fn: props => {
       let msg = null
