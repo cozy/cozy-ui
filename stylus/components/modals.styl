@@ -73,7 +73,7 @@ for size in 'small' 'medium' 'large' 'xlarge' 'xxlarge'
 
         $max-width=lookup(size + '-width') + lookup(size + '-margin') * 2
         @media (max-width: $max-width)
-            width auto
+            width 100%
 
 $modal-wrapper--fullscreen
     +small-screen()
