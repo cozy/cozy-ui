@@ -4,8 +4,8 @@ exports[`IntentModal component renders as expected 1`] = `
 <Unknown
   className="intentModal"
   closable={true}
-  crossClassName="intentModal__cross"
-  crossColor={undefined}
+  closeBtnClassName="intentModal__cross"
+  closeBtnColor={undefined}
   description={undefined}
   dismissAction={[Function]}
   height={undefined}

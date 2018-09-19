@@ -34,7 +34,7 @@ class IntentModal extends Component {
         {...modalProps}
         key="modal"
         className={styles.intentModal}
-        crossClassName={styles.intentModal__cross}
+        closeBtnClassName={styles.intentModal__cross}
         dismissAction={this.dismiss}
         overflowHidden
       >
