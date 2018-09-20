@@ -7,8 +7,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import { initTranslation } from './translation.jsx'
-import { initFormat } from './format.jsx'
+import { initTranslation } from './translation'
+import { initFormat } from './format'
 
 export const DEFAULT_LANG = 'en'
 
