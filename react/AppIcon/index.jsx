@@ -37,7 +37,7 @@ export class AppIcon extends Component {
   }
 
   render() {
-    const { alt } = this.props
+    const { alt, className } = this.props
     const { icon, status } = this.state
     switch (status) {
       case 'idle':
@@ -46,17 +46,28 @@ export class AppIcon extends Component {
           <div
             className={classNames(
               styles['c-loading-placeholder'],
-              styles['c-app-icon']
+              styles['c-app-icon'],
+              className
             )}
           />
         )
       case 'done':
-        return <img className={styles['c-app-icon']} src={icon} alt={alt} />
+        return (
+          <img
+            alt={alt}
+            className={classNames(styles['c-app-icon'], className)}
+            src={icon}
+          />
+        )
       case 'failed':
       default:
         return (
           <Icon
-            className={(styles['c-app-icon'], styles['c-app-icon-default'])}
+            className={classNames(
+              styles['c-app-icon'],
+              styles['c-app-icon-default'],
+              className
+            )}
             height="100%"
             icon={appDefaultIcon}
             width="100%"
@@ -67,6 +78,8 @@ export class AppIcon extends Component {
 }
 
 AppIcon.propTypes = {
+  alt: PropTypes.string,
+  className: PropTypes.string,
   fetchIcon: PropTypes.func.isRequired
 }
 
