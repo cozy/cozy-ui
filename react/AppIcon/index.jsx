@@ -32,6 +32,7 @@ export class AppIcon extends Component {
       const icon = await fetchIcon(app.links.icon)
       this.setState({ icon, status: 'done' })
     } catch (error) {
+      console.error(error.message)
       this.setState({ error, status: 'failed' })
     }
   }
