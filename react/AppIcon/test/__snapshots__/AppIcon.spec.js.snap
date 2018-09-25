@@ -16,7 +16,7 @@ exports[`AppIcon component renders as loading 1`] = `
 
 exports[`AppIcon component renders default when fetch error occurs 1`] = `
 <Icon
-  className="c-app-icon-default"
+  className="c-app-icon c-app-icon-default"
   height="100%"
   icon="test-file-stub"
   spin={false}
