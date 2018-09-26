@@ -170,7 +170,9 @@ const ModalHeader = ({
       {isTitle ? <h2>{children}</h2> : children}
       {appName && (
         <h2 className={styles['c-modal-app']}>
-          {appIcon && <img className={styles['c-app-icon']} src={appIcon} />}
+          {appIcon && (
+            <img className={styles['c-modal-app-icon']} src={appIcon} />
+          )}
           {appEditor && (
             <span className={styles['c-app-editor']}>{appEditor}&nbsp;</span>
           )}
