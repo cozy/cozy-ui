@@ -35,7 +35,7 @@ const ContextHeader = ({ icon, title, text, onClose, className }) => {
   )
 }
 
-ContextHeader.PropTypes = {
+ContextHeader.propTypes = {
   icon: PropTypes.node,
   title: PropTypes.string.isRequired,
   text: PropTypes.string,
