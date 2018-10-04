@@ -1,4 +1,4 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   resolve: {
@@ -18,7 +18,7 @@ module.exports = {
       {
         test: /\.styl$/,
         loader: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
@@ -36,5 +36,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [new ExtractTextPlugin('[name].css')]
+  plugins: [new MiniCssExtractPlugin('[name].css')]
 }

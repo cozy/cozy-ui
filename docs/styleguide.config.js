@@ -78,7 +78,22 @@ module.exports = {
     }
   ],
   components: '../react/**/*.jsx',
-  template: 'template.html',
+  template: {
+    head: {
+      meta: [
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1.0'
+        }
+      ],
+      links: [
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css?family=Lato:400,700,300'
+        }
+      ]
+    }
+  },
   theme: {
     fontFamily: {
       base: 'Lato, sans-serif'
@@ -92,8 +107,8 @@ module.exports = {
     path.join(__dirname, './style.styl'),
     path.join(__dirname, './styleguide.setup')
   ],
-  showCode: false,
-  showUsage: false,
+  exampleMode: 'collapse',
+  usageMode: 'collapse',
   context: {
     utils: path.resolve(__dirname, 'utils'),
     isTesting: path.resolve(__dirname, 'false'),
