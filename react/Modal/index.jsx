@@ -9,6 +9,7 @@ import migrateProps from '../helpers/migrateProps'
 import palette from '../../stylus/settings/palette.json'
 import Portal from 'preact-portal'
 import uniqueId from 'lodash/uniqueId'
+import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 
 class AnimatedContentHeader extends Component {
   render() {
@@ -56,12 +57,12 @@ class ModalContent extends Component {
     this.scrollingContent.addEventListener('scroll', this.handleScroll, {
       passive: true
     })
-    document.body.classList.add('has-modal')
+    disableBodyScroll(this.scrollingContent)
   }
 
   componentWillUnmount() {
     this.scrollingContent.removeEventListener('scroll', this.handleScroll)
-    document.body.classList.remove('has-modal')
+    clearAllBodyScrollLocks()
   }
 
   handleScroll = () => {

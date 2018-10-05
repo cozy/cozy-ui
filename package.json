@@ -83,6 +83,7 @@
   },
   "dependencies": {
     "babel-preset-cozy-app": "^0.3.1",
+    "body-scroll-lock": "^2.5.8",
     "classnames": "^2.2.5",
     "date-fns": "^1.28.5",
     "hammerjs": "^2.0.8",
