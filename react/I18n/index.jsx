@@ -35,7 +35,7 @@ export class I18n extends Component {
     }
   }
 
-  componentWillReceiveProps(newProps) {
+  UNSAFE_componentWillReceiveProps(newProps) {
     if (newProps.lang !== this.props.lang) {
       this.init(newProps)
     }

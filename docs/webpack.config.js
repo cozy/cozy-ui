@@ -2,10 +2,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   resolve: {
-    alias: {
-      react: 'preact-compat',
-      'react-dom': 'preact-compat'
-    },
     extensions: ['.jsx', '.js', '.json', '.styl']
   },
   module: {

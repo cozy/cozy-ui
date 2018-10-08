@@ -7,7 +7,7 @@ import { Button } from '../Button'
 import Icon from '../Icon'
 import migrateProps from '../helpers/migrateProps'
 import palette from '../../stylus/settings/palette.json'
-import Portal from 'preact-portal'
+import Portal from '../Portal'
 import uniqueId from 'lodash/uniqueId'
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 
@@ -40,7 +40,7 @@ class ModalContent extends Component {
     }
   }
 
-  componentWillUpdate(nextProps) {
+  UNSAFE_componentWillUpdate(nextProps) {
     const { children } = nextProps
     this.refreshComputedParts(children)
   }
@@ -175,7 +175,10 @@ const ModalHeader = ({
             <img className={styles['c-modal-app-icon']} src={appIcon} />
           )}
           {appEditor && (
-            <span className={styles['c-app-editor']}>{appEditor}&nbsp;</span>
+            <span className={styles['c-app-editor']}>
+              {appEditor}
+              &nbsp;
+            </span>
           )}
           {appName}
         </h2>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Portal from 'preact-portal'
+import Portal from '../Portal'
 import Button from '../Button'
 
 import styles from './styles.styl'
@@ -34,7 +34,7 @@ class Alert extends Component {
 
   computeDuration() {
     const words = this.props.message.split(/\W/).filter(Boolean)
-    return Math.max(MINIMUM_ALERT_DURATION, words.length / 3 * 1000)
+    return Math.max(MINIMUM_ALERT_DURATION, (words.length / 3) * 1000)
   }
 
   componentDidMount() {
