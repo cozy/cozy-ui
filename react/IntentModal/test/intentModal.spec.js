@@ -2,12 +2,8 @@
 /* eslint-env jest */
 
 import React from 'react'
-import { configure, shallow } from 'enzyme'
-import Adapter from 'enzyme-adapter-react-15'
 
 import IntentModal from '../IntentModal'
-
-configure({ adapter: new Adapter() })
 
 describe('IntentModal component', () => {
   beforeEach(() => {
