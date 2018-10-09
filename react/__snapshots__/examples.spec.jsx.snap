@@ -2,53 +2,27 @@
 
 exports[`ActionMenu should render examples: ActionMenu 1`] = `
 "<div>
-  <div>
-    <div>
-      <button>Show action menu</button>
-    </div>
-  </div>
+  <div><button>Show action menu</button></div>
 </div>"
 `;
 
 exports[`Avatar should render examples: Avatar 1`] = `
 "<div>
-  <div>
-    <div>
-      <div class=\\"c-avatar c-avatar--medium\\">
-        <!-- react-text: 3 -->
-        <!-- /react-text -->
-        <!-- react-text: 4 -->
-        <!-- /react-text -->
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-      </div>
-    </div>
-  </div>
+  <div class=\\"c-avatar c-avatar--medium\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\">
+      <use xlink:href=\\"test-file-stub\\"></use>
+    </svg></div>
 </div>"
 `;
 
 exports[`Avatar should render examples: Avatar 2`] = `
 "<div>
-  <div>
-    <div>
-      <div class=\\"c-avatar c-avatar--medium\\" style=\\"background-color: rgb(245, 45, 45); color: white;\\">
-        <!-- react-text: 3 -->
-        <!-- /react-text --><span class=\\"c-avatar-initials\\">CD</span></div>
-    </div>
-  </div>
+  <div class=\\"c-avatar c-avatar--medium\\" style=\\"background-color: rgb(245, 45, 45); color: white;\\"><span class=\\"c-avatar-initials\\">CD</span></div>
 </div>"
 `;
 
 exports[`Avatar should render examples: Avatar 3`] = `
 "<div>
-  <div>
-    <div>
-      <div class=\\"c-avatar c-avatar--medium\\">
-        <img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"c-avatar-image\\" alt=\\"\\">
-      </div>
-    </div>
-  </div>
+  <div class=\\"c-avatar c-avatar--medium\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"c-avatar-image\\" alt=\\"\\"></div>
 </div>"
 `;
 
@@ -56,42 +30,18 @@ exports[`Avatar should render examples: Avatar 4`] = `
 "<div>
   <div>
     <div>
-      <div>
-        <div>
-          <div class=\\"c-avatar c-avatar--small\\">
-            <!-- react-text: 5 -->
-            <!-- /react-text -->
-            <!-- react-text: 6 -->
-            <!-- /react-text -->
-            <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\">
-              <use xlink:href=\\"test-file-stub\\"></use>
-            </svg>
-          </div>
-          <div class=\\"c-avatar c-avatar--small\\" style=\\"background-color: rgb(245, 45, 45); color: white;\\">
-            <!-- react-text: 10 -->
-            <!-- /react-text --><span class=\\"c-avatar-initials\\">CD</span></div>
-          <div class=\\"c-avatar c-avatar--small\\">
-            <img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"c-avatar-image\\" alt=\\"\\">
-          </div>
-        </div>
-        <div>
-          <div class=\\"c-avatar c-avatar--medium\\">
-            <!-- react-text: 16 -->
-            <!-- /react-text -->
-            <!-- react-text: 17 -->
-            <!-- /react-text -->
-            <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\">
-              <use xlink:href=\\"test-file-stub\\"></use>
-            </svg>
-          </div>
-          <div class=\\"c-avatar c-avatar--medium\\" style=\\"background-color: rgb(245, 45, 45); color: white;\\">
-            <!-- react-text: 21 -->
-            <!-- /react-text --><span class=\\"c-avatar-initials\\">CD</span></div>
-          <div class=\\"c-avatar c-avatar--medium\\">
-            <img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"c-avatar-image\\" alt=\\"\\">
-          </div>
-        </div>
-      </div>
+      <div class=\\"c-avatar c-avatar--small\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg></div>
+      <div class=\\"c-avatar c-avatar--small\\" style=\\"background-color: rgb(245, 45, 45); color: white;\\"><span class=\\"c-avatar-initials\\">CD</span></div>
+      <div class=\\"c-avatar c-avatar--small\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"c-avatar-image\\" alt=\\"\\"></div>
+    </div>
+    <div>
+      <div class=\\"c-avatar c-avatar--medium\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg></div>
+      <div class=\\"c-avatar c-avatar--medium\\" style=\\"background-color: rgb(245, 45, 45); color: white;\\"><span class=\\"c-avatar-initials\\">CD</span></div>
+      <div class=\\"c-avatar c-avatar--medium\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"c-avatar-image\\" alt=\\"\\"></div>
     </div>
   </div>
 </div>"
@@ -100,19 +50,9 @@ exports[`Avatar should render examples: Avatar 4`] = `
 exports[`Badge should render examples: Badge 1`] = `
 "<div>
   <div>
-    <div>
-      <div>
-        <p><span class=\\"c-badge-root\\"><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal c-actionbtn--compact\\" title=\\"Normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
-          </button><span class=\\"c-badge c-badge--normal\\">2</span></span>
-        </p>
-        <p><span class=\\"c-badge-root\\"><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new c-actionbtn--compact\\" title=\\"New\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span>
-          </button><span class=\\"c-badge c-badge--new\\">2</span></span>
-        </p>
-        <p><span class=\\"c-badge-root\\"><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error c-actionbtn--compact\\" title=\\"Error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
-          </button><span class=\\"c-badge c-badge--error\\">2</span></span>
-        </p>
-      </div>
-    </div>
+    <p><span class=\\"c-badge-root\\"><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal c-actionbtn--compact\\" title=\\"Normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span></button><span class=\\"c-badge c-badge--normal\\">2</span></span></p>
+    <p><span class=\\"c-badge-root\\"><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new c-actionbtn--compact\\" title=\\"New\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span></button><span class=\\"c-badge c-badge--new\\">2</span></span></p>
+    <p><span class=\\"c-badge-root\\"><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error c-actionbtn--compact\\" title=\\"Error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span></button><span class=\\"c-badge c-badge--error\\">2</span></span></p>
   </div>
 </div>"
 `;
@@ -120,56 +60,12 @@ exports[`Badge should render examples: Badge 1`] = `
 exports[`Button should render examples: Button 1`] = `
 "<div>
   <div>
-    <div>
-      <p>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--regular\\"><span><span>regular</span></span>
-        </button>
-        <button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--regular\\"><span><span>regular</span></span>
-        </button>
-        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--regular\\"><span><span>regular</span></span>
-        </button>
-      </p>
-      <p>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--danger\\"><span><span>danger</span></span>
-        </button>
-        <button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--danger\\"><span><span>danger</span></span>
-        </button>
-        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--danger\\"><span><span>danger</span></span>
-        </button>
-      </p>
-      <p>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--highlight\\"><span><span>highlight</span></span>
-        </button>
-        <button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--highlight\\"><span><span>highlight</span></span>
-        </button>
-        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--highlight\\"><span><span>highlight</span></span>
-        </button>
-      </p>
-      <p>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--secondary\\"><span><span>secondary</span></span>
-        </button>
-        <button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--secondary\\"><span><span>secondary</span></span>
-        </button>
-        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--secondary\\"><span><span>secondary</span></span>
-        </button>
-      </p>
-      <p>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>danger-outline</span></span>
-        </button>
-        <button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>danger-outline</span></span>
-        </button>
-        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>danger-outline</span></span>
-        </button>
-      </p>
-      <p>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--alpha\\"><span><span>alpha</span></span>
-        </button>
-        <button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--alpha\\"><span><span>alpha</span></span>
-        </button>
-        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--alpha\\"><span><span>alpha</span></span>
-        </button>
-      </p>
-    </div>
+    <p><button type=\\"submit\\" class=\\"c-btn c-btn--regular\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--regular\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--regular\\"><span><span>regular</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"c-btn c-btn--danger\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--danger\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--danger\\"><span><span>danger</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"c-btn c-btn--highlight\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--highlight\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--highlight\\"><span><span>highlight</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"c-btn c-btn--secondary\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--secondary\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--secondary\\"><span><span>secondary</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>danger-outline</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"c-btn c-btn--alpha\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--alpha\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--alpha\\"><span><span>alpha</span></span></button></p>
   </div>
 </div>"
 `;
@@ -177,24 +73,10 @@ exports[`Button should render examples: Button 1`] = `
 exports[`Button should render examples: Button 2`] = `
 "<div>
   <div>
-    <div>
-      <p>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--tiny\\"><span><span>Tiny</span></span>
-        </button>
-      </p>
-      <p>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--small\\"><span><span>Small</span></span>
-        </button>
-      </p>
-      <p>
-        <button type=\\"submit\\" class=\\"c-btn\\"><span><span>Normal</span></span>
-        </button>
-      </p>
-      <p>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--large\\"><span><span>Large</span></span>
-        </button>
-      </p>
-    </div>
+    <p><button type=\\"submit\\" class=\\"c-btn c-btn--tiny\\"><span><span>Tiny</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"c-btn c-btn--small\\"><span><span>Small</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"c-btn\\"><span><span>Normal</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"c-btn c-btn--large\\"><span><span>Large</span></span></button></p>
   </div>
 </div>"
 `;
@@ -202,142 +84,51 @@ exports[`Button should render examples: Button 2`] = `
 exports[`Button should render examples: Button 3`] = `
 "<div>
   <div>
-    <div>
-      <p>
-        <button type=\\"submit\\" class=\\"c-btn\\"><span><span>Normal</span></span>
-        </button>
-      </p>
-      <p>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--narrow\\"><span><span>N…</span></span>
-        </button>
-      </p>
-      <p>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--full\\"><span><span>Full width</span></span>
-        </button>
-      </p>
-    </div>
+    <p><button type=\\"submit\\" class=\\"c-btn\\"><span><span>Normal</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"c-btn c-btn--narrow\\"><span><span>N…</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"c-btn c-btn--full\\"><span><span>Full width</span></span></button></p>
   </div>
 </div>"
 `;
 
-exports[`Button should render examples: Button 4`] = `
-"<div>
-  <div>
-    <button type=\\"submit\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>Show alert</span></span>
-    </button>
-  </div>
-</div>"
-`;
+exports[`Button should render examples: Button 4`] = `"<div><button type=\\"submit\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>Show alert</span></span></button></div>"`;
 
-exports[`Button should render examples: Button 5`] = `
-"<div>
-  <div>
-    <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn\\"><span><span>Loading</span></span>
-    </button>
-  </div>
-</div>"
-`;
+exports[`Button should render examples: Button 5`] = `"<div><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn\\"><span><span>Loading</span></span></button></div>"`;
 
-exports[`Button should render examples: Button 6`] = `
-"<div>
-  <div>
-    <button type=\\"submit\\" class=\\"c-btn\\"><span><span>Toggle busy</span></span>
-    </button>
-  </div>
-</div>"
-`;
+exports[`Button should render examples: Button 6`] = `"<div><button type=\\"submit\\" class=\\"c-btn\\"><span><span>Toggle busy</span></span></button></div>"`;
 
 exports[`Button should render examples: Button 7`] = `
 "<div>
-  <div>
-    <div>
-      <button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn\\"><span><span>Loading</span></span>
-      </button>
-      <a href=\\"http://cozy.io\\" aria-disabled=\\"true\\" class=\\"c-btn\\"><span><span>Go to Cozy website</span></span>
-      </a>
-    </div>
-  </div>
+  <div><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn\\"><span><span>Loading</span></span></button><a href=\\"http://cozy.io\\" aria-disabled=\\"true\\" class=\\"c-btn\\"><span><span>Go to Cozy website</span></span></a></div>
 </div>"
 `;
 
 exports[`Button should render examples: Button 8`] = `
 "<div>
-  <div>
-    <div>
-      <button type=\\"submit\\" class=\\"c-btn c-btn--danger\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>delete</span></span>
-      </button>
-      <button type=\\"submit\\" class=\\"c-btn c-btn--secondary c-btn--narrow\\" title=\\"See more\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span class=\\"u-visuallyhidden\\">See more</span></span>
-      </button>
-    </div>
-  </div>
+  <div><button type=\\"submit\\" class=\\"c-btn c-btn--danger\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>delete</span></span></button><button type=\\"submit\\" class=\\"c-btn c-btn--secondary c-btn--narrow\\" title=\\"See more\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span class=\\"u-visuallyhidden\\">See more</span></span></button></div>
 </div>"
 `;
 
 exports[`Button should render examples: Button 9`] = `
 "<div>
-  <div>
-    <div>
-      <button type=\\"submit\\" class=\\"c-btn c-btn--danger\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: yellow;\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>delete</span></span>
-      </button>
-    </div>
-  </div>
+  <div><button type=\\"submit\\" class=\\"c-btn c-btn--danger\\"><span><svg class=\\"icon\\" style=\\"fill: yellow;\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>delete</span></span></button></div>
 </div>"
 `;
 
 exports[`Button should render examples: Button 10`] = `
 "<div>
-  <div>
-    <div>
-      <button type=\\"submit\\" class=\\"c-btn c-btn--round\\" title=\\"Add\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span class=\\"u-visuallyhidden\\">Add</span></span>
-      </button>
-      <button type=\\"submit\\" class=\\"c-btn c-btn--secondary c-btn--round\\" title=\\"Delete\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span class=\\"u-visuallyhidden\\">Delete</span></span>
-      </button>
-    </div>
-  </div>
+  <div><button type=\\"submit\\" class=\\"c-btn c-btn--round\\" title=\\"Add\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span class=\\"u-visuallyhidden\\">Add</span></span></button><button type=\\"submit\\" class=\\"c-btn c-btn--secondary c-btn--round\\" title=\\"Delete\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span class=\\"u-visuallyhidden\\">Delete</span></span></button></div>
 </div>"
 `;
 
 exports[`Button should render examples: Button 11`] = `
 "<div>
   <div>
-    <div>
-      <p>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--tiny c-btn--subtle\\"><span><span>Tiny text</span></span>
-        </button>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--small c-btn--subtle\\"><span><span>Small text</span></span>
-        </button>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--subtle\\"><span><span>Regular text</span></span>
-        </button>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--large c-btn--subtle\\"><span><span>Large text</span></span>
-        </button>
-      </p>
-      <p>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--secondary c-btn--subtle\\"><span><span>Secondary theme</span></span>
-        </button>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--highlight c-btn--subtle\\"><span><span>Highlight theme</span></span>
-        </button>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--danger c-btn--subtle\\"><span><span>DANGER theme</span></span>
-        </button>
-      </p>
-      <p>
-        <button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--subtle\\"><span><span>Disabled</span></span>
-        </button>
-      </p>
-      <p>
-        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--subtle\\"><span><span>Busy</span></span>
-        </button>
-        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--secondary c-btn--subtle\\"><span><span>Busy secondary</span></span>
-        </button>
-        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--highlight c-btn--subtle\\"><span><span>Busy highlight</span></span>
-        </button>
-        <button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--danger c-btn--subtle\\"><span><span>Busy danger</span></span>
-        </button>
-      </p>
-      <p>
-        <button type=\\"submit\\" class=\\"c-btn c-btn--subtle\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>Cozy</span></span>
-        </button>
-      </p>
-    </div>
+    <p><button type=\\"submit\\" class=\\"c-btn c-btn--tiny c-btn--subtle\\"><span><span>Tiny text</span></span></button><button type=\\"submit\\" class=\\"c-btn c-btn--small c-btn--subtle\\"><span><span>Small text</span></span></button><button type=\\"submit\\" class=\\"c-btn c-btn--subtle\\"><span><span>Regular text</span></span></button><button type=\\"submit\\" class=\\"c-btn c-btn--large c-btn--subtle\\"><span><span>Large text</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"c-btn c-btn--secondary c-btn--subtle\\"><span><span>Secondary theme</span></span></button><button type=\\"submit\\" class=\\"c-btn c-btn--highlight c-btn--subtle\\"><span><span>Highlight theme</span></span></button><button type=\\"submit\\" class=\\"c-btn c-btn--danger c-btn--subtle\\"><span><span>DANGER theme</span></span></button></p>
+    <p><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--subtle\\"><span><span>Disabled</span></span></button></p>
+    <p><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--subtle\\"><span><span>Busy</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--secondary c-btn--subtle\\"><span><span>Busy secondary</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--highlight c-btn--subtle\\"><span><span>Busy highlight</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--danger c-btn--subtle\\"><span><span>Busy danger</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"c-btn c-btn--subtle\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>Cozy</span></span></button></p>
   </div>
 </div>"
 `;
@@ -345,66 +136,27 @@ exports[`Button should render examples: Button 11`] = `
 exports[`Button should render examples: Button 12`] = `
 "<div>
   <div>
-    <div>
-      <p>
-        <a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--tiny\\"><span><span>Link to Cozy.io</span></span>
-        </a>
-      </p>
-      <p>
-        <a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--small\\"><span><span>Link to Cozy.io</span></span>
-        </a>
-      </p>
-      <p>
-        <a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn\\"><span><span>Link to Cozy.io</span></span>
-        </a>
-      </p>
-      <p>
-        <a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--large\\"><span><span>Link to Cozy.io</span></span>
-        </a>
-      </p>
-      <p>
-        <a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--subtle\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>Link to Cozy.io</span></span>
-        </a>
-      </p>
-    </div>
+    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--tiny\\"><span><span>Link to Cozy.io</span></span></a></p>
+    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--small\\"><span><span>Link to Cozy.io</span></span></a></p>
+    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn\\"><span><span>Link to Cozy.io</span></span></a></p>
+    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--large\\"><span><span>Link to Cozy.io</span></span></a></p>
+    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--subtle\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span>Link to Cozy.io</span></span></a></p>
   </div>
 </div>"
 `;
 
 exports[`Button should render examples: Button 13`] = `
 "<div>
-  <div>
-    <div><span to=\\"/destination\\" class=\\"c-btn\\"><span><!-- react-text: 4 -->I'm a (false) NavLink<!-- /react-text --></span></span>
-    </div>
-  </div>
+  <div><span to=\\"/destination\\" class=\\"c-btn\\"><span>I'm a (false) NavLink</span></span></div>
 </div>"
 `;
 
 exports[`ButtonAction should render examples: ButtonAction 1`] = `
 "<div>
   <div>
-    <div>
-      <div>
-        <p>
-          <button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
-          </button>
-          <button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
-          </button>
-        </p>
-        <p>
-          <button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span>
-          </button>
-          <button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span>
-          </button>
-        </p>
-        <p>
-          <button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
-          </button>
-          <button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
-          </button>
-        </p>
-      </div>
-    </div>
+    <p><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span></button><button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span></button></p>
+    <p><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span></button><button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span></button></p>
+    <p><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span></button><button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span></button></p>
   </div>
 </div>"
 `;
@@ -412,14 +164,7 @@ exports[`ButtonAction should render examples: ButtonAction 1`] = `
 exports[`ButtonAction should render examples: ButtonAction 2`] = `
 "<div>
   <div>
-    <div>
-      <div>
-        <p>
-          <button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Very long long long label</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
-          </button>
-        </p>
-      </div>
-    </div>
+    <p><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Very long long long label</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span></button></p>
   </div>
 </div>"
 `;
@@ -427,399 +172,296 @@ exports[`ButtonAction should render examples: ButtonAction 2`] = `
 exports[`ButtonAction should render examples: ButtonAction 3`] = `
 "<div>
   <div>
-    <div>
-      <div>
-        <p>
-          <button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal c-actionbtn--compact\\" title=\\"Normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
-          </button>
-        </p>
-        <p>
-          <button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal c-actionbtn--compact\\" title=\\"Disabled\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Disabled</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
-          </button>
-        </p>
-        <p>
-          <button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new c-actionbtn--compact\\" title=\\"New\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span>
-          </button>
-        </p>
-        <p>
-          <button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error c-actionbtn--compact\\" title=\\"Error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span>
-          </button>
-        </p>
-      </div>
-    </div>
+    <p><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal c-actionbtn--compact\\" title=\\"Normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span></button></p>
+    <p><button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal c-actionbtn--compact\\" title=\\"Disabled\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Disabled</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span></button></p>
+    <p><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new c-actionbtn--compact\\" title=\\"New\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span></button></p>
+    <p><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error c-actionbtn--compact\\" title=\\"Error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span></span></button></p>
   </div>
 </div>"
 `;
 
 exports[`Checkbox should render examples: Checkbox 1`] = `
 "<div>
-  <div>
-    <div>
-      <form>
-        <div>
-          <label class=\\"c-input-checkbox\\" aria-checked=\\"\\">
-            <input type=\\"checkbox\\" value=\\"\\" name=\\"\\"><span>This is a checkbox</span></label>
-        </div>
-      </form>
-    </div>
-  </div>
+  <form>
+    <div><label class=\\"c-input-checkbox\\" aria-checked=\\"\\"><input type=\\"checkbox\\" name=\\"\\" value=\\"\\"><span>This is a checkbox</span></label></div>
+  </form>
 </div>"
 `;
 
 exports[`Checkbox should render examples: Checkbox 2`] = `
 "<div>
-  <div>
-    <div>
-      <div>
-        <label class=\\"c-input-checkbox is-error\\" aria-checked=\\"\\">
-          <input type=\\"checkbox\\" value=\\"\\" name=\\"\\"><span>This is a checkbox with an error</span></label>
-      </div>
-    </div>
-  </div>
+  <div><label class=\\"c-input-checkbox is-error\\" aria-checked=\\"\\"><input type=\\"checkbox\\" name=\\"\\" value=\\"\\"><span>This is a checkbox with an error</span></label></div>
 </div>"
 `;
 
 exports[`Checkbox should render examples: Checkbox 3`] = `
 "<div>
-  <div>
-    <div>
-      <div>
-        <label class=\\"c-input-checkbox\\" aria-checked=\\"mixed\\">
-          <input type=\\"checkbox\\" value=\\"\\" name=\\"\\"><span>This is a mixed checkbox</span></label>
-      </div>
-    </div>
-  </div>
+  <div><label class=\\"c-input-checkbox\\" aria-checked=\\"mixed\\"><input type=\\"checkbox\\" name=\\"\\" value=\\"\\"><span>This is a mixed checkbox</span></label></div>
 </div>"
 `;
 
 exports[`Field should render examples: Field 1`] = `
 "<div>
-  <div>
-    <div>
-      <form>
-        <div class=\\"o-field\\">
-          <label class=\\"c-label\\">I'm a label</label>
-          <textarea placeholder=\\"I'm a textarea\\" class=\\"c-textarea\\" id=\\"idField\\"></textarea>
-        </div>
-      </form>
-    </div>
-  </div>
+  <form>
+    <div class=\\"o-field\\"><label class=\\"c-label\\">I'm a label</label><textarea placeholder=\\"I'm a textarea\\" class=\\"c-textarea\\" id=\\"idField\\"></textarea></div>
+  </form>
 </div>"
 `;
 
 exports[`Field should render examples: Field 2`] = `
 "<div>
-  <div>
-    <div>
-      <form>
-        <div class=\\"o-field\\">
-          <label class=\\"c-label\\">I'm an error label</label>
-          <input type=\\"text\\" id=\\"idFieldError\\" class=\\"c-input-text is-error\\" placeholder=\\"I'm an error input[type=text]\\" value=\\"\\">
-        </div>
-      </form>
-    </div>
-  </div>
+  <form>
+    <div class=\\"o-field\\"><label class=\\"c-label\\">I'm an error label</label><input type=\\"text\\" id=\\"idFieldError\\" class=\\"c-input-text is-error\\" placeholder=\\"I'm an error input[type=text]\\" value=\\"\\"></div>
+  </form>
 </div>"
 `;
 
 exports[`Hero should render examples: Hero 1`] = `
 "<div>
-  <div>
-    <div class=\\"Hero\\">
-      <h2 class=\\" Hero-title\\">Connect your bank accounts</h2>
-      <div class=\\" Hero-sections\\">
-        <div class=\\" Hero-section\\">
-          <svg class=\\"icon\\" width=\\"80\\" height=\\"80\\" style=\\"color: rgb(245, 45, 45);\\">
-            <use xlink:href=\\"test-file-stub\\"></use>
-          </svg>
-          <h3 class=\\" Hero-subtitle\\">Control your budget</h3>
-          <p class=\\" \\">Summary of all your accounts at a glance</p>
-        </div>
-        <div class=\\" Hero-section\\">
-          <svg class=\\"icon\\" width=\\"80\\" height=\\"80\\" style=\\"color: rgb(167, 91, 203);\\">
-            <use xlink:href=\\"test-file-stub\\"></use>
-          </svg>
-          <h3 class=\\" Hero-subtitle\\">Save Time</h3>
-          <p class=\\" \\">Your invoices at your fingertips directly from your statements</p>
-        </div>
-        <div class=\\" Hero-section\\">
-          <svg class=\\"icon\\" width=\\"80\\" height=\\"80\\" style=\\"color: rgb(45, 138, 242);\\">
-            <use xlink:href=\\"test-file-stub\\"></use>
-          </svg>
-          <h3 class=\\" Hero-subtitle\\">Cozy is working for you</h3>
-          <p class=\\" \\">Automatic follow-up of your medical expenses</p>
-        </div>
+  <div class=\\"Hero\\">
+    <h2 class=\\" Hero-title\\">Connect your bank accounts</h2>
+    <div class=\\" Hero-sections\\">
+      <div class=\\" Hero-section\\"><svg class=\\"icon\\" style=\\"color: rgb(245, 45, 45);\\" width=\\"80\\" height=\\"80\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <h3 class=\\" Hero-subtitle\\">Control your budget</h3>
+        <p class=\\" \\">Summary of all your accounts at a glance</p>
       </div>
-      <p class=\\" Hero-cta\\">
-        <button type=\\"submit\\" class=\\"c-btn\\"><span><!-- react-text: 22 -->Connect your bank accounts<!-- /react-text --></span></button>
-      </p>
+      <div class=\\" Hero-section\\"><svg class=\\"icon\\" style=\\"color: rgb(167, 91, 203);\\" width=\\"80\\" height=\\"80\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <h3 class=\\" Hero-subtitle\\">Save Time</h3>
+        <p class=\\" \\">Your invoices at your fingertips directly from your statements</p>
+      </div>
+      <div class=\\" Hero-section\\"><svg class=\\"icon\\" style=\\"color: rgb(45, 138, 242);\\" width=\\"80\\" height=\\"80\\">
+          <use xlink:href=\\"test-file-stub\\"></use>
+        </svg>
+        <h3 class=\\" Hero-subtitle\\">Cozy is working for you</h3>
+        <p class=\\" \\">Automatic follow-up of your medical expenses</p>
+      </div>
     </div>
+    <p class=\\" Hero-cta\\"><button type=\\"submit\\" class=\\"c-btn\\"><span>Connect your bank accounts</span></button></p>
   </div>
 </div>"
 `;
 
 exports[`Icon should render examples: Icon 1`] = `
 "<div>
-  <div>
-    <div style=\\"font-size: 2rem; display: grid;\\">
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">album</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">album-add</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">album-remove</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">back</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">bottom</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">calendar</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">check</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">check-circleless</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">clock</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">connector</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">cozy</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">cozy-negative</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">cross</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">delete</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">destroy</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">device-laptop</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">dots</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">download</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">exchange</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">file</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">file-none</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">folder</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">forward</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">help</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">gear</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">hourglass</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">image</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">moveto</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">openwith</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">paperplane</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">people</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">phone-download</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">plus</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">rename</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">restore</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">share</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">small-arrow</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">spinner</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #F52D2D;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">top</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #FF962F;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">trash</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #297EF2;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">upload</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #08b442;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">warn</p>
-      </div>
-      <div style=\\"text-align: center;\\">
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #B449E7;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <p style=\\"font-size: 1rem;\\">warning</p>
-      </div>
+  <div style=\\"font-size: 2rem; display: grid;\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">album</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">album-add</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">album-remove</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">back</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">bottom</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">calendar</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">check</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">check-circleless</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">clock</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">connector</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cozy</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cozy-negative</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cross</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">delete</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">destroy</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">device-laptop</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">dots</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">download</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">exchange</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">file</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">file-none</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">folder</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">forward</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">help</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">gear</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">hourglass</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">image</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">moveto</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">openwith</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">paperplane</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">people</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">phone-download</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">plus</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">rename</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">restore</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">share</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">small-arrow</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">spinner</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">top</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">trash</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">upload</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">warn</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"test-file-stub\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">warning</p>
     </div>
   </div>
 </div>"
@@ -827,180 +469,105 @@ exports[`Icon should render examples: Icon 1`] = `
 
 exports[`Icon should render examples: Icon 2`] = `
 "<div>
-  <div>
-    <div>
-      <div>
-        <svg class=\\"icon icon--spin\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #0bda51;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-        <!-- react-text: 5 -->&nbsp;
-        <!-- /react-text -->
-        <svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" style=\\"fill: #c30017;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg>
-      </div>
-    </div>
-  </div>
+  <div><svg class=\\"icon icon--spin\\" style=\\"fill: #0bda51;\\" width=\\"16\\" height=\\"16\\">
+      <use xlink:href=\\"test-file-stub\\"></use>
+    </svg>&nbsp;<svg class=\\"icon\\" style=\\"fill: #c30017; transform: rotate(45deg);\\" width=\\"16\\" height=\\"16\\">
+      <use xlink:href=\\"test-file-stub\\"></use>
+    </svg></div>
 </div>"
 `;
 
 exports[`Icon should render examples: Icon 3`] = `
 "<div>
-  <div>
-    <div>
-      <div>
-        <svg class=\\"icon\\" width=\\"32\\" height=\\"32\\" style=\\"fill: purple;\\">
-          <use xlink:href=\\"test-file-stub\\"></use>
-        </svg><span>← Click it</span></div>
-    </div>
-  </div>
+  <div><svg class=\\"icon\\" style=\\"fill: purple;\\" width=\\"32\\" height=\\"32\\">
+      <use xlink:href=\\"test-file-stub\\"></use>
+    </svg><span>← Click it</span></div>
 </div>"
 `;
 
 exports[`Label should render examples: Label 1`] = `
 "<div>
-  <div>
-    <div>
-      <form>
-        <div>
-          <label for=\\"idInput\\" class=\\"c-label\\">This is a label</label>
-          <input type=\\"text\\" id=\\"idInput\\" class=\\"c-input-text\\" placeholder=\\"Recherche\\">
-        </div>
-      </form>
-    </div>
-  </div>
+  <form>
+    <div><label for=\\"idInput\\" class=\\"c-label\\">This is a label</label><input type=\\"text\\" id=\\"idInput\\" class=\\"c-input-text\\" placeholder=\\"Recherche\\" value=\\"\\"></div>
+  </form>
 </div>"
 `;
 
 exports[`Label should render examples: Label 2`] = `
 "<div>
-  <div>
-    <div>
-      <form>
-        <div>
-          <label for=\\"idInput2\\" class=\\"c-label is-error\\">This is an error label</label>
-          <input type=\\"text\\" id=\\"idInput2\\" class=\\"c-input-text is-error\\" placeholder=\\"Recherche\\">
-        </div>
-      </form>
-    </div>
-  </div>
+  <form>
+    <div><label for=\\"idInput2\\" class=\\"c-label is-error\\">This is an error label</label><input type=\\"text\\" id=\\"idInput2\\" class=\\"c-input-text is-error\\" placeholder=\\"Recherche\\" value=\\"\\"></div>
+  </form>
 </div>"
 `;
 
 exports[`ListItemText should render examples: ListItemText 1`] = `
 "<div>
-  <div>
-    <div>
-      <div class=\\"c-list-text\\">
-        <div class=\\"u-ellipsis u-text\\">I'm a list item text</div>
-      </div>
-    </div>
+  <div class=\\"c-list-text\\">
+    <div class=\\"u-ellipsis u-text\\">I'm a list item text</div>
   </div>
 </div>"
 `;
 
 exports[`ListItemText should render examples: ListItemText 2`] = `
 "<div>
-  <div>
-    <div>
-      <div class=\\"c-list-text\\">
-        <div class=\\"u-ellipsis u-text\\">I'm a primary text</div>
-        <div class=\\"u-ellipsis u-caption\\">I'm a secondary text</div>
-      </div>
-    </div>
+  <div class=\\"c-list-text\\">
+    <div class=\\"u-ellipsis u-text\\">I'm a primary text</div>
+    <div class=\\"u-ellipsis u-caption\\">I'm a secondary text</div>
   </div>
 </div>"
 `;
 
-exports[`ListItemText should render examples: ListItemText 3`] = `
-"<div>
-  <div></div>
-  <div>ReferenceError: content is not defined</div>
-</div>"
-`;
+exports[`ListItemText should render examples: ListItemText 3`] = `"<div></div>"`;
 
 exports[`Menu should render examples: Menu 1`] = `
 "<div>
-  <div>
-    <div class=\\"c-menu c-menu--left\\">
-      <button role=\\"button\\" class=\\"c-btn c-menu__btn\\">Click me !</button>
-    </div>
-  </div>
+  <div class=\\"c-menu c-menu--left\\"><button role=\\"button\\" class=\\"c-btn c-menu__btn\\">Click me !</button></div>
 </div>"
 `;
 
 exports[`Menu should render examples: Menu 2`] = `
 "<div>
-  <div>
-    <div class=\\"c-menu c-menu--right\\">
-      <button role=\\"button\\" class=\\"c-btn c-menu__btn\\">Click me !</button>
-    </div>
-  </div>
+  <div class=\\"c-menu c-menu--right\\"><button role=\\"button\\" class=\\"c-btn c-menu__btn\\">Click me !</button></div>
 </div>"
 `;
 
 exports[`Menu should render examples: Menu 3`] = `
 "<div>
-  <div>
-    <div class=\\"c-menu c-menu--left\\">
-      <button type=\\"submit\\" class=\\"c-btn\\"><span><!-- react-text: 4 -->Greetings with custom component<!-- /react-text --></span></button>
-    </div>
-  </div>
+  <div class=\\"c-menu c-menu--left\\"><button type=\\"submit\\" class=\\"c-btn\\"><span>Greetings with custom component</span></button></div>
 </div>"
 `;
 
 exports[`Radio should render examples: Radio 1`] = `
 "<div>
-  <div>
-    <div>
-      <form>
-        <div>
-          <label class=\\"c-input-radio\\">
-            <input type=\\"radio\\" value=\\"radioValue1\\" name=\\"radioForm\\"><span>This is a radio button</span></label>
-          <label class=\\"c-input-radio\\">
-            <input type=\\"radio\\" value=\\"radioValue2\\" name=\\"radioForm\\"><span>This is also a radio button</span></label>
-        </div>
-      </form>
-    </div>
-  </div>
+  <form>
+    <div><label class=\\"c-input-radio\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue1\\"><span>This is a radio button</span></label><label class=\\"c-input-radio\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue2\\"><span>This is also a radio button</span></label></div>
+  </form>
 </div>"
 `;
 
 exports[`Radio should render examples: Radio 2`] = `
 "<div>
-  <div>
-    <div>
-      <div>
-        <label class=\\"c-input-radio is-error\\">
-          <input type=\\"radio\\" value=\\"radioValue1\\" name=\\"radioForm\\"><span>This is a radio button</span></label>
-      </div>
-    </div>
-  </div>
+  <div><label class=\\"c-input-radio is-error\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue1\\"><span>This is a radio button</span></label></div>
 </div>"
 `;
 
 exports[`SelectBox should render examples: SelectBox 1`] = `
 "<div>
-  <div>
-    <div class=\\"css-1h8pu2y\\"><span class=\\"css-1uvvha\\" aria-atomic=\\"true\\" aria-live=\\"polite\\" role=\\"status\\">2 results available.</span>
-      <div class=\\"css-1scqv3c\\">
-        <div class=\\"css-nfppcf\\">
-          <div class=\\"css-1492t68\\">Select...</div>
-          <div class=\\"css-rsyb7x\\">
-            <div class=\\"\\" style=\\"display: inline-block;\\">
-              <input type=\\"text\\" autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-2-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" value=\\"\\" aria-autocomplete=\\"list\\" aria-busy=\\"false\\" aria-expanded=\\"false\\" aria-haspopup=\\"false\\" role=\\"combobox\\"
-                style=\\"box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;\\">
-              <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
-            </div>
+  <div class=\\"css-1h8pu2y\\">
+    <div class=\\"css-1scqv3c\\">
+      <div class=\\"css-1phseng\\">
+        <div class=\\"css-1492t68\\">Select...</div>
+        <div class=\\"css-1g6gooi\\">
+          <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-2-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" theme=\\"[object Object]\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
+            <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
           </div>
         </div>
-        <div class=\\"css-1wy0on6\\"><span role=\\"presentation\\" class=\\"css-1hyfx7x\\"></span>
-          <div role=\\"button\\" class=\\"css-1j9smtq\\">
-            <svg height=\\"20\\" width=\\"20\\" viewBox=\\"0 0 20 20\\" class=\\"css-19bqh2r\\" focusable=\\"false\\" role=\\"presentation\\">
-              <path d=\\"M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z\\"></path>
-            </svg>
-          </div>
-        </div>
+      </div>
+      <div class=\\"css-1wy0on6\\"><span class=\\"css-1hyfx7x\\"></span>
+        <div aria-hidden=\\"true\\" class=\\"css-1j9smtq\\"><svg height=\\"20\\" width=\\"20\\" viewBox=\\"0 0 20 20\\" aria-hidden=\\"true\\" focusable=\\"false\\" class=\\"css-19bqh2r\\">
+            <path d=\\"M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z\\"></path>
+          </svg></div>
       </div>
     </div>
   </div>
@@ -1009,28 +576,21 @@ exports[`SelectBox should render examples: SelectBox 1`] = `
 
 exports[`SelectBox should render examples: SelectBox 2`] = `
 "<div>
-  <div>
-    <div class=\\"css-1h8pu2y\\"><span class=\\"css-1uvvha\\" aria-atomic=\\"true\\" aria-live=\\"polite\\" role=\\"status\\">3 results available.</span>
-      <div>
-        <button>toggle options</button>
-        <div class=\\"select-control__input\\">
-          <div class=\\"css-nfppcf\\">
-            <div class=\\"css-1492t68\\">Select...</div>
-            <div class=\\"css-rsyb7x\\">
-              <div class=\\"\\" style=\\"display: inline-block;\\">
-                <input type=\\"text\\" autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-3-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" value=\\"\\" aria-autocomplete=\\"list\\" aria-busy=\\"false\\" aria-expanded=\\"false\\" aria-haspopup=\\"false\\" role=\\"combobox\\"
-                  style=\\"box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;\\">
-                <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
-              </div>
+  <div class=\\"css-1h8pu2y\\">
+    <div><button>toggle options</button>
+      <div class=\\"select-control__input\\">
+        <div class=\\"css-1phseng\\">
+          <div class=\\"css-1492t68\\">Select...</div>
+          <div class=\\"css-1g6gooi\\">
+            <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-3-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" theme=\\"[object Object]\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
+              <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
             </div>
           </div>
-          <div class=\\"css-1wy0on6\\"><span role=\\"presentation\\" class=\\"css-1hyfx7x\\"></span>
-            <div role=\\"button\\" class=\\"css-1j9smtq\\">
-              <svg height=\\"20\\" width=\\"20\\" viewBox=\\"0 0 20 20\\" class=\\"css-19bqh2r\\" focusable=\\"false\\" role=\\"presentation\\">
-                <path d=\\"M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z\\"></path>
-              </svg>
-            </div>
-          </div>
+        </div>
+        <div class=\\"css-1wy0on6\\"><span class=\\"css-1hyfx7x\\"></span>
+          <div aria-hidden=\\"true\\" class=\\"css-1j9smtq\\"><svg height=\\"20\\" width=\\"20\\" viewBox=\\"0 0 20 20\\" aria-hidden=\\"true\\" focusable=\\"false\\" class=\\"css-19bqh2r\\">
+              <path d=\\"M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z\\"></path>
+            </svg></div>
         </div>
       </div>
     </div>
@@ -1040,26 +600,20 @@ exports[`SelectBox should render examples: SelectBox 2`] = `
 
 exports[`SelectBox should render examples: SelectBox 3`] = `
 "<div>
-  <div>
-    <div class=\\"css-1h8pu2y\\"><span class=\\"css-1uvvha\\" aria-atomic=\\"true\\" aria-live=\\"polite\\" role=\\"status\\">3 results available.</span>
-      <div class=\\"css-1scqv3c\\">
-        <div class=\\"css-nfppcf\\">
-          <div class=\\"css-1492t68\\">Select...</div>
-          <div class=\\"css-rsyb7x\\">
-            <div class=\\"\\" style=\\"display: inline-block;\\">
-              <input type=\\"text\\" autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-4-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" value=\\"\\" aria-autocomplete=\\"list\\" aria-busy=\\"false\\" aria-expanded=\\"false\\" aria-haspopup=\\"false\\" role=\\"combobox\\"
-                style=\\"box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;\\">
-              <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
-            </div>
+  <div class=\\"css-1h8pu2y\\">
+    <div class=\\"css-1scqv3c\\">
+      <div class=\\"css-1phseng\\">
+        <div class=\\"css-1492t68\\">Select...</div>
+        <div class=\\"css-1g6gooi\\">
+          <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-4-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" theme=\\"[object Object]\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
+            <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
           </div>
         </div>
-        <div class=\\"css-1wy0on6\\"><span role=\\"presentation\\" class=\\"css-1hyfx7x\\"></span>
-          <div role=\\"button\\" class=\\"css-1j9smtq\\">
-            <svg height=\\"20\\" width=\\"20\\" viewBox=\\"0 0 20 20\\" class=\\"css-19bqh2r\\" focusable=\\"false\\" role=\\"presentation\\">
-              <path d=\\"M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z\\"></path>
-            </svg>
-          </div>
-        </div>
+      </div>
+      <div class=\\"css-1wy0on6\\"><span class=\\"css-1hyfx7x\\"></span>
+        <div aria-hidden=\\"true\\" class=\\"css-1j9smtq\\"><svg height=\\"20\\" width=\\"20\\" viewBox=\\"0 0 20 20\\" aria-hidden=\\"true\\" focusable=\\"false\\" class=\\"css-19bqh2r\\">
+            <path d=\\"M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z\\"></path>
+          </svg></div>
       </div>
     </div>
   </div>
@@ -1068,139 +622,53 @@ exports[`SelectBox should render examples: SelectBox 3`] = `
 
 exports[`SelectBox should render examples: SelectBox 4`] = `
 "<div>
-  <div>
-    <div class=\\"css-1h8pu2y\\"><span class=\\"css-1uvvha\\" aria-atomic=\\"true\\" aria-live=\\"polite\\" role=\\"status\\">26 results available.</span>
-      <div class=\\"css-1scqv3c\\">
-        <div class=\\"css-nfppcf\\">
-          <div class=\\"css-1492t68\\">Select...</div>
-          <div class=\\"css-rsyb7x\\">
-            <div class=\\"\\" style=\\"display: inline-block;\\">
-              <input type=\\"text\\" autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-5-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" value=\\"\\" aria-autocomplete=\\"list\\" aria-busy=\\"false\\" aria-expanded=\\"true\\" aria-haspopup=\\"true\\" aria-owns=\\"react-select-5-listbox\\"
-                role=\\"combobox\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;\\">
-              <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
-            </div>
-          </div>
-        </div>
-        <div class=\\"css-1wy0on6\\"><span role=\\"presentation\\" class=\\"css-1hyfx7x\\"></span>
-          <div role=\\"button\\" class=\\"css-1j9smtq\\">
-            <svg height=\\"20\\" width=\\"20\\" viewBox=\\"0 0 20 20\\" class=\\"css-19bqh2r\\" focusable=\\"false\\" role=\\"presentation\\">
-              <path d=\\"M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z\\"></path>
-            </svg>
+  <div class=\\"css-1h8pu2y\\">
+    <div class=\\"css-1scqv3c\\">
+      <div class=\\"css-1phseng\\">
+        <div class=\\"css-1492t68\\">Select...</div>
+        <div class=\\"css-1g6gooi\\">
+          <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-5-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" theme=\\"[object Object]\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
+            <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
           </div>
         </div>
       </div>
-      <div>
-        <div>
-          <div class=\\"css-2msmlm\\">
-            <div class=\\"css-11unzgr\\" aria-multiselectable=\\"false\\" id=\\"react-select-5-listbox\\" role=\\"listbox\\">
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-0\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 20 -->A
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-1\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 22 -->B
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-2\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 24 -->C
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-3\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 26 -->D
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-4\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 28 -->E
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-5\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 30 -->F
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-6\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 32 -->G
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-7\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 34 -->H
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-8\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 36 -->I
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-9\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 38 -->J
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-10\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 40 -->K
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-11\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 42 -->L
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-12\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 44 -->M
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-13\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 46 -->N
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-14\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 48 -->O
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-15\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 50 -->P
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-16\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 52 -->Q
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-17\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 54 -->R
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-18\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 56 -->S
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-19\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 58 -->T
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-20\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 60 -->U
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-21\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 62 -->V
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-22\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 64 -->W
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-23\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 66 -->X
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-24\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 68 -->Y
-                <!-- /react-text -->
-              </div>
-              <div aria-selected=\\"false\\" id=\\"react-select-5-option-25\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">
-                <!-- react-text: 70 -->Z
-                <!-- /react-text -->
-              </div>
-            </div>
-            <div style=\\"border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; border-top: 1px solid #D6D8Da; background: white; position: relative;\\"></div>
-          </div>
+      <div class=\\"css-1wy0on6\\"><span class=\\"css-1hyfx7x\\"></span>
+        <div aria-hidden=\\"true\\" class=\\"css-1j9smtq\\"><svg height=\\"20\\" width=\\"20\\" viewBox=\\"0 0 20 20\\" aria-hidden=\\"true\\" focusable=\\"false\\" class=\\"css-19bqh2r\\">
+            <path d=\\"M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z\\"></path>
+          </svg></div>
+      </div>
+    </div>
+    <div>
+      <div class=\\"css-2msmlm\\">
+        <div class=\\"css-11unzgr\\">
+          <div id=\\"react-select-5-option-0\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">A</div>
+          <div id=\\"react-select-5-option-1\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">B</div>
+          <div id=\\"react-select-5-option-2\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">C</div>
+          <div id=\\"react-select-5-option-3\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">D</div>
+          <div id=\\"react-select-5-option-4\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">E</div>
+          <div id=\\"react-select-5-option-5\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">F</div>
+          <div id=\\"react-select-5-option-6\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">G</div>
+          <div id=\\"react-select-5-option-7\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">H</div>
+          <div id=\\"react-select-5-option-8\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">I</div>
+          <div id=\\"react-select-5-option-9\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">J</div>
+          <div id=\\"react-select-5-option-10\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">K</div>
+          <div id=\\"react-select-5-option-11\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">L</div>
+          <div id=\\"react-select-5-option-12\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">M</div>
+          <div id=\\"react-select-5-option-13\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">N</div>
+          <div id=\\"react-select-5-option-14\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">O</div>
+          <div id=\\"react-select-5-option-15\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">P</div>
+          <div id=\\"react-select-5-option-16\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">Q</div>
+          <div id=\\"react-select-5-option-17\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">R</div>
+          <div id=\\"react-select-5-option-18\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">S</div>
+          <div id=\\"react-select-5-option-19\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">T</div>
+          <div id=\\"react-select-5-option-20\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">U</div>
+          <div id=\\"react-select-5-option-21\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">V</div>
+          <div id=\\"react-select-5-option-22\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">W</div>
+          <div id=\\"react-select-5-option-23\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">X</div>
+          <div id=\\"react-select-5-option-24\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">Y</div>
+          <div id=\\"react-select-5-option-25\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">Z</div>
         </div>
+        <div style=\\"border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; padding-top: 0.25rem; padding-bottom: 0.25rem; border-top: 1px solid #D6D8Da; background: white; position: relative;\\"></div>
       </div>
     </div>
   </div>
@@ -1209,26 +677,20 @@ exports[`SelectBox should render examples: SelectBox 4`] = `
 
 exports[`SelectBox should render examples: SelectBox 5`] = `
 "<div>
-  <div>
-    <div class=\\"css-1h8pu2y\\"><span class=\\"css-1uvvha\\" aria-atomic=\\"true\\" aria-live=\\"polite\\" role=\\"status\\">3 results available.</span>
-      <div class=\\"css-1scqv3c\\">
-        <div class=\\"css-nfppcf needsclick\\">
-          <div class=\\"css-1492t68\\">Select...</div>
-          <div class=\\"css-rsyb7x\\">
-            <div class=\\"\\" style=\\"display: inline-block;\\">
-              <input type=\\"text\\" autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-6-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" value=\\"\\" aria-autocomplete=\\"list\\" aria-busy=\\"false\\" aria-expanded=\\"false\\" aria-haspopup=\\"false\\" role=\\"combobox\\"
-                style=\\"box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;\\">
-              <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
-            </div>
+  <div class=\\"css-1h8pu2y\\">
+    <div class=\\"css-1scqv3c\\">
+      <div class=\\"css-1phseng needsclick\\">
+        <div class=\\"css-1492t68\\">Select...</div>
+        <div class=\\"css-1g6gooi\\">
+          <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-6-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" theme=\\"[object Object]\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
+            <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
           </div>
         </div>
-        <div class=\\"css-1wy0on6\\"><span role=\\"presentation\\" class=\\"css-1hyfx7x\\"></span>
-          <div role=\\"button\\" class=\\"css-1j9smtq\\">
-            <svg height=\\"20\\" width=\\"20\\" viewBox=\\"0 0 20 20\\" class=\\"css-19bqh2r\\" focusable=\\"false\\" role=\\"presentation\\">
-              <path d=\\"M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z\\"></path>
-            </svg>
-          </div>
-        </div>
+      </div>
+      <div class=\\"css-1wy0on6\\"><span class=\\"css-1hyfx7x\\"></span>
+        <div aria-hidden=\\"true\\" class=\\"css-1j9smtq\\"><svg height=\\"20\\" width=\\"20\\" viewBox=\\"0 0 20 20\\" aria-hidden=\\"true\\" focusable=\\"false\\" class=\\"css-19bqh2r\\">
+            <path d=\\"M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z\\"></path>
+          </svg></div>
       </div>
     </div>
   </div>
@@ -1237,58 +699,27 @@ exports[`SelectBox should render examples: SelectBox 5`] = `
 
 exports[`Sidebar should render examples: Sidebar 1`] = `
 "<div>
-  <div>
-    <aside class=\\"o-sidebar\\">
-      <nav role=\\"navigation\\">
-        <ul class=\\"c-nav\\">
-          <li class=\\"c-nav-item\\">
-            <a class=\\"c-nav-link\\"><span class=\\"c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-text\\">Warn</span></a>
-          </li>
-          <li class=\\"c-nav-item\\">
-            <a class=\\"c-nav-link\\"><span class=\\"c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-text\\">Check</span></a>
-          </li>
-          <li class=\\"c-nav-item\\">
-            <a class=\\"c-nav-link\\"><span class=\\"c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-text\\">Download</span></a>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-  </div>
+  <aside class=\\"o-sidebar\\">
+    <nav role=\\"navigation\\">
+      <ul class=\\"c-nav\\">
+        <li class=\\"c-nav-item\\"><a class=\\"c-nav-link\\"><span class=\\"c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-text\\">Warn</span></a></li>
+        <li class=\\"c-nav-item\\"><a class=\\"c-nav-link\\"><span class=\\"c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-text\\">Check</span></a></li>
+        <li class=\\"c-nav-item\\"><a class=\\"c-nav-link\\"><span class=\\"c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-text\\">Download</span></a></li>
+      </ul>
+    </nav>
+  </aside>
 </div>"
 `;
 
 exports[`Spinner should render examples: Spinner 1`] = `
 "<div>
-  <div>
-    <div>
-      <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div>
-    </div>
-  </div>
+  <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div>
 </div>"
 `;
 
 exports[`Spinner should render examples: Spinner 2`] = `
 "<div>
-  <div>
-    <div>
-      <div>
-        <!-- react-text: 3 -->blue (default):
-        <!-- /react-text -->
-        <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div>
-        <!-- react-text: 5 -->or
-        <!-- /react-text -->
-        <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div>
-        <!-- react-text: 7 -->grey:
-        <!-- /react-text -->
-        <div class=\\"c-spinner c-spinner--grey c-spinner--medium\\"></div>
-        <!-- react-text: 9 -->white:
-        <!-- /react-text -->
-        <div class=\\"c-spinner c-spinner--white c-spinner--medium\\"></div>
-        <!-- react-text: 11 -->red:
-        <!-- /react-text -->
-        <div class=\\"c-spinner c-spinner--red c-spinner--medium\\"></div>
-      </div>
-    </div>
+  <div>blue (default): <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div> or <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div>grey: <div class=\\"c-spinner c-spinner--grey c-spinner--medium\\"></div>white: <div class=\\"c-spinner c-spinner--white c-spinner--medium\\"></div>red: <div class=\\"c-spinner c-spinner--red c-spinner--medium\\"></div>
   </div>
 </div>"
 `;
@@ -1296,133 +727,63 @@ exports[`Spinner should render examples: Spinner 2`] = `
 exports[`Spinner should render examples: Spinner 3`] = `
 "<div>
   <div>
-    <div>
-      <div>
-        <div class=\\"c-spinner c-spinner--nomargin c-spinner--blue c-spinner--medium\\"></div>
-      </div>
-    </div>
+    <div class=\\"c-spinner c-spinner--nomargin c-spinner--blue c-spinner--medium\\"></div>
   </div>
 </div>"
 `;
 
 exports[`Spinner should render examples: Spinner 4`] = `
 "<div>
-  <div>
-    <div>
-      <div>
-        <!-- react-text: 3 -->tiny:
-        <!-- /react-text -->
-        <div class=\\"c-spinner c-spinner--blue c-spinner--tiny\\"></div>
-        <br>
-        <!-- react-text: 6 -->small:
-        <!-- /react-text -->
-        <div class=\\"c-spinner c-spinner--blue c-spinner--small\\"></div>
-        <br>
-        <!-- react-text: 9 -->medium (default):
-        <!-- /react-text -->
-        <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div>
-        <!-- react-text: 11 -->or
-        <!-- /react-text -->
-        <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div>
-        <br>
-        <!-- react-text: 14 -->large:
-        <!-- /react-text -->
-        <div class=\\"c-spinner c-spinner--blue c-spinner--large\\"></div>
-        <br>
-        <!-- react-text: 17 -->xlarge:
-        <!-- /react-text -->
-        <div class=\\"c-spinner c-spinner--blue c-spinner--xlarge\\"></div>
-        <br>
-        <!-- react-text: 20 -->xxlarge:
-        <!-- /react-text -->
-        <div class=\\"c-spinner c-spinner--blue c-spinner--xxlarge\\"></div>
-      </div>
-    </div>
+  <div>tiny: <div class=\\"c-spinner c-spinner--blue c-spinner--tiny\\"></div><br>small: <div class=\\"c-spinner c-spinner--blue c-spinner--small\\"></div><br>medium (default): <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div> or <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div><br>large: <div class=\\"c-spinner c-spinner--blue c-spinner--large\\"></div><br>xlarge: <div class=\\"c-spinner c-spinner--blue c-spinner--xlarge\\"></div><br>xxlarge: <div class=\\"c-spinner c-spinner--blue c-spinner--xxlarge\\"></div>
   </div>
 </div>"
 `;
 
 exports[`Text should render examples: Text 1`] = `
 "<div>
-  <div>
-    <div class=\\"u-text\\">This a standard text</div>
-  </div>
+  <div class=\\"u-text\\">This a standard text</div>
 </div>"
 `;
 
 exports[`Text should render examples: Text 2`] = `
 "<div>
-  <div>
-    <div class=\\"u-title-h1\\">This a main title text</div>
-  </div>
+  <div class=\\"u-title-h1\\">This a main title text</div>
 </div>"
 `;
 
 exports[`Text should render examples: Text 3`] = `
 "<div>
-  <div>
-    <div class=\\"u-title-h2\\">This a title text</div>
-  </div>
+  <div class=\\"u-title-h2\\">This a title text</div>
 </div>"
 `;
 
 exports[`Text should render examples: Text 4`] = `
 "<div>
-  <div>
-    <div class=\\"u-title-h3\\">This a subtitle text</div>
-  </div>
+  <div class=\\"u-title-h3\\">This a subtitle text</div>
 </div>"
 `;
 
 exports[`Text should render examples: Text 5`] = `
 "<div>
-  <div>
-    <div class=\\"u-title-h4\\">This a bold text</div>
-  </div>
+  <div class=\\"u-title-h4\\">This a bold text</div>
 </div>"
 `;
 
 exports[`Text should render examples: Text 6`] = `
 "<div>
-  <div>
-    <div class=\\"u-caption\\">This a note text</div>
-  </div>
+  <div class=\\"u-caption\\">This a note text</div>
 </div>"
 `;
 
-exports[`Textarea should render examples: Textarea 1`] = `
-"<div>
-  <div>
-    <div>
-      <textarea placeholder=\\"Once upon a time…\\" class=\\"c-textarea\\"></textarea>
-    </div>
-  </div>
-</div>"
-`;
+exports[`Textarea should render examples: Textarea 1`] = `"<div><textarea placeholder=\\"Once upon a time…\\" class=\\"c-textarea\\"></textarea></div>"`;
 
-exports[`Textarea should render examples: Textarea 2`] = `
-"<div>
-  <div>
-    <div>
-      <textarea placeholder=\\"Once upon a time, there was an error…\\" class=\\"c-textarea is-error\\"></textarea>
-    </div>
-  </div>
-</div>"
-`;
+exports[`Textarea should render examples: Textarea 2`] = `"<div><textarea placeholder=\\"Once upon a time, there was an error…\\" class=\\"c-textarea is-error\\"></textarea></div>"`;
 
 exports[`Textarea should render examples: Textarea 3`] = `
 "<div>
   <div>
-    <div>
-      <div>
-        <p>
-          <textarea placeholder=\\"I'm have a tiny size\\" class=\\"c-textarea c-textarea--tiny\\"></textarea>
-        </p>
-        <p>
-          <textarea placeholder=\\"I'm have a medium size\\" class=\\"c-textarea c-textarea--medium\\"></textarea>
-        </p>
-      </div>
-    </div>
+    <p><textarea placeholder=\\"I'm have a tiny size\\" class=\\"c-textarea c-textarea--tiny\\"></textarea></p>
+    <p><textarea placeholder=\\"I'm have a medium size\\" class=\\"c-textarea c-textarea--medium\\"></textarea></p>
   </div>
 </div>"
 `;
@@ -1430,68 +791,27 @@ exports[`Textarea should render examples: Textarea 3`] = `
 exports[`Textarea should render examples: Textarea 4`] = `
 "<div>
   <div>
-    <div>
-      <div>
-        <p>
-          <textarea placeholder=\\"I'm full width\\" class=\\"c-textarea c-textarea--fullwidth\\"></textarea>
-        </p>
-      </div>
-    </div>
+    <p><textarea placeholder=\\"I'm full width\\" class=\\"c-textarea c-textarea--fullwidth\\"></textarea></p>
   </div>
 </div>"
 `;
 
 exports[`Textarea should render examples: Textarea 5`] = `
 "<div>
-  <div>
-    <div>
-      <div>
-        <textarea placeholder=\\"\\" class=\\"c-textarea\\" name=\\"my-field\\"></textarea>
-      </div>
-    </div>
-  </div>
+  <div><textarea placeholder=\\"\\" class=\\"c-textarea\\" name=\\"my-field\\"></textarea></div>
 </div>"
 `;
 
-exports[`Toggle should render examples: Toggle 1`] = `
-"<div>
-  <div>
-    <div><span class=\\"toggle\\"><input type=\\"checkbox\\" id=\\"simple-toggle\\" class=\\"checkbox\\" value=\\"on\\"><label for=\\"simple-toggle\\" class=\\"label\\"></label></span></div>
-  </div>
-</div>"
-`;
+exports[`Toggle should render examples: Toggle 1`] = `"<div><span class=\\"toggle\\"><input type=\\"checkbox\\" id=\\"simple-toggle\\" class=\\"checkbox\\"><label for=\\"simple-toggle\\" class=\\"label\\"></label></span></div>"`;
 
-exports[`Toggle should render examples: Toggle 2`] = `
-"<div>
-  <div>
-    <div><span class=\\"toggle\\"><input type=\\"checkbox\\" id=\\"toggle\\" class=\\"checkbox\\" value=\\"on\\"><label for=\\"toggle\\" class=\\"label\\"></label></span></div>
-  </div>
-</div>"
-`;
+exports[`Toggle should render examples: Toggle 2`] = `"<div><span class=\\"toggle\\"><input type=\\"checkbox\\" id=\\"toggle\\" class=\\"checkbox\\" checked=\\"\\"><label for=\\"toggle\\" class=\\"label\\"></label></span></div>"`;
 
-exports[`Toggle should render examples: Toggle 3`] = `
-"<div>
-  <div>
-    <div><span class=\\"toggle\\"><input type=\\"checkbox\\" id=\\"toggle\\" class=\\"checkbox\\" value=\\"on\\"><label for=\\"toggle\\" class=\\"label\\"></label></span></div>
-  </div>
-</div>"
-`;
+exports[`Toggle should render examples: Toggle 3`] = `"<div><span class=\\"toggle\\"><input type=\\"checkbox\\" id=\\"toggle\\" class=\\"checkbox\\"><label for=\\"toggle\\" class=\\"label\\"></label></span></div>"`;
 
-exports[`Toggle should render examples: Toggle 4`] = `
-"<div>
-  <div>
-    <div><span class=\\"toggle\\"><input type=\\"checkbox\\" id=\\"toggle\\" class=\\"checkbox\\" value=\\"on\\"><label for=\\"toggle\\" class=\\"label\\"></label></span></div>
-  </div>
-</div>"
-`;
+exports[`Toggle should render examples: Toggle 4`] = `"<div><span class=\\"toggle\\"><input type=\\"checkbox\\" id=\\"toggle\\" class=\\"checkbox\\"><label for=\\"toggle\\" class=\\"label\\"></label></span></div>"`;
 
 exports[`Toggle should render examples: Toggle 5`] = `
 "<div>
-  <div>
-    <div>
-      <div>
-        <label for=\\"0\\" style=\\"margin-right: 15px; color: gray;\\">Toggle is controlled and off</label><span class=\\"toggle\\"><input type=\\"checkbox\\" id=\\"0\\" class=\\"checkbox\\" value=\\"on\\"><label for=\\"0\\" class=\\"label\\"></label></span></div>
-    </div>
-  </div>
+  <div><label for=\\"0\\" style=\\"margin-right: 15px; color: gray;\\">Toggle is controlled and off</label><span class=\\"toggle\\"><input type=\\"checkbox\\" id=\\"0\\" class=\\"checkbox\\"><label for=\\"0\\" class=\\"label\\"></label></span></div>
 </div>"
 `;

@@ -8,7 +8,12 @@ export const IntentHeader = ({ appName, appEditor, appIcon, className }) => (
   <div className={classNames(styles['intentHeader'], className)}>
     <h1 className={styles['intentHeader-title']}>
       <img className={styles['intentHeader-icon']} src={appIcon} />
-      {appEditor && <span>{appEditor}&nbsp;</span>}
+      {appEditor && (
+        <span>
+          {appEditor}
+          &nbsp;
+        </span>
+      )}
       {appName}
     </h1>
   </div>

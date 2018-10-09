@@ -49,8 +49,8 @@
     "commitlint-config-cozy": "0.2.2",
     "copyfiles": "^1.2.0",
     "css-loader": "^0.28.4",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-15": "^1.0.5",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "eslint": "^4.18.2",
     "eslint-config-cozy-app": "^0.5.1",
     "git-directory-deploy": "^1.5.1",
@@ -64,11 +64,9 @@
     "node-polyglot": "^2.2.2",
     "npm-run-all": "^4.0.1",
     "postcss-loader": "^2.0.6",
-    "preact": "^8.1.0",
-    "preact-compat": "^3.13.1",
     "prop-types": "^15.6.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
     "react-redux": "^5.0.3",
     "react-styleguidist": "7.3.8",
     "react-test-renderer": "15.6.1",
@@ -90,7 +88,6 @@
     "md5": "^2.2.0",
     "mini-css-extract-plugin": "^0.4.3",
     "normalize.css": "^7.0.0",
-    "preact-portal": "^1.1.2",
     "pretty": "^2.0.0",
     "react-select": "^2.0.0-beta.6",
     "stylus": "^0.54.5"
@@ -135,6 +132,7 @@
       "__ALLOW_HTTP__": false,
       "__TARGET__": "browser",
       "cozy": {}
-    }
+    },
+    "testURL": "http://localhost/"
   }
 }
