@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import cx from 'classnames'
@@ -25,12 +25,15 @@ export const Main = ({ children, className, ...rest }) => {
   )
 }
 
-export const Content = ({ children, className, ...rest }) => {
-  return (
-    <div role="main" className={className} {...rest}>
-      {children}
-    </div>
-  )
+export class Content extends Component {
+  render() {
+    const { children, className, ...rest } = this.props
+    return (
+      <div role="main" className={className} {...rest}>
+        {children}
+      </div>
+    )
+  }
 }
 
 Layout.propTypes = {
