@@ -1,0 +1,23 @@
+@require 'settings/palette.styl'
+@require 'tools/mixins'
+
+.context-header
+  margin rem(16 32)
+  background paleGrey
+  border rem(1) solid silver
+  padding rem(16)
+  border-radius rem(5)
+  display flex
+  flex-grow 1
+  flex-shrink 0
+  flex-direction row
+  justify-content flex-start
+  align-items center
+
+.context-header-content
+  flex-grow 1
+
+.context-header-icon
+  width rem(32)
+  height rem(32)
+  margin-right rem(16)
