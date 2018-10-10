@@ -35,7 +35,13 @@ export class I18n extends Component {
     }
   }
 
-  UNSAFE_componentWillReceiveProps(newProps) {
+  // for preact
+  // eslint-disable-next-line react/no-deprecated
+  componentWillReceiveProps() {
+    this.UNSAFE_componentWillReceiveProps()
+  }
+
+  UNSAFE_componentWillReceiveProps = newProps => {
     if (newProps.lang !== this.props.lang) {
       this.init(newProps)
     }
