@@ -335,7 +335,7 @@ class Modal extends Component {
               )}
               role="dialog"
               aria-modal="true"
-              aria-labelledBy={title ? titleID : null}
+              aria-labelledby={title ? titleID : null}
               {...restProps}
             >
               {closable && (
