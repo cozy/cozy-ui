@@ -19,6 +19,11 @@ const TRANSITION_DURATION = 100 // need to be kept in sync with css
  * - Reacts to gestures with HammerJS
  */
 class ActionMenu extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { closing: false }
+  }
+
   componentDidMount() {
     this.initialAppear()
     this.attachEvents()
