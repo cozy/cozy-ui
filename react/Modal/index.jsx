@@ -199,6 +199,8 @@ const ModalCross = ({ onClick, color, className }) => (
     onClick={onClick}
     extension="narrow"
     type="button"
+    label="Close"
+    iconOnly
   >
     <Icon
       icon="cross"
