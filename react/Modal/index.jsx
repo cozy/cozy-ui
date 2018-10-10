@@ -217,7 +217,11 @@ const ModalCross = ({ onClick, color, className }) => (
   </Button>
 )
 
-const ModalFooter = ({
+const ModalFooter = ({ children, className }) => (
+  <div className={cx(styles['c-modal-footer'], className)}>{children}</div>
+)
+
+const ModalButtons = ({
   secondaryText,
   secondaryAction,
   secondaryType,
@@ -226,42 +230,27 @@ const ModalFooter = ({
   primaryType,
   children,
   className
-}) => {
-  const displayPrimary = primaryText && primaryAction
-  const displaySecondary = secondaryText && secondaryAction
-  return (
-    <div
-      className={cx(
-        styles['c-modal-footer'],
-        {
-          [styles['c-modal-footer--button']]: displayPrimary || displaySecondary
-        },
-        className
-      )}
-    >
-      {children}
-      {displaySecondary && (
+}) => (
+  <div className={cx(styles['c-modal-footer--button'], className)}>
+    {children}
+    {secondaryText &&
+      secondaryAction && (
         <Button
           theme={secondaryType}
           onClick={secondaryAction}
           label={secondaryText}
         />
       )}
-      {displayPrimary && (
+    {primaryText &&
+      primaryAction && (
         <Button
           theme={primaryType}
           onClick={primaryAction}
           label={primaryText}
         />
       )}
-    </div>
-  )
-}
-
-const ModalButtons = props => {
-  console.log('ModalButtons is a deprecated component, use ModalFooter instead')
-  return <ModalFooter {...props} />
-}
+  </div>
+)
 
 class Modal extends Component {
   constructor(props) {
@@ -362,14 +351,16 @@ class Modal extends Component {
               {children}
               {(primaryText && primaryAction) ||
               (secondaryText && secondaryAction) ? (
-                <ModalFooter
-                  primaryText={primaryText}
-                  primaryAction={primaryAction}
-                  primaryType={primaryType}
-                  secondaryText={secondaryText}
-                  secondaryAction={secondaryAction}
-                  secondaryType={secondaryType}
-                />
+                <ModalFooter>
+                  <ModalButtons
+                    primaryText={primaryText}
+                    primaryAction={primaryAction}
+                    primaryType={primaryType}
+                    secondaryText={secondaryText}
+                    secondaryAction={secondaryAction}
+                    secondaryType={secondaryType}
+                  />
+                </ModalFooter>
               ) : null}
             </div>
           </div>
