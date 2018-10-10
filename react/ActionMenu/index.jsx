@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Hammer from 'hammerjs'
@@ -130,13 +129,11 @@ class ActionMenu extends Component {
   }
 
   handleMenuRef = menu => {
-    // FIXME
-    this.menuNode = ReactDOM.findDOMNode(menu) // eslint-disable-line react/no-find-dom-node
+    this.menuNode = menu
   }
 
   handleWrapperRef = wrapper => {
-    // FIXME
-    this.wrapperNode = ReactDOM.findDOMNode(wrapper) // eslint-disable-line react/no-find-dom-node
+    this.wrapperNode = wrapper
   }
 
   render() {
