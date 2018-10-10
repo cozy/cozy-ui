@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styles from './styles.styl'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
 
 const disableScroll = node => {
   const previousOverflow = node.style.overflow
@@ -68,6 +69,12 @@ class Overlay extends Component {
       </div>
     )
   }
+}
+
+Overlay.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  onEscape: PropTypes.func
 }
 
 export default Overlay
