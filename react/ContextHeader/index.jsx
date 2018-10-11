@@ -12,8 +12,8 @@ const ContextHeader = ({ icon, title, text, onClose, className }) => {
     <div className={cx(styles['context-header'], className)}>
       {icon && <Icon className={styles['context-header-icon']} icon={icon} />}
       <div className={styles['context-header-content']}>
-        <Title className={false}>{title}</Title>
-        {text && <Text className={false}>{text}</Text>}
+        <Title ellipsis>{title}</Title>
+        {text && <Text ellipsis>{text}</Text>}
       </div>
       {onClose && (
         <Button
