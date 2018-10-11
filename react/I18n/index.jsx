@@ -37,13 +37,13 @@ export class I18n extends Component {
 
   // for preact
   // eslint-disable-next-line react/no-deprecated
-  componentWillReceiveProps() {
-    this.UNSAFE_componentWillReceiveProps()
+  componentWillReceiveProps(nextProps) {
+    this.UNSAFE_componentWillReceiveProps(nextProps)
   }
 
-  UNSAFE_componentWillReceiveProps = newProps => {
-    if (newProps.lang !== this.props.lang) {
-      this.init(newProps)
+  UNSAFE_componentWillReceiveProps = nextProps => {
+    if (nextProps.lang !== this.props.lang) {
+      this.init(nextProps)
     }
   }
 
