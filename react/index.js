@@ -19,6 +19,7 @@ export {
   ModalContent,
   ModalSection,
   ModalFooter,
+  ModalButtons,
   ModalDescription,
   ModalHeader,
   ModalBrandedHeader
