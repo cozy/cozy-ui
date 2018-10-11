@@ -42,8 +42,8 @@ class ModalContent extends Component {
 
   // for preact
   // eslint-disable-next-line react/no-deprecated
-  componentWillUpdate() {
-    this.UNSAFE_componentWillUpdate()
+  componentWillUpdate(nextProps, nextState) {
+    this.UNSAFE_componentWillUpdate(nextProps, nextState)
   }
 
   UNSAFE_componentWillUpdate = nextProps => {
