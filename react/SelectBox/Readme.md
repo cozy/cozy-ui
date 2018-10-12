@@ -1,8 +1,8 @@
-A select box for more advanced use cases, based on [`react-select` v2](https://deploy-preview-2289--react-select.netlify.com/home).
+A select box for more advanced use cases, based on [`react-select` v2](https://react-select.com).
 
 ### Simple use case
 
-You can use this exactly like you would use `react-select`. See the [official documentation](https://deploy-preview-2289--react-select.netlify.com/home) for more examples.
+You can use this exactly like you would use `react-select`. See the [official documentation](https://react-select.com) for more examples.
 
 ```
 const options = [
