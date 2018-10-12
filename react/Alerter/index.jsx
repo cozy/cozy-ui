@@ -70,6 +70,7 @@ class Alert extends Component {
     const { hidden } = this.state
     return (
       <div
+        ref={c => (this.base = c)}
         className={classNames(
           styles['c-alert'],
           hidden ? styles['c-alert--hidden'] : ''
