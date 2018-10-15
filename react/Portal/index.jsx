@@ -6,7 +6,7 @@ if (process.env.USE_REACT) {
     return ReactDOM.createPortal(children, targetElement)
   }
 } else {
-  Portal = require('preact-portal').default
+  Portal = require('preact-portal')
 }
 
 export default Portal
