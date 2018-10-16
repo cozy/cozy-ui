@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
+
 import styles from './styles.styl'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import { Media, Bd, Img } from '../Media'
-
+import Popover from '../Popover'
+import ActionMenu from '../ActionMenu'
+import withBreakpoints from '../helpers/withBreakpoints'
 class MenuItem extends Component {
   render() {
     const { disabled, className, children, icon, ...props } = this.props
@@ -42,24 +45,11 @@ class Menu extends Component {
       this.close()
     }
   }
-
-  handleClick = item => {
-    const isDisabled = item.props.disabled
-    const itemHandler = isDisabled ? null : item.props.onSelect
-    const handler =
-      itemHandler || this.props[!isDisabled ? 'onSelect' : 'onSelectDisabled']
-    if (handler) {
-      const res = handler(item.props.data)
-      if (res !== false) {
-        this.close()
-      }
-    } else if (!isDisabled) {
-      this.close()
-    }
-  }
-
   open() {
-    this.setState({ opened: true })
+    this.setState({
+      opened: true
+    })
+
     document.addEventListener('click', this.handleClickOutside, true)
   }
 
@@ -71,7 +61,6 @@ class Menu extends Component {
   componentWillUnmount() {
     document.removeEventListener('click', this.handleClickOutside, true)
   }
-
   renderItems() {
     return React.Children.map(this.props.children, item => {
       if (!item) return item
@@ -85,7 +74,20 @@ class Menu extends Component {
       return item
     })
   }
-
+  handleClick = item => {
+    const isDisabled = item.props.disabled
+    const itemHandler = isDisabled ? null : item.props.onSelect
+    const handler =
+      itemHandler || this.props[!isDisabled ? 'onSelect' : 'onSelectDisabled']
+    if (handler) {
+      const res = handler(item.props.data)
+      if (res !== false) {
+        this.props.close()
+      }
+    } else if (!isDisabled) {
+      this.props.close()
+    }
+  }
   render() {
     const {
       text,
@@ -93,7 +95,10 @@ class Menu extends Component {
       className,
       buttonClassName,
       position,
-      component
+      component,
+      itemsStyle,
+      popover,
+      shouldConvertToActionMenu
     } = this.props
     const { opened } = this.state
     return (
@@ -118,30 +123,62 @@ class Menu extends Component {
         ) : (
           React.cloneElement(component, { disabled, onClick: this.toggle })
         )}
-        {opened ? (
-          <div
-            className={cx(styles['c-menu__inner'], {
-              [styles['c-menu__inner--opened']]: opened
-            })}
+        {opened && (
+          <InternalItemWithBreakPoints
+            popover={popover}
+            itemsStyle={itemsStyle}
+            shouldConvertToActionMenu={shouldConvertToActionMenu}
+            onClose={this.close.bind(this)}
           >
             {this.renderItems()}
-          </div>
-        ) : null}
+          </InternalItemWithBreakPoints>
+        )}
       </div>
     )
   }
 }
+
+const InternalItem = ({
+  popover,
+  children,
+  itemsStyle,
+  breakpoints: { isMobile },
+  shouldConvertToActionMenu,
+  onClose
+}) => {
+  return isMobile && shouldConvertToActionMenu ? (
+    <ActionMenu onClose={onClose}>{children}</ActionMenu>
+  ) : popover === true ? (
+    <Popover
+      className={cx(styles['c-menu__inner'], styles['c-menu__inner--opened'])}
+      style={{ ...itemsStyle }}
+    >
+      {children}
+    </Popover>
+  ) : (
+    <div
+      className={cx(styles['c-menu__inner'], styles['c-menu__inner--opened'])}
+      style={{ ...itemsStyle }}
+    >
+      {children}
+    </div>
+  )
+}
+const InternalItemWithBreakPoints = withBreakpoints()(InternalItem)
 
 Menu.defaultProps = {
   position: 'left',
   disabled: false,
   component: null,
   onSelect: null,
-  onSelectDisabled: null
+  onSelectDisabled: null,
+  itemsStyle: {},
+  popover: false
 }
 
 Menu.propTypes = {
-  /** Use position='right' to display the menu to the right */
+  /** Use position='right' to display the menu to the right. Use left to display it to the left.
+   */
   position: PropTypes.string,
   /** Disables the menu */
   disabled: PropTypes.bool,
@@ -150,7 +187,11 @@ Menu.propTypes = {
   /** `onClick` handler for non disabled items */
   onSelect: PropTypes.func,
   /** `onClick` handler for disabled items */
-  onSelectDisabled: PropTypes.func
+  onSelectDisabled: PropTypes.func,
+  /** itemsStyle : Some global Styles for MenuItems */
+  itemsStyle: PropTypes.object,
+  /** popOver: if you need fixed menu */
+  popOver: PropTypes.bool
 }
 
 Menu.MenuItem = MenuItem
