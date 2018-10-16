@@ -5,6 +5,8 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import { Media, Bd, Img } from '../Media'
 import Popover from '../Popover'
+import ActionMenu from '../ActionMenu'
+import withBreakpoints from '../helpers/withBreakpoints'
 class MenuItem extends Component {
   render() {
     const { disabled, className, children, icon, ...props } = this.props
@@ -95,7 +97,8 @@ class Menu extends Component {
       position,
       component,
       itemsStyle,
-      popOver
+      popover,
+      shouldConvertToActionMenu
     } = this.props
     const { opened } = this.state
     return (
@@ -120,31 +123,48 @@ class Menu extends Component {
         ) : (
           React.cloneElement(component, { disabled, onClick: this.toggle })
         )}
-        {opened && popOver === true ? (
-          <Popover
-            className={cx(
-              styles['c-menu__inner'],
-              styles['c-menu__inner--opened']
-            )}
-            style={{ ...itemsStyle }}
+        {opened && (
+          <InternalItemWithBreakPoints
+            popover={popover}
+            itemsStyle={itemsStyle}
+            shouldConvertToActionMenu={shouldConvertToActionMenu}
+            onClose={this.close.bind(this)}
           >
             {this.renderItems()}
-          </Popover>
-        ) : null}
-        {opened && popOver !== true ? (
-          <div
-            className={cx(styles['c-menu__inner'], {
-              [styles['c-menu__inner--opened']]: opened
-            })}
-            style={{ ...itemsStyle }}
-          >
-            {this.renderItems()}
-          </div>
-        ) : null}
+          </InternalItemWithBreakPoints>
+        )}
       </div>
     )
   }
 }
+
+const InternalItem = ({
+  popover,
+  children,
+  itemsStyle,
+  breakpoints: { isMobile },
+  shouldConvertToActionMenu,
+  onClose
+}) => {
+  return isMobile && shouldConvertToActionMenu ? (
+    <ActionMenu onClose={onClose}>{children}</ActionMenu>
+  ) : popover === true ? (
+    <Popover
+      className={cx(styles['c-menu__inner'], styles['c-menu__inner--opened'])}
+      style={{ ...itemsStyle }}
+    >
+      {children}
+    </Popover>
+  ) : (
+    <div
+      className={cx(styles['c-menu__inner'], styles['c-menu__inner--opened'])}
+      style={{ ...itemsStyle }}
+    >
+      {children}
+    </div>
+  )
+}
+const InternalItemWithBreakPoints = withBreakpoints()(InternalItem)
 
 Menu.defaultProps = {
   position: 'left',
@@ -153,7 +173,7 @@ Menu.defaultProps = {
   onSelect: null,
   onSelectDisabled: null,
   itemsStyle: {},
-  popOver: false
+  popover: false
 }
 
 Menu.propTypes = {
