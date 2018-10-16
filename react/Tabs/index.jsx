@@ -78,9 +78,7 @@ export class Tabs extends Component {
   constructor(props) {
     super(props)
     this.changeTab = this.changeTab.bind(this)
-  }
-  getInitialState() {
-    return { activeTab: this.props.initialActiveTab }
+    this.state = { activeTab: props.initialActiveTab }
   }
 
   changeTab(tabName) {
