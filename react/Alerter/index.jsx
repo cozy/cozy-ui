@@ -34,7 +34,7 @@ class Alert extends Component {
 
   computeDuration() {
     const words = this.props.message.split(/\W/).filter(Boolean)
-    return Math.max(MINIMUM_ALERT_DURATION, (words.length / 3) * 1000)
+    return Math.max(MINIMUM_ALERT_DURATION, words.length / 3 * 1000)
   }
 
   componentDidMount() {
