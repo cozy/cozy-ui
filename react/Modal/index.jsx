@@ -64,11 +64,13 @@ class ModalContent extends Component {
       passive: true
     })
     disableBodyScroll(this.scrollingContent)
+    document.body.classList.add('has-modal')
   }
 
   componentWillUnmount() {
     this.scrollingContent.removeEventListener('scroll', this.handleScroll)
     clearAllBodyScrollLocks()
+    document.body.classList.remove('has-modal')
   }
 
   handleScroll = () => {
