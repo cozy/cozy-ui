@@ -122,7 +122,6 @@ class Menu extends Component {
         )}
         {opened && popOver === true ? (
           <Popover
-            refParent={this.container}
             className={cx(
               styles['c-menu__inner'],
               styles['c-menu__inner--opened']
@@ -137,6 +136,7 @@ class Menu extends Component {
             className={cx(styles['c-menu__inner'], {
               [styles['c-menu__inner--opened']]: opened
             })}
+            style={{ ...itemsStyle }}
           >
             {this.renderItems()}
           </div>

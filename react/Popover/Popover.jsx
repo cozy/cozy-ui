@@ -15,16 +15,16 @@ export default class Popover extends Component {
     requestAnimationFrame(this.computeCoordinates.bind(this))
   }
   computeCoordinates() {
-    const { refParent, style } = this.props
-    // eslint-disable-next-line
-    const menuElement = ReactDOM.findDOMNode(refParent)
-    const scrollTop = this.getScrollParent(menuElement)
-    const coordinates = menuElement.getBoundingClientRect()
-
+    const { style } = this.props
     //Find me & give me my coordinates
     // eslint-disable-next-line
     const domItem = ReactDOM.findDOMNode(this.element)
     const domItemCoordinates = domItem.getBoundingClientRect()
+    // eslint-disable-next-line
+    const menuElement = domItem.parentNode
+    const scrollTop = this.getScrollParent(menuElement)
+    const coordinates = menuElement.getBoundingClientRect()
+
     //If we have don't have enough space => maths
     const hasNotEnoughSpace =
       domItemCoordinates.bottom - scrollTop > window.innerHeight
@@ -67,12 +67,10 @@ export default class Popover extends Component {
 
 Popover.defaultProps = {
   style: {},
-  className: {},
-  refParent: ''
+  className: {}
 }
 
 Popover.propTypes = {
   style: PropTypes.object,
-  className: PropTypes.string,
-  refParent: PropTypes.object
+  className: PropTypes.string
 }
