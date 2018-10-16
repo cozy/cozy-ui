@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Hammer from 'hammerjs'
@@ -19,6 +18,11 @@ const TRANSITION_DURATION = 100 // need to be kept in sync with css
  * - Reacts to gestures with HammerJS
  */
 class ActionMenu extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { closing: false }
+  }
+
   componentDidMount() {
     this.initialAppear()
     this.attachEvents()
@@ -125,13 +129,11 @@ class ActionMenu extends Component {
   }
 
   handleMenuRef = menu => {
-    // FIXME
-    this.menuNode = ReactDOM.findDOMNode(menu) // eslint-disable-line react/no-find-dom-node
+    this.menuNode = menu
   }
 
   handleWrapperRef = wrapper => {
-    // FIXME
-    this.wrapperNode = ReactDOM.findDOMNode(wrapper) // eslint-disable-line react/no-find-dom-node
+    this.wrapperNode = wrapper
   }
 
   render() {

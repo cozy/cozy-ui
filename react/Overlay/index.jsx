@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import styles from './styles.styl'
 import cx from 'classnames'
+import omit from 'lodash/omit'
+import PropTypes from 'prop-types'
 
 const disableScroll = node => {
   const previousOverflow = node.style.overflow
@@ -11,6 +13,8 @@ const disableScroll = node => {
 }
 
 const ESC_KEYCODE = 27
+
+const nonDOMProps = ['onEscape', 'children', 'className']
 
 const bodyTallerThanWindow = () => {
   return document.body.getBoundingClientRect().height > window.innerHeight
@@ -56,18 +60,24 @@ class Overlay extends Component {
   }
 
   render() {
-    const { children, className, ...rest } = this.props
-
+    const { children, className } = this.props
+    const domProps = omit(this.props, nonDOMProps)
     return (
       <div
         onClick={this.handleClick}
         className={cx(styles['c-overlay'], className)}
-        {...rest}
+        {...domProps}
       >
         {children}
       </div>
     )
   }
+}
+
+Overlay.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  onEscape: PropTypes.func
 }
 
 export default Overlay
