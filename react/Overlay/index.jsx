@@ -3,14 +3,7 @@ import styles from './styles.styl'
 import cx from 'classnames'
 import omit from 'lodash/omit'
 import PropTypes from 'prop-types'
-
-const disableScroll = node => {
-  const previousOverflow = node.style.overflow
-  node.style.overflow = 'hidden'
-  return () => {
-    node.style.overflow = previousOverflow
-  }
-}
+import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 
 const ESC_KEYCODE = 27
 
@@ -29,8 +22,8 @@ const bodyTallerThanWindow = () => {
 class Overlay extends Component {
   componentDidMount() {
     if (bodyTallerThanWindow()) {
-      this.restoreScrollBody = disableScroll(document.body)
-      this.restoreScrollHtml = disableScroll(document.body.parentNode)
+      disableBodyScroll(document.body)
+      disableBodyScroll(document.body.parentNode)
     }
     if (this.props.onEscape) {
       document.addEventListener('keydown', this.handleKeydown)
@@ -46,8 +39,7 @@ class Overlay extends Component {
   componentWillUnmount() {
     // restauration function can be undefined if there was
     // an error during mounting/rendering
-    this.restoreScrollBody && this.restoreScrollBody()
-    this.restoreScrollBody && this.restoreScrollHtml()
+    clearAllBodyScrollLocks()
     if (this.props.onEscape) {
       document.removeEventListener('keydown', this.handleKeydown)
     }
