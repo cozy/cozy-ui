@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+
 import styles from './styles.styl'
 import cx from 'classnames'
+import MenuButton from './Button'
 import PropTypes from 'prop-types'
 import { Media, Bd, Img } from '../Media'
-
+import Popover from '../Popover'
 class MenuItem extends Component {
   render() {
     const { disabled, className, children, icon, ...props } = this.props
@@ -57,9 +59,10 @@ class Menu extends Component {
       this.close()
     }
   }
-
   open() {
-    this.setState({ opened: true })
+    this.setState({
+      opened: true
+    })
     document.addEventListener('click', this.handleClickOutside, true)
   }
 
@@ -71,7 +74,6 @@ class Menu extends Component {
   componentWillUnmount() {
     document.removeEventListener('click', this.handleClickOutside, true)
   }
-
   renderItems() {
     return React.Children.map(this.props.children, item => {
       if (!item) return item
@@ -93,9 +95,13 @@ class Menu extends Component {
       className,
       buttonClassName,
       position,
-      component
+      component,
+      itemsStyle,
+      popover
     } = this.props
     const { opened } = this.state
+    const Tag = popover === true ? Popover : 'div'
+
     return (
       <div
         className={cx(styles['c-menu'], className, {
@@ -107,26 +113,26 @@ class Menu extends Component {
         }}
       >
         {!component ? (
-          <button
-            role="button"
-            className={cx('c-btn', styles['c-menu__btn'], buttonClassName)}
+          <MenuButton
             disabled={disabled}
             onClick={this.toggle}
-          >
-            {text}
-          </button>
+            text={text}
+            buttonClassName={buttonClassName}
+          />
         ) : (
           React.cloneElement(component, { disabled, onClick: this.toggle })
         )}
-        {opened ? (
-          <div
-            className={cx(styles['c-menu__inner'], {
-              [styles['c-menu__inner--opened']]: opened
-            })}
+        {opened && (
+          <Tag
+            className={cx(
+              styles['c-menu__inner'],
+              styles['c-menu__inner--opened']
+            )}
+            style={{ ...itemsStyle }}
           >
             {this.renderItems()}
-          </div>
-        ) : null}
+          </Tag>
+        )}
       </div>
     )
   }
@@ -137,11 +143,14 @@ Menu.defaultProps = {
   disabled: false,
   component: null,
   onSelect: null,
-  onSelectDisabled: null
+  onSelectDisabled: null,
+  itemsStyle: {},
+  popover: false
 }
 
 Menu.propTypes = {
-  /** Use position='right' to display the menu to the right */
+  /** Use position='right' to display the menu to the right. Use left to display it to the left.
+   */
   position: PropTypes.string,
   /** Disables the menu */
   disabled: PropTypes.bool,
@@ -150,10 +159,15 @@ Menu.propTypes = {
   /** `onClick` handler for non disabled items */
   onSelect: PropTypes.func,
   /** `onClick` handler for disabled items */
-  onSelectDisabled: PropTypes.func
+  onSelectDisabled: PropTypes.func,
+  /** Global Styles for MenuItems */
+  itemsStyle: PropTypes.object,
+  /** if you need fixed menu */
+  popover: PropTypes.bool
 }
 
 Menu.MenuItem = MenuItem
+Menu.MenuButton = MenuButton
 export default Menu
 
-export { MenuItem }
+export { MenuItem, MenuButton }
