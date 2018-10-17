@@ -9,7 +9,6 @@ import migrateProps from '../helpers/migrateProps'
 import palette from '../../stylus/settings/palette.json'
 import Portal from '../Portal'
 import uniqueId from 'lodash/uniqueId'
-import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 
 class AnimatedContentHeader extends Component {
   render() {
@@ -63,13 +62,11 @@ class ModalContent extends Component {
     this.scrollingContent.addEventListener('scroll', this.handleScroll, {
       passive: true
     })
-    disableBodyScroll(this.scrollingContent)
     document.body.classList.add('has-modal')
   }
 
   componentWillUnmount() {
     this.scrollingContent.removeEventListener('scroll', this.handleScroll)
-    clearAllBodyScrollLocks()
     document.body.classList.remove('has-modal')
   }
 
