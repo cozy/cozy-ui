@@ -1,0 +1,41 @@
+.tooltip-buble {
+  z-index: 10;
+  cursor: pointer
+
+  &::after {
+      content: ''
+      position: absolute
+  }
+}
+.tooltip-top {
+  padding-top: 8px;
+  
+  &::after {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid rgba(0,0,0,.7);
+    top: 0;
+    left: calc(50% - 8px);
+  }
+}
+
+.tooltip-bottom {
+  padding-bottom: 8px;
+  
+  &::after {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(0,0,0,.7);
+    top: 0;
+    left: calc(50% - 8px);
+  }
+}
+
+.tooltip-message 
+  background: rgba(0,0,0,.7)
+  border-radius: 3px;
+  color: #fff
+  font-size: .75rem;
+  line-height: 1.4;
+  padding: .75em;
+  text-align: center;

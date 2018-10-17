@@ -8,7 +8,8 @@ export default class Popover extends Component {
     this.defaultStyle = {
       display: 'block',
       visibility: 'hidden',
-      position: 'fixed'
+      position: 'fixed',
+      zIndex: 100
     }
   }
 
@@ -25,16 +26,28 @@ export default class Popover extends Component {
     const menuElement = domItem.parentNode
     const scrollTop = getScrollParent(menuElement)
     const coordinates = menuElement.getBoundingClientRect()
-
     // If we have don't have enough space => maths
     const hasNotEnoughSpace =
       domItemCoordinates.bottom - scrollTop > window.innerHeight
+    let left = ''
+    switch (this.props.align) {
+      case 'center':
+        left =
+          coordinates.left +
+          coordinates.width / 2 -
+          domItemCoordinates.width / 2
+        break
+      case 'right':
+      default:
+        left = coordinates.left + coordinates.width - domItemCoordinates.width
+        break
+    }
     this.setState({
       style: {
         top: hasNotEnoughSpace
           ? coordinates.top - domItemCoordinates.height
           : coordinates.top + coordinates.height,
-        left: coordinates.left + coordinates.width - domItemCoordinates.width,
+        left: left,
         visibility: 'visible'
       }
     })
@@ -50,7 +63,7 @@ export default class Popover extends Component {
         }}
         className={this.props.className}
       >
-        {this.props.children}
+        {this.props.children(!this.state.hasNotEnoughSpace)}
       </div>
     )
   }
@@ -58,10 +71,12 @@ export default class Popover extends Component {
 
 Popover.defaultProps = {
   style: {},
-  className: {}
+  className: {},
+  align: ''
 }
 
 Popover.propTypes = {
   style: PropTypes.object,
-  className: PropTypes.string
+  className: PropTypes.string,
+  align: PropTypes.oneOf(['center', 'right'])
 }
