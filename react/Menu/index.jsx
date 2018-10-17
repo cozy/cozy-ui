@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import styles from './styles.styl'
 import cx from 'classnames'
+import MenuButton from './Button'
 import PropTypes from 'prop-types'
 import { Media, Bd, Img } from '../Media'
 import Popover from '../Popover'
@@ -112,14 +113,12 @@ class Menu extends Component {
         }}
       >
         {!component ? (
-          <button
-            role="button"
-            className={cx('c-btn', styles['c-menu__btn'], buttonClassName)}
+          <MenuButton
             disabled={disabled}
             onClick={this.toggle}
-          >
-            {text}
-          </button>
+            text={text}
+            buttonClassName={buttonClassName}
+          />
         ) : (
           React.cloneElement(component, { disabled, onClick: this.toggle })
         )}
@@ -163,11 +162,12 @@ Menu.propTypes = {
   onSelectDisabled: PropTypes.func,
   /** Global Styles for MenuItems */
   itemsStyle: PropTypes.object,
-  /** popOver: if you need fixed menu */
+  /** if you need fixed menu */
   popover: PropTypes.bool
 }
 
 Menu.MenuItem = MenuItem
+Menu.MenuButton = MenuButton
 export default Menu
 
-export { MenuItem }
+export { MenuItem, MenuButton }

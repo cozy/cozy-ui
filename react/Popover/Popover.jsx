@@ -12,20 +12,21 @@ export default class Popover extends Component {
     }
   }
 
-  //When the component is ready, than let's do some Maths
   componentDidMount() {
+    // When the component is ready, then let's do some maths
     requestAnimationFrame(this.computeCoordinates.bind(this))
   }
+
   computeCoordinates() {
-    //Find me & give me my coordinates
-    //eslint-disable-next-line react/no-find-dom-node
+    // Find me & give me my coordinates
+    // eslint-disable-next-line react/no-find-dom-node
     const domItem = ReactDOM.findDOMNode(this)
     const domItemCoordinates = domItem.getBoundingClientRect()
     const menuElement = domItem.parentNode
     const scrollTop = getScrollParent(menuElement)
     const coordinates = menuElement.getBoundingClientRect()
 
-    //If we have don't have enough space => maths
+    // If we have don't have enough space => maths
     const hasNotEnoughSpace =
       domItemCoordinates.bottom - scrollTop > window.innerHeight
     this.setState({
