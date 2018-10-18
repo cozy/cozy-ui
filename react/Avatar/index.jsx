@@ -18,7 +18,11 @@ const nameToColor = (name = '') => {
     palette['lightishPurple'],
     palette['weirdGreen'],
     palette['puertoRico'],
-    palette['emerald']
+    palette['emerald'],
+    palette['seafoamGreen'],
+    palette['lavender'],
+    palette['brightSun'],
+    palette['fushsia']
   ]
   const key =
     Array.from(name.toUpperCase())
@@ -60,14 +64,14 @@ export const Avatar = ({ text, textId, image, size, className, style }) => {
 Avatar.propTypes = {
   text: PropTypes.string,
   image: PropTypes.string,
-  size: PropTypes.oneOf(['small', 'medium']),
+  size: PropTypes.oneOf(['xsmall', 'small', 'large', 'xlarge']),
   className: PropTypes.string
 }
 
 Avatar.defaultProps = {
   text: '',
   image: '',
-  size: 'medium',
+  size: '',
   className: ''
 }
 

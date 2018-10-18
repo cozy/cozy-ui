@@ -609,18 +609,17 @@ NB: You'll have to deal the behaviour with javascript which is basically adding/
 Display an avatar of a user or contact with initials or an image
 
  Markup:
-<div class="c-avatar c-avatar--small">
+<div class="c-avatar {{modifier_class}}">
     <span class="c-avatar-initials">CD</span>
 </div>
-<div class="c-avatar c-avatar--medium">
-    <span class="c-avatar-initials">CD</span>
-</div>
-<div class="c-avatar c-avatar--small">
+<div class="c-avatar {{modifier_class}}">
     <img src="https://cozy.io/fr/images/cozy-logo_white.png" class="c-avatar-image" alt="">
 </div>
-<div class="c-avatar c-avatar--medium">
-    <img src="https://cozy.io/fr/images/cozy-logo_white.png" class="c-avatar-image" alt="">
-</div>
+
+ .c-avatar--xsmall - Extra small size variant
+ .c-avatar--small - Small size variant
+ .c-avatar--large - Large size variant
+ .c-avatar--xlarge - Extra large variant
 
  Styleguide Components.avatar
 */
