@@ -4,7 +4,7 @@ import { Button } from '../Button'
 import { Title, Text } from '../Text'
 import Icon from '../Icon'
 import styles from './styles.styl'
-import palette from '../../stylus/settings/palette.json'
+import palette from '../palette'
 import cx from 'classnames'
 
 const ContextHeader = ({ icon, title, text, onClose, className }) => {

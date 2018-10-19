@@ -1,0 +1,14 @@
+{
+  "presets": [
+    "cozy-app"
+  ],
+  "plugins": [
+    ["css-modules-transform", {
+      extensions: [".styl"],
+      preprocessCss: "./preprocess",
+      extractCss: "./transpiled/stylesheet.css"
+    }],
+    ["transform-runtime", { "polyfill": false }]
+  ],
+  "ignore": ["examples/**/*"]
+}
