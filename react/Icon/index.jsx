@@ -24,6 +24,8 @@ function Icon(props) {
     anchor = `#${icon.id}`
   } else if (icon[0] === '#') {
     anchor = icon
+  } else {
+    anchor = '#' + icon
   }
 
   if (!anchor) {
