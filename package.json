@@ -39,7 +39,8 @@
     "watch:doc:react": "styleguidist server --config docs/styleguide.config.js",
     "travis-deploy-once": "travis-deploy-once",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "prepublishOnly": "yarn release"
   },
   "devDependencies": {
     "@commitlint/cli": "^6.2.0",
