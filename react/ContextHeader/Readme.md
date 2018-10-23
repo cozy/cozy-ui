@@ -12,7 +12,7 @@ A little inset with text and optional icon that can be used to provide some cont
 
 ```
 <div >
-  <ContextHeader title="Pick a book" text="What will you read today?" icon="album" />
+  <ContextHeader title="Pick a book" text="What will you read today?" illustration={<Icon icon="album" size={32} />} />
 </div>
 ```
 
@@ -20,6 +20,6 @@ A little inset with text and optional icon that can be used to provide some cont
 
 ```
 <div >
-  <ContextHeader title="Pick a book" text="What will you read today?" icon="album" onClose={() => alert('Nothing then.')} />
+  <ContextHeader title="Pick a book" text="What will you read today?" illustration={<Icon icon="album" size={32} />} onClose={() => alert('Nothing then.')} />
 </div>
 ```

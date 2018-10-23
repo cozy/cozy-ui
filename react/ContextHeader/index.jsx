@@ -7,10 +7,14 @@ import styles from './styles.styl'
 import palette from '../../stylus/settings/palette.json'
 import cx from 'classnames'
 
-const ContextHeader = ({ icon, title, text, onClose, className }) => {
+const ContextHeader = ({ illustration, title, text, onClose, className }) => {
   return (
     <div className={cx(styles['context-header'], className)}>
-      {icon && <Icon className={styles['context-header-icon']} icon={icon} />}
+      {illustration && (
+        <div className={styles['context-header-illustration']}>
+          {illustration}
+        </div>
+      )}
       <div className={styles['context-header-content']}>
         <Title ellipsis>{title}</Title>
         {text && <Text ellipsis>{text}</Text>}
@@ -36,7 +40,7 @@ const ContextHeader = ({ icon, title, text, onClose, className }) => {
 }
 
 ContextHeader.propTypes = {
-  icon: PropTypes.node,
+  illustration: PropTypes.node,
   title: PropTypes.string.isRequired,
   text: PropTypes.string,
   onClose: PropTypes.func,
