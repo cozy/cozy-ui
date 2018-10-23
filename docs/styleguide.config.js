@@ -11,7 +11,8 @@ module.exports = {
         '../react/ButtonAction/index.jsx',
         '../react/Chip/index.jsx',
         '../react/Icon/index.jsx',
-        '../react/Spinner/index.jsx'
+        '../react/Spinner/index.jsx',
+        '../react/Counter/index.jsx'
       ]
     },
     {
