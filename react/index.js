@@ -60,3 +60,4 @@ export {
 } from './Text'
 export { default as Empty } from './Empty'
 export { default as ContextHeader } from './ContextHeader'
+export { default as Circle } from './Circle'
