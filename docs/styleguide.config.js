@@ -47,6 +47,7 @@ module.exports = {
         '../react/Accordion/index.jsx',
         '../react/Text/index.jsx',
         '../react/Empty/index.jsx',
+        '../react/Well/index.jsx',
         '../react/ContextHeader/index.jsx'
       ]
     },
