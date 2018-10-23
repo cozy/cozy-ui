@@ -31,20 +31,20 @@ for kType, vType in types
         for kDir, vDir in directions
             if vDir == all
                 ${kType}-{kSize}
-                    {vType}: vSize
+                    {vType}: vSize !important
                 global('.u-'+kType+'-'+kSize, '$'+kType+'-'+kSize)
             else if vDir == vertical
                 ${kType}{kDir}-{kSize}
-                    {vType}-top: vSize
-                    {vType}-bottom: vSize
+                    {vType}-top: vSize !important
+                    {vType}-bottom: vSize !important
                 global('.u-'+kType+kDir+'-'+kSize, '$'+kType+kDir+'-'+kSize)
             else if vDir == horizontal
                 ${kType}{kDir}-{kSize}
-                    {vType}-left: vSize
-                    {vType}-right: vSize
+                    {vType}-left: vSize !important
+                    {vType}-right: vSize !important
                 global('.u-'+kType+kDir+'-'+kSize, '$'+kType+kDir+'-'+kSize)
             else
                 ${kType}{kDir}-{kSize}
-                    {vType}-{vDir}: vSize
+                    {vType}-{vDir}: vSize !important
                 global('.u-'+kType+kDir+'-'+kSize, '$'+kType+kDir+'-'+kSize)
 // @stylint on
