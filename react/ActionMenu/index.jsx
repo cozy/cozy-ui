@@ -5,6 +5,7 @@ import Hammer from 'hammerjs'
 import styles from './styles.styl'
 import Overlay from '../Overlay'
 import once from 'lodash/once'
+import { Media, Bd, Img } from '../Media'
 
 const TRANSITION_DURATION = 100 // need to be kept in sync with css
 
@@ -165,4 +166,15 @@ ActionMenu.propTypes = {
   onClose: PropTypes.func
 }
 
+const ActionMenuItem = ({ left, children, right }) => {
+  return (
+    <Media className={styles['ActionMenu__Item']}>
+      {left && <Img className="u-mh-1">{left}</Img>}
+      <Bd className={left ? 'u-mr-1' : 'u-mh-1'}>{children}</Bd>
+      {right && <Img className="u-mr-1">{right}</Img>}
+    </Media>
+  )
+}
+
 export default ActionMenu
+export { ActionMenuItem }
