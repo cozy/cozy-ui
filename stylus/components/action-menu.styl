@@ -1,5 +1,6 @@
 @require './popover.styl'
 @require '../tools/mixins'
+@require '../settings/palette'
 
 $actionmenu
     .c-actionmenu
@@ -19,3 +20,10 @@ $actionmenu
 
         hr
             margin-top 0
+
+$actionmenuitem
+    height rem(48)
+    cursor pointer
+
+    &:hover
+        background-color paleGrey
