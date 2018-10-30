@@ -11,9 +11,16 @@ const { NavItem, NavIcon, NavText, genNavLink } = _Nav
 const Nav = _Nav.default
 
 const NavLink = genNavLink(({ children, className }) =>
-  <a className={className}>{ children }</a>);
+  <a className={className}>{ children }</a>)
 
-<Layout style='position: relative; transform: translateZ(0);'>
+const styles = {
+  layout: {
+    position: 'relative',
+    transform: 'translateZ(0)'
+  }
+};
+
+<Layout style={styles.layout}>
     <Sidebar>
       <Nav>
         <NavItem>
