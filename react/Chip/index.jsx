@@ -4,11 +4,11 @@ import styles from './styles.styl'
 
 class Chip extends React.PureComponent {
   render() {
-    const { children, className, ...props } = this.props
+    const { children, className, ...restProps } = this.props
     return (
       <div
         className={cx(styles['c-chip'], className, this.constructor.className)}
-        {...props}
+        {...restProps}
       >
         {children}
       </div>
@@ -24,13 +24,14 @@ export default Chip
 
 const disabledChipButtonStyle = styles['c-chip-button--disabled']
 export class ChipButton extends React.PureComponent {
-  render({ children, className, disabled, ...props }) {
+  render() {
+    const { children, className, disabled, ...restProps } = this.props
     return (
       <RoundChip
         className={cx(styles['c-chip-button'], className, {
           [disabledChipButtonStyle]: disabled
         })}
-        {...props}
+        {...restProps}
       >
         {children}
       </RoundChip>
