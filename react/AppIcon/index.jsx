@@ -6,39 +6,41 @@ import styles from './styles.styl'
 import Icon from '../Icon'
 
 import appDefaultIcon from '../../assets/icons/ui/cube.svg'
+import { preload } from './Preloader'
 
 const DONE = 'done'
 const ERRORED = 'errored'
 const FETCHING = 'fetching'
-const IDLE = 'idle'
 
 export class AppIcon extends Component {
   constructor(props, context) {
     super(props, context)
-    this.state = {
-      status: IDLE
-    }
+    this.state = { error: null, icon: null, status: FETCHING }
   }
 
-  async componentDidMount() {
-    this.fetchIcon()
+  componentDidMount() {
+    this.load()
   }
 
-  async fetchIcon() {
-    const { app, fetchIcon } = this.props
-
-    if (typeof fetchIcon !== 'function') {
-      throw new Error('fetchIcon prop is required')
-    }
-
-    this.setState({ status: FETCHING })
-
+  async load() {
+    const { app, domain, fetchIcon, onReady, secure } = this.props
+    const loadFn = fetchIcon || preload
+    let loadedUrl
+    let loadError
     try {
-      const icon = await fetchIcon(app.links.icon)
-      this.setState({ icon, status: DONE })
+      loadedUrl = await loadFn(app, domain, secure)
     } catch (error) {
-      console.error(error.message)
-      this.setState({ error, status: ERRORED })
+      loadError = error
+    }
+
+    this.setState({
+      error: loadError,
+      icon: loadedUrl,
+      status: loadError ? ERRORED : DONE
+    })
+
+    if (typeof onReady === 'function') {
+      onReady()
     }
   }
 
@@ -46,7 +48,6 @@ export class AppIcon extends Component {
     const { alt, className } = this.props
     const { icon, status } = this.state
     switch (status) {
-      case IDLE:
       case FETCHING:
         return (
           <div
@@ -85,8 +86,12 @@ export class AppIcon extends Component {
 
 AppIcon.propTypes = {
   alt: PropTypes.string,
+  app: PropTypes.object,
   className: PropTypes.string,
-  fetchIcon: PropTypes.func.isRequired
+  domain: PropTypes.string,
+  fetchIcon: PropTypes.func,
+  onReady: PropTypes.func,
+  secure: PropTypes.bool
 }
 
 export default AppIcon
