@@ -7,11 +7,16 @@ import Icon from '../Icon'
 
 import appDefaultIcon from '../../assets/icons/ui/cube.svg'
 
+const DONE = 'done'
+const ERRORED = 'errored'
+const FETCHING = 'fetching'
+const IDLE = 'idle'
+
 export class AppIcon extends Component {
   constructor(props, context) {
     super(props, context)
     this.state = {
-      status: 'idle'
+      status: IDLE
     }
   }
 
@@ -26,14 +31,14 @@ export class AppIcon extends Component {
       throw new Error('fetchIcon prop is required')
     }
 
-    this.setState({ status: 'fetching' })
+    this.setState({ status: FETCHING })
 
     try {
       const icon = await fetchIcon(app.links.icon)
-      this.setState({ icon, status: 'done' })
+      this.setState({ icon, status: DONE })
     } catch (error) {
       console.error(error.message)
-      this.setState({ error, status: 'failed' })
+      this.setState({ error, status: ERRORED })
     }
   }
 
@@ -41,8 +46,8 @@ export class AppIcon extends Component {
     const { alt, className } = this.props
     const { icon, status } = this.state
     switch (status) {
-      case 'idle':
-      case 'fetching':
+      case IDLE:
+      case FETCHING:
         return (
           <div
             className={classNames(
@@ -52,7 +57,7 @@ export class AppIcon extends Component {
             )}
           />
         )
-      case 'done':
+      case DONE:
         return (
           <img
             alt={alt}
@@ -60,7 +65,7 @@ export class AppIcon extends Component {
             src={icon}
           />
         )
-      case 'failed':
+      case ERRORED:
       default:
         return (
           <Icon
