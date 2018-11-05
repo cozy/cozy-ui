@@ -702,9 +702,9 @@ exports[`Sidebar should render examples: Sidebar 1`] = `
   <aside class=\\"o-sidebar\\">
     <nav role=\\"navigation\\">
       <ul class=\\"c-nav\\">
-        <li class=\\"c-nav-item\\"><a class=\\"c-nav-link\\"><span class=\\"c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-text\\">Warn</span></a></li>
-        <li class=\\"c-nav-item\\"><a class=\\"c-nav-link\\"><span class=\\"c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-text\\">Check</span></a></li>
-        <li class=\\"c-nav-item\\"><a class=\\"c-nav-link\\"><span class=\\"c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-text\\">Download</span></a></li>
+        <li class=\\"c-nav-item\\"><a class=\\"c-nav-link\\"><span class=\\"c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-text\\">Warn</span></a></li>
+        <li class=\\"c-nav-item\\"><a class=\\"c-nav-link\\"><span class=\\"c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-text\\">Check</span></a></li>
+        <li class=\\"c-nav-item\\"><a class=\\"c-nav-link\\"><span class=\\"c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"test-file-stub\\"></use></svg></span><span class=\\"c-nav-text\\">Download</span></a></li>
       </ul>
     </nav>
   </aside>
