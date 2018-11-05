@@ -25,7 +25,7 @@
     "lint:commit": "git merge-base HEAD master && commitlint --from=$(git merge-base HEAD master) --to=HEAD || true",
     "lint:js": "eslint 'react/**/*.jsx' 'react/**/*.js'",
     "lint:stylus": "stylint stylus --config .stylintrc",
-    "prebuild:css": "mkdir dist/",
+    "prebuild:css": "mkdir -p dist/",
     "prebuild:css:app": "mkdir -p build/styleguide",
     "prebuild:doc:kss": "run-s clean:doc:kss build:css:app",
     "prepush": "[[ $(git rev-parse --abbrev-ref HEAD) != 'gh-pages' ]] && yarn lint || true",
