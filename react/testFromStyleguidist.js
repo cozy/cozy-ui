@@ -47,7 +47,6 @@ import Tabs from './Tabs'
 import Text from './Text'
 import Textarea from './Textarea'
 import Toggle from './Toggle'
-import PropTypes from 'prop-types'
 import * as content from '../docs/fixtures/content'
 
 // Mock error otherwise there are errors with the createStylesheet function

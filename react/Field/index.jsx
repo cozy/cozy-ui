@@ -7,7 +7,17 @@ import Input from '../Input'
 import Textarea from '../Textarea'
 
 const Field = props => {
-  const { className, label, id, type, value, placeholder, error, htmlFor, onChange, readOnly } = props
+  const {
+    className,
+    label,
+    id,
+    type,
+    value,
+    placeholder,
+    error,
+    onChange,
+    readOnly
+  } = props
 
   const inputType = type => {
     switch (type) {
@@ -19,6 +29,7 @@ const Field = props => {
             value={value}
             error={error}
             onChange={onChange}
+            readOnly={readOnly}
           />
         )
       case 'text':
@@ -33,6 +44,7 @@ const Field = props => {
             value={value}
             error={error}
             onChange={onChange}
+            readOnly={readOnly}
           />
         )
       default:
