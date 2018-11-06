@@ -6,7 +6,8 @@
     ["css-modules-transform", {
       extensions: [".styl"],
       preprocessCss: "./preprocess",
-      extractCss: "./transpiled/stylesheet.css"
+      extractCss: "./transpiled/stylesheet.css",
+      generateScopedName: "[name]__[local]___[hash:base64:5]",
     }],
     ["transform-runtime", { "polyfill": false }]
   ],
