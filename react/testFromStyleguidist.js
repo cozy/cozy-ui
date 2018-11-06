@@ -47,6 +47,7 @@ import Tabs from './Tabs'
 import Text from './Text'
 import Textarea from './Textarea'
 import Toggle from './Toggle'
+import * as content from '../docs/fixtures/content'
 
 // Mock error otherwise there are errors with the createStylesheet function
 jest.mock('react-styleguidist/lib/rsg-components/PlaygroundError', () => {
@@ -60,6 +61,7 @@ const testFromStyleguidist = (name, markdown, require) => {
     // eslint-disable-next-line no-new-func
     new Function(
       'require',
+      'content',
       'ActionMenu',
       'Alerter',
       'Avatar',
@@ -102,6 +104,7 @@ const testFromStyleguidist = (name, markdown, require) => {
     ).bind(
       null,
       require,
+      content,
       ActionMenu,
       Alerter,
       Avatar,
