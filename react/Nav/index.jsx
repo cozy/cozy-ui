@@ -28,7 +28,7 @@ export const genNavLink = RRNavLink => ({ to, children }) => (
 
 export const NavIcon = ({ icon }) => (
   <span className={cx(styles['c-nav-icon'])}>
-    <Icon icon={icon} />
+    <Icon icon={icon} aria-hidden="true" focusable="false" />
   </span>
 )
 

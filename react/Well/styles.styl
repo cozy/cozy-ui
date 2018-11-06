@@ -1,0 +1,12 @@
+@require 'settings/palette.styl'
+@require 'settings/breakpoints'
+@require 'tools/mixins'
+
+.well
+  margin rem(16 32)
+  background paleGrey
+  border rem(1) solid silver
+  border-radius rem(5)
+
+  +small-screen()
+      margin rem(8)
