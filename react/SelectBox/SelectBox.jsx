@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import ReactSelect from 'react-select'
 import styles from './styles.styl'
 import Icon from '../Icon'
-import palette from '../../stylus/settings/palette.json'
+import palette from '../palette'
 import withBreakpoints from '../helpers/withBreakpoints'
 import cx from 'classnames'
 

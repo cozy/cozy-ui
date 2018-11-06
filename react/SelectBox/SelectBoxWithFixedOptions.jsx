@@ -3,7 +3,7 @@ import React from 'react'
 import groupBy from 'lodash/groupBy'
 
 import SelectBox from './SelectBox'
-import { silver } from '../../stylus/settings/palette.json'
+import { silver } from '../palette'
 
 const optionPadding = 0.25
 
