@@ -203,7 +203,7 @@ exports[`Checkbox should render examples: Checkbox 3`] = `
 exports[`Field should render examples: Field 1`] = `
 "<div>
   <form>
-    <div class=\\"styles__o-field___3n5HM\\"><label class=\\"styles__c-label___o4ozG\\">I'm a label</label><textarea placeholder=\\"I'm a textarea\\" class=\\"styles__c-textarea___D7EEH\\" id=\\"idField\\"></textarea></div>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idField\\" class=\\"styles__c-label___o4ozG\\">I'm a label</label><textarea placeholder=\\"I'm a textarea\\" class=\\"styles__c-textarea___D7EEH\\" id=\\"idField\\"></textarea></div>
   </form>
 </div>"
 `;
@@ -211,7 +211,7 @@ exports[`Field should render examples: Field 1`] = `
 exports[`Field should render examples: Field 2`] = `
 "<div>
   <form>
-    <div class=\\"styles__o-field___3n5HM\\"><label class=\\"styles__c-label___o4ozG\\">I'm an error label</label><input type=\\"text\\" id=\\"idFieldError\\" class=\\"styles__c-input-text___3TAv1 styles__is-error___3lsCJ\\" placeholder=\\"I'm an error input[type=text]\\" value=\\"\\"></div>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idFieldError\\" class=\\"styles__c-label___o4ozG\\">I'm an error label</label><input type=\\"text\\" id=\\"idFieldError\\" class=\\"styles__c-input-text___3TAv1 styles__is-error___3lsCJ\\" placeholder=\\"I'm an error input[type=text]\\" value=\\"\\"></div>
   </form>
 </div>"
 `;
@@ -240,7 +240,7 @@ exports[`Hero should render examples: Hero 1`] = `
         <p class=\\" \\">Automatic follow-up of your medical expenses</p>
       </div>
     </div>
-    <p class=\\" styles__Hero-cta___2KhwU\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span>Connect your bank accounts</span></button></p>
+    <p class=\\" styles__Hero-cta___2KhwU\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Connect your bank accounts</span></span></button></p>
   </div>
 </div>"
 `;
