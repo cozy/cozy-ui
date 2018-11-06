@@ -32,8 +32,9 @@
     "prepush": "[[ $(git rev-parse --abbrev-ref HEAD) != 'gh-pages' ]] && yarn lint || true",
     "test": "npm-run-all --serial lint test:jest",
     "test:jest": "jest --verbose --coverage",
-    "release": "yarn transpile",
     "transpile": "babel react/ --out-dir transpiled/react --copy-files",
+    "sprite": "scripts/make-icon-sprite.sh transpiled/react/Icon/icons-sprite.js; cp transpiled/react/Icon/icons-sprite.js react/Icon/icons-sprite.js",
+    "release": "yarn transpile; yarn sprite",
     "watch:doc:react": "styleguidist server --config docs/styleguide.config.js",
     "travis-deploy-once": "travis-deploy-once",
     "commitmsg": "commitlint -e $GIT_PARAMS",
@@ -101,7 +102,8 @@
     "pretty": "^2.0.0",
     "react-hot-loader": "^4.3.11",
     "react-select": "^2.0.0-beta.6",
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.5",
+    "svgstore-cli": "^1.3.1"
   },
   "peerDependencies": {
     "piwik-react-router": "^0.8.2"

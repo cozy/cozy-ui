@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
-import icons from '../../src/icons'
 import cx from 'classnames'
 
 const DEFAULT_SIZE = '16'
@@ -25,8 +24,6 @@ function Icon(props) {
     anchor = `#${icon.id}`
   } else if (icon[0] === '#') {
     anchor = icon
-  } else if (icons[icon]) {
-    anchor = icons[icon].id ? `#${icons[icon].id}` : icons[icon]
   }
 
   if (!anchor) {
@@ -83,3 +80,4 @@ Icon.defaultProps = {
 }
 
 export default Icon
+export { default as Sprite } from './Sprite'
