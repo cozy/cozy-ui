@@ -5,7 +5,7 @@ import styles from './styles.styl'
 
 import Icon from '../Icon'
 
-import appDefaultIcon from '../../assets/icons/ui/icon-cube.svg'
+import appDefaultIcon from '../../assets/icons/ui/cube.svg'
 
 export class AppIcon extends Component {
   constructor(props, context) {
