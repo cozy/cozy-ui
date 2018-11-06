@@ -640,35 +640,34 @@ exports[`SelectBox should render examples: SelectBox 4`] = `
     </div>
     <div>
       <div class=\\"css-2msmlm\\">
-        <div class=\\"css-11unzgr\\">
+        <div id=\\"react-select-5-option-1\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">B</div>
+        <div id=\\"react-select-5-option-2\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">C</div>
+        <div id=\\"react-select-5-option-3\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">D</div>
+        <div id=\\"react-select-5-option-4\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">E</div>
+        <div id=\\"react-select-5-option-5\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">F</div>
+        <div id=\\"react-select-5-option-6\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">G</div>
+        <div id=\\"react-select-5-option-7\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">H</div>
+        <div id=\\"react-select-5-option-8\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">I</div>
+        <div id=\\"react-select-5-option-9\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">J</div>
+        <div id=\\"react-select-5-option-10\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">K</div>
+        <div id=\\"react-select-5-option-11\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">L</div>
+        <div id=\\"react-select-5-option-12\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">M</div>
+        <div id=\\"react-select-5-option-13\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">N</div>
+        <div id=\\"react-select-5-option-14\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">O</div>
+        <div id=\\"react-select-5-option-15\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">P</div>
+        <div id=\\"react-select-5-option-16\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">Q</div>
+        <div id=\\"react-select-5-option-17\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">R</div>
+        <div id=\\"react-select-5-option-18\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">S</div>
+        <div id=\\"react-select-5-option-19\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">T</div>
+        <div id=\\"react-select-5-option-20\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">U</div>
+        <div id=\\"react-select-5-option-21\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">V</div>
+        <div id=\\"react-select-5-option-22\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">W</div>
+        <div id=\\"react-select-5-option-23\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">X</div>
+        <div id=\\"react-select-5-option-24\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">Y</div>
+        <div style=\\"border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; padding-top: 0.25rem; padding-bottom: 0.25rem; border-top: 1px solid #D6D8Da; background: white; position: relative;\\">
           <div id=\\"react-select-5-option-0\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">A</div>
-          <div id=\\"react-select-5-option-1\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">B</div>
-          <div id=\\"react-select-5-option-2\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">C</div>
-          <div id=\\"react-select-5-option-3\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">D</div>
-          <div id=\\"react-select-5-option-4\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">E</div>
-          <div id=\\"react-select-5-option-5\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">F</div>
-          <div id=\\"react-select-5-option-6\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">G</div>
-          <div id=\\"react-select-5-option-7\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">H</div>
-          <div id=\\"react-select-5-option-8\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">I</div>
-          <div id=\\"react-select-5-option-9\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">J</div>
-          <div id=\\"react-select-5-option-10\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">K</div>
-          <div id=\\"react-select-5-option-11\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">L</div>
-          <div id=\\"react-select-5-option-12\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">M</div>
-          <div id=\\"react-select-5-option-13\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">N</div>
-          <div id=\\"react-select-5-option-14\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">O</div>
-          <div id=\\"react-select-5-option-15\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">P</div>
-          <div id=\\"react-select-5-option-16\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">Q</div>
-          <div id=\\"react-select-5-option-17\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">R</div>
-          <div id=\\"react-select-5-option-18\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">S</div>
-          <div id=\\"react-select-5-option-19\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">T</div>
-          <div id=\\"react-select-5-option-20\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">U</div>
-          <div id=\\"react-select-5-option-21\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">V</div>
-          <div id=\\"react-select-5-option-22\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">W</div>
-          <div id=\\"react-select-5-option-23\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">X</div>
-          <div id=\\"react-select-5-option-24\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">Y</div>
           <div id=\\"react-select-5-option-25\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">Z</div>
         </div>
-        <div style=\\"border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; padding-top: 0.25rem; padding-bottom: 0.25rem; border-top: 1px solid #D6D8Da; background: white; position: relative;\\"></div>
       </div>
     </div>
   </div>
