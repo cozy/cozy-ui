@@ -2,6 +2,7 @@
   "name": "cozy-ui",
   "version": "0.0.0-development",
   "description": "Cozy apps Ui SDK",
+  "main": "./index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/cozy/cozy-ui.git"
@@ -31,10 +32,15 @@
     "prepush": "[[ $(git rev-parse --abbrev-ref HEAD) != 'gh-pages' ]] && yarn lint || true",
     "test": "npm-run-all --serial lint test:jest",
     "test:jest": "jest --verbose --coverage",
+    "transpile": "babel react/ --out-dir transpiled/react --copy-files",
+    "sprite": "scripts/make-icon-sprite.sh transpiled/react/Icon/icons-sprite.js; cp transpiled/react/Icon/icons-sprite.js react/Icon/icons-sprite.js",
+    "copy-files": "scripts/copy-files.sh",
+    "release": "yarn transpile; yarn sprite; yarn copy-files",
     "watch:doc:react": "styleguidist server --config docs/styleguide.config.js",
     "travis-deploy-once": "travis-deploy-once",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "prepublishOnly": "yarn release"
   },
   "devDependencies": {
     "@commitlint/cli": "^6.2.0",
@@ -44,8 +50,12 @@
     "autoprefixer-stylus": "^0.14.0",
     "babel-core": "^6.22.1",
     "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.1.8",
-    "babel-preset-react": "^6.22.0",
+    "babel-plugin-react-hot-loader": "^3.0.0-beta.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-cozy-app": "1.1.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "commitlint-config-cozy": "0.2.2",
     "copyfiles": "^1.2.0",
     "css-loader": "^0.28.4",
@@ -63,10 +73,11 @@
     "michelangelo": "https://github.com/cozy/michelangelo.git",
     "node-polyglot": "^2.2.2",
     "npm-run-all": "^4.0.1",
+    "parcel": "^1.10.3",
     "postcss-loader": "^2.0.6",
     "prop-types": "^15.6.0",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "react-redux": "^5.0.3",
     "react-styleguidist": "7.3.8",
     "react-test-renderer": "15.6.1",
@@ -80,7 +91,8 @@
     "webpack": "^4.17.2"
   },
   "dependencies": {
-    "babel-preset-cozy-app": "^0.3.1",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-css-modules-transform": "^1.5.0",
     "body-scroll-lock": "^2.5.8",
     "classnames": "^2.2.5",
     "date-fns": "^1.28.5",
@@ -91,8 +103,10 @@
     "preact": "^8.3.1",
     "preact-portal": "^1.1.3",
     "pretty": "^2.0.0",
+    "react-hot-loader": "^4.3.11",
     "react-select": "^2.0.0-beta.6",
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.5",
+    "svgstore-cli": "^1.3.1"
   },
   "peerDependencies": {
     "piwik-react-router": "^0.8.2"
@@ -117,11 +131,19 @@
       "json",
       "styl"
     ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/transpiled/",
+      "/dist/"
+    ],
     "moduleDirectories": [
       "node_modules",
       "src",
       "react-styleguidist/lib"
     ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
     "transformIgnorePatterns": [
       "node_modules/(?!(react-styleguidist)/)"
     ],

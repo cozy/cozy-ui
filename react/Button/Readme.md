@@ -18,9 +18,9 @@ const themes = ['regular', 'danger', 'highlight', 'secondary', 'danger-outline',
 
 <div>
   {themes.map(theme =>
-    <p>{
+    <p key={theme}>{
       props.map(
-        props => <Button label={theme} theme={theme} {...props} />
+        props => <Button key={theme + JSON.stringify(props)} label={theme} theme={theme} {...props} />
       )
     }</p>
   )}

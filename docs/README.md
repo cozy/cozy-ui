@@ -104,7 +104,6 @@ same private space. With it, your web apps and your devices can share data
 easily, providing you with a new experience. You can install Cozy on your own
 hardware where no one profiles you.
 
-
 ## Community
 
 You can reach the Cozy Community by:

@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import ReactSelect from 'react-select'
 import styles from './styles.styl'
 import Icon from '../Icon'
-import palette from '../../stylus/settings/palette.json'
+import palette from '../palette'
 import withBreakpoints from '../helpers/withBreakpoints'
 import cx from 'classnames'
 
@@ -29,8 +29,8 @@ const customStyles = {
   dropdownIndicator: (base, state) => ({
     ...base,
     backgroundImage: state.menuIsOpen
-      ? 'url("../../assets/icons/ui/icon-top-select.svg")'
-      : 'url("../../assets/icons/ui/icon-bottom-select.svg")',
+      ? 'url("../../assets/icons/ui/top-select.svg")'
+      : 'url("../../assets/icons/ui/bottom-select.svg")',
     backgroundSize: '.875rem',
     height: '.875rem',
     marginRight: '.75rem',

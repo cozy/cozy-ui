@@ -7,7 +7,17 @@ import Input from '../Input'
 import Textarea from '../Textarea'
 
 const Field = props => {
-  const { className, label, id, type, value, placeholder, error } = props
+  const {
+    className,
+    label,
+    id,
+    type,
+    value,
+    placeholder,
+    error,
+    onChange,
+    readOnly
+  } = props
 
   const inputType = type => {
     switch (type) {
@@ -18,6 +28,8 @@ const Field = props => {
             placeholder={placeholder}
             value={value}
             error={error}
+            onChange={onChange}
+            readOnly={readOnly}
           />
         )
       case 'text':
@@ -31,6 +43,8 @@ const Field = props => {
             placeholder={placeholder}
             value={value}
             error={error}
+            onChange={onChange}
+            readOnly={readOnly}
           />
         )
       default:
@@ -42,7 +56,7 @@ const Field = props => {
 
   return (
     <div className={cx(styles['o-field'], className)}>
-      <Label forID={id}>{label}</Label>
+      <Label htmlFor={id}>{label}</Label>
       {inputType(type)}
     </div>
   )

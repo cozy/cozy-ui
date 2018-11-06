@@ -3,20 +3,20 @@
 exports[`AppIcon component renders app icon after fetching 1`] = `
 <img
   alt={undefined}
-  className="c-app-icon"
+  className="styles__c-app-icon___2_O40"
   src="data://test-url"
 />
 `;
 
 exports[`AppIcon component renders as loading 1`] = `
 <div
-  className="c-loading-placeholder c-app-icon"
+  className="styles__c-loading-placeholder___3L6Gz styles__c-app-icon___2_O40"
 />
 `;
 
 exports[`AppIcon component renders default when fetch error occurs 1`] = `
 <Icon
-  className="c-app-icon c-app-icon-default"
+  className="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt"
   height="100%"
   icon="test-file-stub"
   spin={false}

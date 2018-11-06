@@ -3,7 +3,7 @@ export { default as Badge } from './Badge'
 export { Button, ButtonLink } from './Button'
 export { default as ButtonAction } from './ButtonAction'
 export { default as I18n, translate } from './I18n'
-export { default as Icon } from './Icon'
+export { default as Icon, Sprite as IconSprite } from './Icon'
 export { default as Sidebar } from './Sidebar'
 export {
   default as Nav,

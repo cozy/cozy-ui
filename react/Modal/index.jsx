@@ -6,7 +6,7 @@ import Overlay from '../Overlay'
 import { Button } from '../Button'
 import Icon from '../Icon'
 import migrateProps from '../helpers/migrateProps'
-import palette from '../../stylus/settings/palette.json'
+import palette from '../palette'
 import Portal from '../Portal'
 import uniqueId from 'lodash/uniqueId'
 
