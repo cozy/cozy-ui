@@ -41,7 +41,7 @@ opener.
 const { MenuItem } = require('.');
 const { Button } = require('../Button');
 
-<Menu component={<Button>Greetings with custom component</Button>} onSelect={ itemData => alert(JSON.stringify(itemData)) }>
+<Menu component={<Button label="Greetings with custom component"/>} onSelect={ itemData => alert(JSON.stringify(itemData)) }>
   <MenuItem data='hello'>Hello !</MenuItem>
   <MenuItem disabled data='bonjour'>Bonjour !</MenuItem>
   <MenuItem data='hola'>¡Hola!</MenuItem>

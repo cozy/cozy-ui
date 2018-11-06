@@ -31,9 +31,9 @@ const BLUE = '#2d8af2';
     </Section>
   </Sections>
   <CTA>
-    <Button onClick={() => flash(t('ComingSoon.description'))}>
-      {t('Onboarding.connect-bank-account')}
-    </Button>
+    <Button
+      label={t('Onboarding.connect-bank-account')}
+      onClick={() => flash(t('ComingSoon.description'))} />
   </CTA>
 </Hero>
 
