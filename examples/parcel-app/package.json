@@ -8,5 +8,8 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.3"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.10.3"
   }
 }
