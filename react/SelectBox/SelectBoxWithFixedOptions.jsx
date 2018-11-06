@@ -32,23 +32,27 @@ const FixedOptions = props => (
   https://github.com/cozy/cozy-ui/pull/501
 */
 const extractFixed = children => {
-  const newChildren = React.cloneElement(children)
-  const menuList = newChildren.children ? newChildren.children[0] : null
+  const menuList = children.props.children.props.children
+    ? children.props.children.props.children.props
+    : null
   if (!menuList) {
-    return { fixed: [], newChildren }
+    return { fixed: [], children }
   }
   const options = menuList.children
   const { fixed, normal } = groupBy(
     options,
-    vnode => (vnode.attributes.data.fixed === true ? 'fixed' : 'normal')
+    vnode => (vnode.props.data.fixed === true ? 'fixed' : 'normal')
   )
-  newChildren.children[0].children = normal
-  return { fixed, newChildren }
+
+  const newElement = normal.map(element => {
+    return React.cloneElement(element)
+  })
+  return { fixed, newElement }
 }
 
 const MenuWithFixedOptions = props => {
   const { children } = props
-  const { fixed, newChildren: menuUi } = extractFixed(children)
+  const { fixed, newElement: menuUi } = extractFixed(children)
   return (
     <div>
       <components.Menu {...props}>
