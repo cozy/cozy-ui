@@ -13,12 +13,14 @@ const Input = props => {
     error,
     size,
     fullwidth,
+    inputRef,
     ...restProps
   } = props
   return (
     <input
       type={type}
       id={id}
+      ref={inputRef}
       className={cx(
         styles['c-input-text'],
         {
@@ -43,7 +45,11 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   error: PropTypes.bool,
   size: PropTypes.oneOf(['tiny', 'medium']),
-  fullwidth: PropTypes.bool
+  fullwidth: PropTypes.bool,
+  /**
+   * Use that property to pass a ref callback to the native input component.
+   */
+  inputRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object])
 }
 
 Input.defaultProps = {
