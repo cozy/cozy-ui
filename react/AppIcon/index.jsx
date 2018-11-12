@@ -6,7 +6,7 @@ import styles from './styles.styl'
 import Icon from '../Icon'
 
 import appDefaultIcon from '../../assets/icons/ui/cube.svg'
-import { preload } from './Preloader'
+import { getPreloaded, preload } from './Preloader'
 
 const DONE = 'done'
 const ERRORED = 'errored'
@@ -15,7 +15,13 @@ const FETCHING = 'fetching'
 export class AppIcon extends Component {
   constructor(props, context) {
     super(props, context)
-    this.state = { error: null, icon: null, status: FETCHING }
+    const { app, domain, secure } = props
+    const preloaded = getPreloaded(app, domain, secure)
+    this.state = {
+      error: null,
+      icon: preloaded,
+      status: preloaded ? DONE : FETCHING
+    }
   }
 
   componentDidMount() {

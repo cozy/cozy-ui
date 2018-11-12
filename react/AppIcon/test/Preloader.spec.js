@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import { preload } from '../Preloader'
+import { preload, getPreloaded } from '../Preloader'
 
 describe('Preloader', () => {
   const app = {
@@ -15,6 +15,8 @@ describe('Preloader', () => {
   let erroredImgMock
 
   beforeEach(() => {
+    jest.resetModules()
+
     successImgMock = {}
     Object.defineProperty(successImgMock, 'onload', {
       set: function(fn) {
@@ -61,6 +63,18 @@ describe('Preloader', () => {
       await expect(preload(app, null)).rejects.toEqual(
         new Error('Cannot fetch icon: missing domain')
       )
+    })
+
+    it('returns already loaded icon URL', async () => {
+      await preload(app, domain)
+      expect(getPreloaded(app, domain)).toBe(
+        'https://cozy.tools/apps/test/icon'
+      )
+    })
+
+    it('returns null for not already loaded icon URL', () => {
+      const getPreloaded = require('../Preloader').getPreloaded
+      expect(getPreloaded(app, domain)).toBeNull()
     })
   })
 })

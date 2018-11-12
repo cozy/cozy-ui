@@ -24,6 +24,14 @@ exports[`AppIcon component renders default when fetch error occurs 1`] = `
 />
 `;
 
+exports[`AppIcon component renders immediately when icon is alredy preloaded 1`] = `
+<img
+  alt={undefined}
+  className="styles__c-app-icon___2_O40"
+  src="http://cozy.tools/apps/test/icon"
+/>
+`;
+
 exports[`AppIcon component uses Preloader.preload when no fetchIcon method is provided 1`] = `
 <img
   alt={undefined}

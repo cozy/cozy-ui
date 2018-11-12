@@ -15,6 +15,7 @@ describe('AppIcon component', () => {
   let failureFetchIcon
 
   beforeEach(() => {
+    jest.unmock('../Preloader')
     jest.resetModules()
 
     successFetchIcon = jest
@@ -95,6 +96,34 @@ describe('AppIcon component', () => {
           const component = wrapper.getElement()
           expect(component).toMatchSnapshot()
           expect(Preloader.preload).toHaveBeenCalledWith(app, domain, secure)
+          expect(console.error).toHaveBeenCalledTimes(0)
+          done()
+        }}
+        secure={secure}
+      />
+    )
+  })
+
+  it(`renders immediately when icon is alredy preloaded`, async done => {
+    jest.mock('../Preloader')
+    const AppIcon = require('../').default
+    const Preloader = require('../Preloader')
+
+    shallow(
+      <AppIcon
+        app={app}
+        domain={domain}
+        onReady={() => {
+          const wrapper = shallow(
+            <AppIcon app={app} domain={domain} secure={secure} />
+          )
+          const component = wrapper.getElement()
+          expect(component).toMatchSnapshot()
+          expect(Preloader.getPreloaded).toHaveBeenCalledWith(
+            app,
+            domain,
+            secure
+          )
           expect(console.error).toHaveBeenCalledTimes(0)
           done()
         }}

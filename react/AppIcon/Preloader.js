@@ -1,3 +1,5 @@
+const _loaded = {}
+
 export const preload = async (app, domain, secure) => {
   const source = _getAppIconURL(app, domain, secure)
 
@@ -8,6 +10,7 @@ export const preload = async (app, domain, secure) => {
   return new Promise((resolve, reject) => {
     const loader = document.createElement('img')
     loader.onload = () => {
+      _loaded[source] = true
       resolve(source)
     }
     loader.onerror = () => {
@@ -17,6 +20,11 @@ export const preload = async (app, domain, secure) => {
     }
     loader.src = source
   })
+}
+
+export const getPreloaded = (app, domain, secure) => {
+  const source = _getAppIconURL(app, domain, secure)
+  return source && _loaded[source] ? source : null
 }
 
 const _getProtocol = (secure = true) => {
