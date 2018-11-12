@@ -294,6 +294,7 @@ class Modal extends Component {
       secondaryText,
       secondaryAction,
       secondaryType,
+      containerClassName,
       ...restProps
     } = this.props
     const { titleID } = this
@@ -301,7 +302,7 @@ class Modal extends Component {
     const maybeWrapInPortal = children =>
       into ? <Portal into={into}>{children}</Portal> : children
     return maybeWrapInPortal(
-      <div className={styles['c-modal-container']}>
+      <div className={cx(styles['c-modal-container'], containerClassName)}>
         <Overlay
           onEscape={closable && dismissAction}
           className={overlayClassName}
@@ -408,7 +409,9 @@ Modal.propTypes = {
   /** className to apply to Overlay component */
   overlayClassName: PropTypes.string,
   /** className to apply to wrapper element */
-  wrapperClassName: PropTypes.string
+  wrapperClassName: PropTypes.string,
+  /** className to apply to the container element */
+  containerClassName: PropTypes.string
 }
 
 Modal.defaultProps = {
