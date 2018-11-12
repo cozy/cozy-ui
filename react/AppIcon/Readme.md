@@ -4,6 +4,8 @@ It contains business logic related to apps documents.
 
 Apps documents provided by the stack are containing a `links.icon` property which is public and can be directly used as `src` value for an `<img />` tag.
 
+`<AppIcon />` is also able to retrive an icon for a registry app. If no attribute `links.icon` is present on the app document, `<AppIcon />` tries to fetch the icon with a registry link, computed thanks to the app attributes `slug` and `latest_version.version`.
+
 ### Example
 ```
   <div>

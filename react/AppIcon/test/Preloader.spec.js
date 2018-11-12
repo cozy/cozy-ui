@@ -11,6 +11,13 @@ describe('Preloader', () => {
 
   const domain = 'cozy.tools'
 
+  const registryApp = {
+    slug: 'test',
+    latest_version: {
+      version: '1.2.3'
+    }
+  }
+
   let successImgMock
   let erroredImgMock
 
@@ -45,6 +52,18 @@ describe('Preloader', () => {
     it('returns the expected unesecure url', async () => {
       await expect(preload(app, domain, false)).resolves.toEqual(
         'http://cozy.tools/apps/test/icon'
+      )
+    })
+
+    it('fetch installed app icon', async () => {
+      await expect(preload(app, domain)).resolves.toEqual(
+        'https://cozy.tools/apps/test/icon'
+      )
+    })
+
+    it('fetch registry app icon', async () => {
+      await expect(preload(registryApp, domain)).resolves.toEqual(
+        'https://cozy.tools/registry/test/1.2.3/icon'
       )
     })
 

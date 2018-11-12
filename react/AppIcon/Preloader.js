@@ -34,10 +34,20 @@ const _getProtocol = (secure = true) => {
 const _getAppIconURL = (app, domain, secure) => {
   if (!domain) throw new Error('Cannot fetch icon: missing domain')
 
+  let path = _getInstalledIconPath(app)
+  path = path || _getRegistryIconPath(app)
+  return path ? `${_getProtocol(secure)}//${domain}${path}` : null
+}
+
+const _getInstalledIconPath = app => {
+  return app.links && app.links.icon
+}
+
+const _getRegistryIconPath = app => {
   return (
-    app.links &&
-    app.links.icon &&
-    `${_getProtocol(secure)}//${domain}${app.links.icon}`
+    app.latest_version &&
+    app.latest_version.version &&
+    `/registry/${app.slug}/${app.latest_version.version}/icon`
   )
 }
 
