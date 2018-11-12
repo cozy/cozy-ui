@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import styles from './styles.styl'
 import Overlay from '../Overlay'
 import { Button } from '../Button'
 import Icon from '../Icon'
@@ -9,6 +8,7 @@ import migrateProps from '../helpers/migrateProps'
 import palette from '../palette'
 import Portal from '../Portal'
 import uniqueId from 'lodash/uniqueId'
+import styles from './styles.styl'
 
 class AnimatedContentHeader extends Component {
   render() {
