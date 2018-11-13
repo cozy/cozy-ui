@@ -31,7 +31,7 @@
     "prebuild:doc:kss": "run-s clean:doc:kss build:css:app",
     "prepush": "[[ $(git rev-parse --abbrev-ref HEAD) != 'gh-pages' ]] && yarn lint || true",
     "test": "npm-run-all --serial lint test:jest",
-    "test:jest": "jest --verbose --coverage",
+    "test:jest": "env BABEL_ENV=transpilation jest --verbose --coverage",
     "transpile": "env BABEL_ENV=transpilation babel react/ --out-dir transpiled/react --copy-files",
     "sprite": "scripts/make-icon-sprite.sh transpiled/react/Icon/icons-sprite.js; cp transpiled/react/Icon/icons-sprite.js react/Icon/icons-sprite.js",
     "copy-files": "scripts/copy-files.sh",
