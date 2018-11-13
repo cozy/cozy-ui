@@ -73,7 +73,6 @@
     "michelangelo": "https://github.com/cozy/michelangelo.git",
     "node-polyglot": "^2.2.2",
     "npm-run-all": "^4.0.1",
-    "parcel": "^1.10.3",
     "postcss-loader": "^2.0.6",
     "prop-types": "^15.6.0",
     "react": "^16.5.2",
