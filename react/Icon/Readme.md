@@ -1,6 +1,11 @@
 Provides an easy way to use SVG icons included in Cozy-UI as well
 as your custom icons.
 
+⚠️ When using `Icon`, the icons are supposed to be already loaded via an 
+SVG sprite loaded in your DOM. `cozy-ui` ships with built-in icons that you can include via `Sprite`. See the example below for how to include
+`Sprite`. `Sprite` can for example be included in the main `Layout` of
+your applicaiton.
+
 ### Available icons
 
 ```
@@ -12,7 +17,7 @@ const availableIcons = ['album-add', 'album-remove', 'album', 'arrow', 'back', '
 <div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
   <Sprite />
   {
-  Object.keys(availableIcons).map(icon => <div key={icon} style={{ textAlign: 'center'}}>
+  availableIcons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
       <Icon icon={ icon } color={ colors[i++ % colors.length] }/>
       <p style={{ fontSize: '1rem', marginTop: '0.5rem', marginBottom: '1rem' }}>{ icon }</p>
     </div>
