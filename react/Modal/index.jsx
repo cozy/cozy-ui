@@ -62,12 +62,10 @@ class ModalContent extends Component {
     this.scrollingContent.addEventListener('scroll', this.handleScroll, {
       passive: true
     })
-    document.body.classList.add('has-modal')
   }
 
   componentWillUnmount() {
     this.scrollingContent.removeEventListener('scroll', this.handleScroll)
-    document.body.classList.remove('has-modal')
   }
 
   handleScroll = () => {
@@ -267,6 +265,11 @@ class Modal extends Component {
         'If your modal has not label you should add an invisible one with `aria-label` props for a11y purposes.'
       )
     }
+    document.body.classList.add('has-modal')
+  }
+
+  componentWillUnmount() {
+    document.body.classList.remove('has-modal')
   }
 
   render() {
