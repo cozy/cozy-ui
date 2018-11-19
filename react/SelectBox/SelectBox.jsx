@@ -81,14 +81,13 @@ const Option = ({
       />
     )}
     {children}
-    {isSelected &&
-      !withCheckbox && (
-        <Icon
-          icon="check-circleless"
-          color={palette['dodgerBlue']}
-          className={styles['select-option--checkmark']}
-        />
-      )}
+    {isSelected && !withCheckbox && (
+      <Icon
+        icon="check-circleless"
+        color={palette['dodgerBlue']}
+        className={styles['select-option--checkmark']}
+      />
+    )}
   </div>
 )
 

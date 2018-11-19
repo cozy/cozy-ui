@@ -17,9 +17,8 @@ class AnimatedContentHeader extends Component {
 }
 
 function _getChildrenToRender(children) {
-  return React.Children.map(
-    children,
-    child => (child && child.nodeName !== AnimatedContentHeader ? child : null)
+  return React.Children.map(children, child =>
+    child && child.nodeName !== AnimatedContentHeader ? child : null
   )
 }
 
@@ -230,22 +229,16 @@ const ModalButtons = ({
 }) => (
   <div className={cx(styles['c-modal-footer--button'], className)}>
     {children}
-    {secondaryText &&
-      secondaryAction && (
-        <Button
-          theme={secondaryType}
-          onClick={secondaryAction}
-          label={secondaryText}
-        />
-      )}
-    {primaryText &&
-      primaryAction && (
-        <Button
-          theme={primaryType}
-          onClick={primaryAction}
-          label={primaryText}
-        />
-      )}
+    {secondaryText && secondaryAction && (
+      <Button
+        theme={secondaryType}
+        onClick={secondaryAction}
+        label={secondaryText}
+      />
+    )}
+    {primaryText && primaryAction && (
+      <Button theme={primaryType} onClick={primaryAction} label={primaryText} />
+    )}
   </div>
 )
 

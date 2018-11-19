@@ -49,8 +49,9 @@ export const Avatar = ({ text, textId, image, size, className, style }) => {
       style={text ? colored : style}
     >
       {image && <img src={image} className={styles['c-avatar-image']} alt="" />}
-      {!image &&
-        text && <span className={styles['c-avatar-initials']}>{text}</span>}
+      {!image && text && (
+        <span className={styles['c-avatar-initials']}>{text}</span>
+      )}
       {!image && !text && <Icon icon="people" />}
     </div>
   )

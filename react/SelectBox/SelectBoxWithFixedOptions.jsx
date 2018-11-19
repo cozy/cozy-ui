@@ -38,9 +38,8 @@ const extractFixed = children => {
     return { fixed: [], newChildren }
   }
   const options = menuList.children
-  const { fixed, normal } = groupBy(
-    options,
-    vnode => (vnode.attributes.data.fixed === true ? 'fixed' : 'normal')
+  const { fixed, normal } = groupBy(options, vnode =>
+    vnode.attributes.data.fixed === true ? 'fixed' : 'normal'
   )
   newChildren.children[0].children = normal
   return { fixed, newChildren }
