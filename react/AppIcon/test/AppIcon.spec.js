@@ -7,39 +7,128 @@ import { shallow } from 'enzyme'
 import AppIcon from '../'
 
 describe('AppIcon component', () => {
-  const app = {
-    links: {
-      icon: 'apps/test/icon'
-    }
-  }
+  const app = {}
+  const domain = 'cozy.tools'
+  const secure = true
 
-  const successFetchIcon = jest.fn().mockResolvedValue('data://test-url')
+  let successFetchIcon
+  let failureFetchIcon
 
-  it(`renders default when fetch error occurs`, () => {
-    const failureFetchIcon = jest.fn().mockImplementation(() => {
-      throw new Error('Mocked error')
-    })
-    const component = shallow(
-      <AppIcon app={app} fetchIcon={failureFetchIcon} />
-    ).getElement()
-    expect(component).toMatchSnapshot()
+  beforeEach(() => {
+    jest.unmock('../Preloader')
+    jest.resetModules()
+
+    successFetchIcon = jest
+      .fn()
+      .mockResolvedValue('http://cozy.tools/apps/test/icon')
+
+    failureFetchIcon = jest
+      .fn()
+      .mockImplementation(() => Promise.reject(new Error('Mocked error')))
+
+    console.error = jest.fn()
   })
 
   it(`renders as loading`, () => {
-    const component = shallow(
-      <AppIcon app={app} fetchIcon={successFetchIcon} />
-    ).getElement()
-    expect(component).toMatchSnapshot()
-  })
-
-  it('renders app icon after fetching', async () => {
-    const successFetchPromise = successFetchIcon()
     const wrapper = shallow(
-      <AppIcon app={app} fetchIcon={() => successFetchPromise} />
+      <AppIcon
+        app={app}
+        domain={domain}
+        fetchIcon={successFetchIcon}
+        secure={secure}
+      />
     )
-    await successFetchPromise
-    wrapper.update()
+
     const component = wrapper.getElement()
     expect(component).toMatchSnapshot()
+    expect(successFetchIcon).toHaveBeenCalledWith(app, domain, secure)
+    expect(console.error).toHaveBeenCalledTimes(0)
+  })
+
+  it(`renders correctly`, async done => {
+    const wrapper = shallow(
+      <AppIcon
+        app={app}
+        domain={domain}
+        fetchIcon={successFetchIcon}
+        onReady={() => {
+          wrapper.update()
+          const component = wrapper.getElement()
+          expect(component).toMatchSnapshot()
+          expect(successFetchIcon).toHaveBeenCalledWith(app, domain, secure)
+          expect(console.error).toHaveBeenCalledTimes(0)
+          done()
+        }}
+        secure={secure}
+      />
+    )
+  })
+
+  it(`renders default when fetch error occurs`, async done => {
+    const wrapper = shallow(
+      <AppIcon
+        app={app}
+        domain={domain}
+        fetchIcon={failureFetchIcon}
+        onReady={() => {
+          wrapper.update()
+          const component = wrapper.getElement()
+          expect(component).toMatchSnapshot()
+          expect(failureFetchIcon).toHaveBeenCalledWith(app, domain, secure)
+          expect(console.error).toHaveBeenCalledTimes(0)
+          done()
+        }}
+        secure={secure}
+      />
+    )
+  })
+
+  it(`uses Preloader.preload when no fetchIcon method is provided`, async done => {
+    jest.mock('../Preloader')
+    const AppIcon = require('../').default
+    const Preloader = require('../Preloader')
+    const wrapper = shallow(
+      <AppIcon
+        app={app}
+        domain={domain}
+        onReady={() => {
+          wrapper.update()
+          const component = wrapper.getElement()
+          expect(component).toMatchSnapshot()
+          expect(Preloader.preload).toHaveBeenCalledWith(app, domain, secure)
+          expect(console.error).toHaveBeenCalledTimes(0)
+          done()
+        }}
+        secure={secure}
+      />
+    )
+  })
+
+  it(`renders immediately when icon is alredy preloaded`, async done => {
+    jest.mock('../Preloader')
+    const AppIcon = require('../').default
+    const Preloader = require('../Preloader')
+
+    shallow(
+      <AppIcon
+        app={app}
+        domain={domain}
+        onReady={() => {
+          const wrapper = shallow(
+            <AppIcon app={app} domain={domain} secure={secure} />
+          )
+          const component = wrapper.getElement()
+          expect(component).toMatchSnapshot()
+          expect(Preloader.getPreloaded).toHaveBeenCalledWith(
+            app,
+            domain,
+            secure
+          )
+          expect(console.error).toHaveBeenCalledTimes(0)
+          done()
+        }}
+        secure={secure}
+      />
+    )
   })
 })

@@ -6,34 +6,47 @@ import styles from './styles.styl'
 import Icon from '../Icon'
 
 import appDefaultIcon from '../../assets/icons/ui/cube.svg'
+import { getPreloaded, preload } from './Preloader'
+
+const DONE = 'done'
+const ERRORED = 'errored'
+const FETCHING = 'fetching'
 
 export class AppIcon extends Component {
   constructor(props, context) {
     super(props, context)
+    const { app, domain, secure } = props
+    const preloaded = getPreloaded(app, domain, secure)
     this.state = {
-      status: 'idle'
+      error: null,
+      icon: preloaded,
+      status: preloaded ? DONE : FETCHING
     }
   }
 
-  async componentDidMount() {
-    this.fetchIcon()
+  componentDidMount() {
+    this.load()
   }
 
-  async fetchIcon() {
-    const { app, fetchIcon } = this.props
-
-    if (typeof fetchIcon !== 'function') {
-      throw new Error('fetchIcon prop is required')
-    }
-
-    this.setState({ status: 'fetching' })
-
+  async load() {
+    const { app, domain, fetchIcon, onReady, secure } = this.props
+    const loadFn = fetchIcon || preload
+    let loadedUrl
+    let loadError
     try {
-      const icon = await fetchIcon(app.links.icon)
-      this.setState({ icon, status: 'done' })
+      loadedUrl = await loadFn(app, domain, secure)
     } catch (error) {
-      console.error(error.message)
-      this.setState({ error, status: 'failed' })
+      loadError = error
+    }
+
+    this.setState({
+      error: loadError,
+      icon: loadedUrl,
+      status: loadError ? ERRORED : DONE
+    })
+
+    if (typeof onReady === 'function') {
+      onReady()
     }
   }
 
@@ -41,8 +54,7 @@ export class AppIcon extends Component {
     const { alt, className } = this.props
     const { icon, status } = this.state
     switch (status) {
-      case 'idle':
-      case 'fetching':
+      case FETCHING:
         return (
           <div
             className={classNames(
@@ -52,7 +64,7 @@ export class AppIcon extends Component {
             )}
           />
         )
-      case 'done':
+      case DONE:
         return (
           <img
             alt={alt}
@@ -60,7 +72,7 @@ export class AppIcon extends Component {
             src={icon}
           />
         )
-      case 'failed':
+      case ERRORED:
       default:
         return (
           <Icon
@@ -80,8 +92,12 @@ export class AppIcon extends Component {
 
 AppIcon.propTypes = {
   alt: PropTypes.string,
+  app: PropTypes.object,
   className: PropTypes.string,
-  fetchIcon: PropTypes.func.isRequired
+  domain: PropTypes.string,
+  fetchIcon: PropTypes.func,
+  onReady: PropTypes.func,
+  secure: PropTypes.bool
 }
 
 export default AppIcon
