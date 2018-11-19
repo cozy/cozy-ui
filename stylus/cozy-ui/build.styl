@@ -17,15 +17,6 @@
 @require '../utilities/*'
 
 /*------------------------------------*\
-  Palette: expose all as css variables
-\*------------------------------------*/
-colors=json('../settings/palette.json', { hash: true })
-:root
-    for color in keys(colors)
-        colorName = '--' + color
-        {colorName} lookup(color)
-
-/*------------------------------------*\
   Objects
 \*------------------------------------*/
 // Layout
