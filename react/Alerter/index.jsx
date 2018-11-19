@@ -38,9 +38,14 @@ class Alert extends Component {
   }
 
   componentDidMount() {
-    this.closeTimer = setTimeout(() => {
-      this.beginClosing()
-    }, this.props.duration === 'auto' ? this.computeDuration() : this.props.duration)
+    this.closeTimer = setTimeout(
+      () => {
+        this.beginClosing()
+      },
+      this.props.duration === 'auto'
+        ? this.computeDuration()
+        : this.props.duration
+    )
     // Delay to trigger CSS transition after the first render.
     // Totally open for a better way to achieve this.
     setTimeout(() => {
