@@ -13,7 +13,9 @@ export {
   NavLink,
   genNavLink
 } from './Nav'
-export { default as ListItemText } from './ListItemText'
+import * as List from './List'
+const ListItemText = List.Content
+export { ListItemText, List }
 export {
   default as Modal,
   ModalContent,

@@ -30,7 +30,7 @@ import IntentIframe from './IntentIframe'
 import IntentModal from './IntentModal'
 import IntentOpener from './IntentOpener'
 import Label from './Label'
-import ListItemText from './ListItemText'
+import List from './List'
 import Media from './Media'
 import Menu from './Menu'
 import MidEllipsis from './MidEllipsis'
@@ -79,7 +79,7 @@ const testFromStyleguidist = (name, markdown, require) => {
       'IntentModal',
       'IntentOpener',
       'Label',
-      'ListItemText',
+      'List',
       'Media',
       'Menu',
       'MidEllipsis',
@@ -122,7 +122,7 @@ const testFromStyleguidist = (name, markdown, require) => {
       IntentModal,
       IntentOpener,
       Label,
-      ListItemText,
+      List,
       Media,
       Menu,
       MidEllipsis,
