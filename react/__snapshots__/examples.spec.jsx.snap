@@ -8,7 +8,7 @@ exports[`ActionMenu should render examples: ActionMenu 1`] = `
 
 exports[`Avatar should render examples: Avatar 1`] = `
 "<div>
-  <div class=\\"c-avatar c-avatar--medium\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\">
+  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
       <use xlink:href=\\"#people\\"></use>
     </svg></div>
 </div>"
@@ -16,13 +16,13 @@ exports[`Avatar should render examples: Avatar 1`] = `
 
 exports[`Avatar should render examples: Avatar 2`] = `
 "<div>
-  <div class=\\"c-avatar c-avatar--medium\\" style=\\"background-color: rgb(245, 45, 45); color: white;\\"><span class=\\"c-avatar-initials\\">CD</span></div>
+  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\" style=\\"background-color: rgb(245, 45, 45); color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
 </div>"
 `;
 
 exports[`Avatar should render examples: Avatar 3`] = `
 "<div>
-  <div class=\\"c-avatar c-avatar--medium\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"c-avatar-image\\" alt=\\"\\"></div>
+  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
 </div>"
 `;
 
@@ -30,18 +30,18 @@ exports[`Avatar should render examples: Avatar 4`] = `
 "<div>
   <div>
     <div>
-      <div class=\\"c-avatar c-avatar--small\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\">
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <use xlink:href=\\"#people\\"></use>
         </svg></div>
-      <div class=\\"c-avatar c-avatar--small\\" style=\\"background-color: rgb(245, 45, 45); color: white;\\"><span class=\\"c-avatar-initials\\">CD</span></div>
-      <div class=\\"c-avatar c-avatar--small\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"c-avatar-image\\" alt=\\"\\"></div>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"background-color: rgb(245, 45, 45); color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
     </div>
     <div>
-      <div class=\\"c-avatar c-avatar--medium\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\">
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <use xlink:href=\\"#people\\"></use>
         </svg></div>
-      <div class=\\"c-avatar c-avatar--medium\\" style=\\"background-color: rgb(245, 45, 45); color: white;\\"><span class=\\"c-avatar-initials\\">CD</span></div>
-      <div class=\\"c-avatar c-avatar--medium\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"c-avatar-image\\" alt=\\"\\"></div>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\" style=\\"background-color: rgb(245, 45, 45); color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
     </div>
   </div>
 </div>"
@@ -50,9 +50,9 @@ exports[`Avatar should render examples: Avatar 4`] = `
 exports[`Badge should render examples: Badge 1`] = `
 "<div>
   <div>
-    <p><span class=\\"c-badge-root\\"><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal c-actionbtn--compact\\" title=\\"Normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#openwith\\"></use></svg></span></span></button><span class=\\"c-badge c-badge--normal\\">2</span></span></p>
-    <p><span class=\\"c-badge-root\\"><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new c-actionbtn--compact\\" title=\\"New\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#plus\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span></button><span class=\\"c-badge c-badge--new\\">2</span></span></p>
-    <p><span class=\\"c-badge-root\\"><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error c-actionbtn--compact\\" title=\\"Error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#file-none\\"></use></svg></span></span></button><span class=\\"c-badge c-badge--error\\">2</span></span></p>
+    <p><span class=\\"styles__c-badge-root___3Xore\\"><button type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--normal___1HGLQ styles__c-actionbtn--compact___37yb2\\" title=\\"Normal\\"><span><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">Normal</span><span data-action=\\"icon\\" class=\\"styles__c-actionbtn-icon___2Od_-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#openwith\\"></use></svg></span></span></button><span class=\\"styles__c-badge___2qZ9Y styles__c-badge--normal___1pXKI\\">2</span></span></p>
+    <p><span class=\\"styles__c-badge-root___3Xore\\"><button type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--new___1_BNn styles__c-actionbtn--compact___37yb2\\" title=\\"New\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#plus\\"></use></svg><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">New</span></span></button><span class=\\"styles__c-badge___2qZ9Y styles__c-badge--new___21-Dw\\">2</span></span></p>
+    <p><span class=\\"styles__c-badge-root___3Xore\\"><button type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--error___2pt97 styles__c-actionbtn--compact___37yb2\\" title=\\"Error\\"><span><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">Error</span><span data-action=\\"icon\\" class=\\"styles__c-actionbtn-icon___2Od_-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#file-none\\"></use></svg></span></span></button><span class=\\"styles__c-badge___2qZ9Y styles__c-badge--error___3lgSC\\">2</span></span></p>
   </div>
 </div>"
 `;
@@ -60,12 +60,12 @@ exports[`Badge should render examples: Badge 1`] = `
 exports[`Button should render examples: Button 1`] = `
 "<div>
   <div>
-    <p><button type=\\"submit\\" class=\\"c-btn c-btn--regular\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--regular\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--regular\\"><span><span>regular</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"c-btn c-btn--danger\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--danger\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--danger\\"><span><span>danger</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"c-btn c-btn--highlight\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--highlight\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--highlight\\"><span><span>highlight</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"c-btn c-btn--secondary\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--secondary\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--secondary\\"><span><span>secondary</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>danger-outline</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"c-btn c-btn--alpha\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--alpha\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--alpha\\"><span><span>alpha</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly\\"><span><span>regular</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C\\"><span><span>danger</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu\\"><span><span>highlight</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N\\"><span><span>secondary</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B\\"><span><span>danger-outline</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi\\"><span><span>alpha</span></span></button></p>
   </div>
 </div>"
 `;
@@ -73,10 +73,10 @@ exports[`Button should render examples: Button 1`] = `
 exports[`Button should render examples: Button 2`] = `
 "<div>
   <div>
-    <p><button type=\\"submit\\" class=\\"c-btn c-btn--tiny\\"><span><span>Tiny</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"c-btn c-btn--small\\"><span><span>Small</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"c-btn\\"><span><span>Normal</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"c-btn c-btn--large\\"><span><span>Large</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--tiny___1pFv6\\"><span><span>Tiny</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--small___3ArkI\\"><span><span>Small</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Normal</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN\\"><span><span>Large</span></span></button></p>
   </div>
 </div>"
 `;
@@ -84,51 +84,51 @@ exports[`Button should render examples: Button 2`] = `
 exports[`Button should render examples: Button 3`] = `
 "<div>
   <div>
-    <p><button type=\\"submit\\" class=\\"c-btn\\"><span><span>Normal</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"c-btn c-btn--narrow\\"><span><span>N…</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"c-btn c-btn--full\\"><span><span>Full width</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Normal</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--narrow___27FHD\\"><span><span>N…</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--full___2VmR1\\"><span><span>Full width</span></span></button></p>
   </div>
 </div>"
 `;
 
-exports[`Button should render examples: Button 4`] = `"<div><button type=\\"submit\\" class=\\"c-btn c-btn--danger-outline\\"><span><span>Show alert</span></span></button></div>"`;
+exports[`Button should render examples: Button 4`] = `"<div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B\\"><span><span>Show alert</span></span></button></div>"`;
 
-exports[`Button should render examples: Button 5`] = `"<div><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn\\"><span><span>Loading</span></span></button></div>"`;
+exports[`Button should render examples: Button 5`] = `"<div><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Loading</span></span></button></div>"`;
 
-exports[`Button should render examples: Button 6`] = `"<div><button type=\\"submit\\" class=\\"c-btn\\"><span><span>Toggle busy</span></span></button></div>"`;
+exports[`Button should render examples: Button 6`] = `"<div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Toggle busy</span></span></button></div>"`;
 
 exports[`Button should render examples: Button 7`] = `
 "<div>
-  <div><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn\\"><span><span>Loading</span></span></button><a href=\\"http://cozy.io\\" aria-disabled=\\"true\\" class=\\"c-btn\\"><span><span>Go to Cozy website</span></span></a></div>
+  <div><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Loading</span></span></button><a href=\\"http://cozy.io\\" aria-disabled=\\"true\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Go to Cozy website</span></span></a></div>
 </div>"
 `;
 
 exports[`Button should render examples: Button 8`] = `
 "<div>
-  <div><button type=\\"submit\\" class=\\"c-btn c-btn--danger\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#delete\\"></use></svg><span>delete</span></span></button><button type=\\"submit\\" class=\\"c-btn c-btn--secondary c-btn--narrow\\" title=\\"See more\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#dots\\"></use></svg><span class=\\"u-visuallyhidden\\">See more</span></span></button></div>
+  <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#delete\\"></use></svg><span>delete</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--narrow___27FHD\\" title=\\"See more\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#dots\\"></use></svg><span class=\\"u-visuallyhidden\\">See more</span></span></button></div>
 </div>"
 `;
 
 exports[`Button should render examples: Button 9`] = `
 "<div>
-  <div><button type=\\"submit\\" class=\\"c-btn c-btn--danger\\"><span><svg class=\\"icon\\" style=\\"fill: yellow;\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#delete\\"></use></svg><span>delete</span></span></button></div>
+  <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C\\"><span><svg class=\\"styles__icon___23x3R\\" style=\\"fill: yellow;\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#delete\\"></use></svg><span>delete</span></span></button></div>
 </div>"
 `;
 
 exports[`Button should render examples: Button 10`] = `
 "<div>
-  <div><button type=\\"submit\\" class=\\"c-btn c-btn--round\\" title=\\"Add\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#plus\\"></use></svg><span class=\\"u-visuallyhidden\\">Add</span></span></button><button type=\\"submit\\" class=\\"c-btn c-btn--secondary c-btn--round\\" title=\\"Delete\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#cross\\"></use></svg><span class=\\"u-visuallyhidden\\">Delete</span></span></button></div>
+  <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--round___1Lkyl\\" title=\\"Add\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#plus\\"></use></svg><span class=\\"u-visuallyhidden\\">Add</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--round___1Lkyl\\" title=\\"Delete\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#cross\\"></use></svg><span class=\\"u-visuallyhidden\\">Delete</span></span></button></div>
 </div>"
 `;
 
 exports[`Button should render examples: Button 11`] = `
 "<div>
   <div>
-    <p><button type=\\"submit\\" class=\\"c-btn c-btn--tiny c-btn--subtle\\"><span><span>Tiny text</span></span></button><button type=\\"submit\\" class=\\"c-btn c-btn--small c-btn--subtle\\"><span><span>Small text</span></span></button><button type=\\"submit\\" class=\\"c-btn c-btn--subtle\\"><span><span>Regular text</span></span></button><button type=\\"submit\\" class=\\"c-btn c-btn--large c-btn--subtle\\"><span><span>Large text</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"c-btn c-btn--secondary c-btn--subtle\\"><span><span>Secondary theme</span></span></button><button type=\\"submit\\" class=\\"c-btn c-btn--highlight c-btn--subtle\\"><span><span>Highlight theme</span></span></button><button type=\\"submit\\" class=\\"c-btn c-btn--danger c-btn--subtle\\"><span><span>DANGER theme</span></span></button></p>
-    <p><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"c-btn c-btn--subtle\\"><span><span>Disabled</span></span></button></p>
-    <p><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--subtle\\"><span><span>Busy</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--secondary c-btn--subtle\\"><span><span>Busy secondary</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--highlight c-btn--subtle\\"><span><span>Busy highlight</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"c-btn c-btn--danger c-btn--subtle\\"><span><span>Busy danger</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"c-btn c-btn--subtle\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#cozy\\"></use></svg><span>Cozy</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--tiny___1pFv6 styles__c-btn--subtle___OknKf\\"><span><span>Tiny text</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--small___3ArkI styles__c-btn--subtle___OknKf\\"><span><span>Small text</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf\\"><span><span>Regular text</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN styles__c-btn--subtle___OknKf\\"><span><span>Large text</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf\\"><span><span>Secondary theme</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--subtle___OknKf\\"><span><span>Highlight theme</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--subtle___OknKf\\"><span><span>DANGER theme</span></span></button></p>
+    <p><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf\\"><span><span>Disabled</span></span></button></p>
+    <p><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf\\"><span><span>Busy</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf\\"><span><span>Busy secondary</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--subtle___OknKf\\"><span><span>Busy highlight</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--subtle___OknKf\\"><span><span>Busy danger</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#cozy\\"></use></svg><span>Cozy</span></span></button></p>
   </div>
 </div>"
 `;
@@ -136,27 +136,27 @@ exports[`Button should render examples: Button 11`] = `
 exports[`Button should render examples: Button 12`] = `
 "<div>
   <div>
-    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--tiny\\"><span><span>Link to Cozy.io</span></span></a></p>
-    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--small\\"><span><span>Link to Cozy.io</span></span></a></p>
-    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn\\"><span><span>Link to Cozy.io</span></span></a></p>
-    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--large\\"><span><span>Link to Cozy.io</span></span></a></p>
-    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"c-btn c-btn--subtle\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#cozy\\"></use></svg><span>Link to Cozy.io</span></span></a></p>
+    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--tiny___1pFv6\\"><span><span>Link to Cozy.io</span></span></a></p>
+    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--small___3ArkI\\"><span><span>Link to Cozy.io</span></span></a></p>
+    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Link to Cozy.io</span></span></a></p>
+    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN\\"><span><span>Link to Cozy.io</span></span></a></p>
+    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#cozy\\"></use></svg><span>Link to Cozy.io</span></span></a></p>
   </div>
 </div>"
 `;
 
 exports[`Button should render examples: Button 13`] = `
 "<div>
-  <div><span to=\\"/destination\\" class=\\"c-btn\\"><span>I'm a (false) NavLink</span></span></div>
+  <div><span to=\\"/destination\\" class=\\"styles__c-btn___-2Vnj\\"><span>I'm a (false) NavLink</span></span></div>
 </div>"
 `;
 
 exports[`ButtonAction should render examples: ButtonAction 1`] = `
 "<div>
   <div>
-    <p><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#openwith\\"></use></svg></span></span></button><button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#openwith\\"></use></svg></span></span></button></p>
-    <p><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#plus\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span></button><button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#plus\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span></button></p>
-    <p><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#file-none\\"></use></svg></span></span></button><button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#file-none\\"></use></svg></span></span></button></p>
+    <p><button type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--normal___1HGLQ\\"><span><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">Normal</span><span data-action=\\"icon\\" class=\\"styles__c-actionbtn-icon___2Od_-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#openwith\\"></use></svg></span></span></button><button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--normal___1HGLQ\\"><span><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">Normal</span><span data-action=\\"icon\\" class=\\"styles__c-actionbtn-icon___2Od_-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#openwith\\"></use></svg></span></span></button></p>
+    <p><button type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--new___1_BNn\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#plus\\"></use></svg><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">New</span></span></button><button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--new___1_BNn\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#plus\\"></use></svg><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">New</span></span></button></p>
+    <p><button type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--error___2pt97\\"><span><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">Error</span><span data-action=\\"icon\\" class=\\"styles__c-actionbtn-icon___2Od_-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#file-none\\"></use></svg></span></span></button><button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--error___2pt97\\"><span><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">Error</span><span data-action=\\"icon\\" class=\\"styles__c-actionbtn-icon___2Od_-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#file-none\\"></use></svg></span></span></button></p>
   </div>
 </div>"
 `;
@@ -164,7 +164,7 @@ exports[`ButtonAction should render examples: ButtonAction 1`] = `
 exports[`ButtonAction should render examples: ButtonAction 2`] = `
 "<div>
   <div>
-    <p><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Very long long long label</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#hourglass\\"></use></svg></span></span></button></p>
+    <p><button type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--normal___1HGLQ\\"><span><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">Very long long long label</span><span data-action=\\"icon\\" class=\\"styles__c-actionbtn-icon___2Od_-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#hourglass\\"></use></svg></span></span></button></p>
   </div>
 </div>"
 `;
@@ -172,10 +172,10 @@ exports[`ButtonAction should render examples: ButtonAction 2`] = `
 exports[`ButtonAction should render examples: ButtonAction 3`] = `
 "<div>
   <div>
-    <p><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal c-actionbtn--compact\\" title=\\"Normal\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Normal</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#openwith\\"></use></svg></span></span></button></p>
-    <p><button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--normal c-actionbtn--compact\\" title=\\"Disabled\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Disabled</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#hourglass\\"></use></svg></span></span></button></p>
-    <p><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--new c-actionbtn--compact\\" title=\\"New\\"><span><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#plus\\"></use></svg><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">New</span></span></button></p>
-    <p><button type=\\"button\\" role=\\"button\\" class=\\"c-actionbtn c-actionbtn--error c-actionbtn--compact\\" title=\\"Error\\"><span><span data-action=\\"label\\" class=\\"c-actionbtn-label\\">Error</span><span data-action=\\"icon\\" class=\\"c-actionbtn-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#file-none\\"></use></svg></span></span></button></p>
+    <p><button type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--normal___1HGLQ styles__c-actionbtn--compact___37yb2\\" title=\\"Normal\\"><span><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">Normal</span><span data-action=\\"icon\\" class=\\"styles__c-actionbtn-icon___2Od_-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#openwith\\"></use></svg></span></span></button></p>
+    <p><button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--normal___1HGLQ styles__c-actionbtn--compact___37yb2\\" title=\\"Disabled\\"><span><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">Disabled</span><span data-action=\\"icon\\" class=\\"styles__c-actionbtn-icon___2Od_-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#hourglass\\"></use></svg></span></span></button></p>
+    <p><button type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--new___1_BNn styles__c-actionbtn--compact___37yb2\\" title=\\"New\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#plus\\"></use></svg><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">New</span></span></button></p>
+    <p><button type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--error___2pt97 styles__c-actionbtn--compact___37yb2\\" title=\\"Error\\"><span><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">Error</span><span data-action=\\"icon\\" class=\\"styles__c-actionbtn-icon___2Od_-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#file-none\\"></use></svg></span></span></button></p>
   </div>
 </div>"
 `;
@@ -183,27 +183,27 @@ exports[`ButtonAction should render examples: ButtonAction 3`] = `
 exports[`Checkbox should render examples: Checkbox 1`] = `
 "<div>
   <form>
-    <div><label class=\\"c-input-checkbox\\" aria-checked=\\"\\"><input type=\\"checkbox\\" name=\\"\\" value=\\"\\"><span>This is a checkbox</span></label></div>
+    <div><label class=\\"styles__c-input-checkbox___2CzvY\\" aria-checked=\\"\\"><input type=\\"checkbox\\" name=\\"\\" value=\\"\\"><span>This is a checkbox</span></label></div>
   </form>
 </div>"
 `;
 
 exports[`Checkbox should render examples: Checkbox 2`] = `
 "<div>
-  <div><label class=\\"c-input-checkbox is-error\\" aria-checked=\\"\\"><input type=\\"checkbox\\" name=\\"\\" value=\\"\\"><span>This is a checkbox with an error</span></label></div>
+  <div><label class=\\"styles__c-input-checkbox___2CzvY styles__is-error___3UPnf\\" aria-checked=\\"\\"><input type=\\"checkbox\\" name=\\"\\" value=\\"\\"><span>This is a checkbox with an error</span></label></div>
 </div>"
 `;
 
 exports[`Checkbox should render examples: Checkbox 3`] = `
 "<div>
-  <div><label class=\\"c-input-checkbox\\" aria-checked=\\"mixed\\"><input type=\\"checkbox\\" name=\\"\\" value=\\"\\"><span>This is a mixed checkbox</span></label></div>
+  <div><label class=\\"styles__c-input-checkbox___2CzvY\\" aria-checked=\\"mixed\\"><input type=\\"checkbox\\" name=\\"\\" value=\\"\\"><span>This is a mixed checkbox</span></label></div>
 </div>"
 `;
 
 exports[`Field should render examples: Field 1`] = `
 "<div>
   <form>
-    <div class=\\"o-field\\"><label for=\\"idField\\" class=\\"c-label\\">I'm a label</label><textarea placeholder=\\"I'm a textarea\\" class=\\"c-textarea\\" id=\\"idField\\"></textarea></div>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idField\\" class=\\"styles__c-label___o4ozG\\">I'm a label</label><textarea placeholder=\\"I'm a textarea\\" class=\\"styles__c-textarea___D7EEH\\" id=\\"idField\\"></textarea></div>
   </form>
 </div>"
 `;
@@ -211,36 +211,36 @@ exports[`Field should render examples: Field 1`] = `
 exports[`Field should render examples: Field 2`] = `
 "<div>
   <form>
-    <div class=\\"o-field\\"><label for=\\"idFieldError\\" class=\\"c-label\\">I'm an error label</label><input type=\\"text\\" id=\\"idFieldError\\" class=\\"c-input-text is-error\\" placeholder=\\"I'm an error input[type=text]\\" value=\\"\\"></div>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idFieldError\\" class=\\"styles__c-label___o4ozG\\">I'm an error label</label><input type=\\"text\\" id=\\"idFieldError\\" class=\\"styles__c-input-text___3TAv1 styles__is-error___3lsCJ\\" placeholder=\\"I'm an error input[type=text]\\" value=\\"\\"></div>
   </form>
 </div>"
 `;
 
 exports[`Hero should render examples: Hero 1`] = `
 "<div>
-  <div class=\\"Hero\\">
-    <h2 class=\\" Hero-title\\">Connect your bank accounts</h2>
-    <div class=\\" Hero-sections\\">
-      <div class=\\" Hero-section\\"><svg class=\\"icon\\" style=\\"color: rgb(245, 45, 45);\\" width=\\"80\\" height=\\"80\\">
+  <div class=\\"styles__Hero___14z7_\\">
+    <h2 class=\\" styles__Hero-title___256Uz\\">Connect your bank accounts</h2>
+    <div class=\\" styles__Hero-sections___ETV6e\\">
+      <div class=\\" styles__Hero-section___1BcNz\\"><svg class=\\"styles__icon___23x3R\\" style=\\"color: rgb(245, 45, 45);\\" width=\\"80\\" height=\\"80\\">
           <use xlink:href=\\"#warning\\"></use>
         </svg>
-        <h3 class=\\" Hero-subtitle\\">Control your budget</h3>
+        <h3 class=\\" styles__Hero-subtitle___1E_WG\\">Control your budget</h3>
         <p class=\\" \\">Summary of all your accounts at a glance</p>
       </div>
-      <div class=\\" Hero-section\\"><svg class=\\"icon\\" style=\\"color: rgb(167, 91, 203);\\" width=\\"80\\" height=\\"80\\">
+      <div class=\\" styles__Hero-section___1BcNz\\"><svg class=\\"styles__icon___23x3R\\" style=\\"color: rgb(167, 91, 203);\\" width=\\"80\\" height=\\"80\\">
           <use xlink:href=\\"#paperplane\\"></use>
         </svg>
-        <h3 class=\\" Hero-subtitle\\">Save Time</h3>
+        <h3 class=\\" styles__Hero-subtitle___1E_WG\\">Save Time</h3>
         <p class=\\" \\">Your invoices at your fingertips directly from your statements</p>
       </div>
-      <div class=\\" Hero-section\\"><svg class=\\"icon\\" style=\\"color: rgb(45, 138, 242);\\" width=\\"80\\" height=\\"80\\">
+      <div class=\\" styles__Hero-section___1BcNz\\"><svg class=\\"styles__icon___23x3R\\" style=\\"color: rgb(45, 138, 242);\\" width=\\"80\\" height=\\"80\\">
           <use xlink:href=\\"#folder\\"></use>
         </svg>
-        <h3 class=\\" Hero-subtitle\\">Cozy is working for you</h3>
+        <h3 class=\\" styles__Hero-subtitle___1E_WG\\">Cozy is working for you</h3>
         <p class=\\" \\">Automatic follow-up of your medical expenses</p>
       </div>
     </div>
-    <p class=\\" Hero-cta\\"><button type=\\"submit\\" class=\\"c-btn\\"><span><span>Connect your bank accounts</span></span></button></p>
+    <p class=\\" styles__Hero-cta___2KhwU\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Connect your bank accounts</span></span></button></p>
   </div>
 </div>"
 `;
@@ -538,292 +538,292 @@ exports[`Icon should render examples: Icon 1`] = `
           </g>
         </symbol>
       </svg></div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#album-add\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">album-add</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#album-remove\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">album-remove</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#album\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">album</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#arrow\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">arrow</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#back\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">back</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#bottom-select\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">bottom-select</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#bottom\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">bottom</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#calendar\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">calendar</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#check 2\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">check 2</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#check-circleless\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">check-circleless</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#check\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">check</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#clock\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">clock</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#connector\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">connector</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cozy-negative\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cozy-negative</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cozy\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cozy</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cross-white\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cross-white</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cross\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cross</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cube\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cube</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dash\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">dash</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#delete-grey08\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">delete-grey08</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#delete\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">delete</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#destroy\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">destroy</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#device-laptop\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">device-laptop</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dots-white\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">dots-white</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dots\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">dots</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#download\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">download</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#exchange\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">exchange</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file-none\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">file-none</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">file</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#folder\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">folder</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#forward\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">forward</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#gear\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">gear</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#help\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">help</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#hourglass\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">hourglass</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#image\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">image</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#moveto\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">moveto</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#openwith\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">openwith</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#paperplane\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">paperplane</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#people\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">people</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#phone-download\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">phone-download</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#plus\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">plus</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#rename\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">rename</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#restore\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">restore</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#share-grey08\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">share-grey08</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#share\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">share</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#small-arrow\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">small-arrow</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#spinner-blue\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">spinner-blue</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#spinner-grey\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">spinner-grey</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#spinner-red\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">spinner-red</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#spinner-white\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">spinner-white</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#spinner\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">spinner</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#top-select\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">top-select</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#top\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">top</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#trash\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">trash</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#upload-grey08\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">upload-grey08</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#upload\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">upload</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#warn\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">warn</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"icon\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#warning\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">warning</p>
@@ -834,9 +834,9 @@ exports[`Icon should render examples: Icon 1`] = `
 
 exports[`Icon should render examples: Icon 2`] = `
 "<div>
-  <div><svg class=\\"icon icon--spin\\" style=\\"fill: #0bda51;\\" width=\\"16\\" height=\\"16\\">
+  <div><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: #0bda51;\\" width=\\"16\\" height=\\"16\\">
       <use xlink:href=\\"#spinner\\"></use>
-    </svg>&nbsp;<svg class=\\"icon\\" style=\\"fill: #c30017; transform: rotate(45deg);\\" width=\\"16\\" height=\\"16\\">
+    </svg>&nbsp;<svg class=\\"styles__icon___23x3R\\" style=\\"fill: #c30017; transform: rotate(45deg);\\" width=\\"16\\" height=\\"16\\">
       <use xlink:href=\\"#forward\\"></use>
     </svg></div>
 </div>"
@@ -844,7 +844,7 @@ exports[`Icon should render examples: Icon 2`] = `
 
 exports[`Icon should render examples: Icon 3`] = `
 "<div>
-  <div><svg class=\\"icon\\" style=\\"fill: purple;\\" width=\\"32\\" height=\\"32\\">
+  <div><svg class=\\"styles__icon___23x3R\\" style=\\"fill: purple;\\" width=\\"32\\" height=\\"32\\">
       <use xlink:href=\\"#warning\\"></use>
     </svg><span>← Click it</span></div>
 </div>"
@@ -853,7 +853,7 @@ exports[`Icon should render examples: Icon 3`] = `
 exports[`Label should render examples: Label 1`] = `
 "<div>
   <form>
-    <div><label for=\\"idInput\\" class=\\"c-label\\">This is a label</label><input type=\\"text\\" id=\\"idInput\\" class=\\"c-input-text\\" placeholder=\\"Recherche\\" value=\\"\\"></div>
+    <div><label for=\\"idInput\\" class=\\"styles__c-label___o4ozG\\">This is a label</label><input type=\\"text\\" id=\\"idInput\\" class=\\"styles__c-input-text___3TAv1\\" placeholder=\\"Recherche\\" value=\\"\\"></div>
   </form>
 </div>"
 `;
@@ -861,32 +861,32 @@ exports[`Label should render examples: Label 1`] = `
 exports[`Label should render examples: Label 2`] = `
 "<div>
   <form>
-    <div><label for=\\"idInput2\\" class=\\"c-label is-error\\">This is an error label</label><input type=\\"text\\" id=\\"idInput2\\" class=\\"c-input-text is-error\\" placeholder=\\"Recherche\\" value=\\"\\"></div>
+    <div><label for=\\"idInput2\\" class=\\"styles__c-label___o4ozG styles__is-error___2Dwem\\">This is an error label</label><input type=\\"text\\" id=\\"idInput2\\" class=\\"styles__c-input-text___3TAv1 styles__is-error___3lsCJ\\" placeholder=\\"Recherche\\" value=\\"\\"></div>
   </form>
 </div>"
 `;
 
 exports[`ListItemText should render examples: ListItemText 1`] = `
 "<div>
-  <div class=\\"c-list-text\\">
-    <div class=\\"u-ellipsis u-text\\">I'm a list item text</div>
+  <div class=\\"styles__c-list-text___3kc3E\\">
+    <div class=\\"u-ellipsis styles__u-text___2UfQa\\">I'm a list item text</div>
   </div>
 </div>"
 `;
 
 exports[`ListItemText should render examples: ListItemText 2`] = `
 "<div>
-  <div class=\\"c-list-text\\">
-    <div class=\\"u-ellipsis u-text\\">I'm a primary text</div>
-    <div class=\\"u-ellipsis u-caption\\">I'm a secondary text</div>
+  <div class=\\"styles__c-list-text___3kc3E\\">
+    <div class=\\"u-ellipsis styles__u-text___2UfQa\\">I'm a primary text</div>
+    <div class=\\"u-ellipsis styles__u-caption___1VRxy\\">I'm a secondary text</div>
   </div>
 </div>"
 `;
 
 exports[`ListItemText should render examples: ListItemText 3`] = `
 "<div>
-  <div class=\\"c-list-text\\">
-    <div class=\\"u-text\\">I'm a primary text</div><a class=\\"u-caption\\" href=\\"http://cozy.io\\">
+  <div class=\\"styles__c-list-text___3kc3E\\">
+    <div class=\\"styles__u-text___2UfQa\\">I'm a primary text</div><a class=\\"styles__u-caption___1VRxy\\" href=\\"http://cozy.io\\">
       <div class=\\"u-midellipsis\\"><span>Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognis</span><span>e that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a \\"computing machine\\" and the first computer programmer.</span></div>
     </a>
   </div>
@@ -895,33 +895,33 @@ exports[`ListItemText should render examples: ListItemText 3`] = `
 
 exports[`Menu should render examples: Menu 1`] = `
 "<div>
-  <div class=\\"c-menu c-menu--left\\"><button role=\\"button\\" class=\\"c-btn c-menu__btn\\">Click me !</button></div>
+  <div class=\\"styles__c-menu___2YTiU styles__c-menu--left___3wamY\\"><button role=\\"button\\" class=\\"c-btn styles__c-menu__btn___18qF8\\">Click me !</button></div>
 </div>"
 `;
 
 exports[`Menu should render examples: Menu 2`] = `
 "<div>
-  <div class=\\"c-menu c-menu--right\\"><button role=\\"button\\" class=\\"c-btn c-menu__btn\\">Click me !</button></div>
+  <div class=\\"styles__c-menu___2YTiU styles__c-menu--right___3wxbb\\"><button role=\\"button\\" class=\\"c-btn styles__c-menu__btn___18qF8\\">Click me !</button></div>
 </div>"
 `;
 
 exports[`Menu should render examples: Menu 3`] = `
 "<div>
-  <div class=\\"c-menu c-menu--left\\"><button type=\\"submit\\" class=\\"c-btn\\"><span><span>Greetings with custom component</span></span></button></div>
+  <div class=\\"styles__c-menu___2YTiU styles__c-menu--left___3wamY\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Greetings with custom component</span></span></button></div>
 </div>"
 `;
 
 exports[`Radio should render examples: Radio 1`] = `
 "<div>
   <form>
-    <div><label class=\\"c-input-radio\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue1\\"><span>This is a radio button</span></label><label class=\\"c-input-radio\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue2\\"><span>This is also a radio button</span></label></div>
+    <div><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue1\\"><span>This is a radio button</span></label><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue2\\"><span>This is also a radio button</span></label></div>
   </form>
 </div>"
 `;
 
 exports[`Radio should render examples: Radio 2`] = `
 "<div>
-  <div><label class=\\"c-input-radio is-error\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue1\\"><span>This is a radio button</span></label></div>
+  <div><label class=\\"styles__c-input-radio___XJQt1 styles__is-error___2-12P\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue1\\"><span>This is a radio button</span></label></div>
 </div>"
 `;
 
@@ -951,7 +951,7 @@ exports[`SelectBox should render examples: SelectBox 2`] = `
 "<div>
   <div class=\\"css-1h8pu2y\\">
     <div><button>toggle options</button>
-      <div class=\\"select-control__input\\">
+      <div class=\\"styles__select-control__input___1xDlj\\">
         <div class=\\"css-1phseng\\">
           <div class=\\"css-1492t68\\">Select...</div>
           <div class=\\"css-1g6gooi\\">
@@ -1014,32 +1014,32 @@ exports[`SelectBox should render examples: SelectBox 4`] = `
     <div>
       <div class=\\"css-2msmlm\\">
         <div class=\\"css-11unzgr\\">
-          <div id=\\"react-select-5-option-0\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">A</div>
-          <div id=\\"react-select-5-option-1\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">B</div>
-          <div id=\\"react-select-5-option-2\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">C</div>
-          <div id=\\"react-select-5-option-3\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">D</div>
-          <div id=\\"react-select-5-option-4\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">E</div>
-          <div id=\\"react-select-5-option-5\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">F</div>
-          <div id=\\"react-select-5-option-6\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">G</div>
-          <div id=\\"react-select-5-option-7\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">H</div>
-          <div id=\\"react-select-5-option-8\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">I</div>
-          <div id=\\"react-select-5-option-9\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">J</div>
-          <div id=\\"react-select-5-option-10\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">K</div>
-          <div id=\\"react-select-5-option-11\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">L</div>
-          <div id=\\"react-select-5-option-12\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">M</div>
-          <div id=\\"react-select-5-option-13\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">N</div>
-          <div id=\\"react-select-5-option-14\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">O</div>
-          <div id=\\"react-select-5-option-15\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">P</div>
-          <div id=\\"react-select-5-option-16\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">Q</div>
-          <div id=\\"react-select-5-option-17\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">R</div>
-          <div id=\\"react-select-5-option-18\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">S</div>
-          <div id=\\"react-select-5-option-19\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">T</div>
-          <div id=\\"react-select-5-option-20\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">U</div>
-          <div id=\\"react-select-5-option-21\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">V</div>
-          <div id=\\"react-select-5-option-22\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">W</div>
-          <div id=\\"react-select-5-option-23\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">X</div>
-          <div id=\\"react-select-5-option-24\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">Y</div>
-          <div id=\\"react-select-5-option-25\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"select-option\\">Z</div>
+          <div id=\\"react-select-5-option-0\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">A</div>
+          <div id=\\"react-select-5-option-1\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">B</div>
+          <div id=\\"react-select-5-option-2\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">C</div>
+          <div id=\\"react-select-5-option-3\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">D</div>
+          <div id=\\"react-select-5-option-4\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">E</div>
+          <div id=\\"react-select-5-option-5\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">F</div>
+          <div id=\\"react-select-5-option-6\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">G</div>
+          <div id=\\"react-select-5-option-7\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">H</div>
+          <div id=\\"react-select-5-option-8\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">I</div>
+          <div id=\\"react-select-5-option-9\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">J</div>
+          <div id=\\"react-select-5-option-10\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">K</div>
+          <div id=\\"react-select-5-option-11\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">L</div>
+          <div id=\\"react-select-5-option-12\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">M</div>
+          <div id=\\"react-select-5-option-13\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">N</div>
+          <div id=\\"react-select-5-option-14\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">O</div>
+          <div id=\\"react-select-5-option-15\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">P</div>
+          <div id=\\"react-select-5-option-16\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">Q</div>
+          <div id=\\"react-select-5-option-17\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">R</div>
+          <div id=\\"react-select-5-option-18\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">S</div>
+          <div id=\\"react-select-5-option-19\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">T</div>
+          <div id=\\"react-select-5-option-20\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">U</div>
+          <div id=\\"react-select-5-option-21\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">V</div>
+          <div id=\\"react-select-5-option-22\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">W</div>
+          <div id=\\"react-select-5-option-23\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">X</div>
+          <div id=\\"react-select-5-option-24\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">Y</div>
+          <div id=\\"react-select-5-option-25\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">Z</div>
         </div>
         <div style=\\"border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; padding-top: 0.25rem; padding-bottom: 0.25rem; border-top: 1px solid #D6D8Da; background: white; position: relative;\\"></div>
       </div>
@@ -1072,12 +1072,12 @@ exports[`SelectBox should render examples: SelectBox 5`] = `
 
 exports[`Sidebar should render examples: Sidebar 1`] = `
 "<div>
-  <aside class=\\"o-sidebar\\">
+  <aside class=\\"styles__o-sidebar___1295j\\">
     <nav role=\\"navigation\\">
-      <ul class=\\"c-nav\\">
-        <li class=\\"c-nav-item\\"><a class=\\"c-nav-link\\"><span class=\\"c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#warn\\"></use></svg></span><span class=\\"c-nav-text\\">Warn</span></a></li>
-        <li class=\\"c-nav-item\\"><a class=\\"c-nav-link\\"><span class=\\"c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#check\\"></use></svg></span><span class=\\"c-nav-text\\">Check</span></a></li>
-        <li class=\\"c-nav-item\\"><a class=\\"c-nav-link\\"><span class=\\"c-nav-icon\\"><svg class=\\"icon\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#download\\"></use></svg></span><span class=\\"c-nav-text\\">Download</span></a></li>
+      <ul class=\\"styles__c-nav___33dZy\\">
+        <li class=\\"styles__c-nav-item___3XOLK\\"><a class=\\"styles__c-nav-link___3mK6W\\"><span class=\\"styles__c-nav-icon___hrJUe\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#warn\\"></use></svg></span><span class=\\"styles__c-nav-text___1J3yU\\">Warn</span></a></li>
+        <li class=\\"styles__c-nav-item___3XOLK\\"><a class=\\"styles__c-nav-link___3mK6W\\"><span class=\\"styles__c-nav-icon___hrJUe\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#check\\"></use></svg></span><span class=\\"styles__c-nav-text___1J3yU\\">Check</span></a></li>
+        <li class=\\"styles__c-nav-item___3XOLK\\"><a class=\\"styles__c-nav-link___3mK6W\\"><span class=\\"styles__c-nav-icon___hrJUe\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#download\\"></use></svg></span><span class=\\"styles__c-nav-text___1J3yU\\">Download</span></a></li>
       </ul>
     </nav>
   </aside>
@@ -1086,13 +1086,13 @@ exports[`Sidebar should render examples: Sidebar 1`] = `
 
 exports[`Spinner should render examples: Spinner 1`] = `
 "<div>
-  <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div>
+  <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--medium___1_GL8\\"></div>
 </div>"
 `;
 
 exports[`Spinner should render examples: Spinner 2`] = `
 "<div>
-  <div>blue (default): <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div> or <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div>grey: <div class=\\"c-spinner c-spinner--grey c-spinner--medium\\"></div>white: <div class=\\"c-spinner c-spinner--white c-spinner--medium\\"></div>red: <div class=\\"c-spinner c-spinner--red c-spinner--medium\\"></div>
+  <div>blue (default): <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--medium___1_GL8\\"></div> or <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--medium___1_GL8\\"></div>grey: <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--grey___2aZMV styles__c-spinner--medium___1_GL8\\"></div>white: <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--white___3mkJl styles__c-spinner--medium___1_GL8\\"></div>red: <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--red___3s5VF styles__c-spinner--medium___1_GL8\\"></div>
   </div>
 </div>"
 `;
@@ -1100,63 +1100,63 @@ exports[`Spinner should render examples: Spinner 2`] = `
 exports[`Spinner should render examples: Spinner 3`] = `
 "<div>
   <div>
-    <div class=\\"c-spinner c-spinner--nomargin c-spinner--blue c-spinner--medium\\"></div>
+    <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--nomargin___13JyW styles__c-spinner--blue___1BMPR styles__c-spinner--medium___1_GL8\\"></div>
   </div>
 </div>"
 `;
 
 exports[`Spinner should render examples: Spinner 4`] = `
 "<div>
-  <div>tiny: <div class=\\"c-spinner c-spinner--blue c-spinner--tiny\\"></div><br>small: <div class=\\"c-spinner c-spinner--blue c-spinner--small\\"></div><br>medium (default): <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div> or <div class=\\"c-spinner c-spinner--blue c-spinner--medium\\"></div><br>large: <div class=\\"c-spinner c-spinner--blue c-spinner--large\\"></div><br>xlarge: <div class=\\"c-spinner c-spinner--blue c-spinner--xlarge\\"></div><br>xxlarge: <div class=\\"c-spinner c-spinner--blue c-spinner--xxlarge\\"></div>
+  <div>tiny: <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--tiny___2bRnB\\"></div><br>small: <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--small___1uzev\\"></div><br>medium (default): <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--medium___1_GL8\\"></div> or <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--medium___1_GL8\\"></div><br>large: <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--large___T0FZi\\"></div><br>xlarge: <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--xlarge___3mSGc\\"></div><br>xxlarge: <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--xxlarge___23prK\\"></div>
   </div>
 </div>"
 `;
 
 exports[`Text should render examples: Text 1`] = `
 "<div>
-  <div class=\\"u-text\\">This a standard text</div>
+  <div class=\\"styles__u-text___2UfQa\\">This a standard text</div>
 </div>"
 `;
 
 exports[`Text should render examples: Text 2`] = `
 "<div>
-  <div class=\\"u-title-h1\\">This a main title text</div>
+  <div class=\\"styles__u-title-h1___fimho\\">This a main title text</div>
 </div>"
 `;
 
 exports[`Text should render examples: Text 3`] = `
 "<div>
-  <div class=\\"u-title-h2\\">This a title text</div>
+  <div class=\\"styles__u-title-h2___2cES6\\">This a title text</div>
 </div>"
 `;
 
 exports[`Text should render examples: Text 4`] = `
 "<div>
-  <div class=\\"u-title-h3\\">This a subtitle text</div>
+  <div class=\\"styles__u-title-h3___1ZGqN\\">This a subtitle text</div>
 </div>"
 `;
 
 exports[`Text should render examples: Text 5`] = `
 "<div>
-  <div class=\\"u-title-h4\\">This a bold text</div>
+  <div class=\\"styles__u-title-h4___1lGMy\\">This a bold text</div>
 </div>"
 `;
 
 exports[`Text should render examples: Text 6`] = `
 "<div>
-  <div class=\\"u-caption\\">This a note text</div>
+  <div class=\\"styles__u-caption___1VRxy\\">This a note text</div>
 </div>"
 `;
 
-exports[`Textarea should render examples: Textarea 1`] = `"<div><textarea placeholder=\\"Once upon a time…\\" class=\\"c-textarea\\"></textarea></div>"`;
+exports[`Textarea should render examples: Textarea 1`] = `"<div><textarea placeholder=\\"Once upon a time…\\" class=\\"styles__c-textarea___D7EEH\\"></textarea></div>"`;
 
-exports[`Textarea should render examples: Textarea 2`] = `"<div><textarea placeholder=\\"Once upon a time, there was an error…\\" class=\\"c-textarea is-error\\"></textarea></div>"`;
+exports[`Textarea should render examples: Textarea 2`] = `"<div><textarea placeholder=\\"Once upon a time, there was an error…\\" class=\\"styles__c-textarea___D7EEH styles__is-error___1kGLj\\"></textarea></div>"`;
 
 exports[`Textarea should render examples: Textarea 3`] = `
 "<div>
   <div>
-    <p><textarea placeholder=\\"I'm have a tiny size\\" class=\\"c-textarea c-textarea--tiny\\"></textarea></p>
-    <p><textarea placeholder=\\"I'm have a medium size\\" class=\\"c-textarea c-textarea--medium\\"></textarea></p>
+    <p><textarea placeholder=\\"I'm have a tiny size\\" class=\\"styles__c-textarea___D7EEH styles__c-textarea--tiny___3fmPW\\"></textarea></p>
+    <p><textarea placeholder=\\"I'm have a medium size\\" class=\\"styles__c-textarea___D7EEH styles__c-textarea--medium___T8f3b\\"></textarea></p>
   </div>
 </div>"
 `;
@@ -1164,27 +1164,27 @@ exports[`Textarea should render examples: Textarea 3`] = `
 exports[`Textarea should render examples: Textarea 4`] = `
 "<div>
   <div>
-    <p><textarea placeholder=\\"I'm full width\\" class=\\"c-textarea c-textarea--fullwidth\\"></textarea></p>
+    <p><textarea placeholder=\\"I'm full width\\" class=\\"styles__c-textarea___D7EEH styles__c-textarea--fullwidth___Ih_mg\\"></textarea></p>
   </div>
 </div>"
 `;
 
 exports[`Textarea should render examples: Textarea 5`] = `
 "<div>
-  <div><textarea placeholder=\\"\\" class=\\"c-textarea\\" name=\\"my-field\\"></textarea></div>
+  <div><textarea placeholder=\\"\\" class=\\"styles__c-textarea___D7EEH\\" name=\\"my-field\\"></textarea></div>
 </div>"
 `;
 
-exports[`Toggle should render examples: Toggle 1`] = `"<div><span class=\\"toggle\\"><input type=\\"checkbox\\" id=\\"simple-toggle\\" class=\\"checkbox\\"><label for=\\"simple-toggle\\" class=\\"label\\"></label></span></div>"`;
+exports[`Toggle should render examples: Toggle 1`] = `"<div><span class=\\"styles__toggle___3zVsE\\"><input type=\\"checkbox\\" id=\\"simple-toggle\\" class=\\"styles__checkbox___3ko96\\"><label for=\\"simple-toggle\\" class=\\"styles__label___3jY1f\\"></label></span></div>"`;
 
-exports[`Toggle should render examples: Toggle 2`] = `"<div><span class=\\"toggle\\"><input type=\\"checkbox\\" id=\\"toggle\\" class=\\"checkbox\\" checked=\\"\\"><label for=\\"toggle\\" class=\\"label\\"></label></span></div>"`;
+exports[`Toggle should render examples: Toggle 2`] = `"<div><span class=\\"styles__toggle___3zVsE\\"><input type=\\"checkbox\\" id=\\"toggle\\" class=\\"styles__checkbox___3ko96\\" checked=\\"\\"><label for=\\"toggle\\" class=\\"styles__label___3jY1f\\"></label></span></div>"`;
 
-exports[`Toggle should render examples: Toggle 3`] = `"<div><span class=\\"toggle\\"><input type=\\"checkbox\\" id=\\"toggle\\" class=\\"checkbox\\"><label for=\\"toggle\\" class=\\"label\\"></label></span></div>"`;
+exports[`Toggle should render examples: Toggle 3`] = `"<div><span class=\\"styles__toggle___3zVsE\\"><input type=\\"checkbox\\" id=\\"toggle\\" class=\\"styles__checkbox___3ko96\\"><label for=\\"toggle\\" class=\\"styles__label___3jY1f\\"></label></span></div>"`;
 
-exports[`Toggle should render examples: Toggle 4`] = `"<div><span class=\\"toggle\\"><input type=\\"checkbox\\" id=\\"toggle\\" class=\\"checkbox\\"><label for=\\"toggle\\" class=\\"label\\"></label></span></div>"`;
+exports[`Toggle should render examples: Toggle 4`] = `"<div><span class=\\"styles__toggle___3zVsE\\"><input type=\\"checkbox\\" id=\\"toggle\\" class=\\"styles__checkbox___3ko96\\"><label for=\\"toggle\\" class=\\"styles__label___3jY1f\\"></label></span></div>"`;
 
 exports[`Toggle should render examples: Toggle 5`] = `
 "<div>
-  <div><label for=\\"0\\" style=\\"margin-right: 15px; color: gray;\\">Toggle is controlled and off</label><span class=\\"toggle\\"><input type=\\"checkbox\\" id=\\"0\\" class=\\"checkbox\\"><label for=\\"0\\" class=\\"label\\"></label></span></div>
+  <div><label for=\\"0\\" style=\\"margin-right: 15px; color: gray;\\">Toggle is controlled and off</label><span class=\\"styles__toggle___3zVsE\\"><input type=\\"checkbox\\" id=\\"0\\" class=\\"styles__checkbox___3ko96\\"><label for=\\"0\\" class=\\"styles__label___3jY1f\\"></label></span></div>
 </div>"
 `;
