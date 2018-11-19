@@ -2,9 +2,9 @@
 
 exports[`IntentModal component renders as expected 1`] = `
 <Unknown
-  className="styles__intentModal___1aYIb"
+  className="intentModal"
   closable={true}
-  closeBtnClassName="styles__intentModal__cross___1Hfuz"
+  closeBtnClassName="intentModal__cross"
   closeBtnColor={undefined}
   containerClassName={undefined}
   description={undefined}

@@ -2,21 +2,21 @@
 
 exports[`AppIcon component renders as loading 1`] = `
 <div
-  className="styles__c-loading-placeholder___3L6Gz styles__c-app-icon___2_O40"
+  className="c-loading-placeholder c-app-icon"
 />
 `;
 
 exports[`AppIcon component renders correctly 1`] = `
 <img
   alt={undefined}
-  className="styles__c-app-icon___2_O40"
+  className="c-app-icon"
   src="http://cozy.tools/apps/test/icon"
 />
 `;
 
 exports[`AppIcon component renders default when fetch error occurs 1`] = `
 <Icon
-  className="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt"
+  className="c-app-icon c-app-icon-default"
   height="100%"
   icon="test-file-stub"
   spin={false}
@@ -27,7 +27,7 @@ exports[`AppIcon component renders default when fetch error occurs 1`] = `
 exports[`AppIcon component renders immediately when icon is alredy preloaded 1`] = `
 <img
   alt={undefined}
-  className="styles__c-app-icon___2_O40"
+  className="c-app-icon"
   src="http://cozy.tools/apps/test/icon"
 />
 `;
@@ -35,7 +35,7 @@ exports[`AppIcon component renders immediately when icon is alredy preloaded 1`]
 exports[`AppIcon component uses Preloader.preload when no fetchIcon method is provided 1`] = `
 <img
   alt={undefined}
-  className="styles__c-app-icon___2_O40"
+  className="c-app-icon"
   src="http://cozy.tools/apps/test/icon"
 />
 `;
