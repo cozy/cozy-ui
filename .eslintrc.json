@@ -7,5 +7,10 @@
   "globals": {
     "mount": true,
     "shallow": true
+  },
+  "settings": {
+    "react": {
+      "version": "16.5.2"
+    }
   }
 }
