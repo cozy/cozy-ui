@@ -14,6 +14,16 @@ const options = [
 <SelectBox options={options} />
 ```
 
+For example if you want to force the menu to be open:
+
+```
+const options = [
+  { value: 'chocolate', label: 'Chocolate' }
+];
+
+<SelectBox options={options} menuIsOpen />
+```
+
 ### Custom control component
 
 You can use the `reactSelectControl` HOC to turn an existing, custom component into the control button for the `Select`:

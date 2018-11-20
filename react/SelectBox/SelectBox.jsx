@@ -50,8 +50,12 @@ const customStyles = {
   })
 }
 
-const reactSelectControl = CustomControl => ({ innerProps, children }) => (
-  <div {...innerProps}>
+const reactSelectControl = CustomControl => ({
+  innerProps,
+  innerRef,
+  children
+}) => (
+  <div {...innerProps} ref={innerRef}>
     {CustomControl}
     <div className={styles['select-control__input']}>{children}</div>
   </div>
@@ -63,10 +67,12 @@ const Option = ({
   isFocused,
   isDisabled,
   innerProps,
+  innerRef,
   withCheckbox
 }) => (
   <div
     {...innerProps}
+    ref={innerRef}
     className={classNames(styles['select-option'], {
       [styles['select-option--selected']]: isSelected && !withCheckbox,
       [styles['select-option--focused']]: isFocused,
