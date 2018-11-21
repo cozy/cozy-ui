@@ -1,0 +1,169 @@
+@require '../tools/mixins'
+@require '../settings/breakpoints'
+@require '../settings/palette'
+@require '../components/forms'
+
+// Wizard layout
+$wizard
+    position fixed
+    top 0
+    left 0
+    height 100%
+    display flex
+    justify-content center
+    align-items center
+    width 100%
+    background-color white
+    color charcoalGrey
+    text-align center
+
+$wizard-wrapper
+    display flex
+    flex-direction column
+    width 100%
+    height 100%
+    justify-content space-between
+    max-width rem(520)
+    padding 0 rem(16)
+    text-align left
+
+    +small-screen('min')
+        height auto
+
+$wizard-wrapper--welcome
+    height auto
+
+$wizard-header
+    flex 0 0 auto
+
+$wizard-main
+    padding 0 rem(4)
+    width 100%
+    box-sizing border-box
+
+$wizard-footer
+    display flex
+    flex-wrap wrap
+    flex 0 0 auto
+    padding-bottom env(safe-area-inset-bottom)
+
+    & > button // @stylint ignore
+    & > a:link // @stylint ignore
+        flex 1 1 100%
+
+
+$wizard-footer--welcome
+    & > button // @stylint ignore
+    & > a:link // @stylint ignore
+        flex 1 0 40%
+        margin 0 rem(4) rem(8)
+
+// Wizard elements
+$wizard-logo
+    position relative
+    margin 0 auto
+    width rem(120)
+    height rem(120)
+
+$wizard-logo-img
+    width 100%
+
+$wizard-logo-badge
+    display flex
+    align-items center
+    justify-content center
+    position absolute
+    bottom rem(6)
+    right rem(16)
+    width rem(32)
+    height rem(32)
+    background-color dodgerBlue
+    border .125rem solid white
+    border-radius 50%
+
+$wizard-previous
+    position fixed
+    top rem(10)
+    left rem(16)
+    margin 0
+    color coolGrey
+
+$wizard-next
+    padding-right rem(48)
+    padding-left rem(48)
+    svg
+        position absolute
+        right rem(16)
+
+$wizard-title
+    text-align center
+    font-size rem(32)
+    +small-screen()
+        font-size rem(18)
+        line-height 1.78
+
+$wizard-title--welcome
+    +small-screen()
+        font-size rem(24)
+        line-height 1.17
+
+$wizard-dualfield
+    display flex
+    flex-direction row
+    border rem(1) solid silver
+    border-radius rem(2)
+
+$wizard-protocol
+    display flex
+    align-items center
+    background-color paleGrey
+    border-right rem(1) solid silver
+    padding 0 rem(16)
+
+    svg
+        fill currentColor
+        margin-right rem(8)
+
+$wizard-select
+    @extend $select
+    flex 0 0 auto
+    width rem(148)
+    border-color transparent
+    padding-left rem(8)
+    &:focus
+        position relative
+        z-index 1
+        outline rem(1) solid dodgerBlue
+
+$wizard-select--medium
+    @extend $select--medium
+    padding-left rem(8)
+
+$wizard-input
+    flex 1 1 auto
+    border-color transparent
+    padding-right rem(8)
+    &:focus
+        position relative
+        z-index 1
+        outline rem(1) solid dodgerBlue
+
+$wizard-notice
+    margin     rem(8) 0
+    +small-screen('min')
+        margin rem(32) 0
+
+$wizard-notice--error
+    color pomegranate
+    font-size rem(12)
+    font-style italic
+
+$wizard-notice--lost
+    font-size rem(16)
+
+    a
+        color dodgerBlue
+        text-decoration none
+
+        &:hover
+            color scienceBlue
