@@ -32,7 +32,7 @@
     "prepush": "[[ $(git rev-parse --abbrev-ref HEAD) != 'gh-pages' ]] && yarn lint || true",
     "test": "npm-run-all --serial lint test:jest",
     "test:jest": "env BABEL_ENV=transpilation jest --verbose --coverage",
-    "transpile": "env BABEL_ENV=transpilation babel react/ --out-dir transpiled/react --copy-files",
+    "transpile": "env BABEL_ENV=transpilation babel react/ --out-dir transpiled/react --copy-files --ignore '**/test/**,**/__mocks__/**'",
     "sprite": "scripts/make-icon-sprite.sh transpiled/react/Icon/icons-sprite.js; cp transpiled/react/Icon/icons-sprite.js react/Icon/icons-sprite.js",
     "copy-files": "scripts/copy-files.sh",
     "release": "yarn transpile; yarn sprite; yarn copy-files",
