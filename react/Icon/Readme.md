@@ -10,7 +10,7 @@ your applicaiton.
 
 ```
 const Sprite = require('./Sprite').default;
-const colors = ['#297EF2', '#08b442', '#B449E7', '#F52D2D', '#FF962F']
+const colors = ['dodgerBlue', '#08b442', 'barney', '#F52D2D', '#FF962F', 'paleGrey']
 let i = 0
 const availableIcons = ['album-add', 'album-remove', 'album', 'arrow', 'back', 'bottom-select', 'bottom', 'calendar', 'check 2', 'check-circleless', 'check', 'clock', 'connector', 'cozy-negative', 'cozy', 'cross-white', 'cross', 'cube', 'dash', 'delete-grey08', 'delete', 'destroy', 'device-laptop', 'dots-white', 'dots', 'download', 'exchange', 'file-none', 'file', 'folder', 'forward', 'gear', 'help', 'hourglass', 'image', 'moveto', 'openwith', 'paperplane', 'people', 'phone-download', 'plus', 'rename', 'restore', 'share-grey08', 'share', 'small-arrow', 'spinner-blue', 'spinner-grey', 'spinner-red', 'spinner-white', 'spinner', 'top-select', 'top', 'trash', 'upload-grey08', 'upload', 'warn', 'warning'];
 
@@ -45,7 +45,7 @@ to load your SVG (either explicitly or, better, implicitly in your `webpack.conf
 
 ```jsx static
 
-import myIcon from 'my-icon.svg' 
+import myIcon from 'my-icon.svg'
 
 <Icon icon={ myIcon } width={32} height={32} color='purple' />
 ```

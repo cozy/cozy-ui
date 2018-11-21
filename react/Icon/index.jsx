@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import cx from 'classnames'
+import palette from '../palette'
 
 const DEFAULT_SIZE = '16'
 
@@ -35,7 +36,7 @@ function Icon(props) {
 
   style = Object.assign({}, style)
   if (color) {
-    style['fill'] = color
+    style['fill'] = palette[color] || color
   }
   if (rotate) {
     style['transform'] = `rotate(${rotate}deg)`
