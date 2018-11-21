@@ -37,7 +37,7 @@
     "release": "yarn transpile; yarn sprite; yarn copy-files",
     "semantic-release": "semantic-release",
     "sprite": "scripts/make-icon-sprite.sh transpiled/react/Icon/icons-sprite.js; cp transpiled/react/Icon/icons-sprite.js react/Icon/icons-sprite.js",
-    "test": "npm-run-all --serial lint test:jest",
+    "test": "yarn test:jest",
     "test:jest": "env BABEL_ENV=transpilation jest --verbose --coverage",
     "transpile": "env BABEL_ENV=transpilation babel react/ --out-dir transpiled/react --copy-files --ignore '**/test/**,**/__mocks__/**'",
     "travis-deploy-once": "travis-deploy-once",
