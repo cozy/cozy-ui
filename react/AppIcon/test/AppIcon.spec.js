@@ -31,17 +31,12 @@ describe('AppIcon component', () => {
 
   it(`renders as loading`, () => {
     const wrapper = shallow(
-      <AppIcon
-        app={app}
-        domain={domain}
-        fetchIcon={successFetchIcon}
-        secure={secure}
-      />
+      <AppIcon app={app} fetchIcon={successFetchIcon} secure={secure} />
     )
 
     const component = wrapper.getElement()
     expect(component).toMatchSnapshot()
-    expect(successFetchIcon).toHaveBeenCalledWith(app, domain, secure)
+    expect(successFetchIcon).toHaveBeenCalledWith(app, undefined, secure)
     expect(console.error).toHaveBeenCalledTimes(0)
   })
 
@@ -49,13 +44,12 @@ describe('AppIcon component', () => {
     const wrapper = shallow(
       <AppIcon
         app={app}
-        domain={domain}
         fetchIcon={successFetchIcon}
         onReady={() => {
           wrapper.update()
           const component = wrapper.getElement()
           expect(component).toMatchSnapshot()
-          expect(successFetchIcon).toHaveBeenCalledWith(app, domain, secure)
+          expect(successFetchIcon).toHaveBeenCalledWith(app, undefined, secure)
           expect(console.error).toHaveBeenCalledTimes(0)
           done()
         }}
@@ -68,13 +62,12 @@ describe('AppIcon component', () => {
     const wrapper = shallow(
       <AppIcon
         app={app}
-        domain={domain}
         fetchIcon={failureFetchIcon}
         onReady={() => {
           wrapper.update()
           const component = wrapper.getElement()
           expect(component).toMatchSnapshot()
-          expect(failureFetchIcon).toHaveBeenCalledWith(app, domain, secure)
+          expect(failureFetchIcon).toHaveBeenCalledWith(app, undefined, secure)
           expect(console.error).toHaveBeenCalledTimes(0)
           done()
         }}
@@ -90,12 +83,11 @@ describe('AppIcon component', () => {
     const wrapper = shallow(
       <AppIcon
         app={app}
-        domain={domain}
         onReady={() => {
           wrapper.update()
           const component = wrapper.getElement()
           expect(component).toMatchSnapshot()
-          expect(Preloader.preload).toHaveBeenCalledWith(app, domain, secure)
+          expect(Preloader.preload).toHaveBeenCalledWith(app, undefined, secure)
           expect(console.error).toHaveBeenCalledTimes(0)
           done()
         }}
@@ -112,7 +104,6 @@ describe('AppIcon component', () => {
     shallow(
       <AppIcon
         app={app}
-        domain={domain}
         onReady={() => {
           const wrapper = shallow(
             <AppIcon app={app} domain={domain} secure={secure} />

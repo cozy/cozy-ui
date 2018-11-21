@@ -1,6 +1,8 @@
 const _loaded = {}
 
 export const preload = async (app, domain, secure) => {
+  if (!domain) throw new Error('Cannot fetch icon: missing domain')
+
   const source = _getAppIconURL(app, domain, secure)
 
   if (!source) {
@@ -32,7 +34,7 @@ const _getProtocol = (secure = true) => {
 }
 
 const _getAppIconURL = (app, domain, secure) => {
-  if (!domain) throw new Error('Cannot fetch icon: missing domain')
+  if (!domain) return null
 
   let path = _getInstalledIconPath(app)
   path = path || _getRegistryIconPath(app)

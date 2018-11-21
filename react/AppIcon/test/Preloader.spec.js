@@ -42,6 +42,24 @@ describe('Preloader', () => {
     console.error = jest.fn()
   })
 
+  describe('getPreloaded', () => {
+    it('returns null when no domain is specified', () => {
+      expect(getPreloaded(app)).toBeNull()
+    })
+
+    it('returns already loaded icon URL', async () => {
+      await preload(app, domain)
+      expect(getPreloaded(app, domain)).toBe(
+        'https://cozy.tools/apps/test/icon'
+      )
+    })
+
+    it('returns null for not already loaded icon URL', () => {
+      const getPreloaded = require('../Preloader').getPreloaded
+      expect(getPreloaded(app, domain)).toBeNull()
+    })
+  })
+
   describe('preload', () => {
     it('returns the expected url', async () => {
       await expect(preload(app, domain)).resolves.toEqual(
@@ -82,18 +100,6 @@ describe('Preloader', () => {
       await expect(preload(app, null)).rejects.toEqual(
         new Error('Cannot fetch icon: missing domain')
       )
-    })
-
-    it('returns already loaded icon URL', async () => {
-      await preload(app, domain)
-      expect(getPreloaded(app, domain)).toBe(
-        'https://cozy.tools/apps/test/icon'
-      )
-    })
-
-    it('returns null for not already loaded icon URL', () => {
-      const getPreloaded = require('../Preloader').getPreloaded
-      expect(getPreloaded(app, domain)).toBeNull()
     })
   })
 })
