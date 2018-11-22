@@ -17,8 +17,9 @@ exports[`AppIcon component renders correctly 1`] = `
 exports[`AppIcon component renders default when fetch error occurs 1`] = `
 <Icon
   className="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt"
+  color="#95999D"
   height="100%"
-  icon="test-file-stub"
+  icon="cube"
   spin={false}
   width="100%"
 />

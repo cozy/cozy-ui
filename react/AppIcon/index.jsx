@@ -4,8 +4,8 @@ import classNames from 'classnames'
 import styles from './styles.styl'
 
 import Icon from '../Icon'
+import palette from '../palette'
 
-import appDefaultIcon from '../../assets/icons/ui/cube.svg'
 import { getPreloaded, preload } from './Preloader'
 
 const DONE = 'done'
@@ -82,8 +82,9 @@ export class AppIcon extends Component {
               className
             )}
             height="100%"
-            icon={appDefaultIcon}
+            icon="cube"
             width="100%"
+            color={palette['coolGrey']}
           />
         )
     }
