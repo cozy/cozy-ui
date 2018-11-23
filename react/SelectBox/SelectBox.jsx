@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
 import ReactSelect from 'react-select'
 import styles from './styles.styl'
 import Icon from '../Icon'
@@ -73,7 +72,7 @@ const Option = ({
   <div
     {...innerProps}
     ref={innerRef}
-    className={classNames(styles['select-option'], {
+    className={cx(styles['select-option'], {
       [styles['select-option--selected']]: isSelected && !withCheckbox,
       [styles['select-option--focused']]: isFocused,
       [styles['select-option--disabled']]: isDisabled
@@ -82,17 +81,22 @@ const Option = ({
     {withCheckbox && (
       <input
         type="checkbox"
+        readOnly
         checked={isSelected}
         className={styles['select-option__checkbox']}
       />
     )}
-    {children}
-    {isSelected && !withCheckbox && (
-      <Icon
-        icon="check-circleless"
-        color={palette['dodgerBlue']}
-        className={styles['select-option--checkmark']}
-      />
+    <span className={styles['select-option__label']}>{children}</span>
+    {!withCheckbox && (
+      <span className={styles['select-option__checkmark']}>
+        {isSelected && (
+          <Icon
+            icon="check-circleless"
+            color={palette['dodgerBlue']}
+            className="u-ph-half"
+          />
+        )}
+      </span>
     )}
   </div>
 )
@@ -108,6 +112,39 @@ Option.defaultProps = {
 const CheckboxOption = ({ ...props }) => <Option {...props} withCheckbox />
 
 CheckboxOption.propTypes = {}
+
+const ActionsOption = ({ actions, ...props }) => (
+  <Option {...props}>
+    {props.children}
+    <span className={styles['select-option__actions']}>
+      {actions.map((action, index) => (
+        <Icon
+          key={index}
+          icon={action.icon}
+          color={props.isFocused ? palette['coolGrey'] : palette['silver']}
+          className="u-ph-half"
+          onClick={e => {
+            e.stopPropagation()
+            action.onClick(props)
+          }}
+        />
+      ))}
+    </span>
+  </Option>
+)
+
+ActionsOption.propTypes = {
+  actions: PropTypes.arrayOf(
+    PropTypes.shape({
+      icon: PropTypes.string,
+      onClick: PropTypes.func
+    })
+  )
+}
+
+ActionsOption.defaultProps = {
+  actions: []
+}
 
 class SelectBox extends Component {
   state = { isOpen: false }
@@ -162,4 +199,4 @@ SelectBox.defaultProps = {
 const components = ReactSelect.components
 
 export default withBreakpoints()(SelectBox)
-export { Option, CheckboxOption, reactSelectControl, components }
+export { Option, CheckboxOption, ActionsOption, reactSelectControl, components }

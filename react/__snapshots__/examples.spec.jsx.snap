@@ -974,7 +974,7 @@ exports[`SelectBox should render examples: SelectBox 2`] = `
     </div>
     <div class=\\"css-1dhof61\\">
       <div class=\\"css-11unzgr\\">
-        <div id=\\"react-select-3-option-0\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">Chocolate</div>
+        <div id=\\"react-select-3-option-0\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">Chocolate</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
       </div>
     </div>
   </div>
@@ -1045,39 +1045,6 @@ exports[`SelectBox should render examples: SelectBox 5`] = `
           </svg></div>
       </div>
     </div>
-    <div>
-      <div class=\\"css-2msmlm\\">
-        <div class=\\"css-11unzgr\\">
-          <div id=\\"react-select-6-option-0\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">A</div>
-          <div id=\\"react-select-6-option-1\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">B</div>
-          <div id=\\"react-select-6-option-2\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">C</div>
-          <div id=\\"react-select-6-option-3\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">D</div>
-          <div id=\\"react-select-6-option-4\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">E</div>
-          <div id=\\"react-select-6-option-5\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">F</div>
-          <div id=\\"react-select-6-option-6\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">G</div>
-          <div id=\\"react-select-6-option-7\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">H</div>
-          <div id=\\"react-select-6-option-8\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">I</div>
-          <div id=\\"react-select-6-option-9\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">J</div>
-          <div id=\\"react-select-6-option-10\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">K</div>
-          <div id=\\"react-select-6-option-11\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">L</div>
-          <div id=\\"react-select-6-option-12\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">M</div>
-          <div id=\\"react-select-6-option-13\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">N</div>
-          <div id=\\"react-select-6-option-14\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">O</div>
-          <div id=\\"react-select-6-option-15\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">P</div>
-          <div id=\\"react-select-6-option-16\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">Q</div>
-          <div id=\\"react-select-6-option-17\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">R</div>
-          <div id=\\"react-select-6-option-18\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">S</div>
-          <div id=\\"react-select-6-option-19\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">T</div>
-          <div id=\\"react-select-6-option-20\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">U</div>
-          <div id=\\"react-select-6-option-21\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">V</div>
-          <div id=\\"react-select-6-option-22\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">W</div>
-          <div id=\\"react-select-6-option-23\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">X</div>
-          <div id=\\"react-select-6-option-24\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">Y</div>
-          <div id=\\"react-select-6-option-25\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\">Z</div>
-        </div>
-        <div style=\\"border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; padding-top: 0.25rem; padding-bottom: 0.25rem; border-top: 1px solid #D6D8Da; background: white; position: relative;\\"></div>
-      </div>
-    </div>
   </div>
 </div>"
 `;
@@ -1086,10 +1053,65 @@ exports[`SelectBox should render examples: SelectBox 6`] = `
 "<div>
   <div class=\\"css-1h8pu2y\\">
     <div class=\\"css-1scqv3c\\">
-      <div class=\\"css-1phseng needsclick\\">
+      <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
           <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-7-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
+            <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
+          </div>
+        </div>
+      </div>
+      <div class=\\"css-1wy0on6\\"><span class=\\"css-1hyfx7x\\"></span>
+        <div aria-hidden=\\"true\\" class=\\"css-kww5l\\"><svg height=\\"20\\" width=\\"20\\" viewBox=\\"0 0 20 20\\" aria-hidden=\\"true\\" focusable=\\"false\\" class=\\"css-19bqh2r\\">
+            <path d=\\"M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z\\"></path>
+          </svg></div>
+      </div>
+    </div>
+    <div>
+      <div class=\\"css-2msmlm\\">
+        <div class=\\"css-11unzgr\\">
+          <div id=\\"react-select-7-option-0\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">A</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-1\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">B</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-2\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">C</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-3\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">D</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-4\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">E</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-5\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">F</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-6\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">G</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-7\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">H</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-8\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">I</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-9\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">J</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-10\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">K</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-11\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">L</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-12\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">M</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-13\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">N</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-14\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">O</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-15\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">P</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-16\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">Q</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-17\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">R</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-18\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">S</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-19\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">T</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-20\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">U</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-21\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">V</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-22\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">W</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-23\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">X</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-24\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">Y</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+          <div id=\\"react-select-7-option-25\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\">Z</span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+        </div>
+        <div style=\\"border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; padding-top: 0.25rem; padding-bottom: 0.25rem; border-top: 1px solid #D6D8Da; background: white; position: relative;\\"></div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`SelectBox should render examples: SelectBox 7`] = `
+"<div>
+  <div class=\\"css-1h8pu2y\\">
+    <div class=\\"css-1scqv3c\\">
+      <div class=\\"css-1phseng needsclick\\">
+        <div class=\\"css-1492t68\\">Select...</div>
+        <div class=\\"css-1g6gooi\\">
+          <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-8-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
             <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
           </div>
         </div>
