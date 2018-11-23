@@ -79,8 +79,8 @@ const options = [
 ];
 
 const CustomOption = (props) => (<ActionsOption {...props} actions={[
-    { icon: 'delete', handler: () => alert('deleting') },
-    { icon: 'rename', handler: ({ data }) => alert(data.value) }
+    { icon: 'delete', onClick: () => alert('deleting') },
+    { icon: 'rename', onClick: ({ data }) => alert(data.value) }
   ]} />);
 
 <SelectBox options={options} components={{

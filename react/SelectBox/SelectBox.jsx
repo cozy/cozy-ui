@@ -81,6 +81,7 @@ const Option = ({
     {withCheckbox && (
       <input
         type="checkbox"
+        readOnly
         checked={isSelected}
         className={styles['select-option__checkbox']}
       />
@@ -124,7 +125,7 @@ const ActionsOption = ({ actions, ...props }) => (
           className="u-ph-half"
           onClick={e => {
             e.stopPropagation()
-            action.handler(props)
+            action.onClick(props)
           }}
         />
       ))}
@@ -133,11 +134,16 @@ const ActionsOption = ({ actions, ...props }) => (
 )
 
 ActionsOption.propTypes = {
-  actions: PropTypes.objectOf(PropTypes.func)
+  actions: PropTypes.arrayOf(
+    PropTypes.shape({
+      icon: PropTypes.string,
+      onClick: PropTypes.func
+    })
+  )
 }
 
 ActionsOption.defaultProps = {
-  actions: {}
+  actions: []
 }
 
 class SelectBox extends Component {
