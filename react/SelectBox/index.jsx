@@ -4,6 +4,7 @@ export {
   default,
   Option,
   CheckboxOption,
+  ActionsOption,
   reactSelectControl
 } from './SelectBox'
 

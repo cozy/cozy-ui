@@ -37,7 +37,7 @@ const options = [
   { value: 'vanilla', label: 'Vanilla' }
 ];
 
-<SelectBox 
+<SelectBox
   options={options}
   components={{
     Control: reactSelectControl(MyControl)
@@ -57,13 +57,35 @@ const options = [
   { value: 'vanilla', label: 'Vanilla' }
 ];
 
-<SelectBox 
+<SelectBox
   options={options}
   isMulti
   components={{
     Option: CheckboxOption
   }}
 />
+```
+
+### Options with actions
+
+You can display additional actions inside an Option with the ActionsOption component.
+
+```
+const ActionsOption = require('../SelectBox').ActionsOption;
+const options = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry', isDisabled: true },
+  { value: 'vanilla', label: 'Vanilla' }
+];
+
+const CustomOption = (props) => (<ActionsOption {...props} actions={[
+    { icon: 'delete', handler: () => alert('deleting') },
+    { icon: 'rename', handler: ({ data }) => alert(data.value) }
+  ]} />);
+
+<SelectBox options={options} components={{
+  Option: CustomOption
+}} />
 ```
 
 ### Fixed options
@@ -75,7 +97,7 @@ const options = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(x => ({ value:x, labe
 options[0].fixed = true
 options[options.length - 1].fixed = true;
 
-<SelectBoxWithFixedOptions 
+<SelectBoxWithFixedOptions
   menuIsOpen={isTesting ? true : undefined}
   options={options} />
 ```

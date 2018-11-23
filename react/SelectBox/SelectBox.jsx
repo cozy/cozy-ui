@@ -85,13 +85,17 @@ const Option = ({
         className={styles['select-option__checkbox']}
       />
     )}
-    {children}
-    {isSelected && !withCheckbox && (
-      <Icon
-        icon="check-circleless"
-        color={palette['dodgerBlue']}
-        className={styles['select-option--checkmark']}
-      />
+    <span className={styles['select-option__label']}>{children}</span>
+    {!withCheckbox && (
+      <span className={styles['select-option__checkmark']}>
+        {isSelected && (
+          <Icon
+            icon="check-circleless"
+            color={palette['dodgerBlue']}
+            className="u-ph-half"
+          />
+        )}
+      </span>
     )}
   </div>
 )
@@ -107,6 +111,34 @@ Option.defaultProps = {
 const CheckboxOption = ({ ...props }) => <Option {...props} withCheckbox />
 
 CheckboxOption.propTypes = {}
+
+const ActionsOption = ({ actions, ...props }) => (
+  <Option {...props}>
+    {props.children}
+    <span className={styles['select-option__actions']}>
+      {actions.map((action, index) => (
+        <Icon
+          key={index}
+          icon={action.icon}
+          color={props.isFocused ? palette['coolGrey'] : palette['silver']}
+          className="u-ph-half"
+          onClick={e => {
+            e.stopPropagation()
+            action.handler(props)
+          }}
+        />
+      ))}
+    </span>
+  </Option>
+)
+
+ActionsOption.propTypes = {
+  actions: PropTypes.objectOf(PropTypes.func)
+}
+
+ActionsOption.defaultProps = {
+  actions: {}
+}
 
 class SelectBox extends Component {
   state = { isOpen: false }
@@ -161,4 +193,4 @@ SelectBox.defaultProps = {
 const components = ReactSelect.components
 
 export default withBreakpoints()(SelectBox)
-export { Option, CheckboxOption, reactSelectControl, components }
+export { Option, CheckboxOption, ActionsOption, reactSelectControl, components }
