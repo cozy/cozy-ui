@@ -39,6 +39,7 @@
     "test": "npm-run-all --serial lint test:jest",
     "test:jest": "env BABEL_ENV=transpilation jest --verbose --coverage",
     "transpile": "env BABEL_ENV=transpilation babel react/ --out-dir transpiled/react --copy-files --ignore '**/test/**,**/__mocks__/**'",
+    "svgr": "svgr --icon --no-dimensions --prettier-config .prettierrc.json -d 'react/_icons' 'assets/icons/ui'",
     "travis-deploy-once": "travis-deploy-once",
     "watch:css": "yarn build:css --watch",
     "watch:doc:react": "env BABEL_ENV=transpilation styleguidist server --config docs/styleguide.config.js"
@@ -47,6 +48,7 @@
     "@semantic-release/changelog": "^2.0.2",
     "@semantic-release/git": "^5.0.0",
     "@semantic-release/npm": "^3.3.1",
+    "@svgr/cli": "^4.0.3",
     "autoprefixer-stylus": "^0.14.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.22.1",
