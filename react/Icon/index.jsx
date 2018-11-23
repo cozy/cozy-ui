@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import cx from 'classnames'
+import toPascalCase from 'to-pascal-case'
+import * as iconsIndex from './icons'
 
 const DEFAULT_SIZE = '16'
 
@@ -16,19 +18,31 @@ function Icon(props) {
     rotate,
     size,
     spin,
+    forceSprite,
     ...restProps
   } = props
   let style = props.style
   let anchor
+  let IconComponent
   if (icon.id) {
     anchor = `#${icon.id}`
   } else if (icon[0] === '#') {
     anchor = icon
-  } else {
+  } else if (forceSprite) {
     anchor = '#' + icon
+  } else {
+    // this is not an id or a Symbol, we use SVG components from cozy-ui
+    try {
+      IconComponent = iconsIndex[toPascalCase(icon)]
+    } catch (e) {
+      console.warn(
+        `SVG Component '${icon}' not found, will use a #${icon} id instead`
+      )
+      anchor = '#' + icon
+    }
   }
 
-  if (!anchor) {
+  if (!anchor && !IconComponent) {
     console.warn(`Icon not found ${icon}.`)
     return null
   }
@@ -46,17 +60,29 @@ function Icon(props) {
     [styles['icon--spin']]: spin
   })
 
-  return (
-    <svg
-      className={iconClass}
-      style={style}
-      width={width || size || DEFAULT_SIZE}
-      height={height || size || DEFAULT_SIZE}
-      {...restProps}
-    >
-      <use xlinkHref={anchor} />
-    </svg>
-  )
+  if (IconComponent) {
+    return (
+      <IconComponent
+        className={iconClass}
+        style={style}
+        width={width || size || DEFAULT_SIZE}
+        height={height || size || DEFAULT_SIZE}
+        {...restProps}
+      />
+    )
+  } else {
+    return (
+      <svg
+        className={iconClass}
+        style={style}
+        width={width || size || DEFAULT_SIZE}
+        height={height || size || DEFAULT_SIZE}
+        {...restProps}
+      >
+        <use xlinkHref={anchor} />
+      </svg>
+    )
+  }
 }
 
 Icon.isProperIcon = icon => {
@@ -74,7 +100,8 @@ Icon.propTypes = {
   preserveColor: PropTypes.bool,
   /** Shorthand for both width and height */
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  spin: PropTypes.bool
+  spin: PropTypes.bool,
+  forceSprite: PropTypes.bool // force using sprite and no SVG components
 }
 
 Icon.defaultProps = {
