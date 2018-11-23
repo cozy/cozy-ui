@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
 import ReactSelect from 'react-select'
 import styles from './styles.styl'
 import Icon from '../Icon'
@@ -73,7 +72,7 @@ const Option = ({
   <div
     {...innerProps}
     ref={innerRef}
-    className={classNames(styles['select-option'], {
+    className={cx(styles['select-option'], {
       [styles['select-option--selected']]: isSelected && !withCheckbox,
       [styles['select-option--focused']]: isFocused,
       [styles['select-option--disabled']]: isDisabled
