@@ -14,6 +14,7 @@
   },
   "homepage": "https://github.com/cozy/cozy-ui",
   "scripts": {
+    "postinstall": "yarn svgComp",
     "build:css": "stylus -c --include stylus -o dist/cozy-ui.min.css stylus/cozy-ui/build.styl --use ./node_modules/autoprefixer-stylus --with \"{ browsers: ['last 2 versions'] }\" --include-css",
     "build:css:app": "stylus --include stylus -o build/styleguide/app.css stylus/cozy-ui/build.styl --use ./node_modules/autoprefixer-stylus --with \"{ browsers: ['last 2 versions'] }\" --include-css",
     "build:doc": "npm-run-all 'build:doc:*'",
@@ -33,13 +34,13 @@
     "prebuild:doc:kss": "run-s clean:doc:kss build:css:app",
     "prepublishOnly": "yarn release",
     "prepush": "[[ $(git rev-parse --abbrev-ref HEAD) != 'gh-pages' ]] && yarn lint || true",
-    "release": "yarn transpile; yarn sprite; yarn copy-files",
+    "release": "npm-run-all --sequential transpile sprite copy-files",
     "semantic-release": "semantic-release",
     "sprite": "scripts/make-icon-sprite.sh transpiled/react/Icon/icons-sprite.js; cp transpiled/react/Icon/icons-sprite.js react/Icon/icons-sprite.js",
     "test": "npm-run-all --serial lint test:jest",
     "test:jest": "env BABEL_ENV=transpilation jest --verbose --coverage",
     "transpile": "env BABEL_ENV=transpilation babel react/ --out-dir transpiled/react --copy-files --ignore '**/test/**,**/__mocks__/**'",
-    "svgr": "svgr --icon --no-dimensions --prettier-config .prettierrc.json -d 'react/_icons' 'assets/icons/ui'",
+    "svgComp": "svgr --icon --no-dimensions --prettier-config .prettierrc.json -d 'react/_icons' 'assets/icons/ui'",
     "travis-deploy-once": "travis-deploy-once",
     "watch:css": "yarn build:css --watch",
     "watch:doc:react": "env BABEL_ENV=transpilation styleguidist server --config docs/styleguide.config.js"
