@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import cx from 'classnames'
-import toPascalCase from 'to-pascal-case'
 import * as iconsIndex from './icons'
+import toPascalCase from 'to-pascal-case'
 
 const DEFAULT_SIZE = '16'
 
@@ -40,9 +40,10 @@ function Icon(props) {
       )
       anchor = '#' + icon
     }
+    if (!IconComponent) anchor = '#' + icon
   }
 
-  if (!anchor && !IconComponent) {
+  if (!anchor) {
     console.warn(`Icon not found ${icon}.`)
     return null
   }
