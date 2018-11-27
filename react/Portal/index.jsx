@@ -1,7 +1,12 @@
-const ReactDOM = require('react-dom')
-const Portal = ({ into, children }) => {
-  const targetElement = document.querySelector(into)
-  return ReactDOM.createPortal(children, targetElement)
+let Portal
+if (process.env.USE_REACT) {
+  const ReactDOM = require('react-dom')
+  Portal = ({ into, children }) => {
+    const targetElement = document.querySelector(into)
+    return ReactDOM.createPortal(children, targetElement)
+  }
+} else {
+  Portal = require('preact-portal')
 }
 
 export default Portal
