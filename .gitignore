@@ -21,3 +21,6 @@ desktop.ini
 
 .cache
 transpiled
+
+react/Icon/icons-sprite.js
+react/palette.js
