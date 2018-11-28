@@ -3,85 +3,52 @@ import React from 'react'
 import groupBy from 'lodash/groupBy'
 
 import SelectBox from './SelectBox'
-import { silver } from '../palette'
+import styles from './styles.styl'
 
-const optionPadding = 0.25
-
-const fixedOptionsStyle = {
-  borderBottomLeftRadius: '4px',
-  borderBottomRightRadius: '4px',
-  paddingTop: optionPadding + 'rem',
-  paddingBottom: optionPadding + 'rem',
-  borderTop: `1px solid ${silver}`,
-  background: 'white',
-  position: 'relative'
+const Group = props => {
+  return (
+    <components.Group
+      {...props}
+      className={props.data.isFixed ? styles.FixedGroup : styles.Group}
+    />
+  )
 }
 
-const FixedOptions = props => (
-  <div style={fixedOptionsStyle}>{props.children}</div>
+const MenuList = props => (
+  <components.MenuList {...props} className={styles.MenuList} />
 )
 
-/*
-  This is the hacky part, where fixed options vnodes are manually spliced
-  from the options vnodes. Fixed options vnodes are returned along with
-  the menuUi where fixed vnodes have been removed.
+const Nothing = () => null
 
-  We rely on react-select internal structure `menu > scroll captor > menu list > options`.
-  This code should be updated if react-select's internal structure changes.
-
-  https://github.com/cozy/cozy-ui/pull/501
-*/
-const extractFixed = children => {
-  const newChildren = React.cloneElement(children)
-  const menuList = newChildren.children ? newChildren.children[0] : null
-  if (!menuList) {
-    return { fixed: [], newChildren }
-  }
-  const options = menuList.children
-  const { fixed, normal } = groupBy(options, vnode =>
-    vnode.attributes.data.fixed === true ? 'fixed' : 'normal'
+const groupByFixed = options => {
+  const { fixed = [], normal = [] } = groupBy(options, o =>
+    o.fixed ? 'fixed' : 'normal'
   )
-  newChildren.children[0].children = normal
-  return { fixed, newChildren }
-}
-
-const MenuWithFixedOptions = props => {
-  const { children } = props
-  const { fixed, newChildren: menuUi } = extractFixed(children)
-  return (
-    <div>
-      <components.Menu {...props}>
-        {menuUi}
-        <FixedOptions>{fixed}</FixedOptions>
-      </components.Menu>
-    </div>
-  )
-}
-
-const fixedMenuStyle = {
-  zIndex: 10,
-  overflow: 'hidden',
-  // the space at the end is important otherwise the property gets autoprefixed (by what, I
-  // don't know) and is no longer understood by the browser
-  display: 'flex ',
-  flexDirection: 'column'
+  return [
+    { label: 'normal', options: normal },
+    { label: 'fixed', isFixed: true, options: fixed }
+  ]
 }
 
 const SelectBoxWithFixedOptions = props => (
   <SelectBox
     {...props}
+    options={groupByFixed(props.options)}
     styles={{
-      menu: base => ({
-        ...base,
-        ...fixedMenuStyle
-      }),
-      ...(props.styles || {})
+      ...props.styles
     }}
     components={{
-      Menu: MenuWithFixedOptions,
-      ...(props.components || {})
+      MenuList: MenuList,
+      GroupHeading: Nothing,
+      Group,
+      ...props.components
     }}
   />
 )
+
+SelectBoxWithFixedOptions.defaultProps = {
+  styles: {},
+  components: {}
+}
 
 export default SelectBoxWithFixedOptions
