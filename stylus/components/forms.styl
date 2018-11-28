@@ -241,7 +241,7 @@ $label
 $input-text
     display inline-block
     width 100%
-    max-width rem(480)
+    max-width rem(512)
     padding rem(13 16)
     box-sizing border-box
     border-radius rem(3)
@@ -311,13 +311,13 @@ $checkbox
             box-shadow inset 0 0 0 rem(2) dodgerBlue
 
         &::after
-            background-image embedurl('../../assets/icons/ui/check.svg')
+            background-image embedurl('../../assets/icons/ui/check-white.svg')
             background-size contain
             transition-duration .2s
             transition-property opacity, transform
 
     &[aria-checked='mixed'] span::after
-            background-image embedurl('../../assets/icons/ui/dash.svg')
+            background-image embedurl('../../assets/icons/ui/dash-white.svg')
             background-size contain
 
     input

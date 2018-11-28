@@ -33,7 +33,13 @@ $wizard-wrapper
 $wizard-wrapper--welcome
     height auto
 
+$wizard-errors
+    order 1
+    color pomegranate
+
 $wizard-header
+    display flex
+    flex-direction column
     flex 0 0 auto
 
 $wizard-main
@@ -81,6 +87,16 @@ $wizard-logo-badge
     border .125rem solid white
     border-radius 50%
 
+$wizard-header-help
+    order -1
+    margin 0 0 rem(8)
+    font-size rem(18)
+    line-height 1.33
+    text-align center
+    +small-screen()
+        margin rem(20) 0 0
+        font-size rem(16)
+
 $wizard-previous
     position fixed
     top rem(10)
@@ -95,17 +111,59 @@ $wizard-next
         position absolute
         right rem(16)
 
+$wizard-button
+    +small-screen('min')
+        // Cannot @extend $button--large inside a Media Query :(
+        min-height rem(48)
+        min-width rem(160)
+        padding rem(8 24)
+        font-size rem(16)
+
+$wizard-password
+    +small-screen()
+        // Cannot @extend $input-text--medium inside a Media Query :(
+        border-radius rem(2)
+        padding rem(8 16 10)
+
 $wizard-title
+    margin 0 0 rem(8)
     text-align center
     font-size rem(32)
     +small-screen()
+        margin 0
         font-size rem(18)
         line-height 1.78
+
+$wizard-subtitle
+    text-align center
+    font-size rem(16)
+    line-height 1.5
+    color coolGrey
+    margin 0 0 rem(8)
+    +small-screen()
+        font-size rem(14)
+        line-height 1.43
 
 $wizard-title--welcome
     +small-screen()
         font-size rem(24)
         line-height 1.17
+
+$wizard-showbutton
+    position absolute
+    right 0
+    top rem(11)
+    margin 0
+    border 0
+    padding 0
+    min-width auto
+    background-color transparent
+    color coolGrey
+
+    &:hover
+    &:focus
+        background-color inherit
+        color charcoalGrey
 
 $wizard-dualfield
     display flex
@@ -150,6 +208,15 @@ $wizard-input
 
 $wizard-notice
     margin     rem(8) 0
+
+    a
+        color dodgerBlue
+        text-decoration none
+
+        &:hover
+        &:focus
+            color scienceBlue
+
     +small-screen('min')
         margin rem(32) 0
 
@@ -161,9 +228,6 @@ $wizard-notice--error
 $wizard-notice--lost
     font-size rem(16)
 
-    a
-        color dodgerBlue
-        text-decoration none
-
-        &:hover
-            color scienceBlue
+$wizard-notice--remember
+    +small-screen()
+        display none
