@@ -8,7 +8,8 @@ You can use this exactly like you would use `react-select`. See the [official do
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry', isDisabled: true },
-  { value: 'vanilla', label: 'Vanilla' }
+  { value: 'vanilla', label: 'Vanilla' },
+  { value: 'long', label: 'Salt and vinegar crisps with vegamite and brussel sprouts, double chai latte sauce' },
 ];
 
 <SelectBox options={options} />
@@ -75,7 +76,8 @@ const ActionsOption = require('../SelectBox').ActionsOption;
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry', isDisabled: true },
-  { value: 'vanilla', label: 'Vanilla' }
+  { value: 'vanilla', label: 'Vanilla' },
+  { value: 'long', label: 'Salt and vinegar crisps with vegamite and brussel sprouts, double chai latte sauce' }
 ];
 
 const CustomOption = (props) => (<ActionsOption {...props} actions={[

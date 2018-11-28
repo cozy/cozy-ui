@@ -42,13 +42,18 @@
 
 .select-option__label
     flex-grow 1
+    display flex
+    justify-content space-between
+    align-items center
+    width 100%
+    overflow hidden
 
 .select-option__checkmark
     width rem(32)
 
 .select-option__actions
-    float right
     opacity 0
+    white-space nowrap
     transition opacity .2s ease-out
 
     +medium-screen()

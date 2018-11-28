@@ -67,6 +67,7 @@ const Option = ({
   isDisabled,
   innerProps,
   innerRef,
+  labelComponent,
   withCheckbox
 }) => (
   <div
@@ -86,7 +87,12 @@ const Option = ({
         className={styles['select-option__checkbox']}
       />
     )}
-    <span className={styles['select-option__label']}>{children}</span>
+    <span className={styles['select-option__label']}>
+      <span className="u-ellipsis">
+        {labelComponent ? labelComponent : children}
+      </span>
+      {labelComponent ? children : false}
+    </span>
     {!withCheckbox && (
       <span className={styles['select-option__checkmark']}>
         {isSelected && (
@@ -102,7 +108,8 @@ const Option = ({
 )
 
 Option.propTypes = {
-  withCheckbox: PropTypes.bool
+  withCheckbox: PropTypes.bool,
+  labelComponent: PropTypes.node
 }
 
 Option.defaultProps = {
@@ -114,8 +121,7 @@ const CheckboxOption = ({ ...props }) => <Option {...props} withCheckbox />
 CheckboxOption.propTypes = {}
 
 const ActionsOption = ({ actions, ...props }) => (
-  <Option {...props}>
-    {props.children}
+  <Option {...props} labelComponent={props.children}>
     <span className={styles['select-option__actions']}>
       {actions.map((action, index) => (
         <Icon
