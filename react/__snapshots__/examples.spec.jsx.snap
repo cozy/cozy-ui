@@ -16,7 +16,7 @@ exports[`Avatar should render examples: Avatar 1`] = `
 
 exports[`Avatar should render examples: Avatar 2`] = `
 "<div>
-  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\" style=\\"background-color: rgb(245, 45, 45); color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
 </div>"
 `;
 
@@ -33,14 +33,14 @@ exports[`Avatar should render examples: Avatar 4`] = `
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <use xlink:href=\\"#people\\"></use>
         </svg></div>
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"background-color: rgb(245, 45, 45); color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
     </div>
     <div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <use xlink:href=\\"#people\\"></use>
         </svg></div>
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\" style=\\"background-color: rgb(245, 45, 45); color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
     </div>
   </div>
@@ -300,6 +300,9 @@ exports[`Icon should render examples: Icon 1`] = `
             <path d=\\"M33.7071068,138.292893 C33.3165825,137.902369 32.6834175,137.902369 32.2928932,138.292893 C31.9023689,138.683418 31.9023689,139.316582 32.2928932,139.707107 L35.2928932,142.707107 C35.6834175,143.097631 36.3165825,143.097631 36.7071068,142.707107 L47.7071068,131.707107 C48.0976311,131.316582 48.0976311,130.683418 47.7071068,130.292893 C47.3165825,129.902369 46.6834175,129.902369 46.2928932,130.292893 L36,140.585786 L33.7071068,138.292893 Z\\"></path>
           </g>
         </symbol>
+        <symbol id=\\"check-white\\" viewBox=\\"0 0 20 20\\">
+          <path d=\\"M3 10.019l4.523 4.523 9.541-9.541\\" stroke=\\"#FFF\\" stroke-width=\\"2\\" fill=\\"none\\"></path>
+        </symbol>
         <symbol id=\\"check\\" viewBox=\\"0 0 20 20\\">
           <path d=\\"M3 10.019l4.523 4.523 9.541-9.541\\" stroke=\\"currentColor\\" stroke-width=\\"2\\" fill=\\"none\\"></path>
         </symbol>
@@ -347,6 +350,9 @@ exports[`Icon should render examples: Icon 1`] = `
         </symbol>
         <symbol id=\\"cube\\" viewBox=\\"0 0 16 16\\">
           <path d=\\"M1,11.0086308 L1,5.50051502 C1,4.95127159 1.3905874,4.72776572 1.87240137,5.00308799 L7.12759863,8.00605786 C7.60359323,8.27805477 8,8.95047139 8,9.50051502 L8,15.0086308 C8,15.5578743 7.6094126,15.7813801 7.12759863,15.5060579 L1.87240137,12.503088 C1.39640677,12.2310911 1,11.5586745 1,11.0086308 Z M16,11.0086308 C16,11.5586745 15.6035932,12.2310911 15.1275986,12.503088 L9.87240137,15.5060579 C9.3905874,15.7813801 9,15.5578743 9,15.0086308 L9,9.50051502 C9,8.95047139 9.39640677,8.27805477 9.87240137,8.00605786 L15.1275986,5.00308799 C15.6094126,4.72776572 16,4.95127159 16,5.50051502 L16,11.0086308 Z M9.34976149,6.98164278 C8.88045118,7.27044912 8.11286116,7.26633364 7.65023851,6.98164278 L2.84976149,4.02750307 C2.38045118,3.73869673 2.38713884,3.29611355 2.87661892,3.03254735 L7.62338108,0.476598498 C8.10752434,0.215905973 8.88713884,0.213032303 9.37661892,0.476598498 L14.1233811,3.03254735 C14.6075243,3.29323988 14.6128612,3.74281221 14.1502385,4.02750307 L9.34976149,6.98164278 Z\\" id=\\"path-1\\"></path>
+        </symbol>
+        <symbol id=\\"dash-white\\" viewBox=\\"0 0 20 20\\">
+          <path d=\\"M3.497 10h13.006\\" stroke=\\"#FFF\\" stroke-width=\\"2\\"></path>
         </symbol>
         <symbol id=\\"dash\\" viewBox=\\"0 0 20 20\\">
           <path d=\\"M3.497 10h13.006\\" stroke=\\"currentColor\\" stroke-width=\\"2\\"></path>
@@ -957,7 +963,7 @@ exports[`Radio should render examples: Radio 2`] = `
 exports[`SelectBox should render examples: SelectBox 1`] = `
 "<div>
   <div class=\\"css-1h8pu2y\\">
-    <div class=\\"css-1scqv3c\\">
+    <div class=\\"css-1mag0rk\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -979,7 +985,7 @@ exports[`SelectBox should render examples: SelectBox 1`] = `
 exports[`SelectBox should render examples: SelectBox 2`] = `
 "<div>
   <div class=\\"css-1h8pu2y\\">
-    <div class=\\"css-1scqv3c\\">
+    <div class=\\"css-1mag0rk\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -1030,7 +1036,7 @@ exports[`SelectBox should render examples: SelectBox 3`] = `
 exports[`SelectBox should render examples: SelectBox 4`] = `
 "<div>
   <div class=\\"css-1h8pu2y\\">
-    <div class=\\"css-1scqv3c\\">
+    <div class=\\"css-1mag0rk\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -1052,7 +1058,7 @@ exports[`SelectBox should render examples: SelectBox 4`] = `
 exports[`SelectBox should render examples: SelectBox 5`] = `
 "<div>
   <div class=\\"css-1h8pu2y\\">
-    <div class=\\"css-1scqv3c\\">
+    <div class=\\"css-1mag0rk\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -1074,7 +1080,7 @@ exports[`SelectBox should render examples: SelectBox 5`] = `
 exports[`SelectBox should render examples: SelectBox 6`] = `
 "<div>
   <div class=\\"css-1h8pu2y\\">
-    <div class=\\"css-1scqv3c\\">
+    <div class=\\"css-1mag0rk\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -1134,7 +1140,7 @@ exports[`SelectBox should render examples: SelectBox 6`] = `
 exports[`SelectBox should render examples: SelectBox 7`] = `
 "<div>
   <div class=\\"css-1h8pu2y\\">
-    <div class=\\"css-1scqv3c\\">
+    <div class=\\"css-1mag0rk\\">
       <div class=\\"css-1phseng needsclick\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
