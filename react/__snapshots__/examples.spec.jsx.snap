@@ -649,149 +649,124 @@ exports[`Icon should render examples: Icon 1`] = `
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cozy</p>
     </div>
     <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#cross-white\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cross-white</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cross\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cross</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cube\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cube</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dash\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">dash</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#delete-grey08\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">delete-grey08</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#delete\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">delete</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#destroy\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">destroy</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#device-laptop\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">device-laptop</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#dots-white\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">dots-white</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dots\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">dots</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#download\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">download</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#exchange\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">exchange</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file-none\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">file-none</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">file</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#folder\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">folder</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#forward\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">forward</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#gear\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">gear</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#help\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">help</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#hourglass\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">hourglass</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#image\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">image</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#moveto\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">moveto</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#openwith\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">openwith</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#paperplane\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">paperplane</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#people\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">people</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#phone-download\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">phone-download</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#plus\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">plus</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#rename\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">rename</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#restore\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">restore</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#share-grey08\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">share-grey08</p>
     </div>
     <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#share\\"></use>
@@ -804,49 +779,24 @@ exports[`Icon should render examples: Icon 1`] = `
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">small-arrow</p>
     </div>
     <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#spinner-blue\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">spinner-blue</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#spinner-grey\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">spinner-grey</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#spinner-red\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">spinner-red</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#spinner-white\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">spinner-white</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#spinner\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">spinner</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#top-select\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">top-select</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#top\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">top</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#trash\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">trash</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#upload-grey08\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">upload-grey08</p>
     </div>
     <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#upload\\"></use>
