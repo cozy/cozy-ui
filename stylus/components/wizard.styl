@@ -2,6 +2,7 @@
 @require '../settings/breakpoints'
 @require '../settings/palette'
 @require '../components/forms'
+@require '../components/button'
 
 // Wizard layout
 $wizard
@@ -108,17 +109,11 @@ $wizard-next
 
 $wizard-button
     +small-screen('min')
-        // Cannot @extend $button--large inside a Media Query :(
-        min-height rem(48)
-        min-width rem(160)
-        padding rem(8 24)
-        font-size rem(16)
+        {button--large}
 
 $wizard-password
     +small-screen()
-        // Cannot @extend $input-text--medium inside a Media Query :(
-        border-radius rem(2)
-        padding rem(8 16 10)
+        {input-text--medium}
 
 $wizard-title
     margin 0 0 rem(8)
