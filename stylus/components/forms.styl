@@ -267,16 +267,22 @@ $input-text
     &:invalid
         border rem(1) solid pomegranate
 
-$input-text--tiny
+input-text--tiny =
     border-radius rem(2)
     padding rem(4 8 6)
+$input-text--tiny
+    {input-text--tiny}
 
-$input-text--medium
+input-text--medium =
     border-radius rem(2)
     padding rem(8 16 10)
+$input-text--medium
+    {input-text--medium}
 
-$input-text--fullwidth
+input-text--fullwidth =
     max-width 100%
+$input-text--fullwidth
+    {input-text--fullwidth}
 
 $checkbox
     // To make sure that checkbox's wrapper have the height of the checkbox

@@ -2,6 +2,7 @@
 @require '../settings/breakpoints'
 @require '../settings/palette'
 @require '../components/forms'
+@require '../components/button'
 
 // Wizard layout
 $wizard
@@ -35,7 +36,6 @@ $wizard-wrapper--welcome
 
 $wizard-errors
     order 1
-    color pomegranate
 
 $wizard-header
     display flex
@@ -49,6 +49,7 @@ $wizard-main
 
 $wizard-footer
     display flex
+    order 2
     flex-wrap wrap
     flex 0 0 auto
     padding-bottom env(safe-area-inset-bottom)
@@ -56,13 +57,7 @@ $wizard-footer
     & > button // @stylint ignore
     & > a:link // @stylint ignore
         flex 1 1 100%
-
-
-$wizard-footer--welcome
-    & > button // @stylint ignore
-    & > a:link // @stylint ignore
-        flex 1 0 40%
-        margin 0 rem(4) rem(8)
+        margin 0 0 rem(8)
 
 // Wizard elements
 $wizard-logo
@@ -99,9 +94,10 @@ $wizard-header-help
 
 $wizard-previous
     position fixed
-    top rem(10)
-    left rem(16)
+    top rem(7)
+    left 0
     margin 0
+    padding rem(10) rem(16)
     color coolGrey
 
 $wizard-next
@@ -113,17 +109,11 @@ $wizard-next
 
 $wizard-button
     +small-screen('min')
-        // Cannot @extend $button--large inside a Media Query :(
-        min-height rem(48)
-        min-width rem(160)
-        padding rem(8 24)
-        font-size rem(16)
+        {button--large}
 
 $wizard-password
     +small-screen()
-        // Cannot @extend $input-text--medium inside a Media Query :(
-        border-radius rem(2)
-        padding rem(8 16 10)
+        {input-text--medium}
 
 $wizard-title
     margin 0 0 rem(8)
@@ -138,7 +128,6 @@ $wizard-subtitle
     text-align center
     font-size rem(16)
     line-height 1.5
-    color coolGrey
     margin 0 0 rem(8)
     +small-screen()
         font-size rem(14)
