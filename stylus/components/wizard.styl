@@ -23,7 +23,6 @@ $wizard-wrapper
     flex-direction column
     width 100%
     height 100%
-    justify-content space-between
     max-width rem(520)
     padding 0 rem(16)
     text-align left
@@ -125,10 +124,11 @@ $wizard-title
         line-height 1.78
 
 $wizard-subtitle
+    margin 0 0 rem(8)
     text-align center
     font-size rem(16)
+    font-weight normal
     line-height 1.5
-    margin 0 0 rem(8)
     +small-screen()
         font-size rem(14)
         line-height 1.43
@@ -196,7 +196,7 @@ $wizard-input
         outline rem(1) solid dodgerBlue
 
 $wizard-notice
-    margin     rem(8) 0
+    margin     rem(8) 0 0
 
     a
         color dodgerBlue
@@ -207,7 +207,7 @@ $wizard-notice
             color scienceBlue
 
     +small-screen('min')
-        margin rem(32) 0
+        margin rem(32) 0 0
 
 $wizard-notice--error
     color pomegranate
