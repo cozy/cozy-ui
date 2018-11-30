@@ -167,7 +167,6 @@ const ModalHeader = ({
       className={cx(styles['c-modal-header'], className)}
       style={style}
       id={id}
-      tabIndex="-1"
     >
       {title && <h2>{title}</h2>}
       {isTitle ? <h2>{children}</h2> : children}
