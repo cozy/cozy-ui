@@ -19,6 +19,7 @@
 
     $below-index        - **index -1** Layer below the app, mostly for hiding purpose
     $app-index          - **index 0** App index, the ground zero.
+    $low-index          - **index 1** Low level index, to make sure a positionned element goes over elements with z-index 0.
     $alert-index-mobile - **index 10** Alert index like success, errors, infos *mobile only*
     $nav-index          - **index 20** Nav index
     $bar-index          - **index 21** Bar index equals Nav index + 1, not actually used, just as reference.
@@ -34,6 +35,7 @@
 
 $below-index        = -1
 $app-index          = 0
+$low-index          = 1
 $alert-index-mobile = 10
 $nav-index          = 20
 $bar-index          = $nav-index + 1 // Not actually used, just as reference
