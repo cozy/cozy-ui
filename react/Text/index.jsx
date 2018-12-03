@@ -22,22 +22,22 @@ const BaseText = props => {
 }
 
 export const Text = ({ className, ...restProps }) => (
-  <BaseText className={cx(className, styles['u-text'])} {...restProps} />
+  <BaseText className={cx(styles['u-text'], className)} {...restProps} />
 )
 export const MainTitle = ({ className, ...restProps }) => (
-  <BaseText className={cx(className, styles['u-title-h1'])} {...restProps} />
+  <BaseText className={cx(styles['u-title-h1'], className)} {...restProps} />
 )
 export const Title = ({ className, ...restProps }) => (
-  <BaseText className={cx(className, styles['u-title-h2'])} {...restProps} />
+  <BaseText className={cx(styles['u-title-h2'], className)} {...restProps} />
 )
 export const SubTitle = ({ className, ...restProps }) => (
-  <BaseText className={cx(className, styles['u-title-h3'])} {...restProps} />
+  <BaseText className={cx(styles['u-title-h3'], className)} {...restProps} />
 )
 export const Bold = ({ className, ...restProps }) => (
-  <BaseText className={cx(className, styles['u-title-h4'])} {...restProps} />
+  <BaseText className={cx(styles['u-title-h4'], className)} {...restProps} />
 )
 export const Caption = ({ className, ...restProps }) => (
-  <BaseText className={cx(className, styles['u-caption'])} {...restProps} />
+  <BaseText className={cx(styles['u-caption'], className)} {...restProps} />
 )
 
 // Props

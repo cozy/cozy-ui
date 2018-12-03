@@ -18,7 +18,7 @@ export class Tab extends Component {
     }
     return (
       <div
-        className={cx(styles['coz-tab'], className, activeStyle)}
+        className={cx(styles['coz-tab'], activeStyle, className)}
         onClick={this.onClick}
       >
         {children}

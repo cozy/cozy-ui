@@ -104,10 +104,14 @@ class Menu extends Component {
 
     return (
       <div
-        className={cx(styles['c-menu'], className, {
-          [styles['c-menu--left']]: position === 'left',
-          [styles['c-menu--right']]: position === 'right'
-        })}
+        className={cx(
+          styles['c-menu'],
+          {
+            [styles['c-menu--left']]: position === 'left',
+            [styles['c-menu--right']]: position === 'right'
+          },
+          className
+        )}
         ref={ref => {
           this.container = ref
         }}

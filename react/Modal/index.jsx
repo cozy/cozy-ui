@@ -317,13 +317,13 @@ class Modal extends Component {
               className={cx(
                 styles['c-modal'],
                 styles[`c-modal--${size}`],
-                className,
                 {
                   [styles['c-modal--overflowHidden']]: overflowHidden,
                   [styles[`c-modal--${spacing}-spacing`]]: spacing,
                   [styles['c-modal--fullscreen']]: mobileFullscreen,
                   [styles['c-modal--closable']]: closable
-                }
+                },
+                className
               )}
               role="dialog"
               aria-modal="true"

@@ -180,8 +180,10 @@ class SelectBox extends Component {
         onMenuClose={this.handleClose}
         {...props}
         className={cx(
-          className,
-          showOverlay ? styles['select__overlay'] : null
+          {
+            [styles['select__overlay']]: showOverlay
+          },
+          className
         )}
         // react-select temporarily adds className to its innerComponents
         // but this behavior will soon be removed. For the moment, we

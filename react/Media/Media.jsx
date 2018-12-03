@@ -10,8 +10,8 @@ export const Media = ({ children, className, align, ...rest }) => {
     <div
       className={cx(
         styles.media,
-        className,
-        align ? styles['media--' + align] : null
+        { [styles['media--' + align]]: align },
+        className
       )}
       {...rest}
     >
