@@ -17,19 +17,15 @@ export const Layout = ({ children, className, monoColumn, ...rest }) => {
   )
 }
 
-export const Main = ({ children, className, ...rest }) => {
-  return (
-    <main className={className} {...rest}>
-      {children}
-    </main>
-  )
+export const Main = ({ children, ...rest }) => {
+  return <main {...rest}>{children}</main>
 }
 
 export class Content extends Component {
   render() {
-    const { children, className, ...rest } = this.props
+    const { children, ...rest } = this.props
     return (
-      <div role="main" className={className} {...rest}>
+      <div role="main" {...rest}>
         {children}
       </div>
     )

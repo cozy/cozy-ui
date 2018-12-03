@@ -41,16 +41,17 @@ export default class Popover extends Component {
   }
 
   render() {
+    const { style, className, children } = this.props
     return (
       <div
         style={{
-          ...this.props.style,
+          ...style,
           ...this.defaultStyle,
           ...this.state.style
         }}
-        className={this.props.className}
+        className={className}
       >
-        {this.props.children}
+        {children}
       </div>
     )
   }
