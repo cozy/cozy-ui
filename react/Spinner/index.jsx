@@ -1,6 +1,6 @@
 import React from 'react'
 import { translate } from '../I18n'
-import classNames from 'classnames'
+import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
@@ -15,7 +15,7 @@ export const Spinner = ({
 }) => {
   return (
     <div
-      className={classNames(
+      className={cx(
         styles['c-spinner'],
         {
           [styles['c-spinner--middle']]: middle,

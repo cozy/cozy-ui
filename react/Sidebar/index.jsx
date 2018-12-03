@@ -1,12 +1,10 @@
 import React from 'react'
-import classNames from 'classnames'
+import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
 const Sidebar = ({ children, className }) => (
-  <aside className={classNames(styles['o-sidebar'], className)}>
-    {children}
-  </aside>
+  <aside className={cx(styles['o-sidebar'], className)}>{children}</aside>
 )
 
 Sidebar.propTypes = {

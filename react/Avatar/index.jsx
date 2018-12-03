@@ -1,5 +1,5 @@
 import React from 'react'
-import classNames from 'classnames'
+import cx from 'classnames'
 import PropTypes from 'prop-types'
 import palette from '../palette'
 import styles from './styles.styl'
@@ -39,7 +39,7 @@ export const Avatar = ({ text, textId, image, size, className, style }) => {
 
   return (
     <div
-      className={classNames(
+      className={cx(
         styles['c-avatar'],
         {
           [styles[`c-avatar--${size}`]]: size

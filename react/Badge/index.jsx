@@ -1,5 +1,5 @@
 import React from 'react'
-import classNames from 'classnames'
+import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
@@ -8,7 +8,7 @@ export const Badge = ({ children, content, type, ...props }) => {
     <span className={styles['c-badge-root']} {...props}>
       {children}
       <span
-        className={classNames(styles['c-badge'], {
+        className={cx(styles['c-badge'], {
           [styles[`c-badge--${type}`]]: type
         })}
       >

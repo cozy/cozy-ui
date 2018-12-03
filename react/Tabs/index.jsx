@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styles from './styles.styl'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 export class Tab extends Component {
   constructor(props) {
@@ -18,7 +18,7 @@ export class Tab extends Component {
     }
     return (
       <div
-        className={classnames(styles['coz-tab'], className, activeStyle)}
+        className={cx(styles['coz-tab'], className, activeStyle)}
         onClick={this.onClick}
       >
         {children}
@@ -37,7 +37,7 @@ export class Tab extends Component {
 
 export const TabList = function({ children, activeTab, changeTab, className }) {
   return (
-    <div className={classnames(styles['coz-tab-list'], className)}>
+    <div className={cx(styles['coz-tab-list'], className)}>
       {React.Children.map(children, child =>
         React.cloneElement(child, {
           active: child.props.name === activeTab,
@@ -50,9 +50,7 @@ export const TabList = function({ children, activeTab, changeTab, className }) {
 
 export const TabPanel = function({ children, active, className }) {
   return active ? (
-    <div className={classnames(styles['coz-tab-panel'], className)}>
-      {children}
-    </div>
+    <div className={cx(styles['coz-tab-panel'], className)}>{children}</div>
   ) : null
 }
 
@@ -63,7 +61,7 @@ export const TabPanels = function({
   className
 }) {
   return (
-    <div className={classnames(styles['coz-tab-panels'], className)}>
+    <div className={cx(styles['coz-tab-panels'], className)}>
       {React.Children.map(children, child =>
         React.cloneElement(child, {
           active: child.props.active || activeTab === child.props.name,
@@ -90,7 +88,7 @@ export class Tabs extends Component {
     const { activeTab } = this.state
     const changeTab = this.changeTab
     return (
-      <div className={classnames(styles['coz-tabs'], className)}>
+      <div className={cx(styles['coz-tabs'], className)}>
         {React.Children.map(children, child =>
           React.cloneElement(child, { activeTab, changeTab })
         )}
