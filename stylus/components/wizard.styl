@@ -160,6 +160,9 @@ $wizard-dualfield
     border rem(1) solid silver
     border-radius rem(2)
 
+$wizard-dualfield--focus
+    border-color dodgerBlue
+
 $wizard-protocol
     display flex
     align-items center
@@ -174,26 +177,35 @@ $wizard-protocol
 $wizard-select
     @extend $select
     flex 0 0 auto
+    margin rem(2)
     width rem(148)
     border-color transparent
     padding-left rem(8)
+
     &:focus
         position relative
         z-index 1
-        outline rem(1) solid dodgerBlue
+        background-color paleGrey
+        border-color transparent
+        outline 0
 
 $wizard-select--medium
     @extend $select--medium
     padding-left rem(8)
 
+$wizard-select--narrow
+    width rem(40)
+
 $wizard-input
     flex 1 1 auto
     border-color transparent
     padding-right rem(8)
+    &:hover
     &:focus
         position relative
         z-index 1
-        outline rem(1) solid dodgerBlue
+        border-color transparent
+        outline 0
 
 $wizard-notice
     margin     rem(8) 0 0
