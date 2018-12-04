@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`AppIcon component does not keep previous icon in state 1`] = `
+<img
+  alt={undefined}
+  className="styles__c-app-icon___2_O40"
+  src="http://cozy.tools/apps/test/other"
+/>
+`;
+
 exports[`AppIcon component renders as loading 1`] = `
 <div
   className="styles__c-loading-placeholder___3L6Gz styles__c-app-icon___2_O40"
@@ -26,14 +34,6 @@ exports[`AppIcon component renders default when fetch error occurs 1`] = `
 `;
 
 exports[`AppIcon component renders immediately when icon is alredy preloaded 1`] = `
-<img
-  alt={undefined}
-  className="styles__c-app-icon___2_O40"
-  src="http://cozy.tools/apps/test/icon"
-/>
-`;
-
-exports[`AppIcon component uses Preloader.preload when no fetchIcon method is provided 1`] = `
 <img
   alt={undefined}
   className="styles__c-app-icon___2_O40"

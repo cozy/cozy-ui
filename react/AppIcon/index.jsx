@@ -17,19 +17,37 @@ export class AppIcon extends Component {
     super(props, context)
     const { app, domain, secure } = props
     const preloaded = getPreloaded(app, domain, secure)
-    this.state = {
-      error: null,
-      icon: preloaded,
-      status: preloaded ? DONE : FETCHING
-    }
+    this.state = this.buildState(preloaded)
   }
 
-  componentDidMount() {
-    this.load()
+  async componentDidMount() {
+    const { onReady } = this.props
+    const { status } = this.state
+    if (status !== DONE) {
+      await this.load()
+    }
+    if (typeof onReady === 'function') onReady()
+  }
+
+  // When nested into a list of component, an AppIcon may update,
+  // and we must then update the state
+  async componentDidUpdate(prevProps) {
+    const { app, domain, onUpdate, secure } = this.props
+
+    if (app.slug === prevProps.app.slug) return
+
+    const preloaded = getPreloaded(app, domain, secure)
+
+    if (preloaded) {
+      this.setIcon(preloaded)
+    } else {
+      await this.load()
+    }
+    if (typeof onUpdate === 'function') onUpdate()
   }
 
   async load() {
-    const { app, domain, fetchIcon, onReady, secure } = this.props
+    const { app, domain, fetchIcon, secure } = this.props
     const loadFn = fetchIcon || preload
     let loadedUrl
     let loadError
@@ -39,15 +57,19 @@ export class AppIcon extends Component {
       loadError = error
     }
 
-    this.setState({
-      error: loadError,
-      icon: loadedUrl,
-      status: loadError ? ERRORED : DONE
-    })
+    this.setIcon(loadedUrl, loadError)
+  }
 
-    if (typeof onReady === 'function') {
-      onReady()
+  buildState(icon, error = null) {
+    return {
+      error,
+      icon,
+      status: error ? ERRORED : icon ? DONE : FETCHING
     }
+  }
+
+  setIcon(icon, error) {
+    this.setState(this.buildState(icon, error))
   }
 
   render() {
@@ -98,6 +120,7 @@ AppIcon.propTypes = {
   domain: PropTypes.string,
   fetchIcon: PropTypes.func,
   onReady: PropTypes.func,
+  onUpdate: PropTypes.func,
   secure: PropTypes.bool
 }
 
