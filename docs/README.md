@@ -60,7 +60,7 @@ Then, you just need to add a `@import 'cozy-ui'` statement at top of your main s
 
 The entire library is also available as a good ol’ CSS library. You can simply add it to your app by linking the distributed minified file.
 ```html
-<link media="all" rel="stylesheet" href=“cozy-ui/dist/cozy-ui.min.css" />
+<link media="all" rel="stylesheet" href="cozy-ui/dist/cozy-ui.min.css" />
 ```
 
 ## Develop on Cozy UI

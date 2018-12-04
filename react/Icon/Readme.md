@@ -1,24 +1,42 @@
 Provides an easy way to use SVG icons included in Cozy-UI as well
 as your custom icons.
 
-⚠️ When using `Icon`, the icons are supposed to be already loaded via an
-SVG sprite loaded in your DOM. `cozy-ui` ships with built-in icons that you can include via `Sprite`. See the example below for how to include
-`Sprite`. `Sprite` can for example be included in the main `Layout` of
-your applicaiton.
+> You can force the Icon to use a sprite lika the `<IconSprite />` from cozy-ui (if this sprite is loaded in the DOM by your application) by usig the `forceSprite` props. See the "Using the sprite" example below
+
+##### Add a new icon
+
+To add a new icon, just add your icon `.svg` file in the `assets/ui` folder, then export your icon like the others in the `react/Icon/icons.jsx` file. Then just run `yarn` or `yarn icons` to launch SVGR again and transform.
 
 ### Available icons
 
 ```
-const Sprite = require('./Sprite').default;
 const colors = ['#297EF2', '#08b442', '#B449E7', '#F52D2D', '#FF962F']
 let i = 0
 const availableIcons = ['album-add', 'album-remove', 'album', 'arrow', 'back', 'bottom-select', 'bottom', 'calendar', 'check 2', 'check-circleless', 'check', 'clock', 'connector', 'cozy-negative', 'cozy', 'cross', 'cube', 'dash', 'delete', 'destroy', 'device-laptop', 'dots', 'download', 'exchange', 'file-none', 'file', 'folder', 'forward', 'gear', 'help', 'hourglass', 'image', 'moveto', 'openwith', 'paperplane', 'people', 'phone-download', 'plus', 'rename', 'restore', 'share', 'small-arrow', 'spinner', 'top-select', 'top', 'trash', 'upload', 'warn', 'warning'];
 
 <div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
-  <Sprite />
   {
   availableIcons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
       <Icon icon={ icon } color={ colors[i++ % colors.length] }/>
+      <p style={{ fontSize: '1rem', marginTop: '0.5rem', marginBottom: '1rem' }}>{ icon }</p>
+    </div>
+  )}
+</div>
+```
+
+### Using the sprite
+
+```
+const Sprite = require('./Sprite').default;
+const colors = ['#297EF2', '#08b442', '#B449E7', '#F52D2D', '#FF962F']
+let i = 0
+const availableIcons = ['cozy-negative', 'cube', 'dash', 'delete', 'hourglass', 'image'];
+
+<div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
+  <Sprite />
+  {
+  availableIcons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
+      <Icon icon={ icon } color={ colors[i++ % colors.length] } forceSprite/>
       <p style={{ fontSize: '1rem', marginTop: '0.5rem', marginBottom: '1rem' }}>{ icon }</p>
     </div>
   )}
