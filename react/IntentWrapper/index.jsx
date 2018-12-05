@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
-import classNames from 'classnames'
+import cx from 'classnames'
 import { ModalHeader, ModalContent } from '../Modal'
 
 export const IntentWrapper = ({
@@ -14,7 +14,7 @@ export const IntentWrapper = ({
   iconDest,
   className
 }) => (
-  <div className={classNames(styles['intentWrapper'], className)}>
+  <div className={cx(styles['intentWrapper'], className)}>
     <ModalHeader
       appIcon={appIcon}
       appName={appName}

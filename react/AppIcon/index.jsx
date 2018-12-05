@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import cx from 'classnames'
 import styles from './styles.styl'
 
 import Icon from '../Icon'
@@ -57,7 +57,7 @@ export class AppIcon extends Component {
       case FETCHING:
         return (
           <div
-            className={classNames(
+            className={cx(
               styles['c-loading-placeholder'],
               styles['c-app-icon'],
               className
@@ -68,7 +68,7 @@ export class AppIcon extends Component {
         return (
           <img
             alt={alt}
-            className={classNames(styles['c-app-icon'], className)}
+            className={cx(styles['c-app-icon'], className)}
             src={icon}
           />
         )
@@ -76,7 +76,7 @@ export class AppIcon extends Component {
       default:
         return (
           <Icon
-            className={classNames(
+            className={cx(
               styles['c-app-icon'],
               styles['c-app-icon-default'],
               className

@@ -4,7 +4,7 @@ import Portal from '../Portal'
 import Button from '../Button'
 
 import styles from './styles.styl'
-import classNames from 'classnames'
+import cx from 'classnames'
 
 const MINIMUM_ALERT_DURATION = 2000
 
@@ -76,17 +76,14 @@ class Alert extends Component {
     return (
       <div
         ref={c => (this.base = c)}
-        className={classNames(
+        className={cx(
           styles['c-alert'],
           hidden ? styles['c-alert--hidden'] : ''
         )}
         role="alert"
       >
         <div
-          className={classNames(
-            styles['c-alert-wrapper'],
-            styles[`c-alert--${type}`]
-          )}
+          className={cx(styles['c-alert-wrapper'], styles[`c-alert--${type}`])}
         >
           <p>{message}</p>
           {buttonText && (

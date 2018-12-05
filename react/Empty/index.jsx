@@ -1,5 +1,5 @@
 import React from 'react'
-import classNames from 'classnames'
+import cx from 'classnames'
 import PropTypes from 'prop-types'
 import { Text, MainTitle } from '../Text'
 import Icon from '../Icon'
@@ -7,7 +7,7 @@ import styles from './styles.styl'
 
 export const Empty = ({ icon, title, text, children, className }) => {
   return (
-    <div className={classNames(styles['c-empty'], className)}>
+    <div className={cx(styles['c-empty'], className)}>
       <Icon
         className={styles['c-empty-img']}
         icon={icon}

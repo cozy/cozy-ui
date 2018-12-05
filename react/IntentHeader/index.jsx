@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
-import classNames from 'classnames'
+import cx from 'classnames'
 
 export const IntentHeader = ({ appName, appEditor, appIcon, className }) => (
-  <div className={classNames(styles['intentHeader'], className)}>
+  <div className={cx(styles['intentHeader'], className)}>
     <h1 className={styles['intentHeader-title']}>
       <img className={styles['intentHeader-icon']} src={appIcon} />
       {appEditor && (

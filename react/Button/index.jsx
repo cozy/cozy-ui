@@ -6,13 +6,17 @@ import Icon from '../Icon'
 
 const btnClass = function(options) {
   const { className, extension, size, theme, variant, round } = options
-  return cx(className, styles['c-btn'], {
-    [styles[`c-btn--${theme}`]]: theme,
-    [styles[`c-btn--${size}`]]: size,
-    [styles[`c-btn--${variant}`]]: variant,
-    [styles[`c-btn--${extension}`]]: extension,
-    [styles[`c-btn--round`]]: round
-  })
+  return cx(
+    styles['c-btn'],
+    {
+      [styles[`c-btn--${theme}`]]: theme,
+      [styles[`c-btn--${size}`]]: size,
+      [styles[`c-btn--${variant}`]]: variant,
+      [styles[`c-btn--${extension}`]]: extension,
+      [styles[`c-btn--round`]]: round
+    },
+    className
+  )
 }
 
 const transformToAria = tag => props => {
