@@ -41,7 +41,8 @@
     "transpile": "env BABEL_ENV=transpilation babel react/ --out-dir transpiled/react --copy-files --ignore '**/test/**,**/__mocks__/**'",
     "travis-deploy-once": "travis-deploy-once",
     "watch:css": "yarn build:css --watch",
-    "watch:doc:react": "env BABEL_ENV=transpilation styleguidist server --config docs/styleguide.config.js"
+    "watch:doc:react": "env BABEL_ENV=transpilation styleguidist server --config docs/styleguide.config.js",
+    "watch:doc:kss": "nodemon --ext styl,md --watch stylus --exec 'yarn build:doc:kss && http-server build/styleguide -p 4242'"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^2.0.2",
@@ -66,6 +67,7 @@
     "eslint": "^4.18.2",
     "eslint-config-cozy-app": "^0.5.1",
     "git-directory-deploy": "^1.5.1",
+    "http-server": "^0.11.1",
     "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.4.3",
@@ -74,6 +76,7 @@
     "lodash": "^4.17.5",
     "michelangelo": "https://github.com/cozy/michelangelo.git",
     "mini-css-extract-plugin": "^0.4.3",
+    "nodemon": "^1.18.7",
     "npm-run-all": "^4.1.5",
     "postcss-loader": "^2.0.6",
     "preact": "^8.3.1",
