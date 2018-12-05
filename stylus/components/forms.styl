@@ -382,8 +382,13 @@ $textarea--medium
 $textarea--fullwidth
     @extend $input-text--fullwidth
 
+
+$select-arrow-padding
+    padding-right rem(38)
+
 $select
     @extend $input-text
+    @extend $select-arrow-padding
     appearance none
     background embedurl('../../assets/icons/ui/bottom-select.svg') right rem(16) center no-repeat
     background-size rem(14)
@@ -393,15 +398,15 @@ $select
 
 $select--tiny
     @extend $input-text--tiny
-    padding-right rem(38)
+    @extend $select-arrow-padding
 
 $select--medium
     @extend $input-text--medium
-    padding-right rem(38)
+    @extend $select-arrow-padding
 
 $select--fullwidth
     @extend $input-text--fullwidth
-    padding-right rem(38)
+    @extend $select-arrow-padding
 
 $field
     position relative
