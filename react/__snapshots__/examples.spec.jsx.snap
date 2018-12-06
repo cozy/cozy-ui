@@ -16,7 +16,7 @@ exports[`Avatar should render examples: Avatar 1`] = `
 
 exports[`Avatar should render examples: Avatar 2`] = `
 "<div>
-  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\" style=\\"background-color: rgb(245, 45, 45); color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
 </div>"
 `;
 
@@ -33,14 +33,14 @@ exports[`Avatar should render examples: Avatar 4`] = `
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <use xlink:href=\\"#people\\"></use>
         </svg></div>
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"background-color: rgb(245, 45, 45); color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
     </div>
     <div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <use xlink:href=\\"#people\\"></use>
         </svg></div>
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\" style=\\"background-color: rgb(245, 45, 45); color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
     </div>
   </div>
@@ -292,9 +292,6 @@ exports[`Icon should render examples: Icon 1`] = `
         <symbol id=\\"calendar\\">
           <path d=\\"M13 1h3v2H0V1h3V0h2v1h6V0h2v1zM0 4h16v10.998A1 1 0 0 1 15 16H1c-.552 0-1-.456-1-1.002V4zm2 2v8h12V6H2zm6 3h5v4H8V9z\\" fill-rule=\\"nonzero\\"></path>
         </symbol>
-        <symbol id=\\"check 2\\" viewBox=\\"0 0 48 48\\">
-          <path fill-rule=\\"evenodd\\" d=\\"M24,48 C37.254834,48 48,37.254834 48,24 C48,10.745166 37.254834,0 24,0 C10.745166,0 0,10.745166 0,24 C0,37.254834 10.745166,48 24,48 Z M13.4142136,24.5857864 C12.633165,23.8047379 11.366835,23.8047379 10.5857864,24.5857864 C9.80473785,25.366835 9.80473785,26.633165 10.5857864,27.4142136 L17.5857864,34.4142136 C18.366835,35.1952621 19.633165,35.1952621 20.4142136,34.4142136 L35.4142136,19.4142136 C36.1952621,18.633165 36.1952621,17.366835 35.4142136,16.5857864 C34.633165,15.8047379 33.366835,15.8047379 32.5857864,16.5857864 L19,30.1715729 L13.4142136,24.5857864 Z\\"></path>
-        </symbol>
         <symbol id=\\"check-circleless\\" viewBox=\\"0 0 16 16\\">
           <g transform=\\"translate(-32 -128)\\">
             <path d=\\"M33.7071068,138.292893 C33.3165825,137.902369 32.6834175,137.902369 32.2928932,138.292893 C31.9023689,138.683418 31.9023689,139.316582 32.2928932,139.707107 L35.2928932,142.707107 C35.6834175,143.097631 36.3165825,143.097631 36.7071068,142.707107 L47.7071068,131.707107 C48.0976311,131.316582 48.0976311,130.683418 47.7071068,130.292893 C47.3165825,129.902369 46.6834175,129.902369 46.2928932,130.292893 L36,140.585786 L33.7071068,138.292893 Z\\"></path>
@@ -339,9 +336,6 @@ exports[`Icon should render examples: Icon 1`] = `
         <symbol id=\\"cozy\\" viewBox=\\"0 0 52 52\\">
           <path fill=\\"#297EF2\\" fill-rule=\\"evenodd\\" d=\\"M558.23098,44 L533.76902,44 C526.175046,44 520,37.756072 520,30.0806092 C520,26.4203755 521.393962,22.9628463 523.927021,20.3465932 C526.145918,18.0569779 529.020185,16.6317448 532.129554,16.2609951 C532.496769,13.1175003 533.905295,10.2113693 536.172045,7.96901668 C538.760238,5.40737823 542.179607,4 545.800788,4 C549.420929,4 552.841339,5.40737823 555.429532,7.96796639 C557.686919,10.2008665 559.091284,13.0912433 559.467862,16.2179336 C566.482405,16.8533543 572,22.8284102 572,30.0816594 C572,37.756072 565.820793,44 558.22994,44 L558.23098,44 Z M558.068077,40.9989547 L558.171599,40.9989547 C564.142748,40.9989547 569,36.0883546 569,30.0520167 C569,24.0167241 564.142748,19.1061239 558.171599,19.1061239 L558.062901,19.1061239 C557.28338,19.1061239 556.644649,18.478972 556.627051,17.6887604 C556.492472,11.7935317 551.63729,7 545.802791,7 C539.968291,7 535.111039,11.7956222 534.977495,17.690851 C534.959896,18.4664289 534.34187,19.0914904 533.573737,19.1092597 C527.743378,19.2451426 523,24.1536522 523,30.0530619 C523,36.0893999 527.857252,41 533.828401,41 L533.916395,41 L533.950557,40.9979094 C533.981614,40.9979094 534.01267,40.9979094 534.043727,41 L558.064971,41 L558.068077,40.9989547 Z M553.766421,29.2227318 C552.890676,28.6381003 552.847676,27.5643091 552.845578,27.5171094 C552.839285,27.2253301 552.606453,26.9957683 552.32118,27.0000592 C552.035908,27.0054228 551.809368,27.2467844 551.814612,27.5364185 C551.81671,27.5750363 551.831393,28.0792139 552.066323,28.6735 C548.949302,31.6942753 544.051427,31.698566 540.928113,28.6917363 C541.169336,28.0888684 541.185068,27.576109 541.185068,27.5374911 C541.190312,27.2478572 540.964821,27.0086409 540.681646,27.0011319 C540.401618,26.9925502 540.163541,27.2264027 540.154102,27.5160368 C540.154102,27.5589455 540.11215,28.6370275 539.234308,29.2216592 C538.995183,29.3825669 538.92806,29.7097461 539.08433,29.9532532 C539.182917,30.1077246 539.346529,30.1924694 539.516434,30.1924694 C539.612923,30.1924694 539.710461,30.1645787 539.797512,30.1066519 C540.023003,29.9564713 540.211786,29.7848363 540.370154,29.6024742 C542.104862,31.2008247 544.296845,32 546.488828,32 C548.686055,32 550.883282,31.1976066 552.621136,29.5917471 C552.780553,29.7762546 552.971434,29.9521804 553.203218,30.1066519 C553.289219,30.1645787 553.387806,30.1924694 553.484295,30.1924694 C553.652102,30.1924694 553.816763,30.1066519 553.916399,29.9521804 C554.07162,29.7076006 554.004497,29.3793488 553.766421,29.2205864 L553.766421,29.2227318 Z\\" transform=\\"translate(-520)\\"></path>
         </symbol>
-        <symbol id=\\"cross-white\\" viewBox=\\"0 0 24 24\\">
-          <path fill=\\"#FFF\\" fill-rule=\\"evenodd\\" d=\\"M106.585786,44 L96.2928932,33.7071068 C95.9023689,33.3165825 95.9023689,32.6834175 96.2928932,32.2928932 C96.6834175,31.9023689 97.3165825,31.9023689 97.7071068,32.2928932 L108,42.5857864 L118.292893,32.2928932 C118.683418,31.9023689 119.316582,31.9023689 119.707107,32.2928932 C120.097631,32.6834175 120.097631,33.3165825 119.707107,33.7071068 L109.414214,44 L119.707107,54.2928932 C120.097631,54.6834175 120.097631,55.3165825 119.707107,55.7071068 C119.316582,56.0976311 118.683418,56.0976311 118.292893,55.7071068 L108,45.4142136 L97.7071068,55.7071068 C97.3165825,56.0976311 96.6834175,56.0976311 96.2928932,55.7071068 C95.9023689,55.3165825 95.9023689,54.6834175 96.2928932,54.2928932 L106.585786,44 Z\\" transform=\\"translate(-96 -32)\\"></path>
-        </symbol>
         <symbol id=\\"cross\\" viewBox=\\"0 0 24 24\\">
           <path fill-rule=\\"evenodd\\" d=\\"M106.585786,44 L96.2928932,33.7071068 C95.9023689,33.3165825 95.9023689,32.6834175 96.2928932,32.2928932 C96.6834175,31.9023689 97.3165825,31.9023689 97.7071068,32.2928932 L108,42.5857864 L118.292893,32.2928932 C118.683418,31.9023689 119.316582,31.9023689 119.707107,32.2928932 C120.097631,32.6834175 120.097631,33.3165825 119.707107,33.7071068 L109.414214,44 L119.707107,54.2928932 C120.097631,54.6834175 120.097631,55.3165825 119.707107,55.7071068 C119.316582,56.0976311 118.683418,56.0976311 118.292893,55.7071068 L108,45.4142136 L97.7071068,55.7071068 C97.3165825,56.0976311 96.6834175,56.0976311 96.2928932,55.7071068 C95.9023689,55.3165825 95.9023689,54.6834175 96.2928932,54.2928932 L106.585786,44 Z\\" transform=\\"translate(-96 -32)\\"></path>
         </symbol>
@@ -350,12 +344,6 @@ exports[`Icon should render examples: Icon 1`] = `
         </symbol>
         <symbol id=\\"dash\\" viewBox=\\"0 0 20 20\\">
           <path d=\\"M3.497 10h13.006\\" stroke=\\"currentColor\\" stroke-width=\\"2\\"></path>
-        </symbol>
-        <symbol id=\\"delete-grey08\\" viewBox=\\"0 0 16 16\\">
-          <g fill=\\"#32363f\\" fill-rule=\\"evenodd\\" transform=\\"translate(-96 -32)\\">
-            <path d=\\"M100.5,33 L98.0068455,33 C97.4499488,33 97,33.4477153 97,34 L97,35 L111,35 L111,34 C111,33.4438648 110.54922,33 109.993155,33 L107.5,33 L107,32 L101,32 L100.5,33 Z M98,36 L110,36 L110,45.9914698 C110,47.1007504 109.09805,48 107.99147,48 L100.00853,48 C98.8992496,48 98,47.0980496 98,45.9914698 L98,36 Z\\"></path>
-            <path d=\\"M100.5,33 L98.0068455,33 C97.4499488,33 97,33.4477153 97,34 L97,35 L111,35 L111,34 C111,33.4438648 110.54922,33 109.993155,33 L107.5,33 L107,32 L101,32 L100.5,33 Z M98,36 L110,36 L110,45.9914698 C110,47.1007504 109.09805,48 107.99147,48 L100.00853,48 C98.8992496,48 98,47.0980496 98,45.9914698 L98,36 Z\\"></path>
-          </g>
         </symbol>
         <symbol id=\\"delete\\" viewBox=\\"0 0 16 16\\">
           <g fill-rule=\\"evenodd\\" transform=\\"translate(-96 -32)\\">
@@ -384,9 +372,6 @@ exports[`Icon should render examples: Icon 1`] = `
             </mask>
             <use id=\\"Fill-1\\" xlink:href=\\"#path-1\\"></use>
           </g>
-        </symbol>
-        <symbol id=\\"dots-white\\" viewBox=\\"0 0 16 16\\">
-          <path fill=\\"#FFFFFF\\" fill-rule=\\"evenodd\\" d=\\"M34,74 C35.1045695,74 36,73.1045695 36,72 C36,70.8954305 35.1045695,70 34,70 C32.8954305,70 32,70.8954305 32,72 C32,73.1045695 32.8954305,74 34,74 Z M46,74 C47.1045695,74 48,73.1045695 48,72 C48,70.8954305 47.1045695,70 46,70 C44.8954305,70 44,70.8954305 44,72 C44,73.1045695 44.8954305,74 46,74 Z M40,74 C41.1045695,74 42,73.1045695 42,72 C42,70.8954305 41.1045695,70 40,70 C38.8954305,70 38,70.8954305 38,72 C38,73.1045695 38.8954305,74 40,74 Z\\" transform=\\"translate(-32 -64)\\"></path>
         </symbol>
         <symbol id=\\"dots\\" viewBox=\\"0 0 16 16\\">
           <path fill=\\"#32363f\\" fill-rule=\\"evenodd\\" d=\\"M34,74 C35.1045695,74 36,73.1045695 36,72 C36,70.8954305 35.1045695,70 34,70 C32.8954305,70 32,70.8954305 32,72 C32,73.1045695 32.8954305,74 34,74 Z M46,74 C47.1045695,74 48,73.1045695 48,72 C48,70.8954305 47.1045695,70 46,70 C44.8954305,70 44,70.8954305 44,72 C44,73.1045695 44.8954305,74 46,74 Z M40,74 C41.1045695,74 42,73.1045695 42,72 C42,70.8954305 41.1045695,70 40,70 C38.8954305,70 38,70.8954305 38,72 C38,73.1045695 38.8954305,74 40,74 Z\\" transform=\\"translate(-32 -64)\\"></path>
@@ -501,12 +486,6 @@ exports[`Icon should render examples: Icon 1`] = `
             <path d=\\"M0.832050294,2.4452998 C0.525697835,1.98577112 -0.0951715076,1.86159725 -0.554700196,2.16794971 C-1.01422888,2.47430216 -1.13840275,3.09517151 -0.832050294,3.5547002 L1.16794971,6.5547002 C1.47430216,7.01422888 2.09517151,7.13840275 2.5547002,6.83205029 L5.5547002,4.83205029 C6.01422888,4.52569784 6.13840275,3.90482849 5.83205029,3.4452998 C5.52569784,2.98577112 4.90482849,2.86159725 4.4452998,3.16794971 L2.2773501,4.61324951 L0.832050294,2.4452998 Z\\"></path>
           </g>
         </symbol>
-        <symbol id=\\"share-grey08\\" viewBox=\\"0 0 16 16\\">
-          <g fill=\\"#32363F\\" fill-rule=\\"evenodd\\" transform=\\"translate(-160 -32)\\">
-            <path d=\\"M165.082611,42.1593397 C164.543049,42.6798471 163.808912,43 163,43 C161.343146,43 160,41.6568542 160,40 C160,38.3431458 161.343146,37 163,37 C163.808912,37 164.543049,37.3201529 165.082611,37.8406603 L170.022669,35.3706317 C170.007705,35.2491857 170,35.1254927 170,35 C170,33.3431458 171.343146,32 173,32 C174.656854,32 176,33.3431458 176,35 C176,36.6568542 174.656854,38 173,38 C172.191088,38 171.456951,37.6798471 170.917389,37.1593397 L165.977331,39.6293683 C165.992295,39.7508143 166,39.8745073 166,40 C166,40.1254927 165.992295,40.2491857 165.977331,40.3706317 L170.917389,42.8406603 C171.456951,42.3201529 172.191088,42 173,42 C174.656854,42 176,43.3431458 176,45 C176,46.6568542 174.656854,48 173,48 C171.343146,48 170,46.6568542 170,45 C170,44.8745073 170.007705,44.7508143 170.022669,44.6293683 L165.082611,42.1593397 Z\\"></path>
-            <path d=\\"M165.082611,42.1593397 C164.543049,42.6798471 163.808912,43 163,43 C161.343146,43 160,41.6568542 160,40 C160,38.3431458 161.343146,37 163,37 C163.808912,37 164.543049,37.3201529 165.082611,37.8406603 L170.022669,35.3706317 C170.007705,35.2491857 170,35.1254927 170,35 C170,33.3431458 171.343146,32 173,32 C174.656854,32 176,33.3431458 176,35 C176,36.6568542 174.656854,38 173,38 C172.191088,38 171.456951,37.6798471 170.917389,37.1593397 L165.977331,39.6293683 C165.992295,39.7508143 166,39.8745073 166,40 C166,40.1254927 165.992295,40.2491857 165.977331,40.3706317 L170.917389,42.8406603 C171.456951,42.3201529 172.191088,42 173,42 C174.656854,42 176,43.3431458 176,45 C176,46.6568542 174.656854,48 173,48 C171.343146,48 170,46.6568542 170,45 C170,44.8745073 170.007705,44.7508143 170.022669,44.6293683 L165.082611,42.1593397 Z\\"></path>
-          </g>
-        </symbol>
         <symbol id=\\"share\\" viewBox=\\"0 0 16 16\\">
           <g fill-rule=\\"evenodd\\" transform=\\"translate(-160 -32)\\">
             <path d=\\"M165.082611,42.1593397 C164.543049,42.6798471 163.808912,43 163,43 C161.343146,43 160,41.6568542 160,40 C160,38.3431458 161.343146,37 163,37 C163.808912,37 164.543049,37.3201529 165.082611,37.8406603 L170.022669,35.3706317 C170.007705,35.2491857 170,35.1254927 170,35 C170,33.3431458 171.343146,32 173,32 C174.656854,32 176,33.3431458 176,35 C176,36.6568542 174.656854,38 173,38 C172.191088,38 171.456951,37.6798471 170.917389,37.1593397 L165.977331,39.6293683 C165.992295,39.7508143 166,39.8745073 166,40 C166,40.1254927 165.992295,40.2491857 165.977331,40.3706317 L170.917389,42.8406603 C171.456951,42.3201529 172.191088,42 173,42 C174.656854,42 176,43.3431458 176,45 C176,46.6568542 174.656854,48 173,48 C171.343146,48 170,46.6568542 170,45 C170,44.8745073 170.007705,44.7508143 170.022669,44.6293683 L165.082611,42.1593397 Z\\"></path>
@@ -515,22 +494,6 @@ exports[`Icon should render examples: Icon 1`] = `
         </symbol>
         <symbol id=\\"small-arrow\\" viewBox=\\"0 0 12 12\\">
           <path d=\\"M1.70710678,3.29289322 C1.31658249,2.90236893 0.683417511,2.90236893 0.292893219,3.29289322 C-0.0976310729,3.68341751 -0.0976310729,4.31658249 0.292893219,4.70710678 L5.29289322,9.70710678 C5.68341751,10.0976311 6.31658249,10.0976311 6.70710678,9.70710678 L11.7071068,4.70710678 C12.0976311,4.31658249 12.0976311,3.68341751 11.7071068,3.29289322 C11.3165825,2.90236893 10.6834175,2.90236893 10.2928932,3.29289322 L6,7.58578644 L1.70710678,3.29289322 Z\\"></path>
-        </symbol>
-        <symbol id=\\"spinner-blue\\" viewBox=\\"0 0 32 32\\">
-          <path opacity=\\".25\\" d=\\"M16 0a16 16 0 0 0 0 32 16 16 0 0 0 0-32m0 4a12 12 0 0 1 0 24 12 12 0 0 1 0-24\\"></path>
-          <path d=\\"M16 0a16 16 0 0 1 16 16h-4a12 12 0 0 0-12-12z\\"></path>
-        </symbol>
-        <symbol id=\\"spinner-grey\\" viewBox=\\"0 0 32 32\\">
-          <path opacity=\\".25\\" d=\\"M16 0a16 16 0 0 0 0 32 16 16 0 0 0 0-32m0 4a12 12 0 0 1 0 24 12 12 0 0 1 0-24\\"></path>
-          <path d=\\"M16 0a16 16 0 0 1 16 16h-4a12 12 0 0 0-12-12z\\"></path>
-        </symbol>
-        <symbol id=\\"spinner-red\\" viewBox=\\"0 0 32 32\\">
-          <path opacity=\\".25\\" d=\\"M16 0a16 16 0 0 0 0 32 16 16 0 0 0 0-32m0 4a12 12 0 0 1 0 24 12 12 0 0 1 0-24\\"></path>
-          <path d=\\"M16 0a16 16 0 0 1 16 16h-4a12 12 0 0 0-12-12z\\"></path>
-        </symbol>
-        <symbol id=\\"spinner-white\\" viewBox=\\"0 0 32 32\\">
-          <path opacity=\\".25\\" d=\\"M16 0a16 16 0 0 0 0 32 16 16 0 0 0 0-32m0 4a12 12 0 0 1 0 24 12 12 0 0 1 0-24\\"></path>
-          <path d=\\"M16 0a16 16 0 0 1 16 16h-4a12 12 0 0 0-12-12z\\"></path>
         </symbol>
         <symbol id=\\"spinner\\" viewBox=\\"0 0 32 32\\">
           <path opacity=\\".25\\" d=\\"M16 0a16 16 0 0 0 0 32 16 16 0 0 0 0-32m0 4a12 12 0 0 1 0 24 12 12 0 0 1 0-24\\"></path>
@@ -551,9 +514,6 @@ exports[`Icon should render examples: Icon 1`] = `
             <path d=\\"M100.5,33 L98.0068455,33 C97.4499488,33 97,33.4477153 97,34 L97,35 L111,35 L111,34 C111,33.4438648 110.54922,33 109.993155,33 L107.5,33 L107,32 L101,32 L100.5,33 Z M98,36 L110,36 L110,45.9914698 C110,47.1007504 109.09805,48 107.99147,48 L100.00853,48 C98.8992496,48 98,47.0980496 98,45.9914698 L98,36 Z\\"></path>
             <path d=\\"M100.5,33 L98.0068455,33 C97.4499488,33 97,33.4477153 97,34 L97,35 L111,35 L111,34 C111,33.4438648 110.54922,33 109.993155,33 L107.5,33 L107,32 L101,32 L100.5,33 Z M98,36 L110,36 L110,45.9914698 C110,47.1007504 109.09805,48 107.99147,48 L100.00853,48 C98.8992496,48 98,47.0980496 98,45.9914698 L98,36 Z\\"></path>
           </g>
-        </symbol>
-        <symbol id=\\"upload-grey08\\" viewBox=\\"0 0 16 16\\">
-          <path fill=\\"#32363f\\" fill-rule=\\"evenodd\\" d=\\"M263,102.414214 L261.707107,103.707107 C261.316582,104.097631 260.683418,104.097631 260.292893,103.707107 C259.902369,103.316582 259.902369,102.683418 260.292893,102.292893 L263.292893,99.2928932 C263.683418,98.9023689 264.316582,98.9023689 264.707107,99.2928932 L267.707107,102.292893 C268.097631,102.683418 268.097631,103.316582 267.707107,103.707107 C267.316582,104.097631 266.683418,104.097631 266.292893,103.707107 L265,102.414214 L265,110 C265,110.552285 264.552285,111 264,111 C263.447715,111 263,110.552285 263,110 L263,102.414214 Z M257,98 L271,98 C271.552285,98 272,97.5522847 272,97 C272,96.4477153 271.552285,96 271,96 L257,96 C256.447715,96 256,96.4477153 256,97 C256,97.5522847 256.447715,98 257,98 Z\\" transform=\\"translate(-256 -96)\\"></path>
         </symbol>
         <symbol id=\\"upload\\" viewBox=\\"0 0 16 16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M263,102.414214 L261.707107,103.707107 C261.316582,104.097631 260.683418,104.097631 260.292893,103.707107 C259.902369,103.316582 259.902369,102.683418 260.292893,102.292893 L263.292893,99.2928932 C263.683418,98.9023689 264.316582,98.9023689 264.707107,99.2928932 L267.707107,102.292893 C268.097631,102.683418 268.097631,103.316582 267.707107,103.707107 C267.316582,104.097631 266.683418,104.097631 266.292893,103.707107 L265,102.414214 L265,110 C265,110.552285 264.552285,111 264,111 C263.447715,111 263,110.552285 263,110 L263,102.414214 Z M257,98 L271,98 C271.552285,98 272,97.5522847 272,97 C272,96.4477153 271.552285,96 271,96 L257,96 C256.447715,96 256,96.4477153 256,97 C256,97.5522847 256.447715,98 257,98 Z\\" transform=\\"translate(-256 -96)\\"></path>
@@ -643,149 +603,124 @@ exports[`Icon should render examples: Icon 1`] = `
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cozy</p>
     </div>
     <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#cross-white\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cross-white</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cross\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cross</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cube\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cube</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dash\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">dash</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#delete-grey08\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">delete-grey08</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#delete\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">delete</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#destroy\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">destroy</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#device-laptop\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">device-laptop</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#dots-white\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">dots-white</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dots\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">dots</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#download\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">download</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#exchange\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">exchange</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file-none\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">file-none</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">file</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#folder\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">folder</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#forward\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">forward</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#gear\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">gear</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#help\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">help</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#hourglass\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">hourglass</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#image\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">image</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#moveto\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">moveto</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#openwith\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">openwith</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#paperplane\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">paperplane</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#people\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">people</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#phone-download\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">phone-download</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#plus\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">plus</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#rename\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">rename</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#restore\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">restore</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#share-grey08\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">share-grey08</p>
     </div>
     <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#share\\"></use>
@@ -798,49 +733,24 @@ exports[`Icon should render examples: Icon 1`] = `
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">small-arrow</p>
     </div>
     <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#spinner-blue\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">spinner-blue</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#spinner-grey\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">spinner-grey</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#spinner-red\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">spinner-red</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#spinner-white\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">spinner-white</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#spinner\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">spinner</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#top-select\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">top-select</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#top\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">top</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#trash\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">trash</p>
-    </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#upload-grey08\\"></use>
-      </svg>
-      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">upload-grey08</p>
     </div>
     <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#upload\\"></use>
@@ -957,7 +867,7 @@ exports[`Radio should render examples: Radio 2`] = `
 exports[`SelectBox should render examples: SelectBox 1`] = `
 "<div>
   <div class=\\"css-1h8pu2y\\">
-    <div class=\\"css-1scqv3c\\">
+    <div class=\\"css-1mag0rk\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -979,7 +889,7 @@ exports[`SelectBox should render examples: SelectBox 1`] = `
 exports[`SelectBox should render examples: SelectBox 2`] = `
 "<div>
   <div class=\\"css-1h8pu2y\\">
-    <div class=\\"css-1scqv3c\\">
+    <div class=\\"css-1mag0rk\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -1030,7 +940,7 @@ exports[`SelectBox should render examples: SelectBox 3`] = `
 exports[`SelectBox should render examples: SelectBox 4`] = `
 "<div>
   <div class=\\"css-1h8pu2y\\">
-    <div class=\\"css-1scqv3c\\">
+    <div class=\\"css-1mag0rk\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -1052,7 +962,7 @@ exports[`SelectBox should render examples: SelectBox 4`] = `
 exports[`SelectBox should render examples: SelectBox 5`] = `
 "<div>
   <div class=\\"css-1h8pu2y\\">
-    <div class=\\"css-1scqv3c\\">
+    <div class=\\"css-1mag0rk\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -1074,7 +984,7 @@ exports[`SelectBox should render examples: SelectBox 5`] = `
 exports[`SelectBox should render examples: SelectBox 6`] = `
 "<div>
   <div class=\\"css-1h8pu2y\\">
-    <div class=\\"css-1scqv3c\\">
+    <div class=\\"css-1mag0rk\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -1134,7 +1044,7 @@ exports[`SelectBox should render examples: SelectBox 6`] = `
 exports[`SelectBox should render examples: SelectBox 7`] = `
 "<div>
   <div class=\\"css-1h8pu2y\\">
-    <div class=\\"css-1scqv3c\\">
+    <div class=\\"css-1mag0rk\\">
       <div class=\\"css-1phseng needsclick\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">

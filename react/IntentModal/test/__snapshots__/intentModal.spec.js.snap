@@ -5,26 +5,12 @@ exports[`IntentModal component renders as expected 1`] = `
   className="styles__intentModal___1aYIb"
   closable={true}
   closeBtnClassName="styles__intentModal__cross___1Hfuz"
-  closeBtnColor={undefined}
-  containerClassName={undefined}
-  description={undefined}
   dismissAction={[Function]}
-  height={undefined}
-  into={undefined}
   mobileFullscreen={false}
   overflowHidden={true}
-  overlayClassName={undefined}
-  primaryAction={undefined}
-  primaryText={undefined}
   primaryType="regular"
-  secondaryAction={undefined}
-  secondaryText={undefined}
   secondaryType="secondary"
   size="small"
-  spacing={undefined}
-  title={undefined}
-  width={undefined}
-  wrapperClassName={undefined}
 >
   <IntentIframe
     action="ANY"
