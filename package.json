@@ -39,7 +39,7 @@
     "sprite": "scripts/make-icon-sprite.sh",
     "test": "yarn test:jest",
     "test:jest": "env BABEL_ENV=transpilation jest --verbose --coverage",
-    "transpile": "env BABEL_ENV=transpilation babel react/ --out-dir transpiled/react --copy-files --ignore '**/test/**,**/__mocks__/**,**/*.spec.*'",
+    "transpile": "env BABEL_ENV=transpilation babel react/ --out-dir transpiled/react --ignore '**/test/**,**/__mocks__/**,**/*.spec.*'",
     "travis-deploy-once": "travis-deploy-once",
     "watch:css": "yarn build:css --watch",
     "watch:doc:react": "env BABEL_ENV=transpilation styleguidist server --config docs/styleguide.config.js",
