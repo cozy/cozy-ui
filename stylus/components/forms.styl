@@ -231,8 +231,10 @@ $label
     display block
     text-transform uppercase
     color coolGrey
-    font-size rem(12)
-    padding rem(9) 0
+    font-size rem(13)
+    font-weight bold
+    line-height rem(16)
+    padding rem(8) 0
     margin-top rem(16)
 
     &.is-error
@@ -256,12 +258,12 @@ $input-text
         color coolGrey
         font-size rem(16)
 
+    &:hover
+        border rem(1) solid coolGrey
+
     &:focus
         border rem(1) solid dodgerBlue
         outline 0
-
-    &:hover
-        border rem(1) solid coolGrey
 
     &.is-error
     &:invalid
@@ -292,9 +294,7 @@ $checkbox
     span
         position relative
         display inline-block
-        height checkbox-size
         padding-left checkbox-size * 1.4
-        line-height rem(16)
         cursor pointer
 
         &::before
@@ -302,11 +302,12 @@ $checkbox
             content ''
             position absolute
             left 0
-            top 0
+            top 50%
             box-sizing border-box
             width checkbox-size
             height checkbox-size
             border-radius rem(2)
+            transform translateY(-53%)
 
         &::before
             transition box-shadow 350ms cubic-bezier(0, .89, .44, 1)
@@ -335,7 +336,7 @@ $checkbox
 
             & + span::after
                 opacity 1
-                transform scale(1)
+                transform scale(1) translateY(-53%)
 
         &:not(:checked) + span::after
             opacity 0
