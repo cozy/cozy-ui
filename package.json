@@ -38,7 +38,7 @@
     "semantic-release": "semantic-release",
     "sprite": "scripts/make-icon-sprite.sh",
     "test": "yarn test:jest",
-    "test:jest": "env BABEL_ENV=transpilation jest --verbose --coverage",
+    "test:jest": "env BABEL_ENV=test jest --verbose --coverage",
     "transpile": "env BABEL_ENV=transpilation babel react/ --out-dir transpiled/react --ignore '**/test/**,**/__mocks__/**,**/*.spec.*'",
     "travis-deploy-once": "travis-deploy-once",
     "watch:css": "yarn build:css --watch",

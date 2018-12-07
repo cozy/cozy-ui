@@ -21,6 +21,15 @@
           "keepImport": true
         }]
       ]
+    },
+    "test": {
+      "plugins": [
+        ["css-modules-transform", {
+          "extensions": [".styl"],
+          "preprocessCss": "./preprocess",
+          "generateScopedName": "[name]__[local]___[hash:base64:5]"
+        }]
+      ]
     }
   },
   "ignore": ["examples/**/*"]
