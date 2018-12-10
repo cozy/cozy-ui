@@ -23,11 +23,11 @@ $wizard-wrapper
     flex-direction column
     width 100%
     height 100%
-    max-width rem(520)
+    max-width rem(512)
     padding 0 rem(16)
     text-align left
 
-    +small-screen('min')
+    +tiny-screen('min')
         height auto
 
 $wizard-wrapper--welcome
@@ -35,14 +35,26 @@ $wizard-wrapper--welcome
 
 $wizard-errors
     order 1
+    margin rem(16) 0 0
+    font-size rem(14)
+    line-height 1.7
+    font-style italic
+
+    +tiny-screen()
+        margin-top rem(8)
 
 $wizard-header
     display flex
     flex-direction column
     flex 0 0 auto
+    margin rem(16) 0
+
+    +tiny-screen()
+        margin rem(16) 0 rem(8)
 
 $wizard-main
-    padding 0 rem(4)
+    display flex
+    flex-direction column
     width 100%
     box-sizing border-box
 
@@ -52,11 +64,24 @@ $wizard-footer
     flex-wrap wrap
     flex 0 0 auto
     padding-bottom env(safe-area-inset-bottom)
+    margin-top rem(32)
 
     & > button // @stylint ignore
     & > a:link // @stylint ignore
         flex 1 1 100%
         margin 0 0 rem(8)
+        line-height 1.5
+
+    +tiny-screen()
+        margin-top rem(24)
+
+$wizard-footer--welcome
+    justify-content space-between
+    +tiny-screen('min')
+        & > button // @stylint ignore
+        & > a:link // @stylint ignore
+            btn-margin = rem(4)
+            flex 0 1 'calc(50% - %s)' % btn-margin
 
 // Wizard elements
 $wizard-logo
@@ -85,15 +110,21 @@ $wizard-header-help
     order -1
     margin 0 0 rem(8)
     font-size rem(18)
-    line-height 1.33
+    line-height 1.5
     text-align center
-    +small-screen()
-        margin rem(20) 0 0
+    +tiny-screen()
+        margin rem(4) 0 0
         font-size rem(16)
+
+$wizard-desc
+    margin rem(32) 0 0
+    line-height 1.5
+    +tiny-screen()
+        margin rem(24) 0 0
 
 $wizard-previous
     position fixed
-    top rem(7)
+    top rem(14)
     left 0
     margin 0
     padding rem(10) rem(16)
@@ -107,34 +138,35 @@ $wizard-next
         right rem(16)
 
 $wizard-button
-    +small-screen('min')
+    +tiny-screen('min')
         {button--large}
 
 $wizard-password
-    +small-screen()
+    +tiny-screen()
         {input-text--medium}
 
 $wizard-title
-    margin 0 0 rem(8)
+    margin 0
     text-align center
     font-size rem(32)
-    +small-screen()
-        margin 0
+    line-height 1.25
+    +tiny-screen()
         font-size rem(18)
         line-height 1.78
 
 $wizard-subtitle
-    margin 0 0 rem(8)
+    margin rem(8) 0 0
     text-align center
     font-size rem(16)
     font-weight normal
     line-height 1.5
-    +small-screen()
+    +tiny-screen()
+        margin 0
         font-size rem(14)
-        line-height 1.43
+        line-height 1.15
 
 $wizard-title--welcome
-    +small-screen()
+    +tiny-screen()
         font-size rem(24)
         line-height 1.17
 
@@ -179,36 +211,42 @@ $wizard-select
     flex 0 0 auto
     margin rem(2)
     width rem(148)
-    border-color transparent
-    padding-left rem(8)
+    border 0
+    padding rem(11 16 11 8)
 
+    &:hover
     &:focus
         position relative
         z-index 1
         background-color paleGrey
-        border-color transparent
+        border 0
         outline 0
 
 $wizard-select--medium
     @extend $select--medium
-    padding-left rem(8)
+    padding rem(6 16 8 8)
 
 $wizard-select--narrow
     width rem(40)
 
 $wizard-input
     flex 1 1 auto
-    border-color transparent
+    border 0
     padding-right rem(8)
     &:hover
     &:focus
         position relative
         z-index 1
-        border-color transparent
+        border 0
         outline 0
 
 $wizard-notice
-    margin     rem(8) 0 0
+    order 2
+    margin rem(16) 0 0
+    line-height 1.5
+
+    p
+        margin 0
 
     a
         color dodgerBlue
@@ -218,13 +256,8 @@ $wizard-notice
         &:focus
             color scienceBlue
 
-    +small-screen('min')
+    +tiny-screen('min')
         margin rem(32) 0 0
-
-$wizard-notice--error
-    color pomegranate
-    font-size rem(12)
-    font-style italic
 
 $wizard-notice--lost
     font-size rem(16)
