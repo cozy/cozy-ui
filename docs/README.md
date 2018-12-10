@@ -23,38 +23,21 @@ Check out [UI components](https://cozy.github.io/cozy-ui/react/) to see how to u
 
 ### As a Components library
 
-Use [`yarn`](https://yarnpkg.com/) to add Cozy UI to a dependency to your project.
+Add Cozy UI to a dependency to your project.
 ```
-yarn add cozy-ui
+npm install cozy-ui
+```
+
+If you use the transpiled components (from `cozy-ui/transpiled/react`), you need to import the stylesheet (once):
+
+```
+import Button from 'cozy-ui/transpiled/react/Button'
+import 'cozy-ui/transpiled/stylesheet.css'
+
+<Button />
 ```
 
 You're now ready to use [Cozy UI's (p)React components](https://cozy.github.io/cozy-ui/react/)
-
-### As a Stylus plugin
-[Stylus][stylus] is used as a preprocessor. You can add it as a library in your project to use it out-of-the-box.
-
-Cozy UI can be distributed as a plugin.
-
-```sh
-$ yarn add -D cozy-ui
-```
-
-Then simply add it to your plugins stack:
-
-```js
-var stylus  = require('stylus')
-  , cozyui = require('cozy-ui/stylus');
-
-
-function compile(str, path) {
-return stylus(str)
-  .set('filename', path)
-  .set('compress', true)
-  .use(cozyui());
-}
-```
-
-Then, you just need to add a `@import 'cozy-ui'` statement at top of your main stylus file.
 
 ### As a vanilla CSS library
 
