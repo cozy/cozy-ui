@@ -27,7 +27,7 @@ $wizard-wrapper
     padding 0 rem(16)
     text-align left
 
-    +small-screen('min')
+    +tiny-screen('min')
         height auto
 
 $wizard-wrapper--welcome
@@ -40,7 +40,7 @@ $wizard-errors
     line-height 1.7
     font-style italic
 
-    +small-screen()
+    +tiny-screen()
         margin-top rem(8)
 
 $wizard-header
@@ -49,7 +49,7 @@ $wizard-header
     flex 0 0 auto
     margin rem(16) 0
 
-    +small-screen()
+    +tiny-screen()
         margin rem(16) 0 rem(8)
 
 $wizard-main
@@ -72,12 +72,12 @@ $wizard-footer
         margin 0 0 rem(8)
         line-height 1.5
 
-    +small-screen()
+    +tiny-screen()
         margin-top rem(24)
 
 $wizard-footer--welcome
     justify-content space-between
-    +small-screen('min')
+    +tiny-screen('min')
         & > button // @stylint ignore
         & > a:link // @stylint ignore
             btn-margin = rem(4)
@@ -112,14 +112,14 @@ $wizard-header-help
     font-size rem(18)
     line-height 1.5
     text-align center
-    +small-screen()
+    +tiny-screen()
         margin rem(4) 0 0
         font-size rem(16)
 
 $wizard-desc
     margin rem(32) 0 0
     line-height 1.5
-    +small-screen()
+    +tiny-screen()
         margin rem(24) 0 0
 
 $wizard-previous
@@ -138,11 +138,11 @@ $wizard-next
         right rem(16)
 
 $wizard-button
-    +small-screen('min')
+    +tiny-screen('min')
         {button--large}
 
 $wizard-password
-    +small-screen()
+    +tiny-screen()
         {input-text--medium}
 
 $wizard-title
@@ -150,7 +150,7 @@ $wizard-title
     text-align center
     font-size rem(32)
     line-height 1.25
-    +small-screen()
+    +tiny-screen()
         font-size rem(18)
         line-height 1.78
 
@@ -160,13 +160,13 @@ $wizard-subtitle
     font-size rem(16)
     font-weight normal
     line-height 1.5
-    +small-screen()
+    +tiny-screen()
         margin 0
         font-size rem(14)
         line-height 1.15
 
 $wizard-title--welcome
-    +small-screen()
+    +tiny-screen()
         font-size rem(24)
         line-height 1.17
 
@@ -256,7 +256,7 @@ $wizard-notice
         &:focus
             color scienceBlue
 
-    +small-screen('min')
+    +tiny-screen('min')
         margin rem(32) 0 0
 
 $wizard-notice--lost
