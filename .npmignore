@@ -6,3 +6,5 @@ yarn.lock
 /scripts
 .changelog
 examples
+docs
+coverage
