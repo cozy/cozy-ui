@@ -8,3 +8,5 @@ yarn.lock
 examples
 docs
 coverage
+codemods
+loaders
