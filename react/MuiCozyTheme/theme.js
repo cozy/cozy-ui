@@ -10,8 +10,8 @@ const getCssVariableValue = variableName =>
 
 export const theme = createMuiTheme({
   typography: {
+    fontFamily: getCssVariableValue('primaryFont'),
     title: {
-      fontFamily: ['Lato', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
       color: 'white'
     }
   },
