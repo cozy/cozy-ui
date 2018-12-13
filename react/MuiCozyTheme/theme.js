@@ -1,7 +1,12 @@
 import { createMuiTheme } from '@material-ui/core/styles'
-import palette from '../../stylus/settings/palette.json'
 
 import MuiButton from './Buttons/theme'
+
+const getCssVariableValue = variableName =>
+  window
+    .getComputedStyle(document.documentElement)
+    .getPropertyValue(`--${variableName}`)
+    .trim()
 
 export const theme = createMuiTheme({
   typography: {
@@ -12,16 +17,16 @@ export const theme = createMuiTheme({
   },
   palette: {
     primary: {
-      light: palette['frenchPass'],
-      main: palette['dodgerBlue'],
-      dark: palette['scienceBlue'],
-      contrastText: palette['white']
+      light: getCssVariableValue('frenchPass'),
+      main: getCssVariableValue('dodgerBlue'),
+      dark: getCssVariableValue('scienceBlue'),
+      contrastText: getCssVariableValue('white')
     },
     secondary: {
-      light: palette['monza'],
-      main: palette['portage'],
-      dark: palette['azure'],
-      contrastText: palette['white']
+      light: getCssVariableValue('monza'),
+      main: getCssVariableValue('portage'),
+      dark: getCssVariableValue('azure'),
+      contrastText: getCssVariableValue('white')
     }
   },
   overrides: {
