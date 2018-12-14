@@ -11,7 +11,7 @@ import { genNavLink } from 'cozy-ui/react/Nav'
 const NavLink = genNavLink(RRNavLink)
 ```
 
-In action : 
+In action :
 
 ```
 const _Nav = require('../Nav')
