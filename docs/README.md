@@ -13,11 +13,11 @@ If you plan to build a webapp to run on Cozy, you'll probably want to use a simp
 
 ## CSS Styleguide
 
-Check the [styleguide](https://cozy.github.io/cozy-ui/styleguide) to see all the variables, mixins, classes, utilities and how to use them with only CSS classes.
+Check the [styleguide](https://docs.cozy.io/cozy-ui/styleguide) to see all the variables, mixins, classes, utilities and how to use them with only CSS classes.
 
 ## React components
 
-Check out [UI components](https://cozy.github.io/cozy-ui/react/) to see how to use ready made (p)React components.
+Check out [UI components](https://docs.cozy.io/cozy-ui/react/) to see how to use ready made (p)React components.
 
 ## Usage
 
@@ -37,7 +37,7 @@ import 'cozy-ui/transpiled/stylesheet.css'
 <Button />
 ```
 
-You're now ready to use [Cozy UI's (p)React components](https://cozy.github.io/cozy-ui/react/)
+You're now ready to use [Cozy UI's (p)React components](https://docs.cozy.io/cozy-ui/react/)
 
 ### As a vanilla CSS library
 
