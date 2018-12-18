@@ -17,6 +17,7 @@
   "texasRose": "var(--texasRose)",
   "chablis": "var(--chablis)",
   "yourPink": "var(--yourPink)",
+  "fuchsia": "var(--fuchsia)",
   "pomegranate": "var(--pomegranate)",
   "monza": "var(--monza)",
   "portage": "var(--portage)",
