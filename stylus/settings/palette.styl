@@ -1,25 +1,4 @@
-
-// load all color codes
-$theme = json('theme.json', { hash: true })
-
-// build the final palette with rgba() values
-$palette = { }
-
-colorFromArray(c)
-    s('rgba(%s, %s, %s, %s)', c['0'], c['1'], c['2'], c['3'] || 1)
-
-
-variableFromName(name)
-    s('var(--%s)', s(name))
-
-buildPalette(theme)
-    for name, color in theme
-        $palette[name] = colorFromArray(color)
-        define(name, variableFromName(name), true)
-
-
-buildPalette($theme)
-
+json('palette.json')
 // @stylint off
 /*------------------------------------*\
   Palette
@@ -33,16 +12,6 @@ buildPalette($theme)
     Styleguide Settings
 */
 
-
-:root {
-  for name,value in $palette {
-    {s('--%s',s(name))}: $value
-  }
-}
-
-
-
-
 /*
     Colors
 
@@ -50,7 +19,7 @@ buildPalette($theme)
 
     Styleguide Settings.colors
 */
-
+:root
     /*
     Grey
 
@@ -66,7 +35,14 @@ buildPalette($theme)
 
     Styleguide Settings.colors.grey
     */
-
+    --white         #FFFFFF
+    --paleGrey      #F5F6F7
+    --silver        #D6D8Da
+    --coolGrey      #95999D
+    --slateGrey     #5D6165
+    --charcoalGrey  #32363F
+    --black         #000000
+    --overlay       rgba(50, 54, 63, .5)
     /*
     Blue
 
@@ -79,6 +55,13 @@ buildPalette($theme)
 
     Styleguide Settings.colors.blue
     */
+    --zircon       #F1F7FF
+    --frenchPass   #C2DCFF
+    --dodgerBlue   #297EF2
+    --azure        #1FA8F1
+    --scienceBlue  #0B61D6
+    --puertoRico   #4DCEC5
+
 
     /*
     Green
@@ -89,7 +72,9 @@ buildPalette($theme)
 
     Styleguide Settings.colors.green
     */
-
+    --emerald     #35CE68
+    --malachite   #08b442
+    --weirdGreen  #40DE8E
     /*
     Orange
 
@@ -101,7 +86,11 @@ buildPalette($theme)
 
     Styleguide Settings.colors.orange
     */
-
+    --texasRose      #FFAE5F
+    --mango          #FF962F
+    --pumpkinOrange  #FF7F1B
+    --blazeOrange    #FC6D00
+    --melon          #FD7461
     /*
     Red
 
@@ -112,7 +101,10 @@ buildPalette($theme)
 
     Styleguide Settings.colors.red
     */
-
+    --chablis      #FFF2F2
+    --yourPink     #FDCBCB
+    --pomegranate  #F52D2D
+    --monza        #DD0505
     /*
     Purple
 
@@ -124,5 +116,9 @@ buildPalette($theme)
 
     Styleguide Settings.colors.purple
     */
-
+    --darkPeriwinkle  #6984CE
+    --purpley         #7F6BEE
+    --portage         #9169F2
+    --lightishPurple  #B449E7
+    --barney          #922BC2
 // @stylint on

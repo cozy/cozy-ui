@@ -24,7 +24,9 @@ $valid
 $warn
     color  texasRose
 
-for color in keys($palette)
+colors=json('../settings/palette.json', { hash: true })
+
+for color in keys(colors)
     $color-{color}
         color: lookup(color) !important // @stylint ignore
 
