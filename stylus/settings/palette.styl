@@ -5,18 +5,12 @@ $theme = json('theme.json', { hash: true })
 // build the final palette with rgba() values
 $palette = { }
 
-colorFromArray(c)
-    s('rgba(%s, %s, %s, %s)', c['0'], c['1'], c['2'], c['3'] || 1)
-
-
 variableFromName(name)
     s('var(--%s)', s(name))
 
 buildPalette(theme)
     for name, color in theme
-        $palette[name] = colorFromArray(color)
-        define(name, variableFromName(name), true)
-
+        $palette[name] = color
 
 buildPalette($theme)
 
@@ -36,7 +30,7 @@ buildPalette($theme)
 
 :root {
   for name,value in $palette {
-    {s('--%s',s(name))}: $value
+    {s('--%s',s(name))}: value
   }
 }
 
