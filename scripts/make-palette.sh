@@ -3,7 +3,8 @@
 set -eu
 
 # Palette needs to be accessible from stylus and from JS
-JS_PALETTE='react/palette.js'
-echo "// GENERATED AUTOMATICALLY FROM stylus/settings/palette.json" > $JS_PALETTE
-echo "module.exports = `cat stylus/settings/palette.json`" >> $JS_PALETTE
-node_modules/.bin/eslint --fix $JS_PALETTE
+DIR_PREFIX='transpiled'
+SOURCE_DIR='stylus/settings'
+SOURCE_FILE='theme.json'
+mkdir -p $DIR_PREFIX/$SOURCE_DIR
+cp $SOURCE_DIR/$SOURCE_FILE $DIR_PREFIX/$SOURCE_DIR
