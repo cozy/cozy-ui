@@ -1,12 +1,6 @@
 import { createMuiTheme } from '@material-ui/core/styles'
-
+import { getCssVariableValue } from '../utils/color'
 import MuiButton from './Buttons/theme'
-
-const getCssVariableValue = variableName =>
-  window
-    .getComputedStyle(document.documentElement)
-    .getPropertyValue(`--${variableName}`)
-    .trim()
 
 export const theme = createMuiTheme({
   typography: {
