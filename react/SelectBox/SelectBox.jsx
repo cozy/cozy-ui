@@ -5,7 +5,7 @@ import styles from './styles.styl'
 import Icon from '../Icon'
 import { dodgerBlue, silver, coolGrey } from '../palette'
 import withBreakpoints from '../helpers/withBreakpoints'
-import cx from 'classnames'
+import classNames from 'classnames'
 
 const customStyles = {
   container: base => ({
@@ -73,7 +73,7 @@ const Option = ({
   <div
     {...innerProps}
     ref={innerRef}
-    className={cx(styles['select-option'], {
+    className={classNames(styles['select-option'], {
       [styles['select-option--selected']]: isSelected && !withCheckbox,
       [styles['select-option--focused']]: isFocused,
       [styles['select-option--disabled']]: isDisabled
@@ -179,7 +179,7 @@ class SelectBox extends Component {
         onMenuOpen={this.handleOpen}
         onMenuClose={this.handleClose}
         {...props}
-        className={cx(
+        className={classNames(
           {
             [styles['select__overlay']]: showOverlay
           },
