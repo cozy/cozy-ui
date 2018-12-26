@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import ReactSelect from 'react-select'
 import styles from './styles.styl'
 import Icon from '../Icon'
-import palette from '../palette'
+import { dodgerBlue, silver, coolGrey } from '../palette'
 import withBreakpoints from '../helpers/withBreakpoints'
 import cx from 'classnames'
 
@@ -16,10 +16,10 @@ const customStyles = {
     ...base,
     backgroundColor: 'white',
     border: state.isFocused
-      ? `.0625rem solid ${palette['dodgerBlue']}`
-      : `.0625rem solid ${palette['silver']}`,
+      ? `.0625rem solid ${dodgerBlue}`
+      : `.0625rem solid ${silver}`,
     ':hover': {
-      borderColor: palette['coolGrey']
+      borderColor: coolGrey
     },
     borderRadius: '.1875rem',
     boxShadow: 'unset',
@@ -98,7 +98,7 @@ const Option = ({
         {isSelected && (
           <Icon
             icon="check-circleless"
-            color={palette['dodgerBlue']}
+            color={dodgerBlue}
             className="u-ph-half"
           />
         )}
@@ -127,7 +127,7 @@ const ActionsOption = ({ actions, ...props }) => (
         <Icon
           key={index}
           icon={action.icon}
-          color={props.isFocused ? palette['coolGrey'] : palette['silver']}
+          color={props.isFocused ? coolGrey : silver}
           className="u-ph-half"
           onClick={e => {
             e.stopPropagation()
