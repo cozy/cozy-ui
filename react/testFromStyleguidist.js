@@ -24,6 +24,7 @@ import Field from './Field'
 import Hero from './Hero'
 import I18n from './I18n'
 import Icon from './Icon'
+import Infos from './Infos'
 import Input from './Input'
 import IntentHeader from './IntentHeader'
 import IntentIframe from './IntentIframe'
@@ -73,6 +74,7 @@ const testFromStyleguidist = (name, markdown, require) => {
       'Hero',
       'I18n',
       'Icon',
+      'Infos',
       'Input',
       'IntentHeader',
       'IntentIframe',
@@ -116,6 +118,7 @@ const testFromStyleguidist = (name, markdown, require) => {
       Hero,
       I18n,
       Icon,
+      Infos,
       Input,
       IntentHeader,
       IntentIframe,
