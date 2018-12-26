@@ -24,8 +24,8 @@ const Infos = ({ icon, text, className }) => {
 Infos.defaultProps = {
   icon: null
 }
-Infos.prototype = {
-  icon: PropTypes.any,
+Infos.propTypes = {
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   text: PropTypes.string
 }
 export default Infos
