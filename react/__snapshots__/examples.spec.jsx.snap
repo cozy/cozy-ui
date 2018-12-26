@@ -1087,7 +1087,7 @@ exports[`SelectBox should render examples: SelectBox 8`] = `
     </div>
     <div class=\\"css-1dhof61 needsclick cz__menu\\">
       <div class=\\"css-11unzgr needsclick cz__menu-list\\">
-        <div id=\\"react-select-9-option-0\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\"><span class=\\"u-ellipsis\\">Chocolate</span></span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
+        <div id=\\"react-select-9-option-0\\" role=\\"option\\" tabindex=\\"-1\\" class=\\"needsclick cz__ styles__select-option___ov_IT\\"><span class=\\"needsclick cz__ styles__select-option__label___1Xi5R\\"><span class=\\"needsclick cz__ u-ellipsis\\">Chocolate</span></span><span class=\\"needsclick cz__ styles__select-option__checkmark___ChXXs\\"></span></div>
       </div>
     </div>
   </div>
