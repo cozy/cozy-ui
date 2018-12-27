@@ -129,3 +129,13 @@ const ValueContainer = props => {
 
 />
 ```
+
+Add a prefix className:
+
+```
+const options = [
+  { value: 'chocolate', label: 'Chocolate' }
+];
+
+<SelectBox options={options} menuIsOpen classNamePrefix='needsclick cz' />
+```

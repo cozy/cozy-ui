@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import ReactSelect from 'react-select'
 import styles from './styles.styl'
 import Icon from '../Icon'
-import palette from '../palette'
+import { dodgerBlue, silver, coolGrey } from '../palette'
 import withBreakpoints from '../helpers/withBreakpoints'
-import cx from 'classnames'
+import classNames from 'classnames'
 
 const customStyles = {
   container: base => ({
@@ -16,10 +16,10 @@ const customStyles = {
     ...base,
     backgroundColor: 'white',
     border: state.isFocused
-      ? `.0625rem solid ${palette['dodgerBlue']}`
-      : `.0625rem solid ${palette['silver']}`,
+      ? `.0625rem solid ${dodgerBlue}`
+      : `.0625rem solid ${silver}`,
     ':hover': {
-      borderColor: palette['coolGrey']
+      borderColor: coolGrey
     },
     borderRadius: '.1875rem',
     boxShadow: 'unset',
@@ -60,6 +60,20 @@ const reactSelectControl = CustomControl => ({
   </div>
 )
 
+export const withPrefix = (reactSelectCx, className) => {
+  // react-select implement a classnames function https://git.io/fhT8S
+  // it's not the same as classnames library (https://www.npmjs.com/package/classnames)
+  // 1st parameter is bound by react-select with prefix https://git.io/fhkIj
+  // 2nd parameter is cssKey. We don't need it so it's set to null
+  // 3rd parameter is used to add prefix but we don't want to stick with
+  //   webpack className so we add space (' ') in front of it
+  const classNameWithPrefix = reactSelectCx(null, { [` ${className}`]: true })
+
+  // When we don't use classNamePrefix cx return '' so we verify to send
+  // className
+  return classNameWithPrefix === '' ? className : classNameWithPrefix
+}
+
 const Option = ({
   children,
   isSelected,
@@ -68,38 +82,42 @@ const Option = ({
   innerProps,
   innerRef,
   labelComponent,
+  cx,
   withCheckbox
 }) => (
   <div
     {...innerProps}
     ref={innerRef}
-    className={cx(styles['select-option'], {
-      [styles['select-option--selected']]: isSelected && !withCheckbox,
-      [styles['select-option--focused']]: isFocused,
-      [styles['select-option--disabled']]: isDisabled
-    })}
+    className={withPrefix(
+      cx,
+      classNames(styles['select-option'], {
+        [styles['select-option--selected']]: isSelected && !withCheckbox,
+        [styles['select-option--focused']]: isFocused,
+        [styles['select-option--disabled']]: isDisabled
+      })
+    )}
   >
     {withCheckbox && (
       <input
         type="checkbox"
         readOnly
         checked={isSelected}
-        className={styles['select-option__checkbox']}
+        className={withPrefix(cx, styles['select-option__checkbox'])}
       />
     )}
-    <span className={styles['select-option__label']}>
-      <span className="u-ellipsis">
+    <span className={withPrefix(cx, styles['select-option__label'])}>
+      <span className={withPrefix(cx, 'u-ellipsis')}>
         {labelComponent ? labelComponent : children}
       </span>
       {labelComponent ? children : false}
     </span>
     {!withCheckbox && (
-      <span className={styles['select-option__checkmark']}>
+      <span className={withPrefix(cx, styles['select-option__checkmark'])}>
         {isSelected && (
           <Icon
             icon="check-circleless"
-            color={palette['dodgerBlue']}
-            className="u-ph-half"
+            color={dodgerBlue}
+            className={withPrefix(cx, 'u-ph-half')}
           />
         )}
       </span>
@@ -122,13 +140,13 @@ CheckboxOption.propTypes = {}
 
 const ActionsOption = ({ actions, ...props }) => (
   <Option {...props} labelComponent={props.children}>
-    <span className={styles['select-option__actions']}>
+    <span className={withPrefix(props.cx, styles['select-option__actions'])}>
       {actions.map((action, index) => (
         <Icon
           key={index}
           icon={action.icon}
-          color={props.isFocused ? palette['coolGrey'] : palette['silver']}
-          className="u-ph-half"
+          color={props.isFocused ? coolGrey : silver}
+          className={withPrefix(props.cx, 'u-ph-half')}
           onClick={e => {
             e.stopPropagation()
             action.onClick(props)
@@ -179,7 +197,7 @@ class SelectBox extends Component {
         onMenuOpen={this.handleOpen}
         onMenuClose={this.handleClose}
         {...props}
-        className={cx(
+        className={classNames(
           {
             [styles['select__overlay']]: showOverlay
           },
