@@ -60,8 +60,17 @@ const reactSelectControl = CustomControl => ({
   </div>
 )
 
-export const withPrefix = (cx, className) => {
-  const classNameWithPrefix = cx(null, { [` ${className}`]: true })
+export const withPrefix = (reactSelectCx, className) => {
+  // react-select implement a classnames function https://git.io/fhT8S
+  // it's not the same as classnames library (https://www.npmjs.com/package/classnames)
+  // 1st parameter is bound by react-select with prefix https://git.io/fhkIj
+  // 2nd parameter is cssKey. We don't need it so it's set to null
+  // 3rd parameter is used to add prefix but we don't want to stick with
+  //   webpack className so we add space (' ') in front of it
+  const classNameWithPrefix = reactSelectCx(null, { [` ${className}`]: true })
+
+  // When we don't use classNamePrefix cx return '' so we verify to send
+  // className
   return classNameWithPrefix === '' ? className : classNameWithPrefix
 }
 
@@ -73,7 +82,7 @@ const Option = ({
   innerProps,
   innerRef,
   labelComponent,
-  cx, // it's classnames of react-select https://git.io/fhT8S
+  cx,
   withCheckbox
 }) => (
   <div
