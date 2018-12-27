@@ -789,6 +789,26 @@ exports[`Icon should render examples: Icon 3`] = `
 </div>"
 `;
 
+exports[`Infos should render examples: Infos 1`] = `
+"<div>
+  <div>
+    <div class=\\"styles__infos___Xu7xe u-p-1\\">
+      <div class=\\"styles__infos--container___faoPY\\">
+        <div class=\\"styles__u-text___2UfQa styles__infos--text___m9oNV\\">My small persistent information! </div>
+      </div>
+    </div>
+    <div style=\\"height: 10px;\\"></div>
+    <div class=\\"styles__infos___Xu7xe u-p-1\\">
+      <div class=\\"styles__infos--container___faoPY\\"><svg class=\\"styles__infos--icon___2XWQm styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+          <use xlink:href=\\"#plus\\"></use>
+        </svg>
+        <div class=\\"styles__u-text___2UfQa styles__infos--text___m9oNV u-pl-half\\">My small persistent information, with an icon. And lot of text ? Again and again...</div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
 exports[`Label should render examples: Label 1`] = `
 "<div>
   <form>
