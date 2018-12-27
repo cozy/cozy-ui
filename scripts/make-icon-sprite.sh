@@ -37,6 +37,7 @@ assets/icons/ui/gear.svg
 assets/icons/ui/help.svg
 assets/icons/ui/hide.svg
 assets/icons/ui/hourglass.svg
+assets/icons/ui/info.svg
 assets/icons/ui/image.svg
 assets/icons/ui/lock.svg
 assets/icons/ui/moveto.svg
