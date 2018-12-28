@@ -109,7 +109,7 @@
     "node-polyglot": "^2.2.2",
     "normalize.css": "^7.0.0",
     "react-hot-loader": "^4.3.11",
-    "react-select": "2.1.1"
+    "react-select": "2.2.0"
   },
   "peerDependencies": {
     "@material-ui/core": "3.7.0",
