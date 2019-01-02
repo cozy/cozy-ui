@@ -211,7 +211,7 @@ exports[`Field should render examples: Field 1`] = `
 exports[`Field should render examples: Field 2`] = `
 "<div>
   <form>
-    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idFieldError\\" class=\\"styles__c-label___o4ozG\\">I'm an error label</label><input type=\\"text\\" id=\\"idFieldError\\" class=\\"styles__c-input-text___3TAv1 styles__is-error___3lsCJ\\" placeholder=\\"I'm an error input[type=text]\\" value=\\"\\"></div>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idFieldError\\" class=\\"styles__c-label___o4ozG\\">I'm an error label</label><input type=\\"text\\" id=\\"idFieldError\\" class=\\"styles__c-input-text___3TAv1 styles__is-error___3lsCJ styles__c-input-text--large___28EaR\\" placeholder=\\"I'm an error input[type=text]\\" value=\\"\\"></div>
   </form>
 </div>"
 `;
@@ -821,7 +821,7 @@ exports[`Infos should render examples: Infos 1`] = `
 exports[`Label should render examples: Label 1`] = `
 "<div>
   <form>
-    <div><label for=\\"idInput\\" class=\\"styles__c-label___o4ozG\\">This is a label</label><input type=\\"text\\" id=\\"idInput\\" class=\\"styles__c-input-text___3TAv1\\" placeholder=\\"Recherche\\" value=\\"\\"></div>
+    <div><label for=\\"idInput\\" class=\\"styles__c-label___o4ozG\\">This is a label</label><input type=\\"text\\" id=\\"idInput\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Recherche\\" value=\\"\\"></div>
   </form>
 </div>"
 `;
@@ -829,7 +829,7 @@ exports[`Label should render examples: Label 1`] = `
 exports[`Label should render examples: Label 2`] = `
 "<div>
   <form>
-    <div><label for=\\"idInput2\\" class=\\"styles__c-label___o4ozG styles__is-error___2Dwem\\">This is an error label</label><input type=\\"text\\" id=\\"idInput2\\" class=\\"styles__c-input-text___3TAv1 styles__is-error___3lsCJ\\" placeholder=\\"Recherche\\" value=\\"\\"></div>
+    <div><label for=\\"idInput2\\" class=\\"styles__c-label___o4ozG styles__is-error___2Dwem\\">This is an error label</label><input type=\\"text\\" id=\\"idInput2\\" class=\\"styles__c-input-text___3TAv1 styles__is-error___3lsCJ styles__c-input-text--large___28EaR\\" placeholder=\\"Recherche\\" value=\\"\\"></div>
   </form>
 </div>"
 `;

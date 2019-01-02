@@ -17,6 +17,8 @@
 
 ### Alternative input sizes
 
+By default, the size is `large`.
+
 ```
 <div>
   <p>
