@@ -37,6 +37,7 @@
     "release": "npm-run-all --parallel sprite palette && yarn transpile",
     "semantic-release": "semantic-release",
     "sprite": "scripts/make-icon-sprite.sh",
+    "jest": "yarn test:jest",
     "test": "yarn test:jest",
     "test:jest": "env BABEL_ENV=transpilation jest --verbose --coverage",
     "transpile": "env BABEL_ENV=transpilation babel react/ --out-dir transpiled/react --copy-files --ignore '**/test/**,**/__mocks__/**,**/*.spec.*'",
