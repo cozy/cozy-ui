@@ -9,6 +9,7 @@ import Textarea from '../Textarea'
 const Field = props => {
   const {
     className,
+    fullwidth,
     label,
     id,
     type,
@@ -38,6 +39,7 @@ const Field = props => {
       case 'url':
         return (
           <Input
+            fullwidth={fullwidth}
             id={id}
             type={type}
             placeholder={placeholder}
@@ -62,7 +64,8 @@ const Field = props => {
   )
 }
 
-Field.propTypes = {
+Field.PropTypes = {
+  fullwidth: PropTypes.bool,
   label: PropTypes.string.isRequired,
   id: PropTypes.string,
   type: PropTypes.oneOf(['text', 'password', 'email', 'url', 'textarea']),
@@ -72,6 +75,7 @@ Field.propTypes = {
 }
 
 Field.defaultProps = {
+  fullwidth: false,
   label: '',
   id: '',
   type: 'text',
