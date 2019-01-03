@@ -1,5 +1,11 @@
 #### Field component is a combination of Label & Input components
 
+Like `Input` component, it can have the following properties:
+
+* `fullwidth` (default: `false`)
+
+##### Example
+
 ```
 <form>
   <Field
