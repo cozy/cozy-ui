@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import ReactSelect from 'react-select'
+import ReactSelect, { components } from 'react-select'
 import styles from './styles.styl'
 import Icon from '../Icon'
 import { dodgerBlue, silver, coolGrey } from '../palette'
@@ -25,16 +25,12 @@ const customStyles = {
     boxShadow: 'unset',
     padding: '.503rem .5rem'
   }),
-  dropdownIndicator: (base, state) => ({
+  dropdownIndicator: base => ({
     ...base,
-    backgroundImage: state.menuIsOpen
-      ? 'url("../../assets/icons/ui/top-select.svg")'
-      : 'url("../../assets/icons/ui/bottom-select.svg")',
-    backgroundSize: '.875rem',
-    height: '.875rem',
     marginRight: '.75rem',
-    padding: 0,
-    width: '.875rem'
+    height: '.875rem',
+    width: '.875rem',
+    padding: 0
   }),
   indicatorSeparator: () => ({
     display: 'none'
@@ -47,6 +43,19 @@ const customStyles = {
     ...base,
     zIndex: 10
   })
+}
+
+const DropdownIndicator = props => {
+  return (
+    <components.DropdownIndicator {...props}>
+      <Icon
+        icon={props.selectProps.menuIsOpen ? 'top' : 'bottom'}
+        color={coolGrey}
+        width="20"
+        height="16"
+      />
+    </components.DropdownIndicator>
+  )
 }
 
 const reactSelectControl = CustomControl => ({
@@ -192,7 +201,7 @@ class SelectBox extends Component {
     const showOverlay = this.state.isOpen && isMobile
     return (
       <ReactSelect
-        components={{ Option, ...components }}
+        components={{ DropdownIndicator, Option, ...components }}
         styles={{ ...customStyles, ...reactSelectStyles }}
         onMenuOpen={this.handleOpen}
         onMenuClose={this.handleClose}
@@ -221,8 +230,6 @@ SelectBox.defaultProps = {
   components: {},
   styles: {}
 }
-
-const components = ReactSelect.components
 
 export default withBreakpoints()(SelectBox)
 export { Option, CheckboxOption, ActionsOption, reactSelectControl, components }
