@@ -6,6 +6,7 @@ Both look exactly the same, they share the same `className`, `disabled`, `onClic
 - `type`, eg. `submit` or `reset` (default `submit`)
 
 when `<ButtonLink>` has:
+
 - `href` to add an URL (default `''`)
 - `target` to pass the link's `target` value (default `''`)
 
@@ -42,8 +43,8 @@ const { Button } = require('./index');
 
 #### Width
 
-* `narrow` to ignore Button's `min-width`
-* `full` to enable full width
+- `narrow` to ignore Button's `min-width`
+- `full` to enable full width
 
 ```
 const { Button } = require('./index');
@@ -118,6 +119,7 @@ const { Button } = require('.');
 ```
 
 ### Subtle Buttons
+
 Subtle buttons are buttons without background and borders, wich look "inverted" compared to the basic Buttons.
 
 ```
@@ -145,6 +147,9 @@ const { Button } = require('./index');
   </p>
   <p>
     <Button subtle icon='cozy' label='Cozy' />
+  </p>
+  <p>
+    <Button subtle icon='plus' label='Subtle Secondary Cozy' theme='secondary' />
   </p>
 </div>
 ```
