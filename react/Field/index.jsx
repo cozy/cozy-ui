@@ -16,7 +16,8 @@ const Field = props => {
     placeholder,
     error,
     onChange,
-    readOnly
+    readOnly,
+    size
   } = props
 
   const inputType = type => {
@@ -45,6 +46,7 @@ const Field = props => {
             error={error}
             onChange={onChange}
             readOnly={readOnly}
+            size={size}
           />
         )
       default:
@@ -68,7 +70,8 @@ Field.propTypes = {
   type: PropTypes.oneOf(['text', 'password', 'email', 'url', 'textarea']),
   value: PropTypes.string,
   placeholder: PropTypes.string,
-  error: PropTypes.bool
+  error: PropTypes.bool,
+  size: PropTypes.oneOf(['tiny', 'medium', 'large'])
 }
 
 Field.defaultProps = {
@@ -77,7 +80,8 @@ Field.defaultProps = {
   type: 'text',
   value: '',
   placeholder: '',
-  error: false
+  error: false,
+  size: 'large'
 }
 
 export default Field

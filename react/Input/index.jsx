@@ -44,7 +44,7 @@ Input.propTypes = {
   value: PropTypes.string,
   placeholder: PropTypes.string,
   error: PropTypes.bool,
-  size: PropTypes.oneOf(['tiny', 'medium']),
+  size: PropTypes.oneOf(['tiny', 'medium', 'large']),
   fullwidth: PropTypes.bool,
   /**
    * Use that property to pass a ref callback to the native input component.
@@ -55,7 +55,8 @@ Input.propTypes = {
 Input.defaultProps = {
   type: 'text',
   error: false,
-  fullwidth: false
+  fullwidth: false,
+  size: 'large'
 }
 
 export default Input

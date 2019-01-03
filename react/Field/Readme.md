@@ -2,12 +2,13 @@
 
 ```
 <form>
-  <Field 
-    id="idField" 
-    label="I'm a label" 
+  <Field
+    id="idField"
+    label="I'm a label"
     type="textarea"
     placeholder="I'm a textarea"
     onChange={() => {}}
+    size="medium"
   />
 </form>
 ```
