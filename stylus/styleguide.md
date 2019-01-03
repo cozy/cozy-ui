@@ -1,7 +1,5 @@
 # CSS Guidelines
 
-Based on [Guidelin.es](http://guidelin.es)
-
 ## Syntax & Formatting
 
 A few basic rules for syntax and formatting. A _linter_ and a _.editorconfig_ file are keeping a eye on the produced CSS to make sure it respects most of those rules but you should know them nevertheless.
