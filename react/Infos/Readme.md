@@ -8,7 +8,7 @@ const Infos = require('./index').default;
     <div style={{height : '10px'}}/>
     <Infos
         text="My small persistent information, with an icon. And lot of text ? Again and again..."
-        icon="plus"
+        icon="info"
     />
 </div>
 ```
