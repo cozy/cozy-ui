@@ -18,6 +18,8 @@ describe('Preloader', () => {
     }
   }
 
+  const stringApp = 'test'
+
   let successImgMock
   let erroredImgMock
 
@@ -82,6 +84,12 @@ describe('Preloader', () => {
     it('fetch registry app icon', async () => {
       await expect(preload(registryApp, domain)).resolves.toEqual(
         'https://cozy.tools/registry/test/1.2.3/icon'
+      )
+    })
+
+    it('fetch registry app icon via string', async () => {
+      await expect(preload(stringApp, domain)).resolves.toEqual(
+        'https://cozy.tools/registry/test/icon'
       )
     })
 
