@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import Label from '../Label'
 import Input from '../Input'
+import SelectBox from '../SelectBox'
 import Textarea from '../Textarea'
 
 const Field = props => {
@@ -23,6 +24,10 @@ const Field = props => {
 
   const inputType = type => {
     switch (type) {
+      case 'select':
+        // If value prop is falsy, the SelectBox never displays any selected option.
+        // Only passing `undefined` make the SelectBox work properly.
+        return <SelectBox {...props} value={props.value || undefined} />
       case 'textarea':
         return (
           <Textarea

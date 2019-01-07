@@ -32,3 +32,31 @@ Like `Input` component, it can have the following properties:
   />
 </form>
 ```
+
+#### Field with SelectBox
+
+```
+const options = [
+{
+  label: 'Choice 1',
+  value: '1'
+}, {
+  label: 'Choice 2',
+  value: '2'
+}];
+
+<form>
+  <Field
+    label="I'am a SelectBox"
+    type="select"
+    options={options}
+    placeholder="Select ..."
+  />
+  <Field
+    label="I'am a SelectBox with a value"
+    type="select"
+    options={options}
+    value={{ label: 'Choice 2', value: '2'}}
+  />
+</form>
+```
