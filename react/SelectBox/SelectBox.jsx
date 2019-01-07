@@ -7,7 +7,13 @@ import { dodgerBlue, silver, coolGrey } from '../palette'
 import withBreakpoints from '../helpers/withBreakpoints'
 import classNames from 'classnames'
 
-const customStyles = {
+const heights = {
+  tiny: '2rem',
+  medium: '2.5rem',
+  large: '3rem'
+}
+
+const customStyles = props => ({
   control: (base, state) => ({
     ...base,
     backgroundColor: 'white',
@@ -19,7 +25,8 @@ const customStyles = {
     },
     borderRadius: '.1875rem',
     boxShadow: 'unset',
-    padding: '.503rem .5rem'
+    height: heights[props.size],
+    minHeight: heights[props.size]
   }),
   dropdownIndicator: base => ({
     ...base,
@@ -39,7 +46,7 @@ const customStyles = {
     ...base,
     zIndex: 10
   })
-}
+})
 
 const DropdownIndicator = props => {
   return (
@@ -199,7 +206,7 @@ class SelectBox extends Component {
     return (
       <ReactSelect
         components={{ DropdownIndicator, Option, ...components }}
-        styles={{ ...customStyles, ...reactSelectStyles }}
+        styles={{ ...customStyles(this.props), ...reactSelectStyles }}
         onMenuOpen={this.handleOpen}
         onMenuClose={this.handleClose}
         {...props}
@@ -223,12 +230,14 @@ class SelectBox extends Component {
 SelectBox.propTypes = {
   components: PropTypes.object,
   fullwidth: PropTypes.bool,
+  size: PropTypes.oneOf(['tiny', 'medium', 'large']),
   styles: PropTypes.object
 }
 
 SelectBox.defaultProps = {
   components: {},
   fullwidth: false,
+  size: 'large',
   styles: {}
 }
 

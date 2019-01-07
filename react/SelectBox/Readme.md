@@ -42,6 +42,36 @@ const options = [
 <SelectBox options={options} fullwidth />
 ```
 
+#### `size`
+
+Set the text size between `tiny`, `medium` and `large` (default: `large`).
+
+```
+const tinyOptions = [
+  { value: '1', label: 'I am a tiny SelectBox' },
+  { value: '2', label: 'I am not a medium SelectBox' },
+  { value: '3', label: 'I am not a large SelectBox' }
+];
+
+const mediumOptions = [
+  { value: '1', label: 'I am not a tiny SelectBox' },
+  { value: '2', label: 'I am a medium SelectBox' },
+  { value: '3', label: 'I am not a large SelectBox' }
+];
+
+const largeOptions = [
+  { value: '1', label: 'I am not a tiny SelectBox' },
+  { value: '2', label: 'I am not a medium SelectBox' },
+  { value: '3', label: 'I am a large SelectBox' }
+];
+
+<div>
+  <div class="u-mb-1"><SelectBox options={tinyOptions} size="tiny" value={tinyOptions.find(o => o.value === '1')} /></div>
+  <div class="u-mb-1"><SelectBox options={mediumOptions} size="medium" value={mediumOptions.find(o => o.value === '2')} /></div>
+  <div class="u-mb-1"><SelectBox options={largeOptions} size="large" value={largeOptions.find(o => o.value === '3')} /></div>
+</div>
+```
+
 ### Custom control component
 
 You can use the `reactSelectControl` HOC to turn an existing, custom component into the control button for the `Select`:
