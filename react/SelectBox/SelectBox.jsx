@@ -8,10 +8,6 @@ import withBreakpoints from '../helpers/withBreakpoints'
 import classNames from 'classnames'
 
 const customStyles = {
-  container: base => ({
-    ...base,
-    maxWidth: '30rem'
-  }),
   control: (base, state) => ({
     ...base,
     backgroundColor: 'white',
@@ -193,6 +189,7 @@ class SelectBox extends Component {
     const {
       className,
       components,
+      fullwidth,
       styles: reactSelectStyles,
       breakpoints: { isMobile },
       classNamePrefix,
@@ -208,7 +205,9 @@ class SelectBox extends Component {
         {...props}
         className={classNames(
           {
-            [styles['select__overlay']]: showOverlay
+            [styles['select__overlay']]: showOverlay,
+            [styles['select--autowidth']]: !fullwidth,
+            [styles['select--fullwidth']]: fullwidth
           },
           className
         )}
@@ -223,11 +222,13 @@ class SelectBox extends Component {
 
 SelectBox.propTypes = {
   components: PropTypes.object,
+  fullwidth: PropTypes.bool,
   styles: PropTypes.object
 }
 
 SelectBox.defaultProps = {
   components: {},
+  fullwidth: false,
   styles: {}
 }
 

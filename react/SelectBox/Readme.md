@@ -25,6 +25,23 @@ const options = [
 <SelectBox options={options} menuIsOpen />
 ```
 
+### Props
+
+#### `fullwidth`
+
+Set the select to spread to 100% of the available width (default: `false`).
+
+```
+const options = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry', isDisabled: true },
+  { value: 'vanilla', label: 'Vanilla' },
+  { value: 'long', label: 'Salt and vinegar crisps with vegamite and brussel sprouts, double chai latte sauce' },
+];
+
+<SelectBox options={options} fullwidth />
+```
+
 ### Custom control component
 
 You can use the `reactSelectControl` HOC to turn an existing, custom component into the control button for the `Select`:

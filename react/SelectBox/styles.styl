@@ -1,3 +1,4 @@
+@require '../../stylus/components/forms'
 @require '../../stylus/settings/palette'
 @require '../../stylus/settings/breakpoints'
 @require '../../stylus/tools/mixins'
@@ -6,6 +7,13 @@
     width 0
     height 0
     overflow hidden
+
+.select--autowidth
+    max-width 30rem
+
+.select--fullwidth
+    @extends $select--fullwidth
+    padding-right 0
 
 .select-option
     display flex
