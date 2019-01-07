@@ -46,6 +46,10 @@ const _getInstalledIconPath = app => {
 }
 
 const _getRegistryIconPath = app => {
+  if (typeof app === 'string') {
+    return `/registry/${app}/icon`
+  }
+
   return (
     app.latest_version &&
     app.latest_version.version &&

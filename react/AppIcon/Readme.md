@@ -6,6 +6,11 @@ Apps documents provided by the stack are containing a `links.icon` property whic
 
 `<AppIcon />` is also able to retrive an icon for a registry app. If no attribute `links.icon` is present on the app document, `<AppIcon />` tries to fetch the icon with a registry link, computed thanks to the app attributes `slug` and `latest_version.version`.
 
+The given app can be:
+
+* An object representing an app fetched from the registry
+* An app's slug string
+
 ### Example
 ```
   <div>

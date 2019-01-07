@@ -93,7 +93,7 @@ export class AppIcon extends Component {
 
 AppIcon.propTypes = {
   alt: PropTypes.string,
-  app: PropTypes.object,
+  app: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   className: PropTypes.string,
   domain: PropTypes.string,
   fetchIcon: PropTypes.func,
