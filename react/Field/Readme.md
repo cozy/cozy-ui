@@ -2,7 +2,7 @@
 
 Like `Input` component, it can have the following properties:
 
-* `fullwidth` (default: `false`)
+- `fullwidth` (default: `false`)
 
 ##### Example
 
@@ -23,10 +23,10 @@ Like `Input` component, it can have the following properties:
 
 ```
 <form>
-  <Field 
-    id="idFieldError" 
-    label="I'm an error label" 
-    placeholder="I'm an error input[type=text]" 
+  <Field
+    id="idFieldError"
+    label="I'm an error label"
+    placeholder="I'm an error input[type=text]"
     error
     onChange={() => {}}
   />
@@ -57,6 +57,19 @@ const options = [
     type="select"
     options={options}
     value={{ label: 'Choice 2', value: '2'}}
+  />
+</form>
+```
+
+##### Password field without show/hide button
+
+```
+<form>
+  <Field
+    id="idFieldPassword"
+    label="I'm a password label"
+    type="password"
+    fieldProps={{showVisibilityButton: true}}
   />
 </form>
 ```
