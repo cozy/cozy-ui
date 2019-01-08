@@ -45,9 +45,7 @@ export const Avatar = ({ text, textId, image, size, className, style }) => {
     <div
       className={cx(
         styles['c-avatar'],
-        {
-          [styles[`c-avatar--${size}`]]: size
-        },
+        size !== 'medium' ? styles[`c-avatar--${size}`] : '',
         className
       )}
       style={text ? colored : style}
@@ -64,14 +62,14 @@ export const Avatar = ({ text, textId, image, size, className, style }) => {
 Avatar.propTypes = {
   text: PropTypes.string,
   image: PropTypes.string,
-  size: PropTypes.oneOf(['xsmall', 'small', 'large', 'xlarge']),
+  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']),
   className: PropTypes.string
 }
 
 Avatar.defaultProps = {
   text: '',
   image: '',
-  size: '',
+  size: 'medium',
   className: ''
 }
 
