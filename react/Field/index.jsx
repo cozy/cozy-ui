@@ -102,6 +102,7 @@ const Field = props => {
             {...secondaryLabels}
           />
         )
+      case 'date':
       case 'email':
       case 'url':
       case 'text':
@@ -120,7 +121,7 @@ const Field = props => {
         )
       default:
         throw new Error(
-          'type must be text, password, email, url or textarea, got ' + type
+          `type must be text, password, email, date, url or textarea, got ${type}`
         )
     }
   }
