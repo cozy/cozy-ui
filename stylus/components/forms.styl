@@ -308,12 +308,11 @@ $checkbox
             content ''
             position absolute
             left 0
-            top 50%
+            top rem(3)
             box-sizing border-box
             width checkbox-size
             height checkbox-size
             border-radius rem(2)
-            transform translateY(-53%)
 
         &::before
             transition box-shadow 350ms cubic-bezier(0, .89, .44, 1)
@@ -342,7 +341,7 @@ $checkbox
 
             & + span::after
                 opacity 1
-                transform scale(1) translateY(-53%)
+                transform scale(1)
 
         &:not(:checked) + span::after
             opacity 0
