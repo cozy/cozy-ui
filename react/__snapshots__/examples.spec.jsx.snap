@@ -8,7 +8,7 @@ exports[`ActionMenu should render examples: ActionMenu 1`] = `
 
 exports[`Avatar should render examples: Avatar 1`] = `
 "<div>
-  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+  <div class=\\"styles__c-avatar___PpDI-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
       <use xlink:href=\\"#people\\"></use>
     </svg></div>
 </div>"
@@ -16,19 +16,26 @@ exports[`Avatar should render examples: Avatar 1`] = `
 
 exports[`Avatar should render examples: Avatar 2`] = `
 "<div>
-  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+  <div class=\\"styles__c-avatar___PpDI-\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
 </div>"
 `;
 
 exports[`Avatar should render examples: Avatar 3`] = `
 "<div>
-  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
+  <div class=\\"styles__c-avatar___PpDI-\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
 </div>"
 `;
 
 exports[`Avatar should render examples: Avatar 4`] = `
 "<div>
   <div>
+    <div>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--xsmall___3H2Io\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+          <use xlink:href=\\"#people\\"></use>
+        </svg></div>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--xsmall___3H2Io\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--xsmall___3H2Io\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
+    </div>
     <div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <use xlink:href=\\"#people\\"></use>
@@ -37,11 +44,25 @@ exports[`Avatar should render examples: Avatar 4`] = `
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
     </div>
     <div>
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+      <div class=\\"styles__c-avatar___PpDI-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <use xlink:href=\\"#people\\"></use>
         </svg></div>
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--medium___hjYh_\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
+      <div class=\\"styles__c-avatar___PpDI-\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+      <div class=\\"styles__c-avatar___PpDI-\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
+    </div>
+    <div>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--large___1Z_HZ\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+          <use xlink:href=\\"#people\\"></use>
+        </svg></div>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--large___1Z_HZ\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--large___1Z_HZ\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
+    </div>
+    <div>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--xlarge___3Qe0b\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+          <use xlink:href=\\"#people\\"></use>
+        </svg></div>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--xlarge___3Qe0b\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--xlarge___3Qe0b\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
     </div>
   </div>
 </div>"

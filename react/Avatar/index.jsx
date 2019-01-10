@@ -18,7 +18,11 @@ const nameToColor = (name = '') => {
     palette['lightishPurple'],
     palette['weirdGreen'],
     palette['puertoRico'],
-    palette['emerald']
+    palette['emerald'],
+    palette['seafoamGreen'],
+    palette['lavender'],
+    palette['brightSun'],
+    palette['fushsia']
   ]
   const key =
     Array.from(name.toUpperCase())
@@ -41,9 +45,7 @@ export const Avatar = ({ text, textId, image, size, className, style }) => {
     <div
       className={cx(
         styles['c-avatar'],
-        {
-          [styles[`c-avatar--${size}`]]: size
-        },
+        size !== 'medium' ? styles[`c-avatar--${size}`] : '',
         className
       )}
       style={text ? colored : style}
@@ -60,7 +62,7 @@ export const Avatar = ({ text, textId, image, size, className, style }) => {
 Avatar.propTypes = {
   text: PropTypes.string,
   image: PropTypes.string,
-  size: PropTypes.oneOf(['small', 'medium']),
+  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']),
   className: PropTypes.string
 }
 

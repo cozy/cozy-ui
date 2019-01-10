@@ -19,9 +19,14 @@ Show an avatar with initials
 <Avatar image="https://cozy.io/fr/images/cozy-logo_white.png" />
 ```
 
-### Available sizes: small, medium (default)
+### Available sizes: xsmall, small, medium (default), large, xlarge
 ```
 <div>
+  <div>
+    <Avatar size="xsmall" />
+    <Avatar text="CD" size="xsmall" />
+    <Avatar image="https://cozy.io/fr/images/cozy-logo_white.png" size="xsmall" />
+  </div>
   <div>
     <Avatar size="small" />
     <Avatar text="CD" size="small" />
@@ -31,6 +36,16 @@ Show an avatar with initials
     <Avatar size="medium" />
     <Avatar text="CD" size="medium" />
     <Avatar image="https://cozy.io/fr/images/cozy-logo_white.png" size="medium" />
+  </div>
+  <div>
+    <Avatar size="large" />
+    <Avatar text="CD" size="large" />
+    <Avatar image="https://cozy.io/fr/images/cozy-logo_white.png" size="large" />
+  </div>
+  <div>
+    <Avatar size="xlarge" />
+    <Avatar text="CD" size="xlarge" />
+    <Avatar image="https://cozy.io/fr/images/cozy-logo_white.png" size="xlarge" />
   </div>
 </div>
 ```
