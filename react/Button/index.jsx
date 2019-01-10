@@ -2,7 +2,7 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
-import Icon from '../Icon'
+import Icon, { iconPropType } from '../Icon'
 
 const btnClass = function(options) {
   const { className, extension, size, theme, variant, round } = options
@@ -112,7 +112,7 @@ Button.propTypes = {
   /** Label of the button */
   label: PropTypes.node.isRequired,
   /** Icon of the button */
-  icon: PropTypes.node,
+  icon: PropTypes.oneOfType([PropTypes.node, iconPropType]),
   /** Displays only the icon, not the label */
   iconOnly: PropTypes.bool,
   theme: PropTypes.string,
