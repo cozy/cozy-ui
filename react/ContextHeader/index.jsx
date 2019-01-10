@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Button } from '../Button'
 import { Title, Text } from '../Text'
-import Icon from '../Icon'
+import Icon, { iconPropType } from '../Icon'
 import styles from './styles.styl'
 import palette from '../palette'
 import cx from 'classnames'
@@ -36,7 +36,7 @@ const ContextHeader = ({ icon, title, text, onClose, className }) => {
 }
 
 ContextHeader.propTypes = {
-  icon: PropTypes.node,
+  icon: iconPropType,
   title: PropTypes.string.isRequired,
   text: PropTypes.string,
   onClose: PropTypes.func,

@@ -2,8 +2,9 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
-import Icon from '../Icon'
+import Icon, { iconPropType } from '../Icon'
 import Text from '../Text'
+
 const Infos = ({ icon, text, className }) => {
   return (
     <div className={cx(styles['infos'], 'u-p-1', className)}>
@@ -24,8 +25,9 @@ const Infos = ({ icon, text, className }) => {
 Infos.defaultProps = {
   icon: null
 }
+
 Infos.propTypes = {
-  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  icon: iconPropType,
   text: PropTypes.string
 }
 export default Infos
