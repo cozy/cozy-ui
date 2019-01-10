@@ -41,12 +41,14 @@ class InputPassword extends React.Component {
 }
 
 InputPassword.propTypes = {
+  ...Input.propTypes,
   hideLabel: PropTypes.string,
   showLabel: PropTypes.string,
   showVisibilityButton: PropTypes.bool
 }
 
 InputPassword.defaultProps = {
+  ...Input.defaultProps,
   showVisibilityButton: true
 }
 
@@ -87,6 +89,7 @@ const Field = props => {
       case 'password':
         return (
           <InputPassword
+            fullwidth={fullwidth}
             id={id}
             type={type}
             placeholder={placeholder}
@@ -94,6 +97,7 @@ const Field = props => {
             error={error}
             onChange={onChange}
             readOnly={readOnly}
+            size={size}
             {...fieldProps}
             {...secondaryLabels}
           />
