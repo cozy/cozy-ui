@@ -1,5 +1,8 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 import { getCssVariableValue } from '../utils/color'
+import MuiExpansionPanel from './ExpansionPanel/theme'
+import MuiExpansionPanelSummary from './ExpansionPanelSummary/theme'
+import MuiExpansionPanelDetails from './ExpansionPanelDetails/theme'
 
 export const theme = createMuiTheme({
   typography: {
@@ -37,6 +40,9 @@ export const theme = createMuiTheme({
         borderRadius: 0
       }
     },
+    MuiExpansionPanel,
+    MuiExpansionPanelSummary,
+    MuiExpansionPanelDetails,
     MuiListItem: {
       button: {
         '&:hover': {
