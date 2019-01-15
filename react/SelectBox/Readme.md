@@ -186,3 +186,19 @@ const options = [
 
 <SelectBox options={options} menuIsOpen classNamePrefix='needsclick cz' />
 ```
+
+Set number of lines shown in menu list
+
+```
+const options = [
+  { value: 'chocolate', label: 'Chocolate' }
+];
+
+<SelectBox
+  options={[
+    {value: 1, label: 1},
+    {value: 2, label: 2},
+    {value: 3, label: 3}]}
+  numLines={2}
+/>
+```

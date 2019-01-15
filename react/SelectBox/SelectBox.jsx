@@ -45,6 +45,12 @@ const customStyles = props => ({
   menu: base => ({
     ...base,
     zIndex: 10
+  }),
+  menuList: base => ({
+    ...base,
+    maxHeight: props.numLines
+      ? `${props.numLines * 2.125 + 0.25}rem`
+      : base.maxHeight
   })
 })
 

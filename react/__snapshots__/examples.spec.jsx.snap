@@ -1295,6 +1295,28 @@ exports[`SelectBox should render examples: SelectBox 10`] = `
 </div>"
 `;
 
+exports[`SelectBox should render examples: SelectBox 11`] = `
+"<div>
+  <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
+    <div class=\\"css-2zgoaw\\">
+      <div class=\\"css-1phseng\\">
+        <div class=\\"css-1492t68\\">Select...</div>
+        <div class=\\"css-1g6gooi\\">
+          <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-16-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
+            <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
+          </div>
+        </div>
+      </div>
+      <div class=\\"css-1wy0on6\\"><span class=\\"css-1hyfx7x\\"></span>
+        <div aria-hidden=\\"true\\" class=\\"css-n6ypum\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"20\\" height=\\"16\\">
+            <use xlink:href=\\"#bottom\\"></use>
+          </svg></div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
 exports[`Sidebar should render examples: Sidebar 1`] = `
 "<div>
   <aside class=\\"styles__o-sidebar___1295j\\">
