@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ReactSelect, { components } from 'react-select'
+
 import styles from './styles.styl'
 import Icon from '../Icon'
 import { dodgerBlue, silver, coolGrey } from '../palette'
@@ -47,6 +48,39 @@ const customStyles = props => ({
     zIndex: 10
   })
 })
+
+/**
+ * Determines maxHeight property for menuList component. This value is computed
+ * with a container element and the current SelectBox element.
+ * The container element defines an element which the SelectBox should not
+ * overflow.
+ * @param  {object} container React reference to an element containing
+ * the SelectBox
+ * @param  {object} element    React reference to the ReactSelect element
+ * @return {object}            A style object, with `menuList` property set.
+ */
+const computedMenuListHeightStyles = (container, selectElement) => {
+  if (!(container && selectElement)) return {}
+
+  const containerPaddingTop = container.style.paddingTop || '0px'
+  const containerPaddingBottom = container.style.paddingBottom || '0px'
+
+  return {
+    menuList: base => {
+      const basePaddings = (base.paddingTop || 0) + (base.paddingBottom || 0)
+      const spaceLeft =
+        container.getBoundingClientRect().bottom -
+        selectElement.getBoundingClientRect().bottom -
+        basePaddings
+      return {
+        ...base,
+        // containerPaddingTop and containerPaddingBottom can be in `rem`, so
+        // let's use calc()
+        maxHeight: `calc(${spaceLeft}px - ${containerPaddingTop} - ${containerPaddingBottom})`
+      }
+    }
+  }
+}
 
 const DropdownIndicator = props => {
   return (
@@ -197,6 +231,7 @@ class SelectBox extends Component {
   render() {
     const {
       className,
+      container,
       components,
       fullwidth,
       styles: reactSelectStyles,
@@ -216,6 +251,12 @@ class SelectBox extends Component {
           styles={{
             ...customStyles(this.props),
             ...reactSelectStyles,
+            ...computedMenuListHeightStyles(
+              // With React, the referenced element is in the current property.
+              // With Preact, the referenced element is the object
+              (container && container.current) || container,
+              this.element
+            )
           }}
           onMenuOpen={this.handleOpen}
           onMenuClose={this.handleClose}
@@ -239,6 +280,7 @@ class SelectBox extends Component {
 }
 
 SelectBox.propTypes = {
+  container: PropTypes.object,
   components: PropTypes.object,
   fullwidth: PropTypes.bool,
   size: PropTypes.oneOf(['tiny', 'medium', 'large']),
@@ -253,4 +295,11 @@ SelectBox.defaultProps = {
 }
 
 export default withBreakpoints()(SelectBox)
-export { Option, CheckboxOption, ActionsOption, reactSelectControl, components }
+export {
+  Option,
+  CheckboxOption,
+  ActionsOption,
+  computedMenuListHeightStyles,
+  reactSelectControl,
+  components
+}
