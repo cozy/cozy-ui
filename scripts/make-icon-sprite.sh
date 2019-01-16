@@ -46,6 +46,7 @@ assets/icons/ui/moveto.svg
 assets/icons/ui/next.svg
 assets/icons/ui/openwith.svg
 assets/icons/ui/paperplane.svg
+assets/icons/ui/pen.svg
 assets/icons/ui/people.svg
 assets/icons/ui/phone-download.svg
 assets/icons/ui/plus.svg
