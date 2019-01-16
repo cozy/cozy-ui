@@ -4,7 +4,16 @@ import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
 const Checkbox = props => {
-  const { className, value, name, label, error, mixed, ...restProps } = props
+  const {
+    className,
+    value,
+    name,
+    label,
+    error,
+    mixed,
+    children,
+    ...restProps
+  } = props
   return (
     <label
       className={cx(
@@ -17,7 +26,7 @@ const Checkbox = props => {
       aria-checked={mixed ? 'mixed' : ''}
     >
       <input type="checkbox" value={value} name={name} {...restProps} />
-      <span>{label}</span>
+      <span>{label || children}</span>
     </label>
   )
 }
