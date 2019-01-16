@@ -222,6 +222,12 @@ exports[`Checkbox should render examples: Checkbox 3`] = `
 </div>"
 `;
 
+exports[`Checkbox should render examples: Checkbox 4`] = `
+"<div>
+  <div><label class=\\"styles__c-input-checkbox___2CzvY\\" aria-checked=\\"\\"><input type=\\"checkbox\\" name=\\"\\" value=\\"\\"><span>This is a <strong>complex</strong> text</span></label></div>
+</div>"
+`;
+
 exports[`Field should render examples: Field 1`] = `
 "<div>
   <form>
