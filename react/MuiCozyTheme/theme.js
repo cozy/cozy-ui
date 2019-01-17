@@ -1,8 +1,9 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 import { getCssVariableValue } from '../utils/color'
-import MuiExpansionPanel from './ExpansionPanel/theme'
-import MuiExpansionPanelSummary from './ExpansionPanelSummary/theme'
-import MuiExpansionPanelDetails from './ExpansionPanelDetails/theme'
+
+const defaultValues = {
+  borderRadius: 6
+}
 
 export const theme = createMuiTheme({
   typography: {
@@ -34,15 +35,58 @@ export const theme = createMuiTheme({
       900: getCssVariableValue('black')
     }
   },
+  shape: {
+    borderRadius: defaultValues.borderRadius
+  },
   overrides: {
     MuiButton: {
       root: {
         borderRadius: 0
       }
     },
-    MuiExpansionPanel,
-    MuiExpansionPanelSummary,
-    MuiExpansionPanelDetails,
+    MuiExpansionPanel: {
+      root: {
+        boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.08)',
+        borderWidth: '0.0625rem',
+        borderStyle: 'solid',
+        borderColor: 'var(--silver)',
+        overflow: 'hidden',
+        marginBottom: '1rem',
+        borderRadius: defaultValues.borderRadius
+      }
+    },
+    MuiExpansionPanelSummary: {
+      expanded: {},
+      root: {
+        backgroundColor: 'var(--paleGrey)',
+        textTransform: 'uppercase',
+        fontWeight: 'bold',
+        fontSize: '0.875rem',
+        minHeight: '3.5rem',
+        padding: 0,
+        color: 'var(--charcoalGrey)',
+        '&$expanded': {
+          minHeight: '3.5rem'
+        }
+      },
+      content: {
+        margin: '0.75rem 0',
+        paddingLeft: '0.5rem',
+        paddingRight: '0.5rem',
+        '& > :last-child': {
+          paddingRight: 0
+        },
+        '&$expanded': {
+          margin: '0.75rem 0'
+        }
+      }
+    },
+    MuiExpansionPanelDetails: {
+      root: {
+        padding: 0,
+        borderTop: '0.0625rem solid var(--silver)'
+      }
+    },
     MuiListItem: {
       button: {
         '&:hover': {
