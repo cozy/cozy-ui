@@ -1,3 +1,7 @@
+// This component is inspired by https://material-ui.com/demos/menus/#menulist-composition
+// Since the MuiMenu component doesn't allow another Popover positioning,
+// we have to recompose the Menu component ourselves with basic Mui component
+
 import React, { Component } from 'react'
 
 import MenuButton from '../../Button'
