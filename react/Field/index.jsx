@@ -55,6 +55,7 @@ InputPassword.defaultProps = {
 const Field = props => {
   const {
     className,
+    disabled,
     fieldProps,
     fullwidth,
     label,
@@ -78,6 +79,7 @@ const Field = props => {
       case 'textarea':
         return (
           <Textarea
+            disabled={disabled}
             id={id}
             placeholder={placeholder}
             value={value}
@@ -89,6 +91,7 @@ const Field = props => {
       case 'password':
         return (
           <InputPassword
+            disabled={disabled}
             fullwidth={fullwidth}
             id={id}
             type={type}
@@ -108,6 +111,7 @@ const Field = props => {
       case 'text':
         return (
           <Input
+            disabled={disabled}
             fullwidth={fullwidth}
             id={id}
             type={type}
