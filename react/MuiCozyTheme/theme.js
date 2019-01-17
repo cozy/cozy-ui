@@ -20,12 +20,39 @@ export const theme = createMuiTheme({
       main: getCssVariableValue('portage'),
       dark: getCssVariableValue('azure'),
       contrastText: getCssVariableValue('white')
+    },
+    grey: {
+      0: getCssVariableValue('white'),
+      100: getCssVariableValue('paleGrey'),
+      200: getCssVariableValue('silver'),
+      300: getCssVariableValue('coolGrey'),
+      400: getCssVariableValue('slateGrey'),
+      800: getCssVariableValue('charcoalGrey'),
+      900: getCssVariableValue('black')
     }
   },
   overrides: {
     MuiButton: {
       root: {
         borderRadius: 0
+      }
+    },
+    MuiListItem: {
+      button: {
+        '&:hover': {
+          backgroundColor: getCssVariableValue('paleGrey')
+        }
+      }
+    },
+    MuiMenuItem: {
+      root: {
+        paddingTop: 4,
+        paddingBottom: 4,
+        color: getCssVariableValue('charcoalGrey')
+      },
+      gutters: {
+        paddingLeft: 24,
+        paddingRight: 24
       }
     }
   }
