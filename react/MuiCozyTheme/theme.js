@@ -1,6 +1,5 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 import { getCssVariableValue } from '../utils/color'
-import MuiButton from './Buttons/theme'
 
 export const theme = createMuiTheme({
   typography: {
@@ -24,7 +23,11 @@ export const theme = createMuiTheme({
     }
   },
   overrides: {
-    MuiButton
+    MuiButton: {
+      root: {
+        borderRadius: 0
+      }
+    }
   }
 })
 
