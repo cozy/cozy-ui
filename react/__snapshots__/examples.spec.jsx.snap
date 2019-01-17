@@ -1004,6 +1004,10 @@ exports[`Menu should render examples: Menu 3`] = `
 
 exports[`MuiCozyTheme/Buttons should render examples: MuiCozyTheme/Buttons 1`] = `"<div></div>"`;
 
+exports[`MuiCozyTheme/ExpansionPanel should render examples: MuiCozyTheme/ExpansionPanel 1`] = `"<div></div>"`;
+
+exports[`MuiCozyTheme/ExpansionPanel should render examples: MuiCozyTheme/ExpansionPanel 2`] = `"<div></div>"`;
+
 exports[`MuiCozyTheme/Menus should render examples: MuiCozyTheme/Menus 1`] = `"<div></div>"`;
 
 exports[`Radio should render examples: Radio 1`] = `

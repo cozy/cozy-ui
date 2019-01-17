@@ -19,6 +19,7 @@ const testComponent = ComponentName => {
 
 testComponent('MuiCozyTheme/Buttons')
 testComponent('MuiCozyTheme/Menus')
+testComponent('MuiCozyTheme/ExpansionPanel')
 testComponent('ActionMenu')
 testComponent('Avatar')
 testComponent('Badge')
