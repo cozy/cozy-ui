@@ -104,6 +104,48 @@ export const theme = createMuiTheme({
         paddingLeft: 24,
         paddingRight: 24
       }
+    },
+    MuiSwitch: {
+      root: {
+        width: 40,
+        height: 23
+      },
+      switchBase: {
+        width: 25,
+        height: 23
+      },
+      checked: {
+        '& + $bar': {
+          opacity: 1
+        }
+      },
+      icon: {
+        width: 16,
+        height: 16
+      },
+      bar: {
+        width: 25,
+        height: 12,
+        marginTop: -6,
+        marginLeft: -12,
+        backgroundColor: '#d6d8da',
+        opacity: 1
+      },
+      colorPrimary: {
+        '&$checked': {
+          color: 'white'
+        }
+      },
+      colorSecondary: {
+        '&$checked': {
+          color: 'white'
+        }
+      },
+      disabled: {
+        '&$switchBase': {
+          color: 'white'
+        }
+      }
     }
   }
 })

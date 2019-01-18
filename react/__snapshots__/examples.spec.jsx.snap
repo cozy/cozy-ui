@@ -1010,6 +1010,8 @@ exports[`MuiCozyTheme/ExpansionPanel should render examples: MuiCozyTheme/Expans
 
 exports[`MuiCozyTheme/Menus should render examples: MuiCozyTheme/Menus 1`] = `"<div></div>"`;
 
+exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `"<div></div>"`;
+
 exports[`Radio should render examples: Radio 1`] = `
 "<div>
   <form>
