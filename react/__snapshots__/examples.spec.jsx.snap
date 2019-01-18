@@ -306,6 +306,16 @@ exports[`Field should render examples: Field 4`] = `
 </div>"
 `;
 
+exports[`Field should render examples: Field 5`] = `
+"<div>
+  <form>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG\\">I'm a label</label>
+      <div class=\\"styles__o-side___tXbXL styles__c-label___o4ozG\\">(optional)</div><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" value=\\"\\">
+    </div>
+  </form>
+</div>"
+`;
+
 exports[`Hero should render examples: Hero 1`] = `
 "<div>
   <div class=\\"styles__Hero___14z7_\\">
