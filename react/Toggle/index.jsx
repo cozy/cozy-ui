@@ -1,37 +1,39 @@
-import styles from './styles.styl'
-
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import MuiCozyTheme from '../MuiCozyTheme'
+import Switch from '@material-ui/core/Switch'
+import omit from 'lodash/omit'
 
 class Toggle extends Component {
-  onChange(e) {
+  onChange = (e, checked) => {
+    // The legacy `onToggle` prop takes only the checked state
     if (this.props.onToggle) {
-      this.props.onToggle(e.target.checked)
+      this.props.onToggle(checked)
+    }
+
+    // MUI's `onChange` props takes the event and the checked state
+    if (this.props.onChange) {
+      this.props.onChange(e, checked)
     }
   }
+
   render() {
-    const { id, checked = false, disabled = false } = this.props
+    // `onToggle` is not a valid prop for MUI's `Switch`, so we omit it
+    // `onToggle` will be used in `onChange`
+    const switchProps = omit(this.props, ['onToggle'])
+
     return (
-      <span className={styles['toggle']}>
-        <input
-          type="checkbox"
-          id={id}
-          className={styles['checkbox']}
-          checked={checked}
-          disabled={disabled}
-          onChange={this.onChange.bind(this)}
-        />
-        <label htmlFor={id} className={styles['label']} />
-      </span>
+      <MuiCozyTheme>
+        <Switch {...switchProps} color="primary" onChange={this.onChange} />
+      </MuiCozyTheme>
     )
   }
 }
 
-Toggle.propTypes = {
-  id: PropTypes.string.isRequired, // A unique id for the toggle, used internally.
-  checked: PropTypes.bool, // The state of the toggle
-  disabled: PropTypes.bool, // Guess what...
-  onToggle: PropTypes.func // A callback when the state of the toggle changes. Called with the new state as argument.
+Toggle.propsTypes = {
+  ...Switch.propTypes,
+  /** A callback when the state of the toggle changes. Called with the new state as argument. This is for backward compatibility purposes only. You should use `onChange` prop */
+  onToggle: PropTypes.func
 }
 
 export default Toggle

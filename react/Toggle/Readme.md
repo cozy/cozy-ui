@@ -20,7 +20,7 @@
 
 #### Disabled
 ```js
-<Toggle id="toggle" disabled={false} />
+<Toggle id="toggle" disabled />
 ```
 
 ### More complex example
