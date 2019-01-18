@@ -25,35 +25,28 @@ $wizard--waiting
 
 $wizard--scroll
     position absolute
+    padding-top rem(56)
 
     +medium-screen()
-        padding-top rem(80)
         box-sizing border-box
 
-    +tiny-screen()
+    +small-device()
         padding-top 0
 
 $wizard-wrapper
     @extend $elastic
+    justify-content center
     width 100%
     height 100%
     max-width rem(544)
     text-align left
-
-    +tiny-screen('min')
-        height auto
 
 $wizard-wrapper--welcome
     height auto
 
 $wizard-wrapper--bleed
     align-items center
-    justify-content center
-    height 100%
-    max-width rem(1032)
-
-    +tiny-screen('min')
-        height 100%
+    max-width 100%
 
 $wizard-wrapper--dual
     @extend $wizard-wrapper--bleed
@@ -82,7 +75,7 @@ $wizard-errors
     p
         margin 0
 
-    +tiny-screen()
+    +small-device()
         margin-top rem(8)
 
 $wizard-header
@@ -94,15 +87,14 @@ $wizard-header
     margin rem(16) auto rem(8)
     padding 0 rem(16)
 
-    +tiny-screen()
-        margin rem(16) 0 0
+    +small-device()
+        margin rem(16) auto 0
 
 $wizard-header--dual
-    position relative
-    width 100%
+    margin-bottom rem(32)
 
-    +tiny-screen()
-        margin-bottom rem(20)
+    +small-device()
+        margin-bottom rem(24)
 
 $wizard-main
     display flex
@@ -130,7 +122,7 @@ $wizard-footer
         margin 0 0 rem(8)
         line-height 1.5
 
-    +tiny-screen()
+    +small-device()
         margin rem(24 0 8)
 
 $wizard-footer--welcome
@@ -142,10 +134,10 @@ $wizard-footer--welcome
             flex 0 1 'calc(50% - %s)' % btn-margin
 
 $wizard-footer--dual
-    margin-top rem(24)
+    margin-top rem(32)
 
-    +tiny-screen()
-        margin-top rem(28)
+    +small-device()
+        margin-top rem(24)
         font-size rem(14)
 
 // Wizard elements
@@ -177,7 +169,7 @@ $wizard-header-help
     font-size rem(18)
     line-height 1.5
     text-align center
-    +tiny-screen()
+    +small-device()
         margin rem(4) 0 0
         font-size rem(16)
 
@@ -203,7 +195,7 @@ $wizard-disclaimer
     strong
         color emerald
 
-    +tiny-screen()
+    +small-device()
         display none
 
 $wizard-desc
@@ -218,13 +210,20 @@ $wizard-desc
         &:focus
             color scienceBlue
 
-    +tiny-screen()
+    +small-device()
         margin rem(24) 0 0
+
+$wizard-desc--footer
+    margin rem(32 0)
+
+    +small-device()
+        margin rem(16 0)
 
 $wizard-header-fixed
     position fixed
     top rem(14)
     left 0
+    padding-left rem(32)
 
 $wizard-previous
     margin 0
@@ -232,8 +231,7 @@ $wizard-previous
     color coolGrey
 
 $wizard-brand
-    margin-left rem(16)
-    +tiny-screen()
+    +small-device()
         display none
 
 $wizard-brand--invert
@@ -262,11 +260,11 @@ $wizard-next
         right rem(16)
 
 $wizard-button
-    +tiny-screen('min')
+    +medium-device()
         {button--large}
 
 $wizard-password
-    +tiny-screen()
+    +small-device()
         {input-text--medium}
 
 $wizard-dual-btn
@@ -298,7 +296,7 @@ $wizard-waiting-icon
         height 100%
         width 100%
 
-    +tiny-screen()
+    +small-device()
         margin-bottom rem(16)
         height rem(55)
 
@@ -308,7 +306,7 @@ $wizard-dual-icon
     height rem(123)
 
 
-    +tiny-screen()
+    +small-device()
         height rem(82)
 
 $wizard-title
@@ -316,7 +314,7 @@ $wizard-title
     text-align center
     font-size rem(32)
     line-height 1.25
-    +tiny-screen()
+    +small-device()
         font-size rem(18)
         line-height 1.78
 
@@ -325,7 +323,7 @@ $wizard-dual-title
     margin-bottom rem(16)
     font-size rem(40)
 
-    +tiny-screen()
+    +small-device()
         margin-bottom rem(8)
         font-size rem(24)
         line-height 1.3
@@ -334,10 +332,10 @@ $wizard-title-sub
     display block
     margin-top rem(8)
     opacity .64
-    font-size rem(24)
+    font-size rem(16)
     font-weight normal
-    line-height 1.33
-    +tiny-screen()
+    line-height 1.5
+    +small-device()
         margin 0
         font-size rem(16)
         line-height 1.5
@@ -348,23 +346,21 @@ $wizard-subtitle
     font-size rem(16)
     font-weight normal
     line-height 1.5
-    +tiny-screen()
+    +small-device()
         font-size rem(14)
         line-height 1.15
 
 $wizard-dual-subtitle
     @extend $wizard-subtitle
-    margin-bottom rem(48)
     font-size rem(20)
     line-height 1.4
 
-    +tiny-screen()
-        margin-bottom rem(24)
+    +small-device()
         font-size rem(16)
         line-height 1.5
 
 $wizard-title--welcome
-    +tiny-screen()
+    +small-device()
         font-size rem(24)
         line-height 1.17
 
@@ -449,7 +445,7 @@ $wizard-input
         border 0
         outline 0
 
-    +tiny-screen()
+    +small-device()
         {input-text--medium}
 
 $wizard-requirements
@@ -465,16 +461,17 @@ $wizard-requirements
         display inline-block
         text-indent rem(8)
 
-    +tiny-screen()
+    +small-device()
         font-size rem(14)
         margin-top rem(8)
 
 $wizard-agreements
     display flex
     flex-direction row
-    margin 0
+    margin 0 auto
     padding 0
     list-style none
+    max-width rem(1032)
 
     +medium-screen()
         flex-direction column
@@ -540,10 +537,45 @@ $wizard-agreements-icon
         border-radius 50%
         padding rem(8)
 
+$wizard-progress
+    position relative
+    margin rem(8) auto rem(32)
+    max-width rem(512)
+    height rem(6)
+
+    &:before
+        content ''
+        position absolute
+        top 0
+        left 0
+        bottom 0
+        right 0
+        opacity .24
+        border-radius: rem(3)
+        background-color white
+
+    @media (max-width: 33.9375rem)
+        margin rem(8 16 24)
+
+    @media (max-height: 23.4375rem)
+        margin-bottom rem(24)
+
+$wizard-progress-bar
+    position relative
+    z-index 1
+    width 0
+    height 100%
+    background-color white
+    border-radius rem(3)
+    transition width .5s ease-out
+
 $wizard-notice
     order 2
-    margin rem(16) 0 0
+    margin rem(32) 0 0
     line-height 1.5
+
+    & + &
+        margin-top rem(16)
 
     p
         margin 0
@@ -551,6 +583,7 @@ $wizard-notice
     a
         color dodgerBlue
         text-decoration none
+        font-weight bold
 
         &:hover
         &:focus
