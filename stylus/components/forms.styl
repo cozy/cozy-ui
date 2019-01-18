@@ -269,6 +269,17 @@ $input-text
     &:invalid
         border rem(1) solid pomegranate
 
+    &[aria-disabled]
+    &[disabled]
+        cursor not-allowed
+        background-color paleGrey
+        color charcoalGrey
+
+        &:hover
+        &:focus
+            border rem(1) solid silver
+
+
 input-text--tiny =
     border-radius rem(2)
     padding rem(4 8 6)

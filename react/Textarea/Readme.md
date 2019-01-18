@@ -10,6 +10,12 @@
 <Textarea error placeholder="Once upon a time, there was an error…"></Textarea>
 ```
 
+#### Disabled Textarea
+
+```
+<Textarea disabled>Don't edit me.</Textarea>
+```
+
 #### Alternative textarea sizes
 
 ```

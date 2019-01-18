@@ -1472,7 +1472,9 @@ exports[`Textarea should render examples: Textarea 1`] = `"<div><textarea placeh
 
 exports[`Textarea should render examples: Textarea 2`] = `"<div><textarea placeholder=\\"Once upon a time, there was an error…\\" class=\\"styles__c-textarea___D7EEH styles__is-error___1kGLj\\"></textarea></div>"`;
 
-exports[`Textarea should render examples: Textarea 3`] = `
+exports[`Textarea should render examples: Textarea 3`] = `"<div><textarea aria-disabled=\\"true\\" disabled=\\"\\" placeholder=\\"\\" class=\\"styles__c-textarea___D7EEH\\">Don't edit me.</textarea></div>"`;
+
+exports[`Textarea should render examples: Textarea 4`] = `
 "<div>
   <div>
     <p><textarea placeholder=\\"I'm have a tiny size\\" class=\\"styles__c-textarea___D7EEH styles__c-textarea--tiny___3fmPW\\"></textarea></p>
@@ -1481,7 +1483,7 @@ exports[`Textarea should render examples: Textarea 3`] = `
 </div>"
 `;
 
-exports[`Textarea should render examples: Textarea 4`] = `
+exports[`Textarea should render examples: Textarea 5`] = `
 "<div>
   <div>
     <p><textarea placeholder=\\"I'm full width\\" class=\\"styles__c-textarea___D7EEH styles__c-textarea--fullwidth___Ih_mg\\"></textarea></p>
@@ -1489,7 +1491,7 @@ exports[`Textarea should render examples: Textarea 4`] = `
 </div>"
 `;
 
-exports[`Textarea should render examples: Textarea 5`] = `
+exports[`Textarea should render examples: Textarea 6`] = `
 "<div>
   <div><textarea placeholder=\\"\\" class=\\"styles__c-textarea___D7EEH\\" name=\\"my-field\\"></textarea></div>
 </div>"

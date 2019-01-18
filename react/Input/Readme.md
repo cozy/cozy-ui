@@ -9,6 +9,14 @@
 </form>
 ```
 
+### Disabled Input
+
+```
+<form>
+  <Input disabled value="I'm disabled" />
+</form>
+```
+
 ### Input when there's an error
 
 ```

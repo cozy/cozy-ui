@@ -5,6 +5,7 @@ import styles from './styles.styl'
 
 const Input = props => {
   const {
+    disabled,
     type,
     id,
     className,
@@ -18,6 +19,7 @@ const Input = props => {
   } = props
   return (
     <input
+      aria-disabled={disabled}
       type={type}
       id={id}
       ref={inputRef}
@@ -30,6 +32,7 @@ const Input = props => {
         },
         className
       )}
+      disabled={disabled}
       placeholder={placeholder}
       value={value}
       {...restProps}
@@ -38,6 +41,7 @@ const Input = props => {
 }
 
 Input.propTypes = {
+  disabled: PropTypes.bool,
   type: PropTypes.oneOf(['text', 'password', 'email', 'url']),
   id: PropTypes.string,
   className: PropTypes.string,

@@ -6,6 +6,7 @@ import styles from './styles.styl'
 const Textarea = props => {
   const {
     className,
+    disabled,
     placeholder,
     children,
     error,
@@ -15,6 +16,8 @@ const Textarea = props => {
   } = props
   return (
     <textarea
+      aria-disabled={disabled}
+      disabled={disabled}
       placeholder={placeholder}
       className={cx(
         styles['c-textarea'],
@@ -34,6 +37,7 @@ const Textarea = props => {
 
 Textarea.propTypes = {
   children: PropTypes.node,
+  disabled: PropTypes.bool,
   placeholder: PropTypes.string,
   className: PropTypes.string,
   error: PropTypes.bool,
