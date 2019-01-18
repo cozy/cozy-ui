@@ -6,6 +6,12 @@
     width   rem(40)
     height  rem(24)
 
+.toggle--subtle
+    width rem(25)
+    height rem(16)
+    display inline-flex
+    align-items center
+
 .checkbox
     display none
 
@@ -33,8 +39,23 @@
     background    white
     transition    all .2s ease-out
 
+.toggle--subtle .label
+    height rem(12)
+
+.toggle--subtle .label:before
+    width rem(16)
+    height rem(16)
+    box-shadow 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.24)
+    left rem(-2)
+
 .checkbox:checked + .label
     background emerald
 
     &:before
         left rem(18)
+
+.toggle--subtle .checkbox:checked + .label
+    background var(--dodgerBlue)
+
+    &:before
+        left rem(9)

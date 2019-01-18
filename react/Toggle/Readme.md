@@ -23,6 +23,40 @@
 <Toggle id="toggle" disabled={false} />
 ```
 
+### Variants
+
+#### Normal
+
+```jsx
+<div>
+  <div>
+    <Toggle id="toggle" /> Normal not checked
+  </div>
+  <div>
+    <Toggle id="toggle" checked /> Normal checked
+  </div>
+  <div>
+    <Toggle id="toggle" disabled /> Normal disabled
+  </div>
+</div>
+```
+
+#### Subtle
+
+```jsx
+<div>
+  <div>
+    <Toggle id="toggle" variant="subtle" /> Sublte not checked
+  </div>
+  <div>
+    <Toggle id="toggle" variant="subtle" checked /> Subtle checked
+  </div>
+  <div>
+    <Toggle id="toggle" variant="subtle" disabled /> Subtle disabled
+  </div>
+</div>
+```
+
 ### More complex example
 
 ```jsx
