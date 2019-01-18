@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ReactSelect, { components } from 'react-select'
+
 import styles from './styles.styl'
 import Icon from '../Icon'
 import { dodgerBlue, silver, coolGrey } from '../palette'
@@ -47,6 +48,39 @@ const customStyles = props => ({
     zIndex: 10
   })
 })
+
+/**
+ * Determines maxHeight property for menuList component. This value is computed
+ * with a container element and the current SelectBox element.
+ * The container element defines an element which the SelectBox should not
+ * overflow.
+ * @param  {object} container React reference to an element containing
+ * the SelectBox
+ * @param  {object} element    React reference to the ReactSelect element
+ * @return {object}            A style object, with `menuList` property set.
+ */
+const computedMenuListHeightStyles = (container, selectElement) => {
+  if (!(container && selectElement)) return {}
+
+  const containerPaddingTop = container.style.paddingTop || '0px'
+  const containerPaddingBottom = container.style.paddingBottom || '0px'
+
+  return {
+    menuList: base => {
+      const basePaddings = (base.paddingTop || 0) + (base.paddingBottom || 0)
+      const spaceLeft =
+        container.getBoundingClientRect().bottom -
+        selectElement.getBoundingClientRect().bottom -
+        basePaddings
+      return {
+        ...base,
+        // containerPaddingTop and containerPaddingBottom can be in `rem`, so
+        // let's use calc()
+        maxHeight: `calc(${spaceLeft}px - ${containerPaddingTop} - ${containerPaddingBottom})`
+      }
+    }
+  }
+}
 
 const DropdownIndicator = props => {
   return (
@@ -184,6 +218,8 @@ ActionsOption.defaultProps = {
 
 class SelectBox extends Component {
   state = { isOpen: false }
+  element = null
+
   handleOpen = () => {
     this.setState({ isOpen: true })
   }
@@ -195,6 +231,7 @@ class SelectBox extends Component {
   render() {
     const {
       className,
+      container,
       components,
       fullwidth,
       styles: reactSelectStyles,
@@ -204,30 +241,46 @@ class SelectBox extends Component {
     } = this.props
     const showOverlay = this.state.isOpen && isMobile
     return (
-      <ReactSelect
-        components={{ DropdownIndicator, Option, ...components }}
-        styles={{ ...customStyles(this.props), ...reactSelectStyles }}
-        onMenuOpen={this.handleOpen}
-        onMenuClose={this.handleClose}
-        {...props}
-        className={classNames(
-          {
-            [styles['select__overlay']]: showOverlay,
-            [styles['select--autowidth']]: !fullwidth,
-            [styles['select--fullwidth']]: fullwidth
-          },
-          className
-        )}
-        // react-select temporarily adds className to its innerComponents
-        // but this behavior will soon be removed. For the moment, we
-        // cancel it by setting it to empty string
-        classNamePrefix={classNamePrefix || ''}
-      />
+      <div
+        ref={element => {
+          this.element = element
+        }}
+      >
+        <ReactSelect
+          components={{ DropdownIndicator, Option, ...components }}
+          styles={{
+            ...customStyles(this.props),
+            ...reactSelectStyles,
+            ...computedMenuListHeightStyles(
+              // With React, the referenced element is in the current property.
+              // With Preact, the referenced element is the object
+              (container && container.current) || container,
+              this.element
+            )
+          }}
+          onMenuOpen={this.handleOpen}
+          onMenuClose={this.handleClose}
+          {...props}
+          className={classNames(
+            {
+              [styles['select__overlay']]: showOverlay,
+              [styles['select--autowidth']]: !fullwidth,
+              [styles['select--fullwidth']]: fullwidth
+            },
+            className
+          )}
+          // react-select temporarily adds className to its innerComponents
+          // but this behavior will soon be removed. For the moment, we
+          // cancel it by setting it to empty string
+          classNamePrefix={classNamePrefix || ''}
+        />
+      </div>
     )
   }
 }
 
 SelectBox.propTypes = {
+  container: PropTypes.object,
   components: PropTypes.object,
   fullwidth: PropTypes.bool,
   size: PropTypes.oneOf(['tiny', 'medium', 'large']),
@@ -242,4 +295,11 @@ SelectBox.defaultProps = {
 }
 
 export default withBreakpoints()(SelectBox)
-export { Option, CheckboxOption, ActionsOption, reactSelectControl, components }
+export {
+  Option,
+  CheckboxOption,
+  ActionsOption,
+  computedMenuListHeightStyles,
+  reactSelectControl,
+  components
+}

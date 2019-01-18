@@ -27,6 +27,46 @@ const options = [
 
 ### Props
 
+#### `container`
+
+Defines an element used as container for the SelectBox, especially when the
+option list is shown.
+
+This example should not cause an overflow on the SelectBoxWrapper component.
+
+```
+const options = [
+  { value: 'banana', label: 'Banana' },
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'lemon', label: 'Lemon' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' }
+];
+
+
+class SelectBoxWrapper extends React.Component {
+  constructor(props, context){
+    super(props, context)
+    this.container = React.createRef()
+  }
+
+  render(){
+    return (<div ref={this.container} style={{
+      height: '12rem',
+      padding: '.5rem',
+      overflow: 'auto'}}>
+      <SelectBox
+        container={this.container}
+        options={options}
+      />
+    </div>)
+  }
+}
+
+<SelectBoxWrapper />
+```
+
+
 #### `fullwidth`
 
 Set the select to spread to 100% of the available width (default: `false`).
