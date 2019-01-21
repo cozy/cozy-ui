@@ -26,6 +26,9 @@ secondaryTheme = {
 dangerOutlineTheme = {
     primaryColor: white, secondaryColor: yourPink, activeColor: yourPink, contrastColor: pomegranate
 }
+text = {
+    primaryColor: transparent, secondaryColor: transparent, activeColor: transparent, contrastColor: dodgerBlue
+}
 
 // We turn stylint off since without semicolons, stylus fails to
 // parse the following code block.
@@ -123,6 +126,9 @@ $button--secondary
 $button--danger-outline
     themedBtn(dangerOutlineTheme)
 
+$button--text
+    themedBtn(text)
+
 // @stylint on
 
 /* specific case for spinner */
@@ -135,6 +141,14 @@ $button--secondary
     &[aria-busy=true]
         > span::after
             @extend  $icon-spinner-blue
+$button--text
+    &:hover
+    &:focus
+        color scienceBlue
+
+    &[aria-busy=true]
+        > span::after
+            @extend    $icon-spinner-blue
 /* end specific case for spinner */
 
 $link--upload
