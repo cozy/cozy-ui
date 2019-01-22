@@ -216,31 +216,53 @@ ActionsOption.defaultProps = {
   actions: []
 }
 
-class SelectBox extends Component {
+// With React, the referenced element is in the current property.
+// With Preact, the referenced element is the object
+const getNodeFromRef = ref => {
+  return (ref && ref.current) || ref
+}
 
-  constructor (props) {
+
+class SelectBox extends Component {
+  constructor(props) {
     super(props)
     this.state = { isOpen: false }
     this.element = null
+    this.handleRef = this.handleRef.bind(this)
     this.handleOpen = this.handleOpen.bind(this)
     this.handleClose = this.handleClose.bind(this)
   }
 
   handleOpen() {
+    this.refreshMenuStyle()
     this.setState({
       isOpen: true
     })
   }
 
+  refreshMenuStyle() {
+    if (this.props.container && this.controlRef) {
+      this.menuStyle = computedMenuListHeightStyles(
+        getNodeFromRef(this.props.container),
+        this.controlRef
+      )
+    }
+  }
 
   handleClose() {
     this.setState({ isOpen: false })
   }
 
+  handleRef(ref) {
+    if (ref && ref.select && ref.select.controlRef) {
+      // Save control ref to use for menu height computation
+      this.controlRef = ref.select.controlRef
+    }
+  }
+
   render() {
     const {
       className,
-      container,
       components,
       fullwidth,
       styles: reactSelectStyles,
@@ -250,40 +272,30 @@ class SelectBox extends Component {
     } = this.props
     const showOverlay = this.state.isOpen && isMobile
     return (
-      <div
-        ref={element => {
-          this.element = element
+      <ReactSelect
+        ref={this.handleRef}
+        components={{ DropdownIndicator, Option, ...components }}
+        styles={{
+          ...customStyles(this.props),
+          ...reactSelectStyles,
+          ...(this.menuStyle || {})
         }}
-      >
-        <ReactSelect
-          components={{ DropdownIndicator, Option, ...components }}
-          styles={{
-            ...customStyles(this.props),
-            ...reactSelectStyles,
-            ...computedMenuListHeightStyles(
-              // With React, the referenced element is in the current property.
-              // With Preact, the referenced element is the object
-              (container && container.current) || container,
-              this.element
-            )
-          }}
-          onMenuOpen={this.handleOpen}
-          onMenuClose={this.handleClose}
-          {...props}
-          className={classNames(
-            {
-              [styles['select__overlay']]: showOverlay,
-              [styles['select--autowidth']]: !fullwidth,
-              [styles['select--fullwidth']]: fullwidth
-            },
-            className
-          )}
-          // react-select temporarily adds className to its innerComponents
-          // but this behavior will soon be removed. For the moment, we
-          // cancel it by setting it to empty string
-          classNamePrefix={classNamePrefix || ''}
-        />
-      </div>
+        onMenuOpen={this.handleOpen}
+        onMenuClose={this.handleClose}
+        {...props}
+        className={classNames(
+          {
+            [styles['select__overlay']]: showOverlay,
+            [styles['select--autowidth']]: !fullwidth,
+            [styles['select--fullwidth']]: fullwidth
+          },
+          className
+        )}
+        // react-select temporarily adds className to its innerComponents
+        // but this behavior will soon be removed. For the moment, we
+        // cancel it by setting it to empty string
+        classNamePrefix={classNamePrefix || ''}
+      />
     )
   }
 }
