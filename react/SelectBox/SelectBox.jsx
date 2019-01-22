@@ -222,6 +222,10 @@ const getNodeFromRef = ref => {
   return (ref && ref.current) || ref
 }
 
+const customComponents = {
+  DropdownIndicator,
+  Option
+}
 
 class SelectBox extends Component {
   constructor(props) {
@@ -274,7 +278,9 @@ class SelectBox extends Component {
     return (
       <ReactSelect
         ref={this.handleRef}
-        components={{ DropdownIndicator, Option, ...components }}
+        components={
+          components ? { ...customComponents, ...components } : customComponents
+        }
         styles={{
           ...customStyles(this.props),
           ...reactSelectStyles,
