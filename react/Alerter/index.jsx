@@ -27,7 +27,7 @@ const createStore = () => {
 
 const store = createStore()
 
-class Alert extends Component {
+export class Alert extends Component {
   state = {
     hidden: true
   }
@@ -70,8 +70,19 @@ class Alert extends Component {
     }
   }
 
+  close = () => {
+    if (this.closeTimer) clearTimeout(this.closeTimer)
+    this.beginClosing()
+  }
+
+  buttonAction = () => {
+    const { buttonAction } = this.props
+    // pass a way to dismiss the alerter from the button
+    if (typeof buttonAction === 'function') buttonAction(this.close)
+  }
+
   render() {
-    const { message, type, buttonText, buttonAction } = this.props
+    const { message, type, buttonText } = this.props
     const { hidden } = this.state
     return (
       <div
@@ -88,7 +99,7 @@ class Alert extends Component {
           <p>{message}</p>
           {buttonText && (
             <Button
-              onClick={buttonAction}
+              onClick={this.buttonAction}
               className={styles[`c-btn--alert-${type}`]}
               label={buttonText}
               size="tiny"

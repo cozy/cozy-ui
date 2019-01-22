@@ -1,7 +1,8 @@
-Display notications!  
+Display notications!
 Include the `<Alerter />` component somewhere in your app, but only once. After that, you can use the static methods `Alerter.info`, `Alerter.success` and `Alerter.error` to trigger a notification.
 
 ```
+// we have to put the Alerter only once in the app
 <div>
   <button onClick={() => Alerter.info("This is an info alert!")}>Show alert info</button>
   <button onClick={() => Alerter.error("This is an error alert!")}>Show alert error</button>
@@ -34,10 +35,29 @@ const triggerAlertSuccess = () => {
   });
 };
 
+// Alerter already included in the example before
 <div>
   <button onClick={triggerAlert}>Show alert</button>
   <button onClick={triggerAlertError}>Show alert error</button>
   <button onClick={triggerAlertSuccess}>Show alert success</button>
-  <Alerter />
+</div>
+```
+
+### Dismiss an alert
+
+A dismiss function is provided to the `buttonAction` as argument which allow you to dismiss the alert before the duration ends from anywhere in your `buttonAction` code:
+
+```
+const triggerAlertWithDismiss = () => {
+  Alerter.info("This is an alert with a dismiss button. Dismiss me ->", {
+    buttonText: "dismiss",
+    buttonAction: dismiss => dismiss(),
+    duration: 20000
+  });
+};
+
+// Alerter already included in the example before
+<div>
+  <button onClick={triggerAlertWithDismiss}>Show alert with dismiss</button>
 </div>
 ```
