@@ -27,7 +27,7 @@ const createStore = () => {
 
 const store = createStore()
 
-class Alert extends Component {
+export class Alert extends Component {
   state = {
     hidden: true
   }
