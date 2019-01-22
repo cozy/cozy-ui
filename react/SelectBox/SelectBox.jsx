@@ -217,14 +217,23 @@ ActionsOption.defaultProps = {
 }
 
 class SelectBox extends Component {
-  state = { isOpen: false }
-  element = null
 
-  handleOpen = () => {
-    this.setState({ isOpen: true })
+  constructor (props) {
+    super(props)
+    this.state = { isOpen: false }
+    this.element = null
+    this.handleOpen = this.handleOpen.bind(this)
+    this.handleClose = this.handleClose.bind(this)
   }
 
-  handleClose = () => {
+  handleOpen() {
+    this.setState({
+      isOpen: true
+    })
+  }
+
+
+  handleClose() {
     this.setState({ isOpen: false })
   }
 
