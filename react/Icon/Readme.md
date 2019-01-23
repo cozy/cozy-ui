@@ -12,7 +12,7 @@ your applicaiton.
 const Sprite = require('./Sprite').default;
 const colors = ['#297EF2', '#08b442', '#B449E7', '#F52D2D', '#FF962F']
 let i = 0
-const availableIcons = ['album-add', 'album-remove', 'album', 'arrow', 'back', 'bottom-select', 'bottom', 'calendar', 'check 2', 'check-circleless', 'check', 'clock', 'connector', 'cozy-negative', 'cozy', 'cross', 'cube', 'dash',  'delete', 'destroy', 'dots', 'download', 'exchange', 'eye', 'eye-closed', 'file-none', 'file', 'folder', 'forward', 'gear', 'help', 'hourglass', 'info', 'image', 'moveto', 'openwith', 'paperplane', 'pen', 'people', 'phone-download', 'plus', 'rename', 'restore', 'share', 'small-arrow', 'spinner', 'sync', 'top-select', 'top', 'trash', 'upload', 'warn', 'warning'];
+const availableIcons = ['album-add', 'album-remove', 'album', 'arrow', 'back', 'bottom-select', 'bottom', 'calendar', 'check 2', 'check-circleless', 'check', 'clock', 'connector', 'cozy-negative', 'cozy', 'cross', 'cross-small', 'cube', 'dash',  'delete', 'destroy', 'dots', 'download', 'exchange', 'eye', 'eye-closed', 'file-none', 'file', 'folder', 'forward', 'gear', 'help', 'hourglass', 'info', 'image', 'moveto', 'openwith', 'paperplane', 'pen', 'people', 'phone-download', 'plus', 'plus-small', 'rename', 'restore', 'share', 'small-arrow', 'spinner', 'sync', 'top-select', 'top', 'trash', 'upload', 'warn', 'warning'];
 
 <div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
   <Sprite />
