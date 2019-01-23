@@ -19,7 +19,7 @@ class InputPassword extends React.Component {
   }
 
   render() {
-    const { hideLabel, showLabel, showVisibilityButton } = this.props
+    const { hideLabel, showLabel, showVisibilityButton, fullwidth } = this.props
     const { visible } = this.state
     return (
       <div className={styles['o-field-input']}>
@@ -27,7 +27,8 @@ class InputPassword extends React.Component {
           <div
             className={cx(
               labelStyles['c-label'],
-              styles['o-field-input-action']
+              styles['o-field-input-action'],
+              { [styles['o-side-fullwidth']]: fullwidth }
             )}
             onClick={() => this.toggleVisibility()}
           >
@@ -135,7 +136,11 @@ const Field = props => {
     <div className={cx(styles['o-field'], className)}>
       <Label htmlFor={id}>{label}</Label>
       {side && (
-        <div className={cx(styles['o-side'], labelStyles['c-label'])}>
+        <div
+          className={cx(styles['o-side'], labelStyles['c-label'], {
+            [styles['o-side-fullwidth']]: fullwidth
+          })}
+        >
           {side}
         </div>
       )}
