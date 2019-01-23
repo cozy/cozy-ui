@@ -73,3 +73,14 @@ const options = [
   />
 </form>
 ```
+
+##### Password field without show/hide button
+
+```
+<form>
+  <Field
+    label="I'm a label"
+    side="(optional)"
+  />
+</form>
+```

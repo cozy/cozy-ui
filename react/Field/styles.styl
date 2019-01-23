@@ -7,8 +7,14 @@
 .o-field-input
     position relative
 
-.o-field-input-action
+.o-side
     position absolute
-    top -3rem
+    top 0
     right 0
     cursor pointer
+    text-transform unset
+
+.o-field-input-action
+    @extend .o-side
+    top -3rem
+    text-transform uppercase

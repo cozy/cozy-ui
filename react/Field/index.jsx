@@ -2,9 +2,9 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
+import { default as labelStyles } from '../Label/styles.styl'
 import styles from './styles.styl'
 import Label from '../Label'
-import { default as LabelStyles } from '../Label/styles.styl'
 import Input from '../Input'
 import SelectBox from '../SelectBox'
 import Textarea from '../Textarea'
@@ -26,7 +26,7 @@ class InputPassword extends React.Component {
         {showVisibilityButton && (
           <div
             className={cx(
-              LabelStyles['c-label'],
+              labelStyles['c-label'],
               styles['o-field-input-action']
             )}
             onClick={() => this.toggleVisibility()}
@@ -67,6 +67,7 @@ const Field = props => {
     onChange,
     readOnly,
     secondaryLabels,
+    side,
     size
   } = props
 
@@ -133,6 +134,11 @@ const Field = props => {
   return (
     <div className={cx(styles['o-field'], className)}>
       <Label htmlFor={id}>{label}</Label>
+      {side && (
+        <div className={cx(styles['o-side'], labelStyles['c-label'])}>
+          {side}
+        </div>
+      )}
       {inputType(type)}
     </div>
   )
@@ -147,6 +153,7 @@ Field.PropTypes = {
   value: PropTypes.string,
   placeholder: PropTypes.string,
   error: PropTypes.bool,
+  side: PropTypes.element,
   size: PropTypes.oneOf(['tiny', 'medium', 'large']),
   secondaryLabels: PropTypes.object
 }
