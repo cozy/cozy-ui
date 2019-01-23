@@ -7,6 +7,7 @@
 
 // variables
 
+BP-teeny       =  375
 BP-tiny        =  543
 BP-small       =  768
 BP-medium      = 1023
@@ -105,6 +106,36 @@ extra-large-screen(direction='max')
         {block}
 
 // mixins named
+
+/*
+    small-device()
+
+    Refers to (max-width: 543px), (max-height: 375px)
+    Triggers when the viewport has a width smaller than 543px OR a height smaller than 375px
+
+    Weight: 0
+
+    Styleguide Settings.breakpoints.small-device
+*/
+
+small-device()
+    @media (max-width: rem(size-helper('max', BP-tiny))), (max-height: rem(size-helper('max', BP-teeny)))
+        {block}
+
+/*
+    medium-device()
+
+    Refers to (min-width: 543px) and (min-height: 375px)
+    Triggers when the viewport has a width bigger than 543px AND a height bigger than 375px
+
+    Weight: 0
+
+    Styleguide Settings.breakpoints.medium-device
+*/
+
+medium-device()
+    @media (min-width: rem(size-helper('min', BP-tiny))) and (min-height: rem(size-helper('min', BP-teeny)))
+        {block}
 
 /*
     desktop()
