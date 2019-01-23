@@ -20,6 +20,7 @@ assets/icons/ui/connector.svg
 assets/icons/ui/cozy-negative.svg
 assets/icons/ui/cozy.svg
 assets/icons/ui/cross.svg
+assets/icons/ui/cross-small.svg
 assets/icons/ui/cube.svg
 assets/icons/ui/dash.svg
 assets/icons/ui/delete.svg
@@ -50,6 +51,7 @@ assets/icons/ui/pen.svg
 assets/icons/ui/people.svg
 assets/icons/ui/phone-download.svg
 assets/icons/ui/plus.svg
+assets/icons/ui/plus-small.svg
 assets/icons/ui/previous.svg
 assets/icons/ui/rename.svg
 assets/icons/ui/restore.svg

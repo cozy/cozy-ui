@@ -342,6 +342,8 @@ exports[`Icon should render examples: Icon 1`] = `
         <defs>
           <path d=\\"M164,261 C164,258.790861 165.790861,257 168,257 C170.209139,257 172,258.790861 172,261 C174.209139,261 176,262.790861 176,265 C176,267.209139 174.209139,269 172,269 L164,269 C161.790861,269 160,267.209139 160,265 C160,262.790861 161.790861,261 164,261 Z M165.146447,264.853553 C165.300738,265.007845 165.568968,265.222429 165.939431,265.434122 C166.557029,265.787035 167.249166,266 168,266 C168.750834,266 169.442971,265.787035 170.060569,265.434122 C170.431032,265.222429 170.699262,265.007845 170.853553,264.853553 C171.048816,264.658291 171.048816,264.341709 170.853553,264.146447 C170.658291,263.951184 170.341709,263.951184 170.146447,264.146447 C170.050738,264.242155 169.850218,264.402571 169.564431,264.565878 C169.088279,264.837965 168.561666,265 168,265 C167.438334,265 166.911721,264.837965 166.435569,264.565878 C166.149782,264.402571 165.949262,264.242155 165.853553,264.146447 C165.658291,263.951184 165.341709,263.951184 165.146447,264.146447 C164.951184,264.341709 164.951184,264.658291 165.146447,264.853553 Z\\" id=\\"path-1\\"></path>
 
+          <path id=\\"cross-small\\" d=\\"M6 4.59l2.3-2.3a1 1 0 0 1 1.4 1.42L7.42 6l2.3 2.3A1 1 0 1 1 8.3 9.7L6 7.42l-2.3 2.3A1 1 0 1 1 2.3 8.3L4.58 6l-2.3-2.3A1 1 0 0 1 3.7 2.3L6 4.58z\\"></path>
+
           <path d=\\"M8,2 C11.637,2 14.742,4.488 16,8 C14.742,11.512 11.637,14 8,14 C4.363,14 1.258,11.512 0,8 C1.258,4.488 4.363,2 8,2 Z M8,12 C10.209,12 12,10.209 12,8 C12,5.791 10.209,4 8,4 C5.791,4 4,5.791 4,8 C4,10.209 5.791,12 8,12 Z M8,6 C9.104,6 10,6.896 10,8 C10,9.104 9.104,10 8,10 C6.896,10 6,9.104 6,8 C6,6.896 6.896,6 8,6 Z\\" id=\\"path-1\\"></path>
 
           <path id=\\"file-none-a\\" d=\\"M10,5.0999 L10,2 L4,2 C3.45,2 3,2.45 3,3 L3,13 C3,13.55 3.45,14 4,14 L12,14 C12.55,14 13,13.55 13,13 L13,6 L11.1001,6 L11.5,6.3999 L9.4,8.4999 L11.5,10.5999 L10.1,11.9999 L8,9.8999 L5.9,11.9999 L4.5,10.5999 L6.6,8.4999 L4.5,6.3999 L5.9,4.9999 L8,7.0999 L10,5.0999 Z M15,5 L15,15.004 C15,15.555 14.55,16 13.993,16 L2.007,16 C1.451,16 1,15.556 1,14.999 L1,1.001 C1,0.448 1.446,0 1.998,0 L10,0 L11,0 L15,4 L15,5 Z\\"></path>
@@ -355,6 +357,8 @@ exports[`Icon should render examples: Icon 1`] = `
           <path id=\\"pen\\" d=\\"M9.5 3.5l3 3L3.04 16H0v-2.97L9.5 3.5zM14.91.92l.18.17c.77.78.78 2.05 0 2.84L14.03 5 11 2 12.09.91a2 2 0 0 1 2.82 0z\\"></path>
 
           <polygon id=\\"plus-a\\" points=\\"7 0 9 0 9 7 16 7 16 9 9 9 9 16 7 16 7 9 0 9 0 7 7 7\\"></polygon>
+
+          <path id=\\"plus-small\\" d=\\"M4 4V1a1 1 0 1 1 2 0v3h3a1 1 0 1 1 0 2H6v3a1 1 0 1 1-2 0V6H1a1 1 0 1 1 0-2h3z\\"></path>
         </defs>
         <symbol id=\\"album-add\\" viewBox=\\"0 0 16 16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M65,99.0094776 C65,97.347389 66.3423789,96 68.0033512,96 L77.9931545,96 C78.5492199,96 79,96.4438648 79,97 C79,97.5522847 78.544239,98 77.9975267,98 L68.0024733,98 C67.4488226,98 67,98.4438648 67,99 C67,99.5522847 67.455761,100 68.0024733,100 L77.9975267,100 C78.5511774,100 79,100.455761 79,101.002473 L79,110.997527 C79,111.551177 78.5500512,112 77.9931545,112 L68.0033512,112 C66.3446462,112 65,110.663369 65,108.990522 L65,99.0094776 Z M72,102 L74,102 L74,105 L77,105 L77,107 L74,107 L74,110 L72,110 L72,107 L69,107 L69,105 L72,105 L72,102 Z\\" transform=\\"translate(-64 -96)\\"></path>
@@ -430,6 +434,10 @@ exports[`Icon should render examples: Icon 1`] = `
         </symbol>
         <symbol id=\\"cross\\" viewBox=\\"0 0 24 24\\">
           <path fill-rule=\\"evenodd\\" d=\\"M106.585786,44 L96.2928932,33.7071068 C95.9023689,33.3165825 95.9023689,32.6834175 96.2928932,32.2928932 C96.6834175,31.9023689 97.3165825,31.9023689 97.7071068,32.2928932 L108,42.5857864 L118.292893,32.2928932 C118.683418,31.9023689 119.316582,31.9023689 119.707107,32.2928932 C120.097631,32.6834175 120.097631,33.3165825 119.707107,33.7071068 L109.414214,44 L119.707107,54.2928932 C120.097631,54.6834175 120.097631,55.3165825 119.707107,55.7071068 C119.316582,56.0976311 118.683418,56.0976311 118.292893,55.7071068 L108,45.4142136 L97.7071068,55.7071068 C97.3165825,56.0976311 96.6834175,56.0976311 96.2928932,55.7071068 C95.9023689,55.3165825 95.9023689,54.6834175 96.2928932,54.2928932 L106.585786,44 Z\\" transform=\\"translate(-96 -32)\\"></path>
+        </symbol>
+        <symbol id=\\"cross-small\\" viewBox=\\"0 0 12 12\\">
+
+          <use xlink:href=\\"#cross-small\\"></use>
         </symbol>
         <symbol id=\\"cube\\" viewBox=\\"0 0 16 16\\">
           <path d=\\"M1,11.0086308 L1,5.50051502 C1,4.95127159 1.3905874,4.72776572 1.87240137,5.00308799 L7.12759863,8.00605786 C7.60359323,8.27805477 8,8.95047139 8,9.50051502 L8,15.0086308 C8,15.5578743 7.6094126,15.7813801 7.12759863,15.5060579 L1.87240137,12.503088 C1.39640677,12.2310911 1,11.5586745 1,11.0086308 Z M16,11.0086308 C16,11.5586745 15.6035932,12.2310911 15.1275986,12.503088 L9.87240137,15.5060579 C9.3905874,15.7813801 9,15.5578743 9,15.0086308 L9,9.50051502 C9,8.95047139 9.39640677,8.27805477 9.87240137,8.00605786 L15.1275986,5.00308799 C15.6094126,4.72776572 16,4.95127159 16,5.50051502 L16,11.0086308 Z M9.34976149,6.98164278 C8.88045118,7.27044912 8.11286116,7.26633364 7.65023851,6.98164278 L2.84976149,4.02750307 C2.38045118,3.73869673 2.38713884,3.29611355 2.87661892,3.03254735 L7.62338108,0.476598498 C8.10752434,0.215905973 8.88713884,0.213032303 9.37661892,0.476598498 L14.1233811,3.03254735 C14.6075243,3.29323988 14.6128612,3.74281221 14.1502385,4.02750307 L9.34976149,6.98164278 Z\\" id=\\"path-1\\"></path>
@@ -581,6 +589,10 @@ exports[`Icon should render examples: Icon 1`] = `
             <use xlink:href=\\"#plus-a\\"></use>
           </g>
         </symbol>
+        <symbol id=\\"plus-small\\" viewBox=\\"0 0 12 12\\">
+
+          <use fill-rule=\\"evenodd\\" transform=\\"translate(1 1)\\" xlink:href=\\"#plus-small\\"></use>
+        </symbol>
         <symbol id=\\"previous\\" viewBox=\\"0 0 16 16\\">
           <g stroke-width=\\"1\\" fill-rule=\\"evenodd\\">
             <path d=\\"M3.41421356,7 L14.9931545,7 C15.5492199,7 16,7.44386482 16,8 C16,8.55228475 15.5500512,9 14.9931545,9 L3.41421356,9 L8.70710678,14.2928932 C9.09763107,14.6834175 9.09763107,15.3165825 8.70710678,15.7071068 C8.31658249,16.0976311 7.68341751,16.0976311 7.29289322,15.7071068 L0.292893219,8.70710678 C-0.0976310729,8.31658249 -0.0976310729,7.68341751 0.292893219,7.29289322 L7.29289322,0.292893219 C7.68341751,-0.0976310729 8.31658249,-0.0976310729 8.70710678,0.292893219 C9.09763107,0.683417511 9.09763107,1.31658249 8.70710678,1.70710678 L3.41421356,7 Z\\"></path>
@@ -720,186 +732,196 @@ exports[`Icon should render examples: Icon 1`] = `
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cross</p>
     </div>
     <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"#cross-small\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cross-small</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cube\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cube</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dash\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">dash</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#delete\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">delete</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#destroy\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">destroy</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dots\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">dots</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#download\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">download</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#exchange\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">exchange</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#eye\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">eye</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#eye-closed\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">eye-closed</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file-none\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">file-none</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">file</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#folder\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">folder</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#forward\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">forward</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#gear\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">gear</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#help\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">help</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#hourglass\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">hourglass</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#info\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">info</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#image\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">image</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#moveto\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">moveto</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#openwith\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">openwith</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#paperplane\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">paperplane</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#pen\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">pen</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#people\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">people</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#phone-download\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">phone-download</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#plus\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">plus</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"#plus-small\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">plus-small</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#rename\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">rename</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#restore\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">restore</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#share\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">share</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#small-arrow\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">small-arrow</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#spinner\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">spinner</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#sync\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">sync</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#top-select\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">top-select</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#top\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">top</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#trash\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">trash</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#upload\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">upload</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#warn\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">warn</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#warning\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">warning</p>
