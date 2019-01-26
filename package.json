@@ -47,7 +47,7 @@
     "watch:doc:kss": "nodemon --ext styl,md --watch stylus --exec 'yarn build:doc:kss && http-server build/styleguide -p 4242'"
   },
   "devDependencies": {
-    "@material-ui/core": "3.7.0",
+    "@material-ui/core": "3.9.1",
     "@semantic-release/changelog": "^2.0.2",
     "@semantic-release/git": "^5.0.0",
     "@semantic-release/npm": "^3.3.1",
@@ -113,7 +113,7 @@
     "react-select": "2.2.0"
   },
   "peerDependencies": {
-    "@material-ui/core": "3.7.0",
+    "@material-ui/core": "3.9.1",
     "piwik-react-router": "^0.8.2",
     "preact": "^8.3.1",
     "preact-portal": "^1.1.3",
