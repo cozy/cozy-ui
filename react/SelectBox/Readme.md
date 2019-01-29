@@ -43,6 +43,11 @@ const options = [
   { value: 'vanilla', label: 'Vanilla' }
 ];
 
+initialState = { height: '12rem'}
+
+const changeHeight = () => setState({
+  height: state.height == '12rem' ? '18rem' : '12rem'
+});
 
 class SelectBoxWrapper extends React.Component {
   constructor(props, context){
@@ -52,9 +57,10 @@ class SelectBoxWrapper extends React.Component {
 
   render(){
     return (<div ref={this.container} style={{
-      height: '12rem',
+      height: state.height,
       padding: '.5rem',
       overflow: 'auto'}}>
+      Container height: {state.height}.  <button onClick={changeHeight}>Change container height</button>
       <SelectBox
         container={this.container}
         options={options}
