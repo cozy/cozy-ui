@@ -45,14 +45,16 @@ export const theme = createMuiTheme({
       }
     },
     MuiExpansionPanel: {
+      rounded: {
+        borderRadius: defaultValues.borderRadius
+      },
       root: {
         boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.08)',
         borderWidth: '0.0625rem',
         borderStyle: 'solid',
         borderColor: 'var(--silver)',
         overflow: 'hidden',
-        marginBottom: '1rem',
-        borderRadius: defaultValues.borderRadius
+        marginBottom: '1rem'
       }
     },
     MuiExpansionPanelSummary: {
