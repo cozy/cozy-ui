@@ -10,6 +10,7 @@ $wizard
     position fixed
     top 0
     left 0
+    box-sizing border-box
     height 100%
     display flex
     justify-content center
@@ -18,6 +19,10 @@ $wizard
     background-color white
     color charcoalGrey
     text-align center
+
+    +small-device()
+        flex-direction column
+        justify-content flex-start
 
 $wizard--waiting
     background-color dodgerBlue
@@ -33,6 +38,10 @@ $wizard--scroll
     +small-device()
         padding-top 0
 
+$wizard--dual
+    position static
+    width 100%
+
 $wizard-wrapper
     @extend $elastic
     justify-content center
@@ -40,6 +49,9 @@ $wizard-wrapper
     height 100%
     max-width rem(544)
     text-align left
+
+    +small-device()
+        justify-content flex-start
 
 $wizard-wrapper--welcome
     height auto
@@ -49,8 +61,13 @@ $wizard-wrapper--bleed
     max-width 100%
 
 $wizard-wrapper--dual
-    @extend $wizard-wrapper--bleed
-    max-width none
+    display flex
+    flex-direction column
+    align-items center
+    height 100vh
+    @media (max-height: rem(608))
+        min-height 100vh
+        height auto
 
 $wizard-dual
     flex 1 1 50%
@@ -104,6 +121,9 @@ $wizard-main
     width 100%
     padding 0 rem(16)
     @extend $elastic-content
+
+    & > * // @stylint ignore
+        flex-shrink 0
 
 $wizard-footer
     @extend $elastic-bar
@@ -270,7 +290,7 @@ $wizard-buttonlink
         {fz-small}
 
 
-$wizard-password
+$wizard-input
     +small-device()
         {input-text--medium}
 
@@ -400,6 +420,23 @@ $wizard-dualfield--focus
 $wizard-dualfield--error
     border-color pomegranate
 
+$wizard-dualfield-wrapper
+    flex 1 1 auto
+
+$wizard-dualfield-input
+    border 0
+    padding-right rem(8)
+    &:hover
+    &:focus
+        position relative
+        z-index 1
+        border 0
+        outline 0
+
+    +small-device()
+        {input-text--medium}
+        padding-right rem(4)
+
 $wizard-protocol
     display flex
     align-items center
@@ -415,8 +452,9 @@ $wizard-domain
     display flex
     flex-direction column
     justify-content center
-    flex 0 0 auto
+    flex 0 1 auto
     margin-right rem(16)
+    max-width rem(140)
 
 $wizard-select
     @extend $select
@@ -441,20 +479,6 @@ $wizard-select--medium
 $wizard-select--narrow
     width rem(40)
 
-$wizard-input
-    flex 1 1 auto
-    border 0
-    padding-right rem(8)
-    &:hover
-    &:focus
-        position relative
-        z-index 1
-        border 0
-        outline 0
-
-    +small-device()
-        {input-text--medium}
-
 $wizard-requirements
     order 2
     margin-bottom 0
@@ -466,11 +490,14 @@ $wizard-requirements
 
     span
         display inline-block
-        text-indent rem(8)
+        text-indent rem(6)
 
     +small-device()
         font-size rem(14)
         margin-top rem(8)
+
+        span
+            text-indent rem(2)
 
 $wizard-agreements
     display flex
@@ -493,6 +520,7 @@ $wizard-agreements-item
     border rem(1) solid silver
     border-radius rem(8)
     padding rem(16)
+    color slateGrey
 
     +medium-screen()
         flex-direction row
