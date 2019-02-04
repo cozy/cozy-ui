@@ -6,6 +6,8 @@ import styles from './styles.styl'
 import Overlay from '../Overlay'
 import once from 'lodash/once'
 import { Media, Bd, Img } from '../Media'
+import Icon from '../Icon'
+import { Bold } from '../Text'
 
 const TRANSITION_DURATION = 100 // need to be kept in sync with css
 
@@ -141,10 +143,7 @@ class ActionMenu extends Component {
     const { children, className } = this.props
     const { closing } = this.state
     return (
-      <div
-        className={cx(styles.ActionMenu, className)}
-        ref={this.handleWrapperRef}
-      >
+      <div className={className} ref={this.handleWrapperRef}>
         <Overlay
           style={{ opacity: closing ? 0 : 1 }}
           onClick={this.animateClose}
@@ -166,9 +165,47 @@ ActionMenu.propTypes = {
   onClose: PropTypes.func
 }
 
+const ActionMenuHeader = ({ icon, filename, extension }) => {
+  return (
+    <Media className={styles['c-actionmenu-header']}>
+      {icon && (
+        <Icon
+          className={cx(styles['c-actionmenu-header-icon'], 'u-mr-1')}
+          icon={icon}
+          width={30}
+          height={30}
+        />
+      )}
+      <Bd className={styles['c-actionmenu-header-text']}>
+        <Bold
+          tag="span"
+          ellipsis
+          className={styles['c-actionmenu-header-filename']}
+        >
+          {filename}
+        </Bold>
+        {extension && (
+          <Bold tag="span" className="u-coolGrey">
+            {extension}
+          </Bold>
+        )}
+      </Bd>
+    </Media>
+  )
+}
+
+ActionMenuHeader.propTypes = {
+  /** Header icon */
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  /** Title, folder name or file name */
+  filename: PropTypes.string.isRequired,
+  /** If a file name, you can specify the extension */
+  extension: PropTypes.string
+}
+
 const ActionMenuItem = ({ left, children, right }) => {
   return (
-    <Media className={styles['ActionMenu__Item']}>
+    <Media className={styles['c-actionmenu-item']}>
       {left && <Img className="u-mh-1">{left}</Img>}
       <Bd className={left ? 'u-mr-1' : 'u-mh-1'}>{children}</Bd>
       {right && <Img className="u-mr-1">{right}</Img>}
@@ -177,4 +214,4 @@ const ActionMenuItem = ({ left, children, right }) => {
 }
 
 export default ActionMenu
-export { ActionMenuItem }
+export { ActionMenuHeader, ActionMenuItem }

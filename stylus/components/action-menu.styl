@@ -3,25 +3,43 @@
 @require '../settings/palette'
 
 $actionmenu
-    .c-actionmenu
-        @extend        $popover
-        z-index        $file-action-menu
-        position       fixed
-        bottom         rem(9)
-        bottom         env(safe-area-inset-bottom) // @stylint ignore
-        left           0
-        width          'calc(100% - %s)' % rem(16)
-        margin         0 rem(8)
-        padding-bottom rem(5)
-        box-sizing border-box
+    @extend        $popover
+    z-index        $file-action-menu
+    position       fixed
+    bottom         rem(9)
+    bottom         env(safe-area-inset-bottom) // @stylint ignore
+    left           0
+    width          'calc(100% - %s)' % rem(16)
+    margin         0 rem(8)
+    padding-bottom rem(5)
+    box-sizing border-box
 
-        &.with-transition
-            transition transform .1s ease-out
+    &.with-transition
+        transition transform .1s ease-out
 
-        hr
-            margin-top 0
+    hr
+        margin-top 0
 
-$actionmenuitem
+$actionmenu-header
+    box-sizing border-box
+    border-bottom rem(1) solid silver
+    padding rem(16)
+    min-height rem(64)
+
+$actionmenu-header-icon
+    flex-shrink 0
+
+$actionmenu-header-text
+    display flex
+
+    :last-child
+        flex-shrink 0
+
+$actionmenu-header-filename
+    display inline
+    width auto
+
+$actionmenu-item
     height rem(48)
     cursor pointer
 
