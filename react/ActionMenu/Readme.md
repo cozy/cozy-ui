@@ -22,6 +22,7 @@ const hideMenu = () => setState({ menuDisplayed: false });
 ```
 const { ActionMenuItem, ActionMenuHeader } = require('.')
 const Icon = require('../Icon').default;
+const Filename = require('../Filename').default;
 
 const showMenu = () => setState({ menuDisplayed: true })
 const hideMenu = () => setState({ menuDisplayed: false });
@@ -31,7 +32,9 @@ const hideMenu = () => setState({ menuDisplayed: false });
   {state.menuDisplayed &&
     <ActionMenu
       onClose={hideMenu}>
-      <ActionMenuHeader icon="folder" filename="lorem_ipsum" extension=".pdf" />
+      <ActionMenuHeader>
+        <Filename icon="file" filename="my_awesome_paper" extension=".pdf" />
+      </ActionMenuHeader>
       <ActionMenuItem left={<Icon icon='file' />}>Item 1</ActionMenuItem>
       <ActionMenuItem left={<Icon icon='forward' />}>Item 2</ActionMenuItem>
       <ActionMenuItem left={<Icon icon='file' />}>Item 3</ActionMenuItem>

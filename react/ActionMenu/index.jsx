@@ -1,13 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 import Hammer from 'hammerjs'
 import styles from './styles.styl'
 import Overlay from '../Overlay'
 import once from 'lodash/once'
 import { Media, Bd, Img } from '../Media'
-import Icon from '../Icon'
-import { Bold } from '../Text'
 
 const TRANSITION_DURATION = 100 // need to be kept in sync with css
 
@@ -165,42 +162,8 @@ ActionMenu.propTypes = {
   onClose: PropTypes.func
 }
 
-const ActionMenuHeader = ({ icon, filename, extension }) => {
-  return (
-    <Media className={styles['c-actionmenu-header']}>
-      {icon && (
-        <Icon
-          className={cx(styles['c-actionmenu-header-icon'], 'u-mr-1')}
-          icon={icon}
-          width={30}
-          height={30}
-        />
-      )}
-      <Bd className={styles['c-actionmenu-header-text']}>
-        <Bold
-          tag="span"
-          ellipsis
-          className={styles['c-actionmenu-header-filename']}
-        >
-          {filename}
-        </Bold>
-        {extension && (
-          <Bold tag="span" className="u-coolGrey">
-            {extension}
-          </Bold>
-        )}
-      </Bd>
-    </Media>
-  )
-}
-
-ActionMenuHeader.propTypes = {
-  /** Header icon */
-  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  /** Title, folder name or file name */
-  filename: PropTypes.string.isRequired,
-  /** If a file name, you can specify the extension */
-  extension: PropTypes.string
+const ActionMenuHeader = ({ children }) => {
+  return <div className={styles['c-actionmenu-header']}>{children}</div>
 }
 
 const ActionMenuItem = ({ left, children, right }) => {
