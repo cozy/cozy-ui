@@ -12,13 +12,16 @@
 var path = require('path')
 var stylus = require('stylus')
 
+const NODE_MODULES_PATH = path.resolve(__dirname, '../..')
+
 var plugin = function () {
   return function (style) {
     style.set('include css', true)
     style.include(__dirname)
     style.define('embed', stylus.url({
-      paths: [path.join(__dirname, '../assets')]
-    }))
+        paths: [path.join(__dirname, '../assets')]
+      }))
+    style.set('paths', [...style.options.paths, NODE_MODULES_PATH])
     return style
   }
 }
