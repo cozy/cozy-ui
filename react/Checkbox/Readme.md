@@ -12,6 +12,12 @@
 <div><Checkbox label="This is a checkbox with an error" error /></div>
 ```
 
+### Checkbox when disabled
+
+```
+<div><Checkbox label="This is a disabled checkbox" disabled /></div>
+```
+
 ### Checkbox mixed checked
 
 ```

@@ -219,11 +219,17 @@ exports[`Checkbox should render examples: Checkbox 2`] = `
 
 exports[`Checkbox should render examples: Checkbox 3`] = `
 "<div>
-  <div><label class=\\"styles__c-input-checkbox___2CzvY\\" aria-checked=\\"mixed\\"><input type=\\"checkbox\\" name=\\"\\" value=\\"\\"><span>This is a mixed checkbox</span></label></div>
+  <div><label class=\\"styles__c-input-checkbox___2CzvY\\" aria-checked=\\"\\" aria-disabled=\\"true\\"><input type=\\"checkbox\\" name=\\"\\" disabled=\\"\\" value=\\"\\"><span>This is a disabled checkbox</span></label></div>
 </div>"
 `;
 
 exports[`Checkbox should render examples: Checkbox 4`] = `
+"<div>
+  <div><label class=\\"styles__c-input-checkbox___2CzvY\\" aria-checked=\\"mixed\\"><input type=\\"checkbox\\" name=\\"\\" value=\\"\\"><span>This is a mixed checkbox</span></label></div>
+</div>"
+`;
+
+exports[`Checkbox should render examples: Checkbox 5`] = `
 "<div>
   <div><label class=\\"styles__c-input-checkbox___2CzvY\\" aria-checked=\\"\\"><input type=\\"checkbox\\" name=\\"\\" value=\\"\\"><span>This is a <strong>complex</strong> text</span></label></div>
 </div>"
@@ -1054,6 +1060,12 @@ exports[`Radio should render examples: Radio 1`] = `
 exports[`Radio should render examples: Radio 2`] = `
 "<div>
   <div><label class=\\"styles__c-input-radio___XJQt1 styles__is-error___2-12P\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue1\\"><span>This is a radio button</span></label></div>
+</div>"
+`;
+
+exports[`Radio should render examples: Radio 3`] = `
+"<div>
+  <div><label class=\\"styles__c-input-radio___XJQt1\\" aria-disabled=\\"true\\"><input type=\\"radio\\" name=\\"radioForm\\" disabled=\\"\\" value=\\"radioValue1\\"><span>This is a disabled radio button</span></label></div>
 </div>"
 `;
 

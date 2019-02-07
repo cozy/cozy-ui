@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
 const Radio = props => {
-  const { className, value, name, label, error, ...restProps } = props
+  const { className, value, name, label, error, disabled, ...restProps } = props
   return (
     <label
       className={cx(
@@ -14,8 +14,15 @@ const Radio = props => {
         },
         className
       )}
+      aria-disabled={disabled}
     >
-      <input type="radio" value={value} name={name} {...restProps} />
+      <input
+        type="radio"
+        value={value}
+        name={name}
+        disabled={disabled}
+        {...restProps}
+      />
       <span>{label}</span>
     </label>
   )
@@ -26,6 +33,7 @@ Radio.propTypes = {
   value: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   error: PropTypes.bool,
+  disabled: PropTypes.bool,
   label: PropTypes.string.isRequired
 }
 
