@@ -5,6 +5,12 @@
 @require '../elements/defaults'
 
 /*------------------------------------*\
+  Layout vars
+\*------------------------------------*/
+barHeight = rem(48)
+navHeight = rem(48)
+
+/*------------------------------------*\
   Layouts
 \*------------------------------------*/
 
@@ -94,7 +100,12 @@ $app
         &:after
             content ''
             display block
-            height rem(48)
+
+        &:before
+            height barHeight
+
+        &:after
+            height navHeight
 
 // STICKY layout
 // When you want a sidebar and you want it to act like a sticky footer on mobile
