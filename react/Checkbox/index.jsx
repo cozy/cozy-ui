@@ -11,6 +11,7 @@ const Checkbox = props => {
     label,
     error,
     mixed,
+    disabled,
     children,
     ...restProps
   } = props
@@ -24,8 +25,15 @@ const Checkbox = props => {
         className
       )}
       aria-checked={mixed ? 'mixed' : ''}
+      aria-disabled={disabled}
     >
-      <input type="checkbox" value={value} name={name} {...restProps} />
+      <input
+        type="checkbox"
+        value={value}
+        name={name}
+        disabled={disabled}
+        {...restProps}
+      />
       <span>{label || children}</span>
     </label>
   )
@@ -36,6 +44,7 @@ Checkbox.propTypes = {
   value: PropTypes.string,
   name: PropTypes.string,
   error: PropTypes.bool,
+  disabled: PropTypes.bool,
   mixed: PropTypes.bool,
   label: PropTypes.string
 }
