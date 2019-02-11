@@ -14,10 +14,10 @@ export const theme = createMuiTheme({
   },
   palette: {
     primary: {
-      light: getCssVariableValue('frenchPass'),
-      main: getCssVariableValue('dodgerBlue'),
+      light: getCssVariableValue('primaryColorLight'),
+      main: getCssVariableValue('primaryColor'),
       dark: getCssVariableValue('scienceBlue'),
-      contrastText: getCssVariableValue('white')
+      contrastText: getCssVariableValue('primaryContrastTextColor')
     },
     secondary: {
       light: getCssVariableValue('monza'),
