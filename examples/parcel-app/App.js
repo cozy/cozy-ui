@@ -18,7 +18,7 @@ import {
   NavIcon,
   genNavLink
 } from '../../transpiled/react'
-import '../../transpiled/stylesheet.css'
+import '../../transpiled/react/stylesheet.css'
 
 const RRNavLink = props => <div {...props} />
 
