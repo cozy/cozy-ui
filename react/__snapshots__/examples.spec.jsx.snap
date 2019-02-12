@@ -241,6 +241,10 @@ exports[`Checkbox should render examples: Checkbox 5`] = `
 </div>"
 `;
 
+exports[`Empty should render examples: Empty 1`] = `"<div></div>"`;
+
+exports[`Empty should render examples: Empty 2`] = `"<div></div>"`;
+
 exports[`Field should render examples: Field 1`] = `
 "<div>
   <form>

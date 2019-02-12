@@ -5,9 +5,16 @@ import { Text, MainTitle } from '../Text'
 import Icon, { iconPropType } from '../Icon'
 import styles from './styles.styl'
 
-export const Empty = ({ icon, title, text, children, className }) => {
+export const Empty = ({
+  icon,
+  title,
+  text,
+  children,
+  className,
+  ...others
+}) => {
   return (
-    <div className={cx(styles['c-empty'], className)}>
+    <div className={cx(styles['c-empty'], className)} {...others}>
       <Icon
         className={styles['c-empty-img']}
         icon={icon}
@@ -33,7 +40,11 @@ Empty.propTypes = {
   icon: iconPropType.isRequired,
   title: PropTypes.node.isRequired,
   text: PropTypes.node,
-  className: PropTypes.string
+  className: PropTypes.string,
+  /*
+   other = all html attributes
+   */
+  others: PropTypes.object
 }
 
 export default Empty

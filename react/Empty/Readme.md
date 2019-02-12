@@ -31,10 +31,9 @@ const styles = {
   }
 };
 
-<div style={styles.empty}>
+<div style={styles.empty} id='empty'>
   <Empty icon="cozy" title="An error occured" text="It's maybe nothing, just refresh to be sure">
     <Button label="Try refreshing" />
   </Empty>
 </div>
 ```
-
