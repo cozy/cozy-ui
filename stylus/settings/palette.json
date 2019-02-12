@@ -34,5 +34,8 @@
   "purpley": "var(--purpley)",
   "lightishPurple": "var(--lightishPurple)",
   "barney": "var(--barney)",
-  "weirdGreen": "var(--weirdGreen)"
+  "weirdGreen": "var(--weirdGreen)",
+  "primaryColor": "var(--primaryColor)",
+  "primaryColorLight": "var(--primaryColorLight)",
+  "primaryContrastTextColor": "var(--primaryContrastTextColor)"
 }
