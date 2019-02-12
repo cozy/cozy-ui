@@ -6,6 +6,12 @@ exports[`ActionMenu should render examples: ActionMenu 1`] = `
 </div>"
 `;
 
+exports[`ActionMenu should render examples: ActionMenu 2`] = `
+"<div>
+  <div><button>Show action menu</button></div>
+</div>"
+`;
+
 exports[`Avatar should render examples: Avatar 1`] = `
 "<div>
   <div class=\\"styles__c-avatar___PpDI-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">

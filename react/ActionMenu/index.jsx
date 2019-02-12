@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 import Hammer from 'hammerjs'
 import styles from './styles.styl'
 import Overlay from '../Overlay'
@@ -141,10 +140,7 @@ class ActionMenu extends Component {
     const { children, className } = this.props
     const { closing } = this.state
     return (
-      <div
-        className={cx(styles.ActionMenu, className)}
-        ref={this.handleWrapperRef}
-      >
+      <div className={className} ref={this.handleWrapperRef}>
         <Overlay
           style={{ opacity: closing ? 0 : 1 }}
           onClick={this.animateClose}
@@ -166,9 +162,13 @@ ActionMenu.propTypes = {
   onClose: PropTypes.func
 }
 
+const ActionMenuHeader = ({ children }) => {
+  return <div className={styles['c-actionmenu-header']}>{children}</div>
+}
+
 const ActionMenuItem = ({ left, children, right }) => {
   return (
-    <Media className={styles['ActionMenu__Item']}>
+    <Media className={styles['c-actionmenu-item']}>
       {left && <Img className="u-mh-1">{left}</Img>}
       <Bd className={left ? 'u-mr-1' : 'u-mh-1'}>{children}</Bd>
       {right && <Img className="u-mr-1">{right}</Img>}
@@ -177,4 +177,4 @@ const ActionMenuItem = ({ left, children, right }) => {
 }
 
 export default ActionMenu
-export { ActionMenuItem }
+export { ActionMenuHeader, ActionMenuItem }
