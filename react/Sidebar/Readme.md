@@ -23,7 +23,7 @@ const NavLink = genNavLink(({ children, className }) =>
 
 <Sidebar id='sidebar'>
   <Nav>
-    <NavItem>
+    <NavItem id='nav-item'>
       <NavLink>
         <NavIcon icon='warn' />
         <NavText>Warn</NavText>
