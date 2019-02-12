@@ -39,7 +39,7 @@
     "jest": "yarn test:jest",
     "test": "yarn test:jest",
     "test:jest": "env BABEL_ENV=transpilation jest --verbose --coverage",
-    "transpile": "env BABEL_ENV=transpilation babel react/ --out-dir transpiled/react --copy-files --ignore '**/test/**,**/__mocks__/**,**/*.spec.*' --verbose",
+    "transpile": "env BABEL_ENV=transpilation babel react/ --out-dir transpiled/react --verbose",
     "posttranspile": "postcss transpiled/react/stylesheet.css --replace",
     "travis-deploy-once": "travis-deploy-once",
     "watch:css": "yarn build:css --watch",
