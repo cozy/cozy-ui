@@ -1,4 +1,3 @@
-const { version } = require('./package.json')
 module.exports = {
   presets: ['cozy-app'],
   env: {
@@ -10,10 +9,7 @@ module.exports = {
             extensions: ['.styl'],
             preprocessCss: './preprocess',
             extractCss: './transpiled/react/stylesheet.css',
-            generateScopedName: `[name]__[local]___cozy_ui_${version.replace(
-              '.',
-              '_'
-            )}`
+            generateScopedName: '[name]__[local]___[hash:base64:5]'
           }
         ]
       ]
