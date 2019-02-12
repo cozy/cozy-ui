@@ -21,7 +21,7 @@ const Nav = _Nav.default
 const NavLink = genNavLink(({ children, className }) =>
   <a className={className}>{ children }</a>);
 
-<Sidebar>
+<Sidebar id='sidebar'>
   <Nav>
     <NavItem>
       <NavLink>

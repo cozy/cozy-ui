@@ -1413,7 +1413,7 @@ exports[`SelectBox should render examples: SelectBox 11`] = `
 
 exports[`Sidebar should render examples: Sidebar 1`] = `
 "<div>
-  <aside class=\\"styles__o-sidebar___1295j\\">
+  <aside class=\\"styles__o-sidebar___1295j\\" id=\\"sidebar\\">
     <nav role=\\"navigation\\">
       <ul class=\\"styles__c-nav___33dZy\\">
         <li class=\\"styles__c-nav-item___3XOLK\\"><a class=\\"styles__c-nav-link___3mK6W\\"><span class=\\"styles__c-nav-icon___hrJUe\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#warn\\"></use></svg></span><span class=\\"styles__c-nav-text___1J3yU\\">Warn</span></a></li>
