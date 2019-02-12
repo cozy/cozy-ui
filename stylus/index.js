@@ -12,13 +12,17 @@
 var path = require('path')
 var stylus = require('stylus')
 
-var plugin = function () {
-  return function (style) {
+var plugin = function() {
+  return function(style) {
     style.set('include css', true)
     style.include(__dirname)
-    style.define('embed', stylus.url({
-      paths: [path.join(__dirname, '../assets')]
-    }))
+    style.define('cssmodules', !(process.env.CSSMODULES === 'false'))
+    style.define(
+      'embed',
+      stylus.url({
+        paths: [path.join(__dirname, '../assets')]
+      })
+    )
     return style
   }
 }

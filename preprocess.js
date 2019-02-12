@@ -1,7 +1,7 @@
 const stylus = require('stylus')
 const cozyStylusPlugin = require('./stylus')
 
-const renderStylus = function (css, filename) {
+const renderStylus = function(css, filename) {
   try {
     return stylus(css)
       .use(cozyStylusPlugin())

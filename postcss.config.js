@@ -1,5 +1,17 @@
+const browsers = require('browserslist-config-cozy')
+
 module.exports = {
   plugins: [
-    require('autoprefixer')(['last 2 versions'])
+    require('cssnano')({
+      preset: [
+        'advanced',
+        {
+          autoprefixer: { browsers },
+          mergeIdents: false,
+          reduceIdents: false,
+          zindex: false
+        }
+      ]
+    })
   ]
 }

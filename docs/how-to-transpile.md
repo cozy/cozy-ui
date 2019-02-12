@@ -14,7 +14,7 @@ yarn add cozy-ui@next
 2. Add `stylesheet.css`
 
 ```patch
-+ import 'cozy-ui/transpiled/stylesheet.css'
++ import 'cozy-ui/transpiled/react/stylesheet.css'
 ```
 
 3. Replace occurences of `cozy-ui/react` by `cozy-ui/transpiled/react`
