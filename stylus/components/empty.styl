@@ -1,6 +1,9 @@
 @require '../settings/palette'
 @require '../settings/breakpoints'
 @require '../tools/mixins'
+@require '../objects/layouts'
+
+contentHeight = barHeight + navHeight
 
 $empty
     display          flex
@@ -12,19 +15,16 @@ $empty
     text-align       center
 
     +medium-screen()
-        height 100%
-        width 100%
-        position fixed
-        top 0
-        left 0
-        pointer-events none
+        margin-top 'calc(50vh - %s)' % contentHeight
+        transform translateY(-50%)
 
 $empty-img
     display              block
-    margin               0 auto rem(32)
+    margin               0 auto rem(16)
     height               rem(140)
 
     +medium-screen()
+        margin-bottom rem(8)
         height  rem(105)
 
 $empty-title
