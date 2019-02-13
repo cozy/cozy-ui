@@ -1035,7 +1035,7 @@ exports[`ListItemText should render examples: ListItemText 3`] = `
 
 exports[`Menu should render examples: Menu 1`] = `
 "<div>
-  <div class=\\"styles__c-menu___2YTiU styles__c-menu--left___3wamY\\"><button role=\\"button\\" class=\\"c-btn styles__c-menu__btn___18qF8\\">Click me !</button></div>
+  <div id=\\"Menu\\" class=\\"styles__c-menu___2YTiU styles__c-menu--left___3wamY\\"><button role=\\"button\\" class=\\"c-btn styles__c-menu__btn___18qF8\\">Click me !</button></div>
 </div>"
 `;
 

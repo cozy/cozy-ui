@@ -97,13 +97,15 @@ class Menu extends Component {
       position,
       component,
       itemsStyle,
-      popover
+      popover,
+      ...restProps
     } = this.props
     const { opened } = this.state
     const Tag = popover === true ? Popover : 'div'
 
     return (
       <div
+        {...restProps}
         className={cx(
           styles['c-menu'],
           {
@@ -167,7 +169,9 @@ Menu.propTypes = {
   /** Global Styles for MenuItems */
   itemsStyle: PropTypes.object,
   /** if you need fixed menu */
-  popover: PropTypes.bool
+  popover: PropTypes.bool,
+  /** other = all html attributes **/
+  restProps: PropTypes.object
 }
 
 Menu.MenuItem = MenuItem
