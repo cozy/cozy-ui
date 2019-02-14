@@ -166,6 +166,23 @@ $modal-header-app-icon
     height rem(18)
     margin-right rem(8)
 
+$modal-content-fixed
+    border-bottom rem(1) solid silver
+    flex 0 0 auto
+    padding 0 medium-padding
+
+$modal-content-fixed--small
+    padding 0 small-padding
+
+    +tiny-screen()
+        padding 0 tiny-padding
+
+$modal-content-fixed--large
+    padding 0 large-padding
+
+    +tiny-screen()
+        padding 0 medium-padding
+
 $modal-content
     @extend $elastic-content
     padding 0 medium-padding

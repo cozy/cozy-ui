@@ -170,6 +170,33 @@ const headerStyle = {
 </div>
 ```
 
+### Complex modals with fixed content
+
+If you need a part of your modal content fixed (not scrollable) and the other part scrollable, you need to compose you own complex modal.
+
+```
+const { ModalContent, ModalHeader, ModalFooter } = Modal;
+
+<div>
+  <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
+    Toggle modal
+  </button>
+  {state.modalOpened &&
+    <Modal
+        overflowHidden={true}
+        dismissAction={()=>setState({ modalOpened: false})} >
+      <ModalHeader title="Augusta Ada King-Noel, Countess of Lovelace" />
+      <ModalContent fixed className='u-pv-1'>
+        { content.ada.short }
+      </ModalContent>
+      <ModalContent>
+        { content.ada.long }
+      </ModalContent>
+      <ModalFooter><strong>This a custom footer</strong></ModalFooter>
+    </Modal>}
+</div>
+```
+
 ### Branded modals
 
 If you need a modal with a branded header when you have a brand related content.
