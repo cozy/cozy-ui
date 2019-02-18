@@ -241,9 +241,33 @@ exports[`Checkbox should render examples: Checkbox 5`] = `
 </div>"
 `;
 
-exports[`Empty should render examples: Empty 1`] = `"<div></div>"`;
+exports[`Empty should render examples: Empty 1`] = `
+"<div>
+  <div style=\\"position: relative; transform: translateZ(0); height: 500px; display: flex;\\">
+    <div class=\\"styles__c-empty___3w5oV\\"><svg class=\\"styles__c-empty-img___2GC4d styles__icon___23x3R\\" width=\\"100%\\" height=\\"100%\\">
+        <use xlink:href=\\"#cozy\\"></use>
+      </svg>
+      <h2 class=\\"styles__u-title-h1___fimho styles__c-empty-title___2HduE\\">This list is empty</h2>
+      <p class=\\"styles__u-text___2UfQa styles__c-empty-text___3HnvR\\">Try adding some content to this list</p>
+      <div class=\\"styles__c-empty-text___3HnvR\\"></div>
+    </div>
+  </div>
+</div>"
+`;
 
-exports[`Empty should render examples: Empty 2`] = `"<div></div>"`;
+exports[`Empty should render examples: Empty 2`] = `
+"<div>
+  <div style=\\"position: relative; transform: translateZ(0); height: 500px; display: flex;\\">
+    <div class=\\"styles__c-empty___3w5oV\\" id=\\"empty\\"><svg class=\\"styles__c-empty-img___2GC4d styles__icon___23x3R\\" width=\\"100%\\" height=\\"100%\\">
+        <use xlink:href=\\"#cozy\\"></use>
+      </svg>
+      <h2 class=\\"styles__u-title-h1___fimho styles__c-empty-title___2HduE\\">An error occured</h2>
+      <p class=\\"styles__u-text___2UfQa styles__c-empty-text___3HnvR\\">It's maybe nothing, just refresh to be sure</p>
+      <div class=\\"styles__c-empty-text___3HnvR\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Try refreshing</span></span></button></div>
+    </div>
+  </div>
+</div>"
+`;
 
 exports[`Field should render examples: Field 1`] = `
 "<div>
