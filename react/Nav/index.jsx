@@ -3,8 +3,10 @@ import Icon from '../Icon'
 import styles from './styles.styl'
 import cx from 'classnames'
 
-export const NavItem = ({ children }) => (
-  <li className={styles['c-nav-item']}>{children}</li>
+export const NavItem = ({ children, ...restProps }) => (
+  <li className={styles['c-nav-item']} {...restProps}>
+    {children}
+  </li>
 )
 
 export const NavText = ({ children }) => (

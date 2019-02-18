@@ -20,6 +20,7 @@ import Badge from './Badge'
 import Button from './Button'
 import ButtonAction from './ButtonAction'
 import Checkbox from './Checkbox'
+import Empty from './Empty'
 import Field from './Field'
 import Hero from './Hero'
 import I18n from './I18n'
@@ -70,6 +71,7 @@ const testFromStyleguidist = (name, markdown, require) => {
       'Button',
       'ButtonAction',
       'Checkbox',
+      'Empty',
       'Field',
       'Hero',
       'I18n',
@@ -114,6 +116,7 @@ const testFromStyleguidist = (name, markdown, require) => {
       Button,
       ButtonAction,
       Checkbox,
+      Empty,
       Field,
       Hero,
       I18n,

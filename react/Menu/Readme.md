@@ -13,7 +13,7 @@ const Button = require('../Button').default;
 const showItem = itemData => alert(JSON.stringify(itemData));
 const showWarning = itemData => alert(itemData + ' is disabled');
 
-<Menu text='Click me !' onSelect={ showItem } onSelectDisabled={ showWarning }>
+<Menu id='menu' text='Click me !' onSelect={ showItem } onSelectDisabled={ showWarning }>
   <MenuItem data='hello'>Hello !</MenuItem>
   <MenuItem disabled data='bonjour'>Bonjour !</MenuItem>
   <hr />

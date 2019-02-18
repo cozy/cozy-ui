@@ -97,7 +97,8 @@ class Menu extends Component {
       position,
       component,
       itemsStyle,
-      popover
+      popover,
+      ...restProps
     } = this.props
     const { opened } = this.state
     const Tag = popover === true ? Popover : 'div'
@@ -115,6 +116,7 @@ class Menu extends Component {
         ref={ref => {
           this.container = ref
         }}
+        {...restProps}
       >
         {!component ? (
           <MenuButton
