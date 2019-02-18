@@ -11,10 +11,10 @@ export const Empty = ({
   text,
   children,
   className,
-  ...others
+  ...restProps
 }) => {
   return (
-    <div className={cx(styles['c-empty'], className)} {...others}>
+    <div className={cx(styles['c-empty'], className)} {...restProps}>
       <Icon
         className={styles['c-empty-img']}
         icon={icon}
@@ -40,11 +40,7 @@ Empty.propTypes = {
   icon: iconPropType.isRequired,
   title: PropTypes.node.isRequired,
   text: PropTypes.node,
-  className: PropTypes.string,
-  /*
-   other = all html attributes
-   */
-  others: PropTypes.object
+  className: PropTypes.string
 }
 
 export default Empty

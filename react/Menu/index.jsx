@@ -105,7 +105,6 @@ class Menu extends Component {
 
     return (
       <div
-        {...restProps}
         className={cx(
           styles['c-menu'],
           {
@@ -117,6 +116,7 @@ class Menu extends Component {
         ref={ref => {
           this.container = ref
         }}
+        {...restProps}
       >
         {!component ? (
           <MenuButton
@@ -169,9 +169,7 @@ Menu.propTypes = {
   /** Global Styles for MenuItems */
   itemsStyle: PropTypes.object,
   /** if you need fixed menu */
-  popover: PropTypes.bool,
-  /** other = all html attributes **/
-  restProps: PropTypes.object
+  popover: PropTypes.bool
 }
 
 Menu.MenuItem = MenuItem
