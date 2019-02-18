@@ -61,7 +61,7 @@ const options = [
 </form>
 ```
 
-##### Password field without show/hide button
+#### Password field without show/hide button
 
 ```
 <form>
@@ -74,7 +74,7 @@ const options = [
 </form>
 ```
 
-##### Password field without show/hide button
+#### Side element
 
 ```
 <form>
@@ -84,3 +84,16 @@ const options = [
   />
 </form>
 ```
+
+#### Side element with fullwidth element
+
+```
+<form>
+  <Field
+    label="I'm a label"
+    side="(optional)"
+    fullwidth={true}
+  />
+</form>
+```
+
