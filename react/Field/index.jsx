@@ -66,6 +66,7 @@ const Field = props => {
     placeholder,
     error,
     onChange,
+    onKeyUp,
     readOnly,
     secondaryLabels,
     side,
@@ -87,6 +88,7 @@ const Field = props => {
             value={value}
             error={error}
             onChange={onChange}
+            onKeyUp={onKeyUp}
             readOnly={readOnly}
           />
         )
@@ -101,6 +103,7 @@ const Field = props => {
             value={value}
             error={error}
             onChange={onChange}
+            onKeyUp={onKeyUp}
             readOnly={readOnly}
             size={size}
             {...fieldProps}
@@ -121,6 +124,7 @@ const Field = props => {
             value={value}
             error={error}
             onChange={onChange}
+            onKeyUp={onKeyUp}
             readOnly={readOnly}
             size={size}
           />
