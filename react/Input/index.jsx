@@ -42,7 +42,7 @@ const Input = props => {
 
 Input.propTypes = {
   disabled: PropTypes.bool,
-  type: PropTypes.oneOf(['text', 'password', 'email', 'url']),
+  type: PropTypes.oneOf(['date', 'email', 'password', 'text', 'url']),
   id: PropTypes.string,
   className: PropTypes.string,
   value: PropTypes.string,
