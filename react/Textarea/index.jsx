@@ -42,7 +42,8 @@ Textarea.propTypes = {
   className: PropTypes.string,
   error: PropTypes.bool,
   size: PropTypes.oneOf(['tiny', 'medium']),
-  fullwidth: PropTypes.bool
+  fullwidth: PropTypes.bool,
+  onChange: PropTypes.func
 }
 
 Textarea.defaultProps = {
