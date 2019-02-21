@@ -53,7 +53,9 @@ Input.propTypes = {
   /**
    * Use that property to pass a ref callback to the native input component.
    */
-  inputRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object])
+  inputRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
+  onChange: PropTypes.func,
+  onKeyUp: PropTypes.func
 }
 
 Input.defaultProps = {
