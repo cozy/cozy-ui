@@ -5,6 +5,7 @@ import styles from './styles.styl'
 
 const Input = props => {
   const {
+    autoComplete,
     disabled,
     type,
     id,
@@ -20,6 +21,7 @@ const Input = props => {
   return (
     <input
       aria-disabled={disabled}
+      autoComplete={autoComplete}
       type={type}
       id={id}
       ref={inputRef}
@@ -41,6 +43,7 @@ const Input = props => {
 }
 
 Input.propTypes = {
+  autoComplete: PropTypes.string,
   disabled: PropTypes.bool,
   type: PropTypes.oneOf(['date', 'email', 'password', 'text', 'url']),
   id: PropTypes.string,

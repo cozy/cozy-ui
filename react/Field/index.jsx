@@ -55,6 +55,7 @@ InputPassword.defaultProps = {
 
 const Field = props => {
   const {
+    autoComplete,
     className,
     disabled,
     fieldProps,
@@ -95,6 +96,7 @@ const Field = props => {
       case 'password':
         return (
           <InputPassword
+            autoComplete={autoComplete}
             disabled={disabled}
             fullwidth={fullwidth}
             id={id}
@@ -116,6 +118,7 @@ const Field = props => {
       case 'text':
         return (
           <Input
+            autoComplete={autoComplete}
             disabled={disabled}
             fullwidth={fullwidth}
             id={id}
@@ -154,6 +157,7 @@ const Field = props => {
 }
 
 Field.propTypes = {
+  autoComplete: PropTypes.string,
   fieldProps: PropTypes.object,
   fullwidth: PropTypes.bool,
   label: PropTypes.string.isRequired,
