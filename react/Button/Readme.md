@@ -36,6 +36,7 @@ const { Button } = require('./index');
 <div>
   <p><Button size='tiny' label='Tiny' /></p>
   <p><Button size='small' label='Small' /></p>
+  <p><Button size='normal' label='Normal' /></p>
   <p><Button label='Normal' /></p>
   <p><Button size='large' label='Large' /></p>
 </div>
