@@ -10,7 +10,7 @@ const btnClass = function(options) {
     styles['c-btn'],
     {
       [styles[`c-btn--${theme}`]]: theme,
-      [styles[`c-btn--${size}`]]: size,
+      [styles[`c-btn--${size}`]]: size !== 'normal',
       [styles[`c-btn--${variant}`]]: variant,
       [styles[`c-btn--${extension}`]]: extension,
       [styles[`c-btn--round`]]: round
@@ -116,7 +116,7 @@ Button.propTypes = {
   /** Displays only the icon, not the label */
   iconOnly: PropTypes.bool,
   theme: PropTypes.string,
-  size: PropTypes.oneOf(['tiny', 'small', 'large']),
+  size: PropTypes.oneOf(['tiny', 'small', 'large', 'normal']),
   /** Spacing of the button */
   extension: PropTypes.oneOf(['narrow', 'full']),
   /** Will make the button round */
@@ -139,7 +139,8 @@ Button.propTypes = {
 
 Button.defaultProps = {
   type: 'submit',
-  tag: 'button'
+  tag: 'button',
+  size: 'normal'
 }
 
 ButtonLink.defaultProps = {

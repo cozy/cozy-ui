@@ -104,6 +104,7 @@ exports[`Button should render examples: Button 2`] = `
     <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--tiny___1pFv6\\"><span><span>Tiny</span></span></button></p>
     <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--small___3ArkI\\"><span><span>Small</span></span></button></p>
     <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Normal</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Normal</span></span></button></p>
     <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN\\"><span><span>Large</span></span></button></p>
   </div>
 </div>"
