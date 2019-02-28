@@ -36,6 +36,20 @@ size-helper(direction, size)
     direction == 'min' ? size + 1 : size
 
 /*
+    teeny-screen()
+
+    teeny-screen() Refers to (max-width: 375px)
+    teeny-screen('min') Refers to (min-width: 376px)
+
+    Weight: -6
+
+    Styleguide Settings.breakpoints.teeny
+*/
+teeny-screen(direction='max')
+    @media ({direction}-width: rem(size-helper(direction, BP-teeny)))
+        {block}
+
+/*
     tiny-screen()
 
     tiny-screen() Refers to (max-width: 543px)
