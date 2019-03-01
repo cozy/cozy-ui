@@ -1252,3 +1252,237 @@ Display an chip that represents complex identity
 
     Styleguide utilities.paddings
 */
+
+/*
+    Flexbox display
+
+    Classes to make Flexbox containers
+
+    .u-flex - Display a flex element
+    .u-inline-flex - Display an inline-flex element
+    .u-flex-none - Undisplay a flex element
+
+    Markup:
+    <div class="{{modifier_class}}" style="background-color:dimgrey; border: 1px solid black;">
+        <div style="padding:.5rem; background-color:gainsboro;">Suspendisse mauris montes elementum varius lectus ullamcorper per, ac praesent maximus curabitur parturient vitae.</div>
+        <div style="padding:.5rem; background-color:gainsboro;">Nulla ex aptent eleifend tempus mauris habitant imperdiet porta, ac mattis lobortis felis per dictum.</div>
+        <div style="padding:.5rem; background-color:gainsboro;">Nullam praesent iaculis phasellus vel turpis taciti facilisis, fermentum bibendum himenaeos class efficitur urna, per nam ut parturient enim dapibus.</div>
+    </div>
+
+    Weight: 1
+
+    Styleguide utilities.flexbox-display
+*/
+
+/*
+    Flexbox direction
+
+    Classes to set Flexbox container's direction
+
+    .u-flex-column - Set the direction to column
+    .u-flex-row - Set the direction to row
+    .u-flex-column-reverse - Set the direction to column-reverse
+    .u-flex-row-reverse - Set the direction to row-reverse
+
+    Markup:
+    <div class="u-flex {{modifier_class}}" style="background-color:dimgrey; border: 1px solid black;">
+        <div style="padding:.5rem; background-color:gainsboro;">Suspendisse mauris montes elementum varius lectus ullamcorper per, ac praesent maximus curabitur parturient vitae.</div>
+        <div style="padding:.5rem; background-color:gainsboro;">Nulla ex aptent eleifend tempus mauris habitant imperdiet porta, ac mattis lobortis felis per dictum.</div>
+        <div style="padding:.5rem; background-color:gainsboro;">Nullam praesent iaculis phasellus vel turpis taciti facilisis, fermentum bibendum himenaeos class efficitur urna, per nam ut parturient enim dapibus.</div>
+    </div>
+
+    Weight: 2
+
+    Styleguide utilities.flexbox-direction
+*/
+
+/*
+    Flexbox wrap
+
+    Classes to set Flexbox container's wrapping
+
+    .u-flex-wrap - Set the wrapping to true
+    .u-flex-nowrap - Set the wrapping to false
+    .u-flex-wrap-reverse - Set the reverse wrapping to true
+
+    Markup:
+    <div class="u-flex {{modifier_class}}" style="background-color:dimgrey; border: 1px solid black;">
+        <div style="padding:.5rem; background-color:gainsboro; flex-basis: calc(50% -1rem);">Suspendisse mauris montes elementum varius lectus ullamcorper per, ac praesent maximus curabitur parturient vitae.</div>
+        <div style="padding:.5rem; background-color:gainsboro; flex-basis: calc(50% -1rem);">Nulla ex aptent eleifend tempus mauris habitant imperdiet porta, ac mattis lobortis felis per dictum.</div>
+        <div style="padding:.5rem; background-color:gainsboro; flex-basis: calc(50% -1rem);">Nullam praesent iaculis phasellus vel turpis taciti facilisis, fermentum bibendum himenaeos class efficitur urna, per nam ut parturient enim dapibus.</div>
+    </div>
+
+    Weight: 3
+
+    Styleguide utilities.flexbox-wrap
+*/
+
+/*
+    Flexbox align items
+
+    Classes to set Flexbox items alignment
+
+    .u-flex-items-start - Flex items aligned to flex-start
+    .u-flex-items-end - Flex items aligned to flex-end
+    .u-flex-items-center - Flex items aligned to center
+    .u-flex-items-baseline - Flex items aligned to baseline
+    .u-flex-items-stretch - Flex items aligned to stretch
+
+    Markup:
+    <div class="u-flex u-flex-nowrap {{modifier_class}}" style="background-color:dimgrey; border: 1px solid black; height: 100px";>
+        <div style="padding:.5rem; background-color:gainsboro;">Suspendisse mauris montes elementum varius lectus ullamcorper per, ac praesent maximus curabitur parturient vitae.</div>
+        <div style="padding:.5rem; background-color:gainsboro;">Nulla ex aptent eleifend tempus mauris habitant imperdiet porta, ac mattis lobortis felis per dictum.</div>
+        <div style="padding:.5rem; background-color:gainsboro;">Nullam praesent iaculis phasellus vel turpis taciti facilisis, fermentum bibendum himenaeos class efficitur urna, per nam ut parturient enim dapibus.</div>
+    </div>
+
+    Weight: 4
+
+    Styleguide utilities.flexbox-items
+*/
+
+/*
+    Flexbox justify cotnent
+
+    Classes to set Flexbox items main axis alignment
+
+    .u-flex-justify-start - Set main axis alignment of flex items to flex-start
+    .u-flex-justify-end - Set main axis alignment of flex items to flex-end
+    .u-flex-justify-center - Set main axis alignment of flex items to center
+    .u-flex-justify-between - Set main axis alignment of flex items to space-between
+    .u-flex-justify-around - Set main axis alignment of flex items to space-around
+    .u-flex-content-start - Set container lines alignment to flex-start
+
+    Markup:
+    <div class="u-flex u-flex-nowrap {{modifier_class}}" style="background-color:dimgrey; border: 1px solid black; height: 100px";>
+        <div style="padding:.5rem; background-color:gainsboro; flex: 0 1 20%">Suspendisse mauris montes elementum varius lectus ullamcorper per, ac praesent maximus curabitur parturient vitae.</div>
+        <div style="padding:.5rem; background-color:gainsboro; flex: 0 1 20%">Nulla ex aptent eleifend tempus mauris habitant imperdiet porta, ac mattis lobortis felis per dictum.</div>
+        <div style="padding:.5rem; background-color:gainsboro; flex: 0 1 20%">Nullam praesent iaculis phasellus vel turpis taciti facilisis, fermentum bibendum himenaeos class efficitur urna, per nam ut parturient enim dapibus.</div>
+    </div>
+
+    Weight: 5
+
+    Styleguide utilities.flexbox-justify
+*/
+
+/*
+    Flexbox content alignment (lines)
+
+    Classes to set Flexbox line items alignment
+
+    .u-flex-content-start - Set container lines alignment to flex-start
+    .u-flex-content-end - Set container lines alignment to flex-end
+    .u-flex-content-center - Set container lines alignment to center
+    .u-flex-content-between -  Set container lines alignment to space-between
+    .u-flex-content-around -  Set container lines alignment to space-around
+    .u-flex-content-stretch - Set container lines alignment to stretch
+
+    Markup:
+    <div class="u-flex u-flex-wrap u-flex-items-start {{modifier_class}}" style="background-color:dimgrey; border: 1px solid black; height: 300px";>
+        <div style="padding:.5rem; background-color:gainsboro; flex: 0 0 100%">Suspendisse mauris montes elementum varius lectus ullamcorper per, ac praesent maximus curabitur parturient vitae.</div>
+        <div style="padding:.5rem; background-color:gainsboro; flex: 0 0 100%">Nulla ex aptent eleifend tempus mauris habitant imperdiet porta, ac mattis lobortis felis per dictum.</div>
+        <div style="padding:.5rem; background-color:gainsboro; flex: 0 0 100%">Nullam praesent iaculis phasellus vel turpis taciti facilisis, fermentum bibendum himenaeos class efficitur urna, per nam ut parturient enim dapibus.</div>
+    </div>
+
+    Weight: 6
+
+    Styleguide utilities.flexbox-content
+*/
+
+/*
+    Flexbox align-self
+
+    Classes to set align-self on items
+
+    .u-flex-self-start - Specific flex item aligned to flex-start
+    .u-flex-self-end - Specific flex item aligned to flex-end
+    .u-flex-self-center - Specific flex item aligned to center
+    .u-flex-self-baseline - Specific flex item aligned to baseline
+    .u-flex-self-stretch - Specific flex item aligned to stretch
+
+    Markup:
+    <div class="u-flex u-flex-nowrap u-flex-items-start" style="background-color:dimgrey; border: 1px solid black; height: 300px";>
+        <div style="padding:.5rem; background-color:gainsboro; flex: 0 0 30%">Suspendisse mauris montes elementum varius lectus ullamcorper per, ac praesent maximus curabitur parturient vitae.</div>
+        <div class="{{modifier_class}}" style="padding:.5rem; background-color:gainsboro; flex: 0 0 30%">Nulla ex aptent eleifend tempus mauris habitant imperdiet porta, ac mattis lobortis felis per dictum.</div>
+        <div style="padding:.5rem; background-color:gainsboro; flex: 0 0 30%">Nullam praesent iaculis phasellus vel turpis taciti facilisis, fermentum bibendum himenaeos class efficitur urna, per nam ut parturient enim dapibus.</div>
+    </div>
+
+    Weight: 7
+
+    Styleguide utilities.flexbox-self
+*/
+
+/*
+    Flexbox order
+
+    Classes to set order on items
+
+    .u-flex-order-0 - Set flex item order to 0
+    .u-flex-order-1 - Set flex item order to 1
+    .u-flex-order-2 - Set flex item order to 2
+    .u-flex-order-3 - Set flex item order to 3
+    .u-flex-order-4 - Set flex item order to 4
+    .u-flex-order-5 - Set flex item order to 5
+    .u-flex-order-6 - Set flex item order to 6
+    .u-flex-order-7 - Set flex item order to 7
+    .u-flex-order-8 - Set flex item order to 8
+    .u-flex-order-last - Set flex item order to the last position (99999)
+
+    Markup:
+    <div class="u-flex u-flex-nowrap u-flex-items-start" style="background-color:dimgrey; border: 1px solid black;";>
+        <div class="u-title-h1 {{modifier_class}}" style="padding:.5rem; background-color:red; flex: 0 0 5%">item</div>
+        <div class="u-title-h1" style="order:1 ;padding:.5rem; background-color:gainsboro; flex: 0 0 5%">1</div>
+        <div class="u-title-h1" style="order:2 ;padding:.5rem; background-color:gainsboro; flex: 0 0 5%">2</div>
+        <div class="u-title-h1" style="order:3 ;padding:.5rem; background-color:gainsboro; flex: 0 0 5%">3</div>
+        <div class="u-title-h1" style="order:4 ;padding:.5rem; background-color:gainsboro; flex: 0 0 5%">4</div>
+        <div class="u-title-h1" style="order:5 ;padding:.5rem; background-color:gainsboro; flex: 0 0 5%">5</div>
+        <div class="u-title-h1" style="order:6 ;padding:.5rem; background-color:gainsboro; flex: 0 0 5%">6</div>
+        <div class="u-title-h1" style="order:7 ;padding:.5rem; background-color:gainsboro; flex: 0 0 5%">7</div>
+        <div class="u-title-h1" style="order:8 ;padding:.5rem; background-color:gainsboro; flex: 0 0 5%">8</div>
+        <div class="u-title-h1" style="order:9 ;padding:.5rem; background-color:gainsboro; flex: 0 0 5%">9</div>
+    </div>
+
+    Weight: 8
+
+    Styleguide utilities.flexbox-order
+*/
+
+/*
+    Flexbox items grow
+
+    Classes to set items growth
+
+    .u-flex-auto - Make a flex item fill the space
+    .u-flex-grow-0 - Flex item doesn't grow
+    .u-flex-grow-1 - Flex item grows
+
+    Markup:
+    <div class="u-flex u-flex-nowrap u-flex-items-start" style="background-color:dimgrey; border: 1px solid black;";>
+        <div style="padding:.5rem; background-color:gainsboro;">Tincidunt at porttitor augue ac</div>
+        <div class="{{modifier_class}}" style="padding:.5rem; background-color:bisque;">Nulla ex aptent eleifend tempus mauris habitant imperdiet porta, ac mattis lobortis felis per dictum.</div>
+        <div style="padding:.5rem; background-color:darkkhaki;">Cubilia pharetra faucibus</div>
+    </div>
+
+    Weight: 9
+
+    Styleguide utilities.flexbox-grow
+*/
+
+/*
+    Flexbox items shrink
+
+    Classes to set items shrink
+
+    .u-flex-shrink-0 - Flex item doesn't shrink
+    .u-flex-shrink-1 - Flex item shrinks
+
+    Markup:
+    <div class="u-flex u-flex-nowrap u-flex-items-start" style="background-color:dimgrey; border: 1px solid black;";>
+        <div style="padding:.5rem; background-color:gainsboro;">Tincidunt at porttitor augue ac</div>
+        <div class="{{modifier_class}}" style="padding:.5rem; background-color:bisque;">Nulla ex aptent eleifend tempus mauris habitant imperdiet porta, ac mattis lobortis felis per dictum commodo parturient condimentum.</div>
+        <div style="padding:.5rem; background-color:darkkhaki;">Cubilia pharetra faucibus commodo parturient condimentum inceptos montes nisl egestas facilisis.</div>
+    </div>
+
+    Weight: 10
+
+    Styleguide utilities.flexbox-shrink
+*/
