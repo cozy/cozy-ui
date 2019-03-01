@@ -207,25 +207,14 @@ $modal-content--large
 
 $modal-footer
     @extend $elastic-bar
-    padding tiny-padding small-padding small-padding
+    padding tiny-padding (small-padding - rem(4)) (small-padding - rem(4))
 
 $modal-footer--button
-    text-align right
+    button
+        margin-bottom rem(4)
 
-    button:last-child
-        margin-right 0
-
-    +small-screen()
-        display flex
-        flex-direction column-reverse
-
-        button
-            width 100%
-            margin 0
-
-            // since the order is reverse we target the first-child
-            &:not(:first-child)
-                margin-bottom rem(4)
+        +small-screen()
+            min-width calc(50% - .5rem)
 
 $modal-section
     border-top rem(1) solid silver

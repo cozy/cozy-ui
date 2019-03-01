@@ -226,17 +226,31 @@ const ModalButtons = ({
   children,
   className
 }) => (
-  <div className={cx(styles['c-modal-footer--button'], className)}>
+  <div
+    className={cx(
+      'u-flex',
+      'u-flex-wrap-reverse',
+      'u-flex-justify-end',
+      styles['c-modal-footer--button'],
+      className
+    )}
+  >
     {children}
     {secondaryText && secondaryAction && (
       <Button
         theme={secondaryType}
         onClick={secondaryAction}
         label={secondaryText}
+        className="u-flex-auto-s"
       />
     )}
     {primaryText && primaryAction && (
-      <Button theme={primaryType} onClick={primaryAction} label={primaryText} />
+      <Button
+        theme={primaryType}
+        onClick={primaryAction}
+        label={primaryText}
+        className="u-flex-auto-s"
+      />
     )}
   </div>
 )
