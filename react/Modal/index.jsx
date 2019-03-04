@@ -88,13 +88,16 @@ class ModalContent extends Component {
   }
 
   render() {
-    const { className } = this.props
+    const { className, fixed } = this.props
 
     const { displayGhostHeader } = this.state
     const { animatedHeader, childrenToRender } = this
     return (
       <div
-        className={cx(styles['c-modal-content'], className)}
+        className={cx(
+          styles[`c-modal-content${fixed ? '-fixed' : ''}`],
+          className
+        )}
         ref={div => {
           this.scrollingContent = div
         }}
@@ -447,7 +450,8 @@ ModalHeader.propTypes = {
 
 ModalContent.propTypes = {
   iconSrc: PropTypes.node,
-  iconDest: PropTypes.node
+  iconDest: PropTypes.node,
+  fixed: PropTypes.bool
 }
 
 const EnhancedModal = migrateProps([
