@@ -45,13 +45,18 @@ $paddingItem = rem(8)
 .c-menu__item
     cursor pointer
     padding   $paddingItem
+    line-height 1.15
 
 .c-menu__item-icon
     $marginIcon = rem(12)
+    margin-top .125em
     margin-right $marginIcon
     // we need to compensate for the already present margin
     margin-left $marginIcon - $paddingItem
-    font-size rem(17)
+
+    svg
+        width 1em
+        height 1em
 
 .c-menu__item:hover
 .c-menu__item:focus

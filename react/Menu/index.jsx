@@ -23,7 +23,7 @@ class MenuItem extends Component {
         {!icon ? (
           children
         ) : (
-          <Media>
+          <Media align="top">
             <Img className={styles['c-menu__item-icon']}>{icon}</Img>
             <Bd>{children}</Bd>
           </Media>

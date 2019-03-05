@@ -17,7 +17,10 @@ const showWarning = itemData => alert(itemData + ' is disabled');
   <MenuItem data='hello'>Hello !</MenuItem>
   <MenuItem disabled data='bonjour'>Bonjour !</MenuItem>
   <hr />
-  <MenuItem icon={<Icon icon='paperplane'/>} onSelect={x => alert('You clicked hola')} data='hola'>¡Hola!</MenuItem>
+  <MenuItem icon={<Icon icon='paperplane'/>} onSelect={x => alert('You clicked hola')} data='hola'>
+    <div>¡Hola!</div>
+    <div>¿Qué tal?</div>
+  </MenuItem>
 </Menu>
 ```
 
