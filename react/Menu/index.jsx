@@ -122,7 +122,7 @@ class Menu extends Component {
           <MenuButton
             disabled={disabled}
             onClick={this.toggle}
-            text={text}
+            label={text}
             buttonClassName={buttonClassName}
           />
         ) : (
