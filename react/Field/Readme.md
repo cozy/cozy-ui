@@ -19,6 +19,38 @@ Like `Input` component, it can have the following properties:
 </form>
 ```
 
+- `inputRef`
+
+This property is mapped to `<Input />` component `inputRef` property.
+It gives access to the underlying `<input />` element, for example to give focus or move the caret.
+
+##### Example
+
+```
+class FieldWithFocus extends React.Component {
+  constructor() {
+    super()
+    this.component = null;
+    this.setFocus = this.setFocus.bind(this)
+  }
+  setFocus() {
+    this.component.focus()
+  }
+  render() {
+    return (
+      <div>
+          <Field
+            inputRef={c => this.component = c}
+            label="I can have focus"
+            placeholder="Focus please" />
+        <Button onClick={this.setFocus}>Set Focus</Button>
+      </div>
+    )
+  }
+}
+;<FieldWithFocus />
+```
+
 #### Field when there's an error
 
 ```
