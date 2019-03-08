@@ -428,6 +428,15 @@ $select
     &::-ms-expand
         display  none
 
+$select--disabled
+    @extend $input--disabled
+
+    &:hover
+    &:focus
+        // Border is set to 0, otherwise SelectBox will
+        // get large borders on hover
+        border-width 0
+
 $select--tiny
     @extend $input-text--tiny
     @extend $select-arrow-padding
