@@ -62,6 +62,7 @@ const Field = props => {
     fullwidth,
     label,
     id,
+    inputRef,
     type,
     value,
     placeholder,
@@ -100,6 +101,7 @@ const Field = props => {
             disabled={disabled}
             fullwidth={fullwidth}
             id={id}
+            inputRef={inputRef}
             type={type}
             placeholder={placeholder}
             value={value}
@@ -122,6 +124,7 @@ const Field = props => {
             disabled={disabled}
             fullwidth={fullwidth}
             id={id}
+            inputRef={inputRef}
             type={type}
             placeholder={placeholder}
             value={value}
@@ -162,6 +165,7 @@ Field.propTypes = {
   fullwidth: PropTypes.bool,
   label: PropTypes.string.isRequired,
   id: PropTypes.string,
+  inputRef: PropTypes.func,
   type: PropTypes.oneOf(['text', 'password', 'email', 'url', 'textarea']),
   value: PropTypes.string,
   placeholder: PropTypes.string,
