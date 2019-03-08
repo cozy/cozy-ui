@@ -178,6 +178,7 @@ const Field = props => {
 
 Field.propTypes = {
   ...inputSpecificPropTypes,
+  disabled: PropTypes.bool,
   fieldProps: PropTypes.object,
   fullwidth: PropTypes.bool,
   label: PropTypes.string.isRequired,
