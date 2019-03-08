@@ -17,7 +17,7 @@ const heights = {
 const customStyles = props => ({
   control: (base, state) => ({
     ...base,
-    backgroundColor: 'white',
+    backgroundColor: 'transparent',
     border: state.isFocused
       ? `.0625rem solid ${dodgerBlue}`
       : `.0625rem solid ${silver}`,

@@ -299,7 +299,7 @@ exports[`Field should render examples: Field 4`] = `
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG\\">I'am a SelectBox</label>
       <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\" id=\\"\\">
-        <div class=\\"css-2zgoaw\\">
+        <div class=\\"css-19fknmj\\">
           <div class=\\"css-1phseng\\">
             <div class=\\"css-1492t68\\">Select ...</div>
             <div class=\\"css-1g6gooi\\">
@@ -318,7 +318,7 @@ exports[`Field should render examples: Field 4`] = `
     </div>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG\\">I'am a SelectBox with a value</label>
       <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\" id=\\"\\">
-        <div class=\\"css-2zgoaw\\">
+        <div class=\\"css-19fknmj\\">
           <div class=\\"css-1phseng\\">
             <div class=\\"css-xp4uvy\\">Choice 2</div>
             <div class=\\"css-1g6gooi\\">
@@ -1125,7 +1125,7 @@ exports[`Radio should render examples: Radio 3`] = `
 exports[`SelectBox should render examples: SelectBox 1`] = `
 "<div>
   <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-    <div class=\\"css-2zgoaw\\">
+    <div class=\\"css-19fknmj\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -1147,7 +1147,7 @@ exports[`SelectBox should render examples: SelectBox 1`] = `
 exports[`SelectBox should render examples: SelectBox 2`] = `
 "<div>
   <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-    <div class=\\"css-2zgoaw\\">
+    <div class=\\"css-19fknmj\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -1175,7 +1175,7 @@ exports[`SelectBox should render examples: SelectBox 3`] = `
 "<div>
   <div style=\\"height: 12rem; padding: .5rem; overflow: auto;\\">Container height: 12rem. <button>Change container height</button>
     <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-      <div class=\\"css-2zgoaw\\">
+      <div class=\\"css-19fknmj\\">
         <div class=\\"css-1phseng\\">
           <div class=\\"css-1492t68\\">Select...</div>
           <div class=\\"css-1g6gooi\\">
@@ -1198,7 +1198,7 @@ exports[`SelectBox should render examples: SelectBox 3`] = `
 exports[`SelectBox should render examples: SelectBox 4`] = `
 "<div>
   <div class=\\"css-10nd86i styles__select--fullwidth___2l_xM\\">
-    <div class=\\"css-2zgoaw\\">
+    <div class=\\"css-19fknmj\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -1222,7 +1222,7 @@ exports[`SelectBox should render examples: SelectBox 5`] = `
   <div>
     <div class=\\"u-mb-1\\">
       <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-        <div class=\\"css-1rg8gyn\\">
+        <div class=\\"css-1472sn5\\">
           <div class=\\"css-1phseng\\">
             <div class=\\"css-xp4uvy\\">I am a tiny SelectBox</div>
             <div class=\\"css-1g6gooi\\">
@@ -1241,7 +1241,7 @@ exports[`SelectBox should render examples: SelectBox 5`] = `
     </div>
     <div class=\\"u-mb-1\\">
       <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-        <div class=\\"css-15w89vh\\">
+        <div class=\\"css-4oellt\\">
           <div class=\\"css-1phseng\\">
             <div class=\\"css-xp4uvy\\">I am a medium SelectBox</div>
             <div class=\\"css-1g6gooi\\">
@@ -1260,7 +1260,7 @@ exports[`SelectBox should render examples: SelectBox 5`] = `
     </div>
     <div class=\\"u-mb-1\\">
       <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-        <div class=\\"css-2zgoaw\\">
+        <div class=\\"css-19fknmj\\">
           <div class=\\"css-1phseng\\">
             <div class=\\"css-xp4uvy\\">I am a large SelectBox</div>
             <div class=\\"css-1g6gooi\\">
@@ -1308,7 +1308,7 @@ exports[`SelectBox should render examples: SelectBox 6`] = `
 exports[`SelectBox should render examples: SelectBox 7`] = `
 "<div>
   <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-    <div class=\\"css-2zgoaw\\">
+    <div class=\\"css-19fknmj\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -1330,7 +1330,7 @@ exports[`SelectBox should render examples: SelectBox 7`] = `
 exports[`SelectBox should render examples: SelectBox 8`] = `
 "<div>
   <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-    <div class=\\"css-2zgoaw\\">
+    <div class=\\"css-19fknmj\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -1352,7 +1352,7 @@ exports[`SelectBox should render examples: SelectBox 8`] = `
 exports[`SelectBox should render examples: SelectBox 9`] = `
 "<div>
   <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-    <div class=\\"css-2zgoaw\\">
+    <div class=\\"css-19fknmj\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -1412,7 +1412,7 @@ exports[`SelectBox should render examples: SelectBox 9`] = `
 exports[`SelectBox should render examples: SelectBox 10`] = `
 "<div>
   <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-    <div class=\\"css-2zgoaw\\">
+    <div class=\\"css-19fknmj\\">
       <div class=\\"css-1phseng needsclick\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -1434,7 +1434,7 @@ exports[`SelectBox should render examples: SelectBox 10`] = `
 exports[`SelectBox should render examples: SelectBox 11`] = `
 "<div>
   <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-    <div class=\\"css-2zgoaw needsclick cz__control\\">
+    <div class=\\"css-19fknmj needsclick cz__control\\">
       <div class=\\"css-1phseng needsclick cz__value-container\\">
         <div class=\\"css-1492t68 needsclick cz__placeholder\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
