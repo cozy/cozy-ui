@@ -240,6 +240,15 @@ $label
     &.is-error
         color pomegranate
 
+$input--disabled
+    cursor not-allowed
+    background-color paleGrey
+    color charcoalGrey
+
+    &:hover
+    &:focus
+        border rem(1) solid silver
+
 $input-text
     display inline-block
     width 100%
@@ -271,13 +280,7 @@ $input-text
 
     &[aria-disabled]
     &[disabled]
-        cursor not-allowed
-        background-color paleGrey
-        color charcoalGrey
-
-        &:hover
-        &:focus
-            border rem(1) solid silver
+        @extend $input--disabled
 
 
 input-text--tiny =
