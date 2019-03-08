@@ -46,7 +46,7 @@ By default, the size is `large`.
 
 ### inputRef ( set focus / blur / ... programmatically)
 
-If you need to programmatically access the underlying `<input />` for example to give focus or move the caret, you can use the `innerRef` prop, that is passed to the `ref` property of the `<input />`.
+If you need to programmatically access the underlying `<input />` for example to give focus or move the caret, you can use the `inputRef` prop, that is passed to the `ref` property of the `<input />`.
 
 ```
 
