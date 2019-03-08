@@ -1070,13 +1070,13 @@ exports[`ListItemText should render examples: ListItemText 3`] = `
 
 exports[`Menu should render examples: Menu 1`] = `
 "<div>
-  <div class=\\"styles__c-menu___2YTiU styles__c-menu--left___3wamY\\" id=\\"menu\\"><button role=\\"button\\" class=\\"c-btn styles__c-menu__btn___18qF8\\">Click me !</button></div>
+  <div class=\\"styles__c-menu___2YTiU styles__c-menu--left___3wamY\\" id=\\"menu\\" label=\\"Click me !\\"><button role=\\"button\\" class=\\"c-btn styles__c-menu__btn___18qF8\\"></button></div>
 </div>"
 `;
 
 exports[`Menu should render examples: Menu 2`] = `
 "<div>
-  <div class=\\"styles__c-menu___2YTiU styles__c-menu--right___3wxbb\\"><button role=\\"button\\" class=\\"c-btn styles__c-menu__btn___18qF8\\">Click me !</button></div>
+  <div class=\\"styles__c-menu___2YTiU styles__c-menu--right___3wxbb\\" label=\\"Click me !\\"><button role=\\"button\\" class=\\"c-btn styles__c-menu__btn___18qF8\\"></button></div>
 </div>"
 `;
 

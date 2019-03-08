@@ -13,11 +13,14 @@ const Button = require('../Button').default;
 const showItem = itemData => alert(JSON.stringify(itemData));
 const showWarning = itemData => alert(itemData + ' is disabled');
 
-<Menu id='menu' text='Click me !' onSelect={ showItem } onSelectDisabled={ showWarning }>
+<Menu id='menu' label='Click me !' onSelect={ showItem } onSelectDisabled={ showWarning }>
   <MenuItem data='hello'>Hello !</MenuItem>
   <MenuItem disabled data='bonjour'>Bonjour !</MenuItem>
   <hr />
-  <MenuItem icon={<Icon icon='paperplane'/>} onSelect={x => alert('You clicked hola')} data='hola'>¡Hola!</MenuItem>
+  <MenuItem icon={<Icon icon='paperplane'/>} onSelect={x => alert('You clicked hola')} data='hola'>
+    <div>¡Hola!</div>
+    <div>¿Qué tal?</div>
+  </MenuItem>
 </Menu>
 ```
 
@@ -27,7 +30,7 @@ Use the `position` attribute to put the menu to the right.
 const { MenuItem } = require('.');
 const { Icon } = require('../Icon');
 
-<Menu position='right' text='Click me !' onSelect={ itemData => alert(JSON.stringify(itemData)) }>
+<Menu position='right' label='Click me !' onSelect={ itemData => alert(JSON.stringify(itemData)) }>
   <MenuItem data='hello'>Hello !</MenuItem>
   <MenuItem disabled data='bonjour'>Bonjour !</MenuItem>
   <MenuItem data='hola'>¡Hola!</MenuItem>
