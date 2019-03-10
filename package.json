@@ -103,6 +103,7 @@
     "webpack": "^4.17.2"
   },
   "dependencies": {
+    "@babel/runtime": "^7.3.4",
     "body-scroll-lock": "^2.5.8",
     "classnames": "^2.2.5",
     "date-fns": "^1.28.5",
