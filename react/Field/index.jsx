@@ -2,7 +2,7 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-import { default as labelStyles } from '../Label/styles.styl'
+import labelStyles from '../Label/styles.styl'
 import styles from './styles.styl'
 import Label from '../Label'
 import Input from '../Input'
