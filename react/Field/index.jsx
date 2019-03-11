@@ -1,5 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
+import omit from 'lodash/omit'
 import PropTypes from 'prop-types'
 
 import { default as labelStyles } from '../Label/styles.styl'
@@ -8,6 +9,16 @@ import Label from '../Label'
 import Input from '../Input'
 import SelectBox from '../SelectBox'
 import Textarea from '../Textarea'
+
+/**
+ * PropTypes to pass to Input but not to other components, like SelectBox
+ * for example
+ */
+const inputSpecificPropTypes = {
+  autoComplete: PropTypes.string,
+  inputRef: PropTypes.func,
+  onKeyUp: PropTypes.func
+}
 
 class InputPassword extends React.Component {
   state = {
@@ -78,9 +89,15 @@ const Field = props => {
   const inputType = type => {
     switch (type) {
       case 'select':
-        // If value prop is falsy, the SelectBox never displays any selected option.
-        // Only passing `undefined` make the SelectBox work properly.
-        return <SelectBox {...props} value={props.value || undefined} />
+        return (
+          <SelectBox
+            {...omit(props, ...Object.keys(inputSpecificPropTypes))}
+            // If value prop is falsy, the SelectBox never displays any selected
+            // option. Only passing `undefined` make the SelectBox work
+            // properly.
+            value={props.value || undefined}
+          />
+        )
       case 'textarea':
         return (
           <Textarea
@@ -160,12 +177,11 @@ const Field = props => {
 }
 
 Field.propTypes = {
-  autoComplete: PropTypes.string,
+  ...inputSpecificPropTypes,
   fieldProps: PropTypes.object,
   fullwidth: PropTypes.bool,
   label: PropTypes.string.isRequired,
   id: PropTypes.string,
-  inputRef: PropTypes.func,
   type: PropTypes.oneOf([
     'date',
     'email',
