@@ -166,11 +166,19 @@ Field.propTypes = {
   label: PropTypes.string.isRequired,
   id: PropTypes.string,
   inputRef: PropTypes.func,
-  type: PropTypes.oneOf(['text', 'password', 'email', 'url', 'textarea']),
+  type: PropTypes.oneOf([
+    'date',
+    'email',
+    'password',
+    'select',
+    'textarea',
+    'text',
+    'url'
+  ]),
   value: PropTypes.string,
   placeholder: PropTypes.string,
   error: PropTypes.bool,
-  side: PropTypes.element,
+  side: PropTypes.node,
   size: PropTypes.oneOf(['tiny', 'medium', 'large']),
   secondaryLabels: PropTypes.object
 }
