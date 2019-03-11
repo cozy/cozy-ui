@@ -72,10 +72,9 @@ class SelectBoxWrapper extends React.Component {
 <SelectBoxWrapper />
 ```
 
+#### `disabled`
 
-#### `fullwidth`
-
-Set the select to spread to 100% of the available width (default: `false`).
+Disable the SelectBox
 
 ```
 const options = [
@@ -83,6 +82,22 @@ const options = [
   { value: 'strawberry', label: 'Strawberry', isDisabled: true },
   { value: 'vanilla', label: 'Vanilla' },
   { value: 'long', label: 'Salt and vinegar crisps with vegamite and brussel sprouts, double chai latte sauce' },
+];
+
+<SelectBox options={options} disabled />
+```
+
+#### `fullwidth`
+
+Set the select to spread to 100% of the available width (default: `false`).
+
+```
+
+const options = [
+{ value: 'chocolate', label: 'Chocolate' },
+{ value: 'strawberry', label: 'Strawberry', isDisabled: true },
+{ value: 'vanilla', label: 'Vanilla' },
+{ value: 'long', label: 'Salt and vinegar crisps with vegamite and brussel sprouts, double chai latte sauce' },
 ];
 
 <SelectBox options={options} fullwidth />

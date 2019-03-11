@@ -240,6 +240,15 @@ $label
     &.is-error
         color pomegranate
 
+$input--disabled
+    cursor not-allowed
+    background-color paleGrey
+    color charcoalGrey
+
+    &:hover
+    &:focus
+        border rem(1) solid silver
+
 $input-text
     display inline-block
     width 100%
@@ -271,13 +280,7 @@ $input-text
 
     &[aria-disabled]
     &[disabled]
-        cursor not-allowed
-        background-color paleGrey
-        color charcoalGrey
-
-        &:hover
-        &:focus
-            border rem(1) solid silver
+        @extend $input--disabled
 
 
 input-text--tiny =
@@ -424,6 +427,15 @@ $select
 
     &::-ms-expand
         display  none
+
+$select--disabled
+    @extend $input--disabled
+
+    &:hover
+    &:focus
+        // Border is set to 0, otherwise SelectBox will
+        // get large borders on hover
+        border-width 0
 
 $select--tiny
     @extend $input-text--tiny

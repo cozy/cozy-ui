@@ -17,7 +17,7 @@ const heights = {
 const customStyles = props => ({
   control: (base, state) => ({
     ...base,
-    backgroundColor: 'white',
+    backgroundColor: 'transparent',
     border: state.isFocused
       ? `.0625rem solid ${dodgerBlue}`
       : `.0625rem solid ${silver}`,
@@ -268,6 +268,7 @@ class SelectBox extends Component {
     const {
       className,
       components,
+      disabled,
       fullwidth,
       styles: reactSelectStyles,
       breakpoints: { isMobile },
@@ -289,10 +290,12 @@ class SelectBox extends Component {
         onMenuOpen={this.handleOpen}
         onMenuClose={this.handleClose}
         {...props}
+        isDisabled={disabled}
         className={classNames(
           {
             [styles['select__overlay']]: showOverlay,
             [styles['select--autowidth']]: !fullwidth,
+            [styles['select--disabled']]: disabled,
             [styles['select--fullwidth']]: fullwidth
           },
           className
@@ -309,6 +312,7 @@ class SelectBox extends Component {
 SelectBox.propTypes = {
   container: PropTypes.object,
   components: PropTypes.object,
+  disabled: PropTypes.bool,
   fullwidth: PropTypes.bool,
   size: PropTypes.oneOf(['tiny', 'medium', 'large']),
   styles: PropTypes.object
