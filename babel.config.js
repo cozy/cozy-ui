@@ -1,5 +1,7 @@
 module.exports = {
-  presets: ['cozy-app'],
+  presets: [
+    ['cozy-app', { presetEnv: { modules: false }, transformRuntime: { helpers: true }}]
+  ],
   env: {
     transpilation: {
       plugins: [

@@ -46,6 +46,7 @@
     "watch:doc:react": "env BABEL_ENV=transpilation styleguidist server --config docs/styleguide.config.js",
     "watch:doc:kss": "nodemon --ext styl,md --watch stylus --exec 'yarn build:doc:kss && http-server build/styleguide -p 4242'"
   },
+  "sideEffects": false,
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
@@ -102,6 +103,7 @@
     "webpack": "^4.17.2"
   },
   "dependencies": {
+    "@babel/runtime": "^7.3.4",
     "body-scroll-lock": "^2.5.8",
     "classnames": "^2.2.5",
     "date-fns": "^1.28.5",
