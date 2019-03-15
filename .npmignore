@@ -2,6 +2,11 @@ test
 build
 
 .editorconfig
+.eslintignore
+.eslintrc.json
+.stylintrc
+.travis.yml
+renovate.json
 yarn.lock
 /scripts
 .changelog
@@ -10,3 +15,4 @@ docs
 coverage
 codemods
 loaders
+.github/
