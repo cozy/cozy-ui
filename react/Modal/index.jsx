@@ -313,6 +313,9 @@ class Modal extends Component {
     const style = Object.assign({}, height && { height }, width && { width })
     const maybeWrapInPortal = children =>
       into ? <Portal into={into}>{children}</Portal> : children
+    const hasModalHeader = children.find(
+      child => child.type.name === 'ModalHeader'
+    )
     return maybeWrapInPortal(
       <div className={cx(styles['c-modal-container'], containerClassName)}>
         <Overlay
@@ -350,7 +353,8 @@ class Modal extends Component {
               {closable && (
                 <ModalCross
                   className={cx(closeBtnClassName, {
-                    [styles['c-modal-close--notitle']]: !title
+                    [styles['c-modal-close--notitle']]:
+                      !title && !hasModalHeader
                   })}
                   onClick={dismissAction}
                   color={closeBtnColor}
