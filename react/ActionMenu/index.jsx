@@ -112,11 +112,12 @@ class ActionMenu extends Component {
 
     // we need to transition the menu to the bottom before dismissing it
     const close = once(() => {
-      this.menuNode.removeEventListener('transitionend', close)
+      this.menuNode && this.menuNode.removeEventListener('transitionend', close)
       this.close()
     })
 
-    this.menuNode.addEventListener('transitionend', close, false)
+    this.menuNode &&
+      this.menuNode.addEventListener('transitionend', close, false)
     // in case transitionend is not called, for example if the element is removed
     setTimeout(close, TRANSITION_DURATION)
 
