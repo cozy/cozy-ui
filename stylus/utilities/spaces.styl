@@ -50,10 +50,10 @@ for kType, vType in types
 
 // Classes generation
 cssModulesSpacingUtils()
-    for kType, vType in types
-        for kSize, vSize in sizes
-            for kDir, vDir in directions
-                for kBp, vBp in breakpoints
+    for kBp, vBp in breakpoints
+        for kType, vType in types
+            for kSize, vSize in sizes
+                for kDir, vDir in directions
                     if vBp == ''
                         if vDir == all
                             :global(.u-{kType}-{kSize})
@@ -87,10 +87,10 @@ cssModulesSpacingUtils()
                                     {vType}-{vDir}: vSize !important
 
 nativeSpacingUtils()
-    for kType, vType in types
-        for kSize, vSize in sizes
-            for kDir, vDir in directions
-                for kBp, vBp in breakpoints
+    for kBp, vBp in breakpoints
+        for kType, vType in types
+            for kSize, vSize in sizes
+                for kDir, vDir in directions
                     if vBp == ''
                         if vDir == all
                             .u-{kType}-{kSize}
