@@ -55,17 +55,17 @@ $caption
     color coolGrey
 
 /*------------------------------------*\
-  Alignement
+  Link
 \*------------------------------------*/
+$link
+    &:link
+        color dodgerBlue
+        text-decoration none
 
-$left
-    text-align left
+    &:visited
+    &:active
+    &:hover
+    &:focus
+        color scienceBlue
 
-$right
-    text-align right
-
-$center
-    text-align center
-
-$justify
-    text-align justify
+global('.u-link', $link)
