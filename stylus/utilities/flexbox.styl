@@ -1,4 +1,5 @@
 @require '../settings/breakpoints'
+@require '../tools/mixins'
 
 flexbox()
     display flex
@@ -110,16 +111,6 @@ flexbox-shrink-1()
 
 // Global classes generation
 
-breakpoints = {
-    'none': '',
-    'teeny': 'tt',
-    'tiny': 't',
-    'small': 's',
-    'medium': 'm',
-    'large': 'l',
-    'extra-large': 'xl'
-}
-
 props = {
     'flexbox': 'flex',
     'inline-flexbox': 'inline-flex',
@@ -169,29 +160,7 @@ props = {
     'flexbox-shrink-1': 'flex-shrink-1'
 }
 
-cssModules()
-    for kProp, vProp in props
-        for kBp, vBp in breakpoints
-            if vBp == ''
-                :global(.u-{vProp})
-                    {kProp}()
-            else
-                @media (max-width: rem(lookup('BP-'+kBp)))
-                    :global(.u-{vProp}-{vBp})
-                        {kProp}()
-
-native()
-    for kProp, vProp in props
-        for kBp, vBp in breakpoints
-            if vBp == ''
-                .u-{vProp}
-                    {kProp}()
-            else
-                @media (max-width: rem(lookup('BP-'+kBp)))
-                    .u-{vProp}-{vBp}
-                        {kProp}()
-
 if cssmodules == true
-    cssModules()
+    cssModulesUtils(props, breakpoints)
 else
-    native()
+    nativeUtils(props, breakpoints)
