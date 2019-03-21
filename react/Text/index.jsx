@@ -3,7 +3,7 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
-const BaseText = props => {
+export const BaseText = props => {
   const { className, children, tag, ellipsis, ...restProps } = props
   const Tag = tag
   return (
