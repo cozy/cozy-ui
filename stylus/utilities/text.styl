@@ -33,9 +33,10 @@ for color in keys(colors)
     global('.u-' + color, '$color-' + color)
 
 
+$breakword
+    word-break break-word
+
 $ellipsis
-    display block
-    width 100%
     white-space nowrap
     overflow hidden
     text-overflow ellipsis
@@ -62,55 +63,62 @@ $midellipsis
             text-overflow '[...]'
 
 // @stylint off
-fz-tiny =
+fz-tiny()
     font-size rem(12)!important
     line-height 1.3!important
-$fz-tiny
-    {fz-tiny}
 
-fz-xsmall =
+fz-xsmall()
     font-size rem(13)!important
     line-height 1.4!important
-$fz-xsmall
-    {fz-xsmall}
 
-fz-small =
+fz-small()
     font-size rem(14)!important
     line-height 1.4!important
-$fz-small
-    {fz-small}
 
-fz-medium =
+fz-medium()
     font-size rem(16)!important
     line-height 1.5!important
-$fz-medium
-    {fz-medium}
 
-fz-large =
+fz-large()
     font-size rem(18)!important
     line-height 1.5!important
-$fz-large
-    {fz-large}
 
-ta-left =
+fontsize = {
+    'fz-tiny': 'fz-tiny',
+    'fz-xsmall': 'fz-xsmall',
+    'fz-small': 'fz-small',
+    'fz-medium': 'fz-medium',
+    'fz-large': 'fz-large'
+}
+
+if cssmodules == true
+    cssModulesUtils(fontsize, breakpoints)
+else
+    nativeUtils(fontsize, breakpoints)
+
+ta-left()
     text-align left!important
-$ta-left
-    {ta-left}
 
-ta-right =
+ta-right()
     text-align right!important
-$ta-right
-    {ta-right}
 
-ta-center =
+ta-center()
     text-align center!important
-$ta-center
-    {ta-center}
 
-ta-justify =
+ta-justify()
     text-align justify!important
-$ta-justify
-    {ta-justify}
+
+textalign = {
+    'ta-left': 'ta-left',
+    'ta-right': 'ta-right',
+    'ta-center': 'ta-center'
+    'ta-justify': 'ta-justify'
+}
+
+if cssmodules == true
+    cssModulesUtils(textalign, breakpoints)
+else
+    nativeUtils(textalign, breakpoints)
 // @stylint on
 
 // Global classes
@@ -118,14 +126,6 @@ global('.u-error', $error)
 global('.u-error--warning', $error-warning)
 global('.u-valid', $valid)
 global('.u-warn', $warn)
+global('.u-breakword', $breakword)
 global('.u-ellipsis', $ellipsis)
 global('.u-midellipsis', $midellipsis)
-global('.u-fz-tiny', $fz-tiny)
-global('.u-fz-xsmall', $fz-xsmall)
-global('.u-fz-small', $fz-small)
-global('.u-fz-medium', $fz-medium)
-global('.u-fz-large', $fz-large)
-global('.u-ta-left', $ta-left)
-global('.u-ta-right', $ta-right)
-global('.u-ta-center', $ta-center)
-global('.u-ta-justify', $ta-justify)
