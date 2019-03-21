@@ -1,0 +1,10 @@
+@require '../settings/palette'
+@require '../tools/mixins'
+
+colors=json('../settings/palette.json', { hash: true })
+
+for color in keys(colors)
+    $bg-color-{color}
+        background-color: lookup(color) !important // @stylint ignore
+
+    global('.u-bg-' + color, '$bg-color-' + color)
