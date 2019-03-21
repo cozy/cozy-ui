@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-import { Text, MainTitle } from '../Text'
+import { MainTitle, BaseText } from '../Text'
 import Icon, { iconPropType } from '../Icon'
 import styles from './styles.styl'
 
@@ -26,11 +26,7 @@ export const Empty = ({
           {title}
         </MainTitle>
       )}
-      {text && (
-        <Text tag="p" className={styles['c-empty-text']}>
-          {text}
-        </Text>
-      )}
+      {text && <EmptySubTitle tag="p">{text}</EmptySubTitle>}
       <div className={styles['c-empty-text']}>{children}</div>
     </div>
   )
@@ -43,4 +39,7 @@ Empty.propTypes = {
   className: PropTypes.string
 }
 
+export const EmptySubTitle = ({ ...restProps }) => (
+  <BaseText className={styles['c-empty-text']} {...restProps} />
+)
 export default Empty

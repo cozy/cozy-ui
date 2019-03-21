@@ -249,7 +249,7 @@ exports[`Empty should render examples: Empty 1`] = `
         <use xlink:href=\\"#cozy\\"></use>
       </svg>
       <h2 class=\\"styles__u-title-h1___fimho styles__c-empty-title___2HduE\\">This list is empty</h2>
-      <p class=\\"styles__u-text___2UfQa styles__c-empty-text___3HnvR\\">Try adding some content to this list</p>
+      <p class=\\"styles__c-empty-text___3HnvR\\">Try adding some content to this list</p>
       <div class=\\"styles__c-empty-text___3HnvR\\"></div>
     </div>
   </div>
@@ -263,7 +263,7 @@ exports[`Empty should render examples: Empty 2`] = `
         <use xlink:href=\\"#cozy\\"></use>
       </svg>
       <h2 class=\\"styles__u-title-h1___fimho styles__c-empty-title___2HduE\\">An error occured</h2>
-      <p class=\\"styles__u-text___2UfQa styles__c-empty-text___3HnvR\\">It's maybe nothing, just refresh to be sure</p>
+      <p class=\\"styles__c-empty-text___3HnvR\\">It's maybe nothing, just refresh to be sure</p>
       <div class=\\"styles__c-empty-text___3HnvR\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Try refreshing</span></span></button></div>
     </div>
   </div>
