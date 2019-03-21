@@ -3,11 +3,11 @@ import { DEFAULT_LANG } from '.'
 
 export const initFormat = (lang, defaultLang = DEFAULT_LANG) => {
   const locales = {
-    [defaultLang]: require(`date-fns/locale/${defaultLang}/index`)
+    [defaultLang]: require(`date-fns/locale/${defaultLang}/index.js`)
   }
   if (lang && lang !== defaultLang) {
     try {
-      locales[lang] = require(`date-fns/locale/${lang}/index`)
+      locales[lang] = require(`date-fns/locale/${lang}/index.js`)
     } catch (e) {
       console.warn(`The "${lang}" locale isn't supported by date-fns`)
     }
