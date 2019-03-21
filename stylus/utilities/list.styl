@@ -1,0 +1,14 @@
+@require '../settings/breakpoints'
+@require '../tools/mixins'
+
+nolist()
+    list-style-type none
+
+props = {
+    'nolist': 'nolist'
+}
+
+if cssmodules == true
+    cssModulesUtils(props, breakpoints)
+else
+    nativeUtils(props, breakpoints)
