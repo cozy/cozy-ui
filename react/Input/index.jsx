@@ -45,7 +45,7 @@ const Input = props => {
 Input.propTypes = {
   autoComplete: PropTypes.string,
   disabled: PropTypes.bool,
-  type: PropTypes.oneOf(['date', 'email', 'password', 'text', 'url']),
+  type: PropTypes.oneOf(['date', 'email', 'password', 'text', 'url', 'tel']),
   id: PropTypes.string,
   className: PropTypes.string,
   value: PropTypes.string,
