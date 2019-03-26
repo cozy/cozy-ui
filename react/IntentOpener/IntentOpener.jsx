@@ -85,9 +85,9 @@ IntentOpener.propTypes = {
   /** Element on which the onClick handler will be added */
   children: PropTypes.element.isRequired,
   /** What should happen when the intent has completed */
-  onComplete: PropTypes.func.isRequired,
+  onComplete: PropTypes.func,
   /** What should happen when the modal is dimissed */
-  onDismiss: PropTypes.func.isRequired,
+  onDismiss: PropTypes.func,
   /** Action you want to execute */
   action: PropTypes.string.isRequired,
   /** Doctype on which you want to execute the action */
