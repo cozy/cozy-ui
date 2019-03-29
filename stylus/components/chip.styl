@@ -7,7 +7,7 @@ $chip-font-size = rem(16)
 $chip
     border-radius ($chip-height / 2)
     height $chip-height
-    background paleGrey
+    background var(--paleGrey)
     padding (($chip-height - $chip-font-size) / 2)
     box-sizing border-box
     line-height 1
@@ -23,7 +23,7 @@ $round-chip
 
 $chip-separator
     width rem(1)
-    border-left rem(1) solid silver
+    border-left rem(1) solid var(--silver)
     display inline-block
     height 100%
     margin-left rem(8)
@@ -31,7 +31,7 @@ $chip-separator
 
 $chip-button
     cursor pointer
-    color slateGrey
+    color var(--slateGrey)
 
 $chip-button--disabled
-    color coolGrey
+    color var(--coolGrey)

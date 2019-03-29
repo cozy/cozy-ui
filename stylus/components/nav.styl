@@ -1,6 +1,5 @@
 @require '../settings/breakpoints'
 @require '../settings/z-index'
-@require '../settings/palette'
 @require '../tools/mixins'
 
 /*------------------------------------*\
@@ -33,7 +32,7 @@ $nav-item
         left 0
         right rem(16)
         bottom 0
-        background     silver
+        background     var(--silver)
 
         // Prevent double tap on tablets
         @media (hover: none)
@@ -52,14 +51,14 @@ $nav-item
 $nav-item-icon
     display inline-block
     margin-right rem(11)
-    color coolGrey
+    color var(--coolGrey)
     fill currentColor
 
     .is-active &
-        color dodgerBlue
+        color var(--dodgerBlue)
 
     :hover > &
-        color charcoalGrey
+        color var(--charcoalGrey)
 
     +medium-screen()
         display block
@@ -83,7 +82,7 @@ $nav-link
     padding-right        rem(16)
     line-height          1.5
     text-decoration      none
-    color                slateGrey
+    color                var(--slateGrey)
     height               100%
     align-items          center
     flex                 1
@@ -91,25 +90,25 @@ $nav-link
     background-position  rem(24) center
 
     &:visited
-        color  slateGrey
+        color  var(--slateGrey)
 
     &:hover
-        color  charcoalGrey
+        color  var(--charcoalGrey)
 
     &.active // deprecated
     &.is-active
-        box-shadow   inset rem(4) 0 0 0 dodgerBlue
+        box-shadow   inset rem(4) 0 0 0 var(--dodgerBlue)
         font-weight  bold
 
         .c-nav-icon
-            color dodgerBlue
+            color var(--dodgerBlue)
 
     +medium-screen()
         display              block
         height               auto
         padding              0
         text-align           center
-        color                slateGrey
+        color                var(--slateGrey)
         font-size            rem(10)
         line-height          1
         background-position  center top
@@ -120,9 +119,9 @@ $nav-link
         &:hover
             box-shadow   none
             font-weight  normal
-            color        charcoalGrey
+            color        var(--charcoalGrey)
 
     // Prevent double tap on tablets
     @media not all and (pointer: fine)
         &:hover
-            color slateGrey
+            color var(--slateGrey)

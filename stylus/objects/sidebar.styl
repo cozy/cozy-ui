@@ -1,5 +1,4 @@
 @require '../settings/breakpoints'
-@require '../settings/palette'
 @require '../tools/mixins'
 
 /*------------------------------------*\
@@ -8,13 +7,13 @@
 
 $sidebar
     width rem(220)
-    border-right rem(1) solid silver
-    background-color paleGrey
+    border-right rem(1) solid var(--silver)
+    background-color var(--paleGrey)
 
     +medium-screen()
         justify-content space-between
         border 0
-        border-top rem(1) solid silver
+        border-top rem(1) solid var(--silver)
         height rem(48)
         width 100%
         // iPhone X environment tweak

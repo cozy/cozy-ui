@@ -1,9 +1,8 @@
-@require '../settings/palette'
 @require '../tools/mixins'
 
 $tabs-base
     .coz-tab-list
-        border-bottom  rem(1) solid silver
+        border-bottom  rem(1) solid var(--silver)
 
     .coz-tab
         display        inline-block
@@ -11,14 +10,14 @@ $tabs-base
         text-transform uppercase
         font-size      rem(13)
         cursor         pointer
-        color          coolGrey
+        color          var(--coolGrey)
 
         &:hover
             text-decoration none
 
     .coz-tab--active
-        border-bottom rem(2) solid dodgerBlue
-        color         dodgerBlue
+        border-bottom rem(2) solid var(--dodgerBlue)
+        color         var(--dodgerBlue)
 
     .coz-tab-panel
         padding-top rem(20)

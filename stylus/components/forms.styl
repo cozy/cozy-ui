@@ -5,7 +5,6 @@
     This file contains all needs for forms, inputs, labels...
 \*------------------------------------*/
 
-@require '../settings/palette'
 @require '../components/button'
 @require '../tools/mixins'
 
@@ -17,7 +16,7 @@ $form
 
         a,
         a:visited
-            color            dodgerBlue
+            color            var(--dodgerBlue)
             text-decoration  none
 
         a:hover,
@@ -38,17 +37,17 @@ $form
     .coz-form-label // Deprecated
         display         block
         text-transform  uppercase
-        color           coolGrey
+        color           var(--coolGrey)
         font-size       rem(12)
         padding         rem(9) 0
         margin-top      rem(16)
 
     .coz-form-label--error // Deprecated
         display  none
-        color    pomegranate
+        color    var(--pomegranate)
 
     .coz-form-errors
-        color  pomegranate
+        color  var(--pomegranate)
 
 $form-button
     .coz-form-controls
@@ -92,23 +91,23 @@ $form-text
         padding        rem(14) rem(12) rem(12) rem(14)
         box-sizing     border-box
         border-radius  rem(2)
-        border         rem(1) solid silver
         background     white
-        color          black
+        border         rem(1) solid var(--silver)
+        color          var(--black)
 
         &::placeholder
-            color      coolGrey
+            color      var(--coolGrey)
             font-size  rem(16)
 
         &:focus
-            border      rem(1) solid dodgerBlue
+            border      rem(1) solid var(--dodgerBlue)
             outline     0
 
         &:hover
-            border  rem(1) solid coolGrey
+            border  rem(1) solid var(--coolGrey)
 
         &.error
-            border      rem(1) solid pomegranate
+            border      rem(1) solid var(--pomegranate)
 
 
 $form-textarea
@@ -117,23 +116,23 @@ $form-textarea
         padding        rem(14 12 12 14)
         box-sizing     border-box
         border-radius  rem(2)
-        border         rem(1) solid silver
         background     white
-        color          black
+        border         rem(1) solid var(--silver)
+        color          var(--black)
 
         &::placeholder
-            color      coolGrey
+            color      var(--coolGrey)
             font-size  rem(16)
 
         &:focus
-            border      rem(1) solid dodgerBlue
+            border      rem(1) solid var(--dodgerBlue)
             outline     0
 
         &:hover
-            border  rem(1) solid coolGrey
+            border  rem(1) solid var(--coolGrey)
 
         &.error
-            border      rem(1) solid pomegranate
+            border      rem(1) solid var(--pomegranate)
 
 
 $form-select
@@ -142,9 +141,9 @@ $form-select
         padding              rem(12 12 14)
         border-radius        rem(4)
         box-sizing           border-box
-        border               rem(1) solid silver
         background           white
-        color                black
+        border               rem(1) solid var(--silver)
+        color                var(--black)
         appearance           none
         background-image     embedurl('../../assets/icons/ui/arrow.svg')
         background-position  right rem(8) center
@@ -154,17 +153,17 @@ $form-select
             display  none
 
         &::placeholder
-            color      slateGrey
+            color      var(--slateGrey)
             font-size  rem(17)
 
         &:focus
-            border      rem(1) solid dodgerBlue
+            border      rem(1) solid var(--dodgerBlue)
 
         &:hover
-            border  rem(1) solid coolGrey
+            border  rem(1) solid var(--coolGrey)
 
         &.error
-            border      rem(1) solid pomegranate
+            border      rem(1) solid var(--pomegranate)
             background  none
 
 
@@ -207,30 +206,30 @@ $form-progress
         margin         rem(8) 0
         width          100%
         height         rem(8)
-        color          dodgerBlue
-        background     paleGrey
+        color          var(--dodgerBlue)
+        background     var(--paleGrey)
         border         0
         border-radius  rem(18)
 
         // chrome and safari
         &::-webkit-progress-bar
-            background     paleGrey
+            background     var(--paleGrey)
             border-radius  rem(18)
 
         &::-webkit-progress-value
-            background     charcoalGrey
+            background     var(--charcoalGrey)
             border-radius  rem(18)
 
         // firefox
         &::-moz-progress-bar
-            background     charcoalGrey
+            background     var(--charcoalGrey)
             border-radius  rem(18)
 
 // New styles
 $label
     display block
     text-transform uppercase
-    color coolGrey
+    color var(--coolGrey)
     font-size rem(13)
     font-weight bold
     line-height rem(16)
@@ -238,16 +237,16 @@ $label
     margin-top rem(16)
 
     &.is-error
-        color pomegranate
+        color var(--pomegranate)
 
 $input--disabled
     cursor not-allowed
-    background-color paleGrey
-    color charcoalGrey
+    background-color var(--paleGrey)
+    color var(--charcoalGrey)
 
     &:hover
     &:focus
-        border rem(1) solid silver
+        border rem(1) solid var(--silver)
 
 $input-text
     display inline-block
@@ -256,27 +255,27 @@ $input-text
     padding rem(13 16)
     box-sizing border-box
     border-radius rem(3)
-    border rem(1) solid silver
     background white
+    border rem(1) solid var(--silver)
     font-size rem(16)
     line-height 1.25
-    color charcoalGrey
+    color var(--charcoalGrey)
     outline 0
 
     &::placeholder
-        color coolGrey
+        color var(--coolGrey)
         font-size rem(16)
 
     &:hover
-        border rem(1) solid coolGrey
+        border rem(1) solid var(--coolGrey)
 
     &:focus
-        border rem(1) solid dodgerBlue
+        border rem(1) solid var(--dodgerBlue)
         outline 0
 
     &.is-error
     &:not(:focus):invalid
-        border rem(1) solid pomegranate
+        border rem(1) solid var(--pomegranate)
 
     &[aria-disabled]
     &[disabled]
@@ -331,11 +330,11 @@ $checkbox
 
         &::before
             transition box-shadow 350ms cubic-bezier(0, .89, .44, 1)
-            box-shadow inset 0 0 0 rem(2) silver
             background-color white
+            box-shadow inset 0 0 0 rem(2) var(--silver)
 
         &:hover::before
-            box-shadow inset 0 0 0 rem(2) dodgerBlue
+            box-shadow inset 0 0 0 rem(2) var(--dodgerBlue)
 
         &::after
             background-image embedurl('../../assets/icons/ui/check-white.svg')
@@ -353,17 +352,17 @@ $checkbox
             cursor not-allowed
 
         :hover::before
-            box-shadow inset 0 0 0 rem(2) silver
+            box-shadow inset 0 0 0 rem(2) var(--silver)
 
         ::before
-            background-color paleGrey
+            background-color var(--paleGrey)
 
     input
         hide()
 
         &:checked
             & + span::before
-                box-shadow inset 0 0 0 checkbox-size dodgerBlue
+                box-shadow inset 0 0 0 checkbox-size var(--dodgerBlue)
 
             & + span::after
                 opacity 1
@@ -374,11 +373,11 @@ $checkbox
             transform scale(0)
 
     &.is-error span
-        color pomegranate
+        color var(--pomegranate)
 
         &::before
-            box-shadow inset 0 0 0 rem(2) pomegranate
-            background-color yourPink
+            box-shadow inset 0 0 0 rem(2) var(--pomegranate)
+            background-color var(--yourPink)
 
 $radio
     @extend $checkbox
