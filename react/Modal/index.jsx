@@ -316,7 +316,7 @@ class Modal extends Component {
     return maybeWrapInPortal(
       <div className={cx(styles['c-modal-container'], containerClassName)}>
         <Overlay
-          onEscape={closable && dismissAction}
+          onEscape={closable ? dismissAction : undefined}
           className={overlayClassName}
         >
           <div
@@ -328,7 +328,7 @@ class Modal extends Component {
               wrapperClassName
             )}
             style={style}
-            onClick={closable && this.handleOutsideClick}
+            onClick={closable ? this.handleOutsideClick : undefined}
           >
             <div
               className={cx(
