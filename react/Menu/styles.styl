@@ -1,4 +1,3 @@
-@require 'settings/palette.styl'
 @require 'components/popover.styl'
 @require 'tools/mixins'
 
@@ -17,7 +16,7 @@
     // cuts the hover background properly (border-radius)
     overflow   hidden
     border     0
-    color      charcoalGrey
+    color      var(--charcoalGrey)
 
 .c-menu--left
     .c-menu__inner
@@ -60,7 +59,7 @@ $paddingItem = rem(8)
 
 .c-menu__item:hover
 .c-menu__item:focus
-    background-color paleGrey
+    background-color var(--paleGrey)
     outline          none
 
 .c-menu__item--disabled

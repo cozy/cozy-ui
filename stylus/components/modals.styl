@@ -1,4 +1,3 @@
-@require '../settings/palette'
 @require '../settings/z-index'
 @require '../settings/breakpoints'
 @require '../objects/layouts'
@@ -65,7 +64,7 @@ $modal
     max-height 100%
     max-width 100%
     background-color white
-    color charcoalGrey
+    color var(--charcoalGrey)
 
 for size in 'small' 'medium' 'large' 'xlarge' 'xxlarge'
     $modal--{size}
@@ -157,7 +156,7 @@ $modal-header-app
     display flex
     align-items center
     font-size rem(20)
-    color charcoalGrey
+    color var(--charcoalGrey)
 
 $modal-header-app-editor
     font-weight normal
@@ -167,7 +166,7 @@ $modal-header-app-icon
     margin-right rem(8)
 
 $modal-content-fixed
-    border-bottom rem(1) solid silver
+    border-bottom rem(1) solid var(--silver)
     flex 0 0 auto
     padding 0 medium-padding
 
@@ -234,7 +233,7 @@ $modal-footer--button
             min-width calc(50% - .5rem)
 
 $modal-section
-    border-top rem(1) solid silver
+    border-top rem(1) solid var(--silver)
 
 cross-size=rem(40)
 

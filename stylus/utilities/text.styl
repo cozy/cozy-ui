@@ -1,4 +1,3 @@
-@require '../settings/palette'
 @require '../tools/mixins'
 
 /*------------------------------------*\
@@ -6,7 +5,7 @@
 \*------------------------------------*/
 
 $error
-    color  pomegranate
+    color  var(--pomegranate)
 
 $error-warning
     &:before
@@ -19,10 +18,10 @@ $error-warning
         vertical-align  text-bottom
 
 $valid
-    color  malachite
+    color  var(--malachite)
 
 $warn
-    color  texasRose
+    color  var(--texasRose)
 
 colors=json('../settings/palette.json', { hash: true })
 

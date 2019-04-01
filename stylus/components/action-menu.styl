@@ -1,6 +1,5 @@
 @require './popover.styl'
 @require '../tools/mixins'
-@require '../settings/palette'
 
 $actionmenu
     @extend        $popover
@@ -22,7 +21,7 @@ $actionmenu
 
 $actionmenu-header
     box-sizing border-box
-    border-bottom rem(1) solid silver
+    border-bottom rem(1) solid var(--silver)
     padding rem(16)
     min-height rem(64)
 
@@ -31,4 +30,4 @@ $actionmenu-item
     cursor pointer
 
     &:hover
-        background-color paleGrey
+        background-color var(--paleGrey)

@@ -1,6 +1,5 @@
 @require '../tools/mixins'
 @require '../settings/breakpoints'
-@require '../settings/palette'
 @require '../objects/layouts'
 @require '../components/forms'
 @require '../components/button'
@@ -16,8 +15,8 @@ $wizard
     justify-content center
     align-items center
     width 100%
-    background-color white
-    color charcoalGrey
+    background-color var(--white)
+    color var(--charcoalGrey)
     text-align center
 
     +small-device()
@@ -25,8 +24,8 @@ $wizard
         justify-content flex-start
 
 $wizard--waiting
-    background-color dodgerBlue
     color white
+    background-color var(--dodgerBlue)
 
 $wizard--scroll
     position absolute
@@ -80,8 +79,8 @@ $wizard-dual
 
     &:first-child
         justify-content flex-end
-        background-color dodgerBlue
         color white
+        background-color var(--dodgerBlue)
 
 $wizard-errors
     order 1
@@ -180,8 +179,8 @@ $wizard-logo-badge
     right rem(16)
     width rem(32)
     height rem(32)
-    background-color dodgerBlue
     border .125rem solid white
+    background-color var(--dodgerBlue)
     border-radius 50%
 
 $wizard-header-help
@@ -205,16 +204,16 @@ $wizard-disclaimer
     span
         flex 0 0 auto
         margin-right rem(16)
-        background-color grannyApple
+        background-color var(--grannyApple)
         padding rem(8)
         border-radius 50%
 
     svg
         display block
-        fill emerald
+        fill var(--emerald)
 
     strong
-        color emerald
+        color var(--emerald)
 
     +small-device()
         display none
@@ -224,12 +223,12 @@ $wizard-desc
     line-height 1.5
 
     a
-        color dodgerBlue
+        color var(--dodgerBlue)
         text-decoration none
 
         &:hover
         &:focus
-            color scienceBlue
+            color var(--scienceBlue)
 
     +small-device()
         margin rem(24) 0 0
@@ -250,7 +249,7 @@ $wizard-header-fixed
 $wizard-previous
     margin 0
     padding rem(10) rem(16)
-    color coolGrey
+    color var(--coolGrey)
 
 $wizard-brand
     margin-left rem(32)
@@ -272,7 +271,7 @@ $wizard-brand-with
         left 0
         top 50%
         height rem(24)
-        border-left rem(1) solid silver
+        border-left rem(1) solid var(--silver)
         transform translateY(-50%)
 
 $wizard-next
@@ -313,8 +312,8 @@ $wizard-dual-btn
 
     &:hover
     &:focus
-        background-color emerald
-        border-color emerald
+        background-color var(--emerald)
+        border-color var(--emerald)
 
 $wizard-waiting-icon
     margin 0 0 rem(32)
@@ -403,25 +402,25 @@ $wizard-showbutton
     padding 0
     min-width auto
     background-color transparent
-    color coolGrey
+    color var(--coolGrey)
 
     &:hover
     &:focus
         background-color inherit
-        color charcoalGrey
+        color var(--charcoalGrey)
 
 $wizard-dualfield
     display flex
     flex-direction row
     align-items stretch
-    border rem(1) solid silver
+    border rem(1) solid var(--silver)
     border-radius rem(2)
 
 $wizard-dualfield--focus
-    border-color dodgerBlue
+    border-color var(--dodgerBlue)
 
 $wizard-dualfield--error
-    border-color pomegranate
+    border-color var(--pomegranate)
 
 $wizard-dualfield-wrapper
     flex 1 1 auto
@@ -443,8 +442,8 @@ $wizard-dualfield-input
 $wizard-protocol
     display flex
     align-items center
-    background-color paleGrey
-    border-right rem(1) solid silver
+    background-color var(--paleGrey)
+    border-right rem(1) solid var(--silver)
     padding 0 rem(16)
 
     svg
@@ -471,7 +470,7 @@ $wizard-select
     &:focus
         position relative
         z-index 1
-        background-color paleGrey
+        background-color var(--paleGrey)
         border 0
         outline 0
 
@@ -489,7 +488,7 @@ $wizard-requirements
     list-style disc inside
     line-height 1.5
     font-style italic
-    color coolGrey
+    color var(--coolGrey)
 
     span
         display inline-block
@@ -520,10 +519,10 @@ $wizard-agreements-item
     flex-direction column
     flex 1 1 calc(100% / 6 - .5rem)
     margin rem(16 4 0)
-    border rem(1) solid silver
+    border rem(1) solid var(--silver)
     border-radius rem(8)
     padding rem(16)
-    color slateGrey
+    color var(--slateGrey)
 
     +medium-screen()
         flex-direction row
@@ -543,13 +542,13 @@ $wizard-agreements-desc
 
     +medium-screen()
         flex 1 1 100%
-        border-bottom rem(1) solid silver
+        border-bottom rem(1) solid var(--silver)
         padding-bottom rem(16)
         font-size rem(16)
         line-height 1.5
 
 $wizard-agreements-icon
-    --bgcolor dodgerBlue // @stylint ignore
+    --bgcolor var(--dodgerBlue) // @stylint ignore
     box-sizing border-box
     display flex
     align-items center
@@ -619,13 +618,13 @@ $wizard-notice
         margin 0
 
     a
-        color dodgerBlue
+        color var(--dodgerBlue)
         text-decoration none
         font-weight bold
 
         &:hover
         &:focus
-            color scienceBlue
+            color var(--scienceBlue)
 
     +tiny-screen('min')
         margin rem(32) 0 0

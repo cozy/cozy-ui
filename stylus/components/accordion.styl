@@ -1,48 +1,47 @@
-@require '../settings/palette'
 @require '../tools/mixins'
 
 $accordion
     padding 0
 
 $accordion-item
-    border-bottom: rem(1) solid silver
+    border-bottom: rem(1) solid var(--silver)
     font-size rem(16)
 
 $accordion-title
     display flex
     align-items center
     line-height 2
-    color slateGrey
+    color var(--slateGrey)
     cursor pointer
     outline 0
     padding rem(8) 0
 
     &:hover
     &:focus
-        color charcoalGrey
+        color var(--charcoalGrey)
 
         svg
-            fill slateGrey
+            fill var(--slateGrey)
 
     svg
         margin-right rem(4)
         transform rotate(0)
         transition transform 300ms ease
-        fill coolGrey
+        fill var(--coolGrey)
 
 $accordion-title--active
-    color charcoalGrey
+    color var(--charcoalGrey)
 
     svg
         transform rotate(90deg)
-        fill coolGrey
+        fill var(--coolGrey)
 
 $accordion-body
     height auto
     max-height 0
     overflow hidden
     line-height 1.3
-    color charcoalGrey
+    color var(--charcoalGrey)
     transition max-height 300ms ease-out
 
     &:after

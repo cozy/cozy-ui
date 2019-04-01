@@ -1,4 +1,3 @@
-@require 'settings/palette.styl'
 @require 'tools/mixins'
 
 .intentHeader
@@ -6,7 +5,7 @@
     align-items center
     height rem(32)
     padding rem(8 16)
-    background-color paleGrey
+    background-color var(--paleGrey)
     margin 0
     // Keep its height in a flex configuration
     flex-basis auto
@@ -16,7 +15,7 @@
     display flex
     align-items center
     font-size rem(20)
-    color charcoalGrey
+    color var(--charcoalGrey)
 
     span
         font-weight normal
