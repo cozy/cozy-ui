@@ -30,7 +30,13 @@ class InputPassword extends React.Component {
   }
 
   render() {
-    const { hideLabel, showLabel, showVisibilityButton, fullwidth } = this.props
+    const {
+      hideLabel,
+      showLabel,
+      showVisibilityButton,
+      fullwidth,
+      ...restProps
+    } = this.props
     const { visible } = this.state
     return (
       <div className={styles['o-field-input']}>
@@ -46,7 +52,7 @@ class InputPassword extends React.Component {
             {visible ? hideLabel : showLabel}
           </div>
         )}
-        <Input {...this.props} type={visible ? 'text' : 'password'} />
+        <Input {...restProps} type={visible ? 'text' : 'password'} />
       </div>
     )
   }
