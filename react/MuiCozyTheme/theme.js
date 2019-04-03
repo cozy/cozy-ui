@@ -7,8 +7,9 @@ const defaultValues = {
 
 export const theme = createMuiTheme({
   typography: {
+    useNextVariants: true,
     fontFamily: getCssVariableValue('primaryFont'),
-    title: {
+    h6: {
       color: 'white'
     }
   },
