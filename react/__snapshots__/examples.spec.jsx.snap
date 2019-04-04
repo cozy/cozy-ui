@@ -1496,13 +1496,25 @@ exports[`Sidebar should render examples: Sidebar 1`] = `
 
 exports[`Spinner should render examples: Spinner 1`] = `
 "<div>
-  <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--medium___1_GL8\\"></div>
+  <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: blue;\\" width=\\"16\\" height=\\"16\\">
+      <use xlink:href=\\"#spinner\\"></use>
+    </svg></div>
 </div>"
 `;
 
 exports[`Spinner should render examples: Spinner 2`] = `
 "<div>
-  <div>blue (default): <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--medium___1_GL8\\"></div> or <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--medium___1_GL8\\"></div>grey: <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--grey___2aZMV styles__c-spinner--medium___1_GL8\\"></div>white: <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--white___3mkJl styles__c-spinner--medium___1_GL8\\"></div>red: <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--red___3s5VF styles__c-spinner--medium___1_GL8\\"></div>
+  <div>blue (default): <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: blue;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"#spinner\\"></use>
+      </svg></div> or <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: blue;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"#spinner\\"></use>
+      </svg></div>grey: <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: grey;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"#spinner\\"></use>
+      </svg></div>white: <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: white;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"#spinner\\"></use>
+      </svg></div>red: <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: red;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"#spinner\\"></use>
+      </svg></div>
   </div>
 </div>"
 `;
@@ -1510,14 +1522,42 @@ exports[`Spinner should render examples: Spinner 2`] = `
 exports[`Spinner should render examples: Spinner 3`] = `
 "<div>
   <div>
-    <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--nomargin___13JyW styles__c-spinner--blue___1BMPR styles__c-spinner--medium___1_GL8\\"></div>
+    <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--nomargin___13JyW\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: blue;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"#spinner\\"></use>
+      </svg></div>
   </div>
 </div>"
 `;
 
 exports[`Spinner should render examples: Spinner 4`] = `
 "<div>
-  <div>tiny: <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--tiny___2bRnB\\"></div><br>small: <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--small___1uzev\\"></div><br>medium (default): <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--medium___1_GL8\\"></div> or <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--medium___1_GL8\\"></div><br>large: <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--large___T0FZi\\"></div><br>xlarge: <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--xlarge___3mSGc\\"></div><br>xxlarge: <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--blue___1BMPR styles__c-spinner--xxlarge___23prK\\"></div>
+  <div>tiny: <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: blue;\\" width=\\"8\\" height=\\"8\\">
+        <use xlink:href=\\"#spinner\\"></use>
+      </svg></div><br>small: <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: blue;\\" width=\\"12\\" height=\\"12\\">
+        <use xlink:href=\\"#spinner\\"></use>
+      </svg></div><br>medium (default): <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: blue;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"#spinner\\"></use>
+      </svg></div> or <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: blue;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"#spinner\\"></use>
+      </svg></div><br>large: <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: blue;\\" width=\\"24\\" height=\\"24\\">
+        <use xlink:href=\\"#spinner\\"></use>
+      </svg></div><br>xlarge: <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: blue;\\" width=\\"36\\" height=\\"36\\">
+        <use xlink:href=\\"#spinner\\"></use>
+      </svg></div><br>xxlarge: <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: blue;\\" width=\\"80\\" height=\\"80\\">
+        <use xlink:href=\\"#spinner\\"></use>
+      </svg></div>
+  </div>
+</div>"
+`;
+
+exports[`Spinner should render examples: Spinner 5`] = `
+"<div>
+  <div>
+    <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: blue;\\" width=\\"80\\" height=\\"80\\">
+        <use xlink:href=\\"#spinner\\"></use>
+      </svg>
+      <p>loading.hi</p>
+    </div>
   </div>
 </div>"
 `;
