@@ -38,12 +38,21 @@ Show a spinner when loading something.
 </div>
 ```
 
-
 ### Message
 
 When you use `loadingType`, `<Spinner />` needs to be in an `<I18n />` wrapper as it uses `t` function.
 
-
 ```jsx static
-<Spinner loadingType='salut' />
+<Spinner loadingType="salut" />
+```
+
+```
+const I18n = require('../I18n').default;
+
+  <div>
+    <I18n lang='en' dictRequire={() => {}}>
+      <Spinner size='xxlarge' loadingType='hi' />
+    </I18n>
+
+</div>
 ```

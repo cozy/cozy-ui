@@ -1,9 +1,9 @@
 import React from 'react'
+import Icon from '../Icon'
 import { translate } from '../I18n'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
-
 export const Spinner = ({
   t,
   loadingType,
@@ -13,19 +13,28 @@ export const Spinner = ({
   size,
   className
 }) => {
+  const realsizeMapping = {
+    tiny: 8,
+    small: 12,
+    medium: 16,
+    large: 24,
+    xlarge: 36,
+    xxlarge: 80
+  }
+  const realsize = realsizeMapping[size]
+
   return (
     <div
       className={cx(
         styles['c-spinner'],
         {
           [styles['c-spinner--middle']]: middle,
-          [styles['c-spinner--nomargin']]: noMargin,
-          [styles[`c-spinner--${color}`]]: color,
-          [styles[`c-spinner--${size}`]]: size
+          [styles['c-spinner--nomargin']]: noMargin
         },
         className
       )}
     >
+      <Icon icon="spinner" color={color} spin={true} size={realsize} />
       {loadingType && <p>{t(`loading.${loadingType}`)}</p>}
     </div>
   )
@@ -35,7 +44,7 @@ Spinner.propTypes = {
   loadingType: PropTypes.string,
   middle: PropTypes.bool,
   noMargin: PropTypes.bool,
-  color: PropTypes.oneOf(['blue', 'grey', 'white', 'red']),
+  color: PropTypes.string,
   size: PropTypes.oneOf([
     'tiny',
     'small',
