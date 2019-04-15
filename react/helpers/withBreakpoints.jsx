@@ -3,6 +3,7 @@ import pick from 'lodash/pick'
 import compose from 'lodash/flowRight'
 import mapValues from 'lodash/mapValues'
 import throttle from 'lodash/throttle'
+import PropTypes from 'prop-types'
 
 const large = 1200
 const medium = 1023
@@ -120,6 +121,16 @@ export const onlyTablet = compose(
 export const onlyDesktop = compose(
   withBreakpoints(pick(breakpoints, 'isDesktop')),
   renderOnlyIf(props => props.breakpoints.isDesktop)
+)
+
+/**
+ * PropTypes to use into the component Proptypes definition
+ */
+export const breakpointsPropTypes = PropTypes.shape(
+  Object.keys(breakpoints).reduce((all, breakpoint) => {
+    all[breakpoint] = PropTypes.bool.isRequired
+    return all
+  }, {})
 )
 
 export default withBreakpoints
