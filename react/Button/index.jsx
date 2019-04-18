@@ -83,6 +83,15 @@ const BaseButton = props => {
         )}
         {label && <span className={iconOnlyClass}>{label}</span>}
         {children}
+        {restProps.busy && (
+          <Icon
+            icon="spinner"
+            spin
+            className="u-ml-half"
+            aria-hidden
+            focusable="false"
+          />
+        )}
       </span>
     </Tag>
   )
