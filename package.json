@@ -61,6 +61,7 @@
     "browserslist-config-cozy": "0.2.0",
     "commitlint-config-cozy": "0.3.24",
     "copyfiles": "^1.2.0",
+    "cozy-device-helper": "1.7.1",
     "css-loader": "^0.28.4",
     "cssnano": "^4.1.8",
     "cssnano-preset-advanced": "^4.0.6",
