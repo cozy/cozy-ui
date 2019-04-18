@@ -7,16 +7,6 @@
 $error
     color  var(--pomegranate)
 
-$error-warning
-    &:before
-        content         ''
-        display         inline-block
-        margin-right    rem(8)
-        width           rem(16)
-        height          rem(14)
-        background      embedurl('../assets/icons/ui/warning.svg') center center / contain no-repeat
-        vertical-align  text-bottom
-
 $valid
     color  var(--malachite)
 
@@ -138,7 +128,6 @@ else
 
 // Global classes
 global('.u-error', $error)
-global('.u-error--warning', $error-warning)
 global('.u-valid', $valid)
 global('.u-warn', $warn)
 global('.u-breakword', $breakword)
