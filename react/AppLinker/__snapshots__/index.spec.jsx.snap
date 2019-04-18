@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app icon should render correctly 1`] = `
+<div>
+  <a
+    href="https://fake.link"
+    onClick={null}
+  >
+    Open 
+    Cozy Drive
+  </a>
+</div>
+`;
