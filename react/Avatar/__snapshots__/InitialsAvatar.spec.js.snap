@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InitialsAvatar should use the initial of the name (string) 1`] = `
+<div
+  className="styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv"
+  style={
+    Object {
+      "backgroundColor": "var(--emerald)",
+      "color": "white",
+    }
+  }
+>
+  
+  <span
+    className="styles__c-avatar-initials___310qC"
+  >
+    K
+  </span>
+</div>
+`;
+
+exports[`InitialsAvatar should use the initials of the name (object) 1`] = `
+<div
+  className="styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv"
+  style={
+    Object {
+      "backgroundColor": "var(--blazeOrange)",
+      "color": "white",
+    }
+  }
+>
+  
+  <span
+    className="styles__c-avatar-initials___310qC"
+  >
+    KW
+  </span>
+</div>
+`;

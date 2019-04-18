@@ -59,12 +59,14 @@ export const Avatar = ({ text, textId, image, size, className, style }) => {
   )
 }
 
-Avatar.propTypes = {
+export const avatarPropTypes = {
   text: PropTypes.string,
   image: PropTypes.string,
   size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']),
   className: PropTypes.string
 }
+
+Avatar.propTypes = avatarPropTypes
 
 Avatar.defaultProps = {
   text: '',
