@@ -21,27 +21,6 @@ const memoizedCheckApp = expiringMemoize(
   appInfo => appInfo.appId
 )
 
-/**
- * Render-props component that provides onClick/href handler to
- * apply to an anchor that needs to open an app.
- *
- * Handles several cases:
- *
- * - On mobile app and other mobile app available
- * - On web (not mobile)
- * - On web mobile
- *
- * @example
- * ```
- * <AppLinker slug='banks' href='http://dalailama-banks.mycozy.cloud'>{
- *   ({ onClick, href, name }) => {
- *     <a href={href} onClick={onClick}>
- *       Open { name }
- *     </a>
- *   }
- * }</AppLinker>
- * ```
- */
 export class AppLinker extends React.Component {
   state = {
     nativeAppIsAvailable: null
