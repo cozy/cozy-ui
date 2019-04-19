@@ -43,7 +43,7 @@ class FieldWithFocus extends React.Component {
             inputRef={c => this.component = c}
             label="I can have focus"
             placeholder="Focus please" />
-        <Button onClick={this.setFocus}>Set Focus</Button>
+        <Button label="Focus!" onClick={this.setFocus}>Set Focus</Button>
       </div>
     )
   }
