@@ -59,6 +59,7 @@ assets/icons/ui/share.svg
 assets/icons/ui/small-arrow.svg
 assets/icons/ui/spinner.svg
 assets/icons/ui/sync.svg
+assets/icons/ui/team.svg
 assets/icons/ui/top-select.svg
 assets/icons/ui/top.svg
 assets/icons/ui/trash.svg
