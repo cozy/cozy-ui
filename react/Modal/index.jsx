@@ -412,7 +412,14 @@ Modal.propTypes = {
   /** If has a value, the modal will be rendered inside a portal and its value will be passed to Portal
    to control the rendering destination of the Modal */
   into: PropTypes.string,
-  size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge', 'xxlarge']),
+  size: PropTypes.oneOf([
+    'xsmall',
+    'small',
+    'medium',
+    'large',
+    'xlarge',
+    'xxlarge'
+  ]),
   height: PropTypes.string,
   width: PropTypes.string,
   spacing: PropTypes.oneOf(['small', 'large']),
