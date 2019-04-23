@@ -59,6 +59,8 @@ const SelectionBar = ({
         />
       ))}
       <Button
+        iconOnly
+        label={t('SelectionBar.close')}
         type="button"
         theme="close"
         className={styles['coz-action-close']}

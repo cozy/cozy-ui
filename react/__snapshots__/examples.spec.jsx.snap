@@ -281,7 +281,7 @@ exports[`Field should render examples: Field 1`] = `
 exports[`Field should render examples: Field 2`] = `
 "<div>
   <div>
-    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG\\">I can have focus</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Focus please\\" value=\\"\\"></div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span>Set Focus</span></button>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG\\">I can have focus</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Focus please\\" value=\\"\\"></div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Focus!</span>Set Focus</span></button>
   </div>
 </div>"
 `;
