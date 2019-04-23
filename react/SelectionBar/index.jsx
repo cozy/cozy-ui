@@ -66,6 +66,8 @@ const SelectionBar = ({
         className={styles['coz-action-close']}
         onClick={hideSelectionBar}
         extension="narrow"
+        label={t('SelectionBar.close')}
+        iconOnly
       >
         <Icon icon="cross" />
       </Button>
