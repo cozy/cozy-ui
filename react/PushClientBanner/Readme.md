@@ -5,11 +5,11 @@ Banner to advertise for Cozy desktop client.
 
 ```
 <BannerClient
-  text="Ajoutez vos documents et photos à votre Cozy depuis votre ordinateur : ils seront sauvegardés en lieu sûr et accessibles à tout moment !"
+  text="Get Cozy Drive for Desktop and synchronise your files safely to make them accessible at all times."
   hrefMobile="https://cozy.io"
   hrefDesktop="https://cozy.io"
-  labelMobile="Téléchargez Cozy Drive sur votre mobile !"
-  labelDesktop="Installer maintenant"
+  labelMobile="Get Cozy Drive on your mobile!"
+  labelDesktop="Download"
 />
 ```
 
@@ -18,11 +18,11 @@ Banner to advertise for Cozy desktop client.
 You can add a function to `onClick` prop on top of the hyperlink
 ```
 <BannerClient
-  text="Ajoutez vos documents et photos à votre Cozy depuis votre ordinateur : ils seront sauvegardés en lieu sûr et accessibles à tout moment !"
+  text="Get Cozy Drive for Desktop and synchronise your files safely to make them accessible at all times."
   hrefMobile="https://cozy.io"
   hrefDesktop="https://cozy.io"
-  labelMobile="Téléchargez Cozy Drive sur votre mobile !"
-  labelDesktop="Installer maintenant"
+  labelMobile="Get Cozy Drive on your mobile!"
+  labelDesktop="Download"
   onClick={() => alert("Clicked!")}
 />
 ```

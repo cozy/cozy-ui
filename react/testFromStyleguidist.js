@@ -19,6 +19,8 @@ import Avatar from './Avatar'
 import Badge from './Badge'
 import Button from './Button'
 import ButtonAction from './ButtonAction'
+import ButtonClient from './PushClientButton'
+import BannerClient from './PushClientBanner'
 import Checkbox from './Checkbox'
 import Empty from './Empty'
 import Field from './Field'
@@ -70,6 +72,8 @@ const testFromStyleguidist = (name, markdown, require) => {
       'Badge',
       'Button',
       'ButtonAction',
+      'ButtonClient',
+      'BannerClient',
       'Checkbox',
       'Empty',
       'Field',
@@ -115,6 +119,8 @@ const testFromStyleguidist = (name, markdown, require) => {
       Badge,
       Button,
       ButtonAction,
+      ButtonClient,
+      BannerClient,
       Checkbox,
       Empty,
       Field,
