@@ -26,12 +26,13 @@ initialState = { modalOpened: false};
 
 ### Size
 
-Several sizes avalaible: `small`, `medium`, `large`, `xlarge`, `xxlarge`.
+Several sizes avalaible: `xsmall, small`, `medium`, `large`, `xlarge`, `xxlarge`.
 `small` being the default one.
 
 ```
 initialState = { modalOpened: false};
 const sizes = [
+  'xsmall',
   'small',
   'medium',
   'large',
@@ -268,11 +269,11 @@ class ModalCounterWithAnimatedHeader extends React.Component {
    increment () {
     this.setState({ counter: this.state.counter + 1 })
    }
-   
+
    componentWillUnmount() {
      clearTimeout(this.timeout)
    }
-   
+
   render () {
     return (
       <Modal

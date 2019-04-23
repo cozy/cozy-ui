@@ -11,6 +11,7 @@
 \*------------------------------------*/
 
 // Modal sizes
+xsmall-width = rem(384)
 small-width = rem(544)
 medium-width = rem(576)
 large-width = rem(640)
@@ -18,6 +19,7 @@ xlarge-width = rem(800)
 xxlarge-width = rem(960)
 
 // Modal margins
+xsmall-margin = rem(8)
 small-margin = rem(8)
 medium-margin = rem(24)
 large-margin = rem(48)
@@ -66,7 +68,7 @@ $modal
     background-color white
     color var(--charcoalGrey)
 
-for size in 'small' 'medium' 'large' 'xlarge' 'xxlarge'
+for size in 'xsmall' 'small' 'medium' 'large' 'xlarge' 'xxlarge'
     $modal--{size}
         width lookup(size + '-width')
 
