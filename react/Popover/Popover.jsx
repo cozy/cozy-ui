@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import { getScrollParent } from '../utils/dom'
 export default class Popover extends Component {
+  state = {
+    style: {}
+  }
+
   constructor(props) {
     super(props)
     this.defaultStyle = {
