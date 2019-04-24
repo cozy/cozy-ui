@@ -2,16 +2,17 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import {
   checkApp,
   startApp,
   isMobileApp,
   isMobile,
-  openDeeplinkOrRedirect
+  openDeeplinkOrRedirect,
+  isAndroid
 } from 'cozy-device-helper'
-import { NATIVE_APP_INFOS } from 'cozy-ui/transpiled/react/AppLinker/native'
+import { generateUniversalLink, getUniversalLinkDomain } from './native'
 
+import { NATIVE_APP_INFOS } from 'cozy-ui/transpiled/react/AppLinker/native.config'
 import expiringMemoize from './expiringMemoize'
 
 const expirationDelay = 10 * 1000
@@ -23,7 +24,8 @@ const memoizedCheckApp = expiringMemoize(
 
 export class AppLinker extends React.Component {
   state = {
-    nativeAppIsAvailable: null
+    nativeAppIsAvailable: null,
+    isFetchingAppInfo: false
   }
 
   constructor(props) {
@@ -67,17 +69,23 @@ export class AppLinker extends React.Component {
     })
   }
 
+  //Will be removed soon when Android universallink will be tested
   openNativeFromWeb(ev) {
     if (ev) {
       ev.preventDefault()
     }
 
-    const { href, slug } = this.props
+    const { href, slug, nativePath } = this.props
     const appInfo = NATIVE_APP_INFOS[slug]
+
     this.onAppSwitch()
-    openDeeplinkOrRedirect(appInfo.uri, function() {
-      window.location.href = href
-    })
+
+    openDeeplinkOrRedirect(
+      appInfo.uri + (nativePath === '/' ? '' : nativePath),
+      function() {
+        window.location.href = href
+      }
+    )
   }
 
   openWeb() {
@@ -85,10 +93,10 @@ export class AppLinker extends React.Component {
   }
 
   render() {
-    const { children, slug } = this.props
+    const { children, slug, nativePath } = this.props
     const { nativeAppIsAvailable } = this.state
-    const appInfo = NATIVE_APP_INFOS[slug]
 
+    const appInfo = NATIVE_APP_INFOS[slug]
     let href = this.props.href
     let onClick = null
     const usingNativeApp = isMobileApp()
@@ -107,19 +115,36 @@ export class AppLinker extends React.Component {
       }
     } else if (isMobile() && appInfo) {
       // If we are on the "mobile web version", we try to open the native app
-      // if it exists. If it fails, we redirect to the web version of the
-      // requested app
-      onClick = this.openNativeFromWeb
+      // if it exists with an universal links. If it fails, we redirect to the web
+      // version of the requested app
+      // Only on iOS ATM
+      if (isAndroid()) {
+        onClick = this.openNativeFromWeb
+      } else {
+        href = generateUniversalLink({ slug, nativePath, fallbackUrl: href })
+      }
     }
 
     return children({ ...appInfo, onClick: onClick, href })
   }
 }
 
+AppLinker.defaultProps = {
+  nativePath: '/'
+}
 AppLinker.propTypes = {
+  //Slug of the app : drive / banks ...
   slug: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired
+  /*
+  Full web url : Used by default on desktop browser
+  Used as a fallback_uri on mobile web 
+  */
+  href: PropTypes.string.isRequired,
+  /*
+    Path used for "native link"
+  */
+  nativePath: PropTypes.string
 }
 
 export default AppLinker
-export { NATIVE_APP_INFOS }
+export { NATIVE_APP_INFOS, getUniversalLinkDomain, generateUniversalLink }
