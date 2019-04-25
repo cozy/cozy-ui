@@ -145,47 +145,43 @@ class ViewerControls extends Component {
             )}
           </div>
         )}
-        {controls &&
-          !isMobile &&
-          hasPrevious && (
-            <div
-              data-test-id="viewer-nav--previous"
-              role="button"
-              className={classNames(
-                styles['pho-viewer-nav'],
-                styles['pho-viewer-nav--previous'],
-                {
-                  [styles['pho-viewer-nav--visible']]: !hidden
-                }
-              )}
-              onClick={onPrevious}
-              onMouseEnter={this.showControls}
-              onMouseLeave={this.hideControls}
-            >
-              <div className={styles['pho-viewer-nav-arrow']} />
-            </div>
-          )}
+        {controls && !isMobile && hasPrevious && (
+          <div
+            data-test-id="viewer-nav--previous"
+            role="button"
+            className={classNames(
+              styles['pho-viewer-nav'],
+              styles['pho-viewer-nav--previous'],
+              {
+                [styles['pho-viewer-nav--visible']]: !hidden
+              }
+            )}
+            onClick={onPrevious}
+            onMouseEnter={this.showControls}
+            onMouseLeave={this.hideControls}
+          >
+            <div className={styles['pho-viewer-nav-arrow']} />
+          </div>
+        )}
         {this.renderChildren(children)}
-        {controls &&
-          !isMobile &&
-          hasNext && (
-            <div
-              data-test-id="viewer-nav--next"
-              role="button"
-              className={classNames(
-                styles['pho-viewer-nav'],
-                styles['pho-viewer-nav--next'],
-                {
-                  [styles['pho-viewer-nav--visible']]: !hidden
-                }
-              )}
-              onClick={onNext}
-              onMouseEnter={this.showControls}
-              onMouseLeave={this.hideControls}
-            >
-              <div className={styles['pho-viewer-nav-arrow']} />
-            </div>
-          )}
+        {controls && !isMobile && hasNext && (
+          <div
+            data-test-id="viewer-nav--next"
+            role="button"
+            className={classNames(
+              styles['pho-viewer-nav'],
+              styles['pho-viewer-nav--next'],
+              {
+                [styles['pho-viewer-nav--visible']]: !hidden
+              }
+            )}
+            onClick={onNext}
+            onMouseEnter={this.showControls}
+            onMouseLeave={this.hideControls}
+          >
+            <div className={styles['pho-viewer-nav-arrow']} />
+          </div>
+        )}
       </div>
     )
   }
