@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon } from 'cozy-ui/transpiled/react'
+import Icon from '../Icon'
 
 import withFileUrl from './withFileUrl'
 import styles from './styles'

@@ -9,7 +9,7 @@ import PdfJsViewer from './PdfJsViewer'
 import TextViewer from './TextViewer'
 import NoViewer from './NoViewer'
 
-import Spinner from 'cozy-ui/react/Spinner'
+import Spinner from '../Spinner'
 
 import styles from './styles'
 

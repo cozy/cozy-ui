@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon } from 'cozy-ui/transpiled/react'
+import Icon from '../../Icon'
 
 import IconFiles from '../icons/icon-type-files.svg'
 import IconBin from '../icons/icon-type-bin.svg'

@@ -1,7 +1,7 @@
 /* global cozy */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Spinner from 'cozy-ui/react/Spinner'
+import Spinner from '../Spinner'
 
 import NoNetworkViewer from './NoNetworkViewer'
 

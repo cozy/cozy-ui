@@ -5,8 +5,8 @@ import ReactDOM from 'react-dom'
 
 import Hammer from 'hammerjs'
 
-import Spinner from 'cozy-ui/react/Spinner'
-import { ImageLoader } from 'components/Image'
+import Spinner from '../Spinner'
+import ImageLoader from './ImageLoader'
 
 import NoNetworkViewer from './NoNetworkViewer'
 

@@ -3,8 +3,8 @@ import classNames from 'classnames'
 import Hammer from 'hammerjs'
 import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
-import { translate } from 'cozy-ui/react/I18n'
-import { Button } from 'cozy-ui/react/Button'
+import { translate } from '../I18n'
+import Button from '../Button'
 
 import styles from './styles'
 
