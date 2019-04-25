@@ -65,7 +65,20 @@ assets/icons/ui/top.svg
 assets/icons/ui/trash.svg
 assets/icons/ui/upload.svg
 assets/icons/ui/warn.svg
-assets/icons/ui/warning.svg"
+assets/icons/ui/warning.svg
+assets/icons/illus/cloud-broken.svg
+assets/icons/illus/file-type-audio.svg
+assets/icons/illus/file-type-bin.svg
+assets/icons/illus/file-type-code.svg
+assets/icons/illus/file-type-files.svg
+assets/icons/illus/file-type-folder.svg
+assets/icons/illus/file-type-image.svg
+assets/icons/illus/file-type-pdf.svg
+assets/icons/illus/file-type-sheet.svg
+assets/icons/illus/file-type-slide.svg
+assets/icons/illus/file-type-text.svg
+assets/icons/illus/file-type-video.svg
+assets/icons/illus/file-type-zip.svg"
 
 echo "Making icon sprite, output file : ${outfile}..."
 echo $icons | xargs yarn svgstore --inline -o /tmp/icons-sprite.svg

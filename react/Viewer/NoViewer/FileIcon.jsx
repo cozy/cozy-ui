@@ -1,42 +1,33 @@
 import React from 'react'
 import Icon from '../../Icon'
 
-import IconFiles from '../icons/icon-type-files.svg'
-import IconBin from '../icons/icon-type-bin.svg'
-import IconCode from '../icons/icon-type-code.svg'
-import IconSpreadsheet from '../icons/icon-type-sheet.svg'
-import IconSlide from '../icons/icon-type-slide.svg'
-import IconText from '../icons/icon-type-text.svg'
-import IconZip from '../icons/icon-type-zip.svg'
-import IconPdf from '../icons/icon-type-pdf.svg'
-
 const FileIcon = ({ type }) => {
   let icon
 
   switch (type) {
     case 'bin':
-      icon = IconBin
+      icon = 'file-type-bin'
       break
     case 'code':
-      icon = IconCode
+      icon = 'file-type-code'
       break
     case 'spreadsheet':
-      icon = IconSpreadsheet
+      icon = 'file-type-spreadsheet'
       break
     case 'slide':
-      icon = IconSlide
+      icon = 'file-type-slide'
       break
     case 'text':
-      icon = IconText
+      icon = 'file-type-text'
       break
     case 'zip':
-      icon = IconZip
+      icon = 'file-type-zip'
       break
     case 'pdf':
-      icon = IconPdf
+      icon = 'file-type-pdf'
       break
     default:
-      icon = IconFiles
+      icon = 'file-type-files'
       break
   }
 
