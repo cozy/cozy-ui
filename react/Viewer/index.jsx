@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import ViewerControls from './ViewerControls'
@@ -30,6 +31,12 @@ const ViewerWrapper = ({ className, children, dark }) => (
     {children}
   </div>
 )
+
+ViewerWrapper.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.element,
+  dark: PropTypes.bool
+}
 
 export const isPlainText = (mimeType = '', fileName = '') => {
   return mimeType ? /^text\//.test(mimeType) : /\.(txt|md)$/.test(fileName)
@@ -88,8 +95,8 @@ export default class Viewer extends Component {
       className,
       currentIndex,
       onClose,
-      dark = true,
-      controls = true
+      dark,
+      controls
     } = this.props
     const currentFile = files[currentIndex]
     const fileCount = files.length
@@ -140,6 +147,28 @@ export default class Viewer extends Component {
         return NoViewer
     }
   }
+}
+
+Viewer.propTypes = {
+  files: PropTypes.arrayOf(
+    PropTypes.shape({
+      _id: PropTypes.string,
+      class: PropTypes.string,
+      mime: PropTypes.string,
+      name: PropTypes.string
+    })
+  ).isRequired,
+  className: PropTypes.string,
+  currentIndex: PropTypes.number,
+  onClose: PropTypes.func.isRequired,
+  dark: PropTypes.bool,
+  controls: PropTypes.bool
+}
+
+Viewer.defaultProps = {
+  currentIndex: 0,
+  dark: true,
+  controls: true
 }
 
 // TODO: This is a temporary export for FilesViewer that has to deal with fetching file links on mobile
