@@ -115,6 +115,8 @@
     "node-polyglot": "^2.2.2",
     "normalize.css": "^7.0.0",
     "react-hot-loader": "^4.3.11",
+    "react-markdown": "^4.0.8",
+    "react-pdf": "^4.0.5",
     "react-select": "2.2.0"
   },
   "peerDependencies": {
