@@ -76,12 +76,11 @@ class ImageLoader extends React.Component {
   async getFileLinks(file) {
     if (file.links) return file.links
     else {
-      const response = await cozy.client.files.statById(
-        this.getFileId(file),
-        false
-      )
-      if (!response.links) throw new Error('Could not fetch file links')
-      return response.links
+      const response = await this.context.client
+        .collection('io.cozy.files')
+        .get(this.getFileId(file))
+      if (!response.data.links) throw new Error('Could not fetch file links')
+      return response.data.links
     }
   }
 
@@ -105,6 +104,7 @@ class ImageLoader extends React.Component {
         })
       }
     } catch (e) {
+      console.log(e)
       this.loadNextSrc(e)
     }
   }
