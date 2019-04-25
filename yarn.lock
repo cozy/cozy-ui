@@ -7695,7 +7695,24 @@ kss-webpack-plugin@1.3.1:
   dependencies:
     kss "^3.0.0 || ^3.0.0-beta.14"
 
-kss@3.0.0-beta.23, "kss@^3.0.0 || ^3.0.0-beta.14":
+kss@3.0.0-beta.25:
+  version "3.0.0-beta.25"
+  resolved "https://registry.yarnpkg.com/kss/-/kss-3.0.0-beta.25.tgz#bf3607b21dc06d56fc84dd66779c941b83f335b9"
+  integrity sha512-jF8zh0HXUZfcysCyyKsftWyLAXkRh1Qt7ikd6WgmfKVhMRygq0x0YUFzTRB/SB57jSyk1DybbfopmFutY6Qo6Q==
+  dependencies:
+    bluebird "^3.3.3"
+    fs-extra "^7.0.0"
+    glob "^7.0.3"
+    handlebars "^4.0.0"
+    highlight.js "^9.12.0"
+    markdown-it "^8.4.1"
+    nunjucks "^3.0.1"
+    resolve "^1.6.0"
+    twig "^1.13.0"
+    twig-drupal-filters "^2.0.0"
+    yargs "^12.0.1"
+
+"kss@^3.0.0 || ^3.0.0-beta.14":
   version "3.0.0-beta.23"
   resolved "https://registry.yarnpkg.com/kss/-/kss-3.0.0-beta.23.tgz#79706dd1b5e80e43d951b855be8a797442722b07"
   integrity sha1-eXBt0bXoDkPZUbhVvop5dEJyKwc=
@@ -13469,6 +13486,15 @@ twig@^1.10.4, twig@^1.12.0:
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/twig/-/twig-1.12.0.tgz#04450bf18ee05532ff70098f10b07227f956b8cf"
   integrity sha512-zm5OQXb8bQDGQUPytFgjqMKHhqcz/s6pU6Nwsy+rKPhsoOOVwYeHnziiDGFzeTDiFd28M8EVkEO8we6ikcrGjQ==
+  dependencies:
+    locutus "^2.0.5"
+    minimatch "3.0.x"
+    walk "2.3.x"
+
+twig@^1.13.0:
+  version "1.13.2"
+  resolved "https://registry.yarnpkg.com/twig/-/twig-1.13.2.tgz#d349895a5f762b52fab71c7a373cf3153819cd7b"
+  integrity sha512-F7o4sDD2DaIj2II8VrbmDXnompOO6ESNQSh97rtJuif00v5FoUWTlkJE1ZlfeFNAwSCU9rexWsB1+3oF8jmU/Q==
   dependencies:
     locutus "^2.0.5"
     minimatch "3.0.x"
