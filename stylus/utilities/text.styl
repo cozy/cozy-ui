@@ -110,7 +110,7 @@ ta-justify()
 textalign = {
     'ta-left': 'ta-left',
     'ta-right': 'ta-right',
-    'ta-center': 'ta-center'
+    'ta-center': 'ta-center',
     'ta-justify': 'ta-justify'
 }
 
@@ -118,6 +118,22 @@ if cssmodules == true
     cssModulesUtils(textalign, breakpoints)
 else
     nativeUtils(textalign, breakpoints)
+
+fs-normal()
+    font-style normal!important
+
+fs-italic()
+    font-style italic!important
+
+fontstyle = {
+    'fs-normal': 'fs-normal',
+    'fs-italic': 'fs-italic'
+}
+
+if cssmodules == true
+    cssModulesUtils(fontstyle, breakpoints)
+else
+    nativeUtils(fontstyle, breakpoints)
 // @stylint on
 
 // Global classes
