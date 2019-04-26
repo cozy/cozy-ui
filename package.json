@@ -96,7 +96,7 @@
     "react-test-renderer": "16.6.3",
     "redux": "3.7.2",
     "semantic-release": "15.12.5",
-    "style-loader": "0.18.2",
+    "style-loader": "0.23.1",
     "stylint": "1.5.9",
     "stylus": "0.54.5",
     "stylus-loader": "3.0.2",
