@@ -4,11 +4,12 @@ import {
   isMobileApp,
   isMobile,
   openDeeplinkOrRedirect,
-  startApp
+  startApp,
+  isAndroid
 } from 'cozy-device-helper'
 
 import AppLinker from './index'
-
+import { generateUniversalLink } from './native'
 jest.useFakeTimers()
 
 const tMock = x => x
@@ -33,13 +34,18 @@ class AppItem extends React.Component {
     )
   }
 }
+jest.mock('./native', () => ({
+  ...require.requireActual('./native'),
+  generateUniversalLink: jest.fn()
+}))
 
 jest.mock('cozy-device-helper', () => ({
   ...require.requireActual('cozy-device-helper'),
   isMobileApp: jest.fn(),
   isMobile: jest.fn(),
   openDeeplinkOrRedirect: jest.fn(),
-  startApp: jest.fn().mockResolvedValue()
+  startApp: jest.fn().mockResolvedValue(),
+  isAndroid: jest.fn()
 }))
 
 const app = {
@@ -64,6 +70,7 @@ describe('app icon', () => {
     )
     isMobileApp.mockReturnValue(false)
     isMobile.mockReturnValue(false)
+    isAndroid.mockReturnValue(false)
     appSwitchMock = jest.fn()
   })
 
@@ -95,8 +102,9 @@ describe('app icon', () => {
     expect(appSwitchMock).toHaveBeenCalled()
   })
 
-  it('should work for web -> native', () => {
+  it('should work for web -> native for Android (custom schema) ', () => {
     isMobile.mockReturnValue(true)
+    isAndroid.mockResolvedValue(true)
     const root = shallow(
       <AppItem t={tMock} app={app} onAppSwitch={appSwitchMock} />
     ).dive()
@@ -106,6 +114,16 @@ describe('app icon', () => {
       expect.any(Function)
     )
     expect(appSwitchMock).toHaveBeenCalled()
+  })
+
+  it('should work for web -> native for iOS (universal link)', () => {
+    isMobile.mockReturnValue(true)
+    const root = shallow(
+      <AppItem t={tMock} app={app} onAppSwitch={appSwitchMock} />
+    ).dive()
+    root.find('a').simulate('click', { preventDefault: () => {} })
+
+    expect(generateUniversalLink).toHaveBeenCalled()
   })
 
   it('should work for native -> web', () => {
