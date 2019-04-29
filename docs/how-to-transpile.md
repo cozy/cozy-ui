@@ -34,7 +34,7 @@ Alternatively, you can use a webpack alias. Inside `webpack.config.js` :
 +}
 ```
 
-3. Add the icon sprite
+4. Add the icon sprite
 
 ```patch
 import { IconSprite } from 'cozy-ui/transpiled/react'
@@ -52,7 +52,7 @@ import { IconSprite } from 'cozy-ui/transpiled/react'
  }
 ```
 
-4. Replace palette location
+5. Replace palette location
  
 ```patch
 -import palette from 'cozy-ui/stylus/settings/palette.json'
