@@ -5,19 +5,19 @@ remove the webpack specific configs.
 
 ## How to
 
-1. Install the next version of cozy-ui
+### 1. Install the next version of cozy-ui
  
 ```
 yarn add cozy-ui@next
 ```
 
-2. Add `stylesheet.css`
+### 2. Add `stylesheet.css`
 
 ```patch
 + import 'cozy-ui/transpiled/react/stylesheet.css'
 ```
 
-3. Replace occurences of `cozy-ui/react` by `cozy-ui/transpiled/react`
+### 3. Replace occurences of `cozy-ui/react` by `cozy-ui/transpiled/react`
 
 ```
 -import { Icon } from 'cozy-ui/react'
@@ -34,7 +34,7 @@ Alternatively, you can use a webpack alias. Inside `webpack.config.js` :
 +}
 ```
 
-4. Add the icon sprite
+### 4. Add the icon sprite
 
 ```patch
 import { IconSprite } from 'cozy-ui/transpiled/react'
@@ -52,7 +52,7 @@ import { IconSprite } from 'cozy-ui/transpiled/react'
  }
 ```
 
-5. Replace palette location
+### 5. Replace palette location
  
 ```patch
 -import palette from 'cozy-ui/stylus/settings/palette.json'
