@@ -273,6 +273,7 @@ class SelectBox extends Component {
       styles: reactSelectStyles,
       breakpoints: { isMobile },
       classNamePrefix,
+      name,
       ...props
     } = this.props
     const showOverlay = this.state.isOpen && isMobile
@@ -304,6 +305,7 @@ class SelectBox extends Component {
         // but this behavior will soon be removed. For the moment, we
         // cancel it by setting it to empty string
         classNamePrefix={classNamePrefix || ''}
+        selectProps={{ name }}
       />
     )
   }
@@ -314,6 +316,7 @@ SelectBox.propTypes = {
   components: PropTypes.object,
   disabled: PropTypes.bool,
   fullwidth: PropTypes.bool,
+  name: PropTypes.string,
   size: PropTypes.oneOf(['tiny', 'medium', 'large']),
   styles: PropTypes.object
 }
