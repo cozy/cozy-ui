@@ -80,6 +80,7 @@ const Field = props => {
     label,
     id,
     inputRef,
+    name,
     type,
     value,
     placeholder,
@@ -109,6 +110,7 @@ const Field = props => {
           <Textarea
             disabled={disabled}
             id={id}
+            name={name}
             placeholder={placeholder}
             value={value}
             error={error}
@@ -125,6 +127,7 @@ const Field = props => {
             fullwidth={fullwidth}
             id={id}
             inputRef={inputRef}
+            name={name}
             type={type}
             placeholder={placeholder}
             value={value}
@@ -148,6 +151,7 @@ const Field = props => {
             fullwidth={fullwidth}
             id={id}
             inputRef={inputRef}
+            name={name}
             type={type}
             placeholder={placeholder}
             value={value}
@@ -189,6 +193,7 @@ Field.propTypes = {
   fullwidth: PropTypes.bool,
   label: PropTypes.string.isRequired,
   id: PropTypes.string,
+  name: PropTypes.string,
   type: PropTypes.oneOf([
     'date',
     'email',

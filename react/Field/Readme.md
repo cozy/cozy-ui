@@ -51,6 +51,21 @@ class FieldWithFocus extends React.Component {
 ;<FieldWithFocus />
 ```
 
+- `name`
+
+Name of the form field, injected into `Input`, `TextArea` or `SelectBox` component.
+
+##### Exemple
+
+```
+<form>
+  <Field
+    label="I got a name"
+    name="foo"
+  />
+</form>
+```
+
 #### Field when there's an error
 
 ```
@@ -128,4 +143,3 @@ const options = [
   />
 </form>
 ```
-
