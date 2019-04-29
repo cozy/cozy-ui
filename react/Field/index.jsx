@@ -16,7 +16,6 @@ import Textarea from '../Textarea'
  */
 const inputSpecificPropTypes = {
   autoComplete: PropTypes.string,
-  inputRef: PropTypes.func,
   onKeyUp: PropTypes.func
 }
 

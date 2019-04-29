@@ -258,9 +258,16 @@ class SelectBox extends Component {
   }
 
   handleRef(ref) {
-    if (ref && ref.select && ref.select.controlRef) {
-      // Save control ref to use for menu height computation
-      this.controlRef = ref.select.controlRef
+    const { inputRef } = this.props
+    if (ref && ref.select) {
+      if (ref.select.controlRef) {
+        // Save control ref to use for menu height computation
+        this.controlRef = ref.select.controlRef
+      }
+
+      if (ref.select.inputRef && typeof inputRef === 'function') {
+        inputRef(ref.select.inputRef)
+      }
     }
   }
 
@@ -317,6 +324,7 @@ SelectBox.propTypes = {
   disabled: PropTypes.bool,
   fullwidth: PropTypes.bool,
   name: PropTypes.string,
+  inputRef: PropTypes.func,
   size: PropTypes.oneOf(['tiny', 'medium', 'large']),
   styles: PropTypes.object
 }
