@@ -9,12 +9,8 @@ export const getUniversalLinkDomain = () => {
 */
 export const generateUniversalLink = ({ slug, nativePath, fallbackUrl }) => {
   if (!nativePath.startsWith('/')) nativePath = '/' + nativePath
-  return (
-    getUniversalLinkDomain() +
-    '/' +
-    slug +
-    nativePath +
-    '&fallback=' +
-    fallbackUrl
-  )
+  let url = getUniversalLinkDomain() + '/' + slug + nativePath
+  const urlObj = new URL(url)
+  urlObj.searchParams.append('fallback', fallbackUrl)
+  return urlObj.toString()
 }
