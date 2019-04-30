@@ -32,7 +32,11 @@ const Infos = ({ actionButton, icon, isImportant, text, className, title }) => {
           {title}
         </SubTitle>
       )}
-      <div className="u-flex u-mv-1 u-w-100">
+      <div
+        className={cx('u-flex', 'u-w-100', 'u-mt-1', {
+          'u-mb-1': !!actionButton
+        })}
+      >
         {icon && (
           <Icon
             icon={icon}
