@@ -1032,18 +1032,30 @@ exports[`Icon should render examples: Icon 3`] = `
 exports[`Infos should render examples: Infos 1`] = `
 "<div>
   <div>
-    <div class=\\"styles__infos___Xu7xe u-p-1\\">
-      <div class=\\"styles__infos--container___faoPY\\">
-        <div class=\\"styles__u-text___2UfQa styles__infos--text___m9oNV\\">My small persistent information! </div>
+    <div class=\\"u-flex u-flex-column u-maw-6 u-mih-2 u-bdrs-4 u-p-1 u-bg-paleGrey u-ta-left\\">
+      <div class=\\"u-flex u-mv-1 u-w-100\\">
+        <div class=\\"styles__u-text___2UfQa u-ta-left\\">My small persistent information! </div>
       </div>
+      <div class=\\"u-flex-shrink-0\\"></div>
     </div>
     <div style=\\"height: 10px;\\"></div>
-    <div class=\\"styles__infos___Xu7xe u-p-1\\">
-      <div class=\\"styles__infos--container___faoPY\\"><svg class=\\"styles__infos--icon___2XWQm styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+    <div class=\\"u-flex u-flex-column u-maw-6 u-mih-2 u-bdrs-4 u-p-1 u-bg-paleGrey u-ta-left\\">
+      <div class=\\"u-flex u-mv-1 u-w-100\\"><svg class=\\"styles__infos--icon___2XWQm u-w-1 u-h-1 u-flex-shrink-0 styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <use xlink:href=\\"#info\\"></use>
         </svg>
-        <div class=\\"styles__u-text___2UfQa styles__infos--text___m9oNV u-pl-half\\">My small persistent information, with an icon. And lot of text ? Again and again...</div>
+        <div class=\\"styles__u-text___2UfQa u-ta-left u-pl-half\\">My small persistent information, with an icon. And lot of text ? Again and again...</div>
       </div>
+      <div class=\\"u-flex-shrink-0\\"></div>
+    </div>
+    <div style=\\"height: 10px;\\"></div>
+    <div class=\\"u-flex u-flex-column u-maw-6 u-mih-2 u-bdrs-4 u-p-1 u-bg-paleGrey u-ta-left u-bg-chablis\\">
+      <div class=\\"styles__u-title-h3___1ZGqN u-pomegranate\\">Infos breaking news</div>
+      <div class=\\"u-flex u-mv-1 u-w-100\\"><svg class=\\"styles__infos--icon___2XWQm u-w-1 u-h-1 u-flex-shrink-0 styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+          <use xlink:href=\\"#warning\\"></use>
+        </svg>
+        <div class=\\"styles__u-text___2UfQa u-ta-left u-pl-half\\">My small persistent information, with an icon. And lot of text ? Again and again...</div>
+      </div>
+      <div class=\\"u-flex-shrink-0\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C\\"><span>A CTA button</span></button></div>
     </div>
   </div>
 </div>"

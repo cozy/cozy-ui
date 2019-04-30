@@ -3,21 +3,56 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import Icon, { iconPropType } from '../Icon'
-import Text from '../Text'
+import Text, { SubTitle } from '../Text'
 
-const Infos = ({ icon, text, className }) => {
+const Infos = ({ actionButton, icon, isImportant, text, className, title }) => {
   return (
-    <div className={cx(styles['infos'], 'u-p-1', className)}>
-      <div className={styles['infos--container']}>
-        {icon && <Icon icon={icon} className={styles['infos--icon']} />}
+    <div
+      className={cx(
+        'u-flex',
+        'u-flex-column',
+        'u-maw-6',
+        'u-mih-2',
+        'u-bdrs-4',
+        'u-p-1',
+        'u-bg-paleGrey',
+        'u-ta-left',
+        {
+          'u-bg-chablis': isImportant
+        },
+        className
+      )}
+    >
+      {!!title && (
+        <SubTitle
+          className={cx({
+            'u-pomegranate': isImportant
+          })}
+        >
+          {title}
+        </SubTitle>
+      )}
+      <div className="u-flex u-mv-1 u-w-100">
+        {icon && (
+          <Icon
+            icon={icon}
+            className={cx(
+              styles['infos--icon'],
+              'u-w-1',
+              'u-h-1',
+              'u-flex-shrink-0'
+            )}
+          />
+        )}
         <Text
-          className={cx(styles['infos--text'], {
+          className={cx('u-ta-left', {
             ['u-pl-half']: icon !== null
           })}
         >
           {text}
         </Text>
       </div>
+      <div className="u-flex-shrink-0">{!!actionButton && actionButton}</div>
     </div>
   )
 }
@@ -27,7 +62,13 @@ Infos.defaultProps = {
 }
 
 Infos.propTypes = {
+  /** A button that will be rendered at the bottom */
+  actionButton: PropTypes.element,
+  /** An icon to display at the left of the text */
   icon: iconPropType,
-  text: PropTypes.string
+  /** An important information will be displayed with red colors */
+  isImportant: PropTypes.bool,
+  text: PropTypes.string,
+  title: PropTypes.string
 }
 export default Infos
