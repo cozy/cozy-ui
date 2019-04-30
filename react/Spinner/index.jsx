@@ -4,6 +4,7 @@ import { translate } from '../I18n'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
+import palette from '../palette'
 export const Spinner = ({
   t,
   loadingType,
@@ -60,7 +61,7 @@ Spinner.defaultProps = {
   loadingType: '',
   middle: false,
   noMargin: false,
-  color: 'blue',
+  color: palette['primaryColor'],
   size: 'medium',
   className: ''
 }
