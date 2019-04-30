@@ -42,7 +42,7 @@ export class AppLinker extends React.Component {
   }
 
   async checkAppAvailability() {
-    const { slug } = this.props.app
+    const { slug } = this.props
     const appInfo = NATIVE_APP_INFOS[slug]
     if (appInfo) {
       const nativeAppIsAvailable = Boolean(await memoizedCheckApp(appInfo))
