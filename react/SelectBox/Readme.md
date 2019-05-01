@@ -103,6 +103,26 @@ const options = [
 <SelectBox options={options} fullwidth />
 ```
 
+#### `inputRef`
+
+This property gives access to the underlying `<input />` element contained into a `ReactSelect` component, for example to give focus or move the caret.
+
+```
+const options = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry', isDisabled: true },
+  { value: 'vanilla', label: 'Vanilla' },
+  { value: 'long', label: 'Salt and vinegar crisps with vegamite and brussel sprouts, double chai latte sauce' },
+];
+
+let inputElement;
+
+<div>
+  <SelectBox inputRef={element => {inputElement = element}} options={options} disabled />
+  <button onClick={() => alert(inputElement)}>Show inputElement value</button>
+</div>
+```
+
 #### `size`
 
 Set the text size between `tiny`, `medium` and `large` (default: `large`).
