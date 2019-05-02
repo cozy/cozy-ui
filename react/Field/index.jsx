@@ -51,7 +51,11 @@ class InputPassword extends React.Component {
             {visible ? hideLabel : showLabel}
           </div>
         )}
-        <Input {...restProps} type={visible ? 'text' : 'password'} />
+        <Input
+          {...restProps}
+          fullwidth={fullwidth}
+          type={visible ? 'text' : 'password'}
+        />
       </div>
     )
   }
