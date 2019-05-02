@@ -149,6 +149,7 @@ export default class Viewer extends Component {
 }
 
 Viewer.propTypes = {
+  /** One or more `io;cozy.files` to display */
   files: PropTypes.arrayOf(
     PropTypes.shape({
       _id: PropTypes.string,
@@ -157,11 +158,15 @@ Viewer.propTypes = {
       name: PropTypes.string
     })
   ).isRequired,
-  className: PropTypes.string,
+  /** Index of the file to show */
   currentIndex: PropTypes.number,
+  className: PropTypes.string,
   onClose: PropTypes.func.isRequired,
+  /** Switch between light and dark mode */
   dark: PropTypes.bool,
+  /** Whether to show the toolbar or not. Note that the built-in close button is in the toolbar. */
   showToolbar: PropTypes.bool,
+  /** Weather to show left and right arrows to navigate between files */
   showNavigation: PropTypes.bool
 }
 

@@ -23,6 +23,10 @@ const mockClient = {
   },
   collection: () => ({
     getDownloadLinkById,
+    download: () =>
+      alert(
+        "This is a demo, there's no actual Cozy to download the file from ¯\\_(ツ)_/¯"
+      ),
     get: () =>
       new Promise(resolve =>
         resolve({
