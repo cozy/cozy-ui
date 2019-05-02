@@ -1,4 +1,5 @@
 @require '../settings/icons'
+@require '../settings/breakpoints'
 @require '../utilities/display'
 @require '../utilities/text'
 @require '../tools/mixins'
@@ -352,6 +353,16 @@ $button--round
     svg
         width rem(10)
         height rem(10)
+
+    // Expand clickable area for touch devices
+    +small-screen()
+        &:after
+            content ''
+            position absolute
+            top rem(-14)
+            right rem(-14)
+            bottom rem(-14)
+            left rem(-14)
 
 /*------------------------------------*\
   Action button
