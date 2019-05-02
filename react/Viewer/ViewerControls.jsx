@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
 import { translate } from '../I18n'
 import Button from '../Button'
+import Icon from '../Icon'
 
 import styles from './styles'
 
@@ -156,7 +157,11 @@ class ViewerControls extends Component {
             onMouseEnter={this.showControls}
             onMouseLeave={this.hideControls}
           >
-            <div className={styles['viewer-nav-arrow']} />
+            <Icon
+              icon="arrow-left"
+              size="24"
+              className={styles['viewer-nav-arrow']}
+            />
           </div>
         )}
         {this.renderChildren(children)}
@@ -174,7 +179,11 @@ class ViewerControls extends Component {
             onMouseEnter={this.showControls}
             onMouseLeave={this.hideControls}
           >
-            <div className={styles['viewer-nav-arrow']} />
+            <Icon
+              icon="arrow-right"
+              size="24"
+              className={styles['viewer-nav-arrow']}
+            />
           </div>
         )}
       </div>
