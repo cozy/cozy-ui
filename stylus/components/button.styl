@@ -1,5 +1,4 @@
 @require '../settings/icons'
-@require '../settings/breakpoints'
 @require '../utilities/display'
 @require '../utilities/text'
 @require '../tools/mixins'
@@ -355,7 +354,7 @@ $button--round
         height rem(10)
 
     // Expand clickable area for touch devices
-    +small-screen()
+    @media (pointer: coarse)
         &:after
             content ''
             position absolute

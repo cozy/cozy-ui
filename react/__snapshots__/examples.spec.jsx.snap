@@ -273,7 +273,7 @@ exports[`Empty should render examples: Empty 2`] = `
 exports[`Field should render examples: Field 1`] = `
 "<div>
   <form>
-    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idField\\" class=\\"styles__c-label___o4ozG\\">I'm a label</label><textarea placeholder=\\"I'm a textarea\\" class=\\"styles__c-textarea___D7EEH\\" id=\\"idField\\"></textarea></div>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idField\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm a label</label><textarea placeholder=\\"I'm a textarea\\" class=\\"styles__c-textarea___D7EEH\\" id=\\"idField\\"></textarea></div>
   </form>
 </div>"
 `;
@@ -281,7 +281,7 @@ exports[`Field should render examples: Field 1`] = `
 exports[`Field should render examples: Field 2`] = `
 "<div>
   <div>
-    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG\\">I can have focus</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Focus please\\" value=\\"\\"></div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Focus!</span>Set Focus</span></button>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I can have focus</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Focus please\\" value=\\"\\"></div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Focus!</span>Set Focus</span></button>
   </div>
 </div>"
 `;
@@ -289,7 +289,7 @@ exports[`Field should render examples: Field 2`] = `
 exports[`Field should render examples: Field 3`] = `
 "<div>
   <form>
-    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG\\">I got a name</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" name=\\"foo\\" value=\\"\\"></div>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I got a name</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" name=\\"foo\\" value=\\"\\"></div>
   </form>
 </div>"
 `;
@@ -297,7 +297,7 @@ exports[`Field should render examples: Field 3`] = `
 exports[`Field should render examples: Field 4`] = `
 "<div>
   <form>
-    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idFieldError\\" class=\\"styles__c-label___o4ozG\\">I'm an error label</label><input type=\\"text\\" id=\\"idFieldError\\" class=\\"styles__c-input-text___3TAv1 styles__is-error___3lsCJ styles__c-input-text--large___28EaR\\" placeholder=\\"I'm an error input[type=text]\\" value=\\"\\"></div>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idFieldError\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm an error label</label><input type=\\"text\\" id=\\"idFieldError\\" class=\\"styles__c-input-text___3TAv1 styles__is-error___3lsCJ styles__c-input-text--large___28EaR\\" placeholder=\\"I'm an error input[type=text]\\" value=\\"\\"></div>
   </form>
 </div>"
 `;
@@ -305,7 +305,7 @@ exports[`Field should render examples: Field 4`] = `
 exports[`Field should render examples: Field 5`] = `
 "<div>
   <form>
-    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG\\">I'am a SelectBox</label>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'am a SelectBox</label>
       <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\" id=\\"\\">
         <div class=\\"css-19fknmj\\">
           <div class=\\"css-1phseng\\">
@@ -324,7 +324,7 @@ exports[`Field should render examples: Field 5`] = `
         </div>
       </div>
     </div>
-    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG\\">I'am a SelectBox with a value</label>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'am a SelectBox with a value</label>
       <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\" id=\\"\\">
         <div class=\\"css-19fknmj\\">
           <div class=\\"css-1phseng\\">
@@ -350,7 +350,7 @@ exports[`Field should render examples: Field 5`] = `
 exports[`Field should render examples: Field 6`] = `
 "<div>
   <form>
-    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idFieldPassword\\" class=\\"styles__c-label___o4ozG\\">I'm a password label</label>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idFieldPassword\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm a password label</label>
       <div class=\\"styles__o-field-input___vCqdV\\">
         <div class=\\"styles__c-label___o4ozG styles__o-field-input-action___2k7a8\\"></div><input type=\\"password\\" id=\\"idFieldPassword\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" value=\\"\\">
       </div>
@@ -362,7 +362,7 @@ exports[`Field should render examples: Field 6`] = `
 exports[`Field should render examples: Field 7`] = `
 "<div>
   <form>
-    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG\\">I'm a label</label>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm a label</label>
       <div class=\\"styles__o-side___tXbXL styles__c-label___o4ozG\\">(optional)</div><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" value=\\"\\">
     </div>
   </form>
@@ -372,7 +372,7 @@ exports[`Field should render examples: Field 7`] = `
 exports[`Field should render examples: Field 8`] = `
 "<div>
   <form>
-    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG\\">I'm a label</label>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm a label</label>
       <div class=\\"styles__o-side___tXbXL styles__c-label___o4ozG styles__o-side-fullwidth___7WcCI\\">(optional)</div><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR styles__c-input-text--fullwidth___33o_f\\" placeholder=\\"\\" value=\\"\\">
     </div>
   </form>
@@ -414,8 +414,6 @@ exports[`Icon should render examples: Icon 1`] = `
     <div style=\\"display: none;\\"><svg>
         <defs>
           <path d=\\"M164,261 C164,258.790861 165.790861,257 168,257 C170.209139,257 172,258.790861 172,261 C174.209139,261 176,262.790861 176,265 C176,267.209139 174.209139,269 172,269 L164,269 C161.790861,269 160,267.209139 160,265 C160,262.790861 161.790861,261 164,261 Z M165.146447,264.853553 C165.300738,265.007845 165.568968,265.222429 165.939431,265.434122 C166.557029,265.787035 167.249166,266 168,266 C168.750834,266 169.442971,265.787035 170.060569,265.434122 C170.431032,265.222429 170.699262,265.007845 170.853553,264.853553 C171.048816,264.658291 171.048816,264.341709 170.853553,264.146447 C170.658291,263.951184 170.341709,263.951184 170.146447,264.146447 C170.050738,264.242155 169.850218,264.402571 169.564431,264.565878 C169.088279,264.837965 168.561666,265 168,265 C167.438334,265 166.911721,264.837965 166.435569,264.565878 C166.149782,264.402571 165.949262,264.242155 165.853553,264.146447 C165.658291,263.951184 165.341709,263.951184 165.146447,264.146447 C164.951184,264.341709 164.951184,264.658291 165.146447,264.853553 Z\\" id=\\"path-1\\"></path>
-
-          <path id=\\"cross-small\\" d=\\"M6 4.59l2.3-2.3a1 1 0 0 1 1.4 1.42L7.42 6l2.3 2.3A1 1 0 1 1 8.3 9.7L6 7.42l-2.3 2.3A1 1 0 1 1 2.3 8.3L4.58 6l-2.3-2.3A1 1 0 0 1 3.7 2.3L6 4.58z\\"></path>
 
           <path d=\\"M8,2 C11.637,2 14.742,4.488 16,8 C14.742,11.512 11.637,14 8,14 C4.363,14 1.258,11.512 0,8 C1.258,4.488 4.363,2 8,2 Z M8,12 C10.209,12 12,10.209 12,8 C12,5.791 10.209,4 8,4 C5.791,4 4,5.791 4,8 C4,10.209 5.791,12 8,12 Z M8,6 C9.104,6 10,6.896 10,8 C10,9.104 9.104,10 8,10 C6.896,10 6,9.104 6,8 C6,6.896 6.896,6 8,6 Z\\" id=\\"path-1\\"></path>
 
@@ -509,8 +507,7 @@ exports[`Icon should render examples: Icon 1`] = `
           <path fill-rule=\\"evenodd\\" d=\\"M106.585786,44 L96.2928932,33.7071068 C95.9023689,33.3165825 95.9023689,32.6834175 96.2928932,32.2928932 C96.6834175,31.9023689 97.3165825,31.9023689 97.7071068,32.2928932 L108,42.5857864 L118.292893,32.2928932 C118.683418,31.9023689 119.316582,31.9023689 119.707107,32.2928932 C120.097631,32.6834175 120.097631,33.3165825 119.707107,33.7071068 L109.414214,44 L119.707107,54.2928932 C120.097631,54.6834175 120.097631,55.3165825 119.707107,55.7071068 C119.316582,56.0976311 118.683418,56.0976311 118.292893,55.7071068 L108,45.4142136 L97.7071068,55.7071068 C97.3165825,56.0976311 96.6834175,56.0976311 96.2928932,55.7071068 C95.9023689,55.3165825 95.9023689,54.6834175 96.2928932,54.2928932 L106.585786,44 Z\\" transform=\\"translate(-96 -32)\\"></path>
         </symbol>
         <symbol id=\\"cross-small\\" viewBox=\\"0 0 12 12\\">
-
-          <use xlink:href=\\"#cross-small\\"></use>
+          <path d=\\"M6 4.59l2.3-2.3a1 1 0 0 1 1.4 1.42L7.42 6l2.3 2.3A1 1 0 1 1 8.3 9.7L6 7.42l-2.3 2.3A1 1 0 1 1 2.3 8.3L4.58 6l-2.3-2.3A1 1 0 0 1 3.7 2.3L6 4.58z\\"></path>
         </symbol>
         <symbol id=\\"cube\\" viewBox=\\"0 0 16 16\\">
           <path d=\\"M1,11.0086308 L1,5.50051502 C1,4.95127159 1.3905874,4.72776572 1.87240137,5.00308799 L7.12759863,8.00605786 C7.60359323,8.27805477 8,8.95047139 8,9.50051502 L8,15.0086308 C8,15.5578743 7.6094126,15.7813801 7.12759863,15.5060579 L1.87240137,12.503088 C1.39640677,12.2310911 1,11.5586745 1,11.0086308 Z M16,11.0086308 C16,11.5586745 15.6035932,12.2310911 15.1275986,12.503088 L9.87240137,15.5060579 C9.3905874,15.7813801 9,15.5578743 9,15.0086308 L9,9.50051502 C9,8.95047139 9.39640677,8.27805477 9.87240137,8.00605786 L15.1275986,5.00308799 C15.6094126,4.72776572 16,4.95127159 16,5.50051502 L16,11.0086308 Z M9.34976149,6.98164278 C8.88045118,7.27044912 8.11286116,7.26633364 7.65023851,6.98164278 L2.84976149,4.02750307 C2.38045118,3.73869673 2.38713884,3.29611355 2.87661892,3.03254735 L7.62338108,0.476598498 C8.10752434,0.215905973 8.88713884,0.213032303 9.37661892,0.476598498 L14.1233811,3.03254735 C14.6075243,3.29323988 14.6128612,3.74281221 14.1502385,4.02750307 L9.34976149,6.98164278 Z\\" id=\\"path-1\\"></path>
@@ -1052,7 +1049,7 @@ exports[`Infos should render examples: Infos 1`] = `
 exports[`Label should render examples: Label 1`] = `
 "<div>
   <form>
-    <div><label for=\\"idInput\\" class=\\"styles__c-label___o4ozG\\">This is a label</label><input type=\\"text\\" id=\\"idInput\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Recherche\\" value=\\"\\"></div>
+    <div><label for=\\"idInput\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">This is a label</label><input type=\\"text\\" id=\\"idInput\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Recherche\\" value=\\"\\"></div>
   </form>
 </div>"
 `;
@@ -1060,7 +1057,15 @@ exports[`Label should render examples: Label 1`] = `
 exports[`Label should render examples: Label 2`] = `
 "<div>
   <form>
-    <div><label for=\\"idInput2\\" class=\\"styles__c-label___o4ozG styles__is-error___2Dwem\\">This is an error label</label><input type=\\"text\\" id=\\"idInput2\\" class=\\"styles__c-input-text___3TAv1 styles__is-error___3lsCJ styles__c-input-text--large___28EaR\\" placeholder=\\"Recherche\\" value=\\"\\"></div>
+    <div><label for=\\"idInput2\\" class=\\"styles__c-label___o4ozG\\">This is an inline label</label><input type=\\"text\\" id=\\"idInput2\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Recherche\\" value=\\"\\"></div>
+  </form>
+</div>"
+`;
+
+exports[`Label should render examples: Label 3`] = `
+"<div>
+  <form>
+    <div><label for=\\"idInput2\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7 styles__is-error___2Dwem\\">This is an error label</label><input type=\\"text\\" id=\\"idInput2\\" class=\\"styles__c-input-text___3TAv1 styles__is-error___3lsCJ styles__c-input-text--large___28EaR\\" placeholder=\\"Recherche\\" value=\\"\\"></div>
   </form>
 </div>"
 `;

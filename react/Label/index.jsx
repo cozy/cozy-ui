@@ -4,13 +4,14 @@ import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
 const Label = props => {
-  const { htmlFor, className, children, error } = props
+  const { htmlFor, className, children, block, error } = props
   return (
     <label
       htmlFor={htmlFor}
       className={cx(
         styles['c-label'],
         {
+          [styles[`c-label--block`]]: block,
           [styles[`is-error`]]: error
         },
         className
@@ -25,12 +26,14 @@ Label.propTypes = {
   children: PropTypes.node.isRequired,
   htmlFor: PropTypes.string.isRequired,
   className: PropTypes.string,
-  error: PropTypes.bool
+  error: PropTypes.bool,
+  block: PropTypes.bool
 }
 
 Label.defaultProps = {
   className: '',
-  error: false
+  error: false,
+  block: true
 }
 
 export default Label

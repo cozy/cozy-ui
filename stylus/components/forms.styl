@@ -227,17 +227,19 @@ $form-progress
 
 // New styles
 $label
-    display block
     text-transform uppercase
     color var(--coolGrey)
     font-size rem(13)
     font-weight bold
     line-height rem(16)
-    padding rem(8) 0
-    margin-top rem(16)
 
     &.is-error
         color var(--pomegranate)
+
+$label--block
+    display block
+    margin-top rem(16)
+    padding rem(8) 0
 
 $input--disabled
     cursor not-allowed
@@ -453,3 +455,43 @@ $field
     display flex
     flex-direction column
     margin rem(8 0 16)
+
+$field-inline
+    display flex
+    align-items start
+    flex-direction row
+    margin rem(8 0 8 24)
+
+    +small-screen()
+        flex-direction column
+        margin-left 0
+
+$double-field
+    width 100%
+
+$double-field--with-button
+    box-sizing border-box
+    position relative
+    padding-right 2.5rem
+
+$double-field-label
+    min-height rem(40)
+
+$double-field-button
+    position absolute
+    right 0
+    top rem(10)
+
+$double-field-wrapper
+    display inline-flex
+    width 100%
+    margin-bottom rem(8)
+
+    +small-screen()
+        flex-direction column
+
+$double-field-input
+    box-sizing border-box
+    flex 1 1 70%
+    & + &
+        flex 1 1 auto
