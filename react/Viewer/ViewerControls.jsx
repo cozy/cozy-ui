@@ -94,7 +94,6 @@ class ViewerControls extends Component {
 
     return (
       <div
-        data-test-id="viewer-controls"
         className={classNames(styles['viewer-controls'], {
           [styles['viewer-controls--expanded']]: expanded
         })}
@@ -104,7 +103,6 @@ class ViewerControls extends Component {
       >
         {showToolbar && (
           <div
-            data-test-id="viewer-toolbar"
             className={classNames(styles['viewer-toolbar'], {
               [styles['viewer-toolbar--hidden']]: hidden,
               [styles['viewer-toolbar--mobilebrowser']]:
@@ -117,7 +115,6 @@ class ViewerControls extends Component {
             <div className={classNames(styles['viewer-toolbar-actions'])}>
               {!isMobile && (
                 <Button
-                  data-test-id="viewer-toolbar-download"
                   onClick={() => {
                     client.collection('io.cozy.files').download(currentFile)
                   }}
@@ -134,7 +131,6 @@ class ViewerControls extends Component {
                 title={t('Viewer.close')}
               >
                 <Button
-                  data-test-id="btn-viewer-toolbar-close"
                   theme="secondary"
                   icon="cross"
                   color="white"
@@ -148,7 +144,6 @@ class ViewerControls extends Component {
         )}
         {showNavigation && !isMobile && hasPrevious && (
           <div
-            data-test-id="viewer-nav--previous"
             role="button"
             className={classNames(
               styles['viewer-nav'],
@@ -167,7 +162,6 @@ class ViewerControls extends Component {
         {this.renderChildren(children)}
         {showNavigation && !isMobile && hasNext && (
           <div
-            data-test-id="viewer-nav--next"
             role="button"
             className={classNames(
               styles['viewer-nav'],

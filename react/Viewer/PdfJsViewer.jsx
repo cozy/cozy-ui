@@ -114,7 +114,6 @@ export class PdfJsViewer extends Component {
 
     return (
       <div
-        data-test-id="viewer-pdf"
         className={styles['viewer-pdfviewer']}
         ref={ref => (this.wrapper = ref)}
       >

@@ -86,7 +86,7 @@ class TextViewer extends React.Component {
     else if (error) return <NoViewer file={file} />
     else
       return (
-        <div data-test-id="viewer-text" className={styles['viewer-textviewer']}>
+        <div className={styles['viewer-textviewer']}>
           <h2 className={cx(styles['viewer-filename'], 'u-mt-3', 'u-mb-1')}>
             {file.name}
           </h2>

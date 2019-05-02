@@ -10,8 +10,6 @@ import PdfJsViewer from './PdfJsViewer'
 import TextViewer from './TextViewer'
 import NoViewer from './NoViewer'
 
-import Spinner from '../Spinner'
-
 import styles from './styles'
 
 const KEY_CODE_LEFT = 37
@@ -22,7 +20,6 @@ import { isMobileApp, isMobile } from 'cozy-device-helper'
 
 const ViewerWrapper = ({ className, children, dark }) => (
   <div
-    data-test-id="viewer-wrapper"
     className={cx(styles['viewer-wrapper'], className, {
       [styles['viewer-wrapper--light']]: !dark
     })}
@@ -174,10 +171,3 @@ Viewer.defaultProps = {
   showToolbar: true,
   showNavigation: true
 }
-
-// TODO: This is a temporary export for FilesViewer that has to deal with fetching file links on mobile
-export const LoadingViewer = () => (
-  <ViewerWrapper>
-    <Spinner size="xxlarge" middle noMargin color="white" />
-  </ViewerWrapper>
-)

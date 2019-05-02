@@ -5,7 +5,7 @@ import withFileUrl from './withFileUrl'
 import styles from './styles'
 
 const AudioViewer = ({ file, url }) => (
-  <div data-test-id="viewer-audio" className={styles['viewer-audioviewer']}>
+  <div className={styles['viewer-audioviewer']}>
     <Icon icon="file-type-audio" width={160} height={140} />
     <p className={styles['viewer-filename']}>{file.name}</p>
     <audio src={url} controls="controls" />
