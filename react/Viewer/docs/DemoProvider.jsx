@@ -38,11 +38,23 @@ const mockClient = {
   getClient: () => mockClient
 }
 
+const t = key => {
+  const translations = {
+    'Viewer.error':
+      'This file could not be loaded. Do you have a working internet connection right now?',
+    'Viewer.retry': 'Retry',
+    'Viewer.download': 'Download',
+    'Viewer.close': 'close'
+  }
+
+  return translations[key] || key
+}
+
 class Wrapper extends React.Component {
   getChildContext() {
     return {
       client: mockClient,
-      t: str => str
+      t
     }
   }
 

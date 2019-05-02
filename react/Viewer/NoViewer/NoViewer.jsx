@@ -10,7 +10,7 @@ const DownloadButton = ({ t, file }, { client }) => (
   <Button
     className={styles['viewer-noviewer-download']}
     onClick={() => client.collection('io.cozy.files').download(file)}
-    label={t('Viewer.noviewer.download')}
+    label={t('Viewer.download')}
   />
 )
 

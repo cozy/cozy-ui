@@ -1,3 +1,9 @@
+Translations:
+Viewer.error
+Viewer.retry
+Viewer.download
+Viewer.close
+
 ```
 const DemoProvider = require('./docs/DemoProvider').default;
 const Overlay = require('../Overlay').default;

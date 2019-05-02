@@ -121,7 +121,7 @@ class ViewerControls extends Component {
                     client.collection('io.cozy.files').download(currentFile)
                   }}
                   icon="download"
-                  label={t('Viewer.actions.download')}
+                  label={t('Viewer.download')}
                   subtle
                 />
               )}
