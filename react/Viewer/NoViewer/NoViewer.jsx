@@ -23,7 +23,7 @@ class NoViewer extends React.Component {
     error: null
   }
   render() {
-    const { t, file, fallbackUrl = false } = this.props
+    const { t, file } = this.props
     return (
       <div className={styles['viewer-noviewer']}>
         <FileIcon type={file.class} />

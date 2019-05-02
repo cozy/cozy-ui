@@ -80,10 +80,10 @@ class TextViewer extends React.Component {
 
   render() {
     const { loading, error, text, isMarkdown } = this.state
-    const { url, file } = this.props
+    const { file } = this.props
 
     if (loading) return <Loader />
-    else if (error) return <NoViewer file={file} fallbackUrl={url} />
+    else if (error) return <NoViewer file={file} />
     else
       return (
         <div data-test-id="viewer-text" className={styles['viewer-textviewer']}>
