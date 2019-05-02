@@ -4,6 +4,18 @@ const Overlay = require('../Overlay').default;
 
 const files = [
   {
+    _id: 'nope',
+    class: 'nope',
+    name: 'nope.nope',
+    mime: 'nope/nope'
+  },
+  {
+    _id: 'audio',
+    class: 'audio',
+    name: 'sample.mp3',
+    mime: 'audio/mp3'
+  },
+  {
     _id: 'pdf',
     class: 'pdf',
     name: 'simple.pdf',
@@ -14,12 +26,6 @@ const files = [
     class: 'text',
     name: 'simple.txt',
     mime: 'text/plain'
-  },
-  {
-    _id: 'audio',
-    class: 'audio',
-    name: 'sample/mp3',
-    mime: 'audio/mp3'
   },
   {
     _id: 'image',
