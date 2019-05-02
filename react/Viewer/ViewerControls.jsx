@@ -84,7 +84,8 @@ class ViewerControls extends Component {
       onNext,
       isMobile,
       expanded,
-      controls,
+      showToolbar,
+      showNavigation,
       children,
       isMobileApp
     } = this.props
@@ -101,7 +102,7 @@ class ViewerControls extends Component {
           this.wrapped = wrapped
         }}
       >
-        {controls && (
+        {showToolbar && (
           <div
             data-test-id="viewer-toolbar"
             className={classNames(styles['viewer-toolbar'], {
@@ -145,7 +146,7 @@ class ViewerControls extends Component {
             )}
           </div>
         )}
-        {controls && !isMobile && hasPrevious && (
+        {showNavigation && !isMobile && hasPrevious && (
           <div
             data-test-id="viewer-nav--previous"
             role="button"
@@ -164,7 +165,7 @@ class ViewerControls extends Component {
           </div>
         )}
         {this.renderChildren(children)}
-        {controls && !isMobile && hasNext && (
+        {showNavigation && !isMobile && hasNext && (
           <div
             data-test-id="viewer-nav--next"
             role="button"
@@ -204,7 +205,8 @@ ViewerControls.propTypes = {
   onNext: PropTypes.func.isRequired,
   isMobile: PropTypes.bool.isRequired,
   expanded: PropTypes.bool.isRequired,
-  controls: PropTypes.bool.isRequired,
+  showToolbar: PropTypes.bool.isRequired,
+  showNavigation: PropTypes.bool.isRequired,
   isMobileApp: PropTypes.bool.isRequired
 }
 export default translate()(ViewerControls)

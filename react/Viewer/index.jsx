@@ -96,7 +96,8 @@ export default class Viewer extends Component {
       currentIndex,
       onClose,
       dark,
-      controls
+      showToolbar,
+      showNavigation
     } = this.props
     const currentFile = files[currentIndex]
     const fileCount = files.length
@@ -115,7 +116,8 @@ export default class Viewer extends Component {
           onNext={this.onNext}
           isMobile={isMobile()}
           expanded={expanded}
-          controls={controls}
+          showToolbar={showToolbar}
+          showNavigation={showNavigation}
           isMobileApp={isMobileApp()}
         >
           {this.renderViewer(currentFile)}
@@ -162,13 +164,15 @@ Viewer.propTypes = {
   currentIndex: PropTypes.number,
   onClose: PropTypes.func.isRequired,
   dark: PropTypes.bool,
-  controls: PropTypes.bool
+  showToolbar: PropTypes.bool,
+  showNavigation: PropTypes.bool
 }
 
 Viewer.defaultProps = {
   currentIndex: 0,
   dark: true,
-  controls: true
+  showToolbar: true,
+  showNavigation: true
 }
 
 // TODO: This is a temporary export for FilesViewer that has to deal with fetching file links on mobile
