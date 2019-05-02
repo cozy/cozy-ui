@@ -1,7 +1,6 @@
 import styles from './styles'
 
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 
 import Hammer from 'hammerjs'
 
@@ -228,14 +227,11 @@ export default class ImageViewer extends Component {
           <ImageLoader
             file={file}
             size="large"
-            ref={photo => {
-              //eslint-disable-next-line
-              this.photo = ReactDOM.findDOMNode(photo)
-            }}
             onError={this.onImageError}
             key={file.id}
             render={src => (
               <img
+                ref={photo => (this.photo = photo)}
                 style={style}
                 alt={file.name}
                 src={src}
