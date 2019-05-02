@@ -7,6 +7,8 @@ outfile="react/Icon/icons-sprite.js"
 icons="assets/icons/ui/album-add.svg
 assets/icons/ui/album-remove.svg
 assets/icons/ui/album.svg
+assets/icons/ui/arrow-left.svg
+assets/icons/ui/arrow-right.svg
 assets/icons/ui/arrow.svg
 assets/icons/ui/back.svg
 assets/icons/ui/bottom-select.svg
