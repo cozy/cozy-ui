@@ -3,6 +3,7 @@ import classNames from 'classnames'
 import Hammer from 'hammerjs'
 import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
+import { withClient } from 'cozy-client'
 import { translate } from '../I18n'
 import Button from '../Button'
 import Icon from '../Icon'
@@ -15,10 +16,6 @@ class ViewerControls extends Component {
   state = {
     hidden: false,
     gestures: null
-  }
-
-  static contextTypes = {
-    client: PropTypes.object.isRequired
   }
 
   _mounted = false
@@ -88,10 +85,10 @@ class ViewerControls extends Component {
       showToolbar,
       showNavigation,
       children,
-      isMobileApp
+      isMobileApp,
+      client
     } = this.props
     const { hidden } = this.state
-    const { client } = this.context
 
     return (
       <div
@@ -200,6 +197,7 @@ class ViewerControls extends Component {
   }
 }
 ViewerControls.propTypes = {
+  client: PropTypes.object.isRequired,
   currentFile: PropTypes.object.isRequired,
   onClose: PropTypes.func.isRequired,
   hasPrevious: PropTypes.bool.isRequired,
@@ -212,4 +210,4 @@ ViewerControls.propTypes = {
   showNavigation: PropTypes.bool.isRequired,
   isMobileApp: PropTypes.bool.isRequired
 }
-export default translate()(ViewerControls)
+export default translate()(withClient(ViewerControls))

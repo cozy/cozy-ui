@@ -1,6 +1,6 @@
-/* global cozy */
 import React from 'react'
 import PropTypes from 'prop-types'
+import { withClient } from 'cozy-client'
 
 const TTL = 10000
 
@@ -11,10 +11,6 @@ const LOADED = 'LOADED'
 const FAILED = 'FAILED'
 
 class ImageLoader extends React.Component {
-  static contextTypes = {
-    client: PropTypes.object.isRequired
-  }
-
   state = {
     status: PENDING,
     src: null
@@ -76,7 +72,7 @@ class ImageLoader extends React.Component {
   async getFileLinks(file) {
     if (file.links) return file.links
     else {
-      const response = await this.context.client
+      const response = await this.props.client
         .collection('io.cozy.files')
         .get(this.getFileId(file))
       if (!response.data.links) throw new Error('Could not fetch file links')
@@ -86,8 +82,7 @@ class ImageLoader extends React.Component {
 
   async loadLink() {
     this.setState({ status: LOADING_LINK })
-    const { file, size } = this.props
-    const { client } = this.context
+    const { file, size, client } = this.props
 
     try {
       const links = await this.getFileLinks(file, size)
@@ -128,13 +123,9 @@ class ImageLoader extends React.Component {
   }
 
   getDownloadLink(fileId) {
-    return this.context.client
-      ? this.context.client
-          .collection('io.cozy.files')
-          .getDownloadLinkById(fileId)
-      : cozy.client.files
-          .getDownloadLinkById(fileId)
-          .then(path => `${cozy.client._url}${path}`)
+    return this.props.client
+      .collection('io.cozy.files')
+      .getDownloadLinkById(fileId)
   }
 
   render() {
@@ -160,4 +151,4 @@ ImageLoader.defaultProps = {
   onError: () => {}
 }
 
-export default ImageLoader
+export default withClient(ImageLoader)

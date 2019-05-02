@@ -2,6 +2,7 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { withClient } from 'cozy-client'
 import Spinner from '../Spinner'
 import withFileUrl from './withFileUrl'
 import styles from './styles'
@@ -35,11 +36,6 @@ class TextViewer extends React.Component {
     loading: true,
     error: null
   }
-
-  static contextTypes = {
-    client: PropTypes.object.isRequired
-  }
-
   _mounted = false
 
   componentDidMount() {
@@ -55,7 +51,7 @@ class TextViewer extends React.Component {
     const { url, file } = this.props
     try {
       const parsedURL = new URL(url)
-      const client = this.context.client.getClient()
+      const client = this.props.client.getClient()
       const response = await client.fetch('GET', parsedURL.pathname)
       const text = await response.text()
       const isMarkdown = file.mime === 'text/markdown' || /.md$/.test(file.name)
@@ -100,4 +96,15 @@ class TextViewer extends React.Component {
   }
 }
 
-export default withFileUrl(TextViewer)
+TextViewer.propTypes = {
+  client: PropTypes.object.isRequired,
+  url: PropTypes.string.isRequired,
+  file: PropTypes.shape({
+    _id: PropTypes.string,
+    class: PropTypes.string,
+    mime: PropTypes.string,
+    name: PropTypes.string
+  }).isRequired
+}
+
+export default withFileUrl(withClient(TextViewer))
