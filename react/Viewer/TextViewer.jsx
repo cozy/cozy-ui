@@ -9,25 +9,21 @@ import NoViewer from './NoViewer'
 
 const MarkdownRenderer = ({ text }) => (
   <ReactMarkdown
-    className={cx(styles['pho-viewer-textviewer-content'], 'u-p-1')}
+    className={cx(styles['viewer-textviewer-content'], 'u-p-1')}
     source={text}
   />
 )
 
 const PlainTextRenderer = ({ text }) => (
   <pre
-    className={cx(
-      styles['pho-viewer-textviewer-content'],
-      'u-mh-auto',
-      'u-mv-2'
-    )}
+    className={cx(styles['viewer-textviewer-content'], 'u-mh-auto', 'u-mv-2')}
   >
     {text}
   </pre>
 )
 
 const Loader = () => (
-  <div className={styles['pho-viewer-textviewer']}>
+  <div className={styles['viewer-textviewer']}>
     <Spinner size="xxlarge" middle noMargin color="white" />
   </div>
 )
@@ -90,11 +86,8 @@ class TextViewer extends React.Component {
     else if (error) return <NoViewer file={file} fallbackUrl={url} />
     else
       return (
-        <div
-          data-test-id="viewer-text"
-          className={styles['pho-viewer-textviewer']}
-        >
-          <h2 className={cx(styles['pho-viewer-filename'], 'u-mt-3', 'u-mb-1')}>
+        <div data-test-id="viewer-text" className={styles['viewer-textviewer']}>
+          <h2 className={cx(styles['viewer-filename'], 'u-mt-3', 'u-mb-1')}>
             {file.name}
           </h2>
           {isMarkdown ? (

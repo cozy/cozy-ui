@@ -115,14 +115,14 @@ export class PdfJsViewer extends Component {
     return (
       <div
         data-test-id="viewer-pdf"
-        className={styles['pho-viewer-pdfviewer']}
+        className={styles['viewer-pdfviewer']}
         ref={ref => (this.wrapper = ref)}
       >
         <Document
           file={url}
           onLoadSuccess={this.onLoadSuccess}
           onLoadError={this.onLoadError}
-          className={styles['pho-viewer-pdfviewer-pdf']}
+          className={styles['viewer-pdfviewer-pdf']}
           loading={<Spinner size="xxlarge" middle noMargin color="white" />}
         >
           {renderAllPages ? (
@@ -132,7 +132,7 @@ export class PdfJsViewer extends Component {
                 pageNumber={page + 1}
                 width={pageWidth}
                 renderAnnotations={false}
-                className={cx('u-mv-1', styles['pho-viewer-pdfviewer-page'])}
+                className={cx('u-mv-1', styles['viewer-pdfviewer-page'])}
               />
             ))
           ) : (
@@ -140,14 +140,12 @@ export class PdfJsViewer extends Component {
               pageNumber={currentPage}
               width={pageWidth}
               renderAnnotations={false}
-              className={styles['pho-viewer-pdfviewer-page']}
+              className={styles['viewer-pdfviewer-page']}
             />
           )}
         </Document>
         {loaded && (
-          <div
-            className={cx(styles['pho-viewer-pdfviewer-toolbar'], 'u-p-half')}
-          >
+          <div className={cx(styles['viewer-pdfviewer-toolbar'], 'u-p-half')}>
             {!renderAllPages && (
               <span className="u-mh-half">
                 <ToolbarButton

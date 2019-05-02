@@ -23,8 +23,8 @@ import { isMobileApp, isMobile } from 'cozy-device-helper'
 const ViewerWrapper = ({ className, children, dark }) => (
   <div
     data-test-id="viewer-wrapper"
-    className={cx(styles['pho-viewer-wrapper'], className, {
-      [styles['pho-viewer-wrapper--light']]: !dark
+    className={cx(styles['viewer-wrapper'], className, {
+      [styles['viewer-wrapper--light']]: !dark
     })}
     role="viewer"
   >

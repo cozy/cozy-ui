@@ -8,7 +8,7 @@ import styles from '../styles.styl'
 
 const DownloadButton = ({ t, file }, { client }) => (
   <Button
-    className={styles['pho-viewer-noviewer-download']}
+    className={styles['viewer-noviewer-download']}
     onClick={() => client.collection('io.cozy.files').download(file)}
     label={t('Viewer.noviewer.download')}
   />
@@ -25,12 +25,9 @@ class NoViewer extends React.Component {
   render() {
     const { t, file, fallbackUrl = false } = this.props
     return (
-      <div
-        data-test-id="viewer-noviewer"
-        className={styles['pho-viewer-noviewer']}
-      >
+      <div className={styles['viewer-noviewer']}>
         <FileIcon type={file.class} />
-        <p className={styles['pho-viewer-filename']}>{file.name}</p>
+        <p className={styles['viewer-filename']}>{file.name}</p>
         <DownloadButton t={t} file={file} />
       </div>
     )

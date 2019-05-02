@@ -2,7 +2,7 @@
 @require 'settings/breakpoints.styl'
 @require 'settings/palette.styl'
 
-.pho-viewer-controls
+.viewer-controls
     display         flex
     flex-direction  column
     justify-content center
@@ -10,7 +10,7 @@
     width           100%
     height          100%
 
-.pho-viewer-nav
+.viewer-nav
     position   absolute
     top        5.625rem
     bottom     0
@@ -34,22 +34,22 @@
         transition        none
     &--previous
         left 0
-        .pho-viewer-nav-arrow
+        .viewer-nav-arrow
             align-self          flex-start
             margin-left         2.5rem
             background-image    embedurl('../../assets/icons/ui/arrow-left.svg')
     &--next
         right 0
-        .pho-viewer-nav-arrow
+        .viewer-nav-arrow
             align-self          flex-end
             margin-right        2.5rem
             background-image    embedurl('../../assets/icons/ui/arrow-right.svg')
 
-.pho-viewer-controls.--expanded .pho-viewer-nav
+.viewer-controls.--expanded .viewer-nav
     margin-top 0
     width      40%
 
-.pho-viewer-nav-arrow
+.viewer-nav-arrow
     height 4.375rem
     width  4.375rem
     border-radius       50%
@@ -58,7 +58,7 @@
     background-repeat   no-repeat
     background-position center center
 
-.pho-viewer-toolbar
+.viewer-toolbar
     position    absolute
     top 0
     z-index     $modal-index + 1
@@ -79,7 +79,7 @@
     +medium-screen()
         height  3rem
 
-.pho-viewer-toolbar-actions
+.viewer-toolbar-actions
     position          static
     z-index           0
     display           flex
@@ -96,7 +96,7 @@
         &:focus
             color white
 
-.pho-viewer-toolbar-close
+.viewer-toolbar-close
     position         absolute
     top              0
     right            0

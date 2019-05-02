@@ -93,9 +93,9 @@ class ViewerControls extends Component {
 
     return (
       <div
-        data-test-id="pho-viewer-controls"
-        className={classNames(styles['pho-viewer-controls'], {
-          [styles['pho-viewer-controls--expanded']]: expanded
+        data-test-id="viewer-controls"
+        className={classNames(styles['viewer-controls'], {
+          [styles['viewer-controls--expanded']]: expanded
         })}
         ref={wrapped => {
           this.wrapped = wrapped
@@ -104,16 +104,16 @@ class ViewerControls extends Component {
         {controls && (
           <div
             data-test-id="viewer-toolbar"
-            className={classNames(styles['pho-viewer-toolbar'], {
-              [styles['pho-viewer-toolbar--hidden']]: hidden,
-              [styles['pho-viewer-toolbar--mobilebrowser']]:
+            className={classNames(styles['viewer-toolbar'], {
+              [styles['viewer-toolbar--hidden']]: hidden,
+              [styles['viewer-toolbar--mobilebrowser']]:
                 !isMobileApp && isMobile
             })}
             role="viewer-toolbar"
             onMouseEnter={this.showControls}
             onMouseLeave={this.hideControls}
           >
-            <div className={classNames(styles['pho-viewer-toolbar-actions'])}>
+            <div className={classNames(styles['viewer-toolbar-actions'])}>
               {!isMobile && (
                 <Button
                   data-test-id="viewer-toolbar-download"
@@ -128,7 +128,7 @@ class ViewerControls extends Component {
             </div>
             {onClose && (
               <div
-                className={styles['pho-viewer-toolbar-close']}
+                className={styles['viewer-toolbar-close']}
                 onClick={onClose}
                 title={t('Viewer.close')}
               >
@@ -150,17 +150,17 @@ class ViewerControls extends Component {
             data-test-id="viewer-nav--previous"
             role="button"
             className={classNames(
-              styles['pho-viewer-nav'],
-              styles['pho-viewer-nav--previous'],
+              styles['viewer-nav'],
+              styles['viewer-nav--previous'],
               {
-                [styles['pho-viewer-nav--visible']]: !hidden
+                [styles['viewer-nav--visible']]: !hidden
               }
             )}
             onClick={onPrevious}
             onMouseEnter={this.showControls}
             onMouseLeave={this.hideControls}
           >
-            <div className={styles['pho-viewer-nav-arrow']} />
+            <div className={styles['viewer-nav-arrow']} />
           </div>
         )}
         {this.renderChildren(children)}
@@ -169,17 +169,17 @@ class ViewerControls extends Component {
             data-test-id="viewer-nav--next"
             role="button"
             className={classNames(
-              styles['pho-viewer-nav'],
-              styles['pho-viewer-nav--next'],
+              styles['viewer-nav'],
+              styles['viewer-nav--next'],
               {
-                [styles['pho-viewer-nav--visible']]: !hidden
+                [styles['viewer-nav--visible']]: !hidden
               }
             )}
             onClick={onNext}
             onMouseEnter={this.showControls}
             onMouseLeave={this.hideControls}
           >
-            <div className={styles['pho-viewer-nav-arrow']} />
+            <div className={styles['viewer-nav-arrow']} />
           </div>
         )}
       </div>
