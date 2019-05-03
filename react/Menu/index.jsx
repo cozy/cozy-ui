@@ -98,6 +98,11 @@ class Menu extends Component {
       component,
       itemsStyle,
       popover,
+      // destructure some props to avoid to pass them to div
+      /* eslint-disable no-unused-vars */
+      onSelect,
+      onSelectDisabled,
+      /* eslint-enable no-unused-vars */
       ...restProps
     } = this.props
     const { opened } = this.state
