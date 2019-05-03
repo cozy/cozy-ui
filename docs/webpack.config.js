@@ -33,7 +33,6 @@ module.exports = {
       },
       {
         test: /\.(png|gif|jpe?g|svg)$/i,
-        exclude: /(sprites|public)/,
         loader: 'url-loader'
       }
     ]
