@@ -5,7 +5,7 @@ import cx from 'classnames'
 import { withClient } from 'cozy-client'
 import Spinner from '../Spinner'
 import withFileUrl from './withFileUrl'
-import styles from './styles'
+import styles from './styles.styl'
 import NoViewer from './NoViewer'
 
 const MarkdownRenderer = ({ text }) => (

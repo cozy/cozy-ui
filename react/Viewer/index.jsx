@@ -10,7 +10,7 @@ import PdfJsViewer from './PdfJsViewer'
 import TextViewer from './TextViewer'
 import NoViewer from './NoViewer'
 
-import styles from './styles'
+import styles from './styles.styl'
 
 const KEY_CODE_LEFT = 37
 const KEY_CODE_RIGHT = 39

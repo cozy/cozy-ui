@@ -168,7 +168,8 @@
     "moduleNameMapper": {
       "\\.(png|gif|jpe?g|svg)$": "<rootDir>/test/__mocks__/fileMock.js",
       "\\.styl$": "identity-obj-proxy",
-      "react-styleguidist.+\\.jsx?$": "babel-jest"
+      "react-styleguidist.+\\.jsx?$": "babel-jest",
+      "react-pdf/dist/entry.webpack.js": "react-pdf"
     },
     "globals": {
       "__ALLOW_HTTP__": false,

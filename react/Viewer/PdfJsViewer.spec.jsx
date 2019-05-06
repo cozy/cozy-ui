@@ -1,6 +1,6 @@
-import { PdfJsViewer, MIN_SCALE, MAX_SCALE, MAX_PAGES } from './PdfJsViewer'
 import React from 'react'
 import { shallow } from 'enzyme'
+import { PdfJsViewer, MIN_SCALE, MAX_SCALE, MAX_PAGES } from './PdfJsViewer'
 
 describe('PDFViewer', () => {
   let component
@@ -12,7 +12,7 @@ describe('PDFViewer', () => {
     }))
   }
   beforeEach(() => {
-    component = shallow(<PdfJsViewer url={'test'} gestures={gesturesMock} />)
+    component = shallow(<PdfJsViewer url={'test'} file={{}} gestures={gesturesMock} />)
   })
   afterEach(() => {
     jest.clearAllMocks()
@@ -144,8 +144,7 @@ describe('PDFViewer', () => {
     it('should show a fallback', () => {
       component.instance().onLoadError('pdfviewer test error')
       expect(component.state('errored')).toBe(true)
-      const wrapper = component.find('Wrapper')
-      const noViewer = wrapper.dive().find('NoViewer')
+      const noViewer = component.find('NoViewer')
       expect(noViewer.length).toBe(1)
     })
   })

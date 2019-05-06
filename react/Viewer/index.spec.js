@@ -1,4 +1,4 @@
-import { isPlainText } from './Viewer'
+import { isPlainText } from './index.jsx'
 
 describe('Plain text file detection', () => {
   describe('using mime types', () => {

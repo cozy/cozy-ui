@@ -1,8 +1,8 @@
-import styles from './styles'
-
 import React, { Component } from 'react'
 
 import Hammer from 'hammerjs'
+
+import styles from './styles.styl'
 
 import Spinner from '../Spinner'
 import ImageLoader from './ImageLoader'

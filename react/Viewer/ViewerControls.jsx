@@ -8,7 +8,7 @@ import { translate } from '../I18n'
 import Button from '../Button'
 import Icon from '../Icon'
 
-import styles from './styles'
+import styles from './styles.styl'
 
 const ACTIONS_HIDE_DELAY = 3000
 
