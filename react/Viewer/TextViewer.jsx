@@ -76,10 +76,16 @@ class TextViewer extends React.Component {
 
   render() {
     const { loading, error, text, isMarkdown } = this.state
-    const { file } = this.props
+    const { file, renderFallbackExtraContent } = this.props
 
     if (loading) return <Loader />
-    else if (error) return <NoViewer file={file} />
+    else if (error)
+      return (
+        <NoViewer
+          file={file}
+          renderFallbackExtraContent={renderFallbackExtraContent}
+        />
+      )
     else
       return (
         <div className={styles['viewer-textviewer']}>
@@ -104,7 +110,8 @@ TextViewer.propTypes = {
     class: PropTypes.string,
     mime: PropTypes.string,
     name: PropTypes.string
-  }).isRequired
+  }).isRequired,
+  renderFallbackExtraContent: PropTypes.func
 }
 
 export default withFileUrl(withClient(TextViewer))

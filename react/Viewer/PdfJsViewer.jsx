@@ -98,7 +98,7 @@ export class PdfJsViewer extends Component {
   }
 
   render() {
-    const { url, file } = this.props
+    const { url, file, renderFallbackExtraContent } = this.props
     const {
       loaded,
       errored,
@@ -109,7 +109,13 @@ export class PdfJsViewer extends Component {
       renderAllPages
     } = this.state
 
-    if (errored) return <NoViewer file={file} />
+    if (errored)
+      return (
+        <NoViewer
+          file={file}
+          renderFallbackExtraContent={renderFallbackExtraContent}
+        />
+      )
     const pageWidth = width ? width * scale : null // newer versions of react-pdf do that automatically
 
     return (
@@ -182,7 +188,8 @@ export class PdfJsViewer extends Component {
 
 PdfJsViewer.propTypes = {
   url: PropTypes.string.isRequired,
-  gestures: PropTypes.object
+  gestures: PropTypes.object,
+  renderFallbackExtraContent: PropTypes.func
 }
 
 export default withFileUrl(PdfJsViewer)

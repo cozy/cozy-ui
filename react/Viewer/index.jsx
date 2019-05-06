@@ -125,9 +125,15 @@ export default class Viewer extends Component {
 
   renderViewer(file) {
     if (!file) return null
-    const { onClose } = this.props
+    const { onClose, renderFallbackExtraContent } = this.props
     const ComponentName = this.getViewerComponentName(file)
-    return <ComponentName file={file} onClose={onClose} />
+    return (
+      <ComponentName
+        file={file}
+        onClose={onClose}
+        renderFallbackExtraContent={renderFallbackExtraContent}
+      />
+    )
   }
 
   getViewerComponentName(file) {
@@ -167,7 +173,9 @@ Viewer.propTypes = {
   /** Whether to show the toolbar or not. Note that the built-in close button is in the toolbar. */
   showToolbar: PropTypes.bool,
   /** Weather to show left and right arrows to navigate between files */
-  showNavigation: PropTypes.bool
+  showNavigation: PropTypes.bool,
+  /** A render prop that is called when a file can't be displayed */
+  renderFallbackExtraContent: PropTypes.func
 }
 
 Viewer.defaultProps = {
