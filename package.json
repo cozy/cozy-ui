@@ -110,7 +110,6 @@
     "body-scroll-lock": "^2.5.8",
     "classnames": "^2.2.5",
     "date-fns": "^1.28.5",
-    "enzyme-to-json": "^3.3.5",
     "hammerjs": "^2.0.8",
     "node-polyglot": "^2.2.2",
     "normalize.css": "^7.0.0",
