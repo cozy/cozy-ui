@@ -99,11 +99,8 @@ $button
             cursor not-allowed
 
     &[aria-busy=true]
-        > span::after
-            @extend    $icon-16
-            @extend    $icon-spinner-white
-            position   relative
-            top        rem(-1)
+        opacity .5
+        pointer-events none
 
     themedBtn(regularTheme)
 
@@ -130,35 +127,10 @@ $button--text
 
 // @stylint on
 
-/* specific case for spinner */
-$button--danger-outline
-    &[aria-busy=true]
-        > span::after
-            @extend  $icon-spinner-red
-
-$button--secondary
-    &[aria-busy=true]
-        > span::after
-            @extend  $icon-spinner-blue
 $button--text
     &:hover
     &:focus
         color var(--scienceBlue)
-
-    &[aria-busy=true]
-        > span::after
-            @extend    $icon-spinner-blue
-/* end specific case for spinner */
-
-$link--upload
-    background-image     embedurl('../assets/icons/ui/upload-grey08.svg')
-    background-position  rem(16) center
-    background-repeat    no-repeat
-
-$link--delete
-    background-image     embedurl('../assets/icons/ui/delete-grey08.svg')
-    background-position  rem(16) center
-    background-repeat    no-repeat
 
 $button--action
     @extend $button--alpha
@@ -243,6 +215,7 @@ $button-client
     justify-content   center
     align-items       center
     height            auto
+    min-height        rem(56)
     margin            0
     padding-left      rem(16)
     padding-right     rem(16)
@@ -256,15 +229,13 @@ $button-client
     &:visited
         color var(--slateGrey)
 
-    &:before
-        content           ''
-        flex              0 0 rem(32)
-        height            rem(32)
-        margin-right      rem(12)
-        background        embedurl('../assets/icons/ui/device-laptop.svg') 0 0 / contain no-repeat
-
     span
         flex  0 1 auto
+
+    figure
+        flex 0 0 rem(32)
+        margin 0 rem(12) 0 0
+
 
 $button-client-mobile
     @extend $button-client
@@ -273,6 +244,7 @@ $button-client-mobile
     background-color var(--dodgerBlue)
     border           0
     border-radius    0
+    margin           0
     padding          rem(8 48 8 16)
     font-size        rem(16)
     font-weight      normal
@@ -293,12 +265,14 @@ $button-client-mobile
     &:focus
         background-color var(--dodgerBlue)
 
-    &:before
+    figure
         flex                0 0 rem(44)
-        height              rem(44)
         border-radius       rem(8)
         border              rem(5) solid white
-        background          white embedurl('../assets/icons/ui/cozy.svg') 0 0 / contain no-repeat
+        background-color    white
+
+        svg
+            display block
 
 /*------------------------------------*\
   Sizes
@@ -502,18 +476,20 @@ $button-subtle
         &:hover
             background transparent
 
+    &[aria-busy=true]
+        opacity .5
+        cursor not-allowed
+        pointer-events none
+
+        &:hover
+            background transparent
+
     &:active
     &:hover
     &:focus
     &:visited
         color var(--scienceBlue)
         background transparent
-
-    &[aria-busy=true] > span::after
-        @extend $icon-16
-        @extend $icon-spinner-blue
-        position relative
-        top rem(-1)
 
     * + &
         margin-left rem(1)
@@ -530,14 +506,8 @@ $button-subtle--large
 $button-subtle--danger
     themedBtnSubtle(dangerTheme)
 
-    &[aria-busy=true] > span::after
-        @extend $icon-spinner-red
-
 $button-subtle--highlight
     themedBtnSubtle(highlightTheme)
-
-    &[aria-busy=true] > span::after
-        @extend $icon-spinner-grey
 
 $button-subtle--regular
     themedBtnSubtle(regularTheme)
@@ -546,9 +516,6 @@ $button-subtle--secondary
     // Not using themedBtnSubtle(secondaryTheme) because
     // silver color for a single text was too bright
     color var(--slateGrey)
-
-    &[aria-busy=true] > span::after
-        @extend $icon-spinner-grey
 
     &:active
     &:focus

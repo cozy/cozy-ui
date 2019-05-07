@@ -101,44 +101,5 @@ $spin-anim
     // so that scoping works
     animation  spin 1s linear infinite
 
-
-/*------------------------------------*\
-  Spinners
-\*------------------------------------*/
-/*
-    Spinners
-
-    Collection of available spinners with different colors
-
-    $icon-spinner-grey  - grey colored spinner
-    $icon-spinner-white - white colored spinner
-    $icon-spinner-blue  - blue colored spinner
-    $icon-spinner-red   - red colored spinner
-
-    Weight: 3
-
-    Styleguide Settings.icons.spinners
-*/
-
 $icon-spin
     @extend           $spin-anim
-
-$icon-spinner-grey
-    @extend           $icon
-    @extend           $spin-anim
-    background-image  embedurl('../../assets/icons/ui/spinner-grey.svg')
-
-$icon-spinner-white
-    @extend           $icon
-    @extend           $spin-anim
-    background-image  embedurl('../../assets/icons/ui/spinner-white.svg')
-
-$icon-spinner-blue
-    @extend           $icon
-    @extend           $spin-anim
-    background-image  embedurl('../../assets/icons/ui/spinner-blue.svg')
-
-$icon-spinner-red
-    @extend           $icon
-    @extend           $spin-anim
-    background-image  embedurl('../../assets/icons/ui/spinner-red.svg')

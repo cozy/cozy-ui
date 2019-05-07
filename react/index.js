@@ -1,6 +1,8 @@
 export { default as Alerter } from './Alerter'
 export { default as Badge } from './Badge'
 export { Button, ButtonLink } from './Button'
+export { default as ButtonClient } from './PushClientButton'
+export { default as BannerClient } from './PushClientBanner'
 export { default as ButtonAction } from './ButtonAction'
 export { default as I18n, translate } from './I18n'
 export { default as Icon, Sprite as IconSprite } from './Icon'

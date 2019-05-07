@@ -1,0 +1,33 @@
+@require '../../stylus/components/button.styl'
+@require '../../stylus/settings/breakpoints.styl'
+
+.c-banner-client
+    position relative
+
+    +small-screen('min')
+        margin-top     -1.875rem
+        margin-bottom  1.875rem
+
+    .c-btn-clientMobile
+        @extend $button-client-mobile
+
+        +medium-screen('min')
+            display none
+
+    .c-banner-text
+        @extend $button-client-mobile
+        cursor default
+
+        +medium-screen()
+            display none
+
+        > span
+            padding-right 2rem
+            justify-content flex-start
+
+    .close-banner
+        position   absolute
+        right      0
+        top        50%
+        transform  translateY(-50%)
+        margin     0
