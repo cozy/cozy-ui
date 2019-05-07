@@ -1,4 +1,3 @@
-/* global cozy */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Spinner from '../Spinner'
@@ -52,15 +51,10 @@ const withFileUrl = BaseComponent =>
         })
     }
 
-    // for compatibility reasons, we try to use cozy-client but fallback on cozy-client-js
     getDownloadLink(file) {
       return this.context.client
-        ? this.context.client
             .collection('io.cozy.files')
             .getDownloadLinkById(file._id)
-        : cozy.client.files
-            .getDownloadLinkById(file._id)
-            .then(path => `${cozy.client._url}${path}`)
     }
 
     clearTimeout() {
