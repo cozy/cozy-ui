@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DeviceIcon from '../../assets/icons/illus/device-laptop.svg'
+import DeviceIcon from 'cozy-ui/assets/icons/illus/device-laptop.svg'
 
 const ButtonClient = props => {
   const { label, href, onClick, className } = props
