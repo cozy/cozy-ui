@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ReactSelect, { components } from 'react-select'
+import classNames from 'classnames'
+
+import { isIOSApp } from 'cozy-device-helper'
 
 import styles from './styles.styl'
 import Icon from '../Icon'
 import { dodgerBlue, silver, coolGrey } from '../palette'
 import withBreakpoints from '../helpers/withBreakpoints'
-import classNames from 'classnames'
 
 const heights = {
   tiny: '2rem',
@@ -311,7 +313,15 @@ class SelectBox extends Component {
         // react-select temporarily adds className to its innerComponents
         // but this behavior will soon be removed. For the moment, we
         // cancel it by setting it to empty string
-        classNamePrefix={classNamePrefix || ''}
+        // needsclick is added only on iOS App since fastclik tries to handle
+        // the click and catch the event.
+        classNamePrefix={
+          isIOSApp()
+            ? `needsclick ${classNamePrefix ? classNamePrefix : ''}`
+            : classNamePrefix
+            ? classNamePrefix
+            : ''
+        }
         selectProps={{ name }}
       />
     )
@@ -343,5 +353,6 @@ export {
   ActionsOption,
   computedMenuListHeightStyles,
   reactSelectControl,
-  components
+  components,
+  SelectBox
 }
