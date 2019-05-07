@@ -35,20 +35,20 @@ const withFileUrl = BaseComponent =>
       }
     }
 
-    loadDownloadUrl() {
+    async loadDownloadUrl() {
       this.timeout = setTimeout(
         () => this.setState(state => ({ ...state, status: FAILED })),
         TTL
       )
-      this.getDownloadLink(this.props.file)
-        .then(url => {
-          this.clearTimeout()
-          this.setState({ downloadUrl: url, status: LOADED })
-        })
-        .catch(() => {
-          this.clearTimeout()
-          this.setState(state => ({ ...state, status: FAILED }))
-        })
+      try {
+        const url = await this.getDownloadLink(this.props.file)
+        this.clearTimeout()
+        this.setState({ downloadUrl: url, status: LOADED })
+      }
+      catch (err) {
+        this.clearTimeout()
+        this.setState(state => ({ ...state, status: FAILED }))
+      }
     }
 
     getDownloadLink(file) {
