@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectBox needsclick shoudl add needclick if iOS 1`] = `
+<StateManager
+  className="styles__select--autowidth___16AEp"
+  classNamePrefix="needsclick "
+  components={
+    Object {
+      "DropdownIndicator": [Function],
+      "Option": [Function],
+    }
+  }
+  defaultInputValue=""
+  defaultMenuIsOpen={false}
+  defaultValue={null}
+  onMenuClose={[Function]}
+  onMenuOpen={[Function]}
+  selectProps={
+    Object {
+      "name": undefined,
+    }
+  }
+  size="large"
+  styles={
+    Object {
+      "control": [Function],
+      "dropdownIndicator": [Function],
+      "indicatorSeparator": [Function],
+      "menu": [Function],
+      "valueContainer": [Function],
+    }
+  }
+/>
+`;
+
+exports[`SelectBox needsclick should not add needclicks if not on iOS 1`] = `
+<StateManager
+  className="styles__select--autowidth___16AEp"
+  classNamePrefix=""
+  components={
+    Object {
+      "DropdownIndicator": [Function],
+      "Option": [Function],
+    }
+  }
+  defaultInputValue=""
+  defaultMenuIsOpen={false}
+  defaultValue={null}
+  onMenuClose={[Function]}
+  onMenuOpen={[Function]}
+  selectProps={
+    Object {
+      "name": undefined,
+    }
+  }
+  size="large"
+  styles={
+    Object {
+      "control": [Function],
+      "dropdownIndicator": [Function],
+      "indicatorSeparator": [Function],
+      "menu": [Function],
+      "valueContainer": [Function],
+    }
+  }
+/>
+`;
