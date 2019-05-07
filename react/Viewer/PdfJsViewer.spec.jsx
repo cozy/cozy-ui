@@ -12,7 +12,9 @@ describe('PDFViewer', () => {
     }))
   }
   beforeEach(() => {
-    component = shallow(<PdfJsViewer url={'test'} file={{}} gestures={gesturesMock} />)
+    component = shallow(
+      <PdfJsViewer url={'test'} file={{}} gestures={gesturesMock} />
+    )
   })
   afterEach(() => {
     jest.clearAllMocks()

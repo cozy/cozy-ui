@@ -44,8 +44,7 @@ const withFileUrl = BaseComponent =>
         const url = await this.getDownloadLink(this.props.file)
         this.clearTimeout()
         this.setState({ downloadUrl: url, status: LOADED })
-      }
-      catch (err) {
+      } catch (err) {
         this.clearTimeout()
         this.setState(state => ({ ...state, status: FAILED }))
       }
@@ -53,8 +52,8 @@ const withFileUrl = BaseComponent =>
 
     getDownloadLink(file) {
       return this.context.client
-            .collection('io.cozy.files')
-            .getDownloadLinkById(file._id)
+        .collection('io.cozy.files')
+        .getDownloadLinkById(file._id)
     }
 
     clearTimeout() {

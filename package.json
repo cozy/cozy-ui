@@ -69,6 +69,7 @@
     "cssnano-preset-advanced": "4.0.7",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.12.1",
+    "enzyme-to-json": "3.3.5",
     "eslint": "4.19.1",
     "eslint-config-cozy-app": "0.5.1",
     "git-directory-deploy": "1.5.1",
@@ -176,6 +177,7 @@
       "__TARGET__": "browser",
       "cozy": {}
     },
-    "testURL": "http://localhost/"
+    "testURL": "http://localhost/",
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   }
 }
