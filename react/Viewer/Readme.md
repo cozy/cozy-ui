@@ -69,8 +69,8 @@ const onFileChange = (file, nextIndex) => setState({ currentFileIndex: nextIndex
         <Viewer
           files={files}
           currentIndex={state.currentFileIndex}
-          onClose={closeViewer}
-          onChange={onFileChange}
+          onCloseRequest={closeViewer}
+          onChangeRequest={onFileChange}
           showNavigation={false}
           showToolbar={true}
         />

@@ -75,14 +75,14 @@ export default class Viewer extends Component {
   }
 
   onClose = () => {
-    if (this.props.onClose) {
-      this.props.onClose()
+    if (this.props.onCloseRequest) {
+      this.props.onCloseRequest()
     }
   }
 
   onChange(nextFile, nextIndex) {
-    if (this.props.onChange) {
-      this.props.onChange(nextFile, nextIndex)
+    if (this.props.onChangeRequest) {
+      this.props.onChangeRequest(nextFile, nextIndex)
     }
   }
 
@@ -124,12 +124,12 @@ export default class Viewer extends Component {
 
   renderViewer(file) {
     if (!file) return null
-    const { onClose, renderFallbackExtraContent } = this.props
+    const { renderFallbackExtraContent } = this.props
     const ComponentName = this.getViewerComponentName(file)
     return (
       <ComponentName
         file={file}
-        onClose={onClose}
+        onClose={this.onClose}
         renderFallbackExtraContent={renderFallbackExtraContent}
       />
     )
@@ -166,7 +166,10 @@ Viewer.propTypes = {
   /** Index of the file to show */
   currentIndex: PropTypes.number,
   className: PropTypes.string,
-  onClose: PropTypes.func,
+  /** Called when the user wants to leave the Viewer */
+  onCloseRequest: PropTypes.func,
+  /** Called with (nextFile, nextIndex) when the user requests to navigate to another file */
+  onChangeRequest: PropTypes.func,
   /** Switch between light and dark mode */
   dark: PropTypes.bool,
   /** Whether to show the toolbar or not. Note that the built-in close button is in the toolbar. */
