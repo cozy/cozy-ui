@@ -91,7 +91,6 @@ export default class Viewer extends Component {
       files,
       className,
       currentIndex,
-      onClose,
       dark,
       showToolbar,
       showNavigation
@@ -106,7 +105,7 @@ export default class Viewer extends Component {
       <ViewerWrapper className={className} dark={dark}>
         <ViewerControls
           currentFile={currentFile}
-          onClose={onClose}
+          onClose={this.onClose}
           hasPrevious={hasPrevious}
           hasNext={hasNext}
           onPrevious={this.onPrevious}
@@ -167,7 +166,7 @@ Viewer.propTypes = {
   /** Index of the file to show */
   currentIndex: PropTypes.number,
   className: PropTypes.string,
-  onClose: PropTypes.func.isRequired,
+  onClose: PropTypes.func,
   /** Switch between light and dark mode */
   dark: PropTypes.bool,
   /** Whether to show the toolbar or not. Note that the built-in close button is in the toolbar. */
