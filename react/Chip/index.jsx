@@ -7,7 +7,12 @@ class Chip extends React.PureComponent {
     const { children, className, ...restProps } = this.props
     return (
       <div
-        className={cx(styles['c-chip'], className, this.constructor.className)}
+        className={cx(
+          styles['c-chip'],
+          'u-breakword',
+          className,
+          this.constructor.className
+        )}
         {...restProps}
       >
         {children}
