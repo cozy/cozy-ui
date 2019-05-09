@@ -71,7 +71,7 @@ const onFileChange = (file, nextIndex) => setState({ currentFileIndex: nextIndex
           currentIndex={state.currentFileIndex}
           onCloseRequest={closeViewer}
           onChangeRequest={onFileChange}
-          showNavigation={false}
+          showNavigation={true}
           showToolbar={true}
         />
       </Overlay>
