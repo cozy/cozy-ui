@@ -327,6 +327,16 @@ $button--round
         width rem(10)
         height rem(10)
 
+    // Expand clickable area for touch devices
+    @media (pointer: coarse)
+        &:after
+            content ''
+            position absolute
+            top rem(-14)
+            right rem(-14)
+            bottom rem(-14)
+            left rem(-14)
+
 /*------------------------------------*\
   Action button
 \*------------------------------------*/

@@ -9,6 +9,17 @@
 </form>
 ```
 
+#### Inline Label (Labels are displayed `block` by default)
+
+```
+<form>
+  <div>
+    <Label htmlFor="idInput2" block={false}>This is an inline label</Label>
+    <Input id="idInput2" placeholder="Recherche" />
+  </div>
+</form>
+```
+
 #### Label when there's an error
 
 ```
