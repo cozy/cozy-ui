@@ -50,8 +50,8 @@
     "*.css"
   ],
   "devDependencies": {
-    "@babel/cli": "7.4.3",
-    "@babel/core": "7.4.3",
+    "@babel/cli": "7.4.4",
+    "@babel/core": "7.4.4",
     "@material-ui/core": "3.9.3",
     "@semantic-release/changelog": "2.1.2",
     "@semantic-release/git": "5.0.0",
