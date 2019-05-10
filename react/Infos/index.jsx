@@ -14,7 +14,8 @@ const Infos = ({ actionButton, icon, isImportant, text, className, title }) => {
         'u-maw-6',
         'u-mih-2',
         'u-bdrs-4',
-        'u-p-1',
+        'u-ph-1',
+        'u-pt-1',
         'u-bg-paleGrey',
         'u-ta-left',
         {
@@ -25,18 +26,14 @@ const Infos = ({ actionButton, icon, isImportant, text, className, title }) => {
     >
       {!!title && (
         <SubTitle
-          className={cx({
+          className={cx('u-mb-1', {
             'u-pomegranate': isImportant
           })}
         >
           {title}
         </SubTitle>
       )}
-      <div
-        className={cx('u-flex', 'u-w-100', 'u-mt-1', {
-          'u-mb-1': !!actionButton
-        })}
-      >
+      <div className={cx('u-flex', 'u-w-100', 'u-mb-1')}>
         {icon && (
           <Icon
             icon={icon}
@@ -56,7 +53,9 @@ const Infos = ({ actionButton, icon, isImportant, text, className, title }) => {
           {text}
         </Text>
       </div>
-      <div className="u-flex-shrink-0">{!!actionButton && actionButton}</div>
+      {!!actionButton && (
+        <div className="u-flex-shrink-0 u-mb-1">{actionButton}</div>
+      )}
     </div>
   )
 }
