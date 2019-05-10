@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import withLocales from '../I18n/withLocales'
+
 import ViewerControls from './ViewerControls'
 import ImageViewer from './ImageViewer'
 import AudioViewer from './AudioViewer'
@@ -11,6 +13,11 @@ import TextViewer from './TextViewer'
 import NoViewer from './NoViewer'
 
 import styles from './styles.styl'
+
+const locales = {
+  en: require(`./locales/en.json`),
+  fr: require(`./locales/fr.json`)
+}
 
 const KEY_CODE_LEFT = 37
 const KEY_CODE_RIGHT = 39
@@ -39,7 +46,7 @@ export const isPlainText = (mimeType = '', fileName = '') => {
   return mimeType ? /^text\//.test(mimeType) : /\.(txt|md)$/.test(fileName)
 }
 
-export default class Viewer extends Component {
+export class Viewer extends Component {
   componentDidMount() {
     document.addEventListener('keyup', this.onKeyUp, false)
   }
@@ -186,3 +193,5 @@ Viewer.defaultProps = {
   showToolbar: true,
   showNavigation: true
 }
+
+export default withLocales(locales)(Viewer)
