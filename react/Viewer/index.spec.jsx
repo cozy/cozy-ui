@@ -1,5 +1,5 @@
 import React from 'react'
-import Viewer, { isPlainText } from './index.jsx'
+import { Viewer, isPlainText } from './index.jsx'
 
 function flushPromises() {
   return new Promise(resolve => setImmediate(resolve))

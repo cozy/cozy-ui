@@ -1,0 +1,8 @@
+{
+  "Viewer": {
+    "download": "Download",
+    "retry": "Retry",
+    "error": "This file could not be loaded. Do you have a working internet connection right now?",
+    "close": "close"
+  }
+}

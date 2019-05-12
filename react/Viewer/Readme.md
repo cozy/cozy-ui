@@ -1,17 +1,10 @@
-The `Viewer` component can be used to display the content of various file types.
-
-In order to download and display the files, it will need a `cozy-client` instance in the React context. It also requires a `t` function in the context to provide translations, as well as the following translated string identifiers:
-
-- `Viewer.error`: When a file can't be loaded.
-- `Viewer.retry`: Button label to retry loading a file.
-- `Viewer.download`: Download the current file.
-- `Viewer.close`: ARIA label for the close button.
+The `Viewer` component can be used to display the content of various file types. In order to download and display the files, it will need a `cozy-client` instance in the React context.
 
 Once rendered, the `Viewer` will take up all the available space in it's container (using `position: absolute`). It can be paired with the `Overlay` component to take up the whole screen.
 
 
 ```
-// The DemoProvider inserts a fake cozy-client and t function in the React context.
+// The DemoProvider inserts a fake cozy-client in the React context.
 const DemoProvider = require('./docs/DemoProvider').default;
 const Overlay = require('../Overlay').default;
 
