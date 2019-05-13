@@ -17,6 +17,7 @@ import ActionMenu from './ActionMenu'
 import Alerter from './Alerter'
 import Avatar from './Avatar'
 import Badge from './Badge'
+import BarButton from './BarButton'
 import Button from './Button'
 import ButtonAction from './ButtonAction'
 import ButtonClient from './PushClientButton'
@@ -70,6 +71,7 @@ const testFromStyleguidist = (name, markdown, require) => {
       'Alerter',
       'Avatar',
       'Badge',
+      'BarButton',
       'Button',
       'ButtonAction',
       'ButtonClient',
@@ -117,6 +119,7 @@ const testFromStyleguidist = (name, markdown, require) => {
       Alerter,
       Avatar,
       Badge,
+      BarButton,
       Button,
       ButtonAction,
       ButtonClient,
