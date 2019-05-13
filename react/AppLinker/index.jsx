@@ -10,10 +10,13 @@ import {
   openDeeplinkOrRedirect,
   isAndroid
 } from 'cozy-device-helper'
-import { generateUniversalLink, getUniversalLinkDomain } from './native'
+import {
+  generateUniversalLink,
+  getUniversalLinkDomain
+} from 'cozy-ui/transpiled/react/AppLinker/native'
 
 import { NATIVE_APP_INFOS } from 'cozy-ui/transpiled/react/AppLinker/native.config'
-import expiringMemoize from './expiringMemoize'
+import expiringMemoize from 'cozy-ui/transpiled/react/AppLinker/expiringMemoize'
 
 const expirationDelay = 10 * 1000
 const memoizedCheckApp = expiringMemoize(

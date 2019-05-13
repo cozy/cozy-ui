@@ -9,7 +9,7 @@ import {
 } from 'cozy-device-helper'
 
 import AppLinker from './index'
-import { generateUniversalLink } from './native'
+import { generateUniversalLink } from 'cozy-ui/transpiled/react/AppLinker/native'
 jest.useFakeTimers()
 
 const tMock = x => x
@@ -34,8 +34,8 @@ class AppItem extends React.Component {
     )
   }
 }
-jest.mock('./native', () => ({
-  ...require.requireActual('./native'),
+jest.mock('cozy-ui/transpiled/react/AppLinker/native', () => ({
+  ...require.requireActual('cozy-ui/transpiled/react/AppLinker/native'),
   generateUniversalLink: jest.fn()
 }))
 
