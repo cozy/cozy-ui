@@ -64,10 +64,7 @@ describe('app icon', () => {
         throw new Error(message)
       }
     })
-    openNativeFromNativeSpy = jest.spyOn(
-      AppLinker.prototype,
-      'openNativeFromNative'
-    )
+    openNativeFromNativeSpy = jest.spyOn(AppLinker, 'openNativeFromNative')
     isMobileApp.mockReturnValue(false)
     isMobile.mockReturnValue(false)
     isAndroid.mockReturnValue(false)

@@ -30,9 +30,6 @@ export class AppLinker extends React.Component {
 
   constructor(props) {
     super(props)
-    this.openWeb = this.openWeb.bind(this)
-    this.openNativeFromNative = this.openNativeFromNative.bind(this)
-    this.openNativeFromWeb = this.openNativeFromWeb.bind(this)
   }
 
   componentDidMount() {
@@ -50,36 +47,50 @@ export class AppLinker extends React.Component {
     }
   }
 
-  onAppSwitch() {
-    const { onAppSwitch } = this.props
-    if (typeof onAppSwitch === 'function') {
-      onAppSwitch()
+  static getOnClickHref(props, nativeAppIsAvailable) {
+    const { slug, nativePath } = props
+    let href = props.href
+    let onClick = null
+    const usingNativeApp = isMobileApp()
+    const appInfo = NATIVE_APP_INFOS[slug]
+    if (usingNativeApp) {
+      if (nativeAppIsAvailable) {
+        // If we are on the native app and the other native app is available,
+        // we open the native app
+        onClick = AppLinker.openNativeFromNative.bind(this, props)
+        href = '#'
+      } else {
+        // If we are on a native app, but the other native app is not available
+        // we open the web link, this is done by the href prop. We still
+        // have to call the prop callback
+        onClick = AppLinker.openWeb.bind(this, props)
+      }
+    } else if (isMobile() && appInfo) {
+      // If we are on the "mobile web version", we try to open the native app
+      // if it exists with an universal links. If it fails, we redirect to the web
+      // version of the requested app
+      // Only on iOS ATM
+      if (isAndroid()) {
+        onClick = AppLinker.openNativeFromWeb.bind(this, props)
+      } else {
+        href = generateUniversalLink({ slug, nativePath, fallbackUrl: href })
+      }
+    }
+
+    return {
+      href,
+      onClick
     }
   }
+  static openNativeFromWeb(props, ev) {
+    const { href, slug, nativePath, onAppSwitch } = props
+    const appInfo = NATIVE_APP_INFOS[slug]
 
-  openNativeFromNative(ev) {
     if (ev) {
       ev.preventDefault()
     }
-    const { slug } = this.props
-    const appInfo = NATIVE_APP_INFOS[slug]
-    this.onAppSwitch()
-    startApp(appInfo).catch(err => {
-      console.error('AppLinker: Could not open native app', err)
-    })
-  }
 
-  //Will be removed soon when Android universallink will be tested
-  openNativeFromWeb(ev) {
-    if (ev) {
-      ev.preventDefault()
-    }
-
-    const { href, slug, nativePath } = this.props
-    const appInfo = NATIVE_APP_INFOS[slug]
-
-    this.onAppSwitch()
-
+    AppLinker.onAppSwitch(onAppSwitch)
     openDeeplinkOrRedirect(
       appInfo.uri + (nativePath === '/' ? '' : nativePath),
       function() {
@@ -88,43 +99,36 @@ export class AppLinker extends React.Component {
     )
   }
 
-  openWeb() {
-    this.onAppSwitch()
+  static onAppSwitch(onAppSwitchFn) {
+    if (typeof onAppSwitchFn === 'function') {
+      onAppSwitchFn()
+    }
+  }
+
+  static openNativeFromNative(props, ev) {
+    const { slug, onAppSwitch } = props
+    if (ev) {
+      ev.preventDefault()
+    }
+    const appInfo = NATIVE_APP_INFOS[slug]
+    AppLinker.onAppSwitch(onAppSwitch)
+    startApp(appInfo).catch(err => {
+      console.error('AppLinker: Could not open native app', err)
+    })
+  }
+
+  static openWeb(props) {
+    AppLinker.onAppSwitch(props.onAppSwitch)
   }
 
   render() {
-    const { children, slug, nativePath } = this.props
+    const { children, slug } = this.props
     const { nativeAppIsAvailable } = this.state
-
     const appInfo = NATIVE_APP_INFOS[slug]
-    let href = this.props.href
-    let onClick = null
-    const usingNativeApp = isMobileApp()
-
-    if (usingNativeApp) {
-      if (nativeAppIsAvailable) {
-        // If we are on the native app and the other native app is available,
-        // we open the native app
-        onClick = this.openNativeFromNative
-        href = '#'
-      } else {
-        // If we are on a native app, but the other native app is not available
-        // we open the web link, this is done by the href prop. We still
-        // have to call the prop callback
-        onClick = this.openWeb
-      }
-    } else if (isMobile() && appInfo) {
-      // If we are on the "mobile web version", we try to open the native app
-      // if it exists with an universal links. If it fails, we redirect to the web
-      // version of the requested app
-      // Only on iOS ATM
-      if (isAndroid()) {
-        onClick = this.openNativeFromWeb
-      } else {
-        href = generateUniversalLink({ slug, nativePath, fallbackUrl: href })
-      }
-    }
-
+    const { href, onClick } = AppLinker.getOnClickHref(
+      this.props,
+      nativeAppIsAvailable
+    )
     return children({ ...appInfo, onClick: onClick, href })
   }
 }
@@ -143,7 +147,8 @@ AppLinker.propTypes = {
   /*
     Path used for "native link"
   */
-  nativePath: PropTypes.string
+  nativePath: PropTypes.string,
+  onAppSwitch: PropTypes.func
 }
 
 export default AppLinker
