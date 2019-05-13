@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Document, Page } from 'react-pdf/dist/entry.webpack.js'
+import { Document, Page } from 'react-pdf'
 import cx from 'classnames'
 import throttle from 'lodash/throttle'
 import { Spinner } from '../Spinner'
