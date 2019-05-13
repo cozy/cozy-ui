@@ -59,6 +59,7 @@
     "autoprefixer-stylus": "0.14.0",
     "babel-loader": "8.0.5",
     "babel-plugin-css-modules-transform": "1.6.2",
+    "babel-plugin-inline-json-import": "0.3.2",
     "babel-preset-cozy-app": "1.5.1",
     "browserslist-config-cozy": "0.2.0",
     "commitlint": "7.6.0",

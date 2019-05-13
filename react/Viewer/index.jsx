@@ -13,10 +13,12 @@ import TextViewer from './TextViewer'
 import NoViewer from './NoViewer'
 
 import styles from './styles.styl'
+import en from './locales/en.json'
+import fr from './locales/fr.json'
 
 const locales = {
-  en: require(`./locales/en.json`),
-  fr: require(`./locales/fr.json`)
+  en,
+  fr
 }
 
 const KEY_CODE_LEFT = 37

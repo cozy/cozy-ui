@@ -7,7 +7,8 @@ const plugins = [
       extractCss: './transpiled/react/stylesheet.css',
       generateScopedName: '[name]__[local]___[hash:base64:5]'
     }
-  ]
+  ],
+  ["inline-json-import", {}]
 ]
 
 module.exports = {

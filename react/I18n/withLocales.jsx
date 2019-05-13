@@ -1,5 +1,5 @@
 import React from 'react'
-import { I18n, translate } from './index.jsx'
+import { I18n, translate } from './'
 
 const withLocales = locales => Component =>
   translate()(props => {
