@@ -1,7 +1,17 @@
 Note :
 
 - The `Viewer` can be used only in a `React Application`. You can't use it with `Preact`.
-- If you want to use the `Viewer` in your app and if you use Webpack, you should add the following alias in your configuration : `react-pdf : react-pdf/dist/entry.webpack.js`. This will make sure a web-worker is used to render PDF files.
+- If you want to use the `Viewer` in your app and if you use Webpack, you should add the following alias in your configuration :
+
+```patch
++ resolve: {
++   alias: {
++     'react-pdf' : 'react-pdf/dist/entry.webpack.js'
++   }
++ }
+```
+
+This will make sure a web-worker is used to render PDF files.
 
 The `Viewer` component can be used to display the content of various file types. In order to download and display the files, it will need a `cozy-client` instance in the React context.
 
