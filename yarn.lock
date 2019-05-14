@@ -944,14 +944,14 @@
     resolve-from "4.0.0"
     resolve-global "0.1.0"
 
-"@commitlint/cli@^7.6.0":
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-7.6.0.tgz#4f046342149ca7c5819d6f799509f77ab824e02e"
-  integrity sha512-3n4qNS1xOIQcL2uLSo+aF8q79kt8qWFUqtVUrlsKsn4B++htJDav3Y2TPjbNXEZD2tO1kg1jfjNE8LLkrHTxqg==
+"@commitlint/cli@^7.6.1":
+  version "7.6.1"
+  resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-7.6.1.tgz#a93cf995082831999937f6d5ec1a582c8fc0393a"
+  integrity sha512-HEJwQ/aK0AOcAwn77ZKbb/GZhlGxBSPhtVp07uoJFVqM12l2Ia2JHA+MTpfHCFdVahKyYGREZgxde6LyKyG8aQ==
   dependencies:
-    "@commitlint/format" "^7.6.0"
+    "@commitlint/format" "^7.6.1"
     "@commitlint/lint" "^7.6.0"
-    "@commitlint/load" "^7.6.0"
+    "@commitlint/load" "^7.6.1"
     "@commitlint/read" "^7.6.0"
     babel-polyfill "6.26.0"
     chalk "2.3.1"
@@ -975,10 +975,18 @@
   dependencies:
     babel-runtime "6.26.0"
 
-"@commitlint/format@^7.5.0", "@commitlint/format@^7.6.0":
+"@commitlint/format@^7.5.0":
   version "7.6.0"
   resolved "https://registry.yarnpkg.com/@commitlint/format/-/format-7.6.0.tgz#f954cd9a8658d0ac3eba1bba6a131f57e3f2b570"
   integrity sha512-Q/gFHImEfGSwp4bSX1ag6C/6GVuMf7KFh3BZIXk9dcbcQbNvyz/NgvS2p/FdZGp6dk8SghXfCiZHNlwNupgbnA==
+  dependencies:
+    babel-runtime "^6.23.0"
+    chalk "^2.0.1"
+
+"@commitlint/format@^7.6.1":
+  version "7.6.1"
+  resolved "https://registry.yarnpkg.com/@commitlint/format/-/format-7.6.1.tgz#106750de50fab7d153eed80e7577c768bb9a3a1b"
+  integrity sha512-Ldzf5N2Sr9RQqvlYwaQn4vz1WOZ7byYinspC/WCrbfcETGy28j7QE4OueZU6nNB9TjwwEorKm13uy7tDWPR7dg==
   dependencies:
     babel-runtime "^6.23.0"
     chalk "^2.0.1"
@@ -1001,10 +1009,22 @@
     babel-runtime "^6.23.0"
     lodash "4.17.11"
 
-"@commitlint/load@^7.5.0", "@commitlint/load@^7.6.0":
+"@commitlint/load@^7.5.0":
   version "7.6.0"
   resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-7.6.0.tgz#c1eccbc0b8714a0c7dc26dacbc49bbc73abc0d27"
   integrity sha512-MNuemmf8ag7hLwypmmvTBLU9W2scTGRB1RfB59MHVG3surLZS/LB5nUgoCHIeAz2KG4W/T4HXJ3G3Yaiw7ML6Q==
+  dependencies:
+    "@commitlint/execute-rule" "^7.6.0"
+    "@commitlint/resolve-extends" "^7.6.0"
+    babel-runtime "^6.23.0"
+    cosmiconfig "^5.2.0"
+    lodash "4.17.11"
+    resolve-from "^5.0.0"
+
+"@commitlint/load@^7.6.1":
+  version "7.6.2"
+  resolved "https://registry.yarnpkg.com/@commitlint/load/-/load-7.6.2.tgz#b5ed8163fa3117d60faf70a4e677b2017bbc71bb"
+  integrity sha512-I+xk+BkXAG1roXNrPsR1eOd5hEa+oLc6HLYnHAT/HLGKKB3E01IGg3O5SGlg7lpf1yiAaYI+wAnNTr3f3sIbWQ==
   dependencies:
     "@commitlint/execute-rule" "^7.6.0"
     "@commitlint/resolve-extends" "^7.6.0"
@@ -3541,12 +3561,12 @@ commitlint-config-cozy@0.3.24:
   dependencies:
     "@commitlint/cli" "7.5.2"
 
-commitlint@7.6.0:
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/commitlint/-/commitlint-7.6.0.tgz#c65db460dbb588fb318a73919e8ca5623b4f83af"
-  integrity sha512-B2Q/G9C5BeQpiA4cA8jlcn3Yqnm5p53fqf2ngwTqAII1tDSzZ8SJ5FL57kJgHt91NVZ/vnkIGuoRCF48ndoexQ==
+commitlint@7.6.1:
+  version "7.6.1"
+  resolved "https://registry.yarnpkg.com/commitlint/-/commitlint-7.6.1.tgz#dfb099e2ee19a2e7c237dc058cf0dd4f140729ac"
+  integrity sha512-UZzzXxbdJGnV+hRPBmmehoX+9igumPK5XEoweNhghMwIoEwN8Y4XcXZcS+a0AIc4bYA8T44qRmhW8Wu1SprLJA==
   dependencies:
-    "@commitlint/cli" "^7.6.0"
+    "@commitlint/cli" "^7.6.1"
     read-pkg "3.0.0"
     resolve-pkg "2.0.0"
 

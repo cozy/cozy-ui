@@ -62,7 +62,7 @@
     "babel-plugin-inline-json-import": "0.3.2",
     "babel-preset-cozy-app": "1.5.1",
     "browserslist-config-cozy": "0.2.0",
-    "commitlint": "7.6.0",
+    "commitlint": "7.6.1",
     "commitlint-config-cozy": "0.3.24",
     "copyfiles": "1.2.0",
     "cozy-device-helper": "1.7.1",
