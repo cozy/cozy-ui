@@ -57,7 +57,7 @@
     "@semantic-release/git": "5.0.0",
     "@semantic-release/npm": "3.4.1",
     "autoprefixer-stylus": "0.14.0",
-    "babel-loader": "8.0.5",
+    "babel-loader": "8.0.6",
     "babel-plugin-css-modules-transform": "1.6.2",
     "babel-plugin-inline-json-import": "0.3.2",
     "babel-preset-cozy-app": "1.5.1",
