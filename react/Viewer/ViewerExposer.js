@@ -1,6 +1,6 @@
 let defaultViewer
 if (process.env.USE_REACT) {
-  defaultViewer = require('./index')
+  defaultViewer = require('./index').default
 } else {
   defaultViewer = ''
 }
