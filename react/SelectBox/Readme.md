@@ -12,7 +12,12 @@ const options = [
   { value: 'long', label: 'Salt and vinegar crisps with vegamite and brussel sprouts, double chai latte sauce' },
 ];
 
-<SelectBox options={options} />
+/**
+ * Setting a background color let us ensure that the selectbox has a background.
+ */
+<div style={{ background:'whitesmoke', padding: '.5em' }}>
+  <SelectBox options={options} />
+</div>
 ```
 
 For example if you want to force the menu to be open:

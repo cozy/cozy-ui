@@ -302,6 +302,8 @@ class SelectBox extends Component {
         {...props}
         isDisabled={disabled}
         className={classNames(
+          // Ensure the selectbox has white background
+          'u-bg-white',
           {
             [styles['select__overlay']]: showOverlay,
             [styles['select--autowidth']]: !fullwidth,
