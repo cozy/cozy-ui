@@ -65,6 +65,7 @@
     "commitlint": "7.6.1",
     "commitlint-config-cozy": "0.3.24",
     "copyfiles": "1.2.0",
+    "cozy-client": "6.31.1",
     "cozy-device-helper": "1.7.1",
     "css-loader": "0.28.11",
     "cssnano": "4.1.10",
@@ -113,7 +114,6 @@
     "@babel/runtime": "^7.3.4",
     "body-scroll-lock": "^2.5.8",
     "classnames": "^2.2.5",
-    "cozy-client": "6.26.0",
     "date-fns": "^1.28.5",
     "hammerjs": "^2.0.8",
     "node-polyglot": "^2.2.2",
@@ -125,6 +125,7 @@
   },
   "peerDependencies": {
     "@material-ui/core": "3.9.3",
+    "cozy-client": "*",
     "cozy-device-helper": "1.7.1",
     "piwik-react-router": "^0.8.2",
     "preact": "^8.3.1",
