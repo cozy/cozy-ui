@@ -108,6 +108,22 @@ const options = [
 </form>
 ```
 
+#### Password field with show/hide button
+
+```
+<form>
+  <Field
+    id="idFieldPassword"
+    label="I'm a password label"
+    type="password"
+    secondaryLabels={{
+      hideLabel: "Hide",
+      showLabel: "Show"
+    }}
+  />
+</form>
+```
+
 #### Password field without show/hide button
 
 ```
@@ -116,7 +132,6 @@ const options = [
     id="idFieldPassword"
     label="I'm a password label"
     type="password"
-    fieldProps={{showVisibilityButton: true}}
   />
 </form>
 ```

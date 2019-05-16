@@ -408,7 +408,7 @@ exports[`Field should render examples: Field 6`] = `
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idFieldPassword\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm a password label</label>
       <div class=\\"styles__o-field-input___vCqdV\\">
-        <div class=\\"styles__c-label___o4ozG styles__o-field-input-action___2k7a8\\"></div><input type=\\"password\\" id=\\"idFieldPassword\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" value=\\"\\">
+        <div class=\\"styles__c-label___o4ozG styles__o-field-input-action___2k7a8\\">Show</div><input type=\\"password\\" id=\\"idFieldPassword\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" value=\\"\\">
       </div>
     </div>
   </form>
@@ -418,6 +418,18 @@ exports[`Field should render examples: Field 6`] = `
 exports[`Field should render examples: Field 7`] = `
 "<div>
   <form>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idFieldPassword\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm a password label</label>
+      <div class=\\"styles__o-field-input___vCqdV\\">
+        <div class=\\"styles__c-label___o4ozG styles__o-field-input-action___2k7a8\\"></div><input type=\\"password\\" id=\\"idFieldPassword\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" value=\\"\\">
+      </div>
+    </div>
+  </form>
+</div>"
+`;
+
+exports[`Field should render examples: Field 8`] = `
+"<div>
+  <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm a label</label>
       <div class=\\"styles__o-side___tXbXL styles__c-label___o4ozG\\">(optional)</div><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" value=\\"\\">
     </div>
@@ -425,7 +437,7 @@ exports[`Field should render examples: Field 7`] = `
 </div>"
 `;
 
-exports[`Field should render examples: Field 8`] = `
+exports[`Field should render examples: Field 9`] = `
 "<div>
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm a label</label>
