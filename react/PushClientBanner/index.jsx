@@ -27,7 +27,7 @@ const BannerClient = props => {
         onClick={onClick}
         label={labelMobile}
       />
-      <p className={styles['c-banner-text']}>
+      <div className={styles['c-banner-text']}>
         <figure>
           <Icon icon="cozy" width="44" height="44" />
         </figure>
@@ -39,7 +39,7 @@ const BannerClient = props => {
           onClick={onClick}
           label={labelDesktop}
         />
-      </p>
+      </div>
       <Button
         theme="close"
         extension="narrow"
