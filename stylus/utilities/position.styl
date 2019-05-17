@@ -1,26 +1,33 @@
+@require '../settings/breakpoints'
 @require '../tools/mixins'
 /*------------------------------------*\
   Position utilities
 \*------------------------------------*/
 
-$position-absolute
+position-absolute()
     position absolute
 
-$position-relative
+position-relative()
     position relative
 
-$position-fixed
+position-fixed()
     position fixed
 
-$position-sticky
+position-sticky()
     position sticky
 
-$position-static
+position-static()
     position static
 
-// Global classes
-global('.u-pos-absolute', $position-absolute)
-global('.u-pos-relative', $position-relative)
-global('.u-pos-fixed', $position-fixed)
-global('.u-pos-sticky', $position-sticky)
-global('.u-pos-static', $position-static)
+props = {
+    'position-absolute': 'pos-absolute',
+    'position-relative': 'pos-relative',
+    'position-fixed': 'pos-fixed',
+    'position-sticky': 'pos-sticky',
+    'position-static': 'pos-static',
+}
+
+if cssmodules == true
+    cssModulesUtils(props, breakpoints)
+else
+    nativeUtils(props, breakpoints)
