@@ -22,9 +22,14 @@ export class AppIcon extends Component {
       icon: preloaded,
       status: preloaded ? DONE : FETCHING
     }
+    this.isUnmounting = false
   }
 
+  componentWillUnmount() {
+    this.isUnmounting = true
+  }
   componentDidMount() {
+    this.isUnmounting = false
     this.load()
   }
 
@@ -38,15 +43,15 @@ export class AppIcon extends Component {
     } catch (error) {
       loadError = error
     }
-
-    this.setState({
-      error: loadError,
-      icon: loadedUrl,
-      status: loadError ? ERRORED : DONE
-    })
-
-    if (typeof onReady === 'function') {
-      onReady()
+    if (!this.isUnmounting) {
+      this.setState({
+        error: loadError,
+        icon: loadedUrl,
+        status: loadError ? ERRORED : DONE
+      })
+      if (typeof onReady === 'function') {
+        onReady()
+      }
     }
   }
 
