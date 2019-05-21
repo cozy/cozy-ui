@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "applications": "Applications",
+    "konnectors": "Services"
+  },
+  "app_item": {
+    "by": "Par",
+    "installed": "Installée",
+    "maintenance": "En maintenance",
+    "update": "Mise à jour dispo."
+  },
+  "app_categories": {
+    "list_separator": ", ",
+    "all": "Toutes les catégories",
+    "konnectors": "Services",
+    "banking": "Banques",
+    "cozy": "Les essentielles",
+    "energy": "Energie",
+    "health": "Santé",
+    "host_provider": "Hébergeur",
+    "insurance": "Assurance",
+    "isp": "Internet",
+    "online_services": "Services en ligne",
+    "others": "Autres",
+    "mes_infos": "Expérimentation MesInfos",
+    "partners": "Partenaires",
+    "productivity": "Productivité",
+    "press": "Presse",
+    "ptnb": "Expérimentation Carnet du Logement",
+    "public_service": "Services publics",
+    "shopping": "Shopping",
+    "social": "Social",
+    "telecom": "Mobile",
+    "transport": "Voyage et transport"
+  }
+}

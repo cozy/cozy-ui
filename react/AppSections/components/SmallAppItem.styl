@@ -1,0 +1,161 @@
+.SmallAppItem
+  --item-size 8rem
+  --item-mobile-height 3rem
+  box-sizing content-box
+  position relative
+  display flex
+  flex-direction column
+  flex-grow 0
+  flex-shrink 0
+  flex-basis var(--item-size)
+  height var(--item-size)
+  align-items center
+  justify-content flex-start
+  background white
+  box-shadow none
+  border-radius 4px
+  border solid 1px var(--silver)
+  padding calc(.75rem / 2 - 1px)
+  margin-bottom 1rem
+  margin-right .75rem
+  overflow hidden
+  transition .15s ease all
+  color var(--black)
+
+
+.SmallAppItem:hover,
+.SmallAppItem:active,
+.SmallAppItem:focus
+  box-shadow 0 4px 12px 0 #00000020
+  cursor pointer
+  transform scale(1.1)
+  transition .15s ease all
+
+
+.SmallAppItem-icon-wrapper
+  margin-top .25rem
+  margin-bottom .25rem
+  width 3rem
+  height 3rem
+
+
+.SmallAppItem-icon-wrapper .SmallAppItem-icon
+  object-fit contain
+  max-width 3rem
+  width auto
+
+
+.SmallAppItem-icon--default
+  height 100%
+  padding 0 .5em
+
+
+.SmallAppItem-desc
+  display flex
+  flex-direction column
+  justify-content flex-start
+  align-items center
+  margin-top .5rem
+  text-align center
+
+
+.SmallAppItem-title, .SmallAppItem-developer, .SmallAppItem-status
+  display block
+  width var(--item-size)
+  margin 0
+  text-overflow ellipsis
+  white-space nowrap
+  overflow hidden
+
+
+.SmallAppItem-title
+  height 1.25rem
+
+
+.SmallAppItem-developer
+  height 1rem
+  font-size 12px
+  color var(--slateGrey)
+
+
+.SmallAppItem-status
+  margin-top .5rem
+  height 1rem
+  font-size 12px
+  color var(--coolGrey)
+
+
+@media (min-width 1041px)
+  .SmallAppItem
+    margin-right 1rem
+  
+
+
+@media (max-width 48rem)
+  .sto-sections-list
+    display flex
+    justify-content space-between
+  
+
+  .SmallAppItem
+    flex-basis calc(50% - 1rem)
+    flex-direction row
+    height var(--item-mobile-height)
+    justify-content flex-start
+    margin-right 0
+    margin-bottom .5rem
+    padding-left .5rem
+  
+
+  .SmallAppItemhover,
+  .SmallAppItemactive,
+  .SmallAppItemfocus
+    box-shadow 0 4px 12px 0 #00000020
+    cursor pointer
+    transform scale(1.01)
+    transition .15s ease all
+  
+
+  .SmallAppItem-icon-wrapper
+    margin-bottom 0
+  
+
+  .SmallAppItem-icon
+    height 2.5rem
+    max-width 2.5rem
+    max-height 2.5rem
+  
+
+  .SmallAppItem-desc
+    margin-top .125rem
+    margin-left .5rem
+    justify-content center
+    text-align left
+    /* 4rem for icon and margins */
+    width calc(100% - 4rem)
+  
+
+  .SmallAppItem-title
+    height 1rem
+    font-weight normal
+    font-size 12px
+  
+
+  .SmallAppItem-title, .SmallAppItem-developer, .SmallAppItem-status
+    width 100%
+  
+
+  .SmallAppItem-developer
+    display none
+  
+
+  .SmallAppItem-status
+    margin-top .125rem
+  
+
+
+@media (max-width 32rem)
+  .SmallAppItem
+    flex-basis calc(100% - .75rem)
+  
+
