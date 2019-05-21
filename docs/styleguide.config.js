@@ -125,16 +125,13 @@ module.exports = {
       base: 'Lato, sans-serif'
     }
   },
-  webpackConfig: webpackMerge(
-    require('./webpack.config.js'),
-    {
-      resolve: {
-        alias: {
-          'cozy-ui': path.join(__dirname, '..')
-        }
+  webpackConfig: webpackMerge(require('./webpack.config.js'), {
+    resolve: {
+      alias: {
+        'cozy-ui': path.join(__dirname, '..')
       }
     }
-  ),
+  }),
   serverPort: 6161,
   skipComponentsWithoutExample: true,
   styleguideDir: path.resolve(__dirname, '../build/react'),
