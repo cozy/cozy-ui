@@ -22,14 +22,14 @@ export class I18n extends Component {
   init(props) {
     const { polyglot, lang, dictRequire, context, defaultLang } = props
 
-    this.translation =
+    this.translator =
       polyglot || initTranslation(lang, dictRequire, context, defaultLang)
     this.format = initFormat(lang, defaultLang)
   }
 
   getChildContext() {
     return {
-      t: this.translation.t.bind(this.translation),
+      t: this.translator.t.bind(this.translator),
       f: this.format,
       lang: this.props.lang
     }
