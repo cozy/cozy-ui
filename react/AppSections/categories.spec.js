@@ -7,6 +7,7 @@ import * as catUtils from './categories'
 import { I18nContext } from '../jestLib/I18n'
 import mockApps from '../mocks/apps'
 import en from './locales/en'
+import mapValues from 'lodash/mapValues'
 
 const i18nContext = I18nContext({
   locale: en
@@ -15,7 +16,9 @@ const tMock = i18nContext.t
 
 describe('groupApps', () => {
   it('should return apps sorted in a dictionnary by categories', () => {
-    expect(catUtils.groupApps(mockApps)).toMatchSnapshot()
+    expect(
+      mapValues(catUtils.groupApps(mockApps), apps => apps.map(x => x.slug))
+    ).toMatchSnapshot()
   })
 })
 
