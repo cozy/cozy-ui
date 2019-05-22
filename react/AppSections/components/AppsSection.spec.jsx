@@ -16,31 +16,27 @@ const i18nContext = I18nContext({ locale: en })
 const tMock = i18nContext.t
 
 describe('AppsSection component', () => {
-  it('should be rendered correctly with apps list, subtitle and onAppClick', () => {
-    const mockOnAppClick = jest.fn()
-    const component = shallow(
+  let component
+  const setup = ({ onAppClick }) => {
+    component = shallow(
       <AppsSection
         t={tMock}
         lang="en"
         subtitle={<h3>Test Apps</h3>}
         appsList={mockApps}
-        onAppClick={mockOnAppClick}
+        onAppClick={onAppClick}
       />
-    ).getElement()
-    expect(component).toMatchSnapshot()
+    )
+  }
+  it('should be rendered correctly with apps list, subtitle and onAppClick', () => {
+    const mockOnAppClick = jest.fn()
+    setup({ onAppClick: mockOnAppClick })
+    expect(component.getElement()).toMatchSnapshot()
   })
 
   it('should run provided onAppClick on SmallAppItem click event', () => {
     const mockOnAppClick = jest.fn()
-    const component = shallow(
-      <AppsSection
-        t={tMock}
-        lang="en"
-        subtitle={<h3>Test Apps</h3>}
-        appsList={mockApps}
-        onAppClick={mockOnAppClick}
-      />
-    )
+    setup({ onAppClick: mockOnAppClick })
     expect(component.find(SmallAppItem).length).toBe(mockApps.length)
     const appItem = component
       .find(SmallAppItem)
