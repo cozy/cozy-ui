@@ -1,6 +1,8 @@
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
+import Icon from '../Icon'
+import palette from '../palette'
 import styles from './styles.styl'
 
 const Checkbox = props => {
@@ -19,6 +21,7 @@ const Checkbox = props => {
     <label
       className={cx(
         styles['c-input-checkbox'],
+        styles['c-input-checkbox--svg'],
         {
           [styles['is-error']]: error
         },
@@ -34,7 +37,17 @@ const Checkbox = props => {
         disabled={disabled}
         {...restProps}
       />
-      <span>{label || children}</span>
+      <span>
+        {/* TODO: Change 'check-circleless' to 'check' when icons are cleaned up */}
+        <Icon
+          icon={mixed ? 'dash' : 'check-circleless'}
+          color={palette['primaryContrastTextColor']}
+          className={styles['c-input-checkbox-icon']}
+          aria-hidden
+          focusable="false"
+        />
+        {label || children}
+      </span>
     </label>
   )
 }
