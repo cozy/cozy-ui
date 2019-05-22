@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "applications": "Applications",
+    "konnectors": "Services"
+  },
+  "app_item": {
+    "by": "By",
+    "installed": "Installed",
+    "maintenance": "In maintenance",
+    "update": "Update available"
+  },
+  "app_categories": {
+    "list_separator": ", ",
+    "all": "All categories",
+    "konnectors": "Services",
+    "banking": "Banking",
+    "cozy": "The essentials",
+    "energy": "Energy",
+    "health": "Health",
+    "host_provider": "Host",
+    "insurance": "Insurance",
+    "isp": "ISP",
+    "online_services": "Online services",
+    "others": "Others",
+    "mes_infos": "MesInfos experimentation",
+    "partners": "Partners",
+    "productivity": "Productivity",
+    "press": "Press",
+    "ptnb": "PTNB experimentation",
+    "public_service": "Public services",
+    "shopping": "Shopping",
+    "social": "Social",
+    "telecom": "Telecom",
+    "transport": "Transportation"
+  }
+}

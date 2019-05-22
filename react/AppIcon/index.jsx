@@ -7,6 +7,7 @@ import Icon from '../Icon'
 import palette from '../palette'
 
 import { getPreloaded, preload } from './Preloader'
+import { AppDoctype } from '../proptypes'
 
 const DONE = 'done'
 const ERRORED = 'errored'
@@ -98,7 +99,7 @@ export class AppIcon extends Component {
 
 AppIcon.propTypes = {
   alt: PropTypes.string,
-  app: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  app: PropTypes.oneOfType([AppDoctype, PropTypes.string]),
   className: PropTypes.string,
   domain: PropTypes.string,
   fetchIcon: PropTypes.func,
