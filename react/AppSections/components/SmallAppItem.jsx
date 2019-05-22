@@ -1,10 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import AppIcon from 'cozy-ui/react/AppIcon'
 import { translate } from 'cozy-ui/react/I18n'
 import styles from './SmallAppItem.styl'
 
 import { getCurrentStatusLabel } from '../status'
+import { AppDoctype } from '../../proptypes'
 
 let dataset
 const getDataset = () => {
@@ -48,6 +50,14 @@ export const SmallAppItem = ({ t, app, name, namePrefix, onClick }) => {
       </div>
     </button>
   )
+}
+
+SmallAppItem.propTypes = {
+  t: PropTypes.func.isRequired,
+  app: AppDoctype,
+  name: PropTypes.string.isRequired,
+  namePrefix: PropTypes.string,
+  onClick: PropTypes.func
 }
 
 export default translate()(SmallAppItem)
