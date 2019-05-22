@@ -4,8 +4,8 @@
 
 import * as catUtils from './categories'
 
-import mockApps from 'ducks/apps/_mockApps'
 import { I18nContext } from '../jestLib/I18n'
+import mockApps from '../mocks/apps'
 import en from './locales/en'
 
 const i18nContext = I18nContext({

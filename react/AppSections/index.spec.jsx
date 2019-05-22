@@ -6,9 +6,9 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import { Sections } from './Sections'
 
-import mockApps from 'ducks/apps/_mockApps'
-import { I18nContext } from '../../jestLib/I18n'
-import en from '../locales/en.json'
+import mockApps from '../mocks/apps'
+import { I18nContext } from '../jestLib/I18n'
+import en from './locales/en.json'
 
 const i18nContext = I18nContext({ locale: en })
 const tMock = i18nContext.t

@@ -3,7 +3,7 @@
 /* eslint-env jest */
 
 import { makeMatcherFromSearch } from './search'
-import mockApps from 'ducks/apps/_mockApps'
+import mockApps from '../mocks/apps'
 
 describe('makeMatcherFromSearch', () => {
   it('should filter correctly on type', () => {

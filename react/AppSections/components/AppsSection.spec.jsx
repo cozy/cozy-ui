@@ -9,7 +9,7 @@ import { I18nContext } from '../../jestLib/I18n'
 import { AppsSection } from './AppsSection'
 import SmallAppItem from './SmallAppItem'
 
-import mockApps from 'ducks/apps/_mockApps'
+import mockApps from '../../mocks/apps'
 import en from '../locales/en'
 
 const i18nContext = I18nContext({ locale: en })
