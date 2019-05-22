@@ -4,9 +4,14 @@
 
 import * as catUtils from './categories'
 
-import { tMock } from 'jestLib/I18n'
-import { extend as extendI18n } from 'cozy-ui/react/I18n'
 import mockApps from 'ducks/apps/_mockApps'
+import { I18nContext } from '../jestLib/I18n'
+import en from './locales/en'
+
+const i18nContext = I18nContext({
+  locale: en
+})
+const tMock = i18nContext.t
 
 describe('groupApps', () => {
   it('should return apps sorted in a dictionnary by categories', () => {

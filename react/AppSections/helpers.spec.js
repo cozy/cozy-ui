@@ -1,6 +1,12 @@
 import { getTranslatedManifestProperty } from './helpers'
+import { extend as extendI18n } from '../I18n'
+import en from './locales/en'
+import { I18nContext } from '../jestLib/I18n'
 
-xdescribe('getTranslatedManifestProperty helper', () => {
+const i18nContext = I18nContext({ locale: en })
+const tMock = i18nContext.t
+
+describe('getTranslatedManifestProperty helper', () => {
   const appMock = {
     slug: 'mock',
     name: 'Not Translated Name',

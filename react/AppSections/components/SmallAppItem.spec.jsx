@@ -5,8 +5,13 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import { tMock } from 'jestLib/I18n'
 import { SmallAppItem } from './SmallAppItem'
+
+import { I18nContext } from '../../jestLib/I18n'
+import en from '../locales/en.json'
+
+const i18nContext = I18nContext({ locale: en })
+const tMock = i18nContext.t
 
 const appMock = {
   slug: 'test',
