@@ -7,6 +7,7 @@ import Spinner from '../Spinner'
 import withFileUrl from './withFileUrl'
 import styles from './styles.styl'
 import NoViewer from './NoViewer'
+import { FileDoctype } from '../proptypes'
 
 const MarkdownRenderer = ({ text }) => (
   <ReactMarkdown
@@ -105,12 +106,7 @@ class TextViewer extends React.Component {
 TextViewer.propTypes = {
   client: PropTypes.object.isRequired,
   url: PropTypes.string.isRequired,
-  file: PropTypes.shape({
-    _id: PropTypes.string,
-    class: PropTypes.string,
-    mime: PropTypes.string,
-    name: PropTypes.string
-  }).isRequired,
+  file: FileDoctype.isRequired,
   renderFallbackExtraContent: PropTypes.func
 }
 

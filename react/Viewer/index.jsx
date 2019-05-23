@@ -15,6 +15,7 @@ import NoViewer from './NoViewer'
 import styles from './styles.styl'
 import en from './locales/en.json'
 import fr from './locales/fr.json'
+import { FileDoctype } from '../proptypes'
 
 const locales = {
   en,
@@ -164,14 +165,7 @@ export class Viewer extends Component {
 
 Viewer.propTypes = {
   /** One or more `io;cozy.files` to display */
-  files: PropTypes.arrayOf(
-    PropTypes.shape({
-      _id: PropTypes.string,
-      class: PropTypes.string,
-      mime: PropTypes.string,
-      name: PropTypes.string
-    })
-  ).isRequired,
+  files: PropTypes.arrayOf(FileDoctype).isRequired,
   /** Index of the file to show */
   currentIndex: PropTypes.number,
   className: PropTypes.string,

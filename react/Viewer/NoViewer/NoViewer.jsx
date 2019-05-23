@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import FileIcon from './FileIcon'
 import DownloadButton from './DownloadButton'
 import styles from '../styles.styl'
+import { FileDoctype } from '../../proptypes'
 
 const NoViewer = ({ file, renderFallbackExtraContent }) => (
   <div className={styles['viewer-noviewer']}>
@@ -13,12 +14,7 @@ const NoViewer = ({ file, renderFallbackExtraContent }) => (
 )
 
 NoViewer.propTypes = {
-  file: PropTypes.shape({
-    _id: PropTypes.string,
-    class: PropTypes.string,
-    mime: PropTypes.string,
-    name: PropTypes.string
-  }).isRequired,
+  file: FileDoctype.isRequired,
   renderFallbackExtraContent: PropTypes.func
 }
 

@@ -11,3 +11,10 @@ export const AppDoctype = PropTypes.shape({
     version: PropTypes.string
   })
 })
+
+export const FileDoctype = PropTypes.shape({
+  _id: PropTypes.string,
+  class: PropTypes.string,
+  mime: PropTypes.string,
+  name: PropTypes.string
+})

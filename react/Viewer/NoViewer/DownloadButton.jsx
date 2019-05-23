@@ -4,6 +4,7 @@ import { withClient } from 'cozy-client'
 import { translate } from '../../I18n'
 import Button from '../../Button'
 import styles from '../styles.styl'
+import { FileDoctype } from '../../proptypes'
 
 const DownloadButton = ({ t, client, file }) => (
   <Button
@@ -16,12 +17,7 @@ const DownloadButton = ({ t, client, file }) => (
 DownloadButton.propTypes = {
   t: PropTypes.func.isRequired,
   client: PropTypes.object.isRequired,
-  file: PropTypes.shape({
-    _id: PropTypes.string,
-    class: PropTypes.string,
-    mime: PropTypes.string,
-    name: PropTypes.string
-  })
+  file: FileDoctype
 }
 
 export default translate()(withClient(DownloadButton))
