@@ -1,7 +1,28 @@
 {
-  "sections": {
-    "applications": "Applications",
-    "konnectors": "Services"
+  "app_categories": {
+    "all": "All categories",
+    "banking": "Banking",
+    "cozy": "The essentials",
+    "education": "Education",
+    "energy": "Energy",
+    "health": "Health",
+    "host_provider": "Host",
+    "insurance": "Insurance",
+    "isp": "ISP",
+    "konnectors": "Services",
+    "list_separator": ", ",
+    "mes_infos": "MesInfos experimentation",
+    "online_services": "Online services",
+    "others": "Others",
+    "partners": "Partners",
+    "press": "Press",
+    "productivity": "Productivity",
+    "ptnb": "PTNB experimentation",
+    "public_service": "Public services",
+    "shopping": "Shopping",
+    "social": "Social",
+    "telecom": "Telecom",
+    "transport": "Transportation"
   },
   "app_item": {
     "by": "By",
@@ -9,30 +30,8 @@
     "maintenance": "In maintenance",
     "update": "Update available"
   },
-  "app_categories": {
-    "list_separator": ", ",
-    "all": "All categories",
-    "education": "Education",
-    "others": "Others",
-    "konnectors": "Services",
-    "banking": "Banking",
-    "cozy": "The essentials",
-    "energy": "Energy",
-    "health": "Health",
-    "host_provider": "Host",
-    "insurance": "Insurance",
-    "isp": "ISP",
-    "online_services": "Online services",
-    "others": "Others",
-    "mes_infos": "MesInfos experimentation",
-    "partners": "Partners",
-    "productivity": "Productivity",
-    "press": "Press",
-    "ptnb": "PTNB experimentation",
-    "public_service": "Public services",
-    "shopping": "Shopping",
-    "social": "Social",
-    "telecom": "Telecom",
-    "transport": "Transportation"
+  "sections": {
+    "applications": "Applications",
+    "konnectors": "Services"
   }
 }
