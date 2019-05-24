@@ -386,17 +386,16 @@ $radio
     @extend $checkbox
     span
         &::before
+        &::after
             border-radius 50%
 
         &::after
-            background none
-            content '•'
-            color white
-            text-align center
-            font-size rem(16)
-            line-height rem(13)
-
-
+            content ''
+            background var(--white)
+            border rem(5) solid var(--dodgerBlue)
+            box-sizing border-box
+            width rem(16)
+            height rem(16)
 
 $textarea
     @extend $input-text
