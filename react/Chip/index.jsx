@@ -4,14 +4,16 @@ import styles from './styles.styl'
 
 class Chip extends React.PureComponent {
   render() {
-    const { children, className, ...restProps } = this.props
+    const { children, className, rounded, ...restProps } = this.props
     return (
       <div
         className={cx(
           styles['c-chip'],
           'u-breakword',
-          className,
-          this.constructor.className
+          {
+            [styles['c-chip--round']]: rounded
+          },
+          className
         )}
         {...restProps}
       >
@@ -21,11 +23,9 @@ class Chip extends React.PureComponent {
   }
 }
 
-export class RoundChip extends Chip {
-  static className = styles['c-chip--round']
-}
-
 export default Chip
+
+export const RoundChip = props => <Chip {...props} rounded />
 
 const disabledChipButtonStyle = styles['c-chip-button--disabled']
 export class ChipButton extends React.PureComponent {
