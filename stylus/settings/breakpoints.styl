@@ -8,18 +8,21 @@
 // variables
 
 BP-teeny       =  375
-BP-tiny        =  480
+BP-tiny        =  543
 BP-small       =  768
 BP-medium      = 1023
 BP-large       = 1200
 BP-extra-large = 1439
 
-// Standard breakpoints collection for utilities
+// Breakpoints collection for utilities
 breakpoints = {
     'none': '',
+    'teeny': 'tt',
     'tiny': 't',
     'small': 's',
     'medium': 'm',
+    'large': 'l',
+    'extra-large': 'xl'
 }
 
 /*
@@ -29,8 +32,7 @@ breakpoints = {
     the desired a `max-width` media-query. Use the direction argument
     to set it to `min`.
 
-    teeny         -  375px
-    tiny          -  480px
+    tiny          -  543px
     small         -  768px
     medium        -  1023px
     large         -  1200px
@@ -61,8 +63,8 @@ teeny-screen(direction='max')
 /*
     tiny-screen()
 
-    tiny-screen() Refers to (max-width: 480px)
-    tiny-screen('min') Refers to (min-width: 481px)
+    tiny-screen() Refers to (max-width: 543px)
+    tiny-screen('min') Refers to (min-width: 544px)
 
     Weight: -5
 
