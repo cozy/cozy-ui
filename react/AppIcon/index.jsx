@@ -99,10 +99,12 @@ export class AppIcon extends Component {
 
 AppIcon.propTypes = {
   alt: PropTypes.string,
-  app: PropTypes.oneOfType([AppDoctype, PropTypes.string]).isRequired,
+  /** Required if fetchIcon is not provided */
+  app: PropTypes.oneOfType([AppDoctype, PropTypes.string]),
+  /** Custom implementation of how to fetch icon */
+  fetchIcon: PropTypes.func,
   className: PropTypes.string,
   domain: PropTypes.string,
-  fetchIcon: PropTypes.func,
   onReady: PropTypes.func,
   secure: PropTypes.bool
 }
