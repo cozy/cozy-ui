@@ -12,6 +12,8 @@
   "app_categories": {
     "list_separator": ", ",
     "all": "All categories",
+    "education": "Education",
+    "others": "Others",
     "konnectors": "Services",
     "banking": "Banking",
     "cozy": "The essentials",
