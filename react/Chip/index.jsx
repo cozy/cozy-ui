@@ -3,10 +3,20 @@ import React from 'react'
 import styles from './styles.styl'
 
 class Chip extends React.PureComponent {
+  static defaultProps = {
+    component: 'div'
+  }
+
   render() {
-    const { children, className, rounded, ...restProps } = this.props
+    const {
+      children,
+      className,
+      rounded,
+      component: Component,
+      ...restProps
+    } = this.props
     return (
-      <div
+      <Component
         className={cx(
           styles['c-chip'],
           'u-breakword',
@@ -18,7 +28,7 @@ class Chip extends React.PureComponent {
         {...restProps}
       >
         {children}
-      </div>
+      </Component>
     )
   }
 }

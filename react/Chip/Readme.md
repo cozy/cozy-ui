@@ -46,3 +46,12 @@ const ContactChip = ({ contact }) => (
   <Chip.Button disabled><Icon icon='back' /></Chip.Button>
 </div>
 ```
+
+### Specify underlying tag/component
+
+```
+<div>
+  <Chip component="button">This is a button</Chip>
+  <Chip component="span">This is a span</Chip>
+</div>
+```
