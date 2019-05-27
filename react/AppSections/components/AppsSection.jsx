@@ -13,6 +13,7 @@ export const AppsSection = ({
   appsList,
   subtitle,
   onAppClick,
+  IconComponent,
   breakpoints = {}
 }) => {
   const { isMobile } = breakpoints
@@ -29,6 +30,7 @@ export const AppsSection = ({
               onClick={() => onAppClick(app.slug)}
               key={app.slug}
               isMobile={isMobile}
+              IconComponent={IconComponent}
             />
           ))}
         </div>

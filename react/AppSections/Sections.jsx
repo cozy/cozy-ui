@@ -71,7 +71,15 @@ export class Sections extends Component {
   }
 
   render() {
-    const { t, apps, error, onAppClick, breakpoints = {}, hasNav } = this.props
+    const {
+      t,
+      apps,
+      error,
+      onAppClick,
+      breakpoints = {},
+      hasNav,
+      IconComponent
+    } = this.props
     const { isMobile, isTablet } = breakpoints
 
     if (error) return <p className="u-error">{error.message}</p>
@@ -127,6 +135,7 @@ export class Sections extends Component {
                     appsList={webAppGroups[cat.value]}
                     subtitle={<SectionSubtitle>{cat.label}</SectionSubtitle>}
                     onAppClick={onAppClick}
+                    IconComponent={IconComponent}
                   />
                 )
               })}
@@ -143,6 +152,7 @@ export class Sections extends Component {
                     subtitle={
                       <SectionSubSubtitle>{cat.label}</SectionSubSubtitle>
                     }
+                    IconComponent={IconComponent}
                     onAppClick={onAppClick}
                   />
                 )

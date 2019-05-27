@@ -21,13 +21,21 @@ const getAppIconProps = () => ({
   secure: window.location.protocol === 'https:'
 })
 
-export const SmallAppItem = ({ t, app, name, namePrefix, onClick }) => {
+export const SmallAppItem = ({
+  t,
+  app,
+  name,
+  namePrefix,
+  onClick,
+  IconComponent
+}) => {
   const { developer = {} } = app
   const statusToDisplay = getCurrentStatusLabel(app)
+  IconComponent = IconComponent || AppIcon
   return (
     <button type="button" className={styles['SmallAppItem']} onClick={onClick}>
       <div className={styles['SmallAppItem-icon-wrapper']}>
-        <AppIcon
+        <IconComponent
           app={app}
           className={styles['SmallAppItem-icon']}
           {...getAppIconProps()}
