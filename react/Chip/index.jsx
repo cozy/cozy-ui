@@ -28,8 +28,8 @@ class Chip extends React.PureComponent {
       <Component
         className={cx(
           styles['c-chip'],
-          styles[`c-chip--${size}`],
-          styles[`c-chip--${variant}`],
+          styles[`c-chip--${size}Size`],
+          styles[`c-chip--${variant}Variant`],
           styles[`c-chip--${theme}Theme`],
           'u-breakword',
           {
