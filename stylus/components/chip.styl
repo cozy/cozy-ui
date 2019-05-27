@@ -8,7 +8,6 @@ $chip-height-normal = rem(40)
 $chip-font-size-normal = rem(16)
 
 $chip
-    background var(--paleGrey)
     box-sizing border-box
     line-height 1
     display inline-flex
@@ -16,7 +15,6 @@ $chip
     margin-right rem(4)
     margin-bottom rem(4)
     border-width 0
-    color inherit
 
 $round-chip
     width $chip-height-normal
@@ -34,12 +32,23 @@ $normal-chip
     border-radius ($chip-height-normal / 2)
 
 $outlined-chip
-    border 1px solid var(--silver)
-    background-color var(--white)
-    color var(--coolGrey)
+    border 1px solid
+    background-color transparent !important
 
 $dashed-chip
-    border 1px dashed var(--coolGrey)
+    border 1px dashed
+
+$normal-theme-chip
+    background var(--paleGrey)
+    color inherit
+
+$primary-theme-chip
+    background-color var(--zircon)
+    color var(--dodgerBlue)
+
+$error-theme-chip
+    background-color var(--chablis)
+    color var(--pomegranate)
 
 $chip-separator
     width rem(1)

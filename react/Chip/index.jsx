@@ -6,7 +6,8 @@ class Chip extends React.PureComponent {
   static defaultProps = {
     component: 'div',
     size: 'normal',
-    variant: 'normal'
+    variant: 'normal',
+    theme: 'normal'
   }
 
   render() {
@@ -19,6 +20,7 @@ class Chip extends React.PureComponent {
       disabled,
       size,
       variant,
+      theme,
       ...restProps
     } = this.props
 
@@ -28,6 +30,7 @@ class Chip extends React.PureComponent {
           styles['c-chip'],
           styles[`c-chip--${size}`],
           styles[`c-chip--${variant}`],
+          styles[`c-chip--${theme}Theme`],
           'u-breakword',
           {
             [styles['c-chip--round']]: rounded,
