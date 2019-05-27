@@ -1,14 +1,14 @@
 @require 'settings/palette'
 @require 'tools/mixins'
 
-$chip-height = rem(40)
-$chip-font-size = rem(16)
+$chip-height-small = rem(32)
+$chip-font-size-small = rem(14)
+
+$chip-height-normal = rem(40)
+$chip-font-size-normal = rem(16)
 
 $chip
-    border-radius ($chip-height / 2)
-    height $chip-height
     background var(--paleGrey)
-    padding (($chip-height - $chip-font-size) / 2)
     box-sizing border-box
     line-height 1
     display inline-flex
@@ -19,9 +19,19 @@ $chip
     color inherit
 
 $round-chip
-    width $chip-height
+    width $chip-height-normal
     text-align center
     justify-content center
+
+$small-chip
+    height $chip-height-small
+    padding (($chip-height-small - $chip-font-size-small) / 2)
+    border-radius ($chip-height-small / 2)
+
+$normal-chip
+    height $chip-height-normal
+    padding (($chip-height-normal - $chip-font-size-normal) / 2)
+    border-radius ($chip-height-normal / 2)
 
 $chip-separator
     width rem(1)

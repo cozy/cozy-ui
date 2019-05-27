@@ -56,3 +56,12 @@ const ContactChip = ({ contact }) => (
   <Chip component="span">This is a span</Chip>
 </div>
 ```
+
+### Sizes
+
+```
+<div>
+  <Chip size="small">This is a small Chip</Chip>
+  <Chip size="normal">This is a normal Chip (default)</Chip>
+</div>
+```

@@ -4,7 +4,8 @@ import styles from './styles.styl'
 
 class Chip extends React.PureComponent {
   static defaultProps = {
-    component: 'div'
+    component: 'div',
+    size: 'normal'
   }
 
   render() {
@@ -15,6 +16,7 @@ class Chip extends React.PureComponent {
       component: Component,
       onClick,
       disabled,
+      size,
       ...restProps
     } = this.props
 
@@ -22,6 +24,7 @@ class Chip extends React.PureComponent {
       <Component
         className={cx(
           styles['c-chip'],
+          styles[`c-chip--${size}`],
           'u-breakword',
           {
             [styles['c-chip--round']]: rounded,
