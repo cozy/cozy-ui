@@ -65,3 +65,13 @@ const ContactChip = ({ contact }) => (
   <Chip size="normal">This is a normal Chip (default)</Chip>
 </div>
 ```
+
+### Variants
+
+```
+<div>
+  <Chip variant="normal">This is a normal Chip (default)</Chip>
+  <Chip variant="outlined">This is an outlined Chip</Chip>
+  <Chip variant="dashed">This is a dashed Chip</Chip>
+</div>
+```
