@@ -97,3 +97,25 @@ const ContactChip = ({ contact }) => (
   </div>
 </div>
 ```
+
+### Mix sizes, variants and themes
+
+```
+<div>
+  <div>
+    <Chip theme="normal" size="small">This is a normal Chip</Chip>
+    <Chip theme="primary" size="small">This is a primary Chip</Chip>
+    <Chip theme="error" size="small">This is an error Chip</Chip>
+  </div>
+  <div>
+    <Chip theme="normal" variant="outlined" size="small">This is a normal Chip</Chip>
+    <Chip theme="primary" variant="outlined" size="small">This is a primary Chip</Chip>
+    <Chip theme="error" variant="outlined" size="small">This is an error Chip</Chip>
+  </div>
+  <div>
+    <Chip theme="normal" variant="dashed" size="small">This is a normal Chip</Chip>
+    <Chip theme="primary" variant="dashed" size="small">This is a primary Chip</Chip>
+    <Chip theme="error" variant="dashed" size="small">This is an error Chip</Chip>
+  </div>
+</div>
+```
