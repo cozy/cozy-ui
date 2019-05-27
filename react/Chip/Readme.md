@@ -51,7 +51,8 @@ const ContactChip = ({ contact }) => (
 
 ```
 <div>
-  <Chip component="button">This is a button</Chip>
+  <Chip component="button" onClick={() => alert('You clicked')}>This is a button</Chip>
+  <Chip component="button" disabled>This is a disabled button</Chip>
   <Chip component="span">This is a span</Chip>
 </div>
 ```

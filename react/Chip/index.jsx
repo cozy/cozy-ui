@@ -13,18 +13,25 @@ class Chip extends React.PureComponent {
       className,
       rounded,
       component: Component,
+      onClick,
+      disabled,
       ...restProps
     } = this.props
+
     return (
       <Component
         className={cx(
           styles['c-chip'],
           'u-breakword',
           {
-            [styles['c-chip--round']]: rounded
+            [styles['c-chip--round']]: rounded,
+            'u-c-pointer': onClick && !disabled,
+            [styles['c-chip-button--disabled']]: onClick && disabled
           },
           className
         )}
+        onClick={onClick}
+        disabled={disabled}
         {...restProps}
       >
         {children}
