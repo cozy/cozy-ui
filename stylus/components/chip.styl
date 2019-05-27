@@ -34,7 +34,9 @@ $normal-size-chip
 
 $outlined-variant-chip
     border 1px solid
-    background-color transparent !important
+    // important is here because this variant needs to have a transparent
+    // background, no matter with which theme it is used
+    background-color transparent !important // @stylint ignore
 
 $dashed-variant-chip
     border 1px dashed
