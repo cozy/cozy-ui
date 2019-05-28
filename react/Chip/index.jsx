@@ -3,29 +3,55 @@ import React from 'react'
 import styles from './styles.styl'
 
 class Chip extends React.PureComponent {
+  static defaultProps = {
+    component: 'div',
+    size: 'normal',
+    variant: 'normal',
+    theme: 'normal'
+  }
+
   render() {
-    const { children, className, ...restProps } = this.props
+    const {
+      children,
+      className,
+      rounded,
+      component: Component,
+      onClick,
+      disabled,
+      size,
+      variant,
+      theme,
+      ...restProps
+    } = this.props
+
     return (
-      <div
+      <Component
         className={cx(
           styles['c-chip'],
+          styles[`c-chip--${size}Size`],
+          styles[`c-chip--${variant}Variant`],
+          styles[`c-chip--${theme}Theme`],
           'u-breakword',
-          className,
-          this.constructor.className
+          {
+            [styles['c-chip--round']]: rounded,
+            [styles['c-chip--clickable']]: onClick && !disabled,
+            [styles['c-chip-button--disabled']]: onClick && disabled
+          },
+          className
         )}
+        onClick={onClick}
+        disabled={disabled}
         {...restProps}
       >
         {children}
-      </div>
+      </Component>
     )
   }
 }
 
-export class RoundChip extends Chip {
-  static className = styles['c-chip--round']
-}
-
 export default Chip
+
+export const RoundChip = props => <Chip {...props} rounded />
 
 const disabledChipButtonStyle = styles['c-chip-button--disabled']
 export class ChipButton extends React.PureComponent {

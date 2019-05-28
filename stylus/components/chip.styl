@@ -1,25 +1,60 @@
 @require 'settings/palette'
 @require 'tools/mixins'
 
-$chip-height = rem(40)
-$chip-font-size = rem(16)
+$chip-height-small = rem(32)
+$chip-font-size-small = rem(14)
+
+$chip-height-normal = rem(40)
+$chip-font-size-normal = rem(16)
 
 $chip
-    border-radius ($chip-height / 2)
-    height $chip-height
-    background var(--paleGrey)
-    padding (($chip-height - $chip-font-size) / 2)
     box-sizing border-box
     line-height 1
     display inline-flex
     align-items center
     margin-right rem(4)
     margin-bottom rem(4)
+    border 0
 
 $round-chip
-    width $chip-height
+    width $chip-height-normal
     text-align center
     justify-content center
+
+$small-size-chip
+    height $chip-height-small
+    padding (($chip-height-small - $chip-font-size-small) / 2)
+    border-radius ($chip-height-small / 2)
+    font-size $chip-font-size-small
+
+$normal-size-chip
+    height $chip-height-normal
+    padding (($chip-height-normal - $chip-font-size-normal) / 2)
+    border-radius ($chip-height-normal / 2)
+
+$outlined-variant-chip
+    border 1px solid
+    // important is here because this variant needs to have a transparent
+    // background, no matter with which theme it is used
+    background-color transparent !important // @stylint ignore
+
+$dashed-variant-chip
+    border 1px dashed
+
+$normal-theme-chip
+    background-color var(--paleGrey)
+    color inherit
+
+$primary-theme-chip
+    background-color var(--zircon)
+    color var(--dodgerBlue)
+
+$error-theme-chip
+    background-color var(--chablis)
+    color var(--pomegranate)
+
+$chip--clickable
+    cursor pointer
 
 $chip-separator
     width rem(1)

@@ -46,3 +46,76 @@ const ContactChip = ({ contact }) => (
   <Chip.Button disabled><Icon icon='back' /></Chip.Button>
 </div>
 ```
+
+### Specify underlying tag/component
+
+```
+<div>
+  <Chip component="button" onClick={() => alert('You clicked')}>This is a button</Chip>
+  <Chip component="button" disabled>This is a disabled button</Chip>
+  <Chip component="span">This is a span</Chip>
+</div>
+```
+
+### Sizes
+
+```
+<div>
+  <Chip size="small">This is a small Chip</Chip>
+  <Chip size="normal">This is a normal Chip (default)</Chip>
+</div>
+```
+
+### Variants
+
+```
+<div>
+  <Chip variant="normal">This is a normal Chip (default)</Chip>
+  <Chip variant="outlined">This is an outlined Chip</Chip>
+  <Chip variant="dashed">This is a dashed Chip</Chip>
+</div>
+```
+
+### Themes
+
+```
+<div>
+  <div>
+    <Chip theme="normal">This is a normal Chip (default)</Chip>
+    <Chip theme="primary">This is a primary Chip</Chip>
+    <Chip theme="error">This is an error Chip</Chip>
+  </div>
+  <div>
+    <Chip theme="normal" variant="outlined">This is a normal Chip (default)</Chip>
+    <Chip theme="primary" variant="outlined">This is a primary Chip</Chip>
+    <Chip theme="error" variant="outlined">This is an error Chip</Chip>
+  </div>
+  <div>
+    <Chip theme="normal" variant="dashed">This is a normal Chip (default)</Chip>
+    <Chip theme="primary" variant="dashed">This is a primary Chip</Chip>
+    <Chip theme="error" variant="dashed">This is an error Chip</Chip>
+  </div>
+</div>
+```
+
+### Mix sizes, variants and themes
+
+```
+<div>
+  <div>
+    <Chip theme="normal" size="small">This is a normal Chip</Chip>
+    <Chip theme="primary" size="small">This is a primary Chip</Chip>
+    <Chip theme="error" size="small">This is an error Chip</Chip>
+  </div>
+  <div>
+    <Chip theme="normal" variant="outlined" size="small">This is a normal Chip</Chip>
+    <Chip theme="primary" variant="outlined" size="small">This is a primary Chip</Chip>
+    <Chip theme="error" variant="outlined" size="small">This is an error Chip</Chip>
+  </div>
+  <div>
+    <Chip theme="normal" variant="dashed" size="small">This is a normal Chip</Chip>
+    <Chip theme="primary" variant="dashed" size="small">This is a primary Chip</Chip>
+    <Chip theme="error" variant="dashed" size="small">This is an error Chip</Chip>
+  </div>
+</div>
+```

@@ -6,6 +6,34 @@
 .c-chip--round
     @extend $round-chip
 
+.c-chip--smallSize
+    @extend $small-size-chip
+
+.c-chip--normalSize
+    @extend $normal-size-chip
+
+.c-chip--outlinedVariant
+    @extend $outlined-variant-chip
+
+.c-chip--dashedVariant
+    @extend $dashed-variant-chip
+
+.c-chip--normalTheme
+    @extend $normal-theme-chip
+
+.c-chip--primaryTheme
+    @extend $primary-theme-chip
+
+.c-chip--errorTheme
+    @extend $error-theme-chip
+
+.c-chip--outlinedVariant.c-chip--normalTheme
+    border-color var(--silver)
+    color var(--charcoalGrey)
+
+.c-chip--clickable
+    @extend $chip--clickable
+
 .c-chip-separator
     @extend $chip-separator
 
