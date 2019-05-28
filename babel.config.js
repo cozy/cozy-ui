@@ -20,12 +20,13 @@ module.exports = {
   ],
   env: {
     transpilation: {
-      plugins: plugins
+      plugins: plugins,
+      ignore: ['**/*.spec.jsx', '**/*.spec.js']
     },
     test: {
       presets: [['cozy-app', { transformRuntime: { helpers: true } }]],
       plugins: plugins
     }
   },
-  ignore: ['examples/**/*', '**/*.spec.jsx', '**/*.spec.js']
+  ignore: ['examples/**/*']
 }
