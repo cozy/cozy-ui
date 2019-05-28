@@ -51,7 +51,7 @@ export class Sections extends Component {
   constructor(props, context) {
     super(props, context)
     this.state = {
-      search: {}
+      search: props.initialSearch || {}
     }
     this.handleCategoryChange = this.handleCategoryChange.bind(this)
   }
@@ -167,10 +167,18 @@ export class Sections extends Component {
 
 Sections.propTypes = {
   t: PropTypes.func.isRequired,
+
+  /** List of apps that will be displayed into categories */
   apps: PropTypes.array.isRequired,
   error: PropTypes.object,
+
   onAppClick: PropTypes.func.isRequired,
-  hasNav: PropTypes.bool
+
+  /** Whether to display the category selector */
+  hasNav: PropTypes.bool,
+
+  /** An initial search object. Changing it after mounting will do nothing. */
+  initialSearch: PropTypes.object
 }
 
 Sections.defaultProps = {
