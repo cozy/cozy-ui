@@ -34,7 +34,7 @@ class Chip extends React.PureComponent {
           'u-breakword',
           {
             [styles['c-chip--round']]: rounded,
-            'u-c-pointer': onClick && !disabled,
+            [styles['c-chip--clickable']]: onClick && !disabled,
             [styles['c-chip-button--disabled']]: onClick && disabled
           },
           className
