@@ -36,6 +36,7 @@ assets/icons/ui/eye.svg
 assets/icons/ui/eye-closed.svg
 assets/icons/ui/file-none.svg
 assets/icons/ui/file.svg
+assets/icons/ui/file-outline.svg
 assets/icons/ui/folder.svg
 assets/icons/ui/forward.svg
 assets/icons/ui/gear.svg
