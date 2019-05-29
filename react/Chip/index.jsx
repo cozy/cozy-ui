@@ -33,6 +33,10 @@ class Chip extends React.PureComponent {
           styles[`c-chip--${theme}Theme`],
           'u-breakword',
           {
+            [styles['c-chip--outlinedNormalTheme']]:
+              variant === 'outlined' && theme === 'normal',
+            [styles['c-chip--outlinedErrorTheme']]:
+              variant === 'outlined' && theme === 'error',
             [styles['c-chip--round']]: rounded,
             [styles['c-chip--clickable']]: onClick && !disabled,
             [styles['c-chip-button--disabled']]: onClick && disabled
