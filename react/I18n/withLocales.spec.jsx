@@ -26,21 +26,32 @@ class Component extends React.Component {
     return <div>{t('hello-world')}</div>
   }
 }
-const TComponent = withLocales(componentLocales)(Component)
 
 describe('with locales', () => {
   let root
-  const setup = ({ lang }) => {
+  const setup = ({ lang, Component }) => {
     root = mount(
       <I18n lang={lang} dictRequire={localeCode => globalLocales[localeCode]}>
-        <TComponent />
+        <Component />
       </I18n>
     )
   }
-  it('should provide t with correct locale strings', () => {
-    setup({ lang: 'en' })
-    expect(root.text()).toBe('Hello local world !')
-    setup({ lang: 'fr' })
-    expect(root.text()).toBe('Bonjour le monde local !')
-  })
+
+  const testComponent = (Component, description) => {
+    describe(description, () => {
+      it('should provide t with correct locale strings', () => {
+        setup({ lang: 'en', Component })
+        expect(root.text()).toBe('Hello local world !')
+        setup({ lang: 'fr', Component })
+        expect(root.text()).toBe('Bonjour le monde local !')
+      })
+    })
+  }
+
+  const TComponentObj = withLocales(componentLocales)(Component)
+  const requireLang = lang => componentLocales[lang]
+  const TComponentFunc = withLocales(requireLang)(Component)
+
+  testComponent(TComponentObj, 'locales from object')
+  testComponent(TComponentFunc, 'locales from require function')
 })
