@@ -35,8 +35,12 @@ class Chip extends React.PureComponent {
           {
             [styles['c-chip--outlinedNormalTheme']]:
               variant === 'outlined' && theme === 'normal',
-            [styles['c-chip--outlinedErrorTheme']]:
-              variant === 'outlined' && theme === 'error',
+            [styles['c-chip--hoverableNormalTheme']]:
+              variant !== 'normal' && theme === 'normal',
+            [styles['c-chip--hoverablePrimaryTheme']]:
+              variant !== 'normal' && theme === 'primary',
+            [styles['c-chip--hoverableErrorTheme']]:
+              variant !== 'normal' && theme === 'error',
             [styles['c-chip--round']]: rounded,
             [styles['c-chip--clickable']]: onClick && !disabled,
             [styles['c-chip-button--disabled']]: onClick && disabled
