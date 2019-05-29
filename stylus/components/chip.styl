@@ -34,31 +34,44 @@ $normal-size-chip
 
 $outlined-variant-chip
     border 1px solid
-    // important is here because this variant needs to have a transparent
-    // background, no matter with which theme it is used
-    background-color transparent !important // @stylint ignore
 
 $dashed-variant-chip
     border 1px dashed
 
 $normal-theme-chip
+    border-color var(--silver)
     background-color var(--paleGrey)
     color inherit
 
 $primary-theme-chip
+    border-color var(--frenchPass)
     background-color var(--zircon)
     color var(--dodgerBlue)
 
 $error-theme-chip
+    border-color var(--yourPink)
     background-color var(--chablis)
     color var(--pomegranate)
 
-$chip--outlinedNormalTheme
-    border-color var(--silver)
+$chip--hoverableNormalTheme
     color var(--charcoalGrey)
 
-$chip--outlinedErrorTheme
-    border-color var(--yourPink)
+    &:hover,
+    &:focus
+        background-color var(--silver)
+
+$chip--hoverablePrimaryTheme
+    &:hover,
+    &:focus
+        background-color var(--frenchPass)
+
+$chip--hoverableErrorTheme
+    &:hover,
+    &:focus
+        background-color var(--yourPink)
+
+$chip--outlinedNormalTheme
+    background-color transparent
 
 $chip--clickable
     cursor pointer
