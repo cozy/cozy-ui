@@ -55,7 +55,8 @@ module.exports = {
         '../react/Well/index.jsx',
         '../react/Infos/index.jsx',
         '../react/ContextHeader/index.jsx',
-        '../react/Filename/index.jsx'
+        '../react/Filename/index.jsx',
+        '../react/AppTitle/index.jsx'
       ]
     },
     {
