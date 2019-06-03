@@ -46,4 +46,15 @@ describe('native functions', () => {
 
     expect(universalLink).toEqual(endLink)
   })
+
+  it('should automatically generate fallbackUrl if provided with cozyUrl', () => {
+    const universalLink = generateUniversalLink({
+      slug: 'drive',
+      nativePath: '/files',
+      cozyUrl: 'https://name.cozy.tools/'
+    })
+    const endLink =
+      'https://links.mycozy.cloud/drive/files?fallback=https%3A%2F%2Fname-drive.cozy.tools%2F%23%2Ffiles'
+    expect(universalLink).toEqual(endLink)
+  })
 })
