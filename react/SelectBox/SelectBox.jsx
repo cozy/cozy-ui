@@ -19,7 +19,9 @@ const heights = {
 const customStyles = props => ({
   control: (base, state) => ({
     ...base,
-    backgroundColor: 'transparent',
+    // The gray background color is managed via the select--disabled
+    // class applied below
+    backgroundColor: props.disabled ? 'transparent' : 'white',
     border: state.isFocused
       ? `.0625rem solid ${dodgerBlue}`
       : `.0625rem solid ${silver}`,
@@ -302,8 +304,6 @@ class SelectBox extends Component {
         {...props}
         isDisabled={disabled}
         className={classNames(
-          // Ensure the selectbox has white background
-          'u-bg-white',
           {
             [styles['select__overlay']]: showOverlay,
             [styles['select--autowidth']]: !fullwidth,
