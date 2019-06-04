@@ -5,6 +5,7 @@
   <div>
     <Radio name="radioForm" value="radioValue1" label="This is a radio button" />
     <Radio name="radioForm" value="radioValue2" label="This is also a radio button" />
+    <Radio style={{ background: 'cadetblue',  padding: '0.5rem', height: '3rem' }} name="radioForm" value="radioValue2" label="This is a radio button with a custom style" />
   </div>
 </form>
 ```

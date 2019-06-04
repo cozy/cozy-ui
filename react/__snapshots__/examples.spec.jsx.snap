@@ -1312,7 +1312,7 @@ exports[`MuiCozyTheme/Menus should render examples: MuiCozyTheme/Menus 1`] = `"<
 exports[`Radio should render examples: Radio 1`] = `
 "<div>
   <form>
-    <div><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue1\\"><span>This is a radio button</span></label><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue2\\"><span>This is also a radio button</span></label></div>
+    <div><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue1\\"><span>This is a radio button</span></label><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue2\\"><span>This is also a radio button</span></label><label class=\\"styles__c-input-radio___XJQt1\\" style=\\"background: cadetblue; padding: 0.5rem; height: 3rem;\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue2\\"><span>This is a radio button with a custom style</span></label></div>
   </form>
 </div>"
 `;
