@@ -119,3 +119,19 @@ const ContactChip = ({ contact }) => (
   </div>
 </div>
 ```
+
+### Complete example
+
+```
+<Chip
+  size="small"
+  variant="outlined"
+  theme="primary"
+  onClick={() => alert('you clicked')}
+>
+  <Icon icon="file" size={16} style={{ marginRight: '0.5rem' }} />
+  1 invoice
+  <Chip.Separator />
+  <Icon icon="openwith" size={16} />
+</Chip>
+```
