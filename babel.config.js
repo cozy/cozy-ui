@@ -5,7 +5,7 @@ const plugins = [
       extensions: ['.styl'],
       preprocessCss: './preprocess',
       extractCss: './transpiled/react/stylesheet.css',
-      generateScopedName: '[name]__[local]___[hash:base64:5]'
+      generateScopedName: 'ui-[local]'
     }
   ],
   ['inline-json-import', {}]
