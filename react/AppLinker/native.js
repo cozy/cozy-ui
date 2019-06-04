@@ -1,4 +1,5 @@
 import { UNIVERSAL_LINK_URL } from 'cozy-ui/transpiled/react/AppLinker/native.config.js'
+
 export const getUniversalLinkDomain = () => {
   return UNIVERSAL_LINK_URL
 }
@@ -12,12 +13,15 @@ export const getUniversalLinkDomain = () => {
  * @param  {string} options.cozyUrl     - https://name.mycozy.cloud, optional if fallbackUrl is passed
  * @return {string}                     - https://links.cozy.cloud/drive/?fallback...
  */
-export const generateUniversalLink = ({
-  slug,
-  nativePath,
-  fallbackUrl,
-  cozyUrl
-}) => {
+export const generateUniversalLink = options => {
+  const { slug, cozyUrl } = options
+  let { fallbackUrl, nativePath } = options
+  nativePath = nativePath || '/'
+  if (!cozyUrl && !fallbackUrl) {
+    throw new Error(
+      'Must have either cozyUrl or fallbackUrl to generate universal link.'
+    )
+  }
   if (cozyUrl && !fallbackUrl) {
     fallbackUrl = new URL(cozyUrl)
     fallbackUrl.host = fallbackUrl.host
