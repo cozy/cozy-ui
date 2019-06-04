@@ -15,6 +15,7 @@ import pretty from 'pretty'
  */
 import ActionMenu from './ActionMenu'
 import Alerter from './Alerter'
+import AppTitle from './AppTitle'
 import Avatar from './Avatar'
 import Badge from './Badge'
 import BarButton from './BarButton'
@@ -69,6 +70,7 @@ const testFromStyleguidist = (name, markdown, require) => {
       'content',
       'ActionMenu',
       'Alerter',
+      'AppTitle',
       'Avatar',
       'Badge',
       'BarButton',
@@ -117,6 +119,7 @@ const testFromStyleguidist = (name, markdown, require) => {
       content,
       ActionMenu,
       Alerter,
+      AppTitle,
       Avatar,
       Badge,
       BarButton,
