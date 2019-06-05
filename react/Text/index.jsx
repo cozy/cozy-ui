@@ -42,7 +42,7 @@ export const Caption = ({ className, ...restProps }) => (
 
 // Props
 const commonProps = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   className: PropTypes.string,
   tag: PropTypes.string,
   ellipsis: PropTypes.bool
