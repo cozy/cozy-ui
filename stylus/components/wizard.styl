@@ -515,6 +515,8 @@ $wizard-agreements
         max-width rem(512)
 
 $wizard-agreements-item
+    position relative
+    overflow hidden
     display flex
     flex-direction column
     flex 1 1 calc(100% / 6 - .5rem)
@@ -573,6 +575,21 @@ $wizard-agreements-icon
         height rem(32)
         border-radius 50%
         padding rem(8)
+
+$wizard-updated
+    position absolute
+    right rem(-27)
+    top rem(19)
+    width rem(100)
+    background-color var(--primaryColor)
+    text-transform uppercase
+    color var(--primaryContrastTextColor)
+    transform rotate(-315deg)
+    padding rem(5)
+    font-size rem(10)
+    line-height 1
+    font-weight bold
+    text-align center
 
 $wizard-progress
     position relative
