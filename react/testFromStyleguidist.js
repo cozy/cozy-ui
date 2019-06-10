@@ -24,6 +24,7 @@ import ButtonAction from './ButtonAction'
 import ButtonClient from './PushClientButton'
 import BannerClient from './PushClientBanner'
 import Checkbox from './Checkbox'
+import Card from './Card'
 import Empty from './Empty'
 import Field from './Field'
 import Hero from './Hero'
@@ -78,6 +79,7 @@ const testFromStyleguidist = (name, markdown, require) => {
       'ButtonAction',
       'ButtonClient',
       'BannerClient',
+      'Card',
       'Checkbox',
       'Empty',
       'Field',
@@ -127,6 +129,7 @@ const testFromStyleguidist = (name, markdown, require) => {
       ButtonAction,
       ButtonClient,
       BannerClient,
+      Card,
       Checkbox,
       Empty,
       Field,
