@@ -272,6 +272,15 @@ exports[`ButtonAction should render examples: ButtonAction 3`] = `
 </div>"
 `;
 
+exports[`Card should render examples: Card 1`] = `
+"<div>
+  <div class=\\"styles__c-card___YgP7B\\">
+    <div class=\\"styles__u-title-h3___1ZGqN u-mb-1\\">This is a card</div>
+    <div class=\\"styles__u-text___2UfQa u-mb-1\\">This is some card content. Content can be small or huge.</div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj u-ml-0\\"><span><span>Demo button</span></span></button>
+  </div>
+</div>"
+`;
+
 exports[`Checkbox should render examples: Checkbox 1`] = `
 "<div>
   <form>
