@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import styles from './styles.styl'
 
-const Well = ({ children, className }) => {
-  return (
-    <div className={cx(styles['well'], 'u-p-1', className)}>{children}</div>
-  )
+import Card from '../Card'
+
+const Well = props => {
+  console.log('Well is a deprecated component, use Card instead')
+  const { className, ...rest } = props
+  return <Card inset className={cx('u-bg-paleGrey', className)} {...rest} />
 }
 
 Well.propTypes = {
