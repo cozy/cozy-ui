@@ -1,9 +1,15 @@
-A section that is inset from the main content.
+`Well` component is depreacted, Use `Card` instead.
+
+### Example:
+
+```js static
+<Card inset className="u-bg-paleGrey">
+  Your content
+</Card>
+```
 
 ```
-<div >
-  <Well>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  </Well>
-</div>
+<Well>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</Well>
 ```

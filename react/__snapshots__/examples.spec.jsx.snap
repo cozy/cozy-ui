@@ -281,6 +281,14 @@ exports[`Card should render examples: Card 1`] = `
 </div>"
 `;
 
+exports[`Card should render examples: Card 2`] = `
+"<div>
+  <div class=\\"styles__c-card___YgP7B styles__c-card--inset___2pofc\\">
+    <div class=\\"styles__u-text___2UfQa\\">This is some card content. Content can be small or huge. Also, it has margins.</div>
+  </div>
+</div>"
+`;
+
 exports[`Checkbox should render examples: Checkbox 1`] = `
 "<div>
   <form>

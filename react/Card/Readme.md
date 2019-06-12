@@ -9,3 +9,17 @@ const { Text, SubTitle } = require('../Text');
   <Button className="u-ml-0" label="Demo button" />
 </Card>
 ```
+
+### Props
+
+#### `inset`
+
+Renders the Card with increased margins.
+
+```
+const { Text, SubTitle } = require('../Text');
+
+<Card inset>
+  <Text>This is some card content. Content can be small or huge. Also, it has margins.</Text>
+</Card>
+```
