@@ -1324,6 +1324,14 @@ exports[`MuiCozyTheme/ExpansionPanel should render examples: MuiCozyTheme/Expans
 
 exports[`MuiCozyTheme/ExpansionPanel should render examples: MuiCozyTheme/ExpansionPanel 2`] = `"<div></div>"`;
 
+exports[`MuiCozyTheme/List should render examples: MuiCozyTheme/List 1`] = `"<div></div>"`;
+
+exports[`MuiCozyTheme/List should render examples: MuiCozyTheme/List 2`] = `"<div></div>"`;
+
+exports[`MuiCozyTheme/List should render examples: MuiCozyTheme/List 3`] = `"<div></div>"`;
+
+exports[`MuiCozyTheme/List should render examples: MuiCozyTheme/List 4`] = `"<div></div>"`;
+
 exports[`MuiCozyTheme/Menus should render examples: MuiCozyTheme/Menus 1`] = `"<div></div>"`;
 
 exports[`Radio should render examples: Radio 1`] = `

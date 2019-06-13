@@ -91,17 +91,73 @@ export const theme = createMuiTheme({
       }
     },
     MuiListItem: {
+      root: {
+        borderTop: '1px solid var(--silver)',
+        minHeight: '4rem',
+        paddingTop: '.5rem',
+        paddingBottom: '.5rem',
+        '&:last-child': {
+          borderBottom: '1px solid var(--silver)'
+        },
+        '&$selected, &$selected:hover': {
+          backgroundColor: 'var(--zircon)'
+        },
+        '&:hover, &:focus': {
+          backgroundColor: 'var(--paleGrey)'
+        }
+      },
+      gutters: {
+        paddingLeft: '1rem',
+        paddingRight: '1rem'
+      },
+      dense: {
+        minHeight: '3.5rem'
+      },
+      secondaryAction: {
+        paddingRight: '.5rem'
+      },
       button: {
         '&:hover': {
           backgroundColor: getCssVariableValue('paleGrey')
         }
       }
     },
+    MuiListSubheader: {
+      root: {
+        borderTop: '1px solid transparent',
+        borderBottom: '1px solid var(--zircon)',
+        marginBottom: '-1px',
+        padding: 0,
+        backgroundColor: 'var(--zircon)',
+        textIndent: '2rem',
+        fontWeight: 'bold',
+        fontSize: '.75rem',
+        lineHeight: 1.33,
+        color: 'var(--coolGrey)'
+      },
+      gutters: {
+        paddingLeft: 0,
+        paddingRight: 0
+      },
+      sticky: {
+        backgroundColor: 'var(--zircon)'
+      }
+    },
+    MuiListItemSecondaryAction: {
+      root: {
+        zIndex: 1
+      }
+    },
     MuiMenuItem: {
       root: {
+        minHeight: 'auto',
         paddingTop: 4,
         paddingBottom: 4,
-        color: getCssVariableValue('charcoalGrey')
+        color: getCssVariableValue('charcoalGrey'),
+        border: 0,
+        '&:last-child': {
+          borderBottom: 0
+        }
       },
       gutters: {
         paddingLeft: 24,
