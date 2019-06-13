@@ -3958,10 +3958,10 @@ cozy-device-helper@1.6.3:
   dependencies:
     lodash "4.17.11"
 
-cozy-device-helper@1.7.1:
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/cozy-device-helper/-/cozy-device-helper-1.7.1.tgz#56c57a14b423de2700a0a695c3f7710cf6a2383d"
-  integrity sha512-CTEJOzRK+AtrGN/Wqjj5n0DM1mMMvNGSZDxKlTCvY0FNYYko05vX5qIEb9vFVm7UhH7GFZjZ+S73g3Kwq/hF4Q==
+cozy-device-helper@1.7.2:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/cozy-device-helper/-/cozy-device-helper-1.7.2.tgz#940d03351002702865a1b710ec6f61e1dc159d12"
+  integrity sha512-kObApQRfAHfWu+F+OhoeLhiMU1MGGRUACWymKW6ybhyHtsFB97nxtHtelg6QoIPEfF6CSJDfIdvEsTZhE1qMfA==
   dependencies:
     lodash "4.17.11"
 
