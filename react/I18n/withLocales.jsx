@@ -19,14 +19,20 @@ const withLocales = localesOrRequire => Component => {
 
   class Wrapped extends React.Component {
     render() {
-      // Do not pass t downwards
-      const { lang, ...rest } = omit(this.props, 't')
+      const { lang } = this.props
+      // Do not pass translate props downwards
+      // since the component is already augmented with translate()
+      const wrappedProps = omit(this.props, Object.keys(I18n.childContextTypes))
       return (
         <I18n dictRequire={requireLocale} lang={lang}>
-          <Translated {...rest} />
+          <Translated {...wrappedProps} />
         </I18n>
       )
     }
+  }
+  Wrapped.propTypes = {
+    ...(Component.propTypes || {}),
+    ...I18n.childContextTypes
   }
 
   Wrapped.displayName = `withLocales(${Component.displayName ||

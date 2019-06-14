@@ -20,7 +20,7 @@ const componentLocales = {
   }
 }
 
-class Component extends React.Component {
+class MockComponent extends React.Component {
   render() {
     const { t } = this.props
     return <div>{t('hello-world')}</div>
@@ -48,9 +48,9 @@ describe('with locales', () => {
     })
   }
 
-  const TComponentObj = withLocales(componentLocales)(Component)
+  const TComponentObj = withLocales(componentLocales)(MockComponent)
   const requireLang = lang => componentLocales[lang]
-  const TComponentFunc = withLocales(requireLang)(Component)
+  const TComponentFunc = withLocales(requireLang)(MockComponent)
 
   testComponent(TComponentObj, 'locales from object')
   testComponent(TComponentFunc, 'locales from require function')
