@@ -206,7 +206,30 @@ Field.propTypes = {
     'text',
     'url'
   ]),
-  value: PropTypes.string,
+  // value should be an object for type=select and string for others
+  value: function(props, propName, componentName) {
+    // not a required props
+    if (typeof props[propName] === 'undefined') return
+    if (props.type === 'select' && typeof props[propName] !== 'object') {
+      return new Error(
+        'Invalid prop `' +
+          propName +
+          '` supplied to' +
+          ' `' +
+          componentName +
+          '`. Expected an object for a Field value with type=select.'
+      )
+    } else if (props.type !== 'select' && typeof props[propName] !== 'string') {
+      return new Error(
+        'Invalid prop `' +
+          propName +
+          '` supplied to' +
+          ' `' +
+          componentName +
+          '`. Expected value to be a string.'
+      )
+    }
+  },
   placeholder: PropTypes.string,
   error: PropTypes.bool,
   side: PropTypes.node,
