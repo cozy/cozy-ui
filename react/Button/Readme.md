@@ -15,7 +15,7 @@ when `<ButtonLink>` has:
 ```
 const { Button } = require('./index');
 const props = [{}, { disabled: true}, { busy: true }];
-const themes = ['regular', 'danger', 'highlight', 'secondary', 'danger-outline', 'alpha', 'text'];
+const themes = ['regular', 'ghost', 'danger', 'highlight', 'secondary', 'danger-outline', 'alpha', 'text'];
 
 <div>
   {themes.map(theme =>
