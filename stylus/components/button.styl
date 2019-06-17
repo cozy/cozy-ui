@@ -286,6 +286,27 @@ $button-client-mobile
             display block
 
 /*------------------------------------*\
+  Text alignment
+\*------------------------------------*/
+button--left =
+    & > span
+        justify-content flex-start
+$button--left
+    {button--left}
+
+button--center =
+    & > span
+        justify-content center
+$button--center
+    {button--center}
+
+button--right =
+    & > span
+        justify-content flex-end
+$button--right
+    {button--right}
+
+/*------------------------------------*\
   Sizes
 \*------------------------------------*/
 button--tiny =

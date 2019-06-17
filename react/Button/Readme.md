@@ -57,6 +57,23 @@ const { Button } = require('./index');
 </div>
 ```
 
+#### Text alignment
+
+- `left` to align the label to the left
+- `right` to align the label to the right
+- `center` to center the label (default)
+
+```
+const { Button } = require('./index');
+
+<div>
+  <p><Button extension="full" label='Default (center)'/></p>
+  <p><Button extension="full" align="left" label='Left'/></p>
+  <p><Button extension="full" align="right" label='Right'/></p>
+  <p><Button extension="full" align="center" label='Center'/></p>
+</div>
+```
+
 #### Add a action on click
 
 ```
