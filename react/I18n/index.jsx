@@ -85,7 +85,7 @@ export const translate = () => WrappedComponent => {
     )
   }
   Wrapper.propTypes = {
-    ...(WrappedComponent.propTypes || {}),
+    ...WrappedComponent.propTypes,
     ...i18nContextTypes
   }
   Wrapper.contextTypes = i18nContextTypes
