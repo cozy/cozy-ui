@@ -123,25 +123,28 @@ exports[`BarButton should render examples: BarButton 4`] = `
 exports[`Button should render examples: Button 1`] = `
 "<div>
   <div>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly\\"><span><span>regular</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly styles__c-btn--center___16_Xh\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly styles__c-btn--center___16_Xh\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly styles__c-btn--center___16_Xh\\"><span><span>regular</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
           <use xlink:href=\\"#spinner\\"></use>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C\\"><span><span>danger</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--ghost___1HC3L styles__c-btn--center___16_Xh\\"><span><span>ghost</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--ghost___1HC3L styles__c-btn--center___16_Xh\\"><span><span>ghost</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--ghost___1HC3L styles__c-btn--center___16_Xh\\"><span><span>ghost</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
           <use xlink:href=\\"#spinner\\"></use>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu\\"><span><span>highlight</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>danger</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
           <use xlink:href=\\"#spinner\\"></use>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N\\"><span><span>secondary</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--center___16_Xh\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--center___16_Xh\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--center___16_Xh\\"><span><span>highlight</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
           <use xlink:href=\\"#spinner\\"></use>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B\\"><span><span>danger-outline</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>secondary</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
           <use xlink:href=\\"#spinner\\"></use>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi\\"><span><span>alpha</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>danger-outline</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
           <use xlink:href=\\"#spinner\\"></use>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2\\"><span><span>text</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2\\"><span><span>text</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2\\"><span><span>text</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi styles__c-btn--center___16_Xh\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi styles__c-btn--center___16_Xh\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi styles__c-btn--center___16_Xh\\"><span><span>alpha</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+          <use xlink:href=\\"#spinner\\"></use>
+        </svg></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>text</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>text</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>text</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
           <use xlink:href=\\"#spinner\\"></use>
         </svg></span></button></p>
   </div>
@@ -151,11 +154,11 @@ exports[`Button should render examples: Button 1`] = `
 exports[`Button should render examples: Button 2`] = `
 "<div>
   <div>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--tiny___1pFv6\\"><span><span>Tiny</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--small___3ArkI\\"><span><span>Small</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Normal</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Normal</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN\\"><span><span>Large</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--tiny___1pFv6 styles__c-btn--center___16_Xh\\"><span><span>Tiny</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--small___3ArkI styles__c-btn--center___16_Xh\\"><span><span>Small</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Normal</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Normal</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN styles__c-btn--center___16_Xh\\"><span><span>Large</span></span></button></p>
   </div>
 </div>"
 `;
@@ -163,69 +166,88 @@ exports[`Button should render examples: Button 2`] = `
 exports[`Button should render examples: Button 3`] = `
 "<div>
   <div>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Normal</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--narrow___27FHD\\"><span><span>N…</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--full___2VmR1\\"><span><span>Full width</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Normal</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--narrow___27FHD styles__c-btn--center___16_Xh\\"><span><span>N…</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--full___2VmR1 styles__c-btn--center___16_Xh\\"><span><span>Full width</span></span></button></p>
   </div>
 </div>"
 `;
 
-exports[`Button should render examples: Button 4`] = `"<div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B\\"><span><span>Show alert</span></span></button></div>"`;
+exports[`Button should render examples: Button 4`] = `
+"<div>
+  <div>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--full___2VmR1 styles__c-btn--center___16_Xh\\"><span><span>Default (center)</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--full___2VmR1 styles__c-btn--left___23VNa\\"><span><span>Left</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--full___2VmR1 styles__c-btn--right___wklLq\\"><span><span>Right</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--full___2VmR1 styles__c-btn--center___16_Xh\\"><span><span>Center</span></span></button></p>
+  </div>
+</div>"
+`;
 
 exports[`Button should render examples: Button 5`] = `
-"<div><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Loading</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+"<div>
+  <div>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN styles__c-btn--full___2VmR1 styles__c-btn--center___16_Xh\\"><span><span>Label</span><span class=\\"u-ml-auto\\"><div class=\\"styles__c-chip___2aPqg styles__c-chip--smallSize___3i9gj styles__c-chip--primaryTheme___1ZNhX u-breakword u-m-0\\">1/2</div></span></span></button></p>
+  </div>
+</div>"
+`;
+
+exports[`Button should render examples: Button 6`] = `"<div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>Show alert</span></span></button></div>"`;
+
+exports[`Button should render examples: Button 7`] = `
+"<div><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Loading</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
       <use xlink:href=\\"#spinner\\"></use>
     </svg></span></button></div>"
 `;
 
-exports[`Button should render examples: Button 6`] = `"<div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Toggle busy</span></span></button></div>"`;
-
-exports[`Button should render examples: Button 7`] = `
-"<div>
-  <div><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Loading</span></span></button><a href=\\"http://cozy.io\\" aria-disabled=\\"true\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Go to Cozy website</span></span></a></div>
-</div>"
-`;
-
-exports[`Button should render examples: Button 8`] = `
-"<div>
-  <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#delete\\"></use></svg><span>delete</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--narrow___27FHD\\" title=\\"See more\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#dots\\"></use></svg><span class=\\"u-visuallyhidden\\">See more</span></span></button></div>
-</div>"
-`;
+exports[`Button should render examples: Button 8`] = `"<div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Toggle busy</span></span></button></div>"`;
 
 exports[`Button should render examples: Button 9`] = `
 "<div>
-  <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C\\"><span><svg class=\\"styles__icon___23x3R\\" style=\\"fill: yellow;\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#delete\\"></use></svg><span>delete</span></span></button></div>
+  <div><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Loading</span></span></button><a href=\\"http://cozy.io\\" aria-disabled=\\"true\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Go to Cozy website</span></span></a></div>
 </div>"
 `;
 
 exports[`Button should render examples: Button 10`] = `
 "<div>
-  <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--round___1Lkyl\\" title=\\"Add\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#plus\\"></use></svg><span class=\\"u-visuallyhidden\\">Add</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--round___1Lkyl\\" title=\\"Delete\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#cross\\"></use></svg><span class=\\"u-visuallyhidden\\">Delete</span></span></button></div>
+  <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#delete\\"></use></svg><span>delete</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--narrow___27FHD styles__c-btn--center___16_Xh\\" title=\\"See more\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#dots\\"></use></svg><span class=\\"u-visuallyhidden\\">See more</span></span></button></div>
 </div>"
 `;
 
 exports[`Button should render examples: Button 11`] = `
 "<div>
-  <div>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--tiny___1pFv6 styles__c-btn--subtle___OknKf\\"><span><span>Tiny text</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--small___3ArkI styles__c-btn--subtle___OknKf\\"><span><span>Small text</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf\\"><span><span>Regular text</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN styles__c-btn--subtle___OknKf\\"><span><span>Large text</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf\\"><span><span>Secondary theme</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--subtle___OknKf\\"><span><span>Highlight theme</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--subtle___OknKf\\"><span><span>DANGER theme</span></span></button></p>
-    <p><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf\\"><span><span>Disabled</span></span></button></p>
-    <p><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf\\"><span><span>Busy</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
-          <use xlink:href=\\"#spinner\\"></use>
-        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf\\"><span><span>Busy secondary</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
-          <use xlink:href=\\"#spinner\\"></use>
-        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--subtle___OknKf\\"><span><span>Busy highlight</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
-          <use xlink:href=\\"#spinner\\"></use>
-        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--subtle___OknKf\\"><span><span>Busy danger</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
-          <use xlink:href=\\"#spinner\\"></use>
-        </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#cozy\\"></use></svg><span>Cozy</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#plus\\"></use></svg><span>Subtle Secondary Cozy</span></span></button></p>
-  </div>
+  <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><svg class=\\"styles__icon___23x3R\\" style=\\"fill: yellow;\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#delete\\"></use></svg><span>delete</span></span></button></div>
 </div>"
 `;
 
 exports[`Button should render examples: Button 12`] = `
+"<div>
+  <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh styles__c-btn--round___1Lkyl\\" title=\\"Add\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#plus\\"></use></svg><span class=\\"u-visuallyhidden\\">Add</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh styles__c-btn--round___1Lkyl\\" title=\\"Delete\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#cross\\"></use></svg><span class=\\"u-visuallyhidden\\">Delete</span></span></button></div>
+</div>"
+`;
+
+exports[`Button should render examples: Button 13`] = `
+"<div>
+  <div>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--tiny___1pFv6 styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Tiny text</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--small___3ArkI styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Small text</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Regular text</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Large text</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Secondary theme</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Highlight theme</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>DANGER theme</span></span></button></p>
+    <p><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Disabled</span></span></button></p>
+    <p><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+          <use xlink:href=\\"#spinner\\"></use>
+        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy secondary</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+          <use xlink:href=\\"#spinner\\"></use>
+        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy highlight</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+          <use xlink:href=\\"#spinner\\"></use>
+        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy danger</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+          <use xlink:href=\\"#spinner\\"></use>
+        </svg></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#cozy\\"></use></svg><span>Cozy</span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#plus\\"></use></svg><span>Subtle Secondary Cozy</span></span></button></p>
+  </div>
+</div>"
+`;
+
+exports[`Button should render examples: Button 14`] = `
 "<div>
   <div>
     <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--tiny___1pFv6\\"><span><span>Link to Cozy.io</span></span></a></p>
@@ -237,7 +259,7 @@ exports[`Button should render examples: Button 12`] = `
 </div>"
 `;
 
-exports[`Button should render examples: Button 13`] = `
+exports[`Button should render examples: Button 15`] = `
 "<div>
   <div><span to=\\"/destination\\" class=\\"styles__c-btn___-2Vnj\\"><span>I'm a (false) NavLink</span></span></div>
 </div>"
@@ -276,7 +298,7 @@ exports[`Card should render examples: Card 1`] = `
 "<div>
   <div class=\\"styles__c-card___YgP7B\\">
     <div class=\\"styles__u-title-h3___1ZGqN u-mb-1\\">This is a card</div>
-    <div class=\\"styles__u-text___2UfQa u-mb-1\\">This is some card content. Content can be small or huge.</div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj u-ml-0\\"><span><span>Demo button</span></span></button>
+    <div class=\\"styles__u-text___2UfQa u-mb-1\\">This is some card content. Content can be small or huge.</div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh u-ml-0\\"><span><span>Demo button</span></span></button>
   </div>
 </div>"
 `;
@@ -343,7 +365,7 @@ exports[`Empty should render examples: Empty 2`] = `
       </svg>
       <h2 class=\\"styles__u-title-h1___fimho styles__c-empty-title___2HduE\\">An error occured</h2>
       <p class=\\"styles__c-empty-text___3HnvR\\">It's maybe nothing, just refresh to be sure</p>
-      <div class=\\"styles__c-empty-text___3HnvR\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Try refreshing</span></span></button></div>
+      <div class=\\"styles__c-empty-text___3HnvR\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Try refreshing</span></span></button></div>
     </div>
   </div>
 </div>"
@@ -360,7 +382,7 @@ exports[`Field should render examples: Field 1`] = `
 exports[`Field should render examples: Field 2`] = `
 "<div>
   <div>
-    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I can have focus</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Focus please\\" value=\\"\\"></div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Focus!</span>Set Focus</span></button>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I can have focus</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Focus please\\" value=\\"\\"></div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Focus!</span>Set Focus</span></button>
   </div>
 </div>"
 `;
@@ -494,7 +516,7 @@ exports[`Hero should render examples: Hero 1`] = `
         <p class=\\" \\">Automatic follow-up of your medical expenses</p>
       </div>
     </div>
-    <p class=\\" styles__Hero-cta___2KhwU\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Connect your bank accounts</span></span></button></p>
+    <p class=\\" styles__Hero-cta___2KhwU\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Connect your bank accounts</span></span></button></p>
   </div>
 </div>"
 `;
@@ -1243,7 +1265,7 @@ exports[`Infos should render examples: Infos 1`] = `
         </svg>
         <div class=\\"styles__u-text___2UfQa u-ta-left u-pl-half\\">My small persistent information, with an icon. And lot of text ? Again and again...</div>
       </div>
-      <div class=\\"u-flex-shrink-0 u-mb-1\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C\\"><span>A CTA button</span></button></div>
+      <div class=\\"u-flex-shrink-0 u-mb-1\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span>A CTA button</span></button></div>
     </div>
   </div>
 </div>"
@@ -1314,7 +1336,7 @@ exports[`Menu should render examples: Menu 2`] = `
 
 exports[`Menu should render examples: Menu 3`] = `
 "<div>
-  <div class=\\"styles__c-menu___2YTiU styles__c-menu--left___3wamY\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Greetings with custom component</span></span></button></div>
+  <div class=\\"styles__c-menu___2YTiU styles__c-menu--left___3wamY\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Greetings with custom component</span></span></button></div>
 </div>"
 `;
 

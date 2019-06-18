@@ -56,6 +56,7 @@ const BaseButton = props => {
     size,
     theme,
     align,
+    extraRight,
     tag: Tag,
     ...restProps
   } = props
@@ -86,6 +87,7 @@ const BaseButton = props => {
         )}
         {label && <span className={iconOnlyClass}>{label}</span>}
         {children}
+        {extraRight && <span className="u-ml-auto">{extraRight}</span>}
         {restProps.busy && (
           <Icon
             icon="spinner"
@@ -139,6 +141,8 @@ Button.propTypes = {
   className: PropTypes.string,
   /** What to do on click */
   onClick: PropTypes.func,
+  /** Adds an element to the right of the button */
+  extraRight: PropTypes.PropTypes.node,
 
   // Only for Button
   /** Will display a spinner if true */

@@ -74,6 +74,17 @@ const { Button } = require('./index');
 </div>
 ```
 
+#### Extra right content
+
+```
+const { Button } = require('./index');
+const Chip = require('../Chip').default;
+
+<div>
+  <p><Button extension="full" size="large" label='Label' extraRight={<Chip size="small" theme="primary" className="u-m-0">1/2</Chip>} /></p>
+</div>
+```
+
 #### Add a action on click
 
 ```
