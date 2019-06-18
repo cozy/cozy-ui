@@ -158,3 +158,20 @@ const options = [
   />
 </form>
 ```
+
+#### Class names
+
+You can use `className`, `labelClassName` to further customize the elements of the Field.
+
+```
+<form>
+  <Field
+    className='u-mt-0'
+    labelClassName='u-mt-0'
+    label="I'm a label"
+    side="(optional)"
+    fullwidth={true}
+  />
+</form>
+```
+

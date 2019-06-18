@@ -93,7 +93,8 @@ const Field = props => {
     readOnly,
     secondaryLabels,
     side,
-    size
+    size,
+    labelClassName
   } = props
 
   const inputType = type => {
@@ -174,7 +175,9 @@ const Field = props => {
 
   return (
     <div className={cx(styles['o-field'], className)}>
-      <Label htmlFor={id}>{label}</Label>
+      <Label className={labelClassName} htmlFor={id}>
+        {label}
+      </Label>
       {side && (
         <div
           className={cx(styles['o-side'], labelStyles['c-label'], {
