@@ -187,7 +187,7 @@ exports[`Button should render examples: Button 4`] = `
 exports[`Button should render examples: Button 5`] = `
 "<div>
   <div>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN styles__c-btn--full___2VmR1 styles__c-btn--center___16_Xh\\"><span><span>Label</span><span class=\\"u-ml-auto\\"><div class=\\"styles__c-chip___2aPqg styles__c-chip--smallSize___3i9gj styles__c-chip--primaryTheme___1ZNhX u-breakword u-m-0\\">1/2</div></span></span></button></p>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN styles__c-btn--full___2VmR1 styles__c-btn--center___16_Xh\\"><span><span>Label</span><span class=\\"u-ml-auto\\"><div class=\\"styles__c-chip___2aPqg styles__c-chip--smallSize___3i9gj styles__c-chip--primaryTheme___1ZNhX u-breakword styles__c-chip--normalPrimaryTheme___24yFt u-m-0\\">1/2</div></span></span></button></p>
   </div>
 </div>"
 `;

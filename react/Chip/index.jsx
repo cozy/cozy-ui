@@ -39,6 +39,8 @@ class Chip extends React.PureComponent {
               variant !== 'normal' && theme === 'normal',
             [styles['c-chip--hoverablePrimaryTheme']]:
               variant !== 'normal' && theme === 'primary',
+            [styles['c-chip--normalPrimaryTheme']]:
+              variant === 'normal' && theme === 'primary',
             [styles['c-chip--hoverableErrorTheme']]:
               variant !== 'normal' && theme === 'error',
             [styles['c-chip--round']]: rounded,
