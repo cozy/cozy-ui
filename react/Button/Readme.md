@@ -15,7 +15,7 @@ when `<ButtonLink>` has:
 ```
 const { Button } = require('./index');
 const props = [{}, { disabled: true}, { busy: true }];
-const themes = ['regular', 'danger', 'highlight', 'secondary', 'danger-outline', 'alpha', 'text'];
+const themes = ['regular', 'ghost', 'danger', 'highlight', 'secondary', 'danger-outline', 'alpha', 'text'];
 
 <div>
   {themes.map(theme =>
@@ -54,6 +54,34 @@ const { Button } = require('./index');
   <p><Button label='Normal'/></p>
   <p><Button extension="narrow" label='N…'/></p>
   <p><Button extension="full" label='Full width'/></p>
+</div>
+```
+
+#### Text alignment
+
+- `left` to align the label to the left
+- `right` to align the label to the right
+- `center` to center the label (default)
+
+```
+const { Button } = require('./index');
+
+<div>
+  <p><Button extension="full" label='Default (center)'/></p>
+  <p><Button extension="full" align="left" label='Left'/></p>
+  <p><Button extension="full" align="right" label='Right'/></p>
+  <p><Button extension="full" align="center" label='Center'/></p>
+</div>
+```
+
+#### Extra right content
+
+```
+const { Button } = require('./index');
+const Chip = require('../Chip').default;
+
+<div>
+  <p><Button extension="full" size="large" label='Label' extraRight={<Chip size="small" theme="primary" className="u-m-0">1/2</Chip>} /></p>
 </div>
 ```
 

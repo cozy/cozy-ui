@@ -9,7 +9,9 @@
 regularTheme = {
     primaryColor: var(--dodgerBlue), secondaryColor: var(--dodgerBlue), activeColor: var(--scienceBlue), contrastColor: var(--white)
 }
-
+ghostTheme = {
+    primaryColor: var(--hawkesBlue), secondaryColor: var(--primaryColor), activeColor: var(--hawkesBlue), contrastColor: var(--primaryColor)
+}
 highlightTheme = {
     primaryColor: var(--emerald), secondaryColor: var(--emerald), activeColor: var(--malachite), contrastColor: var(--white)
 }
@@ -106,6 +108,15 @@ $button
 
 $button--regular  // Deprecated
     @extend $button
+
+$button--ghost
+    themedBtn(ghostTheme)
+    border-style dashed
+
+    &:active
+    &:hover
+    &:focus
+        border-color: var(--primaryColor)
 
 $button--highlight
     themedBtn(highlightTheme)
@@ -273,6 +284,27 @@ $button-client-mobile
 
         svg
             display block
+
+/*------------------------------------*\
+  Text alignment
+\*------------------------------------*/
+button--left =
+    & > span
+        justify-content flex-start
+$button--left
+    {button--left}
+
+button--center =
+    & > span
+        justify-content center
+$button--center
+    {button--center}
+
+button--right =
+    & > span
+        justify-content flex-end
+$button--right
+    {button--right}
 
 /*------------------------------------*\
   Sizes

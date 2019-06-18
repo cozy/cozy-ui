@@ -5,7 +5,7 @@ import styles from './styles.styl'
 import Icon, { iconPropType } from '../Icon'
 
 const btnClass = function(options) {
-  const { className, extension, size, theme, variant, round } = options
+  const { className, extension, size, theme, variant, round, align } = options
   return cx(
     styles['c-btn'],
     {
@@ -13,6 +13,7 @@ const btnClass = function(options) {
       [styles[`c-btn--${size}`]]: size !== 'normal',
       [styles[`c-btn--${variant}`]]: variant,
       [styles[`c-btn--${extension}`]]: extension,
+      [styles[`c-btn--${align}`]]: align,
       [styles[`c-btn--round`]]: round
     },
     className
@@ -54,6 +55,8 @@ const BaseButton = props => {
     round,
     size,
     theme,
+    align,
+    extraRight,
     tag: Tag,
     ...restProps
   } = props
@@ -67,6 +70,7 @@ const BaseButton = props => {
       {...transformProps(restProps)}
       className={btnClass({
         extension,
+        align,
         round,
         size,
         theme,
@@ -83,6 +87,7 @@ const BaseButton = props => {
         )}
         {label && <span className={iconOnlyClass}>{label}</span>}
         {children}
+        {extraRight && <span className="u-ml-auto">{extraRight}</span>}
         {restProps.busy && (
           <Icon
             icon="spinner"
@@ -128,12 +133,16 @@ Button.propTypes = {
   size: PropTypes.oneOf(['tiny', 'small', 'large', 'normal']),
   /** Spacing of the button */
   extension: PropTypes.oneOf(['narrow', 'full']),
+  /** Button's label alignment */
+  align: PropTypes.oneOf(['left', 'right', 'center']),
   /** Will make the button round */
   round: PropTypes.bool,
   /** Extra class */
   className: PropTypes.string,
   /** What to do on click */
   onClick: PropTypes.func,
+  /** Adds an element to the right of the button */
+  extraRight: PropTypes.PropTypes.node,
 
   // Only for Button
   /** Will display a spinner if true */
@@ -149,7 +158,8 @@ Button.propTypes = {
 Button.defaultProps = {
   type: 'submit',
   tag: 'button',
-  size: 'normal'
+  size: 'normal',
+  align: 'center'
 }
 
 ButtonLink.defaultProps = {
