@@ -90,6 +90,7 @@ const Field = props => {
     error,
     onChange,
     onKeyUp,
+    onBlur,
     readOnly,
     secondaryLabels,
     side,
@@ -119,6 +120,7 @@ const Field = props => {
             error={error}
             onChange={onChange}
             onKeyUp={onKeyUp}
+            onBlur={onBlur}
             readOnly={readOnly}
           />
         )
@@ -137,6 +139,7 @@ const Field = props => {
             error={error}
             onChange={onChange}
             onKeyUp={onKeyUp}
+            onBlur={onBlur}
             readOnly={readOnly}
             size={size}
             {...fieldProps}
@@ -161,6 +164,7 @@ const Field = props => {
             error={error}
             onChange={onChange}
             onKeyUp={onKeyUp}
+            onBlur={onBlur}
             readOnly={readOnly}
             size={size}
           />
