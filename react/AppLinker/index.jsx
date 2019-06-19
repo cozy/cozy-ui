@@ -12,7 +12,7 @@ import {
 } from 'cozy-device-helper'
 import { generateUniversalLink, getUniversalLinkDomain } from './native'
 
-import { NATIVE_APP_INFOS } from 'cozy-ui/transpiled/react/AppLinker/native.config'
+import { NATIVE_APP_INFOS } from './native.config'
 import expiringMemoize from './expiringMemoize'
 
 const expirationDelay = 10 * 1000

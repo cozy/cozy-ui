@@ -1,4 +1,4 @@
-import { UNIVERSAL_LINK_URL } from 'cozy-ui/transpiled/react/AppLinker/native.config.js'
+import { UNIVERSAL_LINK_URL } from './native.config.js'
 
 export const getUniversalLinkDomain = () => {
   return UNIVERSAL_LINK_URL
