@@ -1271,6 +1271,8 @@ exports[`Infos should render examples: Infos 1`] = `
 </div>"
 `;
 
+exports[`InlineCard should render examples: InlineCard 1`] = `"<div><span class=\\"styles__c-inline-card___1sri1\\">I am an inline card</span></div>"`;
+
 exports[`Label should render examples: Label 1`] = `
 "<div>
   <form>
