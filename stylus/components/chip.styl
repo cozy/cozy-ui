@@ -1,6 +1,9 @@
 @require 'settings/palette'
 @require 'tools/mixins'
 
+$chip-height-tiny = rem(24)
+$chip-font-size-tiny = rem(12)
+
 $chip-height-small = rem(32)
 $chip-font-size-small = rem(14)
 
@@ -20,6 +23,12 @@ $round-chip
     width $chip-height-normal
     text-align center
     justify-content center
+
+$tiny-size-chip
+    height $chip-height-tiny
+    padding 0 (($chip-height-tiny - $chip-font-size-tiny) / 2)
+    border-radius ($chip-height-tiny / 2)
+    font-size $chip-font-size-tiny
 
 $small-size-chip
     height $chip-height-small
@@ -64,6 +73,10 @@ $chip--hoverablePrimaryTheme
     &:hover,
     &:focus
         background-color var(--frenchPass)
+
+$chip--normalPrimaryTheme
+    background-color var(--dodgerBlue)
+    color var(--white)
 
 $chip--hoverableErrorTheme
     &:hover,
