@@ -6,6 +6,7 @@
   <p><Input type="password" placeholder="This is a input[type=password]" /></p>
   <p><Input type="email" placeholder="This is a input[type=email]" /></p>
   <p><Input type="url" placeholder="This is a input[type=url]" /></p>
+  <p><Input type="number" placeholder="This is a input[type=number]" min="10" max="100" step="10" /></p>
 </form>
 ```
 
