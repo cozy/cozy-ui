@@ -4,7 +4,7 @@ set -eu
 
 outfile="react/Icon/icons-sprite.js"
 
-icons="$(ls assets/icons/*/*.svg)"
+icons="$(ls assets/icons/*/*.svg | sort -d)"
 
 echo "Making icon sprite, output file : ${outfile}..."
 echo $icons | xargs yarn svgstore --inline -o /tmp/icons-sprite.svg
