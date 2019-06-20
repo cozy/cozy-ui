@@ -14,6 +14,7 @@ assets/icons/ui/back.svg
 assets/icons/ui/bottom-select.svg
 assets/icons/ui/bottom.svg
 assets/icons/ui/calendar.svg
+assets/icons/ui/certified.svg
 assets/icons/ui/check 2.svg
 assets/icons/ui/check-circleless.svg
 assets/icons/ui/check.svg
