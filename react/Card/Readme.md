@@ -23,3 +23,16 @@ const { Text, SubTitle } = require('../Text');
   <Text>This is some card content. Content can be small or huge. Also, it has margins.</Text>
 </Card>
 ```
+
+#### `tag`
+
+Uses the provided tag to render the root element of the Card
+
+```
+const { Text, SubTitle } = require('../Text');
+
+<Card tag="a" href="https://cozy.io" target="_blank">
+  <SubTitle>Visit cozy.io</SubTitle>
+  <Text>To learn more about us</Text>
+</Card>
+```

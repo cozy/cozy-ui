@@ -311,6 +311,13 @@ exports[`Card should render examples: Card 2`] = `
 </div>"
 `;
 
+exports[`Card should render examples: Card 3`] = `
+"<div><a class=\\"styles__c-card___YgP7B\\" href=\\"https://cozy.io\\" target=\\"_blank\\">
+    <div class=\\"styles__u-title-h3___1ZGqN\\">Visit cozy.io</div>
+    <div class=\\"styles__u-text___2UfQa\\">To learn more about us</div>
+  </a></div>"
+`;
+
 exports[`Checkbox should render examples: Checkbox 1`] = `
 "<div>
   <form>

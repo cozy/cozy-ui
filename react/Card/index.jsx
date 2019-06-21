@@ -6,9 +6,9 @@ import styles from './styles.styl'
 
 export class Card extends PureComponent {
   render() {
-    const { className, inset, ...rest } = this.props
+    const { className, inset, tag: Tag, ...rest } = this.props
     return (
-      <div
+      <Tag
         className={cx(
           styles['c-card'],
           {
@@ -24,7 +24,12 @@ export class Card extends PureComponent {
 
 Card.propTypes = {
   className: PropTypes.string,
-  inset: PropTypes.bool
+  inset: PropTypes.bool,
+  tag: PropTypes.node
+}
+
+Card.defaultProps = {
+  tag: 'div'
 }
 
 export default Card
