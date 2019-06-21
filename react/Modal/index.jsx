@@ -327,7 +327,6 @@ class Modal extends Component {
               },
               wrapperClassName
             )}
-            style={style}
             onClick={closable ? this.handleOutsideClick : undefined}
           >
             <div
@@ -342,6 +341,7 @@ class Modal extends Component {
                 },
                 className
               )}
+              style={style}
               role="dialog"
               aria-modal="true"
               aria-labelledby={title ? titleID : null}
