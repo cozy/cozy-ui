@@ -38,6 +38,14 @@ const { Bold } = require('./index');
 <Bold>This a bold text</Bold>
 ```
 
+#### Uppercase test
+
+```
+const { Uppercase } = require('./index');
+
+<Uppercase>This is an uppercase text</Uppercase>
+```
+
 #### Note text
 
 ```

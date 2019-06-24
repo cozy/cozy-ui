@@ -1891,6 +1891,12 @@ exports[`Text should render examples: Text 5`] = `
 
 exports[`Text should render examples: Text 6`] = `
 "<div>
+  <div class=\\"styles__u-uppercase___aobU-\\">This is an uppercase text</div>
+</div>"
+`;
+
+exports[`Text should render examples: Text 7`] = `
+"<div>
   <div class=\\"styles__u-caption___1VRxy\\">This a note text</div>
 </div>"
 `;

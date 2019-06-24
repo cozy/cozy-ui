@@ -36,6 +36,9 @@ export const SubTitle = ({ className, ...restProps }) => (
 export const Bold = ({ className, ...restProps }) => (
   <BaseText className={cx(styles['u-title-h4'], className)} {...restProps} />
 )
+export const Uppercase = ({ className, ...restProps }) => (
+  <BaseText className={cx(styles['u-uppercase'], className)} {...restProps} />
+)
 export const Caption = ({ className, ...restProps }) => (
   <BaseText className={cx(styles['u-caption'], className)} {...restProps} />
 )
@@ -66,6 +69,9 @@ Bold.propTypes = {
 Caption.propTypes = {
   ...commonProps
 }
+Uppercase.propTypes = {
+  ...commonProps
+}
 
 // Default Props
 const commonDefaultProps = {
@@ -89,6 +95,10 @@ Bold.defaultProps = {
   ...commonDefaultProps
 }
 Caption.defaultProps = {
+  ...commonDefaultProps
+}
+
+Uppercase.defaultProps = {
   ...commonDefaultProps
 }
 
