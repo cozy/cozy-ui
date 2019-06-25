@@ -150,6 +150,7 @@ const Field = props => {
       case 'email':
       case 'url':
       case 'text':
+      case 'number':
         return (
           <Input
             autoComplete={autoComplete}
@@ -208,7 +209,8 @@ Field.propTypes = {
     'select',
     'textarea',
     'text',
-    'url'
+    'url',
+    'number'
   ]),
   // value should be an object for type=select and string for others
   value: function(props, propName, componentName) {
