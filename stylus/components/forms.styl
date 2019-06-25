@@ -341,13 +341,13 @@ $checkbox
             box-shadow inset 0 0 0 rem(2) var(--dodgerBlue)
 
         &::after
-            background-image embedurl('../../assets/icons/ui/check-white.svg')
+            background-image embedurl('../../assets/icons/illus/check-white.svg')
             background-size contain
             transition-duration .2s
             transition-property opacity, transform
 
     &[aria-checked='mixed'] span::after
-            background-image embedurl('../../assets/icons/ui/dash-white.svg')
+            background-image embedurl('../../assets/icons/illus/dash-white.svg')
             background-size contain
 
     &[aria-disabled=true]
@@ -424,7 +424,7 @@ $select
     @extend $input-text
     @extend $select-arrow-padding
     appearance none
-    background embedurl('../../assets/icons/ui/bottom-select.svg') right rem(16) center no-repeat
+    background embedurl('../../assets/icons/illus/bottom-select.svg') right rem(16) center no-repeat
     background-size rem(14)
 
     &::-ms-expand
