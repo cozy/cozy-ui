@@ -60,7 +60,7 @@ export {
   SubTitle,
   Bold,
   Caption,
-  Upppercase
+  Uppercase
 } from './Text'
 export { default as Empty } from './Empty'
 export { default as ContextHeader } from './ContextHeader'
