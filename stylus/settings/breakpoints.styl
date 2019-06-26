@@ -23,20 +23,34 @@ breakpoints = {
 }
 
 /*
+    Breakpoints
+
+    This is the collection of available breakpoint variables:<br><br>
+    - `BP-teeny`         -  375px
+    - `BP-tiny`          -  480px
+    - `BP-small`         -  768px
+    - `BP-medium`        -  1023px
+    - `BP-large`         -  1200px
+    - `BP-extra-large`   -  1439px
+
+    <br>Also we have a standard breakpoints collection meant to be used as suffixes for some utility classes<br>
+
+    If you want a utility class to trigger only at defined breakpoints you can use those:<br><br>
+    - `-t`  - refers to `tiny` breakpoint (max-width: 480px)
+    - `-s`  - refers to `small` breakpoint (max-width: 768px)
+    - `-m`  - refers to `medium` breakpoint (max-width: 1023px)
+
+    Styleguide Settings.breakpoints
+*/
+
+/*
     Media Queries mixins
 
     You can use these mixins with no arguments and they will output
     the desired a `max-width` media-query. Use the direction argument
     to set it to `min`.
 
-    teeny         -  375px
-    tiny          -  480px
-    small         -  768px
-    medium        -  1023px
-    large         -  1200px
-    extra-large   -  1439px
-
-    Styleguide Settings.breakpoints
+    Styleguide Settings.breakpoints.mixins
 */
 
 // mixins
@@ -52,7 +66,7 @@ size-helper(direction, size)
 
     Weight: -6
 
-    Styleguide Settings.breakpoints.teeny
+    Styleguide Settings.breakpoints.mixins.teeny
 */
 teeny-screen(direction='max')
     @media ({direction}-width: rem(size-helper(direction, BP-teeny)))
@@ -66,7 +80,7 @@ teeny-screen(direction='max')
 
     Weight: -5
 
-    Styleguide Settings.breakpoints.tiny
+    Styleguide Settings.breakpoints.mixins.tiny
 */
 tiny-screen(direction='max')
     @media ({direction}-width: rem(size-helper(direction, BP-tiny)))
@@ -80,7 +94,7 @@ tiny-screen(direction='max')
 
     Weight: -4
 
-    Styleguide Settings.breakpoints.small
+    Styleguide Settings.breakpoints.mixins.small
 */
 small-screen(direction='max')
     @media ({direction}-width: rem(size-helper(direction, BP-small)))
@@ -94,7 +108,7 @@ small-screen(direction='max')
 
     Weight: -3
 
-    Styleguide Settings.breakpoints.medium
+    Styleguide Settings.breakpoints.mixins.medium
 */
 medium-screen(direction='max')
     @media ({direction}-width: rem(size-helper(direction, BP-medium)))
@@ -108,7 +122,7 @@ medium-screen(direction='max')
 
     Weight: -2
 
-    Styleguide Settings.breakpoints.large
+    Styleguide Settings.breakpoints.mixins.large
 */
 large-screen(direction='max')
     @media ({direction}-width: rem(size-helper(direction, BP-large)))
@@ -122,7 +136,7 @@ large-screen(direction='max')
 
     Weight: -1
 
-    Styleguide Settings.breakpoints.extra-large
+    Styleguide Settings.breakpoints.mixins.extra-large
 */
 extra-large-screen(direction='max')
     @media ({direction}-width: rem(size-helper(direction, BP-extra-large)))
@@ -138,7 +152,7 @@ extra-large-screen(direction='max')
 
     Weight: 0
 
-    Styleguide Settings.breakpoints.small-device
+    Styleguide Settings.breakpoints.mixins.small-device
 */
 
 small-device()
@@ -153,7 +167,7 @@ small-device()
 
     Weight: 0
 
-    Styleguide Settings.breakpoints.medium-device
+    Styleguide Settings.breakpoints.mixins.medium-device
 */
 
 medium-device()
@@ -167,7 +181,7 @@ medium-device()
 
     Weight: 0
 
-    Styleguide Settings.breakpoints.desktop
+    Styleguide Settings.breakpoints.mixins.desktop
 */
 desktop()
     @media (min-width: rem(size-helper('min', BP-medium)))
@@ -180,7 +194,7 @@ desktop()
 
     Weight: 1
 
-    Styleguide Settings.breakpoints.tablet
+    Styleguide Settings.breakpoints.mixins.tablet
 */
 tablet()
     @media (min-width: rem(size-helper('min', BP-small))) and (max-width: rem(size-helper('max', BP-medium)))
@@ -193,7 +207,7 @@ tablet()
 
     Weight: 2
 
-    Styleguide Settings.breakpoints.mobile
+    Styleguide Settings.breakpoints.mixins.mobile
 */
 mobile()
     +small-screen()
@@ -206,7 +220,7 @@ mobile()
 
     Weight: 3
 
-    Styleguide Settings.breakpoints.gt-mobile
+    Styleguide Settings.breakpoints.mixins.gt-mobile
 */
 gt-mobile()
     @media (min-width: rem(size-helper('min', BP-small)))
@@ -219,7 +233,7 @@ gt-mobile()
 
     Weight: 4
 
-    Styleguide Settings.breakpoints.gt-tablet
+    Styleguide Settings.breakpoints.mixins.gt-tablet
 */
 gt-tablet()
     @media (min-width: rem(size-helper('min', BP-medium)))
@@ -232,7 +246,7 @@ gt-tablet()
 
     Weight: 5
 
-    Styleguide Settings.breakpoints.lt-desktop
+    Styleguide Settings.breakpoints.mixins.lt-desktop
 */
 lt-desktop()
     +medium-screen()
