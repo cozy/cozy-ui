@@ -39,6 +39,16 @@ import 'cozy-ui/transpiled/react/stylesheet.css'
 
 You're now ready to use [Cozy UI's (p)React components](https://docs.cozy.io/cozy-ui/react/)
 
+### Utility classes
+
+React components only come with the needed style, nothing more, but you may need some more utility classes to build your apps.
+
+To do so you have at your disposal a special CSS build `cozy-ui.utils.min.css` that you can add like this:
+
+```
+import 'cozy-ui/dist/cozy-ui.utils.min.css'
+```
+
 ### As a vanilla CSS library
 
 The entire library is also available as a good ol’ CSS library. You can simply add it to your app by linking the distributed minified file.
