@@ -14,6 +14,7 @@
   },
   "homepage": "https://github.com/cozy/cozy-ui",
   "scripts": {
+    "build:css:all": "yarn build:css && yarn build:css:utils",
     "build:css": "env CSSMODULES=false stylus -c --include stylus -o dist/cozy-ui.min.css stylus/cozy-ui/build.styl --use ./node_modules/autoprefixer-stylus --with \"{ browsers: ['last 2 versions'] }\"",
     "build:css:utils": "env CSSMODULES=false stylus -c --include stylus -o dist/cozy-ui.utils.min.css stylus/cozy-ui/utils.styl --use ./node_modules/autoprefixer-stylus --with \"{ browsers: ['last 2 versions'] }\"",
     "build:css:app": "env CSSMODULES=false stylus -c --include stylus -o build/styleguide/app.css stylus/cozy-ui/build.styl --use ./node_modules/autoprefixer-stylus --with \"{ browsers: ['last 2 versions'] }\"",
