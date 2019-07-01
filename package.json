@@ -46,6 +46,7 @@
     "posttranspile": "postcss transpiled/react/stylesheet.css --replace",
     "travis-deploy-once": "travis-deploy-once",
     "watch:css": "yarn build:css --watch",
+    "prewatch:doc:react": "yarn sprite",
     "watch:doc:react": "env BABEL_ENV=transpilation styleguidist server --config docs/styleguide.config.js",
     "watch:doc:kss": "nodemon --ext styl,md --watch stylus --exec 'yarn build:doc:kss && http-server build/styleguide -p 4242'"
   },
