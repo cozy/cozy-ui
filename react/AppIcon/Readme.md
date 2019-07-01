@@ -29,7 +29,25 @@ Is it also possible to provide a custom asynchronous `fetchIcon` which takes an 
     <AppIcon app={app} fetchIcon={icon => client.fetch(...)} />
   </div>
 ```
+
+```jsx
+const fetchIcon1 = () => 'https://placeholder.pics/svg/100/7DC4FF/Test%20Icon'
+const fetchIcon2 = () => 'https://placeholder.pics/svg/100/FF0202/Test%20Icon'
+
+const handleSwitch = () => {
+  const newFetchIcon = state.fetchIcon.name === 'fetchIcon1' ? fetchIcon2 : fetchIcon1
+  setState({ fetchIcon: newFetchIcon  })
+}
+
+initialState = { fetchIcon: fetchIcon1 };
+
+<div>
+  <button onClick={handleSwitch}>Switch</button>{' '}
+  fetchIcon: {state.fetchIcon.name}<br/>
+  <div style={{ width: '100px' }}>
+    <AppIcon app={'test'} fetchIcon={state.fetchIcon} />
   </div>
+</div>
 ```
 
 ## `domain` and `secure` props

@@ -34,6 +34,12 @@ export class AppIcon extends Component {
     this.load()
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.fetchIcon !== prevProps.fetchIcon) {
+      this.load()
+    }
+  }
+
   async load() {
     const { app, domain, fetchIcon, onReady, secure } = this.props
     const loadFn = fetchIcon || preload
