@@ -1,5 +1,7 @@
 `<AppIcon />` renders an app icon.
 
+AppIcon takes all the space available, it needs to be in a container that specifies its width/height.
+
 It contains business logic related to apps documents.
 
 Apps documents provided by the stack are containing a `links.icon` property which is public and can be directly used as `src` value for an `<img />` tag.
