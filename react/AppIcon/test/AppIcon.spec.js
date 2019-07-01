@@ -76,6 +76,41 @@ describe('AppIcon component', () => {
     )
   })
 
+  it(`renders provided fallbackIcon when fetch error occurs`, async done => {
+    const wrapper = shallow(
+      <AppIcon
+        app={app}
+        fetchIcon={failureFetchIcon}
+        onReady={() => {
+          wrapper.update()
+          const component = wrapper.getElement()
+          expect(component).toMatchSnapshot()
+          expect(failureFetchIcon).toHaveBeenCalledWith(app, undefined, secure)
+          expect(console.error).toHaveBeenCalledTimes(0)
+          done()
+        }}
+        secure={secure}
+        fallbackIcon="warning"
+      />
+    )
+  })
+
+  it(`renders provided fallbackIcon on img error`, async done => {
+    const wrapper = shallow(
+      <AppIcon
+        fetchIcon={() => 'notagoodurl'}
+        onReady={() => {
+          wrapper.simulate('error')
+          wrapper.update()
+          const component = wrapper.getElement()
+          expect(component).toMatchSnapshot()
+          done()
+        }}
+        fallbackIcon="warning"
+      />
+    )
+  })
+
   it(`uses Preloader.preload when no fetchIcon method is provided`, async done => {
     jest.mock('../Preloader')
     const AppIcon = require('../').default

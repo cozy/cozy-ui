@@ -54,3 +54,23 @@ initialState = { fetchIcon: fetchIcon1 };
 
 ## `domain` and `secure` props
 If the `fetchIcon` is missing, the `<AppIcon />` component needs the `domain` prop (litteraly the cozy domain) and the secure prop, to know which protocol use between `http` or `https`.
+
+### Provide `fallbackIcon`
+
+You can provide an `<Icon />` `icon` props to fallback when the AppIcon fetched is broken or the `fetchIcon` function errored.
+
+```jsx
+const fetchIcon = () => 'https://placeholder.pics/svg/100/7DC4FF/Test%20Icon'
+const fetchIconBroken = () => 'blahblahblah'
+
+const brokeFetchIcon = () => setState({ fetchIcon: fetchIconBroken  })
+
+initialState = { fetchIcon };
+
+<div>
+  <button onClick={brokeFetchIcon}>Break it</button>
+  <div style={{ width: '100px' }}>
+    <AppIcon fetchIcon={state.fetchIcon} fallbackIcon='warning' />
+  </div>
+</div>
+```

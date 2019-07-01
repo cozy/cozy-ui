@@ -5,6 +5,7 @@ import styles from './styles.styl'
 
 import Icon from '../Icon'
 import palette from '../palette'
+import { iconPropType } from '../Icon'
 
 import { getPreloaded, preload } from './Preloader'
 import { AppDoctype } from '../proptypes'
@@ -24,6 +25,7 @@ export class AppIcon extends Component {
       status: preloaded ? DONE : FETCHING
     }
     this.isUnmounting = false
+    this.handleError = this.handleError.bind(this)
   }
 
   componentWillUnmount() {
@@ -62,8 +64,13 @@ export class AppIcon extends Component {
     }
   }
 
+  handleError() {
+    this.setState({ status: ERRORED })
+  }
+
   render() {
-    const { alt, className } = this.props
+    const { alt, className, fallbackIcon } = this.props
+
     const { icon, status } = this.state
     switch (status) {
       case FETCHING:
@@ -82,6 +89,7 @@ export class AppIcon extends Component {
             alt={alt}
             className={cx(styles['c-app-icon'], className)}
             src={icon}
+            onError={this.handleError}
           />
         )
       case ERRORED:
@@ -94,7 +102,7 @@ export class AppIcon extends Component {
               className
             )}
             height="100%"
-            icon="cube"
+            icon={fallbackIcon || 'cube'}
             width="100%"
             color={palette['coolGrey']}
           />
@@ -107,6 +115,8 @@ AppIcon.propTypes = {
   alt: PropTypes.string,
   /** Required if fetchIcon is not provided */
   app: PropTypes.oneOfType([AppDoctype, PropTypes.string]),
+  /** Icon to fallback on error (optional), default cube icon */
+  fallbackIcon: iconPropType,
   /** Custom implementation of how to fetch icon */
   fetchIcon: PropTypes.func,
   className: PropTypes.string,
