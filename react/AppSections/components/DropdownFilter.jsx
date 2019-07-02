@@ -9,7 +9,7 @@ import cx from 'classnames'
 const SmallArrow = () => (
   <Icon
     className={cx(styles.DropdownFilter__icon, 'u-mr-1')}
-    icon="small-arrow"
+    icon="bottom"
     color="var(--coolGrey)"
     width={16}
     height={16}

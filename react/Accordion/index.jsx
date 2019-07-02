@@ -40,7 +40,7 @@ class AccordionItem extends Component {
             aria-expanded={selected}
             aria-controls={contentID}
           >
-            <Icon icon="forward" />
+            <Icon icon="right" />
             {label}
           </div>
         </div>

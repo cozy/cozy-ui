@@ -155,7 +155,7 @@ class ViewerControls extends Component {
             onMouseLeave={this.hideControls}
           >
             <Icon
-              icon="arrow-left"
+              icon="previous"
               size="24"
               className={styles['viewer-nav-arrow']}
             />
@@ -177,7 +177,7 @@ class ViewerControls extends Component {
             onMouseLeave={this.hideControls}
           >
             <Icon
-              icon="arrow-right"
+              icon="next"
               size="24"
               className={styles['viewer-nav-arrow']}
             />

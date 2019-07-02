@@ -165,7 +165,7 @@ const Option = ({
       <span className={withPrefix(cx, styles['select-option__checkmark'])}>
         {isSelected && (
           <Icon
-            icon="check-circleless"
+            icon="check"
             color={dodgerBlue}
             className={withPrefix(cx, 'u-ph-half')}
           />

@@ -12,7 +12,7 @@ const hideMenu = () => setState({ menuDisplayed: false });
     <ActionMenu
       onClose={hideMenu}>
       <ActionMenuItem left={<Icon icon='file' />}>Item 1</ActionMenuItem>
-      <ActionMenuItem left={<Icon icon='forward' />}>Item 2</ActionMenuItem>
+      <ActionMenuItem left={<Icon icon='right' />}>Item 2</ActionMenuItem>
       <ActionMenuItem left={<Icon icon='file' />}>Item 3</ActionMenuItem>
   </ActionMenu>}
 </div>
@@ -36,7 +36,7 @@ const hideMenu = () => setState({ menuDisplayed: false });
         <Filename icon="file" filename="my_awesome_paper" extension=".pdf" />
       </ActionMenuHeader>
       <ActionMenuItem left={<Icon icon='file' />}>Item 1</ActionMenuItem>
-      <ActionMenuItem left={<Icon icon='forward' />}>Item 2</ActionMenuItem>
+      <ActionMenuItem left={<Icon icon='right' />}>Item 2</ActionMenuItem>
       <ActionMenuItem left={<Icon icon='file' />}>Item 3</ActionMenuItem>
   </ActionMenu>}
 </div>

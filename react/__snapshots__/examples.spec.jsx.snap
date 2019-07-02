@@ -210,13 +210,13 @@ exports[`Button should render examples: Button 9`] = `
 
 exports[`Button should render examples: Button 10`] = `
 "<div>
-  <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#delete\\"></use></svg><span>delete</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--narrow___27FHD styles__c-btn--center___16_Xh\\" title=\\"See more\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#dots\\"></use></svg><span class=\\"u-visuallyhidden\\">See more</span></span></button></div>
+  <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#trash\\"></use></svg><span>delete</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--narrow___27FHD styles__c-btn--center___16_Xh\\" title=\\"See more\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#dots\\"></use></svg><span class=\\"u-visuallyhidden\\">See more</span></span></button></div>
 </div>"
 `;
 
 exports[`Button should render examples: Button 11`] = `
 "<div>
-  <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><svg class=\\"styles__icon___23x3R\\" style=\\"fill: yellow;\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#delete\\"></use></svg><span>delete</span></span></button></div>
+  <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><svg class=\\"styles__icon___23x3R\\" style=\\"fill: yellow;\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#trash\\"></use></svg><span>delete</span></span></button></div>
 </div>"
 `;
 
@@ -3004,7 +3004,7 @@ exports[`Icon should render examples: Icon 3`] = `
   <div><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: #0bda51;\\" width=\\"16\\" height=\\"16\\">
       <use xlink:href=\\"#spinner\\"></use>
     </svg>&nbsp;<svg class=\\"styles__icon___23x3R\\" style=\\"fill: #c30017; transform: rotate(45deg);\\" width=\\"16\\" height=\\"16\\">
-      <use xlink:href=\\"#forward\\"></use>
+      <use xlink:href=\\"#right\\"></use>
     </svg></div>
 </div>"
 `;
