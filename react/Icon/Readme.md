@@ -49,7 +49,7 @@ Use `spin` and `rotate` if you want you to turn your icons upside down 🙃.
 ```
 <div>
   <Icon icon='spinner' color='#0bda51' spin/>{'\u00A0'}
-  <Icon icon='forward' color='#c30017' rotate={45}/>
+  <Icon icon='right' color='#c30017' rotate={45}/>
 </div>
 ```
 

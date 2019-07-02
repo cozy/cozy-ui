@@ -123,7 +123,7 @@ If you want a button with only an icon as content, you must set the `iconOnly` p
 ```
 const { Button } = require('./index');
 <div>
-  <Button theme="danger" icon='delete' label='delete' />
+  <Button theme="danger" icon='trash' label='delete' />
   <Button theme="secondary" icon='dots' iconOnly label="See more" extension='narrow' />
 </div>
 ```
@@ -133,7 +133,7 @@ You can also pass an Icon directly if you need more flexibility.
 ```
 const { Button } = require('./index');
 <div>
-  <Button theme="danger" icon={ <Icon icon='delete' color='yellow' /> } label='delete' />
+  <Button theme="danger" icon={ <Icon icon='trash' color='yellow' /> } label='delete' />
 </div>
 ```
 

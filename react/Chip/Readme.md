@@ -24,7 +24,7 @@ const ContactChip = ({ contact }) => (
 
 ```
 <Chip.Round>
-  <Icon icon='forward'/>
+  <Icon icon='right'/>
 </Chip.Round>
 ```
 
@@ -42,8 +42,8 @@ const ContactChip = ({ contact }) => (
 
 ```
 <div>
-  <Chip.Button><Icon icon='forward' /></Chip.Button>
-  <Chip.Button disabled><Icon icon='back' /></Chip.Button>
+  <Chip.Button><Icon icon='right' /></Chip.Button>
+  <Chip.Button disabled><Icon icon='left' /></Chip.Button>
 </div>
 ```
 
