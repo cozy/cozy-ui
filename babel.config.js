@@ -1,3 +1,5 @@
+const path = require('path')
+
 const plugins = [
   [
     'css-modules-transform',
@@ -20,7 +22,16 @@ module.exports = {
   ],
   env: {
     transpilation: {
-      plugins: plugins,
+      plugins: [
+        ...plugins,
+        [
+          './scripts/babel-transform-relative-paths-plugin.js',
+          {
+            from: path.resolve(__dirname, './react'),
+            to: 'cozy-ui/transpiled/react'
+          }
+        ]
+      ],
       ignore: ['**/*.spec.jsx', '**/*.spec.js']
     },
     test: {
