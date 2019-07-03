@@ -1,4 +1,4 @@
-import testFromStyleguidist from './testFromStyleguidist'
+import testFromStyleguidist from '../test/testFromStyleguidist'
 import path from 'path'
 
 const makeRequire = subpath => m => {
