@@ -467,6 +467,49 @@ $field-inline
         flex-direction column
         margin-left 0
 
+$inputgroup
+    display inline-flex
+    flex-direction row
+    align-items stretch
+    width 100%
+    max-width rem(512)
+    border rem(1) solid var(--silver)
+    border-radius rem(2)
+    &:hover
+        border rem(1) solid var(--coolGrey)
+
+$inputgroup--focus
+    &
+    &:hover
+        border-color var(--dodgerBlue)
+
+$inputgroup--error
+    border-color var(--pomegranate)
+
+$inputgroup--fullwidth
+    max-width none
+
+$inputgroup-main
+    flex 1 1 auto
+
+$inputgroup-input
+    @extend $input-text
+    border 0
+    padding-right rem(8)
+    &:hover
+    &:focus
+        position relative
+        z-index 1
+        border 0
+        outline 0
+
+$inputgroup-side
+    display flex
+    flex-direction column
+    justify-content center
+    flex 0 1 auto
+    max-width rem(140)
+
 $double-field
     width 100%
 

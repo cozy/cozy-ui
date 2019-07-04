@@ -33,6 +33,7 @@ import I18n from './I18n'
 import Icon from './Icon'
 import Infos from './Infos'
 import Input from './Input'
+import InputGroup from './InputGroup'
 import IntentHeader from './IntentHeader'
 import IntentIframe from './IntentIframe'
 import IntentModal from './IntentModal'
@@ -90,6 +91,7 @@ const testFromStyleguidist = (name, markdown, require) => {
       'Icon',
       'Infos',
       'Input',
+      'InputGroup',
       'IntentHeader',
       'IntentIframe',
       'IntentModal',
@@ -141,6 +143,7 @@ const testFromStyleguidist = (name, markdown, require) => {
       Icon,
       Infos,
       Input,
+      InputGroup,
       IntentHeader,
       IntentIframe,
       IntentModal,

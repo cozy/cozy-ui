@@ -1,0 +1,57 @@
+import React, { Component } from 'react'
+import cx from 'classnames'
+import PropTypes from 'prop-types'
+import styles from './styles.styl'
+
+class InputGroup extends Component {
+  constructor(props) {
+    super(props)
+    this.handleFocus = this.handleFocus.bind(this)
+    this.handleBlur = this.handleBlur.bind(this)
+    this.state = {
+      focused: false
+    }
+  }
+
+  handleFocus() {
+    this.setState({ focused: true })
+  }
+
+  handleBlur() {
+    this.setState({ focused: false })
+  }
+
+  render() {
+    const { children, prepend, append, error, fullwidth } = this.props
+    const { focused } = this.state
+    return (
+      <div
+        className={cx(styles['c-inputgroup'], {
+          [styles['c-inputgroup--error']]: error,
+          [styles['c-inputgroup--fullwidth']]: fullwidth,
+          [styles['c-inputgroup--focus']]: focused
+        })}
+      >
+        {prepend && (
+          <div className={styles['c-inputgroup-side']}>{prepend}</div>
+        )}
+        <div className={styles['c-inputgroup-main']}>{children}</div>
+        {append && <div className={styles['c-inputgroup-side']}>{append}</div>}
+      </div>
+    )
+  }
+}
+
+InputGroup.propTypes = {
+  prepend: PropTypes.object,
+  append: PropTypes.object,
+  error: PropTypes.bool,
+  fullwidth: PropTypes.bool
+}
+
+InputGroup.defaultProps = {
+  error: false,
+  fullwidth: false
+}
+
+export default InputGroup
