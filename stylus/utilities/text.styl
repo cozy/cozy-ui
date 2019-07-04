@@ -70,23 +70,17 @@ lh-large()
 lh-xlarge()
     line-height 1.5!important
 
-:global('.u-lh-tiny')
-    lh-tiny()
+global('.u-lh-tiny', lh-tiny, mixin)
 
-:global('.u-lh-xsmall')
-    lh-xsmall()
+global('.u-lh-xsmall', lh-xsmall, mixin)
 
-:global('.u-lh-small')
-    lh-small()
+global('.u-lh-small', lh-small, mixin)
 
-:global('.u-lh-medium')
-    lh-medium()
+global('.u-lh-medium', lh-medium, mixin)
 
-:global('.u-lh-large')
-    lh-large()
+global('.u-lh-large', lh-large, mixin)
 
-:global('.u-lh-xlarge')
-    lh-xlarge()
+global('.u-lh-xlarge', lh-xlarge, mixin)
 
 fz-tiny()
     font-size rem(12)!important

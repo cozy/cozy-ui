@@ -87,13 +87,21 @@ reset()
     padding 0
     border  0
 
-global(selector, placeholder)
-    if cssmodules == true
-        :global({selector})
-            @extend {placeholder} // @stylint ignore
-    else
-        {selector}
-            @extend {placeholder} // @stylint ignore
+global(selector, placeholder, type = extend)
+    if type == extend
+        if cssmodules == true
+            :global({selector})
+                @extend {placeholder} // @stylint ignore
+        else
+            {selector}
+                @extend {placeholder} // @stylint ignore
+    else if type == mixin
+        if cssmodules == true
+            :global({selector})
+                {placeholder}() // @stylint ignore
+        else
+            {selector}
+                {placeholder}() // @stylint ignore
 
 cssModulesUtils(props, breakpoints)
     for kProp, vProp in props
