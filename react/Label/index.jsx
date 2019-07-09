@@ -24,7 +24,7 @@ const Label = props => {
 
 Label.propTypes = {
   children: PropTypes.node.isRequired,
-  htmlFor: PropTypes.string.isRequired,
+  htmlFor: PropTypes.string,
   className: PropTypes.string,
   error: PropTypes.bool,
   block: PropTypes.bool
