@@ -51,6 +51,17 @@ $midellipsis
         > :first-child
             text-overflow '[...]'
 
+$link
+    &:link
+        color var(--dodgerBlue)
+        text-decoration none
+
+    &:visited
+    &:active
+    &:hover
+    &:focus
+        color var(--scienceBlue)
+
 // @stylint off
 lh-tiny()
     line-height 1!important
@@ -163,3 +174,4 @@ global('.u-warn', $warn)
 global('.u-breakword', $breakword)
 global('.u-ellipsis', $ellipsis)
 global('.u-midellipsis', $midellipsis)
+global('.u-link', $link)
