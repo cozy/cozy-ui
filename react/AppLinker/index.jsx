@@ -33,7 +33,7 @@ export class AppLinker extends React.Component {
   }
 
   componentDidMount() {
-    if (__TARGET__ === 'mobile') {
+    if (typeof __TARGET__ !== 'undefined' && __TARGET__ === 'mobile') {
       this.checkAppAvailability()
     }
   }
