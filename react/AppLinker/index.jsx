@@ -1,5 +1,3 @@
-/* global __TARGET__ */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import {
@@ -33,7 +31,7 @@ export class AppLinker extends React.Component {
   }
 
   componentDidMount() {
-    if (typeof __TARGET__ !== 'undefined' && __TARGET__ === 'mobile') {
+    if (isMobileApp()) {
       this.checkAppAvailability()
     }
   }
