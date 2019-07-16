@@ -57,7 +57,7 @@ describe('app icon', () => {
   let spyConsoleError, openNativeFromNativeSpy, appSwitchMock
 
   beforeEach(() => {
-    global.__TARGET__ = 'browser'
+    isMobileApp.mockReturnValue(false)
     spyConsoleError = jest.spyOn(console, 'error')
     spyConsoleError.mockImplementation(message => {
       if (message.lastIndexOf('Warning: Failed prop type:') === 0) {
