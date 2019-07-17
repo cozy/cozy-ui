@@ -7,8 +7,10 @@
  * <preference name="KeyboardResize" value="false" />
  */
 
+import React from 'react'
 import { useKeyboardInfo } from './keyboard'
 import styles from './styles.styl'
+import withBreakpoints from '../helpers/withBreakpoints'
 
 const TOP_BAR_HEIGHT = 48
 const BOTTOM_BAR_HEIGHT = 48
@@ -64,7 +66,7 @@ const KeyboardSpace = () => {
   )
 }
 
-export const PageLayout = ({ children, extraHeight = 0 }) => {
+export const MobilePageLayout = ({ children, extraHeight = 0 }) => {
   const { keyboardState, keyboardHeight } = useKeyboardInfo()
   const minHeight = contentHeight({
     keyboardState,
@@ -86,9 +88,24 @@ export const PageLayout = ({ children, extraHeight = 0 }) => {
   )
 }
 
-export const PageContent = ({ children }) => (
-  <div className={styles.PageContent}>{children}</div>
+/**
+ * - On mobile, wraps into MobilePageLayout.
+ * - On desktop, wraps into a simple div.
+ */
+export const PageLayout = React.memo(
+  withBreakpoints()(({ breakpoints: { isMobile }, ...props }) => {
+    return isMobile ? (
+      <MobilePageLayout {...props} />
+    ) : (
+      <div>{props.children}</div>
+    )
+  })
 )
+
+export const PageContent = React.memo(({ children }) => (
+  <div className={styles.PageContent}>{children}</div>
+))
+
 export const PageFooter = ({ children }) => (
   <div className={styles.PageFooter}>{children}</div>
 )
