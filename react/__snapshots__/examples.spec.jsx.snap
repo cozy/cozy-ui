@@ -14,7 +14,7 @@ exports[`ActionMenu should render examples: ActionMenu 2`] = `
 
 exports[`AppTitle should render examples: AppTitle 1`] = `
 "<div>
-  <h1 class=\\"styles__u-title-h1___fimho styles__c-apptitle___eqV9l\\">Drive</h1>
+  <h1 class=\\"u-title-h1 styles__c-apptitle___eqV9l\\">Drive</h1>
 </div>"
 `;
 
@@ -41,35 +41,35 @@ exports[`Avatar should render examples: Avatar 3`] = `
 exports[`Avatar should render examples: Avatar 4`] = `
 "<div>
   <div>
-    <div>
+    <div class=\\"u-flex\\">
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--xsmall___3H2Io\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <use xlink:href=\\"#people\\"></use>
         </svg></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--xsmall___3H2Io\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--xsmall___3H2Io\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
     </div>
-    <div>
+    <div class=\\"u-flex\\">
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <use xlink:href=\\"#people\\"></use>
         </svg></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
     </div>
-    <div>
+    <div class=\\"u-flex\\">
       <div class=\\"styles__c-avatar___PpDI-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <use xlink:href=\\"#people\\"></use>
         </svg></div>
       <div class=\\"styles__c-avatar___PpDI-\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
       <div class=\\"styles__c-avatar___PpDI-\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
     </div>
-    <div>
+    <div class=\\"u-flex\\">
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--large___1Z_HZ\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <use xlink:href=\\"#people\\"></use>
         </svg></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--large___1Z_HZ\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--large___1Z_HZ\\"><img src=\\"https://cozy.io/fr/images/cozy-logo_white.png\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
     </div>
-    <div>
+    <div class=\\"u-flex\\">
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--xlarge___3Qe0b\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <use xlink:href=\\"#people\\"></use>
         </svg></div>
@@ -297,8 +297,8 @@ exports[`ButtonAction should render examples: ButtonAction 3`] = `
 exports[`Card should render examples: Card 1`] = `
 "<div>
   <div class=\\"styles__c-card___YgP7B\\">
-    <div class=\\"styles__u-title-h3___1ZGqN u-mb-1\\">This is a card</div>
-    <div class=\\"styles__u-text___2UfQa u-mb-1\\">This is some card content. Content can be small or huge.</div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh u-ml-0\\"><span><span>Demo button</span></span></button>
+    <div class=\\"u-title-h3 u-mb-1\\">This is a card</div>
+    <div class=\\"u-text u-mb-1\\">This is some card content. Content can be small or huge.</div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh u-ml-0\\"><span><span>Demo button</span></span></button>
   </div>
 </div>"
 `;
@@ -306,15 +306,15 @@ exports[`Card should render examples: Card 1`] = `
 exports[`Card should render examples: Card 2`] = `
 "<div>
   <div class=\\"styles__c-card___YgP7B styles__c-card--inset___2pofc\\">
-    <div class=\\"styles__u-text___2UfQa\\">This is some card content. Content can be small or huge. Also, it has margins.</div>
+    <div class=\\"u-text\\">This is some card content. Content can be small or huge. Also, it has margins.</div>
   </div>
 </div>"
 `;
 
 exports[`Card should render examples: Card 3`] = `
 "<div><a class=\\"styles__c-card___YgP7B\\" href=\\"https://cozy.io\\" target=\\"_blank\\">
-    <div class=\\"styles__u-title-h3___1ZGqN\\">Visit cozy.io</div>
-    <div class=\\"styles__u-text___2UfQa\\">To learn more about us</div>
+    <div class=\\"u-title-h3\\">Visit cozy.io</div>
+    <div class=\\"u-text\\">To learn more about us</div>
   </a></div>"
 `;
 
@@ -356,7 +356,7 @@ exports[`Empty should render examples: Empty 1`] = `
     <div class=\\"styles__c-empty___3w5oV\\"><svg class=\\"styles__c-empty-img___2GC4d styles__icon___23x3R\\" width=\\"100%\\" height=\\"100%\\">
         <use xlink:href=\\"#cozy\\"></use>
       </svg>
-      <h2 class=\\"styles__u-title-h1___fimho styles__c-empty-title___2HduE\\">This list is empty</h2>
+      <h2 class=\\"u-title-h1 styles__c-empty-title___2HduE\\">This list is empty</h2>
       <p class=\\"styles__c-empty-text___3HnvR\\">Try adding some content to this list</p>
       <div class=\\"styles__c-empty-text___3HnvR\\"></div>
     </div>
@@ -370,7 +370,7 @@ exports[`Empty should render examples: Empty 2`] = `
     <div class=\\"styles__c-empty___3w5oV\\" id=\\"empty\\"><svg class=\\"styles__c-empty-img___2GC4d styles__icon___23x3R\\" width=\\"100%\\" height=\\"100%\\">
         <use xlink:href=\\"#cozy\\"></use>
       </svg>
-      <h2 class=\\"styles__u-title-h1___fimho styles__c-empty-title___2HduE\\">An error occured</h2>
+      <h2 class=\\"u-title-h1 styles__c-empty-title___2HduE\\">An error occured</h2>
       <p class=\\"styles__c-empty-text___3HnvR\\">It's maybe nothing, just refresh to be sure</p>
       <div class=\\"styles__c-empty-text___3HnvR\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Try refreshing</span></span></button></div>
     </div>
@@ -415,7 +415,7 @@ exports[`Field should render examples: Field 5`] = `
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'am a SelectBox</label>
       <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\" id=\\"\\">
-        <div class=\\"css-2zgoaw\\">
+        <div class=\\"css-zdlybx\\">
           <div class=\\"css-1phseng\\">
             <div class=\\"css-1492t68\\">Select ...</div>
             <div class=\\"css-1g6gooi\\">
@@ -434,7 +434,7 @@ exports[`Field should render examples: Field 5`] = `
     </div>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'am a SelectBox with a value</label>
       <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\" id=\\"\\">
-        <div class=\\"css-2zgoaw\\">
+        <div class=\\"css-zdlybx\\">
           <div class=\\"css-1phseng\\">
             <div class=\\"css-xp4uvy\\">Choice 2</div>
             <div class=\\"css-1g6gooi\\">
@@ -3022,7 +3022,7 @@ exports[`Infos should render examples: Infos 1`] = `
   <div>
     <div class=\\"u-flex u-flex-column u-maw-6 u-mih-2 u-bdrs-4 u-ph-1 u-pt-1 u-bg-paleGrey u-ta-left\\">
       <div class=\\"u-flex u-w-100 u-mb-1\\">
-        <div class=\\"styles__u-text___2UfQa u-ta-left\\">My small persistent information! </div>
+        <div class=\\"u-text u-ta-left\\">My small persistent information! </div>
       </div>
     </div>
     <div style=\\"height: 10px;\\"></div>
@@ -3030,16 +3030,16 @@ exports[`Infos should render examples: Infos 1`] = `
       <div class=\\"u-flex u-w-100 u-mb-1\\"><svg class=\\"styles__infos--icon___2XWQm u-w-1 u-h-1 u-flex-shrink-0 styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <use xlink:href=\\"#info\\"></use>
         </svg>
-        <div class=\\"styles__u-text___2UfQa u-ta-left u-pl-half\\">My small persistent information, with an icon. And lot of text ? Again and again...</div>
+        <div class=\\"u-text u-ta-left u-pl-half\\">My small persistent information, with an icon. And lot of text ? Again and again...</div>
       </div>
     </div>
     <div style=\\"height: 10px;\\"></div>
     <div class=\\"u-flex u-flex-column u-maw-6 u-mih-2 u-bdrs-4 u-ph-1 u-pt-1 u-bg-paleGrey u-ta-left u-bg-chablis\\">
-      <div class=\\"styles__u-title-h3___1ZGqN u-mb-1 u-pomegranate\\">Infos breaking news</div>
+      <div class=\\"u-title-h3 u-mb-1 u-pomegranate\\">Infos breaking news</div>
       <div class=\\"u-flex u-w-100 u-mb-1\\"><svg class=\\"styles__infos--icon___2XWQm u-w-1 u-h-1 u-flex-shrink-0 styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <use xlink:href=\\"#warning\\"></use>
         </svg>
-        <div class=\\"styles__u-text___2UfQa u-ta-left u-pl-half\\">My small persistent information, with an icon. And lot of text ? Again and again...</div>
+        <div class=\\"u-text u-ta-left u-pl-half\\">My small persistent information, with an icon. And lot of text ? Again and again...</div>
       </div>
       <div class=\\"u-flex-shrink-0 u-mb-1\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span>A CTA button</span></button></div>
     </div>
@@ -3076,7 +3076,7 @@ exports[`Label should render examples: Label 3`] = `
 exports[`ListItemText should render examples: ListItemText 1`] = `
 "<div>
   <div class=\\"styles__c-list-text___3kc3E\\">
-    <div class=\\"u-ellipsis styles__u-text___2UfQa\\">I'm a list item text</div>
+    <div class=\\"u-ellipsis u-text\\">I'm a list item text</div>
   </div>
 </div>"
 `;
@@ -3084,8 +3084,8 @@ exports[`ListItemText should render examples: ListItemText 1`] = `
 exports[`ListItemText should render examples: ListItemText 2`] = `
 "<div>
   <div class=\\"styles__c-list-text___3kc3E\\">
-    <div class=\\"u-ellipsis styles__u-text___2UfQa\\">I'm a primary text</div>
-    <div class=\\"u-ellipsis styles__u-caption___1VRxy\\">I'm a secondary text</div>
+    <div class=\\"u-ellipsis u-text\\">I'm a primary text</div>
+    <div class=\\"u-ellipsis u-caption\\">I'm a secondary text</div>
   </div>
 </div>"
 `;
@@ -3093,7 +3093,7 @@ exports[`ListItemText should render examples: ListItemText 2`] = `
 exports[`ListItemText should render examples: ListItemText 3`] = `
 "<div>
   <div class=\\"styles__c-list-text___3kc3E\\">
-    <div class=\\"styles__u-text___2UfQa\\">I'm a primary text</div><a class=\\"styles__u-caption___1VRxy\\" href=\\"http://cozy.io\\">
+    <div class=\\"u-text\\">I'm a primary text</div><a class=\\"u-caption\\" href=\\"http://cozy.io\\">
       <div class=\\"u-midellipsis\\"><span>Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognis</span><span>e that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a \\"computing machine\\" and the first computer programmer.</span></div>
     </a>
   </div>
@@ -3158,7 +3158,7 @@ exports[`SelectBox should render examples: SelectBox 1`] = `
 "<div>
   <div style=\\"background: whitesmoke; padding: .5em;\\">
     <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-      <div class=\\"css-2zgoaw\\">
+      <div class=\\"css-zdlybx\\">
         <div class=\\"css-1phseng\\">
           <div class=\\"css-1492t68\\">Select...</div>
           <div class=\\"css-1g6gooi\\">
@@ -3181,7 +3181,7 @@ exports[`SelectBox should render examples: SelectBox 1`] = `
 exports[`SelectBox should render examples: SelectBox 2`] = `
 "<div>
   <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-    <div class=\\"css-2zgoaw\\">
+    <div class=\\"css-zdlybx\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -3209,7 +3209,7 @@ exports[`SelectBox should render examples: SelectBox 3`] = `
 "<div>
   <div style=\\"height: 12rem; padding: .5rem; overflow: auto;\\">Container height: 12rem. <button>Change container height</button>
     <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-      <div class=\\"css-2zgoaw\\">
+      <div class=\\"css-zdlybx\\">
         <div class=\\"css-1phseng\\">
           <div class=\\"css-1492t68\\">Select...</div>
           <div class=\\"css-1g6gooi\\">
@@ -3232,7 +3232,7 @@ exports[`SelectBox should render examples: SelectBox 3`] = `
 exports[`SelectBox should render examples: SelectBox 4`] = `
 "<div>
   <div class=\\"css-1sontr1 styles__select--autowidth___16AEp styles__select--disabled___1W3en\\">
-    <div class=\\"css-adwy96\\">
+    <div class=\\"css-htdvti\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -3254,7 +3254,7 @@ exports[`SelectBox should render examples: SelectBox 4`] = `
 exports[`SelectBox should render examples: SelectBox 5`] = `
 "<div>
   <div class=\\"css-10nd86i styles__select--fullwidth___2l_xM\\">
-    <div class=\\"css-2zgoaw\\">
+    <div class=\\"css-zdlybx\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -3277,7 +3277,7 @@ exports[`SelectBox should render examples: SelectBox 6`] = `
 "<div>
   <div>
     <div class=\\"css-1sontr1 styles__select--autowidth___16AEp styles__select--disabled___1W3en\\">
-      <div class=\\"css-adwy96\\">
+      <div class=\\"css-htdvti\\">
         <div class=\\"css-1phseng\\">
           <div class=\\"css-1492t68\\">Select...</div>
           <div class=\\"css-1g6gooi\\">
@@ -3302,7 +3302,7 @@ exports[`SelectBox should render examples: SelectBox 7`] = `
   <div>
     <div class=\\"u-mb-1\\">
       <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-        <div class=\\"css-1rg8gyn\\">
+        <div class=\\"css-1enqz0q\\">
           <div class=\\"css-1phseng\\">
             <div class=\\"css-xp4uvy\\">I am a tiny SelectBox</div>
             <div class=\\"css-1g6gooi\\">
@@ -3321,7 +3321,7 @@ exports[`SelectBox should render examples: SelectBox 7`] = `
     </div>
     <div class=\\"u-mb-1\\">
       <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-        <div class=\\"css-15w89vh\\">
+        <div class=\\"css-s52rxs\\">
           <div class=\\"css-1phseng\\">
             <div class=\\"css-xp4uvy\\">I am a medium SelectBox</div>
             <div class=\\"css-1g6gooi\\">
@@ -3340,7 +3340,7 @@ exports[`SelectBox should render examples: SelectBox 7`] = `
     </div>
     <div class=\\"u-mb-1\\">
       <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-        <div class=\\"css-2zgoaw\\">
+        <div class=\\"css-zdlybx\\">
           <div class=\\"css-1phseng\\">
             <div class=\\"css-xp4uvy\\">I am a large SelectBox</div>
             <div class=\\"css-1g6gooi\\">
@@ -3388,7 +3388,7 @@ exports[`SelectBox should render examples: SelectBox 8`] = `
 exports[`SelectBox should render examples: SelectBox 9`] = `
 "<div>
   <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-    <div class=\\"css-2zgoaw\\">
+    <div class=\\"css-zdlybx\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -3410,7 +3410,7 @@ exports[`SelectBox should render examples: SelectBox 9`] = `
 exports[`SelectBox should render examples: SelectBox 10`] = `
 "<div>
   <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-    <div class=\\"css-2zgoaw\\">
+    <div class=\\"css-zdlybx\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -3432,7 +3432,7 @@ exports[`SelectBox should render examples: SelectBox 10`] = `
 exports[`SelectBox should render examples: SelectBox 11`] = `
 "<div>
   <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-    <div class=\\"css-2zgoaw\\">
+    <div class=\\"css-zdlybx\\">
       <div class=\\"css-1phseng\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -3492,7 +3492,7 @@ exports[`SelectBox should render examples: SelectBox 11`] = `
 exports[`SelectBox should render examples: SelectBox 12`] = `
 "<div>
   <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-    <div class=\\"css-2zgoaw\\">
+    <div class=\\"css-zdlybx\\">
       <div class=\\"css-1phseng needsclick\\">
         <div class=\\"css-1492t68\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -3514,7 +3514,7 @@ exports[`SelectBox should render examples: SelectBox 12`] = `
 exports[`SelectBox should render examples: SelectBox 13`] = `
 "<div>
   <div class=\\"css-10nd86i styles__select--autowidth___16AEp\\">
-    <div class=\\"css-2zgoaw needsclick cz__control\\">
+    <div class=\\"css-zdlybx needsclick cz__control\\">
       <div class=\\"css-1phseng needsclick cz__value-container\\">
         <div class=\\"css-1492t68 needsclick cz__placeholder\\">Select...</div>
         <div class=\\"css-1g6gooi\\">
@@ -3622,43 +3622,43 @@ exports[`Spinner should render examples: Spinner 5`] = `
 
 exports[`Text should render examples: Text 1`] = `
 "<div>
-  <div class=\\"styles__u-text___2UfQa\\">This a standard text</div>
+  <div class=\\"u-text\\">This a standard text</div>
 </div>"
 `;
 
 exports[`Text should render examples: Text 2`] = `
 "<div>
-  <div class=\\"styles__u-title-h1___fimho\\">This a main title text</div>
+  <div class=\\"u-title-h1\\">This a main title text</div>
 </div>"
 `;
 
 exports[`Text should render examples: Text 3`] = `
 "<div>
-  <div class=\\"styles__u-title-h2___2cES6\\">This a title text</div>
+  <div class=\\"u-title-h2\\">This a title text</div>
 </div>"
 `;
 
 exports[`Text should render examples: Text 4`] = `
 "<div>
-  <div class=\\"styles__u-title-h3___1ZGqN\\">This a subtitle text</div>
+  <div class=\\"u-title-h3\\">This a subtitle text</div>
 </div>"
 `;
 
 exports[`Text should render examples: Text 5`] = `
 "<div>
-  <div class=\\"styles__u-title-h4___1lGMy\\">This a bold text</div>
+  <div class=\\"u-title-h4\\">This a bold text</div>
 </div>"
 `;
 
 exports[`Text should render examples: Text 6`] = `
 "<div>
-  <div class=\\"styles__u-uppercase___aobU-\\">This is an uppercase text</div>
+  <div class=\\"u-uppercase\\">This is an uppercase text</div>
 </div>"
 `;
 
 exports[`Text should render examples: Text 7`] = `
 "<div>
-  <div class=\\"styles__u-caption___1VRxy\\">This a note text</div>
+  <div class=\\"u-caption\\">This a note text</div>
 </div>"
 `;
 

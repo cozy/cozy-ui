@@ -15,7 +15,6 @@ As it uses the render props pattern, it is flexible and can be used to build com
 anchor.
 
 ```
-window.__TARGET__ = 'web';
 
 <AppLinker slug='banks' href='http://dalailama-banks.mycozy.cloud'>{
   ({ onClick, href, name }) => (

@@ -1,7 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-import styles from './styles.styl'
 
 export const BaseText = props => {
   const { className, children, tag, ellipsis, ...restProps } = props
@@ -22,25 +21,25 @@ export const BaseText = props => {
 }
 
 export const Text = ({ className, ...restProps }) => (
-  <BaseText className={cx(styles['u-text'], className)} {...restProps} />
+  <BaseText className={cx('u-text', className)} {...restProps} />
 )
 export const MainTitle = ({ className, ...restProps }) => (
-  <BaseText className={cx(styles['u-title-h1'], className)} {...restProps} />
+  <BaseText className={cx('u-title-h1', className)} {...restProps} />
 )
 export const Title = ({ className, ...restProps }) => (
-  <BaseText className={cx(styles['u-title-h2'], className)} {...restProps} />
+  <BaseText className={cx('u-title-h2', className)} {...restProps} />
 )
 export const SubTitle = ({ className, ...restProps }) => (
-  <BaseText className={cx(styles['u-title-h3'], className)} {...restProps} />
+  <BaseText className={cx('u-title-h3', className)} {...restProps} />
 )
 export const Bold = ({ className, ...restProps }) => (
-  <BaseText className={cx(styles['u-title-h4'], className)} {...restProps} />
+  <BaseText className={cx('u-title-h4', className)} {...restProps} />
 )
 export const Uppercase = ({ className, ...restProps }) => (
-  <BaseText className={cx(styles['u-uppercase'], className)} {...restProps} />
+  <BaseText className={cx('u-uppercase', className)} {...restProps} />
 )
 export const Caption = ({ className, ...restProps }) => (
-  <BaseText className={cx(styles['u-caption'], className)} {...restProps} />
+  <BaseText className={cx('u-caption', className)} {...restProps} />
 )
 
 // Props

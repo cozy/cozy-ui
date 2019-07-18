@@ -17,7 +17,7 @@
     "build:css:all": "yarn build:css && yarn build:css:utils",
     "build:css": "env CSSMODULES=false stylus -c --include stylus -o dist/cozy-ui.min.css stylus/cozy-ui/build.styl --use ./node_modules/autoprefixer-stylus --with \"{ browsers: ['last 2 versions'] }\"",
     "build:css:utils": "env CSSMODULES=false stylus -c --include stylus -o dist/cozy-ui.utils.min.css stylus/cozy-ui/utils.styl --use ./node_modules/autoprefixer-stylus --with \"{ browsers: ['last 2 versions'] }\"",
-    "build:css:app": "env CSSMODULES=false stylus -c --include stylus -o build/styleguide/app.css stylus/cozy-ui/build.styl --use ./node_modules/autoprefixer-stylus --with \"{ browsers: ['last 2 versions'] }\"",
+    "build:css:kss": "env CSSMODULES=false stylus -c --include stylus -o build/styleguide/app.css stylus/cozy-ui/build.styl --use ./node_modules/autoprefixer-stylus --with \"{ browsers: ['last 2 versions'] }\"",
     "build:doc": "npm-run-all 'build:doc:*'",
     "build:doc:config": "copyfiles -u 1 docs/*.md docs/_config.yml build",
     "build:doc:kss": "kss --destination build/styleguide --title 'Cozy-UI Styleguide' --source stylus --builder node_modules/michelangelo/kss_styleguide/custom-template --homepage styleguide.md --css app.css",
@@ -32,8 +32,8 @@
     "palette": "scripts/make-palette.sh",
     "prebuild:css": "mkdir -p dist/ && stylus -C node_modules/normalize.css/normalize.css node_modules/normalize.css/normalize.styl",
     "prebuild:css:utils": "mkdir -p dist/",
-    "prebuild:css:app": "mkdir -p build/styleguide && stylus -C node_modules/normalize.css/normalize.css node_modules/normalize.css/normalize.styl",
-    "prebuild:doc:kss": "run-s clean:doc:kss build:css:app",
+    "prebuild:css:kss": "mkdir -p build/styleguide && stylus -C node_modules/normalize.css/normalize.css node_modules/normalize.css/normalize.styl",
+    "prebuild:doc:kss": "run-s clean:doc:kss build:css:kss",
     "prepare": "yarn release",
     "prepush": "[[ $(git rev-parse --abbrev-ref HEAD) != 'gh-pages' ]] && yarn lint || true",
     "release": "npm-run-all --parallel sprite palette && yarn transpile",
@@ -54,8 +54,8 @@
     "*.css"
   ],
   "devDependencies": {
-    "@babel/cli": "7.4.4",
-    "@babel/core": "7.4.5",
+    "@babel/cli": "7.5.5",
+    "@babel/core": "7.5.5",
     "@material-ui/core": "3.9.3",
     "@semantic-release/changelog": "2.1.2",
     "@semantic-release/git": "5.0.0",
@@ -86,7 +86,7 @@
     "jest-cli": "24.8.0",
     "kss": "3.0.0-beta.25",
     "kss-webpack-plugin": "1.3.1",
-    "lodash": "4.17.11",
+    "lodash": "4.17.13",
     "michelangelo": "https://github.com/cozy/michelangelo.git",
     "mini-css-extract-plugin": "0.6.0",
     "nodemon": "1.19.1",
@@ -181,7 +181,6 @@
     },
     "globals": {
       "__ALLOW_HTTP__": false,
-      "__TARGET__": "browser",
       "cozy": {}
     },
     "testURL": "http://localhost/",

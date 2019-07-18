@@ -7,7 +7,7 @@ import { isIOSApp } from 'cozy-device-helper'
 
 import styles from './styles.styl'
 import Icon from '../Icon'
-import { dodgerBlue, silver, coolGrey } from '../palette'
+import { dodgerBlue, silver, coolGrey, paleGrey } from '../palette'
 import withBreakpoints from '../helpers/withBreakpoints'
 
 const heights = {
@@ -16,17 +16,24 @@ const heights = {
   large: '3rem'
 }
 
+const borderStyle = (props, state) => {
+  if (props.inset) {
+    return '.125rem solid white'
+  }
+  return `.0625rem solid ${state.isFocused ? dodgerBlue : silver}`
+}
+
 const customStyles = props => ({
   control: (base, state) => ({
     ...base,
     // The gray background color is managed via the select--disabled
     // class applied below
     backgroundColor: props.disabled ? 'transparent' : 'white',
-    border: state.isFocused
-      ? `.0625rem solid ${dodgerBlue}`
-      : `.0625rem solid ${silver}`,
+    border: borderStyle(props, state),
     ':hover': {
-      borderColor: coolGrey
+      borderColor: props.inset ? 'white' : coolGrey,
+      backgroundColor: props.inset ? paleGrey : 'white',
+      cursor: 'pointer'
     },
     borderRadius: '.1875rem',
     boxShadow: 'unset',
@@ -335,6 +342,7 @@ SelectBox.propTypes = {
   components: PropTypes.object,
   disabled: PropTypes.bool,
   fullwidth: PropTypes.bool,
+  inset: PropTypes.bool,
   name: PropTypes.string,
   inputRef: PropTypes.func,
   size: PropTypes.oneOf(['tiny', 'medium', 'large']),
@@ -344,6 +352,7 @@ SelectBox.propTypes = {
 SelectBox.defaultProps = {
   components: {},
   fullwidth: false,
+  inset: false,
   size: 'large',
   styles: {}
 }

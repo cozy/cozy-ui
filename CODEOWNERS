@@ -1,10 +1,2 @@
 # General code owners
-*      @GoOz @ptbrowne @y-lohse
-
-# GoOz is responsible for CSS/Stylus files
-*.css       @GoOz
-*.styl       @GoOz
-
-# cpatchane and ptbrowne for React components
-*.js    @cpatchane @ptbrowne @y-lohse
-*.jsx   @cpatchane @ptbrowne @y-lohse
+* @ptbrowne @y-lohse

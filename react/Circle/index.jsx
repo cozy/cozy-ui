@@ -22,7 +22,7 @@ const Circle = ({ children, backgroundColor, size, className }) => {
 
 Circle.propTypes = {
   backgroundColor: PropTypes.string,
-  size: PropTypes.oneOf(['medium']),
+  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']),
   className: PropTypes.string
 }
 
