@@ -2559,10 +2559,10 @@ babel-polyfill@6.26.0:
     core-js "^2.5.0"
     regenerator-runtime "^0.10.5"
 
-babel-preset-cozy-app@1.5.2:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/babel-preset-cozy-app/-/babel-preset-cozy-app-1.5.2.tgz#56ecfa524b33ee89022f122079eedc6d8da59448"
-  integrity sha512-aACixVXDcQBhh1ewL6bs5PJJdV+CHIUfSOysyP0C0qv05ffOFRrhPQlrM3RBGN9qvTt+Ov/6+rsFJ+R1ZG1nEA==
+babel-preset-cozy-app@1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/babel-preset-cozy-app/-/babel-preset-cozy-app-1.6.0.tgz#588362c0e8aac5f3468ff07a96312e9bfc8f8319"
+  integrity sha512-aWCopE9ilqgt25hsPdsAq8flUxWNU2Pk0L49Jm50ec17T4DmZSdH4NobmfK6VmA6f2huacA95D5XVqObPmr98A==
   dependencies:
     "@babel/core" "7.2.2"
     "@babel/helper-plugin-utils" "7.0.0"
@@ -2573,7 +2573,7 @@ babel-preset-cozy-app@1.5.2:
     "@babel/preset-react" "7.0.0"
     "@babel/runtime" "7.2.0"
     browserslist-config-cozy "0.2.0"
-    lodash "4.17.13"
+    lodash "4.17.15"
 
 babel-preset-jest@^24.6.0:
   version "24.6.0"
@@ -8535,6 +8535,11 @@ lodash@4.17.13:
   version "4.17.13"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.13.tgz#0bdc3a6adc873d2f4e0c4bac285df91b64fc7b93"
   integrity sha512-vm3/XWXfWtRua0FkUyEHBZy8kCPjErNBT9fJx8Zvs+U6zjqPbTUOpkaoum3O5uiA8sm+yNMHXfYkTUHFoMxFNA==
+
+lodash@4.17.15:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
 lodash@^4.17.13:
   version "4.17.14"
