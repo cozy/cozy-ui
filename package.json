@@ -64,7 +64,7 @@
     "babel-loader": "8.0.6",
     "babel-plugin-css-modules-transform": "1.6.2",
     "babel-plugin-inline-json-import": "0.3.2",
-    "babel-preset-cozy-app": "1.5.2",
+    "babel-preset-cozy-app": "1.6.0",
     "browserslist-config-cozy": "0.2.0",
     "commitlint": "7.6.1",
     "commitlint-config-cozy": "0.3.24",
