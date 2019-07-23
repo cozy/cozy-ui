@@ -54,4 +54,8 @@ InputGroup.defaultProps = {
   fullwidth: false
 }
 
+InputGroup.Unit = ({ children }) => (
+  <span className={styles['c-inputgroup-unit']}>{children}</span>
+)
+
 export default InputGroup

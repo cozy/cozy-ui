@@ -5,7 +5,7 @@ const { Bold } = require('../Text');
 const Input = require('../Input').default;
 <form>
   <div>
-    <InputGroup append={<Bold className="u-pr-1">text</Bold>}>
+    <InputGroup append={<InputGroup.Unit>€</InputGroup.Unit>}>
       <Input placeholder="Placeholder" />
     </InputGroup>
   </div>
