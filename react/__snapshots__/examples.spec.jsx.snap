@@ -3049,6 +3049,108 @@ exports[`Infos should render examples: Infos 1`] = `
 
 exports[`InlineCard should render examples: InlineCard 1`] = `"<div><span class=\\"styles__c-inline-card___1sri1\\">I am an inline card</span></div>"`;
 
+exports[`InputGroup should render examples: InputGroup 1`] = `
+"<div>
+  <form>
+    <div>
+      <div class=\\"styles__c-inputgroup___12OVJ\\">
+        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Placeholder\\" value=\\"\\"></div>
+        <div class=\\"styles__c-inputgroup-side___60v0v\\"><span class=\\"styles__c-inputgroup-unit___bFj9a\\">€</span></div>
+      </div>
+    </div>
+  </form>
+</div>"
+`;
+
+exports[`InputGroup should render examples: InputGroup 2`] = `
+"<div>
+  <form>
+    <div>
+      <div class=\\"styles__c-inputgroup___12OVJ\\">
+        <div class=\\"styles__c-inputgroup-side___60v0v\\">
+          <div class=\\"u-title-h4 u-pl-1\\">text</div>
+        </div>
+        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Placeholder\\" value=\\"\\"></div>
+      </div>
+    </div>
+  </form>
+</div>"
+`;
+
+exports[`InputGroup should render examples: InputGroup 3`] = `
+"<div>
+  <form>
+    <div>
+      <div class=\\"styles__c-inputgroup___12OVJ\\">
+        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Email\\" value=\\"\\"></div>
+        <div class=\\"styles__c-inputgroup-side___60v0v\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR u-w-4\\" placeholder=\\"@domain.tld\\" value=\\"\\"></div>
+      </div>
+    </div>
+  </form>
+</div>"
+`;
+
+exports[`InputGroup should render examples: InputGroup 4`] = `
+"<div>
+  <form>
+    <div>
+      <div class=\\"styles__c-inputgroup___12OVJ\\">
+        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"URL\\" value=\\"\\"></div>
+        <div class=\\"styles__c-inputgroup-side___60v0v\\">
+          <div class=\\"css-10nd86i styles__select--autowidth___16AEp u-w-4\\">
+            <div class=\\"css-a8izk4\\">
+              <div class=\\"css-1phseng\\">
+                <div class=\\"css-1492t68\\">Select...</div>
+                <div class=\\"css-1g6gooi\\">
+                  <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-19-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; font-size: inherit; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
+                    <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: inherit; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
+                  </div>
+                </div>
+              </div>
+              <div class=\\"css-1wy0on6\\"><span class=\\"css-1hyfx7x\\"></span>
+                <div aria-hidden=\\"true\\" class=\\"css-n6ypum\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"20\\" height=\\"16\\">
+                    <use xlink:href=\\"#bottom\\"></use>
+                  </svg></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>"
+`;
+
+exports[`InputGroup should render examples: InputGroup 5`] = `
+"<div>
+  <form>
+    <div>
+      <div class=\\"styles__c-inputgroup___12OVJ styles__c-inputgroup--fullwidth___3nuay\\">
+        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Placeholder\\" value=\\"\\"></div>
+        <div class=\\"styles__c-inputgroup-side___60v0v\\">
+          <div class=\\"u-title-h4 u-pr-1\\">text</div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>"
+`;
+
+exports[`InputGroup should render examples: InputGroup 6`] = `
+"<div>
+  <form>
+    <div>
+      <div class=\\"styles__c-inputgroup___12OVJ styles__c-inputgroup--error___1JNbu\\">
+        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Placeholder\\" value=\\"\\"></div>
+        <div class=\\"styles__c-inputgroup-side___60v0v\\">
+          <div class=\\"u-title-h4 u-pr-1\\">text</div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>"
+`;
+
 exports[`Label should render examples: Label 1`] = `
 "<div>
   <form>
