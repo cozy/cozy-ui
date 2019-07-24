@@ -3,6 +3,9 @@ import Types from 'prop-types'
 import classNames from 'classnames'
 import Figure from './Figure'
 import styles from './FigureBlock.styl'
+import labelStyles from '../Label/styles.styl'
+
+const labelStyle = labelStyles['c-label']
 
 /**
  * Shows a `Figure` with a label.
@@ -23,7 +26,7 @@ const FigureBlock = ({
   withCurrencySpacing
 }) => (
   <div className={classNames(styles['FigureBlock'], className)}>
-    <h4 className={styles['FigureBlock-label']}>{label}</h4>
+    <div className={labelStyle}>{label}</div>
     <Figure
       size="big"
       className={classNames(styles['FigureBlock-figure'], figureClassName)}
