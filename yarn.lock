@@ -8095,10 +8095,10 @@ kleur@^3.0.2:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
-kss-webpack-plugin@1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/kss-webpack-plugin/-/kss-webpack-plugin-1.3.1.tgz#8cfbf45822e5813b4aa239b69f3c4da4a1e21d50"
-  integrity sha512-PfM3cPhUlgOneowZeycTlnLX2ZXtjpkEmMl7+Ojkui01IxiMTXZEP005ZC3gNtli2fKcIlv45+XJIpHy+3j5FQ==
+kss-webpack-plugin@1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/kss-webpack-plugin/-/kss-webpack-plugin-1.5.0.tgz#9e551651576bf44f4934ecf6cb9ed308988a8494"
+  integrity sha512-blwsJcUfqekgvJ/YsvjjXPdVk8sXDugtq3VjV08bRtMk8hSpcsuhqGfm+186C7fO10lPzDAsX7aW7l1fW5AUrw==
   dependencies:
     kss "^3.0.0 || ^3.0.0-beta.14"
 
