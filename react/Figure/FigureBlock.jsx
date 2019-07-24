@@ -8,7 +8,7 @@ import labelStyles from '../Label/styles.styl'
 const labelStyle = labelStyles['c-label']
 
 /**
- * Shows a `Figure` with a label.
+ * Shows a `Figure` with a label, useful for important numbers.
  *
  * A part from `className` and `label`, takes same properties
  * as `Figure`.
