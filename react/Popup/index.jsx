@@ -15,22 +15,16 @@ export function popupCenter(w, h) {
   /* global screen */
   // Fixes dual-screen position
   //                      Most browsers      Firefox
-  var dualScreenLeft = window.screenLeft || screen.left
-  var dualScreenTop = window.screenTop || screen.top
+  const dualScreenLeft = window.screenLeft || screen.left
+  const dualScreenTop = window.screenTop || screen.top
 
-  var width = window.innerWidth
-    ? window.innerWidth
-    : document.documentElement.clientWidth
-    ? document.documentElement.clientWidth
-    : screen.width
-  var height = window.innerHeight
-    ? window.innerHeight
-    : document.documentElement.clientHeight
-    ? document.documentElement.clientHeight
-    : screen.height
+  const width =
+    window.innerWidth || document.documentElement.clientWidth || screen.width
+  const height =
+    window.innerHeight || document.documentElement.clientHeight || screen.height
 
-  var left = width / 2 - w / 2 + dualScreenLeft
-  var top = height / 2 - h / 2 + dualScreenTop
+  const left = width / 2 - w / 2 + dualScreenLeft
+  const top = height / 2 - h / 2 + dualScreenTop
   return {
     w,
     h,
