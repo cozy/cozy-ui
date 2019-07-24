@@ -61,7 +61,9 @@ module.exports = {
         '../react/Infos/index.jsx',
         '../react/ContextHeader/index.jsx',
         '../react/Filename/index.jsx',
-        '../react/AppTitle/index.jsx'
+        '../react/AppTitle/index.jsx',
+        '../react/Figure/Figure.jsx',
+        '../react/Figure/FigureBlock.jsx'
       ]
     },
     {
