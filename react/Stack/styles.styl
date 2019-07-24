@@ -1,3 +1,5 @@
+@require 'settings/breakpoints.styl'
+
 .Stack > * + *
     margin-top .5rem
 
@@ -6,3 +8,13 @@
 
 .Stack--sparse > * + *
     margin-top .75rem
+
++small-screen()
+    .Stack > * + *
+        margin-top .25rem
+
+    .Stack--dense > * + *
+        margin-top .15rem
+
+    .Stack--sparse > * + *
+        margin-top .5rem
