@@ -1,8 +1,8 @@
 import React from 'react'
 import Types from 'prop-types'
 import classNames from 'classnames'
-import Figure from 'components/Figure/Figure'
-import styles from 'components/Figure/FigureBlock.styl'
+import Figure from './Figure'
+import styles from './FigureBlock.styl'
 
 /**
  * Shows a `Figure` with a label.

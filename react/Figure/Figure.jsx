@@ -1,8 +1,7 @@
 import React from 'react'
 import Types from 'prop-types'
 import cx from 'classnames'
-import styles from 'components/Figure/Figure.styl'
-import flag from 'cozy-flags'
+import styles from './Figure.styl'
 
 /**
  * Shows a number, typically a balance or an important financial
@@ -30,7 +29,8 @@ const Figure = props => {
     currencyClassName,
     size,
     onClick,
-    inline
+    inline,
+    blurred
   } = props
 
   let { decimalNumbers } = props
@@ -58,7 +58,7 @@ const Figure = props => {
           [styleWarning]: isWarning,
           [styleBig]: size == 'big',
           [styleClickable]: onClick,
-          [styles.Figure_blur]: flag('amount_blur'),
+          [styles.Figure_blur]: blurred,
           [styles['Figure--inline']]: inline
         },
         className
@@ -105,7 +105,9 @@ Figure.propTypes = {
   /** Whether to add a specific class to show warning */
   warningLimit: Types.number,
   /** Whether to add some spacing between the figure and the currency or not */
-  withCurrencySpacing: Types.bool
+  withCurrencySpacing: Types.bool,
+  /** Blur the amount, useful for personal content (banking for example) */
+  blurred: Types.bool
 }
 
 export default Figure
