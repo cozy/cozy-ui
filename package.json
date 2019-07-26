@@ -187,5 +187,8 @@
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ]
-  }
+  },
+  "browserslist": [
+    "extends browserslist-config-cozy"
+  ]
 }
