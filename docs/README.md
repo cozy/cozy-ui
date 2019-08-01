@@ -90,7 +90,7 @@ Cozy UI is developed by Cozy Cloud and distributed under the AGPL-3.0 license.
 
 ## What is Cozy?
 
-![Cozy Logo](https://raw.github.com/cozy/cozy-setup/gh-pages/assets/images/happycloud.png)
+![Cozy Logo](https://cdn.rawgit.com/cozy/cozy-guidelines/master/templates/cozy_logo_small.svg)
 
 [Cozy](https://cozy.io) is a platform that brings all your web services in the
 same private space. With it, your web apps and your devices can share data
