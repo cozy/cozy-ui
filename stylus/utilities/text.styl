@@ -17,7 +17,7 @@ colors=json('../settings/palette.json', { hash: true })
 
 for color in keys(colors)
     $color-{color}
-        color: lookup(color) !important // @stylint ignore
+        color: colors[color] !important // @stylint ignore
 
     global('.u-' + color, '$color-' + color)
 
