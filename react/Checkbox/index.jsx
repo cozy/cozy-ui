@@ -38,9 +38,8 @@ const Checkbox = props => {
         {...restProps}
       />
       <span>
-        {/* TODO: Change 'check-circleless' to 'check' when icons are cleaned up */}
         <Icon
-          icon={mixed ? 'dash' : 'check-circleless'}
+          icon={mixed ? 'dash' : 'check'}
           color={palette['primaryContrastTextColor']}
           className={styles['c-input-checkbox-icon']}
           aria-hidden
