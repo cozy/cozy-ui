@@ -321,20 +321,20 @@ exports[`Card should render examples: Card 3`] = `
 exports[`Checkbox should render examples: Checkbox 1`] = `
 "<div>
   <form>
-    <div><label class=\\"styles__c-input-checkbox___2CzvY styles__c-input-checkbox--svg___3YMZN\\" aria-checked=\\"\\"><input type=\\"checkbox\\" name=\\"\\" value=\\"\\"><span><svg class=\\"styles__c-input-checkbox-icon___7A-8k styles__icon___23x3R\\" style=\\"fill: var(--primaryContrastTextColor);\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#check-circleless\\"></use></svg>This is a checkbox</span></label></div>
+    <div><label class=\\"styles__c-input-checkbox___2CzvY styles__c-input-checkbox--svg___3YMZN\\" aria-checked=\\"\\"><input type=\\"checkbox\\" name=\\"\\" value=\\"\\"><span><svg class=\\"styles__c-input-checkbox-icon___7A-8k styles__icon___23x3R\\" style=\\"fill: var(--primaryContrastTextColor);\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#check\\"></use></svg>This is a checkbox</span></label></div>
   </form>
 </div>"
 `;
 
 exports[`Checkbox should render examples: Checkbox 2`] = `
 "<div>
-  <div><label class=\\"styles__c-input-checkbox___2CzvY styles__c-input-checkbox--svg___3YMZN styles__is-error___3UPnf\\" aria-checked=\\"\\"><input type=\\"checkbox\\" name=\\"\\" value=\\"\\"><span><svg class=\\"styles__c-input-checkbox-icon___7A-8k styles__icon___23x3R\\" style=\\"fill: var(--primaryContrastTextColor);\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#check-circleless\\"></use></svg>This is a checkbox with an error</span></label></div>
+  <div><label class=\\"styles__c-input-checkbox___2CzvY styles__c-input-checkbox--svg___3YMZN styles__is-error___3UPnf\\" aria-checked=\\"\\"><input type=\\"checkbox\\" name=\\"\\" value=\\"\\"><span><svg class=\\"styles__c-input-checkbox-icon___7A-8k styles__icon___23x3R\\" style=\\"fill: var(--primaryContrastTextColor);\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#check\\"></use></svg>This is a checkbox with an error</span></label></div>
 </div>"
 `;
 
 exports[`Checkbox should render examples: Checkbox 3`] = `
 "<div>
-  <div><label class=\\"styles__c-input-checkbox___2CzvY styles__c-input-checkbox--svg___3YMZN\\" aria-checked=\\"\\" aria-disabled=\\"true\\"><input type=\\"checkbox\\" name=\\"\\" disabled=\\"\\" value=\\"\\"><span><svg class=\\"styles__c-input-checkbox-icon___7A-8k styles__icon___23x3R\\" style=\\"fill: var(--primaryContrastTextColor);\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#check-circleless\\"></use></svg>This is a disabled checkbox</span></label></div>
+  <div><label class=\\"styles__c-input-checkbox___2CzvY styles__c-input-checkbox--svg___3YMZN\\" aria-checked=\\"\\" aria-disabled=\\"true\\"><input type=\\"checkbox\\" name=\\"\\" disabled=\\"\\" value=\\"\\"><span><svg class=\\"styles__c-input-checkbox-icon___7A-8k styles__icon___23x3R\\" style=\\"fill: var(--primaryContrastTextColor);\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#check\\"></use></svg>This is a disabled checkbox</span></label></div>
 </div>"
 `;
 
@@ -346,7 +346,7 @@ exports[`Checkbox should render examples: Checkbox 4`] = `
 
 exports[`Checkbox should render examples: Checkbox 5`] = `
 "<div>
-  <div><label class=\\"styles__c-input-checkbox___2CzvY styles__c-input-checkbox--svg___3YMZN\\" aria-checked=\\"\\"><input type=\\"checkbox\\" name=\\"\\" value=\\"\\"><span><svg class=\\"styles__c-input-checkbox-icon___7A-8k styles__icon___23x3R\\" style=\\"fill: var(--primaryContrastTextColor);\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#check-circleless\\"></use></svg>This is a <strong>complex</strong> text</span></label></div>
+  <div><label class=\\"styles__c-input-checkbox___2CzvY styles__c-input-checkbox--svg___3YMZN\\" aria-checked=\\"\\"><input type=\\"checkbox\\" name=\\"\\" value=\\"\\"><span><svg class=\\"styles__c-input-checkbox-icon___7A-8k styles__icon___23x3R\\" style=\\"fill: var(--primaryContrastTextColor);\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#check\\"></use></svg>This is a <strong>complex</strong> text</span></label></div>
 </div>"
 `;
 
