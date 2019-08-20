@@ -158,3 +158,19 @@ const options = [
   />
 </form>
 ```
+
+#### Customized label and input
+
+```
+<form>
+  <Field
+    label="I'm a label"
+    labelProps={{
+      style: { color: 'teal' }
+    }}
+    fieldProps={{
+      style: { borderColor: 'teal' }
+    }}
+  />
+</form>
+```
