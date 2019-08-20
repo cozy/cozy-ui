@@ -361,7 +361,10 @@ $checkbox
             background-color var(--paleGrey)
 
     input
-        hide()
+        visually-hide()
+
+        &:focus + span::before
+            box-shadow inset 0 0 0 rem(2) var(--dodgerBlue)
 
         &:checked
             & + span::before

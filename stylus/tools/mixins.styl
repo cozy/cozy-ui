@@ -72,12 +72,34 @@ hide()
     visibility  hidden !important  // @stylint ignore
 
 /*
+    visually-hide()
+
+    visually-hide() mixin visually hides an element. The element is still visible by screen readers.
+    This mixin doesn't take parameters.
+
+    Weight: 3
+
+    Styleguide Tools.mixins.hide
+*/
+visually-hide()
+    border 0
+    clip rect(0 0 0 0)
+    clip-path polygon(0 0, 0 0, 0 0)
+    height 1px
+    margin -1px
+    overflow hidden
+    padding 0
+    position absolute
+    width 1px
+    white-space nowrap
+
+/*
     reset()
 
     reset() mixin removes every padding, margin and border of an element.
     This mixin doesn't take parameters.
 
-    Weight: 3
+    Weight: 4
 
     Styleguide Tools.mixins.reset
 */
