@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
 const Label = props => {
-  const { htmlFor, className, children, block, error } = props
+  const { htmlFor, className, children, block, error, ...otherProps } = props
   return (
     <label
       htmlFor={htmlFor}
@@ -16,6 +16,7 @@ const Label = props => {
         },
         className
       )}
+      {...otherProps}
     >
       {children}
     </label>

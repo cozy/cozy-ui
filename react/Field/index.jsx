@@ -79,6 +79,7 @@ const Field = props => {
     className,
     disabled,
     fieldProps,
+    labelProps,
     fullwidth,
     label,
     id,
@@ -168,6 +169,7 @@ const Field = props => {
             onBlur={onBlur}
             readOnly={readOnly}
             size={size}
+            {...fieldProps}
           />
         )
       default:
@@ -179,7 +181,9 @@ const Field = props => {
 
   return (
     <div className={cx(styles['o-field'], className)}>
-      <Label htmlFor={id}>{label}</Label>
+      <Label htmlFor={id} {...labelProps}>
+        {label}
+      </Label>
       {side && (
         <div
           className={cx(styles['o-side'], labelStyles['c-label'], {
@@ -197,6 +201,7 @@ const Field = props => {
 Field.propTypes = {
   ...inputSpecificPropTypes,
   disabled: PropTypes.bool,
+  labelProps: PropTypes.object,
   fieldProps: PropTypes.object,
   fullwidth: PropTypes.bool,
   label: PropTypes.string.isRequired,
@@ -245,6 +250,7 @@ Field.propTypes = {
 
 Field.defaultProps = {
   fieldProps: {},
+  labelProps: {},
   fullwidth: false,
   label: '',
   id: '',
