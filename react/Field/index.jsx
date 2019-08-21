@@ -34,12 +34,14 @@ class InputPassword extends React.Component {
       showLabel,
       showVisibilityButton,
       fullwidth,
+      secondaryComponent,
       ...restProps
     } = this.props
     const { visible } = this.state
+
     return (
       <div className={styles['o-field-input']}>
-        {showVisibilityButton && (
+        {showVisibilityButton && !secondaryComponent && (
           <div
             className={cx(
               labelStyles['c-label'],
@@ -49,6 +51,18 @@ class InputPassword extends React.Component {
             onClick={() => this.toggleVisibility()}
           >
             {visible ? hideLabel : showLabel}
+          </div>
+        )}
+        {showVisibilityButton && secondaryComponent && (
+          <div
+            className={cx(styles['o-field-input-action'], {
+              [styles['o-side-fullwidth']]: fullwidth
+            })}
+            onClick={() => this.toggleVisibility()}
+          >
+            {secondaryComponent({
+              visible
+            })}
           </div>
         )}
         <Input
@@ -94,6 +108,7 @@ const Field = props => {
     onBlur,
     readOnly,
     secondaryLabels,
+    secondaryComponent,
     side,
     size
   } = props
@@ -145,6 +160,7 @@ const Field = props => {
             size={size}
             {...fieldProps}
             {...secondaryLabels}
+            secondaryComponent={secondaryComponent}
           />
         )
       case 'date':
@@ -245,7 +261,8 @@ Field.propTypes = {
   error: PropTypes.bool,
   side: PropTypes.node,
   size: PropTypes.oneOf(['tiny', 'medium', 'large']),
-  secondaryLabels: PropTypes.object
+  secondaryLabels: PropTypes.object,
+  secondaryComponent: PropTypes.func
 }
 
 Field.defaultProps = {

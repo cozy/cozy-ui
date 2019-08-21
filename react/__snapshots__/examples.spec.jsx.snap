@@ -507,6 +507,20 @@ exports[`Field should render examples: Field 10`] = `
 </div>"
 `;
 
+exports[`Field should render examples: Field 11`] = `
+"<div>
+  <form>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\" style=\\"color: teal;\\">I'm a label</label>
+      <div class=\\"styles__o-field-input___vCqdV\\">
+        <div class=\\"styles__o-field-input-action___2k7a8\\">
+          <div class=\\"u-bg-silver\\">Show</div>
+        </div><input type=\\"password\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" style=\\"border-color: teal;\\" value=\\"\\">
+      </div>
+    </div>
+  </form>
+</div>"
+`;
+
 exports[`Hero should render examples: Hero 1`] = `
 "<div>
   <div class=\\"styles__Hero___14z7_\\">
