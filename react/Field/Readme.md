@@ -174,3 +174,23 @@ const options = [
   />
 </form>
 ```
+
+#### Password with custom secondaryComponent
+
+```
+<form>
+  <Field
+    label="I'm a label"
+    labelProps={{
+      style: { color: 'teal' }
+    }}
+    fieldProps={{
+      style: { borderColor: 'teal' }
+    }}
+    type="password"
+    secondaryComponent={({visible}) => {
+      return visible ? <div className={'u-bg-dodgerBlue'}>Hide</div> : <div className={'u-bg-silver'}>Show</div>
+    }}
+  />
+</form>
+```
