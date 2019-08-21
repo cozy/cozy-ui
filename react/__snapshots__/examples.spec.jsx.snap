@@ -3768,7 +3768,7 @@ exports[`Text should render examples: Text 6`] = `
 
 exports[`Text should render examples: Text 7`] = `
 "<div>
-  <div class=\\"u-caption\\">This a note text</div>
+  <div class=\\"u-caption\\">This a caption text</div>
 </div>"
 `;
 

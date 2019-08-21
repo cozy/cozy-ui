@@ -46,10 +46,10 @@ const { Uppercase } = require('./index');
 <Uppercase>This is an uppercase text</Uppercase>
 ```
 
-#### Note text
+#### Caption text
 
 ```
 const { Caption } = require('./index');
 
-<Caption>This a note text</Caption>
+<Caption>This a caption text</Caption>
 ```
