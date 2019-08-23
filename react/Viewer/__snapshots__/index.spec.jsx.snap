@@ -30,7 +30,7 @@ exports[`Viewer should render the various viewers: imageviewer 1`] = `
 `;
 
 exports[`Viewer should render the various viewers: markdownviewer 1`] = `
-<Wrapped
+<withClient(TextViewer)
   file={
     Object {
       "_id": "markdownfileid",
@@ -75,7 +75,7 @@ exports[`Viewer should render the various viewers: pdfviewer 1`] = `
 `;
 
 exports[`Viewer should render the various viewers: textviewer 1`] = `
-<Wrapped
+<withClient(TextViewer)
   file={
     Object {
       "_id": "textfileid",
