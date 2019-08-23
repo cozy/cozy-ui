@@ -32,7 +32,6 @@ class InputPassword extends React.Component {
     const {
       hideLabel,
       showLabel,
-      showVisibilityButton,
       fullwidth,
       secondaryComponent,
       ...restProps
@@ -41,7 +40,7 @@ class InputPassword extends React.Component {
 
     return (
       <div className={styles['o-field-input']}>
-        {showVisibilityButton && !secondaryComponent && (
+        {!secondaryComponent && (
           <div
             className={cx(
               labelStyles['c-label'],
@@ -53,7 +52,7 @@ class InputPassword extends React.Component {
             {visible ? hideLabel : showLabel}
           </div>
         )}
-        {showVisibilityButton && secondaryComponent && (
+        {secondaryComponent && (
           <div
             className={cx(styles['o-field-input-action'], {
               [styles['o-side-fullwidth']]: fullwidth
@@ -78,13 +77,11 @@ class InputPassword extends React.Component {
 InputPassword.propTypes = {
   ...Input.propTypes,
   hideLabel: PropTypes.string,
-  showLabel: PropTypes.string,
-  showVisibilityButton: PropTypes.bool
+  showLabel: PropTypes.string
 }
 
 InputPassword.defaultProps = {
-  ...Input.defaultProps,
-  showVisibilityButton: true
+  ...Input.defaultProps
 }
 
 const Field = props => {
