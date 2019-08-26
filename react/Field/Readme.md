@@ -13,7 +13,6 @@ Like `Input` component, it can have the following properties:
     label="I'm a label"
     type="textarea"
     placeholder="I'm a textarea"
-    onChange={() => {}}
     size="medium"
   />
 </form>
@@ -192,5 +191,18 @@ const options = [
       return visible ? <div className={'u-bg-dodgerBlue'}>Hide</div> : <div className={'u-bg-silver'}>Show</div>
     }}
   />
+</form>
+```
+
+#### Controlled Field
+
+```
+<form>
+  <Field
+    side="(optional)"
+    fullwidth={true}
+    value={state.value} onChange={ev => setState({value: ev.target.value})}
+  />
+  Value: { state.value }
 </form>
 ```
