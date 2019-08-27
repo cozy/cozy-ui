@@ -521,6 +521,16 @@ exports[`Field should render examples: Field 11`] = `
 </div>"
 `;
 
+exports[`Field should render examples: Field 12`] = `
+"<div>
+  <form>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\"></label>
+      <div class=\\"styles__o-side___tXbXL styles__c-label___o4ozG styles__o-side-fullwidth___7WcCI\\">(optional)</div><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR styles__c-input-text--fullwidth___33o_f\\" placeholder=\\"\\" value=\\"\\">
+    </div>Value:
+  </form>
+</div>"
+`;
+
 exports[`Hero should render examples: Hero 1`] = `
 "<div>
   <div class=\\"styles__Hero___14z7_\\">

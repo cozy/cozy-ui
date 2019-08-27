@@ -109,7 +109,10 @@ const Field = props => {
     side,
     size
   } = props
-
+  const controlledProps = {
+    ...(value ? { value } : {}),
+    ...(onChange ? { onChange } : {})
+  }
   const inputType = type => {
     switch (type) {
       case 'select':
@@ -129,12 +132,11 @@ const Field = props => {
             id={id}
             name={name}
             placeholder={placeholder}
-            value={value}
             error={error}
-            onChange={onChange}
             onKeyUp={onKeyUp}
             onBlur={onBlur}
             readOnly={readOnly}
+            {...controlledProps}
           />
         )
       case 'password':
@@ -148,9 +150,8 @@ const Field = props => {
             name={name}
             type={type}
             placeholder={placeholder}
-            value={value}
             error={error}
-            onChange={onChange}
+            {...controlledProps}
             onKeyUp={onKeyUp}
             onBlur={onBlur}
             readOnly={readOnly}
@@ -175,9 +176,8 @@ const Field = props => {
             name={name}
             type={type}
             placeholder={placeholder}
-            value={value}
             error={error}
-            onChange={onChange}
+            {...controlledProps}
             onKeyUp={onKeyUp}
             onBlur={onBlur}
             readOnly={readOnly}
