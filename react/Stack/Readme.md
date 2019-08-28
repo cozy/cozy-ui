@@ -17,28 +17,44 @@ const Card = require('../Card').default;
 </Stack>
 ```
 
-You can use `sparse` and `dense` value for "spacing" to have more/less padding.
+You can use `xs`, `s`, `l`, `xl`, and `xxl` values for "spacing" to have less/more padding.
 
 ```
-const Card = require('../Card').default;
+const Card = require('../Card').default
+const spacings = ['xs', 's', 'l', 'xl', 'xxl'];
 
 <div>
-<p>
-Dense:
-</p>
-<Stack spacing="dense">
-  <Card>Homer Simpson</Card>
-  <Card>Marge Simpson</Card>
-</Stack>
 
-<p>
-Sparse:
-</p>
+{ spacings.map(spacing  =>
+  (<>
+    <p>
+    { spacing }:
+    </p>
 
-<Stack spacing="sparse">
-  <Card>Homer Simpson</Card>
-  <Card>Marge Simpson</Card>
-</Stack>
+    <Stack spacing={spacing}>
+      <Card>Homer Simpson</Card>
+      <Card>Marge Simpson</Card>
+    </Stack>
+  </>)
+  )}
 
 </div>
 ```
+
+
+---
+
+
+<Stack spacing='xs'>
+    <Card>
+        <h1 class='u-mb-m'>Joel</h1>
+    </Card>
+    <Card>
+        <h1>Patrick</h1>
+    </Card>
+</Stack>
+
+h1 
+  margin-bottom 1rem
+
+
