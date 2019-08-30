@@ -1,14 +1,41 @@
+@require 'settings/breakpoints.styl'
 @require './text.styl'
+
+fontsize = {
+    'fz-tiny': 'fz-tiny',
+    'fz-xsmall': 'fz-xsmall',
+    'fz-small': 'fz-small',
+    'fz-medium': 'fz-medium',
+    'fz-large': 'fz-large'
+}
 
 fontstyle = {
     'fs-normal': 'fs-normal',
     'fs-italic': 'fs-italic'
 }
 
+textalign = {
+    'ta-left': 'ta-left',
+    'ta-right': 'ta-right',
+    'ta-center': 'ta-center',
+    'ta-justify': 'ta-justify'
+}
+
+if cssmodules == true
+    cssModulesUtils(fontsize, breakpoints)
+else
+    nativeUtils(fontsize, breakpoints)
+
 if cssmodules == true
     cssModulesUtils(fontstyle, breakpoints)
 else
     nativeUtils(fontstyle, breakpoints)
+
+if cssmodules == true
+    cssModulesUtils(textalign, breakpoints)
+else
+    nativeUtils(textalign, breakpoints)
+
 // @stylint on
 
 // Global classes

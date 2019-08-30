@@ -113,19 +113,6 @@ fz-large()
     font-size rem(18)!important
     lh-xlarge()
 
-fontsize = {
-    'fz-tiny': 'fz-tiny',
-    'fz-xsmall': 'fz-xsmall',
-    'fz-small': 'fz-small',
-    'fz-medium': 'fz-medium',
-    'fz-large': 'fz-large'
-}
-
-if cssmodules == true
-    cssModulesUtils(fontsize, breakpoints)
-else
-    nativeUtils(fontsize, breakpoints)
-
 ta-left()
     text-align left!important
 
@@ -137,18 +124,6 @@ ta-center()
 
 ta-justify()
     text-align justify!important
-
-textalign = {
-    'ta-left': 'ta-left',
-    'ta-right': 'ta-right',
-    'ta-center': 'ta-center',
-    'ta-justify': 'ta-justify'
-}
-
-if cssmodules == true
-    cssModulesUtils(textalign, breakpoints)
-else
-    nativeUtils(textalign, breakpoints)
 
 fs-normal()
     font-style normal!important
