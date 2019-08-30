@@ -71,7 +71,8 @@ Infos.propTypes = {
   icon: iconPropType,
   /** An important information will be displayed with red colors */
   isImportant: PropTypes.bool,
-  text: PropTypes.string,
+  /** Can be either a Text, or an element (for instance a ReactMardown component) */
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   title: PropTypes.string
 }
 export default Infos
