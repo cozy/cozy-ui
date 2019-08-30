@@ -86,24 +86,3 @@ display-table-column()
 
 display-table-column-group()
     display table-column-group
-
-props = {
-    'display-none': 'dn',
-    'display-inline': 'di',
-    'display-block': 'db',
-    'display-inline-block': 'dib',
-    'display-inline-table': 'dit',
-    'display-table': 'dt',
-    'display-table-cell': 'dtc',
-    'display-table-row': 'dt-row',
-    'display-table-row-group': 'dt-row-group',
-    'display-table-column': 'dt-column',
-    'display-table-column-group': 'dt-column-group'
-}
-
-if cssmodules == true
-    cssModulesUtils(props, breakpoints)
-else
-    nativeUtils(props, breakpoints)
-
-

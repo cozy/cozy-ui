@@ -1,0 +1,21 @@
+@require './text.styl'
+
+fontstyle = {
+    'fs-normal': 'fs-normal',
+    'fs-italic': 'fs-italic'
+}
+
+if cssmodules == true
+    cssModulesUtils(fontstyle, breakpoints)
+else
+    nativeUtils(fontstyle, breakpoints)
+// @stylint on
+
+// Global classes
+global('.u-error', $error)
+global('.u-valid', $valid)
+global('.u-warn', $warn)
+global('.u-breakword', $breakword)
+global('.u-ellipsis', $ellipsis)
+global('.u-midellipsis', $midellipsis)
+global('.u-link', $link)
