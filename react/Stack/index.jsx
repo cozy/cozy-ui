@@ -3,23 +3,21 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
-const sparseStyle = styles['Stack--sparse']
-const denseStyle = styles['Stack--dense']
-
 const Stack = ({ spacing, ...props }) => {
   return (
     <div
       {...props}
-      className={cx(props.className, styles.Stack, {
-        [sparseStyle]: spacing === 'sparse',
-        [denseStyle]: spacing === 'dense'
-      })}
+      className={cx(
+        props.className,
+        styles.Stack,
+        spacing && styles['Stack--' + spacing]
+      )}
     />
   )
 }
 
 Stack.propTypes = {
-  spacing: PropTypes.oneOf(['sparse', 'dense'])
+  spacing: PropTypes.oneOf(['xs', 's', 'l', 'xl', 'xxl'])
 }
 
 export default Stack
