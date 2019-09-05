@@ -1,5 +1,6 @@
 @require '../settings/breakpoints'
 @require '../tools/mixins'
+@require './spaces.styl'
 /*------------------------------------*\
   Position utilities
 \*------------------------------------*/
@@ -27,7 +28,27 @@ props = {
     'position-static': 'pos-static',
 }
 
+directions = top bottom left right
+
+cssModulesDirectionsUtils()
+    for direction in directions
+        for kSpace, vSpace in spacing_values
+            :global(.u-{direction}-{kSpace})
+                {direction}: vSpace
+        :global(.u-{direction}-0)
+            {direction}: 0
+
+nativeDirectionsUtils()
+    for direction in directions
+        for kSpace, vSpace in spacing_values
+            .u-{direction}-{kSpace}
+                {direction}: vSpace
+        .u-{direction}-0
+            {direction}: 0
+
 if cssmodules == true
     cssModulesUtils(props, breakpoints)
+    cssModulesDirectionsUtils()
 else
     nativeUtils(props, breakpoints)
+    nativeDirectionsUtils()
