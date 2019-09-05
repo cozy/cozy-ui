@@ -102,7 +102,7 @@ export const theme = createMuiTheme({
     },
     MuiListItem: {
       root: {
-        minHeight: '4rem',
+        minHeight: '4.25rem',
         paddingTop: '.5rem',
         paddingBottom: '.5rem',
         '&$selected, &$selected:hover': {
