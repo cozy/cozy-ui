@@ -90,20 +90,29 @@ export const theme = createMuiTheme({
         borderTop: '0.0625rem solid var(--silver)'
       }
     },
-    MuiListItem: {
+    MuiList: {
       root: {
         borderTop: '1px solid var(--silver)',
-        minHeight: '4rem',
+        borderBottom: '1px solid var(--silver)'
+      },
+      padding: {
+        paddingTop: 0,
+        paddingBottom: 0
+      }
+    },
+    MuiListItem: {
+      root: {
+        minHeight: '4.25rem',
         paddingTop: '.5rem',
         paddingBottom: '.5rem',
-        '&:last-child': {
-          borderBottom: '1px solid var(--silver)'
-        },
         '&$selected, &$selected:hover': {
           backgroundColor: 'var(--zircon)'
         },
         '&:hover, &:focus': {
           backgroundColor: 'var(--paleGrey)'
+        },
+        '&:not(:first-child)': {
+          borderTop: '1px solid var(--silver)'
         }
       },
       gutters: {
