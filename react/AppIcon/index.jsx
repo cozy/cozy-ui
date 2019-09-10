@@ -7,22 +7,49 @@ import Icon from '../Icon'
 import palette from '../palette'
 import { iconPropType } from '../Icon'
 
-import { getPreloaded, preload } from './Preloader'
-import { AppDoctype } from '../proptypes'
+import { getPreloaded } from './Preloader'
+import { getAppIconURL } from './utils'
 
-const DONE = 'done'
-const ERRORED = 'errored'
-const FETCHING = 'fetching'
+import { AppDoctype } from '../proptypes'
+import memoize from 'lodash/memoize'
+
+const LoadingIcon = ({ className }) => {
+  return (
+    <div
+      className={cx(
+        styles['c-loading-placeholder'],
+        styles['c-app-icon'],
+        className
+      )}
+    />
+  )
+}
+
+const ErrorIcon = ({ fallbackIcon, className }) => {
+  return (
+    <Icon
+      className={cx(
+        styles['c-app-icon'],
+        styles['c-app-icon-default'],
+        className
+      )}
+      height="100%"
+      icon={fallbackIcon || 'cube'}
+      width="100%"
+      color={palette['coolGrey']}
+    />
+  )
+}
+
+const memoizedLoaders = {}
 
 export class AppIcon extends Component {
   constructor(props, context) {
     super(props, context)
     const { app, domain, secure } = props
-    const preloaded = getPreloaded(app, domain, secure)
     this.state = {
       error: null,
-      icon: preloaded,
-      status: preloaded ? DONE : FETCHING
+      icon: null
     }
     this.isUnmounting = false
     this.handleError = this.handleError.bind(this)
@@ -31,82 +58,68 @@ export class AppIcon extends Component {
   componentWillUnmount() {
     this.isUnmounting = true
   }
+
   componentDidMount() {
-    this.isUnmounting = false
     this.load()
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.fetchIcon !== prevProps.fetchIcon) {
+    if (
+      this.props.app !== prevProps.app ||
+      this.props.domain !== prevProps.domain ||
+      this.props.fetchIcon !== prevProps.fetchIcon
+    ) {
       this.load()
     }
   }
 
   async load() {
-    const { app, domain, fetchIcon, onReady, secure } = this.props
-    const loadFn = fetchIcon || preload
-    let loadedUrl
-    let loadError
+    const { app, domain, fetchIcon, onReady, secure, loadFn } = this.props
+    let loadedUrl, loadError
     try {
-      loadedUrl = await loadFn(app, domain, secure)
+      loadedUrl = 'null'
+      // loadedUrl = await loadFn(app, domain, secure)
     } catch (error) {
       loadError = error
     }
     if (!this.isUnmounting) {
       this.setState({
         error: loadError,
-        icon: loadedUrl,
-        status: loadError ? ERRORED : DONE
+        icon: loadedUrl
       })
       if (typeof onReady === 'function') {
+        console.log('fetched icon')
         onReady()
       }
     }
   }
 
   handleError() {
-    this.setState({ status: ERRORED })
+    this.setState({ error: new Error('Image could not be loaded') })
   }
 
   render() {
     const { alt, className, fallbackIcon } = this.props
 
-    const { icon, status } = this.state
-    switch (status) {
-      case FETCHING:
-        return (
-          <div
-            className={cx(
-              styles['c-loading-placeholder'],
-              styles['c-app-icon'],
-              className
-            )}
-          />
-        )
-      case DONE:
-        return (
-          <img
-            alt={alt}
-            className={cx(styles['c-app-icon'], className)}
-            src={icon}
-            onError={this.handleError}
-          />
-        )
-      case ERRORED:
-      default:
-        return (
-          <Icon
-            className={cx(
-              styles['c-app-icon'],
-              styles['c-app-icon-default'],
-              className
-            )}
-            height="100%"
-            icon={fallbackIcon || 'cube'}
-            width="100%"
-            color={palette['coolGrey']}
-          />
-        )
+    const { icon, error } = this.state
+
+    if (!icon && !error) {
+      return <LoadingIcon className={className} />
+    }
+
+    if (error) {
+      return <ErrorIcon fallbackIcon={fallbackIcon} className={className} />
+    }
+
+    if (icon) {
+      return (
+        <img
+          alt={alt}
+          className={cx(styles['c-app-icon'], className)}
+          src={icon}
+          onError={this.handleError}
+        />
+      )
     }
   }
 }
@@ -123,6 +136,10 @@ AppIcon.propTypes = {
   domain: PropTypes.string,
   onReady: PropTypes.func,
   secure: PropTypes.bool
+}
+
+AppIcon.defaultProps = {
+  fetchIcon: getAppIconURL
 }
 
 export default AppIcon
