@@ -6,6 +6,7 @@ exports[`IntentModal component renders as expected 1`] = `
   closable={true}
   closeBtnClassName="styles__intentModal__cross___1Hfuz"
   dismissAction={[Function]}
+  into="body"
   mobileFullscreen={false}
   overflowHidden={true}
   primaryType="regular"

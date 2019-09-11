@@ -311,73 +311,73 @@ class Modal extends Component {
     } = this.props
     const { titleID } = this
     const style = Object.assign({}, height && { height }, width && { width })
-    const maybeWrapInPortal = children =>
-      into ? <Portal into={into}>{children}</Portal> : children
-    return maybeWrapInPortal(
-      <div className={cx(styles['c-modal-container'], containerClassName)}>
-        <Overlay
-          onEscape={closable ? dismissAction : undefined}
-          className={overlayClassName}
-        >
-          <div
-            className={cx(
-              styles['c-modal-wrapper'],
-              {
-                [styles['c-modal-wrapper--fullscreen']]: mobileFullscreen
-              },
-              wrapperClassName
-            )}
-            onClick={closable ? this.handleOutsideClick : undefined}
+    return (
+      <Portal into={into}>
+        <div className={cx(styles['c-modal-container'], containerClassName)}>
+          <Overlay
+            onEscape={closable ? dismissAction : undefined}
+            className={overlayClassName}
           >
             <div
               className={cx(
-                styles['c-modal'],
-                styles[`c-modal--${size}`],
+                styles['c-modal-wrapper'],
                 {
-                  [styles['c-modal--overflowHidden']]: overflowHidden,
-                  [styles[`c-modal--${spacing}-spacing`]]: spacing,
-                  [styles['c-modal--fullscreen']]: mobileFullscreen,
-                  [styles['c-modal--closable']]: closable
+                  [styles['c-modal-wrapper--fullscreen']]: mobileFullscreen
                 },
-                className
+                wrapperClassName
               )}
-              style={style}
-              role="dialog"
-              aria-modal="true"
-              aria-labelledby={title ? titleID : null}
-              {...restProps}
+              onClick={closable ? this.handleOutsideClick : undefined}
             >
-              {closable && (
-                <ModalCross
-                  className={cx(closeBtnClassName, {
-                    [styles['c-modal-close--notitle']]: !title
-                  })}
-                  onClick={dismissAction}
-                  color={closeBtnColor}
-                />
-              )}
-              {title && <ModalHeader title={title} id={titleID} />}
-              {description && (
-                <ModalDescription>{description}</ModalDescription>
-              )}
-              {children}
-              {(primaryText && primaryAction) ||
-              (secondaryText && secondaryAction) ? (
-                <ModalFooter>
-                  <ModalButtons
-                    primaryText={primaryText}
-                    primaryAction={primaryAction}
-                    primaryType={primaryType}
-                    secondaryText={secondaryText}
-                    secondaryAction={secondaryAction}
-                    secondaryType={secondaryType}
+              <div
+                className={cx(
+                  styles['c-modal'],
+                  styles[`c-modal--${size}`],
+                  {
+                    [styles['c-modal--overflowHidden']]: overflowHidden,
+                    [styles[`c-modal--${spacing}-spacing`]]: spacing,
+                    [styles['c-modal--fullscreen']]: mobileFullscreen,
+                    [styles['c-modal--closable']]: closable
+                  },
+                  className
+                )}
+                style={style}
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby={title ? titleID : null}
+                {...restProps}
+              >
+                {closable && (
+                  <ModalCross
+                    className={cx(closeBtnClassName, {
+                      [styles['c-modal-close--notitle']]: !title
+                    })}
+                    onClick={dismissAction}
+                    color={closeBtnColor}
                   />
-                </ModalFooter>
-              ) : null}
+                )}
+                {title && <ModalHeader title={title} id={titleID} />}
+                {description && (
+                  <ModalDescription>{description}</ModalDescription>
+                )}
+                {children}
+                {(primaryText && primaryAction) ||
+                (secondaryText && secondaryAction) ? (
+                  <ModalFooter>
+                    <ModalButtons
+                      primaryText={primaryText}
+                      primaryAction={primaryAction}
+                      primaryType={primaryType}
+                      secondaryText={secondaryText}
+                      secondaryAction={secondaryAction}
+                      secondaryType={secondaryType}
+                    />
+                  </ModalFooter>
+                ) : null}
+              </div>
             </div>
-          </div>
-        </Overlay>
-      </div>
+          </Overlay>
+        </div>
+      </Portal>
     )
   }
 }
@@ -439,6 +439,7 @@ Modal.defaultProps = {
   closable: true,
   overflowHidden: false,
   size: 'small',
+  into: 'body',
   mobileFullscreen: false
 }
 
@@ -465,16 +466,6 @@ const EnhancedModal = migrateProps([
   { src: 'withCross', dest: 'closable' }, // withCross -> closable
   { src: 'crossClassName', dest: 'closeBtnClassName' }, // crossClassName -> closeBtnClassName
   { src: 'crossColor', dest: 'closeBtnColor' }, // crossColor -> closeBtnColor
-  {
-    fn: props => {
-      let msg = null
-      if (!props.into) {
-        msg =
-          'In the future, `into` default value will be "body" : Modals will be rendered inside a <Portal />. Try to render your Modal with into=`body`'
-      }
-      return [props, msg]
-    }
-  },
   {
     fn: props => {
       let newProps
