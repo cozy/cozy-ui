@@ -45,7 +45,8 @@ module.exports = {
         '../react/Layout/Layout.jsx',
         '../react/Hero/index.jsx',
         '../react/Sidebar/index.jsx',
-        '../react/Circle/index.jsx'
+        '../react/Circle/index.jsx',
+        '../react/Page/index.jsx'
       ]
     },
     {
