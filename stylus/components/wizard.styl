@@ -24,7 +24,7 @@ $wizard
         justify-content flex-start
 
 $wizard--waiting
-    color white
+    color var(--white)
     background-color var(--dodgerBlue)
 
 $wizard--scroll
@@ -79,7 +79,7 @@ $wizard-dual
 
     &:first-child
         justify-content flex-end
-        color white
+        color var(--white)
         background-color var(--dodgerBlue)
 
 $wizard-errors
@@ -180,7 +180,7 @@ $wizard-logo-badge
     right rem(-6)
     width rem(32)
     height rem(32)
-    border .125rem solid white
+    border .125rem solid var(--white)
     background-color var(--dodgerBlue)
     border-radius 50%
 
@@ -572,7 +572,7 @@ $wizard-agreements-icon
         display block
         width 100%
         height 100%
-        fill white
+        fill var(--white)
 
     +medium-screen()
         margin 0 rem(24) 0 0
@@ -611,7 +611,7 @@ $wizard-progress
         right 0
         opacity .24
         border-radius: rem(3)
-        background-color white
+        background-color var(--white)
 
     @media (max-width: 33.9375rem)
         margin rem(8 16 24)
@@ -624,7 +624,7 @@ $wizard-progress-bar
     z-index 1
     width 0
     height 100%
-    background-color white
+    background-color var(--white)
     border-radius rem(3)
     transition width .5s ease-out
 

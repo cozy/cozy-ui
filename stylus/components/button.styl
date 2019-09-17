@@ -170,7 +170,7 @@ $button-alert
     border       0
     height       auto
     padding      rem(8 16)
-    background-color white
+    background-color var(--white)
     font-weight  bold
     font-size rem(14)
     text-decoration none
@@ -190,7 +190,7 @@ $button-alert--error
 
 $button-alert--info
     @extend           $button-alert
-    color             white
+    color             var(--white)
     background-color  var(--coolGrey)
 
     &[disabled]
@@ -199,7 +199,7 @@ $button-alert--info
             background-color var(--coolGrey)
 
     &:visited
-        color white
+        color var(--white)
 
     &:active
     &:hover
@@ -259,7 +259,7 @@ $button-client-mobile
     padding          rem(8 48 8 16)
     font-size        rem(16)
     font-weight      normal
-    color            white
+    color            var(--white)
     text-decoration  none
     text-transform   none
 
@@ -269,7 +269,7 @@ $button-client-mobile
             background-color var(--dodgerBlue)
 
     &:visited
-        color white
+        color var(--white)
 
     &:active
     &:hover
@@ -279,8 +279,8 @@ $button-client-mobile
     figure
         flex                0 0 rem(44)
         border-radius       rem(8)
-        border              rem(5) solid white
-        background-color    white
+        border              rem(5) solid var(--white)
+        background-color    var(--white)
 
         svg
             display block
