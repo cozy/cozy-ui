@@ -10,13 +10,13 @@
     top             0
     bottom          0
     z-index         $overlay-index
-    background      charcoalGrey
+    background      var(--charcoalGrey)
     overflow        hidden
-    color           white
+    color           var(--white)
 
     &--light
-        background  white
-        color       black
+        background  var(--white)
+        color       var(--black)
 
 .viewer-imageviewer
 .viewer-noviewer
@@ -56,7 +56,7 @@
       overflow auto
 
       a
-        color azure
+        color var(--azure)
 
     +medium-screen()
       width 90%
@@ -76,8 +76,8 @@
 .viewer-pdfviewer-toolbar
   position absolute
   bottom 2rem
-  background charcoalGrey
-  color white
+  background var(--charcoalGrey)
+  color var(--white)
   border-radius .5rem
 
 .viewer-imageviewer
