@@ -155,6 +155,8 @@ module.exports = {
     path.join(__dirname, './style.styl'),
     'style-loader!css-loader!' +
       path.join(__dirname, '../transpiled/react/stylesheet.css'),
+    'style-loader!css-loader!' +
+      path.join(__dirname, '../dist/cozy-ui.utils.min.css'),
     path.join(__dirname, './styleguide.setup')
   ],
   exampleMode: 'collapse',
