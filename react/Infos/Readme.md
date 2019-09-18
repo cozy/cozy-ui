@@ -3,9 +3,9 @@
 ```
 const Infos = require('./index').default;
 const Button = require('../Button').default;
-//style={{display: 'flex', alignItems: 'center', flexDirection: 'column'}}
 <div>
     <Infos text="My small persistent information! " />
+    <Infos text="In a slightly different style" className='u-maw-auto u-mv-1 u-bdrs-0'/>
     <div style={{height : '10px'}}/>
     <Infos
         text="My small persistent information, with an icon. And lot of text ? Again and again..."
