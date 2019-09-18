@@ -15,12 +15,9 @@ const Infos = ({ actionButton, icon, isImportant, text, className, title }) => {
         'u-p-1',
         'u-mih-2',
         'u-flex-justify-center',
-        'u-bg-paleGrey',
         'u-ta-left',
         'u-stack-m',
-        {
-          'u-bg-chablis': isImportant
-        },
+        isImportant ? 'u-bg-chablis' : 'u-bg-paleGrey',
         className
       )}
     >
