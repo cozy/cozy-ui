@@ -63,6 +63,7 @@
     "@semantic-release/changelog": "2.1.2",
     "@semantic-release/git": "5.0.0",
     "@semantic-release/npm": "3.4.1",
+    "argos-cli": "0.1.1",
     "autoprefixer-stylus": "1.0.0",
     "babel-loader": "8.0.6",
     "babel-plugin-css-modules-transform": "1.6.2",
@@ -119,7 +120,6 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.3.4",
-    "argos-cli": "0.1.1",
     "body-scroll-lock": "^2.5.8",
     "classnames": "^2.2.5",
     "date-fns": "^1.28.5",
