@@ -9,36 +9,33 @@ const Infos = ({ actionButton, icon, isImportant, text, className, title }) => {
   return (
     <div
       className={cx(
+        styles['Infos'],
         'u-flex',
         'u-flex-column',
-        'u-maw-6',
+        'u-p-1',
         'u-mih-2',
-        'u-bdrs-4',
-        'u-ph-1',
-        'u-pt-1',
-        'u-bg-paleGrey',
+        'u-flex-justify-center',
         'u-ta-left',
-        {
-          'u-bg-chablis': isImportant
-        },
+        'u-stack-m',
+        isImportant ? 'u-bg-chablis' : 'u-bg-paleGrey',
         className
       )}
     >
       {!!title && (
         <SubTitle
-          className={cx('u-mb-1', {
+          className={cx({
             'u-pomegranate': isImportant
           })}
         >
           {title}
         </SubTitle>
       )}
-      <div className={cx('u-flex', 'u-w-100', 'u-mb-1')}>
+      <div className={cx('u-flex', 'u-w-100')}>
         {icon && (
           <Icon
             icon={icon}
             className={cx(
-              styles['infos--icon'],
+              styles['Infos__icon'],
               'u-w-1',
               'u-h-1',
               'u-flex-shrink-0'
@@ -53,9 +50,7 @@ const Infos = ({ actionButton, icon, isImportant, text, className, title }) => {
           {text}
         </Text>
       </div>
-      {!!actionButton && (
-        <div className="u-flex-shrink-0 u-mb-1">{actionButton}</div>
-      )}
+      {!!actionButton && <div className="u-flex-shrink-0">{actionButton}</div>}
     </div>
   )
 }

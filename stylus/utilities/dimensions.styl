@@ -10,8 +10,8 @@ minmax = {
 }
 
 minmaxscale = {
- 'none': auto, // none is deprecated
- 'auto': auto,
+ 'none': none, // Used for max-width
+ 'auto': auto, // Used for min-width, see is_valid below
  '1': rem(16),
  '2': rem(32),
  '3': rem(64),
@@ -43,29 +43,38 @@ dimensionsscale = {
  '100': 100%
 }
 
+is_valid(kProp, vScale)
+    if (kProp == max-width or kProp == max-height) and vScale == auto
+        return false
+    if (kProp == min-width or kProp == min-height) and vScale == none
+        return false
+    return true
+
 cssModulesDimensionsUtils(scale, props, breakpoints)
     for kBp, vBp in breakpoints
         for kScale, vScale in scale
             for kProp, vProp in props
-                if vBp == ''
-                     :global(.u-{vProp}-{kScale})
-                        {kProp}: vScale !important
-                else
-                    @media (max-width: rem(lookup('BP-'+kBp)))
-                         :global(.u-{vProp}-{kScale}-{vBp})
+                if is_valid(kProp, vScale)
+                    if vBp == ''
+                         :global(.u-{vProp}-{kScale})
                             {kProp}: vScale !important
+                    else
+                        @media (max-width: rem(lookup('BP-'+kBp)))
+                             :global(.u-{vProp}-{kScale}-{vBp})
+                                {kProp}: vScale !important
 
 nativeDimensionsUtils(scale, props, breakpoints)
     for kBp, vBp in breakpoints
         for kScale, vScale in scale
             for kProp, vProp in props
-                if vBp == ''
-                    .u-{vProp}-{kScale}
-                        {kProp}: vScale !important
-                else
-                    @media (max-width: rem(lookup('BP-'+kBp)))
-                        .u-{vProp}-{kScale}-{vBp}
+                if is_valid(kProp, vScale)
+                    if vBp == ''
+                        .u-{vProp}-{kScale}
                             {kProp}: vScale !important
+                    else
+                        @media (max-width: rem(lookup('BP-'+kBp)))
+                            .u-{vProp}-{kScale}-{vBp}
+                                {kProp}: vScale !important
 
 if cssmodules == true
     cssModulesDimensionsUtils(minmaxscale, minmax, breakpoints)

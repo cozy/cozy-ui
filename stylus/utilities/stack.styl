@@ -1,0 +1,10 @@
+@require './spaces.styl'
+
+if cssmodules == true
+    for k, v in spacing_values
+        :global(.u-stack-{k} > * + *)
+            margin-top v[0]
+else
+    for k, v in spacing_values
+        .u-stack-{k} > * + *
+            margin-top v[0]
