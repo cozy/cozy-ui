@@ -38,7 +38,7 @@ const Infos = ({ actionButton, icon, isImportant, text, className, title }) => {
           <Icon
             icon={icon}
             className={cx(
-              styles['infos--icon'],
+              styles['Infos__icon'],
               'u-w-1',
               'u-h-1',
               'u-flex-shrink-0'
