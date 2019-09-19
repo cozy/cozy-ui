@@ -3,16 +3,13 @@ const path = require('path')
 const fs = require('fs')
 const sortBy = require('lodash/sortBy')
 
-const DEFAULT_PUPPETEER_VIEWPORT = {
-  width: 800,
-  height: 600
-}
-
 const emptyDirectory = directory => {
   for (const filename of fs.readdirSync(directory)) {
     fs.unlinkSync(path.join(directory, filename))
   }
 }
+
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 /**
  * Screenshot a component to the screenshot directory, taking care of
@@ -21,6 +18,7 @@ const emptyDirectory = directory => {
  */
 const screenshotComponent = async (page, { link, name }, screenshotDir) => {
   await page.goto(link, { waitUntil: 'load', timeout: 0 })
+  await sleep(100)
 
   console.log(`Screenshotting ${name}`)
   await page.screenshot({
