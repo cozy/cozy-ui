@@ -22,29 +22,11 @@ const emptyDirectory = directory => {
 const screenshotComponent = async (page, { link, name }, screenshotDir) => {
   await page.goto(link, { waitUntil: 'load', timeout: 0 })
 
-  // Getting the dimensions of the root wrapper
-  const rootBcr = await page.evaluate(() => {
-    const { width, height } = document
-      .querySelector('#rsg-root')
-      .getBoundingClientRect()
-    return { width, height }
-  })
-
-  // Fitting the viewport to the component
-  await page.setViewport({
-    width: Math.ceil(rootBcr.width),
-    height: Math.ceil(rootBcr.height)
-  })
-
-  console.log(`Screenshotting ${name} at ${rootBcr.width}x${rootBcr.height}`)
+  console.log(`Screenshotting ${name}`)
   await page.screenshot({
     path: path.join(screenshotDir, `${name}.png`),
     fullPage: true
   })
-
-  // Reset dimensions otherwise the page stays at the same dimensions as the
-  // tallest/widest component page
-  await page.setViewport(DEFAULT_PUPPETEER_VIEWPORT)
 }
 
 /**
