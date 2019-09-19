@@ -3,16 +3,13 @@ const path = require('path')
 const fs = require('fs')
 const sortBy = require('lodash/sortBy')
 
-const DEFAULT_PUPPETEER_VIEWPORT = {
-  width: 800,
-  height: 600
-}
-
 const emptyDirectory = directory => {
   for (const filename of fs.readdirSync(directory)) {
     fs.unlinkSync(path.join(directory, filename))
   }
 }
+
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 /**
  * Screenshot a component to the screenshot directory, taking care of
@@ -21,30 +18,13 @@ const emptyDirectory = directory => {
  */
 const screenshotComponent = async (page, { link, name }, screenshotDir) => {
   await page.goto(link, { waitUntil: 'load', timeout: 0 })
+  await sleep(100)
 
-  // Getting the dimensions of the root wrapper
-  const rootBcr = await page.evaluate(() => {
-    const { width, height } = document
-      .querySelector('#rsg-root')
-      .getBoundingClientRect()
-    return { width, height }
-  })
-
-  // Fitting the viewport to the component
-  await page.setViewport({
-    width: Math.ceil(rootBcr.width),
-    height: Math.ceil(rootBcr.height)
-  })
-
-  console.log(`Screenshotting ${name} at ${rootBcr.width}x${rootBcr.height}`)
+  console.log(`Screenshotting ${name}`)
   await page.screenshot({
     path: path.join(screenshotDir, `${name}.png`),
     fullPage: true
   })
-
-  // Reset dimensions otherwise the page stays at the same dimensions as the
-  // tallest/widest component page
-  await page.setViewport(DEFAULT_PUPPETEER_VIEWPORT)
 }
 
 /**
