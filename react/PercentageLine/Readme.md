@@ -1,8 +1,8 @@
 ```
-initialState = { percentage: Math.random() * 100 };
+initialState = { percentage: 0.5 * 100 };
 
 <>
     <button onClick={() => setState({ percentage: Math.random() * 100})}>Random percentage</button>
-    <PercentageLine  color='var(--primaryColor)' value={state.percentage}/>
+    {(state.percentage).toFixed(2)}% <PercentageLine  color='var(--primaryColor)' value={state.percentage}/>
 </>
 ```
