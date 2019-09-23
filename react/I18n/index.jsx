@@ -85,7 +85,8 @@ export const translate = () => WrappedComponent => {
     )
   }
   Wrapper.propTypes = {
-    ...WrappedComponent.propTypes,
+    //!TODO Remove this check after fixing https://github.com/cozy/cozy-drive/issues/1848
+    ...(WrappedComponent ? WrappedComponent.propTypes : undefined),
     ...i18nContextTypes
   }
   Wrapper.contextTypes = i18nContextTypes
