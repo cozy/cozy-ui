@@ -8,7 +8,11 @@ import {
   openDeeplinkOrRedirect,
   isAndroid
 } from 'cozy-device-helper'
-import { generateUniversalLink, getUniversalLinkDomain } from './native'
+import {
+  generateUniversalLink,
+  generateWebLink,
+  getUniversalLinkDomain
+} from './native'
 
 import { NATIVE_APP_INFOS } from 'cozy-ui/transpiled/react/AppLinker/native.config'
 import expiringMemoize from './expiringMemoize'
@@ -139,7 +143,7 @@ AppLinker.propTypes = {
   slug: PropTypes.string.isRequired,
   /*
   Full web url : Used by default on desktop browser
-  Used as a fallback_uri on mobile web 
+  Used as a fallback_uri on mobile web
   */
   href: PropTypes.string.isRequired,
   /*
@@ -150,4 +154,9 @@ AppLinker.propTypes = {
 }
 
 export default AppLinker
-export { NATIVE_APP_INFOS, getUniversalLinkDomain, generateUniversalLink }
+export {
+  NATIVE_APP_INFOS,
+  getUniversalLinkDomain,
+  generateWebLink,
+  generateUniversalLink
+}

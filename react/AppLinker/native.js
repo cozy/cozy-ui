@@ -4,6 +4,25 @@ export const getUniversalLinkDomain = () => {
   return UNIVERSAL_LINK_URL
 }
 
+const ensureFirstSlash = path => {
+  if (!path) {
+    return '/'
+  } else {
+    return path.startsWith('/') ? path : '/' + path
+  }
+}
+
+export const generateWebLink = ({ cozyUrl, nativePath, slug }) => {
+  nativePath = ensureFirstSlash(nativePath)
+  const url = new URL(cozyUrl)
+  url.host = url.host
+    .split('.')
+    .map((x, i) => (i === 0 ? x + '-' + slug : x))
+    .join('.')
+  url.hash = nativePath
+  return url.toString()
+}
+
 /**
  * Returns a universal link for an app + native path
  *
@@ -16,23 +35,16 @@ export const getUniversalLinkDomain = () => {
 export const generateUniversalLink = options => {
   const { slug, cozyUrl } = options
   let { fallbackUrl, nativePath } = options
-  nativePath = nativePath || '/'
+  nativePath = ensureFirstSlash(nativePath)
   if (!cozyUrl && !fallbackUrl) {
     throw new Error(
       'Must have either cozyUrl or fallbackUrl to generate universal link.'
     )
   }
   if (cozyUrl && !fallbackUrl) {
-    fallbackUrl = new URL(cozyUrl)
-    fallbackUrl.host = fallbackUrl.host
-      .split('.')
-      .map((x, i) => (i === 0 ? x + '-' + slug : x))
-      .join('.')
-    fallbackUrl.hash = nativePath
-    fallbackUrl = fallbackUrl.toString()
+    fallbackUrl = generateWebLink({ cozyUrl, nativePath, slug })
   }
-  if (!nativePath.startsWith('/')) nativePath = '/' + nativePath
-  let url = getUniversalLinkDomain() + '/' + slug + nativePath
+  const url = getUniversalLinkDomain(cozyUrl) + '/' + slug + nativePath
   const urlObj = new URL(url)
   urlObj.searchParams.append('fallback', fallbackUrl)
   return urlObj.toString()
