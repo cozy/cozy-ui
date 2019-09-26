@@ -167,9 +167,17 @@ const ActionMenuHeader = ({ children }) => {
   return <div className={styles['c-actionmenu-header']}>{children}</div>
 }
 
-const ActionMenuItem = ({ left, children, right }) => {
+const ActionMenuItem = ({ left, children, right, onClick }) => {
+  const onClickEnhanced = e => {
+    if (onClick) {
+      // we need to stop propagation here so that the menu doesn't close itself
+      e.stopPropagation()
+      onClick()
+    }
+  }
+
   return (
-    <Media className={styles['c-actionmenu-item']}>
+    <Media className={styles['c-actionmenu-item']} onClick={onClickEnhanced}>
       {left && <Img className="u-mh-1">{left}</Img>}
       <Bd className={left ? 'u-mr-1' : 'u-mh-1'}>{children}</Bd>
       {right && <Img className="u-mr-1">{right}</Img>}
@@ -177,5 +185,11 @@ const ActionMenuItem = ({ left, children, right }) => {
   )
 }
 
+ActionMenuItem.propTypes = {
+  left: PropTypes.node,
+  right: PropTypes.node,
+  children: PropTypes.node,
+  onClick: PropTypes.func
+}
 export default ActionMenu
 export { ActionMenuHeader, ActionMenuItem }
