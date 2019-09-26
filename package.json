@@ -87,7 +87,7 @@
     "http-server": "0.11.1",
     "husky": "0.14.3",
     "identity-obj-proxy": "3.0.0",
-    "jest-cli": "24.8.0",
+    "jest-cli": "24.9.0",
     "kss": "3.0.0-beta.25",
     "kss-webpack-plugin": "1.3.1",
     "lodash": "4.17.15",
