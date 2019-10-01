@@ -44,7 +44,7 @@ const Grid = require('.').default;
 const Card = require('../../Card').default;
 
 <MuiCozyTheme>
-    <Grid container spacing={24}>
+    <Grid container spacing={8}>
         <Grid item xs={12}>
            <Card>Homer Simpson</Card>
         </Grid>
@@ -54,16 +54,16 @@ const Card = require('../../Card').default;
         <Grid item xs={12} sm={6}>
            <Card>Homer Simpson</Card>
         </Grid>
-        <Grid item xs={6} sm={3}>
+        <Grid item xs={3} sm={2}>
            <Card>Homer Simpson</Card>
         </Grid>
-        <Grid item xs={6} sm={3}>
+        <Grid item xs={3} sm={2}>
            <Card>Homer Simpson</Card>
         </Grid>
-       <Grid item xs={6} sm={3}>
+       <Grid item xs={3} sm={2}>
            <Card>Homer Simpson</Card>
         </Grid>
-        <Grid item xs={6} sm={3}>
+        <Grid item xs={3} sm={2}>
            <Card>Homer Simpson</Card>
         </Grid>
       </Grid>
