@@ -3295,6 +3295,10 @@ exports[`MuiCozyTheme/ExpansionPanel should render examples: MuiCozyTheme/Expans
 
 exports[`MuiCozyTheme/ExpansionPanel should render examples: MuiCozyTheme/ExpansionPanel 2`] = `"<div></div>"`;
 
+exports[`MuiCozyTheme/Grid should render examples: MuiCozyTheme/Grid 1`] = `"<div></div>"`;
+
+exports[`MuiCozyTheme/Grid should render examples: MuiCozyTheme/Grid 2`] = `"<div></div>"`;
+
 exports[`MuiCozyTheme/List should render examples: MuiCozyTheme/List 1`] = `"<div></div>"`;
 
 exports[`MuiCozyTheme/List should render examples: MuiCozyTheme/List 2`] = `"<div></div>"`;
