@@ -13,6 +13,7 @@ import ModalCross from './ModalCross'
 import ModalFooter from './ModalFooter'
 import ModalButtons from './ModalButtons'
 import AnimatedContentHeader from './AnimatedContentHeader'
+import ModalBackButton from './ModalBackButton'
 
 const ModalDescription = ModalContent
 
@@ -256,7 +257,8 @@ Object.assign(EnhancedModal, {
   ModalHeader,
   AnimatedContentHeader,
   ModalBrandedHeader,
-  ModalDescription
+  ModalDescription,
+  ModalBackButton
 })
 
 export default EnhancedModal
@@ -270,5 +272,6 @@ export {
   ModalTitle,
   ModalButtons,
   ModalBrandedHeader,
-  ModalDescription
+  ModalDescription,
+  ModalBackButton
 }
