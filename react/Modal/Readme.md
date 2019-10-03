@@ -299,6 +299,45 @@ class ModalCounterWithAnimatedHeader extends React.Component {
 </div>
 ```
 
+### Back button
+
+When your modal contains a multi-step process, you may want to add a back button that takes care of going one step back in the inner process, but not close the modal. In that case, you can use the `ModalBackButton` component.
+
+```
+const { ModalContent, ModalBackButton } = Modal;
+const toggle = () => setState({ modalOpened: !state.modalOpened });
+const goToStep1 = () => setState({ step: 1 });
+const goToStep2 = () => setState({ step: 2 });
+
+initialState = {
+  step: 1
+};
+
+<div>
+  <button onClick={toggle}>
+    Toggle modal
+  </button>
+  {state.modalOpened ? <Modal dismissAction={toggle}>
+    <ModalContent>
+    {state.step === 1 && (
+      <>
+        <p>This is step 1</p>
+        <button onClick={goToStep2}>Go to step 2</button>
+      </>
+    )}
+
+    {state.step === 2 && (
+      <>
+        <p>This is step 2</p>
+        <button onClick={goToStep1}>Go to step 1</button>
+      </>
+    )}
+    {state.step === 2 && <ModalBackButton onClick={goToStep1}/>}
+    </ModalContent>
+  </Modal> : null}
+</div>
+```
+
 ### Panes
 
 ```
