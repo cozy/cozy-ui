@@ -258,6 +258,11 @@ const ModalButtons = ({
   </div>
 )
 
+ModalButtons.defaultProps = {
+  primaryType: 'regular',
+  secondaryType: 'secondary'
+}
+
 class Modal extends Component {
   constructor(props) {
     super(props)
