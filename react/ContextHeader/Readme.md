@@ -3,7 +3,8 @@ A little inset with text and optional icon that can be used to provide some cont
 ### Default
 
 ```
-<div >
+import ContextHeader from './index';
+<div>
   <ContextHeader title="Pick a book" text="What will you read today?" />
 </div>
 ```
@@ -11,7 +12,8 @@ A little inset with text and optional icon that can be used to provide some cont
 ### With an icon
 
 ```
-<div >
+import ContextHeader from './index';
+<div>
   <ContextHeader title="Pick a book" text="What will you read today?" icon="album" />
 </div>
 ```
@@ -19,7 +21,8 @@ A little inset with text and optional icon that can be used to provide some cont
 ### With a closing action
 
 ```
-<div >
+import ContextHeader from './index';
+<div>
   <ContextHeader title="Pick a book" text="What will you read today?" icon="album" onClose={() => alert('Nothing then.')} />
 </div>
 ```

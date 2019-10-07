@@ -5,6 +5,7 @@ A select box for more advanced use cases, based on [`react-select` v2](https://r
 You can use this exactly like you would use `react-select`. See the [official documentation](https://react-select.com) for more examples.
 
 ```
+import SelectBox from './index';
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry', isDisabled: true },
@@ -23,6 +24,7 @@ const options = [
 For example if you want to force the menu to be open:
 
 ```
+import SelectBox from './index';
 const options = [
   { value: 'chocolate', label: 'Chocolate' }
 ];
@@ -40,6 +42,7 @@ option list is shown.
 This example should not cause an overflow on the SelectBoxWrapper component.
 
 ```
+import SelectBox from './index';
 const options = [
   { value: 'banana', label: 'Banana' },
   { value: 'chocolate', label: 'Chocolate' },
@@ -82,6 +85,7 @@ class SelectBoxWrapper extends React.Component {
 Disable the SelectBox
 
 ```
+import SelectBox from './index';
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry', isDisabled: true },
@@ -97,7 +101,7 @@ const options = [
 Set the select to spread to 100% of the available width (default: `false`).
 
 ```
-
+import SelectBox from './index';
 const options = [
 { value: 'chocolate', label: 'Chocolate' },
 { value: 'strawberry', label: 'Strawberry', isDisabled: true },
@@ -113,6 +117,7 @@ const options = [
 This property gives access to the underlying `<input />` element contained into a `ReactSelect` component, for example to give focus or move the caret.
 
 ```
+import SelectBox from './index';
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry', isDisabled: true },
@@ -133,6 +138,7 @@ let inputElement;
 Set the text size between `tiny`, `medium` and `large` (default: `large`).
 
 ```
+import SelectBox from './index';
 const tinyOptions = [
   { value: '1', label: 'I am a tiny SelectBox' },
   { value: '2', label: 'I am not a medium SelectBox' },
@@ -152,9 +158,9 @@ const largeOptions = [
 ];
 
 <div>
-  <div class="u-mb-1"><SelectBox options={tinyOptions} size="tiny" value={tinyOptions.find(o => o.value === '1')} /></div>
-  <div class="u-mb-1"><SelectBox options={mediumOptions} size="medium" value={mediumOptions.find(o => o.value === '2')} /></div>
-  <div class="u-mb-1"><SelectBox options={largeOptions} size="large" value={largeOptions.find(o => o.value === '3')} /></div>
+  <div className="u-mb-1"><SelectBox options={tinyOptions} size="tiny" value={tinyOptions.find(o => o.value === '1')} /></div>
+  <div className="u-mb-1"><SelectBox options={mediumOptions} size="medium" value={mediumOptions.find(o => o.value === '2')} /></div>
+  <div className="u-mb-1"><SelectBox options={largeOptions} size="large" value={largeOptions.find(o => o.value === '3')} /></div>
 </div>
 ```
 
@@ -163,7 +169,7 @@ const largeOptions = [
 You can use the `reactSelectControl` HOC to turn an existing, custom component into the control button for the `Select`:
 
 ```
-const reactSelectControl = require('../SelectBox').reactSelectControl;
+import SelectBox, { reactSelectControl } from './index';
 const MyControl = <button>toggle options</button>;
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
@@ -184,7 +190,7 @@ const options = [
 There is a `CheckboxOption` component that can be used as an `Option`, and renders like this:
 
 ```
-const CheckboxOption = require('../SelectBox').CheckboxOption;
+import SelectBox, { CheckboxOption } from './index';
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry' },
@@ -205,7 +211,7 @@ const options = [
 You can display additional actions inside an Option with the ActionsOption component.
 
 ```
-const ActionsOption = require('../SelectBox').ActionsOption;
+import SelectBox, { ActionsOption } from './index';
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry', isDisabled: true },
@@ -226,7 +232,7 @@ const CustomOption = (props) => (<ActionsOption {...props} actions={[
 ### Fixed options
 
 ```
-const { SelectBoxWithFixedOptions } = require('.')
+import { SelectBoxWithFixedOptions } from './index';
 const options = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(x => ({ value:x, label: x }));
 
 options[0].fixed = true
@@ -245,7 +251,7 @@ from `react-select` for you to further customize the components.
 Here a custom class is applied to the `ValueContainer`.
 
 ```
-const { default: SelectBox, components } = require('.')
+import SelectBox, { components } from './index';
 
 const ValueContainer = props => {
   return (
@@ -266,6 +272,7 @@ const ValueContainer = props => {
 Add a prefix className:
 
 ```
+import SelectBox from './index';
 const options = [
   { value: 'chocolate', label: 'Chocolate' }
 ];

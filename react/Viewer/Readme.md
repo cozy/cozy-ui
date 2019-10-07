@@ -3,9 +3,10 @@ The `Viewer` component can be used to display the content of various file types.
 Once rendered, the `Viewer` will take up all the available space in it's container (using `position: absolute`). It can be paired with the `Overlay` component to take up the whole screen.
 
 ```
+import Viewer from './index';
 // The DemoProvider inserts a fake cozy-client in the React context.
-const DemoProvider = require('./docs/DemoProvider').default;
-const Overlay = require('../Overlay').default;
+import DemoProvider from './docs/DemoProvider';
+import Overlay from '../Overlay';
 
 // We provide a collection of (fake) io.cozy.files to be rendered
 const files = [
@@ -76,7 +77,7 @@ const onFileChange = (file, nextIndex) => setState({ currentFileIndex: nextIndex
 
 For performance reasons, it is important to use a web worker when showing PDF files in the viewer. If you use webpack, you should add the following alias in your configuration :
 
-```patch
+```diff
 + resolve: {
 +   alias: {
 +     'react-pdf$' : 'react-pdf/dist/entry.webpack.js'
@@ -88,7 +89,7 @@ With this alias, a specific JS file for the worker will be created in the build 
 
 One way to do this is to explicitly load the web worker in your application like this:
 
-```js
+```js static
 import createWorker from 'react-pdf/dist/pdf.worker.entry.js'
 import { pdfjs } from 'react-pdf'
 
@@ -97,7 +98,7 @@ pdfjs.GlobalWorkerOptions.workerPort = createWorker()
 
 And then configure the [webpack worker-loader](https://github.com/webpack-contrib/worker-loader) to output the file in a publicly served directory:
 
-```js
+```js static
 {
   test: /\.worker\.entry\.js$/,
   issuer: { not: [/node_modules\//] }, // only for the worker loaded by the app, leave the workers created by dependencies alone

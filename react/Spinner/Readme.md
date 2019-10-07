@@ -3,12 +3,14 @@ Show a spinner when loading something.
 ### Default
 
 ```
+import Spinner from './index';
 <Spinner />
 ```
 
 ### Color
 
 ```
+import Spinner from './index';
 <div>
   blue (default): <Spinner /> or <Spinner color='blue' />
   grey: <Spinner color='grey' />
@@ -20,14 +22,16 @@ Show a spinner when loading something.
 ### Placement
 
 ```
+import Spinner from './index';
 <div>
-<Spinner noMargin={ true }/>
+  <Spinner noMargin={ true }/>
 </div>
 ```
 
 ### Sizes
 
 ```
+import Spinner from './index';
 <div>
   tiny: <Spinner size='tiny' /><br/>
   small: <Spinner size='small' /><br/>
@@ -47,12 +51,12 @@ When you use `loadingType`, `<Spinner />` needs to be in an `<I18n />` wrapper a
 ```
 
 ```
-const I18n = require('../I18n').default;
+import Spinner from './index';
+import I18n from '../I18n';
 
-  <div>
-    <I18n lang='en' dictRequire={() => {}}>
-      <Spinner size='xxlarge' loadingType='hi' />
-    </I18n>
-
+<div>
+  <I18n lang='en' dictRequire={() => {}}>
+    <Spinner size='xxlarge' loadingType='hi' />
+  </I18n>
 </div>
 ```

@@ -8,8 +8,9 @@ an item in the `Menu`.
 the item is `disabled`.
 
 ```
-const { default: Menu, MenuItem } = require('.');
-const Button = require('../Button').default;
+import Menu, { MenuItem } from './index';
+import Button from '../Button';
+import Icon from '../Icon';
 const showItem = itemData => alert(JSON.stringify(itemData));
 const showWarning = itemData => alert(itemData + ' is disabled');
 
@@ -27,8 +28,8 @@ const showWarning = itemData => alert(itemData + ' is disabled');
 Use the `position` attribute to put the menu to the right.
 
 ```
-const { default: Menu, MenuItem } = require('.');
-const { Icon } = require('../Icon');
+import Menu, { MenuItem } from './index';
+import Icon from '../Icon';
 
 <Menu initialOpen={isTesting()} position='right' label='Click me !' onSelect={ itemData => alert(JSON.stringify(itemData)) }>
   <MenuItem data='hello'>Hello !</MenuItem>
@@ -41,8 +42,8 @@ Use the `component` attribute if you want to use a custom component for the
 opener.
 
 ```
-const { default: Menu, MenuItem } = require('.');
-const { Button } = require('../Button');
+import Menu, { MenuItem } from './index';
+import Button from '../Button';
 
 <Menu initialOpen={isTesting()} component={<Button label="Greetings with custom component"/>} onSelect={ itemData => alert(JSON.stringify(itemData)) }>
   <MenuItem data='hello'>Hello !</MenuItem>

@@ -1,8 +1,8 @@
 ```
-const MuiCozyTheme = require('..').default
-const Button = require('.').default;
+import MuiCozyTheme from '..';
+import Button from '.';
 
-const Buttons = ({variant}) => {
+const ButtonsVariant = ({variant}) => {
   return (
     <div>
       <Button variant={variant} className='u-m-1'>Default</Button>
@@ -20,12 +20,12 @@ const Buttons = ({variant}) => {
 
 <MuiCozyTheme>
   Text Buttons:
-  <Buttons />
+  <ButtonsVariant />
 
   Outlined Buttons:
-  <Buttons variant='outlined' />
+  <ButtonsVariant variant='outlined' />
 
   Contained Buttons:
-  <Buttons variant='contained' />
+  <ButtonsVariant variant='contained' />
 </MuiCozyTheme>
 ```

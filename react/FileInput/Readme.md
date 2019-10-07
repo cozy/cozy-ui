@@ -3,6 +3,7 @@ This component is used to display a customizable input file. It's just a wrapper
 ### Default
 
 ```jsx
+import FileInput from './index';
 <FileInput className="file-selector" onChange={console.log}>
   <span role="button">Click me to choose file</span>
 </FileInput>
@@ -11,6 +12,8 @@ This component is used to display a customizable input file. It's just a wrapper
 You render what you want:
 
 ```jsx
+import FileInput from './index';
+import Icon from '../Icon';
 <FileInput onChange={console.log}>
   <Icon icon="file" role="button" />
 </FileInput>
@@ -19,6 +22,7 @@ You render what you want:
 ### Multiple files
 
 ```jsx
+import FileInput from './index';
 <FileInput multiple onChange={console.log}>
   <span role="button">Click me to choose files</span>
 </FileInput>
@@ -27,6 +31,7 @@ You render what you want:
 ### Only accept images
 
 ```jsx
+import FileInput from './index';
 <FileInput accept="image/*" multiple onChange={console.log}>
   <span>Click me to choose an image</span>
 </FileInput>
@@ -37,5 +42,6 @@ You render what you want:
 If you want a classic input file, just set `hidden` prop to `false`:
 
 ```jsx
+import FileInput from './index';
 <FileInput hidden={false} onChange={console.log} />
 ```

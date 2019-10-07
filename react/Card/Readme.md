@@ -1,7 +1,9 @@
 A card is a small block used to separate some content from the rest of the UI.
 
 ```
-const { Text, SubTitle } = require('../Text');
+import Card from './index';
+import { Text, SubTitle } from '../Text';
+import Button from '../Button';
 
 <Card>
   <SubTitle className="u-mb-1">This is a card</SubTitle>
@@ -17,7 +19,8 @@ const { Text, SubTitle } = require('../Text');
 Renders the Card with increased margins.
 
 ```
-const { Text, SubTitle } = require('../Text');
+import Card from './index';
+import { Text, SubTitle } from '../Text';
 
 <Card inset>
   <Text>This is some card content. Content can be small or huge. Also, it has margins.</Text>
@@ -29,7 +32,8 @@ const { Text, SubTitle } = require('../Text');
 Uses the provided tag to render the root element of the Card
 
 ```
-const { Text, SubTitle } = require('../Text');
+import Card from './index';
+import { Text, SubTitle } from '../Text';
 
 <Card tag="a" href="https://cozy.io" target="_blank">
   <SubTitle>Visit cozy.io</SubTitle>

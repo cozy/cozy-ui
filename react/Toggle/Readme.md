@@ -1,6 +1,7 @@
 ### Simplest usage
 
 ```js
+import Toggle from './index';
 <Toggle id="simple-toggle" />
 ```
 
@@ -9,23 +10,27 @@
 - Toggle is **on** by default:
 
 ```js
+import Toggle from './index';
 <Toggle id="toggle" checked />
 ```
 
 - Toggle is **off** by default:
 
 ```js
+import Toggle from './index';
 <Toggle id="toggle" checked={false} />
 ```
 
 #### Disabled
 ```js
+import Toggle from './index';
 <Toggle id="toggle" disabled={false} />
 ```
 
 ### More complex example
 
 ```jsx
+import Toggle from './index';
 <div>
   <label
     htmlFor='0'

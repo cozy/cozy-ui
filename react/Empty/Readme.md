@@ -3,7 +3,7 @@ Empty (or error) view in a listing container
 ### Default
 
 ```
-
+import Empty from './index';
 const styles = {
   empty: {
     position: 'relative',
@@ -21,7 +21,8 @@ const styles = {
 ### With some additional content
 
 ```
-const { Button } = require('../Button');
+import Empty from './index';
+import Button from '../Button';
 const styles = {
   empty: {
     position: 'relative',

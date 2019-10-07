@@ -1,4 +1,5 @@
 ```jsx
+import { Figure } from './index';
 <div>
   <Figure
     total={1000}

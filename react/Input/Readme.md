@@ -1,6 +1,7 @@
 ### Input's available types (text, password, email, url)
 
 ```
+import Input from './index';
 <form>
   <p><Input placeholder="This is a input[type=text]" /></p>
   <p><Input type="password" placeholder="This is a input[type=password]" /></p>
@@ -13,6 +14,7 @@
 ### Disabled Input
 
 ```
+import Input from './index';
 <form>
   <Input disabled value="I'm disabled" />
 </form>
@@ -21,6 +23,7 @@
 ### Input when there's an error
 
 ```
+import Input from './index';
 <Input error placeholder="This is a input[type=text] with error" />
 ```
 
@@ -29,6 +32,7 @@
 By default, the size is `large`.
 
 ```
+import Input from './index';
 <div>
   <p>
     <Input placeholder="I have a tiny size" size="tiny" />
@@ -42,6 +46,7 @@ By default, the size is `large`.
 ### Full width inputs
 
 ```
+import Input from './index';
 <Input placeholder="I'm full width" fullwidth />
 ```
 
@@ -50,7 +55,8 @@ By default, the size is `large`.
 If you need to programmatically access the underlying `<input />` for example to give focus or move the caret, you can use the `inputRef` prop, that is passed to the `ref` property of the `<input />`.
 
 ```
-
+import Input from './index';
+import Button from '../Button';
 class InputComponent extends React.Component {
   constructor() {
     super()
@@ -63,7 +69,7 @@ class InputComponent extends React.Component {
   render() {
     return (
       <div>
-        <Button onClick={this.setFocus}>Set Focus</Button>
+        <Button onClick={this.setFocus} label="Set Focus" />
         <Input inputRef={c => this.component = c} />
       </div>
     )
@@ -77,6 +83,7 @@ class InputComponent extends React.Component {
 `Input` forwards unknown props to the underlying `<input />` element.
 
 ```
+import Input from './index';
 <div>
   <Input placeholder='Type to see changes' value={state.value} onChange={ev => setState({value: ev.target.value})} />&nbsp;&nbsp;
   Value: { state.value }

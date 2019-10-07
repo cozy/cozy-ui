@@ -7,6 +7,7 @@ Like `Input` component, it can have the following properties:
 ##### Example
 
 ```
+import Field from './index';
 <form>
   <Field
     id="idField"
@@ -26,6 +27,8 @@ It gives access to the underlying `<input />` element, for example to give focus
 ##### Example
 
 ```
+import Field from './index';
+import Button from '../Button';
 class FieldWithFocus extends React.Component {
   constructor() {
     super()
@@ -57,6 +60,7 @@ Name of the form field, injected into `Input`, `TextArea` or `SelectBox` compone
 ##### Exemple
 
 ```
+import Field from './index';
 <form>
   <Field
     label="I got a name"
@@ -68,6 +72,7 @@ Name of the form field, injected into `Input`, `TextArea` or `SelectBox` compone
 #### Field when there's an error
 
 ```
+import Field from './index';
 <form>
   <Field
     id="idFieldError"
@@ -82,6 +87,7 @@ Name of the form field, injected into `Input`, `TextArea` or `SelectBox` compone
 #### Field with SelectBox
 
 ```
+import Field from './index';
 const options = [
 {
   label: 'Choice 1',
@@ -97,6 +103,7 @@ const options = [
     type="select"
     options={options}
     placeholder="Select ..."
+    value={null}
   />
   <Field
     label="I'am a SelectBox with a value"
@@ -110,6 +117,7 @@ const options = [
 #### Password field with show/hide button
 
 ```
+import Field from './index';
 <form>
   <Field
     id="idFieldPassword"
@@ -126,6 +134,7 @@ const options = [
 #### Password field without show/hide button
 
 ```
+import Field from './index';
 <form>
   <Field
     id="idFieldPassword"
@@ -138,6 +147,7 @@ const options = [
 #### Side element
 
 ```
+import Field from './index';
 <form>
   <Field
     label="I'm a label"
@@ -149,6 +159,7 @@ const options = [
 #### Side element with fullwidth element
 
 ```
+import Field from './index';
 <form>
   <Field
     label="I'm a label"
@@ -161,6 +172,7 @@ const options = [
 #### Customized label and input
 
 ```
+import Field from './index';
 <form>
   <Field
     label="I'm a label"
@@ -177,6 +189,7 @@ const options = [
 #### Password with custom secondaryComponent
 
 ```
+import Field from './index';
 <form>
   <Field
     label="I'm a label"
@@ -197,6 +210,7 @@ const options = [
 #### Controlled Field
 
 ```
+import Field from './index';
 <form>
   <Field
     side="(optional)"

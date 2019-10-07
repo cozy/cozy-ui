@@ -14,9 +14,8 @@ const NavLink = genNavLink(RRNavLink)
 In action :
 
 ```
-const _Nav = require('../Nav')
-const { NavItem, NavIcon, NavText, genNavLink } = _Nav
-const Nav = _Nav.default
+import Sidebar from './index';
+import Nav, { NavItem, NavIcon, NavText, genNavLink } from '../Nav';
 
 const NavLink = genNavLink(({ children, className }) =>
   <a className={className}>{ children }</a>);

@@ -3,6 +3,7 @@ A simple Popup which provides handlers for a few events.
 ### Simple use case
 
 ```
+import Popup from './index';
 <div>
   <button onClick={() => setState({ showPopup: true })}>
     Show popup

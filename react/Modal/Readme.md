@@ -1,6 +1,7 @@
 ### Simple
 
 ```
+import Modal from './index';
 initialState = { modalOpened: false};
 
 <div>
@@ -14,6 +15,7 @@ initialState = { modalOpened: false};
 ### Simple with no title
 
 ```
+import Modal from './index';
 initialState = { modalOpened: false};
 
 <div>
@@ -30,6 +32,7 @@ Several sizes avalaible: `xsmall, small`, `medium`, `large`, `xlarge`, `xxlarge`
 `small` being the default one.
 
 ```
+import Modal from './index';
 initialState = { modalOpened: false};
 const sizes = [
   'xsmall',
@@ -41,7 +44,7 @@ const sizes = [
 ];
 
 <div>
-  {sizes.map(size => <button onClick={()=>setState({ size, modalOpened: !state.modalOpened, })}>
+  {sizes.map(size => <button onClick={()=>setState({ size, modalOpened: !state.modalOpened, })} key={size}>
     { size }
   </button>)}
   {state.modalOpened && <Modal title={ state.size + ' modal'} size={state.size} description={content.ada.short} dismissAction={() => setState({ modalOpened: false })} /> }
@@ -53,6 +56,7 @@ const sizes = [
 Besides the default spacing inside a Modal, you can choose another type from this two available: `small` and `large`
 
 ```
+import Modal from './index';
 initialState = { modalOpened: false};
 const spacings = [
   'small',
@@ -60,7 +64,7 @@ const spacings = [
 ];
 
 <div>
-  {spacings.map(spacing => <button onClick={()=>setState({ spacing, modalOpened: !state.modalOpened, })}>
+  {spacings.map(spacing => <button onClick={()=>setState({ spacing, modalOpened: !state.modalOpened, })} key={spacing}>
     { spacing }
   </button>)}
   {state.modalOpened && <Modal title={ state.spacing + ' modal'} spacing={state.spacing} description={content.ada.short} dismissAction={() => setState({ modalOpened: false })} /> }
@@ -72,6 +76,7 @@ const spacings = [
 If you want the modal to fill all the available space, without margin, on mobile screen.
 
 ```
+import Modal from './index';
 initialState = { modalOpened: false};
 
 <div>
@@ -87,6 +92,7 @@ initialState = { modalOpened: false};
 With `closable` set to `false`, the user will not be able to close the modal, even by clicking outside the modal. You must manage the modal's closing by yourself.
 
 ```
+import Modal from './index';
 <div>
   <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
@@ -104,6 +110,7 @@ With `closable` set to `false`, the user will not be able to close the modal, ev
 If you have a long content, the modal's content will scroll. For the scrollbars to be displayed correctly, you must specify `overflowHidden=true`.
 
 ```
+import Modal from './index';
 <div>
   <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
@@ -121,6 +128,7 @@ If you have a long content, the modal's content will scroll. For the scrollbars 
 You can specify primary and secondary actions. Use `primaryType` and `secondaryType` to choose the types of the buttons
 
 ```
+import Modal from './index';
 const showModal = () => setState({ modalOpened: true })
 const hideModal = () => setState({ modalOpened: false });
 
@@ -146,7 +154,7 @@ const hideModal = () => setState({ modalOpened: false });
 For more complex modals, you can use individual components.
 
 ```
-const { ModalDescription, ModalHeader, ModalFooter } = Modal;
+import Modal, { ModalDescription, ModalHeader, ModalFooter } from './index';
 const headerStyle = {
   background: 'linear-gradient(to right, #005c97, #363795)',
   color: 'white',
@@ -176,7 +184,7 @@ const headerStyle = {
 If you need a part of your modal content fixed (not scrollable) and the other part scrollable, you need to compose you own complex modal.
 
 ```
-const { ModalContent, ModalHeader, ModalFooter } = Modal;
+import Modal, { ModalContent, ModalHeader, ModalFooter } from './index';
 
 <div>
   <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
@@ -205,7 +213,7 @@ If you need a modal with a branded header when you have a brand related content.
 #### with a background color
 
 ```
-const { ModalDescription, ModalBrandedHeader } = Modal;
+import Modal, { ModalDescription, ModalBrandedHeader } from './index';
 
 <div>
   <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
@@ -227,7 +235,7 @@ const { ModalDescription, ModalBrandedHeader } = Modal;
 #### with a background gradient
 
 ```
-const { ModalDescription, ModalBrandedHeader } = Modal;
+import Modal, { ModalDescription, ModalBrandedHeader } from './index';
 
 <div>
   <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
@@ -249,7 +257,7 @@ const { ModalDescription, ModalBrandedHeader } = Modal;
 #### Animated Content Header
 
 ```
-const { ModalContent, AnimatedContentHeader } = Modal;
+import Modal, { ModalContent, AnimatedContentHeader } from './index';
 
 // heigth 128px
 const animatedHeader = <img src="https://cozy.io/fr/images/cozy-logo-name-horizontal-blue.svg" />;
@@ -341,8 +349,8 @@ initialState = {
 ### Panes
 
 ```
-const { ModalDescription, ModalBrandedHeader } = Modal;
-const Panel = require('../Panel');
+import Modal, { ModalDescription, ModalBrandedHeader } from './index';
+import Panel from '../Panel';
 const toggle = () => setState({ modalOpened: !state.modalOpened });
 
 <div>
@@ -377,6 +385,7 @@ const toggle = () => setState({ modalOpened: !state.modalOpened });
 You can use the `into` prop to wrap the `Modal` in a `Portal`. This `prop` will be set to `"body"` in future versions so try to put it now to check if your Modal does not break when rendered in a Portal.
 
 ```jsx
+import Modal from './index';
 initialState = { modalOpened: false};
 
 <div>

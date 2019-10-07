@@ -1,8 +1,8 @@
 ```
-const MuiCozyTheme = require('..').default
-const Menu = require('.').default
-const MenuItem = require('@material-ui/core/MenuItem').default
-const Button = require('../../Button').default;
+import MuiCozyTheme from '..';
+import Menu from '.';
+import MenuItem from '@material-ui/core/MenuItem';
+import Button from '../../Button';
 
 <MuiCozyTheme>
   <Menu

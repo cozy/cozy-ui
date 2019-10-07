@@ -1,6 +1,6 @@
 
 ```
-const { Tabs, TabList, Tab, TabPanels, TabPanel } = require('.');
+import { Tabs, TabList, Tab, TabPanels, TabPanel } from './index';
 
 const general = `
   Grace Murray Hopper, née le 9 décembre 1906 à New York et morte le 1er janvier 1992 dans le comté d'Arlington, est une informaticienne américaine et Rear admiral (lower half) de la marine américaine. Elle est la conceptrice du premier compilateur en 1951 (A-0 System) et du langage COBOL en 1959.

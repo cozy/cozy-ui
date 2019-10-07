@@ -6,7 +6,8 @@ See [this article](https://every-layout.dev/layouts/stack/) for more information
 The padding is responsive, it is smaller on mobile/tablet.
 
 ```
-const Card = require('../Card').default;
+import Stack from './index';
+import Card from '../Card';
 
 <Stack>
   <Card>Homer Simpson</Card>
@@ -20,13 +21,14 @@ const Card = require('../Card').default;
 You can use `xs`, `s`, `l`, `xl`, and `xxl` values for "spacing" to have less/more padding.
 
 ```
-const Card = require('../Card').default
+import Stack from './index';
+import Card from '../Card';
 const spacings = ['xs', 's', 'l', 'xl', 'xxl'];
 
 <div>
 
 { spacings.map(spacing  =>
-  (<>
+  (<React.Fragment key={spacing}>
     <p>
     { spacing }:
     </p>
@@ -35,7 +37,7 @@ const spacings = ['xs', 's', 'l', 'xl', 'xxl'];
       <Card>Homer Simpson</Card>
       <Card>Marge Simpson</Card>
     </Stack>
-  </>)
+  </React.Fragment>)
   )}
 
 </div>

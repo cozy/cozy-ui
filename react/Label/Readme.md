@@ -1,6 +1,8 @@
 #### Label element for forms
 
 ```
+import Label from './index';
+import Input from '../Input';
 <form>
   <div>
     <Label htmlFor="idInput">This is a label</Label>
@@ -12,6 +14,8 @@
 #### Inline Label (Labels are displayed `block` by default)
 
 ```
+import Label from './index';
+import Input from '../Input';
 <form>
   <div>
     <Label htmlFor="idInput2" block={false}>This is an inline label</Label>
@@ -23,6 +27,8 @@
 #### Label when there's an error
 
 ```
+import Label from './index';
+import Input from '../Input';
 <form>
   <div>
     <Label htmlFor="idInput2" error>This is an error label</Label>

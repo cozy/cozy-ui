@@ -1,7 +1,7 @@
 #### Standard text
 
 ```
-const Text = require('./index').default;
+import Text from './index';
 
 <Text>This a standard text</Text>
 ```
@@ -9,7 +9,7 @@ const Text = require('./index').default;
 #### Main title
 
 ```
-const { MainTitle } = require('./index');
+import { MainTitle } from './index';
 
 <MainTitle>This a main title text</MainTitle>
 ```
@@ -17,7 +17,7 @@ const { MainTitle } = require('./index');
 #### Title
 
 ```
-const { Title } = require('./index');
+import { Title } from './index';
 
 <Title>This a title text</Title>
 ```
@@ -25,7 +25,7 @@ const { Title } = require('./index');
 #### SubTitle
 
 ```
-const { SubTitle } = require('./index');
+import { SubTitle } from './index';
 
 <SubTitle>This a subtitle text</SubTitle>
 ```
@@ -33,7 +33,7 @@ const { SubTitle } = require('./index');
 #### Bold text
 
 ```
-const { Bold } = require('./index');
+import { Bold } from './index';
 
 <Bold>This a bold text</Bold>
 ```
@@ -41,7 +41,7 @@ const { Bold } = require('./index');
 #### Uppercase test
 
 ```
-const { Uppercase } = require('./index');
+import { Uppercase } from './index';
 
 <Uppercase>This is an uppercase text</Uppercase>
 ```
@@ -49,7 +49,7 @@ const { Uppercase } = require('./index');
 #### Caption text
 
 ```
-const { Caption } = require('./index');
+import { Caption } from './index';
 
 <Caption>This a caption text</Caption>
 ```
