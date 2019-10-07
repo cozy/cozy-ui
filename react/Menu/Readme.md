@@ -8,12 +8,12 @@ an item in the `Menu`.
 the item is `disabled`.
 
 ```
-const { MenuItem } = require('.');
+const { default: Menu, MenuItem } = require('.');
 const Button = require('../Button').default;
 const showItem = itemData => alert(JSON.stringify(itemData));
 const showWarning = itemData => alert(itemData + ' is disabled');
 
-<Menu id='menu' label='Click me !' onSelect={ showItem } onSelectDisabled={ showWarning }>
+<Menu initialOpen={isTesting()} id='menu' label='Click me !' onSelect={ showItem } onSelectDisabled={ showWarning }>
   <MenuItem data='hello'>Hello !</MenuItem>
   <MenuItem disabled data='bonjour'>Bonjour !</MenuItem>
   <hr />
@@ -27,10 +27,10 @@ const showWarning = itemData => alert(itemData + ' is disabled');
 Use the `position` attribute to put the menu to the right.
 
 ```
-const { MenuItem } = require('.');
+const { default: Menu, MenuItem } = require('.');
 const { Icon } = require('../Icon');
 
-<Menu position='right' label='Click me !' onSelect={ itemData => alert(JSON.stringify(itemData)) }>
+<Menu initialOpen={isTesting()} position='right' label='Click me !' onSelect={ itemData => alert(JSON.stringify(itemData)) }>
   <MenuItem data='hello'>Hello !</MenuItem>
   <MenuItem disabled data='bonjour'>Bonjour !</MenuItem>
   <MenuItem data='hola'>¡Hola!</MenuItem>
@@ -41,10 +41,10 @@ Use the `component` attribute if you want to use a custom component for the
 opener.
 
 ```
-const { MenuItem } = require('.');
+const { default: Menu, MenuItem } = require('.');
 const { Button } = require('../Button');
 
-<Menu component={<Button label="Greetings with custom component"/>} onSelect={ itemData => alert(JSON.stringify(itemData)) }>
+<Menu initialOpen={isTesting()} component={<Button label="Greetings with custom component"/>} onSelect={ itemData => alert(JSON.stringify(itemData)) }>
   <MenuItem data='hello'>Hello !</MenuItem>
   <MenuItem disabled data='bonjour'>Bonjour !</MenuItem>
   <MenuItem data='hola'>¡Hola!</MenuItem>

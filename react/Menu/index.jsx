@@ -6,6 +6,8 @@ import MenuButton from './Button'
 import PropTypes from 'prop-types'
 import { Media, Bd, Img } from '../Media'
 import Popover from '../Popover'
+import migrateProps from '../helpers/migrateProps'
+
 class MenuItem extends Component {
   render() {
     const { disabled, className, children, icon, ...props } = this.props
@@ -34,7 +36,12 @@ class MenuItem extends Component {
 }
 
 class Menu extends Component {
-  state = { opened: false }
+  constructor(props, context) {
+    super(props, context)
+    this.state = {
+      opened: props.initialOpen
+    }
+  }
 
   toggle = () => (this.state.opened ? this.close() : this.open())
 
@@ -90,7 +97,7 @@ class Menu extends Component {
 
   render() {
     const {
-      text,
+      label,
       disabled,
       className,
       buttonClassName,
@@ -127,7 +134,7 @@ class Menu extends Component {
           <MenuButton
             disabled={disabled}
             onClick={this.toggle}
-            label={text}
+            text={label}
             buttonClassName={buttonClassName}
           />
         ) : (
@@ -156,7 +163,8 @@ Menu.defaultProps = {
   onSelect: null,
   onSelectDisabled: null,
   itemsStyle: {},
-  popover: false
+  popover: false,
+  initialOpen: false
 }
 
 Menu.propTypes = {
@@ -173,12 +181,16 @@ Menu.propTypes = {
   onSelectDisabled: PropTypes.func,
   /** Global Styles for MenuItems */
   itemsStyle: PropTypes.object,
-  /** if you need fixed menu */
-  popover: PropTypes.bool
+  /** If you need fixed menu */
+  popover: PropTypes.bool,
+  /** Whether the menu should be initially opened */
+  initialOpen: PropTypes.bool,
+  /** Text inside the button */
+  label: PropTypes.string
 }
 
 Menu.MenuItem = MenuItem
 Menu.MenuButton = MenuButton
-export default Menu
+export default migrateProps([{ src: 'text', dest: 'label' }])(Menu)
 
 export { MenuItem, MenuButton }

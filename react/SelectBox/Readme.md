@@ -233,7 +233,7 @@ options[0].fixed = true
 options[options.length - 1].fixed = true;
 
 <SelectBoxWithFixedOptions
-  menuIsOpen={isTesting ? true : undefined}
+  menuIsOpen={isTesting() ? true : undefined}
   options={options} />
 ```
 

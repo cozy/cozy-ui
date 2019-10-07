@@ -166,7 +166,7 @@ const testFromStyleguidist = (name, markdown, require) => {
       Text,
       Textarea,
       Toggle,
-      true
+      () => true
     )
 
   const options = {

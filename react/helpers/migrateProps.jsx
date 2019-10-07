@@ -77,7 +77,7 @@ const migrate = (oldProps, options) => {
  * ```
  *
  * @param  {Array} migrateOptions - Prop migrations that will be done on the old props
- * @return {[type]}         [description]
+ * @return {HOC}
  */
 export default migrateOptions => Wrapped => oldProps => {
   const newProps = migrate(oldProps, migrateOptions, Wrapped)
