@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 
 import styles from './styles.styl'
 import cx from 'classnames'
-import MenuButton from './Button'
 import PropTypes from 'prop-types'
 import { Media, Bd, Img } from '../Media'
 import Popover from '../Popover'
 import migrateProps from '../helpers/migrateProps'
+import Button from '../Button'
 
 class MenuItem extends Component {
   render() {
@@ -131,10 +131,10 @@ class Menu extends Component {
         {...restProps}
       >
         {!component ? (
-          <MenuButton
+          <Button
             disabled={disabled}
             onClick={this.toggle}
-            text={label}
+            label={label}
             buttonClassName={buttonClassName}
           />
         ) : (
@@ -190,7 +190,7 @@ Menu.propTypes = {
 }
 
 Menu.MenuItem = MenuItem
-Menu.MenuButton = MenuButton
+
 export default migrateProps([{ src: 'text', dest: 'label' }])(Menu)
 
-export { MenuItem, MenuButton }
+export { MenuItem }

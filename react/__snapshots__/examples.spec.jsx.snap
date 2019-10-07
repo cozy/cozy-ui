@@ -3262,7 +3262,7 @@ exports[`ListItemText should render examples: ListItemText 3`] = `
 
 exports[`Menu should render examples: Menu 1`] = `
 "<div>
-  <div class=\\"styles__c-menu___2YTiU styles__c-menu--left___3wamY\\" id=\\"menu\\"><button role=\\"button\\" class=\\"c-btn styles__c-menu__btn___18qF8\\">Click me !</button>
+  <div class=\\"styles__c-menu___2YTiU styles__c-menu--left___3wamY\\" id=\\"menu\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Click me !</span></span></button>
     <div class=\\"styles__c-menu__inner___2g_mC styles__c-menu__inner--opened___sJHKG\\">
       <div data=\\"hello\\" class=\\"styles__c-menu__item___1sXjs\\">Hello !</div>
       <div data=\\"bonjour\\" class=\\"styles__c-menu__item___1sXjs styles__c-menu__item--disabled___OHDks\\">Bonjour !</div>
@@ -3285,7 +3285,7 @@ exports[`Menu should render examples: Menu 1`] = `
 
 exports[`Menu should render examples: Menu 2`] = `
 "<div>
-  <div class=\\"styles__c-menu___2YTiU styles__c-menu--right___3wxbb\\"><button role=\\"button\\" class=\\"c-btn styles__c-menu__btn___18qF8\\">Click me !</button>
+  <div class=\\"styles__c-menu___2YTiU styles__c-menu--right___3wxbb\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Click me !</span></span></button>
     <div class=\\"styles__c-menu__inner___2g_mC styles__c-menu__inner--opened___sJHKG\\">
       <div data=\\"hello\\" class=\\"styles__c-menu__item___1sXjs\\">Hello !</div>
       <div data=\\"bonjour\\" class=\\"styles__c-menu__item___1sXjs styles__c-menu__item--disabled___OHDks\\">Bonjour !</div>
