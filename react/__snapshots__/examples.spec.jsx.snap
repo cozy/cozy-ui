@@ -3262,19 +3262,48 @@ exports[`ListItemText should render examples: ListItemText 3`] = `
 
 exports[`Menu should render examples: Menu 1`] = `
 "<div>
-  <div class=\\"styles__c-menu___2YTiU styles__c-menu--left___3wamY\\" id=\\"menu\\" label=\\"Click me !\\"><button role=\\"button\\" class=\\"c-btn styles__c-menu__btn___18qF8\\"></button></div>
+  <div class=\\"styles__c-menu___2YTiU styles__c-menu--left___3wamY\\" id=\\"menu\\"><button role=\\"button\\" class=\\"c-btn styles__c-menu__btn___18qF8\\">Click me !</button>
+    <div class=\\"styles__c-menu__inner___2g_mC styles__c-menu__inner--opened___sJHKG\\">
+      <div data=\\"hello\\" class=\\"styles__c-menu__item___1sXjs\\">Hello !</div>
+      <div data=\\"bonjour\\" class=\\"styles__c-menu__item___1sXjs styles__c-menu__item--disabled___OHDks\\">Bonjour !</div>
+      <hr>
+      <div data=\\"hola\\" class=\\"styles__c-menu__item___1sXjs\\">
+        <div class=\\"styles__media___cSJMp styles__media--top___K9w0I\\">
+          <div class=\\"styles__img___3SHpG styles__c-menu__item-icon___kzdkW\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+              <use xlink:href=\\"#paperplane\\"></use>
+            </svg></div>
+          <div class=\\"styles__bd___1Uv-F\\">
+            <div>¡Hola!</div>
+            <div>¿Qué tal?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>"
 `;
 
 exports[`Menu should render examples: Menu 2`] = `
 "<div>
-  <div class=\\"styles__c-menu___2YTiU styles__c-menu--right___3wxbb\\" label=\\"Click me !\\"><button role=\\"button\\" class=\\"c-btn styles__c-menu__btn___18qF8\\"></button></div>
+  <div class=\\"styles__c-menu___2YTiU styles__c-menu--right___3wxbb\\"><button role=\\"button\\" class=\\"c-btn styles__c-menu__btn___18qF8\\">Click me !</button>
+    <div class=\\"styles__c-menu__inner___2g_mC styles__c-menu__inner--opened___sJHKG\\">
+      <div data=\\"hello\\" class=\\"styles__c-menu__item___1sXjs\\">Hello !</div>
+      <div data=\\"bonjour\\" class=\\"styles__c-menu__item___1sXjs styles__c-menu__item--disabled___OHDks\\">Bonjour !</div>
+      <div data=\\"hola\\" class=\\"styles__c-menu__item___1sXjs\\">¡Hola!</div>
+    </div>
+  </div>
 </div>"
 `;
 
 exports[`Menu should render examples: Menu 3`] = `
 "<div>
-  <div class=\\"styles__c-menu___2YTiU styles__c-menu--left___3wamY\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Greetings with custom component</span></span></button></div>
+  <div class=\\"styles__c-menu___2YTiU styles__c-menu--left___3wamY\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Greetings with custom component</span></span></button>
+    <div class=\\"styles__c-menu__inner___2g_mC styles__c-menu__inner--opened___sJHKG\\">
+      <div data=\\"hello\\" class=\\"styles__c-menu__item___1sXjs\\">Hello !</div>
+      <div data=\\"bonjour\\" class=\\"styles__c-menu__item___1sXjs styles__c-menu__item--disabled___OHDks\\">Bonjour !</div>
+      <div data=\\"hola\\" class=\\"styles__c-menu__item___1sXjs\\">¡Hola!</div>
+    </div>
+  </div>
 </div>"
 `;
 

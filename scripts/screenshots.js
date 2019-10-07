@@ -86,6 +86,10 @@ const prepareFS = async (styleguideDir, screenshotDir) => {
 const prepareBrowser = async () => {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
+  // Put Argos in user agent
+  await page.setUserAgent(
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36; Argos'
+  )
   await page.setDefaultNavigationTimeout(0)
   console.log('Browser opened and set up')
   return { browser, page }
