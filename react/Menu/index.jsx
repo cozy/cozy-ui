@@ -34,7 +34,12 @@ class MenuItem extends Component {
 }
 
 class Menu extends Component {
-  state = { opened: false }
+  constructor(props, context) {
+    super(props, context)
+    this.state = {
+      opened: props.initialOpen
+    }
+  }
 
   toggle = () => (this.state.opened ? this.close() : this.open())
 
@@ -156,7 +161,8 @@ Menu.defaultProps = {
   onSelect: null,
   onSelectDisabled: null,
   itemsStyle: {},
-  popover: false
+  popover: false,
+  initialOpen: false
 }
 
 Menu.propTypes = {
@@ -173,8 +179,10 @@ Menu.propTypes = {
   onSelectDisabled: PropTypes.func,
   /** Global Styles for MenuItems */
   itemsStyle: PropTypes.object,
-  /** if you need fixed menu */
-  popover: PropTypes.bool
+  /** If you need fixed menu */
+  popover: PropTypes.bool,
+  /** Whether the menu should be initially opened */
+  initialOpen: PropTypes.bool
 }
 
 Menu.MenuItem = MenuItem
