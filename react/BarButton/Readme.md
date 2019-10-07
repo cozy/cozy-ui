@@ -15,23 +15,31 @@ return (
 ## `disabled`
 
 ```jsx
+import BarButton from './index.jsx';
+
 <BarButton icon="previous" disabled />
 ```
 
 ## `href`
 
 ```jsx
+import BarButton from './index.jsx';
+
 <BarButton icon="upload" href="http://cozy.io" />
 ```
 
 ## `icon`
 
 ```jsx
+import BarButton from './index.jsx';
+
 <BarButton icon="cube" />
 ```
 
 ## `onClick`
 
 ```jsx
+import BarButton from './index.jsx';
+
 <BarButton icon="gear" onClick={() => alert('BarButton has been clicked')} />
 ```
