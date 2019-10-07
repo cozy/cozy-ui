@@ -1,7 +1,7 @@
 import React from 'react'
-import Preview from 'react-styleguidist/lib/rsg-components/Preview'
+import Preview from 'react-styleguidist/lib/client/rsg-components/Preview'
 import fs from 'fs'
-import chunkify from 'react-styleguidist/loaders/utils/chunkify'
+import chunkify from 'react-styleguidist/lib/loaders/utils/chunkify'
 import pretty from 'pretty'
 
 /*
@@ -59,11 +59,14 @@ import Toggle from '../react/Toggle'
 import * as content from '../docs/fixtures/content'
 
 // Mock error otherwise there are errors with the createStylesheet function
-jest.mock('react-styleguidist/lib/rsg-components/PlaygroundError', () => {
-  return function(props) {
-    return <div>{props.message}</div>
+jest.mock(
+'react-styleguidist/lib/client/rsg-components/PlaygroundError',
+  () => {
+    return function(props) {
+      return <div>{props.message}</div>
+    }
   }
-})
+)
 
 const testFromStyleguidist = (name, markdown, require) => {
   const evalInContext = a =>
