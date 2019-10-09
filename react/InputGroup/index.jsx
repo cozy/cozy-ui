@@ -22,15 +22,26 @@ class InputGroup extends Component {
   }
 
   render() {
-    const { children, prepend, append, error, fullwidth } = this.props
+    const {
+      children,
+      prepend,
+      append,
+      error,
+      fullwidth,
+      className
+    } = this.props
     const { focused } = this.state
     return (
       <div
-        className={cx(styles['c-inputgroup'], {
-          [styles['c-inputgroup--error']]: error,
-          [styles['c-inputgroup--fullwidth']]: fullwidth,
-          [styles['c-inputgroup--focus']]: focused
-        })}
+        className={cx(
+          styles['c-inputgroup'],
+          {
+            [styles['c-inputgroup--error']]: error,
+            [styles['c-inputgroup--fullwidth']]: fullwidth,
+            [styles['c-inputgroup--focus']]: focused
+          },
+          className
+        )}
       >
         {prepend && (
           <div className={styles['c-inputgroup-side']}>{prepend}</div>
@@ -46,7 +57,8 @@ InputGroup.propTypes = {
   prepend: PropTypes.object,
   append: PropTypes.object,
   error: PropTypes.bool,
-  fullwidth: PropTypes.bool
+  fullwidth: PropTypes.bool,
+  className: PropTypes.string
 }
 
 InputGroup.defaultProps = {
