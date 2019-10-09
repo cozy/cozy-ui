@@ -1,5 +1,6 @@
-The mighty Media object. Also known as Flag. Used to align vertically
-objects. 
+The mighty Media object. Also known as Flag. Used to horizontally align
+objects. Utility classes are also available and are preferred since they
+prevent nestings
 
 * `<Bd />` tries to take the space available
 * `<Img />` is as small as possible
