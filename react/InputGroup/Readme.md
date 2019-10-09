@@ -87,3 +87,17 @@ const Input = require('../Input').default;
   </div>
 </form>
 ```
+
+### InputGroup with a prepended text and a custom classname (border-radius)
+
+```
+const { Bold } = require('../Text');
+const Input = require('../Input').default;
+<form>
+  <div>
+    <InputGroup prepend={<Bold className="u-pl-1">text</Bold>} className="u-bdrs-3">
+      <Input placeholder="Placeholder" />
+    </InputGroup>
+  </div>
+</form>
+```
