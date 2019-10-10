@@ -21,3 +21,5 @@ loaders
 # Since parcel users will use the transpiled version of cozy-ui
 # that has already been processed by postcss, it is not necessary.
 postcss.config.js
+
+screenshots
