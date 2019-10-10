@@ -8,7 +8,7 @@ build
 .travis.yml
 renovate.json
 yarn.lock
-/scripts
+
 .changelog
 examples
 docs
@@ -22,4 +22,4 @@ loaders
 # that has already been processed by postcss, it is not necessary.
 postcss.config.js
 
-screenshots
+screenshots/
