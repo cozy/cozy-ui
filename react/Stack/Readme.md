@@ -40,21 +40,3 @@ const spacings = ['xs', 's', 'l', 'xl', 'xxl'];
 
 </div>
 ```
-
-
----
-
-
-<Stack spacing='xs'>
-    <Card>
-        <h1 class='u-mb-m'>Joel</h1>
-    </Card>
-    <Card>
-        <h1>Patrick</h1>
-    </Card>
-</Stack>
-
-h1 
-  margin-bottom 1rem
-
-
