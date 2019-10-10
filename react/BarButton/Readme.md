@@ -15,7 +15,7 @@ This component is used to display a back Button into the Cozy Bar.
 ## `disabled`
 
 ```jsx
-<BarButton icon="back" disabled />
+<BarButton icon="previous" disabled />
 ```
 
 ## `href`
