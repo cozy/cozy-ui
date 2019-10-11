@@ -35,9 +35,19 @@ export class Tab extends Component {
   }
 }
 
-export const TabList = function({ children, activeTab, changeTab, className }) {
+export const TabList = function({
+  children,
+  activeTab,
+  changeTab,
+  className,
+  inverted
+}) {
   return (
-    <div className={cx(styles['coz-tab-list'], className)}>
+    <div
+      className={cx(styles['coz-tab-list'], className, {
+        [styles['coz-tab-list--inverted']]: inverted
+      })}
+    >
       {React.Children.map(children, child =>
         React.cloneElement(child, {
           active: child.props.name === activeTab,

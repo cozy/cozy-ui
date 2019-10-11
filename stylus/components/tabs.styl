@@ -1,23 +1,40 @@
 @require '../tools/mixins'
+@require '../settings/breakpoints'
 
 $tabs-base
     .coz-tab-list
         border-bottom  rem(1) solid var(--silver)
+        background var(--tabsBackgroundColor)
+
+    .coz-tab-list--inverted
+        --tabsActiveTextColor var(--primaryContrastTextColor)
+        --tabsInactiveTextColor var(--primaryContrastTextColor)
+        --tabsIndicatorColor var(--primaryContrastTextColor)
+        --tabsBackgroundColor var(--primaryColor)
 
     .coz-tab
         display        inline-block
         padding        rem(10 16)
         text-transform uppercase
-        font-size      rem(13)
+        font-size      rem(12)
+        line-height    rem(12)
         cursor         pointer
-        color          var(--coolGrey)
+        color          var(--tabsInactiveTextColor)
+        font-weight    bold
+        opacity        .64
 
         &:hover
             text-decoration none
 
+        +small-screen()
+            &
+                // Important thing is to have the tab's height 48px
+                padding rem(17 24)
+
     .coz-tab--active
-        border-bottom rem(2) solid var(--dodgerBlue)
-        color         var(--dodgerBlue)
+        border-bottom rem(2) solid var(--tabsIndicatorColor)
+        color         var(--tabsActiveTextColor)
+        opacity 1
 
     .coz-tab-panel
         padding-top rem(20)
