@@ -24,7 +24,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, soluta. Voluptas 
         { general }
       </TabPanel>
       <TabPanel name='details'>
-        <div>{ description } </div>
+        { description }
       </TabPanel>
     </TabPanels>
   </Tabs>
@@ -40,7 +40,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, soluta. Voluptas 
         { general }
       </TabPanel>
       <TabPanel name='details'>
-        <div>{ details }</div>
+        { description }
       </TabPanel>
     </TabPanels>
   </Tabs>

@@ -3875,6 +3875,34 @@ exports[`Spinner should render examples: Spinner 5`] = `
 </div>"
 `;
 
+exports[`Tabs should render examples: Tabs 1`] = `
+"<div>
+  <div class=\\"styles__coz-tabs___24QL5\\">
+    <div class=\\"styles__coz-tab-list___3qac8\\">
+      <div class=\\"styles__coz-tab___2mOye styles__coz-tab--active___1wmwM\\">General</div>
+      <div class=\\"styles__coz-tab___2mOye\\">Details</div>
+    </div>
+    <div class=\\"\\">
+      <div class=\\"styles__coz-tab-panel___35538\\">
+        Grace Murray Hopper, née le 9 décembre 1906 à New York et morte le 1er janvier 1992 dans le comté d'Arlington, est une informaticienne américaine et Rear admiral (lower half) de la marine américaine. Elle est la conceptrice du premier compilateur en 1951 (A-0 System) et du langage COBOL en 1959.
+      </div>
+    </div>
+  </div>
+  <div class=\\"u-m-2\\"></div>
+  <div class=\\"styles__coz-tabs___24QL5\\">
+    <div class=\\"styles__coz-tab-list___3qac8 styles__coz-tab-list--inverted___3VjXc\\">
+      <div class=\\"styles__coz-tab___2mOye styles__coz-tab--active___1wmwM\\">General</div>
+      <div class=\\"styles__coz-tab___2mOye\\">Details</div>
+    </div>
+    <div class=\\"\\">
+      <div class=\\"styles__coz-tab-panel___35538\\">
+        Grace Murray Hopper, née le 9 décembre 1906 à New York et morte le 1er janvier 1992 dans le comté d'Arlington, est une informaticienne américaine et Rear admiral (lower half) de la marine américaine. Elle est la conceptrice du premier compilateur en 1951 (A-0 System) et du langage COBOL en 1959.
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
 exports[`Text should render examples: Text 1`] = `
 "<div>
   <div class=\\"u-text\\">This a standard text</div>
