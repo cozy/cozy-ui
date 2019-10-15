@@ -60,7 +60,7 @@ import * as content from '../docs/fixtures/content'
 
 // Mock error otherwise there are errors with the createStylesheet function
 jest.mock(
-'react-styleguidist/lib/client/rsg-components/PlaygroundError',
+  'react-styleguidist/lib/client/rsg-components/PlaygroundError',
   () => {
     return function(props) {
       return <div>{props.message}</div>
@@ -74,109 +74,24 @@ const testFromStyleguidist = (name, markdown, require) => {
     new Function(
       'require',
       'content',
-      'ActionMenu',
-      'Alerter',
-      'AppTitle',
-      'Avatar',
-      'Badge',
-      'BarButton',
-      'Button',
-      'ButtonAction',
-      'ButtonClient',
-      'BannerClient',
-      'Card',
-      'InlineCard',
-      'Checkbox',
-      'Empty',
-      'Field',
-      'Hero',
-      'I18n',
-      'Icon',
-      'Infos',
-      'Input',
-      'InputGroup',
-      'IntentHeader',
-      'IntentIframe',
-      'IntentModal',
-      'IntentOpener',
-      'Label',
-      'ListItemText',
-      'Media',
-      'Menu',
-      'MidEllipsis',
-      'Modal',
-      'Nav',
-      'Overlay',
-      'Panel',
-      'Radio',
-      'SelectBox',
-      'SelectionBar',
-      'Sidebar',
-      'Spinner',
-      'Tabs',
-      'Text',
-      'Textarea',
-      'Toggle',
       'isTesting',
       'state',
       'setState',
       `const React = require("react");
       ` + a
-    ).bind(
-      null,
-      require,
-      content,
-      ActionMenu,
-      Alerter,
-      AppTitle,
-      Avatar,
-      Badge,
-      BarButton,
-      Button,
-      ButtonAction,
-      ButtonClient,
-      BannerClient,
-      Card,
-      InlineCard,
-      Checkbox,
-      Empty,
-      Field,
-      Hero,
-      I18n,
-      Icon,
-      Infos,
-      Input,
-      InputGroup,
-      IntentHeader,
-      IntentIframe,
-      IntentModal,
-      IntentOpener,
-      Label,
-      ListItemText,
-      Media,
-      Menu,
-      MidEllipsis,
-      Modal,
-      Nav,
-      Overlay,
-      Panel,
-      Radio,
-      SelectBox,
-      SelectionBar,
-      Sidebar,
-      Spinner,
-      Tabs,
-      Text,
-      Textarea,
-      Toggle,
-      () => true
-    )
+    ).bind(null, require, content, () => true)
 
   const options = {
     context: {
       config: {
         compilerConfig: {
-          objectAssign: 'Object.assign'
+          objectAssign: 'Object.assign',
+          target: { ie: 11 },
+          transforms: {
+            modules: false,
+            dangerousTaggedTemplateString: true,
+            asyncAwait: false
+          }
         }
       },
       codeRevision: 1337
