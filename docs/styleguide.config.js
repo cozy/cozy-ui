@@ -116,6 +116,10 @@ module.exports = {
         '../react/MuiCozyTheme/ExpansionPanel',
         '../react/MuiCozyTheme/Grid'
       ]
+    },
+    {
+      name: 'Labs',
+      components: () => ['../react/Labs/GridItem']
     }
   ],
   components: '../react/**/*.jsx',
