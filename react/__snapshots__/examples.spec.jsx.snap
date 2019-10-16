@@ -3295,6 +3295,8 @@ exports[`Label should render examples: Label 3`] = `
 </div>"
 `;
 
+exports[`Labs/GridItem should render examples: Labs/GridItem 1`] = `"<div></div>"`;
+
 exports[`ListItemText should render examples: ListItemText 1`] = `
 "<div>
   <div class=\\"styles__c-list-text___3kc3E\\">
