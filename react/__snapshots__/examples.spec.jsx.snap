@@ -3119,6 +3119,18 @@ exports[`Icon should render examples: Icon 4`] = `
 </div>"
 `;
 
+exports[`IconStack should render examples: IconStack 1`] = `
+"<div>
+  <div class=\\"styles__IconStack-wrapper___10dhG\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: blue;\\" width=\\"32\\" height=\\"32\\">
+      <use xlink:href=\\"#file-duotone\\"></use>
+    </svg>
+    <div class=\\"styles__IconStack-foregroundIcon___ZvY-t\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: red;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"#bank\\"></use>
+      </svg></div>
+  </div>
+</div>"
+`;
+
 exports[`Infos should render examples: Infos 1`] = `
 "<div>
   <div class=\\"u-stack-m\\">

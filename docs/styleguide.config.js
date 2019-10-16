@@ -21,7 +21,8 @@ module.exports = {
         '../react/Spinner/index.jsx',
         '../react/Counter/index.jsx',
         '../react/PercentageLine/index.jsx',
-        '../react/Stack/index.jsx'
+        '../react/Stack/index.jsx',
+        '../react/IconStack/index.jsx'
       ]
     },
     {
