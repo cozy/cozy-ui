@@ -83,6 +83,26 @@ yarn build:doc:react
 yarn deploy:doc --repo git@github.com:USERNAME/cozy-ui.git
 ```
 
+## UI regression testing
+
+Components in `cozy-ui` are showcased with [React Styleguidist][]. To prevent UI regressions,
+for each PR, each component is screenshotted and compared to the master version to find any
+regression (thanks [Argos][] !).
+
+If your app uses [React Styleguidist][], `cozy-ui` provides `rsg-screenshots`, a CLI tool to take
+screenshots of your components (uses Puppeteer under the hood).
+
+```bash
+$ yarn add cozy-ui
+$ # The rsg-screenshots binary is now installed
+$ yarn build:doc:react # Build our styleguide, the output directory is docs/react
+$ rsg-screenshots --screenshot-dir screenshots/ --styleguide-dir docs/react
+# Each component in the styleguide will be screenshotted and saved inside the
+# screenshots/ directory
+```
+
+See our [travis configuration](./travis.yml) for more information.
+
 ## License
 
 Cozy UI is developed by Cozy Cloud and distributed under the AGPL-3.0 license.
@@ -107,3 +127,5 @@ You can reach the Cozy Community by:
 * Mentioning us on [Twitter](https://twitter.com/cozycloud)
 
 [stylus]: http://stylus-lang.com/
+[React Styleguidist]: https://react-styleguidist.js.org/
+[Argos]: https://github.com/argos-ci/argos

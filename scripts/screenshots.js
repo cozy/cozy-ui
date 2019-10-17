@@ -1,7 +1,17 @@
-const puppeteer = require('puppeteer')
+#!/usr/bin/env node
+
+let puppeteer
+try {
+  puppeteer = require('puppeteer')
+} catch (e) {
+  console.error(e)
+  console.log('Could not import puppeteer, you should install it if you want to take screenshots')
+  process.exit(1)
+}
 const path = require('path')
 const fs = require('fs')
 const sortBy = require('lodash/sortBy')
+const { ArgumentParser } = require('argparse')
 
 const emptyDirectory = directory => {
   for (const filename of fs.readdirSync(directory)) {
@@ -95,22 +105,34 @@ const prepareBrowser = async () => {
   return { browser, page }
 }
 
+const pathArgument = p => {
+  if (p.startsWith('/')) {
+    return p
+  } else {
+    return path.join(process.cwd(), p)
+  }
+}
+
 /**
  * Fetches all components from styleguide and takes a screenshot of each.
  */
 const main = async () => {
-  const SCREENSHOT_DIR = path.join(__dirname, '../screenshots')
-  const STYLEGUIDE_DIR = path.join(__dirname, '../build/react')
+  const parser = new ArgumentParser()
+  
+  parser.addArgument('--screenshot-dir', { required: true, dest: 'screenshotDir', type: pathArgument })
+  parser.addArgument('--styleguide-dir', { required: true, dest: 'styleguideDir', type: pathArgument })
+  
+  const args = parser.parseArgs()
 
-  await prepareFS(STYLEGUIDE_DIR, SCREENSHOT_DIR)
+  await prepareFS(args.styleguideDir, args.screenshotDir)
   const { browser, page } = await prepareBrowser()
 
-  const styleguideIndexURL = `file://${STYLEGUIDE_DIR}/index.html`
+  const styleguideIndexURL = `file://${path.join(args.styleguideDir, '/index.html')}`
   const components = await fetchAllComponents(page, styleguideIndexURL)
 
   console.log('Screenshotting all components')
   for (const component of components) {
-    await screenshotComponent(page, component, SCREENSHOT_DIR)
+    await screenshotComponent(page, component, args.screenshotDir)
   }
 
   await browser.close()
