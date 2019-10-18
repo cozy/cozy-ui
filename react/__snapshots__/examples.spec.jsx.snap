@@ -3307,6 +3307,8 @@ exports[`Label should render examples: Label 3`] = `
 </div>"
 `;
 
+exports[`Labs/ExperimentalModal should render examples: Labs/ExperimentalModal 1`] = `"<div></div>"`;
+
 exports[`Labs/GridItem should render examples: Labs/GridItem 1`] = `"<div></div>"`;
 
 exports[`ListItemText should render examples: ListItemText 1`] = `
