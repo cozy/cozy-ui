@@ -1,7 +1,7 @@
 Pour montrer une KPI importante.
 
 ```jsx
-import { FigureBlock } from './index';
+import { FigureBlock } from 'cozy-ui/transpiled/react/Figure';
 <div>
   <FigureBlock
     label='Balance totale'

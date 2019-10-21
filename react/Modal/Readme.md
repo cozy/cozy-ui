@@ -1,7 +1,7 @@
 ### Simple
 
 ```
-import Modal from './index';
+import Modal from 'cozy-ui/transpiled/react/Modal';
 initialState = { modalOpened: false};
 
 <div>
@@ -15,7 +15,7 @@ initialState = { modalOpened: false};
 ### Simple with no title
 
 ```
-import Modal from './index';
+import Modal from 'cozy-ui/transpiled/react/Modal';
 initialState = { modalOpened: false};
 
 <div>
@@ -32,7 +32,7 @@ Several sizes avalaible: `xsmall, small`, `medium`, `large`, `xlarge`, `xxlarge`
 `small` being the default one.
 
 ```
-import Modal from './index';
+import Modal from 'cozy-ui/transpiled/react/Modal';
 initialState = { modalOpened: false};
 const sizes = [
   'xsmall',
@@ -56,7 +56,7 @@ const sizes = [
 Besides the default spacing inside a Modal, you can choose another type from this two available: `small` and `large`
 
 ```
-import Modal from './index';
+import Modal from 'cozy-ui/transpiled/react/Modal';
 initialState = { modalOpened: false};
 const spacings = [
   'small',
@@ -76,7 +76,7 @@ const spacings = [
 If you want the modal to fill all the available space, without margin, on mobile screen.
 
 ```
-import Modal from './index';
+import Modal from 'cozy-ui/transpiled/react/Modal';
 initialState = { modalOpened: false};
 
 <div>
@@ -92,7 +92,7 @@ initialState = { modalOpened: false};
 With `closable` set to `false`, the user will not be able to close the modal, even by clicking outside the modal. You must manage the modal's closing by yourself.
 
 ```
-import Modal from './index';
+import Modal from 'cozy-ui/transpiled/react/Modal';
 <div>
   <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
@@ -110,7 +110,7 @@ import Modal from './index';
 If you have a long content, the modal's content will scroll. For the scrollbars to be displayed correctly, you must specify `overflowHidden=true`.
 
 ```
-import Modal from './index';
+import Modal from 'cozy-ui/transpiled/react/Modal';
 <div>
   <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
@@ -128,7 +128,7 @@ import Modal from './index';
 You can specify primary and secondary actions. Use `primaryType` and `secondaryType` to choose the types of the buttons
 
 ```
-import Modal from './index';
+import Modal from 'cozy-ui/transpiled/react/Modal';
 const showModal = () => setState({ modalOpened: true })
 const hideModal = () => setState({ modalOpened: false });
 
@@ -154,7 +154,7 @@ const hideModal = () => setState({ modalOpened: false });
 For more complex modals, you can use individual components.
 
 ```
-import Modal, { ModalDescription, ModalHeader, ModalFooter } from './index';
+import Modal, { ModalDescription, ModalHeader, ModalFooter } from 'cozy-ui/transpiled/react/Modal';
 const headerStyle = {
   background: 'linear-gradient(to right, #005c97, #363795)',
   color: 'white',
@@ -184,7 +184,7 @@ const headerStyle = {
 If you need a part of your modal content fixed (not scrollable) and the other part scrollable, you need to compose you own complex modal.
 
 ```
-import Modal, { ModalContent, ModalHeader, ModalFooter } from './index';
+import Modal, { ModalContent, ModalHeader, ModalFooter } from 'cozy-ui/transpiled/react/Modal';
 
 <div>
   <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
@@ -213,7 +213,7 @@ If you need a modal with a branded header when you have a brand related content.
 #### with a background color
 
 ```
-import Modal, { ModalDescription, ModalBrandedHeader } from './index';
+import Modal, { ModalDescription, ModalBrandedHeader } from 'cozy-ui/transpiled/react/Modal';
 
 <div>
   <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
@@ -235,7 +235,7 @@ import Modal, { ModalDescription, ModalBrandedHeader } from './index';
 #### with a background gradient
 
 ```
-import Modal, { ModalDescription, ModalBrandedHeader } from './index';
+import Modal, { ModalDescription, ModalBrandedHeader } from 'cozy-ui/transpiled/react/Modal';
 
 <div>
   <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
@@ -257,7 +257,7 @@ import Modal, { ModalDescription, ModalBrandedHeader } from './index';
 #### Animated Content Header
 
 ```
-import Modal, { ModalContent, AnimatedContentHeader } from './index';
+import Modal, { ModalContent, AnimatedContentHeader } from 'cozy-ui/transpiled/react/Modal';
 
 // heigth 128px
 const animatedHeader = <img src="https://cozy.io/fr/images/cozy-logo-name-horizontal-blue.svg" />;
@@ -312,7 +312,7 @@ class ModalCounterWithAnimatedHeader extends React.Component {
 When your modal contains a multi-step process, you may want to add a back button that takes care of going one step back in the inner process, but not close the modal. In that case, you can use the `ModalBackButton` component.
 
 ```
-const { ModalContent, ModalBackButton } = Modal;
+import Modal, { ModalContent, ModalBackButton } from 'cozy-ui/transpiled/react/Modal';
 const toggle = () => setState({ modalOpened: !state.modalOpened });
 const goToStep1 = () => setState({ step: 1 });
 const goToStep2 = () => setState({ step: 2 });
@@ -349,8 +349,8 @@ initialState = {
 ### Panes
 
 ```
-import Modal, { ModalDescription, ModalBrandedHeader } from './index';
-import Panel from '../Panel';
+import Modal, { ModalDescription, ModalBrandedHeader } from 'cozy-ui/transpiled/react/Modal';
+import Panel from 'cozy-ui/transpiled/react/Panel';
 const toggle = () => setState({ modalOpened: !state.modalOpened });
 
 <div>
@@ -385,7 +385,7 @@ const toggle = () => setState({ modalOpened: !state.modalOpened });
 You can use the `into` prop to wrap the `Modal` in a `Portal`. This `prop` will be set to `"body"` in future versions so try to put it now to check if your Modal does not break when rendered in a Portal.
 
 ```jsx
-import Modal from './index';
+import Modal from 'cozy-ui/transpiled/react/Modal';
 initialState = { modalOpened: false};
 
 <div>

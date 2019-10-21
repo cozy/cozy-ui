@@ -1,5 +1,5 @@
 ```
-import IntentOpener from './index';
+import IntentOpener from 'cozy-ui/transpiled/react/IntentOpener';
 <IntentOpener
   onComplete={res => alert('intent has completed ! ' + JSON.stringify(res))}
   onDismiss={() => alert('intent has been dismissed !')}

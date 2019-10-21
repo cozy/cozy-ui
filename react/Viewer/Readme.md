@@ -3,10 +3,10 @@ The `Viewer` component can be used to display the content of various file types.
 Once rendered, the `Viewer` will take up all the available space in it's container (using `position: absolute`). It can be paired with the `Overlay` component to take up the whole screen.
 
 ```
-import Viewer from './index';
+import Viewer from 'cozy-ui/transpiled/react/Viewer';
 // The DemoProvider inserts a fake cozy-client in the React context.
 import DemoProvider from './docs/DemoProvider';
-import Overlay from '../Overlay';
+import Overlay from 'cozy-ui/transpiled/react/Overlay';
 
 // We provide a collection of (fake) io.cozy.files to be rendered
 const files = [

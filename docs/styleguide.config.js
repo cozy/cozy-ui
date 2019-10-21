@@ -154,6 +154,7 @@ module.exports = {
   webpackConfig: webpackMerge(require('./webpack.config.js'), {
     resolve: {
       alias: {
+        'cozy-ui/transpiled/react': path.resolve(__dirname, '../react/'),
         'cozy-ui': path.join(__dirname, '..')
       }
     }

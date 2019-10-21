@@ -15,7 +15,7 @@ As it uses the render props pattern, it is flexible and can be used to build com
 anchor.
 
 ```
-import AppLinker from './index';
+import AppLinker from 'cozy-ui/transpiled/react/AppLinker';
 <AppLinker slug='banks' href='http://dalailama-banks.mycozy.cloud'>{
   ({ onClick, href, name }) => (
     <a href={href} onClick={onClick}>

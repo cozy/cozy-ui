@@ -6,7 +6,7 @@ shown, the Page real estate shrinks and the Button will try to appear above the 
 has enough space.
 
 ```jsx static
-const { PageLayout, PageContent, PageFooter } = require('./index');
+import { PageLayout, PageContent, PageFooter } from 'cozy-ui/transpiled/react/Page';
 
 <PageLayout>
   <PageContent>Hello world !</PageContent>

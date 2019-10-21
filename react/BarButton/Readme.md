@@ -15,7 +15,7 @@ return (
 ## `disabled`
 
 ```jsx
-import BarButton from './index.jsx';
+import BarButton from 'cozy-ui/transpiled/react/BarButton';
 
 <BarButton icon="previous" disabled />
 ```
@@ -23,7 +23,7 @@ import BarButton from './index.jsx';
 ## `href`
 
 ```jsx
-import BarButton from './index.jsx';
+import BarButton from 'cozy-ui/transpiled/react/BarButton';
 
 <BarButton icon="upload" href="http://cozy.io" />
 ```
@@ -31,7 +31,7 @@ import BarButton from './index.jsx';
 ## `icon`
 
 ```jsx
-import BarButton from './index.jsx';
+import BarButton from 'cozy-ui/transpiled/react/BarButton';
 
 <BarButton icon="cube" />
 ```
@@ -39,7 +39,7 @@ import BarButton from './index.jsx';
 ## `onClick`
 
 ```jsx
-import BarButton from './index.jsx';
+import BarButton from 'cozy-ui/transpiled/react/BarButton';
 
 <BarButton icon="gear" onClick={() => alert('BarButton has been clicked')} />
 ```

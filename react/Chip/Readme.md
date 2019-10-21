@@ -1,9 +1,9 @@
 Chips represent complex entities in small blocks, such as a contact.
 
 ```
-import Chip from './index';
-import Icon from '../Icon';
-import Avatar from '../Avatar';
+import Chip from 'cozy-ui/transpiled/react/Chip';
+import Icon from 'cozy-ui/transpiled/react/Icon';
+import Avatar from 'cozy-ui/transpiled/react/Avatar';
 const ContactChip = ({ contact }) => (
   <Chip style={{ paddingLeft: '0.25rem' }}>
     <Avatar textId={ contact.name } text={contact.initials} size='small' style={{ marginRight: '0.5rem' }}/> {contact.name}
@@ -26,8 +26,8 @@ const ContactChip = ({ contact }) => (
 ### Round chip
 
 ```
-import Chip from './index';
-import Icon from '../Icon';
+import Chip from 'cozy-ui/transpiled/react/Chip';
+import Icon from 'cozy-ui/transpiled/react/Icon';
 <Chip.Round>
   <Icon icon='right'/>
 </Chip.Round>
@@ -36,7 +36,7 @@ import Icon from '../Icon';
 ### Chip separator
 
 ```
-import Chip from './index';
+import Chip from 'cozy-ui/transpiled/react/Chip';
 <Chip>
   Something
   <Chip.Separator />
@@ -47,8 +47,8 @@ import Chip from './index';
 ### Chip buttons
 
 ```
-import Chip from './index';
-import Icon from '../Icon';
+import Chip from 'cozy-ui/transpiled/react/Chip';
+import Icon from 'cozy-ui/transpiled/react/Icon';
 <div>
   <Chip.Button><Icon icon='right' /></Chip.Button>
   <Chip.Button disabled><Icon icon='left' /></Chip.Button>
@@ -58,7 +58,7 @@ import Icon from '../Icon';
 ### Specify underlying tag/component
 
 ```
-import Chip from './index';
+import Chip from 'cozy-ui/transpiled/react/Chip';
 <div>
   <Chip component="button" onClick={() => alert('You clicked')}>This is a button</Chip>
   <Chip component="button" disabled>This is a disabled button</Chip>
@@ -69,7 +69,7 @@ import Chip from './index';
 ### Sizes
 
 ```
-import Chip from './index';
+import Chip from 'cozy-ui/transpiled/react/Chip';
 <div>
   <Chip size="tiny">This is a tiny Chip</Chip>
   <Chip size="small">This is a small Chip</Chip>
@@ -80,7 +80,7 @@ import Chip from './index';
 ### Variants
 
 ```
-import Chip from './index';
+import Chip from 'cozy-ui/transpiled/react/Chip';
 <div>
   <Chip variant="normal">This is a normal Chip (default)</Chip>
   <Chip variant="outlined">This is an outlined Chip</Chip>
@@ -91,7 +91,7 @@ import Chip from './index';
 ### Themes
 
 ```
-import Chip from './index';
+import Chip from 'cozy-ui/transpiled/react/Chip';
 <div>
   <div>
     <Chip theme="normal">This is a normal Chip (default)</Chip>
@@ -114,7 +114,7 @@ import Chip from './index';
 ### Mix sizes, variants and themes
 
 ```
-import Chip from './index';
+import Chip from 'cozy-ui/transpiled/react/Chip';
 <div>
   <div>
     <Chip theme="normal" size="small">This is a normal Chip</Chip>
@@ -137,8 +137,8 @@ import Chip from './index';
 ### Complete example
 
 ```
-import Chip from './index';
-import Icon from '../Icon';
+import Chip from 'cozy-ui/transpiled/react/Chip';
+import Icon from 'cozy-ui/transpiled/react/Icon';
 <Chip
   size="small"
   variant="outlined"

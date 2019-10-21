@@ -4,7 +4,7 @@ Call To Action for downloading Cozy desktop client.
 ### Basic usage
 
 ```
-import ButtonClient from './index';
+import ButtonClient from 'cozy-ui/transpiled/react/PushClientButton';
 <ButtonClient label="Download our desktop client" href="https://cozy.io" />
 ```
 
@@ -12,7 +12,7 @@ import ButtonClient from './index';
 #### action
 You can add a function to `onClick` prop on top of the hyperlink
 ```
-import ButtonClient from './index';
+import ButtonClient from 'cozy-ui/transpiled/react/PushClientButton';
 <ButtonClient
   label="Download our desktop client"
   href="https://cozy.io"
@@ -23,7 +23,7 @@ import ButtonClient from './index';
 #### className
 You can add custom classNames
 ```
-import ButtonClient from './index';
+import ButtonClient from 'cozy-ui/transpiled/react/PushClientButton';
 <ButtonClient
   label="Download our desktop client"
   href="https://cozy.io"

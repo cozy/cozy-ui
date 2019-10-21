@@ -3,7 +3,7 @@ Empty (or error) view in a listing container
 ### Default
 
 ```
-import Empty from './index';
+import Empty from 'cozy-ui/transpiled/react/Empty';
 const styles = {
   empty: {
     position: 'relative',
@@ -21,8 +21,8 @@ const styles = {
 ### With some additional content
 
 ```
-import Empty from './index';
-import Button from '../Button';
+import Empty from 'cozy-ui/transpiled/react/Empty';
+import Button from 'cozy-ui/transpiled/react/Button';
 const styles = {
   empty: {
     position: 'relative',

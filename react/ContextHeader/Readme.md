@@ -3,7 +3,7 @@ A little inset with text and optional icon that can be used to provide some cont
 ### Default
 
 ```
-import ContextHeader from './index';
+import ContextHeader from 'cozy-ui/transpiled/react/ContextHeader';
 <div>
   <ContextHeader title="Pick a book" text="What will you read today?" />
 </div>
@@ -12,7 +12,7 @@ import ContextHeader from './index';
 ### With an icon
 
 ```
-import ContextHeader from './index';
+import ContextHeader from 'cozy-ui/transpiled/react/ContextHeader';
 <div>
   <ContextHeader title="Pick a book" text="What will you read today?" icon="album" />
 </div>
@@ -21,7 +21,7 @@ import ContextHeader from './index';
 ### With a closing action
 
 ```
-import ContextHeader from './index';
+import ContextHeader from 'cozy-ui/transpiled/react/ContextHeader';
 <div>
   <ContextHeader title="Pick a book" text="What will you read today?" icon="album" onClose={() => alert('Nothing then.')} />
 </div>

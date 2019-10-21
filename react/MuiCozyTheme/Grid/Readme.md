@@ -5,9 +5,9 @@ Displays a Grid of items
 ### Default usage
 
 ```
-import MuiCozyTheme from '..';
-import Grid from '.';
-import Card from '../../Card';
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
+import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid';
+import Card from 'cozy-ui/transpiled/react/Card';
 
 <MuiCozyTheme>
     <Grid container spacing={24}>

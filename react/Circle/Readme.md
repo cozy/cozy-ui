@@ -3,7 +3,7 @@ Displays a simple circle with some text inside of it.
 ### Default
 
 ```
-import Circle from './index';
+import Circle from 'cozy-ui/transpiled/react/Circle';
 <div>
   <Circle>
     yo
@@ -13,7 +13,7 @@ import Circle from './index';
 
 ### Available sizes: xsmall, small, medium (default), large, xlarge
 ```
-import Circle from './index';
+import Circle from 'cozy-ui/transpiled/react/Circle';
 <div>
   <div>
     <Circle size="xsmall">Yo</Circle>

@@ -13,7 +13,7 @@ when `<ButtonLink>` has:
 #### Themes
 
 ```
-import Button from './index';
+import Button from 'cozy-ui/transpiled/react/Button';
 const props = [{}, { disabled: true}, { busy: true }];
 const themes = ['regular', 'ghost', 'danger', 'highlight', 'secondary', 'danger-outline', 'alpha', 'text'];
 
@@ -31,7 +31,7 @@ const themes = ['regular', 'ghost', 'danger', 'highlight', 'secondary', 'danger-
 #### Sizes
 
 ```
-import Button from './index';
+import Button from 'cozy-ui/transpiled/react/Button';
 
 <div>
   <p><Button size='tiny' label='Tiny' /></p>
@@ -48,7 +48,7 @@ import Button from './index';
 - `full` to enable full width
 
 ```
-import Button from './index';
+import Button from 'cozy-ui/transpiled/react/Button';
 
 <div>
   <p><Button label='Normal'/></p>
@@ -64,7 +64,7 @@ import Button from './index';
 - `center` to center the label (default)
 
 ```
-import Button from './index';
+import Button from 'cozy-ui/transpiled/react/Button';
 
 <div>
   <p><Button extension="full" label='Default (center)'/></p>
@@ -77,8 +77,8 @@ import Button from './index';
 #### Extra right content
 
 ```
-import Button from './index';
-const Chip = require('../Chip').default;
+import Button from 'cozy-ui/transpiled/react/Button';
+import Chip from 'cozy-ui/transpiled/react/Chip';
 
 <div>
   <p><Button extension="full" size="large" label='Label' extraRight={<Chip size="small" theme="primary" className="u-m-0">1/2</Chip>} /></p>
@@ -88,19 +88,19 @@ const Chip = require('../Chip').default;
 #### Add a action on click
 
 ```
-import Button from './index';
+import Button from 'cozy-ui/transpiled/react/Button';
 <Button theme='danger-outline' onClick={ () => alert('yay !') } label='Show alert' />
 ```
 
 #### When loading, put a spinner
 
 ```
-import Button from './index';
+import Button from 'cozy-ui/transpiled/react/Button';
 <Button busy label='Loading'/>
 ```
 
 ```
-import Button from './index';
+import Button from 'cozy-ui/transpiled/react/Button';
 initialState = { busy:false };
 <Button onClick={() => {setState(state => ({busy: !state.busy}))}} busy={state.busy} label='Toggle busy'/>
 ```
@@ -108,7 +108,7 @@ initialState = { busy:false };
 #### Disable a button
 
 ```
-import Button, { ButtonLink } from './index';
+import Button, { ButtonLink } from 'cozy-ui/transpiled/react/Button';
 <div>
   <Button disabled label='Loading' />
   <ButtonLink disabled href='http://cozy.io' label='Go to Cozy website' />
@@ -121,7 +121,7 @@ The color of the icon is taken care of by the button style, there's no need to s
 If you want a button with only an icon as content, you must set the `iconOnly` prop.
 
 ```
-import Button from './index';
+import Button from 'cozy-ui/transpiled/react/Button';
 <div>
   <Button theme="danger" icon='trash' label='delete' />
   <Button theme="secondary" icon='dots' iconOnly label="See more" extension='narrow' />
@@ -131,8 +131,8 @@ import Button from './index';
 You can also pass an Icon directly if you need more flexibility.
 
 ```
-import Button from './index';
-import Icon from '../Icon';
+import Button from 'cozy-ui/transpiled/react/Button';
+import Icon from 'cozy-ui/transpiled/react/Icon';
 <div>
   <Button theme="danger" icon={ <Icon icon='trash' color='yellow' /> } label='delete' />
 </div>
@@ -141,7 +141,7 @@ import Icon from '../Icon';
 #### Create a round button with an icon
 
 ```
-import Button from './index';
+import Button from 'cozy-ui/transpiled/react/Button';
 <div>
   <Button icon='plus' label='Add' iconOnly round />
   <Button theme="secondary" icon='cross' label='Delete' iconOnly round />
@@ -153,7 +153,7 @@ import Button from './index';
 Subtle buttons are buttons without background and borders, wich look "inverted" compared to the basic Buttons.
 
 ```
-import Button from './index';
+import Button from 'cozy-ui/transpiled/react/Button';
 <div>
   <p>
     <Button subtle size='tiny' label='Tiny text' onClick={() => alert('Clicked on Tiny text')} />
@@ -187,7 +187,7 @@ import Button from './index';
 #### Using Links
 
 ```
-import { ButtonLink } from './index';
+import { ButtonLink } from 'cozy-ui/transpiled/react/Button';
 <div>
   <p>
     <ButtonLink size="tiny" href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
@@ -215,7 +215,7 @@ You can pass `tag={NavLink}` and `NavLink` will be used. Any props that you
 pass to the `Button` will be passed down to the component.
 
 ```
-import Button from './index';
+import Button from 'cozy-ui/transpiled/react/Button';
 const NavLink = props => (
   <span onClick={() => alert(`Navigating to ${props.to}`)} {...props}>{
     props.children

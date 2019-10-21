@@ -1,7 +1,7 @@
 ## Default
 
 ```
-import MuiCozyTheme from '..';
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
@@ -39,12 +39,12 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 These are material-ui components, so you can customize it like any other:
 
 ```
-import MuiCozyTheme from '../index';
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import { withStyles } from '@material-ui/core/styles';
-import Icon from '../../Icon';
+import Icon from 'cozy-ui/transpiled/react/Icon';
 
 const StyledSummary = withStyles(() => ({
   expand: {}, // required to use `&$expanded` selector

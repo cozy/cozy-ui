@@ -1,9 +1,9 @@
 ### InputGroup with an appended text
 
 ```
-import InputGroup from './index';
-import { Bold } from '../Text';
-import Input from '../Input';
+import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
+import { Bold } from 'cozy-ui/transpiled/react/Text';
+import Input from 'cozy-ui/transpiled/react/Input';
 <form>
   <div>
     <InputGroup append={<InputGroup.Unit>€</InputGroup.Unit>}>
@@ -16,9 +16,9 @@ import Input from '../Input';
 ### InputGroup with a prepended text
 
 ```
-import InputGroup from './index';
-import { Bold } from '../Text';
-import Input from '../Input';
+import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
+import { Bold } from 'cozy-ui/transpiled/react/Text';
+import Input from 'cozy-ui/transpiled/react/Input';
 <form>
   <div>
     <InputGroup prepend={<Bold className="u-pl-1">text</Bold>}>
@@ -33,8 +33,8 @@ import Input from '../Input';
 You will need to set a width to the side component, with a utility class for example.
 
 ```
-import InputGroup from './index';
-import Input from '../Input';
+import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
+import Input from 'cozy-ui/transpiled/react/Input';
 <form>
   <div>
     <InputGroup append={<Input placeholder="@domain.tld" className="u-w-4"/>}>
@@ -49,9 +49,9 @@ import Input from '../Input';
 You will need to set a width to the side component, with a utility class for example.
 
 ```
-import InputGroup from './index';
-import Input from '../Input';
-import SelectBox from '../SelectBox';
+import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
+import Input from 'cozy-ui/transpiled/react/Input';
+import SelectBox from 'cozy-ui/transpiled/react/SelectBox';
 const options = [
   { value: 'cozy.io', label: '.cozy.io' },
   { value: 'cozycloud.cc', label: '.cozycloud.cc' }
@@ -68,9 +68,9 @@ const options = [
 ### Full width InputGroup with an appended text
 
 ```
-import InputGroup from './index';
-import { Bold } from '../Text';
-import Input from '../Input';
+import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
+import { Bold } from 'cozy-ui/transpiled/react/Text';
+import Input from 'cozy-ui/transpiled/react/Input';
 <form>
   <div>
     <InputGroup fullwidth append={<Bold className="u-pr-1">text</Bold>}>
@@ -83,9 +83,9 @@ import Input from '../Input';
 ### Errored InputGroup with an appended text
 
 ```
-import InputGroup from './index';
-import { Bold } from '../Text';
-import Input from '../Input';
+import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
+import { Bold } from 'cozy-ui/transpiled/react/Text';
+import Input from 'cozy-ui/transpiled/react/Input';
 <form>
   <div>
     <InputGroup error append={<Bold className="u-pr-1">text</Bold>}>
@@ -98,8 +98,8 @@ import Input from '../Input';
 ### InputGroup with a prepended text and a custom classname (border-radius)
 
 ```
-const { Bold } = require('../Text');
-const Input = require('../Input').default;
+import { Bold } from 'cozy-ui/transpiled/react/Text';
+import Input from 'cozy-ui/transpiled/react/Input';
 <form>
   <div>
     <InputGroup prepend={<Bold className="u-pl-1">text</Bold>} className="u-bdrs-3">

@@ -1,8 +1,8 @@
 ### Classic
 
 ```
-import ActionMenu, { ActionMenuItem } from './index';
-import Icon from '../Icon';
+import ActionMenu, { ActionMenuItem } from 'cozy-ui/transpiled/react/ActionMenu';
+import Icon from 'cozy-ui/transpiled/react/Icon';
 
 const showMenu = () => setState({ menuDisplayed: true })
 const hideMenu = () => setState({ menuDisplayed: false });

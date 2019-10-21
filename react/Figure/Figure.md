@@ -1,5 +1,5 @@
 ```jsx
-import { Figure } from './index';
+import { Figure } from 'cozy-ui/transpiled/react/Figure';
 <div>
   <Figure
     total={1000}

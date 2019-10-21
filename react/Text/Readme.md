@@ -1,7 +1,7 @@
 #### Standard text
 
 ```
-import Text from './index';
+import Text from 'cozy-ui/transpiled/react/Text';
 
 <Text>This a standard text</Text>
 ```
@@ -9,7 +9,7 @@ import Text from './index';
 #### Main title
 
 ```
-import { MainTitle } from './index';
+import { MainTitle } from 'cozy-ui/transpiled/react/Text';
 
 <MainTitle>This a main title text</MainTitle>
 ```
@@ -17,7 +17,7 @@ import { MainTitle } from './index';
 #### Title
 
 ```
-import { Title } from './index';
+import { Title } from 'cozy-ui/transpiled/react/Text';
 
 <Title>This a title text</Title>
 ```
@@ -25,7 +25,7 @@ import { Title } from './index';
 #### SubTitle
 
 ```
-import { SubTitle } from './index';
+import { SubTitle } from 'cozy-ui/transpiled/react/Text';
 
 <SubTitle>This a subtitle text</SubTitle>
 ```
@@ -33,7 +33,7 @@ import { SubTitle } from './index';
 #### Bold text
 
 ```
-import { Bold } from './index';
+import { Bold } from 'cozy-ui/transpiled/react/Text';
 
 <Bold>This a bold text</Bold>
 ```
@@ -41,7 +41,7 @@ import { Bold } from './index';
 #### Uppercase test
 
 ```
-import { Uppercase } from './index';
+import { Uppercase } from 'cozy-ui/transpiled/react/Text';
 
 <Uppercase>This is an uppercase text</Uppercase>
 ```
@@ -49,7 +49,7 @@ import { Uppercase } from './index';
 #### Caption text
 
 ```
-import { Caption } from './index';
+import { Caption } from 'cozy-ui/transpiled/react/Text';
 
 <Caption>This a caption text</Caption>
 ```

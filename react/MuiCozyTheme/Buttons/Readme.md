@@ -1,6 +1,6 @@
 ```
-import MuiCozyTheme from '..';
-import Button from '.';
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
+import Button from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons';
 
 const ButtonsVariant = ({variant}) => {
   return (

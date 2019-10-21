@@ -6,7 +6,7 @@ used as follows.
 
 ```jsx static
 import { NavLink as RRNavLink } from 'react-router'
-import { genNavLink } from 'cozy-ui/react/Nav'
+import { genNavLink } from 'cozy-ui/transpiled/react/Nav'
 
 const NavLink = genNavLink(RRNavLink)
 ```
@@ -14,8 +14,8 @@ const NavLink = genNavLink(RRNavLink)
 In action :
 
 ```
-import Sidebar from './index';
-import Nav, { NavItem, NavIcon, NavText, genNavLink } from '../Nav';
+import Sidebar from 'cozy-ui/transpiled/react/Sidebar';
+import Nav, { NavItem, NavIcon, NavText, genNavLink } from 'cozy-ui/transpiled/react/Nav';
 
 const NavLink = genNavLink(({ children, className }) =>
   <a className={className}>{ children }</a>);

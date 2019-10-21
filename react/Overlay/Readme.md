@@ -1,5 +1,5 @@
 ```
-import Overlay from './index';
+import Overlay from 'cozy-ui/transpiled/react/Overlay';
 initialState={ overlayShown: false}
 const showOverlay = () => setState({overlayShown: true})
 const hideOverlay = () => setState({overlayShown: false});
@@ -17,7 +17,7 @@ It can react to the escape key.
 
 
 ```
-import Overlay from './index';
+import Overlay from 'cozy-ui/transpiled/react/Overlay';
 initialState={ overlayShown: false}
 const showOverlay = () => setState({overlayShown: true})
 const hideOverlay = () => setState({overlayShown: false});
