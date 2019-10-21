@@ -1,8 +1,8 @@
 ### Classic
 
 ```
-const { ActionMenuItem } = require('.')
-const Icon = require('../Icon').default;
+import ActionMenu, { ActionMenuItem } from './index';
+import Icon from '../Icon';
 
 const showMenu = () => setState({ menuDisplayed: true })
 const hideMenu = () => setState({ menuDisplayed: false });
@@ -22,9 +22,9 @@ const hideMenu = () => setState({ menuDisplayed: false });
 ### With Header
 
 ```
-const { ActionMenuItem, ActionMenuHeader } = require('.')
-const Icon = require('../Icon').default;
-const Filename = require('../Filename').default;
+import ActionMenu, { ActionMenuItem, ActionMenuHeader } from './index';
+import Icon from '../Icon';
+import Filename from '../Filename';
 
 const showMenu = () => setState({ menuDisplayed: true })
 const hideMenu = () => setState({ menuDisplayed: false });
@@ -47,9 +47,9 @@ const hideMenu = () => setState({ menuDisplayed: false });
 ### With Header & onClick
 
 ```
-const { ActionMenuItem, ActionMenuHeader } = require('.')
-const Icon = require('../Icon').default;
-const Filename = require('../Filename').default;
+import ActionMenu, { ActionMenuItem, ActionMenuHeader } from './index';
+import Icon from '../Icon';
+import Filename from '../Filename';
 
 const showMenu = () => setState({ menuDisplayed: true })
 const hideMenu = () => setState({ menuDisplayed: false });

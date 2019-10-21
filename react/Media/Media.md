@@ -11,7 +11,7 @@ Flexbox : https://philipwalton.github.io/solved-by-flexbox/demos/media-object/
 `align=middle` (default)
 
 ```jsx
-const { Media, Img, Bd } = require('./Media')
+import { Media, Img, Bd } from './index';
 const imgStyle = { marginRight: '1rem' };
 
 <Media>
@@ -27,7 +27,7 @@ const imgStyle = { marginRight: '1rem' };
 `align=top`
 
 ```jsx
-const { Media, Img, Bd } = require('./Media')
+import { Media, Img, Bd } from './index';
 const imgStyle = { marginRight: '1rem' };
 
 <Media align='top'>
@@ -43,7 +43,7 @@ const imgStyle = { marginRight: '1rem' };
 `align=bottom`
 
 ```jsx
-const { Media, Img, Bd } = require('./Media');
+import { Media, Img, Bd } from './index';
 const imgStyle = { marginRight: '1rem' };
 
 <Media align='bottom'>

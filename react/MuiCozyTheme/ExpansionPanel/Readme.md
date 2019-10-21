@@ -1,10 +1,10 @@
 ## Default
 
 ```
-const MuiCozyTheme = require('..').default
-const ExpansionPanel = require('@material-ui/core/ExpansionPanel').default
-const ExpansionPanelSummary = require('@material-ui/core/ExpansionPanelSummary').default
-const ExpansionPanelDetails = require('@material-ui/core/ExpansionPanelDetails').default;
+import MuiCozyTheme from '..';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 
 <MuiCozyTheme>
   <ExpansionPanel>
@@ -39,11 +39,12 @@ const ExpansionPanelDetails = require('@material-ui/core/ExpansionPanelDetails')
 These are material-ui components, so you can customize it like any other:
 
 ```
-const MuiCozyTheme = require('..').default
-const ExpansionPanel = require('@material-ui/core/ExpansionPanel').default
-const ExpansionPanelSummary = require('@material-ui/core/ExpansionPanelSummary').default
-const ExpansionPanelDetails = require('@material-ui/core/ExpansionPanelDetails').default
-const { withStyles } = require('@material-ui/core/styles')
+import MuiCozyTheme from '../index';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import { withStyles } from '@material-ui/core/styles';
+import Icon from '../../Icon';
 
 const StyledSummary = withStyles(() => ({
   expand: {}, // required to use `&$expanded` selector

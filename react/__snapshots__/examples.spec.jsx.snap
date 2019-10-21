@@ -99,7 +99,7 @@ exports[`Badge should render examples: Badge 1`] = `
 exports[`BarButton should render examples: BarButton 1`] = `
 "<div>
   <div class=\\"styles__c-bar-btn___1Jc6J\\"><svg class=\\"u-silver styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-      <use xlink:href=\\"#back\\"></use>
+      <use xlink:href=\\"#previous\\"></use>
     </svg></div>
 </div>"
 `;
@@ -3158,7 +3158,7 @@ exports[`Infos should render examples: Infos 1`] = `
         </svg>
         <div class=\\"u-text u-ta-left u-pl-half\\">My small persistent information, with an icon. And lot of text ? Again and again...</div>
       </div>
-      <div class=\\"u-flex-shrink-0\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span>A CTA button</span></button></div>
+      <div class=\\"u-flex-shrink-0\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>A CTA button</span></span></button></div>
     </div>
   </div>
 </div>"
@@ -3268,20 +3268,7 @@ exports[`InputGroup should render examples: InputGroup 6`] = `
 </div>"
 `;
 
-exports[`InputGroup should render examples: InputGroup 7`] = `
-"<div>
-  <form>
-    <div>
-      <div class=\\"styles__c-inputgroup___12OVJ u-bdrs-3\\">
-        <div class=\\"styles__c-inputgroup-side___60v0v\\">
-          <div class=\\"u-title-h4 u-pl-1\\">text</div>
-        </div>
-        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Placeholder\\" value=\\"\\"></div>
-      </div>
-    </div>
-  </form>
-</div>"
-`;
+exports[`InputGroup should render examples: InputGroup 7`] = `"<div></div><pre class=\\"rsg--root-0\\">ReferenceError: InputGroup is not defined</pre>"`;
 
 exports[`Label should render examples: Label 1`] = `
 "<div>
@@ -3306,10 +3293,6 @@ exports[`Label should render examples: Label 3`] = `
   </form>
 </div>"
 `;
-
-exports[`Labs/ExperimentalModal should render examples: Labs/ExperimentalModal 1`] = `"<div></div>"`;
-
-exports[`Labs/GridItem should render examples: Labs/GridItem 1`] = `"<div></div>"`;
 
 exports[`ListItemText should render examples: ListItemText 1`] = `
 "<div>
@@ -3384,26 +3367,6 @@ exports[`Menu should render examples: Menu 3`] = `
   </div>
 </div>"
 `;
-
-exports[`MuiCozyTheme/Buttons should render examples: MuiCozyTheme/Buttons 1`] = `"<div></div>"`;
-
-exports[`MuiCozyTheme/ExpansionPanel should render examples: MuiCozyTheme/ExpansionPanel 1`] = `"<div></div>"`;
-
-exports[`MuiCozyTheme/ExpansionPanel should render examples: MuiCozyTheme/ExpansionPanel 2`] = `"<div></div>"`;
-
-exports[`MuiCozyTheme/Grid should render examples: MuiCozyTheme/Grid 1`] = `"<div></div>"`;
-
-exports[`MuiCozyTheme/Grid should render examples: MuiCozyTheme/Grid 2`] = `"<div></div>"`;
-
-exports[`MuiCozyTheme/List should render examples: MuiCozyTheme/List 1`] = `"<div></div>"`;
-
-exports[`MuiCozyTheme/List should render examples: MuiCozyTheme/List 2`] = `"<div></div>"`;
-
-exports[`MuiCozyTheme/List should render examples: MuiCozyTheme/List 3`] = `"<div></div>"`;
-
-exports[`MuiCozyTheme/List should render examples: MuiCozyTheme/List 4`] = `"<div></div>"`;
-
-exports[`MuiCozyTheme/Menus should render examples: MuiCozyTheme/Menus 1`] = `"<div></div>"`;
 
 exports[`Radio should render examples: Radio 1`] = `
 "<div>

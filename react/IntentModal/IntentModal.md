@@ -1,6 +1,7 @@
 The IntentOpener component is useful to start an new intent modal from a click on a button. But sometimes you want/have to handle the modal opening state on the application side so you need to just render an Intent inside a modal. The IntentModal component is clearly for that use case. This is also the same modal code used by the IntentOpener component.
 
 ```
+import IntentModal from './index';
 initialState = { modalOpened: false};
 
 <div>

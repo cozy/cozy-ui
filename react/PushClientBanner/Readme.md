@@ -4,6 +4,7 @@ Banner to advertise for Cozy desktop client.
 ### Basic usage
 
 ```
+import BannerClient from './index';
 <BannerClient
   text="Get Cozy Drive for Desktop and synchronise your files safely to make them accessible at all times."
   hrefMobile="https://cozy.io"
@@ -17,6 +18,7 @@ Banner to advertise for Cozy desktop client.
 #### action
 You can add a function to `onClick` prop on top of the hyperlink
 ```
+import BannerClient from './index';
 <BannerClient
   text="Get Cozy Drive for Desktop and synchronise your files safely to make them accessible at all times."
   hrefMobile="https://cozy.io"

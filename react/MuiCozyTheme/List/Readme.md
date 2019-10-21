@@ -6,16 +6,16 @@ Displays a List of items, with several metadata
 
 ### Default usage
 ```
-const MuiCozyTheme = require('..').default;
-const List = require('.').default;
-const ListItem = require('../ListItem').default;
-const ListItemIcon = require('../ListItemIcon').default;
-const ListItemText = require('../../ListItemText').default;
-const ListItemSecondaryAction = require('../ListItemSecondaryAction').default;
-const Icon = require('../../Icon').default;
-const Menus = require('../Menus').default;
-const MenuItem = require('@material-ui/core/MenuItem').default;
-const Button = require('../../Button').default;
+import MuiCozyTheme from '..';
+import List from '.';
+import ListItem from '../ListItem';
+import ListItemIcon from '../ListItemIcon';
+import ListItemText from '../../ListItemText';
+import ListItemSecondaryAction from '../ListItemSecondaryAction';
+import Icon from '../../Icon';
+import Menu from '../Menus';
+import MenuItem from '@material-ui/core/MenuItem'
+import Button from '../../Button';
 
 <MuiCozyTheme>
   <List>
@@ -62,12 +62,13 @@ const Button = require('../../Button').default;
 ### dense
 Reduce the space around a list item
 ```
-const MuiCozyTheme = require('..').default
-const List = require('.').default
-const ListItem = require('../ListItem').default;
-const ListItemIcon = require('../ListItemIcon').default;
-const ListItemText = require('../../ListItemText').default;
-const Icon = require('../../Icon').default;
+import MuiCozyTheme from '..';
+import List from '.';
+import ListItem from '../ListItem';
+import ListItemIcon from '../ListItemIcon';
+import ListItemText from '../../ListItemText';
+import ListItemSecondaryAction from '../ListItemSecondaryAction';
+import Icon from '../../Icon';
 
 <MuiCozyTheme>
   <List dense={true}>
@@ -94,12 +95,12 @@ const Icon = require('../../Icon').default;
 ### List item selected
 Highlight a selected item from the list
 ```
-const MuiCozyTheme = require('..').default
-const List = require('.').default
-const ListItem = require('../ListItem').default;
-const ListItemIcon = require('../ListItemIcon').default;
-const ListItemText = require('../../ListItemText').default;
-const Icon = require('../../Icon').default;
+import MuiCozyTheme from '..';
+import List from '.';
+import ListItem from '../ListItem';
+import ListItemIcon from '../ListItemIcon';
+import ListItemText from '../../ListItemText';
+import Icon from '../../Icon';
 
 <MuiCozyTheme>
   <List>
@@ -124,13 +125,13 @@ const Icon = require('../../Icon').default;
 ### List with sub header
 Adds a sub header as a list divider
 ```
-const MuiCozyTheme = require('..').default
-const List = require('.').default
-const ListItem = require('../ListItem').default;
-const ListItemIcon = require('../ListItemIcon').default;
-const ListItemText = require('../../ListItemText').default;
-const ListSubheader = require('../ListSubheader').default;
-const Icon = require('../../Icon').default;
+import MuiCozyTheme from '..';
+import List from '.';
+import ListItem from '../ListItem';
+import ListItemIcon from '../ListItemIcon';
+import ListItemText from '../../ListItemText';
+import ListSubheader from '../ListSubheader';
+import Icon from '../../Icon';
 
 <MuiCozyTheme>
   <List>

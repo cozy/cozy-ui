@@ -1,6 +1,7 @@
 ### Radio
 
 ```
+import Radio from './index';
 <form>
   <div>
     <Radio name="radioForm" value="radioValue1" label="This is a radio button" />
@@ -13,11 +14,13 @@
 ### Radio when there's an error
 
 ```
+import Radio from './index';
 <div><Radio name="radioForm" value="radioValue1" label="This is a radio button" error /></div>
 ```
 
 ### Radio when disabled
 
 ```
+import Radio from './index';
 <div><Radio name="radioForm"value="radioValue1" label="This is a disabled radio button" disabled /></div>
 ```

@@ -1,8 +1,8 @@
 ### Infos display info
 
 ```
-const Infos = require('./index').default;
-const Button = require('../Button').default;
+import Infos from './index';
+import Button from '../Button';
 <div className='u-stack-m'>
     <Infos text="My small persistent information! " />
     <Infos text="In a slightly different style" className='u-maw-none u-bdrs-0'/>
@@ -11,7 +11,7 @@ const Button = require('../Button').default;
         icon="info"
     />
     <Infos
-        actionButton={<Button theme="danger">A CTA button</Button>}
+        actionButton={<Button theme="danger" label="A CTA button" />}
         title="Infos breaking news"
         text="My small persistent information, with an icon. And lot of text ? Again and again..."
         icon="warning"

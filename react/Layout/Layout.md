@@ -4,11 +4,9 @@ The Layout component brings a strong context for apps with any screen resolution
 * `<Content />` is the main content or your app.
 
 ```jsx
-const { Layout, Main, Content } = require('./Layout')
-const Sidebar = require('../Sidebar').default
-const _Nav = require('../Nav')
-const { NavItem, NavIcon, NavText, genNavLink } = _Nav
-const Nav = _Nav.default
+import { Layout, Main, Content } from './index';
+import Sidebar from '../Sidebar';
+import Nav, { NavItem, NavIcon, NavText, genNavLink } from '../Nav';
 
 const NavLink = genNavLink(({ children, className }) =>
   <a className={className}>{ children }</a>)
@@ -54,7 +52,7 @@ const styles = {
 `monoColumn` option (without sidebar)
 
 ```jsx
-const { Layout, Main, Content } = require('./Layout');
+import { Layout, Main, Content } from './index';
 
 <Layout monoColumn>
     <Main>

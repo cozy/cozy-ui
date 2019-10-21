@@ -1,7 +1,8 @@
 This is an icon representing a cipher for a given konnector
 
 ```
-const { Text, SubTitle } = require('../Text');
+import CipherIcon from './index';
+import { Text, SubTitle } from '../Text';
 
 <div>
   <div>

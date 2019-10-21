@@ -1,4 +1,5 @@
 ```
+import PercentageLine from './index';
 initialState = { percentage: 0.5 * 100 };
 
 <>

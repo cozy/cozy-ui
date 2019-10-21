@@ -4,6 +4,8 @@ See [the documentation]() for more information about intents.
 Example:
 
 ```
+import IntentIframe from './index';
+import utils from '../../docs/utils';
   <IntentIframe
     action="PICK"
     create={utils.fakeIntentCreate}

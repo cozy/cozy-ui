@@ -30,8 +30,8 @@ export class BarButton extends PureComponent {
     return (
       <MaybeLink
         className={styles['c-bar-btn']}
-        href={!disabled && href}
-        onClick={!disabled && onClick}
+        href={!disabled ? href : undefined}
+        onClick={!disabled ? onClick : undefined}
       >
         <Icon icon={icon} className={disabled ? 'u-silver' : 'u-coolGrey'} />
       </MaybeLink>

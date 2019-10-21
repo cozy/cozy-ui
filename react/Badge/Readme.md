@@ -7,6 +7,9 @@ This component spreads all other props to its root element.
 Default type is `normal`
 
 ```
+import Badge from './index'
+import ButtonAction from '../ButtonAction';
+
 <div>
   <p>
     <Badge content="2" type="normal">

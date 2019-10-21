@@ -53,7 +53,7 @@
     "travis-deploy-once": "travis-deploy-once",
     "watch:css": "yarn build:css --watch",
     "prewatch:doc:react": "yarn sprite",
-    "watch:doc:react": "env BABEL_ENV=transpilation styleguidist server --config docs/styleguide.config.js",
+    "watch:doc:react": "styleguidist server --config docs/styleguide.config.js",
     "watch:doc:kss": "nodemon --ext styl,md --watch stylus --exec 'yarn build:doc:kss && http-server build/styleguide -p 4242'"
   },
   "sideEffects": [
@@ -108,7 +108,7 @@
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-redux": "5.1.1",
-    "react-styleguidist": "7.3.11",
+    "react-styleguidist": "9.1.16",
     "react-test-renderer": "16.6.3",
     "redux": "3.7.2",
     "semantic-release": "15.13.24",
@@ -186,6 +186,7 @@
       "\\.(png|gif|jpe?g|svg)$": "<rootDir>/test/__mocks__/fileMock.js",
       "\\.styl$": "identity-obj-proxy",
       "react-styleguidist.+\\.jsx?$": "babel-jest",
+"^rsg-components(.*)$": "<rootDir>/node_modules/react-styleguidist/lib/client/rsg-components$1",
       "react-pdf/dist/entry.webpack.js": "react-pdf",
       "^cozy-client$": "cozy-client/dist/index"
     },

@@ -1,7 +1,7 @@
 ### Default (unsynchronized)
 
 ```
-const { AccordionItem } = Accordion;
+import Accordion, { AccordionItem } from './index';
 
 <div>
   <Accordion>

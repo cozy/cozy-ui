@@ -13,7 +13,7 @@ when `<ButtonLink>` has:
 #### Themes
 
 ```
-const { Button } = require('./index');
+import Button from './index';
 const props = [{}, { disabled: true}, { busy: true }];
 const themes = ['regular', 'ghost', 'danger', 'highlight', 'secondary', 'danger-outline', 'alpha', 'text'];
 
@@ -31,7 +31,7 @@ const themes = ['regular', 'ghost', 'danger', 'highlight', 'secondary', 'danger-
 #### Sizes
 
 ```
-const { Button } = require('./index');
+import Button from './index';
 
 <div>
   <p><Button size='tiny' label='Tiny' /></p>
@@ -48,7 +48,7 @@ const { Button } = require('./index');
 - `full` to enable full width
 
 ```
-const { Button } = require('./index');
+import Button from './index';
 
 <div>
   <p><Button label='Normal'/></p>
@@ -64,7 +64,7 @@ const { Button } = require('./index');
 - `center` to center the label (default)
 
 ```
-const { Button } = require('./index');
+import Button from './index';
 
 <div>
   <p><Button extension="full" label='Default (center)'/></p>
@@ -77,7 +77,7 @@ const { Button } = require('./index');
 #### Extra right content
 
 ```
-const { Button } = require('./index');
+import Button from './index';
 const Chip = require('../Chip').default;
 
 <div>
@@ -88,19 +88,19 @@ const Chip = require('../Chip').default;
 #### Add a action on click
 
 ```
-const { Button } = require('./index');
+import Button from './index';
 <Button theme='danger-outline' onClick={ () => alert('yay !') } label='Show alert' />
 ```
 
 #### When loading, put a spinner
 
 ```
-const { Button } = require('./index');
+import Button from './index';
 <Button busy label='Loading'/>
 ```
 
 ```
-const { Button } = require('./index');
+import Button from './index';
 initialState = { busy:false };
 <Button onClick={() => {setState(state => ({busy: !state.busy}))}} busy={state.busy} label='Toggle busy'/>
 ```
@@ -108,7 +108,7 @@ initialState = { busy:false };
 #### Disable a button
 
 ```
-const { Button, ButtonLink } = require('./index');
+import Button, { ButtonLink } from './index';
 <div>
   <Button disabled label='Loading' />
   <ButtonLink disabled href='http://cozy.io' label='Go to Cozy website' />
@@ -121,7 +121,7 @@ The color of the icon is taken care of by the button style, there's no need to s
 If you want a button with only an icon as content, you must set the `iconOnly` prop.
 
 ```
-const { Button } = require('./index');
+import Button from './index';
 <div>
   <Button theme="danger" icon='trash' label='delete' />
   <Button theme="secondary" icon='dots' iconOnly label="See more" extension='narrow' />
@@ -131,7 +131,8 @@ const { Button } = require('./index');
 You can also pass an Icon directly if you need more flexibility.
 
 ```
-const { Button } = require('./index');
+import Button from './index';
+import Icon from '../Icon';
 <div>
   <Button theme="danger" icon={ <Icon icon='trash' color='yellow' /> } label='delete' />
 </div>
@@ -140,7 +141,7 @@ const { Button } = require('./index');
 #### Create a round button with an icon
 
 ```
-const { Button } = require('.');
+import Button from './index';
 <div>
   <Button icon='plus' label='Add' iconOnly round />
   <Button theme="secondary" icon='cross' label='Delete' iconOnly round />
@@ -152,7 +153,7 @@ const { Button } = require('.');
 Subtle buttons are buttons without background and borders, wich look "inverted" compared to the basic Buttons.
 
 ```
-const { Button } = require('./index');
+import Button from './index';
 <div>
   <p>
     <Button subtle size='tiny' label='Tiny text' onClick={() => alert('Clicked on Tiny text')} />
@@ -186,7 +187,7 @@ const { Button } = require('./index');
 #### Using Links
 
 ```
-const { ButtonLink } = require('./index');
+import { ButtonLink } from './index';
 <div>
   <p>
     <ButtonLink size="tiny" href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
@@ -214,7 +215,7 @@ You can pass `tag={NavLink}` and `NavLink` will be used. Any props that you
 pass to the `Button` will be passed down to the component.
 
 ```
-const Button = require('./').default
+import Button from './index';
 const NavLink = props => (
   <span onClick={() => alert(`Navigating to ${props.to}`)} {...props}>{
     props.children

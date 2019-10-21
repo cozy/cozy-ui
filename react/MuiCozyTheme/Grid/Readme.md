@@ -5,9 +5,9 @@ Displays a Grid of items
 ### Default usage
 
 ```
-const MuiCozyTheme = require('..').default;
-const Grid = require('.').default;
-const Card = require('../../Card').default;
+import MuiCozyTheme from '..';
+import Grid from '.';
+import Card from '../../Card';
 
 <MuiCozyTheme>
     <Grid container spacing={24}>
@@ -39,9 +39,9 @@ const Card = require('../../Card').default;
 ### Responsive usage
 
 ```
-const MuiCozyTheme = require('..').default;
-const Grid = require('.').default;
-const Card = require('../../Card').default;
+import MuiCozyTheme from '..';
+import Grid from '.';
+import Card from '../../Card';
 
 <MuiCozyTheme>
     <Grid container spacing={8}>

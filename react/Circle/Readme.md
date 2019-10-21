@@ -3,7 +3,8 @@ Displays a simple circle with some text inside of it.
 ### Default
 
 ```
-<div >
+import Circle from './index';
+<div>
   <Circle>
     yo
   </Circle>
@@ -12,6 +13,7 @@ Displays a simple circle with some text inside of it.
 
 ### Available sizes: xsmall, small, medium (default), large, xlarge
 ```
+import Circle from './index';
 <div>
   <div>
     <Circle size="xsmall">Yo</Circle>

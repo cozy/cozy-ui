@@ -1,8 +1,8 @@
 ```
-const MuiCozyTheme = require('..').default
-const RaisedList = require('.').default
-const ListItem = require('@material-ui/core/ListItem').default
-const ListItemText = require('../../ListItemText').default;
+import MuiCozyTheme from '..';
+import RaisedList from '.';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '../../ListItemText';
 
 <MuiCozyTheme>
   <RaisedList>

@@ -4,6 +4,7 @@ The Action Button has different types whether it's `normal`, just `new` or not c
 Default type is `normal`
 
 ```
+import ButtonAction from './index';
 <div>
   <p>
     <ButtonAction label='Normal' rightIcon='openwith' />
@@ -23,6 +24,7 @@ Default type is `normal`
 #### Long labels are troncated by default
 
 ```
+import ButtonAction from './index';
 <div>
   <p><ButtonAction label='Very long long long label' type='normal' rightIcon='hourglass' /></p>
 </div>
@@ -31,6 +33,7 @@ Default type is `normal`
 #### Compact version (on mobile mostly)
 
 ```
+import ButtonAction from './index';
 <div>
   <p><ButtonAction compact label='Normal' rightIcon='openwith' /></p>
   <p><ButtonAction compact disabled label='Disabled' rightIcon='hourglass' /></p>

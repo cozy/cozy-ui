@@ -4,10 +4,10 @@ GridItem is currently experimental since its behavior is
 not well defined yet.
 
 ```
-const MuiCozyTheme = require('../../MuiCozyTheme').default;
-const Grid = require('../../MuiCozyTheme/Grid').default;
-const GridItem = require('.').default;
-const Card = require('../../Card').default;
+import MuiCozyTheme from '../../MuiCozyTheme';
+import Grid from '../../MuiCozyTheme/Grid';
+import GridItem from './index';
+import Card from '../../Card';
 
 <MuiCozyTheme>
     <Grid container spacing={24}>

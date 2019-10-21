@@ -1,6 +1,7 @@
 Pour montrer une KPI importante.
 
 ```jsx
+import { FigureBlock } from './index';
 <div>
   <FigureBlock
     label='Balance totale'

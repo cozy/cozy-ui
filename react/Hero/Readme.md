@@ -2,10 +2,17 @@ A `Hero` is used to to showcase key marketing messages. It
 is perfect for onboarding an app.
 
 ```jsx
-const Hero = require('.').default
-const { Title, Subtitle, Section, Sections, Paragraph, CTA, Icon} = Hero
-const Button = require('../Button').Button
-const { t } = require('../../docs/utils')
+import Hero, {
+  Title,
+  Subtitle,
+  Section,
+  Sections,
+  Paragraph,
+  CTA,
+  Icon
+} from './index';
+import Button from '../Button';
+import { t } from '../../docs/utils';
 
 const RED = '#f52d2d'
 const PURPLE = '#a75bcb'

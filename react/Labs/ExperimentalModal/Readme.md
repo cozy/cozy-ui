@@ -8,7 +8,7 @@ and add a border-top.
 Not tested on "long content".
 
 ```
-const ExperimentalModal = require('.').default
+import ExperimentalModal from './index';
 
 initialState = { modalOpened: isTesting()};
 const hideModal = () => setState({ modalOpened: false });
