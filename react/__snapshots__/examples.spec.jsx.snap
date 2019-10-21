@@ -3294,13 +3294,6 @@ exports[`Label should render examples: Label 3`] = `
 </div>"
 `;
 
-exports[`Labs/ExperimentalModal should render examples: Labs/ExperimentalModal 1`] = `"<div></div><pre class=\\"rsg--root-0\\">TypeError: Cannot call a class as a function</pre>"`;
-
-exports[`Labs/GridItem should render examples: Labs/GridItem 1`] = `
-"<div></div><pre class=\\"rsg--root-0\\">Error: Material-UI: the color provided to augmentColor(color) is invalid.
-The color object needs to have a \`main\` property or a \`500\` property.</pre>"
-`;
-
 exports[`ListItemText should render examples: ListItemText 1`] = `
 "<div>
   <div class=\\"styles__c-list-text___3kc3E\\">
