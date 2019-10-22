@@ -10,7 +10,7 @@ regularTheme = {
     primaryColor: var(--dodgerBlue), secondaryColor: var(--dodgerBlue), activeColor: var(--scienceBlue), contrastColor: var(--white)
 }
 ghostTheme = {
-    primaryColor: var(--hawkesBlue), secondaryColor: var(--primaryColor), activeColor: var(--hawkesBlue), contrastColor: var(--primaryColor)
+    primaryColor: var(--zircon), secondaryColor: var(--frenchPass), activeColor: var(--frenchPass), contrastColor: var(--dodgerBlue)
 }
 highlightTheme = {
     primaryColor: var(--emerald), secondaryColor: var(--emerald), activeColor: var(--malachite), contrastColor: var(--white)
@@ -112,11 +112,6 @@ $button--regular  // Deprecated
 $button--ghost
     themedBtn(ghostTheme)
     border-style dashed
-
-    &:active
-    &:hover
-    &:focus
-        border-color: var(--primaryColor)
 
 $button--highlight
     themedBtn(highlightTheme)
