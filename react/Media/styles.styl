@@ -1,17 +1,16 @@
+@require '../../stylus/objects/media'
+
 .media
-    display flex
-    align-items center
+    @extend $media
 
 .media--top
-    align-items flex-start
+    @extend $media--top
 
 .media--bottom
-    align-items flex-end
+    @extend $media--bottom
 
 .bd
-    flex 1 1 auto
-    overflow hidden
+    @extend $media__grow
 
 .img
-    line-height 0
-    flex 0 0 auto
+    @extend $media__fixed
