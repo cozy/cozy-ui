@@ -3,7 +3,7 @@ Show an avatar with initials
 ### Default
 
 ```
-import Avatar from './index';
+import Avatar from 'cozy-ui/transpiled/react/Avatar';
 <Avatar />
 ```
 
@@ -11,20 +11,20 @@ import Avatar from './index';
 #### with name
 
 ```
-import Avatar from './index';
+import Avatar from 'cozy-ui/transpiled/react/Avatar';
 <Avatar text="CD" />
 ```
 
 ### with image instead of initials
 
 ```
-import Avatar from './index';
+import Avatar from 'cozy-ui/transpiled/react/Avatar';
 <Avatar image="https://cozy.io/fr/images/cozy-logo_white.png" />
 ```
 
 ### Available sizes: xsmall, small, medium (default), large, xlarge
 ```
-import Avatar from './index';
+import Avatar from 'cozy-ui/transpiled/react/Avatar';
 <div>
   <div className="u-flex">
     <Avatar size="xsmall" />

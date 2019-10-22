@@ -1,7 +1,7 @@
 ### Input's available types (text, password, email, url)
 
 ```
-import Input from './index';
+import Input from 'cozy-ui/transpiled/react/Input';
 <form>
   <p><Input placeholder="This is a input[type=text]" /></p>
   <p><Input type="password" placeholder="This is a input[type=password]" /></p>
@@ -14,7 +14,7 @@ import Input from './index';
 ### Disabled Input
 
 ```
-import Input from './index';
+import Input from 'cozy-ui/transpiled/react/Input';
 <form>
   <Input disabled value="I'm disabled" />
 </form>
@@ -23,7 +23,7 @@ import Input from './index';
 ### Input when there's an error
 
 ```
-import Input from './index';
+import Input from 'cozy-ui/transpiled/react/Input';
 <Input error placeholder="This is a input[type=text] with error" />
 ```
 
@@ -32,7 +32,7 @@ import Input from './index';
 By default, the size is `large`.
 
 ```
-import Input from './index';
+import Input from 'cozy-ui/transpiled/react/Input';
 <div>
   <p>
     <Input placeholder="I have a tiny size" size="tiny" />
@@ -46,7 +46,7 @@ import Input from './index';
 ### Full width inputs
 
 ```
-import Input from './index';
+import Input from 'cozy-ui/transpiled/react/Input';
 <Input placeholder="I'm full width" fullwidth />
 ```
 
@@ -55,8 +55,8 @@ import Input from './index';
 If you need to programmatically access the underlying `<input />` for example to give focus or move the caret, you can use the `inputRef` prop, that is passed to the `ref` property of the `<input />`.
 
 ```
-import Input from './index';
-import Button from '../Button';
+import Input from 'cozy-ui/transpiled/react/Input';
+import Button from 'cozy-ui/transpiled/react/Button';
 class InputComponent extends React.Component {
   constructor() {
     super()
@@ -83,7 +83,7 @@ class InputComponent extends React.Component {
 `Input` forwards unknown props to the underlying `<input />` element.
 
 ```
-import Input from './index';
+import Input from 'cozy-ui/transpiled/react/Input';
 <div>
   <Input placeholder='Type to see changes' value={state.value} onChange={ev => setState({value: ev.target.value})} />&nbsp;&nbsp;
   Value: { state.value }

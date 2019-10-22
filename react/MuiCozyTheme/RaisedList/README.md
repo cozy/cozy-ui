@@ -1,8 +1,8 @@
 ```
-import MuiCozyTheme from '..';
-import RaisedList from '.';
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
+import RaisedList from 'cozy-ui/transpiled/react/MuiCozyTheme/RaisedList';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '../../ListItemText';
+import ListItemText from 'cozy-ui/transpiled/react/ListItemText';
 
 <MuiCozyTheme>
   <RaisedList>

@@ -1,8 +1,8 @@
 ### Infos display info
 
 ```
-import Infos from './index';
-import Button from '../Button';
+import Infos from 'cozy-ui/transpiled/react/Infos';
+import Button from 'cozy-ui/transpiled/react/Button';
 <div className='u-stack-m'>
     <Infos text="My small persistent information! " />
     <Infos text="In a slightly different style" className='u-maw-none u-bdrs-0'/>

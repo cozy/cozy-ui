@@ -1,8 +1,8 @@
 ```
-import MuiCozyTheme from '..';
-import Menu from '.';
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
+import Menu from 'cozy-ui/transpiled/react/MuiCozyTheme/Menus';
 import MenuItem from '@material-ui/core/MenuItem';
-import Button from '../../Button';
+import Button from 'cozy-ui/transpiled/react/Button';
 
 <MuiCozyTheme>
   <Menu

@@ -8,7 +8,7 @@ and add a border-top.
 Not tested on "long content".
 
 ```
-import ExperimentalModal from './index';
+import ExperimentalModal from 'cozy-ui/transpiled/react/Labs/ExperimentalModal';
 
 initialState = { modalOpened: isTesting()};
 const hideModal = () => setState({ modalOpened: false });

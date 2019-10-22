@@ -12,7 +12,7 @@ Flexbox : https://philipwalton.github.io/solved-by-flexbox/demos/media-object/
 `align=middle` (default)
 
 ```jsx
-import { Media, Img, Bd } from './index';
+import { Media, Img, Bd } from 'cozy-ui/transpiled/react/Media';
 const imgStyle = { marginRight: '1rem' };
 
 <Media>
@@ -28,7 +28,7 @@ const imgStyle = { marginRight: '1rem' };
 `align=top`
 
 ```jsx
-import { Media, Img, Bd } from './index';
+import { Media, Img, Bd } from 'cozy-ui/transpiled/react/Media';
 const imgStyle = { marginRight: '1rem' };
 
 <Media align='top'>
@@ -44,7 +44,7 @@ const imgStyle = { marginRight: '1rem' };
 `align=bottom`
 
 ```jsx
-import { Media, Img, Bd } from './index';
+import { Media, Img, Bd } from 'cozy-ui/transpiled/react/Media';
 const imgStyle = { marginRight: '1rem' };
 
 <Media align='bottom'>

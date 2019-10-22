@@ -3,14 +3,14 @@ Show a spinner when loading something.
 ### Default
 
 ```
-import Spinner from './index';
+import Spinner from 'cozy-ui/transpiled/react/Spinner';
 <Spinner />
 ```
 
 ### Color
 
 ```
-import Spinner from './index';
+import Spinner from 'cozy-ui/transpiled/react/Spinner';
 <div>
   blue (default): <Spinner /> or <Spinner color='blue' />
   grey: <Spinner color='grey' />
@@ -22,7 +22,7 @@ import Spinner from './index';
 ### Placement
 
 ```
-import Spinner from './index';
+import Spinner from 'cozy-ui/transpiled/react/Spinner';
 <div>
   <Spinner noMargin={ true }/>
 </div>
@@ -31,7 +31,7 @@ import Spinner from './index';
 ### Sizes
 
 ```
-import Spinner from './index';
+import Spinner from 'cozy-ui/transpiled/react/Spinner';
 <div>
   tiny: <Spinner size='tiny' /><br/>
   small: <Spinner size='small' /><br/>
@@ -51,8 +51,8 @@ When you use `loadingType`, `<Spinner />` needs to be in an `<I18n />` wrapper a
 ```
 
 ```
-import Spinner from './index';
-import I18n from '../I18n';
+import Spinner from 'cozy-ui/transpiled/react/Spinner';
+import I18n from 'cozy-ui/transpiled/react/I18n';
 
 <div>
   <I18n lang='en' dictRequire={() => {}}>

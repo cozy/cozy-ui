@@ -3,7 +3,7 @@ A simple Popup which provides handlers for a few events.
 ### Simple use case
 
 ```
-import Popup from './index';
+import Popup from 'cozy-ui/transpiled/react/Popup';
 <div>
   <button onClick={() => setState({ showPopup: true })}>
     Show popup

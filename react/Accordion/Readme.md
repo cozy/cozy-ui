@@ -1,7 +1,7 @@
 ### Default (unsynchronized)
 
 ```
-import Accordion, { AccordionItem } from './index';
+import Accordion, { AccordionItem } from 'cozy-ui/transpiled/react/Accordion';
 
 <div>
   <Accordion>

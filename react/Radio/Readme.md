@@ -1,7 +1,7 @@
 ### Radio
 
 ```
-import Radio from './index';
+import Radio from 'cozy-ui/transpiled/react/Radio';
 <form>
   <div>
     <Radio name="radioForm" value="radioValue1" label="This is a radio button" />
@@ -14,13 +14,13 @@ import Radio from './index';
 ### Radio when there's an error
 
 ```
-import Radio from './index';
+import Radio from 'cozy-ui/transpiled/react/Radio';
 <div><Radio name="radioForm" value="radioValue1" label="This is a radio button" error /></div>
 ```
 
 ### Radio when disabled
 
 ```
-import Radio from './index';
+import Radio from 'cozy-ui/transpiled/react/Radio';
 <div><Radio name="radioForm"value="radioValue1" label="This is a disabled radio button" disabled /></div>
 ```

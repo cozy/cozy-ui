@@ -4,10 +4,10 @@ GridItem is currently experimental since its behavior is
 not well defined yet.
 
 ```
-import MuiCozyTheme from '../../MuiCozyTheme';
-import Grid from '../../MuiCozyTheme/Grid';
-import GridItem from './index';
-import Card from '../../Card';
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
+import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid';
+import GridItem from 'cozy-ui/transpiled/react/Labs/GridItem';
+import Card from 'cozy-ui/transpiled/react/Card';
 
 <MuiCozyTheme>
     <Grid container spacing={24}>

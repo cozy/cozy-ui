@@ -4,9 +4,9 @@ The Layout component brings a strong context for apps with any screen resolution
 * `<Content />` is the main content or your app.
 
 ```jsx
-import { Layout, Main, Content } from './index';
-import Sidebar from '../Sidebar';
-import Nav, { NavItem, NavIcon, NavText, genNavLink } from '../Nav';
+import { Layout, Main, Content } from 'cozy-ui/transpiled/react/Layout';
+import Sidebar from 'cozy-ui/transpiled/react/Sidebar';
+import Nav, { NavItem, NavIcon, NavText, genNavLink } from 'cozy-ui/transpiled/react/Nav';
 
 const NavLink = genNavLink(({ children, className }) =>
   <a className={className}>{ children }</a>)
@@ -52,7 +52,7 @@ const styles = {
 `monoColumn` option (without sidebar)
 
 ```jsx
-import { Layout, Main, Content } from './index';
+import { Layout, Main, Content } from 'cozy-ui/transpiled/react/Layout';
 
 <Layout monoColumn>
     <Main>

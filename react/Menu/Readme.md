@@ -8,9 +8,9 @@ an item in the `Menu`.
 the item is `disabled`.
 
 ```
-import Menu, { MenuItem } from './index';
-import Button from '../Button';
-import Icon from '../Icon';
+import Menu, { MenuItem } from 'cozy-ui/transpiled/react/Menu';
+import Button from 'cozy-ui/transpiled/react/Button';
+import Icon from 'cozy-ui/transpiled/react/Icon';
 const showItem = itemData => alert(JSON.stringify(itemData));
 const showWarning = itemData => alert(itemData + ' is disabled');
 
@@ -28,8 +28,8 @@ const showWarning = itemData => alert(itemData + ' is disabled');
 Use the `position` attribute to put the menu to the right.
 
 ```
-import Menu, { MenuItem } from './index';
-import Icon from '../Icon';
+import Menu, { MenuItem } from 'cozy-ui/transpiled/react/Menu';
+import Icon from 'cozy-ui/transpiled/react/Icon';
 
 <Menu initialOpen={isTesting()} position='right' label='Click me !' onSelect={ itemData => alert(JSON.stringify(itemData)) }>
   <MenuItem data='hello'>Hello !</MenuItem>
@@ -42,8 +42,8 @@ Use the `component` attribute if you want to use a custom component for the
 opener.
 
 ```
-import Menu, { MenuItem } from './index';
-import Button from '../Button';
+import Menu, { MenuItem } from 'cozy-ui/transpiled/react/Menu';
+import Button from 'cozy-ui/transpiled/react/Button';
 
 <Menu initialOpen={isTesting()} component={<Button label="Greetings with custom component"/>} onSelect={ itemData => alert(JSON.stringify(itemData)) }>
   <MenuItem data='hello'>Hello !</MenuItem>

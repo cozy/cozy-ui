@@ -4,7 +4,7 @@ See [the documentation]() for more information about intents.
 Example:
 
 ```
-import IntentIframe from './index';
+import IntentIframe from 'cozy-ui/transpiled/react/IntentIframe';
 import utils from '../../docs/utils';
   <IntentIframe
     action="PICK"

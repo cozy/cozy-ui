@@ -4,7 +4,7 @@ The Action Button has different types whether it's `normal`, just `new` or not c
 Default type is `normal`
 
 ```
-import ButtonAction from './index';
+import ButtonAction from 'cozy-ui/transpiled/react/ButtonAction';
 <div>
   <p>
     <ButtonAction label='Normal' rightIcon='openwith' />
@@ -24,7 +24,7 @@ import ButtonAction from './index';
 #### Long labels are troncated by default
 
 ```
-import ButtonAction from './index';
+import ButtonAction from 'cozy-ui/transpiled/react/ButtonAction';
 <div>
   <p><ButtonAction label='Very long long long label' type='normal' rightIcon='hourglass' /></p>
 </div>
@@ -33,7 +33,7 @@ import ButtonAction from './index';
 #### Compact version (on mobile mostly)
 
 ```
-import ButtonAction from './index';
+import ButtonAction from 'cozy-ui/transpiled/react/ButtonAction';
 <div>
   <p><ButtonAction compact label='Normal' rightIcon='openwith' /></p>
   <p><ButtonAction compact disabled label='Disabled' rightIcon='hourglass' /></p>

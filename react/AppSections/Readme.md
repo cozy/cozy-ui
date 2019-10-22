@@ -1,6 +1,6 @@
 ```
 import mockApps from './_mockApps';
-import Sections from './Sections';
+import Sections from 'cozy-ui/transpiled/react/AppSections';
 import { I18n } from '../I18n';
 const locale = {};
 const handleAppClick = app => {

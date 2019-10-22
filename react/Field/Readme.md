@@ -7,7 +7,7 @@ Like `Input` component, it can have the following properties:
 ##### Example
 
 ```
-import Field from './index';
+import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
     id="idField"
@@ -27,8 +27,8 @@ It gives access to the underlying `<input />` element, for example to give focus
 ##### Example
 
 ```
-import Field from './index';
-import Button from '../Button';
+import Field from 'cozy-ui/transpiled/react/Field';
+import Button from 'cozy-ui/transpiled/react/Button';
 class FieldWithFocus extends React.Component {
   constructor() {
     super()
@@ -60,7 +60,7 @@ Name of the form field, injected into `Input`, `TextArea` or `SelectBox` compone
 ##### Exemple
 
 ```
-import Field from './index';
+import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
     label="I got a name"
@@ -72,7 +72,7 @@ import Field from './index';
 #### Field when there's an error
 
 ```
-import Field from './index';
+import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
     id="idFieldError"
@@ -87,7 +87,7 @@ import Field from './index';
 #### Field with SelectBox
 
 ```
-import Field from './index';
+import Field from 'cozy-ui/transpiled/react/Field';
 const options = [
 {
   label: 'Choice 1',
@@ -117,7 +117,7 @@ const options = [
 #### Password field with show/hide button
 
 ```
-import Field from './index';
+import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
     id="idFieldPassword"
@@ -134,7 +134,7 @@ import Field from './index';
 #### Password field without show/hide button
 
 ```
-import Field from './index';
+import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
     id="idFieldPassword"
@@ -147,7 +147,7 @@ import Field from './index';
 #### Side element
 
 ```
-import Field from './index';
+import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
     label="I'm a label"
@@ -159,7 +159,7 @@ import Field from './index';
 #### Side element with fullwidth element
 
 ```
-import Field from './index';
+import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
     label="I'm a label"
@@ -172,7 +172,7 @@ import Field from './index';
 #### Customized label and input
 
 ```
-import Field from './index';
+import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
     label="I'm a label"
@@ -189,7 +189,7 @@ import Field from './index';
 #### Password with custom secondaryComponent
 
 ```
-import Field from './index';
+import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
     label="I'm a label"
@@ -210,7 +210,7 @@ import Field from './index';
 #### Controlled Field
 
 ```
-import Field from './index';
+import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
     side="(optional)"

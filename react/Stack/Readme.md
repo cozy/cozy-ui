@@ -6,8 +6,8 @@ See [this article](https://every-layout.dev/layouts/stack/) for more information
 The padding is responsive, it is smaller on mobile/tablet.
 
 ```
-import Stack from './index';
-import Card from '../Card';
+import Stack from 'cozy-ui/transpiled/react/Stack';
+import Card from 'cozy-ui/transpiled/react/Card';
 
 <Stack>
   <Card>Homer Simpson</Card>
@@ -21,8 +21,8 @@ import Card from '../Card';
 You can use `xs`, `s`, `l`, `xl`, and `xxl` values for "spacing" to have less/more padding.
 
 ```
-import Stack from './index';
-import Card from '../Card';
+import Stack from 'cozy-ui/transpiled/react/Stack';
+import Card from 'cozy-ui/transpiled/react/Card';
 const spacings = ['xs', 's', 'l', 'xl', 'xxl'];
 
 <div>

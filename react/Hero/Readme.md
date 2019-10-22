@@ -10,8 +10,8 @@ import Hero, {
   Paragraph,
   CTA,
   Icon
-} from './index';
-import Button from '../Button';
+} from 'cozy-ui/transpiled/react/Hero';
+import Button from 'cozy-ui/transpiled/react/Button';
 import { t } from '../../docs/utils';
 
 const RED = '#f52d2d'

@@ -6,16 +6,16 @@ Displays a List of items, with several metadata
 
 ### Default usage
 ```
-import MuiCozyTheme from '..';
-import List from '.';
-import ListItem from '../ListItem';
-import ListItemIcon from '../ListItemIcon';
-import ListItemText from '../../ListItemText';
-import ListItemSecondaryAction from '../ListItemSecondaryAction';
-import Icon from '../../Icon';
-import Menu from '../Menus';
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
+import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List';
+import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem';
+import ListItemIcon from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon';
+import ListItemText from 'cozy-ui/transpiled/react/ListItemText';
+import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemSecondaryAction';
+import Icon from 'cozy-ui/transpiled/react/Icon';
+import Menu from 'cozy-ui/transpiled/react/MuiCozyTheme/Menus';
 import MenuItem from '@material-ui/core/MenuItem'
-import Button from '../../Button';
+import Button from 'cozy-ui/transpiled/react/Button';
 
 <MuiCozyTheme>
   <List>
@@ -62,13 +62,13 @@ import Button from '../../Button';
 ### dense
 Reduce the space around a list item
 ```
-import MuiCozyTheme from '..';
-import List from '.';
-import ListItem from '../ListItem';
-import ListItemIcon from '../ListItemIcon';
-import ListItemText from '../../ListItemText';
-import ListItemSecondaryAction from '../ListItemSecondaryAction';
-import Icon from '../../Icon';
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
+import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List';
+import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem';
+import ListItemIcon from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon';
+import ListItemText from 'cozy-ui/transpiled/react/ListItemText';
+import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemSecondaryAction';
+import Icon from 'cozy-ui/transpiled/react/Icon';
 
 <MuiCozyTheme>
   <List dense={true}>
@@ -95,12 +95,12 @@ import Icon from '../../Icon';
 ### List item selected
 Highlight a selected item from the list
 ```
-import MuiCozyTheme from '..';
-import List from '.';
-import ListItem from '../ListItem';
-import ListItemIcon from '../ListItemIcon';
-import ListItemText from '../../ListItemText';
-import Icon from '../../Icon';
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
+import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List';
+import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem';
+import ListItemIcon from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon';
+import ListItemText from 'cozy-ui/transpiled/react/ListItemText';
+import Icon from 'cozy-ui/transpiled/react/Icon';
 
 <MuiCozyTheme>
   <List>
@@ -125,13 +125,14 @@ import Icon from '../../Icon';
 ### List with sub header
 Adds a sub header as a list divider
 ```
-import MuiCozyTheme from '..';
-import List from '.';
-import ListItem from '../ListItem';
-import ListItemIcon from '../ListItemIcon';
-import ListItemText from '../../ListItemText';
-import ListSubheader from '../ListSubheader';
-import Icon from '../../Icon';
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
+import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List';
+import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem';
+import ListItemIcon from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon';
+import ListItemText from 'cozy-ui/transpiled/react/ListItemText';
+import ListSubheader from 'cozy-ui/transpiled/react/MuiCozyTheme/ListSubheader';
+import Icon from 'cozy-ui/transpiled/react/Icon';
+
 
 <MuiCozyTheme>
   <List>

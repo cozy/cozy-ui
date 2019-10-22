@@ -7,8 +7,8 @@ This component spreads all other props to its root element.
 Default type is `normal`
 
 ```
-import Badge from './index'
-import ButtonAction from '../ButtonAction';
+import Badge from 'cozy-ui/transpiled/react/Badge'
+import ButtonAction from 'cozy-ui/transpiled/react/ButtonAction';
 
 <div>
   <p>
