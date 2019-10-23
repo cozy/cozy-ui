@@ -394,13 +394,21 @@ exports[`Field should render examples: Field 1`] = `
 
 exports[`Field should render examples: Field 2`] = `
 "<div>
+  <p>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"controlled-field\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\"></label><input type=\\"text\\" id=\\"controlled-field\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" value=\\"\\"></div>
+  </p>
+</div>"
+`;
+
+exports[`Field should render examples: Field 3`] = `
+"<div>
   <div>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I can have focus</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Focus please\\" value=\\"\\"></div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Focus!</span>Set Focus</span></button>
   </div>
 </div>"
 `;
 
-exports[`Field should render examples: Field 3`] = `
+exports[`Field should render examples: Field 4`] = `
 "<div>
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I got a name</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" name=\\"foo\\" value=\\"\\"></div>
@@ -408,7 +416,7 @@ exports[`Field should render examples: Field 3`] = `
 </div>"
 `;
 
-exports[`Field should render examples: Field 4`] = `
+exports[`Field should render examples: Field 5`] = `
 "<div>
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idFieldError\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm an error label</label><input type=\\"text\\" id=\\"idFieldError\\" class=\\"styles__c-input-text___3TAv1 styles__is-error___3lsCJ styles__c-input-text--large___28EaR\\" placeholder=\\"I'm an error input[type=text]\\" value=\\"\\"></div>
@@ -416,7 +424,7 @@ exports[`Field should render examples: Field 4`] = `
 </div>"
 `;
 
-exports[`Field should render examples: Field 5`] = `
+exports[`Field should render examples: Field 6`] = `
 "<div>
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'am a SelectBox</label>
@@ -461,7 +469,7 @@ exports[`Field should render examples: Field 5`] = `
 </div>"
 `;
 
-exports[`Field should render examples: Field 6`] = `
+exports[`Field should render examples: Field 7`] = `
 "<div>
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idFieldPassword\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm a password label</label>
@@ -473,7 +481,7 @@ exports[`Field should render examples: Field 6`] = `
 </div>"
 `;
 
-exports[`Field should render examples: Field 7`] = `
+exports[`Field should render examples: Field 8`] = `
 "<div>
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idFieldPassword\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm a password label</label>
@@ -485,7 +493,7 @@ exports[`Field should render examples: Field 7`] = `
 </div>"
 `;
 
-exports[`Field should render examples: Field 8`] = `
+exports[`Field should render examples: Field 9`] = `
 "<div>
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm a label</label>
@@ -495,7 +503,7 @@ exports[`Field should render examples: Field 8`] = `
 </div>"
 `;
 
-exports[`Field should render examples: Field 9`] = `
+exports[`Field should render examples: Field 10`] = `
 "<div>
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm a label</label>
@@ -505,7 +513,7 @@ exports[`Field should render examples: Field 9`] = `
 </div>"
 `;
 
-exports[`Field should render examples: Field 10`] = `
+exports[`Field should render examples: Field 11`] = `
 "<div>
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\" style=\\"color: teal;\\">I'm a label</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" style=\\"border-color: teal;\\" value=\\"\\"></div>
@@ -513,7 +521,7 @@ exports[`Field should render examples: Field 10`] = `
 </div>"
 `;
 
-exports[`Field should render examples: Field 11`] = `
+exports[`Field should render examples: Field 12`] = `
 "<div>
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\" style=\\"color: teal;\\">I'm a label</label>
@@ -527,7 +535,7 @@ exports[`Field should render examples: Field 11`] = `
 </div>"
 `;
 
-exports[`Field should render examples: Field 12`] = `
+exports[`Field should render examples: Field 13`] = `
 "<div>
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\"></label>
