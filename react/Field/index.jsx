@@ -110,7 +110,7 @@ const Field = props => {
     size
   } = props
   const controlledProps = {
-    ...(value ? { value } : {}),
+    ...(value !== undefined ? { value } : {}),
     ...(onChange ? { onChange } : {})
   }
   const inputType = type => {
@@ -269,7 +269,7 @@ Field.defaultProps = {
   label: '',
   id: '',
   type: 'text',
-  value: '',
+  value: undefined,
   placeholder: '',
   error: false,
   size: 'large',

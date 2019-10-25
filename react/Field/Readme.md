@@ -19,6 +19,22 @@ import Field from 'cozy-ui/transpiled/react/Field';
 </form>
 ```
 
+##### Controlled input
+
+An input is controlled if `props.value` is passed, even if it is empty.
+
+```
+import Field from 'cozy-ui/transpiled/react/Field';
+
+initialState = { value: '' }
+
+const handleChange = ev => setState({ value: ev.target.value });
+
+<p>
+  <Field id='controlled-field' onChange={handleChange} value={state.value} />
+</p>
+```
+
 - `inputRef`
 
 This property is mapped to `<Input />` component `inputRef` property.
