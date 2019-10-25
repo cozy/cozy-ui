@@ -45,5 +45,30 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, soluta. Voluptas 
     </TabPanels>
   </Tabs>
 
+  <div style={{ width: 300, marginTop: 32 }}>
+    <Tabs initialActiveTab='general'>
+      <TabList inverted>
+        <Tab name='general'>General</Tab>
+        <Tab name='details'>Details</Tab>
+        <Tab name='similar'>Similar</Tab>
+        <Tab name='others'>Others</Tab>
+      </TabList>
+      <TabPanels>
+        <TabPanel name='general'>
+          { general }
+        </TabPanel>
+        <TabPanel name='details'>
+          { description }
+        </TabPanel>
+        <TabPanel name='similar'>
+          Similar tab
+        </TabPanel>
+        <TabPanel name='others'>
+          Others tab
+        </TabPanel>
+      </TabPanels>
+    </Tabs>
+  </div>
+
 </>
 ```

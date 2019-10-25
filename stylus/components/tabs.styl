@@ -5,7 +5,8 @@ $tabs-base
     .coz-tab-list
         border-bottom  rem(1) solid var(--silver)
         background var(--tabsBackgroundColor)
-        overflow-x scroll
+        overflow-x auto
+        display flex
 
     .coz-tab-list--inverted
         --tabsActiveTextColor var(--primaryContrastTextColor)
@@ -14,7 +15,7 @@ $tabs-base
         --tabsBackgroundColor var(--primaryColor)
 
     .coz-tab
-        display        inline-block
+        flex 0 0
         padding        rem(10 16)
         text-transform uppercase
         font-size      rem(12)

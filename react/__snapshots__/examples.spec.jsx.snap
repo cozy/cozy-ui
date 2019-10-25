@@ -3914,6 +3914,21 @@ exports[`Tabs should render examples: Tabs 1`] = `
       </div>
     </div>
   </div>
+  <div style=\\"width: 300px; margin-top: 32px;\\">
+    <div class=\\"styles__coz-tabs___24QL5\\">
+      <div class=\\"styles__coz-tab-list___3qac8 styles__coz-tab-list--inverted___3VjXc\\">
+        <div class=\\"styles__coz-tab___2mOye styles__coz-tab--active___1wmwM\\">General</div>
+        <div class=\\"styles__coz-tab___2mOye\\">Details</div>
+        <div class=\\"styles__coz-tab___2mOye\\">Similar</div>
+        <div class=\\"styles__coz-tab___2mOye\\">Others</div>
+      </div>
+      <div class=\\"\\">
+        <div class=\\"styles__coz-tab-panel___35538\\">
+          Grace Murray Hopper, née le 9 décembre 1906 à New York et morte le 1er janvier 1992 dans le comté d'Arlington, est une informaticienne américaine et Rear admiral (lower half) de la marine américaine. Elle est la conceptrice du premier compilateur en 1951 (A-0 System) et du langage COBOL en 1959.
+        </div>
+      </div>
+    </div>
+  </div>
 </div>"
 `;
 
