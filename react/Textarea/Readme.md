@@ -54,3 +54,5 @@ import Textarea from 'cozy-ui/transpiled/react/Textarea';
   <Textarea name='my-field' />
 </div>
 ```
+
+It will also forwards the [`ref`](https://reactjs.org/docs/refs-and-the-dom.html) property received by the `<Textarea />` to the underlying `<textarea />`. The calling component will then have access to a reference to the `<textarea />` DOM node.

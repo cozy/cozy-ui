@@ -3,7 +3,7 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
-const Textarea = props => {
+const Textarea = React.forwardRef((props, ref) => {
   const {
     className,
     disabled,
@@ -16,6 +16,7 @@ const Textarea = props => {
   } = props
   return (
     <textarea
+      ref={ref}
       aria-disabled={disabled}
       disabled={disabled}
       placeholder={placeholder}
@@ -33,7 +34,7 @@ const Textarea = props => {
       {children}
     </textarea>
   )
-}
+})
 
 Textarea.propTypes = {
   children: PropTypes.node,
