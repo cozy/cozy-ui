@@ -1,14 +1,46 @@
 # Display a Modal with a link to the manager to buy space
 
-```
-import {QuotaAlert} from 'cozy-ui/transpiled/react/QuotaAlert';
-import CozyClientProvider from './demo/CozyClientProvider';
+The link to the manager is only displayed if there is a managerUrl
+in the stack response
+
+```jsx noeditor
+import QuotaAlert from "cozy-ui/transpiled/react/QuotaAlert";
+import { CozyProvider } from "cozy-client";
 
 <div>
-  <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
+  <button onClick={() => setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
   </button>
 
-  {state.modalOpened && <CozyClientProvider><QuotaAlert t={(e) => e} onClose={() => setState({ modalOpened: false}) } /></CozyClientProvider> }
-</div>
+  {state.modalOpened && (
+    <CozyProvider
+      client={{
+        getStackClient: () => ({
+          fetchJSON: () =>
+            Promise.resolve({
+              data: {
+                attributes: { uuid: "1223", manager_url: "http://mycozy.cloud" }
+              }
+            })
+        })
+      }}
+    >
+      <QuotaAlert onClose={() => setState({ modalOpened: false })} />
+    </CozyProvider>
+  )}
+</div>;
+```
+
+```jsx static
+import { QuotaAlert } from "cozy-ui/transpiled/react/QuotaAlert";
+
+<div>
+  <button onClick={() => setState({ modalOpened: !state.modalOpened })}>
+    Toggle modal
+  </button>
+
+  {state.modalOpened && (
+    <QuotaAlert onClose={() => setState({ modalOpened: false })} />
+  )}
+</div>;
 ```

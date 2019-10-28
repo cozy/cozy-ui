@@ -18,7 +18,7 @@ const locales = {
 const buildPremiumLink = (uuid, managerUrl) =>
   `${managerUrl}/cozy/instances/${uuid}/premium`
 
-export const QuotaAlert = ({ t, onClose, client }) => {
+const QuotaAlert = ({ t, onClose, client }) => {
   let uuid, managerUrl
   /**
    * We do the request only on the web since Apple
