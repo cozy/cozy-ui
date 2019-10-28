@@ -18,18 +18,9 @@ const locales = {
 const buildPremiumLink = (uuid, managerUrl) =>
   `${managerUrl}/cozy/instances/${uuid}/premium`
 
-const QuotaAlert = ({ t, onClose, client }) => {
-  let uuid, managerUrl
-  /**
-   * We do the request only on the web since Apple
-   * and Google have a restricted policy for the
-   * inApp purchase...
-   */
-  if (!isMobileApp()) {
-    const instanceInfo = useInstance(client)
-    uuid = get(instanceInfo, 'instance.data.attributes.uuid')
-    managerUrl = get(instanceInfo, 'context.data.attributes.manager_url')
-  }
+const QuotaModalAlert = withLocales(locales)(({ t, onClose, instance }) => {
+  const uuid = get(instance, 'instance.data.attributes.uuid')
+  const managerUrl = get(instance, 'context.data.attributes.manager_url')
 
   return (
     <Modal
@@ -46,6 +37,22 @@ const QuotaAlert = ({ t, onClose, client }) => {
       dismissAction={onClose}
     />
   )
-}
+})
 
-export default withLocales(locales)(withClient(QuotaAlert))
+const QuotaAlert = withClient(({ client, onClose }) => {
+  /**
+   * We don't want to call useInstance if we are on
+   * mobile since we don't want to create a link to the cozy manager
+   * because Apple and Google have restricted policy about
+   * making a link to an outside purchase.
+   *
+   * So no call, no instance info, no button
+   */
+  if (isMobileApp()) {
+    return <QuotaModalAlert onClose={onClose} />
+  }
+  const instanceInfo = useInstance(client)
+  return <QuotaModalAlert instance={instanceInfo} onClose={onClose} />
+})
+
+export default QuotaAlert

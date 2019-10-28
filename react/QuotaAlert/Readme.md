@@ -32,7 +32,7 @@ import { CozyProvider } from "cozy-client";
 ```
 
 ```jsx static
-import { QuotaAlert } from "cozy-ui/transpiled/react/QuotaAlert";
+import QuotaAlert from "cozy-ui/transpiled/react/QuotaAlert";
 
 <div>
   <button onClick={() => setState({ modalOpened: !state.modalOpened })}>
