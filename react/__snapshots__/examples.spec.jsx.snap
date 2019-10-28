@@ -3403,6 +3403,12 @@ exports[`Menu should render examples: Menu 3`] = `
 </div>"
 `;
 
+exports[`QuotaAlert should render examples: QuotaAlert 1`] = `
+"<div>
+  <div><button>Toggle modal</button></div>
+</div>"
+`;
+
 exports[`Radio should render examples: Radio 1`] = `
 "<div>
   <form>
