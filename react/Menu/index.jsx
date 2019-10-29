@@ -109,6 +109,7 @@ class Menu extends Component {
       /* eslint-disable no-unused-vars */
       onSelect,
       onSelectDisabled,
+      initialOpen,
       /* eslint-enable no-unused-vars */
       ...restProps
     } = this.props
