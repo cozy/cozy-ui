@@ -62,7 +62,7 @@
   "devDependencies": {
     "@babel/cli": "7.6.2",
     "@babel/core": "7.6.2",
-    "@material-ui/core": "3.9.3",
+    "@material-ui/core": "4.5.2",
     "@semantic-release/changelog": "2.1.2",
     "@semantic-release/git": "5.0.0",
     "@semantic-release/npm": "3.4.1",
@@ -137,7 +137,7 @@
   },
   "peerDependencies": {
     "puppeteer": "1.20.0",
-    "@material-ui/core": "3.9.3",
+    "@material-ui/core": "4.5.2",
     "cozy-client": "*",
     "cozy-device-helper": "1.7.5",
     "piwik-react-router": "^0.8.2",
