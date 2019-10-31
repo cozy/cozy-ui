@@ -75,7 +75,7 @@
     "browserslist-config-cozy": "0.2.0",
     "commitlint": "7.6.1",
     "commitlint-config-cozy": "0.3.27",
-    "copyfiles": "1.2.0",
+    "copyfiles": "2.1.1",
     "cozy-client": "6.58.1",
     "cozy-device-helper": "1.7.5",
     "css-loader": "0.28.11",
