@@ -21,7 +21,7 @@ const CompositeRow = ({
 }) => {
   return (
     <Media
-      className={cx('u-mb-2 ', className, dense ? 'u-ph-1' : 'u-p-1')}
+      className={cx(className, dense ? 'u-ph-1' : 'u-p-1')}
       style={dense ? Object.assign({}, denseStyle, style) : style}
     >
       <div className="u-media u-media-grow u-row-m">
