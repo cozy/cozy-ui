@@ -50,7 +50,7 @@ const getBreakpointsStatus = breakpoints => {
  *
  *
  */
-const withBreakpoints = (bp = breakpoints) => Wrapped =>
+const withBreakpoints = (bp = breakpoints) => Wrapped => {
   class Aware extends Component {
     constructor(props) {
       super(props)
@@ -80,6 +80,10 @@ const withBreakpoints = (bp = breakpoints) => Wrapped =>
       return <Wrapped {...props} breakpoints={breakpoints} />
     }
   }
+
+  Aware.displayName = `withBreakpoints(${Wrapped.displayName || Wrapped.name})`
+  return Aware
+}
 
 /**
  * HOC that tries a predicate on props + state and
