@@ -7,7 +7,29 @@ import TextField from 'cozy-ui/transpiled/react/MuiCozyTheme/TextField';
 <MuiCozyTheme>
   <TextField
     required
-    id="filled-required"
+    id="required-outlined"
+    label="Label"
+    defaultValue="Default value"
+    margin="normal"
+    variant="outlined"
+    placeholder="placeholder"
+    helperText="Helper text"
+  /><br/>
+  <TextField
+    required
+    error
+    id="required-error"
+    label="Label"
+    defaultValue="Default value"
+    margin="normal"
+    variant="outlined"
+    placeholder="placeholder"
+    helperText="Helper text"
+  /><br/>
+  <TextField
+    required
+    disabled
+    id="required-disabled"
     label="Label"
     defaultValue="Default value"
     margin="normal"
