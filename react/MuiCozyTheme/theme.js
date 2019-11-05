@@ -48,6 +48,9 @@ export const theme = createMuiTheme({
         '&$disabled': {
           background: 'var(--paleGrey)'
         },
+        '&:hover $notchedOutline': {
+          borderColor: 'var(--coolGrey)' // Does not seem to work, IDK why :/
+        },
         '&$focused $notchedOutline': {
           borderWidth: '0.0625rem'
         }
