@@ -17,12 +17,14 @@ const CompositeRow = ({
   image,
   right,
   actions,
-  dense
+  dense,
+  ...rest
 }) => {
   return (
     <Media
       className={cx(className, dense ? 'u-ph-1' : 'u-p-1')}
       style={dense ? Object.assign({}, denseStyle, style) : style}
+      {...rest}
     >
       <div className="u-media u-media-grow u-row-m">
         {image ? <Img className="u-flex-self-start">{image}</Img> : null}
