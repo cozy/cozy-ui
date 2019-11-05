@@ -4,14 +4,16 @@ import styles from './PercentageLine.styl'
 import PropTypes from 'prop-types'
 
 const PercentageLine = ({ value, color, className, style }) => (
-  <div
-    className={cx(className, styles.PercentageLine)}
-    style={{
-      transform: `scaleX(${value / 100})`,
-      backgroundColor: color,
-      ...style
-    }}
-  />
+  <div className={cx(className, styles.PercentageLine)}>
+    <div
+      className={styles.PercentageLine__inner}
+      style={{
+        transform: `scaleX(${value / 100})`,
+        backgroundColor: color,
+        ...style
+      }}
+    />
+  </div>
 )
 
 PercentageLine.propTypes = {
