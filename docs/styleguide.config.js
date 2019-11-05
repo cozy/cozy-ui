@@ -112,11 +112,12 @@ module.exports = {
       components: () => [
         '../react/MuiCozyTheme/index.jsx',
         '../react/MuiCozyTheme/Buttons',
-        '../react/MuiCozyTheme/Menus',
-        '../react/MuiCozyTheme/List',
-        '../react/MuiCozyTheme/RaisedList',
         '../react/MuiCozyTheme/ExpansionPanel',
-        '../react/MuiCozyTheme/Grid'
+        '../react/MuiCozyTheme/Grid',
+        '../react/MuiCozyTheme/List',
+        '../react/MuiCozyTheme/Menus',
+        '../react/MuiCozyTheme/RaisedList',
+        '../react/MuiCozyTheme/TextField'
       ]
     },
     {
