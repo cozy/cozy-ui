@@ -20,6 +20,9 @@ export const theme = createMuiTheme({
       dark: getCssVariableValue('scienceBlue'),
       contrastText: getCssVariableValue('primaryContrastTextColor')
     },
+    error: {
+      main: getCssVariableValue('errorColor')
+    },
     secondary: {
       light: getCssVariableValue('monza'),
       main: getCssVariableValue('portage'),
@@ -40,6 +43,19 @@ export const theme = createMuiTheme({
     borderRadius: defaultValues.borderRadius
   },
   overrides: {
+    MuiOutlinedInput: {
+      root: {
+        '&$disabled': {
+          background: 'var(--paleGrey)'
+        },
+        '&$focused $notchedOutline': {
+          borderWidth: '0.0625rem'
+        }
+      },
+      notchedOutline: {
+        borderColor: 'var(--silver)'
+      }
+    },
     MuiButton: {
       root: {
         borderRadius: 0
@@ -171,6 +187,15 @@ export const theme = createMuiTheme({
       gutters: {
         paddingLeft: 24,
         paddingRight: 24
+      }
+    },
+    MuiTextField: {
+      borderWidth: '0.0625rem'
+    },
+    MuiFormHelperText: {
+      root: {
+        fontStyle: 'italic',
+        fontSize: '0.875rem'
       }
     }
   },
