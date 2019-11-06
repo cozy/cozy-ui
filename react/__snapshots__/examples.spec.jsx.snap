@@ -3425,6 +3425,21 @@ exports[`Menu should render examples: Menu 3`] = `
 </div>"
 `;
 
+exports[`PercentageBar should render examples: PercentageBar 1`] = `
+"<div><button>Random percentage</button>50.00% <div class=\\"styles__PercentageBar___12TWu\\" style=\\"margin-bottom: 2rem;\\">
+    <div class=\\"styles__PercentageBar__line___1DAnN PercentageLine__PercentageLine___3koWP\\" style=\\"transform: scaleX(0.5);\\"></div>
+  </div>
+  <div class=\\"styles__PercentageBar___12TWu\\">
+    <div class=\\"styles__PercentageBar__line___1DAnN PercentageLine__PercentageLine___3koWP\\" style=\\"transform: scaleX(0.5);\\"></div>
+  </div>
+</div>"
+`;
+
+exports[`PercentageLine should render examples: PercentageLine 1`] = `
+"<div><button>Random percentage</button>50.00% <div class=\\"PercentageLine__PercentageLine___3koWP\\" style=\\"transform: scaleX(0.5);\\"></div>
+</div>"
+`;
+
 exports[`QuotaAlert should render examples: QuotaAlert 1`] = `
 "<div>
   <div><button>Toggle modal</button></div>
