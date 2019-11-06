@@ -21,7 +21,7 @@ export const theme = createMuiTheme({
       contrastText: getCssVariableValue('primaryContrastTextColor')
     },
     error: {
-      main: getCssVariableValue('errorColor')
+      main: getCssVariableValue('pomegranate')
     },
     secondary: {
       light: getCssVariableValue('monza'),
