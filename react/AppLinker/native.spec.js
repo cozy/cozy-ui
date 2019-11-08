@@ -11,6 +11,24 @@ describe('native functions', () => {
 
       expect(webLink).toEqual('https://test-drive.cozy.tools:8080/#/files/1')
     })
+
+    it('should handle both types of subdomains', () => {
+      const flatLink = generateWebLink({
+        cozyUrl: 'https://test.cozy.tools:8080',
+        nativePath: '/files/1',
+        slug: 'drive',
+        subDomainType: 'flat'
+      })
+      expect(flatLink).toEqual('https://test-drive.cozy.tools:8080/#/files/1')
+
+      const nestedLink = generateWebLink({
+        cozyUrl: 'https://cozy.tools:8080',
+        nativePath: '/files/1',
+        slug: 'drive',
+        subDomainType: 'nested'
+      })
+      expect(nestedLink).toEqual('https://drive.cozy.tools:8080/#/files/1')
+    })
   })
 
   describe('universal link', () => {
@@ -69,6 +87,29 @@ describe('native functions', () => {
       const endLink =
         'https://links.mycozy.cloud/drive/files?fallback=https%3A%2F%2Fname-drive.cozy.tools%2F%23%2Ffiles'
       expect(universalLink).toEqual(endLink)
+    })
+
+    it('should handle both types of subdomains', () => {
+      const flatUniversalLink = generateUniversalLink({
+        slug: 'drive',
+        nativePath: '/files',
+        cozyUrl: 'https://name.cozy.tools/',
+        subDomainType: 'flat'
+      })
+      expect(flatUniversalLink).toEqual(
+        'https://links.mycozy.cloud/drive/files?fallback=https%3A%2F%2Fname-drive.cozy.tools%2F%23%2Ffiles'
+      )
+
+      const nestedUniversalLink = generateUniversalLink({
+        slug: 'drive',
+        nativePath: '/files',
+        cozyUrl: 'https://name.cozy.tools/',
+        subDomainType: 'nested'
+      })
+
+      expect(nestedUniversalLink).toEqual(
+        'https://links.mycozy.cloud/drive/files?fallback=https%3A%2F%2Fdrive.name.cozy.tools%2F%23%2Ffiles'
+      )
     })
   })
 })
