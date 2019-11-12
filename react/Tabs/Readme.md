@@ -1,6 +1,6 @@
-
 ```
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from 'cozy-ui/transpiled/react/Tabs';
+import Icon from 'cozy-ui/transpiled/react/Icon';
 
 const general = `
   Grace Murray Hopper, née le 9 décembre 1906 à New York et morte le 1er janvier 1992 dans le comté d'Arlington, est une informaticienne américaine et Rear admiral (lower half) de la marine américaine. Elle est la conceptrice du premier compilateur en 1951 (A-0 System) et du langage COBOL en 1959.
@@ -33,7 +33,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, soluta. Voluptas 
   <Tabs initialActiveTab='general'>
     <TabList inverted>
       <Tab name='general'>General</Tab>
-      <Tab name='details'>Details</Tab>
+      <Tab name='details'>Details <Icon icon="magnifier" size={13} className="u-ml-half" /></Tab>
     </TabList>
     <TabPanels>
       <TabPanel name='general'>
