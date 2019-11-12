@@ -4058,6 +4058,36 @@ exports[`Textarea should render examples: Textarea 6`] = `
 </div>"
 `;
 
+exports[`ThresholdBar should render examples: ThresholdBar 1`] = `
+"<div>val: 50, threshold: 100<div class=\\"styles__ThresholdBar___R_ADM\\">
+    <div class=\\"styles__ThresholdBar__bg___3EmkC\\">
+      <div style=\\"width: 50%;\\" class=\\"styles__ThresholdBar__inner___8PPM_\\"></div>
+    </div>
+  </div><br>val: 25, threshold: 100<div class=\\"styles__ThresholdBar___R_ADM\\">
+    <div class=\\"styles__ThresholdBar__bg___3EmkC\\">
+      <div style=\\"width: 25%;\\" class=\\"styles__ThresholdBar__inner___8PPM_\\"></div>
+    </div>
+  </div><br>val: 50, threshold: 100<div class=\\"styles__ThresholdBar___R_ADM\\">
+    <div class=\\"styles__ThresholdBar__bg___3EmkC\\">
+      <div style=\\"width: 50%;\\" class=\\"styles__ThresholdBar__inner___8PPM_\\"></div>
+    </div>
+  </div><br>val: 200, threshold: 100<div class=\\"styles__ThresholdBar___R_ADM styles__ThresholdBar--exceeded___22r2C\\">
+    <div class=\\"styles__ThresholdBar__bg___3EmkC\\">
+      <div style=\\"width: 50%;\\" class=\\"styles__ThresholdBar__inner___8PPM_\\"></div>
+    </div>
+    <div class=\\"styles__ThresholdBar__tick___2D_0Q\\" style=\\"left: 50%;\\"></div>
+  </div><br>val: 120, threshold: 100<div class=\\"styles__ThresholdBar___R_ADM styles__ThresholdBar--exceeded___22r2C\\">
+    <div class=\\"styles__ThresholdBar__bg___3EmkC\\">
+      <div style=\\"width: 83.33333333333334%;\\" class=\\"styles__ThresholdBar__inner___8PPM_\\"></div>
+    </div>
+    <div class=\\"styles__ThresholdBar__tick___2D_0Q\\" style=\\"left: 83.33333333333334%;\\"></div>
+  </div><br><input type=\\"range\\" step=\\"1\\" min=\\"0\\" max=\\"200\\" value=\\"0\\">val: 25, threshold: 100<div class=\\"styles__ThresholdBar___R_ADM\\">
+    <div class=\\"styles__ThresholdBar__bg___3EmkC\\">
+      <div style=\\"width: 25%;\\" class=\\"styles__ThresholdBar__inner___8PPM_\\"></div>
+    </div>
+  </div><br></div>"
+`;
+
 exports[`Toggle should render examples: Toggle 1`] = `"<div><span class=\\"styles__toggle___3zVsE\\"><input type=\\"checkbox\\" id=\\"simple-toggle\\" class=\\"styles__checkbox___3ko96\\"><label for=\\"simple-toggle\\" class=\\"styles__label___3jY1f\\"></label></span></div>"`;
 
 exports[`Toggle should render examples: Toggle 2`] = `"<div><span class=\\"styles__toggle___3zVsE\\"><input type=\\"checkbox\\" id=\\"toggle\\" class=\\"styles__checkbox___3ko96\\" checked=\\"\\"><label for=\\"toggle\\" class=\\"styles__label___3jY1f\\"></label></span></div>"`;
