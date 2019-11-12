@@ -3961,7 +3961,9 @@ exports[`Tabs should render examples: Tabs 1`] = `
   <div class=\\"styles__coz-tabs___24QL5\\">
     <div class=\\"styles__coz-tab-list___3qac8 styles__coz-tab-list--inverted___3VjXc\\">
       <div class=\\"styles__coz-tab___2mOye styles__coz-tab--active___1wmwM\\">General</div>
-      <div class=\\"styles__coz-tab___2mOye\\">Details</div>
+      <div class=\\"styles__coz-tab___2mOye\\">Details <svg class=\\"u-ml-half styles__icon___23x3R\\" width=\\"13\\" height=\\"13\\">
+          <use xlink:href=\\"#magnifier\\"></use>
+        </svg></div>
     </div>
     <div class=\\"\\">
       <div class=\\"styles__coz-tab-panel___35538\\">
