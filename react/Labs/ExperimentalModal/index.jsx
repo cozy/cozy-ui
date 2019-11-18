@@ -52,20 +52,22 @@ class ExperimentalModal extends Component {
         >
           {description}
         </ModalContent>
-        <ModalFooter
-          className={classNames({
-            [styles['modal-footer']]: isMobile
-          })}
-        >
-          <ModalButtons
-            primaryText={primaryText}
-            primaryAction={primaryAction}
-            primaryType={'regular'}
-            secondaryText={secondaryText}
-            secondaryAction={secondaryAction}
-            secondaryType={'secondary'}
-          />
-        </ModalFooter>
+        {primaryText && primaryAction && (
+          <ModalFooter
+            className={classNames({
+              [styles['modal-footer']]: isMobile
+            })}
+          >
+            <ModalButtons
+              primaryText={primaryText}
+              primaryAction={primaryAction}
+              primaryType={'regular'}
+              secondaryText={secondaryText}
+              secondaryAction={secondaryAction}
+              secondaryType={'secondary'}
+            />
+          </ModalFooter>
+        )}
       </Modal>
     )
   }
