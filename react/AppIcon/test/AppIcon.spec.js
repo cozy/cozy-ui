@@ -4,12 +4,16 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import AppIcon from '../'
+import { AppIcon } from '../'
 
 describe('AppIcon component', () => {
   const app = {}
   const domain = 'cozy.tools'
   const secure = true
+
+  const mockClient = {
+    getStackClient: () => ({ uri: `https://${domain}` })
+  }
 
   let successFetchIcon
   let failureFetchIcon
@@ -31,12 +35,12 @@ describe('AppIcon component', () => {
 
   it(`renders as loading`, () => {
     const wrapper = shallow(
-      <AppIcon app={app} fetchIcon={successFetchIcon} secure={secure} />
+      <AppIcon app={app} fetchIcon={successFetchIcon} client={mockClient} />
     )
 
     const component = wrapper.getElement()
     expect(component).toMatchSnapshot()
-    expect(successFetchIcon).toHaveBeenCalledWith(app, undefined, secure)
+    expect(successFetchIcon).toHaveBeenCalledWith(app, domain, secure)
     expect(console.error).toHaveBeenCalledTimes(0)
   })
 
@@ -45,15 +49,15 @@ describe('AppIcon component', () => {
       <AppIcon
         app={app}
         fetchIcon={successFetchIcon}
+        client={mockClient}
         onReady={() => {
           wrapper.update()
           const component = wrapper.getElement()
           expect(component).toMatchSnapshot()
-          expect(successFetchIcon).toHaveBeenCalledWith(app, undefined, secure)
+          expect(successFetchIcon).toHaveBeenCalledWith(app, domain, secure)
           expect(console.error).toHaveBeenCalledTimes(0)
           done()
         }}
-        secure={secure}
       />
     )
   })
@@ -63,15 +67,15 @@ describe('AppIcon component', () => {
       <AppIcon
         app={app}
         fetchIcon={failureFetchIcon}
+        client={mockClient}
         onReady={() => {
           wrapper.update()
           const component = wrapper.getElement()
           expect(component).toMatchSnapshot()
-          expect(failureFetchIcon).toHaveBeenCalledWith(app, undefined, secure)
+          expect(failureFetchIcon).toHaveBeenCalledWith(app, domain, secure)
           expect(console.error).toHaveBeenCalledTimes(0)
           done()
         }}
-        secure={secure}
       />
     )
   })
@@ -81,15 +85,15 @@ describe('AppIcon component', () => {
       <AppIcon
         app={app}
         fetchIcon={failureFetchIcon}
+        client={mockClient}
         onReady={() => {
           wrapper.update()
           const component = wrapper.getElement()
           expect(component).toMatchSnapshot()
-          expect(failureFetchIcon).toHaveBeenCalledWith(app, undefined, secure)
+          expect(failureFetchIcon).toHaveBeenCalledWith(app, domain, secure)
           expect(console.error).toHaveBeenCalledTimes(0)
           done()
         }}
-        secure={secure}
         fallbackIcon="warning"
       />
     )
@@ -113,36 +117,35 @@ describe('AppIcon component', () => {
 
   it(`uses Preloader.preload when no fetchIcon method is provided`, async done => {
     jest.mock('../Preloader')
-    const AppIcon = require('../').default
+    const AppIcon = require('../').AppIcon
     const Preloader = require('../Preloader')
     const wrapper = shallow(
       <AppIcon
         app={app}
+        client={mockClient}
         onReady={() => {
           wrapper.update()
           const component = wrapper.getElement()
           expect(component).toMatchSnapshot()
-          expect(Preloader.preload).toHaveBeenCalledWith(app, undefined, secure)
+          expect(Preloader.preload).toHaveBeenCalledWith(app, domain, secure)
           expect(console.error).toHaveBeenCalledTimes(0)
           done()
         }}
-        secure={secure}
       />
     )
   })
 
   it(`renders immediately when icon is alredy preloaded`, async done => {
     jest.mock('../Preloader')
-    const AppIcon = require('../').default
+    const AppIcon = require('../').AppIcon
     const Preloader = require('../Preloader')
 
     shallow(
       <AppIcon
         app={app}
+        client={mockClient}
         onReady={() => {
-          const wrapper = shallow(
-            <AppIcon app={app} domain={domain} secure={secure} />
-          )
+          const wrapper = shallow(<AppIcon app={app} client={mockClient} />)
           const component = wrapper.getElement()
           expect(component).toMatchSnapshot()
           expect(Preloader.getPreloaded).toHaveBeenCalledWith(
@@ -153,7 +156,6 @@ describe('AppIcon component', () => {
           expect(console.error).toHaveBeenCalledTimes(0)
           done()
         }}
-        secure={secure}
       />
     )
   })

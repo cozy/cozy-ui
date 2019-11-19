@@ -9,7 +9,7 @@ exports[`SmallAppItem component should render correctly an app 1`] = `
   <div
     className="SmallAppItem__SmallAppItem-icon-wrapper___rQAvt"
   >
-    <AppIcon
+    <withClient(AppIcon)
       app={
         Object {
           "developer": Object {
@@ -55,7 +55,7 @@ exports[`SmallAppItem component should render correctly an app in maintenance 1`
   <div
     className="SmallAppItem__SmallAppItem-icon-wrapper___rQAvt"
   >
-    <AppIcon
+    <withClient(AppIcon)
       app={
         Object {
           "developer": Object {
@@ -110,7 +110,7 @@ exports[`SmallAppItem component should render correctly an app with iconToLoad (
   <div
     className="SmallAppItem__SmallAppItem-icon-wrapper___rQAvt"
   >
-    <AppIcon
+    <withClient(AppIcon)
       app={
         Object {
           "developer": Object {
@@ -163,7 +163,7 @@ exports[`SmallAppItem component should render correctly an app with iconToLoad i
   <div
     className="SmallAppItem__SmallAppItem-icon-wrapper___rQAvt"
   >
-    <AppIcon
+    <withClient(AppIcon)
       app={
         Object {
           "developer": Object {
@@ -216,7 +216,7 @@ exports[`SmallAppItem component should render correctly an app without developer
   <div
     className="SmallAppItem__SmallAppItem-icon-wrapper___rQAvt"
   >
-    <AppIcon
+    <withClient(AppIcon)
       app={
         Object {
           "editor": "cozy",
@@ -254,7 +254,7 @@ exports[`SmallAppItem component should render correctly an installed app 1`] = `
   <div
     className="SmallAppItem__SmallAppItem-icon-wrapper___rQAvt"
   >
-    <AppIcon
+    <withClient(AppIcon)
       app={
         Object {
           "developer": Object {
@@ -306,7 +306,7 @@ exports[`SmallAppItem component should render correctly an installed app without
   <div
     className="SmallAppItem__SmallAppItem-icon-wrapper___rQAvt"
   >
-    <AppIcon
+    <withClient(AppIcon)
       app={
         Object {
           "developer": Object {
