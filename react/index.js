@@ -83,3 +83,8 @@ export { default as Popup } from './Popup'
 export { default as IconStack } from './IconStack'
 export { default as QuotaAlert } from './QuotaAlert'
 export { default as ThresholdBar } from './ThresholdBar'
+export {
+  default as ViewStack,
+  useViewStack,
+  ViewStackContext
+} from './ViewStack'

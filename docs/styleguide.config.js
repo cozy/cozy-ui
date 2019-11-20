@@ -51,7 +51,8 @@ module.exports = {
         '../react/Sidebar/index.jsx',
         '../react/Circle/index.jsx',
         '../react/Page/index.jsx',
-        '../react/NarrowContent/index.jsx'
+        '../react/NarrowContent/index.jsx',
+        '../react/ViewStack/index.jsx'
       ]
     },
     {
