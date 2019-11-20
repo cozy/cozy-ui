@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 
 import styles from './styles.styl'
 
@@ -26,10 +27,10 @@ MaybeLink.propTypes = {
 
 export class BarButton extends PureComponent {
   render() {
-    const { disabled, icon, href, onClick } = this.props
+    const { disabled, icon, href, onClick, className } = this.props
     return (
       <MaybeLink
-        className={styles['c-bar-btn']}
+        className={cx(styles['c-bar-btn'], className)}
         href={!disabled ? href : undefined}
         onClick={!disabled ? onClick : undefined}
       >
@@ -55,7 +56,11 @@ BarButton.propTypes = {
   /**
    * Click event handler on the component.
    */
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  /**
+   * Custom extra class name
+   */
+  className: PropTypes.string
 }
 
 export default BarButton
