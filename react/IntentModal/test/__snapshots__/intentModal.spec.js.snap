@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`IntentModal component renders as expected 1`] = `
-<Unknown
+<Modal
   className="styles__intentModal___1aYIb"
   closable={true}
   closeBtnClassName="styles__intentModal__cross___1Hfuz"
@@ -26,5 +26,5 @@ exports[`IntentModal component renders as expected 1`] = `
     onTerminate={[MockFunction onCompleteMock]}
     type="io.cozy.whatever"
   />
-</Unknown>
+</Modal>
 `;

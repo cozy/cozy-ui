@@ -79,7 +79,11 @@ const migrate = (oldProps, options) => {
  * @param  {Array} migrateOptions - Prop migrations that will be done on the old props
  * @return {HOC}
  */
-export default migrateOptions => Wrapped => oldProps => {
-  const newProps = migrate(oldProps, migrateOptions, Wrapped)
-  return <Wrapped {...newProps} />
+export default migrateOptions => Component => {
+  const Wrapped = oldProps => {
+    const newProps = migrate(oldProps, migrateOptions, Component)
+    return <Component {...newProps} />
+  }
+  Wrapped.displayName = Component.displayName || Component.name
+  return Wrapped
 }
