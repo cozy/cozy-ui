@@ -21,17 +21,18 @@ class ExperimentalModal extends Component {
       secondaryText,
       secondaryAction,
       description,
+      descriptionFooter,
       breakpoints: { isMobile }
     } = this.props
     return (
       <Modal
         mobileFullscreen
-        closable={isMobile ? false : true}
+        closable={isMobile && title ? false : true}
         size="large"
         title={isMobile ? '' : title}
         dismissAction={dismissAction}
       >
-        {isMobile && (
+        {isMobile && title && (
           <ModalHeader className={classNames(styles['modal-header'])}>
             <h2>{title}</h2>
 
@@ -47,10 +48,16 @@ class ExperimentalModal extends Component {
         )}
         <ModalContent
           className={classNames({
-            ['u-flex-grow-1 u-ph-1']: isMobile
+            ['u-flex-grow-1 u-ph-1']: isMobile,
+            ['u-flex u-flex-column']: descriptionFooter
           })}
         >
-          {description}
+          {descriptionFooter ? (
+            <div className="u-flex-grow-1">{description}</div>
+          ) : (
+            <>{description}</>
+          )}
+          {descriptionFooter}
         </ModalContent>
         {primaryText && primaryAction && (
           <ModalFooter
