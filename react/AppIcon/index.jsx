@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { withClient } from 'cozy-client'
 import styles from './styles.styl'
 
-import Icon from '../Icon'
+import Icon, { iconPropType } from '../Icon'
 import palette from '../palette'
-import { iconPropType } from '../Icon'
 
 import { getPreloaded, preload } from './Preloader'
 import { AppDoctype } from '../proptypes'
@@ -17,15 +17,28 @@ const FETCHING = 'fetching'
 export class AppIcon extends Component {
   constructor(props, context) {
     super(props, context)
-    const { app, domain, secure } = props
-    const preloaded = getPreloaded(app, domain, secure)
-    this.state = {
-      error: null,
-      icon: preloaded,
-      status: preloaded ? DONE : FETCHING
-    }
     this.isUnmounting = false
     this.handleError = this.handleError.bind(this)
+
+    try {
+      const { app, client } = props
+      const cozyURL = new URL(client.getStackClient().uri)
+      // TODO: instead of storung domain and secure, pass down the client to the loaders (see https://github.com/cozy/cozy-ui/pull/1243#discussion_r348016827)
+      this.domain = cozyURL.host
+      this.secure = cozyURL.protocol === 'https:'
+
+      const preloaded = getPreloaded(app, this.domain, this.secure)
+      this.state = {
+        error: null,
+        icon: preloaded,
+        status: preloaded ? DONE : FETCHING
+      }
+    } catch (error) {
+      this.state = {
+        error,
+        status: ERRORED
+      }
+    }
   }
 
   componentWillUnmount() {
@@ -43,12 +56,12 @@ export class AppIcon extends Component {
   }
 
   async load() {
-    const { app, domain, fetchIcon, onReady, secure } = this.props
+    const { app, fetchIcon, onReady } = this.props
     const loadFn = fetchIcon || preload
     let loadedUrl
     let loadError
     try {
-      loadedUrl = await loadFn(app, domain, secure)
+      loadedUrl = await loadFn(app, this.domain, this.secure)
     } catch (error) {
       loadError = error
     }
@@ -119,10 +132,9 @@ AppIcon.propTypes = {
   fallbackIcon: iconPropType,
   /** Custom implementation of how to fetch icon */
   fetchIcon: PropTypes.func,
+  client: PropTypes.object.isRequired,
   className: PropTypes.string,
-  domain: PropTypes.string,
-  onReady: PropTypes.func,
-  secure: PropTypes.bool
+  onReady: PropTypes.func
 }
 
-export default AppIcon
+export default withClient(AppIcon)
