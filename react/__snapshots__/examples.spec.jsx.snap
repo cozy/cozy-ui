@@ -574,6 +574,158 @@ exports[`Hero should render examples: Hero 1`] = `
 </div>"
 `;
 
+exports[`HistoryRow should render examples: HistoryRow 1`] = `
+"<div>
+  <div class=\\"styles__media___cSJMp styles__HistoryRowMedia___2jgYN\\">
+    <div class=\\"u-media u-media-grow u-row-m\\">
+      <div class=\\"styles__HistoryRowCircleWrapper___3r8Uo\\">
+        <div class=\\"styles__img___3SHpG styles__HistoryRowMediaImg___1J9OI\\">
+          <div class=\\"styles__c-circle___1DuMR styles__c-circle--small___3uPhB styles__HistoryRowCircle___4FWWa\\"><span class=\\"styles__c-circle-text___1jFgD\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#file\\"></use></svg></span></div>
+        </div>
+      </div>
+      <div class=\\"u-media-grow u-stack-xs \\">
+        <div class=\\"u-media u-row-m\\">
+          <div class=\\"styles__bd___1Uv-F\\">
+            <div class=\\"u-title-h4\\">12/12/12 12:12</div>
+            <div class=\\"u-title-h3\\">Current Version</div>
+          </div>
+          <div class=\\"styles__img___3SHpG\\"><svg class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
+              <use xlink:href=\\"#download\\"></use>
+            </svg></div>
+        </div>
+        <div class=\\"u-caption\\">10ko</div>
+      </div>
+    </div>
+  </div>
+  <div class=\\"styles__media___cSJMp styles__HistoryRowMedia___2jgYN\\">
+    <div class=\\"u-media u-media-grow u-row-m\\">
+      <div class=\\"styles__HistoryRowCircleWrapper___3r8Uo\\">
+        <div class=\\"styles__img___3SHpG styles__HistoryRowMediaImg___1J9OI\\">
+          <div class=\\"styles__c-circle___1DuMR styles__c-circle--xsmall___aEyBX styles__HistoryRowCircle___4FWWa\\"><span class=\\"styles__c-circle-text___1jFgD\\"></span></div>
+        </div>
+      </div>
+      <div class=\\"u-media-grow u-stack-xs \\">
+        <div class=\\"u-media u-row-m\\">
+          <div class=\\"styles__bd___1Uv-F\\">
+            <div class=\\"u-title-h4\\">12/12/12 12:10</div>
+            <div class=\\"u-title-h3\\"></div>
+          </div>
+          <div class=\\"styles__img___3SHpG\\"><svg class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
+              <use xlink:href=\\"#download\\"></use>
+            </svg></div>
+        </div>
+        <div class=\\"u-caption\\">9ko</div>
+      </div>
+    </div>
+  </div>
+  <div class=\\"styles__media___cSJMp styles__HistoryRowMedia___2jgYN\\">
+    <div class=\\"u-media u-media-grow u-row-m\\">
+      <div class=\\"styles__HistoryRowCircleWrapper___3r8Uo\\">
+        <div class=\\"styles__img___3SHpG styles__HistoryRowMediaImg___1J9OI\\">
+          <div class=\\"styles__c-circle___1DuMR styles__c-circle--small___3uPhB styles__HistoryRowCircle___4FWWa\\"><span class=\\"styles__c-circle-text___1jFgD\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#file\\"></use></svg></span></div>
+        </div>
+      </div>
+      <div class=\\"u-media-grow u-stack-xs \\">
+        <div class=\\"u-media u-row-m\\">
+          <div class=\\"styles__bd___1Uv-F\\">
+            <div class=\\"u-title-h4\\">12/12/12 12:09</div>
+            <div class=\\"u-title-h3\\">V2</div>
+          </div>
+          <div class=\\"styles__img___3SHpG\\"><svg class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
+              <use xlink:href=\\"#download\\"></use>
+            </svg></div>
+        </div>
+        <div class=\\"u-caption\\">9ko</div>
+      </div>
+    </div>
+  </div>
+  <div class=\\"styles__media___cSJMp styles__HistoryRowMedia___2jgYN\\">
+    <div class=\\"u-media u-media-grow u-row-m\\">
+      <div class=\\"styles__HistoryRowCircleWrapper___3r8Uo\\">
+        <div class=\\"styles__img___3SHpG styles__HistoryRowMediaImg___1J9OI\\">
+          <div class=\\"styles__c-circle___1DuMR styles__c-circle--xsmall___aEyBX styles__HistoryRowCircle___4FWWa\\"><span class=\\"styles__c-circle-text___1jFgD\\"></span></div>
+        </div>
+      </div>
+      <div class=\\"u-media-grow u-stack-xs \\">
+        <div class=\\"u-media u-row-m\\">
+          <div class=\\"styles__bd___1Uv-F\\">
+            <div class=\\"u-title-h4\\">12/12/12 12:07</div>
+            <div class=\\"u-title-h3\\"></div>
+          </div>
+          <div class=\\"styles__img___3SHpG\\"><svg class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
+              <use xlink:href=\\"#download\\"></use>
+            </svg></div>
+        </div>
+        <div class=\\"u-caption\\">9ko</div>
+      </div>
+    </div>
+  </div>
+  <div class=\\"styles__media___cSJMp styles__HistoryRowMedia___2jgYN\\">
+    <div class=\\"u-media u-media-grow u-row-m\\">
+      <div class=\\"styles__HistoryRowCircleWrapper___3r8Uo\\">
+        <div class=\\"styles__img___3SHpG styles__HistoryRowMediaImg___1J9OI\\">
+          <div class=\\"styles__c-circle___1DuMR styles__c-circle--xsmall___aEyBX styles__HistoryRowCircle___4FWWa\\"><span class=\\"styles__c-circle-text___1jFgD\\"></span></div>
+        </div>
+      </div>
+      <div class=\\"u-media-grow u-stack-xs \\">
+        <div class=\\"u-media u-row-m\\">
+          <div class=\\"styles__bd___1Uv-F\\">
+            <div class=\\"u-title-h4\\">12/12/12 12:05</div>
+            <div class=\\"u-title-h3\\"></div>
+          </div>
+          <div class=\\"styles__img___3SHpG\\"><svg class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
+              <use xlink:href=\\"#download\\"></use>
+            </svg></div>
+        </div>
+        <div class=\\"u-caption\\">9ko</div>
+      </div>
+    </div>
+  </div>
+  <div class=\\"styles__media___cSJMp styles__HistoryRowMedia___2jgYN\\">
+    <div class=\\"u-media u-media-grow u-row-m\\">
+      <div class=\\"styles__HistoryRowCircleWrapper___3r8Uo\\">
+        <div class=\\"styles__img___3SHpG styles__HistoryRowMediaImg___1J9OI\\">
+          <div class=\\"styles__c-circle___1DuMR styles__c-circle--xsmall___aEyBX styles__HistoryRowCircle___4FWWa\\"><span class=\\"styles__c-circle-text___1jFgD\\"></span></div>
+        </div>
+      </div>
+      <div class=\\"u-media-grow u-stack-xs \\">
+        <div class=\\"u-media u-row-m\\">
+          <div class=\\"styles__bd___1Uv-F\\">
+            <div class=\\"u-title-h4\\">12/12/12 12:04</div>
+            <div class=\\"u-title-h3\\"></div>
+          </div>
+          <div class=\\"styles__img___3SHpG\\"><svg class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
+              <use xlink:href=\\"#download\\"></use>
+            </svg></div>
+        </div>
+        <div class=\\"u-caption\\">9ko</div>
+      </div>
+    </div>
+  </div>
+  <div class=\\"styles__media___cSJMp styles__HistoryRowMedia___2jgYN\\">
+    <div class=\\"u-media u-media-grow u-row-m\\">
+      <div class=\\"styles__HistoryRowCircleWrapper___3r8Uo\\">
+        <div class=\\"styles__img___3SHpG styles__HistoryRowMediaImg___1J9OI\\">
+          <div class=\\"styles__c-circle___1DuMR styles__c-circle--small___3uPhB styles__HistoryRowCircle___4FWWa\\"><span class=\\"styles__c-circle-text___1jFgD\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#file\\"></use></svg></span></div>
+        </div>
+      </div>
+      <div class=\\"u-media-grow u-stack-xs \\">
+        <div class=\\"u-media u-row-m\\">
+          <div class=\\"styles__bd___1Uv-F\\">
+            <div class=\\"u-title-h4\\">12/12/12 12:03</div>
+            <div class=\\"u-title-h3\\">V1</div>
+          </div>
+          <div class=\\"styles__img___3SHpG\\"><svg class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
+              <use xlink:href=\\"#download\\"></use>
+            </svg></div>
+        </div>
+        <div class=\\"u-caption\\">9ko</div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
 exports[`Icon should render examples: Icon 1`] = `
 "<div>
   <div style=\\"font-size: 2rem; display: grid; grid-template-columns: repeat(6, 1fr);\\">
