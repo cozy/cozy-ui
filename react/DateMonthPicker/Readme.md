@@ -19,7 +19,7 @@ const handleSelect = monthDate => {
   <Stack>
       Month chosen: { state.monthDate ? state.monthDate : 'No date chosen yet'}<br/>
       <Button onClick={showPicker} label='Choose month'/>
-      { state.choosing ? <Modal dismissAction={hidePicker}>
+      { state.choosing ? <Modal title='Choose month' dismissAction={hidePicker}>
         <DateMonthPicker
             f={x => x}
             onSelect={handleSelect}
