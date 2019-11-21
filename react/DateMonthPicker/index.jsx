@@ -9,6 +9,8 @@ import styles from './styles.styl'
 import cx from 'classnames'
 
 const MonthButton = translate()(({ monthNum, f, onClick, isSelected }) => {
+  // We do not care care about year and day since we are creating the date
+  // only to be able to format it into a monthName
   const d = new Date(2019, monthNum, 15)
   const handleClick = () => {
     onClick(monthNum)
@@ -47,7 +49,6 @@ const DateMonthPicker = ({ initialValue, onSelect }) => {
     const d = new Date(year, month, 1)
     onSelect(format(d, 'YYYY-MM-DD'))
   }
-
   return (
     <>
       <div className={styles.DateMonthPicker__YearControls}>
@@ -55,7 +56,8 @@ const DateMonthPicker = ({ initialValue, onSelect }) => {
           className={styles.DateMonthPicker__YearButton}
           theme="secondary"
           size="small"
-          label=""
+          label={year - 1}
+          iconOnly={true}
           onClick={decreaseYear}
           icon={<Icon icon="left" />}
         />
@@ -71,7 +73,8 @@ const DateMonthPicker = ({ initialValue, onSelect }) => {
           className={styles.DateMonthPicker__YearButton}
           theme="secondary"
           size="small"
-          label=""
+          label={year + 1}
+          iconOnly={true}
           onClick={increaseYear}
           icon={<Icon icon="right" />}
         />
