@@ -1,17 +1,22 @@
 const path = require('path')
+const { isUsingDevStyleguidist } = require('./docs/build-utils')
 
 const plugins = [
-  [
-    'css-modules-transform',
-    {
-      extensions: ['.styl'],
-      preprocessCss: './preprocess',
-      extractCss: './transpiled/react/stylesheet.css',
-      generateScopedName: '[name]__[local]___[hash:base64:5]'
-    }
-  ],
+  // While developing on the styleguidist, we do not want babel to touch the CSS
+  // otherwise CSS hot reload does not work
+  isUsingDevStyleguidist()
+    ? null
+    : [
+        'css-modules-transform',
+        {
+          extensions: ['.styl'],
+          preprocessCss: './preprocess',
+          extractCss: './transpiled/react/stylesheet.css',
+          generateScopedName: '[name]__[local]___[hash:base64:5]'
+        }
+      ],
   ['inline-json-import', {}]
-]
+].filter(Boolean)
 
 module.exports = {
   presets: [
