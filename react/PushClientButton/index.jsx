@@ -3,8 +3,7 @@ import styles from './styles.styl'
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
-import DeviceIcon from 'cozy-ui/assets/icons/illus/device-laptop.svg'
+import { Icon } from 'cozy-ui/transpiled/react'
 
 const ButtonClient = props => {
   const { label, href, onClick, className } = props
@@ -17,7 +16,7 @@ const ButtonClient = props => {
       onClick={onClick}
     >
       <figure>
-        <img width="32" height="32" src={DeviceIcon} />
+        <Icon icon="device-laptop" size="32" />
       </figure>
       <span>{label}</span>
     </a>
