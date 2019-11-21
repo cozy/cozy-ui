@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactRow should match the contact snapshot 1`] = `
+<div
+  className="styles__contact___169nD"
+  onClick={[Function]}
+>
+  <div
+    className="styles__contact-identity___mL3IJ"
+  >
+    <div
+      className="styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv"
+      style={
+        Object {
+          "backgroundColor": "var(--brightSun)",
+          "color": "white",
+        }
+      }
+    >
+      
+      <span
+        className="styles__c-avatar-initials___310qC"
+      >
+        JD
+      </span>
+    </div>
+    <div>
+      <span
+        className="styles__contact-firstname___2GPEr"
+      >
+        John
+      </span>
+       
+      <span
+        className="styles__contact-lastname___134MM"
+      >
+        Doe
+      </span>
+    </div>
+  </div>
+  <div
+    className="styles__contact-email___3n3q2"
+  >
+    johndoe@localhost
+  </div>
+  <div
+    className="styles__contact-phone___1sA_m"
+  >
+    0123456789
+  </div>
+  <div
+    className="styles__contact-cozyurl___3kBp5"
+  >
+    http://johndoe.mycozy.cloud
+  </div>
+</div>
+`;

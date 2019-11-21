@@ -91,3 +91,4 @@ export {
 } from './ViewStack'
 export { default as DateMonthPicker } from './DateMonthPicker'
 export { default as NestedSelect, NestedSelectModal } from './NestedSelect'
+export { default as ContactsList } from './ContactsList'
