@@ -7,15 +7,15 @@ import Modal, { ModalContent } from 'cozy-ui/transpiled/react/Modal';
 
 
 const dictRequire = x => ({})
-const initialState = { choosing: isTesting(), monthDate: '2019-08' }
+const initialState = { choosing: false, monthDate: '2019-08' }
 const showPicker = () => setState({ choosing: true });
 const hidePicker = () => setState({ choosing: false });
 const handleSelect = monthDate => {
   setState({ monthDate })
   hidePicker()
-}
+};
 
-<I18n dictRequire={dictRequire} lang='en'>
+const Interactive = () => (
   <Stack>
       Month chosen: { state.monthDate ? state.monthDate : 'No date chosen yet'}<br/>
       <Button onClick={showPicker} label='Choose month'/>
@@ -29,5 +29,17 @@ const handleSelect = monthDate => {
         </ModalContent>
       </Modal>: null }
   </Stack>
+)
+
+const Static = () => (
+  <DateMonthPicker
+    f={x => x}
+    onSelect={handleSelect}
+    initialValue={state.monthDate}
+  /> 
+);
+
+<I18n dictRequire={dictRequire} lang='en'>
+  { isTesting() ? <Static /> : <Interactive /> }
 </I18n>
 ```

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import Button from '../Button'
 import Icon from '../Icon'
 import { translate } from '../I18n'
 import range from 'lodash/range'
@@ -50,7 +49,7 @@ const DateMonthPicker = ({ initialValue, onSelect }) => {
     onSelect(format(d, 'YYYY-MM-DD'))
   }
   return (
-    <>
+    <div>
       <div className={styles.DateMonthPicker__YearControls}>
         <button
           className={styles.DateMonthPicker__YearButton}
@@ -78,7 +77,7 @@ const DateMonthPicker = ({ initialValue, onSelect }) => {
           />
         ))}
       </div>
-    </>
+    </div>
   )
 }
 

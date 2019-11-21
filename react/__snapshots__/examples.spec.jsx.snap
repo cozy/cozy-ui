@@ -356,6 +356,21 @@ exports[`Checkbox should render examples: Checkbox 5`] = `
 </div>"
 `;
 
+exports[`DateMonthPicker should render examples: DateMonthPicker 1`] = `
+"<div>
+  <div>
+    <div class=\\"styles__DateMonthPicker__YearControls___1DGlB\\"><button class=\\"styles__DateMonthPicker__YearButton___3zNDK\\" title=\\"2018\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+          <use xlink:href=\\"#left\\"></use>
+        </svg></button>
+      <div class=\\"styles__DateMonthPicker__Year___387bP\\">2019</div><button class=\\"styles__DateMonthPicker__YearButton___3zNDK\\" title=\\"2020\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+          <use xlink:href=\\"#right\\"></use>
+        </svg></button>
+    </div>
+    <div class=\\"styles__DateMonthPicker__MonthGrid___TCFg4\\"><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Jan</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Feb</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Mar</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Apr</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">May</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Jun</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Jul</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm styles__DateMonthPicker__MonthButton--selected___40hCm\\">Aug</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Sep</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Oct</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Nov</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Dec</button></div>
+  </div>
+</div>"
+`;
+
 exports[`Empty should render examples: Empty 1`] = `
 "<div>
   <div style=\\"position: relative; transform: translateZ(0); height: 500px; display: flex;\\">
