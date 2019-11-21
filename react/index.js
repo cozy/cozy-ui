@@ -88,3 +88,4 @@ export {
   useViewStack,
   ViewStackContext
 } from './ViewStack'
+export { default as DateMonthPicker } from './DateMonthPicker'
