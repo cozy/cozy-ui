@@ -197,6 +197,42 @@ export const theme = createMuiTheme({
         fontStyle: 'italic',
         fontSize: '0.875rem'
       }
+    },
+    MuiDialog: {
+      root: {
+        color: getCssVariableValue('charcoalGrey'),
+        'border-radius': '8px'
+      },
+      paper: {
+        'box-sizing': 'border-box',
+        [theme.breakpoints.down('md')]: {
+          padding: '16px'
+        },
+        [theme.breakpoints.up('md')]: {
+          padding: '32px'
+        }
+      },
+      paperFullScreen: {
+        '&$paperScrollBody': {
+          'min-height': '100%',
+          height: 'auto'
+        }
+      }
+    },
+    MuiDialogContent: {
+      root: {
+        padding: '8px 0'
+      }
+    },
+    MuiDialogActions: {
+      root: {
+        padding: '0'
+      }
+    },
+    MuiDialogTitle: {
+      root: {
+        padding: '0 0 8px 0'
+      }
     }
   },
   breakpoints: {
