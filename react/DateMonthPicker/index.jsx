@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import Button from '../Button'
 import Icon from '../Icon'
 import { translate } from '../I18n'
 import range from 'lodash/range'
@@ -16,15 +15,15 @@ const MonthButton = translate()(({ monthNum, f, onClick, isSelected }) => {
     onClick(monthNum)
   }
   return (
-    <Button
-      theme="secondary"
+    <button
       className={cx(
         styles.DateMonthPicker__MonthButton,
-        isSelected ? styles.ValueSelected : null
+        isSelected ? styles['DateMonthPicker__MonthButton--selected'] : null
       )}
       onClick={handleClick}
-      label={f(d, 'MMM')}
-    />
+    >
+      {f(d, 'MMM')}
+    </button>
   )
 })
 
@@ -50,34 +49,23 @@ const DateMonthPicker = ({ initialValue, onSelect }) => {
     onSelect(format(d, 'YYYY-MM-DD'))
   }
   return (
-    <>
+    <div>
       <div className={styles.DateMonthPicker__YearControls}>
-        <Button
+        <button
           className={styles.DateMonthPicker__YearButton}
-          theme="secondary"
-          size="small"
-          label={year - 1}
-          iconOnly={true}
+          title={year - 1}
           onClick={decreaseYear}
-          icon={<Icon icon="left" />}
-        />
-        <div
-          className={cx(
-            styles.DateMonthPicker__Year,
-            year === initialYear && styles.ValueSelected
-          )}
         >
-          {year}
-        </div>
-        <Button
+          <Icon icon="left" />
+        </button>
+        <div className={cx(styles.DateMonthPicker__Year)}>{year}</div>
+        <button
           className={styles.DateMonthPicker__YearButton}
-          theme="secondary"
-          size="small"
-          label={year + 1}
-          iconOnly={true}
+          title={year + 1}
           onClick={increaseYear}
-          icon={<Icon icon="right" />}
-        />
+        >
+          <Icon icon="right" />
+        </button>
       </div>
       <div className={styles.DateMonthPicker__MonthGrid}>
         {range(0, 12).map(i => (
@@ -89,7 +77,7 @@ const DateMonthPicker = ({ initialValue, onSelect }) => {
           />
         ))}
       </div>
-    </>
+    </div>
   )
 }
 

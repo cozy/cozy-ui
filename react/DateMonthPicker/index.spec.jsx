@@ -1,22 +1,27 @@
 import { mount } from 'enzyme'
 import React from 'react'
 import DateMonthPicker from './index'
-import Button from '../Button'
 import I18n from '../I18n'
 import { act } from 'react-dom/test-utils'
+
 const findButtonWithLabel = (root, label) =>
-  root.findWhere(n => n.type() == Button && n.props().label === label)
+  root.findWhere(n => n.type() == 'button' && n.props().children === label)
 
 const findButtonWithIcon = (root, iconName) =>
   root.findWhere(n => {
     const props = n.props()
-    if (n.type() !== Button) {
+    if (n.type() !== 'button') {
       return
     }
-    if (!props.icon) {
+    if (!props.children || !props.children.length > 1) {
       return
     }
-    return props.icon.props.icon === iconName
+
+    return (
+      props.children.props &&
+      props.children.props.icon &&
+      props.children.props.icon == iconName
+    )
   })
 
 describe('DateMonthPicker', () => {
