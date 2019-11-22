@@ -85,6 +85,7 @@ export { default as QuotaAlert } from './QuotaAlert'
 export { default as ThresholdBar } from './ThresholdBar'
 export {
   default as ViewStack,
+  ModalStack,
   useViewStack,
   ViewStackContext
 } from './ViewStack'
