@@ -122,15 +122,14 @@ module.exports = {
         '../react/MuiCozyTheme/List',
         '../react/MuiCozyTheme/Menus',
         '../react/MuiCozyTheme/RaisedList',
-        '../react/MuiCozyTheme/TextField',
-        '../react/MuiCozyTheme/Dialog'
+        '../react/MuiCozyTheme/TextField'
       ]
     },
     {
       name: 'Labs',
       components: () => [
         '../react/Labs/GridItem',
-        '../react/Labs/ExperimentalModal',
+        '../react/MuiCozyTheme/Dialog',
         '../react/Labs/IconGrid'
       ]
     },
