@@ -22,6 +22,10 @@ const ModalTitle = props => {
   return <ModalHeader {...props} />
 }
 
+// Present on the body when a Modal is shown, changes the
+// z-index of alerts so they appear in front of the modal
+export const BODY_CLASS = 'has-modal'
+
 class Modal extends Component {
   constructor(props) {
     super(props)
@@ -38,11 +42,19 @@ class Modal extends Component {
         'If your modal has not label you should add an invisible one with `aria-label` props for a11y purposes.'
       )
     }
-    document.body.classList.add('has-modal')
+
+    const hasBodyClass = document.body.classList.contains(BODY_CLASS)
+    if (!hasBodyClass) {
+      document.body.classList.add(BODY_CLASS)
+      this.shouldRemoveBodyClass = true
+    }
   }
 
   componentWillUnmount() {
-    document.body.classList.remove('has-modal')
+    // Do not remove the class if it was not added by us
+    if (this.shouldRemoveBodyClass) {
+      document.body.classList.remove(BODY_CLASS)
+    }
   }
 
   render() {
