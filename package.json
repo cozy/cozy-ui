@@ -109,7 +109,6 @@
     "react-dom": "16.8.6",
     "react-redux": "5.1.1",
     "react-styleguidist": "9.1.16",
-    "react-swipeable-views": "0.13.3",
     "react-test-renderer": "16.6.3",
     "redux": "3.7.2",
     "semantic-release": "15.13.24",
@@ -134,7 +133,8 @@
     "react-hot-loader": "^4.3.11",
     "react-markdown": "^4.0.8",
     "react-pdf": "^4.0.5",
-    "react-select": "2.2.0"
+    "react-select": "2.2.0",
+    "react-swipeable-views": "0.13.3"
   },
   "peerDependencies": {
     "@material-ui/core": "3.9.3",
