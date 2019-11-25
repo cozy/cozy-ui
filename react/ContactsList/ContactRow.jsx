@@ -40,6 +40,7 @@ const ContactRow = props => {
         },
         className
       )}
+      onClick={() => onClick(contact)}
       {...rest}
     >
       <ContactIdentity name={name} myself={isMyself} />

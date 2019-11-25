@@ -8,7 +8,7 @@ import ContactHeaderRow from './ContactHeaderRow'
 import styles from './styles.styl'
 
 const ContactsList = props => {
-  const { contacts, className, ...rest } = props
+  const { contacts, className, onItemClick, ...rest } = props
 
   const sortedContacts = [...contacts].sort(sortLastNameFirst)
   const categorizedContacts = sortedContacts.reduce((acc, contact) => {
@@ -31,6 +31,7 @@ const ContactsList = props => {
                   id={contact._id}
                   key={contact._id}
                   contact={contact}
+                  onClick={onItemClick}
                 />
               </li>
             ))}
