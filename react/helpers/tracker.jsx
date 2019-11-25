@@ -148,3 +148,24 @@ export const resetTracker = () => {
     trackerInstance = null
   }
 }
+/**
+ *
+ * @param {array} event Event to track ['Drive', 'action', 'label']
+ * @param {object} trackerForTest Mocked Tracker for test purpose
+ */
+export const trackEvent = (event, trackerForTest) => {
+  const tracker = trackerForTest || getTracker()
+  if (tracker) {
+    let trackEventArray = []
+    if (event && event[0]) {
+      //Like that, we can do trackEvent(['Drive', 'option1']) without thinking of adding this `trackEvent` attr
+      if (event[0] !== 'trackEvent') {
+        trackEventArray = event.unshift('trackEvent')
+      }
+
+      trackEventArray = event
+    }
+
+    tracker.push(trackEventArray)
+  }
+}
