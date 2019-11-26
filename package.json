@@ -47,7 +47,7 @@
     "jest": "yarn test:jest",
     "screenshots": "node scripts/screenshots.js --screenshot-dir ./screenshots --styleguide-dir ./build/react",
     "test": "yarn test:jest",
-    "test:jest": "env USE_REACT=true jest --verbose",
+    "test:jest": "jest --verbose",
     "transpile": "env BABEL_ENV=transpilation babel react/ --out-dir transpiled/react --verbose && babel helpers/ --out-dir transpiled/helpers --verbose",
     "posttranspile": "postcss transpiled/react/stylesheet.css --replace",
     "travis-deploy-once": "travis-deploy-once",
