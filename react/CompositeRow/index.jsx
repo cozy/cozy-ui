@@ -3,6 +3,7 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import { Media, Bd, Img } from '../Media'
 import { Text, Caption } from '../Text'
+import styles from './styles.styl'
 
 const denseStyle = { height: '48px' }
 
@@ -22,7 +23,11 @@ const CompositeRow = ({
 }) => {
   return (
     <Media
-      className={cx(className, dense ? 'u-ph-1' : 'u-p-1')}
+      className={cx(
+        className,
+        styles.CompositeRow,
+        dense ? styles.CompositeRow__dense : null
+      )}
       style={dense ? Object.assign({}, denseStyle, style) : style}
       {...rest}
     >
