@@ -49,6 +49,13 @@ class NestedSelect extends Component {
 
   handleSelect = item => {
     this.props.onSelect(item)
+    // It is important to reset history if the NestedSelected is used
+    // multiple times in a row without being dismounted. For example
+    // if it displayed in Carousel that slides in the NestedSelect
+    // and slides it out on selection.
+    // But, we want in this case that the resetting does not happen
+    // while the animation is running.
+    // There is probably a better way to do this.
     setTimeout(() => {
       this.resetHistory()
     }, 500)
