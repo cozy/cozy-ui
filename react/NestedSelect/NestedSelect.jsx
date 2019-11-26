@@ -125,12 +125,39 @@ const ItemPropType = PropTypes.shape({
 })
 
 NestedSelect.propTypes = {
+  /**
+   * The whole option item is passed to this function when selected
+   */
   onSelect: PropTypes.func.isRequired,
+
+  /**
+   * Determines if the row looks selected. The `option` is
+   * passed as an argument.
+   */
   isSelected: PropTypes.func.isRequired,
+
+  /**
+   * Options that will be rendered as nested lists of choices
+   */
   options: PropTypes.shape({
     children: PropTypes.arrayOf(ItemPropType)
   }),
-  canSelectParent: PropTypes.bool
+
+  /** If true, parent option will be shown at the top of its children */
+  canSelectParent: PropTypes.bool,
+
+  /**
+   * `parentItem` is passed into this function before being used to render
+   * the parent item row (canSelectParent must be true).
+   * Use this if you want the parent to have a different text on the "outer"
+   * row than inside the "inner" row.
+   *
+   * @example
+   * ```
+   * const transformParentItem = item => ({ ...item, title: "Everything"})
+   * ````
+   */
+  transformParentItem: PropTypes.func
 }
 
 export default NestedSelect
