@@ -56,15 +56,29 @@ const StaticExample = () => {
 
 const RADIO_BUTTON_ANIM_DURATION = 500
 
+// Crude parent-children relationship
+const isParent = (item, childItem) => {
+  return childItem.title.includes(item.title)
+}
+
 const InteractiveExample = () => {
   const [showingModal, setShowingModal] = useState(false)
   const [selectedItem, setSelected] = useState(null)
   const showModal = () => setShowingModal(true)
   const hideModal = () => setShowingModal(false)
-  const isSelected = item => selectedItem && selectedItem.title === item.title
+  const isSelected = (item, level) => {
+    if (!selectedItem) { 
+      return false
+    } else if (level === 0 && isParent(item, selectedItem)) {
+      return true
+    } else if (item.title === selectedItem.title) {
+      return true
+    }
+    return false
+  }
+
   const handleSelect = item => {
     setSelected(item)
-
     setTimeout(() => {
       hideModal()
     }, RADIO_BUTTON_ANIM_DURATION)

@@ -11,13 +11,11 @@ const Radio = ({ className, ...props }) => (
   <UIRadio className={cx(styles.Radio, className)} {...props} />
 )
 
-const Row = ({ children }) => <div className={styles.Row}>{children}</div>
-
 const Divider = () => <div className={styles.Divider} />
 
 const ItemRow = ({ item, onClick, isSelected }) => {
   return (
-    <Row>
+    <div className={cx(styles.Row, isSelected ? styles.Row__selected : null)}>
       <CompositeRow
         dense
         image={item.icon}
@@ -27,11 +25,11 @@ const ItemRow = ({ item, onClick, isSelected }) => {
           item.children && item.children.length > 0 ? (
             <Icon icon="right" color="var(--coolGrey)" />
           ) : (
-            <Radio checked={isSelected(item)} />
+            <Radio checked={isSelected} />
           )
         }
       />
-    </Row>
+    </div>
   )
 }
 
@@ -104,6 +102,7 @@ class NestedSelect extends Component {
     const children = current.children || []
     const level = history.length - 1
     const isSelectedWithLevel = item => isSelected(item, level)
+    const parentItem = transformParentItem(omit(current, 'children'))
 
     return (
       <>
@@ -118,9 +117,9 @@ class NestedSelect extends Component {
           {canSelectParent && level > 0 ? (
             <>
               <ItemRow
-                item={transformParentItem(omit(current, 'children'))}
+                item={parentItem}
                 onClick={this.handleClickItem}
-                isSelected={isSelectedWithLevel}
+                isSelected={isSelectedWithLevel(parentItem)}
               />
               <Divider />
             </>
@@ -130,7 +129,7 @@ class NestedSelect extends Component {
               key={item.title}
               item={item}
               onClick={this.handleClickItem}
-              isSelected={isSelectedWithLevel}
+              isSelected={isSelectedWithLevel(item)}
             />
           ))}
         </ContentComponent>
