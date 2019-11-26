@@ -1,5 +1,5 @@
 /**
- * preact plugin that provides an I18n helper using a Higher Order Component.
+ * Provides an I18n helper using a Higher Order Component.
  */
 
 'use strict'
