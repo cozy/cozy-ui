@@ -1,8 +1,8 @@
 let defaultViewer
-if (process.env.USE_REACT) {
-  defaultViewer = require('./index').default
-} else {
+if (process.env.USE_PREACT) {
   defaultViewer = ''
+} else {
+  defaultViewer = require('./index').default
 }
 
 export default defaultViewer
