@@ -119,9 +119,9 @@ NestedSelect.defaultProps = {
 }
 
 const ItemPropType = PropTypes.shape({
-  icon: PropTypes.element.isRequired,
+  icon: PropTypes.element,
   title: PropTypes.string.isRequired,
-  children: PropTypes.arrayOf(ItemPropType)
+  children: PropTypes.array
 })
 
 NestedSelect.propTypes = {
