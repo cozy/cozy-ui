@@ -54,6 +54,19 @@ const makeSureUseNewName = source => {
   }
 }
 
+const updateToNewIcon = (j, jsxComponent) => {
+  const iconAttr = jsxComponent.node.attributes.find(
+    attr => attr.name.name == 'icon'
+  )
+  if (!iconAttr) {
+    return
+  }
+  const newName = oldToNewNames[iconAttr.value.value]
+  if (newName) {
+    iconAttr.value = j.literal(newName)
+  }
+}
+
 export default function transformer(file, api) {
   const j = api.jscodeshift
   const root = j(file.source)
@@ -64,18 +77,10 @@ export default function transformer(file, api) {
     makeSureUseNewName(iDec.source)
   })
   const jsxIcons = root.find(j.JSXOpeningElement, { name: { name: 'Icon' } })
-  jsxIcons.forEach(jsxIcon => {
-    const iconAttr = jsxIcon.node.attributes.find(
-      attr => attr.name.name == 'icon'
-    )
-    if (!iconAttr) {
-      return
-    }
-    const newName = oldToNewNames[iconAttr.value.value]
-    if (newName) {
-      iconAttr.value = j.literal(newName)
-    }
-  })
+  jsxIcons.forEach(jsxIcon => updateToNewIcon(j, jsxIcon))
+
+  const buttons = root.find(j.JSXOpeningElement, { name: { name: 'Button' } })
+  buttons.forEach(jsxButton => updateToNewIcon(j, jsxButton))
 
   return root.toSource()
 }
