@@ -1,5 +1,5 @@
 const path = require('path')
-const { isUsingDevStyleguidist } = require('./docs/build-utils')
+const { isUsingDevStyleguidist } = require('./scripts/build-utils')
 
 const plugins = [
   // While developing on the styleguidist, we do not want babel to touch the CSS
