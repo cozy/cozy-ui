@@ -7,32 +7,6 @@ import UIRadio from '../Radio'
 import cx from 'classnames'
 import omit from 'lodash/omit'
 
-const Radio = ({ className, ...props }) => (
-  <UIRadio className={cx(styles.Radio, className)} {...props} />
-)
-
-const Divider = () => <div className={styles.Divider} />
-
-const ItemRow = ({ item, onClick, isSelected }) => {
-  return (
-    <div className={cx(styles.Row, isSelected ? styles.Row__selected : null)}>
-      <CompositeRow
-        dense
-        image={item.icon}
-        primaryText={item.title}
-        onClick={() => onClick(item)}
-        right={
-          item.children && item.children.length > 0 ? (
-            <Icon icon="right" color="var(--coolGrey)" />
-          ) : (
-            <Radio checked={isSelected} />
-          )
-        }
-      />
-    </div>
-  )
-}
-
 /**
  * Select like component to choose an option among a list of options.
  * Options can have children; selecting an option that has children
@@ -160,3 +134,34 @@ NestedSelect.propTypes = {
 }
 
 export default NestedSelect
+
+export const Radio = ({ className, ...props }) => (
+  <UIRadio label="" className={cx(styles.Radio, className)} {...props} />
+)
+
+const Divider = () => <div className={styles.Divider} />
+
+export const ItemRow = ({ item, onClick, isSelected }) => {
+  return (
+    <div className={cx(styles.Row, isSelected ? styles.Row__selected : null)}>
+      <CompositeRow
+        dense
+        image={item.icon}
+        primaryText={item.title}
+        onClick={() => onClick(item)}
+        right={
+          item.children && item.children.length > 0 ? (
+            <Icon icon="right" color="var(--coolGrey)" />
+          ) : (
+            <Radio
+              readOnly
+              name={item.title}
+              value={item.title}
+              checked={!!isSelected}
+            />
+          )
+        }
+      />
+    </div>
+  )
+}
