@@ -131,6 +131,8 @@ const main = async () => {
     dest: 'styleguideDir',
     type: pathArgument
   })
+  parser.addArgument('--component')
+
   const args = parser.parseArgs()
 
   await prepareFS(args.styleguideDir, args.screenshotDir)
@@ -140,8 +142,14 @@ const main = async () => {
     args.styleguideDir,
     '/index.html'
   )}`
+  const components = (await fetchAllComponents(
+    page,
+    styleguideIndexURL
+  )).filter(
+    args.component ? component => component.name === args.component : () => true
+  )
 
-  console.log('Screenshotting all components')
+  console.log('Screenshotting components')
   for (const component of components) {
     await screenshotComponent(page, component, args.screenshotDir)
   }
