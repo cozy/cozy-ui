@@ -7,17 +7,21 @@ import ContactRow from './ContactRow'
 import ContactHeaderRow from './ContactHeaderRow'
 import styles from './styles.styl'
 
-const ContactsList = props => {
-  const { contacts, className, onItemClick, ...rest } = props
-
-  const sortedContacts = [...contacts].sort(sortLastNameFirst)
-  const categorizedContacts = sortedContacts.reduce((acc, contact) => {
+const sortContacts = contacts => contacts.sort(sortLastNameFirst)
+const categorizeContacts = contacts =>
+  contacts.reduce((acc, contact) => {
     const name = buildLastNameFirst(contact)
     const header = name[0] || 'EMPTY'
     acc[header] = acc[header] || []
     acc[header].push(contact)
     return acc
   }, {})
+
+const ContactsList = props => {
+  const { contacts, className, onItemClick, ...rest } = props
+
+  const sortedContacts = sortContacts(contacts)
+  const categorizedContacts = categorizeContacts(sortedContacts)
 
   return (
     <ol className={cx(styles['list-contact'], className)} {...rest}>
