@@ -1,26 +1,28 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { Contact } from 'cozy-doctypes'
 
 import { Avatar } from '../../Avatar'
 import ContactName from './ContactName'
-import { getInitials } from '../helpers'
 import styles from '../styles.styl'
 
 const MyselfMarker = (props, { t }) => (
   <span className={styles['contact-myself']}>({t('me')})</span>
 )
-const ContactIdentity = ({ name, myself }) => (
-  <div className={styles['contact-identity']}>
-    <Avatar text={getInitials(name).toUpperCase()} size="small" />
-    <ContactName firstname={name.givenName} lastname={name.familyName} />
-    {myself && <MyselfMarker />}
-  </div>
-)
-ContactIdentity.propTypes = {
-  myself: PropTypes.bool
+
+const ContactIdentity = ({ contact }) => {
+  const isMyself = contact.metadata ? !!contact.metadata.me : false
+
+  return (
+    <div className={styles['contact-identity']}>
+      <Avatar text={Contact.getInitials(contact)} size="small" />
+      <ContactName contact={contact} />
+      {isMyself && <MyselfMarker />}
+    </div>
+  )
 }
-ContactIdentity.defaultProps = {
-  myself: false
+
+ContactIdentity.propTypes = {
+  contact: Contact.propType.isRequired
 }
 
 export default ContactIdentity

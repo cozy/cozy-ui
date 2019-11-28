@@ -19,8 +19,6 @@ const ContactRow = props => {
   } = props
   const phone = Contact.getPrimaryPhone(contact)
   const email = Contact.getPrimaryEmail(contact)
-  const name = contact.name || {}
-  const isMyself = contact.metadata ? !!contact.metadata.me : false
   const cozyUrl = Contact.getPrimaryCozy(contact)
 
   return (
@@ -35,7 +33,7 @@ const ContactRow = props => {
       onClick={() => onClick(contact)}
       {...rest}
     >
-      <ContactIdentity name={name} myself={isMyself} />
+      <ContactIdentity contact={contact} />
       {!isMobile && <ContactEmail email={email} />}
       {!isMobile && <ContactPhone phone={phone} />}
       {!isMobile && <ContactCozy cozyUrl={cozyUrl} />}
