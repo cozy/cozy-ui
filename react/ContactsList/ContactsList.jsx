@@ -43,7 +43,8 @@ const ContactsList = props => {
 }
 
 ContactsList.propTypes = {
-  contacts: PropTypes.array.isRequired
+  contacts: PropTypes.array.isRequired,
+  onItemClick: PropTypes.func
 }
 
 export default ContactsList

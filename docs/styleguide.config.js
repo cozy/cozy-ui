@@ -140,7 +140,7 @@ module.exports = {
     },
     {
       name: 'Contacts',
-      components: () => ['../react/ContactsList']
+      components: () => ['../react/ContactsList', '../react/ContactsListModal']
     }
   ],
   components: '../react/**/*.jsx',
