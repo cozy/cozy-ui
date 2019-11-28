@@ -6,6 +6,7 @@ import styles from './styles.styl'
 import UIRadio from '../Radio'
 import cx from 'classnames'
 import omit from 'lodash/omit'
+import palette from 'cozy-ui/react/palette'
 
 /**
  * Select like component to choose an option among a list of options.
@@ -185,7 +186,7 @@ export const ItemRow = ({ item, onClick, isSelected }) => {
         onClick={() => onClick(item)}
         right={
           item.children && item.children.length > 0 ? (
-            <Icon icon="right" color="var(--coolGrey)" />
+            <Icon icon="right" color={palette.coolGrey} />
           ) : (
             <Radio
               readOnly
