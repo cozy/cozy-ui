@@ -7,28 +7,24 @@ import styles from './styles.styl'
 import Input from '../Input'
 import PropTypes from 'prop-types'
 import withBreakpoints from '../helpers/withBreakpoints'
+import { Contact } from 'cozy-doctypes'
 
 const thirtySeconds = 30000
 const olderThan30s = fetchPolicies.olderThan(thirtySeconds)
 
-const mkFilter = filter => contacts => {
-  if (!filter) {
+const mkFilter = filterStr => contacts => {
+  if (!filterStr) {
     return contacts
   }
 
-  const f = filter.toLowerCase()
+  const f = filterStr.toLowerCase()
 
-  return contacts.filter(contact => {
-    return (
-      (contact.fullname && contact.fullname.toLowerCase().includes(f)) ||
-      (contact.name &&
-        contact.name.familyName &&
-        contact.name.familyName.toLowerCase().includes(f)) ||
-      (contact.name &&
-        contact.name.givenName &&
-        contact.name.givenName.toLowerCase().includes(f))
-    )
-  })
+  // TODO better filtering methods can be extracted from drive. See https://github.com/cozy/cozy-ui/pull/1273#discussion_r351845385
+  return contacts.filter(contact =>
+    Contact.getDisplayName(contact)
+      .toLowerCase()
+      .includes(f)
+  )
 }
 
 const ContactsListModal = props => {
