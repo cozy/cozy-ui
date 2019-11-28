@@ -1,6 +1,7 @@
 [
   {
     "_id": "013a6413-9726-4a4d-8b34-d3b9946a17c5",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Greenville",
@@ -43,6 +44,7 @@
   },
   {
     "_id": "0409957b-36c1-4a66-b4f7-316e1a06e8b8",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Fargo",
@@ -72,6 +74,7 @@
   },
   {
     "_id": "07719549-2087-412e-8da2-e5c0b55fe7b8",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Norfolk",
@@ -114,6 +117,7 @@
   },
   {
     "_id": "083bf60c-287b-45e9-b3d6-0e64ee2eee2d",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Hobart",
@@ -143,6 +147,7 @@
   },
   {
     "_id": "0c647009-9785-4d09-b18a-0f22d3bff233",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Pheonix",
@@ -193,6 +198,7 @@
   },
   {
     "_id": "0ea42f4a-28f1-432e-934a-68f9c50fe38e",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Youngstown",
@@ -222,6 +228,7 @@
   },
   {
     "_id": "0ffe83ef-10cf-4be6-bf6c-a189f907e65a",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Halifax",
@@ -264,6 +271,7 @@
   },
   {
     "_id": "155e4c33-f6ad-45ee-816d-5eb0874225f2",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Greenville",
@@ -308,6 +316,7 @@
   },
   {
     "_id": "1816abd3-d371-482c-ae9d-33385fb8780d",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Northampton",
@@ -352,6 +361,7 @@
   },
   {
     "_id": "1be291a9-0836-4c94-876b-5269fa901ed4",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Northampton",
@@ -394,6 +404,7 @@
   },
   {
     "_id": "23d3d724-d869-4def-841f-c85b499aa6a6",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Waterbury",
@@ -436,6 +447,7 @@
   },
   {
     "_id": "24e83428-df51-46fd-97ed-1f7d94064548",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Bangor",
@@ -478,6 +490,7 @@
   },
   {
     "_id": "289a814a-0d7d-4c6d-aa6c-be8bd28456dd",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Charleston",
@@ -520,6 +533,7 @@
   },
   {
     "_id": "29fdda84-d786-4890-9fd6-842fed02d193",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Melbourne",
@@ -549,6 +563,7 @@
   },
   {
     "_id": "2a75a0e5-cc4b-4fdc-be4d-2ac24a802368",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Charleston",
@@ -593,6 +608,7 @@
   },
   {
     "_id": "3043b044-072b-464f-b301-46df3ae99aee",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Albany",
@@ -635,6 +651,7 @@
   },
   {
     "_id": "307c4e16-70b8-4328-af1c-1d762f788e16",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Tacoma",
@@ -664,6 +681,7 @@
   },
   {
     "_id": "309067e3-81a5-45a4-8125-179185dc37da",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Northampton",
@@ -714,6 +732,7 @@
   },
   {
     "_id": "328b1bb6-8234-4efd-b18f-1aafd58dc83e",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Walkerville",
@@ -743,6 +762,7 @@
   },
   {
     "_id": "366f3eec-aaa0-4c82-9f27-80ad305ecec8",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Oakland",
@@ -772,6 +792,7 @@
   },
   {
     "_id": "398e8336-de18-43c8-8b5a-86ab72005c41",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Frankston",
@@ -801,6 +822,7 @@
   },
   {
     "_id": "3e540ae7-4605-4f05-82c9-8cb901a0c34d",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Norfolk",
@@ -830,6 +852,7 @@
   },
   {
     "_id": "3f6007f9-9284-4bfd-9350-1cbf294bd39b",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Greenville",
@@ -861,6 +884,7 @@
   },
   {
     "_id": "3fe82c80-9da3-4a42-bab5-8274df1316e6",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Rochester",
@@ -903,6 +927,7 @@
   },
   {
     "_id": "42a330ca-a30c-489f-8939-4c1b137f84e9",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Nottingham",
@@ -932,6 +957,7 @@
   },
   {
     "_id": "44bae7a3-04ed-4cc3-80f8-e15fc9b2399d",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Redmond",
@@ -974,6 +1000,7 @@
   },
   {
     "_id": "4bb1f622-5383-449e-a2d2-fc9e14006903",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Sacramento",
@@ -1003,6 +1030,7 @@
   },
   {
     "_id": "507fcc3d-1423-46da-b5f9-8fbcfd3f3fe4",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Christchurch",
@@ -1053,6 +1081,7 @@
   },
   {
     "_id": "53c75e29-5c9b-4c4f-b802-e4a152551b23",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Southampton",
@@ -1084,6 +1113,7 @@
   },
   {
     "_id": "5c21e9fa-18a5-4999-b704-59b902db8542",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Stanford",
@@ -1126,6 +1156,7 @@
   },
   {
     "_id": "627ba975-1314-4813-8366-cea7ac4734bf",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Norfolk",
@@ -1155,6 +1186,7 @@
   },
   {
     "_id": "63d70d1a-838b-4eb4-b9ca-c3ea15937d51",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Charleston",
@@ -1199,6 +1231,7 @@
   },
   {
     "_id": "6e109549-bbb7-4b23-a95e-794407001cd1",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Halifax",
@@ -1241,6 +1274,7 @@
   },
   {
     "_id": "6ed104be-083e-4991-bacb-78e18f815210",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Seattle",
@@ -1283,6 +1317,7 @@
   },
   {
     "_id": "6f767688-7118-4837-818f-610d0565ce83",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Denver",
@@ -1333,6 +1368,7 @@
   },
   {
     "_id": "706364ef-f84c-4d84-896a-f96c1c6a554c",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Cardiff",
@@ -1362,6 +1398,7 @@
   },
   {
     "_id": "71967809-8e54-4413-aa8e-35b2b945e816",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Newark",
@@ -1406,6 +1443,7 @@
   },
   {
     "_id": "799b0f99-3ad7-4f07-a689-9765b4e239c9",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Bradford",
@@ -1450,6 +1488,7 @@
   },
   {
     "_id": "7a8b0143-ed8a-4e28-85ec-37c16d1904b6",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Rochester",
@@ -1494,6 +1533,7 @@
   },
   {
     "_id": "7acdab81-52cb-46f6-9e81-42032e9843ae",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Richmond",
@@ -1544,6 +1584,7 @@
   },
   {
     "_id": "7cb3822f-3a2b-4978-9791-a1e19e792828",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Albany",
@@ -1586,6 +1627,7 @@
   },
   {
     "_id": "814f6f67-bcc0-498f-bb91-cab5ed315a12",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Nottingham",
@@ -1615,6 +1657,7 @@
   },
   {
     "_id": "823d1ca9-4b10-456f-a603-231e3de5a774",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Kingston",
@@ -1644,6 +1687,7 @@
   },
   {
     "_id": "857a0db5-84ff-4efe-a16e-9fa6b6a843eb",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Birmingham",
@@ -1694,6 +1738,7 @@
   },
   {
     "_id": "8ba82505-25c3-4821-88df-2e11becc21e8",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Hartford",
@@ -1736,6 +1781,7 @@
   },
   {
     "_id": "8cbefa6a-41c9-4065-ad33-87618dfee702",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "York",
@@ -1786,6 +1832,7 @@
   },
   {
     "_id": "9393e04d-90eb-4f47-b0d1-7cfd88ca9a3f",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Frankston",
@@ -1836,6 +1883,7 @@
   },
   {
     "_id": "9b05f823-53fd-48b7-ba50-e2abf7aa20bc",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Lancaster",
@@ -1865,6 +1913,7 @@
   },
   {
     "_id": "a68a9b3c-f3f7-4f94-b3f2-f2d0363895a5",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Sudbury",
@@ -1907,6 +1956,7 @@
   },
   {
     "_id": "a749ffad-068e-4772-9060-4cb9bd7e8039",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Melbourne",
@@ -1936,6 +1986,7 @@
   },
   {
     "_id": "a83989ca-041d-4615-87e0-7d41f86acc5d",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Seattle",
@@ -1965,6 +2016,7 @@
   },
   {
     "_id": "a9d28cf8-43a6-4fff-81a1-4a09048edf71",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Vancouver",
@@ -2007,6 +2059,7 @@
   },
   {
     "_id": "b21e4b4b-1df9-4992-b39b-cf844df864d5",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Cleveland",
@@ -2051,6 +2104,7 @@
   },
   {
     "_id": "b6f5fc43-4199-4cca-8372-d1fe4e75a168",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Boston",
@@ -2093,6 +2147,7 @@
   },
   {
     "_id": "c55c831a-9869-4e14-b3aa-d004bced41b0",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Cleveland",
@@ -2122,6 +2177,7 @@
   },
   {
     "_id": "d0c565de-f440-4d2f-83db-0e3d75f49d23",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Waterbury",
@@ -2151,6 +2207,7 @@
   },
   {
     "_id": "d2bda580-4df6-473e-89db-2af41364c44e",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Hobart",
@@ -2195,6 +2252,7 @@
   },
   {
     "_id": "d50b7eea-6e71-4348-ad75-fc791d7a82d4",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Fargo",
@@ -2245,6 +2303,7 @@
   },
   {
     "_id": "e93c6abd-4819-4873-b7fb-ea46e02816a2",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Plymouth",
@@ -2287,6 +2346,7 @@
   },
   {
     "_id": "f330db30-2c2b-4621-b40f-25bb737e2eba",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Boston",
@@ -2337,6 +2397,7 @@
   },
   {
     "_id": "f87951a3-f887-498c-b683-efbf59221da0",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Pheonix",
@@ -2379,6 +2440,7 @@
   },
   {
     "_id": "fc1f5295-a7e9-431c-a3cb-70259edd81e0",
+    "_type": "io.cozy.contacts",
     "address": [
       {
         "city": "Portsmouth",

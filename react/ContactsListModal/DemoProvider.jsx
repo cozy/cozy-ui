@@ -11,7 +11,7 @@ const mockClient = new CozyClient({
 mockClient.__proto__.requestQuery = () =>
   Promise.resolve({
     fetchStatus: 'loaded',
-    data: contacts.map(contact => ({ ...contact, _type: 'io.cozy.contacts' }))
+    data: contacts
   })
 
 class Wrapper extends React.Component {

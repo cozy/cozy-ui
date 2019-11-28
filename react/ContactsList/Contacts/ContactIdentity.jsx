@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 
 import { Avatar } from '../../Avatar'
 import ContactName from './ContactName'
-import contactPropTypes from '../ContactPropTypes'
 import { getInitials } from '../helpers'
 import styles from '../styles.styl'
 
@@ -18,7 +17,6 @@ const ContactIdentity = ({ name, myself }) => (
   </div>
 )
 ContactIdentity.propTypes = {
-  name: contactPropTypes.name.isRequired,
   myself: PropTypes.bool
 }
 ContactIdentity.defaultProps = {

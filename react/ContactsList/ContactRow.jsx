@@ -1,9 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import withBreakpoints from '../helpers/withBreakpoints'
 import cx from 'classnames'
-
-import contactPropTypes from './ContactPropTypes'
+import { Contact } from 'cozy-doctypes'
 
 import ContactPhone from './Contacts/ContactPhone'
 import ContactIdentity from './Contacts/ContactIdentity'
@@ -52,12 +50,7 @@ const ContactRow = props => {
 }
 
 ContactRow.propTypes = {
-  contact: PropTypes.shape({
-    name: contactPropTypes.name,
-    email: PropTypes.arrayOf(contactPropTypes.email),
-    phone: PropTypes.arrayOf(contactPropTypes.phone),
-    metadata: contactPropTypes.metadata
-  }).isRequired
+  contact: Contact.propType.isRequired
 }
 
 export default withBreakpoints()(ContactRow)
