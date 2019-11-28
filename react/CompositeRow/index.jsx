@@ -3,6 +3,7 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import { Media, Bd, Img } from '../Media'
 import { Text, Caption } from '../Text'
+import styles from './styles.styl'
 
 const denseStyle = { height: '48px' }
 
@@ -22,7 +23,11 @@ const CompositeRow = ({
 }) => {
   return (
     <Media
-      className={cx(className, dense ? 'u-ph-1' : 'u-p-1')}
+      className={cx(
+        className,
+        styles.CompositeRow,
+        dense ? styles.CompositeRow__dense : null
+      )}
       style={dense ? Object.assign({}, denseStyle, style) : style}
       {...rest}
     >
@@ -49,18 +54,18 @@ CompositeRow.propTypes = {
   /** Custom class */
   className: PropTypes.string,
   /** First line */
-  primaryText: PropTypes.element,
+  primaryText: PropTypes.node,
   /** Second line */
-  secondaryText: PropTypes.element,
+  secondaryText: PropTypes.node,
   /** Image to the left of the row */
-  image: PropTypes.element,
+  image: PropTypes.node,
   /**
    * Actions are shown below primary and secondary texts. Pass fragment for multiple elements.
    * Good to use with Chips.
    */
-  actions: PropTypes.element,
+  actions: PropTypes.node,
   /* Element(s) to the show to the right of the CompositeRow */
-  right: PropTypes.element,
+  right: PropTypes.node,
   /** Row height will be fixed to 48px */
   dense: PropTypes.bool
 }

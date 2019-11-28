@@ -5,7 +5,9 @@ try {
   puppeteer = require('puppeteer')
 } catch (e) {
   console.error(e)
-  console.log('Could not import puppeteer, you should install it if you want to take screenshots')
+  console.log(
+    'Could not import puppeteer, you should install it if you want to take screenshots'
+  )
   process.exit(1)
 }
 const path = require('path')
@@ -118,19 +120,36 @@ const pathArgument = p => {
  */
 const main = async () => {
   const parser = new ArgumentParser()
-  
-  parser.addArgument('--screenshot-dir', { required: true, dest: 'screenshotDir', type: pathArgument })
-  parser.addArgument('--styleguide-dir', { required: true, dest: 'styleguideDir', type: pathArgument })
-  
+
+  parser.addArgument('--screenshot-dir', {
+    required: true,
+    dest: 'screenshotDir',
+    type: pathArgument
+  })
+  parser.addArgument('--styleguide-dir', {
+    required: true,
+    dest: 'styleguideDir',
+    type: pathArgument
+  })
+  parser.addArgument('--component')
+
   const args = parser.parseArgs()
 
   await prepareFS(args.styleguideDir, args.screenshotDir)
   const { browser, page } = await prepareBrowser()
 
-  const styleguideIndexURL = `file://${path.join(args.styleguideDir, '/index.html')}`
-  const components = await fetchAllComponents(page, styleguideIndexURL)
+  const styleguideIndexURL = `file://${path.join(
+    args.styleguideDir,
+    '/index.html'
+  )}`
+  const components = (await fetchAllComponents(
+    page,
+    styleguideIndexURL
+  )).filter(
+    args.component ? component => component.name === args.component : () => true
+  )
 
-  console.log('Screenshotting all components')
+  console.log('Screenshotting components')
   for (const component of components) {
     await screenshotComponent(page, component, args.screenshotDir)
   }
