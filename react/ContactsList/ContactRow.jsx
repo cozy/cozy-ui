@@ -9,8 +9,6 @@ import ContactCozy from './Contacts/ContactCozy'
 import ContactEmail from './Contacts/ContactEmail'
 import styles from './styles.styl'
 
-const getPrimaryOrFirst = (arr = [{}]) => arr.find(obj => obj.primary) || arr[0]
-
 const ContactRow = props => {
   const {
     className,
@@ -19,16 +17,12 @@ const ContactRow = props => {
     onClick,
     ...rest
   } = props
-  const { number: phone } = getPrimaryOrFirst(contact.phone) || {
-    number: undefined
-  }
-
-  const { address: email } = getPrimaryOrFirst(contact.email) || {
-    address: undefined
-  }
+  const phone = Contact.getPrimaryPhone(contact)
+  const email = Contact.getPrimaryEmail(contact)
   const name = contact.name || {}
   const isMyself = contact.metadata ? !!contact.metadata.me : false
-  const cozyUrl = getPrimaryOrFirst(contact.cozy) || { url: undefined }
+  const cozyUrl = Contact.getPrimaryCozy(contact)
+
   return (
     <div
       className={cx(
@@ -44,7 +38,7 @@ const ContactRow = props => {
       <ContactIdentity name={name} myself={isMyself} />
       {!isMobile && <ContactEmail email={email} />}
       {!isMobile && <ContactPhone phone={phone} />}
-      {!isMobile && <ContactCozy cozyUrl={cozyUrl.url} />}
+      {!isMobile && <ContactCozy cozyUrl={cozyUrl} />}
     </div>
   )
 }
