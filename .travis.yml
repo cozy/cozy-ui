@@ -15,7 +15,7 @@ script:
 - yarn screenshots
 - yarn argos --token $ARGOS_TOKEN --branch $TRAVIS_BRANCH --commit $TRAVIS_COMMIT
 after_success:
-- test $TRAVIS_BRANCH = "master" && test $TRAVIS_REPO_SLUG = "cozy/cozy-ui" && yarn
+- test $TRAVIS_BRANCH = "master" && test $TRAVIS_REPO_SLUG = "cozy/cozy-ui" && test $TRAVIS_PULL_REQUEST = "false" && yarn
   build:doc:kss && yarn deploy:doc -- --username cozycloud --email contact@cozycloud.cc
   --repo=https://$GITHUB_TOKEN@github.com/cozy/cozy-ui.git
 - test $TRAVIS_BRANCH = "master" && test $TRAVIS_REPO_SLUG = "cozy/cozy-ui" && yarn travis-deploy-once "yarn semantic-release"
