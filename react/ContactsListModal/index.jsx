@@ -20,11 +20,15 @@ const mkFilter = filterStr => contacts => {
   const f = filterStr.toLowerCase()
 
   // TODO better filtering methods can be extracted from drive. See https://github.com/cozy/cozy-ui/pull/1273#discussion_r351845385
-  return contacts.filter(contact =>
-    Contact.getDisplayName(contact)
-      .toLowerCase()
-      .includes(f)
-  )
+  return contacts.filter(contact => {
+    const displayName = Contact.getDisplayName(contact)
+
+    if (!displayName) {
+      return false
+    }
+
+    return displayName.toLowerCase().includes(f)
+  })
 }
 
 const ContactsListModal = props => {

@@ -21,23 +21,25 @@ const ContactsList = props => {
 
   return (
     <ol className={cx(styles['list-contact'], className)} {...rest}>
-      {Object.keys(categorizedContacts).map(header => (
-        <li key={header}>
-          <ContactHeaderRow header={header} />
-          <ol className={styles['sublist-contact']}>
-            {categorizedContacts[header].map(contact => (
-              <li key={contact._id}>
-                <ContactRow
-                  id={contact._id}
-                  key={contact._id}
-                  contact={contact}
-                  onClick={onItemClick}
-                />
-              </li>
-            ))}
-          </ol>
-        </li>
-      ))}
+      {Object.keys(categorizedContacts)
+        .sort()
+        .map(header => (
+          <li key={header}>
+            <ContactHeaderRow header={header} />
+            <ol className={styles['sublist-contact']}>
+              {categorizedContacts[header].map(contact => (
+                <li key={contact._id}>
+                  <ContactRow
+                    id={contact._id}
+                    key={contact._id}
+                    contact={contact}
+                    onClick={onItemClick}
+                  />
+                </li>
+              ))}
+            </ol>
+          </li>
+        ))}
     </ol>
   )
 }
