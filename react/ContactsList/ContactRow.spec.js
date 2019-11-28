@@ -9,7 +9,6 @@ describe('ContactRow', () => {
     const contactRowInstance = <ContactRow contact={contact} />
     const contactrow = mount(contactRowInstance)
     const contactrowemail = contactrow.find('ContactEmail')
-    expect(contactrowemail).toBeDefined()
     expect(contactrowemail.text()).toBe(contact.email[0].address)
   })
   test('should display data', () => {
