@@ -19,7 +19,7 @@ const SelectControl = props => {
 }
 
 const ContactPicker = props => {
-  const { placeholder, onChange, selectedContact, ...rest } = props
+  const { placeholder, onChange, value, ...rest } = props
   const [showContactsList, setShowContactsList] = useState(false)
 
   const handleChange = contact => {
@@ -29,9 +29,7 @@ const ContactPicker = props => {
   return (
     <>
       <SelectControl {...rest} onClick={() => setShowContactsList(true)}>
-        {selectedContact
-          ? Contact.getDisplayName(selectedContact)
-          : placeholder}
+        {value ? Contact.getDisplayName(value) : placeholder}
       </SelectControl>
       {showContactsList && (
         <ContactsListModal

@@ -42,13 +42,10 @@ it('should call the onChange function when a contact is being selected', async (
   expect(onChange).toHaveBeenCalled()
 })
 
-it('should show the given select contact name in the select', () => {
+it('should show the given contact name in the select', () => {
   const wrapper = mount(
     <DemoProvider>
-      <ContactPicker
-        placeholder="Select a contact"
-        selectedContact={contacts[0]}
-      />
+      <ContactPicker placeholder="Select a contact" value={contacts[0]} />
     </DemoProvider>
   )
 
