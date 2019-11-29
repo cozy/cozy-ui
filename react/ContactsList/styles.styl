@@ -1,0 +1,68 @@
+@require 'components/table.styl'
+
+$reset-list
+    list-style none
+    padding-left 0
+    margin 0
+
+.list-contact
+    @extend $table
+    @extend $reset-list
+
+.sublist-contact
+    @extend $reset-list
+
+    :last-child
+        .contact
+            border 0
+
+.contact
+    @extend $table-row
+    color var(--coolGrey)
+
+    +small-screen()
+        height auto
+
+.contact--clickable
+    cursor pointer
+
+.divider
+    @extend $table-divider
+
+.contact-phone
+    @extend $table-cell
+    flex 0 0 12rem
+
+.contact-cozyurl
+    @extend $table-cell
+    flex 0 0 12rem
+
+.contact-email
+    @extend $table-cell
+    flex-basis 30%
+
+.contact-myself
+    color coolGrey
+    padding-left .5rem
+
+.contact-identity
+    @extend $table-cell
+    @extend $table-cell--primary
+    display inline-flex
+    align-items center
+    flex-basis 30%
+    padding-left 2rem
+
+.contact-firstname
+    margin-left 1rem
+
+.contact-lastname
+    font-weight bold
+
++small-screen()
+    .contact-identity
+    .contact-phone
+    .contact-cozyurl
+    .contact-email
+        flex-basis auto
+        padding .3rem 1rem

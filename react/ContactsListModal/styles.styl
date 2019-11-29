@@ -1,0 +1,25 @@
+@require 'settings/breakpoints'
+
+.ContactsListModal__header
+    +small-screen()
+        background-color var(--primaryColor)
+        padding rem(12) 0
+        height rem(48)
+        display flex
+        align-items center
+        box-sizing border-box
+
+        input
+            background-color transparent
+            border 0
+            color var(--white)
+            padding-left rem(8)
+
+            &:focus
+                border 0
+
+            &::placeholder
+                color inherit
+
+.ContactsListModal__description
+    padding 0
