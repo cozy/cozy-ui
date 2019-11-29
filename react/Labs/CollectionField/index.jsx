@@ -1,11 +1,10 @@
 import React from 'react'
 import Button from '../../Button'
-import cx from 'classnames'
-import fieldStyles from '../../Field/styles.styl'
 import Label from '../../Label'
 import styles from './styles.styl'
 import Stack from '../../Stack'
 import Icon from '../../Icon'
+import { FieldContainer } from '../../Field'
 
 /**
  * Handles a collection of form fields.
@@ -21,7 +20,6 @@ const CollectionField = props => {
     addButtonLabel,
     removeButtonLabel,
     onChange,
-    className,
     ...rest
   } = props
 
@@ -43,7 +41,7 @@ const CollectionField = props => {
   }
 
   return (
-    <div className={cx(fieldStyles['o-field'], className)} {...rest}>
+    <FieldContainer {...rest}>
       <Label>{label}</Label>
       <Stack>
         <Stack spacing="s">
@@ -79,7 +77,7 @@ const CollectionField = props => {
           className={styles.CollectionField__addBtn}
         />
       </Stack>
-    </div>
+    </FieldContainer>
   )
 }
 

@@ -85,6 +85,21 @@ InputPassword.defaultProps = {
   ...Input.defaultProps
 }
 
+const FieldContainer = props => {
+  const { className, variant, ...rest } = props
+
+  return (
+    <div
+      className={cx(
+        styles['o-field'],
+        { [styles['o-field--inline']]: variant === 'inline' },
+        className
+      )}
+      {...rest}
+    />
+  )
+}
+
 const Field = props => {
   const {
     autoComplete,
@@ -108,7 +123,8 @@ const Field = props => {
     secondaryLabels,
     secondaryComponent,
     side,
-    size
+    size,
+    variant
   } = props
   const controlledProps = {
     ...(value !== undefined ? { value } : {}),
@@ -204,7 +220,7 @@ const Field = props => {
   }
 
   return (
-    <div className={cx(styles['o-field'], className)}>
+    <FieldContainer className={className} variant={variant}>
       <Label htmlFor={id} {...labelProps}>
         {label}
       </Label>
@@ -218,7 +234,7 @@ const Field = props => {
         </div>
       )}
       {inputType(type)}
-    </div>
+    </FieldContainer>
   )
 }
 
@@ -290,3 +306,4 @@ Field.defaultProps = {
 }
 
 export default Field
+export { FieldContainer }
