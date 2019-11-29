@@ -110,6 +110,7 @@ module.exports = {
         '../react/AppSections/index.jsx',
         '../react/AppIcon/index.jsx',
         '../react/CipherIcon/index.jsx',
+        '../react/Pin/PinGuard.jsx',
         '../react/QuotaAlert/index.jsx'
       ]
     },

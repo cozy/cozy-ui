@@ -135,13 +135,14 @@
     "react-markdown": "^4.0.8",
     "react-pdf": "^4.0.5",
     "react-select": "2.2.0",
+    "react-side-effect": "2.1.0",
     "react-swipeable-views": "0.13.3"
   },
   "peerDependencies": {
     "@material-ui/core": "3.9.3",
     "cozy-client": "*",
-    "cozy-doctypes": "^1.69.0",
     "cozy-device-helper": "1.7.5",
+    "cozy-doctypes": "^1.69.0",
     "piwik-react-router": "^0.8.2",
     "preact": "^8.3.1",
     "preact-portal": "^1.1.3",
