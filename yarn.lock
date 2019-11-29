@@ -1524,6 +1524,13 @@
     universal-user-agent "^2.0.0"
     url-template "^2.0.8"
 
+"@oskarer/enzyme-wait@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@oskarer/enzyme-wait/-/enzyme-wait-1.5.0.tgz#5a66da400f5c0c933a436841fff3382371575dc9"
+  integrity sha512-8GFIO7+3tAoEMJVckrv6VY1FTcFqSgZe9PsTpArjBXL6VjjdDgSIeuXez/KZ/NvW1PCaaQDUyeboqIb3SSBGzw==
+  dependencies:
+    assertion-error "^1.0.2"
+
 "@semantic-release/changelog@2.1.2":
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/@semantic-release/changelog/-/changelog-2.1.2.tgz#d232a61e193cad6fcea95600a9351e026c9f979f"
@@ -2467,6 +2474,11 @@ assert@^1.1.1:
   integrity sha1-mZEtWRg2tab1s0XA8H7vwI/GXZE=
   dependencies:
     util "0.10.3"
+
+assertion-error@^1.0.2:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/assertion-error/-/assertion-error-1.1.0.tgz#e60b6b0e8f301bd97e5375215bda406c85118c0b"
+  integrity sha512-jgsaNduz+ndvGyFt3uSuWqvy4lCnIJiovtouQN5JZHOKCS2QuhEdbcQHFhVksz2N2U9hXJo8odG7ETyWlEeuDw==
 
 assign-symbols@^1.0.0:
   version "1.0.0"

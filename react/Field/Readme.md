@@ -130,6 +130,27 @@ const options = [
 </form>
 ```
 
+#### Field with ContactPicker
+
+```jsx
+import Field from 'cozy-ui/transpiled/react/Field';
+import DemoProvider from '../ContactsListModal/DemoProvider';
+initialState = { selectedContact: null };
+
+<DemoProvider>
+  <form>
+    <Field
+      label="Contact"
+      type="contact"
+      placeholder="Select a contact"
+      value={state.selectedContact}
+      onChange={selectedContact => setState({ selectedContact })}
+    />
+  </form>
+</DemoProvider>
+```
+
+
 #### Password field with show/hide button
 
 ```

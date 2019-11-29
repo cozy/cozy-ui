@@ -9,6 +9,7 @@ import Label from '../Label'
 import Input from '../Input'
 import SelectBox from '../SelectBox'
 import Textarea from '../Textarea'
+import ContactPicker from '../ContactPicker'
 
 /**
  * PropTypes to pass to Input but not to other components, like SelectBox
@@ -161,6 +162,16 @@ const Field = props => {
             secondaryComponent={secondaryComponent}
           />
         )
+
+      case 'contact':
+        return (
+          <ContactPicker
+            placeholder={placeholder}
+            onChange={onChange}
+            selectedContact={value}
+          />
+        )
+
       case 'date':
       case 'email':
       case 'url':
@@ -187,7 +198,7 @@ const Field = props => {
         )
       default:
         throw new Error(
-          `type must be text, password, email, date, url or textarea, got ${type}`
+          `${type} is not a valid type. Type must be ${allowedTypes.join(', ')}`
         )
     }
   }
@@ -211,6 +222,17 @@ const Field = props => {
   )
 }
 
+const allowedTypes = [
+  'date',
+  'email',
+  'password',
+  'select',
+  'textarea',
+  'text',
+  'url',
+  'number'
+]
+
 Field.propTypes = {
   ...inputSpecificPropTypes,
   disabled: PropTypes.bool,
@@ -220,16 +242,7 @@ Field.propTypes = {
   label: PropTypes.string.isRequired,
   id: PropTypes.string,
   name: PropTypes.string,
-  type: PropTypes.oneOf([
-    'date',
-    'email',
-    'password',
-    'select',
-    'textarea',
-    'text',
-    'url',
-    'number'
-  ]),
+  type: PropTypes.oneOf(allowedTypes),
   // value should be an object for type=select and string for others
   value: function(props, propName, componentName) {
     // not a required props
