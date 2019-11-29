@@ -19,6 +19,22 @@ import Field from 'cozy-ui/transpiled/react/Field';
 </form>
 ```
 
+##### Inline variant
+
+```
+import Field from 'cozy-ui/transpiled/react/Field';
+<form>
+  <Field
+    id="idField"
+    label="I'm a label"
+    type="text"
+    placeholder="Write something"
+    size="medium"
+    variant="inline"
+  />
+</form>
+```
+
 ##### Controlled input
 
 An input is controlled if `props.value` is passed, even if it is empty.

@@ -3,6 +3,18 @@
 .o-field
     @extend $field
 
+.o-field--inline
+    @extend $field-inline
+    margin 0
+
+    label
+        flex-basis rem(128)
+        flex-shrink 0
+        flex-grow 0
+        padding 0.75rem 0
+
+        +small-screen()
+            flex-basis auto
 
 .o-field-input
     position relative

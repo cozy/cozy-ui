@@ -108,7 +108,8 @@ const Field = props => {
     secondaryLabels,
     secondaryComponent,
     side,
-    size
+    size,
+    variant
   } = props
   const controlledProps = {
     ...(value !== undefined ? { value } : {}),
@@ -204,7 +205,13 @@ const Field = props => {
   }
 
   return (
-    <div className={cx(styles['o-field'], className)}>
+    <div
+      className={cx(
+        styles['o-field'],
+        { [styles['o-field--inline']]: variant === 'inline' },
+        className
+      )}
+    >
       <Label htmlFor={id} {...labelProps}>
         {label}
       </Label>
