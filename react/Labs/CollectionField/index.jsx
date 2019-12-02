@@ -44,28 +44,30 @@ const CollectionField = props => {
     <FieldContainer {...rest}>
       <Label>{label}</Label>
       <Stack>
-        <Stack spacing="s">
-          {values.map((value, index) => {
-            return (
-              <div key={index} className={styles.CollectionField__row}>
-                <Component
-                  value={value}
-                  onChange={handleChange(index)}
-                  placeholder={placeholder}
-                />
-                <Button
-                  type="button"
-                  theme="secondary"
-                  label={removeButtonLabel}
-                  iconOnly
-                  round
-                  icon={<Icon icon="cross-small" color="var(--slateGrey)" />}
-                  onClick={() => handleRemove(index)}
-                />
-              </div>
-            )
-          })}
-        </Stack>
+        {values.length > 0 ? (
+          <Stack spacing="s">
+            {values.map((value, index) => {
+              return (
+                <div key={index} className={styles.CollectionField__row}>
+                  <Component
+                    value={value}
+                    onChange={handleChange(index)}
+                    placeholder={placeholder}
+                  />
+                  <Button
+                    type="button"
+                    theme="secondary"
+                    label={removeButtonLabel}
+                    iconOnly
+                    round
+                    icon={<Icon icon="cross-small" color="var(--slateGrey)" />}
+                    onClick={() => handleRemove(index)}
+                  />
+                </div>
+              )
+            })}
+          </Stack>
+        ) : null}
         <Button
           label={addButtonLabel}
           type="button"
