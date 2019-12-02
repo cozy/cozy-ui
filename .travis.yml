@@ -22,4 +22,5 @@ after_success:
 
 env:
   global:
-    secure: R3CSBrSNdBrL27FaZLw8KyshNreI9eArdXksT7Zf3oms/88mivudD0rSt5jYodPcMWF6IJtJ6xqqpJRbb/CH7eY7TOPoM9A2mhjxjy/tyk+UN4ieh75clCo/eMt89Zx6aJ72VZ0NsQAQHcOjA9UUm463HYpsGzzkc9dNGAM5F30=
+  # GH_TOKEN from cozy-bot (readable from password-store/cozy-ui/github-token-for-semantic-release-on-travis)
+  - secure: fMlsp52RBxJCGqB1cR5ShG3WiGl2iTl3cvzskrFqWIxrpOFc0TBaSQmpiOdkc9lg35zt8Pt1Z9F8zlWX/k/SXcR0x5SwSzunVXl1P/FzZkJ1pjtG3pVw5gtlhhuSfMhtu/cUSNyil0CfTvWbhSSkdeBpaR+J9TapBKH6qvIYGo4=
