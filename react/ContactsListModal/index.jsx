@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { Query, fetchPolicies } from 'cozy-client'
 import ContactsList from '../ContactsList'
-import Modal, { ModalHeader, ModalDescription, ModalBackButton } from '../Modal'
+import Modal, { ModalHeader, ModalDescription } from '../Modal'
 import Spinner from '../Spinner'
 import styles from './styles.styl'
 import Input from '../Input'
 import PropTypes from 'prop-types'
 import withBreakpoints from '../helpers/withBreakpoints'
+import Button from '../Button'
 import { Contact } from 'cozy-doctypes'
 
 const thirtySeconds = 30000
@@ -60,9 +61,12 @@ const ContactsListModal = props => {
     <Modal size="xxlarge" mobileFullscreen {...rest} closable={!isMobile}>
       <ModalHeader className={styles.ContactsListModal__header}>
         {isMobile && (
-          <ModalBackButton
+          <Button
             onClick={rest.dismissAction}
-            style={{ color: 'var(--white)' }}
+            extension="narrow"
+            iconOnly
+            icon="previous"
+            theme="primary"
           />
         )}
         <Input
