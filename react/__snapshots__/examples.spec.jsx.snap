@@ -366,7 +366,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"799b0f99-3ad7-4f07-a689-9765b4e239c9\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">B</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">B</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Baramax</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">tyler.rhymer@baramax.eu</div>
@@ -377,7 +377,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"013a6413-9726-4a4d-8b34-d3b9946a17c5\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AB</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AB</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Alexis</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Bickers</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">alexis.bickers@logico.club</div>
@@ -388,7 +388,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"857a0db5-84ff-4efe-a16e-9fa6b6a843eb\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JB</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JB</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Jenette</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Bourne</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">jenette.bourne@dynaair.mobi</div>
@@ -399,7 +399,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"3043b044-072b-464f-b301-46df3ae99aee\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Raylene</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Bourne</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">raylene.bourne@tecomix.name</div>
@@ -410,7 +410,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"a9d28cf8-43a6-4fff-81a1-4a09048edf71\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Rico</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Bourne</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">rico.bourne@citisys.org</div>
@@ -421,7 +421,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"d0c565de-f440-4d2f-83db-0e3d75f49d23\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Rosanne</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Bourne</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">rosanne.bourne@creatonix.xyz</div>
@@ -432,7 +432,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"1be291a9-0836-4c94-876b-5269fa901ed4\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KB</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KB</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Katelin</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Bourquin</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">katelin.bourquin@unilogic.biz</div>
@@ -443,7 +443,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"0ffe83ef-10cf-4be6-bf6c-a189f907e65a\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">SB</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">SB</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Shea</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Brier</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">shea.brier@logico.club</div>
@@ -454,7 +454,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"24e83428-df51-46fd-97ed-1f7d94064548\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AB</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AB</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Aiden</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Bryd</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">aiden.bryd@citisys.info</div>
@@ -470,7 +470,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"507fcc3d-1423-46da-b5f9-8fbcfd3f3fe4\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">LC</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">LC</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Lorelei</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Cadena</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">lorelei.cadena@dalserve.club</div>
@@ -481,7 +481,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"7cb3822f-3a2b-4978-9791-a1e19e792828\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RC</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RC</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Raisa</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Cappel</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">raisa.cappel@zatheon.eu</div>
@@ -492,7 +492,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"9b05f823-53fd-48b7-ba50-e2abf7aa20bc\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RC</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RC</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Rosanne</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Chapman</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">rosanne.chapman@peersys.gov</div>
@@ -503,7 +503,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"fc1f5295-a7e9-431c-a3cb-70259edd81e0\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">C</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">C</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">CoreMax</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">grace.muldoon@coremax.xyz</div>
@@ -519,7 +519,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"7acdab81-52cb-46f6-9e81-42032e9843ae\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">FF</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">FF</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Francis</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Flinn</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">francis.flinn@fortyfour.xyz</div>
@@ -530,7 +530,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"6f767688-7118-4837-818f-610d0565ce83\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">VF</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">VF</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Vaughn</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Friedrich</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">vaughn.friedrich@seelogic.co</div>
@@ -546,7 +546,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"8ba82505-25c3-4821-88df-2e11becc21e8\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KG</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KG</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Kurt</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Goudy</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">kurt.goudy@amsquare.edu</div>
@@ -562,7 +562,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"307c4e16-70b8-4328-af1c-1d762f788e16\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MH</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MH</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Max</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Higgins</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">max.higgins@maxcast.com</div>
@@ -573,7 +573,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"155e4c33-f6ad-45ee-816d-5eb0874225f2\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">H</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">H</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Hivemind</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">neida.backer@hivemind.biz</div>
@@ -584,7 +584,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"f330db30-2c2b-4621-b40f-25bb737e2eba\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">LH</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">LH</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Lyn</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Hollis</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">lyn.hollis@citisys.biz</div>
@@ -595,7 +595,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"42a330ca-a30c-489f-8939-4c1b137f84e9\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">EH</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">EH</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Eleanore</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Hottle</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">eleanore.hottle@tomiatech.edu</div>
@@ -611,7 +611,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"3e540ae7-4605-4f05-82c9-8cb901a0c34d\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MJ</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MJ</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Michelle</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Jensen</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">michelle.jensen@pancast.club</div>
@@ -627,7 +627,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"366f3eec-aaa0-4c82-9f27-80ad305ecec8\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AK</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AK</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Andy</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Keesee</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">andy.keesee@fortyfour.mobi</div>
@@ -638,7 +638,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"6e109549-bbb7-4b23-a95e-794407001cd1\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">EK</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">EK</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Edward</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Kelsey</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">edward.kelsey@hivemind.co</div>
@@ -649,7 +649,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"289a814a-0d7d-4c6d-aa6c-be8bd28456dd\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MK</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MK</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Maisha</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Kilmer</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">maisha.kilmer@nitrosystems.eu</div>
@@ -665,7 +665,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"3fe82c80-9da3-4a42-bab5-8274df1316e6\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CL</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CL</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Chloe</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Leath</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">chloe.leath@iridimax.org</div>
@@ -676,7 +676,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"07719549-2087-412e-8da2-e5c0b55fe7b8\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RL</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RL</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Rosanne</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Leath</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">rosanne.leath@conixco.name</div>
@@ -687,7 +687,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"083bf60c-287b-45e9-b3d6-0e64ee2eee2d\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RL</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RL</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Rosanne</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Lenihan</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">rosanne.lenihan@corerobotics.info</div>
@@ -698,7 +698,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"0409957b-36c1-4a66-b4f7-316e1a06e8b8\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AL</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AL</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Alexa</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Luck</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">alexa.luck@grafixmedia.name</div>
@@ -714,7 +714,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"d50b7eea-6e71-4348-ad75-fc791d7a82d4\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RM</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RM</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Rico</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Magby</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">rico.magby@freecast.eu</div>
@@ -725,7 +725,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"398e8336-de18-43c8-8b5a-86ab72005c41\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KM</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KM</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Kirstie</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Mercer</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">kirstie.mercer@tomiatech.eu</div>
@@ -736,7 +736,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"f87951a3-f887-498c-b683-efbf59221da0\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MM</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MM</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Marcus</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Milligan</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">marcus.milligan@fortyfour.me</div>
@@ -747,7 +747,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"9393e04d-90eb-4f47-b0d1-7cfd88ca9a3f\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MM</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MM</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Madeleine</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Milling</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">madeleine.milling@acousticom.gov</div>
@@ -758,7 +758,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"a68a9b3c-f3f7-4f94-b3f2-f2d0363895a5\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">IM</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">IM</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Isabelle</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Muldoon</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">isabelle.muldoon@fastmart.co</div>
@@ -769,7 +769,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"309067e3-81a5-45a4-8125-179185dc37da\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RM</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RM</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Raymond</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Muldoon</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">raymond.muldoon@thermolock.info</div>
@@ -785,7 +785,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"627ba975-1314-4813-8366-cea7ac4734bf\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JN</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JN</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Jetta</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Neal</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">jetta.neal@multiserv.net</div>
@@ -801,7 +801,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"3f6007f9-9284-4bfd-9350-1cbf294bd39b\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JO</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JO</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Jay</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Okainmayle</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">—</div>
@@ -817,7 +817,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"53c75e29-5c9b-4c4f-b802-e4a152551b23\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JP</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JP</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Jay</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Padeutell</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">jay.padeutell@noemail.net</div>
@@ -828,7 +828,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"4bb1f622-5383-449e-a2d2-fc9e14006903\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">TP</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">TP</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Travis</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Paquette</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">travis.paquette@zatheon.co</div>
@@ -839,7 +839,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"a83989ca-041d-4615-87e0-7d41f86acc5d\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JP</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JP</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Jamie</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Paschall</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">jamie.paschall@acousticom.me</div>
@@ -850,7 +850,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"706364ef-f84c-4d84-896a-f96c1c6a554c\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RP</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RP</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Raylene</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Pullman</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">raylene.pullman@viewtopia.me</div>
@@ -866,7 +866,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"c55c831a-9869-4e14-b3aa-d004bced41b0\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">NR</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">NR</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Neida</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Remus</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">neida.remus@dynalab.club</div>
@@ -877,7 +877,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"44bae7a3-04ed-4cc3-80f8-e15fc9b2399d\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KR</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KR</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Kurt</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Rohloff</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">kurt.rohloff@corexts.org</div>
@@ -893,7 +893,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"814f6f67-bcc0-498f-bb91-cab5ed315a12\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">HS</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">HS</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Hannah</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Sager</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">hannah.sager@haltheon.eu</div>
@@ -904,7 +904,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"823d1ca9-4b10-456f-a603-231e3de5a774\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AS</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AS</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Aiden</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Smit</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">aiden.smit@tomiatech.co</div>
@@ -915,7 +915,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"5c21e9fa-18a5-4999-b704-59b902db8542\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">TS</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">TS</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Travis</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Sprowl</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">travis.sprowl@vtgrafix.name</div>
@@ -926,7 +926,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"29fdda84-d786-4890-9fd6-842fed02d193\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">DS</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">DS</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Danny</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Stine</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">danny.stine@celmax.club</div>
@@ -937,7 +937,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"328b1bb6-8234-4efd-b18f-1aafd58dc83e\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RS</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RS</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Rosanne</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Stine</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">rosanne.stine@infracom.edu</div>
@@ -948,7 +948,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"2a75a0e5-cc4b-4fdc-be4d-2ac24a802368\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">S</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">S</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">StrategyLine</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">ivan.bryd@strategyline.eu</div>
@@ -964,7 +964,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"0ea42f4a-28f1-432e-934a-68f9c50fe38e\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">HT</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">HT</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Haydee</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Tindel</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">haydee.tindel@galcom.com</div>
@@ -975,7 +975,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"a749ffad-068e-4772-9060-4cb9bd7e8039\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">WT</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">WT</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Warren</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Tindel</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">warren.tindel@fortyfour.info</div>
@@ -986,7 +986,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"1816abd3-d371-482c-ae9d-33385fb8780d\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">T</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">T</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Tomiatech</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">edward.carter@tomiatech.com</div>
@@ -997,7 +997,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"b21e4b4b-1df9-4992-b39b-cf844df864d5\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">T</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">T</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">TrioSys</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">rico.murphy@triosys.info</div>
@@ -1013,7 +1013,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"23d3d724-d869-4def-841f-c85b499aa6a6\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CV</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CV</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Cory</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Verde</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">cory.verde@peersys.xyz</div>
@@ -1024,7 +1024,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"8cbefa6a-41c9-4065-ad33-87618dfee702\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MV</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MV</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Madeleine</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Verde</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">madeleine.verde@tomiatech.me</div>
@@ -1035,7 +1035,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"7a8b0143-ed8a-4e28-85ec-37c16d1904b6\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">V</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">V</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">VTGrafix</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">vernon.leath@vtgrafix.co</div>
@@ -1051,7 +1051,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"b6f5fc43-4199-4cca-8372-d1fe4e75a168\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">GW</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">GW</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Gavin</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Wallis</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">gavin.wallis@infratouch.biz</div>
@@ -1062,7 +1062,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"e93c6abd-4819-4873-b7fb-ea46e02816a2\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RW</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RW</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Raylene</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Wallis</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">raylene.wallis@corerobotics.name</div>
@@ -1073,7 +1073,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"d2bda580-4df6-473e-89db-2af41364c44e\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">W</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">W</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Westercom</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">anton.brandt@westercom.me</div>
@@ -1084,7 +1084,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"63d70d1a-838b-4eb4-b9ca-c3ea15937d51\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">W</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">W</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">WestGate</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">selma.keesee@westgate.net</div>
@@ -1095,7 +1095,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"6ed104be-083e-4991-bacb-78e18f815210\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MW</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MW</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Madelyn</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Woodrum</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">madelyn.woodrum@airconix.xyz</div>
@@ -1106,7 +1106,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"0c647009-9785-4d09-b18a-0f22d3bff233\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MW</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MW</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Mitch</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Woodrum</span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">mitch.woodrum@opticast.org</div>
@@ -1122,7 +1122,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"71967809-8e54-4413-aa8e-35b2b945e816\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">X</span></div>
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">X</span></div>
                 <div><span class=\\"styles__contact-firstname___2GPEr\\">Xenosys</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">cecilia.latshaw@xenosys.club</div>
@@ -1149,7 +1149,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"799b0f99-3ad7-4f07-a689-9765b4e239c9\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">B</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">B</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Baramax</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">tyler.rhymer@baramax.eu</div>
@@ -1160,7 +1160,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"013a6413-9726-4a4d-8b34-d3b9946a17c5\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AB</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AB</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Alexis</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Bickers</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">alexis.bickers@logico.club</div>
@@ -1171,7 +1171,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"857a0db5-84ff-4efe-a16e-9fa6b6a843eb\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JB</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JB</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Jenette</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Bourne</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">jenette.bourne@dynaair.mobi</div>
@@ -1182,7 +1182,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"3043b044-072b-464f-b301-46df3ae99aee\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Raylene</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Bourne</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">raylene.bourne@tecomix.name</div>
@@ -1193,7 +1193,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"a9d28cf8-43a6-4fff-81a1-4a09048edf71\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Rico</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Bourne</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">rico.bourne@citisys.org</div>
@@ -1204,7 +1204,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"d0c565de-f440-4d2f-83db-0e3d75f49d23\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Rosanne</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Bourne</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">rosanne.bourne@creatonix.xyz</div>
@@ -1215,7 +1215,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"1be291a9-0836-4c94-876b-5269fa901ed4\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KB</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KB</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Katelin</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Bourquin</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">katelin.bourquin@unilogic.biz</div>
@@ -1226,7 +1226,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"0ffe83ef-10cf-4be6-bf6c-a189f907e65a\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">SB</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">SB</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Shea</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Brier</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">shea.brier@logico.club</div>
@@ -1237,7 +1237,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"24e83428-df51-46fd-97ed-1f7d94064548\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AB</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AB</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Aiden</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Bryd</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">aiden.bryd@citisys.info</div>
@@ -1253,7 +1253,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"507fcc3d-1423-46da-b5f9-8fbcfd3f3fe4\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">LC</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">LC</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Lorelei</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Cadena</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">lorelei.cadena@dalserve.club</div>
@@ -1264,7 +1264,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"7cb3822f-3a2b-4978-9791-a1e19e792828\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RC</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RC</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Raisa</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Cappel</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">raisa.cappel@zatheon.eu</div>
@@ -1275,7 +1275,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"9b05f823-53fd-48b7-ba50-e2abf7aa20bc\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RC</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RC</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Rosanne</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Chapman</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">rosanne.chapman@peersys.gov</div>
@@ -1286,7 +1286,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"fc1f5295-a7e9-431c-a3cb-70259edd81e0\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">C</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">C</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">CoreMax</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">grace.muldoon@coremax.xyz</div>
@@ -1302,7 +1302,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"7acdab81-52cb-46f6-9e81-42032e9843ae\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">FF</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">FF</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Francis</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Flinn</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">francis.flinn@fortyfour.xyz</div>
@@ -1313,7 +1313,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"6f767688-7118-4837-818f-610d0565ce83\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">VF</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">VF</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Vaughn</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Friedrich</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">vaughn.friedrich@seelogic.co</div>
@@ -1329,7 +1329,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"8ba82505-25c3-4821-88df-2e11becc21e8\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KG</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KG</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Kurt</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Goudy</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">kurt.goudy@amsquare.edu</div>
@@ -1345,7 +1345,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"307c4e16-70b8-4328-af1c-1d762f788e16\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MH</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MH</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Max</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Higgins</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">max.higgins@maxcast.com</div>
@@ -1356,7 +1356,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"155e4c33-f6ad-45ee-816d-5eb0874225f2\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">H</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">H</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Hivemind</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">neida.backer@hivemind.biz</div>
@@ -1367,7 +1367,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"f330db30-2c2b-4621-b40f-25bb737e2eba\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">LH</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">LH</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Lyn</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Hollis</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">lyn.hollis@citisys.biz</div>
@@ -1378,7 +1378,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"42a330ca-a30c-489f-8939-4c1b137f84e9\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">EH</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">EH</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Eleanore</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Hottle</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">eleanore.hottle@tomiatech.edu</div>
@@ -1394,7 +1394,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"3e540ae7-4605-4f05-82c9-8cb901a0c34d\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MJ</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MJ</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Michelle</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Jensen</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">michelle.jensen@pancast.club</div>
@@ -1410,7 +1410,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"366f3eec-aaa0-4c82-9f27-80ad305ecec8\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AK</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AK</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Andy</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Keesee</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">andy.keesee@fortyfour.mobi</div>
@@ -1421,7 +1421,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"6e109549-bbb7-4b23-a95e-794407001cd1\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">EK</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">EK</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Edward</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Kelsey</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">edward.kelsey@hivemind.co</div>
@@ -1432,7 +1432,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"289a814a-0d7d-4c6d-aa6c-be8bd28456dd\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MK</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MK</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Maisha</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Kilmer</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">maisha.kilmer@nitrosystems.eu</div>
@@ -1448,7 +1448,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"3fe82c80-9da3-4a42-bab5-8274df1316e6\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CL</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CL</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Chloe</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Leath</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">chloe.leath@iridimax.org</div>
@@ -1459,7 +1459,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"07719549-2087-412e-8da2-e5c0b55fe7b8\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RL</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RL</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Rosanne</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Leath</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">rosanne.leath@conixco.name</div>
@@ -1470,7 +1470,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"083bf60c-287b-45e9-b3d6-0e64ee2eee2d\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RL</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RL</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Rosanne</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Lenihan</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">rosanne.lenihan@corerobotics.info</div>
@@ -1481,7 +1481,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"0409957b-36c1-4a66-b4f7-316e1a06e8b8\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AL</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AL</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Alexa</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Luck</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">alexa.luck@grafixmedia.name</div>
@@ -1497,7 +1497,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"d50b7eea-6e71-4348-ad75-fc791d7a82d4\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RM</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RM</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Rico</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Magby</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">rico.magby@freecast.eu</div>
@@ -1508,7 +1508,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"398e8336-de18-43c8-8b5a-86ab72005c41\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KM</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KM</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Kirstie</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Mercer</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">kirstie.mercer@tomiatech.eu</div>
@@ -1519,7 +1519,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"f87951a3-f887-498c-b683-efbf59221da0\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MM</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MM</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Marcus</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Milligan</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">marcus.milligan@fortyfour.me</div>
@@ -1530,7 +1530,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"9393e04d-90eb-4f47-b0d1-7cfd88ca9a3f\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MM</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MM</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Madeleine</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Milling</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">madeleine.milling@acousticom.gov</div>
@@ -1541,7 +1541,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"a68a9b3c-f3f7-4f94-b3f2-f2d0363895a5\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">IM</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">IM</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Isabelle</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Muldoon</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">isabelle.muldoon@fastmart.co</div>
@@ -1552,7 +1552,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"309067e3-81a5-45a4-8125-179185dc37da\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RM</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RM</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Raymond</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Muldoon</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">raymond.muldoon@thermolock.info</div>
@@ -1568,7 +1568,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"627ba975-1314-4813-8366-cea7ac4734bf\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JN</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JN</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Jetta</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Neal</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">jetta.neal@multiserv.net</div>
@@ -1584,7 +1584,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"3f6007f9-9284-4bfd-9350-1cbf294bd39b\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JO</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JO</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Jay</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Okainmayle</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">—</div>
@@ -1600,7 +1600,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"53c75e29-5c9b-4c4f-b802-e4a152551b23\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JP</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JP</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Jay</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Padeutell</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">jay.padeutell@noemail.net</div>
@@ -1611,7 +1611,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"4bb1f622-5383-449e-a2d2-fc9e14006903\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">TP</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">TP</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Travis</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Paquette</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">travis.paquette@zatheon.co</div>
@@ -1622,7 +1622,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"a83989ca-041d-4615-87e0-7d41f86acc5d\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JP</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JP</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Jamie</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Paschall</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">jamie.paschall@acousticom.me</div>
@@ -1633,7 +1633,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"706364ef-f84c-4d84-896a-f96c1c6a554c\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RP</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RP</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Raylene</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Pullman</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">raylene.pullman@viewtopia.me</div>
@@ -1649,7 +1649,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"c55c831a-9869-4e14-b3aa-d004bced41b0\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">NR</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">NR</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Neida</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Remus</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">neida.remus@dynalab.club</div>
@@ -1660,7 +1660,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"44bae7a3-04ed-4cc3-80f8-e15fc9b2399d\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KR</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KR</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Kurt</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Rohloff</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">kurt.rohloff@corexts.org</div>
@@ -1676,7 +1676,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"814f6f67-bcc0-498f-bb91-cab5ed315a12\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">HS</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">HS</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Hannah</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Sager</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">hannah.sager@haltheon.eu</div>
@@ -1687,7 +1687,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"823d1ca9-4b10-456f-a603-231e3de5a774\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AS</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AS</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Aiden</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Smit</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">aiden.smit@tomiatech.co</div>
@@ -1698,7 +1698,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"5c21e9fa-18a5-4999-b704-59b902db8542\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">TS</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">TS</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Travis</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Sprowl</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">travis.sprowl@vtgrafix.name</div>
@@ -1709,7 +1709,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"29fdda84-d786-4890-9fd6-842fed02d193\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">DS</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">DS</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Danny</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Stine</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">danny.stine@celmax.club</div>
@@ -1720,7 +1720,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"328b1bb6-8234-4efd-b18f-1aafd58dc83e\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RS</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RS</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Rosanne</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Stine</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">rosanne.stine@infracom.edu</div>
@@ -1731,7 +1731,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"2a75a0e5-cc4b-4fdc-be4d-2ac24a802368\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">S</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">S</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">StrategyLine</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">ivan.bryd@strategyline.eu</div>
@@ -1747,7 +1747,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"0ea42f4a-28f1-432e-934a-68f9c50fe38e\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">HT</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">HT</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Haydee</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Tindel</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">haydee.tindel@galcom.com</div>
@@ -1758,7 +1758,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"a749ffad-068e-4772-9060-4cb9bd7e8039\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">WT</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">WT</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Warren</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Tindel</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">warren.tindel@fortyfour.info</div>
@@ -1769,7 +1769,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"1816abd3-d371-482c-ae9d-33385fb8780d\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">T</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">T</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Tomiatech</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">edward.carter@tomiatech.com</div>
@@ -1780,7 +1780,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"b21e4b4b-1df9-4992-b39b-cf844df864d5\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">T</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">T</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">TrioSys</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">rico.murphy@triosys.info</div>
@@ -1796,7 +1796,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"23d3d724-d869-4def-841f-c85b499aa6a6\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CV</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CV</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Cory</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Verde</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">cory.verde@peersys.xyz</div>
@@ -1807,7 +1807,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"8cbefa6a-41c9-4065-ad33-87618dfee702\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MV</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MV</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Madeleine</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Verde</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">madeleine.verde@tomiatech.me</div>
@@ -1818,7 +1818,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"7a8b0143-ed8a-4e28-85ec-37c16d1904b6\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">V</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">V</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">VTGrafix</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">vernon.leath@vtgrafix.co</div>
@@ -1834,7 +1834,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"b6f5fc43-4199-4cca-8372-d1fe4e75a168\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">GW</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">GW</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Gavin</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Wallis</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">gavin.wallis@infratouch.biz</div>
@@ -1845,7 +1845,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"e93c6abd-4819-4873-b7fb-ea46e02816a2\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RW</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RW</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Raylene</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Wallis</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">raylene.wallis@corerobotics.name</div>
@@ -1856,7 +1856,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"d2bda580-4df6-473e-89db-2af41364c44e\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">W</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">W</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Westercom</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">anton.brandt@westercom.me</div>
@@ -1867,7 +1867,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"63d70d1a-838b-4eb4-b9ca-c3ea15937d51\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">W</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">W</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">WestGate</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">selma.keesee@westgate.net</div>
@@ -1878,7 +1878,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"6ed104be-083e-4991-bacb-78e18f815210\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MW</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MW</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Madelyn</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Woodrum</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">madelyn.woodrum@airconix.xyz</div>
@@ -1889,7 +1889,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"0c647009-9785-4d09-b18a-0f22d3bff233\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MW</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MW</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Mitch</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Woodrum</span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">mitch.woodrum@opticast.org</div>
@@ -1905,7 +1905,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
             <li>
               <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"71967809-8e54-4413-aa8e-35b2b945e816\\">
                 <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">X</span></div>
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">X</span></div>
                   <div><span class=\\"styles__contact-firstname___2GPEr\\">Xenosys</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">cecilia.latshaw@xenosys.club</div>

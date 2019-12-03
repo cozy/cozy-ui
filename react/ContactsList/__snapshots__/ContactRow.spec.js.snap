@@ -9,7 +9,7 @@ exports[`ContactRow should match the contact snapshot 1`] = `
     className="styles__contact-identity___mL3IJ"
   >
     <div
-      className="styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv"
+      className="styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs"
       style={
         Object {
           "backgroundColor": "var(--brightSun)",
