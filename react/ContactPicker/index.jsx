@@ -19,7 +19,16 @@ const SelectControl = props => {
 }
 
 const ContactPicker = props => {
-  const { placeholder, listPlaceholder, onChange, value, ...rest } = props
+  const {
+    placeholder,
+    onChange,
+    value,
+    listPlaceholder,
+    listEmptyMessage,
+    addContactLabel,
+    ...rest
+  } = props
+
   const [showContactsList, setShowContactsList] = useState(false)
 
   const handleChange = contact => {
@@ -36,6 +45,8 @@ const ContactPicker = props => {
           dismissAction={() => setShowContactsList(false)}
           onItemClick={handleChange}
           placeholder={listPlaceholder}
+          emptyMessage={listEmptyMessage}
+          addContactLabel={addContactLabel}
         />
       )}
     </>
