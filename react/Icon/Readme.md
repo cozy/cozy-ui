@@ -1,10 +1,10 @@
 Provides an easy way to use SVG icons included in Cozy-UI as well
 as your custom icons.
 
-⚠️ When using `Icon`, the icons are supposed to be already loaded via an
-SVG sprite loaded in your DOM. `cozy-ui` ships with built-in icons that you can include via `Sprite`. See the example below for how to include
-`Sprite`. `Sprite` can for example be included in the main `Layout` of
-your applicaiton.
+⚠️ When using `Icon`, you can either give a React component or use the identifier 
+of an already loaded one. `cozy-ui` ships with built-in icons that you can 
+include via `Sprite`. See the example below for how to include `Sprite`. 
+`Sprite` can for example be included in the main `Layout` of your applicaiton.
 
 ### Available illustrations icons (colors fixed)
 
@@ -57,6 +57,14 @@ import Icon from 'cozy-ui/transpiled/react/Icon';
 ```
 
 ### Custom icons
+
+The `icon` attribute can take a arbitrary React component. It is expected that
+this component print an `<svg>` tag and forwards any props to it.
+
+```jsx static
+const MyIcon = (props) => <svg {...props}>…</svg>;
+<Icon icon={myIcon} width={32} height={32} color="purple" />
+```
 
 You can also directly import an SVG to use it. You MUST use svg-sprite-loader
 to load your SVG (either explicitly or, better, implicitly in your `webpack.config.js`).

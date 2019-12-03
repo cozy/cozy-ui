@@ -1,9 +1,33 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import cx from 'classnames'
 
 const DEFAULT_SIZE = '16'
+
+function getSvgObject(icon) {
+  let anchor
+  if (icon.id) {
+    anchor = `#${icon.id}`
+  } else if (icon[0] === '#') {
+    anchor = icon
+  } else {
+    anchor = '#' + icon
+  }
+  if (!anchor) {
+    console.warn(`Icon not found ${icon}.`)
+    return null
+  }
+  return props => (
+    <svg {...props}>
+      <use xlinkHref={anchor} />
+    </svg>
+  )
+}
+
+function isReactComponent(obj) {
+  return obj instanceof Function
+}
 
 function Icon(props) {
   const {
@@ -18,21 +42,13 @@ function Icon(props) {
     spin,
     ...restProps
   } = props
+
+  const Svg = useMemo(
+    () => (isReactComponent(icon) ? icon : getSvgObject(icon)),
+    [icon]
+  )
+
   let style = props.style
-  let anchor
-  if (icon.id) {
-    anchor = `#${icon.id}`
-  } else if (icon[0] === '#') {
-    anchor = icon
-  } else {
-    anchor = '#' + icon
-  }
-
-  if (!anchor) {
-    console.warn(`Icon not found ${icon}.`)
-    return null
-  }
-
   style = Object.assign({}, style)
   if (color) {
     style['fill'] = color
@@ -46,17 +62,15 @@ function Icon(props) {
     [styles['icon--spin']]: spin
   })
 
-  return (
-    <svg
+  return Svg ? (
+    <Svg
       className={iconClass}
       style={style}
       width={width || size || DEFAULT_SIZE}
       height={height || size || DEFAULT_SIZE}
       {...restProps}
-    >
-      <use xlinkHref={anchor} />
-    </svg>
-  )
+    />
+  ) : null
 }
 
 Icon.isProperIcon = icon => {
@@ -67,7 +81,8 @@ Icon.isProperIcon = icon => {
 
 export const iconPropType = PropTypes.oneOfType([
   PropTypes.string,
-  PropTypes.object
+  PropTypes.object,
+  PropTypes.func
 ])
 
 Icon.propTypes = {
