@@ -6,9 +6,11 @@ initialState = { selectedContact: null };
 <DemoProvider>
   <ContactPicker
     placeholder="Select a contact"
-    listPlaceholder="Search a contact"
     onChange={selectedContact => setState({ selectedContact })}
     value={state.selectedContact}
+    listPlaceholder="Search a contact"
+    listEmptyMessage="No contact"
+    addContactLabel="Add a contact"
   />
 </DemoProvider>
 ```
