@@ -1,6 +1,6 @@
 /* global __PIWIK_TRACKER_URL__ __PIWIK_SITEID__ __PIWIK_DIMENSION_ID_APP__ */
 /* global Piwik */
-
+import memoize from 'lodash/memoize'
 // Think of these functions as a singleton class with only static methods.
 let trackerInstance = null
 
@@ -8,7 +8,7 @@ let trackerInstance = null
  * Tries to detect if tracking should be enabled or not, based on a `cozyTracking` attribute in the root dataset.
  * @returns {boolean} Undefined if it can't find the information, true/false otherwise.
  */
-export const shouldEnableTracking = () => {
+export const shouldEnableTracking = memoize(() => {
   const root = document.querySelector('[role=application]')
 
   if (root && root.dataset) {
@@ -19,15 +19,20 @@ export const shouldEnableTracking = () => {
   }
 
   return undefined
-}
+})
 
 /**
+ * @private
+ *
  * Returns the instance of the piwik tracker, creating it on thee fly if required. All parameters are optionnal.
+ * You should not use this method directly but rather `trackEvent`
  * @param   {string}  trackerUrl             The URL of the piwik instance, without the php file name
  * @param   {number}  siteId                 The siteId to use for piwik
  * @param   {boolean} automaticallyConfigure = true Pass false to skip the automatic configuration
  * @param   {boolean} injectScript = false Whether or not the Piwik tracking script should be injected
- * @returns {object}  An instance of `PiwikReactRouter` on success, `null` if the creation fails (usually because of adblockers)
+ * @returns {object | null }  An instance of `PiwikReactRouter` on success,
+ *                            `null` if the creation fails (usually because of adblockers)
+ *                            `null` if the user doesn't accept the tracking
  */
 export const getTracker = (
   trackerUrl,
@@ -35,6 +40,7 @@ export const getTracker = (
   automaticallyConfigure = true,
   injectScript = false
 ) => {
+  if (!shouldEnableTracking()) return null
   if (trackerInstance !== null) return trackerInstance
 
   try {
