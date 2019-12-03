@@ -1,4 +1,5 @@
 @require 'settings/breakpoints'
+@require 'settings/spaces'
 
 .ContactsListModal__header.ContactsListModal__header
     +small-screen()
@@ -23,3 +24,13 @@
 
 .ContactsListModal__description.ContactsListModal__description
     padding 0
+
+.ContactsListModal__addContactContainer
+    display flex
+    justify-content center
+    margin-bottom spacing_values.m
+    margin 0 spacing_values.xs spacing_values.m
+
+    +small-screen()
+        > *
+            flex 1

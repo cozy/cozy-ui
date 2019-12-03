@@ -9,6 +9,7 @@ import PropTypes from 'prop-types'
 import withBreakpoints from '../helpers/withBreakpoints'
 import Button from '../Button'
 import { Contact } from 'cozy-doctypes'
+import AddContactButton from './AddContactButton'
 
 const thirtySeconds = 30000
 const olderThan30s = fetchPolicies.olderThan(thirtySeconds)
@@ -37,6 +38,7 @@ const ContactsListModal = props => {
     onItemClick,
     placeholder,
     breakpoints: { isMobile },
+    addContactLabel,
     ...rest
   } = props
 
@@ -56,6 +58,7 @@ const ContactsListModal = props => {
     onItemClick(contact)
     rest.dismissAction()
   }
+
 
   return (
     <Modal size="xxlarge" mobileFullscreen {...rest} closable={!isMobile}>
@@ -79,6 +82,9 @@ const ContactsListModal = props => {
         />
       </ModalHeader>
       <ModalDescription className={styles.ContactsListModal__description}>
+        <div className={styles.ContactsListModal__addContactContainer}>
+          <AddContactButton label={addContactLabel} />
+        </div>
         <Query
           query={client => client.all('io.cozy.contacts').UNSAFE_noLimit()}
           fetchPolicy={olderThan30s}

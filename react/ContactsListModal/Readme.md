@@ -17,6 +17,7 @@ initialState = { opened: isTesting() };
       placeholder="Search a contact"
       dismissAction={() => setState({ opened: false })}
       onItemClick={contact => alert(`Clicked on ${contact._id}`)}
+      addContactLabel="Add a contact"
     />
   )}
 </DemoProvider>
