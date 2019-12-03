@@ -10,6 +10,7 @@ import withBreakpoints from '../helpers/withBreakpoints'
 import Button from '../Button'
 import { Contact } from 'cozy-doctypes'
 import AddContactButton from './AddContactButton'
+import EmptyMessage from './EmptyMessage'
 
 const thirtySeconds = 30000
 const olderThan30s = fetchPolicies.olderThan(thirtySeconds)
@@ -39,6 +40,7 @@ const ContactsListModal = props => {
     placeholder,
     breakpoints: { isMobile },
     addContactLabel,
+    emptyMessage,
     ...rest
   } = props
 
@@ -58,7 +60,6 @@ const ContactsListModal = props => {
     onItemClick(contact)
     rest.dismissAction()
   }
-
 
   return (
     <Modal size="xxlarge" mobileFullscreen {...rest} closable={!isMobile}>
@@ -98,6 +99,10 @@ const ContactsListModal = props => {
             }
 
             const filteredContacts = filterContacts(data)
+
+            if (filteredContacts.length === 0) {
+              return <EmptyMessage>{emptyMessage}</EmptyMessage>
+            }
 
             return (
               <ContactsList

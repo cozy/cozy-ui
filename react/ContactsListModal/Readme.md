@@ -18,6 +18,7 @@ initialState = { opened: isTesting() };
       dismissAction={() => setState({ opened: false })}
       onItemClick={contact => alert(`Clicked on ${contact._id}`)}
       addContactLabel="Add a contact"
+      emptyMessage="No contact"
     />
   )}
 </DemoProvider>
