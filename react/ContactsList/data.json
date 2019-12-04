@@ -1,5 +1,15 @@
 [
   {
+    "_id": "013a6414-9727-4a4e-8b35-d3b9946a17c6",
+    "_type": "io.cozy.contacts",
+    "email": [
+      {
+        "address": "isabelle.durand@cozycloud.cc",
+        "primary": true
+      }
+    ]
+  },
+  {
     "_id": "013a6413-9726-4a4d-8b34-d3b9946a17c5",
     "_type": "io.cozy.contacts",
     "address": [
@@ -21,10 +31,7 @@
     "metadata": {
       "version": 1
     },
-    "name": {
-      "familyName": "Bickers",
-      "givenName": "Alexis"
-    },
+    "fullname": "Alexis Bickers",
     "phone": [
       {
         "number": "+33 (9)7 58 16 92 55",

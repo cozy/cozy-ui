@@ -1,16 +1,20 @@
 import ContactsList from './ContactsList'
 
 export function buildLastNameFirst(contact) {
-  const givenNameA =
+  const givenName =
     contact.name && contact.name.givenName
       ? contact.name.givenName.toUpperCase()
       : ''
-  const familyNameA =
+  const familyName =
     contact.name && contact.name.familyName
       ? contact.name.familyName.toUpperCase()
       : ''
-  const nameA = `${familyNameA} ${givenNameA}`.trim()
-  return nameA
+
+  if (!givenName && !familyName && contact.fullname) {
+    return contact.fullname.toUpperCase().trim()
+  } else {
+    return `${familyName} ${givenName}`.trim()
+  }
 }
 
 export const sortLastNameFirst = (contact, comparedContact) => {
