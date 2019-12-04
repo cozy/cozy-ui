@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { sortLastNameFirst, buildLastNameFirst } from './'
+import { sortLastNameFirst, buildLastNameFirst } from './helpers'
 import ContactRow from './ContactRow'
 import ContactHeaderRow from './ContactHeaderRow'
 import styles from './styles.styl'

@@ -1,4 +1,4 @@
-import { sortLastNameFirst } from './'
+import { sortLastNameFirst } from './helpers'
 describe('Sort contacts', () => {
   describe('By Last Name', () => {
     test('should sort contact by last name', () => {
