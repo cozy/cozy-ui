@@ -14,7 +14,11 @@ const ContactIdentity = ({ contact }) => {
 
   return (
     <div className={styles['contact-identity']}>
-      <Avatar text={Contact.getInitials(contact)} size="small" />
+      <Avatar
+        text={Contact.getInitials(contact)}
+        size="small"
+        className={styles['contact-avatar']}
+      />
       <ContactName contact={contact} />
       {isMyself && <MyselfMarker />}
     </div>
