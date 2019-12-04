@@ -20,3 +20,27 @@ export const sortLastNameFirst = (contact, comparedContact) => {
   const nameB = buildLastNameFirst(comparedContact)
   return nameA.localeCompare(nameB)
 }
+
+export const sortContacts = contacts => contacts.sort(sortLastNameFirst)
+
+export const categorizeContacts = contacts =>
+  contacts.reduce((acc, contact) => {
+    const name = buildLastNameFirst(contact)
+    const header = name[0] || 'EMPTY'
+    acc[header] = acc[header] || []
+    acc[header].push(contact)
+    return acc
+  }, {})
+
+export const sortHeaders = categorized => {
+  const headers = Object.keys(categorized)
+  const notEmptyHeaders = headers.filter(header => header !== 'EMPTY')
+
+  const notEmptySorted = notEmptyHeaders.sort()
+
+  if (headers.length === notEmptyHeaders.length) {
+    return notEmptySorted
+  }
+
+  return ['EMPTY', ...notEmptySorted]
+}

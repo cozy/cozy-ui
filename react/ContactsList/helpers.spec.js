@@ -1,4 +1,4 @@
-import { sortLastNameFirst } from './helpers'
+import { sortLastNameFirst, sortHeaders } from './helpers'
 describe('Sort contacts', () => {
   describe('By Last Name', () => {
     test('should sort contact by last name', () => {
@@ -67,5 +67,32 @@ describe('Sort contacts', () => {
         { name: { givenName: 'B', familyName: 'C' } }
       ])
     })
+  })
+})
+
+describe('sortHeaders', () => {
+  it('should return headers sorted', () => {
+    const contacts = {
+      F: [],
+      B: [],
+      H: []
+    }
+
+    const sortedHeaders = sortHeaders(contacts)
+
+    expect(sortedHeaders).toEqual(['B', 'F', 'H'])
+  })
+
+  it('should put EMPTY header first', () => {
+    const contacts = {
+      F: [],
+      B: [],
+      H: [],
+      EMPTY: []
+    }
+
+    const sortedHeaders = sortHeaders(contacts)
+
+    expect(sortedHeaders).toEqual(['EMPTY', 'B', 'F', 'H'])
   })
 })
