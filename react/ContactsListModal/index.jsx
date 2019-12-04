@@ -13,7 +13,11 @@ import AddContactButton from './AddContactButton'
 import EmptyMessage from './EmptyMessage'
 
 const thirtySeconds = 30000
-const olderThan30s = fetchPolicies.olderThan(thirtySeconds)
+// the check in the next line is because it otherwise requires cozy-client
+// even for libs or apps that do not use cozy-client nor ContactsListModal
+const olderThan30s = fetchPolicies
+  ? fetchPolicies.olderThan(thirtySeconds)
+  : () => true
 
 const mkFilter = filterStr => contacts => {
   if (!filterStr) {
