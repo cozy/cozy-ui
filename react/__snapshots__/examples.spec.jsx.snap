@@ -361,6 +361,38 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
   <div style=\\"height: 500px; overflow-y: scroll;\\">
     <ol class=\\"styles__list-contact___8ztoP\\">
       <li>
+        <div class=\\"styles__divider___3j8WW\\">EMPTY</div>
+        <ol class=\\"styles__sublist-contact___NBitx\\">
+          <li>
+            <div class=\\"styles__contact___169nD\\" id=\\"013a6414-9727-4a4e-8b35-d3b9946a17c6\\">
+              <div class=\\"styles__contact-identity___mL3IJ\\">
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">I</span></div>
+                <div><span class=\\"styles__contact-firstname___2GPEr\\"></span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
+              </div>
+              <div class=\\"styles__contact-email___3n3q2\\">isabelle.durand@cozycloud.cc</div>
+              <div class=\\"styles__contact-phone___1sA_m\\">—</div>
+              <div class=\\"styles__contact-cozyurl___3kBp5\\">—</div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <div class=\\"styles__divider___3j8WW\\">A</div>
+        <ol class=\\"styles__sublist-contact___NBitx\\">
+          <li>
+            <div class=\\"styles__contact___169nD\\" id=\\"013a6413-9726-4a4d-8b34-d3b9946a17c5\\">
+              <div class=\\"styles__contact-identity___mL3IJ\\">
+                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">A</span></div>
+                <div><span class=\\"styles__contact-firstname___2GPEr\\">Alexis Bickers</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
+              </div>
+              <div class=\\"styles__contact-email___3n3q2\\">alexis.bickers@logico.club</div>
+              <div class=\\"styles__contact-phone___1sA_m\\">+33 (9)7 58 16 92 55</div>
+              <div class=\\"styles__contact-cozyurl___3kBp5\\">—</div>
+            </div>
+          </li>
+        </ol>
+      </li>
+      <li>
         <div class=\\"styles__divider___3j8WW\\">B</div>
         <ol class=\\"styles__sublist-contact___NBitx\\">
           <li>
@@ -371,17 +403,6 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
               </div>
               <div class=\\"styles__contact-email___3n3q2\\">tyler.rhymer@baramax.eu</div>
               <div class=\\"styles__contact-phone___1sA_m\\">+33 (3)2 38 88 00 99</div>
-              <div class=\\"styles__contact-cozyurl___3kBp5\\">—</div>
-            </div>
-          </li>
-          <li>
-            <div class=\\"styles__contact___169nD\\" id=\\"013a6413-9726-4a4d-8b34-d3b9946a17c5\\">
-              <div class=\\"styles__contact-identity___mL3IJ\\">
-                <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AB</span></div>
-                <div><span class=\\"styles__contact-firstname___2GPEr\\">Alexis</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Bickers</span></div>
-              </div>
-              <div class=\\"styles__contact-email___3n3q2\\">alexis.bickers@logico.club</div>
-              <div class=\\"styles__contact-phone___1sA_m\\">+33 (9)7 58 16 92 55</div>
               <div class=\\"styles__contact-cozyurl___3kBp5\\">—</div>
             </div>
           </li>
@@ -1144,6 +1165,38 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
     <div style=\\"height: 500px; overflow-y: scroll;\\">
       <ol class=\\"styles__list-contact___8ztoP\\">
         <li>
+          <div class=\\"styles__divider___3j8WW\\">EMPTY</div>
+          <ol class=\\"styles__sublist-contact___NBitx\\">
+            <li>
+              <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"013a6414-9727-4a4e-8b35-d3b9946a17c6\\">
+                <div class=\\"styles__contact-identity___mL3IJ\\">
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">I</span></div>
+                  <div><span class=\\"styles__contact-firstname___2GPEr\\"></span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
+                </div>
+                <div class=\\"styles__contact-email___3n3q2\\">isabelle.durand@cozycloud.cc</div>
+                <div class=\\"styles__contact-phone___1sA_m\\">—</div>
+                <div class=\\"styles__contact-cozyurl___3kBp5\\">—</div>
+              </div>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <div class=\\"styles__divider___3j8WW\\">A</div>
+          <ol class=\\"styles__sublist-contact___NBitx\\">
+            <li>
+              <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"013a6413-9726-4a4d-8b34-d3b9946a17c5\\">
+                <div class=\\"styles__contact-identity___mL3IJ\\">
+                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">A</span></div>
+                  <div><span class=\\"styles__contact-firstname___2GPEr\\">Alexis Bickers</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\"></span></div>
+                </div>
+                <div class=\\"styles__contact-email___3n3q2\\">alexis.bickers@logico.club</div>
+                <div class=\\"styles__contact-phone___1sA_m\\">+33 (9)7 58 16 92 55</div>
+                <div class=\\"styles__contact-cozyurl___3kBp5\\">—</div>
+              </div>
+            </li>
+          </ol>
+        </li>
+        <li>
           <div class=\\"styles__divider___3j8WW\\">B</div>
           <ol class=\\"styles__sublist-contact___NBitx\\">
             <li>
@@ -1154,17 +1207,6 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
                 </div>
                 <div class=\\"styles__contact-email___3n3q2\\">tyler.rhymer@baramax.eu</div>
                 <div class=\\"styles__contact-phone___1sA_m\\">+33 (3)2 38 88 00 99</div>
-                <div class=\\"styles__contact-cozyurl___3kBp5\\">—</div>
-              </div>
-            </li>
-            <li>
-              <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"013a6413-9726-4a4d-8b34-d3b9946a17c5\\">
-                <div class=\\"styles__contact-identity___mL3IJ\\">
-                  <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__contact-avatar___3lZPs\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AB</span></div>
-                  <div><span class=\\"styles__contact-firstname___2GPEr\\">Alexis</span>&nbsp;<span class=\\"styles__contact-lastname___134MM\\">Bickers</span></div>
-                </div>
-                <div class=\\"styles__contact-email___3n3q2\\">alexis.bickers@logico.club</div>
-                <div class=\\"styles__contact-phone___1sA_m\\">+33 (9)7 58 16 92 55</div>
                 <div class=\\"styles__contact-cozyurl___3kBp5\\">—</div>
               </div>
             </li>
@@ -5079,7 +5121,7 @@ exports[`Labs/CollectionField should render examples: Labs/CollectionField 1`] =
   <div class=\\"styles__o-field___3n5HM\\"><label class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">Contacts</label>
     <div class=\\"styles__Stack--m___1tSpV\\">
       <div class=\\"styles__Stack--s___22WMg\\">
-        <div class=\\"styles__CollectionField__row___Z7bbf\\"><button type=\\"button\\" class=\\"styles__SelectControl___2OxoO\\">Baramax</button><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh styles__c-btn--round___1Lkyl\\" title=\\"Remove this contact\\"><span><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#cross-small\\"></use></svg><span class=\\"u-visuallyhidden\\">Remove this contact</span></span></button></div>
+        <div class=\\"styles__CollectionField__row___Z7bbf\\"><button type=\\"button\\" class=\\"styles__SelectControl___2OxoO\\">isabelle.durand@cozycloud.cc</button><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh styles__c-btn--round___1Lkyl\\" title=\\"Remove this contact\\"><span><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#cross-small\\"></use></svg><span class=\\"u-visuallyhidden\\">Remove this contact</span></span></button></div>
       </div><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh styles__CollectionField__addBtn___Z0FO-\\"><span><svg class=\\"styles__CollectionField__addBtnIcon___1hA5b styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#plus\\"></use></svg><span>Add a contact</span></span></button>
     </div>
   </div>
@@ -5091,7 +5133,7 @@ exports[`Labs/CollectionField should render examples: Labs/CollectionField 2`] =
   <div class=\\"styles__o-field___3n5HM styles__o-field--inline___7JWZ8\\"><label class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">Contacts</label>
     <div class=\\"styles__Stack--m___1tSpV\\">
       <div class=\\"styles__Stack--s___22WMg\\">
-        <div class=\\"styles__CollectionField__row___Z7bbf\\"><button type=\\"button\\" class=\\"styles__SelectControl___2OxoO\\">Baramax</button><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh styles__c-btn--round___1Lkyl\\" title=\\"Remove this contact\\"><span><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#cross-small\\"></use></svg><span class=\\"u-visuallyhidden\\">Remove this contact</span></span></button></div>
+        <div class=\\"styles__CollectionField__row___Z7bbf\\"><button type=\\"button\\" class=\\"styles__SelectControl___2OxoO\\">isabelle.durand@cozycloud.cc</button><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh styles__c-btn--round___1Lkyl\\" title=\\"Remove this contact\\"><span><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#cross-small\\"></use></svg><span class=\\"u-visuallyhidden\\">Remove this contact</span></span></button></div>
       </div><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh styles__CollectionField__addBtn___Z0FO-\\"><span><svg class=\\"styles__CollectionField__addBtnIcon___1hA5b styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#plus\\"></use></svg><span>Add a contact</span></span></button>
     </div>
   </div>

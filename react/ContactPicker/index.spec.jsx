@@ -50,5 +50,5 @@ it('should show the given contact name in the select', () => {
   )
 
   const control = wrapper.find('button')
-  expect(control.text()).toBe('Alexis Bickers')
+  expect(control.text()).toBe('isabelle.durand@cozycloud.cc')
 })
