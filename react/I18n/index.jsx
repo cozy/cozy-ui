@@ -89,6 +89,8 @@ export const translate = () => WrappedComponent => {
     ...(WrappedComponent ? WrappedComponent.propTypes : undefined),
     ...i18nContextTypes
   }
+  Wrapper.displayName = `translate(${WrappedComponent.name ||
+    WrappedComponent.displayName})`
   Wrapper.contextTypes = i18nContextTypes
   return Wrapper
 }

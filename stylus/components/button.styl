@@ -61,6 +61,7 @@ $button
     position         relative
     box-sizing       border-box
     display          inline-flex
+    align-items      center
     margin           0 rem(4)
     border-width     rem(1)
     border-style     solid
@@ -80,17 +81,11 @@ $button
     svg
         fill         currentColor
 
-        & + span
-            margin-left rem(6)
+        &:first-child
+            margin-right rem(6)
 
     input
         cursor pointer
-
-    > span
-        display          flex
-        align-items      center
-        justify-content  center
-        width            100%
 
     &[disabled]
     &[aria-disabled=true]
@@ -235,9 +230,6 @@ $button-client
     &:visited
         color var(--slateGrey)
 
-    span
-        flex  0 1 auto
-
     figure
         flex 0 0 rem(32)
         margin 0 rem(12) 0 0
@@ -284,20 +276,22 @@ $button-client-mobile
   Text alignment
 \*------------------------------------*/
 button--left =
-    & > span
+    &
         justify-content flex-start
+
 $button--left
     {button--left}
 
 button--center =
-    & > span
+    &
         justify-content center
 $button--center
     {button--center}
 
 button--right =
-    & > span
+    &
         justify-content flex-end
+
 $button--right
     {button--right}
 
@@ -562,4 +556,5 @@ $button-subtle--secondary
              color var(--slateGrey)
     svg
         color var(--coolGrey)
+
 // @stylint on

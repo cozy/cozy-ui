@@ -5,7 +5,16 @@ import styles from './styles.styl'
 import Icon, { iconPropType } from '../Icon'
 
 const btnClass = function(options) {
-  const { className, extension, size, theme, variant, round, align } = options
+  const {
+    className,
+    extension,
+    size,
+    theme,
+    variant,
+    round,
+    align,
+    iconOnly
+  } = options
   return cx(
     styles['c-btn'],
     {
@@ -14,7 +23,8 @@ const btnClass = function(options) {
       [styles[`c-btn--${variant}`]]: variant,
       [styles[`c-btn--${extension}`]]: extension,
       [styles[`c-btn--${align}`]]: align,
-      [styles[`c-btn--round`]]: round
+      [styles[`c-btn--round`]]: round,
+      [styles[`c-btn--iconOnly`]]: iconOnly
     },
     className
   )
@@ -63,7 +73,6 @@ const BaseButton = props => {
 
   const transformProps = tagToTransformProps[Tag] || identity
   const tooltip = iconOnly ? label : null
-  const iconOnlyClass = iconOnly ? 'u-visuallyhidden' : null
 
   return (
     <Tag
@@ -75,29 +84,29 @@ const BaseButton = props => {
         size,
         theme,
         className,
+        iconOnly,
         variant: subtle && 'subtle'
       })}
       title={tooltip}
     >
-      <span>
-        {Icon.isProperIcon(icon) ? (
-          <Icon icon={icon} aria-hidden focusable="false" />
-        ) : (
-          icon
-        )}
-        {label && <span className={iconOnlyClass}>{label}</span>}
-        {children}
-        {extraRight && <span className="u-ml-auto">{extraRight}</span>}
-        {restProps.busy && (
-          <Icon
-            icon="spinner"
-            spin
-            className="u-ml-half"
-            aria-hidden
-            focusable="false"
-          />
-        )}
-      </span>
+      {iconOnly && <span className="u-visuallyhidden">{label}</span>}
+      {Icon.isProperIcon(icon) ? (
+        <Icon icon={icon} aria-hidden focusable="false" />
+      ) : (
+        icon
+      )}
+      {!iconOnly && label}
+      {children}
+      {extraRight && <span className="u-ml-auto">{extraRight}</span>}
+      {restProps.busy && (
+        <Icon
+          icon="spinner"
+          spin
+          className="u-ml-half"
+          aria-hidden
+          focusable="false"
+        />
+      )}
     </Tag>
   )
 }
