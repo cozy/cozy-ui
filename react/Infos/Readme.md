@@ -7,13 +7,13 @@ import Button from 'cozy-ui/transpiled/react/Button';
     <Infos text="My small persistent information! " />
     <Infos text="In a slightly different style" className='u-maw-none u-bdrs-0'/>
     <Infos
-        text="My small persistent information, with an icon. And lot of text ? Again and again..."
+        text="My small persistent information, with an icon. And a lot of text ? Again and again..."
         icon="info"
     />
     <Infos
         actionButton={<Button theme="danger" label="A CTA button" />}
         title="Infos breaking news"
-        text="My small persistent information, with an icon. And lot of text ? Again and again..."
+        text="My small persistent information, with an icon. And a lot of text ? Again and again..."
         icon="warning"
         isImportant
     />

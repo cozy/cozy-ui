@@ -4970,7 +4970,7 @@ exports[`Infos should render examples: Infos 1`] = `
       <div class=\\"u-flex u-w-100\\"><svg class=\\"styles__Infos__icon___1IdYS u-w-1 u-h-1 u-flex-shrink-0 styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <use xlink:href=\\"#info\\"></use>
         </svg>
-        <div class=\\"u-text u-ta-left u-pl-half\\">My small persistent information, with an icon. And lot of text ? Again and again...</div>
+        <div class=\\"u-text u-ta-left u-pl-half\\">My small persistent information, with an icon. And a lot of text ? Again and again...</div>
       </div>
     </div>
     <div class=\\"styles__Infos___2ZZVs u-flex u-flex-column u-p-1 u-mih-2 u-flex-justify-center u-ta-left u-stack-m u-bg-chablis\\">
@@ -4978,7 +4978,7 @@ exports[`Infos should render examples: Infos 1`] = `
       <div class=\\"u-flex u-w-100\\"><svg class=\\"styles__Infos__icon___1IdYS u-w-1 u-h-1 u-flex-shrink-0 styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <use xlink:href=\\"#warning\\"></use>
         </svg>
-        <div class=\\"u-text u-ta-left u-pl-half\\">My small persistent information, with an icon. And lot of text ? Again and again...</div>
+        <div class=\\"u-text u-ta-left u-pl-half\\">My small persistent information, with an icon. And a lot of text ? Again and again...</div>
       </div>
       <div class=\\"u-flex-shrink-0\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>A CTA button</span></span></button></div>
     </div>
