@@ -10,12 +10,6 @@ const Infos = ({ actionButton, icon, isImportant, text, className, title }) => {
     <div
       className={cx(
         styles['Infos'],
-        'u-flex',
-        'u-flex-column',
-        'u-p-1',
-        'u-mih-2',
-        'u-flex-justify-center',
-        'u-ta-left',
         'u-stack-m',
         isImportant ? 'u-bg-chablis' : 'u-bg-paleGrey',
         className
