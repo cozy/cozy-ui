@@ -7,12 +7,12 @@ const DumbAddContactButton = props => {
   const { client, ...rest } = props
 
   const cozyURL = new URL(client.getStackClient().uri)
-  const { cozySubDomainType } = client.getInstanceOptions()
+  const { cozySubdomainType } = client.getInstanceOptions()
   const contactsAppSlug = 'contacts'
   const contactsAppHref = generateWebLink({
     cozyUrl: cozyURL.origin,
     slug: contactsAppSlug,
-    subDomainType: cozySubDomainType
+    subDomainType: cozySubdomainType
   })
 
   return (
