@@ -26,4 +26,14 @@ describe('tracker / piwik action', () => {
     trackerFile.trackEvent(['trackEvent', 'foo'], tracker)
     expect(tracker.push).toHaveBeenCalledWith(['trackEvent', 'foo'])
   })
+
+  it('should memoize shouldEnableTracking', () => {
+    const querySelectorSpy = jest.fn()
+    Object.defineProperty(global.document, 'querySelector', {
+      value: querySelectorSpy
+    })
+    trackerFile.shouldEnableTracking()
+    trackerFile.shouldEnableTracking()
+    expect(querySelectorSpy).toHaveBeenCalledTimes(1)
+  })
 })
