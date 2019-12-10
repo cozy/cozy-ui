@@ -5760,6 +5760,29 @@ exports[`Spinner should render examples: Spinner 5`] = `
 </div>"
 `;
 
+exports[`Table should render examples: Table 1`] = `
+"<div>
+  <div class=\\"styles__Table___x3ZsI\\">
+    <div class=\\"styles__TableHead___1rqhM\\">
+      <div class=\\"styles__TableRow___1D62H\\">
+        <div class=\\"styles__TableHeader___FWkmV\\" style=\\"flex-grow: 1;\\">Firstname</div>
+        <div class=\\"styles__TableHeader___FWkmV\\" style=\\"flex-grow: 1;\\">Lastname</div>
+      </div>
+    </div>
+    <div class=\\"styles__TableBody___1EfpK\\">
+      <div class=\\"styles__TableRow___1D62H\\">
+        <div class=\\"styles__TableCell___yJCq7\\" style=\\"flex-grow: 1;\\">Claude</div>
+        <div class=\\"styles__TableCell___yJCq7\\" style=\\"flex-grow: 1;\\">Douillet</div>
+      </div>
+      <div class=\\"styles__TableRow___1D62H\\">
+        <div class=\\"styles__TableCell___yJCq7\\" style=\\"flex-grow: 1;\\">Isabelle</div>
+        <div class=\\"styles__TableCell___yJCq7\\" style=\\"flex-grow: 1;\\">Durand</div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
 exports[`Tabs should render examples: Tabs 1`] = `
 "<div>
   <div class=\\"styles__coz-tabs___24QL5\\">
