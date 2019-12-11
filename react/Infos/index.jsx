@@ -5,6 +5,7 @@ import Icon from '../Icon'
 import Text, { SubTitle } from '../Text'
 import Stack from '../Stack'
 import palette from '../palette'
+import createDepreciationLogger from '../helpers/createDepreciationLogger'
 
 import styles from './styles.styl'
 
@@ -49,6 +50,7 @@ Infos.defaultProps = {
   theme: 'primary'
 }
 
+const logInfosDepecrated = createDepreciationLogger()
 const InfosMigration = React.memo(props => {
   const isUsingDeprecatedProps =
     props.actionButton ||
@@ -65,7 +67,7 @@ const InfosMigration = React.memo(props => {
       isImportant,
       ...otherProps
     } = props
-    console.warn(
+    logInfosDepecrated(
       'The Infos component API has changed, using any of the following props is deprecated: title, text, icon, actionButton, isImportant'
     )
     return (
