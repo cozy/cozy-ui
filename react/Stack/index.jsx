@@ -3,9 +3,9 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
-const Stack = ({ spacing, ...props }) => {
+const Stack = ({ spacing, tag: Tag, ...props }) => {
   return (
-    <div
+    <Tag
       {...props}
       className={cx(props.className, spacing && styles['Stack--' + spacing])}
     />
@@ -17,7 +17,8 @@ Stack.propTypes = {
 }
 
 Stack.defaultProps = {
-  spacing: 'm'
+  spacing: 'm',
+  tag: 'div'
 }
 
 export default Stack
