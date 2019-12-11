@@ -1,67 +1,117 @@
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-import styles from './styles.styl'
-import Icon, { iconPropType } from '../Icon'
+import Icon from '../Icon'
 import Text, { SubTitle } from '../Text'
+import Stack from '../Stack'
+import palette from '../palette'
 
-const Infos = ({ actionButton, icon, isImportant, text, className, title }) => {
+import styles from './styles.styl'
+
+export const Infos = ({
+  description,
+  action,
+  dismissAction,
+  theme,
+  className
+}) => {
   return (
-    <div
-      className={cx(
-        styles['Infos'],
-        'u-stack-m',
-        isImportant ? 'u-bg-chablis' : 'u-bg-paleGrey',
-        className
+    <div className={cx(styles['Infos'], styles[`Infos--${theme}`], className)}>
+      <Stack spacing="m">
+        <div className={styles['Infos-description']}>
+          <Stack spacing="s">{description}</Stack>
+        </div>
+        {action && <div>{action}</div>}
+      </Stack>
+      {dismissAction && (
+        <button className={styles['Info-close']} onClick={dismissAction}>
+          <Icon icon="cross" color={palette['coolGrey']} />
+        </button>
       )}
-    >
-      {!!title && (
-        <SubTitle
-          className={cx({
-            'u-pomegranate': isImportant
-          })}
-        >
-          {title}
-        </SubTitle>
-      )}
-      <div className={cx('u-flex', 'u-w-100')}>
-        {icon && (
-          <Icon
-            icon={icon}
-            className={cx(
-              styles['Infos__icon'],
-              'u-w-1',
-              'u-h-1',
-              'u-flex-shrink-0'
-            )}
-          />
-        )}
-        <Text
-          className={cx('u-ta-left', {
-            ['u-pl-half']: icon !== null
-          })}
-        >
-          {text}
-        </Text>
-      </div>
-      {!!actionButton && <div className="u-flex-shrink-0">{actionButton}</div>}
     </div>
   )
 }
 
-Infos.defaultProps = {
-  icon: null
+Infos.propTypes = {
+  /** The textual part of the info, including titles */
+  description: PropTypes.element.isRequired,
+  /** One or more call to actions */
+  action: PropTypes.element,
+  /** If supplied, displays a cross in the top right corner that calls the prop when clicked */
+  dismissAction: PropTypes.func,
+  /** Extra classnames to apply to the root element */
+  className: PropTypes.string,
+  /** Controls the background color of the component */
+  theme: PropTypes.oneOf(['primary', 'secondary', 'danger'])
 }
 
-Infos.propTypes = {
-  /** A button that will be rendered at the bottom */
-  actionButton: PropTypes.element,
-  /** An icon to display at the left of the text */
-  icon: iconPropType,
-  /** An important information will be displayed with red colors */
-  isImportant: PropTypes.bool,
-  /** Can be either a Text, or an element (for instance a ReactMardown component) */
-  text: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-  title: PropTypes.string
+Infos.defaultProps = {
+  theme: 'primary'
 }
-export default Infos
+
+const InfosMigration = React.memo(props => {
+  const isUsingDeprecatedProps =
+    props.actionButton ||
+    props.icon ||
+    props.isImportant ||
+    props.text ||
+    props.title
+  if (isUsingDeprecatedProps) {
+    const {
+      title,
+      text,
+      icon,
+      actionButton,
+      isImportant,
+      ...otherProps
+    } = props
+    console.warn(
+      'The Infos component API has changed, using any of the following props is deprecated: title, text, icon, actionButton, isImportant'
+    )
+    return (
+      <Infos
+        className="u-maw-6"
+        theme={isImportant ? 'danger' : 'secondary'}
+        description={
+          <>
+            {title && (
+              <SubTitle
+                className={cx({
+                  'u-pomegranate': isImportant
+                })}
+              >
+                {title}
+              </SubTitle>
+            )}
+            <div className={cx('u-flex', 'u-w-100')}>
+              {icon && (
+                <Icon
+                  icon={icon}
+                  className={cx(
+                    styles['Infos__icon'],
+                    'u-w-1',
+                    'u-h-1',
+                    'u-flex-shrink-0'
+                  )}
+                />
+              )}
+              {text && (
+                <Text
+                  className={cx({
+                    ['u-pl-half']: icon !== null
+                  })}
+                >
+                  {text}
+                </Text>
+              )}
+            </div>
+          </>
+        }
+        action={actionButton}
+        {...otherProps}
+      />
+    )
+  } else return <Infos {...props} />
+})
+
+export default InfosMigration

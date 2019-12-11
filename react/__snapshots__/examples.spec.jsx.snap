@@ -4956,31 +4956,95 @@ exports[`IconStack should render examples: IconStack 1`] = `
 exports[`Infos should render examples: Infos 1`] = `
 "<div>
   <div class=\\"u-stack-m\\">
-    <div class=\\"styles__Infos___2ZZVs u-flex u-flex-column u-p-1 u-mih-2 u-flex-justify-center u-ta-left u-stack-m u-bg-paleGrey\\">
-      <div class=\\"u-flex u-w-100\\">
-        <div class=\\"u-text u-ta-left\\">My small persistent information! </div>
+    <div class=\\"styles__Infos___2ZZVs styles__Infos--secondary___1AW6F u-maw-6\\">
+      <div class=\\"styles__Stack--m___1tSpV\\">
+        <div class=\\"styles__Infos-description___7P1NP\\">
+          <div class=\\"styles__Stack--s___22WMg\\">
+            <div class=\\"u-flex u-w-100\\">
+              <div class=\\"u-text u-pl-half\\">My small persistent information! </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class=\\"styles__Infos___2ZZVs u-flex u-flex-column u-p-1 u-mih-2 u-flex-justify-center u-ta-left u-stack-m u-bg-paleGrey u-maw-none u-bdrs-0\\">
-      <div class=\\"u-flex u-w-100\\">
-        <div class=\\"u-text u-ta-left\\">In a slightly different style</div>
+    <div class=\\"styles__Infos___2ZZVs styles__Infos--secondary___1AW6F u-maw-none u-bdrs-0\\">
+      <div class=\\"styles__Stack--m___1tSpV\\">
+        <div class=\\"styles__Infos-description___7P1NP\\">
+          <div class=\\"styles__Stack--s___22WMg\\">
+            <div class=\\"u-flex u-w-100\\">
+              <div class=\\"u-text u-pl-half\\">In a slightly different style</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class=\\"styles__Infos___2ZZVs u-flex u-flex-column u-p-1 u-mih-2 u-flex-justify-center u-ta-left u-stack-m u-bg-paleGrey\\">
-      <div class=\\"u-flex u-w-100\\"><svg class=\\"styles__Infos__icon___1IdYS u-w-1 u-h-1 u-flex-shrink-0 styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <use xlink:href=\\"#info\\"></use>
-        </svg>
-        <div class=\\"u-text u-ta-left u-pl-half\\">My small persistent information, with an icon. And a lot of text ? Again and again...</div>
+    <div class=\\"styles__Infos___2ZZVs styles__Infos--secondary___1AW6F u-maw-6\\">
+      <div class=\\"styles__Stack--m___1tSpV\\">
+        <div class=\\"styles__Infos-description___7P1NP\\">
+          <div class=\\"styles__Stack--s___22WMg\\">
+            <div class=\\"u-flex u-w-100\\"><svg class=\\"u-w-1 u-h-1 u-flex-shrink-0 styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+                <use xlink:href=\\"#info\\"></use>
+              </svg>
+              <div class=\\"u-text u-pl-half\\">My small persistent information, with an icon. And a lot of text ? Again and again...</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class=\\"styles__Infos___2ZZVs u-flex u-flex-column u-p-1 u-mih-2 u-flex-justify-center u-ta-left u-stack-m u-bg-chablis\\">
-      <div class=\\"u-title-h3 u-pomegranate\\">Infos breaking news</div>
-      <div class=\\"u-flex u-w-100\\"><svg class=\\"styles__Infos__icon___1IdYS u-w-1 u-h-1 u-flex-shrink-0 styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <use xlink:href=\\"#warning\\"></use>
-        </svg>
-        <div class=\\"u-text u-ta-left u-pl-half\\">My small persistent information, with an icon. And a lot of text ? Again and again...</div>
+    <div class=\\"styles__Infos___2ZZVs styles__Infos--danger___3wKYc u-maw-6\\">
+      <div class=\\"styles__Stack--m___1tSpV\\">
+        <div class=\\"styles__Infos-description___7P1NP\\">
+          <div class=\\"styles__Stack--s___22WMg\\">
+            <div class=\\"u-title-h3 u-pomegranate\\">Infos breaking news</div>
+            <div class=\\"u-flex u-w-100\\"><svg class=\\"u-w-1 u-h-1 u-flex-shrink-0 styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+                <use xlink:href=\\"#warning\\"></use>
+              </svg>
+              <div class=\\"u-text u-pl-half\\">My small persistent information, with an icon. And a lot of text ? Again and again...</div>
+            </div>
+          </div>
+        </div>
+        <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>A CTA button</span></span></button></div>
       </div>
-      <div class=\\"u-flex-shrink-0\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>A CTA button</span></span></button></div>
+    </div>
+    <hr>
+    <h2>New API</h2>
+    <div class=\\"u-m-1\\">title: <input class=\\"u-mr-1\\" type=\\"checkbox\\" checked=\\"\\">action: <input class=\\"u-mr-1\\" type=\\"checkbox\\">secondaryTheme: <input class=\\"u-mr-1\\" type=\\"checkbox\\"></div>
+    <div class=\\"styles__Infos___2ZZVs styles__Infos--primary___3i4ll\\">
+      <div class=\\"styles__Stack--m___1tSpV\\">
+        <div class=\\"styles__Infos-description___7P1NP\\">
+          <div class=\\"styles__Stack--s___22WMg\\">
+            <div class=\\"u-title-h3\\">Date of birth</div>
+            <div class=\\"u-text\\">10 December 1815</div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <div class=\\"u-m-1\\">title: <input class=\\"u-mr-1\\" type=\\"checkbox\\" checked=\\"\\">action: <input class=\\"u-mr-1\\" type=\\"checkbox\\" checked=\\"\\">dangerTheme: <input class=\\"u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+    <div class=\\"styles__Infos___2ZZVs styles__Infos--danger___3wKYc\\">
+      <div class=\\"styles__Stack--m___1tSpV\\">
+        <div class=\\"styles__Infos-description___7P1NP\\">
+          <div class=\\"styles__Stack--s___22WMg\\">
+            <div class=\\"u-title-h3 u-pomegranate\\">Date of birth</div>
+            <div class=\\"u-text\\">10 December 1815</div>
+          </div>
+        </div>
+        <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>ok</span></span></button></div>
+      </div>
+    </div>
+    <div class=\\"u-m-1\\">title: <input class=\\"u-mr-1\\" type=\\"checkbox\\" checked=\\"\\">multiActions: <input class=\\"u-mr-1\\" type=\\"checkbox\\" checked=\\"\\">dangerTheme: <input class=\\"u-mr-1\\" type=\\"checkbox\\">dismissAction: <input class=\\"u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+    <div class=\\"styles__Infos___2ZZVs styles__Infos--primary___3i4ll\\">
+      <div class=\\"styles__Stack--m___1tSpV\\">
+        <div class=\\"styles__Infos-description___7P1NP\\">
+          <div class=\\"styles__Stack--s___22WMg\\">
+            <div class=\\"u-title-h3\\">Date of birth</div>
+            <div class=\\"u-text\\">10 December 1815</div>
+          </div>
+        </div>
+        <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>one</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>two</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>three</span></span></button></div>
+      </div><button class=\\"styles__Info-close___1RVQP\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
+          <use xlink:href=\\"#cross\\"></use>
+        </svg></button>
     </div>
   </div>
 </div>"

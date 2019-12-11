@@ -1,16 +1,32 @@
+@require 'settings/palette'
+@require 'settings/breakpoints'
 @require 'tools/mixins'
-@require 'settings/spaces'
 
 .Infos
-    border-radius 4px
-    max-width 32rem
-    display flex
-    flex-direction column
-    justify-content center
-    text-align left
-    padding 1rem
-    min-height 2rem
+    position relative
+    border-radius 8px
+    padding 2rem 1.5rem
 
-.Infos__icon
-    padding-top .2rem
-    fill var(--slateGrey)
+    +mobile()
+        padding 1rem
+
+    &.Infos--primary
+        background-color var(--zircon)
+
+    &.Infos--secondary
+        background-color var(--paleGrey)
+
+    &.Infos--danger
+        background-color var(--chablis)
+
+.Infos-description
+    max-width 32rem
+
+.Info-close
+    position absolute
+    top 0
+    right 0
+    padding 1rem
+    cursor pointer
+    border 0
+    background transparent
