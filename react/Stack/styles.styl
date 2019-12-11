@@ -1,5 +1,9 @@
 @require 'utilities/spaces.styl'
 
+.Stack
+    display flex
+    flex-direction column
+
 for k,v in spacing_values
   modifier = "--" + k
   .Stack{modifier} > * + *

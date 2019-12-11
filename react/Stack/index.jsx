@@ -7,7 +7,11 @@ const Stack = ({ spacing, ...props }) => {
   return (
     <div
       {...props}
-      className={cx(props.className, spacing && styles['Stack--' + spacing])}
+      className={cx(
+        props.className,
+        styles.Stack,
+        spacing && styles['Stack--' + spacing]
+      )}
     />
   )
 }

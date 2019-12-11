@@ -5119,8 +5119,8 @@ exports[`Label should render examples: Label 3`] = `
 exports[`Labs/CollectionField should render examples: Labs/CollectionField 1`] = `
 "<div>
   <div class=\\"styles__o-field___3n5HM\\"><label class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">Contacts</label>
-    <div class=\\"styles__Stack--m___1tSpV\\">
-      <div class=\\"styles__Stack--s___22WMg\\">
+    <div class=\\"styles__Stack___2Wsor styles__Stack--m___1tSpV\\">
+      <div class=\\"styles__Stack___2Wsor styles__Stack--s___22WMg\\">
         <div class=\\"styles__CollectionField__row___Z7bbf\\"><button type=\\"button\\" class=\\"styles__SelectControl___2OxoO\\">isabelle.durand@cozycloud.cc</button><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh styles__c-btn--round___1Lkyl\\" title=\\"Remove this contact\\"><span><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#cross-small\\"></use></svg><span class=\\"u-visuallyhidden\\">Remove this contact</span></span></button></div>
       </div><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh styles__CollectionField__addBtn___Z0FO-\\"><span><svg class=\\"styles__CollectionField__addBtnIcon___1hA5b styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#plus\\"></use></svg><span>Add a contact</span></span></button>
     </div>
@@ -5131,8 +5131,8 @@ exports[`Labs/CollectionField should render examples: Labs/CollectionField 1`] =
 exports[`Labs/CollectionField should render examples: Labs/CollectionField 2`] = `
 "<div>
   <div class=\\"styles__o-field___3n5HM styles__o-field--inline___7JWZ8\\"><label class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">Contacts</label>
-    <div class=\\"styles__Stack--m___1tSpV\\">
-      <div class=\\"styles__Stack--s___22WMg\\">
+    <div class=\\"styles__Stack___2Wsor styles__Stack--m___1tSpV\\">
+      <div class=\\"styles__Stack___2Wsor styles__Stack--s___22WMg\\">
         <div class=\\"styles__CollectionField__row___Z7bbf\\"><button type=\\"button\\" class=\\"styles__SelectControl___2OxoO\\">isabelle.durand@cozycloud.cc</button><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh styles__c-btn--round___1Lkyl\\" title=\\"Remove this contact\\"><span><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#cross-small\\"></use></svg><span class=\\"u-visuallyhidden\\">Remove this contact</span></span></button></div>
       </div><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh styles__CollectionField__addBtn___Z0FO-\\"><span><svg class=\\"styles__CollectionField__addBtnIcon___1hA5b styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#plus\\"></use></svg><span>Add a contact</span></span></button>
     </div>
