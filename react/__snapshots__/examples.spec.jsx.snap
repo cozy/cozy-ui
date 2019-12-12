@@ -5008,6 +5008,37 @@ exports[`Infos should render examples: Infos 1`] = `
 </div>"
 `;
 
+exports[`InfosCarrousel should render examples: InfosCarrousel 1`] = `
+"<div>
+  <div class=\\"u-stack-m\\">
+    <div class=\\"styles__InfosCarrousel___3rCyB styles__InfosCarrousel--danger___1Cdvd\\">
+      <div style=\\"overflow-x: hidden;\\">
+        <div style=\\"height: 0px; flex-direction: row; transition: all 0s ease 0s; direction: ltr; display: flex; will-change: transform;\\" class=\\"react-swipeable-view-container\\">
+          <div style=\\"width: 100%; flex-shrink: 0; overflow: auto; overflow-y: hidden;\\" aria-hidden=\\"false\\" data-swipeable=\\"true\\">
+            <div class=\\"styles__Infos___2ZZVs styles__Infos--danger___3wKYc\\">
+              <div class=\\"styles__Stack--m___1tSpV\\">
+                <div class=\\"styles__Infos-description___7P1NP\\">
+                  <div class=\\"styles__Stack--s___22WMg\\">
+                    <div class=\\"u-title-h3\\">News 1</div>
+                    <div class=\\"u-text\\">Breaking news 1</div>
+                  </div>
+                </div>
+                <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>A CTA button</span></span></button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=\\"styles__InfosCarrousel-navigation___3s_hu\\"><button class=\\"styles__InfosCarrousel-arrow___1kpYd\\" disabled=\\"\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+            <use xlink:href=\\"#left\\"></use>
+          </svg></button><span class=\\"styles__InfosCarrousel-separator___AvH5m\\"></span><button class=\\"styles__InfosCarrousel-arrow___1kpYd\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+            <use xlink:href=\\"#right\\"></use>
+          </svg></button></div>
+    </div>
+  </div>
+</div>"
+`;
+
 exports[`InlineCard should render examples: InlineCard 1`] = `"<div><span class=\\"styles__c-inline-card___1sri1\\">I am an inline card</span></div>"`;
 
 exports[`InputGroup should render examples: InputGroup 1`] = `
