@@ -53,3 +53,11 @@ import { Caption } from 'cozy-ui/transpiled/react/Text';
 
 <Caption>This a caption text</Caption>
 ```
+
+#### Emphasis text
+
+```jsx
+import { Em } from 'cozy-ui/transpiled/react/Text';
+
+<Em>This is an emphasis text</Em>
+```

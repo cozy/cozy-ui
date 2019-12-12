@@ -1,6 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
+import styles from './styles.styl'
 
 export const BaseText = props => {
   const { className, children, tag, ellipsis, ...restProps } = props
@@ -41,6 +42,9 @@ export const Uppercase = ({ className, ...restProps }) => (
 export const Caption = ({ className, ...restProps }) => (
   <BaseText className={cx('u-caption', className)} {...restProps} />
 )
+export const Em = ({ className, ...restProps }) => (
+  <BaseText className={cx(styles.Em, className)} {...restProps} />
+)
 
 // Props
 const commonProps = {
@@ -71,6 +75,9 @@ Caption.propTypes = {
 Uppercase.propTypes = {
   ...commonProps
 }
+Em.propTypes = {
+  ...commonProps
+}
 
 // Default Props
 const commonDefaultProps = {
@@ -99,6 +106,11 @@ Caption.defaultProps = {
 
 Uppercase.defaultProps = {
   ...commonDefaultProps
+}
+
+Em.defaultProps = {
+  ...commonDefaultProps,
+  tag: 'span'
 }
 
 export default Text
