@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-import SelectBox from 'cozy-ui/react/SelectBox'
-import Icon from 'cozy-ui/react/Icon'
+import SelectBox from '../../SelectBox'
+import Icon from '../../Icon'
 import PropTypes from 'prop-types'
 import styles from './DropdownFilter.styl'
 import cx from 'classnames'

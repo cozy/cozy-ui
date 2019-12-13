@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { translate } from 'cozy-ui/react/I18n'
-import withBreakpoints from 'cozy-ui/react/helpers/withBreakpoints'
+import { translate } from '../I18n'
+import withBreakpoints from '../helpers/withBreakpoints'
 
 import AppsSection from './components/AppsSection'
 import DropdownFilter from './components/DropdownFilter'

@@ -1,6 +1,6 @@
 import React from 'react'
-import { translate } from 'cozy-ui/react/I18n'
-import withBreakpoints from 'cozy-ui/react/helpers/withBreakpoints'
+import { translate } from '../../I18n'
+import withBreakpoints from '../../helpers/withBreakpoints'
 import { getTranslatedManifestProperty } from '../helpers'
 import sortBy from 'lodash/sortBy'
 import SmallAppItem from './SmallAppItem'

@@ -6,7 +6,7 @@ import styles from './styles.styl'
 import UIRadio from '../Radio'
 import cx from 'classnames'
 import omit from 'lodash/omit'
-import palette from 'cozy-ui/react/palette'
+import palette from '../palette'
 
 /**
  * Select like component to choose an option among a list of options.
