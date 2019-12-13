@@ -1,11 +1,11 @@
 import React from 'react'
-import Icon from 'cozy-ui/react/Icon'
+import Icon from '../Icon'
 import Modal, {
   ModalHeader as UIModalHeader,
   ModalContent as UIModalContent
-} from 'cozy-ui/react/Modal'
-import { Media, Bd, Img } from 'cozy-ui/react/Media'
-import palette from 'cozy-ui/react/palette'
+} from '../Modal'
+import { Media, Bd, Img } from '../Media'
+import palette from '../palette'
 import NestedSelect from './NestedSelect'
 
 import styles from './styles.styl'

@@ -1,3 +1,3 @@
-import ModalCross from 'cozy-ui/react/Modal/ModalCross'
+import ModalCross from '../../Modal/ModalCross'
 
 export default ModalCross
