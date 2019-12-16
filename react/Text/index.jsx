@@ -1,6 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
+import styles from './styles.styl'
 
 export const BaseText = props => {
   const { className, children, tag, ellipsis, ...restProps } = props
@@ -42,6 +43,10 @@ export const Caption = ({ className, ...restProps }) => (
   <BaseText className={cx('u-caption', className)} {...restProps} />
 )
 
+export const ErrorMessage = ({ className, ...restProps }) => (
+  <BaseText className={cx(styles.ErrorMessage, className)} {...restProps} />
+)
+
 // Props
 const commonProps = {
   children: PropTypes.node,
@@ -71,6 +76,9 @@ Caption.propTypes = {
 Uppercase.propTypes = {
   ...commonProps
 }
+ErrorMessage.propTypes = {
+  ...commonProps
+}
 
 // Default Props
 const commonDefaultProps = {
@@ -98,6 +106,10 @@ Caption.defaultProps = {
 }
 
 Uppercase.defaultProps = {
+  ...commonDefaultProps
+}
+
+ErrorMessage.defaultProps = {
   ...commonDefaultProps
 }
 
