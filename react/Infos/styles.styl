@@ -1,14 +1,15 @@
 @require 'settings/palette'
 @require 'settings/breakpoints'
 @require 'tools/mixins'
+@require 'settings/spaces'
 
 .Infos
     position relative
     border-radius 8px
-    padding 2rem 1.5rem
+    padding spacing_values.xl spacing_values.l
 
     +mobile()
-        padding 1rem
+        padding spacing_values.m
 
     &.Infos--primary
         background-color var(--zircon)
@@ -26,7 +27,7 @@
     position absolute
     top 0
     right 0
-    padding 1rem
+    padding spacing_values.m
     cursor pointer
     border 0
     background transparent
