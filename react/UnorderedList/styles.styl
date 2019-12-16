@@ -1,0 +1,22 @@
+.UnorderedList
+    padding-left 0
+    list-style none
+
+bullet-size = 0.5rem
+line-height = 1.5
+
+.ListItem
+    position relative
+    line-height line-height
+    padding-left 1.5rem
+
+    &::before
+        content ''
+        position absolute
+        top line-height * bullet-size
+        left 0
+        width bullet-size
+        height bullet-size
+        background-color var(--slateGrey)
+        border-radius 50%
+        transform: translateY(-50%)
