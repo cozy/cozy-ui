@@ -5253,6 +5253,8 @@ exports[`NarrowContent should render examples: NarrowContent 1`] = `
 </div>"
 `;
 
+exports[`PasswordExample should render examples: PasswordExample 1`] = `"<div><span class=\\"styles__c-inline-card___1sri1\\"><span class=\\"\\">C</span><span class=\\"\\">l</span><span class=\\"styles__Token--number___2EzoN\\">4</span><span class=\\"\\">u</span><span class=\\"\\">d</span><span class=\\"\\">e</span><span class=\\"styles__Token--special___3_rSu\\">€</span><span class=\\"\\">s</span><span class=\\"\\">t</span><span class=\\"styles__Token--number___2EzoN\\">1</span><span class=\\"\\">N</span><span class=\\"\\">u</span><span class=\\"styles__Token--special___3_rSu\\">@</span><span class=\\"\\">g</span><span class=\\"\\">e</span></span></div>"`;
+
 exports[`PercentageBar should render examples: PercentageBar 1`] = `
 "<div><button>Random percentage</button>50.00% <div class=\\"styles__PercentageBar___12TWu\\" style=\\"margin-bottom: 2rem;\\">
     <div class=\\"styles__PercentageBar__line___1DAnN PercentageLine__PercentageLine___3koWP\\" style=\\"transform: scaleX(0.5);\\"></div>
