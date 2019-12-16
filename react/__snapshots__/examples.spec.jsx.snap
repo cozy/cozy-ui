@@ -5870,6 +5870,12 @@ exports[`Text should render examples: Text 7`] = `
 </div>"
 `;
 
+exports[`Text should render examples: Text 8`] = `
+"<div>
+  <div class=\\"styles__ErrorMessage___PWDaA\\">This an error message text</div>
+</div>"
+`;
+
 exports[`Textarea should render examples: Textarea 1`] = `"<div><textarea placeholder=\\"Once upon a time…\\" class=\\"styles__c-textarea___D7EEH\\"></textarea></div>"`;
 
 exports[`Textarea should render examples: Textarea 2`] = `"<div><textarea placeholder=\\"Once upon a time, there was an error…\\" class=\\"styles__c-textarea___D7EEH styles__is-error___1kGLj\\"></textarea></div>"`;

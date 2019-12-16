@@ -53,3 +53,11 @@ import { Caption } from 'cozy-ui/transpiled/react/Text';
 
 <Caption>This a caption text</Caption>
 ```
+
+#### ErrorMessage text
+
+```
+import { ErrorMessage } from 'cozy-ui/transpiled/react/Text';
+
+<ErrorMessage>This an error message text</ErrorMessage>
+```
