@@ -5253,6 +5253,16 @@ exports[`NarrowContent should render examples: NarrowContent 1`] = `
 </div>"
 `;
 
+exports[`OrderedList should render examples: OrderedList 1`] = `
+"<div>
+  <ol class=\\"styles__OrderedList___17A_o styles__Stack--m___1tSpV\\">
+    <li class=\\"styles__ListItem___2Lu4a\\">Do this</li>
+    <li class=\\"styles__ListItem___2Lu4a\\">Then do this</li>
+    <li class=\\"styles__ListItem___2Lu4a\\">And finally do this</li>
+  </ol>
+</div>"
+`;
+
 exports[`PasswordExample should render examples: PasswordExample 1`] = `"<div><span class=\\"styles__c-inline-card___1sri1\\"><span class=\\"\\">C</span><span class=\\"\\">l</span><span class=\\"styles__Token--number___2EzoN\\">4</span><span class=\\"\\">u</span><span class=\\"\\">d</span><span class=\\"\\">e</span><span class=\\"styles__Token--special___3_rSu\\">€</span><span class=\\"\\">s</span><span class=\\"\\">t</span><span class=\\"styles__Token--number___2EzoN\\">1</span><span class=\\"\\">N</span><span class=\\"\\">u</span><span class=\\"styles__Token--special___3_rSu\\">@</span><span class=\\"\\">g</span><span class=\\"\\">e</span></span></div>"`;
 
 exports[`PercentageBar should render examples: PercentageBar 1`] = `

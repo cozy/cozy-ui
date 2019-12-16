@@ -1,0 +1,19 @@
+counter-name = cozy-ui-ordered-list
+
+.OrderedList
+    list-style none
+    counter-reset counter-name
+    padding-left 0
+    line-height 1.5
+
+.ListItem
+    counter-increment counter-name
+    position relative
+    padding-left 1.5rem
+
+    &::before
+        content counter(counter-name) ". "
+        font-weight bold
+        position absolute
+        left 0
+        top 0
