@@ -5017,7 +5017,6 @@ exports[`Infos should render examples: Infos 1`] = `
             <div class=\\"u-text\\">10 December 1815</div>
           </div>
         </div>
-        <div></div>
       </div>
     </div>
     <div class=\\"u-m-1\\">title: <input class=\\"u-mr-1\\" type=\\"checkbox\\" checked=\\"\\">action: <input class=\\"u-mr-1\\" type=\\"checkbox\\" checked=\\"\\">dangerTheme: <input class=\\"u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>

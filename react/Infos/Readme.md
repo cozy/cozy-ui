@@ -39,7 +39,7 @@ const initialVariants = [
             {variant.title && <SubTitle className={variant.dangerTheme ? 'u-pomegranate' : ''}>{content.ada.facts[0].title}</SubTitle>}
             <Text>{content.ada.facts[0].description}</Text>
           </>}
-          action={<>
+          action={(variant.action || variant.multiActions) && <>
             {variant.action && <Button label="ok" theme={variant.dangerTheme ? 'danger' : 'primary'} />}
             {variant.multiActions && ['one', 'two', 'three'].map(label => <Button label={label} theme={variant.dangerTheme ? 'danger' : 'primary'} />)}
           </>}
