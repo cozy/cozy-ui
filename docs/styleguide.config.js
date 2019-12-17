@@ -136,7 +136,8 @@ module.exports = {
         '../react/Labs/GridItem',
         '../react/MuiCozyTheme/Dialog',
         '../react/Labs/IconGrid',
-        '../react/Labs/CollectionField'
+        '../react/Labs/CollectionField',
+        '../react/Labs/PasswordInput'
       ]
     },
     {
