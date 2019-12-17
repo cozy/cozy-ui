@@ -3,7 +3,6 @@
 ```
 import Infos from 'cozy-ui/transpiled/react/Infos';
 import Button from 'cozy-ui/transpiled/react/Button';
-import Icon from 'cozy-ui/transpiled/react/Icon';
 import Text, { SubTitle } from 'cozy-ui/transpiled/react/Text';
 import Variants from 'cozy-ui/docs/components/Variants';
 
@@ -14,23 +13,6 @@ const initialVariants = [
 ];
 
 <div className='u-stack-m'>
-    <Infos text="My small persistent information! " />
-    <Infos text="In a slightly different style" className='u-maw-none u-bdrs-0'/>
-    <Infos
-        text="My small persistent information, with an icon. And a lot of text ? Again and again..."
-        icon="info"
-    />
-    <Infos
-        actionButton={<Button theme="danger" label="A CTA button" />}
-        title="Infos breaking news"
-        text="My small persistent information, with an icon. And a lot of text ? Again and again..."
-        icon="warning"
-        isImportant
-    />
-
-    <hr />
-    <h2>New API</h2>
-
     <Variants initialVariants={initialVariants}>{
       variant => (
         <Infos
