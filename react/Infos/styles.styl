@@ -1,9 +1,33 @@
+@require 'settings/palette'
+@require 'settings/breakpoints'
 @require 'tools/mixins'
+@require 'settings/spaces'
 
 .Infos
-    border-radius 4px
+    position relative
+    border-radius 8px
+    padding spacing_values.xl spacing_values.l
+
+    +mobile()
+        padding spacing_values.m
+
+    &.Infos--primary
+        background-color var(--zircon)
+
+    &.Infos--secondary
+        background-color var(--paleGrey)
+
+    &.Infos--danger
+        background-color var(--chablis)
+
+.Infos-description
     max-width 32rem
 
-.Infos__icon
-  padding-top .2rem
-  fill var(--slateGrey)
+.Info-close
+    position absolute
+    top 0
+    right 0
+    padding spacing_values.m
+    cursor pointer
+    border 0
+    background transparent
