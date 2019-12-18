@@ -22,7 +22,7 @@ const InfosCarrousel = ({ children, theme, className, swipleableProps }) => {
         className
       )}
     >
-      <SwipeableViews index={index} animateHeight {...swipleableProps}>
+      <SwipeableViews index={index} animateHeight {...swipeableProps}>
         {children}
       </SwipeableViews>
       <div className={styles['InfosCarrousel-navigation']}>
