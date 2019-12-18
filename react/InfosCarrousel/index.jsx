@@ -54,7 +54,7 @@ InfosCarrousel.propTypes = {
   /** Extra classes to apply to the main wrapper */
   className: PropTypes.string,
   /** Props to pass to the underlying react-swipeable-views component */
-  swipleableProps: PropTypes.object
+  swipeableProps: PropTypes.object
 }
 
 InfosCarrousel.defaultProps = {
