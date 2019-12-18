@@ -9,8 +9,8 @@ import Icon from '../Icon'
 const InfosCarrousel = ({ children, theme, className, swipeableProps }) => {
   const count = React.Children.count(children)
   const [index, setIndex] = useState(0)
-  const nextInfos = useCallback(() => setIndex(index + 1), [index])
-  const previousInfos = useCallback(() => setIndex(index - 1), [index])
+  const goToNextInfos = useCallback(() => setIndex(index + 1), [index])
+  const goToPreviousInfos = useCallback(() => setIndex(index - 1), [index])
   const hasPreviousInfos = index === 0
   const hasNextInfos = index === count - 1
 
@@ -28,7 +28,7 @@ const InfosCarrousel = ({ children, theme, className, swipeableProps }) => {
       <div className={styles['InfosCarrousel-navigation']}>
         <button
           className={styles['InfosCarrousel-arrow']}
-          onClick={previousInfos}
+          onClick={goToPreviousInfos}
           disabled={hasPreviousInfos}
         >
           <Icon icon="left" />
@@ -36,7 +36,7 @@ const InfosCarrousel = ({ children, theme, className, swipeableProps }) => {
         <span className={styles['InfosCarrousel-separator']} />
         <button
           className={styles['InfosCarrousel-arrow']}
-          onClick={nextInfos}
+          onClick={goToNextInfos}
           disabled={hasNextInfos}
         >
           <Icon icon="right" />
