@@ -66,15 +66,28 @@ export const theme = createMuiTheme({
 theme.overrides = {
   MuiOutlinedInput: {
     root: {
+      '.CozyMuiInvertedTextField &': {
+        color: 'var(--white)'
+      },
       '&$disabled': {
         background: 'var(--paleGrey)'
       },
       '&$focused $notchedOutline': {
         borderWidth: '0.0625rem'
+      },
+      '.CozyMuiInvertedTextField & $notchedOutline': {
+        borderColor: 'var(--white) !important'
       }
     },
     notchedOutline: {
       borderColor: 'var(--silver)'
+    }
+  },
+  MuiInputLabel: {
+    outlined: {
+      '.CozyMuiInvertedTextField &': {
+        color: 'var(--white)'
+      }
     }
   },
   MuiButton: {
