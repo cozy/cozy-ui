@@ -5,7 +5,7 @@ const defaultValues = {
   borderRadius: 6
 }
 
-export const theme = createMuiTheme({
+export const normalTheme = createMuiTheme({
   typography: {
     useNextVariants: true,
     fontFamily: getCssVariableValue('primaryFont'),
@@ -13,7 +13,30 @@ export const theme = createMuiTheme({
       color: 'white'
     }
   },
+  shape: {
+    borderRadius: defaultValues.borderRadius
+  },
+  breakpoints: {
+    // Define custom breakpoint values.
+    // These will apply to Material-UI components that use responsive
+    // breakpoints, such as `Grid` and `Hidden`. You can also use the
+    // theme breakpoint functions `up`, `down`, and `between` to create
+    // media queries for these breakpoints
+    // xs = all
+    // sm = tiny
+    // md = small
+    // lg = medium
+    // xl = large
+    values: {
+      xs: 0,
+      sm: 480,
+      md: 768,
+      lg: 1023,
+      xl: 1200
+    }
+  },
   palette: {
+    type: 'light',
     primary: {
       light: getCssVariableValue('primaryColorLight'),
       main: getCssVariableValue('primaryColor'),
@@ -38,32 +61,10 @@ export const theme = createMuiTheme({
       800: getCssVariableValue('charcoalGrey'),
       900: getCssVariableValue('black')
     }
-  },
-  shape: {
-    borderRadius: defaultValues.borderRadius
-  },
-  breakpoints: {
-    // Define custom breakpoint values.
-    // These will apply to Material-UI components that use responsive
-    // breakpoints, such as `Grid` and `Hidden`. You can also use the
-    // theme breakpoint functions `up`, `down`, and `between` to create
-    // media queries for these breakpoints
-    // xs = all
-    // sm = tiny
-    // md = small
-    // lg = medium
-    // xl = large
-    values: {
-      xs: 0,
-      sm: 480,
-      md: 768,
-      lg: 1023,
-      xl: 1200
-    }
   }
 })
 
-theme.overrides = {
+normalTheme.overrides = {
   MuiOutlinedInput: {
     root: {
       '&$disabled': {
@@ -226,10 +227,10 @@ theme.overrides = {
     },
     paper: {
       'box-sizing': 'border-box',
-      [theme.breakpoints.down('md')]: {
+      [normalTheme.breakpoints.down('md')]: {
         padding: '16px'
       },
-      [theme.breakpoints.up('md')]: {
+      [normalTheme.breakpoints.up('md')]: {
         padding: '32px'
       }
     },
@@ -258,7 +259,61 @@ theme.overrides = {
 }
 
 // Override default shadow for elevation 8 used for Popover
-theme.shadows[8] =
+normalTheme.shadows[8] =
   '0rem 0.125rem 0.375rem 0rem rgba(50, 54, 63, .19), 0rem 0.375rem 1.25rem 0rem rgba(50, 54, 63, .19)'
 
-export default theme
+export const invertedTheme = {
+  ...normalTheme,
+  palette: {
+    ...normalTheme.palette,
+    type: 'dark',
+    text: {
+      primary: getCssVariableValue('white')
+    }
+  }
+}
+
+invertedTheme.overrides = {
+  ...normalTheme.overrides,
+  MuiOutlinedInput: {
+    root: {
+      '&$focused $notchedOutline': {
+        borderColor: invertedTheme.palette.text.primary,
+        borderWidth: '0.0625rem'
+      },
+      '& $notchedOutline': {
+        borderColor: invertedTheme.palette.text.primary
+      }
+    }
+  },
+  MuiFormLabel: {
+    root: {
+      '&$focused': {
+        color: invertedTheme.palette.text.primary
+      }
+    }
+  },
+  MuiInputLabel: {
+    root: {
+      color: invertedTheme.palette.text.primary
+    }
+  }
+}
+
+const themes = {
+  normal: normalTheme,
+  inverted: invertedTheme
+}
+
+export const getTheme = variant => {
+  const theme = themes[variant]
+
+  if (!theme) {
+    const possibleThemes = Object.keys(themes).join(', ')
+    throw new Error(
+      `[MuiCozyTheme] Unknown theme variant: ${variant}. Possible variants are ${possibleThemes}`
+    )
+  }
+
+  return theme
+}
