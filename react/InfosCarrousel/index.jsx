@@ -6,7 +6,7 @@ import SwipeableViews from 'react-swipeable-views'
 import styles from './styles.styl'
 import Icon from '../Icon'
 
-const InfosCarrousel = ({ children, theme, className, swipleableProps }) => {
+const InfosCarrousel = ({ children, theme, className, swipeableProps }) => {
   const count = React.Children.count(children)
   const [index, setIndex] = useState(0)
   const nextInfos = useCallback(() => setIndex(index + 1), [index])
