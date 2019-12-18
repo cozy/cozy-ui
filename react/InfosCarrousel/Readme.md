@@ -11,7 +11,6 @@ import Text, { SubTitle } from 'cozy-ui/transpiled/react/Text';
 <div className='u-stack-m'>
   <InfosCarrousel theme="danger">
     <Infos
-      theme="danger"
       description={<>
         <SubTitle>News 1</SubTitle>
         <Text>Breaking news 1</Text>
@@ -23,7 +22,7 @@ import Text, { SubTitle } from 'cozy-ui/transpiled/react/Text';
         <SubTitle>News 2</SubTitle>
         <Text>Breaking news 2</Text>
       </>}
-      theme="danger"
+      theme="primary"
       action={<Button theme="secondary" label="A CTA button" />}
     />
   </InfosCarrousel>
