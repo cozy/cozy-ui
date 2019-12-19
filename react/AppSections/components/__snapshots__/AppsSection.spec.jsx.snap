@@ -10,7 +10,7 @@ exports[`AppsSection component should be rendered correctly with apps list, subt
   <div
     className="AppsSection__AppsSection__list___2Uy0E"
   >
-    <Wrapper
+    <withI18n(SmallAppItem)
       app={
         Object {
           "categories": Array [
@@ -43,7 +43,7 @@ exports[`AppsSection component should be rendered correctly with apps list, subt
       namePrefix=""
       onClick={[Function]}
     />
-    <Wrapper
+    <withI18n(SmallAppItem)
       app={
         Object {
           "categories": Array [
@@ -96,7 +96,7 @@ exports[`AppsSection component should be rendered correctly with apps list, subt
       namePrefix="Cozy"
       onClick={[Function]}
     />
-    <Wrapper
+    <withI18n(SmallAppItem)
       app={
         Object {
           "categories": Array [
@@ -128,7 +128,7 @@ exports[`AppsSection component should be rendered correctly with apps list, subt
       namePrefix=""
       onClick={[Function]}
     />
-    <Wrapper
+    <withI18n(SmallAppItem)
       app={
         Object {
           "categories": Array [
@@ -163,7 +163,7 @@ exports[`AppsSection component should be rendered correctly with apps list, subt
       namePrefix="Cozy"
       onClick={[Function]}
     />
-    <Wrapper
+    <withI18n(SmallAppItem)
       app={
         Object {
           "categories": Array [
@@ -202,7 +202,7 @@ exports[`AppsSection component should be rendered correctly with apps list, subt
       namePrefix="Cozy"
       onClick={[Function]}
     />
-    <Wrapper
+    <withI18n(SmallAppItem)
       app={
         Object {
           "availableVersion": "3.0.0",
@@ -236,7 +236,7 @@ exports[`AppsSection component should be rendered correctly with apps list, subt
       namePrefix=""
       onClick={[Function]}
     />
-    <Wrapper
+    <withI18n(SmallAppItem)
       app={
         Object {
           "categories": Array [
