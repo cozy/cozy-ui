@@ -5767,7 +5767,7 @@ exports[`Spinner should render examples: Spinner 5`] = `
     <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"80\\" height=\\"80\\">
         <use xlink:href=\\"#spinner\\"></use>
       </svg>
-      <p>loading.hi</p>
+      <p>loading.helloWorld</p>
     </div>
   </div>
 </div>"
