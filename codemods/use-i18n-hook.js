@@ -71,10 +71,18 @@ export default function transformer(file, api) {
   })
 
   if (needToAddUseI18nImport) {
-    utils.imports.add(root, {
-      path: 'cozy-ui/transpiled/react',
-      identifiers: ['useI18n']
-    })
+    utils.imports.add(
+      root,
+      {
+        useI18n: true
+      },
+      x => {
+        return (
+          x.source.value == 'cozy-ui/transpiled/react' ||
+          x.source.value == 'cozy-ui/react'
+        )
+      }
+    )
   }
 
   return root.toSource()
