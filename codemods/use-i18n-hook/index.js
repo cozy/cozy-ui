@@ -1,4 +1,4 @@
-import makeUtils from './utils'
+import makeUtils from '../utils'
 
 const prepend = (arr, item) => {
   arr.splice(0, 0, item)
