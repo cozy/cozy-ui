@@ -92,7 +92,10 @@ module.exports = function(j) {
     }
   }
 
-  const addImport = (root, specifierObj, source) => {
+  const addImport = (root, specifierObj, sourceOrFilter, maybeSource) => {
+    const source = maybeSource || sourceOrFilter
+    const filter = maybeSource ? sourceOrFilter : null
+
     const specifiers = Object.entries(specifierObj).map(([k, v]) => {
       return k === 'default'
         ? j.importDefaultSpecifier(j.identifier(v))
@@ -103,13 +106,13 @@ module.exports = function(j) {
 
     const matchingImports = root.find(
       j.ImportDeclaration,
-      typeof source === 'string'
-        ? {
+      filter
+        ? filter
+        : {
             source: {
               value: source
             }
           }
-        : source
     )
 
     if (matchingImports.length > 0) {
