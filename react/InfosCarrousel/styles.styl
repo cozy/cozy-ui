@@ -1,0 +1,31 @@
+@require 'settings/palette'
+
+.InfosCarrousel
+    position relative
+
+    &.InfosCarrousel--primary .InfosCarrousel-arrow,
+    &.InfosCarrousel--secondary .InfosCarrousel-arrow
+        color var(--coolGrey)
+
+    &.InfosCarrousel--danger .InfosCarrousel-arrow
+        color var(--pomegranate)
+
+.InfosCarrousel-navigation
+    position absolute
+    bottom 0
+    right 0
+    display flex
+    align-items center
+
+.InfosCarrousel-arrow
+    background none
+    border 0
+    min-width 32px
+    padding 8px 16px
+
+    &:disabled
+        opacity .24
+
+.InfosCarrousel-separator
+    border-left 1px solid var(--silver)
+    height 1rem
