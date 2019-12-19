@@ -99,7 +99,8 @@ export default function transformer(file, api) {
           x.source.value == 'cozy-ui/transpiled/react' ||
           x.source.value == 'cozy-ui/react'
         )
-      }
+      },
+      'cozy-ui/transpiled/react'
     )
     utils.simplifyCompose(root)
     utils.imports.removeUnused(root)
