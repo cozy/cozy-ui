@@ -3,21 +3,28 @@ import { mount } from 'enzyme'
 
 import ContactRow from './ContactRow'
 import renderer from 'react-test-renderer'
+
+const makeContact = attrs => ({
+  _id: 'contactid',
+  _type: 'io.cozy.contacts',
+  ...attrs
+})
+
 describe('ContactRow', () => {
   test('should accept the strict minimum', () => {
-    const contact = { email: [{ address: 'johndoe@localhost' }] }
+    const contact = makeContact({ email: [{ address: 'johndoe@localhost' }] })
     const contactRowInstance = <ContactRow contact={contact} />
     const contactrow = mount(contactRowInstance)
     const contactrowemail = contactrow.find('ContactEmail')
     expect(contactrowemail.text()).toBe(contact.email[0].address)
   })
   test('should display data', () => {
-    const contact = {
+    const contact = makeContact({
       name: { familyName: 'Doe', givenName: 'John' },
       phone: [{ number: '0123456789' }],
       email: [{ address: 'johndoe@localhost' }],
       cozy: [{ url: 'http://johndoe.mycozy.cloud' }]
-    }
+    })
     const contactRowInstance = <ContactRow contact={contact} />
     const contactrow = mount(contactRowInstance)
     const contactrowname = contactrow.find('ContactName')
@@ -37,7 +44,9 @@ describe('ContactRow', () => {
     expect(contactrowcozyurl.text()).toBe(contact.cozy[0].url)
   })
   test('should display empty string for missing information', () => {
-    const contact = { email: [{ address: 'johndoe@localhost' }] }
+    const contact = makeContact({
+      email: [{ address: 'johndoe@localhost' }]
+    })
     const contactRowInstance = <ContactRow contact={contact} />
     const contactrow = mount(contactRowInstance)
     const contactrowname = contactrow.find('ContactName')
@@ -51,7 +60,7 @@ describe('ContactRow', () => {
     expect(contactrowcozyurl.text().trim()).toBe('—')
   })
   test('should accept empty array', () => {
-    const contact = { email: [] }
+    const contact = makeContact({ email: [] })
     const contactRowInstance = <ContactRow contact={contact} />
     const contactrow = mount(contactRowInstance)
     const contactrowemail = contactrow.find('ContactEmail')
@@ -60,12 +69,12 @@ describe('ContactRow', () => {
   })
 
   test('should match the contact snapshot', () => {
-    const contact = {
+    const contact = makeContact({
       name: { familyName: 'Doe', givenName: 'John' },
       phone: [{ number: '0123456789' }],
       email: [{ address: 'johndoe@localhost' }],
       cozy: [{ url: 'http://johndoe.mycozy.cloud' }]
-    }
+    })
     const tree = renderer.create(<ContactRow contact={contact} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
