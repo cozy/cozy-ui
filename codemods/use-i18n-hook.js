@@ -45,10 +45,18 @@ export default function transformer(file, api) {
       return false
     }
 
-    arrowFunctionBody.params[0].properties = arrowFunctionBody.params[0].properties.filter(
+    const updatedProperties = arrowFunctionBody.params[0].properties.filter(
       prop => !isI18nProp(prop)
     )
 
+    if (
+      updatedProperties.length === 0 &&
+      arrowFunctionBody.params.length === 1
+    ) {
+      arrowFunctionBody.params = []
+    } else {
+      arrowFunctionBody.params[0].properties = updatedProperties
+    }
 
     prepend(arrowFunctionBody.body.body, `const { ${i18nProps} } = useI18n()`)
     utils.hoc.removeHOC(arrowFunctionBodyPath, 'translate')
