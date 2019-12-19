@@ -61,7 +61,6 @@ export const SmallAppItem = ({
 }
 
 SmallAppItem.propTypes = {
-  t: PropTypes.func.isRequired,
   app: AppDoctype,
   name: PropTypes.string.isRequired,
   namePrefix: PropTypes.string,

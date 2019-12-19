@@ -29,7 +29,9 @@ describe('AppsSection component', () => {
           onAppClick={onAppClick}
         />
       </I18n>
-    ).dive()
+    )
+      .dive()
+      .dive()
   }
   it('should be rendered correctly with apps list, subtitle and onAppClick', () => {
     const mockOnAppClick = jest.fn()
