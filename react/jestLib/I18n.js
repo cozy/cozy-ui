@@ -9,5 +9,5 @@ export const I18nContext = options => {
     dictRequire: () => options.locale
   })
 
-  return I18nComponent.getChildContext()
+  return I18nComponent.getContextValue()
 }
