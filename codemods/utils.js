@@ -119,6 +119,22 @@ module.exports = function(j) {
     }
   }
 
+  const simplifyCompose = root => {
+    root
+      .find(j.CallExpression, {
+        callee: {
+          callee: {
+            name: 'compose'
+          }
+        }
+      })
+      .forEach(path => {
+        if (path.node.callee.arguments.length === 1) {
+          path.node.callee = path.node.callee.arguments[0]
+        }
+      })
+  }
+
   return {
     nodes: {
       isEmptyText: emptyTextNode
@@ -137,5 +153,6 @@ module.exports = function(j) {
     imports: {
       add: addImport,
     },
+    simplifyCompose
   }
 }
