@@ -1,3 +1,5 @@
+import makeRemoveImportIfUnused from './remove-import-if-unused'
+
 /* eslint new-cap: 0 */
 
 module.exports = function(j) {
@@ -152,6 +154,7 @@ module.exports = function(j) {
     },
     imports: {
       add: addImport,
+      removeUnused: makeRemoveImportIfUnused(j)
     },
     simplifyCompose
   }

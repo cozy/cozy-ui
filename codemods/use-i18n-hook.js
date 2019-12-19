@@ -102,6 +102,7 @@ export default function transformer(file, api) {
       }
     )
     utils.simplifyCompose(root)
+    utils.imports.removeUnused(root)
     return root.toSource()
   }
 
