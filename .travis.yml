@@ -2,18 +2,18 @@ language: node_js
 matrix:
   fast_finish: true
 node_js:
-- '8'
+  - '8'
 cache:
   yarn: true
   directories:
-  - node_modules
+    - node_modules
 script:
-- yarn lint
-- yarn test
-- yarn build:css:all
-- yarn build:doc:react
-- yarn screenshots
-- yarn argos --token $ARGOS_TOKEN --branch $TRAVIS_BRANCH --commit $TRAVIS_COMMIT
+  - yarn lint
+  - yarn test
+  - yarn build:css:all
+  - yarn build:doc:react
+  - yarn screenshots
+  - yarn argos --token $ARGOS_TOKEN --branch $TRAVIS_BRANCH --commit $TRAVIS_COMMIT
 deploy:
   - provider: script
     repo: cozy/cozy-ui
@@ -24,5 +24,5 @@ deploy:
 
 env:
   global:
-  # GH_TOKEN from cozy-bot (readable from password-store/cozy-ui/github-token-for-semantic-release-on-travis)
-  - secure: fMlsp52RBxJCGqB1cR5ShG3WiGl2iTl3cvzskrFqWIxrpOFc0TBaSQmpiOdkc9lg35zt8Pt1Z9F8zlWX/k/SXcR0x5SwSzunVXl1P/FzZkJ1pjtG3pVw5gtlhhuSfMhtu/cUSNyil0CfTvWbhSSkdeBpaR+J9TapBKH6qvIYGo4=
+    # GH_TOKEN from cozy-bot (readable from password-store/cozy-ui/github-token-for-semantic-release-on-travis)
+    - secure: fMlsp52RBxJCGqB1cR5ShG3WiGl2iTl3cvzskrFqWIxrpOFc0TBaSQmpiOdkc9lg35zt8Pt1Z9F8zlWX/k/SXcR0x5SwSzunVXl1P/FzZkJ1pjtG3pVw5gtlhhuSfMhtu/cUSNyil0CfTvWbhSSkdeBpaR+J9TapBKH6qvIYGo4=
