@@ -3,11 +3,12 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
-export const BaseText = props => {
+export const BaseText = React.forwardRef((props, ref) => {
   const { className, children, tag, ellipsis, ...restProps } = props
   const Tag = tag
   return (
     <Tag
+      ref={ref}
       className={cx(
         {
           ['u-ellipsis']: ellipsis
@@ -19,32 +20,50 @@ export const BaseText = props => {
       {children}
     </Tag>
   )
-}
+})
 
-export const Text = ({ className, ...restProps }) => (
-  <BaseText className={cx('u-text', className)} {...restProps} />
+export const Text = React.forwardRef(({ className, ...restProps }, ref) => (
+  <BaseText className={cx('u-text', className)} {...restProps} ref={ref} />
+))
+export const MainTitle = React.forwardRef(
+  ({ className, ...restProps }, ref) => (
+    <BaseText
+      className={cx('u-title-h1', className)}
+      {...restProps}
+      ref={ref}
+    />
+  )
 )
-export const MainTitle = ({ className, ...restProps }) => (
-  <BaseText className={cx('u-title-h1', className)} {...restProps} />
+export const Title = React.forwardRef(({ className, ...restProps }, ref) => (
+  <BaseText className={cx('u-title-h2', className)} {...restProps} ref={ref} />
+))
+export const SubTitle = React.forwardRef(({ className, ...restProps }, ref) => (
+  <BaseText className={cx('u-title-h3', className)} {...restProps} ref={ref} />
+))
+export const Bold = React.forwardRef(({ className, ...restProps }, ref) => (
+  <BaseText className={cx('u-title-h4', className)} {...restProps} ref={ref} />
+))
+export const Uppercase = React.forwardRef(
+  ({ className, ...restProps }, ref) => (
+    <BaseText
+      className={cx('u-uppercase', className)}
+      {...restProps}
+      ref={ref}
+    />
+  )
 )
-export const Title = ({ className, ...restProps }) => (
-  <BaseText className={cx('u-title-h2', className)} {...restProps} />
-)
-export const SubTitle = ({ className, ...restProps }) => (
-  <BaseText className={cx('u-title-h3', className)} {...restProps} />
-)
-export const Bold = ({ className, ...restProps }) => (
-  <BaseText className={cx('u-title-h4', className)} {...restProps} />
-)
-export const Uppercase = ({ className, ...restProps }) => (
-  <BaseText className={cx('u-uppercase', className)} {...restProps} />
-)
-export const Caption = ({ className, ...restProps }) => (
-  <BaseText className={cx('u-caption', className)} {...restProps} />
-)
+export const Caption = React.forwardRef(({ className, ...restProps }, ref) => (
+  <BaseText className={cx('u-caption', className)} {...restProps} ref={ref} />
+))
 
-export const ErrorMessage = ({ className, ...restProps }) => (
-  <BaseText className={cx(styles.ErrorMessage, className)} {...restProps} />
+export const ErrorMessage = React.forwardRef(
+  ({ className, ...restProps }, ref) => (
+    <BaseText
+      className={cx(styles.ErrorMessage, className)}
+      {...restProps}
+      ref={ref}
+    />
+  )
 )
 
 // Props
