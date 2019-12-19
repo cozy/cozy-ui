@@ -143,6 +143,12 @@ describe('PDFViewer', () => {
   })
 
   describe('with a pdf that does not load', () => {
+    beforeEach(() => {
+      jest.spyOn(console, 'warn').mockImplementation(() => {})
+    })
+    afterEach(() => {
+      console.warn.mockRestore()
+    })
     it('should show a fallback', () => {
       component.instance().onLoadError('pdfviewer test error')
       expect(component.state('errored')).toBe(true)
