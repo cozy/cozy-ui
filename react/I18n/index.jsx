@@ -91,6 +91,8 @@ export const translate = () => WrappedComponent => {
       />
     )
   }
+  Wrapper.displayName = `withI18n(${WrappedComponent.displayName ||
+    WrappedComponent.name})`
   Wrapper.propTypes = {
     //!TODO Remove this check after fixing https://github.com/cozy/cozy-drive/issues/1848
     ...(WrappedComponent ? WrappedComponent.propTypes : undefined)
