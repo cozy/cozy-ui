@@ -66,6 +66,15 @@ export default function transformer(file, api) {
       x => x.node.type === 'VariableDeclarator'
     )
     const ComponentName = declarator.node.id.name
+    j(declarator)
+      .closestScope()
+      .find(j.Identifier, {
+        name: ComponentName
+      })
+      .forEach(path => {
+        utils.hoc.removeHOC(path, 'translate')
+      })
+
     utils.hoc.removeDefaultExportHOC(root, ComponentName, 'translate')
     return true
   }
