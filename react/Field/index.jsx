@@ -246,7 +246,8 @@ const allowedTypes = [
   'textarea',
   'text',
   'url',
-  'number'
+  'number',
+  'contact'
 ]
 
 Field.propTypes = {
