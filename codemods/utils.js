@@ -75,16 +75,48 @@ module.exports = function(j) {
     }
   }
 
-  const addImport = (root, importOptions) => {
-    root.find(j.Program).forEach(({ node }) => {
-      node.body.splice(
-        0,
-        0,
-        `import { ${importOptions.identifiers.join(', ')} } from "${
-          importOptions.path
-        }"`
-      )
+  const isSameSpec = (eSpec, spec) => {
+    return eSpec.imported.name == spec.imported.name
+  }
+
+  const mergeSpecifiersToImport = (importDeclaration, specifiers) => {
+    for (const spec of specifiers) {
+      if (importDeclaration.specifiers.find(eSpec => isSameSpec(eSpec, spec))) {
+        console.log('mergeSpecifiersToImport continue')
+        continue
+      } else {
+        importDeclaration.specifiers.push(spec)
+      }
+    }
+  }
+
+  const addImport = (root, specifierObj, source) => {
+    const specifiers = Object.entries(specifierObj).map(([k, v]) => {
+      return k === 'default'
+        ? j.importDefaultSpecifier(j.identifier(v))
+        : j.importSpecifier(j.identifier(k))
     })
+
+    const program = root.find(j.Program).get(0)
+
+    const matchingImports = root.find(
+      j.ImportDeclaration,
+      typeof source === 'string'
+        ? {
+            source: {
+              value: source
+            }
+          }
+        : source
+    )
+
+    if (matchingImports.length > 0) {
+      mergeSpecifiersToImport(matchingImports.get(0).node, specifiers)
+    } else {
+      const imports = root.find(j.ImportDeclaration)
+      const decl = j.importDeclaration(specifiers, j.literal(source))
+      imports.at(-1).insertAfter(decl)
+    }
   }
 
   return {
@@ -103,7 +135,7 @@ module.exports = function(j) {
       removeHOC
     },
     imports: {
-      add: addImport
-    }
+      add: addImport,
+    },
   }
 }
