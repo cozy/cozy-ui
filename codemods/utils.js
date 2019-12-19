@@ -30,6 +30,62 @@ module.exports = function(j) {
     return x.type === 'Literal' && strip(x.value).length === 0
   }
 
+  const removeDefaultExportHOC = (root, ComponentName, hocName) => {
+    const defaultExports = root.find(j.ExportDefaultDeclaration)
+    if (!defaultExports.length) {
+      return
+    }
+    const defaultExport = defaultExports.get(0)
+    const decl = defaultExport.node.declaration
+    if (decl.type !== 'CallExpression') {
+      return
+    } else if (
+      decl.callee &&
+      decl.callee.callee &&
+      decl.callee.callee.name == hocName &&
+      decl.arguments[0].name == ComponentName
+    ) {
+      defaultExport.node.declaration = decl.arguments[0]
+    } else if (
+      decl.callee &&
+      decl.callee.callee &&
+      decl.callee.callee.name == 'compose' &&
+      decl.arguments[0].name == ComponentName
+    ) {
+      decl.callee.arguments = decl.callee.arguments.filter(
+        node => !node.callee || node.callee.name !== hocName
+      )
+    }
+  }
+
+  const removeHOC = (arrowFunctionBodyPath, hocName) => {
+    let curPath = arrowFunctionBodyPath
+    while (curPath) {
+      const curNode = curPath.node
+      if (
+        curNode.type === 'CallExpression' &&
+        curNode.callee.callee &&
+        curNode.callee.callee.name === hocName
+      ) {
+        const component = curPath.parentPath.node.arguments[0]
+        curPath.parentPath.replace(curPath.parentPath.node.arguments[0])
+        break
+      }
+      curPath = curPath.parentPath
+    }
+  }
+
+  const addImport = (root, importOptions) => {
+    root.find(j.Program).forEach(({ node }) => {
+      node.body.splice(
+        0,
+        0,
+        `import { ${importOptions.identifiers.join(', ')} } from "${
+          importOptions.path
+        }"`
+      )
+    })
+  }
 
   return {
     nodes: {
@@ -41,6 +97,13 @@ module.exports = function(j) {
       maybeWrap: maybeWrap,
       getAttributeValue,
       getAttributeName
+    },
+    hoc: {
+      removeDefaultExportHOC,
+      removeHOC
+    },
+    imports: {
+      add: addImport
     }
   }
 }
