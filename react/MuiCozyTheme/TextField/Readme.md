@@ -1,4 +1,6 @@
-Cozy themed MUI TextField. It is only a re-export of the component from MUI.
+Cozy themed MUI TextField. See
+[MUI V3 documentation](https://v3.material-ui.com/api/text-field/) to find the
+props.
 
 ```
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
@@ -40,3 +42,22 @@ import TextField from 'cozy-ui/transpiled/react/MuiCozyTheme/TextField';
 </MuiCozyTheme>
 ```
 
+#### Inverted theme
+
+```jsx
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
+import TextField from 'cozy-ui/transpiled/react/MuiCozyTheme/TextField';
+
+<MuiCozyTheme variant="inverted">
+  <div style={{ backgroundColor: 'var(--primaryColor)', padding: '2rem' }}>
+    <TextField
+      id="inverted-field"
+      label="Label"
+      defaultValue="Default value"
+      margin="normal"
+      variant="outlined"
+      placeholder="placeholder"
+    />
+  </div>
+</MuiCozyTheme>
+```
