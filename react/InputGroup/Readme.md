@@ -98,6 +98,7 @@ import Input from 'cozy-ui/transpiled/react/Input';
 ### InputGroup with a prepended text and a custom classname (border-radius)
 
 ```
+import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
 import { Bold } from 'cozy-ui/transpiled/react/Text';
 import Input from 'cozy-ui/transpiled/react/Input';
 <form>

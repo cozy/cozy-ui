@@ -5090,7 +5090,20 @@ exports[`InputGroup should render examples: InputGroup 6`] = `
 </div>"
 `;
 
-exports[`InputGroup should render examples: InputGroup 7`] = `"<div></div><pre class=\\"rsg--root-0\\">ReferenceError: InputGroup is not defined</pre>"`;
+exports[`InputGroup should render examples: InputGroup 7`] = `
+"<div>
+  <form>
+    <div>
+      <div class=\\"styles__c-inputgroup___12OVJ u-bdrs-3\\">
+        <div class=\\"styles__c-inputgroup-side___60v0v\\">
+          <div class=\\"u-title-h4 u-pl-1\\">text</div>
+        </div>
+        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Placeholder\\" value=\\"\\"></div>
+      </div>
+    </div>
+  </form>
+</div>"
+`;
 
 exports[`Label should render examples: Label 1`] = `
 "<div>
