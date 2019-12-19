@@ -3,6 +3,9 @@ import { mount } from 'enzyme'
 
 import ContactRow from './ContactRow'
 import renderer from 'react-test-renderer'
+import logger from 'cozy-logger'
+
+logger.setLevel('error')
 
 const makeContact = attrs => ({
   _id: 'contactid',
@@ -59,6 +62,7 @@ describe('ContactRow', () => {
     expect(contactrowcozyurl).toBeDefined()
     expect(contactrowcozyurl.text().trim()).toBe('—')
   })
+
   test('should accept empty array', () => {
     const contact = makeContact({ email: [] })
     const contactRowInstance = <ContactRow contact={contact} />
