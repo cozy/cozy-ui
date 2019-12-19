@@ -8,16 +8,15 @@ const isI18nProp = prop => {
   return prop.key && (prop.key.name === 't' || prop.key.name === 'f')
 }
 
-const findI18nProps = params => {
-  const props = params[0]
-  if (!props) {
+const findI18nProps = objPattern => {
+  if (!objPattern) {
     return
   }
-  if (props.type !== 'ObjectPattern') {
+  if (objPattern.type !== 'ObjectPattern') {
     return
   }
-  return props.properties
-    ? props.properties.filter(isI18nProp).map(prop => prop.key.name)
+  return objPattern.properties
+    ? objPattern.properties.filter(isI18nProp).map(prop => prop.key.name)
     : []
 }
 
@@ -28,6 +27,35 @@ const findNearest = (path, condition) => {
   return path
 }
 
+const findPropObjectPattern = (j, functionBodyPath) => {
+  const functionBody = functionBodyPath.node
+  const propsArg = functionBody.params[0]
+  const propObjPattern =
+    propsArg && propsArg.type === 'ObjectPattern' ? propsArg : null
+  if (propObjPattern) {
+    return { objPattern: propObjPattern, from: 'params' }
+  }
+
+  const bodyPropsDeclarators = j(functionBodyPath).find(j.VariableDeclarator, {
+    init: {
+      name: 'props'
+    }
+  })
+  const bodyPropsDeclarator =
+    bodyPropsDeclarators.length > 0 ? bodyPropsDeclarators.get(0) : 0
+
+  if (
+    bodyPropsDeclarator &&
+    bodyPropsDeclarator.node.id.type === 'ObjectPattern'
+  ) {
+    return {
+      objPattern: bodyPropsDeclarator.node.id,
+      from: 'body',
+      declarator: bodyPropsDeclarator
+    }
+  }
+}
+
 export default function transformer(file, api) {
   const j = api.jscodeshift
   const utils = makeUtils(j)
@@ -35,27 +63,45 @@ export default function transformer(file, api) {
 
   const replaceI18nPropsByHook = arrowFunctionBodyPath => {
     const arrowFunctionBody = arrowFunctionBodyPath.node
-    const i18nProps = findI18nProps(arrowFunctionBody.params)
+    const objPattern = findPropObjectPattern(j, arrowFunctionBodyPath)
+    if (!objPattern) {
+      return
+    }
+
+    const {
+      objPattern: propObjPattern,
+      from: objPatternOrigin,
+      declarator: objPatternDeclarator
+    } = objPattern
+
+    const i18nProps = findI18nProps(propObjPattern)
+
     if (!i18nProps || !i18nProps.length) {
       return
     }
 
-    // TODO why some body do not have splice ?
     if (!arrowFunctionBody.body.body || !arrowFunctionBody.body.body.splice) {
-      return false
+      arrowFunctionBody.body = j.blockStatement([
+        j.returnStatement(arrowFunctionBody.body)
+      ])
     }
 
-    const updatedProperties = arrowFunctionBody.params[0].properties.filter(
+    const updatedProperties = propObjPattern.properties.filter(
       prop => !isI18nProp(prop)
     )
 
     if (
       updatedProperties.length === 0 &&
-      arrowFunctionBody.params.length === 1
+      arrowFunctionBody.params.length === 1 &&
+      objPatternOrigin === 'params'
     ) {
       arrowFunctionBody.params = []
-    } else {
+    } else if (objPatternOrigin === 'params') {
       arrowFunctionBody.params[0].properties = updatedProperties
+    } else if (updatedProperties.length > 0 && objPatternOrigin === 'body') {
+      objPatternDeclarator.node.id.properties = updatedProperties
+    } else if (updatedProperties === 0 && objPatternOrigin === 'body') {
+      objPatternDeclarator.prune()
     }
 
     prepend(arrowFunctionBody.body.body, `const { ${i18nProps} } = useI18n()`)
