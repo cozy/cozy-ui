@@ -1,6 +1,23 @@
 ## ContactsListModal
 
-A filterable list of contacts shown in a modal. This component should be wrapped in a CozyProvider since it does a request to fetch all contacts.
+A filterable list of contacts shown in a modal.
+
+Since this component does a request to fetch all contacts, it should be wrapped
+in a CozyProvider. Also, to take advantage of realtime updates of the contacts,
+the CozyClient passed to the provider should have a realtime plugin initialized.
+The component will work without realtime initialized, but the list will not always
+be up-to-date.
+
+```jsx static
+import CozyClient, { CozyProvider } from 'cozy-client'
+
+const client = new CozyClient(/* ... */)
+client.registerPlugin(RealtimePlugin)
+
+<CozyProvider client={client}>
+  {/* ... */}
+</CozyProvider>
+```
 
 ```jsx
 import ContactsListModal from 'cozy-ui/transpiled/react/ContactsListModal';
