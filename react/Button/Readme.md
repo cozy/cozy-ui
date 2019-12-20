@@ -156,10 +156,10 @@ Subtle buttons are buttons without background and borders, wich look "inverted" 
 import Button from 'cozy-ui/transpiled/react/Button';
 <div>
   <p>
-    <Button subtle size='tiny' label='Tiny text' onClick={() => alert('Clicked on Tiny text')} />
-    <Button subtle size='small' label='Small text' onClick={() => alert('Clicked on Small text')} />
-    <Button subtle label='Regular text' onClick={() => alert('Clicked on Regular text')} />
-    <Button subtle size='large' label='Large text' onClick={() => alert('Clicked on Large text')} />
+    <Button subtle icon='plus' size='tiny' label='Tiny text' onClick={() => alert('Clicked on Tiny text')} />
+    <Button subtle icon='plus' size='small' label='Small text' onClick={() => alert('Clicked on Small text')} />
+    <Button subtle icon='plus' label='Regular text' onClick={() => alert('Clicked on Regular text')} />
+    <Button subtle icon='plus' size='large' label='Large text' onClick={() => alert('Clicked on Large text')} />
   </p>
   <p>
     <Button subtle theme='secondary' label='Secondary theme' onClick={() => alert('Clicked on Secondary theme')} />
