@@ -3,13 +3,16 @@
 Displays several Infos component in a Carrousel. [react-swipeable-views](https://react-swipeable-views.com/) is used under the hood and can be configured.
 
 ```
-import InfosCarrousel from 'cozy-ui/transpiled/react/InfosCarrousel';
-import Infos from 'cozy-ui/transpiled/react/Infos';
-import Button from 'cozy-ui/transpiled/react/Button';
-import Text, { SubTitle } from 'cozy-ui/transpiled/react/Text';
+import InfosCarrousel from 'cozy-ui/transpiled/react/InfosCarrousel'
+import Infos from 'cozy-ui/transpiled/react/Infos'
+import Button from 'cozy-ui/transpiled/react/Button'
+import Text, { SubTitle } from 'cozy-ui/transpiled/react/Text'
+
+// This is necessary for tests to be predictable
+const swipeableProps = { disableLazyLoading: true };
 
 <div className='u-stack-m'>
-  <InfosCarrousel theme="danger">
+  <InfosCarrousel theme="danger" swipeableProps={swipeableProps}>
     <Infos
       description={<>
         <SubTitle>News 1</SubTitle>
