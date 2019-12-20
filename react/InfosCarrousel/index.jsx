@@ -50,7 +50,7 @@ const InfosCarrousel = ({ children, theme, className, swipeableProps }) => {
 
 InfosCarrousel.propTypes = {
   /** Infos components that will be rendered, one per carrousel slide */
-  children: PropTypes.element,
+  children: PropTypes.node,
   /** Controls the color scheme of the carrousel. This prop is passed onto child Infos, unless they have their own defined theme prop.  */
   theme: PropTypes.oneOf(['primary', 'secondary', 'danger']),
   /** Extra classes to apply to the main wrapper */
