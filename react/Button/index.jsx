@@ -43,6 +43,12 @@ const tagToTransformProps = {
 
 const identity = x => x
 
+const sizeToIconSize = {
+  tiny: 8,
+  small: 12,
+  large: 18
+}
+
 const BaseButton = props => {
   const {
     children,
@@ -81,7 +87,12 @@ const BaseButton = props => {
     >
       <span>
         {Icon.isProperIcon(icon) ? (
-          <Icon icon={icon} aria-hidden focusable="false" />
+          <Icon
+            size={sizeToIconSize[size]}
+            icon={icon}
+            aria-hidden
+            focusable="false"
+          />
         ) : (
           icon
         )}
@@ -90,6 +101,7 @@ const BaseButton = props => {
         {extraRight && <span className="u-ml-auto">{extraRight}</span>}
         {restProps.busy && (
           <Icon
+            size={sizeToIconSize[size]}
             icon="spinner"
             spin
             className="u-ml-half"
