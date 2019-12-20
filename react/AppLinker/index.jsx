@@ -19,7 +19,7 @@ import expiringMemoize from './expiringMemoize'
 
 const expirationDelay = 10 * 1000
 const memoizedCheckApp = expiringMemoize(
-  checkApp,
+  appInfo => checkApp(appInfo).catch(() => false),
   expirationDelay,
   appInfo => appInfo.appId
 )

@@ -55,8 +55,14 @@ import Spinner from 'cozy-ui/transpiled/react/Spinner';
 import I18n from 'cozy-ui/transpiled/react/I18n';
 
 <div>
-  <I18n lang='en' dictRequire={() => {}}>
-    <Spinner size='xxlarge' loadingType='hi' />
+  <I18n lang='en' dictRequire={() => {
+      en: {
+        loading: {
+          helloWorld: 'Hello World !'
+        }
+      }
+    }}>
+    <Spinner size='xxlarge' loadingType='helloWorld' />
   </I18n>
 </div>
 ```
