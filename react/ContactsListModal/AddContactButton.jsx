@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { withClient, models, queryConnect } from 'cozy-client'
 import AppLinker from '../AppLinker'
 import { ButtonLink } from '../Button'
 import compose from 'lodash/flowRight'
+import useRealtime from './useRealtime'
 
 const DumbAddContactButton = props => {
   const { client, apps, ...rest } = props
@@ -18,43 +19,15 @@ const DumbAddContactButton = props => {
     href = models.applications.getStoreInstallationURL(apps.data, wantedApp)
   }
 
-  useEffect(() => {
-    const refreshApps = () => {
-      apps.fetch()
-    }
-
-    const subscribeRealtime = async () => {
-      try {
-        await client.plugins.realtime.subscribe(
-          'created',
-          'io.cozy.apps',
-          refreshApps
-        )
-      } catch (err) {
-        console.error(err)
-        console.warning(
-          'Impossible to subscribe to io.cozy.apps creation in realtime. Your app should have io.cozy.apps permission and your client should have realtime initialized.'
-        )
+  useRealtime(
+    client,
+    {
+      'io.cozy.apps': {
+        created: apps.fetch
       }
-    }
-
-    subscribeRealtime()
-
-    return async () => {
-      try {
-        await client.plugins.realtime.unsubscribe(
-          'created',
-          'io.cozy.apps',
-          refreshApps
-        )
-      } catch (err) {
-        console.error(err)
-        console.warning(
-          'Impossible to unsubscribe from io.cozy.apps creation in realtime. Your app should have io.cozy.apps permission and your client should have realtime initialized.'
-        )
-      }
-    }
-  }, [])
+    },
+    []
+  )
 
   return (
     <AppLinker

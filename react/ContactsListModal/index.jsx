@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { withClient, fetchPolicies, queryConnect } from 'cozy-client'
 import ContactsList from '../ContactsList'
 import Modal, { ModalHeader, ModalDescription } from '../Modal'
@@ -12,6 +12,7 @@ import { Contact } from 'cozy-doctypes'
 import AddContactButton from './AddContactButton'
 import EmptyMessage from './EmptyMessage'
 import compose from 'lodash/flowRight'
+import useRealtime from './useRealtime'
 
 const thirtySeconds = 30000
 const olderThan30s = fetchPolicies.olderThan(thirtySeconds)
@@ -71,69 +72,16 @@ const ContactsListModal = props => {
 
   const filteredContacts = filterContacts(contacts.data)
 
-  useEffect(() => {
-    const refreshContacts = () => {
-      contacts.fetch()
-    }
-
-    const subscribeRealtime = async () => {
-      try {
-        await client.plugins.realtime.subscribe(
-          'created',
-          'io.cozy.contacts',
-          refreshContacts
-        )
-      } catch (err) {
-        console.error(err)
-        console.warning(
-          'Impossible to subscribe to io.cozy.contacts creation in realtime. Your app should have io.cozy.contacts permission and your client should have realtime initialized.'
-        )
+  useRealtime(
+    client,
+    {
+      'io.cozy.contacts': {
+        created: contacts.fetch,
+        updated: contacts.fetch
       }
-
-      try {
-        await client.plugins.realtime.subscribe(
-          'updated',
-          'io.cozy.contacts',
-          refreshContacts
-        )
-      } catch (err) {
-        console.error(err)
-        console.warning(
-          'Impossible to subscribe to io.cozy.contacts updates in realtime. Your app should have io.cozy.contacts permission and your client should have realtime initialized.'
-        )
-      }
-    }
-
-    subscribeRealtime()
-
-    return async () => {
-      try {
-        await client.plugins.realtime.unsubscribe(
-          'created',
-          'io.cozy.contacts',
-          refreshContacts
-        )
-      } catch (err) {
-        console.error(err)
-        console.warning(
-          'Impossible to unsubscribe to io.cozy.contacts creation in realtime. Your app should have io.cozy.contacts permission and your client should have realtime initialized.'
-        )
-      }
-
-      try {
-        await client.plugins.realtime.unsubscribe(
-          'updated',
-          'io.cozy.contacts',
-          refreshContacts
-        )
-      } catch (err) {
-        console.error(err)
-        console.warning(
-          'Impossible to unsubscribe to io.cozy.contacts updates in realtime. Your app should have io.cozy.contacts permission and your client should have realtime initialized.'
-        )
-      }
-    }
-  }, [])
+    },
+    []
+  )
 
   return (
     <Modal size="xxlarge" mobileFullscreen {...rest} closable={!isMobile}>
