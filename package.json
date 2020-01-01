@@ -77,7 +77,7 @@
     "commitlint": "7.6.1",
     "commitlint-config-cozy": "0.3.27",
     "copyfiles": "2.1.1",
-    "cozy-client": "8.2.0",
+    "cozy-client": "8.10.1",
     "cozy-device-helper": "1.7.5",
     "cozy-doctypes": "^1.69.0",
     "css-loader": "0.28.11",
