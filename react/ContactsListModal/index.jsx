@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Query, fetchPolicies } from 'cozy-client'
+import { withClient, fetchPolicies, queryConnect } from 'cozy-client'
 import ContactsList from '../ContactsList'
 import Modal, { ModalHeader, ModalDescription } from '../Modal'
 import Spinner from '../Spinner'
@@ -11,6 +11,8 @@ import Button from '../Button'
 import { Contact } from 'cozy-doctypes'
 import AddContactButton from './AddContactButton'
 import EmptyMessage from './EmptyMessage'
+import compose from 'lodash/flowRight'
+import useRealtime from './useRealtime'
 
 const thirtySeconds = 30000
 const olderThan30s = fetchPolicies.olderThan(thirtySeconds)
@@ -41,6 +43,8 @@ const ContactsListModal = props => {
     breakpoints: { isMobile },
     addContactLabel,
     emptyMessage,
+    contacts,
+    client,
     ...rest
   } = props
 
@@ -60,6 +64,24 @@ const ContactsListModal = props => {
     onItemClick(contact)
     rest.dismissAction()
   }
+
+  const loading =
+    (contacts.fetchStatus === 'loading' ||
+      contacts.fetchStatus === 'pending') &&
+    !contacts.lastFetch
+
+  const filteredContacts = filterContacts(contacts.data)
+
+  useRealtime(
+    client,
+    {
+      'io.cozy.contacts': {
+        created: contacts.fetch,
+        updated: contacts.fetch
+      }
+    },
+    []
+  )
 
   return (
     <Modal size="xxlarge" mobileFullscreen {...rest} closable={!isMobile}>
@@ -86,32 +108,16 @@ const ContactsListModal = props => {
         <div className={styles.ContactsListModal__addContactContainer}>
           <AddContactButton label={addContactLabel} />
         </div>
-        <Query
-          query={client => client.all('io.cozy.contacts').UNSAFE_noLimit()}
-          fetchPolicy={olderThan30s}
-        >
-          {({ data, fetchStatus, lastFetch }) => {
-            if (
-              (fetchStatus === 'loading' || fetchStatus === 'pending') &&
-              !lastFetch
-            ) {
-              return <Spinner size="xxlarge" />
-            }
-
-            const filteredContacts = filterContacts(data)
-
-            if (filteredContacts.length === 0) {
-              return <EmptyMessage>{emptyMessage}</EmptyMessage>
-            }
-
-            return (
-              <ContactsList
-                contacts={filteredContacts}
-                onItemClick={handleItemClick}
-              />
-            )
-          }}
-        </Query>
+        {loading && <Spinner size="xxlarge" />}
+        {!loading && filteredContacts.length === 0 && (
+          <EmptyMessage>{emptyMessage}</EmptyMessage>
+        )}
+        {!loading && filteredContacts.length > 0 && (
+          <ContactsList
+            contacts={filteredContacts}
+            onItemClick={handleItemClick}
+          />
+        )}
       </ModalDescription>
     </Modal>
   )
@@ -121,4 +127,14 @@ ContactsListModal.propTypes = {
   onItemClick: PropTypes.func
 }
 
-export default withBreakpoints()(ContactsListModal)
+export default compose(
+  withClient,
+  withBreakpoints(),
+  queryConnect({
+    contacts: {
+      query: client => client.all('io.cozy.contacts').UNSAFE_noLimit(),
+      as: 'contacts',
+      fetchPolicy: olderThan30s
+    }
+  })
+)(ContactsListModal)

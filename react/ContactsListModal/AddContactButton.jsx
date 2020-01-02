@@ -1,22 +1,39 @@
 import React from 'react'
-import { withClient } from 'cozy-client'
-import AppLinker, { generateWebLink } from '../AppLinker'
+import { withClient, models, queryConnect } from 'cozy-client'
+import AppLinker from '../AppLinker'
 import { ButtonLink } from '../Button'
+import compose from 'lodash/flowRight'
+import useRealtime from './useRealtime'
 
 const DumbAddContactButton = props => {
-  const { client, ...rest } = props
+  const { client, apps, ...rest } = props
 
-  const cozyURL = new URL(client.getStackClient().uri)
-  const { cozySubdomainType } = client.getInstanceOptions()
-  const contactsAppSlug = 'contacts'
-  const contactsAppHref = generateWebLink({
-    cozyUrl: cozyURL.origin,
-    slug: contactsAppSlug,
-    subDomainType: cozySubdomainType
-  })
+  const wantedApp = { slug: 'contacts' }
+  const installedApp = models.applications.isInstalled(apps.data, wantedApp)
+
+  let href
+
+  if (installedApp) {
+    href = models.applications.getUrl(installedApp)
+  } else {
+    href = models.applications.getStoreInstallationURL(apps.data, wantedApp)
+  }
+
+  useRealtime(
+    client,
+    {
+      'io.cozy.apps': {
+        created: apps.fetch
+      }
+    },
+    []
+  )
 
   return (
-    <AppLinker slug={contactsAppSlug} href={contactsAppHref}>
+    <AppLinker
+      slug={installedApp ? installedApp.attributes.slug : 'store'}
+      href={href}
+    >
       {({ onClick, href }) => (
         <ButtonLink
           href={href}
@@ -31,6 +48,14 @@ const DumbAddContactButton = props => {
   )
 }
 
-const AddContactButton = withClient(DumbAddContactButton)
+const AddContactButton = compose(
+  withClient,
+  queryConnect({
+    apps: {
+      query: client => client.all('io.cozy.apps'),
+      as: 'apps'
+    }
+  })
+)(DumbAddContactButton)
 
 export default AddContactButton
