@@ -10,6 +10,7 @@ be up-to-date.
 
 ```jsx static
 import CozyClient, { CozyProvider } from 'cozy-client'
+import { RealtimePlugin } from 'cozy-realtime'
 
 const client = new CozyClient(/* ... */)
 client.registerPlugin(RealtimePlugin)
