@@ -12,7 +12,7 @@ const useRealtime = (client, specs, deps) => {
     Object.entries(specs).forEach(([doctype, events]) => {
       Object.entries(events).forEach(async ([event, callback]) => {
         try {
-          await client.plugins.realtime.subscribe(doctype, event, callback)
+          await client.plugins.realtime.subscribe(event, doctype, callback)
         } catch (err) {
           console.error(err)
           console.error(
@@ -27,7 +27,7 @@ const useRealtime = (client, specs, deps) => {
     Object.entries(specs).forEach(([doctype, events]) => {
       Object.entries(events).forEach(async ([event, callback]) => {
         try {
-          await client.plugins.realtime.unsubscribe(doctype, event, callback)
+          await client.plugins.realtime.unsubscribe(event, doctype, callback)
         } catch (err) {
           console.error(err)
           console.error(
