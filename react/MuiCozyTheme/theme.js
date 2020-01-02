@@ -277,6 +277,7 @@ invertedTheme.overrides = {
   ...normalTheme.overrides,
   MuiOutlinedInput: {
     root: {
+      boxSizing: 'border-box',
       '&$focused $notchedOutline': {
         borderColor: invertedTheme.palette.text.primary,
         borderWidth: '0.0625rem'
