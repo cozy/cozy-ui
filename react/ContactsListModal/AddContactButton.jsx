@@ -3,7 +3,8 @@ import { withClient, models, queryConnect } from 'cozy-client'
 import AppLinker from '../AppLinker'
 import { ButtonLink } from '../Button'
 import compose from 'lodash/flowRight'
-import useRealtime from './useRealtime'
+import useRealtime from '../hooks/useRealtime'
+import useEventListener from '../hooks/useEventListener.js'
 
 const DumbAddContactButton = props => {
   const { client, apps, ...rest } = props
@@ -28,6 +29,8 @@ const DumbAddContactButton = props => {
     },
     []
   )
+
+  useEventListener(document, 'resume', apps.fetch)
 
   return (
     <AppLinker
