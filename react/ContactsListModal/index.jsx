@@ -12,7 +12,8 @@ import { Contact } from 'cozy-doctypes'
 import AddContactButton from './AddContactButton'
 import EmptyMessage from './EmptyMessage'
 import compose from 'lodash/flowRight'
-import useRealtime from './useRealtime'
+import useRealtime from '../hooks/useRealtime'
+import useEventListener from '../hooks/useEventListener.js'
 
 const thirtySeconds = 30000
 const olderThan30s = fetchPolicies.olderThan(thirtySeconds)
@@ -82,6 +83,8 @@ const ContactsListModal = props => {
     },
     []
   )
+
+  useEventListener(document, 'resume', contacts.fetch)
 
   return (
     <Modal size="xxlarge" mobileFullscreen {...rest} closable={!isMobile}>
