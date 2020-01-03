@@ -40,11 +40,11 @@ const Radio = props => {
 
 Radio.propTypes = {
   className: PropTypes.string,
-  value: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  value: PropTypes.string,
+  name: PropTypes.string,
   error: PropTypes.bool,
   disabled: PropTypes.bool,
-  label: PropTypes.string.isRequired
+  label: PropTypes.string
 }
 
 Radio.defaultProps = {
