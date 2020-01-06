@@ -4401,10 +4401,10 @@ cosmiconfig@^5.0.1:
     js-yaml "^3.13.1"
     parse-json "^4.0.0"
 
-cozy-client@9.2.0:
-  version "9.2.0"
-  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-9.2.0.tgz#277f8fb36201f3767f7e116b112b8f416c38d43f"
-  integrity sha512-o2EVDrWlkqNdkwKbs5iaFSUhfoBY3sqQBdQgg5uE/PXxMo24Ee1jqiqTHEz927MRwHLjoHMQQaie/DahWscuiw==
+cozy-client@9.4.0:
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-9.4.0.tgz#c57a05716a6d4184743fe2031e38a691fb85f93e"
+  integrity sha512-5YK7OhKH/hsHRYMWVfP4S8wzJk9D7VsQZb1gNUWbMtZnxKZ0lP6mIuyBL4iYg4olqmr4lj77k9utBzW1oZ8bag==
   dependencies:
     cozy-device-helper "^1.7.3"
     cozy-stack-client "^9.2.0"
