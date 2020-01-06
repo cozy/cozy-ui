@@ -17,7 +17,7 @@ const DumbAddContactButton = props => {
   if (installedApp) {
     href = models.applications.getUrl(installedApp)
   } else {
-    href = models.applications.getStoreInstallationURL(apps.data, wantedApp)
+    href = models.applications.getStoreURL(apps.data, wantedApp)
   }
 
   useRealtime(
