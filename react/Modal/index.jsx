@@ -37,9 +37,9 @@ class Modal extends Component {
   }
 
   componentDidMount() {
-    if (!this.props.title) {
+    if (!this.props.title && !this.props['aria-label']) {
       console.warn(
-        'If your modal has not label you should add an invisible one with `aria-label` props for a11y purposes.'
+        'If your modal does not provide a `title` prop, please provide the `aria-label` prop for a11y purposes.'
       )
     }
 
