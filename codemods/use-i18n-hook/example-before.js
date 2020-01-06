@@ -10,7 +10,7 @@ const ComponentUsingT = translate()(({ t }) => (
   </Padded>
 ))
 
-const ComponentUsingTAndF = ({ t, f }) => (
+const DumbComponentUsingTAndF = ({ t, f }) => (
   <Padded>
     <Title>{t('Title2')}</Title>
     <Text>{f(new Date())}</Text>
