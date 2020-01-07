@@ -39,6 +39,10 @@ export class I18n extends Component {
     }
   }
 
+  getChildContext() {
+    return this.contextValue
+  }
+
   // for preact
   // eslint-disable-next-line react/no-deprecated
   componentWillReceiveProps(nextProps) {
