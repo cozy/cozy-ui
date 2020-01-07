@@ -4,13 +4,15 @@
 
 'use strict'
 
-import React, { Component } from 'react'
+import React, { Component, useContext } from 'react'
 import PropTypes from 'prop-types'
 
 import { initTranslation } from './translation'
 import { initFormat } from './format'
 
 export const DEFAULT_LANG = 'en'
+
+const I18nContext = React.createContext()
 
 // Provider root component
 export class I18n extends Component {
@@ -25,14 +27,20 @@ export class I18n extends Component {
     this.translator =
       polyglot || initTranslation(lang, dictRequire, context, defaultLang)
     this.format = initFormat(lang, defaultLang)
+    this.t = this.translator.t.bind(this.translator)
+    this.contextValue = this.getContextValue()
   }
 
-  getChildContext() {
+  getContextValue() {
     return {
-      t: this.translator.t.bind(this.translator),
+      t: this.t,
       f: this.format,
       lang: this.props.lang
     }
+  }
+
+  getChildContext() {
+    return this.contextValue
   }
 
   // for preact
@@ -48,7 +56,11 @@ export class I18n extends Component {
   }
 
   render() {
-    return React.Children.only(this.props.children)
+    return (
+      <I18nContext.Provider value={this.contextValue}>
+        {this.props.children}
+      </I18nContext.Provider>
+    )
   }
 }
 
@@ -64,34 +76,35 @@ I18n.defaultProps = {
   defaultLang: DEFAULT_LANG
 }
 
-const i18nContextTypes = {
+I18n.childContextTypes = {
   t: PropTypes.func,
   f: PropTypes.func,
   lang: PropTypes.string
 }
 
-I18n.childContextTypes = i18nContextTypes
-
 // higher order decorator for components that need `t` and/or `f`
 export const translate = () => WrappedComponent => {
-  const Wrapper = (props, context) => {
+  const Wrapper = props => {
+    const i18nContext = useContext(I18nContext)
     return (
       <WrappedComponent
         {...props}
-        t={context.t}
-        f={context.f}
-        lang={context.lang}
+        t={i18nContext && i18nContext.t}
+        f={i18nContext && i18nContext.f}
+        lang={i18nContext && i18nContext.lang}
       />
     )
   }
+  Wrapper.displayName = `withI18n(${WrappedComponent.displayName ||
+    WrappedComponent.name})`
   Wrapper.propTypes = {
     //!TODO Remove this check after fixing https://github.com/cozy/cozy-drive/issues/1848
-    ...(WrappedComponent ? WrappedComponent.propTypes : undefined),
-    ...i18nContextTypes
+    ...(WrappedComponent ? WrappedComponent.propTypes : undefined)
   }
-  Wrapper.contextTypes = i18nContextTypes
   return Wrapper
 }
+
+export const useI18n = () => useContext(I18nContext)
 
 export { initTranslation, extend } from './translation'
 

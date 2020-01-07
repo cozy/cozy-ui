@@ -1,5 +1,6 @@
 import React from 'react'
 import { Viewer, isPlainText } from './index.jsx'
+import ViewerControls from './ViewerControls'
 
 function flushPromises() {
   return new Promise(resolve => setImmediate(resolve))
@@ -26,7 +27,7 @@ describe('Viewer', () => {
       await flushPromises()
       return viewer
     } else {
-      const viewer = wrapper.find('Wrapper').childAt(0)
+      const viewer = wrapper.find(ViewerControls.displayName).childAt(0)
       return viewer
     }
   }
