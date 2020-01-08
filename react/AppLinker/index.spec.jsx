@@ -131,4 +131,21 @@ describe('app icon', () => {
     root.find('a').simulate('click')
     expect(appSwitchMock).toHaveBeenCalled()
   })
+
+  it('should not crash if no href', () => {
+    isMobileApp.mockReturnValue(true)
+    spyConsoleError.mockImplementation(() => {})
+    const root = shallow(
+      <AppLinker onAppSwitch={appSwitchMock} slug={app.slug}>
+        {({ onClick, href, name }) => (
+          <div>
+            <a href={href} onClick={onClick}>
+              Open {name}
+            </a>
+          </div>
+        )}
+      </AppLinker>
+    )
+    expect(root.getElement()).toMatchSnapshot()
+  })
 })
