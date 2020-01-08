@@ -22,51 +22,11 @@ export const BaseText = React.forwardRef((props, ref) => {
   )
 })
 
-export const Text = React.forwardRef(({ className, ...restProps }, ref) => (
-  <BaseText className={cx('u-text', className)} {...restProps} ref={ref} />
-))
-export const MainTitle = React.forwardRef(
-  ({ className, ...restProps }, ref) => (
-    <BaseText
-      className={cx('u-title-h1', className)}
-      {...restProps}
-      ref={ref}
-    />
-  )
-)
-export const Title = React.forwardRef(({ className, ...restProps }, ref) => (
-  <BaseText className={cx('u-title-h2', className)} {...restProps} ref={ref} />
-))
-export const SubTitle = React.forwardRef(({ className, ...restProps }, ref) => (
-  <BaseText className={cx('u-title-h3', className)} {...restProps} ref={ref} />
-))
-export const Bold = React.forwardRef(({ className, ...restProps }, ref) => (
-  <BaseText className={cx('u-title-h4', className)} {...restProps} ref={ref} />
-))
-export const Uppercase = React.forwardRef(
-  ({ className, ...restProps }, ref) => (
-    <BaseText
-      className={cx('u-uppercase', className)}
-      {...restProps}
-      ref={ref}
-    />
-  )
-)
-export const Caption = React.forwardRef(({ className, ...restProps }, ref) => (
-  <BaseText className={cx('u-caption', className)} {...restProps} ref={ref} />
-))
+const commonDefaultProps = {
+  tag: 'div',
+  ellipsis: false
+}
 
-export const ErrorMessage = React.forwardRef(
-  ({ className, ...restProps }, ref) => (
-    <BaseText
-      className={cx(styles.ErrorMessage, className)}
-      {...restProps}
-      ref={ref}
-    />
-  )
-)
-
-// Props
 const commonProps = {
   children: PropTypes.node,
   className: PropTypes.string,
@@ -74,62 +34,35 @@ const commonProps = {
   ellipsis: PropTypes.bool
 }
 
-Text.propTypes = {
-  ...commonProps
-}
-MainTitle.propTypes = {
-  ...commonProps
-}
-Title.propTypes = {
-  ...commonProps
-}
-SubTitle.propTypes = {
-  ...commonProps
-}
-Bold.propTypes = {
-  ...commonProps
-}
-Caption.propTypes = {
-  ...commonProps
-}
-Uppercase.propTypes = {
-  ...commonProps
-}
-ErrorMessage.propTypes = {
-  ...commonProps
+const makeTextComponent = (componentName, { className: extraClassName }) => {
+  const Component = React.forwardRef(({ className, ...restProps }, ref) => (
+    <BaseText
+      className={cx(extraClassName, className)}
+      {...restProps}
+      ref={ref}
+    />
+  ))
+  Component.displayName = `ForwardRef(${componentName})`
+  Component.propTypes = commonProps
+  Component.defaultProps = commonDefaultProps
+  return Component
 }
 
-// Default Props
-const commonDefaultProps = {
-  tag: 'div',
-  ellipsis: false
-}
-
-Text.defaultProps = {
-  ...commonDefaultProps
-}
-MainTitle.defaultProps = {
-  ...commonDefaultProps
-}
-Title.defaultProps = {
-  ...commonDefaultProps
-}
-SubTitle.defaultProps = {
-  ...commonDefaultProps
-}
-Bold.defaultProps = {
-  ...commonDefaultProps
-}
-Caption.defaultProps = {
-  ...commonDefaultProps
-}
-
-Uppercase.defaultProps = {
-  ...commonDefaultProps
-}
-
-ErrorMessage.defaultProps = {
-  ...commonDefaultProps
-}
+export const Text = makeTextComponent('Text', { className: 'u-text' })
+export const MainTitle = makeTextComponent('MainTitle', {
+  className: 'u-title-h1'
+})
+export const Title = makeTextComponent('Title', { className: 'u-title-h2' })
+export const SubTitle = makeTextComponent('SubTitle', {
+  className: 'u-title-h3'
+})
+export const Bold = makeTextComponent('Bold', { className: 'u-title-h4' })
+export const Uppercase = makeTextComponent('Uppercase', {
+  className: 'u-uppercase'
+})
+export const Caption = makeTextComponent('Caption', { className: 'u-caption' })
+export const ErrorMessage = makeTextComponent('ErrorMessage', {
+  className: styles.ErrorMessage
+})
 
 export default Text
