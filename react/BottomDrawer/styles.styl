@@ -1,0 +1,15 @@
+@require 'tools/mixins'
+
+.with-transition
+    transition transform .1s ease-out
+
+.BottomDrawer-content
+    z-index        $file-action-menu
+    position       fixed
+    bottom         rem(9)
+    bottom         env(safe-area-inset-bottom) // @stylint ignore
+    left           0
+    width          'calc(100% - %s)' % rem(16)
+    margin         0 rem(8)
+    padding-bottom rem(5)
+    box-sizing border-box
