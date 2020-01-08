@@ -81,7 +81,7 @@ export class AppLinker extends React.Component {
           href = generateUniversalLink({ slug, nativePath, fallbackUrl: href })
         } catch (err) {
           console.error(err)
-          href = ''
+          href = '#'
         }
       }
     }
