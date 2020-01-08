@@ -3,7 +3,7 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
-export const BaseText = React.forwardRef((props, ref) => {
+function BaseText(props, ref) {
   const { className, children, tag, ellipsis, ...restProps } = props
   const Tag = tag
   return (
@@ -20,51 +20,115 @@ export const BaseText = React.forwardRef((props, ref) => {
       {children}
     </Tag>
   )
-})
+}
+const ForwardRefBaseText = React.forwardRef(BaseText)
+ForwardRefBaseText.displayName = 'forwardRef(BaseText)'
+export { ForwardRefBaseText as BaseText }
 
-export const Text = React.forwardRef(({ className, ...restProps }, ref) => (
-  <BaseText className={cx('u-text', className)} {...restProps} ref={ref} />
-))
-export const MainTitle = React.forwardRef(
-  ({ className, ...restProps }, ref) => (
-    <BaseText
+function Text({ className, ...restProps }, ref) {
+  return (
+    <ForwardRefBaseText
+      className={cx('u-text', className)}
+      {...restProps}
+      ref={ref}
+    />
+  )
+}
+const ForwardRefText = React.forwardRef(Text)
+ForwardRefText.displayName = 'forwardRef(Text)'
+export { ForwardRefText as Text }
+export default ForwardRefText
+
+function MainTitle({ className, ...restProps }, ref) {
+  return (
+    <ForwardRefBaseText
       className={cx('u-title-h1', className)}
       {...restProps}
       ref={ref}
     />
   )
-)
-export const Title = React.forwardRef(({ className, ...restProps }, ref) => (
-  <BaseText className={cx('u-title-h2', className)} {...restProps} ref={ref} />
-))
-export const SubTitle = React.forwardRef(({ className, ...restProps }, ref) => (
-  <BaseText className={cx('u-title-h3', className)} {...restProps} ref={ref} />
-))
-export const Bold = React.forwardRef(({ className, ...restProps }, ref) => (
-  <BaseText className={cx('u-title-h4', className)} {...restProps} ref={ref} />
-))
-export const Uppercase = React.forwardRef(
-  ({ className, ...restProps }, ref) => (
-    <BaseText
+}
+const ForwardRefMainTitle = React.forwardRef(MainTitle)
+ForwardRefMainTitle.displayName = 'forwardRef(MainTitle)'
+export { ForwardRefMainTitle as MainTitle }
+
+function Title({ className, ...restProps }, ref) {
+  return (
+    <ForwardRefBaseText
+      className={cx('u-title-h2', className)}
+      {...restProps}
+      ref={ref}
+    />
+  )
+}
+const ForwardRefTitle = React.forwardRef(Title)
+ForwardRefTitle.displayName = 'forwardRef(Title)'
+export { ForwardRefTitle as Title }
+
+function SubTitle({ className, ...restProps }, ref) {
+  return (
+    <ForwardRefBaseText
+      className={cx('u-title-h3', className)}
+      {...restProps}
+      ref={ref}
+    />
+  )
+}
+const ForwardRefSubTitle = React.forwardRef(SubTitle)
+ForwardRefSubTitle.displayName = 'forwardRef(SubTitle)'
+export { ForwardRefSubTitle as SubTitle }
+
+function Bold({ className, ...restProps }, ref) {
+  return (
+    <ForwardRefBaseText
+      className={cx('u-title-h4', className)}
+      {...restProps}
+      ref={ref}
+    />
+  )
+}
+const ForwardRefBold = React.forwardRef(Bold)
+ForwardRefBold.displayName = 'forwardRef(Bold)'
+export { ForwardRefBold as Bold }
+
+function Uppercase({ className, ...restProps }, ref) {
+  return (
+    <ForwardRefBaseText
       className={cx('u-uppercase', className)}
       {...restProps}
       ref={ref}
     />
   )
-)
-export const Caption = React.forwardRef(({ className, ...restProps }, ref) => (
-  <BaseText className={cx('u-caption', className)} {...restProps} ref={ref} />
-))
+}
+const ForwardRefUppercase = React.forwardRef(Uppercase)
+ForwardRefUppercase.displayName = 'forwardRef(Uppercase)'
+export { ForwardRefUppercase as Uppercase }
 
-export const ErrorMessage = React.forwardRef(
-  ({ className, ...restProps }, ref) => (
-    <BaseText
+function Caption({ className, ...restProps }, ref) {
+  return (
+    <ForwardRefBaseText
+      className={cx('u-caption', className)}
+      {...restProps}
+      ref={ref}
+    />
+  )
+}
+const ForwardRefCaption = React.forwardRef(Caption)
+ForwardRefCaption.displayName = 'forwardRef(Caption)'
+export { ForwardRefCaption as Caption }
+
+function ErrorMessage({ className, ...restProps }, ref) {
+  return (
+    <ForwardRefBaseText
       className={cx(styles.ErrorMessage, className)}
       {...restProps}
       ref={ref}
     />
   )
-)
+}
+const ForwardRefErrorMessage = React.forwardRef(ErrorMessage)
+ForwardRefErrorMessage.displayName = 'forwardRef(ErrorMessage)'
+export { ForwardRefErrorMessage as ErrorMessage }
 
 // Props
 const commonProps = {
@@ -74,28 +138,28 @@ const commonProps = {
   ellipsis: PropTypes.bool
 }
 
-Text.propTypes = {
+ForwardRefText.propTypes = {
   ...commonProps
 }
-MainTitle.propTypes = {
+ForwardRefMainTitle.propTypes = {
   ...commonProps
 }
-Title.propTypes = {
+ForwardRefTitle.propTypes = {
   ...commonProps
 }
-SubTitle.propTypes = {
+ForwardRefSubTitle.propTypes = {
   ...commonProps
 }
-Bold.propTypes = {
+ForwardRefBold.propTypes = {
   ...commonProps
 }
-Caption.propTypes = {
+ForwardRefCaption.propTypes = {
   ...commonProps
 }
-Uppercase.propTypes = {
+ForwardRefUppercase.propTypes = {
   ...commonProps
 }
-ErrorMessage.propTypes = {
+ForwardRefErrorMessage.propTypes = {
   ...commonProps
 }
 
@@ -105,31 +169,29 @@ const commonDefaultProps = {
   ellipsis: false
 }
 
-Text.defaultProps = {
+ForwardRefText.defaultProps = {
   ...commonDefaultProps
 }
-MainTitle.defaultProps = {
+ForwardRefMainTitle.defaultProps = {
   ...commonDefaultProps
 }
-Title.defaultProps = {
+ForwardRefTitle.defaultProps = {
   ...commonDefaultProps
 }
-SubTitle.defaultProps = {
+ForwardRefSubTitle.defaultProps = {
   ...commonDefaultProps
 }
-Bold.defaultProps = {
+ForwardRefBold.defaultProps = {
   ...commonDefaultProps
 }
-Caption.defaultProps = {
-  ...commonDefaultProps
-}
-
-Uppercase.defaultProps = {
+ForwardRefCaption.defaultProps = {
   ...commonDefaultProps
 }
 
-ErrorMessage.defaultProps = {
+ForwardRefUppercase.defaultProps = {
   ...commonDefaultProps
 }
 
-export default Text
+ForwardRefErrorMessage.defaultProps = {
+  ...commonDefaultProps
+}
