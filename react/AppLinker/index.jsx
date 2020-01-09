@@ -75,7 +75,14 @@ export class AppLinker extends React.Component {
       if (isAndroid()) {
         onClick = AppLinker.openNativeFromWeb.bind(this, props)
       } else {
-        href = generateUniversalLink({ slug, nativePath, fallbackUrl: href })
+        //Since generateUniversalLink can rise an error, let's catch it to not crash
+        //all the page.
+        try {
+          href = generateUniversalLink({ slug, nativePath, fallbackUrl: href })
+        } catch (err) {
+          console.error(err)
+          href = '#'
+        }
       }
     }
 
