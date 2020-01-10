@@ -1,12 +1,12 @@
 const charsets = [
   // upper
-  { regexp: /[A-Z]/g, size: 26 },
+  { regexp: /[A-Z]/, size: 26 },
   // lower
-  { regexp: /[a-z]/g, size: 26 },
+  { regexp: /[a-z]/, size: 26 },
   // digit
-  { regexp: /[0-9]/g, size: 10 },
+  { regexp: /[0-9]/, size: 10 },
   // special
-  { regexp: /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/g, size: 30 }
+  { regexp: /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/, size: 30 }
 ]
 
 /*
