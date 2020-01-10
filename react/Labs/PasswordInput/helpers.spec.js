@@ -16,4 +16,12 @@ describe('getStrength', () => {
 
     expect(getStrength('').percentage).toBe(0)
   })
+
+  it('should return the same strength when called multiple times with the same password', () => {
+    const password = 'this1s@veRYCompl3xp4ssw0rd!'
+    const strength1 = getStrength(password)
+    const strength2 = getStrength(password)
+
+    expect(strength1).toEqual(strength2)
+  })
 })
