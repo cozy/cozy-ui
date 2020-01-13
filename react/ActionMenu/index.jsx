@@ -1,26 +1,43 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import styles from './styles.styl'
 import { Media, Bd, Img } from '../Media'
 import BottomDrawer from '../BottomDrawer'
+import ClickAwayListener from '@material-ui/core/ClickAwayListener'
 
-/**
- * Use an ActionMenu to show the user possible actions to the user
- * at the bottom of the screen in a modal way.
- */
-const ActionMenu = ({ children, className, onClose }) => (
-  <div className={className}>
-    <BottomDrawer onClose={onClose}>
-      <div className={styles['c-actionmenu']}>{children}</div>
-    </BottomDrawer>
-  </div>
-)
+const ActionMenuWrapper = ({ inline, onClose, children }) =>
+  inline ? (
+    <ClickAwayListener onClickAway={onClose}>{children}</ClickAwayListener>
+  ) : (
+    <BottomDrawer onClose={onClose}>{children}</BottomDrawer>
+  )
+
+const ActionMenu = ({ children, className, onClose, inline }) => {
+  return (
+    <div
+      className={cx({ [styles['c-actionmenu-container']]: inline }, className)}
+    >
+      <ActionMenuWrapper onClose={onClose} inline={inline}>
+        <div
+          className={cx(styles['c-actionmenu'], {
+            [styles['c-actionmenu--inline']]: inline
+          })}
+        >
+          {children}
+        </div>
+      </ActionMenuWrapper>
+    </div>
+  )
+}
 
 ActionMenu.propTypes = {
   /** Extra class */
   className: PropTypes.string,
   /** What to do on close */
-  onClose: PropTypes.func
+  onClose: PropTypes.func,
+  /** The menu will be displayed where it is rendered instead of the botom of the page  */
+  inline: PropTypes.bool
 }
 
 const ActionMenuHeader = ({ children }) => {

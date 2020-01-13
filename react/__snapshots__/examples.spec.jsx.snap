@@ -18,6 +18,12 @@ exports[`ActionMenu should render examples: ActionMenu 3`] = `
 </div>"
 `;
 
+exports[`ActionMenu should render examples: ActionMenu 4`] = `
+"<div>
+  <div><button>Show action menu</button></div>
+</div>"
+`;
+
 exports[`AppTitle should render examples: AppTitle 1`] = `
 "<div>
   <h1 class=\\"u-title-h1 styles__c-apptitle___eqV9l\\">Drive</h1>
