@@ -256,7 +256,7 @@ Field.propTypes = {
   labelProps: PropTypes.object,
   fieldProps: PropTypes.object,
   fullwidth: PropTypes.bool,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.node.isRequired,
   id: PropTypes.string,
   name: PropTypes.string,
   type: PropTypes.oneOf(allowedTypes),
