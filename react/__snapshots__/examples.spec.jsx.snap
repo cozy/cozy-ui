@@ -4971,7 +4971,7 @@ exports[`Infos should render examples: Infos 1`] = `
     <div class=\\"styles__Infos___2ZZVs styles__Infos--primary___3i4ll\\">
       <div class=\\"styles__Stack--m___1tSpV\\">
         <div class=\\"styles__Infos-description___7P1NP\\">
-          <div class=\\"styles__Stack--s___22WMg\\">
+          <div class=\\"styles__Stack--xs___2R5lW\\">
             <div class=\\"u-title-h3\\">Date of birth</div>
             <div class=\\"u-text\\">10 December 1815</div>
           </div>
@@ -4982,7 +4982,7 @@ exports[`Infos should render examples: Infos 1`] = `
     <div class=\\"styles__Infos___2ZZVs styles__Infos--danger___3wKYc\\">
       <div class=\\"styles__Stack--m___1tSpV\\">
         <div class=\\"styles__Infos-description___7P1NP\\">
-          <div class=\\"styles__Stack--s___22WMg\\">
+          <div class=\\"styles__Stack--xs___2R5lW\\">
             <div class=\\"u-title-h3 u-pomegranate\\">Date of birth</div>
             <div class=\\"u-text\\">10 December 1815</div>
           </div>
@@ -4994,7 +4994,7 @@ exports[`Infos should render examples: Infos 1`] = `
     <div class=\\"styles__Infos___2ZZVs styles__Infos--primary___3i4ll\\">
       <div class=\\"styles__Stack--m___1tSpV\\">
         <div class=\\"styles__Infos-description___7P1NP\\">
-          <div class=\\"styles__Stack--s___22WMg\\">
+          <div class=\\"styles__Stack--xs___2R5lW\\">
             <div class=\\"u-title-h3\\">Date of birth</div>
             <div class=\\"u-text\\">10 December 1815</div>
           </div>
@@ -5018,7 +5018,7 @@ exports[`InfosCarrousel should render examples: InfosCarrousel 1`] = `
             <div class=\\"styles__Infos___2ZZVs styles__Infos--danger___3wKYc\\">
               <div class=\\"styles__Stack--m___1tSpV\\">
                 <div class=\\"styles__Infos-description___7P1NP\\">
-                  <div class=\\"styles__Stack--s___22WMg\\">
+                  <div class=\\"styles__Stack--xs___2R5lW\\">
                     <div class=\\"u-title-h3\\">News 1</div>
                     <div class=\\"u-text\\">Breaking news 1</div>
                   </div>
@@ -5031,7 +5031,7 @@ exports[`InfosCarrousel should render examples: InfosCarrousel 1`] = `
             <div class=\\"styles__Infos___2ZZVs styles__Infos--primary___3i4ll\\">
               <div class=\\"styles__Stack--m___1tSpV\\">
                 <div class=\\"styles__Infos-description___7P1NP\\">
-                  <div class=\\"styles__Stack--s___22WMg\\">
+                  <div class=\\"styles__Stack--xs___2R5lW\\">
                     <div class=\\"u-title-h3\\">News 2</div>
                     <div class=\\"u-text\\">Breaking news 2</div>
                   </div>

@@ -20,7 +20,7 @@ export const Infos = ({
     <div className={cx(styles['Infos'], styles[`Infos--${theme}`], className)}>
       <Stack spacing="m">
         <div className={styles['Infos-description']}>
-          <Stack spacing="s">{description}</Stack>
+          <Stack spacing="xs">{description}</Stack>
         </div>
         {action && <div>{action}</div>}
       </Stack>
