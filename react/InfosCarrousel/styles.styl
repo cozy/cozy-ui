@@ -1,5 +1,6 @@
 @require 'settings/palette'
 @require 'settings/breakpoints'
+@require 'settings/spaces'
 
 .InfosCarrousel
     position relative
@@ -13,24 +14,24 @@
 
 .InfosCarrousel-navigation
     position absolute
-    bottom 10px
-    right 8px
+    bottom rem(10)
+    right spacing_values.xs
     display flex
     align-items center
 
     +mobile()
-        bottom 4px
+        bottom rem(4)
         right 0
 
 .InfosCarrousel-arrow
     background none
     border 0
-    min-width 32px
-    padding 16px
+    min-width spacing_values.xl
+    padding spacing_values.m
 
     &:disabled
         opacity .24
 
 .InfosCarrousel-separator
     border-left 1px solid var(--silver)
-    height 1rem
+    height rem(16)
