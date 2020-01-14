@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import ClickAwayListener from '@material-ui/core/ClickAwayListener'
 import styles from './styles.styl'
 import { Media, Bd, Img } from '../Media'
 import BottomDrawer from '../BottomDrawer'
-import ClickAwayListener from '@material-ui/core/ClickAwayListener'
+import withBreakpoints from '../helpers/withBreakpoints'
 
 const ActionMenuWrapper = ({ inline, onClose, children }) =>
   inline ? (
@@ -13,18 +14,29 @@ const ActionMenuWrapper = ({ inline, onClose, children }) =>
     <BottomDrawer onClose={onClose}>{children}</BottomDrawer>
   )
 
-const ActionMenu = ({ children, className, onClose, inline }) => {
+const ActionMenu = ({
+  children,
+  className,
+  onClose,
+  breakpoints: { isDesktop }
+}) => {
+  const shouldDisplayInline = isDesktop
   return (
     <div
-      className={cx({ [styles['c-actionmenu-container']]: inline }, className)}
+      className={cx(
+        { [styles['c-actionmenu-container']]: shouldDisplayInline },
+        className
+      )}
     >
-      <ActionMenuWrapper onClose={onClose} inline={inline}>
+      <ActionMenuWrapper onClose={onClose} inline={shouldDisplayInline}>
         <div
           className={cx(styles['c-actionmenu'], {
-            [styles['c-actionmenu--inline']]: inline
+            [styles['c-actionmenu--inline']]: shouldDisplayInline
           })}
         >
-          {children}
+          {React.Children.map(children, child =>
+            child.type === ActionMenuHeader && isDesktop ? null : child
+          )}
         </div>
       </ActionMenuWrapper>
     </div>
@@ -35,9 +47,7 @@ ActionMenu.propTypes = {
   /** Extra class */
   className: PropTypes.string,
   /** What to do on close */
-  onClose: PropTypes.func,
-  /** The menu will be displayed where it is rendered instead of the botom of the page  */
-  inline: PropTypes.bool
+  onClose: PropTypes.func
 }
 
 const ActionMenuHeader = ({ children }) => {
@@ -68,5 +78,5 @@ ActionMenuItem.propTypes = {
   children: PropTypes.node,
   onClick: PropTypes.func
 }
-export default ActionMenu
+export default withBreakpoints()(ActionMenu)
 export { ActionMenuHeader, ActionMenuItem }
