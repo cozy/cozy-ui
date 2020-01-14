@@ -6,6 +6,8 @@ Use an ActionMenu to show a list of actions. ActionMenus automatically switch th
 import ActionMenu, { ActionMenuItem } from 'cozy-ui/transpiled/react/ActionMenu';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 
+initialState = { menuDisplayed: isTesting() };
+
 const showMenu = () => setState({ menuDisplayed: true });
 const hideMenu = () => setState({ menuDisplayed: false });
 
@@ -27,6 +29,8 @@ const hideMenu = () => setState({ menuDisplayed: false });
 import ActionMenu, { ActionMenuItem, ActionMenuHeader } from './index';
 import Icon from '../Icon';
 import Filename from '../Filename';
+
+initialState = { menuDisplayed: isTesting() };
 
 const showMenu = () => setState({ menuDisplayed: true });
 const hideMenu = () => setState({ menuDisplayed: false });
@@ -52,6 +56,8 @@ const hideMenu = () => setState({ menuDisplayed: false });
 import ActionMenu, { ActionMenuItem, ActionMenuHeader } from './index';
 import Icon from '../Icon';
 import Filename from '../Filename';
+
+initialState = { menuDisplayed: isTesting() };
 
 const showMenu = () => setState({ menuDisplayed: true });
 const hideMenu = () => setState({ menuDisplayed: false });
