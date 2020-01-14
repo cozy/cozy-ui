@@ -51,7 +51,7 @@ Infos.defaultProps = {
 }
 
 const logInfosDepecrated = createDepreciationLogger()
-const InfosMigration = React.memo(props => {
+const InfosMigration = React.memo(function InfosMigration(props) {
   const isUsingDeprecatedProps =
     props.actionButton ||
     props.icon ||
