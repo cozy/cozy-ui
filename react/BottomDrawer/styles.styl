@@ -1,4 +1,5 @@
 @require 'tools/mixins'
+@require 'settings/spaces'
 
 .with-transition
     transition transform .1s ease-out
@@ -10,6 +11,6 @@
     bottom         env(safe-area-inset-bottom) // @stylint ignore
     left           0
     width          'calc(100% - %s)' % rem(16)
-    margin         0 rem(8)
+    margin         0 spacing_values.m
     padding-bottom rem(5)
     box-sizing border-box
