@@ -78,7 +78,7 @@ module.exports = function(j) {
   }
 
   const isSameSpec = (eSpec, spec) => {
-    return eSpec.imported.name == spec.imported.name
+    return eSpec.imported && eSpec.imported.name == spec.imported.name
   }
 
   const mergeSpecifiersToImport = (importDeclaration, specifiers) => {
