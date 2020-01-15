@@ -1,5 +1,7 @@
 A menu to display choices to the user.
 
+**This component is deprecated, please use ActionMenu instead. See below for informations on how to migrate.**
+
 Pass data to the `MenuItem`s and use `onSelect` to handle user selecting
 an item in the `Menu`.
 
@@ -50,4 +52,45 @@ import Button from 'cozy-ui/transpiled/react/Button';
   <MenuItem disabled data='bonjour'>Bonjour !</MenuItem>
   <MenuItem data='hola'>¡Hola!</MenuItem>
 </Menu>
+```
+
+### Migrating from Menu to ActionMenu
+
+#### 1. Replacing the Components
+
+`Menu` and `MenuItem` need to be replaced by `ActionMenu` and `ActionMenuItem` respectively.
+
+#### 2. Opening and closing the ActionMenu
+
+`Menu` had a built-in state and toggle button that need to be replaced. The most straightforward replacements are a `useState` hook and a `Button` component.
+
+#### 3. Handling clicks
+
+Clicks are now handled on the `ActionMenuItem` directly through the `onClick` prop. Unlike `Menu`, `ActionMenu` doesn't close itself after a click on an item, but you can change the opening state in the callback if you wish to do it.
+
+#### Putting it all together
+
+```
+import ActionMenu, { ActionMenuItem } from 'cozy-ui/transpiled/react/ActionMenu';
+import Button from 'cozy-ui/transpiled/react/Button';
+
+initialState = { menuDisplayed: false };
+
+const showMenu = () => setState({ menuDisplayed: true });
+const hideMenu = () => setState({ menuDisplayed: false });
+
+const showItem = item => {
+  alert(item);
+  hideMenu();
+}
+
+<div>
+  <Button onClick={showMenu} label="Click me !" theme="secondary" subtle />
+  {state.menuDisplayed &&
+    <ActionMenu onClose={hideMenu}>
+      <ActionMenuItem onClick={() => showItem('Hello !')}>Hello !</ActionMenuItem>
+      <ActionMenuItem onClick={() => showItem('Bonjour !')}>Bonjour !</ActionMenuItem>
+      <ActionMenuItem onClick={() => showItem('¡Hola!')}>¡Hola!</ActionMenuItem>
+  </ActionMenu>}
+</div>
 ```

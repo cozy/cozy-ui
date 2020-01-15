@@ -7,6 +7,7 @@ import PropTypes from 'prop-types'
 import { Media, Bd, Img } from '../Media'
 import Popover from '../Popover'
 import migrateProps from '../helpers/migrateProps'
+import createDepreciationLogger from '../helpers/createDepreciationLogger'
 
 class MenuItem extends Component {
   render() {
@@ -35,12 +36,17 @@ class MenuItem extends Component {
   }
 }
 
+const logMenuDepecrated = createDepreciationLogger()
 class Menu extends Component {
   constructor(props, context) {
     super(props, context)
     this.state = {
       opened: props.initialOpen
     }
+
+    logMenuDepecrated(
+      'The Menu component has been deprecated and should be replaced by ActionMenu. More infos: https://docs.cozy.io/cozy-ui/react/#!/Menu'
+    )
   }
 
   toggle = () => (this.state.opened ? this.close() : this.open())

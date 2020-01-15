@@ -5377,6 +5377,12 @@ exports[`Menu should render examples: Menu 3`] = `
 </div>"
 `;
 
+exports[`Menu should render examples: Menu 4`] = `
+"<div>
+  <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Click me !</span></span></button></div>
+</div>"
+`;
+
 exports[`NarrowContent should render examples: NarrowContent 1`] = `
 "<div>
   <div class=\\"styles__NarrowContent___Zq8oI\\">
