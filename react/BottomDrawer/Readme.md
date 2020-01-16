@@ -6,6 +6,8 @@ import Card from 'cozy-ui/transpiled/react/Card';
 import { Text, SubTitle } from 'cozy-ui/transpiled/react/Text';
 import Button from 'cozy-ui/transpiled/react/Button';
 
+initialState = { isDrawerDisplayed: isTesting() };
+
 const showDrawer = () => setState({ isDrawerDisplayed: true });
 const hideDrawer = () => setState({ isDrawerDisplayed: false });
 
