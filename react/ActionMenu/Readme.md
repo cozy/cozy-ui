@@ -1,10 +1,14 @@
+Use an ActionMenu to show a list of actions. ActionMenus automatically switch their display between desktop and mobile.
+
 ### Classic
 
 ```
 import ActionMenu, { ActionMenuItem } from 'cozy-ui/transpiled/react/ActionMenu';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 
-const showMenu = () => setState({ menuDisplayed: true })
+initialState = { menuDisplayed: isTesting() };
+
+const showMenu = () => setState({ menuDisplayed: true });
 const hideMenu = () => setState({ menuDisplayed: false });
 
 <div>
@@ -19,14 +23,16 @@ const hideMenu = () => setState({ menuDisplayed: false });
 </div>
 ```
 
-### With Header
+### With Header (mobile only)
 
 ```
 import ActionMenu, { ActionMenuItem, ActionMenuHeader } from './index';
 import Icon from '../Icon';
 import Filename from '../Filename';
 
-const showMenu = () => setState({ menuDisplayed: true })
+initialState = { menuDisplayed: isTesting() };
+
+const showMenu = () => setState({ menuDisplayed: true });
 const hideMenu = () => setState({ menuDisplayed: false });
 
 <div>
@@ -44,14 +50,16 @@ const hideMenu = () => setState({ menuDisplayed: false });
 </div>
 ```
 
-### With Header & onClick
+### With dedicated click handler
 
 ```
 import ActionMenu, { ActionMenuItem, ActionMenuHeader } from './index';
 import Icon from '../Icon';
 import Filename from '../Filename';
 
-const showMenu = () => setState({ menuDisplayed: true })
+initialState = { menuDisplayed: isTesting() };
+
+const showMenu = () => setState({ menuDisplayed: true });
 const hideMenu = () => setState({ menuDisplayed: false });
 
 <div>

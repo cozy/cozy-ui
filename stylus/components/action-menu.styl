@@ -1,23 +1,21 @@
 @require './popover.styl'
 @require '../tools/mixins'
 
-$actionmenu
-    @extend        $popover
-    z-index        $file-action-menu
-    position       fixed
-    bottom         rem(9)
-    bottom         env(safe-area-inset-bottom) // @stylint ignore
-    left           0
-    width          'calc(100% - %s)' % rem(16)
-    margin         0 rem(8)
-    padding-bottom rem(5)
-    box-sizing border-box
+$actionmenu-container
+    position relative
 
-    &.with-transition
-        transition transform .1s ease-out
+$actionmenu
+    @extend $popover
 
     hr
         margin-top 0
+
+$actionmenu--inline
+    position absolute
+    bottom auto
+    left auto
+    width auto
+    min-width rem(220)
 
 $actionmenu-header
     box-sizing border-box
