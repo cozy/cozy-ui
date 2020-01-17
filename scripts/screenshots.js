@@ -82,10 +82,10 @@ const fetchAllComponents = async (page, styleguideIndexURL) => {
  *
  * - Throws if styleguide has not been built
  * - Creates the screenshot dir if it does not exist
- * - Empties the screenshot dir if it exists
+ * - Defaults to emptying the screenshot dir if it exists
  *
  */
-const prepareFS = async (styleguideDir, screenshotDir) => {
+const prepareFS = async (styleguideDir, screenshotDir, options) => {
   if (!fs.existsSync(styleguideDir)) {
     throw new Error(
       `Styleguide does not seem to have been built (searching in ${styleguideDir}). Please run yarn build:doc:react.`
@@ -95,7 +95,7 @@ const prepareFS = async (styleguideDir, screenshotDir) => {
   if (!fs.existsSync(screenshotDir)) {
     console.log(`Creating screenshot directory ${screenshotDir}`)
     fs.mkdirSync(screenshotDir)
-  } else {
+  } else if (options.emptyDirectory) {
     console.log(`Emptying screenshot directory ${screenshotDir}`)
     emptyDirectory(screenshotDir)
   }
@@ -157,11 +157,18 @@ const main = async () => {
     type: viewportArgument,
     defaultValue: '800x600'
   })
+  parser.addArgument('--no-empty-screenshot-dir', {
+    action: 'storeFalse',
+    defaultValue: true,
+    dest: 'emptyScreenshotDir'
+  })
   parser.addArgument('--component')
 
   const args = parser.parseArgs()
 
-  await prepareFS(args.styleguideDir, args.screenshotDir)
+  await prepareFS(args.styleguideDir, args.screenshotDir, {
+    emptyDirectory: args.emptyScreenshotDir
+  })
   const { browser, page } = await prepareBrowser({ viewport: args.viewport })
 
   const styleguideIndexURL = `file://${path.join(
