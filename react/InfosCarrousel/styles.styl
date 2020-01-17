@@ -7,14 +7,22 @@
 
 .InfosCarrousel-navigation
     position absolute
-    bottom (spacing_values.xs)
-    right (spacing_values.xs)
     display flex
     align-items center
 
+    CtaButtonHeight=2.5rem
+    height CtaButtonHeight
+    bottom (spacing_values.m)
+    right (spacing_values.m)
+
+    box-sizing border-box
+
     +mobile()
-        bottom rem(4)
-        right rem(4)
+        // The CTA Button heights should change soon
+        CtaButtonHeight=2.5rem
+        height CtaButtonHeight
+        bottom  (spacing_values.s)
+        right  (spacing_values.s)
 
 .InfosCarrousel-arrow
     background none
