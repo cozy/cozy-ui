@@ -18,6 +18,17 @@ const InfosCarrousel = ({ children, theme, className, swipeableProps }) => {
   const hasPreviousInfos = index === 0
   const hasNextInfos = index === count - 1
 
+  const onChangeIndex = useCallback(
+    function(index) {
+      const { onChangeIndex: onChangeIndexProp } = swipeableProps
+      if (onChangeIndexProp) {
+        onChangeIndexProp(index)
+      }
+      setIndex(index)
+    },
+    [setIndex, swipeableProps]
+  )
+
   return (
     <div
       className={cx(
@@ -26,7 +37,12 @@ const InfosCarrousel = ({ children, theme, className, swipeableProps }) => {
         className
       )}
     >
-      <SwipeableViews index={index} animateHeight {...swipeableProps}>
+      <SwipeableViews
+        index={index}
+        animateHeight
+        {...swipeableProps}
+        onChangeIndex={onChangeIndex}
+      >
         {React.Children.map(children, child =>
           React.cloneElement(child, { theme: child.props.theme || theme })
         )}
