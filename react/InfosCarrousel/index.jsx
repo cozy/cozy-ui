@@ -30,13 +30,7 @@ const InfosCarrousel = ({ children, theme, className, swipeableProps }) => {
   )
 
   return (
-    <div
-      className={cx(
-        styles['InfosCarrousel'],
-        styles[`InfosCarrousel--${theme}`],
-        className
-      )}
-    >
+    <div className={cx(styles['InfosCarrousel'], className)}>
       <SwipeableViews
         index={index}
         animateHeight

@@ -5068,7 +5068,7 @@ exports[`Infos should render examples: Infos 1`] = `
 exports[`InfosCarrousel should render examples: InfosCarrousel 1`] = `
 "<div>
   <div class=\\"u-stack-m\\">
-    <div class=\\"styles__InfosCarrousel___3rCyB styles__InfosCarrousel--danger___1Cdvd\\">
+    <div class=\\"styles__InfosCarrousel___3rCyB\\">
       <div style=\\"overflow-x: hidden;\\">
         <div style=\\"height: 0px; flex-direction: row; transition: all 0s ease 0s; transform: translate(0%, 0); direction: ltr; display: flex; will-change: transform;\\" class=\\"react-swipeable-view-container\\">
           <div style=\\"width: 100%; flex-shrink: 0; overflow: auto; overflow-y: hidden;\\" aria-hidden=\\"false\\" data-swipeable=\\"true\\">
@@ -5099,9 +5099,9 @@ exports[`InfosCarrousel should render examples: InfosCarrousel 1`] = `
           </div>
         </div>
       </div>
-      <div class=\\"styles__InfosCarrousel-navigation___3s_hu\\"><button disabled=\\"\\" class=\\"styles__InfosCarrousel-arrow___1kpYd\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+      <div class=\\"styles__InfosCarrousel-navigation___3s_hu\\"><button disabled=\\"\\" class=\\"styles__IconButton___1LWwV\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
             <use xlink:href=\\"#left\\"></use>
-          </svg></button><span class=\\"styles__InfosCarrousel-separator___AvH5m\\"></span><button class=\\"styles__InfosCarrousel-arrow___1kpYd\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+          </svg></button><span class=\\"styles__InfosCarrousel-separator___AvH5m\\"></span><button class=\\"styles__IconButton___1LWwV\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
             <use xlink:href=\\"#right\\"></use>
           </svg></button></div>
     </div>
@@ -5112,7 +5112,7 @@ exports[`InfosCarrousel should render examples: InfosCarrousel 1`] = `
 exports[`InfosCarrousel should render examples: InfosCarrousel 2`] = `
 "<div>
   <div class=\\"u-stack-m\\">
-    <div class=\\"styles__InfosCarrousel___3rCyB styles__InfosCarrousel--danger___1Cdvd\\">
+    <div class=\\"styles__InfosCarrousel___3rCyB\\">
       <div style=\\"overflow-x: hidden;\\">
         <div style=\\"height: 0px; flex-direction: row; transition: all 0s ease 0s; transform: translate(0%, 0); direction: ltr; display: flex; will-change: transform;\\" class=\\"react-swipeable-view-container\\">
           <div style=\\"width: 100%; flex-shrink: 0; overflow: auto; overflow-y: hidden;\\" aria-hidden=\\"false\\" data-swipeable=\\"true\\">
