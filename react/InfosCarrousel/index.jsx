@@ -6,6 +6,10 @@ import SwipeableViews from 'react-swipeable-views'
 import styles from './styles.styl'
 import Icon from '../Icon'
 
+export const Arrow = props => (
+  <button {...props} className={styles['InfosCarrousel-arrow']} />
+)
+
 const InfosCarrousel = ({ children, theme, className, swipeableProps }) => {
   const count = React.Children.count(children)
   const [index, setIndex] = useState(0)
@@ -27,23 +31,17 @@ const InfosCarrousel = ({ children, theme, className, swipeableProps }) => {
           React.cloneElement(child, { theme: child.props.theme || theme })
         )}
       </SwipeableViews>
-      <div className={styles['InfosCarrousel-navigation']}>
-        <button
-          className={styles['InfosCarrousel-arrow']}
-          onClick={goToPreviousInfos}
-          disabled={hasPreviousInfos}
-        >
-          <Icon icon="left" />
-        </button>
-        <span className={styles['InfosCarrousel-separator']} />
-        <button
-          className={styles['InfosCarrousel-arrow']}
-          onClick={goToNextInfos}
-          disabled={hasNextInfos}
-        >
-          <Icon icon="right" />
-        </button>
-      </div>
+      {React.Children.count(children) > 1 ? (
+        <div className={styles['InfosCarrousel-navigation']}>
+          <Arrow onClick={goToPreviousInfos} disabled={hasPreviousInfos}>
+            <Icon icon="left" />
+          </Arrow>
+          <span className={styles['InfosCarrousel-separator']} />
+          <Arrow onClick={goToNextInfos} disabled={hasNextInfos}>
+            <Icon icon="right" />
+          </Arrow>
+        </div>
+      ) : null}
     </div>
   )
 }
