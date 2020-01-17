@@ -47,7 +47,7 @@
     "jest": "yarn test:jest",
     "screenshots": "node scripts/screenshots.js --screenshot-dir ./screenshots --styleguide-dir ./build/react",
     "test": "yarn test:jest",
-    "test:jest": "jest --verbose",
+    "test:jest": "jest",
     "transpile:react": "env BABEL_ENV=transpilation babel react/ --out-dir transpiled/react --verbose",
     "transpile:helpers": "babel helpers/ --out-dir transpiled/helpers --verbose",
     "transpile": "yarn transpile:react && yarn transpile:helpers",
