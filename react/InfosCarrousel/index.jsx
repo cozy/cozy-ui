@@ -5,10 +5,7 @@ import SwipeableViews from 'react-swipeable-views'
 
 import styles from './styles.styl'
 import Icon from '../Icon'
-
-export const Arrow = props => (
-  <button {...props} className={styles['InfosCarrousel-arrow']} />
-)
+import IconButton from '../IconButton'
 
 const InfosCarrousel = ({ children, theme, className, swipeableProps }) => {
   const count = React.Children.count(children)
@@ -43,13 +40,13 @@ const InfosCarrousel = ({ children, theme, className, swipeableProps }) => {
       </SwipeableViews>
       {React.Children.count(children) > 1 ? (
         <div className={styles['InfosCarrousel-navigation']}>
-          <Arrow onClick={goToPreviousInfos} disabled={hasPreviousInfos}>
+          <IconButton onClick={goToPreviousInfos} disabled={hasPreviousInfos}>
             <Icon icon="left" />
-          </Arrow>
+          </IconButton>
           <span className={styles['InfosCarrousel-separator']} />
-          <Arrow onClick={goToNextInfos} disabled={hasNextInfos}>
+          <IconButton onClick={goToNextInfos} disabled={hasNextInfos}>
             <Icon icon="right" />
-          </Arrow>
+          </IconButton>
         </div>
       ) : null}
     </div>

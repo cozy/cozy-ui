@@ -1,6 +1,7 @@
 import { act } from 'react-dom/test-utils'
 import React from 'react'
-import InfosCarrousel, { Arrow } from '../InfosCarrousel'
+import InfosCarrousel from '.'
+import IconButton from '../IconButton'
 import Infos from '../Infos'
 import Button from '../Button'
 import Text, { SubTitle } from '../Text'
@@ -37,7 +38,7 @@ const Example = () => (
 
 const getArrowsDisabledProps = root =>
   root
-    .find(Arrow)
+    .find(IconButton)
     .map(node => node.props())
     .map(x => x.disabled)
 
