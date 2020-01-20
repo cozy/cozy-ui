@@ -24,7 +24,9 @@ const emptyDirectory = directory => {
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 const defaultGetScreenshotName = ({ componentName, viewport }) =>
-  `${componentName}-${viewport.width}x${viewport.height}.png`
+  `${componentName}-${formatViewport(viewport)}.png`
+
+const formatViewport = viewport => `${viewport.width}x${viewport.height}`
 
 /**
  * Screenshot a component to the screenshot directory, taking care of
@@ -39,7 +41,7 @@ const screenshotComponent = async (page, options) => {
   const getScreenshotName =
     options.getScreenshotName || defaultGetScreenshotName
 
-  console.log(`Screenshotting ${name}`)
+  console.log(`Screenshotting ${name} at ${formatViewport(viewport)}`)
   await page.screenshot({
     path: path.join(
       screenshotDir,
