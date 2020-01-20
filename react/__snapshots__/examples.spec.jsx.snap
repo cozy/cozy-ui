@@ -5009,6 +5009,16 @@ exports[`Icon should render examples: Icon 4`] = `
 </div>"
 `;
 
+exports[`IconButton should render examples: IconButton 1`] = `
+"<div><button class=\\"styles__IconButton___1LWwV\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+      <use xlink:href=\\"#left\\"></use>
+    </svg></button><button class=\\"styles__IconButton___1LWwV\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+      <use xlink:href=\\"#restore\\"></use>
+    </svg></button><button class=\\"styles__IconButton___1LWwV\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+      <use xlink:href=\\"#right\\"></use>
+    </svg></button></div>"
+`;
+
 exports[`IconStack should render examples: IconStack 1`] = `
 "<div>
   <div class=\\"styles__IconStack-wrapper___10dhG\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: blue;\\" width=\\"32\\" height=\\"32\\">
