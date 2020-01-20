@@ -23,18 +23,30 @@ const emptyDirectory = directory => {
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
+const defaultGetScreenshotName = ({ componentName, viewport }) =>
+  `${componentName}-${formatViewport(viewport)}.png`
+
+const formatViewport = viewport => `${viewport.width}x${viewport.height}`
+
 /**
  * Screenshot a component to the screenshot directory, taking care of
  * resizing the viewport before-hand so that the viewport fits the
  * component.
  */
-const screenshotComponent = async (page, { link, name }, screenshotDir) => {
+const screenshotComponent = async (page, options) => {
+  const { link, name, screenshotDir, viewport } = options
   await page.goto(link, { waitUntil: 'load', timeout: 0 })
   await sleep(100)
 
-  console.log(`Screenshotting ${name}`)
+  const getScreenshotName =
+    options.getScreenshotName || defaultGetScreenshotName
+
+  console.log(`Screenshotting ${name} at ${formatViewport(viewport)}`)
   await page.screenshot({
-    path: path.join(screenshotDir, `${name}.png`),
+    path: path.join(
+      screenshotDir,
+      getScreenshotName({ componentName: name, viewport })
+    ),
     fullPage: true
   })
 }
@@ -72,10 +84,14 @@ const fetchAllComponents = async (page, styleguideIndexURL) => {
  *
  * - Throws if styleguide has not been built
  * - Creates the screenshot dir if it does not exist
- * - Empties the screenshot dir if it exists
+ *
+ * @param {string} options.styleguideDir - Where are the HTML pages of the styleguide
+ * @param {string} options.screenshotDir - Where to store screenshots
+ * @param {boolean} options.emptyScreenshotDir - Whether to empty the screenshot dir
  *
  */
-const prepareFS = async (styleguideDir, screenshotDir) => {
+const prepareFS = async options => {
+  const { styleguideDir, screenshotDir, emptyScreenshotDir } = options
   if (!fs.existsSync(styleguideDir)) {
     throw new Error(
       `Styleguide does not seem to have been built (searching in ${styleguideDir}). Please run yarn build:doc:react.`
@@ -85,7 +101,7 @@ const prepareFS = async (styleguideDir, screenshotDir) => {
   if (!fs.existsSync(screenshotDir)) {
     console.log(`Creating screenshot directory ${screenshotDir}`)
     fs.mkdirSync(screenshotDir)
-  } else {
+  } else if (emptyScreenshotDir) {
     console.log(`Emptying screenshot directory ${screenshotDir}`)
     emptyDirectory(screenshotDir)
   }
@@ -95,13 +111,14 @@ const prepareFS = async (styleguideDir, screenshotDir) => {
  * Opens and configure browser and page.
  * Returns { browser, page }
  */
-const prepareBrowser = async () => {
+const prepareBrowser = async options => {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
   // Put Argos in user agent
   await page.setUserAgent(
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36; Argos'
   )
+  page.setViewport(options.viewport)
   await page.setDefaultNavigationTimeout(0)
   console.log('Browser opened and set up')
   return { browser, page }
@@ -113,6 +130,25 @@ const pathArgument = p => {
   } else {
     return path.join(process.cwd(), p)
   }
+}
+
+const builtinViewports = {
+  mobile: '320x480',
+  desktop: '800x600'
+}
+
+const viewportArgument = viewportStr => {
+  viewportStr = builtinViewports[viewportStr] || viewportStr
+  const splitted = viewportStr.split('x')
+  if (!splitted[1]) {
+    console.warn(
+      `Viewport format unsupported (${viewportStr}), supported format example: 800x600. You can also use built-in viewport names: ${Object.keys(
+        builtinViewports
+      ).join(', ')}.`
+    )
+    throw new Error('Bad viewport format')
+  }
+  return { width: parseInt(splitted[0]), height: parseInt(splitted[1]) }
 }
 
 /**
@@ -131,12 +167,25 @@ const main = async () => {
     dest: 'styleguideDir',
     type: pathArgument
   })
+  parser.addArgument('--viewport', {
+    type: viewportArgument,
+    defaultValue: builtinViewports.desktop
+  })
+  parser.addArgument('--no-empty-screenshot-dir', {
+    action: 'storeFalse',
+    defaultValue: true,
+    dest: 'emptyScreenshotDir'
+  })
   parser.addArgument('--component')
 
   const args = parser.parseArgs()
 
-  await prepareFS(args.styleguideDir, args.screenshotDir)
-  const { browser, page } = await prepareBrowser()
+  await prepareFS({
+    styleguideDir: args.styleguideDir,
+    screenshotDir: args.screenshotDir,
+    emptyScreenshotDir: args.emptyScreenshotDir
+  })
+  const { browser, page } = await prepareBrowser({ viewport: args.viewport })
 
   const styleguideIndexURL = `file://${path.join(
     args.styleguideDir,
@@ -151,7 +200,12 @@ const main = async () => {
 
   console.log('Screenshotting components')
   for (const component of components) {
-    await screenshotComponent(page, component, args.screenshotDir)
+    await screenshotComponent(page, {
+      link: component.link,
+      name: component.name,
+      screenshotDir: args.screenshotDir,
+      viewport: args.viewport
+    })
   }
 
   await browser.close()
