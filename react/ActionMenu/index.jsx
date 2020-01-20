@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import ClickAwayListener from '@material-ui/core/ClickAwayListener'
@@ -6,29 +6,58 @@ import styles from './styles.styl'
 import { Media, Bd, Img } from '../Media'
 import BottomDrawer from '../BottomDrawer'
 import withBreakpoints from '../helpers/withBreakpoints'
+import Popper from '@material-ui/core/Popper'
 
-const ActionMenuWrapper = ({ inline, onClose, children }) =>
-  inline ? (
-    <ClickAwayListener onClickAway={onClose}>{children}</ClickAwayListener>
+const ActionMenuWrapper = ({
+  inline,
+  onClose,
+  anchorElRef,
+  placement,
+  preventOverflow,
+  children
+}) => {
+  const getAnchorElement = useCallback(() => {
+    return anchorElRef.current
+  }, [anchorElRef])
+  const normalOverflowModifiers = {
+    preventOverflow: { enabled: false },
+    hide: { enabled: false }
+  }
+
+  return inline ? (
+    <Popper
+      anchorEl={getAnchorElement}
+      modifiers={preventOverflow ? null : normalOverflowModifiers}
+      open
+      placement={placement}
+    >
+      <ClickAwayListener onClickAway={onClose}>{children}</ClickAwayListener>
+    </Popper>
   ) : (
     <BottomDrawer onClose={onClose}>{children}</BottomDrawer>
   )
+}
 
 const ActionMenu = ({
   children,
   className,
   onClose,
+  placement,
+  preventOverflow,
+  anchorElRef,
   breakpoints: { isDesktop }
 }) => {
   const shouldDisplayInline = isDesktop
+  const containerRef = React.createRef()
   return (
-    <div
-      className={cx(
-        { [styles['c-actionmenu-container']]: shouldDisplayInline },
-        className
-      )}
-    >
-      <ActionMenuWrapper onClose={onClose} inline={shouldDisplayInline}>
+    <div className={className} ref={containerRef}>
+      <ActionMenuWrapper
+        onClose={onClose}
+        inline={shouldDisplayInline}
+        anchorElRef={anchorElRef || containerRef}
+        placement={placement}
+        preventOverflow={preventOverflow}
+      >
         <div
           className={cx(styles['c-actionmenu'], {
             [styles['c-actionmenu--inline']]: shouldDisplayInline
@@ -47,7 +76,31 @@ ActionMenu.propTypes = {
   /** Extra class */
   className: PropTypes.string,
   /** What to do on close */
-  onClose: PropTypes.func
+  onClose: PropTypes.func,
+  /** Controls the placement of the menu on desktop */
+  placement: PropTypes.oneOf([
+    'bottom-end',
+    'bottom-start',
+    'bottom',
+    'left-end',
+    'left-start',
+    'left',
+    'right-end',
+    'right-start',
+    'right',
+    'top-end',
+    'top-start',
+    'top'
+  ]),
+  /** Will keep the menu visible when scrolling */
+  preventOverflow: PropTypes.bool,
+  /** The reference element for the menu placement and overflow prevention. */
+  anchorElRef: PropTypes.object
+}
+
+ActionMenu.defaultProps = {
+  placement: 'bottom-start',
+  preventOverflow: false
 }
 
 const ActionMenuHeader = ({ children }) => {
