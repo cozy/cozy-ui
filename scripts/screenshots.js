@@ -126,11 +126,19 @@ const pathArgument = p => {
   }
 }
 
+const builtinViewports = {
+  mobile: '320x480',
+  desktop: '800x600'
+}
+
 const viewportArgument = viewportStr => {
+  viewportStr = builtinViewports[viewportStr] || viewportStr
   const splitted = viewportStr.split('x')
   if (!splitted[1]) {
     console.warn(
-      `Viewport format unsupported (${viewportStr}), supported format example : 800x600`
+      `Viewport format unsupported (${viewportStr}), supported format example: 800x600. You can also use built-in viewport names: ${Object.keys(
+        builtinViewports
+      ).join(', ')}.`
     )
     throw new Error('Bad viewport format')
   }
@@ -155,7 +163,7 @@ const main = async () => {
   })
   parser.addArgument('--viewport', {
     type: viewportArgument,
-    defaultValue: '800x600'
+    defaultValue: builtinViewports.desktop
   })
   parser.addArgument('--no-empty-screenshot-dir', {
     action: 'storeFalse',
