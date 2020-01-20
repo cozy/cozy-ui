@@ -5,6 +5,7 @@ import SwipeableViews from 'react-swipeable-views'
 
 import styles from './styles.styl'
 import Icon from '../Icon'
+import IconButton from '../IconButton'
 
 const InfosCarrousel = ({ children, theme, className, swipeableProps }) => {
   const count = React.Children.count(children)
@@ -14,36 +15,40 @@ const InfosCarrousel = ({ children, theme, className, swipeableProps }) => {
   const hasPreviousInfos = index === 0
   const hasNextInfos = index === count - 1
 
+  const onChangeIndex = useCallback(
+    function(index) {
+      const { onChangeIndex: onChangeIndexProp } = swipeableProps
+      if (onChangeIndexProp) {
+        onChangeIndexProp(index)
+      }
+      setIndex(index)
+    },
+    [setIndex, swipeableProps]
+  )
+
   return (
-    <div
-      className={cx(
-        styles['InfosCarrousel'],
-        styles[`InfosCarrousel--${theme}`],
-        className
-      )}
-    >
-      <SwipeableViews index={index} animateHeight {...swipeableProps}>
+    <div className={cx(styles['InfosCarrousel'], className)}>
+      <SwipeableViews
+        index={index}
+        animateHeight
+        {...swipeableProps}
+        onChangeIndex={onChangeIndex}
+      >
         {React.Children.map(children, child =>
           React.cloneElement(child, { theme: child.props.theme || theme })
         )}
       </SwipeableViews>
-      <div className={styles['InfosCarrousel-navigation']}>
-        <button
-          className={styles['InfosCarrousel-arrow']}
-          onClick={goToPreviousInfos}
-          disabled={hasPreviousInfos}
-        >
-          <Icon icon="left" />
-        </button>
-        <span className={styles['InfosCarrousel-separator']} />
-        <button
-          className={styles['InfosCarrousel-arrow']}
-          onClick={goToNextInfos}
-          disabled={hasNextInfos}
-        >
-          <Icon icon="right" />
-        </button>
-      </div>
+      {React.Children.count(children) > 1 ? (
+        <div className={styles['InfosCarrousel-navigation']}>
+          <IconButton onClick={goToPreviousInfos} disabled={hasPreviousInfos}>
+            <Icon icon="left" />
+          </IconButton>
+          <span className={styles['InfosCarrousel-separator']} />
+          <IconButton onClick={goToNextInfos} disabled={hasNextInfos}>
+            <Icon icon="right" />
+          </IconButton>
+        </div>
+      ) : null}
     </div>
   )
 }

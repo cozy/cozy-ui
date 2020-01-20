@@ -5,33 +5,28 @@
 .InfosCarrousel
     position relative
 
-    &.InfosCarrousel--primary .InfosCarrousel-arrow,
-    &.InfosCarrousel--secondary .InfosCarrousel-arrow
-        color var(--coolGrey)
-
-    &.InfosCarrousel--danger .InfosCarrousel-arrow
-        color var(--pomegranate)
 
 .InfosCarrousel-navigation
     position absolute
-    bottom rem(10)
-    right spacing_values.xs
     display flex
     align-items center
 
+    CtaButtonHeight=2.5rem
+    height CtaButtonHeight
+    bottom (spacing_values.m)
+    right (spacing_values.m)
+
+    box-sizing border-box
+
     +mobile()
-        bottom rem(4)
-        right 0
+        // The CTA Button heights should change soon
+        CtaButtonHeight=2.5rem
+        height CtaButtonHeight
+        bottom  (spacing_values.s)
+        right  (spacing_values.s)
 
-.InfosCarrousel-arrow
-    background none
-    border 0
-    min-width spacing_values.xl
-    padding spacing_values.m
-
-    &:disabled
-        opacity .24
 
 .InfosCarrousel-separator
     border-left 1px solid var(--silver)
     height rem(16)
+    margin 0 (spacing_values.xs)
