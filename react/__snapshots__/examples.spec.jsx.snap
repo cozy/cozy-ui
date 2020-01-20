@@ -5342,7 +5342,9 @@ exports[`ListItemText should render examples: ListItemText 3`] = `
 exports[`Media should render examples: Media 1`] = `
 "<div>
   <div class=\\"styles__media___cSJMp\\">
-    <div class=\\"styles__img___3SHpG\\"><img src=\\"http://lorempixel.com/90/90/people\\" style=\\"margin-right: 1rem;\\"></div>
+    <div class=\\"styles__img___3SHpG\\" style=\\"padding-right: 1rem;\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"#people\\"></use>
+      </svg></div>
     <div class=\\"styles__bd___1Uv-F\\">Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a \\"computing machine\\" and the first computer programmer.</div>
   </div>
 </div>"
@@ -5351,7 +5353,9 @@ exports[`Media should render examples: Media 1`] = `
 exports[`Media should render examples: Media 2`] = `
 "<div>
   <div class=\\"styles__media___cSJMp styles__media--top___K9w0I\\">
-    <div class=\\"styles__img___3SHpG\\"><img src=\\"http://lorempixel.com/90/90/people\\" style=\\"margin-right: 1rem;\\"></div>
+    <div class=\\"styles__img___3SHpG\\" style=\\"padding-right: 1rem;\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"#people\\"></use>
+      </svg></div>
     <div class=\\"styles__bd___1Uv-F\\">Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a \\"computing machine\\" and the first computer programmer.</div>
   </div>
 </div>"
@@ -5360,7 +5364,9 @@ exports[`Media should render examples: Media 2`] = `
 exports[`Media should render examples: Media 3`] = `
 "<div>
   <div class=\\"styles__media___cSJMp styles__media--bottom___21YWJ\\">
-    <div class=\\"styles__img___3SHpG\\"><img src=\\"http://lorempixel.com/90/90/people\\" style=\\"margin-right: 1rem;\\"></div>
+    <div class=\\"styles__img___3SHpG\\" style=\\"padding-right: 1rem;\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"#people\\"></use>
+      </svg></div>
     <div class=\\"styles__bd___1Uv-F\\">Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a \\"computing machine\\" and the first computer programmer.</div>
   </div>
 </div>"

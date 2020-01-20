@@ -13,11 +13,12 @@ Flexbox : https://philipwalton.github.io/solved-by-flexbox/demos/media-object/
 
 ```jsx
 import { Media, Img, Bd } from 'cozy-ui/transpiled/react/Media';
-const imgStyle = { marginRight: '1rem' };
+import Icon from 'cozy-ui/transpiled/react/Icon';
+const imgStyle = { paddingRight: '1rem' };
 
 <Media>
-  <Img>
-    <img src='http://lorempixel.com/90/90/people' style={imgStyle} />
+  <Img style={imgStyle}>
+    <Icon icon='people' />
   </Img>
   <Bd>
     { content.ada.short }
@@ -29,11 +30,13 @@ const imgStyle = { marginRight: '1rem' };
 
 ```jsx
 import { Media, Img, Bd } from 'cozy-ui/transpiled/react/Media';
-const imgStyle = { marginRight: '1rem' };
+import Icon from 'cozy-ui/transpiled/react/Icon';
+
+const imgStyle = { paddingRight: '1rem' };
 
 <Media align='top'>
-  <Img>
-    <img src='http://lorempixel.com/90/90/people' style={imgStyle} />
+  <Img style={imgStyle}>
+    <Icon icon='people' />
   </Img>
   <Bd>
     { content.ada.short }
@@ -45,11 +48,13 @@ const imgStyle = { marginRight: '1rem' };
 
 ```jsx
 import { Media, Img, Bd } from 'cozy-ui/transpiled/react/Media';
-const imgStyle = { marginRight: '1rem' };
+import Icon from 'cozy-ui/transpiled/react/Icon';
+
+const imgStyle = { paddingRight: '1rem' };
 
 <Media align='bottom'>
-  <Img>
-    <img src='http://lorempixel.com/90/90/people' style={imgStyle} />
+  <Img style={imgStyle}>
+    <Icon icon='people' />
   </Img>
   <Bd>
     { content.ada.short }
