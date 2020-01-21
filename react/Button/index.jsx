@@ -71,6 +71,8 @@ const BaseButton = props => {
   const tooltip = iconOnly ? label : null
   const iconOnlyClass = iconOnly ? 'u-visuallyhidden' : null
 
+  const { size: contextSize } = React.useContext(ButtonContext)
+
   return (
     <Tag
       {...transformProps(restProps)}
@@ -78,7 +80,7 @@ const BaseButton = props => {
         extension,
         align,
         round,
-        size,
+        size: size || contextSize,
         theme,
         className,
         variant: subtle && 'subtle'
@@ -113,6 +115,10 @@ const BaseButton = props => {
     </Tag>
   )
 }
+
+export const ButtonContext = React.createContext({
+  size: 'normal'
+})
 
 const Button = props => <BaseButton {...props} />
 const ButtonLink = props => <BaseButton {...props} />
@@ -170,7 +176,6 @@ Button.propTypes = {
 Button.defaultProps = {
   type: 'submit',
   tag: 'button',
-  size: 'normal',
   align: 'center'
 }
 

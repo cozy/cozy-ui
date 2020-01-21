@@ -5,6 +5,8 @@ import Icon from '../Icon'
 import Text, { SubTitle } from '../Text'
 import Stack from '../Stack'
 import palette from '../palette'
+import { ButtonContext } from '../Button'
+import withBreakpoints from '../helpers/withBreakpoints'
 import createDepreciationLogger from '../helpers/createDepreciationLogger'
 
 import styles from './styles.styl'
@@ -14,6 +16,7 @@ export const Infos = ({
   action,
   dismissAction,
   theme,
+  breakpoints: { isMobile },
   className
 }) => {
   return (
@@ -22,7 +25,15 @@ export const Infos = ({
         <div className={styles['Infos-description']}>
           <Stack spacing="xs">{description}</Stack>
         </div>
-        {action && <div>{action}</div>}
+        {action && (
+          <div>
+            <ButtonContext.Provider
+              value={{ size: isMobile ? 'small' : 'normal' }}
+            >
+              {action}
+            </ButtonContext.Provider>
+          </div>
+        )}
       </Stack>
       {dismissAction && (
         <button className={styles['Info-close']} onClick={dismissAction}>
@@ -116,4 +127,4 @@ const InfosMigration = React.memo(function InfosMigration(props) {
   } else return <Infos {...props} />
 })
 
-export default InfosMigration
+export default withBreakpoints()(InfosMigration)
