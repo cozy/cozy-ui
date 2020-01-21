@@ -1,3 +1,4 @@
+@require '../../react/CozyTheme/defaults'
 @require '../settings/icons'
 @require '../utilities/display'
 @require '../utilities/text'
@@ -70,7 +71,7 @@ $button
     padding          rem(3 16)
     vertical-align   top
     text-align       center
-    font-size        rem(14)
+    font-size        var(--cztheme-button-fs-default)
     font-weight      bold
     line-height      1
     text-transform   uppercase
@@ -308,7 +309,7 @@ button--tiny =
     min-height rem(24)
     min-width rem(80)
     padding rem(2 16)
-    font-size rem(12)
+    font-size var(--cztheme-button-fs-tiny)
     line-height 1.3
 $button--tiny
     {button--tiny}
