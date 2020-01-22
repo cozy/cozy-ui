@@ -48,7 +48,7 @@ module.exports = {
       ]
     },
     {
-      name: 'Layout',
+      name: 'Layout components',
       components: () => [
         '../react/Layout/Layout.jsx',
         '../react/Hero/index.jsx',
