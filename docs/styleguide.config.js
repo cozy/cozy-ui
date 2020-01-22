@@ -56,7 +56,8 @@ module.exports = {
         '../react/Circle/index.jsx',
         '../react/Page/index.jsx',
         '../react/NarrowContent/index.jsx',
-        '../react/ViewStack/index.jsx'
+        '../react/ViewStack/index.jsx',
+        '../react/hooks/useBreakpoints/index.jsx'
       ]
     },
     {
