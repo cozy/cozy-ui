@@ -1,0 +1,8 @@
+{
+  "useConfirmExit": {
+    "back": "Back",
+    "leave": "Leave",
+    "title": "Do you want to leave?",
+    "message": "Some changes are not saved yet. Do you really want to leave and lose these changes?"
+  }
+}
