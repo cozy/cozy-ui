@@ -74,3 +74,37 @@ const hideMenu = () => setState({ menuDisplayed: false });
   </ActionMenu>}
 </div>
 ```
+
+### Placement
+
+The `placement` and `anchorElRef` prop can be used to control the placement of the menu on desktop. `anchorElRef` should be a ref to a DOM element and not a react component.
+
+```
+import ActionMenu, { ActionMenuItem } from 'cozy-ui/transpiled/react/ActionMenu';
+import Icon from 'cozy-ui/transpiled/react/Icon';
+
+const testRef = React.createRef();
+
+initialState = { menuDisplayed: isTesting() };
+
+const showMenu = () => setState({ menuDisplayed: true });
+const hideMenu = () => setState({ menuDisplayed: false });
+
+const anchorRef = React.createRef();
+
+<div>
+  <button onClick={showMenu} ref={anchorRef}>Show action menu</button>
+  {state.menuDisplayed &&
+    <ActionMenu
+      anchorElRef={anchorRef}
+      placement="bottom-end"
+      buttonRef={testRef}
+      onClose={hideMenu}>
+      <ActionMenuItem left={<Icon icon='file' />}>Item 1</ActionMenuItem>
+  </ActionMenu>}
+</div>
+```
+
+### preventOverflow
+
+Set `preventOverflow` to `true` to keep the ActionMenu visible on desktop, even if `anchorElRef` is outside the viewport.
