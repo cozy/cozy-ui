@@ -1,4 +1,4 @@
-You can use the `useBreakpoints` hook when you need access to whether
+You can use the `useBreakpoints` hook to know whether
 the window has a mobile or desktop width.
 
 A `BreakpointsProvider` must be used above the component using the
