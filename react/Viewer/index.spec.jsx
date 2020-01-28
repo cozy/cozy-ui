@@ -131,6 +131,7 @@ describe('Plain text file detection', () => {
       expect(isPlainText('text/markdown')).toBe(true)
       expect(isPlainText('application/text')).toBe(false)
       expect(isPlainText('something/text/else')).toBe(false)
+      expect(isPlainText('text/vnd.cozy.note+markdown')).toBe(true)
     })
 
     it('should not match complex text formats', () => {

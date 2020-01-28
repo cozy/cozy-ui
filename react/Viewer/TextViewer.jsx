@@ -2,7 +2,7 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { withClient } from 'cozy-client'
+import { withClient, models } from 'cozy-client'
 import Spinner from '../Spinner'
 import withFileUrl from './withFileUrl'
 import styles from './styles.styl'
@@ -30,7 +30,11 @@ const Loader = () => (
   </div>
 )
 
-class TextViewer extends React.Component {
+export const isMarkdown = file =>
+  file.mime === 'text/markdown' ||
+  /.md$/.test(file.name) ||
+  models.file.isNote(file)
+export class TextViewer extends React.Component {
   state = {
     text: '',
     isMarkdown: false,
@@ -52,14 +56,14 @@ class TextViewer extends React.Component {
     const { url, file } = this.props
     try {
       const parsedURL = new URL(url)
-      const client = this.props.client.getClient()
+      const client = this.props.client.getStackClient()
       const response = await client.fetch('GET', parsedURL.pathname)
       const text = await response.text()
-      const isMarkdown = file.mime === 'text/markdown' || /.md$/.test(file.name)
+
       if (this._mounted) {
         this.setState({
           text,
-          isMarkdown,
+          isMarkdown: isMarkdown(file),
           loading: false
         })
       }
@@ -78,7 +82,6 @@ class TextViewer extends React.Component {
   render() {
     const { loading, error, text, isMarkdown } = this.state
     const { file, renderFallbackExtraContent } = this.props
-
     if (loading) return <Loader />
     else if (error)
       return (
