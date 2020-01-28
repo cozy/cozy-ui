@@ -16,17 +16,25 @@ import fr from './locales/fr.json'
  * @param {function} onConfirm - will be executed on confirmation
  * @param {function} onCancel - will be executed on cancelation
  */
-function ConfirmModal({ t, title, message, onConfirm, onCancel }) {
+function ConfirmModal({
+  t,
+  title,
+  message,
+  onConfirm,
+  onCancel,
+  cancel,
+  confirm
+}) {
   return (
     <Modal
       closable={false}
       mobileFullscreen={false}
       primaryAction={onConfirm}
-      primaryType="regular"
-      primaryText={t('useConfirmExit.leave')}
+      primaryType="danger"
+      primaryText={confirm || t('useConfirmExit.leave')}
       secondaryAction={onCancel}
       secondaryType="secondary"
-      secondaryText={t('useConfirmExit.back')}
+      secondaryText={cancel || t('useConfirmExit.back')}
       description={message || t('useConfirmExit.message')}
       title={title || t('useConfirmExit.title')}
     />
@@ -91,7 +99,9 @@ export default function useConfirmExit({
   activate = true,
   onLeave,
   message,
-  title
+  title,
+  leave,
+  cancel
 }) {
   // `onbeforeunload` event on the browser:
   // Using a ref in order to have an event listener that does not
@@ -142,6 +152,8 @@ export default function useConfirmExit({
       title={title}
       onCancel={onCloseModalRequest}
       onConfirm={onConfirm}
+      confirm={leave}
+      cancel={cancel}
     />
   )
   return {
