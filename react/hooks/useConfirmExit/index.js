@@ -22,8 +22,8 @@ function ConfirmModal({
   message,
   onConfirm,
   onCancel,
-  cancel,
-  confirm
+  cancelLabel,
+  confirmLabel
 }) {
   return (
     <Modal
@@ -31,20 +31,23 @@ function ConfirmModal({
       mobileFullscreen={false}
       primaryAction={onConfirm}
       primaryType="danger"
-      primaryText={confirm || t('useConfirmExit.leave')}
+      primaryText={confirmLabel || t('useConfirmExit.leave')}
+      dismissAction={onCancel}
       secondaryAction={onCancel}
       secondaryType="secondary"
-      secondaryText={cancel || t('useConfirmExit.back')}
+      secondaryText={cancelLabel || t('useConfirmExit.back')}
       description={message || t('useConfirmExit.message')}
       title={title || t('useConfirmExit.title')}
     />
   )
 }
-ConfirmModal.PropTypes = {
+ConfirmModal.propTypes = {
   message: PropTypes.string,
   title: PropTypes.string,
   onConfirm: PropTypes.func.isRequired,
-  onCancel: PropTypes.func.isRequired
+  onCancel: PropTypes.func.isRequired,
+  cancelLabel: PropTypes.string,
+  confirmLabel: PropTypes.string
 }
 const dictRequire = { en, fr }
 const LocalizedConfirmModal = withLocales(dictRequire)(ConfirmModal)
@@ -100,8 +103,8 @@ export default function useConfirmExit({
   onLeave,
   message,
   title,
-  leave,
-  cancel
+  leaveLabel,
+  cancelLabel
 }) {
   // `onbeforeunload` event on the browser:
   // Using a ref in order to have an event listener that does not
@@ -152,8 +155,8 @@ export default function useConfirmExit({
       title={title}
       onCancel={onCloseModalRequest}
       onConfirm={onConfirm}
-      confirm={leave}
-      cancel={cancel}
+      confirmLabel={leaveLabel}
+      cancelLabel={cancelLabel}
     />
   )
   return {
