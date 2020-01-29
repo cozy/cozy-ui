@@ -2,7 +2,7 @@
   "useConfirmExit": {
     "back": "Retour",
     "leave": "Quitter",
-    "title": "Voulez-vous quitter ?",
-    "message": "Des modifications n'ont pas encore pu être enregistrées. Voulez-vous vraiment quitter et perdre ces modifications ?"
+    "title": "Abandonner les modifications ?",
+    "message": "Des modifications n'ont pas encore pu être enregistrées. Voulez-vous vraiment quitter et perdre ces modifications ?"
   }
 }

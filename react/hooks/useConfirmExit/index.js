@@ -16,27 +16,38 @@ import fr from './locales/fr.json'
  * @param {function} onConfirm - will be executed on confirmation
  * @param {function} onCancel - will be executed on cancelation
  */
-function ConfirmModal({ t, title, message, onConfirm, onCancel }) {
+function ConfirmModal({
+  t,
+  title,
+  message,
+  onConfirm,
+  onCancel,
+  cancelLabel,
+  confirmLabel
+}) {
   return (
     <Modal
       closable={false}
       mobileFullscreen={false}
       primaryAction={onConfirm}
-      primaryType="regular"
-      primaryText={t('useConfirmExit.leave')}
+      primaryType="danger"
+      primaryText={confirmLabel || t('useConfirmExit.leave')}
+      dismissAction={onCancel}
       secondaryAction={onCancel}
       secondaryType="secondary"
-      secondaryText={t('useConfirmExit.back')}
+      secondaryText={cancelLabel || t('useConfirmExit.back')}
       description={message || t('useConfirmExit.message')}
       title={title || t('useConfirmExit.title')}
     />
   )
 }
-ConfirmModal.PropTypes = {
+ConfirmModal.propTypes = {
   message: PropTypes.string,
   title: PropTypes.string,
   onConfirm: PropTypes.func.isRequired,
-  onCancel: PropTypes.func.isRequired
+  onCancel: PropTypes.func.isRequired,
+  cancelLabel: PropTypes.string,
+  confirmLabel: PropTypes.string
 }
 const dictRequire = { en, fr }
 const LocalizedConfirmModal = withLocales(dictRequire)(ConfirmModal)
@@ -91,7 +102,9 @@ export default function useConfirmExit({
   activate = true,
   onLeave,
   message,
-  title
+  title,
+  leaveLabel,
+  cancelLabel
 }) {
   // `onbeforeunload` event on the browser:
   // Using a ref in order to have an event listener that does not
@@ -142,6 +155,8 @@ export default function useConfirmExit({
       title={title}
       onCancel={onCloseModalRequest}
       onConfirm={onConfirm}
+      confirmLabel={leaveLabel}
+      cancelLabel={cancelLabel}
     />
   )
   return {
