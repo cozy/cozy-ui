@@ -1,15 +1,28 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import clamp from 'lodash/clamp'
 import SwipeableViews from 'react-swipeable-views'
 
 import styles from './styles.styl'
 import Icon from '../Icon'
 import IconButton from '../IconButton'
 
+const useClampedValue = (initialValue, min, max) => {
+  const [value, setValue] = useState(initialValue)
+
+  const setClampedValue = newVal => setValue(clamp(newVal, min, max))
+
+  useEffect(() => {
+    setClampedValue(value)
+  }, [min, max])
+
+  return [clamp(value, min, max), setClampedValue]
+}
+
 const InfosCarrousel = ({ children, theme, className, swipeableProps }) => {
   const count = React.Children.count(children)
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useClampedValue(0, 0, count - 1)
   const goToNextInfos = useCallback(() => setIndex(index + 1), [index])
   const goToPreviousInfos = useCallback(() => setIndex(index - 1), [index])
   const hasPreviousInfos = index === 0
