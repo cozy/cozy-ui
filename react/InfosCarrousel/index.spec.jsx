@@ -10,28 +10,21 @@ import SwipeableViews from 'react-swipeable-views'
 // This is necessary for tests to be predictable
 const swipeableProps = { disableLazyLoading: true }
 
-const Example = () => (
+const Example = ({ numberOfChildren = 2 }) => (
   <div className="u-stack-m">
     <InfosCarrousel theme="danger" swipeableProps={swipeableProps}>
-      <Infos
-        description={
-          <>
-            <SubTitle>News 1</SubTitle>
-            <Text>Breaking news 1</Text>
-          </>
-        }
-        action={<Button theme="secondary" label="A CTA button" />}
-      />
-      <Infos
-        description={
-          <>
-            <SubTitle>News 2</SubTitle>
-            <Text>Breaking news 2</Text>
-          </>
-        }
-        theme="primary"
-        action={<Button theme="secondary" label="A CTA button" />}
-      />
+      {[...new Array(numberOfChildren)].map((child, index) => (
+        <Infos
+          key={index}
+          description={
+            <>
+              <SubTitle>News {index}</SubTitle>
+              <Text>Breaking news {index}</Text>
+            </>
+          }
+          action={<Button theme="secondary" label="A CTA button" />}
+        />
+      ))}
     </InfosCarrousel>
   </div>
 )
@@ -65,5 +58,16 @@ describe('InfosCarrousel', () => {
     expect(getArrowsDisabledProps(root)).toEqual([false, true])
     simulateSwipeToSlideIndex(root, 0)
     expect(getArrowsDisabledProps(root)).toEqual([true, false])
+  })
+
+  it('should change index when a child is removed', () => {
+    const root = mount(<Example numberOfChildren={3} />)
+    expect(root.find(SwipeableViews).prop('index')).toEqual(0)
+    simulateSwipeToSlideIndex(root, 2)
+    expect(root.find(SwipeableViews).prop('index')).toEqual(2)
+    root.setProps({ numberOfChildren: 2 })
+    root.update()
+    expect(root.find(Infos).length).toBe(2)
+    expect(root.find(SwipeableViews).prop('index')).toEqual(1)
   })
 })
