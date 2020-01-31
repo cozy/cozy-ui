@@ -1,6 +1,6 @@
 ### Simple
 
-```
+```jsx
 import Modal from 'cozy-ui/transpiled/react/Modal';
 initialState = { modalOpened: false};
 
@@ -12,9 +12,35 @@ initialState = { modalOpened: false};
 </div>
 ```
 
+### Confirmation modal
+
+```jsx
+import Modal from 'cozy-ui/transpiled/react/Modal';
+initialState = { modalOpened: false};
+
+<div>
+  <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
+    Toggle confirmation modal
+  </button>
+  {state.modalOpened && <Modal 
+    title='Do you want to leave?' 
+    description='You may lose changes if you leave.' 
+    dismissAction={() => setState({ modalOpened: false })}
+    closable={false}
+    mobileFullscreen={false}
+    primaryAction={() => setState({ modalOpened: false })}
+    primaryType='danger'
+    primaryText='Leave without saving'
+    secondaryAction={() => setState({ modalOpened: false })}
+    secondaryType="secondary"
+    secondaryText='Cancel'
+  /> }
+</div>
+```
+
 ### Simple with no title
 
-```
+```jsx
 import Modal from 'cozy-ui/transpiled/react/Modal';
 initialState = { modalOpened: false};
 
@@ -31,7 +57,7 @@ initialState = { modalOpened: false};
 Several sizes avalaible: `xsmall, small`, `medium`, `large`, `xlarge`, `xxlarge`.
 `small` being the default one.
 
-```
+```jsx
 import Modal from 'cozy-ui/transpiled/react/Modal';
 initialState = { modalOpened: false};
 const sizes = [
@@ -55,7 +81,7 @@ const sizes = [
 
 Besides the default spacing inside a Modal, you can choose another type from this two available: `small` and `large`
 
-```
+```jsx
 import Modal from 'cozy-ui/transpiled/react/Modal';
 initialState = { modalOpened: false};
 const spacings = [
@@ -75,7 +101,7 @@ const spacings = [
 
 If you want the modal to fill all the available space, without margin, on mobile screen.
 
-```
+```jsx
 import Modal from 'cozy-ui/transpiled/react/Modal';
 initialState = { modalOpened: false};
 
@@ -91,7 +117,7 @@ initialState = { modalOpened: false};
 
 With `closable` set to `false`, the user will not be able to close the modal, even by clicking outside the modal. You must manage the modal's closing by yourself.
 
-```
+```jsx
 import Modal from 'cozy-ui/transpiled/react/Modal';
 <div>
   <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
@@ -109,7 +135,7 @@ import Modal from 'cozy-ui/transpiled/react/Modal';
 
 If you have a long content, the modal's content will scroll. For the scrollbars to be displayed correctly, you must specify `overflowHidden=true`.
 
-```
+```jsx
 import Modal from 'cozy-ui/transpiled/react/Modal';
 <div>
   <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
@@ -127,7 +153,7 @@ import Modal from 'cozy-ui/transpiled/react/Modal';
 
 You can specify primary and secondary actions. Use `primaryType` and `secondaryType` to choose the types of the buttons
 
-```
+```jsx
 import Modal from 'cozy-ui/transpiled/react/Modal';
 const showModal = () => setState({ modalOpened: true })
 const hideModal = () => setState({ modalOpened: false });
@@ -153,7 +179,7 @@ const hideModal = () => setState({ modalOpened: false });
 
 For more complex modals, you can use individual components.
 
-```
+```jsx
 import Modal, { ModalDescription, ModalHeader, ModalFooter } from 'cozy-ui/transpiled/react/Modal';
 const headerStyle = {
   background: 'linear-gradient(to right, #005c97, #363795)',
@@ -183,7 +209,7 @@ const headerStyle = {
 
 If you need a part of your modal content fixed (not scrollable) and the other part scrollable, you need to compose you own complex modal.
 
-```
+```jsx
 import Modal, { ModalContent, ModalHeader, ModalFooter } from 'cozy-ui/transpiled/react/Modal';
 
 <div>
@@ -212,7 +238,7 @@ If you need a modal with a branded header when you have a brand related content.
 
 #### with a background color
 
-```
+```jsx
 import Modal, { ModalDescription, ModalBrandedHeader } from 'cozy-ui/transpiled/react/Modal';
 
 <div>
@@ -234,7 +260,7 @@ import Modal, { ModalDescription, ModalBrandedHeader } from 'cozy-ui/transpiled/
 
 #### with a background gradient
 
-```
+```jsx
 import Modal, { ModalDescription, ModalBrandedHeader } from 'cozy-ui/transpiled/react/Modal';
 
 <div>
@@ -256,7 +282,7 @@ import Modal, { ModalDescription, ModalBrandedHeader } from 'cozy-ui/transpiled/
 
 #### Animated Content Header
 
-```
+```jsx
 import Modal, { ModalContent, AnimatedContentHeader } from 'cozy-ui/transpiled/react/Modal';
 
 // heigth 128px
@@ -311,7 +337,7 @@ class ModalCounterWithAnimatedHeader extends React.Component {
 
 When your modal contains a multi-step process, you may want to add a back button that takes care of going one step back in the inner process, but not close the modal. In that case, you can use the `ModalBackButton` component.
 
-```
+```jsx
 import Modal, { ModalContent, ModalBackButton } from 'cozy-ui/transpiled/react/Modal';
 const toggle = () => setState({ modalOpened: !state.modalOpened });
 const goToStep1 = () => setState({ step: 1 });
@@ -348,7 +374,7 @@ initialState = {
 
 ### Panes
 
-```
+```jsx
 import Modal, { ModalDescription, ModalBrandedHeader } from 'cozy-ui/transpiled/react/Modal';
 import Panel from 'cozy-ui/transpiled/react/Panel';
 const toggle = () => setState({ modalOpened: !state.modalOpened });
