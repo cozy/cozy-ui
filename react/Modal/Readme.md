@@ -12,7 +12,7 @@ initialState = { modalOpened: false};
 </div>
 ```
 
-### Confirmartion modal
+### Confirmation modal
 
 ```jsx
 import Modal from 'cozy-ui/transpiled/react/Modal';
