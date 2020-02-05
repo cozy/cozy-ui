@@ -125,24 +125,26 @@ global(selector, placeholder, type = extend)
                 {placeholder}() // @stylint ignore
 
 cssModulesUtils(props, breakpoints)
-    for kProp, vProp in props
-        for kBp, vBp in breakpoints
-            if vBp == ''
+    for kBp, vBp in breakpoints
+        if vBp == ''
+            for kProp, vProp in props
                 :global(.u-{vProp})
                     {kProp}()
-            else
-                @media (max-width: rem(lookup('BP-'+kBp)))
+        else
+            @media (max-width: rem(lookup('BP-'+kBp)))
+                for kProp, vProp in props
                     :global(.u-{vProp}-{vBp})
                         {kProp}()
 
 nativeUtils(props, breakpoints)
-    for kProp, vProp in props
-        for kBp, vBp in breakpoints
-            if vBp == ''
+    for kBp, vBp in breakpoints
+        if vBp == ''
+            for kProp, vProp in props
                 .u-{vProp}
                     {kProp}()
-            else
-                @media (max-width: rem(lookup('BP-'+kBp)))
+        else
+            @media (max-width: rem(lookup('BP-'+kBp)))
+                for kProp, vProp in props
                     .u-{vProp}-{vBp}
                         {kProp}()
 
