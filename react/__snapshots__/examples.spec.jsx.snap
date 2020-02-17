@@ -5348,6 +5348,10 @@ exports[`Labs/CollectionField should render examples: Labs/CollectionField 2`] =
 </div>"
 `;
 
+exports[`Labs/ExperimentalModal should render examples: Labs/ExperimentalModal 1`] = `"<div><button>Toggle modal</button></div>"`;
+
+exports[`Labs/ExperimentalModal should render examples: Labs/ExperimentalModal 2`] = `"<div><button>Toggle modal</button></div>"`;
+
 exports[`ListItemText should render examples: ListItemText 1`] = `
 "<div>
   <div class=\\"styles__c-list-text___3kc3E\\">

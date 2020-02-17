@@ -2,7 +2,15 @@ import { createMuiTheme } from '@material-ui/core/styles'
 import { getCssVariableValue } from '../utils/color'
 
 const defaultValues = {
-  borderRadius: 6
+  borderRadius: 6,
+  dialog: {
+    sm: {
+      padding: 16
+    },
+    md: {
+      padding: 32
+    }
+  }
 }
 
 export const normalTheme = createMuiTheme({
@@ -228,11 +236,15 @@ normalTheme.overrides = {
     paper: {
       'box-sizing': 'border-box',
       [normalTheme.breakpoints.down('md')]: {
-        padding: '16px'
+        padding: `${defaultValues.dialog.sm.padding}px`
       },
       [normalTheme.breakpoints.up('md')]: {
-        padding: '32px'
+        padding: `${defaultValues.dialog.md.padding}px`
       }
+    },
+    paperWidthSm: {
+      width: '544px',
+      maxWidth: '544px'
     },
     paperFullScreen: {
       '&$paperScrollBody': {
@@ -243,17 +255,58 @@ normalTheme.overrides = {
   },
   MuiDialogContent: {
     root: {
-      padding: '8px 0'
+      [normalTheme.breakpoints.up('md')]: {
+        padding: `${defaultValues.dialog.md.padding}px 0`
+      },
+      [normalTheme.breakpoints.down('md')]: {
+        padding: `0px`
+      },
+
+      overflowY: 'initial'
     }
   },
   MuiDialogActions: {
     root: {
-      padding: '0'
+      padding: '0',
+      [normalTheme.breakpoints.down('md')]: {
+        margin: 0,
+        '& button': {
+          '&:only-child': {
+            width: '100%'
+          },
+          width: '50%'
+        },
+        '&.modal_actions_below': {
+          display: 'block',
+          '& button': {
+            width: '100%',
+            margin: 0,
+            '&:not(:first-child)': {
+              marginTop: '8px'
+            }
+          }
+        }
+      }
     }
   },
   MuiDialogTitle: {
     root: {
-      padding: '0 0 8px 0'
+      padding: '0 0 16px 0',
+      [normalTheme.breakpoints.down('md')]: {
+        padding: '4px 0 16px 0'
+      }
+    }
+  },
+  MuiDivider: {
+    root: {
+      [normalTheme.breakpoints.down('md')]: {
+        width: `calc(100% + ${defaultValues.dialog.sm.padding}*2px)`,
+        marginLeft: `-${defaultValues.dialog.sm.padding}px`
+      },
+      [normalTheme.breakpoints.up('md')]: {
+        width: `calc(100% + ${defaultValues.dialog.md.padding}*2px)`,
+        marginLeft: `-${defaultValues.dialog.md.padding}px`
+      }
     }
   }
 }
