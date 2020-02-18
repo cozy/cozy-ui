@@ -64,16 +64,19 @@ const fetchAllComponents = async (page, styleguideIndexURL) => {
   })
 
   console.log('Extracting links')
-  const links = await page.evaluate(() => {
-    return Array.from(
-      document.querySelectorAll('h2 + * [title="Open isolated"]')
-    ).map(x => x.href)
+  //Categories have link like : #/Labs. Components' link: Labs?id=component
+  //So we filter to not have the categories, and get the component's name from
+  //the text attribute of the a. Like that we can create the right url
+  const names = await page.evaluate(() => {
+    return Array.from(document.querySelectorAll('.rsg--sidebar-4 a'))
+      .filter(v => v.href.includes('?id='))
+      .map(x => x.text)
   })
 
   return sortBy(
-    links.map(link => ({
-      link,
-      name: link.split('/').slice(-1)[0]
+    names.map(name => ({
+      link: styleguideIndexURL + '#!/' + name,
+      name
     })),
     x => x.name
   )
