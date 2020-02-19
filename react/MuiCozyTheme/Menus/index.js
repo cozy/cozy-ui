@@ -27,7 +27,7 @@ const styles = {
   }
 }
 
-class Menu extends Component {
+class MuiMenu extends Component {
   state = { open: false, anchorEl: null }
 
   toggle = event => {
@@ -105,13 +105,13 @@ class Menu extends Component {
   }
 }
 
-Menu.defaultProps = {
+MuiMenu.defaultProps = {
   disabled: false,
   component: null,
   placement: 'bottom-end'
 }
 
-Menu.propTypes = {
+MuiMenu.propTypes = {
   /** Disables the menu */
   disabled: PropTypes.bool,
   /** Specifies a custom component for the opener */
@@ -120,7 +120,7 @@ Menu.propTypes = {
   placement: PropTypes.oneOf(['bottom-start', 'bottom-end'])
 }
 
-Menu.MenuButton = MenuButton
-export default withStyles(styles, { name: 'MuiMenu' })(Menu)
+MuiMenu.MenuButton = MenuButton
+export default withStyles(styles, { name: 'MuiMenu' })(MuiMenu)
 
 export { MenuButton }
