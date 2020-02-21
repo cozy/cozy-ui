@@ -15,7 +15,7 @@ export const DEFAULT_LANG = 'en'
 const I18nContext = React.createContext()
 
 // Provider root component
-export class I18n extends Component {
+class BaseI18n extends Component {
   constructor(props) {
     super(props)
     this.init(this.props)
@@ -43,12 +43,6 @@ export class I18n extends Component {
     return this.contextValue
   }
 
-  // for preact
-  // eslint-disable-next-line react/no-deprecated
-  componentWillReceiveProps(nextProps) {
-    this.UNSAFE_componentWillReceiveProps(nextProps)
-  }
-
   UNSAFE_componentWillReceiveProps = nextProps => {
     if (nextProps.lang !== this.props.lang) {
       this.init(nextProps)
@@ -64,7 +58,7 @@ export class I18n extends Component {
   }
 }
 
-I18n.propTypes = {
+BaseI18n.propTypes = {
   lang: PropTypes.string.isRequired, // current language.
   polyglot: PropTypes.object, // A polyglot instance.
   dictRequire: PropTypes.func, // A callback to load locales.
@@ -72,15 +66,23 @@ I18n.propTypes = {
   defaultLang: PropTypes.string // default language. By default is 'en'
 }
 
-I18n.defaultProps = {
+BaseI18n.defaultProps = {
   defaultLang: DEFAULT_LANG
 }
 
-I18n.childContextTypes = {
+BaseI18n.childContextTypes = {
   t: PropTypes.func,
   f: PropTypes.func,
   lang: PropTypes.string
 }
+
+class PreactI18n extends BaseI18n {
+  componentWillReceiveProps(nextProps) {
+    this.UNSAFE_componentWillReceiveProps(nextProps)
+  }
+}
+
+export const I18n = process.env.USE_PREACT ? PreactI18n : BaseI18n
 
 // higher order decorator for components that need `t` and/or `f`
 export const translate = () => WrappedComponent => {
