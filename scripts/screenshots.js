@@ -68,7 +68,7 @@ const fetchAllComponents = async (page, styleguideIndexURL) => {
   //We want to take screenshot for individual example, so we : 
   //-extract categories (link from the side menu with no ?id=)
   //- go to category's page
-  //- look for `.rsg--controls-40 a` which is the open isolated for exemples
+  //- look for `.rsg--controls-40 a` which is the open isolated for examples
   //- look for its closest data-testid to get the name
   const categoriesName = await page.evaluate(() => {
     return Array.from(document.querySelectorAll('.rsg--sidebar-4 a'))
