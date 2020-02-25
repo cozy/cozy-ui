@@ -65,11 +65,11 @@ const fetchAllComponents = async (page, styleguideIndexURL) => {
   })
 
   console.log('Extracting links')
-  //We want to take screenshot for individual example, so we : 
-  //-extract categories (link from the side menu with no ?id=)
-  //- go to category's page
-  //- look for `.rsg--controls-40 a` which is the open isolated for examples
-  //- look for its closest data-testid to get the name
+  // We want to take screenshot for individual example, so we :
+  // - extract categories (link from the side menu with no ?id=)
+  // - go to category's page
+  // - look for `.rsg--controls-40 a` which is the open isolated for examples
+  // - look for its closest data-testid to get the name
   const categoriesName = await page.evaluate(() => {
     return Array.from(document.querySelectorAll('.rsg--sidebar-4 a'))
       .filter(v => !v.href.includes('?id='))
@@ -82,23 +82,22 @@ const fetchAllComponents = async (page, styleguideIndexURL) => {
     })),
     x => x.name
   )
-  const allLinks = [];
-  for (cate of sortedCategoriesNames){
-      console.log('Go to category page', cate.link)
-      await page.goto(cate.link, { waitUntil: 'load', timeout: 0 })
-      await sleep(100)
-       
-        const links = await page.evaluate(() => {
-          
-         return Array.from(document.querySelectorAll('.rsg--controls-40 a'))
-            .map(x => {
-              return {
-                name: x.closest("div[data-testid]").dataset.testid,
-                link: x.href
-              }
-            })
-        })
-        allLinks.push(links)      
+  const allLinks = []
+  for (const cate of sortedCategoriesNames) {
+    await page.goto(cate.link, { waitUntil: 'load', timeout: 0 })
+    await sleep(100)
+
+    const links = await page.evaluate(() => {
+      return Array.from(document.querySelectorAll('.rsg--controls-40 a')).map(
+        x => {
+          return {
+            name: x.closest('div[data-testid]').dataset.testid,
+            link: x.href
+          }
+        }
+      )
+    })
+    allLinks.push(links)
   }
   return flattenDeep(allLinks)
 }
@@ -215,10 +214,7 @@ const main = async () => {
     args.styleguideDir,
     '/index.html'
   )}`
-  const components = (await fetchAllComponents(
-    page,
-    styleguideIndexURL
-  ))
+  const components = await fetchAllComponents(page, styleguideIndexURL)
   console.log('Screenshotting components')
   for (const component of components) {
     await screenshotComponent(page, {
