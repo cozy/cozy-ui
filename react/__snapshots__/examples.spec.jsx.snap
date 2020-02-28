@@ -5052,9 +5052,37 @@ exports[`IconStack should render examples: IconStack 1`] = `
   <div class=\\"styles__IconStack-wrapper___10dhG\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: blue;\\" width=\\"32\\" height=\\"32\\">
       <use xlink:href=\\"#file-duotone\\"></use>
     </svg>
-    <div class=\\"styles__IconStack-foregroundIcon___ZvY-t\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: red;\\" width=\\"16\\" height=\\"16\\">
+    <div class=\\"styles__IconStack-foregroundIcon-center___1Jel_\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: red;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#bank\\"></use>
       </svg></div>
+  </div>
+</div>"
+`;
+
+exports[`IconStack should render examples: IconStack 2`] = `
+"<div>
+  <div class=\\"styles__IconStack-wrapper___10dhG\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: blue;\\" width=\\"32\\" height=\\"32\\">
+      <use xlink:href=\\"#file-duotone\\"></use>
+    </svg>
+    <div class=\\"styles__IconStack-foregroundIcon-bottom-right___1s3VH\\">
+      <div style=\\"border-radius: 10px; width: 20px; height: 20px; background-color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; box-sizing: border-box;\\"><svg class=\\"styles__icon___23x3R\\" width=\\"10\\" height=\\"10\\">
+          <use xlink:href=\\"#link\\"></use>
+        </svg></div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`IconStack should render examples: IconStack 3`] = `
+"<div>
+  <div class=\\"styles__IconStack-wrapper___10dhG\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: blue;\\" width=\\"32\\" height=\\"32\\">
+      <use xlink:href=\\"#file-duotone\\"></use>
+    </svg>
+    <div class=\\"styles__IconStack-foregroundIcon-bottom-right___1s3VH\\">
+      <div style=\\"border-radius: 6px; width: 24px; height: 24px; background-color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; box-sizing: border-box;\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+          <use xlink:href=\\"#folder\\"></use>
+        </svg></div>
+    </div>
   </div>
 </div>"
 `;
