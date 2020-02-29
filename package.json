@@ -78,7 +78,7 @@
     "babel-preset-cozy-app": "1.6.0",
     "browserslist-config-cozy": "0.2.0",
     "commitlint": "7.6.1",
-    "commitlint-config-cozy": "0.3.27",
+    "commitlint-config-cozy": "0.4.2",
     "copyfiles": "2.1.1",
     "cozy-client": "^10.5.0",
     "cozy-device-helper": "1.7.5",
