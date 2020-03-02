@@ -1,6 +1,6 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 import { getCssVariableValue } from '../utils/color'
-
+import isTesting from '../../docs/isTesting'
 const defaultValues = {
   borderRadius: 6,
   dialog: {
@@ -69,7 +69,8 @@ export const normalTheme = createMuiTheme({
       800: getCssVariableValue('charcoalGrey'),
       900: getCssVariableValue('black')
     }
-  }
+  },
+  ...(isTesting() && { transitions: { create: () => 'none' } })
 })
 
 normalTheme.overrides = {
