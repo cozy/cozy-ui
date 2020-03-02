@@ -5348,9 +5348,9 @@ exports[`Labs/CollectionField should render examples: Labs/CollectionField 2`] =
 </div>"
 `;
 
-exports[`Labs/ExperimentalModal should render examples: Labs/ExperimentalModal 1`] = `"<div><button>Toggle modal</button></div>"`;
+exports[`Labs/ExperimentalDialog should render examples: Labs/ExperimentalDialog 1`] = `"<div><button>Toggle modal</button></div>"`;
 
-exports[`Labs/ExperimentalModal should render examples: Labs/ExperimentalModal 2`] = `"<div><button>Toggle modal</button></div>"`;
+exports[`Labs/ExperimentalDialog should render examples: Labs/ExperimentalDialog 2`] = `"<div><button>Toggle modal</button></div>"`;
 
 exports[`ListItemText should render examples: ListItemText 1`] = `
 "<div>

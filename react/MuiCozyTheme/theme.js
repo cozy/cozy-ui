@@ -258,8 +258,8 @@ normalTheme.overrides = {
       [normalTheme.breakpoints.up('md')]: {
         padding: `${defaultValues.dialog.md.padding}px 0`
       },
-      [normalTheme.breakpoints.down('md')]: {
-        padding: `0px`
+      [normalTheme.breakpoints.down('sm')]: {
+        padding: `${defaultValues.dialog.sm.padding}px 0`
       },
 
       overflowY: 'initial'
@@ -268,7 +268,7 @@ normalTheme.overrides = {
   MuiDialogActions: {
     root: {
       padding: '0',
-      [normalTheme.breakpoints.down('md')]: {
+      [normalTheme.breakpoints.down('sm')]: {
         margin: 0,
         '& button': {
           '&:only-child': {
@@ -292,12 +292,17 @@ normalTheme.overrides = {
   MuiDialogTitle: {
     root: {
       padding: '0 0 16px 0',
-      [normalTheme.breakpoints.down('md')]: {
-        padding: '4px 0 16px 0'
+      [normalTheme.breakpoints.down('sm')]: {
+        padding: '14px 0 16px 0'
       }
     }
   },
   MuiDivider: {
+    /**
+     * calcs are made since we have defaultMargin on the Dialog so
+     * we need to remove the left margin and add the width of 2 margins
+     * in order to have the divider takes the full width of the Modal
+     */
     root: {
       [normalTheme.breakpoints.down('md')]: {
         width: `calc(100% + ${defaultValues.dialog.sm.padding}*2px)`,
