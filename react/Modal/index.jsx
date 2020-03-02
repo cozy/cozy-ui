@@ -33,7 +33,8 @@ class Modal extends Component {
   }
 
   handleOutsideClick = e => {
-    if (e.target === e.currentTarget) this.props.dismissAction()
+    if (e.target === e.currentTarget && this.props.dismissAction)
+      this.props.dismissAction()
   }
 
   componentDidMount() {
@@ -206,7 +207,9 @@ Modal.propTypes = {
   /** className to apply to wrapper element */
   wrapperClassName: PropTypes.string,
   /** className to apply to the container element */
-  containerClassName: PropTypes.string
+  containerClassName: PropTypes.string,
+  /** A function to be executed when the modal is dismissed */
+  dismissAction: PropTypes.func
 }
 
 Modal.defaultProps = {
