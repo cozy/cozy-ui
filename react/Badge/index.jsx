@@ -3,16 +3,30 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
-export const Badge = ({ children, content, type, ...props }) => {
+export const Badge = ({
+  children,
+  content,
+  type,
+  alignment = 'bottom-right',
+  size = 'small',
+  ...props
+}) => {
   return (
     <span className={styles['c-badge-root']} {...props}>
       {children}
       <span
         className={cx(styles['c-badge'], {
-          [styles[`c-badge--${type}`]]: type
+          [styles[`c-badge--${alignment}`]]: alignment
         })}
       >
-        {content}
+        <div
+          className={cx(styles['c-badge--wrapper'], {
+            [styles[`c-badge--size-${size}`]]: size,
+            [styles[`c-badge--${type}`]]: type
+          })}
+        >
+          {content}
+        </div>
       </span>
     </span>
   )
@@ -22,7 +36,8 @@ Badge.propTypes = {
   /** The content of the badge */
   content: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /** The type of the badge */
-  type: PropTypes.oneOf(['normal', 'new', 'error'])
+  type: PropTypes.oneOf(['normal', 'new', 'error']),
+  alignment: PropTypes.oneOf(['bottom-right'])
 }
 
 Badge.defaultProps = {
