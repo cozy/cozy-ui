@@ -8,32 +8,42 @@ $badge-root
 
 $badge
     position absolute
-    bottom - (size / 2)
-    right - (size / 2)
-    width size
-    height size
-    border-radius 50%
-    background-color var(--black)
-    color var(--white)
-    z-index 1
     display flex
-    flex-direction row
-    flex-wrap wrap
-    justify-content center
-    align-content center
     align-items center
+    justify-content center
+    width rem(24)
+    height rem(24)
+
+$badge--wrapper
+    display flex
+    align-items center
+    justify-content center
+    box-sizing border-box
+
+$badge--size-medium
+    border-radius rem(10)
+    width rem(20)
+    height rem(20)
+
+$badge--size-small
+    width rem(14)
+    height rem(14)
+    border-radius rem(7)
     font-size rem(10)
-    border rem(1) solid var(--white)
-    cursor inherit
+
+$badge--bottom-right
+    top rem(12)
+    left rem(16)
 
 $badge--new
     color var(--zircon)
     background-color var(--dodgerBlue)
 
 $badge--normal
-    color var(--paleGrey)
-    background-color var(--charcoalGrey)
-
+    color var(--charcoalGrey)
+    border solid 1px var(--silver)
+    background-color var(--white)
+    
 $badge--error
     color var(--chablis)
     background-color var(--pomegranate)
