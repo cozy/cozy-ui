@@ -1,7 +1,9 @@
 ### IconStack
 
 A component to put something in the background and center an
-other component on the foreground
+other component on the foreground.
+
+Use IconStack when the resulting combination of icons is considered a single entity.
 
 ```
 import IconStack from 'cozy-ui/transpiled/react/IconStack';
