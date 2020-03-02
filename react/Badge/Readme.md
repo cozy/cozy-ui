@@ -1,6 +1,6 @@
 `<Badge />` component wraps the element on which you want to apply a badge. In the following examples, it is applied to compact `<ButtonAction />`.
 
-You should use `<Badge />` when we want to add additionnal informations on the wrapped component
+You should use `<Badge />` to provide additional information related to the wrapped content.
 
 This component spreads all other props to its root element.
 
@@ -34,7 +34,7 @@ import ButtonAction from 'cozy-ui/transpiled/react/ButtonAction';
 
 #### Alignment
 
-Only support `bottom-right` 
+Only supports `bottom-right` 
 
 
 ```
