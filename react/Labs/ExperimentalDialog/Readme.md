@@ -3,7 +3,7 @@
 ### With default Actions (mobile and desktop)
 ```jsx
 import ExperimentalDialog, {ExperimentalDialogTitle, ExperimentalDialogActions} from './index';
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
+import MuiCozyTheme from '../../MuiCozyTheme/';
 
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
@@ -49,7 +49,7 @@ initialState = { modalOpened: isTesting()};
 ### With "below" Actions (mobile)
 ```jsx
 import ExperimentalDialog, {ExperimentalDialogTitle, ExperimentalDialogActions} from './index';
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
+import MuiCozyTheme from '../../MuiCozyTheme/';
 
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
