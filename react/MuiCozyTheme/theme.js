@@ -1,8 +1,16 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 import { getCssVariableValue } from '../utils/color'
-
+import isTesting from '../../docs/isTesting'
 const defaultValues = {
-  borderRadius: 6
+  borderRadius: 6,
+  dialog: {
+    sm: {
+      padding: 16
+    },
+    md: {
+      padding: 32
+    }
+  }
 }
 
 export const normalTheme = createMuiTheme({
@@ -61,7 +69,8 @@ export const normalTheme = createMuiTheme({
       800: getCssVariableValue('charcoalGrey'),
       900: getCssVariableValue('black')
     }
-  }
+  },
+  ...(isTesting() && { transitions: { create: () => 'none' } })
 })
 
 normalTheme.overrides = {
@@ -228,11 +237,15 @@ normalTheme.overrides = {
     paper: {
       'box-sizing': 'border-box',
       [normalTheme.breakpoints.down('md')]: {
-        padding: '16px'
+        padding: `${defaultValues.dialog.sm.padding}px`
       },
       [normalTheme.breakpoints.up('md')]: {
-        padding: '32px'
+        padding: `${defaultValues.dialog.md.padding}px`
       }
+    },
+    paperWidthSm: {
+      width: '544px',
+      maxWidth: '544px'
     },
     paperFullScreen: {
       '&$paperScrollBody': {
@@ -243,17 +256,63 @@ normalTheme.overrides = {
   },
   MuiDialogContent: {
     root: {
-      padding: '8px 0'
+      [normalTheme.breakpoints.up('md')]: {
+        padding: `${defaultValues.dialog.md.padding}px 0`
+      },
+      [normalTheme.breakpoints.down('sm')]: {
+        padding: `${defaultValues.dialog.sm.padding}px 0`
+      },
+
+      overflowY: 'initial'
     }
   },
   MuiDialogActions: {
     root: {
-      padding: '0'
+      padding: '0',
+      [normalTheme.breakpoints.down('sm')]: {
+        margin: 0,
+        '& button': {
+          '&:only-child': {
+            width: '100%'
+          },
+          width: '50%'
+        },
+        '&.modal_actions_below': {
+          display: 'block',
+          '& button': {
+            width: '100%',
+            margin: 0,
+            '&:not(:first-child)': {
+              marginTop: '8px'
+            }
+          }
+        }
+      }
     }
   },
   MuiDialogTitle: {
     root: {
-      padding: '0 0 8px 0'
+      padding: '0 0 16px 0',
+      [normalTheme.breakpoints.down('sm')]: {
+        padding: '14px 0 16px 0'
+      }
+    }
+  },
+  MuiDivider: {
+    /**
+     * calcs are made since we have defaultMargin on the Dialog so
+     * we need to remove the left margin and add the width of 2 margins
+     * in order to have the divider takes the full width of the Modal
+     */
+    root: {
+      [normalTheme.breakpoints.down('md')]: {
+        width: `calc(100% + ${defaultValues.dialog.sm.padding}*2px)`,
+        marginLeft: `-${defaultValues.dialog.sm.padding}px`
+      },
+      [normalTheme.breakpoints.up('md')]: {
+        width: `calc(100% + ${defaultValues.dialog.md.padding}*2px)`,
+        marginLeft: `-${defaultValues.dialog.md.padding}px`
+      }
     }
   }
 }

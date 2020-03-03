@@ -3,8 +3,14 @@ import styles from './styles.styl'
 import cx from 'classnames'
 import Icon from '../Icon'
 import palette from '../palette'
+import withBreakpoints from '../helpers/withBreakpoints'
 
-const ModalCross = ({ onClick, color, className }) => (
+const ModalCross = ({
+  onClick,
+  color,
+  className,
+  breakpoints: { isMobile }
+}) => (
   <button
     className={cx(styles['c-modal-close'], className)}
     onClick={onClick}
@@ -13,11 +19,10 @@ const ModalCross = ({ onClick, color, className }) => (
   >
     <Icon
       icon="cross"
-      width="24"
-      height="24"
+      size={isMobile ? '16' : '24'}
       color={color || palette['coolGrey']}
     />
   </button>
 )
 
-export default ModalCross
+export default withBreakpoints()(ModalCross)

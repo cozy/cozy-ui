@@ -96,3 +96,8 @@ export { default as DateMonthPicker } from './DateMonthPicker'
 export { default as NestedSelect, NestedSelectModal } from './NestedSelect'
 export { default as ContactsList } from './ContactsList'
 export { default as ContactsListModal } from './ContactsListModal'
+export {
+  default as ExperimentalDialog,
+  ExperimentalDialogActions,
+  ExperimentalDialogTitle
+} from './Labs/ExperimentalDialog'
