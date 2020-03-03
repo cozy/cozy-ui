@@ -1,6 +1,6 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 import { getCssVariableValue } from '../utils/color'
-import isTesting from '../../docs/isTesting'
+import isTesting from '../../helpers/isTesting'
 const defaultValues = {
   borderRadius: 6,
   dialog: {
