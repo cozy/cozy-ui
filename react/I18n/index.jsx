@@ -12,7 +12,7 @@ import { initFormat } from './format'
 
 export const DEFAULT_LANG = 'en'
 
-const I18nContext = React.createContext()
+export const I18nContext = React.createContext()
 
 // Provider root component
 class BaseI18n extends Component {

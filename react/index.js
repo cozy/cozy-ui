@@ -101,3 +101,5 @@ export {
   ExperimentalDialogActions,
   ExperimentalDialogTitle
 } from './Labs/ExperimentalDialog'
+
+export { default as BarContextProvider } from './BarContextProvider'
