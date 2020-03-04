@@ -1,7 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import contacts from '../ContactsList/data.json'
-import CozyClient from 'cozy-client'
+import CozyClient, { CozyProvider } from 'cozy-client'
 
 const mockClient = new CozyClient({
   uri: 'http://cozy.tools:8080',
@@ -41,19 +40,11 @@ mockClient.plugins = {
 }
 
 class Wrapper extends React.Component {
-  getChildContext() {
-    return {
-      client: mockClient
-    }
-  }
-
   render() {
-    return <>{this.props.children}</>
+    return (
+      <CozyProvider client={mockClient}>{this.props.children}</CozyProvider>
+    )
   }
-}
-
-Wrapper.childContextTypes = {
-  client: PropTypes.object
 }
 
 export default Wrapper
