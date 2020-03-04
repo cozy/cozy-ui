@@ -68,7 +68,7 @@ class Overlay extends Component {
 
 Overlay.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   onEscape: PropTypes.func
 }
 
