@@ -39,12 +39,8 @@ mockClient.plugins = {
   }
 }
 
-class Wrapper extends React.Component {
-  render() {
-    return (
-      <CozyProvider client={mockClient}>{this.props.children}</CozyProvider>
-    )
-  }
+const Wrapper = ({ children }) => {
+  return <CozyProvider client={mockClient}>{children}</CozyProvider>
 }
 
 export default Wrapper

@@ -10,8 +10,10 @@ import { Provider, useStore } from 'react-redux'
 
 import BarContextProvider from '.'
 import I18n, { useI18n, translate } from '../I18n'
+
 const locales = { helloworld: 'Hello World !' }
 const localesBar = { a: 'b' }
+
 const DumbHelloWorld = translate()(({ t, f, lang }) => (
   <div>
     {t('helloworld')}
@@ -45,6 +47,7 @@ const App = () => {
     </MockedBar>
   )
 }
+
 describe('BarContextProvider', () => {
   it('should provide the right (aka app not the one from the bar) t/f/store/client to the DumbHelloWorld', () => {
     const client = createMockClient({})
