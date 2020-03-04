@@ -11,7 +11,7 @@ include via `Sprite`. See the example below for how to include `Sprite`.
 ```
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite';
-const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'device-phone', 'device-tablet', 'file-type-audio', 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-image', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'google', 'top-select', 'bottom-select', 'check-white', 'dash-white', 'keychain'];
+const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'device-phone', 'device-tablet', 'device-browser', 'file-type-audio', 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-image', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'google', 'top-select', 'bottom-select', 'check-white', 'dash-white', 'keychain'];
 
 <div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
   <Sprite />
