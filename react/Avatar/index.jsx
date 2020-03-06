@@ -22,7 +22,7 @@ const nameToColor = (name = '') => {
     palette['seafoamGreen'],
     palette['lavender'],
     palette['brightSun'],
-    palette['fushsia']
+    palette['fuchsia']
   ]
   const key =
     Array.from(name.toUpperCase())
