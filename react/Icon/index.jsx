@@ -2,8 +2,6 @@ import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import cx from 'classnames'
-import isTesting from '../../helpers/isTesting'
-const isTestingValue = isTesting()
 const DEFAULT_SIZE = '16'
 
 function getSvgObject(icon) {
@@ -60,7 +58,7 @@ function Icon(props) {
 
   const iconClassName = preserveColor ? 'icon--preserveColor' : 'icon'
   const iconClass = cx(className, styles[iconClassName], {
-    [styles['icon--spin']]: spin && !isTestingValue
+    [styles['icon--spin']]: spin
   })
 
   return Svg ? (
