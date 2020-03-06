@@ -50,6 +50,25 @@ export const isPlainText = (mimeType = '', fileName = '') => {
   return mimeType ? /^text\//.test(mimeType) : /\.(txt|md)$/.test(fileName)
 }
 
+export const getViewerComponentName = file => {
+  switch (file.class) {
+    case 'shortcut':
+      return ShortcutViewer
+    case 'image':
+      return ImageViewer
+    case 'audio':
+      return AudioViewer
+    case 'video':
+      return isMobile() ? NoViewer : VideoViewer
+    case 'pdf':
+      return PdfJsViewer
+    case 'text':
+      return isPlainText(file.mime, file.name) ? TextViewer : NoViewer
+    default:
+      return NoViewer
+  }
+}
+
 export class Viewer extends Component {
   componentDidMount() {
     document.addEventListener('keyup', this.onKeyUp, false)
@@ -136,7 +155,7 @@ export class Viewer extends Component {
   renderViewer(file) {
     if (!file) return null
     const { renderFallbackExtraContent } = this.props
-    const ComponentName = this.getViewerComponentName(file)
+    const ComponentName = getViewerComponentName(file)
     return (
       <ComponentName
         file={file}
@@ -144,25 +163,6 @@ export class Viewer extends Component {
         renderFallbackExtraContent={renderFallbackExtraContent}
       />
     )
-  }
-
-  getViewerComponentName(file) {
-    switch (file.class) {
-      case 'shortcut':
-        return ShortcutViewer
-      case 'image':
-        return ImageViewer
-      case 'audio':
-        return AudioViewer
-      case 'video':
-        return isMobile() ? NoViewer : VideoViewer
-      case 'pdf':
-        return PdfJsViewer
-      case 'text':
-        return isPlainText(file.mime, file.name) ? TextViewer : NoViewer
-      default:
-        return NoViewer
-    }
   }
 }
 
