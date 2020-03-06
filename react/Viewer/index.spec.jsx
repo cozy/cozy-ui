@@ -75,6 +75,12 @@ describe('Viewer', () => {
         class: '???',
         mime: 'something/unsupported',
         name: 'sample.unsupported'
+      },
+      {
+        _id: 'shortcutfileid',
+        class: 'shortcut',
+        mime: 'application/internet-shortcut',
+        name: 'cozy.url'
       }
     ]
 
@@ -121,6 +127,12 @@ describe('Viewer', () => {
     })
     const noViewer = await getViewerComponent(component)
     expect(noViewer).toMatchSnapshot('noviewer')
+
+    component.setProps({
+      currentIndex: 7
+    })
+    const shortcutViewer = await getViewerComponent(component)
+    expect(shortcutViewer).toMatchSnapshot('shortcutviewer')
   })
 })
 

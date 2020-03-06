@@ -74,6 +74,20 @@ exports[`Viewer should render the various viewers: pdfviewer 1`] = `
 />
 `;
 
+exports[`Viewer should render the various viewers: shortcutviewer 1`] = `
+<ShortcutViewer
+  file={
+    Object {
+      "_id": "shortcutfileid",
+      "class": "shortcut",
+      "mime": "application/internet-shortcut",
+      "name": "cozy.url",
+    }
+  }
+  onClose={[Function]}
+/>
+`;
+
 exports[`Viewer should render the various viewers: textviewer 1`] = `
 <withClient(TextViewer)
   file={

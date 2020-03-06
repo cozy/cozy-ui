@@ -11,13 +11,14 @@ import VideoViewer from './VideoViewer'
 import PdfJsViewer from './PdfJsViewer'
 import TextViewer from './TextViewer'
 import NoViewer from './NoViewer'
+import ShortcutViewer from './ShortcutViewer'
 
 import styles from './styles.styl'
 import en from './locales/en.json'
 import fr from './locales/fr.json'
 import { FileDoctype } from '../proptypes'
 
-const locales = {
+export const locales = {
   en,
   fr
 }
@@ -47,6 +48,25 @@ ViewerWrapper.propTypes = {
 
 export const isPlainText = (mimeType = '', fileName = '') => {
   return mimeType ? /^text\//.test(mimeType) : /\.(txt|md)$/.test(fileName)
+}
+
+export const getViewerComponentName = file => {
+  switch (file.class) {
+    case 'shortcut':
+      return ShortcutViewer
+    case 'image':
+      return ImageViewer
+    case 'audio':
+      return AudioViewer
+    case 'video':
+      return isMobile() ? NoViewer : VideoViewer
+    case 'pdf':
+      return PdfJsViewer
+    case 'text':
+      return isPlainText(file.mime, file.name) ? TextViewer : NoViewer
+    default:
+      return NoViewer
+  }
 }
 
 export class Viewer extends Component {
@@ -135,7 +155,7 @@ export class Viewer extends Component {
   renderViewer(file) {
     if (!file) return null
     const { renderFallbackExtraContent } = this.props
-    const ComponentName = this.getViewerComponentName(file)
+    const ComponentName = getViewerComponentName(file)
     return (
       <ComponentName
         file={file}
@@ -143,23 +163,6 @@ export class Viewer extends Component {
         renderFallbackExtraContent={renderFallbackExtraContent}
       />
     )
-  }
-
-  getViewerComponentName(file) {
-    switch (file.class) {
-      case 'image':
-        return ImageViewer
-      case 'audio':
-        return AudioViewer
-      case 'video':
-        return isMobile() ? NoViewer : VideoViewer
-      case 'pdf':
-        return PdfJsViewer
-      case 'text':
-        return isPlainText(file.mime, file.name) ? TextViewer : NoViewer
-      default:
-        return NoViewer
-    }
   }
 }
 

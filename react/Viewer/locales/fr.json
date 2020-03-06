@@ -3,6 +3,7 @@
     "download": "Télécharger",
     "retry": "Réessayer",
     "error": "Ce fichier n'a pas pu être chargé. Avez-vous une connexion internet qui fonctionne actuellement ?",
-    "close": "Fermer"
+    "close": "Fermer",
+    "goto": "Ouvrir %{url}"
   }
 }
