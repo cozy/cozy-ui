@@ -29,7 +29,7 @@
     40%, 60%
         transform translate3d(4px, 0, 0)
 
-$with-transition
+$transition-transform-ease-out
     transition transform .1s ease-out
 
 $spin-anim
@@ -38,7 +38,7 @@ $spin-anim
     animation  spin 1s linear infinite
 
 @media (prefers-reduced-motion: reduce)
-    $with-transition
+    $transition-transform-ease-out
         transition none
     $spin-anim
         animation none
