@@ -12,7 +12,7 @@ const ShortcutViewer = ({ file }) => {
   const { shortcutInfos } = useFetchShortcut(client, file.id)
   let url = ''
   if (shortcutInfos) {
-    url = new URL(shortcutInfos.data.attributes.url)
+    url = new URL(get(shortcutInfos, 'data.attributes.url'))
   }
   return (
     <NoViewer

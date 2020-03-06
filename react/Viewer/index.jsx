@@ -18,7 +18,7 @@ import en from './locales/en.json'
 import fr from './locales/fr.json'
 import { FileDoctype } from '../proptypes'
 
-const locales = {
+export const locales = {
   en,
   fr
 }

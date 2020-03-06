@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shortcutviewer renders the component 1`] = `
+<div>
+  <div
+    class="styles__viewer-noviewer___3heA6"
+  >
+    <svg
+      class="styles__icon___23x3R"
+      height="140"
+      width="160"
+    >
+      <use
+        xlink:href="#file-type-files"
+      />
+    </svg>
+    <p
+      class="styles__viewer-filename___36bWW"
+    />
+    <a
+      class="styles__c-btn___-2Vnj"
+      href=""
+      target="_blank"
+    >
+      <span>
+        <svg
+          aria-hidden="true"
+          class="styles__icon___23x3R"
+          focusable="false"
+          height="16"
+          width="16"
+        >
+          <use
+            xlink:href="#openwith"
+          />
+        </svg>
+        <span>
+          Go to 
+        </span>
+      </span>
+    </a>
+  </div>
+</div>
+`;
