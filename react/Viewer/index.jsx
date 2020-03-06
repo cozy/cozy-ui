@@ -11,6 +11,7 @@ import VideoViewer from './VideoViewer'
 import PdfJsViewer from './PdfJsViewer'
 import TextViewer from './TextViewer'
 import NoViewer from './NoViewer'
+import ShortcutViewer from './ShortcutViewer'
 
 import styles from './styles.styl'
 import en from './locales/en.json'
@@ -147,6 +148,8 @@ export class Viewer extends Component {
 
   getViewerComponentName(file) {
     switch (file.class) {
+      case 'shortcut':
+        return ShortcutViewer
       case 'image':
         return ImageViewer
       case 'audio':
