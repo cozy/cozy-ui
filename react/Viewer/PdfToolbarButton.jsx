@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Button from '../Button'
 
-const PdfToolbarButton = ({ icon, onClick, disabled }) => (
+const PdfToolbarButton = ({ icon, onClick, disabled, label }) => (
   <Button
     iconOnly
     subtle
@@ -11,13 +11,15 @@ const PdfToolbarButton = ({ icon, onClick, disabled }) => (
     icon={icon}
     onClick={onClick}
     disabled={disabled}
+    label={label}
   />
 )
 
 PdfToolbarButton.propTypes = {
   icon: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  label: PropTypes.string.isRequired
 }
 
 export default PdfToolbarButton

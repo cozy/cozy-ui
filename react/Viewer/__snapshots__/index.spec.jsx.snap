@@ -60,7 +60,7 @@ exports[`Viewer should render the various viewers: noviewer 1`] = `
 `;
 
 exports[`Viewer should render the various viewers: pdfviewer 1`] = `
-<PdfJsViewer
+<withI18n(PdfJsViewer)
   file={
     Object {
       "_id": "pdffileid",

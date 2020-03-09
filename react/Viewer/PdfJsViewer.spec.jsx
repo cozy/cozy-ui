@@ -13,7 +13,7 @@ describe('PDFViewer', () => {
   }
   beforeEach(() => {
     component = shallow(
-      <PdfJsViewer url={'test'} file={{}} gestures={gesturesMock} />
+      <PdfJsViewer url={'test'} file={{}} gestures={gesturesMock} t={x => x} />
     )
   })
   afterEach(() => {

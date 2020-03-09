@@ -4,6 +4,10 @@
     "retry": "Réessayer",
     "error": "Ce fichier n'a pas pu être chargé. Avez-vous une connexion internet qui fonctionne actuellement ?",
     "close": "Fermer",
-    "goto": "Ouvrir %{url}"
+    "goto": "Ouvrir %{url}",
+    "next": "Suivante",
+    "previous": "Précédente",
+    "scaledown": "Zoom arrière",
+    "scaleup": "Zoom avant"
   }
 }
