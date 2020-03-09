@@ -64,7 +64,7 @@
   "devDependencies": {
     "@babel/cli": "7.7.4",
     "@babel/core": "7.7.4",
-    "@material-ui/core": "3.9.3",
+    "@material-ui/core": "3.9.4",
     "@oskarer/enzyme-wait": "^1.5.0",
     "@semantic-release/changelog": "3.0.6",
     "@semantic-release/git": "7.0.18",
@@ -143,7 +143,7 @@
     "react-swipeable-views": "0.13.3"
   },
   "peerDependencies": {
-    "@material-ui/core": "3.9.3",
+    "@material-ui/core": "3.9.4",
     "cozy-client": "*",
     "cozy-device-helper": "1.7.5",
     "cozy-doctypes": "^1.69.0",
