@@ -34,7 +34,7 @@ export const Badge = ({
 
 Badge.propTypes = {
   /** The content of the badge */
-  content: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  content: PropTypes.node,
   /** The type of the badge */
   type: PropTypes.oneOf(['normal', 'new', 'error']),
   alignment: PropTypes.oneOf(['bottom-right'])
