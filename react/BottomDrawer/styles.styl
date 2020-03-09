@@ -1,9 +1,10 @@
 @require 'tools/mixins'
 @require 'settings/spaces'
 @require 'settings/z-index'
+@require 'generic/animations'
 
 .with-transition
-    transition transform .1s ease-out
+    @extends $transition-transform-ease-out
 
 .BottomDrawer-content
     z-index        $drawer-index

@@ -1,5 +1,6 @@
 @require '../generic/animations'
 @require '../tools/mixins'
+@require 'generic/animations'
 
 /*------------------------------------*\
   Icons
@@ -96,10 +97,7 @@ $icon-centered
     left       50%
     transform  translateX(-50%) translateY(-50%)
 
-$spin-anim
-    // arguments' order is important: the animation name must stay first
-    // so that scoping works
-    animation  spin 1s linear infinite
 
 $icon-spin
-    @extend           $spin-anim
+    @extend $spin-anim
+
