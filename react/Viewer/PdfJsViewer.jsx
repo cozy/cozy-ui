@@ -7,6 +7,7 @@ import { Spinner } from '../Spinner'
 import withFileUrl from './withFileUrl'
 import ToolbarButton from './PdfToolbarButton'
 import NoViewer from './NoViewer'
+import { translate } from '../I18n'
 import styles from './styles.styl'
 
 export const MIN_SCALE = 0.25
@@ -98,7 +99,7 @@ export class PdfJsViewer extends Component {
   }
 
   render() {
-    const { url, file, renderFallbackExtraContent } = this.props
+    const { url, file, renderFallbackExtraContent, t } = this.props
     const {
       loaded,
       errored,
@@ -108,7 +109,6 @@ export class PdfJsViewer extends Component {
       width,
       renderAllPages
     } = this.state
-
     if (errored)
       return (
         <NoViewer
@@ -157,12 +157,14 @@ export class PdfJsViewer extends Component {
                   icon="top"
                   onClick={this.previousPage}
                   disabled={currentPage === 1}
+                  label={t('Viewer.previous')}
                 />
                 {currentPage}/{totalPages}
                 <ToolbarButton
                   icon="bottom"
                   onClick={this.nextPage}
                   disabled={currentPage === totalPages}
+                  label={t('Viewer.next')}
                 />
               </span>
             )}
@@ -172,11 +174,13 @@ export class PdfJsViewer extends Component {
                 icon="dash"
                 onClick={this.scaleDown}
                 disabled={scale === MIN_SCALE}
+                label={t('Viewer.scaledown')}
               />
               <ToolbarButton
                 icon="plus"
                 onClick={this.scaleUp}
                 disabled={scale === MAX_SCALE}
+                label={t('Viewer.scaleup')}
               />
             </span>
           </div>
@@ -192,4 +196,4 @@ PdfJsViewer.propTypes = {
   renderFallbackExtraContent: PropTypes.func
 }
 
-export default withFileUrl(PdfJsViewer)
+export default withFileUrl(translate()(PdfJsViewer))

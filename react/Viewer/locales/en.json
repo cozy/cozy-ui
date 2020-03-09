@@ -4,6 +4,10 @@
     "retry": "Retry",
     "error": "This file could not be loaded. Do you have a working internet connection right now?",
     "close": "close",
-    "goto": "Go to %{url}"
+    "goto": "Go to %{url}",
+    "next": "Next",
+    "previous": "Previous",
+    "scaledown": "Zoom out",
+    "scaleup": "Zoom in"
   }
 }
