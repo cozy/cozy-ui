@@ -232,7 +232,8 @@ normalTheme.overrides = {
   MuiDialog: {
     root: {
       color: getCssVariableValue('charcoalGrey'),
-      'border-radius': '8px'
+      'border-radius': '8px',
+      zIndex: getCssVariableValue('zIndex-modal')
     },
     paper: {
       'box-sizing': 'border-box',
