@@ -7,7 +7,7 @@ import { Media, Bd, Img } from '../Media'
 import BottomDrawer from '../BottomDrawer'
 import withBreakpoints from '../helpers/withBreakpoints'
 import Popper from '@material-ui/core/Popper'
-
+import { getCssVariableValue } from '../utils/color'
 const ActionMenuWrapper = ({
   inline,
   onClose,
@@ -30,6 +30,11 @@ const ActionMenuWrapper = ({
       modifiers={preventOverflow ? null : normalOverflowModifiers}
       open
       placement={placement}
+      disablePortal={true}
+      style={{
+        position: 'fixed',
+        zIndex: getCssVariableValue('zIndex-popover')
+      }}
     >
       <ClickAwayListener onClickAway={onClose}>{children}</ClickAwayListener>
     </Popper>
