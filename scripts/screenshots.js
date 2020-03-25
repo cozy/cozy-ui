@@ -43,6 +43,7 @@ const screenshotComponent = async (page, options) => {
     options.getScreenshotName || defaultGetScreenshotName
 
   console.log(`Screenshotting ${name} at ${formatViewport(viewport)}`)
+  await page.bringToFront();
   await page.screenshot({
     path: path.join(
       screenshotDir,
