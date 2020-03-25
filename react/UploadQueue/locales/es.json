@@ -1,0 +1,9 @@
+{
+  "header": "Subiendo %{smart_count} foto a %{app} |||| Subiendo %{smart_count} fotos a %{app}",
+  "header_mobile": "Subiendo %{done} de %{total}",
+  "header_done": "Subidos %{done} de %{total} con éxito",
+  "close": "cerrar",
+  "item": {
+    "pending": "Pendiente"
+  }
+}

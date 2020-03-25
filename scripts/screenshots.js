@@ -217,7 +217,12 @@ const main = async () => {
     args.styleguideDir,
     '/index.html'
   )}`
-  const components = await fetchAllComponents(page, styleguideIndexURL)
+  let components = await fetchAllComponents(page, styleguideIndexURL)
+  if (args.component) {
+    components = components.filter(component =>
+      component.name.includes(args.component)
+    )
+  }
   console.log('Screenshotting components')
   for (const component of components) {
     await screenshotComponent(page, {

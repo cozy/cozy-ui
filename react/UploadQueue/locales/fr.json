@@ -1,0 +1,9 @@
+{
+  "header": "Import de %{smart_count} fichier dans votre Cozy |||| Import de %{smart_count} fichiers dans votre Cozy",
+  "header_mobile": "Import de %{done} sur %{total}",
+  "header_done": "%{done} sur %{total} élément(s) importé(s)",
+  "close": "Fermer",
+  "item": {
+    "pending": "En attente"
+  }
+}
