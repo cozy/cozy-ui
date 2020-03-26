@@ -10,7 +10,11 @@ the upload queue:
 - underneath the top-bar on mobile  
 
 ```
-const state = {
+const initialState = {
+  popover: false
+}
+
+const data = {
   queue: [{
     file: { name: 'Photo.jpg' },
     status: 'created'
@@ -29,13 +33,16 @@ const state = {
   successCount: 1
 };
 
-<UploadQueue
-  lang='fr'
-  app='Cozy Drive'
-  getMimeTypeIcon={() => 'file'}
-  queue={state.queue}
-  doneCount={state.doneCount}
-  successCount={state.successCount}
-  popover={false}
-/>
+<>
+  popover: <input type="checkbox" value={state.popover} onChange={() => setState({ popover: !state.popover })} />
+  <UploadQueue
+    lang='fr'
+    app='Cozy Drive'
+    getMimeTypeIcon={() => 'file'}
+    queue={data.queue}
+    doneCount={data.doneCount}
+    successCount={data.successCount}
+    popover={state.popover}
+  />
+</>
 ```
