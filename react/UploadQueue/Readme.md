@@ -1,3 +1,14 @@
+Dumb component to display a list of files being uploaded.
+
+On mobile, the list of files being displayed is not shown, only
+a small banner is shown.
+
+The popover attribute should be used to automatically layout
+the upload queue:
+
+- in a fixed bottom-right position on desktop
+- underneath the top-bar on mobile  
+
 ```
 const state = {
   queue: [{
