@@ -12,7 +12,7 @@ script:
   - yarn test
   - yarn build:css:all
   - yarn build:doc:react
-  - yarn screenshots
+  - yarn screenshots --viewport desktop
   - yarn screenshots --no-empty-screenshot-dir --viewport 300x600
   - yarn argos --token $ARGOS_TOKEN --branch $TRAVIS_BRANCH --commit $TRAVIS_COMMIT
 deploy:

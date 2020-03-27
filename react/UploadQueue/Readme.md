@@ -10,6 +10,8 @@ the upload queue:
 - underneath the top-bar on mobile  
 
 ```
+import isTesting from '../../helpers/isTesting'
+
 const initialState = {
   popover: false
 }
@@ -44,5 +46,15 @@ const data = {
     successCount={data.successCount}
     popover={state.popover}
   />
+  {isTesting() ?
+    <UploadQueue
+      lang='fr'
+      app='Cozy Drive'
+      getMimeTypeIcon={() => 'file'}
+      queue={data.queue}
+      doneCount={data.doneCount}
+      successCount={data.successCount}
+      popover={true}
+    /> : null }
 </>
 ```

@@ -24,8 +24,8 @@ const emptyDirectory = directory => {
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
-const defaultGetScreenshotName = ({ componentName, viewport }) =>
-  `${componentName}-${formatViewport(viewport)}.png`
+const defaultGetScreenshotName = ({ component, viewport }) =>
+  `${component.testId}-${formatViewport(viewport)}.png`
 
 const formatViewport = viewport => `${viewport.width}x${viewport.height}`
 
@@ -35,7 +35,8 @@ const formatViewport = viewport => `${viewport.width}x${viewport.height}`
  * component.
  */
 const screenshotComponent = async (page, options) => {
-  const { link, name, screenshotDir, viewport } = options
+  const { component, screenshotDir, viewport } = options
+  const { link, name } = component
   await page.goto(link, { waitUntil: 'load', timeout: 0 })
   await sleep(100)
 
@@ -43,14 +44,15 @@ const screenshotComponent = async (page, options) => {
     options.getScreenshotName || defaultGetScreenshotName
 
   console.log(`Screenshotting ${name} at ${formatViewport(viewport)}`)
-  await page.bringToFront();
+  await page.bringToFront()
   await page.screenshot({
-    path: path.join(
-      screenshotDir,
-      getScreenshotName({ componentName: name, viewport })
-    ),
+    path: path.join(screenshotDir, getScreenshotName({ component, viewport })),
     fullPage: true
   })
+}
+
+const getComponentNameFromTestId = testId => {
+  return testId.split('-example-')[0]
 }
 
 /**
@@ -88,16 +90,20 @@ const fetchAllComponents = async (page, styleguideIndexURL) => {
     await page.goto(cate.link, { waitUntil: 'load', timeout: 0 })
     await sleep(100)
 
-    const links = await page.evaluate(() => {
+    const links = (await page.evaluate(() => {
       return Array.from(document.querySelectorAll('.rsg--controls-40 a')).map(
         x => {
+          const testId = x.closest('div[data-testid]').dataset.testid
           return {
-            name: x.closest('div[data-testid]').dataset.testid,
+            testId,
             link: x.href
           }
         }
       )
-    })
+    })).map(componentInfo => ({
+      ...componentInfo,
+      name: getComponentNameFromTestId(componentInfo.testId)
+    }))
     allLinks.push(links)
   }
   return flattenDeep(allLinks)
@@ -164,7 +170,7 @@ const builtinViewports = {
   desktop: '800x600'
 }
 
-const viewportArgument = viewportStr => {
+const parseViewportArgument = viewportStr => {
   viewportStr = builtinViewports[viewportStr] || viewportStr
   const splitted = viewportStr.split('x')
   if (!splitted[1]) {
@@ -176,6 +182,15 @@ const viewportArgument = viewportStr => {
     throw new Error('Bad viewport format')
   }
   return { width: parseInt(splitted[0]), height: parseInt(splitted[1]) }
+}
+
+const readConfig = async () => {
+  const configPath = path.join(process.cwd(), 'rsgscreenshots.json')
+  if (fs.existsSync(configPath)) {
+    return JSON.parse(fs.readFileSync(configPath))
+  } else {
+    return {}
+  }
 }
 
 /**
@@ -195,7 +210,6 @@ const main = async () => {
     type: pathArgument
   })
   parser.addArgument('--viewport', {
-    type: viewportArgument,
     defaultValue: builtinViewports.desktop
   })
   parser.addArgument('--no-empty-screenshot-dir', {
@@ -205,14 +219,17 @@ const main = async () => {
   })
   parser.addArgument('--component')
 
+  const config = await readConfig()
   const args = parser.parseArgs()
+
+  const parsedViewport = parseViewportArgument(args.viewport)
 
   await prepareFS({
     styleguideDir: args.styleguideDir,
     screenshotDir: args.screenshotDir,
     emptyScreenshotDir: args.emptyScreenshotDir
   })
-  const { browser, page } = await prepareBrowser({ viewport: args.viewport })
+  const { browser, page } = await prepareBrowser({ viewport: parsedViewport })
 
   const styleguideIndexURL = `file://${path.join(
     args.styleguideDir,
@@ -226,11 +243,18 @@ const main = async () => {
   }
   console.log('Screenshotting components')
   for (const component of components) {
+    const componentConfig = config[component.name] || {}
+    const componentViewportSpec =
+      (componentConfig.viewports && componentConfig.viewports[args.viewport]) ||
+      null
+    const componentViewport = componentViewportSpec
+      ? parseViewportArgument(componentViewportSpec)
+      : parsedViewport
+    page.setViewport(componentViewport)
     await screenshotComponent(page, {
-      link: component.link,
-      name: component.name,
+      component,
       screenshotDir: args.screenshotDir,
-      viewport: args.viewport
+      viewport: componentViewport
     })
   }
 
