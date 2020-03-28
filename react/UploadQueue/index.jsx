@@ -5,9 +5,12 @@ import Icon from '../Icon'
 import Spinner from '../Spinner'
 import Stack from '../Stack'
 import withLocales from '../I18n/withLocales'
+import { useI18n } from '../I18n'
 import ThresholdBar from '../ThresholdBar'
+import { Caption } from '../Text'
 import palette from '../../stylus/settings/palette.json'
 import styles from './styles.styl'
+import formatDistanceToNow from 'date-fns/distance_in_words_to_now'
 
 import localeEn from './locales/en.json'
 import localeEs from './locales/es.json'
@@ -57,8 +60,29 @@ const Pending = translate()(props => (
   <span className={styles['item-pending']}>{props.t('item.pending')}</span>
 ))
 
+const formatRemainingTime = durationInSec => {
+  const later = Date.now() + durationInSec * 1000
+  return formatDistanceToNow(later)
+}
+
 const FileUploadProgress = ({ progress }) => {
-  return <ThresholdBar threshold={progress.total} value={progress.loaded} />
+  const { t } = useI18n()
+  return (
+    <div className={styles['upload-queue__upload-progress']}>
+      <ThresholdBar
+        className={styles['upload-queue__threshold-bar']}
+        threshold={progress.total}
+        value={progress.loaded}
+      />
+      {progress.remainingTime ? (
+        <Caption className={styles['upload-queue__progress-caption']}>
+          {t('item.remainingTime', {
+            time: formatRemainingTime(progress.remainingTime)
+          })}
+        </Caption>
+      ) : null}
+    </div>
+  )
 }
 
 const Item = translate()(

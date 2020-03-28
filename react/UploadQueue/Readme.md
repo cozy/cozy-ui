@@ -24,9 +24,11 @@ const data = {
     file: { name: 'Readme.txt' },
     progress: {
       loaded: 100,
-      total: 400
-      },
-      status: 'loading'
+      total: 400,
+      speed: 135000,
+      remainingTime: 90 
+    },
+    status: 'loading'
   }, {
     file: { name: 'File.jpg' },
     status: 'pending'
