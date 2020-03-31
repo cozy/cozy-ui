@@ -1,7 +1,7 @@
 import React from 'react'
 import get from 'lodash/get'
 import Modal from '../Modal'
-import { withClient } from 'cozy-client'
+import { useClient } from 'cozy-client'
 import { isMobileApp } from 'cozy-device-helper'
 
 import useInstance from '../../helpers/useInstance'
@@ -39,7 +39,8 @@ const QuotaModalAlert = withLocales(locales)(({ t, onClose, instance }) => {
   )
 })
 
-const QuotaAlert = withClient(({ client, onClose }) => {
+const QuotaAlert = ({ onClose }) => {
+  const client = useClient()
   /**
    * We don't want to call useInstance if we are on
    * mobile since we don't want to create a link to the cozy manager
@@ -53,6 +54,6 @@ const QuotaAlert = withClient(({ client, onClose }) => {
   }
   const instanceInfo = useInstance(client)
   return <QuotaModalAlert instance={instanceInfo} onClose={onClose} />
-})
+}
 
 export default QuotaAlert
