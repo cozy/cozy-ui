@@ -11,6 +11,7 @@ import { Caption } from '../Text'
 import palette from '../../stylus/settings/palette.json'
 import styles from './styles.styl'
 import formatDistanceToNow from 'date-fns/distance_in_words_to_now'
+import cx from 'classnames'
 
 import localeEn from './locales/en.json'
 import localeEs from './locales/es.json'
@@ -65,8 +66,20 @@ const formatRemainingTime = durationInSec => {
   return formatDistanceToNow(later)
 }
 
-const FileUploadProgress = ({ progress }) => {
+const RemainingTime = ({ durationInSec }) => {
   const { t } = useI18n()
+  return (
+    <Caption
+      className={cx(styles['upload-queue__progress-caption'], 'u-ellipsis')}
+    >
+      {t('item.remainingTime', {
+        time: formatRemainingTime(durationInSec)
+      })}
+    </Caption>
+  )
+}
+
+const FileUploadProgress = ({ progress }) => {
   return (
     <div className={styles['upload-queue__upload-progress']}>
       <ThresholdBar
@@ -75,11 +88,7 @@ const FileUploadProgress = ({ progress }) => {
         value={progress.loaded}
       />
       {progress.remainingTime ? (
-        <Caption className={styles['upload-queue__progress-caption']}>
-          {t('item.remainingTime', {
-            time: formatRemainingTime(progress.remainingTime)
-          })}
-        </Caption>
+        <RemainingTime durationInSec={progress.remainingTime} />
       ) : null}
     </div>
   )
@@ -101,9 +110,9 @@ const Item = translate()(
     const statusToUse = file.status ? file.status : status
 
     if (statusToUse === LOADING) {
-      statusIcon = (
+      statusIcon = !progress ? (
         <Spinner className="u-ml-half" color={palette['dodgerBlue']} />
-      )
+      ) : null
     } else if (statusToUse === CANCEL) {
       statusIcon = (
         <Icon className="u-ml-half" icon="cross" color={palette['monza']} />
