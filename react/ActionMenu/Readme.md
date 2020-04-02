@@ -109,6 +109,51 @@ const anchorRef = React.createRef();
 </div>
 ```
 
+### ActionMenu within other components and containerElRef
+
+The ActionMenu component is rendered at the root of the DOM tree using a [Portal](https://reactjs.org/docs/portals.html) and a fixed z-index. Since Modals for example have a higher z-index than ActionMenus, an ActionMenu _inside_ a Modal will be displayed behind it, instead of over it.
+
+In that case, we can use the `containerElRef` prop to provide a reference to an element where ActionMenu will be rendered. Here is an example for the most common case, an ActionMenu inside a Modal:
+
+```
+import ActionMenu, { ActionMenuItem, ActionMenuHeader } from './index';
+import Icon from '../Icon';
+import Modal, { ModalDescription } from '../Modal';
+import Filename from '../Filename';
+
+initialState = { modalDisplayed: isTesting(), menuDisplayed: isTesting() };
+
+const showModal = () => setState({ modalDisplayed: true });
+const hideModal = () => setState({ modalDisplayed: false });
+
+const showMenu = () => setState({ menuDisplayed: true });
+const hideMenu = () => setState({ menuDisplayed: false });
+
+const insideModalRef = React.createRef();
+
+<div>
+  <button onClick={showModal}>Show modal</button>
+  {state.modalDisplayed &&
+    <Modal dismissAction={hideModal}>
+      <ModalDescription>
+        <div ref={insideModalRef}>
+          <button onClick={showMenu}>Show action menu</button>
+        </div>
+        {state.menuDisplayed &&
+          <ActionMenu
+            containerElRef={insideModalRef}
+            onClose={hideMenu}>
+            <ActionMenuHeader>
+              <Filename icon="file" filename="my_awesome_paper" extension=".pdf" />
+            </ActionMenuHeader>
+            <ActionMenuItem onClick={() => alert('click')}left={<Icon icon='file' />}>Item 1</ActionMenuItem>
+        </ActionMenu>}
+      </ModalDescription>
+    </Modal>
+  }
+</div>
+```
+
 ### preventOverflow
 
 Set `preventOverflow` to `true` to keep the ActionMenu visible on desktop, even if `anchorElRef` is outside the viewport.
