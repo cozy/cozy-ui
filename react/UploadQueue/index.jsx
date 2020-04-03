@@ -3,7 +3,6 @@ import classNames from 'classnames'
 import { translate } from 'cozy-ui/react/I18n'
 import Icon from '../Icon'
 import Spinner from '../Spinner'
-import Stack from '../Stack'
 import withLocales from '../I18n/withLocales'
 import { useI18n } from '../I18n'
 import ThresholdBar from '../ThresholdBar'
@@ -147,7 +146,7 @@ const Item = translate()(
               className="u-flex-shrink-0 u-mr-1"
             />
           ) : null}
-          <Stack spacing="xs">
+          <div>
             <div data-test-id="upload-queue-item-name" className="u-ellipsis">
               {filename}
               {extension && (
@@ -155,7 +154,7 @@ const Item = translate()(
               )}
             </div>
             {progress ? <FileUploadProgress progress={progress} /> : null}
-          </Stack>
+          </div>
         </div>
         <div className={styles['item-status']}>{statusIcon}</div>
       </div>
