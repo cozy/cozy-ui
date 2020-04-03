@@ -250,7 +250,7 @@ const main = async () => {
     const componentViewport = componentViewportSpec
       ? parseViewportArgument(componentViewportSpec)
       : parsedViewport
-    page.setViewport(componentViewport)
+    await page.setViewport(componentViewport)
     await screenshotComponent(page, {
       component,
       screenshotDir: args.screenshotDir,
