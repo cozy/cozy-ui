@@ -13,7 +13,6 @@ try {
 const path = require('path')
 const fs = require('fs')
 const sortBy = require('lodash/sortBy')
-const flattenDeep = require('lodash/flattenDeep')
 const { ArgumentParser } = require('argparse')
 
 const emptyDirectory = directory => {
@@ -29,6 +28,7 @@ const defaultGetScreenshotName = ({ component, viewport }) =>
 
 const formatViewport = viewport => `${viewport.width}x${viewport.height}`
 
+const pushAll = (arr, items) => arr.push.apply(arr, items)
 /**
  * Screenshot a component to the screenshot directory, taking care of
  * resizing the viewport before-hand so that the viewport fits the
@@ -74,7 +74,8 @@ const fetchAllComponents = async (page, styleguideIndexURL) => {
   // - look for `.rsg--controls-40 a` which is the open isolated for examples
   // - look for its closest data-testid to get the name
   const categoriesName = await page.evaluate(() => {
-    return Array.from(document.querySelectorAll('.rsg--sidebar-4 a'))
+    const sidebarSelector = '.rsg--sidebar-4'
+    return Array.from(document.querySelectorAll(`${sidebarSelector} a`))
       .filter(v => !v.href.includes('?id='))
       .map(x => x.text)
   })
@@ -90,23 +91,35 @@ const fetchAllComponents = async (page, styleguideIndexURL) => {
     await page.goto(cate.link, { waitUntil: 'load', timeout: 0 })
     await sleep(100)
 
-    const links = (await page.evaluate(() => {
-      return Array.from(document.querySelectorAll('.rsg--controls-40 a')).map(
-        x => {
-          const testId = x.closest('div[data-testid]').dataset.testid
-          return {
-            testId,
-            link: x.href
-          }
-        }
+    const componentLinks = await page.evaluate(() => {
+      const componentSectionSelector = '.rsg--root-23'
+      const toolbarSelector = '.rsg--toolbar-11'
+      const openIsolatedButtonSelector = '.rsg--button-21'
+      const componentToolbars = Array.from(
+        document.querySelectorAll(
+          `${componentSectionSelector} ${toolbarSelector}`
+        )
       )
-    })).map(componentInfo => ({
-      ...componentInfo,
-      name: getComponentNameFromTestId(componentInfo.testId)
-    }))
-    allLinks.push(links)
+      return componentToolbars.map(toolbar => {
+        const isolateLink = toolbar.querySelector(openIsolatedButtonSelector)
+        const testId = isolateLink.dataset.testid.replace('-isolate-button', '')
+        return {
+          testId,
+          link: isolateLink.getAttribute('href')
+        }
+      })
+    })
+
+    pushAll(
+      allLinks,
+      componentLinks.map(link => ({
+        ...link,
+        link: 'file://' + link.link,
+        name: getComponentNameFromTestId(link.testId)
+      }))
+    )
   }
-  return flattenDeep(allLinks)
+  return allLinks
 }
 
 /**
