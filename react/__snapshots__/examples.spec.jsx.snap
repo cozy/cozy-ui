@@ -2,7 +2,9 @@
 
 exports[`ActionMenu should render examples: ActionMenu 1`] = `
 "<div>
-  <div><button>Show action menu</button>
+  <div><button role=\\"button\\" class=\\"styles__c-DropdownButton___1JXUA\\">Show action menu<svg class=\\"styles__c-DropdownButton-Icon___ohvD2 styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
+        <use xlink:href=\\"#bottom\\"></use>
+      </svg></button>
     <div>
       <div class=\\"styles__c-actionmenu___22Fp1 styles__c-actionmenu--inline___1SXZa\\">
         <div class=\\"styles__media___cSJMp styles__c-actionmenu-item___gODqd\\">
@@ -31,7 +33,9 @@ exports[`ActionMenu should render examples: ActionMenu 1`] = `
 
 exports[`ActionMenu should render examples: ActionMenu 2`] = `
 "<div>
-  <div><button>Show action menu</button>
+  <div><button role=\\"button\\" class=\\"styles__c-DropdownButton___1JXUA\\">Show action menu<svg class=\\"styles__c-DropdownButton-Icon___ohvD2 styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
+        <use xlink:href=\\"#bottom\\"></use>
+      </svg></button>
     <div>
       <div class=\\"styles__c-actionmenu___22Fp1 styles__c-actionmenu--inline___1SXZa\\">
         <div class=\\"styles__media___cSJMp styles__c-actionmenu-item___gODqd\\">
@@ -60,7 +64,9 @@ exports[`ActionMenu should render examples: ActionMenu 2`] = `
 
 exports[`ActionMenu should render examples: ActionMenu 3`] = `
 "<div>
-  <div><button>Show action menu</button>
+  <div><button role=\\"button\\" class=\\"styles__c-DropdownButton___1JXUA\\">Show action menu<svg class=\\"styles__c-DropdownButton-Icon___ohvD2 styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
+        <use xlink:href=\\"#bottom\\"></use>
+      </svg></button>
     <div>
       <div class=\\"styles__c-actionmenu___22Fp1 styles__c-actionmenu--inline___1SXZa\\">
         <div class=\\"styles__media___cSJMp styles__c-actionmenu-item___gODqd\\">
@@ -77,7 +83,9 @@ exports[`ActionMenu should render examples: ActionMenu 3`] = `
 
 exports[`ActionMenu should render examples: ActionMenu 4`] = `
 "<div>
-  <div><button>Show action menu</button>
+  <div><button role=\\"button\\" class=\\"styles__c-DropdownButton___1JXUA\\">Show action menu<svg class=\\"styles__c-DropdownButton-Icon___ohvD2 styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
+        <use xlink:href=\\"#bottom\\"></use>
+      </svg></button>
     <div>
       <div class=\\"styles__c-actionmenu___22Fp1 styles__c-actionmenu--inline___1SXZa\\">
         <div class=\\"styles__media___cSJMp styles__c-actionmenu-item___gODqd\\">

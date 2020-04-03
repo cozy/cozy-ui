@@ -4,6 +4,7 @@ Use an ActionMenu to show a list of actions. ActionMenus automatically switch th
 
 ```
 import ActionMenu, { ActionMenuItem } from 'cozy-ui/transpiled/react/ActionMenu';
+import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 
 initialState = { menuDisplayed: isTesting() };
@@ -12,7 +13,7 @@ const showMenu = () => setState({ menuDisplayed: true });
 const hideMenu = () => setState({ menuDisplayed: false });
 
 <div>
-  <button onClick={showMenu}>Show action menu</button>
+  <DropdownButton onClick={showMenu}>Show action menu</DropdownButton>
   {state.menuDisplayed &&
     <ActionMenu
       onClose={hideMenu}>
@@ -27,6 +28,7 @@ const hideMenu = () => setState({ menuDisplayed: false });
 
 ```
 import ActionMenu, { ActionMenuItem, ActionMenuHeader } from './index';
+import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Icon from '../Icon';
 import Filename from '../Filename';
 
@@ -36,7 +38,7 @@ const showMenu = () => setState({ menuDisplayed: true });
 const hideMenu = () => setState({ menuDisplayed: false });
 
 <div>
-  <button onClick={showMenu}>Show action menu</button>
+  <DropdownButton onClick={showMenu}>Show action menu</DropdownButton>
   {state.menuDisplayed &&
     <ActionMenu
       onClose={hideMenu}>
@@ -54,6 +56,7 @@ const hideMenu = () => setState({ menuDisplayed: false });
 
 ```
 import ActionMenu, { ActionMenuItem, ActionMenuHeader } from './index';
+import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Icon from '../Icon';
 import Filename from '../Filename';
 
@@ -63,7 +66,7 @@ const showMenu = () => setState({ menuDisplayed: true });
 const hideMenu = () => setState({ menuDisplayed: false });
 
 <div>
-  <button onClick={showMenu}>Show action menu</button>
+  <DropdownButton onClick={showMenu}>Show action menu</DropdownButton>
   {state.menuDisplayed &&
     <ActionMenu
       onClose={hideMenu}>
@@ -81,6 +84,7 @@ The `placement` and `anchorElRef` prop can be used to control the placement of t
 
 ```
 import ActionMenu, { ActionMenuItem } from 'cozy-ui/transpiled/react/ActionMenu';
+import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 
 const testRef = React.createRef();
@@ -93,7 +97,7 @@ const hideMenu = () => setState({ menuDisplayed: false });
 const anchorRef = React.createRef();
 
 <div>
-  <button onClick={showMenu} ref={anchorRef}>Show action menu</button>
+  <DropdownButton onClick={showMenu} ref={anchorRef}>Show action menu</DropdownButton>
   {state.menuDisplayed &&
     <ActionMenu
       anchorElRef={anchorRef}
