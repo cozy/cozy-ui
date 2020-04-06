@@ -29,6 +29,7 @@ const defaultGetScreenshotName = ({ component, viewport }) =>
 
 const formatViewport = viewport => `${viewport.width}x${viewport.height}`
 
+const pushAll = (arr, items) => arr.push.apply(arr, items)
 /**
  * Screenshot a component to the screenshot directory, taking care of
  * resizing the viewport before-hand so that the viewport fits the
@@ -60,7 +61,7 @@ const getComponentNameFromTestId = testId => {
  * of { name, link } describing each component.
  * Components are sorted by name.
  */
-const fetchAllComponents = async (page, styleguideIndexURL) => {
+const fetchAllComponents = async (page, styleguideIndexURL, config) => {
   console.log(`Opening page ${styleguideIndexURL}`)
   await page.goto(styleguideIndexURL, {
     waitUntil: 'load',
@@ -74,7 +75,8 @@ const fetchAllComponents = async (page, styleguideIndexURL) => {
   // - look for `.rsg--controls-40 a` which is the open isolated for examples
   // - look for its closest data-testid to get the name
   const categoriesName = await page.evaluate(() => {
-    return Array.from(document.querySelectorAll('.rsg--sidebar-4 a'))
+    const sidebarSelector = '.rsg--sidebar-4'
+    return Array.from(document.querySelectorAll(`${sidebarSelector} a`))
       .filter(v => !v.href.includes('?id='))
       .map(x => x.text)
   })
@@ -90,23 +92,52 @@ const fetchAllComponents = async (page, styleguideIndexURL) => {
     await page.goto(cate.link, { waitUntil: 'load', timeout: 0 })
     await sleep(100)
 
-    const links = (await page.evaluate(() => {
-      return Array.from(document.querySelectorAll('.rsg--controls-40 a')).map(
-        x => {
-          const testId = x.closest('div[data-testid]').dataset.testid
-          return {
-            testId,
-            link: x.href
-          }
-        }
-      )
-    })).map(componentInfo => ({
-      ...componentInfo,
-      name: getComponentNameFromTestId(componentInfo.testId)
-    }))
-    allLinks.push(links)
+    const componentLinks = flattenDeep(
+      await page.evaluate(config => {
+        const componentSectionSelector = '.rsg--root-23'
+        const exampleToolbarSelector = '.rsg--toolbar-41'
+        const componentToolbarSelector = '.rsg--toolbar-11'
+        const openIsolatedButtonSelector = '.rsg--button-21'
+        const componentContainers = document.querySelectorAll(
+          componentSectionSelector
+        )
+
+        return Array.from(componentContainers, componentContainer => {
+          const componentId = componentContainer.dataset.testid.replace(
+            '-container',
+            ''
+          )
+          const perExampleScreenshot =
+            config[componentId] && config[componentId].perExampleScreenshot
+
+          const isolateButtons = componentContainer.querySelectorAll(
+            `${
+              perExampleScreenshot
+                ? exampleToolbarSelector
+                : componentToolbarSelector
+            } ${openIsolatedButtonSelector}`
+          )
+          return Array.from(isolateButtons).map(btn => {
+            const testId = btn.dataset.testid.replace('-isolate-button', '')
+            return {
+              testId,
+              link: btn.getAttribute('href')
+            }
+          })
+        })
+      }, config)
+    )
+
+    pushAll(
+      allLinks,
+      componentLinks.map(link => ({
+        ...link,
+        link: 'file://' + link.link,
+        name: getComponentNameFromTestId(link.testId)
+      }))
+    )
   }
-  return flattenDeep(allLinks)
+  return allLinks
 }
 
 /**
@@ -235,7 +266,7 @@ const main = async () => {
     args.styleguideDir,
     '/index.html'
   )}`
-  let components = await fetchAllComponents(page, styleguideIndexURL)
+  let components = await fetchAllComponents(page, styleguideIndexURL, config)
   if (args.component) {
     components = components.filter(component =>
       component.name.includes(args.component)

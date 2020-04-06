@@ -3,5 +3,11 @@
     "viewports": {
       "desktop": "1200x700"
     }
+  },
+  "ActionMenu": {
+    "perExampleScreenshot": true
+  },
+  "Modal": {
+    "perExampleScreenshot": true
   }
 }
