@@ -13,6 +13,7 @@ try {
 const path = require('path')
 const fs = require('fs')
 const sortBy = require('lodash/sortBy')
+const flattenDeep = require('lodash/flattenDeep')
 const { ArgumentParser } = require('argparse')
 
 const emptyDirectory = directory => {
@@ -60,7 +61,7 @@ const getComponentNameFromTestId = testId => {
  * of { name, link } describing each component.
  * Components are sorted by name.
  */
-const fetchAllComponents = async (page, styleguideIndexURL) => {
+const fetchAllComponents = async (page, styleguideIndexURL, config) => {
   console.log(`Opening page ${styleguideIndexURL}`)
   await page.goto(styleguideIndexURL, {
     waitUntil: 'load',
@@ -91,24 +92,41 @@ const fetchAllComponents = async (page, styleguideIndexURL) => {
     await page.goto(cate.link, { waitUntil: 'load', timeout: 0 })
     await sleep(100)
 
-    const componentLinks = await page.evaluate(() => {
-      const componentSectionSelector = '.rsg--root-23'
-      const toolbarSelector = '.rsg--toolbar-11'
-      const openIsolatedButtonSelector = '.rsg--button-21'
-      const componentToolbars = Array.from(
-        document.querySelectorAll(
-          `${componentSectionSelector} ${toolbarSelector}`
+    const componentLinks = flattenDeep(
+      await page.evaluate(config => {
+        const componentSectionSelector = '.rsg--root-23'
+        const exampleToolbarSelector = '.rsg--toolbar-41'
+        const componentToolbarSelector = '.rsg--toolbar-11'
+        const openIsolatedButtonSelector = '.rsg--button-21'
+        const componentContainers = document.querySelectorAll(
+          componentSectionSelector
         )
-      )
-      return componentToolbars.map(toolbar => {
-        const isolateLink = toolbar.querySelector(openIsolatedButtonSelector)
-        const testId = isolateLink.dataset.testid.replace('-isolate-button', '')
-        return {
-          testId,
-          link: isolateLink.getAttribute('href')
-        }
-      })
-    })
+
+        return Array.from(componentContainers, componentContainer => {
+          const componentId = componentContainer.dataset.testid.replace(
+            '-container',
+            ''
+          )
+          const perExampleScreenshot =
+            config[componentId] && config[componentId].perExampleScreenshot
+
+          const isolateButtons = componentContainer.querySelectorAll(
+            `${
+              perExampleScreenshot
+                ? exampleToolbarSelector
+                : componentToolbarSelector
+            } ${openIsolatedButtonSelector}`
+          )
+          return Array.from(isolateButtons).map(btn => {
+            const testId = btn.dataset.testid.replace('-isolate-button', '')
+            return {
+              testId,
+              link: btn.getAttribute('href')
+            }
+          })
+        })
+      }, config)
+    )
 
     pushAll(
       allLinks,
@@ -248,7 +266,7 @@ const main = async () => {
     args.styleguideDir,
     '/index.html'
   )}`
-  let components = await fetchAllComponents(page, styleguideIndexURL)
+  let components = await fetchAllComponents(page, styleguideIndexURL, config)
   if (args.component) {
     components = components.filter(component =>
       component.name.includes(args.component)
