@@ -4,6 +4,7 @@
   "header_done": "%{done} sur %{total} élément(s) importé(s)",
   "close": "Fermer",
   "item": {
-    "pending": "En attente"
+    "pending": "En attente",
+    "remainingTime": "%{time} restantes"
   }
 }

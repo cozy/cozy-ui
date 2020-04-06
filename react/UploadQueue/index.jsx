@@ -3,11 +3,14 @@ import classNames from 'classnames'
 import { translate } from 'cozy-ui/react/I18n'
 import Icon from '../Icon'
 import Spinner from '../Spinner'
-import Stack from '../Stack'
 import withLocales from '../I18n/withLocales'
+import { useI18n } from '../I18n'
 import ThresholdBar from '../ThresholdBar'
+import { Caption } from '../Text'
 import palette from '../../stylus/settings/palette.json'
 import styles from './styles.styl'
+import formatDistanceToNow from 'date-fns/distance_in_words_to_now'
+import cx from 'classnames'
 
 import localeEn from './locales/en.json'
 import localeEs from './locales/es.json'
@@ -57,8 +60,37 @@ const Pending = translate()(props => (
   <span className={styles['item-pending']}>{props.t('item.pending')}</span>
 ))
 
+const formatRemainingTime = durationInSec => {
+  const later = Date.now() + durationInSec * 1000
+  return formatDistanceToNow(later)
+}
+
+const RemainingTime = ({ durationInSec }) => {
+  const { t } = useI18n()
+  return (
+    <Caption
+      className={cx(styles['upload-queue__progress-caption'], 'u-ellipsis')}
+    >
+      {t('item.remainingTime', {
+        time: formatRemainingTime(durationInSec)
+      })}
+    </Caption>
+  )
+}
+
 const FileUploadProgress = ({ progress }) => {
-  return <ThresholdBar threshold={progress.total} value={progress.loaded} />
+  return (
+    <div className={styles['upload-queue__upload-progress']}>
+      <ThresholdBar
+        className={styles['upload-queue__threshold-bar']}
+        threshold={progress.total}
+        value={progress.loaded}
+      />
+      {progress.remainingTime ? (
+        <RemainingTime durationInSec={progress.remainingTime} />
+      ) : null}
+    </div>
+  )
 }
 
 const Item = translate()(
@@ -77,9 +109,9 @@ const Item = translate()(
     const statusToUse = file.status ? file.status : status
 
     if (statusToUse === LOADING) {
-      statusIcon = (
+      statusIcon = !progress ? (
         <Spinner className="u-ml-half" color={palette['dodgerBlue']} />
-      )
+      ) : null
     } else if (statusToUse === CANCEL) {
       statusIcon = (
         <Icon className="u-ml-half" icon="cross" color={palette['monza']} />
@@ -114,7 +146,7 @@ const Item = translate()(
               className="u-flex-shrink-0 u-mr-1"
             />
           ) : null}
-          <Stack spacing="xs">
+          <div>
             <div data-test-id="upload-queue-item-name" className="u-ellipsis">
               {filename}
               {extension && (
@@ -122,7 +154,7 @@ const Item = translate()(
               )}
             </div>
             {progress ? <FileUploadProgress progress={progress} /> : null}
-          </Stack>
+          </div>
         </div>
         <div className={styles['item-status']}>{statusIcon}</div>
       </div>

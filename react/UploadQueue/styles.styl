@@ -4,6 +4,7 @@
 @require 'settings/breakpoints.styl'
 @require 'settings/z-index.styl'
 @require 'settings/spaces.styl'
+@require 'settings/typography.styl'
 
 $coz-bar-size=3rem
 
@@ -15,6 +16,20 @@ $coz-bar-size=3rem
     flex-direction   column
     max-width 90%
     width    30rem
+
+.upload-queue__threshold-bar
+    min-width 10rem
+    margin-right 1rem
+
+.upload-queue__progress-caption
+    line-height $caption-font-size
+    height 1rem
+
+.upload-queue__upload-progress
+    justify-content center
+    align-items center
+    display flex
+    margin-top 0.125rem // Must tweak a bit the margin-top
 
 .upload-queue--popover
     @extend $popover

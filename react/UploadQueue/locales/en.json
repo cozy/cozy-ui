@@ -4,6 +4,7 @@
   "header_done": "Uploaded %{done} out of %{total} successfully",
   "close": "close",
   "item": {
-    "pending": "Pending"
+    "pending": "Pending",
+    "remainingTime": "%{time} remaining"
   }
 }

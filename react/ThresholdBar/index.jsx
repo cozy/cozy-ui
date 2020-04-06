@@ -11,13 +11,17 @@ import styles from './styles.styl'
  * - Otherwise, the bar is red an a tick indicates the threshold amount
  *   so that we see how far the threshold has been exceeded
  */
-function ThresholdBar({ threshold, value }) {
+function ThresholdBar({ threshold, value, className }) {
   const sup = value > threshold
   return (
     <div
-      className={cx(styles.ThresholdBar, {
-        [styles['ThresholdBar--exceeded']]: sup
-      })}
+      className={cx(
+        styles.ThresholdBar,
+        {
+          [styles['ThresholdBar--exceeded']]: sup
+        },
+        className
+      )}
     >
       <div className={styles.ThresholdBar__bg}>
         <div
