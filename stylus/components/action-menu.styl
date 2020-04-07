@@ -1,5 +1,6 @@
 @require './popover.styl'
 @require '../tools/mixins'
+@require '../settings/spaces.styl'
 
 $actionmenu
     @extend $popover
@@ -8,8 +9,7 @@ $actionmenu
         margin-top 0
 
 $actionmenu--inline
-    width auto
-    min-width rem(220)
+    width rem(256)
 
 $actionmenu-header
     box-sizing border-box
@@ -18,7 +18,7 @@ $actionmenu-header
     min-height rem(64)
 
 $actionmenu-item
-    height rem(48)
+    padding spacing_values.s 0
     cursor pointer
 
     &:hover
