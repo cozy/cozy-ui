@@ -12,13 +12,18 @@ const ActionMenuWrapper = ({
   inline,
   onClose,
   anchorElRef,
+  containerElRef,
   placement,
   preventOverflow,
   children
 }) => {
-  const getAnchorElement = useCallback(() => {
-    return anchorElRef.current
-  }, [anchorElRef])
+  const getElementFromRefCallback = ref =>
+    useCallback(() => {
+      return ref ? ref.current : undefined
+    }, [ref])
+
+  const getAnchorElement = getElementFromRefCallback(anchorElRef)
+  const getContainerElement = getElementFromRefCallback(containerElRef)
   const normalOverflowModifiers = {
     preventOverflow: { enabled: false },
     hide: { enabled: false }
@@ -27,12 +32,11 @@ const ActionMenuWrapper = ({
   return inline ? (
     <Popper
       anchorEl={getAnchorElement}
+      container={getContainerElement}
       modifiers={preventOverflow ? null : normalOverflowModifiers}
       open
       placement={placement}
-      disablePortal={true}
       style={{
-        position: 'fixed',
         zIndex: getCssVariableValue('zIndex-popover')
       }}
     >
@@ -50,6 +54,7 @@ const ActionMenu = ({
   placement,
   preventOverflow,
   anchorElRef,
+  containerElRef,
   breakpoints: { isDesktop }
 }) => {
   const shouldDisplayInline = isDesktop
@@ -60,6 +65,7 @@ const ActionMenu = ({
         onClose={onClose}
         inline={shouldDisplayInline}
         anchorElRef={anchorElRef || containerRef}
+        containerElRef={containerElRef}
         placement={placement}
         preventOverflow={preventOverflow}
       >
@@ -100,7 +106,9 @@ ActionMenu.propTypes = {
   /** Will keep the menu visible when scrolling */
   preventOverflow: PropTypes.bool,
   /** The reference element for the menu placement and overflow prevention. */
-  anchorElRef: PropTypes.object
+  anchorElRef: PropTypes.object,
+  /** ActionMenu will be rendered inside the elemnt of this ref. Useful when rendering inside Modals for example. */
+  containerElRef: PropTypes.object
 }
 
 ActionMenu.defaultProps = {
