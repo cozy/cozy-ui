@@ -36,9 +36,10 @@ const ERROR_STATUSES = [CONFLICT, NETWORK, QUOTA]
 
 const splitFilename = filename => {
   const parts = filename.split('.')
+  const hasExtension = parts.length > 1
   return {
-    filename: parts.slice(0, -1).join('.') + '.',
-    extension: parts.length > 1 ? parts[parts.length - 1] : ''
+    filename: hasExtension ? parts.slice(0, -1).join('.') + '.' : parts[0],
+    extension: hasExtension ? parts[parts.length - 1] : ''
   }
 }
 
