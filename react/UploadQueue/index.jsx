@@ -11,6 +11,7 @@ import palette from '../../stylus/settings/palette.json'
 import styles from './styles.styl'
 import formatDistanceToNow from 'date-fns/distance_in_words_to_now'
 import cx from 'classnames'
+import { splitFilename } from 'cozy-client/dist/models/file'
 
 import localeEn from './locales/en.json'
 import localeEs from './locales/es.json'
@@ -33,15 +34,6 @@ const QUOTA = 'quota'
 const NETWORK = 'network'
 const DONE_STATUSES = [CREATED, UPDATED]
 const ERROR_STATUSES = [CONFLICT, NETWORK, QUOTA]
-
-const splitFilename = filename => {
-  const parts = filename.split('.')
-  const hasExtension = parts.length > 1
-  return {
-    filename: hasExtension ? parts.slice(0, -1).join('.') + '.' : parts[0],
-    extension: hasExtension ? parts[parts.length - 1] : ''
-  }
-}
 
 export const uploadStatus = {
   CANCEL,
@@ -97,7 +89,7 @@ const FileUploadProgress = ({ progress }) => {
 const Item = translate()(
   ({ file, status, isDirectory, progress, getMimeTypeIcon }) => {
     const { CANCEL, LOADING, DONE_STATUSES, ERROR_STATUSES } = uploadStatus
-    const { filename, extension } = splitFilename(file.name)
+    const { filename, extension } = splitFilename(file)
     let statusIcon
     let done = false
     let error = false
