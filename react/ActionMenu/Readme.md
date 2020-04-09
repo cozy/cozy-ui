@@ -116,32 +116,27 @@ The ActionMenu component is rendered at the root of the DOM tree using a [Portal
 In that case, we can use the `containerElRef` prop to provide a reference to an element where ActionMenu will be rendered. Here is an example for the most common case, an ActionMenu inside a Modal:
 
 ```
+import { useState, useRef } from 'react'
 import ActionMenu, { ActionMenuItem, ActionMenuHeader } from './index';
 import Icon from '../Icon';
 import Modal, { ModalDescription } from '../Modal';
 import Filename from '../Filename';
 
-initialState = { modalDisplayed: isTesting(), menuDisplayed: isTesting() };
+initialState = { modalDisplayed: isTesting() };
 
 const showModal = () => setState({ modalDisplayed: true });
 const hideModal = () => setState({ modalDisplayed: false });
 
-const showMenu = () => setState({ menuDisplayed: true });
-const hideMenu = () => setState({ menuDisplayed: false });
 
-const insideModalRef = React.createRef();
-
-<div>
-  <button onClick={showModal}>Show modal</button>
-  {state.modalDisplayed &&
-    <Modal dismissAction={hideModal}>
+const ExampleModalContent = () => {
+  const [menuDisplayed, setMenuDisplayed] = useState(isTesting())
+    const showMenu = () => setMenuDisplayed(true);
+    const hideMenu = () => setMenuDisplayed(false);
+    return (
       <ModalDescription>
-        <div ref={insideModalRef}>
           <button onClick={showMenu}>Show action menu</button>
-        </div>
-        {state.menuDisplayed &&
+        {menuDisplayed &&
           <ActionMenu
-            containerElRef={insideModalRef}
             onClose={hideMenu}>
             <ActionMenuHeader>
               <Filename icon="file" filename="my_awesome_paper" extension=".pdf" />
@@ -149,6 +144,14 @@ const insideModalRef = React.createRef();
             <ActionMenuItem onClick={() => alert('click')}left={<Icon icon='file' />}>Item 1</ActionMenuItem>
         </ActionMenu>}
       </ModalDescription>
+    )
+}
+
+<div>
+  <button onClick={showModal}>Show modal</button>
+  {state.modalDisplayed &&
+    <Modal dismissAction={hideModal}>
+      <ExampleModalContent />
     </Modal>
   }
 </div>

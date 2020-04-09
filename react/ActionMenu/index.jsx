@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useContext } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import ClickAwayListener from '@material-ui/core/ClickAwayListener'
@@ -8,6 +8,8 @@ import BottomDrawer from '../BottomDrawer'
 import withBreakpoints from '../helpers/withBreakpoints'
 import Popper from '@material-ui/core/Popper'
 import { getCssVariableValue } from '../utils/color'
+import PopperContainerContext from '../PopperContainerContext'
+
 const ActionMenuWrapper = ({
   inline,
   onClose,
@@ -22,8 +24,11 @@ const ActionMenuWrapper = ({
       return ref ? ref.current : undefined
     }, [ref])
 
+  const popperContainerRef = useContext(PopperContainerContext)
   const getAnchorElement = getElementFromRefCallback(anchorElRef)
-  const getContainerElement = getElementFromRefCallback(containerElRef)
+
+  const containerRef = popperContainerRef || containerElRef
+  const getContainerElement = getElementFromRefCallback(containerRef)
   const normalOverflowModifiers = {
     preventOverflow: { enabled: false },
     hide: { enabled: false }
