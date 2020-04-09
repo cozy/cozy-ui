@@ -30,7 +30,7 @@ const data = {
     },
     status: 'loading'
   }, {
-    file: { name: 'File.jpg' },
+    file: { name: 'Directory' },
     status: 'pending'
   }],
   doneCount: 1,
