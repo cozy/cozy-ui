@@ -101,6 +101,24 @@ exports[`ActionMenu should render examples: ActionMenu 4`] = `
 `;
 
 exports[`ActionMenu should render examples: ActionMenu 5`] = `
+"<div><button>Toggle custom fixed element</button>
+  <div style=\\"position: fixed; height: 100px; width: 100px; bottom: 0px; top: 0px; margin: auto; left: 0px; right: 0px; z-index: 1;\\">
+    <div></div><button>Open action menu</button>
+    <div>
+      <div class=\\"styles__c-actionmenu___22Fp1 styles__c-actionmenu--inline___1SXZa\\">
+        <div class=\\"styles__media___cSJMp styles__c-actionmenu-item___gODqd\\">
+          <div class=\\"styles__img___3SHpG u-mh-1\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+              <use xlink:href=\\"#file\\"></use>
+            </svg></div>
+          <div class=\\"styles__bd___1Uv-F u-mr-1\\">Item 1</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`ActionMenu should render examples: ActionMenu 6`] = `
 "<div>
   <div><button>Show modal</button></div>
 </div>"
