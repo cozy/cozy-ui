@@ -7,23 +7,26 @@ exports[`ActionMenu should render examples: ActionMenu 1`] = `
       </svg></button>
     <div>
       <div class=\\"styles__c-actionmenu___22Fp1 styles__c-actionmenu--inline___1SXZa\\">
-        <div class=\\"styles__media___cSJMp styles__c-actionmenu-item___gODqd\\">
+        <div class=\\"styles__media___cSJMp styles__media--top___K9w0I styles__c-actionmenu-item___gODqd\\">
           <div class=\\"styles__img___3SHpG u-mh-1\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <use xlink:href=\\"#file\\"></use>
             </svg></div>
           <div class=\\"styles__bd___1Uv-F u-mr-1\\">Item 1</div>
         </div>
-        <div class=\\"styles__media___cSJMp styles__c-actionmenu-item___gODqd\\">
+        <div class=\\"styles__media___cSJMp styles__media--top___K9w0I styles__c-actionmenu-item___gODqd\\">
           <div class=\\"styles__img___3SHpG u-mh-1\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <use xlink:href=\\"#right\\"></use>
             </svg></div>
           <div class=\\"styles__bd___1Uv-F u-mr-1\\">Item 2</div>
         </div>
-        <div class=\\"styles__media___cSJMp styles__c-actionmenu-item___gODqd\\">
+        <div class=\\"styles__media___cSJMp styles__media--top___K9w0I styles__c-actionmenu-item___gODqd\\">
           <div class=\\"styles__img___3SHpG u-mh-1\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <use xlink:href=\\"#file\\"></use>
             </svg></div>
-          <div class=\\"styles__bd___1Uv-F u-mr-1\\">Item 3</div>
+          <div class=\\"styles__bd___1Uv-F u-mr-1\\">
+            <div>Item 3 <div class=\\"u-caption u-mt-half\\">Descriptive text to elaborate on what item 3 does.</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -38,19 +41,19 @@ exports[`ActionMenu should render examples: ActionMenu 2`] = `
       </svg></button>
     <div>
       <div class=\\"styles__c-actionmenu___22Fp1 styles__c-actionmenu--inline___1SXZa\\">
-        <div class=\\"styles__media___cSJMp styles__c-actionmenu-item___gODqd\\">
+        <div class=\\"styles__media___cSJMp styles__media--top___K9w0I styles__c-actionmenu-item___gODqd\\">
           <div class=\\"styles__img___3SHpG u-mh-1\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <use xlink:href=\\"#file\\"></use>
             </svg></div>
           <div class=\\"styles__bd___1Uv-F u-mr-1\\">Item 1</div>
         </div>
-        <div class=\\"styles__media___cSJMp styles__c-actionmenu-item___gODqd\\">
+        <div class=\\"styles__media___cSJMp styles__media--top___K9w0I styles__c-actionmenu-item___gODqd\\">
           <div class=\\"styles__img___3SHpG u-mh-1\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <use xlink:href=\\"#right\\"></use>
             </svg></div>
           <div class=\\"styles__bd___1Uv-F u-mr-1\\">Item 2</div>
         </div>
-        <div class=\\"styles__media___cSJMp styles__c-actionmenu-item___gODqd\\">
+        <div class=\\"styles__media___cSJMp styles__media--top___K9w0I styles__c-actionmenu-item___gODqd\\">
           <div class=\\"styles__img___3SHpG u-mh-1\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <use xlink:href=\\"#file\\"></use>
             </svg></div>
@@ -69,7 +72,7 @@ exports[`ActionMenu should render examples: ActionMenu 3`] = `
       </svg></button>
     <div>
       <div class=\\"styles__c-actionmenu___22Fp1 styles__c-actionmenu--inline___1SXZa\\">
-        <div class=\\"styles__media___cSJMp styles__c-actionmenu-item___gODqd\\">
+        <div class=\\"styles__media___cSJMp styles__media--top___K9w0I styles__c-actionmenu-item___gODqd\\">
           <div class=\\"styles__img___3SHpG u-mh-1\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <use xlink:href=\\"#file\\"></use>
             </svg></div>
@@ -88,7 +91,7 @@ exports[`ActionMenu should render examples: ActionMenu 4`] = `
       </svg></button>
     <div>
       <div class=\\"styles__c-actionmenu___22Fp1 styles__c-actionmenu--inline___1SXZa\\">
-        <div class=\\"styles__media___cSJMp styles__c-actionmenu-item___gODqd\\">
+        <div class=\\"styles__media___cSJMp styles__media--top___K9w0I styles__c-actionmenu-item___gODqd\\">
           <div class=\\"styles__img___3SHpG u-mh-1\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <use xlink:href=\\"#file\\"></use>
             </svg></div>

@@ -135,7 +135,11 @@ const ActionMenuItem = ({ left, children, right, onClick }) => {
   }
 
   return (
-    <Media className={styles['c-actionmenu-item']} onClick={onClickEnhanced}>
+    <Media
+      className={styles['c-actionmenu-item']}
+      onClick={onClickEnhanced}
+      align="top"
+    >
       {left && <Img className="u-mh-1">{left}</Img>}
       <Bd className={left ? 'u-mr-1' : 'u-mh-1'}>{children}</Bd>
       {right && <Img className="u-mr-1">{right}</Img>}
