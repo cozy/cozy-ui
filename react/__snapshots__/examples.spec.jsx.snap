@@ -109,7 +109,7 @@ exports[`ActionMenu should render examples: ActionMenu 5`] = `
     <div></div><button>Open action menu</button>
     <div>
       <div class=\\"styles__c-actionmenu___22Fp1 styles__c-actionmenu--inline___1SXZa\\">
-        <div class=\\"styles__media___cSJMp styles__c-actionmenu-item___gODqd\\">
+        <div class=\\"styles__media___cSJMp styles__media--top___K9w0I styles__c-actionmenu-item___gODqd\\">
           <div class=\\"styles__img___3SHpG u-mh-1\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <use xlink:href=\\"#file\\"></use>
             </svg></div>
