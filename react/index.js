@@ -104,3 +104,4 @@ export {
 } from './Labs/ExperimentalDialog'
 
 export { default as BarContextProvider } from './BarContextProvider'
+export { default as BarTitle } from './BarTitle'
