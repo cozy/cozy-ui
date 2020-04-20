@@ -108,7 +108,8 @@ module.exports = {
         '../react/ActionMenu/index.jsx',
         '../react/Menu/index.jsx',
         '../react/Tabs/index.jsx',
-        '../react/AppLinker/index.jsx'
+        '../react/AppLinker/index.jsx',
+        '../react/Breadcrumbs/index.jsx'
       ]
     },
     {
