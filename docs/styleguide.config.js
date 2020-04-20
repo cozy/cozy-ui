@@ -48,7 +48,8 @@ module.exports = {
         '../react/Toggle/index.jsx',
         '../react/FileInput/index.jsx',
         '../react/DateMonthPicker/index.jsx',
-        '../react/NestedSelect/NestedSelect.jsx'
+        '../react/NestedSelect/NestedSelect.jsx',
+        '../react/Stepper/index.jsx'
       ]
     },
     {
