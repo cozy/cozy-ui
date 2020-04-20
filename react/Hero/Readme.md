@@ -39,6 +39,7 @@ const BLUE = '#2d8af2';
   </Sections>
   <CTA>
     <Button
+      extension="full"
       label={t('Onboarding.connect-bank-account')}
       onClick={() => flash(t('ComingSoon.description'))} />
   </CTA>

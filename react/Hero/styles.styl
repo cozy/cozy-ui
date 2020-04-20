@@ -1,5 +1,6 @@
 @require 'settings/breakpoints.styl'
 @require 'tools/mixins'
+@require 'settings/spaces.styl'
 
 .Hero
     margin-left auto
@@ -29,10 +30,22 @@
     &-section
         max-width rem(300)
         text-align center
+        flex-grow 1
+        flex-basis 100%
 
         +small-screen()
             max-width auto
             margin-bottom rem(32)
 
+    &-section + &-section
+        margin-left spacing_values.xl
+
+        +small-screen()
+            margin-left 0
+
     &-cta
         text-align center
+        max-width 32rem
+        margin-left auto
+        margin-right auto
+        margin-top spacing_values.xl
