@@ -1,0 +1,42 @@
+@require 'settings/spaces'
+@require 'settings/typography'
+
+.Breadcrumb
+    display flex
+    align-items center
+
+.Breadcrumb__previousButton
+    margin-right (spacing_values.m)
+    cursor pointer
+
+    .Breadcrumb--default &
+        color var(--charcoalGrey)
+
+    .Breadcrumb--primary &
+        color var(--primaryContrastTextColor)
+
+.Breadcrumb__items
+    flex-grow 1
+
+    .Breadcrumb--default &
+        color var(--charcoalGrey)
+
+    .Breadcrumb--primary &
+        color var(--primaryContrastTextColor)
+
+.Breadcrumb__previousItems
+    display flex
+
+.BreadcrumbItem
+    font-size $small-font-size
+    line-height 1
+
+.BreadcrumbItem--current
+    font-size $h1-font-size
+    font-weight bold
+    line-height 1.67
+
+.BreadcrumbSeparator
+    display inline-block
+    margin-left (spacing_values.xs / 4)
+    margin-right (spacing_values.xs / 4)
