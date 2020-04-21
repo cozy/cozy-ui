@@ -3,8 +3,14 @@ import Icon from '../Icon'
 import styles from './styles.styl'
 import cx from 'classnames'
 
-export const NavItem = ({ children, ...restProps }) => (
-  <li className={styles['c-nav-item']} {...restProps}>
+export const NavItem = ({ children, secondary, ...restProps }) => (
+  <li
+    className={cx(
+      styles['c-nav-item'],
+      secondary ? styles['c-nav-item-secondary'] : null
+    )}
+    {...restProps}
+  >
     {children}
   </li>
 )
@@ -18,11 +24,12 @@ export const NavLink = {
   activeClassName: styles['is-active']
 }
 
-export const genNavLink = RRNavLink => ({ to, children }) => (
+export const genNavLink = RRNavLink => ({ to, children, ...rest }) => (
   <RRNavLink
     to={to}
     className={NavLink.className}
     activeClassName={NavLink.activeClassName}
+    {...rest}
   >
     {children}
   </RRNavLink>

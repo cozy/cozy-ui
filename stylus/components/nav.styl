@@ -1,5 +1,6 @@
 @require '../settings/breakpoints'
 @require '../settings/z-index'
+@require '../settings/typography'
 @require '../tools/mixins'
 
 /*------------------------------------*\
@@ -22,6 +23,8 @@ $nav-item
     position        relative
     z-index         $app-index
     height          rem(48)
+    box-sizing      border-box
+    cursor          pointer
 
     &:hover::before
         content        ''
@@ -32,7 +35,7 @@ $nav-item
         left 0
         right rem(16)
         bottom 0
-        background     var(--silver)
+        background     rgba(0, 0, 0, .10)
 
         // Prevent double tap on tablets
         @media (hover: none)
@@ -79,6 +82,7 @@ $nav-item-text
 
 $nav-link
     display              flex
+    box-shadow           border-box
     padding-left         rem(24)
     padding-right        rem(16)
     line-height          1.5
@@ -126,3 +130,45 @@ $nav-link
     @media not all and (pointer: fine)
         &:hover
             color var(--slateGrey)
+
+
+$nav-item-secondary
+    height auto
+    margin-top .125rem
+
+    +medium-screen()
+        &
+            display none
+
+
+    &:hover::before
+        content        ''
+        position       absolute
+        z-index        $below-index
+        border-radius  rem(3 0 0 3)
+        top 0
+        right 0
+        left rem(48)
+        bottom 0
+        background     rgba(0, 0, 0, .10)
+
+        // Prevent double tap on tablets
+        @media (hover: none)
+            content none
+
+$nav-link-secondary
+    padding .5rem 1rem
+    margin-left 3rem
+    border-radius 4px 0 0 4px
+    box-shadow none
+    font-size $small-font-size
+    color var(--charcoalGrey)
+    text-decoration none
+    height auto
+
+    &.is-active
+        color white
+        border-right 1px solid var(--slateGrey)
+        background-color var(--slateGrey)
+
+
