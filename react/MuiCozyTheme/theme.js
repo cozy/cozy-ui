@@ -105,6 +105,11 @@ normalTheme.overrides = {
       marginBottom: '1rem'
     }
   },
+  MuiStepConnector: {
+    line: {
+      borderColor: 'var(--coolGrey)'
+    }
+  },
   MuiExpansionPanelSummary: {
     expanded: {},
     root: {
