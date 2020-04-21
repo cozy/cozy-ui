@@ -2326,7 +2326,7 @@ exports[`Hero should render examples: Hero 1`] = `
         <p class=\\" \\">Automatic follow-up of your medical expenses</p>
       </div>
     </div>
-    <p class=\\" styles__Hero-cta___2KhwU\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Connect your bank accounts</span></span></button></p>
+    <p class=\\" styles__Hero-cta___2KhwU\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--full___2VmR1 styles__c-btn--center___16_Xh\\"><span><span>Connect your bank accounts</span></span></button></p>
   </div>
 </div>"
 `;
