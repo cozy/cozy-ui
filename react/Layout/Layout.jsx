@@ -17,9 +17,7 @@ export const Layout = ({ children, className, monoColumn, ...rest }) => {
   )
 }
 
-export const Main = ({ children, ...rest }) => {
-  return <main {...rest}>{children}</main>
-}
+export const Main = ({ children, ...rest }) => <main {...rest}>{children}</main>
 
 export class Content extends Component {
   render() {
