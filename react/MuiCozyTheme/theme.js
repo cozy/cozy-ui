@@ -21,6 +21,12 @@ export const normalTheme = createMuiTheme({
       color: 'white'
     }
   },
+  props: {
+    MuiButtonBase: {
+      // The properties to apply
+      disableRipple: true // No more ripple, on the whole application 💣!
+    }
+  },
   shape: {
     borderRadius: defaultValues.borderRadius
   },
