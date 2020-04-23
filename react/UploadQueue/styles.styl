@@ -26,7 +26,6 @@ $coz-bar-size=3rem
     height 1rem
 
 .upload-queue__upload-progress
-    justify-content center
     align-items center
     display flex
     margin-top 0.125rem // Must tweak a bit the margin-top
@@ -107,21 +106,10 @@ progress.upload-queue-progress::-moz-progress-bar
 .upload-queue-item
     height          3rem
     box-sizing      border-box
-    display         flex
-    flex-direction  row
-    align-items     center
-    flex            0 0 auto
-    width           100%
     border-bottom   .0625rem solid var(--silver)
-    max-width       'calc(100vw - %s)' % 13.75rem
 
     .item-file
-        flex        0 0 85%
-        display flex
-        align-items center
-        padding spacing_values.m
         user-select none
-        box-sizing  border-box
         color          var(--charcoalGrey)
         overflow hidden
 
@@ -130,7 +118,7 @@ progress.upload-queue-progress::-moz-progress-bar
 
     .item-status
         flex       0 0 15%
-        text-align center
+        text-align right
 
     .item-pending
         text-transform uppercase
