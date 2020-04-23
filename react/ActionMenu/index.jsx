@@ -80,7 +80,7 @@ const ActionMenu = ({
           })}
         >
           {React.Children.map(children, child =>
-            child.type === ActionMenuHeader && isDesktop ? null : child
+            child && child.type === ActionMenuHeader && isDesktop ? null : child
           )}
         </div>
       </ActionMenuWrapper>
