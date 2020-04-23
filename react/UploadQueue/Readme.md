@@ -18,10 +18,10 @@ const initialState = {
 
 const data = {
   queue: [{
-    file: { name: 'Photo.jpg' },
+    file: { name: 'Photo.jpg', type: 'file' },
     status: 'created'
   }, {
-    file: { name: 'Readme.txt' },
+    file: { name: 'File with a very long name - really long - 2020/04/16.txt', type: 'file' },
     progress: {
       loaded: 100,
       total: 400,

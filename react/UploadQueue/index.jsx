@@ -12,7 +12,7 @@ import styles from './styles.styl'
 import formatDistanceToNow from 'date-fns/distance_in_words_to_now'
 import cx from 'classnames'
 import { splitFilename } from 'cozy-client/dist/models/file'
-
+import { Media, Bd, Img } from '../Media'
 import localeEn from './locales/en.json'
 import localeEs from './locales/es.json'
 import localeFr from './locales/fr.json'
@@ -124,33 +124,33 @@ const Item = translate()(
     }
 
     return (
-      <div
+      <Media
         data-test-id="upload-queue-item"
-        className={classNames(styles['upload-queue-item'], {
+        className={classNames('u-ph-1', styles['upload-queue-item'], {
           [styles['upload-queue-item--done']]: done,
           [styles['upload-queue-item--error']]: error
         })}
       >
-        <div className={styles['item-file']}>
-          {getMimeTypeIcon ? (
+        {getMimeTypeIcon ? (
+          <Img>
             <Icon
               icon={getMimeTypeIcon(isDirectory, file.name, file.type)}
               size={32}
-              className="u-flex-shrink-0 u-mr-1"
+              className="u-mr-1"
             />
-          ) : null}
-          <div>
-            <div data-test-id="upload-queue-item-name" className="u-ellipsis">
-              {filename}
-              {extension && (
-                <span className={styles['item-ext']}>{extension}</span>
-              )}
-            </div>
-            {progress ? <FileUploadProgress progress={progress} /> : null}
+          </Img>
+        ) : null}
+        <Bd className={styles['item-file']}>
+          <div data-test-id="upload-queue-item-name" className="u-ellipsis">
+            {filename}
+            {extension && (
+              <span className={styles['item-ext']}>{extension}</span>
+            )}
           </div>
-        </div>
-        <div className={styles['item-status']}>{statusIcon}</div>
-      </div>
+          {progress ? <FileUploadProgress progress={progress} /> : null}
+        </Bd>
+        <Img className={styles['item-status']}>{statusIcon}</Img>
+      </Media>
     )
   }
 )
