@@ -21,6 +21,18 @@ const data = {
     file: { name: 'Photo.jpg', type: 'file' },
     status: 'created'
   }, {
+    file: { name: 'Photo - conflict error.jpg', type: 'file' },
+    status: 'conflict'
+  }, {
+    file: { name: 'Photo - quota error.jpg', type: 'file' },
+    status: 'quota'
+  }, {
+    file: { name: 'Photo - network error.jpg', type: 'file' },
+    status: 'network'
+  }, {
+    file: { name: 'Photo - generic failure error.jpg', type: 'file' },
+    status: 'failed'
+  }, {
     file: { name: 'File with a very long name - really long - 2020/04/16.txt', type: 'file' },
     progress: {
       loaded: 100,
