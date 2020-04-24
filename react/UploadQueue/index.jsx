@@ -33,7 +33,7 @@ const CONFLICT = 'conflict'
 const QUOTA = 'quota'
 const NETWORK = 'network'
 const DONE_STATUSES = [CREATED, UPDATED]
-const ERROR_STATUSES = [CONFLICT, NETWORK, QUOTA]
+const ERROR_STATUSES = [CONFLICT, NETWORK, QUOTA, FAILED]
 
 export const uploadStatus = {
   CANCEL,
@@ -119,7 +119,7 @@ const Item = translate()(
       statusIcon = (
         <Icon className="u-ml-half" icon="check" color={palette['emerald']} />
       )
-    } else {
+    } else if (statusToUse === PENDING) {
       statusIcon = <Pending />
     }
 
