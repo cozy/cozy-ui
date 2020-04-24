@@ -108,7 +108,7 @@ class NestedSelect extends Component {
           ) : null}
           {children.map(item => (
             <ItemRow
-              key={item.title}
+              key={item.key || item.title}
               item={item}
               onClick={this.handleClickItem}
               isSelected={isSelectedWithLevel(item)}
