@@ -2,25 +2,10 @@ import React from 'react'
 import { mount } from 'enzyme'
 
 import ActionMenu, { ActionMenuItem } from './'
+import { fixPopperTesting } from '../Popper/testing'
 
 describe('ActionMenu', () => {
-  let createRangeBackup
-
-  beforeAll(() => {
-    createRangeBackup = global.document.createRange
-    global.document.createRange = jest.fn(() => ({
-      setStart: () => {},
-      setEnd: () => {},
-      commonAncestorContainer: {
-        nodeName: 'BODY',
-        ownerDocument: document
-      }
-    }))
-  })
-
-  afterAll(() => {
-    global.document.createRange = createRangeBackup
-  })
+  fixPopperTesting()
 
   it('should support null children', () => {
     const comp = mount(
