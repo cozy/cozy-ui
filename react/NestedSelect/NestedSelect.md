@@ -11,8 +11,10 @@ const Image = ({ letter }) => (
   </Circle>
 )
 
-const letterOption = letter => ({
+const letterOption = (letter, description, key) => ({
   title: letter,
+  description,
+  key,
   icon: <Image letter={letter} />
 })
 
@@ -26,12 +28,13 @@ const options = {
         letterOption('B2')
       ]
     },
-    letterOption('C'),
+    letterOption('C', 'C for car'),
     letterOption('D'),
     letterOption('E'),
     letterOption('F'),
     letterOption('G'),
-    letterOption('H'),
+    letterOption('H', 'H for hero', 'hero'),
+    letterOption('H', 'H for helicopter', 'helicopter'),
     letterOption('I'),
     letterOption('J'),
     letterOption('K'),

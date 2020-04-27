@@ -108,7 +108,7 @@ class NestedSelect extends Component {
           ) : null}
           {children.map(item => (
             <ItemRow
-              key={item.title}
+              key={item.key || item.title}
               item={item}
               onClick={this.handleClickItem}
               isSelected={isSelectedWithLevel(item)}
@@ -128,7 +128,13 @@ NestedSelect.defaultProps = {
 
 const ItemPropType = PropTypes.shape({
   icon: PropTypes.element,
+  /** Key used for the item, if not passed, title is used */
+  key: PropTypes.string,
+  /** Label used for the item */
   title: PropTypes.string.isRequired,
+  /** Description of the item */
+  description: PropTypes.string,
+  /** Options below the current one */
   children: PropTypes.array
 })
 
@@ -183,6 +189,7 @@ export const ItemRow = ({ item, onClick, isSelected }) => {
         dense
         image={item.icon}
         primaryText={item.title}
+        secondaryText={item.description}
         onClick={() => onClick(item)}
         right={
           item.children && item.children.length > 0 ? (
