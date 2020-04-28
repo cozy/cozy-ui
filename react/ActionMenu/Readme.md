@@ -18,7 +18,7 @@ const hideMenu = () => setState({ menuDisplayed: false });
   {state.menuDisplayed &&
     <ActionMenu
       onClose={hideMenu}>
-      <ActionMenuItem left={<Icon icon='file' />}>Item 1</ActionMenuItem>
+      <ActionMenuItem left={<Icon icon='file' />} right={<Icon icon='warning' />}>Item 1</ActionMenuItem>
       <ActionMenuItem left={<Icon icon='right' />}>Item 2</ActionMenuItem>
       <ActionMenuItem left={<Icon icon='file' />}>
         <div>

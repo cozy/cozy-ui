@@ -12,6 +12,9 @@ exports[`ActionMenu should render examples: ActionMenu 1`] = `
               <use xlink:href=\\"#file\\"></use>
             </svg></div>
           <div class=\\"styles__bd___1Uv-F u-mr-1\\">Item 1</div>
+          <div class=\\"styles__img___3SHpG u-mr-1\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+              <use xlink:href=\\"#warning\\"></use>
+            </svg></div>
         </div>
         <div class=\\"styles__media___cSJMp styles__media--top___K9w0I styles__c-actionmenu-item___gODqd\\">
           <div class=\\"styles__img___3SHpG u-mh-1\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
