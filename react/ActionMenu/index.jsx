@@ -54,6 +54,7 @@ const ActionMenuWrapper = ({
 
 const ActionMenu = ({
   children,
+  autoclose,
   className,
   onClose,
   placement,
@@ -65,7 +66,11 @@ const ActionMenu = ({
   const shouldDisplayInline = isDesktop
   const containerRef = React.createRef()
   return (
-    <div className={className} ref={containerRef}>
+    <div
+      className={className}
+      ref={containerRef}
+      onClick={autoclose ? onClose : null}
+    >
       <ActionMenuWrapper
         onClose={onClose}
         inline={shouldDisplayInline}
@@ -93,6 +98,8 @@ ActionMenu.propTypes = {
   className: PropTypes.string,
   /** What to do on close */
   onClose: PropTypes.func,
+  /** Whether the menu should automatically close itself when an item is clicked */
+  autoclose: PropTypes.bool,
   /** Controls the placement of the menu on desktop */
   placement: PropTypes.oneOf([
     'bottom-end',
@@ -118,7 +125,8 @@ ActionMenu.propTypes = {
 
 ActionMenu.defaultProps = {
   placement: 'bottom-start',
-  preventOverflow: false
+  preventOverflow: false,
+  autoclose: false
 }
 
 const ActionMenuHeader = ({ children }) => {
@@ -126,18 +134,10 @@ const ActionMenuHeader = ({ children }) => {
 }
 
 const ActionMenuItem = ({ left, children, right, onClick }) => {
-  const onClickEnhanced = e => {
-    if (onClick) {
-      // we need to stop propagation here so that the menu doesn't close itself
-      e.stopPropagation()
-      onClick()
-    }
-  }
-
   return (
     <Media
       className={styles['c-actionmenu-item']}
-      onClick={onClickEnhanced}
+      onClick={onClick}
       align="top"
     >
       {left && <Img className="u-mh-1">{left}</Img>}
