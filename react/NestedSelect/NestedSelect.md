@@ -3,7 +3,8 @@ import Button from '../Button'
 import Circle from '../Circle'
 import NestedSelectModal from './Modal';
 import { useState } from 'react'
-
+import Checkbox from '../Checkbox'
+import useBreakpoints, { BreakpointsProvider } from '../hooks/useBreakpoints'
 
 const Image = ({ letter }) => (
   <Circle backgroundColor='var(--melon)'>
@@ -50,8 +51,10 @@ const transformParentItem = item => ({
 })
 
 const StaticExample = () => {
+  const { isMobile } = useBreakpoints()
   return (
     <NestedSelectModal
+      radioPosition={isMobile ? 'left' : 'right'}
       canSelectParent={true}
       onSelect={x => x}
       dismissAction={x => x}
@@ -71,6 +74,7 @@ const isParent = (item, childItem) => {
 }
 
 const InteractiveExample = () => {
+  const [leftRadio, setLeftRadio] = useState(false)
   const [showingModal, setShowingModal] = useState(false)
   const [selectedItem, setSelected] = useState(null)
   const showModal = () => setShowingModal(true)
@@ -86,6 +90,10 @@ const InteractiveExample = () => {
     return false
   }
 
+  const handleClickLeftRadio = () => {
+    setLeftRadio(!leftRadio)
+  }
+
   const handleSelect = item => {
     setSelected(item)
     setTimeout(() => {
@@ -95,6 +103,7 @@ const InteractiveExample = () => {
 
   return (
     <>
+      <Checkbox label='radio to the left' readOnly name='leftRadio' value={leftRadio} checked={leftRadio} onClick={handleClickLeftRadio} />
       { selectedItem ? <>Selected: { selectedItem.title }<br/></> : null }
       <Button label='Select' onClick={showModal} ></Button>
       { showingModal ?
@@ -113,7 +122,7 @@ const InteractiveExample = () => {
 
 <>
   { isTesting()
-    ? <StaticExample />
+    ? <BreakpointsProvider><StaticExample /></BreakpointsProvider>
     : <InteractiveExample /> }
 </>
 ```

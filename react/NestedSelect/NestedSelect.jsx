@@ -77,7 +77,8 @@ class NestedSelect extends Component {
       canSelectParent,
       isSelected,
       title,
-      transformParentItem
+      transformParentItem,
+      radioPosition
     } = this.props
     const { history } = this.state
     const current = history[0]
@@ -99,6 +100,7 @@ class NestedSelect extends Component {
           {canSelectParent && level > 0 ? (
             <>
               <ItemRow
+                radioPosition={radioPosition}
                 item={parentItem}
                 onClick={this.handleClickItem}
                 isSelected={isSelectedWithLevel(parentItem)}
@@ -108,6 +110,7 @@ class NestedSelect extends Component {
           ) : null}
           {children.map(item => (
             <ItemRow
+              radioPosition={radioPosition}
               key={item.key || item.title}
               item={item}
               onClick={this.handleClickItem}
@@ -123,7 +126,8 @@ class NestedSelect extends Component {
 NestedSelect.defaultProps = {
   ContentComponent: 'div',
   HeaderComponent: null,
-  transformParentItem: x => x
+  transformParentItem: x => x,
+  radioPosition: 'right'
 }
 
 const ItemPropType = PropTypes.shape({
@@ -139,6 +143,11 @@ const ItemPropType = PropTypes.shape({
 })
 
 NestedSelect.propTypes = {
+  /**
+   * Can be set to "right" or "left". Defaults to "right"
+   */
+  radioPosition: PropTypes.oneOf(['left', 'right']),
+
   /**
    * The whole option item is passed to this function when selected
    */
@@ -182,19 +191,32 @@ export const Radio = ({ className, ...props }) => (
 
 const Divider = () => <div className={styles.Divider} />
 
-export const ItemRow = ({ item, onClick, isSelected }) => {
+export const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
   return (
     <div className={cx(styles.Row, isSelected ? styles.Row__selected : null)}>
       <CompositeRow
         dense
-        image={item.icon}
+        image={
+          <div className="u-flex">
+            {radioPosition === 'left' ? (
+              <Radio
+                className="u-mr-1"
+                readOnly
+                name={item.title}
+                value={item.title}
+                checked={!!isSelected}
+              />
+            ) : null}
+            {item.icon}
+          </div>
+        }
         primaryText={item.title}
         secondaryText={item.description}
         onClick={() => onClick(item)}
         right={
           item.children && item.children.length > 0 ? (
             <Icon icon="right" color={palette.coolGrey} />
-          ) : (
+          ) : radioPosition !== 'right' ? null : (
             <Radio
               readOnly
               name={item.title}
