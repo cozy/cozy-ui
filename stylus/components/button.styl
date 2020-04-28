@@ -7,10 +7,11 @@
   Variants
 \*------------------------------------*/
 regularTheme = {
-    primaryColor: var(--dodgerBlue), secondaryColor: var(--dodgerBlue), activeColor: var(--scienceBlue), contrastColor: var(--white)
+    primaryColor: var(--primaryColor), secondaryColor: var(--primaryColor), activeColor: var(--primaryColorDark), contrastColor: var(--white)
+}
 }
 ghostTheme = {
-    primaryColor: var(--zircon), secondaryColor: var(--frenchPass), activeColor: var(--frenchPass), contrastColor: var(--dodgerBlue)
+    primaryColor: var(--zircon), secondaryColor: var(--frenchPass), activeColor: var(--frenchPass), contrastColor: var(--primaryColor)
 }
 highlightTheme = {
     primaryColor: var(--emerald), secondaryColor: var(--emerald), activeColor: var(--malachite), contrastColor: var(--white)
@@ -28,7 +29,7 @@ dangerOutlineTheme = {
     primaryColor: var(--white), secondaryColor: var(--yourPink), activeColor: var(--yourPink), contrastColor: var(--pomegranate)
 }
 text = {
-    primaryColor: transparent, secondaryColor: transparent, activeColor: transparent, contrastColor: var(--dodgerBlue)
+    primaryColor: transparent, secondaryColor: transparent, activeColor: transparent, contrastColor: var(--primaryColor)
 }
 
 // We turn stylint off since without semicolons, stylus fails to
