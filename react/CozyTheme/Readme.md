@@ -1,4 +1,4 @@
-An area of a page can have a different CozyTheme and components under theme
+An area of a page can have a different CozyTheme and inside components
 will be automatically styled.
 
 - At the moment only some Buttons support this.
