@@ -9,6 +9,8 @@
 regularTheme = {
     primaryColor: var(--primaryColor), secondaryColor: var(--primaryColor), activeColor: var(--primaryColorDark), contrastColor: var(--white)
 }
+regularInvertedTheme = {
+    primaryColor: var(--white), secondaryColor: var(--primaryColor), activeColor: var(--paleGrey), contrastColor: var(--primaryColor)
 }
 ghostTheme = {
     primaryColor: var(--zircon), secondaryColor: var(--frenchPass), activeColor: var(--frenchPass), contrastColor: var(--primaryColor)
@@ -24,6 +26,9 @@ alphaTheme = {
 }
 secondaryTheme = {
     primaryColor: var(--white), secondaryColor: var(--silver), activeColor: var(--silver), contrastColor: var(--black)
+}
+secondaryInvertedTheme = {
+    primaryColor: var(--primaryColor), secondaryColor: var(--white), activeColor: rgba(255, 255, 255, 0.24), contrastColor: var(--white)
 }
 dangerOutlineTheme = {
     primaryColor: var(--white), secondaryColor: var(--yourPink), activeColor: var(--yourPink), contrastColor: var(--pomegranate)
@@ -111,6 +116,9 @@ $button
 $button--regular  // Deprecated
     @extend $button
 
+$button--regularInverted
+    themedBtn(regularInvertedTheme)
+
 $button--ghost
     themedBtn(ghostTheme)
     border-style dashed
@@ -126,6 +134,9 @@ $button--danger
 
 $button--secondary
     themedBtn(secondaryTheme)
+
+$button--secondaryInverted
+    themedBtn(secondaryInvertedTheme)
 
 $button--danger-outline
     themedBtn(dangerOutlineTheme)

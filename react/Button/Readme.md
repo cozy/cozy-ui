@@ -28,6 +28,37 @@ const themes = ['regular', 'ghost', 'danger', 'highlight', 'secondary', 'danger-
 </div>
 ```
 
+#### Support for Cozy themes
+
+⚠ This feature is still in beta
+
+An area of a page can have a different CozyTheme, some Buttons support this.
+
+```
+import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme';
+import { SubTitle } from 'cozy-ui/transpiled/react/Text';
+
+const props = [{}, { disabled: true}, { busy: true }];
+
+const themesSupportingContext = [
+  'regular',
+  'secondary'
+];
+
+<div className='u-bg-primaryColor u-p-1'>
+  <SubTitle className='u-white'>Inverted theme</SubTitle>
+  <CozyTheme theme='inverted'>
+    {themesSupportingContext.map(theme =>
+      <p key={theme}>{
+        props.map(
+          props => <Button key={theme + JSON.stringify(props)} label={theme} theme={theme} {...props} />
+        )
+      }</p>
+    )}
+  </CozyTheme>
+</div>
+```
+
 #### Sizes
 
 ```

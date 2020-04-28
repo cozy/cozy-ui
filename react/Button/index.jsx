@@ -3,13 +3,24 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import Icon, { iconPropType } from '../Icon'
+import { useCozyTheme } from '../CozyTheme'
 
 const btnClass = function(options) {
-  const { className, extension, size, theme, variant, round, align } = options
+  const {
+    className,
+    extension,
+    size,
+    theme,
+    variant,
+    round,
+    align,
+    context
+  } = options
   return cx(
     styles['c-btn'],
     {
       [styles[`c-btn--${theme}`]]: theme,
+      [styles[`c-btn--${theme}-${context}`]]: context,
       [styles[`c-btn--${size}`]]: size !== 'normal',
       [styles[`c-btn--${variant}`]]: variant,
       [styles[`c-btn--${extension}`]]: extension,
@@ -67,6 +78,7 @@ const BaseButton = props => {
     ...restProps
   } = props
 
+  const context = useCozyTheme()
   const transformProps = tagToTransformProps[Tag] || identity
   const tooltip = iconOnly ? label : null
   const iconOnlyClass = iconOnly ? 'u-visuallyhidden' : null
@@ -81,6 +93,7 @@ const BaseButton = props => {
         size,
         theme,
         className,
+        context,
         variant: subtle && 'subtle'
       })}
       title={tooltip}
