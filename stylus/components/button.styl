@@ -3,14 +3,30 @@
 @require '../utilities/text'
 @require '../tools/mixins'
 
+:root
+    --regularButtonPrimaryColor: var(--primaryColor)
+    --regularButtonSecondaryColor: var(--primaryColor)
+    --regularButtonActiveColor: var(--primaryColorDark)
+    --regularButtonConstrastColor: var(--primaryContrastTextColor)
+
+    --secondaryButtonPrimaryColor: var(--white)
+    --secondaryButtonSecondaryColor: var(--silver)
+    --secondaryButtonActiveColor: var(--silver)
+    --secondaryButtonContrastColor: var(--black)
 /*------------------------------------*\
   Variants
 \*------------------------------------*/
 regularTheme = {
-    primaryColor: var(--primaryColor), secondaryColor: var(--primaryColor), activeColor: var(--primaryColorDark), contrastColor: var(--white)
+    primaryColor: var(--regularButtonPrimaryColor),
+    secondaryColor: var(--regularButtonSecondaryColor),
+    activeColor: var(--regularButtonActiveColor),
+    contrastColor: var(--regularButtonConstrastColor)
 }
-regularInvertedTheme = {
-    primaryColor: var(--white), secondaryColor: var(--primaryColor), activeColor: var(--paleGrey), contrastColor: var(--primaryColor)
+secondaryTheme = {
+    primaryColor: var(--secondaryButtonPrimaryColor),
+    secondaryColor: var(--secondaryButtonSecondaryColor),
+    activeColor: var(--secondaryButtonActiveColor),
+    contrastColor: var(--secondaryButtonContrastColor)
 }
 ghostTheme = {
     primaryColor: var(--zircon), secondaryColor: var(--frenchPass), activeColor: var(--frenchPass), contrastColor: var(--primaryColor)
@@ -23,12 +39,6 @@ dangerTheme = {
 }
 alphaTheme = {
     primaryColor: transparent, secondaryColor: var(--white), activeColor: var(--scienceBlue), contrastColor: var(--white)
-}
-secondaryTheme = {
-    primaryColor: var(--white), secondaryColor: var(--silver), activeColor: var(--silver), contrastColor: var(--black)
-}
-secondaryInvertedTheme = {
-    primaryColor: var(--primaryColor), secondaryColor: var(--white), activeColor: rgba(255, 255, 255, 0.24), contrastColor: var(--white)
 }
 dangerOutlineTheme = {
     primaryColor: var(--white), secondaryColor: var(--yourPink), activeColor: var(--yourPink), contrastColor: var(--pomegranate)
