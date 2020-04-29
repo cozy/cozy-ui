@@ -30,11 +30,15 @@ export class BarButton extends PureComponent {
     const { disabled, icon, href, onClick, className } = this.props
     return (
       <MaybeLink
-        className={cx(styles['c-bar-btn'], className)}
+        className={cx(
+          styles.BarButton,
+          disabled && styles['BarButton--disabled'],
+          className
+        )}
         href={!disabled ? href : undefined}
         onClick={!disabled ? onClick : undefined}
       >
-        <Icon icon={icon} className={disabled ? 'u-silver' : 'u-coolGrey'} />
+        <Icon icon={icon} className={styles.BarButtonIcon} />
       </MaybeLink>
     )
   }
