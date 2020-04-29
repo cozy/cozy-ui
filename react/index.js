@@ -42,7 +42,11 @@ export { default as useBrowserOffline } from './hooks/useBrowserOffline'
 export { Media, Img, Bd } from './Media'
 export { Layout, Main, Content } from './Layout'
 export { default as MidEllipsis } from './MidEllipsis'
-export { default as ActionMenu } from './ActionMenu'
+export {
+  default as ActionMenu,
+  ActionMenuItem,
+  ActionMenuHeader
+} from './ActionMenu'
 export { default as Menu, MenuItem, MenuButton } from './Menu'
 export { default as Overlay } from './Overlay'
 export { default as Label } from './Label'
@@ -105,3 +109,4 @@ export {
 
 export { default as BarContextProvider } from './BarContextProvider'
 export { default as BarTitle } from './BarTitle'
+export { default as UploadQueue } from './UploadQueue'
