@@ -64,7 +64,8 @@ $nav-item-icon
         color var(--dodgerBlue)
 
     :hover > &
-        color var(--charcoalGrey)
+        color var(--slateGrey)
+
     +medium-screen()
         display block
         margin-right 0
@@ -134,7 +135,9 @@ $nav-link
 
 $nav-item-secondary
     height auto
-    margin-top .125rem
+
+    & + &
+        margin-top .125rem
 
     +medium-screen()
         &
@@ -162,9 +165,12 @@ $nav-link-secondary
     border-radius 4px 0 0 4px
     box-shadow none
     font-size $small-font-size
-    color var(--charcoalGrey)
+    color var(--slateGrey)
     text-decoration none
     height auto
+
+    &:hover
+        color var(--charcoalGrey)
 
     &.is-active
         color white
