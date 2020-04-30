@@ -9,6 +9,7 @@ import withBreakpoints from '../helpers/withBreakpoints'
 import Popper from '@material-ui/core/Popper'
 import { getCssVariableValue } from '../utils/color'
 import PopperContainerContext from '../PopperContainerContext'
+import Radio from '../Radio'
 
 const ActionMenuWrapper = ({
   inline,
@@ -156,6 +157,10 @@ const ActionMenuItem = ({ left, children, right, onClick, className }) => {
   )
 }
 
+const ActionMenuRadio = props => {
+  return <Radio {...props} className={styles['c-actionmenu-radio']} />
+}
+
 ActionMenuItem.propTypes = {
   left: PropTypes.node,
   right: PropTypes.node,
@@ -164,4 +169,4 @@ ActionMenuItem.propTypes = {
   className: PropTypes.string
 }
 export default withBreakpoints()(ActionMenu)
-export { ActionMenuHeader, ActionMenuItem }
+export { ActionMenuHeader, ActionMenuItem, ActionMenuRadio }

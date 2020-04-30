@@ -17,9 +17,7 @@ exports[`ActionMenu should render examples: ActionMenu 1`] = `
             </svg></div>
         </div>
         <div class=\\"styles__media___cSJMp styles__media--top___K9w0I styles__c-actionmenu-item___gODqd\\">
-          <div class=\\"styles__img___3SHpG u-mh-1\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-              <use xlink:href=\\"#right\\"></use>
-            </svg></div>
+          <div class=\\"styles__img___3SHpG u-mh-1\\"><label class=\\"styles__c-input-radio___XJQt1 styles__c-actionmenu-radio___Km9uj\\"><input type=\\"radio\\" value=\\"\\"><span></span></label></div>
           <div class=\\"styles__bd___1Uv-F u-mr-1\\">Item 2</div>
         </div>
         <div class=\\"styles__media___cSJMp styles__media--top___K9w0I styles__c-actionmenu-item___gODqd\\">

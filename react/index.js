@@ -45,7 +45,8 @@ export { default as MidEllipsis } from './MidEllipsis'
 export {
   default as ActionMenu,
   ActionMenuItem,
-  ActionMenuHeader
+  ActionMenuHeader,
+  ActionMenuRadio
 } from './ActionMenu'
 export { default as Menu, MenuItem, MenuButton } from './Menu'
 export { default as Overlay } from './Overlay'
