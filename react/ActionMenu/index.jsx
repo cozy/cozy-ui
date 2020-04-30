@@ -129,14 +129,23 @@ ActionMenu.defaultProps = {
   autoclose: false
 }
 
-const ActionMenuHeader = ({ children }) => {
-  return <div className={styles['c-actionmenu-header']}>{children}</div>
+const ActionMenuHeader = ({ children, className }) => {
+  return (
+    <div className={cx(styles['c-actionmenu-header'], className)}>
+      {children}
+    </div>
+  )
 }
 
-const ActionMenuItem = ({ left, children, right, onClick }) => {
+ActionMenuHeader.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string
+}
+
+const ActionMenuItem = ({ left, children, right, onClick, className }) => {
   return (
     <Media
-      className={styles['c-actionmenu-item']}
+      className={cx(styles['c-actionmenu-item'], className)}
       onClick={onClick}
       align="top"
     >
@@ -151,7 +160,8 @@ ActionMenuItem.propTypes = {
   left: PropTypes.node,
   right: PropTypes.node,
   children: PropTypes.node,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  className: PropTypes.string
 }
 export default withBreakpoints()(ActionMenu)
 export { ActionMenuHeader, ActionMenuItem }
