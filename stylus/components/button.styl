@@ -3,14 +3,33 @@
 @require '../utilities/text'
 @require '../tools/mixins'
 
+:root
+    --regularButtonPrimaryColor: var(--primaryColor)
+    --regularButtonSecondaryColor: var(--primaryColor)
+    --regularButtonActiveColor: var(--primaryColorDark)
+    --regularButtonConstrastColor: var(--primaryContrastTextColor)
+
+    --secondaryButtonPrimaryColor: var(--white)
+    --secondaryButtonSecondaryColor: var(--silver)
+    --secondaryButtonActiveColor: var(--silver)
+    --secondaryButtonContrastColor: var(--black)
 /*------------------------------------*\
   Variants
 \*------------------------------------*/
 regularTheme = {
-    primaryColor: var(--dodgerBlue), secondaryColor: var(--dodgerBlue), activeColor: var(--scienceBlue), contrastColor: var(--white)
+    primaryColor: var(--regularButtonPrimaryColor),
+    secondaryColor: var(--regularButtonSecondaryColor),
+    activeColor: var(--regularButtonActiveColor),
+    contrastColor: var(--regularButtonConstrastColor)
+}
+secondaryTheme = {
+    primaryColor: var(--secondaryButtonPrimaryColor),
+    secondaryColor: var(--secondaryButtonSecondaryColor),
+    activeColor: var(--secondaryButtonActiveColor),
+    contrastColor: var(--secondaryButtonContrastColor)
 }
 ghostTheme = {
-    primaryColor: var(--zircon), secondaryColor: var(--frenchPass), activeColor: var(--frenchPass), contrastColor: var(--dodgerBlue)
+    primaryColor: var(--zircon), secondaryColor: var(--frenchPass), activeColor: var(--frenchPass), contrastColor: var(--primaryColor)
 }
 highlightTheme = {
     primaryColor: var(--emerald), secondaryColor: var(--emerald), activeColor: var(--malachite), contrastColor: var(--white)
@@ -21,14 +40,11 @@ dangerTheme = {
 alphaTheme = {
     primaryColor: transparent, secondaryColor: var(--white), activeColor: var(--scienceBlue), contrastColor: var(--white)
 }
-secondaryTheme = {
-    primaryColor: var(--white), secondaryColor: var(--silver), activeColor: var(--silver), contrastColor: var(--black)
-}
 dangerOutlineTheme = {
     primaryColor: var(--white), secondaryColor: var(--yourPink), activeColor: var(--yourPink), contrastColor: var(--pomegranate)
 }
 text = {
-    primaryColor: transparent, secondaryColor: transparent, activeColor: transparent, contrastColor: var(--dodgerBlue)
+    primaryColor: transparent, secondaryColor: transparent, activeColor: transparent, contrastColor: var(--primaryColor)
 }
 
 // We turn stylint off since without semicolons, stylus fails to
@@ -51,6 +67,7 @@ themedBtn(theme)
     &[disabled]
     &[aria-disabled=true]
         &:hover
+            border-color:     theme['secondaryColor']
             background-color: theme['primaryColor']
 
 /*------------------------------------*\
@@ -110,6 +127,9 @@ $button
 $button--regular  // Deprecated
     @extend $button
 
+$button--regularInverted
+    themedBtn(regularInvertedTheme)
+
 $button--ghost
     themedBtn(ghostTheme)
     border-style dashed
@@ -125,6 +145,9 @@ $button--danger
 
 $button--secondary
     themedBtn(secondaryTheme)
+
+$button--secondaryInverted
+    themedBtn(secondaryInvertedTheme)
 
 $button--danger-outline
     themedBtn(dangerOutlineTheme)

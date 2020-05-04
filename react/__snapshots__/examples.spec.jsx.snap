@@ -216,21 +216,21 @@ exports[`Badge should render examples: Badge 2`] = `
 
 exports[`BarButton should render examples: BarButton 1`] = `
 "<div>
-  <div class=\\"styles__c-bar-btn___1Jc6J\\"><svg class=\\"u-silver styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+  <div class=\\"styles__BarButton___3z5Er styles__BarButton--disabled___5e3Ll\\"><svg class=\\"styles__BarButtonIcon___1pSOT styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
       <use xlink:href=\\"#previous\\"></use>
     </svg></div>
 </div>"
 `;
 
 exports[`BarButton should render examples: BarButton 2`] = `
-"<div><a href=\\"http://cozy.io\\" class=\\"styles__c-bar-btn___1Jc6J\\"><svg class=\\"u-coolGrey styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+"<div><a href=\\"http://cozy.io\\" class=\\"styles__BarButton___3z5Er\\"><svg class=\\"styles__BarButtonIcon___1pSOT styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
       <use xlink:href=\\"#upload\\"></use>
     </svg></a></div>"
 `;
 
 exports[`BarButton should render examples: BarButton 3`] = `
 "<div>
-  <div class=\\"styles__c-bar-btn___1Jc6J\\"><svg class=\\"u-coolGrey styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+  <div class=\\"styles__BarButton___3z5Er\\"><svg class=\\"styles__BarButtonIcon___1pSOT styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
       <use xlink:href=\\"#cube\\"></use>
     </svg></div>
 </div>"
@@ -238,7 +238,7 @@ exports[`BarButton should render examples: BarButton 3`] = `
 
 exports[`BarButton should render examples: BarButton 4`] = `
 "<div>
-  <div class=\\"styles__c-bar-btn___1Jc6J\\"><svg class=\\"u-coolGrey styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+  <div class=\\"styles__BarButton___3z5Er\\"><svg class=\\"styles__BarButtonIcon___1pSOT styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
       <use xlink:href=\\"#gear\\"></use>
     </svg></div>
 </div>"

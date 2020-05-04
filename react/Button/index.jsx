@@ -66,7 +66,6 @@ const BaseButton = props => {
     tag: Tag,
     ...restProps
   } = props
-
   const transformProps = tagToTransformProps[Tag] || identity
   const tooltip = iconOnly ? label : null
   const iconOnlyClass = iconOnly ? 'u-visuallyhidden' : null
