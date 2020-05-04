@@ -16,7 +16,6 @@ $alert
     right 0
     bottom calc(3rem + env(safe-area-inset-bottom))
     left 0
-    color var(--white)
     opacity 1
     transition transform .2s ease-out, opacity .2s ease-out
     cursor default
@@ -43,7 +42,6 @@ $alert-wrapper
     box-sizing border-box
     width 100%
     box-shadow 0 rem(6) rem(18) 0 rgba(50, 54, 63, .23)
-    background-color var(--validColor)
     padding rem(13 16)
     pointer-events auto
 
@@ -73,10 +71,14 @@ $alert-title
     font-weight bold
 
 $alert--error
-    background-color var(--errorColor)
+    color var(--alertErrorColor)
+    background-color var(--alertErrorBackgroundColor)
 
 $alert--success
-    background-color var(--validColor)
+    color var(--alertSuccessColor)
+    background-color var(--alertSuccessBackgroundColor)
 
 $alert--info
-    background-color var(--slateGrey)
+    color var(--alertInfoColor)
+    background-color var(--alertInfoBackgroundColor)
+
