@@ -1,16 +1,17 @@
-$transluentWhite=rgba(255, 255, 255, 0.88)
+$translucentWhite1=rgba(255, 255, 255, 0.24)
+$translucentWhite2=rgba(255, 255, 255, 0.88)
 
 .CozyTheme--inverted
     background: var(--primaryColor)
     --barIconColor white
-    --barIconColorDisabled $transluentWhite
+    --barIconColorDisabled $translucentWhite2
 
     --regularButtonPrimaryColor: var(--primaryContrastTextColor)
     --regularButtonSecondaryColor: var(--primaryContrastTextColor)
-    --regularButtonActiveColor: $transluentWhite
+    --regularButtonActiveColor: $translucentWhite2
     --regularButtonConstrastColor: var(--primaryColor)
 
     --secondaryButtonPrimaryColor: var(--primaryColor)
     --secondaryButtonSecondaryColor: var(--white)
-    --secondaryButtonActiveColor: rgba(255, 255, 255, 0.24)
+    --secondaryButtonActiveColor: $translucentWhite1
     --secondaryButtonContrastColor: var(--white)
