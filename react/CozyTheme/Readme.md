@@ -1,7 +1,7 @@
 An area of a page can have a different CozyTheme and components inside
 will be automatically styled.
 
-- At the moment only some Buttons support this.
+- At the moment only a few components support this (Buttons / Breadcrumbs / Figure).
 
 
 ```
