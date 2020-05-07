@@ -29,6 +29,13 @@ const themesSupportingContext = [
   )}
   <SubTitle className='u-white'>BarButton</SubTitle>
   <BarButton icon='dots' />
+  <div className='u-bg-white u-p-1'>
+    We can always go back to normal theme if a child must "get out"
+    of the theme.
+    <CozyTheme variant='normal'>
+      <Button className='u-ml-0 u-mt-half' theme='primary' label='Primary button' />
+    </CozyTheme>
+  </div>
 </CozyTheme>
 ```
 
