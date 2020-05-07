@@ -1,29 +1,26 @@
 @require 'settings/breakpoints'
 
-.default
-    &.Figure-currency
-        color var(--coolGrey)
 
-    &.Figure-content--positive
+&.Figure-currency
+    color var(--secondaryTextColor)
+
+&.Figure-content--positive
+    color var(--emerald)
+
+    .Figure-currency
         color var(--emerald)
 
-        .Figure-currency
-            color var(--emerald)
+&.Figure-content--negative
+    color var(--pomegranate)
 
-    &.Figure-content--negative
+    .Figure-currency
         color var(--pomegranate)
 
-        .Figure-currency
-            color var(--pomegranate)
+&.Figure-content--warning
+    color var(--texasRose)
 
-    &.Figure-content--warning
+    .Figure-currency
         color var(--texasRose)
-
-        .Figure-currency
-            color var(--texasRose)
-
-.primary
-    color var(--white)
 
 .Figure-total
     font-weight    900

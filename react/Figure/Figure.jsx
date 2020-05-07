@@ -23,7 +23,6 @@ const Figure = props => {
     warningLimit,
     signed,
     className,
-    theme = 'default',
     total,
     totalClassName,
     currencyClassName,
@@ -50,7 +49,6 @@ const Figure = props => {
   return (
     <div
       className={cx(
-        styles[theme],
         {
           [stylePositive]: isTotalPositive && coloredPositive,
           [styleNegative]:

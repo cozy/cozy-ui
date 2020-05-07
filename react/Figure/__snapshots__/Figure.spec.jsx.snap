@@ -2,7 +2,7 @@
 
 exports[`Figure should render correctly -100 coloredPositive: false, coloredNegative: false, coloredWarning: false 1`] = `
 <div
-  className="Figure__default___2A1eX"
+  className=""
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -14,7 +14,7 @@ exports[`Figure should render correctly -100 coloredPositive: false, coloredNega
 
 exports[`Figure should render correctly -100 coloredPositive: false, coloredNegative: false, coloredWarning: true 1`] = `
 <div
-  className="Figure__default___2A1eX Figure__Figure-content--warning___1Pn6n"
+  className="Figure__Figure-content--warning___1Pn6n"
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -26,7 +26,7 @@ exports[`Figure should render correctly -100 coloredPositive: false, coloredNega
 
 exports[`Figure should render correctly -100 coloredPositive: false, coloredNegative: true, coloredWarning: false 1`] = `
 <div
-  className="Figure__default___2A1eX Figure__Figure-content--negative___3ACbA"
+  className="Figure__Figure-content--negative___3ACbA"
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -38,7 +38,7 @@ exports[`Figure should render correctly -100 coloredPositive: false, coloredNega
 
 exports[`Figure should render correctly -100 coloredPositive: false, coloredNegative: true, coloredWarning: true 1`] = `
 <div
-  className="Figure__default___2A1eX Figure__Figure-content--warning___1Pn6n"
+  className="Figure__Figure-content--warning___1Pn6n"
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -50,7 +50,7 @@ exports[`Figure should render correctly -100 coloredPositive: false, coloredNega
 
 exports[`Figure should render correctly -100 coloredPositive: true, coloredNegative: false, coloredWarning: false 1`] = `
 <div
-  className="Figure__default___2A1eX"
+  className=""
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -62,7 +62,7 @@ exports[`Figure should render correctly -100 coloredPositive: true, coloredNegat
 
 exports[`Figure should render correctly -100 coloredPositive: true, coloredNegative: false, coloredWarning: true 1`] = `
 <div
-  className="Figure__default___2A1eX Figure__Figure-content--warning___1Pn6n"
+  className="Figure__Figure-content--warning___1Pn6n"
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -74,7 +74,7 @@ exports[`Figure should render correctly -100 coloredPositive: true, coloredNegat
 
 exports[`Figure should render correctly -100 coloredPositive: true, coloredNegative: true, coloredWarning: false 1`] = `
 <div
-  className="Figure__default___2A1eX Figure__Figure-content--negative___3ACbA"
+  className="Figure__Figure-content--negative___3ACbA"
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -86,7 +86,7 @@ exports[`Figure should render correctly -100 coloredPositive: true, coloredNegat
 
 exports[`Figure should render correctly -100 coloredPositive: true, coloredNegative: true, coloredWarning: true 1`] = `
 <div
-  className="Figure__default___2A1eX Figure__Figure-content--warning___1Pn6n"
+  className="Figure__Figure-content--warning___1Pn6n"
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -98,7 +98,7 @@ exports[`Figure should render correctly -100 coloredPositive: true, coloredNegat
 
 exports[`Figure should render correctly 4 coloredPositive: false, coloredNegative: false, coloredWarning: false 1`] = `
 <div
-  className="Figure__default___2A1eX"
+  className=""
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -110,7 +110,7 @@ exports[`Figure should render correctly 4 coloredPositive: false, coloredNegativ
 
 exports[`Figure should render correctly 4 coloredPositive: false, coloredNegative: false, coloredWarning: true 1`] = `
 <div
-  className="Figure__default___2A1eX"
+  className=""
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -122,7 +122,7 @@ exports[`Figure should render correctly 4 coloredPositive: false, coloredNegativ
 
 exports[`Figure should render correctly 4 coloredPositive: false, coloredNegative: true, coloredWarning: false 1`] = `
 <div
-  className="Figure__default___2A1eX"
+  className=""
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -134,7 +134,7 @@ exports[`Figure should render correctly 4 coloredPositive: false, coloredNegativ
 
 exports[`Figure should render correctly 4 coloredPositive: false, coloredNegative: true, coloredWarning: true 1`] = `
 <div
-  className="Figure__default___2A1eX"
+  className=""
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -146,7 +146,7 @@ exports[`Figure should render correctly 4 coloredPositive: false, coloredNegativ
 
 exports[`Figure should render correctly 4 coloredPositive: true, coloredNegative: false, coloredWarning: false 1`] = `
 <div
-  className="Figure__default___2A1eX Figure__Figure-content--positive___1qyd8"
+  className="Figure__Figure-content--positive___1qyd8"
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -158,7 +158,7 @@ exports[`Figure should render correctly 4 coloredPositive: true, coloredNegative
 
 exports[`Figure should render correctly 4 coloredPositive: true, coloredNegative: false, coloredWarning: true 1`] = `
 <div
-  className="Figure__default___2A1eX Figure__Figure-content--positive___1qyd8"
+  className="Figure__Figure-content--positive___1qyd8"
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -170,7 +170,7 @@ exports[`Figure should render correctly 4 coloredPositive: true, coloredNegative
 
 exports[`Figure should render correctly 4 coloredPositive: true, coloredNegative: true, coloredWarning: false 1`] = `
 <div
-  className="Figure__default___2A1eX Figure__Figure-content--positive___1qyd8"
+  className="Figure__Figure-content--positive___1qyd8"
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -182,7 +182,7 @@ exports[`Figure should render correctly 4 coloredPositive: true, coloredNegative
 
 exports[`Figure should render correctly 4 coloredPositive: true, coloredNegative: true, coloredWarning: true 1`] = `
 <div
-  className="Figure__default___2A1eX Figure__Figure-content--positive___1qyd8"
+  className="Figure__Figure-content--positive___1qyd8"
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -194,7 +194,7 @@ exports[`Figure should render correctly 4 coloredPositive: true, coloredNegative
 
 exports[`Figure should render correctly 100 coloredPositive: false, coloredNegative: false, coloredWarning: false 1`] = `
 <div
-  className="Figure__default___2A1eX"
+  className=""
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -206,7 +206,7 @@ exports[`Figure should render correctly 100 coloredPositive: false, coloredNegat
 
 exports[`Figure should render correctly 100 coloredPositive: false, coloredNegative: false, coloredWarning: true 1`] = `
 <div
-  className="Figure__default___2A1eX"
+  className=""
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -218,7 +218,7 @@ exports[`Figure should render correctly 100 coloredPositive: false, coloredNegat
 
 exports[`Figure should render correctly 100 coloredPositive: false, coloredNegative: true, coloredWarning: false 1`] = `
 <div
-  className="Figure__default___2A1eX"
+  className=""
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -230,7 +230,7 @@ exports[`Figure should render correctly 100 coloredPositive: false, coloredNegat
 
 exports[`Figure should render correctly 100 coloredPositive: false, coloredNegative: true, coloredWarning: true 1`] = `
 <div
-  className="Figure__default___2A1eX"
+  className=""
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -242,7 +242,7 @@ exports[`Figure should render correctly 100 coloredPositive: false, coloredNegat
 
 exports[`Figure should render correctly 100 coloredPositive: true, coloredNegative: false, coloredWarning: false 1`] = `
 <div
-  className="Figure__default___2A1eX Figure__Figure-content--positive___1qyd8"
+  className="Figure__Figure-content--positive___1qyd8"
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -254,7 +254,7 @@ exports[`Figure should render correctly 100 coloredPositive: true, coloredNegati
 
 exports[`Figure should render correctly 100 coloredPositive: true, coloredNegative: false, coloredWarning: true 1`] = `
 <div
-  className="Figure__default___2A1eX Figure__Figure-content--positive___1qyd8"
+  className="Figure__Figure-content--positive___1qyd8"
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -266,7 +266,7 @@ exports[`Figure should render correctly 100 coloredPositive: true, coloredNegati
 
 exports[`Figure should render correctly 100 coloredPositive: true, coloredNegative: true, coloredWarning: false 1`] = `
 <div
-  className="Figure__default___2A1eX Figure__Figure-content--positive___1qyd8"
+  className="Figure__Figure-content--positive___1qyd8"
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -278,7 +278,7 @@ exports[`Figure should render correctly 100 coloredPositive: true, coloredNegati
 
 exports[`Figure should render correctly 100 coloredPositive: true, coloredNegative: true, coloredWarning: true 1`] = `
 <div
-  className="Figure__default___2A1eX Figure__Figure-content--positive___1qyd8"
+  className="Figure__Figure-content--positive___1qyd8"
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -290,7 +290,7 @@ exports[`Figure should render correctly 100 coloredPositive: true, coloredNegati
 
 exports[`Figure should render correctly 500 coloredPositive: false, coloredNegative: false, coloredWarning: false 1`] = `
 <div
-  className="Figure__default___2A1eX"
+  className=""
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -302,7 +302,7 @@ exports[`Figure should render correctly 500 coloredPositive: false, coloredNegat
 
 exports[`Figure should render correctly 500 coloredPositive: false, coloredNegative: false, coloredWarning: true 1`] = `
 <div
-  className="Figure__default___2A1eX"
+  className=""
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -314,7 +314,7 @@ exports[`Figure should render correctly 500 coloredPositive: false, coloredNegat
 
 exports[`Figure should render correctly 500 coloredPositive: false, coloredNegative: true, coloredWarning: false 1`] = `
 <div
-  className="Figure__default___2A1eX"
+  className=""
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -326,7 +326,7 @@ exports[`Figure should render correctly 500 coloredPositive: false, coloredNegat
 
 exports[`Figure should render correctly 500 coloredPositive: false, coloredNegative: true, coloredWarning: true 1`] = `
 <div
-  className="Figure__default___2A1eX"
+  className=""
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -338,7 +338,7 @@ exports[`Figure should render correctly 500 coloredPositive: false, coloredNegat
 
 exports[`Figure should render correctly 500 coloredPositive: true, coloredNegative: false, coloredWarning: false 1`] = `
 <div
-  className="Figure__default___2A1eX Figure__Figure-content--positive___1qyd8"
+  className="Figure__Figure-content--positive___1qyd8"
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -350,7 +350,7 @@ exports[`Figure should render correctly 500 coloredPositive: true, coloredNegati
 
 exports[`Figure should render correctly 500 coloredPositive: true, coloredNegative: false, coloredWarning: true 1`] = `
 <div
-  className="Figure__default___2A1eX Figure__Figure-content--positive___1qyd8"
+  className="Figure__Figure-content--positive___1qyd8"
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -362,7 +362,7 @@ exports[`Figure should render correctly 500 coloredPositive: true, coloredNegati
 
 exports[`Figure should render correctly 500 coloredPositive: true, coloredNegative: true, coloredWarning: false 1`] = `
 <div
-  className="Figure__default___2A1eX Figure__Figure-content--positive___1qyd8"
+  className="Figure__Figure-content--positive___1qyd8"
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
@@ -374,7 +374,7 @@ exports[`Figure should render correctly 500 coloredPositive: true, coloredNegati
 
 exports[`Figure should render correctly 500 coloredPositive: true, coloredNegative: true, coloredWarning: true 1`] = `
 <div
-  className="Figure__default___2A1eX Figure__Figure-content--positive___1qyd8"
+  className="Figure__Figure-content--positive___1qyd8"
 >
   <span
     className="Figure__Figure-total___MZ7Xt"
