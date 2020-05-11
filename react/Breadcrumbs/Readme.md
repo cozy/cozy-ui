@@ -8,6 +8,7 @@ context.
 import { Component } from 'react'
 import Breadcrumbs from '.';
 import Icon from '../Icon'
+import ThemeChooser from '../../docs/ThemeChooser'
 
 const items = [
   { 
@@ -32,10 +33,10 @@ const items = [
 
 const Items = ({ items, onClickItem }) => {
   return items.map(item => (
-    <div style={{ height: '2rem', display: 'flex', alignItems: 'center'}} className={item.items ? 'u-c-pointer' : null } onClick={() => onClickItem(item)}>
+    <div style={{ color: 'var(--primaryTextColor)', height: '2rem', display: 'flex', alignItems: 'center'}} className={item.items ? 'u-c-pointer' : null } onClick={() => onClickItem(item)}>
       <Icon
         icon={!item.items ? 'file' : 'folder'}
-        className='u-mr-half' color='var(--primaryColor)' />
+        className='u-mr-half' color='var(--primaryTextColor)' />
       { item.name }
     </div>
   ))
@@ -71,12 +72,16 @@ class Example extends Component {
   render() {
     const { breadcrumbs } = this.state
     const last = breadcrumbs[breadcrumbs.length - 1]
-    return <div>
+    return <div className='u-p-1'>
       <Breadcrumbs items={breadcrumbs} />
       <Items items={last.items} onClickItem={this.handleGoDown} />
     </div>
   }
 }
 
-<Example />
+<>
+  <ThemeChooser>
+    <Example />
+  </ThemeChooser>
+</>
 ```

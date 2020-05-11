@@ -47,20 +47,13 @@ BreadcrumbItem.propTypes = {
   showSeparator: PropTypes.bool
 }
 
-const Breadcrumbs = ({ items, className, theme, style }) => {
+const Breadcrumbs = ({ items, className, style }) => {
   const previousItems = items.slice(0, -1)
   const [lastPreviousItem] = previousItems.slice(-1)
   const [currentItem] = items.slice(-1)
 
   return (
-    <div
-      style={style}
-      className={cx(
-        styles.Breadcrumb,
-        className,
-        styles[`Breadcrumb--${theme}`]
-      )}
-    >
+    <div style={style} className={cx(styles.Breadcrumb, className)}>
       {items.length > 1 && (
         <Icon
           icon={'left'}
@@ -90,13 +83,8 @@ const Breadcrumbs = ({ items, className, theme, style }) => {
   )
 }
 
-Breadcrumbs.defaultProps = {
-  theme: 'default'
-}
-
 Breadcrumbs.propTypes = {
   className: PropTypes.string,
-  theme: PropTypes.oneOf(['default', 'primary']),
   items: PropTypes.arrayOf(PropTypes.shape(itemPropTypes))
 }
 
