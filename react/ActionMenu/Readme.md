@@ -6,7 +6,7 @@ Use an ActionMenu to show a list of actions. ActionMenus automatically switch th
 import ActionMenu, { ActionMenuItem, ActionMenuRadio } from 'cozy-ui/transpiled/react/ActionMenu';
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Icon from 'cozy-ui/transpiled/react/Icon';
-import { Caption } from 'cozy-ui/transpiled/react/Text';
+import { Text, Caption } from 'cozy-ui/transpiled/react/Text';
 
 initialState = { menuDisplayed: isTesting() };
 
@@ -21,12 +21,12 @@ const hideMenu = () => setState({ menuDisplayed: false });
       <ActionMenuItem left={<Icon icon='file' />} right={<Icon icon='warning' />}>Item 1</ActionMenuItem>
       <ActionMenuItem left={<ActionMenuRadio />}>Item 2</ActionMenuItem>
       <ActionMenuItem left={<Icon icon='file' />}>
-        <div>
+        <Text>
           Item 3
-          <Caption className="u-mt-half">
-            Descriptive text to elaborate on what item 3 does.
-          </Caption>
-        </div>
+        </Text>
+        <Caption>
+          Descriptive text to elaborate on what item 3 does.
+        </Caption>
       </ActionMenuItem>
   </ActionMenu>}
 </div>

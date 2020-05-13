@@ -10,6 +10,7 @@ import Popper from '@material-ui/core/Popper'
 import { getCssVariableValue } from '../utils/color'
 import PopperContainerContext from '../PopperContainerContext'
 import Radio from '../Radio'
+import { spacingProp } from '../Stack'
 
 const ActionMenuWrapper = ({
   inline,
@@ -143,7 +144,14 @@ ActionMenuHeader.propTypes = {
   className: PropTypes.string
 }
 
-const ActionMenuItem = ({ left, children, right, onClick, className }) => {
+const ActionMenuItem = ({
+  left,
+  children,
+  right,
+  onClick,
+  className,
+  contentSpacing
+}) => {
   return (
     <Media
       className={cx(styles['c-actionmenu-item'], className)}
@@ -151,7 +159,11 @@ const ActionMenuItem = ({ left, children, right, onClick, className }) => {
       align="top"
     >
       {left && <Img className="u-mh-1">{left}</Img>}
-      <Bd className={left ? 'u-mr-1' : 'u-mh-1'}>{children}</Bd>
+      <Bd
+        className={cx(left ? 'u-mr-1' : 'u-mh-1', `u-stack-${contentSpacing}`)}
+      >
+        {children}
+      </Bd>
       {right && <Img className="u-mr-1">{right}</Img>}
     </Media>
   )
@@ -166,7 +178,14 @@ ActionMenuItem.propTypes = {
   right: PropTypes.node,
   children: PropTypes.node,
   onClick: PropTypes.func,
-  className: PropTypes.string
+  className: PropTypes.string,
+  /** Controls spacing between between children of the ActionMenuItem */
+  contentSpacing: spacingProp
 }
+
+ActionMenuItem.defaultProps = {
+  contentSpacing: 'xs'
+}
+
 export default withBreakpoints()(ActionMenu)
 export { ActionMenuHeader, ActionMenuItem, ActionMenuRadio }
