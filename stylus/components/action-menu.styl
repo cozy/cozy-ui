@@ -1,12 +1,21 @@
 @require './popover.styl'
 @require '../tools/mixins'
 @require '../settings/spaces.styl'
+@require '../settings/breakpoints.styl'
+
+$smallScreenPaddingTop=.5rem
 
 $actionmenu
     @extend $popover
     color var(--charcoalGrey)
     hr
         margin-top 0
+
+    +small-screen()
+        border 0
+        border-radius 1rem 1rem 0 0
+        padding-top $smallScreenPaddingTop
+        overflow hidden
 
 $actionmenu--inline
     width rem(256)
@@ -16,6 +25,7 @@ $actionmenu-header
     border-bottom rem(1) solid var(--silver)
     padding rem(16)
     min-height rem(64)
+    margin-top -($smallScreenPaddingTop)
 
 $actionmenu-item
     padding spacing_values.s 0

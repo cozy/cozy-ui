@@ -1,6 +1,7 @@
 @require 'tools/mixins'
 @require 'settings/spaces'
 @require 'settings/z-index'
+@require 'settings/breakpoints'
 @require 'generic/animations'
 
 .with-transition
@@ -12,7 +13,7 @@
     bottom         rem(9)
     bottom         env(safe-area-inset-bottom) // @stylint ignore
     left           0
-    width          'calc(100% - %s)' % (spacing_values.m * 2)
-    margin         0 spacing_values.m
-    padding-bottom rem(5)
-    box-sizing border-box
+    right          0
+    width          100%
+    margin         0
+
