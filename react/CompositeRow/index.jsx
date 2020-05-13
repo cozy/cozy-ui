@@ -14,6 +14,8 @@ const CompositeRow = ({
   style,
   className,
   primaryText,
+  primaryTextClassName,
+  secondaryTextClassName,
   secondaryText,
   image,
   right,
@@ -35,9 +37,13 @@ const CompositeRow = ({
         {image ? <Img className="u-flex-self-start">{image}</Img> : null}
         <div className="u-media-grow u-stack-xs">
           <div className="u-media u-row-m">
-            <Bd>
-              <Text>{primaryText}</Text>
-              {secondaryText ? <Caption>{secondaryText}</Caption> : null}
+            <Bd className={styles.CompositeRow__body}>
+              <Text className={primaryTextClassName}>{primaryText}</Text>
+              {secondaryText ? (
+                <Caption className={secondaryTextClassName}>
+                  {secondaryText}
+                </Caption>
+              ) : null}
             </Bd>
             {right}
           </div>
@@ -57,6 +63,10 @@ CompositeRow.propTypes = {
   primaryText: PropTypes.node,
   /** Second line */
   secondaryText: PropTypes.node,
+  /** Controls the className of the primaryText node */
+  primaryTextClassName: PropTypes.string,
+  /** Controls the className of the secondaryText node */
+  secondaryTextClassName: PropTypes.string,
   /** Image to the left of the row */
   image: PropTypes.node,
   /**

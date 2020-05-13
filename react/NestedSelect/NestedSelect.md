@@ -13,25 +13,26 @@ const Image = ({ letter }) => (
 )
 
 const letterOption = (letter, description, key) => ({
+  id: letter,
   title: letter,
   description,
   key,
-  icon: <Image letter={letter} />
+  icon: <Image letter={letter[0]} />
 })
 
 const options = {
   children: [
-    letterOption('A'),
+    letterOption('A', 'is for Apple'),
     {
-      ...letterOption('B'), 
+      ...letterOption('B', 'is for Balloon'), 
       children: [
         letterOption('B1'),
         letterOption('B2')
       ]
     },
-    letterOption('C', 'C for car'),
-    letterOption('D'),
-    letterOption('E'),
+    letterOption('C', 'is for crayon'),
+    letterOption('D', 'is for Drums !'),
+    letterOption('E. A very long option, that should be ellipsed. And it goes on, and on...'),
     letterOption('F'),
     letterOption('G'),
     letterOption('H', 'H for hero', 'hero'),
@@ -76,7 +77,7 @@ const isParent = (item, childItem) => {
 const InteractiveExample = () => {
   const [leftRadio, setLeftRadio] = useState(false)
   const [showingModal, setShowingModal] = useState(false)
-  const [selectedItem, setSelected] = useState(null)
+  const [selectedItem, setSelected] = useState({ title: 'A' })
   const showModal = () => setShowingModal(true)
   const hideModal = () => setShowingModal(false)
   const isSelected = (item, level) => {
