@@ -34,6 +34,11 @@ const hideMenu = () => setState({ menuDisplayed: false });
 
 ### With Header (mobile only)
 
+A header can be used to provide context on the menu actions. Since on
+desktop, we display a popper and not a BottomDrawer, context for the
+user is not lost, so the ActionMenuHeader would be redundant. This is
+why it is not rendered unless we are on mobile.
+
 ```
 import ActionMenu, { ActionMenuItem, ActionMenuHeader } from './index';
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
