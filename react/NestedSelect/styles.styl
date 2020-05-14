@@ -1,3 +1,5 @@
+@require 'settings/typography.styl'
+
 .Row
     padding-left 0.5rem
     padding-right 0.5rem
@@ -13,9 +15,16 @@
 .Row__selected
     font-weight bold
 
+.Row__caption
+    font-weight normal
+
 .Modal__title
     border-bottom 1px solid var(--silver)
     margin-bottom 0
+    padding-top 1rem
+
+.Modal__title h2
+    font-size $h2-font-size
 
 .Modal__content
     padding 0

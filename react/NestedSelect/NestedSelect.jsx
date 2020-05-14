@@ -211,7 +211,9 @@ export const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
           </div>
         }
         primaryText={item.title}
+        primaryTextClassName="u-ellipsis"
         secondaryText={item.description}
+        secondaryTextClassName={styles.Row__caption}
         onClick={() => onClick(item)}
         right={
           item.children && item.children.length > 0 ? (
