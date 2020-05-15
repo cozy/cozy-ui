@@ -26,6 +26,9 @@ $tabs-base
         font-weight    bold
         opacity        .64
 
+        // Create a transparent border even if the tab is not active
+	// otherwise (if the border is set only when tab is active)
+	// the text goes up the size of the border
         border-bottom $borderBottomWidth solid transparent
 
         &:hover
