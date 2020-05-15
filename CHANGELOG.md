@@ -1,3 +1,20 @@
+# [35.21.0](https://github.com/cozy/cozy-ui/compare/v35.20.0...v35.21.0) (2020-05-15)
+
+
+### Bug Fixes
+
+* Incoherence between bottom drawer display and rounder radius ([f2ddfbd](https://github.com/cozy/cozy-ui/commit/f2ddfbd))
+
+
+### Features
+
+* Download logo (can cause problems on CI to have it remote) ([286f2d1](https://github.com/cozy/cozy-ui/commit/286f2d1))
+* Manage action menu icon color through CSS variables ([32ba963](https://github.com/cozy/cozy-ui/commit/32ba963))
+* Rounder style for action menu ([5c80fdc](https://github.com/cozy/cozy-ui/commit/5c80fdc))
+* Spacing for ActionMenuItems ([c8a094c](https://github.com/cozy/cozy-ui/commit/c8a094c))
+* Tab button mobile layout ([e96ae5b](https://github.com/cozy/cozy-ui/commit/e96ae5b))
+* Tabs grow to fill the space ([2af071e](https://github.com/cozy/cozy-ui/commit/2af071e))
+
 <a name="9.13.0"></a>
 # [9.13.0](https://github.com/cozy/cozy-ui/compare/v9.12.1...v9.13.0) (2018-06-18)
 
