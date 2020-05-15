@@ -12,8 +12,10 @@ const Stack = ({ spacing, tag: Tag, ...props }) => {
   )
 }
 
+export const spacingProp = PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl', 'xxl'])
+
 Stack.propTypes = {
-  spacing: PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl', 'xxl'])
+  spacing: spacingProp
 }
 
 Stack.defaultProps = {
