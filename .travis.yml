@@ -25,5 +25,5 @@ deploy:
 
 env:
   global:
-    # GH_TOKEN from cozy-bot (readable from password-store/cozy-ui/github-token-for-semantic-release-on-travis)
-    - secure: fMlsp52RBxJCGqB1cR5ShG3WiGl2iTl3cvzskrFqWIxrpOFc0TBaSQmpiOdkc9lg35zt8Pt1Z9F8zlWX/k/SXcR0x5SwSzunVXl1P/FzZkJ1pjtG3pVw5gtlhhuSfMhtu/cUSNyil0CfTvWbhSSkdeBpaR+J9TapBKH6qvIYGo4=
+    # GH_TOKEN from mycozycloud (readable from password-store/cozy-ui/github-token-for-semantic-release-on-travis)
+    - secure: rPQqo7cZCiEw4oUZvjn62oToLptwUdtvxKeuADo3l6cchn7/OnpXdL32JN6VuJrj/a2ebPKZmAmBNCYqQ5SmIaK7/3EKXPNNvgXmdwubjWE1VNls2Oj4XFZ+E5AyNV3KOq1MpOBa7ccNORmspthnTHWe7Z6b8dyv7I2KN2Igjac=
