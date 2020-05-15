@@ -63,9 +63,9 @@ const ActionMenu = ({
   preventOverflow,
   anchorElRef,
   containerElRef,
-  breakpoints: { isDesktop }
+  breakpoints: { isMobile }
 }) => {
-  const shouldDisplayInline = isDesktop
+  const shouldDisplayInline = !isMobile
   const containerRef = React.createRef()
   return (
     <div
@@ -87,7 +87,7 @@ const ActionMenu = ({
           })}
         >
           {React.Children.map(children, child =>
-            child && child.type === ActionMenuHeader && isDesktop ? null : child
+            child && child.type === ActionMenuHeader && !isMobile ? null : child
           )}
         </div>
       </ActionMenuWrapper>
