@@ -2,6 +2,7 @@
 @require '../settings/breakpoints'
 
 $tabs-base
+    $borderBottomWidth=rem(2)
     .coz-tab-list
         border-bottom  rem(1) solid var(--silver)
         background var(--tabsBackgroundColor)
@@ -15,7 +16,7 @@ $tabs-base
         --tabsBackgroundColor var(--primaryColor)
 
     .coz-tab
-        flex 0 0 auto
+        flex           0 0 auto
         padding        rem(10 16)
         text-transform uppercase
         font-size      rem(12)
@@ -25,16 +26,27 @@ $tabs-base
         font-weight    bold
         opacity        .64
 
+        border-bottom $borderBottomWidth solid transparent
+
         &:hover
             text-decoration none
 
         +small-screen()
             &
-                // Important thing is to have the tab's height 48px
-                padding rem(17 24)
+                // 0 for flex-basis so that each tabs has the same width
+                flex           1 0 0
+
+                height 3rem
+                padding 0 1.5rem
+                box-sizing border-box
+
+                display flex
+                justify-content center
+                align-items center
+                white-space nowrap
 
     .coz-tab--active
-        border-bottom rem(2) solid var(--tabsIndicatorColor)
+        border-bottom-color var(--tabsIndicatorColor)
         color         var(--tabsActiveTextColor)
         opacity 1
 

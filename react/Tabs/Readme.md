@@ -33,7 +33,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, soluta. Voluptas 
   <Tabs initialActiveTab='general'>
     <TabList inverted>
       <Tab name='general'>General</Tab>
-      <Tab name='details'>Details <Icon icon="magnifier" size={13} className="u-ml-half" /></Tab>
+      <Tab name='details'>Details</Tab>
     </TabList>
     <TabPanels>
       <TabPanel name='general'>
@@ -50,7 +50,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, soluta. Voluptas 
       <TabList inverted>
         <Tab name='general'>General</Tab>
         <Tab name='details'>Details</Tab>
-        <Tab name='similar'>Similar</Tab>
+        <Tab name='similar'>Very long title</Tab>
         <Tab name='others'>Others</Tab>
       </TabList>
       <TabPanels>
