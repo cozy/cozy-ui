@@ -1,3 +1,12 @@
+# [35.22.0](https://github.com/cozy/cozy-ui/compare/v35.21.0...v35.22.0) (2020-05-19)
+
+
+### Features
+
+* Add cozy text icon ([dee0f62](https://github.com/cozy/cozy-ui/commit/dee0f62))
+* Add sad cozy icon ([ab41bbe](https://github.com/cozy/cozy-ui/commit/ab41bbe))
+* Move cozy-text and sad-cozy to icons ([aedecde](https://github.com/cozy/cozy-ui/commit/aedecde))
+
 # [35.21.0](https://github.com/cozy/cozy-ui/compare/v35.20.0...v35.21.0) (2020-05-15)
 
 
