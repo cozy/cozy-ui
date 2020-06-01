@@ -140,7 +140,7 @@
     "react-hot-loader": "^4.3.11",
     "react-markdown": "^4.0.8",
     "react-pdf": "^4.0.5",
-    "react-select": "2.2.0",
+    "react-select": "2.4.4",
     "react-swipeable-views": "0.13.3"
   },
   "peerDependencies": {
