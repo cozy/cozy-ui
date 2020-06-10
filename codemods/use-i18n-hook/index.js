@@ -40,5 +40,5 @@ export default function transformer(file, api) {
     }
   })
 
-  return replaceI18nPropsByHook(root)
+  return replaceI18nPropsByHook(root).toSource()
 }

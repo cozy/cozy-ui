@@ -45,5 +45,5 @@ export default function transformer(file, api) {
     }
   })
 
-  return replaceBreakpointsHOC(root)
+  return replaceBreakpointsHOC(root).toSource()
 }
