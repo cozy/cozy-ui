@@ -403,9 +403,6 @@ const toggle = () => setState({ modalOpened: !state.modalOpened });
 
 ```
 
-
-
-
 ### Portal modals
 
 You can use the `into` prop to wrap the `Modal` in a `Portal`. This `prop` will be set to `"body"` in future versions so try to put it now to check if your Modal does not break when rendered in a Portal.
@@ -419,5 +416,42 @@ initialState = { modalOpened: false};
     Toggle modal
   </button>
   {state.modalOpened && <Modal into='body' title='Ada Lovelace' description={content.ada.short} dismissAction={() => setState({ modalOpened: false })} /> }
+</div>
+```
+
+### Focus trap
+
+FocusTrap can be useful used in conjuction with the Modal.
+
+```jsx
+import FocusTrap from 'focus-trap-react'
+import Modal, { ModalContent, ModalButtons } from 'cozy-ui/transpiled/react/Modal';
+import Button from 'cozy-ui/transpiled/react/Button';
+
+initialState = { modalOpened: false};
+
+const toggleModal = () => setState({ modalOpened: !state.modalOpened })
+const hideModal = () => setState({ modalOpened: false })
+
+const MyModal = ({ dismissAction }) => {
+  return <Modal dismissAction={dismissAction}>
+    <FocusTrap>
+      <ModalContent>
+        <p>
+          Buttons below can be cycled with Tab and focus will not escape
+          the modal.
+        </p>
+        <Button label="OK" onClick={dismissAction} />
+        <Button theme="secondary" label="Cancel" onClick={dismissAction} />
+      </ModalContent>
+    </FocusTrap>
+  </Modal>
+} ;
+
+<div>
+  <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
+    Toggle modal
+  </button>
+  {state.modalOpened && <MyModal dismissAction={hideModal} />}
 </div>
 ```
