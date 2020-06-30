@@ -59,5 +59,17 @@ import { Caption } from 'cozy-ui/transpiled/react/Text';
 ```
 import { ErrorMessage } from 'cozy-ui/transpiled/react/Text';
 
-<ErrorMessage>This an error message text</ErrorMessage>
+<ErrorMessage>This is an error message text</ErrorMessage>
+```
+
+#### Utility classes
+
+Utility classes can be used for status texts
+
+```
+<>
+  <p className='u-error'>This is an error message styled with u-error.</p>
+  <p className='u-warn'>This is a warning message styled with u-warn.</p>
+  <p className='u-valid'>This is a valid message styled with u-valid.</p>
+</>
 ```
