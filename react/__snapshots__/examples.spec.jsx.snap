@@ -6222,7 +6222,15 @@ exports[`Text should render examples: Text 7`] = `
 
 exports[`Text should render examples: Text 8`] = `
 "<div>
-  <div class=\\"styles__ErrorMessage___PWDaA\\">This an error message text</div>
+  <div class=\\"styles__ErrorMessage___PWDaA\\">This is an error message text</div>
+</div>"
+`;
+
+exports[`Text should render examples: Text 9`] = `
+"<div>
+  <p class=\\"u-error\\">This is an error message styled with u-error.</p>
+  <p class=\\"u-warn\\">This is a warning message styled with u-warn.</p>
+  <p class=\\"u-valid\\">This is a valid message styled with u-valid.</p>
 </div>"
 `;
 
