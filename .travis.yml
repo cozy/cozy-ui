@@ -22,8 +22,3 @@ deploy:
     script: yarn build:doc:kss && yarn deploy:doc -- --username cozycloud --email contact@cozycloud.cc --repo https://cozy-bot:$GH_TOKEN@github.com/cozy/cozy-ui.git && yarn semantic-release
     on:
       branch: master
-
-env:
-  global:
-    # GH_TOKEN from mycozycloud (readable from password-store/cozy-ui/github-token-for-semantic-release-on-travis)
-    - secure: rPQqo7cZCiEw4oUZvjn62oToLptwUdtvxKeuADo3l6cchn7/OnpXdL32JN6VuJrj/a2ebPKZmAmBNCYqQ5SmIaK7/3EKXPNNvgXmdwubjWE1VNls2Oj4XFZ+E5AyNV3KOq1MpOBa7ccNORmspthnTHWe7Z6b8dyv7I2KN2Igjac=
