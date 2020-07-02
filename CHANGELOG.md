@@ -1,3 +1,18 @@
+# [35.23.0](https://github.com/cozy/cozy-ui/compare/v35.22.0...v35.23.0) (2020-07-02)
+
+
+### Bug Fixes
+
+* Use toSource() on codemod ([88a8c32](https://github.com/cozy/cozy-ui/commit/88a8c32))
+
+
+### Features
+
+* Status colors go through semantic indirection ([12a69ff](https://github.com/cozy/cozy-ui/commit/12a69ff))
+* Use custom css prop for active color ([d76f0e7](https://github.com/cozy/cozy-ui/commit/d76f0e7))
+* Use primaryColor for nav ([950ac12](https://github.com/cozy/cozy-ui/commit/950ac12))
+* Use primaryTextColor for text classes ([86cb7fa](https://github.com/cozy/cozy-ui/commit/86cb7fa))
+
 # [35.22.0](https://github.com/cozy/cozy-ui/compare/v35.21.0...v35.22.0) (2020-05-19)
 
 
