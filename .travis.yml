@@ -19,6 +19,6 @@ deploy:
   - provider: script
     repo: cozy/cozy-ui
     skip-cleanup: true
-    script: yarn build:doc:kss && yarn deploy:doc -- --username cozycloud --email contact@cozycloud.cc --repo https://mycozycloud:$GH_TOKEN@github.com/cozy/cozy-ui.git && yarn semantic-release
+    script: yarn build:doc:kss && yarn deploy:doc -- --username cozycloud --email contact@cozycloud.cc --repo https://cozy-bot:$GH_TOKEN@github.com/cozy/cozy-ui.git && yarn semantic-release
     on:
       branch: master
