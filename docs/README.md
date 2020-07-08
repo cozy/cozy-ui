@@ -64,6 +64,7 @@ If you want to customize or improve a Cozy UI Component, you need to clone a loc
 git clone git@github.com:cozy/cozy-ui.git
 cd cozy-ui
 yarn link
+yarn transpile --watch # Launch transpilation
 ```
 
 Then in your application folder, you can link to your local Cozy UI
@@ -73,7 +74,7 @@ yarn link cozy-ui
 yarn watch
 ```
 
-All your modification in your local Cozy UI will now be visible in your application!
+All your modifications in your local Cozy UI will now be visible in your application!
 
 When sending a PR, if your changes have graphic impacts, it is useful for the reviewers if
 you have deployed a version of the styleguidist containing your changes to your repository.
