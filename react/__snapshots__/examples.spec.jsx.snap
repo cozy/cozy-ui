@@ -389,35 +389,6 @@ exports[`Button should render examples: Button 15`] = `
 </div>"
 `;
 
-exports[`ButtonAction should render examples: ButtonAction 1`] = `
-"<div>
-  <div>
-    <p><button type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--normal___1HGLQ\\"><span><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">Normal</span><span data-action=\\"icon\\" class=\\"styles__c-actionbtn-icon___2Od_-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#openwith\\"></use></svg></span></span></button><button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--normal___1HGLQ\\"><span><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">Normal</span><span data-action=\\"icon\\" class=\\"styles__c-actionbtn-icon___2Od_-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#openwith\\"></use></svg></span></span></button></p>
-    <p><button type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--new___1_BNn\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#plus\\"></use></svg><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">New</span></span></button><button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--new___1_BNn\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#plus\\"></use></svg><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">New</span></span></button></p>
-    <p><button type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--error___2pt97\\"><span><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">Error</span><span data-action=\\"icon\\" class=\\"styles__c-actionbtn-icon___2Od_-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#file-none\\"></use></svg></span></span></button><button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--error___2pt97\\"><span><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">Error</span><span data-action=\\"icon\\" class=\\"styles__c-actionbtn-icon___2Od_-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#file-none\\"></use></svg></span></span></button></p>
-  </div>
-</div>"
-`;
-
-exports[`ButtonAction should render examples: ButtonAction 2`] = `
-"<div>
-  <div>
-    <p><button type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--normal___1HGLQ\\"><span><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">Very long long long label</span><span data-action=\\"icon\\" class=\\"styles__c-actionbtn-icon___2Od_-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#hourglass\\"></use></svg></span></span></button></p>
-  </div>
-</div>"
-`;
-
-exports[`ButtonAction should render examples: ButtonAction 3`] = `
-"<div>
-  <div>
-    <p><button type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--normal___1HGLQ styles__c-actionbtn--compact___37yb2\\" title=\\"Normal\\"><span><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">Normal</span><span data-action=\\"icon\\" class=\\"styles__c-actionbtn-icon___2Od_-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#openwith\\"></use></svg></span></span></button></p>
-    <p><button disabled=\\"\\" type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--normal___1HGLQ styles__c-actionbtn--compact___37yb2\\" title=\\"Disabled\\"><span><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">Disabled</span><span data-action=\\"icon\\" class=\\"styles__c-actionbtn-icon___2Od_-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#hourglass\\"></use></svg></span></span></button></p>
-    <p><button type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--new___1_BNn styles__c-actionbtn--compact___37yb2\\" title=\\"New\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#plus\\"></use></svg><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">New</span></span></button></p>
-    <p><button type=\\"button\\" role=\\"button\\" class=\\"styles__c-actionbtn___162t6 styles__c-actionbtn--error___2pt97 styles__c-actionbtn--compact___37yb2\\" title=\\"Error\\"><span><span data-action=\\"label\\" class=\\"styles__c-actionbtn-label___3nDeu\\">Error</span><span data-action=\\"icon\\" class=\\"styles__c-actionbtn-icon___2Od_-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#file-none\\"></use></svg></span></span></button></p>
-  </div>
-</div>"
-`;
-
 exports[`Card should render examples: Card 1`] = `
 "<div>
   <div class=\\"styles__c-card___YgP7B\\">
