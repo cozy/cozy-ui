@@ -17,6 +17,9 @@ const ButtonAction = props => {
     onClick,
     ...restProps
   } = props
+  console.warn(
+    'ButtonAction is deprecated, please use either a Chip or a Button'
+  )
   return (
     <button
       disabled={disabled}
