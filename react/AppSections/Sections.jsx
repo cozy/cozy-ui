@@ -192,9 +192,16 @@ Sections.propTypes = {
 
 Sections.defaultProps = {
   hasNav: true,
+  /** Whether to show the top dropdown that is used to switch categories on mobile */
   showFilterDropdown: true,
+
+  /** Whether to show titles (ex: Applications) */
   showTitles: true,
+
+  /** Whether to show sub titles (ex: Application category) */
   showSubTitles: true,
+
+  /** Whether to show sub sub titles (ex: Konnector category) */
   showSubSubTitles: true
 }
 
