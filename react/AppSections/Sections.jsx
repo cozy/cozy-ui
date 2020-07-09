@@ -78,7 +78,11 @@ export class Sections extends Component {
       onAppClick,
       breakpoints = {},
       hasNav,
-      IconComponent
+      IconComponent,
+      showFilterDropdown,
+      showTitles,
+      showSubTitles,
+      showSubSubTitles
     } = this.props
     const { isMobile, isTablet } = breakpoints
 
@@ -103,7 +107,8 @@ export class Sections extends Component {
       .map(cat => catUtils.addLabel({ value: cat }, t))
       .sort(catUtils.sorter)
 
-    const dropdownDisplayed = hasNav && (isMobile || isTablet)
+    const dropdownDisplayed =
+      hasNav && (isMobile || isTablet) && showFilterDropdown
     const rawSelectOptions = catUtils.generateOptionsFromApps(apps, {
       includeAll: true
     })
@@ -122,7 +127,7 @@ export class Sections extends Component {
             onChange={this.handleCategoryChange}
           />
         )}
-        {!isMobile && !!webAppsCategories.length && (
+        {!isMobile && !!webAppsCategories.length && showTitles && (
           <SectionTitle>{t('sections.applications')}</SectionTitle>
         )}
         <Section>
@@ -143,14 +148,18 @@ export class Sections extends Component {
           )}
           {!!konnectorsCategories.length && (
             <div>
-              <SectionSubtitle>{t('sections.konnectors')}</SectionSubtitle>
+              {showSubTitles && (
+                <SectionSubtitle>{t('sections.konnectors')}</SectionSubtitle>
+              )}
               {konnectorsCategories.map(cat => {
                 return (
                   <AppsSection
                     key={cat.value}
                     appsList={konnectorGroups[cat.value]}
                     subtitle={
-                      <SectionSubSubtitle>{cat.label}</SectionSubSubtitle>
+                      showSubSubTitles ? (
+                        <SectionSubSubtitle>{cat.label}</SectionSubSubtitle>
+                      ) : null
                     }
                     IconComponent={IconComponent}
                     onAppClick={onAppClick}
@@ -182,7 +191,11 @@ Sections.propTypes = {
 }
 
 Sections.defaultProps = {
-  hasNav: true
+  hasNav: true,
+  showFilterDropdown: true,
+  showTitles: true,
+  showSubTitles: true,
+  showSubSubTitles: true
 }
 
 export const Untranslated = withBreakpoints()(Sections)
