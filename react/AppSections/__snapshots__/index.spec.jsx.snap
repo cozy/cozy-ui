@@ -2,7 +2,7 @@
 
 exports[`AppsSection component should be rendered correctly with apps list, subtitle and onAppClick 1`] = `
 <div
-  className="Sections__Sections___2QzV_"
+  className=""
 >
   <SectionTitle>
     Applications
@@ -340,7 +340,7 @@ exports[`AppsSection component should be rendered correctly with apps list, subt
 
 exports[`AppsSection component should not render dropdown filter on mobile if nav=false flag provided 1`] = `
 <div
-  className="Sections__Sections___2QzV_"
+  className=""
 >
   <Section>
     <div>
@@ -675,7 +675,7 @@ exports[`AppsSection component should not render dropdown filter on mobile if na
 
 exports[`AppsSection component should not render dropdown filter on tablet if nav=false flag provided 1`] = `
 <div
-  className="Sections__Sections___2QzV_"
+  className=""
 >
   <SectionTitle>
     Applications
@@ -1021,7 +1021,7 @@ exports[`AppsSection component should render correctly render message if error p
 
 exports[`AppsSection component should render dropdown filter on mobile if no nav=false flag provided 1`] = `
 <div
-  className="Sections__Sections___2QzV_ u-mt-half"
+  className="u-mt-half"
 >
   <DropdownFilter
     defaultValue={
@@ -1416,7 +1416,7 @@ exports[`AppsSection component should render dropdown filter on mobile if no nav
 
 exports[`AppsSection component should render dropdown filter on tablet if no nav=false flag provided 1`] = `
 <div
-  className="Sections__Sections___2QzV_ u-mt-half"
+  className="u-mt-half"
 >
   <DropdownFilter
     defaultValue={
