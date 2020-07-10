@@ -1,20 +1,24 @@
 $translucentWhite1=rgba(255, 255, 255, 0.24)
 $translucentWhite2=rgba(255, 255, 255, 0.88)
 
-.CozyTheme--inverted
-    background: var(--primaryColor)
+:root
+    --invertedBackgroundColor: var(--primaryColor)
+    --invertedContrastTextColor: var(--primaryContrastTextColor)
 
-    --primaryTextColor: var(--primaryContrastTextColor)
-    --secondaryTextColor: var(--primaryContrastTextColor)
-    --barIconColor var(--primaryContrastTextColor)
+.CozyTheme--inverted
+    background: var(--invertedBackgroundColor)
+
+    --primaryTextColor: var(--invertedContrastTextColor)
+    --secondaryTextColor: var(--invertedContrastTextColor)
+    --barIconColor var(--invertedContrastTextColor)
     --barIconColorDisabled $translucentWhite2
 
-    --regularButtonPrimaryColor: var(--primaryContrastTextColor)
-    --regularButtonSecondaryColor: var(--primaryContrastTextColor)
+    --regularButtonPrimaryColor: var(--invertedContrastTextColor)
+    --regularButtonSecondaryColor: var(--invertedContrastTextColor)
     --regularButtonActiveColor: $translucentWhite2
-    --regularButtonConstrastColor: var(--primaryColor)
+    --regularButtonConstrastColor: var(--invertedBackgroundColor)
 
-    --secondaryButtonPrimaryColor: var(--primaryColor)
-    --secondaryButtonSecondaryColor: var(--white)
+    --secondaryButtonPrimaryColor: var(--invertedBackgroundColor)
+    --secondaryButtonSecondaryColor: var(--invertedContrastTextColor)
     --secondaryButtonActiveColor: $translucentWhite1
-    --secondaryButtonContrastColor: var(--white)
+    --secondaryButtonContrastColor: var(--invertedContrastTextColor)
