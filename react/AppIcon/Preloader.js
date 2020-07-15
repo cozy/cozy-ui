@@ -42,7 +42,7 @@ const _getAppIconURL = (app, domain, secure) => {
 }
 
 const _getInstalledIconPath = app => {
-  return app.links && app.links.icon
+  return app && app.links && app.links.icon
 }
 
 const _getRegistryIconPath = app => {
@@ -51,6 +51,7 @@ const _getRegistryIconPath = app => {
   }
 
   return (
+    app &&
     app.latest_version &&
     app.latest_version.version &&
     `/registry/${app.slug}/${app.latest_version.version}/icon`
