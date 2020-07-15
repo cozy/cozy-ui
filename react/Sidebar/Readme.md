@@ -16,14 +16,15 @@ In action :
 ```
 import Sidebar from 'cozy-ui/transpiled/react/Sidebar';
 import Nav, { NavItem, NavIcon, NavText, genNavLink } from 'cozy-ui/transpiled/react/Nav';
+import cx from 'classnames';
 
-const NavLink = genNavLink(({ children, className }) =>
-  <a className={className}>{ children }</a>);
+const NavLink = genNavLink(({ children, className, active, activeClassName }) =>
+  <a className={cx(className, active ? activeClassName : null)}>{ children }</a>);
 
 <Sidebar id='sidebar'>
   <Nav>
     <NavItem id='nav-item'>
-      <NavLink>
+      <NavLink active>
         <NavIcon icon='warn' />
         <NavText>Warn</NavText>
       </NavLink>
