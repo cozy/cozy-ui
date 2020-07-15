@@ -64,7 +64,7 @@ $nav-item-icon
         color var(--primaryColor)
 
     :hover > &
-        color var(--slateGrey)
+        color var(--navTextColor)
 
     +medium-screen()
         display block
@@ -88,7 +88,7 @@ $nav-link
     padding-right        rem(16)
     line-height          1.5
     text-decoration      none
-    color                var(--slateGrey)
+    color                var(--navTextColor)
     height               100%
     align-items          center
     flex                 1
@@ -96,15 +96,16 @@ $nav-link
     background-position  rem(24) center
 
     &:visited
-        color  var(--slateGrey)
+        color  var(--navTextColor)
 
     &:hover
-        color  var(--charcoalGrey)
+        color  var(--navTextHoverColor)
 
     &.active // deprecated
     &.is-active
         box-shadow   inset rem(4) 0 0 0 var(--primaryColor)
         font-weight  bold
+        color  var(--navTextActiveColor)
 
         .c-nav-icon
             color var(--primaryColor)
@@ -114,7 +115,6 @@ $nav-link
         height               auto
         padding              0
         text-align           center
-        color                var(--slateGrey)
         font-size            rem(10)
         line-height          rem(12)
         background-position  center top
@@ -125,12 +125,12 @@ $nav-link
         &:hover
             box-shadow   none
             font-weight  normal
-            color        var(--charcoalGrey)
+            color        var(--navTextHoverColor)
 
     // Prevent double tap on tablets
     @media not all and (pointer: fine)
         &:hover
-            color var(--slateGrey)
+            color var(--navTextColor)
 
 
 $nav-item-secondary
@@ -165,16 +165,16 @@ $nav-link-secondary
     border-radius 4px 0 0 4px
     box-shadow none
     font-size $small-font-size
-    color var(--slateGrey)
+    color var(--navTextColor)
     text-decoration none
     height auto
 
     &:hover
-        color var(--charcoalGrey)
+        color var(--navTextHoverColor)
 
     &.is-active
         color white
-        border-right 1px solid var(--slateGrey)
-        background-color var(--slateGrey)
+        border-right 1px solid var(--navTextColor)
+        background-color var(--navTextColor)
 
 
