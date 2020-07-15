@@ -3,7 +3,7 @@ import styles from './styles.styl'
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { Icon } from 'cozy-ui/transpiled/react'
+import Icon from '../react/Icon'
 
 const ButtonClient = props => {
   const { label, href, onClick, className } = props

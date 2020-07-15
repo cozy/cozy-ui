@@ -1,18 +1,19 @@
 import React, { Component } from 'react'
-import classNames from 'classnames'
-import { translate } from 'cozy-ui/react/I18n'
+import cx from 'classnames'
+import formatDistanceToNow from 'date-fns/distance_in_words_to_now'
+import { splitFilename } from 'cozy-client/dist/models/file'
+
+import { translate } from '../I18n'
 import Icon from '../Icon'
 import Spinner from '../Spinner'
 import withLocales from '../I18n/withLocales'
 import { useI18n } from '../I18n'
 import ThresholdBar from '../ThresholdBar'
 import { Caption } from '../Text'
-import palette from '../../stylus/settings/palette.json'
-import styles from './styles.styl'
-import formatDistanceToNow from 'date-fns/distance_in_words_to_now'
-import cx from 'classnames'
-import { splitFilename } from 'cozy-client/dist/models/file'
 import { Media, Bd, Img } from '../Media'
+import palette from '../../stylus/settings/palette.json'
+
+import styles from './styles.styl'
 import localeEn from './locales/en.json'
 import localeEs from './locales/es.json'
 import localeFr from './locales/fr.json'
@@ -126,7 +127,7 @@ const Item = translate()(
     return (
       <Media
         data-test-id="upload-queue-item"
-        className={classNames('u-ph-1', styles['upload-queue-item'], {
+        className={cx('u-ph-1', styles['upload-queue-item'], {
           [styles['upload-queue-item--done']]: done,
           [styles['upload-queue-item--error']]: error
         })}
@@ -179,7 +180,7 @@ class UploadQueue extends Component {
     return (
       <div
         data-test-id="upload-queue"
-        className={classNames(styles['upload-queue'], {
+        className={cx(styles['upload-queue'], {
           [styles['upload-queue--visible']]: queue.length !== 0,
           [styles['upload-queue--collapsed']]: collapsed,
           [styles['upload-queue--popover']]: popover
@@ -213,10 +214,7 @@ class UploadQueue extends Component {
                   total: queue.length
                 })}
               </span>
-              <button
-                className={classNames(styles['btn-close'])}
-                onClick={purgeQueue}
-              >
+              <button className={cx(styles['btn-close'])} onClick={purgeQueue}>
                 {t('close')}
               </button>
             </div>
