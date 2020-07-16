@@ -30,6 +30,20 @@ $ellipsis
     overflow hidden
     text-overflow ellipsis
 
+spacellipsis()
+    overflow hidden
+    text-overflow ellipsis
+    white-space break-spaces
+
+space-ellipsis = {
+    'spacellipsis': 'spacellipsis'
+}
+
+if cssmodules == true
+    cssModulesUtils(space-ellipsis, breakpoints)
+else
+    nativeUtils(space-ellipsis, breakpoints)
+
 $midellipsis
     display flex
     flex-wrap nowrap
