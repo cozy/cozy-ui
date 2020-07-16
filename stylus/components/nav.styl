@@ -122,10 +122,16 @@ $nav-link
 
         &.active // deprecated
         &.is-active
+            color        var(--navTextActiveColor)
+
+        &:hover
+            color        var(--navTextHoverColor)
+
+        &.active // deprecated
+        &.is-active
         &:hover
             box-shadow   none
             font-weight  normal
-            color        var(--navTextHoverColor)
 
     // Prevent double tap on tablets
     @media not all and (pointer: fine)
