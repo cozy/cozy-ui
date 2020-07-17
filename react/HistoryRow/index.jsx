@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Circle from './Circle'
+import Circle from '../Circle'
 import { Media, Bd, Img } from '../Media'
 import { Caption, SubTitle, Bold } from '../Text'
 import Icon from '../Icon'
