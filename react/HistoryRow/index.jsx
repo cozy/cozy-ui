@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Media, Bd, Img } from 'cozy-ui/transpiled/react/Media'
-import { Caption, SubTitle, Bold } from 'cozy-ui/transpiled/react/Text'
-import { Icon, Circle } from 'cozy-ui/transpiled/react'
-import palette from 'cozy-ui/transpiled/react/palette'
+import Circle from './Circle'
+import { Media, Bd, Img } from '../Media'
+import { Caption, SubTitle, Bold } from '../Text'
+import Icon from '../Icon'
+import palette from '../palette'
 
 import styles from './styles.styl'
 

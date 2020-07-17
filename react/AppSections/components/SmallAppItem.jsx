@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import AppIcon from 'cozy-ui/react/AppIcon'
-import { translate } from 'cozy-ui/react/I18n'
-import styles from './SmallAppItem.styl'
-
+import AppIcon from '../../AppIcon'
+import { translate } from '../../I18n'
 import { getCurrentStatusLabel } from '../status'
 import { AppDoctype } from '../../proptypes'
+
+import styles from './SmallAppItem.styl'
 
 let dataset
 const getDataset = () => {

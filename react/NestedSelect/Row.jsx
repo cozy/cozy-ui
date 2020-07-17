@@ -1,7 +1,9 @@
 import React from 'react'
-import { Media, Bd, Img, Icon } from 'cozy-ui/transpiled/react'
-import styles from './Row.styl'
 import cx from 'classnames'
+
+import { Media, Bd, Img } from '../Media'
+import Icon from '../Icon'
+import styles from './Row.styl'
 
 export const RowBody = ({ children }) => (
   <Bd className="u-ellipsis">{children}</Bd>

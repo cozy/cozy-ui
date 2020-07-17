@@ -1,8 +1,9 @@
 import React from 'react'
-import { ButtonLink } from 'cozy-ui/transpiled/react/Button'
-import { useI18n } from '../I18n'
 import { useClient, useFetchShortcut } from 'cozy-client'
 import get from 'lodash/get'
+
+import { ButtonLink } from '../Button'
+import { useI18n } from '../I18n'
 import NoViewer from './NoViewer'
 import { FileDoctype } from '../proptypes'
 
