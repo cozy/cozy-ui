@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button'
 import { Title, Text } from '../../Text'
 import Stack from '../../Stack'
 import { Media, Img } from '../../Media'
+import Switch from '.'
 
 initialState = {
   switch1: false,
