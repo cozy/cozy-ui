@@ -163,3 +163,19 @@ export const WizardNotice = ({
     </Component>
   )
 }
+
+export const WizardErrors = ({
+  children,
+  className,
+  tag: Component,
+  ...props
+}) => {
+  return (
+    <Component
+      className={cx(styles['wizard-errors'], 'u-error', className)}
+      {...props}
+    >
+      {children}
+    </Component>
+  )
+}
