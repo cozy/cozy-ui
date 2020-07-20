@@ -1,6 +1,6 @@
 {
   "name": "cozy-ui",
-  "version": "35.23.0",
+  "version": "35.33.0-beta.1",
   "description": "Cozy apps UI SDK",
   "main": "./index.js",
   "bin": {
