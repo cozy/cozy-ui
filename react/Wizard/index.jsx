@@ -130,7 +130,7 @@ export const WizardDualField = ({ children, hasFocus, hasError }) => {
   )
 }
 
-export const DualFieldWrapper = ({ children }) => {
+export const WizardDualFieldWrapper = ({ children }) => {
   return <div className={styles['wizard-dualfield-wrapper']}>{children}</div>
 }
 
@@ -157,6 +157,22 @@ export const WizardNotice = ({
         variant === 'lost' ? styles['wizard-notice--lost'] : null,
         className
       )}
+      {...props}
+    >
+      {children}
+    </Component>
+  )
+}
+
+export const WizardErrors = ({
+  children,
+  className,
+  tag: Component,
+  ...props
+}) => {
+  return (
+    <Component
+      className={cx(styles['wizard-errors'], 'u-error', className)}
       {...props}
     >
       {children}

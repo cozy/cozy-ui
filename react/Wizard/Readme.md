@@ -7,7 +7,8 @@ import {
   WizardNextButton,
   WizardTitle,
   WizardMain,
-  WizardFooter
+  WizardFooter,
+  WizardErrors
 } from '.'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Field from 'cozy-ui/transpiled/react/Field'
@@ -39,6 +40,9 @@ const WizardExample = ({ onNext, onRegister }) => {
       <WizardMain>
         <Field label='Login' type='text' placeholder='dalailama@cozycloud.cc' />
         <Field label='Password' type='text' />
+        <WizardErrors tag='p'>
+          There is an error
+        </WizardErrors>
       </WizardMain>
       <WizardFooter className={isTiny ? 'u-mt-auto' : 'u-pb-2'}>
         <WizardNextButton
