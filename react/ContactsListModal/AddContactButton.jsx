@@ -1,5 +1,5 @@
 import React from 'react'
-import { withClient, models, queryConnect } from 'cozy-client'
+import { withClient, models, queryConnect, Q } from 'cozy-client'
 import AppLinker from '../AppLinker'
 import { ButtonLink } from '../Button'
 import compose from 'lodash/flowRight'
@@ -55,7 +55,7 @@ const AddContactButton = compose(
   withClient,
   queryConnect({
     apps: {
-      query: client => client.all('io.cozy.apps'),
+      query: () => Q('io.cozy.apps'),
       as: 'apps'
     }
   })

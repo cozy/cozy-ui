@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { withClient, fetchPolicies, queryConnect } from 'cozy-client'
+import { Q, withClient, fetchPolicies, queryConnect } from 'cozy-client'
 import ContactsList from '../ContactsList'
 import Modal, { ModalHeader, ModalDescription } from '../Modal'
 import Spinner from '../Spinner'
@@ -135,7 +135,7 @@ export default compose(
   withBreakpoints(),
   queryConnect({
     contacts: {
-      query: client => client.all('io.cozy.contacts').UNSAFE_noLimit(),
+      query: () => Q('io.cozy.contacts').UNSAFE_noLimit(),
       as: 'contacts',
       fetchPolicy: olderThan30s
     }
