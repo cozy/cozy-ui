@@ -130,7 +130,7 @@ export const WizardDualField = ({ children, hasFocus, hasError }) => {
   )
 }
 
-export const DualFieldWrapper = ({ children }) => {
+export const WizardDualFieldWrapper = ({ children }) => {
   return <div className={styles['wizard-dualfield-wrapper']}>{children}</div>
 }
 
