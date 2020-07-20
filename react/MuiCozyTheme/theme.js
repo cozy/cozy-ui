@@ -1,6 +1,8 @@
+import merge from 'lodash/merge'
 import { createMuiTheme } from '@material-ui/core/styles'
 import { getCssVariableValue } from '../utils/color'
 import isTesting from '../../helpers/isTesting'
+
 const defaultValues = {
   borderRadius: 6,
   dialog: {
@@ -12,6 +14,10 @@ const defaultValues = {
     }
   }
 }
+
+const SWITCH_BAR_WIDTH = 25
+const SWITCH_BAR_HEIGHT = 12
+const SWITCH_BUTTON_WIDTH = 46
 
 export const normalTheme = createMuiTheme({
   typography: {
@@ -46,7 +52,7 @@ export const normalTheme = createMuiTheme({
   palette: {
     type: 'light',
     primary: {
-      light: getCssVariableValue('primaryColorLight'),
+      light: getCssVariableValue('white'),
       main: getCssVariableValue('primaryColor'),
       dark: getCssVariableValue('scienceBlue'),
       contrastText: getCssVariableValue('primaryContrastTextColor')
@@ -144,7 +150,7 @@ normalTheme.overrides = {
   },
   MuiList: {
     root: {
-      borderTop: '1px solid var(--silver)',
+      borderTop: '1px solid var(--red)',
       borderBottom: '1px solid var(--silver)'
     },
     padding: {
@@ -320,6 +326,52 @@ normalTheme.overrides = {
         marginLeft: `-${defaultValues.dialog.md.padding}px`
       }
     }
+  },
+  MuiSwitch: {
+    root: {
+      width: SWITCH_BUTTON_WIDTH,
+      '& input': {
+        width: '150%',
+        height: '150%',
+        left: '-25%',
+        top: '-25%'
+      }
+    },
+    switchBase: {
+      width: SWITCH_BUTTON_WIDTH,
+      transform: 'translateX(-7px)'
+    },
+    checked: {
+      '& + $bar': {
+        opacity: 1
+      },
+      transform: 'translateX(7px)'
+    },
+    icon: {
+      width: 16,
+      height: 16
+    },
+    bar: {
+      width: SWITCH_BAR_WIDTH,
+      height: 12,
+      marginTop: -(SWITCH_BAR_HEIGHT / 2),
+      marginLeft: -(SWITCH_BAR_WIDTH / 2),
+      backgroundColor: 'var(--silver)',
+      opacity: 1
+    },
+    colorPrimary: {
+      '&$checked': {
+        color: getCssVariableValue('primaryContrastTextColor')
+      }
+    },
+    colorSecondary: {
+      '&$checked': {
+        '& + $bar': {
+          backgroundColor: getCssVariableValue('validColor')
+        },
+        color: getCssVariableValue('primaryContrastTextColor')
+      }
+    }
   }
 }
 
@@ -333,13 +385,18 @@ export const invertedTheme = {
     ...normalTheme.palette,
     type: 'dark',
     text: {
-      primary: getCssVariableValue('white')
+      primary: {
+        light: getCssVariableValue('white'),
+        main: getCssVariableValue('white'),
+        dark: getCssVariableValue('white'),
+        contrastText: getCssVariableValue('primaryContrastTextColor')
+      },
+      secondary: getCssVariableValue('emerald')
     }
   }
 }
 
-invertedTheme.overrides = {
-  ...normalTheme.overrides,
+invertedTheme.overrides = merge({}, normalTheme.overrides, {
   MuiOutlinedInput: {
     root: {
       boxSizing: 'border-box',
@@ -363,8 +420,25 @@ invertedTheme.overrides = {
     root: {
       color: invertedTheme.palette.text.primary
     }
+  },
+  MuiSwitch: {
+    switchBase: {
+      color: 'white'
+    },
+    colorPrimary: {
+      '& + $bar': {
+        backgroundColor: 'white'
+      },
+
+      '&$checked': {
+        '& + $bar': {
+          border: '1px solid white',
+          boxSizing: 'border-box'
+        }
+      }
+    }
   }
-}
+})
 
 const themes = {
   normal: normalTheme,
