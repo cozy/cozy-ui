@@ -5552,6 +5552,55 @@ exports[`Menu should render examples: Menu 4`] = `
 </div>"
 `;
 
+exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
+"<div>
+  <div class=\\"styles__Stack--m___1tSpV\\">
+    <div class=\\"u-title-h2 u-mt-1\\">Normal theme</div>
+    <div>
+      <div class=\\"styles__media___cSJMp\\">
+        <div class=\\"styles__img___3SHpG\\">
+          <div class=\\"u-text\\">Primary</div>
+        </div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-55\\"><span class=\\"MuiButtonBase-root-74 MuiIconButton-root-68 MuiPrivateSwitchBase-root-64 MuiSwitch-switchBase-58 MuiSwitch-colorPrimary-60 MuiPrivateSwitchBase-checked-65 MuiSwitch-checked-59\\"><span class=\\"MuiIconButton-label-73\\"><span class=\\"MuiSwitch-icon-56 MuiSwitch-iconChecked-57\\"></span><input class=\\"MuiPrivateSwitchBase-input-67\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-99\\"></span></span><span class=\\"MuiSwitch-bar-63\\"></span></span></div>
+      </div>
+      <div class=\\"styles__media___cSJMp\\">
+        <div class=\\"styles__img___3SHpG\\">
+          <div class=\\"u-text\\">Secondary</div>
+        </div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-55\\"><span class=\\"MuiButtonBase-root-74 MuiIconButton-root-68 MuiPrivateSwitchBase-root-64 MuiSwitch-switchBase-58 MuiSwitch-colorSecondary-61 MuiPrivateSwitchBase-checked-65 MuiSwitch-checked-59\\"><span class=\\"MuiIconButton-label-73\\"><span class=\\"MuiSwitch-icon-56 MuiSwitch-iconChecked-57\\"></span><input class=\\"MuiPrivateSwitchBase-input-67\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-99\\"></span></span><span class=\\"MuiSwitch-bar-63\\"></span></span></div>
+      </div>
+      <div class=\\"styles__media___cSJMp\\">
+        <div class=\\"styles__img___3SHpG\\">
+          <div class=\\"u-text\\">Disabled</div>
+        </div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-55\\"><span class=\\"MuiButtonBase-root-74 MuiButtonBase-disabled-75 MuiIconButton-root-68 MuiIconButton-disabled-72 MuiPrivateSwitchBase-root-64 MuiSwitch-switchBase-58 MuiSwitch-colorSecondary-61 MuiPrivateSwitchBase-disabled-66 MuiSwitch-disabled-62\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-73\\"><span class=\\"MuiSwitch-icon-56\\"></span><input class=\\"MuiPrivateSwitchBase-input-67\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-63\\"></span></span></div>
+      </div>
+    </div>
+    <div class=\\"u-title-h2 u-mt-1\\">Inverted theme</div>
+    <div class=\\"u-p-1 styles__CozyTheme--inverted___1ygHa\\">
+      <div class=\\"styles__media___cSJMp\\">
+        <div class=\\"styles__img___3SHpG\\">
+          <div class=\\"u-text\\">Primary</div>
+        </div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-77\\"><span class=\\"MuiButtonBase-root-96 MuiIconButton-root-90 MuiPrivateSwitchBase-root-86 MuiSwitch-switchBase-80 MuiSwitch-colorPrimary-82 MuiPrivateSwitchBase-checked-87 MuiSwitch-checked-81\\"><span class=\\"MuiIconButton-label-95\\"><span class=\\"MuiSwitch-icon-78 MuiSwitch-iconChecked-79\\"></span><input class=\\"MuiPrivateSwitchBase-input-89\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-106\\"></span></span><span class=\\"MuiSwitch-bar-85\\"></span></span></div>
+      </div>
+      <div class=\\"styles__media___cSJMp\\">
+        <div class=\\"styles__img___3SHpG\\">
+          <div class=\\"u-text\\">Secondary</div>
+        </div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-77\\"><span class=\\"MuiButtonBase-root-96 MuiIconButton-root-90 MuiPrivateSwitchBase-root-86 MuiSwitch-switchBase-80 MuiSwitch-colorSecondary-83 MuiPrivateSwitchBase-checked-87 MuiSwitch-checked-81\\"><span class=\\"MuiIconButton-label-95\\"><span class=\\"MuiSwitch-icon-78 MuiSwitch-iconChecked-79\\"></span><input class=\\"MuiPrivateSwitchBase-input-89\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-106\\"></span></span><span class=\\"MuiSwitch-bar-85\\"></span></span></div>
+      </div>
+      <div class=\\"styles__media___cSJMp\\">
+        <div class=\\"styles__img___3SHpG\\">
+          <div class=\\"u-text\\">Disabled</div>
+        </div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-77\\"><span class=\\"MuiButtonBase-root-96 MuiButtonBase-disabled-97 MuiIconButton-root-90 MuiIconButton-disabled-94 MuiPrivateSwitchBase-root-86 MuiSwitch-switchBase-80 MuiSwitch-colorSecondary-83 MuiPrivateSwitchBase-disabled-88 MuiSwitch-disabled-84\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-95\\"><span class=\\"MuiSwitch-icon-78\\"></span><input class=\\"MuiPrivateSwitchBase-input-89\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-85\\"></span></span></div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
 exports[`NarrowContent should render examples: NarrowContent 1`] = `
 "<div>
   <div class=\\"styles__NarrowContent___Zq8oI\\">
@@ -6264,20 +6313,6 @@ exports[`ThresholdBar should render examples: ThresholdBar 1`] = `
   </div><br></div>"
 `;
 
-exports[`Toggle should render examples: Toggle 1`] = `"<div><span class=\\"styles__toggle___3zVsE\\"><input type=\\"checkbox\\" id=\\"simple-toggle\\" class=\\"styles__checkbox___3ko96\\"><label for=\\"simple-toggle\\" class=\\"styles__label___3jY1f\\"></label></span></div>"`;
-
-exports[`Toggle should render examples: Toggle 2`] = `"<div><span class=\\"styles__toggle___3zVsE\\"><input type=\\"checkbox\\" id=\\"toggle\\" class=\\"styles__checkbox___3ko96\\" checked=\\"\\"><label for=\\"toggle\\" class=\\"styles__label___3jY1f\\"></label></span></div>"`;
-
-exports[`Toggle should render examples: Toggle 3`] = `"<div><span class=\\"styles__toggle___3zVsE\\"><input type=\\"checkbox\\" id=\\"toggle\\" class=\\"styles__checkbox___3ko96\\"><label for=\\"toggle\\" class=\\"styles__label___3jY1f\\"></label></span></div>"`;
-
-exports[`Toggle should render examples: Toggle 4`] = `"<div><span class=\\"styles__toggle___3zVsE\\"><input type=\\"checkbox\\" id=\\"toggle\\" class=\\"styles__checkbox___3ko96\\"><label for=\\"toggle\\" class=\\"styles__label___3jY1f\\"></label></span></div>"`;
-
-exports[`Toggle should render examples: Toggle 5`] = `
-"<div>
-  <div><label for=\\"0\\" style=\\"margin-right: 15px; color: gray;\\">Toggle is controlled and off</label><span class=\\"styles__toggle___3zVsE\\"><input type=\\"checkbox\\" id=\\"0\\" class=\\"styles__checkbox___3ko96\\"><label for=\\"0\\" class=\\"styles__label___3jY1f\\"></label></span></div>
-</div>"
-`;
-
 exports[`UnorderedList should render examples: UnorderedList 1`] = `
 "<div>
   <ul class=\\"styles__UnorderedList___2uFFY styles__Stack--m___1tSpV\\">
@@ -6285,5 +6320,25 @@ exports[`UnorderedList should render examples: UnorderedList 1`] = `
     <li class=\\"styles__ListItem___3cRoI\\">And this</li>
     <li class=\\"styles__ListItem___3cRoI\\">Oh, and this, too</li>
   </ul>
+</div>"
+`;
+
+exports[`Wizard should render examples: Wizard 1`] = `
+"<div><button>Show wizard</button><br>
+  <div class=\\"styles__wizard___m6AMR\\">
+    <div class=\\"styles__wizard-wrapper___38V4s\\">
+      <header class=\\"styles__wizard-header___2_r05\\"><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--narrow___27FHD styles__c-btn--center___16_Xh styles__wizard-previous___2StGt\\" title=\\"Previous\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#previous\\"></use></svg><span class=\\"u-visuallyhidden\\">Previous</span></span></button>
+        <h1 class=\\"u-title-h1 styles__wizard-title___11Dzr\\">Connect to your Cozy</h1>
+      </header>
+      <div class=\\"styles__wizard-main___ObvId\\">
+        <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">Login</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"dalailama@cozycloud.cc\\" value=\\"\\"></div>
+        <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">Password</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" value=\\"\\"></div>
+        <p class=\\"styles__wizard-errors___1ufSE u-error\\">There is an error</p>
+      </div>
+      <footer class=\\"styles__wizard-footer___-ZrgM u-pb-2\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN styles__c-btn--center___16_Xh styles__wizard-next___38lPl\\"><span><span>Next step</span><svg class=\\"styles__icon___23x3R\\" style=\\"fill: white;\\" width=\\"16\\" height=\\"16\\">
+            <use xlink:href=\\"#next\\"></use>
+          </svg></span></button><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--large___2gatN styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Register an account</span></span></button></footer>
+    </div>
+  </div>
 </div>"
 `;
