@@ -1,5 +1,7 @@
 Used to present a binary choice to the user.
 
+Uses [Material UI's Switch](https://material-ui.com/components/switches/).
+
 ```
 import MuiCozyTheme from '..'
 import CozyTheme from '../../CozyTheme'
