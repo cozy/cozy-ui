@@ -98,10 +98,9 @@ $nav-link
     &:visited
         color  var(--navTextColor)
 
-    &:hover
+    &:hover:not(.is-active)
         color  var(--navTextHoverColor)
 
-    &.active // deprecated
     &.is-active
         box-shadow   inset rem(4) 0 0 0 var(--primaryColor)
         font-weight  bold
@@ -120,14 +119,6 @@ $nav-link
         background-position  center top
         background-size      rem(24)
 
-        &.active // deprecated
-        &.is-active
-            color        var(--navTextActiveColor)
-
-        &:hover
-            color        var(--navTextHoverColor)
-
-        &.active // deprecated
         &.is-active
         &:hover
             box-shadow   none
@@ -175,7 +166,7 @@ $nav-link-secondary
     text-decoration none
     height auto
 
-    &:hover
+    &:hover:not(.is-active)
         color var(--navTextHoverColor)
 
     &.is-active
