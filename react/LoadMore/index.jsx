@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import Button from '../Button'
 import Spinner from '../Spinner'
 
+import 'intersection-observer' // polyfill for safari (mobile and desktop)
+
 const LoadMore = ({ fetchMore, label }) => {
   const [isLoading, setIsLoading] = useState(false)
   const elementRef = useRef()
