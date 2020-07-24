@@ -42,7 +42,7 @@ import Button from 'cozy-ui/transpiled/react/Button';
 </div>
 ```
 
-#### Width
+#### Extension
 
 - `narrow` to ignore Button's `min-width`
 - `full` to enable full width
