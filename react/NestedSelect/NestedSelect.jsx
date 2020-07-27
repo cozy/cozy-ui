@@ -135,9 +135,9 @@ const ItemPropType = PropTypes.shape({
   /** Key used for the item, if not passed, title is used */
   key: PropTypes.string,
   /** Label used for the item */
-  title: PropTypes.string.isRequired,
+  title: PropTypes.node.isRequired,
   /** Description of the item */
-  description: PropTypes.string,
+  description: PropTypes.node,
   /** Options below the current one */
   children: PropTypes.array
 })
@@ -213,7 +213,7 @@ export const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
         primaryText={item.title}
         primaryTextClassName="u-ellipsis"
         secondaryText={item.description}
-        secondaryTextClassName={styles.Row__caption}
+        secondaryTextClassName={cx(styles.Row__caption, 'u-ellipsis')}
         onClick={() => onClick(item)}
         right={
           item.children && item.children.length > 0 ? (
