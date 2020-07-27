@@ -32,7 +32,7 @@ const options = {
     },
     letterOption('C', 'is for crayon'),
     letterOption('D', 'is for Drums !'),
-    letterOption('E. A very long option, that should be ellipsed. And it goes on, and on...'),
+    letterOption('E. A very long option, that should be ellipsed. And it goes on, and on...', 'Its description is also very long and will be ellipsed. E is the 5th letter from the roman alphabet...'),
     letterOption('F'),
     letterOption('G'),
     letterOption('H', 'H for hero', 'hero'),
