@@ -3,11 +3,18 @@ Include the `<Alert />` component somewhere in your app, but only once. After th
 
 ```
 import Alerter from 'cozy-ui/transpiled/react/Alerter';
-// we have to put the Alert only once in the app
+
+if (isTesting()) {
+  setTimeout(() => {
+    Alerter.success('This is a success alert')
+  }, 1)
+}
+
 <div>
   <button onClick={() => Alert.info("This is an info alert!")}>Show alert info</button>
   <button onClick={() => Alert.error("This is an error alert!")}>Show alert error</button>
   <button onClick={() => Alert.success("This is a success alert")}>Show alert success</button>
+  {/* The Alerter must be rendered once in the App */ }
   <Alerter />
 </div>
 ```

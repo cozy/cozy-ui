@@ -22,6 +22,9 @@ $alert
     cursor default
     pointer-events none
 
+    @media (prefers-reduced-motion: reduce)
+        transition none
+
     @media all and (min-width alert-width)
         z-index $alert-index
         top rem(16)
@@ -40,7 +43,7 @@ $alert-wrapper
     box-sizing border-box
     width 100%
     box-shadow 0 rem(6) rem(18) 0 rgba(50, 54, 63, .23)
-    background-color var(--emerald)
+    background-color var(--validColor)
     padding rem(13 16)
     pointer-events auto
 
@@ -70,10 +73,10 @@ $alert-title
     font-weight bold
 
 $alert--error
-    background-color var(--pomegranate)
+    background-color var(--errorColor)
 
 $alert--success
-    background-color var(--emerald)
+    background-color var(--validColor)
 
 $alert--info
     background-color var(--slateGrey)
