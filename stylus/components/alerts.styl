@@ -22,6 +22,9 @@ $alert
     cursor default
     pointer-events none
 
+    @media (prefers-reduced-motion: reduce)
+        transition none
+
     @media all and (min-width alert-width)
         z-index $alert-index
         top rem(16)
