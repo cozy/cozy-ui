@@ -7,13 +7,13 @@ import ExperimentalDialog, {
   ExperimentalDialogTitle,
   ExperimentalDialogActions
 } from './index'
-import MuiCozyTheme from '../../MuiCozyTheme/'
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
 
-import DialogContent from '@material-ui/core/DialogContent'
-import DialogContentText from '@material-ui/core/DialogContentText'
-import Divider from '@material-ui/core/Divider'
-import DialogCloseButton from '../../MuiCozyTheme/Dialog/DialogCloseButton'
-import Button from '../../Button'
+import DialogContent from 'cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogContent'
+import DialogContentText from 'cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogContentText'
+import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
+import DialogCloseButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogCloseButton'
+import Button from 'cozy-ui/transpiled/react/Button'
 
 const onClose = () => setState({ modalOpened: !state.modalOpened })
 
@@ -62,12 +62,12 @@ import ExperimentalDialog, {
   ExperimentalDialogTitle,
   ExperimentalDialogActions
 } from './index'
-import MuiCozyTheme from '../../MuiCozyTheme/'
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
 
-import DialogContent from '@material-ui/core/DialogContent'
-import DialogContentText from '@material-ui/core/DialogContentText'
-import DialogCloseButton from '../../MuiCozyTheme/Dialog/DialogCloseButton'
-import Button from '../../Button'
+import DialogContent from 'cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogContent'
+import DialogContentText from 'cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogContentText'
+import DialogCloseButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogCloseButton'
+import Button from 'cozy-ui/transpiled/react/Button'
 const onClose = () => setState({ modalOpened: !state.modalOpened })
 
 initialState = { modalOpened: isTesting() }
