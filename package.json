@@ -63,8 +63,8 @@
     "intersection-observer"
   ],
   "devDependencies": {
-    "@babel/cli": "7.7.4",
-    "@babel/core": "7.7.4",
+    "@babel/cli": "7.10.5",
+    "@babel/core": "7.11.0",
     "@cozy/codemods": "^1.1.0",
     "@material-ui/core": "3.9.4",
     "@oskarer/enzyme-wait": "^1.5.0",
@@ -75,7 +75,7 @@
     "@testing-library/react-hooks": "^3.2.1",
     "argos-cli": "0.1.3",
     "autoprefixer-stylus": "1.0.0",
-    "babel-loader": "8.0.6",
+    "babel-loader": "8.1.0",
     "babel-plugin-css-modules-transform": "1.6.2",
     "babel-plugin-inline-json-import": "0.3.2",
     "babel-preset-cozy-app": "1.8.1",
