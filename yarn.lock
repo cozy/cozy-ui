@@ -1691,6 +1691,11 @@
   dependencies:
     assertion-error "^1.0.2"
 
+"@popperjs/core@^2.4.4":
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.4.4.tgz#11d5db19bd178936ec89cd84519c4de439574398"
+  integrity sha512-1oO6+dN5kdIA3sKPZhRGJTfGVP4SWV6KqlMOwry4J3HfyD68sl/3KmG7DeYUzvN+RbhXDnv/D8vNNB8168tAMg==
+
 "@semantic-release/changelog@3.0.6":
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/@semantic-release/changelog/-/changelog-3.0.6.tgz#9d68d68bf732cbba1034c028bb6720091f783b2a"
@@ -13863,6 +13868,11 @@ react-event-listener@^0.6.0, react-event-listener@^0.6.2:
     prop-types "^15.6.0"
     warning "^4.0.1"
 
+react-fast-compare@^3.0.1:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
+  integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
+
 react-group@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/react-group/-/react-group-3.0.2.tgz#cb31d0fae255111e1dace5b5f9abb9deefc7b36e"
@@ -13938,6 +13948,14 @@ react-pdf@^4.0.5:
     merge-class-names "^1.1.1"
     pdfjs-dist "2.1.266"
     prop-types "^15.6.2"
+
+react-popper@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/react-popper/-/react-popper-2.2.3.tgz#33d425fa6975d4bd54d9acd64897a89d904b9d97"
+  integrity sha512-mOEiMNT1249js0jJvkrOjyHsGvqcJd3aGW/agkiMoZk3bZ1fXN1wQszIQSjHIai48fE67+zwF8Cs+C4fWqlfjw==
+  dependencies:
+    react-fast-compare "^3.0.1"
+    warning "^4.0.2"
 
 react-redux@^7.2.0:
   version "7.2.0"
@@ -17166,7 +17184,7 @@ warning@^3.0.0:
   dependencies:
     loose-envify "^1.0.0"
 
-warning@^4.0.1:
+warning@^4.0.1, warning@^4.0.2:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/warning/-/warning-4.0.3.tgz#16e9e077eb8a86d6af7d64aa1e05fd85b4678ca3"
   integrity sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==

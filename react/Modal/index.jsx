@@ -1,4 +1,4 @@
-import React, { Component, createRef } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Overlay from '../Overlay'
@@ -14,7 +14,6 @@ import ModalFooter from './ModalFooter'
 import ModalButtons from './ModalButtons'
 import AnimatedContentHeader from './AnimatedContentHeader'
 import ModalBackButton from './ModalBackButton'
-import PopperContainerContext from '../PopperContainerContext'
 
 const ModalDescription = ModalContent
 
@@ -89,81 +88,74 @@ class Modal extends Component {
     } = this.props
     const { titleID } = this
     const style = Object.assign({}, height && { height }, width && { width })
-    const modalPopperRef = createRef()
+
     return (
-      <PopperContainerContext.Provider value={modalPopperRef}>
-        <Portal into={into}>
-          <div className={cx(styles['c-modal-container'], containerClassName)}>
-            <Overlay
-              onEscape={closable ? dismissAction : undefined}
-              className={overlayClassName}
+      <Portal into={into}>
+        <div className={cx(styles['c-modal-container'], containerClassName)}>
+          <Overlay
+            onEscape={closable ? dismissAction : undefined}
+            className={overlayClassName}
+          >
+            <div
+              className={cx(
+                styles['c-modal-wrapper'],
+                {
+                  [styles['c-modal-wrapper--fullscreen']]: mobileFullscreen
+                },
+                wrapperClassName
+              )}
+              onClick={closable ? this.handleOutsideClick : undefined}
             >
               <div
                 className={cx(
-                  styles['c-modal-wrapper'],
+                  styles['c-modal'],
+                  styles[`c-modal--${size}`],
                   {
-                    [styles['c-modal-wrapper--fullscreen']]: mobileFullscreen
+                    [styles['c-modal--overflowHidden']]: overflowHidden,
+                    [styles[`c-modal--${spacing}-spacing`]]: spacing,
+                    [styles['c-modal--fullscreen']]: mobileFullscreen,
+                    [styles['c-modal--closable']]: closable
                   },
-                  wrapperClassName
+                  className
                 )}
-                onClick={closable ? this.handleOutsideClick : undefined}
+                style={style}
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby={title ? titleID : null}
+                {...restProps}
               >
-                {/** The popper ref is on a sibling node and not on a parent so that its ref
-                gets filled in before we render the content of the modal. When the ref
-                is on a parent of the modal, the ref is not filled yet when we render
-                the content of the modal */}
-                <div ref={modalPopperRef} />
-                <div
-                  className={cx(
-                    styles['c-modal'],
-                    styles[`c-modal--${size}`],
-                    {
-                      [styles['c-modal--overflowHidden']]: overflowHidden,
-                      [styles[`c-modal--${spacing}-spacing`]]: spacing,
-                      [styles['c-modal--fullscreen']]: mobileFullscreen,
-                      [styles['c-modal--closable']]: closable
-                    },
-                    className
-                  )}
-                  style={style}
-                  role="dialog"
-                  aria-modal="true"
-                  aria-labelledby={title ? titleID : null}
-                  {...restProps}
-                >
-                  {closable && (
-                    <ModalCross
-                      className={cx(closeBtnClassName, {
-                        [styles['c-modal-close--notitle']]: !title
-                      })}
-                      onClick={dismissAction}
-                      color={closeBtnColor}
+                {closable && (
+                  <ModalCross
+                    className={cx(closeBtnClassName, {
+                      [styles['c-modal-close--notitle']]: !title
+                    })}
+                    onClick={dismissAction}
+                    color={closeBtnColor}
+                  />
+                )}
+                {title && <ModalHeader title={title} id={titleID} />}
+                {description && (
+                  <ModalDescription>{description}</ModalDescription>
+                )}
+                {children}
+                {(primaryText && primaryAction) ||
+                (secondaryText && secondaryAction) ? (
+                  <ModalFooter>
+                    <ModalButtons
+                      primaryText={primaryText}
+                      primaryAction={primaryAction}
+                      primaryType={primaryType}
+                      secondaryText={secondaryText}
+                      secondaryAction={secondaryAction}
+                      secondaryType={secondaryType}
                     />
-                  )}
-                  {title && <ModalHeader title={title} id={titleID} />}
-                  {description && (
-                    <ModalDescription>{description}</ModalDescription>
-                  )}
-                  {children}
-                  {(primaryText && primaryAction) ||
-                  (secondaryText && secondaryAction) ? (
-                    <ModalFooter>
-                      <ModalButtons
-                        primaryText={primaryText}
-                        primaryAction={primaryAction}
-                        primaryType={primaryType}
-                        secondaryText={secondaryText}
-                        secondaryAction={secondaryAction}
-                        secondaryType={secondaryType}
-                      />
-                    </ModalFooter>
-                  ) : null}
-                </div>
+                  </ModalFooter>
+                ) : null}
               </div>
-            </Overlay>
-          </div>
-        </Portal>
-      </PopperContainerContext.Provider>
+            </div>
+          </Overlay>
+        </div>
+      </Portal>
     )
   }
 }
