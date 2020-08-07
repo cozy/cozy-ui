@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import ClickAwayListener from '@material-ui/core/ClickAwayListener'
@@ -6,53 +6,64 @@ import styles from './styles.styl'
 import { Media, Bd, Img } from '../Media'
 import BottomDrawer from '../BottomDrawer'
 import withBreakpoints from '../helpers/withBreakpoints'
-import Popper from '@material-ui/core/Popper'
 import { getCssVariableValue } from '../utils/color'
-import PopperContainerContext from '../PopperContainerContext'
 import Radio from '../Radio'
 import { spacingProp } from '../Stack'
+import { usePopper } from 'react-popper'
+import createDepreciationLogger from '../helpers/createDepreciationLogger'
 
 const ActionMenuWrapper = ({
   inline,
   onClose,
   anchorElRef,
-  containerElRef,
+  popperOptions,
   placement,
   preventOverflow,
   children
 }) => {
-  const getElementFromRefCallback = ref =>
-    useCallback(() => {
-      return ref ? ref.current : undefined
-    }, [ref])
+  const [popperElement, setPopperElement] = React.useState(null)
+  const referenceElement = anchorElRef ? anchorElRef.current : null
 
-  const popperContainerRef = useContext(PopperContainerContext)
-  const getAnchorElement = getElementFromRefCallback(anchorElRef)
-
-  const containerRef = popperContainerRef || containerElRef
-  const getContainerElement = getElementFromRefCallback(containerRef)
-  const normalOverflowModifiers = {
-    preventOverflow: { enabled: false },
-    hide: { enabled: false }
+  const normalOverflowModifiers = [
+    {
+      name: 'preventOverflow',
+      enabled: false
+    },
+    {
+      name: 'hide',
+      enabled: false
+    }
+  ]
+  const options = popperOptions || {
+    placement,
+    modifiers: preventOverflow ? undefined : normalOverflowModifiers
   }
 
+  const { styles, attributes } = usePopper(
+    referenceElement,
+    popperElement,
+    options
+  )
+
   return inline ? (
-    <Popper
-      anchorEl={getAnchorElement}
-      container={getContainerElement}
-      modifiers={preventOverflow ? null : normalOverflowModifiers}
-      open
-      placement={placement}
+    <div
+      ref={setPopperElement}
       style={{
+        ...styles.popper,
         zIndex: getCssVariableValue('zIndex-popover')
       }}
+      {...attributes.popper}
     >
       <ClickAwayListener onClickAway={onClose}>{children}</ClickAwayListener>
-    </Popper>
+    </div>
   ) : (
     <BottomDrawer onClose={onClose}>{children}</BottomDrawer>
   )
 }
+
+const logDepecratedPlacement = createDepreciationLogger()
+const logDepecratedOverflow = createDepreciationLogger()
+const logDepecratedContainer = createDepreciationLogger()
 
 const ActionMenu = ({
   children,
@@ -61,10 +72,24 @@ const ActionMenu = ({
   onClose,
   placement,
   preventOverflow,
+  popperOptions,
   anchorElRef,
   containerElRef,
   breakpoints: { isMobile }
 }) => {
+  if (placement)
+    logDepecratedPlacement(
+      '<ActionMenu placement /> is deprecated, use <ActionMenu popperOptions={{ placement }} /> instead'
+    )
+  if (preventOverflow)
+    logDepecratedOverflow(
+      '<ActionMenu preventOverflow /> is deprecated, use <ActionMenu popperOptions={{ modifiers }} /> instead'
+    )
+  if (containerElRef)
+    logDepecratedContainer(
+      '<ActionMenu containerElRef /> is not needed anymore, it can be removed.'
+    )
+
   const shouldDisplayInline = !isMobile
   const containerRef = React.createRef()
   return (
@@ -77,9 +102,9 @@ const ActionMenu = ({
         onClose={onClose}
         inline={shouldDisplayInline}
         anchorElRef={anchorElRef || containerRef}
-        containerElRef={containerElRef}
         placement={placement}
         preventOverflow={preventOverflow}
+        popperOptions={popperOptions}
       >
         <div
           className={cx(styles['c-actionmenu'], {
@@ -120,9 +145,7 @@ ActionMenu.propTypes = {
   /** Will keep the menu visible when scrolling */
   preventOverflow: PropTypes.bool,
   /** The reference element for the menu placement and overflow prevention. */
-  anchorElRef: PropTypes.object,
-  /** ActionMenu will be rendered inside the elemnt of this ref. Useful when rendering inside Modals for example. */
-  containerElRef: PropTypes.object
+  anchorElRef: PropTypes.object
 }
 
 ActionMenu.defaultProps = {
