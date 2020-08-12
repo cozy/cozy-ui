@@ -3,7 +3,7 @@ import { translate } from '../../I18n'
 import withBreakpoints from '../../helpers/withBreakpoints'
 import { getTranslatedManifestProperty } from '../helpers'
 import sortBy from 'lodash/sortBy'
-import SmallAppItem from './SmallAppItem'
+import AppTile from './AppTile'
 import styles from './AppsSection.styl'
 
 const makeNameGetter = t => app => getTranslatedManifestProperty(app, 'name', t)
@@ -23,7 +23,7 @@ export const AppsSection = ({
       {appsList && !!appsList.length && (
         <div className={styles.AppsSection__list}>
           {sortBy(appsList, makeNameGetter(t)).map(app => (
-            <SmallAppItem
+            <AppTile
               app={app}
               namePrefix={getTranslatedManifestProperty(app, 'name_prefix', t)}
               name={getTranslatedManifestProperty(app, 'name', t)}

@@ -1,0 +1,280 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppTile component should render correctly an app 1`] = `
+<BaseI18n
+  defaultLang="en"
+  dictRequire={[Function]}
+  lang="en"
+>
+  <AppTile
+    app={
+      Object {
+        "developer": Object {
+          "name": "Cozy",
+        },
+        "editor": "cozy",
+        "icon": "<svg></svg>",
+        "name": "Test",
+        "namePrefix": "Cozy",
+        "onClick": [MockFunction],
+        "slug": "test",
+        "version": "3.0.3",
+      }
+    }
+    developer={
+      Object {
+        "name": "Cozy",
+      }
+    }
+    editor="cozy"
+    icon="<svg></svg>"
+    name="Test"
+    namePrefix="Cozy"
+    onClick={[MockFunction]}
+    showDeveloper={true}
+    slug="test"
+    version="3.0.3"
+  />
+</BaseI18n>
+`;
+
+exports[`AppTile component should render correctly an app in maintenance 1`] = `
+<BaseI18n
+  defaultLang="en"
+  dictRequire={[Function]}
+  lang="en"
+>
+  <AppTile
+    app={
+      Object {
+        "developer": Object {
+          "name": "Naming me",
+        },
+        "editor": "",
+        "icon": "<svg></svg>",
+        "installed": true,
+        "installedAppLink": "test2.cozy.mock",
+        "maintenance": Object {
+          "maintenance_options": Object {},
+        },
+        "name": "Test2",
+        "onClick": [MockFunction],
+        "slug": "test2",
+        "version": "3.0.3-beta7483",
+      }
+    }
+    developer={
+      Object {
+        "name": "Naming me",
+      }
+    }
+    editor=""
+    icon="<svg></svg>"
+    installed={true}
+    installedAppLink="test2.cozy.mock"
+    maintenance={
+      Object {
+        "maintenance_options": Object {},
+      }
+    }
+    name="Test2"
+    onClick={[MockFunction]}
+    showDeveloper={true}
+    slug="test2"
+    version="3.0.3-beta7483"
+  />
+</BaseI18n>
+`;
+
+exports[`AppTile component should render correctly an app with iconToLoad (icon being fetching) 1`] = `
+<BaseI18n
+  defaultLang="en"
+  dictRequire={[Function]}
+  lang="en"
+>
+  <AppTile
+    app={
+      Object {
+        "developer": Object {
+          "name": "Naming me",
+        },
+        "editor": "",
+        "icon": "<svg></svg>",
+        "iconToLoad": true,
+        "installed": true,
+        "installedAppLink": "test2.cozy.mock",
+        "name": "Test2",
+        "onClick": [MockFunction],
+        "slug": "test2",
+        "version": "3.0.3-beta7483",
+      }
+    }
+    developer={
+      Object {
+        "name": "Naming me",
+      }
+    }
+    editor=""
+    icon="<svg></svg>"
+    iconToLoad={true}
+    installed={true}
+    installedAppLink="test2.cozy.mock"
+    name="Test2"
+    onClick={[MockFunction]}
+    showDeveloper={true}
+    slug="test2"
+    version="3.0.3-beta7483"
+  />
+</BaseI18n>
+`;
+
+exports[`AppTile component should render correctly an app with iconToLoad if isMobile 1`] = `
+<BaseI18n
+  defaultLang="en"
+  dictRequire={[Function]}
+  lang="en"
+>
+  <AppTile
+    app={
+      Object {
+        "developer": Object {
+          "name": "Naming me",
+        },
+        "editor": "",
+        "icon": "<svg></svg>",
+        "iconToLoad": true,
+        "installed": true,
+        "installedAppLink": "test2.cozy.mock",
+        "name": "Test2",
+        "onClick": [MockFunction],
+        "slug": "test2",
+        "version": "3.0.3-beta7483",
+      }
+    }
+    developer={
+      Object {
+        "name": "Naming me",
+      }
+    }
+    editor=""
+    icon="<svg></svg>"
+    iconToLoad={true}
+    installed={true}
+    installedAppLink="test2.cozy.mock"
+    isMobile={true}
+    name="Test2"
+    onClick={[MockFunction]}
+    showDeveloper={true}
+    slug="test2"
+    version="3.0.3-beta7483"
+  />
+</BaseI18n>
+`;
+
+exports[`AppTile component should render correctly an app without developer property 1`] = `
+<BaseI18n
+  defaultLang="en"
+  dictRequire={[Function]}
+  lang="en"
+>
+  <AppTile
+    app={
+      Object {
+        "editor": "cozy",
+        "icon": "<svg></svg>",
+        "name": "Test",
+        "namePrefix": "Cozy",
+        "onClick": [MockFunction],
+        "slug": "test",
+        "version": "3.0.3",
+      }
+    }
+    editor="cozy"
+    icon="<svg></svg>"
+    name="Test"
+    namePrefix="Cozy"
+    onClick={[MockFunction]}
+    showDeveloper={true}
+    slug="test"
+    version="3.0.3"
+  />
+</BaseI18n>
+`;
+
+exports[`AppTile component should render correctly an installed app 1`] = `
+<BaseI18n
+  defaultLang="en"
+  dictRequire={[Function]}
+  lang="en"
+>
+  <AppTile
+    app={
+      Object {
+        "developer": Object {
+          "name": "Naming me",
+        },
+        "editor": "",
+        "icon": "<svg></svg>",
+        "installed": true,
+        "installedAppLink": "test2.cozy.mock",
+        "name": "Test2",
+        "onClick": [MockFunction],
+        "slug": "test2",
+        "version": "3.0.3-beta7483",
+      }
+    }
+    developer={
+      Object {
+        "name": "Naming me",
+      }
+    }
+    editor=""
+    icon="<svg></svg>"
+    installed={true}
+    installedAppLink="test2.cozy.mock"
+    name="Test2"
+    onClick={[MockFunction]}
+    showDeveloper={true}
+    slug="test2"
+    version="3.0.3-beta7483"
+  />
+</BaseI18n>
+`;
+
+exports[`AppTile component should render correctly an installed app without icon provided 1`] = `
+<BaseI18n
+  defaultLang="en"
+  dictRequire={[Function]}
+  lang="en"
+>
+  <AppTile
+    app={
+      Object {
+        "developer": Object {
+          "name": "Cozy",
+        },
+        "editor": "cozy",
+        "icon": "",
+        "name": "Test",
+        "namePrefix": "Cozy",
+        "onClick": [MockFunction],
+        "slug": "test",
+        "version": "3.0.3",
+      }
+    }
+    developer={
+      Object {
+        "name": "Cozy",
+      }
+    }
+    editor="cozy"
+    icon=""
+    name="Test"
+    namePrefix="Cozy"
+    onClick={[MockFunction]}
+    showDeveloper={true}
+    slug="test"
+    version="3.0.3"
+  />
+</BaseI18n>
+`;
