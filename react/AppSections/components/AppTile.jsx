@@ -22,7 +22,14 @@ const getAppIconProps = () => ({
   secure: window.location.protocol === 'https:'
 })
 
-export const AppTile = ({ app, name, namePrefix, onClick, IconComponent }) => {
+export const AppTile = ({
+  app,
+  name,
+  namePrefix,
+  onClick,
+  showDeveloper,
+  IconComponent
+}) => {
   const { t } = useI18n()
   const { developer = {} } = app
   const statusToDisplay = getCurrentStatusLabel(app)
@@ -40,7 +47,7 @@ export const AppTile = ({ app, name, namePrefix, onClick, IconComponent }) => {
         <h4 className={styles['AppTile-title']}>
           {namePrefix ? `${namePrefix} ${name}` : name}
         </h4>
-        {developer.name && (
+        {developer.name && showDeveloper && (
           <p className={styles['AppTile-developer']}>
             {`${t('app_item.by')} ${developer.name}`}
           </p>
@@ -59,7 +66,12 @@ AppTile.propTypes = {
   app: AppDoctype,
   name: PropTypes.string.isRequired,
   namePrefix: PropTypes.string,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  showDeveloper: PropTypes.bool
+}
+
+AppTile.defaultProps = {
+  showDeveloper: true
 }
 
 export default AppTile
