@@ -1,4 +1,4 @@
-.SmallAppItem
+.AppTile
   --item-size 8rem
   --item-mobile-height 3rem
   box-sizing content-box
@@ -23,34 +23,34 @@
   color var(--black)
 
 
-.SmallAppItem:hover,
-.SmallAppItem:active,
-.SmallAppItem:focus
+.AppTile:hover,
+.AppTile:active,
+.AppTile:focus
   box-shadow 0 4px 12px 0 #00000020
   cursor pointer
   transform scale(1.1)
   transition .15s ease all
 
 
-.SmallAppItem-icon-wrapper
+.AppTile-icon-wrapper
   margin-top .25rem
   margin-bottom .25rem
   width 3rem
   height 3rem
 
 
-.SmallAppItem-icon-wrapper .SmallAppItem-icon
+.AppTile-icon-wrapper .AppTile-icon
   object-fit contain
-  max-width 3rem
+  max-width 100%
   width auto
 
 
-.SmallAppItem-icon--default
+.AppTile-icon--default
   height 100%
   padding 0 .5em
 
 
-.SmallAppItem-desc
+.AppTile-desc
   display flex
   flex-direction column
   justify-content flex-start
@@ -59,7 +59,7 @@
   text-align center
 
 
-.SmallAppItem-title, .SmallAppItem-developer, .SmallAppItem-status
+.AppTile-title, .AppTile-developer, .AppTile-status
   display block
   width var(--item-size)
   margin 0
@@ -68,17 +68,17 @@
   overflow hidden
 
 
-.SmallAppItem-title
+.AppTile-title
   height 1.25rem
 
 
-.SmallAppItem-developer
+.AppTile-developer
   height 1rem
   font-size 12px
   color var(--slateGrey)
 
 
-.SmallAppItem-status
+.AppTile-status
   margin-top .5rem
   height 1rem
   font-size 12px
@@ -86,18 +86,18 @@
 
 
 @media (min-width 1041px)
-  .SmallAppItem
+  .AppTile
     margin-right 1rem
-  
+
 
 
 @media (max-width 48rem)
   .sto-sections-list
     display flex
     justify-content space-between
-  
 
-  .SmallAppItem
+
+  .AppTile
     flex-basis calc(50% - 1rem)
     flex-direction row
     height var(--item-mobile-height)
@@ -105,57 +105,57 @@
     margin-right 0
     margin-bottom .5rem
     padding-left .5rem
-  
 
-  .SmallAppItemhover,
-  .SmallAppItemactive,
-  .SmallAppItemfocus
+
+  .AppTile:hover,
+  .AppTile:active,
+  .AppTile:focus
     box-shadow 0 4px 12px 0 #00000020
     cursor pointer
     transform scale(1.01)
     transition .15s ease all
-  
 
-  .SmallAppItem-icon-wrapper
+
+  .AppTile-icon-wrapper
     margin-bottom 0
-  
 
-  .SmallAppItem-icon
+
+  .AppTile-icon
     height 2.5rem
     max-width 2.5rem
     max-height 2.5rem
-  
 
-  .SmallAppItem-desc
+
+  .AppTile-desc
     margin-top .125rem
     margin-left .5rem
     justify-content center
     text-align left
     /* 4rem for icon and margins */
     width calc(100% - 4rem)
-  
 
-  .SmallAppItem-title
+
+  .AppTile-title
     height 1rem
     font-weight normal
     font-size 12px
-  
 
-  .SmallAppItem-title, .SmallAppItem-developer, .SmallAppItem-status
+
+  .AppTile-title, .AppTile-developer, .AppTile-status
     width 100%
-  
 
-  .SmallAppItem-developer
+
+  .AppTile-developer
     display none
-  
 
-  .SmallAppItem-status
+
+  .AppTile-status
     margin-top .125rem
-  
+
 
 
 @media (max-width 32rem)
-  .SmallAppItem
+  .AppTile
     flex-basis calc(100% - .75rem)
-  
+
 

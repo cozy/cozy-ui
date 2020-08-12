@@ -6,7 +6,7 @@ import { translate } from '../../I18n'
 import { getCurrentStatusLabel } from '../status'
 import { AppDoctype } from '../../proptypes'
 
-import styles from './SmallAppItem.styl'
+import styles from './AppTile.styl'
 
 let dataset
 const getDataset = () => {
@@ -21,7 +21,7 @@ const getAppIconProps = () => ({
   secure: window.location.protocol === 'https:'
 })
 
-export const SmallAppItem = ({
+export const AppTile = ({
   t,
   app,
   name,
@@ -33,25 +33,25 @@ export const SmallAppItem = ({
   const statusToDisplay = getCurrentStatusLabel(app)
   IconComponent = IconComponent || AppIcon
   return (
-    <button type="button" className={styles['SmallAppItem']} onClick={onClick}>
-      <div className={styles['SmallAppItem-icon-wrapper']}>
+    <button type="button" className={styles['AppTile']} onClick={onClick}>
+      <div className={styles['AppTile-icon-wrapper']}>
         <IconComponent
           app={app}
-          className={styles['SmallAppItem-icon']}
+          className={styles['AppTile-icon']}
           {...getAppIconProps()}
         />
       </div>
-      <div className={styles['SmallAppItem-desc']}>
-        <h4 className={styles['SmallAppItem-title']}>
+      <div className={styles['AppTile-desc']}>
+        <h4 className={styles['AppTile-title']}>
           {namePrefix ? `${namePrefix} ${name}` : name}
         </h4>
         {developer.name && (
-          <p className={styles['SmallAppItem-developer']}>
+          <p className={styles['AppTile-developer']}>
             {`${t('app_item.by')} ${developer.name}`}
           </p>
         )}
         {statusToDisplay && (
-          <p className={styles['SmallAppItem-status']}>
+          <p className={styles['AppTile-status']}>
             {t(`app_item.${statusToDisplay}`)}
           </p>
         )}
@@ -60,7 +60,7 @@ export const SmallAppItem = ({
   )
 }
 
-SmallAppItem.propTypes = {
+AppTile.propTypes = {
   t: PropTypes.func.isRequired,
   app: AppDoctype,
   name: PropTypes.string.isRequired,
@@ -68,4 +68,4 @@ SmallAppItem.propTypes = {
   onClick: PropTypes.func
 }
 
-export default translate()(SmallAppItem)
+export default translate()(AppTile)
