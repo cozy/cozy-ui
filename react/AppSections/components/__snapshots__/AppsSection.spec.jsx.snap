@@ -1,285 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppsSection component should be rendered correctly with apps list, subtitle and onAppClick 1`] = `
-<div
-  className="AppsSection__AppsSection___3WHhE"
->
-  <h3>
-    Test Apps
-  </h3>
-  <div
-    className="AppsSection__AppsSection__list___2Uy0E"
-  >
-    <withI18n(SmallAppItem)
-      app={
-        Object {
-          "categories": Array [
-            "isp",
-            "telecom",
-          ],
-          "developer": Object {
-            "name": "Cozy",
-          },
-          "icon": "<svg></svg>",
-          "isInRegistry": true,
-          "name": "Bouilligue",
-          "slug": "konnector-bouilligue",
-          "type": "konnector",
-          "uninstallable": true,
-          "versions": Object {
-            "beta": Array [
-              "0.1.0",
-            ],
-            "dev": Array [
-              "0.1.0",
-            ],
-            "stable": Array [
-              "0.1.0",
-            ],
-          },
-        }
-      }
-      name="Bouilligue"
-      namePrefix=""
-      onClick={[Function]}
-    />
-    <withI18n(SmallAppItem)
-      app={
-        Object {
-          "categories": Array [
-            "cozy",
-          ],
-          "developer": Object {
-            "name": "Cozy",
-          },
-          "editor": "Cozy",
-          "icon": "<svg></svg>",
-          "installed": true,
-          "isInRegistry": true,
-          "label": 1,
-          "name": "Collect",
-          "name_prefix": "Cozy",
-          "permissions": Object {
-            "mock": Object {
-              "type": "io.mock.doctype",
-            },
-            "mock2": Object {
-              "type": "io.mock.doctype2",
-            },
-          },
-          "related": "http://collect.cozy.mock/",
-          "slug": "collect",
-          "tags": Array [
-            "konnector",
-            "collect",
-            "bills",
-            "providers",
-            "files",
-          ],
-          "type": "webapp",
-          "uninstallable": false,
-          "version": "3.0.0",
-          "versions": Object {
-            "beta": Array [
-              "3.0.0",
-            ],
-            "dev": Array [
-              "3.0.0",
-            ],
-            "stable": Array [
-              "3.0.0",
-            ],
-          },
-        }
-      }
-      name="Collect"
-      namePrefix="Cozy"
-      onClick={[Function]}
-    />
-    <withI18n(SmallAppItem)
-      app={
-        Object {
-          "categories": Array [
-            "others",
-          ],
-          "developer": Object {
-            "name": "Cozy",
-          },
-          "editor": "Cozy",
-          "icon": "<svg></svg>",
-          "isInRegistry": true,
-          "locales": Object {
-            "name": "For Dev Only",
-          },
-          "name": "DevOnly",
-          "slug": "devonly",
-          "type": "webapp",
-          "uninstallable": true,
-          "versions": Object {
-            "beta": Array [],
-            "dev": Array [
-              "1.0.0-betaojdkehy989ekhflldh",
-            ],
-            "stable": Array [],
-          },
-        }
-      }
-      name="DevOnly"
-      namePrefix=""
-      onClick={[Function]}
-    />
-    <withI18n(SmallAppItem)
-      app={
-        Object {
-          "categories": Array [
-            "cozy",
-          ],
-          "developer": Object {
-            "name": "Cozy",
-          },
-          "editor": "Cozy",
-          "icon": "<svg></svg>",
-          "installed": true,
-          "name": "Drive",
-          "name_prefix": "Cozy",
-          "permissions": Object {
-            "mock2": Object {
-              "type": "io.mock.doctype2",
-            },
-          },
-          "related": "http://drive.cozy.mock/",
-          "slug": "drive",
-          "tags": Array [
-            "search",
-            "files",
-            "folders",
-          ],
-          "type": "webapp",
-          "uninstallable": false,
-          "version": "3.0.0-beta89bnhj3993",
-        }
-      }
-      name="Drive"
-      namePrefix="Cozy"
-      onClick={[Function]}
-    />
-    <withI18n(SmallAppItem)
-      app={
-        Object {
-          "categories": Array [
-            "cozy",
-          ],
-          "developer": Object {
-            "name": "Cozy",
-          },
-          "editor": "Cozy",
-          "icon": "<svg></svg>",
-          "isInRegistry": true,
-          "locales": Object {
-            "en": Object {
-              "long_description": "A long description finally short",
-            },
-          },
-          "name": "Photos",
-          "name_prefix": "Cozy",
-          "slug": "photos",
-          "type": "webapp",
-          "uninstallable": true,
-          "versions": Object {
-            "beta": Array [
-              "3.0.0",
-            ],
-            "dev": Array [
-              "3.0.0",
-            ],
-            "stable": Array [
-              "3.0.0",
-            ],
-          },
-        }
-      }
-      name="Photos"
-      namePrefix="Cozy"
-      onClick={[Function]}
-    />
-    <withI18n(SmallAppItem)
-      app={
-        Object {
-          "availableVersion": "3.0.0",
-          "categories": Array [
-            "partners",
-          ],
-          "icon": "<svg></svg>",
-          "installed": true,
-          "isInRegistry": true,
-          "name": "Tasky",
-          "slug": "tasky",
-          "type": "webapp",
-          "uninstallable": true,
-          "versions": Object {
-            "beta": Array [
-              "3.0.0",
-              "1.0.0",
-            ],
-            "dev": Array [
-              "3.0.0",
-              "1.0.0",
-            ],
-            "stable": Array [
-              "3.0.0",
-              "1.0.0",
-            ],
-          },
-        }
-      }
-      name="Tasky"
-      namePrefix=""
-      onClick={[Function]}
-    />
-    <withI18n(SmallAppItem)
-      app={
-        Object {
-          "categories": Array [
-            "transport",
-          ],
-          "developer": Object {
-            "name": "Cozy",
-          },
-          "icon": "<svg></svg>",
-          "installed": true,
-          "isInRegistry": true,
-          "name": "Trinlane",
-          "permissions": Object {
-            "mock": Object {
-              "type": "io.mock.doctype",
-            },
-          },
-          "slug": "konnector-trinlane",
-          "tags": Array [
-            "transport",
-            "files",
-            "bills",
-          ],
-          "type": "konnector",
-          "uninstallable": true,
-          "version": "0.1.0",
-          "versions": Object {
-            "beta": Array [
-              "0.1.0",
-            ],
-            "dev": Array [
-              "0.1.0",
-            ],
-            "stable": Array [
-              "0.1.0",
-            ],
-          },
-        }
-      }
-      name="Trinlane"
-      namePrefix=""
-      onClick={[Function]}
-    />
-  </div>
-</div>
+exports[`AppsSection component should be rendered correctly with apps list, subtitle 1`] = `
+Array [
+  "Test Apps",
+]
+`;
+
+exports[`AppsSection component should be rendered correctly with apps list, subtitle 2`] = `
+Array [
+  "Bouilligue",
+  "Cozy Collect",
+  "DevOnly",
+  "Cozy Drive",
+  "Cozy Photos",
+  "Tasky",
+  "Trinlane",
+]
+`;
+
+exports[`AppsSection component should be rendered correctly with apps list, subtitle 3`] = `
+Array [
+  "By Cozy",
+  "By Cozy",
+  "Installed",
+  "By Cozy",
+  "By Cozy",
+  "Installed",
+  "By Cozy",
+  "Update available",
+  "By Cozy",
+  "Installed",
+]
 `;

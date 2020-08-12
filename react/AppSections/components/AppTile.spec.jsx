@@ -5,13 +5,10 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import { SmallAppItem } from './SmallAppItem'
+import AppTile from './AppTile'
 
-import { I18nContext } from '../../jestLib/I18n'
+import I18n from '../../I18n'
 import en from '../locales/en.json'
-
-const i18nContext = I18nContext({ locale: en })
-const tMock = i18nContext.t
 
 const appMock = {
   slug: 'test',
@@ -40,10 +37,18 @@ const appMock2 = {
   onClick: jest.fn()
 }
 
-describe('SmallAppItem component', () => {
+const Wrapper = props => {
+  return (
+    <I18n dictRequire={() => en} lang="en">
+      <AppTile {...props} />
+    </I18n>
+  )
+}
+
+describe('AppTile component', () => {
   it('should render correctly an app', () => {
     const component = shallow(
-      <SmallAppItem t={tMock} {...appMock} app={appMock} />
+      <Wrapper {...appMock} app={appMock} />
     ).getElement()
     expect(component).toMatchSnapshot()
   })
@@ -52,11 +57,7 @@ describe('SmallAppItem component', () => {
     const appMockWithoutDevelopper = Object.assign({}, appMock)
     delete appMockWithoutDevelopper.developer
     const component = shallow(
-      <SmallAppItem
-        t={tMock}
-        {...appMockWithoutDevelopper}
-        app={appMockWithoutDevelopper}
-      />
+      <Wrapper {...appMockWithoutDevelopper} app={appMockWithoutDevelopper} />
     ).getElement()
     expect(component).toMatchSnapshot()
   })
@@ -66,7 +67,7 @@ describe('SmallAppItem component', () => {
       maintenance: { maintenance_options: {} }
     })
     const component = shallow(
-      <SmallAppItem t={tMock} {...appInMaintenance} app={appInMaintenance} />
+      <Wrapper {...appInMaintenance} app={appInMaintenance} />
     ).getElement()
     expect(component).toMatchSnapshot()
   })
@@ -76,7 +77,7 @@ describe('SmallAppItem component', () => {
       iconToLoad: true
     })
     const component = shallow(
-      <SmallAppItem t={tMock} {...appIconToLoad} app={appIconToLoad} />
+      <Wrapper {...appIconToLoad} app={appIconToLoad} />
     ).getElement()
     expect(component).toMatchSnapshot()
   })
@@ -86,14 +87,14 @@ describe('SmallAppItem component', () => {
       iconToLoad: true
     })
     const component = shallow(
-      <SmallAppItem t={tMock} {...appIconToLoad} app={appIconToLoad} isMobile />
+      <Wrapper {...appIconToLoad} app={appIconToLoad} isMobile />
     ).getElement()
     expect(component).toMatchSnapshot()
   })
 
   it('should render correctly an installed app', () => {
     const component = shallow(
-      <SmallAppItem t={tMock} {...appMock2} app={appMock2} />
+      <Wrapper {...appMock2} app={appMock2} />
     ).getElement()
     expect(component).toMatchSnapshot()
   })
@@ -101,11 +102,7 @@ describe('SmallAppItem component', () => {
   it('should render correctly an installed app without icon provided', () => {
     const appMockWithoutIcon = Object.assign({}, appMock, { icon: '' })
     const component = shallow(
-      <SmallAppItem
-        t={tMock}
-        {...appMockWithoutIcon}
-        app={appMockWithoutIcon}
-      />
+      <Wrapper {...appMockWithoutIcon} app={appMockWithoutIcon} />
     ).getElement()
     expect(component).toMatchSnapshot()
   })
