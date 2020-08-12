@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import AppIcon from '../../AppIcon'
 import Tile from '../../Tile'
-import { translate } from '../../I18n'
+import { useI18n } from '../../I18n'
 
 import { getCurrentStatusLabel } from '../status'
 import { AppDoctype } from '../../proptypes'
@@ -22,14 +22,8 @@ const getAppIconProps = () => ({
   secure: window.location.protocol === 'https:'
 })
 
-export const AppTile = ({
-  t,
-  app,
-  name,
-  namePrefix,
-  onClick,
-  IconComponent
-}) => {
+export const AppTile = ({ app, name, namePrefix, onClick, IconComponent }) => {
+  const { t } = useI18n()
   const { developer = {} } = app
   const statusToDisplay = getCurrentStatusLabel(app)
   IconComponent = IconComponent || AppIcon
@@ -62,11 +56,10 @@ export const AppTile = ({
 }
 
 AppTile.propTypes = {
-  t: PropTypes.func.isRequired,
   app: AppDoctype,
   name: PropTypes.string.isRequired,
   namePrefix: PropTypes.string,
   onClick: PropTypes.func
 }
 
-export default translate()(AppTile)
+export default AppTile
