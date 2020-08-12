@@ -2,10 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import AppIcon from '../../AppIcon'
+import Tile from '../../Tile'
 import { translate } from '../../I18n'
+
 import { getCurrentStatusLabel } from '../status'
 import { AppDoctype } from '../../proptypes'
-
 import styles from './AppTile.styl'
 
 let dataset
@@ -33,7 +34,7 @@ export const AppTile = ({
   const statusToDisplay = getCurrentStatusLabel(app)
   IconComponent = IconComponent || AppIcon
   return (
-    <button type="button" className={styles['AppTile']} onClick={onClick}>
+    <Tile tag="button" type="button" onClick={onClick}>
       <div className={styles['AppTile-icon-wrapper']}>
         <IconComponent
           app={app}
@@ -56,7 +57,7 @@ export const AppTile = ({
           </p>
         )}
       </div>
-    </button>
+    </Tile>
   )
 }
 
