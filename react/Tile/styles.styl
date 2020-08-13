@@ -1,3 +1,4 @@
+@require 'settings/breakpoints.styl'
 $tileSize = 8.75rem
 $tileMobileHeight = 3.75rem
 
@@ -29,7 +30,7 @@ $tileMobileHeight = 3.75rem
   .Tile
     margin-right 1rem
 
-@media (max-width 48rem)
++small-screen()
   .Tile
     flex-basis 100%
     flex-direction row
