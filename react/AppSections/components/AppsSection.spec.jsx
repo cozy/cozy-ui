@@ -8,7 +8,8 @@ import { mount } from 'enzyme'
 import { CozyProvider } from 'cozy-client'
 import { I18nContext } from '../../jestLib/I18n'
 import { AppsSection } from './AppsSection'
-import AppTile from './AppTile'
+import Tile from '../../Tile'
+import AppTile, { AppTitle, AppStatus, AppDeveloper } from './AppTile'
 
 import mockApps from '../../mocks/apps'
 import en from '../locales/en'
@@ -39,9 +40,17 @@ describe('AppsSection component', () => {
   it('should be rendered correctly with apps list, subtitle', () => {
     const mockOnAppClick = jest.fn()
     setup({ onAppClick: mockOnAppClick })
-    expect(component.find('h3').map(x => x.text())).toMatchSnapshot()
-    expect(component.find('h4').map(x => x.text())).toMatchSnapshot()
-    expect(component.find('p').map(x => x.text())).toMatchSnapshot()
+    expect(
+      component.find(Tile).map(x => {
+        const developer = x.find(AppDeveloper)
+        const status = x.find(AppStatus)
+        return {
+          title: x.find(AppTitle).text(),
+          developer: developer.length ? x.find(AppDeveloper).text() : null,
+          status: status.length ? status.text() : null
+        }
+      })
+    ).toMatchSnapshot()
   })
 
   it('should run provided onAppClick on AppTile click event', () => {
