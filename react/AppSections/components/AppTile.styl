@@ -1,3 +1,5 @@
+@require 'settings/breakpoints.styl'
+
 .AppTile-icon-wrapper
   margin-top .25rem
   margin-bottom .25rem
@@ -34,17 +36,14 @@
 
 .AppTile-developer
   height 1rem
-  font-size 12px
-  color var(--slateGrey)
 
 .AppTile-status
   margin-top .5rem
   height 1rem
-  font-size 12px
   color var(--coolGrey)
 
 
-@media (max-width 48rem)
++small-screen()
   .AppTile-icon-wrapper
     margin-bottom 0
 

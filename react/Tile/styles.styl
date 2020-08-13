@@ -1,3 +1,6 @@
+@require 'settings/breakpoints.styl'
+@require 'settings/shadows.styl'
+
 $tileSize = 8.75rem
 $tileMobileHeight = 3.75rem
 
@@ -21,15 +24,12 @@ $tileMobileHeight = 3.75rem
 .Tile:hover,
 .Tile:active,
 .Tile:focus
-  box-shadow 0 4px 12px 0 #00000020
+  box-shadow box-shadow-12
   cursor pointer
   transform scale(1.1)
 
-@media (min-width 1041px)
-  .Tile
-    margin-right 1rem
 
-@media (max-width 48rem)
++small-screen()
   .Tile
     flex-basis 100%
     flex-direction row
