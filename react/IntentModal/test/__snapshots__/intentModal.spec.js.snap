@@ -13,7 +13,7 @@ exports[`IntentModal component renders as expected 1`] = `
   secondaryType="secondary"
   size="small"
 >
-  <IntentIframe
+  <withClient(IntentIframe)
     action="ANY"
     create={[MockFunction createMock]}
     data={
