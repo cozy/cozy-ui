@@ -1,6 +1,8 @@
-/* global cozy */
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Intents } from 'cozy-interapp'
+import { withClient } from 'cozy-client'
+
 import Spinner from '../Spinner'
 import styles from './styles.styl'
 
@@ -15,9 +17,23 @@ class IntentIframe extends React.Component {
   state = { loading: false }
 
   componentDidMount() {
-    const { action, data, type, onCancel, onError, onTerminate } = this.props
+    const {
+      action,
+      data,
+      type,
+      onCancel,
+      onError,
+      onTerminate,
+      client
+    } = this.props
 
-    const create = this.props.create || cozy.client.intents.create
+    let create
+    if (this.props.create) {
+      create = this.props.create
+    } else {
+      const intents = new Intents({ client })
+      create = intents.create
+    }
 
     this.setState({ loading: true })
     create(action, type, {
@@ -70,4 +86,4 @@ IntentIframe.defaultProps = {
   data: {}
 }
 
-export default IntentIframe
+export default withClient(IntentIframe)
