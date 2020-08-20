@@ -195,10 +195,14 @@ normalTheme.overrides = {
       borderBottom: '1px solid var(--zircon)',
       marginBottom: '-1px',
       padding: 0,
-      backgroundColor: 'var(--zircon)',
+      height: '2rem',
+      backgroundColor: 'var(--paleGrey)',
       textIndent: '2rem',
       fontWeight: 'bold',
       fontSize: '.75rem',
+      textTransform: 'uppercase',
+      alignItems: 'center',
+      display: 'flex',
       lineHeight: 1.33,
       color: 'var(--coolGrey)'
     },
@@ -207,7 +211,7 @@ normalTheme.overrides = {
       paddingRight: 0
     },
     sticky: {
-      backgroundColor: 'var(--zircon)'
+      backgroundColor: 'var(--paleGrey)'
     }
   },
   MuiListItemSecondaryAction: {
