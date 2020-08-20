@@ -1,6 +1,7 @@
 @require '../settings/breakpoints'
 @require '../settings/z-index'
 @require '../tools/mixins'
+@require './sections'
 
 $table
     position relative
@@ -92,22 +93,10 @@ $table-cell--primary
         flex 1 1 auto
 
 $table-divider
+    @extend $section-header
     position sticky
     z-index $low-index
     top 0
-    background-color var(--zircon)
-    text-indent rem(32)
-    font-weight bold
-    font-size rem(12)
-    line-height 1.33
-    color var(--coolGrey)
-
-    & + * // @stylint ignore
-        border-top 0
-
-
-    +small-screen()
-        text-indent rem(16)
 
 // Legacy table
 $table--legacy

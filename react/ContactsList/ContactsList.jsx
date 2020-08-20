@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import { sortContacts, categorizeContacts, sortHeaders } from './helpers'
 import ContactRow from './ContactRow'
-import ContactHeaderRow from './ContactHeaderRow'
+import ListSubheader from '../MuiCozyTheme/ListSubheader'
 import styles from './styles.styl'
 
 const ContactsList = props => {
@@ -18,7 +18,7 @@ const ContactsList = props => {
     <ol className={cx(styles['list-contact'], className)} {...rest}>
       {sortedHeaders.map(header => (
         <li key={header}>
-          <ContactHeaderRow header={header} />
+          <ListSubheader>{header}</ListSubheader>
           <ol className={styles['sublist-contact']}>
             {categorizedContacts[header].map(contact => (
               <li key={contact._id}>
