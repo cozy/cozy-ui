@@ -159,6 +159,11 @@ normalTheme.overrides = {
     }
   },
   MuiListItem: {
+    container: {
+      '&:not(:first-child)': {
+        borderTop: '1px solid var(--silver) !important'
+      }
+    },
     root: {
       minHeight: '4.25rem',
       paddingTop: '.5rem',

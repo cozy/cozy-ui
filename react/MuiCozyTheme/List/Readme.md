@@ -54,6 +54,16 @@ import Button from 'cozy-ui/transpiled/react/Button';
     </ListItem>
     <ListItem>
       <ListItemText primaryText="I'm a primary text" />
+      <ListItemSecondaryAction>
+        <Button
+          label='Click for more !'
+          theme="text"
+          icon="dots"
+          extension="narrow"
+          iconOnly
+          className="u-m-0"
+        />
+      </ListItemSecondaryAction>
     </ListItem>
   </List>
 </MuiCozyTheme>
