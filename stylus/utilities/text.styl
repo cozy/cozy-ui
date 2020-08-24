@@ -174,11 +174,25 @@ fontstyle = {
     'fs-normal': 'fs-normal',
     'fs-italic': 'fs-italic'
 }
-
 if cssmodules == true
     cssModulesUtils(fontstyle, breakpoints)
 else
     nativeUtils(fontstyle, breakpoints)
+
+fw-normal()
+    font-weight normal
+
+fw-bold()
+    font-weight bold
+
+fontweight = {
+    'fw-normal': 'fw-normal',
+    'fw-bold': 'fw-bold'
+}
+if cssmodules == true
+    cssModulesUtils(fontweight, breakpoints)
+else
+    nativeUtils(fontweight, breakpoints)
 // @stylint on
 
 // Global classes
