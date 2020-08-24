@@ -6,7 +6,7 @@ exports[`ActionMenu should render examples: ActionMenu 1`] = `
         <use xlink:href=\\"#bottom\\"></use>
       </svg></button>
     <div>
-      <div style=\\"position: absolute; left: 0px; top: 0px; z-index: #fff; transform: translate(0px, 0px);\\" data-popper-placement=\\"bottom-start\\">
+      <div style=\\"position: absolute; left: 0px; top: 0px; z-index: #fff; transform: translate(0px, 0px);\\">
         <div class=\\"styles__c-actionmenu___22Fp1 styles__c-actionmenu--inline___1SXZa\\">
           <div class=\\"styles__media___cSJMp styles__media--top___K9w0I styles__c-actionmenu-item___gODqd\\">
             <div class=\\"styles__img___3SHpG u-mh-1\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">

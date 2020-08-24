@@ -127,30 +127,29 @@ ActionMenu.propTypes = {
   onClose: PropTypes.func,
   /** Whether the menu should automatically close itself when an item is clicked */
   autoclose: PropTypes.bool,
-  /** Controls the placement of the menu on desktop */
-  placement: PropTypes.oneOf([
-    'bottom-end',
-    'bottom-start',
-    'bottom',
-    'left-end',
-    'left-start',
-    'left',
-    'right-end',
-    'right-start',
-    'right',
-    'top-end',
-    'top-start',
-    'top'
-  ]),
-  /** Will keep the menu visible when scrolling */
-  preventOverflow: PropTypes.bool,
+  /** Options passed to popper.js to control menu behaviour on desktop */
+  popperOptions: PropTypes.shape({
+    placement: PropTypes.oneOf([
+      'bottom-end',
+      'bottom-start',
+      'bottom',
+      'left-end',
+      'left-start',
+      'left',
+      'right-end',
+      'right-start',
+      'right',
+      'top-end',
+      'top-start',
+      'top'
+    ])
+  }),
   /** The reference element for the menu placement and overflow prevention. */
   anchorElRef: PropTypes.object
 }
 
 ActionMenu.defaultProps = {
-  placement: 'bottom-start',
-  preventOverflow: false,
+  popperOptions: { placement: 'bottom-start' },
   autoclose: false
 }
 
