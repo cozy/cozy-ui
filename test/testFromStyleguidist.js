@@ -6,7 +6,14 @@ import pretty from 'pretty'
 
 import * as content from '../docs/fixtures/content'
 
-const testFromStyleguidist = (name, markdown, require) => {
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+
+const testFromStyleguidist = (
+  name,
+  markdown,
+  require,
+  { delay } = { delay: 0 }
+) => {
   const evalInContext = a =>
     // eslint-disable-next-line no-new-func
     new Function(
@@ -49,11 +56,12 @@ const testFromStyleguidist = (name, markdown, require) => {
         })
         done()
       }
-      codes.forEach(code => {
+      codes.forEach(async code => {
         const root = mount(
           <Preview code={code.content} evalInContext={evalInContext} />,
           options
         )
+        await sleep(delay) // some components (like the ActionMenu) are flaky due to external libs
         requestAnimationFrame(() => {
           root.update()
           rendered.push(pretty(root.html()))

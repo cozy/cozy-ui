@@ -14,16 +14,17 @@ const makeRequire = subpath => m => {
   }
 }
 
-const testComponent = ComponentName => {
+const testComponent = (ComponentName, options) => {
   testFromStyleguidist(
     ComponentName,
     path.join(__dirname, ComponentName, 'Readme.md'),
-    makeRequire(ComponentName)
+    makeRequire(ComponentName),
+    options
   )
 }
 
 // Please keep the list sorted
-testComponent('ActionMenu')
+testComponent('ActionMenu', { delay: 100 })
 testComponent('AppTitle')
 testComponent('Avatar')
 testComponent('Badge')
