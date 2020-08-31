@@ -9,14 +9,24 @@ const ListItemText = props => {
     primaryText,
     secondaryText,
     className,
+    primaryTextClassName,
+    secondaryTextClassName,
     ellipsis,
     children,
     ...rest
   } = props
   return (
     <div className={cx(styles['c-list-text'], className)} {...rest}>
-      {primaryText && <Text ellipsis={ellipsis}>{primaryText}</Text>}
-      {secondaryText && <Caption ellipsis={ellipsis}>{secondaryText}</Caption>}
+      {primaryText && (
+        <Text className={primaryTextClassName} ellipsis={ellipsis}>
+          {primaryText}
+        </Text>
+      )}
+      {secondaryText && (
+        <Caption className={secondaryTextClassName} ellipsis={ellipsis}>
+          {secondaryText}
+        </Caption>
+      )}
       {children}
     </div>
   )
@@ -25,7 +35,9 @@ const ListItemText = props => {
 ListItemText.propTypes = {
   children: PropTypes.node,
   primaryText: PropTypes.string,
+  primaryTextClassName: PropTypes.string,
   secondaryText: PropTypes.string,
+  secondaryTextClassName: PropTypes.string,
   className: PropTypes.string,
   ellipsis: PropTypes.bool
 }
