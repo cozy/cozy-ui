@@ -5,13 +5,13 @@
 \*------------------------------------*/
 
 $error
-    color  var(--errorColor)
+    color  var(--errorColor) !important // @stylint ignore
 
 $valid
-    color  var(--validColor)
+    color  var(--validColor) !important // @stylint ignore
 
 $warn
-    color  var(--warnColor)
+    color  var(--warnColor) !important // @stylint ignore
 
 colors=json('../settings/palette.json', { hash: true })
 
