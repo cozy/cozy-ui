@@ -9,13 +9,6 @@ import Icon from 'cozy-ui/transpiled/react/Icon';
 import ListSubHeader from '../MuiCozyTheme/ListSubheader'
 import ListNavigation from '../../docs/organisms/ListNavigation'
 
-const description = `
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, soluta. Voluptas ipsa ullam a totam veniam itaque, iusto ducimus, sequi eveniet debitis recusandae incidunt, fugiat architecto et distinctio, optio! Deserunt.</div>
-      <div>Velit neque, repellendus explicabo voluptates veritatis itaque saepe nemo et! Impedit veniam, voluptates. Aliquid laborum voluptate, non commodi magnam, soluta perferendis sapiente nemo harum, eligendi saepe beatae cum quam fugiat.</div>
-      <div>Quam tempora, similique pariatur, vitae atque ducimus. Quidem tempore, nulla est. Dolor quisquam quia placeat molestiae, nulla beatae voluptatem labore sit mollitia repudiandae animi iure maxime maiores quidem delectus ad.</div>
-      <div>Iste reiciendis reprehenderit et similique, rem. Architecto quasi debitis hic, voluptatum in possimus soluta sit, praesentium nisi provident pariatur culpa mollitia repellendus earum reiciendis animi. Sunt voluptates, assumenda esse perspiciatis.</div>
-      <div>Alias quae sequi aliquid sed, nobis veniam magnam rerum amet velit dignissimos dicta a dolorem! Dolorem soluta perferendis error, voluptate dolorum quas, fuga ad repellendus tenetur amet sit assumenda dignissimos.
-`;
 
 <MuiCozyTheme>
   <Tabs initialActiveTab='navlist'>
@@ -28,12 +21,22 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, soluta. Voluptas 
         <ListNavigation />
       </TabPanel>
       <TabPanel name='details'>
-        { description }
+        { content.ada.short }
       </TabPanel>
     </TabPanels>
   </Tabs>
   <div className='u-m-2'></div>
+</MuiCozyTheme>
+```
 
+Tabs can have the `inverted` prop to be in the primary color of the app.
+
+```
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
+import { Tabs, TabList, Tab, TabPanels, TabPanel } from 'cozy-ui/transpiled/react/Tabs';
+import ListNavigation from '../../docs/organisms/ListNavigation';
+
+<MuiCozyTheme>
   <Tabs initialActiveTab='navlist'>
     <TabList inverted>
       <Tab name='navlist'>General</Tab>
@@ -48,7 +51,15 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, soluta. Voluptas 
       </TabPanel>
     </TabPanels>
   </Tabs>
+</MuiCozyTheme>
+```
 
+```
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
+import { Tabs, TabList, Tab, TabPanels, TabPanel } from 'cozy-ui/transpiled/react/Tabs';
+import ListNavigation from '../../docs/organisms/ListNavigation';
+
+<MuiCozyTheme>
   <div style={{ width: 300, marginTop: 32 }}>
     <Tabs initialActiveTab='navlist'>
       <TabList inverted>
@@ -59,13 +70,13 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, soluta. Voluptas 
       </TabList>
       <TabPanels>
         <TabPanel name='navlist'>
-          <ListNavigation />
+          General tab
         </TabPanel>
         <TabPanel name='details'>
-          { description }
+          Details tab
         </TabPanel>
         <TabPanel name='similar'>
-          Similar tab
+          Content for "Very long title" tab
         </TabPanel>
         <TabPanel name='others'>
           Others tab
