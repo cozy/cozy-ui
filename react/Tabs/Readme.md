@@ -1,5 +1,4 @@
-Content needs to be separated into sections and accessed via a single content area using a flat navigation structure that does not refresh the page when selected. 
-
+Content needs to be separated into sections and accessed via a single content area using a flat navigation structure that does not refresh the page when selected.
 
 
 ```
@@ -9,6 +8,7 @@ import Icon from 'cozy-ui/transpiled/react/Icon';
 import ListSubHeader from '../MuiCozyTheme/ListSubheader'
 import ListNavigation from '../../docs/organisms/ListNavigation'
 
+const listNavigationStyle = { marginTop: -1 };
 
 <MuiCozyTheme>
   <Tabs initialActiveTab='navlist'>
@@ -17,8 +17,8 @@ import ListNavigation from '../../docs/organisms/ListNavigation'
       <Tab name='details'>Details</Tab>
     </TabList>
     <TabPanels>
-      <TabPanel name='navlist'>
-        <ListNavigation />
+      <TabPanel className='u-pt-0' name='navlist'>
+        <ListNavigation style={listNavigationStyle} />
       </TabPanel>
       <TabPanel name='details'>
         { content.ada.short }

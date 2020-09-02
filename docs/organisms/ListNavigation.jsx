@@ -7,9 +7,9 @@ import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListI
 import ListSubheader from 'cozy-ui/transpiled/react/MuiCozyTheme/ListSubheader'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 
-const ListNavigation = () => {
+const ListNavigation = ({ style }) => {
   return (
-    <List>
+    <List style={style}>
       <ListSubheader>General</ListSubheader>
       <ListItem>
         <ListItemIcon>

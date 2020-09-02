@@ -6145,8 +6145,8 @@ exports[`Tabs should render examples: Tabs 1`] = `
       <div class=\\"styles__coz-tab___2mOye\\">Details</div>
     </div>
     <div class=\\"\\">
-      <div class=\\"styles__coz-tab-panel___35538\\">
-        <ul class=\\"MuiList-root-119 MuiList-padding-120\\">
+      <div class=\\"styles__coz-tab-panel___35538 u-pt-0\\">
+        <ul class=\\"MuiList-root-119 MuiList-padding-120\\" style=\\"margin-top: -1px;\\">
           <li class=\\"MuiListSubheader-root-1 MuiListSubheader-sticky-6 MuiListSubheader-gutters-4\\">General</li>
           <li class=\\"MuiListItem-container-124\\">
             <div class=\\"MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-131 MuiListItem-secondaryAction-133\\">
