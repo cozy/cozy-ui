@@ -48,11 +48,20 @@ $caption
     line-height 1.2
     color var(--coolGrey)
 
+$subtitle
+    font-size $subtitle-font-size
+    line-height 1.313
+
 $uppercase
     text-transform uppercase
 
 $lowercase
     text-transform lowercase
+
+$subtitle
+    font-size $subtitle-font-size
+    text-transform uppercase
+    font-weight bold
 
 global('.u-title-h1', $title-h1)
 global('.u-title-h2', $title-h2)
@@ -62,3 +71,4 @@ global('.u-text', $text)
 global('.u-uppercase', $uppercase)
 global('.u-lowercase', $lowercase)
 global('.u-caption', $caption)
+global('.u-subtitle', $subtitle)

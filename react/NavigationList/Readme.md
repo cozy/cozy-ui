@@ -12,9 +12,9 @@ import ListItemIcon from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemSecondaryAction'
 import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
-import ListSubheader from '../MuiCozyTheme/ListSubheader'
 import NavigationList, {
-  NavigationListSection
+  NavigationListSection,
+  NavigationListHeader
 } from 'cozy-ui/transpiled/react/NavigationList'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 
@@ -22,25 +22,25 @@ import Stack from 'cozy-ui/transpiled/react/Stack'
 const NavigationListExample = ({ style }) => {
   return (
     <NavigationList style={style}>
-      <NavigationListSection>
-        <ListSubheader>General</ListSubheader>
+        <NavigationListHeader>General</NavigationListHeader>
+        <NavigationListSection>
         <ListItem>
           <ListItemIcon>
-            <Icon icon="gear" width="24" height="24" />
+            <Icon icon="gear" width="16" height="16" />
           </ListItemIcon>
           <ListItemText primaryText="General settings" />
           <ListItemSecondaryAction>
             <Icon
               icon="right"
-              width="24"
-              height="24"
+              width="16"
+              height="16"
               className="u-mr-1 u-coolGrey"
             />
           </ListItemSecondaryAction>
         </ListItem>
         <ListItem>
           <ListItemIcon>
-            <Icon icon="people" width="24" height="24" />
+            <Icon icon="people" width="16" height="16" />
           </ListItemIcon>
           <ListItemText
             primaryText="User preferences"
@@ -49,15 +49,15 @@ const NavigationListExample = ({ style }) => {
           <ListItemSecondaryAction>
             <Icon
               icon="right"
-              width="24"
-              height="24"
+              width="16"
+              height="16"
               className="u-mr-1 u-coolGrey"
             />
           </ListItemSecondaryAction>
         </ListItem>
         <ListItem>
           <ListItemIcon>
-            <Icon icon="trash" className="u-error" width="24" height="24" />
+            <Icon icon="trash" className="u-error" width="16" height="16" />
           </ListItemIcon>
           <ListItemText
             primaryText="Delete account"
@@ -67,18 +67,18 @@ const NavigationListExample = ({ style }) => {
           />
         </ListItem>
       </NavigationListSection>
+      <NavigationListHeader>Accounts</NavigationListHeader>
       <NavigationListSection>
-        <ListSubheader>Accounts</ListSubheader>
         <ListItem>
           <ListItemIcon>
-            <Icon icon="bank" width="24" height="24" />
+            <Icon icon="bank" width="16" height="16" />
           </ListItemIcon>
           <ListItemText primaryText="Bank accounts" />
           <ListItemSecondaryAction>
             <Icon
               icon="right"
-              width="24"
-              height="24"
+              width="16"
+              height="16"
               className="u-mr-1 u-coolGrey"
             />
           </ListItemSecondaryAction>
@@ -103,7 +103,7 @@ const TabsExample = () => {
           <Tab name='details'>Details</Tab>
         </TabList>
         <TabPanels>
-          <TabPanel className={isMobile ? 'u-pt-0' : null} name='navlist'>
+          <TabPanel className={isMobile ? 'u-pt-0' : 'u-pt-1-half'} name='navlist'>
             <NavigationListExample style={tabsNavigationListStyle} />
           </TabPanel>
           <TabPanel name='details'>

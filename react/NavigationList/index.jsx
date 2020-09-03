@@ -1,26 +1,34 @@
 import React from 'react'
-import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List'
-import Stack from 'cozy-ui/transpiled/react/Stack'
-import Card from 'cozy-ui/transpiled/react/Card'
-import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import cx from 'classnames'
+import List from '../MuiCozyTheme/List'
+import Stack from '../Stack'
+import Card from '../Card'
+import { NewSubTitle } from '../Text'
+import useBreakpoints from '../hooks/useBreakpoints'
+import ListSubheader from '../MuiCozyTheme/ListSubheader'
+import styles from './styles.styl'
 
-const NavigationList = ({ children, style }) => {
+const NavigationList = ({ children, style, className }) => {
   const { isMobile } = useBreakpoints()
   return isMobile ? (
-    <List style={style}>{children}</List>
+    <List className={className} style={style}>
+      {children}
+    </List>
   ) : (
-    <DesktopSectionWrapper style={style}>{children}</DesktopSectionWrapper>
+    <Stack
+      spacing="s"
+      className={cx(styles.DesktopSectionWrapper, className)}
+      style={style}
+    >
+      {children}
+    </Stack>
   )
 }
 
 export default NavigationList
 
 const DesktopSection = ({ children }) => (
-  <Card className="u-p-0 u-ov-hidden">{children}</Card>
-)
-
-const DesktopSectionWrapper = ({ children }) => (
-  <Stack spacing="s">{children}</Stack>
+  <Card className="u-p-0 u-ov-hidden u-mb-1-half">{children}</Card>
 )
 
 export const NavigationListSection = ({ children }) => {
@@ -29,5 +37,14 @@ export const NavigationListSection = ({ children }) => {
     <>{children}</>
   ) : (
     <DesktopSection>{children}</DesktopSection>
+  )
+}
+
+export const NavigationListHeader = ({ children }) => {
+  const { isMobile } = useBreakpoints()
+  return isMobile ? (
+    <ListSubheader>{children}</ListSubheader>
+  ) : (
+    <NewSubTitle className="u-coolGrey u-mb-1">{children}</NewSubTitle>
   )
 }
