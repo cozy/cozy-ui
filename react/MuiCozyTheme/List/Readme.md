@@ -135,21 +135,4 @@ import Icon from 'cozy-ui/transpiled/react/Icon';
 ```
 ### Navigation list
 
-When presenting a list of actions in a navigation menu, it can be useful to 
-group actions per sections.
-
-- `ListSubHeader` can be used to add a section header.
-- `ListItemSecondaryAction` can be used to show an arrow.
-
-```
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
-import NavigationList from 'cozy-ui/transpiled/react/NavigationList/example'
-
-
-<BreakpointsProvider>
-  <MuiCozyTheme>
-    <ListNavigation />
-  </MuiCozyTheme>
-</BreakpointsProvider>
-```
+List components are used in the [NavigationList](#/NavigationList) component.

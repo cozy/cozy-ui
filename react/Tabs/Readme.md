@@ -1,43 +1,5 @@
 Content needs to be separated into sections and accessed via a single content area using a flat navigation structure that does not refresh the page when selected.
 
-
-```
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
-import { Tabs, TabList, Tab, TabPanels, TabPanel } from 'cozy-ui/transpiled/react/Tabs';
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
-import ListSubHeader from '../MuiCozyTheme/ListSubheader'
-import NavigationList from 'cozy-ui/transpiled/react/NavigationList/example'
-
-const navigationListStyle = { marginTop: -1 };
-
-const Example = () => {
-  const { isMobile } = useBreakpoints()
-  return (
-    <Tabs initialActiveTab='navlist'>
-      <TabList>
-        <Tab name='navlist'>Navigation list</Tab>
-        <Tab name='details'>Details</Tab>
-      </TabList>
-      <TabPanels>
-        <TabPanel className={isMobile ? 'u-pt-0' : null} name='navlist'>
-          <NavigationList style={navigationListStyle} />
-        </TabPanel>
-        <TabPanel name='details'>
-          { content.ada.short }
-        </TabPanel>
-      </TabPanels>
-    </Tabs>
-  )
-}
-
-<BreakpointsProvider>
-  <MuiCozyTheme>
-    <Example />
-  </MuiCozyTheme>
-</BreakpointsProvider>
-```
-
 Tabs can have the `inverted` prop to be in the primary color of the app.
 
 ```
@@ -94,3 +56,5 @@ import { Tabs, TabList, Tab, TabPanels, TabPanel } from 'cozy-ui/transpiled/reac
 
 </MuiCozyTheme>
 ```
+
+Tabs can be along with the [NavigationList](#/NavigationList) component.

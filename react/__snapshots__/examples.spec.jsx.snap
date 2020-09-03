@@ -6140,75 +6140,6 @@ exports[`Table should render examples: Table 1`] = `
 exports[`Tabs should render examples: Tabs 1`] = `
 "<div>
   <div class=\\"styles__coz-tabs___24QL5\\">
-    <div class=\\"styles__coz-tab-list___3qac8\\">
-      <div class=\\"styles__coz-tab___2mOye styles__coz-tab--active___1wmwM\\">Navigation list</div>
-      <div class=\\"styles__coz-tab___2mOye\\">Details</div>
-    </div>
-    <div class=\\"\\">
-      <div class=\\"styles__coz-tab-panel___35538 u-pt-0\\">
-        <ul class=\\"MuiList-root-119 MuiList-padding-120\\" style=\\"margin-top: -1px;\\">
-          <li class=\\"MuiListSubheader-root-1 MuiListSubheader-sticky-6 MuiListSubheader-gutters-4\\">General</li>
-          <li class=\\"MuiListItem-container-124\\">
-            <div class=\\"MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-131 MuiListItem-secondaryAction-133\\">
-              <div class=\\"MuiListItemIcon-root-135\\"><svg class=\\"styles__icon___23x3R\\" width=\\"24\\" height=\\"24\\">
-                  <use xlink:href=\\"#gear\\"></use>
-                </svg></div>
-              <div class=\\"styles__c-list-text___3kc3E\\">
-                <div class=\\"u-ellipsis u-text\\">General settings</div>
-              </div>
-            </div>
-            <div class=\\"MuiListItemSecondaryAction-root-136\\"><svg class=\\"u-mr-1 u-coolGrey styles__icon___23x3R\\" width=\\"24\\" height=\\"24\\">
-                <use xlink:href=\\"#right\\"></use>
-              </svg></div>
-          </li>
-          <li class=\\"MuiListItem-container-124\\">
-            <div class=\\"MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-131 MuiListItem-secondaryAction-133\\">
-              <div class=\\"MuiListItemIcon-root-135\\"><svg class=\\"styles__icon___23x3R\\" width=\\"24\\" height=\\"24\\">
-                  <use xlink:href=\\"#people\\"></use>
-                </svg></div>
-              <div class=\\"styles__c-list-text___3kc3E\\">
-                <div class=\\"u-ellipsis u-text\\">User preferences</div>
-                <div class=\\"u-ellipsis u-caption\\">Notifications and theme</div>
-              </div>
-            </div>
-            <div class=\\"MuiListItemSecondaryAction-root-136\\"><svg class=\\"u-mr-1 u-coolGrey styles__icon___23x3R\\" width=\\"24\\" height=\\"24\\">
-                <use xlink:href=\\"#right\\"></use>
-              </svg></div>
-          </li>
-          <li class=\\"MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-131\\">
-            <div class=\\"MuiListItemIcon-root-135\\"><svg class=\\"u-error styles__icon___23x3R\\" width=\\"24\\" height=\\"24\\">
-                <use xlink:href=\\"#trash\\"></use>
-              </svg></div>
-            <div class=\\"styles__c-list-text___3kc3E\\">
-              <div class=\\"u-ellipsis u-text u-error\\">Delete account</div>
-              <div class=\\"u-ellipsis u-caption u-error\\">Permanently delete all your data</div>
-            </div>
-          </li>
-          <li class=\\"MuiListSubheader-root-1 MuiListSubheader-sticky-6 MuiListSubheader-gutters-4\\">Accounts</li>
-          <li class=\\"MuiListItem-container-124\\">
-            <div class=\\"MuiListItem-root-123 MuiListItem-default-126 MuiListItem-gutters-131 MuiListItem-secondaryAction-133\\">
-              <div class=\\"MuiListItemIcon-root-135\\"><svg class=\\"styles__icon___23x3R\\" width=\\"24\\" height=\\"24\\">
-                  <use xlink:href=\\"#bank\\"></use>
-                </svg></div>
-              <div class=\\"styles__c-list-text___3kc3E\\">
-                <div class=\\"u-ellipsis u-text\\">Bank accounts</div>
-              </div>
-            </div>
-            <div class=\\"MuiListItemSecondaryAction-root-136\\"><svg class=\\"u-mr-1 u-coolGrey styles__icon___23x3R\\" width=\\"24\\" height=\\"24\\">
-                <use xlink:href=\\"#right\\"></use>
-              </svg></div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class=\\"u-m-2\\"></div>
-</div>"
-`;
-
-exports[`Tabs should render examples: Tabs 2`] = `
-"<div>
-  <div class=\\"styles__coz-tabs___24QL5\\">
     <div class=\\"styles__coz-tab-list___3qac8 styles__coz-tab-list--inverted___3VjXc\\">
       <div class=\\"styles__coz-tab___2mOye styles__coz-tab--active___1wmwM\\">General</div>
       <div class=\\"styles__coz-tab___2mOye\\">Details</div>
@@ -6220,7 +6151,7 @@ exports[`Tabs should render examples: Tabs 2`] = `
 </div>"
 `;
 
-exports[`Tabs should render examples: Tabs 3`] = `
+exports[`Tabs should render examples: Tabs 2`] = `
 "<div>
   <div style=\\"width: 300px; margin-top: 32px;\\">
     <div class=\\"styles__coz-tabs___24QL5\\">
