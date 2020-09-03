@@ -65,4 +65,12 @@ export const ErrorMessage = makeTextComponent('ErrorMessage', {
   className: styles.ErrorMessage
 })
 
+export const NewSubTitle = ({ children, className, ...props }) => {
+  return (
+    <div className={cx('u-subtitle', className)} {...props}>
+      {children}
+    </div>
+  )
+}
+
 export default Text
