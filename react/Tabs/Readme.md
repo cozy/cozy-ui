@@ -5,28 +5,37 @@ Content needs to be separated into sections and accessed via a single content ar
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from 'cozy-ui/transpiled/react/Tabs';
 import Icon from 'cozy-ui/transpiled/react/Icon';
+import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
 import ListSubHeader from '../MuiCozyTheme/ListSubheader'
 import ListNavigation from '../../docs/organisms/ListNavigation'
 
 const listNavigationStyle = { marginTop: -1 };
 
-<MuiCozyTheme>
-  <Tabs initialActiveTab='navlist'>
-    <TabList>
-      <Tab name='navlist'>Navigation list</Tab>
-      <Tab name='details'>Details</Tab>
-    </TabList>
-    <TabPanels>
-      <TabPanel className='u-pt-0' name='navlist'>
-        <ListNavigation style={listNavigationStyle} />
-      </TabPanel>
-      <TabPanel name='details'>
-        { content.ada.short }
-      </TabPanel>
-    </TabPanels>
-  </Tabs>
-  <div className='u-m-2'></div>
-</MuiCozyTheme>
+const Example = () => {
+  const { isMobile } = useBreakpoints()
+  return (
+    <Tabs initialActiveTab='navlist'>
+      <TabList>
+        <Tab name='navlist'>Navigation list</Tab>
+        <Tab name='details'>Details</Tab>
+      </TabList>
+      <TabPanels>
+        <TabPanel className={isMobile ? 'u-pt-0' : null} name='navlist'>
+          <ListNavigation style={listNavigationStyle} />
+        </TabPanel>
+        <TabPanel name='details'>
+          { content.ada.short }
+        </TabPanel>
+      </TabPanels>
+    </Tabs>
+  )
+}
+
+<BreakpointsProvider>
+  <MuiCozyTheme>
+    <Example />
+  </MuiCozyTheme>
+</BreakpointsProvider>
 ```
 
 Tabs can have the `inverted` prop to be in the primary color of the app.

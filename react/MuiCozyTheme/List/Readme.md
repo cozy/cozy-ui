@@ -142,12 +142,14 @@ group actions per sections.
 - `ListItemSecondaryAction` can be used to show an arrow.
 
 ```
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
-import ListNavigation from '../../../docs/organisms/ListNavigation';
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
+import ListNavigation from '../../../docs/organisms/ListNavigation'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
 
 
-
-<MuiCozyTheme>
-  <ListNavigation />
-</MuiCozyTheme>
+<BreakpointsProvider>
+  <MuiCozyTheme>
+    <ListNavigation />
+  </MuiCozyTheme>
+</BreakpointsProvider>
 ```
