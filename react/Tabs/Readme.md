@@ -7,9 +7,9 @@ import { Tabs, TabList, Tab, TabPanels, TabPanel } from 'cozy-ui/transpiled/reac
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
 import ListSubHeader from '../MuiCozyTheme/ListSubheader'
-import ListNavigation from '../../docs/organisms/ListNavigation'
+import NavigationList from 'cozy-ui/transpiled/react/NavigationList/example'
 
-const listNavigationStyle = { marginTop: -1 };
+const navigationListStyle = { marginTop: -1 };
 
 const Example = () => {
   const { isMobile } = useBreakpoints()
@@ -21,7 +21,7 @@ const Example = () => {
       </TabList>
       <TabPanels>
         <TabPanel className={isMobile ? 'u-pt-0' : null} name='navlist'>
-          <ListNavigation style={listNavigationStyle} />
+          <NavigationList style={navigationListStyle} />
         </TabPanel>
         <TabPanel name='details'>
           { content.ada.short }
@@ -43,7 +43,6 @@ Tabs can have the `inverted` prop to be in the primary color of the app.
 ```
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from 'cozy-ui/transpiled/react/Tabs';
-import ListNavigation from '../../docs/organisms/ListNavigation';
 
 <MuiCozyTheme>
   <Tabs initialActiveTab='navlist'>
@@ -66,7 +65,6 @@ import ListNavigation from '../../docs/organisms/ListNavigation';
 ```
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from 'cozy-ui/transpiled/react/Tabs';
-import ListNavigation from '../../docs/organisms/ListNavigation';
 
 <MuiCozyTheme>
   <div style={{ width: 300, marginTop: 32 }}>

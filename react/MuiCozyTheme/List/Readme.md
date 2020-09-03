@@ -133,7 +133,7 @@ import Icon from 'cozy-ui/transpiled/react/Icon';
   </List>
 </MuiCozyTheme>
 ```
-### Navigation menus
+### Navigation list
 
 When presenting a list of actions in a navigation menu, it can be useful to 
 group actions per sections.
@@ -143,8 +143,8 @@ group actions per sections.
 
 ```
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
-import ListNavigation from '../../../docs/organisms/ListNavigation'
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
+import NavigationList from 'cozy-ui/transpiled/react/NavigationList/example'
 
 
 <BreakpointsProvider>

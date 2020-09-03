@@ -1,44 +1,17 @@
 import React from 'react'
-import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List'
 import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem'
 import ListItemIcon from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemSecondaryAction'
 import ListSubheader from 'cozy-ui/transpiled/react/MuiCozyTheme/ListSubheader'
-import Stack from 'cozy-ui/transpiled/react/Stack'
 import Icon from 'cozy-ui/transpiled/react/Icon'
-import Card from 'cozy-ui/transpiled/react/Card'
-import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import NavigationList, {
+  NavigationListSection
+} from 'cozy-ui/transpiled/react/NavigationList'
 
-const DesktopSection = ({ children }) => (
-  <Card className="u-p-0 u-ov-hidden">{children}</Card>
-)
-
-const DesktopSectionWrapper = ({ children }) => (
-  <Stack spacing="s">{children}</Stack>
-)
-
-const NavigationListSection = ({ children }) => {
-  const { isMobile } = useBreakpoints()
-  return isMobile ? (
-    <List>{children}</List>
-  ) : (
-    <DesktopSection>{children}</DesktopSection>
-  )
-}
-
-const NavigationListWrapper = ({ children, style }) => {
-  const { isMobile } = useBreakpoints()
-  return isMobile ? (
-    <div style={style}>{children}</div>
-  ) : (
-    <DesktopSectionWrapper style={style}>{children}</DesktopSectionWrapper>
-  )
-}
-
-const ListNavigation = ({ style }) => {
+const NavigationListExample = ({ style }) => {
   return (
-    <NavigationListWrapper style={style}>
+    <NavigationList style={style}>
       <NavigationListSection>
         <ListSubheader>General</ListSubheader>
         <ListItem>
@@ -101,8 +74,8 @@ const ListNavigation = ({ style }) => {
           </ListItemSecondaryAction>
         </ListItem>
       </NavigationListSection>
-    </NavigationListWrapper>
+    </NavigationList>
   )
 }
 
-export default ListNavigation
+export default NavigationListExample
