@@ -34,9 +34,9 @@ const ListItemText = props => {
 
 ListItemText.propTypes = {
   children: PropTypes.node,
-  primaryText: PropTypes.string,
+  primaryText: PropTypes.node,
   primaryTextClassName: PropTypes.string,
-  secondaryText: PropTypes.string,
+  secondaryText: PropTypes.node,
   secondaryTextClassName: PropTypes.string,
   className: PropTypes.string,
   ellipsis: PropTypes.bool
