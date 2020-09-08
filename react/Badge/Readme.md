@@ -1,55 +1,59 @@
-`<Badge />` component wraps the element on which you want to apply a badge. In the following examples, it is applied to compact `<ButtonAction />`.
+`<Badge />` component wraps the element you want to apply a badge to. It is based on the [Badge component from Material-UI](https://v3.material-ui.com/api/badge/).
 
-You should use `<Badge />` to provide additional information related to the wrapped content.
+### Basic Badges
 
-This component spreads all other props to its root element.
+The default version of badges is used to indicate an amount of new things that the user should see. This could be a number of new messages in an inbox or the number of new files in a folder.
 
-#### Available types
-
-Default type is `normal`
+The `dot` variant can be used to indicate that the item _itself_ is new. A `dot` badge on a folder for example indicates that the folder is new, not that it contains new elements.
 
 ```
-import Badge from 'cozy-ui/transpiled/react/Badge'
-import ButtonAction from 'cozy-ui/transpiled/react/ButtonAction';
-
-<div>
-  <p>
-    <Badge content="2" type="normal">
-      <ButtonAction label='Normal' rightIcon='openwith' compact />
-    </Badge>
-  </p>
-  <p>
-    <Badge content="2" type="new">
-      <ButtonAction type='new' leftIcon="plus" label='New' compact />
-    </Badge>
-  </p>
-  <p>
-    <Badge content="2" type="error">
-      <ButtonAction type='error' label='Error' rightIcon='file-none' compact />
-    </Badge>
-  </p>
-</div>
-```
-
-
-#### Alignment
-
-Only supports `bottom-right` 
-
-
-```
-import Badge from 'cozy-ui/transpiled/react/Badge'
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
+import Badge from 'cozy-ui/transpiled/react/Badge';
 import Icon from 'cozy-ui/transpiled/react/Icon';
+import Variants from 'cozy-ui/docs/components/Variants';
+
+const initialVariants = [
+  { error: false, dot: false, large: false, small: false },
+  { error: true, dot: true, large: false, small: false },
+  { error: false, dot: false, large: false, small: false },
+];
 
 
+<MuiCozyTheme>
+  <Variants initialVariants={initialVariants}>{
+    variant => (
+      <p>
+        <Badge badgeContent={4} color={variant.error ? 'error' : variant.secondaryColor ? 'secondary' : 'primary'} variant={variant.dot ? 'dot' : 'standard'} size={variant.large ? 'large' : variant.small ? 'small' : 'medium'} anchorOrigin={{vertical: variant.bottom ? 'bottom' : 'top', 'horizontal': variant.left ? 'left' : 'right'}}>
+          <Icon icon="circle-filled" size={variant.large ? '32' : variant.small ? '16' : '24'} color="var(--slateGrey)" />
+        </Badge>
+      </p>
+    )
+  }</Variants>
+</MuiCozyTheme>
+```
 
-<div>
+### Double badges
+
+Badges can be combined — in this example, we have an item with a new qualification.
+
+```
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
+import Badge from 'cozy-ui/transpiled/react/Badge';
+import InfosBadge from 'cozy-ui/transpiled/react/InfosBadge';
+import Icon from 'cozy-ui/transpiled/react/Icon';
+import Avatar from 'cozy-ui/transpiled/react/Avatar';
+
+<MuiCozyTheme>
   <p>
-    <Badge 
-      content={ <Icon icon="link" size={10} />} type="normal" alignment="bottom-right" size='medium'>
-      <Icon icon="cloud" size="32" />
-    </Badge>
+    <InfosBadge
+      badgeContent={
+        <Badge color="error" variant="dot" size="small">
+          <Icon icon="link" size="10" />
+        </Badge>
+      }
+    >
+      <Avatar text="CD" size="small" />
+    </InfosBadge>
   </p>
-  
-</div>
+</MuiCozyTheme>
 ```
