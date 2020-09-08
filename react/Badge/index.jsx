@@ -20,25 +20,13 @@ const customStyles = theme => ({
     top: '82%',
     '&$large': {
       top: '86%'
-    },
-    '&$qualifier': {
-      top: '80%'
-    },
-    '&$ghost': {
-      top: '76%'
     }
   },
   left: {
     right: '90%'
   },
   right: {
-    right: '10%',
-    '&$qualifier': {
-      right: '12%'
-    },
-    '&$ghost': {
-      right: '12%'
-    }
+    right: '10%'
   },
   large: {
     height: LARGE_BADGE,
@@ -79,35 +67,17 @@ const customStyles = theme => ({
       height: SMALL_DOT,
       minWidth: SMALL_DOT
     }
-  },
-  qualifier: {
-    backgroundColor: 'white',
-    color: 'var(--slateGrey)',
-    border: '1px solid var(--silver)'
-  },
-  ghost: {
-    backgroundColor: 'white',
-    color: 'var(--coolGrey)',
-    border: '1px solid var(--silver)',
-    borderRadius: '6px',
-    height: 'auto',
-    minWidth: 'auto',
-    padding: '3px'
   }
 })
 
-const customVariants = ['qualifier', 'ghost']
-
-export const Badge = withStyles(customStyles)(
-  ({ classes, anchorOrigin, size, variant, ...props }) => {
+const Badge = withStyles(customStyles)(
+  ({ classes, anchorOrigin, size, ...props }) => {
     const {
       badge,
       colorPrimary,
       colorSecondary,
       colorError,
       dot,
-      qualifier,
-      ghost,
       top,
       bottom,
       left,
@@ -117,12 +87,9 @@ export const Badge = withStyles(customStyles)(
       small,
       ...customClasses
     } = classes
-    const isCustomvariant = customVariants.includes(variant)
     const verticalClasses = { top, bottom }
     const horizontalClasses = { left, right }
     const sizeClasses = { large, medium, small }
-    if (isCustomvariant)
-      anchorOrigin = { vertical: 'bottom', horizontal: 'right' }
 
     return (
       <MuiBadge
@@ -135,13 +102,10 @@ export const Badge = withStyles(customStyles)(
             badge,
             verticalClasses[anchorOrigin.vertical],
             horizontalClasses[anchorOrigin.horizontal],
-            variant === 'qualifier' ? qualifier : null,
-            variant === 'ghost' ? ghost : null,
-            isCustomvariant ? null : sizeClasses[size],
+            sizeClasses[size],
             customClasses
           )
         }}
-        variant={isCustomvariant ? 'standard' : variant}
         {...props}
       />
     )
@@ -155,7 +119,7 @@ Badge.propTypes = {
   }),
   size: PropTypes.oneOf('small', 'medium', 'large'),
   showZero: PropTypes.bool,
-  variant: PropTypes.oneOf('standaard', 'dot', 'qualifier', 'ghost')
+  variant: PropTypes.oneOf('standard', 'dot')
 }
 
 Badge.defaultProps = {

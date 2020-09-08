@@ -32,65 +32,28 @@ const initialVariants = [
 </MuiCozyTheme>
 ```
 
-### Qualifier badge
-
-The qualifier badge is used to provider extra information about the item it's annotating.
-
-```
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
-import Badge from 'cozy-ui/transpiled/react/Badge';
-import Icon from 'cozy-ui/transpiled/react/Icon';
-
-<MuiCozyTheme>
-  <p>
-    <Badge badgeContent={<Icon icon="link" size="10" />} color="primary" variant="qualifier">
-      <Icon icon="circle-filled" size="32" color="var(--slateGrey)" />
-    </Badge>
-  </p>
-</MuiCozyTheme>
-```
-
-### Ghost badge
-
-Ghost badges are specifically used to indicate that a file in a Cozy is a ghost file — it is not truly in the Cozy (usually it is shared from another instance).
-
-```
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
-import Badge from 'cozy-ui/transpiled/react/Badge';
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import Avatar from 'cozy-ui/transpiled/react/Avatar';
-
-<MuiCozyTheme>
-  <p>
-    <Badge badgeContent={<Icon icon="folder" size="16" />} color="primary" variant="ghost">
-      <Avatar text="CD" size="small" />
-    </Badge>
-  </p>
-</MuiCozyTheme>
-```
-
 ### Double badges
 
-Badges can be combined — in this example, we have a ghost file that is new.
+Badges can be combined — in this example, we have an item with a new qualification.
 
 ```
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import Badge from 'cozy-ui/transpiled/react/Badge';
+import InfosBadge from 'cozy-ui/transpiled/react/InfosBadge';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import Avatar from 'cozy-ui/transpiled/react/Avatar';
 
 <MuiCozyTheme>
   <p>
-    <Badge
+    <InfosBadge
       badgeContent={
         <Badge color="error" variant="dot" size="small">
-          <Icon icon="folder" size="16" />
+          <Icon icon="link" size="10" />
         </Badge>
       }
-      color="primary"
-      variant="ghost">
-        <Avatar text="CD" size="small" />
-    </Badge>
+    >
+      <Avatar text="CD" size="small" />
+    </InfosBadge>
   </p>
 </MuiCozyTheme>
 ```

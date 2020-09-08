@@ -183,31 +183,18 @@ exports[`Avatar should render examples: Avatar 4`] = `
 exports[`Badge should render examples: Badge 1`] = `
 "<div>
   <div class=\\"u-m-1\\">error: <input class=\\"u-mr-1\\" type=\\"checkbox\\">dot: <input class=\\"u-mr-1\\" type=\\"checkbox\\">large: <input class=\\"u-mr-1\\" type=\\"checkbox\\">small: <input class=\\"u-mr-1\\" type=\\"checkbox\\"></div>
-  <p><span class=\\"MuiBadge-root-14\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"24\\" height=\\"24\\"><use xlink:href=\\"#circle-filled\\"></use></svg><span class=\\"MuiBadge-badge-15 Component-top-1 Component-right-4 Component-medium-6 MuiBadge-colorPrimary-16 Component-colorPrimary-8\\">4</span></span></p>
+  <p><span class=\\"MuiBadge-root-12\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"24\\" height=\\"24\\"><use xlink:href=\\"#circle-filled\\"></use></svg><span class=\\"MuiBadge-badge-13 Component-top-1 Component-right-4 Component-medium-6 MuiBadge-colorPrimary-14 Component-colorPrimary-8\\">4</span></span></p>
   <div class=\\"u-m-1\\">error: <input class=\\"u-mr-1\\" type=\\"checkbox\\" checked=\\"\\">dot: <input class=\\"u-mr-1\\" type=\\"checkbox\\" checked=\\"\\">large: <input class=\\"u-mr-1\\" type=\\"checkbox\\">small: <input class=\\"u-mr-1\\" type=\\"checkbox\\"></div>
-  <p><span class=\\"MuiBadge-root-14\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"24\\" height=\\"24\\"><use xlink:href=\\"#circle-filled\\"></use></svg><span class=\\"MuiBadge-badge-15 Component-top-1 Component-right-4 Component-medium-6 MuiBadge-colorError-18 Component-colorError-10 MuiBadge-dot-20 Component-dot-11\\"></span></span></p>
+  <p><span class=\\"MuiBadge-root-12\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"24\\" height=\\"24\\"><use xlink:href=\\"#circle-filled\\"></use></svg><span class=\\"MuiBadge-badge-13 Component-top-1 Component-right-4 Component-medium-6 MuiBadge-colorError-16 Component-colorError-10 MuiBadge-dot-18 Component-dot-11\\"></span></span></p>
   <div class=\\"u-m-1\\">error: <input class=\\"u-mr-1\\" type=\\"checkbox\\">dot: <input class=\\"u-mr-1\\" type=\\"checkbox\\">large: <input class=\\"u-mr-1\\" type=\\"checkbox\\">small: <input class=\\"u-mr-1\\" type=\\"checkbox\\"></div>
-  <p><span class=\\"MuiBadge-root-14\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"24\\" height=\\"24\\"><use xlink:href=\\"#circle-filled\\"></use></svg><span class=\\"MuiBadge-badge-15 Component-top-1 Component-right-4 Component-medium-6 MuiBadge-colorPrimary-16 Component-colorPrimary-8\\">4</span></span></p>
+  <p><span class=\\"MuiBadge-root-12\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"24\\" height=\\"24\\"><use xlink:href=\\"#circle-filled\\"></use></svg><span class=\\"MuiBadge-badge-13 Component-top-1 Component-right-4 Component-medium-6 MuiBadge-colorPrimary-14 Component-colorPrimary-8\\">4</span></span></p>
 </div>"
 `;
 
 exports[`Badge should render examples: Badge 2`] = `
 "<div>
-  <p><span class=\\"MuiBadge-root-14\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"32\\" height=\\"32\\"><use xlink:href=\\"#circle-filled\\"></use></svg><span class=\\"MuiBadge-badge-15 Component-bottom-2 Component-right-4 Component-qualifier-12 MuiBadge-colorPrimary-16 Component-colorPrimary-8\\"><svg class=\\"styles__icon___23x3R\\" width=\\"10\\" height=\\"10\\"><use xlink:href=\\"#link\\"></use></svg></span></span></p>
-</div>"
-`;
-
-exports[`Badge should render examples: Badge 3`] = `
-"<div>
-  <p><span class=\\"MuiBadge-root-14\\"><div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span>
-</div><span class=\\"MuiBadge-badge-15 Component-bottom-2 Component-right-4 Component-ghost-13 MuiBadge-colorPrimary-16 Component-colorPrimary-8\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#folder\\"></use></svg></span></span></p>
-</div>"
-`;
-
-exports[`Badge should render examples: Badge 4`] = `
-"<div>
-  <p><span class=\\"MuiBadge-root-14\\"><div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span>
-</div><span class=\\"MuiBadge-badge-15 Component-bottom-2 Component-right-4 Component-ghost-13 MuiBadge-colorPrimary-16 Component-colorPrimary-8\\"><span class=\\"MuiBadge-root-14\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#folder\\"></use></svg><span class=\\"MuiBadge-badge-15 Component-top-1 Component-right-4 Component-small-7 MuiBadge-colorError-18 Component-colorError-10 MuiBadge-dot-20 Component-dot-11\\"></span></span></span></span></p>
+  <p><span class=\\"MuiBadge-root-12\\"><div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span>
+</div><span class=\\"MuiBadge-badge-13 undefined Component-qualifier-19 Component-bottom-2 Component-right-4 Component-medium-6\\"><span class=\\"MuiBadge-root-12\\"><svg class=\\"styles__icon___23x3R\\" width=\\"10\\" height=\\"10\\"><use xlink:href=\\"#link\\"></use></svg><span class=\\"MuiBadge-badge-13 Component-top-1 Component-right-4 Component-small-7 MuiBadge-colorError-16 Component-colorError-10 MuiBadge-dot-18 Component-dot-11\\"></span></span></span></span></p>
 </div>"
 `;
 
@@ -447,7 +434,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
   <div style=\\"height: 500px; overflow-y: scroll;\\">
     <ol class=\\"styles__list-contact___8ztoP\\">
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">EMPTY</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">EMPTY</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"013a6414-9727-4a4e-8b35-d3b9946a17c6\\">
@@ -463,7 +450,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">A</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">A</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"013a6413-9726-4a4d-8b34-d3b9946a17c5\\">
@@ -479,7 +466,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">B</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">B</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"799b0f99-3ad7-4f07-a689-9765b4e239c9\\">
@@ -572,7 +559,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">C</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">C</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"507fcc3d-1423-46da-b5f9-8fbcfd3f3fe4\\">
@@ -621,7 +608,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">F</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">F</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"7acdab81-52cb-46f6-9e81-42032e9843ae\\">
@@ -648,7 +635,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">G</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">G</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"8ba82505-25c3-4821-88df-2e11becc21e8\\">
@@ -664,7 +651,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">H</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">H</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"307c4e16-70b8-4328-af1c-1d762f788e16\\">
@@ -713,7 +700,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">J</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">J</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"3e540ae7-4605-4f05-82c9-8cb901a0c34d\\">
@@ -729,7 +716,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">K</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">K</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"366f3eec-aaa0-4c82-9f27-80ad305ecec8\\">
@@ -767,7 +754,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">L</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">L</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"3fe82c80-9da3-4a42-bab5-8274df1316e6\\">
@@ -816,7 +803,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">M</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">M</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"d50b7eea-6e71-4348-ad75-fc791d7a82d4\\">
@@ -887,7 +874,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">N</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">N</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"627ba975-1314-4813-8366-cea7ac4734bf\\">
@@ -903,7 +890,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">O</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">O</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"3f6007f9-9284-4bfd-9350-1cbf294bd39b\\">
@@ -919,7 +906,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">P</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">P</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"53c75e29-5c9b-4c4f-b802-e4a152551b23\\">
@@ -968,7 +955,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">R</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">R</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"c55c831a-9869-4e14-b3aa-d004bced41b0\\">
@@ -995,7 +982,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">S</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">S</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"814f6f67-bcc0-498f-bb91-cab5ed315a12\\">
@@ -1066,7 +1053,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">T</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">T</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"0ea42f4a-28f1-432e-934a-68f9c50fe38e\\">
@@ -1115,7 +1102,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">V</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">V</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"23d3d724-d869-4def-841f-c85b499aa6a6\\">
@@ -1153,7 +1140,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">W</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">W</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"b6f5fc43-4199-4cca-8372-d1fe4e75a168\\">
@@ -1224,7 +1211,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">X</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">X</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD\\" id=\\"71967809-8e54-4413-aa8e-35b2b945e816\\">
@@ -1250,7 +1237,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
   <div style=\\"height: 500px; overflow-y: scroll;\\">
     <ol class=\\"styles__list-contact___8ztoP\\">
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">EMPTY</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">EMPTY</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"013a6414-9727-4a4e-8b35-d3b9946a17c6\\">
@@ -1266,7 +1253,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">A</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">A</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"013a6413-9726-4a4d-8b34-d3b9946a17c5\\">
@@ -1282,7 +1269,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">B</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">B</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"799b0f99-3ad7-4f07-a689-9765b4e239c9\\">
@@ -1375,7 +1362,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">C</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">C</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"507fcc3d-1423-46da-b5f9-8fbcfd3f3fe4\\">
@@ -1424,7 +1411,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">F</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">F</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"7acdab81-52cb-46f6-9e81-42032e9843ae\\">
@@ -1451,7 +1438,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">G</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">G</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"8ba82505-25c3-4821-88df-2e11becc21e8\\">
@@ -1467,7 +1454,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">H</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">H</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"307c4e16-70b8-4328-af1c-1d762f788e16\\">
@@ -1516,7 +1503,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">J</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">J</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"3e540ae7-4605-4f05-82c9-8cb901a0c34d\\">
@@ -1532,7 +1519,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">K</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">K</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"366f3eec-aaa0-4c82-9f27-80ad305ecec8\\">
@@ -1570,7 +1557,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">L</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">L</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"3fe82c80-9da3-4a42-bab5-8274df1316e6\\">
@@ -1619,7 +1606,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">M</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">M</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"d50b7eea-6e71-4348-ad75-fc791d7a82d4\\">
@@ -1690,7 +1677,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">N</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">N</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"627ba975-1314-4813-8366-cea7ac4734bf\\">
@@ -1706,7 +1693,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">O</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">O</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"3f6007f9-9284-4bfd-9350-1cbf294bd39b\\">
@@ -1722,7 +1709,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">P</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">P</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"53c75e29-5c9b-4c4f-b802-e4a152551b23\\">
@@ -1771,7 +1758,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">R</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">R</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"c55c831a-9869-4e14-b3aa-d004bced41b0\\">
@@ -1798,7 +1785,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">S</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">S</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"814f6f67-bcc0-498f-bb91-cab5ed315a12\\">
@@ -1869,7 +1856,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">T</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">T</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"0ea42f4a-28f1-432e-934a-68f9c50fe38e\\">
@@ -1918,7 +1905,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">V</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">V</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"23d3d724-d869-4def-841f-c85b499aa6a6\\">
@@ -1956,7 +1943,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">W</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">W</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"b6f5fc43-4199-4cca-8372-d1fe4e75a168\\">
@@ -2027,7 +2014,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </ol>
       </li>
       <li>
-      <li class=\\"MuiListSubheader-root-21 MuiListSubheader-sticky-26 MuiListSubheader-gutters-24\\">X</li>
+      <li class=\\"MuiListSubheader-root-20 MuiListSubheader-sticky-25 MuiListSubheader-gutters-23\\">X</li>
       <ol class=\\"styles__sublist-contact___NBitx\\">
         <li>
           <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"71967809-8e54-4413-aa8e-35b2b945e816\\">
@@ -5556,19 +5543,19 @@ exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Primary</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-81\\"><span class=\\"MuiButtonBase-root-100 MuiIconButton-root-94 MuiPrivateSwitchBase-root-90 MuiSwitch-switchBase-84 MuiSwitch-colorPrimary-86 MuiPrivateSwitchBase-checked-91 MuiSwitch-checked-85\\"><span class=\\"MuiIconButton-label-99\\"><span class=\\"MuiSwitch-icon-82 MuiSwitch-iconChecked-83\\"></span><input class=\\"MuiPrivateSwitchBase-input-93\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-125\\"></span></span><span class=\\"MuiSwitch-bar-89\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-80\\"><span class=\\"MuiButtonBase-root-99 MuiIconButton-root-93 MuiPrivateSwitchBase-root-89 MuiSwitch-switchBase-83 MuiSwitch-colorPrimary-85 MuiPrivateSwitchBase-checked-90 MuiSwitch-checked-84\\"><span class=\\"MuiIconButton-label-98\\"><span class=\\"MuiSwitch-icon-81 MuiSwitch-iconChecked-82\\"></span><input class=\\"MuiPrivateSwitchBase-input-92\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-124\\"></span></span><span class=\\"MuiSwitch-bar-88\\"></span></span></div>
       </div>
       <div class=\\"styles__media___cSJMp\\">
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Secondary</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-81\\"><span class=\\"MuiButtonBase-root-100 MuiIconButton-root-94 MuiPrivateSwitchBase-root-90 MuiSwitch-switchBase-84 MuiSwitch-colorSecondary-87 MuiPrivateSwitchBase-checked-91 MuiSwitch-checked-85\\"><span class=\\"MuiIconButton-label-99\\"><span class=\\"MuiSwitch-icon-82 MuiSwitch-iconChecked-83\\"></span><input class=\\"MuiPrivateSwitchBase-input-93\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-125\\"></span></span><span class=\\"MuiSwitch-bar-89\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-80\\"><span class=\\"MuiButtonBase-root-99 MuiIconButton-root-93 MuiPrivateSwitchBase-root-89 MuiSwitch-switchBase-83 MuiSwitch-colorSecondary-86 MuiPrivateSwitchBase-checked-90 MuiSwitch-checked-84\\"><span class=\\"MuiIconButton-label-98\\"><span class=\\"MuiSwitch-icon-81 MuiSwitch-iconChecked-82\\"></span><input class=\\"MuiPrivateSwitchBase-input-92\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-124\\"></span></span><span class=\\"MuiSwitch-bar-88\\"></span></span></div>
       </div>
       <div class=\\"styles__media___cSJMp\\">
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Disabled</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-81\\"><span class=\\"MuiButtonBase-root-100 MuiButtonBase-disabled-101 MuiIconButton-root-94 MuiIconButton-disabled-98 MuiPrivateSwitchBase-root-90 MuiSwitch-switchBase-84 MuiSwitch-colorSecondary-87 MuiPrivateSwitchBase-disabled-92 MuiSwitch-disabled-88\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-99\\"><span class=\\"MuiSwitch-icon-82\\"></span><input class=\\"MuiPrivateSwitchBase-input-93\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-89\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-80\\"><span class=\\"MuiButtonBase-root-99 MuiButtonBase-disabled-100 MuiIconButton-root-93 MuiIconButton-disabled-97 MuiPrivateSwitchBase-root-89 MuiSwitch-switchBase-83 MuiSwitch-colorSecondary-86 MuiPrivateSwitchBase-disabled-91 MuiSwitch-disabled-87\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-98\\"><span class=\\"MuiSwitch-icon-81\\"></span><input class=\\"MuiPrivateSwitchBase-input-92\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-88\\"></span></span></div>
       </div>
     </div>
     <div class=\\"u-title-h2 u-mt-1\\">Inverted theme</div>
@@ -5577,19 +5564,19 @@ exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Primary</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-103\\"><span class=\\"MuiButtonBase-root-122 MuiIconButton-root-116 MuiPrivateSwitchBase-root-112 MuiSwitch-switchBase-106 MuiSwitch-colorPrimary-108 MuiPrivateSwitchBase-checked-113 MuiSwitch-checked-107\\"><span class=\\"MuiIconButton-label-121\\"><span class=\\"MuiSwitch-icon-104 MuiSwitch-iconChecked-105\\"></span><input class=\\"MuiPrivateSwitchBase-input-115\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-132\\"></span></span><span class=\\"MuiSwitch-bar-111\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-102\\"><span class=\\"MuiButtonBase-root-121 MuiIconButton-root-115 MuiPrivateSwitchBase-root-111 MuiSwitch-switchBase-105 MuiSwitch-colorPrimary-107 MuiPrivateSwitchBase-checked-112 MuiSwitch-checked-106\\"><span class=\\"MuiIconButton-label-120\\"><span class=\\"MuiSwitch-icon-103 MuiSwitch-iconChecked-104\\"></span><input class=\\"MuiPrivateSwitchBase-input-114\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-131\\"></span></span><span class=\\"MuiSwitch-bar-110\\"></span></span></div>
       </div>
       <div class=\\"styles__media___cSJMp\\">
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Secondary</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-103\\"><span class=\\"MuiButtonBase-root-122 MuiIconButton-root-116 MuiPrivateSwitchBase-root-112 MuiSwitch-switchBase-106 MuiSwitch-colorSecondary-109 MuiPrivateSwitchBase-checked-113 MuiSwitch-checked-107\\"><span class=\\"MuiIconButton-label-121\\"><span class=\\"MuiSwitch-icon-104 MuiSwitch-iconChecked-105\\"></span><input class=\\"MuiPrivateSwitchBase-input-115\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-132\\"></span></span><span class=\\"MuiSwitch-bar-111\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-102\\"><span class=\\"MuiButtonBase-root-121 MuiIconButton-root-115 MuiPrivateSwitchBase-root-111 MuiSwitch-switchBase-105 MuiSwitch-colorSecondary-108 MuiPrivateSwitchBase-checked-112 MuiSwitch-checked-106\\"><span class=\\"MuiIconButton-label-120\\"><span class=\\"MuiSwitch-icon-103 MuiSwitch-iconChecked-104\\"></span><input class=\\"MuiPrivateSwitchBase-input-114\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-131\\"></span></span><span class=\\"MuiSwitch-bar-110\\"></span></span></div>
       </div>
       <div class=\\"styles__media___cSJMp\\">
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Disabled</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-103\\"><span class=\\"MuiButtonBase-root-122 MuiButtonBase-disabled-123 MuiIconButton-root-116 MuiIconButton-disabled-120 MuiPrivateSwitchBase-root-112 MuiSwitch-switchBase-106 MuiSwitch-colorSecondary-109 MuiPrivateSwitchBase-disabled-114 MuiSwitch-disabled-110\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-121\\"><span class=\\"MuiSwitch-icon-104\\"></span><input class=\\"MuiPrivateSwitchBase-input-115\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-111\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-102\\"><span class=\\"MuiButtonBase-root-121 MuiButtonBase-disabled-122 MuiIconButton-root-115 MuiIconButton-disabled-119 MuiPrivateSwitchBase-root-111 MuiSwitch-switchBase-105 MuiSwitch-colorSecondary-108 MuiPrivateSwitchBase-disabled-113 MuiSwitch-disabled-109\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-120\\"><span class=\\"MuiSwitch-icon-103\\"></span><input class=\\"MuiPrivateSwitchBase-input-114\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-110\\"></span></span></div>
       </div>
     </div>
   </div>
