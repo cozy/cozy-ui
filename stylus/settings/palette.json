@@ -37,5 +37,11 @@
   "weirdGreen": "var(--weirdGreen)",
   "primaryColor": "var(--primaryColor)",
   "primaryColorLight": "var(--primaryColorLight)",
-  "primaryContrastTextColor": "var(--primaryContrastTextColor)"
+  "primaryContrastTextColor": "var(--primaryContrastTextColor)",
+  "valid": "var(--validColor)",
+  "warn": "var(--warnColor)",
+  "error": "var(--errorColor)",
+  "errorBackgroundLight": "var(--errorBackgroundLight)",
+  "primaryBackgroundLight": "var(--primaryBackgroundLight)",
+  "neutralBackground": "var(--neutralBackground)"
 }
