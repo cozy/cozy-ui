@@ -7,16 +7,3 @@ for color in keys(colors)
         background-color: colors[color] !important // @stylint ignore
 
     global('.u-bg-' + color, '$bg-color-' + color)
-
-$bg-primary-light
-    background-color: var(--primaryColorLightBackground) !important // @stylint ignore
-
-$bg-error-light
-    background-color: var(--errorLightBackground) !important // @stylint ignore
-
-$bg-neutral
-    background-color: var(--neutralBackground) !important // @stylint ignore
-
-global('.u-bg-primary-light', $bg-primary-light)
-global('.u-bg-error-light', $bg-error-light)
-global('.u-bg-neutral', $bg-neutral)
