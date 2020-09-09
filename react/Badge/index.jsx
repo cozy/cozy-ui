@@ -114,12 +114,12 @@ const Badge = withStyles(customStyles)(
 
 Badge.propTypes = {
   anchorOrigin: PropTypes.shape({
-    horizontal: PropTypes.oneOf('left', 'right'),
-    vertical: PropTypes.oneOf('bottom', 'top')
+    horizontal: PropTypes.oneOf(['left', 'right']),
+    vertical: PropTypes.oneOf(['bottom', 'top'])
   }),
-  size: PropTypes.oneOf('small', 'medium', 'large'),
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
   showZero: PropTypes.bool,
-  variant: PropTypes.oneOf('standard', 'dot')
+  variant: PropTypes.oneOf(['standard', 'dot'])
 }
 
 Badge.defaultProps = {
