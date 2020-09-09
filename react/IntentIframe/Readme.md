@@ -1,5 +1,5 @@
 The IntentIframe is the basic and minimal component to open an intent.
-See [the documentation]() for more information about intents.
+See [the documentation](https://docs.cozy.io/en/cozy-stack/intents/) for more information about intents.
 
 Example:
 
