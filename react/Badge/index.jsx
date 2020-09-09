@@ -13,6 +13,8 @@ const MEDIUM_DOT = '.75rem'
 const SMALL_DOT = '.625rem'
 
 const customStyles = theme => ({
+  badge: {},
+  root: {},
   top: {
     top: '16%'
   },
@@ -102,9 +104,9 @@ const Badge = withStyles(customStyles)(
             badge,
             verticalClasses[anchorOrigin.vertical],
             horizontalClasses[anchorOrigin.horizontal],
-            sizeClasses[size],
-            customClasses
-          )
+            sizeClasses[size]
+          ),
+          ...customClasses
         }}
         {...props}
       />
