@@ -8,6 +8,8 @@ global.shallow = shallow
 
 const isDeprecatedLifecycleWarning = (msg, componentName) => {
   return (
+    msg &&
+    msg.includes &&
     msg.includes('has been renamed, and is not recommended for use') &&
     msg.includes(componentName)
   )
@@ -45,7 +47,11 @@ const ignoredWarnings = {
   },
   ModalAriaLabel: {
     reason: 'Dont know',
-    matcher: msg => msg.includes('aria-label') && msg.includes('If your modal')
+    matcher: msg =>
+      msg &&
+      msg.includes &&
+      msg.includes('aria-label') &&
+      msg.includes('If your modal')
   }
 }
 

@@ -24,6 +24,9 @@ mockClient.__proto__.requestQuery = ({ doctype }) => {
           _type: 'io.cozy.apps',
           attributes: {
             slug: 'contacts'
+          },
+          links: {
+            related: 'http://contacts.cozy.tools:8080/'
           }
         }
       ]

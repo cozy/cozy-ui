@@ -18,8 +18,8 @@ const ContactsList = props => {
     <ol className={cx(styles['list-contact'], className)} {...rest}>
       {sortedHeaders.map(header => (
         <li key={header}>
-          <ListSubheader>{header}</ListSubheader>
           <ol className={styles['sublist-contact']}>
+            <ListSubheader>{header}</ListSubheader>
             {categorizedContacts[header].map(contact => (
               <li key={contact._id}>
                 <ContactRow

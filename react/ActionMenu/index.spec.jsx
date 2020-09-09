@@ -1,11 +1,35 @@
 import React from 'react'
 import { mount } from 'enzyme'
-
+import { act } from 'react-dom/test-utils'
 import ActionMenu, { ActionMenuItem } from './'
 import { fixPopperTesting } from '../Popper/testing'
 
 describe('ActionMenu', () => {
   fixPopperTesting()
+
+  // The update-not-wrapping-in-act warning is disabled for ActionMenuWrapper since
+  // we have not found how to remove the "update" happening when mounting the
+  // ActionMenu.
+  let originalConsoleError = console.error
+
+  beforeEach(() => {
+    // eslint-disable-next-line no-console
+    console.error = function(msg, arg) {
+      if (
+        msg.includes('An update to %s inside a test was not wrapped in act') &&
+        arg == 'ActionMenuWrapper'
+      ) {
+        return
+      } else {
+        return originalConsoleError.apply(this, arguments)
+      }
+    }
+  })
+
+  afterEach(() => {
+    // eslint-disable-next-line no-console
+    console.error = originalConsoleError
+  })
 
   it('should support null children', () => {
     const comp = mount(
@@ -40,16 +64,21 @@ describe('ActionMenu', () => {
       </ActionMenu>
     )
 
-    comp
-      .find(ActionMenuItem)
-      .at(1)
-      .simulate('click')
+    act(() => {
+      comp
+        .find(ActionMenuItem)
+        .at(1)
+        .simulate('click')
+    })
     expect(menuAction2).toHaveBeenCalled()
     expect(closeMenu).not.toHaveBeenCalled()
-    comp
-      .find(ActionMenuItem)
-      .at(0)
-      .simulate('click')
+
+    act(() => {
+      comp
+        .find(ActionMenuItem)
+        .at(0)
+        .simulate('click')
+    })
     expect(menuAction1).toHaveBeenCalled()
     expect(closeMenu).toHaveBeenCalled()
   })

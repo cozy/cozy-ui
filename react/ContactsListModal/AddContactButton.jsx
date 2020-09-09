@@ -32,6 +32,10 @@ const DumbAddContactButton = props => {
 
   useEventListener(document, 'resume', apps.fetch)
 
+  if (apps.fetchStatus === 'loading') {
+    return null
+  }
+
   return (
     <AppLinker
       slug={installedApp ? installedApp.attributes.slug : 'store'}
