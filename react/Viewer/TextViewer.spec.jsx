@@ -3,8 +3,17 @@ import { shallow } from 'enzyme'
 import { TextViewer, isMarkdown } from './TextViewer'
 import { createMockClient } from 'cozy-client'
 import renderer from 'react-test-renderer'
+
+const client = createMockClient({})
+
+const mockFetch = responseText => async () => ({
+  text: async () => responseText
+})
+
+client.stackClient.fetch = mockFetch('Text')
+
 const props = {
-  client: createMockClient({}),
+  client,
   url: 'https://foo.mycozy.cloud',
   file: {
     _id: '1',
