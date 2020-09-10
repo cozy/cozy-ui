@@ -7,11 +7,10 @@ import Dialog from 'cozy-ui/transpiled/react/Dialog'
 import DialogTitle from 'cozy-ui/transpiled/react/Dialog/DialogTitle'
 import DialogActions from 'cozy-ui/transpiled/react/Dialog/DialogActions'
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
-
-import DialogContent from 'cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogContent'
-import DialogContentText from 'cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogContentText'
+import DialogContent from 'cozy-ui/transpiled/react/Dialog/DialogContent'
+import DialogContentText from 'cozy-ui/transpiled/react/Dialog/DialogContentText'
+import DialogCloseButton from 'cozy-ui/transpiled/react/Dialog/DialogCloseButton'
 import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
-import DialogCloseButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogCloseButton'
 import Button from 'cozy-ui/transpiled/react/Button'
 
 const onClose = () => setState({ modalOpened: !state.modalOpened })
@@ -61,10 +60,9 @@ import Dialog from 'cozy-ui/transpiled/react/Dialog'
 import DialogTitle from 'cozy-ui/transpiled/react/Dialog/DialogTitle'
 import DialogActions from 'cozy-ui/transpiled/react/Dialog/DialogActions'
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
-
-import DialogContent from 'cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogContent'
-import DialogContentText from 'cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogContentText'
-import DialogCloseButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogCloseButton'
+import DialogContent from 'cozy-ui/transpiled/react/Dialog/DialogContent'
+import DialogContentText from 'cozy-ui/transpiled/react/Dialog/DialogContentText'
+import DialogCloseButton from 'cozy-ui/transpiled/react/Dialog/DialogCloseButton'
 import Button from 'cozy-ui/transpiled/react/Button'
 const onClose = () => setState({ modalOpened: !state.modalOpened })
 
