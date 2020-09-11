@@ -32,3 +32,9 @@ Dialog.propTypes = {
 }
 
 export default withMobileDialog()(Dialog)
+
+export { default as DialogActions } from './DialogActions'
+export { default as DialogCloseButton } from './DialogCloseButton'
+export { default as DialogContent } from './DialogContent'
+export { default as DialogContentText } from './DialogContentText'
+export { default as DialogTitle } from './DialogTitle'
