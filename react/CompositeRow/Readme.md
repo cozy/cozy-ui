@@ -94,3 +94,5 @@ const initialVariants = [
     />
   )
 }</Variants>
+
+```

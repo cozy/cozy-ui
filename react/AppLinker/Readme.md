@@ -7,9 +7,9 @@ be opened.
 
 Handles several cases:
 
-- On mobile app and other mobile app available
-- On web (not mobile)
-- On web mobile
+* On mobile app and other mobile app available
+* On web (not mobile)
+* On web mobile
 
 As it uses the render props pattern, it is flexible and can be used to build components that are more complex than a simple
 anchor.

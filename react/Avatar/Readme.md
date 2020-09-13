@@ -8,6 +8,7 @@ import Avatar from 'cozy-ui/transpiled/react/Avatar';
 ```
 
 ### with initials only
+
 #### with name
 
 ```

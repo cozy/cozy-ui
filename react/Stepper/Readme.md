@@ -1,6 +1,6 @@
 Steppers convey progress through numbered steps. They provide a wizard-like workflows.
 
-See https://material-ui.com/components/steppers/ for more information.
+See <https://material-ui.com/components/steppers/> for more information.
 
 ```
 import MuiCozyTheme from '../MuiCozyTheme';

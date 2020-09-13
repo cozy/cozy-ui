@@ -1,4 +1,5 @@
 ## Push Client Banner
+
 Banner to advertise for Cozy desktop client.
 
 ### Basic usage
@@ -15,8 +16,11 @@ import BannerClient from 'cozy-ui/transpiled/react/PushClientBanner';
 ```
 
 ### Options
+
 #### action
+
 You can add a function to `onClick` prop on top of the hyperlink
+
 ```
 import BannerClient from 'cozy-ui/transpiled/react/PushClientBanner';
 <BannerClient

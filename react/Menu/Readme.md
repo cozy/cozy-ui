@@ -99,7 +99,7 @@ const showItem = item => {
 
 `ActionMenu` relies on the Material-UI (Popover)[https://v3.material-ui.com/utils/popper/] component to handle both `position` and `popover`.
 
-- `position='left'` is now `placement='bottom-start'`, and is still the default behavior.
-- `position='right'` is now `placement='bottom-end'`.
-- All other Popover.js placement options are also supported
-- The Menu `popover` prop is now called `preventOverflow`
+* `position='left'` is now `placement='bottom-start'`, and is still the default behavior.
+* `position='right'` is now `placement='bottom-end'`.
+* All other Popover.js placement options are also supported
+* The Menu `popover` prop is now called `preventOverflow`

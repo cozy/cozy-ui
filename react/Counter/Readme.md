@@ -1,4 +1,4 @@
-A simple way to show how many *things* there are.
+A simple way to show how many _things_ there are.
 
 ### Default
 
