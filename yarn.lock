@@ -1348,12 +1348,12 @@
   dependencies:
     find-up "^2.1.0"
 
-"@cozy/codemods@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@cozy/codemods/-/codemods-1.1.0.tgz#f68af27506ed80d24afb12fc5d5c57ee1b333cc7"
-  integrity sha512-kgbqyjUs3Ub/N4e9OqqKoE4KA8IwPmz+bOho6z6wYGQqe/xCo54/XQ1YOjWTRn/rKXVKOhkz9R2/v7Udh2Tjaw==
+"@cozy/codemods@1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@cozy/codemods/-/codemods-1.2.0.tgz#eb6c45791c8926d65f848f846f05d38d11118260"
+  integrity sha512-qjz9xJ5uUS0oJspbHlZvesw2KuoUGLBsuhUBMjO38hHEKsDG4kjvtUOsj0p3FA83sjp+rWPqPHWB114Ywf4ouQ==
   dependencies:
-    eslint-config-cozy-app "^1.5.0"
+    eslint-config-cozy-app "^1.6.0"
 
 "@emotion/cache@^10.0.9":
   version "10.0.9"
@@ -6018,10 +6018,10 @@ eslint-config-cozy-app@0.5.1:
     eslint-plugin-react "^7.7.0"
     prettier "^1.11.1"
 
-eslint-config-cozy-app@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-cozy-app/-/eslint-config-cozy-app-1.5.0.tgz#a68addd27286984d808304f4cdac95ef8757aa8c"
-  integrity sha512-3iHvM5b77w2Xl9ZnbRvRVmfOaKJt6JmNGkNbOQTqihLesehlX9C6ax4XueEIBfwvJVP/P1b8OAuXOcr+5pi07Q==
+eslint-config-cozy-app@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-cozy-app/-/eslint-config-cozy-app-1.6.0.tgz#68b4c24adb341c445dc44825255fe3f2ae3e8fc0"
+  integrity sha512-5Cc9Vdp7KR/McWEeG/9Git+zN525/2YbI9AUzXlPjNPHTLo/5yYIFyWWDk2OAvuKCKt7kJ4xFyADWB3q/Y2rwg==
   dependencies:
     babel-eslint "10.0.1"
     eslint "5.16.0"
