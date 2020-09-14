@@ -1,18 +1,16 @@
-## Experimental Dialog
+## Dialog
 
 ### With default Actions (mobile and desktop)
 
 ```jsx
-import ExperimentalDialog, {
-  ExperimentalDialogTitle,
-  ExperimentalDialogActions
-} from './index'
+import Dialog from 'cozy-ui/transpiled/react/Dialog'
+import DialogTitle from 'cozy-ui/transpiled/react/Dialog/DialogTitle'
+import DialogActions from 'cozy-ui/transpiled/react/Dialog/DialogActions'
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
-
-import DialogContent from 'cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogContent'
-import DialogContentText from 'cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogContentText'
+import DialogContent from 'cozy-ui/transpiled/react/Dialog/DialogContent'
+import DialogContentText from 'cozy-ui/transpiled/react/Dialog/DialogContentText'
+import DialogCloseButton from 'cozy-ui/transpiled/react/Dialog/DialogCloseButton'
 import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
-import DialogCloseButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogCloseButton'
 import Button from 'cozy-ui/transpiled/react/Button'
 
 const onClose = () => setState({ modalOpened: !state.modalOpened })
@@ -23,9 +21,9 @@ initialState = { modalOpened: isTesting() }
     Toggle modal
   </button>
   <MuiCozyTheme>
-    <ExperimentalDialog open={state.modalOpened} onClose={() => onClose()}>
+    <Dialog open={state.modalOpened} onClose={() => onClose()}>
       <DialogCloseButton onClick={() => onClose()} />
-      <ExperimentalDialogTitle>Ada Lovelace</ExperimentalDialogTitle>
+      <DialogTitle>Ada Lovelace</DialogTitle>
       <Divider />
       <DialogContent>
         Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815
@@ -38,7 +36,7 @@ initialState = { modalOpened: isTesting() }
         the full potential of a "computing machine" and the first computer
         programmer.
       </DialogContent>
-      <ExperimentalDialogActions>
+      <DialogActions>
         <Button
           theme="secondary"
           onClick={() => onClose()}
@@ -49,8 +47,8 @@ initialState = { modalOpened: isTesting() }
           label={'Touch Me'}
           onClick={() => alert('click')}
         />
-      </ExperimentalDialogActions>
-    </ExperimentalDialog>
+      </DialogActions>
+    </Dialog>
   </MuiCozyTheme>
 </>
 ```
@@ -58,15 +56,13 @@ initialState = { modalOpened: isTesting() }
 ### With "below" Actions (mobile)
 
 ```jsx
-import ExperimentalDialog, {
-  ExperimentalDialogTitle,
-  ExperimentalDialogActions
-} from './index'
+import Dialog from 'cozy-ui/transpiled/react/Dialog'
+import DialogTitle from 'cozy-ui/transpiled/react/Dialog/DialogTitle'
+import DialogActions from 'cozy-ui/transpiled/react/Dialog/DialogActions'
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
-
-import DialogContent from 'cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogContent'
-import DialogContentText from 'cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogContentText'
-import DialogCloseButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogCloseButton'
+import DialogContent from 'cozy-ui/transpiled/react/Dialog/DialogContent'
+import DialogContentText from 'cozy-ui/transpiled/react/Dialog/DialogContentText'
+import DialogCloseButton from 'cozy-ui/transpiled/react/Dialog/DialogCloseButton'
 import Button from 'cozy-ui/transpiled/react/Button'
 const onClose = () => setState({ modalOpened: !state.modalOpened })
 
@@ -76,9 +72,9 @@ initialState = { modalOpened: isTesting() }
     Toggle modal
   </button>
   <MuiCozyTheme>
-    <ExperimentalDialog open={state.modalOpened} onClose={() => onClose()}>
+    <Dialog open={state.modalOpened} onClose={() => onClose()}>
       <DialogCloseButton onClick={() => onClose()} />
-      <ExperimentalDialogTitle>Ada Lovelace</ExperimentalDialogTitle>
+      <DialogTitle>Ada Lovelace</DialogTitle>
       <DialogContent>
         Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815
         – 27 November 1852) was an English mathematician and writer, chiefly
@@ -90,7 +86,7 @@ initialState = { modalOpened: isTesting() }
         the full potential of a "computing machine" and the first computer
         programmer.
       </DialogContent>
-      <ExperimentalDialogActions layout="row">
+      <DialogActions layout="row">
         <Button
           theme="secondary"
           onClick={() => onClose()}
@@ -101,12 +97,12 @@ initialState = { modalOpened: isTesting() }
           label={'Touch Me'}
           onClick={() => alert('click')}
         />
-      </ExperimentalDialogActions>
-    </ExperimentalDialog>
+      </DialogActions>
+    </Dialog>
   </MuiCozyTheme>
 </>
 ```
 
-- ExperimentalDialogs have no close button, but Cozy-UI exposes `cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogCloseButton` that can be included as a child of `<ExperimentalDialog />`.
-- Use `<ExperimentalDialog scroll="body" />` to make the whole Dialog scrollable, instead of only the `DialogContent`.
-- Use [Divider components](https://v3.material-ui.com/api/divider/) when you need to materialize the separation between `ExperimentalDialogTitle`, `DialogContent` and `ExperimentalDialogActions`.
+- Dialogs have no close button, but Cozy-UI exposes `cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogCloseButton` that can be included as a child of `<Dialog />`.
+- Use `<Dialog scroll="body" />` to make the whole Dialog scrollable, instead of only the `DialogContent`.
+- Use [Divider components](https://v3.material-ui.com/api/divider/) when you need to materialize the separation between `DialogTitle`, `DialogContent` and `DialogActions`.
