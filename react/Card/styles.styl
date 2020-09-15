@@ -1,17 +1,8 @@
-@require 'settings/breakpoints'
-@require 'settings/palette'
-@require 'tools/mixins'
+@require '../../stylus/components/card'
 
-.c-card {
-    border rem(1) solid var(--silver)
-    border-radius rem(8)
-    padding rem(16)
-    text-decoration none
-    display block
-}
+.c-card
+    @extend $card
 
 .c-card--inset
-    margin rem(16 32)
+    @extend $card--inset
 
-    +small-screen()
-        margin rem(8)
