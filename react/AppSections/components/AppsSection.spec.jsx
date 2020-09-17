@@ -8,8 +8,7 @@ import { mount } from 'enzyme'
 import { CozyProvider } from 'cozy-client'
 import { I18nContext } from '../../jestLib/I18n'
 import { AppsSection } from './AppsSection'
-import Tile from '../../Tile'
-import AppTile, { AppTitle, AppStatus, AppDeveloper } from './AppTile'
+import Tile, { TileTitle, TileSubtitle, TileFooter } from '../../Tile'
 
 import mockApps from '../../mocks/apps'
 import en from '../locales/en'
@@ -42,11 +41,11 @@ describe('AppsSection component', () => {
     setup({ onAppClick: mockOnAppClick })
     expect(
       component.find(Tile).map(x => {
-        const developer = x.find(AppDeveloper)
-        const status = x.find(AppStatus)
+        const developer = x.find(TileSubtitle)
+        const status = x.find(TileFooter)
         return {
-          title: x.find(AppTitle).text(),
-          developer: developer.length ? x.find(AppDeveloper).text() : null,
+          title: x.find(TileTitle).text(),
+          developer: developer.length ? developer.text() : null,
           status: status.length ? status.text() : null
         }
       })
@@ -56,8 +55,8 @@ describe('AppsSection component', () => {
   it('should run provided onAppClick on AppTile click event', () => {
     const mockOnAppClick = jest.fn()
     setup({ onAppClick: mockOnAppClick })
-    expect(component.find(AppTile).length).toBe(mockApps.length)
-    const appItem = component.find(AppTile).at(0)
+    expect(component.find(Tile).length).toBe(mockApps.length)
+    const appItem = component.find(Tile).at(0)
     appItem.simulate('click')
     expect(mockOnAppClick.mock.calls.length).toBe(1)
     expect(mockOnAppClick.mock.calls[0][0]).toBe('konnector-bouilligue')

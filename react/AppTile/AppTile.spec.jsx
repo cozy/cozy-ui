@@ -5,10 +5,10 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import AppTile from './AppTile'
+import en from '../AppSections/locales/en.json'
+import I18n from '../I18n'
 
-import I18n from '../../I18n'
-import en from '../locales/en.json'
+import AppTile from './index'
 
 const appMock = {
   slug: 'test',

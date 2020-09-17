@@ -43,3 +43,68 @@ $tileMobileHeight = 3.75rem
   .Tile:active,
   .Tile:focus
     transform scale(1.01)
+
+.Tile-icon-wrapper
+  margin-top .25rem
+  margin-bottom .25rem
+  width 3rem
+  height 3rem
+
+.Tile-desc
+  display flex
+  flex-direction column
+  justify-content flex-start
+  align-items center
+  margin-top .5rem
+  text-align center
+  max-width 100%
+
+.Tile-title, .Tile-developer, .Tile-status
+  display block
+  margin 0
+  text-overflow ellipsis
+  white-space nowrap
+  overflow hidden
+  max-width 100%
+
+.Tile-title
+  height 1.25rem
+  color var(--black)
+
+.Tile-developer
+  height 1rem
+
+.Tile-status
+  margin-top .5rem
+  height 1rem
+  color var(--coolGrey)
+
+
++small-screen()
+  .Tile-icon-wrapper
+    margin-top 0
+    margin-bottom 0
+    max-width 2.5rem
+    max-height 2.5rem
+
+  .Tile-desc
+    margin-top .125rem
+    margin-left .5rem
+    justify-content center
+    text-align left
+    /* 4rem for icon and margins */
+    width calc(100% - 4rem)
+
+  .Tile-title
+    height 1rem
+    font-weight normal
+    font-size 12px
+
+  .Tile-title, .Tile-developer, .Tile-status
+    width 100%
+
+  .Tile-developer
+    display none
+
+  .Tile-status
+    margin-top .125rem

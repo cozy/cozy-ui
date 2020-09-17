@@ -1,12 +1,7 @@
 @require 'settings/breakpoints.styl'
 
-.AppTile-icon-wrapper
-  margin-top .25rem
-  margin-bottom .25rem
-  width 3rem
-  height 3rem
 
-.AppTile-icon-wrapper .AppTile-icon
+.AppTile-icon
   object-fit contain
   max-width 100%
   width auto
@@ -15,62 +10,3 @@
   height 100%
   padding 0 .5em
 
-.AppTile-desc
-  display flex
-  flex-direction column
-  justify-content flex-start
-  align-items center
-  margin-top .5rem
-  text-align center
-  max-width 100%
-
-.AppTile-title, .AppTile-developer, .AppTile-status
-  display block
-  margin 0
-  text-overflow ellipsis
-  white-space nowrap
-  overflow hidden
-
-.AppTile-title
-  height 1.25rem
-  color var(--black)
-
-.AppTile-developer
-  height 1rem
-
-.AppTile-status
-  margin-top .5rem
-  height 1rem
-  color var(--coolGrey)
-
-
-+small-screen()
-  .AppTile-icon-wrapper
-    margin-bottom 0
-
-  .AppTile-icon
-    height 2.5rem
-    max-width 2.5rem
-    max-height 2.5rem
-
-  .AppTile-desc
-    margin-top .125rem
-    margin-left .5rem
-    justify-content center
-    text-align left
-    /* 4rem for icon and margins */
-    width calc(100% - 4rem)
-
-  .AppTile-title
-    height 1rem
-    font-weight normal
-    font-size 12px
-
-  .AppTile-title, .AppTile-developer, .AppTile-status
-    width 100%
-
-  .AppTile-developer
-    display none
-
-  .AppTile-status
-    margin-top .125rem
