@@ -86,9 +86,9 @@ export const apps = [
   },
   {
     slug: 'konnector-trinlane',
-    name: 'Trinlane',
+    name: 'Trinlane (with a very long name)',
     icon: '<svg></svg>',
-    developer: { name: 'Cozy' },
+    developer: { name: 'Author with long name' },
     type: 'konnector',
     categories: ['transport'],
     tags: ['transport', 'files', 'bills'],
