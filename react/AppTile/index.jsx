@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import AppIcon from '../../AppIcon'
-import Tile from '../../Tile'
-import { useI18n } from '../../I18n'
-import { Caption } from '../../Text'
+import AppIcon from '../AppIcon'
+import Tile from '../Tile'
+import { useI18n } from '../I18n'
+import { Caption } from '../Text'
 
-import { getCurrentStatusLabel } from '../status'
-import { AppDoctype } from '../../proptypes'
-import styles from './AppTile.styl'
+import { getCurrentStatusLabel } from './helpers'
+import { AppDoctype } from '../proptypes'
+import styles from './styles.styl'
 let dataset
 const getDataset = () => {
   if (dataset) return dataset

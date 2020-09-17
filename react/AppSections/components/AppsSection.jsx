@@ -3,7 +3,7 @@ import { translate } from '../../I18n'
 import withBreakpoints from '../../helpers/withBreakpoints'
 import { getTranslatedManifestProperty } from '../helpers'
 import sortBy from 'lodash/sortBy'
-import AppTile from './AppTile'
+import AppTile from '../../AppTile'
 import styles from './AppsSection.styl'
 
 const makeNameGetter = t => app => getTranslatedManifestProperty(app, 'name', t)
