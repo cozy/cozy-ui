@@ -56,7 +56,8 @@
     "watch:css": "yarn build:css --watch",
     "prewatch:doc:react": "yarn sprite",
     "watch:doc:react": "env BUILD_ENV=watch-styleguidist styleguidist server --config docs/styleguide.config.js",
-    "watch:doc:kss": "nodemon --ext styl,md --watch stylus --exec 'yarn build:doc:kss && http-server build/styleguide -p 4242'"
+    "watch:doc:kss": "nodemon --ext styl,md --watch stylus --exec 'yarn build:doc:kss && http-server build/styleguide -p 4242'",
+    "watch": "yarn transpile:react --watch"
   },
   "sideEffects": [
     "*.css",
