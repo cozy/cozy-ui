@@ -1,48 +1,87 @@
-Divider: { 
-  importPath: 'cozy-ui/transpiled/react/Divider',
-  defaultImport: true
-},
-ExpansionPanel: { 
-  importPath: 'cozy-ui/transpiled/react/ExpansionPanel',
-  defaultImport: true
-},
-ExpansionPanelDetails: { 
-  importPath: 'cozy-ui/transpiled/react/ExpansionPanelDetails',
-  defaultImport: true
-},
-ExpansionPanelSummary: { 
-  importPath: 'cozy-ui/transpiled/react/ExpansionPanelSummary',
-  defaultImport: true
-},
-Grid: { 
-  importPath: 'cozy-ui/transpiled/react/Grid',
-  defaultImport: true
-},
-List: { 
-  importPath: 'cozy-ui/transpiled/react/List',
-  defaultImport: true
-},
-ListItem: { 
-  importPath: 'cozy-ui/transpiled/react/ListItem',
-  defaultImport: true
-},
-ListItemIcon: { 
-  importPath: 'cozy-ui/transpiled/react/ListItemIcon',
-  defaultImport: true
-},
-ListItemSecondaryAction: { 
-  importPath: 'cozy-ui/transpiled/react/ListItemSecondaryAction',
-  defaultImport: true
-},
-ListSubheader: { 
-  importPath: 'cozy-ui/transpiled/react/ListSubheader',
-  defaultImport: true
-},
-Switch: { 
-  importPath: 'cozy-ui/transpiled/react/Switch',
-  defaultImport: true
-},
-TextField: { 
-  importPath: 'cozy-ui/transpiled/react/TextField',
-  defaultImport: true
-}
+Use typographic components to have sensible defaults for text
+content. The typography variants naming is based on material design.
+
+🆕 The Typography component should be used instead of Text components.
+
+<details>
+<summary>⤵️ A codemod can be used to help you migrate the code (click here for more information).</summary>
+
+```bash
+npm install -g jscodeshift
+jscodeshift -t node_modules/cozy-ui/codemods/transform-typography.js --parser babel src/
+```
+
+</details>
+
+
+```
+import Typography from '.'
+import MuiCozyTheme from '../MuiCozyTheme'
+import Stack from '../Stack'
+
+const variants = [
+  'h1',
+  'h2',
+  'h3',
+  'h4',
+  'h5',
+  'button',
+  'subtitle1',
+  'body1',
+  'body2',
+  'caption',
+];
+
+<MuiCozyTheme>
+  <Stack spacing='s'>
+    { variants.map(variant => (
+      <Typography variant={variant}>{variant}</Typography>
+    )) }
+  </Stack>
+</MuiCozyTheme>
+```
+
+From old to new :
+
+```
+import { Text, Caption, MainTitle, SubTitle, Title, Bold, ErrorMessage } from '../Text'
+import MuiCozyTheme from '../MuiCozyTheme'
+import Typography from '.';
+
+const trStyle = { borderBottom: '1px solid gray'}
+const tdStyle = { borderRight: '1px solid gray'};
+
+<MuiCozyTheme>
+  <table className='u-w-100'>
+    <tbody>
+      <tr style={trStyle}>
+        <td style={tdStyle}><MainTitle>MainTitle</MainTitle></td>
+        <td><Typography variant='h2'>is replaced by &lt;Typography variant="h2" &gt;</Typography></td>
+      </tr>
+      <tr style={trStyle}>
+        <td style={tdStyle}><Title>Title</Title></td>
+        <td><Typography variant='h3'>is replaced by &lt;Typography variant="h3" &gt;</Typography></td>
+      </tr>
+      <tr style={trStyle}>
+        <td style={tdStyle}><SubTitle>SubTitle</SubTitle></td>
+        <td><Typography variant='h4'>is replaced by &lt;Typography variant="h4" &gt;</Typography></td>
+      </tr>
+      <tr style={trStyle}>
+        <td style={tdStyle}><Bold>Bold</Bold></td>
+        <td><Typography variant='h5'>is replaced by &lt;Typography variant="h5" &gt;</Typography></td>
+      </tr>
+      <tr style={trStyle}>
+        <td style={tdStyle}><Caption>Caption</Caption></td>
+        <td><Typography variant='caption' color='textSecondary'>is replaced by &lt;Typography variant="caption" color="textSecondary" /&gt; </Typography></td>
+      </tr>
+      <tr style={trStyle}>
+        <td style={tdStyle}><ErrorMessage>ErrorMessage</ErrorMessage></td>
+        <td><Typography variant='body1' color='error'>is replaced by &lt;Typography color="error"  variant='body1' /&gt; </Typography></td>
+      </tr>
+    </tbody>
+  </table>
+</MuiCozyTheme>
+
+```
+
+

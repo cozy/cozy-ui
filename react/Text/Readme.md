@@ -1,3 +1,5 @@
+⚠️ Those components are deprecated, instead please use the Typography component.
+
 #### Standard text
 
 ```
