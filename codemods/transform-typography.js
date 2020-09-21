@@ -4,25 +4,25 @@ const mappings = {
   MainTitle: {
     componentName: 'Typography',
     props: {
-      variant: 'h1'
+      variant: 'h3'
     }
   },
   Title: {
     componentName: 'Typography',
     props: {
-      variant: 'h2'
+      variant: 'h4'
     }
   },
   SubTitle: {
     componentName: 'Typography',
     props: {
-      variant: 'h3'
+      variant: 'h5'
     }
   },
   Bold: {
     componentName: 'Typography',
     props: {
-      variant: 'h4'
+      variant: 'h6'
     }
   },
   Caption: {

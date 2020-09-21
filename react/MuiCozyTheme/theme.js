@@ -24,26 +24,33 @@ export const normalTheme = createMuiTheme({
     useNextVariants: true,
     fontFamily: getCssVariableValue('primaryFont') || 'Lato',
     h1: {
-      fontSize: 40,
+      fontSize: 48,
       fontWeight: 'bold',
-      lineHeight: 1.313
+      lineHeight: 1.087,
+      letterSpacing: -0.8
     },
     h2: {
-      fontSize: 24,
+      fontSize: 32,
       fontWeight: 'bold',
-      lineHeight: 1.313
+      lineHeight: 1.313,
+      letterSpacing: -0.4
     },
     h3: {
-      fontSize: 20,
+      fontSize: 24,
       fontWeight: 'bold',
-      lineHeight: 1.313
+      lineHeight: 1.167
     },
     h4: {
+      fontSize: 20,
+      fontWeight: 'bold',
+      lineHeight: 1.167
+    },
+    h5: {
       fontSize: 18,
       fontWeight: 'bold',
       lineHeight: 1.313
     },
-    h5: {
+    h6: {
       fontSize: 16,
       fontWeight: 'bold',
       lineHeight: 1.313

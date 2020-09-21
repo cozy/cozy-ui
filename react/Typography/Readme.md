@@ -56,19 +56,19 @@ const tdStyle = { borderRight: '1px solid gray'};
     <tbody>
       <tr style={trStyle}>
         <td style={tdStyle}><MainTitle>MainTitle</MainTitle></td>
-        <td><Typography variant='h2'>is replaced by &lt;Typography variant="h2" &gt;</Typography></td>
-      </tr>
-      <tr style={trStyle}>
-        <td style={tdStyle}><Title>Title</Title></td>
         <td><Typography variant='h3'>is replaced by &lt;Typography variant="h3" &gt;</Typography></td>
       </tr>
       <tr style={trStyle}>
-        <td style={tdStyle}><SubTitle>SubTitle</SubTitle></td>
+        <td style={tdStyle}><Title>Title</Title></td>
         <td><Typography variant='h4'>is replaced by &lt;Typography variant="h4" &gt;</Typography></td>
       </tr>
       <tr style={trStyle}>
-        <td style={tdStyle}><Bold>Bold</Bold></td>
+        <td style={tdStyle}><SubTitle>SubTitle</SubTitle></td>
         <td><Typography variant='h5'>is replaced by &lt;Typography variant="h5" &gt;</Typography></td>
+      </tr>
+      <tr style={trStyle}>
+        <td style={tdStyle}><Bold>Bold</Bold></td>
+        <td><Typography variant='h6'>is replaced by &lt;Typography variant="h6" &gt;</Typography></td>
       </tr>
       <tr style={trStyle}>
         <td style={tdStyle}><Caption>Caption</Caption></td>
