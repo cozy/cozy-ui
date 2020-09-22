@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import cx from 'classnames'
 
@@ -10,7 +11,7 @@ export const Media = ({ children, className, align, ...rest }) => {
     <div
       className={cx(
         styles.media,
-        { [styles['media--' + align]]: align },
+        { [styles['media--' + align]]: align && align !== 'middle' },
         className
       )}
       {...rest}
@@ -18,6 +19,10 @@ export const Media = ({ children, className, align, ...rest }) => {
       {children}
     </div>
   )
+}
+
+Media.propTypes = {
+  align: PropTypes.oneOf(['top', 'middle', 'bottom'])
 }
 
 export const Img = ({ children, className, style, ...rest }) => {
