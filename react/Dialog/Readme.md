@@ -3,13 +3,15 @@
 ### With default Actions (mobile and desktop)
 
 ```jsx
-import Dialog from 'cozy-ui/transpiled/react/Dialog'
-import DialogTitle from 'cozy-ui/transpiled/react/Dialog/DialogTitle'
-import DialogActions from 'cozy-ui/transpiled/react/Dialog/DialogActions'
+import Dialog, {
+  DialogTitle,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogCloseButton,
+} from 'cozy-ui/transpiled/react/Dialog';
+
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
-import DialogContent from 'cozy-ui/transpiled/react/Dialog/DialogContent'
-import DialogContentText from 'cozy-ui/transpiled/react/Dialog/DialogContentText'
-import DialogCloseButton from 'cozy-ui/transpiled/react/Dialog/DialogCloseButton'
 import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
 import Button from 'cozy-ui/transpiled/react/Button'
 
@@ -56,13 +58,15 @@ initialState = { modalOpened: isTesting() }
 ### With "below" Actions (mobile)
 
 ```jsx
-import Dialog from 'cozy-ui/transpiled/react/Dialog'
-import DialogTitle from 'cozy-ui/transpiled/react/Dialog/DialogTitle'
-import DialogActions from 'cozy-ui/transpiled/react/Dialog/DialogActions'
+import Dialog, {
+  DialogTitle,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogCloseButton,
+} from 'cozy-ui/transpiled/react/Dialog';
+
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
-import DialogContent from 'cozy-ui/transpiled/react/Dialog/DialogContent'
-import DialogContentText from 'cozy-ui/transpiled/react/Dialog/DialogContentText'
-import DialogCloseButton from 'cozy-ui/transpiled/react/Dialog/DialogCloseButton'
 import Button from 'cozy-ui/transpiled/react/Button'
 const onClose = () => setState({ modalOpened: !state.modalOpened })
 
