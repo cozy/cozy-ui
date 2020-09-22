@@ -8,7 +8,7 @@ import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from 'cozy-ui/transpiled/react/Tabs';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem'
-import ListItemIcon, {smallSize, largeSize} from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon'
+import ListItemIcon, {smallSize, mediumSize, largeSize} from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemSecondaryAction'
 import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
@@ -24,11 +24,11 @@ const NavigationListExample = ({ style }) => {
     <NavigationList style={style}>
         <NavigationListHeader>General</NavigationListHeader>
         <NavigationListSection>
-        <ListItem>
+       <ListItem>
           <ListItemIcon>
-            <Icon icon="gear" size={largeSize} />
+            <Icon icon="gear" size={mediumSize} />
           </ListItemIcon>
-          <ListItemText primaryText="General settings (large icon does not change size of icon area)" />
+          <ListItemText primaryText="General settings" />
           <ListItemSecondaryAction>
             <Icon
               icon="right"
@@ -37,6 +37,19 @@ const NavigationListExample = ({ style }) => {
             />
           </ListItemSecondaryAction>
         </ListItem>
+        <ListItem>
+          <ListItemIcon>
+            <Icon icon="gear" size={largeSize} />
+          </ListItemIcon>
+          <ListItemText primaryText="A large icon does not change size of icon area" />
+          <ListItemSecondaryAction>
+            <Icon
+              icon="right"
+              size={smallSize}
+              className="u-mr-1 u-coolGrey"
+            />
+          </ListItemSecondaryAction>
+        </ListItem>        
         <ListItem>
           <ListItemIcon>
             <Icon icon="people" size={smallSize} />

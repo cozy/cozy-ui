@@ -225,6 +225,11 @@ normalTheme.overrides = {
       paddingBottom: 0
     }
   },
+  MuiListItemIcon: {
+    root: {
+      padding: 0
+    }
+  },
   MuiListItem: {
     container: {
       '&:not(:first-child)': {
@@ -232,9 +237,9 @@ normalTheme.overrides = {
       }
     },
     root: {
-      minHeight: '4.25rem',
-      paddingTop: '.5rem',
-      paddingBottom: '.5rem',
+      paddingTop: 0,
+      paddingBottom: 0,
+      minHeight: '3.5rem',
       '&$selected, &$selected:hover': {
         backgroundColor: 'var(--zircon)'
       },
@@ -253,12 +258,17 @@ normalTheme.overrides = {
       minHeight: '3.5rem'
     },
     secondaryAction: {
-      paddingRight: '.5rem'
+      paddingRight: '2rem'
     },
     button: {
       '&:hover': {
         backgroundColor: getCssVariableValue('paleGrey')
       }
+    }
+  },
+  MuiListItemText: {
+    root: {
+      padding: '14px 0'
     }
   },
   MuiListSubheader: {
@@ -288,7 +298,8 @@ normalTheme.overrides = {
   },
   MuiListItemSecondaryAction: {
     root: {
-      zIndex: 1
+      zIndex: 1,
+      right: 0
     }
   },
   MuiMenuItem: {
