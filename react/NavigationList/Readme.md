@@ -26,9 +26,9 @@ const NavigationListExample = ({ style }) => {
         <NavigationListSection>
         <ListItem>
           <ListItemIcon>
-            <Icon icon="gear" width="16" height="16" />
+            <Icon icon="gear" width="32" height="32" />
           </ListItemIcon>
-          <ListItemText primaryText="General settings" />
+          <ListItemText primaryText="General settings (large icon does not change size of icon area)" />
           <ListItemSecondaryAction>
             <Icon
               icon="right"
