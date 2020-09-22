@@ -36,12 +36,13 @@ const getAppIconProps = () => ({
 
 export const AppTile = ({
   app,
-  name,
+  name: nameProp,
   namePrefix,
   onClick,
   showDeveloper,
   IconComponent
 }) => {
+  const name = nameProp || app.name
   const { t } = useI18n()
   const { developer = {} } = app
   const statusToDisplay = getCurrentStatusLabel(app)
