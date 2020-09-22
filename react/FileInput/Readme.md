@@ -1,4 +1,6 @@
-This component is used to display a customizable input file. It's just a wrapper of input[type=file] and props will be passed to it (so you can use `accept`, `multiple` and others to alter its behavior).
+Displays a customizable input file. It's a wrapper of `input[type=file]` and
+props will be passed to it (so you can use `accept`, `multiple` an
+others to alter its behavior).
 
 ### Default
 
