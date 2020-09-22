@@ -1,0 +1,8 @@
+{
+  "app_item": {
+    "by": "By",
+    "installed": "Installed",
+    "maintenance": "In maintenance",
+    "update": "Update available"
+  }
+}

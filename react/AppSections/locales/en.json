@@ -24,12 +24,6 @@
     "telecom": "Telecom",
     "transport": "Transportation"
   },
-  "app_item": {
-    "by": "By",
-    "installed": "Installed",
-    "maintenance": "In maintenance",
-    "update": "Update available"
-  },
   "sections": {
     "applications": "Applications",
     "konnectors": "Services"
