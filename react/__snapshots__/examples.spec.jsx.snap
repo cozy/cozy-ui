@@ -273,11 +273,7 @@ exports[`Button should render examples: Button 2`] = `
 
 exports[`Button should render examples: Button 3`] = `
 "<div>
-  <div>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Normal</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--narrow___27FHD styles__c-btn--center___16_Xh\\"><span><span>N…</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--full___2VmR1 styles__c-btn--center___16_Xh\\"><span><span>Full width</span></span></button></p>
-  </div>
+  <div class=\\"styles__Stack--m___1tSpV\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh u-db\\"><span><span>Normal</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--narrow___27FHD styles__c-btn--center___16_Xh u-db\\"><span><span>N…</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--full___2VmR1 styles__c-btn--center___16_Xh u-db\\"><span><span>Full width</span></span></button></div>
 </div>"
 `;
 

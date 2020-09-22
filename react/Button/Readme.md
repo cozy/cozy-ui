@@ -49,12 +49,13 @@ import Button from 'cozy-ui/transpiled/react/Button';
 
 ```
 import Button from 'cozy-ui/transpiled/react/Button';
+import Stack from 'cozy-ui/transpiled/react/Stack';
 
-<div>
-  <p><Button label='Normal'/></p>
-  <p><Button extension="narrow" label='N…'/></p>
-  <p><Button extension="full" label='Full width'/></p>
-</div>
+<Stack>
+  <Button className='u-db' label='Normal'/>
+  <Button className='u-db' extension="narrow" label='N…'/>
+  <Button className='u-db' extension="full" label='Full width'/>
+</Stack>
 ```
 
 #### Text alignment
