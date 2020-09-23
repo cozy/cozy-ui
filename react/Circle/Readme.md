@@ -12,6 +12,7 @@ import Circle from 'cozy-ui/transpiled/react/Circle';
 ```
 
 ### Available sizes: xsmall, small, medium (default), large, xlarge
+
 ```
 import Circle from 'cozy-ui/transpiled/react/Circle';
 <div>

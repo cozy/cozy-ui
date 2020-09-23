@@ -24,6 +24,7 @@ Check out [UI components](https://docs.cozy.io/cozy-ui/react/) to see how to use
 ### As a Components library
 
 Add Cozy UI to a dependency to your project.
+
 ```
 npm install cozy-ui
 ```
@@ -52,6 +53,7 @@ import 'cozy-ui/dist/cozy-ui.utils.min.css'
 ### As a vanilla CSS library
 
 The entire library is also available as a good ol’ CSS library. You can simply add it to your app by linking the distributed minified file.
+
 ```html
 <link media="all" rel="stylesheet" href=“cozy-ui/dist/cozy-ui.min.css" />
 ```
@@ -108,7 +110,6 @@ See our [travis configuration](./travis.yml) for more information.
 
 Cozy UI is developed by Cozy Cloud and distributed under the AGPL-3.0 license.
 
-
 ## What is Cozy?
 
 ![Cozy Logo](https://cdn.rawgit.com/cozy/cozy-guidelines/master/templates/cozy_logo_small.svg)
@@ -128,5 +129,7 @@ You can reach the Cozy Community by:
 * Mentioning us on [Twitter](https://twitter.com/cozycloud)
 
 [stylus]: http://stylus-lang.com/
+
 [React Styleguidist]: https://react-styleguidist.js.org/
+
 [Argos]: https://github.com/argos-ci/argos

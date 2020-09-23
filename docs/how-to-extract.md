@@ -1,5 +1,4 @@
-How to extract particular styles from Cozy-UI
----------------------------------------------
+## How to extract particular styles from Cozy-UI
 
 Sometimes, you only need some parts of Cozy UI. You can
 manually use `stylus`.

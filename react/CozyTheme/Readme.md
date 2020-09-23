@@ -1,8 +1,7 @@
 An area of a page can have a different CozyTheme and components inside
 will be automatically styled.
 
-- At the moment only a few components support this (Buttons / Breadcrumbs / Figure).
-
+* At the moment only a few components support this (Buttons / Breadcrumbs / Figure).
 
 ```
 import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme';
@@ -50,3 +49,5 @@ import MuiButton from '@material-ui/core/Button';
     <MuiButton>Default button with Cozy theme</MuiButton>
   </CozyTheme>
 </div>
+
+```

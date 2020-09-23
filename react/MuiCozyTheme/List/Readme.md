@@ -1,10 +1,13 @@
 # List
+
 Displays a List of items, with several metadata
 
 ## props
+
 `dense`: boolean (`false` by default)
 
 ### Default usage
+
 ```
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List';
@@ -70,7 +73,9 @@ import Button from 'cozy-ui/transpiled/react/Button';
 ```
 
 ### dense
+
 Reduce the space around a list item
+
 ```
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List';
@@ -104,7 +109,9 @@ import Icon from 'cozy-ui/transpiled/react/Icon';
 ## Use cases
 
 ### List item selected
+
 Highlight a selected item from the list
+
 ```
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List';
@@ -133,6 +140,7 @@ import Icon from 'cozy-ui/transpiled/react/Icon';
   </List>
 </MuiCozyTheme>
 ```
+
 ### Navigation list
 
 List components are used in the [NavigationList](#/NavigationList) component.

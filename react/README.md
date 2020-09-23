@@ -1,5 +1,4 @@
-Components available
-====================
+# Components available
 
 ### Alerter
 
@@ -114,8 +113,8 @@ const example = () =>
 
 ### `I18n`, `translate`
 
-- `I18n`: Context provider for children to have access to `t` in their context
-- `translate`: HOC to pass `t` as a prop, from the context
+* `I18n`: Context provider for children to have access to `t` in their context
+* `translate`: HOC to pass `t` as a prop, from the context
 
 ```jsx
  <I18n lang='en' dictRequire={(lang) => require(`../src/locales/${lang}`)}>
@@ -133,4 +132,3 @@ class HelloWorld extends Component {
 
 export default translate()(HelloWorld)
 ```
-

@@ -2,7 +2,7 @@
 
 Like `Input` component, it can have the following properties:
 
-- `fullwidth` (default: `false`)
+* `fullwidth` (default: `false`)
 
 ##### Example
 
@@ -51,7 +51,7 @@ const handleChange = ev => setState({ value: ev.target.value });
 </p>
 ```
 
-- `inputRef`
+* `inputRef`
 
 This property is mapped to `<Input />` component `inputRef` property.
 It gives access to the underlying `<input />` element, for example to give focus or move the caret.
@@ -85,7 +85,7 @@ class FieldWithFocus extends React.Component {
 ;<FieldWithFocus />
 ```
 
-- `name`
+* `name`
 
 Name of the form field, injected into `Input`, `TextArea` or `SelectBox` component.
 
@@ -165,7 +165,6 @@ initialState = { selectedContact: null };
   </form>
 </DemoProvider>
 ```
-
 
 #### Password field with show/hide button
 

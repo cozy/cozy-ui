@@ -22,6 +22,7 @@ The given app can be:
 ```
 
 ## Using fetchIcon
+
 Is it also possible to provide a custom asynchronous `fetchIcon` which takes an app document as argument and resolves with an icon URL (see [`URL.createObjectURL`](https://developer.mozilla.org/en/docs/Web/API/URL/createObjectURL)). `fetchIcon` may also throw errors.
 
 ### Example with fetchIcon

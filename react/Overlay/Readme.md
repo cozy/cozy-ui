@@ -15,7 +15,6 @@ const hideOverlay = () => setState({overlayShown: false});
 
 It can react to the escape key.
 
-
 ```
 import Overlay from 'cozy-ui/transpiled/react/Overlay';
 initialState={ overlayShown: false}

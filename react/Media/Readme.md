@@ -5,9 +5,9 @@ prevent nesting.
 * `<Bd />` tries to take the space available
 * `<Img />` is as small as possible
 
-Original post : http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+Original post : <http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/>
 
-Flexbox : https://philipwalton.github.io/solved-by-flexbox/demos/media-object/
+Flexbox : <https://philipwalton.github.io/solved-by-flexbox/demos/media-object/>
 
 `align=middle` (default)
 

@@ -1,4 +1,5 @@
 # BarButton
+
 This component is used to display a back Button into the Cozy Bar.
 
 ### Example

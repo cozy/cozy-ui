@@ -6,7 +6,7 @@ remove the webpack specific configs.
 ## How to
 
 ### 1. Install the next version of cozy-ui
- 
+
 ```
 yarn add cozy-ui@next
 ```
@@ -53,7 +53,7 @@ import { IconSprite } from 'cozy-ui/transpiled/react'
 ```
 
 ### 5. Replace palette location
- 
+
 ```patch
 -import palette from 'cozy-ui/stylus/settings/palette.json'
 +import palette from 'cozy-ui/transpiled/react/palette'

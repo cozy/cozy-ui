@@ -2,13 +2,13 @@ There's two kinds of Button at your disposal : `<Button />` & `<ButtonLink />`.
 The first is a basic `<button>` for a click event, the second is a `<a>`, a link.
 Both look exactly the same, they share the same `className`, `disabled`, `onClick` & `theme` parameters but `<Button>` has also:
 
-- `busy` that adds a spinner (default `false`)
-- `type`, eg. `submit` or `reset` (default `submit`)
+* `busy` that adds a spinner (default `false`)
+* `type`, eg. `submit` or `reset` (default `submit`)
 
 when `<ButtonLink>` has:
 
-- `href` to add an URL (default `''`)
-- `target` to pass the link's `target` value (default `''`)
+* `href` to add an URL (default `''`)
+* `target` to pass the link's `target` value (default `''`)
 
 #### Themes
 
@@ -44,8 +44,8 @@ import Button from 'cozy-ui/transpiled/react/Button';
 
 #### Extension
 
-- `narrow` to ignore Button's `min-width`
-- `full` to enable full width
+* `narrow` to ignore Button's `min-width`
+* `full` to enable full width
 
 ```
 import Button from 'cozy-ui/transpiled/react/Button';
@@ -60,9 +60,9 @@ import Stack from 'cozy-ui/transpiled/react/Stack';
 
 #### Text alignment
 
-- `left` to align the label to the left
-- `right` to align the label to the right
-- `center` to center the label (default)
+* `left` to align the label to the left
+* `right` to align the label to the right
+* `center` to center the label (default)
 
 ```
 import Button from 'cozy-ui/transpiled/react/Button';
