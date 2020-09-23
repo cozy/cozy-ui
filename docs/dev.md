@@ -19,7 +19,7 @@ remark is a processor for markdown: it parses the markdown, transforms the
 tree and stringifies it afterwards. It can be used along with jscodeshift
 to automatically migrate and transform examples.
 
-Here is an example, running a jscodeshift codemod through the remark-jscodeshift
+Here is an example, running a jscodeshift codemod through the `remark-jscodeshift`
 plugin:
 
 ```
