@@ -24,12 +24,6 @@
     "telecom": "Mobile",
     "transport": "Voyage et transport"
   },
-  "app_item": {
-    "by": "Par",
-    "installed": "Installée",
-    "maintenance": "En maintenance",
-    "update": "Mise à jour dispo."
-  },
   "sections": {
     "applications": "Applications",
     "konnectors": "Services"

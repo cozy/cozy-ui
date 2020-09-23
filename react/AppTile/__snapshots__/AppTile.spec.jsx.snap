@@ -6,7 +6,7 @@ exports[`AppTile component should render correctly an app 1`] = `
   dictRequire={[Function]}
   lang="en"
 >
-  <AppTile
+  <withI18n(withLocales(AppTile))
     app={
       Object {
         "developer": Object {
@@ -31,7 +31,6 @@ exports[`AppTile component should render correctly an app 1`] = `
     name="Test"
     namePrefix="Cozy"
     onClick={[MockFunction]}
-    showDeveloper={true}
     slug="test"
     version="3.0.3"
   />
@@ -44,7 +43,7 @@ exports[`AppTile component should render correctly an app in maintenance 1`] = `
   dictRequire={[Function]}
   lang="en"
 >
-  <AppTile
+  <withI18n(withLocales(AppTile))
     app={
       Object {
         "developer": Object {
@@ -79,7 +78,6 @@ exports[`AppTile component should render correctly an app in maintenance 1`] = `
     }
     name="Test2"
     onClick={[MockFunction]}
-    showDeveloper={true}
     slug="test2"
     version="3.0.3-beta7483"
   />
@@ -92,7 +90,7 @@ exports[`AppTile component should render correctly an app with iconToLoad (icon 
   dictRequire={[Function]}
   lang="en"
 >
-  <AppTile
+  <withI18n(withLocales(AppTile))
     app={
       Object {
         "developer": Object {
@@ -121,7 +119,6 @@ exports[`AppTile component should render correctly an app with iconToLoad (icon 
     installedAppLink="test2.cozy.mock"
     name="Test2"
     onClick={[MockFunction]}
-    showDeveloper={true}
     slug="test2"
     version="3.0.3-beta7483"
   />
@@ -134,7 +131,7 @@ exports[`AppTile component should render correctly an app with iconToLoad if isM
   dictRequire={[Function]}
   lang="en"
 >
-  <AppTile
+  <withI18n(withLocales(AppTile))
     app={
       Object {
         "developer": Object {
@@ -164,7 +161,6 @@ exports[`AppTile component should render correctly an app with iconToLoad if isM
     isMobile={true}
     name="Test2"
     onClick={[MockFunction]}
-    showDeveloper={true}
     slug="test2"
     version="3.0.3-beta7483"
   />
@@ -177,7 +173,7 @@ exports[`AppTile component should render correctly an app without developer prop
   dictRequire={[Function]}
   lang="en"
 >
-  <AppTile
+  <withI18n(withLocales(AppTile))
     app={
       Object {
         "editor": "cozy",
@@ -194,7 +190,6 @@ exports[`AppTile component should render correctly an app without developer prop
     name="Test"
     namePrefix="Cozy"
     onClick={[MockFunction]}
-    showDeveloper={true}
     slug="test"
     version="3.0.3"
   />
@@ -207,7 +202,7 @@ exports[`AppTile component should render correctly an installed app 1`] = `
   dictRequire={[Function]}
   lang="en"
 >
-  <AppTile
+  <withI18n(withLocales(AppTile))
     app={
       Object {
         "developer": Object {
@@ -234,7 +229,6 @@ exports[`AppTile component should render correctly an installed app 1`] = `
     installedAppLink="test2.cozy.mock"
     name="Test2"
     onClick={[MockFunction]}
-    showDeveloper={true}
     slug="test2"
     version="3.0.3-beta7483"
   />
@@ -247,7 +241,7 @@ exports[`AppTile component should render correctly an installed app without icon
   dictRequire={[Function]}
   lang="en"
 >
-  <AppTile
+  <withI18n(withLocales(AppTile))
     app={
       Object {
         "developer": Object {
@@ -272,7 +266,6 @@ exports[`AppTile component should render correctly an installed app without icon
     name="Test"
     namePrefix="Cozy"
     onClick={[MockFunction]}
-    showDeveloper={true}
     slug="test"
     version="3.0.3"
   />

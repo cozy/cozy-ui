@@ -11,10 +11,16 @@ import Tile, {
 } from '../Tile'
 
 import { useI18n } from '../I18n'
+import withLocales from '../I18n/withLocales'
+import { AppDoctype } from '../proptypes'
 
 import { getCurrentStatusLabel } from './helpers'
-import { AppDoctype } from '../proptypes'
 import styles from './styles.styl'
+import en from './locales/en.json'
+import fr from './locales/fr.json'
+
+const locales = { en, fr }
+
 let dataset
 const getDataset = () => {
   if (dataset) return dataset
@@ -30,12 +36,13 @@ const getAppIconProps = () => ({
 
 export const AppTile = ({
   app,
-  name,
+  name: nameProp,
   namePrefix,
   onClick,
   showDeveloper,
   IconComponent
 }) => {
+  const name = nameProp || app.name
   const { t } = useI18n()
   const { developer = {} } = app
   const statusToDisplay = getCurrentStatusLabel(app)
@@ -74,4 +81,4 @@ AppTile.defaultProps = {
   showDeveloper: true
 }
 
-export default AppTile
+export default withLocales(locales)(AppTile)
