@@ -15,13 +15,15 @@ with imports, you can use [`rlink`](https://gist.github.com/ptbrowne/add609bdcf4
 
 # Transform markdown examples
 
-remark is a processor for markdown: it parses the markdown, transforms the
-tree and stringifies it afterwards. It can be used along with jscodeshift
-to automatically migrate and transform examples.
+:information_source: [`remark`][remark] is a processor for markdown: it parses markdown source into an AST,
+transforms the tree and stringifies it afterwards. It can be used along with
+jscodeshift to automatically migrate and transform examples.
 
-Here is an example, running a jscodeshift codemod through the `remark-jscodeshift`
-plugin:
+When an API has changed and we need to update example, it can be useful to do it via a codemod. Here
+is an example, running a jscodeshift codemod through the remark-jscodeshift plugin:
 
 ```
 remark -o --use remark-jscodeshift=allowNoLang:true,transform:\"codemods/transform-dialog-imports.js\" .
 ```
+
+[remark]: https://github.com/remarkjs/remark
