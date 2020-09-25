@@ -68,16 +68,21 @@ const CollectionField = props => {
             })}
           </Stack>
         ) : null}
-        <Button
-          label={addButtonLabel}
-          type="button"
-          theme="text"
-          icon={
-            <Icon icon="plus" className={styles.CollectionField__addBtnIcon} />
-          }
-          onClick={handleAdd}
-          className={styles.CollectionField__addBtn}
-        />
+        {values[values.length - 1] !== null ? (
+          <Button
+            label={addButtonLabel}
+            type="button"
+            theme="text"
+            icon={
+              <Icon
+                icon="plus"
+                className={styles.CollectionField__addBtnIcon}
+              />
+            }
+            onClick={handleAdd}
+            className={styles.CollectionField__addBtn}
+          />
+        ) : null}
       </Stack>
     </FieldContainer>
   )
