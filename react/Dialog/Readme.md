@@ -1,5 +1,9 @@
 ## Dialog
 
+* Dialogs have no close button, but Cozy-UI exposes `DialogCloseButton` that can be included as a child of `<Dialog />`.
+* Use `<Dialog scroll="body" />` to make the whole Dialog scrollable, instead of only the `DialogContent`.
+* Use [Divider components](https://v3.material-ui.com/api/divider/) when you need to materialize the separation between `DialogTitle`, `DialogContent` and `DialogActions`.
+
 ### With default Actions (mobile and desktop)
 
 ```jsx
@@ -128,7 +132,3 @@ initialState = { modalOpened: isTesting() }
   </BreakpointsProvider>
 </>
 ```
-
-* Dialogs have no close button, but Cozy-UI exposes `cozy-ui/transpiled/react/MuiCozyTheme/Dialog/DialogCloseButton` that can be included as a child of `<Dialog />`.
-* Use `<Dialog scroll="body" />` to make the whole Dialog scrollable, instead of only the `DialogContent`.
-* Use [Divider components](https://v3.material-ui.com/api/divider/) when you need to materialize the separation between `DialogTitle`, `DialogContent` and `DialogActions`.
