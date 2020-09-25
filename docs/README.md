@@ -128,8 +128,6 @@ You can reach the Cozy Community by:
 * Posting issues on the [Github repos](https://github.com/cozy/)
 * Mentioning us on [Twitter](https://twitter.com/cozycloud)
 
-[stylus]: http://stylus-lang.com/
-
 [React Styleguidist]: https://react-styleguidist.js.org/
 
 [Argos]: https://github.com/argos-ci/argos
