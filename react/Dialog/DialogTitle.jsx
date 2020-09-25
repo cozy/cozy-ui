@@ -7,6 +7,10 @@ import styles from './styles.styl'
 const DialogTitle = ({ children, classes }) => {
   return (
     <MUIDialogTitle disableTypography classes={classes}>
+      {/*
+        The h6 tag is used here since the modal title is always deeply nested in the DOM.
+        This is what MuiDialogTitle originally uses for its inner Typography component.
+      */}
       <AppTitle className={styles.DialogTitle} tag="h6" id="dialog-title">
         {children}
       </AppTitle>
