@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Button from '../../Button'
 import Label from '../../Label'
 import styles from './styles.styl'
@@ -20,8 +20,16 @@ const CollectionField = props => {
     addButtonLabel,
     removeButtonLabel,
     onChange,
+    onAddField,
     ...rest
   } = props
+
+  // This ref is used to support the onAddField props.
+  // It contains the index of the field that has been
+  // added and is used when handling refs to pass the
+  // instance of the component that was added to the
+  // onAddField prop of the parent.
+  const justAddedFieldIndex = useRef()
 
   const handleChange = index => contact => {
     const data = [...values]
@@ -33,11 +41,22 @@ const CollectionField = props => {
   const handleAdd = () => {
     const data = [...values, null]
     onChange(data)
+    justAddedFieldIndex.current = data.length - 1
   }
 
   const handleRemove = index => {
     const data = [...values.slice(0, index), ...values.slice(index + 1)]
     onChange(data)
+  }
+
+  const handleFieldRef = (index, componentInstance) => {
+    if (!onAddField) {
+      return
+    }
+    if (index === justAddedFieldIndex.current && componentInstance) {
+      justAddedFieldIndex.current = null
+      onAddField(componentInstance)
+    }
   }
 
   return (
@@ -50,6 +69,7 @@ const CollectionField = props => {
               return (
                 <div key={index} className={styles.CollectionField__row}>
                   <Component
+                    ref={value => handleFieldRef(index, value)}
                     value={value}
                     onChange={handleChange(index)}
                     placeholder={placeholder}

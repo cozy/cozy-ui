@@ -10,6 +10,7 @@ initialState = { contacts: [contacts[0]] };
     values={state.contacts}
     component={ContactPicker}
     onChange={contacts => setState({ contacts })}
+    onAddField={fieldInstance => fieldInstance.open()}
     label="Contacts"
     addButtonLabel="Add a contact"
     removeButtonLabel="Remove this contact"
