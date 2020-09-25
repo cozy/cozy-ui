@@ -3,20 +3,21 @@ import { act } from 'react-dom/test-utils'
 import { useState } from 'react'
 import { mount } from 'enzyme'
 import Modal, { BODY_CLASS } from './index'
+import { BreakpointsProvider } from '../hooks/useBreakpoints'
 
 describe('Modal', () => {
   const Example = () => {
     const [showModal, setShowModal] = useState(false)
     const [showModal2, setShowModal2] = useState(false)
     return (
-      <div>
+      <BreakpointsProvider>
         {showModal ? <Modal title="example 1">1</Modal> : null}
         {showModal2 ? <Modal title="example 2">2</Modal> : null}
         <button onClick={() => setShowModal(true)} />
         <button onClick={() => setShowModal2(true)} />
         <button onClick={() => setShowModal2(false)} />
         <button onClick={() => setShowModal(false)} />
-      </div>
+      </BreakpointsProvider>
     )
   }
 

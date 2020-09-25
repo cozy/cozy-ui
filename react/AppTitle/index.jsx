@@ -4,10 +4,10 @@ import { MainTitle } from '../Text'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
-export const AppTitle = ({ children, className, ...restProps }) => {
+export const AppTitle = ({ children, tag, className, ...restProps }) => {
   return (
     <MainTitle
-      tag="h1"
+      tag={tag}
       className={cx(styles['c-apptitle'], className)}
       {...restProps}
     >
@@ -21,7 +21,8 @@ AppTitle.propTypes = {
 }
 
 AppTitle.defaultProps = {
-  className: ''
+  className: '',
+  tag: 'h1'
 }
 
 export default AppTitle

@@ -4,15 +4,24 @@ import React from 'react'
 import DemoProvider from '../ContactsListModal/DemoProvider'
 import ContactsListModal from '../ContactsListModal'
 import ContactsList from '../ContactsList'
+import { BreakpointsProvider } from '../hooks/useBreakpoints'
 import ContactRow from '../ContactsList/ContactRow'
 import contacts from '../ContactsList/data.json'
 import { createWaitForElement } from '@oskarer/enzyme-wait'
 
+const Wrapper = ({ children }) => {
+  return (
+    <DemoProvider>
+      <BreakpointsProvider>{children}</BreakpointsProvider>
+    </DemoProvider>
+  )
+}
+
 it('should show a contacts list modal when clicking the control', () => {
   const wrapper = mount(
-    <DemoProvider>
+    <Wrapper>
       <ContactPicker placeholder="Select a contact" />
-    </DemoProvider>
+    </Wrapper>
   )
 
   const control = wrapper.find('button')
@@ -25,9 +34,9 @@ it('should show a contacts list modal when clicking the control', () => {
 it('should call the onChange function when a contact is being selected', async () => {
   const onChange = jest.fn()
   const wrapper = mount(
-    <DemoProvider>
+    <Wrapper>
       <ContactPicker placeholder="Select a contact" onChange={onChange} />
-    </DemoProvider>
+    </Wrapper>
   )
 
   const waitForContactsList = createWaitForElement(ContactsList)
@@ -44,9 +53,9 @@ it('should call the onChange function when a contact is being selected', async (
 
 it('should show the given contact name in the select', () => {
   const wrapper = mount(
-    <DemoProvider>
+    <Wrapper>
       <ContactPicker placeholder="Select a contact" value={contacts[0]} />
-    </DemoProvider>
+    </Wrapper>
   )
 
   const control = wrapper.find('button')
