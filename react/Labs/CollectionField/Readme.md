@@ -1,41 +1,39 @@
-```jsx
-import CollectionField from 'cozy-ui/transpiled/react/Labs/CollectionField';
-import ContactPicker from 'cozy-ui/transpiled/react/ContactPicker';
-import DemoProvider from '../../ContactsListModal/DemoProvider';
-import contacts from '../../ContactsList/data.json';
-initialState = { contacts: [contacts[0]] };
-
-<DemoProvider>
-  <CollectionField
-    values={state.contacts}
-    component={ContactPicker}
-    onChange={contacts => setState({ contacts })}
-    onAddField={fieldInstance => fieldInstance.open()}
-    label="Contacts"
-    addButtonLabel="Add a contact"
-    removeButtonLabel="Remove this contact"
-    placeholder="Select a contact"
-  />
-</DemoProvider>
-```
+If the initial data is empty, the button is shown. If it contains
+only `null`, the button will not be shown, and the underlying component
+will receive `null` as its value, which can be handy for example for
+the ContactPicker to remove one click.
 
 ```jsx
 import CollectionField from 'cozy-ui/transpiled/react/Labs/CollectionField';
 import ContactPicker from 'cozy-ui/transpiled/react/ContactPicker';
 import DemoProvider from '../../ContactsListModal/DemoProvider';
 import contacts from '../../ContactsList/data.json';
+import Variants from 'cozy-ui/docs/components/Variants';
+
 initialState = { contacts: [contacts[0]] };
 
-<DemoProvider>
-  <CollectionField
-    values={state.contacts}
-    component={ContactPicker}
-    onChange={contacts => setState({ contacts })}
-    label="Contacts"
-    addButtonLabel="Add a contact"
-    removeButtonLabel="Remove this contact"
-    placeholder="Select a contact"
-    variant="inline"
-  />
-</DemoProvider>
+const initialVariants = [{
+  inline: false,
+  emptyData: false,
+  nullData: false
+}];
+
+<Variants initialVariants={initialVariants}>{
+  variant => (
+    <DemoProvider>
+      <CollectionField
+        values={variant.emptyData ? [] : variant.nullData ? [null] : state.contacts}
+        component={ContactPicker}
+        onChange={contacts => setState({ contacts })}
+        onAddField={fieldInstance => fieldInstance.open()}
+        label="Contacts"
+        addButtonLabel="Add a contact"
+        removeButtonLabel="Remove this contact"
+        placeholder="Select a contact"
+        variant={variant.inline ? "inline" : null}
+      />
+    </DemoProvider>
+  )
+}
+</Variants>
 ```
