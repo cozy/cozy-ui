@@ -1,11 +1,21 @@
 @require 'settings/breakpoints.styl'
 
 .DialogCloseButton
-    top 1rem
+    top 0.8125rem
+    right 1.5rem
+    background-color transparent
+    margin 0
+    padding 0
+    width 3rem
+    height 3rem
+    position absolute
+    border 0
+    cursor pointer
 
 +small-screen()
     .DialogCloseButton
-        top .375rem
+        top 0rem
+        right 0.5rem
 
 .DialogTitle
     margin-top -1.5rem // Cancels padding of the dialog
