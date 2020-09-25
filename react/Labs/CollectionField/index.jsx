@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import PropTypes from 'prop-types'
 import Button from '../../Button'
 import Label from '../../Label'
 import styles from './styles.styl'
@@ -10,6 +11,10 @@ import { FieldContainer } from '../../Field'
  * Handles a collection of form fields.
  * This is a controlled component. You have to give it some values and handle
  * changes via the onChange prop. See examples in readme.
+ *
+ * When a field is added, the underlying component receives `null` as
+ * its value.
+ * When a field is being added, the "Add" button is not shown.
  */
 const CollectionField = props => {
   const {
@@ -106,6 +111,25 @@ const CollectionField = props => {
       </Stack>
     </FieldContainer>
   )
+}
+
+CollectionField.propTypes = {
+  /** @type {Array} Individual values will be passed through `value` to the underlying Component */
+  values: PropTypes.array.isRequired,
+  /** @type {Element} Component used to render a field */
+  component: PropTypes.element.isRequired,
+  /** @type {String} Label of the field */
+  label: PropTypes.node.isRequired,
+  /** @type {Function} Callback called when a value is added / updated / removed */
+  onChange: PropTypes.func.isRequired,
+  /** @type {String} Label of the "Add" button */
+  addButtonLabel: PropTypes.node.isRequired,
+  /** @type {String} Label of the "Remove" button */
+  removeButtonLabel: PropTypes.node.isRequired,
+  /** @type {String} Placeholder passed to the Component */
+  placeholder: PropTypes.string,
+  /** @type {String} Callback called with the instance of the Component when a field is being added */
+  onAddField: PropTypes.func
 }
 
 export default CollectionField
