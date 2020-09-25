@@ -16,7 +16,6 @@ jscodeshift -t node_modules/cozy-ui/codemods/transform-typography.js --parser ba
 
 </details>
 
-
 ```
 import Typography from '.'
 import MuiCozyTheme from '../MuiCozyTheme'
@@ -86,5 +85,3 @@ const tdStyle = { borderRight: '1px solid gray'};
 </MuiCozyTheme>
 
 ```
-
-

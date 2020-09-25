@@ -3,10 +3,13 @@ import styles from './styles.styl'
 import cx from 'classnames'
 import Icon from '../Icon'
 import palette from '../palette'
-import useBreakpoints from '../hooks/useBreakpoints'
+import withBreakpoints from '../helpers/withBreakpoints'
 
-export const ModalCrossIcon = ({ color }) => {
-  const { isMobile } = useBreakpoints()
+export const ModalCrossIcon = withBreakpoints()(props => {
+  const {
+    color,
+    breakpoints: { isMobile }
+  } = props
   return (
     <Icon
       icon="cross"
@@ -14,7 +17,7 @@ export const ModalCrossIcon = ({ color }) => {
       color={color || palette['coolGrey']}
     />
   )
-}
+})
 
 const ModalCross = ({ onClick, color, className }) => (
   <button
