@@ -1,6 +1,9 @@
 Use typographic components to have sensible defaults for text
 content. The typography variants naming is based on material design.
 
+Read the original [Typography component](https://material-ui.com/components/typography/)
+documentation for more information.
+
 🆕 The Typography component should be used instead of Text components.
 
 <details>
