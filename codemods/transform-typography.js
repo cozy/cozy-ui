@@ -4,7 +4,8 @@ const mappings = {
   MainTitle: {
     componentName: 'Typography',
     props: {
-      variant: 'h3'
+      variant: 'h3',
+      component: 'h1'
     }
   },
   Title: {
