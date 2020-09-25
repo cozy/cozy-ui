@@ -1,0 +1,17 @@
+@require 'settings/breakpoints.styl'
+
+.DialogCloseButton
+    top 1rem
+
++small-screen()
+    .DialogCloseButton
+        top .5rem
+
+.DialogTitle
+    margin-top -1.5rem // Cancels padding of the dialog
+    height 4rem // Should match with the DialogCloseButton size so that cross and title are centered
+
++small-screen()
+    .DialogTitle
+        margin-top -1rem
+        height 3rem
