@@ -9,23 +9,28 @@ import Dialog, {
   DialogContent,
   DialogContentText,
   DialogCloseButton,
+  DialogBackButton
 } from 'cozy-ui/transpiled/react/Dialog';
+import useBreakpoints, {
+  BreakpointsProvider
+} from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
 import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
 import Button from 'cozy-ui/transpiled/react/Button'
 
-const onClose = () => setState({ modalOpened: !state.modalOpened })
+const handleClose = () => setState({ modalOpened: !state.modalOpened })
 
 initialState = { modalOpened: isTesting() }
-;<>
-  <button onClick={() => setState({ modalOpened: !state.modalOpened })}>
-    Toggle modal
-  </button>
-  <MuiCozyTheme>
-    <Dialog open={state.modalOpened} onClose={() => onClose()}>
-      <DialogCloseButton onClick={() => onClose()} />
-      <DialogTitle>Ada Lovelace</DialogTitle>
+
+const ExampleDialog = ({ opened, onClose }) => {
+  const { isMobile } = useBreakpoints()
+  return (
+    <Dialog open={opened} onClose={onClose}>
+      <DialogCloseButton onClick={onClose} />
+      <DialogTitle>
+        {isMobile ? <DialogBackButton onClick={onClose} /> :  null } Ada Lovelace
+      </DialogTitle>
       <Divider />
       <DialogContent>
         Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815
@@ -51,7 +56,18 @@ initialState = { modalOpened: isTesting() }
         />
       </DialogActions>
     </Dialog>
-  </MuiCozyTheme>
+  )
+}
+
+;<>
+  <button onClick={() => setState({ modalOpened: !state.modalOpened })}>
+    Toggle modal
+  </button>
+  <BreakpointsProvider>
+    <MuiCozyTheme>
+      <ExampleDialog opened={state.modalOpened} onClose={handleClose} />
+    </MuiCozyTheme>
+  </BreakpointsProvider>
 </>
 ```
 
