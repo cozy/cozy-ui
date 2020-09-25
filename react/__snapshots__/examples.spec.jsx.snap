@@ -5539,19 +5539,19 @@ exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Primary</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-82\\"><span class=\\"MuiButtonBase-root-101 MuiIconButton-root-95 MuiPrivateSwitchBase-root-91 MuiSwitch-switchBase-85 MuiSwitch-colorPrimary-87 MuiPrivateSwitchBase-checked-92 MuiSwitch-checked-86\\"><span class=\\"MuiIconButton-label-100\\"><span class=\\"MuiSwitch-icon-83 MuiSwitch-iconChecked-84\\"></span><input class=\\"MuiPrivateSwitchBase-input-94\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-126\\"></span></span><span class=\\"MuiSwitch-bar-90\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-83\\"><span class=\\"MuiButtonBase-root-102 MuiIconButton-root-96 MuiPrivateSwitchBase-root-92 MuiSwitch-switchBase-86 MuiSwitch-colorPrimary-88 MuiPrivateSwitchBase-checked-93 MuiSwitch-checked-87\\"><span class=\\"MuiIconButton-label-101\\"><span class=\\"MuiSwitch-icon-84 MuiSwitch-iconChecked-85\\"></span><input class=\\"MuiPrivateSwitchBase-input-95\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-127\\"></span></span><span class=\\"MuiSwitch-bar-91\\"></span></span></div>
       </div>
       <div class=\\"styles__media___cSJMp\\">
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Secondary</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-82\\"><span class=\\"MuiButtonBase-root-101 MuiIconButton-root-95 MuiPrivateSwitchBase-root-91 MuiSwitch-switchBase-85 MuiSwitch-colorSecondary-88 MuiPrivateSwitchBase-checked-92 MuiSwitch-checked-86\\"><span class=\\"MuiIconButton-label-100\\"><span class=\\"MuiSwitch-icon-83 MuiSwitch-iconChecked-84\\"></span><input class=\\"MuiPrivateSwitchBase-input-94\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-126\\"></span></span><span class=\\"MuiSwitch-bar-90\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-83\\"><span class=\\"MuiButtonBase-root-102 MuiIconButton-root-96 MuiPrivateSwitchBase-root-92 MuiSwitch-switchBase-86 MuiSwitch-colorSecondary-89 MuiPrivateSwitchBase-checked-93 MuiSwitch-checked-87\\"><span class=\\"MuiIconButton-label-101\\"><span class=\\"MuiSwitch-icon-84 MuiSwitch-iconChecked-85\\"></span><input class=\\"MuiPrivateSwitchBase-input-95\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-127\\"></span></span><span class=\\"MuiSwitch-bar-91\\"></span></span></div>
       </div>
       <div class=\\"styles__media___cSJMp\\">
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Disabled</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-82\\"><span class=\\"MuiButtonBase-root-101 MuiButtonBase-disabled-102 MuiIconButton-root-95 MuiIconButton-disabled-99 MuiPrivateSwitchBase-root-91 MuiSwitch-switchBase-85 MuiSwitch-colorSecondary-88 MuiPrivateSwitchBase-disabled-93 MuiSwitch-disabled-89\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-100\\"><span class=\\"MuiSwitch-icon-83\\"></span><input class=\\"MuiPrivateSwitchBase-input-94\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-90\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-83\\"><span class=\\"MuiButtonBase-root-102 MuiButtonBase-disabled-103 MuiIconButton-root-96 MuiIconButton-disabled-100 MuiPrivateSwitchBase-root-92 MuiSwitch-switchBase-86 MuiSwitch-colorSecondary-89 MuiPrivateSwitchBase-disabled-94 MuiSwitch-disabled-90\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-101\\"><span class=\\"MuiSwitch-icon-84\\"></span><input class=\\"MuiPrivateSwitchBase-input-95\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-91\\"></span></span></div>
       </div>
     </div>
     <div class=\\"u-title-h2 u-mt-1\\">Inverted theme</div>
@@ -5560,19 +5560,19 @@ exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Primary</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-104\\"><span class=\\"MuiButtonBase-root-123 MuiIconButton-root-117 MuiPrivateSwitchBase-root-113 MuiSwitch-switchBase-107 MuiSwitch-colorPrimary-109 MuiPrivateSwitchBase-checked-114 MuiSwitch-checked-108\\"><span class=\\"MuiIconButton-label-122\\"><span class=\\"MuiSwitch-icon-105 MuiSwitch-iconChecked-106\\"></span><input class=\\"MuiPrivateSwitchBase-input-116\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-133\\"></span></span><span class=\\"MuiSwitch-bar-112\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-105\\"><span class=\\"MuiButtonBase-root-124 MuiIconButton-root-118 MuiPrivateSwitchBase-root-114 MuiSwitch-switchBase-108 MuiSwitch-colorPrimary-110 MuiPrivateSwitchBase-checked-115 MuiSwitch-checked-109\\"><span class=\\"MuiIconButton-label-123\\"><span class=\\"MuiSwitch-icon-106 MuiSwitch-iconChecked-107\\"></span><input class=\\"MuiPrivateSwitchBase-input-117\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-134\\"></span></span><span class=\\"MuiSwitch-bar-113\\"></span></span></div>
       </div>
       <div class=\\"styles__media___cSJMp\\">
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Secondary</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-104\\"><span class=\\"MuiButtonBase-root-123 MuiIconButton-root-117 MuiPrivateSwitchBase-root-113 MuiSwitch-switchBase-107 MuiSwitch-colorSecondary-110 MuiPrivateSwitchBase-checked-114 MuiSwitch-checked-108\\"><span class=\\"MuiIconButton-label-122\\"><span class=\\"MuiSwitch-icon-105 MuiSwitch-iconChecked-106\\"></span><input class=\\"MuiPrivateSwitchBase-input-116\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-133\\"></span></span><span class=\\"MuiSwitch-bar-112\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-105\\"><span class=\\"MuiButtonBase-root-124 MuiIconButton-root-118 MuiPrivateSwitchBase-root-114 MuiSwitch-switchBase-108 MuiSwitch-colorSecondary-111 MuiPrivateSwitchBase-checked-115 MuiSwitch-checked-109\\"><span class=\\"MuiIconButton-label-123\\"><span class=\\"MuiSwitch-icon-106 MuiSwitch-iconChecked-107\\"></span><input class=\\"MuiPrivateSwitchBase-input-117\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-134\\"></span></span><span class=\\"MuiSwitch-bar-113\\"></span></span></div>
       </div>
       <div class=\\"styles__media___cSJMp\\">
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Disabled</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-104\\"><span class=\\"MuiButtonBase-root-123 MuiButtonBase-disabled-124 MuiIconButton-root-117 MuiIconButton-disabled-121 MuiPrivateSwitchBase-root-113 MuiSwitch-switchBase-107 MuiSwitch-colorSecondary-110 MuiPrivateSwitchBase-disabled-115 MuiSwitch-disabled-111\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-122\\"><span class=\\"MuiSwitch-icon-105\\"></span><input class=\\"MuiPrivateSwitchBase-input-116\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-112\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-105\\"><span class=\\"MuiButtonBase-root-124 MuiButtonBase-disabled-125 MuiIconButton-root-118 MuiIconButton-disabled-122 MuiPrivateSwitchBase-root-114 MuiSwitch-switchBase-108 MuiSwitch-colorSecondary-111 MuiPrivateSwitchBase-disabled-116 MuiSwitch-disabled-112\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-123\\"><span class=\\"MuiSwitch-icon-106\\"></span><input class=\\"MuiPrivateSwitchBase-input-117\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-113\\"></span></span></div>
       </div>
     </div>
   </div>
