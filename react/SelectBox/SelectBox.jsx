@@ -200,6 +200,7 @@ const ActionsOption = ({ actions, ...props }) => (
     <span className={withPrefix(props.cx, styles['select-option__actions'])}>
       {actions.map((action, index) => (
         <Icon
+          {...action.iconProps}
           key={index}
           icon={action.icon}
           color={props.isFocused ? coolGrey : silver}
@@ -218,7 +219,8 @@ ActionsOption.propTypes = {
   actions: PropTypes.arrayOf(
     PropTypes.shape({
       icon: PropTypes.string,
-      onClick: PropTypes.func
+      onClick: PropTypes.func,
+      iconProps: PropTypes.object
     })
   )
 }
