@@ -14,6 +14,7 @@ const path = require('path')
 const fs = require('fs')
 const sortBy = require('lodash/sortBy')
 const flattenDeep = require('lodash/flattenDeep')
+const stackExampleApp = require('../examples/stack')
 const { ArgumentParser } = require('argparse')
 
 const emptyDirectory = directory => {
@@ -224,6 +225,73 @@ const readConfig = async () => {
   }
 }
 
+const screenshotStyleguide = async (page, args, config) => {
+  const styleguideIndexURL = `file://${path.join(
+    args.styleguideDir,
+    '/index.html'
+  )}`
+  let components = await fetchAllComponents(page, styleguideIndexURL, config)
+  if (args.component) {
+    components = components.filter(component =>
+      component.name.includes(args.component)
+    )
+  }
+  console.log('Screenshotting components')
+  for (const component of components) {
+    const componentConfig = config[component.name] || {}
+    const componentViewportSpec =
+      (componentConfig.viewports && componentConfig.viewports[args.viewport]) ||
+      null
+    const componentViewport = componentViewportSpec
+      ? parseViewportArgument(componentViewportSpec)
+      : parseViewportArgument(args.viewport)
+    await page.setViewport(componentViewport)
+    await screenshotComponent(page, {
+      component,
+      screenshotDir: args.screenshotDir,
+      viewport: componentViewport
+    })
+  }
+}
+
+const screenshotStackExamples = async (page, args) => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const port = 3000
+      const examples = [
+        { name: 'connection', url: 'connection' },
+        { name: 'connection-red', url: 'connection?theme=red' }
+      ]
+      const server = stackExampleApp.listen(port, async () => {
+        console.log(
+          `Stack examples server listening at http://localhost:${port}`
+        )
+
+        for (let example of examples) {
+          await page.goto(`http://localhost:3000/${example.url}`, {
+            waitUntil: 'load',
+            timeout: 0
+          })
+
+          await page.bringToFront()
+          await page.screenshot({
+            path: path.join(
+              args.screenshotDir,
+              `stack-example-${example.name}.png`
+            ),
+            fullPage: true
+          })
+        }
+
+        server.close()
+        resolve()
+      })
+    } catch (e) {
+      reject(e)
+    }
+  })
+}
+
 /**
  * Fetches all components from styleguide and takes a screenshot of each.
  */
@@ -262,32 +330,8 @@ const main = async () => {
   })
   const { browser, page } = await prepareBrowser({ viewport: parsedViewport })
 
-  const styleguideIndexURL = `file://${path.join(
-    args.styleguideDir,
-    '/index.html'
-  )}`
-  let components = await fetchAllComponents(page, styleguideIndexURL, config)
-  if (args.component) {
-    components = components.filter(component =>
-      component.name.includes(args.component)
-    )
-  }
-  console.log('Screenshotting components')
-  for (const component of components) {
-    const componentConfig = config[component.name] || {}
-    const componentViewportSpec =
-      (componentConfig.viewports && componentConfig.viewports[args.viewport]) ||
-      null
-    const componentViewport = componentViewportSpec
-      ? parseViewportArgument(componentViewportSpec)
-      : parsedViewport
-    await page.setViewport(componentViewport)
-    await screenshotComponent(page, {
-      component,
-      screenshotDir: args.screenshotDir,
-      viewport: componentViewport
-    })
-  }
+  await screenshotStyleguide(page, args, config)
+  await screenshotStackExamples(page, args)
 
   await browser.close()
 }
