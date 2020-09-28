@@ -224,6 +224,35 @@ const readConfig = async () => {
   }
 }
 
+const screenshotStyleguide = async (page, args, config) => {
+  const styleguideIndexURL = `file://${path.join(
+    args.styleguideDir,
+    '/index.html'
+  )}`
+  let components = await fetchAllComponents(page, styleguideIndexURL, config)
+  if (args.component) {
+    components = components.filter(component =>
+      component.name.includes(args.component)
+    )
+  }
+  console.log('Screenshotting components')
+  for (const component of components) {
+    const componentConfig = config[component.name] || {}
+    const componentViewportSpec =
+      (componentConfig.viewports && componentConfig.viewports[args.viewport]) ||
+      null
+    const componentViewport = componentViewportSpec
+      ? parseViewportArgument(componentViewportSpec)
+      : parseViewportArgument(args.viewport)
+    await page.setViewport(componentViewport)
+    await screenshotComponent(page, {
+      component,
+      screenshotDir: args.screenshotDir,
+      viewport: componentViewport
+    })
+  }
+}
+
 /**
  * Fetches all components from styleguide and takes a screenshot of each.
  */
@@ -262,32 +291,7 @@ const main = async () => {
   })
   const { browser, page } = await prepareBrowser({ viewport: parsedViewport })
 
-  const styleguideIndexURL = `file://${path.join(
-    args.styleguideDir,
-    '/index.html'
-  )}`
-  let components = await fetchAllComponents(page, styleguideIndexURL, config)
-  if (args.component) {
-    components = components.filter(component =>
-      component.name.includes(args.component)
-    )
-  }
-  console.log('Screenshotting components')
-  for (const component of components) {
-    const componentConfig = config[component.name] || {}
-    const componentViewportSpec =
-      (componentConfig.viewports && componentConfig.viewports[args.viewport]) ||
-      null
-    const componentViewport = componentViewportSpec
-      ? parseViewportArgument(componentViewportSpec)
-      : parsedViewport
-    await page.setViewport(componentViewport)
-    await screenshotComponent(page, {
-      component,
-      screenshotDir: args.screenshotDir,
-      viewport: componentViewport
-    })
-  }
+  await screenshotStyleguide(page, args, config)
 
   await browser.close()
 }
