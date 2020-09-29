@@ -14,7 +14,7 @@ $alert
     position fixed
     z-index $alert-index
     right 0
-    bottom calc(3rem + env(safe-area-inset-bottom))
+    bottom 0
     left 0
     color var(--white)
     opacity 1
@@ -46,7 +46,8 @@ $alert-wrapper
     background-color var(--validColor)
     padding rem(13 16)
     pointer-events auto
-
+    padding-bottom 3rem
+    padding-bottom env(safe-area-inset-bottom)
     p
         margin 0
         line-height 1.5
