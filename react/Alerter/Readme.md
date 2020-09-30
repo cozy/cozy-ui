@@ -1,5 +1,5 @@
 Display notications!
-Include the `<Alert />` component somewhere in your app, but only once. After that, you can use the static methods `Alert.info`, `Alert.success` and `Alert.error` to trigger a notification.
+Include the `<Alerter />` component somewhere in your app, but only once. After that, you can use the static methods `Alerter.info`, `Alerter.success` and `Alerter.error` to trigger a notification.
 
 ```
 import Alerter from 'cozy-ui/transpiled/react/Alerter';
@@ -11,9 +11,9 @@ if (isTesting()) {
 }
 
 <div>
-  <button onClick={() => Alert.info("This is an info alert!")}>Show alert info</button>
-  <button onClick={() => Alert.error("This is an error alert!")}>Show alert error</button>
-  <button onClick={() => Alert.success("This is a success alert")}>Show alert success</button>
+  <button onClick={() => Alerter.info("This is an info alert!")}>Show alert info</button>
+  <button onClick={() => Alerter.error("This is an error alert!")}>Show alert error</button>
+  <button onClick={() => Alerter.success("This is a success alert")}>Show alert success</button>
   {/* The Alerter must be rendered once in the App */ }
   <Alerter />
 </div>
@@ -21,7 +21,7 @@ if (isTesting()) {
 
 ### Alert with a button
 
-The `Alert` methods support an optionnal second parameter, which can be used to add a button to the notification, with the `buttonText` and `buttonAction` keys:
+The `Alerter` methods support an optionnal second parameter, which can be used to add a button to the notification, with the `buttonText` and `buttonAction` keys:
 
 ```
 import Alerter from 'cozy-ui/transpiled/react/Alerter';
@@ -44,7 +44,7 @@ const triggerAlertSuccess = () => {
   });
 };
 
-// Alert already included in the example before
+// Alerter already included in the example before
 <div>
   <button onClick={triggerAlert}>Show alert</button>
   <button onClick={triggerAlertError}>Show alert error</button>
@@ -67,7 +67,7 @@ const triggerAlertWithDismiss = () => {
   });
 };
 
-// Alert already included in the example before
+// Alerter already included in the example before
 <div>
   <button onClick={triggerAlertWithDismiss}>Show alert with dismiss</button>
 </div>
