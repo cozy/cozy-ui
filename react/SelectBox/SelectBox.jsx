@@ -195,23 +195,25 @@ const CheckboxOption = ({ ...props }) => <Option {...props} withCheckbox />
 
 CheckboxOption.propTypes = {}
 
-const ActionsOption = ({ actions, ...props }) => (
+const ActionsOption = ({ actions, withNoAction, ...props }) => (
   <Option {...props} labelComponent={props.children}>
-    <span className={withPrefix(props.cx, styles['select-option__actions'])}>
-      {actions.map((action, index) => (
-        <Icon
-          {...action.iconProps}
-          key={index}
-          icon={action.icon}
-          color={props.isFocused ? coolGrey : silver}
-          className={withPrefix(props.cx, 'u-ph-half')}
-          onClick={e => {
-            e.stopPropagation()
-            action.onClick(props)
-          }}
-        />
-      ))}
-    </span>
+    {withNoAction ? null : (
+      <span className={withPrefix(props.cx, styles['select-option__actions'])}>
+        {actions.map((action, index) => (
+          <Icon
+            {...action.iconProps}
+            key={index}
+            icon={action.icon}
+            color={props.isFocused ? coolGrey : silver}
+            className={withPrefix(props.cx, 'u-ph-half')}
+            onClick={e => {
+              e.stopPropagation()
+              action.onClick(props)
+            }}
+          />
+        ))}
+      </span>
+    )}
   </Option>
 )
 

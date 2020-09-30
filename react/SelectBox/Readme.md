@@ -215,6 +215,7 @@ import SelectBox, { ActionsOption } from 'cozy-ui/transpiled/react/SelectBox';
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry', isDisabled: true },
+  { value: 'withNoAction', label: 'withNoAction', withNoAction: true },
   { value: 'vanilla', label: 'Vanilla' },
   { value: 'long', label: 'Salt and vinegar crisps with vegamite and brussel sprouts, double chai latte sauce' }
 ];
