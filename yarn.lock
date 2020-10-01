@@ -3243,10 +3243,10 @@ babel-polyfill@6.26.0:
     core-js "^2.5.0"
     regenerator-runtime "^0.10.5"
 
-babel-preset-cozy-app@1.9.1:
-  version "1.9.1"
-  resolved "https://registry.yarnpkg.com/babel-preset-cozy-app/-/babel-preset-cozy-app-1.9.1.tgz#a190df4702feaaea5560eafa2e506d5816024f2a"
-  integrity sha512-zi2NCe1WSWrC0fKU9C9MTiY0XGXQ9EdEZqK3rLTk7mr8M2hRWjWEUwH2HyOMd0ZkL25c29YSUpmYJXk7xBIIWw==
+babel-preset-cozy-app@1.9.2:
+  version "1.9.2"
+  resolved "https://registry.yarnpkg.com/babel-preset-cozy-app/-/babel-preset-cozy-app-1.9.2.tgz#eb072c931828b2cacf84fd8dac57f345b5b608d8"
+  integrity sha512-fNECVqgGUjj/O0jbH25EqoWAeXRN+4voVZecG794BqmXYejvW0dPIIzLtMlsIDXR/YAYVWefF6faJegRI1xSTQ==
   dependencies:
     "@babel/core" "7.2.2"
     "@babel/helper-plugin-utils" "7.0.0"
