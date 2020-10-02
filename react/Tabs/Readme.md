@@ -2,6 +2,38 @@ Content needs to be separated into sections and accessed via a single content ar
 
 Tabs can have the `inverted` prop to be in the primary color of the app.
 
+### Themed tab for material-ui
+
+```
+import { Tabs, Tab } from 'cozy-ui/transpiled/react/MuiTabs'
+import { CardDivider } from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider';
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
+
+initialState.value = 0
+
+const handleChange = (event, value) => {
+  setState({ value })
+};
+
+<MuiCozyTheme variant='inverted'>
+  <Tabs value={state.value} onChange={handleChange} aria-label="simple tabs example">
+    <Tab label="Item One" {...a11yProps(0)} />
+    <Tab label="Item Two" {...a11yProps(1)} />
+    <Tab label="Item Three" {...a11yProps(2)} />
+  </Tabs>
+  <CardDivider />
+</MuiCozyTheme>
+```
+
+### Old tabs
+
 ```
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from 'cozy-ui/transpiled/react/Tabs';
@@ -57,4 +89,4 @@ import { Tabs, TabList, Tab, TabPanels, TabPanel } from 'cozy-ui/transpiled/reac
 </MuiCozyTheme>
 ```
 
-Tabs can be along with the [NavigationList](#/NavigationList) component.
+ℹ️ Tabs can work along with the [NavigationList](#/NavigationList) component.
