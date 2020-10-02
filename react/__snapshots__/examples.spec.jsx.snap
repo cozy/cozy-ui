@@ -6124,6 +6124,27 @@ exports[`Table should render examples: Table 1`] = `
 
 exports[`Tabs should render examples: Tabs 1`] = `
 "<div>
+  <div class=\\"MuiTabs-root-141\\" aria-label=\\"simple tabs example\\">
+    <div class=\\"MuiTabs-flexContainer-142\\">
+      <div class=\\"MuiTabs-scroller-144 MuiTabs-fixed-145\\" style=\\"margin-bottom: 0px;\\" role=\\"tablist\\">
+        <div class=\\"MuiTabs-flexContainer-142\\"><button class=\\"MuiButtonBase-root-162 MuiTab-root-150 MuiTab-textColorPrimary-153 MuiTab-selected-155\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"true\\" id=\\"simple-tab-0\\" aria-controls=\\"simple-tabpanel-0\\"><span class=\\"MuiTab-wrapper-158\\"><span class=\\"MuiTab-labelContainer-159\\"><span class=\\"MuiTab-label-160\\">Item One</span></span></span><span class=\\"MuiTouchRipple-root-200\\"></span></button><button class=\\"MuiButtonBase-root-162 MuiTab-root-150 MuiTab-textColorPrimary-153\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-1\\" aria-controls=\\"simple-tabpanel-1\\"><span class=\\"MuiTab-wrapper-158\\"><span class=\\"MuiTab-labelContainer-159\\"><span class=\\"MuiTab-label-160\\">Item Two</span></span></span><span class=\\"MuiTouchRipple-root-200\\"></span></button><button class=\\"MuiButtonBase-root-162 MuiTab-root-150 MuiTab-textColorPrimary-153\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-2\\" aria-controls=\\"simple-tabpanel-2\\"><span class=\\"MuiTab-wrapper-158\\"><span class=\\"MuiTab-labelContainer-159\\"><span class=\\"MuiTab-label-160\\">Item Three</span></span></span><span class=\\"MuiTouchRipple-root-200\\"></span></button></div><span class=\\"MuiPrivateTabIndicator-root-165 MuiPrivateTabIndicator-colorPrimary-166 MuiTabs-indicator-149\\" style=\\"left: 0px; width: 0px;\\"></span>
+      </div>
+    </div>
+  </div>
+  <hr class=\\"MuiDivider-root-75 u-ml-0 u-maw-100\\"><br>
+  <div class=\\"MuiTabs-root-168\\" aria-label=\\"simple tabs example\\">
+    <div class=\\"MuiTabs-flexContainer-169\\">
+      <div class=\\"MuiTabs-scroller-171 MuiTabs-fixed-172\\" style=\\"margin-bottom: 0px;\\" role=\\"tablist\\">
+        <div class=\\"MuiTabs-flexContainer-169\\"><button class=\\"MuiButtonBase-root-189 MuiTab-root-177 MuiTab-textColorPrimary-180 MuiTab-selected-182\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"true\\" id=\\"simple-tab-0\\" aria-controls=\\"simple-tabpanel-0\\"><span class=\\"MuiTab-wrapper-185\\"><span class=\\"MuiTab-labelContainer-186\\"><span class=\\"MuiTab-label-187\\">Item One</span></span></span><span class=\\"MuiTouchRipple-root-207\\"></span></button><button class=\\"MuiButtonBase-root-189 MuiTab-root-177 MuiTab-textColorPrimary-180\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-1\\" aria-controls=\\"simple-tabpanel-1\\"><span class=\\"MuiTab-wrapper-185\\"><span class=\\"MuiTab-labelContainer-186\\"><span class=\\"MuiTab-label-187\\">Item Two</span></span></span><span class=\\"MuiTouchRipple-root-207\\"></span></button><button class=\\"MuiButtonBase-root-189 MuiTab-root-177 MuiTab-textColorPrimary-180\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-2\\" aria-controls=\\"simple-tabpanel-2\\"><span class=\\"MuiTab-wrapper-185\\"><span class=\\"MuiTab-labelContainer-186\\"><span class=\\"MuiTab-label-187\\">Item Three</span></span></span><span class=\\"MuiTouchRipple-root-207\\"></span></button></div><span class=\\"MuiPrivateTabIndicator-root-192 MuiPrivateTabIndicator-colorPrimary-193 MuiTabs-indicator-176\\" style=\\"left: 0px; width: 0px;\\"></span>
+      </div>
+    </div>
+  </div>
+  <hr class=\\"MuiDivider-root-195 u-ml-0 u-maw-100\\">
+</div>"
+`;
+
+exports[`Tabs should render examples: Tabs 2`] = `
+"<div>
   <div class=\\"styles__coz-tabs___24QL5\\">
     <div class=\\"styles__coz-tab-list___3qac8 styles__coz-tab-list--inverted___3VjXc\\">
       <div class=\\"styles__coz-tab___2mOye styles__coz-tab--active___1wmwM\\">General</div>
@@ -6136,7 +6157,7 @@ exports[`Tabs should render examples: Tabs 1`] = `
 </div>"
 `;
 
-exports[`Tabs should render examples: Tabs 2`] = `
+exports[`Tabs should render examples: Tabs 3`] = `
 "<div>
   <div style=\\"width: 300px; margin-top: 32px;\\">
     <div class=\\"styles__coz-tabs___24QL5\\">

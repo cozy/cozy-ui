@@ -461,7 +461,7 @@ export const invertedTheme = {
     ...normalTheme.palette,
     type: 'dark',
     primary: {
-      main: 'white'
+      main: 'rgb(255,255,255)'
     },
     text: {
       primary: getCssVariableValue('white')
@@ -502,10 +502,15 @@ invertedTheme.overrides = merge({}, normalTheme.overrides, {
   MuiTab: {
     // This overrides the disabled color of the MuiTab
     textColorPrimary: {
-      color: 'white'
+      color: 'rgb(255,255,255)',
+      opacity: 0.64
     },
     textColorSecondary: {
-      color: 'white'
+      color: 'rgb(255,255,255)',
+      opacity: 0.64
+    },
+    selected: {
+      opacity: 1
     }
   },
   MuiSwitch: {
