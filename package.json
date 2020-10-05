@@ -34,7 +34,7 @@
     "lint:commit": "git merge-base HEAD master && commitlint --from=$(git merge-base HEAD master) --to=HEAD || true",
     "lint:js": "eslint 'react/**/*.jsx' 'react/**/*.js'",
     "lint:stylus": "stylint stylus --config .stylintrc",
-    "lint:md": "remark . -o",
+    "lint:md": "remark . -o -S",
     "palette": "scripts/make-palette.sh",
     "prebuild:css": "mkdir -p dist/ && stylus -C node_modules/normalize.css/normalize.css node_modules/normalize.css/normalize.styl",
     "prebuild:css:utils": "mkdir -p dist/",

@@ -128,6 +128,12 @@ export const normalTheme = createMuiTheme({
       900: getCssVariableValue('black')
     }
   },
+  props: {
+    MuiTabs: {
+      textColor: 'primary',
+      TabIndicatorProps: { color: 'primary' }
+    }
+  },
   ...(isTesting() && { transitions: { create: () => 'none' } })
 })
 
@@ -148,6 +154,15 @@ normalTheme.overrides = {
   MuiButton: {
     root: {
       borderRadius: 0
+    }
+  },
+  MuiTab: {
+    // This overrides the disabled color of the MuiTab
+    textColorPrimary: {
+      color: 'var(--coolGrey)'
+    },
+    textColorSecondary: {
+      color: 'var(--coolGrey)'
     }
   },
   MuiExpansionPanel: {
@@ -445,6 +460,9 @@ export const invertedTheme = {
   palette: {
     ...normalTheme.palette,
     type: 'dark',
+    primary: {
+      main: 'rgb(255,255,255)'
+    },
     text: {
       primary: getCssVariableValue('white')
     }
@@ -474,6 +492,25 @@ invertedTheme.overrides = merge({}, normalTheme.overrides, {
   MuiInputLabel: {
     root: {
       color: invertedTheme.palette.text.primary
+    }
+  },
+  MuiTabs: {
+    root: {
+      background: normalTheme.palette.primary.main
+    }
+  },
+  MuiTab: {
+    // This overrides the disabled color of the MuiTab
+    textColorPrimary: {
+      color: 'rgb(255,255,255)',
+      opacity: 0.64
+    },
+    textColorSecondary: {
+      color: 'rgb(255,255,255)',
+      opacity: 0.64
+    },
+    selected: {
+      opacity: 1
     }
   },
   MuiSwitch: {
