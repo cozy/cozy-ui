@@ -9,6 +9,7 @@ import { useState } from 'react'
 import { Tabs, Tab } from 'cozy-ui/transpiled/react/MuiTabs'
 import { CardDivider } from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider';
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 
 function a11yProps(index) {
   return {
@@ -36,7 +37,7 @@ const Example = () => {
   )
 };
 
-<>
+<BreakpointsProvider>
   <MuiCozyTheme variant='normal'>
     <Example />
   </MuiCozyTheme>
@@ -44,7 +45,7 @@ const Example = () => {
   <MuiCozyTheme variant='inverted'>
     <Example />
   </MuiCozyTheme>
-</>
+</BreakpointsProvider>
 ```
 
 ### Old tabs
