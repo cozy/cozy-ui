@@ -116,8 +116,8 @@ const CollectionField = props => {
 CollectionField.propTypes = {
   /** @type {Array} Individual values will be passed through `value` to the underlying Component */
   values: PropTypes.array.isRequired,
-  /** @type {Element} Component used to render a field */
-  component: PropTypes.element.isRequired,
+  /** @type {ElementType} Component used to render a field */
+  component: PropTypes.elementType.isRequired,
   /** @type {String} Label of the field */
   label: PropTypes.node.isRequired,
   /** @type {Function} Callback called when a value is added / updated / removed */
