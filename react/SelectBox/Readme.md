@@ -1,5 +1,7 @@
 A select box for more advanced use cases, based on [`react-select` v2](https://react-select.com).
 
+On mobiles, be aware that if you manage `menuIsOpen` and use a custom Control, `onClick` won't be enough and you will have to use `onTouchStart` to detect the touch ([see issue here](https://github.com/JedWatson/react-select/issues/3806)).
+
 ### Simple use case
 
 You can use this exactly like you would use `react-select`. See the [official documentation](https://react-select.com) for more examples.
