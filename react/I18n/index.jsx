@@ -15,7 +15,7 @@ export const DEFAULT_LANG = 'en'
 export const I18nContext = React.createContext()
 
 // Provider root component
-class BaseI18n extends Component {
+export class I18n extends Component {
   constructor(props) {
     super(props)
     this.init(this.props)
@@ -58,7 +58,7 @@ class BaseI18n extends Component {
   }
 }
 
-BaseI18n.propTypes = {
+I18n.propTypes = {
   lang: PropTypes.string.isRequired, // current language.
   polyglot: PropTypes.object, // A polyglot instance.
   dictRequire: PropTypes.func, // A callback to load locales.
@@ -66,23 +66,15 @@ BaseI18n.propTypes = {
   defaultLang: PropTypes.string // default language. By default is 'en'
 }
 
-BaseI18n.defaultProps = {
+I18n.defaultProps = {
   defaultLang: DEFAULT_LANG
 }
 
-BaseI18n.childContextTypes = {
+I18n.childContextTypes = {
   t: PropTypes.func,
   f: PropTypes.func,
   lang: PropTypes.string
 }
-
-class PreactI18n extends BaseI18n {
-  componentWillReceiveProps(nextProps) {
-    this.UNSAFE_componentWillReceiveProps(nextProps)
-  }
-}
-
-export const I18n = process.env.USE_PREACT ? PreactI18n : BaseI18n
 
 // higher order decorator for components that need `t` and/or `f`
 export const translate = () => WrappedComponent => {

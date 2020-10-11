@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AppTile component should render correctly an app 1`] = `
-<BaseI18n
+<I18n
   defaultLang="en"
   dictRequire={[Function]}
   lang="en"
@@ -34,11 +34,11 @@ exports[`AppTile component should render correctly an app 1`] = `
     slug="test"
     version="3.0.3"
   />
-</BaseI18n>
+</I18n>
 `;
 
 exports[`AppTile component should render correctly an app in maintenance 1`] = `
-<BaseI18n
+<I18n
   defaultLang="en"
   dictRequire={[Function]}
   lang="en"
@@ -81,11 +81,11 @@ exports[`AppTile component should render correctly an app in maintenance 1`] = `
     slug="test2"
     version="3.0.3-beta7483"
   />
-</BaseI18n>
+</I18n>
 `;
 
 exports[`AppTile component should render correctly an app with iconToLoad (icon being fetching) 1`] = `
-<BaseI18n
+<I18n
   defaultLang="en"
   dictRequire={[Function]}
   lang="en"
@@ -122,11 +122,11 @@ exports[`AppTile component should render correctly an app with iconToLoad (icon 
     slug="test2"
     version="3.0.3-beta7483"
   />
-</BaseI18n>
+</I18n>
 `;
 
 exports[`AppTile component should render correctly an app with iconToLoad if isMobile 1`] = `
-<BaseI18n
+<I18n
   defaultLang="en"
   dictRequire={[Function]}
   lang="en"
@@ -164,11 +164,11 @@ exports[`AppTile component should render correctly an app with iconToLoad if isM
     slug="test2"
     version="3.0.3-beta7483"
   />
-</BaseI18n>
+</I18n>
 `;
 
 exports[`AppTile component should render correctly an app without developer property 1`] = `
-<BaseI18n
+<I18n
   defaultLang="en"
   dictRequire={[Function]}
   lang="en"
@@ -193,11 +193,11 @@ exports[`AppTile component should render correctly an app without developer prop
     slug="test"
     version="3.0.3"
   />
-</BaseI18n>
+</I18n>
 `;
 
 exports[`AppTile component should render correctly an installed app 1`] = `
-<BaseI18n
+<I18n
   defaultLang="en"
   dictRequire={[Function]}
   lang="en"
@@ -232,11 +232,11 @@ exports[`AppTile component should render correctly an installed app 1`] = `
     slug="test2"
     version="3.0.3-beta7483"
   />
-</BaseI18n>
+</I18n>
 `;
 
 exports[`AppTile component should render correctly an installed app without icon provided 1`] = `
-<BaseI18n
+<I18n
   defaultLang="en"
   dictRequire={[Function]}
   lang="en"
@@ -269,5 +269,5 @@ exports[`AppTile component should render correctly an installed app without icon
     slug="test"
     version="3.0.3"
   />
-</BaseI18n>
+</I18n>
 `;
