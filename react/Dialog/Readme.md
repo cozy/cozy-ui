@@ -132,3 +132,55 @@ initialState = { modalOpened: isTesting() }
   </BreakpointsProvider>
 </>
 ```
+
+
+
+### With long content
+
+```jsx
+import Dialog, {
+  DialogTitle,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogCloseButton,
+} from 'cozy-ui/transpiled/react/Dialog';
+
+import {
+  BreakpointsProvider
+} from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
+import Button from 'cozy-ui/transpiled/react/Button'
+const onClose = () => setState({ modalOpened: !state.modalOpened })
+
+initialState = { modalOpened: isTesting() }
+;<>
+  <button onClick={() => setState({ modalOpened: !state.modalOpened })}>
+    Toggle modal
+  </button>
+  <BreakpointsProvider>
+    <MuiCozyTheme>
+      <Dialog open={state.modalOpened} onClose={() => onClose()}>
+        <DialogCloseButton onClick={() => onClose()} />
+        <DialogTitle>Ada Lovelace</DialogTitle>
+        <DialogContent>
+          {content.ada.long}
+        </DialogContent>
+        <DialogActions layout="row">
+          <Button
+            theme="secondary"
+            onClick={() => onClose()}
+            label={'Close Modal'}
+          />
+          <Button
+            theme="primary"
+            label={'Touch Me'}
+            onClick={() => alert('click')}
+          />
+        </DialogActions>
+      </Dialog>
+    </MuiCozyTheme>
+  </BreakpointsProvider>
+</>
+```

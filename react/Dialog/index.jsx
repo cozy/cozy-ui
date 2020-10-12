@@ -3,20 +3,24 @@ import React from 'react'
 import MUIDialog from '@material-ui/core/Dialog'
 import withMobileDialog from '@material-ui/core/withMobileDialog'
 import PropTypes from 'prop-types'
+import { RemoveScroll } from 'react-remove-scroll'
 
 export const Dialog = props => {
   const { onClose, fullScreen, children, open, scroll, ...otherProps } = props
+  const Wrapper = open ? RemoveScroll : React.Fragment
   return (
-    <MUIDialog
-      open={open}
-      onClose={onClose}
-      fullScreen={fullScreen}
-      aria-labelledby="dialog-title"
-      scroll={scroll}
-      {...otherProps}
-    >
-      {children}
-    </MUIDialog>
+    <Wrapper>
+      <MUIDialog
+        open={open}
+        onClose={onClose}
+        fullScreen={fullScreen}
+        aria-labelledby="dialog-title"
+        scroll={scroll}
+        {...otherProps}
+      >
+        {children}
+      </MUIDialog>
+    </Wrapper>
   )
 }
 Dialog.defaultProps = {
