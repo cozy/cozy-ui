@@ -9,6 +9,10 @@ const ESC_KEYCODE = 27
 
 const nonDOMProps = ['onEscape', 'children', 'className']
 
+const bodyTallerThanWindow = () => {
+  return document.body.getBoundingClientRect().height > window.innerHeight
+}
+
 /**
  * Display a black overlay on the screen. Stops
  * scrolling on the html/body while displayed.
@@ -43,13 +47,19 @@ class Overlay extends Component {
   render() {
     const { children, className } = this.props
     const domProps = omit(this.props, nonDOMProps)
+    // We use Overlay when opening an ActionMenu.
+    // We don't want to block the scroll on Desktop if the ActionMenu
+    // is displayed. So no RemoveScroll if the content is too small
+    // @todo Overlay should not RemoveScroll by itself. It should
+    // be done by lower component (like ActionMenu / Dialog / Modal...)
+    const Wrapper = bodyTallerThanWindow() ? React.Fragment : RemoveScroll
     return (
       <div
         onClick={this.handleClick}
         className={cx(styles['c-overlay'], className)}
         {...domProps}
       >
-        <RemoveScroll>{children}</RemoveScroll>
+        <Wrapper>{children}</Wrapper>
       </div>
     )
   }
