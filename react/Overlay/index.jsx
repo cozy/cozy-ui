@@ -3,15 +3,11 @@ import styles from './styles.styl'
 import cx from 'classnames'
 import omit from 'lodash/omit'
 import PropTypes from 'prop-types'
-import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
+import { RemoveScroll } from 'react-remove-scroll'
 
 const ESC_KEYCODE = 27
 
 const nonDOMProps = ['onEscape', 'children', 'className']
-
-const bodyTallerThanWindow = () => {
-  return document.body.getBoundingClientRect().height > window.innerHeight
-}
 
 /**
  * Display a black overlay on the screen. Stops
@@ -21,10 +17,6 @@ const bodyTallerThanWindow = () => {
  */
 class Overlay extends Component {
   componentDidMount() {
-    if (bodyTallerThanWindow()) {
-      disableBodyScroll(document.body)
-      disableBodyScroll(document.body.parentNode)
-    }
     if (this.props.onEscape) {
       document.addEventListener('keydown', this.handleKeydown)
     }
@@ -37,9 +29,6 @@ class Overlay extends Component {
   }
 
   componentWillUnmount() {
-    // restauration function can be undefined if there was
-    // an error during mounting/rendering
-    clearAllBodyScrollLocks()
     if (this.props.onEscape) {
       document.removeEventListener('keydown', this.handleKeydown)
     }
@@ -60,7 +49,7 @@ class Overlay extends Component {
         className={cx(styles['c-overlay'], className)}
         {...domProps}
       >
-        {children}
+        <RemoveScroll>{children}</RemoveScroll>
       </div>
     )
   }
