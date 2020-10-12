@@ -1,8 +1,3 @@
-let defaultViewer
-if (process.env.USE_PREACT) {
-  defaultViewer = ''
-} else {
-  defaultViewer = require('./index').default
-}
+import DefaultViewer from './index'
 
-export default defaultViewer
+export default DefaultViewer

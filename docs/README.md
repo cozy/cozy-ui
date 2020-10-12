@@ -17,7 +17,7 @@ Check the [styleguide](https://docs.cozy.io/cozy-ui/styleguide) to see all the v
 
 ## React components
 
-Check out [UI components](https://docs.cozy.io/cozy-ui/react/) to see how to use ready made (p)React components.
+Check out [UI components](https://docs.cozy.io/cozy-ui/react/) to see how to use ready made React components.
 
 ## Usage
 
@@ -38,7 +38,7 @@ import 'cozy-ui/transpiled/react/stylesheet.css'
 <Button />
 ```
 
-You're now ready to use [Cozy UI's (p)React components](https://docs.cozy.io/cozy-ui/react/)
+You're now ready to use [Cozy UI's React components](https://docs.cozy.io/cozy-ui/react/)
 
 ### Utility classes
 
