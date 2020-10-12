@@ -10,6 +10,8 @@ import Icon from '../Icon'
 import { dodgerBlue, silver, coolGrey, paleGrey } from '../palette'
 import withBreakpoints from '../helpers/withBreakpoints'
 
+import ControlDefault from './ControlDefault'
+
 const heights = {
   tiny: '2rem',
   medium: '2.5rem',
@@ -236,6 +238,7 @@ const getNodeFromRef = ref => {
 }
 
 const customComponents = {
+  Control: ControlDefault,
   DropdownIndicator,
   Option
 }
