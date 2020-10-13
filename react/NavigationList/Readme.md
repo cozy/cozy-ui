@@ -8,7 +8,7 @@ import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from 'cozy-ui/transpiled/react/Tabs';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem'
-import ListItemIcon from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon'
+import ListItemIcon, {smallSize, mediumSize, largeSize} from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemSecondaryAction'
 import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
@@ -24,46 +24,57 @@ const NavigationListExample = ({ style }) => {
     <NavigationList style={style}>
         <NavigationListHeader>General</NavigationListHeader>
         <NavigationListSection>
-        <ListItem>
+       <ListItem>
           <ListItemIcon>
-            <Icon icon="gear" width="32" height="32" />
+            <Icon icon="gear" size={mediumSize} />
           </ListItemIcon>
-          <ListItemText primaryText="General settings (large icon does not change size of icon area)" />
+          <ListItemText primary="General settings" />
           <ListItemSecondaryAction>
             <Icon
               icon="right"
-              width="16"
-              height="16"
+              size={smallSize}
               className="u-mr-1 u-coolGrey"
             />
           </ListItemSecondaryAction>
         </ListItem>
         <ListItem>
           <ListItemIcon>
-            <Icon icon="people" width="16" height="16" />
+            <Icon icon="gear" size={largeSize} />
+          </ListItemIcon>
+          <ListItemText primary="A large icon does not change size of icon area" />
+          <ListItemSecondaryAction>
+            <Icon
+              icon="right"
+              size={smallSize}
+              className="u-mr-1 u-coolGrey"
+            />
+          </ListItemSecondaryAction>
+        </ListItem>        
+        <ListItem>
+          <ListItemIcon>
+            <Icon icon="people" size={smallSize} />
           </ListItemIcon>
           <ListItemText
-            primaryText="User preferences"
-            secondaryText="Notifications and theme"
+            primary="User preferences"
+            secondary="Notifications and theme"
           />
           <ListItemSecondaryAction>
             <Icon
               icon="right"
-              width="16"
-              height="16"
+              size={smallSize}
               className="u-mr-1 u-coolGrey"
             />
           </ListItemSecondaryAction>
         </ListItem>
         <ListItem>
           <ListItemIcon>
-            <Icon icon="trash" className="u-error" width="16" height="16" />
+            <Icon icon="trash" className="u-error" size={smallSize} />
           </ListItemIcon>
           <ListItemText
-            primaryText="Delete account"
+            primary="Delete account"
             primaryTextClassName="u-error"
             secondaryTextClassName="u-error"
-            secondaryText="Permanently delete all your data"
+            secondary="Permanently delete all your data"
           />
         </ListItem>
       </NavigationListSection>
@@ -71,14 +82,13 @@ const NavigationListExample = ({ style }) => {
       <NavigationListSection>
         <ListItem>
           <ListItemIcon>
-            <Icon icon="bank" width="16" height="16" />
+            <Icon icon="bank" size={smallSize} />
           </ListItemIcon>
-          <ListItemText primaryText="Bank accounts" />
+          <ListItemText primary="Bank accounts" />
           <ListItemSecondaryAction>
             <Icon
               icon="right"
-              width="16"
-              height="16"
+              size={smallSize}
               className="u-mr-1 u-coolGrey"
             />
           </ListItemSecondaryAction>
