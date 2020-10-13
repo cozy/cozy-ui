@@ -255,7 +255,9 @@ normalTheme.overrides = {
       paddingRight: '1rem'
     },
     dense: {
-      minHeight: '3.5rem'
+      minHeight: '3.5rem',
+      paddingTop: 0,
+      paddingBottom: 0
     },
     secondaryAction: {
       paddingRight: '2rem'
@@ -269,6 +271,19 @@ normalTheme.overrides = {
   MuiListItemText: {
     root: {
       padding: '14px 0'
+    },
+    dense: {
+      fontSize: null
+    },
+    primary: {
+      '&$textDense': {
+        fontSize: null
+      }
+    },
+    secondary: {
+      '&$textDense': {
+        fontSize: null
+      }
     }
   },
   MuiListSubheader: {
