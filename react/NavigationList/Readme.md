@@ -28,7 +28,7 @@ const NavigationListExample = ({ style }) => {
           <ListItemIcon>
             <Icon icon="gear" size={mediumSize} />
           </ListItemIcon>
-          <ListItemText primaryText="General settings" />
+          <ListItemText primary="General settings" />
           <ListItemSecondaryAction>
             <Icon
               icon="right"
@@ -41,7 +41,7 @@ const NavigationListExample = ({ style }) => {
           <ListItemIcon>
             <Icon icon="gear" size={largeSize} />
           </ListItemIcon>
-          <ListItemText primaryText="A large icon does not change size of icon area" />
+          <ListItemText primary="A large icon does not change size of icon area" />
           <ListItemSecondaryAction>
             <Icon
               icon="right"
@@ -55,8 +55,8 @@ const NavigationListExample = ({ style }) => {
             <Icon icon="people" size={smallSize} />
           </ListItemIcon>
           <ListItemText
-            primaryText="User preferences"
-            secondaryText="Notifications and theme"
+            primary="User preferences"
+            secondary="Notifications and theme"
           />
           <ListItemSecondaryAction>
             <Icon
@@ -71,10 +71,10 @@ const NavigationListExample = ({ style }) => {
             <Icon icon="trash" className="u-error" size={smallSize} />
           </ListItemIcon>
           <ListItemText
-            primaryText="Delete account"
+            primary="Delete account"
             primaryTextClassName="u-error"
             secondaryTextClassName="u-error"
-            secondaryText="Permanently delete all your data"
+            secondary="Permanently delete all your data"
           />
         </ListItem>
       </NavigationListSection>
@@ -84,7 +84,7 @@ const NavigationListExample = ({ style }) => {
           <ListItemIcon>
             <Icon icon="bank" size={smallSize} />
           </ListItemIcon>
-          <ListItemText primaryText="Bank accounts" />
+          <ListItemText primary="Bank accounts" />
           <ListItemSecondaryAction>
             <Icon
               icon="right"

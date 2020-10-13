@@ -26,9 +26,9 @@ import Button from 'cozy-ui/transpiled/react/Button';
       <ListItemIcon>
         <Icon icon="folder" width="32" height="32" />
       </ListItemIcon>
-      <ListItemText primaryText="I'm a primary text"/>
-      <ListItemText secondaryText="metadata"/>
-      <ListItemText secondaryText="metadata"/>
+      <ListItemText primary="I'm a primary text"/>
+      <ListItemText secondary="metadata"/>
+      <ListItemText secondary="metadata"/>
       <ListItemSecondaryAction>
         <Menu
           component={
@@ -53,10 +53,10 @@ import Button from 'cozy-ui/transpiled/react/Button';
       <ListItemIcon>
         <Icon icon="file" width="32" height="32" />
       </ListItemIcon>
-      <ListItemText primaryText="I'm a primary text" secondaryText="I'm a secondary text"/>
+      <ListItemText primary="I'm a primary text" secondary="I'm a secondary text"/>
     </ListItem>
     <ListItem>
-      <ListItemText primaryText="I'm a primary text" />
+      <ListItemText primary="I'm a primary text" />
       <ListItemSecondaryAction>
         <Button
           label='Click for more !'
@@ -91,16 +91,16 @@ import Icon from 'cozy-ui/transpiled/react/Icon';
       <ListItemIcon>
         <Icon icon="folder" width="32" height="32" />
       </ListItemIcon>
-      <ListItemText primaryText="I'm a primary text"/>
+      <ListItemText primary="I'm a primary text"/>
     </ListItem>
     <ListItem>
       <ListItemIcon>
         <Icon icon="file" width="32" height="32" />
       </ListItemIcon>
-      <ListItemText primaryText="I'm a primary text" secondaryText="I'm a secondary text"/>
+      <ListItemText primary="I'm a primary text" secondary="I'm a secondary text"/>
     </ListItem>
     <ListItem>
-      <ListItemText primaryText="I'm a primary text" />
+      <ListItemText primary="I'm a primary text" />
     </ListItem>
   </List>
 </MuiCozyTheme>
@@ -126,16 +126,16 @@ import Icon from 'cozy-ui/transpiled/react/Icon';
       <ListItemIcon>
         <Icon icon="folder" width="32" height="32" />
       </ListItemIcon>
-      <ListItemText primaryText="I'm a primary text"/>
+      <ListItemText primary="I'm a primary text"/>
     </ListItem>
     <ListItem selected={true}>
       <ListItemIcon>
         <Icon icon="file" width="32" height="32" />
       </ListItemIcon>
-      <ListItemText primaryText="I'm a primary text" secondaryText="I'm a secondary text"/>
+      <ListItemText primary="I'm a primary text" secondary="I'm a secondary text"/>
     </ListItem>
     <ListItem>
-      <ListItemText primaryText="I'm a primary text" />
+      <ListItemText primary="I'm a primary text" />
     </ListItem>
   </List>
 </MuiCozyTheme>
