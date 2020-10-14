@@ -3,53 +3,44 @@
 @require '../utilities/display'
 @require '../tools/mixins'
 
-
-/*------------------------------------*\
-  Selection Bar
-  ======
-
-  This file contains all needs for Selection Bar
-\*------------------------------------*/
-
 $selectionbar
-    .coz-selectionbar
-        position          fixed
-        z-index           $selection-index
-        top               0
-        left              0
-        box-sizing        border-box
-        display           flex
-        justify-content   center
-        align-items       center
-        width             100%
-        height            rem(52)
-        color             var(--white)
-        background-color  var(--slateGrey)
-        font-weight       bold
+    position          fixed
+    z-index           $selection-index
+    top               0
+    left              0
+    box-sizing        border-box
+    display           flex
+    justify-content   center
+    align-items       center
+    width             100%
+    height            rem(52)
+    color             var(--white)
+    background-color  var(--slateGrey)
+    font-weight       bold
 
-        .coz-selectionbar-separator
-            margin            rem(0 8 0 32)
-            width             rem(4)
-            height            rem(4)
-            border-radius     50%
-            background-color  var(--black)
+    .SelectionBar-separator
+        margin            rem(0 8 0 32)
+        width             rem(4)
+        height            rem(4)
+        border-radius     50%
+        background-color  var(--black)
 
-        button
-            padding 0 rem(16)
-            color   var(--white)
+    button
+        padding 0 rem(16)
+        color   var(--white)
 
-        .coz-action-extra
-            display none
+    .SelectionBar-action-extra
+        display none
 
-        .coz-action-close
-            position          absolute
-            top               50%
-            right             0
-            transform         translateY(-50%)
+    .SelectionBar-action-close
+        position          absolute
+        top               50%
+        right             0
+        transform         translateY(-50%)
 
 
     +medium-screen()
-        .coz-selectionbar
+        &
             top              auto
             bottom           0
             justify-content  flex-start
@@ -61,16 +52,16 @@ $selectionbar
             // iPhone X environment tweak
             padding-bottom env(safe-area-inset-bottom)
 
-            .coz-selectionbar-count span
-            .coz-action-moveto
+            .SelectionBar-count span
+            .SelectionBar-action-moveto
                 display none
 
-            .coz-action-extra
+            .SelectionBar-action-extra
                 display block
 
-            .coz-selectionbar-separator
+            .SelectionBar-separator
                 margin   0 0 0 rem(16)
 
-            .coz-action-close
+            .SelectionBar-action-close
                 top auto
                 transform none

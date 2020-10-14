@@ -38,15 +38,15 @@ const SelectionBar = ({
     )
   })
   return (
-    <div className={styles['coz-selectionbar']} role="toolbar">
-      <span className={styles['coz-selectionbar-count']}>
+    <div className={styles['SelectionBar']} role="toolbar">
+      <span className={styles['SelectionBar-count']}>
         {selectedCount}
         <span>
           {' '}
           {t('SelectionBar.selected_count', { smart_count: selectedCount })}
         </span>
       </span>
-      <span className={styles['coz-selectionbar-separator']} />
+      <span className={styles['SelectionBar-separator']} />
       {actionNames.map((actionName, index) => (
         <Button
           type="button"
@@ -64,7 +64,7 @@ const SelectionBar = ({
         label={t('SelectionBar.close')}
         type="button"
         theme="close"
-        className={styles['coz-action-close']}
+        className={styles['SelectionBar-action-close']}
         onClick={hideSelectionBar}
         extension="narrow"
       >
