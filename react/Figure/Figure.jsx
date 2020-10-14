@@ -2,17 +2,63 @@ import React from 'react'
 import Types from 'prop-types'
 import cx from 'classnames'
 import styles from './Figure.styl'
+import { useI18n } from '../I18n'
 
-/**
- * Shows a number, typically a balance or an important financial
- * number in a bold way.
- */
 const stylePositive = styles['Figure-content--positive']
 const styleNegative = styles['Figure-content--negative']
 const styleWarning = styles['Figure-content--warning']
 const styleBig = styles['Figure--big']
 const styleClickable = styles['Figure--clickable']
 
+const zeroPadding = '00000'
+/**
+ * Utility function to format numbers
+ * from https://stackoverflow.com/questions/5731193/how-to-format-numbers
+ */
+const formatThousandsNoRounding = function(
+  n,
+  decimalPrecision,
+  decimalSeparator,
+  thousandSeparator
+) {
+  let e = ''
+  let s = e + n
+  let l = s.length
+  let b = n < 0 ? 1 : 0
+  let dotIndex = s.lastIndexOf('.')
+  let j = dotIndex == -1 ? l : dotIndex
+  let r = e
+  let d = s.substr(j + 1, decimalPrecision)
+  while ((j -= 3) > b) {
+    r = thousandSeparator + s.substr(j, 3) + r
+  }
+  return (
+    s.substr(0, j + 3) +
+    r +
+    (decimalPrecision
+      ? decimalSeparator +
+        d +
+        (d.length < decimalPrecision
+          ? zeroPadding.substr(0, decimalPrecision - d.length)
+          : e)
+      : e)
+  )
+}
+
+const decimalSeparatorPerLocale = {
+  fr: ',',
+  en: '.'
+}
+
+const thousandSeparatorPerLocale = {
+  fr: '\u00A0', // unbreakable space
+  en: ','
+}
+
+/**
+ * Shows a number, typically a balance or an important financial
+ * number in a bold way.
+ */
 const Figure = props => {
   const {
     symbol,
@@ -32,16 +78,22 @@ const Figure = props => {
     blurred
   } = props
 
+  const { lang } = useI18n()
+
+  const decimalSeparator =
+    decimalSeparatorPerLocale[lang] || decimalSeparator.en
+  const thousandSeparator =
+    thousandSeparatorPerLocale[lang] || thousandSeparator.en
+
   let { decimalNumbers } = props
   decimalNumbers = isNaN(decimalNumbers) ? 2 : decimalNumbers
 
-  const totalLocalized =
-    typeof total === 'number'
-      ? total.toLocaleString('fr-FR', {
-          minimumFractionDigits: decimalNumbers,
-          maximumFractionDigits: decimalNumbers
-        })
-      : total
+  const totalFormatted = formatThousandsNoRounding(
+    total,
+    decimalNumbers,
+    decimalSeparator,
+    thousandSeparator
+  )
   const isTotalPositive = total > 0
   const isTotalInLimit = total > warningLimit
   const isWarning = !isTotalPositive && !isTotalInLimit && coloredWarning
@@ -65,7 +117,7 @@ const Figure = props => {
     >
       <span className={cx(styles['Figure-total'], totalClassName)}>
         {isTotalPositive && signed && '+'}
-        {totalLocalized}
+        {totalFormatted}
       </span>
       {symbol && (
         <span
@@ -108,4 +160,4 @@ Figure.propTypes = {
   blurred: Types.bool
 }
 
-export default Figure
+export default React.memo(Figure)
