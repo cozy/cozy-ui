@@ -12,7 +12,8 @@ If you want use SelectionBar component, you must have `actions` parameter, like 
 
 actions = {
   trash: {
-    action: selections => dispatch(trashFiles(selections)))
+    action: selections => dispatch(trashFiles(selections))),
+    icon: 'trash'
   },
   rename: {
     action: selections => dispatch(startRenamingAsync(selected[0])),
@@ -52,7 +53,7 @@ const SelectionBar = ({
           key={index}
           disabled={selectedCount < 1}
           onClick={() => actions[actionName].action(selected)}
-          icon={actionName.toLowerCase()}
+          icon={actions[actionName].icon || actionName.toLowerCase()}
           label={t('SelectionBar.' + actionName)}
           iconOnly={isMobile || isTablet ? true : false}
           subtle
@@ -80,4 +81,4 @@ SelectionBar.propTypes = {
   hideSelectionBar: PropTypes.func.isRequired // function to close SelectionBar.
 }
 
-export default withBreakpoints()(translate()(SelectionBar))
+export default translate()(withBreakpoints()(SelectionBar))
