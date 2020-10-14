@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { translate } from '../I18n'
+import { useI18n } from '../I18n'
 import { Button, Icon } from '../index'
-import withBreakpoints from '../helpers/withBreakpoints'
+import useBreakpoints from '../hooks/useBreakpoints'
 
 import styles from './styles.styl'
 
@@ -23,13 +23,9 @@ actions = {
 
 */
 
-const SelectionBar = ({
-  t,
-  actions,
-  selected,
-  hideSelectionBar,
-  breakpoints: { isMobile, isTablet }
-}) => {
+const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
+  const { t } = useI18n()
+  const { isMobile, isTablet } = useBreakpoints()
   const selectedCount = selected.length
   const actionNames = Object.keys(actions).filter(actionName => {
     const action = actions[actionName]
@@ -75,10 +71,9 @@ const SelectionBar = ({
 }
 
 SelectionBar.propTypes = {
-  t: PropTypes.func.isRequired, // translate action name.
   actions: PropTypes.object.isRequired, // An object with actions
   selected: PropTypes.array.isRequired, // selected items id.
   hideSelectionBar: PropTypes.func.isRequired // function to close SelectionBar.
 }
 
-export default translate()(withBreakpoints()(SelectionBar))
+export default SelectionBar
