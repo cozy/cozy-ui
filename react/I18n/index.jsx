@@ -18,17 +18,18 @@ export const I18nContext = React.createContext()
 export class I18n extends Component {
   constructor(props) {
     super(props)
-    this.init(this.props)
+    this.init()
+    this.state = {
+      contextValue: this.getContextValue()
+    }
   }
 
-  init(props) {
-    const { polyglot, lang, dictRequire, context, defaultLang } = props
-
+  init() {
+    const { polyglot, lang, dictRequire, context, defaultLang } = this.props
     this.translator =
       polyglot || initTranslation(lang, dictRequire, context, defaultLang)
     this.format = initFormat(lang, defaultLang)
     this.t = this.translator.t.bind(this.translator)
-    this.contextValue = this.getContextValue()
   }
 
   getContextValue() {
@@ -40,18 +41,19 @@ export class I18n extends Component {
   }
 
   getChildContext() {
-    return this.contextValue
+    return this.state.contextValue
   }
 
-  UNSAFE_componentWillReceiveProps = nextProps => {
-    if (nextProps.lang !== this.props.lang) {
-      this.init(nextProps)
+  componentDidUpdate(prevProps) {
+    if (prevProps.lang !== this.props.lang) {
+      this.init()
+      this.setState({ contextValue: this.getContextValue() })
     }
   }
 
   render() {
     return (
-      <I18nContext.Provider value={this.contextValue}>
+      <I18nContext.Provider value={this.state.contextValue}>
         {this.props.children}
       </I18nContext.Provider>
     )
