@@ -7143,6 +7143,8 @@ exports[`SelectBox should render examples: SelectBox 13`] = `
 </div>"
 `;
 
+exports[`SelectBox should render examples: SelectBox 14`] = `"<div><button>Toggle modal</button></div>"`;
+
 exports[`Sidebar should render examples: Sidebar 1`] = `
 "<div>
   <aside class=\\"styles__o-sidebar___1295j\\" id=\\"sidebar\\">
