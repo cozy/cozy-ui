@@ -60,7 +60,7 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
         label={t('SelectionBar.close')}
         type="button"
         theme="close"
-        className={styles['SelectionBar-action-close']}
+        className={styles['SelectionBar-actionClose']}
         onClick={hideSelectionBar}
         extension="narrow"
       >
