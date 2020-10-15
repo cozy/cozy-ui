@@ -7,12 +7,14 @@ import SelectionBar from 'cozy-ui/transpiled/react/SelectionBar';
 import I18n from 'cozy-ui/transpiled/react/I18n';
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
 
-initialState = { selected: [] };
 
 const selectedItem = {
     _id: 1,
     type: 'file'
-}
+};
+
+initialState = { selected: isTesting() ? [selectedItem, selectedItem] : [] };
+
 
 const addSelected = () => setState(previousState => {
     const arr = previousState.selected
