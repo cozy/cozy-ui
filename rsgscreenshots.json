@@ -12,5 +12,8 @@
   },
   "Dialog": {
     "perExampleScreenshot": true
+  },
+  "SelectBox": {
+    "perExampleScreenshot": true
   }
 }
