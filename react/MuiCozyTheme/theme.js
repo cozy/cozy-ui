@@ -153,6 +153,12 @@ normalTheme.overrides = {
     },
     textColorSecondary: {
       color: 'var(--coolGrey)'
+    },
+    root: {
+      fontSize: normalTheme.typography.subtitle1.fontSize,
+      [normalTheme.breakpoints.up('md')]: {
+        fontSize: normalTheme.typography.subtitle1.fontSize
+      }
     }
   },
   MuiExpansionPanel: {
