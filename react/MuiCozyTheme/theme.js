@@ -83,16 +83,6 @@ export const normalTheme = createMuiTheme({
     borderRadius: defaultValues.borderRadius
   },
   breakpoints: {
-    // Define custom breakpoint values.
-    // These will apply to Material-UI components that use responsive
-    // breakpoints, such as `Grid` and `Hidden`. You can also use the
-    // theme breakpoint functions `up`, `down`, and `between` to create
-    // media queries for these breakpoints
-    // xs = all
-    // sm = tiny
-    // md = small
-    // lg = medium
-    // xl = large
     values: {
       xs: 0,
       sm: 480,
@@ -163,6 +153,12 @@ normalTheme.overrides = {
     },
     textColorSecondary: {
       color: 'var(--coolGrey)'
+    },
+    root: {
+      fontSize: normalTheme.typography.subtitle1.fontSize,
+      [normalTheme.breakpoints.up('md')]: {
+        fontSize: normalTheme.typography.subtitle1.fontSize
+      }
     }
   },
   MuiExpansionPanel: {
