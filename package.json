@@ -49,16 +49,14 @@
     "screenshots": "node scripts/screenshots.js --screenshot-dir ./screenshots --styleguide-dir ./build/react",
     "test": "yarn test:jest",
     "test:jest": "jest",
-    "transpile:react": "env BABEL_ENV=transpilation babel react/ --out-dir transpiled/react --verbose",
-    "transpile:helpers": "babel helpers/ --out-dir transpiled/helpers --verbose",
-    "transpile": "yarn transpile:react && yarn transpile:helpers",
+    "transpile": "env BABEL_ENV=transpilation babel react/ --out-dir transpiled/react --verbose",
     "posttranspile": "postcss transpiled/react/stylesheet.css --replace",
     "travis-deploy-once": "travis-deploy-once",
     "watch:css": "yarn build:css --watch",
-    "prewatch:doc:react": "yarn sprite",
-    "watch:doc:react": "env BUILD_ENV=watch-styleguidist styleguidist server --config docs/styleguide.config.js",
+    "prewatch:doc": "yarn sprite",
+    "watch:doc": "env BUILD_ENV=watch-styleguidist styleguidist server --config docs/styleguide.config.js",
     "watch:doc:kss": "nodemon --ext styl,md --watch stylus --exec 'yarn build:doc:kss && http-server build/styleguide -p 4242'",
-    "watch": "yarn transpile:react --watch"
+    "watch": "yarn transpile --watch"
   },
   "sideEffects": [
     "*.css",
