@@ -1,10 +1,12 @@
-## Push Client Banner
+## Push Client Banner - Deprecated
+
+**Deprecated - Please use `<Banner />` instead.**
 
 Banner to advertise for Cozy desktop client.
 
 ### Basic usage
 
-```
+```jsx
 import BannerClient from 'cozy-ui/transpiled/react/PushClientBanner';
 <BannerClient
   text="Get Cozy Drive for Desktop and synchronise your files safely to make them accessible at all times."
@@ -21,7 +23,7 @@ import BannerClient from 'cozy-ui/transpiled/react/PushClientBanner';
 
 You can add a function to `onClick` prop on top of the hyperlink
 
-```
+```jsx
 import BannerClient from 'cozy-ui/transpiled/react/PushClientBanner';
 <BannerClient
   text="Get Cozy Drive for Desktop and synchronise your files safely to make them accessible at all times."
