@@ -136,7 +136,6 @@
   "dependencies": {
     "@babel/runtime": "^7.3.4",
     "@popperjs/core": "^2.4.4",
-    "body-scroll-lock": "^2.5.8",
     "classnames": "^2.2.5",
     "cozy-interapp": "0.5.4",
     "date-fns": "^1.28.5",
@@ -147,6 +146,7 @@
     "react-markdown": "^4.0.8",
     "react-pdf": "^4.0.5",
     "react-popper": "^2.2.3",
+    "react-remove-scroll": "^2.4.0",
     "react-select": "2.2.0",
     "react-swipeable-views": "0.13.3"
   },

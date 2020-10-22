@@ -3,7 +3,7 @@ import styles from './styles.styl'
 import cx from 'classnames'
 import omit from 'lodash/omit'
 import PropTypes from 'prop-types'
-import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
+import { RemoveScroll } from 'react-remove-scroll'
 
 const ESC_KEYCODE = 27
 
@@ -21,10 +21,6 @@ const bodyTallerThanWindow = () => {
  */
 class Overlay extends Component {
   componentDidMount() {
-    if (bodyTallerThanWindow()) {
-      disableBodyScroll(document.body)
-      disableBodyScroll(document.body.parentNode)
-    }
     if (this.props.onEscape) {
       document.addEventListener('keydown', this.handleKeydown)
     }
@@ -37,9 +33,6 @@ class Overlay extends Component {
   }
 
   componentWillUnmount() {
-    // restauration function can be undefined if there was
-    // an error during mounting/rendering
-    clearAllBodyScrollLocks()
     if (this.props.onEscape) {
       document.removeEventListener('keydown', this.handleKeydown)
     }
@@ -54,13 +47,19 @@ class Overlay extends Component {
   render() {
     const { children, className } = this.props
     const domProps = omit(this.props, nonDOMProps)
+    // We use Overlay when opening an ActionMenu.
+    // We don't want to block the scroll on Desktop if the ActionMenu
+    // is displayed. So no RemoveScroll if the content is too small
+    // @todo Overlay should not RemoveScroll by itself. It should
+    // be done by lower component (like ActionMenu / Dialog / Modal...)
+    const Wrapper = bodyTallerThanWindow() ? React.Fragment : RemoveScroll
     return (
       <div
         onClick={this.handleClick}
         className={cx(styles['c-overlay'], className)}
         {...domProps}
       >
-        {children}
+        <Wrapper>{children}</Wrapper>
       </div>
     )
   }

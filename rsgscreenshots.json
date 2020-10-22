@@ -9,5 +9,8 @@
   },
   "Modal": {
     "perExampleScreenshot": true
+  },
+  "Dialog": {
+    "perExampleScreenshot": true
   }
 }

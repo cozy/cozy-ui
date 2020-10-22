@@ -21,6 +21,28 @@ const ActionMenuWrapper = ({
   preventOverflow,
   children
 }) => {
+  if (!inline) return <BottomDrawer onClose={onClose}>{children}</BottomDrawer>
+  return (
+    <NotInlineWrapper
+      anchorElRef={anchorElRef}
+      popperOptions={popperOptions}
+      placement={placement}
+      preventOverflow={preventOverflow}
+      onClose={onClose}
+    >
+      {children}
+    </NotInlineWrapper>
+  )
+}
+
+const NotInlineWrapper = ({
+  anchorElRef,
+  popperOptions,
+  placement,
+  preventOverflow,
+  onClose,
+  children
+}) => {
   const [popperElement, setPopperElement] = React.useState(null)
   const referenceElement = anchorElRef ? anchorElRef.current : null
 
@@ -44,8 +66,7 @@ const ActionMenuWrapper = ({
     popperElement,
     options
   )
-
-  return inline ? (
+  return (
     <div
       ref={setPopperElement}
       style={{
@@ -56,11 +77,8 @@ const ActionMenuWrapper = ({
     >
       <ClickAwayListener onClickAway={onClose}>{children}</ClickAwayListener>
     </div>
-  ) : (
-    <BottomDrawer onClose={onClose}>{children}</BottomDrawer>
   )
 }
-
 const logDepecratedPlacement = createDepreciationLogger()
 const logDepecratedOverflow = createDepreciationLogger()
 const logDepecratedContainer = createDepreciationLogger()

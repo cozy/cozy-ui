@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Hammer from 'hammerjs'
 import once from 'lodash/once'
+import { RemoveScroll } from 'react-remove-scroll'
+
 import styles from './styles.styl'
 import Overlay from '../Overlay'
 
@@ -128,17 +130,19 @@ class BottomDrawer extends Component {
     this.menuNode = React.createRef()
     this.wrapperNode = React.createRef()
     return (
-      <div ref={this.wrapperNode}>
-        <Overlay
-          style={{ opacity: closing ? 0 : 1 }}
-          onClick={this.animateClose}
-          onEscape={this.animateClose}
-        >
-          <div ref={this.menuNode} className={styles['BottomDrawer-content']}>
-            {children}
-          </div>
-        </Overlay>
-      </div>
+      <RemoveScroll>
+        <div ref={this.wrapperNode}>
+          <Overlay
+            style={{ opacity: closing ? 0 : 1 }}
+            onClick={this.animateClose}
+            onEscape={this.animateClose}
+          >
+            <div ref={this.menuNode} className={styles['BottomDrawer-content']}>
+              {children}
+            </div>
+          </Overlay>
+        </div>
+      </RemoveScroll>
     )
   }
 }
