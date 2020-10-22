@@ -1,7 +1,7 @@
 import merge from 'lodash/merge'
 import { createMuiTheme } from '@material-ui/core/styles'
 import { getCssVariableValue } from '../utils/color'
-import isTesting from '../../helpers/isTesting'
+import isTesting from '../helpers/isTesting'
 
 const defaultValues = {
   borderRadius: 6,

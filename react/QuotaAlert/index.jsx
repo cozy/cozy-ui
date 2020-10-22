@@ -4,7 +4,7 @@ import Modal from '../Modal'
 import { useClient } from 'cozy-client'
 import { isMobileApp } from 'cozy-device-helper'
 
-import useInstance from '../../helpers/useInstance'
+import useInstance from '../helpers/useInstance'
 
 import withLocales from '../I18n/withLocales'
 import en from './locales/en.json'
