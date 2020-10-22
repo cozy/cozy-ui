@@ -7,10 +7,10 @@ The popover attribute should be used to automatically layout
 the upload queue:
 
 * in a fixed bottom-right position on desktop
-* underneath the top-bar on mobile  
+* underneath the top-bar on mobile
 
 ```
-import isTesting from '../../helpers/isTesting'
+import isTesting from '../helpers/isTesting'
 
 const initialState = {
   popover: false
@@ -38,7 +38,7 @@ const data = {
       loaded: 100,
       total: 400,
       speed: 135000,
-      remainingTime: 90 
+      remainingTime: 90
     },
     status: 'loading'
   }, {

@@ -71,7 +71,7 @@ git clone git@github.com:cozy/cozy-ui.git
 It is convenient when modifying a component to use the styleguide site.
 
 ```bash
-yarn watch:doc:react # Run the styleguide in watch mode
+yarn watch:doc # Run the styleguide in watch mode
 ```
 
 ### Develop inside an app
@@ -82,7 +82,7 @@ Then you need to link cozy-ui with `yarn link`.
 ```bash
 cd cozy-ui
 yarn link
-yarn transpile --watch # Launch transpilation
+yarn watch # Launch transpilation
 ```
 
 Then in your application folder, you can link to your local Cozy UI.
