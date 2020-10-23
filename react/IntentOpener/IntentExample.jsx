@@ -4,7 +4,7 @@ import IntentWrapper from '../IntentWrapper'
 const IntentExample = function({ onComplete, action, doctype, options }) {
   return (
     <IntentWrapper
-      appIcon={'http://lorempixel.com/90/90/cats'}
+      appIcon={'https://via.placeholder.com/90'}
       appName="IntentExample"
       appEditor="EditorExample"
     >
