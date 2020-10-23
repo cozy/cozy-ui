@@ -347,10 +347,10 @@ normalTheme.overrides = {
     paper: {
       'box-sizing': 'border-box',
       [normalTheme.breakpoints.down('md')]: {
-        padding: `${defaultValues.dialog.sm.padding}px`
+        padding: `12px ${defaultValues.dialog.sm.padding}px`
       },
       [normalTheme.breakpoints.up('md')]: {
-        padding: `${defaultValues.dialog.md.padding}px`
+        padding: `16px ${defaultValues.dialog.md.padding}px`
       }
     },
     paperWidthSm: {
@@ -366,21 +366,26 @@ normalTheme.overrides = {
   },
   MuiDialogContent: {
     root: {
+      '&.modal_content_dividers': {
+        padding: '1.5rem 0'
+      },
       [normalTheme.breakpoints.up('md')]: {
-        padding: `${defaultValues.dialog.md.padding}px 0`
+        padding: '0 0 0.75rem'
       },
       [normalTheme.breakpoints.down('sm')]: {
-        padding: `${defaultValues.dialog.sm.padding}px 0`
-      },
-
-      overflowY: 'initial'
+        padding: '0',
+        '&.modal_content_dividers': {
+          padding: '1rem 0'
+        }
+      }
     }
   },
   MuiDialogActions: {
     root: {
       padding: '0',
+      margin: '12px 0 0',
       [normalTheme.breakpoints.down('sm')]: {
-        margin: 0,
+        margin: '8px 0 0',
         '& button': {
           '&:only-child': {
             width: '100%'
@@ -402,9 +407,13 @@ normalTheme.overrides = {
   },
   MuiDialogTitle: {
     root: {
-      padding: '0 0 16px 0',
+      ...normalTheme.typography.h3,
+      padding: '4px 0 0',
+      marginBottom: '20px',
+      width: '90%', // to not recover DialogCloseButton
       [normalTheme.breakpoints.down('sm')]: {
-        padding: '14px 0 16px 0'
+        ...normalTheme.typography.h4,
+        marginBottom: '12px'
       }
     }
   },

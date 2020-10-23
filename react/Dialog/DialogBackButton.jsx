@@ -5,7 +5,7 @@ const DialogBackButton = ({ onClick }) => {
   return (
     <Icon
       onClick={onClick}
-      icon="left"
+      icon="previous"
       className="u-c-pointer u-coolGrey u-mr-1"
     />
   )
