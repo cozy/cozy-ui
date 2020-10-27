@@ -18,6 +18,8 @@ const BannerClient = props => {
     onClick
   } = props
 
+  console.warn('Deprecated : please use <Banner /> instead.')
+
   return (
     <div className={styles['c-banner-client']}>
       <ButtonLink

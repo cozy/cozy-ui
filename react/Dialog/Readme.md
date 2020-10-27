@@ -133,8 +133,6 @@ initialState = { modalOpened: isTesting() }
 </>
 ```
 
-
-
 ### With long content
 
 ```jsx
