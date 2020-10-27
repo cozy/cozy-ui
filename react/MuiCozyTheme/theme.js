@@ -402,6 +402,7 @@ normalTheme.overrides = {
   },
   MuiDialogTitle: {
     root: {
+      width: '90%',
       padding: '0 0 16px 0',
       [normalTheme.breakpoints.down('sm')]: {
         padding: '14px 0 16px 0'
