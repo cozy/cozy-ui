@@ -67,6 +67,7 @@
     "@babel/core": "7.11.5",
     "@cozy/codemods": "1.2.0",
     "@material-ui/core": "3.9.4",
+    "@material-ui/styles": "4.10.0",
     "@oskarer/enzyme-wait": "^1.5.0",
     "@semantic-release/changelog": "3.0.6",
     "@semantic-release/git": "7.0.18",
