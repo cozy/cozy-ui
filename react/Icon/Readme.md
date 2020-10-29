@@ -4,7 +4,7 @@ as your custom icons.
 ⚠️ When using `Icon`, you can either give a React component or use the identifier
 of an already loaded one. `cozy-ui` ships with built-in icons that you can
 include via `Sprite`. See the example below for how to include `Sprite`.
-`Sprite` can for example be included in the main `Layout` of your applicaiton.
+`Sprite` can for example be included in the main `Layout` of your application.
 
 ### Available illustrations
 
@@ -31,7 +31,7 @@ import Icon from 'cozy-ui/transpiled/react/Icon';
 import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite';
 const colors = ['#297EF2', '#08b442', '#B449E7', '#F52D2D', '#FF962F']
 let i = 0
-const availableIcons = ['album','album-add','album-remove','answer','apple','archive','attachment','attention','bank','bell','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-firefox','browser-ie','browser-opera','browser-safari','burger','calendar','camera','car','certified','check','check-circle','check-list','check-square','circle-filled','clock','cloud','cloud-happy','collect','comment','company','compass','connector','contract','contrast','cozy-text','credit-card','credit-card-add','crop','cross','cross-circle','cross-small','cube','dash','dashboard','data-control','devices','dots','down','download','drawing-arrow-up','dropdown','dropdown-close','dropdown-open','dropup','email','email-notification','eu','euro','exchange','eye','eye-closed','file','file-add','file-duotone','file-none','file-outline','filter','fingerprint','flag','flag-outlined','flash-auto','flashlight','folder','folder-add','forbidden','from-user','gear','globe','grid','group-list','groups','heart','help','history','home','hourglass','image','info','info-outlined','key','laptop','left','lightbulb','link','link-out','list','location','lock','logout','magic-trick','magnet','magnifier','merge','movement-in','movement-out','moveto','multi-files','music','new','next','note','offline','online','openwith','palette','paperplane','password','pen','people','percent-circle','personal-data','phone','phone-download','pie-chart','pin','plus','plus-small','previous','printer','qualify','rename','repare','restore','right','rise','rotate-left','rotate-right','sad-cozy','select-all','setting','share','share-circle','sound','spinner','stack','star','stats','sync','sync-cozy','target','team','telephone','to-the-cloud','top','trash','trophy','unlink','unlock','up','upload','videos','wallet','wallet-add','warn','warning','warning-circle','wrench-circle'];
+const availableIcons = ['album-add','album-remove','album','answer','apple','archive','attachment','attention','bank','banking-add','banking','bell','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-firefox','browser-ie','browser-opera','browser-safari','burger','calendar','camera','car','categories','certified','check-circle','check-list','check-square','check','circle-filled','clock','cloud-happy','cloud','collect','comment','company','compass','connector','contract','contrast','cozy-laugh','cozy-text','credit-card-add','credit-card','credit','crop','cross-circle','cross-small','cross','cube','dash','dashboard','data-control','debit','devices','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','email-notification','email','eu','euro','exchange','eye-closed','eye','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','flag-outlined','flag','flash-auto','flashlight','folder-add','folder','forbidden','from-user','gear','globe','graph-circle','grid','group-list','groups','heart','help','history','home','hourglass','image','info-outlined','info','key','laptop','left','lightbulb','link-out','link','list','location','lock','logout','magic-trick','magnet','magnifier','merge','movement-in','movement-out','moveto','multi-files','music','new','next','note','notification-email','offline','online','openwith','palette','paperplane','password','pen','people','percent-circle','percent','personal-data','phone-download','phone','pie-chart','pin','plus-small','plus','previous','printer','qualify','rename','repare','restore','right','rise','rotate-left','rotate-right','sad-cozy','select-all','setting','share-circle','share','sound','spinner','stack','star','stats','sync-cozy','sync','target','team','telephone','to-the-cloud','top','trash','trophy','unlink','unlock','up','upload','videos','wallet-add','wallet-new','wallet','warn','warning-circle','warning','wrench-circle'];
 <div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
   <Sprite />
   {
@@ -468,7 +468,8 @@ const icons = [
   WalletNew,
   Warn,
   Warning,
-  WarningCircle
+  WarningCircle,
+  WrenchCircle
 ];
 
 const wrapperStyle = {
