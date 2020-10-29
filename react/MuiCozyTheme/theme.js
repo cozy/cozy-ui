@@ -338,6 +338,90 @@ normalTheme.overrides = {
       fontSize: '0.875rem'
     }
   },
+  MuiDialog: {
+    paper: {
+      '&.sizeS': {
+        width: '480px',
+        maxWidth: '480px',
+        [normalTheme.breakpoints.down('md')]: {
+          margin: '16px',
+          padding: '0 8px 8px',
+          height: 'auto',
+          maxHeight: 'calc(100% - 32px)',
+          borderRadius: '6px'
+        }
+      },
+      '&.sizeM': {
+        [normalTheme.breakpoints.up('md')]: {
+          width: '544px',
+          maxWidth: '544px'
+        }
+      },
+      '&.sizeL': {
+        [normalTheme.breakpoints.up('md')]: {
+          width: '800px',
+          maxWidth: '800px'
+        }
+      }
+    }
+  },
+  MuiDialogTitle: {
+    root: {
+      ...normalTheme.typography.h3,
+      width: 'calc(100% - (58px + 30px))', // remove close button width and margin
+      padding: '24px 32px',
+      [normalTheme.breakpoints.down('sm')]: {
+        ...normalTheme.typography.h4,
+        width: 'calc(100% - 58px)', // remove close button width and margin
+        padding: '13px 16px 12px'
+      },
+      '&.dialogTitleFluid': {
+        paddingTop: 0,
+        paddingLeft: 0,
+        paddingRight: 0,
+        [normalTheme.breakpoints.down('sm')]: {
+          padding: '0 0 24px 0'
+        }
+      }
+    }
+  },
+  MuiDialogContent: {
+    root: {
+      padding: '24px 32px 0',
+      [normalTheme.breakpoints.down('sm')]: {
+        padding: '24px 16px 0'
+      },
+      '& .dialogContentInner': {
+        marginBottom: '24px',
+        '&.withFluidActions': {
+          [normalTheme.breakpoints.down('sm')]: {
+            marginBottom: '16px'
+          }
+        }
+      }
+    }
+  },
+  MuiDialogActions: {
+    root: {
+      margin: '16px 32px',
+      [normalTheme.breakpoints.down('sm')]: {
+        margin: '8px 16px'
+      },
+      '&.dialogActionsFluid': {
+        margin: '24px 0 0'
+      },
+      '&.dialogActionsBelow': {
+        display: 'block',
+        '& button': {
+          width: '100%',
+          margin: 0,
+          '&:not(:first-child)': {
+            marginTop: '8px'
+          }
+        }
+      }
+    }
+  },
   MuiDivider: {
     /**
      * calcs are made since we have defaultMargin on the Dialog so
