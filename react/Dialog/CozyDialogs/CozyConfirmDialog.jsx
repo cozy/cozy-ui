@@ -19,7 +19,7 @@ const CozyConfirmDialog = ({
   actions,
   below
 }) => {
-  const { cssSize, isFullscreen } = useCozyDialog('S')
+  const { cssSize, isFullscreen, id } = useCozyDialog('S')
 
   return (
     <Dialog
@@ -29,11 +29,16 @@ const CozyConfirmDialog = ({
       TransitionProps={{ isFullscreen }}
       fullScreen={isFullscreen}
       classes={{ paper: cssSize }}
+      aria-labelledby={`modal-title-${id}`}
     >
       {!isFullscreen && <DialogCloseButton onClick={onClose} />}
       <DialogContent>
         <div className="dialogContentInner withFluidActions">
-          <DialogTitle disableTypography className="dialogTitleFluid">
+          <DialogTitle
+            id={`modal-title-${id}`}
+            disableTypography
+            className="dialogTitleFluid"
+          >
             {isFullscreen ? <DialogBackButton onClick={onClose} /> : null}
             {title}
           </DialogTitle>

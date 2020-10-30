@@ -1,4 +1,7 @@
+import { useState } from 'react'
 import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+
+let globalId = 0
 
 /**
  * Returns the cssSize class and isFullscreen bool to be used in the Dialog,
@@ -8,8 +11,9 @@ import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
  */
 export const useCozyDialog = size => {
   const { isMobile } = useBreakpoints()
+  const [id] = useState(globalId++)
   const cssSize = ['S', 'M', 'L'].includes(size) ? `size${size}` : 'sizeM'
   const isFullscreen = size !== 'S' && isMobile
 
-  return { cssSize, isFullscreen }
+  return { cssSize, isFullscreen, id: id }
 }

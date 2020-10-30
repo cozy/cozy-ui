@@ -21,7 +21,7 @@ const CozyIllustrationDialog = ({
   below,
   size
 }) => {
-  const { cssSize, isFullscreen } = useCozyDialog(size)
+  const { cssSize, isFullscreen, id } = useCozyDialog(size)
 
   return (
     <Dialog
@@ -31,11 +31,16 @@ const CozyIllustrationDialog = ({
       TransitionProps={{ isFullscreen }}
       fullScreen={isFullscreen}
       classes={{ paper: cssSize }}
+      aria-labelledby={`modal-title-${id}`}
     >
       {!isFullscreen && <DialogCloseButton onClick={onClose} />}
       <DialogContent>
         <div className="dialogContentInner withFluidActions">
-          <DialogTitle disableTypography className="dialogTitleFluid u-w-100">
+          <DialogTitle
+            id={`modal-title-${id}`}
+            disableTypography
+            className="dialogTitleFluid u-w-100"
+          >
             {isFullscreen ? <DialogBackButton onClick={onClose} /> : null}
             <div className="u-flex u-flex-justify-center">{title}</div>
           </DialogTitle>
