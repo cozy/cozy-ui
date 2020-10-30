@@ -8,13 +8,13 @@ Pre-built modals ready to be directly used in applications, based on MUI Dialog.
 
 ### Props
 
-* size : `<string>` Should be S, M (default), L
+* size : `<string>` Can be "s", "m" (default) or "l"
 * opened : `<boolean>` (required) To open/close the modal
 * onClose : `<function>` (required) Triggered function on modal close action
 * title : `<node>` Title of the modal
 * content : `<node>` Content of the modal
 * actions : `<node>` Actions of the modal
-* below : `<boolean>` Show actions in column
+* actionsLayout : `<string>` Can be "row" or "column"
 
 ```jsx
 import Variants from 'docs/components/Variants'
