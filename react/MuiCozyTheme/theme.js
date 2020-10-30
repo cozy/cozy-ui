@@ -411,12 +411,13 @@ normalTheme.overrides = {
         margin: '24px 0 0'
       },
       '&.columnLayout': {
-        display: 'block',
+        display: 'flex',
+        flexDirection: 'column-reverse',
         '& button': {
           width: '100%',
           margin: 0,
           '&:not(:first-child)': {
-            marginTop: '8px'
+            marginBottom: '8px'
           }
         }
       }
