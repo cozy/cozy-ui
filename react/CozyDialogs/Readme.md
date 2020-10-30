@@ -7,6 +7,7 @@ Pre-built modals ready to be directly used in applications, based on MUI Dialog.
 * FixedActionsDialog : default one but with title fluid and actions fixed
 
 ### Props
+
 * size : `<string>` Should be S, M (default), L
 * opened : `<boolean>` (required) To open/close the modal
 * onClose : `<function>` (required) Triggered function on modal close action
