@@ -37,7 +37,7 @@ import Icon from 'cozy-ui/transpiled/react/Icon'
 const handleClose = () => setState({ modalOpened: !state.modalOpened })
 
 initialState = {
-  modalOpened: isTesting(),
+  modalOpened: false,
   modal: Dialog,
   size: 'm',
   actionsLayout: 'row',
@@ -123,6 +123,13 @@ const StateRadio = ({ name, ...props }) => {
   />
 }
 
+const toggleDialog = dialog => {
+  setState({
+    modalOpened: !state.modalOpened,
+    modal: dialog
+  })
+}
+
 <>
   <BreakpointsProvider>
     <MuiCozyTheme>
@@ -156,7 +163,7 @@ const StateRadio = ({ name, ...props }) => {
     </MuiCozyTheme>
   </BreakpointsProvider>
   {dialogs.map(dialog => (
-    <button onClick={() => setState({ modalOpened: !state.modalOpened, modal: dialog })}>
+    <button data-test-id={`open-btn-${dialog.name}`} onClick={() => toggleDialog(dialog)}>
       Open {dialog.name}
     </button>
   ))}

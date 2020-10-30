@@ -35,7 +35,12 @@ const Dialog = ({
       classes={{ paper: cssSize }}
       aria-labelledby={`modal-title-${id}`}
     >
-      {!isFullscreen && <DialogCloseButton onClick={onClose} />}
+      {!isFullscreen && (
+        <DialogCloseButton
+          onClick={onClose}
+          data-test-id={`modal-close-button-${id}`}
+        />
+      )}
       <DialogTitle
         id={`modal-title-${id}`}
         disableTypography

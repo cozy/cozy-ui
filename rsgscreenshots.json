@@ -12,5 +12,8 @@
   },
   "Dialog": {
     "perExampleScreenshot": true
+  },
+  "CozyDialogs": {
+    "script": "./react/CozyDialogs/e2e.js"
   }
 }

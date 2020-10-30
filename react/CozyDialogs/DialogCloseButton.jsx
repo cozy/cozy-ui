@@ -5,9 +5,13 @@ import IconButton from 'cozy-ui/transpiled/react/IconButton'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import styles from './styles.styl'
 
-const CloseButton = ({ onClick }) => {
+const CloseButton = ({ onClick, ...props }) => {
   return (
-    <IconButton onClick={onClick} className={styles.DialogCloseButton}>
+    <IconButton
+      onClick={onClick}
+      className={styles.DialogCloseButton}
+      {...props}
+    >
       <Icon icon="cross-medium" />
     </IconButton>
   )

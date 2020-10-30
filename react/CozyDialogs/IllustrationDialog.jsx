@@ -34,7 +34,12 @@ const IllustrationDialog = ({
       classes={{ paper: cssSize }}
       aria-labelledby={`modal-title-${id}`}
     >
-      {!isFullscreen && <DialogCloseButton onClick={onClose} />}
+      {!isFullscreen && (
+        <DialogCloseButton
+          data-test-id={`modal-close-button-${id}`}
+          onClick={onClose}
+        />
+      )}
       <DialogContent>
         <div className="dialogContentInner withFluidActions">
           <DialogTitle

@@ -17,6 +17,8 @@ const flattenDeep = require('lodash/flattenDeep')
 const stackExampleApp = require('../examples/stack')
 const { ArgumentParser } = require('argparse')
 
+const rootDirectory = path.join(__dirname, '../')
+
 const emptyDirectory = directory => {
   for (const filename of fs.readdirSync(directory)) {
     fs.unlinkSync(path.join(directory, filename))
@@ -25,8 +27,10 @@ const emptyDirectory = directory => {
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
-const defaultGetScreenshotName = ({ component, viewport }) =>
-  `${component.testId}-${formatViewport(viewport)}.png`
+const defaultGetScreenshotName = ({ component, viewport, suffix }) =>
+  `${component.testId}-${suffix ? `${suffix}-` : ''}${formatViewport(
+    viewport
+  )}.png`
 
 const formatViewport = viewport => `${viewport.width}x${viewport.height}`
 
@@ -45,12 +49,29 @@ const screenshotComponent = async (page, options) => {
   const getScreenshotName =
     options.getScreenshotName || defaultGetScreenshotName
 
-  console.log(`Screenshotting ${name} at ${formatViewport(viewport)}`)
+  const screenshot = async suffix => {
+    await page.screenshot({
+      path: path.join(
+        screenshotDir,
+        getScreenshotName({ component, viewport, suffix })
+      ),
+      fullPage: true
+    })
+  }
+
   await page.bringToFront()
-  await page.screenshot({
-    path: path.join(screenshotDir, getScreenshotName({ component, viewport })),
-    fullPage: true
-  })
+
+  if (options.componentConfig && options.componentConfig.script) {
+    const componentScript = require(path.join(
+      rootDirectory,
+      options.componentConfig.script
+    ))
+    console.log(`Executing custom script for ${name}`)
+    await componentScript(page, screenshot)
+  } else {
+    console.log(`Screenshotting ${name} at ${formatViewport(viewport)}`)
+    await screenshot()
+  }
 }
 
 const getComponentNameFromTestId = testId => {
@@ -248,6 +269,7 @@ const screenshotStyleguide = async (page, args, config) => {
     await page.setViewport(componentViewport)
     await screenshotComponent(page, {
       component,
+      componentConfig,
       screenshotDir: args.screenshotDir,
       viewport: componentViewport
     })
