@@ -19,7 +19,7 @@ const CozyActionsFixedDialog = ({
   title,
   content,
   actions,
-  below,
+  actionsLayout,
   size
 }) => {
   const { cssSize, isFullscreen, id } = useCozyDialog(size)
@@ -51,7 +51,7 @@ const CozyActionsFixedDialog = ({
       <CardDivider />
       <DialogActions
         disableActionSpacing
-        className={cx({ dialogActionsBelow: below })}
+        className={cx({ columnLayout: actionsLayout == "column" })}
       >
         {actions}
       </DialogActions>
@@ -65,7 +65,7 @@ CozyActionsFixedDialog.propTypes = {
   title: PropTypes.node,
   content: PropTypes.node,
   actions: PropTypes.node,
-  below: PropTypes.bool,
+  actionsLayout: PropTypes.oneOf(['row', 'column']),
   size: PropTypes.string
 }
 

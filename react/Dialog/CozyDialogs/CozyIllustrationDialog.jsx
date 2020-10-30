@@ -18,7 +18,7 @@ const CozyIllustrationDialog = ({
   title,
   content,
   actions,
-  below,
+  actionsLayout,
   size
 }) => {
   const { cssSize, isFullscreen, id } = useCozyDialog(size)
@@ -48,7 +48,7 @@ const CozyIllustrationDialog = ({
           <DialogActions
             disableActionSpacing
             className={cx('dialogActionsFluid', {
-              dialogActionsBelow: below
+              columnLayout: actionsLayout == "column"
             })}
           >
             {actions}
@@ -65,7 +65,7 @@ CozyIllustrationDialog.propTypes = {
   title: PropTypes.node,
   content: PropTypes.node,
   actions: PropTypes.node,
-  below: PropTypes.bool,
+  actionsLayout: PropTypes.oneOf(['row', 'column']),
   size: PropTypes.string
 }
 

@@ -17,7 +17,7 @@ const CozyConfirmDialog = ({
   title,
   content,
   actions,
-  below
+  actionsLayout
 }) => {
   const { cssSize, isFullscreen, id } = useCozyDialog('S')
 
@@ -46,7 +46,7 @@ const CozyConfirmDialog = ({
           <DialogActions
             disableActionSpacing
             className={cx('dialogActionsFluid', {
-              dialogActionsBelow: below
+              columnLayout: actionsLayout == "column"
             })}
           >
             {actions}
@@ -63,7 +63,7 @@ CozyConfirmDialog.propTypes = {
   title: PropTypes.node,
   content: PropTypes.node,
   actions: PropTypes.node,
-  below: PropTypes.bool
+  actionsLayout: PropTypes.oneOf(['row', 'column'])
 }
 
 export default CozyConfirmDialog

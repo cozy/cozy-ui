@@ -410,7 +410,7 @@ normalTheme.overrides = {
       '&.dialogActionsFluid': {
         margin: '24px 0 0'
       },
-      '&.dialogActionsBelow': {
+      '&.columnLayout': {
         display: 'block',
         '& button': {
           width: '100%',
