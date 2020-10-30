@@ -40,7 +40,8 @@ initialState = {
   modalOpened: isTesting(),
   modal: Dialog,
   size: 'm',
-  actionsLayout: 'row'
+  actionsLayout: 'row',
+  content: 'default'
 }
 
 const DialogComponent = state.modal
@@ -125,6 +126,11 @@ const StateRadio = ({ name, ...props }) => {
 <>
   <BreakpointsProvider>
     <MuiCozyTheme>
+      <p>Content:
+        default: <StateRadio value='default' name='content' />{' '}
+        short: <StateRadio value='short' name='content' />{' '}
+        long: <StateRadio value='long' name='content' />
+      </p>
       <p>Size:
         s: <StateRadio value='s' name='size' />{' '}
         m: <StateRadio value='m' name='size' />{' '}
@@ -139,7 +145,11 @@ const StateRadio = ({ name, ...props }) => {
         opened={state.modalOpened}
         onClose={handleClose}
         title={dialogTitles[DialogComponent.name]}
-        content={dialogContents[DialogComponent.name]}
+        content={state.content == 'default'
+          ? dialogContents[DialogComponent.name]
+          : state.content == 'long'
+            ? content.ada.long 
+            : content.ada.short}
         actions={dialogActions[DialogComponent.name]}
         actionsLayout={state.actionsLayout}
       />
