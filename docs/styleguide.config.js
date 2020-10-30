@@ -91,6 +91,7 @@ module.exports = {
         '../react/MidEllipsis/index.jsx',
         '../react/Modal/index.jsx',
         '../react/CozyDialogs',
+        '../react/Dialog',
         '../react/OrderedList/index.jsx',
         '../react/Table/index.jsx',
         '../react/Text/index.jsx',
