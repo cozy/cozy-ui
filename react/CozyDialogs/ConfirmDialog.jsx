@@ -6,22 +6,22 @@ import { useCozyDialog } from './useCozyDialog'
 import Dialog, {
   DialogTitle,
   DialogActions,
-  DialogContent,
-  DialogBackButton,
-  DialogCloseButton
+  DialogContent
 } from 'cozy-ui/transpiled/react/Dialog'
+
+import DialogBackButton from './DialogBackButton'
+import DialogCloseButton from './DialogCloseButton'
 import DialogTransition from './DialogTransition'
 
-const CozyIllustrationDialog = ({
+const ConfirmDialog = ({
   opened,
   onClose,
   title,
   content,
   actions,
-  actionsLayout,
-  size
+  actionsLayout
 }) => {
-  const { cssSize, isFullscreen, id } = useCozyDialog(size)
+  const { cssSize, isFullscreen, id } = useCozyDialog('S')
 
   return (
     <Dialog
@@ -39,16 +39,16 @@ const CozyIllustrationDialog = ({
           <DialogTitle
             id={`modal-title-${id}`}
             disableTypography
-            className="dialogTitleFluid u-w-100"
+            className="dialogTitleFluid"
           >
             {isFullscreen ? <DialogBackButton onClick={onClose} /> : null}
-            <div className="u-flex u-flex-justify-center">{title}</div>
+            {title}
           </DialogTitle>
           {content}
           <DialogActions
             disableActionSpacing
             className={cx('dialogActionsFluid', {
-              columnLayout: actionsLayout == "column"
+              columnLayout: actionsLayout == 'column'
             })}
           >
             {actions}
@@ -59,14 +59,13 @@ const CozyIllustrationDialog = ({
   )
 }
 
-CozyIllustrationDialog.propTypes = {
+ConfirmDialog.propTypes = {
   opened: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
   title: PropTypes.node,
   content: PropTypes.node,
   actions: PropTypes.node,
-  actionsLayout: PropTypes.oneOf(['row', 'column']),
-  size: PropTypes.string
+  actionsLayout: PropTypes.oneOf(['row', 'column'])
 }
 
-export default CozyIllustrationDialog
+export default ConfirmDialog

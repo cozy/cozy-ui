@@ -1,12 +1,10 @@
-## CozyDialogs
-
 Pre-built modals ready to be directly used in applications, based on MUI Dialog.
 
-* CozyDialog : default Cozy modal
-* CozyConfirmDialog : used for confirmation popup
-* CozyIllustrationDialog : used for illustration as title
-* CozyFixedDialog : default one but with both title/actions fixed
-* CozyActionsFixedDialog : default one but with title fluid and actions fixed
+* Dialog : default Cozy modal
+* ConfirmDialog : used for confirmation popups
+* IllustrationDialog : used for illustration as title
+* FixedDialog : default one but with both title/actions fixed
+* FixedActionsDialog : default one but with title fluid and actions fixed
 
 ### Props
 * size : `<string>` Should be S, M (default), L
@@ -20,11 +18,14 @@ Pre-built modals ready to be directly used in applications, based on MUI Dialog.
 ```jsx
 import Variants from 'docs/components/Variants'
 
-import CozyDialog from 'cozy-ui/transpiled/react/Dialog/CozyDialogs/CozyDialog'
-import CozyConfirmDialog from 'cozy-ui/transpiled/react/Dialog/CozyDialogs/CozyConfirmDialog'
-import CozyIllustrationDialog from 'cozy-ui/transpiled/react/Dialog/CozyDialogs/CozyIllustrationDialog'
-import CozyFixedDialog from 'cozy-ui/transpiled/react/Dialog/CozyDialogs/CozyFixedDialog'
-import CozyActionsFixedDialog from 'cozy-ui/transpiled/react/Dialog/CozyDialogs/CozyActionsFixedDialog'
+import {
+  Dialog,
+  ConfirmDialog,
+  IllustrationDialog,
+  FixedDialog,
+  FixedActionsDialog
+} from  'cozy-ui/transpiled/react/CozyDialogs'
+
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
@@ -34,9 +35,9 @@ import Icon from 'cozy-ui/transpiled/react/Icon'
 
 const handleClose = () => setState({ modalOpened: !state.modalOpened })
 
-initialState = { modalOpened: isTesting(), modal: CozyDialog }
+initialState = { modalOpened: isTesting(), modal: Dialog }
 
-const CozyDialogs = state.modal
+const DialogComponent = state.modal
 
 const dialogTitle = {
   short: "Ada Lovelace",
@@ -67,20 +68,39 @@ const DialogActions = () => {
 }
 
 const initialVariants = [
-  { shortTitle: true, shortContent: true, actionsBelow: false, illustrationTitle: false, sizeS: false, sizeM: true, sizeL: false }
+  {
+    shortTitle: true,
+    shortContent: true,
+    actionsBelow: false,
+    sizeS: false,
+    sizeM: true,
+    sizeL: false 
+  }
 ];
-const dialogs = [CozyDialog, CozyConfirmDialog, CozyIllustrationDialog, CozyFixedDialog, CozyActionsFixedDialog];
+
+const dialogs = [
+  Dialog,
+  ConfirmDialog,
+  IllustrationDialog,
+  FixedDialog,
+  FixedActionsDialog
+];
 
 <>
   <BreakpointsProvider>
     <MuiCozyTheme>
       <Variants initialVariants={initialVariants}>{
         variant => (
-          <CozyDialogs
+          <DialogComponent
             size={(variant.sizeS ? "S" : variant.sizeM ? "M" : variant.sizeL ? "L": undefined)}
             opened={state.modalOpened}
             onClose={handleClose}
-            title={variant.illustrationTitle ? dialogTitle.illustration : variant.shortTitle ? dialogTitle.short : dialogTitle.long}
+            title={
+              DialogComponent.name === 'IllustrationDialog'
+                ? dialogTitle.illustration
+                : variant.shortTitle
+                  ? dialogTitle.short
+                  : dialogTitle.long}
             content={variant.shortContent ? dialogContent.short : dialogContent.long}
             actions={<DialogActions />}
             below={variant.actionsBelow}
@@ -107,11 +127,13 @@ import cx from 'classnames'
 import Dialog, {
   DialogTitle,
   DialogActions,
-  DialogContent,
-  DialogBackButton,
-  DialogCloseButton,
-  DialogTransition
+  DialogContent
 } from 'cozy-ui/transpiled/react/Dialog';
+import {
+  DialogTransition,
+  DialogBackButton,
+  DialogCloseButton
+} from 'cozy-ui/transpiled/react/CozyDialogs';
 import useBreakpoints, {
   BreakpointsProvider
 } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'

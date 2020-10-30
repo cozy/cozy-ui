@@ -6,14 +6,15 @@ import { useCozyDialog } from './useCozyDialog'
 import Dialog, {
   DialogTitle,
   DialogActions,
-  DialogContent,
-  DialogBackButton,
-  DialogCloseButton
+  DialogContent
 } from 'cozy-ui/transpiled/react/Dialog'
-import DialogTransition from './DialogTransition'
 import { CardDivider } from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
 
-const CozyDialog = ({
+import DialogTransition from './DialogTransition'
+import DialogBackButton from './DialogBackButton'
+import DialogCloseButton from './DialogCloseButton'
+
+const FixedDialog = ({
   opened,
   onClose,
   title,
@@ -45,23 +46,20 @@ const CozyDialog = ({
       </DialogTitle>
       <CardDivider />
       <DialogContent>
-        <div className="dialogContentInner withFluidActions">
-          {content}
-          <DialogActions
-            disableActionSpacing
-            className={cx('dialogActionsFluid', {
-              columnLayout: actionsLayout == "column"
-            })}
-          >
-            {actions}
-          </DialogActions>
-        </div>
+        <div className="dialogContentInner">{content}</div>
       </DialogContent>
+      <CardDivider />
+      <DialogActions
+        disableActionSpacing
+        className={cx({ columnLayout: actionsLayout == 'column' })}
+      >
+        {actions}
+      </DialogActions>
     </Dialog>
   )
 }
 
-CozyDialog.propTypes = {
+FixedDialog.propTypes = {
   opened: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
   title: PropTypes.node,
@@ -71,4 +69,4 @@ CozyDialog.propTypes = {
   size: PropTypes.string
 }
 
-export default CozyDialog
+export default FixedDialog

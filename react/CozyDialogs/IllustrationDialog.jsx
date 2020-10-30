@@ -6,14 +6,14 @@ import { useCozyDialog } from './useCozyDialog'
 import Dialog, {
   DialogTitle,
   DialogActions,
-  DialogContent,
-  DialogBackButton,
-  DialogCloseButton
+  DialogContent
 } from 'cozy-ui/transpiled/react/Dialog'
-import DialogTransition from './DialogTransition'
-import { CardDivider } from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
 
-const CozyFixedDialog = ({
+import DialogBackButton from './DialogBackButton'
+import DialogCloseButton from './DialogCloseButton'
+import DialogTransition from './DialogTransition'
+
+const IllustrationDialog = ({
   opened,
   onClose,
   title,
@@ -35,30 +35,32 @@ const CozyFixedDialog = ({
       aria-labelledby={`modal-title-${id}`}
     >
       {!isFullscreen && <DialogCloseButton onClick={onClose} />}
-      <DialogTitle
-        id={`modal-title-${id}`}
-        disableTypography
-        className="u-ellipsis"
-      >
-        {isFullscreen ? <DialogBackButton onClick={onClose} /> : null}
-        {title}
-      </DialogTitle>
-      <CardDivider />
       <DialogContent>
-        <div className="dialogContentInner">{content}</div>
+        <div className="dialogContentInner withFluidActions">
+          <DialogTitle
+            id={`modal-title-${id}`}
+            disableTypography
+            className="dialogTitleFluid u-w-100"
+          >
+            {isFullscreen ? <DialogBackButton onClick={onClose} /> : null}
+            <div className="u-flex u-flex-justify-center">{title}</div>
+          </DialogTitle>
+          {content}
+          <DialogActions
+            disableActionSpacing
+            className={cx('dialogActionsFluid', {
+              columnLayout: actionsLayout == 'column'
+            })}
+          >
+            {actions}
+          </DialogActions>
+        </div>
       </DialogContent>
-      <CardDivider />
-      <DialogActions
-        disableActionSpacing
-        className={cx({ columnLayout: actionsLayout == "column" })}
-      >
-        {actions}
-      </DialogActions>
     </Dialog>
   )
 }
 
-CozyFixedDialog.propTypes = {
+IllustrationDialog.propTypes = {
   opened: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
   title: PropTypes.node,
@@ -68,4 +70,4 @@ CozyFixedDialog.propTypes = {
   size: PropTypes.string
 }
 
-export default CozyFixedDialog
+export default IllustrationDialog

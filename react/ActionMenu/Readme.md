@@ -128,7 +128,7 @@ const anchorRef = React.createRef();
 import ActionMenu, { ActionMenuItem } from 'cozy-ui/transpiled/react/ActionMenu';
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Icon from 'cozy-ui/transpiled/react/Icon';
-import CozyDialog from 'cozy-ui/transpiled/react/Dialog/CozyDialogs/CozyDialog';
+import { Dialog } from 'cozy-ui/transpiled/react/CozyDialogs';
 
 import {
   BreakpointsProvider
@@ -162,7 +162,7 @@ const onClose = () => setState({ modalOpened: !state.modalOpened });
                   Item 1
               </ActionMenuItem>
           </ActionMenu>}
-          <CozyDialog
+          <Dialog
             opened={state.modalOpened}
             onClose={() => onClose()}
             title="Ada Lovelace"

@@ -1,3 +1,5 @@
+⚠️ Please do not use Modal, prefer [CozyDialogs](#/CozyDialogs) variants, ready-made components based on Mui Dialog.
+
 ### Simple
 
 ```jsx

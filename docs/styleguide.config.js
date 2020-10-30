@@ -90,7 +90,7 @@ module.exports = {
         '../react/Media/Media.jsx',
         '../react/MidEllipsis/index.jsx',
         '../react/Modal/index.jsx',
-        '../react/Dialog',
+        '../react/CozyDialogs',
         '../react/OrderedList/index.jsx',
         '../react/Table/index.jsx',
         '../react/Text/index.jsx',
