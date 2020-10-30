@@ -405,7 +405,10 @@ normalTheme.overrides = {
     root: {
       margin: '16px 32px',
       [normalTheme.breakpoints.down('sm')]: {
-        margin: '8px 16px'
+        margin: '8px 16px',
+        '& button': {
+          flexGrow: 1
+        }
       },
       '&.dialogActionsFluid': {
         margin: '24px 0 0'
