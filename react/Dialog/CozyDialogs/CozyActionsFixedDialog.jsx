@@ -8,9 +8,9 @@ import Dialog, {
   DialogActions,
   DialogContent,
   DialogBackButton,
-  DialogCloseButton,
-  DialogTransition
+  DialogCloseButton
 } from 'cozy-ui/transpiled/react/Dialog'
+import DialogTransition from './DialogTransition'
 import { CardDivider } from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
 
 const CozyActionsFixedDialog = ({
@@ -29,6 +29,7 @@ const CozyActionsFixedDialog = ({
       open={opened}
       onClose={onClose}
       TransitionComponent={DialogTransition}
+      TransitionProps={{ isFullscreen }}
       fullScreen={isFullscreen}
       classes={{ paper: cssSize }}
     >

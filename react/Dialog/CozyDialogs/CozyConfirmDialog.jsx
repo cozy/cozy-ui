@@ -8,10 +8,9 @@ import Dialog, {
   DialogActions,
   DialogContent,
   DialogBackButton,
-  DialogCloseButton,
-  DialogTransition
+  DialogCloseButton
 } from 'cozy-ui/transpiled/react/Dialog'
-
+import DialogTransition from './DialogTransition'
 const CozyConfirmDialog = ({
   opened,
   onClose,
@@ -27,6 +26,7 @@ const CozyConfirmDialog = ({
       open={opened}
       onClose={onClose}
       TransitionComponent={DialogTransition}
+      TransitionProps={{ isFullscreen }}
       fullScreen={isFullscreen}
       classes={{ paper: cssSize }}
     >
