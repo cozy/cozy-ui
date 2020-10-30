@@ -35,7 +35,12 @@ import Icon from 'cozy-ui/transpiled/react/Icon'
 
 const handleClose = () => setState({ modalOpened: !state.modalOpened })
 
-initialState = { modalOpened: isTesting(), modal: Dialog }
+initialState = {
+  modalOpened: isTesting(),
+  modal: Dialog,
+  size: 'm',
+  actionsLayout: 'row'
+}
 
 const DialogComponent = state.modal
 
@@ -97,13 +102,6 @@ const dialogActions = {
   Dialog: <ExampleDialogActions />
 }
 
-const initialVariants = [
-  {
-    sizeS: false,
-    sizeM: true,
-    sizeL: false 
-  }
-];
 
 const dialogs = [
   Dialog,
@@ -113,22 +111,37 @@ const dialogs = [
   FixedActionsDialog
 ];
 
+const StateRadio = ({ name, ...props }) => {
+  return <input
+    type='radio'
+    name={name}
+    checked={state[name] == props.value}
+    onChange={() => setState({ [name]: props.value })}
+    {...props}
+  />
+}
+
 <>
   <BreakpointsProvider>
     <MuiCozyTheme>
-      <Variants initialVariants={initialVariants}>{
-        variant => (
-          <DialogComponent
-            size={(variant.sizeS ? "S" : variant.sizeM ? "M" : variant.sizeL ? "L": undefined)}
-            opened={state.modalOpened}
-            onClose={handleClose}
-            title={dialogTitles[DialogComponent.name]}
-            content={dialogContents[DialogComponent.name]}
-            actions={dialogActions[DialogComponent.name]}
-            actionsLayout={variant.columnActionsLayout ? 'column' : 'row'}
-          />
-        )
-      }</Variants>
+      <p>Size:
+        s: <StateRadio value='s' name='size' />{' '}
+        m: <StateRadio value='m' name='size' />{' '}
+        l: <StateRadio value='l' name='size' />
+      </p>
+      <p>Actions layout:
+        row: <StateRadio value='row' name='actionsLayout' />{' '}
+        column: <StateRadio value='column' name='actionsLayout' />
+      </p>
+      <DialogComponent
+        size={state.size}
+        opened={state.modalOpened}
+        onClose={handleClose}
+        title={dialogTitles[DialogComponent.name]}
+        content={dialogContents[DialogComponent.name]}
+        actions={dialogActions[DialogComponent.name]}
+        actionsLayout={state.actionsLayout}
+      />
     </MuiCozyTheme>
   </BreakpointsProvider>
   {dialogs.map(dialog => (

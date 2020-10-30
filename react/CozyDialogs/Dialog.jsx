@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import { useCozyDialog } from './useCozyDialog'
@@ -10,6 +9,7 @@ import MUIDialog, {
 } from 'cozy-ui/transpiled/react/Dialog'
 import { CardDivider } from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
 
+import dialogPropTypes from './dialogPropTypes'
 import DialogBackButton from './DialogBackButton'
 import DialogCloseButton from './DialogCloseButton'
 import DialogTransition from './DialogTransition'
@@ -62,14 +62,6 @@ const Dialog = ({
   )
 }
 
-Dialog.propTypes = {
-  opened: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
-  title: PropTypes.node,
-  content: PropTypes.node,
-  actions: PropTypes.node,
-  actionsLayout: PropTypes.oneOf(['row', 'column']),
-  size: PropTypes.string
-}
+Dialog.propTypes = dialogPropTypes
 
 export default Dialog

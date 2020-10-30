@@ -1,6 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
+import omit from 'lodash/omit'
 
 import { useCozyDialog } from './useCozyDialog'
 import Dialog, {
@@ -9,6 +9,7 @@ import Dialog, {
   DialogContent
 } from 'cozy-ui/transpiled/react/Dialog'
 
+import dialogPropTypes from './dialogPropTypes'
 import DialogBackButton from './DialogBackButton'
 import DialogCloseButton from './DialogCloseButton'
 import DialogTransition from './DialogTransition'
@@ -59,13 +60,6 @@ const ConfirmDialog = ({
   )
 }
 
-ConfirmDialog.propTypes = {
-  opened: PropTypes.bool.isRequired,
-  onClose: PropTypes.func.isRequired,
-  title: PropTypes.node,
-  content: PropTypes.node,
-  actions: PropTypes.node,
-  actionsLayout: PropTypes.oneOf(['row', 'column'])
-}
+ConfirmDialog.PropTypes = omit(dialogPropTypes, 'size')
 
 export default ConfirmDialog
