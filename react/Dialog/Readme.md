@@ -1,6 +1,6 @@
 ## CozyDialogs
 
-Pre-built modal ready to be directly used in applications, based on MUI Dialog.
+Pre-built modals ready to be directly used in applications, based on MUI Dialog.
 
 * CozyDialog : default Cozy modal
 * CozyConfirmDialog : used for confirmation popup
