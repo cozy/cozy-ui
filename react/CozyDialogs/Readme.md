@@ -39,18 +39,7 @@ initialState = { modalOpened: isTesting(), modal: Dialog }
 
 const DialogComponent = state.modal
 
-const dialogTitle = {
-  short: "Ada Lovelace",
-  long: "Ada Lovelace Ada Lovelace Ada Lovelace Ada Lovelace Ada Lovelace",
-  illustration: <Icon icon="cozy" size="140" />
-}
-
-const dialogContent = {
-  short: new Array(10).fill('Augusta Ada King-Noel was an English mathematician and writer.').join('\n'),
-  long: new Array(100).fill('Augusta Ada King-Noel was an English mathematician and writer.').join('\n')
-}
-
-const DialogActions = () => {
+const ExampleDialogActions = () => {
   return (
     <>
       <Button
@@ -60,18 +49,56 @@ const DialogActions = () => {
       />
       <Button
         theme="primary"
-        label={'Touch Me'}
+        label='Do something'
         onClick={() => alert('click')}
       />
     </>
   )
 }
 
+const ConfirmDialogActions = () => {
+  return (
+    <>
+      <Button
+        theme="secondary"
+        onClick={handleClose}
+        label={'Close Modal'}
+      />
+      <Button
+        theme="danger"
+        label='Do something destructive'
+        onClick={() => alert('click')}
+      />
+    </>
+  )
+}
+
+const dialogTitles = {
+  ConfirmDialog: "Are you sure ?",
+  IllustrationDialog: <Icon icon="cozy" size="140" />,
+  FixedDialog: 'Fixed Dialog',
+  FixedActionsDialog: 'Fixed Actions Dialog',
+  Dialog: 'Dialog'
+}
+
+const dialogContents = {
+  ConfirmDialog: "Content of a confirm dialog, precising what the actions will do, and asking the user if she is sure.",
+  IllustrationDialog: "An IllustrationDialog contains short content." + content.ada.short,
+  FixedDialog: "A FixedDialog can contain very long content. Actions are at the bottom of the content are not visible to the user if she has not scrolled to the bottom. " + content.ada.long,
+  FixedActionsDialog: "A FixedActionsDialog can contain very long content. Actions are visible even without scrolling. " + content.ada.long,
+  Dialog: "A normal Dialog should contain short content. " + content.ada.short
+}
+
+const dialogActions = {
+  ConfirmDialog: <ConfirmDialogActions />,
+  IllustrationDialog: <ExampleDialogActions />,
+  FixedDialog: <ExampleDialogActions />,
+  FixedActionsDialog: <ExampleDialogActions />,
+  Dialog: <ExampleDialogActions />
+}
+
 const initialVariants = [
   {
-    shortTitle: true,
-    shortContent: true,
-    actionsBelow: false,
     sizeS: false,
     sizeM: true,
     sizeL: false 
@@ -95,15 +122,10 @@ const dialogs = [
             size={(variant.sizeS ? "S" : variant.sizeM ? "M" : variant.sizeL ? "L": undefined)}
             opened={state.modalOpened}
             onClose={handleClose}
-            title={
-              DialogComponent.name === 'IllustrationDialog'
-                ? dialogTitle.illustration
-                : variant.shortTitle
-                  ? dialogTitle.short
-                  : dialogTitle.long}
-            content={variant.shortContent ? dialogContent.short : dialogContent.long}
-            actions={<DialogActions />}
-            below={variant.actionsBelow}
+            title={dialogTitles[DialogComponent.name]}
+            content={dialogContents[DialogComponent.name]}
+            actions={dialogActions[DialogComponent.name]}
+            actionsLayout={variant.columnActionsLayout ? 'column' : 'row'}
           />
         )
       }</Variants>
