@@ -246,12 +246,50 @@ const readConfig = async () => {
   }
 }
 
+const loadJSON = filename => {
+  try {
+    return JSON.parse(fs.readFileSync(filename).toString())
+  } catch {
+    return null
+  }
+}
+
+const cacheToDisk = (fnToCache, options) =>
+  async function() {
+    const { cacheFile } = options
+    let res
+    if (cacheFile) {
+      res = loadJSON(cacheFile)
+    }
+    if (res) {
+      options.onLoadCache && options.onLoadCache()
+    } else {
+      res = await fnToCache.apply(this, arguments)
+      if (cacheFile) {
+        fs.writeFileSync(cacheFile, JSON.stringify(res, null, 2))
+        options.onSaveCache && options.onSaveCache()
+      }
+    }
+    return res
+  }
+
 const screenshotStyleguide = async (page, args, config) => {
   const styleguideIndexURL = `file://${path.join(
     args.styleguideDir,
     '/index.html'
   )}`
-  let components = await fetchAllComponents(page, styleguideIndexURL, config)
+
+  const cachedFetchAllComponents = cacheToDisk(fetchAllComponents, {
+    cacheFile: args.cacheFile,
+    onLoadCache: () =>
+      console.log(`Using cached component list from ${args.cacheFile}`),
+    onSaveCache: () => console.log(`Saved component list to ${args.cacheFile}`)
+  })
+  let components = await cachedFetchAllComponents(
+    page,
+    styleguideIndexURL,
+    config
+  )
   if (args.component) {
     components = components.filter(component =>
       component.name.includes(args.component)
@@ -339,6 +377,14 @@ const main = async () => {
     dest: 'emptyScreenshotDir'
   })
   parser.addArgument('--component')
+  parser.addArgument('--cache-file', {
+    defaultValue: '/tmp/cozy-ui-e2e-screenshots-cache.json',
+    dest: 'cacheFile'
+  })
+  parser.addArgument('--no-cache', {
+    dest: 'cacheFile',
+    action: 'storeFalse'
+  })
 
   const config = await readConfig()
   const args = parser.parseArgs()
