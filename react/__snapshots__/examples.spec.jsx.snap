@@ -129,7 +129,6 @@ exports[`ActionMenu should render examples: ActionMenu 5`] = `
         </div>
       </div>
     </div>
-    <div></div>
   </div>
 </div>"
 `;
@@ -205,18 +204,18 @@ exports[`Avatar should render examples: Avatar 4`] = `
 exports[`Badge should render examples: Badge 1`] = `
 "<div>
   <div class=\\"u-m-1\\">error: <input class=\\"u-mr-1\\" type=\\"checkbox\\">dot: <input class=\\"u-mr-1\\" type=\\"checkbox\\">large: <input class=\\"u-mr-1\\" type=\\"checkbox\\">small: <input class=\\"u-mr-1\\" type=\\"checkbox\\"></div>
-  <p><span class=\\"MuiBadge-root-64 Component-root-52\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"24\\" height=\\"24\\"><use xlink:href=\\"#circle-filled\\"></use></svg><span class=\\"MuiBadge-badge-65 Component-badge-51 Component-top-53 Component-right-56 Component-medium-58 MuiBadge-colorPrimary-66 Component-colorPrimary-60\\">4</span></span></p>
+  <p><span class=\\"MuiBadge-root-68 Component-root-56\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"24\\" height=\\"24\\"><use xlink:href=\\"#circle-filled\\"></use></svg><span class=\\"MuiBadge-badge-69 Component-badge-55 Component-top-57 Component-right-60 Component-medium-62 MuiBadge-colorPrimary-70 Component-colorPrimary-64\\">4</span></span></p>
   <div class=\\"u-m-1\\">error: <input class=\\"u-mr-1\\" type=\\"checkbox\\" checked=\\"\\">dot: <input class=\\"u-mr-1\\" type=\\"checkbox\\" checked=\\"\\">large: <input class=\\"u-mr-1\\" type=\\"checkbox\\">small: <input class=\\"u-mr-1\\" type=\\"checkbox\\"></div>
-  <p><span class=\\"MuiBadge-root-64 Component-root-52\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"24\\" height=\\"24\\"><use xlink:href=\\"#circle-filled\\"></use></svg><span class=\\"MuiBadge-badge-65 Component-badge-51 Component-top-53 Component-right-56 Component-medium-58 MuiBadge-colorError-68 Component-colorError-62 MuiBadge-dot-70 Component-dot-63\\"></span></span></p>
+  <p><span class=\\"MuiBadge-root-68 Component-root-56\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"24\\" height=\\"24\\"><use xlink:href=\\"#circle-filled\\"></use></svg><span class=\\"MuiBadge-badge-69 Component-badge-55 Component-top-57 Component-right-60 Component-medium-62 MuiBadge-colorError-72 Component-colorError-66 MuiBadge-dot-74 Component-dot-67\\"></span></span></p>
   <div class=\\"u-m-1\\">error: <input class=\\"u-mr-1\\" type=\\"checkbox\\">dot: <input class=\\"u-mr-1\\" type=\\"checkbox\\">large: <input class=\\"u-mr-1\\" type=\\"checkbox\\">small: <input class=\\"u-mr-1\\" type=\\"checkbox\\"></div>
-  <p><span class=\\"MuiBadge-root-64 Component-root-52\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"24\\" height=\\"24\\"><use xlink:href=\\"#circle-filled\\"></use></svg><span class=\\"MuiBadge-badge-65 Component-badge-51 Component-top-53 Component-right-56 Component-medium-58 MuiBadge-colorPrimary-66 Component-colorPrimary-60\\">4</span></span></p>
+  <p><span class=\\"MuiBadge-root-68 Component-root-56\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"24\\" height=\\"24\\"><use xlink:href=\\"#circle-filled\\"></use></svg><span class=\\"MuiBadge-badge-69 Component-badge-55 Component-top-57 Component-right-60 Component-medium-62 MuiBadge-colorPrimary-70 Component-colorPrimary-64\\">4</span></span></p>
 </div>"
 `;
 
 exports[`Badge should render examples: Badge 2`] = `
 "<div>
-  <p><span class=\\"MuiBadge-root-64 Component-root-52\\"><div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span>
-</div><span class=\\"MuiBadge-badge-65 Component-badge-51 Component-qualifier-71 Component-bottom-54 Component-right-56 Component-medium-58\\"><span class=\\"MuiBadge-root-64 Component-root-52\\"><svg class=\\"styles__icon___23x3R\\" width=\\"10\\" height=\\"10\\"><use xlink:href=\\"#link\\"></use></svg><span class=\\"MuiBadge-badge-65 Component-badge-51 Component-top-53 Component-right-56 Component-small-59 MuiBadge-colorError-68 Component-colorError-62 MuiBadge-dot-70 Component-dot-63\\"></span></span></span></span></p>
+  <p><span class=\\"MuiBadge-root-68 Component-root-56\\"><div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\" style=\\"color: white;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span>
+</div><span class=\\"MuiBadge-badge-69 Component-badge-55 Component-qualifier-75 Component-bottom-58 Component-right-60 Component-medium-62\\"><span class=\\"MuiBadge-root-68 Component-root-56\\"><svg class=\\"styles__icon___23x3R\\" width=\\"10\\" height=\\"10\\"><use xlink:href=\\"#link\\"></use></svg><span class=\\"MuiBadge-badge-69 Component-badge-55 Component-top-57 Component-right-60 Component-small-63 MuiBadge-colorError-72 Component-colorError-66 MuiBadge-dot-74 Component-dot-67\\"></span></span></span></span></p>
 </div>"
 `;
 
@@ -453,7 +452,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
     <ol class=\\"styles__list-contact___8ztoP\\">
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">EMPTY</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">EMPTY</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"013a6414-9727-4a4e-8b35-d3b9946a17c6\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -469,7 +468,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">A</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">A</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"013a6413-9726-4a4d-8b34-d3b9946a17c5\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -485,7 +484,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">B</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">B</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"799b0f99-3ad7-4f07-a689-9765b4e239c9\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -578,7 +577,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">C</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">C</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"507fcc3d-1423-46da-b5f9-8fbcfd3f3fe4\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -627,7 +626,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">F</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">F</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"7acdab81-52cb-46f6-9e81-42032e9843ae\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -654,7 +653,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">G</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">G</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"8ba82505-25c3-4821-88df-2e11becc21e8\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -670,7 +669,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">H</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">H</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"307c4e16-70b8-4328-af1c-1d762f788e16\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -719,7 +718,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">J</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">J</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"3e540ae7-4605-4f05-82c9-8cb901a0c34d\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -735,7 +734,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">K</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">K</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"366f3eec-aaa0-4c82-9f27-80ad305ecec8\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -773,7 +772,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">L</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">L</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"3fe82c80-9da3-4a42-bab5-8274df1316e6\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -822,7 +821,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">M</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">M</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"d50b7eea-6e71-4348-ad75-fc791d7a82d4\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -893,7 +892,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">N</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">N</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"627ba975-1314-4813-8366-cea7ac4734bf\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -909,7 +908,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">O</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">O</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"3f6007f9-9284-4bfd-9350-1cbf294bd39b\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -925,7 +924,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">P</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">P</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"53c75e29-5c9b-4c4f-b802-e4a152551b23\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -974,7 +973,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">R</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">R</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"c55c831a-9869-4e14-b3aa-d004bced41b0\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1001,7 +1000,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">S</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">S</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"814f6f67-bcc0-498f-bb91-cab5ed315a12\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1072,7 +1071,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">T</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">T</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"0ea42f4a-28f1-432e-934a-68f9c50fe38e\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1121,7 +1120,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">V</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">V</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"23d3d724-d869-4def-841f-c85b499aa6a6\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1159,7 +1158,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">W</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">W</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"b6f5fc43-4199-4cca-8372-d1fe4e75a168\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1230,7 +1229,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">X</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">X</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"71967809-8e54-4413-aa8e-35b2b945e816\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1256,7 +1255,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
     <ol class=\\"styles__list-contact___8ztoP\\">
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">EMPTY</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">EMPTY</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"013a6414-9727-4a4e-8b35-d3b9946a17c6\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1272,7 +1271,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">A</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">A</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"013a6413-9726-4a4d-8b34-d3b9946a17c5\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1288,7 +1287,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">B</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">B</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"799b0f99-3ad7-4f07-a689-9765b4e239c9\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1381,7 +1380,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">C</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">C</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"507fcc3d-1423-46da-b5f9-8fbcfd3f3fe4\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1430,7 +1429,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">F</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">F</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"7acdab81-52cb-46f6-9e81-42032e9843ae\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1457,7 +1456,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">G</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">G</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"8ba82505-25c3-4821-88df-2e11becc21e8\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1473,7 +1472,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">H</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">H</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"307c4e16-70b8-4328-af1c-1d762f788e16\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1522,7 +1521,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">J</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">J</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"3e540ae7-4605-4f05-82c9-8cb901a0c34d\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1538,7 +1537,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">K</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">K</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"366f3eec-aaa0-4c82-9f27-80ad305ecec8\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1576,7 +1575,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">L</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">L</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"3fe82c80-9da3-4a42-bab5-8274df1316e6\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1625,7 +1624,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">M</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">M</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"d50b7eea-6e71-4348-ad75-fc791d7a82d4\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1696,7 +1695,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">N</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">N</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"627ba975-1314-4813-8366-cea7ac4734bf\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1712,7 +1711,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">O</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">O</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"3f6007f9-9284-4bfd-9350-1cbf294bd39b\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1728,7 +1727,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">P</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">P</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"53c75e29-5c9b-4c4f-b802-e4a152551b23\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1777,7 +1776,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">R</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">R</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"c55c831a-9869-4e14-b3aa-d004bced41b0\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1804,7 +1803,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">S</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">S</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"814f6f67-bcc0-498f-bb91-cab5ed315a12\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1875,7 +1874,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">T</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">T</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"0ea42f4a-28f1-432e-934a-68f9c50fe38e\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1924,7 +1923,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">V</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">V</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"23d3d724-d869-4def-841f-c85b499aa6a6\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1962,7 +1961,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">W</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">W</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"b6f5fc43-4199-4cca-8372-d1fe4e75a168\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -2033,7 +2032,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-72 MuiListSubheader-sticky-77 MuiListSubheader-gutters-75\\">X</li>
+          <li class=\\"MuiListSubheader-root-76 MuiListSubheader-sticky-81 MuiListSubheader-gutters-79\\">X</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"71967809-8e54-4413-aa8e-35b2b945e816\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -2069,23 +2068,7 @@ exports[`DateMonthPicker should render examples: DateMonthPicker 1`] = `
 </div>"
 `;
 
-exports[`Dialog should render examples: Dialog 1`] = `
-"<div><button>Toggle modal</button>
-  <div></div>
-</div>"
-`;
-
-exports[`Dialog should render examples: Dialog 2`] = `
-"<div><button>Toggle modal</button>
-  <div></div>
-</div>"
-`;
-
-exports[`Dialog should render examples: Dialog 3`] = `
-"<div><button>Toggle modal</button>
-  <div></div>
-</div>"
-`;
+exports[`Dialog should render examples: Dialog 1`] = `"<div><button>Toggle modal</button></div>"`;
 
 exports[`Empty should render examples: Empty 1`] = `
 "<div>
@@ -2734,7 +2717,7 @@ exports[`Icon should render examples: Icon 1`] = `
         <symbol id=\\"burger\\" viewBox=\\"0 0 16 16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M0 3c0-.552.445-1 1-1h14c.552 0 1 .444 1 1 0 .552-.445 1-1 1H1c-.552 0-1-.444-1-1zm0 10c0-.552.445-1 1-1h14c.552 0 1 .444 1 1 0 .552-.445 1-1 1H1c-.552 0-1-.444-1-1zm0-5c0-.552.445-1 1-1h14c.552 0 1 .444 1 1 0 .552-.445 1-1 1H1c-.552 0-1-.444-1-1z\\"></path>
         </symbol>
-        <symbol id=\\"calendar\\" viewBox=\\"0 0 16 16\\">
+        <symbol id=\\"calendar\\">
           <path d=\\"M13 1h3v2H0V1h3V0h2v1h6V0h2v1zM0 4h16v10.998A1 1 0 0 1 15 16H1c-.552 0-1-.456-1-1.002V4zm2 2v8h12V6H2zm6 3h5v4H8V9z\\" fill-rule=\\"nonzero\\"></path>
         </symbol>
         <symbol id=\\"camera\\" viewBox=\\"0 0 16 16\\">
@@ -2843,6 +2826,9 @@ exports[`Icon should render examples: Icon 1`] = `
         </symbol>
         <symbol id=\\"cross-circle\\" viewBox=\\"0 0 16 16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM5.707 4.293l-.094-.083a1 1 0 0 0-1.226 0l-.094.083-.083.094-.07.102c-.206.345-.185.788.062 1.114l.09.104L6.586 8l-2.292 2.293a1 1 0 0 0 1.32 1.497l.094-.083L8 9.415l2.293 2.292.094.083a1 1 0 0 0 1.226 0l.094-.083.083-.094a1 1 0 0 0 0-1.226l-.083-.094L9.415 8l2.292-2.293a1 1 0 0 0-1.32-1.497l-.094.083L8 6.585 5.707 4.293l-.094-.083.094.083z\\"></path>
+        </symbol>
+        <symbol id=\\"cross-medium\\" viewBox=\\"0 0 16 16\\">
+          <path fill-rule=\\"evenodd\\" d=\\"M8 6.59l5.3-5.3a1 1 0 0 1 1.4 1.42L9.42 8l5.3 5.3a1 1 0 0 1-1.42 1.4L8 9.42l-5.3 5.3a1 1 0 1 1-1.4-1.42L6.58 8l-5.3-5.3A1 1 0 1 1 2.7 1.3L8 6.58z\\"></path>
         </symbol>
         <symbol id=\\"cross-small\\" viewBox=\\"0 0 12 12\\">
           <path d=\\"M6 4.59l2.3-2.3a1 1 0 0 1 1.4 1.42L7.42 6l2.3 2.3A1 1 0 1 1 8.3 9.7L6 7.42l-2.3 2.3A1 1 0 1 1 2.3 8.3L4.58 6l-2.3-2.3A1 1 0 0 1 3.7 2.3L6 4.58z\\"></path>
@@ -3050,8 +3036,8 @@ exports[`Icon should render examples: Icon 1`] = `
           <path fill-rule=\\"evenodd\\" d=\\"M4.977 12.513s.103-1.083-.956-2.022a6 6 0 1 1 7.99-.028c-.674.605-.907 2.05-.907 2.05a.635.635 0 0 1-.595.487H5.491a.524.524 0 0 1-.514-.487zM11 14l-1.652 1.652a1.355 1.355 0 0 1-.853.348h-.99c-.279 0-.662-.157-.853-.348L5 14h6zm1-8a4 4 0 0 0-4-4 1 1 0 1 0 0 2 2 2 0 0 1 2 2 1 1 0 0 0 2 0z\\"></path>
         </symbol>
         <symbol id=\\"link-out\\" viewBox=\\"0 0 16 16\\">
-          <g fill-rule=\\"evenodd\\" transform=\\"translate(-128 -160)\\">
-            <path d=\\"M137,160 L137,162 L140.5,162 L134,168.5 L135.5,170 L142,163.5 L142,167 L144,167 L144,161.002929 C144,160.449027 143.562119,160 142.997071,160 L137,160 Z M135,162 L135,160 L129.002929,160 C128.449027,160 128,160.444631 128,161.000872 L128,174.999128 C128,175.551894 128.444631,176 129.000872,176 L142.999128,176 C143.551894,176 144,175.562119 144,174.997071 L144,169 L142,169 L142,174 L130,174 L130,162 L135,162 Z\\"></path>
+          <g fill=\\"none\\" fill-rule=\\"evenodd\\" transform=\\"translate(-128 -160)\\">
+            <path fill=\\"#5d6165\\" d=\\"M137,160 L137,162 L140.5,162 L134,168.5 L135.5,170 L142,163.5 L142,167 L144,167 L144,161.002929 C144,160.449027 143.562119,160 142.997071,160 L137,160 Z M135,162 L135,160 L129.002929,160 C128.449027,160 128,160.444631 128,161.000872 L128,174.999128 C128,175.551894 128.444631,176 129.000872,176 L142.999128,176 C143.551894,176 144,175.562119 144,174.997071 L144,169 L142,169 L142,174 L130,174 L130,162 L135,162 Z\\"></path>
           </g>
         </symbol>
         <symbol id=\\"link\\" viewBox=\\"0 0 16 16\\">
@@ -3311,7 +3297,7 @@ exports[`Icon should render examples: Icon 1`] = `
         <symbol id=\\"wallet\\" viewBox=\\"0 0 16 16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M2 0h11a1 1 0 0 1 1 1v3h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm1 2a1 1 0 1 0 0 2h9V2H3zm8 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z\\"></path>
         </symbol>
-        <symbol id=\\"warning-circle\\" viewBox=\\"0 0 16 16\\">
+        <symbol id=\\"warning-circle\\">
           <path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 110 16A8 8 0 018 0zm0 9.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM8 4a1 1 0 00-.993.883L7 5v3a1 1 0 001.993.117L9 8V5a1 1 0 00-1-1z\\"></path>
         </symbol>
         <symbol id=\\"warning\\" viewBox=\\"0 0 16 16\\">
@@ -3322,7 +3308,7 @@ exports[`Icon should render examples: Icon 1`] = `
         <symbol id=\\"warn\\" viewBox=\\"0 0 48 48\\">
           <path fill-rule=\\"evenodd\\" d=\\"M24,48 C37.254834,48 48,37.254834 48,24 C48,10.745166 37.254834,0 24,0 C10.745166,0 0,10.745166 0,24 C0,37.254834 10.745166,48 24,48 Z M22.4965402,13.1030164 C23.3271937,11.6654101 24.6721035,11.6623183 25.5044703,13.1030164 L35.4961011,30.3969836 C36.3266815,31.8345899 35.6568766,33 33.9920699,33 L14.0079301,33 C12.3466962,33 11.6715912,31.8376817 12.5040311,30.3969836 L22.4965402,13.1030164 Z M22.5792265,18.4260768 C22.5354709,17.6384763 23.1362228,17 23.9297104,17 L24.0702896,17 C24.8598969,17 25.464841,17.6328625 25.4207735,18.4260768 L25.0554191,25.0024554 C25.024812,25.553384 24.5561352,26 24,26 C23.4477153,26 22.9752049,25.5536886 22.9445809,25.0024554 L22.5792265,18.4260768 Z M22.5,29 C22.5,28.1715729 23.1657972,27.5 24,27.5 C24.8284271,27.5 25.5,28.1657972 25.5,29 C25.5,29.8284271 24.8342028,30.5 24,30.5 C23.1715729,30.5 22.5,29.8342028 22.5,29 Z\\"></path>
         </symbol>
-        <symbol id=\\"wrench-circle\\" viewBox=\\"0 0 16 16\\">
+        <symbol id=\\"wrench-circle\\">
           <path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 110 16A8 8 0 018 0zm1.91 4.182a4.052 4.052 0 00-4.636-.773l2.262 2.262.072.086a.62.62 0 01-.072.793l-.99.99-.078.068a.61.61 0 01-.801-.067L3.404 5.279l-.09.199a4.05 4.05 0 00.87 4.43 4.055 4.055 0 004.293.923l2.422 2.423a6.029 6.029 0 002.326-2.302l-2.41-2.414.072-.2a4.054 4.054 0 00-.976-4.156z\\"></path>
         </symbol>
       </svg></div>
@@ -3721,7 +3707,7 @@ exports[`Icon should render examples: Icon 2`] = `
         <symbol id=\\"burger\\" viewBox=\\"0 0 16 16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M0 3c0-.552.445-1 1-1h14c.552 0 1 .444 1 1 0 .552-.445 1-1 1H1c-.552 0-1-.444-1-1zm0 10c0-.552.445-1 1-1h14c.552 0 1 .444 1 1 0 .552-.445 1-1 1H1c-.552 0-1-.444-1-1zm0-5c0-.552.445-1 1-1h14c.552 0 1 .444 1 1 0 .552-.445 1-1 1H1c-.552 0-1-.444-1-1z\\"></path>
         </symbol>
-        <symbol id=\\"calendar\\" viewBox=\\"0 0 16 16\\">
+        <symbol id=\\"calendar\\">
           <path d=\\"M13 1h3v2H0V1h3V0h2v1h6V0h2v1zM0 4h16v10.998A1 1 0 0 1 15 16H1c-.552 0-1-.456-1-1.002V4zm2 2v8h12V6H2zm6 3h5v4H8V9z\\" fill-rule=\\"nonzero\\"></path>
         </symbol>
         <symbol id=\\"camera\\" viewBox=\\"0 0 16 16\\">
@@ -3830,6 +3816,9 @@ exports[`Icon should render examples: Icon 2`] = `
         </symbol>
         <symbol id=\\"cross-circle\\" viewBox=\\"0 0 16 16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM5.707 4.293l-.094-.083a1 1 0 0 0-1.226 0l-.094.083-.083.094-.07.102c-.206.345-.185.788.062 1.114l.09.104L6.586 8l-2.292 2.293a1 1 0 0 0 1.32 1.497l.094-.083L8 9.415l2.293 2.292.094.083a1 1 0 0 0 1.226 0l.094-.083.083-.094a1 1 0 0 0 0-1.226l-.083-.094L9.415 8l2.292-2.293a1 1 0 0 0-1.32-1.497l-.094.083L8 6.585 5.707 4.293l-.094-.083.094.083z\\"></path>
+        </symbol>
+        <symbol id=\\"cross-medium\\" viewBox=\\"0 0 16 16\\">
+          <path fill-rule=\\"evenodd\\" d=\\"M8 6.59l5.3-5.3a1 1 0 0 1 1.4 1.42L9.42 8l5.3 5.3a1 1 0 0 1-1.42 1.4L8 9.42l-5.3 5.3a1 1 0 1 1-1.4-1.42L6.58 8l-5.3-5.3A1 1 0 1 1 2.7 1.3L8 6.58z\\"></path>
         </symbol>
         <symbol id=\\"cross-small\\" viewBox=\\"0 0 12 12\\">
           <path d=\\"M6 4.59l2.3-2.3a1 1 0 0 1 1.4 1.42L7.42 6l2.3 2.3A1 1 0 1 1 8.3 9.7L6 7.42l-2.3 2.3A1 1 0 1 1 2.3 8.3L4.58 6l-2.3-2.3A1 1 0 0 1 3.7 2.3L6 4.58z\\"></path>
@@ -4037,8 +4026,8 @@ exports[`Icon should render examples: Icon 2`] = `
           <path fill-rule=\\"evenodd\\" d=\\"M4.977 12.513s.103-1.083-.956-2.022a6 6 0 1 1 7.99-.028c-.674.605-.907 2.05-.907 2.05a.635.635 0 0 1-.595.487H5.491a.524.524 0 0 1-.514-.487zM11 14l-1.652 1.652a1.355 1.355 0 0 1-.853.348h-.99c-.279 0-.662-.157-.853-.348L5 14h6zm1-8a4 4 0 0 0-4-4 1 1 0 1 0 0 2 2 2 0 0 1 2 2 1 1 0 0 0 2 0z\\"></path>
         </symbol>
         <symbol id=\\"link-out\\" viewBox=\\"0 0 16 16\\">
-          <g fill-rule=\\"evenodd\\" transform=\\"translate(-128 -160)\\">
-            <path d=\\"M137,160 L137,162 L140.5,162 L134,168.5 L135.5,170 L142,163.5 L142,167 L144,167 L144,161.002929 C144,160.449027 143.562119,160 142.997071,160 L137,160 Z M135,162 L135,160 L129.002929,160 C128.449027,160 128,160.444631 128,161.000872 L128,174.999128 C128,175.551894 128.444631,176 129.000872,176 L142.999128,176 C143.551894,176 144,175.562119 144,174.997071 L144,169 L142,169 L142,174 L130,174 L130,162 L135,162 Z\\"></path>
+          <g fill=\\"none\\" fill-rule=\\"evenodd\\" transform=\\"translate(-128 -160)\\">
+            <path fill=\\"#5d6165\\" d=\\"M137,160 L137,162 L140.5,162 L134,168.5 L135.5,170 L142,163.5 L142,167 L144,167 L144,161.002929 C144,160.449027 143.562119,160 142.997071,160 L137,160 Z M135,162 L135,160 L129.002929,160 C128.449027,160 128,160.444631 128,161.000872 L128,174.999128 C128,175.551894 128.444631,176 129.000872,176 L142.999128,176 C143.551894,176 144,175.562119 144,174.997071 L144,169 L142,169 L142,174 L130,174 L130,162 L135,162 Z\\"></path>
           </g>
         </symbol>
         <symbol id=\\"link\\" viewBox=\\"0 0 16 16\\">
@@ -4298,7 +4287,7 @@ exports[`Icon should render examples: Icon 2`] = `
         <symbol id=\\"wallet\\" viewBox=\\"0 0 16 16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M2 0h11a1 1 0 0 1 1 1v3h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm1 2a1 1 0 1 0 0 2h9V2H3zm8 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z\\"></path>
         </symbol>
-        <symbol id=\\"warning-circle\\" viewBox=\\"0 0 16 16\\">
+        <symbol id=\\"warning-circle\\">
           <path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 110 16A8 8 0 018 0zm0 9.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM8 4a1 1 0 00-.993.883L7 5v3a1 1 0 001.993.117L9 8V5a1 1 0 00-1-1z\\"></path>
         </symbol>
         <symbol id=\\"warning\\" viewBox=\\"0 0 16 16\\">
@@ -4309,7 +4298,7 @@ exports[`Icon should render examples: Icon 2`] = `
         <symbol id=\\"warn\\" viewBox=\\"0 0 48 48\\">
           <path fill-rule=\\"evenodd\\" d=\\"M24,48 C37.254834,48 48,37.254834 48,24 C48,10.745166 37.254834,0 24,0 C10.745166,0 0,10.745166 0,24 C0,37.254834 10.745166,48 24,48 Z M22.4965402,13.1030164 C23.3271937,11.6654101 24.6721035,11.6623183 25.5044703,13.1030164 L35.4961011,30.3969836 C36.3266815,31.8345899 35.6568766,33 33.9920699,33 L14.0079301,33 C12.3466962,33 11.6715912,31.8376817 12.5040311,30.3969836 L22.4965402,13.1030164 Z M22.5792265,18.4260768 C22.5354709,17.6384763 23.1362228,17 23.9297104,17 L24.0702896,17 C24.8598969,17 25.464841,17.6328625 25.4207735,18.4260768 L25.0554191,25.0024554 C25.024812,25.553384 24.5561352,26 24,26 C23.4477153,26 22.9752049,25.5536886 22.9445809,25.0024554 L22.5792265,18.4260768 Z M22.5,29 C22.5,28.1715729 23.1657972,27.5 24,27.5 C24.8284271,27.5 25.5,28.1657972 25.5,29 C25.5,29.8284271 24.8342028,30.5 24,30.5 C23.1715729,30.5 22.5,29.8342028 22.5,29 Z\\"></path>
         </symbol>
-        <symbol id=\\"wrench-circle\\" viewBox=\\"0 0 16 16\\">
+        <symbol id=\\"wrench-circle\\">
           <path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 110 16A8 8 0 018 0zm1.91 4.182a4.052 4.052 0 00-4.636-.773l2.262 2.262.072.086a.62.62 0 01-.072.793l-.99.99-.078.068a.61.61 0 01-.801-.067L3.404 5.279l-.09.199a4.05 4.05 0 00.87 4.43 4.055 4.055 0 004.293.923l2.422 2.423a6.029 6.029 0 002.326-2.302l-2.41-2.414.072-.2a4.054 4.054 0 00-.976-4.156z\\"></path>
         </symbol>
       </svg></div>
@@ -4559,671 +4548,676 @@ exports[`Icon should render examples: Icon 2`] = `
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cross-circle</p>
     </div>
     <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"#cross-medium\\"></use>
+      </svg>
+      <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cross-medium</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cross-small\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cross-small</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cross\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cross</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cube\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">cube</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dash\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">dash</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dashboard\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">dashboard</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#data-control\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">data-control</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#debit\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">debit</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#devices\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">devices</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dots\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">dots</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#down\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">down</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#download\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">download</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#drawing-arrow-up\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">drawing-arrow-up</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dropdown-close\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">dropdown-close</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dropdown-open\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">dropdown-open</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dropdown\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">dropdown</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dropup\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">dropup</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#email-notification\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">email-notification</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#email\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">email</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#eu\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">eu</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#euro\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">euro</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#exchange\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">exchange</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#eye-closed\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">eye-closed</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#eye\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">eye</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file-add\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">file-add</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file-duotone\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">file-duotone</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file-new\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">file-new</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file-none\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">file-none</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file-outline\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">file-outline</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">file</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#filter\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">filter</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#fingerprint\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">fingerprint</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#flag-outlined\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">flag-outlined</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#flag\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">flag</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#flash-auto\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">flash-auto</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#flashlight\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">flashlight</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#folder-add\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">folder-add</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#folder\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">folder</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#forbidden\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">forbidden</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#from-user\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">from-user</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#gear\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">gear</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#globe\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">globe</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#graph-circle\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">graph-circle</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#grid\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">grid</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#group-list\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">group-list</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#groups\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">groups</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#heart\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">heart</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#help\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">help</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#history\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">history</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#home\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">home</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#hourglass\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">hourglass</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#image\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">image</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#info-outlined\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">info-outlined</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#info\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">info</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#key\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">key</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#laptop\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">laptop</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#left\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">left</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#lightbulb\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">lightbulb</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#link-out\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">link-out</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#link\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">link</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#list\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">list</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#location\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">location</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#lock\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">lock</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#logout\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">logout</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#magic-trick\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">magic-trick</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#magnet\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">magnet</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#magnifier\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">magnifier</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#merge\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">merge</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#movement-in\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">movement-in</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#movement-out\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">movement-out</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#moveto\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">moveto</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#multi-files\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">multi-files</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#music\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">music</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#new\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">new</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#next\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">next</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#note\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">note</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#notification-email\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">notification-email</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#offline\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">offline</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#online\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">online</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#openwith\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">openwith</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#palette\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">palette</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#paperplane\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">paperplane</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#password\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">password</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#pen\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">pen</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#people\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">people</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#percent-circle\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">percent-circle</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#percent\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">percent</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#personal-data\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">personal-data</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#phone-download\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">phone-download</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#phone\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">phone</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#pie-chart\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">pie-chart</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#pin\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">pin</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#plus-small\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">plus-small</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#plus\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">plus</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#previous\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">previous</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#printer\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">printer</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#qualify\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">qualify</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#rename\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">rename</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#repare\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">repare</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#restore\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">restore</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#right\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">right</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#rise\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">rise</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#rotate-left\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">rotate-left</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#rotate-right\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">rotate-right</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#sad-cozy\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">sad-cozy</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#select-all\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">select-all</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#setting\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">setting</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#share-circle\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">share-circle</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#share\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">share</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#sound\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">sound</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#spinner\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">spinner</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#stack\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">stack</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#star\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">star</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#stats\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">stats</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#sync-cozy\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">sync-cozy</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#sync\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">sync</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#target\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">target</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#team\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">team</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#telephone\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">telephone</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#to-the-cloud\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">to-the-cloud</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#top\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">top</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#trash\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">trash</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#trophy\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">trophy</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#unlink\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">unlink</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#unlock\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">unlock</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#up\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">up</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#upload\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">upload</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#videos\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">videos</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#wallet-add\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">wallet-add</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#wallet-new\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">wallet-new</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#wallet\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">wallet</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#warn\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">warn</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#warning-circle\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">warning-circle</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#warning\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">warning</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#wrench-circle\\"></use>
       </svg>
       <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">wrench-circle</p>
@@ -6342,7 +6336,7 @@ exports[`InfosCarrousel should render examples: InfosCarrousel 1`] = `
           </div>
         </div>
       </div>
-      <div class=\\"styles__InfosCarrousel-navigation___3s_hu\\"><button disabled=\\"\\" class=\\"styles__IconButton___1LWwV\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+      <div class=\\"styles__InfosCarrousel-navigation___3s_hu\\"><button class=\\"styles__IconButton___1LWwV\\" disabled=\\"\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
             <use xlink:href=\\"#left\\"></use>
           </svg></button><span class=\\"styles__InfosCarrousel-separator___AvH5m\\"></span><button class=\\"styles__IconButton___1LWwV\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
             <use xlink:href=\\"#right\\"></use>
@@ -6536,19 +6530,19 @@ exports[`Labs/CollectionField should render examples: Labs/CollectionField 1`] =
 
 exports[`ListItemText should render examples: ListItemText 1`] = `
 "<div>
-  <div class=\\"MuiListItemText-root-83\\"><span class=\\"MuiTypography-root-89 u-db u-ellipsis MuiTypography-subheading-96 MuiListItemText-primary-86\\">I'm a list item text</span></div>
+  <div class=\\"MuiListItemText-root-82\\"><span class=\\"MuiTypography-root-88 u-db u-ellipsis MuiTypography-subheading-95 MuiListItemText-primary-85\\">I'm a list item text</span></div>
 </div>"
 `;
 
 exports[`ListItemText should render examples: ListItemText 2`] = `
 "<div>
-  <div class=\\"MuiListItemText-root-83\\"><span class=\\"MuiTypography-root-89 u-db u-ellipsis MuiTypography-subheading-96 MuiListItemText-primary-86\\">I'm a primary text</span><span class=\\"MuiTypography-root-89 u-db u-ellipsis MuiTypography-caption-99 MuiTypography-colorTextSecondary-122 MuiListItemText-secondary-87\\">I'm a secondary text</span></div>
+  <div class=\\"MuiListItemText-root-82\\"><span class=\\"MuiTypography-root-88 u-db u-ellipsis MuiTypography-subheading-95 MuiListItemText-primary-85\\">I'm a primary text</span><span class=\\"MuiTypography-root-88 u-db u-ellipsis MuiTypography-caption-98 MuiTypography-colorTextSecondary-121 MuiListItemText-secondary-86\\">I'm a secondary text</span></div>
 </div>"
 `;
 
 exports[`ListItemText should render examples: ListItemText 3`] = `
 "<div>
-  <div class=\\"MuiListItemText-root-83\\"><span class=\\"MuiTypography-root-89 u-db u-ellipsis MuiTypography-subheading-96 MuiListItemText-primary-86\\"><div class=\\"u-text\\">I'm a primary text</div><a class=\\"u-caption\\" href=\\"http://cozy.io\\"><div class=\\"u-midellipsis\\"><span>Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognis</span><span>e that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a \\"computing machine\\" and the first computer programmer.</span></div></a></span>
+  <div class=\\"MuiListItemText-root-82\\"><span class=\\"MuiTypography-root-88 u-db u-ellipsis MuiTypography-subheading-95 MuiListItemText-primary-85\\"><div class=\\"u-text\\">I'm a primary text</div><a class=\\"u-caption\\" href=\\"http://cozy.io\\"><div class=\\"u-midellipsis\\"><span>Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognis</span><span>e that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a \\"computing machine\\" and the first computer programmer.</span></div></a></span>
 </div>
 </div>"
 `;
@@ -6648,19 +6642,19 @@ exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Primary</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-125\\"><span class=\\"MuiButtonBase-root-144 MuiIconButton-root-138 MuiPrivateSwitchBase-root-134 MuiSwitch-switchBase-128 MuiSwitch-colorPrimary-130 MuiPrivateSwitchBase-checked-135 MuiSwitch-checked-129\\"><span class=\\"MuiIconButton-label-143\\"><span class=\\"MuiSwitch-icon-126 MuiSwitch-iconChecked-127\\"></span><input class=\\"MuiPrivateSwitchBase-input-137\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-169\\"></span></span><span class=\\"MuiSwitch-bar-133\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-124\\"><span class=\\"MuiButtonBase-root-143 MuiIconButton-root-137 MuiPrivateSwitchBase-root-133 MuiSwitch-switchBase-127 MuiSwitch-colorPrimary-129 MuiPrivateSwitchBase-checked-134 MuiSwitch-checked-128\\"><span class=\\"MuiIconButton-label-142\\"><span class=\\"MuiSwitch-icon-125 MuiSwitch-iconChecked-126\\"></span><input class=\\"MuiPrivateSwitchBase-input-136\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-168\\"></span></span><span class=\\"MuiSwitch-bar-132\\"></span></span></div>
       </div>
       <div class=\\"styles__media___cSJMp\\">
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Secondary</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-125\\"><span class=\\"MuiButtonBase-root-144 MuiIconButton-root-138 MuiPrivateSwitchBase-root-134 MuiSwitch-switchBase-128 MuiSwitch-colorSecondary-131 MuiPrivateSwitchBase-checked-135 MuiSwitch-checked-129\\"><span class=\\"MuiIconButton-label-143\\"><span class=\\"MuiSwitch-icon-126 MuiSwitch-iconChecked-127\\"></span><input class=\\"MuiPrivateSwitchBase-input-137\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-169\\"></span></span><span class=\\"MuiSwitch-bar-133\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-124\\"><span class=\\"MuiButtonBase-root-143 MuiIconButton-root-137 MuiPrivateSwitchBase-root-133 MuiSwitch-switchBase-127 MuiSwitch-colorSecondary-130 MuiPrivateSwitchBase-checked-134 MuiSwitch-checked-128\\"><span class=\\"MuiIconButton-label-142\\"><span class=\\"MuiSwitch-icon-125 MuiSwitch-iconChecked-126\\"></span><input class=\\"MuiPrivateSwitchBase-input-136\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-168\\"></span></span><span class=\\"MuiSwitch-bar-132\\"></span></span></div>
       </div>
       <div class=\\"styles__media___cSJMp\\">
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Disabled</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-125\\"><span class=\\"MuiButtonBase-root-144 MuiButtonBase-disabled-145 MuiIconButton-root-138 MuiIconButton-disabled-142 MuiPrivateSwitchBase-root-134 MuiSwitch-switchBase-128 MuiSwitch-colorSecondary-131 MuiPrivateSwitchBase-disabled-136 MuiSwitch-disabled-132\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-143\\"><span class=\\"MuiSwitch-icon-126\\"></span><input class=\\"MuiPrivateSwitchBase-input-137\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-133\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-124\\"><span class=\\"MuiButtonBase-root-143 MuiButtonBase-disabled-144 MuiIconButton-root-137 MuiIconButton-disabled-141 MuiPrivateSwitchBase-root-133 MuiSwitch-switchBase-127 MuiSwitch-colorSecondary-130 MuiPrivateSwitchBase-disabled-135 MuiSwitch-disabled-131\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-142\\"><span class=\\"MuiSwitch-icon-125\\"></span><input class=\\"MuiPrivateSwitchBase-input-136\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-132\\"></span></span></div>
       </div>
     </div>
     <div class=\\"u-title-h2 u-mt-1\\">Inverted theme</div>
@@ -6669,19 +6663,19 @@ exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Primary</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-147\\"><span class=\\"MuiButtonBase-root-166 MuiIconButton-root-160 MuiPrivateSwitchBase-root-156 MuiSwitch-switchBase-150 MuiSwitch-colorPrimary-152 MuiPrivateSwitchBase-checked-157 MuiSwitch-checked-151\\"><span class=\\"MuiIconButton-label-165\\"><span class=\\"MuiSwitch-icon-148 MuiSwitch-iconChecked-149\\"></span><input class=\\"MuiPrivateSwitchBase-input-159\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-176\\"></span></span><span class=\\"MuiSwitch-bar-155\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-146\\"><span class=\\"MuiButtonBase-root-165 MuiIconButton-root-159 MuiPrivateSwitchBase-root-155 MuiSwitch-switchBase-149 MuiSwitch-colorPrimary-151 MuiPrivateSwitchBase-checked-156 MuiSwitch-checked-150\\"><span class=\\"MuiIconButton-label-164\\"><span class=\\"MuiSwitch-icon-147 MuiSwitch-iconChecked-148\\"></span><input class=\\"MuiPrivateSwitchBase-input-158\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-175\\"></span></span><span class=\\"MuiSwitch-bar-154\\"></span></span></div>
       </div>
       <div class=\\"styles__media___cSJMp\\">
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Secondary</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-147\\"><span class=\\"MuiButtonBase-root-166 MuiIconButton-root-160 MuiPrivateSwitchBase-root-156 MuiSwitch-switchBase-150 MuiSwitch-colorSecondary-153 MuiPrivateSwitchBase-checked-157 MuiSwitch-checked-151\\"><span class=\\"MuiIconButton-label-165\\"><span class=\\"MuiSwitch-icon-148 MuiSwitch-iconChecked-149\\"></span><input class=\\"MuiPrivateSwitchBase-input-159\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-176\\"></span></span><span class=\\"MuiSwitch-bar-155\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-146\\"><span class=\\"MuiButtonBase-root-165 MuiIconButton-root-159 MuiPrivateSwitchBase-root-155 MuiSwitch-switchBase-149 MuiSwitch-colorSecondary-152 MuiPrivateSwitchBase-checked-156 MuiSwitch-checked-150\\"><span class=\\"MuiIconButton-label-164\\"><span class=\\"MuiSwitch-icon-147 MuiSwitch-iconChecked-148\\"></span><input class=\\"MuiPrivateSwitchBase-input-158\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-175\\"></span></span><span class=\\"MuiSwitch-bar-154\\"></span></span></div>
       </div>
       <div class=\\"styles__media___cSJMp\\">
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Disabled</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-147\\"><span class=\\"MuiButtonBase-root-166 MuiButtonBase-disabled-167 MuiIconButton-root-160 MuiIconButton-disabled-164 MuiPrivateSwitchBase-root-156 MuiSwitch-switchBase-150 MuiSwitch-colorSecondary-153 MuiPrivateSwitchBase-disabled-158 MuiSwitch-disabled-154\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-165\\"><span class=\\"MuiSwitch-icon-148\\"></span><input class=\\"MuiPrivateSwitchBase-input-159\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-155\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-146\\"><span class=\\"MuiButtonBase-root-165 MuiButtonBase-disabled-166 MuiIconButton-root-159 MuiIconButton-disabled-163 MuiPrivateSwitchBase-root-155 MuiSwitch-switchBase-149 MuiSwitch-colorSecondary-152 MuiPrivateSwitchBase-disabled-157 MuiSwitch-disabled-153\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-164\\"><span class=\\"MuiSwitch-icon-147\\"></span><input class=\\"MuiPrivateSwitchBase-input-158\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-154\\"></span></span></div>
       </div>
     </div>
   </div>
@@ -7244,22 +7238,22 @@ exports[`Table should render examples: Table 1`] = `
 
 exports[`Tabs should render examples: Tabs 1`] = `
 "<div>
-  <div class=\\"MuiTabs-root-183\\" aria-label=\\"simple tabs example\\">
-    <div class=\\"MuiTabs-flexContainer-184\\">
-      <div class=\\"MuiTabs-scroller-186 MuiTabs-fixed-187\\" style=\\"margin-bottom: 0px;\\" role=\\"tablist\\">
-        <div class=\\"MuiTabs-flexContainer-184\\"><button class=\\"MuiButtonBase-root-204 MuiTab-root-192 MuiTab-textColorPrimary-195 MuiTab-selected-197\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"true\\" id=\\"simple-tab-0\\" aria-controls=\\"simple-tabpanel-0\\"><span class=\\"MuiTab-wrapper-200\\"><span class=\\"MuiTab-labelContainer-201\\"><span class=\\"MuiTab-label-202\\">Item One</span></span></span><span class=\\"MuiTouchRipple-root-242\\"></span></button><button class=\\"MuiButtonBase-root-204 MuiTab-root-192 MuiTab-textColorPrimary-195\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-1\\" aria-controls=\\"simple-tabpanel-1\\"><span class=\\"MuiTab-wrapper-200\\"><span class=\\"MuiTab-labelContainer-201\\"><span class=\\"MuiTab-label-202\\">Item Two</span></span></span><span class=\\"MuiTouchRipple-root-242\\"></span></button><button class=\\"MuiButtonBase-root-204 MuiTab-root-192 MuiTab-textColorPrimary-195\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-2\\" aria-controls=\\"simple-tabpanel-2\\"><span class=\\"MuiTab-wrapper-200\\"><span class=\\"MuiTab-labelContainer-201\\"><span class=\\"MuiTab-label-202\\">Item Three</span></span></span><span class=\\"MuiTouchRipple-root-242\\"></span></button></div><span class=\\"MuiPrivateTabIndicator-root-207 MuiPrivateTabIndicator-colorPrimary-208 MuiTabs-indicator-191\\" style=\\"left: 0px; width: 0px;\\"></span>
+  <div class=\\"MuiTabs-root-182\\" aria-label=\\"simple tabs example\\">
+    <div class=\\"MuiTabs-flexContainer-183\\">
+      <div class=\\"MuiTabs-scroller-185 MuiTabs-fixed-186\\" style=\\"margin-bottom: 0px;\\" role=\\"tablist\\">
+        <div class=\\"MuiTabs-flexContainer-183\\"><button class=\\"MuiButtonBase-root-203 MuiTab-root-191 MuiTab-textColorPrimary-194 MuiTab-selected-196\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"true\\" id=\\"simple-tab-0\\" aria-controls=\\"simple-tabpanel-0\\"><span class=\\"MuiTab-wrapper-199\\"><span class=\\"MuiTab-labelContainer-200\\"><span class=\\"MuiTab-label-201\\">Item One</span></span></span><span class=\\"MuiTouchRipple-root-241\\"></span></button><button class=\\"MuiButtonBase-root-203 MuiTab-root-191 MuiTab-textColorPrimary-194\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-1\\" aria-controls=\\"simple-tabpanel-1\\"><span class=\\"MuiTab-wrapper-199\\"><span class=\\"MuiTab-labelContainer-200\\"><span class=\\"MuiTab-label-201\\">Item Two</span></span></span><span class=\\"MuiTouchRipple-root-241\\"></span></button><button class=\\"MuiButtonBase-root-203 MuiTab-root-191 MuiTab-textColorPrimary-194\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-2\\" aria-controls=\\"simple-tabpanel-2\\"><span class=\\"MuiTab-wrapper-199\\"><span class=\\"MuiTab-labelContainer-200\\"><span class=\\"MuiTab-label-201\\">Item Three</span></span></span><span class=\\"MuiTouchRipple-root-241\\"></span></button></div><span class=\\"MuiPrivateTabIndicator-root-206 MuiPrivateTabIndicator-colorPrimary-207 MuiTabs-indicator-190\\" style=\\"left: 0px; width: 0px;\\"></span>
       </div>
     </div>
   </div>
-  <hr class=\\"MuiDivider-root-78 u-ml-0 u-maw-100\\"><br>
-  <div class=\\"MuiTabs-root-210\\" aria-label=\\"simple tabs example\\">
-    <div class=\\"MuiTabs-flexContainer-211\\">
-      <div class=\\"MuiTabs-scroller-213 MuiTabs-fixed-214\\" style=\\"margin-bottom: 0px;\\" role=\\"tablist\\">
-        <div class=\\"MuiTabs-flexContainer-211\\"><button class=\\"MuiButtonBase-root-231 MuiTab-root-219 MuiTab-textColorPrimary-222 MuiTab-selected-224\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"true\\" id=\\"simple-tab-0\\" aria-controls=\\"simple-tabpanel-0\\"><span class=\\"MuiTab-wrapper-227\\"><span class=\\"MuiTab-labelContainer-228\\"><span class=\\"MuiTab-label-229\\">Item One</span></span></span><span class=\\"MuiTouchRipple-root-249\\"></span></button><button class=\\"MuiButtonBase-root-231 MuiTab-root-219 MuiTab-textColorPrimary-222\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-1\\" aria-controls=\\"simple-tabpanel-1\\"><span class=\\"MuiTab-wrapper-227\\"><span class=\\"MuiTab-labelContainer-228\\"><span class=\\"MuiTab-label-229\\">Item Two</span></span></span><span class=\\"MuiTouchRipple-root-249\\"></span></button><button class=\\"MuiButtonBase-root-231 MuiTab-root-219 MuiTab-textColorPrimary-222\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-2\\" aria-controls=\\"simple-tabpanel-2\\"><span class=\\"MuiTab-wrapper-227\\"><span class=\\"MuiTab-labelContainer-228\\"><span class=\\"MuiTab-label-229\\">Item Three</span></span></span><span class=\\"MuiTouchRipple-root-249\\"></span></button></div><span class=\\"MuiPrivateTabIndicator-root-234 MuiPrivateTabIndicator-colorPrimary-235 MuiTabs-indicator-218\\" style=\\"left: 0px; width: 0px;\\"></span>
+  <hr class=\\"MuiDivider-root-47 u-ml-0 u-maw-100\\"><br>
+  <div class=\\"MuiTabs-root-209\\" aria-label=\\"simple tabs example\\">
+    <div class=\\"MuiTabs-flexContainer-210\\">
+      <div class=\\"MuiTabs-scroller-212 MuiTabs-fixed-213\\" style=\\"margin-bottom: 0px;\\" role=\\"tablist\\">
+        <div class=\\"MuiTabs-flexContainer-210\\"><button class=\\"MuiButtonBase-root-230 MuiTab-root-218 MuiTab-textColorPrimary-221 MuiTab-selected-223\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"true\\" id=\\"simple-tab-0\\" aria-controls=\\"simple-tabpanel-0\\"><span class=\\"MuiTab-wrapper-226\\"><span class=\\"MuiTab-labelContainer-227\\"><span class=\\"MuiTab-label-228\\">Item One</span></span></span><span class=\\"MuiTouchRipple-root-248\\"></span></button><button class=\\"MuiButtonBase-root-230 MuiTab-root-218 MuiTab-textColorPrimary-221\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-1\\" aria-controls=\\"simple-tabpanel-1\\"><span class=\\"MuiTab-wrapper-226\\"><span class=\\"MuiTab-labelContainer-227\\"><span class=\\"MuiTab-label-228\\">Item Two</span></span></span><span class=\\"MuiTouchRipple-root-248\\"></span></button><button class=\\"MuiButtonBase-root-230 MuiTab-root-218 MuiTab-textColorPrimary-221\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-2\\" aria-controls=\\"simple-tabpanel-2\\"><span class=\\"MuiTab-wrapper-226\\"><span class=\\"MuiTab-labelContainer-227\\"><span class=\\"MuiTab-label-228\\">Item Three</span></span></span><span class=\\"MuiTouchRipple-root-248\\"></span></button></div><span class=\\"MuiPrivateTabIndicator-root-233 MuiPrivateTabIndicator-colorPrimary-234 MuiTabs-indicator-217\\" style=\\"left: 0px; width: 0px;\\"></span>
       </div>
     </div>
   </div>
-  <hr class=\\"MuiDivider-root-237 u-ml-0 u-maw-100\\">
+  <hr class=\\"MuiDivider-root-236 u-ml-0 u-maw-100\\">
 </div>"
 `;
 

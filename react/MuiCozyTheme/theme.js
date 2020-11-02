@@ -339,73 +339,90 @@ normalTheme.overrides = {
     }
   },
   MuiDialog: {
-    root: {
-      color: getCssVariableValue('charcoalGrey'),
-      'border-radius': '8px',
-      zIndex: getCssVariableValue('zIndex-modal')
-    },
     paper: {
-      'box-sizing': 'border-box',
-      [normalTheme.breakpoints.down('md')]: {
-        padding: `${defaultValues.dialog.sm.padding}px`
+      '&.small': {
+        width: '480px',
+        maxWidth: '480px',
+        [normalTheme.breakpoints.down('md')]: {
+          margin: '16px',
+          padding: '0 8px 8px',
+          height: 'auto',
+          maxHeight: 'calc(100% - 32px)',
+          borderRadius: '6px'
+        }
       },
-      [normalTheme.breakpoints.up('md')]: {
-        padding: `${defaultValues.dialog.md.padding}px`
-      }
-    },
-    paperWidthSm: {
-      width: '544px',
-      maxWidth: '544px'
-    },
-    paperFullScreen: {
-      '&$paperScrollBody': {
-        'min-height': '100%',
-        height: 'auto'
-      }
-    }
-  },
-  MuiDialogContent: {
-    root: {
-      [normalTheme.breakpoints.up('md')]: {
-        padding: `${defaultValues.dialog.md.padding}px 0`
+      '&.medium': {
+        [normalTheme.breakpoints.up('md')]: {
+          width: '544px',
+          maxWidth: '544px'
+        }
       },
-      [normalTheme.breakpoints.down('sm')]: {
-        padding: `${defaultValues.dialog.sm.padding}px 0`
-      },
-
-      overflowY: 'initial'
-    }
-  },
-  MuiDialogActions: {
-    root: {
-      padding: '0',
-      [normalTheme.breakpoints.down('sm')]: {
-        margin: 0,
-        '& button': {
-          '&:only-child': {
-            width: '100%'
-          },
-          width: '50%'
-        },
-        '&.modal_actions_below': {
-          display: 'block',
-          '& button': {
-            width: '100%',
-            margin: 0,
-            '&:not(:first-child)': {
-              marginTop: '8px'
-            }
-          }
+      '&.large': {
+        [normalTheme.breakpoints.up('md')]: {
+          width: '800px',
+          maxWidth: '800px'
         }
       }
     }
   },
   MuiDialogTitle: {
     root: {
-      width: '90%',
-      padding: '0 0 16px 0',
+      ...normalTheme.typography.h3,
+      width: 'calc(100% - (58px + 30px))', // remove close button width and margin
+      padding: '24px 32px',
       [normalTheme.breakpoints.down('sm')]: {
-        padding: '14px 0 16px 0'
+        ...normalTheme.typography.h4,
+        width: 'calc(100% - 58px)', // remove close button width and margin
+        padding: '13px 16px 12px'
+      },
+      '&.dialogTitleFluid': {
+        paddingTop: 0,
+        paddingLeft: 0,
+        paddingRight: 0,
+        [normalTheme.breakpoints.down('sm')]: {
+          padding: '0 0 24px 0'
+        }
+      }
+    }
+  },
+  MuiDialogContent: {
+    root: {
+      padding: '24px 32px 0',
+      [normalTheme.breakpoints.down('sm')]: {
+        padding: '24px 16px 0'
+      },
+      '& .dialogContentInner': {
+        marginBottom: '24px',
+        '&.withFluidActions': {
+          [normalTheme.breakpoints.down('sm')]: {
+            marginBottom: '16px'
+          }
+        }
+      }
+    }
+  },
+  MuiDialogActions: {
+    root: {
+      margin: '16px 32px',
+      [normalTheme.breakpoints.down('sm')]: {
+        margin: '8px 16px',
+        '& button': {
+          flexGrow: 1
+        }
+      },
+      '&.dialogActionsFluid': {
+        margin: '24px 0 0'
+      },
+      '&.columnLayout': {
+        display: 'flex',
+        flexDirection: 'column-reverse',
+        '& button': {
+          width: '100%',
+          margin: 0,
+          '&:not(:first-child)': {
+            marginBottom: '8px'
+          }
+        }
       }
     }
   },

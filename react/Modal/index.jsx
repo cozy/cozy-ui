@@ -26,6 +26,9 @@ const ModalTitle = props => {
 // z-index of alerts so they appear in front of the modal
 export const BODY_CLASS = 'has-modal'
 
+/**
+ * @deprecated Please use CozyDialogs or Dialog.
+ */
 class Modal extends Component {
   constructor(props) {
     super(props)

@@ -7,9 +7,9 @@ cache:
     - node_modules
 script:
   - yarn lint
-  - yarn test
   - yarn build:css:all
   - yarn build:doc:react
+  - yarn test
   - yarn screenshots --viewport desktop
   - yarn screenshots --no-empty-screenshot-dir --viewport 300x600
   - yarn argos --token $ARGOS_TOKEN --branch $TRAVIS_BRANCH --commit $TRAVIS_COMMIT
