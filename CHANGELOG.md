@@ -1,3 +1,21 @@
+# [40.1.0](https://github.com/cozy/cozy-ui/compare/v40.0.0...v40.1.0) (2020-11-02)
+
+
+### Features
+
+* Ability to cache the component list, for faster debug ([5fa634e](https://github.com/cozy/cozy-ui/commit/5fa634e))
+* Ability to control content via radio ([eb2f32c](https://github.com/cozy/cozy-ui/commit/eb2f32c))
+* Add aria-labelledby attributes ([dde97b9](https://github.com/cozy/cozy-ui/commit/dde97b9))
+* Add CozyDialogs ([c1e1081](https://github.com/cozy/cozy-ui/commit/c1e1081))
+* Add Dialog back and close button, and Transition ([d3f3215](https://github.com/cozy/cozy-ui/commit/d3f3215))
+* Buttons grow to take all the space on mobile ([7102e97](https://github.com/cozy/cozy-ui/commit/7102e97))
+* DialogTransition is based on fullScreen ([c376d59](https://github.com/cozy/cozy-ui/commit/c376d59))
+* Inverse button order when in column layout ([e8385fc](https://github.com/cozy/cozy-ui/commit/e8385fc))
+* Move files to have a clearer API ([ac2c5db](https://github.com/cozy/cozy-ui/commit/ac2c5db))
+* Screenshot CozyDialogs ([d6101c6](https://github.com/cozy/cozy-ui/commit/d6101c6))
+* Use small / medium / large for Dialog::size ([3651ff9](https://github.com/cozy/cozy-ui/commit/3651ff9))
+* Use small/medium/large for dialog size property ([433c488](https://github.com/cozy/cozy-ui/commit/433c488))
+
 # [35.23.0](https://github.com/cozy/cozy-ui/compare/v35.22.0...v35.23.0) (2020-07-02)
 
 
