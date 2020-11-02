@@ -340,7 +340,7 @@ normalTheme.overrides = {
   },
   MuiDialog: {
     paper: {
-      '&.sizeS': {
+      '&.small': {
         width: '480px',
         maxWidth: '480px',
         [normalTheme.breakpoints.down('md')]: {
@@ -351,13 +351,13 @@ normalTheme.overrides = {
           borderRadius: '6px'
         }
       },
-      '&.sizeM': {
+      '&.medium': {
         [normalTheme.breakpoints.up('md')]: {
           width: '544px',
           maxWidth: '544px'
         }
       },
-      '&.sizeL': {
+      '&.large': {
         [normalTheme.breakpoints.up('md')]: {
           width: '800px',
           maxWidth: '800px'

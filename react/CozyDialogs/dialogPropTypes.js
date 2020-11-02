@@ -7,5 +7,5 @@ export default {
   content: PropTypes.node,
   actions: PropTypes.node,
   actionsLayout: PropTypes.oneOf(['row', 'column']),
-  size: PropTypes.oneOf(['s', 'm', 'l', 'S', 'M', 'L'])
+  size: PropTypes.oneOf(['small', 'medium', 'large'])
 }
