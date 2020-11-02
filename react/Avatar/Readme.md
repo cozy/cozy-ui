@@ -2,7 +2,7 @@ Show an avatar with initials
 
 ### Default
 
-```
+```jsx
 import Avatar from 'cozy-ui/transpiled/react/Avatar';
 <Avatar />
 ```
@@ -11,22 +11,35 @@ import Avatar from 'cozy-ui/transpiled/react/Avatar';
 
 #### with name
 
-```
+```jsx
 import Avatar from 'cozy-ui/transpiled/react/Avatar';
 <Avatar text="CD" />
 ```
 
 ### with image instead of initials
 
-```
+```jsx
 import cozyLogo from '../../docs/cozy-logo_white_128.png'
 import Avatar from 'cozy-ui/transpiled/react/Avatar';
 <Avatar image={cozyLogo} />
 ```
 
+### with disabled color
+
+```jsx
+import cozyLogo from '../../docs/cozy-logo_white_128.png'
+import Avatar from 'cozy-ui/transpiled/react/Avatar';
+
+<div className="u-flex">
+  <Avatar disabled />
+  <Avatar text="CD" disabled />
+  <Avatar image={cozyLogo} disabled />
+</div>
+```
+
 ### Available sizes: xsmall, small, medium (default), large, xlarge
 
-```
+```jsx
 import cozyLogo from '../../docs/cozy-logo_white_128.png'
 import Avatar from 'cozy-ui/transpiled/react/Avatar';
 
