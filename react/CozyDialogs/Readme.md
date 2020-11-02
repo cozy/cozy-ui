@@ -39,7 +39,7 @@ const handleClose = () => setState({ modalOpened: !state.modalOpened })
 initialState = {
   modalOpened: false,
   modal: Dialog,
-  size: 'm',
+  size: 'medium',
   actionsLayout: 'row',
   content: 'default'
 }
@@ -134,18 +134,18 @@ const toggleDialog = dialog => {
   <BreakpointsProvider>
     <MuiCozyTheme>
       <p>Content:
-        default: <StateRadio value='default' name='content' />{' '}
-        short: <StateRadio value='short' name='content' />{' '}
-        long: <StateRadio value='long' name='content' />
+        <StateRadio value='default' name='content' /> default{' '}
+        <StateRadio value='short' name='content' /> short{' '}
+        <StateRadio value='long' name='content' /> long 
       </p>
       <p>Size:
-        s: <StateRadio value='s' name='size' />{' '}
-        m: <StateRadio value='m' name='size' />{' '}
-        l: <StateRadio value='l' name='size' />
+        <StateRadio value='small' name='size' /> small {' '}
+        <StateRadio value='medium' name='size' /> medium {' '}
+        <StateRadio value='large' name='size' /> large 
       </p>
       <p>Actions layout:
-        row: <StateRadio value='row' name='actionsLayout' />{' '}
-        column: <StateRadio value='column' name='actionsLayout' />
+        <StateRadio value='row' name='actionsLayout' /> row{' '}
+        <StateRadio value='column' name='actionsLayout' /> column 
       </p>
       <DialogComponent
         size={state.size}

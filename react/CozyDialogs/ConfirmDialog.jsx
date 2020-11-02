@@ -22,7 +22,7 @@ const ConfirmDialog = ({
   actions,
   actionsLayout
 }) => {
-  const { cssSize, isFullscreen, id } = useCozyDialog('S')
+  const { paperClassName, isFullscreen, id } = useCozyDialog('small')
 
   return (
     <Dialog
@@ -31,7 +31,7 @@ const ConfirmDialog = ({
       TransitionComponent={DialogTransition}
       TransitionProps={{ isFullscreen }}
       fullScreen={isFullscreen}
-      classes={{ paper: cssSize }}
+      classes={{ paper: paperClassName }}
       aria-labelledby={`modal-title-${id}`}
     >
       {!isFullscreen && (
