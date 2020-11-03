@@ -31,14 +31,17 @@ const nameToColor = (name = '') => {
   return colors[key]
 }
 
-export const Avatar = ({ text, textId, image, size, className, style }) => {
+export const Avatar = ({
+  text,
+  textId,
+  image,
+  size,
+  className,
+  style,
+  disabled
+}) => {
   const colored = {
-    backgroundColor: `${nameToColor(textId || text)}`,
-    color: 'white'
-  }
-
-  if (style) {
-    Object.assign(colored, style)
+    backgroundColor: `${nameToColor(textId || text)}`
   }
 
   return (
@@ -46,9 +49,12 @@ export const Avatar = ({ text, textId, image, size, className, style }) => {
       className={cx(
         styles['c-avatar'],
         size !== 'medium' ? styles[`c-avatar--${size}`] : '',
+        text ? styles['c-avatar--text'] : '',
+        image ? styles['c-avatar--image'] : '',
+        disabled ? styles['c-avatar--disabled'] : '',
         className
       )}
-      style={text ? colored : style}
+      style={text ? Object.assign(colored, style) : style}
     >
       {image && <img src={image} className={styles['c-avatar-image']} alt="" />}
       {!image && text && (

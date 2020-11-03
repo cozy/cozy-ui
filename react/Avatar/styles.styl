@@ -5,6 +5,20 @@
     @extend $circle
     @extend $avatar
 
+.c-avatar--text
+    color white
+
+.c-avatar--disabled
+    &.c-avatar--image
+        background-color white !important // to override inline style props
+
+    &:not(.c-avatar--image)
+        background-color var(--silver) !important // to override inline style props
+
+    & .c-avatar-image
+        filter grayscale(1)
+        opacity .3
+
 .c-avatar--xsmall
     @extend $circle--xsmall
 
