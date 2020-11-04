@@ -1,6 +1,5 @@
 import React from 'react'
 import cx from 'classnames'
-import omit from 'lodash/omit'
 
 import useCozyDialog from './useCozyDialog'
 import Dialog, {
@@ -12,21 +11,18 @@ import Dialog, {
 import dialogPropTypes from './dialogPropTypes'
 import DialogBackButton from './DialogBackButton'
 import DialogCloseButton from './DialogCloseButton'
-import DialogTransition from './DialogTransition'
 
-const ConfirmDialog = ({
-  open,
-  opened, // Deprecated
-  onClose,
-  title,
-  content,
-  actions,
-  actionsLayout
-}) => {
-  const { dialogProps, dialogTitleProps, fullScreen, id } = useCozyDialog(
-    'small'
-  )
-
+const ConfirmDialog = props => {
+  const {
+    open,
+    opened, // Deprecated
+    onClose,
+    title,
+    content,
+    actions,
+    actionsLayout
+  } = props
+  const { dialogProps, dialogTitleProps, fullScreen, id } = useCozyDialog(props)
   return (
     <Dialog open={open || opened} onClose={onClose} {...dialogProps}>
       {!fullScreen && (
@@ -56,6 +52,10 @@ const ConfirmDialog = ({
   )
 }
 
-ConfirmDialog.propTypes = omit(dialogPropTypes, 'size')
+ConfirmDialog.defaultProps = {
+  size: 'small'
+}
+
+ConfirmDialog.propTypes = dialogPropTypes
 
 export default ConfirmDialog

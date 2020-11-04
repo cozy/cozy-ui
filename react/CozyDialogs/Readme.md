@@ -148,7 +148,7 @@ const toggleDialog = dialog => {
         <StateRadio value='column' name='actionsLayout' /> column 
       </p>
       <DialogComponent
-        size={state.size}
+        size={DialogComponent !== ConfirmDialog ? state.size : undefined}
         opened={state.modalOpened}
         onClose={handleClose}
         title={dialogTitles[DialogComponent.name]}

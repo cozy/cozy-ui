@@ -40,7 +40,7 @@ initialState = { modalOpened: isTesting() }
 
 const ExampleDialog = ({ open, onClose }) => {
   const { isMobile } = useBreakpoints()
-  const { dialogProps, dialogTitleProps, listItemProps } = useCozyDialog('medium')
+  const { dialogProps, dialogTitleProps, listItemProps } = useCozyDialog({ size: 'medium' })
 
   return (
     <Dialog

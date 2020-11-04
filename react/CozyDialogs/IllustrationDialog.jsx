@@ -12,17 +12,17 @@ import dialogPropTypes from './dialogPropTypes'
 import DialogBackButton from './DialogBackButton'
 import DialogCloseButton from './DialogCloseButton'
 
-const IllustrationDialog = ({
-  open,
-  opened, // Deprecated
-  onClose,
-  title,
-  content,
-  actions,
-  actionsLayout,
-  size
-}) => {
-  const { dialogProps, dialogTitleProps, id, fullScreen } = useCozyDialog(size)
+const IllustrationDialog = props => {
+  const {
+    open,
+    opened, // Deprecated
+    onClose,
+    title,
+    content,
+    actions,
+    actionsLayout
+  } = props
+  const { dialogProps, dialogTitleProps, id, fullScreen } = useCozyDialog(props)
 
   return (
     <Dialog open={open || opened} onClose={onClose} {...dialogProps}>

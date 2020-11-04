@@ -13,17 +13,17 @@ import dialogPropTypes from './dialogPropTypes'
 import DialogBackButton from './DialogBackButton'
 import DialogCloseButton from './DialogCloseButton'
 
-const Dialog = ({
-  open,
-  opened, // Deprecated
-  onClose,
-  title,
-  content,
-  actions,
-  actionsLayout,
-  size
-}) => {
-  const { dialogProps, dialogTitleProps, fullScreen, id } = useCozyDialog(size)
+const Dialog = props => {
+  const {
+    open,
+    opened, // Deprecated
+    onClose,
+    title,
+    content,
+    actions,
+    actionsLayout
+  } = props
+  const { dialogProps, dialogTitleProps, fullScreen, id } = useCozyDialog(props)
 
   return (
     <MUIDialog open={open || opened} onClose={onClose} {...dialogProps}>
