@@ -15,7 +15,8 @@ import DialogBackButton from './DialogBackButton'
 import DialogCloseButton from './DialogCloseButton'
 
 const FixedActionsDialog = ({
-  opened,
+  open,
+  opened, // Deprecated
   onClose,
   title,
   content,
@@ -27,7 +28,7 @@ const FixedActionsDialog = ({
 
   return (
     <Dialog
-      open={opened}
+      open={open || opened}
       onClose={onClose}
       TransitionComponent={DialogTransition}
       TransitionProps={{ isFullscreen }}

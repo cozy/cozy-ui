@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 export default {
-  opened: PropTypes.bool.isRequired,
+  open: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
   title: PropTypes.node,
   content: PropTypes.node,
