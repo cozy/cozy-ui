@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 
-import { useCozyDialog } from './useCozyDialog'
+import useCozyDialog from './useCozyDialog'
 import MUIDialog, {
   DialogTitle,
   DialogActions,
@@ -12,42 +12,21 @@ import { CardDivider } from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
 import dialogPropTypes from './dialogPropTypes'
 import DialogBackButton from './DialogBackButton'
 import DialogCloseButton from './DialogCloseButton'
-import DialogTransition from './DialogTransition'
 
-const Dialog = ({
-  open,
-  opened, // Deprecated
-  onClose,
-  title,
-  content,
-  actions,
-  actionsLayout,
-  size
-}) => {
-  const { paperClassName, isFullscreen, id } = useCozyDialog(size)
+const Dialog = props => {
+  const { onClose, title, content, actions, actionsLayout } = props
+  const { dialogProps, dialogTitleProps, fullScreen, id } = useCozyDialog(props)
 
   return (
-    <MUIDialog
-      open={open || opened}
-      onClose={onClose}
-      TransitionComponent={DialogTransition}
-      TransitionProps={{ isFullscreen }}
-      fullScreen={isFullscreen}
-      classes={{ paper: paperClassName }}
-      aria-labelledby={`modal-title-${id}`}
-    >
-      {!isFullscreen && (
+    <MUIDialog {...dialogProps}>
+      {!fullScreen && (
         <DialogCloseButton
           onClick={onClose}
           data-test-id={`modal-close-button-${id}`}
         />
       )}
-      <DialogTitle
-        id={`modal-title-${id}`}
-        disableTypography
-        className="u-ellipsis"
-      >
-        {isFullscreen ? <DialogBackButton onClick={onClose} /> : null}
+      <DialogTitle {...dialogTitleProps} className="u-ellipsis">
+        {fullScreen ? <DialogBackButton onClick={onClose} /> : null}
         {title}
       </DialogTitle>
       <CardDivider />

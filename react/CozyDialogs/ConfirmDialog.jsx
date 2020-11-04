@@ -1,8 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
-import omit from 'lodash/omit'
 
-import { useCozyDialog } from './useCozyDialog'
+import useCozyDialog from './useCozyDialog'
 import Dialog, {
   DialogTitle,
   DialogActions,
@@ -12,30 +11,13 @@ import Dialog, {
 import dialogPropTypes from './dialogPropTypes'
 import DialogBackButton from './DialogBackButton'
 import DialogCloseButton from './DialogCloseButton'
-import DialogTransition from './DialogTransition'
 
-const ConfirmDialog = ({
-  open,
-  opened, // Deprecated
-  onClose,
-  title,
-  content,
-  actions,
-  actionsLayout
-}) => {
-  const { paperClassName, isFullscreen, id } = useCozyDialog('small')
-
+const ConfirmDialog = props => {
+  const { onClose, title, content, actions, actionsLayout } = props
+  const { dialogProps, dialogTitleProps, fullScreen, id } = useCozyDialog(props)
   return (
-    <Dialog
-      open={open || opened}
-      onClose={onClose}
-      TransitionComponent={DialogTransition}
-      TransitionProps={{ isFullscreen }}
-      fullScreen={isFullscreen}
-      classes={{ paper: paperClassName }}
-      aria-labelledby={`modal-title-${id}`}
-    >
-      {!isFullscreen && (
+    <Dialog {...dialogProps}>
+      {!fullScreen && (
         <DialogCloseButton
           onClick={onClose}
           data-test-id={`modal-close-button-${id}`}
@@ -43,12 +25,8 @@ const ConfirmDialog = ({
       )}
       <DialogContent>
         <div className="dialogContentInner withFluidActions">
-          <DialogTitle
-            id={`modal-title-${id}`}
-            disableTypography
-            className="dialogTitleFluid"
-          >
-            {isFullscreen ? <DialogBackButton onClick={onClose} /> : null}
+          <DialogTitle {...dialogTitleProps} className="dialogTitleFluid">
+            {fullScreen ? <DialogBackButton onClick={onClose} /> : null}
             {title}
           </DialogTitle>
           {content}
@@ -66,6 +44,10 @@ const ConfirmDialog = ({
   )
 }
 
-ConfirmDialog.propTypes = omit(dialogPropTypes, 'size')
+ConfirmDialog.defaultProps = {
+  size: 'small'
+}
+
+ConfirmDialog.propTypes = dialogPropTypes
 
 export default ConfirmDialog

@@ -248,7 +248,13 @@ normalTheme.overrides = {
     },
     gutters: {
       paddingLeft: '1rem',
-      paddingRight: '1rem'
+      paddingRight: '1rem',
+      [normalTheme.breakpoints.up('md')]: {
+        '&.listItem--dialog': {
+          paddingLeft: '2rem',
+          paddingRight: '2rem'
+        }
+      }
     },
     dense: {
       minHeight: '3.5rem',

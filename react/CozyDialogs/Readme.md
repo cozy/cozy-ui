@@ -6,6 +6,11 @@ Pre-built modals ready to be directly used in applications, based on MUI Dialog.
 * FixedDialog : default one but with both title/actions fixed
 * FixedActionsDialog : default one but with title fluid and actions fixed
 
+Will automatically:
+
+* Be aria-labelled via the title
+* Switch to fullscreen on mobile unless the size is small
+
 ### Props
 
 * size : `<string>` Can be "s", "m" (default) or "l"
@@ -15,6 +20,8 @@ Pre-built modals ready to be directly used in applications, based on MUI Dialog.
 * content : `<node>` Content of the modal
 * actions : `<node>` Actions of the modal
 * actionsLayout : `<string>` Can be "row" or "column"
+
+Additionally, all the CozyDialogs support [MUI Dialog's props](https://v3.material-ui.com/api/dialog/). 
 
 ```jsx
 import Variants from 'docs/components/Variants'
@@ -148,8 +155,8 @@ const toggleDialog = dialog => {
         <StateRadio value='column' name='actionsLayout' /> column 
       </p>
       <DialogComponent
-        size={state.size}
-        opened={state.modalOpened}
+        size={DialogComponent !== ConfirmDialog ? state.size : undefined}
+        open={state.modalOpened}
         onClose={handleClose}
         title={dialogTitles[DialogComponent.name]}
         content={state.content == 'default'

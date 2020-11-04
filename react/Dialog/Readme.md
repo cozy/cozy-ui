@@ -1,7 +1,9 @@
 ## Dialog
 
 If no ready made [CozyDialogs](#/CozyDialogs) corresponds to what you need, you can use
-Dialog directly.
+Dialog directly. The useCozyDialog takes [CozyDialog props]([CozyDialogs](#/CozyDialogs))
+and returns props to spread on the components used in your custom Dialog. Those props
+will make sure that even your custom Dialogs will behave as CozyDialogs. 
 
 ```jsx
 import cx from 'classnames'
@@ -14,7 +16,8 @@ import Dialog, {
 import {
   DialogTransition,
   DialogBackButton,
-  DialogCloseButton
+  DialogCloseButton,
+  useCozyDialog
 } from 'cozy-ui/transpiled/react/CozyDialogs';
 import useBreakpoints, {
   BreakpointsProvider
@@ -23,53 +26,104 @@ import useBreakpoints, {
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
 import { CardDivider } from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
 import Button from 'cozy-ui/transpiled/react/Button'
+import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List';
+import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem';
+import ListItemIcon from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon';
+import ListItemText from 'cozy-ui/transpiled/react/ListItemText';
+import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemSecondaryAction';
+import Icon from 'cozy-ui/transpiled/react/Icon';
+import Menu from 'cozy-ui/transpiled/react/MuiCozyTheme/Menus';
+import MenuItem from '@material-ui/core/MenuItem'
 
 const handleClose = () => setState({ modalOpened: !state.modalOpened })
 
 initialState = { modalOpened: isTesting() }
 
-const ExampleDialog = ({ opened, onClose }) => {
+const ExampleDialog = ({ open, onClose }) => {
   const { isMobile } = useBreakpoints()
+  const { dialogProps, dialogTitleProps, listItemProps } = useCozyDialog({
+    size: 'medium',
+    classes: {
+      paper: 'my-class'
+    },
+    open,
+    onClose,
+    disableEnforceFocus: true
+  })
 
   return (
     <Dialog
-      open={opened}
-      onClose={onClose}
-      TransitionComponent={DialogTransition}
-      fullScreen={isMobile}
-      classes={{ paper: 'sizeM' }}
+      {...dialogProps}
     >
+      <style type='text/css'>{`
+        .my-class {
+          <!-- https://uigradients.com/#Margo -->
+          background: linear-gradient(to right, #ffefba, #ffffff);
+        }
+      `}</style>
       <DialogCloseButton onClick={onClose} />
-      <DialogTitle disableTypography className="u-ellipsis">
+      <DialogTitle {...dialogTitleProps}>
         {isMobile ? <DialogBackButton onClick={onClose} /> : null}
         Ada Lovelace
       </DialogTitle>
-      <CardDivider />
-      <DialogContent>
-        <div className="dialogContentInner withFluidActions">
-          Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815
-          – 27 November 1852) was an English mathematician and writer, chiefly
-          known for her work on Charles Babbage's proposed mechanical
-          general-purpose computer, the Analytical Engine. She was the first to
-          recognise that the machine had applications beyond pure calculation, and
-          published the first algorithm intended to be carried out by such a
-          machine. As a result, she is often regarded as the first to recognise
-          the full potential of a "computing machine" and the first computer
-          programmer.
-          <DialogActions disableActionSpacing className="dialogActionsFluid">
+      <List>
+        <ListItem {...listItemProps}>
+          <ListItemIcon>
+            <Icon icon="folder" width="32" height="32" />
+          </ListItemIcon>
+          <ListItemText primary="I'm a primary text"/>
+          <ListItemSecondaryAction>
+            <Menu
+              component={
+                <Button
+                  label='Click for more !'
+                  theme="text"
+                  icon="dots"
+                  extension="narrow"
+                  iconOnly
+                  className="u-m-0"
+                />
+              }
+            >
+              <MenuItem>Profile</MenuItem>
+              <MenuItem>My account</MenuItem>
+              <hr />
+              <MenuItem>Logout</MenuItem>
+            </Menu>
+          </ListItemSecondaryAction>
+        </ListItem>
+        <ListItem {...listItemProps}>
+          <ListItemIcon>
+            <Icon icon="file" width="32" height="32" />
+          </ListItemIcon>
+          <ListItemText primary="I'm a primary text" secondary="I'm a secondary text"/>
+        </ListItem>
+        <ListItem {...listItemProps}>
+          <ListItemText primary="I'm a primary text" />
+          <ListItemSecondaryAction>
             <Button
-              theme="secondary"
-              onClick={() => onClose()}
-              label={'Close Modal'}
+              label='Click for more !'
+              theme="text"
+              icon="dots"
+              extension="narrow"
+              iconOnly
+              className="u-m-0"
             />
-            <Button
-              theme="primary"
-              label={'Touch Me'}
-              onClick={() => alert('click')}
-            />
-          </DialogActions>
-        </div>
-      </DialogContent>
+          </ListItemSecondaryAction>
+        </ListItem>
+      </List>
+      <DialogActions>
+        <Button
+          theme="secondary"
+          onClick={() => onClose()}
+          label={'Close Modal'}
+        />
+        <Button
+          theme="primary"
+          label='Click Me'
+          onClick={() => alert('click')}
+        />
+      </DialogActions>
     </Dialog>
   )
 }
@@ -80,7 +134,7 @@ const ExampleDialog = ({ opened, onClose }) => {
   </button>
   <BreakpointsProvider>
     <MuiCozyTheme>
-      <ExampleDialog opened={state.modalOpened} onClose={handleClose} />
+      <ExampleDialog open={state.modalOpened} onClose={handleClose} />
     </MuiCozyTheme>
   </BreakpointsProvider>
 </>

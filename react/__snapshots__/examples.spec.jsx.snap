@@ -6542,19 +6542,19 @@ exports[`Labs/CollectionField should render examples: Labs/CollectionField 1`] =
 
 exports[`ListItemText should render examples: ListItemText 1`] = `
 "<div>
-  <div class=\\"MuiListItemText-root-82\\"><span class=\\"MuiTypography-root-88 u-db u-ellipsis MuiTypography-subheading-95 MuiListItemText-primary-85\\">I'm a list item text</span></div>
+  <div class=\\"MuiListItemText-root-145\\"><span class=\\"MuiTypography-root-151 u-db u-ellipsis MuiTypography-subheading-158 MuiListItemText-primary-148\\">I'm a list item text</span></div>
 </div>"
 `;
 
 exports[`ListItemText should render examples: ListItemText 2`] = `
 "<div>
-  <div class=\\"MuiListItemText-root-82\\"><span class=\\"MuiTypography-root-88 u-db u-ellipsis MuiTypography-subheading-95 MuiListItemText-primary-85\\">I'm a primary text</span><span class=\\"MuiTypography-root-88 u-db u-ellipsis MuiTypography-caption-98 MuiTypography-colorTextSecondary-121 MuiListItemText-secondary-86\\">I'm a secondary text</span></div>
+  <div class=\\"MuiListItemText-root-145\\"><span class=\\"MuiTypography-root-151 u-db u-ellipsis MuiTypography-subheading-158 MuiListItemText-primary-148\\">I'm a primary text</span><span class=\\"MuiTypography-root-151 u-db u-ellipsis MuiTypography-caption-161 MuiTypography-colorTextSecondary-184 MuiListItemText-secondary-149\\">I'm a secondary text</span></div>
 </div>"
 `;
 
 exports[`ListItemText should render examples: ListItemText 3`] = `
 "<div>
-  <div class=\\"MuiListItemText-root-82\\"><span class=\\"MuiTypography-root-88 u-db u-ellipsis MuiTypography-subheading-95 MuiListItemText-primary-85\\"><div class=\\"u-text\\">I'm a primary text</div><a class=\\"u-caption\\" href=\\"http://cozy.io\\"><div class=\\"u-midellipsis\\"><span>Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognis</span><span>e that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a \\"computing machine\\" and the first computer programmer.</span></div></a></span>
+  <div class=\\"MuiListItemText-root-145\\"><span class=\\"MuiTypography-root-151 u-db u-ellipsis MuiTypography-subheading-158 MuiListItemText-primary-148\\"><div class=\\"u-text\\">I'm a primary text</div><a class=\\"u-caption\\" href=\\"http://cozy.io\\"><div class=\\"u-midellipsis\\"><span>Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognis</span><span>e that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a \\"computing machine\\" and the first computer programmer.</span></div></a></span>
 </div>
 </div>"
 `;
@@ -6654,19 +6654,19 @@ exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Primary</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-124\\"><span class=\\"MuiButtonBase-root-143 MuiIconButton-root-137 MuiPrivateSwitchBase-root-133 MuiSwitch-switchBase-127 MuiSwitch-colorPrimary-129 MuiPrivateSwitchBase-checked-134 MuiSwitch-checked-128\\"><span class=\\"MuiIconButton-label-142\\"><span class=\\"MuiSwitch-icon-125 MuiSwitch-iconChecked-126\\"></span><input class=\\"MuiPrivateSwitchBase-input-136\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-168\\"></span></span><span class=\\"MuiSwitch-bar-132\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-187\\"><span class=\\"MuiButtonBase-root-206 MuiIconButton-root-200 MuiPrivateSwitchBase-root-196 MuiSwitch-switchBase-190 MuiSwitch-colorPrimary-192 MuiPrivateSwitchBase-checked-197 MuiSwitch-checked-191\\"><span class=\\"MuiIconButton-label-205\\"><span class=\\"MuiSwitch-icon-188 MuiSwitch-iconChecked-189\\"></span><input class=\\"MuiPrivateSwitchBase-input-199\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-231\\"></span></span><span class=\\"MuiSwitch-bar-195\\"></span></span></div>
       </div>
       <div class=\\"styles__media___cSJMp\\">
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Secondary</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-124\\"><span class=\\"MuiButtonBase-root-143 MuiIconButton-root-137 MuiPrivateSwitchBase-root-133 MuiSwitch-switchBase-127 MuiSwitch-colorSecondary-130 MuiPrivateSwitchBase-checked-134 MuiSwitch-checked-128\\"><span class=\\"MuiIconButton-label-142\\"><span class=\\"MuiSwitch-icon-125 MuiSwitch-iconChecked-126\\"></span><input class=\\"MuiPrivateSwitchBase-input-136\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-168\\"></span></span><span class=\\"MuiSwitch-bar-132\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-187\\"><span class=\\"MuiButtonBase-root-206 MuiIconButton-root-200 MuiPrivateSwitchBase-root-196 MuiSwitch-switchBase-190 MuiSwitch-colorSecondary-193 MuiPrivateSwitchBase-checked-197 MuiSwitch-checked-191\\"><span class=\\"MuiIconButton-label-205\\"><span class=\\"MuiSwitch-icon-188 MuiSwitch-iconChecked-189\\"></span><input class=\\"MuiPrivateSwitchBase-input-199\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-231\\"></span></span><span class=\\"MuiSwitch-bar-195\\"></span></span></div>
       </div>
       <div class=\\"styles__media___cSJMp\\">
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Disabled</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-124\\"><span class=\\"MuiButtonBase-root-143 MuiButtonBase-disabled-144 MuiIconButton-root-137 MuiIconButton-disabled-141 MuiPrivateSwitchBase-root-133 MuiSwitch-switchBase-127 MuiSwitch-colorSecondary-130 MuiPrivateSwitchBase-disabled-135 MuiSwitch-disabled-131\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-142\\"><span class=\\"MuiSwitch-icon-125\\"></span><input class=\\"MuiPrivateSwitchBase-input-136\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-132\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-187\\"><span class=\\"MuiButtonBase-root-206 MuiButtonBase-disabled-207 MuiIconButton-root-200 MuiIconButton-disabled-204 MuiPrivateSwitchBase-root-196 MuiSwitch-switchBase-190 MuiSwitch-colorSecondary-193 MuiPrivateSwitchBase-disabled-198 MuiSwitch-disabled-194\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-205\\"><span class=\\"MuiSwitch-icon-188\\"></span><input class=\\"MuiPrivateSwitchBase-input-199\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-195\\"></span></span></div>
       </div>
     </div>
     <div class=\\"u-title-h2 u-mt-1\\">Inverted theme</div>
@@ -6675,19 +6675,19 @@ exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Primary</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-146\\"><span class=\\"MuiButtonBase-root-165 MuiIconButton-root-159 MuiPrivateSwitchBase-root-155 MuiSwitch-switchBase-149 MuiSwitch-colorPrimary-151 MuiPrivateSwitchBase-checked-156 MuiSwitch-checked-150\\"><span class=\\"MuiIconButton-label-164\\"><span class=\\"MuiSwitch-icon-147 MuiSwitch-iconChecked-148\\"></span><input class=\\"MuiPrivateSwitchBase-input-158\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-175\\"></span></span><span class=\\"MuiSwitch-bar-154\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-209\\"><span class=\\"MuiButtonBase-root-228 MuiIconButton-root-222 MuiPrivateSwitchBase-root-218 MuiSwitch-switchBase-212 MuiSwitch-colorPrimary-214 MuiPrivateSwitchBase-checked-219 MuiSwitch-checked-213\\"><span class=\\"MuiIconButton-label-227\\"><span class=\\"MuiSwitch-icon-210 MuiSwitch-iconChecked-211\\"></span><input class=\\"MuiPrivateSwitchBase-input-221\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-238\\"></span></span><span class=\\"MuiSwitch-bar-217\\"></span></span></div>
       </div>
       <div class=\\"styles__media___cSJMp\\">
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Secondary</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-146\\"><span class=\\"MuiButtonBase-root-165 MuiIconButton-root-159 MuiPrivateSwitchBase-root-155 MuiSwitch-switchBase-149 MuiSwitch-colorSecondary-152 MuiPrivateSwitchBase-checked-156 MuiSwitch-checked-150\\"><span class=\\"MuiIconButton-label-164\\"><span class=\\"MuiSwitch-icon-147 MuiSwitch-iconChecked-148\\"></span><input class=\\"MuiPrivateSwitchBase-input-158\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-175\\"></span></span><span class=\\"MuiSwitch-bar-154\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-209\\"><span class=\\"MuiButtonBase-root-228 MuiIconButton-root-222 MuiPrivateSwitchBase-root-218 MuiSwitch-switchBase-212 MuiSwitch-colorSecondary-215 MuiPrivateSwitchBase-checked-219 MuiSwitch-checked-213\\"><span class=\\"MuiIconButton-label-227\\"><span class=\\"MuiSwitch-icon-210 MuiSwitch-iconChecked-211\\"></span><input class=\\"MuiPrivateSwitchBase-input-221\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-238\\"></span></span><span class=\\"MuiSwitch-bar-217\\"></span></span></div>
       </div>
       <div class=\\"styles__media___cSJMp\\">
         <div class=\\"styles__img___3SHpG\\">
           <div class=\\"u-text\\">Disabled</div>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-146\\"><span class=\\"MuiButtonBase-root-165 MuiButtonBase-disabled-166 MuiIconButton-root-159 MuiIconButton-disabled-163 MuiPrivateSwitchBase-root-155 MuiSwitch-switchBase-149 MuiSwitch-colorSecondary-152 MuiPrivateSwitchBase-disabled-157 MuiSwitch-disabled-153\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-164\\"><span class=\\"MuiSwitch-icon-147\\"></span><input class=\\"MuiPrivateSwitchBase-input-158\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-154\\"></span></span></div>
+        <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-209\\"><span class=\\"MuiButtonBase-root-228 MuiButtonBase-disabled-229 MuiIconButton-root-222 MuiIconButton-disabled-226 MuiPrivateSwitchBase-root-218 MuiSwitch-switchBase-212 MuiSwitch-colorSecondary-215 MuiPrivateSwitchBase-disabled-220 MuiSwitch-disabled-216\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-227\\"><span class=\\"MuiSwitch-icon-210\\"></span><input class=\\"MuiPrivateSwitchBase-input-221\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-217\\"></span></span></div>
       </div>
     </div>
   </div>
@@ -7250,22 +7250,22 @@ exports[`Table should render examples: Table 1`] = `
 
 exports[`Tabs should render examples: Tabs 1`] = `
 "<div>
-  <div class=\\"MuiTabs-root-182\\" aria-label=\\"simple tabs example\\">
-    <div class=\\"MuiTabs-flexContainer-183\\">
-      <div class=\\"MuiTabs-scroller-185 MuiTabs-fixed-186\\" style=\\"margin-bottom: 0px;\\" role=\\"tablist\\">
-        <div class=\\"MuiTabs-flexContainer-183\\"><button class=\\"MuiButtonBase-root-203 MuiTab-root-191 MuiTab-textColorPrimary-194 MuiTab-selected-196\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"true\\" id=\\"simple-tab-0\\" aria-controls=\\"simple-tabpanel-0\\"><span class=\\"MuiTab-wrapper-199\\"><span class=\\"MuiTab-labelContainer-200\\"><span class=\\"MuiTab-label-201\\">Item One</span></span></span><span class=\\"MuiTouchRipple-root-241\\"></span></button><button class=\\"MuiButtonBase-root-203 MuiTab-root-191 MuiTab-textColorPrimary-194\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-1\\" aria-controls=\\"simple-tabpanel-1\\"><span class=\\"MuiTab-wrapper-199\\"><span class=\\"MuiTab-labelContainer-200\\"><span class=\\"MuiTab-label-201\\">Item Two</span></span></span><span class=\\"MuiTouchRipple-root-241\\"></span></button><button class=\\"MuiButtonBase-root-203 MuiTab-root-191 MuiTab-textColorPrimary-194\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-2\\" aria-controls=\\"simple-tabpanel-2\\"><span class=\\"MuiTab-wrapper-199\\"><span class=\\"MuiTab-labelContainer-200\\"><span class=\\"MuiTab-label-201\\">Item Three</span></span></span><span class=\\"MuiTouchRipple-root-241\\"></span></button></div><span class=\\"MuiPrivateTabIndicator-root-206 MuiPrivateTabIndicator-colorPrimary-207 MuiTabs-indicator-190\\" style=\\"left: 0px; width: 0px;\\"></span>
+  <div class=\\"MuiTabs-root-245\\" aria-label=\\"simple tabs example\\">
+    <div class=\\"MuiTabs-flexContainer-246\\">
+      <div class=\\"MuiTabs-scroller-248 MuiTabs-fixed-249\\" style=\\"margin-bottom: 0px;\\" role=\\"tablist\\">
+        <div class=\\"MuiTabs-flexContainer-246\\"><button class=\\"MuiButtonBase-root-266 MuiTab-root-254 MuiTab-textColorPrimary-257 MuiTab-selected-259\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"true\\" id=\\"simple-tab-0\\" aria-controls=\\"simple-tabpanel-0\\"><span class=\\"MuiTab-wrapper-262\\"><span class=\\"MuiTab-labelContainer-263\\"><span class=\\"MuiTab-label-264\\">Item One</span></span></span><span class=\\"MuiTouchRipple-root-304\\"></span></button><button class=\\"MuiButtonBase-root-266 MuiTab-root-254 MuiTab-textColorPrimary-257\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-1\\" aria-controls=\\"simple-tabpanel-1\\"><span class=\\"MuiTab-wrapper-262\\"><span class=\\"MuiTab-labelContainer-263\\"><span class=\\"MuiTab-label-264\\">Item Two</span></span></span><span class=\\"MuiTouchRipple-root-304\\"></span></button><button class=\\"MuiButtonBase-root-266 MuiTab-root-254 MuiTab-textColorPrimary-257\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-2\\" aria-controls=\\"simple-tabpanel-2\\"><span class=\\"MuiTab-wrapper-262\\"><span class=\\"MuiTab-labelContainer-263\\"><span class=\\"MuiTab-label-264\\">Item Three</span></span></span><span class=\\"MuiTouchRipple-root-304\\"></span></button></div><span class=\\"MuiPrivateTabIndicator-root-269 MuiPrivateTabIndicator-colorPrimary-270 MuiTabs-indicator-253\\" style=\\"left: 0px; width: 0px;\\"></span>
       </div>
     </div>
   </div>
   <hr class=\\"MuiDivider-root-47 u-ml-0 u-maw-100\\"><br>
-  <div class=\\"MuiTabs-root-209\\" aria-label=\\"simple tabs example\\">
-    <div class=\\"MuiTabs-flexContainer-210\\">
-      <div class=\\"MuiTabs-scroller-212 MuiTabs-fixed-213\\" style=\\"margin-bottom: 0px;\\" role=\\"tablist\\">
-        <div class=\\"MuiTabs-flexContainer-210\\"><button class=\\"MuiButtonBase-root-230 MuiTab-root-218 MuiTab-textColorPrimary-221 MuiTab-selected-223\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"true\\" id=\\"simple-tab-0\\" aria-controls=\\"simple-tabpanel-0\\"><span class=\\"MuiTab-wrapper-226\\"><span class=\\"MuiTab-labelContainer-227\\"><span class=\\"MuiTab-label-228\\">Item One</span></span></span><span class=\\"MuiTouchRipple-root-248\\"></span></button><button class=\\"MuiButtonBase-root-230 MuiTab-root-218 MuiTab-textColorPrimary-221\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-1\\" aria-controls=\\"simple-tabpanel-1\\"><span class=\\"MuiTab-wrapper-226\\"><span class=\\"MuiTab-labelContainer-227\\"><span class=\\"MuiTab-label-228\\">Item Two</span></span></span><span class=\\"MuiTouchRipple-root-248\\"></span></button><button class=\\"MuiButtonBase-root-230 MuiTab-root-218 MuiTab-textColorPrimary-221\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-2\\" aria-controls=\\"simple-tabpanel-2\\"><span class=\\"MuiTab-wrapper-226\\"><span class=\\"MuiTab-labelContainer-227\\"><span class=\\"MuiTab-label-228\\">Item Three</span></span></span><span class=\\"MuiTouchRipple-root-248\\"></span></button></div><span class=\\"MuiPrivateTabIndicator-root-233 MuiPrivateTabIndicator-colorPrimary-234 MuiTabs-indicator-217\\" style=\\"left: 0px; width: 0px;\\"></span>
+  <div class=\\"MuiTabs-root-272\\" aria-label=\\"simple tabs example\\">
+    <div class=\\"MuiTabs-flexContainer-273\\">
+      <div class=\\"MuiTabs-scroller-275 MuiTabs-fixed-276\\" style=\\"margin-bottom: 0px;\\" role=\\"tablist\\">
+        <div class=\\"MuiTabs-flexContainer-273\\"><button class=\\"MuiButtonBase-root-293 MuiTab-root-281 MuiTab-textColorPrimary-284 MuiTab-selected-286\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"true\\" id=\\"simple-tab-0\\" aria-controls=\\"simple-tabpanel-0\\"><span class=\\"MuiTab-wrapper-289\\"><span class=\\"MuiTab-labelContainer-290\\"><span class=\\"MuiTab-label-291\\">Item One</span></span></span><span class=\\"MuiTouchRipple-root-311\\"></span></button><button class=\\"MuiButtonBase-root-293 MuiTab-root-281 MuiTab-textColorPrimary-284\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-1\\" aria-controls=\\"simple-tabpanel-1\\"><span class=\\"MuiTab-wrapper-289\\"><span class=\\"MuiTab-labelContainer-290\\"><span class=\\"MuiTab-label-291\\">Item Two</span></span></span><span class=\\"MuiTouchRipple-root-311\\"></span></button><button class=\\"MuiButtonBase-root-293 MuiTab-root-281 MuiTab-textColorPrimary-284\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-2\\" aria-controls=\\"simple-tabpanel-2\\"><span class=\\"MuiTab-wrapper-289\\"><span class=\\"MuiTab-labelContainer-290\\"><span class=\\"MuiTab-label-291\\">Item Three</span></span></span><span class=\\"MuiTouchRipple-root-311\\"></span></button></div><span class=\\"MuiPrivateTabIndicator-root-296 MuiPrivateTabIndicator-colorPrimary-297 MuiTabs-indicator-280\\" style=\\"left: 0px; width: 0px;\\"></span>
       </div>
     </div>
   </div>
-  <hr class=\\"MuiDivider-root-236 u-ml-0 u-maw-100\\">
+  <hr class=\\"MuiDivider-root-299 u-ml-0 u-maw-100\\">
 </div>"
 `;
 
