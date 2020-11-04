@@ -15,7 +15,8 @@ import DialogCloseButton from './DialogCloseButton'
 import DialogTransition from './DialogTransition'
 
 const Dialog = ({
-  opened,
+  open,
+  opened, // Deprecated
   onClose,
   title,
   content,
@@ -27,7 +28,7 @@ const Dialog = ({
 
   return (
     <MUIDialog
-      open={opened}
+      open={open || opened}
       onClose={onClose}
       TransitionComponent={DialogTransition}
       TransitionProps={{ isFullscreen }}

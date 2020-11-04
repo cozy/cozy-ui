@@ -14,7 +14,8 @@ import DialogCloseButton from './DialogCloseButton'
 import DialogTransition from './DialogTransition'
 
 const IllustrationDialog = ({
-  opened,
+  open,
+  opened, // Deprecated
   onClose,
   title,
   content,
@@ -26,7 +27,7 @@ const IllustrationDialog = ({
 
   return (
     <Dialog
-      open={opened}
+      open={open || opened}
       onClose={onClose}
       TransitionComponent={DialogTransition}
       TransitionProps={{ isFullscreen }}
