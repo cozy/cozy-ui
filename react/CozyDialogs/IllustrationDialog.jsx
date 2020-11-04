@@ -21,7 +21,8 @@ const IllustrationDialog = ({
   content,
   actions,
   actionsLayout,
-  size
+  size,
+  ...otherProps
 }) => {
   const { paperClassName, isFullscreen, id } = useCozyDialog(size)
 
@@ -34,6 +35,7 @@ const IllustrationDialog = ({
       fullScreen={isFullscreen}
       classes={{ paper: paperClassName }}
       aria-labelledby={`modal-title-${id}`}
+      {...otherProps}
     >
       {!isFullscreen && (
         <DialogCloseButton

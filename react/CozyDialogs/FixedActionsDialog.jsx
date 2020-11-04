@@ -22,7 +22,8 @@ const FixedActionsDialog = ({
   content,
   actions,
   actionsLayout,
-  size
+  size,
+  ...otherProps
 }) => {
   const { paperClassName, isFullscreen, id } = useCozyDialog(size)
 
@@ -35,6 +36,7 @@ const FixedActionsDialog = ({
       fullScreen={isFullscreen}
       classes={{ paper: paperClassName }}
       aria-labelledby={`modal-title-${id}`}
+      {...otherProps}
     >
       {!isFullscreen && (
         <DialogCloseButton

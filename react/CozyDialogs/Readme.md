@@ -15,6 +15,7 @@ Pre-built modals ready to be directly used in applications, based on MUI Dialog.
 * content : `<node>` Content of the modal
 * actions : `<node>` Actions of the modal
 * actionsLayout : `<string>` Can be "row" or "column"
+* ...Mui.ModalProps & ...Mui.DialogProps 
 
 ```jsx
 import Variants from 'docs/components/Variants'
