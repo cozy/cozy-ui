@@ -35,9 +35,18 @@ const useCozyDialog = size => {
     disableTypography: true,
     className: 'u-ellipsis'
   }
+
+  const listItemClassName = 'listItem--dialog'
+  const listItemProps = {
+    classes: {
+      root: listItemClassName
+    }
+  }
+
   return {
     dialogProps,
     dialogTitleProps,
+    listItemProps,
     id,
     fullScreen
   }
