@@ -65,6 +65,6 @@ const ConfirmDialog = ({
   )
 }
 
-ConfirmDialog.PropTypes = omit(dialogPropTypes, 'size')
+ConfirmDialog.propTypes = omit(dialogPropTypes, 'size')
 
 export default ConfirmDialog
