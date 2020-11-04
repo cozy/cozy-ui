@@ -14,19 +14,11 @@ import DialogBackButton from './DialogBackButton'
 import DialogCloseButton from './DialogCloseButton'
 
 const Dialog = props => {
-  const {
-    open,
-    opened, // Deprecated
-    onClose,
-    title,
-    content,
-    actions,
-    actionsLayout
-  } = props
+  const { onClose, title, content, actions, actionsLayout } = props
   const { dialogProps, dialogTitleProps, fullScreen, id } = useCozyDialog(props)
 
   return (
-    <MUIDialog open={open || opened} onClose={onClose} {...dialogProps}>
+    <MUIDialog {...dialogProps}>
       {!fullScreen && (
         <DialogCloseButton
           onClick={onClose}

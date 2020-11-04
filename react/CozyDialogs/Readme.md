@@ -149,7 +149,7 @@ const toggleDialog = dialog => {
       </p>
       <DialogComponent
         size={DialogComponent !== ConfirmDialog ? state.size : undefined}
-        opened={state.modalOpened}
+        open={state.modalOpened}
         onClose={handleClose}
         title={dialogTitles[DialogComponent.name]}
         content={state.content == 'default'

@@ -14,23 +14,11 @@ import DialogBackButton from './DialogBackButton'
 import DialogCloseButton from './DialogCloseButton'
 
 const FixedActionsDialog = props => {
-  const {
-    open,
-    opened, // Deprecated
-    onClose,
-    title,
-    content,
-    actions,
-    actionsLayout
-  } = props
+  const { onClose, title, content, actions, actionsLayout } = props
   const { dialogProps, dialogTitleProps, fullScreen, id } = useCozyDialog(props)
 
   return (
-    <Dialog
-      open={open || opened}
-      onClose={onClose}
-      {...dialogProps}
-    >
+    <Dialog {...dialogProps}>
       {!fullScreen && (
         <DialogCloseButton
           data-test-id={`modal-close-button-${id}`}

@@ -13,22 +13,40 @@ const modalSizes = ['small', 'medium', 'large']
  * @returns {object} className, isFullscreen and id
  */
 const useCozyDialog = props => {
-  const { size } = props
+  const {
+    size,
+    actions, // eslint-disable-line no-unused-vars
+    actionsLayout, // eslint-disable-line no-unused-vars
+    title, // eslint-disable-line no-unused-vars
+    content, // eslint-disable-line no-unused-vars
+    open,
+    opened,
+    onClose,
+    ...otherProps
+  } = props
   const { isMobile } = useBreakpoints()
   const [id] = useState(globalId++)
   const paperClassName = modalSizes.includes(size) ? `${size}` : 'medium'
   const fullScreen = size !== 'small' && isMobile
   const TransitionComponent = DialogTransition
-  const TransitionProps = { fullScreen }
 
   const dialogProps = {
     'aria-labelledby': `modal-title-${id}`,
-    classes: {
-      paper: paperClassName
-    },
     fullScreen,
+    open: open || opened,
+    onClose,
     TransitionComponent,
-    TransitionProps
+    ...otherProps,
+    classes: {
+      ...otherProps.classes,
+      paper: `${paperClassName} ${
+        otherProps.classes ? otherProps.classes.paper : ''
+      }`
+    },
+    TransitionProps: {
+      fullScreen,
+      ...otherProps.TransitionProps
+    }
   }
 
   const dialogTitleProps = {
