@@ -11,10 +11,12 @@ const modalSizes = ['small', 'medium', 'large']
  * @param {string} size - Size of the modal (small, medium, large)
  * @returns {object} className, isFullscreen and id
  */
-export const useCozyDialog = size => {
+const useCozyDialog = size => {
   const { isMobile } = useBreakpoints()
   const [id] = useState(globalId++)
   const paperClassName = modalSizes.includes(size) ? `${size}` : 'medium'
   const isFullscreen = size !== 'small' && isMobile
   return { paperClassName, isFullscreen, id }
 }
+
+export default useCozyDialog

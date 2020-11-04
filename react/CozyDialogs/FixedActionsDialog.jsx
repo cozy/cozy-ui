@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 
-import { useCozyDialog } from './useCozyDialog'
+import useCozyDialog from './useCozyDialog'
 import Dialog, {
   DialogTitle,
   DialogActions,
