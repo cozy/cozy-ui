@@ -11,7 +11,6 @@ import Dialog, {
 import dialogPropTypes from './dialogPropTypes'
 import DialogBackButton from './DialogBackButton'
 import DialogCloseButton from './DialogCloseButton'
-import DialogTransition from './DialogTransition'
 
 const IllustrationDialog = ({
   open,
@@ -23,19 +22,11 @@ const IllustrationDialog = ({
   actionsLayout,
   size
 }) => {
-  const { paperClassName, isFullscreen, id } = useCozyDialog(size)
+  const { dialogProps, dialogTitleProps, id, fullScreen } = useCozyDialog(size)
 
   return (
-    <Dialog
-      open={open || opened}
-      onClose={onClose}
-      TransitionComponent={DialogTransition}
-      TransitionProps={{ isFullscreen }}
-      fullScreen={isFullscreen}
-      classes={{ paper: paperClassName }}
-      aria-labelledby={`modal-title-${id}`}
-    >
-      {!isFullscreen && (
+    <Dialog open={open || opened} onClose={onClose} {...dialogProps}>
+      {!fullScreen && (
         <DialogCloseButton
           data-test-id={`modal-close-button-${id}`}
           onClick={onClose}
@@ -44,11 +35,10 @@ const IllustrationDialog = ({
       <DialogContent>
         <div className="dialogContentInner withFluidActions">
           <DialogTitle
-            id={`modal-title-${id}`}
-            disableTypography
+            {...dialogTitleProps}
             className="dialogTitleFluid u-w-100"
           >
-            {isFullscreen ? <DialogBackButton onClick={onClose} /> : null}
+            {fullScreen ? <DialogBackButton onClick={onClose} /> : null}
             <div className="u-flex u-flex-justify-center">{title}</div>
           </DialogTitle>
           {content}

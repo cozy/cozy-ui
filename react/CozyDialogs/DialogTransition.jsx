@@ -2,8 +2,8 @@ import React from 'react'
 import MuiSlide from '@material-ui/core/Slide'
 import MuiGrow from '@material-ui/core/Grow'
 
-const DialogTransition = ({ isFullscreen, ...props }) => {
-  return isFullscreen ? (
+const DialogTransition = ({ fullScreen, ...props }) => {
+  return fullScreen ? (
     <MuiSlide direction="up" {...props} />
   ) : (
     <MuiGrow {...props} />

@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import useBreakpoints from '../hooks/useBreakpoints'
+import DialogTransition from './DialogTransition'
 
 let globalId = 0
 
@@ -15,8 +16,31 @@ const useCozyDialog = size => {
   const { isMobile } = useBreakpoints()
   const [id] = useState(globalId++)
   const paperClassName = modalSizes.includes(size) ? `${size}` : 'medium'
-  const isFullscreen = size !== 'small' && isMobile
-  return { paperClassName, isFullscreen, id }
+  const fullScreen = size !== 'small' && isMobile
+  const TransitionComponent = DialogTransition
+  const TransitionProps = { fullScreen }
+
+  const dialogProps = {
+    'aria-labelledby': `modal-title-${id}`,
+    classes: {
+      paper: paperClassName
+    },
+    fullScreen,
+    TransitionComponent,
+    TransitionProps
+  }
+
+  const dialogTitleProps = {
+    id: `modal-title-${id}`,
+    disableTypography: true,
+    className: 'u-ellipsis'
+  }
+  return {
+    dialogProps,
+    dialogTitleProps,
+    id,
+    fullScreen
+  }
 }
 
 export default useCozyDialog
