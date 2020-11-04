@@ -65,6 +65,6 @@ const IllustrationDialog = ({
   )
 }
 
-IllustrationDialog.PropTypes = dialogPropTypes
+IllustrationDialog.propTypes = dialogPropTypes
 
 export default IllustrationDialog
