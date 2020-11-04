@@ -106,6 +106,14 @@ yarn build:doc:react
 yarn deploy:doc --repo git@github.com:USERNAME/cozy-ui.git
 ```
 
+## Unit testing
+
+Be aware that snapshots in unit tests use the transpilated version of cozy-ui. Therefore if you make changes and need to update the snapshots, you need to transpile first.
+
+```bash
+yarn transpile && yarn test -u
+```
+
 ## UI regression testing
 
 Components in `cozy-ui` are showcased with [React Styleguidist][]. To prevent UI regressions,
