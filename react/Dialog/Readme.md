@@ -40,15 +40,26 @@ initialState = { modalOpened: isTesting() }
 
 const ExampleDialog = ({ open, onClose }) => {
   const { isMobile } = useBreakpoints()
-  const { dialogProps, dialogTitleProps, listItemProps } = useCozyDialog({ size: 'medium' })
+  const { dialogProps, dialogTitleProps, listItemProps } = useCozyDialog({
+    size: 'medium',
+    classes: {
+      paper: 'my-class'
+    },
+    open,
+    onClose,
+    disableEnforceFocus: true
+  })
 
   return (
     <Dialog
-      open={open}
-      onClose={onClose}
-      TransitionComponent={DialogTransition}
       {...dialogProps}
     >
+      <style type='text/css'>{`
+        .my-class {
+          <!-- https://uigradients.com/#Margo -->
+          background: linear-gradient(to right, #ffefba, #ffffff);
+        }
+      `}</style>
       <DialogCloseButton onClick={onClose} />
       <DialogTitle {...dialogTitleProps}>
         {isMobile ? <DialogBackButton onClick={onClose} /> : null}
