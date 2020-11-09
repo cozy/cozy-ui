@@ -345,6 +345,9 @@ normalTheme.overrides = {
     }
   },
   MuiDialog: {
+    root: {
+      zIndex: getCssVariableValue('zIndex-modal')
+    },
     paper: {
       '&.small': {
         width: '480px',

@@ -22,6 +22,7 @@ import {
 import useBreakpoints, {
   BreakpointsProvider
 } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import Alerter from 'cozy-ui/transpiled/react/Alerter';
 
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
 import { CardDivider } from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
@@ -121,7 +122,7 @@ const ExampleDialog = ({ open, onClose }) => {
         <Button
           theme="primary"
           label='Click Me'
-          onClick={() => alert('click')}
+          onClick={() => Alerter.info("This is an info alert!")}
         />
       </DialogActions>
     </Dialog>
@@ -134,6 +135,7 @@ const ExampleDialog = ({ open, onClose }) => {
   </button>
   <BreakpointsProvider>
     <MuiCozyTheme>
+      <Alerter />
       <ExampleDialog open={state.modalOpened} onClose={handleClose} />
     </MuiCozyTheme>
   </BreakpointsProvider>
