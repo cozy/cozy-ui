@@ -35,8 +35,10 @@ Is it also possible to provide a custom asynchronous `fetchIcon` which takes an 
 
 ```jsx
 import AppIcon from 'cozy-ui/transpiled/react/AppIcon';
-const fetchIcon1 = () => 'https://placeholder.pics/svg/100/7DC4FF/Test%20Icon'
-const fetchIcon2 = () => 'https://placeholder.pics/svg/100/FF0202/Test%20Icon'
+import {placeholder100, placeholder100Red} from 'docs/placeholders/img';
+const fetchIcon1 = () => placeholder100
+
+const fetchIcon2 = () => placeholder100Red
 
 const handleSwitch = () => {
   const newFetchIcon = state.fetchIcon.name === 'fetchIcon1' ? fetchIcon2 : fetchIcon1
@@ -60,7 +62,8 @@ You can provide an `<Icon />` `icon` props to fallback when the AppIcon fetched 
 
 ```jsx
 import AppIcon from 'cozy-ui/transpiled/react/AppIcon';
-const fetchIcon = () => 'https://placeholder.pics/svg/100/7DC4FF/Test%20Icon'
+import {placeholder100Red} from 'docs/placeholders/img'
+const fetchIcon = () => placeholder100Red
 const fetchIconBroken = () => 'blahblahblah'
 
 const brokeFetchIcon = () => setState({ fetchIcon: fetchIconBroken  })
