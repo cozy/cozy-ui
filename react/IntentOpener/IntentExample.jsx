@@ -1,10 +1,11 @@
 import React from 'react'
 import IntentWrapper from '../IntentWrapper'
+import { placeholder90 } from '../../docs/placeholders/img'
 
 const IntentExample = function({ onComplete, action, doctype, options }) {
   return (
     <IntentWrapper
-      appIcon={'https://via.placeholder.com/90'}
+      appIcon={placeholder90}
       appName="IntentExample"
       appEditor="EditorExample"
     >
