@@ -18,6 +18,10 @@ import localeEn from './locales/en.json'
 import localeEs from './locales/es.json'
 import localeFr from './locales/fr.json'
 
+import CrossIcon from 'cozy-ui/transpiled/react/Icons/Cross'
+import WarningIcon from 'cozy-ui/transpiled/react/Icons/Warning'
+import CheckIcon from 'cozy-ui/transpiled/react/Icons/Check'
+
 const locales = {
   en: localeEn,
   es: localeEs,
@@ -108,17 +112,25 @@ const Item = translate()(
       ) : null
     } else if (statusToUse === CANCEL) {
       statusIcon = (
-        <Icon className="u-ml-half" icon="cross" color={palette['monza']} />
+        <Icon className="u-ml-half" icon={CrossIcon} color={palette['monza']} />
       )
     } else if (ERROR_STATUSES.includes(statusToUse)) {
       error = true
       statusIcon = (
-        <Icon className="u-ml-half" icon="warning" color={palette['monza']} />
+        <Icon
+          className="u-ml-half"
+          icon={WarningIcon}
+          color={palette['monza']}
+        />
       )
     } else if (DONE_STATUSES.includes(statusToUse)) {
       done = true
       statusIcon = (
-        <Icon className="u-ml-half" icon="check" color={palette['emerald']} />
+        <Icon
+          className="u-ml-half"
+          icon={CheckIcon}
+          color={palette['emerald']}
+        />
       )
     } else if (statusToUse === PENDING) {
       statusIcon = <Pending />

@@ -5,6 +5,8 @@ import IconButton from 'cozy-ui/transpiled/react/IconButton'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import styles from './styles.styl'
 
+import CrossMediumIcon from 'cozy-ui/transpiled/react/Icons/CrossMedium'
+
 const CloseButton = ({ onClick, ...props }) => {
   return (
     <IconButton
@@ -12,7 +14,7 @@ const CloseButton = ({ onClick, ...props }) => {
       className={styles.DialogCloseButton}
       {...props}
     >
-      <Icon icon="cross-medium" />
+      <Icon icon={CrossMediumIcon} />
     </IconButton>
   )
 }

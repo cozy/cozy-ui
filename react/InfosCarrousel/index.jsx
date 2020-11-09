@@ -8,6 +8,9 @@ import styles from './styles.styl'
 import Icon from '../Icon'
 import IconButton from '../IconButton'
 
+import LeftIcon from 'cozy-ui/transpiled/react/Icons/Left'
+import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
+
 const useClampedValue = (initialValue, min, max) => {
   const [value, setValue] = useState(initialValue)
 
@@ -54,11 +57,11 @@ const InfosCarrousel = ({ children, theme, className, swipeableProps }) => {
       {React.Children.count(children) > 1 ? (
         <div className={styles['InfosCarrousel-navigation']}>
           <IconButton onClick={goToPreviousInfos} disabled={hasPreviousInfos}>
-            <Icon icon="left" />
+            <Icon icon={LeftIcon} />
           </IconButton>
           <span className={styles['InfosCarrousel-separator']} />
           <IconButton onClick={goToNextInfos} disabled={hasNextInfos}>
-            <Icon icon="right" />
+            <Icon icon={RightIcon} />
           </IconButton>
         </div>
       ) : null}

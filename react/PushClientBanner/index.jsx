@@ -8,6 +8,9 @@ import PropTypes from 'prop-types'
 import { Button, ButtonLink } from '../Button'
 import Icon from '../Icon'
 
+import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
+import CrossIcon from 'cozy-ui/transpiled/react/Icons/Cross'
+
 const BannerClient = props => {
   const {
     text,
@@ -31,7 +34,7 @@ const BannerClient = props => {
       />
       <div className={styles['c-banner-text']}>
         <figure>
-          <Icon icon="cozy" width="44" height="44" />
+          <Icon icon={CozyIcon} width="44" height="44" />
         </figure>
         <span>{text}</span>
         <ButtonLink
@@ -47,7 +50,7 @@ const BannerClient = props => {
         extension="narrow"
         className={styles['close-banner']}
         onClick={onClick}
-        icon={<Icon icon="cross" width="24" height="24" />}
+        icon={<Icon icon={CrossIcon} width="24" height="24" />}
         iconOnly
         label="Close"
       />

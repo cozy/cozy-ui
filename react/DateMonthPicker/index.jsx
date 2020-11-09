@@ -7,6 +7,9 @@ import { format } from 'date-fns'
 import styles from './styles.styl'
 import cx from 'classnames'
 
+import LeftIcon from 'cozy-ui/transpiled/react/Icons/Left'
+import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
+
 const MonthButton = translate()(({ monthNum, f, onClick, isSelected }) => {
   // We do not care care about year and day since we are creating the date
   // only to be able to format it into a monthName
@@ -56,7 +59,7 @@ const DateMonthPicker = ({ initialValue, onSelect }) => {
           title={year - 1}
           onClick={decreaseYear}
         >
-          <Icon icon="left" />
+          <Icon icon={LeftIcon} />
         </button>
         <div className={cx(styles.DateMonthPicker__Year)}>{year}</div>
         <button
@@ -64,7 +67,7 @@ const DateMonthPicker = ({ initialValue, onSelect }) => {
           title={year + 1}
           onClick={increaseYear}
         >
-          <Icon icon="right" />
+          <Icon icon={RightIcon} />
         </button>
       </div>
       <div className={styles.DateMonthPicker__MonthGrid}>

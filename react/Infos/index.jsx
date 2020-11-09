@@ -9,6 +9,8 @@ import createDepreciationLogger from '../helpers/createDepreciationLogger'
 
 import styles from './styles.styl'
 
+import CrossIcon from 'cozy-ui/transpiled/react/Icons/Cross'
+
 export const Infos = ({
   description,
   action,
@@ -26,7 +28,7 @@ export const Infos = ({
       </Stack>
       {dismissAction && (
         <button className={styles['Info-close']} onClick={dismissAction}>
-          <Icon icon="cross" color={palette['coolGrey']} />
+          <Icon icon={CrossIcon} color={palette['coolGrey']} />
         </button>
       )}
     </div>

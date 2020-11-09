@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import Icon, { iconPropType } from '../Icon'
 
+import SpinnerIcon from 'cozy-ui/transpiled/react/Icons/Spinner'
+
 const btnClass = function(options) {
   const { className, extension, size, theme, variant, round, align } = options
   return cx(
@@ -101,7 +103,7 @@ const BaseButton = props => {
         {restProps.busy && (
           <Icon
             size={sizeToIconSize[size]}
-            icon="spinner"
+            icon={SpinnerIcon}
             spin
             className="u-ml-half"
             aria-hidden

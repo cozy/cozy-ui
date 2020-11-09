@@ -8,6 +8,8 @@ import palette from '../palette'
 
 import styles from './styles.styl'
 
+import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
+
 /**
  *
  * This component display a timeline of file's version
@@ -44,7 +46,7 @@ const HistoryRow = ({
               <Icon
                 className="u-c-pointer"
                 color={palette.coolGrey}
-                icon="download"
+                icon={DownloadIcon}
                 onClick={() => downloadLink()}
               />
             </Img>

@@ -3,6 +3,8 @@ import cx from 'classnames'
 import styles from './styles.styl'
 import Icon from '../Icon'
 
+import BottomIcon from 'cozy-ui/transpiled/react/Icons/Bottom'
+
 const DropdownButton = React.forwardRef(
   ({ children, className, ...props }, ref) => (
     <button
@@ -13,7 +15,7 @@ const DropdownButton = React.forwardRef(
     >
       {children}
       <Icon
-        icon="bottom"
+        icon={BottomIcon}
         size="12"
         className={styles['c-DropdownButton-Icon']}
       />

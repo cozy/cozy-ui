@@ -5,6 +5,8 @@ import cx from 'classnames'
 import Icon from '../Icon'
 import styles from './styles.styl'
 
+import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
+
 class AccordionItem extends Component {
   constructor(props) {
     super(props)
@@ -40,7 +42,7 @@ class AccordionItem extends Component {
             aria-expanded={selected}
             aria-controls={contentID}
           >
-            <Icon icon="right" />
+            <Icon icon={RightIcon} />
             {label}
           </div>
         </div>
