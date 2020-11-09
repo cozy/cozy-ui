@@ -62,6 +62,7 @@ const withFileUrl = BaseComponent =>
     }
 
     reset = () => {
+      this.clearTimeout()
       this.setState({ status: LOADING, downloadUrl: null })
     }
 
