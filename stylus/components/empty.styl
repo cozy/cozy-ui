@@ -14,9 +14,10 @@ $empty
     text-align       center
     max-width        100%
 
-    +medium-screen()
-        margin-top 'calc(50vh - %s)' % contentHeight
-        transform translateY(-50%)
+    &.withTransform
+        +medium-screen()
+            margin-top 'calc(50vh - %s)' % contentHeight
+            transform translateY(-50%)
 
 $empty-img
     display              block

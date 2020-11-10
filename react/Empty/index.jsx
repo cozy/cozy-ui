@@ -11,10 +11,22 @@ export const Empty = ({
   text,
   children,
   className,
+  noTransform,
   ...restProps
 }) => {
+  let withTransform = null
+  if (!noTransform) {
+    console.warn(
+      "Empty shouldn't have css transformation on it, but should be managed by the application. Please put the css of withTransform class into the application and set noTransform to true."
+    )
+    withTransform = 'withTransform'
+  }
+
   return (
-    <div className={cx(styles['c-empty'], className)} {...restProps}>
+    <div
+      className={cx(styles['c-empty'], styles[withTransform], className)}
+      {...restProps}
+    >
       <Icon
         className={styles['c-empty-img']}
         icon={icon}
@@ -36,7 +48,12 @@ Empty.propTypes = {
   icon: iconPropType.isRequired,
   title: PropTypes.node.isRequired,
   text: PropTypes.node,
-  className: PropTypes.string
+  className: PropTypes.string,
+  noTransform: PropTypes.bool
+}
+
+Empty.defaultProps = {
+  noTransform: false
 }
 
 export const EmptySubTitle = ({ ...restProps }) => (
