@@ -6,6 +6,8 @@ import Icon from '../Icon'
 import { withClient } from 'cozy-client'
 import { AppDoctype } from '../proptypes'
 
+import KeychainIcon from 'cozy-ui/transpiled/react/Icons/Keychain'
+
 class CipherIcon extends React.PureComponent {
   constructor(props) {
     super(props)
@@ -29,7 +31,7 @@ class CipherIcon extends React.PureComponent {
         <div className="u-pos-absolute u-right-0 u-bottom-0">
           <AppIcon fetchIcon={this.fetchIcon} className="u-w-1 u-h-1" />
         </div>
-        <Icon icon="keychain" size={32} />
+        <Icon icon={KeychainIcon} size={32} />
       </div>
     )
   }

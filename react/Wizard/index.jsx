@@ -8,6 +8,8 @@ import Input from 'cozy-ui/transpiled/react/Input'
 
 import styles from './styles.styl'
 
+import CloudIcon from 'cozy-ui/transpiled/react/Icons/Cloud'
+
 export const Wizard = ({ children, tag, ...props }) => {
   const Component = tag || 'div'
   return (
@@ -75,7 +77,7 @@ export const WizardLogo = ({ src, badgeIcon, badgeColor }) => (
       focusable="false"
     />
     <div className={styles['wizard-logo-badge']}>
-      <Icon icon="cloud" width={badgeIcon} height="20" color={badgeColor} />
+      <Icon icon={CloudIcon} width={badgeIcon} height="20" color={badgeColor} />
     </div>
   </div>
 )

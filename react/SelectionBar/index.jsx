@@ -6,6 +6,8 @@ import useBreakpoints from '../hooks/useBreakpoints'
 
 import styles from './styles.styl'
 
+import CrossIcon from 'cozy-ui/transpiled/react/Icons/Cross'
+
 /*
 
 If you want use SelectionBar component, you must have `actions` parameter, like :
@@ -64,7 +66,7 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
         onClick={hideSelectionBar}
         extension="narrow"
       >
-        <Icon icon="cross" />
+        <Icon icon={CrossIcon} />
       </Button>
     </div>
   )

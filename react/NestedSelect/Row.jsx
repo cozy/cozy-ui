@@ -5,6 +5,8 @@ import { Media, Bd, Img } from '../Media'
 import Icon from '../Icon'
 import styles from './Row.styl'
 
+import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
+
 export const RowBody = ({ children }) => (
   <Bd className="u-ellipsis">{children}</Bd>
 )
@@ -32,7 +34,7 @@ const Row = ({
     {children}
     {hasArrow && (
       <Img>
-        <Icon icon="right" color="var(--coolGrey)" />
+        <Icon icon={RightIcon} color="var(--coolGrey)" />
       </Img>
     )}
   </Media>

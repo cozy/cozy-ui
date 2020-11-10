@@ -5,6 +5,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Icon from '../Icon'
 
+import DeviceLaptopIcon from 'cozy-ui/transpiled/react/Icons/DeviceLaptop'
+
 const ButtonClient = props => {
   const { label, href, onClick, className } = props
   return (
@@ -16,7 +18,7 @@ const ButtonClient = props => {
       onClick={onClick}
     >
       <figure>
-        <Icon icon="device-laptop" size="32" />
+        <Icon icon={DeviceLaptopIcon} size="32" />
       </figure>
       <span>{label}</span>
     </a>

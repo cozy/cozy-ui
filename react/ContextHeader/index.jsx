@@ -7,6 +7,8 @@ import styles from './styles.styl'
 import palette from '../palette'
 import cx from 'classnames'
 
+import CrossIcon from 'cozy-ui/transpiled/react/Icons/Cross'
+
 const ContextHeader = ({ icon, title, text, onClose, className }) => {
   return (
     <div className={cx(styles['context-header'], className)}>
@@ -24,7 +26,7 @@ const ContextHeader = ({ icon, title, text, onClose, className }) => {
           type="button"
         >
           <Icon
-            icon="cross"
+            icon={CrossIcon}
             width="14"
             height="14"
             color={palette['coolGrey']}

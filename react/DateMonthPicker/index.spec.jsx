@@ -3,6 +3,8 @@ import React from 'react'
 import DateMonthPicker from './index'
 import I18n from '../I18n'
 import { act } from 'react-dom/test-utils'
+import LeftIcon from 'cozy-ui/transpiled/react/Icons/Left'
+import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
 
 const findButtonWithLabel = (root, label) =>
   root.findWhere(n => n.type() == 'button' && n.props().children === label)
@@ -46,7 +48,7 @@ describe('DateMonthPicker', () => {
 
   it('should be able to go to previous year', async () => {
     const { root, handleSelect } = setup({ initialValue: '2015-08' })
-    const prevYearButton = findButtonWithIcon(root, 'left')
+    const prevYearButton = findButtonWithIcon(root, LeftIcon)
     act(() => {
       prevYearButton.props().onClick()
     })
@@ -59,7 +61,7 @@ describe('DateMonthPicker', () => {
 
   it('should be able to go to next year', async () => {
     const { root, handleSelect } = setup({ initialValue: '2015-08' })
-    const nextYearButton = findButtonWithIcon(root, 'right')
+    const nextYearButton = findButtonWithIcon(root, RightIcon)
     act(() => {
       nextYearButton.props().onClick()
     })

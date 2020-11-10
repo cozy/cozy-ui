@@ -2,8 +2,8 @@
 
 exports[`ActionMenu should render examples: ActionMenu 1`] = `
 "<div>
-  <div><button role=\\"button\\" class=\\"styles__c-DropdownButton___1JXUA\\">Show action menu<svg class=\\"styles__c-DropdownButton-Icon___ohvD2 styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
-        <use xlink:href=\\"#bottom\\"></use>
+  <div><button role=\\"button\\" class=\\"styles__c-DropdownButton___1JXUA\\">Show action menu<svg viewBox=\\"0 0 24 24\\" class=\\"styles__c-DropdownButton-Icon___ohvD2 styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
+        <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
       </svg></button>
     <div>
       <div style=\\"position: absolute; left: 0px; top: 0px; z-index: #fff; transform: translate(0px, 0px);\\" data-popper-reference-hidden=\\"true\\" data-popper-escaped=\\"true\\" data-popper-placement=\\"bottom-start\\">
@@ -39,8 +39,8 @@ exports[`ActionMenu should render examples: ActionMenu 1`] = `
 
 exports[`ActionMenu should render examples: ActionMenu 2`] = `
 "<div>
-  <div><button role=\\"button\\" class=\\"styles__c-DropdownButton___1JXUA\\">Show action menu<svg class=\\"styles__c-DropdownButton-Icon___ohvD2 styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
-        <use xlink:href=\\"#bottom\\"></use>
+  <div><button role=\\"button\\" class=\\"styles__c-DropdownButton___1JXUA\\">Show action menu<svg viewBox=\\"0 0 24 24\\" class=\\"styles__c-DropdownButton-Icon___ohvD2 styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
+        <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
       </svg></button>
     <div>
       <div style=\\"position: absolute; left: 0px; top: 0px; z-index: #fff; transform: translate(0px, 0px);\\" data-popper-reference-hidden=\\"true\\" data-popper-escaped=\\"true\\" data-popper-placement=\\"bottom-start\\">
@@ -72,8 +72,8 @@ exports[`ActionMenu should render examples: ActionMenu 2`] = `
 
 exports[`ActionMenu should render examples: ActionMenu 3`] = `
 "<div>
-  <div><button role=\\"button\\" class=\\"styles__c-DropdownButton___1JXUA\\">Show action menu<svg class=\\"styles__c-DropdownButton-Icon___ohvD2 styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
-        <use xlink:href=\\"#bottom\\"></use>
+  <div><button role=\\"button\\" class=\\"styles__c-DropdownButton___1JXUA\\">Show action menu<svg viewBox=\\"0 0 24 24\\" class=\\"styles__c-DropdownButton-Icon___ohvD2 styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
+        <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
       </svg></button>
     <div>
       <div style=\\"position: absolute; left: 0px; top: 0px; z-index: #fff; transform: translate(0px, 0px);\\" data-popper-reference-hidden=\\"true\\" data-popper-escaped=\\"true\\" data-popper-placement=\\"bottom-start\\">
@@ -93,8 +93,8 @@ exports[`ActionMenu should render examples: ActionMenu 3`] = `
 
 exports[`ActionMenu should render examples: ActionMenu 4`] = `
 "<div>
-  <div><button role=\\"button\\" class=\\"styles__c-DropdownButton___1JXUA\\">Show action menu<svg class=\\"styles__c-DropdownButton-Icon___ohvD2 styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
-        <use xlink:href=\\"#bottom\\"></use>
+  <div><button role=\\"button\\" class=\\"styles__c-DropdownButton___1JXUA\\">Show action menu<svg viewBox=\\"0 0 24 24\\" class=\\"styles__c-DropdownButton-Icon___ohvD2 styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
+        <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
       </svg></button>
     <div>
       <div style=\\"position: absolute; left: 0px; top: 0px; z-index: #fff; transform: translate(0px, 0px);\\" data-popper-reference-hidden=\\"true\\" data-popper-escaped=\\"true\\" data-popper-placement=\\"bottom-end\\">
@@ -114,8 +114,8 @@ exports[`ActionMenu should render examples: ActionMenu 4`] = `
 
 exports[`ActionMenu should render examples: ActionMenu 5`] = `
 "<div>
-  <div><button role=\\"button\\" class=\\"styles__c-DropdownButton___1JXUA\\">Show action menu<svg class=\\"styles__c-DropdownButton-Icon___ohvD2 styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
-        <use xlink:href=\\"#bottom\\"></use>
+  <div><button role=\\"button\\" class=\\"styles__c-DropdownButton___1JXUA\\">Show action menu<svg viewBox=\\"0 0 24 24\\" class=\\"styles__c-DropdownButton-Icon___ohvD2 styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
+        <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
       </svg></button>
     <div>
       <div style=\\"position: absolute; left: 0px; top: 0px; z-index: #fff; transform: translate(0px, 0px);\\" data-popper-reference-hidden=\\"true\\" data-popper-escaped=\\"true\\" data-popper-placement=\\"bottom-end\\">
@@ -141,8 +141,8 @@ exports[`AppTitle should render examples: AppTitle 1`] = `
 
 exports[`Avatar should render examples: Avatar 1`] = `
 "<div>
-  <div class=\\"styles__c-avatar___PpDI-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-      <use xlink:href=\\"#people\\"></use>
+  <div class=\\"styles__c-avatar___PpDI-\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+      <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
     </svg></div>
 </div>"
 `;
@@ -162,8 +162,8 @@ exports[`Avatar should render examples: Avatar 3`] = `
 exports[`Avatar should render examples: Avatar 4`] = `
 "<div>
   <div class=\\"u-flex\\">
-    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--disabled___xoLOy\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#people\\"></use>
+    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--disabled___xoLOy\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
       </svg></div>
     <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna styles__c-avatar--disabled___xoLOy\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
     <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--image___jDBci styles__c-avatar--disabled___xoLOy\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
@@ -175,36 +175,36 @@ exports[`Avatar should render examples: Avatar 5`] = `
 "<div>
   <div>
     <div class=\\"u-flex\\">
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--xsmall___3H2Io\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <use xlink:href=\\"#people\\"></use>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--xsmall___3H2Io\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+          <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
         </svg></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--xsmall___3H2Io styles__c-avatar--text___2dvna\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--xsmall___3H2Io styles__c-avatar--image___jDBci\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
     </div>
     <div class=\\"u-flex\\">
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <use xlink:href=\\"#people\\"></use>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+          <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
         </svg></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__c-avatar--text___2dvna\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--small___1Y_Pv styles__c-avatar--image___jDBci\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
     </div>
     <div class=\\"u-flex\\">
-      <div class=\\"styles__c-avatar___PpDI-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <use xlink:href=\\"#people\\"></use>
+      <div class=\\"styles__c-avatar___PpDI-\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+          <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
         </svg></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--image___jDBci\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
     </div>
     <div class=\\"u-flex\\">
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--large___1Z_HZ\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <use xlink:href=\\"#people\\"></use>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--large___1Z_HZ\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+          <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
         </svg></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--large___1Z_HZ styles__c-avatar--text___2dvna\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--large___1Z_HZ styles__c-avatar--image___jDBci\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
     </div>
     <div class=\\"u-flex\\">
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--xlarge___3Qe0b\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <use xlink:href=\\"#people\\"></use>
+      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--xlarge___3Qe0b\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+          <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
         </svg></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--xlarge___3Qe0b styles__c-avatar--text___2dvna\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
       <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--xlarge___3Qe0b styles__c-avatar--image___jDBci\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
@@ -264,29 +264,37 @@ exports[`BarButton should render examples: BarButton 4`] = `
 exports[`Button should render examples: Button 1`] = `
 "<div>
   <div>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly styles__c-btn--center___16_Xh\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly styles__c-btn--center___16_Xh\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly styles__c-btn--center___16_Xh\\"><span><span>regular</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
-          <use xlink:href=\\"#spinner\\"></use>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly styles__c-btn--center___16_Xh\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly styles__c-btn--center___16_Xh\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly styles__c-btn--center___16_Xh\\"><span><span>regular</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--ghost___1HC3L styles__c-btn--center___16_Xh\\"><span><span>ghost</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--ghost___1HC3L styles__c-btn--center___16_Xh\\"><span><span>ghost</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--ghost___1HC3L styles__c-btn--center___16_Xh\\"><span><span>ghost</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
-          <use xlink:href=\\"#spinner\\"></use>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--ghost___1HC3L styles__c-btn--center___16_Xh\\"><span><span>ghost</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--ghost___1HC3L styles__c-btn--center___16_Xh\\"><span><span>ghost</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--ghost___1HC3L styles__c-btn--center___16_Xh\\"><span><span>ghost</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>danger</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
-          <use xlink:href=\\"#spinner\\"></use>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>danger</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--center___16_Xh\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--center___16_Xh\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--center___16_Xh\\"><span><span>highlight</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
-          <use xlink:href=\\"#spinner\\"></use>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--center___16_Xh\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--center___16_Xh\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--center___16_Xh\\"><span><span>highlight</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>secondary</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
-          <use xlink:href=\\"#spinner\\"></use>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>secondary</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>danger-outline</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
-          <use xlink:href=\\"#spinner\\"></use>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>danger-outline</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi styles__c-btn--center___16_Xh\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi styles__c-btn--center___16_Xh\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi styles__c-btn--center___16_Xh\\"><span><span>alpha</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
-          <use xlink:href=\\"#spinner\\"></use>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi styles__c-btn--center___16_Xh\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi styles__c-btn--center___16_Xh\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi styles__c-btn--center___16_Xh\\"><span><span>alpha</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>text</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>text</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>text</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
-          <use xlink:href=\\"#spinner\\"></use>
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>text</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>text</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>text</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
         </svg></span></button></p>
   </div>
 </div>"
@@ -332,8 +340,9 @@ exports[`Button should render examples: Button 5`] = `
 exports[`Button should render examples: Button 6`] = `"<div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>Show alert</span></span></button></div>"`;
 
 exports[`Button should render examples: Button 7`] = `
-"<div><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Loading</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
-      <use xlink:href=\\"#spinner\\"></use>
+"<div><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Loading</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+      <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+      <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
     </svg></span></button></div>"
 `;
 
@@ -369,14 +378,18 @@ exports[`Button should render examples: Button 13`] = `
     <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--tiny___1pFv6 styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"8\\" height=\\"8\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#plus\\"></use></svg><span>Tiny text</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--small___3ArkI styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#plus\\"></use></svg><span>Small text</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#plus\\"></use></svg><span>Regular text</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"18\\" height=\\"18\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#plus\\"></use></svg><span>Large text</span></span></button></p>
     <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Secondary theme</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Highlight theme</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>DANGER theme</span></span></button></p>
     <p><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Disabled</span></span></button></p>
-    <p><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
-          <use xlink:href=\\"#spinner\\"></use>
-        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy secondary</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
-          <use xlink:href=\\"#spinner\\"></use>
-        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy highlight</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
-          <use xlink:href=\\"#spinner\\"></use>
-        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy danger</span><svg class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
-          <use xlink:href=\\"#spinner\\"></use>
+    <p><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
+        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy secondary</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
+        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy highlight</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
+        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy danger</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
         </svg></span></button></p>
     <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#cozy\\"></use></svg><span>Cozy</span></span></button></p>
     <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#plus\\"></use></svg><span>Subtle Secondary Cozy</span></span></button></p>
@@ -2068,11 +2081,11 @@ exports[`ContactsListModal should render examples: ContactsListModal 1`] = `"<di
 exports[`DateMonthPicker should render examples: DateMonthPicker 1`] = `
 "<div>
   <div>
-    <div class=\\"styles__DateMonthPicker__YearControls___1DGlB\\"><button class=\\"styles__DateMonthPicker__YearButton___3zNDK\\" title=\\"2018\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <use xlink:href=\\"#left\\"></use>
+    <div class=\\"styles__DateMonthPicker__YearControls___1DGlB\\"><button class=\\"styles__DateMonthPicker__YearButton___3zNDK\\" title=\\"2018\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+          <path fill-rule=\\"evenodd\\" d=\\"M10.707 2.707a.999.999 0 10-1.414-1.414l-6 6a.999.999 0 000 1.414l6 6a.999.999 0 101.414-1.414L5.414 8l5.293-5.293z\\"></path>
         </svg></button>
-      <div class=\\"styles__DateMonthPicker__Year___387bP\\">2019</div><button class=\\"styles__DateMonthPicker__YearButton___3zNDK\\" title=\\"2020\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <use xlink:href=\\"#right\\"></use>
+      <div class=\\"styles__DateMonthPicker__Year___387bP\\">2019</div><button class=\\"styles__DateMonthPicker__YearButton___3zNDK\\" title=\\"2020\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+          <path fill-rule=\\"evenodd\\" d=\\"M12.707 7.293l-6-6a.999.999 0 10-1.414 1.414L10.586 8l-5.293 5.293a.999.999 0 101.414 1.414l6-6a.999.999 0 000-1.414\\"></path>
         </svg></button>
     </div>
     <div class=\\"styles__DateMonthPicker__MonthGrid___TCFg4\\"><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Jan</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Feb</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Mar</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Apr</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">May</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Jun</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Jul</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm styles__DateMonthPicker__MonthButton--selected___40hCm\\">Aug</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Sep</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Oct</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Nov</button><button class=\\"styles__DateMonthPicker__MonthButton___3I_Mm\\">Dec</button></div>
@@ -2331,8 +2344,8 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
             <div class=\\"u-title-h4\\">12/12/12 12:12</div>
             <div class=\\"u-title-h3\\">Current Version</div>
           </div>
-          <div class=\\"styles__img___3SHpG\\"><svg class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
-              <use xlink:href=\\"#download\\"></use>
+          <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
+              <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
             </svg></div>
         </div>
         <div class=\\"u-caption\\">10ko</div>
@@ -2352,8 +2365,8 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
             <div class=\\"u-title-h4\\">12/12/12 12:10</div>
             <div class=\\"u-title-h3\\"></div>
           </div>
-          <div class=\\"styles__img___3SHpG\\"><svg class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
-              <use xlink:href=\\"#download\\"></use>
+          <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
+              <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
             </svg></div>
         </div>
         <div class=\\"u-caption\\">9ko</div>
@@ -2373,8 +2386,8 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
             <div class=\\"u-title-h4\\">12/12/12 12:09</div>
             <div class=\\"u-title-h3\\">V2</div>
           </div>
-          <div class=\\"styles__img___3SHpG\\"><svg class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
-              <use xlink:href=\\"#download\\"></use>
+          <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
+              <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
             </svg></div>
         </div>
         <div class=\\"u-caption\\">9ko</div>
@@ -2394,8 +2407,8 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
             <div class=\\"u-title-h4\\">12/12/12 12:07</div>
             <div class=\\"u-title-h3\\"></div>
           </div>
-          <div class=\\"styles__img___3SHpG\\"><svg class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
-              <use xlink:href=\\"#download\\"></use>
+          <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
+              <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
             </svg></div>
         </div>
         <div class=\\"u-caption\\">9ko</div>
@@ -2415,8 +2428,8 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
             <div class=\\"u-title-h4\\">12/12/12 12:05</div>
             <div class=\\"u-title-h3\\"></div>
           </div>
-          <div class=\\"styles__img___3SHpG\\"><svg class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
-              <use xlink:href=\\"#download\\"></use>
+          <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
+              <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
             </svg></div>
         </div>
         <div class=\\"u-caption\\">9ko</div>
@@ -2436,8 +2449,8 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
             <div class=\\"u-title-h4\\">12/12/12 12:04</div>
             <div class=\\"u-title-h3\\"></div>
           </div>
-          <div class=\\"styles__img___3SHpG\\"><svg class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
-              <use xlink:href=\\"#download\\"></use>
+          <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
+              <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
             </svg></div>
         </div>
         <div class=\\"u-caption\\">9ko</div>
@@ -2457,8 +2470,8 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
             <div class=\\"u-title-h4\\">12/12/12 12:03</div>
             <div class=\\"u-title-h3\\">V1</div>
           </div>
-          <div class=\\"styles__img___3SHpG\\"><svg class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
-              <use xlink:href=\\"#download\\"></use>
+          <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
+              <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
             </svg></div>
         </div>
         <div class=\\"u-caption\\">9ko</div>
@@ -6306,8 +6319,8 @@ exports[`Infos should render examples: Infos 1`] = `
           </div>
         </div>
         <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>one</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>two</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>three</span></span></button></div>
-      </div><button class=\\"styles__Info-close___1RVQP\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
-          <use xlink:href=\\"#cross\\"></use>
+      </div><button class=\\"styles__Info-close___1RVQP\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
+          <path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path>
         </svg></button>
     </div>
   </div>
@@ -6348,10 +6361,10 @@ exports[`InfosCarrousel should render examples: InfosCarrousel 1`] = `
           </div>
         </div>
       </div>
-      <div class=\\"styles__InfosCarrousel-navigation___3s_hu\\"><button class=\\"styles__IconButton___1LWwV\\" disabled=\\"\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-            <use xlink:href=\\"#left\\"></use>
-          </svg></button><span class=\\"styles__InfosCarrousel-separator___AvH5m\\"></span><button class=\\"styles__IconButton___1LWwV\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-            <use xlink:href=\\"#right\\"></use>
+      <div class=\\"styles__InfosCarrousel-navigation___3s_hu\\"><button class=\\"styles__IconButton___1LWwV\\" disabled=\\"\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+            <path fill-rule=\\"evenodd\\" d=\\"M10.707 2.707a.999.999 0 10-1.414-1.414l-6 6a.999.999 0 000 1.414l6 6a.999.999 0 101.414-1.414L5.414 8l5.293-5.293z\\"></path>
+          </svg></button><span class=\\"styles__InfosCarrousel-separator___AvH5m\\"></span><button class=\\"styles__IconButton___1LWwV\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+            <path fill-rule=\\"evenodd\\" d=\\"M12.707 7.293l-6-6a.999.999 0 10-1.414 1.414L10.586 8l-5.293 5.293a.999.999 0 101.414 1.414l6-6a.999.999 0 000-1.414\\"></path>
           </svg></button></div>
     </div>
   </div>
@@ -6533,8 +6546,8 @@ exports[`Labs/CollectionField should render examples: Labs/CollectionField 1`] =
   <div class=\\"styles__o-field___3n5HM\\"><label class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">Contacts</label>
     <div class=\\"styles__Stack--m___1tSpV\\">
       <div class=\\"styles__Stack--s___22WMg\\">
-        <div class=\\"styles__CollectionField__row___Z7bbf\\"><button type=\\"button\\" class=\\"styles__SelectControl___2OxoO\\">isabelle.durand@cozycloud.cc</button><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh styles__c-btn--round___1Lkyl\\" title=\\"Remove this contact\\"><span><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#cross-small\\"></use></svg><span class=\\"u-visuallyhidden\\">Remove this contact</span></span></button></div>
-      </div><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh styles__CollectionField__addBtn___Z0FO-\\"><span><svg class=\\"styles__CollectionField__addBtnIcon___1hA5b styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><use xlink:href=\\"#plus\\"></use></svg><span>Add a contact</span></span></button>
+        <div class=\\"styles__CollectionField__row___Z7bbf\\"><button type=\\"button\\" class=\\"styles__SelectControl___2OxoO\\">isabelle.durand@cozycloud.cc</button><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh styles__c-btn--round___1Lkyl\\" title=\\"Remove this contact\\"><span><svg viewBox=\\"0 0 12 12\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"16\\" height=\\"16\\"><path d=\\"M6 4.59l2.3-2.3a1 1 0 011.4 1.42L7.42 6l2.3 2.3A1 1 0 118.3 9.7L6 7.42l-2.3 2.3A1 1 0 112.3 8.3L4.58 6l-2.3-2.3A1 1 0 013.7 2.3L6 4.58z\\"></path></svg><span class=\\"u-visuallyhidden\\">Remove this contact</span></span></button></div>
+      </div><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh styles__CollectionField__addBtn___Z0FO-\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__CollectionField__addBtnIcon___1hA5b styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg><span>Add a contact</span></span></button>
     </div>
   </div>
 </div>"
@@ -7161,24 +7174,30 @@ exports[`Sidebar should render examples: Sidebar 1`] = `
 
 exports[`Spinner should render examples: Spinner 1`] = `
 "<div>
-  <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\">
-      <use xlink:href=\\"#spinner\\"></use>
+  <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\">
+      <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+      <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
     </svg></div>
 </div>"
 `;
 
 exports[`Spinner should render examples: Spinner 2`] = `
 "<div>
-  <div>blue (default): <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#spinner\\"></use>
-      </svg></div> or <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: blue;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#spinner\\"></use>
-      </svg></div>grey: <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: grey;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#spinner\\"></use>
-      </svg></div>white: <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: white;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#spinner\\"></use>
-      </svg></div>red: <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: red;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#spinner\\"></use>
+  <div>blue (default): <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\">
+        <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+        <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
+      </svg></div> or <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: blue;\\" width=\\"16\\" height=\\"16\\">
+        <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+        <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
+      </svg></div>grey: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: grey;\\" width=\\"16\\" height=\\"16\\">
+        <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+        <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
+      </svg></div>white: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: white;\\" width=\\"16\\" height=\\"16\\">
+        <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+        <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
+      </svg></div>red: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: red;\\" width=\\"16\\" height=\\"16\\">
+        <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+        <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
       </svg></div>
   </div>
 </div>"
@@ -7187,8 +7206,9 @@ exports[`Spinner should render examples: Spinner 2`] = `
 exports[`Spinner should render examples: Spinner 3`] = `
 "<div>
   <div>
-    <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--nomargin___13JyW\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#spinner\\"></use>
+    <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--nomargin___13JyW\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\">
+        <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+        <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
       </svg></div>
   </div>
 </div>"
@@ -7196,20 +7216,27 @@ exports[`Spinner should render examples: Spinner 3`] = `
 
 exports[`Spinner should render examples: Spinner 4`] = `
 "<div>
-  <div>tiny: <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"8\\" height=\\"8\\">
-        <use xlink:href=\\"#spinner\\"></use>
-      </svg></div><br>small: <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"12\\" height=\\"12\\">
-        <use xlink:href=\\"#spinner\\"></use>
-      </svg></div><br>medium (default): <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#spinner\\"></use>
-      </svg></div> or <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#spinner\\"></use>
-      </svg></div><br>large: <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"24\\" height=\\"24\\">
-        <use xlink:href=\\"#spinner\\"></use>
-      </svg></div><br>xlarge: <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"36\\" height=\\"36\\">
-        <use xlink:href=\\"#spinner\\"></use>
-      </svg></div><br>xxlarge: <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"80\\" height=\\"80\\">
-        <use xlink:href=\\"#spinner\\"></use>
+  <div>tiny: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"8\\" height=\\"8\\">
+        <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+        <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
+      </svg></div><br>small: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"12\\" height=\\"12\\">
+        <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+        <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
+      </svg></div><br>medium (default): <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\">
+        <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+        <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
+      </svg></div> or <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\">
+        <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+        <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
+      </svg></div><br>large: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"24\\" height=\\"24\\">
+        <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+        <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
+      </svg></div><br>xlarge: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"36\\" height=\\"36\\">
+        <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+        <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
+      </svg></div><br>xxlarge: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"80\\" height=\\"80\\">
+        <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+        <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
       </svg></div>
   </div>
 </div>"
@@ -7218,8 +7245,9 @@ exports[`Spinner should render examples: Spinner 4`] = `
 exports[`Spinner should render examples: Spinner 5`] = `
 "<div>
   <div>
-    <div class=\\"styles__c-spinner___1snK7\\"><svg class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"80\\" height=\\"80\\">
-        <use xlink:href=\\"#spinner\\"></use>
+    <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"80\\" height=\\"80\\">
+        <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+        <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
       </svg>
       <p>Hello world !</p>
     </div>

@@ -6,10 +6,12 @@ import PropTypes from 'prop-types'
 import styles from './DropdownFilter.styl'
 import cx from 'classnames'
 
+import BottomIcon from 'cozy-ui/transpiled/react/Icons/Bottom'
+
 const SmallArrow = () => (
   <Icon
     className={cx(styles.DropdownFilter__icon, 'u-mr-1')}
-    icon="bottom"
+    icon={BottomIcon}
     color="var(--coolGrey)"
     width={16}
     height={16}

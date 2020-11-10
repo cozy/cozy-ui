@@ -7,6 +7,9 @@ import Stack from '../../Stack'
 import Icon from '../../Icon'
 import { FieldContainer } from '../../Field'
 
+import CrossSmallIcon from 'cozy-ui/transpiled/react/Icons/CrossSmall'
+import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
+
 /**
  * Handles a collection of form fields.
  * This is a controlled component. You have to give it some values and handle
@@ -85,7 +88,9 @@ const CollectionField = props => {
                     label={removeButtonLabel}
                     iconOnly
                     round
-                    icon={<Icon icon="cross-small" color="var(--slateGrey)" />}
+                    icon={
+                      <Icon icon={CrossSmallIcon} color="var(--slateGrey)" />
+                    }
                     onClick={() => handleRemove(index)}
                   />
                 </div>
@@ -100,7 +105,7 @@ const CollectionField = props => {
             theme="text"
             icon={
               <Icon
-                icon="plus"
+                icon={PlusIcon}
                 className={styles.CollectionField__addBtnIcon}
               />
             }

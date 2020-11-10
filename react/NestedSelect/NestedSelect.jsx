@@ -8,6 +8,8 @@ import cx from 'classnames'
 import omit from 'lodash/omit'
 import palette from '../palette'
 
+import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
+
 /**
  * Select like component to choose an option among a list of options.
  * Options can have children; selecting an option that has children
@@ -217,7 +219,7 @@ export const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
         onClick={() => onClick(item)}
         right={
           item.children && item.children.length > 0 ? (
-            <Icon icon="right" color={palette.coolGrey} />
+            <Icon icon={RightIcon} color={palette.coolGrey} />
           ) : radioPosition !== 'right' ? null : (
             <Radio
               readOnly

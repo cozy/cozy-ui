@@ -10,11 +10,13 @@ import NestedSelect from './NestedSelect'
 
 import styles from './styles.styl'
 
+import LeftIcon from 'cozy-ui/transpiled/react/Icons/Left'
+
 const ModalTitle = ({ showBack, onClickBack, title }) => (
   <Media>
     {showBack && (
       <Img className={styles.Modal__back} onClick={onClickBack}>
-        <Icon icon="left" color={palette['coolGrey']} />
+        <Icon icon={LeftIcon} color={palette['coolGrey']} />
       </Img>
     )}
     <Bd>

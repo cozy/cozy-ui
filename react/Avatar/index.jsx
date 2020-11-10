@@ -5,6 +5,8 @@ import palette from '../palette'
 import styles from './styles.styl'
 import Icon from '../Icon'
 
+import PeopleIcon from 'cozy-ui/transpiled/react/Icons/People'
+
 const nameToColor = (name = '') => {
   const colors = [
     palette['azure'],
@@ -60,7 +62,7 @@ export const Avatar = ({
       {!image && text && (
         <span className={styles['c-avatar-initials']}>{text}</span>
       )}
-      {!image && !text && <Icon icon="people" />}
+      {!image && !text && <Icon icon={PeopleIcon} />}
     </div>
   )
 }

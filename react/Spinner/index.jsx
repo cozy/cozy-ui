@@ -5,6 +5,7 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import palette from '../palette'
+import SpinnerIcon from 'cozy-ui/transpiled/react/Icons/Spinner'
 export const Spinner = ({
   t,
   loadingType,
@@ -35,7 +36,7 @@ export const Spinner = ({
         className
       )}
     >
-      <Icon icon="spinner" color={color} spin={true} size={realsize} />
+      <Icon icon={SpinnerIcon} color={color} spin={true} size={realsize} />
       {loadingType && <p>{t(`loading.${loadingType}`)}</p>}
     </div>
   )
