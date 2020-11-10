@@ -1,11 +1,12 @@
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
+import assign from 'lodash/assign'
+
 import palette from '../palette'
 import styles from './styles.styl'
 import Icon from '../Icon'
-
-import PeopleIcon from 'cozy-ui/transpiled/react/Icons/People'
+import { createSizeStyle } from '../Circle'
 
 const nameToColor = (name = '') => {
   const colors = [
@@ -33,6 +34,9 @@ const nameToColor = (name = '') => {
   return colors[key]
 }
 
+const createBgColorStyle = ({ text, textId }) =>
+  text ? { backgroundColor: `${nameToColor(textId || text)}` } : {}
+
 export const Avatar = ({
   text,
   textId,
@@ -40,29 +44,29 @@ export const Avatar = ({
   size,
   className,
   style,
-  disabled
+  disabled,
+  icon
 }) => {
-  const colored = {
-    backgroundColor: `${nameToColor(textId || text)}`
-  }
+  const sizeStyle = createSizeStyle(size)
+  const bgColorStyle = createBgColorStyle({ text, textId })
+  const avatarStyle = assign(bgColorStyle, sizeStyle, style)
 
   return (
     <div
       className={cx(
         styles['c-avatar'],
-        size !== 'medium' ? styles[`c-avatar--${size}`] : '',
         text ? styles['c-avatar--text'] : '',
         image ? styles['c-avatar--image'] : '',
         disabled ? styles['c-avatar--disabled'] : '',
         className
       )}
-      style={text ? Object.assign(colored, style) : style}
+      style={avatarStyle}
     >
       {image && <img src={image} className={styles['c-avatar-image']} alt="" />}
       {!image && text && (
         <span className={styles['c-avatar-initials']}>{text}</span>
       )}
-      {!image && !text && <Icon icon={PeopleIcon} />}
+      {!image && !text && <Icon icon={icon} />}
     </div>
   )
 }
@@ -70,15 +74,24 @@ export const Avatar = ({
 Avatar.propTypes = {
   text: PropTypes.string,
   image: PropTypes.string,
-  size: PropTypes.oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']),
-  className: PropTypes.string
+  size: PropTypes.oneOfType([
+    PropTypes.oneOf(['xsmall', 'small', 'medium', 'large', 'xlarge']),
+    PropTypes.number
+  ]),
+  className: PropTypes.string,
+  disabled: PropTypes.bool,
+  icon: PropTypes.string,
+  style: PropTypes.object
 }
 
 Avatar.defaultProps = {
   text: '',
   image: '',
   size: 'medium',
-  className: ''
+  className: '',
+  disabled: false,
+  icon: 'people',
+  style: {}
 }
 
 export default Avatar
