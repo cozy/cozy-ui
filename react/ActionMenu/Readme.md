@@ -118,8 +118,6 @@ import ActionMenu, { ActionMenuItem } from 'cozy-ui/transpiled/react/ActionMenu'
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 
-const testRef = React.createRef();
-
 initialState = { menuDisplayed: isTesting() };
 
 const showMenu = () => setState({ menuDisplayed: true });
@@ -152,8 +150,6 @@ import {
 } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
 import Button from 'cozy-ui/transpiled/react/Button'
-
-const testRef = React.createRef();
 
 initialState = { menuDisplayed: isTesting(),  modalOpened: isTesting() };
 
