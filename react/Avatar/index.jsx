@@ -5,7 +5,7 @@ import assign from 'lodash/assign'
 
 import palette from '../palette'
 import styles from './styles.styl'
-import Icon from '../Icon'
+import Icon, { iconPropType } from '../Icon'
 import { createSizeStyle } from '../Circle'
 
 const nameToColor = (name = '') => {
@@ -50,7 +50,7 @@ export const Avatar = ({
   const sizeStyle = createSizeStyle(size)
   const bgColorStyle = createBgColorStyle({ text, textId })
   const avatarStyle = assign(bgColorStyle, sizeStyle, style)
-
+  const IconToRender = Icon.isProperIcon(icon) ? <Icon icon={icon} /> : icon
   return (
     <div
       className={cx(
@@ -66,7 +66,7 @@ export const Avatar = ({
       {!image && text && (
         <span className={styles['c-avatar-initials']}>{text}</span>
       )}
-      {!image && !text && <Icon icon={icon} />}
+      {!image && !text && IconToRender}
     </div>
   )
 }
@@ -80,7 +80,7 @@ Avatar.propTypes = {
   ]),
   className: PropTypes.string,
   disabled: PropTypes.bool,
-  icon: PropTypes.string,
+  icon: PropTypes.oneOfType([PropTypes.node, iconPropType]),
   style: PropTypes.object
 }
 

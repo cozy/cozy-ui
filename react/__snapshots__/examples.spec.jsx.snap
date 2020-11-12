@@ -151,6 +151,9 @@ exports[`Avatar should render examples: Avatar 1`] = `
         <use xlink:href=\\"#link\\"></use>
       </svg></div>
     <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"color: black;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+    <div class=\\"styles__c-avatar___PpDI-\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"#warning\\"></use>
+      </svg></div>
   </div>
 </div>"
 `;
