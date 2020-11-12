@@ -4,6 +4,7 @@ module.exports = {
     "@semantic-release/release-notes-generator",
     ["@semantic-release/git", {
       "assets": ["CHANGELOG.md"],
+      "branch": "master",
       "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
     }],
     "@semantic-release/github"
