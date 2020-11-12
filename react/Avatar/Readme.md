@@ -3,6 +3,7 @@
 ```jsx
 import cozyLogo from '../../docs/cozy-logo_white_128.png'
 import Avatar from 'cozy-ui/transpiled/react/Avatar';
+import Icon from 'cozy-ui/transpiled/react/Icon'; 
 
 <div className="u-flex">
   <Avatar />
@@ -10,6 +11,7 @@ import Avatar from 'cozy-ui/transpiled/react/Avatar';
   <Avatar image={cozyLogo} />
   <Avatar icon="link" />
   <Avatar text="CD" style={{color: 'black', backgroundColor: 'var(--seafoamGreen)' }} />
+  <Avatar icon={<Icon icon='warning' />} />
 </div>
 ```
 
