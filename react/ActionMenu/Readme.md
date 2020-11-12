@@ -2,22 +2,37 @@ Use an ActionMenu to show a list of actions. ActionMenus automatically switch th
 
 ### Classic
 
+You can pass a reference to a custom DOM element through the `anchorElRef` prop to attach the menu to that element. This is useful is you want to be able to have autoclose true and be able to close the menu by clicking on the same component that opens it. 
+
 ```jsx
 import ActionMenu, { ActionMenuItem, ActionMenuRadio } from 'cozy-ui/transpiled/react/ActionMenu';
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import { Text, Caption } from 'cozy-ui/transpiled/react/Text';
 
-initialState = { menuDisplayed: isTesting() };
+class ExempleMenu extends React.Component {
+  constructor(props){
+    super(props);
+    this.state ={ menuDisplayed: isTesting() };
+    this.ref = React.createRef();
+    this.showMenu = this.showMenu.bind(this)
+    this.hideMenu = this.hideMenu.bind(this)
+    this.toggleMenu = this.toggleMenu.bind(this)
+  }
 
-const showMenu = () => setState({ menuDisplayed: true });
-const hideMenu = () => setState({ menuDisplayed: false });
+  showMenu(){this.setState({ menuDisplayed: true })}
+  hideMenu (){ this.setState({ menuDisplayed: false })}
+  toggleMenu (){ this.setState(state => ({ menuDisplayed: !state.menuDisplayed }))}
+ 
 
-<div>
-  <DropdownButton onClick={showMenu}>Show action menu</DropdownButton>
-  {state.menuDisplayed &&
+  render(){
+  return <div>
+  <DropdownButton onClick={this.toggleMenu} ref={this.ref}>Show action menu</DropdownButton>
+  {this.state.menuDisplayed &&
     <ActionMenu
-      onClose={hideMenu}>
+      anchorElRef={this.ref}
+      autoclose={true}
+      onClose={this.hideMenu}>
       <ActionMenuItem left={<Icon icon='file' />} right={<Icon icon='warning' />}>Item 1</ActionMenuItem>
       <ActionMenuItem left={<ActionMenuRadio />}>Item 2</ActionMenuItem>
       <ActionMenuItem left={<Icon icon='file' />}>
@@ -30,6 +45,9 @@ const hideMenu = () => setState({ menuDisplayed: false });
       </ActionMenuItem>
   </ActionMenu>}
 </div>
+  }
+}
+<ExempleMenu />
 ```
 
 ### With Header (mobile only)
@@ -93,15 +111,12 @@ const hideMenu = () => setState({ menuDisplayed: false });
 
 ### Placement on desktop
 
-You can pass a reference to a custom DOM element through the `anchorElRef` prop to attach the menu to that element.
 We use [popper.js](https://popper.js.org/docs/v2/) under the hood. You can use the `popperOptions` prop to pass options to the popper.js instance. This lets you control things like placement relative to the anchor, positioning strategies and more — refer to the popper doc for all the details.
 
 ```jsx
 import ActionMenu, { ActionMenuItem } from 'cozy-ui/transpiled/react/ActionMenu';
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Icon from 'cozy-ui/transpiled/react/Icon';
-
-const testRef = React.createRef();
 
 initialState = { menuDisplayed: isTesting() };
 
@@ -135,8 +150,6 @@ import {
 } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
 import Button from 'cozy-ui/transpiled/react/Button'
-
-const testRef = React.createRef();
 
 initialState = { menuDisplayed: isTesting(),  modalOpened: isTesting() };
 

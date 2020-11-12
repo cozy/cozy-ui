@@ -66,6 +66,11 @@ const NotInlineWrapper = ({
     popperElement,
     options
   )
+
+  const handleClose = e => {
+    if (referenceElement.contains(e.target)) return
+    onClose(e)
+  }
   return (
     <div
       ref={setPopperElement}
@@ -75,7 +80,9 @@ const NotInlineWrapper = ({
       }}
       {...attributes.popper}
     >
-      <ClickAwayListener onClickAway={onClose}>{children}</ClickAwayListener>
+      <ClickAwayListener onClickAway={handleClose}>
+        {children}
+      </ClickAwayListener>
     </div>
   )
 }
