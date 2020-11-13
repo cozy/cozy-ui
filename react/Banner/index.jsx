@@ -31,7 +31,6 @@ const Banner = ({ icon, bgcolor, text, buttonOne, buttonTwo, inline }) => {
               item
               xs={12}
               lg={size[0]}
-              spacing={16}
               alignItems="center"
               wrap="nowrap"
             >
@@ -40,8 +39,8 @@ const Banner = ({ icon, bgcolor, text, buttonOne, buttonTwo, inline }) => {
                   <div className={styles['c-banner-icon']}>{icon}</div>
                 </Grid>
               )}
-              <Grid item>
-                <Typography variant="body1">{text}</Typography>
+              <Grid item className={styles['c-banner-text']}>
+                <Typography variant="body2">{text}</Typography>
               </Grid>
             </Grid>
             {(buttonOne || buttonTwo) && (
@@ -51,9 +50,9 @@ const Banner = ({ icon, bgcolor, text, buttonOne, buttonTwo, inline }) => {
                 xs={12}
                 lg={size[1]}
                 justify="flex-end"
-                spacing={8}
+                alignItems="center"
               >
-                <Grid item>
+                <Grid item className={styles['c-banner-buttons']}>
                   {buttonOne && buttonOne}
                   {buttonTwo && buttonTwo}
                 </Grid>
