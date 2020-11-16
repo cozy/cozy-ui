@@ -43,6 +43,12 @@ const variants = [
 </MuiCozyTheme>
 ```
 
+You can use `color="textSecondary"`:
+
+```
+<Typography variant='body1' color="textSecondary">A text written in secondary text color.</Typography>
+```
+
 From old to new :
 
 ```

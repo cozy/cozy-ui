@@ -108,6 +108,10 @@ export const normalTheme = createMuiTheme({
       dark: getCssVariableValue('azure'),
       contrastText: getCssVariableValue('white')
     },
+    text: {
+      primary: getCssVariableValue('charcoalGrey'),
+      secondary: getCssVariableValue('slateGrey')
+    },
     grey: {
       0: getCssVariableValue('white'),
       100: getCssVariableValue('paleGrey'),
@@ -512,8 +516,12 @@ export const invertedTheme = {
     primary: {
       main: 'rgb(255,255,255)'
     },
+    secondary: {
+      main: 'rgba(255, 255, 255)'
+    },
     text: {
-      primary: getCssVariableValue('white')
+      primary: 'rgb(255,255,255)',
+      secondary: 'rgb(255,255,255)'
     }
   }
 }
