@@ -6840,6 +6840,16 @@ exports[`Radio should render examples: Radio 3`] = `
 </div>"
 `;
 
+exports[`Radio should render examples: Radio 4`] = `
+"<div>
+  <p><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" value=\\"\\" checked=\\"\\"><span>View bounding box</span></label></p>
+  <p>Default gutter</p>
+  <div style=\\"height: 3rem; width: 3rem; border: 2px dashed #ccc; display: flex; justify-content: center; align-items: center;\\"><label class=\\"styles__c-input-radio___XJQt1\\" style=\\"border: 1px solid red;\\"><input type=\\"radio\\" value=\\"\\" checked=\\"\\"><span></span></label></div>
+  <p>Gutter set to false</p>
+  <div style=\\"height: 3rem; width: 3rem; border: 2px dashed #ccc; display: flex; justify-content: center; align-items: center;\\"><label class=\\"styles__c-input-radio___XJQt1 styles__c-input-radio--noGutter___3WtC2\\" style=\\"border: 1px solid red;\\"><input type=\\"radio\\" value=\\"\\" checked=\\"\\"><span></span></label></div>
+</div>"
+`;
+
 exports[`SelectBox should render examples: SelectBox 1`] = `
 "<div>
   <div style=\\"background: whitesmoke; padding: .5em;\\">

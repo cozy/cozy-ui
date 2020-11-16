@@ -309,8 +309,9 @@ $input-text--fullwidth
 $checkbox
     // To make sure that checkbox's wrapper have the height of the checkbox
     display flex
-    margin-bottom rem(8)
     align-items center
+    min-width checkbox-size
+    min-height checkbox-size
 
     span
         position relative
@@ -384,6 +385,10 @@ $checkbox
         &::before
             box-shadow inset 0 0 0 rem(2) var(--pomegranate)
             background-color var(--yourPink)
+
+    &--noGutter span
+            padding-left 0
+
 
 $radio
     @extend $checkbox
