@@ -1,3 +1,11 @@
+## [40.7.2](https://github.com/cozy/cozy-ui/compare/v40.7.1...v40.7.2) (2020-11-16)
+
+
+### Bug Fixes
+
+* Add changelog step ([1cfcf65](https://github.com/cozy/cozy-ui/commit/1cfcf65))
+* Add npm publication with semantic-release ([0e12489](https://github.com/cozy/cozy-ui/commit/0e12489))
+
 # [40.1.0](https://github.com/cozy/cozy-ui/compare/v40.0.0...v40.1.0) (2020-11-02)
 
 
