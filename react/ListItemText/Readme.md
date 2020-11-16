@@ -1,11 +1,11 @@
-#### List item main text
+#### List item primary text
 
 ```
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText';
 <ListItemText primary="I'm a list item text"/>
 ```
 
-#### List item main text with an annotation text
+#### List item with secondary text
 
 ```
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText';

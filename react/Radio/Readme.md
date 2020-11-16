@@ -57,3 +57,5 @@ initialState.bbox = isTesting();
     <Radio gutter={false} checked style={state.bbox ? bboxStyle : null} />
   </Box>
 </>
+
+```

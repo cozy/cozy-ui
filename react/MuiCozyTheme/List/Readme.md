@@ -11,6 +11,7 @@ Displays a List of items, with several metadata
 ```
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List';
+import ListSubheader from 'cozy-ui/transpiled/react/MuiCozyTheme/ListSubheader';
 import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem';
 import ListItemIcon from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon';
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText';
@@ -22,6 +23,7 @@ import Button from 'cozy-ui/transpiled/react/Button';
 
 <MuiCozyTheme>
   <List>
+    <ListSubheader>Section 1</ListSubheader>
     <ListItem>
       <ListItemIcon>
         <Icon icon="folder" width="32" height="32" />
@@ -49,6 +51,7 @@ import Button from 'cozy-ui/transpiled/react/Button';
         </Menu>
       </ListItemSecondaryAction>
     </ListItem>
+    <ListSubheader>Section 2</ListSubheader>
     <ListItem>
       <ListItemIcon>
         <Icon icon="file" width="32" height="32" />
