@@ -24,7 +24,7 @@ function getSvgObject(icon) {
   )
 }
 
-function isReactComponent(obj) {
+function isFunction(obj) {
   return obj instanceof Function
 }
 
@@ -42,10 +42,9 @@ function Icon(props) {
     ...restProps
   } = props
 
-  const Svg = useMemo(
-    () => (isReactComponent(icon) ? icon : getSvgObject(icon)),
-    [icon]
-  )
+  const Svg = useMemo(() => (isFunction(icon) ? icon : getSvgObject(icon)), [
+    icon
+  ])
 
   let style = props.style
   style = Object.assign({}, style)
@@ -75,7 +74,8 @@ function Icon(props) {
 Icon.isProperIcon = icon => {
   const isSvgSymbol = icon && !!icon.id
   const isIconIdentifier = typeof icon === 'string'
-  return isSvgSymbol || isIconIdentifier
+  const isSvgr = isFunction(icon)
+  return isSvgSymbol || isIconIdentifier || isSvgr
 }
 
 export const iconPropType = PropTypes.oneOfType([
