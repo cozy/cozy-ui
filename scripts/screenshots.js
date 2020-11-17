@@ -273,7 +273,7 @@ const cacheToDisk = (fnToCache, options) =>
     return res
   }
 
-const screenshotStyleguide = async (page, args, config) => {
+const screenshotReactStyleguide = async (page, args, config) => {
   const styleguideIndexURL = `file://${path.join(
     args.styleguideDir,
     '/index.html'
@@ -412,6 +412,10 @@ const screenshotKSSStyleguide = async (page, args) => {
 const main = async () => {
   const parser = new ArgumentParser()
 
+  parser.addArgument('--mode', {
+    choices: ['react', 'stack', 'kss'],
+    defaultValue: 'react'
+  })
   parser.addArgument('--screenshot-dir', {
     required: true,
     dest: 'screenshotDir',
@@ -457,9 +461,13 @@ const main = async () => {
   })
   const { browser, page } = await prepareBrowser({ viewport: parsedViewport })
 
-  // await screenshotStyleguide(page, args, config)
-  await screenshotKSSStyleguide(page, args)
-  // await screenshotStackExamples(page, args)
+  if (args.mode == 'react') {
+    await screenshotReactStyleguide(page, args, config)
+  } else if (args.mode == 'stack') {
+  await screenshotStackExamples(page, args)
+  } else if (args.mode == 'kss') {
+    await screenshotKSSStyleguide(page, args)
+  }
 
   await browser.close()
 }
