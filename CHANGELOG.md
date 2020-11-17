@@ -1,3 +1,10 @@
+# [40.8.0](https://github.com/cozy/cozy-ui/compare/v40.7.2...v40.8.0) (2020-11-17)
+
+
+### Features
+
+* Use CozyDialog in QuotaAlert ([#1662](https://github.com/cozy/cozy-ui/issues/1662)) ([0c94a8a](https://github.com/cozy/cozy-ui/commit/0c94a8a))
+
 ## [40.7.2](https://github.com/cozy/cozy-ui/compare/v40.7.1...v40.7.2) (2020-11-16)
 
 
