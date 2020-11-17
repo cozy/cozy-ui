@@ -46,7 +46,7 @@
     "semantic-release": "semantic-release",
     "sprite": "scripts/make-icon-sprite.sh",
     "jest": "yarn test:jest",
-    "screenshots": "node scripts/screenshots.js --screenshot-dir ./screenshots --styleguide-dir ./build/react",
+    "screenshots": "node scripts/screenshots.js --screenshot-dir ./screenshots --styleguide-dir ./build/react --kss-dir ./build/styleguide",
     "test": "yarn test:jest",
     "test:jest": "jest",
     "transpile": "env BABEL_ENV=transpilation babel react/ --out-dir transpiled/react --verbose",
