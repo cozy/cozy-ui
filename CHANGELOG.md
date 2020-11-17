@@ -1,3 +1,11 @@
+## [40.9.1](https://github.com/cozy/cozy-ui/compare/v40.9.0...v40.9.1) (2020-11-17)
+
+
+### Bug Fixes
+
+* Banner style and elements positions ([1a8c8c4](https://github.com/cozy/cozy-ui/commit/1a8c8c4))
+* Icon isProperIcon can be use with svgr ([8593b96](https://github.com/cozy/cozy-ui/commit/8593b96))
+
 # [40.9.0](https://github.com/cozy/cozy-ui/compare/v40.8.0...v40.9.0) (2020-11-17)
 
 
