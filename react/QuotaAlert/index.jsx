@@ -1,8 +1,11 @@
 import React from 'react'
 import get from 'lodash/get'
-import Modal from '../Modal'
+
 import { useClient } from 'cozy-client'
 import { isMobileApp } from 'cozy-device-helper'
+
+import { Dialog } from '../CozyDialogs'
+import Button from '../Button'
 
 import useInstance from '../helpers/useInstance'
 
@@ -21,20 +24,30 @@ const buildPremiumLink = (uuid, managerUrl) =>
 const QuotaModalAlert = withLocales(locales)(({ t, onClose, instance }) => {
   const uuid = get(instance, 'instance.data.attributes.uuid')
   const managerUrl = get(instance, 'context.data.attributes.manager_url')
-
   return (
-    <Modal
+    <Dialog
+      open={true}
       title={t('quotaalert.title')}
-      description={t('quotaalert.desc')}
-      secondaryText={t('quotaalert.confirm')}
-      secondaryAction={onClose}
-      primaryText={uuid && managerUrl ? t('quotaalert.increase') : undefined}
-      primaryAction={() =>
-        uuid && managerUrl
-          ? window.open(buildPremiumLink(uuid, managerUrl), 'self')
-          : onClose
+      content={t('quotaalert.desc')}
+      actions={
+        <>
+          <Button
+            theme="secondary"
+            onClick={onClose}
+            label={t('quotaalert.confirm')}
+          />
+          {uuid && managerUrl && (
+            <Button
+              theme="primary"
+              label={t('quotaalert.increase')}
+              onClick={() =>
+                window.open(buildPremiumLink(uuid, managerUrl), 'self')
+              }
+            />
+          )}
+        </>
       }
-      dismissAction={onClose}
+      onClose={onClose}
     />
   )
 })

@@ -1,4 +1,4 @@
-# Display a Modal with a link to the manager to buy space
+# Display a CozyDialog with a link to the manager to buy space
 
 The link to the manager is only displayed if there is a managerUrl
 in the stack response
@@ -6,29 +6,35 @@ in the stack response
 ```jsx noeditor
 import QuotaAlert from "cozy-ui/transpiled/react/QuotaAlert";
 import { CozyProvider } from "cozy-client";
+import { BreakpointsProvider } from "cozy-ui/transpiled/react/hooks/useBreakpoints";
+import MuiCozyTheme from "cozy-ui/transpiled/react/MuiCozyTheme/";
 
-<div>
-  <button onClick={() => setState({ modalOpened: !state.modalOpened })}>
-    Toggle modal
-  </button>
+<BreakpointsProvider>
+  <MuiCozyTheme>
+    <div>
+      <button onClick={() => setState({ modalOpened: !state.modalOpened })}>
+        Toggle modal
+      </button>
 
-  {state.modalOpened && (
-    <CozyProvider
-      client={{
-        getStackClient: () => ({
-          fetchJSON: () =>
-            Promise.resolve({
-              data: {
-                attributes: { uuid: "1223", manager_url: "http://mycozy.cloud" }
-              }
+      {state.modalOpened && (
+        <CozyProvider
+          client={{
+            getStackClient: () => ({
+              fetchJSON: () =>
+                Promise.resolve({
+                  data: {
+                    attributes: { uuid: "1223", manager_url: "http://mycozy.cloud" }
+                  }
+                })
             })
-        })
-      }}
-    >
-      <QuotaAlert onClose={() => setState({ modalOpened: false })} />
-    </CozyProvider>
-  )}
-</div>;
+          }}
+        >
+          <QuotaAlert onClose={() => setState({ modalOpened: false })} />
+        </CozyProvider>
+      )}
+    </div>
+  </MuiCozyTheme>
+</BreakpointsProvider>;
 ```
 
 ```jsx static
