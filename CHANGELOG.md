@@ -1,3 +1,11 @@
+# [40.10.0](https://github.com/cozy/cozy-ui/compare/v40.9.1...v40.10.0) (2020-11-17)
+
+
+### Features
+
+* Add mode to screenshots ([a157bbf](https://github.com/cozy/cozy-ui/commit/a157bbf))
+* Screenshot KSS styleguide ([3452e8e](https://github.com/cozy/cozy-ui/commit/3452e8e))
+
 ## [40.9.1](https://github.com/cozy/cozy-ui/compare/v40.9.0...v40.9.1) (2020-11-17)
 
 
