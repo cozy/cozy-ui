@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { unstable_Box as MUIBox } from '@material-ui/core/Box'
-
 import Paper from '../Paper'
 import Grid from '../MuiCozyTheme/Grid'
 import { CardDivider } from '../MuiCozyTheme/Divider'
 import Typography from '../Typography'
+
+import styles from './styles.styl'
 
 /**
  * A banner displays a prominent message and related optional actions.
@@ -21,7 +21,10 @@ const Banner = ({ icon, bgcolor, text, buttonOne, buttonTwo, inline }) => {
   return (
     <>
       <Paper elevation={0} square>
-        <MUIBox pt={2} pr={1} pb={2} pl={2} bgcolor={bgcolor}>
+        <div
+          className={styles['c-banner-wrapper']}
+          style={bgcolor && { backgroundColor: bgcolor }}
+        >
           <Grid container justify="space-between">
             <Grid
               container
@@ -34,9 +37,7 @@ const Banner = ({ icon, bgcolor, text, buttonOne, buttonTwo, inline }) => {
             >
               {icon && (
                 <Grid item>
-                  <MUIBox width={40} height={40}>
-                    {icon}
-                  </MUIBox>
+                  <div className={styles['c-banner-icon']}>{icon}</div>
                 </Grid>
               )}
               <Grid item>
@@ -59,7 +60,7 @@ const Banner = ({ icon, bgcolor, text, buttonOne, buttonTwo, inline }) => {
               </Grid>
             )}
           </Grid>
-        </MUIBox>
+        </div>
       </Paper>
       <CardDivider />
     </>
