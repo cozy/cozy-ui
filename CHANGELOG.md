@@ -1,3 +1,14 @@
+# [40.9.0](https://github.com/cozy/cozy-ui/compare/v40.8.0...v40.9.0) (2020-11-17)
+
+
+### Features
+
+* Add cloud-sync icon ([2965a1f](https://github.com/cozy/cozy-ui/commit/2965a1f))
+* Add MUI Progress ([88bf000](https://github.com/cozy/cozy-ui/commit/88bf000))
+* Add ProgressionBanner ([7696267](https://github.com/cozy/cozy-ui/commit/7696267))
+* Add useProgression to simulate progression ([287e5c7](https://github.com/cozy/cozy-ui/commit/287e5c7))
+* Remove unstable Mui Box from Banner ([c36cd00](https://github.com/cozy/cozy-ui/commit/c36cd00))
+
 # [40.8.0](https://github.com/cozy/cozy-ui/compare/v40.7.2...v40.8.0) (2020-11-17)
 
 
