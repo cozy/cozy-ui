@@ -369,10 +369,7 @@ const screenshotKSSStyleguide = async (page, args) => {
     return navLinks.map(node => node.getAttribute('href'))
   })
 
-  let i =0
   for (const link of links) {
-    i = i + 1
-    console.log(link)
     await page
     await page.goto(resolveLink(link))
 
