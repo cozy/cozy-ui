@@ -33,6 +33,8 @@ import {
   FixedDialog,
   FixedActionsDialog
 } from  'cozy-ui/transpiled/react/CozyDialogs'
+import ActionMenu, { ActionMenuItem, ActionMenuRadio } from 'cozy-ui/transpiled/react/ActionMenu';
+import { Text, Caption } from 'cozy-ui/transpiled/react/Text';
 
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 
@@ -52,6 +54,29 @@ initialState = {
 }
 
 const DialogComponent = state.modal
+
+const ExampleActionMenu = ({ onClose }) => {
+  return (
+    <ActionMenu
+        anchorElRef={this.ref}
+        autoclose={true}
+        onClose={onClose}>
+        <ActionMenuItem left={<Icon icon='file' />} right={<Icon icon='warning' />}>Item 1</ActionMenuItem>
+        <ActionMenuItem left={<ActionMenuRadio />}>Item 2</ActionMenuItem>
+        <ActionMenuItem left={<Icon icon='file' />}>
+          <Text>
+            Item 3
+          </Text>
+          <Caption>
+            Descriptive text to elaborate on what item 3 does.
+          </Caption>
+        </ActionMenuItem>
+    </ActionMenu>
+  )
+}
+
+const handleOpenActionMenu = () => setState({ showActionMenu: true })
+const handleCloseActionMenu = () => setState({ showActionMenu: false })
 
 const ExampleDialogActions = () => {
   return (
@@ -100,7 +125,15 @@ const dialogContents = {
   IllustrationDialog: "An IllustrationDialog contains short content." + content.ada.short,
   FixedDialog: "A FixedDialog can contain very long content. Actions are at the bottom of the content are not visible to the user if she has not scrolled to the bottom. " + content.ada.long,
   FixedActionsDialog: "A FixedActionsDialog can contain very long content. Actions are visible even without scrolling. " + content.ada.long,
-  Dialog: "A normal Dialog should contain short content. " + content.ada.short
+  Dialog: <>
+    <p>
+      {"A normal Dialog should contain short content. " + content.ada.short}
+    </p>
+    <p>
+      <Button theme="secondary" size="small" onClick={handleOpenActionMenu} label="Open action menu" />
+    </p>
+  { state.showActionMenu ? <ExampleActionMenu onClose={handleCloseActionMenu} /> : null }
+  </>
 }
 
 const dialogActions = {
