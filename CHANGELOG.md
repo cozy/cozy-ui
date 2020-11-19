@@ -1,3 +1,17 @@
+# [41.0.0](https://github.com/cozy/cozy-ui/compare/v40.10.0...v41.0.0) (2020-11-19)
+
+
+### Features
+
+* Add secondary text color ([69327d5](https://github.com/cozy/cozy-ui/commit/69327d5))
+* Better alignment for Radio/Checkbox ([f93db43](https://github.com/cozy/cozy-ui/commit/f93db43))
+
+
+### BREAKING CHANGES
+
+* A margin-bottom has been removed from checkbox/radio,
+you must check in your app that it has not broken anything
+
 # [40.10.0](https://github.com/cozy/cozy-ui/compare/v40.9.1...v40.10.0) (2020-11-17)
 
 
