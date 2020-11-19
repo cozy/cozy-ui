@@ -12,6 +12,7 @@ const Radio = props => {
     error,
     disabled,
     style,
+    gutter,
     ...restProps
   } = props
   return (
@@ -19,6 +20,7 @@ const Radio = props => {
       className={cx(
         styles['c-input-radio'],
         {
+          [styles['c-input-radio--noGutter']]: gutter === false,
           [styles['is-error']]: error
         },
         className
@@ -48,7 +50,8 @@ Radio.propTypes = {
 }
 
 Radio.defaultProps = {
-  error: false
+  error: false,
+  gutter: true
 }
 
 export default Radio

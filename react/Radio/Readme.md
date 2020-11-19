@@ -24,3 +24,38 @@ import Radio from 'cozy-ui/transpiled/react/Radio';
 import Radio from 'cozy-ui/transpiled/react/Radio';
 <div><Radio name="radioForm"value="radioValue1" label="This is a disabled radio button" disabled /></div>
 ```
+
+### No gutter
+
+By default Radio and Checkbox have a small gutter next to them for their label not to be touching
+the edge of the radio/checkbox. This can be cumbersome when aligning horizontally inside a container.
+You can set `gutter` to `false` to cancel the default gutter.
+
+```
+import Radio from 'cozy-ui/transpiled/react/Radio';
+
+const Box = ({ children }) => {
+  return   <div style={{ height: '3rem', width: '3rem', border: '2px dashed #CCC', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    { children }
+  </div>
+}
+
+const bboxStyle = { border: '1px solid red' };
+
+initialState.bbox = isTesting();
+
+<>
+  <p>
+    <Radio checked={state.bbox} onClick={() => setState({ bbox: !state.bbox })} label="View bounding box" />
+  </p>
+  <p>Default gutter</p>
+  <Box>
+    <Radio checked style={state.bbox ? bboxStyle : null}/>
+  </Box>
+  <p>Gutter set to false</p>
+  <Box>
+    <Radio gutter={false} checked style={state.bbox ? bboxStyle : null} />
+  </Box>
+</>
+
+```
