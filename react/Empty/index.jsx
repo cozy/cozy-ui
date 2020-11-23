@@ -1,9 +1,10 @@
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-import { MainTitle, BaseText } from '../Text'
 import Icon, { iconPropType } from '../Icon'
 import styles from './styles.styl'
+import Typography from '../Typography'
+import Stack from '../Stack'
 
 export const Empty = ({
   icon,
@@ -21,13 +22,15 @@ export const Empty = ({
         width="100%"
         height="100%"
       />
-      {title && (
-        <MainTitle tag="h2" className={styles['c-empty-title']}>
-          {title}
-        </MainTitle>
-      )}
-      {text && <EmptySubTitle tag="p">{text}</EmptySubTitle>}
-      <div className={styles['c-empty-text']}>{children}</div>
+      <Stack spacing="xs">
+        {title && (
+          <Typography variant="h3" color="textPrimary">
+            {title}
+          </Typography>
+        )}
+        {text && <EmptySubTitle>{text}</EmptySubTitle>}
+        <div className={styles['c-empty-text']}>{children}</div>
+      </Stack>
     </div>
   )
 }
@@ -40,6 +43,7 @@ Empty.propTypes = {
 }
 
 export const EmptySubTitle = ({ ...restProps }) => (
-  <BaseText className={styles['c-empty-text']} {...restProps} />
+  <Typography variant="body1" color="textSecondary" {...restProps} />
 )
+
 export default Empty
