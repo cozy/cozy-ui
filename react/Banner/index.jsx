@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Paper from '../Paper'
 import Grid from '../MuiCozyTheme/Grid'
-import { CardDivider } from '../MuiCozyTheme/Divider'
+import Divider from '../MuiCozyTheme/Divider'
 import Typography from '../Typography'
 
 import styles from './styles.styl'
@@ -61,7 +61,7 @@ const Banner = ({ icon, bgcolor, text, buttonOne, buttonTwo, inline }) => {
           </Grid>
         </div>
       </Paper>
-      <CardDivider />
+      <Divider />
     </>
   )
 }

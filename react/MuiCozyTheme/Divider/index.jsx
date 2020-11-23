@@ -1,10 +1,23 @@
-import React from 'react'
 import Divider from '@material-ui/core/Divider'
+import { withStyles } from '@material-ui/core/styles'
+import { defaultValues, normalTheme } from '../theme'
 
 export default Divider
 
-export const CardDivider = () => {
-  // To circumvent a theme problem, we have to remove the margins
-  // https://github.com/cozy/cozy-ui/issues/1534 */
-  return <Divider className="u-ml-0 u-maw-100" />
-}
+export const DeprecatedDivider = withStyles({
+  /**
+   * calcs are made since we have defaultMargin on the Dialog so
+   * we need to remove the left margin and add the width of 2 margins
+   * in order to have the divider takes the full width of the Modal
+   */
+  root: {
+    [normalTheme.breakpoints.down('md')]: {
+      width: `calc(100% + ${defaultValues.dialog.sm.padding}*2px)`,
+      marginLeft: `-${defaultValues.dialog.sm.padding}px`
+    },
+    [normalTheme.breakpoints.up('md')]: {
+      width: `calc(100% + ${defaultValues.dialog.md.padding}*2px)`,
+      marginLeft: `-${defaultValues.dialog.md.padding}px`
+    }
+  }
+})(Divider)

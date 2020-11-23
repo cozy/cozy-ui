@@ -25,7 +25,7 @@ import useBreakpoints, {
 import Alerter from 'cozy-ui/transpiled/react/Alerter';
 
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
-import { CardDivider } from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
+import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
 import Button from 'cozy-ui/transpiled/react/Button'
 import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List';
 import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem';

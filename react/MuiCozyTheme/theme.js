@@ -3,7 +3,7 @@ import { createMuiTheme } from '@material-ui/core/styles'
 import { getCssVariableValue } from '../utils/color'
 import isTesting from '../helpers/isTesting'
 
-const defaultValues = {
+export const defaultValues = {
   borderRadius: 6,
   dialog: {
     sm: {
@@ -230,10 +230,6 @@ normalTheme.overrides = {
     }
   },
   MuiList: {
-    root: {
-      borderTop: '1px solid var(--silver)',
-      borderBottom: '1px solid var(--silver)'
-    },
     padding: {
       paddingTop: 0,
       paddingBottom: 0
@@ -245,11 +241,6 @@ normalTheme.overrides = {
     }
   },
   MuiListItem: {
-    container: {
-      '&:not(:first-child)': {
-        borderTop: '1px solid var(--silver) !important'
-      }
-    },
     root: {
       paddingTop: 0,
       paddingBottom: 0,
@@ -259,9 +250,6 @@ normalTheme.overrides = {
       },
       '&:hover, &:focus': {
         backgroundColor: 'var(--paleGrey)'
-      },
-      '&:not(:first-child)': {
-        borderTop: '1px solid var(--silver)'
       }
     },
     gutters: {
@@ -454,20 +442,8 @@ normalTheme.overrides = {
     }
   },
   MuiDivider: {
-    /**
-     * calcs are made since we have defaultMargin on the Dialog so
-     * we need to remove the left margin and add the width of 2 margins
-     * in order to have the divider takes the full width of the Modal
-     */
-    root: {
-      [normalTheme.breakpoints.down('md')]: {
-        width: `calc(100% + ${defaultValues.dialog.sm.padding}*2px)`,
-        marginLeft: `-${defaultValues.dialog.sm.padding}px`
-      },
-      [normalTheme.breakpoints.up('md')]: {
-        width: `calc(100% + ${defaultValues.dialog.md.padding}*2px)`,
-        marginLeft: `-${defaultValues.dialog.md.padding}px`
-      }
+    inset: {
+      marginLeft: 64
     }
   },
   MuiSwitch: {

@@ -7,7 +7,7 @@ Tabs can have the `inverted` prop to be in the primary color of the app.
 ```
 import { useState } from 'react'
 import { Tabs, Tab } from 'cozy-ui/transpiled/react/MuiTabs'
-import { CardDivider } from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider';
+import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider';
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 
@@ -32,7 +32,7 @@ const Example = () => {
         <Tab label="Item Two" {...a11yProps(1)} />
         <Tab label="Item Three" {...a11yProps(2)} />
       </Tabs>
-      <CardDivider />
+      <Divider />
     </>
   )
 };
