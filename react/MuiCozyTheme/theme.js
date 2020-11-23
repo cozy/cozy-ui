@@ -110,7 +110,7 @@ export const normalTheme = createMuiTheme({
     },
     text: {
       primary: getCssVariableValue('charcoalGrey'),
-      secondary: getCssVariableValue('slateGrey')
+      secondary: getCssVariableValue('coolGrey')
     },
     grey: {
       0: getCssVariableValue('white'),
