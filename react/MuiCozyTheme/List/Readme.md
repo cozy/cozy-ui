@@ -27,7 +27,7 @@ import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider';
 <MuiCozyTheme>
   <List>
     <ListSubheader>Section 1</ListSubheader>
-    <ListItem>
+    <ListItem button>
       <ListItemIcon>
         <Icon icon="folder" width="32" height="32" />
       </ListItemIcon>
@@ -55,14 +55,14 @@ import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider';
       </ListItemSecondaryAction>
     </ListItem>
     <ListSubheader>Section 2</ListSubheader>
-    <ListItem>
+    <ListItem button>
       <ListItemIcon>
         <Icon icon="file" width="32" height="32" />
       </ListItemIcon>
       <ListItemText primary="I'm a primary text" secondary="I'm a secondary text"/>
     </ListItem>
     <Divider component="li" variant="inset" />
-    <ListItem>
+    <ListItem button>
       <ListItemIcon>
         <Icon icon="file" width="32" height="32" />
       </ListItemIcon>
@@ -98,21 +98,21 @@ import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider';
 
 <MuiCozyTheme>
   <List dense={true}>
-    <ListItem>
+    <ListItem button>
       <ListItemIcon>
         <Icon icon="folder" width="32" height="32" />
       </ListItemIcon>
       <ListItemText primary="I'm a primary text"/>
     </ListItem>
     <Divider component="li" variant="inset" />
-    <ListItem>
+    <ListItem button>
       <ListItemIcon>
         <Icon icon="file" width="32" height="32" />
       </ListItemIcon>
       <ListItemText primary="I'm a primary text" secondary="I'm a secondary text"/>
     </ListItem>
     <Divider component="li" variant="inset" />
-    <ListItem>
+    <ListItem button>
       <ListItemText primary="I'm a primary text" />
     </ListItem>
   </List>

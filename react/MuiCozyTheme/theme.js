@@ -129,6 +129,9 @@ export const normalTheme = createMuiTheme({
     },
     MuiButton: {
       disableRipple: true
+    },
+    MuiListItem: {
+      disableRipple: true
     }
   },
   ...(isTesting() && { transitions: { create: () => 'none' } })

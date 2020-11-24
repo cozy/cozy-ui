@@ -68,7 +68,7 @@ const ExampleDialog = ({ open, onClose }) => {
         Ada Lovelace
       </DialogTitle>
       <List>
-        <ListItem {...listItemProps}>
+        <ListItem {...listItemProps} button>
           <ListItemIcon>
             <Icon icon="folder" width="32" height="32" />
           </ListItemIcon>
@@ -93,13 +93,16 @@ const ExampleDialog = ({ open, onClose }) => {
             </Menu>
           </ListItemSecondaryAction>
         </ListItem>
-        <ListItem {...listItemProps}>
+        <ListItem {...listItemProps} button>
           <ListItemIcon>
             <Icon icon="file" width="32" height="32" />
           </ListItemIcon>
           <ListItemText primary="I'm a primary text" secondary="I'm a secondary text"/>
         </ListItem>
-        <ListItem {...listItemProps}>
+        <ListItem {...listItemProps} button>
+          <ListItemIcon>
+            <Icon icon="folder" width="32" height="32" />
+          </ListItemIcon>
           <ListItemText primary="I'm a primary text" />
           <ListItemSecondaryAction>
             <Button
