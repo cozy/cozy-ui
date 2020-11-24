@@ -248,8 +248,12 @@ normalTheme.overrides = {
       '&$selected, &$selected:hover': {
         backgroundColor: 'var(--zircon)'
       },
+      '&$selected:hover': {
+        outline: '1px solid var(--zircon)'
+      },
       '&:hover, &:focus': {
-        backgroundColor: 'var(--paleGrey)'
+        backgroundColor: 'var(--paleGrey)',
+        outline: '1px solid var(--paleGrey)'
       }
     },
     gutters: {
