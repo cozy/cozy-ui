@@ -11,7 +11,7 @@ include via `Sprite`. See the example below for how to include `Sprite`.
 ```
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite';
-const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'device-phone', 'device-tablet', 'device-browser', 'file-type-audio', 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-image', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'google', 'logout-large', 'top-select', 'bottom-select', 'check-white', 'dash-white', 'keychain'];
+const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'device-phone', 'device-tablet', 'device-browser', 'file-type-audio', 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-image', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'forbidden-sign', 'google', 'logout-large', 'top-select', 'bottom-select', 'check-white', 'dash-white', 'keychain'];
 
 <div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
   <Sprite />
@@ -472,6 +472,97 @@ const icons = [
   WarningCircle,
   WrenchCircle
 ];
+
+const wrapperStyle = {
+  fontSize: '2rem',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(6, 1fr)',
+  color: '#444'
+};
+
+initialState = { size: 16 };
+
+const handleInputRangeChange = ev => {
+  setState({ size: parseInt(ev.target.value, 10) })
+};
+
+<div>
+  <p>
+    Font size: <input type='range' min='8' max='48' value={state.size} onChange={handleInputRangeChange} /> {state.size}px
+  </p>
+  <div style={wrapperStyle}>
+    {
+    icons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
+        <Icon icon={ icon } size={state.size} />
+        <p style={{ fontSize: '1rem', marginTop: '0.5rem', marginBottom: '1rem' }}>{ icon.name.replace(/^Svg/, '') }</p>
+      </div>
+    )}
+  </div>
+</div>
+```
+
+## Import React illustrations directly
+
+```
+import Icon from 'cozy-ui/transpiled/react/Icon';
+
+import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
+import CloudBrokenIcon from 'cozy-ui/transpiled/react/Icons/CloudBroken'
+import CozyLogoIcon from 'cozy-ui/transpiled/react/Icons/CozyLogo'
+import DeviceLaptopIcon from 'cozy-ui/transpiled/react/Icons/DeviceLaptop'
+import DevicePhoneIcon from 'cozy-ui/transpiled/react/Icons/DevicePhone'
+import DeviceTabletIcon from 'cozy-ui/transpiled/react/Icons/DeviceTablet'
+import DeviceBrowserIcon from 'cozy-ui/transpiled/react/Icons/DeviceBrowser'
+import FileTypeAudioIcon from 'cozy-ui/transpiled/react/Icons/FileTypeAudio'
+import FileTypeBinIcon from 'cozy-ui/transpiled/react/Icons/FileTypeBin'
+import FileTypeCodeIcon from 'cozy-ui/transpiled/react/Icons/FileTypeCode'
+import FileTypeFilesIcon from 'cozy-ui/transpiled/react/Icons/FileTypeFiles'
+import FileTypeFolderIcon from 'cozy-ui/transpiled/react/Icons/FileTypeFolder'
+import FileTypeImageIcon from 'cozy-ui/transpiled/react/Icons/FileTypeImage'
+import FileTypePdfIcon from 'cozy-ui/transpiled/react/Icons/FileTypePdf'
+import FileTypeSheetIcon from 'cozy-ui/transpiled/react/Icons/FileTypeSheet'
+import FileTypeSlideIcon from 'cozy-ui/transpiled/react/Icons/FileTypeSlide'
+import FileTypeTextIcon from 'cozy-ui/transpiled/react/Icons/FileTypeText'
+import FileTypeVideoIcon from 'cozy-ui/transpiled/react/Icons/FileTypeVideo'
+import FileTypeZipIcon from 'cozy-ui/transpiled/react/Icons/FileTypeZip'
+import ForbiddenSignIcon from 'cozy-ui/transpiled/react/Icons/ForbiddenSign'
+import GoogleIcon from 'cozy-ui/transpiled/react/Icons/Google'
+import LogoutLargeIcon from 'cozy-ui/transpiled/react/Icons/LogoutLarge'
+import TopSelectIcon from 'cozy-ui/transpiled/react/Icons/TopSelect'
+import BottomSelectIcon from 'cozy-ui/transpiled/react/Icons/BottomSelect'
+import CheckWhiteIcon from 'cozy-ui/transpiled/react/Icons/CheckWhite'
+import DashWhiteIcon from 'cozy-ui/transpiled/react/Icons/DashWhite'
+import KeychainIcon from 'cozy-ui/transpiled/react/Icons/Keychain'
+
+const icons = [
+  CozyIcon,
+  CloudBrokenIcon,
+  CozyLogoIcon,
+  DeviceLaptopIcon,
+  DevicePhoneIcon,
+  DeviceTabletIcon,
+  DeviceBrowserIcon,
+  FileTypeAudioIcon,
+  FileTypeBinIcon,
+  FileTypeCodeIcon,
+  FileTypeFilesIcon,
+  FileTypeFolderIcon,
+  FileTypeImageIcon,
+  FileTypePdfIcon,
+  FileTypeSheetIcon,
+  FileTypeSlideIcon,
+  FileTypeTextIcon,
+  FileTypeVideoIcon,
+  FileTypeZipIcon,
+  ForbiddenSignIcon,
+  GoogleIcon,
+  LogoutLargeIcon,
+  TopSelectIcon,
+  BottomSelectIcon,
+  CheckWhiteIcon,
+  DashWhiteIcon,
+  KeychainIcon
+]
 
 const wrapperStyle = {
   fontSize: '2rem',
