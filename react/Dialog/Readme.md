@@ -35,6 +35,8 @@ import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListI
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import Menu from 'cozy-ui/transpiled/react/MuiCozyTheme/Menus';
 import MenuItem from '@material-ui/core/MenuItem'
+import FiletypeFolder from 'cozy-ui/transpiled/react/Icons/FiletypeFolder'
+import FiletypeText from 'cozy-ui/transpiled/react/Icons/FileTypeText'
 
 const handleClose = () => setState({ modalOpened: !state.modalOpened })
 
@@ -71,7 +73,7 @@ const ExampleDialog = ({ open, onClose }) => {
       <List>
         <ListItem {...listItemProps} button>
           <ListItemIcon>
-            <Icon icon="folder" width="32" height="32" />
+            <Icon icon={FiletypeFolder} width="32" height="32" />
           </ListItemIcon>
           <ListItemText primary="I'm a primary text"/>
           <ListItemSecondaryAction>
@@ -83,7 +85,7 @@ const ExampleDialog = ({ open, onClose }) => {
                   icon="dots"
                   extension="narrow"
                   iconOnly
-                  className="u-m-0"
+                  className="u-m-0 u-coolGrey"
                 />
               }
             >
@@ -97,14 +99,14 @@ const ExampleDialog = ({ open, onClose }) => {
         <Divider {...dividerProps} variant='inset' />
         <ListItem {...listItemProps} button>
           <ListItemIcon>
-            <Icon icon="file" width="32" height="32" />
+            <Icon icon={FiletypeText} width="32" height="32" />
           </ListItemIcon>
           <ListItemText primary="I'm a primary text" secondary="I'm a secondary text"/>
         </ListItem>
         <Divider {...dividerProps} variant='inset' />
         <ListItem {...listItemProps} button>
           <ListItemIcon>
-            <Icon icon="folder" width="32" height="32" />
+            <Icon icon={FiletypeText} width="32" height="32" />
           </ListItemIcon>
           <ListItemText primary="I'm a primary text" />
           <ListItemSecondaryAction>
@@ -114,7 +116,7 @@ const ExampleDialog = ({ open, onClose }) => {
               icon="dots"
               extension="narrow"
               iconOnly
-              className="u-m-0"
+              className="u-m-0 u-coolGrey"
             />
           </ListItemSecondaryAction>
         </ListItem>
