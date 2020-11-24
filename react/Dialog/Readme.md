@@ -42,7 +42,7 @@ initialState = { modalOpened: isTesting() }
 
 const ExampleDialog = ({ open, onClose }) => {
   const { isMobile } = useBreakpoints()
-  const { dialogProps, dialogTitleProps, listItemProps } = useCozyDialog({
+  const { dialogProps, dialogTitleProps, listItemProps, dividerProps } = useCozyDialog({
     size: 'medium',
     classes: {
       paper: 'my-class'
@@ -67,6 +67,7 @@ const ExampleDialog = ({ open, onClose }) => {
         {isMobile ? <DialogBackButton onClick={onClose} /> : null}
         Ada Lovelace
       </DialogTitle>
+      <Divider />
       <List>
         <ListItem {...listItemProps} button>
           <ListItemIcon>
@@ -93,12 +94,14 @@ const ExampleDialog = ({ open, onClose }) => {
             </Menu>
           </ListItemSecondaryAction>
         </ListItem>
+        <Divider {...dividerProps} variant='inset' />
         <ListItem {...listItemProps} button>
           <ListItemIcon>
             <Icon icon="file" width="32" height="32" />
           </ListItemIcon>
           <ListItemText primary="I'm a primary text" secondary="I'm a secondary text"/>
         </ListItem>
+        <Divider {...dividerProps} variant='inset' />
         <ListItem {...listItemProps} button>
           <ListItemIcon>
             <Icon icon="folder" width="32" height="32" />
@@ -116,6 +119,7 @@ const ExampleDialog = ({ open, onClose }) => {
           </ListItemSecondaryAction>
         </ListItem>
       </List>
+      <Divider {...dividerProps} />
       <DialogActions>
         <Button
           theme="secondary"

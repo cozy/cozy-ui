@@ -450,7 +450,10 @@ normalTheme.overrides = {
   },
   MuiDivider: {
     inset: {
-      marginLeft: 64
+      marginLeft: 64,
+      '&.divider--dialog': {
+        marginLeft: 80
+      }
     }
   },
   MuiSwitch: {
