@@ -70,7 +70,7 @@ const ExampleDialog = ({ open, onClose }) => {
         Ada Lovelace
       </DialogTitle>
       <Divider />
-      <List>
+      <List className='u-mv-half'>
         <ListItem {...listItemProps} button>
           <ListItemIcon>
             <Icon icon={FiletypeFolder} width="32" height="32" />
