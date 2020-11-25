@@ -1,3 +1,11 @@
+# [41.1.0](https://github.com/cozy/cozy-ui/compare/v41.0.0...v41.1.0) (2020-11-25)
+
+
+### Features
+
+* Add ForbiddenSign illustration icon ([b29e1e6](https://github.com/cozy/cozy-ui/commit/b29e1e6))
+* Add how to import illustrations directly ([2c186ad](https://github.com/cozy/cozy-ui/commit/2c186ad))
+
 # [41.0.0](https://github.com/cozy/cozy-ui/compare/v40.10.0...v41.0.0) (2020-11-19)
 
 
