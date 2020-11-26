@@ -1,3 +1,10 @@
+# [41.2.0](https://github.com/cozy/cozy-ui/compare/v41.1.0...v41.2.0) (2020-11-26)
+
+
+### Features
+
+* Use primaryColorDark CSS variable in MUI theme ([83d9721](https://github.com/cozy/cozy-ui/commit/83d9721))
+
 # [41.1.0](https://github.com/cozy/cozy-ui/compare/v41.0.0...v41.1.0) (2020-11-25)
 
 
