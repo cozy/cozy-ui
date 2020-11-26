@@ -96,7 +96,7 @@ export const normalTheme = createMuiTheme({
     primary: {
       light: getCssVariableValue('primaryColorLight'),
       main: getCssVariableValue('primaryColor'),
-      dark: getCssVariableValue('scienceBlue'),
+      dark: getCssVariableValue('primaryColorDark'),
       contrastText: getCssVariableValue('primaryContrastTextColor')
     },
     error: {
