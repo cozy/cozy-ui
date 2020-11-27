@@ -33,7 +33,7 @@ const useCozyDialog = props => {
   const dialogProps = {
     'aria-labelledby': `modal-title-${id}`,
     fullScreen,
-    open: open || opened,
+    open: open !== undefined ? open : opened,
     onClose,
     TransitionComponent,
     ...otherProps,
