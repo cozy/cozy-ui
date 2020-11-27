@@ -1,3 +1,11 @@
+## [41.3.1](https://github.com/cozy/cozy-ui/compare/v41.3.0...v41.3.1) (2020-11-27)
+
+
+### Bug Fixes
+
+* Only consider opened prop if open is undefined ([15169cb](https://github.com/cozy/cozy-ui/commit/15169cb))
+* Remove warning ([98cbe38](https://github.com/cozy/cozy-ui/commit/98cbe38))
+
 # [41.3.0](https://github.com/cozy/cozy-ui/compare/v41.2.0...v41.3.0) (2020-11-27)
 
 
