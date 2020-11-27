@@ -1,3 +1,10 @@
+# [41.3.0](https://github.com/cozy/cozy-ui/compare/v41.2.0...v41.3.0) (2020-11-27)
+
+
+### Features
+
+* Better support for secondary color ([f4910be](https://github.com/cozy/cozy-ui/commit/f4910be))
+
 # [41.2.0](https://github.com/cozy/cozy-ui/compare/v41.1.0...v41.2.0) (2020-11-26)
 
 
