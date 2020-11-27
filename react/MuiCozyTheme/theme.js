@@ -103,10 +103,10 @@ export const normalTheme = createMuiTheme({
       main: getCssVariableValue('pomegranate')
     },
     secondary: {
-      light: getCssVariableValue('monza'),
-      main: getCssVariableValue('portage'),
-      dark: getCssVariableValue('azure'),
-      contrastText: getCssVariableValue('white')
+      light: getCssVariableValue('secondaryColorLight'),
+      main: getCssVariableValue('secondaryColor'),
+      dark: getCssVariableValue('secondaryColorDark'),
+      contrastText: getCssVariableValue('secondaryContrastTextColor')
     },
     text: {
       primary: getCssVariableValue('charcoalGrey'),
@@ -126,6 +126,9 @@ export const normalTheme = createMuiTheme({
     MuiTabs: {
       textColor: 'primary',
       TabIndicatorProps: { color: 'primary' }
+    },
+    MuiButton: {
+      disableRipple: true
     }
   },
   ...(isTesting() && { transitions: { create: () => 'none' } })
@@ -146,8 +149,19 @@ normalTheme.overrides = {
     }
   },
   MuiButton: {
-    root: {
-      borderRadius: 0
+    outlined: {
+      borderRadius: 2,
+      height: 40,
+      minWidth: 112
+    },
+    contained: {
+      borderRadius: 2,
+      boxShadow: 0,
+      height: 40,
+      minWidth: 112
+    },
+    containedSecondary: {
+      color: 'white'
     }
   },
   MuiTab: {
