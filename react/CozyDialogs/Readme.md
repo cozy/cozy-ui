@@ -170,7 +170,7 @@ const toggleDialog = dialog => {
     </MuiCozyTheme>
   </BreakpointsProvider>
   {dialogs.map(dialog => (
-    <button data-test-id={`open-btn-${dialog.name}`} onClick={() => toggleDialog(dialog)}>
+    <button key={`open-btn-${dialog.name}`} data-test-id={`open-btn-${dialog.name}`} onClick={() => toggleDialog(dialog)}>
       Open {dialog.name}
     </button>
   ))}
