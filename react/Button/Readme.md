@@ -1,3 +1,5 @@
+⚠️ You are encouraged to use [MuiButtons](#/Buttons) instead of the Buttons here.
+
 There's two kinds of Button at your disposal : `<Button />` & `<ButtonLink />`.
 The first is a basic `<button>` for a click event, the second is a `<a>`, a link.
 Both look exactly the same, they share the same `className`, `disabled`, `onClick` & `theme` parameters but `<Button>` has also:
@@ -15,7 +17,7 @@ when `<ButtonLink>` has:
 ```
 import Button from 'cozy-ui/transpiled/react/Button';
 const props = [{}, { disabled: true}, { busy: true }];
-const themes = ['regular', 'ghost', 'danger', 'highlight', 'secondary', 'danger-outline', 'alpha', 'text'];
+const themes = ['regular', 'ghost', 'danger', 'highlight', 'secondary', 'danger-outline', 'text'];
 
 <div>
   {themes.map(theme =>
