@@ -34,7 +34,6 @@ const themes = ['regular', 'ghost', 'danger', 'highlight', 'secondary', 'danger-
 import Button from 'cozy-ui/transpiled/react/Button';
 
 <div>
-  <p><Button size='tiny' label='Tiny' /></p>
   <p><Button size='small' label='Small' /></p>
   <p><Button size='normal' label='Normal' /></p>
   <p><Button label='Normal' /></p>
