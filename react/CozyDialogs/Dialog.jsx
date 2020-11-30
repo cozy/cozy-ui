@@ -15,7 +15,13 @@ import DialogCloseButton from './DialogCloseButton'
 
 const Dialog = props => {
   const { onClose, title, content, actions, actionsLayout } = props
-  const { dialogProps, dialogTitleProps, fullScreen, id } = useCozyDialog(props)
+  const {
+    dialogProps,
+    dialogTitleProps,
+    fullScreen,
+    id,
+    dialogActionsProps
+  } = useCozyDialog(props)
 
   return (
     <MUIDialog {...dialogProps}>
@@ -34,6 +40,7 @@ const Dialog = props => {
         <div className="dialogContentInner withFluidActions">
           {content}
           <DialogActions
+            {...dialogActionsProps}
             disableActionSpacing
             className={cx('dialogActionsFluid', {
               columnLayout: actionsLayout == 'column'

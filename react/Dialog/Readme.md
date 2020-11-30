@@ -3,7 +3,7 @@
 If no ready made [CozyDialogs](#/CozyDialogs) corresponds to what you need, you can use
 Dialog directly. The useCozyDialog takes [CozyDialog props]([CozyDialogs](#/CozyDialogs))
 and returns props to spread on the components used in your custom Dialog. Those props
-will make sure that even your custom Dialogs will behave as CozyDialogs. 
+will make sure that even your custom Dialogs will behave as CozyDialogs.
 
 ```jsx
 import cx from 'classnames'
@@ -44,7 +44,7 @@ initialState = { modalOpened: isTesting() }
 
 const ExampleDialog = ({ open, onClose }) => {
   const { isMobile } = useBreakpoints()
-  const { dialogProps, dialogTitleProps, listItemProps, dividerProps } = useCozyDialog({
+  const { dialogProps, dialogTitleProps, listItemProps, dividerProps, dialogActionsProps } = useCozyDialog({
     size: 'medium',
     classes: {
       paper: 'my-class'
@@ -122,7 +122,7 @@ const ExampleDialog = ({ open, onClose }) => {
         </ListItem>
       </List>
       <Divider {...dividerProps} />
-      <DialogActions>
+      <DialogActions {...dialogActionsProps}>
         <Button
           theme="secondary"
           onClick={() => onClose()}

@@ -381,6 +381,11 @@ normalTheme.overrides = {
           maxWidth: '800px'
         }
       }
+    },
+    paperFullScreen: {
+      '& .cozyDialogActions': {
+        paddingBottom: 'env(safe-area-inset-bottom)'
+      }
     }
   },
   MuiDialogTitle: {
