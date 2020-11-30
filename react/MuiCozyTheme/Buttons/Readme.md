@@ -29,3 +29,18 @@ const ButtonsVariant = ({variant}) => {
   <ButtonsVariant variant='contained' />
 </MuiCozyTheme>
 ```
+
+Additionally to material UI default variants, we have other "variants" that are exported are components:
+
+```
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
+
+import { DangerButton, GhostButton } from './index';
+
+<MuiCozyTheme>
+  <DangerButton className='u-m-1'>Danger</DangerButton>
+  <DangerButton variant='outlined' className='u-m-1'>Danger outline</DangerButton>
+  <GhostButton className='u-m-1'>Ghost</GhostButton>
+</MuiCozyTheme>
+```
+

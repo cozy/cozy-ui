@@ -1,10 +1,11 @@
 import merge from 'lodash/merge'
 import { createMuiTheme } from '@material-ui/core/styles'
+import { lighten } from '@material-ui/core/styles/colorManipulator'
 import { getCssVariableValue } from '../utils/color'
 import isTesting from '../helpers/isTesting'
 
 const defaultValues = {
-  borderRadius: 6,
+  borderRadius: 2,
   dialog: {
     sm: {
       padding: 16
@@ -149,19 +150,31 @@ normalTheme.overrides = {
     }
   },
   MuiButton: {
-    outlined: {
-      borderRadius: 2,
+    root: {
       height: 40,
       minWidth: 112
     },
     contained: {
-      borderRadius: 2,
       boxShadow: 0,
-      height: 40,
-      minWidth: 112
+      backgroundColor: normalTheme.palette.grey['200'],
+      '&:hover': {
+        backgroundColor: `${lighten(normalTheme.palette.grey['200'], 0.1)}`
+      },
+      '&:active': {
+        boxShadow: 0,
+        backgroundColor: `${lighten(normalTheme.palette.grey['200'], 0.3)}`
+      }
+    },
+    containedPrimary: {
+      '&:active': {
+        backgroundColor: lighten(normalTheme.palette.primary.main, 0.1)
+      }
     },
     containedSecondary: {
-      color: 'white'
+      color: 'white',
+      '&:active': {
+        backgroundColor: lighten(normalTheme.palette.secondary.main, 0.1)
+      }
     }
   },
   MuiTab: {
