@@ -1,3 +1,10 @@
+# [41.4.0](https://github.com/cozy/cozy-ui/compare/v41.3.1...v41.4.0) (2020-11-30)
+
+
+### Features
+
+* BlockScroll on mobile screen ([7eddad1](https://github.com/cozy/cozy-ui/commit/7eddad1))
+
 ## [41.3.1](https://github.com/cozy/cozy-ui/compare/v41.3.0...v41.3.1) (2020-11-27)
 
 
