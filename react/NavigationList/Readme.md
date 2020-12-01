@@ -8,6 +8,7 @@ import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from 'cozy-ui/transpiled/react/Tabs';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem'
+import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
 import ListItemIcon, {smallSize, mediumSize, largeSize} from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemSecondaryAction'
@@ -37,6 +38,7 @@ const NavigationListExample = ({ style }) => {
             />
           </ListItemSecondaryAction>
         </ListItem>
+        <Divider inset />
         <ListItem>
           <ListItemIcon>
             <Icon icon="gear" size={largeSize} />
@@ -50,6 +52,7 @@ const NavigationListExample = ({ style }) => {
             />
           </ListItemSecondaryAction>
         </ListItem>        
+        <Divider inset />
         <ListItem>
           <ListItemIcon>
             <Icon icon="people" size={smallSize} />
@@ -66,6 +69,7 @@ const NavigationListExample = ({ style }) => {
             />
           </ListItemSecondaryAction>
         </ListItem>
+        <Divider inset />
         <ListItem>
           <ListItemIcon>
             <Icon icon="trash" className="u-error" size={smallSize} />
