@@ -247,17 +247,7 @@ normalTheme.overrides = {
     root: {
       paddingTop: 0,
       paddingBottom: 0,
-      minHeight: '3.5rem',
-      '&$selected, &$selected:hover': {
-        backgroundColor: 'var(--zircon)'
-      },
-      '&$selected:hover': {
-        outline: '1px solid var(--zircon)'
-      },
-      '&:hover, &:focus': {
-        backgroundColor: 'var(--paleGrey)',
-        outline: '1px solid var(--paleGrey)'
-      }
+      minHeight: '3.5rem'
     },
     gutters: {
       paddingLeft: '1rem',
@@ -278,7 +268,13 @@ normalTheme.overrides = {
       paddingRight: '2rem'
     },
     button: {
+      '&$selected, &$selected:hover': {
+        backgroundColor: 'var(--zircon)'
+      },
       '&:hover': {
+        backgroundColor: getCssVariableValue('paleGrey')
+      },
+      '&:focus': {
         backgroundColor: getCssVariableValue('paleGrey')
       }
     }

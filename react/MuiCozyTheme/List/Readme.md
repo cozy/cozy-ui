@@ -143,21 +143,21 @@ import FiletypeTextIcon from 'cozy-ui/transpiled/react/Icons/FileTypeText';
 
 <MuiCozyTheme>
   <List>
-    <ListItem>
+    <ListItem button>
       <ListItemIcon>
         <Icon icon={FileTypeFolderIcon} width="32" height="32" />
       </ListItemIcon>
       <ListItemText primary="I'm a primary text"/>
     </ListItem>
-    <Divider component="li" variant="inset" />
-    <ListItem selected={true}>
+    <Divider variant="inset" />
+    <ListItem selected={true}  button>
       <ListItemIcon>
         <Icon icon={FiletypeTextIcon} width="32" height="32" />
       </ListItemIcon>
       <ListItemText primary="I'm a primary text" secondary="I'm a secondary text"/>
     </ListItem>
-    <Divider component="li" variant="inset" />
-    <ListItem>
+    <Divider variant="inset" />
+    <ListItem  button>
       <ListItemIcon>
         <Icon icon={FiletypeTextIcon} width="32" height="32" />
       </ListItemIcon>
@@ -189,19 +189,19 @@ import FiletypeTextIcon from 'cozy-ui/transpiled/react/Icons/FileTypeText';
 <MuiCozyTheme>
   <Divider />
   <List>
-    <ListItem divider>
+    <ListItem divider button>
       <ListItemIcon>
         <Icon icon={FileTypeFolderIcon} width="32" height="32" />
       </ListItemIcon>
       <ListItemText primary="I'm a primary text"/>
     </ListItem>
-    <ListItem divider selected={true}>
+    <ListItem divider button>
       <ListItemIcon>
         <Icon icon={FiletypeTextIcon} width="32" height="32" />
       </ListItemIcon>
       <ListItemText primary="I'm a primary text" secondary="I'm a secondary text"/>
     </ListItem>
-    <ListItem divider>
+    <ListItem divider button>
        <ListItemIcon>
         <Icon icon={FiletypeTextIcon} width="32" height="32" />
       </ListItemIcon>
