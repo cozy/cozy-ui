@@ -8,11 +8,12 @@ import {
   TableCell
 } from 'cozy-ui/transpiled/react/Table';
 
+let refRow = ''
 const cellStyles = { flexGrow: 1 };
 
 <Table>
   <TableHead>
-    <TableRow>
+    <TableRow ref={c => (refRow = c)} onClick={() => alert(refRow)}>
       <TableHeader style={cellStyles}>Firstname</TableHeader>
       <TableHeader style={cellStyles}>Lastname</TableHeader>
     </TableRow>
