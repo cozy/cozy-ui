@@ -1,3 +1,10 @@
+## [41.4.1](https://github.com/cozy/cozy-ui/compare/v41.4.0...v41.4.1) (2020-12-08)
+
+
+### Bug Fixes
+
+* Missing variable in palette would cause blank page ([f2afb60](https://github.com/cozy/cozy-ui/commit/f2afb60))
+
 # [41.4.0](https://github.com/cozy/cozy-ui/compare/v41.3.1...v41.4.0) (2020-11-30)
 
 
