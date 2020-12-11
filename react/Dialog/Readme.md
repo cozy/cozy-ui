@@ -25,7 +25,7 @@ import useBreakpoints, {
 import Alerter from 'cozy-ui/transpiled/react/Alerter';
 
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
-import { CardDivider } from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
+import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
 import Button from 'cozy-ui/transpiled/react/Button'
 import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List';
 import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem';
@@ -35,6 +35,8 @@ import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListI
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import Menu from 'cozy-ui/transpiled/react/MuiCozyTheme/Menus';
 import MenuItem from '@material-ui/core/MenuItem'
+import FileTypeFolderIcon from 'cozy-ui/transpiled/react/Icons/FileTypeFolder'
+import FileTypeText from 'cozy-ui/transpiled/react/Icons/FileTypeText'
 
 const handleClose = () => setState({ modalOpened: !state.modalOpened })
 
@@ -42,7 +44,7 @@ initialState = { modalOpened: isTesting() }
 
 const ExampleDialog = ({ open, onClose }) => {
   const { isMobile } = useBreakpoints()
-  const { dialogProps, dialogTitleProps, listItemProps } = useCozyDialog({
+  const { dialogProps, dialogTitleProps, listItemProps, dividerProps } = useCozyDialog({
     size: 'medium',
     classes: {
       paper: 'my-class'
@@ -67,10 +69,11 @@ const ExampleDialog = ({ open, onClose }) => {
         {isMobile ? <DialogBackButton onClick={onClose} /> : null}
         Ada Lovelace
       </DialogTitle>
-      <List>
-        <ListItem {...listItemProps}>
+      <Divider />
+      <List className='u-mv-half'>
+        <ListItem {...listItemProps} button>
           <ListItemIcon>
-            <Icon icon="folder" width="32" height="32" />
+            <Icon icon={FileTypeFolderIcon} width="32" height="32" />
           </ListItemIcon>
           <ListItemText primary="I'm a primary text"/>
           <ListItemSecondaryAction>
@@ -82,7 +85,7 @@ const ExampleDialog = ({ open, onClose }) => {
                   icon="dots"
                   extension="narrow"
                   iconOnly
-                  className="u-m-0"
+                  className="u-m-0 u-coolGrey"
                 />
               }
             >
@@ -93,13 +96,18 @@ const ExampleDialog = ({ open, onClose }) => {
             </Menu>
           </ListItemSecondaryAction>
         </ListItem>
-        <ListItem {...listItemProps}>
+        <Divider {...dividerProps} variant='inset' />
+        <ListItem {...listItemProps} button>
           <ListItemIcon>
-            <Icon icon="file" width="32" height="32" />
+            <Icon icon={FileTypeText} width="32" height="32" />
           </ListItemIcon>
           <ListItemText primary="I'm a primary text" secondary="I'm a secondary text"/>
         </ListItem>
-        <ListItem {...listItemProps}>
+        <Divider {...dividerProps} variant='inset' />
+        <ListItem {...listItemProps} button>
+          <ListItemIcon>
+            <Icon icon={FileTypeText} width="32" height="32" />
+          </ListItemIcon>
           <ListItemText primary="I'm a primary text" />
           <ListItemSecondaryAction>
             <Button
@@ -108,11 +116,12 @@ const ExampleDialog = ({ open, onClose }) => {
               icon="dots"
               extension="narrow"
               iconOnly
-              className="u-m-0"
+              className="u-m-0 u-coolGrey"
             />
           </ListItemSecondaryAction>
         </ListItem>
       </List>
+      <Divider {...dividerProps} />
       <DialogActions>
         <Button
           theme="secondary"

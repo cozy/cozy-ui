@@ -3,7 +3,7 @@ import { createMuiTheme } from '@material-ui/core/styles'
 import { getCssVariableValue } from '../utils/color'
 import isTesting from '../helpers/isTesting'
 
-const defaultValues = {
+export const defaultValues = {
   borderRadius: 6,
   dialog: {
     sm: {
@@ -110,7 +110,7 @@ export const normalTheme = createMuiTheme({
     },
     text: {
       primary: getCssVariableValue('charcoalGrey'),
-      secondary: getCssVariableValue('slateGrey')
+      secondary: getCssVariableValue('coolGrey')
     },
     grey: {
       0: getCssVariableValue('white'),
@@ -128,6 +128,9 @@ export const normalTheme = createMuiTheme({
       TabIndicatorProps: { color: 'primary' }
     },
     MuiButton: {
+      disableRipple: true
+    },
+    MuiListItem: {
       disableRipple: true
     }
   },
@@ -230,10 +233,6 @@ normalTheme.overrides = {
     }
   },
   MuiList: {
-    root: {
-      borderTop: '1px solid var(--silver)',
-      borderBottom: '1px solid var(--silver)'
-    },
     padding: {
       paddingTop: 0,
       paddingBottom: 0
@@ -245,24 +244,10 @@ normalTheme.overrides = {
     }
   },
   MuiListItem: {
-    container: {
-      '&:not(:first-child)': {
-        borderTop: '1px solid var(--silver) !important'
-      }
-    },
     root: {
       paddingTop: 0,
       paddingBottom: 0,
-      minHeight: '3.5rem',
-      '&$selected, &$selected:hover': {
-        backgroundColor: 'var(--zircon)'
-      },
-      '&:hover, &:focus': {
-        backgroundColor: 'var(--paleGrey)'
-      },
-      '&:not(:first-child)': {
-        borderTop: '1px solid var(--silver)'
-      }
+      minHeight: '3.5rem'
     },
     gutters: {
       paddingLeft: '1rem',
@@ -283,7 +268,13 @@ normalTheme.overrides = {
       paddingRight: '2rem'
     },
     button: {
+      '&$selected, &$selected:hover': {
+        backgroundColor: 'var(--zircon)'
+      },
       '&:hover': {
+        backgroundColor: getCssVariableValue('paleGrey')
+      },
+      '&:focus': {
         backgroundColor: getCssVariableValue('paleGrey')
       }
     }
@@ -454,19 +445,10 @@ normalTheme.overrides = {
     }
   },
   MuiDivider: {
-    /**
-     * calcs are made since we have defaultMargin on the Dialog so
-     * we need to remove the left margin and add the width of 2 margins
-     * in order to have the divider takes the full width of the Modal
-     */
-    root: {
-      [normalTheme.breakpoints.down('md')]: {
-        width: `calc(100% + ${defaultValues.dialog.sm.padding}*2px)`,
-        marginLeft: `-${defaultValues.dialog.sm.padding}px`
-      },
-      [normalTheme.breakpoints.up('md')]: {
-        width: `calc(100% + ${defaultValues.dialog.md.padding}*2px)`,
-        marginLeft: `-${defaultValues.dialog.md.padding}px`
+    inset: {
+      marginLeft: 64,
+      '&.divider--dialog': {
+        marginLeft: 80
       }
     }
   },

@@ -7,7 +7,7 @@ import Dialog, {
   DialogActions,
   DialogContent
 } from 'cozy-ui/transpiled/react/Dialog'
-import { CardDivider } from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
+import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
 
 import dialogPropTypes from './dialogPropTypes'
 import DialogBackButton from './DialogBackButton'
@@ -29,11 +29,11 @@ const FixedDialog = props => {
         {fullScreen ? <DialogBackButton onClick={onClose} /> : null}
         {title}
       </DialogTitle>
-      <CardDivider />
+      <Divider />
       <DialogContent>
         <div className="dialogContentInner">{content}</div>
       </DialogContent>
-      <CardDivider />
+      <Divider />
       <DialogActions
         disableActionSpacing
         className={cx({ columnLayout: actionsLayout == 'column' })}
