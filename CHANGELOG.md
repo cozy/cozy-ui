@@ -1,3 +1,49 @@
+# [42.0.0](https://github.com/cozy/cozy-ui/compare/v41.4.1...v42.0.0) (2020-12-11)
+
+
+### Bug Fixes
+
+* Raised list uses ListItems with Dividers ([451d3e2](https://github.com/cozy/cozy-ui/commit/451d3e2))
+* Text secondary color is coolGrey ([e554f67](https://github.com/cozy/cozy-ui/commit/e554f67))
+
+
+### Features
+
+* Add inset dividers on NavigationList example ([ea8b66a](https://github.com/cozy/cozy-ui/commit/ea8b66a))
+* Add outline to listitem when hovered to hide list item divider ([9a67e62](https://github.com/cozy/cozy-ui/commit/9a67e62))
+* Better behavior for ListItem buttons focus and hover ([66db925](https://github.com/cozy/cozy-ui/commit/66db925))
+* Rework Dividers ([deab976](https://github.com/cozy/cozy-ui/commit/deab976))
+* Support inset dividers in Dialogs ([34a07c5](https://github.com/cozy/cozy-ui/commit/34a07c5))
+* Use typography components for Empty ([5f9ea6c](https://github.com/cozy/cozy-ui/commit/5f9ea6c))
+
+
+### BREAKING CHANGES
+
+* List, ListItem and Divider do not have the same
+behavior: they do not add automatically a divider border; you have to
+add a top Divider and use the divider prop on ListItems to achieve the
+same behavior as before. This BC was necessary since we had put the
+borders in our default theme and we could not achieve the "inset" effect
+with default CSS borders, we needed an extra HTML element for that. We
+are now closer to the original MUI implementation.
+
+Summary of changes
+
+```
+- import { CardDivider } from 'cozy-ui/transpiled/react/Divider'
++ import Divider from 'cozy-ui/transpiled/react/Divider'
+
+- import Divider from 'cozy-ui/transpiled/react/Divider'
++ import { DeprecatedDivider } from 'cozy-ui/transpiled/react/Divider'
+
+- <List>
++ <Divider />
++ <List>
+
+- <ListItem />
++ <ListItem divider />
+```
+
 ## [41.4.1](https://github.com/cozy/cozy-ui/compare/v41.4.0...v41.4.1) (2020-12-08)
 
 
