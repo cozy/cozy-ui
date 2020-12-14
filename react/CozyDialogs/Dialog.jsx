@@ -19,7 +19,7 @@ const Dialog = props => {
 
   return (
     <MUIDialog {...dialogProps}>
-      {!fullScreen && (
+      {!fullScreen && onClose && (
         <DialogCloseButton
           onClick={onClose}
           data-test-id={`modal-close-button-${id}`}
