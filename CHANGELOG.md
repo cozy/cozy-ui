@@ -1,3 +1,10 @@
+# [42.1.0](https://github.com/cozy/cozy-ui/compare/v42.0.1...v42.1.0) (2020-12-14)
+
+
+### Features
+
+* Add carbonCopy and Safe icons ([40f3817](https://github.com/cozy/cozy-ui/commit/40f3817))
+
 ## [42.0.1](https://github.com/cozy/cozy-ui/compare/v42.0.0...v42.0.1) (2020-12-14)
 
 
