@@ -2,8 +2,9 @@ import React, { useCallback, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 
 import useEventListener from '../useEventListener'
-import Modal from '../../Modal'
 import withLocales from '../../I18n/withLocales'
+import { ConfirmDialog } from '../../CozyDialogs'
+import Button from '../../Button'
 
 import en from './locales/en.json'
 import fr from './locales/fr.json'
@@ -26,17 +27,24 @@ function ConfirmModal({
   confirmLabel
 }) {
   return (
-    <Modal
-      closable={false}
-      mobileFullscreen={false}
-      primaryAction={onConfirm}
-      primaryType="danger"
-      primaryText={confirmLabel || t('useConfirmExit.leave')}
-      dismissAction={onCancel}
-      secondaryAction={onCancel}
-      secondaryType="secondary"
-      secondaryText={cancelLabel || t('useConfirmExit.back')}
-      description={message || t('useConfirmExit.message')}
+    <ConfirmDialog
+      open
+      onClose={() => {}}
+      actions={
+        <>
+          <Button
+            label={confirmLabel || t('useConfirmExit.leave')}
+            onClick={onConfirm}
+            theme="danger"
+          />
+          <Button
+            label={cancelLabel || t('useConfirmExit.back')}
+            onClick={onCancel}
+            theme="secondary"
+          />
+        </>
+      }
+      content={message || t('useConfirmExit.message')}
       title={title || t('useConfirmExit.title')}
     />
   )
@@ -105,7 +113,7 @@ export default function useConfirmExit({
   title,
   leaveLabel,
   cancelLabel
-}) {
+} = {}) {
   // `onbeforeunload` event on the browser:
   // Using a ref in order to have an event listener that does not
   // need to be deregistered, recreated and registered again at each
