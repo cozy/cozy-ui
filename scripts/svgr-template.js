@@ -8,7 +8,7 @@ function defaultTemplate(
     plugins.push('typescript')
   }
   const typeScriptTpl = template.smart({ plugins, preserveComments: true })
-  const automaticallyCreatedMention = `// Automatically created, please run \`scripts/generate-svg-icon.sh ${
+  const automaticallyCreatedMention = `// Automatically created, please run \`scripts/generate-svgr-icon.sh ${
     opts.state.filePath
   }\` to regenerate`
 

@@ -30,6 +30,7 @@
     "clean:doc:kss": "rm -rf build/styleguide",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "deploy:doc": "git-directory-deploy --directory build/ --branch gh-pages",
+    "makeSvgr": "scripts/generate-svgr-icon.sh",
     "lint": "npm-run-all 'lint:*'",
     "lint:commit": "git merge-base HEAD master && commitlint --from=$(git merge-base HEAD master) --to=HEAD || true",
     "lint:js": "eslint 'react/**/*.jsx' 'react/**/*.js'",
