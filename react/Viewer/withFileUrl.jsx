@@ -53,7 +53,7 @@ const withFileUrl = BaseComponent =>
     getDownloadLink(file) {
       return this.context.client
         .collection('io.cozy.files')
-        .getDownloadLinkById(file._id)
+        .getDownloadLinkById(file._id, file.name)
     }
 
     clearTimeout() {
