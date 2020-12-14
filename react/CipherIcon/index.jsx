@@ -28,10 +28,10 @@ class CipherIcon extends React.PureComponent {
 
     return (
       <div className={cx('u-dib u-pos-relative', className)} {...rest}>
+        <Icon icon={KeychainIcon} size={32} />
         <div className="u-pos-absolute u-right-0 u-bottom-0">
           <AppIcon fetchIcon={this.fetchIcon} className="u-w-1 u-h-1" />
         </div>
-        <Icon icon={KeychainIcon} size={32} />
       </div>
     )
   }
