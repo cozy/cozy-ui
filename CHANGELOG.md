@@ -1,3 +1,10 @@
+## [42.0.1](https://github.com/cozy/cozy-ui/compare/v42.0.0...v42.0.1) (2020-12-14)
+
+
+### Bug Fixes
+
+* Pass the filename to download() ([#1685](https://github.com/cozy/cozy-ui/issues/1685)) ([bdce2e3](https://github.com/cozy/cozy-ui/commit/bdce2e3))
+
 # [42.0.0](https://github.com/cozy/cozy-ui/compare/v41.4.1...v42.0.0) (2020-12-11)
 
 
