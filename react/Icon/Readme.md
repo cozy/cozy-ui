@@ -31,7 +31,7 @@ import Icon from 'cozy-ui/transpiled/react/Icon';
 import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite';
 const colors = ['#297EF2', '#08b442', '#B449E7', '#F52D2D', '#FF962F']
 let i = 0
-const availableIcons = ['album-add','album-remove','album','answer','apple','archive','attachment','attention','bank','banking-add','banking','bell','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-firefox','browser-ie','browser-opera','browser-safari','burger','calendar','camera','car','categories','certified','check-circle','check-list','check-square','check','circle-filled','clock','cloud-happy','cloud','collect','comment','company','compass','connector','contract','contrast','cozy-laugh','cozy-text','credit-card-add','credit-card','credit','crop','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','debit','devices','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','email-notification','email','eu','euro','exchange','eye-closed','eye','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','flag-outlined','flag','flash-auto','flashlight','folder-add','folder','forbidden','from-user','gear','globe','graph-circle','grid','group-list','groups','heart','help','history','home','hourglass','image','info-outlined','info','key','laptop','left','lightbulb','link-out','link','list','location','lock','logout','magic-trick','magnet','magnifier','merge','movement-in','movement-out','moveto','multi-files','music','new','next','note','notification-email','offline','online','openwith','palette','paperplane','password','pen','people','percent-circle','percent','personal-data','phone-download','phone','pie-chart','pin','plus-small','plus','previous','printer','qualify','rename','repare','restore','right','rise','rotate-left','rotate-right','sad-cozy','select-all','setting','share-circle','share','sound','spinner','stack','star','stats','sync-cozy','sync','target','team','telephone','to-the-cloud','top','trash','trophy','unlink','unlock','up','upload','videos','wallet-add','wallet-new','wallet','warn','warning-circle','warning','wrench-circle'];
+const availableIcons = ['album-add','album-remove','album','answer','apple','archive','attachment','attention','bank','banking-add','banking','bell','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-firefox','browser-ie','browser-opera','browser-safari','burger','calendar','camera','car','carbonCopy','categories','certified','check-circle','check-list','check-square','check','circle-filled','clock','cloud-happy','cloud','collect','comment','company','compass','connector','contract','contrast','cozy-laugh','cozy-text','credit-card-add','credit-card','credit','crop','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','debit','devices','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','email-notification','email','eu','euro','exchange','eye-closed','eye','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','flag-outlined','flag','flash-auto','flashlight','folder-add','folder','forbidden','from-user','gear','globe','graph-circle','grid','group-list','groups','heart','help','history','home','hourglass','image','info-outlined','info','key','laptop','left','lightbulb','link-out','link','list','location','lock','logout','magic-trick','magnet','magnifier','merge','movement-in','movement-out','moveto','multi-files','music','new','next','note','notification-email','offline','online','openwith','palette','paperplane','password','pen','people','percent-circle','percent','personal-data','phone-download','phone','pie-chart','pin','plus-small','plus','previous','printer','qualify','rename','repare','restore','right','rise','rotate-left','rotate-right','sad-cozy','safe','select-all','setting','share-circle','share','sound','spinner','stack','star','stats','sync-cozy','sync','target','team','telephone','to-the-cloud','top','trash','trophy','unlink','unlock','up','upload','videos','wallet-add','wallet-new','wallet','warn','warning-circle','warning','wrench-circle'];
 <div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
   <Sprite />
   {
@@ -285,7 +285,10 @@ import WalletNew from 'cozy-ui/transpiled/react/Icons/WalletNew'
 import Warn from 'cozy-ui/transpiled/react/Icons/Warn'
 import Warning from 'cozy-ui/transpiled/react/Icons/Warning'
 import WarningCircle from 'cozy-ui/transpiled/react/Icons/WarningCircle'
-import WrenchCircle from 'cozy-ui/transpiled/react/Icons/WrenchCircle';
+import WrenchCircle from 'cozy-ui/transpiled/react/Icons/WrenchCircle'
+import CarbonCopy from 'cozy-ui/transpiled/react/Icons/CarbonCopy'
+import Safe from 'cozy-ui/transpiled/react/Icons/Safe'
+;
 
 const icons = [
   Album,
@@ -313,6 +316,7 @@ const icons = [
   Calendar,
   Camera,
   Car,
+  CarbonCopy,
   Categories,
   Certified,
   Check,
@@ -441,6 +445,7 @@ const icons = [
   RotateLeft,
   RotateRight,
   SadCozy,
+  Safe,
   SelectAll,
   Setting,
   Share,
