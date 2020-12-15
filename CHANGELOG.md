@@ -1,3 +1,10 @@
+## [42.1.1](https://github.com/cozy/cozy-ui/compare/v42.1.0...v42.1.1) (2020-12-15)
+
+
+### Bug Fixes
+
+* Safe-Area for fullscreen Dialog's DialogActions ([c2d9194](https://github.com/cozy/cozy-ui/commit/c2d9194))
+
 # [42.1.0](https://github.com/cozy/cozy-ui/compare/v42.0.1...v42.1.0) (2020-12-14)
 
 
