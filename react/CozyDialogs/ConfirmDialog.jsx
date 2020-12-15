@@ -14,7 +14,13 @@ import DialogCloseButton from './DialogCloseButton'
 
 const ConfirmDialog = props => {
   const { onClose, title, content, actions, actionsLayout } = props
-  const { dialogProps, dialogTitleProps, fullScreen, id } = useCozyDialog(props)
+  const {
+    dialogProps,
+    dialogTitleProps,
+    fullScreen,
+    id,
+    dialogActionsProps
+  } = useCozyDialog(props)
   return (
     <Dialog {...dialogProps}>
       {!fullScreen && (
@@ -31,6 +37,7 @@ const ConfirmDialog = props => {
           </DialogTitle>
           {content}
           <DialogActions
+            {...dialogActionsProps}
             disableActionSpacing
             className={cx('dialogActionsFluid', {
               columnLayout: actionsLayout == 'column'

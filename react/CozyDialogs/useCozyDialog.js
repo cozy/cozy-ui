@@ -68,13 +68,22 @@ const useCozyDialog = props => {
       root: dividerClassName
     }
   }
+
+  const dialogActionsClassName = 'cozyDialogActions'
+  const dialogActionsProps = {
+    classes: {
+      root: dialogActionsClassName
+    }
+  }
+
   return {
     dialogProps,
     dialogTitleProps,
     listItemProps,
     id,
     fullScreen,
-    dividerProps
+    dividerProps,
+    dialogActionsProps
   }
 }
 
