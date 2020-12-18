@@ -1,3 +1,5 @@
+@require 'settings/palette.styl'
+
 $translucentWhite1=rgba(255, 255, 255, 0.24)
 $translucentWhite2=rgba(255, 255, 255, 0.88)
 
@@ -22,3 +24,7 @@ $translucentWhite2=rgba(255, 255, 255, 0.88)
     --secondaryButtonSecondaryColor: var(--invertedContrastTextColor)
     --secondaryButtonActiveColor: $translucentWhite1
     --secondaryButtonContrastColor: var(--invertedContrastTextColor)
+
+    --errorColor: lighten($errorColor, 70%)
+    --validColor: lighten($validColor, 70%)
+    --warnColor: lighten($warnColor, 70%)

@@ -28,12 +28,23 @@ const themesSupportingContext = [
   )}
   <SubTitle className='u-white'>BarButton</SubTitle>
   <BarButton icon='dots' />
-  <div className='u-bg-white u-p-1'>
+  <div className='u-bg-white u-p-1 u-mb-1'>
     We can always go back to normal theme if a child must "get out"
     of the theme.
     <CozyTheme variant='normal'>
       <Button className='u-ml-0 u-mt-half' theme='primary' label='Primary button' />
     </CozyTheme>
+  </div>
+  <div class='u-stack-s'>
+    <div class='u-error'>
+      Error text : "Please enter the right password."
+    </div>
+    <div class='u-valid'>
+      Valid text : "Success, you've connected EDF to your Cozy."
+    </div>
+    <div class='u-warn'>
+      Warning text : "Something does not feel right, you may want to reload the page."
+    </div>
   </div>
 </CozyTheme>
 ```
