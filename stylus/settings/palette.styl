@@ -1,5 +1,13 @@
 @require '../tools/mixins'
 
+// @TODO Check to deduplicate dangerColor and errorColor
+$dangerColor=#F52D2D
+$errorColor=#F52D2D
+$errorBackgroundLight=#FFF2F2
+
+$validColor=#35CE68
+$warnColor=#FF962F
+
 // @stylint off
 /*------------------------------------*\
   Palette
@@ -191,12 +199,12 @@ html, .CozyTheme--normal
     --iconColor: currentColor
     --actionMenuIconColor: var(--slateGrey)
 
-    --errorColor: var(--pomegranate)
-    --errorBackgroundLight: var(--chablis)
+    --errorColor: $errorColor
+    --errorBackgroundLight: $errorBackgroundLight
 
-    --validColor: var(--emerald)
-    --warnColor: var(--texasRose)
-    --dangerColor: var(--pomegranate)
+    --validColor: $validColor
+    --warnColor: $warnColor
+    --dangerColor: $dangerColor
 
     --neutralBackground: var(--paleGrey)
 
