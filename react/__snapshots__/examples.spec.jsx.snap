@@ -316,35 +316,35 @@ exports[`BarButton should render examples: BarButton 4`] = `
 exports[`Button should render examples: Button 1`] = `
 "<div>
   <div>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly styles__c-btn--center___16_Xh\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly styles__c-btn--center___16_Xh\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly styles__c-btn--center___16_Xh\\"><span><span>regular</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly styles__c-btn--center___16_Xh\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly styles__c-btn--center___16_Xh\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly styles__c-btn--center___16_Xh\\"><span><span>regular</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
           <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
           <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--ghost___1HC3L styles__c-btn--center___16_Xh\\"><span><span>ghost</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--ghost___1HC3L styles__c-btn--center___16_Xh\\"><span><span>ghost</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--ghost___1HC3L styles__c-btn--center___16_Xh\\"><span><span>ghost</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--ghost___1HC3L styles__c-btn--center___16_Xh\\"><span><span>ghost</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--ghost___1HC3L styles__c-btn--center___16_Xh\\"><span><span>ghost</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--ghost___1HC3L styles__c-btn--center___16_Xh\\"><span><span>ghost</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
           <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
           <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>danger</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>danger</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
           <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
           <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--center___16_Xh\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--center___16_Xh\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--center___16_Xh\\"><span><span>highlight</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--center___16_Xh\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--center___16_Xh\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--center___16_Xh\\"><span><span>highlight</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
           <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
           <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>secondary</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>secondary</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
           <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
           <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>danger-outline</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>danger-outline</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
           <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
           <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi styles__c-btn--center___16_Xh\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi styles__c-btn--center___16_Xh\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi styles__c-btn--center___16_Xh\\"><span><span>alpha</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi styles__c-btn--center___16_Xh\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi styles__c-btn--center___16_Xh\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi styles__c-btn--center___16_Xh\\"><span><span>alpha</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
           <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
           <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
         </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>text</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>text</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>text</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>text</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>text</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>text</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
           <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
           <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
         </svg></span></button></p>
@@ -392,7 +392,7 @@ exports[`Button should render examples: Button 5`] = `
 exports[`Button should render examples: Button 6`] = `"<div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>Show alert</span></span></button></div>"`;
 
 exports[`Button should render examples: Button 7`] = `
-"<div><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Loading</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+"<div><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Loading</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
       <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
       <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
     </svg></span></button></div>"
@@ -430,16 +430,16 @@ exports[`Button should render examples: Button 13`] = `
     <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--tiny___1pFv6 styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"8\\" height=\\"8\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#plus\\"></use></svg><span>Tiny text</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--small___3ArkI styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#plus\\"></use></svg><span>Small text</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#plus\\"></use></svg><span>Regular text</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><svg class=\\"styles__icon___23x3R\\" width=\\"18\\" height=\\"18\\" aria-hidden=\\"true\\" focusable=\\"false\\"><use xlink:href=\\"#plus\\"></use></svg><span>Large text</span></span></button></p>
     <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Secondary theme</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Highlight theme</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>DANGER theme</span></span></button></p>
     <p><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Disabled</span></span></button></p>
-    <p><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+    <p><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
           <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
           <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy secondary</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy secondary</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
           <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
           <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy highlight</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy highlight</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
           <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
           <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy danger</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\">
+        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy danger</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
           <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
           <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
         </svg></span></button></p>
@@ -6228,7 +6228,7 @@ exports[`Icon should render examples: Icon 5`] = `
         </svg>
         <p style=\\"font-size: 1rem; margin-top: 0.5rem; margin-bottom: 1rem;\\">Sound</p>
       </div>
-      <div style=\\"text-align: center;\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+      <div style=\\"text-align: center;\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
           <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
           <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
         </svg>
@@ -7510,7 +7510,7 @@ exports[`Sidebar should render examples: Sidebar 1`] = `
 
 exports[`Spinner should render examples: Spinner 1`] = `
 "<div>
-  <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\">
+  <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
       <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
       <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
     </svg></div>
@@ -7519,19 +7519,19 @@ exports[`Spinner should render examples: Spinner 1`] = `
 
 exports[`Spinner should render examples: Spinner 2`] = `
 "<div>
-  <div>blue (default): <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\">
+  <div>blue (default): <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-      </svg></div> or <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: blue;\\" width=\\"16\\" height=\\"16\\">
+      </svg></div> or <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: blue;\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-      </svg></div>grey: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: grey;\\" width=\\"16\\" height=\\"16\\">
+      </svg></div>grey: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: grey;\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-      </svg></div>white: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: white;\\" width=\\"16\\" height=\\"16\\">
+      </svg></div>white: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: white;\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-      </svg></div>red: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: red;\\" width=\\"16\\" height=\\"16\\">
+      </svg></div>red: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: red;\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
       </svg></div>
@@ -7542,7 +7542,7 @@ exports[`Spinner should render examples: Spinner 2`] = `
 exports[`Spinner should render examples: Spinner 3`] = `
 "<div>
   <div>
-    <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--nomargin___13JyW\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\">
+    <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--nomargin___13JyW\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
       </svg></div>
@@ -7552,25 +7552,25 @@ exports[`Spinner should render examples: Spinner 3`] = `
 
 exports[`Spinner should render examples: Spinner 4`] = `
 "<div>
-  <div>tiny: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"8\\" height=\\"8\\">
+  <div>tiny: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"8\\" height=\\"8\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-      </svg></div><br>small: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"12\\" height=\\"12\\">
+      </svg></div><br>small: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"12\\" height=\\"12\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-      </svg></div><br>medium (default): <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\">
+      </svg></div><br>medium (default): <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-      </svg></div> or <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\">
+      </svg></div> or <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-      </svg></div><br>large: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"24\\" height=\\"24\\">
+      </svg></div><br>large: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"24\\" height=\\"24\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-      </svg></div><br>xlarge: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"36\\" height=\\"36\\">
+      </svg></div><br>xlarge: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"36\\" height=\\"36\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-      </svg></div><br>xxlarge: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"80\\" height=\\"80\\">
+      </svg></div><br>xxlarge: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"80\\" height=\\"80\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
       </svg></div>
@@ -7581,7 +7581,7 @@ exports[`Spinner should render examples: Spinner 4`] = `
 exports[`Spinner should render examples: Spinner 5`] = `
 "<div>
   <div>
-    <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"80\\" height=\\"80\\">
+    <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"80\\" height=\\"80\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
       </svg>
