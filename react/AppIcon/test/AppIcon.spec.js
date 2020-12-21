@@ -41,7 +41,7 @@ describe('AppIcon component', () => {
     const component = wrapper.getElement()
     expect(component).toMatchSnapshot()
     expect(successFetchIcon).toHaveBeenCalledWith(app, domain, secure)
-    expect(console.error).toHaveBeenCalledTimes(0)
+    expect(console.error).not.toHaveBeenCalled()
   })
 
   it(`renders correctly`, async done => {
@@ -55,7 +55,7 @@ describe('AppIcon component', () => {
           const component = wrapper.getElement()
           expect(component).toMatchSnapshot()
           expect(successFetchIcon).toHaveBeenCalledWith(app, domain, secure)
-          expect(console.error).toHaveBeenCalledTimes(0)
+          expect(console.error).not.toHaveBeenCalled()
           done()
         }}
       />
@@ -73,7 +73,7 @@ describe('AppIcon component', () => {
           const component = wrapper.getElement()
           expect(component).toMatchSnapshot()
           expect(failureFetchIcon).toHaveBeenCalledWith(app, domain, secure)
-          expect(console.error).toHaveBeenCalledTimes(0)
+          expect(console.error).not.toHaveBeenCalled()
           done()
         }}
       />
@@ -91,7 +91,7 @@ describe('AppIcon component', () => {
           const component = wrapper.getElement()
           expect(component).toMatchSnapshot()
           expect(failureFetchIcon).toHaveBeenCalledWith(app, domain, secure)
-          expect(console.error).toHaveBeenCalledTimes(0)
+          expect(console.error).not.toHaveBeenCalled()
           done()
         }}
         fallbackIcon="warning"
@@ -128,7 +128,7 @@ describe('AppIcon component', () => {
           const component = wrapper.getElement()
           expect(component).toMatchSnapshot()
           expect(Preloader.preload).toHaveBeenCalledWith(app, domain, secure)
-          expect(console.error).toHaveBeenCalledTimes(0)
+          expect(console.error).not.toHaveBeenCalled()
           done()
         }}
       />
@@ -153,7 +153,7 @@ describe('AppIcon component', () => {
             domain,
             secure
           )
-          expect(console.error).toHaveBeenCalledTimes(0)
+          expect(console.error).not.toHaveBeenCalled()
           done()
         }}
       />
