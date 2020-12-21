@@ -152,14 +152,14 @@ const makeOverrides = theme => ({
   MuiOutlinedInput: {
     root: {
       '&$disabled': {
-        background: 'var(--paleGrey)'
+        background: theme.palette.grey[100]
       },
       '&$focused $notchedOutline': {
         borderWidth: '0.0625rem'
       }
     },
     notchedOutline: {
-      borderColor: 'var(--silver)'
+      borderColor: theme.palette.grey[200]
     }
   },
   MuiButton: {
@@ -181,10 +181,10 @@ const makeOverrides = theme => ({
   MuiTab: {
     // This overrides the disabled color of the MuiTab
     textColorPrimary: {
-      color: 'var(--coolGrey)'
+      color: theme.palette.grey[300]
     },
     textColorSecondary: {
-      color: 'var(--coolGrey)'
+      color: theme.palette.grey[300]
     },
     root: {
       fontSize: normalTheme.typography.subtitle1.fontSize,
@@ -283,10 +283,10 @@ const makeOverrides = theme => ({
         backgroundColor: 'var(--zircon)'
       },
       '&:hover': {
-        backgroundColor: getCssVariableValue('paleGrey')
+        backgroundColor: theme.palette.grey[100]
       },
       '&:focus': {
-        backgroundColor: getCssVariableValue('paleGrey')
+        backgroundColor: theme.palette.grey[100]
       }
     }
   },
@@ -315,7 +315,7 @@ const makeOverrides = theme => ({
       marginBottom: '-1px',
       padding: 0,
       height: '2rem',
-      backgroundColor: 'var(--paleGrey)',
+      backgroundColor: theme.palette.grey[100],
       textIndent: '2rem',
       fontWeight: 'bold',
       fontSize: '.75rem',
