@@ -36,20 +36,14 @@ import {
 
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
+import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
 import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
 import Button from 'cozy-ui/transpiled/react/Button'
 import Icon from 'cozy-ui/transpiled/react/Icon'
+import Typography from 'cozy-ui/transpiled/react/Typography'
 
 const handleClose = () => setState({ modalOpened: !state.modalOpened })
-
-initialState = {
-  modalOpened: false,
-  modal: Dialog,
-  size: 'medium',
-  actionsLayout: 'row',
-  content: 'default'
-}
 
 const DialogComponent = state.modal
 
@@ -89,7 +83,7 @@ const ConfirmDialogActions = () => {
 
 const dialogTitles = {
   ConfirmDialog: "Are you sure ?",
-  IllustrationDialog: <Icon icon="cozy" size="140" />,
+  IllustrationDialog: <Icon icon="cloud" size="140" />,
   FixedDialog: 'Fixed Dialog',
   FixedActionsDialog: 'Fixed Actions Dialog',
   Dialog: 'Dialog'
@@ -137,42 +131,64 @@ const toggleDialog = dialog => {
   })
 }
 
-<>
+const InvertedTheme = ({ children }) => {
+  return <CozyTheme variant='inverted'>
+    { children }
+  </CozyTheme>
+}
+
+initialState = {
+  modalOpened: false,
+  modal: Dialog,
+  size: 'medium',
+  actionsLayout: 'row',
+  content: 'default',
+  theme: 'normal'
+};
+
+<MuiCozyTheme>
   <BreakpointsProvider>
-    <MuiCozyTheme>
-      <p>Content:
-        <StateRadio value='default' name='content' /> default{' '}
-        <StateRadio value='short' name='content' /> short{' '}
-        <StateRadio value='long' name='content' /> long 
-      </p>
-      <p>Size:
-        <StateRadio value='small' name='size' /> small {' '}
-        <StateRadio value='medium' name='size' /> medium {' '}
-        <StateRadio value='large' name='size' /> large 
-      </p>
-      <p>Actions layout:
-        <StateRadio value='row' name='actionsLayout' /> row{' '}
-        <StateRadio value='column' name='actionsLayout' /> column 
-      </p>
+    <p>Content:
+      <StateRadio value='default' name='content' /> default{' '}
+      <StateRadio value='short' name='content' /> short{' '}
+      <StateRadio value='long' name='content' /> long 
+    </p>
+    <p>Size:
+      <StateRadio value='small' name='size' /> small {' '}
+      <StateRadio value='medium' name='size' /> medium {' '}
+      <StateRadio value='large' name='size' /> large 
+    </p>
+    <p>Theme:
+      <StateRadio value='normal' name='theme' /> normal {' '}
+      <StateRadio value='inverted' name='theme' /> inverted
+    </p>
+    <p>Actions layout:
+      <StateRadio value='row' name='actionsLayout' /> row{' '}
+      <StateRadio value='column' name='actionsLayout' /> column 
+    </p>
+    <CozyTheme variant='inverted'>
       <DialogComponent
         size={DialogComponent !== ConfirmDialog ? state.size : undefined}
         open={state.modalOpened}
         onClose={handleClose}
         title={dialogTitles[DialogComponent.name]}
-        content={state.content == 'default'
-          ? dialogContents[DialogComponent.name]
-          : state.content == 'long'
-            ? content.ada.long 
-            : content.ada.short}
+        content={
+          <Typography variant='body1' color='textPrimary'>
+            { state.content == 'default'
+            ? dialogContents[DialogComponent.name]
+            : state.content == 'long'
+              ? content.ada.long
+              : content.ada.short}
+          </Typography>}
         actions={dialogActions[DialogComponent.name]}
         actionsLayout={state.actionsLayout}
       />
-    </MuiCozyTheme>
+    </CozyTheme>
   </BreakpointsProvider>
   {dialogs.map(dialog => (
     <button key={`open-btn-${dialog.name}`} data-test-id={`open-btn-${dialog.name}`} onClick={() => toggleDialog(dialog)}>
       Open {dialog.name}
     </button>
   ))}
-</>
+</MuiCozyTheme>
 ```
