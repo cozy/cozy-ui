@@ -19,66 +19,107 @@ const SWITCH_BAR_WIDTH = 25
 const SWITCH_BAR_HEIGHT = 12
 const SWITCH_BUTTON_WIDTH = 46
 
-export const normalTheme = createMuiTheme({
-  typography: {
-    useNextVariants: true,
-    fontFamily: getCssVariableValue('primaryFont') || 'Lato',
-    h1: {
-      fontSize: 48,
-      fontWeight: 'bold',
-      lineHeight: 1.087,
-      letterSpacing: -0.8
-    },
-    h2: {
-      fontSize: 32,
-      fontWeight: 'bold',
-      lineHeight: 1.313,
-      letterSpacing: -0.4
-    },
-    h3: {
-      fontSize: 24,
-      fontWeight: 'bold',
-      lineHeight: 1.167
-    },
-    h4: {
-      fontSize: 20,
-      fontWeight: 'bold',
-      lineHeight: 1.167
-    },
-    h5: {
-      fontSize: 18,
-      fontWeight: 'bold',
-      lineHeight: 1.313
-    },
-    h6: {
-      fontSize: 16,
-      fontWeight: 'bold',
-      lineHeight: 1.313
-    },
-    subtitle1: {
-      fontWeight: 'bold',
-      fontSize: 12,
-      lineHeight: 1.313,
-      textTransform: 'uppercase'
-    },
-    body1: {
-      fontSize: 16,
-      lineHeight: 1.313
-    },
-    body2: {
-      fontSize: 14,
-      lineHeight: 1.313
-    },
-    button: {
-      fontWeight: 'bold',
-      fontSize: 14,
-      lineHeight: 1.313
-    },
-    caption: {
-      fontSize: 12,
-      lineHeight: 1.313
-    }
+const makeTypography = palette => ({
+  useNextVariants: true,
+  fontFamily: getCssVariableValue('primaryFont') || 'Lato',
+  h1: {
+    fontSize: 48,
+    color: palette.text.primary,
+    fontWeight: 'bold',
+    lineHeight: 1.087,
+    letterSpacing: -0.8
   },
+  h2: {
+    fontSize: 32,
+    color: palette.text.primary,
+    fontWeight: 'bold',
+    lineHeight: 1.313,
+    letterSpacing: -0.4
+  },
+  h3: {
+    fontSize: 24,
+    color: palette.text.primary,
+    fontWeight: 'bold',
+    lineHeight: 1.167
+  },
+  h4: {
+    fontSize: 20,
+    color: palette.text.primary,
+    fontWeight: 'bold',
+    lineHeight: 1.167
+  },
+  h5: {
+    fontSize: 18,
+    color: palette.text.primary,
+    fontWeight: 'bold',
+    lineHeight: 1.313
+  },
+  h6: {
+    fontSize: 16,
+    color: palette.text.primary,
+    fontWeight: 'bold',
+    lineHeight: 1.313
+  },
+  subtitle1: {
+    fontWeight: 'bold',
+    fontSize: 12,
+    lineHeight: 1.313,
+    textTransform: 'uppercase'
+  },
+  body1: {
+    fontSize: 16,
+    lineHeight: 1.313
+  },
+  body2: {
+    fontSize: 14,
+    lineHeight: 1.313
+  },
+  button: {
+    fontWeight: 'bold',
+    fontSize: 14,
+    lineHeight: 1.313
+  },
+  caption: {
+    fontSize: 12,
+    lineHeight: 1.313
+  }
+})
+
+const normalPalette = {
+  type: 'light',
+  primary: {
+    light: getCssVariableValue('primaryColorLight'),
+    main: getCssVariableValue('primaryColor'),
+    dark: getCssVariableValue('primaryColorDark'),
+    contrastText: getCssVariableValue('primaryContrastTextColor')
+  },
+  error: {
+    main: getCssVariableValue('pomegranate')
+  },
+  secondary: {
+    light: getCssVariableValue('secondaryColorLight'),
+    main: getCssVariableValue('secondaryColor'),
+    dark: getCssVariableValue('secondaryColorDark'),
+    contrastText: getCssVariableValue('secondaryContrastTextColor')
+  },
+  text: {
+    primary: getCssVariableValue('primaryTextColor'),
+    secondary: getCssVariableValue('secondaryTextColor')
+  },
+  grey: {
+    0: getCssVariableValue('white'),
+    100: getCssVariableValue('paleGrey'),
+    200: getCssVariableValue('silver'),
+    300: getCssVariableValue('coolGrey'),
+    400: getCssVariableValue('slateGrey'),
+    800: getCssVariableValue('charcoalGrey'),
+    900: getCssVariableValue('black')
+  },
+  divider: getCssVariableValue('silver')
+}
+
+export const normalTheme = createMuiTheme({
+  typography: makeTypography(normalPalette),
   shape: {
     borderRadius: defaultValues.borderRadius
   },
@@ -91,37 +132,7 @@ export const normalTheme = createMuiTheme({
       xl: 1200
     }
   },
-  palette: {
-    type: 'light',
-    primary: {
-      light: getCssVariableValue('primaryColorLight'),
-      main: getCssVariableValue('primaryColor'),
-      dark: getCssVariableValue('primaryColorDark'),
-      contrastText: getCssVariableValue('primaryContrastTextColor')
-    },
-    error: {
-      main: getCssVariableValue('pomegranate')
-    },
-    secondary: {
-      light: getCssVariableValue('secondaryColorLight'),
-      main: getCssVariableValue('secondaryColor'),
-      dark: getCssVariableValue('secondaryColorDark'),
-      contrastText: getCssVariableValue('secondaryContrastTextColor')
-    },
-    text: {
-      primary: getCssVariableValue('charcoalGrey'),
-      secondary: getCssVariableValue('coolGrey')
-    },
-    grey: {
-      0: getCssVariableValue('white'),
-      100: getCssVariableValue('paleGrey'),
-      200: getCssVariableValue('silver'),
-      300: getCssVariableValue('coolGrey'),
-      400: getCssVariableValue('slateGrey'),
-      800: getCssVariableValue('charcoalGrey'),
-      900: getCssVariableValue('black')
-    }
-  },
+  palette: normalPalette,
   props: {
     MuiTabs: {
       textColor: 'primary',
@@ -137,7 +148,7 @@ export const normalTheme = createMuiTheme({
   ...(isTesting() && { transitions: { create: () => 'none' } })
 })
 
-normalTheme.overrides = {
+const makeOverrides = theme => ({
   MuiOutlinedInput: {
     root: {
       '&$disabled': {
@@ -190,7 +201,7 @@ normalTheme.overrides = {
       boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.08)',
       borderWidth: '0.0625rem',
       borderStyle: 'solid',
-      borderColor: 'var(--silver)',
+      borderColor: theme.palette.grey[300],
       overflow: 'hidden',
       marginBottom: '1rem'
     }
@@ -209,7 +220,7 @@ normalTheme.overrides = {
       fontSize: '0.875rem',
       minHeight: '3.5rem',
       padding: 0,
-      color: 'var(--charcoalGrey)',
+      color: theme.palette.text.primary,
       '&$expanded': {
         minHeight: '3.5rem'
       }
@@ -319,7 +330,7 @@ normalTheme.overrides = {
       paddingRight: 0
     },
     sticky: {
-      backgroundColor: 'var(--paleGrey)'
+      backgroundColor: theme.palette.grey[100]
     }
   },
   MuiListItemSecondaryAction: {
@@ -333,7 +344,7 @@ normalTheme.overrides = {
       minHeight: 'auto',
       paddingTop: 4,
       paddingBottom: 4,
-      color: getCssVariableValue('charcoalGrey'),
+      color: theme.palette.grey[800],
       border: 0,
       '&:last-child': {
         borderBottom: 0
@@ -390,11 +401,11 @@ normalTheme.overrides = {
   },
   MuiDialogTitle: {
     root: {
-      ...normalTheme.typography.h3,
+      ...theme.typography.h3,
       width: 'calc(100% - (58px + 30px))', // remove close button width and margin
       padding: '24px 32px',
-      [normalTheme.breakpoints.down('sm')]: {
-        ...normalTheme.typography.h4,
+      [theme.breakpoints.down('sm')]: {
+        ...theme.typography.h4,
         width: 'calc(100% - 58px)', // remove close button width and margin
         padding: '13px 16px 12px'
       },
@@ -402,7 +413,7 @@ normalTheme.overrides = {
         paddingTop: 0,
         paddingLeft: 0,
         paddingRight: 0,
-        [normalTheme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('sm')]: {
           padding: '0 0 24px 0'
         }
       }
@@ -411,13 +422,13 @@ normalTheme.overrides = {
   MuiDialogContent: {
     root: {
       padding: '24px 32px 0',
-      [normalTheme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('sm')]: {
         padding: '24px 16px 0'
       },
       '& .dialogContentInner': {
         marginBottom: '24px',
         '&.withFluidActions': {
-          [normalTheme.breakpoints.down('sm')]: {
+          [theme.breakpoints.down('sm')]: {
             marginBottom: '16px'
           }
         }
@@ -427,7 +438,7 @@ normalTheme.overrides = {
   MuiDialogActions: {
     root: {
       margin: '16px 32px',
-      [normalTheme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('sm')]: {
         margin: '8px 16px',
         '& button': {
           flexGrow: 1
@@ -471,7 +482,7 @@ normalTheme.overrides = {
       width: SWITCH_BUTTON_WIDTH,
       transform: 'translateX(-7px)'
     },
-    checked: {
+    '&$checked': {
       '& + $bar': {
         opacity: 1
       },
@@ -503,7 +514,9 @@ normalTheme.overrides = {
       }
     }
   }
-}
+})
+
+normalTheme.overrides = makeOverrides(normalTheme)
 
 // Override default shadow for elevation 8 used for Popover
 normalTheme.shadows[8] =
