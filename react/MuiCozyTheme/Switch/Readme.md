@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button'
 import { Title, Text } from '../../Text'
 import Stack from '../../Stack'
 import { Media, Img } from '../../Media'
+import Paper from '../../Paper'
 import Switch from '.'
 
 initialState = {
@@ -52,8 +53,10 @@ const Switches = () => {
       <Switches />
     </div>
     <Title className='u-mt-1'>Inverted theme</Title>
-    <CozyTheme className='u-p-1' variant='inverted'>
-      <Switches />
+    <CozyTheme variant='inverted'>
+      <Paper square elevation={0} className='u-p-1'>
+        <Switches />
+      </Paper>
     </CozyTheme>
   </Stack>
 </MuiCozyTheme>
