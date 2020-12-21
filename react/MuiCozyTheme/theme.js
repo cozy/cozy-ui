@@ -482,7 +482,7 @@ const makeOverrides = theme => ({
       width: SWITCH_BUTTON_WIDTH,
       transform: 'translateX(-7px)'
     },
-    '&$checked': {
+    checked: {
       '& + $bar': {
         opacity: 1
       },
@@ -522,25 +522,32 @@ normalTheme.overrides = makeOverrides(normalTheme)
 normalTheme.shadows[8] =
   '0rem 0.125rem 0.375rem 0rem rgba(50, 54, 63, .19), 0rem 0.375rem 1.25rem 0rem rgba(50, 54, 63, .19)'
 
-export const invertedTheme = {
-  ...normalTheme,
-  palette: {
-    ...normalTheme.palette,
-    type: 'dark',
-    primary: {
-      main: 'rgb(255,255,255)'
-    },
-    secondary: {
-      main: 'rgba(255, 255, 255)'
-    },
-    text: {
-      primary: 'rgb(255,255,255)',
-      secondary: 'rgb(255,255,255)'
-    }
-  }
+const invertedPalette = {
+  ...normalTheme.palette,
+  type: 'dark',
+  background: {
+    default: getCssVariableValue('primaryColor'),
+    paper: getCssVariableValue('primaryColor')
+  },
+  primary: {
+    main: '#fff'
+  },
+  secondary: {
+    main: '#fff'
+  },
+  text: {
+    primary: '#fff',
+    secondary: '#fff'
+  },
+  divider: '#fff'
 }
 
-invertedTheme.overrides = merge({}, normalTheme.overrides, {
+export const invertedTheme = createMuiTheme({
+  palette: invertedPalette,
+  typography: makeTypography(invertedPalette)
+})
+
+invertedTheme.overrides = merge(makeOverrides(invertedTheme), {
   MuiOutlinedInput: {
     root: {
       boxSizing: 'border-box',
@@ -558,11 +565,6 @@ invertedTheme.overrides = merge({}, normalTheme.overrides, {
       '&$focused': {
         color: invertedTheme.palette.text.primary
       }
-    }
-  },
-  MuiInputLabel: {
-    root: {
-      color: invertedTheme.palette.text.primary
     }
   },
   MuiTabs: {
