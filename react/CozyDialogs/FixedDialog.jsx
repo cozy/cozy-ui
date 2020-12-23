@@ -25,7 +25,7 @@ const FixedDialog = props => {
 
   return (
     <Dialog {...dialogProps}>
-      {!fullScreen && (
+      {!fullScreen && onClose && (
         <DialogCloseButton
           data-test-id={`modal-close-button-${id}`}
           onClick={onClose}

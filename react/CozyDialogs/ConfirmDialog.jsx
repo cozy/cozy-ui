@@ -23,7 +23,7 @@ const ConfirmDialog = props => {
   } = useCozyDialog(props)
   return (
     <Dialog {...dialogProps}>
-      {!fullScreen && (
+      {!fullScreen && onClose && (
         <DialogCloseButton
           onClick={onClose}
           data-test-id={`modal-close-button-${id}`}
