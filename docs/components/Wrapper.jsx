@@ -1,9 +1,8 @@
-/* global isTesting */
-
 import React, { useState } from 'react'
 import CozyTheme from '../../react/CozyTheme'
 import Paper from '../../react/Paper'
 import Button from '../../react/Button'
+import isTesting from '../../react/helpers/isTesting'
 
 const styles = {
   button: {
@@ -14,7 +13,7 @@ const styles = {
   },
   paper: {
     position: 'relative',
-    padding: '0.75rem'
+    padding: '1rem'
   }
 }
 export default ({ children }) => {
