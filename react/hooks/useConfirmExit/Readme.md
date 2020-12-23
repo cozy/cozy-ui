@@ -3,7 +3,6 @@ import { useState } from 'react'
 import Button from '../Button'
 import useConfirmExit from '../hooks/useConfirmExit'
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 
 
 const NeedCloseConfirmation = () => {
@@ -32,9 +31,7 @@ const Example = () => {
     </>
 };
 
-<MuiCozyTheme>
-  <BreakpointsProvider>
-    <Example />
-  </BreakpointsProvider>
-</MuiCozyTheme>
+<BreakpointsProvider>
+  <Example />
+</BreakpointsProvider>
 ```

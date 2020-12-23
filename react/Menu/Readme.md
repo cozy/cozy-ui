@@ -11,7 +11,6 @@ the item is `disabled`.
 
 ```
 import Menu, { MenuItem } from 'cozy-ui/transpiled/react/Menu';
-import Button from 'cozy-ui/transpiled/react/Button';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 const showItem = itemData => alert(JSON.stringify(itemData));
 const showWarning = itemData => alert(itemData + ' is disabled');
@@ -31,7 +30,6 @@ Use the `position` attribute to put the menu to the right.
 
 ```
 import Menu, { MenuItem } from 'cozy-ui/transpiled/react/Menu';
-import Icon from 'cozy-ui/transpiled/react/Icon';
 
 <Menu initialOpen={isTesting()} position='right' label='Click me !' onSelect={ itemData => alert(JSON.stringify(itemData)) }>
   <MenuItem data='hello'>Hello !</MenuItem>

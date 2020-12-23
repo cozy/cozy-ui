@@ -292,8 +292,6 @@ import {
   BreakpointsProvider
 } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
-import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
 import Button from 'cozy-ui/transpiled/react/Button'
 
 import SelectBox from 'cozy-ui/transpiled/react/SelectBox';
@@ -352,9 +350,7 @@ const ExampleDialog = ({ open, onClose }) => {
     Toggle modal
   </button>
   <BreakpointsProvider>
-    <MuiCozyTheme>
-      <ExampleDialog open={state.modalOpened} onClose={handleClose} />
-    </MuiCozyTheme>
+    <ExampleDialog open={state.modalOpened} onClose={handleClose} />
   </BreakpointsProvider>
 </>
 ```

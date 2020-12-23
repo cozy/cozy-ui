@@ -377,7 +377,7 @@ initialState = {
 ### Panes
 
 ```jsx
-import Modal, { ModalDescription, ModalBrandedHeader } from 'cozy-ui/transpiled/react/Modal';
+import Modal, { ModalBrandedHeader } from 'cozy-ui/transpiled/react/Modal';
 import Panel from 'cozy-ui/transpiled/react/Panel';
 const toggle = () => setState({ modalOpened: !state.modalOpened });
 
@@ -427,7 +427,7 @@ FocusTrap can be useful used in conjuction with the Modal.
 
 ```jsx
 import FocusTrap from 'focus-trap-react'
-import Modal, { ModalContent, ModalButtons } from 'cozy-ui/transpiled/react/Modal';
+import Modal, { ModalContent } from 'cozy-ui/transpiled/react/Modal';
 import Button from 'cozy-ui/transpiled/react/Button';
 
 initialState = { modalOpened: false};

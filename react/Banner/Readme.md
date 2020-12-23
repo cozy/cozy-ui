@@ -1,7 +1,6 @@
 ### Banner
 
 ```jsx
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
 import Variants from 'docs/components/Variants'
 import palette from 'cozy-ui/transpiled/react/palette'
 
@@ -22,8 +21,7 @@ const initialVariants = [
   { icon: true, longText: true, buttonOne: true, buttonTwo: true, inline: false, backgroundColor: false }
 ];
 
-<MuiCozyTheme>
-  <Variants initialVariants={initialVariants}>{
+<><Variants initialVariants={initialVariants}>{
     variant => (
       <Banner
         bgcolor={variant.backgroundColor ? palette['paleGrey'] : 'transparent'}
@@ -34,15 +32,12 @@ const initialVariants = [
         inline={variant.inline}
       />
     )
-  }</Variants>
-  <hr />
-  <Banner
+  }</Variants><hr /><Banner
     icon={<Icon icon={DeviceLaptopIcon} />}
     text="Get Cozy Drive for Desktop and synchronise your files safely to make them accessible at all times"
     bgcolor={palette['paleGrey']}
     buttonOne={<Button theme="text" icon='download' label="Download" onClick={() => alert("Clicked!")} />}
     buttonTwo={<Button theme="text" label="No, thanks!" />}
     inline
-  />
-</MuiCozyTheme>
+  /></>
 ```

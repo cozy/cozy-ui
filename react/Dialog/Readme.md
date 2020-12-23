@@ -6,25 +6,13 @@ and returns props to spread on the components used in your custom Dialog. Those 
 will make sure that even your custom Dialogs will behave as CozyDialogs.
 
 ```jsx
-import cx from 'classnames'
-
-import Dialog, {
-  DialogTitle,
-  DialogActions,
-  DialogContent
-} from 'cozy-ui/transpiled/react/Dialog';
-import {
-  DialogTransition,
-  DialogBackButton,
-  DialogCloseButton,
-  useCozyDialog
-} from 'cozy-ui/transpiled/react/CozyDialogs';
+import Dialog, { DialogTitle, DialogActions } from 'cozy-ui/transpiled/react/Dialog';
+import { DialogBackButton, DialogCloseButton, useCozyDialog } from 'cozy-ui/transpiled/react/CozyDialogs';
 import useBreakpoints, {
   BreakpointsProvider
 } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 import Alerter from 'cozy-ui/transpiled/react/Alerter';
 
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
 import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
 import Button from 'cozy-ui/transpiled/react/Button'
 import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List';
@@ -143,10 +131,7 @@ const ExampleDialog = ({ open, onClose }) => {
     Toggle modal
   </button>
   <BreakpointsProvider>
-    <MuiCozyTheme>
-      <Alerter />
-      <ExampleDialog open={state.modalOpened} onClose={handleClose} />
-    </MuiCozyTheme>
+    <><Alerter /><ExampleDialog open={state.modalOpened} onClose={handleClose} /></>
   </BreakpointsProvider>
 </>
 ```
