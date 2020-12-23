@@ -68,11 +68,13 @@ const makeTypography = palette => ({
   },
   body1: {
     fontSize: 16,
-    lineHeight: 1.313
+    lineHeight: 1.313,
+    color: palette.text.primary
   },
   body2: {
     fontSize: 14,
-    lineHeight: 1.313
+    lineHeight: 1.313,
+    color: palette.text.primary
   },
   button: {
     fontWeight: 'bold',
@@ -81,7 +83,8 @@ const makeTypography = palette => ({
   },
   caption: {
     fontSize: 12,
-    lineHeight: 1.313
+    lineHeight: 1.313,
+    color: palette.text.secondary
   }
 })
 
@@ -542,12 +545,13 @@ const invertedPalette = {
   divider: '#fff'
 }
 
+const invertedTypography = makeTypography(invertedPalette)
 export const invertedTheme = createMuiTheme({
   palette: invertedPalette,
-  typography: makeTypography(invertedPalette)
+  typography: invertedTypography
 })
 
-invertedTheme.overrides = merge(makeOverrides(invertedTheme), {
+invertedTheme.overrides = {
   MuiOutlinedInput: {
     root: {
       boxSizing: 'border-box',
@@ -567,15 +571,13 @@ invertedTheme.overrides = merge(makeOverrides(invertedTheme), {
       }
     }
   },
-  MuiTabs: {
-    root: {
-      background: normalTheme.palette.primary.main
-    }
-  },
   MuiTab: {
+    root: {
+      color: 'rgb(255,255,255) !important'
+    },
     // This overrides the disabled color of the MuiTab
     textColorPrimary: {
-      color: 'rgb(255,255,255)',
+      color: 'rgb(255,255,255) !important',
       opacity: 0.64
     },
     textColorSecondary: {
@@ -604,8 +606,10 @@ invertedTheme.overrides = merge(makeOverrides(invertedTheme), {
       }
     }
   }
-})
+}
 
+window.normalTheme = normalTheme
+window.invertedTheme = invertedTheme
 const themes = {
   normal: normalTheme,
   inverted: invertedTheme
