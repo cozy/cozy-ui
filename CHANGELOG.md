@@ -1,3 +1,19 @@
+# [42.2.0](https://github.com/cozy/cozy-ui/compare/v42.1.1...v42.2.0) (2020-12-23)
+
+
+### Bug Fixes
+
+* Show app icon under the key icon ([f406668](https://github.com/cozy/cozy-ui/commit/f406668))
+
+
+### Features
+
+* Add role=progressbar and aria-busy=true to Spinner ([d7aa268](https://github.com/cozy/cozy-ui/commit/d7aa268))
+* Do not show close button if onClose is falsy ([e51fd74](https://github.com/cozy/cozy-ui/commit/e51fd74))
+* Rename to jsx ([4e98913](https://github.com/cozy/cozy-ui/commit/4e98913))
+* Use Dialog for useConfirmExit ([4852f16](https://github.com/cozy/cozy-ui/commit/4852f16))
+* Use Typography for AppTitle ([66c87f0](https://github.com/cozy/cozy-ui/commit/66c87f0))
+
 ## [42.1.1](https://github.com/cozy/cozy-ui/compare/v42.1.0...v42.1.1) (2020-12-15)
 
 
