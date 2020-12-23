@@ -1611,12 +1611,23 @@
   dependencies:
     find-up "^2.1.0"
 
-"@cozy/codemods@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@cozy/codemods/-/codemods-1.2.0.tgz#eb6c45791c8926d65f848f846f05d38d11118260"
-  integrity sha512-qjz9xJ5uUS0oJspbHlZvesw2KuoUGLBsuhUBMjO38hHEKsDG4kjvtUOsj0p3FA83sjp+rWPqPHWB114Ywf4ouQ==
+"@cozy/cli-tree@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@cozy/cli-tree/-/cli-tree-0.2.2.tgz#60becb81f6c43ed92adf6db1fa13dc1560b85afd"
+  integrity sha512-4h1Ilo4hxtK6ekaRL82hky+KQs7dhzhBSnu+bahnOX7BBmQ2ri/Sx97A84HuvHUx7YNhecYloeB1SIpnHve3WA==
   dependencies:
-    eslint-config-cozy-app "^1.6.0"
+    argparse "^1.0.10"
+    lodash "^4.17.19"
+    tabtab "^3.0.2"
+
+"@cozy/codemods@^1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@cozy/codemods/-/codemods-1.9.0.tgz#bbaf00b5ce7e28ba85992933d953b5263169a514"
+  integrity sha512-3BZ+taiwwHnkLke4ZvTMlfMSePSMxHQajxOWr2Gwhl//l+ido++ARVd2RL3CukZxJcBLomrAi3gu9BskMXOmgw==
+  dependencies:
+    "@cozy/cli-tree" "^0.2.2"
+    eslint-config-cozy-app "^2.0.0"
+    jscodeshift "^0.11.0"
 
 "@emotion/cache@^10.0.9":
   version "10.0.9"
@@ -3134,7 +3145,7 @@ argos-cli@0.1.3:
     raven "^2.6.4"
     update-notifier "^3.0.1"
 
-argparse@^1.0.7:
+argparse@^1.0.10, argparse@^1.0.7:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/argparse/-/argparse-1.0.10.tgz#bcd6791ea5ae09725e17e5ad988134cd40b3d911"
   integrity sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==
@@ -6582,6 +6593,11 @@ es6-promisify@^5.0.0:
   dependencies:
     es6-promise "^4.0.3"
 
+es6-promisify@^6.0.0:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/es6-promisify/-/es6-promisify-6.1.1.tgz#46837651b7b06bf6fff893d03f29393668d01621"
+  integrity sha512-HBL8I3mIki5C1Cc9QjKUenHtnG0A5/xA8Q/AllRcfiwl2CZFXGK7ddBiCoRwAix4i2KxcQfjtIVcrVbB3vbmwg==
+
 escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
@@ -6628,10 +6644,10 @@ eslint-config-cozy-app@0.5.1:
     eslint-plugin-react "^7.7.0"
     prettier "^1.11.1"
 
-eslint-config-cozy-app@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-cozy-app/-/eslint-config-cozy-app-1.6.0.tgz#68b4c24adb341c445dc44825255fe3f2ae3e8fc0"
-  integrity sha512-5Cc9Vdp7KR/McWEeG/9Git+zN525/2YbI9AUzXlPjNPHTLo/5yYIFyWWDk2OAvuKCKt7kJ4xFyADWB3q/Y2rwg==
+eslint-config-cozy-app@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-cozy-app/-/eslint-config-cozy-app-2.0.0.tgz#2b8ee3f4ee695d1f8503e76018b771bfdfc0d629"
+  integrity sha512-eRqxBsKyDYpqP3aRprTvMuJOKQHiVzy1eWd7jIMmGcUWTicZftZuVYQw0l9xadPmE6S92PgbihdCpJKQf9vNvA==
   dependencies:
     babel-eslint "10.0.1"
     eslint "5.16.0"
@@ -8942,7 +8958,7 @@ inquirer@^3.0.6:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
-inquirer@^6.2.2:
+inquirer@^6.0.0, inquirer@^6.2.2:
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-6.5.2.tgz#ad50942375d036d327ff528c08bd5fab089928ca"
   integrity sha512-cntlB5ghuB0iuO65Ovoi8ogLHiWGs/5yNrtUcKjFhSSiVeAIVpD7koaSU9RM8mpXw5YDi9RdYXGQMaOURB7ycQ==
@@ -15684,10 +15700,10 @@ remark-cli@^8.0.1:
     remark "^12.0.0"
     unified-args "^8.0.0"
 
-remark-jscodeshift@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/remark-jscodeshift/-/remark-jscodeshift-1.0.0.tgz#3a0320cafd13660a17b11ac391481f18c46fe23e"
-  integrity sha512-Ql6b7jgpBSfJkrWo78Ur2PQGf3p4B7UMpW9K23osNC3W8o7zR//MPMV9DRaVikzcMVo2x256Dedvlq+R1JcOKQ==
+remark-jscodeshift@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/remark-jscodeshift/-/remark-jscodeshift-1.1.0.tgz#23f981444f863e4012aed34bf039b34a0ce7235a"
+  integrity sha512-7lXzaWtFsDUCXCTZF/OdEXde1ArQBFct36g7so0bLi1geodHVOeK/ZrwHg5dCsSUE89GzTNDBFJU5TOLby7V+g==
   dependencies:
     jscodeshift "^0.11.0"
     unist-util-visit "^2.0.3"
@@ -17660,6 +17676,18 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
+tabtab@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/tabtab/-/tabtab-3.0.2.tgz#a2cea0f1035f88d145d7da77eaabbd3fe03e1ec9"
+  integrity sha512-jANKmUe0sIQc/zTALTBy186PoM/k6aPrh3A7p6AaAfF6WPSbTx1JYeGIGH162btpH+mmVEXln+UxwViZHO2Jhg==
+  dependencies:
+    debug "^4.0.1"
+    es6-promisify "^6.0.0"
+    inquirer "^6.0.0"
+    minimist "^1.2.0"
+    mkdirp "^0.5.1"
+    untildify "^3.0.3"
+
 tapable@^1.0.0, tapable@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-1.1.3.tgz#a1fccc06b58db61fd7a45da2da44f5f3a3e67ba2"
@@ -18472,6 +18500,11 @@ unset-value@^1.0.0:
   dependencies:
     has-value "^0.3.1"
     isobject "^3.0.0"
+
+untildify@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/untildify/-/untildify-3.0.3.tgz#1e7b42b140bcfd922b22e70ca1265bfe3634c7c9"
+  integrity sha512-iSk/J8efr8uPT/Z4eSUywnqyrQU7DSdMfdqK4iWEaUVVmcP5JcnpRqmVMwcwcnmI1ATFNgC5V90u09tBynNFKA==
 
 unzip-response@^2.0.1:
   version "2.0.1"
