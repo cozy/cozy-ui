@@ -4,7 +4,6 @@ desktop sections rendered into cards while on mobile, it will rendered
 simply as a list with subheaders.
 
 ```
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from 'cozy-ui/transpiled/react/Tabs';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem'
@@ -130,11 +129,9 @@ const TabsExample = () => {
 }
 
 <BreakpointsProvider>
-  <MuiCozyTheme>
-    <Stack spacing='xl'>
-      <NavigationListExample />
-      <TabsExample />
-    </Stack>
-  </MuiCozyTheme>
+  <Stack spacing='xl'>
+    <NavigationListExample />
+    <TabsExample />
+  </Stack>
 </BreakpointsProvider>
 ```

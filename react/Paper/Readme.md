@@ -1,5 +1,4 @@
 ```jsx
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import Variants from 'docs/components/Variants';
 
 import Paper from 'cozy-ui/transpiled/react/Paper';
@@ -34,11 +33,9 @@ const initialVariants = [
   { square: true }
 ];
 
-<MuiCozyTheme>
-    <Variants initialVariants={initialVariants}>{
-      variant => (
-        <StyledPaperSheet elevation="1" square={variant.square} />
-      )
-    }</Variants>
-</MuiCozyTheme>
+<Variants initialVariants={initialVariants}>{
+  variant => (
+    <StyledPaperSheet elevation="1" square={variant.square} />
+  )
+}</Variants>
 ```

@@ -3,7 +3,6 @@ Steppers convey progress through numbered steps. They provide a wizard-like work
 See <https://material-ui.com/components/steppers/> for more information.
 
 ```
-import MuiCozyTheme from '../MuiCozyTheme';
 import React, { useState } from 'react'
 import { Stepper, Step, StepButton, StepLabel } from './index'
 
@@ -25,8 +24,7 @@ const getStepContent = index => {
 const Example = () => {
   const [activeStep, setActiveStep] = useState(0)
 
-  return <MuiCozyTheme>
-    <Stepper alternativeLabel nonLinear activeStep={activeStep}>
+  return <><Stepper alternativeLabel nonLinear activeStep={activeStep}>
       {steps.map((label, index) => {
         const stepProps = {
           onClick: () => {
@@ -44,9 +42,7 @@ const Example = () => {
           </Step>
         )
       })}
-    </Stepper>
-    {getStepContent(activeStep, setActiveStep)}
-  </MuiCozyTheme>
+    </Stepper>{getStepContent(activeStep, setActiveStep)}</>;
 };
 
 <Example />

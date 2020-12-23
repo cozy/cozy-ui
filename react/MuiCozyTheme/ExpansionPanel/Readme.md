@@ -1,12 +1,11 @@
 ## Default
 
 ```
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 
-<MuiCozyTheme>
+<>
   <ExpansionPanel>
     <ExpansionPanelSummary>
       Click to expand/collapse the first item
@@ -31,7 +30,7 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
       <p>Lorem ipsum dolor sit amet consectetur</p>
     </ExpansionPanelDetails>
   </ExpansionPanel>
-</MuiCozyTheme>
+</>
 ```
 
 ## Customized
@@ -39,7 +38,6 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 These are material-ui components, so you can customize it like any other:
 
 ```
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
@@ -61,21 +59,19 @@ const StyledSummary = withStyles(() => ({
   }
 }))(ExpansionPanelSummary);
 
-<MuiCozyTheme>
-  <ExpansionPanel>
-    <StyledSummary
-      expandIcon={<Icon icon="bottom" color="black" width={16} />}
-      IconButtonProps={{
-        disableRipple: true
-      }}
-    >
-      Click to expand/collapse the first item
-    </StyledSummary>
-    <ExpansionPanelDetails>
-      <p>Lorem ipsum dolor sit amet consectetur</p>
-    </ExpansionPanelDetails>
-  </ExpansionPanel>
-</MuiCozyTheme>
+<ExpansionPanel>
+  <StyledSummary
+    expandIcon={<Icon icon="bottom" color="black" width={16} />}
+    IconButtonProps={{
+      disableRipple: true
+    }}
+  >
+    Click to expand/collapse the first item
+  </StyledSummary>
+  <ExpansionPanelDetails>
+    <p>Lorem ipsum dolor sit amet consectetur</p>
+  </ExpansionPanelDetails>
+</ExpansionPanel>
 ```
 
 See [Material UI documentation](https://material-ui.com/demos/expansion-panels/) to learn more about Expansion Panels.

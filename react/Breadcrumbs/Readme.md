@@ -8,7 +8,6 @@ context.
 import { Component } from 'react'
 import Breadcrumbs from '.';
 import Icon from '../Icon'
-import ThemeChooser from '../../docs/ThemeChooser'
 
 const items = [
   { 
@@ -80,8 +79,6 @@ class Example extends Component {
 }
 
 <>
-  <ThemeChooser>
-    <Example />
-  </ThemeChooser>
+  <Example />
 </>
 ```

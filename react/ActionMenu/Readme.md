@@ -148,7 +148,6 @@ import { Dialog } from 'cozy-ui/transpiled/react/CozyDialogs';
 import {
   BreakpointsProvider
 } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme/'
 import Button from 'cozy-ui/transpiled/react/Button'
 
 initialState = { menuDisplayed: isTesting(),  modalOpened: isTesting() };
@@ -161,42 +160,40 @@ const onClose = () => setState({ modalOpened: !state.modalOpened });
 
 <div>
   <BreakpointsProvider>
-    <MuiCozyTheme>
-      <>
-        <DropdownButton onClick={showMenu} ref={anchorRef}>Show action menu</DropdownButton>
-        {state.menuDisplayed &&
-          <ActionMenu
-            anchorElRef={anchorRef}
-            popperOptions={{ placement: 'bottom-end'}}
-            onClose={hideMenu}>
-              <ActionMenuItem
-                left={<Icon icon='file' />}
-                onClick={() => setState({ modalOpened: !state.modalOpened })}>
-                  Item 1
-              </ActionMenuItem>
-          </ActionMenu>}
-          <Dialog
-            opened={state.modalOpened}
-            onClose={() => onClose()}
-            title="Ada Lovelace"
-            content="Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a 'computing machine' and the first computer programmer."
-            actions={
-              <>
-                <Button
-                  theme="secondary"
-                  onClick={() => onClose()}
-                  label={'Close Modal'}
-                />
-                <Button
-                  theme="primary"
-                  label={'Touch Me'}
-                  onClick={() => alert('click')}
-                />
-              </>
-            }
-          />
-      </>
-    </MuiCozyTheme>
+    <>
+      <DropdownButton onClick={showMenu} ref={anchorRef}>Show action menu</DropdownButton>
+      {state.menuDisplayed &&
+        <ActionMenu
+          anchorElRef={anchorRef}
+          popperOptions={{ placement: 'bottom-end'}}
+          onClose={hideMenu}>
+            <ActionMenuItem
+              left={<Icon icon='file' />}
+              onClick={() => setState({ modalOpened: !state.modalOpened })}>
+                Item 1
+            </ActionMenuItem>
+        </ActionMenu>}
+        <Dialog
+          opened={state.modalOpened}
+          onClose={() => onClose()}
+          title="Ada Lovelace"
+          content="Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a 'computing machine' and the first computer programmer."
+          actions={
+            <>
+              <Button
+                theme="secondary"
+                onClick={() => onClose()}
+                label={'Close Modal'}
+              />
+              <Button
+                theme="primary"
+                label={'Touch Me'}
+                onClick={() => alert('click')}
+              />
+            </>
+          }
+        />
+    </>
   </BreakpointsProvider>
 </div>
 ```

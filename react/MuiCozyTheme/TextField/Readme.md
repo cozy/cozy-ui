@@ -3,11 +3,9 @@ Cozy themed MUI TextField. See
 props.
 
 ```
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import TextField from 'cozy-ui/transpiled/react/MuiCozyTheme/TextField';
 
-<MuiCozyTheme>
-  <TextField
+<><TextField
     required
     id="required-outlined"
     label="Label"
@@ -16,8 +14,7 @@ import TextField from 'cozy-ui/transpiled/react/MuiCozyTheme/TextField';
     variant="outlined"
     placeholder="placeholder"
     helperText="Helper text"
-  /><br/>
-  <TextField
+  /><br/><TextField
     required
     error
     id="required-error"
@@ -27,8 +24,7 @@ import TextField from 'cozy-ui/transpiled/react/MuiCozyTheme/TextField';
     variant="outlined"
     placeholder="placeholder"
     helperText="Helper text"
-  /><br/>
-  <TextField
+  /><br/><TextField
     required
     disabled
     id="required-disabled"
@@ -38,26 +34,22 @@ import TextField from 'cozy-ui/transpiled/react/MuiCozyTheme/TextField';
     variant="outlined"
     placeholder="placeholder"
     helperText="Helper text"
-  />
-</MuiCozyTheme>
+  /></>
 ```
 
 #### Inverted theme
 
 ```jsx
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import TextField from 'cozy-ui/transpiled/react/MuiCozyTheme/TextField';
 
-<MuiCozyTheme variant="inverted">
-  <div style={{ backgroundColor: 'var(--primaryColor)', padding: '2rem' }}>
-    <TextField
-      id="inverted-field"
-      label="Label"
-      defaultValue="Default value"
-      margin="normal"
-      variant="outlined"
-      placeholder="placeholder"
-    />
-  </div>
-</MuiCozyTheme>
+<div style={{ backgroundColor: 'var(--primaryColor)', padding: '2rem' }}>
+  <TextField
+    id="inverted-field"
+    label="Label"
+    defaultValue="Default value"
+    margin="normal"
+    variant="outlined"
+    placeholder="placeholder"
+  />
+</div>
 ```

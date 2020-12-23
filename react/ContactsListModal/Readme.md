@@ -22,7 +22,6 @@ client.registerPlugin(RealtimePlugin)
 
 ```jsx
 import ContactsListModal from 'cozy-ui/transpiled/react/ContactsListModal';
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
 import DemoProvider from './DemoProvider';
 
@@ -30,20 +29,18 @@ initialState = { opened: isTesting() };
 
 <DemoProvider>
   <BreakpointsProvider>
-    <MuiCozyTheme>
-      <button type="button" onClick={() => setState({ opened: true })}>
-        Open contacts list
-      </button>
-      {state.opened && (
-        <ContactsListModal
-          placeholder="Search a contact"
-          dismissAction={() => setState({ opened: false })}
-          onItemClick={contact => alert(`Clicked on ${contact._id}`)}
-          addContactLabel="Add a contact"
-          emptyMessage="No contact"
-        />
-      )}
-    </MuiCozyTheme>
+    <button type="button" onClick={() => setState({ opened: true })}>
+      Open contacts list
+    </button>
+    {state.opened && (
+      <ContactsListModal
+        placeholder="Search a contact"
+        dismissAction={() => setState({ opened: false })}
+        onItemClick={contact => alert(`Clicked on ${contact._id}`)}
+        addContactLabel="Add a contact"
+        emptyMessage="No contact"
+      />
+    )}
   </BreakpointsProvider>
 </DemoProvider>
 ```
