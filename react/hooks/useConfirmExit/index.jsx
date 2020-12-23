@@ -29,7 +29,6 @@ function ConfirmModal({
   return (
     <ConfirmDialog
       open
-      onClose={() => {}}
       actions={
         <>
           <Button
@@ -49,6 +48,7 @@ function ConfirmModal({
     />
   )
 }
+
 ConfirmModal.propTypes = {
   message: PropTypes.string,
   title: PropTypes.string,
@@ -57,6 +57,7 @@ ConfirmModal.propTypes = {
   cancelLabel: PropTypes.string,
   confirmLabel: PropTypes.string
 }
+
 const dictRequire = { en, fr }
 const LocalizedConfirmModal = withLocales(dictRequire)(ConfirmModal)
 
