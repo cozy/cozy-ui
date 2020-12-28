@@ -4,7 +4,8 @@ desktop sections rendered into cards while on mobile, it will rendered
 simply as a list with subheaders.
 
 ```
-import { Tabs, TabList, Tab, TabPanels, TabPanel } from 'cozy-ui/transpiled/react/Tabs';
+import { useState } from 'react'
+import { Tabs, Tab } from 'cozy-ui/transpiled/react/MuiTabs'
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem'
 import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
@@ -17,7 +18,7 @@ import NavigationList, {
   NavigationListHeader
 } from 'cozy-ui/transpiled/react/NavigationList'
 import Stack from 'cozy-ui/transpiled/react/Stack'
-
+import Typography from 'cozy-ui/transpiled/react/Typography'
 
 const NavigationListExample = ({ style }) => {
   return (
@@ -101,30 +102,34 @@ const NavigationListExample = ({ style }) => {
   )
 }
 
-const tabsNavigationListStyle = { marginTop: -1 };
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
 
 const TabsExample = () => {
   const { isMobile } = useBreakpoints()
+  const [tab, setTab] = useState('nav')
+  const handleChange = (event, value) => setTab(value)
+
   return (
-    <>
-      <p>
-        With tabs, it is necessary to tweak a bit the style to prevent a double border on mobile.
-      </p>
-      <Tabs initialActiveTab='navlist'>
-        <TabList>
-          <Tab name='navlist'>Navigation list</Tab>
-          <Tab name='details'>Details</Tab>
-        </TabList>
-        <TabPanels>
-          <TabPanel className={isMobile ? 'u-pt-0' : 'u-pt-1-half'} name='navlist'>
-            <NavigationListExample style={tabsNavigationListStyle} />
-          </TabPanel>
-          <TabPanel name='details'>
-            { content.ada.short }
-          </TabPanel>
-        </TabPanels>
+    <div>
+      <Tabs value={tab} onChange={handleChange} aria-label="simple tabs example">
+        <Tab value='nav' label="Nav" {...a11yProps(0)} />
+        <Tab value='details' label="Details" {...a11yProps(1)} />
       </Tabs>
-    </>
+      <Divider className='u-mb-1' />
+      { tab == 'nav' ?
+        <NavigationListExample /> : null }
+      { tab == 'details' ? 
+        <Typography variant='body1'>
+          { content.ada.short }
+        </Typography> : null
+      }
+    </div>
   )
 }
 
