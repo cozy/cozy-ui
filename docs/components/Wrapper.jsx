@@ -10,7 +10,7 @@ const styles = {
     top: '0.75rem',
     right: '0.75rem',
     marginRight: 0,
-    zIndex: 1
+    zIndex: 10
   },
   paper: {
     position: 'relative',
