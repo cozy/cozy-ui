@@ -4,18 +4,20 @@ import { withStyles } from '@material-ui/core/styles'
 
 import Banner from '../Banner'
 import { LinearProgress } from '../Progress'
-import { paleGrey } from '../palette'
 import Typography from '../Typography'
 
 const progressHeight = '0.125rem'
 
-const styles = {
+const styles = theme => ({
+  banner: {
+    backgroundColor: theme.palette.background.banner
+  },
   progress: {
     backgroundColor: 'transparent',
     height: progressHeight,
     marginTop: `-${progressHeight}`
   }
-}
+})
 
 const ProgressionBanner = withStyles(styles)(
   ({ classes, value, text, icon, button, progressBar }) => {
@@ -24,7 +26,7 @@ const ProgressionBanner = withStyles(styles)(
     return (
       <>
         <Banner
-          bgcolor={paleGrey}
+          className={classes.banner}
           icon={icon}
           text={<Typography variant="h6">{text}</Typography>}
           buttonOne={button}

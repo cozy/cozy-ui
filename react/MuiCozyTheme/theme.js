@@ -121,6 +121,10 @@ const normalPalette = {
   divider: getCssVariableValue('silver')
 }
 
+normalPalette.background = {
+  banner: normalPalette.grey[100]
+}
+
 export const normalTheme = createMuiTheme({
   typography: makeTypography(normalPalette),
   shape: {
@@ -530,7 +534,8 @@ const invertedPalette = {
   type: 'dark',
   background: {
     default: getCssVariableValue('primaryColor'),
-    paper: getCssVariableValue('primaryColor')
+    paper: getCssVariableValue('primaryColor'),
+    banner: getCssVariableValue('primaryColorDark')
   },
   primary: {
     main: '#fff'

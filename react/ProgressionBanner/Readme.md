@@ -7,6 +7,7 @@ import Icon from 'cozy-ui/transpiled/react/Icon'
 import Button from 'cozy-ui/transpiled/react/Button'
 import CloudSync from 'cozy-ui/transpiled/react/Icons/CloudSync'
 import Variants from 'docs/components/Variants'
+import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons'
 
 const { progression } = useProgression()
 
@@ -21,11 +22,9 @@ const initialVariants = [
       value={variant.withValue && progression}
       text={variant.withButton ? "Storage limit nearly reached" : "4 remaining items"}
       icon={<Icon icon={CloudSync} />}
-      button={variant.withButton && <Button
-          theme="text"
-          label="Manage your storage space"
-          onClick={() => alert("Clicked!")}
-        />}
+      button={variant.withButton && <MuiButton color='primary' onClick={() => alert("Clicked!")}>
+          Manage your storage space
+        </MuiButton>}
     />
   )
 }</Variants>
