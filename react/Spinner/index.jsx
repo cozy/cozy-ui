@@ -5,7 +5,6 @@ import cx from 'classnames'
 import Icon from '../Icon'
 import Typography from '../Typography'
 import { translate } from '../I18n'
-import palette from '../palette'
 import SpinnerIcon from '../Icons/Spinner'
 
 import styles from './styles.styl'
