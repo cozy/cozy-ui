@@ -200,6 +200,10 @@ module.exports = {
   },
   styleguideComponents: {
     SectionsRenderer: path.join(__dirname, 'components/SectionsRenderer.jsx'),
+    TableOfContentsRenderer: path.join(
+      __dirname,
+      'components/TableOfContentsRenderer.jsx'
+    ),
     Wrapper: path.join(__dirname, 'components/Wrapper')
   },
   theme: {
