@@ -1,4 +1,5 @@
 @require '../tools/mixins'
+@require './colors'
 
 /*------------------------------------*\
   Text utilities
@@ -13,11 +14,11 @@ $valid
 $warn
     color  var(--warnColor) !important // @stylint ignore
 
-colors=json('../settings/palette.json', { hash: true })
+json_colors=json('../settings/palette.json', { hash: true })
 
-for color in keys(colors)
+for color in utility_colors
     $color-{color}
-        color: colors[color] !important // @stylint ignore
+        color: json_colors[color] !important // @stylint ignore
 
     global('.u-' + color, '$color-' + color)
 

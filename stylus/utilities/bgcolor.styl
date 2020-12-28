@@ -1,9 +1,10 @@
 @require '../tools/mixins'
+@require './colors'
 
-colors=json('../settings/palette.json', { hash: true })
+json_colors=json('../settings/palette.json', { hash: true })
 
-for color in keys(colors)
+for color in utility_colors
     $bg-color-{color}
-        background-color: colors[color] !important // @stylint ignore
+        background-color: json_colors[color] !important // @stylint ignore
 
     global('.u-bg-' + color, '$bg-color-' + color)
