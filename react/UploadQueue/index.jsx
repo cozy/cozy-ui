@@ -11,7 +11,6 @@ import { useI18n } from '../I18n'
 import ThresholdBar from '../ThresholdBar'
 import { Caption } from '../Text'
 import { Media, Bd, Img } from '../Media'
-import palette from '../../stylus/settings/palette.json'
 
 import styles from './styles.styl'
 import localeEn from './locales/en.json'
@@ -108,11 +107,15 @@ const Item = translate()(
 
     if (statusToUse === LOADING) {
       statusIcon = !progress ? (
-        <Spinner className="u-ml-half" color={palette['dodgerBlue']} />
+        <Spinner className="u-ml-half" color="var(--primaryColor)" />
       ) : null
     } else if (statusToUse === CANCEL) {
       statusIcon = (
-        <Icon className="u-ml-half" icon={CrossIcon} color={palette['monza']} />
+        <Icon
+          className="u-ml-half"
+          icon={CrossIcon}
+          color="var(--errorColor)"
+        />
       )
     } else if (ERROR_STATUSES.includes(statusToUse)) {
       error = true
@@ -120,7 +123,7 @@ const Item = translate()(
         <Icon
           className="u-ml-half"
           icon={WarningIcon}
-          color={palette['monza']}
+          color="var(--errorColor)"
         />
       )
     } else if (DONE_STATUSES.includes(statusToUse)) {
@@ -129,7 +132,7 @@ const Item = translate()(
         <Icon
           className="u-ml-half"
           icon={CheckIcon}
-          color={palette['emerald']}
+          color="var(--validColor)"
         />
       )
     } else if (statusToUse === PENDING) {
