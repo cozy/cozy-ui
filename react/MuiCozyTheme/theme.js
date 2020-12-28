@@ -318,8 +318,7 @@ const makeOverrides = theme => ({
   MuiListSubheader: {
     root: {
       borderTop: '1px solid transparent',
-      borderBottom: '1px solid',
-      borderBottomColor: theme.palette.divider,
+      borderBottom: '1px solid transparent',
       marginBottom: '-1px',
       padding: 0,
       height: '2rem',
