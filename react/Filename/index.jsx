@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
+
 import { Media, Bd, Img } from '../Media'
 import Icon from '../Icon'
-import { Bold } from '../Text'
+import Typography from '../Typography'
 import styles from './styles.styl'
 
 const Filename = ({ icon, filename, extension }) => {
@@ -14,13 +16,17 @@ const Filename = ({ icon, filename, extension }) => {
         </Img>
       )}
       <Bd className={styles['c-filename-wrapper']}>
-        <Bold tag="span" ellipsis className={styles['c-filename-name']}>
+        <Typography
+          variant="h6"
+          component="span"
+          className={cx(styles['c-filename-name'], 'u-ellipsis')}
+        >
           {filename}
-        </Bold>
+        </Typography>
         {extension && (
-          <Bold tag="span" className="u-coolGrey">
+          <Typography variant="h6" component="span" color="textSecondary">
             {extension}
-          </Bold>
+          </Typography>
         )}
       </Bd>
     </Media>
