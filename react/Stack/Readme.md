@@ -8,13 +8,14 @@ The padding is responsive, it is smaller on mobile/tablet.
 ```
 import Stack from 'cozy-ui/transpiled/react/Stack';
 import Card from 'cozy-ui/transpiled/react/Card';
+import Typography from 'cozy-ui/transpiled/react/Typography';
 
 <Stack>
-  <Card>Homer Simpson</Card>
-  <Card>Marge Simpson</Card>
-  <Card>Lisa Simpson</Card>
-  <Card>Bart Simpson</Card>
-  <Card>Maggie Simpson</Card>
+  <Card><Typography variant='body1'>Homer Simpson</Typography></Card>
+  <Card><Typography variant='body1'>Marge Simpson</Typography></Card>
+  <Card><Typography variant='body1'>Lisa Simpson</Typography></Card>
+  <Card><Typography variant='body1'>Bart Simpson</Typography></Card>
+  <Card><Typography variant='body1'>Maggie Simpson</Typography></Card>
 </Stack>
 ```
 
@@ -23,22 +24,23 @@ You can use `xs`, `s`, `l`, `xl`, and `xxl` values for "spacing" to have less/mo
 ```
 import Stack from 'cozy-ui/transpiled/react/Stack';
 import Card from 'cozy-ui/transpiled/react/Card';
+import Typography from 'cozy-ui/transpiled/react/Typography';
 const spacings = ['xs', 's', 'l', 'xl', 'xxl'];
 
-<div>
+<Stack spacing='l'>
 
 { spacings.map(spacing  =>
-  (<React.Fragment key={spacing}>
-    <p>
-    { spacing }:
-    </p>
+  (<div key={spacing}>
+    <Typography variant='subheading' className='u-mb-1'>
+    { spacing }
+    </Typography>
 
     <Stack spacing={spacing}>
-      <Card>Homer Simpson</Card>
-      <Card>Marge Simpson</Card>
+      <Card><Typography variant='body1'>Homer Simpson</Typography></Card>
+      <Card><Typography variant='body1'>Marge Simpson</Typography></Card>
     </Stack>
-  </React.Fragment>)
+  </div>)
   )}
 
-</div>
+</Stack>
 ```
