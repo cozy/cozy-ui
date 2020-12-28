@@ -36,20 +36,3 @@ import TextField from 'cozy-ui/transpiled/react/MuiCozyTheme/TextField';
     helperText="Helper text"
   /></>
 ```
-
-#### Inverted theme
-
-```jsx
-import TextField from 'cozy-ui/transpiled/react/MuiCozyTheme/TextField';
-
-<div style={{ backgroundColor: 'var(--primaryColor)', padding: '2rem' }}>
-  <TextField
-    id="inverted-field"
-    label="Label"
-    defaultValue="Default value"
-    margin="normal"
-    variant="outlined"
-    placeholder="placeholder"
-  />
-</div>
-```

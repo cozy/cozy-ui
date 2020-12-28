@@ -15,8 +15,8 @@ const themesSupportingContext = [
   'secondary'
 ];
 
-<CozyTheme variant='inverted'>
-  <Paper className='u-p-1 u-mb-1'>
+<CozyTheme variant='inverted' className='u-stack-m'>
+  <Paper className='u-p-1'>
     <Title className='u-white'>Inverted theme</Title>
     <SubTitle className='u-white'>Buttons</SubTitle>
     {themesSupportingContext.map(theme =>
@@ -54,11 +54,22 @@ const themesSupportingContext = [
 also styled. 
 
 ```
-import MuiButton from '@material-ui/core/Button';
+import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons';
+import TextField from 'cozy-ui/transpiled/react/MuiCozyTheme/TextField';
 
 <div className='u-bg-primaryColor u-p-1'>
   <CozyTheme variant='inverted'>
-    <MuiButton>Default button with Cozy theme</MuiButton>
+    <MuiButton variant='outlined' color='primary'>
+      A button
+    </MuiButton><br/>
+    <TextField
+      id="inverted-field"
+      label="A field"
+      defaultValue="Default value"
+      margin="normal"
+      variant="outlined"
+      placeholder="placeholder"
+    />
   </CozyTheme>
 </div>
 
