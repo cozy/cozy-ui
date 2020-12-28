@@ -121,7 +121,8 @@ const normalPalette = {
 }
 
 normalPalette.background = {
-  banner: normalPalette.grey[100]
+  banner: normalPalette.grey[100],
+  selected: '#F5FAFF'
 }
 
 export const normalTheme = createMuiTheme({
@@ -286,13 +287,13 @@ const makeOverrides = theme => ({
     },
     button: {
       '&$selected, &$selected:hover': {
-        backgroundColor: 'var(--zircon)'
+        backgroundColor: theme.palette.background.selected
       },
       '&:hover': {
-        backgroundColor: theme.palette.grey[100]
+        backgroundColor: theme.palette.background.banner
       },
       '&:focus': {
-        backgroundColor: theme.palette.grey[100]
+        backgroundColor: theme.palette.background.banner
       }
     }
   },
@@ -317,11 +318,12 @@ const makeOverrides = theme => ({
   MuiListSubheader: {
     root: {
       borderTop: '1px solid transparent',
-      borderBottom: '1px solid var(--zircon)',
+      borderBottom: '1px solid',
+      borderBottomColor: theme.palette.divider,
       marginBottom: '-1px',
       padding: 0,
       height: '2rem',
-      backgroundColor: theme.palette.grey[100],
+      backgroundColor: theme.palette.background.banner,
       textIndent: '2rem',
       fontWeight: 'bold',
       fontSize: '.75rem',
@@ -329,14 +331,14 @@ const makeOverrides = theme => ({
       alignItems: 'center',
       display: 'flex',
       lineHeight: 1.33,
-      color: 'var(--coolGrey)'
+      color: theme.palette.text.secondary
     },
     gutters: {
       paddingLeft: 0,
       paddingRight: 0
     },
     sticky: {
-      backgroundColor: theme.palette.grey[100]
+      backgroundColor: theme.palette.background.banner
     }
   },
   MuiListItemSecondaryAction: {
@@ -534,7 +536,8 @@ const invertedPalette = {
   background: {
     default: getCssVariableValue('primaryColor'),
     paper: getCssVariableValue('primaryColor'),
-    banner: getCssVariableValue('primaryColorDark')
+    banner: getCssVariableValue('primaryColorDark'),
+    selected: getCssVariableValue('primaryColorDark')
   },
   primary: {
     main: '#fff'
@@ -550,7 +553,7 @@ const invertedPalette = {
     main: '#fcc0c0' // lighten($errorColor, 70%)
   },
 
-  divider: '#fff'
+  divider: getCssVariableValue('primaryColorDark')
 }
 
 const invertedTypography = makeTypography(invertedPalette)
@@ -560,6 +563,7 @@ export const invertedTheme = createMuiTheme({
 })
 
 invertedTheme.overrides = {
+  ...makeOverrides(invertedTheme),
   MuiOutlinedInput: {
     root: {
       boxSizing: 'border-box',
