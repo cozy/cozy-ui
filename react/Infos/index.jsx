@@ -2,7 +2,7 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import Icon from '../Icon'
-import Text, { SubTitle } from '../Text'
+import Typography from '../Typography'
 import Stack from '../Stack'
 import palette from '../palette'
 import createDepreciationLogger from '../helpers/createDepreciationLogger'
@@ -79,13 +79,14 @@ const InfosMigration = React.memo(function InfosMigration(props) {
         description={
           <>
             {title && (
-              <SubTitle
+              <Typography
+                variant="h5"
                 className={cx({
-                  'u-pomegranate': isImportant
+                  'u-error': isImportant
                 })}
               >
                 {title}
-              </SubTitle>
+              </Typography>
             )}
             <div className={cx('u-flex', 'u-w-100')}>
               {icon && (
@@ -100,13 +101,14 @@ const InfosMigration = React.memo(function InfosMigration(props) {
                 />
               )}
               {text && (
-                <Text
+                <Typography
+                  variant="body1"
                   className={cx({
                     ['u-pl-half']: icon !== null
                   })}
                 >
                   {text}
-                </Text>
+                </Typography>
               )}
             </div>
           </>
