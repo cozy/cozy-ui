@@ -96,7 +96,7 @@ const normalPalette = {
     contrastText: getCssVariableValue('primaryContrastTextColor')
   },
   error: {
-    main: getCssVariableValue('pomegranate')
+    main: getCssVariableValue('errorColor')
   },
   secondary: {
     light: getCssVariableValue('secondaryColorLight'),
@@ -546,6 +546,10 @@ const invertedPalette = {
     primary: '#fff',
     secondary: '#fff'
   },
+  error: {
+    main: '#fcc0c0' // lighten($errorColor, 70%)
+  },
+
   divider: '#fff'
 }
 
