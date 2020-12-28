@@ -10,6 +10,7 @@ include via `Sprite`. See the example below for how to include `Sprite`.
 
 ```
 import Icon from 'cozy-ui/transpiled/react/Icon';
+import Typography from 'cozy-ui/transpiled/react/Typography';
 import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite';
 const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'device-phone', 'device-tablet', 'device-browser', 'file-type-audio', 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-image', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'forbidden-sign', 'google', 'logout-large', 'top-select', 'bottom-select', 'check-white', 'dash-white', 'keychain'];
 
@@ -18,7 +19,7 @@ const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'd
   {
   availableIcons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
       <Icon icon={ icon }/>
-      <p style={{ fontSize: '1rem', marginTop: '0.5rem', marginBottom: '1rem' }}>{ icon }</p>
+      <Typography variant='body1' className='u-mb-1 u-mt-half'>{ icon }</Typography>
     </div>
   )}
 </div>
@@ -29,6 +30,8 @@ const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'd
 ```
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite';
+import Typography from 'cozy-ui/transpiled/react/Typography';
+
 const colors = ['#297EF2', '#08b442', '#B449E7', '#F52D2D', '#FF962F']
 let i = 0
 const availableIcons = ['album-add','album-remove','album','answer','apple','archive','attachment','attention','bank','banking-add','banking','bell','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-firefox','browser-ie','browser-opera','browser-safari','burger','calendar','camera','car','carbonCopy','categories','certified','check-circle','check-list','check-square','check','circle-filled','clock','cloud-happy','cloud','collect','comment','company','compass','connector','contract','contrast','cozy-laugh','cozy-text','credit-card-add','credit-card','credit','crop','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','debit','devices','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','email-notification','email','eu','euro','exchange','eye-closed','eye','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','flag-outlined','flag','flash-auto','flashlight','folder-add','folder','forbidden','from-user','gear','globe','graph-circle','grid','group-list','groups','heart','help','history','home','hourglass','image','info-outlined','info','key','laptop','left','lightbulb','link-out','link','list','location','lock','logout','magic-trick','magnet','magnifier','merge','movement-in','movement-out','moveto','multi-files','music','new','next','note','notification-email','offline','online','openwith','palette','paperplane','password','pen','people','percent-circle','percent','personal-data','phone-download','phone','pie-chart','pin','plus-small','plus','previous','printer','qualify','rename','repare','restore','right','rise','rotate-left','rotate-right','sad-cozy','safe','select-all','setting','share-circle','share','sound','spinner','stack','star','stats','sync-cozy','sync','target','team','telephone','to-the-cloud','top','trash','trophy','unlink','unlock','up','upload','videos','wallet-add','wallet-new','wallet','warn','warning-circle','warning','wrench-circle'];
@@ -37,7 +40,7 @@ const availableIcons = ['album-add','album-remove','album','answer','apple','arc
   {
   availableIcons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
       <Icon icon={ icon } color={ colors[i++ % colors.length] }/>
-      <p style={{ fontSize: '1rem', marginTop: '0.5rem', marginBottom: '1rem' }}>{ icon }</p>
+      <Typography variant='body1' className='u-mt-half u-mb-1'>{ icon }</Typography>
     </div>
   )}
 </div>
@@ -101,6 +104,7 @@ import Album from 'cozy-ui/transpiled/react/Icons/Album'
 
 ```
 import Icon from 'cozy-ui/transpiled/react/Icon';
+import Typography from 'cozy-ui/transpiled/react/Typography';
 
 import Album from 'cozy-ui/transpiled/react/Icons/Album'
 import AlbumAdd from 'cozy-ui/transpiled/react/Icons/AlbumAdd'
@@ -491,14 +495,14 @@ const handleInputRangeChange = ev => {
 };
 
 <div>
-  <p>
+  <Typography component='p' variant='body1' className='u-mb-1'>
     Font size: <input type='range' min='8' max='48' value={state.size} onChange={handleInputRangeChange} /> {state.size}px
-  </p>
+  </Typography>
   <div style={wrapperStyle}>
     {
-    icons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
+    icons.map(icon => <div key={icon} className='u-ta-center u-mb-1'>
         <Icon icon={ icon } size={state.size} />
-        <p style={{ fontSize: '1rem', marginTop: '0.5rem', marginBottom: '1rem' }}>{ icon.name.replace(/^Svg/, '') }</p>
+        <Typography variant='body1' className='u-mt-half'>{ icon.name.replace(/^Svg/, '') }</Typography>
       </div>
     )}
   </div>
@@ -509,6 +513,7 @@ const handleInputRangeChange = ev => {
 
 ```
 import Icon from 'cozy-ui/transpiled/react/Icon';
+import Typography from 'cozy-ui/transpiled/react/Typography';
 
 import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
 import CloudBrokenIcon from 'cozy-ui/transpiled/react/Icons/CloudBroken'
@@ -582,14 +587,14 @@ const handleInputRangeChange = ev => {
 };
 
 <div>
-  <p>
+  <Typography component='p' variant='body1' className='u-mb-1'>
     Font size: <input type='range' min='8' max='48' value={state.size} onChange={handleInputRangeChange} /> {state.size}px
-  </p>
+  </Typography>
   <div style={wrapperStyle}>
     {
-    icons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
+    icons.map(icon => <div key={icon} className='u-ta-center u-mb-1'>
         <Icon icon={ icon } size={state.size} />
-        <p style={{ fontSize: '1rem', marginTop: '0.5rem', marginBottom: '1rem' }}>{ icon.name.replace(/^Svg/, '') }</p>
+        <Typography variant='body1' className='u-mt-half'>{ icon.name.replace(/^Svg/, '') }</Typography>
       </div>
     )}
   </div>
