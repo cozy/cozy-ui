@@ -14,6 +14,7 @@ Flexbox : <https://philipwalton.github.io/solved-by-flexbox/demos/media-object/>
 ```jsx
 import { Media, Img, Bd } from 'cozy-ui/transpiled/react/Media';
 import Icon from 'cozy-ui/transpiled/react/Icon';
+import Typography from 'cozy-ui/transpiled/react/Typography';
 const imgStyle = { paddingRight: '1rem' };
 
 <Media>
@@ -21,7 +22,7 @@ const imgStyle = { paddingRight: '1rem' };
     <Icon icon='people' />
   </Img>
   <Bd>
-    { content.ada.short }
+    <Typography variant='body1'>{ content.ada.short }</Typography>
   </Bd>
 </Media>
 ```
@@ -31,6 +32,7 @@ const imgStyle = { paddingRight: '1rem' };
 ```jsx
 import { Media, Img, Bd } from 'cozy-ui/transpiled/react/Media';
 import Icon from 'cozy-ui/transpiled/react/Icon';
+import Typography from 'cozy-ui/transpiled/react/Typography';
 
 const imgStyle = { paddingRight: '1rem' };
 
@@ -39,7 +41,7 @@ const imgStyle = { paddingRight: '1rem' };
     <Icon icon='people' />
   </Img>
   <Bd>
-    { content.ada.short }
+    <Typography variant='body1'>{ content.ada.short }</Typography>
   </Bd>
 </Media>
 ```
@@ -49,6 +51,7 @@ const imgStyle = { paddingRight: '1rem' };
 ```jsx
 import { Media, Img, Bd } from 'cozy-ui/transpiled/react/Media';
 import Icon from 'cozy-ui/transpiled/react/Icon';
+import Typography from 'cozy-ui/transpiled/react/Typography';
 
 const imgStyle = { paddingRight: '1rem' };
 
@@ -57,7 +60,7 @@ const imgStyle = { paddingRight: '1rem' };
     <Icon icon='people' />
   </Img>
   <Bd>
-    { content.ada.short }
+    <Typography variant='body1'>{ content.ada.short }</Typography>
   </Bd>
 </Media>
 ```
