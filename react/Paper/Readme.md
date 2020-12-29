@@ -2,6 +2,7 @@
 import Variants from 'docs/components/Variants';
 
 import Paper from 'cozy-ui/transpiled/react/Paper';
+import Stack from 'cozy-ui/transpiled/react/Stack';
 import Typography from 'cozy-ui/transpiled/react/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -10,15 +11,19 @@ const styles = theme => ({
     ...theme.mixins.gutters(),
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2,
+    position: 'relative'
   }
 });
 
-const PaperSheet = ({ classes, square, elevation }) => {
+const PaperExample = ({ classes, square, elevation }) => {
   return (
     <Paper className={classes.root} elevation={elevation} square={square}>
       <Typography variant="h3" component="h3">
-        This is a sheet of paper.
+        This is a sheet of paper
       </Typography>
+      <div style={{ position: 'absolute', right: '1rem', top: '1rem' }}>
+        <Typography variant='subtitle1'>elevation {elevation}</Typography>
+      </div>
       <Typography component="p">
         Paper can be used to build surface or other elements for your application.
       </Typography>
@@ -27,7 +32,7 @@ const PaperSheet = ({ classes, square, elevation }) => {
 }
 
 
-const StyledPaperSheet = withStyles(styles)(PaperSheet);
+const StyledPaperExample = withStyles(styles)(PaperExample);
 
 const initialVariants = [
   { square: true }
@@ -35,7 +40,14 @@ const initialVariants = [
 
 <Variants initialVariants={initialVariants}>{
   variant => (
-    <StyledPaperSheet elevation="1" square={variant.square} />
+    <Stack spacing='m'>
+      <StyledPaperExample elevation="0" square={variant.square} />
+      <StyledPaperExample elevation="1" square={variant.square} />
+      <StyledPaperExample elevation="4" square={variant.square} />
+      <StyledPaperExample elevation="12" square={variant.square} />
+      <StyledPaperExample elevation="16" square={variant.square} />
+      <StyledPaperExample elevation="24" square={variant.square} />
+    </Stack>
   )
 }</Variants>
 ```
