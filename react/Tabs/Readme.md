@@ -35,8 +35,6 @@ const Example = () => {
 
 <BreakpointsProvider>
   <Example />
-  <br/>
-  <Example />
 </BreakpointsProvider>
 ```
 
