@@ -66,7 +66,7 @@
   "devDependencies": {
     "@babel/cli": "7.11.5",
     "@babel/core": "7.11.5",
-    "@cozy/codemods": "1.2.0",
+    "@cozy/codemods": "1.9.0",
     "@material-ui/core": "3.9.4",
     "@oskarer/enzyme-wait": "^1.5.0",
     "@semantic-release/changelog": "5.0.1",
