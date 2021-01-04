@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 
 import withLocales from '../I18n/withLocales'
 
+import ViewerWrapper from './ViewerWrapper'
 import ViewerControls from './ViewerControls'
 import ImageViewer from './ImageViewer'
 import AudioViewer from './AudioViewer'
@@ -13,7 +13,6 @@ import TextViewer from './TextViewer'
 import NoViewer from './NoViewer'
 import ShortcutViewer from './ShortcutViewer'
 
-import styles from './styles.styl'
 import en from './locales/en.json'
 import fr from './locales/fr.json'
 import { FileDoctype } from '../proptypes'
@@ -28,23 +27,6 @@ const KEY_CODE_RIGHT = 39
 const KEY_CODE_ESCAPE = 27
 
 import { isMobileApp, isMobile } from 'cozy-device-helper'
-
-const ViewerWrapper = ({ className, children, dark }) => (
-  <div
-    className={cx(styles['viewer-wrapper'], className, {
-      [styles['viewer-wrapper--light']]: !dark
-    })}
-    role="viewer"
-  >
-    {children}
-  </div>
-)
-
-ViewerWrapper.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.element,
-  dark: PropTypes.bool
-}
 
 export const isPlainText = (mimeType = '', fileName = '') => {
   return mimeType ? /^text\//.test(mimeType) : /\.(txt|md)$/.test(fileName)
