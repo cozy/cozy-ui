@@ -1,6 +1,9 @@
 An area of a page can have a different CozyTheme and components inside
 will be automatically styled.
 
+The inverted theme is not supported for several components but the work
+[is in progress](https://github.com/cozy/cozy-ui/issues/1692).
+
 ```
 import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme';
 import { Title, SubTitle } from 'cozy-ui/transpiled/react/Text';
