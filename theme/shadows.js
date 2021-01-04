@@ -1,3 +1,6 @@
+// Used to generate all the shadows used in the material theme.
+// Is not used at runtime.
+
 const parseLine = line => {
   const values = line.split(/\s+/)
   return {
