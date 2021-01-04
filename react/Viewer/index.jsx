@@ -98,6 +98,19 @@ export class Viewer extends Component {
     }
   }
 
+  renderViewer(file) {
+    if (!file) return null
+    const { renderFallbackExtraContent } = this.props
+    const ComponentName = getViewerComponentName(file)
+    return (
+      <ComponentName
+        file={file}
+        onClose={this.onClose}
+        renderFallbackExtraContent={renderFallbackExtraContent}
+      />
+    )
+  }
+
   render() {
     const {
       files,
@@ -131,19 +144,6 @@ export class Viewer extends Component {
           {this.renderViewer(currentFile)}
         </ViewerControls>
       </ViewerWrapper>
-    )
-  }
-
-  renderViewer(file) {
-    if (!file) return null
-    const { renderFallbackExtraContent } = this.props
-    const ComponentName = getViewerComponentName(file)
-    return (
-      <ComponentName
-        file={file}
-        onClose={this.onClose}
-        renderFallbackExtraContent={renderFallbackExtraContent}
-      />
     )
   }
 }
