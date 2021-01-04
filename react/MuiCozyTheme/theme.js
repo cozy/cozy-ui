@@ -646,8 +646,6 @@ invertedTheme.overrides = {
   }
 }
 
-window.normalTheme = normalTheme
-window.invertedTheme = invertedTheme
 const themes = {
   normal: normalTheme,
   inverted: invertedTheme
