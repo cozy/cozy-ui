@@ -121,7 +121,7 @@ const normalPalette = {
 }
 
 normalPalette.background = {
-  banner: normalPalette.grey[100],
+  default: normalPalette.grey[100],
   selected: '#F5FAFF'
 }
 
@@ -290,10 +290,10 @@ const makeOverrides = theme => ({
         backgroundColor: theme.palette.background.selected
       },
       '&:hover': {
-        backgroundColor: theme.palette.background.banner
+        backgroundColor: theme.palette.grey[100]
       },
       '&:focus': {
-        backgroundColor: theme.palette.background.banner
+        backgroundColor: theme.palette.grey[100]
       }
     }
   },
@@ -322,7 +322,7 @@ const makeOverrides = theme => ({
       marginBottom: '-1px',
       padding: 0,
       height: '2rem',
-      backgroundColor: theme.palette.background.banner,
+      backgroundColor: theme.palette.background.default,
       textIndent: '2rem',
       fontWeight: 'bold',
       fontSize: '.75rem',
@@ -337,7 +337,7 @@ const makeOverrides = theme => ({
       paddingRight: 0
     },
     sticky: {
-      backgroundColor: theme.palette.background.banner
+      backgroundColor: theme.palette.background.default
     }
   },
   MuiListItemSecondaryAction: {
@@ -559,9 +559,8 @@ const invertedPalette = {
   ...normalTheme.palette,
   type: 'dark',
   background: {
-    default: getCssVariableValue('primaryColor'),
+    default: getCssVariableValue('primaryColorDark'),
     paper: getCssVariableValue('primaryColor'),
-    banner: getCssVariableValue('primaryColorDark'),
     selected: getCssVariableValue('primaryColorDark')
   },
   primary: {

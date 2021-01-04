@@ -10,7 +10,7 @@ const progressHeight = '0.125rem'
 
 const styles = theme => ({
   banner: {
-    backgroundColor: theme.palette.background.banner
+    backgroundColor: theme.palette.background.default
   },
   progress: {
     backgroundColor: 'transparent',
