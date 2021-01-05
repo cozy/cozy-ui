@@ -6,7 +6,7 @@ import ThemeChooser from '../../docs/ThemeChooser'
 
 const Example = () => {
   return (
-    <div>
+    <div className='u-stack-s'>
       <FigureBlock
         label='Balance totale'
         total={1000}
@@ -28,7 +28,5 @@ const Example = () => {
   )
 }
 
-<ThemeChooser>
-  <Example />
-</ThemeChooser>
+<Example />
 ```

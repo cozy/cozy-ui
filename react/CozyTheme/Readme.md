@@ -1,13 +1,15 @@
 An area of a page can have a different CozyTheme and components inside
 will be automatically styled.
 
-* At the moment only a few components support this (Buttons / Breadcrumbs / Figure).
+The inverted theme is not supported for several components but the work
+[is in progress](https://github.com/cozy/cozy-ui/issues/1692).
 
 ```
 import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme';
 import { Title, SubTitle } from 'cozy-ui/transpiled/react/Text';
 import Button from 'cozy-ui/transpiled/react/Button';
 import BarButton from 'cozy-ui/transpiled/react/BarButton';
+import Paper from 'cozy-ui/transpiled/react/Paper';
 
 const props = [{}, { disabled: true}, { busy: true }];
 
@@ -16,25 +18,38 @@ const themesSupportingContext = [
   'secondary'
 ];
 
-<CozyTheme variant='inverted' className='u-p-1'>
-  <Title className='u-white'>Inverted theme</Title>
-  <SubTitle className='u-white'>Buttons</SubTitle>
-  {themesSupportingContext.map(theme =>
-    <p key={theme}>{
-      props.map(
-        props => <Button key={theme + JSON.stringify(props)} label={theme} theme={theme} {...props} />
-      )
-    }</p>
-  )}
-  <SubTitle className='u-white'>BarButton</SubTitle>
-  <BarButton icon='dots' />
-  <div className='u-bg-white u-p-1'>
-    We can always go back to normal theme if a child must "get out"
-    of the theme.
-    <CozyTheme variant='normal'>
-      <Button className='u-ml-0 u-mt-half' theme='primary' label='Primary button' />
-    </CozyTheme>
-  </div>
+<CozyTheme variant='inverted' className='u-stack-m'>
+  <Paper className='u-p-1'>
+    <Title className='u-white'>Inverted theme</Title>
+    <SubTitle className='u-white'>Buttons</SubTitle>
+    {themesSupportingContext.map(theme =>
+      <p key={theme}>{
+        props.map(
+          props => <Button key={theme + JSON.stringify(props)} label={theme} theme={theme} {...props} />
+        )
+      }</p>
+    )}
+    <SubTitle className='u-white'>BarButton</SubTitle>
+    <BarButton icon='dots' />
+    <div className='u-bg-white u-p-1 u-mb-1'>
+      We can always go back to normal theme if a child must "get out"
+      of the theme.
+      <CozyTheme variant='normal'>
+        <Button className='u-ml-0 u-mt-half' theme='primary' label='Primary button' />
+      </CozyTheme>
+    </div>
+  </Paper>
+  <Paper className='u-p-1 u-stack-s'>
+    <div class='u-error'>
+      Error text : "Please enter the right password."
+    </div>
+    <div class='u-valid'>
+      Valid text : "Success, you've connected EDF to your Cozy."
+    </div>
+    <div class='u-warn'>
+      Warning text : "Something does not feel right, you may want to reload the page."
+    </div>
+  </Paper>
 </CozyTheme>
 ```
 
@@ -42,11 +57,22 @@ const themesSupportingContext = [
 also styled. 
 
 ```
-import MuiButton from '@material-ui/core/Button';
+import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons';
+import TextField from 'cozy-ui/transpiled/react/MuiCozyTheme/TextField';
 
 <div className='u-bg-primaryColor u-p-1'>
   <CozyTheme variant='inverted'>
-    <MuiButton>Default button with Cozy theme</MuiButton>
+    <MuiButton variant='outlined' color='primary'>
+      A button
+    </MuiButton><br/>
+    <TextField
+      id="inverted-field"
+      label="A field"
+      defaultValue="Default value"
+      margin="normal"
+      variant="outlined"
+      placeholder="placeholder"
+    />
   </CozyTheme>
 </div>
 

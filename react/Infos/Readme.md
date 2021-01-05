@@ -3,7 +3,7 @@
 ```
 import Infos from 'cozy-ui/transpiled/react/Infos';
 import Button from 'cozy-ui/transpiled/react/Button';
-import Text, { SubTitle } from 'cozy-ui/transpiled/react/Text';
+import Typography from 'cozy-ui/transpiled/react/Typography';
 import Variants from 'cozy-ui/docs/components/Variants';
 
 const initialVariants = [
@@ -18,8 +18,8 @@ const initialVariants = [
         <Infos
           theme={variant.secondaryTheme ? 'secondary' : variant.dangerTheme ? 'danger' : 'primary'}
           description={<>
-            {variant.title && <SubTitle className={variant.dangerTheme ? 'u-pomegranate' : ''}>{content.ada.facts[0].title}</SubTitle>}
-            <Text>{content.ada.facts[0].description}</Text>
+            {variant.title && <Typography variant='h5' className={variant.dangerTheme ? 'u-error' : ''}>{content.ada.facts[0].title}</Typography>}
+            <Typography variant='body1'>{content.ada.facts[0].description}</Typography>
           </>}
           action={(variant.action || variant.multiActions) && <>
             {variant.action && <Button label="ok" theme={variant.dangerTheme ? 'danger' : 'primary'} />}

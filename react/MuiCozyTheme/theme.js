@@ -1,4 +1,3 @@
-import merge from 'lodash/merge'
 import { createMuiTheme } from '@material-ui/core/styles'
 import { getCssVariableValue } from '../utils/color'
 import isTesting from '../helpers/isTesting'
@@ -19,66 +18,115 @@ const SWITCH_BAR_WIDTH = 25
 const SWITCH_BAR_HEIGHT = 12
 const SWITCH_BUTTON_WIDTH = 46
 
-export const normalTheme = createMuiTheme({
-  typography: {
-    useNextVariants: true,
-    fontFamily: getCssVariableValue('primaryFont') || 'Lato',
-    h1: {
-      fontSize: 48,
-      fontWeight: 'bold',
-      lineHeight: 1.087,
-      letterSpacing: -0.8
-    },
-    h2: {
-      fontSize: 32,
-      fontWeight: 'bold',
-      lineHeight: 1.313,
-      letterSpacing: -0.4
-    },
-    h3: {
-      fontSize: 24,
-      fontWeight: 'bold',
-      lineHeight: 1.167
-    },
-    h4: {
-      fontSize: 20,
-      fontWeight: 'bold',
-      lineHeight: 1.167
-    },
-    h5: {
-      fontSize: 18,
-      fontWeight: 'bold',
-      lineHeight: 1.313
-    },
-    h6: {
-      fontSize: 16,
-      fontWeight: 'bold',
-      lineHeight: 1.313
-    },
-    subtitle1: {
-      fontWeight: 'bold',
-      fontSize: 12,
-      lineHeight: 1.313,
-      textTransform: 'uppercase'
-    },
-    body1: {
-      fontSize: 16,
-      lineHeight: 1.313
-    },
-    body2: {
-      fontSize: 14,
-      lineHeight: 1.313
-    },
-    button: {
-      fontWeight: 'bold',
-      fontSize: 14,
-      lineHeight: 1.313
-    },
-    caption: {
-      fontSize: 12,
-      lineHeight: 1.313
-    }
+const makeTypography = palette => ({
+  useNextVariants: true,
+  fontFamily: getCssVariableValue('primaryFont') || 'Lato',
+  h1: {
+    fontSize: 48,
+    color: palette.text.primary,
+    fontWeight: 'bold',
+    lineHeight: 1.087,
+    letterSpacing: -0.8
   },
+  h2: {
+    fontSize: 32,
+    color: palette.text.primary,
+    fontWeight: 'bold',
+    lineHeight: 1.313,
+    letterSpacing: -0.4
+  },
+  h3: {
+    fontSize: 24,
+    color: palette.text.primary,
+    fontWeight: 'bold',
+    lineHeight: 1.167
+  },
+  h4: {
+    fontSize: 20,
+    color: palette.text.primary,
+    fontWeight: 'bold',
+    lineHeight: 1.167
+  },
+  h5: {
+    fontSize: 18,
+    color: palette.text.primary,
+    fontWeight: 'bold',
+    lineHeight: 1.313
+  },
+  h6: {
+    fontSize: 16,
+    color: palette.text.primary,
+    fontWeight: 'bold',
+    lineHeight: 1.313
+  },
+  subtitle1: {
+    fontWeight: 'bold',
+    fontSize: 12,
+    lineHeight: 1.313,
+    textTransform: 'uppercase'
+  },
+  body1: {
+    fontSize: 16,
+    lineHeight: 1.313,
+    color: palette.text.primary
+  },
+  body2: {
+    fontSize: 14,
+    lineHeight: 1.313,
+    color: palette.text.primary
+  },
+  button: {
+    fontWeight: 'bold',
+    fontSize: 14,
+    lineHeight: 1.313
+  },
+  caption: {
+    fontSize: 12,
+    lineHeight: 1.313,
+    color: palette.text.secondary
+  }
+})
+
+const normalPalette = {
+  type: 'light',
+  primary: {
+    light: getCssVariableValue('primaryColorLight'),
+    main: getCssVariableValue('primaryColor'),
+    dark: getCssVariableValue('primaryColorDark'),
+    contrastText: getCssVariableValue('primaryContrastTextColor')
+  },
+  error: {
+    main: getCssVariableValue('errorColor')
+  },
+  secondary: {
+    light: getCssVariableValue('secondaryColorLight'),
+    main: getCssVariableValue('secondaryColor'),
+    dark: getCssVariableValue('secondaryColorDark'),
+    contrastText: getCssVariableValue('secondaryContrastTextColor')
+  },
+  text: {
+    primary: getCssVariableValue('primaryTextColor'),
+    secondary: getCssVariableValue('secondaryTextColor')
+  },
+  grey: {
+    0: getCssVariableValue('white'),
+    100: getCssVariableValue('paleGrey'),
+    200: getCssVariableValue('silver'),
+    300: getCssVariableValue('coolGrey'),
+    400: getCssVariableValue('slateGrey'),
+    800: getCssVariableValue('charcoalGrey'),
+    900: getCssVariableValue('black')
+  },
+  divider: getCssVariableValue('silver')
+}
+
+normalPalette.background = {
+  default: normalPalette.grey[100],
+  selected: '#F5FAFF'
+}
+
+export const normalTheme = createMuiTheme({
+  typography: makeTypography(normalPalette),
   shape: {
     borderRadius: defaultValues.borderRadius
   },
@@ -91,37 +139,7 @@ export const normalTheme = createMuiTheme({
       xl: 1200
     }
   },
-  palette: {
-    type: 'light',
-    primary: {
-      light: getCssVariableValue('primaryColorLight'),
-      main: getCssVariableValue('primaryColor'),
-      dark: getCssVariableValue('primaryColorDark'),
-      contrastText: getCssVariableValue('primaryContrastTextColor')
-    },
-    error: {
-      main: getCssVariableValue('pomegranate')
-    },
-    secondary: {
-      light: getCssVariableValue('secondaryColorLight'),
-      main: getCssVariableValue('secondaryColor'),
-      dark: getCssVariableValue('secondaryColorDark'),
-      contrastText: getCssVariableValue('secondaryContrastTextColor')
-    },
-    text: {
-      primary: getCssVariableValue('charcoalGrey'),
-      secondary: getCssVariableValue('coolGrey')
-    },
-    grey: {
-      0: getCssVariableValue('white'),
-      100: getCssVariableValue('paleGrey'),
-      200: getCssVariableValue('silver'),
-      300: getCssVariableValue('coolGrey'),
-      400: getCssVariableValue('slateGrey'),
-      800: getCssVariableValue('charcoalGrey'),
-      900: getCssVariableValue('black')
-    }
-  },
+  palette: normalPalette,
   props: {
     MuiTabs: {
       textColor: 'primary',
@@ -137,18 +155,18 @@ export const normalTheme = createMuiTheme({
   ...(isTesting() && { transitions: { create: () => 'none' } })
 })
 
-normalTheme.overrides = {
+const makeOverrides = theme => ({
   MuiOutlinedInput: {
     root: {
       '&$disabled': {
-        background: 'var(--paleGrey)'
+        background: theme.palette.grey[100]
       },
       '&$focused $notchedOutline': {
         borderWidth: '0.0625rem'
       }
     },
     notchedOutline: {
-      borderColor: 'var(--silver)'
+      borderColor: theme.palette.grey[200]
     }
   },
   MuiButton: {
@@ -170,10 +188,10 @@ normalTheme.overrides = {
   MuiTab: {
     // This overrides the disabled color of the MuiTab
     textColorPrimary: {
-      color: 'var(--coolGrey)'
+      color: theme.palette.grey[300]
     },
     textColorSecondary: {
-      color: 'var(--coolGrey)'
+      color: theme.palette.grey[300]
     },
     root: {
       fontSize: normalTheme.typography.subtitle1.fontSize,
@@ -190,7 +208,7 @@ normalTheme.overrides = {
       boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.08)',
       borderWidth: '0.0625rem',
       borderStyle: 'solid',
-      borderColor: 'var(--silver)',
+      borderColor: theme.palette.grey[200],
       overflow: 'hidden',
       marginBottom: '1rem'
     }
@@ -209,7 +227,7 @@ normalTheme.overrides = {
       fontSize: '0.875rem',
       minHeight: '3.5rem',
       padding: 0,
-      color: 'var(--charcoalGrey)',
+      color: theme.palette.text.primary,
       '&$expanded': {
         minHeight: '3.5rem'
       }
@@ -269,13 +287,13 @@ normalTheme.overrides = {
     },
     button: {
       '&$selected, &$selected:hover': {
-        backgroundColor: 'var(--zircon)'
+        backgroundColor: theme.palette.background.selected
       },
       '&:hover': {
-        backgroundColor: getCssVariableValue('paleGrey')
+        backgroundColor: theme.palette.grey[100]
       },
       '&:focus': {
-        backgroundColor: getCssVariableValue('paleGrey')
+        backgroundColor: theme.palette.grey[100]
       }
     }
   },
@@ -300,11 +318,11 @@ normalTheme.overrides = {
   MuiListSubheader: {
     root: {
       borderTop: '1px solid transparent',
-      borderBottom: '1px solid var(--zircon)',
+      borderBottom: '1px solid transparent',
       marginBottom: '-1px',
       padding: 0,
       height: '2rem',
-      backgroundColor: 'var(--paleGrey)',
+      backgroundColor: theme.palette.background.default,
       textIndent: '2rem',
       fontWeight: 'bold',
       fontSize: '.75rem',
@@ -312,14 +330,14 @@ normalTheme.overrides = {
       alignItems: 'center',
       display: 'flex',
       lineHeight: 1.33,
-      color: 'var(--coolGrey)'
+      color: theme.palette.text.secondary
     },
     gutters: {
       paddingLeft: 0,
       paddingRight: 0
     },
     sticky: {
-      backgroundColor: 'var(--paleGrey)'
+      backgroundColor: theme.palette.background.default
     }
   },
   MuiListItemSecondaryAction: {
@@ -333,7 +351,7 @@ normalTheme.overrides = {
       minHeight: 'auto',
       paddingTop: 4,
       paddingBottom: 4,
-      color: getCssVariableValue('charcoalGrey'),
+      color: theme.palette.grey[800],
       border: 0,
       '&:last-child': {
         borderBottom: 0
@@ -390,11 +408,11 @@ normalTheme.overrides = {
   },
   MuiDialogTitle: {
     root: {
-      ...normalTheme.typography.h3,
+      ...theme.typography.h3,
       width: 'calc(100% - (58px + 30px))', // remove close button width and margin
       padding: '24px 32px',
-      [normalTheme.breakpoints.down('sm')]: {
-        ...normalTheme.typography.h4,
+      [theme.breakpoints.down('sm')]: {
+        ...theme.typography.h4,
         width: 'calc(100% - 58px)', // remove close button width and margin
         padding: '13px 16px 12px'
       },
@@ -402,7 +420,7 @@ normalTheme.overrides = {
         paddingTop: 0,
         paddingLeft: 0,
         paddingRight: 0,
-        [normalTheme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('sm')]: {
           padding: '0 0 24px 0'
         }
       }
@@ -411,13 +429,13 @@ normalTheme.overrides = {
   MuiDialogContent: {
     root: {
       padding: '24px 32px 0',
-      [normalTheme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('sm')]: {
         padding: '24px 16px 0'
       },
       '& .dialogContentInner': {
         marginBottom: '24px',
         '&.withFluidActions': {
-          [normalTheme.breakpoints.down('sm')]: {
+          [theme.breakpoints.down('sm')]: {
             marginBottom: '16px'
           }
         }
@@ -427,7 +445,7 @@ normalTheme.overrides = {
   MuiDialogActions: {
     root: {
       margin: '16px 32px',
-      [normalTheme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('sm')]: {
         margin: '8px 16px',
         '& button': {
           flexGrow: 1
@@ -503,31 +521,74 @@ normalTheme.overrides = {
       }
     }
   }
+})
+
+normalTheme.overrides = makeOverrides(normalTheme)
+
+const shadows = [
+  'none',
+  'rgba(29, 33, 42, 0.08) 0px 2px 4px 0px, rgba(29, 33, 42, 0.06) 0px 4px 16px 0px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.08) 0px 3px 5px 0px, rgba(29, 33, 42, 0.06) 0px 4px 17px 0px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.09) 0px 4px 6px 0px, rgba(29, 33, 42, 0.07) 0px 5px 19px 1px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.09) 0px 5px 8px 1px, rgba(29, 33, 42, 0.07) 0px 5px 20px 1px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.09) 0px 6px 9px 1px, rgba(29, 33, 42, 0.07) 0px 5px 22px 1px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.1) 0px 7px 10px 1px, rgba(29, 33, 42, 0.07) 0px 6px 23px 2px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.1) 0px 8px 11px 1px, rgba(29, 33, 42, 0.08) 0px 6px 24px 2px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.1) 0px 9px 13px 1px, rgba(29, 33, 42, 0.08) 0px 6px 26px 2px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.11) 0px 10px 14px 1px, rgba(29, 33, 42, 0.08) 0px 7px 27px 3px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.11) 0px 11px 15px 2px, rgba(29, 33, 42, 0.08) 0px 7px 29px 3px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.11) 0px 12px 16px 2px, rgba(29, 33, 42, 0.09) 0px 7px 30px 3px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.12) 0px 13px 17px 2px, rgba(29, 33, 42, 0.09) 0px 8px 31px 4px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.12) 0px 13px 19px 2px, rgba(29, 33, 42, 0.09) 0px 8px 33px 4px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.13) 0px 14px 20px 2px, rgba(29, 33, 42, 0.09) 0px 9px 34px 5px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.13) 0px 15px 21px 2px, rgba(29, 33, 42, 0.1) 0px 9px 35px 5px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.13) 0px 16px 22px 3px, rgba(29, 33, 42, 0.1) 0px 9px 37px 5px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.14) 0px 17px 23px 3px, rgba(29, 33, 42, 0.1) 0px 10px 38px 6px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.14) 0px 18px 25px 3px, rgba(29, 33, 42, 0.1) 0px 10px 40px 6px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.14) 0px 19px 26px 3px, rgba(29, 33, 42, 0.11) 0px 10px 41px 6px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.15) 0px 20px 27px 3px, rgba(29, 33, 42, 0.11) 0px 11px 42px 7px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.15) 0px 21px 28px 3px, rgba(29, 33, 42, 0.11) 0px 11px 44px 7px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.15) 0px 22px 30px 4px, rgba(29, 33, 42, 0.11) 0px 11px 45px 7px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.16) 0px 23px 31px 4px, rgba(29, 33, 42, 0.12) 0px 12px 47px 8px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
+  'rgba(29, 33, 42, 0.16) 0px 24px 32px 4px, rgba(29, 33, 42, 0.12) 0px 12px 48px 8px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px'
+]
+
+normalTheme.shadows = shadows
+
+const invertedPalette = {
+  ...normalTheme.palette,
+  type: 'dark',
+  background: {
+    default: getCssVariableValue('primaryColorDark'),
+    paper: getCssVariableValue('primaryColor'),
+    selected: getCssVariableValue('primaryColorDark')
+  },
+  primary: {
+    main: '#fff'
+  },
+  secondary: {
+    main: '#fff'
+  },
+  text: {
+    primary: '#fff',
+    secondary: '#fff'
+  },
+  error: {
+    main: '#fcc0c0' // lighten($errorColor, 70%)
+  },
+
+  divider: getCssVariableValue('primaryColorDark')
 }
 
-// Override default shadow for elevation 8 used for Popover
-normalTheme.shadows[8] =
-  '0rem 0.125rem 0.375rem 0rem rgba(50, 54, 63, .19), 0rem 0.375rem 1.25rem 0rem rgba(50, 54, 63, .19)'
+const invertedTypography = makeTypography(invertedPalette)
+export const invertedTheme = createMuiTheme({
+  palette: invertedPalette,
+  typography: invertedTypography,
+  shadows
+})
 
-export const invertedTheme = {
-  ...normalTheme,
-  palette: {
-    ...normalTheme.palette,
-    type: 'dark',
-    primary: {
-      main: 'rgb(255,255,255)'
-    },
-    secondary: {
-      main: 'rgba(255, 255, 255)'
-    },
-    text: {
-      primary: 'rgb(255,255,255)',
-      secondary: 'rgb(255,255,255)'
-    }
-  }
-}
-
-invertedTheme.overrides = merge({}, normalTheme.overrides, {
+invertedTheme.overrides = {
+  ...makeOverrides(invertedTheme),
   MuiOutlinedInput: {
     root: {
       boxSizing: 'border-box',
@@ -547,20 +608,13 @@ invertedTheme.overrides = merge({}, normalTheme.overrides, {
       }
     }
   },
-  MuiInputLabel: {
-    root: {
-      color: invertedTheme.palette.text.primary
-    }
-  },
-  MuiTabs: {
-    root: {
-      background: normalTheme.palette.primary.main
-    }
-  },
   MuiTab: {
+    root: {
+      color: 'rgb(255,255,255) !important'
+    },
     // This overrides the disabled color of the MuiTab
     textColorPrimary: {
-      color: 'rgb(255,255,255)',
+      color: 'rgb(255,255,255) !important',
       opacity: 0.64
     },
     textColorSecondary: {
@@ -589,7 +643,7 @@ invertedTheme.overrides = merge({}, normalTheme.overrides, {
       }
     }
   }
-})
+}
 
 const themes = {
   normal: normalTheme,

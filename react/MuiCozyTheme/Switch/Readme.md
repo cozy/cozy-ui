@@ -3,11 +3,7 @@ Used to present a binary choice to the user.
 Uses [Material UI's Switch](https://material-ui.com/components/switches/).
 
 ```
-import MuiCozyTheme from '..'
-import CozyTheme from '../../CozyTheme'
-import Button from '@material-ui/core/Button'
-import { Title, Text } from '../../Text'
-import Stack from '../../Stack'
+import { Text } from '../../Text';
 import { Media, Img } from '../../Media'
 import Switch from '.'
 
@@ -26,7 +22,7 @@ const Aligned = ({ children }) => {
     <Img>{ children[0] }</Img>
     <Img>{ children[1] }</Img>
   </Media>
-} 
+}
 
 const Switches = () => {
   return <>
@@ -43,18 +39,7 @@ const Switches = () => {
       <Switch color="secondary" checked={state.switch2} disabled onClick={handleClick2} />
     </Aligned>
   </>
-}
+};
 
-<MuiCozyTheme>
-  <Stack spacing='m'>
-    <Title className='u-mt-1'>Normal theme</Title>
-    <div>
-      <Switches />
-    </div>
-    <Title className='u-mt-1'>Inverted theme</Title>
-    <CozyTheme className='u-p-1' variant='inverted'>
-      <Switches />
-    </CozyTheme>
-  </Stack>
-</MuiCozyTheme>
+<Switches />
 ```

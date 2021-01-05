@@ -1,5 +1,13 @@
 @require '../tools/mixins'
 
+// @TODO Check to deduplicate dangerColor and errorColor
+$dangerColor=#F52D2D
+$errorColor=#F52D2D
+$errorBackgroundLight=#FFF2F2
+
+$validColor=#35CE68
+$warnColor=#FF962F
+
 // @stylint off
 /*------------------------------------*\
   Palette
@@ -170,8 +178,12 @@ html, .CozyTheme--normal
 
     --primaryTextColor var(--charcoalGrey)
     --secondaryTextColor var(--coolGrey)
-    --primaryContrastTextColor var(--white)
-    --secondaryContrastTextColor var(--white)
+    --primaryContrastTextColor #FFF
+    --secondaryContrastTextColor #FFF
+    --spinnerColor var(--primaryColor)
+
+    --linkColor var(--primaryColor)
+    --linkColorActive var(--primaryColorDark)
 
     --invertedTabsActiveTextColor var(--primaryContrastTextColor)
     --invertedTabsInactiveTextColor var(--primaryContrastTextColor)
@@ -183,7 +195,7 @@ html, .CozyTheme--normal
     --regularButtonActiveColor: var(--primaryColorDark)
     --regularButtonConstrastColor: var(--primaryContrastTextColor)
 
-    --secondaryButtonPrimaryColor: var(--white)
+    --secondaryButtonPrimaryColor: #FFF
     --secondaryButtonSecondaryColor: var(--silver)
     --secondaryButtonActiveColor: var(--silver)
     --secondaryButtonContrastColor: var(--black)
@@ -191,12 +203,12 @@ html, .CozyTheme--normal
     --iconColor: currentColor
     --actionMenuIconColor: var(--slateGrey)
 
-    --errorColor: var(--pomegranate)
-    --errorBackgroundLight: var(--chablis)
+    --errorColor: $errorColor
+    --errorBackgroundLight: $errorBackgroundLight
 
-    --validColor: var(--emerald)
-    --warnColor: var(--texasRose)
-    --dangerColor: var(--pomegranate)
+    --validColor: $validColor
+    --warnColor: $warnColor
+    --dangerColor: $dangerColor
 
     --neutralBackground: var(--paleGrey)
 

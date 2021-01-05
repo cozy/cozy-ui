@@ -1,4 +1,5 @@
 import React from 'react'
+import cx from 'classnames'
 import PropTypes from 'prop-types'
 
 import Paper from '../Paper'
@@ -11,7 +12,15 @@ import styles from './styles.styl'
 /**
  * A banner displays a prominent message and related optional actions.
  */
-const Banner = ({ icon, bgcolor, text, buttonOne, buttonTwo, inline }) => {
+const Banner = ({
+  icon,
+  bgcolor,
+  className,
+  text,
+  buttonOne,
+  buttonTwo,
+  inline
+}) => {
   const position = {
     row: [8, 4],
     column: [12, 12]
@@ -22,7 +31,7 @@ const Banner = ({ icon, bgcolor, text, buttonOne, buttonTwo, inline }) => {
     <>
       <Paper elevation={0} square>
         <div
-          className={styles['c-banner-wrapper']}
+          className={cx(styles['c-banner-wrapper'], className)}
           style={bgcolor && { backgroundColor: bgcolor }}
         >
           <Grid container justify="space-between">

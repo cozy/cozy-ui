@@ -1,11 +1,14 @@
 import React from 'react'
-import Icon from '../Icon'
-import { translate } from '../I18n'
-import cx from 'classnames'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
+
+import Icon from '../Icon'
+import Typography from '../Typography'
+import { translate } from '../I18n'
+import SpinnerIcon from '../Icons/Spinner'
+
 import styles from './styles.styl'
-import palette from '../palette'
-import SpinnerIcon from 'cozy-ui/transpiled/react/Icons/Spinner'
+
 export const Spinner = ({
   t,
   loadingType,
@@ -37,7 +40,11 @@ export const Spinner = ({
       )}
     >
       <Icon icon={SpinnerIcon} color={color} spin={true} size={realsize} />
-      {loadingType && <p>{t(`loading.${loadingType}`)}</p>}
+      {loadingType && (
+        <Typography variant="body1" color="textSecondary" component="p">
+          {t(`loading.${loadingType}`)}
+        </Typography>
+      )}
     </div>
   )
 }
@@ -62,7 +69,7 @@ Spinner.defaultProps = {
   loadingType: '',
   middle: false,
   noMargin: false,
-  color: palette['primaryColor'],
+  color: 'var(--spinnerColor)',
   size: 'medium',
   className: ''
 }

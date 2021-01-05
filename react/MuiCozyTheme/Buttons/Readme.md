@@ -1,5 +1,4 @@
 ```
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import Button from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons';
 
 const ButtonsVariant = ({variant}) => {
@@ -18,14 +17,5 @@ const ButtonsVariant = ({variant}) => {
   )
 }
 
-<MuiCozyTheme>
-  Text Buttons:
-  <ButtonsVariant />
-
-  Outlined Buttons:
-  <ButtonsVariant variant='outlined' />
-
-  Contained Buttons:
-  <ButtonsVariant variant='contained' />
-</MuiCozyTheme>
+<>Text Buttons:<ButtonsVariant />Outlined Buttons:<ButtonsVariant variant='outlined' />Contained Buttons:<ButtonsVariant variant='contained' /></>
 ```

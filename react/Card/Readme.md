@@ -20,7 +20,7 @@ Renders the Card with increased margins.
 
 ```
 import Card from 'cozy-ui/transpiled/react/Card';
-import { Text, SubTitle } from 'cozy-ui/transpiled/react/Text';
+import { Text } from 'cozy-ui/transpiled/react/Text';
 
 <Card inset>
   <Text>This is some card content. Content can be small or huge. Also, it has margins.</Text>

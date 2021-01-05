@@ -1,7 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-import styles from './styles.styl'
 
 export const BaseText = React.forwardRef((props, ref) => {
   const { className, children, tag, ellipsis, ...restProps } = props
@@ -62,7 +61,7 @@ export const Uppercase = makeTextComponent('Uppercase', {
 })
 export const Caption = makeTextComponent('Caption', { className: 'u-caption' })
 export const ErrorMessage = makeTextComponent('ErrorMessage', {
-  className: styles.ErrorMessage
+  className: 'u-error'
 })
 
 export const NewSubTitle = ({ children, className, ...props }) => {

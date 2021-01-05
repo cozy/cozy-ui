@@ -2,13 +2,10 @@
 
 ```jsx
 import ContactsList from 'cozy-ui/transpiled/react/ContactsList';
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import contacts from './data.json';
 
 <div style={{ height: 500, overflowY: 'scroll' }}>
-  <MuiCozyTheme>
-    <ContactsList contacts={contacts} />
-  </MuiCozyTheme>
+  <ContactsList contacts={contacts} />
 </div>
 ```
 
@@ -16,24 +13,20 @@ import contacts from './data.json';
 
 ```jsx
 import ContactsList from 'cozy-ui/transpiled/react/ContactsList';
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import contacts from './data.json';
 initialState = { contact: null };
 
 
-<MuiCozyTheme>
-  <p>
+<><p>
   {state.contact ? (
       `Clicked on contact ${state.contact._id}`
     ) : (
       'No contact clicked'
   )}
-  </p>
-  <div style={{ height: 500, overflowY: 'scroll' }}>
+  </p><div style={{ height: 500, overflowY: 'scroll' }}>
     <ContactsList
       contacts={contacts}
       onItemClick={contact => setState({ contact })}
     />
-  </div>
-</MuiCozyTheme>
+  </div></>
 ```

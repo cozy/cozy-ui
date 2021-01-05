@@ -2,26 +2,31 @@ import React from 'react'
 import { default as MUIDialog } from '@material-ui/core/Dialog'
 import { RemoveScroll } from 'react-remove-scroll'
 import useBreakpoints from '../hooks/useBreakpoints'
-
-// Here is a crude fix until we upgrade to material-ui to version > 3.9.4.
-// This is to block the scroll on the html node element otherwise mui only puts
-// overflow: hidden on the body and html is still scrollable for screen widths < 1024px.
-// Improvement seems to have been done in mui ModalManager, we should be able
-// to remove this RemoveScroll after update to mui 4.9.11
-// https://github.com/mui-org/material-ui/pull/17972
-// See also this related issue https://github.com/cozy/cozy-ui/pull/1597 on UI's side
-// to have more information about RemoveScroll
+import CozyTheme, { useCozyTheme } from '../CozyTheme'
 
 const Dialog = props => {
   const { isMobile, isTablet } = useBreakpoints()
+
+  // Here is a crude fix until we upgrade to material-ui to version > 3.9.4.
+  // This is to block the scroll on the html node element otherwise mui only puts
+  // overflow: hidden on the body and html is still scrollable for screen widths < 1024px.
+  // Improvement seems to have been done in mui ModalManager, we should be able
+  // to remove this RemoveScroll after update to mui 4.9.11
+  // https://github.com/mui-org/material-ui/pull/17972
+  // See also this related issue https://github.com/cozy/cozy-ui/pull/1597 on UI's side
+  // to have more information about RemoveScroll
   const shouldBlockScroll = isMobile || isTablet
   const Wrapper =
     (props.open || props.opened) && shouldBlockScroll
       ? RemoveScroll
       : React.Fragment
+
+  const theme = useCozyTheme()
   return (
     <Wrapper>
-      <MUIDialog {...props} />
+      <MUIDialog {...props}>
+        <CozyTheme variant={theme}>{props.children}</CozyTheme>
+      </MUIDialog>
     </Wrapper>
   )
 }

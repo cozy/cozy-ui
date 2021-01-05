@@ -9,6 +9,8 @@ const denseStyle = { height: '48px' }
 
 /**
  * A ready-made row layout for presenting rich information.
+ *
+ * @deprecated Please use [List](#/List)
  */
 const CompositeRow = ({
   style,

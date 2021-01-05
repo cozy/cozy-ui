@@ -7,33 +7,30 @@ in the stack response
 import QuotaAlert from "cozy-ui/transpiled/react/QuotaAlert";
 import { CozyProvider } from "cozy-client";
 import { BreakpointsProvider } from "cozy-ui/transpiled/react/hooks/useBreakpoints";
-import MuiCozyTheme from "cozy-ui/transpiled/react/MuiCozyTheme/";
 
 <BreakpointsProvider>
-  <MuiCozyTheme>
-    <div>
-      <button onClick={() => setState({ modalOpened: !state.modalOpened })}>
-        Toggle modal
-      </button>
+  <div>
+    <button onClick={() => setState({ modalOpened: !state.modalOpened })}>
+      Toggle modal
+    </button>
 
-      {state.modalOpened && (
-        <CozyProvider
-          client={{
-            getStackClient: () => ({
-              fetchJSON: () =>
-                Promise.resolve({
-                  data: {
-                    attributes: { uuid: "1223", manager_url: "http://mycozy.cloud" }
-                  }
-                })
-            })
-          }}
-        >
-          <QuotaAlert onClose={() => setState({ modalOpened: false })} />
-        </CozyProvider>
-      )}
-    </div>
-  </MuiCozyTheme>
+    {state.modalOpened && (
+      <CozyProvider
+        client={{
+          getStackClient: () => ({
+            fetchJSON: () =>
+              Promise.resolve({
+                data: {
+                  attributes: { uuid: "1223", manager_url: "http://mycozy.cloud" }
+                }
+              })
+          })
+        }}
+      >
+        <QuotaAlert onClose={() => setState({ modalOpened: false })} />
+      </CozyProvider>
+    )}
+  </div>
 </BreakpointsProvider>;
 ```
 

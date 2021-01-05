@@ -242,6 +242,8 @@ import Field from 'cozy-ui/transpiled/react/Field';
 
 ```
 import Field from 'cozy-ui/transpiled/react/Field';
+import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons';
+
 <form>
   <Field
     label="I'm a label"
@@ -253,7 +255,7 @@ import Field from 'cozy-ui/transpiled/react/Field';
     }}
     type="password"
     secondaryComponent={({visible}) => {
-      return visible ? <div className={'u-bg-dodgerBlue'}>Hide</div> : <div className={'u-bg-silver'}>Show</div>
+      return <MuiButton size='small' color='secondary'>{visible ? 'Hide' : 'Show' }</MuiButton>
     }}
   />
 </form>

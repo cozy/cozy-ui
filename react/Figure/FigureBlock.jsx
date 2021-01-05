@@ -2,10 +2,8 @@ import React from 'react'
 import Types from 'prop-types'
 import classNames from 'classnames'
 import Figure from './Figure'
+import Typography from '../Typography'
 import styles from './FigureBlock.styl'
-import labelStyles from '../Label/styles.styl'
-
-const labelStyle = labelStyles['c-label']
 
 /**
  * Shows a `Figure` with a label, useful for important numbers.
@@ -26,7 +24,9 @@ const FigureBlock = ({
   withCurrencySpacing
 }) => (
   <div className={classNames(styles['FigureBlock'], className)}>
-    <div className={labelStyle}>{label}</div>
+    <Typography variant="subtitle1" color="textSecondary">
+      {label}
+    </Typography>
     <Figure
       size="big"
       className={classNames(styles['FigureBlock-figure'], figureClassName)}

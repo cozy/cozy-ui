@@ -1,6 +1,6 @@
 {
   "name": "cozy-ui",
-  "version": "40.1.0",
+  "version": "42.3.0-beta.2",
   "description": "Cozy apps UI SDK",
   "main": "./index.js",
   "bin": {
@@ -66,7 +66,7 @@
   "devDependencies": {
     "@babel/cli": "7.11.5",
     "@babel/core": "7.11.5",
-    "@cozy/codemods": "1.2.0",
+    "@cozy/codemods": "^1.9.0",
     "@material-ui/core": "3.9.4",
     "@oskarer/enzyme-wait": "^1.5.0",
     "@semantic-release/changelog": "5.0.1",
@@ -123,7 +123,7 @@
     "redux": "3.7.2",
     "redux-mock-store": "^1.5.4",
     "remark-cli": "^8.0.1",
-    "remark-jscodeshift": "^1.0.0",
+    "remark-jscodeshift": "^1.1.0",
     "remark-preset-lint-recommended": "^4.0.1",
     "semantic-release": "17.2.2",
     "style-loader": "0.23.1",

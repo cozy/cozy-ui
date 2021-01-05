@@ -3,7 +3,7 @@ import cx from 'classnames'
 import List from '../MuiCozyTheme/List'
 import Stack from '../Stack'
 import Card from '../Card'
-import { NewSubTitle } from '../Text'
+import Typography from '../Typography'
 import useBreakpoints from '../hooks/useBreakpoints'
 import ListSubheader from '../MuiCozyTheme/ListSubheader'
 import styles from './styles.styl'
@@ -45,6 +45,8 @@ export const NavigationListHeader = ({ children }) => {
   return isMobile ? (
     <ListSubheader>{children}</ListSubheader>
   ) : (
-    <NewSubTitle className="u-coolGrey u-mb-1">{children}</NewSubTitle>
+    <Typography variant="subtitle1" className="u-mb-1">
+      {children}
+    </Typography>
   )
 }
