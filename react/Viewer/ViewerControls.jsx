@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
-import classNames from 'classnames'
+import cx from 'classnames'
 import Hammer from 'hammerjs'
 
 import Toolbar from './Toolbar'
@@ -73,6 +73,15 @@ class ViewerControls extends Component {
     if (this.state.gestures) this.state.gestures.destroy()
   }
 
+  renderChildren(children) {
+    if (!children) return null
+    return React.cloneElement(children, {
+      gestures: this.state.gestures,
+      gesturesRef: this.wrapped,
+      onSwipe: this.onSwipe
+    })
+  }
+
   render() {
     const {
       currentFile,
@@ -92,7 +101,7 @@ class ViewerControls extends Component {
 
     return (
       <div
-        className={classNames(styles['viewer-controls'], {
+        className={cx(styles['viewer-controls'], {
           [styles['viewer-controls--expanded']]: expanded
         })}
         ref={wrapped => {
@@ -112,7 +121,7 @@ class ViewerControls extends Component {
         {showNavigation && !isMobile && hasPrevious && (
           <div
             role="button"
-            className={classNames(
+            className={cx(
               styles['viewer-nav'],
               styles['viewer-nav--previous'],
               {
@@ -134,13 +143,9 @@ class ViewerControls extends Component {
         {showNavigation && !isMobile && hasNext && (
           <div
             role="button"
-            className={classNames(
-              styles['viewer-nav'],
-              styles['viewer-nav--next'],
-              {
-                [styles['viewer-nav--visible']]: !hidden
-              }
-            )}
+            className={cx(styles['viewer-nav'], styles['viewer-nav--next'], {
+              [styles['viewer-nav--visible']]: !hidden
+            })}
             onClick={onNext}
             onMouseEnter={this.showControls}
             onMouseLeave={this.hideControls}
@@ -155,16 +160,8 @@ class ViewerControls extends Component {
       </div>
     )
   }
-
-  renderChildren(children) {
-    if (!children) return null
-    return React.cloneElement(children, {
-      gestures: this.state.gestures,
-      gesturesRef: this.wrapped,
-      onSwipe: this.onSwipe
-    })
-  }
 }
+
 ViewerControls.propTypes = {
   currentFile: PropTypes.object.isRequired,
   onClose: PropTypes.func.isRequired,
@@ -178,4 +175,5 @@ ViewerControls.propTypes = {
   showNavigation: PropTypes.bool.isRequired,
   isMobileApp: PropTypes.bool.isRequired
 }
+
 export default ViewerControls
