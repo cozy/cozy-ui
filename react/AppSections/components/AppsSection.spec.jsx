@@ -6,13 +6,15 @@ import React from 'react'
 import { mount } from 'enzyme'
 
 import { CozyProvider } from 'cozy-client'
-import { I18nContext } from '../../jestLib/I18n'
-import { AppsSection } from './AppsSection'
-import Tile, { TileTitle, TileSubtitle, TileFooter } from '../../Tile'
 
 import mockApps from '../../mocks/apps'
 import en from '../locales/en'
+import { I18nContext } from '../../jestLib/I18n'
+import Tile, { TileTitle, TileSubtitle, TileFooter } from '../../Tile'
+import { BreakpointsProvider } from '../../hooks/useBreakpoints'
 import { I18n } from '../../I18n'
+
+import { AppsSection } from './AppsSection'
 
 const i18nContext = I18nContext({ locale: en })
 const tMock = i18nContext.t
@@ -23,15 +25,17 @@ describe('AppsSection component', () => {
   const setup = ({ onAppClick }) => {
     component = mount(
       <CozyProvider client={client}>
-        <I18n lang="en" dictRequire={() => en}>
-          <AppsSection
-            t={tMock}
-            lang="en"
-            subtitle={<h3>Test Apps</h3>}
-            appsList={mockApps}
-            onAppClick={onAppClick}
-          />
-        </I18n>
+        <BreakpointsProvider>
+          <I18n lang="en" dictRequire={() => en}>
+            <AppsSection
+              t={tMock}
+              lang="en"
+              subtitle={<h3>Test Apps</h3>}
+              appsList={mockApps}
+              onAppClick={onAppClick}
+            />
+          </I18n>
+        </BreakpointsProvider>
       </CozyProvider>
     ).find(AppsSection)
   }
