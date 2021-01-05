@@ -25,19 +25,25 @@ const locales = {
 }
 
 const SectionTitle = ({ children }) => (
-  <Typography variant='h3' className={styles.Sections__title}>
+  <Typography variant="h3" className={styles.Sections__title}>
     {children}
   </Typography>
 )
 
 const SectionSubtitle = ({ children }) => (
-  <Typography variant='h4' className={styles.Sections__subtitle}>
+  <Typography variant="h4" className={styles.Sections__subtitle}>
     {children}
   </Typography>
 )
 
 const SectionSubSubtitle = ({ children }) => (
-  <Typography variant='subtitle1' color='textSecondary' className={styles.Sections__subsubtitle}>{children}</Typography>
+  <Typography
+    variant="subtitle1"
+    color="textSecondary"
+    className={styles.Sections__subsubtitle}
+  >
+    {children}
+  </Typography>
 )
 
 const Section = ({ children }) => (

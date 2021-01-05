@@ -16,17 +16,19 @@ export const TileDescription = ({ children }) => {
 }
 
 export const TileTitle = ({ children }) => (
-  <Typography variant='h6'>{children}</Typography>
+  <Typography variant="h6">{children}</Typography>
 )
 
 export const TileSubtitle = ({ children }) => (
-  <Typography variant='caption' className={styles['Tile-developer']}>
+  <Typography variant="caption" className={styles['Tile-developer']}>
     {children}
   </Typography>
 )
 
 export const TileFooter = ({ children }) => (
-  <Typography variant='caption' className={styles['Tile-status']}>{children}</Typography>
+  <Typography variant="caption" className={styles['Tile-status']}>
+    {children}
+  </Typography>
 )
 
 export const TileIcon = ({ children }) => {
