@@ -1,3 +1,41 @@
+# [42.3.0](https://github.com/cozy/cozy-ui/compare/v42.2.0...v42.3.0) (2021-01-05)
+
+
+### Bug Fixes
+
+* ErrorMessage uses u-error and thus is correctly styled in inverted ([d4f2be4](https://github.com/cozy/cozy-ui/commit/d4f2be4))
+* Lighter color for ExpansionPanel border ([f965914](https://github.com/cozy/cozy-ui/commit/f965914))
+* No border for ListSubHeader ([8042c75](https://github.com/cozy/cozy-ui/commit/8042c75))
+* Switch example ([fbb0766](https://github.com/cozy/cozy-ui/commit/fbb0766))
+* Theme inverted switcher was under ListSubHeader ([bc2034d](https://github.com/cozy/cozy-ui/commit/bc2034d))
+
+
+### Features
+
+* Add deprecation warning to CompositeRow ([8fee6cf](https://github.com/cozy/cozy-ui/commit/8fee6cf))
+* Add elevation examples to Paper ([5ddbdd5](https://github.com/cozy/cozy-ui/commit/5ddbdd5))
+* Add global theme selector ([1747679](https://github.com/cozy/cozy-ui/commit/1747679))
+* Add inverted colors for intents ([001601c](https://github.com/cozy/cozy-ui/commit/001601c))
+* Add our custom shadows ([8cafa94](https://github.com/cozy/cozy-ui/commit/8cafa94))
+* Add palette that can be imported in sketch ([455eed8](https://github.com/cozy/cozy-ui/commit/455eed8))
+* Add shadow generation ([19e4cdd](https://github.com/cozy/cozy-ui/commit/19e4cdd))
+* Add way to switch to inverted theme in each example ([78029e7](https://github.com/cozy/cozy-ui/commit/78029e7))
+* Banner supports inverted theme ([03b81b5](https://github.com/cozy/cozy-ui/commit/03b81b5))
+* Better support for Dialog in inverted theme ([9a9256d](https://github.com/cozy/cozy-ui/commit/9a9256d))
+* Better support for inverted theme for List ([d43d5c1](https://github.com/cozy/cozy-ui/commit/d43d5c1))
+* Error intent color supports inverted ([813fc31](https://github.com/cozy/cozy-ui/commit/813fc31))
+* FigureBlock supports inverted mode ([91b3dcd](https://github.com/cozy/cozy-ui/commit/91b3dcd))
+* Filename supports inverted mode ([6f4a3cf](https://github.com/cozy/cozy-ui/commit/6f4a3cf))
+* Icon buttons are in text secondary color ([bb234a6](https://github.com/cozy/cozy-ui/commit/bb234a6))
+* Put TextField inverted example in CozyTheme example ([33ebdf1](https://github.com/cozy/cozy-ui/commit/33ebdf1))
+* Refresh navigation list example ([e351857](https://github.com/cozy/cozy-ui/commit/e351857))
+* Spinner works in inverted mode ([4592799](https://github.com/cozy/cozy-ui/commit/4592799))
+* U-link is supported by inverted theme ([c9be8fd](https://github.com/cozy/cozy-ui/commit/c9be8fd))
+* Update @cozy/codemods and remark-jscodeshift ([f1f0dbc](https://github.com/cozy/cozy-ui/commit/f1f0dbc))
+* Use default color instead of adhoc "banner" background color ([56e9ad6](https://github.com/cozy/cozy-ui/commit/56e9ad6))
+* Use intent color in UploadQueue ([e57568e](https://github.com/cozy/cozy-ui/commit/e57568e))
+* Use Typography for BarTitle ([ef3d4b6](https://github.com/cozy/cozy-ui/commit/ef3d4b6))
+
 # [42.2.0](https://github.com/cozy/cozy-ui/compare/v42.1.1...v42.2.0) (2020-12-23)
 
 
