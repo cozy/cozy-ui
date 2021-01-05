@@ -9,9 +9,6 @@ import Navigation from './Navigation'
 
 import styles from './styles.styl'
 
-import PreviousIcon from 'cozy-ui/transpiled/react/Icons/Previous'
-import NextIcon from 'cozy-ui/transpiled/react/Icons/Next'
-
 const ACTIONS_HIDE_DELAY = 3000
 
 class ViewerControls extends Component {
@@ -122,7 +119,6 @@ class ViewerControls extends Component {
           <Navigation
             className={styles['viewer-nav--previous']}
             hidden={hidden}
-            icon={PreviousIcon}
             onMouseEnter={this.showControls}
             onMouseLeave={this.hideControls}
             onClick={onPrevious}
@@ -133,7 +129,6 @@ class ViewerControls extends Component {
           <Navigation
             className={styles['viewer-nav--next']}
             hidden={hidden}
-            icon={NextIcon}
             onMouseEnter={this.showControls}
             onMouseLeave={this.hideControls}
             onClick={onNext}

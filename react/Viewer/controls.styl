@@ -26,22 +26,25 @@
     justify-content      center
     flex-direction       column
 
-    +medium-screen()
-      display none
-
     &--visible:hover
         opacity           1
         transition        none
+
     &--previous
         left 0
         .viewer-nav-arrow
             align-self          flex-start
             margin-left         2.5rem
+            transform           rotate(180deg)
+
     &--next
         right 0
         .viewer-nav-arrow
             align-self          flex-end
             margin-right        2.5rem
+
+    +medium-screen()
+      display none
 
 .viewer-controls.--expanded .viewer-nav
     margin-top 0

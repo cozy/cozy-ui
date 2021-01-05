@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Icon from '../Icon'
+import { default as ArrowIcon } from 'cozy-ui/transpiled/react/Icons/DropdownClose'
 
 import styles from './styles.styl'
 
 const Navigation = ({
   className,
   hidden,
-  icon,
   onMouseEnter,
   onMouseLeave,
   onClick
@@ -24,7 +24,7 @@ const Navigation = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <Icon icon={icon} size="24" className={styles['viewer-nav-arrow']} />
+      <Icon icon={ArrowIcon} size="32" className={styles['viewer-nav-arrow']} />
     </div>
   )
 }
@@ -32,7 +32,6 @@ const Navigation = ({
 Navigation.propTypes = {
   className: PropTypes.string.isRequired,
   hidden: PropTypes.bool.isRequired,
-  icon: PropTypes.func.isRequired,
   onMouseEnter: PropTypes.func.isRequired,
   onMouseLeave: PropTypes.func.isRequired,
   onClick: PropTypes.func.isRequired
