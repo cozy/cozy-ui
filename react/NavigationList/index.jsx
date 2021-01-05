@@ -45,7 +45,7 @@ export const NavigationListHeader = ({ children }) => {
   return isMobile ? (
     <ListSubheader>{children}</ListSubheader>
   ) : (
-    <Typography variant="subtitle1" className="u-mb-1">
+    <Typography variant="subtitle1" color="textSecondary" className="u-mb-1">
       {children}
     </Typography>
   )
