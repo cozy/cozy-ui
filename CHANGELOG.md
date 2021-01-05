@@ -1,3 +1,16 @@
+# [42.4.0](https://github.com/cozy/cozy-ui/compare/v42.3.0...v42.4.0) (2021-01-05)
+
+
+### Bug Fixes
+
+* Text secondary color for navigation section headers ([7a6d8dc](https://github.com/cozy/cozy-ui/commit/7a6d8dc))
+
+
+### Features
+
+* Better support inverted theme for AppSections and Tiles ([d4aea4a](https://github.com/cozy/cozy-ui/commit/d4aea4a))
+* Update snapshot and test ([ba6472d](https://github.com/cozy/cozy-ui/commit/ba6472d))
+
 # [42.3.0](https://github.com/cozy/cozy-ui/compare/v42.2.0...v42.3.0) (2021-01-05)
 
 
