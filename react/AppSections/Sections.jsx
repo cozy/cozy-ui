@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import Typography from '../Typography'
 import { translate } from '../I18n'
 import withBreakpoints from '../helpers/withBreakpoints'
 
@@ -24,15 +25,19 @@ const locales = {
 }
 
 const SectionTitle = ({ children }) => (
-  <h1 className={cx(styles.Sections__title, 'u-title-h1')}>{children}</h1>
+  <Typography variant='h3' className={styles.Sections__title}>
+    {children}
+  </Typography>
 )
 
 const SectionSubtitle = ({ children }) => (
-  <h2 className={cx(styles.Sections__subtitle, 'u-title-h2')}>{children}</h2>
+  <Typography variant='h4' className={styles.Sections__subtitle}>
+    {children}
+  </Typography>
 )
 
 const SectionSubSubtitle = ({ children }) => (
-  <h3 className={styles.Sections__subsubtitle}>{children}</h3>
+  <Typography variant='subtitle1' color='textSecondary' className={styles.Sections__subsubtitle}>{children}</Typography>
 )
 
 const Section = ({ children }) => (

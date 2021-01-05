@@ -1,6 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
-import { Caption } from '../Text'
+import Typography from '../Typography'
 import styles from './styles.styl'
 
 const Tile = ({ children, className, tag: Tag, ...props }) => {
@@ -16,17 +16,17 @@ export const TileDescription = ({ children }) => {
 }
 
 export const TileTitle = ({ children }) => (
-  <h4 className={styles['Tile-title']}>{children}</h4>
+  <Typography variant='h6'>{children}</Typography>
 )
 
 export const TileSubtitle = ({ children }) => (
-  <Caption className={cx(styles['Tile-developer'], 'u-slateGrey')}>
+  <Typography variant='caption' className={styles['Tile-developer']}>
     {children}
-  </Caption>
+  </Typography>
 )
 
 export const TileFooter = ({ children }) => (
-  <Caption className={styles['Tile-status']}>{children}</Caption>
+  <Typography variant='caption' className={styles['Tile-status']}>{children}</Typography>
 )
 
 export const TileIcon = ({ children }) => {

@@ -1,6 +1,6 @@
 import React from 'react'
-import { translate } from '../../I18n'
-import withBreakpoints from '../../helpers/withBreakpoints'
+import { useI18n } from '../../I18n'
+import useBreakpoints from '../../hooks/useBreakpoints'
 import { getTranslatedManifestProperty } from '../helpers'
 import sortBy from 'lodash/sortBy'
 import AppTile from '../../AppTile'
@@ -9,14 +9,13 @@ import styles from './AppsSection.styl'
 const makeNameGetter = t => app => getTranslatedManifestProperty(app, 'name', t)
 
 export const AppsSection = ({
-  t,
   appsList,
   subtitle,
   onAppClick,
-  IconComponent,
-  breakpoints = {}
+  IconComponent
 }) => {
-  const { isMobile } = breakpoints
+  const { isMobile } = useBreakpoints()
+  const { t } = useI18n()
   return (
     <div className={styles.AppsSection}>
       {subtitle}
@@ -39,4 +38,4 @@ export const AppsSection = ({
   )
 }
 
-export default translate()(withBreakpoints()(AppsSection))
+export default AppsSection
