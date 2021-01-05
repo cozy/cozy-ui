@@ -5,7 +5,7 @@ import cx from 'classnames'
 import Hammer from 'hammerjs'
 
 import Toolbar from './Toolbar'
-import Icon from '../Icon'
+import Navigation from './Navigation'
 
 import styles from './styles.styl'
 
@@ -119,43 +119,25 @@ class ViewerControls extends Component {
           />
         )}
         {showNavigation && !isMobile && hasPrevious && (
-          <div
-            role="button"
-            className={cx(
-              styles['viewer-nav'],
-              styles['viewer-nav--previous'],
-              {
-                [styles['viewer-nav--visible']]: !hidden
-              }
-            )}
-            onClick={onPrevious}
+          <Navigation
+            className={styles['viewer-nav--previous']}
+            hidden={hidden}
+            icon={PreviousIcon}
             onMouseEnter={this.showControls}
             onMouseLeave={this.hideControls}
-          >
-            <Icon
-              icon={PreviousIcon}
-              size="24"
-              className={styles['viewer-nav-arrow']}
-            />
-          </div>
+            onClick={onPrevious}
+          />
         )}
         {this.renderChildren(children)}
         {showNavigation && !isMobile && hasNext && (
-          <div
-            role="button"
-            className={cx(styles['viewer-nav'], styles['viewer-nav--next'], {
-              [styles['viewer-nav--visible']]: !hidden
-            })}
-            onClick={onNext}
+          <Navigation
+            className={styles['viewer-nav--next']}
+            hidden={hidden}
+            icon={NextIcon}
             onMouseEnter={this.showControls}
             onMouseLeave={this.hideControls}
-          >
-            <Icon
-              icon={NextIcon}
-              size="24"
-              className={styles['viewer-nav-arrow']}
-            />
-          </div>
+            onClick={onNext}
+          />
         )}
       </div>
     )
