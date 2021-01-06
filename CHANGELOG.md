@@ -1,3 +1,10 @@
+## [42.4.1](https://github.com/cozy/cozy-ui/compare/v42.4.0...v42.4.1) (2021-01-06)
+
+
+### Bug Fixes
+
+* Can or not show status in AppTile ([67de390](https://github.com/cozy/cozy-ui/commit/67de390))
+
 # [42.4.0](https://github.com/cozy/cozy-ui/compare/v42.3.0...v42.4.0) (2021-01-05)
 
 
