@@ -2,7 +2,8 @@ The `Viewer` component can be used to display the content of various file types.
 
 Once rendered, the `Viewer` will take up all the available space in it's container (using `position: absolute`). It can be paired with the `Overlay` component to take up the whole screen.
 
-```
+```jsx
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import Viewer from 'cozy-ui/transpiled/react/Viewer';
 // The DemoProvider inserts a fake cozy-client in the React context.
 import DemoProvider from './docs/DemoProvider';
@@ -52,7 +53,7 @@ const openViewer = () => setState({ viewerOpened: true });
 const closeViewer = () => setState({ viewerOpened: false });
 const onFileChange = (file, nextIndex) => setState({ currentFileIndex: nextIndex });
 
-<div>
+<MuiCozyTheme>
   <DemoProvider>
     <button onClick={openViewer}>
       Open viewer
@@ -70,7 +71,7 @@ const onFileChange = (file, nextIndex) => setState({ currentFileIndex: nextIndex
       </Overlay>
     }
   </DemoProvider>
-</div>
+</MuiCozyTheme>
 ```
 
 ### Using a worker for pdfjs

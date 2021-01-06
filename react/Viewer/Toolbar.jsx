@@ -6,6 +6,11 @@ import { useClient } from 'cozy-client'
 
 import { useI18n } from '../I18n'
 import Button from '../Button'
+import IconButton from '../IconButton'
+import Icon from '../Icon'
+import Typography from '../Typography'
+import PreviousIcon from '../Icons/Previous'
+import DownloadIcon from '../Icons/Download'
 
 import styles from './styles.styl'
 
@@ -31,34 +36,32 @@ const Toolbar = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <div className={cx(styles['viewer-toolbar-actions'])}>
+      {onClose && (
+        <IconButton onClick={onClose} className="u-white">
+          <Icon icon={PreviousIcon} />
+        </IconButton>
+      )}
+      <Typography
+        style={{ marginBottom: '0.32rem' }}
+        className="u-pl-half"
+        variant="h3"
+        color="inherit"
+      >
+        {currentFile.name}
+      </Typography>
+      <div className="u-ml-auto u-ph-1">
         {!isMobile && (
           <Button
+            className="u-white"
+            icon={DownloadIcon}
+            label={t('Viewer.download')}
+            subtle
             onClick={() => {
               client.collection('io.cozy.files').download(currentFile)
             }}
-            icon="download"
-            label={t('Viewer.download')}
-            subtle
           />
         )}
       </div>
-      {onClose && (
-        <div
-          className={styles['viewer-toolbar-close']}
-          onClick={onClose}
-          title={t('Viewer.close')}
-        >
-          <Button
-            theme="secondary"
-            icon="cross"
-            color="white"
-            label={t('Viewer.close')}
-            iconOnly
-            extension="narrow"
-          />
-        </div>
-      )}
     </div>
   )
 }
