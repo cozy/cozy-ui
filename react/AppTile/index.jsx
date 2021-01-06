@@ -40,12 +40,13 @@ export const AppTile = ({
   namePrefix,
   onClick,
   showDeveloper,
+  showStatus,
   IconComponent
 }) => {
   const name = nameProp || app.name
   const { t } = useI18n()
   const { developer = {} } = app
-  const statusToDisplay = getCurrentStatusLabel(app)
+  const statusToDisplay = showStatus && getCurrentStatusLabel(app)
   IconComponent = IconComponent || AppIcon
   return (
     <Tile tag="button" type="button" onClick={onClick}>
@@ -74,11 +75,13 @@ AppTile.propTypes = {
   name: PropTypes.string.isRequired,
   namePrefix: PropTypes.string,
   onClick: PropTypes.func,
-  showDeveloper: PropTypes.bool
+  showDeveloper: PropTypes.bool,
+  showStatus: PropTypes.bool
 }
 
 AppTile.defaultProps = {
-  showDeveloper: true
+  showDeveloper: true,
+  showStatus: true
 }
 
 export default withLocales(locales)(AppTile)
