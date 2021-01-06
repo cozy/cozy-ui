@@ -23,13 +23,11 @@ module.exports = {
         '../react/ButtonAction/index.jsx',
         '../react/Card/index.jsx',
         '../react/Chip/index.jsx',
-        '../react/CompositeRow/index.jsx',
         '../react/Counter/index.jsx',
         '../react/DropdownButton/index.jsx',
         '../react/Icon/index.jsx',
         '../react/IconButton/index.jsx',
         '../react/IconStack/index.jsx',
-        '../react/InlineCard/index.jsx',
         '../react/Paper/index.js',
         '../react/PercentageBar/index.jsx',
         '../react/PercentageLine/index.jsx',
@@ -178,7 +176,9 @@ module.exports = {
       name: 'Deprecated',
       components: () => [
         '../react/Modal/index.jsx',
-        '../react/Text/index.jsx'
+        '../react/Text/index.jsx',
+        '../react/CompositeRow/index.jsx',
+        '../react/InlineCard/index.jsx',
       ]
     }
   ],
