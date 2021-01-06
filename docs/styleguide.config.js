@@ -36,8 +36,7 @@ module.exports = {
         '../react/Progress',
         '../react/ProgressionBanner',
         '../react/Spinner/index.jsx',
-        '../react/Stack/index.jsx',
-        '../react/ThresholdBar/index.jsx'
+        '../react/Stack/index.jsx'
       ]
     },
     {
@@ -81,7 +80,6 @@ module.exports = {
         '../react/AppTitle/index.jsx',
         '../react/Avatar/index.jsx',
         '../react/BottomDrawer/index.jsx',
-        '../react/ContextHeader/index.jsx',
         '../react/Empty/index.jsx',
         '../react/Figure/Figure.jsx',
         '../react/Figure/FigureBlock.jsx',
@@ -100,7 +98,6 @@ module.exports = {
         '../react/Typography/index.jsx',
         '../react/Tooltip/index.jsx',
         '../react/UnorderedList/index.jsx',
-        '../react/Well/index.jsx',
         '../react/Wizard/index.jsx'
       ]
     },
@@ -140,7 +137,6 @@ module.exports = {
         '../react/PasswordExample/index.jsx',
         '../react/Popup/index.jsx',
         '../react/PopupOpener/index.jsx',
-        '../react/PushClientBanner/index.jsx',
         '../react/PushClientButton/index.jsx',
         '../react/QuotaAlert/index.jsx',
         '../react/Viewer/index.jsx'

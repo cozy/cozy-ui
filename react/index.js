@@ -2,7 +2,6 @@ export { default as Alerter } from './Alerter'
 export { default as Badge } from './Badge'
 export { Button, ButtonLink } from './Button'
 export { default as ButtonClient } from './PushClientButton'
-export { default as BannerClient } from './PushClientBanner'
 export { default as Banner } from './Banner'
 export { default as ButtonAction } from './ButtonAction'
 export { default as BottomDrawer } from './BottomDrawer'
@@ -72,10 +71,8 @@ export {
   Uppercase
 } from './Text'
 export { default as Empty } from './Empty'
-export { default as ContextHeader } from './ContextHeader'
 export { default as Circle } from './Circle'
 export { default as Counter } from './Counter'
-export { default as Well } from './Well'
 export { default as Infos } from './Infos'
 export { default as InfosCarrousel } from './InfosCarrousel'
 export { default as InputGroup } from './InputGroup'
@@ -92,7 +89,6 @@ export { default as PercentageLine } from './PercentageLine'
 export { default as Popup } from './Popup'
 export { default as IconStack } from './IconStack'
 export { default as QuotaAlert } from './QuotaAlert'
-export { default as ThresholdBar } from './ThresholdBar'
 export {
   default as ViewStack,
   ModalStack,
