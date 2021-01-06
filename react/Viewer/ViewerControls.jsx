@@ -5,6 +5,7 @@ import cx from 'classnames'
 import Hammer from 'hammerjs'
 import { withStyles } from '@material-ui/core/styles'
 
+import { toolbarPropsPropType } from './index'
 import { infoWidth } from './InformationPanel'
 import Toolbar from './Toolbar'
 import Navigation from './Navigation'
@@ -97,13 +98,14 @@ class ViewerControls extends Component {
       onNext,
       isMobile,
       expanded,
-      showToolbar,
+      toolbarProps,
       showNavigation,
       showInfoPanel,
       children,
       isMobileApp,
       classes
     } = this.props
+    const { showToolbar, showClose } = toolbarProps
     const { hidden } = this.state
 
     return (
@@ -119,7 +121,7 @@ class ViewerControls extends Component {
         {showToolbar && (
           <Toolbar
             currentFile={currentFile}
-            onClose={onClose}
+            onClose={showClose && onClose}
             isMobileApp={isMobileApp}
             onMouseEnter={this.showControls}
             onMouseLeave={this.hideControls}
@@ -159,7 +161,7 @@ ViewerControls.propTypes = {
   onNext: PropTypes.func.isRequired,
   isMobile: PropTypes.bool.isRequired,
   expanded: PropTypes.bool.isRequired,
-  showToolbar: PropTypes.bool.isRequired,
+  toolbarProps: PropTypes.shape(toolbarPropsPropType),
   showNavigation: PropTypes.bool.isRequired,
   isMobileApp: PropTypes.bool.isRequired,
   showInfoPanel: PropTypes.bool

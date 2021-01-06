@@ -120,7 +120,7 @@ export class Viewer extends Component {
       className,
       currentIndex,
       dark,
-      showToolbar,
+      toolbarProps,
       showNavigation,
       showInfo,
       breakpoints: { isDesktop }
@@ -144,7 +144,7 @@ export class Viewer extends Component {
           onNext={this.onNext}
           isMobile={isMobileDevice()}
           expanded={expanded}
-          showToolbar={showToolbar}
+          toolbarProps={toolbarProps}
           showNavigation={showNavigation}
           isMobileApp={isMobileApp()}
           showInfoPanel={showInfoPanel}
@@ -157,8 +157,15 @@ export class Viewer extends Component {
   }
 }
 
+export const toolbarPropsPropType = {
+  /** Whether to show the toolbar or not. Note that the built-in close button is in the toolbar. */
+  showToolbar: PropTypes.bool,
+  /** Whether to show close button in toolbar */
+  showClose: PropTypes.bool
+}
+
 Viewer.propTypes = {
-  /** One or more `io;cozy.files` to display */
+  /** One or more `io.cozy.files` to display */
   files: PropTypes.arrayOf(FileDoctype).isRequired,
   /** Index of the file to show */
   currentIndex: PropTypes.number,
@@ -169,8 +176,7 @@ Viewer.propTypes = {
   onChangeRequest: PropTypes.func,
   /** Switch between light and dark mode */
   dark: PropTypes.bool,
-  /** Whether to show the toolbar or not. Note that the built-in close button is in the toolbar. */
-  showToolbar: PropTypes.bool,
+  toolbarProps: PropTypes.shape(toolbarPropsPropType),
   /** Whether to show left and right arrows to navigate between files */
   showNavigation: PropTypes.bool,
   /** A render prop that is called when a file can't be displayed */
@@ -182,7 +188,7 @@ Viewer.propTypes = {
 Viewer.defaultProps = {
   currentIndex: 0,
   dark: true,
-  showToolbar: true,
+  toolbarProps: { display: true, showClose: true },
   showNavigation: true,
   showInfo: false
 }

@@ -4,6 +4,8 @@ Once rendered, the `Viewer` will take up all the available space in it's contain
 
 ```jsx
 import Variants from 'docs/components/Variants';
+import Card from 'cozy-ui/transpiled/react/Card';
+import Checkbox from 'cozy-ui/transpiled/react/Checkbox';
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import Viewer from 'cozy-ui/transpiled/react/Viewer';
 // The DemoProvider inserts a fake cozy-client in the React context.
@@ -47,15 +49,17 @@ const files = [
 // The host app will usually need a small wrapper to display the Viewer. This is a very small example of such a wrapper that handles opening, closing, and navigating between files.
 initialState = {
   viewerOpened: false,
-  currentFileIndex: 0
+  currentFileIndex: 0,
+  close: true
 };
 
 const initialVariants = [
-  { infoPanel: false }
+  { infoPanel: false, navigation: true, toolbar: true }
 ];
 
 const openViewer = () => setState({ viewerOpened: true });
 const closeViewer = () => setState({ viewerOpened: false });
+const handleToggleToolbarClose = () => setState({ close: !state.close });
 const onFileChange = (file, nextIndex) => setState({ currentFileIndex: nextIndex });
 
 <MuiCozyTheme>
@@ -63,6 +67,17 @@ const onFileChange = (file, nextIndex) => setState({ currentFileIndex: nextIndex
     <Variants initialVariants={initialVariants}>{
         variant => (
           <>
+            {variant.toolbar && (
+              <Card className="u-mb-1">
+                <div className="u-dib u-mr-1">Toolbar props :</div>
+                <Checkbox
+                  className="u-dib"
+                  label="Close"
+                  checked={state.close}
+                  onChange={handleToggleToolbarClose}
+                />
+              </Card>
+            )}
             <button onClick={openViewer}>Open viewer</button>
             {state.viewerOpened && (
               <Overlay>
@@ -71,8 +86,11 @@ const onFileChange = (file, nextIndex) => setState({ currentFileIndex: nextIndex
                   currentIndex={state.currentFileIndex}
                   onCloseRequest={closeViewer}
                   onChangeRequest={onFileChange}
-                  showNavigation={true}
-                  showToolbar={true}
+                  showNavigation={variant.navigation}
+                  toolbarProps={{
+                    showToolbar: variant.toolbar,
+                    showClose: state.close
+                  }}
                   showInfo={variant.infoPanel}
                 />
               </Overlay>
