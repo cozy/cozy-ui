@@ -2395,14 +2395,13 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
       <div class=\\"u-media-grow u-stack-xs \\">
         <div class=\\"u-media u-row-m\\">
           <div class=\\"styles__bd___1Uv-F\\">
-            <div class=\\"u-title-h4\\">12/12/12 12:12</div>
-            <div class=\\"u-title-h3\\">Current Version</div>
+            <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73\\">12/12/12 12:12</h6>
+            <h5 class=\\"MuiTypography-root-56 MuiTypography-h5-72\\">Current Version</h5>
           </div>
           <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
             </svg></div>
-        </div>
-        <div class=\\"u-caption\\">10ko</div>
+        </div><span class=\\"MuiTypography-root-56 MuiTypography-caption-66 MuiTypography-colorTextSecondary-89\\">10ko</span>
       </div>
     </div>
   </div>
@@ -2416,14 +2415,13 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
       <div class=\\"u-media-grow u-stack-xs \\">
         <div class=\\"u-media u-row-m\\">
           <div class=\\"styles__bd___1Uv-F\\">
-            <div class=\\"u-title-h4\\">12/12/12 12:10</div>
-            <div class=\\"u-title-h3\\"></div>
+            <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73\\">12/12/12 12:10</h6>
+            <h5 class=\\"MuiTypography-root-56 MuiTypography-h5-72\\"></h5>
           </div>
           <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
             </svg></div>
-        </div>
-        <div class=\\"u-caption\\">9ko</div>
+        </div><span class=\\"MuiTypography-root-56 MuiTypography-caption-66 MuiTypography-colorTextSecondary-89\\">9ko</span>
       </div>
     </div>
   </div>
@@ -2437,14 +2435,13 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
       <div class=\\"u-media-grow u-stack-xs \\">
         <div class=\\"u-media u-row-m\\">
           <div class=\\"styles__bd___1Uv-F\\">
-            <div class=\\"u-title-h4\\">12/12/12 12:09</div>
-            <div class=\\"u-title-h3\\">V2</div>
+            <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73\\">12/12/12 12:09</h6>
+            <h5 class=\\"MuiTypography-root-56 MuiTypography-h5-72\\">V2</h5>
           </div>
           <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
             </svg></div>
-        </div>
-        <div class=\\"u-caption\\">9ko</div>
+        </div><span class=\\"MuiTypography-root-56 MuiTypography-caption-66 MuiTypography-colorTextSecondary-89\\">9ko</span>
       </div>
     </div>
   </div>
@@ -2458,14 +2455,13 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
       <div class=\\"u-media-grow u-stack-xs \\">
         <div class=\\"u-media u-row-m\\">
           <div class=\\"styles__bd___1Uv-F\\">
-            <div class=\\"u-title-h4\\">12/12/12 12:07</div>
-            <div class=\\"u-title-h3\\"></div>
+            <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73\\">12/12/12 12:07</h6>
+            <h5 class=\\"MuiTypography-root-56 MuiTypography-h5-72\\"></h5>
           </div>
           <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
             </svg></div>
-        </div>
-        <div class=\\"u-caption\\">9ko</div>
+        </div><span class=\\"MuiTypography-root-56 MuiTypography-caption-66 MuiTypography-colorTextSecondary-89\\">9ko</span>
       </div>
     </div>
   </div>
@@ -2479,14 +2475,13 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
       <div class=\\"u-media-grow u-stack-xs \\">
         <div class=\\"u-media u-row-m\\">
           <div class=\\"styles__bd___1Uv-F\\">
-            <div class=\\"u-title-h4\\">12/12/12 12:05</div>
-            <div class=\\"u-title-h3\\"></div>
+            <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73\\">12/12/12 12:05</h6>
+            <h5 class=\\"MuiTypography-root-56 MuiTypography-h5-72\\"></h5>
           </div>
           <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
             </svg></div>
-        </div>
-        <div class=\\"u-caption\\">9ko</div>
+        </div><span class=\\"MuiTypography-root-56 MuiTypography-caption-66 MuiTypography-colorTextSecondary-89\\">9ko</span>
       </div>
     </div>
   </div>
@@ -2500,14 +2495,13 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
       <div class=\\"u-media-grow u-stack-xs \\">
         <div class=\\"u-media u-row-m\\">
           <div class=\\"styles__bd___1Uv-F\\">
-            <div class=\\"u-title-h4\\">12/12/12 12:04</div>
-            <div class=\\"u-title-h3\\"></div>
+            <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73\\">12/12/12 12:04</h6>
+            <h5 class=\\"MuiTypography-root-56 MuiTypography-h5-72\\"></h5>
           </div>
           <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
             </svg></div>
-        </div>
-        <div class=\\"u-caption\\">9ko</div>
+        </div><span class=\\"MuiTypography-root-56 MuiTypography-caption-66 MuiTypography-colorTextSecondary-89\\">9ko</span>
       </div>
     </div>
   </div>
@@ -2521,14 +2515,13 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
       <div class=\\"u-media-grow u-stack-xs \\">
         <div class=\\"u-media u-row-m\\">
           <div class=\\"styles__bd___1Uv-F\\">
-            <div class=\\"u-title-h4\\">12/12/12 12:03</div>
-            <div class=\\"u-title-h3\\">V1</div>
+            <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73\\">12/12/12 12:03</h6>
+            <h5 class=\\"MuiTypography-root-56 MuiTypography-h5-72\\">V1</h5>
           </div>
           <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
             </svg></div>
-        </div>
-        <div class=\\"u-caption\\">9ko</div>
+        </div><span class=\\"MuiTypography-root-56 MuiTypography-caption-66 MuiTypography-colorTextSecondary-89\\">9ko</span>
       </div>
     </div>
   </div>
@@ -7612,19 +7605,6 @@ exports[`Table should render examples: Table 1`] = `
 </div>"
 `;
 
-exports[`Tabs should render examples: Tabs 1`] = `
-"<div>
-  <div class=\\"MuiTabs-root-247\\" aria-label=\\"simple tabs example\\">
-    <div class=\\"MuiTabs-flexContainer-248\\">
-      <div class=\\"MuiTabs-scroller-250 MuiTabs-fixed-251\\" style=\\"margin-bottom: 0px;\\" role=\\"tablist\\">
-        <div class=\\"MuiTabs-flexContainer-248\\"><button class=\\"MuiButtonBase-root-211 MuiTab-root-256 MuiTab-textColorInherit-258 MuiTab-selected-261\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"true\\" id=\\"simple-tab-0\\" aria-controls=\\"simple-tabpanel-0\\"><span class=\\"MuiTab-wrapper-264\\"><span class=\\"MuiTab-labelContainer-265\\"><span class=\\"MuiTab-label-266\\">Item One</span></span></span><span class=\\"MuiTouchRipple-root-214\\"></span></button><button class=\\"MuiButtonBase-root-211 MuiTab-root-256 MuiTab-textColorInherit-258\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-1\\" aria-controls=\\"simple-tabpanel-1\\"><span class=\\"MuiTab-wrapper-264\\"><span class=\\"MuiTab-labelContainer-265\\"><span class=\\"MuiTab-label-266\\">Item Two</span></span></span><span class=\\"MuiTouchRipple-root-214\\"></span></button><button class=\\"MuiButtonBase-root-211 MuiTab-root-256 MuiTab-textColorInherit-258\\" tabindex=\\"0\\" type=\\"button\\" role=\\"tab\\" aria-selected=\\"false\\" id=\\"simple-tab-2\\" aria-controls=\\"simple-tabpanel-2\\"><span class=\\"MuiTab-wrapper-264\\"><span class=\\"MuiTab-labelContainer-265\\"><span class=\\"MuiTab-label-266\\">Item Three</span></span></span><span class=\\"MuiTouchRipple-root-214\\"></span></button></div><span class=\\"MuiPrivateTabIndicator-root-268 MuiPrivateTabIndicator-colorSecondary-270 MuiTabs-indicator-255\\" style=\\"left: 0px; width: 0px;\\"></span>
-      </div>
-    </div>
-  </div>
-  <hr class=\\"MuiDivider-root-271\\">
-</div>"
-`;
-
 exports[`Text should render examples: Text 1`] = `
 "<div>
   <div class=\\"u-text\\">This a standard text</div>
@@ -7708,36 +7688,6 @@ exports[`Textarea should render examples: Textarea 6`] = `
 "<div>
   <div><textarea placeholder=\\"\\" class=\\"styles__c-textarea___D7EEH\\" name=\\"my-field\\"></textarea></div>
 </div>"
-`;
-
-exports[`ThresholdBar should render examples: ThresholdBar 1`] = `
-"<div>val: 50, threshold: 100<div class=\\"styles__ThresholdBar___R_ADM\\">
-    <div class=\\"styles__ThresholdBar__bg___3EmkC\\">
-      <div style=\\"width: 50%;\\" class=\\"styles__ThresholdBar__inner___8PPM_\\"></div>
-    </div>
-  </div><br>val: 25, threshold: 100<div class=\\"styles__ThresholdBar___R_ADM\\">
-    <div class=\\"styles__ThresholdBar__bg___3EmkC\\">
-      <div style=\\"width: 25%;\\" class=\\"styles__ThresholdBar__inner___8PPM_\\"></div>
-    </div>
-  </div><br>val: 50, threshold: 100<div class=\\"styles__ThresholdBar___R_ADM\\">
-    <div class=\\"styles__ThresholdBar__bg___3EmkC\\">
-      <div style=\\"width: 50%;\\" class=\\"styles__ThresholdBar__inner___8PPM_\\"></div>
-    </div>
-  </div><br>val: 200, threshold: 100<div class=\\"styles__ThresholdBar___R_ADM styles__ThresholdBar--exceeded___22r2C\\">
-    <div class=\\"styles__ThresholdBar__bg___3EmkC\\">
-      <div style=\\"width: 50%;\\" class=\\"styles__ThresholdBar__inner___8PPM_\\"></div>
-    </div>
-    <div class=\\"styles__ThresholdBar__tick___2D_0Q\\" style=\\"left: 50%;\\"></div>
-  </div><br>val: 120, threshold: 100<div class=\\"styles__ThresholdBar___R_ADM styles__ThresholdBar--exceeded___22r2C\\">
-    <div class=\\"styles__ThresholdBar__bg___3EmkC\\">
-      <div style=\\"width: 83.33333333333334%;\\" class=\\"styles__ThresholdBar__inner___8PPM_\\"></div>
-    </div>
-    <div class=\\"styles__ThresholdBar__tick___2D_0Q\\" style=\\"left: 83.33333333333334%;\\"></div>
-  </div><br><input type=\\"range\\" step=\\"1\\" min=\\"0\\" max=\\"200\\" value=\\"0\\">val: 25, threshold: 100<div class=\\"styles__ThresholdBar___R_ADM\\">
-    <div class=\\"styles__ThresholdBar__bg___3EmkC\\">
-      <div style=\\"width: 25%;\\" class=\\"styles__ThresholdBar__inner___8PPM_\\"></div>
-    </div>
-  </div><br></div>"
 `;
 
 exports[`UnorderedList should render examples: UnorderedList 1`] = `
