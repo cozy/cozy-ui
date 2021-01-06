@@ -8,7 +8,7 @@ import Icon from '../Icon'
 import Spinner from '../Spinner'
 import withLocales from '../I18n/withLocales'
 import { useI18n } from '../I18n'
-import ThresholdBar from '../ThresholdBar'
+import LinearProgress from '@material-ui/core/LinearProgress'
 import { Caption } from '../Text'
 import { Media, Bd, Img } from '../Media'
 
@@ -78,14 +78,16 @@ const RemainingTime = ({ durationInSec }) => {
 const FileUploadProgress = ({ progress }) => {
   return (
     <div className={styles['upload-queue__upload-progress']}>
-      <ThresholdBar
-        className={styles['upload-queue__threshold-bar']}
-        threshold={progress.total}
-        value={progress.loaded}
-      />
-      {progress.remainingTime ? (
-        <RemainingTime durationInSec={progress.remainingTime} />
-      ) : null}
+      <div className='u-flex-grow-1 u-pr-1'>
+        <LinearProgress variant="determinate"
+          value={progress.loaded / progress.total * 100}
+        />
+      </div>
+      <div className='u-flex-shrink'>
+        {progress.remainingTime ? (
+          <RemainingTime durationInSec={progress.remainingTime} />
+        ) : null}
+      </div>
     </div>
   )
 }
