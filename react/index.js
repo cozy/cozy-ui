@@ -18,16 +18,6 @@ export {
   genNavLink
 } from './Nav'
 export { default as ListItemText } from './ListItemText'
-export {
-  default as Modal,
-  ModalContent,
-  ModalSection,
-  ModalFooter,
-  ModalButtons,
-  ModalDescription,
-  ModalHeader,
-  ModalBrandedHeader
-} from './Modal'
 export { default as SelectionBar } from './SelectionBar'
 export { default as IntentIframe } from './IntentIframe'
 export { default as IntentOpener } from './IntentOpener'
@@ -61,15 +51,6 @@ export { default as IntentHeader } from './IntentHeader'
 export { default as Panel } from './Panel'
 export { default as SelectBox, SelectBoxWithFixedOptions } from './SelectBox'
 export { default as Chip } from './Chip'
-export {
-  default as Text,
-  MainTitle,
-  Title,
-  SubTitle,
-  Bold,
-  Caption,
-  Uppercase
-} from './Text'
 export { default as Empty } from './Empty'
 export { default as Circle } from './Circle'
 export { default as Counter } from './Counter'

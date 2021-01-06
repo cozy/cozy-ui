@@ -2,6 +2,9 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
+/**
+ * @deprecated Please use [Typography](#/Typography)
+ */
 export const BaseText = React.forwardRef((props, ref) => {
   const { className, children, tag, ellipsis, ...restProps } = props
   const Tag = tag

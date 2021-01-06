@@ -89,12 +89,10 @@ module.exports = {
         '../react/LoadMore/index.jsx',
         '../react/Media/Media.jsx',
         '../react/MidEllipsis/index.jsx',
-        '../react/Modal/index.jsx',
         '../react/CozyDialogs',
         '../react/Dialog',
         '../react/OrderedList/index.jsx',
         '../react/Table/index.jsx',
-        '../react/Text/index.jsx',
         '../react/Typography/index.jsx',
         '../react/Tooltip/index.jsx',
         '../react/UnorderedList/index.jsx',
@@ -174,6 +172,13 @@ module.exports = {
         '../react/ContactsList',
         '../react/ContactsListModal',
         '../react/ContactPicker'
+      ]
+    },
+    {
+      name: 'Deprecated',
+      components: () => [
+        '../react/Modal/index.jsx',
+        '../react/Text/index.jsx'
       ]
     }
   ],

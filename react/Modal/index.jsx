@@ -27,7 +27,7 @@ const ModalTitle = props => {
 export const BODY_CLASS = 'has-modal'
 
 /**
- * @deprecated Please use CozyDialogs or Dialog.
+ * @deprecated Please use [CozyDialogs](#/CozyDialogs) or [Dialog](#/Dialog).
  */
 class Modal extends Component {
   constructor(props) {
