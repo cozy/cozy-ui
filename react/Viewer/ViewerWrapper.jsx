@@ -17,7 +17,7 @@ const ViewerWrapper = ({ className, children, dark }) => (
 
 ViewerWrapper.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.element,
+  children: PropTypes.array,
   dark: PropTypes.bool
 }
 

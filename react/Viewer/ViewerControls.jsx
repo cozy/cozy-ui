@@ -3,13 +3,21 @@ import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
 import cx from 'classnames'
 import Hammer from 'hammerjs'
+import { withStyles } from '@material-ui/core/styles'
 
+import { infoWidth } from './InformationPanel'
 import Toolbar from './Toolbar'
 import Navigation from './Navigation'
 
 import styles from './styles.styl'
 
 const ACTIONS_HIDE_DELAY = 3000
+
+const customStyles = () => ({
+  viewerControlsWithInfo: {
+    width: `calc(100% - ${infoWidth}) !important`
+  }
+})
 
 class ViewerControls extends Component {
   state = {
@@ -91,15 +99,18 @@ class ViewerControls extends Component {
       expanded,
       showToolbar,
       showNavigation,
+      showInfoPanel,
       children,
-      isMobileApp
+      isMobileApp,
+      classes
     } = this.props
     const { hidden } = this.state
 
     return (
       <div
         className={cx(styles['viewer-controls'], {
-          [styles['viewer-controls--expanded']]: expanded
+          [styles['viewer-controls--expanded']]: expanded,
+          [classes.viewerControlsWithInfo]: showInfoPanel
         })}
         ref={wrapped => {
           this.wrapped = wrapped
@@ -150,7 +161,8 @@ ViewerControls.propTypes = {
   expanded: PropTypes.bool.isRequired,
   showToolbar: PropTypes.bool.isRequired,
   showNavigation: PropTypes.bool.isRequired,
-  isMobileApp: PropTypes.bool.isRequired
+  isMobileApp: PropTypes.bool.isRequired,
+  showInfoPanel: PropTypes.bool
 }
 
-export default ViewerControls
+export default withStyles(customStyles)(ViewerControls)

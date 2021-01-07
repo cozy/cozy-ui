@@ -3,6 +3,7 @@ The `Viewer` component can be used to display the content of various file types.
 Once rendered, the `Viewer` will take up all the available space in it's container (using `position: absolute`). It can be paired with the `Overlay` component to take up the whole screen.
 
 ```jsx
+import Variants from 'docs/components/Variants';
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import Viewer from 'cozy-ui/transpiled/react/Viewer';
 // The DemoProvider inserts a fake cozy-client in the React context.
@@ -49,27 +50,37 @@ initialState = {
   currentFileIndex: 0
 };
 
+const initialVariants = [
+  { infoPanel: false }
+];
+
 const openViewer = () => setState({ viewerOpened: true });
 const closeViewer = () => setState({ viewerOpened: false });
 const onFileChange = (file, nextIndex) => setState({ currentFileIndex: nextIndex });
 
 <MuiCozyTheme>
   <DemoProvider>
-    <button onClick={openViewer}>
-      Open viewer
-    </button>
-    { state.viewerOpened &&
-      <Overlay>
-        <Viewer
-          files={files}
-          currentIndex={state.currentFileIndex}
-          onCloseRequest={closeViewer}
-          onChangeRequest={onFileChange}
-          showNavigation={true}
-          showToolbar={true}
-        />
-      </Overlay>
-    }
+    <Variants initialVariants={initialVariants}>{
+        variant => (
+          <>
+            <button onClick={openViewer}>Open viewer</button>
+            {state.viewerOpened && (
+              <Overlay>
+                <Viewer
+                  files={files}
+                  currentIndex={state.currentFileIndex}
+                  onCloseRequest={closeViewer}
+                  onChangeRequest={onFileChange}
+                  showNavigation={true}
+                  showToolbar={true}
+                  showInfo={variant.infoPanel}
+                />
+              </Overlay>
+            )}
+          </>
+        )
+      }
+    </Variants>
   </DemoProvider>
 </MuiCozyTheme>
 ```
