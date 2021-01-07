@@ -4,7 +4,6 @@ import Circle from '../Circle'
 import { Media, Bd, Img } from '../Media'
 import Typography from '../Typography'
 import Icon from '../Icon'
-import palette from '../palette'
 
 import styles from './styles.styl'
 
@@ -31,20 +30,28 @@ const HistoryRow = ({
               size={tag ? 'small' : 'xsmall'}
               className={styles.HistoryRowCircle}
             >
-              {tag && <Icon icon={'file'} color='var(--primaryTextColor)' />}
+              {tag && <Icon icon={'file'} color="var(--primaryTextColor)" />}
             </Circle>
           </Img>
         </div>
         <div className="u-media u-media-grow u-stack-xs u-row-m">
           <Bd>
-            <Typography gutterBottom variant='h6'>{primaryText}</Typography>
-            <Typography gutterBottom variant='h6'>{tag}</Typography>
-            {secondaryText ? <Typography gutterBottom variant='caption' color='textSecondary'>{secondaryText}</Typography> : null}
+            <Typography gutterBottom variant="h6">
+              {primaryText}
+            </Typography>
+            <Typography gutterBottom variant="h6">
+              {tag}
+            </Typography>
+            {secondaryText ? (
+              <Typography gutterBottom variant="caption" color="textSecondary">
+                {secondaryText}
+              </Typography>
+            ) : null}
           </Bd>
           <Img>
             <Icon
               className="u-c-pointer"
-              color='var(--secondaryTextColor)'
+              color="var(--secondaryTextColor)"
               icon={DownloadIcon}
               onClick={() => downloadLink()}
             />
