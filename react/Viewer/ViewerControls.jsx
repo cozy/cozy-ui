@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import classNames from 'classnames'
-import Hammer from 'hammerjs'
 import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
-import { withClient } from 'cozy-client'
-import { translate } from '../I18n'
-import Button from '../Button'
+import classNames from 'classnames'
+import Hammer from 'hammerjs'
+
+import Toolbar from './Toolbar'
 import Icon from '../Icon'
 
 import styles from './styles.styl'
@@ -76,7 +75,6 @@ class ViewerControls extends Component {
 
   render() {
     const {
-      t,
       currentFile,
       onClose,
       hasPrevious,
@@ -88,8 +86,7 @@ class ViewerControls extends Component {
       showToolbar,
       showNavigation,
       children,
-      isMobileApp,
-      client
+      isMobileApp
     } = this.props
     const { hidden } = this.state
 
@@ -103,45 +100,14 @@ class ViewerControls extends Component {
         }}
       >
         {showToolbar && (
-          <div
-            className={classNames(styles['viewer-toolbar'], {
-              [styles['viewer-toolbar--hidden']]: hidden,
-              [styles['viewer-toolbar--mobilebrowser']]:
-                !isMobileApp && isMobile
-            })}
-            role="viewer-toolbar"
+          <Toolbar
+            currentFile={currentFile}
+            onClose={onClose}
+            isMobileApp={isMobileApp}
             onMouseEnter={this.showControls}
             onMouseLeave={this.hideControls}
-          >
-            <div className={classNames(styles['viewer-toolbar-actions'])}>
-              {!isMobile && (
-                <Button
-                  onClick={() => {
-                    client.collection('io.cozy.files').download(currentFile)
-                  }}
-                  icon="download"
-                  label={t('Viewer.download')}
-                  subtle
-                />
-              )}
-            </div>
-            {onClose && (
-              <div
-                className={styles['viewer-toolbar-close']}
-                onClick={onClose}
-                title={t('Viewer.close')}
-              >
-                <Button
-                  theme="secondary"
-                  icon="cross"
-                  color="white"
-                  label={t('Viewer.close')}
-                  iconOnly
-                  extension="narrow"
-                />
-              </div>
-            )}
-          </div>
+            isMobile={isMobile}
+          />
         )}
         {showNavigation && !isMobile && hasPrevious && (
           <div
@@ -200,7 +166,6 @@ class ViewerControls extends Component {
   }
 }
 ViewerControls.propTypes = {
-  client: PropTypes.object.isRequired,
   currentFile: PropTypes.object.isRequired,
   onClose: PropTypes.func.isRequired,
   hasPrevious: PropTypes.bool.isRequired,
@@ -213,4 +178,4 @@ ViewerControls.propTypes = {
   showNavigation: PropTypes.bool.isRequired,
   isMobileApp: PropTypes.bool.isRequired
 }
-export default translate()(withClient(ViewerControls))
+export default ViewerControls
