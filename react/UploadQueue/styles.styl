@@ -9,9 +9,9 @@
 $coz-bar-size=3rem
 
 .upload-queue
-    border   .0625rem solid var(--silver)
+    border   .0625rem solid var(--dividerColor)
     border-radius    .25rem
-    background-color var(--white)
+    background-color var(--paperBackgroundColor)
     display          flex
     flex-direction   column
     max-width 90%
@@ -47,8 +47,7 @@ $coz-bar-size=3rem
     transform  translate(0)
 
 .upload-queue-header
-    background-color var(--paleGrey)
-    color            var(--charcoalGrey)
+    background-color var(--defaultBackgroundColor)
     font-weight      bold
     margin           0
     padding          .5rem 1rem .5rem
@@ -76,12 +75,6 @@ progress.upload-queue-progress
     height     .125rem
     margin     0
 
-progress.upload-queue-progress::-webkit-progress-bar
-    background-color var(--silver)
-progress.upload-queue-progress::-webkit-progress-value
-    background-color var(--dodgerBlue)
-progress.upload-queue-progress::-moz-progress-bar
-    background-color var(--dodgerBlue)
 
 .upload-queue-content
     overflow auto
@@ -98,36 +91,20 @@ progress.upload-queue-progress::-moz-progress-bar
     flex-direction column
 
 .upload-queue-item--error
-    background-color var(--chablis)
+    background-color var(--errorBackgroundLight)
 
 .upload-queue-item--done
-    background-color var(--paleGrey)
+    background-color var(--defaultBackgroundColor)
 
-.upload-queue-item
-    height          3rem
-    box-sizing      border-box
-    border-bottom   .0625rem solid var(--silver)
+.item-file
+    user-select none
+    overflow hidden
 
-    .item-file
-        user-select none
-        color          var(--charcoalGrey)
-        overflow hidden
-
-    .item-ext
-        color var(--coolGrey)
-
-    .item-status
-        flex       0 0 15%
-        text-align right
-        white-space nowrap
-        padding-left (spacing_values.m)
-
-    .item-pending
-        text-transform uppercase
-        color          var(--dodgerBlue)
-        font-size      .75rem
-        font-weight    bold
-        line-height    2rem
+.item-status
+    flex       0 0 15%
+    text-align right
+    white-space nowrap
+    padding-left (spacing_values.m)
 
 +medium-screen()
     // we need to cover the border-bottom of the cozy-bar
@@ -136,7 +113,7 @@ progress.upload-queue-progress::-moz-progress-bar
     .upload-queue
         border-radius 0
         border 0
-        background-color var(--white)
+        background-color var(--paperColor)
         box-shadow none
         width 100%
         max-width 100%
@@ -146,7 +123,7 @@ progress.upload-queue-progress::-moz-progress-bar
 
     .upload-queue-header
         background 0
-        color var(--dodgerBlue)
+        color var(--primaryColor)
         text-transform uppercase
 
     .upload-queue-content
@@ -167,7 +144,7 @@ progress.upload-queue-progress::-moz-progress-bar
             width 100%
             height $coz-bar-border-size
             content ''
-            background var(--white)
+            background var(--paperColor)
 
         &.upload-queue--visible
             max-height 30%

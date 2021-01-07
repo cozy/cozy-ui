@@ -653,6 +653,14 @@ invertedTheme.overrides = {
         }
       }
     }
+  },
+  MuiLinearProgress: {
+    colorPrimary: {
+      backgroundColor: 'rgba(255,255,255,0.2)'
+    },
+    colorSecondary: {
+      backgroundColor: 'rgba(255,255,255,0.2)'
+    }
   }
 }
 
