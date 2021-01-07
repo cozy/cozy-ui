@@ -34,7 +34,7 @@ const styles = {
 
 <div style={styles.empty}>
   <Empty id='empty' icon="cozy" title="An error occured" text="It's maybe nothing, just refresh to be sure">
-    <Button label="Try refreshing" />
+    <Button className='u-mt-1' label="Try refreshing" />
   </Empty>
 </div>
 ```
