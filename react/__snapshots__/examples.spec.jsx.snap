@@ -2390,7 +2390,7 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
       </div>
       <div class=\\"u-media u-media-grow u-stack-xs u-row-m\\">
         <div class=\\"styles__bd___1Uv-F\\">
-          <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73 MuiTypography-gutterBottom-83\\">12/12/12 12:12</h6>
+          <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73\\">12/12/12 12:12</h6>
           <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73 MuiTypography-gutterBottom-83\\">Current Version</h6><span class=\\"MuiTypography-root-56 MuiTypography-caption-66 MuiTypography-colorTextSecondary-89 MuiTypography-gutterBottom-83\\">10ko</span>
         </div>
         <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
@@ -2408,7 +2408,7 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
       </div>
       <div class=\\"u-media u-media-grow u-stack-xs u-row-m\\">
         <div class=\\"styles__bd___1Uv-F\\">
-          <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73 MuiTypography-gutterBottom-83\\">12/12/12 12:10</h6>
+          <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73\\">12/12/12 12:10</h6>
           <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73 MuiTypography-gutterBottom-83\\"></h6><span class=\\"MuiTypography-root-56 MuiTypography-caption-66 MuiTypography-colorTextSecondary-89 MuiTypography-gutterBottom-83\\">9ko</span>
         </div>
         <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
@@ -2426,7 +2426,7 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
       </div>
       <div class=\\"u-media u-media-grow u-stack-xs u-row-m\\">
         <div class=\\"styles__bd___1Uv-F\\">
-          <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73 MuiTypography-gutterBottom-83\\">12/12/12 12:09</h6>
+          <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73\\">12/12/12 12:09</h6>
           <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73 MuiTypography-gutterBottom-83\\">V2</h6><span class=\\"MuiTypography-root-56 MuiTypography-caption-66 MuiTypography-colorTextSecondary-89 MuiTypography-gutterBottom-83\\">9ko</span>
         </div>
         <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
@@ -2444,7 +2444,7 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
       </div>
       <div class=\\"u-media u-media-grow u-stack-xs u-row-m\\">
         <div class=\\"styles__bd___1Uv-F\\">
-          <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73 MuiTypography-gutterBottom-83\\">12/12/12 12:07</h6>
+          <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73\\">12/12/12 12:07</h6>
           <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73 MuiTypography-gutterBottom-83\\"></h6><span class=\\"MuiTypography-root-56 MuiTypography-caption-66 MuiTypography-colorTextSecondary-89 MuiTypography-gutterBottom-83\\">9ko</span>
         </div>
         <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
@@ -2462,7 +2462,7 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
       </div>
       <div class=\\"u-media u-media-grow u-stack-xs u-row-m\\">
         <div class=\\"styles__bd___1Uv-F\\">
-          <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73 MuiTypography-gutterBottom-83\\">12/12/12 12:05</h6>
+          <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73\\">12/12/12 12:05</h6>
           <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73 MuiTypography-gutterBottom-83\\"></h6><span class=\\"MuiTypography-root-56 MuiTypography-caption-66 MuiTypography-colorTextSecondary-89 MuiTypography-gutterBottom-83\\">9ko</span>
         </div>
         <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
@@ -2480,7 +2480,7 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
       </div>
       <div class=\\"u-media u-media-grow u-stack-xs u-row-m\\">
         <div class=\\"styles__bd___1Uv-F\\">
-          <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73 MuiTypography-gutterBottom-83\\">12/12/12 12:04</h6>
+          <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73\\">12/12/12 12:04</h6>
           <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73 MuiTypography-gutterBottom-83\\"></h6><span class=\\"MuiTypography-root-56 MuiTypography-caption-66 MuiTypography-colorTextSecondary-89 MuiTypography-gutterBottom-83\\">9ko</span>
         </div>
         <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
@@ -2498,7 +2498,7 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
       </div>
       <div class=\\"u-media u-media-grow u-stack-xs u-row-m\\">
         <div class=\\"styles__bd___1Uv-F\\">
-          <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73 MuiTypography-gutterBottom-83\\">12/12/12 12:03</h6>
+          <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73\\">12/12/12 12:03</h6>
           <h6 class=\\"MuiTypography-root-56 MuiTypography-h6-73 MuiTypography-gutterBottom-83\\">V1</h6><span class=\\"MuiTypography-root-56 MuiTypography-caption-66 MuiTypography-colorTextSecondary-89 MuiTypography-gutterBottom-83\\">9ko</span>
         </div>
         <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
