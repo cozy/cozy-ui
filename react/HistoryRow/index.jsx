@@ -36,7 +36,7 @@ const HistoryRow = ({
         </div>
         <div className="u-media u-media-grow u-stack-xs u-row-m">
           <Bd>
-            <Typography gutterBottom variant="h6">
+            <Typography variant="h6">
               {primaryText}
             </Typography>
             <Typography gutterBottom variant="h6">
