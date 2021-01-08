@@ -1,3 +1,32 @@
+# [43.0.0](https://github.com/cozy/cozy-ui/compare/v42.4.1...v43.0.0) (2021-01-08)
+
+
+### Bug Fixes
+
+* Remove one gutterBottom in HistoryRow ([959033b](https://github.com/cozy/cozy-ui/commit/959033b))
+
+
+### Features
+
+* Better spacing for Empty text ([5e921fd](https://github.com/cozy/cozy-ui/commit/5e921fd))
+* Better support inverted theme for UploadQueue ([eacd8af](https://github.com/cozy/cozy-ui/commit/eacd8af))
+* Deprecate Modal and Text ([6e7163d](https://github.com/cozy/cozy-ui/commit/6e7163d))
+* Move CompositeRow & InlineCard to deprecated section of styleguide ([1ae301e](https://github.com/cozy/cozy-ui/commit/1ae301e))
+* Move tooltip styles to theme and support inverted theme ([27ae826](https://github.com/cozy/cozy-ui/commit/27ae826))
+* Remove ContextHeader./ Well / ThresholdBar / PushClientBanner ([c2cf02b](https://github.com/cozy/cozy-ui/commit/c2cf02b))
+* Remove old Tabs ([36d02e8](https://github.com/cozy/cozy-ui/commit/36d02e8))
+* UploadQueue better supports the theme ([ed0b64c](https://github.com/cozy/cozy-ui/commit/ed0b64c))
+* Use MuiButton for Upload header in mobile ([d621ef4](https://github.com/cozy/cozy-ui/commit/d621ef4))
+
+
+### BREAKING CHANGES
+
+* Old tabs are removed, MUI tabs should be used now
+* Modal and Text are no longer importable via
+import cozy-ui/transpiled/react, they still are importable from
+import cozy-ui/transpiled/react/{Text,Modal} though
+* Removed ContextHeader / Well and ThresholdBar
+
 ## [42.4.1](https://github.com/cozy/cozy-ui/compare/v42.4.0...v42.4.1) (2021-01-06)
 
 
