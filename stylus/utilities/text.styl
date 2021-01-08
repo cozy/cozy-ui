@@ -67,14 +67,14 @@ $midellipsis
 
 $link
     &:link
-        color var(--linkColor)
-        text-decoration none
+        color var(--linkColor) !important // @stylint ignore
+        text-decoration var(--linkTextDecoration) !important // @stylint ignore
 
     &:visited
     &:active
     &:hover
     &:focus
-        color var(--linkColorActive)
+        color var(--linkColorActive) !important // @stylint ignore
 
 // @stylint off
 lh-tiny()
