@@ -5,6 +5,7 @@ import { splitFilename } from 'cozy-client/dist/models/file'
 import CrossIcon from 'cozy-ui/transpiled/react/Icons/Cross'
 import WarningIcon from 'cozy-ui/transpiled/react/Icons/Warning'
 import CheckIcon from 'cozy-ui/transpiled/react/Icons/Check'
+import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons'
 import { withStyles } from '@material-ui/core/styles'
 
 import { translate } from '../I18n'
@@ -248,12 +249,12 @@ class UploadQueue extends Component {
               <Typography variant="h6" className="u-hide--mob">
                 {t('header', { smart_count: queue.length, app: app })}
               </Typography>
-              <Typography variant="h6" className="u-hide--tablet">
+              <MuiButton color="primary" className="u-hide--tablet">
                 {t('header_mobile', {
                   done: doneCount,
                   total: queue.length
                 })}
-              </Typography>
+              </MuiButton>
             </div>
           )}
           {doneCount >= queue.length && (
