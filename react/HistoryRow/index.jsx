@@ -2,9 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Circle from '../Circle'
 import { Media, Bd, Img } from '../Media'
-import { Caption, SubTitle, Bold } from '../Text'
+import Typography from '../Typography'
 import Icon from '../Icon'
-import palette from '../palette'
 
 import styles from './styles.styl'
 
@@ -29,29 +28,32 @@ const HistoryRow = ({
           <Img className={styles.HistoryRowMediaImg}>
             <Circle
               size={tag ? 'small' : 'xsmall'}
-              backgroundColor={palette.white}
               className={styles.HistoryRowCircle}
             >
-              {tag && <Icon icon={'file'} color={palette.slateGrey} />}
+              {tag && <Icon icon={'file'} color="var(--primaryTextColor)" />}
             </Circle>
           </Img>
         </div>
-        <div className="u-media-grow u-stack-xs ">
-          <div className="u-media u-row-m">
-            <Bd>
-              <Bold>{primaryText}</Bold>
-              <SubTitle>{tag}</SubTitle>
-            </Bd>
-            <Img>
-              <Icon
-                className="u-c-pointer"
-                color={palette.coolGrey}
-                icon={DownloadIcon}
-                onClick={() => downloadLink()}
-              />
-            </Img>
-          </div>
-          {secondaryText ? <Caption>{secondaryText}</Caption> : null}
+        <div className="u-media u-media-grow u-stack-xs u-row-m">
+          <Bd>
+            <Typography variant="h6">{primaryText}</Typography>
+            <Typography gutterBottom variant="h6">
+              {tag}
+            </Typography>
+            {secondaryText ? (
+              <Typography gutterBottom variant="caption" color="textSecondary">
+                {secondaryText}
+              </Typography>
+            ) : null}
+          </Bd>
+          <Img>
+            <Icon
+              className="u-c-pointer"
+              color="var(--secondaryTextColor)"
+              icon={DownloadIcon}
+              onClick={() => downloadLink()}
+            />
+          </Img>
         </div>
       </div>
     </Media>

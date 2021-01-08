@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import Icon, { iconPropType } from '../Icon'
 import styles from './styles.styl'
 import Typography from '../Typography'
-import Stack from '../Stack'
 
 export const Empty = ({
   icon,
@@ -22,15 +21,13 @@ export const Empty = ({
         width="100%"
         height="100%"
       />
-      <Stack spacing="xs">
-        {title && (
-          <Typography variant="h3" color="textPrimary">
-            {title}
-          </Typography>
-        )}
-        {text && <EmptySubTitle>{text}</EmptySubTitle>}
-        <div className={styles['c-empty-text']}>{children}</div>
-      </Stack>
+      {title && (
+        <Typography gutterBottom variant="h3" color="textPrimary">
+          {title}
+        </Typography>
+      )}
+      {text && <EmptySubTitle gutterBottom>{text}</EmptySubTitle>}
+      <div className={styles['c-empty-text']}>{children}</div>
     </div>
   )
 }

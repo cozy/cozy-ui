@@ -520,6 +520,17 @@ const makeOverrides = theme => ({
         color: getCssVariableValue('primaryContrastTextColor')
       }
     }
+  },
+  MuiTooltip: {
+    tooltip: {
+      backgroundColor: theme.palette.background.default,
+      borderRadius: '8px',
+      fontSize: '1rem',
+      color: theme.palette.text.primary,
+      lineHeight: '1.3',
+      boxShadow:
+        '0 1px 3px 0 rgba(50, 54, 63, 0.19), 0 6px 18px 0 rgba(50, 54, 63, 0.19)'
+    }
   }
 })
 
@@ -641,6 +652,14 @@ invertedTheme.overrides = {
           boxSizing: 'border-box'
         }
       }
+    }
+  },
+  MuiLinearProgress: {
+    colorPrimary: {
+      backgroundColor: 'rgba(255,255,255,0.2)'
+    },
+    colorSecondary: {
+      backgroundColor: 'rgba(255,255,255,0.2)'
     }
   }
 }

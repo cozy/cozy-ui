@@ -3,6 +3,9 @@ import cx from 'classnames'
 import styles from './PercentageLine.styl'
 import PropTypes from 'prop-types'
 
+/**
+ * @deprecated Use [Progress](#/Progress)
+ */
 const PercentageLine = ({ value, color, className, style }) => (
   <div
     className={cx(className, styles.PercentageLine)}

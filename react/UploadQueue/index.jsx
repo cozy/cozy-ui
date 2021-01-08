@@ -2,24 +2,29 @@ import React, { Component } from 'react'
 import cx from 'classnames'
 import formatDistanceToNow from 'date-fns/distance_in_words_to_now'
 import { splitFilename } from 'cozy-client/dist/models/file'
+import CrossIcon from 'cozy-ui/transpiled/react/Icons/Cross'
+import WarningIcon from 'cozy-ui/transpiled/react/Icons/Warning'
+import CheckIcon from 'cozy-ui/transpiled/react/Icons/Check'
+import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons'
+import { withStyles } from '@material-ui/core/styles'
 
 import { translate } from '../I18n'
 import Icon from '../Icon'
 import Spinner from '../Spinner'
 import withLocales from '../I18n/withLocales'
 import { useI18n } from '../I18n'
-import ThresholdBar from '../ThresholdBar'
-import { Caption } from '../Text'
-import { Media, Bd, Img } from '../Media'
+import LinearProgress from '@material-ui/core/LinearProgress'
+import Typography from '../Typography'
+import List from '../MuiCozyTheme/List'
+import ListItem from '../MuiCozyTheme/ListItem'
+import ListItemText from '../ListItemText'
+import ListItemIcon from '../MuiCozyTheme/ListItemIcon'
+import { Img } from '../Media'
 
 import styles from './styles.styl'
 import localeEn from './locales/en.json'
 import localeEs from './locales/es.json'
 import localeFr from './locales/fr.json'
-
-import CrossIcon from 'cozy-ui/transpiled/react/Icons/Cross'
-import WarningIcon from 'cozy-ui/transpiled/react/Icons/Warning'
-import CheckIcon from 'cozy-ui/transpiled/react/Icons/Check'
 
 const locales = {
   en: localeEn,
@@ -54,7 +59,9 @@ export const uploadStatus = {
 }
 
 const Pending = translate()(props => (
-  <span className={styles['item-pending']}>{props.t('item.pending')}</span>
+  <Typography variant="subtitle1" color="primary">
+    {props.t('item.pending')}
+  </Typography>
 ))
 
 const formatRemainingTime = durationInSec => {
@@ -65,27 +72,49 @@ const formatRemainingTime = durationInSec => {
 const RemainingTime = ({ durationInSec }) => {
   const { t } = useI18n()
   return (
-    <Caption
+    <Typography
+      variant="caption"
       className={cx(styles['upload-queue__progress-caption'], 'u-ellipsis')}
     >
       {t('item.remainingTime', {
         time: formatRemainingTime(durationInSec)
       })}
-    </Caption>
+    </Typography>
   )
 }
+
+const FileLinearProgress = withStyles(theme => ({
+  root: {
+    borderRadius: theme.shape.borderRadius
+  },
+  colorPrimary: {
+    backgroundColor: theme.palette.background.default
+  },
+  barColorPrimary: {
+    backgroundColor: 'var(--emerald)'
+  }
+}))(LinearProgress)
+
+const QueueLinearProgress = withStyles({
+  root: {
+    height: '2px'
+  }
+})(LinearProgress)
 
 const FileUploadProgress = ({ progress }) => {
   return (
     <div className={styles['upload-queue__upload-progress']}>
-      <ThresholdBar
-        className={styles['upload-queue__threshold-bar']}
-        threshold={progress.total}
-        value={progress.loaded}
-      />
-      {progress.remainingTime ? (
-        <RemainingTime durationInSec={progress.remainingTime} />
-      ) : null}
+      <div className="u-flex-grow-1 u-pr-1">
+        <FileLinearProgress
+          variant="determinate"
+          value={(progress.loaded / progress.total) * 100}
+        />
+      </div>
+      <div className="u-flex-shrink">
+        {progress.remainingTime ? (
+          <RemainingTime durationInSec={progress.remainingTime} />
+        ) : null}
+      </div>
     </div>
   )
 }
@@ -140,33 +169,43 @@ const Item = translate()(
     }
 
     return (
-      <Media
+      <ListItem
+        divider
         data-test-id="upload-queue-item"
-        className={cx('u-ph-1', styles['upload-queue-item'], {
+        className={cx('u-ph-1', {
           [styles['upload-queue-item--done']]: done,
           [styles['upload-queue-item--error']]: error
         })}
       >
         {getMimeTypeIcon ? (
-          <Img>
+          <ListItemIcon className="u-ta-center">
             <Icon
               icon={getMimeTypeIcon(isDirectory, file.name, file.type)}
               size={32}
               className="u-mr-1"
             />
-          </Img>
+          </ListItemIcon>
         ) : null}
-        <Bd className={styles['item-file']}>
+        <ListItemText disableTypography>
           <div data-test-id="upload-queue-item-name" className="u-ellipsis">
-            {filename}
-            {extension && (
-              <span className={styles['item-ext']}>{extension}</span>
-            )}
+            <Typography variant="body1" className="u-ellipsis">
+              {filename}
+              {extension && (
+                <Typography
+                  component="span"
+                  variant="body1"
+                  color="textSecondary"
+                  className="u-dib"
+                >
+                  {extension}
+                </Typography>
+              )}
+            </Typography>
           </div>
           {progress ? <FileUploadProgress progress={progress} /> : null}
-        </Bd>
+        </ListItemText>
         <Img className={styles['item-status']}>{statusIcon}</Img>
-      </Media>
+      </ListItem>
     )
   }
 )
@@ -207,15 +246,15 @@ class UploadQueue extends Component {
         >
           {doneCount < queue.length && (
             <div className={styles['upload-queue-header-inner']}>
-              <span className="u-hide--mob">
+              <Typography variant="h6" className="u-hide--mob">
                 {t('header', { smart_count: queue.length, app: app })}
-              </span>
-              <span className="u-hide--tablet">
+              </Typography>
+              <MuiButton color="primary" className="u-hide--tablet">
                 {t('header_mobile', {
                   done: doneCount,
                   total: queue.length
                 })}
-              </span>
+              </MuiButton>
             </div>
           )}
           {doneCount >= queue.length && (
@@ -223,29 +262,28 @@ class UploadQueue extends Component {
               data-test-id="upload-queue-success"
               className={styles['upload-queue-header-inner']}
             >
-              <span>
+              <Typography variant="h6">
                 {t('header_done', {
                   done: successCount,
                   total: queue.length
                 })}
-              </span>
+              </Typography>
               <button className={cx(styles['btn-close'])} onClick={purgeQueue}>
                 {t('close')}
               </button>
             </div>
           )}
         </h4>
-        <progress
-          className={styles['upload-queue-progress']}
-          value={doneCount}
-          max={queue.length}
+        <QueueLinearProgress
+          variant="determinate"
+          value={(doneCount / queue.length) * 100}
         />
         <div className={styles['upload-queue-content']}>
-          <div className={styles['upload-queue-list']}>
+          <List>
             {queue.map((item, index) => (
               <Item key={index} {...item} getMimeTypeIcon={getMimeTypeIcon} />
             ))}
-          </div>
+          </List>
         </div>
       </div>
     )
