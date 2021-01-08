@@ -1,3 +1,15 @@
+# [43.1.0](https://github.com/cozy/cozy-ui/compare/v43.0.0...v43.1.0) (2021-01-08)
+
+
+### Bug Fixes
+
+* Correct path for stylus file ([00d23bf](https://github.com/cozy/cozy-ui/commit/00d23bf))
+
+
+### Features
+
+* Better support for inverted theme for u-links ([bd7f261](https://github.com/cozy/cozy-ui/commit/bd7f261))
+
 # [43.0.0](https://github.com/cozy/cozy-ui/compare/v42.4.1...v43.0.0) (2021-01-08)
 
 
