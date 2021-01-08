@@ -36,6 +36,9 @@ const themesSupportingContext = [
       of the theme.
       <CozyTheme variant='normal'>
         <Button className='u-ml-0 u-mt-half' theme='primary' label='Primary button' />
+        <p>
+          <a href='#' className='u-link'>An u-link span</a>
+        </p>
       </CozyTheme>
     </div>
   </Paper>
@@ -49,6 +52,10 @@ const themesSupportingContext = [
     <div class='u-warn'>
       Warning text : "Something does not feel right, you may want to reload the page."
     </div>
+
+    <p>
+      <a href='#' className='u-link'>An u-link span</a>
+    </p>
   </Paper>
 </CozyTheme>
 ```
