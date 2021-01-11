@@ -1,3 +1,15 @@
+# [43.5.0](https://github.com/cozy/cozy-ui/compare/v43.4.0...v43.5.0) (2021-01-11)
+
+
+### Bug Fixes
+
+* Border color as a variable ([dc9257a](https://github.com/cozy/cozy-ui/commit/dc9257a))
+
+
+### Features
+
+* Popover supports inverted theme ([e321e37](https://github.com/cozy/cozy-ui/commit/e321e37))
+
 # [43.4.0](https://github.com/cozy/cozy-ui/compare/v43.3.0...v43.4.0) (2021-01-11)
 
 
