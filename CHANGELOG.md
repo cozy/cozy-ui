@@ -1,3 +1,13 @@
+# [43.2.0](https://github.com/cozy/cozy-ui/compare/v43.1.0...v43.2.0) (2021-01-11)
+
+
+### Features
+
+* Add possibility to hide close button of Viewer ([ed9a304](https://github.com/cozy/cozy-ui/commit/ed9a304))
+* Add support of Information panel in Viewer ([9dd9f68](https://github.com/cozy/cozy-ui/commit/9dd9f68))
+* Change Viewer Navigation arrow icons ([3135a15](https://github.com/cozy/cozy-ui/commit/3135a15))
+* New toolbar for Viewer ([51d0daa](https://github.com/cozy/cozy-ui/commit/51d0daa))
+
 # [43.1.0](https://github.com/cozy/cozy-ui/compare/v43.0.0...v43.1.0) (2021-01-08)
 
 
