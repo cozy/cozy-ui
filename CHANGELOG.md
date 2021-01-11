@@ -1,3 +1,15 @@
+# [43.4.0](https://github.com/cozy/cozy-ui/compare/v43.3.0...v43.4.0) (2021-01-11)
+
+
+### Bug Fixes
+
+* Add gutterBottom to ActionMenu ([387162f](https://github.com/cozy/cozy-ui/commit/387162f))
+
+
+### Features
+
+* Use dividerColor for card border color ([76260a3](https://github.com/cozy/cozy-ui/commit/76260a3))
+
 # [43.3.0](https://github.com/cozy/cozy-ui/compare/v43.2.0...v43.3.0) (2021-01-11)
 
 
