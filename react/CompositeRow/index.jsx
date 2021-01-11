@@ -2,8 +2,8 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import { Media, Bd, Img } from '../Media'
-import { Text, Caption } from '../Text'
 import styles from './styles.styl'
+import Typography from 'cozy-ui/transpiled/react/Typography'
 
 const denseStyle = { height: '48px' }
 
@@ -40,11 +40,17 @@ const CompositeRow = ({
         <div className="u-media-grow u-stack-xs">
           <div className="u-media u-row-m">
             <Bd className={styles.CompositeRow__body}>
-              <Text className={primaryTextClassName}>{primaryText}</Text>
+              <Typography className={primaryTextClassName} variant="body1">
+                {primaryText}
+              </Typography>
               {secondaryText ? (
-                <Caption className={secondaryTextClassName}>
+                <Typography
+                  className={secondaryTextClassName}
+                  variant="caption"
+                  color="textSecondary"
+                >
                   {secondaryText}
-                </Caption>
+                </Typography>
               ) : null}
             </Bd>
             {right}
