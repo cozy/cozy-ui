@@ -26,7 +26,7 @@ exports[`ActionMenu should render examples: ActionMenu 1`] = `
                 <use xlink:href=\\"#file\\"></use>
               </svg></div>
             <div class=\\"styles__bd___1Uv-F u-mr-1 u-stack-xs\\">
-              <p class=\\"MuiTypography-root-1 MuiTypography-body1-10\\">Item 3</p><span class=\\"MuiTypography-root-1 MuiTypography-caption-11 MuiTypography-colorTextSecondary-34\\">Descriptive text to elaborate on what item 3 does.</span>
+              <p class=\\"MuiTypography-root-1 MuiTypography-body1-10 MuiTypography-gutterBottom-28\\">Item 3</p><span class=\\"MuiTypography-root-1 MuiTypography-caption-11 MuiTypography-colorTextSecondary-34\\">Descriptive text to elaborate on what item 3 does.</span>
             </div>
           </div>
         </div>

@@ -37,7 +37,7 @@ class ExempleMenu extends React.Component {
         <ActionMenuItem left={<Icon icon='file' />} right={<Icon icon='warning' />}>Item 1</ActionMenuItem>
         <ActionMenuItem left={<ActionMenuRadio />}>Item 2</ActionMenuItem>
         <ActionMenuItem left={<Icon icon='file' />}>
-          <Typography variant="body1">
+          <Typography variant="body1" gutterBottom>
             Item 3
           </Typography>
           <Typography variant="caption" color="textSecondary">
