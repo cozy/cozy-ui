@@ -16,13 +16,13 @@ import ListItemText from 'cozy-ui/transpiled/react/ListItemText';
 
 ```
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText';
-import { Text, Caption } from 'cozy-ui/transpiled/react/Text';
 import MidEllipsis from 'cozy-ui/transpiled/react/MidEllipsis';
+import Typography from "cozy-ui/transpiled/react/Typography";
 
 <ListItemText>
-  <Text>I'm a primary text</Text>
-  <Caption tag="a" href="http://cozy.io">
+  <Typography variant="body1">I'm a primary text</Typography>
+  <Typography tag="a" href="http://cozy.io" variant="caption" color="textSecondary">
     <MidEllipsis text={content.ada.short} />
-  </Caption>
+  </Typography>
 </ListItemText>
 ```

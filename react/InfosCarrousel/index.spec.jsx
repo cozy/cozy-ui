@@ -4,8 +4,8 @@ import InfosCarrousel from '.'
 import IconButton from '../IconButton'
 import Infos from '../Infos'
 import Button from '../Button'
-import Text, { SubTitle } from '../Text'
 import SwipeableViews from 'react-swipeable-views'
+import Typography from 'cozy-ui/transpiled/react/Typography'
 
 // This is necessary for tests to be predictable
 const swipeableProps = { disableLazyLoading: true }
@@ -18,8 +18,8 @@ const Example = ({ numberOfChildren = 2 }) => (
           key={index}
           description={
             <>
-              <SubTitle>News {index}</SubTitle>
-              <Text>Breaking news {index}</Text>
+              <Typography variant="h5">News {index}</Typography>
+              <Typography variant="body1">Breaking news {index}</Typography>
             </>
           }
           action={<Button theme="secondary" label="A CTA button" />}

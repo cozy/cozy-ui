@@ -1,11 +1,11 @@
 ```js
 import { Media, Bd, Img } from '../Media'
 import UIChip from '../Chip'
-import { Bold, Caption } from '../Text'
 import Icon from '../Icon'
 import Circle from '../Circle'
-
 import Variants from 'docs/components/Variants'
+
+import Typography from "cozy-ui/transpiled/react/Typography";
 
 const fnacLogoURL = 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Fnac_Logo.svg';
 
@@ -35,7 +35,7 @@ const CompositeImage = () => (
 )
 
 const Amount = () => (
-  <Bold tag='span'>12,15€</Bold>
+  <Typography tag='span' variant="h6">12,15€</Typography>
 )
 
 const onDotsClick = () => { alert('clicked dots !')}
@@ -64,7 +64,7 @@ const Actions = ({ extraInformation }) => (
         <ChipImage src={fnacLogoURL} /> Fnac
       </Chip>
     </Bd>
-    { extraInformation ? <Shrink><Caption>Extra information to the right of the card</Caption></Shrink> : null }
+    { extraInformation ? <Shrink><Typography variant="caption" color="textSecondary">Extra information to the right of the card</Typography></Shrink> : null }
   </Media>
 )
 

@@ -8,7 +8,7 @@ You can pass a reference to a custom DOM element through the `anchorElRef` prop 
 import ActionMenu, { ActionMenuItem, ActionMenuRadio } from 'cozy-ui/transpiled/react/ActionMenu';
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Icon from 'cozy-ui/transpiled/react/Icon';
-import { Text, Caption } from 'cozy-ui/transpiled/react/Text';
+import Typography from "cozy-ui/transpiled/react/Typography";
 
 class ExempleMenu extends React.Component {
   constructor(props){
@@ -26,25 +26,27 @@ class ExempleMenu extends React.Component {
  
 
   render(){
-  return <div>
-  <DropdownButton onClick={this.toggleMenu} ref={this.ref}>Show action menu</DropdownButton>
-  {this.state.menuDisplayed &&
-    <ActionMenu
-      anchorElRef={this.ref}
-      autoclose={true}
-      onClose={this.hideMenu}>
-      <ActionMenuItem left={<Icon icon='file' />} right={<Icon icon='warning' />}>Item 1</ActionMenuItem>
-      <ActionMenuItem left={<ActionMenuRadio />}>Item 2</ActionMenuItem>
-      <ActionMenuItem left={<Icon icon='file' />}>
-        <Text>
-          Item 3
-        </Text>
-        <Caption>
-          Descriptive text to elaborate on what item 3 does.
-        </Caption>
-      </ActionMenuItem>
-  </ActionMenu>}
-</div>
+  return (
+    <div>
+    <DropdownButton onClick={this.toggleMenu} ref={this.ref}>Show action menu</DropdownButton>
+    {this.state.menuDisplayed &&
+      <ActionMenu
+        anchorElRef={this.ref}
+        autoclose={true}
+        onClose={this.hideMenu}>
+        <ActionMenuItem left={<Icon icon='file' />} right={<Icon icon='warning' />}>Item 1</ActionMenuItem>
+        <ActionMenuItem left={<ActionMenuRadio />}>Item 2</ActionMenuItem>
+        <ActionMenuItem left={<Icon icon='file' />}>
+          <Typography variant="body1" gutterBottom>
+            Item 3
+          </Typography>
+          <Typography variant="caption" color="textSecondary">
+            Descriptive text to elaborate on what item 3 does.
+          </Typography>
+        </ActionMenuItem>
+    </ActionMenu>}
+  </div>
+  );
   }
 }
 <ExempleMenu />

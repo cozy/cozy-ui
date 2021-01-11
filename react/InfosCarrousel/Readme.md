@@ -6,7 +6,7 @@ Displays several Infos component in a Carrousel. [react-swipeable-views](https:/
 import InfosCarrousel from 'cozy-ui/transpiled/react/InfosCarrousel'
 import Infos from 'cozy-ui/transpiled/react/Infos'
 import Button from 'cozy-ui/transpiled/react/Button'
-import Text, { SubTitle } from 'cozy-ui/transpiled/react/Text'
+import Typography from "cozy-ui/transpiled/react/Typography";
 
 // This is necessary for tests to be predictable
 const swipeableProps = { disableLazyLoading: true };
@@ -15,15 +15,15 @@ const swipeableProps = { disableLazyLoading: true };
   <InfosCarrousel theme="danger" swipeableProps={swipeableProps}>
     <Infos
       description={<>
-        <SubTitle>News 1</SubTitle>
-        <Text>Breaking news 1</Text>
+        <Typography variant="h6">News 1</Typography>
+        <Typography variant="body1">Breaking news 1</Typography>
       </>}
       action={<Button theme="secondary" label="A CTA button" />}
     />
     <Infos
       description={<>
-        <SubTitle>News 2</SubTitle>
-        <Text>Breaking news 2</Text>
+        <Typography variant="h6">News 2</Typography>
+        <Typography variant="body1">Breaking news 2</Typography>
       </>}
       theme="primary"
       action={<Button theme="secondary" label="A CTA button" />}
@@ -38,7 +38,7 @@ Arrows are not displayed if there is only 1 info.
 import InfosCarrousel from 'cozy-ui/transpiled/react/InfosCarrousel'
 import Infos from 'cozy-ui/transpiled/react/Infos'
 import Button from 'cozy-ui/transpiled/react/Button'
-import Text, { SubTitle } from 'cozy-ui/transpiled/react/Text'
+import Typography from "cozy-ui/transpiled/react/Typography";
 
 // This is necessary for tests to be predictable
 const swipeableProps = { disableLazyLoading: true };
@@ -47,8 +47,8 @@ const swipeableProps = { disableLazyLoading: true };
   <InfosCarrousel theme="danger" swipeableProps={swipeableProps}>
     <Infos
       description={<>
-        <SubTitle>News 1</SubTitle>
-        <Text>Breaking news 1</Text>
+        <Typography variant="h6">News 1</Typography>
+        <Typography variant="body1">Breaking news 1</Typography>
       </>}
       action={<Button theme="secondary" label="A CTA button" />}
     />
