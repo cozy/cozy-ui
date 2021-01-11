@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
+import flow from 'lodash/flow'
 
 import withLocales from '../I18n/withLocales'
+import withBreakpoints from '../helpers/withBreakpoints'
 
+import ViewerWrapper from './ViewerWrapper'
 import ViewerControls from './ViewerControls'
 import ImageViewer from './ImageViewer'
 import AudioViewer from './AudioViewer'
@@ -12,8 +14,8 @@ import PdfJsViewer from './PdfJsViewer'
 import TextViewer from './TextViewer'
 import NoViewer from './NoViewer'
 import ShortcutViewer from './ShortcutViewer'
+import InformationPanel from './InformationPanel'
 
-import styles from './styles.styl'
 import en from './locales/en.json'
 import fr from './locales/fr.json'
 import { FileDoctype } from '../proptypes'
@@ -27,24 +29,7 @@ const KEY_CODE_LEFT = 37
 const KEY_CODE_RIGHT = 39
 const KEY_CODE_ESCAPE = 27
 
-import { isMobileApp, isMobile } from 'cozy-device-helper'
-
-const ViewerWrapper = ({ className, children, dark }) => (
-  <div
-    className={cx(styles['viewer-wrapper'], className, {
-      [styles['viewer-wrapper--light']]: !dark
-    })}
-    role="viewer"
-  >
-    {children}
-  </div>
-)
-
-ViewerWrapper.propTypes = {
-  className: PropTypes.string,
-  children: PropTypes.element,
-  dark: PropTypes.bool
-}
+import { isMobileApp, isMobile as isMobileDevice } from 'cozy-device-helper'
 
 export const isPlainText = (mimeType = '', fileName = '') => {
   return mimeType ? /^text\//.test(mimeType) : /\.(txt|md)$/.test(fileName)
@@ -59,7 +44,7 @@ export const getViewerComponentName = file => {
     case 'audio':
       return AudioViewer
     case 'video':
-      return isMobile() ? NoViewer : VideoViewer
+      return isMobileDevice() ? NoViewer : VideoViewer
     case 'pdf':
       return PdfJsViewer
     case 'text':
@@ -116,42 +101,6 @@ export class Viewer extends Component {
     }
   }
 
-  render() {
-    const {
-      files,
-      className,
-      currentIndex,
-      dark,
-      showToolbar,
-      showNavigation
-    } = this.props
-    const currentFile = files[currentIndex]
-    const fileCount = files.length
-    const hasPrevious = currentIndex > 0
-    const hasNext = currentIndex < fileCount - 1
-    // this `expanded` property makes the next/previous controls cover the displayed image
-    const expanded = currentFile && currentFile.class === 'image'
-    return (
-      <ViewerWrapper className={className} dark={dark}>
-        <ViewerControls
-          currentFile={currentFile}
-          onClose={this.onClose}
-          hasPrevious={hasPrevious}
-          hasNext={hasNext}
-          onPrevious={this.onPrevious}
-          onNext={this.onNext}
-          isMobile={isMobile()}
-          expanded={expanded}
-          showToolbar={showToolbar}
-          showNavigation={showNavigation}
-          isMobileApp={isMobileApp()}
-        >
-          {this.renderViewer(currentFile)}
-        </ViewerControls>
-      </ViewerWrapper>
-    )
-  }
-
   renderViewer(file) {
     if (!file) return null
     const { renderFallbackExtraContent } = this.props
@@ -164,10 +113,59 @@ export class Viewer extends Component {
       />
     )
   }
+
+  render() {
+    const {
+      files,
+      className,
+      currentIndex,
+      dark,
+      toolbarProps,
+      showNavigation,
+      showInfo,
+      breakpoints: { isDesktop }
+    } = this.props
+    const currentFile = files[currentIndex]
+    const fileCount = files.length
+    const hasPrevious = currentIndex > 0
+    const hasNext = currentIndex < fileCount - 1
+    // this `expanded` property makes the next/previous controls cover the displayed image
+    const expanded = currentFile && currentFile.class === 'image'
+    const showInfoPanel = showInfo && isDesktop
+
+    return (
+      <ViewerWrapper className={className} dark={dark}>
+        <ViewerControls
+          currentFile={currentFile}
+          onClose={this.onClose}
+          hasPrevious={hasPrevious}
+          hasNext={hasNext}
+          onPrevious={this.onPrevious}
+          onNext={this.onNext}
+          isMobile={isMobileDevice()}
+          expanded={expanded}
+          toolbarProps={toolbarProps}
+          showNavigation={showNavigation}
+          isMobileApp={isMobileApp()}
+          showInfoPanel={showInfoPanel}
+        >
+          {this.renderViewer(currentFile)}
+        </ViewerControls>
+        {showInfoPanel && <InformationPanel />}
+      </ViewerWrapper>
+    )
+  }
+}
+
+export const toolbarPropsPropType = {
+  /** Whether to show the toolbar or not. Note that the built-in close button is in the toolbar. */
+  showToolbar: PropTypes.bool,
+  /** Whether to show close button in toolbar */
+  showClose: PropTypes.bool
 }
 
 Viewer.propTypes = {
-  /** One or more `io;cozy.files` to display */
+  /** One or more `io.cozy.files` to display */
   files: PropTypes.arrayOf(FileDoctype).isRequired,
   /** Index of the file to show */
   currentIndex: PropTypes.number,
@@ -178,19 +176,24 @@ Viewer.propTypes = {
   onChangeRequest: PropTypes.func,
   /** Switch between light and dark mode */
   dark: PropTypes.bool,
-  /** Whether to show the toolbar or not. Note that the built-in close button is in the toolbar. */
-  showToolbar: PropTypes.bool,
-  /** Weather to show left and right arrows to navigate between files */
+  toolbarProps: PropTypes.shape(toolbarPropsPropType),
+  /** Whether to show left and right arrows to navigate between files */
   showNavigation: PropTypes.bool,
   /** A render prop that is called when a file can't be displayed */
-  renderFallbackExtraContent: PropTypes.func
+  renderFallbackExtraContent: PropTypes.func,
+  /** Whether to show more informations about the file */
+  showInfo: PropTypes.bool
 }
 
 Viewer.defaultProps = {
   currentIndex: 0,
   dark: true,
-  showToolbar: true,
-  showNavigation: true
+  toolbarProps: { display: true, showClose: true },
+  showNavigation: true,
+  showInfo: false
 }
 
-export default withLocales(locales)(Viewer)
+export default flow(
+  withLocales(locales),
+  withBreakpoints()
+)(Viewer)

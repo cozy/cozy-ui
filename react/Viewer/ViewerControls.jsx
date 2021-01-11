@@ -1,19 +1,24 @@
 import React, { Component } from 'react'
-import classNames from 'classnames'
-import Hammer from 'hammerjs'
 import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
-import { withClient } from 'cozy-client'
-import { translate } from '../I18n'
-import Button from '../Button'
-import Icon from '../Icon'
+import cx from 'classnames'
+import Hammer from 'hammerjs'
+import { withStyles } from '@material-ui/core/styles'
+
+import { toolbarPropsPropType } from './index'
+import { infoWidth } from './InformationPanel'
+import Toolbar from './Toolbar'
+import Navigation from './Navigation'
 
 import styles from './styles.styl'
 
-import PreviousIcon from 'cozy-ui/transpiled/react/Icons/Previous'
-import NextIcon from 'cozy-ui/transpiled/react/Icons/Next'
-
 const ACTIONS_HIDE_DELAY = 3000
+
+const customStyles = () => ({
+  viewerControlsWithInfo: {
+    width: `calc(100% - ${infoWidth}) !important`
+  }
+})
 
 class ViewerControls extends Component {
   state = {
@@ -74,122 +79,6 @@ class ViewerControls extends Component {
     if (this.state.gestures) this.state.gestures.destroy()
   }
 
-  render() {
-    const {
-      t,
-      currentFile,
-      onClose,
-      hasPrevious,
-      hasNext,
-      onPrevious,
-      onNext,
-      isMobile,
-      expanded,
-      showToolbar,
-      showNavigation,
-      children,
-      isMobileApp,
-      client
-    } = this.props
-    const { hidden } = this.state
-
-    return (
-      <div
-        className={classNames(styles['viewer-controls'], {
-          [styles['viewer-controls--expanded']]: expanded
-        })}
-        ref={wrapped => {
-          this.wrapped = wrapped
-        }}
-      >
-        {showToolbar && (
-          <div
-            className={classNames(styles['viewer-toolbar'], {
-              [styles['viewer-toolbar--hidden']]: hidden,
-              [styles['viewer-toolbar--mobilebrowser']]:
-                !isMobileApp && isMobile
-            })}
-            role="viewer-toolbar"
-            onMouseEnter={this.showControls}
-            onMouseLeave={this.hideControls}
-          >
-            <div className={classNames(styles['viewer-toolbar-actions'])}>
-              {!isMobile && (
-                <Button
-                  onClick={() => {
-                    client.collection('io.cozy.files').download(currentFile)
-                  }}
-                  icon="download"
-                  label={t('Viewer.download')}
-                  subtle
-                />
-              )}
-            </div>
-            {onClose && (
-              <div
-                className={styles['viewer-toolbar-close']}
-                onClick={onClose}
-                title={t('Viewer.close')}
-              >
-                <Button
-                  theme="secondary"
-                  icon="cross"
-                  color="white"
-                  label={t('Viewer.close')}
-                  iconOnly
-                  extension="narrow"
-                />
-              </div>
-            )}
-          </div>
-        )}
-        {showNavigation && !isMobile && hasPrevious && (
-          <div
-            role="button"
-            className={classNames(
-              styles['viewer-nav'],
-              styles['viewer-nav--previous'],
-              {
-                [styles['viewer-nav--visible']]: !hidden
-              }
-            )}
-            onClick={onPrevious}
-            onMouseEnter={this.showControls}
-            onMouseLeave={this.hideControls}
-          >
-            <Icon
-              icon={PreviousIcon}
-              size="24"
-              className={styles['viewer-nav-arrow']}
-            />
-          </div>
-        )}
-        {this.renderChildren(children)}
-        {showNavigation && !isMobile && hasNext && (
-          <div
-            role="button"
-            className={classNames(
-              styles['viewer-nav'],
-              styles['viewer-nav--next'],
-              {
-                [styles['viewer-nav--visible']]: !hidden
-              }
-            )}
-            onClick={onNext}
-            onMouseEnter={this.showControls}
-            onMouseLeave={this.hideControls}
-          >
-            <Icon
-              icon={NextIcon}
-              size="24"
-              className={styles['viewer-nav-arrow']}
-            />
-          </div>
-        )}
-      </div>
-    )
-  }
-
   renderChildren(children) {
     if (!children) return null
     return React.cloneElement(children, {
@@ -198,9 +87,72 @@ class ViewerControls extends Component {
       onSwipe: this.onSwipe
     })
   }
+
+  render() {
+    const {
+      currentFile,
+      onClose,
+      hasPrevious,
+      hasNext,
+      onPrevious,
+      onNext,
+      isMobile,
+      expanded,
+      toolbarProps,
+      showNavigation,
+      showInfoPanel,
+      children,
+      isMobileApp,
+      classes
+    } = this.props
+    const { showToolbar, showClose } = toolbarProps
+    const { hidden } = this.state
+
+    return (
+      <div
+        className={cx(styles['viewer-controls'], {
+          [styles['viewer-controls--expanded']]: expanded,
+          [classes.viewerControlsWithInfo]: showInfoPanel
+        })}
+        ref={wrapped => {
+          this.wrapped = wrapped
+        }}
+      >
+        {showToolbar && (
+          <Toolbar
+            currentFile={currentFile}
+            onClose={showClose && onClose}
+            isMobileApp={isMobileApp}
+            onMouseEnter={this.showControls}
+            onMouseLeave={this.hideControls}
+            isMobile={isMobile}
+          />
+        )}
+        {showNavigation && !isMobile && hasPrevious && (
+          <Navigation
+            className={styles['viewer-nav--previous']}
+            hidden={hidden}
+            onMouseEnter={this.showControls}
+            onMouseLeave={this.hideControls}
+            onClick={onPrevious}
+          />
+        )}
+        {this.renderChildren(children)}
+        {showNavigation && !isMobile && hasNext && (
+          <Navigation
+            className={styles['viewer-nav--next']}
+            hidden={hidden}
+            onMouseEnter={this.showControls}
+            onMouseLeave={this.hideControls}
+            onClick={onNext}
+          />
+        )}
+      </div>
+    )
+  }
 }
+
 ViewerControls.propTypes = {
-  client: PropTypes.object.isRequired,
   currentFile: PropTypes.object.isRequired,
   onClose: PropTypes.func.isRequired,
   hasPrevious: PropTypes.bool.isRequired,
@@ -209,8 +161,10 @@ ViewerControls.propTypes = {
   onNext: PropTypes.func.isRequired,
   isMobile: PropTypes.bool.isRequired,
   expanded: PropTypes.bool.isRequired,
-  showToolbar: PropTypes.bool.isRequired,
+  toolbarProps: PropTypes.shape(toolbarPropsPropType),
   showNavigation: PropTypes.bool.isRequired,
-  isMobileApp: PropTypes.bool.isRequired
+  isMobileApp: PropTypes.bool.isRequired,
+  showInfoPanel: PropTypes.bool
 }
-export default translate()(withClient(ViewerControls))
+
+export default withStyles(customStyles)(ViewerControls)

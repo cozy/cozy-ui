@@ -85,7 +85,7 @@ describe('Viewer', () => {
     ]
 
     const component = shallow(
-      <Viewer files={files} currentIndex={0} />,
+      <Viewer files={files} breakpoints={{}} currentIndex={0} />,
       shallowRenderOptions
     )
 
