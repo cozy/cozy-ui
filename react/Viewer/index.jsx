@@ -121,8 +121,8 @@ export class Viewer extends Component {
       currentIndex,
       dark,
       toolbarProps,
+      panelInfoProps,
       showNavigation,
-      showInfo,
       breakpoints: { isDesktop }
     } = this.props
     const currentFile = files[currentIndex]
@@ -131,7 +131,8 @@ export class Viewer extends Component {
     const hasNext = currentIndex < fileCount - 1
     // this `expanded` property makes the next/previous controls cover the displayed image
     const expanded = currentFile && currentFile.class === 'image'
-    const showInfoPanel = showInfo && isDesktop
+    const showInfoPanel =
+      isDesktop && panelInfoProps && panelInfoProps.showPanel({ currentFile })
 
     return (
       <ViewerWrapper className={className} dark={dark}>
@@ -151,7 +152,11 @@ export class Viewer extends Component {
         >
           {this.renderViewer(currentFile)}
         </ViewerControls>
-        {showInfoPanel && <InformationPanel />}
+        {showInfoPanel && (
+          <InformationPanel>
+            <panelInfoProps.PanelContent currentFile={currentFile} />
+          </InformationPanel>
+        )}
       </ViewerWrapper>
     )
   }
@@ -181,8 +186,12 @@ Viewer.propTypes = {
   showNavigation: PropTypes.bool,
   /** A render prop that is called when a file can't be displayed */
   renderFallbackExtraContent: PropTypes.func,
-  /** Whether to show more informations about the file */
-  showInfo: PropTypes.bool
+  panelInfoProps: PropTypes.shape({
+    /** Whether to show the panel containing more information about the file */
+    showPanel: PropTypes.func,
+    /** Content to be shown  */
+    PanelContent: PropTypes.func
+  })
 }
 
 Viewer.defaultProps = {

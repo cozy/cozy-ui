@@ -2,12 +2,19 @@ The `Viewer` component can be used to display the content of various file types.
 
 Once rendered, the `Viewer` will take up all the available space in it's container (using `position: absolute`). It can be paired with the `Overlay` component to take up the whole screen.
 
+The `Viewer` can display an **information panel** to show additional information about the current file (e.g. whether a file is certified).
+
 ```jsx
 import Variants from 'docs/components/Variants';
 import Card from 'cozy-ui/transpiled/react/Card';
 import Checkbox from 'cozy-ui/transpiled/react/Checkbox';
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
 import Viewer from 'cozy-ui/transpiled/react/Viewer';
+import Stack from 'cozy-ui/transpiled/react/Stack';
+import Paper from 'cozy-ui/transpiled/react/Paper';
+import Typography from 'cozy-ui/transpiled/react/Typography';
+import { Media, Img, Bd } from 'cozy-ui/transpiled/react/Media';
+import Icon from 'cozy-ui/transpiled/react/Icon';
 // The DemoProvider inserts a fake cozy-client in the React context.
 import DemoProvider from './docs/DemoProvider';
 import Overlay from 'cozy-ui/transpiled/react/Overlay';
@@ -48,19 +55,47 @@ const files = [
 
 // The host app will usually need a small wrapper to display the Viewer. This is a very small example of such a wrapper that handles opening, closing, and navigating between files.
 initialState = {
-  viewerOpened: false,
+  viewerOpened: isTesting(),
   currentFileIndex: 0,
-  close: true
+  showToolbarCloseButton: true
 };
 
 const initialVariants = [
-  { infoPanel: false, navigation: true, toolbar: true }
+  { navigation: true, toolbar: true }
 ];
 
-const openViewer = () => setState({ viewerOpened: true });
-const closeViewer = () => setState({ viewerOpened: false });
-const handleToggleToolbarClose = () => setState({ close: !state.close });
+const toggleViewer = () => setState({ viewerOpened: !state.viewerOpened });
+const handleToggleToolbarClose = () => setState({ showToolbarCloseButton: !state.showToolbarCloseButton });
 const onFileChange = (file, nextIndex) => setState({ currentFileIndex: nextIndex });
+
+const PanelContent = ({ currentFile }) => {
+  return (
+    <Stack
+      spacing="l"
+      className="u-flex u-flex-column u-h-100"
+    >
+      <Paper className={'u-ph-2 u-flex u-flex-items-center u-h-3'} elevation={2} square>
+        <Typography variant="h4">Informations utiles</Typography>
+      </Paper>
+      <Paper className={'u-ph-2 u-pv-1-half'} elevation={2} square>
+        <Typography variant="body1">Titre du fichier : {currentFile.name}</Typography>
+      </Paper>
+      <Paper className={'u-ph-2 u-pv-1-half u-flex-grow-1'} elevation={2} square>
+        <Typography variant="h4">
+          <Media className="u-mb-half">
+            <Img>
+              <Icon icon="carbonCopy" className="u-mr-half" />
+            </Img>
+            <Bd>
+              <Typography variant="body1">Copie conforme</Typography>
+            </Bd>
+          </Media>
+          <Typography variant="caption">Ce document a été fourni par Grand Lyon. Il est défini “authentique et original” par Cozy Cloud, hébergeur de votre Cozy, car il peut affirmer qu'il provient directement du service du Grand Lyon, sans qu’il n’ait subit aucune modification.</Typography>
+        </Typography>
+      </Paper>
+    </Stack>
+  )
+};
 
 <MuiCozyTheme>
   <DemoProvider>
@@ -73,25 +108,28 @@ const onFileChange = (file, nextIndex) => setState({ currentFileIndex: nextIndex
                 <Checkbox
                   className="u-dib"
                   label="Close"
-                  checked={state.close}
+                  checked={state.showToolbarCloseButton}
                   onChange={handleToggleToolbarClose}
                 />
               </Card>
             )}
-            <button onClick={openViewer}>Open viewer</button>
+            <button onClick={toggleViewer}>Open viewer</button>
             {state.viewerOpened && (
               <Overlay>
                 <Viewer
                   files={files}
                   currentIndex={state.currentFileIndex}
-                  onCloseRequest={closeViewer}
+                  onCloseRequest={toggleViewer}
                   onChangeRequest={onFileChange}
                   showNavigation={variant.navigation}
                   toolbarProps={{
                     showToolbar: variant.toolbar,
-                    showClose: state.close
+                    showClose: state.showToolbarCloseButton
                   }}
-                  showInfo={variant.infoPanel}
+                  panelInfoProps={{
+                    showPanel: ({ currentFile }) => currentFile.class === "pdf" || currentFile.class === "audio",
+                    PanelContent: PanelContent
+                  }}
                 />
               </Overlay>
             )}
