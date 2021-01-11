@@ -1,3 +1,10 @@
+# [43.3.0](https://github.com/cozy/cozy-ui/compare/v43.2.0...v43.3.0) (2021-01-11)
+
+
+### Features
+
+* Add blocks in Viewer InformationPanel ([0c6382c](https://github.com/cozy/cozy-ui/commit/0c6382c))
+
 # [43.2.0](https://github.com/cozy/cozy-ui/compare/v43.1.0...v43.2.0) (2021-01-11)
 
 
