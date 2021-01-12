@@ -1,3 +1,10 @@
+# [43.6.0](https://github.com/cozy/cozy-ui/compare/v43.5.0...v43.6.0) (2021-01-12)
+
+
+### Features
+
+* Add arrow on Tooltip and change style ([b3b59a7](https://github.com/cozy/cozy-ui/commit/b3b59a7))
+
 # [43.5.0](https://github.com/cozy/cozy-ui/compare/v43.4.0...v43.5.0) (2021-01-11)
 
 
