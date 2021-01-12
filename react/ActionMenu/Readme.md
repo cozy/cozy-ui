@@ -26,6 +26,7 @@ class ExempleMenu extends React.Component {
  
 
   render(){
+
   return (
     <div>
     <DropdownButton onClick={this.toggleMenu} ref={this.ref}>Show action menu</DropdownButton>
@@ -34,7 +35,7 @@ class ExempleMenu extends React.Component {
         anchorElRef={this.ref}
         autoclose={true}
         onClose={this.hideMenu}>
-        <ActionMenuItem left={<Icon icon='file' />} right={<Icon icon='warning' />}>Item 1</ActionMenuItem>
+        <ActionMenuItem left={<Icon icon='file' />} right={<Icon icon='warning' color="var(--errorColor)" />}>Item 1</ActionMenuItem>
         <ActionMenuItem left={<ActionMenuRadio />}>Item 2</ActionMenuItem>
         <ActionMenuItem left={<Icon icon='file' />}>
           <Typography variant="body1" gutterBottom>
