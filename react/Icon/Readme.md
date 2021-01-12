@@ -65,7 +65,7 @@ this component print an `<svg>` tag and forwards any props to it.
 
 ```jsx static
 const MyIcon = (props) => <svg {...props}>…</svg>;
-<Icon icon={myIcon} width={32} height={32} color="purple" />
+<Icon icon={myIcon} width={32} height={32} color="var(--errorColor)" />
 ```
 
 You can also directly import an SVG to use it. You MUST use svg-sprite-loader
@@ -76,7 +76,7 @@ to load your SVG (either explicitly or, better, implicitly in your `webpack.conf
 ```jsx static
 import myIcon from 'my-icon.svg'
 
-;<Icon icon={myIcon} width={32} height={32} color="purple" />
+;<Icon icon={myIcon} width={32} height={32} color="var(--errorColor)" />
 ```
 
 ### Props forwarding
@@ -86,7 +86,7 @@ Icon forwards unknown props to the underlying `<svg />` element.
 ```
 import Icon from 'cozy-ui/transpiled/react/Icon';
 <div>
-  <Icon icon='warning' onClick={() => alert('Be careful !')} width={32} height={32} color='purple' /><span>← Click it</span>
+  <Icon icon='warning' onClick={() => alert('Be careful !')} width={32} height={32} color="var(--errorColor)" /><span>← Click it</span>
 </div>
 ```
 
