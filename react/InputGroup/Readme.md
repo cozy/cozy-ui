@@ -16,11 +16,11 @@ import Input from 'cozy-ui/transpiled/react/Input';
 
 ```
 import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
-import { Bold } from 'cozy-ui/transpiled/react/Text';
 import Input from 'cozy-ui/transpiled/react/Input';
+import Typography from "cozy-ui/transpiled/react/Typography";
 <form>
   <div>
-    <InputGroup prepend={<Bold className="u-pl-1">text</Bold>}>
+    <InputGroup prepend={<Typography className="u-pl-1" variant="h6">text</Typography>}>
       <Input placeholder="Placeholder" />
     </InputGroup>
   </div>
@@ -68,11 +68,11 @@ const options = [
 
 ```
 import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
-import { Bold } from 'cozy-ui/transpiled/react/Text';
 import Input from 'cozy-ui/transpiled/react/Input';
+import Typography from "cozy-ui/transpiled/react/Typography";
 <form>
   <div>
-    <InputGroup fullwidth append={<Bold className="u-pr-1">text</Bold>}>
+    <InputGroup fullwidth append={<Typography className="u-pr-1" variant="h6">text</Typography>}>
       <Input placeholder="Placeholder" />
     </InputGroup>
   </div>
@@ -83,11 +83,11 @@ import Input from 'cozy-ui/transpiled/react/Input';
 
 ```
 import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
-import { Bold } from 'cozy-ui/transpiled/react/Text';
 import Input from 'cozy-ui/transpiled/react/Input';
+import Typography from "cozy-ui/transpiled/react/Typography";
 <form>
   <div>
-    <InputGroup error append={<Bold className="u-pr-1">text</Bold>}>
+    <InputGroup error append={<Typography className="u-pr-1" variant="h6">text</Typography>}>
       <Input placeholder="Placeholder" />
     </InputGroup>
   </div>
@@ -98,11 +98,11 @@ import Input from 'cozy-ui/transpiled/react/Input';
 
 ```
 import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
-import { Bold } from 'cozy-ui/transpiled/react/Text';
 import Input from 'cozy-ui/transpiled/react/Input';
+import Typography from "cozy-ui/transpiled/react/Typography";
 <form>
   <div>
-    <InputGroup prepend={<Bold className="u-pl-1">text</Bold>} className="u-bdrs-3">
+    <InputGroup prepend={<Typography className="u-pl-1" variant="h6">text</Typography>} className="u-bdrs-3">
       <Input placeholder="Placeholder" />
     </InputGroup>
   </div>

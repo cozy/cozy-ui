@@ -3,8 +3,8 @@ Displays content coming up from the bottom of the screen.
 ```
 import BottomDrawer from 'cozy-ui/transpiled/react/BottomDrawer';
 import Card from 'cozy-ui/transpiled/react/Card';
-import { Text, SubTitle } from 'cozy-ui/transpiled/react/Text';
 import Button from 'cozy-ui/transpiled/react/Button';
+import Typography from "cozy-ui/transpiled/react/Typography";
 
 initialState = { isDrawerDisplayed: isTesting() };
 
@@ -16,8 +16,8 @@ const hideDrawer = () => setState({ isDrawerDisplayed: false });
   {state.isDrawerDisplayed &&
     <BottomDrawer onClose={hideDrawer}>
       <Card className="u-bg-white">
-        <SubTitle className="u-mb-1">This is a card in a drawer</SubTitle>
-        <Text className="u-mb-1">This is some card content. Content can be small or huge.</Text>
+        <Typography className="u-mb-1" variant="h5">This is a card in a drawer</Typography>
+        <Typography className="u-mb-1" variant="body1">This is some card content. Content can be small or huge.</Typography>
         <Button className="u-ml-0" label="Demo button" />
       </Card>
   </BottomDrawer>}

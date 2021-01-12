@@ -523,13 +523,15 @@ const makeOverrides = theme => ({
   },
   MuiTooltip: {
     tooltip: {
-      backgroundColor: theme.palette.background.default,
+      backgroundColor: theme.palette.grey[800], // TODO should be grey[700] when grey[700] will be supported
       borderRadius: '8px',
       fontSize: '1rem',
-      color: theme.palette.text.primary,
+      color: 'white',
       lineHeight: '1.3',
-      boxShadow:
-        '0 1px 3px 0 rgba(50, 54, 63, 0.19), 0 6px 18px 0 rgba(50, 54, 63, 0.19)'
+      padding: '16px'
+    },
+    popper: {
+      opacity: 0.9
     }
   }
 })

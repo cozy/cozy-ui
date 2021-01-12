@@ -3,9 +3,9 @@ Used to present a binary choice to the user.
 Uses [Material UI's Switch](https://material-ui.com/components/switches/).
 
 ```
-import { Text } from '../../Text';
 import { Media, Img } from '../../Media'
 import Switch from '.'
+import Typography from "cozy-ui/transpiled/react/Typography";
 
 initialState = {
   switch1: false,
@@ -27,18 +27,18 @@ const Aligned = ({ children }) => {
 const Switches = () => {
   return <>
     <Aligned>
-      <Text>Primary</Text>
+      <Typography variant="body1">Primary</Typography>
       <Switch color="primary" checked={state.switch3}  onClick={handleClick3} />
     </Aligned>
     <Aligned>
-      <Text>Secondary</Text>
+      <Typography variant="body1">Secondary</Typography>
       <Switch color="secondary" checked={state.switch3} onClick={handleClick3} />
     </Aligned>
     <Aligned>
-      <Text>Disabled</Text>
+      <Typography variant="body1">Disabled</Typography>
       <Switch color="secondary" checked={state.switch2} disabled onClick={handleClick2} />
     </Aligned>
-  </>
+  </>;
 };
 
 <Switches />

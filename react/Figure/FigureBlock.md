@@ -2,7 +2,6 @@ Pour montrer une KPI importante.
 
 ```jsx
 import { FigureBlock } from 'cozy-ui/transpiled/react/Figure'
-import ThemeChooser from '../../docs/ThemeChooser'
 
 const Example = () => {
   return (
