@@ -3,7 +3,7 @@
 // @TODO Check to deduplicate dangerColor and errorColor
 $dangerColor=#F52D2D
 $errorColor=#F52D2D
-$errorBackgroundLight=#FFF2F2
+$errorBackground=#FFF2F2
 
 $validColor=#35CE68
 $warnColor=#FF962F
@@ -211,7 +211,7 @@ html, .CozyTheme--normal
     --actionMenuIconColor: var(--slateGrey)
 
     --errorColor: $errorColor
-    --errorBackgroundLight: $errorBackgroundLight
+    --errorBackground: $errorBackground
 
     --validColor: $validColor
     --warnColor: $warnColor
@@ -225,4 +225,13 @@ html, .CozyTheme--normal
     --navTextColor var(--slateGrey)
     --navTextActiveColor var(--slateGrey)
     --navTextHoverColor var(--charcoalGrey)
+
+    --alertErrorColor #fff
+    --alertErrorBackgroundColor var(--errorColor)
+
+    --alertSuccessColor #fff
+    --alertSuccessBackgroundColor var(--validColor)
+
+    --alertInfoColor #fff
+    --alertInfoBackgroundColor var(--slateGrey)
 // @stylint on

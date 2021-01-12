@@ -4,7 +4,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import Alerter, { Alert } from './'
+import Alerter from './'
+import Alert from './Alert'
 import Button from '../Button'
 
 describe('Alerter component', () => {

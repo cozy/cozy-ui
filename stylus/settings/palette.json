@@ -42,7 +42,7 @@
   "warn": "var(--warnColor)",
   "error": "var(--errorColor)",
   "danger": "var(--dangerColor)",
-  "errorBackgroundLight": "var(--errorBackgroundLight)",
+  "errorBackground": "var(--errorBackground)",
   "primaryBackgroundLight": "var(--primaryBackgroundLight)",
   "neutralBackground": "var(--neutralBackground)"
 }
