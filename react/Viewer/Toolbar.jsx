@@ -41,12 +41,7 @@ const Toolbar = ({
           <Icon icon={PreviousIcon} />
         </IconButton>
       )}
-      <Typography
-        style={{ marginBottom: '0.32rem' }}
-        className="u-pl-half"
-        variant="h3"
-        color="inherit"
-      >
+      <Typography className="u-pl-half" variant="h3" color="inherit">
         {currentFile.name}
       </Typography>
       <div className="u-ml-auto u-ph-1">

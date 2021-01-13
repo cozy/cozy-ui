@@ -2,8 +2,11 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import flow from 'lodash/flow'
 
+import { isMobileApp, isMobile as isMobileDevice } from 'cozy-device-helper'
+
 import withLocales from '../I18n/withLocales'
 import withBreakpoints from '../helpers/withBreakpoints'
+import { FileDoctype } from '../proptypes'
 
 import ViewerWrapper from './ViewerWrapper'
 import ViewerControls from './ViewerControls'
@@ -18,7 +21,6 @@ import InformationPanel from './InformationPanel'
 
 import en from './locales/en.json'
 import fr from './locales/fr.json'
-import { FileDoctype } from '../proptypes'
 
 export const locales = {
   en,
@@ -28,8 +30,6 @@ export const locales = {
 const KEY_CODE_LEFT = 37
 const KEY_CODE_RIGHT = 39
 const KEY_CODE_ESCAPE = 27
-
-import { isMobileApp, isMobile as isMobileDevice } from 'cozy-device-helper'
 
 export const isPlainText = (mimeType = '', fileName = '') => {
   return mimeType ? /^text\//.test(mimeType) : /\.(txt|md)$/.test(fileName)
@@ -197,9 +197,9 @@ Viewer.propTypes = {
 Viewer.defaultProps = {
   currentIndex: 0,
   dark: true,
-  toolbarProps: { display: true, showClose: true },
+  toolbarProps: { showToolbar: true, showClose: true },
   showNavigation: true,
-  showInfo: false
+  panelInfoProps: { showPanel: false }
 }
 
 export default flow(
