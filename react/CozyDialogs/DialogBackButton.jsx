@@ -1,17 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { withStyles } from '@material-ui/core/styles'
 
+import IconButton from 'cozy-ui/transpiled/react/IconButton'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 
 import PreviousIcon from 'cozy-ui/transpiled/react/Icons/Previous'
 
-const DialogBackButton = ({ onClick }) => {
+const customStyles = () => ({
+  root: {
+    margin: '-16px 0 -16px -16px'
+  }
+})
+
+const DialogBackButton = ({ classes, onClick }) => {
   return (
-    <Icon
-      onClick={onClick}
-      icon={PreviousIcon}
-      className="u-c-pointer u-coolGrey u-mr-1"
-    />
+    <IconButton className={classes.root} onClick={onClick}>
+      <Icon icon={PreviousIcon} />
+    </IconButton>
   )
 }
 
@@ -19,4 +25,4 @@ DialogBackButton.propTypes = {
   onClick: PropTypes.func.isRequired
 }
 
-export default DialogBackButton
+export default withStyles(customStyles)(DialogBackButton)
