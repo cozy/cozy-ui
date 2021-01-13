@@ -1,3 +1,10 @@
+## [44.0.4](https://github.com/cozy/cozy-ui/compare/v44.0.3...v44.0.4) (2021-01-13)
+
+
+### Bug Fixes
+
+* Viewer panelInfoProps defaultProps ([16312c5](https://github.com/cozy/cozy-ui/commit/16312c5))
+
 ## [44.0.3](https://github.com/cozy/cozy-ui/compare/v44.0.2...v44.0.3) (2021-01-13)
 
 
