@@ -1,3 +1,10 @@
+## [44.0.2](https://github.com/cozy/cozy-ui/compare/v44.0.1...v44.0.2) (2021-01-13)
+
+
+### Bug Fixes
+
+* OnClose is not required for CozyDialogs ([79bef46](https://github.com/cozy/cozy-ui/commit/79bef46))
+
 ## [44.0.1](https://github.com/cozy/cozy-ui/compare/v44.0.0...v44.0.1) (2021-01-13)
 
 
