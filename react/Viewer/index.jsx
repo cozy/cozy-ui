@@ -199,7 +199,7 @@ Viewer.defaultProps = {
   dark: true,
   toolbarProps: { showToolbar: true, showClose: true },
   showNavigation: true,
-  panelInfoProps: { showPanel: false }
+  panelInfoProps: { showPanel: () => false }
 }
 
 export default flow(
