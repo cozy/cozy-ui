@@ -1,3 +1,22 @@
+# [44.0.0](https://github.com/cozy/cozy-ui/compare/v43.6.0...v44.0.0) (2021-01-13)
+
+
+### Bug Fixes
+
+* Fix Color icons ([36c92d5](https://github.com/cozy/cozy-ui/commit/36c92d5))
+
+
+### Features
+
+* Ability to override alert info color via CSS variable ([18568dd](https://github.com/cozy/cozy-ui/commit/18568dd))
+* Error background loses "light" ([ab25f3c](https://github.com/cozy/cozy-ui/commit/ab25f3c))
+* Remove fill color ([c5190df](https://github.com/cozy/cozy-ui/commit/c5190df))
+
+
+### BREAKING CHANGES
+
+* Removing of fill color to can specify it
+
 # [43.6.0](https://github.com/cozy/cozy-ui/compare/v43.5.0...v43.6.0) (2021-01-12)
 
 
