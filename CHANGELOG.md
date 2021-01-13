@@ -1,3 +1,12 @@
+## [44.0.1](https://github.com/cozy/cozy-ui/compare/v44.0.0...v44.0.1) (2021-01-13)
+
+
+### Bug Fixes
+
+* CozyDialog back button use now IconButton ([e2a8c72](https://github.com/cozy/cozy-ui/commit/e2a8c72))
+* CozyTheme doesn't add markup inside Dialog children ([48428c8](https://github.com/cozy/cozy-ui/commit/48428c8))
+* Remove trainling spaces in CozyDialog readme ([311ae74](https://github.com/cozy/cozy-ui/commit/311ae74))
+
 # [44.0.0](https://github.com/cozy/cozy-ui/compare/v43.6.0...v44.0.0) (2021-01-13)
 
 
