@@ -21,7 +21,7 @@ Will automatically:
 * actions : `<node>` Actions of the modal
 * actionsLayout : `<string>` Can be "row" or "column"
 
-Additionally, all the CozyDialogs support [MUI Dialog's props](https://v3.material-ui.com/api/dialog/). 
+Additionally, all the CozyDialogs support [MUI Dialog's props](https://v3.material-ui.com/api/dialog/).
 
 ```jsx
 import {
@@ -140,14 +140,14 @@ initialState = {
     <p>Content:
       <StateRadio value='default' name='content' /> default{' '}
       <StateRadio value='short' name='content' /> short{' '}
-      <StateRadio value='long' name='content' /> long 
+      <StateRadio value='long' name='content' /> long
     </p><p>Size:
       <StateRadio value='small' name='size' /> small {' '}
       <StateRadio value='medium' name='size' /> medium {' '}
-      <StateRadio value='large' name='size' /> large 
+      <StateRadio value='large' name='size' /> large
     </p><p>Actions layout:
       <StateRadio value='row' name='actionsLayout' /> row{' '}
-      <StateRadio value='column' name='actionsLayout' /> column 
+      <StateRadio value='column' name='actionsLayout' /> column
     </p>
     <DialogComponent
       size={DialogComponent !== ConfirmDialog ? state.size : undefined}

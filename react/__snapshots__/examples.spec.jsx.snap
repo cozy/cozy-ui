@@ -2332,7 +2332,7 @@ exports[`Field should render examples: Field 14`] = `
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\" style=\\"color: teal;\\">I'm a label</label>
       <div class=\\"styles__o-field-input___vCqdV\\">
-        <div class=\\"styles__o-field-input-action___2k7a8\\"><button class=\\"MuiButtonBase-root-211 MuiButton-root-185 MuiButton-text-187 MuiButton-textSecondary-189 MuiButton-flat-190 MuiButton-flatSecondary-192 MuiButton-sizeSmall-208\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label-186\\">Show</span><span class=\\"MuiTouchRipple-root-214\\"></span></button></div><input type=\\"password\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" style=\\"border-color: teal;\\" value=\\"\\">
+        <div class=\\"styles__o-field-input-action___2k7a8\\"><button class=\\"MuiButtonBase-root-135 MuiButton-root-156 MuiButton-text-158 MuiButton-textSecondary-160 MuiButton-flat-161 MuiButton-flatSecondary-163 MuiButton-sizeSmall-179\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label-157\\">Show</span><span class=\\"MuiTouchRipple-root-149\\"></span></button></div><input type=\\"password\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" style=\\"border-color: teal;\\" value=\\"\\">
       </div>
     </div>
   </form>
@@ -6580,11 +6580,11 @@ exports[`Icon should render examples: Icon 6`] = `
 `;
 
 exports[`IconButton should render examples: IconButton 1`] = `
-"<div><button class=\\"styles__IconButton___1LWwV IconButton-root-221\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+"<div><button class=\\"styles__IconButton___1LWwV IconButton-root-82\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
       <use xlink:href=\\"#left\\"></use>
-    </svg></button><button class=\\"styles__IconButton___1LWwV IconButton-root-221\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+    </svg></button><button class=\\"styles__IconButton___1LWwV IconButton-root-82\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
       <use xlink:href=\\"#restore\\"></use>
-    </svg></button><button class=\\"styles__IconButton___1LWwV IconButton-root-221\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+    </svg></button><button class=\\"styles__IconButton___1LWwV IconButton-root-82\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
       <use xlink:href=\\"#right\\"></use>
     </svg></button></div>"
 `;
@@ -6679,9 +6679,9 @@ exports[`InfosCarrousel should render examples: InfosCarrousel 1`] = `
           </div>
         </div>
       </div>
-      <div class=\\"styles__InfosCarrousel-navigation___3s_hu\\"><button class=\\"styles__IconButton___1LWwV IconButton-root-221\\" disabled=\\"\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+      <div class=\\"styles__InfosCarrousel-navigation___3s_hu\\"><button class=\\"styles__IconButton___1LWwV IconButton-root-82\\" disabled=\\"\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
             <path fill-rule=\\"evenodd\\" d=\\"M10.707 2.707a.999.999 0 10-1.414-1.414l-6 6a.999.999 0 000 1.414l6 6a.999.999 0 101.414-1.414L5.414 8l5.293-5.293z\\"></path>
-          </svg></button><span class=\\"styles__InfosCarrousel-separator___AvH5m\\"></span><button class=\\"styles__IconButton___1LWwV IconButton-root-221\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+          </svg></button><span class=\\"styles__InfosCarrousel-separator___AvH5m\\"></span><button class=\\"styles__IconButton___1LWwV IconButton-root-82\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
             <path fill-rule=\\"evenodd\\" d=\\"M12.707 7.293l-6-6a.999.999 0 10-1.414 1.414L10.586 8l-5.293 5.293a.999.999 0 101.414 1.414l6-6a.999.999 0 000-1.414\\"></path>
           </svg></button></div>
     </div>
@@ -6873,19 +6873,19 @@ exports[`Labs/CollectionField should render examples: Labs/CollectionField 1`] =
 
 exports[`ListItemText should render examples: ListItemText 1`] = `
 "<div>
-  <div class=\\"MuiListItemText-root-222\\"><span class=\\"MuiTypography-root-1 u-db u-ellipsis MuiTypography-subheading-8 MuiListItemText-primary-225\\">I'm a list item text</span></div>
+  <div class=\\"MuiListItemText-root-140\\"><span class=\\"MuiTypography-root-1 u-db u-ellipsis MuiTypography-subheading-8 MuiListItemText-primary-143\\">I'm a list item text</span></div>
 </div>"
 `;
 
 exports[`ListItemText should render examples: ListItemText 2`] = `
 "<div>
-  <div class=\\"MuiListItemText-root-222\\"><span class=\\"MuiTypography-root-1 u-db u-ellipsis MuiTypography-subheading-8 MuiListItemText-primary-225\\">I'm a primary text</span><span class=\\"MuiTypography-root-1 u-db u-ellipsis MuiTypography-caption-11 MuiTypography-colorTextSecondary-34 MuiListItemText-secondary-226\\">I'm a secondary text</span></div>
+  <div class=\\"MuiListItemText-root-140\\"><span class=\\"MuiTypography-root-1 u-db u-ellipsis MuiTypography-subheading-8 MuiListItemText-primary-143\\">I'm a primary text</span><span class=\\"MuiTypography-root-1 u-db u-ellipsis MuiTypography-caption-11 MuiTypography-colorTextSecondary-34 MuiListItemText-secondary-144\\">I'm a secondary text</span></div>
 </div>"
 `;
 
 exports[`ListItemText should render examples: ListItemText 3`] = `
 "<div>
-  <div class=\\"MuiListItemText-root-222\\"><span class=\\"MuiTypography-root-1 u-db u-ellipsis MuiTypography-subheading-8 MuiListItemText-primary-225\\"><p class=\\"MuiTypography-root-1 MuiTypography-body1-10\\">I'm a primary text</p><span class=\\"MuiTypography-root-1 MuiTypography-caption-11 MuiTypography-colorTextSecondary-34\\" tag=\\"a\\" href=\\"http://cozy.io\\"><div class=\\"u-midellipsis\\"><span>Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognis</span><span>e that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a \\"computing machine\\" and the first computer programmer.</span></div></span></span>
+  <div class=\\"MuiListItemText-root-140\\"><span class=\\"MuiTypography-root-1 u-db u-ellipsis MuiTypography-subheading-8 MuiListItemText-primary-143\\"><p class=\\"MuiTypography-root-1 MuiTypography-body1-10\\">I'm a primary text</p><span class=\\"MuiTypography-root-1 MuiTypography-caption-11 MuiTypography-colorTextSecondary-34\\" tag=\\"a\\" href=\\"http://cozy.io\\"><div class=\\"u-midellipsis\\"><span>Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognis</span><span>e that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a \\"computing machine\\" and the first computer programmer.</span></div></span></span>
 </div>
 </div>"
 `;
@@ -6988,19 +6988,19 @@ exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
     <div class=\\"styles__img___3SHpG\\">
       <p class=\\"MuiTypography-root-1 MuiTypography-body1-10\\">Primary</p>
     </div>
-    <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-228\\"><span class=\\"MuiButtonBase-root-211 MuiIconButton-root-241 MuiPrivateSwitchBase-root-237 MuiSwitch-switchBase-231 MuiSwitch-colorPrimary-233 MuiPrivateSwitchBase-checked-238 MuiSwitch-checked-232\\"><span class=\\"MuiIconButton-label-246\\"><span class=\\"MuiSwitch-icon-229 MuiSwitch-iconChecked-230\\"></span><input class=\\"MuiPrivateSwitchBase-input-240\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-214\\"></span></span><span class=\\"MuiSwitch-bar-236\\"></span></span></div>
+    <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-182\\"><span class=\\"MuiButtonBase-root-135 MuiIconButton-root-195 MuiPrivateSwitchBase-root-191 MuiSwitch-switchBase-185 MuiSwitch-colorPrimary-187 MuiPrivateSwitchBase-checked-192 MuiSwitch-checked-186\\"><span class=\\"MuiIconButton-label-200\\"><span class=\\"MuiSwitch-icon-183 MuiSwitch-iconChecked-184\\"></span><input class=\\"MuiPrivateSwitchBase-input-194\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-149\\"></span></span><span class=\\"MuiSwitch-bar-190\\"></span></span></div>
   </div>
   <div class=\\"styles__media___cSJMp\\">
     <div class=\\"styles__img___3SHpG\\">
       <p class=\\"MuiTypography-root-1 MuiTypography-body1-10\\">Secondary</p>
     </div>
-    <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-228\\"><span class=\\"MuiButtonBase-root-211 MuiIconButton-root-241 MuiPrivateSwitchBase-root-237 MuiSwitch-switchBase-231 MuiSwitch-colorSecondary-234 MuiPrivateSwitchBase-checked-238 MuiSwitch-checked-232\\"><span class=\\"MuiIconButton-label-246\\"><span class=\\"MuiSwitch-icon-229 MuiSwitch-iconChecked-230\\"></span><input class=\\"MuiPrivateSwitchBase-input-240\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-214\\"></span></span><span class=\\"MuiSwitch-bar-236\\"></span></span></div>
+    <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-182\\"><span class=\\"MuiButtonBase-root-135 MuiIconButton-root-195 MuiPrivateSwitchBase-root-191 MuiSwitch-switchBase-185 MuiSwitch-colorSecondary-188 MuiPrivateSwitchBase-checked-192 MuiSwitch-checked-186\\"><span class=\\"MuiIconButton-label-200\\"><span class=\\"MuiSwitch-icon-183 MuiSwitch-iconChecked-184\\"></span><input class=\\"MuiPrivateSwitchBase-input-194\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-149\\"></span></span><span class=\\"MuiSwitch-bar-190\\"></span></span></div>
   </div>
   <div class=\\"styles__media___cSJMp\\">
     <div class=\\"styles__img___3SHpG\\">
       <p class=\\"MuiTypography-root-1 MuiTypography-body1-10\\">Disabled</p>
     </div>
-    <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-228\\"><span class=\\"MuiButtonBase-root-211 MuiButtonBase-disabled-212 MuiIconButton-root-241 MuiIconButton-disabled-245 MuiPrivateSwitchBase-root-237 MuiSwitch-switchBase-231 MuiSwitch-colorSecondary-234 MuiPrivateSwitchBase-disabled-239 MuiSwitch-disabled-235\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-246\\"><span class=\\"MuiSwitch-icon-229\\"></span><input class=\\"MuiPrivateSwitchBase-input-240\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-236\\"></span></span></div>
+    <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-182\\"><span class=\\"MuiButtonBase-root-135 MuiButtonBase-disabled-136 MuiIconButton-root-195 MuiIconButton-disabled-199 MuiPrivateSwitchBase-root-191 MuiSwitch-switchBase-185 MuiSwitch-colorSecondary-188 MuiPrivateSwitchBase-disabled-193 MuiSwitch-disabled-189\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-200\\"><span class=\\"MuiSwitch-icon-183\\"></span><input class=\\"MuiPrivateSwitchBase-input-194\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-190\\"></span></span></div>
   </div>
 </div>"
 `;
