@@ -1,3 +1,10 @@
+## [44.0.3](https://github.com/cozy/cozy-ui/compare/v44.0.2...v44.0.3) (2021-01-13)
+
+
+### Bug Fixes
+
+* Viewer defaultProps and Toolbar title position ([de74342](https://github.com/cozy/cozy-ui/commit/de74342))
+
 ## [44.0.2](https://github.com/cozy/cozy-ui/compare/v44.0.1...v44.0.2) (2021-01-13)
 
 
