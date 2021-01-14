@@ -1,3 +1,12 @@
+## [44.0.5](https://github.com/cozy/cozy-ui/compare/v44.0.4...v44.0.5) (2021-01-14)
+
+
+### Bug Fixes
+
+* Viewer exemple use small stack spacing ([341da41](https://github.com/cozy/cozy-ui/commit/341da41))
+* Viewer title use now ellipsis ([9f3c1ca](https://github.com/cozy/cozy-ui/commit/9f3c1ca))
+* Viewer toolbar no longer cover content ([a097d36](https://github.com/cozy/cozy-ui/commit/a097d36))
+
 ## [44.0.4](https://github.com/cozy/cozy-ui/compare/v44.0.3...v44.0.4) (2021-01-13)
 
 
