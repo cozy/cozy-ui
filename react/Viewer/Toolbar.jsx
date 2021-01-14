@@ -41,7 +41,7 @@ const Toolbar = ({
           <Icon icon={PreviousIcon} />
         </IconButton>
       )}
-      <Typography className="u-pl-half" variant="h3" color="inherit">
+      <Typography className="u-pl-half" variant="h3" color="inherit" noWrap>
         {currentFile.name}
       </Typography>
       <div className="u-ml-auto u-ph-1">
