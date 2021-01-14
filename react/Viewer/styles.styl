@@ -28,10 +28,11 @@
     position         relative
     display          flex
     width            60%
-    max-height       100%
+    max-height       'calc(100% - %s)' % $toolbarHeight
     justify-content  center
     align-items      center
     flex-direction   column
+    margin-top       $toolbarHeight
 
     h2
         max-width   90%
@@ -39,6 +40,8 @@
     +medium-screen()
         margin-left      0
         width            100%
+        max-height       'calc(100% - %s)' % $toolbarHeightMedium
+        margin-top       $toolbarHeightMedium
 
 // rules for specific viewers below
 

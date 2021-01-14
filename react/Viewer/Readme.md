@@ -24,25 +24,25 @@ const files = [
   {
     _id: 'audio',
     class: 'audio',
-    name: 'sample.mp3',
+    name: 'Sample.mp3',
     mime: 'audio/mp3'
   },
   {
     _id: 'pdf',
     class: 'pdf',
-    name: 'demo.pdf',
+    name: 'Demo.pdf',
     mime: 'application/pdf'
   },
   {
     _id: 'text',
     class: 'text',
-    name: 'demo.txt',
+    name: 'Demo.txt',
     mime: 'text/plain'
   },
   {
     _id: 'image',
     class: 'image',
-    name: 'demo.jpg',
+    name: 'Demo.jpg',
     mime: 'image/jpg'
   },
   {
@@ -71,7 +71,7 @@ const onFileChange = (file, nextIndex) => setState({ currentFileIndex: nextIndex
 const PanelContent = ({ currentFile }) => {
   return (
     <Stack
-      spacing="l"
+      spacing="s"
       className="u-flex u-flex-column u-h-100"
     >
       <Paper className={'u-ph-2 u-flex u-flex-items-center u-h-3'} elevation={2} square>
