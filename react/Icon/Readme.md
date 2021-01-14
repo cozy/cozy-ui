@@ -602,12 +602,3 @@ const handleInputRangeChange = ev => {
   </div>
 </div>
 ```
-
-## Add an Icon
-
-If you want to add a new icon, you must follow these steps:
-
-* Add the SVG in the `assets/icons` folder
-* Generate the react component, simply by running `scripts/generate-svgr-icon.sh`
-* Update this README by adding your icon in the list
-* Update the tests by running `yarn test --updateSnapshot`
