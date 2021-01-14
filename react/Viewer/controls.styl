@@ -2,6 +2,9 @@
 @require 'settings/breakpoints.styl'
 @require 'settings/palette.styl'
 
+$toolbarHeight = 4rem
+$toolbarHeightMedium = 3rem
+
 .viewer-controls
     position relative
     display flex
@@ -13,7 +16,7 @@
 
 .viewer-nav
     position absolute
-    top 4rem
+    top $toolbarHeight
     bottom 0
     z-index $modal-index + 1
     width 20%
@@ -61,7 +64,7 @@
     flex-shrink 0
     width calc(100% - 2rem)
     padding 0 1rem
-    height 4rem
+    height $toolbarHeight
     transition .4s opacity ease-out
     background linear-gradient(to bottom, var(--charcoalGrey), rgba(50, 54, 63, 0))
     justify-content flex-start
@@ -75,4 +78,4 @@
         opacity 0
 
     +medium-screen()
-        height 3rem
+        height $toolbarHeightMedium
