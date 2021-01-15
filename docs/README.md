@@ -74,6 +74,15 @@ It is convenient when modifying a component to use the styleguide site.
 yarn watch:doc # Run the styleguide in watch mode
 ```
 
+### Add an Icon
+
+If you want to add a new icon to cozy-ui, you must follow these steps:
+
+* Add the SVG in the `assets/icons` folder
+* Generate the react component, simply by running `scripts/generate-svgr-icon.sh`
+* Update this README by adding your icon in the list
+* Update the tests by running `yarn test --updateSnapshot`
+
 ### Develop inside an app
 
 Sometimes, you want to develop on a component, from the context of an app.
