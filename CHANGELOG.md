@@ -1,3 +1,10 @@
+# [44.1.0](https://github.com/cozy/cozy-ui/compare/v44.0.5...v44.1.0) (2021-01-15)
+
+
+### Features
+
+* Add bill icon ([3ec5e02](https://github.com/cozy/cozy-ui/commit/3ec5e02))
+
 ## [44.0.5](https://github.com/cozy/cozy-ui/compare/v44.0.4...v44.0.5) (2021-01-14)
 
 
