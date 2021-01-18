@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import { useClient } from 'cozy-client'
 
-import { useI18n } from '../I18n'
+import { withViewerLocales } from './withViewerLocales'
 import Button from '../Button'
 import IconButton from '../IconButton'
 import Icon from '../Icon'
@@ -21,9 +21,9 @@ const Toolbar = ({
   onMouseEnter,
   onMouseLeave,
   currentFile,
-  onClose
+  onClose,
+  t
 }) => {
-  const { t } = useI18n()
   const client = useClient()
 
   return (
@@ -71,4 +71,4 @@ Toolbar.propTypes = {
   onClose: PropTypes.func.isRequired
 }
 
-export default Toolbar
+export default withViewerLocales(Toolbar)

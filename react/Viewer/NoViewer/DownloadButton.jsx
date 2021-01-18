@@ -1,10 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import flow from 'lodash/flow'
+
 import { withClient } from 'cozy-client'
-import { translate } from '../../I18n'
-import Button from '../../Button'
-import styles from '../styles.styl'
+
 import { FileDoctype } from '../../proptypes'
+import Button from '../../Button'
+
+import { withViewerLocales } from '../withViewerLocales'
+import styles from '../styles.styl'
 
 const DownloadButton = ({ t, client, file }) => (
   <Button
@@ -20,4 +24,7 @@ DownloadButton.propTypes = {
   file: FileDoctype
 }
 
-export default translate()(withClient(DownloadButton))
+export default flow(
+  withClient,
+  withViewerLocales
+)(DownloadButton)

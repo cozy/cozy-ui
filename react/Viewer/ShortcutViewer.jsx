@@ -2,14 +2,13 @@ import React from 'react'
 import { useClient, useFetchShortcut } from 'cozy-client'
 import get from 'lodash/get'
 
+import { withViewerLocales } from './withViewerLocales'
 import { ButtonLink } from '../Button'
-import { useI18n } from '../I18n'
 import NoViewer from './NoViewer'
 import { FileDoctype } from '../proptypes'
 
-const ShortcutViewer = ({ file }) => {
+const ShortcutViewer = ({ t, file }) => {
   const client = useClient()
-  const { t } = useI18n()
   const { shortcutInfos } = useFetchShortcut(client, file.id)
   let url = ''
   if (shortcutInfos) {
@@ -34,4 +33,4 @@ ShortcutViewer.propTypes = {
   file: FileDoctype.isRequired
 }
 
-export default ShortcutViewer
+export default withViewerLocales(ShortcutViewer)

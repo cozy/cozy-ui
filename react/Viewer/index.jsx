@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import flow from 'lodash/flow'
 
 import { isMobileApp, isMobile as isMobileDevice } from 'cozy-device-helper'
 
-import withLocales from '../I18n/withLocales'
 import withBreakpoints from '../helpers/withBreakpoints'
 import { FileDoctype } from '../proptypes'
 
@@ -18,14 +16,6 @@ import TextViewer from './TextViewer'
 import NoViewer from './NoViewer'
 import ShortcutViewer from './ShortcutViewer'
 import InformationPanel from './InformationPanel'
-
-import en from './locales/en.json'
-import fr from './locales/fr.json'
-
-export const locales = {
-  en,
-  fr
-}
 
 const KEY_CODE_LEFT = 37
 const KEY_CODE_RIGHT = 39
@@ -202,7 +192,4 @@ Viewer.defaultProps = {
   panelInfoProps: { showPanel: () => false }
 }
 
-export default flow(
-  withLocales(locales),
-  withBreakpoints()
-)(Viewer)
+export default withBreakpoints()(Viewer)
