@@ -4,8 +4,9 @@
 
 'use strict'
 
-import React, { Component, useContext } from 'react'
+import React, { Component, useContext, useMemo } from 'react'
 import PropTypes from 'prop-types'
+import Polyglot from 'node-polyglot'
 
 import { initTranslation } from './translation'
 import { initFormat } from './format'
@@ -94,7 +95,22 @@ export const translate = () => WrappedComponent => {
   return Wrapper
 }
 
-export const useI18n = () => useContext(I18nContext)
+export const useI18n = () => {
+  return useContext(I18nContext)
+}
+
+export const createUseI18n = locales => () => {
+  const { lang } = useI18n() || { lang: DEFAULT_LANG }
+  return useMemo(() => {
+    const polyglot = new Polyglot({
+      lang: lang,
+      phrases: locales[lang]
+    })
+    const f = initFormat(lang)
+    const t = polyglot.t.bind(polyglot)
+    return { t, f, lang }
+  }, [lang])
+}
 
 export { initTranslation, extend } from './translation'
 

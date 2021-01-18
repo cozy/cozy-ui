@@ -10,8 +10,7 @@ import Tile, {
   TileDescription
 } from '../Tile'
 
-import { useI18n } from '../I18n'
-import withLocales from '../I18n/withLocales'
+import { createUseI18n } from '../I18n'
 import { AppDoctype } from '../proptypes'
 
 import { getCurrentStatusLabel } from './helpers'
@@ -33,6 +32,8 @@ const getAppIconProps = () => ({
   domain: getDataset() && getDataset().cozyDomain,
   secure: window.location.protocol === 'https:'
 })
+
+const useI18n = createUseI18n(locales)
 
 export const AppTile = ({
   app,
@@ -84,4 +85,4 @@ AppTile.defaultProps = {
   showStatus: true
 }
 
-export default withLocales(locales)(AppTile)
+export default AppTile
