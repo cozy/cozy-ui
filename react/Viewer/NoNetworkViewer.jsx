@@ -1,11 +1,11 @@
 import React from 'react'
+
 import Icon from '../Icon'
+import CloudBrokenIcon from '../Icons/CloudBroken'
 import Button from '../Button'
-import { translate } from '../I18n'
 
+import { withViewerLocales } from './withViewerLocales'
 import styles from './styles.styl'
-
-import CloudBrokenIcon from 'cozy-ui/transpiled/react/Icons/CloudBroken'
 
 const NoNetworkViewer = ({ t, onReload }) => (
   <div className={styles['viewer-canceled']}>
@@ -15,4 +15,4 @@ const NoNetworkViewer = ({ t, onReload }) => (
   </div>
 )
 
-export default translate()(NoNetworkViewer)
+export default withViewerLocales(NoNetworkViewer)

@@ -5,7 +5,13 @@ import I18n from '../I18n'
 import { render, wait } from '@testing-library/react'
 
 import ShortcutViewer from './ShortcutViewer'
-import { locales } from './index'
+
+import en from './locales/en.json'
+
+export const locales = {
+  en
+}
+
 const setup = () => {
   const client = new CozyClient({})
   return (

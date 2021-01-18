@@ -60,7 +60,7 @@ exports[`Viewer should render the various viewers: noviewer 1`] = `
 `;
 
 exports[`Viewer should render the various viewers: pdfviewer 1`] = `
-<withI18n(PdfJsViewer)
+<withI18n(withLocales(withFileUrlClass))
   file={
     Object {
       "_id": "pdffileid",
@@ -70,12 +70,11 @@ exports[`Viewer should render the various viewers: pdfviewer 1`] = `
     }
   }
   onClose={[Function]}
-  url="https://testurl.com/pdffileid"
 />
 `;
 
 exports[`Viewer should render the various viewers: shortcutviewer 1`] = `
-<ShortcutViewer
+<withI18n(withLocales(ShortcutViewer))
   file={
     Object {
       "_id": "shortcutfileid",
