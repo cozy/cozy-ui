@@ -1,3 +1,10 @@
+## [44.1.1](https://github.com/cozy/cozy-ui/compare/v44.1.0...v44.1.1) (2021-01-18)
+
+
+### Bug Fixes
+
+* Viewer now uses UI locales only for specific component ([664f523](https://github.com/cozy/cozy-ui/commit/664f523))
+
 # [44.1.0](https://github.com/cozy/cozy-ui/compare/v44.0.5...v44.1.0) (2021-01-15)
 
 
