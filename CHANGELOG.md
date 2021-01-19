@@ -1,3 +1,10 @@
+## [44.1.2](https://github.com/cozy/cozy-ui/compare/v44.1.1...v44.1.2) (2021-01-19)
+
+
+### Bug Fixes
+
+* Viewer gives `file` to children rather than `currentFile` ([e4593c0](https://github.com/cozy/cozy-ui/commit/e4593c0))
+
 ## [44.1.1](https://github.com/cozy/cozy-ui/compare/v44.1.0...v44.1.1) (2021-01-18)
 
 
