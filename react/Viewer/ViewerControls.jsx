@@ -90,7 +90,7 @@ class ViewerControls extends Component {
 
   render() {
     const {
-      currentFile,
+      file,
       onClose,
       hasPrevious,
       hasNext,
@@ -120,7 +120,7 @@ class ViewerControls extends Component {
       >
         {showToolbar && (
           <Toolbar
-            currentFile={currentFile}
+            file={file}
             onClose={showClose && onClose}
             isMobileApp={isMobileApp}
             onMouseEnter={this.showControls}
@@ -153,7 +153,7 @@ class ViewerControls extends Component {
 }
 
 ViewerControls.propTypes = {
-  currentFile: PropTypes.object.isRequired,
+  file: PropTypes.object.isRequired,
   onClose: PropTypes.func.isRequired,
   hasPrevious: PropTypes.bool.isRequired,
   hasNext: PropTypes.bool.isRequired,
