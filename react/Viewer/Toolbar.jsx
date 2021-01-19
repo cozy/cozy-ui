@@ -20,7 +20,7 @@ const Toolbar = ({
   isMobileApp,
   onMouseEnter,
   onMouseLeave,
-  currentFile,
+  file,
   onClose,
   t
 }) => {
@@ -42,7 +42,7 @@ const Toolbar = ({
         </IconButton>
       )}
       <Typography className="u-pl-half" variant="h3" color="inherit" noWrap>
-        {currentFile.name}
+        {file.name}
       </Typography>
       <div className="u-ml-auto u-ph-1">
         {!isMobile && (
@@ -52,7 +52,7 @@ const Toolbar = ({
             label={t('Viewer.download')}
             subtle
             onClick={() => {
-              client.collection('io.cozy.files').download(currentFile)
+              client.collection('io.cozy.files').download(file)
             }}
           />
         )}
@@ -67,7 +67,7 @@ Toolbar.propTypes = {
   isMobileApp: PropTypes.bool.isRequired,
   onMouseEnter: PropTypes.func.isRequired,
   onMouseLeave: PropTypes.func.isRequired,
-  currentFile: PropTypes.object.isRequired,
+  file: PropTypes.object.isRequired,
   onClose: PropTypes.func.isRequired
 }
 

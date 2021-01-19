@@ -122,12 +122,14 @@ export class Viewer extends Component {
     // this `expanded` property makes the next/previous controls cover the displayed image
     const expanded = currentFile && currentFile.class === 'image'
     const showInfoPanel =
-      isDesktop && panelInfoProps && panelInfoProps.showPanel({ currentFile })
+      isDesktop &&
+      panelInfoProps &&
+      panelInfoProps.showPanel({ file: currentFile })
 
     return (
       <ViewerWrapper className={className} dark={dark}>
         <ViewerControls
-          currentFile={currentFile}
+          file={currentFile}
           onClose={this.onClose}
           hasPrevious={hasPrevious}
           hasNext={hasNext}
@@ -144,7 +146,7 @@ export class Viewer extends Component {
         </ViewerControls>
         {showInfoPanel && (
           <InformationPanel>
-            <panelInfoProps.PanelContent currentFile={currentFile} />
+            <panelInfoProps.PanelContent file={currentFile} />
           </InformationPanel>
         )}
       </ViewerWrapper>
