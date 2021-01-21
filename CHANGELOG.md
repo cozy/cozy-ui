@@ -1,3 +1,10 @@
+## [44.1.3](https://github.com/cozy/cozy-ui/compare/v44.1.2...v44.1.3) (2021-01-21)
+
+
+### Bug Fixes
+
+* Destructure prop to avoid passing it to children ([c39691a](https://github.com/cozy/cozy-ui/commit/c39691a))
+
 ## [44.1.2](https://github.com/cozy/cozy-ui/compare/v44.1.1...v44.1.2) (2021-01-19)
 
 
