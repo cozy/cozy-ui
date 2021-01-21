@@ -45,6 +45,7 @@ class ContactPicker extends React.Component {
       listPlaceholder,
       listEmptyMessage,
       addContactLabel,
+      initialOpen, // eslint-disable-line no-unused-vars
       ...rest
     } = this.props
     const { opened } = this.state
