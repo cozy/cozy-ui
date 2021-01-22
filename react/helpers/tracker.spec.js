@@ -1,9 +1,13 @@
 import * as trackerFile from './tracker'
+import { resetCache } from './appDataset'
+
+window.__PIWIK_DIMENSION_ID_APP__ = 1234
 
 jest.mock('./tracker', () => ({
   ...require.requireActual('./tracker'),
   getTracker: jest.fn()
 }))
+
 describe('tracker / piwik action', () => {
   beforeEach(() => {
     trackerFile.getTracker.mockImplementation(() => ({ push: jest.fn() }))
@@ -29,11 +33,36 @@ describe('tracker / piwik action', () => {
 
   it('should memoize shouldEnableTracking', () => {
     const querySelectorSpy = jest.fn()
-    Object.defineProperty(global.document, 'querySelector', {
-      value: querySelectorSpy
-    })
+    jest
+      .spyOn(global.document, 'querySelector')
+      .mockImplementation(querySelectorSpy)
     trackerFile.shouldEnableTracking()
     trackerFile.shouldEnableTracking()
     expect(querySelectorSpy).toHaveBeenCalledTimes(1)
+  })
+})
+
+describe('configureTracker', () => {
+  beforeEach(() => {
+    resetCache()
+    trackerFile.getTracker.mockImplementation(() => ({ push: jest.fn() }))
+  })
+
+  it('should read the correct values from DOM', () => {
+    const tracker = trackerFile.getTracker()
+    trackerFile.setTracker(tracker)
+    const data = { cozyDomain: 'cozy.tools:8080', appName: 'banks' }
+    document.body.innerHTML = `<div role="application" data-cozy='${JSON.stringify(
+      data
+    )}' />`
+
+    trackerFile.configureTracker({ app: 'banks2' })
+    expect(tracker.push).toHaveBeenCalledWith(['enableHeartBeatTimer', 15])
+    expect(tracker.push).toHaveBeenCalledWith(['setUserId', 'cozy.tools'])
+    expect(tracker.push).toHaveBeenCalledWith([
+      'setCustomDimension',
+      1234,
+      'banks2'
+    ])
   })
 })
