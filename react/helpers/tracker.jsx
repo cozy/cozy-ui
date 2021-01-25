@@ -1,25 +1,19 @@
 /* global __PIWIK_TRACKER_URL__ __PIWIK_SITEID__ __PIWIK_DIMENSION_ID_APP__ */
 /* global Piwik */
 import memoize from 'lodash/memoize'
+import { readCozyDataFromDOM } from './appDataset'
+
 // Think of these functions as a singleton class with only static methods.
 let trackerInstance = null
 
 /**
- * Tries to detect if tracking should be enabled or not, based on a `cozyTracking` attribute in the root dataset.
- * @returns {boolean} Undefined if it can't find the information, true/false otherwise.
+ * Returns whether tracking should be enabled
+ *
+ * @returns {boolean|unefined} True if tracking should be enabled
  */
-export const shouldEnableTracking = memoize(() => {
-  const root = document.querySelector('[role=application]')
-
-  if (root && root.dataset) {
-    let track = root.dataset.cozyTracking
-
-    if (track === '' || track === 'true') return true
-    else if (track === 'false') return false
-  }
-
-  return undefined
-})
+export const shouldEnableTracking = memoize(() =>
+  readCozyDataFromDOM('tracking')
+)
 
 /**
  * @private
@@ -68,13 +62,16 @@ export const getTracker = (
   }
 }
 
+export const setTracker = tracker => (trackerInstance = tracker)
+
 /**
  * Configures the base options for the tracker which will persist during the session.
- * @param   {object} options A map of options that can be configured.
- *                         {string} options.userId
- *                         {number} options.appDimensionId
- *                         {string} options.app
- *                         {number} options.heartbeat
+ *
+ * @param {object} options A map of options that can be configured.
+ * @param {string} options.userId
+ * @param {number} options.appDimensionId
+ * @param {string} options.app
+ * @param {number} options.heartbeat
  */
 export const configureTracker = (options = {}) => {
   // early out in case the tracker is not available
@@ -83,17 +80,23 @@ export const configureTracker = (options = {}) => {
     return
   }
 
-  // compute the default values for options
-  let userId
   let appName
+  let cozyDomain
+  let userId
 
   const root = document.querySelector('[role=application]')
-  if (root && root.dataset) {
-    appName = root.dataset.cozyAppName
-    userId = root.dataset.cozyDomain || ''
 
-    let indexOfPort = userId.indexOf(':')
-    if (indexOfPort >= 0) userId = userId.substring(0, indexOfPort)
+  if (root && root.dataset) {
+    appName = readCozyDataFromDOM('appName')
+    cozyDomain = readCozyDataFromDOM('cozyDomain')
+  }
+
+  if (cozyDomain) {
+    userId = cozyDomain
+    let indexOfPort = cozyDomain.indexOf(':')
+    if (indexOfPort >= 0) {
+      userId = userId.substring(0, indexOfPort)
+    }
   }
 
   // merge default options with what has been provided
@@ -109,7 +112,10 @@ export const configureTracker = (options = {}) => {
 
   // apply them
   if (parseInt(options.heartbeat) > 0)
-    trackerInstance.push(['enableHeartBeatTimer', parseInt(options.heartbeat)])
+    trackerInstance.push([
+      'enableHeartBeatTimer',
+      parseInt(options.heartbeat, 10)
+    ])
   trackerInstance.push(['setUserId', options.userId])
   trackerInstance.push([
     'setCustomDimension',
@@ -119,7 +125,10 @@ export const configureTracker = (options = {}) => {
 }
 
 /**
- * Returns a new middleware for redux, which will track events if the action has an `trackEvent` field, containing at least `category` and `action` fields.
+ * Returns a redux middleware which tracks events if the action
+ * has a `trackEvent` field containing at least `category` and `action`
+ * fields.
+ *
  * @returns {function}
  */
 export const createTrackerMiddleware = () => {
@@ -144,17 +153,24 @@ export const createTrackerMiddleware = () => {
 }
 
 /**
- * Resets the tracker; disconnecting it from history and the middleware, if it was attached. *Please be aware*: if the tracker instance had been used outside of this library (in another middleware for example), further calls to the tracking server may still work.
+ * Resets the tracker; disconnecting it from history and the middleware, if
+ * it was attached.
+ *
+ * *Please be aware*: if the tracker instance had been used outside of this
+ * library (in another middleware for example), further calls to the tracking
+ * server may still work.
  */
 export const resetTracker = () => {
   if (trackerInstance) {
     // stop tracking the history, if we were doing that
     trackerInstance.disconnectFromHistory()
-    // we can't remove middlewares on the fly, but reseting the instance object will actually achieve that
+    // we can't remove middlewares on the fly, but resetting the instance object will actually achieve that
     trackerInstance = null
   }
 }
+
 /**
+ * Sends an event to matomo
  *
  * @param {array} event Event to track ['Drive', 'action', 'label']
  * @param {object} trackerForTest Mocked Tracker for test purpose
