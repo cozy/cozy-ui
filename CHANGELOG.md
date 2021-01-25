@@ -1,3 +1,10 @@
+# [44.2.0](https://github.com/cozy/cozy-ui/compare/v44.1.3...v44.2.0) (2021-01-25)
+
+
+### Features
+
+* Read tracking setting from data-cozy or data-cozy-tracking ([e2298db](https://github.com/cozy/cozy-ui/commit/e2298db))
+
 ## [44.1.3](https://github.com/cozy/cozy-ui/compare/v44.1.2...v44.1.3) (2021-01-21)
 
 
