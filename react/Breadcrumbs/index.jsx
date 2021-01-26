@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import styles from './styles.styl'
 import Icon from '../Icon'
+import Typography from '../Typography'
+import IconButton from '@material-ui/core/IconButton'
+import LeftIcon from '../Icons/Left'
 
 const BreadcrumbSeparator = () => (
   <span className={styles.BreadcrumbSeparator}>/</span>
@@ -17,11 +20,7 @@ const BreadcrumbItem = ({
 }) => {
   const Tag = tag
   return (
-    <div
-      className={cx(styles.BreadcrumbItem, {
-        [styles['BreadcrumbItem--current']]: isCurrent
-      })}
-    >
+    <Typography variant={isCurrent ? 'h3' : 'body1'} gutterBottom={isCurrent}>
       <Tag
         onClick={onClick}
         className={cx({
@@ -31,7 +30,7 @@ const BreadcrumbItem = ({
         {name}
       </Tag>
       {showSeparator && <BreadcrumbSeparator />}
-    </div>
+    </Typography>
   )
 }
 
@@ -55,11 +54,12 @@ const Breadcrumbs = ({ items, className, style }) => {
   return (
     <div style={style} className={cx(styles.Breadcrumb, className)}>
       {items.length > 1 && (
-        <Icon
-          icon={'left'}
-          className={styles.Breadcrumb__previousButton}
+        <IconButton
           onClick={lastPreviousItem.onClick}
-        />
+          className={styles.Breadcrumb__previousButton}
+        >
+          <Icon icon={LeftIcon} />
+        </IconButton>
       )}
       <div className={styles.Breadcrumb__items}>
         <div className={styles.Breadcrumb__previousItems}>
