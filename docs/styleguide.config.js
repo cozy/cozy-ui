@@ -31,7 +31,6 @@ module.exports = {
         '../react/IconStack/index.jsx',
         '../react/Paper/index.js',
         '../react/PercentageBar/index.jsx',
-        '../react/PercentageLine/index.jsx',
         '../react/Progress',
         '../react/ProgressionBanner',
         '../react/Spinner/index.jsx',
@@ -86,6 +85,7 @@ module.exports = {
         '../react/Figure/Figure.jsx',
         '../react/Figure/FigureBlock.jsx',
         '../react/Filename/index.jsx',
+        '../react/MuiCozyTheme/Grid',
         '../react/Infos/index.jsx',
         '../react/InfosCarrousel/index.jsx',
         '../react/LoadMore/index.jsx',
@@ -93,7 +93,6 @@ module.exports = {
         '../react/MidEllipsis/index.jsx',
         '../react/CozyDialogs',
         '../react/Dialog',
-        '../react/OrderedList/index.jsx',
         '../react/Table/index.jsx',
         '../react/Typography/index.jsx',
         '../react/Tooltip/index.jsx',
@@ -111,7 +110,11 @@ module.exports = {
     },
     {
       name: 'List',
-      components: () => ['../react/ListItemText/index.jsx']
+      components: () => [
+        '../react/MuiCozyTheme/List',
+        '../react/ListItemText/index.jsx',
+        '../react/OrderedList/index.jsx'
+      ]
     },
     {
       name: 'Navigation',
@@ -143,15 +146,6 @@ module.exports = {
       ]
     },
     {
-      name: 'Material-UI',
-      components: () => [
-        '../react/MuiCozyTheme/Grid',
-        '../react/MuiCozyTheme/index.jsx',
-        '../react/MuiCozyTheme/List',
-        '../react/MuiCozyTheme/RaisedList'
-      ]
-    },
-    {
       name: 'Labs',
       components: () => [
         '../react/Labs/GridItem',
@@ -177,8 +171,10 @@ module.exports = {
         '../react/Menu/index.jsx',
         '../react/Modal/index.jsx',
         '../react/Text/index.jsx',
+        '../react/MuiCozyTheme/RaisedList',
         '../react/CompositeRow/index.jsx',
-        '../react/InlineCard/index.jsx'
+        '../react/InlineCard/index.jsx',
+        '../react/PercentageLine/index.jsx'
       ]
     }
   ],
