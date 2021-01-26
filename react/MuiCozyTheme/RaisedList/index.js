@@ -1,14 +1,17 @@
-import BaseList from '@material-ui/core/List'
-import { withStyles } from '@material-ui/core/styles'
+import React from 'react'
+import List from '@material-ui/core/List'
+import Paper from '@material-ui/core/Paper'
+import createDepreciationLogger from '../../helpers/createDepreciationLogger'
 
-const styles = {
-  root: {
-    borderRadius: 8,
-    overflow: 'hidden',
-    borderLeft: '1px solid var(--silver)',
-    borderRight: '1px solid var(--silver)',
-    boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.08)'
-  }
+const logRaisedListDepecrated = createDepreciationLogger()
+
+export default props => {
+  logRaisedListDepecrated(
+    'RaisedList is deprecated, please use a combination of List & Paper : <Paper elevation={4}><List /></Paper>'
+  )
+  return (
+    <Paper elevation={2}>
+      <List {...props} />
+    </Paper>
+  )
 }
-
-export default withStyles(styles, 'RaisedList')(BaseList)
