@@ -1,10 +1,12 @@
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
+
+import IconButton from '@material-ui/core/IconButton'
+
 import Icon from '../Icon'
 import Typography from '../Typography'
 import Stack from '../Stack'
-import palette from '../palette'
 import createDepreciationLogger from '../helpers/createDepreciationLogger'
 
 import styles from './styles.styl'
@@ -27,9 +29,13 @@ export const Infos = ({
         {action && <div>{action}</div>}
       </Stack>
       {dismissAction && (
-        <button className={styles['Info-close']} onClick={dismissAction}>
-          <Icon icon={CrossIcon} color={palette['coolGrey']} />
-        </button>
+        <IconButton
+          size="small"
+          className={styles['Info-close']}
+          onClick={dismissAction}
+        >
+          <Icon icon={CrossIcon} size="12" className="u-coolGrey" />
+        </IconButton>
       )}
     </div>
   )
