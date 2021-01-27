@@ -1,18 +1,43 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import Types from 'prop-types'
 import cx from 'classnames'
 import styles from './Figure.styl'
+import { useI18n } from '../I18n'
 
-/**
- * Shows a number, typically a balance or an important financial
- * number in a bold way.
- */
 const stylePositive = styles['Figure-content--positive']
 const styleNegative = styles['Figure-content--negative']
 const styleWarning = styles['Figure-content--warning']
 const styleBig = styles['Figure--big']
 const styleClickable = styles['Figure--clickable']
 
+/**
+ * Formats with Number::toLocaleString and replace spaces for non-breaking
+ * spaces
+ *
+ * - on Firefox, the narrow space is not correctly rendered (not visible)
+ * - on Safari mobile, the space is not correctly rendered (not visible)
+ */
+const toLocaleStringEnhanced = (number, locale, decimalNumbers) => {
+  let res = number.toLocaleString(locale, {
+    minimumFractionDigits: decimalNumbers,
+    maximumFractionDigits: decimalNumbers
+  })
+
+  if (number > 999) {
+    res = res
+      .split(' ') // narrow non breaking space not showing on Firefox
+      .join('\u00a0')
+      .split('\u202f') // narrow non breaking space not showing on Firefox
+      .join('\u00a0')
+  }
+
+  return res
+}
+
+/**
+ * Shows a number, typically a balance or an important financial
+ * number in a bold way.
+ */
 const Figure = props => {
   const {
     symbol,
@@ -32,16 +57,17 @@ const Figure = props => {
     blurred
   } = props
 
+  const { lang } = useI18n()
+
   let { decimalNumbers } = props
   decimalNumbers = isNaN(decimalNumbers) ? 2 : decimalNumbers
 
-  const totalLocalized =
-    typeof total === 'number'
-      ? total.toLocaleString('fr-FR', {
-          minimumFractionDigits: decimalNumbers,
-          maximumFractionDigits: decimalNumbers
-        })
+  const totalLocalized = useMemo(() => {
+    return typeof total === 'number'
+      ? toLocaleStringEnhanced(total, lang, decimalNumbers)
       : total
+  }, [total, lang, decimalNumbers])
+
   const isTotalPositive = total > 0
   const isTotalInLimit = total > warningLimit
   const isWarning = !isTotalPositive && !isTotalInLimit && coloredWarning
@@ -108,4 +134,4 @@ Figure.propTypes = {
   blurred: Types.bool
 }
 
-export default Figure
+export default React.memo(Figure)
