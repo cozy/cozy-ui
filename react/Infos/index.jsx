@@ -17,6 +17,7 @@ export const Infos = ({
   description,
   action,
   dismissAction,
+  dismissButtonProps,
   theme,
   className
 }) => {
@@ -33,6 +34,7 @@ export const Infos = ({
           size="small"
           className={styles['Info-close']}
           onClick={dismissAction}
+          {...dismissButtonProps}
         >
           <Icon icon={CrossIcon} size="12" className="u-coolGrey" />
         </IconButton>
@@ -51,7 +53,9 @@ Infos.propTypes = {
   /** Extra classnames to apply to the root element */
   className: PropTypes.string,
   /** Controls the background color of the component */
-  theme: PropTypes.oneOf(['primary', 'secondary', 'danger'])
+  theme: PropTypes.oneOf(['primary', 'secondary', 'danger']),
+  /** Props for dismiss button */
+  dismissButtonProps: PropTypes.object
 }
 
 Infos.defaultProps = {
