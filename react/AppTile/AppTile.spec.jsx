@@ -3,7 +3,8 @@
 /* eslint-env jest */
 
 import React from 'react'
-import { shallow } from 'enzyme'
+import { render } from '@testing-library/react'
+import CozyClient, { CozyProvider } from 'cozy-client'
 
 import en from '../AppSections/locales/en.json'
 import I18n from '../I18n'
@@ -37,73 +38,71 @@ const appMock2 = {
   onClick: jest.fn()
 }
 
+const client = new CozyClient({})
 const Wrapper = props => {
   return (
-    <I18n dictRequire={() => en} lang="en">
-      <AppTile {...props} />
-    </I18n>
+    <CozyProvider client={client}>
+      <I18n dictRequire={() => en} lang="en">
+        <AppTile {...props} />
+      </I18n>
+    </CozyProvider>
   )
 }
 
 describe('AppTile component', () => {
   it('should render correctly an app', () => {
-    const component = shallow(
-      <Wrapper {...appMock} app={appMock} />
-    ).getElement()
-    expect(component).toMatchSnapshot()
+    const root = render(<Wrapper {...appMock} app={appMock} />)
+    expect(root.getByText('Cozy Test')).toBeTruthy()
+    expect(root.getByText('By Cozy')).toBeTruthy()
   })
 
   it('should render correctly an app without developer property', () => {
     const appMockWithoutDevelopper = Object.assign({}, appMock)
     delete appMockWithoutDevelopper.developer
-    const component = shallow(
+    const root = render(
       <Wrapper {...appMockWithoutDevelopper} app={appMockWithoutDevelopper} />
-    ).getElement()
-    expect(component).toMatchSnapshot()
+    )
+    expect(root.getByText('Cozy Test')).toBeTruthy()
+    expect(root.queryByText('By Cozy')).toBeFalsy()
   })
 
   it('should render correctly an app in maintenance', () => {
     const appInMaintenance = Object.assign({}, appMock2, {
       maintenance: { maintenance_options: {} }
     })
-    const component = shallow(
+    const root = render(
       <Wrapper {...appInMaintenance} app={appInMaintenance} />
-    ).getElement()
-    expect(component).toMatchSnapshot()
-  })
-
-  it('should render correctly an app with iconToLoad (icon being fetching)', () => {
-    const appIconToLoad = Object.assign({}, appMock2, {
-      iconToLoad: true
-    })
-    const component = shallow(
-      <Wrapper {...appIconToLoad} app={appIconToLoad} />
-    ).getElement()
-    expect(component).toMatchSnapshot()
-  })
-
-  it('should render correctly an app with iconToLoad if isMobile', () => {
-    const appIconToLoad = Object.assign({}, appMock2, {
-      iconToLoad: true
-    })
-    const component = shallow(
-      <Wrapper {...appIconToLoad} app={appIconToLoad} isMobile />
-    ).getElement()
-    expect(component).toMatchSnapshot()
+    )
+    expect(root.getByText('Test2')).toBeTruthy()
+    expect(root.getByText('By Naming me')).toBeTruthy()
+    expect(root.getByText('In maintenance')).toBeTruthy()
   })
 
   it('should render correctly an installed app', () => {
-    const component = shallow(
-      <Wrapper {...appMock2} app={appMock2} />
-    ).getElement()
-    expect(component).toMatchSnapshot()
+    const root = render(<Wrapper {...appMock2} app={appMock2} />)
+    expect(root.getByText('Installed')).toBeTruthy()
+  })
+
+  it('should render correctly an installed app without icon provided', () => {
+    const appMockWithoutIcon = Object.assign({}, appMock, {
+      icon: 'https://hello.svg'
+    })
+    const root = render(
+      <Wrapper
+        {...appMockWithoutIcon}
+        app={appMockWithoutIcon}
+        alt="Alternative text"
+      />
+    )
+    expect(root.getByText('Cozy Test')).toBeTruthy()
+    expect(root.getByText('By Cozy')).toBeTruthy()
   })
 
   it('should render correctly an installed app without icon provided', () => {
     const appMockWithoutIcon = Object.assign({}, appMock, { icon: '' })
-    const component = shallow(
+    const root = render(
       <Wrapper {...appMockWithoutIcon} app={appMockWithoutIcon} />
-    ).getElement()
-    expect(component).toMatchSnapshot()
+    )
+    expect(root.queryByRole('progressbar')).toBeFalsy()
   })
 })

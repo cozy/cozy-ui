@@ -4,8 +4,9 @@
 
 'use strict'
 
-import React, { Component, useContext } from 'react'
+import React, { Component, useContext, useMemo } from 'react'
 import PropTypes from 'prop-types'
+import Polyglot from 'node-polyglot'
 
 import { initTranslation } from './translation'
 import { initFormat } from './format'
@@ -23,19 +24,18 @@ export class I18n extends Component {
 
   init(props) {
     const { polyglot, lang, dictRequire, context, defaultLang } = props
-
     this.translator =
       polyglot || initTranslation(lang, dictRequire, context, defaultLang)
     this.format = initFormat(lang, defaultLang)
     this.t = this.translator.t.bind(this.translator)
-    this.contextValue = this.getContextValue()
+    this.contextValue = this.getContextValue(props)
   }
 
-  getContextValue() {
+  getContextValue(props) {
     return {
       t: this.t,
       f: this.format,
-      lang: this.props.lang
+      lang: (props || this.props).lang
     }
   }
 
@@ -94,7 +94,22 @@ export const translate = () => WrappedComponent => {
   return Wrapper
 }
 
-export const useI18n = () => useContext(I18nContext)
+export const useI18n = () => {
+  return useContext(I18nContext)
+}
+
+export const createUseI18n = locales => () => {
+  const { lang } = useI18n() || { lang: DEFAULT_LANG }
+  return useMemo(() => {
+    const polyglot = new Polyglot({
+      lang: lang,
+      phrases: locales[lang]
+    })
+    const f = initFormat(lang)
+    const t = polyglot.t.bind(polyglot)
+    return { t, f, lang }
+  }, [lang])
+}
 
 export { initTranslation, extend } from './translation'
 

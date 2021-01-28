@@ -5,6 +5,8 @@ import { withClient } from 'cozy-client'
 import styles from './styles.styl'
 
 import Icon, { iconPropType } from '../Icon'
+import CubeIcon from '../Icons/Cube'
+
 import palette from '../palette'
 
 import { getPreloaded, preload } from './Preloader'
@@ -83,12 +85,12 @@ export class AppIcon extends Component {
 
   render() {
     const { alt, className, fallbackIcon } = this.props
-
     const { icon, status } = this.state
     switch (status) {
       case FETCHING:
         return (
           <div
+            role="progressbar"
             className={cx(
               styles['c-loading-placeholder'],
               styles['c-app-icon'],
@@ -115,7 +117,7 @@ export class AppIcon extends Component {
               className
             )}
             height="100%"
-            icon={fallbackIcon || 'cube'}
+            icon={fallbackIcon || CubeIcon}
             width="100%"
             color={palette['coolGrey']}
           />

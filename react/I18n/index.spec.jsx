@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import I18n, { useI18n } from '.'
+import { render, fireEvent } from '@testing-library/react'
+import I18n, { useI18n, createUseI18n } from '.'
 
 const locales = { helloworld: 'Hello World !' }
 
@@ -49,5 +50,40 @@ describe('old context api', () => {
       </I18n>
     )
     expect(root.html()).toBe('<div>Hello World !<br>6 Jan<br>en</div>')
+  })
+})
+
+describe('use i18n with custom locales', () => {
+  const locales = {
+    en: {
+      'hello-world': 'Hello world'
+    },
+    fr: {
+      'hello-world': 'Bonjour le monde'
+    }
+  }
+  const useI18n = createUseI18n(locales)
+  const Child = () => {
+    const { t } = useI18n()
+    return <div>{t('hello-world')}</div>
+  }
+  const Parent = () => {
+    const [lang, setLang] = useState('en')
+    return (
+      <>
+        <button onClick={() => setLang('fr')}>switch to French</button>
+        <I18n lang={lang} dictRequire={() => ({})}>
+          <Child />
+        </I18n>
+      </>
+    )
+  }
+
+  it('should work', () => {
+    const root = render(<Parent />)
+    const btn = root.getByText('switch to French')
+    expect(root.getByText('Hello world')).toBeTruthy()
+    fireEvent.click(btn)
+    expect(root.getByText('Bonjour le monde')).toBeTruthy()
   })
 })

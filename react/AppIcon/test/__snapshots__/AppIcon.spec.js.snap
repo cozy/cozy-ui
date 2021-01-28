@@ -3,6 +3,7 @@
 exports[`AppIcon component renders as loading 1`] = `
 <div
   className="styles__c-loading-placeholder___3L6Gz styles__c-app-icon___2_O40"
+  role="progressbar"
 />
 `;
 
@@ -19,7 +20,7 @@ exports[`AppIcon component renders default when fetch error occurs 1`] = `
   className="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt"
   color="var(--coolGrey)"
   height="100%"
-  icon="cube"
+  icon={[Function]}
   spin={false}
   width="100%"
 />
