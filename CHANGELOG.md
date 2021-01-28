@@ -1,3 +1,15 @@
+# [44.3.0](https://github.com/cozy/cozy-ui/compare/v44.2.0...v44.3.0) (2021-01-28)
+
+
+### Bug Fixes
+
+* Use icon component for fallback icon in AppIcon ([e61c62b](https://github.com/cozy/cozy-ui/commit/e61c62b))
+
+
+### Features
+
+* Ability to use lib locales without withLocales ([ab5d70d](https://github.com/cozy/cozy-ui/commit/ab5d70d))
+
 # [44.2.0](https://github.com/cozy/cozy-ui/compare/v44.1.3...v44.2.0) (2021-01-25)
 
 
