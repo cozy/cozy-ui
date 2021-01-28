@@ -24,19 +24,18 @@ export class I18n extends Component {
 
   init(props) {
     const { polyglot, lang, dictRequire, context, defaultLang } = props
-
     this.translator =
       polyglot || initTranslation(lang, dictRequire, context, defaultLang)
     this.format = initFormat(lang, defaultLang)
     this.t = this.translator.t.bind(this.translator)
-    this.contextValue = this.getContextValue()
+    this.contextValue = this.getContextValue(props)
   }
 
-  getContextValue() {
+  getContextValue(props) {
     return {
       t: this.t,
       f: this.format,
-      lang: this.props.lang
+      lang: (props || this.props).lang
     }
   }
 
