@@ -37,6 +37,10 @@ class MenuItem extends Component {
 }
 
 const logMenuDepecrated = createDepreciationLogger()
+
+/**
+ * @deprecated This component is deprecated, please use ActionMenu instead. See styleguide > Menu for more information on how to migrate.
+ */
 class Menu extends Component {
   constructor(props, context) {
     super(props, context)
