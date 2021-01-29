@@ -7,7 +7,9 @@
     color var(--primaryTextColor)
 
 .Breadcrumb__previousButton
-    margin-right (spacing_values.m)
+    // Tweak the margin-left to account for the IconButton wrapper
+    margin-left -(spacing_values.s)
+    margin-right (spacing_values.xs / 2)
     cursor pointer
 
 .Breadcrumb__items
@@ -15,15 +17,6 @@
 
 .Breadcrumb__previousItems
     display flex
-
-.BreadcrumbItem
-    font-size $small-font-size
-    line-height 1
-
-.BreadcrumbItem--current
-    font-size $h1-font-size
-    font-weight bold
-    line-height 1.67
 
 .BreadcrumbSeparator
     display inline-block

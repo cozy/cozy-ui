@@ -5,14 +5,13 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText';
 
 <RaisedList>
-  <Divider />
   <ListItem button divider>
     <ListItemText primaryText="cozy.io" secondaryText="Claude Douillet" />
   </ListItem>
   <ListItem button divider>
     <ListItemText primaryText="cozy.io" secondaryText="Isabelle Durand" />
   </ListItem>
-  <ListItem button divider>
+  <ListItem button>
     <ListItemText primaryText="cozy.io" secondaryText="Geneviève Durand" />
   </ListItem>
 </RaisedList>
