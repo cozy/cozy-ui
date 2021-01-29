@@ -1,3 +1,14 @@
+# [44.4.0](https://github.com/cozy/cozy-ui/compare/v44.3.0...v44.4.0) (2021-01-29)
+
+
+### Features
+
+* Add deprecation mentions on Menu and RaisedList ([c48e2f6](https://github.com/cozy/cozy-ui/commit/c48e2f6))
+* Breadcrumbs use Typography and IconButton ([69a9563](https://github.com/cozy/cozy-ui/commit/69a9563))
+* Deprecate RaisedList as it can be made with List & Paper ([7c10639](https://github.com/cozy/cozy-ui/commit/7c10639))
+* Move material ui components to normal navigation ([31b8cc5](https://github.com/cozy/cozy-ui/commit/31b8cc5))
+* Reorganize styleguide sections ([dbc4747](https://github.com/cozy/cozy-ui/commit/dbc4747))
+
 # [44.3.0](https://github.com/cozy/cozy-ui/compare/v44.2.0...v44.3.0) (2021-01-28)
 
 
