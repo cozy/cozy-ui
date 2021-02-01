@@ -9,13 +9,11 @@ import CrossMediumIcon from 'cozy-ui/transpiled/react/Icons/CrossMedium'
 
 const CloseButton = ({ onClick, ...props }) => {
   return (
-    <IconButton
-      onClick={onClick}
-      className={styles.DialogCloseButton}
-      {...props}
-    >
-      <Icon icon={CrossMediumIcon} />
-    </IconButton>
+    <div className={styles.DialogCloseButton}>
+      <IconButton onClick={onClick} {...props}>
+        <Icon icon={CrossMediumIcon} />
+      </IconButton>
+    </div>
   )
 }
 
