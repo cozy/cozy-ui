@@ -1,3 +1,15 @@
+# [44.6.0](https://github.com/cozy/cozy-ui/compare/v44.5.0...v44.6.0) (2021-02-01)
+
+
+### Bug Fixes
+
+* Adjust examples ([fcdcb7a](https://github.com/cozy/cozy-ui/commit/fcdcb7a))
+
+
+### Features
+
+* Better example for mui buttons ([e534560](https://github.com/cozy/cozy-ui/commit/e534560))
+
 # [44.5.0](https://github.com/cozy/cozy-ui/compare/v44.4.0...v44.5.0) (2021-02-01)
 
 
