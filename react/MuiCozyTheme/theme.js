@@ -170,15 +170,25 @@ const makeOverrides = theme => ({
     }
   },
   MuiButton: {
+    root: {
+      height: '2.5rem',
+      padding: '0px 1rem'
+    },
+    sizeSmall: {
+      height: '2rem',
+      padding: '0px 0.75rem'
+    },
+    sizeLarge: {
+      padding: '0px 1.25rem',
+      height: '3rem'
+    },
     outlined: {
       borderRadius: 2,
-      height: 40,
       minWidth: 112
     },
     contained: {
       borderRadius: 2,
       boxShadow: 0,
-      height: 40,
       minWidth: 112
     },
     containedSecondary: {

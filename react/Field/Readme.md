@@ -245,6 +245,7 @@ import Field from 'cozy-ui/transpiled/react/Field';
 import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons';
 
 <form>
+  <br/>
   <Field
     label="I'm a label"
     labelProps={{
@@ -255,7 +256,14 @@ import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons';
     }}
     type="password"
     secondaryComponent={({visible}) => {
-      return <MuiButton size='small' color='secondary'>{visible ? 'Hide' : 'Show' }</MuiButton>
+      return (
+        /* Need to cancel the paddingTop of the button */
+        <div style={{ marginTop: '-0.5rem'}}>
+          <MuiButton size='small' color='secondary'>
+            {visible ? 'Hide' : 'Show' }
+          </MuiButton>
+        </div>
+      )
     }}
   />
 </form>

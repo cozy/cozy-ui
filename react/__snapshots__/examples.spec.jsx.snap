@@ -2329,10 +2329,12 @@ exports[`Field should render examples: Field 13`] = `
 
 exports[`Field should render examples: Field 14`] = `
 "<div>
-  <form>
+  <form><br>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\" style=\\"color: teal;\\">I'm a label</label>
       <div class=\\"styles__o-field-input___vCqdV\\">
-        <div class=\\"styles__o-field-input-action___2k7a8\\"><button class=\\"MuiButtonBase-root-88 MuiButton-root-161 MuiButton-text-163 MuiButton-textSecondary-165 MuiButton-flat-166 MuiButton-flatSecondary-168 MuiButton-sizeSmall-184\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label-162\\">Show</span><span class=\\"MuiTouchRipple-root-100\\"></span></button></div><input type=\\"password\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" style=\\"border-color: teal;\\" value=\\"\\">
+        <div class=\\"styles__o-field-input-action___2k7a8\\">
+          <div style=\\"margin-top: -0.5rem;\\"><button class=\\"MuiButtonBase-root-88 MuiButton-root-161 MuiButton-text-163 MuiButton-textSecondary-165 MuiButton-flat-166 MuiButton-flatSecondary-168 MuiButton-sizeSmall-184\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label-162\\">Show</span><span class=\\"MuiTouchRipple-root-100\\"></span></button></div>
+        </div><input type=\\"password\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" style=\\"border-color: teal;\\" value=\\"\\">
       </div>
     </div>
   </form>
