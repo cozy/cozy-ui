@@ -100,7 +100,6 @@ const dialogActions = {
   Dialog: <ExampleDialogActions />
 }
 
-
 const dialogs = [
   Dialog,
   ConfirmDialog,

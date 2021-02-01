@@ -23,7 +23,14 @@ const useClampedValue = (initialValue, min, max) => {
   return [clamp(value, min, max), setClampedValue]
 }
 
-const InfosCarrousel = ({ children, theme, className, swipeableProps }) => {
+const InfosCarrousel = ({
+  children,
+  theme,
+  className,
+  swipeableProps,
+  previousButtonProps,
+  nextButtonProps
+}) => {
   const count = React.Children.count(children)
   const [index, setIndex] = useClampedValue(0, 0, count - 1)
   const goToNextInfos = useCallback(() => setIndex(index + 1), [index])
@@ -56,11 +63,19 @@ const InfosCarrousel = ({ children, theme, className, swipeableProps }) => {
       </SwipeableViews>
       {React.Children.count(children) > 1 ? (
         <div className={styles['InfosCarrousel-navigation']}>
-          <IconButton onClick={goToPreviousInfos} disabled={hasPreviousInfos}>
+          <IconButton
+            onClick={goToPreviousInfos}
+            disabled={hasPreviousInfos}
+            {...previousButtonProps}
+          >
             <Icon icon={LeftIcon} />
           </IconButton>
           <span className={styles['InfosCarrousel-separator']} />
-          <IconButton onClick={goToNextInfos} disabled={hasNextInfos}>
+          <IconButton
+            onClick={goToNextInfos}
+            disabled={hasNextInfos}
+            {...nextButtonProps}
+          >
             <Icon icon={RightIcon} />
           </IconButton>
         </div>
@@ -77,7 +92,11 @@ InfosCarrousel.propTypes = {
   /** Extra classes to apply to the main wrapper */
   className: PropTypes.string,
   /** Props to pass to the underlying react-swipeable-views component */
-  swipeableProps: PropTypes.object
+  swipeableProps: PropTypes.object,
+  /** Props for previous button */
+  previousButtonProps: PropTypes.object,
+  /** Props for next button */
+  nextButtonProps: PropTypes.string
 }
 
 InfosCarrousel.defaultProps = {

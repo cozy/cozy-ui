@@ -1,10 +1,12 @@
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
+
+import IconButton from '@material-ui/core/IconButton'
+
 import Icon from '../Icon'
 import Typography from '../Typography'
 import Stack from '../Stack'
-import palette from '../palette'
 import createDepreciationLogger from '../helpers/createDepreciationLogger'
 
 import styles from './styles.styl'
@@ -15,6 +17,7 @@ export const Infos = ({
   description,
   action,
   dismissAction,
+  dismissButtonProps,
   theme,
   className
 }) => {
@@ -27,9 +30,15 @@ export const Infos = ({
         {action && <div>{action}</div>}
       </Stack>
       {dismissAction && (
-        <button className={styles['Info-close']} onClick={dismissAction}>
-          <Icon icon={CrossIcon} color={palette['coolGrey']} />
-        </button>
+        <div className={styles['Info-close']}>
+          <IconButton
+            size="small"
+            onClick={dismissAction}
+            {...dismissButtonProps}
+          >
+            <Icon icon={CrossIcon} size="12" className="u-coolGrey" />
+          </IconButton>
+        </div>
       )}
     </div>
   )
@@ -45,7 +54,9 @@ Infos.propTypes = {
   /** Extra classnames to apply to the root element */
   className: PropTypes.string,
   /** Controls the background color of the component */
-  theme: PropTypes.oneOf(['primary', 'secondary', 'danger'])
+  theme: PropTypes.oneOf(['primary', 'secondary', 'danger']),
+  /** Props for dismiss button */
+  dismissButtonProps: PropTypes.object
 }
 
 Infos.defaultProps = {

@@ -267,18 +267,18 @@ exports[`Avatar should render examples: Avatar 4`] = `
 exports[`Badge should render examples: Badge 1`] = `
 "<div>
   <div class=\\"u-m-1\\"><span class=\\"MuiTypography-root-1 MuiTypography-button-12 u-dib\\">error<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></span> <span class=\\"MuiTypography-root-1 MuiTypography-button-12 u-dib\\">dot<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></span> <span class=\\"MuiTypography-root-1 MuiTypography-button-12 u-dib\\">large<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></span> <span class=\\"MuiTypography-root-1 MuiTypography-button-12 u-dib\\">small<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></span> </div>
-  <p><span class=\\"MuiBadge-root-105 Component-root-93\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"24\\" height=\\"24\\"><use xlink:href=\\"#circle-filled\\"></use></svg><span class=\\"MuiBadge-badge-106 Component-badge-92 Component-top-94 Component-right-97 Component-medium-99 MuiBadge-colorPrimary-107 Component-colorPrimary-101\\">4</span></span></p>
+  <p><span class=\\"MuiBadge-root-120 Component-root-108\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"24\\" height=\\"24\\"><use xlink:href=\\"#circle-filled\\"></use></svg><span class=\\"MuiBadge-badge-121 Component-badge-107 Component-top-109 Component-right-112 Component-medium-114 MuiBadge-colorPrimary-122 Component-colorPrimary-116\\">4</span></span></p>
   <div class=\\"u-m-1\\"><span class=\\"MuiTypography-root-1 MuiTypography-button-12 u-dib\\">error<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></span> <span class=\\"MuiTypography-root-1 MuiTypography-button-12 u-dib\\">dot<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></span> <span class=\\"MuiTypography-root-1 MuiTypography-button-12 u-dib\\">large<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></span> <span class=\\"MuiTypography-root-1 MuiTypography-button-12 u-dib\\">small<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></span> </div>
-  <p><span class=\\"MuiBadge-root-105 Component-root-93\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"24\\" height=\\"24\\"><use xlink:href=\\"#circle-filled\\"></use></svg><span class=\\"MuiBadge-badge-106 Component-badge-92 Component-top-94 Component-right-97 Component-medium-99 MuiBadge-colorError-109 Component-colorError-103 MuiBadge-dot-111 Component-dot-104\\"></span></span></p>
+  <p><span class=\\"MuiBadge-root-120 Component-root-108\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"24\\" height=\\"24\\"><use xlink:href=\\"#circle-filled\\"></use></svg><span class=\\"MuiBadge-badge-121 Component-badge-107 Component-top-109 Component-right-112 Component-medium-114 MuiBadge-colorError-124 Component-colorError-118 MuiBadge-dot-126 Component-dot-119\\"></span></span></p>
   <div class=\\"u-m-1\\"><span class=\\"MuiTypography-root-1 MuiTypography-button-12 u-dib\\">error<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></span> <span class=\\"MuiTypography-root-1 MuiTypography-button-12 u-dib\\">dot<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></span> <span class=\\"MuiTypography-root-1 MuiTypography-button-12 u-dib\\">large<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></span> <span class=\\"MuiTypography-root-1 MuiTypography-button-12 u-dib\\">small<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></span> </div>
-  <p><span class=\\"MuiBadge-root-105 Component-root-93\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"24\\" height=\\"24\\"><use xlink:href=\\"#circle-filled\\"></use></svg><span class=\\"MuiBadge-badge-106 Component-badge-92 Component-top-94 Component-right-97 Component-medium-99 MuiBadge-colorPrimary-107 Component-colorPrimary-101\\">4</span></span></p>
+  <p><span class=\\"MuiBadge-root-120 Component-root-108\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"24\\" height=\\"24\\"><use xlink:href=\\"#circle-filled\\"></use></svg><span class=\\"MuiBadge-badge-121 Component-badge-107 Component-top-109 Component-right-112 Component-medium-114 MuiBadge-colorPrimary-122 Component-colorPrimary-116\\">4</span></span></p>
 </div>"
 `;
 
 exports[`Badge should render examples: Badge 2`] = `
 "<div>
-  <p><span class=\\"MuiBadge-root-105 Component-root-93\\"><div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span>
-</div><span class=\\"MuiBadge-badge-106 Component-badge-92 Component-qualifier-112 Component-bottom-95 Component-right-97 Component-medium-99\\"><span class=\\"MuiBadge-root-105 Component-root-93\\"><svg class=\\"styles__icon___23x3R\\" width=\\"10\\" height=\\"10\\"><use xlink:href=\\"#link\\"></use></svg><span class=\\"MuiBadge-badge-106 Component-badge-92 Component-top-94 Component-right-97 Component-small-100 MuiBadge-colorError-109 Component-colorError-103 MuiBadge-dot-111 Component-dot-104\\"></span></span></span></span></p>
+  <p><span class=\\"MuiBadge-root-120 Component-root-108\\"><div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span>
+</div><span class=\\"MuiBadge-badge-121 Component-badge-107 Component-qualifier-127 Component-bottom-110 Component-right-112 Component-medium-114\\"><span class=\\"MuiBadge-root-120 Component-root-108\\"><svg class=\\"styles__icon___23x3R\\" width=\\"10\\" height=\\"10\\"><use xlink:href=\\"#link\\"></use></svg><span class=\\"MuiBadge-badge-121 Component-badge-107 Component-top-109 Component-right-112 Component-small-115 MuiBadge-colorError-124 Component-colorError-118 MuiBadge-dot-126 Component-dot-119\\"></span></span></span></span></p>
 </div>"
 `;
 
@@ -528,7 +528,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
     <ol class=\\"styles__list-contact___8ztoP\\">
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">EMPTY</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">EMPTY</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"013a6414-9727-4a4e-8b35-d3b9946a17c6\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -544,7 +544,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">A</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">A</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"013a6413-9726-4a4d-8b34-d3b9946a17c5\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -560,7 +560,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">B</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">B</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"799b0f99-3ad7-4f07-a689-9765b4e239c9\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -653,7 +653,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">C</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">C</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"507fcc3d-1423-46da-b5f9-8fbcfd3f3fe4\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -702,7 +702,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">F</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">F</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"7acdab81-52cb-46f6-9e81-42032e9843ae\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -729,7 +729,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">G</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">G</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"8ba82505-25c3-4821-88df-2e11becc21e8\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -745,7 +745,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">H</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">H</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"307c4e16-70b8-4328-af1c-1d762f788e16\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -794,7 +794,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">J</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">J</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"3e540ae7-4605-4f05-82c9-8cb901a0c34d\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -810,7 +810,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">K</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">K</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"366f3eec-aaa0-4c82-9f27-80ad305ecec8\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -848,7 +848,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">L</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">L</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"3fe82c80-9da3-4a42-bab5-8274df1316e6\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -897,7 +897,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">M</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">M</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"d50b7eea-6e71-4348-ad75-fc791d7a82d4\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -968,7 +968,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">N</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">N</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"627ba975-1314-4813-8366-cea7ac4734bf\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -984,7 +984,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">O</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">O</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"3f6007f9-9284-4bfd-9350-1cbf294bd39b\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1000,7 +1000,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">P</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">P</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"53c75e29-5c9b-4c4f-b802-e4a152551b23\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1049,7 +1049,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">R</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">R</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"c55c831a-9869-4e14-b3aa-d004bced41b0\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1076,7 +1076,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">S</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">S</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"814f6f67-bcc0-498f-bb91-cab5ed315a12\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1147,7 +1147,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">T</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">T</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"0ea42f4a-28f1-432e-934a-68f9c50fe38e\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1196,7 +1196,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">V</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">V</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"23d3d724-d869-4def-841f-c85b499aa6a6\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1234,7 +1234,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">W</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">W</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"b6f5fc43-4199-4cca-8372-d1fe4e75a168\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1305,7 +1305,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">X</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">X</li>
           <li>
             <div class=\\"styles__contact___169nD\\" id=\\"71967809-8e54-4413-aa8e-35b2b945e816\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1331,7 +1331,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
     <ol class=\\"styles__list-contact___8ztoP\\">
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">EMPTY</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">EMPTY</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"013a6414-9727-4a4e-8b35-d3b9946a17c6\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1347,7 +1347,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">A</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">A</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"013a6413-9726-4a4d-8b34-d3b9946a17c5\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1363,7 +1363,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">B</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">B</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"799b0f99-3ad7-4f07-a689-9765b4e239c9\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1456,7 +1456,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">C</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">C</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"507fcc3d-1423-46da-b5f9-8fbcfd3f3fe4\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1505,7 +1505,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">F</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">F</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"7acdab81-52cb-46f6-9e81-42032e9843ae\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1532,7 +1532,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">G</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">G</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"8ba82505-25c3-4821-88df-2e11becc21e8\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1548,7 +1548,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">H</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">H</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"307c4e16-70b8-4328-af1c-1d762f788e16\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1597,7 +1597,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">J</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">J</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"3e540ae7-4605-4f05-82c9-8cb901a0c34d\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1613,7 +1613,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">K</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">K</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"366f3eec-aaa0-4c82-9f27-80ad305ecec8\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1651,7 +1651,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">L</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">L</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"3fe82c80-9da3-4a42-bab5-8274df1316e6\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1700,7 +1700,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">M</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">M</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"d50b7eea-6e71-4348-ad75-fc791d7a82d4\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1771,7 +1771,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">N</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">N</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"627ba975-1314-4813-8366-cea7ac4734bf\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1787,7 +1787,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">O</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">O</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"3f6007f9-9284-4bfd-9350-1cbf294bd39b\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1803,7 +1803,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">P</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">P</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"53c75e29-5c9b-4c4f-b802-e4a152551b23\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1852,7 +1852,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">R</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">R</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"c55c831a-9869-4e14-b3aa-d004bced41b0\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1879,7 +1879,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">S</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">S</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"814f6f67-bcc0-498f-bb91-cab5ed315a12\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1950,7 +1950,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">T</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">T</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"0ea42f4a-28f1-432e-934a-68f9c50fe38e\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -1999,7 +1999,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">V</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">V</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"23d3d724-d869-4def-841f-c85b499aa6a6\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -2037,7 +2037,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">W</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">W</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"b6f5fc43-4199-4cca-8372-d1fe4e75a168\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -2108,7 +2108,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
       </li>
       <li>
         <ol class=\\"styles__sublist-contact___NBitx\\">
-          <li class=\\"MuiListSubheader-root-113 MuiListSubheader-sticky-118 MuiListSubheader-gutters-116\\">X</li>
+          <li class=\\"MuiListSubheader-root-128 MuiListSubheader-sticky-133 MuiListSubheader-gutters-131\\">X</li>
           <li>
             <div class=\\"styles__contact___169nD styles__contact--clickable___1GLTM\\" id=\\"71967809-8e54-4413-aa8e-35b2b945e816\\">
               <div class=\\"styles__contact-identity___mL3IJ\\">
@@ -2332,7 +2332,7 @@ exports[`Field should render examples: Field 14`] = `
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\" style=\\"color: teal;\\">I'm a label</label>
       <div class=\\"styles__o-field-input___vCqdV\\">
-        <div class=\\"styles__o-field-input-action___2k7a8\\"><button class=\\"MuiButtonBase-root-135 MuiButton-root-156 MuiButton-text-158 MuiButton-textSecondary-160 MuiButton-flat-161 MuiButton-flatSecondary-163 MuiButton-sizeSmall-179\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label-157\\">Show</span><span class=\\"MuiTouchRipple-root-149\\"></span></button></div><input type=\\"password\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" style=\\"border-color: teal;\\" value=\\"\\">
+        <div class=\\"styles__o-field-input-action___2k7a8\\"><button class=\\"MuiButtonBase-root-88 MuiButton-root-161 MuiButton-text-163 MuiButton-textSecondary-165 MuiButton-flat-166 MuiButton-flatSecondary-168 MuiButton-sizeSmall-184\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label-162\\">Show</span><span class=\\"MuiTouchRipple-root-100\\"></span></button></div><input type=\\"password\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" style=\\"border-color: teal;\\" value=\\"\\">
       </div>
     </div>
   </form>
@@ -6596,13 +6596,19 @@ exports[`Icon should render examples: Icon 6`] = `
 `;
 
 exports[`IconButton should render examples: IconButton 1`] = `
-"<div><button class=\\"styles__IconButton___1LWwV IconButton-root-82\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-      <use xlink:href=\\"#left\\"></use>
-    </svg></button><button class=\\"styles__IconButton___1LWwV IconButton-root-82\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-      <use xlink:href=\\"#restore\\"></use>
-    </svg></button><button class=\\"styles__IconButton___1LWwV IconButton-root-82\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-      <use xlink:href=\\"#right\\"></use>
-    </svg></button></div>"
+"<div>
+  <div class=\\"styles__Stack--l___3oxCJ\\">
+    <div>
+      <h3 class=\\"MuiTypography-root-1 MuiTypography-h3-15 MuiTypography-gutterBottom-28\\">color: default</h3><button class=\\"MuiButtonBase-root-88 MuiIconButton-root-82\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label-87\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M10.707 2.707a.999.999 0 10-1.414-1.414l-6 6a.999.999 0 000 1.414l6 6a.999.999 0 101.414-1.414L5.414 8l5.293-5.293z\\"></path></svg></span><span class=\\"MuiTouchRipple-root-100\\"></span></button><button class=\\"MuiButtonBase-root-88 MuiIconButton-root-82\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label-87\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><g fill-rule=\\"evenodd\\"><path d=\\"M1 15h8c4.052 0 7-2.948 7-7s-2.948-7-7-7-7 2.948-7 7a1 1 0 102 0c0-2.948 2.052-5 5-5s5 2.052 5 5-2.052 5-5 5H1a1 1 0 000 2z\\"></path><path d=\\"M1.832 4.445a1 1 0 00-1.664 1.11l2 3a1 1 0 001.387.277l3-2a1 1 0 00-1.11-1.664L3.277 6.613 1.832 4.445z\\"></path></g></svg></span><span class=\\"MuiTouchRipple-root-100\\"></span></button><button class=\\"MuiButtonBase-root-88 MuiIconButton-root-82\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label-87\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M12.707 7.293l-6-6a.999.999 0 10-1.414 1.414L10.586 8l-5.293 5.293a.999.999 0 101.414 1.414l6-6a.999.999 0 000-1.414\\"></path></svg></span><span class=\\"MuiTouchRipple-root-100\\"></span></button>
+    </div>
+    <div>
+      <h3 class=\\"MuiTypography-root-1 MuiTypography-h3-15 MuiTypography-gutterBottom-28\\">color: primary</h3><button class=\\"MuiButtonBase-root-88 MuiIconButton-root-82 MuiIconButton-colorPrimary-84\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label-87\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M10.707 2.707a.999.999 0 10-1.414-1.414l-6 6a.999.999 0 000 1.414l6 6a.999.999 0 101.414-1.414L5.414 8l5.293-5.293z\\"></path></svg></span><span class=\\"MuiTouchRipple-root-100\\"></span></button><button class=\\"MuiButtonBase-root-88 MuiIconButton-root-82 MuiIconButton-colorPrimary-84\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label-87\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><g fill-rule=\\"evenodd\\"><path d=\\"M1 15h8c4.052 0 7-2.948 7-7s-2.948-7-7-7-7 2.948-7 7a1 1 0 102 0c0-2.948 2.052-5 5-5s5 2.052 5 5-2.052 5-5 5H1a1 1 0 000 2z\\"></path><path d=\\"M1.832 4.445a1 1 0 00-1.664 1.11l2 3a1 1 0 001.387.277l3-2a1 1 0 00-1.11-1.664L3.277 6.613 1.832 4.445z\\"></path></g></svg></span><span class=\\"MuiTouchRipple-root-100\\"></span></button><button class=\\"MuiButtonBase-root-88 MuiIconButton-root-82 MuiIconButton-colorPrimary-84\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label-87\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M12.707 7.293l-6-6a.999.999 0 10-1.414 1.414L10.586 8l-5.293 5.293a.999.999 0 101.414 1.414l6-6a.999.999 0 000-1.414\\"></path></svg></span><span class=\\"MuiTouchRipple-root-100\\"></span></button>
+    </div>
+    <div>
+      <h3 class=\\"MuiTypography-root-1 MuiTypography-h3-15 MuiTypography-gutterBottom-28\\">color: secondary</h3><button class=\\"MuiButtonBase-root-88 MuiIconButton-root-82 MuiIconButton-colorSecondary-85\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label-87\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M10.707 2.707a.999.999 0 10-1.414-1.414l-6 6a.999.999 0 000 1.414l6 6a.999.999 0 101.414-1.414L5.414 8l5.293-5.293z\\"></path></svg></span><span class=\\"MuiTouchRipple-root-100\\"></span></button><button class=\\"MuiButtonBase-root-88 MuiIconButton-root-82 MuiIconButton-colorSecondary-85\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label-87\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><g fill-rule=\\"evenodd\\"><path d=\\"M1 15h8c4.052 0 7-2.948 7-7s-2.948-7-7-7-7 2.948-7 7a1 1 0 102 0c0-2.948 2.052-5 5-5s5 2.052 5 5-2.052 5-5 5H1a1 1 0 000 2z\\"></path><path d=\\"M1.832 4.445a1 1 0 00-1.664 1.11l2 3a1 1 0 001.387.277l3-2a1 1 0 00-1.11-1.664L3.277 6.613 1.832 4.445z\\"></path></g></svg></span><span class=\\"MuiTouchRipple-root-100\\"></span></button><button class=\\"MuiButtonBase-root-88 MuiIconButton-root-82 MuiIconButton-colorSecondary-85\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label-87\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M12.707 7.293l-6-6a.999.999 0 10-1.414 1.414L10.586 8l-5.293 5.293a.999.999 0 101.414 1.414l6-6a.999.999 0 000-1.414\\"></path></svg></span><span class=\\"MuiTouchRipple-root-100\\"></span></button>
+    </div>
+  </div>
+</div>"
 `;
 
 exports[`IconStack should render examples: IconStack 1`] = `
@@ -6653,9 +6659,8 @@ exports[`Infos should render examples: Infos 1`] = `
           </div>
         </div>
         <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>one</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>two</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>three</span></span></button></div>
-      </div><button class=\\"styles__Info-close___1RVQP\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
-          <path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path>
-        </svg></button>
+      </div>
+      <div class=\\"styles__Info-close___1RVQP\\"><button class=\\"MuiButtonBase-root-88 MuiIconButton-root-82\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label-87\\"><svg viewBox=\\"0 0 24 24\\" class=\\"u-coolGrey styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\"><path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path></svg></span><span class=\\"MuiTouchRipple-root-100\\"></span></button></div>
     </div>
   </div>
 </div>"
@@ -6663,7 +6668,7 @@ exports[`Infos should render examples: Infos 1`] = `
 
 exports[`InfosCarrousel should render examples: InfosCarrousel 1`] = `
 "<div>
-  <div class=\\"u-stack-m\\">
+  <div class=\\"u-stack-m\\"><br>
     <div class=\\"styles__InfosCarrousel___3rCyB\\">
       <div style=\\"overflow-x: hidden;\\">
         <div style=\\"height: 0px; flex-direction: row; transition: all 0s ease 0s; transform: translate(0%, 0); direction: ltr; display: flex; will-change: transform;\\" class=\\"react-swipeable-view-container\\">
@@ -6678,6 +6683,7 @@ exports[`InfosCarrousel should render examples: InfosCarrousel 1`] = `
                 </div>
                 <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>A CTA button</span></span></button></div>
               </div>
+              <div class=\\"styles__Info-close___1RVQP\\"><button class=\\"MuiButtonBase-root-88 MuiIconButton-root-82\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label-87\\"><svg viewBox=\\"0 0 24 24\\" class=\\"u-coolGrey styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\"><path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path></svg></span><span class=\\"MuiTouchRipple-root-100\\"></span></button></div>
             </div>
           </div>
           <div style=\\"width: 100%; flex-shrink: 0; overflow: auto; overflow-y: hidden;\\" aria-hidden=\\"true\\" data-swipeable=\\"true\\">
@@ -6691,15 +6697,12 @@ exports[`InfosCarrousel should render examples: InfosCarrousel 1`] = `
                 </div>
                 <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>A CTA button</span></span></button></div>
               </div>
+              <div class=\\"styles__Info-close___1RVQP\\"><button class=\\"MuiButtonBase-root-88 MuiIconButton-root-82\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label-87\\"><svg viewBox=\\"0 0 24 24\\" class=\\"u-coolGrey styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\"><path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path></svg></span><span class=\\"MuiTouchRipple-root-100\\"></span></button></div>
             </div>
           </div>
         </div>
       </div>
-      <div class=\\"styles__InfosCarrousel-navigation___3s_hu\\"><button class=\\"styles__IconButton___1LWwV IconButton-root-82\\" disabled=\\"\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-            <path fill-rule=\\"evenodd\\" d=\\"M10.707 2.707a.999.999 0 10-1.414-1.414l-6 6a.999.999 0 000 1.414l6 6a.999.999 0 101.414-1.414L5.414 8l5.293-5.293z\\"></path>
-          </svg></button><span class=\\"styles__InfosCarrousel-separator___AvH5m\\"></span><button class=\\"styles__IconButton___1LWwV IconButton-root-82\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-            <path fill-rule=\\"evenodd\\" d=\\"M12.707 7.293l-6-6a.999.999 0 10-1.414 1.414L10.586 8l-5.293 5.293a.999.999 0 101.414 1.414l6-6a.999.999 0 000-1.414\\"></path>
-          </svg></button></div>
+      <div class=\\"styles__InfosCarrousel-navigation___3s_hu\\"><button class=\\"MuiButtonBase-root-88 MuiButtonBase-disabled-89 MuiIconButton-root-82 MuiIconButton-disabled-86\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiIconButton-label-87\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M10.707 2.707a.999.999 0 10-1.414-1.414l-6 6a.999.999 0 000 1.414l6 6a.999.999 0 101.414-1.414L5.414 8l5.293-5.293z\\"></path></svg></span></button><span class=\\"styles__InfosCarrousel-separator___AvH5m\\"></span><button class=\\"MuiButtonBase-root-88 MuiIconButton-root-82\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label-87\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M12.707 7.293l-6-6a.999.999 0 10-1.414 1.414L10.586 8l-5.293 5.293a.999.999 0 101.414 1.414l6-6a.999.999 0 000-1.414\\"></path></svg></span><span class=\\"MuiTouchRipple-root-100\\"></span></button></div>
     </div>
   </div>
 </div>"
@@ -6889,19 +6892,19 @@ exports[`Labs/CollectionField should render examples: Labs/CollectionField 1`] =
 
 exports[`ListItemText should render examples: ListItemText 1`] = `
 "<div>
-  <div class=\\"MuiListItemText-root-140\\"><span class=\\"MuiTypography-root-1 u-db u-ellipsis MuiTypography-subheading-8 MuiListItemText-primary-143\\">I'm a list item text</span></div>
+  <div class=\\"MuiListItemText-root-152\\"><span class=\\"MuiTypography-root-1 u-db u-ellipsis MuiTypography-subheading-8 MuiListItemText-primary-155\\">I'm a list item text</span></div>
 </div>"
 `;
 
 exports[`ListItemText should render examples: ListItemText 2`] = `
 "<div>
-  <div class=\\"MuiListItemText-root-140\\"><span class=\\"MuiTypography-root-1 u-db u-ellipsis MuiTypography-subheading-8 MuiListItemText-primary-143\\">I'm a primary text</span><span class=\\"MuiTypography-root-1 u-db u-ellipsis MuiTypography-caption-11 MuiTypography-colorTextSecondary-34 MuiListItemText-secondary-144\\">I'm a secondary text</span></div>
+  <div class=\\"MuiListItemText-root-152\\"><span class=\\"MuiTypography-root-1 u-db u-ellipsis MuiTypography-subheading-8 MuiListItemText-primary-155\\">I'm a primary text</span><span class=\\"MuiTypography-root-1 u-db u-ellipsis MuiTypography-caption-11 MuiTypography-colorTextSecondary-34 MuiListItemText-secondary-156\\">I'm a secondary text</span></div>
 </div>"
 `;
 
 exports[`ListItemText should render examples: ListItemText 3`] = `
 "<div>
-  <div class=\\"MuiListItemText-root-140\\"><span class=\\"MuiTypography-root-1 u-db u-ellipsis MuiTypography-subheading-8 MuiListItemText-primary-143\\"><p class=\\"MuiTypography-root-1 MuiTypography-body1-10\\">I'm a primary text</p><span class=\\"MuiTypography-root-1 MuiTypography-caption-11 MuiTypography-colorTextSecondary-34\\" tag=\\"a\\" href=\\"http://cozy.io\\"><div class=\\"u-midellipsis\\"><span>Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognis</span><span>e that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a \\"computing machine\\" and the first computer programmer.</span></div></span></span>
+  <div class=\\"MuiListItemText-root-152\\"><span class=\\"MuiTypography-root-1 u-db u-ellipsis MuiTypography-subheading-8 MuiListItemText-primary-155\\"><p class=\\"MuiTypography-root-1 MuiTypography-body1-10\\">I'm a primary text</p><span class=\\"MuiTypography-root-1 MuiTypography-caption-11 MuiTypography-colorTextSecondary-34\\" tag=\\"a\\" href=\\"http://cozy.io\\"><div class=\\"u-midellipsis\\"><span>Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognis</span><span>e that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a \\"computing machine\\" and the first computer programmer.</span></div></span></span>
 </div>
 </div>"
 `;
@@ -7004,19 +7007,19 @@ exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
     <div class=\\"styles__img___3SHpG\\">
       <p class=\\"MuiTypography-root-1 MuiTypography-body1-10\\">Primary</p>
     </div>
-    <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-182\\"><span class=\\"MuiButtonBase-root-135 MuiIconButton-root-195 MuiPrivateSwitchBase-root-191 MuiSwitch-switchBase-185 MuiSwitch-colorPrimary-187 MuiPrivateSwitchBase-checked-192 MuiSwitch-checked-186\\"><span class=\\"MuiIconButton-label-200\\"><span class=\\"MuiSwitch-icon-183 MuiSwitch-iconChecked-184\\"></span><input class=\\"MuiPrivateSwitchBase-input-194\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-149\\"></span></span><span class=\\"MuiSwitch-bar-190\\"></span></span></div>
+    <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-187\\"><span class=\\"MuiButtonBase-root-88 MuiIconButton-root-82 MuiPrivateSwitchBase-root-196 MuiSwitch-switchBase-190 MuiSwitch-colorPrimary-192 MuiPrivateSwitchBase-checked-197 MuiSwitch-checked-191\\"><span class=\\"MuiIconButton-label-87\\"><span class=\\"MuiSwitch-icon-188 MuiSwitch-iconChecked-189\\"></span><input class=\\"MuiPrivateSwitchBase-input-199\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-100\\"></span></span><span class=\\"MuiSwitch-bar-195\\"></span></span></div>
   </div>
   <div class=\\"styles__media___cSJMp\\">
     <div class=\\"styles__img___3SHpG\\">
       <p class=\\"MuiTypography-root-1 MuiTypography-body1-10\\">Secondary</p>
     </div>
-    <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-182\\"><span class=\\"MuiButtonBase-root-135 MuiIconButton-root-195 MuiPrivateSwitchBase-root-191 MuiSwitch-switchBase-185 MuiSwitch-colorSecondary-188 MuiPrivateSwitchBase-checked-192 MuiSwitch-checked-186\\"><span class=\\"MuiIconButton-label-200\\"><span class=\\"MuiSwitch-icon-183 MuiSwitch-iconChecked-184\\"></span><input class=\\"MuiPrivateSwitchBase-input-194\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-149\\"></span></span><span class=\\"MuiSwitch-bar-190\\"></span></span></div>
+    <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-187\\"><span class=\\"MuiButtonBase-root-88 MuiIconButton-root-82 MuiPrivateSwitchBase-root-196 MuiSwitch-switchBase-190 MuiSwitch-colorSecondary-193 MuiPrivateSwitchBase-checked-197 MuiSwitch-checked-191\\"><span class=\\"MuiIconButton-label-87\\"><span class=\\"MuiSwitch-icon-188 MuiSwitch-iconChecked-189\\"></span><input class=\\"MuiPrivateSwitchBase-input-199\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"></span><span class=\\"MuiTouchRipple-root-100\\"></span></span><span class=\\"MuiSwitch-bar-195\\"></span></span></div>
   </div>
   <div class=\\"styles__media___cSJMp\\">
     <div class=\\"styles__img___3SHpG\\">
       <p class=\\"MuiTypography-root-1 MuiTypography-body1-10\\">Disabled</p>
     </div>
-    <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-182\\"><span class=\\"MuiButtonBase-root-135 MuiButtonBase-disabled-136 MuiIconButton-root-195 MuiIconButton-disabled-199 MuiPrivateSwitchBase-root-191 MuiSwitch-switchBase-185 MuiSwitch-colorSecondary-188 MuiPrivateSwitchBase-disabled-193 MuiSwitch-disabled-189\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-200\\"><span class=\\"MuiSwitch-icon-183\\"></span><input class=\\"MuiPrivateSwitchBase-input-194\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-190\\"></span></span></div>
+    <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root-187\\"><span class=\\"MuiButtonBase-root-88 MuiButtonBase-disabled-89 MuiIconButton-root-82 MuiIconButton-disabled-86 MuiPrivateSwitchBase-root-196 MuiSwitch-switchBase-190 MuiSwitch-colorSecondary-193 MuiPrivateSwitchBase-disabled-198 MuiSwitch-disabled-194\\" tabindex=\\"-1\\"><span class=\\"MuiIconButton-label-87\\"><span class=\\"MuiSwitch-icon-188\\"></span><input class=\\"MuiPrivateSwitchBase-input-199\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"></span></span><span class=\\"MuiSwitch-bar-195\\"></span></span></div>
   </div>
 </div>"
 `;

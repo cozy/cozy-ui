@@ -11,9 +11,15 @@ import Typography from "cozy-ui/transpiled/react/Typography";
 // This is necessary for tests to be predictable
 const swipeableProps = { disableLazyLoading: true };
 
+const handleDismissAction = () => {
+  alert('Dismiss action from Infos')
+};
+
 <div className='u-stack-m'>
-  <InfosCarrousel theme="danger" swipeableProps={swipeableProps}>
+  <br/>
+  <InfosCarrousel theme="danger" swipeableProps={swipeableProps} >
     <Infos
+      dismissAction={handleDismissAction}
       description={<>
         <Typography variant="h6">News 1</Typography>
         <Typography variant="body1">Breaking news 1</Typography>
@@ -21,6 +27,7 @@ const swipeableProps = { disableLazyLoading: true };
       action={<Button theme="secondary" label="A CTA button" />}
     />
     <Infos
+      dismissAction={handleDismissAction}
       description={<>
         <Typography variant="h6">News 2</Typography>
         <Typography variant="body1">Breaking news 2</Typography>
