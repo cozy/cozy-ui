@@ -533,6 +533,11 @@ const makeOverrides = theme => ({
     popper: {
       opacity: 0.9
     }
+  },
+  MuiIconButton: {
+    root: {
+      color: theme.palette.text.secondary
+    }
   }
 })
 

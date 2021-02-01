@@ -30,14 +30,15 @@ export const Infos = ({
         {action && <div>{action}</div>}
       </Stack>
       {dismissAction && (
-        <IconButton
-          size="small"
-          className={styles['Info-close']}
-          onClick={dismissAction}
-          {...dismissButtonProps}
-        >
-          <Icon icon={CrossIcon} size="12" className="u-coolGrey" />
-        </IconButton>
+        <div className={styles['Info-close']}>
+          <IconButton
+            size="small"
+            onClick={dismissAction}
+            {...dismissButtonProps}
+          >
+            <Icon icon={CrossIcon} size="12" className="u-coolGrey" />
+          </IconButton>
+        </div>
       )}
     </div>
   )
