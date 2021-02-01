@@ -78,6 +78,8 @@ const getComponentNameFromTestId = testId => {
   return testId.split('-example-')[0]
 }
 
+const LINK_BASE = 'file://'
+
 /**
  * Fetch all available components on the styleguide and returns an array
  * of { name, link } describing each component.
@@ -154,7 +156,7 @@ const fetchAllComponents = async (page, styleguideIndexURL, config) => {
       allLinks,
       componentLinks.map(link => ({
         ...link,
-        link: 'file://' + link.link,
+        link: LINK_BASE + link.link,
         name: getComponentNameFromTestId(link.testId)
       }))
     )
@@ -274,7 +276,7 @@ const cacheToDisk = (fnToCache, options) =>
   }
 
 const screenshotReactStyleguide = async (page, args, config) => {
-  const styleguideIndexURL = `file://${path.join(
+  const styleguideIndexURL = `${LINK_BASE}${path.join(
     args.styleguideDir,
     '/index.html'
   )}`
@@ -353,7 +355,8 @@ const screenshotStackExamples = async (page, args) => {
 }
 
 const screenshotKSSStyleguide = async (page, args) => {
-  const resolveLink = relativePage => `file://${path.join(args.kssDir, relativePage)}`
+  const resolveLink = relativePage =>
+    `${LINK_BASE}${path.join(args.kssDir, relativePage)}`
   const kssPage = resolveLink('index.html')
   await page.goto(kssPage)
 
