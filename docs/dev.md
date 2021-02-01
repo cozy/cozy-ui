@@ -30,16 +30,26 @@ remark -o --use remark-jscodeshift=allowNoLang:true,transform:\"codemods/transfo
 
 # Screenshot testing locally
 
-You can run the screenshots on a local styleguide server.
+- You can screenshot old components into old_screenshots directory
+- Screenshot the new one inside screenshots
+- Run pixelmatch-server, which shows screenshots side by side like on Argos (you need the `pixelmatch` binary to be available)
 
 ```
 # Screenshot all the components
+yarn build:doc:react
 yarn screenshots --styleguide-url 'http://localhost:6161'
 cp -r screenshots old_screenshots
+# yarn watch:doc:react
 # Make changes to BarButton...
 # Screenshot BarButton
 export COMPONENT=BarButton
 yarn screenshots --styleguide-url 'http://localhost:6161' --component $COMPONENT
 # Run pixel diff on a single component
-pixelmatch old_screenshots/$COMPONENT-800x600.png screenshots/$COMPONENT-800x600.png $COMPONENT-diff.png 0.1
+pixelmatch old_screenshots/$COMPONENT.png screenshots/$COMPONENT.png diff/$COMPONENT.png 0.1
+# Regenerate screenshots.html when screenshot is taken
+nodemon -w screenshots -x "node tpl-screenshots.js" -e png
+# Open pixelmatch server to check diffs
+$ nodemon ./scripts/pixelmatch-server/server.js
+# Enable hot reload
+$ livereload screenshots,old_screenshots,diffs -w 1000
 ```
