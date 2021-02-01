@@ -27,3 +27,19 @@ remark -o --use remark-jscodeshift=allowNoLang:true,transform:\"codemods/transfo
 ```
 
 [remark]: https://github.com/remarkjs/remark
+
+# Screenshot testing locally
+
+You can run the screenshots on a local styleguide server.
+
+```
+# Screenshot all the components
+yarn screenshots --styleguide-url 'http://localhost:6161'
+cp -r screenshots old_screenshots
+# Make changes to BarButton...
+# Screenshot BarButton
+export COMPONENT=BarButton
+yarn screenshots --styleguide-url 'http://localhost:6161' --component $COMPONENT
+# Run pixel diff on a single component
+pixelmatch old_screenshots/$COMPONENT-800x600.png screenshots/$COMPONENT-800x600.png $COMPONENT-diff.png 0.1
+```
