@@ -411,6 +411,8 @@ const makeOverrides = theme => ({
       ...theme.typography.h3,
       width: 'calc(100% - (58px + 30px))', // remove close button width and margin
       padding: '24px 32px',
+      display: 'flex',
+      alignItems: 'center',
       [theme.breakpoints.down('sm')]: {
         ...theme.typography.h4,
         width: 'calc(100% - 58px)', // remove close button width and margin
