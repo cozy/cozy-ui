@@ -1,3 +1,18 @@
+# [44.5.0](https://github.com/cozy/cozy-ui/compare/v44.4.0...v44.5.0) (2021-02-01)
+
+
+### Bug Fixes
+
+* Wrap close button in div since IconButton doesn't deal with layout ([49a5bf9](https://github.com/cozy/cozy-ui/commit/49a5bf9))
+
+
+### Features
+
+* Adjust margins for Dialog close button ([4bc03f4](https://github.com/cozy/cozy-ui/commit/4bc03f4))
+* Better example for IconButton ([316aa9c](https://github.com/cozy/cozy-ui/commit/316aa9c))
+* Props forwarding for Infos/InfosCarrousel children ([0eeebf7](https://github.com/cozy/cozy-ui/commit/0eeebf7))
+* Use IconButton for Infos dismissAction button ([1abadf2](https://github.com/cozy/cozy-ui/commit/1abadf2))
+
 # [44.4.0](https://github.com/cozy/cozy-ui/compare/v44.3.0...v44.4.0) (2021-01-29)
 
 
