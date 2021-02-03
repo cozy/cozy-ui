@@ -5,11 +5,12 @@ import classNames from 'classnames'
 
 import { isIOSApp } from 'cozy-device-helper'
 
-import styles from './styles.styl'
 import Icon from '../Icon'
+import CheckIcon from '../Icons/Check'
 import { dodgerBlue, silver, coolGrey, paleGrey } from '../palette'
 import withBreakpoints from '../helpers/withBreakpoints'
 
+import styles from './styles.styl'
 import ControlDefault from './ControlDefault'
 
 const heights = {
@@ -174,7 +175,7 @@ const Option = ({
       <span className={withPrefix(cx, styles['select-option__checkmark'])}>
         {isSelected && (
           <Icon
-            icon="check"
+            icon={CheckIcon}
             color={dodgerBlue}
             className={withPrefix(cx, 'u-ph-half')}
           />

@@ -6,6 +6,7 @@ import { withViewerLocales } from './withViewerLocales'
 import { ButtonLink } from '../Button'
 import NoViewer from './NoViewer'
 import { FileDoctype } from '../proptypes'
+import OpenwithIcon from '../Icons/Openwith'
 
 const ShortcutViewer = ({ t, file }) => {
   const client = useClient()
@@ -20,7 +21,7 @@ const ShortcutViewer = ({ t, file }) => {
       renderFallbackExtraContent={() => (
         <ButtonLink
           label={`${t('Viewer.goto', { url: get(url, 'origin', '') })}`}
-          icon="openwith"
+          icon={OpenwithIcon}
           href={`${get(url, 'origin', '')}`}
           target="_blank"
         />
