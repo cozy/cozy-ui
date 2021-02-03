@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cozy-UI Styleguide</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="app.css">
+
+  </head>
+
+  <body class="kss-body">
+
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
+        </a>
+        <h1 class="kss-header__title kss-title">
+          <img class="kss-logo" src="kss-assets/images/logo.svg" width="52" height="52" alt="Cozy Cloud" />
+          <div>Cozy-UI Styleguide</div>
+        </h1>
+      </section>
+    </header>
+    <!-- /header. -->
+
+
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">
+        <img class="kss-logo" src="kss-assets/images/logo.svg" width="52" height="52" alt="Cozy Cloud" />
+        <div>Cozy-UI Styleguide</div>
+      </h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
+          </a>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-settings.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Settings</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-tools.html">
+              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">Tools</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-generic.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Generic</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-utilities.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Utilities</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="kss-state-active" href="section-components.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Components</span>
+            </a>
+                <ul class="kss-nav__subnav">
+                    <li class="kss-nav__item ">
+                      <a href="section-components.html#kssref-components-accordion">
+                        <span class="kss-nav__ref">5.1</span>
+                        <span class="kss-nav__name">Accordion</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-components.html#kssref-components-avatar">
+                        <span class="kss-nav__ref">5.2</span>
+                        <span class="kss-nav__name">Avatar</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-components.html#kssref-components-chip">
+                        <span class="kss-nav__ref">5.3</span>
+                        <span class="kss-nav__name">Chip</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-components.html#kssref-components-form">
+                        <span class="kss-nav__ref">5.4</span>
+                        <span class="kss-nav__name">Form</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-components.html#kssref-components-form-label">
+                        <span class="kss-nav__ref">5.4.1</span>
+                        <span class="kss-nav__name">Label</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-components.html#kssref-components-form-input-text">
+                        <span class="kss-nav__ref">5.4.2</span>
+                        <span class="kss-nav__name">Input text</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-components.html#kssref-components-form-input-checkbox">
+                        <span class="kss-nav__ref">5.4.3</span>
+                        <span class="kss-nav__name">Input Checkbox</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-components.html#kssref-components-form-input-radio">
+                        <span class="kss-nav__ref">5.4.4</span>
+                        <span class="kss-nav__name">Input Radio</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-components.html#kssref-components-form-textarea">
+                        <span class="kss-nav__ref">5.4.5</span>
+                        <span class="kss-nav__name">Textarea</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-components.html#kssref-components-form-select">
+                        <span class="kss-nav__ref">5.4.6</span>
+                        <span class="kss-nav__name">Select</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-components.html#kssref-components-nav">
+                        <span class="kss-nav__ref">5.5</span>
+                        <span class="kss-nav__name">Navigation</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-components.html#kssref-components-table">
+                        <span class="kss-nav__ref">5.6</span>
+                        <span class="kss-nav__name">Table</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-components.html#kssref-components-table-legacy">
+                        <span class="kss-nav__ref">5.7</span>
+                        <span class="kss-nav__name">Table legacy</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item ">
+                      <a href="section-components.html#kssref-components-buttons">
+                        <span class="kss-nav__ref">5.8</span>
+                        <span class="kss-nav__name">Buttons</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-components.html#kssref-components-buttons-sizes">
+                        <span class="kss-nav__ref">5.8.1</span>
+                        <span class="kss-nav__name">Button sizes</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-components.html#kssref-components-buttons-extension">
+                        <span class="kss-nav__ref">5.8.2</span>
+                        <span class="kss-nav__name">Button extensions</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-components.html#kssref-components-buttons-icons">
+                        <span class="kss-nav__ref">5.8.3</span>
+                        <span class="kss-nav__name">Buttons with icons</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-components.html#kssref-components-buttons-alert">
+                        <span class="kss-nav__ref">5.8.4</span>
+                        <span class="kss-nav__name">Alert&#x27;s buttons</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-components.html#kssref-components-buttons-special">
+                        <span class="kss-nav__ref">5.8.5</span>
+                        <span class="kss-nav__name">Special buttons</span>
+                      </a>
+                    </li>
+                </ul>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
+
+
+    <!-- documentation. -->
+    <section class="kss-documentation">
+
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-1" id="kssref-components">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components">
+                <h1 class="kss-section__item kss-section__item--depth-1">
+                  <span class="kss-section__ref">5</span>
+                  <span class="kss-section__name">Components</span>
+                </h1>
+              </a>
+
+
+            </article>
+
+
+            </header>
+            <section class="kss-section kss-section--depth-2" id="kssref-components-accordion">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-accordion">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.1</span>
+                  <span class="kss-section__name">Accordion</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Basic accordion to gracefully hide/display long content.</p>
+<p>NB: You'll have to deal the behaviour with javascript which is basically adding/removing <code>is-active</code> classes and changing aria attributes accordingly on <code>c-accordion-title</code> &amp; <code>c-accordion-body</code> elements when activated.</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div class="c-accordion">
+   <div class="c-accordion-item">
+       <div class="c-accordion-title is-active" aria-selected="true" aria-controls="body1" role="tab" tabindex="0">
+           Title (is-active)
+       </div>
+       <div class="c-accordion-body is-active" aria-hidden="false" aria-labelledby="body1" rol="tabpanel">
+           Dolor nulla cursus justo netus sociis facilisis maecenas arcu purus, senectus elit nostra conubia libero ornare consectetur sit, elementum ultrices suscipit blandit nunc hendrerit ipsum mi. Facilisis convallis aliquet tempor nunc interdum egestas est ac, hac massa hendrerit odio lectus dignissim quam, cursus elit a tristique nec felis imperdiet. Ridiculus nostra torquent vel nisi taciti ad pharetra lobortis, rutrum purus dui felis tempor cras. Curae id placerat suspendisse purus eget hac sodales primis, aptent potenti facilisis suscipit felis morbi metus parturient pretium, conubia orci ultrices dictum sit mollis lacinia. Ultricies a cum sollicitudin duis in vivamus, eros suscipit viverra donec consectetur, mattis sed eleifend sociis vitae. Magnis pharetra fusce vivamus egestas viverra mauris vehicula, libero velit semper tortor leo augue, aenean senectus ad malesuada mus tincidunt. Semper mattis magnis egestas nec etiam hendrerit ridiculus eleifend bibendum nascetur auctor primis quam, aenean tellus adipiscing vulputate mauris class sem himenaeos consequat condimentum ullamcorper tempor.
+       </div>
+   </div>
+   <div class="c-accordion-item">
+       <div class="c-accordion-title" aria-selected="false" aria-controls="body2" role="tab" tabindex="0">
+           Title not displayed
+       </div>
+       <div class="c-accordion-body" aria-hidden="true" aria-labelledby="body2" rol="tabpanel">
+           Dolor nulla cursus justo netus sociis facilisis maecenas arcu purus, senectus elit nostra conubia libero ornare consectetur sit, elementum ultrices suscipit blandit nunc hendrerit ipsum mi. Facilisis convallis aliquet tempor nunc interdum egestas est ac, hac massa hendrerit odio lectus dignissim quam, cursus elit a tristique nec felis imperdiet. Ridiculus nostra torquent vel nisi taciti ad pharetra lobortis, rutrum purus dui felis tempor cras. Curae id placerat suspendisse purus eget hac sodales primis, aptent potenti facilisis suscipit felis morbi metus parturient pretium, conubia orci ultrices dictum sit mollis lacinia. Ultricies a cum sollicitudin duis in vivamus, eros suscipit viverra donec consectetur, mattis sed eleifend sociis vitae. Magnis pharetra fusce vivamus egestas viverra mauris vehicula, libero velit semper tortor leo augue, aenean senectus ad malesuada mus tincidunt. Semper mattis magnis egestas nec etiam hendrerit ridiculus eleifend bibendum nascetur auctor primis quam, aenean tellus adipiscing vulputate mauris class sem himenaeos consequat condimentum ullamcorper tempor.
+       </div>
+   </div>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;c-accordion&quot;&gt;
+   &lt;div class&#x3D;&quot;c-accordion-item&quot;&gt;
+       &lt;div class&#x3D;&quot;c-accordion-title is-active&quot; aria-selected&#x3D;&quot;true&quot; aria-controls&#x3D;&quot;body1&quot; role&#x3D;&quot;tab&quot; tabindex&#x3D;&quot;0&quot;&gt;
+           Title (is-active)
+       &lt;/div&gt;
+       &lt;div class&#x3D;&quot;c-accordion-body is-active&quot; aria-hidden&#x3D;&quot;false&quot; aria-labelledby&#x3D;&quot;body1&quot; rol&#x3D;&quot;tabpanel&quot;&gt;
+           Dolor nulla cursus justo netus sociis facilisis maecenas arcu purus, senectus elit nostra conubia libero ornare consectetur sit, elementum ultrices suscipit blandit nunc hendrerit ipsum mi. Facilisis convallis aliquet tempor nunc interdum egestas est ac, hac massa hendrerit odio lectus dignissim quam, cursus elit a tristique nec felis imperdiet. Ridiculus nostra torquent vel nisi taciti ad pharetra lobortis, rutrum purus dui felis tempor cras. Curae id placerat suspendisse purus eget hac sodales primis, aptent potenti facilisis suscipit felis morbi metus parturient pretium, conubia orci ultrices dictum sit mollis lacinia. Ultricies a cum sollicitudin duis in vivamus, eros suscipit viverra donec consectetur, mattis sed eleifend sociis vitae. Magnis pharetra fusce vivamus egestas viverra mauris vehicula, libero velit semper tortor leo augue, aenean senectus ad malesuada mus tincidunt. Semper mattis magnis egestas nec etiam hendrerit ridiculus eleifend bibendum nascetur auctor primis quam, aenean tellus adipiscing vulputate mauris class sem himenaeos consequat condimentum ullamcorper tempor.
+       &lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;c-accordion-item&quot;&gt;
+       &lt;div class&#x3D;&quot;c-accordion-title&quot; aria-selected&#x3D;&quot;false&quot; aria-controls&#x3D;&quot;body2&quot; role&#x3D;&quot;tab&quot; tabindex&#x3D;&quot;0&quot;&gt;
+           Title not displayed
+       &lt;/div&gt;
+       &lt;div class&#x3D;&quot;c-accordion-body&quot; aria-hidden&#x3D;&quot;true&quot; aria-labelledby&#x3D;&quot;body2&quot; rol&#x3D;&quot;tabpanel&quot;&gt;
+           Dolor nulla cursus justo netus sociis facilisis maecenas arcu purus, senectus elit nostra conubia libero ornare consectetur sit, elementum ultrices suscipit blandit nunc hendrerit ipsum mi. Facilisis convallis aliquet tempor nunc interdum egestas est ac, hac massa hendrerit odio lectus dignissim quam, cursus elit a tristique nec felis imperdiet. Ridiculus nostra torquent vel nisi taciti ad pharetra lobortis, rutrum purus dui felis tempor cras. Curae id placerat suspendisse purus eget hac sodales primis, aptent potenti facilisis suscipit felis morbi metus parturient pretium, conubia orci ultrices dictum sit mollis lacinia. Ultricies a cum sollicitudin duis in vivamus, eros suscipit viverra donec consectetur, mattis sed eleifend sociis vitae. Magnis pharetra fusce vivamus egestas viverra mauris vehicula, libero velit semper tortor leo augue, aenean senectus ad malesuada mus tincidunt. Semper mattis magnis egestas nec etiam hendrerit ridiculus eleifend bibendum nascetur auctor primis quam, aenean tellus adipiscing vulputate mauris class sem himenaeos consequat condimentum ullamcorper tempor.
+       &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-components-avatar">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-avatar">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.2</span>
+                  <span class="kss-section__name">Avatar</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Display an avatar of a user or contact with initials or an image</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="c-avatar [modifier class]">
+   <span class="c-avatar-initials">CD</span>
+</div>
+<div class="c-avatar [modifier class]">
+   <img src="https://cozy.io/fr/images/cozy-logo_white.png" class="c-avatar-image" alt="">
+</div></div>
+
+                  <h2 class="kss-modifiers__name">.c-avatar--xsmall</h2>
+
+                  <p class="kss-modifiers__description">Extra small size variant</p>
+
+                  <div class="kss-modifiers__example"><div class="c-avatar c-avatar--xsmall">
+   <span class="c-avatar-initials">CD</span>
+</div>
+<div class="c-avatar c-avatar--xsmall">
+   <img src="https://cozy.io/fr/images/cozy-logo_white.png" class="c-avatar-image" alt="">
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-avatar--small</h2>
+
+                  <p class="kss-modifiers__description">Small size variant</p>
+
+                  <div class="kss-modifiers__example"><div class="c-avatar c-avatar--small">
+   <span class="c-avatar-initials">CD</span>
+</div>
+<div class="c-avatar c-avatar--small">
+   <img src="https://cozy.io/fr/images/cozy-logo_white.png" class="c-avatar-image" alt="">
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-avatar--large</h2>
+
+                  <p class="kss-modifiers__description">Large size variant</p>
+
+                  <div class="kss-modifiers__example"><div class="c-avatar c-avatar--large">
+   <span class="c-avatar-initials">CD</span>
+</div>
+<div class="c-avatar c-avatar--large">
+   <img src="https://cozy.io/fr/images/cozy-logo_white.png" class="c-avatar-image" alt="">
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-avatar--xlarge</h2>
+
+                  <p class="kss-modifiers__description">Extra large variant</p>
+
+                  <div class="kss-modifiers__example"><div class="c-avatar c-avatar--xlarge">
+   <span class="c-avatar-initials">CD</span>
+</div>
+<div class="c-avatar c-avatar--xlarge">
+   <img src="https://cozy.io/fr/images/cozy-logo_white.png" class="c-avatar-image" alt="">
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;c-avatar [modifier class]&quot;&gt;
+   &lt;span class&#x3D;&quot;c-avatar-initials&quot;&gt;CD&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;c-avatar [modifier class]&quot;&gt;
+   &lt;img src&#x3D;&quot;https://cozy.io/fr/images/cozy-logo_white.png&quot; class&#x3D;&quot;c-avatar-image&quot; alt&#x3D;&quot;&quot;&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-components-chip">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-chip">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.3</span>
+                  <span class="kss-section__name">Chip</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Display an chip that represents complex identity</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div>
+   <div class="c-chip">
+       <svg class="u-mr-half" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+           <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+       </svg>
+       File
+   </div>
+</div>
+<div>
+   <div class="c-chip">
+       <div class="c-avatar c-avatar--small u-mr-half">
+           <img src="https://cozy.io/fr/images/cozy-logo_white.png" class="c-avatar-image" alt="">
+       </div>
+       Ada Lovelace
+   </div>
+</div>
+<div>
+   <div class="c-chip">
+       Developer
+       <span class="c-chip-separator"></span>
+       Ada Lovelace
+   </div>
+</div>
+<div>
+   <div class="c-chip c-chip--round">
+       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+           <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+       </svg>
+   </div>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div&gt;
+   &lt;div class&#x3D;&quot;c-chip&quot;&gt;
+       &lt;svg class&#x3D;&quot;u-mr-half&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;16&quot; height&#x3D;&quot;16&quot; viewBox&#x3D;&quot;0 0 16 16&quot;&gt;
+           &lt;path d&#x3D;&quot;M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z&quot;/&gt;
+       &lt;/svg&gt;
+       File
+   &lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+   &lt;div class&#x3D;&quot;c-chip&quot;&gt;
+       &lt;div class&#x3D;&quot;c-avatar c-avatar--small u-mr-half&quot;&gt;
+           &lt;img src&#x3D;&quot;https://cozy.io/fr/images/cozy-logo_white.png&quot; class&#x3D;&quot;c-avatar-image&quot; alt&#x3D;&quot;&quot;&gt;
+       &lt;/div&gt;
+       Ada Lovelace
+   &lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+   &lt;div class&#x3D;&quot;c-chip&quot;&gt;
+       Developer
+       &lt;span class&#x3D;&quot;c-chip-separator&quot;&gt;&lt;/span&gt;
+       Ada Lovelace
+   &lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+   &lt;div class&#x3D;&quot;c-chip c-chip--round&quot;&gt;
+       &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;16&quot; height&#x3D;&quot;16&quot; viewBox&#x3D;&quot;0 0 16 16&quot;&gt;
+           &lt;path d&#x3D;&quot;M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z&quot;/&gt;
+       &lt;/svg&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-components-form">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-form">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.4</span>
+                  <span class="kss-section__name">Form</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Form elements</p>
+</div>
+
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-components-form-label">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-form-label">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.4.1</span>
+                  <span class="kss-section__name">Label</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Label element coupled with any other form elements like inputs, textareas, select,etc</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><form>
+   <div>
+       <label class="c-label [modifier class]" for="">Hello, I'm a label</label>
+   </div>
+</form></div>
+
+                  <h2 class="kss-modifiers__name">.is-error</h2>
+
+                  <p class="kss-modifiers__description">Error variant</p>
+
+                  <div class="kss-modifiers__example"><form>
+   <div>
+       <label class="c-label is-error" for="">Hello, I'm a label</label>
+   </div>
+</form></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;form&gt;
+   &lt;div&gt;
+       &lt;label class&#x3D;&quot;c-label [modifier class]&quot; for&#x3D;&quot;&quot;&gt;Hello, I&#x27;m a label&lt;/label&gt;
+   &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-components-form-input-text">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-form-input-text">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.4.2</span>
+                  <span class="kss-section__name">Input text</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Input element for text but also password, url, email</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><form>
+   <div class="u-mb-1">
+       <input type="text" class="c-input-text [modifier class]" placeholder="I'm an input[type=text]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="password" class="c-input-text [modifier class]" placeholder="I'm an input[type=password]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="url" class="c-input-text [modifier class]" placeholder="I'm an input[type=url]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="email" class="c-input-text [modifier class]" placeholder="I'm an input[type=email]" value="" />
+   </div>
+</form></div>
+
+                  <h2 class="kss-modifiers__name">.is-error</h2>
+
+                  <p class="kss-modifiers__description">Error variant</p>
+
+                  <div class="kss-modifiers__example"><form>
+   <div class="u-mb-1">
+       <input type="text" class="c-input-text is-error" placeholder="I'm an input[type=text]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="password" class="c-input-text is-error" placeholder="I'm an input[type=password]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="url" class="c-input-text is-error" placeholder="I'm an input[type=url]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="email" class="c-input-text is-error" placeholder="I'm an input[type=email]" value="" />
+   </div>
+</form></div>
+                  <h2 class="kss-modifiers__name">.c-input-text--tiny</h2>
+
+                  <p class="kss-modifiers__description">Tiny size variant</p>
+
+                  <div class="kss-modifiers__example"><form>
+   <div class="u-mb-1">
+       <input type="text" class="c-input-text c-input-text--tiny" placeholder="I'm an input[type=text]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="password" class="c-input-text c-input-text--tiny" placeholder="I'm an input[type=password]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="url" class="c-input-text c-input-text--tiny" placeholder="I'm an input[type=url]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="email" class="c-input-text c-input-text--tiny" placeholder="I'm an input[type=email]" value="" />
+   </div>
+</form></div>
+                  <h2 class="kss-modifiers__name">.c-input-text--medium</h2>
+
+                  <p class="kss-modifiers__description">Medium size variant</p>
+
+                  <div class="kss-modifiers__example"><form>
+   <div class="u-mb-1">
+       <input type="text" class="c-input-text c-input-text--medium" placeholder="I'm an input[type=text]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="password" class="c-input-text c-input-text--medium" placeholder="I'm an input[type=password]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="url" class="c-input-text c-input-text--medium" placeholder="I'm an input[type=url]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="email" class="c-input-text c-input-text--medium" placeholder="I'm an input[type=email]" value="" />
+   </div>
+</form></div>
+                  <h2 class="kss-modifiers__name">.c-input-text--large</h2>
+
+                  <p class="kss-modifiers__description">Large size variant (default)</p>
+
+                  <div class="kss-modifiers__example"><form>
+   <div class="u-mb-1">
+       <input type="text" class="c-input-text c-input-text--large" placeholder="I'm an input[type=text]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="password" class="c-input-text c-input-text--large" placeholder="I'm an input[type=password]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="url" class="c-input-text c-input-text--large" placeholder="I'm an input[type=url]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="email" class="c-input-text c-input-text--large" placeholder="I'm an input[type=email]" value="" />
+   </div>
+</form></div>
+                  <h2 class="kss-modifiers__name">.c-input-text--fullwidth</h2>
+
+                  <p class="kss-modifiers__description">Full width variant</p>
+
+                  <div class="kss-modifiers__example"><form>
+   <div class="u-mb-1">
+       <input type="text" class="c-input-text c-input-text--fullwidth" placeholder="I'm an input[type=text]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="password" class="c-input-text c-input-text--fullwidth" placeholder="I'm an input[type=password]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="url" class="c-input-text c-input-text--fullwidth" placeholder="I'm an input[type=url]" value="" />
+   </div>
+   <div class="u-mb-1">
+       <input type="email" class="c-input-text c-input-text--fullwidth" placeholder="I'm an input[type=email]" value="" />
+   </div>
+</form></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;form&gt;
+   &lt;div class&#x3D;&quot;u-mb-1&quot;&gt;
+       &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;c-input-text [modifier class]&quot; placeholder&#x3D;&quot;I&#x27;m an input[type&#x3D;text]&quot; value&#x3D;&quot;&quot; /&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;u-mb-1&quot;&gt;
+       &lt;input type&#x3D;&quot;password&quot; class&#x3D;&quot;c-input-text [modifier class]&quot; placeholder&#x3D;&quot;I&#x27;m an input[type&#x3D;password]&quot; value&#x3D;&quot;&quot; /&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;u-mb-1&quot;&gt;
+       &lt;input type&#x3D;&quot;url&quot; class&#x3D;&quot;c-input-text [modifier class]&quot; placeholder&#x3D;&quot;I&#x27;m an input[type&#x3D;url]&quot; value&#x3D;&quot;&quot; /&gt;
+   &lt;/div&gt;
+   &lt;div class&#x3D;&quot;u-mb-1&quot;&gt;
+       &lt;input type&#x3D;&quot;email&quot; class&#x3D;&quot;c-input-text [modifier class]&quot; placeholder&#x3D;&quot;I&#x27;m an input[type&#x3D;email]&quot; value&#x3D;&quot;&quot; /&gt;
+   &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-components-form-input-checkbox">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-form-input-checkbox">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.4.3</span>
+                  <span class="kss-section__name">Input Checkbox</span>
+                </h3>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><form>
+   <h3>Standard checkbox</h3>
+   <div>
+       <label class="c-input-checkbox [modifier class]">
+           <input type="checkbox" />
+           <span>I'm a checkbox</span>
+       </label>
+   </div>
+   <h3>Mixed checkbox</h3>
+   <div>
+       <label class="c-input-checkbox [modifier class]" aria-checked="mixed">
+           <input type="checkbox" />
+           <span>I'm a checkbox</span>
+       </label>
+   </div>
+</form></div>
+
+                  <h2 class="kss-modifiers__name">.is-error</h2>
+
+                  <p class="kss-modifiers__description">Error variant</p>
+
+                  <div class="kss-modifiers__example"><form>
+   <h3>Standard checkbox</h3>
+   <div>
+       <label class="c-input-checkbox is-error">
+           <input type="checkbox" />
+           <span>I'm a checkbox</span>
+       </label>
+   </div>
+   <h3>Mixed checkbox</h3>
+   <div>
+       <label class="c-input-checkbox is-error" aria-checked="mixed">
+           <input type="checkbox" />
+           <span>I'm a checkbox</span>
+       </label>
+   </div>
+</form></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;form&gt;
+   &lt;h3&gt;Standard checkbox&lt;/h3&gt;
+   &lt;div&gt;
+       &lt;label class&#x3D;&quot;c-input-checkbox [modifier class]&quot;&gt;
+           &lt;input type&#x3D;&quot;checkbox&quot; /&gt;
+           &lt;span&gt;I&#x27;m a checkbox&lt;/span&gt;
+       &lt;/label&gt;
+   &lt;/div&gt;
+   &lt;h3&gt;Mixed checkbox&lt;/h3&gt;
+   &lt;div&gt;
+       &lt;label class&#x3D;&quot;c-input-checkbox [modifier class]&quot; aria-checked&#x3D;&quot;mixed&quot;&gt;
+           &lt;input type&#x3D;&quot;checkbox&quot; /&gt;
+           &lt;span&gt;I&#x27;m a checkbox&lt;/span&gt;
+       &lt;/label&gt;
+   &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-components-form-input-radio">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-form-input-radio">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.4.4</span>
+                  <span class="kss-section__name">Input Radio</span>
+                </h3>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><form>
+   <div>
+       <label class="u-mb-half c-input-radio [modifier class]">
+           <input type="radio" name="radio"/>
+           <span>I'm a radio one</span>
+       </label>
+       <label class="u-mb-half c-input-radio [modifier class]">
+           <input type="radio" name="radio"/>
+           <span>I'm a radio two</span>
+       </label>
+   </div>
+</form></div>
+
+                  <h2 class="kss-modifiers__name">.is-error</h2>
+
+                  <p class="kss-modifiers__description">Error variant</p>
+
+                  <div class="kss-modifiers__example"><form>
+   <div>
+       <label class="u-mb-half c-input-radio is-error">
+           <input type="radio" name="radio"/>
+           <span>I'm a radio one</span>
+       </label>
+       <label class="u-mb-half c-input-radio is-error">
+           <input type="radio" name="radio"/>
+           <span>I'm a radio two</span>
+       </label>
+   </div>
+</form></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;form&gt;
+   &lt;div&gt;
+       &lt;label class&#x3D;&quot;u-mb-half c-input-radio [modifier class]&quot;&gt;
+           &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio&quot;/&gt;
+           &lt;span&gt;I&#x27;m a radio one&lt;/span&gt;
+       &lt;/label&gt;
+       &lt;label class&#x3D;&quot;u-mb-half c-input-radio [modifier class]&quot;&gt;
+           &lt;input type&#x3D;&quot;radio&quot; name&#x3D;&quot;radio&quot;/&gt;
+           &lt;span&gt;I&#x27;m a radio two&lt;/span&gt;
+       &lt;/label&gt;
+   &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-components-form-textarea">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-form-textarea">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.4.5</span>
+                  <span class="kss-section__name">Textarea</span>
+                </h3>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><form>
+   <div>
+       <textarea class="c-textarea [modifier class]" placeholder="Once upon a time…"></textarea>
+   </div>
+</form></div>
+
+                  <h2 class="kss-modifiers__name">.is-error</h2>
+
+                  <p class="kss-modifiers__description">Error variant</p>
+
+                  <div class="kss-modifiers__example"><form>
+   <div>
+       <textarea class="c-textarea is-error" placeholder="Once upon a time…"></textarea>
+   </div>
+</form></div>
+                  <h2 class="kss-modifiers__name">.c-textarea--tiny</h2>
+
+                  <p class="kss-modifiers__description">Tiny size variant</p>
+
+                  <div class="kss-modifiers__example"><form>
+   <div>
+       <textarea class="c-textarea c-textarea--tiny" placeholder="Once upon a time…"></textarea>
+   </div>
+</form></div>
+                  <h2 class="kss-modifiers__name">.c-textarea--medium</h2>
+
+                  <p class="kss-modifiers__description">Medium size variant</p>
+
+                  <div class="kss-modifiers__example"><form>
+   <div>
+       <textarea class="c-textarea c-textarea--medium" placeholder="Once upon a time…"></textarea>
+   </div>
+</form></div>
+                  <h2 class="kss-modifiers__name">.c-textarea--fullwidth</h2>
+
+                  <p class="kss-modifiers__description">Full width variant</p>
+
+                  <div class="kss-modifiers__example"><form>
+   <div>
+       <textarea class="c-textarea c-textarea--fullwidth" placeholder="Once upon a time…"></textarea>
+   </div>
+</form></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;form&gt;
+   &lt;div&gt;
+       &lt;textarea class&#x3D;&quot;c-textarea [modifier class]&quot; placeholder&#x3D;&quot;Once upon a time…&quot;&gt;&lt;/textarea&gt;
+   &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-components-form-select">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-form-select">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.4.6</span>
+                  <span class="kss-section__name">Select</span>
+                </h3>
+              </a>
+
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><form>
+   <div>
+       <select class="c-select [modifier class]">
+           <option value="" disabled selected>Choose your option</option>
+           <option value="1">Option 1</option>
+           <option value="2">Option 2</option>
+           <option value="3">Option 3</option>
+           <option value="4">Option 4</option>
+       </select>
+   </div>
+</form></div>
+
+                  <h2 class="kss-modifiers__name">.is-error</h2>
+
+                  <p class="kss-modifiers__description">Error variant</p>
+
+                  <div class="kss-modifiers__example"><form>
+   <div>
+       <select class="c-select is-error">
+           <option value="" disabled selected>Choose your option</option>
+           <option value="1">Option 1</option>
+           <option value="2">Option 2</option>
+           <option value="3">Option 3</option>
+           <option value="4">Option 4</option>
+       </select>
+   </div>
+</form></div>
+                  <h2 class="kss-modifiers__name">.c-select--tiny</h2>
+
+                  <p class="kss-modifiers__description">Tiny size variant</p>
+
+                  <div class="kss-modifiers__example"><form>
+   <div>
+       <select class="c-select c-select--tiny">
+           <option value="" disabled selected>Choose your option</option>
+           <option value="1">Option 1</option>
+           <option value="2">Option 2</option>
+           <option value="3">Option 3</option>
+           <option value="4">Option 4</option>
+       </select>
+   </div>
+</form></div>
+                  <h2 class="kss-modifiers__name">.c-select--medium</h2>
+
+                  <p class="kss-modifiers__description">Medium size variant</p>
+
+                  <div class="kss-modifiers__example"><form>
+   <div>
+       <select class="c-select c-select--medium">
+           <option value="" disabled selected>Choose your option</option>
+           <option value="1">Option 1</option>
+           <option value="2">Option 2</option>
+           <option value="3">Option 3</option>
+           <option value="4">Option 4</option>
+       </select>
+   </div>
+</form></div>
+                  <h2 class="kss-modifiers__name">.c-select--fullwidth</h2>
+
+                  <p class="kss-modifiers__description">Full width variant</p>
+
+                  <div class="kss-modifiers__example"><form>
+   <div>
+       <select class="c-select c-select--fullwidth">
+           <option value="" disabled selected>Choose your option</option>
+           <option value="1">Option 1</option>
+           <option value="2">Option 2</option>
+           <option value="3">Option 3</option>
+           <option value="4">Option 4</option>
+       </select>
+   </div>
+</form></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;form&gt;
+   &lt;div&gt;
+       &lt;select class&#x3D;&quot;c-select [modifier class]&quot;&gt;
+           &lt;option value&#x3D;&quot;&quot; disabled selected&gt;Choose your option&lt;/option&gt;
+           &lt;option value&#x3D;&quot;1&quot;&gt;Option 1&lt;/option&gt;
+           &lt;option value&#x3D;&quot;2&quot;&gt;Option 2&lt;/option&gt;
+           &lt;option value&#x3D;&quot;3&quot;&gt;Option 3&lt;/option&gt;
+           &lt;option value&#x3D;&quot;4&quot;&gt;Option 4&lt;/option&gt;
+       &lt;/select&gt;
+   &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-components-nav">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-nav">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.5</span>
+                  <span class="kss-section__name">Navigation</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Navigation component that displays a list of item link to other pages</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><nav style="width: 220px">
+    <ul class="c-nav">
+        <li class="c-nav-item">
+            <a class="c-nav-link is-active" href="#">
+                <span class="c-nav-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+                    </svg>
+                </span>
+                <span class="c-nav-text">Link 1</span>
+            </a>
+        </li>
+        <li class="c-nav-item">
+            <a class="c-nav-link" href="#">
+                <span class="c-nav-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+                    </svg>
+                </span>
+                <span class="c-nav-text">Link 2</span>
+            </a>
+        </li>
+        <li class="c-nav-item">
+            <a class="c-nav-link" href="#">
+                <span class="c-nav-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+                    </svg>
+                </span>
+                <span class="c-nav-text">Link 3</span>
+            </a>
+        </li>
+    </ul>
+</nav></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;nav style&#x3D;&quot;width: 220px&quot;&gt;
+    &lt;ul class&#x3D;&quot;c-nav&quot;&gt;
+        &lt;li class&#x3D;&quot;c-nav-item&quot;&gt;
+            &lt;a class&#x3D;&quot;c-nav-link is-active&quot; href&#x3D;&quot;#&quot;&gt;
+                &lt;span class&#x3D;&quot;c-nav-icon&quot;&gt;
+                    &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;16&quot; height&#x3D;&quot;16&quot; viewBox&#x3D;&quot;0 0 16 16&quot;&gt;
+                        &lt;path d&#x3D;&quot;M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z&quot;/&gt;
+                    &lt;/svg&gt;
+                &lt;/span&gt;
+                &lt;span class&#x3D;&quot;c-nav-text&quot;&gt;Link 1&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class&#x3D;&quot;c-nav-item&quot;&gt;
+            &lt;a class&#x3D;&quot;c-nav-link&quot; href&#x3D;&quot;#&quot;&gt;
+                &lt;span class&#x3D;&quot;c-nav-icon&quot;&gt;
+                    &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;16&quot; height&#x3D;&quot;16&quot; viewBox&#x3D;&quot;0 0 16 16&quot;&gt;
+                        &lt;path d&#x3D;&quot;M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z&quot;/&gt;
+                    &lt;/svg&gt;
+                &lt;/span&gt;
+                &lt;span class&#x3D;&quot;c-nav-text&quot;&gt;Link 2&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class&#x3D;&quot;c-nav-item&quot;&gt;
+            &lt;a class&#x3D;&quot;c-nav-link&quot; href&#x3D;&quot;#&quot;&gt;
+                &lt;span class&#x3D;&quot;c-nav-icon&quot;&gt;
+                    &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;16&quot; height&#x3D;&quot;16&quot; viewBox&#x3D;&quot;0 0 16 16&quot;&gt;
+                        &lt;path d&#x3D;&quot;M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z&quot;/&gt;
+                    &lt;/svg&gt;
+                &lt;/span&gt;
+                &lt;span class&#x3D;&quot;c-nav-text&quot;&gt;Link 3&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-components-table">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-table">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.6</span>
+                  <span class="kss-section__name">Table</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>For a flexibility purpose, complex tables use <code>&lt;div&gt;</code> element instead of <code>&lt;table&gt;</code> but you still can use <code>&lt;table&gt;</code> for simpler tables, see <strong>table-legacy</strong> below.</p>
+<p>By default, only <code>.c-table-cell--primary</code> has an ellipsis effect, but you can have it on any cell by applying the <code>.c-table-ellipsis</code> class.</p>
+<p>NB: You should decide by yourself the sizes of the columns. In those examples we use the style tag but you definitely should use CSS classes.</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div>
+   <h2>Table with div element</h2>
+   <div class="c-table">
+       <div class="c-table-head">
+           <div class="c-table-row-head">
+               <div class="c-table-header" style="width:50%">Header 1</div>
+               <div class="c-table-header" style="width:25%">Header 2</div>
+               <div class="c-table-header" style="width:25%">Header 3</div>
+           </div>
+       </div>
+       <div class="c-table-body">
+           <div class="c-table-row is-selected">
+               <div class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet</div>
+               <div class="c-table-cell" style="width:25%">lorem</div>
+               <div class="c-table-cell c-table-ellipsis" style="width:25%">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+           </div>
+           <div class="c-table-row">
+               <div class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</div>
+               <div class="c-table-cell" style="width:25%">corporis</div>
+               <div class="c-table-cell" style="width:25%">placeat</div>
+           </div>
+           <div class="c-table-divider">Divider</div>
+           <div class="c-table-row">
+               <div class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</div>
+               <div class="c-table-cell" style="width:25%">corporis</div>
+               <div class="c-table-cell" style="width:25%">placeat</div>
+           </div>
+       </div>
+   </div>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div&gt;
+   &lt;h2&gt;Table with div element&lt;/h2&gt;
+   &lt;div class&#x3D;&quot;c-table&quot;&gt;
+       &lt;div class&#x3D;&quot;c-table-head&quot;&gt;
+           &lt;div class&#x3D;&quot;c-table-row-head&quot;&gt;
+               &lt;div class&#x3D;&quot;c-table-header&quot; style&#x3D;&quot;width:50%&quot;&gt;Header 1&lt;/div&gt;
+               &lt;div class&#x3D;&quot;c-table-header&quot; style&#x3D;&quot;width:25%&quot;&gt;Header 2&lt;/div&gt;
+               &lt;div class&#x3D;&quot;c-table-header&quot; style&#x3D;&quot;width:25%&quot;&gt;Header 3&lt;/div&gt;
+           &lt;/div&gt;
+       &lt;/div&gt;
+       &lt;div class&#x3D;&quot;c-table-body&quot;&gt;
+           &lt;div class&#x3D;&quot;c-table-row is-selected&quot;&gt;
+               &lt;div class&#x3D;&quot;c-table-cell c-table-cell--primary&quot; style&#x3D;&quot;width:50%&quot;&gt;Lorem ipsum dolor sit amet&lt;/div&gt;
+               &lt;div class&#x3D;&quot;c-table-cell&quot; style&#x3D;&quot;width:25%&quot;&gt;lorem&lt;/div&gt;
+               &lt;div class&#x3D;&quot;c-table-cell c-table-ellipsis&quot; style&#x3D;&quot;width:25%&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/div&gt;
+           &lt;/div&gt;
+           &lt;div class&#x3D;&quot;c-table-row&quot;&gt;
+               &lt;div class&#x3D;&quot;c-table-cell c-table-cell--primary&quot; style&#x3D;&quot;width:50%&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam&lt;/div&gt;
+               &lt;div class&#x3D;&quot;c-table-cell&quot; style&#x3D;&quot;width:25%&quot;&gt;corporis&lt;/div&gt;
+               &lt;div class&#x3D;&quot;c-table-cell&quot; style&#x3D;&quot;width:25%&quot;&gt;placeat&lt;/div&gt;
+           &lt;/div&gt;
+           &lt;div class&#x3D;&quot;c-table-divider&quot;&gt;Divider&lt;/div&gt;
+           &lt;div class&#x3D;&quot;c-table-row&quot;&gt;
+               &lt;div class&#x3D;&quot;c-table-cell c-table-cell--primary&quot; style&#x3D;&quot;width:50%&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam&lt;/div&gt;
+               &lt;div class&#x3D;&quot;c-table-cell&quot; style&#x3D;&quot;width:25%&quot;&gt;corporis&lt;/div&gt;
+               &lt;div class&#x3D;&quot;c-table-cell&quot; style&#x3D;&quot;width:25%&quot;&gt;placeat&lt;/div&gt;
+           &lt;/div&gt;
+       &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-components-table-legacy">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-table-legacy">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.7</span>
+                  <span class="kss-section__name">Table legacy</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>You also can use the <code>&lt;table&gt;</code> if you want although it could be tricky for complex tables.</p>
+<p>List of utility classes for table</p>
+<ul>
+<li><code>.is-selected</code> on a <code>&lt;tr&gt;</code> to highlight an entire line</li>
+<li><code>.c-table-divider</code> on a <code>&lt;tr&gt;</code> to create a divider in your data table</li>
+<li><code>.c-table-cell--primary</code> on a <code>&lt;td&gt;</code> to bring out a cell</li>
+<li><code>.c-table-ellipsis</code> on a <code>&lt;td&gt;</code> to add an ellipsis effect without adding <code>table-layout: fixed</code> property to the table. In order for this to work you <strong>MUST</strong> have <strong>2</strong> <code>&lt;div&gt;</code> nested inside you <code>&lt;td&gt;</code>. <em>See example</em></li>
+</ul>
+<p>NB: Unlike the <code>&lt;div&gt;</code> table, the cell with <code>.c-table-cell--primary</code> does <strong>not</strong> have an ellipsis effect by default, if you want it must you add the <code>.c-table-ellipsis</code> class and the needed DOM.</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div>
+   <h2>Table with table element</h2>
+   <table class="c-table">
+       <thead>
+           <tr>
+               <th>Header 1</th>
+               <th>Header 2</th>
+               <th>Header 3</th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr class="is-selected">
+               <td class="c-table-cell--primary">Lorem ipsum dolor sit amet</td>
+               <td>lorem</td>
+               <td>ipsum</td>
+           </tr>
+           <tr>
+               <td class="c-table-cell--primary c-table-ellipsis">
+                   <div>
+                       <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</div>
+                   </div>
+               </td>
+               <td>corporis</td>
+               <td>placeat</td>
+           </tr>
+           <tr class="c-table-divider">
+               <td colspan="3">Divider</td>
+           </tr>
+           <tr>
+               <td class="c-table-cell--primary c-table-ellipsis">
+                    <div>
+                       <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</div>
+                   </div>
+               </td>
+               <td>corporis</td>
+               <td>placeat</td>
+           </tr>
+       </tbody>
+   </table>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div&gt;
+   &lt;h2&gt;Table with table element&lt;/h2&gt;
+   &lt;table class&#x3D;&quot;c-table&quot;&gt;
+       &lt;thead&gt;
+           &lt;tr&gt;
+               &lt;th&gt;Header 1&lt;/th&gt;
+               &lt;th&gt;Header 2&lt;/th&gt;
+               &lt;th&gt;Header 3&lt;/th&gt;
+           &lt;/tr&gt;
+       &lt;/thead&gt;
+       &lt;tbody&gt;
+           &lt;tr class&#x3D;&quot;is-selected&quot;&gt;
+               &lt;td class&#x3D;&quot;c-table-cell--primary&quot;&gt;Lorem ipsum dolor sit amet&lt;/td&gt;
+               &lt;td&gt;lorem&lt;/td&gt;
+               &lt;td&gt;ipsum&lt;/td&gt;
+           &lt;/tr&gt;
+           &lt;tr&gt;
+               &lt;td class&#x3D;&quot;c-table-cell--primary c-table-ellipsis&quot;&gt;
+                   &lt;div&gt;
+                       &lt;div&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam&lt;/div&gt;
+                   &lt;/div&gt;
+               &lt;/td&gt;
+               &lt;td&gt;corporis&lt;/td&gt;
+               &lt;td&gt;placeat&lt;/td&gt;
+           &lt;/tr&gt;
+           &lt;tr class&#x3D;&quot;c-table-divider&quot;&gt;
+               &lt;td colspan&#x3D;&quot;3&quot;&gt;Divider&lt;/td&gt;
+           &lt;/tr&gt;
+           &lt;tr&gt;
+               &lt;td class&#x3D;&quot;c-table-cell--primary c-table-ellipsis&quot;&gt;
+                    &lt;div&gt;
+                       &lt;div&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam&lt;/div&gt;
+                   &lt;/div&gt;
+               &lt;/td&gt;
+               &lt;td&gt;corporis&lt;/td&gt;
+               &lt;td&gt;placeat&lt;/td&gt;
+           &lt;/tr&gt;
+       &lt;/tbody&gt;
+   &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-2" id="kssref-components-buttons">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-buttons">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.8</span>
+                  <span class="kss-section__name">Buttons</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Buttons in different flavour</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn [modifier class]"><span>Click me, I'm a button!</span></button>
+    <button class="c-btn c-btn--subtle [modifier class]"><span>Click me, I'm a button!</span></button>
+</div></div>
+
+                  <h2 class="kss-modifiers__name">.c-btn--secondary</h2>
+
+                  <p class="kss-modifiers__description">Basic alternative</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn c-btn--secondary"><span>Click me, I'm a button!</span></button>
+    <button class="c-btn c-btn--subtle c-btn--secondary"><span>Click me, I'm a button!</span></button>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn--danger</h2>
+
+                  <p class="kss-modifiers__description">Danger</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn c-btn--danger"><span>Click me, I'm a button!</span></button>
+    <button class="c-btn c-btn--subtle c-btn--danger"><span>Click me, I'm a button!</span></button>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn--danger-outline</h2>
+
+                  <p class="kss-modifiers__description">Danger outlined</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn c-btn--danger-outline"><span>Click me, I'm a button!</span></button>
+    <button class="c-btn c-btn--subtle c-btn--danger-outline"><span>Click me, I'm a button!</span></button>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn--highlight</h2>
+
+                  <p class="kss-modifiers__description">Highlighted button to catch the eye</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn c-btn--highlight"><span>Click me, I'm a button!</span></button>
+    <button class="c-btn c-btn--subtle c-btn--highlight"><span>Click me, I'm a button!</span></button>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn--text</h2>
+
+                  <p class="kss-modifiers__description">Text only button</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn c-btn--text"><span>Click me, I'm a button!</span></button>
+    <button class="c-btn c-btn--subtle c-btn--text"><span>Click me, I'm a button!</span></button>
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;u-p-1&quot;&gt;
+    &lt;button class&#x3D;&quot;c-btn [modifier class]&quot;&gt;&lt;span&gt;Click me, I&#x27;m a button!&lt;/span&gt;&lt;/button&gt;
+    &lt;button class&#x3D;&quot;c-btn c-btn--subtle [modifier class]&quot;&gt;&lt;span&gt;Click me, I&#x27;m a button!&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-components-buttons-sizes">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-buttons-sizes">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.8.1</span>
+                  <span class="kss-section__name">Button sizes</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Different sizes of buttons</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn [modifier class]"><span>Click me</span></button>
+    <button class="c-btn c-btn--subtle [modifier class]"><span>Click me</span></button>
+</div></div>
+
+                  <h2 class="kss-modifiers__name">.c-btn--tiny</h2>
+
+                  <p class="kss-modifiers__description">Tiny button (for Alerts mostly)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn c-btn--tiny"><span>Click me</span></button>
+    <button class="c-btn c-btn--subtle c-btn--tiny"><span>Click me</span></button>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn--small</h2>
+
+                  <p class="kss-modifiers__description">Small button</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn c-btn--small"><span>Click me</span></button>
+    <button class="c-btn c-btn--subtle c-btn--small"><span>Click me</span></button>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn--large</h2>
+
+                  <p class="kss-modifiers__description">Large button</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn c-btn--large"><span>Click me</span></button>
+    <button class="c-btn c-btn--subtle c-btn--large"><span>Click me</span></button>
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;u-p-1&quot;&gt;
+    &lt;button class&#x3D;&quot;c-btn [modifier class]&quot;&gt;&lt;span&gt;Click me&lt;/span&gt;&lt;/button&gt;
+    &lt;button class&#x3D;&quot;c-btn c-btn--subtle [modifier class]&quot;&gt;&lt;span&gt;Click me&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-components-buttons-extension">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-buttons-extension">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.8.2</span>
+                  <span class="kss-section__name">Button extensions</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Different extensions of buttons</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn [modifier class]"><span>Click</span></button>
+    <button class="c-btn c-btn--subtle [modifier class]"><span>Click</span></button>
+</div></div>
+
+                  <h2 class="kss-modifiers__name">.c-btn--narrow</h2>
+
+                  <p class="kss-modifiers__description">Narrow button (ignore button's min-width)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn c-btn--narrow"><span>Click</span></button>
+    <button class="c-btn c-btn--subtle c-btn--narrow"><span>Click</span></button>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn--full</h2>
+
+                  <p class="kss-modifiers__description">Full button</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn c-btn--full"><span>Click</span></button>
+    <button class="c-btn c-btn--subtle c-btn--full"><span>Click</span></button>
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;u-p-1&quot;&gt;
+    &lt;button class&#x3D;&quot;c-btn [modifier class]&quot;&gt;&lt;span&gt;Click&lt;/span&gt;&lt;/button&gt;
+    &lt;button class&#x3D;&quot;c-btn c-btn--subtle [modifier class]&quot;&gt;&lt;span&gt;Click&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-components-buttons-icons">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-buttons-icons">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.8.3</span>
+                  <span class="kss-section__name">Buttons with icons</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Those buttons can inherit any flavour of buttons described above.</p>
+<p>The SVG icon is filled with a color consistent with the theme of its button.</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="u-p-1">
+   <button class="c-btn [modifier class]">
+       <span>
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+               <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+           </svg>
+           <span>Click me, I'm a button!</span>
+       </span>
+   </button>
+   <button class="c-btn c-btn--subtle [modifier class]">
+       <span>
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+               <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+           </svg>
+           <span>Click me, I'm a button!</span>
+       </span>
+   </button>
+</div></div>
+
+                  <h2 class="kss-modifiers__name">.c-btn--secondary</h2>
+
+                  <p class="kss-modifiers__description">Basic alternative</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+   <button class="c-btn c-btn--secondary">
+       <span>
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+               <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+           </svg>
+           <span>Click me, I'm a button!</span>
+       </span>
+   </button>
+   <button class="c-btn c-btn--subtle c-btn--secondary">
+       <span>
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+               <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+           </svg>
+           <span>Click me, I'm a button!</span>
+       </span>
+   </button>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn--danger</h2>
+
+                  <p class="kss-modifiers__description">Danger</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+   <button class="c-btn c-btn--danger">
+       <span>
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+               <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+           </svg>
+           <span>Click me, I'm a button!</span>
+       </span>
+   </button>
+   <button class="c-btn c-btn--subtle c-btn--danger">
+       <span>
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+               <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+           </svg>
+           <span>Click me, I'm a button!</span>
+       </span>
+   </button>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn--danger-outline</h2>
+
+                  <p class="kss-modifiers__description">Danger outlined</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+   <button class="c-btn c-btn--danger-outline">
+       <span>
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+               <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+           </svg>
+           <span>Click me, I'm a button!</span>
+       </span>
+   </button>
+   <button class="c-btn c-btn--subtle c-btn--danger-outline">
+       <span>
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+               <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+           </svg>
+           <span>Click me, I'm a button!</span>
+       </span>
+   </button>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn--highlight</h2>
+
+                  <p class="kss-modifiers__description">Highlighted button to catch the eye</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+   <button class="c-btn c-btn--highlight">
+       <span>
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+               <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+           </svg>
+           <span>Click me, I'm a button!</span>
+       </span>
+   </button>
+   <button class="c-btn c-btn--subtle c-btn--highlight">
+       <span>
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+               <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+           </svg>
+           <span>Click me, I'm a button!</span>
+       </span>
+   </button>
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;u-p-1&quot;&gt;
+   &lt;button class&#x3D;&quot;c-btn [modifier class]&quot;&gt;
+       &lt;span&gt;
+           &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;16&quot; height&#x3D;&quot;16&quot; viewBox&#x3D;&quot;0 0 16 16&quot;&gt;
+               &lt;path d&#x3D;&quot;M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z&quot;/&gt;
+           &lt;/svg&gt;
+           &lt;span&gt;Click me, I&#x27;m a button!&lt;/span&gt;
+       &lt;/span&gt;
+   &lt;/button&gt;
+   &lt;button class&#x3D;&quot;c-btn c-btn--subtle [modifier class]&quot;&gt;
+       &lt;span&gt;
+           &lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; width&#x3D;&quot;16&quot; height&#x3D;&quot;16&quot; viewBox&#x3D;&quot;0 0 16 16&quot;&gt;
+               &lt;path d&#x3D;&quot;M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z&quot;/&gt;
+           &lt;/svg&gt;
+           &lt;span&gt;Click me, I&#x27;m a button!&lt;/span&gt;
+       &lt;/span&gt;
+   &lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-components-buttons-alert">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-buttons-alert">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.8.4</span>
+                  <span class="kss-section__name">Alert&#x27;s buttons</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Buttons that look like links, with icons</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn-alert [modifier class] u-m-1"><span>Click me, I'm a button!</span></button>
+    <a href="#" class="c-btn-alert [modifier class] u-m-1"><span>Click me, I'm a link!</span></a>
+</div></div>
+
+                  <h2 class="kss-modifiers__name">.c-btn-alert--error</h2>
+
+                  <p class="kss-modifiers__description">Error button</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn-alert c-btn-alert--error u-m-1"><span>Click me, I'm a button!</span></button>
+    <a href="#" class="c-btn-alert c-btn-alert--error u-m-1"><span>Click me, I'm a link!</span></a>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn-alert--info</h2>
+
+                  <p class="kss-modifiers__description">Information button</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn-alert c-btn-alert--info u-m-1"><span>Click me, I'm a button!</span></button>
+    <a href="#" class="c-btn-alert c-btn-alert--info u-m-1"><span>Click me, I'm a link!</span></a>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn-alert--success</h2>
+
+                  <p class="kss-modifiers__description">Success button</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1">
+    <button class="c-btn-alert c-btn-alert--success u-m-1"><span>Click me, I'm a button!</span></button>
+    <a href="#" class="c-btn-alert c-btn-alert--success u-m-1"><span>Click me, I'm a link!</span></a>
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;u-p-1&quot;&gt;
+    &lt;button class&#x3D;&quot;c-btn-alert [modifier class] u-m-1&quot;&gt;&lt;span&gt;Click me, I&#x27;m a button!&lt;/span&gt;&lt;/button&gt;
+    &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;c-btn-alert [modifier class] u-m-1&quot;&gt;&lt;span&gt;Click me, I&#x27;m a link!&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-components-buttons-special">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-buttons-special">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">5.8.5</span>
+                  <span class="kss-section__name">Special buttons</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Special link that look like buttons (<a> only)</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="u-p-1" style="background-color: darkgrey; width: 50%;">
+    <a hre="#" class="[modifier class] u-mb-1"><span>Click me, I'm a link!</span></a>
+</div></div>
+
+                  <h2 class="kss-modifiers__name">.c-btn-client</h2>
+
+                  <p class="kss-modifiers__description">Button to download Cozy client app</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1" style="background-color: darkgrey; width: 50%;">
+    <a hre="#" class="c-btn-client u-mb-1"><span>Click me, I'm a link!</span></a>
+</div></div>
+                  <h2 class="kss-modifiers__name">.c-btn-client-mobile</h2>
+
+                  <p class="kss-modifiers__description">Button to download Cozy client app on mobile</p>
+
+                  <div class="kss-modifiers__example"><div class="u-p-1" style="background-color: darkgrey; width: 50%;">
+    <a hre="#" class="c-btn-client-mobile u-mb-1"><span>Click me, I'm a link!</span></a>
+</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;u-p-1&quot; style&#x3D;&quot;background-color: darkgrey; width: 50%;&quot;&gt;
+    &lt;a hre&#x3D;&quot;#&quot; class&#x3D;&quot;[modifier class] u-mb-1&quot;&gt;&lt;span&gt;Click me, I&#x27;m a link!&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </section>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  
+  <!-- /scripts. -->
+
+  </body>
+</html>

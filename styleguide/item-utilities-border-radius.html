@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cozy-UI Styleguide</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="app.css">
+
+  </head>
+
+  <body class="kss-body">
+
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
+        </a>
+        <h1 class="kss-header__title kss-title">
+          <img class="kss-logo" src="kss-assets/images/logo.svg" width="52" height="52" alt="Cozy Cloud" />
+          <div>Cozy-UI Styleguide</div>
+        </h1>
+      </section>
+    </header>
+    <!-- /header. -->
+
+
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">
+        <img class="kss-logo" src="kss-assets/images/logo.svg" width="52" height="52" alt="Cozy Cloud" />
+        <div>Cozy-UI Styleguide</div>
+      </h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
+          </a>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-settings.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Settings</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-tools.html">
+              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">Tools</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-generic.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Generic</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-utilities.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Utilities</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-components.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Components</span>
+            </a>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
+
+
+    <!-- documentation. -->
+    <section class="kss-documentation">
+
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-3" id="kssref-utilities-border-radius">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-utilities-border-radius">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">4.2.1</span>
+                  <span class="kss-section__name">Border-radius</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p><a href="section-settings.html#kssref-settings-breakpoints">Can be used with breakpoints modifier suffixes (<code>-t</code>,<code>-s</code>,<code>-m</code>)</a></p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="[modifier class]  u-bg-dodgerBlue" style="width:4rem; height:4rem; "></div></div>
+
+                  <h2 class="kss-modifiers__name">.u-bdrs-1</h2>
+
+                  <p class="kss-modifiers__description">1st step of border-radius (2px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bdrs-1  u-bg-dodgerBlue" style="width:4rem; height:4rem; "></div></div>
+                  <h2 class="kss-modifiers__name">.u-bdrs-2</h2>
+
+                  <p class="kss-modifiers__description">2nd step of border-radius (3px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bdrs-2  u-bg-dodgerBlue" style="width:4rem; height:4rem; "></div></div>
+                  <h2 class="kss-modifiers__name">.u-bdrs-3</h2>
+
+                  <p class="kss-modifiers__description">3rd step of border-radius (4px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bdrs-3  u-bg-dodgerBlue" style="width:4rem; height:4rem; "></div></div>
+                  <h2 class="kss-modifiers__name">.u-bdrs-4</h2>
+
+                  <p class="kss-modifiers__description">4th step of border-radius (8px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bdrs-4  u-bg-dodgerBlue" style="width:4rem; height:4rem; "></div></div>
+                  <h2 class="kss-modifiers__name">.u-bdrs-circle</h2>
+
+                  <p class="kss-modifiers__description">Round element with border-radius (100%)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bdrs-circle  u-bg-dodgerBlue" style="width:4rem; height:4rem; "></div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;[modifier class]  u-bg-dodgerBlue&quot; style&#x3D;&quot;width:4rem; height:4rem; &quot;&gt;&lt;/div&gt;</code></pre>
+                </article>
+
+            </header>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  
+  <!-- /scripts. -->
+
+  </body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cozy-UI Styleguide</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="app.css">
+
+  </head>
+
+  <body class="kss-body">
+
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
+        </a>
+        <h1 class="kss-header__title kss-title">
+          <img class="kss-logo" src="kss-assets/images/logo.svg" width="52" height="52" alt="Cozy Cloud" />
+          <div>Cozy-UI Styleguide</div>
+        </h1>
+      </section>
+    </header>
+    <!-- /header. -->
+
+
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">
+        <img class="kss-logo" src="kss-assets/images/logo.svg" width="52" height="52" alt="Cozy Cloud" />
+        <div>Cozy-UI Styleguide</div>
+      </h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
+          </a>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-settings.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Settings</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-tools.html">
+              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">Tools</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-generic.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Generic</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-utilities.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Utilities</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-components.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Components</span>
+            </a>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
+
+
+    <!-- documentation. -->
+    <section class="kss-documentation">
+
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-3" id="kssref-utilities-dimensions-min">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-utilities-dimensions-min">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">4.17.1</span>
+                  <span class="kss-section__name">Min-width/height</span>
+                </h3>
+              </a>
+
+                <div class="kss-section__description"><p>Classes to set min-width/height on elements<br>
+<a href="section-settings.html#kssref-settings-breakpoints">Can be used with breakpoints modifier suffixes (<code>-t</code>,<code>-s</code>,<code>-m</code>)</a></p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="[modifier class]" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+
+                  <h2 class="kss-modifiers__name">.u-miw-auto</h2>
+
+                  <p class="kss-modifiers__description">Cancel min-width</p>
+
+                  <div class="kss-modifiers__example"><div class="u-miw-auto" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-miw-half</h2>
+
+                  <p class="kss-modifiers__description">Apply min-width half step in scale (0.5rem = 8px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-miw-half" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-miw-1</h2>
+
+                  <p class="kss-modifiers__description">Apply min-width 1st step in scale (1rem = 16px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-miw-1" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-miw-1-half</h2>
+
+                  <p class="kss-modifiers__description">Apply min-width 1st step + half step in scale (1.5rem = 24px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-miw-1-half" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-miw-2</h2>
+
+                  <p class="kss-modifiers__description">Apply min-width 2nd step in scale (2rem = 32px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-miw-2" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-miw-2-half</h2>
+
+                  <p class="kss-modifiers__description">Apply min-width 2nd step + half step in scale (2.5rem = 40px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-miw-2-half" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-miw-3</h2>
+
+                  <p class="kss-modifiers__description">Apply min-width 3rd step in scale (4rem = 64px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-miw-3" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-miw-4</h2>
+
+                  <p class="kss-modifiers__description">Apply min-width 4th step in scale (8rem = 128px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-miw-4" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-miw-5</h2>
+
+                  <p class="kss-modifiers__description">Apply min-width 5th step in scale (16rem = 256px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-miw-5" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-miw-6</h2>
+
+                  <p class="kss-modifiers__description">Apply min-width 6th step in scale (32rem = 512px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-miw-6" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-miw-7</h2>
+
+                  <p class="kss-modifiers__description">Apply min-width 7th step in scale (48rem = 768px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-miw-7" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-miw-8</h2>
+
+                  <p class="kss-modifiers__description">Apply min-width 8th step in scale (64rem = 1024px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-miw-8" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-miw-9</h2>
+
+                  <p class="kss-modifiers__description">Apply min-width 9th step in scale (96rem = 1536px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-miw-9" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-miw-100</h2>
+
+                  <p class="kss-modifiers__description">Apply min-width 100%</p>
+
+                  <div class="kss-modifiers__example"><div class="u-miw-100" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-mih-auto</h2>
+
+                  <p class="kss-modifiers__description">Cancel min-height</p>
+
+                  <div class="kss-modifiers__example"><div class="u-mih-auto" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-mih-half</h2>
+
+                  <p class="kss-modifiers__description">Apply min-height half step in scale (0.5rem = 8px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-mih-half" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-mih-1</h2>
+
+                  <p class="kss-modifiers__description">Apply min-height 1st step in scale (1rem = 16px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-mih-1" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-mih-1-half</h2>
+
+                  <p class="kss-modifiers__description">Apply min-height 1st step + half step in scale (1.5rem = 24px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-mih-1-half" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-mih-2</h2>
+
+                  <p class="kss-modifiers__description">Apply min-height 2nd step in scale (2rem = 32px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-mih-2" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-mih-2-half</h2>
+
+                  <p class="kss-modifiers__description">Apply min-height 2nd step + half step in scale (2.5rem = 40px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-mih-2-half" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-mih-3</h2>
+
+                  <p class="kss-modifiers__description">Apply min-height 3rd step in scale (4rem = 64px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-mih-3" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-mih-4</h2>
+
+                  <p class="kss-modifiers__description">Apply min-height 4th step in scale (8rem = 128px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-mih-4" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-mih-5</h2>
+
+                  <p class="kss-modifiers__description">Apply min-height 5th step in scale (16rem = 256px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-mih-5" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-mih-6</h2>
+
+                  <p class="kss-modifiers__description">Apply min-height 6th step in scale (32rem = 512px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-mih-6" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-mih-7</h2>
+
+                  <p class="kss-modifiers__description">Apply min-height 7th step in scale (48rem = 768px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-mih-7" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-mih-8</h2>
+
+                  <p class="kss-modifiers__description">Apply min-height 8th step in scale (64rem = 1024px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-mih-8" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-mih-9</h2>
+
+                  <p class="kss-modifiers__description">Apply min-height 9th step in scale (96rem = 1536px)</p>
+
+                  <div class="kss-modifiers__example"><div class="u-mih-9" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+                  <h2 class="kss-modifiers__name">.u-mih-100</h2>
+
+                  <p class="kss-modifiers__description">Apply min-height 100%</p>
+
+                  <div class="kss-modifiers__example"><div class="u-mih-100" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;[modifier class]&quot; style&#x3D;&quot;display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;&quot;&gt;&amp;nbsp;&lt;/div&gt;</code></pre>
+                </article>
+
+            </header>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  
+  <!-- /scripts. -->
+
+  </body>
+</html>

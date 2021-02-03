@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cozy-UI Styleguide</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="app.css">
+
+  </head>
+
+  <body class="kss-body">
+
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
+        </a>
+        <h1 class="kss-header__title kss-title">
+          <img class="kss-logo" src="kss-assets/images/logo.svg" width="52" height="52" alt="Cozy Cloud" />
+          <div>Cozy-UI Styleguide</div>
+        </h1>
+      </section>
+    </header>
+    <!-- /header. -->
+
+
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">
+        <img class="kss-logo" src="kss-assets/images/logo.svg" width="52" height="52" alt="Cozy Cloud" />
+        <div>Cozy-UI Styleguide</div>
+      </h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
+          </a>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-settings.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Settings</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-tools.html">
+              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">Tools</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-generic.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Generic</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-utilities.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Utilities</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-components.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Components</span>
+            </a>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
+
+
+    <!-- documentation. -->
+    <section class="kss-documentation">
+
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-2" id="kssref-utilities-margins">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-utilities-margins">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">4.5</span>
+                  <span class="kss-section__name">Margins</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Classes to add margins on top, bottom, right, left or all of them based on
+default font-size (16px)<br>
+<a href="section-settings.html#kssref-settings-breakpoints">Can be used with breakpoints modifier suffixes (<code>-t</code>,<code>-s</code>,<code>-m</code>)</a></p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="[modifier class]">🎶 Gimme some margin 🎵 </div></div></div>
+
+                  <h2 class="kss-modifiers__name">.u-m-auto</h2>
+
+                  <p class="kss-modifiers__description">Auto margin on all sides</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-m-auto">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-m-0</h2>
+
+                  <p class="kss-modifiers__description">No margins on all sides</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-m-0">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-m-half</h2>
+
+                  <p class="kss-modifiers__description">Margins on all sides with half a line (8px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-m-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-m-1</h2>
+
+                  <p class="kss-modifiers__description">Margins on all sides with 1 line (16px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-m-1">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-m-1-half</h2>
+
+                  <p class="kss-modifiers__description">Margins on all sides with 1 line an a half (24px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-m-1-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-m-2</h2>
+
+                  <p class="kss-modifiers__description">Margins on all sides with 2 lines (32px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-m-2">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-m-2-half</h2>
+
+                  <p class="kss-modifiers__description">Margins on all sides with 1 line an a half (40px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-m-2-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-m-3</h2>
+
+                  <p class="kss-modifiers__description">Margins on all sides with 2 lines (48px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-m-3">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mv-auto</h2>
+
+                  <p class="kss-modifiers__description">Auto vertically margins</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mv-auto">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mv-0</h2>
+
+                  <p class="kss-modifiers__description">No vertically margins</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mv-0">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mv-half</h2>
+
+                  <p class="kss-modifiers__description">Vertically margins with half a line (8px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mv-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mv-1</h2>
+
+                  <p class="kss-modifiers__description">Vertically margins with 1 line (16px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mv-1">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mv-1-half</h2>
+
+                  <p class="kss-modifiers__description">Vertically margins with 1 line an a half (24px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mv-1-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mv-2</h2>
+
+                  <p class="kss-modifiers__description">Vertically margins with 2 lines (32px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mv-2">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mv-2-half</h2>
+
+                  <p class="kss-modifiers__description">Vertically margins with 1 line an a half (40px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mv-2-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mv-3</h2>
+
+                  <p class="kss-modifiers__description">Vertically margins with 2 lines (48px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mv-3">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mh-auto</h2>
+
+                  <p class="kss-modifiers__description">Auto horizontally margins</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mh-auto">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mh-0</h2>
+
+                  <p class="kss-modifiers__description">No horizontally margins</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mh-0">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mh-half</h2>
+
+                  <p class="kss-modifiers__description">Horizontally margins with half a line (8px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mh-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mh-1</h2>
+
+                  <p class="kss-modifiers__description">Horizontally margins with 1 line (16px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mh-1">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mh-1-half</h2>
+
+                  <p class="kss-modifiers__description">Horizontally margins with 1 line an a half (24px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mh-1-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mh-2</h2>
+
+                  <p class="kss-modifiers__description">Horizontally margins with 2 lines (32px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mh-2">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mh-2-half</h2>
+
+                  <p class="kss-modifiers__description">Horizontally margins with 1 line an a half (40px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mh-2-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mh-3</h2>
+
+                  <p class="kss-modifiers__description">Horizontally margins with 2 lines (48px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mh-3">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mt-auto</h2>
+
+                  <p class="kss-modifiers__description">Margin Top auto</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mt-auto">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mt-0</h2>
+
+                  <p class="kss-modifiers__description">No margin Top</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mt-0">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mt-half</h2>
+
+                  <p class="kss-modifiers__description">Margin Top with half a line (8px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mt-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mt-1</h2>
+
+                  <p class="kss-modifiers__description">Margin Top with 1 line (16px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mt-1">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mt-1-half</h2>
+
+                  <p class="kss-modifiers__description">Margin Top with 1 line an a half (24px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mt-1-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mt-2</h2>
+
+                  <p class="kss-modifiers__description">Margin Top with 2 lines (32px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mt-2">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mt-2-half</h2>
+
+                  <p class="kss-modifiers__description">Margin Top with 1 line an a half (40px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mt-2-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mt-3</h2>
+
+                  <p class="kss-modifiers__description">Margin Top with 2 lines (48px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mt-3">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mb-auto</h2>
+
+                  <p class="kss-modifiers__description">Margin Bottom auto</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mb-auto">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mb-0</h2>
+
+                  <p class="kss-modifiers__description">No margin Bottom</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mb-0">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mb-half</h2>
+
+                  <p class="kss-modifiers__description">Margin Bottom with half a line (8px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mb-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mb-1</h2>
+
+                  <p class="kss-modifiers__description">Margin Bottom with 1 line (16px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mb-1">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mb-1-half</h2>
+
+                  <p class="kss-modifiers__description">Margin Bottom with 1 line an a half (24px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mb-1-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mb-2</h2>
+
+                  <p class="kss-modifiers__description">Margin Bottom with 2 lines (32px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mb-2">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mb-2-half</h2>
+
+                  <p class="kss-modifiers__description">Margin Bottom with 1 line an a half (40px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mb-2-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mb-3</h2>
+
+                  <p class="kss-modifiers__description">Margin Bottom with 2 lines (48px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mb-3">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-ml-auto</h2>
+
+                  <p class="kss-modifiers__description">Margin Left auto</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-ml-auto">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-ml-0</h2>
+
+                  <p class="kss-modifiers__description">No margin Left</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-ml-0">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-ml-half</h2>
+
+                  <p class="kss-modifiers__description">Margin Left with half a line (8px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-ml-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-ml-1</h2>
+
+                  <p class="kss-modifiers__description">Margin Left with 1 line (16px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-ml-1">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-ml-1-half</h2>
+
+                  <p class="kss-modifiers__description">Margin Left with 1 line an a half (24px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-ml-1-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-ml-2</h2>
+
+                  <p class="kss-modifiers__description">Margin Left with 2 lines (32px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-ml-2">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-ml-2-half</h2>
+
+                  <p class="kss-modifiers__description">Margin Left with 1 line an a half (40px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-ml-2-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-ml-3</h2>
+
+                  <p class="kss-modifiers__description">Margin Left with 2 lines (48px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-ml-3">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mr-auto</h2>
+
+                  <p class="kss-modifiers__description">Margin Right auto</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mr-auto">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mr-0</h2>
+
+                  <p class="kss-modifiers__description">No margin Right</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mr-0">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mr-half</h2>
+
+                  <p class="kss-modifiers__description">Margin Right with half a line (8px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mr-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mr-1</h2>
+
+                  <p class="kss-modifiers__description">Margin Right with 1 line (16px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mr-1">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mr-1-half</h2>
+
+                  <p class="kss-modifiers__description">Margin Right with 1 line an a half (24px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mr-1-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mr-2</h2>
+
+                  <p class="kss-modifiers__description">Margin Right with 2 lines (32px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mr-2">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mr-2-half</h2>
+
+                  <p class="kss-modifiers__description">Margin Right with 1 line an a half (40px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mr-2-half">🎶 Gimme some margin 🎵 </div></div></div>
+                  <h2 class="kss-modifiers__name">.u-mr-3</h2>
+
+                  <p class="kss-modifiers__description">Margin Right with 2 lines (48px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="u-mr-3">🎶 Gimme some margin 🎵 </div></div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div style&#x3D;&quot;background-color:dimgrey; border: 1px solid black;&quot;&gt;&lt;div style&#x3D;&quot;padding:.5rem; background-color:gainsboro;&quot; class&#x3D;&quot;[modifier class]&quot;&gt;🎶 Gimme some margin 🎵 &lt;/div&gt;&lt;/div&gt;</code></pre>
+                </article>
+
+            </header>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  
+  <!-- /scripts. -->
+
+  </body>
+</html>

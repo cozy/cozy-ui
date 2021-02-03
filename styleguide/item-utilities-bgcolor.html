@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cozy-UI Styleguide</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="app.css">
+
+  </head>
+
+  <body class="kss-body">
+
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
+        </a>
+        <h1 class="kss-header__title kss-title">
+          <img class="kss-logo" src="kss-assets/images/logo.svg" width="52" height="52" alt="Cozy Cloud" />
+          <div>Cozy-UI Styleguide</div>
+        </h1>
+      </section>
+    </header>
+    <!-- /header. -->
+
+
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">
+        <img class="kss-logo" src="kss-assets/images/logo.svg" width="52" height="52" alt="Cozy Cloud" />
+        <div>Cozy-UI Styleguide</div>
+      </h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
+          </a>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-settings.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Settings</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-tools.html">
+              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">Tools</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-generic.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Generic</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-utilities.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Utilities</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-components.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Components</span>
+            </a>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
+
+
+    <!-- documentation. -->
+    <section class="kss-documentation">
+
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-2" id="kssref-utilities-bgcolor">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-utilities-bgcolor">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">4.18</span>
+                  <span class="kss-section__name">Background-color</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Classes to set a background-color on elements</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div class="[modifier class]" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+
+                  <h2 class="kss-modifiers__name">.u-bg-black</h2>
+
+                  <p class="kss-modifiers__description">block color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-black" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-white</h2>
+
+                  <p class="kss-modifiers__description">white color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-white" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-paleGrey</h2>
+
+                  <p class="kss-modifiers__description">paleGrey color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-paleGrey" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-silver</h2>
+
+                  <p class="kss-modifiers__description">silver color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-silver" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-coolGrey</h2>
+
+                  <p class="kss-modifiers__description">coolGrey color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-coolGrey" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-slateGrey</h2>
+
+                  <p class="kss-modifiers__description">slateGrey color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-slateGrey" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-charcoalGrey</h2>
+
+                  <p class="kss-modifiers__description">charcoalGrey color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-charcoalGrey" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-dodgerBlue</h2>
+
+                  <p class="kss-modifiers__description">dodgerBlue color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-dodgerBlue" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-scienceBlue</h2>
+
+                  <p class="kss-modifiers__description">scienceBlue color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-scienceBlue" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-puertoRico</h2>
+
+                  <p class="kss-modifiers__description">puertoRico color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-puertoRico" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-emerald</h2>
+
+                  <p class="kss-modifiers__description">emerald color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-emerald" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-malachite</h2>
+
+                  <p class="kss-modifiers__description">malachite color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-malachite" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-texasRose</h2>
+
+                  <p class="kss-modifiers__description">texasRose color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-texasRose" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-yourPink</h2>
+
+                  <p class="kss-modifiers__description">yourPink color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-yourPink" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-pomegranate</h2>
+
+                  <p class="kss-modifiers__description">pomegranate color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-pomegranate" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-monza</h2>
+
+                  <p class="kss-modifiers__description">monza color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-monza" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-portage</h2>
+
+                  <p class="kss-modifiers__description">portage color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-portage" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-azure</h2>
+
+                  <p class="kss-modifiers__description">azure color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-azure" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-melon</h2>
+
+                  <p class="kss-modifiers__description">melon color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-melon" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-blazeOrange</h2>
+
+                  <p class="kss-modifiers__description">blazeOrange color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-blazeOrange" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-mango</h2>
+
+                  <p class="kss-modifiers__description">mango color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-mango" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-pumpkinOrange</h2>
+
+                  <p class="kss-modifiers__description">pumpkinOrange color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-pumpkinOrange" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-darkPeriwinkle</h2>
+
+                  <p class="kss-modifiers__description">darkPeriwinkle color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-darkPeriwinkle" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-purpley</h2>
+
+                  <p class="kss-modifiers__description">purpley color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-purpley" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-lightishPurple</h2>
+
+                  <p class="kss-modifiers__description">lightishPurple color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-lightishPurple" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-weirdGreen</h2>
+
+                  <p class="kss-modifiers__description">weirdGreen color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-weirdGreen" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-overlay</h2>
+
+                  <p class="kss-modifiers__description">overlay color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-overlay" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-zircon</h2>
+
+                  <p class="kss-modifiers__description">zircon color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-zircon" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-frenchPass</h2>
+
+                  <p class="kss-modifiers__description">frenchPass color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-frenchPass" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-grannyApple</h2>
+
+                  <p class="kss-modifiers__description">grannyApple color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-grannyApple" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-seafoamGreen</h2>
+
+                  <p class="kss-modifiers__description">seafoamGreen color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-seafoamGreen" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-brightSun</h2>
+
+                  <p class="kss-modifiers__description">brightSun color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-brightSun" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-chablis</h2>
+
+                  <p class="kss-modifiers__description">chablis color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-chablis" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-fuchsia</h2>
+
+                  <p class="kss-modifiers__description">fuchsia color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-fuchsia" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-lavender</h2>
+
+                  <p class="kss-modifiers__description">lavender color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-lavender" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-barney</h2>
+
+                  <p class="kss-modifiers__description">barney color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-barney" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-primaryColor</h2>
+
+                  <p class="kss-modifiers__description">primaryColor color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-primaryColor" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-primaryBackgroundLight</h2>
+
+                  <p class="kss-modifiers__description">primaryBackgroundLIght color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-primaryBackgroundLight" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-errorBackground</h2>
+
+                  <p class="kss-modifiers__description">errorBackground color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-errorBackground" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+                  <h2 class="kss-modifiers__name">.u-bg-neutralBackgroundLight</h2>
+
+                  <p class="kss-modifiers__description">neutralBackgroundLight color</p>
+
+                  <div class="kss-modifiers__example"><div class="u-bg-neutralBackgroundLight" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div class&#x3D;&quot;[modifier class]&quot; style&#x3D;&quot;display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;&quot;&gt;&lt;/div&gt;</code></pre>
+                </article>
+
+            </header>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  
+  <!-- /scripts. -->
+
+  </body>
+</html>

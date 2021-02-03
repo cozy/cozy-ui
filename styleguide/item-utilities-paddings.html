@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cozy-UI Styleguide</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="app.css">
+
+  </head>
+
+  <body class="kss-body">
+
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
+        </a>
+        <h1 class="kss-header__title kss-title">
+          <img class="kss-logo" src="kss-assets/images/logo.svg" width="52" height="52" alt="Cozy Cloud" />
+          <div>Cozy-UI Styleguide</div>
+        </h1>
+      </section>
+    </header>
+    <!-- /header. -->
+
+
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">
+        <img class="kss-logo" src="kss-assets/images/logo.svg" width="52" height="52" alt="Cozy Cloud" />
+        <div>Cozy-UI Styleguide</div>
+      </h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
+          </a>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-settings.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Settings</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-tools.html">
+              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">Tools</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-generic.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Generic</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-utilities.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Utilities</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-components.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Components</span>
+            </a>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
+
+
+    <!-- documentation. -->
+    <section class="kss-documentation">
+
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-2" id="kssref-utilities-paddings">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-utilities-paddings">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">4.6</span>
+                  <span class="kss-section__name">Paddings</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>Classes to add paddings on top, bottom, right, left or all of them based on
+default font-size (16px)<br>
+<a href="section-settings.html#kssref-settings-breakpoints">Can be used with breakpoints modifier suffixes (<code>-t</code>,<code>-s</code>,<code>-m</code>)</a></p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Examples</h1>
+
+                  <h2 class="kss-modifiers__name">Default styling</h2>
+
+                <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="[modifier class]"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+
+                  <h2 class="kss-modifiers__name">.u-p-auto</h2>
+
+                  <p class="kss-modifiers__description">Auto paddings on all sides</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-p-auto"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-p-0</h2>
+
+                  <p class="kss-modifiers__description">No paddings on all sides</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-p-0"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-p-half</h2>
+
+                  <p class="kss-modifiers__description">Paddings on all sides with half a line (8px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-p-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-p-1</h2>
+
+                  <p class="kss-modifiers__description">Paddings on all sides with 1 line (16px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-p-1"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-p-1-half</h2>
+
+                  <p class="kss-modifiers__description">Paddings on all sides with 1 line an a half (24px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-p-1-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-p-2</h2>
+
+                  <p class="kss-modifiers__description">Paddings on all sides with 2 lines (32px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-p-2"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-p-2-half</h2>
+
+                  <p class="kss-modifiers__description">Paddings on all sides with 1 line an a half (40px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-p-2-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-p-3</h2>
+
+                  <p class="kss-modifiers__description">Paddings on all sides with 2 lines (48px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-p-3"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pv-auto</h2>
+
+                  <p class="kss-modifiers__description">Auto vertically paddings</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pv-auto"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pv-0</h2>
+
+                  <p class="kss-modifiers__description">No vertically paddings</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pv-0"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pv-half</h2>
+
+                  <p class="kss-modifiers__description">Vertically paddings with half a line (8px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pv-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pv-1</h2>
+
+                  <p class="kss-modifiers__description">Vertically paddings with 1 line (16px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pv-1"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pv-1-half</h2>
+
+                  <p class="kss-modifiers__description">Vertically paddings with 1 line an a half (24px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pv-1-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pv-2</h2>
+
+                  <p class="kss-modifiers__description">Vertically paddings with 2 lines (32px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pv-2"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pv-2-half</h2>
+
+                  <p class="kss-modifiers__description">Vertically paddings with 1 line an a half (40px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pv-2-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pv-3</h2>
+
+                  <p class="kss-modifiers__description">Vertically paddings with 2 lines (48px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pv-3"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-ph-auto</h2>
+
+                  <p class="kss-modifiers__description">Auto horizontally paddings</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-ph-auto"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-ph-0</h2>
+
+                  <p class="kss-modifiers__description">No horizontally paddings</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-ph-0"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-ph-half</h2>
+
+                  <p class="kss-modifiers__description">Horizontally paddings with half a line (8px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-ph-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-ph-1</h2>
+
+                  <p class="kss-modifiers__description">Horizontally paddings with 1 line (16px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-ph-1"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-ph-1-half</h2>
+
+                  <p class="kss-modifiers__description">Horizontally paddings with 1 line an a half (24px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-ph-1-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-ph-2</h2>
+
+                  <p class="kss-modifiers__description">Horizontally paddings with 2 lines (32px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-ph-2"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-ph-2-half</h2>
+
+                  <p class="kss-modifiers__description">Horizontally paddings with 1 line an a half (40px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-ph-2-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-ph-3</h2>
+
+                  <p class="kss-modifiers__description">Horizontally paddings with 2 lines (48px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-ph-3"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pt-auto</h2>
+
+                  <p class="kss-modifiers__description">Padding Top auto</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pt-auto"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pt-0</h2>
+
+                  <p class="kss-modifiers__description">No padding Top</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pt-0"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pt-half</h2>
+
+                  <p class="kss-modifiers__description">Padding Top with half a line (8px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pt-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pt-1</h2>
+
+                  <p class="kss-modifiers__description">Padding Top with 1 line (16px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pt-1"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pt-1-half</h2>
+
+                  <p class="kss-modifiers__description">Padding Top with 1 line an a half (24px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pt-1-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pt-2</h2>
+
+                  <p class="kss-modifiers__description">Padding Top with 2 lines (32px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pt-2"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pt-2-half</h2>
+
+                  <p class="kss-modifiers__description">Padding Top with 1 line an a half (40px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pt-2-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pt-3</h2>
+
+                  <p class="kss-modifiers__description">Padding Top with 2 lines (48px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pt-3"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pb-auto</h2>
+
+                  <p class="kss-modifiers__description">Padding Bottom auto</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pb-auto"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pb-0</h2>
+
+                  <p class="kss-modifiers__description">No padding Bottom</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pb-0"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pb-half</h2>
+
+                  <p class="kss-modifiers__description">Padding Bottom with half a line (8px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pb-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pb-1</h2>
+
+                  <p class="kss-modifiers__description">Padding Bottom with 1 line (16px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pb-1"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pb-1-half</h2>
+
+                  <p class="kss-modifiers__description">Padding Bottom with 1 line an a half (24px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pb-1-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pb-2</h2>
+
+                  <p class="kss-modifiers__description">Padding Bottom with 2 lines (32px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pb-2"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pb-2-half</h2>
+
+                  <p class="kss-modifiers__description">Padding Bottom with 1 line an a half (40px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pb-2-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pb-3</h2>
+
+                  <p class="kss-modifiers__description">Padding Bottom with 2 lines (48px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pb-3"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pl-auto</h2>
+
+                  <p class="kss-modifiers__description">Padding Left auto</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pl-auto"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pl-0</h2>
+
+                  <p class="kss-modifiers__description">No padding Left</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pl-0"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pl-half</h2>
+
+                  <p class="kss-modifiers__description">Padding Left with half a line (8px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pl-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pl-1</h2>
+
+                  <p class="kss-modifiers__description">Padding Left with 1 line (16px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pl-1"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pl-1-half</h2>
+
+                  <p class="kss-modifiers__description">Padding Left with 1 line an a half (24px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pl-1-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pl-2</h2>
+
+                  <p class="kss-modifiers__description">Padding Left with 2 lines (32px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pl-2"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pl-2-half</h2>
+
+                  <p class="kss-modifiers__description">Padding Left with 1 line an a half (40px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pl-2-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pl-3</h2>
+
+                  <p class="kss-modifiers__description">Padding Left with 2 lines (48px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pl-3"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pr-auto</h2>
+
+                  <p class="kss-modifiers__description">Padding Right auto</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pr-auto"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pr-0</h2>
+
+                  <p class="kss-modifiers__description">No padding Right</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pr-0"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pr-half</h2>
+
+                  <p class="kss-modifiers__description">Padding Right with half a line (8px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pr-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pr-1</h2>
+
+                  <p class="kss-modifiers__description">Padding Right with 1 line (16px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pr-1"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pr-1-half</h2>
+
+                  <p class="kss-modifiers__description">Padding Right with 1 line an a half (24px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pr-1-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pr-2</h2>
+
+                  <p class="kss-modifiers__description">Padding Right with 2 lines (32px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pr-2"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pr-2-half</h2>
+
+                  <p class="kss-modifiers__description">Padding Right with 1 line an a half (40px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pr-2-half"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+                  <h2 class="kss-modifiers__name">.u-pr-3</h2>
+
+                  <p class="kss-modifiers__description">Padding Right with 2 lines (48px)</p>
+
+                  <div class="kss-modifiers__example"><div style="background-color:gainsboro; display: inline-block;" class="u-pr-3"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div></div>
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div style&#x3D;&quot;background-color:gainsboro; display: inline-block;&quot; class&#x3D;&quot;[modifier class]&quot;&gt;&lt;span style&#x3D;&quot;background-color:bisque;&quot;&gt;🎼 Gimme some padding 💃&lt;/span&gt;&lt;/div&gt;</code></pre>
+                </article>
+
+            </header>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  
+  <!-- /scripts. -->
+
+  </body>
+</html>

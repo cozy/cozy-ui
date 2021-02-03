@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cozy-UI Styleguide</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="generator" content="kss-node">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300">
+    <link rel="stylesheet" href="kss-assets/vendor/prism.css">
+    <link rel="stylesheet" href="kss-assets/css/kss.css">
+    <link rel="stylesheet" href="app.css">
+
+  </head>
+
+  <body class="kss-body">
+
+    <!-- header. -->
+    <header class="kss-header">
+      <section class="kss-header__inner">
+        <a class="kss-header__hamburger-trigger">
+          <div class="kss-header__hamburger"></div>
+        </a>
+        <h1 class="kss-header__title kss-title">
+          <img class="kss-logo" src="kss-assets/images/logo.svg" width="52" height="52" alt="Cozy Cloud" />
+          <div>Cozy-UI Styleguide</div>
+        </h1>
+      </section>
+    </header>
+    <!-- /header. -->
+
+
+    <!-- navigation. -->
+    <section class="kss-navigation">
+      <h1 class="kss-navigation__title kss-title">
+        <img class="kss-logo" src="kss-assets/images/logo.svg" width="52" height="52" alt="Cozy Cloud" />
+        <div>Cozy-UI Styleguide</div>
+      </h1>
+      <ul class="kss-nav">
+        <li class="kss-nav__item">
+          <a href="index.html">
+            <span class="kss-nav__ref">0</span>
+            <span class="kss-nav__name">Introduction</span>
+          </a>
+        </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-settings.html">
+              <span class="kss-nav__ref">1</span>
+              <span class="kss-nav__name">Settings</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-tools.html">
+              <span class="kss-nav__ref">2</span>
+              <span class="kss-nav__name">Tools</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-generic.html">
+              <span class="kss-nav__ref">3</span>
+              <span class="kss-nav__name">Generic</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-utilities.html">
+              <span class="kss-nav__ref">4</span>
+              <span class="kss-nav__name">Utilities</span>
+            </a>
+          </li>
+          <li class="kss-nav__item">
+            <a class="" href="section-components.html">
+              <span class="kss-nav__ref">5</span>
+              <span class="kss-nav__name">Components</span>
+            </a>
+          </li>
+      </ul>
+    </section>
+    <!-- /navigation. -->
+
+
+    <!-- documentation. -->
+    <section class="kss-documentation">
+
+        <!--
+          display each section, in order.
+          the "root" element comes first in this loop, and can be detected using
+          the "#if @first" block as seen below.
+        -->
+            <header class="kss-section kss-section--depth-2" id="kssref-components-table">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-components-table">
+                <h2 class="kss-section__item kss-section__item--depth-2">
+                  <span class="kss-section__ref">5.6</span>
+                  <span class="kss-section__name">Table</span>
+                </h2>
+              </a>
+
+                <div class="kss-section__description"><p>For a flexibility purpose, complex tables use <code>&lt;div&gt;</code> element instead of <code>&lt;table&gt;</code> but you still can use <code>&lt;table&gt;</code> for simpler tables, see <strong>table-legacy</strong> below.</p>
+<p>By default, only <code>.c-table-cell--primary</code> has an ellipsis effect, but you can have it on any cell by applying the <code>.c-table-ellipsis</code> class.</p>
+<p>NB: You should decide by yourself the sizes of the columns. In those examples we use the style tag but you definitely should use CSS classes.</p>
+</div>
+
+            </article>
+
+              <article class="kss-section__modifiers">
+                <h1 class="kss-modifiers__heading">Example</h1>
+
+
+                <div class="kss-modifiers__example"><div>
+   <h2>Table with div element</h2>
+   <div class="c-table">
+       <div class="c-table-head">
+           <div class="c-table-row-head">
+               <div class="c-table-header" style="width:50%">Header 1</div>
+               <div class="c-table-header" style="width:25%">Header 2</div>
+               <div class="c-table-header" style="width:25%">Header 3</div>
+           </div>
+       </div>
+       <div class="c-table-body">
+           <div class="c-table-row is-selected">
+               <div class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet</div>
+               <div class="c-table-cell" style="width:25%">lorem</div>
+               <div class="c-table-cell c-table-ellipsis" style="width:25%">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+           </div>
+           <div class="c-table-row">
+               <div class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</div>
+               <div class="c-table-cell" style="width:25%">corporis</div>
+               <div class="c-table-cell" style="width:25%">placeat</div>
+           </div>
+           <div class="c-table-divider">Divider</div>
+           <div class="c-table-row">
+               <div class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</div>
+               <div class="c-table-cell" style="width:25%">corporis</div>
+               <div class="c-table-cell" style="width:25%">placeat</div>
+           </div>
+       </div>
+   </div>
+</div></div>
+
+              </article>
+
+                <article class="kss-section__markup">
+                  <pre><code class="language-markup">&lt;div&gt;
+   &lt;h2&gt;Table with div element&lt;/h2&gt;
+   &lt;div class&#x3D;&quot;c-table&quot;&gt;
+       &lt;div class&#x3D;&quot;c-table-head&quot;&gt;
+           &lt;div class&#x3D;&quot;c-table-row-head&quot;&gt;
+               &lt;div class&#x3D;&quot;c-table-header&quot; style&#x3D;&quot;width:50%&quot;&gt;Header 1&lt;/div&gt;
+               &lt;div class&#x3D;&quot;c-table-header&quot; style&#x3D;&quot;width:25%&quot;&gt;Header 2&lt;/div&gt;
+               &lt;div class&#x3D;&quot;c-table-header&quot; style&#x3D;&quot;width:25%&quot;&gt;Header 3&lt;/div&gt;
+           &lt;/div&gt;
+       &lt;/div&gt;
+       &lt;div class&#x3D;&quot;c-table-body&quot;&gt;
+           &lt;div class&#x3D;&quot;c-table-row is-selected&quot;&gt;
+               &lt;div class&#x3D;&quot;c-table-cell c-table-cell--primary&quot; style&#x3D;&quot;width:50%&quot;&gt;Lorem ipsum dolor sit amet&lt;/div&gt;
+               &lt;div class&#x3D;&quot;c-table-cell&quot; style&#x3D;&quot;width:25%&quot;&gt;lorem&lt;/div&gt;
+               &lt;div class&#x3D;&quot;c-table-cell c-table-ellipsis&quot; style&#x3D;&quot;width:25%&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/div&gt;
+           &lt;/div&gt;
+           &lt;div class&#x3D;&quot;c-table-row&quot;&gt;
+               &lt;div class&#x3D;&quot;c-table-cell c-table-cell--primary&quot; style&#x3D;&quot;width:50%&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam&lt;/div&gt;
+               &lt;div class&#x3D;&quot;c-table-cell&quot; style&#x3D;&quot;width:25%&quot;&gt;corporis&lt;/div&gt;
+               &lt;div class&#x3D;&quot;c-table-cell&quot; style&#x3D;&quot;width:25%&quot;&gt;placeat&lt;/div&gt;
+           &lt;/div&gt;
+           &lt;div class&#x3D;&quot;c-table-divider&quot;&gt;Divider&lt;/div&gt;
+           &lt;div class&#x3D;&quot;c-table-row&quot;&gt;
+               &lt;div class&#x3D;&quot;c-table-cell c-table-cell--primary&quot; style&#x3D;&quot;width:50%&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam&lt;/div&gt;
+               &lt;div class&#x3D;&quot;c-table-cell&quot; style&#x3D;&quot;width:25%&quot;&gt;corporis&lt;/div&gt;
+               &lt;div class&#x3D;&quot;c-table-cell&quot; style&#x3D;&quot;width:25%&quot;&gt;placeat&lt;/div&gt;
+           &lt;/div&gt;
+       &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </article>
+
+            </header>
+    </section>
+    <!-- /documentation. -->
+
+
+
+  <!-- scripts. -->
+  <script src="kss-assets/vendor/jquery.js"></script>
+  <script src="kss-assets/vendor/prism.js"></script>
+  <script src="kss-assets/js/kss.js"></script>
+  
+  <!-- /scripts. -->
+
+  </body>
+</html>
