@@ -1,3 +1,19 @@
+# [44.7.0](https://github.com/cozy/cozy-ui/compare/v44.6.0...v44.7.0) (2021-02-03)
+
+
+### Bug Fixes
+
+* Use svgr icons in examples ([b9da282](https://github.com/cozy/cozy-ui/commit/b9da282))
+* Use svgr icons in examples ([321f7b4](https://github.com/cozy/cozy-ui/commit/321f7b4))
+
+
+### Features
+
+* Change argos upload commands not to shadow argos CLI ([b010537](https://github.com/cozy/cozy-ui/commit/b010537))
+* Update argos CLI ([f96cc48](https://github.com/cozy/cozy-ui/commit/f96cc48))
+* Use svgr icons ([47370b9](https://github.com/cozy/cozy-ui/commit/47370b9))
+* Use svgr icons in examples ([0b5fa4a](https://github.com/cozy/cozy-ui/commit/0b5fa4a))
+
 # [44.6.0](https://github.com/cozy/cozy-ui/compare/v44.5.0...v44.6.0) (2021-02-01)
 
 
