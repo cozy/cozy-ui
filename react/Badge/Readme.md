@@ -11,6 +11,8 @@ import Badge from 'cozy-ui/transpiled/react/Badge';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import Variants from 'cozy-ui/docs/components/Variants';
 
+import CircleFilledIcon from "cozy-ui/transpiled/react/Icons/CircleFilled";
+
 const initialVariants = [
   { error: false, dot: false, large: false, small: false },
   { error: true, dot: true, large: false, small: false },
@@ -22,7 +24,7 @@ const initialVariants = [
   variant => (
     <p>
       <Badge badgeContent={4} color={variant.error ? 'error' : variant.secondaryColor ? 'secondary' : 'primary'} variant={variant.dot ? 'dot' : 'standard'} size={variant.large ? 'large' : variant.small ? 'small' : 'medium'} anchorOrigin={{vertical: variant.bottom ? 'bottom' : 'top', 'horizontal': variant.left ? 'left' : 'right'}}>
-        <Icon icon="circle-filled" size={variant.large ? '32' : variant.small ? '16' : '24'} color="var(--slateGrey)" />
+        <Icon icon={CircleFilledIcon} size={variant.large ? '32' : variant.small ? '16' : '24'} color="var(--slateGrey)" />
       </Badge>
     </p>
   )
@@ -39,11 +41,13 @@ import InfosBadge from 'cozy-ui/transpiled/react/InfosBadge';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import Avatar from 'cozy-ui/transpiled/react/Avatar';
 
+import LinkIcon from "cozy-ui/transpiled/react/Icons/Link";
+
 <p>
   <InfosBadge
     badgeContent={
       <Badge color="error" variant="dot" size="small">
-        <Icon icon="link" size="10" />
+        <Icon icon={LinkIcon} size="10" />
       </Badge>
     }
   >

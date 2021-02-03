@@ -10,6 +10,9 @@ import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import Typography from "cozy-ui/transpiled/react/Typography";
 
+import FileIcon from "cozy-ui/transpiled/react/Icons/File";
+import WarningIcon from "cozy-ui/transpiled/react/Icons/Warning";
+
 class ExempleMenu extends React.Component {
   constructor(props){
     super(props);
@@ -35,9 +38,9 @@ class ExempleMenu extends React.Component {
         anchorElRef={this.ref}
         autoclose={true}
         onClose={this.hideMenu}>
-        <ActionMenuItem left={<Icon icon='file' />} right={<Icon icon='warning' color="var(--errorColor)" />}>Item 1</ActionMenuItem>
+        <ActionMenuItem left={<Icon icon={FileIcon} />} right={<Icon icon={WarningIcon} color="var(--errorColor)" />}>Item 1</ActionMenuItem>
         <ActionMenuItem left={<ActionMenuRadio />}>Item 2</ActionMenuItem>
-        <ActionMenuItem left={<Icon icon='file' />}>
+        <ActionMenuItem left={<Icon icon={FileIcon} />}>
           <Typography variant="body1" gutterBottom>
             Item 3
           </Typography>
@@ -66,6 +69,9 @@ import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Icon from '../Icon';
 import Filename from '../Filename';
 
+import FileIcon from "cozy-ui/transpiled/react/Icons/File";
+import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
+
 initialState = { menuDisplayed: isTesting() };
 
 const showMenu = () => setState({ menuDisplayed: true });
@@ -77,11 +83,11 @@ const hideMenu = () => setState({ menuDisplayed: false });
     <ActionMenu
       onClose={hideMenu}>
       <ActionMenuHeader>
-        <Filename icon="file" filename="my_awesome_paper" extension=".pdf" />
+        <Filename icon={FileIcon} filename="my_awesome_paper" extension=".pdf" />
       </ActionMenuHeader>
-      <ActionMenuItem left={<Icon icon='file' />}>Item 1</ActionMenuItem>
-      <ActionMenuItem left={<Icon icon='right' />}>Item 2</ActionMenuItem>
-      <ActionMenuItem left={<Icon icon='file' />}>Item 3</ActionMenuItem>
+      <ActionMenuItem left={<Icon icon={FileIcon} />}>Item 1</ActionMenuItem>
+      <ActionMenuItem left={<Icon icon={RightIcon} />}>Item 2</ActionMenuItem>
+      <ActionMenuItem left={<Icon icon={FileIcon} />}>Item 3</ActionMenuItem>
   </ActionMenu>}
 </div>
 ```
@@ -93,6 +99,7 @@ import ActionMenu, { ActionMenuItem, ActionMenuHeader } from './index';
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Icon from '../Icon';
 import Filename from '../Filename';
+import FileIcon from "cozy-ui/transpiled/react/Icons/File";
 
 initialState = { menuDisplayed: isTesting() };
 
@@ -105,9 +112,9 @@ const hideMenu = () => setState({ menuDisplayed: false });
     <ActionMenu
       onClose={hideMenu}>
       <ActionMenuHeader>
-        <Filename icon="file" filename="my_awesome_paper" extension=".pdf" />
+        <Filename icon={FileIcon} filename="my_awesome_paper" extension=".pdf" />
       </ActionMenuHeader>
-      <ActionMenuItem onClick={() => alert('click')}left={<Icon icon='file' />}>Item 1</ActionMenuItem>
+      <ActionMenuItem onClick={() => alert('click')}left={<Icon icon={FileIcon} />}>Item 1</ActionMenuItem>
   </ActionMenu>}
 </div>
 ```
@@ -120,6 +127,8 @@ We use [popper.js](https://popper.js.org/docs/v2/) under the hood. You can use t
 import ActionMenu, { ActionMenuItem } from 'cozy-ui/transpiled/react/ActionMenu';
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Icon from 'cozy-ui/transpiled/react/Icon';
+
+import FileIcon from "cozy-ui/transpiled/react/Icons/File";
 
 initialState = { menuDisplayed: isTesting() };
 
@@ -135,7 +144,7 @@ const anchorRef = React.createRef();
       anchorElRef={anchorRef}
       popperOptions={{ placement: 'bottom-end'}}
       onClose={hideMenu}>
-      <ActionMenuItem left={<Icon icon='file' />}>Item 1</ActionMenuItem>
+      <ActionMenuItem left={<Icon icon={FileIcon} />}>Item 1</ActionMenuItem>
   </ActionMenu>}
 </div>
 ```
@@ -152,6 +161,8 @@ import {
   BreakpointsProvider
 } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 import Button from 'cozy-ui/transpiled/react/Button'
+
+import FileIcon from "cozy-ui/transpiled/react/Icons/File";
 
 initialState = { menuDisplayed: isTesting(),  modalOpened: isTesting() };
 
@@ -171,7 +182,7 @@ const onClose = () => setState({ modalOpened: !state.modalOpened });
           popperOptions={{ placement: 'bottom-end'}}
           onClose={hideMenu}>
             <ActionMenuItem
-              left={<Icon icon='file' />}
+              left={<Icon icon={FileIcon} />}
               onClick={() => setState({ modalOpened: !state.modalOpened })}>
                 Item 1
             </ActionMenuItem>

@@ -6,6 +6,8 @@ import cx from 'classnames'
 import { getStrength } from './helpers'
 import styles from './styles.styl'
 import PropTypes from 'prop-types'
+import EyeIcon from '../../Icons/Eye'
+import EyeClosedIcon from '../../Icons/EyeClosed'
 
 const HideShowButton = props => {
   const { hidden, className, ...rest } = props
@@ -17,7 +19,7 @@ const HideShowButton = props => {
       {...rest}
     >
       <Icon
-        icon={hidden ? 'eye' : 'eye-closed'}
+        icon={hidden ? EyeIcon : EyeClosedIcon}
         size={16}
         color="var(--coolGrey)"
       />

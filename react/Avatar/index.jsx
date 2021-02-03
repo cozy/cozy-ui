@@ -6,6 +6,7 @@ import assign from 'lodash/assign'
 import palette from '../palette'
 import styles from './styles.styl'
 import Icon, { iconPropType } from '../Icon'
+import PeopleIcon from '../Icons/People'
 import { createSizeStyle } from '../Circle'
 
 const nameToColor = (name = '') => {
@@ -90,7 +91,7 @@ Avatar.defaultProps = {
   size: 'medium',
   className: '',
   disabled: false,
-  icon: 'people',
+  icon: PeopleIcon,
   style: {}
 }
 

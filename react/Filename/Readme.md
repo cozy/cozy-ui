@@ -11,7 +11,9 @@ import Filename from 'cozy-ui/transpiled/react/Filename';
 
 ```
 import Filename from 'cozy-ui/transpiled/react/Filename';
+import FileIcon from 'cozy-ui/transpiled/react/Icons/File';
+
 <div>
-  <Filename icon="file" filename="my_awesome_paper" extension=".pdf" />
+  <Filename icon={FileIcon} filename="my_awesome_paper" extension=".pdf" />
 </div>
 ```

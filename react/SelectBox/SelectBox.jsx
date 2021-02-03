@@ -5,11 +5,14 @@ import classNames from 'classnames'
 
 import { isIOSApp } from 'cozy-device-helper'
 
-import styles from './styles.styl'
 import Icon from '../Icon'
+import CheckIcon from '../Icons/Check'
 import { dodgerBlue, silver, coolGrey, paleGrey } from '../palette'
 import withBreakpoints from '../helpers/withBreakpoints'
+import TopIcon from '../Icons/Top'
+import BottomIcon from '../Icons/Bottom'
 
+import styles from './styles.styl'
 import ControlDefault from './ControlDefault'
 
 const heights = {
@@ -99,7 +102,7 @@ const DropdownIndicator = props => {
   return (
     <components.DropdownIndicator {...props}>
       <Icon
-        icon={props.selectProps.menuIsOpen ? 'top' : 'bottom'}
+        icon={props.selectProps.menuIsOpen ? TopIcon : BottomIcon}
         color={coolGrey}
         width="20"
         height="16"
@@ -174,7 +177,7 @@ const Option = ({
       <span className={withPrefix(cx, styles['select-option__checkmark'])}>
         {isSelected && (
           <Icon
-            icon="check"
+            icon={CheckIcon}
             color={dodgerBlue}
             className={withPrefix(cx, 'u-ph-half')}
           />

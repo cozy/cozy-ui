@@ -4,6 +4,7 @@ Chips represent complex entities in small blocks, such as a contact.
 import Chip from 'cozy-ui/transpiled/react/Chip';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import Avatar from 'cozy-ui/transpiled/react/Avatar';
+import FileIcon from "cozy-ui/transpiled/react/Icons/File";
 const ContactChip = ({ contact }) => (
   <Chip style={{ paddingLeft: '0.25rem' }}>
     <Avatar textId={ contact.name } text={contact.initials} size='small' style={{ marginRight: '0.5rem' }}/> {contact.name}
@@ -12,7 +13,7 @@ const ContactChip = ({ contact }) => (
 
 <div>
   <Chip>
-    <Icon icon='file' style={{ marginRight: '0.5rem' }}/> File
+    <Icon icon={FileIcon} style={{ marginRight: '0.5rem' }}/> File
   </Chip><br/>
   <ContactChip contact={{ initials: 'AL',  name: 'Ada Lovelace'}} />
   <ContactChip contact={{ initials: 'CB',  name: 'Charles Babbage'}} />
@@ -28,8 +29,9 @@ const ContactChip = ({ contact }) => (
 ```
 import Chip from 'cozy-ui/transpiled/react/Chip';
 import Icon from 'cozy-ui/transpiled/react/Icon';
+import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
 <Chip.Round>
-  <Icon icon='right'/>
+  <Icon icon={RightIcon}/>
 </Chip.Round>
 ```
 
@@ -49,9 +51,11 @@ import Chip from 'cozy-ui/transpiled/react/Chip';
 ```
 import Chip from 'cozy-ui/transpiled/react/Chip';
 import Icon from 'cozy-ui/transpiled/react/Icon';
+import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
+import LeftIcon from "cozy-ui/transpiled/react/Icons/Left";
 <div>
-  <Chip.Button><Icon icon='right' /></Chip.Button>
-  <Chip.Button disabled><Icon icon='left' /></Chip.Button>
+  <Chip.Button><Icon icon={RightIcon} /></Chip.Button>
+  <Chip.Button disabled><Icon icon={LeftIcon} /></Chip.Button>
 </div>
 ```
 
@@ -139,15 +143,17 @@ import Chip from 'cozy-ui/transpiled/react/Chip';
 ```
 import Chip from 'cozy-ui/transpiled/react/Chip';
 import Icon from 'cozy-ui/transpiled/react/Icon';
+import FileIcon from "cozy-ui/transpiled/react/Icons/File";
+import OpenwithIcon from "cozy-ui/transpiled/react/Icons/Openwith";
 <Chip
   size="small"
   variant="outlined"
   theme="primary"
   onClick={() => alert('you clicked')}
 >
-  <Icon icon="file" size={16} style={{ marginRight: '0.5rem' }} />
+  <Icon icon={FileIcon} size={16} style={{ marginRight: '0.5rem' }} />
   1 invoice
   <Chip.Separator />
-  <Icon icon="openwith" size={16} />
+  <Icon icon={OpenwithIcon} size={16} />
 </Chip>
 ```

@@ -17,30 +17,34 @@ return (
 
 ```jsx
 import BarButton from 'cozy-ui/transpiled/react/BarButton';
+import PreviousIcon from 'cozy-ui/transpiled/react/Icons/Previous';
 
-<BarButton icon="previous" disabled />
+<BarButton icon={PreviousIcon} disabled />
 ```
 
 ## `href`
 
 ```jsx
 import BarButton from 'cozy-ui/transpiled/react/BarButton';
+import UploadIcon from 'cozy-ui/transpiled/react/Icons/Upload';
 
-<BarButton icon="upload" href="http://cozy.io" />
+<BarButton icon={UploadIcon} href="http://cozy.io" />
 ```
 
 ## `icon`
 
 ```jsx
 import BarButton from 'cozy-ui/transpiled/react/BarButton';
+import CubeIcon from 'cozy-ui/transpiled/react/Icons/Cube';
 
-<BarButton icon="cube" />
+<BarButton icon={CubeIcon} />
 ```
 
 ## `onClick`
 
 ```jsx
 import BarButton from 'cozy-ui/transpiled/react/BarButton';
+import GearIcon from 'cozy-ui/transpiled/react/Icons/Gear';
 
-<BarButton icon="gear" onClick={() => alert('BarButton has been clicked')} />
+<BarButton icon={GearIcon} onClick={() => alert('BarButton has been clicked')} />
 ```

@@ -5,10 +5,14 @@ A component to display a grid of 4 icons. This component is not considered stabl
 ```
 import IconGrid from 'cozy-ui/transpiled/react/Labs/IconGrid';
 import Icon from 'cozy-ui/transpiled/react/Icon';
+import FileIcon from "cozy-ui/transpiled/react/Icons/File";
+import CloudIcon from "cozy-ui/transpiled/react/Icons/Cloud";
+import CloudHappyIcon from "cozy-ui/transpiled/react/Icons/CloudHappy";
+import OnlineIcon from "cozy-ui/transpiled/react/Icons/Online";
 <IconGrid>
-  <Icon icon="file" />
-  <Icon icon="cloud" />
-  <Icon icon="cloud-happy" />
-  <Icon icon="online" />
+  <Icon icon={FileIcon} />
+  <Icon icon={CloudIcon} />
+  <Icon icon={CloudHappyIcon} />
+  <Icon icon={OnlineIcon} />
 </IconGrid>
 ```

@@ -17,6 +17,9 @@ In action :
 import Sidebar from 'cozy-ui/transpiled/react/Sidebar';
 import Nav, { NavItem, NavIcon, NavText, genNavLink } from 'cozy-ui/transpiled/react/Nav';
 import cx from 'classnames';
+import WarnIcon from 'cozy-ui/transpiled/react/Icons/Warn'
+import CheckIcon from 'cozy-ui/transpiled/react/Icons/Check'
+import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
 
 const NavLink = genNavLink(({ children, className, active, activeClassName }) =>
   <a className={cx(className, active ? activeClassName : null)}>{ children }</a>);
@@ -25,19 +28,19 @@ const NavLink = genNavLink(({ children, className, active, activeClassName }) =>
   <Nav>
     <NavItem id='nav-item'>
       <NavLink active>
-        <NavIcon icon='warn' />
+        <NavIcon icon={WarnIcon} />
         <NavText>Warn</NavText>
       </NavLink>
     </NavItem>
     <NavItem>
       <NavLink>
-        <NavIcon icon='check' />
+        <NavIcon icon={CheckIcon} />
         <NavText>Check</NavText>
       </NavLink>
     </NavItem>
     <NavItem>
       <NavLink>
-        <NavIcon icon='download' />
+        <NavIcon icon={DownloadIcon} />
         <NavText>Download</NavText>
       </NavLink>
     </NavItem>

@@ -4,6 +4,8 @@ import { Button } from '../Button'
 import withBreakpoints from '../helpers/withBreakpoints'
 import styles from './styles.styl'
 
+import PreviousIcon from '../Icons/Previous'
+
 const DumbModalBackButton = props => {
   const {
     breakpoints: { isMobile },
@@ -13,7 +15,7 @@ const DumbModalBackButton = props => {
 
   return (
     <Button
-      icon="previous"
+      icon={PreviousIcon}
       iconOnly
       extension="narrow"
       theme="text"

@@ -123,9 +123,11 @@ If you want a button with only an icon as content, you must set the `iconOnly` p
 
 ```
 import Button from 'cozy-ui/transpiled/react/Button';
+import TrashIcon from "cozy-ui/transpiled/react/Icons/Trash";
+import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots";
 <div>
-  <Button theme="danger" icon='trash' label='delete' />
-  <Button theme="secondary" icon='dots' iconOnly label="See more" extension='narrow' />
+  <Button theme="danger" icon={TrashIcon} label='delete' />
+  <Button theme="secondary" icon={DotsIcon} iconOnly label="See more" extension='narrow' />
 </div>
 ```
 
@@ -134,8 +136,9 @@ You can also pass an Icon directly if you need more flexibility.
 ```
 import Button from 'cozy-ui/transpiled/react/Button';
 import Icon from 'cozy-ui/transpiled/react/Icon';
+import TrashIcon from "cozy-ui/transpiled/react/Icons/Trash";
 <div>
-  <Button theme="danger" icon={ <Icon icon='trash' color='yellow' /> } label='delete' />
+  <Button theme="danger" icon={ <Icon icon={TrashIcon} color='yellow' /> } label='delete' />
 </div>
 ```
 
@@ -143,9 +146,11 @@ import Icon from 'cozy-ui/transpiled/react/Icon';
 
 ```
 import Button from 'cozy-ui/transpiled/react/Button';
+import PlusIcon from "cozy-ui/transpiled/react/Icons/Plus";
+import CrossIcon from "cozy-ui/transpiled/react/Icons/Cross";
 <div>
-  <Button icon='plus' label='Add' iconOnly round />
-  <Button theme="secondary" icon='cross' label='Delete' iconOnly round />
+  <Button icon={PlusIcon} label='Add' iconOnly round />
+  <Button theme="secondary" icon={CrossIcon} label='Delete' iconOnly round />
 </div>
 ```
 
@@ -155,12 +160,14 @@ Subtle buttons are buttons without background and borders, wich look "inverted" 
 
 ```
 import Button from 'cozy-ui/transpiled/react/Button';
+import PlusIcon from "cozy-ui/transpiled/react/Icons/Plus";
+import CozyIcon from "cozy-ui/transpiled/react/Icons/Cozy";
 <div>
   <p>
-    <Button subtle icon='plus' size='tiny' label='Tiny text' onClick={() => alert('Clicked on Tiny text')} />
-    <Button subtle icon='plus' size='small' label='Small text' onClick={() => alert('Clicked on Small text')} />
-    <Button subtle icon='plus' label='Regular text' onClick={() => alert('Clicked on Regular text')} />
-    <Button subtle icon='plus' size='large' label='Large text' onClick={() => alert('Clicked on Large text')} />
+    <Button subtle icon={PlusIcon} size='tiny' label='Tiny text' onClick={() => alert('Clicked on Tiny text')} />
+    <Button subtle icon={PlusIcon} size='small' label='Small text' onClick={() => alert('Clicked on Small text')} />
+    <Button subtle icon={PlusIcon} label='Regular text' onClick={() => alert('Clicked on Regular text')} />
+    <Button subtle icon={PlusIcon} size='large' label='Large text' onClick={() => alert('Clicked on Large text')} />
   </p>
   <p>
     <Button subtle theme='secondary' label='Secondary theme' onClick={() => alert('Clicked on Secondary theme')} />
@@ -177,10 +184,10 @@ import Button from 'cozy-ui/transpiled/react/Button';
     <Button subtle busy theme='danger' label='Busy danger'  onClick={() => alert('Clicked on Busy danger')} />
   </p>
   <p>
-    <Button subtle icon='cozy' label='Cozy' />
+    <Button subtle icon={CozyIcon} label='Cozy' />
   </p>
   <p>
-    <Button subtle icon='plus' label='Subtle Secondary Cozy' theme='secondary' />
+    <Button subtle icon={PlusIcon} label='Subtle Secondary Cozy' theme='secondary' />
   </p>
 </div>
 ```
@@ -189,6 +196,7 @@ import Button from 'cozy-ui/transpiled/react/Button';
 
 ```
 import { ButtonLink } from 'cozy-ui/transpiled/react/Button';
+import CozyIcon from "cozy-ui/transpiled/react/Icons/Cozy";
 <div>
   <p>
     <ButtonLink size="tiny" href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
@@ -203,7 +211,7 @@ import { ButtonLink } from 'cozy-ui/transpiled/react/Button';
     <ButtonLink size="large" href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
   </p>
   <p>
-    <ButtonLink subtle icon='cozy' href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
+    <ButtonLink subtle icon={CozyIcon} href="https://cozy.io" target="_blank" label='Link to Cozy.io'/>
   </p>
 </div>
 ```

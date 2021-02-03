@@ -25,6 +25,8 @@ import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider';
 import FileTypeFolderIcon from 'cozy-ui/transpiled/react/Icons/FileTypeFolder'
 import FiletypeTextIcon from 'cozy-ui/transpiled/react/Icons/FileTypeText';
 
+import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots";
+
 <List>
   <ListSubheader>Section 1</ListSubheader>
   <ListItem button>
@@ -40,7 +42,7 @@ import FiletypeTextIcon from 'cozy-ui/transpiled/react/Icons/FileTypeText';
           <Button
             label='Click for more !'
             theme="text"
-            icon="dots"
+            icon={DotsIcon}
             extension="narrow"
             iconOnly
             className="u-m-0 u-coolGrey"
@@ -71,7 +73,7 @@ import FiletypeTextIcon from 'cozy-ui/transpiled/react/Icons/FileTypeText';
       <Button
         label='Click for more !'
         theme="text"
-        icon="dots"
+        icon={DotsIcon}
         extension="narrow"
         iconOnly
         className="u-m-0 u-coolGrey"

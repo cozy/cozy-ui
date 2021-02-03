@@ -11,6 +11,7 @@ the upload queue:
 
 ```
 import isTesting from '../helpers/isTesting'
+import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
 
 const initialState = {
   popover: false
@@ -54,7 +55,7 @@ const data = {
   <UploadQueue
     lang='fr'
     app='Cozy Drive'
-    getMimeTypeIcon={() => 'file'}
+    getMimeTypeIcon={() => FileIcon}
     queue={data.queue}
     doneCount={data.doneCount}
     successCount={data.successCount}
@@ -64,7 +65,7 @@ const data = {
     <UploadQueue
       lang='fr'
       app='Cozy Drive'
-      getMimeTypeIcon={() => 'file'}
+      getMimeTypeIcon={() => FileIcon}
       queue={data.queue}
       doneCount={data.doneCount}
       successCount={data.successCount}

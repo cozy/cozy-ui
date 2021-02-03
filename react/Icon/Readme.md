@@ -52,9 +52,11 @@ Use `spin` and `rotate` if you want you to turn your icons upside down 🙃.
 
 ```
 import Icon from 'cozy-ui/transpiled/react/Icon';
+import SpinnerIcon from "cozy-ui/transpiled/react/Icons/Spinner";
+import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
 <div>
-  <Icon icon='spinner' color='#0bda51' spin/>{'\u00A0'}
-  <Icon icon='right' color='#c30017' rotate={45}/>
+  <Icon icon={SpinnerIcon} color='#0bda51' spin/>{'\u00A0'}
+  <Icon icon={RightIcon} color='#c30017' rotate={45}/>
 </div>
 ```
 
@@ -85,8 +87,9 @@ Icon forwards unknown props to the underlying `<svg />` element.
 
 ```
 import Icon from 'cozy-ui/transpiled/react/Icon';
+import WarningIcon from "cozy-ui/transpiled/react/Icons/Warning";
 <div>
-  <Icon icon='warning' onClick={() => alert('Be careful !')} width={32} height={32} color="var(--errorColor)" /><span>← Click it</span>
+  <Icon icon={WarningIcon} onClick={() => alert('Be careful !')} width={32} height={32} color="var(--errorColor)" /><span>← Click it</span>
 </div>
 ```
 

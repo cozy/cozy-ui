@@ -12,6 +12,7 @@ the item is `disabled`.
 ```
 import Menu, { MenuItem } from 'cozy-ui/transpiled/react/Menu';
 import Icon from 'cozy-ui/transpiled/react/Icon';
+import PaperplaneIcon from "cozy-ui/transpiled/react/Icons/Paperplane";
 const showItem = itemData => alert(JSON.stringify(itemData));
 const showWarning = itemData => alert(itemData + ' is disabled');
 
@@ -19,7 +20,7 @@ const showWarning = itemData => alert(itemData + ' is disabled');
   <MenuItem data='hello'>Hello !</MenuItem>
   <MenuItem disabled data='bonjour'>Bonjour !</MenuItem>
   <hr />
-  <MenuItem icon={<Icon icon='paperplane'/>} onSelect={x => alert('You clicked hola')} data='hola'>
+  <MenuItem icon={<Icon icon={PaperplaneIcon}/>} onSelect={x => alert('You clicked hola')} data='hola'>
     <div>¡Hola!</div>
     <div>¿Qué tal?</div>
   </MenuItem>

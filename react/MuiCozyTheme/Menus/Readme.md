@@ -3,12 +3,14 @@ import Menu from 'cozy-ui/transpiled/react/MuiCozyTheme/Menus';
 import MenuItem from '@material-ui/core/MenuItem';
 import Button from 'cozy-ui/transpiled/react/Button';
 
+import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots";
+
 <Menu
   component={
     <Button
       label='Click for more !'
       theme="secondary"
-      icon="dots"
+      icon={DotsIcon}
       extension="narrow"
       iconOnly
     />

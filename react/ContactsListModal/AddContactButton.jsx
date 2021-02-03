@@ -1,10 +1,12 @@
 import React from 'react'
 import { withClient, models, queryConnect, Q } from 'cozy-client'
+
 import AppLinker from '../AppLinker'
 import { ButtonLink } from '../Button'
 import compose from 'lodash/flowRight'
 import useRealtime from '../hooks/useRealtime'
 import useEventListener from '../hooks/useEventListener.js'
+import PlusIcon from '../Icons/Plus'
 
 const DumbAddContactButton = props => {
   const { client, apps, ...rest } = props
@@ -45,7 +47,7 @@ const DumbAddContactButton = props => {
         <ButtonLink
           href={href}
           onClick={onClick}
-          icon="plus"
+          icon={PlusIcon}
           theme="secondary"
           target="_blank"
           {...rest}

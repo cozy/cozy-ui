@@ -14,6 +14,7 @@ import EmptyMessage from './EmptyMessage'
 import compose from 'lodash/flowRight'
 import useRealtime from '../hooks/useRealtime'
 import useEventListener from '../hooks/useEventListener.js'
+import PreviousIcon from '../Icons/Previous'
 
 const thirtySeconds = 30000
 const olderThan30s = fetchPolicies.olderThan(thirtySeconds)
@@ -94,7 +95,7 @@ const ContactsListModal = props => {
             onClick={rest.dismissAction}
             extension="narrow"
             iconOnly
-            icon="previous"
+            icon={PreviousIcon}
             theme="primary"
           />
         )}
