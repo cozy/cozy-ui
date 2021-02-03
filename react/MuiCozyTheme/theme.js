@@ -269,6 +269,8 @@ const makeOverrides = theme => ({
   },
   MuiListItemIcon: {
     root: {
+      minWidth: 'auto',
+      marginRight: '1rem',
       padding: 0
     }
   },
@@ -324,6 +326,10 @@ const makeOverrides = theme => ({
       '&$textDense': {
         fontSize: null
       }
+    },
+    multiline: {
+      marginTop: 0,
+      marginBottom: 0
     }
   },
   MuiListSubheader: {
@@ -458,6 +464,7 @@ const makeOverrides = theme => ({
   MuiDialogActions: {
     root: {
       margin: '16px 32px',
+      padding: 0,
       [theme.breakpoints.down('sm')]: {
         margin: '8px 16px',
         '& button': {
@@ -477,6 +484,12 @@ const makeOverrides = theme => ({
             marginBottom: '8px'
           }
         }
+      },
+
+      // To keep muiV3 behavior
+      // TODO check later if we need this behavior
+      '& > :not(:first-child):not(:first-child)': {
+        marginLeft: 4
       }
     }
   },
