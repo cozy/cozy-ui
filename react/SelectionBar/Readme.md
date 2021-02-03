@@ -7,7 +7,7 @@ import SelectionBar from 'cozy-ui/transpiled/react/SelectionBar';
 import I18n from 'cozy-ui/transpiled/react/I18n';
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
 import TrashIcon from 'cozy-ui/transpiled/react/Icons/Trash'
-
+import RenameIcon from 'cozy-ui/transpiled/react/Icons/Rename'
 
 const selectedItem = {
     _id: 1,
@@ -38,7 +38,8 @@ const actions = {
   },
   rename: {
     action: selections => alert(JSON.stringify(selections)),
-    displayCondition: selections => selections.length > 1
+    displayCondition: selections => selections.length > 1,
+    icon: RenameIcon
   }
 };
 
