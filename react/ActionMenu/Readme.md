@@ -83,7 +83,7 @@ const hideMenu = () => setState({ menuDisplayed: false });
     <ActionMenu
       onClose={hideMenu}>
       <ActionMenuHeader>
-        <Filename icon="file" filename="my_awesome_paper" extension=".pdf" />
+        <Filename icon={FileIcon} filename="my_awesome_paper" extension=".pdf" />
       </ActionMenuHeader>
       <ActionMenuItem left={<Icon icon={FileIcon} />}>Item 1</ActionMenuItem>
       <ActionMenuItem left={<Icon icon={RightIcon} />}>Item 2</ActionMenuItem>
@@ -99,7 +99,6 @@ import ActionMenu, { ActionMenuItem, ActionMenuHeader } from './index';
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Icon from '../Icon';
 import Filename from '../Filename';
-
 import FileIcon from "cozy-ui/transpiled/react/Icons/File";
 
 initialState = { menuDisplayed: isTesting() };
@@ -113,7 +112,7 @@ const hideMenu = () => setState({ menuDisplayed: false });
     <ActionMenu
       onClose={hideMenu}>
       <ActionMenuHeader>
-        <Filename icon="file" filename="my_awesome_paper" extension=".pdf" />
+        <Filename icon={FileIcon} filename="my_awesome_paper" extension=".pdf" />
       </ActionMenuHeader>
       <ActionMenuItem onClick={() => alert('click')}left={<Icon icon={FileIcon} />}>Item 1</ActionMenuItem>
   </ActionMenu>}

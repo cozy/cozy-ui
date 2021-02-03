@@ -11,6 +11,9 @@ import Sidebar from 'cozy-ui/transpiled/react/Sidebar';
 import Nav, { NavItem, NavIcon, NavText, genNavLink } from 'cozy-ui/transpiled/react/Nav';
 import cx from 'classnames'
 import isEqual from 'lodash/isEqual'
+import WarnIcon from 'cozy-ui/transpiled/react/Icons/Warn'
+import CheckIcon from 'cozy-ui/transpiled/react/Icons/Check'
+import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
 
 /**
  * In a normal app, ExampleRouterNavLink is from react-router
@@ -48,7 +51,7 @@ const Example = () => {
       <Nav>
         <NavItem>
           <NavLink {...makeProps(['Section 1'])}>
-            <NavIcon icon='warn' />
+            <NavIcon icon={WarnIcon} />
             <NavText>Section 1</NavText>
           </NavLink>
         </NavItem>
@@ -64,13 +67,13 @@ const Example = () => {
         </NavItem>
         <NavItem>
           <NavLink {...makeProps(['Section 2'])}>
-            <NavIcon icon='check' />
+            <NavIcon icon={CheckIcon} />
             <NavText>Section 2</NavText>
           </NavLink>
         </NavItem>
         <NavItem>
           <NavLink {...makeProps(['Section 3'])}>
-            <NavIcon icon='download' />
+            <NavIcon icon={DownloadIcon} />
             <NavText>Section 3</NavText>
           </NavLink>
         </NavItem>

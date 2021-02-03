@@ -8,6 +8,7 @@ import Icon from '../Icon'
 import styles from './styles.styl'
 
 import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
+import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
 
 /**
  *
@@ -30,7 +31,7 @@ const HistoryRow = ({
               size={tag ? 'small' : 'xsmall'}
               className={styles.HistoryRowCircle}
             >
-              {tag && <Icon icon={'file'} color="var(--primaryTextColor)" />}
+              {tag && <Icon icon={FileIcon} color="var(--primaryTextColor)" />}
             </Circle>
           </Img>
         </div>

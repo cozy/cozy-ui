@@ -7,7 +7,9 @@ context.
 ```
 import { Component } from 'react'
 import Breadcrumbs from '.';
-import Icon from '../Icon'
+import Icon from '../Icon';
+import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
+import FolderIcon from 'cozy-ui/transpiled/react/Icons/Folder'
 
 const items = [
   { 
@@ -34,7 +36,7 @@ const Items = ({ items, onClickItem }) => {
   return items.map(item => (
     <div style={{ color: 'var(--primaryTextColor)', height: '2rem', display: 'flex', alignItems: 'center'}} className={item.items ? 'u-c-pointer' : null } onClick={() => onClickItem(item)}>
       <Icon
-        icon={!item.items ? 'file' : 'folder'}
+        icon={!item.items ? FileIcon : FolderIcon}
         className='u-mr-half' color='var(--primaryTextColor)' />
       { item.name }
     </div>

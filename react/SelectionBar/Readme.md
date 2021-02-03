@@ -6,6 +6,7 @@ SelectionBar
 import SelectionBar from 'cozy-ui/transpiled/react/SelectionBar';
 import I18n from 'cozy-ui/transpiled/react/I18n';
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
+import TrashIcon from 'cozy-ui/transpiled/react/Icons/Trash'
 
 
 const selectedItem = {
@@ -33,7 +34,7 @@ const dictRequire = x => ({})
 const actions = {
   trash: {
     action: selections => alert(JSON.stringify(selections)),
-    icon: 'trash'
+    icon: TrashIcon
   },
   rename: {
     action: selections => alert(JSON.stringify(selections)),

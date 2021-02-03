@@ -13,8 +13,8 @@ import {
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Field from 'cozy-ui/transpiled/react/Field'
 import Button from 'cozy-ui/transpiled/react/Button';
-
-import NextIcon from "cozy-ui/transpiled/react/Icons/Next";
+import PreviousIcon from 'cozy-ui/transpiled/react/Icons/Previous' 
+import NextIcon from 'cozy-ui/transpiled/react/Icons/Next';
 
 const t = x => x;
 const isTiny = false;
@@ -29,10 +29,10 @@ const WizardExample = ({ onNext, onRegister }) => {
         <WizardHeader>
           <WizardPreviousButton
             subtle
-            icon="previous"
+            icon={PreviousIcon}
             iconOnly
             extension="narrow"
-            onClick={null}
+            onClick={() => setState({ showExample: false })}
             type="button"
             label="Previous"
           />

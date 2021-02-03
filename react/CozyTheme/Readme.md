@@ -10,6 +10,7 @@ import { Title, SubTitle } from 'cozy-ui/transpiled/react/Text';
 import Button from 'cozy-ui/transpiled/react/Button';
 import BarButton from 'cozy-ui/transpiled/react/BarButton';
 import Paper from 'cozy-ui/transpiled/react/Paper';
+import DotsIcon from 'cozy-ui/transpiled/react/Icons/Dots'
 
 const props = [{}, { disabled: true}, { busy: true }];
 
@@ -30,7 +31,7 @@ const themesSupportingContext = [
       }</p>
     )}
     <SubTitle className='u-white'>BarButton</SubTitle>
-    <BarButton icon='dots' />
+    <BarButton icon={DotsIcon} />
     <div className='u-bg-white u-p-1 u-mb-1'>
       We can always go back to normal theme if a child must "get out"
       of the theme.
