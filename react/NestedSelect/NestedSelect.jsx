@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import CompositeRow from '../CompositeRow'
+import { withStyles } from '@material-ui/core'
 import Icon from '../Icon'
 import styles from './styles.styl'
 import UIRadio from '../Radio'
 import cx from 'classnames'
 import omit from 'lodash/omit'
 import palette from '../palette'
+import ListItem from '../MuiCozyTheme/ListItem'
+import ListItemText from '../ListItemText'
+import ListItemIcon from '../MuiCozyTheme/ListItemIcon'
 
 import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
 
@@ -193,43 +196,59 @@ export const Radio = ({ className, ...props }) => (
 
 const Divider = () => <div className={styles.Divider} />
 
+const NestedSelectListItemText = withStyles({
+  multiline: {
+    padding: '0.125rem 0.5rem'
+  }
+})(ListItemText)
+
 export const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
   return (
-    <div className={cx(styles.Row, isSelected ? styles.Row__selected : null)}>
-      <CompositeRow
-        dense
-        image={
-          <div className="u-flex">
-            {radioPosition === 'left' ? (
-              <Radio
-                className="u-mr-1"
-                readOnly
-                name={item.title}
-                value={item.title}
-                checked={!!isSelected}
-              />
-            ) : null}
-            {item.icon}
-          </div>
-        }
-        primaryText={item.title}
-        primaryTextClassName="u-ellipsis"
-        secondaryText={item.description}
-        secondaryTextClassName={cx(styles.Row__caption, 'u-ellipsis')}
-        onClick={() => onClick(item)}
-        right={
-          item.children && item.children.length > 0 ? (
-            <Icon icon={RightIcon} color={palette.coolGrey} />
-          ) : radioPosition !== 'right' ? null : (
-            <Radio
-              readOnly
-              name={item.title}
-              value={item.title}
-              checked={!!isSelected}
-            />
-          )
-        }
+    <ListItem
+      dense
+      button
+      divider
+      onClick={() => onClick(item)}
+      className={cx(styles.Row, isSelected ? styles.Row__selected : null)}
+    >
+      {radioPosition === 'left' ? (
+        <ListItemIcon>
+          <Radio
+            className="u-mr-1"
+            readOnly
+            name={item.title}
+            value={item.title}
+            checked={!!isSelected}
+          />
+        </ListItemIcon>
+      ) : null}
+      <ListItemIcon>{item.icon}</ListItemIcon>
+      <NestedSelectListItemText
+        primary={item.title}
+        ellipsis
+        primaryTypographyProps={{ className: 'u-ellipsis' }}
+        secondary={item.description}
+        secondaryTypographyProps={{
+          className: cx(styles.Row__caption, 'u-ellipsis')
+        }}
       />
-    </div>
+      {item.children && item.children.length > 0 ? (
+        <ListItemIcon>
+          <Icon icon={RightIcon} color={palette.coolGrey} />
+        </ListItemIcon>
+      ) : null}
+
+      {radioPosition == 'right' &&
+      !(item.children && item.children.length > 0) ? (
+        <ListItemIcon>
+          <Radio
+            readOnly
+            name={item.title}
+            value={item.title}
+            checked={!!isSelected}
+          />
+        </ListItemIcon>
+      ) : null}
+    </ListItem>
   )
 }

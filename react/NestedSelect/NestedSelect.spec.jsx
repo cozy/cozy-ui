@@ -1,6 +1,6 @@
 import React from 'react'
 import NestedSelect, { ItemRow } from './NestedSelect'
-import CompositeRow from '../CompositeRow'
+import ListItem from '../MuiCozyTheme/ListItem'
 
 describe('NestedSelect', () => {
   const options = {
@@ -22,7 +22,7 @@ describe('NestedSelect', () => {
 
   const simulateClick = row =>
     row
-      .find(CompositeRow)
+      .find(ListItem)
       .props()
       .onClick()
 
