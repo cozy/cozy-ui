@@ -83,7 +83,8 @@ const makeTypography = palette => ({
   caption: {
     fontSize: 12,
     lineHeight: 1.313,
-    color: palette.text.secondary
+    color: palette.text.secondary,
+    display: 'block'
   }
 })
 
