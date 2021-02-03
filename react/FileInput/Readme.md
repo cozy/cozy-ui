@@ -16,8 +16,9 @@ You render what you want:
 ```jsx
 import FileInput from 'cozy-ui/transpiled/react/FileInput';
 import Icon from 'cozy-ui/transpiled/react/Icon';
+import FileIcon from "cozy-ui/transpiled/react/Icons/File";
 <FileInput onChange={console.log}>
-  <Icon icon="file" role="button" />
+  <Icon icon={FileIcon} role="button" />
 </FileInput>
 ```
 

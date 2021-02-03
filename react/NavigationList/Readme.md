@@ -20,6 +20,12 @@ import NavigationList, {
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 
+import GearIcon from "cozy-ui/transpiled/react/Icons/Gear";
+import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
+import PeopleIcon from "cozy-ui/transpiled/react/Icons/People";
+import TrashIcon from "cozy-ui/transpiled/react/Icons/Trash";
+import BankIcon from "cozy-ui/transpiled/react/Icons/Bank";
+
 const NavigationListExample = ({ style }) => {
   return (
     <NavigationList style={style}>
@@ -27,12 +33,12 @@ const NavigationListExample = ({ style }) => {
         <NavigationListSection>
        <ListItem>
           <ListItemIcon>
-            <Icon icon="gear" size={mediumSize} />
+            <Icon icon={GearIcon} size={mediumSize} />
           </ListItemIcon>
           <ListItemText primary="General settings" />
           <ListItemSecondaryAction>
             <Icon
-              icon="right"
+              icon={RightIcon}
               size={smallSize}
               className="u-mr-1 u-coolGrey"
             />
@@ -41,12 +47,12 @@ const NavigationListExample = ({ style }) => {
         <Divider inset />
         <ListItem>
           <ListItemIcon>
-            <Icon icon="gear" size={largeSize} />
+            <Icon icon={GearIcon} size={largeSize} />
           </ListItemIcon>
           <ListItemText primary="A large icon does not change size of icon area" />
           <ListItemSecondaryAction>
             <Icon
-              icon="right"
+              icon={RightIcon}
               size={smallSize}
               className="u-mr-1 u-coolGrey"
             />
@@ -55,7 +61,7 @@ const NavigationListExample = ({ style }) => {
         <Divider inset />
         <ListItem>
           <ListItemIcon>
-            <Icon icon="people" size={smallSize} />
+            <Icon icon={PeopleIcon} size={smallSize} />
           </ListItemIcon>
           <ListItemText
             primary="User preferences"
@@ -63,7 +69,7 @@ const NavigationListExample = ({ style }) => {
           />
           <ListItemSecondaryAction>
             <Icon
-              icon="right"
+              icon={RightIcon}
               size={smallSize}
               className="u-mr-1 u-coolGrey"
             />
@@ -72,7 +78,7 @@ const NavigationListExample = ({ style }) => {
         <Divider inset />
         <ListItem>
           <ListItemIcon>
-            <Icon icon="trash" className="u-error" size={smallSize} />
+            <Icon icon={TrashIcon} className="u-error" size={smallSize} />
           </ListItemIcon>
           <ListItemText
             primary="Delete account"
@@ -86,12 +92,12 @@ const NavigationListExample = ({ style }) => {
       <NavigationListSection>
         <ListItem>
           <ListItemIcon>
-            <Icon icon="bank" size={smallSize} />
+            <Icon icon={BankIcon} size={smallSize} />
           </ListItemIcon>
           <ListItemText primary="Bank accounts" />
           <ListItemSecondaryAction>
             <Icon
-              icon="right"
+              icon={RightIcon}
               size={smallSize}
               className="u-mr-1 u-coolGrey"
             />
@@ -99,7 +105,7 @@ const NavigationListExample = ({ style }) => {
         </ListItem>
       </NavigationListSection>
     </NavigationList>
-  )
+  );
 }
 
 

@@ -38,6 +38,8 @@ import Button from 'cozy-ui/transpiled/react/Button'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 
+import CloudIcon from "cozy-ui/transpiled/react/Icons/Cloud";
+
 const handleClose = () => setState({ modalOpened: !state.modalOpened })
 
 const DialogComponent = state.modal
@@ -78,7 +80,7 @@ const ConfirmDialogActions = () => {
 
 const dialogTitles = {
   ConfirmDialog: "Are you sure ?",
-  IllustrationDialog: <Icon icon="cloud" size="140" />,
+  IllustrationDialog: <Icon icon={CloudIcon} size="140" />,
   FixedDialog: 'Fixed Dialog',
   FixedActionsDialog: 'Fixed Actions Dialog',
   Dialog: 'Dialog'

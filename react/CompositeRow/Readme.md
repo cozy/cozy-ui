@@ -7,6 +7,9 @@ import Variants from 'docs/components/Variants'
 
 import Typography from "cozy-ui/transpiled/react/Typography";
 
+import WalletIcon from "cozy-ui/transpiled/react/Icons/Wallet";
+import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots";
+
 const fnacLogoURL = 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Fnac_Logo.svg';
 
 const Chip = React.memo(({ children, ...props }) => (
@@ -30,7 +33,7 @@ const compositeStyle = {
 
 const CompositeImage = () => (
   <Circle backgroundColor='var(--melon)'>
-    <Icon icon='wallet' />
+    <Icon icon={WalletIcon} />
   </Circle>
 )
 
@@ -40,7 +43,7 @@ const Amount = () => (
 
 const onDotsClick = () => { alert('clicked dots !')}
 const Dots = () => (
-  <Icon className="u-c-pointer" color="var(--coolGrey)" icon="dots" onClick={onDotsClick}/>
+  <Icon className="u-c-pointer" color="var(--coolGrey)" icon={DotsIcon} onClick={onDotsClick}/>
 )
 
 const Chips = () => (

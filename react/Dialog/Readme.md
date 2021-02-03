@@ -26,6 +26,8 @@ import MenuItem from '@material-ui/core/MenuItem'
 import FileTypeFolderIcon from 'cozy-ui/transpiled/react/Icons/FileTypeFolder'
 import FileTypeText from 'cozy-ui/transpiled/react/Icons/FileTypeText'
 
+import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots";
+
 const handleClose = () => setState({ modalOpened: !state.modalOpened })
 
 initialState = { modalOpened: isTesting() }
@@ -70,7 +72,7 @@ const ExampleDialog = ({ open, onClose }) => {
                 <Button
                   label='Click for more !'
                   theme="text"
-                  icon="dots"
+                  icon={DotsIcon}
                   extension="narrow"
                   iconOnly
                   className="u-m-0 u-coolGrey"
@@ -101,7 +103,7 @@ const ExampleDialog = ({ open, onClose }) => {
             <Button
               label='Click for more !'
               theme="text"
-              icon="dots"
+              icon={DotsIcon}
               extension="narrow"
               iconOnly
               className="u-m-0 u-coolGrey"
@@ -123,7 +125,7 @@ const ExampleDialog = ({ open, onClose }) => {
         />
       </DialogActions>
     </Dialog>
-  )
+  );
 }
 
 ;<>
