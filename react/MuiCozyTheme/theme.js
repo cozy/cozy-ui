@@ -385,10 +385,16 @@ const makeOverrides = theme => ({
   MuiTextField: {
     borderWidth: '0.0625rem'
   },
+  MuiFormLabel: {
+    root: {
+      color: theme.palette.text.secondary
+    }
+  },
   MuiFormHelperText: {
     root: {
       fontStyle: 'italic',
-      fontSize: '0.875rem'
+      fontSize: '0.875rem',
+      marginTop: 4
     }
   },
   MuiDialog: {
