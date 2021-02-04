@@ -8,9 +8,9 @@ import Switch from '.'
 import Typography from "cozy-ui/transpiled/react/Typography";
 
 initialState = {
-  switch1: false,
-  switch2: false,
-  switch3: true
+  switch1: true,
+  switch2: true,
+  switch3: false
 }
 
 const handleClick1 = ev => setState({ switch1: ev.target.checked })
@@ -18,7 +18,7 @@ const handleClick2 = ev => setState({ switch2: ev.target.checked })
 const handleClick3 = ev => setState({ switch3: ev.target.checked });
 
 const Aligned = ({ children }) => {
-  return <Media>
+  return <Media className='u-mb-half'>
     <Img>{ children[0] }</Img>
     <Img>{ children[1] }</Img>
   </Media>
@@ -28,15 +28,15 @@ const Switches = () => {
   return <>
     <Aligned>
       <Typography variant="body1">Primary</Typography>
-      <Switch color="primary" checked={state.switch3}  onClick={handleClick3} />
+      <Switch color="primary" checked={state.switch1}  onClick={handleClick1} />
     </Aligned>
     <Aligned>
       <Typography variant="body1">Secondary</Typography>
-      <Switch color="secondary" checked={state.switch3} onClick={handleClick3} />
+      <Switch color="secondary" checked={state.switch2} onClick={handleClick2} />
     </Aligned>
     <Aligned>
       <Typography variant="body1">Disabled</Typography>
-      <Switch color="secondary" checked={state.switch2} disabled onClick={handleClick2} />
+      <Switch color="secondary" checked={state.switch3} disabled onClick={handleClick3} />
     </Aligned>
   </>;
 };

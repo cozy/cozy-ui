@@ -502,36 +502,24 @@ const makeOverrides = theme => ({
     }
   },
   MuiSwitch: {
-    root: {
-      width: SWITCH_BUTTON_WIDTH,
-      '& input': {
-        width: '150%',
-        height: '150%',
-        left: '-25%',
-        top: '-25%'
+    checked: {
+      '& + $track$track': {
+        opacity: 1
       }
     },
     switchBase: {
-      width: SWITCH_BUTTON_WIDTH,
-      transform: 'translateX(-7px)'
+      top: 1,
+      '&$checked': {
+        transform: 'translateX(15px)'
+      }
     },
-    checked: {
-      '& + $bar': {
-        opacity: 1
-      },
-      transform: 'translateX(7px)'
-    },
-    icon: {
+    thumb: {
       width: 16,
       height: 16
     },
-    bar: {
+    track: {
       width: SWITCH_BAR_WIDTH,
-      height: 12,
-      marginTop: -(SWITCH_BAR_HEIGHT / 2),
-      marginLeft: -(SWITCH_BAR_WIDTH / 2),
-      backgroundColor: 'var(--silver)',
-      opacity: 1
+      height: 12
     },
     colorPrimary: {
       '&$checked': {
@@ -540,10 +528,15 @@ const makeOverrides = theme => ({
     },
     colorSecondary: {
       '&$checked': {
-        '& + $bar': {
+        '& + $track': {
           backgroundColor: getCssVariableValue('validColor')
         },
         color: getCssVariableValue('primaryContrastTextColor')
+      }
+    },
+    disabled: {
+      '&$checked + $track': {
+        backgroundColor: 'var(--silver)'
       }
     }
   },
@@ -674,12 +667,12 @@ invertedTheme.overrides = {
       color: getCssVariableValue('primaryContrastTextColor')
     },
     colorPrimary: {
-      '& + $bar': {
+      '& + $track': {
         backgroundColor: getCssVariableValue('primaryContrastTextColor')
       },
 
       '&$checked': {
-        '& + $bar': {
+        '& + $track': {
           border:
             '1px solid ' + getCssVariableValue('primaryContrastTextColor'),
           boxSizing: 'border-box'
