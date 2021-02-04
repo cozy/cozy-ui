@@ -3,6 +3,8 @@
 exports[`ActionMenu should support null children 1`] = `
 <div
   className="styles__c-actionmenu___22Fp1 styles__c-actionmenu--inline___1SXZa"
+  onClick={[Function]}
+  onTouchEnd={[Function]}
 >
   <ActionMenuItem
     contentSpacing="xs"
