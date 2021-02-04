@@ -9,8 +9,8 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
   root: {
     ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
     position: 'relative'
   }
 });
@@ -24,7 +24,7 @@ const PaperExample = ({ classes, square, elevation }) => {
       <div style={{ position: 'absolute', right: '1rem', top: '1rem' }}>
         <Typography variant='subtitle1'>elevation {elevation}</Typography>
       </div>
-      <Typography component="p">
+      <Typography variant='body1' component="p">
         Paper can be used to build surface or other elements for your application.
       </Typography>
     </Paper>
