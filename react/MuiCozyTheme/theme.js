@@ -1,6 +1,9 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 import { getCssVariableValue } from '../utils/color'
 import isTesting from '../helpers/isTesting'
+import React from 'react'
+import Icon from '../Icon'
+import BottomIcon from '../Icons/Bottom'
 
 export const defaultValues = {
   borderRadius: 6,
@@ -152,6 +155,9 @@ export const normalTheme = createMuiTheme({
     },
     MuiTooltip: {
       arrow: true
+    },
+    MuiAccordionSummary: {
+      expandIcon: <Icon icon={BottomIcon} width={16} />
     }
   },
   ...(isTesting() && { transitions: { create: () => 'none' } })
@@ -239,10 +245,19 @@ const makeOverrides = theme => ({
         minHeight: '3.5rem'
       }
     },
+    expandIcon: {
+      order: 0,
+      marginLeft: '0.5rem',
+      transform: 'rotate(-90deg)',
+      '&$expanded': {
+        transform: 'rotate(0)'
+      }
+    },
     content: {
       margin: '0.75rem 0',
-      paddingLeft: '0.5rem',
+      paddingLeft: '0.75rem',
       paddingRight: '0.5rem',
+      order: 1,
       '& > :last-child': {
         paddingRight: 0
       },
