@@ -287,12 +287,14 @@ a custom CSS position for your SelectBox's options. `fixed` position makes
 the options to be displayed on top of all the layers. 
 
 ```jsx
+import { useState, useEffect } from 'react'
 import { Dialog } from 'cozy-ui/transpiled/react/CozyDialogs';
 import {
   BreakpointsProvider
 } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 
 import Button from 'cozy-ui/transpiled/react/Button'
+import Typography from 'cozy-ui/transpiled/react/Typography'
 
 import SelectBox from 'cozy-ui/transpiled/react/SelectBox';
 const options = [
@@ -307,14 +309,24 @@ const handleClose = () => setState({ modalOpened: false })
 initialState = { modalOpened: isTesting()  }
 
 const ExampleDialog = ({ open, onClose }) => {
+  const [menuIsOpen, setMenuIsOpen] = useState(false)
+
+  // Unfortunately we have to do this trick: if we set the state
+  // initially to true, the menu is not shown
+  useEffect(() => {
+    requestIdleCallback(() => {
+      setMenuIsOpen(true)
+    })
+  }, [])
+
   return (
     <Dialog 
       open={open} 
       onClose={onClose} 
       title='Ada Lovelace'
       content={
-        <>
-          <span>Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815
+        <Typography variant='body1'>
+          Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815
           – 27 November 1852) was an English mathematician and writer, chiefly
           known for her work on Charles Babbage's proposed mechanical
           general-purpose computer, the Analytical Engine. She was the first to
@@ -322,9 +334,13 @@ const ExampleDialog = ({ open, onClose }) => {
           published the first algorithm intended to be carried out by such a
           machine. As a result, she is often regarded as the first to recognise
           the full potential of a "computing machine" and the first computer
-          programmer.</span>
-          <SelectBox options={options} menuIsOpen  menuPosition='fixed'/>
-        </>
+          programmer.<br/>
+          <SelectBox options={options}
+            menuIsOpen={menuIsOpen}
+            onMenuOpen={() => setMenuIsOpen(true) }
+            onMenuClose={() => setMenuIsOpen(false) }
+           menuPosition='fixed'/>
+        </Typography>
       }
       actions={
         <>
@@ -350,7 +366,9 @@ const ExampleDialog = ({ open, onClose }) => {
     Toggle modal
   </button>
   <BreakpointsProvider>
-    <ExampleDialog open={state.modalOpened} onClose={handleClose} />
+    { state.modalOpened
+      ? <ExampleDialog open={true} onClose={handleClose} />
+      : null }
   </BreakpointsProvider>
 </>
 ```
