@@ -211,7 +211,7 @@ const makeOverrides = theme => ({
       }
     }
   },
-  MuiExpansionPanel: {
+  MuiAccordion: {
     rounded: {
       borderRadius: defaultValues.borderRadius
     },
@@ -224,12 +224,7 @@ const makeOverrides = theme => ({
       marginBottom: '1rem'
     }
   },
-  MuiStepConnector: {
-    line: {
-      borderColor: 'var(--coolGrey)'
-    }
-  },
-  MuiExpansionPanelSummary: {
+  MuiAccordionSummary: {
     expanded: {},
     root: {
       backgroundColor: 'var(--paleGrey)',
@@ -255,10 +250,15 @@ const makeOverrides = theme => ({
       }
     }
   },
-  MuiExpansionPanelDetails: {
+  MuiAccordionDetails: {
     root: {
       padding: 0,
       borderTop: '0.0625rem solid var(--silver)'
+    }
+  },
+  MuiStepConnector: {
+    line: {
+      borderColor: 'var(--coolGrey)'
     }
   },
   MuiList: {
