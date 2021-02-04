@@ -1,4 +1,8 @@
-### Simplest usage
+### Usage
+
+This component is imported from MUI and has the same API.
+Read the original [Tooltip component](https://material-ui.com/api/tooltip/)
+documentation for more information.
 
 ```jsx
 import Typography from 'cozy-ui/transpiled/react/Typography';
@@ -23,4 +27,3 @@ import Tooltip from 'cozy-ui/transpiled/react/Tooltip';
 </Tooltip>
 ```
 
-This component is imported from MUI and has the same API.

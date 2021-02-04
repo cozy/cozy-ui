@@ -151,6 +151,9 @@ export const normalTheme = createMuiTheme({
     },
     MuiListItem: {
       disableRipple: true
+    },
+    MuiTooltip: {
+      arrow: true
     }
   },
   ...(isTesting() && { transitions: { create: () => 'none' } })
@@ -542,12 +545,17 @@ const makeOverrides = theme => ({
   },
   MuiTooltip: {
     tooltip: {
-      backgroundColor: theme.palette.grey[800], // TODO should be grey[700] when grey[700] will be supported
+      // TODO should be grey[700] when grey[700] is supported
+      backgroundColor: theme.palette.grey[800],
       borderRadius: '8px',
       fontSize: '1rem',
       color: 'white',
       lineHeight: '1.3',
       padding: '16px'
+    },
+    arrow: {
+      // TODO should be grey[700] when grey[700] is supported
+      color: theme.palette.grey[800]
     },
     popper: {
       opacity: 0.9
