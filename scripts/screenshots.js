@@ -80,6 +80,14 @@ const getComponentNameFromTestId = testId => {
 
 const LINK_BASE = 'file://'
 
+const formatLink = (parsedStyleguideURL, relativeLink) => {
+  if (parsedStyleguideURL.protocol === 'file:') {
+    return `file://${relativeLink}`
+  } else {
+    return `${parsedStyleguideURL.toString()}${relativeLink}`
+  }
+}
+
 /**
  * Fetch all available components on the styleguide and returns an array
  * of { name, link } describing each component.
@@ -114,6 +122,7 @@ const fetchAllComponents = async (page, args, config) => {
     x => x.name
   )
   const allLinks = []
+  const parsedStyleguideURL = new URL(args.styleguideUrl)
   for (const cate of sortedCategoriesNames) {
     await page.goto(cate.link, { waitUntil: 'load', timeout: 0 })
     await sleep(100)
@@ -158,7 +167,7 @@ const fetchAllComponents = async (page, args, config) => {
       allLinks,
       componentLinks.map(link => ({
         ...link,
-        link: args.styleguideUrl + link.link,
+        link: formatLink(parsedStyleguideURL, link.link),
         name: getComponentNameFromTestId(link.testId)
       }))
     )
@@ -212,14 +221,6 @@ const pathArgument = p => {
     return p
   } else {
     return path.join(process.cwd(), p)
-  }
-}
-
-const urlOrPathArgument = p => {
-  if (p.indexOf('http') === 0) {
-    return p
-  } else {
-    return pathArgument(p)
   }
 }
 
@@ -403,6 +404,11 @@ const screenshotKSSStyleguide = async (page, args) => {
   }
 }
 
+const urlArgument = rawURL => {
+  const c = new URL(rawURL)
+  return rawURL
+}
+
 /**
  * Fetches all components from styleguide and takes a screenshot of each.
  */
@@ -421,7 +427,7 @@ const main = async () => {
   parser.addArgument('--styleguide-url', {
     required: true,
     dest: 'styleguideUrl',
-    type: urlOrPathArgument
+    type: urlArgument
   })
   parser.addArgument('--kss-dir', {
     required: true,
