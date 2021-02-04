@@ -45,15 +45,12 @@ const index = async req => {
 }
 
 const shouldRegenerateDiff = async (currentFile, diffFile) => {
-  if (fs.existsSync(diffFile)) {
-    const diffStat = fs.statSync(diffFile)
-    const currentStat = fs.statSync(currentFile)
-    if (diffStat.mtime > currentStat.mtime) {
-      return false
-    }
+  if (!fs.existsSync(diffFile)) {
     return true
   }
-  return true
+  const diffStat = fs.statSync(diffFile)
+  const currentStat = fs.statSync(currentFile)
+  return diffStat.mtime < currentStat.mtime
 }
 
 const q = new Queue(10)
