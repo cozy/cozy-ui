@@ -1,6 +1,7 @@
 import React from 'react'
 import NestedSelect, { ItemRow } from './NestedSelect'
 import ListItem from '../MuiCozyTheme/ListItem'
+import { BreakpointsProvider } from '../hooks/useBreakpoints'
 
 describe('NestedSelect', () => {
   const options = {
@@ -43,13 +44,15 @@ describe('NestedSelect', () => {
     }
 
     const root = mount(
-      <NestedSelect
-        canSelectParent={canSelectParent}
-        options={options}
-        isSelected={isSelected}
-        onSelect={jest.fn()}
-        onCancel={jest.fn()}
-      />
+      <BreakpointsProvider>
+        <NestedSelect
+          canSelectParent={canSelectParent}
+          options={options}
+          isSelected={isSelected}
+          onSelect={jest.fn()}
+          onCancel={jest.fn()}
+        />
+      </BreakpointsProvider>
     )
     return { root }
   }

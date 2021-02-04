@@ -122,8 +122,10 @@ const InteractiveExample = () => {
 };
 
 <>
-  { isTesting()
-    ? <BreakpointsProvider><StaticExample /></BreakpointsProvider>
-    : <InteractiveExample /> }
+  <BreakpointsProvider>{
+    isTesting()
+      ? <StaticExample />
+      : <InteractiveExample />
+  }</BreakpointsProvider>
 </>
 ```

@@ -10,6 +10,7 @@ import palette from '../palette'
 import ListItem from '../MuiCozyTheme/ListItem'
 import ListItemText from '../ListItemText'
 import ListItemIcon from '../MuiCozyTheme/ListItemIcon'
+import useBreakpoints from '../hooks/useBreakpoints'
 
 import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
 
@@ -197,12 +198,19 @@ export const Radio = ({ className, ...props }) => (
 const Divider = () => <div className={styles.Divider} />
 
 const NestedSelectListItemText = withStyles({
-  multiline: {
-    padding: '0.125rem 0.5rem'
+  root: {
+    padding: '0rem 0.5rem'
   }
 })(ListItemText)
 
+const NestedSelectListRightIcon = withStyles({
+  root: {
+    marginRight: 0
+  }
+})(ListItemIcon)
+
 export const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
+  const { isMobile } = useBreakpoints()
   return (
     <ListItem
       dense
@@ -222,32 +230,35 @@ export const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
           />
         </ListItemIcon>
       ) : null}
-      <ListItemIcon>{item.icon}</ListItemIcon>
+      <ListItemIcon className={`${isMobile ? 'u-ml-half' : 'u-ml-1'} u-mr-1`}>
+        {item.icon}
+      </ListItemIcon>
       <NestedSelectListItemText
         primary={item.title}
         ellipsis
         primaryTypographyProps={{ className: 'u-ellipsis' }}
         secondary={item.description}
         secondaryTypographyProps={{
+          variant: 'caption',
           className: cx(styles.Row__caption, 'u-ellipsis')
         }}
       />
       {item.children && item.children.length > 0 ? (
-        <ListItemIcon>
+        <NestedSelectListRightIcon>
           <Icon icon={RightIcon} color={palette.coolGrey} />
-        </ListItemIcon>
+        </NestedSelectListRightIcon>
       ) : null}
 
       {radioPosition == 'right' &&
       !(item.children && item.children.length > 0) ? (
-        <ListItemIcon>
+        <NestedSelectListRightIcon>
           <Radio
             readOnly
             name={item.title}
             value={item.title}
             checked={!!isSelected}
           />
-        </ListItemIcon>
+        </NestedSelectListRightIcon>
       ) : null}
     </ListItem>
   )
