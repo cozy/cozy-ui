@@ -314,16 +314,20 @@ const ExampleDialog = ({ open, onClose }) => {
   // Unfortunately we have to do this trick: if we set the state
   // initially to true, the menu is not shown
   useEffect(() => {
-    requestIdleCallback(() => {
+    setTimeout(() => {
       setMenuIsOpen(true)
-    })
+    }, 0)
   }, [])
 
+  // Since we open the selectbox immediately, we need to disable the
+  // transition. Otherwise the position for the selectbox is computed
+  // wrongly. See the `transitionDuration` prop.
   return (
     <Dialog 
       open={open} 
       onClose={onClose} 
       title='Ada Lovelace'
+      transitionDuration={0}
       content={
         <Typography variant='body1'>
           Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815
