@@ -30,9 +30,9 @@ remark -o --use remark-jscodeshift=allowNoLang:true,transform:\"codemods/transfo
 
 # Screenshot testing locally
 
-- You can screenshot old components into old_screenshots directory
-- Screenshot the new one inside screenshots
-- Run pixelmatch-server, which shows screenshots side by side like on Argos (you need the `pixelmatch` binary to be available)
+* You can screenshot old components into old_screenshots directory
+* Screenshot the new one inside screenshots
+* Run pixelmatch-server, which shows screenshots side by side like on Argos (you need the `pixelmatch` binary to be available)
 
 ```
 # Screenshot all the components

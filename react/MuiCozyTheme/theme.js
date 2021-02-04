@@ -15,8 +15,6 @@ export const defaultValues = {
 }
 
 const SWITCH_BAR_WIDTH = 25
-const SWITCH_BAR_HEIGHT = 12
-const SWITCH_BUTTON_WIDTH = 46
 
 const makeTypography = palette => ({
   useNextVariants: true,

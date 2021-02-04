@@ -26,4 +26,3 @@ import Tooltip from 'cozy-ui/transpiled/react/Tooltip';
   <u>hover over me</u>
 </Tooltip>
 ```
-
