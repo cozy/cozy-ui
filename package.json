@@ -49,6 +49,7 @@
     "jest": "yarn test:jest",
     "screenshots": "node scripts/screenshots.js --screenshot-dir ./screenshots --styleguide-url file://$(pwd)/build/react --kss-dir ./build/styleguide",
     "test": "yarn test:jest",
+    "screenshots:server": "nodemon ./scripts/pixelmatch-server/server.js -e js,hbs",
     "test:jest": "jest",
     "transpile": "env BABEL_ENV=transpilation babel react/ --out-dir transpiled/react --verbose",
     "posttranspile": "postcss transpiled/react/stylesheet.css --replace",

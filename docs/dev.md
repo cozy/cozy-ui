@@ -49,7 +49,7 @@ pixelmatch old_screenshots/$COMPONENT.png screenshots/$COMPONENT.png diff/$COMPO
 # Regenerate screenshots.html when screenshot is taken
 nodemon -w screenshots -x "node tpl-screenshots.js" -e png
 # Open pixelmatch server to check diffs
-$ nodemon ./scripts/pixelmatch-server/server.js
+$ yarn screenshots:server
 # Enable hot reload
 $ livereload screenshots,old_screenshots,diffs -w 1000
 ```
