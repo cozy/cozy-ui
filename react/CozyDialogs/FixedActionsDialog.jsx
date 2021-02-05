@@ -43,7 +43,7 @@ const FixedActionsDialog = props => {
       <Divider />
       <DialogActions
         {...dialogActionsProps}
-        disableActionSpacing
+        disableSpacing
         className={cx({ columnLayout: actionsLayout == 'column' })}
       >
         {actions}

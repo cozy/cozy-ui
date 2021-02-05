@@ -38,7 +38,7 @@ const ConfirmDialog = props => {
           {content}
           <DialogActions
             {...dialogActionsProps}
-            disableActionSpacing
+            disableSpacing
             className={cx('dialogActionsFluid', {
               columnLayout: actionsLayout == 'column'
             })}
