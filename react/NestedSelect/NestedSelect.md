@@ -111,9 +111,10 @@ const InteractiveExample = () => {
         <NestedSelectModal
           canSelectParent={true}
           onSelect={handleSelect}
-          dismissAction={hideModal}
+          onClose={hideModal}
           isSelected={isSelected}
           options={options}
+          radioPosition={leftRadio ? 'left' : 'right'}
           title="Please select letter"
           transformParentItem={transformParentItem}
         /> : null }
