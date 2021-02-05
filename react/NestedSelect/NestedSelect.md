@@ -106,7 +106,7 @@ const InteractiveExample = () => {
     <>
       <Checkbox label='radio to the left' readOnly name='leftRadio' value={leftRadio} checked={leftRadio} onClick={handleClickLeftRadio} />
       { selectedItem ? <>Selected: { selectedItem.title }<br/></> : null }
-      <Button label='Select' onClick={showModal} ></Button>
+      <Button className='u-ml-0' label='Select' onClick={showModal} ></Button>
       { showingModal ?
         <NestedSelectModal
           canSelectParent={true}

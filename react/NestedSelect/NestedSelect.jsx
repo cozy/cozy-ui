@@ -9,6 +9,7 @@ import omit from 'lodash/omit'
 import palette from '../palette'
 import ListItem from '../MuiCozyTheme/ListItem'
 import ListItemText from '../ListItemText'
+import Divider from '../MuiCozyTheme/Divider'
 import ListItemIcon from '../MuiCozyTheme/ListItemIcon'
 import useBreakpoints from '../hooks/useBreakpoints'
 
@@ -111,7 +112,7 @@ class NestedSelect extends Component {
                 onClick={this.handleClickItem}
                 isSelected={isSelectedWithLevel(parentItem)}
               />
-              <Divider />
+              <Divider className={styles.Divider} />
             </>
           ) : null}
           {children.map(item => (
@@ -194,8 +195,6 @@ export default NestedSelect
 export const Radio = ({ className, ...props }) => (
   <UIRadio label="" className={cx(styles.Radio, className)} {...props} />
 )
-
-const Divider = () => <div className={styles.Divider} />
 
 const NestedSelectListItemText = withStyles({
   root: {
