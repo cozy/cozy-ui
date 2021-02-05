@@ -20,7 +20,6 @@ export const defaultValues = {
 const SWITCH_BAR_WIDTH = 25
 
 const makeTypography = palette => ({
-  useNextVariants: true,
   fontFamily: getCssVariableValue('primaryFont') || 'Lato',
   h1: {
     fontSize: 48,
@@ -119,7 +118,10 @@ const normalPalette = {
     800: getCssVariableValue('charcoalGrey'),
     900: getCssVariableValue('black')
   },
-  divider: getCssVariableValue('silver')
+  divider: getCssVariableValue('silver'),
+  actions: {
+    focus: 'rgba(0, 0, 0, 0.12)'
+  }
 }
 
 normalPalette.background = {
@@ -157,7 +159,7 @@ export const normalTheme = createMuiTheme({
       arrow: true
     },
     MuiAccordionSummary: {
-      expandIcon: <Icon icon={BottomIcon} width={16} />
+      expandIcon: <Icon icon={BottomIcon} width={12} />
     }
   },
   ...(isTesting() && { transitions: { create: () => 'none' } })
@@ -247,16 +249,19 @@ const makeOverrides = theme => ({
     },
     expandIcon: {
       order: 0,
-      marginLeft: '0.5rem',
+      '&&': {
+        marginLeft: '0.3125rem'
+      },
       transform: 'rotate(-90deg)',
       '&$expanded': {
+        marginLeft: '0.3125rem',
         transform: 'rotate(0)'
       }
     },
     content: {
       margin: '0.75rem 0',
-      paddingLeft: '0.75rem',
-      paddingRight: '0.5rem',
+      paddingLeft: '0.5rem',
+      paddingRight: '0.25rem',
       order: 1,
       '& > :last-child': {
         paddingRight: 0
@@ -541,7 +546,8 @@ const makeOverrides = theme => ({
     },
     track: {
       width: SWITCH_BAR_WIDTH,
-      height: 12
+      height: 12,
+      backgroundColor: 'var(--silver)'
     },
     colorPrimary: {
       '&$checked': {
@@ -558,7 +564,7 @@ const makeOverrides = theme => ({
     },
     disabled: {
       '&$checked + $track': {
-        backgroundColor: 'var(--silver)'
+        backgroundColor: 'var(--silver) !important'
       }
     }
   },
