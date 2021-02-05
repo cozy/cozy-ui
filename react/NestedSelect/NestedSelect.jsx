@@ -220,9 +220,8 @@ export const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
       className={cx(styles.Row, isSelected ? styles.Row__selected : null)}
     >
       {radioPosition === 'left' ? (
-        <ListItemIcon>
+        <ListItemIcon className="u-mr-0">
           <Radio
-            className="u-mr-1"
             readOnly
             name={item.title}
             value={item.title}
