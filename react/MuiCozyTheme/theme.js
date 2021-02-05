@@ -339,12 +339,12 @@ const makeOverrides = theme => ({
       fontSize: null
     },
     primary: {
-      '&$textDense': {
+      '&$dense': {
         fontSize: null
       }
     },
     secondary: {
-      '&$textDense': {
+      '&$dense': {
         fontSize: null
       }
     },
