@@ -106,6 +106,10 @@ const main = async () => {
   app.set('currentDir', currentScreenshotsDir)
   app.set('diffsDir', diffsDir)
 
+  console.log(
+    `Comparing ${pristineScreenshotsDir} against ${currentScreenshotsDir}`
+  )
+
   app.get('/', async (req, res) => {
     const data = await index(req)
     res.send(data)
