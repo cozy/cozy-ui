@@ -6,7 +6,6 @@ import Spinner from '../Spinner'
 import styles from './styles.styl'
 import Input from '../Input'
 import PropTypes from 'prop-types'
-import withBreakpoints from '../helpers/withBreakpoints'
 import Button from '../Button'
 import { Contact } from 'cozy-doctypes'
 import AddContactButton from './AddContactButton'
@@ -15,6 +14,7 @@ import compose from 'lodash/flowRight'
 import useRealtime from '../hooks/useRealtime'
 import useEventListener from '../hooks/useEventListener.js'
 import PreviousIcon from '../Icons/Previous'
+import useBreakpoints from '../hooks/useBreakpoints'
 
 const thirtySeconds = 30000
 const olderThan30s = fetchPolicies.olderThan(thirtySeconds)
@@ -39,10 +39,10 @@ const mkFilter = filterStr => contacts => {
 }
 
 const ContactsListModal = props => {
+  const { isMobile } = useBreakpoints()
   const {
     onItemClick,
     placeholder,
-    breakpoints: { isMobile },
     addContactLabel,
     emptyMessage,
     contacts,
@@ -133,7 +133,6 @@ ContactsListModal.propTypes = {
 
 export default compose(
   withClient,
-  withBreakpoints(),
   queryConnect({
     contacts: {
       query: () => Q('io.cozy.contacts').UNSAFE_noLimit(),
