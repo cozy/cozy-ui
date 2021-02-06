@@ -5,7 +5,7 @@ import ClickAwayListener from '@material-ui/core/ClickAwayListener'
 import styles from './styles.styl'
 import { Media, Bd, Img } from '../Media'
 import BottomDrawer from '../BottomDrawer'
-import withBreakpoints from '../helpers/withBreakpoints'
+import useBreakpoints from '../hooks/useBreakpoints'
 import { getCssVariableValue } from '../utils/color'
 import Radio from '../Radio'
 import { spacingProp } from '../Stack'
@@ -99,8 +99,7 @@ const ActionMenu = ({
   preventOverflow,
   popperOptions,
   anchorElRef,
-  containerElRef,
-  breakpoints: { isMobile }
+  containerElRef
 }) => {
   if (placement)
     logDepecratedPlacement(
@@ -114,6 +113,8 @@ const ActionMenu = ({
     logDepecratedContainer(
       '<ActionMenu containerElRef /> is not needed anymore, it can be removed.'
     )
+
+  const { isMobile } = useBreakpoints()
 
   const shouldDisplayInline = !isMobile
   const containerRef = React.createRef()
@@ -234,5 +235,5 @@ ActionMenuItem.defaultProps = {
   contentSpacing: 'xs'
 }
 
-export default withBreakpoints()(ActionMenu)
+export default ActionMenu
 export { ActionMenuHeader, ActionMenuItem, ActionMenuRadio }
