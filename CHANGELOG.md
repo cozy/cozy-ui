@@ -1,3 +1,11 @@
+# [44.8.0](https://github.com/cozy/cozy-ui/compare/v44.7.0...v44.8.0) (2021-02-08)
+
+
+### Features
+
+* Publish next-major branch ([43ad834](https://github.com/cozy/cozy-ui/commit/43ad834))
+* Update semantic release ([1f4b818](https://github.com/cozy/cozy-ui/commit/1f4b818))
+
 # [44.7.0](https://github.com/cozy/cozy-ui/compare/v44.6.0...v44.7.0) (2021-02-03)
 
 
