@@ -9,7 +9,9 @@ import ActionMenu, { ActionMenuItem, ActionMenuRadio } from 'cozy-ui/transpiled/
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import Typography from "cozy-ui/transpiled/react/Typography";
-
+import {
+  BreakpointsProvider
+} from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 import FileIcon from "cozy-ui/transpiled/react/Icons/File";
 import WarningIcon from "cozy-ui/transpiled/react/Icons/Warning";
 
@@ -68,7 +70,9 @@ import ActionMenu, { ActionMenuItem, ActionMenuHeader } from './index';
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Icon from '../Icon';
 import Filename from '../Filename';
-
+import {
+  BreakpointsProvider
+} from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 import FileIcon from "cozy-ui/transpiled/react/Icons/File";
 import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
 
@@ -77,7 +81,7 @@ initialState = { menuDisplayed: isTesting() };
 const showMenu = () => setState({ menuDisplayed: true });
 const hideMenu = () => setState({ menuDisplayed: false });
 
-<div>
+<BreakpointsProvider>
   <DropdownButton onClick={showMenu}>Show action menu</DropdownButton>
   {state.menuDisplayed &&
     <ActionMenu
@@ -89,7 +93,7 @@ const hideMenu = () => setState({ menuDisplayed: false });
       <ActionMenuItem left={<Icon icon={RightIcon} />}>Item 2</ActionMenuItem>
       <ActionMenuItem left={<Icon icon={FileIcon} />}>Item 3</ActionMenuItem>
   </ActionMenu>}
-</div>
+</BreakpointsProvider>
 ```
 
 ### With dedicated click handler
@@ -99,6 +103,9 @@ import ActionMenu, { ActionMenuItem, ActionMenuHeader } from './index';
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Icon from '../Icon';
 import Filename from '../Filename';
+import {
+  BreakpointsProvider
+} from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 import FileIcon from "cozy-ui/transpiled/react/Icons/File";
 
 initialState = { menuDisplayed: isTesting() };
@@ -106,7 +113,7 @@ initialState = { menuDisplayed: isTesting() };
 const showMenu = () => setState({ menuDisplayed: true });
 const hideMenu = () => setState({ menuDisplayed: false });
 
-<div>
+<BreakpointsProvider>
   <DropdownButton onClick={showMenu}>Show action menu</DropdownButton>
   {state.menuDisplayed &&
     <ActionMenu
@@ -116,7 +123,7 @@ const hideMenu = () => setState({ menuDisplayed: false });
       </ActionMenuHeader>
       <ActionMenuItem onClick={() => alert('click')}left={<Icon icon={FileIcon} />}>Item 1</ActionMenuItem>
   </ActionMenu>}
-</div>
+</BreakpointsProvider>
 ```
 
 ### Placement on desktop
@@ -127,7 +134,9 @@ We use [popper.js](https://popper.js.org/docs/v2/) under the hood. You can use t
 import ActionMenu, { ActionMenuItem } from 'cozy-ui/transpiled/react/ActionMenu';
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Icon from 'cozy-ui/transpiled/react/Icon';
-
+import {
+  BreakpointsProvider
+} from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 import FileIcon from "cozy-ui/transpiled/react/Icons/File";
 
 initialState = { menuDisplayed: isTesting() };
@@ -137,7 +146,7 @@ const hideMenu = () => setState({ menuDisplayed: false });
 
 const anchorRef = React.createRef();
 
-<div>
+<BreakpointsProvider>
   <DropdownButton onClick={showMenu} ref={anchorRef}>Show action menu</DropdownButton>
   {state.menuDisplayed &&
     <ActionMenu
@@ -146,7 +155,7 @@ const anchorRef = React.createRef();
       onClose={hideMenu}>
       <ActionMenuItem left={<Icon icon={FileIcon} />}>Item 1</ActionMenuItem>
   </ActionMenu>}
-</div>
+</BreakpointsProvider>
 ```
 
 ### Open Dialog from ActionMenu
