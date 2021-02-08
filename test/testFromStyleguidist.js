@@ -43,6 +43,12 @@ const testFromStyleguidist = (
     }
   }
 
+  // TouchRipples can cause flaky tests
+  const touchRippleRx = /<span class="MuiTouchRipple-root"><\/span>/g
+  const removeTouchRipples = html => {
+    return html.replace(touchRippleRx, '')
+  }
+
   describe(name, () => {
     it('should render examples', done => {
       let doneCounter = 0
@@ -64,7 +70,7 @@ const testFromStyleguidist = (
         await sleep(delay) // some components (like the ActionMenu) are flaky due to external libs
         requestAnimationFrame(() => {
           root.update()
-          rendered.push(pretty(root.html()))
+          rendered.push(pretty(removeTouchRipples(root.html())))
           doneCounter++
           if (doneCounter === codes.length) {
             finish()

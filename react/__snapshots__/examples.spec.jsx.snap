@@ -2311,7 +2311,7 @@ exports[`Field should render examples: Field 14`] = `
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\" style=\\"color: teal;\\">I'm a label</label>
       <div class=\\"styles__o-field-input___vCqdV\\">
         <div class=\\"styles__o-field-input-action___2k7a8\\">
-          <div style=\\"margin-top: -0.5rem;\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-textSizeSmall MuiButton-sizeSmall\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">Show</span><span class=\\"MuiTouchRipple-root\\"></span></button></div>
+          <div style=\\"margin-top: -0.5rem;\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-textSizeSmall MuiButton-sizeSmall\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">Show</span></button></div>
         </div><input type=\\"password\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" style=\\"border-color: teal;\\" value=\\"\\">
       </div>
     </div>
@@ -6662,7 +6662,7 @@ exports[`Infos should render examples: Infos 1`] = `
         </div>
         <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>one</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>two</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>three</span></span></button></div>
       </div>
-      <div class=\\"styles__Info-close___1RVQP\\"><button class=\\"MuiButtonBase-root MuiIconButton-root\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 24 24\\" class=\\"u-coolGrey styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\"><path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path></svg></span><span class=\\"MuiTouchRipple-root\\"></span></button></div>
+      <div class=\\"styles__Info-close___1RVQP\\"><button class=\\"MuiButtonBase-root MuiIconButton-root\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 24 24\\" class=\\"u-coolGrey styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\"><path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path></svg></span></button></div>
     </div>
   </div>
 </div>"
@@ -6685,7 +6685,7 @@ exports[`InfosCarrousel should render examples: InfosCarrousel 1`] = `
                 </div>
                 <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>A CTA button</span></span></button></div>
               </div>
-              <div class=\\"styles__Info-close___1RVQP\\"><button class=\\"MuiButtonBase-root MuiIconButton-root\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 24 24\\" class=\\"u-coolGrey styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\"><path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path></svg></span><span class=\\"MuiTouchRipple-root\\"></span></button></div>
+              <div class=\\"styles__Info-close___1RVQP\\"><button class=\\"MuiButtonBase-root MuiIconButton-root\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 24 24\\" class=\\"u-coolGrey styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\"><path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path></svg></span></button></div>
             </div>
           </div>
           <div style=\\"width: 100%; flex-shrink: 0; overflow: auto; overflow-y: hidden;\\" aria-hidden=\\"true\\" data-swipeable=\\"true\\">
@@ -6699,12 +6699,12 @@ exports[`InfosCarrousel should render examples: InfosCarrousel 1`] = `
                 </div>
                 <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>A CTA button</span></span></button></div>
               </div>
-              <div class=\\"styles__Info-close___1RVQP\\"><button class=\\"MuiButtonBase-root MuiIconButton-root\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 24 24\\" class=\\"u-coolGrey styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\"><path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path></svg></span><span class=\\"MuiTouchRipple-root\\"></span></button></div>
+              <div class=\\"styles__Info-close___1RVQP\\"><button class=\\"MuiButtonBase-root MuiIconButton-root\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 24 24\\" class=\\"u-coolGrey styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\"><path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path></svg></span></button></div>
             </div>
           </div>
         </div>
       </div>
-      <div class=\\"styles__InfosCarrousel-navigation___3s_hu\\"><button class=\\"MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M10.707 2.707a.999.999 0 10-1.414-1.414l-6 6a.999.999 0 000 1.414l6 6a.999.999 0 101.414-1.414L5.414 8l5.293-5.293z\\"></path></svg></span></button><span class=\\"styles__InfosCarrousel-separator___AvH5m\\"></span><button class=\\"MuiButtonBase-root MuiIconButton-root\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M12.707 7.293l-6-6a.999.999 0 10-1.414 1.414L10.586 8l-5.293 5.293a.999.999 0 101.414 1.414l6-6a.999.999 0 000-1.414\\"></path></svg></span><span class=\\"MuiTouchRipple-root\\"></span></button></div>
+      <div class=\\"styles__InfosCarrousel-navigation___3s_hu\\"><button class=\\"MuiButtonBase-root MuiIconButton-root Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M10.707 2.707a.999.999 0 10-1.414-1.414l-6 6a.999.999 0 000 1.414l6 6a.999.999 0 101.414-1.414L5.414 8l5.293-5.293z\\"></path></svg></span></button><span class=\\"styles__InfosCarrousel-separator___AvH5m\\"></span><button class=\\"MuiButtonBase-root MuiIconButton-root\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M12.707 7.293l-6-6a.999.999 0 10-1.414 1.414L10.586 8l-5.293 5.293a.999.999 0 101.414 1.414l6-6a.999.999 0 000-1.414\\"></path></svg></span></button></div>
     </div>
   </div>
 </div>"
@@ -7013,13 +7013,13 @@ exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
     <div class=\\"styles__img___3SHpG\\">
       <p class=\\"MuiTypography-root MuiTypography-body1\\">Primary</p>
     </div>
-    <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-16 MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-checked-17 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-19 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span><span class=\\"MuiTouchRipple-root\\"></span></span><span class=\\"MuiSwitch-track\\"></span></span></div>
+    <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-16 MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-checked-17 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-19 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span></div>
   </div>
   <div class=\\"styles__media___cSJMp u-mb-half\\">
     <div class=\\"styles__img___3SHpG\\">
       <p class=\\"MuiTypography-root MuiTypography-body1\\">Secondary</p>
     </div>
-    <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-16 MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-checked-17 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-19 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span><span class=\\"MuiTouchRipple-root\\"></span></span><span class=\\"MuiSwitch-track\\"></span></span></div>
+    <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-16 MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-checked-17 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-19 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span></div>
   </div>
   <div class=\\"styles__media___cSJMp u-mb-half\\">
     <div class=\\"styles__img___3SHpG\\">
