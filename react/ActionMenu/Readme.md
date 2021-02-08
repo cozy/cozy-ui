@@ -15,7 +15,7 @@ import {
 import FileIcon from "cozy-ui/transpiled/react/Icons/File";
 import WarningIcon from "cozy-ui/transpiled/react/Icons/Warning";
 
-class ExempleMenu extends React.Component {
+class ExampleMenu extends React.Component {
   constructor(props){
     super(props);
     this.state ={ menuDisplayed: isTesting() };
@@ -55,7 +55,10 @@ class ExempleMenu extends React.Component {
   );
   }
 }
-<ExempleMenu />
+
+<BreakpointsProvider>
+  <ExampleMenu />
+</BreakpointsProvider>
 ```
 
 ### With Header (mobile only)
