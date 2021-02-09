@@ -6,13 +6,26 @@ import once from 'lodash/once'
 
 import IntentIframe from '../IntentIframe'
 import Modal from '../Modal'
+import createDepreciationLogger from '../helpers/createDepreciationLogger'
+
+const logIntentModalDepecrated = createDepreciationLogger()
 
 /**
  * Render a modal for the specified intent.
  *
  * The modal for an intent takes the majority of the viewport.
+ *
+ * @deprecated Please use IntentIframe with Dialog instead
  */
 class IntentModal extends Component {
+  constructor(props, context) {
+    super(props, context)
+
+    logIntentModalDepecrated(
+      'The IntentModal component has been deprecated and should be replaced by IntentIframe wrapped in Dialog'
+    )
+  }
+
   // As dismissAction is passed twice to the modal, both for closing and for
   // intent cancellation, we need to ensure that it is only actually
   // called once.
