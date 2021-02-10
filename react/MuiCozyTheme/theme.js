@@ -236,7 +236,7 @@ const makeOverrides = theme => ({
   MuiAccordionSummary: {
     expanded: {},
     root: {
-      backgroundColor: 'var(--paleGrey)',
+      backgroundColor: theme.palette.grey[100],
       textTransform: 'uppercase',
       fontWeight: 'bold',
       fontSize: '0.875rem',
@@ -274,12 +274,12 @@ const makeOverrides = theme => ({
   MuiAccordionDetails: {
     root: {
       padding: 0,
-      borderTop: '0.0625rem solid var(--silver)'
+      borderTop: `0.0625rem solid ${theme.palette.grey[200]}`
     }
   },
   MuiStepConnector: {
     line: {
-      borderColor: 'var(--coolGrey)'
+      borderColor: theme.palette.grey[300]
     }
   },
   MuiList: {
@@ -547,7 +547,7 @@ const makeOverrides = theme => ({
     track: {
       width: SWITCH_BAR_WIDTH,
       height: 12,
-      backgroundColor: 'var(--silver)'
+      backgroundColor: theme.palette.grey[200]
     },
     colorPrimary: {
       '&$checked': {
@@ -564,7 +564,7 @@ const makeOverrides = theme => ({
     },
     disabled: {
       '&$checked + $track': {
-        backgroundColor: 'var(--silver) !important'
+        backgroundColor: `${theme.palette.grey[200]} !important`
       },
       '& $thumb': {
         backgroundColor: 'white'
