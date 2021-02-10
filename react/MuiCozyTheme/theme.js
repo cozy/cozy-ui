@@ -565,6 +565,9 @@ const makeOverrides = theme => ({
     disabled: {
       '&$checked + $track': {
         backgroundColor: 'var(--silver) !important'
+      },
+      '& $thumb': {
+        backgroundColor: 'white'
       }
     }
   },

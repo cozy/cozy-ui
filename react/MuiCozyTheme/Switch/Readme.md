@@ -6,6 +6,8 @@ Uses [Material UI's Switch](https://material-ui.com/components/switches/).
 import { Media, Img } from '../../Media'
 import Switch from '.'
 import Typography from "cozy-ui/transpiled/react/Typography";
+import Stack from "cozy-ui/transpiled/react/Stack";
+import Box from '@material-ui/core/Box'
 
 initialState = {
   switch1: true,
@@ -17,28 +19,19 @@ const handleClick1 = ev => setState({ switch1: ev.target.checked })
 const handleClick2 = ev => setState({ switch2: ev.target.checked })
 const handleClick3 = ev => setState({ switch3: ev.target.checked });
 
-const Aligned = ({ children }) => {
-  return <Media className='u-mb-half'>
-    <Img>{ children[0] }</Img>
-    <Img>{ children[1] }</Img>
-  </Media>
-}
-
 const Switches = () => {
-  return <>
-    <Aligned>
-      <Typography variant="body1">Primary</Typography>
-      <Switch color="primary" checked={state.switch1}  onClick={handleClick1} />
-    </Aligned>
-    <Aligned>
-      <Typography variant="body1">Secondary</Typography>
-      <Switch color="secondary" checked={state.switch2} onClick={handleClick2} />
-    </Aligned>
-    <Aligned>
-      <Typography variant="body1">Disabled</Typography>
-      <Switch color="secondary" checked={state.switch3} disabled onClick={handleClick3} />
-    </Aligned>
-  </>;
+  return <Stack spacing='xs'>
+    {['primary', 'secondary', 'default'].map(color => {
+      return (
+        <Box display='flex' alignItems='center'>
+          <Typography variant='body1' inline>
+            { color }
+          </Typography>
+          <Switch color={color} checked  />
+        </Box>
+      )
+    })}
+  </Stack>;
 };
 
 <Switches />
