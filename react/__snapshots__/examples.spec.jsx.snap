@@ -7009,23 +7009,16 @@ exports[`Menu should render examples: Menu 4`] = `
 
 exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
 "<div>
-  <div class=\\"styles__media___cSJMp u-mb-half\\">
-    <div class=\\"styles__img___3SHpG\\">
-      <p class=\\"MuiTypography-root MuiTypography-body1\\">Primary</p>
+  <div class=\\"styles__Stack--xs___2R5lW\\">
+    <div class=\\"MuiBox-root MuiBox-root-16\\">
+      <p class=\\"MuiTypography-root MuiTypography-body1\\">primary</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-17 MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-checked-18 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-20 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
-    <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-16 MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-checked-17 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-19 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span></div>
-  </div>
-  <div class=\\"styles__media___cSJMp u-mb-half\\">
-    <div class=\\"styles__img___3SHpG\\">
-      <p class=\\"MuiTypography-root MuiTypography-body1\\">Secondary</p>
+    <div class=\\"MuiBox-root MuiBox-root-21\\">
+      <p class=\\"MuiTypography-root MuiTypography-body1\\">secondary</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-17 MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-checked-18 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-20 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
-    <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-16 MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-checked-17 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-19 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span></div>
-  </div>
-  <div class=\\"styles__media___cSJMp u-mb-half\\">
-    <div class=\\"styles__img___3SHpG\\">
-      <p class=\\"MuiTypography-root MuiTypography-body1\\">Disabled</p>
+    <div class=\\"MuiBox-root MuiBox-root-22\\">
+      <p class=\\"MuiTypography-root MuiTypography-body1\\">default</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-17 MuiSwitch-switchBase\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-20 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
-    <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-16 MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-disabled-18 Mui-disabled Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" aria-disabled=\\"true\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-19 MuiSwitch-input\\" disabled=\\"\\" type=\\"checkbox\\" value=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span></div>
   </div>
 </div>"
 `;

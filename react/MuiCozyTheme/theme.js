@@ -1,7 +1,9 @@
 import { createMuiTheme } from '@material-ui/core/styles'
+import merge from 'lodash/merge'
+import React from 'react'
+
 import { getCssVariableValue } from '../utils/color'
 import isTesting from '../helpers/isTesting'
-import React from 'react'
 import Icon from '../Icon'
 import BottomIcon from '../Icons/Bottom'
 
@@ -698,7 +700,7 @@ invertedTheme.overrides = {
       opacity: 1
     }
   },
-  MuiSwitch: {
+  MuiSwitch: merge({}, normalTheme.overrides.MuiSwitch, {
     switchBase: {
       color: getCssVariableValue('primaryContrastTextColor')
     },
@@ -709,13 +711,12 @@ invertedTheme.overrides = {
 
       '&$checked': {
         '& + $track': {
-          border:
-            '1px solid ' + getCssVariableValue('primaryContrastTextColor'),
-          boxSizing: 'border-box'
+          boxSizing: 'border-box',
+          backgroundColor: '#34CE68'
         }
       }
     }
-  },
+  }),
   MuiLinearProgress: {
     colorPrimary: {
       backgroundColor: 'rgba(255,255,255,0.2)'
