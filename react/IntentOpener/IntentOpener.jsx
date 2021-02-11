@@ -1,14 +1,23 @@
 import React, { useState } from 'react'
-import IntentModal from '../IntentModal'
 import PropTypes from 'prop-types'
+
+import IntentModal from '../IntentModal'
+import createDepreciationLogger from '../helpers/createDepreciationLogger'
+
+const logIntentOpenerDepecrated = createDepreciationLogger()
 
 /**
  * Wrapper that adds an `onClick` handler to its children that opens a modal
  * for the specified intent.
  *
  * The modal for an intent takes the majority of the viewport.
+ *
+ * @deprecated Please use IntentDialogOpener instead
  */
 const IntentOpener = props => {
+  logIntentOpenerDepecrated(
+    'The IntentOpener component has been deprecated and should be replaced by IntentDialogOpener.'
+  )
   const {
     options,
     action,
