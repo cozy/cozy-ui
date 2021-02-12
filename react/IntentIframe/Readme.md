@@ -1,9 +1,66 @@
 The IntentIframe is the basic and minimal component to open an intent.
 See [the documentation](https://docs.cozy.io/en/cozy-stack/intents/) for more information about intents.
 
-Example:
+The IntentOpener component is useful to start an new intent modal from a click on a button. But sometimes you want/have to handle the modal opening state on the application side so you need to just render an Intent inside a modal. You can then use IntentIframe wrapped in a Dialog for that use case.
 
+```jsx
+import { withStyles } from '@material-ui/core/styles'
+import { DialogCloseButton } from 'cozy-ui/transpiled/react/CozyDialogs'
+import Dialog from 'cozy-ui/transpiled/react/Dialog'
+import IntentIframe from 'cozy-ui/transpiled/react/IntentIframe'
+import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+
+initialState = { modalOpened: false}
+
+const customStyles = () => ({
+  paper: {
+    height: '100%'
+  }
+})
+
+const StyledDialog = withStyles(customStyles)(Dialog)
+const onClose = () => setState({ modalOpened: false })
+
+const IntentDialog = () => {
+  const { isMobile } = useBreakpoints()
+  return (
+    <StyledDialog
+      open={state.modalOpened}
+      onClose={onClose}
+      fullScreen={isMobile}
+      fullWidth
+      maxWidth="md"
+    >
+      <DialogCloseButton onClick={onClose} />
+      <IntentIframe
+        onCancel={onClose}
+        onTerminate={res => {
+            setState({ modalOpened: false })
+            alert('intent has completed ! ' + JSON.stringify(res))
+          }
+        }
+        action='OPEN'
+        type='io.cozy.files'
+        // you would not pass create normally as it defaults to
+        // cozy.client.intents.create
+        create={utils.fakeIntentCreate}
+      />
+    </StyledDialog>
+  )
+}
+
+;
+<BreakpointsProvider>
+  <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
+    Toggle an IntentDialog OPEN io.cozy.files
+  </button>
+  <IntentDialog />
+</BreakpointsProvider>
 ```
+
+Here a simple example :
+
+```jsx
 import IntentIframe from 'cozy-ui/transpiled/react/IntentIframe';
 import utils from '../../docs/utils';
   <IntentIframe

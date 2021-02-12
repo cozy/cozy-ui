@@ -1,6 +1,6 @@
 import React from 'react'
-import IntentWrapper from '../IntentWrapper'
-import { placeholder90 } from '../../docs/placeholders/img'
+import IntentWrapper from '../../react/IntentWrapper'
+import { placeholder90 } from '../placeholders/img'
 
 const IntentExample = function({ onComplete, action, doctype, options }) {
   return (
