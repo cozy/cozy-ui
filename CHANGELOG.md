@@ -1,3 +1,11 @@
+# [44.9.0](https://github.com/cozy/cozy-ui/compare/v44.8.0...v44.9.0) (2021-02-12)
+
+
+### Features
+
+* Add IntentDialogOpener and depreciate IntentOpener ([41af7bc](https://github.com/cozy/cozy-ui/commit/41af7bc))
+* Depreciate IntentModal, use Dialog with IntentIframe instead ([ab710a3](https://github.com/cozy/cozy-ui/commit/ab710a3))
+
 # [44.8.0](https://github.com/cozy/cozy-ui/compare/v44.7.0...v44.8.0) (2021-02-08)
 
 
