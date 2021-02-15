@@ -4,21 +4,15 @@ import cx from 'classnames'
 
 import styles from './styles.styl'
 
-const ViewerWrapper = ({ className, children, dark }) => (
-  <div
-    className={cx(styles['viewer-wrapper'], className, {
-      [styles['viewer-wrapper--light']]: !dark
-    })}
-    role="viewer"
-  >
+const ViewerWrapper = ({ className, children }) => (
+  <div className={cx(styles['viewer-wrapper'], className)} role="viewer">
     {children}
   </div>
 )
 
 ViewerWrapper.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.array,
-  dark: PropTypes.bool
+  children: PropTypes.array
 }
 
 export default ViewerWrapper
