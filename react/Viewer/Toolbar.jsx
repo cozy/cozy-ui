@@ -17,7 +17,6 @@ import styles from './styles.styl'
 const Toolbar = ({
   hidden,
   isMobile,
-  isMobileApp,
   onMouseEnter,
   onMouseLeave,
   file,
@@ -29,15 +28,14 @@ const Toolbar = ({
   return (
     <div
       className={cx(styles['viewer-toolbar'], {
-        [styles['viewer-toolbar--hidden']]: hidden,
-        [styles['viewer-toolbar--mobilebrowser']]: !isMobileApp && isMobile
+        [styles['viewer-toolbar--hidden']]: hidden
       })}
       role="viewer-toolbar"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
       {onClose && (
-        <IconButton onClick={onClose} className="u-white">
+        <IconButton onClick={onClose} className={cx({ 'u-white': !isMobile })}>
           <Icon icon={PreviousIcon} />
         </IconButton>
       )}
@@ -64,7 +62,6 @@ const Toolbar = ({
 Toolbar.propTypes = {
   hidden: PropTypes.bool,
   isMobile: PropTypes.bool.isRequired,
-  isMobileApp: PropTypes.bool.isRequired,
   onMouseEnter: PropTypes.func.isRequired,
   onMouseLeave: PropTypes.func.isRequired,
   file: PropTypes.object.isRequired,
