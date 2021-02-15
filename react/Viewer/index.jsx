@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import { isMobileApp, isMobile as isMobileDevice } from 'cozy-device-helper'
+import { isMobile as isMobileDevice } from 'cozy-device-helper'
 
 import withBreakpoints from '../helpers/withBreakpoints'
 import { FileDoctype } from '../proptypes'
@@ -138,7 +138,6 @@ export class Viewer extends Component {
           expanded={expanded}
           toolbarProps={toolbarProps}
           showNavigation={showNavigation}
-          isMobileApp={isMobileApp()}
           showInfoPanel={showInfoPanel}
         >
           {this.renderViewer(currentFile)}

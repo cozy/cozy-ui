@@ -70,12 +70,12 @@ $toolbarHeightMedium = 3rem
     justify-content flex-start
     align-items center
 
-    &--mobilebrowser
-        background-color var(--charcoalGrey)
-        opacity .9
-
     &--hidden
         opacity 0
 
     +medium-screen()
         height $toolbarHeightMedium
+
+    +small-screen()
+        background var(--white)
+        border-bottom 1px solid var(--silver)
