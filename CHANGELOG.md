@@ -1,3 +1,12 @@
+# [44.10.0](https://github.com/cozy/cozy-ui/compare/v44.9.0...v44.10.0) (2021-02-15)
+
+
+### Features
+
+* Remove Viewer dark prop ([f6f37e8](https://github.com/cozy/cozy-ui/commit/f6f37e8))
+* Viewer has now white background on mobile ([5a316ff](https://github.com/cozy/cozy-ui/commit/5a316ff))
+* Viewer toolbar is now white with grey back button on mobile ([ea54036](https://github.com/cozy/cozy-ui/commit/ea54036))
+
 # [44.9.0](https://github.com/cozy/cozy-ui/compare/v44.8.0...v44.9.0) (2021-02-12)
 
 
