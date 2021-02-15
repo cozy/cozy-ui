@@ -29272,16 +29272,18 @@ html {
   justify-content: flex-start;
   align-items: center;
 }
-.viewer-toolbar--mobilebrowser--VH9jK {
-  background-color: var(--charcoalGrey);
-  opacity: 0.9;
-}
 .viewer-toolbar--hidden--13ibV {
   opacity: 0;
 }
 @media (max-width: 63.938rem) {
   .viewer-toolbar--27_8W {
     height: 3rem;
+  }
+}
+@media (max-width: 48rem) {
+  .viewer-toolbar--27_8W {
+    background: var(--white);
+    border-bottom: 1px solid var(--silver);
   }
 }
 .viewer-wrapper--2GIXH {
@@ -29291,13 +29293,15 @@ html {
   top: 0;
   bottom: 0;
   z-index: 50;
-  background: var(--charcoalGrey);
   overflow: hidden;
+  background: var(--charcoalGrey);
   color: var(--white);
 }
-.viewer-wrapper--light--1syW7 {
-  background: var(--white);
-  color: var(--black);
+@media (max-width: 48rem) {
+  .viewer-wrapper--2GIXH {
+    color: var(--charcoalGrey);
+    background: var(--white);
+  }
 }
 .viewer-imageviewer--TR2gU,
 .viewer-noviewer--3heA6,
