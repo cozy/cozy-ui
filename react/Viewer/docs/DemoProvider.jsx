@@ -1,5 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
+import { CozyProvider } from 'cozy-client'
+
+import { I18nContext } from '../../I18n'
 
 const demoTextFileResponse = {
   text: () => new Promise(resolve => resolve('Hello World !'))
@@ -13,15 +16,10 @@ const demoFilesByClass = {
   text: 'https://viewerdemo.cozycloud.cc/notes.md'
 }
 
-const getDownloadLinkById = id =>
-  new Promise(resolve => resolve(demoFilesByClass[id]))
-
 const mockClient = {
-  options: {
-    uri: ''
-  },
   collection: () => ({
-    getDownloadLinkById,
+    getDownloadLinkById: id =>
+      new Promise(resolve => resolve(demoFilesByClass[id])),
     download: () =>
       alert(
         "This is a demo, there's no actual Cozy to download the file from ¯\\_(ツ)_/¯"
@@ -37,25 +35,23 @@ const mockClient = {
         })
       )
   }),
-  fetch: () => new Promise(resolve => resolve(demoTextFileResponse)),
+  getStackClient: () => ({
+    uri: '',
+    fetch: () => new Promise(resolve => resolve(demoTextFileResponse))
+  }),
   getClient: () => mockClient
 }
 
 class Wrapper extends React.Component {
-  getChildContext() {
-    return {
-      client: mockClient
-    }
-  }
-
   render() {
-    return <>{this.props.children}</>
+    return (
+      <CozyProvider client={mockClient}>
+        <I18nContext.Provider value={{ t: x => x, lang: 'en' }}>
+          {this.props.children}
+        </I18nContext.Provider>
+      </CozyProvider>
+    )
   }
-}
-
-Wrapper.childContextTypes = {
-  client: PropTypes.object,
-  t: PropTypes.func
 }
 
 export default Wrapper
