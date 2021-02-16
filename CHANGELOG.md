@@ -1,3 +1,10 @@
+## [44.10.1](https://github.com/cozy/cozy-ui/compare/v44.10.0...v44.10.1) (2021-02-16)
+
+
+### Bug Fixes
+
+* Viewer doc example for ImageLoader ([9619ff2](https://github.com/cozy/cozy-ui/commit/9619ff2))
+
 # [44.10.0](https://github.com/cozy/cozy-ui/compare/v44.9.0...v44.10.0) (2021-02-15)
 
 
