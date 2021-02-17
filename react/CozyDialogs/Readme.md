@@ -128,25 +128,32 @@ const toggleDialog = dialog => {
 }
 
 initialState = {
-  modalOpened: false,
+  modalOpened: isTesting(),
   modal: Dialog,
   size: 'medium',
   actionsLayout: 'row',
+  title: 'short',
   content: 'default',
   theme: 'normal'
 };
 
 <>
   <BreakpointsProvider>
+    <p>Title:
+      <StateRadio value='short' name='title' /> short{' '}
+      <StateRadio value='long' name='title' /> long
+    </p>
     <p>Content:
       <StateRadio value='default' name='content' /> default{' '}
       <StateRadio value='short' name='content' /> short{' '}
       <StateRadio value='long' name='content' /> long
-    </p><p>Size:
+    </p>
+    <p>Size:
       <StateRadio value='small' name='size' /> small {' '}
       <StateRadio value='medium' name='size' /> medium {' '}
       <StateRadio value='large' name='size' /> large
-    </p><p>Actions layout:
+    </p>
+    <p>Actions layout:
       <StateRadio value='row' name='actionsLayout' /> row{' '}
       <StateRadio value='column' name='actionsLayout' /> column
     </p>
@@ -154,7 +161,10 @@ initialState = {
       size={DialogComponent !== ConfirmDialog ? state.size : undefined}
       open={state.modalOpened}
       onClose={handleClose}
-      title={dialogTitles[DialogComponent.name]}
+      title={DialogComponent !== IllustrationDialog && state.title === "long"
+        ? `${dialogTitles[DialogComponent.name]} - ${content.ada.short}`
+        : dialogTitles[DialogComponent.name]
+      }
       content={
         <Typography variant='body1' color='textPrimary'>
           { state.content == 'default'
