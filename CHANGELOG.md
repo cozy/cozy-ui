@@ -1,3 +1,72 @@
+# [45.0.0](https://github.com/cozy/cozy-ui/compare/v44.10.1...v45.0.0) (2021-02-17)
+
+
+### Bug Fixes
+
+* Correct margin for left radio in nested modal ([6a29d34](https://github.com/cozy/cozy-ui/commit/6a29d34))
+* Dense should be used instead of textDense ([c2ce5cf](https://github.com/cozy/cozy-ui/commit/c2ce5cf))
+* Do not stretch small screenshots ([f6a3d51](https://github.com/cozy/cozy-ui/commit/f6a3d51))
+* Forward ref to transition component ([721cde0](https://github.com/cozy/cozy-ui/commit/721cde0))
+* Prop has been renamed (caused warnings in the console in harvest) ([4717b00](https://github.com/cozy/cozy-ui/commit/4717b00))
+* Remove CSS prop to keep old behavior ([0a09c4f](https://github.com/cozy/cozy-ui/commit/0a09c4f))
+* Set text-transform to uppercase to keep old behacvior ([a7161df](https://github.com/cozy/cozy-ui/commit/a7161df))
+* Small tweaks to text field to match with previous screenshots ([9f4baf8](https://github.com/cozy/cozy-ui/commit/9f4baf8))
+* Switch thumb is white even when disabled ([d5d44ae](https://github.com/cozy/cozy-ui/commit/d5d44ae))
+* Tweak example since spacing API has changed for Grid ([118b99a](https://github.com/cozy/cozy-ui/commit/118b99a))
+* Tweak example to use variant='inset' instead of inset for Dividers ([4e98c18](https://github.com/cozy/cozy-ui/commit/4e98c18))
+* Tweaks to badge for it to work like before ([a0292a6](https://github.com/cozy/cozy-ui/commit/a0292a6))
+* Tweaks to Variants to show as before ([0989b32](https://github.com/cozy/cozy-ui/commit/0989b32))
+
+
+### Features
+
+* Ability for screenshots command to be launched against a server ([2f4f9bf](https://github.com/cozy/cozy-ui/commit/2f4f9bf))
+* Add BreakpointsProvider ([badbd38](https://github.com/cozy/cozy-ui/commit/badbd38))
+* Add embryo of local Argos ([0c0d304](https://github.com/cozy/cozy-ui/commit/0c0d304))
+* Add log ([839ce44](https://github.com/cozy/cozy-ui/commit/839ce44))
+* Add pixelmatch server ([20d4331](https://github.com/cozy/cozy-ui/commit/20d4331))
+* Allow screenshots of different heights to be compared ([5e8e14c](https://github.com/cozy/cozy-ui/commit/5e8e14c))
+* Correct style for inverted switch ([4cf2d31](https://github.com/cozy/cozy-ui/commit/4cf2d31))
+* DateMonthPicker uses useI18n instead of translate ([4adc5a6](https://github.com/cozy/cozy-ui/commit/4adc5a6))
+* Disable MUI v4 new styles to keep old behavior ([ad4248e](https://github.com/cozy/cozy-ui/commit/ad4248e))
+* Double the selector to increase specificity ([cd9c228](https://github.com/cozy/cozy-ui/commit/cd9c228))
+* Force caption to display as block ([b581e7a](https://github.com/cozy/cozy-ui/commit/b581e7a))
+* Only support url argument for --styleguide-url ([a1f1818](https://github.com/cozy/cozy-ui/commit/a1f1818))
+* Pixelmatch server crashes if folders are not set up ([90daa1c](https://github.com/cozy/cozy-ui/commit/90daa1c))
+* Remove accordion styles from build ([f1f8c02](https://github.com/cozy/cozy-ui/commit/f1f8c02))
+* Remove touch ripples from snapshots ([0930c45](https://github.com/cozy/cozy-ui/commit/0930c45))
+* Rename ExpansionPanel into Accordion and add icon in theme ([9640ffa](https://github.com/cozy/cozy-ui/commit/9640ffa))
+* Replace CSS vars for colors in overrides by theme colors ([6c5c664](https://github.com/cozy/cozy-ui/commit/6c5c664))
+* Small tweaks on Accordion theme ([7937316](https://github.com/cozy/cozy-ui/commit/7937316))
+* Tweak ExpansionPanel to match previous screenshots ([8fef825](https://github.com/cozy/cozy-ui/commit/8fef825))
+* Tweak Infos close button to match previous screenshot ([432d46c](https://github.com/cozy/cozy-ui/commit/432d46c))
+* Tweak Switch after Mui update ([155ce8a](https://github.com/cozy/cozy-ui/commit/155ce8a))
+* Tweak Tooltip after mui v4 update ([663de0b](https://github.com/cozy/cozy-ui/commit/663de0b))
+* Tweaks NestedSelect to better match previous screenshots ([81d811d](https://github.com/cozy/cozy-ui/commit/81d811d))
+* Update snapshots ([3a3c394](https://github.com/cozy/cozy-ui/commit/3a3c394))
+* Update to muiv4 ([2b3402f](https://github.com/cozy/cozy-ui/commit/2b3402f))
+* Use a Typography inside CozyTheme otherwise text is white ([cabd63b](https://github.com/cozy/cozy-ui/commit/cabd63b))
+* Use Dialog instead of Modal for NestedSelectModal ([a032a34](https://github.com/cozy/cozy-ui/commit/a032a34))
+* Use Dialog instead of Modal in DateMonthPicker ([c99a90c](https://github.com/cozy/cozy-ui/commit/c99a90c))
+* Use Divider from MUI in NestedSelectModal ([948d537](https://github.com/cozy/cozy-ui/commit/948d537))
+* Use List/ListItemText/ListItemIcon to implement NestedSelect rows ([d3fe37b](https://github.com/cozy/cozy-ui/commit/d3fe37b))
+* Use setTimeout for example to work in jsdom ([04a63a8](https://github.com/cozy/cozy-ui/commit/04a63a8))
+* Use useBreakpoints instead of withBreakpoints ([1d94e8f](https://github.com/cozy/cozy-ui/commit/1d94e8f))
+* Use useBreakpoints instead of withBreakpoints ([12f92ef](https://github.com/cozy/cozy-ui/commit/12f92ef))
+
+
+### BREAKING CHANGES
+
+* You need to replace ExpansionPanel by Accordion, the
+API has not changed.
+
+ExpansionPanel -> Accordion
+ExpansionPanelSummary -> AccordionSummary
+ExpansionPanelDetails -> AccordionDetails
+
+The icon is added since this is the default styles in Banks
+* @material-ui/core@4 is now necessary
+
 ## [44.10.1](https://github.com/cozy/cozy-ui/compare/v44.10.0...v44.10.1) (2021-02-16)
 
 
