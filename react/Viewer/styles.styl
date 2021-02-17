@@ -10,13 +10,13 @@
     top             0
     bottom          0
     z-index         $overlay-index
-    background      var(--charcoalGrey)
     overflow        hidden
+    background      var(--charcoalGrey)
     color           var(--white)
 
-    &--light
-        background  var(--white)
-        color       var(--black)
+    +small-screen()
+        color var(--charcoalGrey)
+        background var(--white)
 
 .viewer-imageviewer
 .viewer-noviewer

@@ -103,8 +103,7 @@ module.exports = {
       name: 'Intents',
       components: () => [
         '../react/IntentIframe/IntentIframe.jsx',
-        '../react/IntentModal/IntentModal.jsx',
-        '../react/IntentOpener/IntentOpener.jsx'
+        '../react/IntentDialogOpener/IntentDialogOpener.jsx'
       ]
     },
     {
@@ -173,7 +172,9 @@ module.exports = {
         '../react/MuiCozyTheme/RaisedList',
         '../react/CompositeRow/index.jsx',
         '../react/InlineCard/index.jsx',
-        '../react/PercentageLine/index.jsx'
+        '../react/PercentageLine/index.jsx',
+        '../react/IntentModal/IntentModal.jsx',
+        '../react/IntentOpener/IntentOpener.jsx'
       ]
     }
   ],

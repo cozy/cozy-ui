@@ -1,3 +1,27 @@
+## [44.10.1](https://github.com/cozy/cozy-ui/compare/v44.10.0...v44.10.1) (2021-02-16)
+
+
+### Bug Fixes
+
+* Viewer doc example for ImageLoader ([9619ff2](https://github.com/cozy/cozy-ui/commit/9619ff2))
+
+# [44.10.0](https://github.com/cozy/cozy-ui/compare/v44.9.0...v44.10.0) (2021-02-15)
+
+
+### Features
+
+* Remove Viewer dark prop ([f6f37e8](https://github.com/cozy/cozy-ui/commit/f6f37e8))
+* Viewer has now white background on mobile ([5a316ff](https://github.com/cozy/cozy-ui/commit/5a316ff))
+* Viewer toolbar is now white with grey back button on mobile ([ea54036](https://github.com/cozy/cozy-ui/commit/ea54036))
+
+# [44.9.0](https://github.com/cozy/cozy-ui/compare/v44.8.0...v44.9.0) (2021-02-12)
+
+
+### Features
+
+* Add IntentDialogOpener and depreciate IntentOpener ([41af7bc](https://github.com/cozy/cozy-ui/commit/41af7bc))
+* Depreciate IntentModal, use Dialog with IntentIframe instead ([ab710a3](https://github.com/cozy/cozy-ui/commit/ab710a3))
+
 # [44.8.0](https://github.com/cozy/cozy-ui/compare/v44.7.0...v44.8.0) (2021-02-08)
 
 

@@ -15,6 +15,7 @@ import Paper from 'cozy-ui/transpiled/react/Paper';
 import Typography from 'cozy-ui/transpiled/react/Typography';
 import { Media, Img, Bd } from 'cozy-ui/transpiled/react/Media';
 import Icon from 'cozy-ui/transpiled/react/Icon';
+import CarbonCopyIcon from 'cozy-ui/transpiled/react/Icons/CarbonCopy';
 // The DemoProvider inserts a fake cozy-client in the React context.
 import DemoProvider from './docs/DemoProvider';
 import Overlay from 'cozy-ui/transpiled/react/Overlay';
@@ -56,7 +57,7 @@ const files = [
 // The host app will usually need a small wrapper to display the Viewer. This is a very small example of such a wrapper that handles opening, closing, and navigating between files.
 initialState = {
   viewerOpened: isTesting(),
-  currentFileIndex: 0,
+  currentIndex: 0,
   showToolbarCloseButton: true
 };
 
@@ -66,9 +67,9 @@ const initialVariants = [
 
 const toggleViewer = () => setState({ viewerOpened: !state.viewerOpened });
 const handleToggleToolbarClose = () => setState({ showToolbarCloseButton: !state.showToolbarCloseButton });
-const onFileChange = (file, nextIndex) => setState({ currentFileIndex: nextIndex });
+const onFileChange = (file, nextIndex) => setState({ currentIndex: nextIndex });
 
-const PanelContent = ({ currentFile }) => {
+const PanelContent = ({ file }) => {
   return (
     <Stack
       spacing="s"
@@ -78,13 +79,13 @@ const PanelContent = ({ currentFile }) => {
         <Typography variant="h4">Informations utiles</Typography>
       </Paper>
       <Paper className={'u-ph-2 u-pv-1-half'} elevation={2} square>
-        <Typography variant="body1">Titre du fichier : {currentFile.name}</Typography>
+        <Typography variant="body1">Titre du fichier : {file.name}</Typography>
       </Paper>
       <Paper className={'u-ph-2 u-pv-1-half u-flex-grow-1'} elevation={2} square>
         <Typography variant="h4">
           <Media className="u-mb-half">
             <Img>
-              <Icon icon="carbonCopy" className="u-mr-half" />
+              <Icon icon={CarbonCopyIcon} className="u-mr-half" />
             </Img>
             <Bd>
               <Typography variant="body1">Copie conforme</Typography>
@@ -118,7 +119,7 @@ const PanelContent = ({ currentFile }) => {
               <Overlay>
                 <Viewer
                   files={files}
-                  currentIndex={state.currentFileIndex}
+                  currentIndex={state.currentIndex}
                   onCloseRequest={toggleViewer}
                   onChangeRequest={onFileChange}
                   showNavigation={variant.navigation}
@@ -127,8 +128,8 @@ const PanelContent = ({ currentFile }) => {
                     showClose: state.showToolbarCloseButton
                   }}
                   panelInfoProps={{
-                    showPanel: ({ currentFile }) => currentFile.class === "pdf" || currentFile.class === "audio",
-                    PanelContent: PanelContent
+                    showPanel: ({ file }) => file.class === "pdf" || file.class === "audio",
+                    PanelContent
                   }}
                 />
               </Overlay>

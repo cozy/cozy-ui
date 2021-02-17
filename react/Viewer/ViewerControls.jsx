@@ -102,7 +102,6 @@ class ViewerControls extends Component {
       showNavigation,
       showInfoPanel,
       children,
-      isMobileApp,
       classes
     } = this.props
     const { showToolbar, showClose } = toolbarProps
@@ -122,7 +121,6 @@ class ViewerControls extends Component {
           <Toolbar
             file={file}
             onClose={showClose && onClose}
-            isMobileApp={isMobileApp}
             onMouseEnter={this.showControls}
             onMouseLeave={this.hideControls}
             isMobile={isMobile}
@@ -163,7 +161,6 @@ ViewerControls.propTypes = {
   expanded: PropTypes.bool.isRequired,
   toolbarProps: PropTypes.shape(toolbarPropsPropType),
   showNavigation: PropTypes.bool.isRequired,
-  isMobileApp: PropTypes.bool.isRequired,
   showInfoPanel: PropTypes.bool
 }
 
