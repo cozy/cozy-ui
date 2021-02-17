@@ -1,10 +1,11 @@
 import { mount } from 'enzyme'
 import React from 'react'
 import DateMonthPicker from './index'
-import I18n from '../I18n'
 import { act } from 'react-dom/test-utils'
-import LeftIcon from 'cozy-ui/transpiled/react/Icons/Left'
-import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
+
+import I18n from '../I18n'
+import LeftIcon from '../Icons/Left'
+import RightIcon from '../Icons/Right'
 
 const findButtonWithLabel = (root, label) =>
   root.findWhere(n => n.type() == 'button' && n.props().children === label)

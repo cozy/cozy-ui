@@ -31,11 +31,7 @@ export const Infos = ({
       </Stack>
       {dismissAction && (
         <div className={styles['Info-close']}>
-          <IconButton
-            size="small"
-            onClick={dismissAction}
-            {...dismissButtonProps}
-          >
+          <IconButton onClick={dismissAction} {...dismissButtonProps}>
             <Icon icon={CrossIcon} size="12" className="u-coolGrey" />
           </IconButton>
         </div>

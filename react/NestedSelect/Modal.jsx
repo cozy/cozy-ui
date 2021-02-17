@@ -1,54 +1,46 @@
 import React from 'react'
 import Icon from '../Icon'
-import Modal, {
-  ModalHeader as UIModalHeader,
-  ModalContent as UIModalContent
-} from '../Modal'
-import { Media, Bd, Img } from '../Media'
+
+import { Img } from '../Media'
 import palette from '../palette'
 import NestedSelect from './NestedSelect'
+import Dialog, {
+  DialogTitle,
+  DialogContent
+} from 'cozy-ui/transpiled/react/Dialog'
+import { useCozyDialog, DialogCloseButton } from '../CozyDialogs'
 
 import styles from './styles.styl'
 
 import LeftIcon from 'cozy-ui/transpiled/react/Icons/Left'
 
-const ModalTitle = ({ showBack, onClickBack, title }) => (
-  <Media>
-    {showBack && (
-      <Img className={styles.Modal__back} onClick={onClickBack}>
-        <Icon icon={LeftIcon} color={palette['coolGrey']} />
-      </Img>
-    )}
-    <Bd>
-      <h2>{title}</h2>
-    </Bd>
-  </Media>
-)
-
-const ModalHeader = ({ showBack, onClickBack, title }) => (
-  <UIModalHeader className={styles.Modal__title}>
-    <ModalTitle showBack={showBack} onClickBack={onClickBack} title={title} />
-  </UIModalHeader>
-)
-
-const ModalContent = ({ children }) => (
-  <UIModalContent className={styles.Modal__content}>{children}</UIModalContent>
-)
-
 const NestedSelectModal = props => {
+  const { dialogProps, dialogTitleProps } = useCozyDialog({
+    open: true
+  })
   return (
-    <Modal
-      closeBtnClassName={props.closeBtnClassName}
-      overflowHidden
-      dismissAction={props.onCancel}
-      into="body"
+    <Dialog
+      {...dialogProps}
+      open={true}
+      title={props.title}
+      onClose={props.onClose}
     >
-      <NestedSelect
-        {...props}
-        HeaderComponent={ModalHeader}
-        ContentComponent={ModalContent}
+      <DialogTitle {...dialogTitleProps}>
+        {props.showBack && (
+          <Img className={styles.Modal__back} onClick={props.onClickBack}>
+            <Icon icon={LeftIcon} color={palette['coolGrey']} />
+          </Img>
+        )}
+        {props.title}
+      </DialogTitle>
+      <DialogCloseButton
+        onClick={props.onClose}
+        data-test-id={`modal-close-button-nested-select`}
       />
-    </Modal>
+      <DialogContent className="u-p-0">
+        <NestedSelect {...props} />
+      </DialogContent>
+    </Dialog>
   )
 }
 

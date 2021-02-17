@@ -3,6 +3,7 @@ import { mount } from 'enzyme'
 import { act } from 'react-dom/test-utils'
 import ActionMenu, { ActionMenuItem } from './'
 import { fixPopperTesting } from '../Popper/testing'
+import { BreakpointsProvider } from '../hooks/useBreakpoints'
 
 describe('ActionMenu', () => {
   fixPopperTesting()
@@ -31,13 +32,17 @@ describe('ActionMenu', () => {
     console.error = originalConsoleError
   })
 
-  it('should support null children', () => {
+  it('should support null children', async () => {
     const comp = mount(
-      <ActionMenu onClose={jest.fn()}>
-        <ActionMenuItem>Item 1</ActionMenuItem>
-        {null}
-      </ActionMenu>
+      <BreakpointsProvider>
+        <ActionMenu onClose={jest.fn()}>
+          <ActionMenuItem>Item 1</ActionMenuItem>
+          {null}
+        </ActionMenu>
+      </BreakpointsProvider>
     )
+    // Remove an update was not wrapped in act() warning
+    await act(async () => {})
     expect(
       comp
         .find(ActionMenuItem)
@@ -46,7 +51,7 @@ describe('ActionMenu', () => {
     ).toMatchSnapshot()
   })
 
-  it('should support auto-closing the menu', () => {
+  it('should support auto-closing the menu', async () => {
     const closeMenu = jest.fn()
     const menuAction1 = jest.fn()
     const menuAction2 = jest.fn()
@@ -56,15 +61,17 @@ describe('ActionMenu', () => {
     }
 
     const comp = mount(
-      <ActionMenu onClose={closeMenu} autoclose>
-        <ActionMenuItem onClick={menuAction1}>Item 1</ActionMenuItem>
-        <ActionMenuItem onClick={menuActionStoppingPropagation}>
-          Item 2
-        </ActionMenuItem>
-      </ActionMenu>
+      <BreakpointsProvider>
+        <ActionMenu onClose={closeMenu} autoclose>
+          <ActionMenuItem onClick={menuAction1}>Item 1</ActionMenuItem>
+          <ActionMenuItem onClick={menuActionStoppingPropagation}>
+            Item 2
+          </ActionMenuItem>
+        </ActionMenu>
+      </BreakpointsProvider>
     )
 
-    act(() => {
+    await act(async () => {
       comp
         .find(ActionMenuItem)
         .at(1)

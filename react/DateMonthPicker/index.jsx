@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import Icon from '../Icon'
-import { translate } from '../I18n'
 import range from 'lodash/range'
 import { format } from 'date-fns'
-import styles from './styles.styl'
 import cx from 'classnames'
 
-import LeftIcon from 'cozy-ui/transpiled/react/Icons/Left'
-import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
+import { useI18n } from '../I18n'
+import Icon from '../Icon'
+import LeftIcon from '../Icons/Left'
+import RightIcon from '../Icons/Right'
 
-const MonthButton = translate()(({ monthNum, f, onClick, isSelected }) => {
+import styles from './styles.styl'
+
+const MonthButton = ({ monthNum, onClick, isSelected }) => {
+  const { f } = useI18n()
   // We do not care care about year and day since we are creating the date
   // only to be able to format it into a monthName
   const d = new Date(2019, monthNum, 15)
@@ -28,7 +30,7 @@ const MonthButton = translate()(({ monthNum, f, onClick, isSelected }) => {
       {f(d, 'MMM')}
     </button>
   )
-})
+}
 
 const useCounter = (initialValue, min, max) => {
   const [state, setState] = useState(initialValue)

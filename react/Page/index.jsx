@@ -10,7 +10,7 @@
 import React from 'react'
 import { useKeyboardInfo } from './keyboard'
 import styles from './styles.styl'
-import withBreakpoints from '../helpers/withBreakpoints'
+import useBreakpoints from '../hooks/useBreakpoints'
 
 const TOP_BAR_HEIGHT = 48
 const BOTTOM_BAR_HEIGHT = 48
@@ -92,15 +92,14 @@ export const MobilePageLayout = ({ children, extraHeight = 0 }) => {
  * - On mobile, wraps into MobilePageLayout.
  * - On desktop, wraps into a simple div.
  */
-export const PageLayout = React.memo(
-  withBreakpoints()(({ breakpoints: { isMobile }, ...props }) => {
-    return isMobile ? (
-      <MobilePageLayout {...props} />
-    ) : (
-      <div>{props.children}</div>
-    )
-  })
-)
+export const PageLayout = React.memo(({ ...props }) => {
+  const { isMobile } = useBreakpoints()
+  return isMobile ? (
+    <MobilePageLayout {...props} />
+  ) : (
+    <div>{props.children}</div>
+  )
+})
 
 export const PageContent = React.memo(({ children }) => (
   <div className={styles.PageContent}>{children}</div>

@@ -1,6 +1,11 @@
 import { createMuiTheme } from '@material-ui/core/styles'
+import merge from 'lodash/merge'
+import React from 'react'
+
 import { getCssVariableValue } from '../utils/color'
 import isTesting from '../helpers/isTesting'
+import Icon from '../Icon'
+import BottomIcon from '../Icons/Bottom'
 
 export const defaultValues = {
   borderRadius: 6,
@@ -15,11 +20,8 @@ export const defaultValues = {
 }
 
 const SWITCH_BAR_WIDTH = 25
-const SWITCH_BAR_HEIGHT = 12
-const SWITCH_BUTTON_WIDTH = 46
 
 const makeTypography = palette => ({
-  useNextVariants: true,
   fontFamily: getCssVariableValue('primaryFont') || 'Lato',
   h1: {
     fontSize: 48,
@@ -83,7 +85,8 @@ const makeTypography = palette => ({
   caption: {
     fontSize: 12,
     lineHeight: 1.313,
-    color: palette.text.secondary
+    color: palette.text.secondary,
+    display: 'block'
   }
 })
 
@@ -117,7 +120,10 @@ const normalPalette = {
     800: getCssVariableValue('charcoalGrey'),
     900: getCssVariableValue('black')
   },
-  divider: getCssVariableValue('silver')
+  divider: getCssVariableValue('silver'),
+  actions: {
+    focus: 'rgba(0, 0, 0, 0.12)'
+  }
 }
 
 normalPalette.background = {
@@ -150,6 +156,12 @@ export const normalTheme = createMuiTheme({
     },
     MuiListItem: {
       disableRipple: true
+    },
+    MuiTooltip: {
+      arrow: true
+    },
+    MuiAccordionSummary: {
+      expandIcon: <Icon icon={BottomIcon} width={12} />
     }
   },
   ...(isTesting() && { transitions: { create: () => 'none' } })
@@ -210,7 +222,7 @@ const makeOverrides = theme => ({
       }
     }
   },
-  MuiExpansionPanel: {
+  MuiAccordion: {
     rounded: {
       borderRadius: defaultValues.borderRadius
     },
@@ -223,15 +235,10 @@ const makeOverrides = theme => ({
       marginBottom: '1rem'
     }
   },
-  MuiStepConnector: {
-    line: {
-      borderColor: 'var(--coolGrey)'
-    }
-  },
-  MuiExpansionPanelSummary: {
+  MuiAccordionSummary: {
     expanded: {},
     root: {
-      backgroundColor: 'var(--paleGrey)',
+      backgroundColor: theme.palette.grey[100],
       textTransform: 'uppercase',
       fontWeight: 'bold',
       fontSize: '0.875rem',
@@ -242,10 +249,22 @@ const makeOverrides = theme => ({
         minHeight: '3.5rem'
       }
     },
+    expandIcon: {
+      order: 0,
+      '&&': {
+        marginLeft: '0.3125rem'
+      },
+      transform: 'rotate(-90deg)',
+      '&$expanded': {
+        marginLeft: '0.3125rem',
+        transform: 'rotate(0)'
+      }
+    },
     content: {
       margin: '0.75rem 0',
       paddingLeft: '0.5rem',
-      paddingRight: '0.5rem',
+      paddingRight: '0.25rem',
+      order: 1,
       '& > :last-child': {
         paddingRight: 0
       },
@@ -254,10 +273,15 @@ const makeOverrides = theme => ({
       }
     }
   },
-  MuiExpansionPanelDetails: {
+  MuiAccordionDetails: {
     root: {
       padding: 0,
-      borderTop: '0.0625rem solid var(--silver)'
+      borderTop: `0.0625rem solid ${theme.palette.grey[200]}`
+    }
+  },
+  MuiStepConnector: {
+    line: {
+      borderColor: theme.palette.grey[300]
     }
   },
   MuiList: {
@@ -268,6 +292,8 @@ const makeOverrides = theme => ({
   },
   MuiListItemIcon: {
     root: {
+      minWidth: 'auto',
+      marginRight: '1rem',
       padding: 0
     }
   },
@@ -315,14 +341,18 @@ const makeOverrides = theme => ({
       fontSize: null
     },
     primary: {
-      '&$textDense': {
+      '&$dense': {
         fontSize: null
       }
     },
     secondary: {
-      '&$textDense': {
+      '&$dense': {
         fontSize: null
       }
+    },
+    multiline: {
+      marginTop: 0,
+      marginBottom: 0
     }
   },
   MuiListSubheader: {
@@ -375,10 +405,16 @@ const makeOverrides = theme => ({
   MuiTextField: {
     borderWidth: '0.0625rem'
   },
+  MuiFormLabel: {
+    root: {
+      color: theme.palette.text.secondary
+    }
+  },
   MuiFormHelperText: {
     root: {
       fontStyle: 'italic',
-      fontSize: '0.875rem'
+      fontSize: '0.875rem',
+      marginTop: 4
     }
   },
   MuiDialog: {
@@ -457,6 +493,7 @@ const makeOverrides = theme => ({
   MuiDialogActions: {
     root: {
       margin: '16px 32px',
+      padding: 0,
       [theme.breakpoints.down('sm')]: {
         margin: '8px 16px',
         '& button': {
@@ -476,6 +513,12 @@ const makeOverrides = theme => ({
             marginBottom: '8px'
           }
         }
+      },
+
+      // To keep muiV3 behavior
+      // TODO check later if we need this behavior
+      '& > :not(:first-child):not(:first-child)': {
+        marginLeft: 4
       }
     }
   },
@@ -488,36 +531,25 @@ const makeOverrides = theme => ({
     }
   },
   MuiSwitch: {
-    root: {
-      width: SWITCH_BUTTON_WIDTH,
-      '& input': {
-        width: '150%',
-        height: '150%',
-        left: '-25%',
-        top: '-25%'
+    checked: {
+      '& + $track$track': {
+        opacity: 1
       }
     },
     switchBase: {
-      width: SWITCH_BUTTON_WIDTH,
-      transform: 'translateX(-7px)'
+      top: 1,
+      '&$checked': {
+        transform: 'translateX(15px)'
+      }
     },
-    checked: {
-      '& + $bar': {
-        opacity: 1
-      },
-      transform: 'translateX(7px)'
-    },
-    icon: {
+    thumb: {
       width: 16,
       height: 16
     },
-    bar: {
+    track: {
       width: SWITCH_BAR_WIDTH,
       height: 12,
-      marginTop: -(SWITCH_BAR_HEIGHT / 2),
-      marginLeft: -(SWITCH_BAR_WIDTH / 2),
-      backgroundColor: 'var(--silver)',
-      opacity: 1
+      backgroundColor: theme.palette.grey[200]
     },
     colorPrimary: {
       '&$checked': {
@@ -526,21 +558,34 @@ const makeOverrides = theme => ({
     },
     colorSecondary: {
       '&$checked': {
-        '& + $bar': {
+        '& + $track': {
           backgroundColor: getCssVariableValue('validColor')
         },
         color: getCssVariableValue('primaryContrastTextColor')
+      }
+    },
+    disabled: {
+      '&$checked + $track': {
+        backgroundColor: `${theme.palette.grey[200]} !important`
+      },
+      '& $thumb': {
+        backgroundColor: 'white'
       }
     }
   },
   MuiTooltip: {
     tooltip: {
-      backgroundColor: theme.palette.grey[800], // TODO should be grey[700] when grey[700] will be supported
+      // TODO should be grey[700] when grey[700] is supported
+      backgroundColor: theme.palette.grey[800],
       borderRadius: '8px',
       fontSize: '1rem',
       color: 'white',
       lineHeight: '1.3',
       padding: '16px'
+    },
+    arrow: {
+      // TODO should be grey[700] when grey[700] is supported
+      color: theme.palette.grey[800]
     },
     popper: {
       opacity: 0.9
@@ -655,24 +700,23 @@ invertedTheme.overrides = {
       opacity: 1
     }
   },
-  MuiSwitch: {
+  MuiSwitch: merge({}, normalTheme.overrides.MuiSwitch, {
     switchBase: {
       color: getCssVariableValue('primaryContrastTextColor')
     },
     colorPrimary: {
-      '& + $bar': {
+      '& + $track': {
         backgroundColor: getCssVariableValue('primaryContrastTextColor')
       },
 
       '&$checked': {
-        '& + $bar': {
-          border:
-            '1px solid ' + getCssVariableValue('primaryContrastTextColor'),
-          boxSizing: 'border-box'
+        '& + $track': {
+          boxSizing: 'border-box',
+          backgroundColor: '#34CE68'
         }
       }
     }
-  },
+  }),
   MuiLinearProgress: {
     colorPrimary: {
       backgroundColor: 'rgba(255,255,255,0.2)'

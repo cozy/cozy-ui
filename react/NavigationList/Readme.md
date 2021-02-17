@@ -44,7 +44,7 @@ const NavigationListExample = ({ style }) => {
             />
           </ListItemSecondaryAction>
         </ListItem>
-        <Divider inset />
+        <Divider variant="inset" />
         <ListItem>
           <ListItemIcon>
             <Icon icon={GearIcon} size={largeSize} />
@@ -58,7 +58,7 @@ const NavigationListExample = ({ style }) => {
             />
           </ListItemSecondaryAction>
         </ListItem>        
-        <Divider inset />
+        <Divider variant="inset" />
         <ListItem>
           <ListItemIcon>
             <Icon icon={PeopleIcon} size={smallSize} />
@@ -75,7 +75,7 @@ const NavigationListExample = ({ style }) => {
             />
           </ListItemSecondaryAction>
         </ListItem>
-        <Divider inset />
+        <Divider variant="inset" />
         <ListItem>
           <ListItemIcon>
             <Icon icon={TrashIcon} className="u-error" size={smallSize} />

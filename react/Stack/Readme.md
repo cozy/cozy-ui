@@ -52,7 +52,7 @@ const StateRadio = ({ name, value, ...props }) => {
     <Stack spacing='l'>
       {spacings.map(spacing  => (
         <div key={spacing}>
-          <Typography variant='subheading' className="u-mb-1">
+          <Typography variant='subtitle1' className="u-mb-1">
             {spacing}
           </Typography>
           <Stack spacing={spacing}>

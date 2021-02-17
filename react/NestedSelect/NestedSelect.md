@@ -106,14 +106,15 @@ const InteractiveExample = () => {
     <>
       <Checkbox label='radio to the left' readOnly name='leftRadio' value={leftRadio} checked={leftRadio} onClick={handleClickLeftRadio} />
       { selectedItem ? <>Selected: { selectedItem.title }<br/></> : null }
-      <Button label='Select' onClick={showModal} ></Button>
+      <Button className='u-ml-0' label='Select' onClick={showModal} ></Button>
       { showingModal ?
         <NestedSelectModal
           canSelectParent={true}
           onSelect={handleSelect}
-          dismissAction={hideModal}
+          onClose={hideModal}
           isSelected={isSelected}
           options={options}
+          radioPosition={leftRadio ? 'left' : 'right'}
           title="Please select letter"
           transformParentItem={transformParentItem}
         /> : null }
@@ -122,8 +123,10 @@ const InteractiveExample = () => {
 };
 
 <>
-  { isTesting()
-    ? <BreakpointsProvider><StaticExample /></BreakpointsProvider>
-    : <InteractiveExample /> }
+  <BreakpointsProvider>{
+    isTesting()
+      ? <StaticExample />
+      : <InteractiveExample />
+  }</BreakpointsProvider>
 </>
 ```

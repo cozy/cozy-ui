@@ -13,7 +13,9 @@ const MEDIUM_DOT = '.75rem'
 const SMALL_DOT = '.625rem'
 
 const customStyles = theme => ({
-  badge: {},
+  badge: {
+    padding: 0
+  },
   root: {},
   top: {
     top: '16%'
@@ -57,6 +59,8 @@ const customStyles = theme => ({
     border: `2px solid ${theme.palette.error.contrastText}`
   },
   dot: {
+    borderRadius: '100%',
+    padding: 0,
     '&$large': {
       height: LARGE_DOT,
       minWidth: LARGE_DOT
