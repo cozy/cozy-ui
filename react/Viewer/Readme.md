@@ -19,6 +19,9 @@ import CarbonCopyIcon from 'cozy-ui/transpiled/react/Icons/CarbonCopy';
 // The DemoProvider inserts a fake cozy-client in the React context.
 import DemoProvider from './docs/DemoProvider';
 import Overlay from 'cozy-ui/transpiled/react/Overlay';
+import {
+  BreakpointsProvider
+} from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
 
 // We provide a collection of (fake) io.cozy.files to be rendered
 const files = [
@@ -99,46 +102,48 @@ const PanelContent = ({ file }) => {
 };
 
 <MuiCozyTheme>
-  <DemoProvider>
-    <Variants initialVariants={initialVariants}>{
-        variant => (
-          <>
-            {variant.toolbar && (
-              <Card className="u-mb-1">
-                <div className="u-dib u-mr-1">Toolbar props :</div>
-                <Checkbox
-                  className="u-dib"
-                  label="Close"
-                  checked={state.showToolbarCloseButton}
-                  onChange={handleToggleToolbarClose}
-                />
-              </Card>
-            )}
-            <button onClick={toggleViewer}>Open viewer</button>
-            {state.viewerOpened && (
-              <Overlay>
-                <Viewer
-                  files={files}
-                  currentIndex={state.currentIndex}
-                  onCloseRequest={toggleViewer}
-                  onChangeRequest={onFileChange}
-                  showNavigation={variant.navigation}
-                  toolbarProps={{
-                    showToolbar: variant.toolbar,
-                    showClose: state.showToolbarCloseButton
-                  }}
-                  panelInfoProps={{
-                    showPanel: ({ file }) => file.class === "pdf" || file.class === "audio",
-                    PanelContent
-                  }}
-                />
-              </Overlay>
-            )}
-          </>
-        )
-      }
-    </Variants>
-  </DemoProvider>
+  <BreakpointsProvider>
+    <DemoProvider>
+      <Variants initialVariants={initialVariants}>{
+          variant => (
+            <>
+              {variant.toolbar && (
+                <Card className="u-mb-1">
+                  <div className="u-dib u-mr-1">Toolbar props :</div>
+                  <Checkbox
+                    className="u-dib"
+                    label="Close"
+                    checked={state.showToolbarCloseButton}
+                    onChange={handleToggleToolbarClose}
+                  />
+                </Card>
+              )}
+              <button onClick={toggleViewer}>Open viewer</button>
+              {state.viewerOpened && (
+                <Overlay>
+                  <Viewer
+                    files={files}
+                    currentIndex={state.currentIndex}
+                    onCloseRequest={toggleViewer}
+                    onChangeRequest={onFileChange}
+                    showNavigation={variant.navigation}
+                    toolbarProps={{
+                      showToolbar: variant.toolbar,
+                      showClose: state.showToolbarCloseButton
+                    }}
+                    panelInfoProps={{
+                      showPanel: ({ file }) => file.class === "pdf" || file.class === "audio",
+                      PanelContent
+                    }}
+                  />
+                </Overlay>
+              )}
+            </>
+          )
+        }
+      </Variants>
+    </DemoProvider>
+  </BreakpointsProvider>
 </MuiCozyTheme>
 ```
 

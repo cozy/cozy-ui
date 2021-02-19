@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import { useClient } from 'cozy-client'
 
-import { withViewerLocales } from './withViewerLocales'
+import useBreakpoints from '../hooks/useBreakpoints'
 import Button from '../Button'
 import IconButton from '../IconButton'
 import Icon from '../Icon'
@@ -12,18 +12,13 @@ import Typography from '../Typography'
 import PreviousIcon from '../Icons/Previous'
 import DownloadIcon from '../Icons/Download'
 
+import { withViewerLocales } from './withViewerLocales'
+
 import styles from './styles.styl'
 
-const Toolbar = ({
-  hidden,
-  isMobile,
-  onMouseEnter,
-  onMouseLeave,
-  file,
-  onClose,
-  t
-}) => {
+const Toolbar = ({ hidden, onMouseEnter, onMouseLeave, file, onClose, t }) => {
   const client = useClient()
+  const { isMobile } = useBreakpoints()
 
   return (
     <div
@@ -61,7 +56,6 @@ const Toolbar = ({
 
 Toolbar.propTypes = {
   hidden: PropTypes.bool,
-  isMobile: PropTypes.bool.isRequired,
   onMouseEnter: PropTypes.func.isRequired,
   onMouseLeave: PropTypes.func.isRequired,
   file: PropTypes.object.isRequired,
