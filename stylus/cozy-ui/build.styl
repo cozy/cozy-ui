@@ -701,103 +701,64 @@ Display an chip that represents complex identity
 /*
     Text
 
-    Utilities that mess only with with wild texts.
+    Utilities to control text styling.
 
     Styleguide utilities.text
 */
 
+
 /*
- Colored text
+    Intentions
 
- Utilities that give text some color from the existing palette.
+    Utilities to style texts that have an intention behind them.
 
- Markup: <p class="{{modifier_class}}">Hello World!</p>
+    Markup: <p class="{{modifier_class}}">A message with an intention</p>
 
- .u-black - block color
- .u-white - white color
- .u-paleGrey - paleGrey color
- .u-silver - silver color
- .u-coolGrey - coolGrey color
- .u-slateGrey - slateGrey color
- .u-charcoalGrey - charcoalGrey color
- .u-dodgerBlue - dodgerBlue color
- .u-scienceBlue - scienceBlue color
- .u-puertoRico - puertoRico color
- .u-emerald - emerald color
- .u-malachite - malachite color
- .u-texasRose - texasRose color
- .u-yourPink - yourPink color
- .u-pomegranate - pomegranate color
- .u-monza - monza color
- .u-portage - portage color
- .u-azure - azure color
- .u-melon - melon color
- .u-blazeOrange - blazeOrange color
- .u-mango - mango color
- .u-pumpkinOrange - pumpkinOrange color
- .u-darkPeriwinkle - darkPeriwinkle color
- .u-purpley - purpley color
- .u-lightishPurple - lightishPurple color
- .u-weirdGreen - weirdGreen color
- .u-overlay - overlay color
- .u-zircon - zircon color
- .u-frenchPass - frenchPass color
- .u-grannyApple - grannyApple color
- .u-seafoamGreen - seafoamGreen color
- .u-brightSun - brightSun color
- .u-chablis - chablis color
- .u-fuchsia - fuchsia color
- .u-lavender - lavender color
- .u-barney - barney color
- .u-primaryColor - primaryColor color
- .u-primaryColorLight - primaryColorLight color
- .u-primaryContrastTextColor - primaryContrastTextColor color
+    .u-valid - Valid text, can be used to indicate a success
+    .u-warn - Warning text, something seems to be wrong.
+    .u-error - Error text, something is definitely wrong. Use with parcimony.
 
- Weight: 1
-
- Styleguide utilities.text.colors
+    Styleguide utilities.text.intentions
 */
 
-/*
-    Error
-
-    Utilities that give text some semantic color in case of error.
-
-    Markup: <p class="{{modifier_class}}">Somehow you messed up somewhere.</p>
-
-    .u-error - simple error text
-
-    Weight: 2
-
-    Styleguide utilities.text.error
-*/
 
 /*
- Valid
+    Colored text
 
- Utilities that give text some semantic color in case of success.
+    Utilities that give text a color from the existing palette.
+    In general, try to use variables with [semantic names](#kssref-utilities-text-intentions)
+    instead of variables with names referring to colors. This will help to
+    support theming.
 
- Markup: <p class="{{modifier_class}}">Yay, you did it!</p>
+    Markup: <p class="{{modifier_class}}">Hello World!</p>
 
- .u-valid - simple valid text
+    .u-primaryColor - primaryColor color
+    .u-primaryColorLight - primaryColorLight color
+    .u-primaryContrastTextColor - primaryContrastTextColor color
+    .u-black - block color
+    .u-white - white color
+    .u-paleGrey - paleGrey color
+    .u-silver - silver color
+    .u-coolGrey - coolGrey color
+    .u-slateGrey - slateGrey color
+    .u-charcoalGrey - charcoalGrey color
+    .u-dodgerBlue - dodgerBlue color
+    .u-scienceBlue - scienceBlue color
+    .u-emerald - emerald color
+    .u-malachite - malachite color
+    .u-weirdGreen - weirdGreen color
+    .u-yourPink - yourPink color
+    .u-pomegranate - pomegranate color
+    .u-monza - monza color
+    .u-chablis - chablis color
+    .u-fuchsia - fuchsia color
+    .u-mango - mango color
+    .u-overlay - overlay color
+    .u-zircon - zircon color
 
- Weight: 4
+    Weight: 1
 
- Styleguide utilities.text.valid
-*/
-
-/*
- Warning
-
- Utilities that give text some semantic color in case of warning.
-
- Markup: <p class="{{modifier_class}}">Ok, something went wrong but it's not that bad.</p>
-
- .u-warn - simple warning text
-
- Weight: 5
-
- Styleguide utilities.text.warn
+    Styleguide utilities.text.colors
 */
 
 /*
