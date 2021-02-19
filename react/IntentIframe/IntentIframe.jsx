@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import get from 'lodash/get'
+
 import { Intents } from 'cozy-interapp'
 import { withClient } from 'cozy-client'
 
@@ -55,14 +57,19 @@ class IntentIframe extends React.Component {
   }
 
   render() {
+    const { iframeProps } = this.props
     const { error, loading } = this.state
+
     return (
       <div
         ref={intentViewer => (this.intentViewer = intentViewer)}
         className={styles.intentContainer}
         aria-busy={loading}
+        {...get(iframeProps, 'wrapperProps')}
       >
-        {loading && <Spinner size="xxlarge" />}
+        {loading && (
+          <Spinner size="xxlarge" {...get(iframeProps, 'spinnerProps')} />
+        )}
         {error && (
           <div className={styles.intentContainer__error}>{error.message}</div>
         )}
@@ -79,7 +86,11 @@ IntentIframe.propTypes = {
   data: PropTypes.object,
   onCancel: PropTypes.func,
   onError: PropTypes.func,
-  onTerminate: PropTypes.func.isRequired
+  onTerminate: PropTypes.func.isRequired,
+  iframeProps: PropTypes.shape({
+    wrapperProps: PropTypes.object,
+    spinnerProps: PropTypes.object
+  })
 }
 
 IntentIframe.defaultProps = {
