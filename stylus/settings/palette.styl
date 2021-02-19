@@ -24,7 +24,11 @@ $warnColor=#FF962F
 /*
     Colors
 
-    Colors used in the user interface. You can directly use the var name assiociated with its hexadecimal.
+    Colors used in the user interface.
+
+    ℹ️ In general, you are advised to use [theme colors](#kssref-settings-theme) when
+    building your components: this will ensure your components react correctly when
+    changing the theme.
 
     Styleguide Settings.colors
 */
@@ -40,7 +44,6 @@ html
     Stylus: charcoalGrey -  #32363F, CSS: var(--charcoalGrey)
     Stylus: black        -  #000000, CSS: var(--black)
 
-    Weight: -1
 
     Styleguide Settings.colors.grey
     */
@@ -52,6 +55,7 @@ html
     --charcoalGrey  #32363F
     --black         #000000
     --overlay       rgba(50, 54, 63, .5)
+
     /*
     Blue
 
@@ -64,6 +68,7 @@ html
     --zircon       #F5FAFF
     --dodgerBlue   #297EF2
     --scienceBlue  #0B61D6
+
     /*
     Green
 
@@ -76,6 +81,7 @@ html
     --weirdGreen   #40DE8E
     --emerald      #35CE68
     --malachite    #08b442
+
     /*
     Orange
 
@@ -84,6 +90,7 @@ html
     Styleguide Settings.colors.orange
     */
     --mango          #FF962F
+
     /*
     Red
 
@@ -100,14 +107,21 @@ html
     --fuchsia      #FC4C83
     --pomegranate  #F52D2D
     --monza        #DD0505
-    /*
-        Theme
 
-        Colors theme used in the user interface. You can directly use the var name assiociated with its hexadecimal.
+/*
+    Theme
 
-        Styleguide Settings.theme
-    */
+    Semantic colors suitable for theming. We encourage users of cozy-ui to use semantic colors
+    instead of absolute colors to facilitate theming.
 
+    We try to use a naming schema that is close to what is use in [Material-UI React's theming](https://material-ui.com/customization/palette/#palette-colors).
+    It is possible that we have some discrepancies. If you see something that seems out
+    of the ordinary and where you think we could reduce the difference with MUI, please
+    do not hesitate to [open an issue](https://github.com/cozy/cozy-ui/issues/new).
+
+    Styleguide Settings.theme
+*/
+html, .CozyTheme--normal
     /*
     Primary
 
@@ -120,25 +134,83 @@ html
 
     Styleguide Settings.theme.primary
     */
-html, .CozyTheme--normal
     --primaryColor #297EF2
     --primaryColorDark #0B61D6
     --primaryColorLight #5C9DF5
     --primaryColorLighter #4B93F7 // should not be used
     --primaryColorLightest #9FC4FB
 
+    /*
+    Secondary
+
+    Stylus: secondaryColor   - #fd7461, CSS: var(--secondaryColor)
+    Stylus: secondaryColorDark   - #E3503B, CSS: var(--secondaryColorDark)
+    Stylus: secondaryColorLight   - #ffdeda, CSS: var(--secondaryColorLight)
+    Stylus: secondaryColorLighter   - #fd7461, CSS: var(--secondaryColorLighter)
+    Stylus: secondaryColorLightest   - #FECDC6, CSS: var(--secondaryColorLightest)
+
+    Styleguide Settings.theme.secondary
+    */
     --secondaryColor #fd7461
     --secondaryColorDark #E3503B
     --secondaryColorLight #ffdeda // lighten(dodgerBlue, 24)
     --secondaryColorLighter #fd7461 //
     --secondaryColorLightest #FECDC6
 
-    --primaryBackgroundLight: var(--zircon)
+    /*
+    Background colors
 
-    --primaryTextColor var(--charcoalGrey)
-    --secondaryTextColor var(--coolGrey)
+    Stylus: primaryBackgroundLight -  #F5FAFF, CSS: var(--primaryBackgroundLight)
+    Stylus: paperBackgroundColor -  #FFF, CSS: var(--paperBackgroundColor)
+    Stylus: defaultBackgroundColor -  #F5F6F7, CSS: var(--defaultBackgroundColor)
+
+    Styleguide Settings.theme.background
+    */
+    --primaryBackgroundLight: #F5FAFF
+    --paperBackgroundColor: #FFF
+    --defaultBackgroundColor: #F5F6F7 // paleGrey
+
+    /*
+    Text colors
+
+    Stylus: primaryTextColor -  #32363F, CSS: var(--primaryTextColor)
+    Stylus: secondaryTextColor - #95999D, CSS: var(--secondaryTextColor)
+    Stylus: primaryContrastTextColor -  #FFF, CSS: var(--primaryContrastTextColor)
+    Stylus: primaryContrastTextColor -  #FFF, CSS(--secondaryContrastTextColor)
+
+    Styleguide Settings.theme.text
+    */
+    --primaryTextColor #32363F
+    --secondaryTextColor #95999D
     --primaryContrastTextColor #FFF
     --secondaryContrastTextColor #FFF
+
+
+    /*
+    Components colors
+
+    Stylus: dividerColor -  #D6D8Da, CSS: var(--dividerColor)
+    Styleguide Settings.theme.components
+    */
+    --dividerColor: #D6D8Da
+
+    /*
+    Intention colors
+
+    Stylus: validColor -  #35CE68, CSS: var(--validColor)
+    Stylus: warnColor -  #FF962F, CSS: var(--warnColor)
+    Stylus: dangerColor -  #F52D2D, CSS: var(--dangerColor)
+    Styleguide Settings.theme.intention
+    */
+    --validColor: $validColor
+    --warnColor: $warnColor
+    --dangerColor: $dangerColor
+
+
+    /*
+    The CSS variables below are historic and we should strive not to
+    use them. Prefer to use directly semantic colors above.
+    */
     --spinnerColor var(--primaryColor)
 
     --linkColor var(--primaryColor)
@@ -160,9 +232,6 @@ html, .CozyTheme--normal
     --secondaryButtonActiveColor: var(--silver)
     --secondaryButtonContrastColor: var(--black)
 
-    --paperBackgroundColor: #FFF
-    --defaultBackgroundColor: var(--paleGrey)
-    --dividerColor: var(--silver)
     --dividerColor2: var(--coolGrey)
 
     --iconColor: currentColor
@@ -171,10 +240,6 @@ html, .CozyTheme--normal
 
     --errorColor: $errorColor
     --errorBackground: $errorBackground
-
-    --validColor: $validColor
-    --warnColor: $warnColor
-    --dangerColor: $dangerColor
 
     --neutralBackground: var(--paleGrey)
 
