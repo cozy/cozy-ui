@@ -1,3 +1,18 @@
+# [44.11.0](https://github.com/cozy/cozy-ui/compare/v44.10.1...v44.11.0) (2021-02-22)
+
+
+### Bug Fixes
+
+* CozyDialog Title should have ellipsis with long text ([ed7022f](https://github.com/cozy/cozy-ui/commit/ed7022f))
+* Revert travis and deploy modification ([4ca25a7](https://github.com/cozy/cozy-ui/commit/4ca25a7))
+* Viewer isMobile based on breakpoint, not device ([b488a69](https://github.com/cozy/cozy-ui/commit/b488a69))
+
+
+### Features
+
+* IntentIframe can receive props to be tweaked ([54be890](https://github.com/cozy/cozy-ui/commit/54be890))
+* Use semantic colors for wizard ([2423b5c](https://github.com/cozy/cozy-ui/commit/2423b5c))
+
 ## [44.10.1](https://github.com/cozy/cozy-ui/compare/v44.10.0...v44.10.1) (2021-02-16)
 
 
