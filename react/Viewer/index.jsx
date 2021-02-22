@@ -134,7 +134,6 @@ export class Viewer extends Component {
           hasNext={hasNext}
           onPrevious={this.onPrevious}
           onNext={this.onNext}
-          isMobile={isMobileDevice()}
           expanded={expanded}
           toolbarProps={toolbarProps}
           showNavigation={showNavigation}

@@ -21,6 +21,7 @@ const IntentDialogOpener = props => {
     tag,
     onComplete,
     onDismiss,
+    iframeProps,
     ...dialogProps
   } = props
   const [modalOpened, setModalOpened] = useState(false)
@@ -61,6 +62,7 @@ const IntentDialogOpener = props => {
           create={create}
           onCancel={handleDismiss}
           onTerminate={handleComplete}
+          iframeProps={iframeProps}
         />
       </Dialog>
     )
@@ -85,7 +87,12 @@ IntentDialogOpener.propTypes = {
   /** Whether the dialog close button is shown */
   showCloseButton: PropTypes.bool.isRequired,
   /** Tag used to wrap children */
-  tag: PropTypes.string.isRequired
+  tag: PropTypes.string.isRequired,
+  /** Props to be passed to the iframe */
+  iframeProps: PropTypes.shape({
+    wrapperProps: PropTypes.object,
+    spinnerProps: PropTypes.object
+  })
 }
 
 IntentDialogOpener.defaultProps = {
