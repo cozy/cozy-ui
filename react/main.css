@@ -27232,7 +27232,7 @@ body {
   width: 2rem;
   height: 2rem;
   border: 0.125rem solid var(--white);
-  background-color: var(--dodgerBlue);
+  background-color: var(--primaryColor);
   border-radius: 50%;
 }
 @media (max-width: 30rem), (max-height: 23.438rem) {
@@ -27244,12 +27244,12 @@ body {
   line-height: 1.5;
 }
 .wizard-desc--z9QXl a {
-  color: var(--dodgerBlue);
+  color: var(--primaryColor);
   text-decoration: none;
 }
 .wizard-desc--z9QXl a:hover,
 .wizard-desc--z9QXl a:focus {
-  color: var(--scienceBlue);
+  color: var(--primaryColorDark);
 }
 @media (max-width: 30rem), (max-height: 23.438rem) {
   .wizard-desc--z9QXl {
@@ -27340,10 +27340,10 @@ body {
   border-radius: 0.125rem;
 }
 .wizard-dualfield--focus--2Om-l {
-  border-color: var(--dodgerBlue);
+  border-color: var(--primaryColor);
 }
 .wizard-dualfield--error--2NR9g {
-  border-color: var(--pomegranate);
+  border-color: var(--errorColor);
 }
 .wizard-dualfield-wrapper--VN8PM {
   flex: 1 1 auto;
