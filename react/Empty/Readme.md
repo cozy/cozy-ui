@@ -20,6 +20,17 @@ const styles = {
 </div>
 ```
 
+### Without layout
+
+```
+import Empty from 'cozy-ui/transpiled/react/Empty';
+import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy';
+
+<>
+  <Empty icon={CozyIcon} layout={false} title="This list is empty" text="Try adding some content to this list"/>
+</>
+```
+
 ### With some additional content
 
 ```
