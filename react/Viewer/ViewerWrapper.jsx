@@ -5,7 +5,7 @@ import cx from 'classnames'
 import styles from './styles.styl'
 
 const ViewerWrapper = ({ className, children }) => (
-  <div className={cx(styles['viewer-wrapper'], className)} role="viewer">
+  <div id="viewer-wrapper" className={cx(styles['viewer-wrapper'], className)}>
     {children}
   </div>
 )
