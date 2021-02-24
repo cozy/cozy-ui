@@ -162,7 +162,7 @@ See our [travis configuration](./travis.yml) for more information.
 
 ## License
 
-Cozy UI is developed by Cozy Cloud and distributed under the AGPL-3.0 license.
+Cozy UI is developed by Cozy Cloud and distributed under the MIT license.
 
 ## What is Cozy?
 
