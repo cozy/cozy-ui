@@ -24538,6 +24538,16 @@ body {
     margin: 0.313rem 1.5rem 0;
   }
 }
+.c-empty-container--1LpH9 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 auto;
+  align-self: center;
+  padding: 1rem 0;
+  text-align: center;
+  max-width: 100%;
+}
 
 .Figure-currency--195-B {
   color: var(--secondaryTextColor);
