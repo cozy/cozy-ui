@@ -1,8 +1,11 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { TextViewer, isMarkdown } from './TextViewer'
-import { createMockClient } from 'cozy-client'
 import renderer from 'react-test-renderer'
+
+import { createMockClient } from 'cozy-client'
+
+import { BreakpointsProvider } from '../hooks/useBreakpoints'
+import { TextViewer, isMarkdown } from './TextViewer'
 
 const client = createMockClient({})
 
@@ -45,19 +48,31 @@ describe('TextViewer Component', () => {
     const comp = shallow(<TextViewer {...props} />)
     expect(comp).toMatchSnapshot()
   })
+
   it('should display the error component and render with renderFallback', () => {
     const comp = renderer.create(
-      <TextViewer
-        {...props}
-        renderFallbackExtraContent={file => <span>{file.name}</span>}
-      />
+      <BreakpointsProvider>
+        <TextViewer
+          {...props}
+          renderFallbackExtraContent={file => <span>{file.name}</span>}
+        />
+      </BreakpointsProvider>
     )
-    comp.getInstance().setState({ error: true, loading: false })
+
+    const inst = comp.root.children[0].instance
+    inst.setState({ error: true, loading: false })
     expect(comp.toJSON()).toMatchSnapshot()
   })
+
   it('should display the text viewer', () => {
-    const comp = renderer.create(<TextViewer {...props} />)
-    comp.getInstance().setState({
+    const comp = renderer.create(
+      <BreakpointsProvider>
+        <TextViewer {...props} />
+      </BreakpointsProvider>
+    )
+
+    const inst = comp.root.children[0].instance
+    inst.setState({
       loading: false,
       isMarkdown: false,
       text: 'The content of my file'
@@ -66,8 +81,14 @@ describe('TextViewer Component', () => {
   })
 
   it('should display the markdown viewer', () => {
-    const comp = renderer.create(<TextViewer {...props} />)
-    comp.getInstance().setState({
+    const comp = renderer.create(
+      <BreakpointsProvider>
+        <TextViewer {...props} />
+      </BreakpointsProvider>
+    )
+
+    const inst = comp.root.children[0].instance
+    inst.setState({
       loading: false,
       isMarkdown: true,
       text:

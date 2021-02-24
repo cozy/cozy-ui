@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
-
 import Hammer from 'hammerjs'
 
-import styles from './styles.styl'
-
-import Spinner from '../Spinner'
+import ViewerSpinner from './ViewerSpinner'
 import ImageLoader from './ImageLoader'
-
 import NoNetworkViewer from './NoNetworkViewer'
+
+import styles from './styles.styl'
 
 const MIN_SCALE = 1
 const MAX_SCALE = 6
@@ -16,7 +14,7 @@ const FRICTION = 0.9 // When the photo is paning after a pan gesture ended sudde
 
 const clamp = (min, value, max) => Math.max(min, Math.min(max, value))
 
-export default class ImageViewer extends Component {
+class ImageViewer extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -213,16 +211,16 @@ export default class ImageViewer extends Component {
     if (this.state.canceled) {
       return <NoNetworkViewer onReload={this.reload} />
     }
+
     const { file } = this.props
     const { scale, offsetX, offsetY } = this.state
     const style = {
       transform: `scale(${scale}) translate(${offsetX}px, ${offsetY}px)`
     }
+
     return (
       <div className={styles['viewer-imageviewer']}>
-        {this.state.loading && (
-          <Spinner size="xxlarge" middle noMargin color="white" />
-        )}
+        {this.state.loading && <ViewerSpinner />}
         {file && (
           <ImageLoader
             file={file}
@@ -326,3 +324,5 @@ export default class ImageViewer extends Component {
     }
   }
 }
+
+export default ImageViewer
