@@ -1,3 +1,10 @@
+# [44.12.0](https://github.com/cozy/cozy-ui/compare/v44.11.0...v44.12.0) (2021-02-24)
+
+
+### Features
+
+* Have the option of not having a layout ([f42d40c](https://github.com/cozy/cozy-ui/commit/f42d40c))
+
 # [44.11.0](https://github.com/cozy/cozy-ui/compare/v44.10.1...v44.11.0) (2021-02-22)
 
 
