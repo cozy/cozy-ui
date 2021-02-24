@@ -2,7 +2,9 @@
   "Viewer": {
     "download": "Télécharger",
     "retry": "Réessayer",
-    "error": "Ce fichier n'a pas pu être chargé. Avez-vous une connexion internet qui fonctionne actuellement ?",
+    "error": {
+      "network": "Ce fichier n'a pas pu être chargé. Avez-vous une connexion internet qui fonctionne actuellement ?"
+    },
     "close": "Fermer",
     "goto": "Ouvrir %{url}",
     "next": "Suivante",
