@@ -1,3 +1,15 @@
+# [44.13.0](https://github.com/cozy/cozy-ui/compare/v44.12.0...v44.13.0) (2021-02-25)
+
+
+### Bug Fixes
+
+* Viewer spinners should not be white in mobile ([8deb594](https://github.com/cozy/cozy-ui/commit/8deb594))
+
+
+### Features
+
+* Ability to show maintenance ([29d3c2e](https://github.com/cozy/cozy-ui/commit/29d3c2e))
+
 # [44.12.0](https://github.com/cozy/cozy-ui/compare/v44.11.0...v44.12.0) (2021-02-24)
 
 
