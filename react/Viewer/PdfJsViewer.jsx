@@ -5,8 +5,7 @@ import cx from 'classnames'
 import throttle from 'lodash/throttle'
 import flow from 'lodash/flow'
 
-import { Spinner } from '../Spinner'
-
+import ViewerSpinner from './ViewerSpinner'
 import { withViewerLocales } from './withViewerLocales'
 import withFileUrl from './withFileUrl'
 import ToolbarButton from './PdfToolbarButton'
@@ -132,7 +131,7 @@ export class PdfJsViewer extends Component {
           onLoadSuccess={this.onLoadSuccess}
           onLoadError={this.onLoadError}
           className={styles['viewer-pdfviewer-pdf']}
-          loading={<Spinner size="xxlarge" middle noMargin color="white" />}
+          loading={<ViewerSpinner />}
         >
           {renderAllPages ? (
             [...Array(totalPages)].map((_, page) => (
