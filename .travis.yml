@@ -15,7 +15,7 @@ script:
   - yarn screenshots --mode react --viewport desktop
   - yarn screenshots --mode react --viewport 300x600 --no-empty-screenshot-dir
   - yarn screenshots --mode stack --no-empty-screenshot-dir
-  - yarn screenshots --mode kss --no-empty-screenshot-dir
+  - travis_wait yarn screenshots --mode kss --no-empty-screenshot-dir
   - yarn argos:upload --token $ARGOS_TOKEN --branch $TRAVIS_BRANCH --commit $TRAVIS_COMMIT
 deploy:
   - provider: script
