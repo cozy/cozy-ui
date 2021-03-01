@@ -1,3 +1,10 @@
+# [44.14.0](https://github.com/cozy/cozy-ui/compare/v44.13.0...v44.14.0) (2021-03-01)
+
+
+### Features
+
+* Add filter grayscale utility class to styleguide ([043ae4f](https://github.com/cozy/cozy-ui/commit/043ae4f))
+
 # [44.13.0](https://github.com/cozy/cozy-ui/compare/v44.12.0...v44.13.0) (2021-02-25)
 
 
