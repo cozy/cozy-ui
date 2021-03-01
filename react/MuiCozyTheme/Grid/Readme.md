@@ -8,7 +8,7 @@ Displays a Grid of items
 import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid';
 import Card from 'cozy-ui/transpiled/react/Card';
 
-<Grid container spacing={24}>
+<Grid container spacing={3}>
     <Grid item xs={12}>
        <Card>Homer Simpson</Card>
     </Grid>
@@ -39,7 +39,7 @@ import Card from 'cozy-ui/transpiled/react/Card';
 import Grid from '.';
 import Card from '../../Card';
 
-<Grid container spacing={8}>
+<Grid container spacing={1}>
     <Grid item xs={12}>
        <Card>Homer Simpson</Card>
     </Grid>

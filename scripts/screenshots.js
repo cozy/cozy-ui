@@ -78,13 +78,25 @@ const getComponentNameFromTestId = testId => {
   return testId.split('-example-')[0]
 }
 
+const LINK_BASE = 'file://'
+
+const formatLink = (parsedStyleguideURL, relativeLink) => {
+  if (parsedStyleguideURL.protocol === 'file:') {
+    return `file://${relativeLink}`
+  } else {
+    return `${parsedStyleguideURL.toString()}${relativeLink}`
+  }
+}
+
 /**
  * Fetch all available components on the styleguide and returns an array
  * of { name, link } describing each component.
  * Components are sorted by name.
  */
-const fetchAllComponents = async (page, styleguideIndexURL, config) => {
-  console.log(`Opening page ${styleguideIndexURL}`)
+const fetchAllComponents = async (page, args, config) => {
+  const styleguideIndexURL = `${args.styleguideUrl}/index.html`
+
+  console.log(`Opening styleguide ${styleguideIndexURL}`)
   await page.goto(styleguideIndexURL, {
     waitUntil: 'load',
     timeout: 0
@@ -110,6 +122,7 @@ const fetchAllComponents = async (page, styleguideIndexURL, config) => {
     x => x.name
   )
   const allLinks = []
+  const parsedStyleguideURL = new URL(args.styleguideUrl)
   for (const cate of sortedCategoriesNames) {
     await page.goto(cate.link, { waitUntil: 'load', timeout: 0 })
     await sleep(100)
@@ -154,7 +167,7 @@ const fetchAllComponents = async (page, styleguideIndexURL, config) => {
       allLinks,
       componentLinks.map(link => ({
         ...link,
-        link: 'file://' + link.link,
+        link: formatLink(parsedStyleguideURL, link.link),
         name: getComponentNameFromTestId(link.testId)
       }))
     )
@@ -168,19 +181,12 @@ const fetchAllComponents = async (page, styleguideIndexURL, config) => {
  * - Throws if styleguide has not been built
  * - Creates the screenshot dir if it does not exist
  *
- * @param {string} options.styleguideDir - Where are the HTML pages of the styleguide
  * @param {string} options.screenshotDir - Where to store screenshots
  * @param {boolean} options.emptyScreenshotDir - Whether to empty the screenshot dir
  *
  */
 const prepareFS = async options => {
-  const { styleguideDir, screenshotDir, emptyScreenshotDir } = options
-  if (!fs.existsSync(styleguideDir)) {
-    throw new Error(
-      `Styleguide does not seem to have been built (searching in ${styleguideDir}). Please run yarn build:doc:react.`
-    )
-  }
-
+  const { screenshotDir, emptyScreenshotDir } = options
   if (!fs.existsSync(screenshotDir)) {
     console.log(`Creating screenshot directory ${screenshotDir}`)
     fs.mkdirSync(screenshotDir)
@@ -274,22 +280,13 @@ const cacheToDisk = (fnToCache, options) =>
   }
 
 const screenshotReactStyleguide = async (page, args, config) => {
-  const styleguideIndexURL = `file://${path.join(
-    args.styleguideDir,
-    '/index.html'
-  )}`
-
   const cachedFetchAllComponents = cacheToDisk(fetchAllComponents, {
     cacheFile: args.cacheFile,
     onLoadCache: () =>
       console.log(`Using cached component list from ${args.cacheFile}`),
     onSaveCache: () => console.log(`Saved component list to ${args.cacheFile}`)
   })
-  let components = await cachedFetchAllComponents(
-    page,
-    styleguideIndexURL,
-    config
-  )
+  let components = await cachedFetchAllComponents(page, args, config)
   if (args.component) {
     components = components.filter(component =>
       component.name.includes(args.component)
@@ -353,7 +350,8 @@ const screenshotStackExamples = async (page, args) => {
 }
 
 const screenshotKSSStyleguide = async (page, args) => {
-  const resolveLink = relativePage => `file://${path.join(args.kssDir, relativePage)}`
+  const resolveLink = relativePage =>
+    `${LINK_BASE}${path.join(args.kssDir, relativePage)}`
   const kssPage = resolveLink('index.html')
   await page.goto(kssPage)
 
@@ -363,9 +361,11 @@ const screenshotKSSStyleguide = async (page, args) => {
   const ignore = [/^utilities/]
 
   const WIDTH = 800
-  await page.setViewport({ width: WIDTH, height: 800})
+  await page.setViewport({ width: WIDTH, height: 800 })
   const links = await page.evaluate(() => {
-    const navLinks = Array.from(document.querySelectorAll('.kss-nav > .kss-nav__item > a[href]'))
+    const navLinks = Array.from(
+      document.querySelectorAll('.kss-nav > .kss-nav__item > a[href]')
+    )
     return navLinks.map(node => node.getAttribute('href'))
   })
 
@@ -373,8 +373,9 @@ const screenshotKSSStyleguide = async (page, args) => {
     await page
     await page.goto(resolveLink(link))
 
-    const sections = Array.from(await page.$$('.kss-section--depth-2'))
-      .concat(Array.from(await page.$$('.kss-section--depth-3')))
+    const sections = Array.from(await page.$$('.kss-section--depth-2')).concat(
+      Array.from(await page.$$('.kss-section--depth-3'))
+    )
     for (let section of sections) {
       const idProp = await section.getProperty('id')
       const idValue = await idProp.jsonValue()
@@ -388,19 +389,24 @@ const screenshotKSSStyleguide = async (page, args) => {
 
       // Need to resize the viewport otherwise screenshots are blank
       const body = await page.$('body')
-      const bodySize = await body.boundingBox();
-      await page.setViewport({ height: Math.ceil(bodySize.height), width:  WIDTH });
+      const bodySize = await body.boundingBox()
+      await page.setViewport({
+        height: Math.ceil(bodySize.height),
+        width: WIDTH
+      })
 
       console.log('Screenshotting section', idValue)
       await page.screenshot({
         clip: await section.boundingBox(),
-        path: path.join(
-          args.screenshotDir,
-          `kss-${ref}-${id}.png`
-        )
+        path: path.join(args.screenshotDir, `kss-${ref}-${id}.png`)
       })
     }
   }
+}
+
+const urlArgument = rawURL => {
+  const c = new URL(rawURL)
+  return rawURL
 }
 
 /**
@@ -418,10 +424,10 @@ const main = async () => {
     dest: 'screenshotDir',
     type: pathArgument
   })
-  parser.addArgument('--styleguide-dir', {
+  parser.addArgument('--styleguide-url', {
     required: true,
-    dest: 'styleguideDir',
-    type: pathArgument
+    dest: 'styleguideUrl',
+    type: urlArgument
   })
   parser.addArgument('--kss-dir', {
     required: true,
@@ -452,7 +458,6 @@ const main = async () => {
   const parsedViewport = parseViewportArgument(args.viewport)
 
   await prepareFS({
-    styleguideDir: args.styleguideDir,
     screenshotDir: args.screenshotDir,
     emptyScreenshotDir: args.emptyScreenshotDir
   })
@@ -461,7 +466,7 @@ const main = async () => {
   if (args.mode == 'react') {
     await screenshotReactStyleguide(page, args, config)
   } else if (args.mode == 'stack') {
-  await screenshotStackExamples(page, args)
+    await screenshotStackExamples(page, args)
   } else if (args.mode == 'kss') {
     await screenshotKSSStyleguide(page, args)
   }

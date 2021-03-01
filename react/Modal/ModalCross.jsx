@@ -3,15 +3,13 @@ import styles from './styles.styl'
 import cx from 'classnames'
 import Icon from '../Icon'
 import palette from '../palette'
-import withBreakpoints from '../helpers/withBreakpoints'
-
 import CrossIcon from 'cozy-ui/transpiled/react/Icons/Cross'
 
-export const ModalCrossIcon = withBreakpoints()(props => {
-  const {
-    color,
-    breakpoints: { isMobile }
-  } = props
+import useBreakpoints from '../hooks/useBreakpoints'
+
+export const ModalCrossIcon = props => {
+  const { isMobile } = useBreakpoints()
+  const { color } = props
   return (
     <Icon
       icon={CrossIcon}
@@ -19,7 +17,7 @@ export const ModalCrossIcon = withBreakpoints()(props => {
       color={color || palette['coolGrey']}
     />
   )
-})
+}
 
 const ModalCross = ({ onClick, color, className }) => (
   <button

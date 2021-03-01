@@ -11,6 +11,7 @@ import Button from 'cozy-ui/transpiled/react/Button';
 import BarButton from 'cozy-ui/transpiled/react/BarButton';
 import Paper from 'cozy-ui/transpiled/react/Paper';
 import DotsIcon from 'cozy-ui/transpiled/react/Icons/Dots'
+import Typography from 'cozy-ui/transpiled/react/Typography'
 
 const props = [{}, { disabled: true}, { busy: true }];
 
@@ -32,16 +33,18 @@ const themesSupportingContext = [
     )}
     <SubTitle className='u-white'>BarButton</SubTitle>
     <BarButton icon={DotsIcon} />
-    <div className='u-bg-white u-p-1 u-mb-1'>
-      We can always go back to normal theme if a child must "get out"
-      of the theme.
-      <CozyTheme variant='normal'>
-        <Button className='u-ml-0 u-mt-half' theme='primary' label='Primary button' />
-        <p>
-          <a href='#' className='u-link'>An u-link span</a>
-        </p>
-      </CozyTheme>
-    </div>
+    <CozyTheme variant='normal'>
+      <Paper className='u-p-1 u-mb-1'>
+          <Typography variant='body1'>
+            We can always go back to normal theme if a child must "get out"
+          of the theme.
+          </Typography>
+          <Button className='u-ml-0 u-mt-half' theme='primary' label='Primary button' />
+          <p>
+            <a href='#' className='u-link'>An u-link span</a>
+          </p>
+      </Paper>
+    </CozyTheme>
   </Paper>
   <Paper className='u-p-1 u-stack-s'>
     <div class='u-error'>

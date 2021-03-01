@@ -8,7 +8,7 @@ import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid';
 import GridItem from 'cozy-ui/transpiled/react/Labs/GridItem';
 import Card from 'cozy-ui/transpiled/react/Card';
 
-<Grid container spacing={24}>
+<Grid container spacing={3}>
     <GridItem>
         <Card className="u-ellipsis">Homer Simpson</Card>
     </GridItem>

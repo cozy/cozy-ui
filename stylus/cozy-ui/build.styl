@@ -587,38 +587,6 @@ table.c-table
         @extend $table-ellipsis--legacy
 
 
-
-/*
- Accordion
-
-Basic accordion to gracefully hide/display long content.
-
-NB: You'll have to deal the behaviour with javascript which is basically adding/removing `is-active` classes and changing aria attributes accordingly on `c-accordion-title` & `c-accordion-body` elements when activated.
-
- Markup:
-<div class="c-accordion">
-    <div class="c-accordion-item">
-        <div class="c-accordion-title is-active" aria-selected="true" aria-controls="body1" role="tab" tabindex="0">
-            Title (is-active)
-        </div>
-        <div class="c-accordion-body is-active" aria-hidden="false" aria-labelledby="body1" rol="tabpanel">
-            Dolor nulla cursus justo netus sociis facilisis maecenas arcu purus, senectus elit nostra conubia libero ornare consectetur sit, elementum ultrices suscipit blandit nunc hendrerit ipsum mi. Facilisis convallis aliquet tempor nunc interdum egestas est ac, hac massa hendrerit odio lectus dignissim quam, cursus elit a tristique nec felis imperdiet. Ridiculus nostra torquent vel nisi taciti ad pharetra lobortis, rutrum purus dui felis tempor cras. Curae id placerat suspendisse purus eget hac sodales primis, aptent potenti facilisis suscipit felis morbi metus parturient pretium, conubia orci ultrices dictum sit mollis lacinia. Ultricies a cum sollicitudin duis in vivamus, eros suscipit viverra donec consectetur, mattis sed eleifend sociis vitae. Magnis pharetra fusce vivamus egestas viverra mauris vehicula, libero velit semper tortor leo augue, aenean senectus ad malesuada mus tincidunt. Semper mattis magnis egestas nec etiam hendrerit ridiculus eleifend bibendum nascetur auctor primis quam, aenean tellus adipiscing vulputate mauris class sem himenaeos consequat condimentum ullamcorper tempor.
-        </div>
-    </div>
-    <div class="c-accordion-item">
-        <div class="c-accordion-title" aria-selected="false" aria-controls="body2" role="tab" tabindex="0">
-            Title not displayed
-        </div>
-        <div class="c-accordion-body" aria-hidden="true" aria-labelledby="body2" rol="tabpanel">
-            Dolor nulla cursus justo netus sociis facilisis maecenas arcu purus, senectus elit nostra conubia libero ornare consectetur sit, elementum ultrices suscipit blandit nunc hendrerit ipsum mi. Facilisis convallis aliquet tempor nunc interdum egestas est ac, hac massa hendrerit odio lectus dignissim quam, cursus elit a tristique nec felis imperdiet. Ridiculus nostra torquent vel nisi taciti ad pharetra lobortis, rutrum purus dui felis tempor cras. Curae id placerat suspendisse purus eget hac sodales primis, aptent potenti facilisis suscipit felis morbi metus parturient pretium, conubia orci ultrices dictum sit mollis lacinia. Ultricies a cum sollicitudin duis in vivamus, eros suscipit viverra donec consectetur, mattis sed eleifend sociis vitae. Magnis pharetra fusce vivamus egestas viverra mauris vehicula, libero velit semper tortor leo augue, aenean senectus ad malesuada mus tincidunt. Semper mattis magnis egestas nec etiam hendrerit ridiculus eleifend bibendum nascetur auctor primis quam, aenean tellus adipiscing vulputate mauris class sem himenaeos consequat condimentum ullamcorper tempor.
-        </div>
-    </div>
-</div>
-
- Styleguide Components.accordion
-*/
-@require '../../react/Accordion/styles.styl'
-
 /*
  Avatar
 

@@ -1,17 +1,14 @@
 import React from 'react'
 import cx from 'classnames'
 import { Button } from '../Button'
-import withBreakpoints from '../helpers/withBreakpoints'
 import styles from './styles.styl'
-
 import PreviousIcon from '../Icons/Previous'
 
+import useBreakpoints from '../hooks/useBreakpoints'
+
 const DumbModalBackButton = props => {
-  const {
-    breakpoints: { isMobile },
-    className,
-    ...rest
-  } = props
+  const { isMobile } = useBreakpoints()
+  const { className, ...rest } = props
 
   return (
     <Button
@@ -35,6 +32,6 @@ const DumbModalBackButton = props => {
   )
 }
 
-const ModalBackButton = withBreakpoints()(DumbModalBackButton)
+const ModalBackButton = DumbModalBackButton
 
 export default ModalBackButton
