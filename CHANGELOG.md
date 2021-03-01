@@ -1,3 +1,92 @@
+# [44.14.0](https://github.com/cozy/cozy-ui/compare/v44.13.0...v44.14.0) (2021-03-01)
+
+
+### Features
+
+* Add filter grayscale utility class to styleguide ([043ae4f](https://github.com/cozy/cozy-ui/commit/043ae4f))
+
+# [44.13.0](https://github.com/cozy/cozy-ui/compare/v44.12.0...v44.13.0) (2021-02-25)
+
+
+### Bug Fixes
+
+* Viewer spinners should not be white in mobile ([8deb594](https://github.com/cozy/cozy-ui/commit/8deb594))
+
+
+### Features
+
+* Ability to show maintenance ([29d3c2e](https://github.com/cozy/cozy-ui/commit/29d3c2e))
+
+# [44.12.0](https://github.com/cozy/cozy-ui/compare/v44.11.0...v44.12.0) (2021-02-24)
+
+
+### Features
+
+* Have the option of not having a layout ([f42d40c](https://github.com/cozy/cozy-ui/commit/f42d40c))
+
+# [44.11.0](https://github.com/cozy/cozy-ui/compare/v44.10.1...v44.11.0) (2021-02-22)
+
+
+### Bug Fixes
+
+* CozyDialog Title should have ellipsis with long text ([ed7022f](https://github.com/cozy/cozy-ui/commit/ed7022f))
+* Revert travis and deploy modification ([4ca25a7](https://github.com/cozy/cozy-ui/commit/4ca25a7))
+* Viewer isMobile based on breakpoint, not device ([b488a69](https://github.com/cozy/cozy-ui/commit/b488a69))
+
+
+### Features
+
+* IntentIframe can receive props to be tweaked ([54be890](https://github.com/cozy/cozy-ui/commit/54be890))
+* Use semantic colors for wizard ([2423b5c](https://github.com/cozy/cozy-ui/commit/2423b5c))
+
+## [44.10.1](https://github.com/cozy/cozy-ui/compare/v44.10.0...v44.10.1) (2021-02-16)
+
+
+### Bug Fixes
+
+* Viewer doc example for ImageLoader ([9619ff2](https://github.com/cozy/cozy-ui/commit/9619ff2))
+
+# [44.10.0](https://github.com/cozy/cozy-ui/compare/v44.9.0...v44.10.0) (2021-02-15)
+
+
+### Features
+
+* Remove Viewer dark prop ([f6f37e8](https://github.com/cozy/cozy-ui/commit/f6f37e8))
+* Viewer has now white background on mobile ([5a316ff](https://github.com/cozy/cozy-ui/commit/5a316ff))
+* Viewer toolbar is now white with grey back button on mobile ([ea54036](https://github.com/cozy/cozy-ui/commit/ea54036))
+
+# [44.9.0](https://github.com/cozy/cozy-ui/compare/v44.8.0...v44.9.0) (2021-02-12)
+
+
+### Features
+
+* Add IntentDialogOpener and depreciate IntentOpener ([41af7bc](https://github.com/cozy/cozy-ui/commit/41af7bc))
+* Depreciate IntentModal, use Dialog with IntentIframe instead ([ab710a3](https://github.com/cozy/cozy-ui/commit/ab710a3))
+
+# [44.8.0](https://github.com/cozy/cozy-ui/compare/v44.7.0...v44.8.0) (2021-02-08)
+
+
+### Features
+
+* Publish next-major branch ([43ad834](https://github.com/cozy/cozy-ui/commit/43ad834))
+* Update semantic release ([1f4b818](https://github.com/cozy/cozy-ui/commit/1f4b818))
+
+# [44.7.0](https://github.com/cozy/cozy-ui/compare/v44.6.0...v44.7.0) (2021-02-03)
+
+
+### Bug Fixes
+
+* Use svgr icons in examples ([b9da282](https://github.com/cozy/cozy-ui/commit/b9da282))
+* Use svgr icons in examples ([321f7b4](https://github.com/cozy/cozy-ui/commit/321f7b4))
+
+
+### Features
+
+* Change argos upload commands not to shadow argos CLI ([b010537](https://github.com/cozy/cozy-ui/commit/b010537))
+* Update argos CLI ([f96cc48](https://github.com/cozy/cozy-ui/commit/f96cc48))
+* Use svgr icons ([47370b9](https://github.com/cozy/cozy-ui/commit/47370b9))
+* Use svgr icons in examples ([0b5fa4a](https://github.com/cozy/cozy-ui/commit/0b5fa4a))
+
 # [44.6.0](https://github.com/cozy/cozy-ui/compare/v44.5.0...v44.6.0) (2021-02-01)
 
 

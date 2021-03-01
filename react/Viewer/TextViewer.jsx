@@ -2,12 +2,16 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+
 import { withClient, models } from 'cozy-client'
-import Spinner from '../Spinner'
-import withFileUrl from './withFileUrl'
-import styles from './styles.styl'
-import NoViewer from './NoViewer'
+
+import ViewerSpinner from './ViewerSpinner'
 import { FileDoctype } from '../proptypes'
+
+import withFileUrl from './withFileUrl'
+import NoViewer from './NoViewer'
+
+import styles from './styles.styl'
 
 const MarkdownRenderer = ({ text }) => (
   <ReactMarkdown
@@ -24,11 +28,13 @@ const PlainTextRenderer = ({ text }) => (
   </pre>
 )
 
-const Loader = () => (
-  <div className={styles['viewer-textviewer']}>
-    <Spinner size="xxlarge" middle noMargin color="white" />
-  </div>
-)
+const Loader = () => {
+  return (
+    <div className={styles['viewer-textviewer']}>
+      <ViewerSpinner />
+    </div>
+  )
+}
 
 export const isMarkdown = file =>
   file.mime === 'text/markdown' ||

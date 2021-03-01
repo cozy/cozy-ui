@@ -1,84 +1,75 @@
-import React from 'react'
-import IntentModal from '../IntentModal'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+
+import IntentModal from '../IntentModal'
+import createDepreciationLogger from '../helpers/createDepreciationLogger'
+
+const logIntentOpenerDepecrated = createDepreciationLogger()
 
 /**
  * Wrapper that adds an `onClick` handler to its children that opens a modal
  * for the specified intent.
  *
  * The modal for an intent takes the majority of the viewport.
+ *
+ * @deprecated Please use IntentDialogOpener instead
  */
-class IntentOpener extends React.Component {
-  state = {
-    modalOpened: false
+const IntentOpener = props => {
+  logIntentOpenerDepecrated(
+    'The IntentOpener component has been deprecated and should be replaced by IntentDialogOpener.'
+  )
+  const {
+    options,
+    action,
+    doctype,
+    children,
+    closable,
+    create,
+    tag,
+    into,
+    onComplete,
+    onDismiss,
+    ...modalProps
+  } = props
+  const [modalOpened, setModalOpened] = useState(false)
+
+  const openModal = () => setModalOpened(true)
+  const closeModal = () => setModalOpened(false)
+
+  const handleComplete = result => {
+    closeModal()
+    onComplete && onComplete(result)
   }
 
-  openModal = () => {
-    this.setState({
-      modalOpened: true
-    })
+  const handleDismiss = () => {
+    closeModal()
+    onDismiss && onDismiss()
   }
 
-  closeModal = () => {
-    this.setState({
-      modalOpened: false
-    })
+  const Tag = tag // React needs uppercase element names
+  const elements = [
+    React.cloneElement(children, { key: 'opener', onClick: openModal })
+  ]
+
+  if (modalOpened) {
+    elements.push(
+      <IntentModal
+        key="intent-modal"
+        closable={closable}
+        overflowHidden
+        dismissAction={handleDismiss}
+        action={action}
+        doctype={doctype}
+        options={options}
+        onComplete={handleComplete}
+        create={create}
+        into={into}
+        {...modalProps}
+      />
+    )
   }
 
-  handleComplete = result => {
-    this.closeModal()
-    if (this.props.onComplete) {
-      this.props.onComplete(result)
-    }
-  }
-
-  handleDismiss = () => {
-    this.closeModal()
-    if (this.props.onDismiss) {
-      this.props.onDismiss()
-    }
-  }
-
-  render() {
-    const {
-      options,
-      action,
-      doctype,
-      children,
-      closable,
-      create,
-      tag,
-      into,
-      ...modalProps
-    } = this.props
-    const { modalOpened } = this.state
-
-    const Tag = tag // React needs uppercase element names
-
-    const elements = [
-      React.cloneElement(children, { key: 'opener', onClick: this.openModal })
-    ]
-
-    if (modalOpened) {
-      elements.push(
-        <IntentModal
-          key="intent-modal"
-          closable={closable}
-          overflowHidden
-          dismissAction={this.handleDismiss}
-          action={action}
-          doctype={doctype}
-          options={options}
-          onComplete={this.handleComplete}
-          create={create}
-          into={into}
-          {...modalProps}
-        />
-      )
-    }
-
-    return <Tag>{elements}</Tag>
-  }
+  return <Tag>{elements}</Tag>
 }
 
 IntentOpener.propTypes = {

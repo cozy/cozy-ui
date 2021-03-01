@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
+import flow from 'lodash/flow'
 import cx from 'classnames'
 import Hammer from 'hammerjs'
 import { withStyles } from '@material-ui/core/styles'
+
+import withBreakpoints from '../helpers/withBreakpoints'
 
 import { toolbarPropsPropType } from './index'
 import { infoWidth } from './InformationPanel'
@@ -96,14 +99,13 @@ class ViewerControls extends Component {
       hasNext,
       onPrevious,
       onNext,
-      isMobile,
       expanded,
       toolbarProps,
       showNavigation,
       showInfoPanel,
       children,
-      isMobileApp,
-      classes
+      classes,
+      breakpoints: { isMobile }
     } = this.props
     const { showToolbar, showClose } = toolbarProps
     const { hidden } = this.state
@@ -122,10 +124,8 @@ class ViewerControls extends Component {
           <Toolbar
             file={file}
             onClose={showClose && onClose}
-            isMobileApp={isMobileApp}
             onMouseEnter={this.showControls}
             onMouseLeave={this.hideControls}
-            isMobile={isMobile}
           />
         )}
         {showNavigation && !isMobile && hasPrevious && (
@@ -159,12 +159,13 @@ ViewerControls.propTypes = {
   hasNext: PropTypes.bool.isRequired,
   onPrevious: PropTypes.func.isRequired,
   onNext: PropTypes.func.isRequired,
-  isMobile: PropTypes.bool.isRequired,
   expanded: PropTypes.bool.isRequired,
   toolbarProps: PropTypes.shape(toolbarPropsPropType),
   showNavigation: PropTypes.bool.isRequired,
-  isMobileApp: PropTypes.bool.isRequired,
   showInfoPanel: PropTypes.bool
 }
 
-export default withStyles(customStyles)(ViewerControls)
+export default flow(
+  withBreakpoints(),
+  withStyles(customStyles)
+)(ViewerControls)

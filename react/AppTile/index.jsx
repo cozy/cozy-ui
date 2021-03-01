@@ -47,7 +47,10 @@ export const AppTile = ({
   const name = nameProp || app.name
   const { t } = useI18n()
   const { developer = {} } = app
-  const statusToDisplay = showStatus && getCurrentStatusLabel(app)
+  const statusLabel = getCurrentStatusLabel(app)
+  const statusToDisplay = Array.isArray(showStatus)
+    ? showStatus.indexOf(statusLabel) > -1 && statusLabel
+    : showStatus && statusLabel
   IconComponent = IconComponent || AppIcon
   return (
     <Tile tag="button" type="button" onClick={onClick}>
@@ -77,7 +80,7 @@ AppTile.propTypes = {
   namePrefix: PropTypes.string,
   onClick: PropTypes.func,
   showDeveloper: PropTypes.bool,
-  showStatus: PropTypes.bool
+  showStatus: PropTypes.oneOfType([PropTypes.bool, PropTypes.array])
 }
 
 AppTile.defaultProps = {

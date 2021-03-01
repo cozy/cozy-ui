@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import { isMobileApp, isMobile as isMobileDevice } from 'cozy-device-helper'
+import { isMobile as isMobileDevice } from 'cozy-device-helper'
 
 import withBreakpoints from '../helpers/withBreakpoints'
 import { FileDoctype } from '../proptypes'
@@ -109,7 +109,6 @@ export class Viewer extends Component {
       files,
       className,
       currentIndex,
-      dark,
       toolbarProps,
       panelInfoProps,
       showNavigation,
@@ -127,7 +126,7 @@ export class Viewer extends Component {
       panelInfoProps.showPanel({ file: currentFile })
 
     return (
-      <ViewerWrapper className={className} dark={dark}>
+      <ViewerWrapper className={className}>
         <ViewerControls
           file={currentFile}
           onClose={this.onClose}
@@ -135,11 +134,9 @@ export class Viewer extends Component {
           hasNext={hasNext}
           onPrevious={this.onPrevious}
           onNext={this.onNext}
-          isMobile={isMobileDevice()}
           expanded={expanded}
           toolbarProps={toolbarProps}
           showNavigation={showNavigation}
-          isMobileApp={isMobileApp()}
           showInfoPanel={showInfoPanel}
         >
           {this.renderViewer(currentFile)}
@@ -171,8 +168,6 @@ Viewer.propTypes = {
   onCloseRequest: PropTypes.func,
   /** Called with (nextFile, nextIndex) when the user requests to navigate to another file */
   onChangeRequest: PropTypes.func,
-  /** Switch between light and dark mode */
-  dark: PropTypes.bool,
   toolbarProps: PropTypes.shape(toolbarPropsPropType),
   /** Whether to show left and right arrows to navigate between files */
   showNavigation: PropTypes.bool,
@@ -188,7 +183,6 @@ Viewer.propTypes = {
 
 Viewer.defaultProps = {
   currentIndex: 0,
-  dark: true,
   toolbarProps: { showToolbar: true, showClose: true },
   showNavigation: true,
   panelInfoProps: { showPanel: () => false }

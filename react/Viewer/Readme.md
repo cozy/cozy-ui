@@ -15,9 +15,13 @@ import Paper from 'cozy-ui/transpiled/react/Paper';
 import Typography from 'cozy-ui/transpiled/react/Typography';
 import { Media, Img, Bd } from 'cozy-ui/transpiled/react/Media';
 import Icon from 'cozy-ui/transpiled/react/Icon';
+import CarbonCopyIcon from 'cozy-ui/transpiled/react/Icons/CarbonCopy';
 // The DemoProvider inserts a fake cozy-client in the React context.
 import DemoProvider from './docs/DemoProvider';
 import Overlay from 'cozy-ui/transpiled/react/Overlay';
+import {
+  BreakpointsProvider
+} from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
 
 // We provide a collection of (fake) io.cozy.files to be rendered
 const files = [
@@ -56,7 +60,7 @@ const files = [
 // The host app will usually need a small wrapper to display the Viewer. This is a very small example of such a wrapper that handles opening, closing, and navigating between files.
 initialState = {
   viewerOpened: isTesting(),
-  currentFileIndex: 0,
+  currentIndex: 0,
   showToolbarCloseButton: true
 };
 
@@ -66,9 +70,9 @@ const initialVariants = [
 
 const toggleViewer = () => setState({ viewerOpened: !state.viewerOpened });
 const handleToggleToolbarClose = () => setState({ showToolbarCloseButton: !state.showToolbarCloseButton });
-const onFileChange = (file, nextIndex) => setState({ currentFileIndex: nextIndex });
+const onFileChange = (file, nextIndex) => setState({ currentIndex: nextIndex });
 
-const PanelContent = ({ currentFile }) => {
+const PanelContent = ({ file }) => {
   return (
     <Stack
       spacing="s"
@@ -78,13 +82,13 @@ const PanelContent = ({ currentFile }) => {
         <Typography variant="h4">Informations utiles</Typography>
       </Paper>
       <Paper className={'u-ph-2 u-pv-1-half'} elevation={2} square>
-        <Typography variant="body1">Titre du fichier : {currentFile.name}</Typography>
+        <Typography variant="body1">Titre du fichier : {file.name}</Typography>
       </Paper>
       <Paper className={'u-ph-2 u-pv-1-half u-flex-grow-1'} elevation={2} square>
         <Typography variant="h4">
           <Media className="u-mb-half">
             <Img>
-              <Icon icon="carbonCopy" className="u-mr-half" />
+              <Icon icon={CarbonCopyIcon} className="u-mr-half" />
             </Img>
             <Bd>
               <Typography variant="body1">Copie conforme</Typography>
@@ -98,46 +102,48 @@ const PanelContent = ({ currentFile }) => {
 };
 
 <MuiCozyTheme>
-  <DemoProvider>
-    <Variants initialVariants={initialVariants}>{
-        variant => (
-          <>
-            {variant.toolbar && (
-              <Card className="u-mb-1">
-                <div className="u-dib u-mr-1">Toolbar props :</div>
-                <Checkbox
-                  className="u-dib"
-                  label="Close"
-                  checked={state.showToolbarCloseButton}
-                  onChange={handleToggleToolbarClose}
-                />
-              </Card>
-            )}
-            <button onClick={toggleViewer}>Open viewer</button>
-            {state.viewerOpened && (
-              <Overlay>
-                <Viewer
-                  files={files}
-                  currentIndex={state.currentFileIndex}
-                  onCloseRequest={toggleViewer}
-                  onChangeRequest={onFileChange}
-                  showNavigation={variant.navigation}
-                  toolbarProps={{
-                    showToolbar: variant.toolbar,
-                    showClose: state.showToolbarCloseButton
-                  }}
-                  panelInfoProps={{
-                    showPanel: ({ currentFile }) => currentFile.class === "pdf" || currentFile.class === "audio",
-                    PanelContent: PanelContent
-                  }}
-                />
-              </Overlay>
-            )}
-          </>
-        )
-      }
-    </Variants>
-  </DemoProvider>
+  <BreakpointsProvider>
+    <DemoProvider>
+      <Variants initialVariants={initialVariants}>{
+          variant => (
+            <>
+              {variant.toolbar && (
+                <Card className="u-mb-1">
+                  <div className="u-dib u-mr-1">Toolbar props :</div>
+                  <Checkbox
+                    className="u-dib"
+                    label="Close"
+                    checked={state.showToolbarCloseButton}
+                    onChange={handleToggleToolbarClose}
+                  />
+                </Card>
+              )}
+              <button onClick={toggleViewer}>Open viewer</button>
+              {state.viewerOpened && (
+                <Overlay>
+                  <Viewer
+                    files={files}
+                    currentIndex={state.currentIndex}
+                    onCloseRequest={toggleViewer}
+                    onChangeRequest={onFileChange}
+                    showNavigation={variant.navigation}
+                    toolbarProps={{
+                      showToolbar: variant.toolbar,
+                      showClose: state.showToolbarCloseButton
+                    }}
+                    panelInfoProps={{
+                      showPanel: ({ file }) => file.class === "pdf" || file.class === "audio",
+                      PanelContent
+                    }}
+                  />
+                </Overlay>
+              )}
+            </>
+          )
+        }
+      </Variants>
+    </DemoProvider>
+  </BreakpointsProvider>
 </MuiCozyTheme>
 ```
 
