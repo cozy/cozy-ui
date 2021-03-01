@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Spinner from '../Spinner'
 
+import ViewerSpinner from './ViewerSpinner'
 import NoNetworkViewer from './NoNetworkViewer'
 
 const TTL = 6000
@@ -68,7 +68,7 @@ const withFileUrl = BaseComponent =>
 
     render() {
       if (this.state.status === LOADING) {
-        return <Spinner size="xxlarge" middle noMargin color="white" />
+        return <ViewerSpinner />
       }
       if (this.state.status === FAILED) {
         return <NoNetworkViewer onReload={this.reset} />

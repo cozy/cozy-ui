@@ -67,6 +67,40 @@ ExpansionPanelDetails -> AccordionDetails
 The icon is added since this is the default styles in Banks
 * @material-ui/core@4 is now necessary
 
+# [44.13.0](https://github.com/cozy/cozy-ui/compare/v44.12.0...v44.13.0) (2021-02-25)
+
+
+### Bug Fixes
+
+* Viewer spinners should not be white in mobile ([8deb594](https://github.com/cozy/cozy-ui/commit/8deb594))
+
+
+### Features
+
+* Ability to show maintenance ([29d3c2e](https://github.com/cozy/cozy-ui/commit/29d3c2e))
+
+# [44.12.0](https://github.com/cozy/cozy-ui/compare/v44.11.0...v44.12.0) (2021-02-24)
+
+
+### Features
+
+* Have the option of not having a layout ([f42d40c](https://github.com/cozy/cozy-ui/commit/f42d40c))
+
+# [44.11.0](https://github.com/cozy/cozy-ui/compare/v44.10.1...v44.11.0) (2021-02-22)
+
+
+### Bug Fixes
+
+* CozyDialog Title should have ellipsis with long text ([ed7022f](https://github.com/cozy/cozy-ui/commit/ed7022f))
+* Revert travis and deploy modification ([4ca25a7](https://github.com/cozy/cozy-ui/commit/4ca25a7))
+* Viewer isMobile based on breakpoint, not device ([b488a69](https://github.com/cozy/cozy-ui/commit/b488a69))
+
+
+### Features
+
+* IntentIframe can receive props to be tweaked ([54be890](https://github.com/cozy/cozy-ui/commit/54be890))
+* Use semantic colors for wizard ([2423b5c](https://github.com/cozy/cozy-ui/commit/2423b5c))
+
 ## [44.10.1](https://github.com/cozy/cozy-ui/compare/v44.10.0...v44.10.1) (2021-02-16)
 
 
