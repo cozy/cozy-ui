@@ -1,3 +1,22 @@
+# [45.1.0](https://github.com/cozy/cozy-ui/compare/v45.0.0...v45.1.0) (2021-03-01)
+
+
+### Bug Fixes
+
+* CozyDialog Title should have ellipsis with long text ([ed7022f](https://github.com/cozy/cozy-ui/commit/ed7022f))
+* Revert travis and deploy modification ([4ca25a7](https://github.com/cozy/cozy-ui/commit/4ca25a7))
+* Viewer isMobile based on breakpoint, not device ([b488a69](https://github.com/cozy/cozy-ui/commit/b488a69))
+* Viewer spinners should not be white in mobile ([8deb594](https://github.com/cozy/cozy-ui/commit/8deb594))
+
+
+### Features
+
+* Ability to show maintenance ([29d3c2e](https://github.com/cozy/cozy-ui/commit/29d3c2e))
+* Add filter grayscale utility class to styleguide ([043ae4f](https://github.com/cozy/cozy-ui/commit/043ae4f))
+* Have the option of not having a layout ([f42d40c](https://github.com/cozy/cozy-ui/commit/f42d40c))
+* IntentIframe can receive props to be tweaked ([54be890](https://github.com/cozy/cozy-ui/commit/54be890))
+* Use semantic colors for wizard ([2423b5c](https://github.com/cozy/cozy-ui/commit/2423b5c))
+
 # [45.0.0](https://github.com/cozy/cozy-ui/compare/v44.10.1...v45.0.0) (2021-02-17)
 
 ### Bug Fixes
