@@ -3254,6 +3254,9 @@ html,
   box-shadow: 0 4px 12px 0 rgba(0,0,0,0.08);
   border: 1px solid rgba(0,0,0,0.08);
 }
+.u-filter-gray-100--2E17o {
+  filter: grayscale(1);
+}
 .u-flex {
   display: flex;
 }
