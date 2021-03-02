@@ -82,13 +82,13 @@ export class ImageLoader extends React.Component {
 
   async loadLink() {
     this.setState({ status: LOADING_LINK })
-    const { file, size, client } = this.props
+    const { file, linkType, client } = this.props
 
     try {
-      const links = await this.getFileLinks(file, size)
-      const link = links[size]
+      const links = await this.getFileLinks(file, linkType)
+      const link = links[linkType]
 
-      if (!link) throw new Error(`${size} link is not available`)
+      if (!link) throw new Error(`${linkType} link is not available`)
 
       const src = client.getStackClient().uri + link
       await this.checkImageSource(src)
@@ -141,13 +141,13 @@ export class ImageLoader extends React.Component {
 ImageLoader.propTypes = {
   file: PropTypes.object.isRequired,
   render: PropTypes.func.isRequired,
-  size: PropTypes.oneOf(['small', 'medium', 'large', 'preview']),
+  linkType: PropTypes.oneOf(['small', 'medium', 'large', 'preview']),
   onError: PropTypes.func,
   renderFallback: PropTypes.func
 }
 
 ImageLoader.defaultProps = {
-  size: 'small',
+  linkType: 'small',
   onError: () => {}
 }
 

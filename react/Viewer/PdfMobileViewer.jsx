@@ -94,7 +94,7 @@ export const PdfMobileViewer = ({ file, t, gestures }) => {
       {file && (
         <ImageLoader
           file={file}
-          size="preview"
+          linkType="preview"
           onError={onImageError}
           key={file.id}
           render={src => (
