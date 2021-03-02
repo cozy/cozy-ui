@@ -1,6 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
-import Typography from 'cozy-ui/transpiled/react/Typography'
+import Typography from '../Typography'
 
 const EmptyMessage = props => {
   const { className, ...rest } = props

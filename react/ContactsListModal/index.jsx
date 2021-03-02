@@ -1,20 +1,27 @@
 import React, { useState } from 'react'
-import { Q, withClient, fetchPolicies, queryConnect } from 'cozy-client'
-import ContactsList from '../ContactsList'
-import Modal, { ModalHeader, ModalDescription } from '../Modal'
-import Spinner from '../Spinner'
-import styles from './styles.styl'
-import Input from '../Input'
 import PropTypes from 'prop-types'
-import Button from '../Button'
-import { Contact } from 'cozy-doctypes'
-import AddContactButton from './AddContactButton'
-import EmptyMessage from './EmptyMessage'
 import compose from 'lodash/flowRight'
+
+import { Contact } from 'cozy-doctypes'
+import { Q, withClient, fetchPolicies, queryConnect } from 'cozy-client'
+import { DialogTitle, DialogContent } from '../Dialog'
+import {
+  TopAnchoredDialog,
+  DialogCloseButton,
+  useCozyDialog
+} from '../CozyDialogs'
 import useRealtime from '../hooks/useRealtime'
 import useEventListener from '../hooks/useEventListener.js'
 import PreviousIcon from '../Icons/Previous'
 import useBreakpoints from '../hooks/useBreakpoints'
+
+import ContactsList from '../ContactsList'
+import Spinner from '../Spinner'
+import styles from './styles.styl'
+import Input from '../Input'
+import Button from '../Button'
+import AddContactButton from './AddContactButton'
+import EmptyMessage from './EmptyMessage'
 
 const thirtySeconds = 30000
 const olderThan30s = fetchPolicies.olderThan(thirtySeconds)
@@ -87,9 +94,16 @@ const ContactsListModal = props => {
 
   useEventListener(document, 'resume', contacts.fetch)
 
+  const { dialogProps, dialogTitleProps } = useCozyDialog({
+    size: 'large',
+    open: true,
+    onClose: props.dismissAction
+  })
+
   return (
-    <Modal size="xxlarge" mobileFullscreen {...rest} closable={!isMobile}>
-      <ModalHeader className={styles.ContactsListModal__header}>
+    <TopAnchoredDialog {...dialogProps}>
+      <DialogCloseButton onClick={props.dismissAction} />
+      <DialogTitle {...dialogTitleProps}>
         {isMobile && (
           <Button
             onClick={rest.dismissAction}
@@ -107,23 +121,29 @@ const ContactsListModal = props => {
           onChange={handleFilterChange}
           autoFocus
         />
-      </ModalHeader>
-      <ModalDescription className={styles.ContactsListModal__description}>
-        <div className={styles.ContactsListModal__addContactContainer}>
-          <AddContactButton label={addContactLabel} />
+      </DialogTitle>
+      <DialogContent className="u-p-0">
+        <div className="dialogContentInner">
+          <div className={styles.ContactsListModal__addContactContainer}>
+            <AddContactButton label={addContactLabel} />
+          </div>
+          {loading && (
+            <div className="u-mv-2">
+              <Spinner size="xxlarge" />
+            </div>
+          )}
+          {!loading && filteredContacts.length === 0 && (
+            <EmptyMessage>{emptyMessage}</EmptyMessage>
+          )}
+          {!loading && filteredContacts.length > 0 && (
+            <ContactsList
+              contacts={filteredContacts}
+              onItemClick={handleItemClick}
+            />
+          )}
         </div>
-        {loading && <Spinner size="xxlarge" />}
-        {!loading && filteredContacts.length === 0 && (
-          <EmptyMessage>{emptyMessage}</EmptyMessage>
-        )}
-        {!loading && filteredContacts.length > 0 && (
-          <ContactsList
-            contacts={filteredContacts}
-            onItemClick={handleItemClick}
-          />
-        )}
-      </ModalDescription>
-    </Modal>
+      </DialogContent>
+    </TopAnchoredDialog>
   )
 }
 
