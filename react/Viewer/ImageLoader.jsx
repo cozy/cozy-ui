@@ -141,7 +141,7 @@ class ImageLoader extends React.Component {
 ImageLoader.propTypes = {
   file: PropTypes.object.isRequired,
   render: PropTypes.func.isRequired,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'preview']),
   onError: PropTypes.func,
   renderFallback: PropTypes.func
 }
