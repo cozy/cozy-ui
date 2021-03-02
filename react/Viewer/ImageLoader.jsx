@@ -10,7 +10,7 @@ const LOADING_FALLBACK = 'LOADING_FALLBACK'
 const LOADED = 'LOADED'
 const FAILED = 'FAILED'
 
-class ImageLoader extends React.Component {
+export class ImageLoader extends React.Component {
   state = {
     status: PENDING,
     src: null

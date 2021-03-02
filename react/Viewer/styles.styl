@@ -93,3 +93,11 @@
         max-width   100%
         max-height  100%
         box-shadow  0 .375rem 1.5rem 0 rgba(0, 0, 0, .5)
+
+.viewer-pdfMobile
+    width 100%
+    height 'calc(100% - %s)' % $toolbarHeightMedium
+    margin-top $toolbarHeightMedium
+
+    &--image
+        width 100%

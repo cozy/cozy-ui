@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import ReactDOM from 'react-dom'
 import flow from 'lodash/flow'
 import cx from 'classnames'
 import Hammer from 'hammerjs'
@@ -66,8 +65,7 @@ class ViewerControls extends Component {
   }
 
   initGestures = () => {
-    // eslint-disable-next-line react/no-find-dom-node
-    const gestures = new Hammer(ReactDOM.findDOMNode(this.wrapped))
+    const gestures = new Hammer(this.wrapped)
     gestures.on('swipe', this.onSwipe)
     gestures.on('tap', this.onTap)
     const tap = gestures.get('tap')
