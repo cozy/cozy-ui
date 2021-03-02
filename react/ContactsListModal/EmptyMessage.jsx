@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from './EmptyMessage.styl'
 import cx from 'classnames'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 
@@ -8,7 +7,7 @@ const EmptyMessage = props => {
 
   return (
     <Typography
-      className={cx(styles.EmptyMessage, className)}
+      className={cx('u-ta-center u-pv-2', className)}
       {...rest}
       variant="body1"
     />
