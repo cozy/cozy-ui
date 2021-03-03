@@ -13,6 +13,7 @@ import AudioViewer from './AudioViewer'
 import VideoViewer from './VideoViewer'
 import PdfJsViewer from './PdfJsViewer'
 import TextViewer from './TextViewer'
+import PdfMobileViewer from './PdfMobileViewer'
 import NoViewer from './NoViewer'
 import ShortcutViewer from './ShortcutViewer'
 import InformationPanel from './InformationPanel'
@@ -25,7 +26,7 @@ export const isPlainText = (mimeType = '', fileName = '') => {
   return mimeType ? /^text\//.test(mimeType) : /\.(txt|md)$/.test(fileName)
 }
 
-export const getViewerComponentName = file => {
+export const getViewerComponentName = (file, isDesktop) => {
   switch (file.class) {
     case 'shortcut':
       return ShortcutViewer
@@ -36,7 +37,7 @@ export const getViewerComponentName = file => {
     case 'video':
       return isMobileDevice() ? NoViewer : VideoViewer
     case 'pdf':
-      return PdfJsViewer
+      return isDesktop ? PdfJsViewer : PdfMobileViewer
     case 'text':
       return isPlainText(file.mime, file.name) ? TextViewer : NoViewer
     default:
@@ -91,10 +92,10 @@ export class Viewer extends Component {
     }
   }
 
-  renderViewer(file) {
+  renderViewer(file, isDesktop) {
     if (!file) return null
     const { renderFallbackExtraContent } = this.props
-    const ComponentName = getViewerComponentName(file)
+    const ComponentName = getViewerComponentName(file, isDesktop)
     return (
       <ComponentName
         file={file}
@@ -139,7 +140,7 @@ export class Viewer extends Component {
           showNavigation={showNavigation}
           showInfoPanel={showInfoPanel}
         >
-          {this.renderViewer(currentFile)}
+          {this.renderViewer(currentFile, isDesktop)}
         </ViewerControls>
         {showInfoPanel && (
           <InformationPanel>

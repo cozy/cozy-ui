@@ -35,6 +35,15 @@ const files = [
     _id: 'pdf',
     class: 'pdf',
     name: 'Demo.pdf',
+    mime: 'application/pdf',
+    links: {
+      preview: 'https://viewerdemo.cozycloud.cc/IMG_0062.PNG'
+    }
+  },
+  {
+    _id: 'pdf',
+    class: 'pdf',
+    name: 'Demo.pdf',
     mime: 'application/pdf'
   },
   {

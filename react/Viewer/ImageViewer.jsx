@@ -224,7 +224,7 @@ class ImageViewer extends Component {
         {file && (
           <ImageLoader
             file={file}
-            size="large"
+            linkType="large"
             onError={this.onImageError}
             key={file.id}
             render={src => (

@@ -1,33 +1,42 @@
 import React from 'react'
+
 import Icon from '../../Icon'
+import FileTypeBinIcon from '../../Icons/FileTypeBin'
+import FileTypeCodeIcon from '../../Icons/FileTypeCode'
+import FileTypeSheetIcon from '../../Icons/FileTypeSheet'
+import FileTypeSlideIcon from '../../Icons/FileTypeSlide'
+import FileTypeTextIcon from '../../Icons/FileTypeText'
+import FileTypeZipIcon from '../../Icons/FileTypeZip'
+import FileTypePdfIcon from '../../Icons/FileTypePdf'
+import FileTypeFilesIcon from '../../Icons/FileTypeFiles'
 
 const FileIcon = ({ type }) => {
   let icon
 
   switch (type) {
     case 'bin':
-      icon = 'file-type-bin'
+      icon = FileTypeBinIcon
       break
     case 'code':
-      icon = 'file-type-code'
+      icon = FileTypeCodeIcon
       break
     case 'spreadsheet':
-      icon = 'file-type-spreadsheet'
+      icon = FileTypeSheetIcon
       break
     case 'slide':
-      icon = 'file-type-slide'
+      icon = FileTypeSlideIcon
       break
     case 'text':
-      icon = 'file-type-text'
+      icon = FileTypeTextIcon
       break
     case 'zip':
-      icon = 'file-type-zip'
+      icon = FileTypeZipIcon
       break
     case 'pdf':
-      icon = 'file-type-pdf'
+      icon = FileTypePdfIcon
       break
     default:
-      icon = 'file-type-files'
+      icon = FileTypeFilesIcon
       break
   }
 

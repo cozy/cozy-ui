@@ -1,8 +1,14 @@
 {
   "Viewer": {
     "download": "Download",
+    "openWith": "Open with...",
     "retry": "Retry",
-    "error": "This file could not be loaded. Do you have a working internet connection right now?",
+    "error": {
+      "network": "This file could not be loaded. Do you have a working internet connection right now?",
+      "noapp": "No application on your device can open this file with mime type: %{fileMime} ",
+      "missing": "This file is missing",
+      "offline": "You should be connected to open this file"
+    },
     "close": "close",
     "goto": "Go to %{url}",
     "next": "Next",

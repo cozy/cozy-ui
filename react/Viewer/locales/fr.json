@@ -1,8 +1,14 @@
 {
   "Viewer": {
     "download": "Télécharger",
+    "openWith": "Ouvrir avec...",
     "retry": "Réessayer",
-    "error": "Ce fichier n'a pas pu être chargé. Avez-vous une connexion internet qui fonctionne actuellement ?",
+    "error": {
+      "network": "Ce fichier n'a pas pu être chargé. Avez-vous une connexion internet qui fonctionne actuellement ?",
+      "noapp": "Aucune application de votre appareil ne peut ouvrir ce fichier avec le type mime : %{fileMime} ",
+      "missing": "Le fichier est manquant",
+      "offline": "Vous devez être connecté pour ouvrir ce fichier"
+    },
     "close": "Fermer",
     "goto": "Ouvrir %{url}",
     "next": "Suivante",

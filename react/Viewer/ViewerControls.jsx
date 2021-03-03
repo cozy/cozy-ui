@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import ReactDOM from 'react-dom'
 import flow from 'lodash/flow'
 import cx from 'classnames'
 import Hammer from 'hammerjs'
@@ -65,14 +64,22 @@ class ViewerControls extends Component {
     else if (e.direction === Hammer.DIRECTION_RIGHT) this.props.onPrevious()
   }
 
+  initGestures = () => {
+    const gestures = new Hammer(this.wrapped)
+    gestures.on('swipe', this.onSwipe)
+    gestures.on('tap', this.onTap)
+    const tap = gestures.get('tap')
+    const doubleTap = gestures.get('doubletap')
+    doubleTap.recognizeWith(tap)
+    tap.requireFailure(doubleTap)
+    return gestures
+  }
+
   componentDidMount() {
     this._mounted = true
     clearTimeout(this.hideTimeout)
     this.hideAfterDelay()
-    //eslint-disable-next-line react/no-find-dom-node
-    const gestures = new Hammer(ReactDOM.findDOMNode(this.wrapped))
-    gestures.on('swipe', this.onSwipe)
-    gestures.on('tap', this.onTap)
+    const gestures = this.initGestures()
     this.setState({ gestures })
   }
 
