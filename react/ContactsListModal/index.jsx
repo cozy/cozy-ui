@@ -1,20 +1,31 @@
 import React, { useState } from 'react'
-import { Q, withClient, fetchPolicies, queryConnect } from 'cozy-client'
-import ContactsList from '../ContactsList'
-import Modal, { ModalHeader, ModalDescription } from '../Modal'
-import Spinner from '../Spinner'
-import styles from './styles.styl'
-import Input from '../Input'
 import PropTypes from 'prop-types'
-import Button from '../Button'
-import { Contact } from 'cozy-doctypes'
-import AddContactButton from './AddContactButton'
-import EmptyMessage from './EmptyMessage'
 import compose from 'lodash/flowRight'
+import IconButton from '@material-ui/core/IconButton'
+import Input from '@material-ui/core/Input'
+import TextField from '@material-ui/core/TextField'
+
+import { Contact } from 'cozy-doctypes'
+import { Q, withClient, fetchPolicies, queryConnect } from 'cozy-client'
+import { DialogTitle, DialogContent } from '../Dialog'
+import Paper from '../Paper'
+import CozyTheme from '../CozyTheme'
+import {
+  TopAnchoredDialog,
+  DialogCloseButton,
+  useCozyDialog
+} from '../CozyDialogs'
 import useRealtime from '../hooks/useRealtime'
 import useEventListener from '../hooks/useEventListener.js'
 import PreviousIcon from '../Icons/Previous'
 import useBreakpoints from '../hooks/useBreakpoints'
+
+import ContactsList from '../ContactsList'
+import Spinner from '../Spinner'
+import styles from './styles.styl'
+import Icon from '../Icon'
+import AddContactButton from './AddContactButton'
+import EmptyMessage from './EmptyMessage'
 
 const thirtySeconds = 30000
 const olderThan30s = fetchPolicies.olderThan(thirtySeconds)
@@ -36,6 +47,10 @@ const mkFilter = filterStr => contacts => {
 
     return displayName.toLowerCase().includes(f)
   })
+}
+
+const barStyle = {
+  height: 48
 }
 
 const ContactsListModal = props => {
@@ -87,43 +102,82 @@ const ContactsListModal = props => {
 
   useEventListener(document, 'resume', contacts.fetch)
 
+  const { dialogProps, dialogTitleProps } = useCozyDialog({
+    size: 'large',
+    open: true,
+    onClose: props.dismissAction
+  })
+
   return (
-    <Modal size="xxlarge" mobileFullscreen {...rest} closable={!isMobile}>
-      <ModalHeader className={styles.ContactsListModal__header}>
-        {isMobile && (
-          <Button
-            onClick={rest.dismissAction}
-            extension="narrow"
-            iconOnly
-            icon={PreviousIcon}
-            theme="primary"
+    <TopAnchoredDialog {...dialogProps}>
+      <CozyTheme variant={isMobile ? 'inverted' : 'normal'}>
+        <DialogCloseButton onClick={props.dismissAction} />
+      </CozyTheme>
+      <DialogTitle
+        {...dialogTitleProps}
+        className={isMobile && 'u-p-0 u-w-100'}
+      >
+        {isMobile ? (
+          <>
+            <CozyTheme variant="inverted">
+              <Paper
+                square
+                elevation={0}
+                className="u-flex u-flex-items-center u-pr-3 u-pl-half"
+                style={barStyle}
+              >
+                <IconButton className="u-mr-half" onClick={rest.dismissAction}>
+                  <Icon icon={PreviousIcon} />
+                </IconButton>
+                <Input
+                  type="text"
+                  placeholder={placeholder}
+                  value={filter}
+                  onChange={handleFilterChange}
+                  autoFocus
+                  fullWidth
+                  disableUnderline
+                />
+              </Paper>
+            </CozyTheme>
+          </>
+        ) : (
+          <TextField
+            variant="outlined"
+            type="text"
+            placeholder={placeholder}
+            fullWidth
+            value={filter}
+            onChange={handleFilterChange}
+            autoFocus
           />
         )}
-        <Input
-          type="text"
-          placeholder={placeholder}
-          fullwidth
-          value={filter}
-          onChange={handleFilterChange}
-          autoFocus
-        />
-      </ModalHeader>
-      <ModalDescription className={styles.ContactsListModal__description}>
-        <div className={styles.ContactsListModal__addContactContainer}>
-          <AddContactButton label={addContactLabel} />
+      </DialogTitle>
+      <DialogContent className="u-p-0">
+        <div className="dialogContentInner">
+          <div className={styles.ContactsListModal__addContactContainer}>
+            <AddContactButton
+              className={isMobile && 'u-mt-1'}
+              label={addContactLabel}
+            />
+          </div>
+          {loading && (
+            <div className="u-mv-2">
+              <Spinner size="xxlarge" />
+            </div>
+          )}
+          {!loading && filteredContacts.length === 0 && (
+            <EmptyMessage>{emptyMessage}</EmptyMessage>
+          )}
+          {!loading && filteredContacts.length > 0 && (
+            <ContactsList
+              contacts={filteredContacts}
+              onItemClick={handleItemClick}
+            />
+          )}
         </div>
-        {loading && <Spinner size="xxlarge" />}
-        {!loading && filteredContacts.length === 0 && (
-          <EmptyMessage>{emptyMessage}</EmptyMessage>
-        )}
-        {!loading && filteredContacts.length > 0 && (
-          <ContactsList
-            contacts={filteredContacts}
-            onItemClick={handleItemClick}
-          />
-        )}
-      </ModalDescription>
-    </Modal>
+      </DialogContent>
+    </TopAnchoredDialog>
   )
 }
 

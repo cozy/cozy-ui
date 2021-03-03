@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ContactsListModal from '../ContactsListModal'
-import styles from './styles.styl'
 import cx from 'classnames'
 import { Contact } from 'cozy-doctypes'
+
+import ContactsListModal from '../ContactsListModal'
+import styles from './styles.styl'
 
 const SelectControl = props => {
   const { className, children, ...rest } = props

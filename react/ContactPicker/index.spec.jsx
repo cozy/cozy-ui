@@ -1,13 +1,11 @@
-import ContactPicker from '.'
-import { mount } from 'enzyme'
+import { render, fireEvent } from '@testing-library/react'
 import React from 'react'
+
 import DemoProvider from '../ContactsListModal/DemoProvider'
-import ContactsListModal from '../ContactsListModal'
-import ContactsList from '../ContactsList'
 import { BreakpointsProvider } from '../hooks/useBreakpoints'
-import ContactRow from '../ContactsList/ContactRow'
 import contacts from '../ContactsList/data.json'
-import { createWaitForElement } from '@oskarer/enzyme-wait'
+
+import ContactPicker from '.'
 
 const Wrapper = ({ children }) => {
   return (
@@ -18,46 +16,44 @@ const Wrapper = ({ children }) => {
 }
 
 it('should show a contacts list modal when clicking the control', () => {
-  const wrapper = mount(
+  const root = render(
     <Wrapper>
       <ContactPicker placeholder="Select a contact" />
     </Wrapper>
   )
 
-  const control = wrapper.find('button')
-  control.simulate('click')
-  const modal = wrapper.find(ContactsListModal)
-
-  expect(modal.length).toBe(1)
+  const btn = root.getByText('Select a contact')
+  fireEvent.click(btn)
+  expect(root.getByRole('dialog')).toBeTruthy()
 })
 
 it('should call the onChange function when a contact is being selected', async () => {
   const onChange = jest.fn()
-  const wrapper = mount(
+  const root = render(
     <Wrapper>
       <ContactPicker placeholder="Select a contact" onChange={onChange} />
     </Wrapper>
   )
 
-  const waitForContactsList = createWaitForElement(ContactsList)
+  const btn = root.getByText('Select a contact')
+  fireEvent.click(btn)
 
-  const control = wrapper.find('button')
-  control.simulate('click')
+  const row = await root.findByText('Alexis Bickers')
+  fireEvent.click(row)
 
-  const list = await waitForContactsList(wrapper)
-  const row = list.find(ContactRow).first()
-  row.simulate('click')
-
-  expect(onChange).toHaveBeenCalled()
+  expect(onChange).toHaveBeenCalledWith(
+    expect.objectContaining({
+      fullname: 'Alexis Bickers'
+    })
+  )
 })
 
 it('should show the given contact name in the select', () => {
-  const wrapper = mount(
+  const root = render(
     <Wrapper>
       <ContactPicker placeholder="Select a contact" value={contacts[0]} />
     </Wrapper>
   )
 
-  const control = wrapper.find('button')
-  expect(control.text()).toBe('isabelle.durand@cozycloud.cc')
+  expect(root.getByText('isabelle.durand@cozycloud.cc')).toBeTruthy()
 })
