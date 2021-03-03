@@ -1,10 +1,15 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import compose from 'lodash/flowRight'
+import IconButton from '@material-ui/core/IconButton'
+import Input from '@material-ui/core/Input'
+import TextField from '@material-ui/core/TextField'
 
 import { Contact } from 'cozy-doctypes'
 import { Q, withClient, fetchPolicies, queryConnect } from 'cozy-client'
 import { DialogTitle, DialogContent } from '../Dialog'
+import Paper from '../Paper'
+import CozyTheme from '../CozyTheme'
 import {
   TopAnchoredDialog,
   DialogCloseButton,
@@ -18,8 +23,7 @@ import useBreakpoints from '../hooks/useBreakpoints'
 import ContactsList from '../ContactsList'
 import Spinner from '../Spinner'
 import styles from './styles.styl'
-import Input from '../Input'
-import Button from '../Button'
+import Icon from '../Icon'
 import AddContactButton from './AddContactButton'
 import EmptyMessage from './EmptyMessage'
 
@@ -43,6 +47,10 @@ const mkFilter = filterStr => contacts => {
 
     return displayName.toLowerCase().includes(f)
   })
+}
+
+const barStyle = {
+  height: 48
 }
 
 const ContactsListModal = props => {
@@ -102,30 +110,56 @@ const ContactsListModal = props => {
 
   return (
     <TopAnchoredDialog {...dialogProps}>
-      <DialogCloseButton onClick={props.dismissAction} />
-      <DialogTitle {...dialogTitleProps}>
-        {isMobile && (
-          <Button
-            onClick={rest.dismissAction}
-            extension="narrow"
-            iconOnly
-            icon={PreviousIcon}
-            theme="primary"
+      <CozyTheme variant={isMobile ? 'inverted' : 'normal'}>
+        <DialogCloseButton onClick={props.dismissAction} />
+      </CozyTheme>
+      <DialogTitle
+        {...dialogTitleProps}
+        className={isMobile && 'u-p-0 u-w-100'}
+      >
+        {isMobile ? (
+          <>
+            <CozyTheme variant="inverted">
+              <Paper
+                square
+                elevation={0}
+                className="u-flex u-flex-items-center u-pr-3 u-pl-half"
+                style={barStyle}
+              >
+                <IconButton className="u-mr-half" onClick={rest.dismissAction}>
+                  <Icon icon={PreviousIcon} />
+                </IconButton>
+                <Input
+                  type="text"
+                  placeholder={placeholder}
+                  value={filter}
+                  onChange={handleFilterChange}
+                  autoFocus
+                  fullWidth
+                  disableUnderline
+                />
+              </Paper>
+            </CozyTheme>
+          </>
+        ) : (
+          <TextField
+            variant="outlined"
+            type="text"
+            placeholder={placeholder}
+            fullWidth
+            value={filter}
+            onChange={handleFilterChange}
+            autoFocus
           />
         )}
-        <Input
-          type="text"
-          placeholder={placeholder}
-          fullwidth
-          value={filter}
-          onChange={handleFilterChange}
-          autoFocus
-        />
       </DialogTitle>
       <DialogContent className="u-p-0">
         <div className="dialogContentInner">
           <div className={styles.ContactsListModal__addContactContainer}>
-            <AddContactButton label={addContactLabel} />
+            <AddContactButton
+              className={isMobile && 'u-mt-1'}
+              label={addContactLabel}
+            />
           </div>
           {loading && (
             <div className="u-mv-2">
