@@ -1,3 +1,11 @@
+# [45.3.0](https://github.com/cozy/cozy-ui/compare/v45.2.0...v45.3.0) (2021-03-03)
+
+
+### Features
+
+* Mobile contact dialog via inverted/Paper MUI components ([b1e7648](https://github.com/cozy/cozy-ui/commit/b1e7648))
+* Use Dialog instead of Modal for contact list ([0a46058](https://github.com/cozy/cozy-ui/commit/0a46058))
+
 # [45.2.0](https://github.com/cozy/cozy-ui/compare/v45.1.0...v45.2.0) (2021-03-03)
 
 
