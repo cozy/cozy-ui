@@ -1,3 +1,19 @@
+# [45.2.0](https://github.com/cozy/cozy-ui/compare/v45.1.0...v45.2.0) (2021-03-03)
+
+
+### Bug Fixes
+
+* Viewer FileIcon use now svgr icons ([8c26e2c](https://github.com/cozy/cozy-ui/commit/8c26e2c))
+
+
+### Features
+
+* Add pdf viewer on mobile for Viewer component ([3608587](https://github.com/cozy/cozy-ui/commit/3608587))
+* Add tap/doubletap behavior management in Viewer ([edc3f51](https://github.com/cozy/cozy-ui/commit/edc3f51))
+* Set Alerter z-index to alert-index even on mobile ([395b543](https://github.com/cozy/cozy-ui/commit/395b543))
+* Upgrade cozy-client to 18.1.2 ([b9e033d](https://github.com/cozy/cozy-ui/commit/b9e033d))
+* Viewer ImageLoader can now deal with "preview" size ([45c0f37](https://github.com/cozy/cozy-ui/commit/45c0f37))
+
 # [45.1.0](https://github.com/cozy/cozy-ui/compare/v45.0.0...v45.1.0) (2021-03-01)
 
 
