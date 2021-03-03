@@ -25736,7 +25736,7 @@ html {
 }
 .c-alert--f9mWB {
   position: fixed;
-  z-index: 10;
+  z-index: 80;
   right: 0;
   bottom: calc(3rem + env(safe-area-inset-bottom));
   left: 0;
@@ -29143,6 +29143,14 @@ html {
   max-width: 100%;
   max-height: 100%;
   box-shadow: 0 0.375rem 1.5rem 0 rgba(0,0,0,0.5);
+}
+.viewer-pdfMobile--2V75t {
+  width: 100%;
+  height: calc(100% - 3rem);
+  margin-top: 3rem;
+}
+.viewer-pdfMobile--image--2xo_a {
+  width: 100%;
 }
 
 .gridItem-container--387sO {
