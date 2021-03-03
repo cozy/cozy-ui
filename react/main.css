@@ -19086,58 +19086,6 @@ html,
 @media (max-width: 48rem) {
 }
 
-html {
-  --zIndex-below: -1;
-  --zIndex-app: 0;
-  --zIndex-low: 1;
-  --zIndex-alertMobile: 10;
-  --zIndex-nav: 20;
-  --zIndex-bar: 21;
-  --zIndex-selection: 30;
-  --zIndex-popover: 40;
-  --zIndex-overlay: 50;
-  --zIndex-fileActionMenu: 60;
-  --zIndex-drawer: 60;
-  --zIndex-modal: 70;
-  --zindex-alert: 80;
-}
-.c-overlay--31iWd {
-  z-index: 50;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: var(--overlay);
-  visibility: visible;
-  transition: opacity 0.3s, visibility 0s ease-out;
-}
-
-@media (max-width: 48rem) {
-  .ContactsListModal__header--3SSCg.ContactsListModal__header--3SSCg {
-    background-color: var(--primaryColor);
-    padding: 0.75rem 0;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-  }
-  .ContactsListModal__header--3SSCg.ContactsListModal__header--3SSCg input {
-    background-color: transparent;
-    border: 0;
-    color: var(--white);
-    padding-left: 0.5rem;
-  }
-  .ContactsListModal__header--3SSCg.ContactsListModal__header--3SSCg input:focus {
-    border: 0;
-  }
-  .ContactsListModal__header--3SSCg.ContactsListModal__header--3SSCg input::placeholder {
-    color: inherit;
-  }
-}
-.ContactsListModal__description--ZWegl.ContactsListModal__description--ZWegl {
-  padding: 0;
-}
 .ContactsListModal__addContactContainer--2W-dE {
   display: flex;
   justify-content: center;
@@ -19148,11 +19096,6 @@ html {
   .ContactsListModal__addContactContainer--2W-dE > * {
     flex: 1;
   }
-}
-
-.EmptyMessage--2T8TF {
-  padding: 0 1rem;
-  text-align: center;
 }
 
 html {
@@ -23396,6 +23339,33 @@ html {
   right: 0;
   width: 100%;
   margin: 0;
+}
+
+html {
+  --zIndex-below: -1;
+  --zIndex-app: 0;
+  --zIndex-low: 1;
+  --zIndex-alertMobile: 10;
+  --zIndex-nav: 20;
+  --zIndex-bar: 21;
+  --zIndex-selection: 30;
+  --zIndex-popover: 40;
+  --zIndex-overlay: 50;
+  --zIndex-fileActionMenu: 60;
+  --zIndex-drawer: 60;
+  --zIndex-modal: 70;
+  --zindex-alert: 80;
+}
+.c-overlay--31iWd {
+  z-index: 50;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--overlay);
+  visibility: visible;
+  transition: opacity 0.3s, visibility 0s ease-out;
 }
 
 html {
