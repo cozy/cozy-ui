@@ -1,3 +1,11 @@
+# [45.4.0](https://github.com/cozy/cozy-ui/compare/v45.3.0...v45.4.0) (2021-03-04)
+
+
+### Features
+
+* Add mobile actions footer on Viewer ([ef728d4](https://github.com/cozy/cozy-ui/commit/ef728d4))
+* Add reply and shareIos icons ([9a22acc](https://github.com/cozy/cozy-ui/commit/9a22acc))
+
 # [45.3.0](https://github.com/cozy/cozy-ui/compare/v45.2.0...v45.3.0) (2021-03-03)
 
 
