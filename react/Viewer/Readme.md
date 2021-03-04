@@ -5,23 +5,26 @@ Once rendered, the `Viewer` will take up all the available space in it's contain
 The `Viewer` can display an **information panel** to show additional information about the current file (e.g. whether a file is certified).
 
 ```jsx
-import Variants from 'docs/components/Variants';
-import Card from 'cozy-ui/transpiled/react/Card';
-import Checkbox from 'cozy-ui/transpiled/react/Checkbox';
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme';
-import Viewer from 'cozy-ui/transpiled/react/Viewer';
-import Stack from 'cozy-ui/transpiled/react/Stack';
-import Paper from 'cozy-ui/transpiled/react/Paper';
-import Typography from 'cozy-ui/transpiled/react/Typography';
-import { Media, Img, Bd } from 'cozy-ui/transpiled/react/Media';
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import CarbonCopyIcon from 'cozy-ui/transpiled/react/Icons/CarbonCopy';
+import Variants from 'docs/components/Variants'
+import Card from 'cozy-ui/transpiled/react/Card'
+import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
+import Viewer from 'cozy-ui/transpiled/react/Viewer'
+import Stack from 'cozy-ui/transpiled/react/Stack'
+import Paper from 'cozy-ui/transpiled/react/Paper'
+import Typography from 'cozy-ui/transpiled/react/Typography'
+import { Media, Img, Bd } from 'cozy-ui/transpiled/react/Media'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import CarbonCopyIcon from 'cozy-ui/transpiled/react/Icons/CarbonCopy'
 // The DemoProvider inserts a fake cozy-client in the React context.
-import DemoProvider from './docs/DemoProvider';
-import Overlay from 'cozy-ui/transpiled/react/Overlay';
+import DemoProvider from './docs/DemoProvider'
+import Overlay from 'cozy-ui/transpiled/react/Overlay'
 import {
   BreakpointsProvider
-} from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
+} from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import Button from 'cozy-ui/transpiled/react/Button'
+import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
+import ShareIcon from 'cozy-ui/transpiled/react/Icons/Share'
 
 // We provide a collection of (fake) io.cozy.files to be rendered
 const files = [
@@ -64,22 +67,22 @@ const files = [
     name: 'Unsupported file type',
     mime: '???/???'
   }
-];
+]
 
 // The host app will usually need a small wrapper to display the Viewer. This is a very small example of such a wrapper that handles opening, closing, and navigating between files.
 initialState = {
   viewerOpened: isTesting(),
   currentIndex: 0,
   showToolbarCloseButton: true
-};
+}
 
 const initialVariants = [
   { navigation: true, toolbar: true }
-];
+]
 
-const toggleViewer = () => setState({ viewerOpened: !state.viewerOpened });
-const handleToggleToolbarClose = () => setState({ showToolbarCloseButton: !state.showToolbarCloseButton });
-const onFileChange = (file, nextIndex) => setState({ currentIndex: nextIndex });
+const toggleViewer = () => setState({ viewerOpened: !state.viewerOpened })
+const handleToggleToolbarClose = () => setState({ showToolbarCloseButton: !state.showToolbarCloseButton })
+const onFileChange = (file, nextIndex) => setState({ currentIndex: nextIndex })
 
 const PanelContent = ({ file }) => {
   return (
@@ -108,7 +111,29 @@ const PanelContent = ({ file }) => {
       </Paper>
     </Stack>
   )
-};
+}
+
+const FooterContent = () => {
+  return (
+    <>
+      <Button
+        className="u-mr-half"
+        extension="full"
+        theme="secondary"
+        icon={ShareIcon}
+        label="Share"
+      />
+      <Button
+        extension="full"
+        theme="secondary"
+        icon={DownloadIcon}
+        label="Download"
+      />
+    </>
+  )
+}
+
+;
 
 <MuiCozyTheme>
   <BreakpointsProvider>
@@ -143,6 +168,9 @@ const PanelContent = ({ file }) => {
                     panelInfoProps={{
                       showPanel: ({ file }) => file.class === "pdf" || file.class === "audio",
                       PanelContent
+                    }}
+                    footerProps={{
+                      FooterContent
                     }}
                   />
                 </Overlay>

@@ -17,6 +17,7 @@ import PdfMobileViewer from './PdfMobileViewer'
 import NoViewer from './NoViewer'
 import ShortcutViewer from './ShortcutViewer'
 import InformationPanel from './InformationPanel'
+import Footer from './Footer'
 
 const KEY_CODE_LEFT = 37
 const KEY_CODE_RIGHT = 39
@@ -113,7 +114,8 @@ export class Viewer extends Component {
       toolbarProps,
       panelInfoProps,
       showNavigation,
-      breakpoints: { isDesktop }
+      breakpoints: { isDesktop },
+      footerProps
     } = this.props
     const currentFile = files[currentIndex]
     const fileCount = files.length
@@ -142,6 +144,11 @@ export class Viewer extends Component {
         >
           {this.renderViewer(currentFile, isDesktop)}
         </ViewerControls>
+        {footerProps && (
+          <Footer>
+            <footerProps.FooterContent file={currentFile} />
+          </Footer>
+        )}
         {showInfoPanel && (
           <InformationPanel>
             <panelInfoProps.PanelContent file={currentFile} />
@@ -179,6 +186,10 @@ Viewer.propTypes = {
     showPanel: PropTypes.func,
     /** Content to be shown  */
     PanelContent: PropTypes.func
+  }),
+  /** File actions on mobile (to share or download the file, for example) */
+  footerProps: PropTypes.shape({
+    footerContent: PropTypes.elementType
   })
 }
 

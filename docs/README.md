@@ -79,9 +79,8 @@ yarn watch:doc # Run the styleguide in watch mode
 If you want to add a new icon to cozy-ui, you must follow these steps:
 
 * Add the SVG in the `assets/icons` folder
-* Generate the react component, simply by running `scripts/generate-svgr-icon.sh`
-* Update this README by adding your icon in the list
-* Update the tests by running `yarn test --updateSnapshot`
+* Generate the react component, simply by running `yarn makeSvgr assets/icons/[new icon folder]/[new icon file name]`
+* Update the tests by running `yarn test -u`
 
 ### Develop inside an app
 
