@@ -3,6 +3,9 @@
 @require 'settings/z-index.styl'
 @require './controls.styl'
 
+$viewerHeightMedium = $toolbarHeightMedium + $footerHeight
+$viewerMarginTopMedium = $toolbarHeightMedium - $footerHeight
+
 .viewer-wrapper
     position        absolute
     left            0
@@ -40,8 +43,8 @@
     +medium-screen()
         margin-left      0
         width            100%
-        max-height       'calc(100% - %s)' % $toolbarHeightMedium
-        margin-top       $toolbarHeightMedium
+        max-height       'calc(100% - %s)' % $viewerHeightMedium
+        margin-top       $viewerMarginTopMedium
 
 // rules for specific viewers below
 
@@ -96,8 +99,8 @@
 
 .viewer-pdfMobile
     width 100%
-    height 'calc(100% - %s)' % $toolbarHeightMedium
-    margin-top $toolbarHeightMedium
+    height 'calc(100% - %s)' % $viewerHeightMedium
+    margin-top $viewerMarginTopMedium
 
     &--image
         width 100%
