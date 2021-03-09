@@ -1,3 +1,10 @@
+## [45.4.1](https://github.com/cozy/cozy-ui/compare/v45.4.0...v45.4.1) (2021-03-09)
+
+
+### Bug Fixes
+
+* Fix a typo in MUI palette ([#1759](https://github.com/cozy/cozy-ui/issues/1759)) ([5ca0a39](https://github.com/cozy/cozy-ui/commit/5ca0a39))
+
 # [45.4.0](https://github.com/cozy/cozy-ui/compare/v45.3.0...v45.4.0) (2021-03-04)
 
 
