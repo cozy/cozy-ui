@@ -85,12 +85,7 @@ $footerHeight = 3.5rem
     position fixed
     bottom 0
     z-index $modal-index + 1
-    display flex
-    flex-shrink 0
-    justify-content flex-start
-    align-items center
-    width calc(100% - 2rem)
+    width 100%
     height $footerHeight
-    padding 0 1rem env(safe-area-inset-bottom)
-    background var(--paperColor)
-    border-top 1px solid var(--dividerColor)
+    padding-bottom env(safe-area-inset-bottom)
+    background var(--paperBackgroundColor)

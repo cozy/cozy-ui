@@ -5,6 +5,7 @@ Once rendered, the `Viewer` will take up all the available space in it's contain
 The `Viewer` can display an **information panel** to show additional information about the current file (e.g. whether a file is certified).
 
 ```jsx
+import { makeStyles } from '@material-ui/core/styles'
 import Variants from 'docs/components/Variants'
 import Card from 'cozy-ui/transpiled/react/Card'
 import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
@@ -113,9 +114,23 @@ const PanelContent = ({ file }) => {
   )
 }
 
+const useStyles = makeStyles({
+  footer: {
+    display: 'flex',
+    alignItems: 'center',
+    width: 'calc(100% - 2rem)',
+    height: '100%',
+    paddingLeft: '1rem',
+    paddingRight: '1rem',
+    borderTop: '1px solid var(--dividerColor)'
+  }
+})
+
 const FooterContent = () => {
+  const styles = useStyles()
+
   return (
-    <>
+    <div className={styles.footer}>
       <Button
         className="u-mr-half"
         extension="full"
@@ -129,7 +144,7 @@ const FooterContent = () => {
         icon={DownloadIcon}
         label="Download"
       />
-    </>
+    </div>
   )
 }
 
