@@ -1,11 +1,10 @@
+import React from 'react'
 import { createMuiTheme } from '@material-ui/core/styles'
 import merge from 'lodash/merge'
-import React from 'react'
 
 import { getCssVariableValue } from '../utils/color'
 import isTesting from '../helpers/isTesting'
-import Icon from '../Icon'
-import BottomIcon from '../Icons/Bottom'
+import AccordionExpandIcon from './AccordionExpandIcon'
 
 export const defaultValues = {
   borderRadius: 6,
@@ -161,7 +160,7 @@ export const normalTheme = createMuiTheme({
       arrow: true
     },
     MuiAccordionSummary: {
-      expandIcon: <Icon icon={BottomIcon} width={12} />
+      expandIcon: <AccordionExpandIcon />
     }
   },
   ...(isTesting() && { transitions: { create: () => 'none' } })

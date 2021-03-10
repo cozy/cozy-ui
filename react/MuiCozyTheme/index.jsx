@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { MuiThemeProvider } from '@material-ui/core/styles'
-import { getTheme } from './theme.js'
+import { getTheme } from './theme'
 
 const MuiCozyTheme = ({ variant, children }) => {
   const theme = getTheme(variant)
