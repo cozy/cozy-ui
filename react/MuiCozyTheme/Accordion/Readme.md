@@ -11,7 +11,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
       Click to expand/collapse the first item
     </AccordionSummary>
     <AccordionDetails>
-      <p>Lorem ipsum dolor sit amet consectetur</p>
+      <p className='u-mh-1'>Lorem ipsum dolor sit amet consectetur</p>
     </AccordionDetails>
   </Accordion>
   <Accordion>
@@ -19,7 +19,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
       Click to expand/collapse the second item
     </AccordionSummary>
     <AccordionDetails>
-      <p>Lorem ipsum dolor sit amet consectetur</p>
+      <p className='u-mh-1'>Lorem ipsum dolor sit amet consectetur</p>
     </AccordionDetails>
   </Accordion>
   <Accordion>
@@ -27,7 +27,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
       Click to expand/collapse the third item
     </AccordionSummary>
     <AccordionDetails>
-      <p>Lorem ipsum dolor sit amet consectetur</p>
+      <p className='u-mh-1'>Lorem ipsum dolor sit amet consectetur</p>
     </AccordionDetails>
   </Accordion>
 </>
