@@ -208,6 +208,8 @@ const NestedSelectListRightIcon = withStyles({
   }
 })(ListItemIcon)
 
+const primaryTypographyProps = { className: 'u-ellipsis', variant: 'body1' }
+
 export const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
   const { isMobile } = useBreakpoints()
   return (
@@ -228,13 +230,15 @@ export const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
           />
         </ListItemIcon>
       ) : null}
-      <ListItemIcon className={`${isMobile ? 'u-ml-half' : 'u-ml-1'} u-mr-1`}>
-        {item.icon}
-      </ListItemIcon>
+      {item.icon ? (
+        <ListItemIcon className={`${isMobile ? 'u-ml-half' : 'u-ml-1'} u-mr-1`}>
+          {item.icon}
+        </ListItemIcon>
+      ) : null}
       <NestedSelectListItemText
         primary={item.title}
         ellipsis
-        primaryTypographyProps={{ className: 'u-ellipsis' }}
+        primaryTypographyProps={primaryTypographyProps}
         secondary={item.description}
         secondaryTypographyProps={{
           variant: 'caption',
