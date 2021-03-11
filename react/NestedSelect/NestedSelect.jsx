@@ -208,7 +208,7 @@ const NestedSelectListRightIcon = withStyles({
   }
 })(ListItemIcon)
 
-const primaryTypographyProps = { className: 'u-ellipsis' }
+const primaryTypographyProps = { className: 'u-ellipsis', variant: 'body1' }
 
 export const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
   const { isMobile } = useBreakpoints()
