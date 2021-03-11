@@ -19,7 +19,7 @@ $footerHeight = 3.5rem
     position absolute
     top $toolbarHeight
     bottom 0
-    z-index $modal-index + 1
+    z-index $modal-toolbar-index
     width 20%
     cursor pointer
     background-color transparent
@@ -60,7 +60,7 @@ $footerHeight = 3.5rem
 .viewer-toolbar
     position absolute
     top 0
-    z-index $modal-index + 1
+    z-index $modal-toolbar-index
     display flex
     flex-shrink 0
     width calc(100% - 2rem)
@@ -78,19 +78,14 @@ $footerHeight = 3.5rem
         height $toolbarHeightMedium
 
     +small-screen()
-        background var(--paperColor)
+        background var(--paperBackgroundColor)
         border-bottom 1px solid var(--dividerColor)
 
 .viewer-footer
     position fixed
     bottom 0
-    z-index $modal-index + 1
-    display flex
-    flex-shrink 0
-    justify-content flex-start
-    align-items center
-    width calc(100% - 2rem)
+    z-index $modal-footer-index
+    width 100%
     height $footerHeight
-    padding 0 1rem env(safe-area-inset-bottom)
-    background var(--paperColor)
-    border-top 1px solid var(--dividerColor)
+    padding-bottom env(safe-area-inset-bottom)
+    background var(--paperBackgroundColor)
