@@ -1,3 +1,22 @@
+# [46.0.0](https://github.com/cozy/cozy-ui/compare/v45.5.0...v46.0.0) (2021-03-11)
+
+
+### Bug Fixes
+
+* Use css --paperBackgroundColor instead of --paperColor ([fe63667](https://github.com/cozy/cozy-ui/commit/fe63667))
+* Viewer toolbar have now a higher zIndex than the footer ([003b665](https://github.com/cozy/cozy-ui/commit/003b665))
+
+
+### Features
+
+* Viewer no longer enforce footer style ([189e894](https://github.com/cozy/cozy-ui/commit/189e894))
+
+
+### BREAKING CHANGES
+
+* The footer is now only a simple bottom container
+The style have to be set in the application
+
 # [45.5.0](https://github.com/cozy/cozy-ui/compare/v45.4.1...v45.5.0) (2021-03-11)
 
 
