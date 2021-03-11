@@ -115,7 +115,7 @@ const ContactsListModal = props => {
       </CozyTheme>
       <DialogTitle
         {...dialogTitleProps}
-        className={isMobile && 'u-p-0 u-w-100'}
+        className={isMobile ? 'u-p-0 u-w-100' : undefined}
       >
         {isMobile ? (
           <>
