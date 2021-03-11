@@ -1,7 +1,7 @@
 ```
 import { useState } from 'react'
-import Button from '../Button'
-import useConfirmExit from '../hooks/useConfirmExit'
+import Button from 'cozy-ui/transpiled/react/Button'
+import useConfirmExit from 'cozy-ui/transpiled/react/hooks/useConfirmExit'
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
 
 
