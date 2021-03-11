@@ -228,9 +228,11 @@ export const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
           />
         </ListItemIcon>
       ) : null}
-      <ListItemIcon className={`${isMobile ? 'u-ml-half' : 'u-ml-1'} u-mr-1`}>
-        {item.icon}
-      </ListItemIcon>
+      {item.icon ? (
+        <ListItemIcon className={`${isMobile ? 'u-ml-half' : 'u-ml-1'} u-mr-1`}>
+          {item.icon}
+        </ListItemIcon>
+      ) : null}
       <NestedSelectListItemText
         primary={item.title}
         ellipsis
