@@ -1,3 +1,12 @@
+# [45.5.0](https://github.com/cozy/cozy-ui/compare/v45.4.1...v45.5.0) (2021-03-11)
+
+
+### Features
+
+* Add test file for useCycle ([420a572](https://github.com/cozy/cozy-ui/commit/420a572))
+* Add useCycle hook ([9607772](https://github.com/cozy/cozy-ui/commit/9607772))
+* Improve useCycle and add doc ([8f76808](https://github.com/cozy/cozy-ui/commit/8f76808))
+
 ## [45.4.1](https://github.com/cozy/cozy-ui/compare/v45.4.0...v45.4.1) (2021-03-09)
 
 
