@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withClient } from 'cozy-client'
+import logger from 'cozy-logger'
 
 const TTL = 10000
 
@@ -42,8 +43,7 @@ export class ImageLoader extends React.Component {
     if (status === PENDING) this.loadLink()
     else if (status === LOADING_LINK) this.loadFallback()
     else if (status === LOADING_FALLBACK) {
-      // eslint-disable-next-line no-console
-      console.warn('failed loading thumbnail', lastError)
+      logger.warn('failed loading thumbnail', lastError)
       this.setState({ status: FAILED })
       this.props.onError(lastError)
     }
@@ -99,7 +99,7 @@ export class ImageLoader extends React.Component {
         })
       }
     } catch (e) {
-      console.log(e)
+      logger.info(e)
       this.loadNextSrc(e)
     }
   }
