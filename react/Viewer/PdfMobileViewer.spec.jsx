@@ -3,11 +3,14 @@ import { render, wait } from '@testing-library/react'
 
 import { CozyProvider, createMockClient } from 'cozy-client'
 import { isMobileApp } from 'cozy-device-helper'
+import logger from 'cozy-logger'
 
 import { I18n } from '../I18n'
 
 import { PdfMobileViewer } from './PdfMobileViewer'
 import { ImageLoader } from './ImageLoader'
+
+logger.info = logger.warn = jest.fn()
 
 jest.mock('cozy-device-helper', () => ({
   ...jest.requireActual('cozy-device-helper'),
