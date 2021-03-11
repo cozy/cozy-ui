@@ -28939,7 +28939,7 @@ html {
   position: absolute;
   top: 4rem;
   bottom: 0;
-  z-index: 71;
+  z-index: 72;
   width: 20%;
   cursor: pointer;
   background-color: transparent;
@@ -28984,7 +28984,7 @@ html {
 .viewer-toolbar--27_8W {
   position: absolute;
   top: 0;
-  z-index: 71;
+  z-index: 72;
   display: flex;
   flex-shrink: 0;
   width: calc(100% - 2rem);
@@ -29005,7 +29005,7 @@ html {
 }
 @media (max-width: 48rem) {
   .viewer-toolbar--27_8W {
-    background: var(--paperColor);
+    background: var(--paperBackgroundColor);
     border-bottom: 1px solid var(--dividerColor);
   }
 }
@@ -29013,15 +29013,10 @@ html {
   position: fixed;
   bottom: 0;
   z-index: 71;
-  display: flex;
-  flex-shrink: 0;
-  justify-content: flex-start;
-  align-items: center;
-  width: calc(100% - 2rem);
+  width: 100%;
   height: 3.5rem;
-  padding: 0 1rem env(safe-area-inset-bottom);
-  background: var(--paperColor);
-  border-top: 1px solid var(--dividerColor);
+  padding-bottom: env(safe-area-inset-bottom);
+  background: var(--paperBackgroundColor);
 }
 .viewer-wrapper--2GIXH {
   position: absolute;
@@ -31819,7 +31814,7 @@ progress.upload-queue-progress--1CmN- {
     width: 100%;
     height: 0.0625rem;
     content: '';
-    background: var(--paperColor);
+    background: var(--paperBackgroundColor);
   }
   .upload-queue--popover--2z1a4.upload-queue--visible--DjVRs {
     max-height: 30%;
