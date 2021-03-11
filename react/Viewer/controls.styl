@@ -19,7 +19,7 @@ $footerHeight = 3.5rem
     position absolute
     top $toolbarHeight
     bottom 0
-    z-index $modal-index + 1
+    z-index $modal-toolbar-index
     width 20%
     cursor pointer
     background-color transparent
@@ -60,7 +60,7 @@ $footerHeight = 3.5rem
 .viewer-toolbar
     position absolute
     top 0
-    z-index $modal-index + 10
+    z-index $modal-toolbar-index
     display flex
     flex-shrink 0
     width calc(100% - 2rem)
@@ -84,7 +84,7 @@ $footerHeight = 3.5rem
 .viewer-footer
     position fixed
     bottom 0
-    z-index $modal-index + 1
+    z-index $modal-footer-index
     width 100%
     height $footerHeight
     padding-bottom env(safe-area-inset-bottom)

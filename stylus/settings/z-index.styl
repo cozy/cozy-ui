@@ -28,24 +28,28 @@
     $overlay            - **index 50** Overlay index for modals background
     $file-action-menu   - **index 60** File action menu index *mobile only*
     $modal-index        - **index 70** Modal index
+    $modal-footer-index - **index 71** Modal footer index
+    $modal-toolbar-index - **index 72** Modal toolbar index
     $alert-index        - **index 80** Alert index such as success, errors, infos
 
     Styleguide Settings.z-index
 */
 
-$below-index        = -1
-$app-index          = 0
-$low-index          = 1
+$below-index = -1
+$app-index = 0
+$low-index = 1
 $alert-index-mobile = 10
-$nav-index          = 20
-$bar-index          = $nav-index + 1 // Not actually used, just as reference
-$selection-index    = 30
-$popover-index      = 40
-$overlay-index      = 50
-$file-action-menu   = 60 // replaced by $drawer-index
-$drawer-index       = 60
-$modal-index        = 70
-$alert-index        = 80
+$nav-index = 20
+$bar-index = $nav-index + 1 // Not actually used, just as reference
+$selection-index = 30
+$popover-index = 40
+$overlay-index = 50
+$file-action-menu = 60 // replaced by $drawer-index
+$drawer-index = 60
+$modal-index = 70
+$modal-footer-index = $modal-index + 1
+$modal-toolbar-index = $modal-footer-index + 1
+$alert-index = 80
 
 // @stylint off
 html
