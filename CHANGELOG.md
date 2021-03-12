@@ -1,3 +1,18 @@
+# [46.1.0](https://github.com/cozy/cozy-ui/compare/v46.0.0...v46.1.0) (2021-03-12)
+
+
+### Bug Fixes
+
+* Do not wait when screenshots process is frozen ([d012399](https://github.com/cozy/cozy-ui/commit/d012399))
+* Invalid boolean prop passed to className ([f27bfdf](https://github.com/cozy/cozy-ui/commit/f27bfdf))
+
+
+### Features
+
+* Do not display icon when there is no icon ([5140e1d](https://github.com/cozy/cozy-ui/commit/5140e1d))
+* Extract static props object ([f7370b6](https://github.com/cozy/cozy-ui/commit/f7370b6))
+* NestedSelect row title text should be in body1 ([0e9e86a](https://github.com/cozy/cozy-ui/commit/0e9e86a))
+
 # [46.0.0](https://github.com/cozy/cozy-ui/compare/v45.5.0...v46.0.0) (2021-03-11)
 
 
