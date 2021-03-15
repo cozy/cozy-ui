@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { makeStyles } from '@material-ui/core/styles'
 
 import { useClient } from 'cozy-client'
 
@@ -16,6 +17,14 @@ import { withViewerLocales } from './withViewerLocales'
 
 import styles from './styles.styl'
 
+const useClasses = makeStyles(theme => ({
+  iconButton: {
+    [theme.breakpoints.down('md')]: {
+      marginLeft: '0.25rem'
+    }
+  }
+}))
+
 const Toolbar = ({
   hidden,
   onMouseEnter,
@@ -27,6 +36,7 @@ const Toolbar = ({
 }) => {
   const client = useClient()
   const { isMobile } = useBreakpoints()
+  const classes = useClasses()
 
   return (
     <div
@@ -38,7 +48,10 @@ const Toolbar = ({
       onMouseLeave={onMouseLeave}
     >
       {onClose && (
-        <IconButton onClick={onClose} className={cx({ 'u-white': !isMobile })}>
+        <IconButton
+          onClick={onClose}
+          className={cx(classes.iconButton, { 'u-white': !isMobile })}
+        >
           <Icon icon={PreviousIcon} />
         </IconButton>
       )}
