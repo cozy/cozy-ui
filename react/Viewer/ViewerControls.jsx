@@ -114,7 +114,7 @@ class ViewerControls extends Component {
       classes,
       breakpoints: { isMobile }
     } = this.props
-    const { showToolbar, showClose } = toolbarProps
+    const { showToolbar, showClose, toolbarRef } = toolbarProps
     const { hidden } = this.state
 
     return (
@@ -129,6 +129,7 @@ class ViewerControls extends Component {
       >
         {showToolbar && (
           <Toolbar
+            toolbarRef={toolbarRef}
             file={file}
             onClose={showClose && onClose}
             onMouseEnter={this.showControls}

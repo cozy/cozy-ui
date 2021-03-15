@@ -16,16 +16,24 @@ import { withViewerLocales } from './withViewerLocales'
 
 import styles from './styles.styl'
 
-const Toolbar = ({ hidden, onMouseEnter, onMouseLeave, file, onClose, t }) => {
+const Toolbar = ({
+  hidden,
+  onMouseEnter,
+  onMouseLeave,
+  file,
+  onClose,
+  t,
+  toolbarRef
+}) => {
   const client = useClient()
   const { isMobile } = useBreakpoints()
 
   return (
     <div
+      ref={toolbarRef}
       className={cx(styles['viewer-toolbar'], {
         [styles['viewer-toolbar--hidden']]: hidden
       })}
-      role="viewer-toolbar"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
