@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, createRef } from 'react'
 import PropTypes from 'prop-types'
 
 import { isMobile as isMobileDevice } from 'cozy-device-helper'
@@ -47,6 +47,10 @@ export const getViewerComponentName = (file, isDesktop) => {
 }
 
 export class Viewer extends Component {
+  constructor() {
+    super()
+    this.toolbarRef = createRef()
+  }
   componentDidMount() {
     document.addEventListener('keyup', this.onKeyUp, false)
   }
@@ -138,7 +142,7 @@ export class Viewer extends Component {
           onPrevious={this.onPrevious}
           onNext={this.onNext}
           expanded={expanded}
-          toolbarProps={toolbarProps}
+          toolbarProps={{ ...toolbarProps, toolbarRef: this.toolbarRef }}
           showNavigation={showNavigation}
           showInfoPanel={showInfoPanel}
         >
@@ -146,7 +150,10 @@ export class Viewer extends Component {
         </ViewerControls>
         {footerProps && (
           <Footer>
-            <footerProps.FooterContent file={currentFile} />
+            <footerProps.FooterContent
+              file={currentFile}
+              toolbarRef={this.toolbarRef}
+            />
           </Footer>
         )}
         {showInfoPanel && (
@@ -163,7 +170,8 @@ export const toolbarPropsPropType = {
   /** Whether to show the toolbar or not. Note that the built-in close button is in the toolbar. */
   showToolbar: PropTypes.bool,
   /** Whether to show close button in toolbar */
-  showClose: PropTypes.bool
+  showClose: PropTypes.bool,
+  toolbarRef: PropTypes.object
 }
 
 Viewer.propTypes = {
