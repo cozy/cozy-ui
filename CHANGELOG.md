@@ -1,3 +1,17 @@
+# [47.0.0](https://github.com/cozy/cozy-ui/compare/v46.1.0...v47.0.0) (2021-03-16)
+
+
+### Features
+
+* Replace "role" of Viewer toolbar by "ref" ([32f1139](https://github.com/cozy/cozy-ui/commit/32f1139))
+
+
+### BREAKING CHANGES
+
+* There is no role anymore on Viewer toolbar
+Since this is an invalid role.
+Ref is useful to get the height value of this element
+
 # [46.1.0](https://github.com/cozy/cozy-ui/compare/v46.0.0...v46.1.0) (2021-03-12)
 
 
