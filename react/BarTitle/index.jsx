@@ -4,7 +4,7 @@ import styles from './styles.styl'
 
 const BarTitle = ({ children }) => {
   return (
-    <Typography variant="h3" component="h1" className={styles.BarTitle}>
+    <Typography variant="h5" component="h1" className={styles.BarTitle}>
       {children}
     </Typography>
   )
