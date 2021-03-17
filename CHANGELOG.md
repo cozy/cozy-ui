@@ -1,3 +1,10 @@
+## [47.0.1](https://github.com/cozy/cozy-ui/compare/v47.0.0...v47.0.1) (2021-03-17)
+
+
+### Bug Fixes
+
+* Viewer toolbar back button position ([52864f7](https://github.com/cozy/cozy-ui/commit/52864f7))
+
 # [47.0.0](https://github.com/cozy/cozy-ui/compare/v46.1.0...v47.0.0) (2021-03-16)
 
 
