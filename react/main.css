@@ -29001,6 +29001,8 @@ html {
 @media (max-width: 63.938rem) {
   .viewer-toolbar--27_8W {
     height: 3rem;
+    width: calc(100% - 1rem);
+    padding: 0 1rem 0 0;
   }
 }
 @media (max-width: 48rem) {
