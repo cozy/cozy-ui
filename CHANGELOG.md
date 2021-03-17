@@ -1,3 +1,11 @@
+# [47.2.0](https://github.com/cozy/cozy-ui/compare/v47.1.0...v47.2.0) (2021-03-17)
+
+
+### Features
+
+* Better support for inverted theme in List ([49ba7a1](https://github.com/cozy/cozy-ui/commit/49ba7a1))
+* Remove absolute color class and use same variable as IconButton ([a146c8e](https://github.com/cozy/cozy-ui/commit/a146c8e))
+
 # [47.1.0](https://github.com/cozy/cozy-ui/compare/v47.0.1...v47.1.0) (2021-03-17)
 
 
