@@ -11,7 +11,7 @@ const ViewerSpinner = () => {
       size="xxlarge"
       middle
       noMargin
-      {...!isMobile && { color: 'white' }}
+      {...(!isMobile && { color: 'white' })}
     />
   )
 }
