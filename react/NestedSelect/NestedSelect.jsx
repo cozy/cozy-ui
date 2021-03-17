@@ -6,7 +6,6 @@ import styles from './styles.styl'
 import UIRadio from '../Radio'
 import cx from 'classnames'
 import omit from 'lodash/omit'
-import palette from '../palette'
 import ListItem from '../MuiCozyTheme/ListItem'
 import ListItemText from '../ListItemText'
 import Divider from '../MuiCozyTheme/Divider'
@@ -202,11 +201,12 @@ const NestedSelectListItemText = withStyles({
   }
 })(ListItemText)
 
-const NestedSelectListRightIcon = withStyles({
+const NestedSelectListRightIcon = withStyles(theme => ({
   root: {
-    marginRight: 0
+    marginRight: 0,
+    color: theme.palette.text.secondary
   }
-})(ListItemIcon)
+}))(ListItemIcon)
 
 const primaryTypographyProps = { className: 'u-ellipsis', variant: 'body1' }
 
@@ -247,7 +247,7 @@ export const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
       />
       {item.children && item.children.length > 0 ? (
         <NestedSelectListRightIcon>
-          <Icon icon={RightIcon} color={palette.coolGrey} />
+          <Icon icon={RightIcon} />
         </NestedSelectListRightIcon>
       ) : null}
 

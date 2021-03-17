@@ -726,6 +726,19 @@ invertedTheme.overrides = {
     colorSecondary: {
       backgroundColor: 'rgba(255,255,255,0.2)'
     }
+  },
+  MuiListItem: {
+    button: {
+      '&$selected, &$selected:hover': {
+        backgroundColor: invertedPalette.background.selected
+      },
+      '&:hover': {
+        backgroundColor: invertedPalette.background.selected
+      },
+      '&:focus': {
+        backgroundColor: invertedPalette.background.selected
+      }
+    }
   }
 }
 
