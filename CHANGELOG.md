@@ -1,3 +1,18 @@
+# [47.1.0](https://github.com/cozy/cozy-ui/compare/v47.0.1...v47.1.0) (2021-03-17)
+
+
+### Bug Fixes
+
+* Cancel height increase of modal header from back button ([f6a706d](https://github.com/cozy/cozy-ui/commit/f6a706d))
+* Improve BarTitle ([7b6dbb5](https://github.com/cozy/cozy-ui/commit/7b6dbb5))
+* NestedSelect would not show back button when navigating deeply ([e8a7d02](https://github.com/cozy/cozy-ui/commit/e8a7d02))
+
+
+### Features
+
+* Capacity for dialogs to be aligned to the top ([ad01c55](https://github.com/cozy/cozy-ui/commit/ad01c55))
+* Relax dep pinning for deps ([029a2cc](https://github.com/cozy/cozy-ui/commit/029a2cc))
+
 ## [47.0.1](https://github.com/cozy/cozy-ui/compare/v47.0.0...v47.0.1) (2021-03-17)
 
 
