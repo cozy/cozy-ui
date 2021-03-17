@@ -22,11 +22,13 @@ const useCozyDialog = props => {
     open,
     opened,
     onClose,
+    align,
     ...otherProps
   } = props
   const { isMobile } = useBreakpoints()
   const [id] = useState(globalId++)
   const paperClassName = modalSizes.includes(size) ? `${size}` : 'medium'
+  const scrollPaperClassName = align == 'top' ? `alignTop` : ''
   const fullScreen = size !== 'small' && isMobile
   const TransitionComponent = DialogTransition
 
@@ -41,7 +43,8 @@ const useCozyDialog = props => {
       ...otherProps.classes,
       paper: `${paperClassName} ${
         otherProps.classes ? otherProps.classes.paper : ''
-      }`
+      }`,
+      scrollPaper: scrollPaperClassName
     },
     TransitionProps: {
       fullScreen,

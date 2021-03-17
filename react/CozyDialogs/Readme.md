@@ -134,7 +134,8 @@ initialState = {
   actionsLayout: 'row',
   title: 'short',
   content: 'default',
-  theme: 'normal'
+  theme: 'normal',
+  align: 'middle'
 };
 
 <>
@@ -157,10 +158,15 @@ initialState = {
       <StateRadio value='row' name='actionsLayout' /> row{' '}
       <StateRadio value='column' name='actionsLayout' /> column
     </p>
+    <p>Alignment:
+      <StateRadio value='middle' name='align' /> middle
+      <StateRadio value='top' name='align' /> top{' '}
+    </p>
     <DialogComponent
       size={DialogComponent !== ConfirmDialog ? state.size : undefined}
       open={state.modalOpened}
       onClose={handleClose}
+      align={state.align}
       title={DialogComponent !== IllustrationDialog && state.title === "long"
         ? `${dialogTitles[DialogComponent.name]} - ${content.ada.short}`
         : dialogTitles[DialogComponent.name]
