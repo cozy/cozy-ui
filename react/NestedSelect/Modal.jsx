@@ -2,7 +2,6 @@ import React from 'react'
 import Icon from '../Icon'
 
 import { Media, Bd, Img } from '../Media'
-import palette from '../palette'
 import NestedSelect from './NestedSelect'
 import Dialog, {
   DialogTitle,
@@ -25,7 +24,7 @@ const NestedSelectDialogHeader = ({ onClickBack, showBack, title }) => {
         {showBack && (
           <Img className={styles.Modal__back}>
             <IconButton onClick={onClickBack}>
-              <Icon icon={LeftIcon} color={palette['coolGrey']} />
+              <Icon icon={LeftIcon} />
             </IconButton>
           </Img>
         )}
