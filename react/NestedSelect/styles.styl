@@ -1,45 +1,13 @@
-@require 'settings/typography.styl'
-
-.Row
-    padding-left 0.5rem
-    padding-right 0.5rem
-    border-bottom 1px solid var(--silver)
-
-    &:hover
-        background-color var(--paleGrey)
-        cursor pointer
-
-    &:last-child
-        border-bottom 0
-
-.Row__selected
-    font-weight bold
-
-.Row__caption
-    font-weight normal
-
-.Modal__title
-    border-bottom 1px solid var(--silver)
-    margin-bottom 0
-    padding-top 1rem
-
-.Modal__title h2
-    font-size $h2-font-size
-
-.Modal__content
-    padding 0
-
 .Modal__back
     cursor pointer
-    margin-right 1.25rem
+    margin-right 0.5rem
     margin-left -0.25rem
     font-size 1.5rem
+    line-height 0
 
-.Radio
-    margin-bottom 0
-    min-height 1rem
-    width 1rem
-
-.Divider
-    margin-top .5rem
-
+    // Need to cancel the height of the icon button
+    // that expands the height of the modal header
+    // too much
+    margin-bottom -1rem
+    position relative
+    top -0.5rem

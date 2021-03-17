@@ -445,6 +445,11 @@ const makeOverrides = theme => ({
         }
       }
     },
+    scrollPaper: {
+      '&.alignTop': {
+        alignItems: 'start'
+      }
+    },
     paperFullScreen: {
       '& .cozyDialogActions': {
         paddingBottom: 'env(safe-area-inset-bottom)'

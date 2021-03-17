@@ -17,6 +17,10 @@ const MyPage = () => {
 
 ### Display
 
+The border is here to show the area of the bar.
+
 ```
-<BarTitle>My transactions</BarTitle>
+<div style={{ height: '3rem', border: '1px solid var(--dividerColor) ' }}>
+  <BarTitle>My transactions</BarTitle>
+</div>
 ```
