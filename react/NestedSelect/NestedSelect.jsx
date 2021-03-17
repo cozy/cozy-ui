@@ -112,7 +112,7 @@ class NestedSelect extends Component {
                 onClick={this.handleClickItem}
                 isSelected={isSelectedWithLevel(parentItem)}
               />
-              <Divider className={styles.Divider} />
+              <Divider />
             </>
           ) : null}
           {children.map(item => (
@@ -192,8 +192,8 @@ NestedSelect.propTypes = {
 
 export default NestedSelect
 
-export const Radio = ({ className, ...props }) => (
-  <UIRadio label="" className={cx(styles.Radio, className)} {...props} />
+export const Radio = ({ ...props }) => (
+  <UIRadio label="" gutter={false} {...props} />
 )
 
 const NestedSelectListItemText = withStyles({
