@@ -1,3 +1,10 @@
+# [47.3.0](https://github.com/cozy/cozy-ui/compare/v47.2.0...v47.3.0) (2021-03-18)
+
+
+### Features
+
+* Add bp provider in BarContextProvider ([8471f0d](https://github.com/cozy/cozy-ui/commit/8471f0d))
+
 # [47.2.0](https://github.com/cozy/cozy-ui/compare/v47.1.0...v47.2.0) (2021-03-17)
 
 
