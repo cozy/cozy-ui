@@ -1,5 +1,7 @@
 import React from 'react'
 import { I18nContext } from '../I18n'
+import { BreakpointsProvider } from '../hooks/useBreakpoints'
+
 import { CozyProvider } from 'cozy-client'
 import { Provider } from 'react-redux'
 
@@ -11,7 +13,7 @@ const BarContextProvider = props => {
         <I18nContext.Provider
           value={{ f: props.f, t: props.t, lang: props.lang }}
         >
-          {props.children}
+          <BreakpointsProvider>{props.children}</BreakpointsProvider>
         </I18nContext.Provider>
       </CozyProvider>
     </Provider>
