@@ -118,6 +118,7 @@ const Field = props => {
     error,
     onChange,
     onKeyUp,
+    onFocus,
     onBlur,
     readOnly,
     secondaryLabels,
@@ -151,6 +152,7 @@ const Field = props => {
             placeholder={placeholder}
             error={error}
             onKeyUp={onKeyUp}
+            onFocus={onFocus}
             onBlur={onBlur}
             readOnly={readOnly}
             {...controlledProps}
@@ -170,6 +172,7 @@ const Field = props => {
             error={error}
             {...controlledProps}
             onKeyUp={onKeyUp}
+            onFocus={onFocus}
             onBlur={onBlur}
             readOnly={readOnly}
             size={size}
@@ -206,6 +209,7 @@ const Field = props => {
             error={error}
             {...controlledProps}
             onKeyUp={onKeyUp}
+            onFocus={onFocus}
             onBlur={onBlur}
             readOnly={readOnly}
             size={size}
@@ -286,6 +290,7 @@ Field.propTypes = {
   },
   placeholder: PropTypes.string,
   error: PropTypes.bool,
+  onFocus: PropTypes.func,
   side: PropTypes.node,
   size: PropTypes.oneOf(['tiny', 'medium', 'large']),
   secondaryLabels: PropTypes.object,
