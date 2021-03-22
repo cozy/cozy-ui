@@ -1,3 +1,10 @@
+# [47.4.0](https://github.com/cozy/cozy-ui/compare/v47.3.0...v47.4.0) (2021-03-22)
+
+
+### Features
+
+* Add onFocus prop on Field component ([4f11a44](https://github.com/cozy/cozy-ui/commit/4f11a44))
+
 # [47.3.0](https://github.com/cozy/cozy-ui/compare/v47.2.0...v47.3.0) (2021-03-18)
 
 
