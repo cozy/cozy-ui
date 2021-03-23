@@ -37,14 +37,16 @@ const tokenize = passphrase => {
 }
 
 const Token = props => {
-  const { token, className, ...rest } = props
+  const { token, className, color, ...rest } = props
 
   return (
     <span
       className={cx(
         {
-          [styles['Token--number']]: token.type === tokenTypes.number,
-          [styles['Token--special']]: token.type === tokenTypes.special
+          [styles['Token--number']]:
+            color !== false && token.type === tokenTypes.number,
+          [styles['Token--special']]:
+            color !== false && token.type === tokenTypes.special
         },
         className
       )}
@@ -56,16 +58,24 @@ const Token = props => {
 }
 
 const PasswordExample = props => {
-  const { password, ...rest } = props
+  const { password, color, ...rest } = props
   const tokens = tokenize(password)
 
   return (
     <InlineCard {...rest}>
       {tokens.map((token, index) => (
-        <Token key={`${token.char}-${token.type}-${index}`} token={token} />
+        <Token
+          key={`${token.char}-${token.type}-${index}`}
+          token={token}
+          color={color}
+        />
       ))}
     </InlineCard>
   )
+}
+
+PasswordExample.defaultProps = {
+  color: true
 }
 
 export default PasswordExample
