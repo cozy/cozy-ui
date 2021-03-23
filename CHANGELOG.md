@@ -1,3 +1,10 @@
+# [47.5.0](https://github.com/cozy/cozy-ui/compare/v47.4.0...v47.5.0) (2021-03-23)
+
+
+### Features
+
+* Ability to remove color on password example ([643cec2](https://github.com/cozy/cozy-ui/commit/643cec2))
+
 # [47.4.0](https://github.com/cozy/cozy-ui/compare/v47.3.0...v47.4.0) (2021-03-22)
 
 
