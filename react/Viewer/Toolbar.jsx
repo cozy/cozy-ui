@@ -41,6 +41,7 @@ const Toolbar = ({
   return (
     <div
       ref={toolbarRef}
+      data-testid="viewer-toolbar"
       className={cx(styles['viewer-toolbar'], {
         [styles['viewer-toolbar--hidden']]: hidden
       })}
