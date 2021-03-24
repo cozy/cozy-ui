@@ -152,7 +152,7 @@
     "react-pdf": "^4.0.5",
     "react-popper": "^2.2.3",
     "react-remove-scroll": "^2.4.0",
-    "react-select": "^2.2.0",
+    "react-select": "^4.3.0",
     "react-swipeable-views": "^0.13.3"
   },
   "peerDependencies": {
