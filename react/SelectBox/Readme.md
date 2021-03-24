@@ -212,6 +212,10 @@ You can display additional actions inside an Option with the ActionsOption compo
 
 ```
 import SelectBox, { ActionsOption } from 'cozy-ui/transpiled/react/SelectBox';
+import TrashIcon from 'cozy-ui/transpiled/react/Icons/Trash';
+import RenameIcon from 'cozy-ui/transpiled/react/Icons/Rename';
+
+
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry', isDisabled: true },
@@ -220,8 +224,8 @@ const options = [
 ];
 
 const CustomOption = (props) => (<ActionsOption {...props} actions={[
-    { icon: 'delete', onClick: () => alert('deleting') },
-    { icon: 'rename', onClick: ({ data }) => alert(data.value) }
+    { icon: TrashIcon, onClick: () => alert('deleting') },
+    { icon: RenameIcon, onClick: ({ data }) => alert(data.value) }
   ]} />);
 
 <SelectBox options={options} components={{
