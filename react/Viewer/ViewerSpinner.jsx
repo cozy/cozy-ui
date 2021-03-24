@@ -4,14 +4,14 @@ import useBreakpoints from '../hooks/useBreakpoints'
 import Spinner from '../Spinner'
 
 const ViewerSpinner = () => {
-  const { isMobile } = useBreakpoints()
+  const { isDesktop } = useBreakpoints()
 
   return (
     <Spinner
       size="xxlarge"
       middle
       noMargin
-      {...(!isMobile && { color: 'white' })}
+      {...(isDesktop && { color: 'white' })}
     />
   )
 }

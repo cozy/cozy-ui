@@ -35,7 +35,7 @@ const Toolbar = ({
   toolbarRef
 }) => {
   const client = useClient()
-  const { isMobile } = useBreakpoints()
+  const { isDesktop } = useBreakpoints()
   const classes = useClasses()
 
   return (
@@ -51,16 +51,21 @@ const Toolbar = ({
       {onClose && (
         <IconButton
           onClick={onClose}
-          className={cx(classes.iconButton, { 'u-white': !isMobile })}
+          className={cx(classes.iconButton, { 'u-white': isDesktop })}
         >
           <Icon icon={PreviousIcon} />
         </IconButton>
       )}
-      <Typography className="u-pl-half" variant="h3" color="inherit" noWrap>
+      <Typography
+        className="u-pl-half"
+        variant="h3"
+        color={isDesktop ? 'inherit' : 'textPrimary'}
+        noWrap
+      >
         {file.name}
       </Typography>
       <div className="u-ml-auto u-ph-1">
-        {!isMobile && (
+        {isDesktop && (
           <Button
             className="u-white"
             icon={DownloadIcon}

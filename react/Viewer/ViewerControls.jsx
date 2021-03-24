@@ -112,7 +112,7 @@ class ViewerControls extends Component {
       showInfoPanel,
       children,
       classes,
-      breakpoints: { isMobile }
+      breakpoints: { isDesktop }
     } = this.props
     const { showToolbar, showClose, toolbarRef } = toolbarProps
     const { hidden } = this.state
@@ -136,7 +136,7 @@ class ViewerControls extends Component {
             onMouseLeave={this.hideControls}
           />
         )}
-        {showNavigation && !isMobile && hasPrevious && (
+        {showNavigation && isDesktop && hasPrevious && (
           <Navigation
             className={styles['viewer-nav--previous']}
             hidden={hidden}
@@ -146,7 +146,7 @@ class ViewerControls extends Component {
           />
         )}
         {this.renderChildren(children)}
-        {showNavigation && !isMobile && hasNext && (
+        {showNavigation && isDesktop && hasNext && (
           <Navigation
             className={styles['viewer-nav--next']}
             hidden={hidden}
