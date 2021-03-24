@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react'
-import has from 'lodash/get'
 
 import { useClient } from 'cozy-client'
 import { openFileWith } from 'cozy-client/dist/models/fsnative'
@@ -13,7 +12,6 @@ import { withViewerLocales } from './withViewerLocales'
 import DownloadButton from './NoViewer/DownloadButton'
 import ImageLoader from './ImageLoader'
 import NoViewer from './NoViewer'
-import NoNetworkViewer from './NoNetworkViewer'
 
 import styles from './styles.styl'
 
@@ -23,11 +21,6 @@ export const PdfMobileViewer = ({ file, t, gestures }) => {
   const imgRef = useRef(null)
 
   const client = useClient()
-
-  const reload = () => {
-    setLoading(true)
-    setError(false)
-  }
 
   const onImageError = () => {
     setLoading(false)
@@ -66,10 +59,6 @@ export const PdfMobileViewer = ({ file, t, gestures }) => {
   }, [gestures])
 
   if (error) {
-    return <NoNetworkViewer onReload={reload} />
-  }
-
-  if (!has(file, 'links.preview')) {
     return (
       <NoViewer
         file={file}
