@@ -71,7 +71,8 @@ git clone git@github.com:cozy/cozy-ui.git
 It is convenient when modifying a component to use the styleguide site.
 
 ```bash
-yarn watch:doc # Run the styleguide in watch mode
+yarn start # Transpile the files in watch mode
+yarn start:doc # Run the styleguide in watch mode
 ```
 
 ### Add an Icon
@@ -90,7 +91,7 @@ Then you need to link cozy-ui with `yarn link`.
 ```bash
 cd cozy-ui
 yarn link
-yarn watch # Launch transpilation
+yarn start # Launch transpilation
 ```
 
 Then in your application folder, you can link to your local Cozy UI.
@@ -101,7 +102,7 @@ to module resolution inside symlinked folders.
 ```bash
 cd my-app
 rlink cozy-ui # Prefer rlink to yarn link
-yarn watch
+yarn start
 ```
 
 All your modifications in your local Cozy UI will now be visible in your application!
@@ -136,7 +137,7 @@ withStyles(theme => ({
 Be aware that snapshots in unit tests use the transpiled version of cozy-ui. Therefore if you make changes and need to update the snapshots, you need to transpile first.
 
 ```bash
-yarn transpile && yarn test -u
+yarn build && yarn test -u
 ```
 
 ## UI regression testing
