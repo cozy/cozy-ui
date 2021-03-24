@@ -99,17 +99,28 @@ export class ImageLoader extends React.Component {
         })
       }
     } catch (e) {
-      logger.info(e)
+      logger.error(e)
       this.loadNextSrc(e)
     }
   }
 
   async loadFallback() {
     this.setState({ status: LOADING_FALLBACK })
-    const { file } = this.props
+    const { file, client } = this.props
 
     try {
-      const src = await this.getDownloadLink(this.getFileId(file))
+      // ImageLoader can also be used for pdf files, because on mobile a preview image is
+      // generated and the pdf is therefore treated as an image.
+      // But the fallback allows to display the original file as an image if there is an error
+      // during the preview recovery. This principle is not possible with a pdf file.
+      if (file.class === 'pdf') {
+        throw new Error('No pdf files fallback')
+      }
+
+      const src = await client
+        .collection('io.cozy.files')
+        .getDownloadLinkById(this.getFileId(file), file.name)
+
       await this.checkImageSource(src)
       if (this._mounted) {
         this.setState({
@@ -120,12 +131,6 @@ export class ImageLoader extends React.Component {
     } catch (e) {
       this.loadNextSrc(e)
     }
-  }
-
-  getDownloadLink(fileId) {
-    return this.props.client
-      .collection('io.cozy.files')
-      .getDownloadLinkById(fileId)
   }
 
   render() {

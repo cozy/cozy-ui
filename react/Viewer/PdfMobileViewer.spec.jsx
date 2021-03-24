@@ -8,9 +8,8 @@ import logger from 'cozy-logger'
 import { I18n } from '../I18n'
 
 import { PdfMobileViewer } from './PdfMobileViewer'
-import { ImageLoader } from './ImageLoader'
 
-logger.info = logger.warn = jest.fn()
+logger.error = logger.warn = jest.fn()
 
 jest.mock('cozy-device-helper', () => ({
   ...jest.requireActual('cozy-device-helper'),
@@ -52,53 +51,33 @@ describe('PdfMobileViewer', () => {
     expect(getByRole('progressbar'))
   })
 
-  describe('error when downloading file', () => {
-    it('should show network error message on native app and browser', async () => {
-      ImageLoader.prototype.checkImageSource = jest.fn().mockRejectedValue() // fail to load image
-
-      const { root } = setup({ file })
-      const { queryByRole, getByText } = root
-
-      const isMobileAppValues = [true, false]
-
-      for (const isMobileAppValue of isMobileAppValues) {
-        isMobileApp.mockReturnValue(isMobileAppValue)
-
-        await wait()
-
-        expect(queryByRole('progressbar')).toBeFalsy()
-        expect(
-          getByText(
-            'This file could not be loaded. Do you have a working internet connection right now?'
-          )
-        )
-      }
-    })
-  })
-
-  describe('error if file as no preview', () => {
+  describe('errors if file as no preview or failed to download', () => {
     let fileWithoutLinks = file
 
     beforeAll(() => {
-      fileWithoutLinks.links = {}
+      fileWithoutLinks.links = undefined
     })
 
-    it('should show "download" button on browser', () => {
+    it('should show "download" button on browser', async () => {
       isMobileApp.mockReturnValue(false)
 
       const { root } = setup({ file: fileWithoutLinks })
       const { getByText, queryByRole } = root
+
+      await wait()
 
       expect(queryByRole('progressbar')).toBeFalsy()
       expect(getByText('Download'))
       expect(getByText(file.name))
     })
 
-    it('should show "open with" button on native app', () => {
+    it('should show "open with" button on native app', async () => {
       isMobileApp.mockReturnValue(true)
 
       const { root } = setup({ file: fileWithoutLinks })
       const { getByText, queryByRole } = root
+
+      await wait()
 
       expect(queryByRole('progressbar')).toBeFalsy()
       expect(getByText('Viewer.openWith'))
