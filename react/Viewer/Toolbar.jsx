@@ -41,6 +41,7 @@ const Toolbar = ({
   return (
     <div
       ref={toolbarRef}
+      data-testid="viewer-toolbar"
       className={cx(styles['viewer-toolbar'], {
         [styles['viewer-toolbar--hidden']]: hidden
       })}
@@ -80,7 +81,7 @@ Toolbar.propTypes = {
   onMouseEnter: PropTypes.func.isRequired,
   onMouseLeave: PropTypes.func.isRequired,
   file: PropTypes.object.isRequired,
-  onClose: PropTypes.func.isRequired
+  onClose: PropTypes.func
 }
 
 export default withViewerLocales(Toolbar)
