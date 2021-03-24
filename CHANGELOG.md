@@ -1,3 +1,11 @@
+## [47.5.1](https://github.com/cozy/cozy-ui/compare/v47.5.0...v47.5.1) (2021-03-24)
+
+
+### Bug Fixes
+
+* Add data-testid on Viewer Toolbar ([ce51422](https://github.com/cozy/cozy-ui/commit/ce51422))
+* PdfMobileViewer shows thumbnail on mobile and correct error ([ad5840b](https://github.com/cozy/cozy-ui/commit/ad5840b))
+
 # [47.5.0](https://github.com/cozy/cozy-ui/compare/v47.4.0...v47.5.0) (2021-03-23)
 
 
