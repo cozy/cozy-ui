@@ -122,20 +122,6 @@ const reactSelectControl = CustomControl => ({
   </div>
 )
 
-export const withPrefix = (reactSelectCx, className) => {
-  // react-select implement a classnames function https://git.io/fhT8S
-  // it's not the same as classnames library (https://www.npmjs.com/package/classnames)
-  // 1st parameter is bound by react-select with prefix https://git.io/fhkIj
-  // 2nd parameter is cssKey. We don't need it so it's set to null
-  // 3rd parameter is used to add prefix but we don't want to stick with
-  //   webpack className so we add space (' ') in front of it
-  const classNameWithPrefix = reactSelectCx(null, { [` ${className}`]: true })
-
-  // When we don't use classNamePrefix cx return '' so we verify to send
-  // className
-  return classNameWithPrefix === '' ? className : classNameWithPrefix
-}
-
 const Option = ({
   children,
   isSelected,
@@ -144,43 +130,35 @@ const Option = ({
   innerProps,
   innerRef,
   labelComponent,
-  cx,
   withCheckbox
 }) => (
   <div
     {...innerProps}
     ref={innerRef}
-    className={withPrefix(
-      cx,
-      classNames(styles['select-option'], {
-        [styles['select-option--selected']]: isSelected && !withCheckbox,
-        [styles['select-option--focused']]: isFocused,
-        [styles['select-option--disabled']]: isDisabled
-      })
-    )}
+    className={classNames(styles['select-option'], {
+      [styles['select-option--selected']]: isSelected && !withCheckbox,
+      [styles['select-option--focused']]: isFocused,
+      [styles['select-option--disabled']]: isDisabled
+    })}
   >
     {withCheckbox && (
       <input
         type="checkbox"
         readOnly
         checked={isSelected}
-        className={withPrefix(cx, styles['select-option__checkbox'])}
+        className={styles['select-option__checkbox']}
       />
     )}
-    <span className={withPrefix(cx, styles['select-option__label'])}>
-      <span className={withPrefix(cx, 'u-ellipsis')}>
+    <span className={styles['select-option__label']}>
+      <span className="u-ellipsis">
         {labelComponent ? labelComponent : children}
       </span>
       {labelComponent ? children : false}
     </span>
     {!withCheckbox && (
-      <span className={withPrefix(cx, styles['select-option__checkmark'])}>
+      <span className={styles['select-option__checkmark']}>
         {isSelected && (
-          <Icon
-            icon={CheckIcon}
-            color={dodgerBlue}
-            className={withPrefix(cx, 'u-ph-half')}
-          />
+          <Icon icon={CheckIcon} color={dodgerBlue} className="u-ph-half" />
         )}
       </span>
     )}
@@ -202,14 +180,14 @@ CheckboxOption.propTypes = {}
 
 const ActionsOption = ({ actions, ...props }) => (
   <Option {...props} labelComponent={props.children}>
-    <span className={withPrefix(props.cx, styles['select-option__actions'])}>
+    <span className={styles['select-option__actions']}>
       {actions.map((action, index) => (
         <Icon
           {...action.iconProps}
           key={index}
           icon={action.icon}
           color={props.isFocused ? coolGrey : silver}
-          className={withPrefix(props.cx, 'u-ph-half')}
+          className="u-ph-half"
           onClick={e => {
             e.stopPropagation()
             action.onClick(props)
