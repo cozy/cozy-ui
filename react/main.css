@@ -28971,10 +28971,6 @@ html {
     height: 3rem;
     width: calc(100% - 1rem);
     padding: 0 1rem 0 0;
-  }
-}
-@media (max-width: 48rem) {
-  .viewer-toolbar--27_8W {
     background: var(--paperBackgroundColor);
     border-bottom: 1px solid var(--dividerColor);
   }
@@ -28999,7 +28995,7 @@ html {
   background: var(--charcoalGrey);
   color: var(--white);
 }
-@media (max-width: 48rem) {
+@media (max-width: 63.938rem) {
   .viewer-wrapper--2GIXH {
     color: var(--charcoalGrey);
     background: var(--white);
