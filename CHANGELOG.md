@@ -1,3 +1,28 @@
+# [48.0.0](https://github.com/cozy/cozy-ui/compare/v47.6.0...v48.0.0) (2021-03-25)
+
+
+### Bug Fixes
+
+* Remove withPrefix function, that no longer seems necessary ([15a6c6f](https://github.com/cozy/cozy-ui/commit/15a6c6f))
+* Use SVGr icon for example ([696e9a9](https://github.com/cozy/cozy-ui/commit/696e9a9))
+
+
+### Features
+
+* Upgrade react-select ([f60569e](https://github.com/cozy/cozy-ui/commit/f60569e)), closes [/github.com/JedWatson/react-select/blob/master/packages/react-select/CHANGELOG.md#400](https://github.com//github.com/JedWatson/react-select/blob/master/packages/react-select/CHANGELOG.md/issues/400) [/github.com/JedWatson/react-select/blob/master/packages/react-select/CHANGELOG.md#300](https://github.com//github.com/JedWatson/react-select/blob/master/packages/react-select/CHANGELOG.md/issues/300)
+
+
+### BREAKING CHANGES
+
+* react-select is upgraded from v2 to v4. It should
+not impact you but you should be extra careful around the areas that
+use a select.
+
+Values are now normalized: https://github.com/JedWatson/react-select/pull/4339
+The onChange callback receives values that are more coherent now (array
+if multi select, value is always an array (can be empty), if a single
+select, value can be object/null.
+
 # [47.6.0](https://github.com/cozy/cozy-ui/compare/v47.5.1...v47.6.0) (2021-03-25)
 
 
