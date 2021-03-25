@@ -1,3 +1,10 @@
+# [47.6.0](https://github.com/cozy/cozy-ui/compare/v47.5.1...v47.6.0) (2021-03-25)
+
+
+### Features
+
+* Viewer on tablet is now like on mobile ([9d28cf8](https://github.com/cozy/cozy-ui/commit/9d28cf8))
+
 ## [47.5.1](https://github.com/cozy/cozy-ui/compare/v47.5.0...v47.5.1) (2021-03-24)
 
 
