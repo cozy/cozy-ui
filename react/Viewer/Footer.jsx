@@ -5,9 +5,9 @@ import useBreakpoints from '../hooks/useBreakpoints'
 import styles from './styles.styl'
 
 const Footer = ({ children }) => {
-  const { isMobile } = useBreakpoints()
+  const { isDesktop } = useBreakpoints()
 
-  if (!isMobile) return null
+  if (isDesktop) return null
   return <div className={styles['viewer-footer']}>{children}</div>
 }
 
