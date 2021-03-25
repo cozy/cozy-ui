@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
 
-import IconButton from 'cozy-ui/transpiled/react/IconButton'
-import Icon from 'cozy-ui/transpiled/react/Icon'
+import IconButton from '../IconButton'
+import Icon from '../Icon'
 
-import PreviousIcon from 'cozy-ui/transpiled/react/Icons/Previous'
+import PreviousIcon from '../Icons/Previous'
 
 const customStyles = () => ({
   root: {

@@ -2,12 +2,8 @@ import React from 'react'
 import cx from 'classnames'
 
 import useCozyDialog from './useCozyDialog'
-import MUIDialog, {
-  DialogTitle,
-  DialogActions,
-  DialogContent
-} from 'cozy-ui/transpiled/react/Dialog'
-import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
+import MUIDialog, { DialogTitle, DialogActions, DialogContent } from '../Dialog'
+import Divider from '../MuiCozyTheme/Divider'
 
 import dialogPropTypes from './dialogPropTypes'
 import DialogBackButton from './DialogBackButton'
