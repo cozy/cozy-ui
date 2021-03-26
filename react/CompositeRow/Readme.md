@@ -9,6 +9,7 @@ import Typography from "cozy-ui/transpiled/react/Typography";
 
 import WalletIcon from "cozy-ui/transpiled/react/Icons/Wallet";
 import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots";
+import palette from "cozy-ui/transpiled/react/palette";
 
 const fnacLogoURL = 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Fnac_Logo.svg';
 
@@ -32,7 +33,7 @@ const compositeStyle = {
 
 
 const CompositeImage = () => (
-  <Circle backgroundColor='var(--melon)'>
+  <Circle backgroundColor={palette.melon}>
     <Icon icon={WalletIcon} />
   </Circle>
 )

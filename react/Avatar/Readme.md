@@ -7,13 +7,14 @@ import Icon from 'cozy-ui/transpiled/react/Icon';
 
 import LinkIcon from "cozy-ui/transpiled/react/Icons/Link";
 import WarningIcon from "cozy-ui/transpiled/react/Icons/Warning";
+import palette from 'cozy-ui/transpiled/react/palette';
 
 <div className="u-flex">
   <Avatar />
   <Avatar text="CD" />
   <Avatar image={cozyLogo} />
   <Avatar icon={LinkIcon} />
-  <Avatar text="CD" style={{color: 'black', backgroundColor: 'var(--seafoamGreen)' }} />
+  <Avatar text="CD" style={{color: 'black', backgroundColor: palette.seafoamGreen }} />
   <Avatar icon={<Icon icon={WarningIcon} />} />
 </div>
 ```
