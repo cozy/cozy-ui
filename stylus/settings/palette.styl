@@ -135,7 +135,6 @@ html, .CozyTheme--normal
     --primaryColor #297EF2
     --primaryColorDark #0B61D6
     --primaryColorLight #5C9DF5
-    --primaryColorLighter #4B93F7 // should not be used
     --primaryColorLightest #9FC4FB
 
     /*
@@ -151,7 +150,6 @@ html, .CozyTheme--normal
     --secondaryColor #fd7461
     --secondaryColorDark #E3503B
     --secondaryColorLight #ffdeda // lighten(dodgerBlue, 24)
-    --secondaryColorLighter #fd7461 // should not be used
     --secondaryColorLightest #FECDC6
 
     /*
@@ -203,9 +201,12 @@ html, .CozyTheme--normal
     Styleguide Settings.theme.intention
     */
     --successColor: $successColor
-    --errorColor: $errorColor
     --warningColor: $warningColor
 
+    --errorColor: $errorColor
+    --errorColorDark: darken($errorColor, 24)
+    --errorColorLight: lighten($errorColor, 30)
+    --errorColorLightest: lighten($errorColor, 38)
 
     /*
     The CSS variables below are historic and we should strive not to
