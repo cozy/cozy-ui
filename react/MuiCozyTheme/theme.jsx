@@ -561,7 +561,7 @@ const makeOverrides = theme => ({
     colorSecondary: {
       '&$checked': {
         '& + $track': {
-          backgroundColor: getCssVariableValue('validColor')
+          backgroundColor: getCssVariableValue('successColor')
         },
         color: getCssVariableValue('primaryContrastTextColor')
       }

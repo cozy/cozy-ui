@@ -38,10 +38,10 @@
   "primaryColor": "var(--primaryColor)",
   "primaryColorLight": "var(--primaryColorLight)",
   "primaryContrastTextColor": "var(--primaryContrastTextColor)",
-  "valid": "var(--validColor)",
-  "warn": "var(--warnColor)",
+  "success": "var(--successColor)",
+  "warning": "var(--warningColor)",
   "error": "var(--errorColor)",
-  "danger": "var(--dangerColor)",
+  "info": "var(--infoColor)",
   "errorBackground": "var(--errorBackground)",
   "primaryBackgroundLight": "var(--primaryBackgroundLight)",
   "neutralBackground": "var(--neutralBackground)"

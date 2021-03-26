@@ -1,12 +1,11 @@
 @require '../tools/mixins'
 
-// @TODO Check to deduplicate dangerColor and errorColor
-$dangerColor=#F52D2D
 $errorColor=#F52D2D
 $errorBackground=#FFF2F2
 
-$validColor=#35CE68
-$warnColor=#FF962F
+$successColor=#35CE68
+$warningColor=#FF962F
+$infoColor=#34373F
 
 // @stylint off
 /*------------------------------------*\
@@ -196,15 +195,16 @@ html, .CozyTheme--normal
     /*
     Intention colors
 
-    Stylus: validColor -  #35CE68, CSS: var(--validColor)
-    Stylus: warnColor -  #FF962F, CSS: var(--warnColor)
-    Stylus: dangerColor -  #F52D2D, CSS: var(--dangerColor)
+    Stylus: successColor -  #35CE68, CSS: var(--successColor)
+    Stylus: warningColor -  #FF962F, CSS: var(--warningColor)
+    Stylus: errorColor -  #F52D2D, CSS: var(--errorColor)
+    Stylus: infoColor -  #34373F, CSS: var(--infoColor)
 
     Styleguide Settings.theme.intention
     */
-    --validColor: $validColor
-    --warnColor: $warnColor
-    --dangerColor: $dangerColor
+    --successColor: $successColor
+    --errorColor: $errorColor
+    --warningColor: $warningColor
 
 
     /*
@@ -254,7 +254,7 @@ html, .CozyTheme--normal
     --alertErrorBackgroundColor var(--errorColor)
 
     --alertSuccessColor #fff
-    --alertSuccessBackgroundColor var(--validColor)
+    --alertSuccessBackgroundColor var(--successColor)
 
     --alertInfoColor #fff
     --alertInfoBackgroundColor var(--slateGrey)
