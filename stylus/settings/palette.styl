@@ -29,6 +29,13 @@ $infoColor=#34373F
     building your components: this will ensure your components react correctly when
     changing the theme.
 
+    If you need to access an absolute color that is not semantic, you can use
+
+    ```
+    import palette from 'cozy-ui/transpiled/react/palette'
+    <div style={{ backgroundColor: palette.melon }} />
+    ```
+
     Styleguide Settings.colors
 */
 html
