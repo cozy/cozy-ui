@@ -133,7 +133,7 @@ cssModulesUtils(props, breakpoints)
         else
             @media (max-width: rem(lookup('BP-'+kBp)))
                 for kProp, vProp in props
-                    :global(.u-{vProp}-{vBp})
+                    :global(.u-{vProp}-{vBp})  // @stylint ignore
                         {kProp}()
 
 nativeUtils(props, breakpoints)
@@ -145,7 +145,7 @@ nativeUtils(props, breakpoints)
         else
             @media (max-width: rem(lookup('BP-'+kBp)))
                 for kProp, vProp in props
-                    .u-{vProp}-{vBp}
+                    .u-{vProp}-{vBp}  // @stylint ignore
                         {kProp}()
 
 // @stylint on
