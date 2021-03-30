@@ -539,7 +539,7 @@ import {name}Icon from 'cozy-ui/transpiled/react/Icons/{name}'{'\n'}
 </div>
 ```
 
-## Import React illustrations directly
+### Import React illustrations directly
 
 ```
 import Icon from 'cozy-ui/transpiled/react/Icon';
