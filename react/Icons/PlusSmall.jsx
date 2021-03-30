@@ -1,9 +1,9 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/plus-small.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/plus-small.svg` to regenerate;
 import React from 'react'
 
 function SvgPlusSmall(props) {
   return (
-    <svg viewBox="0 0 12 12" {...props}>
+    <svg viewBox="0 0 12 12" width="1em" height="1em" {...props}>
       <defs>
         <path
           id="plus-small_svg__a"

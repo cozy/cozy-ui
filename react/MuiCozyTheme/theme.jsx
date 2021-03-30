@@ -185,6 +185,12 @@ const makeOverrides = theme => ({
       height: '2.5rem',
       padding: '0px 1rem'
     },
+    startIcon: {
+      fill: 'currentColor'
+    },
+    endIcon: {
+      fill: 'currentColor'
+    },
     sizeSmall: {
       height: '2rem',
       padding: '0px 0.75rem'
@@ -201,9 +207,6 @@ const makeOverrides = theme => ({
       borderRadius: 2,
       boxShadow: 0,
       minWidth: 112
-    },
-    containedSecondary: {
-      color: 'white'
     }
   },
   MuiTab: {

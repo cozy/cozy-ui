@@ -106,8 +106,11 @@ import Album from 'cozy-ui/transpiled/react/Icons/Album'
 ```
 
 ```
+import { useState, useCallback } from 'react'
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import Typography from 'cozy-ui/transpiled/react/Typography';
+import Button from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons';
+import Dialog from '@material-ui/core/Dialog';
 
 import Album from 'cozy-ui/transpiled/react/Icons/Album'
 import AlbumAdd from 'cozy-ui/transpiled/react/Icons/AlbumAdd'
@@ -487,34 +490,69 @@ const icons = [
 ];
 
 const wrapperStyle = {
-  fontSize: '2rem',
+  fontSize: '1rem',
   display: 'grid',
   gridTemplateColumns: 'repeat(6, 1fr)',
   color: '#444'
 };
 
-initialState = { size: 16 };
+initialState = { size: 32, autoFontSize: true };
 
 const handleInputRangeChange = ev => {
   setState({ size: parseInt(ev.target.value, 10) })
 };
 
+const handleAutoFontSizeChange = () => {
+  setState({ autoFontSize: !state.autoFontSize })
+};
+
+const SvgFilenameCleanRx = /^Svg/
+const cleanSvgFilename = name => name.replace(SvgFilenameCleanRx, '')
+
+const CopyCode = ({ icon}) => {
+  const [open, setOpen] = useState(false)
+  const handleToggle = useCallback(() => {
+    setOpen(open => !open)
+  }, [setOpen])
+  const name = cleanSvgFilename(icon.name)
+  return <>
+    { open ? <Dialog open onClose={handleToggle}><pre>
+import {name}Icon from 'cozy-ui/transpiled/react/Icons/{name}'{'\n'}
+&lt;{name}Icon /&gt;
+   </pre></Dialog> : null }<br/>
+    <Button size='small' onClick={handleToggle}>Code</Button>
+  </>
+}
+
 <div>
   <Typography component='p' variant='body1' className='u-mb-1'>
-    Font size: <input type='range' min='8' max='48' value={state.size} onChange={handleInputRangeChange} /> {state.size}px
+    Size: <input
+      type='checkbox'
+      onChange={handleAutoFontSizeChange}
+      checked={state.autoFontSize} 
+    />
+    inherit{ !state.autoFontSize ? <> - <input
+      type='range'
+      min='8'
+      max='48'
+      value={state.size}
+      onChange={handleInputRangeChange} /> {state.size}px</> : null }
   </Typography>
   <div style={wrapperStyle}>
     {
-    icons.map(icon => <div key={icon} className='u-ta-center u-mb-1'>
-        <Icon icon={ icon } size={state.size} />
-        <Typography variant='body1' className='u-mt-half'>{ icon.name.replace(/^Svg/, '') }</Typography>
+    icons.map((Icon, i) => <div key={i} className='u-ta-center u-mb-1'>
+        <Icon {...(state.autoFontSize ? {} : { width: state.size, height: state.size })} />
+        <Typography variant='body1' className='u-mt-half'>
+          { cleanSvgFilename(Icon.name) }
+          <CopyCode icon={Icon} />
+        </Typography>
       </div>
     )}
   </div>
 </div>
 ```
 
-## Import React illustrations directly
+### Import React illustrations directly
 
 ```
 import Icon from 'cozy-ui/transpiled/react/Icon';
