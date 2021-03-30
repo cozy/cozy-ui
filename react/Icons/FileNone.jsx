@@ -1,9 +1,9 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/file-none.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/file-none.svg` to regenerate;
 import React from 'react'
 
 function SvgFileNone(props) {
   return (
-    <svg viewBox="0 0 16 16" {...props}>
+    <svg width="1em" height="1em" viewBox="0 0 16 16" {...props}>
       <defs>
         <path
           id="file-none_svg__a"

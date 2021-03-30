@@ -1,9 +1,9 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/info.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/info.svg` to regenerate;
 import React from 'react'
 
 function SvgInfo(props) {
   return (
-    <svg viewBox="0 0 16 16" {...props}>
+    <svg viewBox="0 0 16 16" width="1em" height="1em" {...props}>
       <defs>
         <path
           id="info_svg__a"

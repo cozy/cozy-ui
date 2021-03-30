@@ -1,9 +1,9 @@
-// Automatically created, please run `scripts/generate-svg-icon.sh assets/icons/ui/file-duotone.svg` to regenerate;
+// Automatically created, please run `scripts/generate-svgr-icon.sh assets/icons/ui/file-duotone.svg` to regenerate;
 import React from 'react'
 
 function SvgFileDuotone(props) {
   return (
-    <svg viewBox="0 0 26 32" {...props}>
+    <svg width="1em" height="1em" viewBox="0 0 26 32" {...props}>
       <g fillRule="evenodd">
         <path
           d="M0 2.002C0 .896.89 0 1.997 0H19l7 7v22.996A2 2 0 0124.003 32H1.997A1.995 1.995 0 010 29.998C.048 16 0 16 0 2.002z"
