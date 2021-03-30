@@ -490,18 +490,21 @@ const icons = [
 ];
 
 const wrapperStyle = {
-  fontSize: '2rem',
+  fontSize: '1rem',
   display: 'grid',
   gridTemplateColumns: 'repeat(6, 1fr)',
   color: '#444'
 };
 
-initialState = { size: 16 };
+initialState = { size: 32, autoFontSize: true };
 
 const handleInputRangeChange = ev => {
   setState({ size: parseInt(ev.target.value, 10) })
 };
 
+const handleAutoFontSizeChange = () => {
+  setState({ autoFontSize: !state.autoFontSize })
+};
 
 const SvgFilenameCleanRx = /^Svg/
 const cleanSvgFilename = name => name.replace(SvgFilenameCleanRx, '')
@@ -523,12 +526,22 @@ import {name}Icon from 'cozy-ui/transpiled/react/Icons/{name}'{'\n'}
 
 <div>
   <Typography component='p' variant='body1' className='u-mb-1'>
-    Font size: <input type='range' min='8' max='48' value={state.size} onChange={handleInputRangeChange} /> {state.size}px
+    Size: <input
+      type='checkbox'
+      onChange={handleAutoFontSizeChange}
+      checked={state.autoFontSize} 
+    />
+    inherit{ !state.autoFontSize ? <> - <input
+      type='range'
+      min='8'
+      max='48'
+      value={state.size}
+      onChange={handleInputRangeChange} /> {state.size}px</> : null }
   </Typography>
   <div style={wrapperStyle}>
     {
     icons.map((Icon, i) => <div key={i} className='u-ta-center u-mb-1'>
-        <Icon width={state.size} height={state.size} />
+        <Icon {...(state.autoFontSize ? {} : { width: state.size, height: state.size })} />
         <Typography variant='body1' className='u-mt-half'>
           { cleanSvgFilename(Icon.name) }
           <CopyCode icon={Icon} />

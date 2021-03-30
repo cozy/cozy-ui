@@ -11,12 +11,12 @@ const ButtonsVariant = ({variant, size }) => {
       <Button
         variant={variant}
         size={size}
-        startIcon={<WrenchCircleIcon width='1em' />}>
+        startIcon={<WrenchCircleIcon />}>
         
         Default
       </Button>
       <Button
-        startIcon={<WrenchCircleIcon width='1em' />}
+        startIcon={<WrenchCircleIcon />}
         variant={variant}
         size={size}
         color="primary"
