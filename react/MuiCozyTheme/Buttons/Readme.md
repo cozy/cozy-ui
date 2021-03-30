@@ -8,12 +8,19 @@ import WrenchCircleIcon from 'cozy-ui/transpiled/react/Icons/WrenchCircle'
 const ButtonsVariant = ({variant, size }) => {
   return (
     <div>
-      <Button variant={variant} size={size}>
-        <Icon icon={WrenchCircleIcon} className='u-mr-half' />
+      <Button
+        variant={variant}
+        size={size}
+        startIcon={<WrenchCircleIcon width='1em' />}>
+        
         Default
       </Button>
-      <Button variant={variant} size={size} color="primary" className='u-ml-half'>
-        <Icon icon={WrenchCircleIcon} className='u-mr-half' />
+      <Button
+        startIcon={<WrenchCircleIcon width='1em' />}
+        variant={variant}
+        size={size}
+        color="primary"
+        className='u-ml-half'>
         Primary
       </Button>
       <Button variant={variant} size={size} color="secondary"  className='u-ml-half'>Secondary</Button>

@@ -505,9 +505,9 @@ const handleInputRangeChange = ev => {
   </Typography>
   <div style={wrapperStyle}>
     {
-    icons.map(icon => <div key={icon} className='u-ta-center u-mb-1'>
-        <Icon icon={ icon } size={state.size} />
-        <Typography variant='body1' className='u-mt-half'>{ icon.name.replace(/^Svg/, '') }</Typography>
+    icons.map((Icon, i) => <div key={i} className='u-ta-center u-mb-1'>
+        <Icon width={state.size} height={state.size} />
+        <Typography variant='body1' className='u-mt-half'>{ Icon.name.replace(/^Svg/, '') }</Typography>
       </div>
     )}
   </div>
