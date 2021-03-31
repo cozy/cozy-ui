@@ -69,21 +69,21 @@
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
-                      <a href="section-settings.html#kssref-settings-colors-grey">
-                        <span class="kss-nav__ref">1.2.1</span>
-                        <span class="kss-nav__name">Grey</span>
-                      </a>
-                    </li>
-                    <li class="kss-nav__item kss-nav__item--grandchild">
                       <a href="section-settings.html#kssref-settings-colors-blue">
-                        <span class="kss-nav__ref">1.2.2</span>
+                        <span class="kss-nav__ref">1.2.1</span>
                         <span class="kss-nav__name">Blue</span>
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
                       <a href="section-settings.html#kssref-settings-colors-green">
-                        <span class="kss-nav__ref">1.2.3</span>
+                        <span class="kss-nav__ref">1.2.2</span>
                         <span class="kss-nav__name">Green</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-settings.html#kssref-settings-colors-grey">
+                        <span class="kss-nav__ref">1.2.3</span>
+                        <span class="kss-nav__name">Grey</span>
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
@@ -93,14 +93,8 @@
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
-                      <a href="section-settings.html#kssref-settings-colors-purple">
-                        <span class="kss-nav__ref">1.2.5</span>
-                        <span class="kss-nav__name">Purple</span>
-                      </a>
-                    </li>
-                    <li class="kss-nav__item kss-nav__item--grandchild">
                       <a href="section-settings.html#kssref-settings-colors-red">
-                        <span class="kss-nav__ref">1.2.6</span>
+                        <span class="kss-nav__ref">1.2.5</span>
                         <span class="kss-nav__name">Red</span>
                       </a>
                     </li>
@@ -135,9 +129,39 @@
                       </a>
                     </li>
                     <li class="kss-nav__item kss-nav__item--grandchild">
-                      <a href="section-settings.html#kssref-settings-theme-primary">
+                      <a href="section-settings.html#kssref-settings-theme-background">
                         <span class="kss-nav__ref">1.5.1</span>
+                        <span class="kss-nav__name">Background colors</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-settings.html#kssref-settings-theme-components">
+                        <span class="kss-nav__ref">1.5.2</span>
+                        <span class="kss-nav__name">Components colors</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-settings.html#kssref-settings-theme-intention">
+                        <span class="kss-nav__ref">1.5.3</span>
+                        <span class="kss-nav__name">Intention colors</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-settings.html#kssref-settings-theme-primary">
+                        <span class="kss-nav__ref">1.5.4</span>
                         <span class="kss-nav__name">Primary</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-settings.html#kssref-settings-theme-secondary">
+                        <span class="kss-nav__ref">1.5.5</span>
+                        <span class="kss-nav__name">Secondary</span>
+                      </a>
+                    </li>
+                    <li class="kss-nav__item kss-nav__item--grandchild">
+                      <a href="section-settings.html#kssref-settings-theme-text">
+                        <span class="kss-nav__ref">1.5.6</span>
+                        <span class="kss-nav__name">Text colors</span>
                       </a>
                     </li>
                     <li class="kss-nav__item ">
@@ -525,9 +549,90 @@ Triggers when the viewport has a width smaller than 543px OR a height smaller th
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Colors used in the user interface. You can directly use the var name assiociated with its hexadecimal.</p>
+                <div class="kss-section__description"><p>Colors used in the user interface.</p>
+<p>ℹ️  In general, you are advised to use <a href="#kssref-settings-theme">theme colors</a> when
+building your components: this will ensure your components react correctly when
+changing the theme.</p>
+<p>If you need to access an absolute color that is not semantic, you can use</p>
+<pre class="hljs"><code class="language-">import palette from 'cozy-ui/transpiled/react/palette'
+&lt;div style={{ backgroundColor: palette.melon }} /&gt;
+</code></pre>
 </div>
 
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-settings-colors-blue">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-settings-colors-blue">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.2.1</span>
+                  <span class="kss-section__name">Blue</span>
+                </h3>
+              </a>
+
+
+                <div class="kss-parameters__title">Parameters:</div>
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: zircon</code></div>
+                    <div class="kss-parameters__description">
+                      #F5FAFF, CSS: var(--zircon)
+                    </div>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: dodgerBlue</code></div>
+                    <div class="kss-parameters__description">
+                      #297EF2, CSS: var(--dodgerBlue)
+                    </div>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: scienceBlue</code></div>
+                    <div class="kss-parameters__description">
+                      #0B61D6, CSS: var(--scienceBlue)
+                    </div>
+                  </li>
+                </ul>
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-settings-colors-green">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-settings-colors-green">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.2.2</span>
+                  <span class="kss-section__name">Green</span>
+                </h3>
+              </a>
+
+
+                <div class="kss-parameters__title">Parameters:</div>
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: weirdGreen</code></div>
+                    <div class="kss-parameters__description">
+                      #40DE8E, CSS: var(--weirdGreen)
+                    </div>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: emerald</code></div>
+                    <div class="kss-parameters__description">
+                      #35CE68, CSS: var(--emerald)
+                    </div>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: malachite</code></div>
+                    <div class="kss-parameters__description">
+                      #08b442, CSS: var(--malachite)
+                    </div>
+                  </li>
+                </ul>
             </article>
 
 
@@ -538,7 +643,7 @@ Triggers when the viewport has a width smaller than 543px OR a height smaller th
 
               <a class="kss-section__permalink" href="#kssref-settings-colors-grey">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">1.2.1</span>
+                  <span class="kss-section__ref">1.2.3</span>
                   <span class="kss-section__name">Grey</span>
                 </h3>
               </a>
@@ -593,116 +698,6 @@ Triggers when the viewport has a width smaller than 543px OR a height smaller th
 
 
             </section>
-            <section class="kss-section kss-section--depth-3" id="kssref-settings-colors-blue">
-
-            <article class="kss-section__content">
-
-              <a class="kss-section__permalink" href="#kssref-settings-colors-blue">
-                <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">1.2.2</span>
-                  <span class="kss-section__name">Blue</span>
-                </h3>
-              </a>
-
-
-                <div class="kss-parameters__title">Parameters:</div>
-                <ul class="kss-parameters">
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: zircon</code></div>
-                    <div class="kss-parameters__description">
-                      #F5FAFF, CSS: var(--zircon)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: hawkesBlue</code></div>
-                    <div class="kss-parameters__description">
-                      #EEF5FE, CSS: var(--hawkesBlue)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: frenchPass</code></div>
-                    <div class="kss-parameters__description">
-                      #C2DCFF, CSS: var(--frenchPass)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: azure</code></div>
-                    <div class="kss-parameters__description">
-                      #1FA8F1, CSS: var(--azure)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: dodgerBlue</code></div>
-                    <div class="kss-parameters__description">
-                      #297EF2, CSS: var(--dodgerBlue)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: scienceBlue</code></div>
-                    <div class="kss-parameters__description">
-                      #0B61D6, CSS: var(--scienceBlue)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: puertoRico</code></div>
-                    <div class="kss-parameters__description">
-                      #0DCBCF, CSS: var(--puertoRico)
-                    </div>
-                  </li>
-                </ul>
-            </article>
-
-
-            </section>
-            <section class="kss-section kss-section--depth-3" id="kssref-settings-colors-green">
-
-            <article class="kss-section__content">
-
-              <a class="kss-section__permalink" href="#kssref-settings-colors-green">
-                <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">1.2.3</span>
-                  <span class="kss-section__name">Green</span>
-                </h3>
-              </a>
-
-
-                <div class="kss-parameters__title">Parameters:</div>
-                <ul class="kss-parameters">
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: grannyApple</code></div>
-                    <div class="kss-parameters__description">
-                      #DEF7E7, CSS: var(--grannyApple)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: weirdGreen</code></div>
-                    <div class="kss-parameters__description">
-                      #40DE8E, CSS: var(--weirdGreen)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: emerald</code></div>
-                    <div class="kss-parameters__description">
-                      #35CE68, CSS: var(--emerald)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: malachite</code></div>
-                    <div class="kss-parameters__description">
-                      #08b442, CSS: var(--malachite)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: seafoamGreen</code></div>
-                    <div class="kss-parameters__description">
-                      #3DA67E, CSS: var(--seafoamGreen)
-                    </div>
-                  </li>
-                </ul>
-            </article>
-
-
-            </section>
             <section class="kss-section kss-section--depth-3" id="kssref-settings-colors-orange">
 
             <article class="kss-section__content">
@@ -718,94 +713,9 @@ Triggers when the viewport has a width smaller than 543px OR a height smaller th
                 <div class="kss-parameters__title">Parameters:</div>
                 <ul class="kss-parameters">
                   <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: brightSun</code></div>
-                    <div class="kss-parameters__description">
-                      #FFC644, CSS: var(--brightSun)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: texasRose</code></div>
-                    <div class="kss-parameters__description">
-                      #FFAE5F, CSS: var(--texasRose)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
                     <div class="kss-parameters__name"><code>Stylus: mango</code></div>
                     <div class="kss-parameters__description">
                       #FF962F, CSS: var(--mango)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: pumpkinOrange</code></div>
-                    <div class="kss-parameters__description">
-                      #FF7F1B, CSS: var(--pumpkinOrange)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: blazeOrange</code></div>
-                    <div class="kss-parameters__description">
-                      #FC6D00, CSS: var(--blazeOrange)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: melon</code></div>
-                    <div class="kss-parameters__description">
-                      #FD7461, CSS: var(--melon)
-                    </div>
-                  </li>
-                </ul>
-            </article>
-
-
-            </section>
-            <section class="kss-section kss-section--depth-3" id="kssref-settings-colors-purple">
-
-            <article class="kss-section__content">
-
-              <a class="kss-section__permalink" href="#kssref-settings-colors-purple">
-                <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">1.2.5</span>
-                  <span class="kss-section__name">Purple</span>
-                </h3>
-              </a>
-
-
-                <div class="kss-parameters__title">Parameters:</div>
-                <ul class="kss-parameters">
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: lavender</code></div>
-                    <div class="kss-parameters__description">
-                      #C2ADF4, CSS: var(--lavender)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: darkPeriwinkle</code></div>
-                    <div class="kss-parameters__description">
-                      #6984CE, CSS: var(--darkPeriwinkle)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: purpley</code></div>
-                    <div class="kss-parameters__description">
-                      #7F6BEE, CSS: var(--purpley)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: portage</code></div>
-                    <div class="kss-parameters__description">
-                      #9169F2, CSS: var(--portage)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: lightishPurple</code></div>
-                    <div class="kss-parameters__description">
-                      #B449E7, CSS: var(--lightishPurple)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: barney</code></div>
-                    <div class="kss-parameters__description">
-                      #922BC2, CSS: var(--barney)
                     </div>
                   </li>
                 </ul>
@@ -819,7 +729,7 @@ Triggers when the viewport has a width smaller than 543px OR a height smaller th
 
               <a class="kss-section__permalink" href="#kssref-settings-colors-red">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">1.2.6</span>
+                  <span class="kss-section__ref">1.2.5</span>
                   <span class="kss-section__name">Red</span>
                 </h3>
               </a>
@@ -1015,9 +925,119 @@ is 16px (which is the default size in Cozy-UI)</p>
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Colors theme used in the user interface. You can directly use the var name assiociated with its hexadecimal.</p>
+                <div class="kss-section__description"><p>Semantic colors suitable for theming. We encourage users of cozy-ui to use semantic colors
+instead of absolute colors to facilitate theming.</p>
+<p>We try to use a naming schema that is close to what is use in <a href="https://material-ui.com/customization/palette/#palette-colors">Material-UI React's theming</a>.
+It is possible that we have some discrepancies. If you see something that seems out
+of the ordinary and where you think we could reduce the difference with MUI, please
+do not hesitate to <a href="https://github.com/cozy/cozy-ui/issues/new">open an issue</a>.</p>
 </div>
 
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-settings-theme-background">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-settings-theme-background">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.5.1</span>
+                  <span class="kss-section__name">Background colors</span>
+                </h3>
+              </a>
+
+
+                <div class="kss-parameters__title">Parameters:</div>
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: primaryBackgroundLight</code></div>
+                    <div class="kss-parameters__description">
+                      #F5FAFF, CSS: var(--primaryBackgroundLight)
+                    </div>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: paperBackgroundColor</code></div>
+                    <div class="kss-parameters__description">
+                      #FFF, CSS: var(--paperBackgroundColor)
+                    </div>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: defaultBackgroundColor</code></div>
+                    <div class="kss-parameters__description">
+                      #F5F6F7, CSS: var(--defaultBackgroundColor)
+                    </div>
+                  </li>
+                </ul>
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-settings-theme-components">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-settings-theme-components">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.5.2</span>
+                  <span class="kss-section__name">Components colors</span>
+                </h3>
+              </a>
+
+
+                <div class="kss-parameters__title">Parameters:</div>
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: dividerColor</code></div>
+                    <div class="kss-parameters__description">
+                      #D6D8Da, CSS: var(--dividerColor)
+                    </div>
+                  </li>
+                </ul>
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-settings-theme-intention">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-settings-theme-intention">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.5.3</span>
+                  <span class="kss-section__name">Intention colors</span>
+                </h3>
+              </a>
+
+
+                <div class="kss-parameters__title">Parameters:</div>
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: successColor</code></div>
+                    <div class="kss-parameters__description">
+                      #35CE68, CSS: var(--successColor)
+                    </div>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: warningColor</code></div>
+                    <div class="kss-parameters__description">
+                      #FF962F, CSS: var(--warningColor)
+                    </div>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: errorColor</code></div>
+                    <div class="kss-parameters__description">
+                      #F52D2D, CSS: var(--errorColor)
+                    </div>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: infoColor</code></div>
+                    <div class="kss-parameters__description">
+                      #34373F, CSS: var(--infoColor)
+                    </div>
+                  </li>
+                </ul>
             </article>
 
 
@@ -1028,7 +1048,7 @@ is 16px (which is the default size in Cozy-UI)</p>
 
               <a class="kss-section__permalink" href="#kssref-settings-theme-primary">
                 <h3 class="kss-section__item kss-section__item--depth-3">
-                  <span class="kss-section__ref">1.5.1</span>
+                  <span class="kss-section__ref">1.5.4</span>
                   <span class="kss-section__name">Primary</span>
                 </h3>
               </a>
@@ -1055,12 +1075,6 @@ is 16px (which is the default size in Cozy-UI)</p>
                     </div>
                   </li>
                   <li class="kss-parameters__item">
-                    <div class="kss-parameters__name"><code>Stylus: primaryColorLighter</code></div>
-                    <div class="kss-parameters__description">
-                      #4B93F7, CSS: var(--primaryColorLighter)
-                    </div>
-                  </li>
-                  <li class="kss-parameters__item">
                     <div class="kss-parameters__name"><code>Stylus: primaryColorLightest</code></div>
                     <div class="kss-parameters__description">
                       #9FC4FB, CSS: var(--primaryColorLightest)
@@ -1070,6 +1084,92 @@ is 16px (which is the default size in Cozy-UI)</p>
                     <div class="kss-parameters__name"><code>Stylus: primaryContrastTextColor</code></div>
                     <div class="kss-parameters__description">
                       #FFFFFF, CSS: var(--primaryContrastTextColor)
+                    </div>
+                  </li>
+                </ul>
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-settings-theme-secondary">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-settings-theme-secondary">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.5.5</span>
+                  <span class="kss-section__name">Secondary</span>
+                </h3>
+              </a>
+
+
+                <div class="kss-parameters__title">Parameters:</div>
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: secondaryColor</code></div>
+                    <div class="kss-parameters__description">
+                      #fd7461, CSS: var(--secondaryColor)
+                    </div>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: secondaryColorDark</code></div>
+                    <div class="kss-parameters__description">
+                      #E3503B, CSS: var(--secondaryColorDark)
+                    </div>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: secondaryColorLight</code></div>
+                    <div class="kss-parameters__description">
+                      #ffdeda, CSS: var(--secondaryColorLight)
+                    </div>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: secondaryColorLightest</code></div>
+                    <div class="kss-parameters__description">
+                      #FECDC6, CSS: var(--secondaryColorLightest)
+                    </div>
+                  </li>
+                </ul>
+            </article>
+
+
+            </section>
+            <section class="kss-section kss-section--depth-3" id="kssref-settings-theme-text">
+
+            <article class="kss-section__content">
+
+              <a class="kss-section__permalink" href="#kssref-settings-theme-text">
+                <h3 class="kss-section__item kss-section__item--depth-3">
+                  <span class="kss-section__ref">1.5.6</span>
+                  <span class="kss-section__name">Text colors</span>
+                </h3>
+              </a>
+
+
+                <div class="kss-parameters__title">Parameters:</div>
+                <ul class="kss-parameters">
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: primaryTextColor</code></div>
+                    <div class="kss-parameters__description">
+                      #32363F, CSS: var(--primaryTextColor)
+                    </div>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: secondaryTextColor</code></div>
+                    <div class="kss-parameters__description">
+                      #95999D, CSS: var(--secondaryTextColor)
+                    </div>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: primaryContrastTextColor</code></div>
+                    <div class="kss-parameters__description">
+                      #FFF, CSS: var(--primaryContrastTextColor)
+                    </div>
+                  </li>
+                  <li class="kss-parameters__item">
+                    <div class="kss-parameters__name"><code>Stylus: secondaryContrastTextColor</code></div>
+                    <div class="kss-parameters__description">
+                      #FFF, CSS: var(--secondaryContrastTextColor)
                     </div>
                   </li>
                 </ul>

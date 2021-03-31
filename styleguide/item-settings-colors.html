@@ -98,7 +98,14 @@
                 </h2>
               </a>
 
-                <div class="kss-section__description"><p>Colors used in the user interface. You can directly use the var name assiociated with its hexadecimal.</p>
+                <div class="kss-section__description"><p>Colors used in the user interface.</p>
+<p>ℹ️  In general, you are advised to use <a href="#kssref-settings-theme">theme colors</a> when
+building your components: this will ensure your components react correctly when
+changing the theme.</p>
+<p>If you need to access an absolute color that is not semantic, you can use</p>
+<pre class="hljs"><code class="language-">import palette from 'cozy-ui/transpiled/react/palette'
+&lt;div style={{ backgroundColor: palette.melon }} /&gt;
+</code></pre>
 </div>
 
             </article>
