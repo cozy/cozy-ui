@@ -5,9 +5,10 @@ import NestedSelectModal from './Modal';
 import { useState } from 'react'
 import Checkbox from '../Checkbox'
 import useBreakpoints, { BreakpointsProvider } from '../hooks/useBreakpoints'
+import palette from 'cozy-ui/transpiled/react/palette'
 
 const Image = ({ letter }) => (
-  <Circle backgroundColor='var(--melon)'>
+  <Circle backgroundColor={palette.melon}>
     { letter }
   </Circle>
 )

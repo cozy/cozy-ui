@@ -161,7 +161,7 @@ const Item = translate()(
         <Icon
           className="u-ml-half"
           icon={CheckIcon}
-          color="var(--validColor)"
+          color="var(--successColor)"
         />
       )
     } else if (statusToUse === PENDING) {

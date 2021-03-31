@@ -50,10 +50,10 @@ const themesSupportingContext = [
     <div class='u-error'>
       Error text : "Please enter the right password."
     </div>
-    <div class='u-valid'>
+    <div class='u-success'>
       Valid text : "Success, you've connected EDF to your Cozy."
     </div>
-    <div class='u-warn'>
+    <div class='u-warning'>
       Warning text : "Something does not feel right, you may want to reload the page."
     </div>
 

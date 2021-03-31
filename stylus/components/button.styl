@@ -3,6 +3,7 @@
 @require '../utilities/text'
 @require '../tools/mixins'
 
+palette=json('../settings/palette.json', { hash: true })
 
 /*------------------------------------*\
   Variants
@@ -20,19 +21,19 @@ secondaryTheme = {
     contrastColor: var(--secondaryButtonContrastColor)
 }
 ghostTheme = {
-    primaryColor: var(--zircon), secondaryColor: var(--frenchPass), activeColor: var(--frenchPass), contrastColor: var(--primaryColor)
+    primaryColor: var(--zircon), secondaryColor: palette['frenchPass'], activeColor: palette['frenchPass'], contrastColor: var(--primaryColor)
 }
 highlightTheme = {
-    primaryColor: var(--emerald), secondaryColor: var(--emerald), activeColor: var(--malachite), contrastColor: var(--white)
+    primaryColor: palette['emerald'], secondaryColor: palette['emerald'], activeColor: palette['malachite'], contrastColor: var(--white)
 }
 dangerTheme = {
-    primaryColor: var(--pomegranate), secondaryColor: var(--pomegranate), activeColor: var(--monza), contrastColor: var(--white)
+    primaryColor: palette['pomegranate'], secondaryColor: palette['pomegranate'], activeColor: var(--monza), contrastColor: var(--white)
 }
 alphaTheme = {
     primaryColor: transparent, secondaryColor: var(--white), activeColor: var(--scienceBlue), contrastColor: var(--white)
 }
 dangerOutlineTheme = {
-    primaryColor: var(--white), secondaryColor: var(--yourPink), activeColor: var(--yourPink), contrastColor: var(--pomegranate)
+    primaryColor: var(--white), secondaryColor: palette['yourPink'], activeColor: palette['yourPink'], contrastColor: palette['pomegranate']
 }
 text = {
     primaryColor: transparent, secondaryColor: transparent, activeColor: transparent, contrastColor: var(--primaryColor)
@@ -187,16 +188,16 @@ $button-alert
 
 $button-alert--error
     @extend $button-alert
-    color   var(--pomegranate)
+    color:   palette['pomegranate']  // @stylint ignore
 
     &:visited
-        color var(--pomegranate)
+        color: palette['pomegranate']  // @stylint ignore
 
     &:active
     &:hover
     &:focus
         color  var(--monza)
-        background-color var(--yourPink)
+        background-color: palette['yourPink']  // @stylint ignore
 
 $button-alert--info
     @extend           $button-alert
@@ -218,16 +219,16 @@ $button-alert--info
 
 $button-alert--success
     @extend $button-alert
-    color   var(--emerald)
+    color:   palette['emerald']  // @stylint ignore
 
     &:visited
-        color var(--emerald)
+        color: palette['emerald']  // @stylint ignore
 
     &:active
     &:hover
     &:focus
-        color var(--malachite)
-        background-color var(--grannyApple)
+        color:  palette['malachite']  // @stylint ignore
+        background-color: palette['grannyApple']  // @stylint ignore
 
 $button-client
     @extend $button
@@ -454,10 +455,10 @@ $actionbtn--normal
     actionbtnVariant(var(--paleGrey), var(--charcoalGrey), var(--silver))
 
 $actionbtn--error
-    actionbtnVariant(var(--chablis), var(--pomegranate), var(--yourPink))
+    actionbtnVariant(var(--chablis), palette['pomegranate'], palette['yourPink'])
 
 $actionbtn--new
-    actionbtnVariant(var(--zircon), var(--dodgerBlue), var(--frenchPass))
+    actionbtnVariant(var(--zircon), var(--dodgerBlue), palette['frenchPass'])
     border-width rem(1)
     border-style dashed
 
