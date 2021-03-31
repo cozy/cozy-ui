@@ -1,3 +1,59 @@
+# [49.0.0](https://github.com/cozy/cozy-ui/compare/v48.0.0...v49.0.0) (2021-03-31)
+
+
+### Bug Fixes
+
+* Use colors from JSON palette for PasswordExample ([523dafa](https://github.com/cozy/cozy-ui/commit/523dafa))
+* Use colors from JSON palette in styleguide ([353e2a4](https://github.com/cozy/cozy-ui/commit/353e2a4))
+* Use theme colors for Chip ([9126b54](https://github.com/cozy/cozy-ui/commit/9126b54))
+* Use theme colors for Chip ([dbc43a5](https://github.com/cozy/cozy-ui/commit/dbc43a5))
+
+
+### Features
+
+* Remove absolute colors from utility classes ([2964d8f](https://github.com/cozy/cozy-ui/commit/2964d8f))
+* Remove css custom properties for absolute colors ([5fd473a](https://github.com/cozy/cozy-ui/commit/5fd473a)), closes [#EEF5](https://github.com/cozy/cozy-ui/issues/EEF5) [#C2](https://github.com/cozy/cozy-ui/issues/C2) [#1FA8F1](https://github.com/cozy/cozy-ui/issues/1FA8F1) [#0](https://github.com/cozy/cozy-ui/issues/0) [#DEF7E7](https://github.com/cozy/cozy-ui/issues/DEF7E7) [#3DA67](https://github.com/cozy/cozy-ui/issues/3DA67) [#FFC644](https://github.com/cozy/cozy-ui/issues/FFC644) [#FFAE5](https://github.com/cozy/cozy-ui/issues/FFAE5) [#FF7F1](https://github.com/cozy/cozy-ui/issues/FF7F1) [#FC6D00](https://github.com/cozy/cozy-ui/issues/FC6D00) [#FD7461](https://github.com/cozy/cozy-ui/issues/FD7461) [#C2ADF4](https://github.com/cozy/cozy-ui/issues/C2ADF4) [#6984](https://github.com/cozy/cozy-ui/issues/6984) [#7F6](https://github.com/cozy/cozy-ui/issues/7F6) [#9169F2](https://github.com/cozy/cozy-ui/issues/9169F2) [#B449E7](https://github.com/cozy/cozy-ui/issues/B449E7) [#922BC2](https://github.com/cozy/cozy-ui/issues/922BC2)
+* Use absolute variables in palette.js ([4bdc0a0](https://github.com/cozy/cozy-ui/commit/4bdc0a0))
+* Use correct variables ([21b28f3](https://github.com/cozy/cozy-ui/commit/21b28f3))
+* Use material ui names for intention colors ([7e809ef](https://github.com/cozy/cozy-ui/commit/7e809ef))
+* Use palette for absolute colors ([3634eb4](https://github.com/cozy/cozy-ui/commit/3634eb4))
+
+
+### BREAKING CHANGES
+
+* 'u-valid' and 'u-warn' intention utility classes have
+been renamed to be closer to material ui names.
+
+* `u-valid` -> `u-success`
+* `u-warn` -> `u-warning`
+* `u-danger` -> `u-error`
+
+You can use the following codemod commands to update your project:
+
+```
+codemod --extension js,jsx,styl,md,snap '\bu-danger\b' 'u-error';
+codemod --extension js,jsx,styl,md,snap '\bu-warn\b' 'u-warning';
+codemod --extension js,jsx,styl,md,snap '\bu-valid\b' 'u-success';
+```
+
+See
+https://material-ui.com/customization/palette/#palette-colors
+* Some utility classes for text/background color have
+been removed, please use semantic utility classes instead.
+
+- u-primaryColor
+- u-secondaryColor
+- u-bg-primaryColor
+- u-bg-secondaryColor
+- u-warning
+- u-error
+- u-success
+* Some CSS custom variables for colors have been removed,
+you are encouraged to import directly the colors from
+cozy-ui/stylus/settings/palette if necessary.
+
+Here is the list of colors that have been removed:
+
 # [48.0.0](https://github.com/cozy/cozy-ui/compare/v47.6.0...v48.0.0) (2021-03-25)
 
 
