@@ -14033,6 +14033,7 @@ html,
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
+  z-index: var(--zIndex-modal);
 }
 @media (max-width: 48rem) {
   .DialogCloseButton--cxKPO {
