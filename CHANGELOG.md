@@ -1,3 +1,10 @@
+## [49.0.1](https://github.com/cozy/cozy-ui/compare/v49.0.0...v49.0.1) (2021-04-01)
+
+
+### Bug Fixes
+
+* Fix closing issue with the cross on iOS ([7da01d4](https://github.com/cozy/cozy-ui/commit/7da01d4))
+
 # [49.0.0](https://github.com/cozy/cozy-ui/compare/v48.0.0...v49.0.0) (2021-03-31)
 
 
