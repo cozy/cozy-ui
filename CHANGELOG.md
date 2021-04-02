@@ -1,3 +1,10 @@
+## [49.0.3](https://github.com/cozy/cozy-ui/compare/v49.0.2...v49.0.3) (2021-04-02)
+
+
+### Bug Fixes
+
+* Spacing in AppSections ([50a22dd](https://github.com/cozy/cozy-ui/commit/50a22dd))
+
 ## [49.0.2](https://github.com/cozy/cozy-ui/compare/v49.0.1...v49.0.2) (2021-04-02)
 
 
