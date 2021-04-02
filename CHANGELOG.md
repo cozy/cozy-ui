@@ -1,3 +1,10 @@
+## [49.0.2](https://github.com/cozy/cozy-ui/compare/v49.0.1...v49.0.2) (2021-04-02)
+
+
+### Bug Fixes
+
+* Typo in CSS styleguide ([ecc579b](https://github.com/cozy/cozy-ui/commit/ecc579b))
+
 ## [49.0.1](https://github.com/cozy/cozy-ui/compare/v49.0.0...v49.0.1) (2021-04-01)
 
 
