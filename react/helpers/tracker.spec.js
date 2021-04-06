@@ -4,7 +4,7 @@ import { resetCache } from './appDataset'
 window.__PIWIK_DIMENSION_ID_APP__ = 1234
 
 jest.mock('./tracker', () => ({
-  ...require.requireActual('./tracker'),
+  ...jest.requireActual('./tracker'),
   getTracker: jest.fn()
 }))
 
