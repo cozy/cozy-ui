@@ -9,7 +9,7 @@ the upload queue:
 * in a fixed bottom-right position on desktop
 * underneath the top-bar on mobile
 
-```
+```jsx
 import isTesting from '../helpers/isTesting'
 import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
 
@@ -61,15 +61,27 @@ const data = {
     successCount={data.successCount}
     popover={state.popover}
   />
-  {isTesting() ?
-    <UploadQueue
-      lang='fr'
-      app='Cozy Drive'
-      getMimeTypeIcon={() => FileIcon}
-      queue={data.queue}
-      doneCount={data.doneCount}
-      successCount={data.successCount}
-      popover={true}
-    /> : null }
+  {isTesting() && (
+    <>
+      <UploadQueue
+        lang='fr'
+        app='Cozy Drive'
+        getMimeTypeIcon={() => FileIcon}
+        queue={data.queue}
+        doneCount={data.queue.length}
+        successCount={data.queue.length}
+        popover={false}
+      />
+      <UploadQueue
+        lang='fr'
+        app='Cozy Drive'
+        getMimeTypeIcon={() => FileIcon}
+        queue={data.queue}
+        doneCount={data.doneCount}
+        successCount={data.successCount}
+        popover={true}
+      />
+    </>
+  )}
 </>
 ```
