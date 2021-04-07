@@ -1,25 +1,25 @@
 import React, { Component } from 'react'
 import cx from 'classnames'
-import formatDistanceToNow from 'date-fns/distance_in_words_to_now'
-import { splitFilename } from 'cozy-client/dist/models/file'
-import CrossIcon from 'cozy-ui/transpiled/react/Icons/Cross'
-import WarningIcon from 'cozy-ui/transpiled/react/Icons/Warning'
-import CheckIcon from 'cozy-ui/transpiled/react/Icons/Check'
-import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons'
 import { withStyles } from '@material-ui/core/styles'
+import LinearProgress from '@material-ui/core/LinearProgress'
+import formatDistanceToNow from 'date-fns/distance_in_words_to_now'
 
-import { translate } from '../I18n'
+import { splitFilename } from 'cozy-client/dist/models/file'
+
+import CrossIcon from '../Icons/Cross'
+import WarningIcon from '../Icons/Warning'
+import CheckIcon from '../Icons/Check'
+import { translate, useI18n } from '../I18n'
+import withLocales from '../I18n/withLocales'
 import Icon from '../Icon'
 import Spinner from '../Spinner'
-import withLocales from '../I18n/withLocales'
-import { useI18n } from '../I18n'
-import LinearProgress from '@material-ui/core/LinearProgress'
 import Typography from '../Typography'
 import List from '../MuiCozyTheme/List'
 import ListItem from '../MuiCozyTheme/ListItem'
 import ListItemText from '../ListItemText'
 import ListItemIcon from '../MuiCozyTheme/ListItemIcon'
 import { Img } from '../Media'
+import Button from '../Button'
 
 import styles from './styles.styl'
 import localeEn from './locales/en.json'
@@ -249,12 +249,16 @@ class UploadQueue extends Component {
               <Typography variant="h6" className="u-hide--mob">
                 {t('header', { smart_count: queue.length, app: app })}
               </Typography>
-              <MuiButton color="primary" className="u-hide--tablet">
+              <Typography
+                color="primary"
+                variant="h6"
+                className="u-hide--tablet"
+              >
                 {t('header_mobile', {
                   done: doneCount,
                   total: queue.length
                 })}
-              </MuiButton>
+              </Typography>
             </div>
           )}
           {doneCount >= queue.length && (
@@ -268,9 +272,12 @@ class UploadQueue extends Component {
                   total: queue.length
                 })}
               </Typography>
-              <button className={cx(styles['btn-close'])} onClick={purgeQueue}>
-                {t('close')}
-              </button>
+              <Button
+                subtle
+                className="u-mv-0"
+                label={t('close')}
+                onClick={purgeQueue}
+              />
             </div>
           )}
         </h4>
