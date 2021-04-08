@@ -1,3 +1,10 @@
+## [49.0.4](https://github.com/cozy/cozy-ui/compare/v49.0.3...v49.0.4) (2021-04-08)
+
+
+### Bug Fixes
+
+* UploadQueue header style ([55b0995](https://github.com/cozy/cozy-ui/commit/55b0995))
+
 ## [49.0.3](https://github.com/cozy/cozy-ui/compare/v49.0.2...v49.0.3) (2021-04-02)
 
 
