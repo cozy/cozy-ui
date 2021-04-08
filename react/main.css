@@ -30282,6 +30282,10 @@ html {
   transform: translate(0);
 }
 .upload-queue-header--c9Vf2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 2rem;
   background-color: var(--defaultBackgroundColor);
   font-weight: bold;
   margin: 0;
@@ -30291,15 +30295,6 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.upload-queue-header--c9Vf2 .btn-close--2zN0K {
-  border: 0;
-  background: 0;
-  margin: 0;
-  padding: 0.4rem 0 0.4rem 0.8rem;
-  color: var(--dodgerBlue);
-  text-transform: uppercase;
-  font-size: 0.8rem;
 }
 progress.upload-queue-progress--1CmN- {
   -webkit-appearance: none;
@@ -30354,7 +30349,7 @@ progress.upload-queue-progress--1CmN- {
   .upload-queue-header--c9Vf2 {
     background: 0;
     text-transform: uppercase;
-    padding: 0;
+    padding: 0.5rem;
   }
   .upload-queue-content--3MPHo {
     display: none;
