@@ -1,3 +1,10 @@
+# [49.1.0](https://github.com/cozy/cozy-ui/compare/v49.0.4...v49.1.0) (2021-04-08)
+
+
+### Features
+
+* Show alerts on top of mui dialogs ([9299426](https://github.com/cozy/cozy-ui/commit/9299426))
+
 ## [49.0.4](https://github.com/cozy/cozy-ui/compare/v49.0.3...v49.0.4) (2021-04-08)
 
 
