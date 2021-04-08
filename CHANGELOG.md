@@ -1,3 +1,10 @@
+## [49.1.1](https://github.com/cozy/cozy-ui/compare/v49.1.0...v49.1.1) (2021-04-08)
+
+
+### Bug Fixes
+
+* Prevent default when opening intent dialog ([34f3712](https://github.com/cozy/cozy-ui/commit/34f3712))
+
 # [49.1.0](https://github.com/cozy/cozy-ui/compare/v49.0.4...v49.1.0) (2021-04-08)
 
 
