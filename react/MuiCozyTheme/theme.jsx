@@ -144,6 +144,9 @@ export const normalTheme = createMuiTheme({
       xl: 1200
     }
   },
+  zIndex: {
+    modal: getCssVariableValue('zIndex-modal')
+  },
   palette: normalPalette,
   props: {
     MuiTabs: {
@@ -417,9 +420,6 @@ const makeOverrides = theme => ({
     }
   },
   MuiDialog: {
-    root: {
-      zIndex: getCssVariableValue('zIndex-modal')
-    },
     paper: {
       '&.small': {
         width: '480px',
