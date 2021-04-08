@@ -35,6 +35,7 @@ import {
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 
 import Button from 'cozy-ui/transpiled/react/Button'
+import Alerter from 'cozy-ui/transpiled/react/Alerter'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 
@@ -177,7 +178,8 @@ initialState = {
           ? dialogContents[DialogComponent.name]
           : state.content == 'long'
             ? content.ada.long
-            : content.ada.short}
+            : content.ada.short}<br/>
+          <Button className='u-mt-1 u-ml-0' label="Show an alert" onClick={() => Alerter.success('Hello', { duration: 100000 })}/>
         </Typography>}
       actions={dialogActions[DialogComponent.name]}
       actionsLayout={state.actionsLayout}
