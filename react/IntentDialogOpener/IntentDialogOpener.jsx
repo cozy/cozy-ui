@@ -26,7 +26,10 @@ const IntentDialogOpener = props => {
   } = props
   const [modalOpened, setModalOpened] = useState(false)
 
-  const openModal = () => setModalOpened(true)
+  const openModal = ev => {
+    ev.preventDefault()
+    setModalOpened(true)
+  }
   const closeModal = () => setModalOpened(false)
 
   const handleComplete = useCallback(result => {
