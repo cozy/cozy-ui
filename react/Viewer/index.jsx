@@ -97,10 +97,15 @@ export class Viewer extends Component {
     }
   }
 
-  renderViewer(file, isDesktop) {
+  renderViewer(file) {
     if (!file) return null
-    const { renderFallbackExtraContent } = this.props
+
+    const {
+      renderFallbackExtraContent,
+      breakpoints: { isDesktop }
+    } = this.props
     const ComponentName = getViewerComponentName(file, isDesktop)
+
     return (
       <ComponentName
         file={file}
@@ -146,7 +151,7 @@ export class Viewer extends Component {
           showNavigation={showNavigation}
           showInfoPanel={showInfoPanel}
         >
-          {this.renderViewer(currentFile, isDesktop)}
+          {this.renderViewer(currentFile)}
         </ViewerControls>
         {footerProps && (
           <Footer>
