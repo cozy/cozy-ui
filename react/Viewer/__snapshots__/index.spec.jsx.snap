@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Viewer should render the various viewers: audioviewer 1`] = `
-<AudioViewer
+<View
   file={
     Object {
       "_id": "audiofileid",
@@ -11,12 +11,11 @@ exports[`Viewer should render the various viewers: audioviewer 1`] = `
     }
   }
   onClose={[Function]}
-  url="https://testurl.com/audiofileid"
 />
 `;
 
 exports[`Viewer should render the various viewers: imageviewer 1`] = `
-<ImageViewer
+<View
   file={
     Object {
       "_id": "imagefileid",
@@ -30,7 +29,7 @@ exports[`Viewer should render the various viewers: imageviewer 1`] = `
 `;
 
 exports[`Viewer should render the various viewers: markdownviewer 1`] = `
-<withClient(TextViewer)
+<View
   file={
     Object {
       "_id": "markdownfileid",
@@ -40,12 +39,11 @@ exports[`Viewer should render the various viewers: markdownviewer 1`] = `
     }
   }
   onClose={[Function]}
-  url="https://testurl.com/markdownfileid"
 />
 `;
 
 exports[`Viewer should render the various viewers: noviewer 1`] = `
-<NoViewer
+<View
   file={
     Object {
       "_id": "unknownfileid",
@@ -55,12 +53,11 @@ exports[`Viewer should render the various viewers: noviewer 1`] = `
     }
   }
   onClose={[Function]}
-  renderFallbackExtraContent={[Function]}
 />
 `;
 
 exports[`Viewer should render the various viewers: pdfviewer 1`] = `
-<withI18n(withLocales(PdfMobileViewer))
+<View
   file={
     Object {
       "_id": "pdffileid",
@@ -74,7 +71,7 @@ exports[`Viewer should render the various viewers: pdfviewer 1`] = `
 `;
 
 exports[`Viewer should render the various viewers: shortcutviewer 1`] = `
-<withI18n(withLocales(ShortcutViewer))
+<View
   file={
     Object {
       "_id": "shortcutfileid",
@@ -88,7 +85,7 @@ exports[`Viewer should render the various viewers: shortcutviewer 1`] = `
 `;
 
 exports[`Viewer should render the various viewers: textviewer 1`] = `
-<withClient(TextViewer)
+<View
   file={
     Object {
       "_id": "textfileid",
@@ -98,12 +95,11 @@ exports[`Viewer should render the various viewers: textviewer 1`] = `
     }
   }
   onClose={[Function]}
-  url="https://testurl.com/textfileid"
 />
 `;
 
 exports[`Viewer should render the various viewers: videoviewer 1`] = `
-<VideoViewer
+<View
   file={
     Object {
       "_id": "videofileid",
@@ -113,6 +109,5 @@ exports[`Viewer should render the various viewers: videoviewer 1`] = `
     }
   }
   onClose={[Function]}
-  url="https://testurl.com/videofileid"
 />
 `;

@@ -8,7 +8,7 @@ import ViewerWrapper from './ViewerWrapper'
 import ViewerControls from './ViewerControls'
 import InformationPanel from './InformationPanel'
 import Footer from './Footer'
-import { getViewerComponentName } from './helpers'
+import View from './View'
 
 const KEY_CODE_LEFT = 37
 const KEY_CODE_RIGHT = 39
@@ -65,24 +65,6 @@ export class Viewer extends Component {
     }
   }
 
-  renderViewer(file) {
-    if (!file) return null
-
-    const {
-      renderFallbackExtraContent,
-      breakpoints: { isDesktop }
-    } = this.props
-    const ComponentName = getViewerComponentName(file, isDesktop)
-
-    return (
-      <ComponentName
-        file={file}
-        onClose={this.onClose}
-        renderFallbackExtraContent={renderFallbackExtraContent}
-      />
-    )
-  }
-
   render() {
     const {
       files,
@@ -92,8 +74,10 @@ export class Viewer extends Component {
       panelInfoProps,
       showNavigation,
       breakpoints: { isDesktop },
-      footerProps
+      footerProps,
+      renderFallbackExtraContent
     } = this.props
+
     const currentFile = files[currentIndex]
     const fileCount = files.length
     const hasPrevious = currentIndex > 0
@@ -119,7 +103,11 @@ export class Viewer extends Component {
           showNavigation={showNavigation}
           showInfoPanel={showInfoPanel}
         >
-          {this.renderViewer(currentFile)}
+          <View
+            file={currentFile}
+            onClose={this.onClose}
+            renderFallbackExtraContent={renderFallbackExtraContent}
+          />
         </ViewerControls>
         {footerProps && (
           <Footer>
