@@ -35,12 +35,12 @@ class AppItem extends React.Component {
   }
 }
 jest.mock('./native', () => ({
-  ...require.requireActual('./native'),
+  ...jest.requireActual('./native'),
   generateUniversalLink: jest.fn()
 }))
 
 jest.mock('cozy-device-helper', () => ({
-  ...require.requireActual('cozy-device-helper'),
+  ...jest.requireActual('cozy-device-helper'),
   isMobileApp: jest.fn(),
   isMobile: jest.fn(),
   openDeeplinkOrRedirect: jest.fn(),

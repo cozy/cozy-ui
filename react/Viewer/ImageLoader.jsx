@@ -3,17 +3,16 @@ import PropTypes from 'prop-types'
 import { withClient } from 'cozy-client'
 import logger from 'cozy-logger'
 
-const TTL = 10000
-
 const PENDING = 'PENDING'
 const LOADING_LINK = 'LOADING_LINK'
 const LOADING_FALLBACK = 'LOADING_FALLBACK'
 const LOADED = 'LOADED'
 const FAILED = 'FAILED'
+const GET_LINK = 'GET_LINK'
 
+import { checkImageSource } from './checkImageSource'
 export class ImageLoader extends React.Component {
   state = {
-    status: PENDING,
     src: null
   }
 
@@ -21,12 +20,12 @@ export class ImageLoader extends React.Component {
 
   componentDidMount() {
     this._mounted = true
+    this.status = PENDING
     this.loadNextSrc()
   }
 
   componentWillUnmount() {
     this._mounted = false
-    clearTimeout(this.timeout)
     if (this.img) {
       this.img.onload = this.img.onerror = null
       this.img.src = ''
@@ -38,63 +37,60 @@ export class ImageLoader extends React.Component {
   }
 
   loadNextSrc(lastError = null) {
-    const { status } = this.state
-
-    if (status === PENDING) this.loadLink()
-    else if (status === LOADING_LINK) this.loadFallback()
-    else if (status === LOADING_FALLBACK) {
+    if (this.status === PENDING) this.getLink()
+    else if (this.status === GET_LINK) this.loadLink()
+    else if (this.status === LOADING_LINK) this.loadFallback()
+    else if (this.status === LOADING_FALLBACK) {
       logger.warn('failed loading thumbnail', lastError)
       this.setState({ status: FAILED })
       this.props.onError(lastError)
     }
   }
 
-  checkImageSource(src) {
-    const cleanImageLoader = () => {
-      clearTimeout(this.timeout)
-      this.img.onload = this.img.onerror = null
-      this.img.src = ''
-      this.img = null
-    }
-
-    return new Promise((resolve, reject) => {
-      this.img = new Image()
-      this.img.onload = resolve
-      this.img.onerror = reject
-      this.img.src = src
-      this.timeout = setTimeout(
-        () => reject(new Error('Loading image took too long')),
-        TTL
-      )
-    }).then(cleanImageLoader, cleanImageLoader)
+  async fetchFileLinks(file) {
+    const response = await this.props.client
+      .collection('io.cozy.files')
+      .get(this.getFileId(file))
+    if (!response.data.links) throw new Error('Could not fetch file links')
+    return response.data.links
   }
 
-  async getFileLinks(file) {
-    if (file.links) return file.links
-    else {
-      const response = await this.props.client
-        .collection('io.cozy.files')
-        .get(this.getFileId(file))
-      if (!response.data.links) throw new Error('Could not fetch file links')
-      return response.data.links
-    }
-  }
-
-  async loadLink() {
-    this.setState({ status: LOADING_LINK })
+  async getLink() {
+    this.status = GET_LINK
     const { file, linkType, client } = this.props
 
     try {
-      const links = await this.getFileLinks(file, linkType)
+      const link = file.links ? file.links[linkType] : false
+
+      if (!link) throw new Error(`${linkType} link is not available`)
+      const src = client.getStackClient().uri + link
+      await checkImageSource(src)
+      if (this._mounted) {
+        this.status = LOADED
+        this.setState({
+          src
+        })
+      }
+    } catch (e) {
+      logger.error(e)
+      this.loadNextSrc(e)
+    }
+  }
+  async loadLink() {
+    this.status = LOADING_LINK
+    const { file, linkType, client } = this.props
+
+    try {
+      const links = await this.fetchFileLinks(file)
       const link = links[linkType]
 
       if (!link) throw new Error(`${linkType} link is not available`)
 
       const src = client.getStackClient().uri + link
-      await this.checkImageSource(src)
+      await checkImageSource(src)
       if (this._mounted) {
+        this.status = LOADED
         this.setState({
-          status: LOADED,
           src
         })
       }
@@ -105,7 +101,7 @@ export class ImageLoader extends React.Component {
   }
 
   async loadFallback() {
-    this.setState({ status: LOADING_FALLBACK })
+    this.status = LOADING_FALLBACK
     const { file, client } = this.props
 
     try {
@@ -116,15 +112,13 @@ export class ImageLoader extends React.Component {
       if (file.class === 'pdf') {
         throw new Error('No pdf files fallback')
       }
-
       const src = await client
         .collection('io.cozy.files')
         .getDownloadLinkById(this.getFileId(file), file.name)
-
-      await this.checkImageSource(src)
+      await checkImageSource(src)
       if (this._mounted) {
+        this.status = LOADED
         this.setState({
-          status: LOADED,
           src
         })
       }
