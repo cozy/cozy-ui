@@ -2183,7 +2183,7 @@ exports[`Field should render examples: Field 2`] = `
 exports[`Field should render examples: Field 3`] = `
 "<div>
   <p>
-    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"controlled-field\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\"></label><input type=\\"text\\" id=\\"controlled-field\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" value=\\"\\"></div>
+  <div class=\\"styles__o-field___3n5HM\\"><label for=\\"controlled-field\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\"></label><input type=\\"text\\" id=\\"controlled-field\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" value=\\"\\"></div>
   </p>
 </div>"
 `;
