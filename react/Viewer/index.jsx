@@ -8,7 +8,7 @@ import ViewerWrapper from './ViewerWrapper'
 import ViewerControls from './ViewerControls'
 import InformationPanel from './InformationPanel'
 import Footer from './Footer'
-import View from './View'
+import ViewerByFile from './ViewerByFile'
 
 const KEY_CODE_LEFT = 37
 const KEY_CODE_RIGHT = 39
@@ -104,12 +104,11 @@ export class Viewer extends Component {
           showNavigation={showNavigation}
           showInfoPanel={showInfoPanel}
         >
-          <View
+          <ViewerByFile
             file={currentFile}
             onClose={this.onClose}
             renderFallbackExtraContent={renderFallbackExtraContent}
-            isOnlyOfficeEnabled={onlyOfficeProps && onlyOfficeProps.isEnabled}
-            onlyOfficeOpener={onlyOfficeProps && onlyOfficeProps.opener}
+            onlyOfficeProps={onlyOfficeProps}
           />
         </ViewerControls>
         {footerProps && (
