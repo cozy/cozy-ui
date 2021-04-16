@@ -2,6 +2,7 @@
   "Viewer": {
     "download": "Télécharger",
     "openWith": "Ouvrir avec...",
+    "openInOnlyOffice": "Ouvrir avec Only Office",
     "retry": "Réessayer",
     "error": {
       "network": "Ce fichier n'a pas pu être chargé. Avez-vous une connexion internet qui fonctionne actuellement ?",

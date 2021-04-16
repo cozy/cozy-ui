@@ -75,7 +75,8 @@ export class Viewer extends Component {
       showNavigation,
       breakpoints: { isDesktop },
       footerProps,
-      renderFallbackExtraContent
+      renderFallbackExtraContent,
+      onlyOfficeProps
     } = this.props
 
     const currentFile = files[currentIndex]
@@ -107,6 +108,8 @@ export class Viewer extends Component {
             file={currentFile}
             onClose={this.onClose}
             renderFallbackExtraContent={renderFallbackExtraContent}
+            isOnlyOfficeEnabled={onlyOfficeProps && onlyOfficeProps.isEnabled}
+            onlyOfficeOpener={onlyOfficeProps && onlyOfficeProps.opener}
           />
         </ViewerControls>
         {footerProps && (
@@ -150,6 +153,13 @@ Viewer.propTypes = {
   showNavigation: PropTypes.bool,
   /** A render prop that is called when a file can't be displayed */
   renderFallbackExtraContent: PropTypes.func,
+  /** Used to open an Only Office file */
+  onlyOfficeProps: PropTypes.shape({
+    /** Whether Only Office is enabled on the server */
+    isEnabled: PropTypes.bool,
+    /** To open the Only Office file */
+    opener: PropTypes.func
+  }),
   panelInfoProps: PropTypes.shape({
     /** Whether to show the panel containing more information about the file */
     showPanel: PropTypes.func,

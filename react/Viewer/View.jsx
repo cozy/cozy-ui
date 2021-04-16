@@ -12,10 +12,16 @@ const View = ({
   renderFallbackExtraContent,
   gestures,
   gesturesRef,
-  onSwipe
+  onSwipe,
+  isOnlyOfficeEnabled,
+  onlyOfficeOpener
 }) => {
   const { isDesktop } = useBreakpoints()
-  const ComponentName = getViewerComponentName(file, isDesktop)
+  const ComponentName = getViewerComponentName({
+    file,
+    isDesktop,
+    isOnlyOfficeEnabled
+  })
 
   return (
     <ComponentName
@@ -25,6 +31,7 @@ const View = ({
       gestures={gestures}
       gesturesRef={gesturesRef}
       onSwipe={onSwipe}
+      onlyOfficeOpener={onlyOfficeOpener}
     />
   )
 }

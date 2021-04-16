@@ -8,12 +8,18 @@ import TextViewer from './TextViewer'
 import PdfMobileViewer from './PdfMobileViewer'
 import NoViewer from './NoViewer'
 import ShortcutViewer from './ShortcutViewer'
+import OnlyOfficeViewer from './OnlyOfficeViewer'
 
+// TODO : should be in file model of cozy-client
 export const isPlainText = (mimeType = '', fileName = '') => {
   return mimeType ? /^text\//.test(mimeType) : /\.(txt|md)$/.test(fileName)
 }
 
-export const getViewerComponentName = (file, isDesktop) => {
+export const getViewerComponentName = ({
+  file,
+  isDesktop,
+  isOnlyOfficeEnabled
+}) => {
   switch (file.class) {
     case 'shortcut':
       return ShortcutViewer
@@ -26,7 +32,15 @@ export const getViewerComponentName = (file, isDesktop) => {
     case 'pdf':
       return isDesktop ? PdfJsViewer : PdfMobileViewer
     case 'text':
-      return isPlainText(file.mime, file.name) ? TextViewer : NoViewer
+      return isPlainText(file.mime, file.name)
+        ? TextViewer
+        : isOnlyOfficeEnabled
+        ? OnlyOfficeViewer
+        : NoViewer
+    case 'slide':
+      return isOnlyOfficeEnabled ? OnlyOfficeViewer : NoViewer
+    case 'spreadsheet':
+      return isOnlyOfficeEnabled ? OnlyOfficeViewer : NoViewer
     default:
       return NoViewer
   }

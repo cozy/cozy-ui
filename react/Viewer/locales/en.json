@@ -2,6 +2,7 @@
   "Viewer": {
     "download": "Download",
     "openWith": "Open with...",
+    "openInOnlyOffice": "Open with Only Office",
     "retry": "Retry",
     "error": {
       "network": "This file could not be loaded. Do you have a working internet connection right now?",
