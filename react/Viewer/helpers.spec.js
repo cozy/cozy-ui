@@ -1,6 +1,52 @@
-import { isPlainText } from './helpers'
+import { isMobile as isMobileDevice } from 'cozy-device-helper'
 
-describe('Plain text file detection', () => {
+import { isPlainText, getViewerComponentName } from './helpers'
+
+jest.mock('cozy-device-helper', () => ({
+  ...jest.requireActual('cozy-device-helper'),
+  isMobile: jest.fn()
+}))
+jest.mock('./ShortcutViewer', () => 'ShortcutViewer')
+jest.mock('./ImageViewer', () => 'ImageViewer')
+jest.mock('./AudioViewer', () => 'AudioViewer')
+jest.mock('./AudioViewer', () => 'AudioViewer')
+jest.mock('./VideoViewer', () => 'VideoViewer')
+jest.mock('./PdfJsViewer', () => 'PdfJsViewer')
+jest.mock('./PdfMobileViewer', () => 'PdfMobileViewer')
+jest.mock('./TextViewer', () => 'TextViewer')
+jest.mock('./NoViewer', () => 'NoViewer')
+
+describe('getViewerComponentName', () => {
+  beforeEach(() => {
+    isMobileDevice.mockReturnValue(false)
+  })
+
+  it('should return the correct component', () => {
+    expect(getViewerComponentName({ class: 'shortcut' })).toBe('ShortcutViewer')
+    expect(getViewerComponentName({ class: 'image' })).toBe('ImageViewer')
+    expect(getViewerComponentName({ class: 'audio' })).toBe('AudioViewer')
+    expect(getViewerComponentName({ class: 'video' })).toBe('VideoViewer')
+    isMobileDevice.mockReturnValue(true)
+    expect(getViewerComponentName({ class: 'video' })).toBe('NoViewer')
+    isMobileDevice.mockReturnValue(false)
+    expect(getViewerComponentName({ class: 'pdf' }, false)).toBe(
+      'PdfMobileViewer'
+    )
+    expect(getViewerComponentName({ class: 'pdf' }, true)).toBe('PdfJsViewer')
+    expect(
+      getViewerComponentName({
+        class: 'text',
+        mime: 'text/plain',
+        name: 'test.txt'
+      })
+    ).toBe('TextViewer')
+    expect(getViewerComponentName({ class: 'notSupportedClass' })).toBe(
+      'NoViewer'
+    )
+  })
+})
+
+describe('isPlainText', () => {
   describe('using mime types', () => {
     it('should match mime types starting with "text/"', () => {
       expect(isPlainText('text/plain')).toBe(true)
