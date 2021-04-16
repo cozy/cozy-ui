@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ActionMenu should render examples: ActionMenu 1`] = `
+exports[`AppTitle should render examples: ActionMenu 1`] = `
 "<div>
   <div><button role=\\"button\\" class=\\"styles__c-DropdownButton___1JXUA\\">Show action menu<svg viewBox=\\"0 0 24 24\\" class=\\"styles__c-DropdownButton-Icon___ohvD2 styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
         <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
@@ -42,11 +42,11 @@ exports[`ActionMenu should render examples: ActionMenu 1`] = `
 </div>"
 `;
 
-exports[`ActionMenu should render examples: ActionMenu 2`] = `"<div></div><pre class=\\"rsg--root-0\\">Error: Cannot use useBreakpoints without BreakpointsProvider. The component must have a BreakpointsProvider above it.</pre>"`;
+exports[`AppTitle should render examples: ActionMenu 2`] = `"<div></div><pre class=\\"rsg--root-0\\">Error: Cannot use useBreakpoints without BreakpointsProvider. The component must have a BreakpointsProvider above it.</pre>"`;
 
-exports[`ActionMenu should render examples: ActionMenu 3`] = `"<div></div><pre class=\\"rsg--root-0\\">Error: Cannot use useBreakpoints without BreakpointsProvider. The component must have a BreakpointsProvider above it.</pre>"`;
+exports[`AppTitle should render examples: ActionMenu 3`] = `"<div></div><pre class=\\"rsg--root-0\\">Error: Cannot use useBreakpoints without BreakpointsProvider. The component must have a BreakpointsProvider above it.</pre>"`;
 
-exports[`ActionMenu should render examples: ActionMenu 4`] = `
+exports[`AppTitle should render examples: ActionMenu 4`] = `
 "<div><button role=\\"button\\" class=\\"styles__c-DropdownButton___1JXUA\\">Show action menu<svg viewBox=\\"0 0 24 24\\" class=\\"styles__c-DropdownButton-Icon___ohvD2 styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
       <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
     </svg></button>
@@ -68,7 +68,7 @@ exports[`ActionMenu should render examples: ActionMenu 4`] = `
 </div>"
 `;
 
-exports[`ActionMenu should render examples: ActionMenu 5`] = `
+exports[`AppTitle should render examples: ActionMenu 5`] = `
 "<div>
   <div><button role=\\"button\\" class=\\"styles__c-DropdownButton___1JXUA\\">Show action menu<svg viewBox=\\"0 0 24 24\\" class=\\"styles__c-DropdownButton-Icon___ohvD2 styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
         <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
