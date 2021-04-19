@@ -1,3 +1,10 @@
+# [49.3.0](https://github.com/cozy/cozy-ui/compare/v49.2.0...v49.3.0) (2021-04-19)
+
+
+### Features
+
+* Replace Slide icon by vertical one ([0924978](https://github.com/cozy/cozy-ui/commit/0924978))
+
 # [49.2.0](https://github.com/cozy/cozy-ui/compare/v49.1.1...v49.2.0) (2021-04-19)
 
 
