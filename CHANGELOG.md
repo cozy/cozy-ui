@@ -1,3 +1,10 @@
+# [49.2.0](https://github.com/cozy/cozy-ui/compare/v49.1.1...v49.2.0) (2021-04-19)
+
+
+### Features
+
+* Viewer - add support for only office ([1325b1e](https://github.com/cozy/cozy-ui/commit/1325b1e))
+
 ## [49.1.1](https://github.com/cozy/cozy-ui/compare/v49.1.0...v49.1.1) (2021-04-08)
 
 
