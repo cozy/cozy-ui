@@ -2647,9 +2647,13 @@ exports[`Icon should render examples: Icon 1`] = `
           </g>
         </symbol>
         <symbol id=\\"file-type-slide\\" viewBox=\\"0 0 32 32\\">
-          <g fill=\\"none\\" fill-rule=\\"evenodd\\">
-            <path fill=\\"#FFDEC1\\" d=\\"M0 3.991C0 2.891.89 2 2.004 2H25l7 7v19.005C32 29.107 31.11 30 29.998 30H2.002C.896 30 0 29.1 0 28.009V3.99z\\"></path>
-            <path fill=\\"#FF9433\\" d=\\"M24.5 2c-.276 0-.5.23-.5.5V10h7.5c.276 0 .5-.232.5-.5V9l-7-7h-.5zM9.996 18h16v2h-16v-2zm0 4h16v2h-16v-2zM6 18h2v2H6v-2zm0 4h2v2H6v-2zm10-6a4 4 0 0 0 4-4h-4V8a4 4 0 1 0 0 8zm1-5V7c2 0 4 2 4 4h-4z\\"></path>
+          <title>icons/files/presentation</title>
+          <g id=\\"icons/files/presentation\\" stroke=\\"none\\" stroke-width=\\"1\\" fill=\\"none\\" fill-rule=\\"evenodd\\">
+            <g id=\\"file-02\\" transform=\\"translate(3.000000, 0.000000)\\">
+              <path d=\\"M0,2.00174332 C0,0.89621101 0.890925393,0 1.99742191,0 L19,0 L26,7 L26,29.9964051 C26,31.10296 25.1050211,32 24.0029953,32 L1.99700466,32 C0.89408944,32 0,31.1107383 0,29.9982567 L0,2.00174332 Z\\" id=\\"Rectangle-2\\" fill=\\"#FFDEC1\\"></path>
+              <path d=\\"M18.5,8.57092175e-14 C18.2238576,1.33045111e-13 18,0.230796814 18,0.500435829 L18,8 L25.4995642,8 C25.7759472,8 26,7.76806641 26,7.5 L26,7 L19,0 L18.5,8.57092175e-14 Z\\" id=\\"Path-2\\" fill=\\"#FF9433\\"></path>
+            </g>
+            <path d=\\"M22.9962158,24 L22.9962158,26 L12.9962158,26 L12.9962158,24 L22.9962158,24 Z M11,24 L11,26 L9,26 L9,24 L11,24 Z M22.9962158,20 L22.9962158,22 L12.9962158,22 L12.9962158,20 L22.9962158,20 Z M11,20 L11,22 L9,22 L9,20 L11,20 Z M16,10 L16,14 L20,14 C20,16.209139 18.209139,18 16,18 C13.790861,18 12,16.209139 12,14 C12,11.790861 13.790861,10 16,10 L16,10 Z M17,9 C19,9 21.0000002,11 21,13 L17,13 L17,9 L17,9 Z\\" id=\\"text\\" fill=\\"#FF9433\\"></path>
           </g>
         </symbol>
         <symbol id=\\"file-type-text\\" viewBox=\\"0 0 32 32\\">
@@ -3675,9 +3679,13 @@ exports[`Icon should render examples: Icon 2`] = `
           </g>
         </symbol>
         <symbol id=\\"file-type-slide\\" viewBox=\\"0 0 32 32\\">
-          <g fill=\\"none\\" fill-rule=\\"evenodd\\">
-            <path fill=\\"#FFDEC1\\" d=\\"M0 3.991C0 2.891.89 2 2.004 2H25l7 7v19.005C32 29.107 31.11 30 29.998 30H2.002C.896 30 0 29.1 0 28.009V3.99z\\"></path>
-            <path fill=\\"#FF9433\\" d=\\"M24.5 2c-.276 0-.5.23-.5.5V10h7.5c.276 0 .5-.232.5-.5V9l-7-7h-.5zM9.996 18h16v2h-16v-2zm0 4h16v2h-16v-2zM6 18h2v2H6v-2zm0 4h2v2H6v-2zm10-6a4 4 0 0 0 4-4h-4V8a4 4 0 1 0 0 8zm1-5V7c2 0 4 2 4 4h-4z\\"></path>
+          <title>icons/files/presentation</title>
+          <g id=\\"icons/files/presentation\\" stroke=\\"none\\" stroke-width=\\"1\\" fill=\\"none\\" fill-rule=\\"evenodd\\">
+            <g id=\\"file-02\\" transform=\\"translate(3.000000, 0.000000)\\">
+              <path d=\\"M0,2.00174332 C0,0.89621101 0.890925393,0 1.99742191,0 L19,0 L26,7 L26,29.9964051 C26,31.10296 25.1050211,32 24.0029953,32 L1.99700466,32 C0.89408944,32 0,31.1107383 0,29.9982567 L0,2.00174332 Z\\" id=\\"Rectangle-2\\" fill=\\"#FFDEC1\\"></path>
+              <path d=\\"M18.5,8.57092175e-14 C18.2238576,1.33045111e-13 18,0.230796814 18,0.500435829 L18,8 L25.4995642,8 C25.7759472,8 26,7.76806641 26,7.5 L26,7 L19,0 L18.5,8.57092175e-14 Z\\" id=\\"Path-2\\" fill=\\"#FF9433\\"></path>
+            </g>
+            <path d=\\"M22.9962158,24 L22.9962158,26 L12.9962158,26 L12.9962158,24 L22.9962158,24 Z M11,24 L11,26 L9,26 L9,24 L11,24 Z M22.9962158,20 L22.9962158,22 L12.9962158,22 L12.9962158,20 L22.9962158,20 Z M11,20 L11,22 L9,22 L9,20 L11,20 Z M16,10 L16,14 L20,14 C20,16.209139 18.209139,18 16,18 C13.790861,18 12,16.209139 12,14 C12,11.790861 13.790861,10 16,10 L16,10 Z M17,9 C19,9 21.0000002,11 21,13 L17,13 L17,9 L17,9 Z\\" id=\\"text\\" fill=\\"#FF9433\\"></path>
           </g>
         </symbol>
         <symbol id=\\"file-type-text\\" viewBox=\\"0 0 32 32\\">
@@ -6521,8 +6529,8 @@ exports[`Icon should render examples: Icon 6`] = `
       </div>
       <div class=\\"u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <g fill=\\"none\\" fill-rule=\\"evenodd\\">
-            <path fill=\\"#FFDEC1\\" d=\\"M0 3.991C0 2.891.89 2 2.004 2H25l7 7v19.005C32 29.107 31.11 30 29.998 30H2.002C.896 30 0 29.1 0 28.009V3.99z\\"></path>
-            <path fill=\\"#FF9433\\" d=\\"M24.5 2c-.276 0-.5.23-.5.5V10h7.5c.276 0 .5-.232.5-.5V9l-7-7h-.5zM9.996 18h16v2h-16v-2zm0 4h16v2h-16v-2zM6 18h2v2H6v-2zm0 4h2v2H6v-2zm10-6a4 4 0 004-4h-4V8a4 4 0 100 8zm1-5V7c2 0 4 2 4 4h-4z\\"></path>
+            <path d=\\"M3 2.002C3 .896 3.89 0 4.997 0H22l7 7v22.996A2 2 0 0127.003 32H4.997A1.995 1.995 0 013 29.998V2.002z\\" fill=\\"#FFDEC1\\"></path>
+            <path d=\\"M21.5 0c-.276 0-.5.23-.5.5V8h7.5c.276 0 .5-.232.5-.5V7l-7-7h-.5zM22.996 24v2h-10v-2h10zM11 24v2H9v-2h2zm11.996-4v2h-10v-2h10zM11 20v2H9v-2h2zm5-10v4h4a4 4 0 11-4-4zm1-1c2 0 4 2 4 4h-4V9z\\" fill=\\"#FF9433\\"></path>
           </g>
         </svg>
         <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1\\">FileTypeSlide</p>
