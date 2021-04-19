@@ -213,14 +213,14 @@ class ImageViewer extends Component {
     }
 
     const { file } = this.props
-    const { scale, offsetX, offsetY } = this.state
+    const { scale, offsetX, offsetY, loading } = this.state
     const style = {
       transform: `scale(${scale}) translate(${offsetX}px, ${offsetY}px)`
     }
 
     return (
       <div className={styles['viewer-imageviewer']}>
-        {this.state.loading && <ViewerSpinner />}
+        {loading && <ViewerSpinner />}
         {file && (
           <ImageLoader
             file={file}

@@ -8,11 +8,9 @@ import { FileDoctype } from '../../proptypes'
 import Button from '../../Button'
 
 import { withViewerLocales } from '../withViewerLocales'
-import styles from '../styles.styl'
 
 const DownloadButton = ({ t, client, file }) => (
   <Button
-    className={styles['viewer-noviewer-download']}
     onClick={() => client.collection('io.cozy.files').download(file)}
     label={t('Viewer.download')}
   />
