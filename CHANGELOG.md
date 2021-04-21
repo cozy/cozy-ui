@@ -1,3 +1,10 @@
+# [49.4.0](https://github.com/cozy/cozy-ui/compare/v49.3.0...v49.4.0) (2021-04-21)
+
+
+### Features
+
+* Add file-type-note icon ([3af6319](https://github.com/cozy/cozy-ui/commit/3af6319))
+
 # [49.3.0](https://github.com/cozy/cozy-ui/compare/v49.2.0...v49.3.0) (2021-04-19)
 
 
