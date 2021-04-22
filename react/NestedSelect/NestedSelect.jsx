@@ -10,9 +10,8 @@ import Divider from '../MuiCozyTheme/Divider'
 import ListItemIcon from '../MuiCozyTheme/ListItemIcon'
 import useBreakpoints from '../hooks/useBreakpoints'
 import Input from '../Input'
-
+import Typography from '../Typography'
 import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
-import Typography from '@material-ui/core/Typography'
 
 /**
  * Select like component to choose an option among a list of options.
