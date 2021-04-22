@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core'
-
 import Icon from '../Icon'
-import styles from './styles.styl'
 import UIRadio from '../Radio'
-import cx from 'classnames'
 import omit from 'lodash/omit'
 import ListItem from '../MuiCozyTheme/ListItem'
 import ListItemText from '../ListItemText'
@@ -269,13 +266,7 @@ const primaryTypographyProps = { className: 'u-ellipsis', variant: 'body1' }
 export const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
   const { isMobile } = useBreakpoints()
   return (
-    <ListItem
-      dense
-      button
-      divider
-      onClick={() => onClick(item)}
-      className={cx(styles.Row, isSelected ? styles.Row__selected : null)}
-    >
+    <ListItem dense button divider onClick={() => onClick(item)}>
       {radioPosition === 'left' ? (
         <ListItemIcon className="u-mr-0">
           <Radio
@@ -298,7 +289,7 @@ export const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
         secondary={item.description}
         secondaryTypographyProps={{
           variant: 'caption',
-          className: cx(styles.Row__caption, 'u-ellipsis')
+          className: 'u-ellipsis'
         }}
       />
       {item.children && item.children.length > 0 ? (
