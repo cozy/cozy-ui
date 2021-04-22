@@ -77,6 +77,7 @@ const isParent = (item, childItem) => {
 
 const InteractiveExample = () => {
   const [leftRadio, setLeftRadio] = useState(false)
+  const [withSearch, setWithSearch] = useState(false)
   const [showingModal, setShowingModal] = useState(false)
   const [selectedItem, setSelected] = useState({ title: 'A' })
   const showModal = () => setShowingModal(true)
@@ -102,11 +103,16 @@ const InteractiveExample = () => {
       hideModal()
     }, RADIO_BUTTON_ANIM_DURATION)
   }
+  
+  const searchOptions = withSearch && {
+  }
 
   return (
     <>
       <Checkbox label='radio to the left' readOnly name='leftRadio' value={leftRadio} checked={leftRadio} onClick={handleClickLeftRadio} />
       { selectedItem ? <>Selected: { selectedItem.title }<br/></> : null }
+      <Checkbox label='with search' readOnly name='withSearch' value={withSearch} checked={withSearch} onClick={handleClickLeftRadio} />
+ 
       <Button className='u-ml-0' label='Select' onClick={showModal} ></Button>
       { showingModal ?
         <NestedSelectModal
@@ -118,6 +124,7 @@ const InteractiveExample = () => {
           radioPosition={leftRadio ? 'left' : 'right'}
           title="Please select letter"
           transformParentItem={transformParentItem}
+          searchOptions={searchOptions}
         /> : null }
     </>
   )

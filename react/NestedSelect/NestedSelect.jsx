@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core'
+
 import Icon from '../Icon'
 import styles from './styles.styl'
 import UIRadio from '../Radio'
@@ -11,8 +12,10 @@ import ListItemText from '../ListItemText'
 import Divider from '../MuiCozyTheme/Divider'
 import ListItemIcon from '../MuiCozyTheme/ListItemIcon'
 import useBreakpoints from '../hooks/useBreakpoints'
+import Input from '../Input'
 
 import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
+import Typography from '@material-ui/core/Typography'
 
 /**
  * Select like component to choose an option among a list of options.
@@ -24,7 +27,9 @@ class NestedSelect extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      history: [props.options]
+      history: [props.options],
+      searchValue: '',
+      searchResult: []
     }
   }
 
@@ -86,12 +91,27 @@ class NestedSelect extends Component {
       transformParentItem,
       radioPosition
     } = this.props
-    const { history } = this.state
+    const { history, searchValue, searchResult } = this.state
     const current = history[0]
     const children = current.children || []
     const level = history.length - 1
     const isSelectedWithLevel = item => isSelected(item, level)
     const parentItem = transformParentItem(omit(current, 'children'))
+
+    const searchOptions = this.props.searchOptions
+    const hasSearchResult =
+      searchOptions &&
+      searchOptions.displaySearchResultItem &&
+      searchValue.length > 0
+
+    const onChange = ev => {
+      const onSearch = searchOptions && searchOptions.onSearch
+      if (onSearch) {
+        const searchValue = ev.target.value
+        const searchResult = onSearch(searchValue)
+        this.setState({ searchValue, searchResult })
+      }
+    }
 
     return (
       <>
@@ -114,15 +134,38 @@ class NestedSelect extends Component {
               <Divider />
             </>
           ) : null}
-          {children.map(item => (
-            <ItemRow
-              radioPosition={radioPosition}
-              key={item.key || item.title}
-              item={item}
-              onClick={this.handleClickItem}
-              isSelected={isSelectedWithLevel(item)}
-            />
-          ))}
+          {searchOptions && level === 0 && (
+            <div className="u-mh-1 u-mb-half">
+              <Input
+                placeholder={searchOptions.placeholderSearch}
+                onChange={onChange}
+                value={searchValue}
+              />
+            </div>
+          )}
+
+          {hasSearchResult ? (
+            searchResult.length === 0 ? (
+              <Typography
+                variant="body1"
+                className="u-flex u-flex-justify-center u-mb-1 "
+              >
+                {searchOptions.noDataLabel}
+              </Typography>
+            ) : (
+              searchResult.map(searchOptions.displaySearchResultItem)
+            )
+          ) : (
+            children.map(item => (
+              <ItemRow
+                radioPosition={radioPosition}
+                key={item.key || item.title}
+                item={item}
+                onClick={this.handleClickItem}
+                isSelected={isSelectedWithLevel(item)}
+              />
+            ))
+          )}
         </ContentComponent>
       </>
     )
@@ -186,7 +229,20 @@ NestedSelect.propTypes = {
    * const transformParentItem = item => ({ ...item, title: "Everything"})
    * ````
    */
-  transformParentItem: PropTypes.func
+  transformParentItem: PropTypes.func,
+
+  /**
+   * Search options defines :
+   * - placeholder in input search
+   * - the implementation of a search
+   * - how to display the results of a search
+   */
+  searchOptions: PropTypes.shape({
+    placeholderSearch: PropTypes.string.isRequired,
+    noDataLabel: PropTypes.string.isRequired,
+    onSearch: PropTypes.func.isRequired,
+    displaySearchResultItem: PropTypes.func.isRequired
+  })
 }
 
 export default NestedSelect
@@ -251,7 +307,7 @@ export const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
         </NestedSelectListRightIcon>
       ) : null}
 
-      {radioPosition == 'right' &&
+      {radioPosition === 'right' &&
       !(item.children && item.children.length > 0) ? (
         <NestedSelectListRightIcon>
           <Radio
