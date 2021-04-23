@@ -100,8 +100,7 @@ describe('NestedSelect', () => {
         noDataLabel: 'No Data Found',
         onSearch: () => {
           return []
-        },
-        displaySearchResultItem: item => <div>{item.title}</div>
+        }
       }
       const { root } = setup({
         searchOptions
@@ -117,8 +116,7 @@ describe('NestedSelect', () => {
         noDataLabel: 'No Data Found',
         onSearch: () => {
           return []
-        },
-        displaySearchResultItem: item => <div>{item.title}</div>
+        }
       }
       const { root } = setup({
         searchOptions
@@ -132,16 +130,22 @@ describe('NestedSelect', () => {
     })
 
     it('should show search results', () => {
-      const data = ['cozy 1', 'cozy 2', 'anything']
+      const data = [
+        { title: 'cozy 1' },
+        { title: 'cozy 2' },
+        { title: 'anything' }
+      ]
       const searchOptions = {
         placeholderSearch: 'Placeholder Search',
         noDataLabel: 'No Data Found',
         onSearch: value => {
-          return data.filter(d => d.startsWith(value))
-        },
-        displaySearchResultItem: item => <div key={item}>{item}</div>
+          // Your custom search
+          return data.filter(d => d.title.startsWith(value))
+        }
       }
       const { root } = setup({
+        itemSelected: { title: 'B1' },
+        canSelectParent: true,
         searchOptions
       })
 

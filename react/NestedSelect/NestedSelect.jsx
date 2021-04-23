@@ -137,9 +137,7 @@ class NestedSelect extends Component {
             </div>
           )}
 
-          {searchOptions &&
-          searchOptions.displaySearchResultItem &&
-          hasSearchResult ? (
+          {hasSearchResult ? (
             searchResult.length === 0 ? (
               <Typography
                 variant="body1"
@@ -148,7 +146,15 @@ class NestedSelect extends Component {
                 {searchOptions.noDataLabel}
               </Typography>
             ) : (
-              searchResult.map(searchOptions.displaySearchResultItem)
+              searchResult.map(item => (
+                <ItemRow
+                  radioPosition={radioPosition}
+                  key={item.key || item.title}
+                  item={item}
+                  onClick={this.handleClickItem}
+                  isSelected={isSelectedWithLevel(item)}
+                />
+              ))
             )
           ) : (
             children.map(item => (
@@ -235,8 +241,7 @@ NestedSelect.propTypes = {
   searchOptions: PropTypes.shape({
     placeholderSearch: PropTypes.string.isRequired,
     noDataLabel: PropTypes.string.isRequired,
-    onSearch: PropTypes.func.isRequired,
-    displaySearchResultItem: PropTypes.func.isRequired
+    onSearch: PropTypes.func.isRequired
   })
 }
 
