@@ -101,22 +101,22 @@ const InteractiveExample = () => {
   
   const handleClickWithSearch = (e) => {
     if (e.target.checked) {
-    const searchOpts = {
-        placeholderSearch: 'Placeholder Search',
-        noDataLabel: 'No Data Found',
-        onSearch: (value) => {
-          return options.children.filter(o => o.description && o.description.toLowerCase().includes(value.toLowerCase()))
-        },
-        displaySearchResultItem: item =>
-        <ListItem key={item.id} dense button divider>
-           <ListItemText
-             primary={item.description}
-             ellipsis />
-        </ListItem>
-      }
-    setSearchOptions(searchOpts)
+      const searchOpts = {
+          placeholderSearch: 'Placeholder Search',
+          noDataLabel: 'No Data Found',
+          onSearch: (value) => {
+            return options.children.filter(o => o.description && o.description.toLowerCase().includes(value.toLowerCase()))
+          },
+          displaySearchResultItem: item =>
+          <ListItem key={item.id} dense button divider>
+             <ListItemText
+               primary={item.description}
+               ellipsis />
+          </ListItem>
+        }
+      setSearchOptions(searchOpts)
     } else {
-    setSearchOptions(null)
+      setSearchOptions(null)
     }
     
   }
