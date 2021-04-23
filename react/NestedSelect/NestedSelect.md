@@ -133,8 +133,8 @@ const InteractiveExample = () => {
   return (
     <>
       <Checkbox label='radio to the left' readOnly name='leftRadio' value={leftRadio} checked={leftRadio} onClick={handleClickLeftRadio} />
-      { selectedItem ? <>Selected: { selectedItem.title }<br/></> : null }
       <Checkbox label='with search' readOnly name='withSearch' value={!!searchOptions} checked={!!searchOptions} onClick={handleClickWithSearch} />
+      { selectedItem ? <>Selected: { selectedItem.title }<br/></> : null }
  
       <Button className='u-ml-0' label='Select' onClick={showModal} ></Button>
       { showingModal ?
