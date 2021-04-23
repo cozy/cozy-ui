@@ -19843,17 +19843,6 @@ html {
 @media (max-width: 48rem) {
 }
 
-.Modal__back--qxUn_ {
-  cursor: pointer;
-  margin-right: 0.5rem;
-  margin-left: -0.25rem;
-  font-size: 1.5rem;
-  line-height: 0;
-  margin-bottom: -1rem;
-  position: relative;
-  top: -0.5rem;
-}
-
 .media--cSJMp {
   display: flex;
   align-items: center;
@@ -19871,6 +19860,17 @@ html {
 .img--3SHpG {
   line-height: 0;
   flex: 0 0 auto;
+}
+
+.Modal__back--qxUn_ {
+  cursor: pointer;
+  margin-right: 0.5rem;
+  margin-left: -0.25rem;
+  font-size: 1.5rem;
+  line-height: 0;
+  margin-bottom: -1rem;
+  position: relative;
+  top: -0.5rem;
 }
 
 .Hero--14z7_ {
