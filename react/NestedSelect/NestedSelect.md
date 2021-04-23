@@ -1,8 +1,10 @@
 ```
+import { useState } from 'react'
 import Button from '../Button'
 import Circle from '../Circle'
 import NestedSelectModal from './Modal';
-import { useState } from 'react'
+import ListItem from '../MuiCozyTheme/ListItem'
+import ListItemText from '../ListItemText'
 import Checkbox from '../Checkbox'
 import useBreakpoints, { BreakpointsProvider } from '../hooks/useBreakpoints'
 import palette from 'cozy-ui/transpiled/react/palette'
@@ -77,6 +79,7 @@ const isParent = (item, childItem) => {
 
 const InteractiveExample = () => {
   const [leftRadio, setLeftRadio] = useState(false)
+  const [searchOptions, setSearchOptions] = useState(null)
   const [showingModal, setShowingModal] = useState(false)
   const [selectedItem, setSelected] = useState({ title: 'A' })
   const showModal = () => setShowingModal(true)
@@ -95,6 +98,30 @@ const InteractiveExample = () => {
   const handleClickLeftRadio = () => {
     setLeftRadio(!leftRadio)
   }
+  
+  const handleClickWithSearch = (e) => {
+    if (e.target.checked) {
+      const searchOpts = {
+          placeholderSearch: 'Placeholder Search',
+          noDataLabel: 'No Data Found',
+          onSearch: (value) => {
+            return options.children.filter(o => o.description && o.description.toLowerCase().includes(value.toLowerCase()))
+          },
+          displaySearchResultItem: item =>
+          <ListItem key={item.id} dense button divider>
+             <ListItemText
+               primary={item.description}
+               ellipsis />
+          </ListItem>
+        }
+      setSearchOptions(searchOpts)
+    } else {
+      setSearchOptions(null)
+    }
+    
+  }
+  
+  
 
   const handleSelect = item => {
     setSelected(item)
@@ -106,7 +133,9 @@ const InteractiveExample = () => {
   return (
     <>
       <Checkbox label='radio to the left' readOnly name='leftRadio' value={leftRadio} checked={leftRadio} onClick={handleClickLeftRadio} />
+      <Checkbox label='with search' readOnly name='withSearch' value={!!searchOptions} checked={!!searchOptions} onClick={handleClickWithSearch} />
       { selectedItem ? <>Selected: { selectedItem.title }<br/></> : null }
+ 
       <Button className='u-ml-0' label='Select' onClick={showModal} ></Button>
       { showingModal ?
         <NestedSelectModal
@@ -118,6 +147,7 @@ const InteractiveExample = () => {
           radioPosition={leftRadio ? 'left' : 'right'}
           title="Please select letter"
           transformParentItem={transformParentItem}
+          searchOptions={searchOptions}
         /> : null }
     </>
   )
