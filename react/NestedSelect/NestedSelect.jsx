@@ -95,10 +95,7 @@ class NestedSelect extends Component {
     const parentItem = transformParentItem(omit(current, 'children'))
 
     const searchOptions = this.props.searchOptions
-    const hasSearchResult =
-      searchOptions &&
-      searchOptions.displaySearchResultItem &&
-      searchValue.length > 0
+    const hasSearchResult = searchValue.length > 0
 
     const onChange = ev => {
       const onSearch = searchOptions && searchOptions.onSearch
@@ -140,7 +137,9 @@ class NestedSelect extends Component {
             </div>
           )}
 
-          {hasSearchResult ? (
+          {searchOptions &&
+          searchOptions.displaySearchResultItem &&
+          hasSearchResult ? (
             searchResult.length === 0 ? (
               <Typography
                 variant="body1"
