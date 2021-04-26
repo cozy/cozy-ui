@@ -29,6 +29,10 @@ class IntentIframe extends React.Component {
       client
     } = this.props
 
+    console.warn(
+      'Be carful to use `withBreakpoints()` and not `useBreakpoints()` in intents. See https://github.com/cozy/cozy-ui/issues/1807'
+    )
+
     let create
     if (this.props.create) {
       create = this.props.create

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { isMobile as isMobileDevice } from 'cozy-device-helper'
 import { FileDoctype } from '../proptypes'
-import useBreakpoints from '../hooks/useBreakpoints'
+import withBreakpoints from '../helpers/withBreakpoints'
 
 import { isPlainText } from './helpers'
 import ImageViewer from './ImageViewer'
@@ -54,9 +54,9 @@ const ViewerByFile = ({
   gestures,
   gesturesRef,
   onSwipe,
-  onlyOfficeProps
+  onlyOfficeProps,
+  breakpoints: { isDesktop }
 }) => {
-  const { isDesktop } = useBreakpoints()
   const isOnlyOfficeEnabled = onlyOfficeProps && onlyOfficeProps.isEnabled
   const onlyOfficeOpener = onlyOfficeProps && onlyOfficeProps.opener
 
@@ -94,4 +94,4 @@ ViewerByFile.propTypes = {
   onSwipe: PropTypes.func
 }
 
-export default ViewerByFile
+export default withBreakpoints()(ViewerByFile)
