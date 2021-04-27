@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import flow from 'lodash/flow'
 import { makeStyles } from '@material-ui/core/styles'
 
 import { useClient } from 'cozy-client'
 
-import useBreakpoints from '../hooks/useBreakpoints'
+import withBreakpoints from '../helpers/withBreakpoints'
 import Button from '../Button'
 import IconButton from '../IconButton'
 import Icon from '../Icon'
@@ -32,10 +33,10 @@ const Toolbar = ({
   file,
   onClose,
   t,
-  toolbarRef
+  toolbarRef,
+  breakpoints: { isDesktop }
 }) => {
   const client = useClient()
-  const { isDesktop } = useBreakpoints()
   const classes = useClasses()
 
   return (
@@ -89,4 +90,7 @@ Toolbar.propTypes = {
   onClose: PropTypes.func
 }
 
-export default withViewerLocales(Toolbar)
+export default flow(
+  withBreakpoints(),
+  withViewerLocales
+)(Toolbar)

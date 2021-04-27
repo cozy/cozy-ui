@@ -1,11 +1,9 @@
 import React from 'react'
 
-import useBreakpoints from '../hooks/useBreakpoints'
+import withBreakpoints from '../helpers/withBreakpoints'
 import Spinner from '../Spinner'
 
-const ViewerSpinner = () => {
-  const { isDesktop } = useBreakpoints()
-
+const ViewerSpinner = ({ breakpoints: { isDesktop } }) => {
   return (
     <Spinner
       size="xxlarge"
@@ -16,4 +14,4 @@ const ViewerSpinner = () => {
   )
 }
 
-export default ViewerSpinner
+export default withBreakpoints()(ViewerSpinner)
