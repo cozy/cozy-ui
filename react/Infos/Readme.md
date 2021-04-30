@@ -1,17 +1,18 @@
 ### Infos display
 
-```
-import Infos from 'cozy-ui/transpiled/react/Infos';
-import Button from 'cozy-ui/transpiled/react/Button';
-import Typography from 'cozy-ui/transpiled/react/Typography';
-import Variants from 'cozy-ui/docs/components/Variants';
+```jsx
+import Infos from 'cozy-ui/transpiled/react/Infos'
+import Button from 'cozy-ui/transpiled/react/Button'
+import Typography from 'cozy-ui/transpiled/react/Typography'
+import Variants from 'cozy-ui/docs/components/Variants'
 
 const initialVariants = [
   { title: true, action: false, secondaryTheme: false, secondaryTheme: false },
   { title: true, action: true, dangerTheme: true },
   { title: true, multiActions: true, dangerTheme: false, dismissAction: true },
-];
+]
 
+;
 <div className='u-stack-m'>
     <Variants initialVariants={initialVariants}>{
       variant => (

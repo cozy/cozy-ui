@@ -9,7 +9,7 @@ import PreviousIcon from 'cozy-ui/transpiled/react/Icons/Previous'
 
 const customStyles = () => ({
   root: {
-    margin: '-1.1rem 0.25rem -0.9rem -0.5rem'
+    margin: '-1.25rem 0 -1rem -0.75rem'
   }
 })
 

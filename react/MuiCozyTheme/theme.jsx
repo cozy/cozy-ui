@@ -538,8 +538,14 @@ const makeOverrides = theme => ({
         opacity: 1
       }
     },
+    sizeSmall: {
+      '& $switchBase': {
+        padding: '4px !important' // TODO: because of MuiIconButton style, should be removed
+      }
+    },
     switchBase: {
       top: 1,
+      padding: '9px !important', // TODO: because of MuiIconButton style, should be removed
       '&$checked': {
         transform: 'translateX(15px)'
       }
@@ -595,7 +601,12 @@ const makeOverrides = theme => ({
   },
   MuiIconButton: {
     root: {
-      color: theme.palette.text.secondary
+      color: theme.palette.text.secondary,
+      '&:not($sizeSmall)': {
+        // TODO: remove this if icons default size is 24px, see https://github.com/cozy/cozy-ui/issues/1808
+        // if you remove this, remove also in MuiSwitch
+        padding: '1rem'
+      }
     }
   }
 })

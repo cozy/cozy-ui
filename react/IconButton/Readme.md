@@ -1,15 +1,16 @@
 A component suitable to be used when an Icon should be used as a button.
 Provides hover, active styles + accessible size (48px).
 
-```
+```jsx
 import IconButton from 'cozy-ui/transpiled/react/IconButton'
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import Stack from 'cozy-ui/transpiled/react/Stack';
-import Typography from 'cozy-ui/transpiled/react/Typography';
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import Stack from 'cozy-ui/transpiled/react/Stack'
+import Typography from 'cozy-ui/transpiled/react/Typography'
 
 import LeftIcon from 'cozy-ui/transpiled/react/Icons/Left'
 import RestoreIcon from 'cozy-ui/transpiled/react/Icons/Restore'
 import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
+import TrashIcon from 'cozy-ui/transpiled/react/Icons/Trash'
 
 const StateRadio = ({ name, ...props }) => {
   return <input
@@ -32,6 +33,9 @@ const Example = ({ color }) => {
     <IconButton color={color}>
       <Icon icon={RightIcon} />
     </IconButton>
+    <IconButton color={color} size="small">
+      <Icon icon={TrashIcon} />
+    </IconButton>
   </>
 }
 
@@ -39,7 +43,9 @@ initialState = {
   color: 'default'
 }
 
-const colors = ['default', 'primary', 'secondary'];
+const colors = ['default', 'primary', 'secondary']
+
+;
 
 <>
   { isTesting ()
@@ -53,7 +59,7 @@ const colors = ['default', 'primary', 'secondary'];
     </Stack>
     : <div>
       <Stack spacing='l'>
-        <div>
+        <div className="u-mb-half">
           <StateRadio value='default' name='color' /> default{' '}
           <StateRadio value='primary' name='color' /> primary{' '}
           <StateRadio value='secondary' name='color' /> secondary

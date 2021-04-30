@@ -49,8 +49,14 @@ const mkFilter = filterStr => contacts => {
   })
 }
 
-const barStyle = {
-  height: 48
+const customStyle = {
+  bar: {
+    paddingLeft: '0.25rem',
+    height: 48
+  },
+  iconButton: {
+    marginRight: '0.25rem'
+  }
 }
 
 const ContactsListModal = props => {
@@ -123,10 +129,13 @@ const ContactsListModal = props => {
               <Paper
                 square
                 elevation={0}
-                className="u-flex u-flex-items-center u-pr-3 u-pl-half"
-                style={barStyle}
+                className="u-flex u-flex-items-center u-pr-3"
+                style={customStyle.bar}
               >
-                <IconButton className="u-mr-half" onClick={rest.dismissAction}>
+                <IconButton
+                  style={customStyle.iconButton}
+                  onClick={rest.dismissAction}
+                >
                   <Icon icon={PreviousIcon} />
                 </IconButton>
                 <Input
