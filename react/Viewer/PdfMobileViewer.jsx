@@ -66,7 +66,6 @@ export const PdfMobileViewer = ({ file, t, gestures }) => {
           isMobileApp()
             ? file => (
                 <Button
-                  className={styles['viewer-noviewer-download']}
                   onClick={() => onFileOpen(file)}
                   label={t('Viewer.openWith')}
                 />

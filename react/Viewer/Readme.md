@@ -36,6 +36,12 @@ const files = [
     mime: 'audio/mp3'
   },
   {
+    _id: 'slide',
+    class: 'slide',
+    name: 'Slide.pptx',
+    mime: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+  },
+  {
     _id: 'pdf',
     class: 'pdf',
     name: 'Demo.pdf',
@@ -78,7 +84,7 @@ initialState = {
 }
 
 const initialVariants = [
-  { navigation: true, toolbar: true }
+  { navigation: true, toolbar: true, onlyOfficeEnabled: true }
 ]
 
 const toggleViewer = () => setState({ viewerOpened: !state.viewerOpened })
@@ -176,6 +182,10 @@ const FooterContent = () => {
                     onCloseRequest={toggleViewer}
                     onChangeRequest={onFileChange}
                     showNavigation={variant.navigation}
+                    onlyOfficeProps={{
+                      isEnabled: variant.onlyOfficeEnabled,
+                      opener: () => alert('This is a demo, no Only Office opener here')
+                    }}
                     toolbarProps={{
                       showToolbar: variant.toolbar,
                       showClose: state.showToolbarCloseButton

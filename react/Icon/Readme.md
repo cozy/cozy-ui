@@ -12,7 +12,7 @@ include via `Sprite`. See the example below for how to include `Sprite`.
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import Typography from 'cozy-ui/transpiled/react/Typography';
 import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite';
-const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'device-phone', 'device-tablet', 'device-browser', 'file-type-audio', 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-image', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'forbidden-sign', 'google', 'logout-large', 'top-select', 'bottom-select', 'check-white', 'dash-white', 'keychain'];
+const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'device-phone', 'device-tablet', 'device-browser', 'file-type-audio', 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'forbidden-sign', 'google', 'logout-large', 'top-select', 'bottom-select', 'check-white', 'dash-white', 'keychain'];
 
 <div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
   <Sprite />

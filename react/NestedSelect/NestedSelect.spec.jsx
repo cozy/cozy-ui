@@ -1,4 +1,6 @@
 import React from 'react'
+import { render, fireEvent } from '@testing-library/react'
+
 import NestedSelect, { ItemRow } from './NestedSelect'
 import ListItem from '../MuiCozyTheme/ListItem'
 import { BreakpointsProvider } from '../hooks/useBreakpoints'
@@ -27,7 +29,7 @@ describe('NestedSelect', () => {
       .props()
       .onClick()
 
-  const setup = ({ canSelectParent, itemSelected }) => {
+  const setup = ({ canSelectParent, itemSelected, searchOptions }) => {
     // Very crude notion of parenting
     const isParent = (item, childItem) => {
       return childItem && childItem.title.includes(item.title)
@@ -43,7 +45,8 @@ describe('NestedSelect', () => {
       }
     }
 
-    const root = mount(
+    const use = searchOptions ? render : mount
+    const root = use(
       <BreakpointsProvider>
         <NestedSelect
           canSelectParent={canSelectParent}
@@ -51,6 +54,7 @@ describe('NestedSelect', () => {
           isSelected={isSelected}
           onSelect={jest.fn()}
           onCancel={jest.fn()}
+          searchOptions={searchOptions}
         />
       </BreakpointsProvider>
     )
@@ -86,6 +90,73 @@ describe('NestedSelect', () => {
       root.update()
 
       expect(root.find(ItemRow).length).toBe(3)
+    })
+  })
+
+  describe('when there is a search options defined', () => {
+    it('should not display search input when we are in a subcategory', () => {
+      const searchOptions = {
+        placeholderSearch: 'Placeholder Search',
+        noDataLabel: 'No Data Found',
+        onSearch: () => {
+          return []
+        }
+      }
+      const { root } = setup({
+        searchOptions
+      })
+
+      fireEvent.click(root.getByText('B'))
+      expect(root.queryByPlaceholderText('Placeholder Search')).toBeFalsy()
+    })
+
+    it('should return no data (onSearch return [])', () => {
+      const searchOptions = {
+        placeholderSearch: 'Placeholder Search',
+        noDataLabel: 'No Data Found',
+        onSearch: () => {
+          return []
+        }
+      }
+      const { root } = setup({
+        searchOptions
+      })
+      const searchInput = root.getByPlaceholderText('Placeholder Search')
+      expect(searchInput).toBeTruthy()
+
+      fireEvent.change(searchInput, { target: { value: 'cozy' } })
+      const noData = root.getByText('No Data Found')
+      expect(noData).toBeTruthy()
+    })
+
+    it('should show search results', () => {
+      const data = [
+        { title: 'cozy 1' },
+        { title: 'cozy 2' },
+        { title: 'anything' }
+      ]
+      const searchOptions = {
+        placeholderSearch: 'Placeholder Search',
+        noDataLabel: 'No Data Found',
+        onSearch: value => {
+          // Your custom search
+          return data.filter(d => d.title.startsWith(value))
+        }
+      }
+      const { root } = setup({
+        itemSelected: { title: 'B1' },
+        canSelectParent: true,
+        searchOptions
+      })
+
+      const searchInput = root.getByPlaceholderText('Placeholder Search')
+      expect(searchInput).toBeTruthy()
+
+      fireEvent.change(searchInput, { target: { value: 'cozy' } })
+
+      expect(root.queryByText('cozy 1')).toBeTruthy()
+      expect(root.queryByText('cozy 1')).toBeTruthy()
+      expect(root.queryByText('anything')).toBeFalsy()
     })
   })
 })

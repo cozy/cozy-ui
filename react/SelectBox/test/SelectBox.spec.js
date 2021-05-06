@@ -7,7 +7,7 @@ import { SelectBox } from '../SelectBox'
 import { isIOSApp } from 'cozy-device-helper'
 
 jest.mock('cozy-device-helper', () => ({
-  ...require.requireActual('cozy-device-helper'),
+  ...jest.requireActual('cozy-device-helper'),
   isIOSApp: jest.fn()
 }))
 

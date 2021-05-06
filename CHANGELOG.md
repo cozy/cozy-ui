@@ -1,3 +1,37 @@
+# [49.5.0](https://github.com/cozy/cozy-ui/compare/v49.4.0...v49.5.0) (2021-04-23)
+
+
+### Bug Fixes
+
+* Change order display search checkbox ([4c8b4bf](https://github.com/cozy/cozy-ui/commit/4c8b4bf))
+* Split hasSearch (decoupled of displaySearchResultItem) ([66ebde9](https://github.com/cozy/cozy-ui/commit/66ebde9))
+
+
+### Features
+
+* Add search input ([9a13d93](https://github.com/cozy/cozy-ui/commit/9a13d93))
+
+# [49.4.0](https://github.com/cozy/cozy-ui/compare/v49.3.0...v49.4.0) (2021-04-21)
+
+
+### Features
+
+* Add file-type-note icon ([3af6319](https://github.com/cozy/cozy-ui/commit/3af6319))
+
+# [49.3.0](https://github.com/cozy/cozy-ui/compare/v49.2.0...v49.3.0) (2021-04-19)
+
+
+### Features
+
+* Replace Slide icon by vertical one ([0924978](https://github.com/cozy/cozy-ui/commit/0924978))
+
+# [49.2.0](https://github.com/cozy/cozy-ui/compare/v49.1.1...v49.2.0) (2021-04-19)
+
+
+### Features
+
+* Viewer - add support for only office ([1325b1e](https://github.com/cozy/cozy-ui/commit/1325b1e))
+
 ## [49.1.1](https://github.com/cozy/cozy-ui/compare/v49.1.0...v49.1.1) (2021-04-08)
 
 

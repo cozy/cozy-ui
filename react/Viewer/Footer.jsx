@@ -1,14 +1,12 @@
 import React from 'react'
 
-import useBreakpoints from '../hooks/useBreakpoints'
+import withBreakpoints from '../helpers/withBreakpoints'
 
 import styles from './styles.styl'
 
-const Footer = ({ children }) => {
-  const { isDesktop } = useBreakpoints()
-
+const Footer = ({ children, breakpoints: { isDesktop } }) => {
   if (isDesktop) return null
   return <div className={styles['viewer-footer']}>{children}</div>
 }
 
-export default Footer
+export default withBreakpoints()(Footer)
