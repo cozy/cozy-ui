@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Alerter component handle dismiss provided to buttonAction 1`] = `
+exports[`Alerter component handles dismiss provided to buttonAction 1`] = `
 <div
   className="styles__c-alert___f9mWB styles__c-alert--hidden___22Mz1"
   role="alert"
@@ -21,7 +21,7 @@ exports[`Alerter component handle dismiss provided to buttonAction 1`] = `
 </div>
 `;
 
-exports[`Alerter component render button if buttonText provided 1`] = `
+exports[`Alerter component renders button if buttonText provided 1`] = `
 <div
   className="styles__c-alert___f9mWB styles__c-alert--hidden___22Mz1"
   role="alert"
@@ -42,7 +42,7 @@ exports[`Alerter component render button if buttonText provided 1`] = `
 </div>
 `;
 
-exports[`Alerter component render correctly an error alert 1`] = `
+exports[`Alerter component renders correctly an error alert 1`] = `
 <div
   className="styles__c-alert___f9mWB styles__c-alert--hidden___22Mz1"
   role="alert"
@@ -57,7 +57,7 @@ exports[`Alerter component render correctly an error alert 1`] = `
 </div>
 `;
 
-exports[`Alerter component render correctly an info alert 1`] = `
+exports[`Alerter component renders correctly an info alert 1`] = `
 <div
   className="styles__c-alert___f9mWB styles__c-alert--hidden___22Mz1"
   role="alert"
@@ -72,7 +72,7 @@ exports[`Alerter component render correctly an info alert 1`] = `
 </div>
 `;
 
-exports[`Alerter component render correctly an success alert 1`] = `
+exports[`Alerter component renders correctly an success alert 1`] = `
 <div
   className="styles__c-alert___f9mWB styles__c-alert--hidden___22Mz1"
   role="alert"
