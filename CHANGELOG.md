@@ -1,3 +1,15 @@
+# [50.0.0](https://github.com/cozy/cozy-ui/compare/v49.5.0...v50.0.0) (2021-05-07)
+
+
+### Features
+
+* Remove preloader from AppIcon, use client getIconURL instead ([faca1b1](https://github.com/cozy/cozy-ui/commit/faca1b1))
+
+
+### BREAKING CHANGES
+
+* AppIcon has now two more props `type` and `priority` to match client.getIconURL() API. By default, and without any fetchIcon fn as prop, AppIcon will fetch icon from apps, so the `type` must be specified as `konnector` if necessary. Note that `type` (`app` by default) and `priority` (`stack` by default) are not required.
+
 # [49.5.0](https://github.com/cozy/cozy-ui/compare/v49.4.0...v49.5.0) (2021-04-23)
 
 
