@@ -9,7 +9,6 @@ import CubeIcon from '../Icons/Cube'
 
 import palette from '../palette'
 
-import { getPreloaded, preload } from './Preloader'
 import { AppDoctype } from '../proptypes'
 
 const DONE = 'done'
@@ -21,26 +20,13 @@ export class AppIcon extends Component {
     super(props, context)
     this.isUnmounting = false
     this.handleError = this.handleError.bind(this)
+    this.fetchIcon = this.fetchIcon.bind(this)
+  }
 
-    try {
-      const { app, client } = props
-      const cozyURL = new URL(client.getStackClient().uri)
-      // TODO: instead of storung domain and secure, pass down the client to the loaders (see https://github.com/cozy/cozy-ui/pull/1243#discussion_r348016827)
-      this.domain = cozyURL.host
-      this.secure = cozyURL.protocol === 'https:'
-
-      const preloaded = getPreloaded(app, this.domain, this.secure)
-      this.state = {
-        error: null,
-        icon: preloaded,
-        status: preloaded ? DONE : FETCHING
-      }
-    } catch (error) {
-      this.state = {
-        error,
-        status: ERRORED
-      }
-    }
+  state = {
+    error: null,
+    icon: null,
+    status: this.props.client ? FETCHING : ERRORED
   }
 
   componentWillUnmount() {
@@ -57,16 +43,39 @@ export class AppIcon extends Component {
     }
   }
 
+  fetchIcon() {
+    const { app, type, priority, client } = this.props
+
+    return client.getStackClient().getIconURL({
+      type,
+      slug: app.slug || app,
+      priority
+    })
+  }
+
+  handleError() {
+    this.setState({ status: ERRORED })
+  }
+
   async load() {
-    const { app, fetchIcon, onReady } = this.props
-    const loadFn = fetchIcon || preload
+    const { app, fetchIcon, onReady, client } = this.props
+    const loadFn = fetchIcon || this.fetchIcon
     let loadedUrl
     let loadError
+    let domain
+    let secure
+
     try {
-      loadedUrl = await loadFn(app, this.domain, this.secure)
+      if (client) {
+        const cozyURL = new URL(client.getStackClient().uri)
+        domain = cozyURL.host
+        secure = cozyURL.protocol === 'https:'
+      }
+      loadedUrl = await loadFn(app, domain, secure)
     } catch (error) {
       loadError = error
     }
+
     if (!this.isUnmounting) {
       this.setState({
         error: loadError,
@@ -79,13 +88,10 @@ export class AppIcon extends Component {
     }
   }
 
-  handleError() {
-    this.setState({ status: ERRORED })
-  }
-
   render() {
     const { alt, className, fallbackIcon } = this.props
     const { icon, status } = this.state
+
     switch (status) {
       case FETCHING:
         return (
@@ -136,7 +142,16 @@ AppIcon.propTypes = {
   fetchIcon: PropTypes.func,
   client: PropTypes.object.isRequired,
   className: PropTypes.string,
-  onReady: PropTypes.func
+  onReady: PropTypes.func,
+  /** Type of application */
+  type: PropTypes.oneOf(['app', 'konnector']),
+  /** First source to fetch the icon. If nothing is found, there is a second try with the other source */
+  priority: PropTypes.oneOf(['stack', 'registry'])
+}
+
+AppIcon.defaultProps = {
+  type: 'app',
+  priority: 'stack'
 }
 
 export default withClient(AppIcon)
