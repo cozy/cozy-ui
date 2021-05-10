@@ -5,21 +5,45 @@ import Alert from './Alert'
 
 const MINIMUM_ALERT_DURATION = 2000
 
+let currentId = 0
+
 const createStore = () => {
-  const notifications = []
+  let state = []
   const listeners = []
 
-  const dispatch = notification => {
-    notification.id = notifications.length
-    notifications.push(notification)
-    listeners.forEach(listener => listener(notification))
+  const emit = () => {
+    listeners.forEach(listener => listener(state))
+  }
+
+  const addNotification = notification => {
+    notification.id = currentId++
+    state = [...state, notification]
+    emit()
+    return notification
+  }
+
+  const removeNotification = notification => {
+    const id = notification.id
+    const idx = state.findIndex(n => n.id === id)
+    if (idx === -1) {
+      return
+    }
+    const removed = state[idx]
+    state = [...state.slice(0, idx), ...state.slice(idx + 1)]
+    emit()
+    return removed
   }
 
   const subscribe = listener => {
     listeners.push(listener)
   }
 
-  return { dispatch, subscribe }
+  const reset = () => {
+    state = []
+    emit()
+  }
+
+  return { addNotification, removeNotification, subscribe, reset }
 }
 
 const store = createStore()
@@ -29,6 +53,10 @@ class Alerter extends Component {
     notifications: []
   }
 
+  static reset() {
+    store.reset()
+  }
+
   /**
    * @param {string} message
    * @param {object} options
@@ -36,7 +64,7 @@ class Alerter extends Component {
    * @static
    */
   static info(msg, options) {
-    store.dispatch({ type: 'info', msg, options })
+    return store.addNotification({ type: 'info', msg, options })
   }
 
   /**
@@ -46,7 +74,7 @@ class Alerter extends Component {
    * @static
    */
   static success(msg, options) {
-    store.dispatch({ type: 'success', msg, options })
+    return store.addNotification({ type: 'success', msg, options })
   }
 
   /**
@@ -56,28 +84,29 @@ class Alerter extends Component {
    * @static
    */
   static error(msg, options) {
-    store.dispatch({ type: 'error', msg, options })
+    return store.addNotification({ type: 'error', msg, options })
+  }
+
+  /**
+   * Remove notification by id
+   */
+  static removeNotification(notification) {
+    return store.removeNotification(notification)
   }
 
   componentDidMount() {
     this.setState({ mounted: true })
-    store.subscribe(this.notify)
+    store.subscribe(this.onStoreEvent)
   }
 
-  notify = notification => {
+  onStoreEvent = newNotifications => {
     this.setState({
-      notifications: [...this.state.notifications, notification]
+      notifications: newNotifications
     })
   }
 
   handleClose = id => {
-    let idx = this.state.notifications.findIndex(n => n.id === id)
-    this.setState({
-      notifications: [
-        ...this.state.notifications.slice(0, idx),
-        ...this.state.notifications.slice(idx + 1)
-      ]
-    })
+    store.removeNotification(id)
   }
 
   render() {
@@ -90,7 +119,7 @@ class Alerter extends Component {
             type={notif.type}
             key={notif.id}
             message={t ? t(notif.msg, notif.options) : notif.msg}
-            onClose={() => this.handleClose(notif.id)}
+            onClose={() => this.handleClose(notif)}
             buttonText={notif.options && notif.options.buttonText}
             buttonAction={notif.options && notif.options.buttonAction}
             duration={notif.options && notif.options.duration}

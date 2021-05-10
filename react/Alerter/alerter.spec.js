@@ -10,11 +10,11 @@ import Button from '../Button'
 
 describe('Alerter component', () => {
   beforeEach(() => {
-    jest.resetModules()
+    Alerter.reset()
   })
   //
   ;['info', 'success', 'error'].forEach(type => {
-    it(`render correctly an ${type} alert`, () => {
+    it(`renders correctly an ${type} alert`, () => {
       const wrapper = shallow(<Alerter />)
       Alerter[type](`Test ${type} alert`)
       expect(
@@ -26,7 +26,15 @@ describe('Alerter component', () => {
     })
   })
 
-  it('render button if buttonText provided', () => {
+  it('should not render too much alerts', () => {
+    const wrapper = shallow(<Alerter />)
+    Alerter.info(`Test 1`)
+    Alerter.info(`Test 2`)
+    Alerter.info(`Test 3`)
+    expect(wrapper.find(Alert).length).toBe(3)
+  })
+
+  it('renders button if buttonText provided', () => {
     const wrapper = shallow(<Alerter />)
     Alerter.info(`Test alert with button`, {
       buttonText: 'BTN'
@@ -39,7 +47,7 @@ describe('Alerter component', () => {
     ).toMatchSnapshot()
   })
 
-  it('handle dismiss provided to buttonAction', () => {
+  it('handles dismiss provided to buttonAction', () => {
     const alerterWrapper = shallow(<Alerter />)
     Alerter.info(`Test alert with button`, {
       buttonText: 'BTN',
@@ -62,5 +70,22 @@ describe('Alerter component', () => {
         .simulate('click')
       expect(alert.state('hidden')).toBe(true)
     }, 20)
+  })
+
+  it('handles programmatic removal', () => {
+    const wrapper = shallow(<Alerter />)
+    const notif = Alerter.info(`Test alert with button`, {
+      duration: 20000
+    })
+    Alerter.info(`Test another alert`, {
+      duration: 20000
+    })
+    expect(wrapper.find(Alert).length).toBe(2)
+    Alerter.removeNotification(notif)
+    expect(wrapper.find(Alert).length).toBe(1)
+
+    // Nothing should happen if we try to remove a non existing notification
+    Alerter.removeNotification(notif)
+    expect(wrapper.find(Alert).length).toBe(1)
   })
 })
