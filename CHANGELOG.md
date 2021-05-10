@@ -1,3 +1,11 @@
+# [50.1.0](https://github.com/cozy/cozy-ui/compare/v50.0.0...v50.1.0) (2021-05-10)
+
+
+### Features
+
+* Ability to remove a notification programmatically ([70f9644](https://github.com/cozy/cozy-ui/commit/70f9644))
+* Support for Infinity as a duration ([fb4279c](https://github.com/cozy/cozy-ui/commit/fb4279c))
+
 # [50.0.0](https://github.com/cozy/cozy-ui/compare/v49.5.0...v50.0.0) (2021-05-07)
 
 
