@@ -28,11 +28,8 @@ const IllustrationDialog = props => {
       )}
       <DialogContent>
         <div className="dialogContentInner withFluidActions">
-          <DialogTitle
-            {...dialogTitleProps}
-            className="dialogTitleFluid u-w-100"
-          >
-            {fullScreen ? <DialogBackButton onClick={onClose} /> : null}
+          <DialogTitle {...dialogTitleProps} className="dialogTitleFluid">
+            {fullScreen && onClose && <DialogBackButton onClick={onClose} />}
             <div className="u-flex u-flex-justify-center">{title}</div>
           </DialogTitle>
           {content}

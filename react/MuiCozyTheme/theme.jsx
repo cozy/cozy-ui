@@ -459,19 +459,26 @@ const makeOverrides = theme => ({
   MuiDialogTitle: {
     root: {
       ...theme.typography.h3,
-      width: 'calc(100% - (58px + 30px))', // remove close button width and margin
+      width: 'calc(100% - (64px + 24px))', // remove padding and close button width + margin
       padding: '24px 32px',
       [theme.breakpoints.down('sm')]: {
         ...theme.typography.h4,
-        width: 'calc(100% - 58px)', // remove close button width and margin
+        width: 'calc(100% - 32px)', // remove padding
         padding: '13px 16px 12px'
       },
       '&.dialogTitleFluid': {
+        width: '100%',
         paddingTop: 0,
         paddingLeft: 0,
         paddingRight: 0,
         [theme.breakpoints.down('sm')]: {
           padding: '0 0 24px 0'
+        }
+      },
+      '&.dialogTitleFull': {
+        width: 'calc(100% - 64px)', // remove padding
+        [theme.breakpoints.down('sm')]: {
+          width: 'calc(100% - 32px)' // remove padding
         }
       }
     }

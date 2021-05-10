@@ -31,8 +31,11 @@ const FixedDialog = props => {
           onClick={onClose}
         />
       )}
-      <DialogTitle {...dialogTitleProps} className="u-ellipsis">
-        {fullScreen ? <DialogBackButton onClick={onClose} /> : null}
+      <DialogTitle
+        {...dialogTitleProps}
+        className={cx('u-ellipsis', { dialogTitleFull: !onClose })}
+      >
+        {fullScreen && onClose && <DialogBackButton onClick={onClose} />}
         {title}
       </DialogTitle>
       <Divider />
