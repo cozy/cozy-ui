@@ -1,3 +1,10 @@
+## [50.1.1](https://github.com/cozy/cozy-ui/compare/v50.1.0...v50.1.1) (2021-05-11)
+
+
+### Bug Fixes
+
+* CozyDialogs Title width and close button ([bc434d4](https://github.com/cozy/cozy-ui/commit/bc434d4))
+
 # [50.1.0](https://github.com/cozy/cozy-ui/compare/v50.0.0...v50.1.0) (2021-05-10)
 
 
