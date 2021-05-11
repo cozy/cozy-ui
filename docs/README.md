@@ -140,6 +140,25 @@ Be aware that snapshots in unit tests use the transpiled version of cozy-ui. The
 yarn build && yarn test -u
 ```
 
+We suggest to use `@testing-library/react` over `enzyme` for tests. We have
+historically used `enzyme` but we prefer the philosophy behind `testing-library` since
+it pushes to test for what the user sees.
+
+For complex components, we expose testing helpers in the `testing` file in their respective folders.
+
+```jsx
+import { getCloseButton, getAllDialogs } from 'cozy-ui/transpiled/react/CozyDialogs/testing'
+
+it('should close dialog', () => {
+  const onClose = jest.fn()
+  const root = render(<MyApp onCloseDialog={onClose} />)
+  const dialog = getDialog(root)
+  const closeBtn = getCloseButton(dialog)
+  fireEvent.click(closeBtn)
+  expect(onClose).toHaveBeenCalled()
+})
+```
+
 ## UI regression testing
 
 Components in `cozy-ui` are showcased with [React Styleguidist][]. To prevent UI regressions,

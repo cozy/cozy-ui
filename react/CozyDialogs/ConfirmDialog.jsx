@@ -2,11 +2,7 @@ import React from 'react'
 import cx from 'classnames'
 
 import useCozyDialog from './useCozyDialog'
-import Dialog, {
-  DialogTitle,
-  DialogActions,
-  DialogContent
-} from 'cozy-ui/transpiled/react/Dialog'
+import Dialog, { DialogTitle, DialogActions, DialogContent } from '../Dialog'
 
 import dialogPropTypes from './dialogPropTypes'
 import DialogBackButton from './DialogBackButton'
