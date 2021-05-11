@@ -28,7 +28,7 @@ const ConfirmDialog = props => {
       <DialogContent>
         <div className="dialogContentInner withFluidActions">
           <DialogTitle {...dialogTitleProps} className="dialogTitleFluid">
-            {fullScreen ? <DialogBackButton onClick={onClose} /> : null}
+            {fullScreen && onClose && <DialogBackButton onClick={onClose} />}
             {title}
           </DialogTitle>
           {content}

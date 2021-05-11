@@ -134,6 +134,7 @@ initialState = {
   size: 'medium',
   actionsLayout: 'row',
   title: 'short',
+  withCloseButton: true,
   content: 'default',
   theme: 'normal',
   align: 'middle'
@@ -141,6 +142,10 @@ initialState = {
 
 <>
   <BreakpointsProvider>
+    <p>With close button:
+      <StateRadio value={true} name='withCloseButton' /> yes{' '}
+      <StateRadio value={false} name='withCloseButton' /> no
+    </p>
     <p>Title:
       <StateRadio value='short' name='title' /> short{' '}
       <StateRadio value='long' name='title' /> long
@@ -166,7 +171,7 @@ initialState = {
     <DialogComponent
       size={DialogComponent !== ConfirmDialog ? state.size : undefined}
       open={state.modalOpened}
-      onClose={handleClose}
+      onClose={state.withCloseButton ? handleClose : undefined}
       align={state.align}
       title={DialogComponent !== IllustrationDialog && state.title === "long"
         ? `${dialogTitles[DialogComponent.name]} - ${content.ada.short}`
