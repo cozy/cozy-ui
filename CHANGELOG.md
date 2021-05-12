@@ -1,3 +1,10 @@
+## [50.1.2](https://github.com/cozy/cozy-ui/compare/v50.1.1...v50.1.2) (2021-05-12)
+
+
+### Bug Fixes
+
+* TileTitle ([#1821](https://github.com/cozy/cozy-ui/issues/1821)) ([246a196](https://github.com/cozy/cozy-ui/commit/246a196))
+
 ## [50.1.1](https://github.com/cozy/cozy-ui/compare/v50.1.0...v50.1.1) (2021-05-11)
 
 
