@@ -26131,7 +26131,7 @@ html {
   .Tile-title--3gbq- {
     height: 1rem;
     font-weight: normal;
-    font-size: 0.75rem;
+    font-size: 0.75rem !important;
   }
   .Tile-title--3gbq-,
   .Tile-developer--2GOfB,
