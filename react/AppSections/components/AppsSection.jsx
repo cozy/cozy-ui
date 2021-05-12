@@ -28,7 +28,7 @@ export const AppsSection = ({
               name={getTranslatedManifestProperty(app, 'name', t)}
               onClick={() => onAppClick(app.slug)}
               key={app.slug}
-              isMobile={isMobile}
+              showDeveloper={!isMobile}
               IconComponent={IconComponent}
             />
           ))}

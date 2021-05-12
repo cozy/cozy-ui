@@ -16,7 +16,9 @@ export const TileDescription = ({ children }) => {
 }
 
 export const TileTitle = ({ children }) => (
-  <Typography variant="h6">{children}</Typography>
+  <Typography variant="h6" className={styles['Tile-title']}>
+    {children}
+  </Typography>
 )
 
 export const TileSubtitle = ({ children }) => (
