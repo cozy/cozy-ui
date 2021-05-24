@@ -5,6 +5,9 @@
   Sidebar
 \*------------------------------------*/
 
+:root
+    --sidebarHeight: rem(48)
+
 $sidebar
     width rem(220)
     border-right rem(1) solid var(--dividerColor)
@@ -14,7 +17,7 @@ $sidebar
         justify-content space-between
         border 0
         border-top rem(1) solid var(--dividerColor)
-        height rem(48)
+        height var(--sidebarHeight)
         width 100%
         // iPhone X environment tweak
         padding-bottom env(safe-area-inset-bottom)
