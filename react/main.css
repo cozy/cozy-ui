@@ -20781,6 +20781,9 @@ body {
   }
 }
 
+:root {
+  --sidebarHeight: 3rem;
+}
 .o-sidebar--1295j {
   width: 13.75rem;
   border-right: 0.063rem solid var(--dividerColor);
@@ -20791,7 +20794,7 @@ body {
     justify-content: space-between;
     border: 0;
     border-top: 0.063rem solid var(--dividerColor);
-    height: 3rem;
+    height: var(--sidebarHeight);
     width: 100%;
     padding-bottom: env(safe-area-inset-bottom);
   }
