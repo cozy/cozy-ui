@@ -1,3 +1,11 @@
+# [50.2.0](https://github.com/cozy/cozy-ui/compare/v50.1.2...v50.2.0) (2021-05-24)
+
+
+### Features
+
+* Add --sidebarHeight to expose the height of the bottom sidebar ([6af3549](https://github.com/cozy/cozy-ui/commit/6af3549))
+* Add Fab component ([0fe4744](https://github.com/cozy/cozy-ui/commit/0fe4744))
+
 ## [50.1.2](https://github.com/cozy/cozy-ui/compare/v50.1.1...v50.1.2) (2021-05-12)
 
 
