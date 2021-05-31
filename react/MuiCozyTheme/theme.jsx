@@ -296,7 +296,9 @@ const makeOverrides = theme => ({
     root: {
       minWidth: 'auto',
       marginRight: '1rem',
-      padding: 0
+      padding: 0,
+      width: 32,
+      justifyContent: 'center'
     }
   },
   MuiListItem: {
