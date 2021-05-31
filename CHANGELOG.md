@@ -1,3 +1,10 @@
+# [50.3.0](https://github.com/cozy/cozy-ui/compare/v50.2.0...v50.3.0) (2021-05-31)
+
+
+### Features
+
+* Put styles as part of theme ([b1c13c5](https://github.com/cozy/cozy-ui/commit/b1c13c5))
+
 # [50.2.0](https://github.com/cozy/cozy-ui/compare/v50.1.2...v50.2.0) (2021-05-24)
 
 
