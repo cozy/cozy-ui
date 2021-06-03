@@ -17,6 +17,9 @@ import { getCurrentStatusLabel } from './helpers'
 import styles from './styles.styl'
 import en from './locales/en.json'
 import fr from './locales/fr.json'
+import Icon from '../Icon'
+import WrenchCircleIcon from '../Icons/WrenchCircle'
+import palette from '../palette'
 
 const locales = { en, fr }
 
@@ -42,7 +45,8 @@ export const AppTile = ({
   onClick,
   showDeveloper,
   showStatus,
-  IconComponent
+  IconComponent,
+  displaySpecificMaintenanceStyle
 }) => {
   const name = nameProp || app.name
   const { t } = useI18n()
@@ -52,14 +56,33 @@ export const AppTile = ({
     ? showStatus.indexOf(statusLabel) > -1 && statusLabel
     : showStatus && statusLabel
   IconComponent = IconComponent || AppIcon
+  const isInMaintenanceWithSpecificDisplay =
+    displaySpecificMaintenanceStyle && statusLabel === 'maintenance'
+
   return (
-    <Tile tag="button" type="button" onClick={onClick}>
+    <Tile
+      tag="button"
+      type="button"
+      onClick={onClick}
+      className={
+        isInMaintenanceWithSpecificDisplay
+          ? styles['AppTile-container-maintenance']
+          : undefined
+      }
+    >
       <TileIcon>
         <IconComponent
           app={app}
           className={styles['AppTile-icon']}
           {...getAppIconProps()}
         />
+        {isInMaintenanceWithSpecificDisplay && (
+          <Icon
+            icon={WrenchCircleIcon}
+            color={palette['coolGrey']}
+            className={styles['AppTile-icon-maintenance']}
+          />
+        )}
       </TileIcon>
       <TileDescription>
         <TileTitle>{namePrefix ? `${namePrefix} ${name}` : name}</TileTitle>
@@ -79,13 +102,16 @@ AppTile.propTypes = {
   name: PropTypes.string.isRequired,
   namePrefix: PropTypes.string,
   onClick: PropTypes.func,
+  IconComponent: PropTypes.element,
   showDeveloper: PropTypes.bool,
-  showStatus: PropTypes.oneOfType([PropTypes.bool, PropTypes.array])
+  showStatus: PropTypes.oneOfType([PropTypes.bool, PropTypes.array]),
+  displaySpecificMaintenanceStyle: PropTypes.bool
 }
 
 AppTile.defaultProps = {
   showDeveloper: true,
-  showStatus: true
+  showStatus: true,
+  displaySpecificMaintenanceStyle: false
 }
 
 export default AppTile

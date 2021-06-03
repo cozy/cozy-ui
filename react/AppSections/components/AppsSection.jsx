@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { useI18n } from '../../I18n'
 import useBreakpoints from '../../hooks/useBreakpoints'
 import { getTranslatedManifestProperty } from '../helpers'
@@ -12,7 +13,8 @@ export const AppsSection = ({
   appsList,
   subtitle,
   onAppClick,
-  IconComponent
+  IconComponent,
+  displaySpecificMaintenanceStyle
 }) => {
   const { isMobile } = useBreakpoints()
   const { t } = useI18n()
@@ -29,6 +31,7 @@ export const AppsSection = ({
               onClick={() => onAppClick(app.slug)}
               key={app.slug}
               showDeveloper={!isMobile}
+              displaySpecificMaintenanceStyle={displaySpecificMaintenanceStyle}
               IconComponent={IconComponent}
             />
           ))}
@@ -36,6 +39,14 @@ export const AppsSection = ({
       )}
     </div>
   )
+}
+
+AppsSection.propTypes = {
+  appsList: PropTypes.array,
+  subtitle: PropTypes.element,
+  onAppClick: PropTypes.func,
+  IconComponent: PropTypes.element,
+  displaySpecificMaintenanceStyle: PropTypes.bool
 }
 
 export default AppsSection
