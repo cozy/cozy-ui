@@ -78,6 +78,7 @@ export const AppTile = ({
         />
         {isInMaintenanceWithSpecificDisplay && (
           <Icon
+            data-testid="icon-maintenance"
             icon={WrenchCircleIcon}
             color={palette['coolGrey']}
             className={styles['AppTile-icon-maintenance']}

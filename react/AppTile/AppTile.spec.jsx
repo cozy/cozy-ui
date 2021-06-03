@@ -70,12 +70,22 @@ describe('AppTile component', () => {
     const appInMaintenance = Object.assign({}, appMock2, {
       maintenance: { maintenance_options: {} }
     })
-    const root = render(
-      <Wrapper {...appInMaintenance} app={appInMaintenance} />
-    )
+    const setup = ({ displaySpecificMaintenanceStyle }) =>
+      render(
+        <Wrapper
+          {...appInMaintenance}
+          app={appInMaintenance}
+          displaySpecificMaintenanceStyle={displaySpecificMaintenanceStyle}
+        />
+      )
+    const root = setup({ displaySpecificMaintenanceStyle: false })
     expect(root.getByText('Test2')).toBeTruthy()
     expect(root.getByText('By Naming me')).toBeTruthy()
     expect(root.getByText('In maintenance')).toBeTruthy()
+    expect(root.queryByTestId('icon-maintenance')).toBeNull()
+
+    const rootWithIcon = setup({ displaySpecificMaintenanceStyle: true })
+    expect(rootWithIcon.getByTestId('icon-maintenance')).toBeTruthy()
   })
 
   it('should render correctly an installed app', () => {
