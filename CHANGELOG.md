@@ -1,3 +1,10 @@
+# [50.4.0](https://github.com/cozy/cozy-ui/compare/v50.3.0...v50.4.0) (2021-06-04)
+
+
+### Features
+
+* Add Edge-Chromium icon ([8b3b199](https://github.com/cozy/cozy-ui/commit/8b3b199))
+
 # [50.3.0](https://github.com/cozy/cozy-ui/compare/v50.2.0...v50.3.0) (2021-05-31)
 
 
