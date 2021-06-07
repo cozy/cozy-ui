@@ -89,7 +89,8 @@ export class Sections extends Component {
       showFilterDropdown,
       showTitles,
       showSubTitles,
-      showSubSubTitles
+      showSubSubTitles,
+      displaySpecificMaintenanceStyle
     } = this.props
     const { isMobile, isTablet } = breakpoints
 
@@ -148,6 +149,9 @@ export class Sections extends Component {
                     subtitle={<SectionSubtitle>{cat.label}</SectionSubtitle>}
                     onAppClick={onAppClick}
                     IconComponent={IconComponent}
+                    displaySpecificMaintenanceStyle={
+                      displaySpecificMaintenanceStyle
+                    }
                   />
                 )
               })}
@@ -170,6 +174,9 @@ export class Sections extends Component {
                     }
                     IconComponent={IconComponent}
                     onAppClick={onAppClick}
+                    displaySpecificMaintenanceStyle={
+                      displaySpecificMaintenanceStyle
+                    }
                   />
                 )
               })}
@@ -194,11 +201,15 @@ Sections.propTypes = {
   hasNav: PropTypes.bool,
 
   /** An initial search object. Changing it after mounting will do nothing. */
-  initialSearch: PropTypes.object
+  initialSearch: PropTypes.object,
+
+  displaySpecificMaintenanceStyle: PropTypes.bool
 }
 
 Sections.defaultProps = {
   hasNav: true,
+
+  displaySpecificMaintenanceStyle: false,
   /** Whether to show the top dropdown that is used to switch categories on mobile */
   showFilterDropdown: true,
 

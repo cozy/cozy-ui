@@ -41,6 +41,7 @@ exports[`AppsSection component should be rendered correctly with apps list, subt
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubtitle>
@@ -159,6 +160,7 @@ exports[`AppsSection component should be rendered correctly with apps list, subt
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubtitle>
@@ -196,6 +198,7 @@ exports[`AppsSection component should be rendered correctly with apps list, subt
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubtitle>
@@ -239,6 +242,7 @@ exports[`AppsSection component should be rendered correctly with apps list, subt
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
@@ -277,6 +281,7 @@ exports[`AppsSection component should be rendered correctly with apps list, subt
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
@@ -326,6 +331,7 @@ exports[`AppsSection component should be rendered correctly with apps list, subt
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
@@ -376,6 +382,7 @@ exports[`AppsSection component should not render dropdown filter on mobile if na
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubtitle>
@@ -494,6 +501,7 @@ exports[`AppsSection component should not render dropdown filter on mobile if na
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubtitle>
@@ -531,6 +539,7 @@ exports[`AppsSection component should not render dropdown filter on mobile if na
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubtitle>
@@ -574,6 +583,7 @@ exports[`AppsSection component should not render dropdown filter on mobile if na
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
@@ -612,6 +622,7 @@ exports[`AppsSection component should not render dropdown filter on mobile if na
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
@@ -661,6 +672,7 @@ exports[`AppsSection component should not render dropdown filter on mobile if na
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
@@ -714,6 +726,7 @@ exports[`AppsSection component should not render dropdown filter on tablet if na
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubtitle>
@@ -832,6 +845,7 @@ exports[`AppsSection component should not render dropdown filter on tablet if na
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubtitle>
@@ -869,6 +883,7 @@ exports[`AppsSection component should not render dropdown filter on tablet if na
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubtitle>
@@ -912,6 +927,7 @@ exports[`AppsSection component should not render dropdown filter on tablet if na
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
@@ -950,6 +966,7 @@ exports[`AppsSection component should not render dropdown filter on tablet if na
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
@@ -999,6 +1016,7 @@ exports[`AppsSection component should not render dropdown filter on tablet if na
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
@@ -1117,6 +1135,7 @@ exports[`AppsSection component should render dropdown filter on mobile if no nav
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubtitle>
@@ -1235,6 +1254,7 @@ exports[`AppsSection component should render dropdown filter on mobile if no nav
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubtitle>
@@ -1272,6 +1292,7 @@ exports[`AppsSection component should render dropdown filter on mobile if no nav
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubtitle>
@@ -1315,6 +1336,7 @@ exports[`AppsSection component should render dropdown filter on mobile if no nav
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
@@ -1353,6 +1375,7 @@ exports[`AppsSection component should render dropdown filter on mobile if no nav
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
@@ -1402,6 +1425,7 @@ exports[`AppsSection component should render dropdown filter on mobile if no nav
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
@@ -1515,6 +1539,7 @@ exports[`AppsSection component should render dropdown filter on tablet if no nav
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubtitle>
@@ -1633,6 +1658,7 @@ exports[`AppsSection component should render dropdown filter on tablet if no nav
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubtitle>
@@ -1670,6 +1696,7 @@ exports[`AppsSection component should render dropdown filter on tablet if no nav
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubtitle>
@@ -1713,6 +1740,7 @@ exports[`AppsSection component should render dropdown filter on tablet if no nav
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
@@ -1751,6 +1779,7 @@ exports[`AppsSection component should render dropdown filter on tablet if no nav
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
@@ -1800,6 +1829,7 @@ exports[`AppsSection component should render dropdown filter on tablet if no nav
             },
           ]
         }
+        displaySpecificMaintenanceStyle={false}
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>

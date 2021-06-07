@@ -67,6 +67,7 @@ export const apps = [
     version: '3.0.0-beta89bnhj3993',
     uninstallable: false,
     installed: true,
+    maintenance: true,
     related: 'http://drive.cozy.mock/'
   },
   {
@@ -128,7 +129,8 @@ export const apps = [
       dev: ['3.0.0']
     },
     uninstallable: true,
-    isInRegistry: true
+    isInRegistry: true,
+    maintenance: true
   },
   {
     slug: 'tasky',
