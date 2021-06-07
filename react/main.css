@@ -26158,6 +26158,24 @@ html {
   height: 100%;
   padding: 0 0.5em;
 }
+.AppTile-icon-maintenance--2VOvO {
+  position: absolute;
+  border: 2px solid var(--primaryContrastTextColor);
+  border-radius: 50%;
+  background: var(--primaryContrastTextColor);
+  bottom: 80px;
+  left: 80px;
+}
+@media (max-width: 48rem) {
+  .AppTile-icon-maintenance--2VOvO {
+    bottom: 6px;
+    left: 40px;
+  }
+}
+.AppTile-container-maintenance--u1a1M {
+  filter: grayscale(1);
+  opacity: 0.64;
+}
 
 .Sections__section--2onYy {
   margin-bottom: 4rem;
