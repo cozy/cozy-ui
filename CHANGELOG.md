@@ -1,3 +1,10 @@
+# [50.6.0](https://github.com/cozy/cozy-ui/compare/v50.5.0...v50.6.0) (2021-06-07)
+
+
+### Features
+
+* **deps:** update dependency @material-ui/core to v4.11.4 ([#1827](https://github.com/cozy/cozy-ui/issues/1827)) ([a5b464b](https://github.com/cozy/cozy-ui/commit/a5b464b))
+
 # [50.5.0](https://github.com/cozy/cozy-ui/compare/v50.4.0...v50.5.0) (2021-06-07)
 
 
