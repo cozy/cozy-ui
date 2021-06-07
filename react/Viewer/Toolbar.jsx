@@ -18,13 +18,11 @@ import { withViewerLocales } from './withViewerLocales'
 
 import styles from './styles.styl'
 
-const useClasses = makeStyles(theme => ({
-  iconButton: {
-    [theme.breakpoints.down('md')]: {
-      marginLeft: '0.25rem'
-    }
+const useClasses = makeStyles({
+  title: {
+    paddingLeft: '0.25rem'
   }
-}))
+})
 
 const Toolbar = ({
   hidden,
@@ -50,15 +48,12 @@ const Toolbar = ({
       onMouseLeave={onMouseLeave}
     >
       {onClose && (
-        <IconButton
-          onClick={onClose}
-          className={cx(classes.iconButton, { 'u-white': isDesktop })}
-        >
+        <IconButton onClick={onClose} className={isDesktop && 'u-white'}>
           <Icon icon={PreviousIcon} />
         </IconButton>
       )}
       <Typography
-        className="u-pl-half"
+        className={classes.title}
         variant="h3"
         color={isDesktop ? 'inherit' : 'textPrimary'}
         noWrap

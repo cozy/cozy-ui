@@ -2,12 +2,12 @@ Used to present a binary choice to the user.
 
 Uses [Material UI's Switch](https://material-ui.com/components/switches/).
 
-```
+```jsx
 import { useState, useCallback } from 'react'
 import { Media, Img } from '../../Media'
 import Switch from '.'
-import Typography from "cozy-ui/transpiled/react/Typography";
-import Stack from "cozy-ui/transpiled/react/Stack";
+import Typography from "cozy-ui/transpiled/react/Typography"
+import Stack from "cozy-ui/transpiled/react/Stack"
 import Box from '@material-ui/core/Box'
 
 initialState = {
@@ -16,30 +16,33 @@ initialState = {
   switch2: false
 }
 
-const StateSwitch = ({ id, color }) => {
+const StateSwitch = ({ id, color, size }) => {
   const [checked, setChecked] = useState(initialState[`switch${id}`])
   const handleClick = useCallback((ev) => setChecked(ev.target.checked), [setChecked])
   return <Switch
     color={color}
     checked={checked}
     onChange={handleClick}
+    size={size}
   />
-} 
+}
 
 const Switches = () => {
   return <Stack spacing='xs'>
-    {['primary', 'secondary', 'default'].map((color, i) => {
+    {['primary', 'secondary', 'default', 'small'].map((color, i) => {
       return (
         <Box display='flex' alignItems='center' key={i}>
           <Typography variant='body1' inline>
             { color }
           </Typography>
-          <StateSwitch id={i} color={color} />
+          <StateSwitch id={i} color={color} size={color} />
         </Box>
       )
     })}
-  </Stack>;
-};
+  </Stack>
+}
+
+;
 
 <Switches />
 ```
