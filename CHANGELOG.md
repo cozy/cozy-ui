@@ -1,3 +1,10 @@
+# [50.5.0](https://github.com/cozy/cozy-ui/compare/v50.4.0...v50.5.0) (2021-06-07)
+
+
+### Features
+
+* Add maintenance display ([8c135f7](https://github.com/cozy/cozy-ui/commit/8c135f7))
+
 # [50.4.0](https://github.com/cozy/cozy-ui/compare/v50.3.0...v50.4.0) (2021-06-04)
 
 
