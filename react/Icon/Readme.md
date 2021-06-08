@@ -6,9 +6,9 @@ of an already loaded one. `cozy-ui` ships with built-in icons that you can
 include via `Sprite`. See the example below for how to include `Sprite`.
 `Sprite` can for example be included in the main `Layout` of your application.
 
-### Import SVGx icons
+### SVGr icons
 
-Cozy-ui provides SVGx icons; icons that can be directly imported as a React components.
+Cozy-ui provides SVGr icons; icons that can be directly imported as a React components.
 
 This works well with tree shaking since icons provided by cozy-ui that you do not use will
 not be present in your final bundle.
@@ -21,6 +21,11 @@ import Album from 'cozy-ui/transpiled/react/Icons/Album'
 ```
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import Typography from 'cozy-ui/transpiled/react/Typography';
+import Dialog from 'cozy-ui/transpiled/react/CozyDialogs/Dialog';
+import IconButton from 'cozy-ui/transpiled/react/IconButton';
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
+import { makeStyles } from '@material-ui/styles';
+import cx from 'classnames';
 
 import Album from 'cozy-ui/transpiled/react/Icons/Album'
 import AlbumAdd from 'cozy-ui/transpiled/react/Icons/AlbumAdd'
@@ -414,22 +419,67 @@ const handleInputRangeChange = ev => {
   setState({ size: parseInt(ev.target.value, 10) })
 };
 
-<div>
-  <Typography component='p' variant='body1' className='u-mb-1'>
-    Font size: <input type='range' min='8' max='48' value={state.size} onChange={handleInputRangeChange} /> {state.size}px
-  </Typography>
-  <div style={wrapperStyle}>
-    {
-    icons.map(icon => <div key={icon} className='u-ta-center u-mb-1'>
-        <Icon icon={ icon } size={state.size} />
-        <Typography variant='body1' className='u-mt-half'>{ icon.name.replace(/^Svg/, '') }</Typography>
+const getNameFromIcon = icon => {
+  return icon.name.replace(/^Svg/, '')
+}
+
+const InfoModal = ({ icon }) => {
+  const iconName = getNameFromIcon(icon)
+  return <Dialog
+    size='large'
+    open={true}
+    title={<div className='u-ta-center'>{ iconName }</div>}
+    onClose={() => setState({ selected: null })}
+    content={
+      <>
+        <Typography variant='body1'>To import {iconName}, copy/paste the following line:</Typography>
+        <pre>
+          import {iconName}Icon from 'cozy-ui/transpiled/react/icons/{iconName}'
+        </pre>
+      </>
+    }
+  />
+};
+
+const useStyles = makeStyles({
+  iconTile: {
+    cursor: 'pointer',
+    '&:hover': {
+      'text-decoration': 'underline'
+    }
+  }
+})
+
+const Example = () => {
+  const classes = useStyles()
+  return (
+    <BreakpointsProvider>
+      <Typography component='p' variant='body1' className='u-mb-1'>
+        Font size: <input type='range' min='8' max='48' value={state.size} onChange={handleInputRangeChange} /> {state.size}px
+      </Typography>
+      <div style={wrapperStyle}>
+        {
+        icons.map(icon => <div
+            key={icon}
+            className={cx(classes.iconTile, 'u-ta-center u-mb-1')}
+            onClick={() => setState({ selected: icon })}
+          >
+            <Icon icon={ icon } size={state.size} />
+            <Typography variant='body1' className='u-mt-half'>
+              { getNameFromIcon(icon) }
+            </Typography>
+          </div>
+        )}
+      { state.selected ? <InfoModal icon={state.selected} /> : null }
       </div>
-    )}
-  </div>
-</div>
+    </BreakpointsProvider>
+  )
+};
+
+<Example />
 ```
 
-## Import React illustrations directly
+## SVGr illustrations
 
 ```
 import Icon from 'cozy-ui/transpiled/react/Icon';
@@ -540,7 +590,6 @@ const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'd
 </div>
 ```
 
-
 ### Transform properties
 
 Use `spin` and `rotate` if you want you to turn your icons upside down 🙃.
@@ -608,4 +657,3 @@ const availableIcons = ['album-add','album-remove','album','answer','apple','arc
   )}
 </div>
 ```
-
