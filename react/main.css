@@ -12713,6 +12713,19 @@ html,
   margin-left: 0.25rem;
 }
 
+.DialogCloseButton--cxKPO {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: var(--zIndex-modal);
+}
+@media (max-width: 48rem) {
+  .DialogCloseButton--cxKPO {
+    top: 0.25rem;
+    right: 0.25rem;
+  }
+}
+
 .IconStack-wrapper--10dhG {
   position: relative;
   display: inline-block;
@@ -14027,19 +14040,6 @@ html,
 }
 .DateMonthPicker__MonthButton--3I_Mm.DateMonthPicker__MonthButton--selected--40hCm {
   font-weight: bold;
-}
-
-.DialogCloseButton--cxKPO {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  z-index: var(--zIndex-modal);
-}
-@media (max-width: 48rem) {
-  .DialogCloseButton--cxKPO {
-    top: 0.25rem;
-    right: 0.25rem;
-  }
 }
 
 @-moz-keyframes spin--2YilK {
