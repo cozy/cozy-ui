@@ -6,99 +6,12 @@ of an already loaded one. `cozy-ui` ships with built-in icons that you can
 include via `Sprite`. See the example below for how to include `Sprite`.
 `Sprite` can for example be included in the main `Layout` of your application.
 
-### Available illustrations
+### SVGr icons
 
-```
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import Typography from 'cozy-ui/transpiled/react/Typography';
-import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite';
-const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'device-phone', 'device-tablet', 'device-browser', 'file-type-audio', 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'forbidden-sign', 'google', 'logout-large', 'top-select', 'bottom-select', 'check-white', 'dash-white', 'keychain'];
+Cozy-ui provides SVGr icons; icons that can be directly imported as a React components.
 
-<div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
-  <Sprite />
-  {
-  availableIcons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
-      <Icon icon={ icon }/>
-      <Typography variant='body1' className='u-mb-1 u-mt-half'>{ icon }</Typography>
-    </div>
-  )}
-</div>
-```
-
-### Available UI icons
-
-```
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite';
-import Typography from 'cozy-ui/transpiled/react/Typography';
-
-const colors = ['#297EF2', '#08b442', '#B449E7', '#F52D2D', '#FF962F']
-let i = 0
-const availableIcons = ['album-add','album-remove','album','answer','apple','archive','attachment','attention','bank','banking-add','banking','bell','bill','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-edge-chromium','browser-firefox','browser-ie','browser-opera','browser-safari','burger','calendar','camera','car','carbonCopy','categories','certified','check-circle','check-list','check-square','check','circle-filled','clock','cloud-happy','cloud','collect','comment','company','compass','connector','contract','contrast','cozy-laugh','cozy-text','credit-card-add','credit-card','credit','crop','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','debit','devices','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','email-notification','email','eu','euro','exchange','eye-closed','eye','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','flag-outlined','flag','flash-auto','flashlight','folder-add','folder','forbidden','from-user','gear','globe','graph-circle','grid','group-list','groups','heart','help','history','home','hourglass','image','info-outlined','info','key','laptop','left','lightbulb','link-out','link','list','location','lock','logout','magic-trick','magnet','magnifier','merge','movement-in','movement-out','moveto','multi-files','music','new','next','note','notification-email','offline','online','openwith','palette','paperplane','password','pen','people','percent-circle','percent','personal-data','phone-download','phone','pie-chart','pin','plus-small','plus','previous','printer','qualify','rename','repare','restore','right','rise','rotate-left','rotate-right','sad-cozy','safe','select-all','setting','share-circle','share','sound','spinner','stack','star','stats','sync-cozy','sync','target','team','telephone','to-the-cloud','top','trash','trophy','unlink','unlock','up','upload','videos','wallet-add','wallet-new','wallet','warn','warning-circle','warning','wrench-circle'];
-<div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
-  <Sprite />
-  {
-  availableIcons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
-      <Icon icon={ icon } color={ colors[i++ % colors.length] }/>
-      <Typography variant='body1' className='u-mt-half u-mb-1'>{ icon }</Typography>
-    </div>
-  )}
-</div>
-```
-
-### Transform properties
-
-Use `spin` and `rotate` if you want you to turn your icons upside down 🙃.
-
-```
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import SpinnerIcon from "cozy-ui/transpiled/react/Icons/Spinner";
-import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
-<div>
-  <Icon icon={SpinnerIcon} color='#0bda51' spin/>{'\u00A0'}
-  <Icon icon={RightIcon} color='#c30017' rotate={45}/>
-</div>
-```
-
-### Custom icons
-
-The `icon` attribute can take a arbitrary React component. It is expected that
-this component print an `<svg>` tag and forwards any props to it.
-
-```jsx static
-const MyIcon = (props) => <svg {...props}>…</svg>;
-<Icon icon={myIcon} width={32} height={32} color="var(--errorColor)" />
-```
-
-You can also directly import an SVG to use it. You MUST use svg-sprite-loader
-to load your SVG (either explicitly or, better, implicitly in your `webpack.config.js`).
-
-⚠️ Do not put a `fill` property on your icon
-
-```jsx static
-import myIcon from 'my-icon.svg'
-
-;<Icon icon={myIcon} width={32} height={32} color="var(--errorColor)" />
-```
-
-### Props forwarding
-
-Icon forwards unknown props to the underlying `<svg />` element.
-
-```
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import WarningIcon from "cozy-ui/transpiled/react/Icons/Warning";
-<div>
-  <Icon icon={WarningIcon} onClick={() => alert('Be careful !')} width={32} height={32} color="var(--errorColor)" /><span>← Click it</span>
-</div>
-```
-
-### Import React icons directly
-
-If you do not want to include the full icon sprite in your
-bundle, you can import a React version of the svg icon (svg icons are converted
-to React components with svgr).  This is useful since with tree shaking, you'll
-pay only for the icons that you use.
+This works well with tree shaking since icons provided by cozy-ui that you do not use will
+not be present in your final bundle.
 
 ```jsx static
 import Album from 'cozy-ui/transpiled/react/Icons/Album'
@@ -108,6 +21,11 @@ import Album from 'cozy-ui/transpiled/react/Icons/Album'
 ```
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import Typography from 'cozy-ui/transpiled/react/Typography';
+import Dialog from 'cozy-ui/transpiled/react/CozyDialogs/Dialog';
+import IconButton from 'cozy-ui/transpiled/react/IconButton';
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
+import { makeStyles } from '@material-ui/styles';
+import cx from 'classnames';
 
 import Album from 'cozy-ui/transpiled/react/Icons/Album'
 import AlbumAdd from 'cozy-ui/transpiled/react/Icons/AlbumAdd'
@@ -501,22 +419,67 @@ const handleInputRangeChange = ev => {
   setState({ size: parseInt(ev.target.value, 10) })
 };
 
-<div>
-  <Typography component='p' variant='body1' className='u-mb-1'>
-    Font size: <input type='range' min='8' max='48' value={state.size} onChange={handleInputRangeChange} /> {state.size}px
-  </Typography>
-  <div style={wrapperStyle}>
-    {
-    icons.map(icon => <div key={icon} className='u-ta-center u-mb-1'>
-        <Icon icon={ icon } size={state.size} />
-        <Typography variant='body1' className='u-mt-half'>{ icon.name.replace(/^Svg/, '') }</Typography>
+const getNameFromIcon = icon => {
+  return icon.name.replace(/^Svg/, '')
+}
+
+const InfoModal = ({ icon }) => {
+  const iconName = getNameFromIcon(icon)
+  return <Dialog
+    size='large'
+    open={true}
+    title={<div className='u-ta-center'>{ iconName }</div>}
+    onClose={() => setState({ selected: null })}
+    content={
+      <>
+        <Typography variant='body1'>To import {iconName}, copy/paste the following line:</Typography>
+        <pre>
+          import {iconName}Icon from 'cozy-ui/transpiled/react/icons/{iconName}'
+        </pre>
+      </>
+    }
+  />
+};
+
+const useStyles = makeStyles({
+  iconTile: {
+    cursor: 'pointer',
+    '&:hover': {
+      'text-decoration': 'underline'
+    }
+  }
+})
+
+const Example = () => {
+  const classes = useStyles()
+  return (
+    <BreakpointsProvider>
+      <Typography component='p' variant='body1' className='u-mb-1'>
+        Font size: <input type='range' min='8' max='48' value={state.size} onChange={handleInputRangeChange} /> {state.size}px
+      </Typography>
+      <div style={wrapperStyle}>
+        {
+        icons.map(icon => <div
+            key={icon}
+            className={cx(classes.iconTile, 'u-ta-center u-mb-1')}
+            onClick={() => setState({ selected: icon })}
+          >
+            <Icon icon={ icon } size={state.size} />
+            <Typography variant='body1' className='u-mt-half'>
+              { getNameFromIcon(icon) }
+            </Typography>
+          </div>
+        )}
+      { state.selected ? <InfoModal icon={state.selected} /> : null }
       </div>
-    )}
-  </div>
-</div>
+    </BreakpointsProvider>
+  )
+};
+
+<Example />
 ```
 
-## Import React illustrations directly
+## SVGr illustrations
 
 ```
 import Icon from 'cozy-ui/transpiled/react/Icon';
@@ -605,5 +568,92 @@ const handleInputRangeChange = ev => {
       </div>
     )}
   </div>
+</div>
+```
+
+### Available illustrations
+
+```
+import Icon from 'cozy-ui/transpiled/react/Icon';
+import Typography from 'cozy-ui/transpiled/react/Typography';
+import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite';
+const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'device-phone', 'device-tablet', 'device-browser', 'file-type-audio', 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'forbidden-sign', 'google', 'logout-large', 'top-select', 'bottom-select', 'check-white', 'dash-white', 'keychain'];
+
+<div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
+  <Sprite />
+  {
+  availableIcons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
+      <Icon icon={ icon }/>
+      <Typography variant='body1' className='u-mb-1 u-mt-half'>{ icon }</Typography>
+    </div>
+  )}
+</div>
+```
+
+### Transform properties
+
+Use `spin` and `rotate` if you want you to turn your icons upside down 🙃.
+
+```
+import Icon from 'cozy-ui/transpiled/react/Icon';
+import SpinnerIcon from "cozy-ui/transpiled/react/Icons/Spinner";
+import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
+<div>
+  <Icon icon={SpinnerIcon} color='#0bda51' spin/>{'\u00A0'}
+  <Icon icon={RightIcon} color='#c30017' rotate={45}/>
+</div>
+```
+
+### Custom icons
+
+The `icon` attribute can take a arbitrary React component. It is expected that
+this component print an `<svg>` tag and forwards any props to it.
+
+```jsx static
+const MyIcon = (props) => <svg {...props}>…</svg>;
+<Icon icon={myIcon} width={32} height={32} color="var(--errorColor)" />
+```
+
+You can also directly import an SVG to use it. You MUST use svg-sprite-loader
+to load your SVG (either explicitly or, better, implicitly in your `webpack.config.js`).
+
+⚠️ Do not put a `fill` property on your icon
+
+```jsx static
+import myIcon from 'my-icon.svg'
+
+;<Icon icon={myIcon} width={32} height={32} color="var(--errorColor)" />
+```
+
+### Props forwarding
+
+Icon forwards unknown props to the underlying `<svg />` element.
+
+```
+import Icon from 'cozy-ui/transpiled/react/Icon';
+import WarningIcon from "cozy-ui/transpiled/react/Icons/Warning";
+<div>
+  <Icon icon={WarningIcon} onClick={() => alert('Be careful !')} width={32} height={32} color="var(--errorColor)" /><span>← Click it</span>
+</div>
+```
+
+### Available UI icons
+
+```
+import Icon from 'cozy-ui/transpiled/react/Icon';
+import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite';
+import Typography from 'cozy-ui/transpiled/react/Typography';
+
+const colors = ['#297EF2', '#08b442', '#B449E7', '#F52D2D', '#FF962F']
+let i = 0
+const availableIcons = ['album-add','album-remove','album','answer','apple','archive','attachment','attention','bank','banking-add','banking','bell','bill','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-edge-chromium','browser-firefox','browser-ie','browser-opera','browser-safari','burger','calendar','camera','car','carbonCopy','categories','certified','check-circle','check-list','check-square','check','circle-filled','clock','cloud-happy','cloud','collect','comment','company','compass','connector','contract','contrast','cozy-laugh','cozy-text','credit-card-add','credit-card','credit','crop','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','debit','devices','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','email-notification','email','eu','euro','exchange','eye-closed','eye','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','flag-outlined','flag','flash-auto','flashlight','folder-add','folder','forbidden','from-user','gear','globe','graph-circle','grid','group-list','groups','heart','help','history','home','hourglass','image','info-outlined','info','key','laptop','left','lightbulb','link-out','link','list','location','lock','logout','magic-trick','magnet','magnifier','merge','movement-in','movement-out','moveto','multi-files','music','new','next','note','notification-email','offline','online','openwith','palette','paperplane','password','pen','people','percent-circle','percent','personal-data','phone-download','phone','pie-chart','pin','plus-small','plus','previous','printer','qualify','rename','repare','restore','right','rise','rotate-left','rotate-right','sad-cozy','safe','select-all','setting','share-circle','share','sound','spinner','stack','star','stats','sync-cozy','sync','target','team','telephone','to-the-cloud','top','trash','trophy','unlink','unlock','up','upload','videos','wallet-add','wallet-new','wallet','warn','warning-circle','warning','wrench-circle'];
+<div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
+  <Sprite />
+  {
+  availableIcons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
+      <Icon icon={ icon } color={ colors[i++ % colors.length] }/>
+      <Typography variant='body1' className='u-mt-half u-mb-1'>{ icon }</Typography>
+    </div>
+  )}
 </div>
 ```
