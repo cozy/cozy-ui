@@ -1,3 +1,10 @@
+# [50.7.0](https://github.com/cozy/cozy-ui/compare/v50.6.0...v50.7.0) (2021-06-08)
+
+
+### Features
+
+* Add an info modal to easily copy/paste icon code ([c2f7e4d](https://github.com/cozy/cozy-ui/commit/c2f7e4d))
+
 # [50.6.0](https://github.com/cozy/cozy-ui/compare/v50.5.0...v50.6.0) (2021-06-07)
 
 
