@@ -33,12 +33,14 @@ export const Empty = ({
       )}
       {...restProps}
     >
-      <Icon
-        className={styles['c-empty-img']}
-        icon={icon}
-        width="100%"
-        height="100%"
-      />
+      {icon && (
+        <Icon
+          className={styles['c-empty-img']}
+          icon={icon}
+          width="100%"
+          height="100%"
+        />
+      )}
       {title && (
         <Typography gutterBottom variant="h3" color="textPrimary">
           {title}
@@ -51,7 +53,7 @@ export const Empty = ({
 }
 
 Empty.propTypes = {
-  icon: iconPropType.isRequired,
+  icon: iconPropType,
   title: PropTypes.node.isRequired,
   text: PropTypes.node,
   className: PropTypes.string,
