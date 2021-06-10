@@ -1,3 +1,10 @@
+# [50.8.0](https://github.com/cozy/cozy-ui/compare/v50.7.0...v50.8.0) (2021-06-10)
+
+
+### Features
+
+* Icon is not required for Empty component ([1ea8975](https://github.com/cozy/cozy-ui/commit/1ea8975))
+
 # [50.7.0](https://github.com/cozy/cozy-ui/compare/v50.6.0...v50.7.0) (2021-06-08)
 
 
