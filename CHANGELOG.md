@@ -1,3 +1,10 @@
+# [50.9.0](https://github.com/cozy/cozy-ui/compare/v50.8.0...v50.9.0) (2021-06-10)
+
+
+### Features
+
+* Re-export core components from [@material-ui](https://github.com/material-ui) ([a191f58](https://github.com/cozy/cozy-ui/commit/a191f58))
+
 # [50.8.0](https://github.com/cozy/cozy-ui/compare/v50.7.0...v50.8.0) (2021-06-10)
 
 
