@@ -191,11 +191,14 @@ html, .CozyTheme--normal
     /*
     Components colors
 
-    Stylus: dividerColor -  #D6D8Da, CSS: var(--dividerColor)
+    Be careful to use the semantic variable, not the hexa color.
+    In this case the real color is `#1D212A1F`, and becomes `#E3E4E5` on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
 
     Styleguide Settings.theme.components
     */
-    --dividerColor: #D6D8Da
+    --dividerColor: #1D212A1F // grey[900] with 12% opacity
 
     /*
     Intention colors

@@ -119,7 +119,7 @@ const normalPalette = {
     800: getCssVariableValue('charcoalGrey'),
     900: getCssVariableValue('black')
   },
-  divider: getCssVariableValue('silver'),
+  divider: getCssVariableValue('dividerColor'),
   actions: {
     focus: 'rgba(0, 0, 0, 0.12)'
   }
@@ -662,8 +662,7 @@ const invertedPalette = {
   error: {
     main: '#fcc0c0' // lighten($errorColor, 70%)
   },
-
-  divider: getCssVariableValue('primaryColorDark')
+  divider: '#FFFFFF29' // 16% opacity
 }
 
 const invertedTypography = makeTypography(invertedPalette)
