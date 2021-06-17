@@ -24,7 +24,9 @@ export const readCozyDataFromDOM = memoize(attrName => {
   const data = readCozyData()
 
   if (data && data[attrName] !== undefined) {
-    return data[attrName]
+    return data[attrName] === 'true' || data[attrName] === 'false'
+      ? JSON.parse(data[attrName])
+      : data[attrName]
   }
 
   const appDataset = readApplicationDataset()
