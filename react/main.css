@@ -1494,11 +1494,14 @@ html,
 /*
     Components colors
 
-    Stylus: dividerColor -  #D6D8Da, CSS: var(--dividerColor)
+    Be careful to use the semantic variable, not the hexa color.
+    In this case the real color is `#1D212A1F`, and becomes `#E3E4E5` on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
 
     Styleguide Settings.theme.components
     */
-  --dividerColor: #d6d8da;
+  --dividerColor: rgba(29,33,42,0.122);
 /*
     Intention colors
 
@@ -6293,11 +6296,14 @@ html,
 /*
     Components colors
 
-    Stylus: dividerColor -  #D6D8Da, CSS: var(--dividerColor)
+    Be careful to use the semantic variable, not the hexa color.
+    In this case the real color is `#1D212A1F`, and becomes `#E3E4E5` on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
 
     Styleguide Settings.theme.components
     */
-  --dividerColor: #d6d8da;
+  --dividerColor: rgba(29,33,42,0.122);
 /*
     Intention colors
 
@@ -6380,8 +6386,8 @@ html,
   --warningColor: #ffe0c1;
   --paperBackgroundColor: var(--primaryColor);
   --defaultBackgroundColor: var(--primaryColorDark);
-  --dividerColor: var(--primaryColorDark);
-  --dividerColor2: var(--primaryColorDark);
+  --dividerColor: rgba(255,255,255,0.16);
+  --dividerColor2: rgba(255,255,255,0.16);
   --errorBackground: #530404;
 }
 
@@ -6558,11 +6564,14 @@ html,
 /*
     Components colors
 
-    Stylus: dividerColor -  #D6D8Da, CSS: var(--dividerColor)
+    Be careful to use the semantic variable, not the hexa color.
+    In this case the real color is `#1D212A1F`, and becomes `#E3E4E5` on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
 
     Styleguide Settings.theme.components
     */
-  --dividerColor: #d6d8da;
+  --dividerColor: rgba(29,33,42,0.122);
 /*
     Intention colors
 
@@ -8735,11 +8744,14 @@ html,
 /*
     Components colors
 
-    Stylus: dividerColor -  #D6D8Da, CSS: var(--dividerColor)
+    Be careful to use the semantic variable, not the hexa color.
+    In this case the real color is `#1D212A1F`, and becomes `#E3E4E5` on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
 
     Styleguide Settings.theme.components
     */
-  --dividerColor: #d6d8da;
+  --dividerColor: rgba(29,33,42,0.122);
 /*
     Intention colors
 
@@ -12341,11 +12353,14 @@ html,
 /*
     Components colors
 
-    Stylus: dividerColor -  #D6D8Da, CSS: var(--dividerColor)
+    Be careful to use the semantic variable, not the hexa color.
+    In this case the real color is `#1D212A1F`, and becomes `#E3E4E5` on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
 
     Styleguide Settings.theme.components
     */
-  --dividerColor: #d6d8da;
+  --dividerColor: rgba(29,33,42,0.122);
 /*
     Intention colors
 
@@ -12625,11 +12640,14 @@ html,
 /*
     Components colors
 
-    Stylus: dividerColor -  #D6D8Da, CSS: var(--dividerColor)
+    Be careful to use the semantic variable, not the hexa color.
+    In this case the real color is `#1D212A1F`, and becomes `#E3E4E5` on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
 
     Styleguide Settings.theme.components
     */
-  --dividerColor: #d6d8da;
+  --dividerColor: rgba(29,33,42,0.122);
 /*
     Intention colors
 
@@ -12886,11 +12904,14 @@ html,
 /*
     Components colors
 
-    Stylus: dividerColor -  #D6D8Da, CSS: var(--dividerColor)
+    Be careful to use the semantic variable, not the hexa color.
+    In this case the real color is `#1D212A1F`, and becomes `#E3E4E5` on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
 
     Styleguide Settings.theme.components
     */
-  --dividerColor: #d6d8da;
+  --dividerColor: rgba(29,33,42,0.122);
 /*
     Intention colors
 
@@ -13892,11 +13913,14 @@ html,
 /*
     Components colors
 
-    Stylus: dividerColor -  #D6D8Da, CSS: var(--dividerColor)
+    Be careful to use the semantic variable, not the hexa color.
+    In this case the real color is `#1D212A1F`, and becomes `#E3E4E5` on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
 
     Styleguide Settings.theme.components
     */
-  --dividerColor: #d6d8da;
+  --dividerColor: rgba(29,33,42,0.122);
 /*
     Intention colors
 
@@ -16766,11 +16790,14 @@ html,
 /*
     Components colors
 
-    Stylus: dividerColor -  #D6D8Da, CSS: var(--dividerColor)
+    Be careful to use the semantic variable, not the hexa color.
+    In this case the real color is `#1D212A1F`, and becomes `#E3E4E5` on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
 
     Styleguide Settings.theme.components
     */
-  --dividerColor: #d6d8da;
+  --dividerColor: rgba(29,33,42,0.122);
 /*
     Intention colors
 
@@ -20932,11 +20959,14 @@ html,
 /*
     Components colors
 
-    Stylus: dividerColor -  #D6D8Da, CSS: var(--dividerColor)
+    Be careful to use the semantic variable, not the hexa color.
+    In this case the real color is `#1D212A1F`, and becomes `#E3E4E5` on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
 
     Styleguide Settings.theme.components
     */
-  --dividerColor: #d6d8da;
+  --dividerColor: rgba(29,33,42,0.122);
 /*
     Intention colors
 
@@ -21330,11 +21360,14 @@ html,
 /*
     Components colors
 
-    Stylus: dividerColor -  #D6D8Da, CSS: var(--dividerColor)
+    Be careful to use the semantic variable, not the hexa color.
+    In this case the real color is `#1D212A1F`, and becomes `#E3E4E5` on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
 
     Styleguide Settings.theme.components
     */
-  --dividerColor: #d6d8da;
+  --dividerColor: rgba(29,33,42,0.122);
 /*
     Intention colors
 
@@ -23249,11 +23282,14 @@ html,
 /*
     Components colors
 
-    Stylus: dividerColor -  #D6D8Da, CSS: var(--dividerColor)
+    Be careful to use the semantic variable, not the hexa color.
+    In this case the real color is `#1D212A1F`, and becomes `#E3E4E5` on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
 
     Styleguide Settings.theme.components
     */
-  --dividerColor: #d6d8da;
+  --dividerColor: rgba(29,33,42,0.122);
 /*
     Intention colors
 
@@ -23469,11 +23505,14 @@ html,
 /*
     Components colors
 
-    Stylus: dividerColor -  #D6D8Da, CSS: var(--dividerColor)
+    Be careful to use the semantic variable, not the hexa color.
+    In this case the real color is `#1D212A1F`, and becomes `#E3E4E5` on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
 
     Styleguide Settings.theme.components
     */
-  --dividerColor: #d6d8da;
+  --dividerColor: rgba(29,33,42,0.122);
 /*
     Intention colors
 
@@ -23685,11 +23724,14 @@ html,
 /*
     Components colors
 
-    Stylus: dividerColor -  #D6D8Da, CSS: var(--dividerColor)
+    Be careful to use the semantic variable, not the hexa color.
+    In this case the real color is `#1D212A1F`, and becomes `#E3E4E5` on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
 
     Styleguide Settings.theme.components
     */
-  --dividerColor: #d6d8da;
+  --dividerColor: rgba(29,33,42,0.122);
 /*
     Intention colors
 
@@ -26346,11 +26388,14 @@ html,
 /*
     Components colors
 
-    Stylus: dividerColor -  #D6D8Da, CSS: var(--dividerColor)
+    Be careful to use the semantic variable, not the hexa color.
+    In this case the real color is `#1D212A1F`, and becomes `#E3E4E5` on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
 
     Styleguide Settings.theme.components
     */
-  --dividerColor: #d6d8da;
+  --dividerColor: rgba(29,33,42,0.122);
 /*
     Intention colors
 
@@ -27264,11 +27309,14 @@ html,
 /*
     Components colors
 
-    Stylus: dividerColor -  #D6D8Da, CSS: var(--dividerColor)
+    Be careful to use the semantic variable, not the hexa color.
+    In this case the real color is `#1D212A1F`, and becomes `#E3E4E5` on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
 
     Styleguide Settings.theme.components
     */
-  --dividerColor: #d6d8da;
+  --dividerColor: rgba(29,33,42,0.122);
 /*
     Intention colors
 
@@ -30098,11 +30146,14 @@ html,
 /*
     Components colors
 
-    Stylus: dividerColor -  #D6D8Da, CSS: var(--dividerColor)
+    Be careful to use the semantic variable, not the hexa color.
+    In this case the real color is `#1D212A1F`, and becomes `#E3E4E5` on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
 
     Styleguide Settings.theme.components
     */
-  --dividerColor: #d6d8da;
+  --dividerColor: rgba(29,33,42,0.122);
 /*
     Intention colors
 
