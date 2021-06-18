@@ -1,3 +1,10 @@
+## [50.9.1](https://github.com/cozy/cozy-ui/compare/v50.9.0...v50.9.1) (2021-06-18)
+
+
+### Bug Fixes
+
+* ReadCozyDataFromDOM can now deal with "boolean string" ([0b429e1](https://github.com/cozy/cozy-ui/commit/0b429e1))
+
 # [50.9.0](https://github.com/cozy/cozy-ui/compare/v50.8.0...v50.9.0) (2021-06-10)
 
 
