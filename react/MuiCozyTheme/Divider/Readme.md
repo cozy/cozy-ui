@@ -1,12 +1,29 @@
-A divider can be used when you want to separate the content.
+A divider can be used when you want to separate the content. See [Mui documentation](https://material-ui.com/api/divider/).
 
-```
+Vertical division
+
+```jsx
 import Card from 'cozy-ui/transpiled/react/Card'
+import Typography from "cozy-ui/transpiled/react/Typography"
 import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider';
 
 <Card>
-  <p>Here is some content in a card.</p>
-  <Divider className='u-ml-0 u-maw-100' />
-  <p>Other content in a card, that is unrelated to the first paragraph.</p>
+  <Typography variant="body1" className="u-mb-1">Here is some content in a card.</Typography>
+  <Divider />
+  <Typography variant="body1" className="u-mt-1">Other content in a card, that is unrelated to the first paragraph.</Typography>
 </Card>
+```
+
+Horizontal division
+
+```jsx
+import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
+import Typography from "cozy-ui/transpiled/react/Typography"
+import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid';
+
+<Grid container alignItems="center">
+  <Typography variant="body1" className="u-mr-1">Left block</Typography>
+  <Divider orientation="vertical" flexItem />
+  <Typography variant="body1" className="u-ml-1">Right block</Typography>
+</Grid>
 ```
