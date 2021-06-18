@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, wait } from '@testing-library/react'
+import { render, waitFor } from '@testing-library/react'
 
 import { BreakpointsProvider } from '../hooks/useBreakpoints'
 import DemoProvider from './docs/DemoProvider'
@@ -32,9 +32,9 @@ describe('AudioViewer', () => {
 
     expect(queryByRole('progressbar')).toBeTruthy()
 
-    await wait()
-
-    expect(queryByRole('progressbar')).toBeFalsy()
-    expect(container).toMatchSnapshot()
+    await waitFor(() => {
+      expect(queryByRole('progressbar')).toBeFalsy()
+      expect(container).toMatchSnapshot()
+    })
   })
 })
