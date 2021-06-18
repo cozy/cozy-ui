@@ -1,3 +1,10 @@
+## [50.9.2](https://github.com/cozy/cozy-ui/compare/v50.9.1...v50.9.2) (2021-06-18)
+
+
+### Bug Fixes
+
+* Divider styles ([e03b9c7](https://github.com/cozy/cozy-ui/commit/e03b9c7))
+
 ## [50.9.1](https://github.com/cozy/cozy-ui/compare/v50.9.0...v50.9.1) (2021-06-18)
 
 
