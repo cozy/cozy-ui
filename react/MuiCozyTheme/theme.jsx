@@ -759,6 +759,18 @@ invertedTheme.overrides = {
         backgroundColor: invertedPalette.background.selected
       }
     }
+  },
+  MuiCheckbox: {
+    colorPrimary: {
+      '&.Mui-checked:not(.Mui-disabled)': {
+        color: invertedTheme.palette.success.main
+      }
+    },
+    colorSecondary: {
+      '&.Mui-checked:not(.Mui-disabled)': {
+        color: invertedTheme.palette.error.main
+      }
+    }
   }
 }
 
