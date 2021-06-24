@@ -1,3 +1,10 @@
+## [50.9.3](https://github.com/cozy/cozy-ui/compare/v50.9.2...v50.9.3) (2021-06-24)
+
+
+### Bug Fixes
+
+* Remove wide space between count and text in mobile SelectionBar ([783ebe0](https://github.com/cozy/cozy-ui/commit/783ebe0))
+
 ## [50.9.2](https://github.com/cozy/cozy-ui/compare/v50.9.1...v50.9.2) (2021-06-18)
 
 
