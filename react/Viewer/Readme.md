@@ -9,7 +9,6 @@ import { makeStyles } from '@material-ui/core/styles'
 import Variants from 'docs/components/Variants'
 import Card from 'cozy-ui/transpiled/react/Card'
 import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
-import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
 import Viewer from 'cozy-ui/transpiled/react/Viewer'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Paper from 'cozy-ui/transpiled/react/Paper'
@@ -20,9 +19,6 @@ import CarbonCopyIcon from 'cozy-ui/transpiled/react/Icons/CarbonCopy'
 // The DemoProvider inserts a fake cozy-client in the React context.
 import DemoProvider from './docs/DemoProvider'
 import Overlay from 'cozy-ui/transpiled/react/Overlay'
-import {
-  BreakpointsProvider
-} from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 import Button from 'cozy-ui/transpiled/react/Button'
 import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
 import ShareIcon from 'cozy-ui/transpiled/react/Icons/Share'
@@ -156,57 +152,53 @@ const FooterContent = () => {
 
 ;
 
-<MuiCozyTheme>
-  <BreakpointsProvider>
-    <DemoProvider>
-      <Variants initialVariants={initialVariants}>{
-          variant => (
-            <>
-              {variant.toolbar && (
-                <Card className="u-mb-1">
-                  <div className="u-dib u-mr-1">Toolbar props :</div>
-                  <Checkbox
-                    className="u-dib"
-                    label="Close"
-                    checked={state.showToolbarCloseButton}
-                    onChange={handleToggleToolbarClose}
-                  />
-                </Card>
-              )}
-              <button onClick={toggleViewer}>Open viewer</button>
-              {state.viewerOpened && (
-                <Overlay>
-                  <Viewer
-                    files={files}
-                    currentIndex={state.currentIndex}
-                    onCloseRequest={toggleViewer}
-                    onChangeRequest={onFileChange}
-                    showNavigation={variant.navigation}
-                    onlyOfficeProps={{
-                      isEnabled: variant.onlyOfficeEnabled,
-                      opener: () => alert('This is a demo, no Only Office opener here')
-                    }}
-                    toolbarProps={{
-                      showToolbar: variant.toolbar,
-                      showClose: state.showToolbarCloseButton
-                    }}
-                    panelInfoProps={{
-                      showPanel: ({ file }) => file.class === "pdf" || file.class === "audio",
-                      PanelContent
-                    }}
-                    footerProps={{
-                      FooterContent
-                    }}
-                  />
-                </Overlay>
-              )}
-            </>
-          )
-        }
-      </Variants>
-    </DemoProvider>
-  </BreakpointsProvider>
-</MuiCozyTheme>
+<DemoProvider>
+  <Variants initialVariants={initialVariants}>{
+      variant => (
+        <>
+          {variant.toolbar && (
+            <Card className="u-mb-1">
+              <div className="u-dib u-mr-1">Toolbar props :</div>
+              <Checkbox
+                className="u-dib"
+                label="Close"
+                checked={state.showToolbarCloseButton}
+                onChange={handleToggleToolbarClose}
+              />
+            </Card>
+          )}
+          <button onClick={toggleViewer}>Open viewer</button>
+          {state.viewerOpened && (
+            <Overlay>
+              <Viewer
+                files={files}
+                currentIndex={state.currentIndex}
+                onCloseRequest={toggleViewer}
+                onChangeRequest={onFileChange}
+                showNavigation={variant.navigation}
+                onlyOfficeProps={{
+                  isEnabled: variant.onlyOfficeEnabled,
+                  opener: () => alert('This is a demo, no Only Office opener here')
+                }}
+                toolbarProps={{
+                  showToolbar: variant.toolbar,
+                  showClose: state.showToolbarCloseButton
+                }}
+                panelInfoProps={{
+                  showPanel: ({ file }) => file.class === "pdf" || file.class === "audio",
+                  PanelContent
+                }}
+                footerProps={{
+                  FooterContent
+                }}
+              />
+            </Overlay>
+          )}
+        </>
+      )
+    }
+  </Variants>
+</DemoProvider>
 ```
 
 ### Using a worker for pdfjs
