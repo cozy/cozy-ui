@@ -1,60 +1,62 @@
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-import Icon from '../Icon'
-import palette from '../palette'
-import styles from './styles.styl'
 
-const Checkbox = props => {
-  const {
-    className,
-    value,
-    name,
-    label,
-    error,
-    mixed,
-    disabled,
-    children,
-    ...restProps
-  } = props
+import MUICheckbox from '@material-ui/core/Checkbox'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+
+import createDepreciationLogger from '../helpers/createDepreciationLogger'
+
+const logDepecratedCheckbox = createDepreciationLogger()
+
+const DefaultCheckbox = ({ label, error, mixed, disabled, ...props }) => {
   return (
-    <label
-      className={cx(
-        styles['c-input-checkbox'],
-        styles['c-input-checkbox--svg'],
-        {
-          [styles['is-error']]: error
-        },
-        className
-      )}
-      aria-checked={mixed ? 'mixed' : ''}
-      aria-disabled={disabled}
-    >
-      <input
-        type="checkbox"
-        value={value}
-        name={name}
-        disabled={disabled}
-        {...restProps}
+    <MUICheckbox
+      inputProps={{
+        'aria-label': label,
+        'aria-checked': mixed ? 'mixed' : '',
+        'aria-disabled': disabled
+      }}
+      color={error ? 'secondary' : 'primary'}
+      indeterminate={mixed}
+      disabled={disabled}
+      label={label}
+      {...props}
+    />
+  )
+}
+
+const Checkbox = ({ className, label, onChange, children, ...props }) => {
+  if (children) {
+    logDepecratedCheckbox(
+      '<Checkbox> used with children is deprecated, please use <Checkbox label={something} /> instead of <Checkbox>something</Checkbox>'
+    )
+  }
+
+  if (label || children) {
+    return (
+      <FormControlLabel
+        className={cx(
+          {
+            'FormControlLabel-error': props.error
+          },
+          className
+        )}
+        label={label || children}
+        control={<DefaultCheckbox {...props} />}
+        onChange={onChange}
       />
-      <span>
-        <Icon
-          icon={mixed ? 'dash' : 'check'}
-          color={palette['primaryContrastTextColor']}
-          className={styles['c-input-checkbox-icon']}
-          aria-hidden
-          focusable="false"
-        />
-        {label || children}
-      </span>
-    </label>
+    )
+  }
+
+  return (
+    <DefaultCheckbox className={className} onChange={onChange} {...props} />
   )
 }
 
 Checkbox.propTypes = {
   className: PropTypes.string,
   value: PropTypes.string,
-  name: PropTypes.string,
   error: PropTypes.bool,
   disabled: PropTypes.bool,
   mixed: PropTypes.bool,
@@ -64,7 +66,6 @@ Checkbox.propTypes = {
 Checkbox.defaultProps = {
   className: '',
   value: '',
-  name: '',
   error: false,
   mixed: false,
   label: ''
