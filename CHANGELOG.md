@@ -1,3 +1,20 @@
+# [51.0.0](https://github.com/cozy/cozy-ui/compare/v50.9.3...v51.0.0) (2021-06-29)
+
+
+### Bug Fixes
+
+* InvertedTheme success and action colors ([98ea26d](https://github.com/cozy/cozy-ui/commit/98ea26d))
+
+
+### Features
+
+* Replace our custom Checkbox by MUI checkbox API ([6724ccf](https://github.com/cozy/cozy-ui/commit/6724ccf))
+
+
+### BREAKING CHANGES
+
+* Checkbox no longer accept `name` prop
+
 ## [50.9.3](https://github.com/cozy/cozy-ui/compare/v50.9.2...v50.9.3) (2021-06-24)
 
 
