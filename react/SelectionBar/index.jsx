@@ -1,7 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
+
 import { useI18n } from '../I18n'
-import { Button, Icon } from '../index'
+import Icon from '../Icon'
+import Button from '../MuiCozyTheme/Buttons'
+import IconButton from '../IconButton'
 import useBreakpoints from '../hooks/useBreakpoints'
 
 import styles from './styles.styl'
@@ -27,7 +31,7 @@ actions = {
 
 const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
   const { t } = useI18n()
-  const { isMobile, isTablet } = useBreakpoints()
+  const { isDesktop } = useBreakpoints()
   const selectedCount = selected.length
   const actionNames = Object.keys(actions).filter(actionName => {
     const action = actions[actionName]
@@ -46,28 +50,48 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
       </span>
       <span className={styles['SelectionBar-separator']} />
       {actionNames.map((actionName, index) => (
-        <Button
-          type="button"
-          key={index}
-          disabled={selectedCount < 1}
-          onClick={() => actions[actionName].action(selected)}
-          icon={actions[actionName].icon || actionName.toLowerCase()}
-          label={t('SelectionBar.' + actionName)}
-          iconOnly={isMobile || isTablet ? true : false}
-          subtle
-        />
+        <>
+          {isDesktop && actionName ? (
+            <Button
+              className={cx(
+                styles['SelectionBar-action'],
+                styles['SelectionBar-action--withLabel']
+              )}
+              variant="text"
+              key={index}
+              disabled={selectedCount < 1}
+              onClick={() => actions[actionName].action(selected)}
+              startIcon={
+                <Icon
+                  icon={actions[actionName].icon || actionName.toLowerCase()}
+                />
+              }
+            >
+              {t('SelectionBar.' + actionName)}
+            </Button>
+          ) : (
+            <IconButton
+              className={styles['SelectionBar-action']}
+              key={index}
+              disabled={selectedCount < 1}
+              onClick={() => actions[actionName].action(selected)}
+            >
+              <Icon
+                icon={actions[actionName].icon || actionName.toLowerCase()}
+              />
+            </IconButton>
+          )}
+        </>
       ))}
-      <Button
-        iconOnly
-        label={t('SelectionBar.close')}
-        type="button"
-        theme="close"
-        className={styles['SelectionBar-actionClose']}
+      <IconButton
+        className={cx(
+          styles['SelectionBar-action'],
+          styles['SelectionBar-action--close']
+        )}
         onClick={hideSelectionBar}
-        extension="narrow"
       >
         <Icon icon={CrossIcon} />
-      </Button>
+      </IconButton>
     </div>
   )
 }

@@ -19,23 +19,27 @@ $selectionbar
     font-weight       bold
 
     .SelectionBar-separator
-        margin            rem(0 8 0 32)
+        margin            0 1rem 0 2rem
         width             rem(4)
         height            rem(4)
         border-radius     50%
         background-color  var(--black)
 
-    button
-        padding 0 rem(16)
-        color   var(--white)
+    .SelectionBar-action
+        margin 0 .25rem
+        color var(--white)
         &:hover
-            color   var(--white)
-    .SelectionBar-actionClose
-        position          absolute
-        top               50%
-        right             0
-        transform         translateY(-50%)
+            color var(--white)
 
+        &--withLabel
+            margin 0 .5rem
+
+        &--close
+            position absolute
+            top 50%
+            right 0
+            transform translateY(-50%)
+            margin 0 .5rem
 
     +medium-screen()
         &
@@ -44,15 +48,16 @@ $selectionbar
             justify-content  flex-start
             box-sizing       content-box
             width            calc(100% - 2rem)
-            height           rem(48)
-            padding-left     rem(16)
-            padding-right    rem(16)
+            height           3rem
+            padding-left     1rem
+            padding-right    1rem
             // iPhone X environment tweak
             padding-bottom env(safe-area-inset-bottom)
 
             .SelectionBar-separator
-                margin   0 0 0 rem(16)
+                margin 0 0 0 1rem
 
-            .SelectionBar-actionClose
+            .SelectionBar-action--close
                 top auto
                 transform none
+                margin 0 .5rem
