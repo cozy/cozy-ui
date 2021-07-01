@@ -21143,24 +21143,28 @@ html {
   font-weight: bold;
 }
 .SelectionBar--3UOqy .SelectionBar-separator--2OV1_ {
-  margin: 0 0.5rem 0 2rem;
+  margin: 0 1rem 0 2rem;
   width: 0.25rem;
   height: 0.25rem;
   border-radius: 50%;
   background-color: var(--black);
 }
-.SelectionBar--3UOqy button {
-  padding: 0 1rem;
+.SelectionBar--3UOqy .SelectionBar-action--3B1aR {
+  margin: 0 0.25rem;
   color: var(--white);
 }
-.SelectionBar--3UOqy button:hover {
+.SelectionBar--3UOqy .SelectionBar-action--3B1aR:hover {
   color: var(--white);
 }
-.SelectionBar--3UOqy .SelectionBar-actionClose--1OhRM {
+.SelectionBar--3UOqy .SelectionBar-action--withLabel--3TJq3 {
+  margin: 0 0.5rem;
+}
+.SelectionBar--3UOqy .SelectionBar-action--close--1OgGC {
   position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
+  margin: 0 0.5rem;
 }
 @media (max-width: 63.938rem) {
   .SelectionBar--3UOqy {
@@ -21177,9 +21181,10 @@ html {
   .SelectionBar--3UOqy .SelectionBar-separator--2OV1_ {
     margin: 0 0 0 1rem;
   }
-  .SelectionBar--3UOqy .SelectionBar-actionClose--1OhRM {
+  .SelectionBar--3UOqy .SelectionBar-action--close--1OgGC {
     top: auto;
     transform: none;
+    margin: 0 0.5rem;
   }
 }
 
