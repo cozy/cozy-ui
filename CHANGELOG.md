@@ -1,3 +1,10 @@
+## [51.0.1](https://github.com/cozy/cozy-ui/compare/v51.0.0...v51.0.1) (2021-07-01)
+
+
+### Bug Fixes
+
+* SelectionBar use Mui Button and IconButton ([88ae168](https://github.com/cozy/cozy-ui/commit/88ae168))
+
 # [51.0.0](https://github.com/cozy/cozy-ui/compare/v50.9.3...v51.0.0) (2021-06-29)
 
 
