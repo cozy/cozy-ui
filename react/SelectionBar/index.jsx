@@ -57,7 +57,7 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
       </span>
       <span className={styles['SelectionBar-separator']} />
       {actionNames.map((actionName, index) =>
-        isDesktop && actionName ? (
+        isDesktop ? (
           <Button
             data-testid={`selectionBar-action-${actionName}`}
             className={cx(
