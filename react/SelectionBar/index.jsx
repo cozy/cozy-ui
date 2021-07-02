@@ -40,8 +40,15 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
     )
   })
   return (
-    <div className={styles['SelectionBar']} role="toolbar">
-      <span className={styles['SelectionBar-count']}>
+    <div
+      data-testid="selectionBar"
+      className={styles['SelectionBar']}
+      role="toolbar"
+    >
+      <span
+        data-testid="selectionBar-count"
+        className={styles['SelectionBar-count']}
+      >
         {selectedCount}
         <span>
           {' '}
@@ -53,6 +60,7 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
         <>
           {isDesktop && actionName ? (
             <Button
+              data-testid={`selectionBar-action-${actionName}`}
               className={cx(
                 styles['SelectionBar-action'],
                 styles['SelectionBar-action--withLabel']
@@ -71,7 +79,9 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
             </Button>
           ) : (
             <IconButton
+              data-testid={`selectionBar-action-${actionName}`}
               className={styles['SelectionBar-action']}
+              label={t('SelectionBar.' + actionName)}
               key={index}
               disabled={selectedCount < 1}
               onClick={() => actions[actionName].action(selected)}
@@ -84,10 +94,12 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
         </>
       ))}
       <IconButton
+        data-testid="selectionBar-action-close"
         className={cx(
           styles['SelectionBar-action'],
           styles['SelectionBar-action--close']
         )}
+        label={t('SelectionBar.close')}
         onClick={hideSelectionBar}
       >
         <Icon icon={CrossIcon} />
