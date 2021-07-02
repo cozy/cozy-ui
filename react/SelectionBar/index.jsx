@@ -56,43 +56,39 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
         </span>
       </span>
       <span className={styles['SelectionBar-separator']} />
-      {actionNames.map((actionName, index) => (
-        <>
-          {isDesktop && actionName ? (
-            <Button
-              data-testid={`selectionBar-action-${actionName}`}
-              className={cx(
-                styles['SelectionBar-action'],
-                styles['SelectionBar-action--withLabel']
-              )}
-              variant="text"
-              key={index}
-              disabled={selectedCount < 1}
-              onClick={() => actions[actionName].action(selected)}
-              startIcon={
-                <Icon
-                  icon={actions[actionName].icon || actionName.toLowerCase()}
-                />
-              }
-            >
-              {t('SelectionBar.' + actionName)}
-            </Button>
-          ) : (
-            <IconButton
-              data-testid={`selectionBar-action-${actionName}`}
-              className={styles['SelectionBar-action']}
-              label={t('SelectionBar.' + actionName)}
-              key={index}
-              disabled={selectedCount < 1}
-              onClick={() => actions[actionName].action(selected)}
-            >
+      {actionNames.map((actionName, index) =>
+        isDesktop && actionName ? (
+          <Button
+            data-testid={`selectionBar-action-${actionName}`}
+            className={cx(
+              styles['SelectionBar-action'],
+              styles['SelectionBar-action--withLabel']
+            )}
+            variant="text"
+            key={index}
+            disabled={selectedCount < 1}
+            onClick={() => actions[actionName].action(selected)}
+            startIcon={
               <Icon
                 icon={actions[actionName].icon || actionName.toLowerCase()}
               />
-            </IconButton>
-          )}
-        </>
-      ))}
+            }
+          >
+            {t('SelectionBar.' + actionName)}
+          </Button>
+        ) : (
+          <IconButton
+            data-testid={`selectionBar-action-${actionName}`}
+            className={styles['SelectionBar-action']}
+            label={t('SelectionBar.' + actionName)}
+            key={index}
+            disabled={selectedCount < 1}
+            onClick={() => actions[actionName].action(selected)}
+          >
+            <Icon icon={actions[actionName].icon || actionName.toLowerCase()} />
+          </IconButton>
+        )
+      )}
       <IconButton
         data-testid="selectionBar-action-close"
         className={cx(
