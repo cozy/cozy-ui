@@ -1,3 +1,12 @@
+## [51.0.2](https://github.com/cozy/cozy-ui/compare/v51.0.1...v51.0.2) (2021-07-02)
+
+
+### Bug Fixes
+
+* Add label and data-testid to SelectionBar to improve tests ([e1458f1](https://github.com/cozy/cozy-ui/commit/e1458f1))
+* Remove useless actionName condition on SelectionBar ([da54989](https://github.com/cozy/cozy-ui/commit/da54989))
+* Remove useless fragment in SelectionBar and fix key missing ([1bc1ae4](https://github.com/cozy/cozy-ui/commit/1bc1ae4))
+
 ## [51.0.1](https://github.com/cozy/cozy-ui/compare/v51.0.0...v51.0.1) (2021-07-01)
 
 
