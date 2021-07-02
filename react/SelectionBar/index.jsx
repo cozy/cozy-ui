@@ -40,8 +40,15 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
     )
   })
   return (
-    <div className={styles['SelectionBar']} role="toolbar">
-      <span className={styles['SelectionBar-count']}>
+    <div
+      data-testid="selectionBar"
+      className={styles['SelectionBar']}
+      role="toolbar"
+    >
+      <span
+        data-testid="selectionBar-count"
+        className={styles['SelectionBar-count']}
+      >
         {selectedCount}
         <span>
           {' '}
@@ -49,45 +56,46 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
         </span>
       </span>
       <span className={styles['SelectionBar-separator']} />
-      {actionNames.map((actionName, index) => (
-        <>
-          {isDesktop && actionName ? (
-            <Button
-              className={cx(
-                styles['SelectionBar-action'],
-                styles['SelectionBar-action--withLabel']
-              )}
-              variant="text"
-              key={index}
-              disabled={selectedCount < 1}
-              onClick={() => actions[actionName].action(selected)}
-              startIcon={
-                <Icon
-                  icon={actions[actionName].icon || actionName.toLowerCase()}
-                />
-              }
-            >
-              {t('SelectionBar.' + actionName)}
-            </Button>
-          ) : (
-            <IconButton
-              className={styles['SelectionBar-action']}
-              key={index}
-              disabled={selectedCount < 1}
-              onClick={() => actions[actionName].action(selected)}
-            >
+      {actionNames.map((actionName, index) =>
+        isDesktop ? (
+          <Button
+            data-testid={`selectionBar-action-${actionName}`}
+            className={cx(
+              styles['SelectionBar-action'],
+              styles['SelectionBar-action--withLabel']
+            )}
+            variant="text"
+            key={index}
+            disabled={selectedCount < 1}
+            onClick={() => actions[actionName].action(selected)}
+            startIcon={
               <Icon
                 icon={actions[actionName].icon || actionName.toLowerCase()}
               />
-            </IconButton>
-          )}
-        </>
-      ))}
+            }
+          >
+            {t('SelectionBar.' + actionName)}
+          </Button>
+        ) : (
+          <IconButton
+            data-testid={`selectionBar-action-${actionName}`}
+            className={styles['SelectionBar-action']}
+            label={t('SelectionBar.' + actionName)}
+            key={index}
+            disabled={selectedCount < 1}
+            onClick={() => actions[actionName].action(selected)}
+          >
+            <Icon icon={actions[actionName].icon || actionName.toLowerCase()} />
+          </IconButton>
+        )
+      )}
       <IconButton
+        data-testid="selectionBar-action-close"
         className={cx(
           styles['SelectionBar-action'],
           styles['SelectionBar-action--close']
         )}
+        label={t('SelectionBar.close')}
         onClick={hideSelectionBar}
       >
         <Icon icon={CrossIcon} />
