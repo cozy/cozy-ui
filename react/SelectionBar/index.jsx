@@ -66,7 +66,11 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
             )}
             variant="text"
             key={index}
-            disabled={selectedCount < 1}
+            disabled={
+              actions[actionName].disabled === undefined
+                ? selectedCount < 1 // to avoid breaking change
+                : actions[actionName].disabled(selected)
+            }
             onClick={() => actions[actionName].action(selected)}
             startIcon={
               <Icon
@@ -82,7 +86,11 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
             className={styles['SelectionBar-action']}
             label={t('SelectionBar.' + actionName)}
             key={index}
-            disabled={selectedCount < 1}
+            disabled={
+              actions[actionName].disabled === undefined
+                ? selectedCount < 1 // to avoid breaking change
+                : actions[actionName].disabled(selected)
+            }
             onClick={() => actions[actionName].action(selected)}
           >
             <Icon icon={actions[actionName].icon || actionName.toLowerCase()} />
