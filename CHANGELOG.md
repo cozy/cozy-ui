@@ -1,3 +1,10 @@
+# [51.1.0](https://github.com/cozy/cozy-ui/compare/v51.0.2...v51.1.0) (2021-07-08)
+
+
+### Features
+
+* Add disabled prop on SelectionBar actions ([0f32e9e](https://github.com/cozy/cozy-ui/commit/0f32e9e))
+
 ## [51.0.2](https://github.com/cozy/cozy-ui/compare/v51.0.1...v51.0.2) (2021-07-02)
 
 
