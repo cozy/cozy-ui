@@ -8,7 +8,8 @@ import Icon from '../Icon'
 import DeviceLaptopIcon from 'cozy-ui/transpiled/react/Icons/DeviceLaptop'
 
 const ButtonClient = props => {
-  const { label, href, onClick, className } = props
+  const { label, href, onClick, className, icon } = props
+
   return (
     <a
       href={href}
@@ -18,7 +19,7 @@ const ButtonClient = props => {
       onClick={onClick}
     >
       <figure>
-        <Icon icon={DeviceLaptopIcon} size="32" />
+        <Icon icon={icon || DeviceLaptopIcon} size="32" />
       </figure>
       <span>{label}</span>
     </a>
@@ -26,10 +27,16 @@ const ButtonClient = props => {
 }
 
 ButtonClient.propTypes = {
+  /** Button's label */
   label: PropTypes.string.isRequired,
+  /** Button's hyperlink */
   href: PropTypes.string.isRequired,
+  /** Custom classNames to apply to the component */
   className: PropTypes.string,
-  onClick: PropTypes.func
+  /** Function `onClick` to be called on top of the hyperlink */
+  onClick: PropTypes.func,
+  /** Custom icon to display. If undefined then DeviceLaptop is used as default icon */
+  icon: PropTypes.elementType
 }
 
 ButtonClient.defaultProps = {
