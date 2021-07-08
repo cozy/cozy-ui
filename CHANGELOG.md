@@ -1,3 +1,12 @@
+# [51.2.0](https://github.com/cozy/cozy-ui/compare/v51.1.0...v51.2.0) (2021-07-08)
+
+
+### Features
+
+* Add `toBeInTheDocument()` support with `@testing-library/jest-dom` ([1690b88](https://github.com/cozy/cozy-ui/commit/1690b88))
+* Add optional `icon` prop to `PushClientButton` ([23bc4ad](https://github.com/cozy/cozy-ui/commit/23bc4ad))
+* Improve `PushClientButton` documentation ([0ddd96b](https://github.com/cozy/cozy-ui/commit/0ddd96b))
+
 # [51.1.0](https://github.com/cozy/cozy-ui/compare/v51.0.2...v51.1.0) (2021-07-08)
 
 
