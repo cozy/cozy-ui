@@ -123,7 +123,7 @@
     "react-redux": "^7.2.0",
     "react-styleguidist": "9.1.16",
     "react-test-renderer": "16.12.0",
-    "redux": "3.7.2",
+    "redux": "4.1.0",
     "redux-mock-store": "^1.5.4",
     "remark-cli": "^8.0.1",
     "remark-jscodeshift": "^1.1.0",
