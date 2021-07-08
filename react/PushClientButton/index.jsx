@@ -27,10 +27,15 @@ const ButtonClient = props => {
 }
 
 ButtonClient.propTypes = {
+  /** Button's label */
   label: PropTypes.string.isRequired,
+  /** Button's hyperlink */
   href: PropTypes.string.isRequired,
+  /** Custom classNames to apply to the component */
   className: PropTypes.string,
+  /** Function `onClick` to be called on top of the hyperlink */
   onClick: PropTypes.func,
+  /** Custom icon to display. If undefined then DeviceLaptop is used as default icon */
   icon: PropTypes.elementType
 }
 
