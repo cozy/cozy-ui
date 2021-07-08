@@ -73,7 +73,7 @@
     "@semantic-release/git": "7.0.18",
     "@semantic-release/npm": "5.3.4",
     "@svgr/cli": "^5.4.0",
-    "@testing-library/react": "^11.2.6",
+    "@testing-library/react": "11.2.7",
     "@testing-library/react-hooks": "^3.2.1",
     "argos-cli": "^0.3.3",
     "autoprefixer-stylus": "1.0.0",
