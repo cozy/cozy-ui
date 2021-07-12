@@ -55,7 +55,8 @@ const screenshotComponent = async (page, options) => {
         screenshotDir,
         getScreenshotName({ component, viewport, suffix })
       ),
-      fullPage: true
+      fullPage: true,
+      captureBeyondViewport: false
     })
   }
 
