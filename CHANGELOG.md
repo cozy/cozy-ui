@@ -1,3 +1,11 @@
+## [51.2.1](https://github.com/cozy/cozy-ui/compare/v51.2.0...v51.2.1) (2021-07-13)
+
+
+### Bug Fixes
+
+* Generates screenshots with `captureBeyondViewport` disabled ([48d1178](https://github.com/cozy/cozy-ui/commit/48d1178))
+* Upgrade puppeteer ([a8b8aa0](https://github.com/cozy/cozy-ui/commit/a8b8aa0))
+
 # [51.2.0](https://github.com/cozy/cozy-ui/compare/v51.1.0...v51.2.0) (2021-07-08)
 
 
