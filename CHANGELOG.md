@@ -1,3 +1,10 @@
+# [51.3.0](https://github.com/cozy/cozy-ui/compare/v51.2.1...v51.3.0) (2021-07-13)
+
+
+### Features
+
+* Improve IconStack ([4edc727](https://github.com/cozy/cozy-ui/commit/4edc727))
+
 ## [51.2.1](https://github.com/cozy/cozy-ui/compare/v51.2.0...v51.2.1) (2021-07-13)
 
 
