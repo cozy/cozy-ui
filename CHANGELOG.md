@@ -1,3 +1,10 @@
+## [51.3.1](https://github.com/cozy/cozy-ui/compare/v51.3.0...v51.3.1) (2021-07-15)
+
+
+### Bug Fixes
+
+* Set cozy-client minimum version in peer dependencies ([335d27b](https://github.com/cozy/cozy-ui/commit/335d27b))
+
 # [51.3.0](https://github.com/cozy/cozy-ui/compare/v51.2.1...v51.3.0) (2021-07-13)
 
 
