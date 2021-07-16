@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, wait } from '@testing-library/react'
+import { render, waitFor } from '@testing-library/react'
 
 import { CozyProvider, createMockClient } from 'cozy-client'
 import { isMobileApp } from 'cozy-device-helper'
@@ -64,11 +64,11 @@ describe('PdfMobileViewer', () => {
       const { root } = setup({ file: fileWithoutLinks })
       const { getByText, queryByRole } = root
 
-      await wait()
-
-      expect(queryByRole('progressbar')).toBeFalsy()
-      expect(getByText('Download'))
-      expect(getByText(file.name))
+      await waitFor(() => {
+        expect(queryByRole('progressbar')).toBeFalsy()
+        expect(getByText('Download'))
+        expect(getByText(file.name))
+      })
     })
 
     it('should show "open with" button on native app', async () => {
@@ -77,11 +77,11 @@ describe('PdfMobileViewer', () => {
       const { root } = setup({ file: fileWithoutLinks })
       const { getByText, queryByRole } = root
 
-      await wait()
-
-      expect(queryByRole('progressbar')).toBeFalsy()
-      expect(getByText('Viewer.openWith'))
-      expect(getByText(file.name))
+      await waitFor(() => {
+        expect(queryByRole('progressbar')).toBeFalsy()
+        expect(getByText('Viewer.openWith'))
+        expect(getByText(file.name))
+      })
     })
   })
 })

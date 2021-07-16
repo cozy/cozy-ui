@@ -1,7 +1,7 @@
 import { sortLastNameFirst, sortHeaders } from './helpers'
 describe('Sort contacts', () => {
   describe('By Last Name', () => {
-    test('should sort contact by last name', () => {
+    it('should sort contact by last name', () => {
       const contacts = [
         { name: { givenName: '', familyName: '' } },
         { name: { givenName: 'A', familyName: 'A' } },
@@ -19,12 +19,12 @@ describe('Sort contacts', () => {
       const sortedContact = [...contacts].sort(sortLastNameFirst)
       expect(sortedContact).toEqual([
         { name: { givenName: '', familyName: '' } },
-        { name: { givenName: '', familyName: 'A' } },
         { name: { givenName: 'A', familyName: '' } },
+        { name: { givenName: '', familyName: 'A' } },
         { name: { givenName: 'A', familyName: 'A' } },
         { name: { givenName: 'B', familyName: 'A' } },
-        { name: { givenName: '', familyName: 'B' } },
         { name: { givenName: 'B', familyName: '' } },
+        { name: { givenName: '', familyName: 'B' } },
         { name: { givenName: 'A', familyName: 'B' } },
         { name: { givenName: 'B', familyName: 'B' } },
         { name: { givenName: 'C', familyName: 'B' } },
@@ -32,7 +32,7 @@ describe('Sort contacts', () => {
         { name: { givenName: 'B', familyName: 'C' } }
       ])
     })
-    test('should work with incomplete data', () => {
+    it('should work with incomplete data', () => {
       const contacts = [
         { name: { givenName: '' } },
         { name: { givenName: 'A' } },
@@ -52,14 +52,14 @@ describe('Sort contacts', () => {
       const sortedContact = [...contacts].sort(sortLastNameFirst)
       expect(sortedContact).toEqual([
         { name: { givenName: '' } },
-        { name: { givenName: '', familyName: 'A' } },
         { name: { givenName: 'A' } },
         { name: { givenName: 'A', familyName: '' } },
+        { name: { givenName: '', familyName: 'A' } },
         { name: { givenName: 'A', familyName: 'A' } },
         { name: { givenName: 'B', familyName: 'A' } },
         { name: { familyName: 'B' } },
-        { name: { givenName: '', familyName: 'B' } },
         { name: { givenName: 'B', familyName: '' } },
+        { name: { givenName: '', familyName: 'B' } },
         { name: { givenName: 'B', familyName: 'B' } },
         { name: { givenName: 'C', familyName: 'B' } },
         { name: { familyName: 'C' } },

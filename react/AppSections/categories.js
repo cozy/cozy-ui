@@ -48,7 +48,7 @@ export const sorter = (categoryA, categoryB) => {
     (categoryB.value === 'all' && 1) ||
     (categoryA.value === 'others' && 1) ||
     (categoryB.value === 'others' && -1) ||
-    categoryA.label > categoryB.label
+    categoryA.label.localeCompare(categoryB.label)
   )
 }
 
@@ -104,6 +104,5 @@ export const generateOptionsFromApps = (apps, options = {}) => {
     }
     allCategoryOptions = allCategoryOptions.concat(categoryOptions)
   }
-
   return allCategoryOptions
 }
