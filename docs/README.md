@@ -72,6 +72,7 @@ It is convenient when modifying a component to use the styleguide site.
 
 ```bash
 yarn start # Transpile the files in watch mode
+yarn build:css:all # Build CSS files needed by the documentation
 yarn start:doc # Run the styleguide in watch mode
 ```
 
