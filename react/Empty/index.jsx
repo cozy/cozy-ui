@@ -23,16 +23,7 @@ export const Empty = ({
   }
 
   return (
-    <div
-      className={cx(
-        {
-          [styles['c-empty']]: layout,
-          [styles['c-empty-container']]: !layout
-        },
-        className
-      )}
-      {...restProps}
-    >
+    <div className={cx(styles['c-empty'], className)} {...restProps}>
       {icon && (
         <Icon
           className={styles['c-empty-img']}
