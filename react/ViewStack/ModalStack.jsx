@@ -12,6 +12,9 @@ import { useStack } from './hooks'
  * - Several modals can be stacked in this manner
  * - The <Modal /> element wrapping <View /> can receive props via the 2nd
  * argument of stackPush : `stackPush(<SmallView />, { size: 'xsmall' })`
+ * Passing `{ noModalStackWrapper: true }` will avoid wrapping your
+ * component inside a `<Modal />`, if the component already embed one.
+ * When doing so, it's up to you to use the `stackPop` method.
  *
  * Can be used as a replacement of a <ViewStack /> on mobile
  */
@@ -29,11 +32,16 @@ const ModalStack = ({ children }) => {
         const hasProps = child.length > 1
         const props = hasProps ? child[1] : null
         child = hasProps ? child[0] : child
-        return (
-          <Modal mobileFullscreen key={i} dismissAction={stackPop} {...props}>
-            {child}
-          </Modal>
-        )
+        const shouldWrap = props ? !props.noModalStackWrapper : true
+        if (shouldWrap) {
+          return (
+            <Modal mobileFullscreen key={i} dismissAction={stackPop} {...props}>
+              {child}
+            </Modal>
+          )
+        } else {
+          return React.cloneElement(child, { key: i })
+        }
       })}
     </ViewStackContext.Provider>
   )
