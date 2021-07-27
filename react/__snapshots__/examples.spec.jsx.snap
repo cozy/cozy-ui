@@ -2714,6 +2714,12 @@ exports[`Icon should render examples: Icon 1`] = `
       </svg>
       <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1\\">Check</p>
     </div>
+    <div class=\\"makeStyles-iconTile-29 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path d=\\"M14 14V8.243l2-2V14a2 2 0 01-2 2H2a2 2 0 01-2-2V2a2 2 0 012-2h11.757l-2 2H2v12h12z\\"></path>
+        <path d=\\"M4.707 7.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l8-8a1 1 0 00-1.414-1.414L7 9.586 4.707 7.293z\\"></path>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1\\">Checkbox</p>
+    </div>
     <div class=\\"makeStyles-iconTile-29 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
         <path fill-rule=\\"evenodd\\" d=\\"M24 48c13.255 0 24-10.745 24-24S37.255 0 24 0 0 10.745 0 24s10.745 24 24 24zM13.414 24.586a2 2 0 00-2.828 2.828l7 7a2 2 0 002.828 0l15-15a2 2 0 00-2.828-2.828L19 30.172l-5.586-5.586z\\"></path>
       </svg>
@@ -4094,6 +4100,10 @@ exports[`Icon should render examples: Icon 3`] = `
         <symbol id=\\"certified\\" viewBox=\\"0 0 12 12\\">
           <path fill-rule=\\"nonzero\\" d=\\"M11.806 5.468c.259.295.259.737 0 1.032l-.714.812a.782.782 0 0 0-.19.588L11 8.976a.782.782 0 0 1-.606.835l-1.057.24a.782.782 0 0 0-.5.363l-.553.93a.782.782 0 0 1-.98.32l-.995-.427a.782.782 0 0 0-.619 0l-.993.43a.782.782 0 0 1-.983-.318l-.553-.929a.782.782 0 0 0-.499-.363l-1.057-.24A.782.782 0 0 1 1 8.982L1.1 7.9a.782.782 0 0 0-.191-.587l-.715-.814a.782.782 0 0 1 0-1.031l.715-.819a.782.782 0 0 0 .19-.587L1 2.988a.782.782 0 0 1 .608-.836l1.054-.236a.782.782 0 0 0 .501-.364l.552-.93c.201-.337.62-.473.982-.318l.995.427c.197.085.42.085.617 0l.995-.427a.782.782 0 0 1 .981.319l.553.93c.11.185.29.316.5.363l1.057.24a.782.782 0 0 1 .606.835l-.1 1.076c-.02.214.05.427.191.588l.714.813zm-7.526.001a.75.75 0 0 0-1.06 1.062l1.5 1.497a.75.75 0 0 0 1.06 0l3-2.997a.75.75 0 1 0-1.06-1.062L5.25 6.42l-.97-.95z\\"></path>
         </symbol>
+        <symbol id=\\"checkbox\\" viewBox=\\"0 0 16 16\\">
+          <path d=\\"M14 14V8.24267L16 6.24267V14C16 15.1046 15.1046 16 14 16H2C0.895431 16 0 15.1046 0 14V2C0 0.895431 0.895431 0 2 0H13.7574L11.7574 2H2V14H14Z\\"></path>
+          <path d=\\"M4.70711 7.29289C4.31658 6.90237 3.68342 6.90237 3.29289 7.29289C2.90237 7.68342 2.90237 8.31658 3.29289 8.70711L6.29289 11.7071C6.68342 12.0976 7.31658 12.0976 7.70711 11.7071L15.7071 3.70711C16.0976 3.31658 16.0976 2.68342 15.7071 2.29289C15.3166 1.90237 14.6834 1.90237 14.2929 2.29289L7 9.58579L4.70711 7.29289Z\\"></path>
+        </symbol>
         <symbol id=\\"check-circle\\" viewBox=\\"0 0 48 48\\">
           <path fill-rule=\\"evenodd\\" d=\\"M24,48 C37.254834,48 48,37.254834 48,24 C48,10.745166 37.254834,0 24,0 C10.745166,0 0,10.745166 0,24 C0,37.254834 10.745166,48 24,48 Z M13.4142136,24.5857864 C12.633165,23.8047379 11.366835,23.8047379 10.5857864,24.5857864 C9.80473785,25.366835 9.80473785,26.633165 10.5857864,27.4142136 L17.5857864,34.4142136 C18.366835,35.1952621 19.633165,35.1952621 20.4142136,34.4142136 L35.4142136,19.4142136 C36.1952621,18.633165 36.1952621,17.366835 35.4142136,16.5857864 C34.633165,15.8047379 33.366835,15.8047379 32.5857864,16.5857864 L19,30.1715729 L13.4142136,24.5857864 Z\\"></path>
         </symbol>
@@ -5157,6 +5167,10 @@ exports[`Icon should render examples: Icon 6`] = `
         <symbol id=\\"certified\\" viewBox=\\"0 0 12 12\\">
           <path fill-rule=\\"nonzero\\" d=\\"M11.806 5.468c.259.295.259.737 0 1.032l-.714.812a.782.782 0 0 0-.19.588L11 8.976a.782.782 0 0 1-.606.835l-1.057.24a.782.782 0 0 0-.5.363l-.553.93a.782.782 0 0 1-.98.32l-.995-.427a.782.782 0 0 0-.619 0l-.993.43a.782.782 0 0 1-.983-.318l-.553-.929a.782.782 0 0 0-.499-.363l-1.057-.24A.782.782 0 0 1 1 8.982L1.1 7.9a.782.782 0 0 0-.191-.587l-.715-.814a.782.782 0 0 1 0-1.031l.715-.819a.782.782 0 0 0 .19-.587L1 2.988a.782.782 0 0 1 .608-.836l1.054-.236a.782.782 0 0 0 .501-.364l.552-.93c.201-.337.62-.473.982-.318l.995.427c.197.085.42.085.617 0l.995-.427a.782.782 0 0 1 .981.319l.553.93c.11.185.29.316.5.363l1.057.24a.782.782 0 0 1 .606.835l-.1 1.076c-.02.214.05.427.191.588l.714.813zm-7.526.001a.75.75 0 0 0-1.06 1.062l1.5 1.497a.75.75 0 0 0 1.06 0l3-2.997a.75.75 0 1 0-1.06-1.062L5.25 6.42l-.97-.95z\\"></path>
         </symbol>
+        <symbol id=\\"checkbox\\" viewBox=\\"0 0 16 16\\">
+          <path d=\\"M14 14V8.24267L16 6.24267V14C16 15.1046 15.1046 16 14 16H2C0.895431 16 0 15.1046 0 14V2C0 0.895431 0.895431 0 2 0H13.7574L11.7574 2H2V14H14Z\\"></path>
+          <path d=\\"M4.70711 7.29289C4.31658 6.90237 3.68342 6.90237 3.29289 7.29289C2.90237 7.68342 2.90237 8.31658 3.29289 8.70711L6.29289 11.7071C6.68342 12.0976 7.31658 12.0976 7.70711 11.7071L15.7071 3.70711C16.0976 3.31658 16.0976 2.68342 15.7071 2.29289C15.3166 1.90237 14.6834 1.90237 14.2929 2.29289L7 9.58579L4.70711 7.29289Z\\"></path>
+        </symbol>
         <symbol id=\\"check-circle\\" viewBox=\\"0 0 48 48\\">
           <path fill-rule=\\"evenodd\\" d=\\"M24,48 C37.254834,48 48,37.254834 48,24 C48,10.745166 37.254834,0 24,0 C10.745166,0 0,10.745166 0,24 C0,37.254834 10.745166,48 24,48 Z M13.4142136,24.5857864 C12.633165,23.8047379 11.366835,23.8047379 10.5857864,24.5857864 C9.80473785,25.366835 9.80473785,26.633165 10.5857864,27.4142136 L17.5857864,34.4142136 C18.366835,35.1952621 19.633165,35.1952621 20.4142136,34.4142136 L35.4142136,19.4142136 C36.1952621,18.633165 36.1952621,17.366835 35.4142136,16.5857864 C34.633165,15.8047379 33.366835,15.8047379 32.5857864,16.5857864 L19,30.1715729 L13.4142136,24.5857864 Z\\"></path>
         </symbol>
@@ -5921,771 +5935,776 @@ exports[`Icon should render examples: Icon 6`] = `
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">check</p>
     </div>
     <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"#checkbox\\"></use>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">checkbox</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#circle-filled\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">circle-filled</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#clock\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">clock</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cloud-happy\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">cloud-happy</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cloud\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">cloud</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#collect\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">collect</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#comment\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">comment</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#company\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">company</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#compass\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">compass</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#connector\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">connector</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#contract\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">contract</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#contrast\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">contrast</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cozy-laugh\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">cozy-laugh</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cozy-text\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">cozy-text</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#credit-card-add\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">credit-card-add</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#credit-card\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">credit-card</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#credit\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">credit</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#crop\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">crop</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cross-circle\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">cross-circle</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cross-medium\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">cross-medium</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cross-small\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">cross-small</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cross\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">cross</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#cube\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">cube</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dash\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">dash</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dashboard\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">dashboard</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#data-control\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">data-control</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#debit\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">debit</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#devices\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">devices</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dots\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">dots</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#down\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">down</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#download\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">download</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#drawing-arrow-up\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">drawing-arrow-up</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dropdown-close\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">dropdown-close</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dropdown-open\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">dropdown-open</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dropdown\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">dropdown</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#dropup\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">dropup</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#email-notification\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">email-notification</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#email\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">email</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#eu\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">eu</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#euro\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">euro</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#exchange\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">exchange</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#eye-closed\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">eye-closed</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#eye\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">eye</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file-add\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">file-add</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file-duotone\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">file-duotone</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file-new\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">file-new</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file-none\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">file-none</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file-outline\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">file-outline</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#file\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">file</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#filter\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">filter</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#fingerprint\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">fingerprint</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#flag-outlined\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">flag-outlined</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#flag\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">flag</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#flash-auto\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">flash-auto</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#flashlight\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">flashlight</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#folder-add\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">folder-add</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#folder\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">folder</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#forbidden\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">forbidden</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#from-user\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">from-user</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#gear\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">gear</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#globe\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">globe</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#graph-circle\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">graph-circle</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#grid\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">grid</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#group-list\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">group-list</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#groups\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">groups</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#heart\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">heart</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#help\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">help</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#history\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">history</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#home\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">home</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#hourglass\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">hourglass</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#image\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">image</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#info-outlined\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">info-outlined</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#info\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">info</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#key\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">key</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#laptop\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">laptop</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#left\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">left</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#lightbulb\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">lightbulb</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#link-out\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">link-out</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#link\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">link</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#list\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">list</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#location\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">location</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#lock\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">lock</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#logout\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">logout</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#magic-trick\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">magic-trick</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#magnet\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">magnet</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#magnifier\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">magnifier</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#merge\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">merge</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#movement-in\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">movement-in</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#movement-out\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">movement-out</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#moveto\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">moveto</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#multi-files\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">multi-files</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#music\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">music</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#new\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">new</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#next\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">next</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#note\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">note</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#notification-email\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">notification-email</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#offline\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">offline</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#online\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">online</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#openwith\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">openwith</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#palette\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">palette</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#paperplane\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">paperplane</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#password\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">password</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#pen\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">pen</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#people\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">people</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#percent-circle\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">percent-circle</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#percent\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">percent</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#personal-data\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">personal-data</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#phone-download\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">phone-download</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#phone\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">phone</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#pie-chart\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">pie-chart</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#pin\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">pin</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#plus-small\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">plus-small</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#plus\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">plus</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#previous\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">previous</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#printer\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">printer</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#qualify\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">qualify</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#rename\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">rename</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#repare\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">repare</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#restore\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">restore</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#right\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">right</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#rise\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">rise</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#rotate-left\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">rotate-left</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#rotate-right\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">rotate-right</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#sad-cozy\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">sad-cozy</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#safe\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">safe</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#select-all\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">select-all</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#setting\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">setting</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#share-circle\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">share-circle</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#share\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">share</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#sound\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">sound</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#spinner\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">spinner</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#stack\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">stack</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#star\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">star</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#stats\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">stats</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#sync-cozy\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">sync-cozy</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#sync\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">sync</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#target\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">target</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#team\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">team</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#telephone\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">telephone</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#to-the-cloud\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">to-the-cloud</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#top\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">top</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#trash\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">trash</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#trophy\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">trophy</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#unlink\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">unlink</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#unlock\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">unlock</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#up\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">up</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#upload\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">upload</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#videos\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">videos</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#wallet-add\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">wallet-add</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#wallet-new\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">wallet-new</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#wallet\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">wallet</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#warn\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">warn</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#warning-circle\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">warning-circle</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#warning\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">warning</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#wrench-circle\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">wrench-circle</p>
