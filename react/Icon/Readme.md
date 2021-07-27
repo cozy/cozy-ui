@@ -18,14 +18,14 @@ import Album from 'cozy-ui/transpiled/react/Icons/Album'
 <Icon icon={Album} />
 ```
 
-```
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import Typography from 'cozy-ui/transpiled/react/Typography';
-import Dialog from 'cozy-ui/transpiled/react/CozyDialogs/Dialog';
-import IconButton from 'cozy-ui/transpiled/react/IconButton';
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
-import { makeStyles } from '@material-ui/styles';
-import cx from 'classnames';
+```jsx
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import Typography from 'cozy-ui/transpiled/react/Typography'
+import Dialog from 'cozy-ui/transpiled/react/CozyDialogs/Dialog'
+import IconButton from 'cozy-ui/transpiled/react/IconButton'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { makeStyles } from '@material-ui/styles'
+import cx from 'classnames'
 
 import Album from 'cozy-ui/transpiled/react/Icons/Album'
 import AlbumAdd from 'cozy-ui/transpiled/react/Icons/AlbumAdd'
@@ -404,20 +404,20 @@ const icons = [
   Warning,
   WarningCircle,
   WrenchCircle
-];
+]
 
 const wrapperStyle = {
   fontSize: '2rem',
   display: 'grid',
   gridTemplateColumns: 'repeat(6, 1fr)',
   color: '#444'
-};
+}
 
 initialState = { size: 16 };
 
 const handleInputRangeChange = ev => {
   setState({ size: parseInt(ev.target.value, 10) })
-};
+}
 
 const getNameFromIcon = icon => {
   return icon.name.replace(/^Svg/, '')
@@ -439,7 +439,7 @@ const InfoModal = ({ icon }) => {
       </>
     }
   />
-};
+}
 
 const useStyles = makeStyles({
   iconTile: {
@@ -474,16 +474,18 @@ const Example = () => {
       </div>
     </BreakpointsProvider>
   )
-};
+}
+
+;
 
 <Example />
 ```
 
 ## SVGr illustrations
 
-```
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import Typography from 'cozy-ui/transpiled/react/Typography';
+```jsx
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import Typography from 'cozy-ui/transpiled/react/Typography'
 
 import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
 import CloudBrokenIcon from 'cozy-ui/transpiled/react/Icons/CloudBroken'
@@ -548,13 +550,15 @@ const wrapperStyle = {
   display: 'grid',
   gridTemplateColumns: 'repeat(6, 1fr)',
   color: '#444'
-};
+}
 
-initialState = { size: 16 };
+initialState = { size: 16 }
 
 const handleInputRangeChange = ev => {
   setState({ size: parseInt(ev.target.value, 10) })
-};
+}
+
+;
 
 <div>
   <Typography component='p' variant='body1' className='u-mb-1'>
@@ -573,16 +577,18 @@ const handleInputRangeChange = ev => {
 
 ### Available illustrations
 
-```
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import Typography from 'cozy-ui/transpiled/react/Typography';
-import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite';
-const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'device-phone', 'device-tablet', 'device-browser', 'file-type-audio', 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'forbidden-sign', 'google', 'logout-large', 'top-select', 'bottom-select', 'check-white', 'dash-white', 'keychain'];
+```jsx
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import Typography from 'cozy-ui/transpiled/react/Typography'
+import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite'
+
+const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'device-phone', 'device-tablet', 'device-browser', 'file-type-audio', 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'forbidden-sign', 'google', 'logout-large', 'top-select', 'bottom-select', 'check-white', 'dash-white', 'keychain']
+
+;
 
 <div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
   <Sprite />
-  {
-  availableIcons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
+  {availableIcons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
       <Icon icon={ icon }/>
       <Typography variant='body1' className='u-mb-1 u-mt-half'>{ icon }</Typography>
     </div>
@@ -594,10 +600,11 @@ const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'd
 
 Use `spin` and `rotate` if you want you to turn your icons upside down 🙃.
 
-```
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import SpinnerIcon from "cozy-ui/transpiled/react/Icons/Spinner";
-import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
+```jsx
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import SpinnerIcon from "cozy-ui/transpiled/react/Icons/Spinner"
+import RightIcon from "cozy-ui/transpiled/react/Icons/Right"
+;
 <div>
   <Icon icon={SpinnerIcon} color='#0bda51' spin/>{'\u00A0'}
   <Icon icon={RightIcon} color='#c30017' rotate={45}/>
@@ -620,37 +627,44 @@ to load your SVG (either explicitly or, better, implicitly in your `webpack.conf
 ⚠️ Do not put a `fill` property on your icon
 
 ```jsx static
-import myIcon from 'my-icon.svg'
-
-;<Icon icon={myIcon} width={32} height={32} color="var(--errorColor)" />
+import myIcon from 'my-icon.svg';
+<Icon icon={myIcon} width={32} height={32} color="var(--errorColor)" />
 ```
 
 ### Props forwarding
 
 Icon forwards unknown props to the underlying `<svg />` element.
 
-```
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import WarningIcon from "cozy-ui/transpiled/react/Icons/Warning";
+```jsx
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import WarningIcon from "cozy-ui/transpiled/react/Icons/Warning"
+;
 <div>
-  <Icon icon={WarningIcon} onClick={() => alert('Be careful !')} width={32} height={32} color="var(--errorColor)" /><span>← Click it</span>
+  <Icon
+    icon={WarningIcon}
+    width={32}
+    height={32}
+    color="var(--errorColor)"
+    onClick={() => alert('Be careful !')}
+  />
+  <span>← Click it</span>
 </div>
 ```
 
 ### Available UI icons
 
-```
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite';
-import Typography from 'cozy-ui/transpiled/react/Typography';
+```jsx
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite'
+import Typography from 'cozy-ui/transpiled/react/Typography'
 
 const colors = ['#297EF2', '#08b442', '#B449E7', '#F52D2D', '#FF962F']
 let i = 0
-const availableIcons = ['album-add','album-remove','album','answer','apple','archive','attachment','attention','bank','banking-add','banking','bell','bill','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-edge-chromium','browser-firefox','browser-ie','browser-opera','browser-safari','burger','calendar','camera','car','carbonCopy','categories','certified','check-circle','check-list','check-square','check','circle-filled','clock','cloud-happy','cloud','collect','comment','company','compass','connector','contract','contrast','cozy-laugh','cozy-text','credit-card-add','credit-card','credit','crop','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','debit','devices','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','email-notification','email','eu','euro','exchange','eye-closed','eye','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','flag-outlined','flag','flash-auto','flashlight','folder-add','folder','forbidden','from-user','gear','globe','graph-circle','grid','group-list','groups','heart','help','history','home','hourglass','image','info-outlined','info','key','laptop','left','lightbulb','link-out','link','list','location','lock','logout','magic-trick','magnet','magnifier','merge','movement-in','movement-out','moveto','multi-files','music','new','next','note','notification-email','offline','online','openwith','palette','paperplane','password','pen','people','percent-circle','percent','personal-data','phone-download','phone','pie-chart','pin','plus-small','plus','previous','printer','qualify','rename','repare','restore','right','rise','rotate-left','rotate-right','sad-cozy','safe','select-all','setting','share-circle','share','sound','spinner','stack','star','stats','sync-cozy','sync','target','team','telephone','to-the-cloud','top','trash','trophy','unlink','unlock','up','upload','videos','wallet-add','wallet-new','wallet','warn','warning-circle','warning','wrench-circle'];
+const availableIcons = ['album-add','album-remove','album','answer','apple','archive','attachment','attention','bank','banking-add','banking','bell','bill','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-edge-chromium','browser-firefox','browser-ie','browser-opera','browser-safari','burger','calendar','camera','car','carbonCopy','categories','certified','check-circle','check-list','check-square','check','circle-filled','clock','cloud-happy','cloud','collect','comment','company','compass','connector','contract','contrast','cozy-laugh','cozy-text','credit-card-add','credit-card','credit','crop','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','debit','devices','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','email-notification','email','eu','euro','exchange','eye-closed','eye','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','flag-outlined','flag','flash-auto','flashlight','folder-add','folder','forbidden','from-user','gear','globe','graph-circle','grid','group-list','groups','heart','help','history','home','hourglass','image','info-outlined','info','key','laptop','left','lightbulb','link-out','link','list','location','lock','logout','magic-trick','magnet','magnifier','merge','movement-in','movement-out','moveto','multi-files','music','new','next','note','notification-email','offline','online','openwith','palette','paperplane','password','pen','people','percent-circle','percent','personal-data','phone-download','phone','pie-chart','pin','plus-small','plus','previous','printer','qualify','rename','repare','restore','right','rise','rotate-left','rotate-right','sad-cozy','safe','select-all','setting','share-circle','share','sound','spinner','stack','star','stats','sync-cozy','sync','target','team','telephone','to-the-cloud','top','trash','trophy','unlink','unlock','up','upload','videos','wallet-add','wallet-new','wallet','warn','warning-circle','warning','wrench-circle']
+;
 <div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
   <Sprite />
-  {
-  availableIcons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
+  {availableIcons.map(icon => <div key={icon} style={{ textAlign: 'center'}}>
       <Icon icon={ icon } color={ colors[i++ % colors.length] }/>
       <Typography variant='body1' className='u-mt-half u-mb-1'>{ icon }</Typography>
     </div>
