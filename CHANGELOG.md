@@ -1,3 +1,10 @@
+# [51.4.0](https://github.com/cozy/cozy-ui/compare/v51.3.1...v51.4.0) (2021-07-28)
+
+
+### Features
+
+* Add checkbox icon ([001a491](https://github.com/cozy/cozy-ui/commit/001a491))
+
 ## [51.3.1](https://github.com/cozy/cozy-ui/compare/v51.3.0...v51.3.1) (2021-07-15)
 
 
