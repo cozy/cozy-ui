@@ -1,5 +1,5 @@
 import React from 'react'
-import { createMuiTheme } from '@material-ui/core/styles'
+import { createTheme } from '@material-ui/core/styles'
 import merge from 'lodash/merge'
 
 import { getCssVariableValue } from '../utils/color'
@@ -131,7 +131,7 @@ normalPalette.background = {
   selected: '#F5FAFF'
 }
 
-export const normalTheme = createMuiTheme({
+export const normalTheme = createTheme({
   typography: makeTypography(normalPalette),
   shape: {
     borderRadius: defaultValues.borderRadius
@@ -678,7 +678,7 @@ invertedPalette.action = {
 }
 
 const invertedTypography = makeTypography(invertedPalette)
-export const invertedTheme = createMuiTheme({
+export const invertedTheme = createTheme({
   palette: invertedPalette,
   typography: invertedTypography,
   shadows
