@@ -1,3 +1,10 @@
+# [51.5.0](https://github.com/cozy/cozy-ui/compare/v51.4.0...v51.5.0) (2021-08-09)
+
+
+### Features
+
+* Do not render `DialogActions` when `actions` prop is undefined ([bbfe215](https://github.com/cozy/cozy-ui/commit/bbfe215)), closes [#1861](https://github.com/cozy/cozy-ui/issues/1861)
+
 # [51.4.0](https://github.com/cozy/cozy-ui/compare/v51.3.1...v51.4.0) (2021-07-28)
 
 
