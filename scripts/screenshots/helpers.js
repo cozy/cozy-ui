@@ -1,11 +1,6 @@
 const path = require('path')
 const fs = require('fs')
 
-const builtinViewports = {
-  mobile: '320x480',
-  desktop: '800x600'
-}
-
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 const readConfig = async () => {
@@ -17,17 +12,9 @@ const readConfig = async () => {
   }
 }
 
-const pathArgument = p => {
-  if (p.startsWith('/')) {
-    return p
-  } else {
-    return path.join(process.cwd(), p)
-  }
-}
-
-const urlArgument = rawURL => {
-  const c = new URL(rawURL) //eslint-disable-line no-unused-vars
-  return rawURL
+const builtinViewports = {
+  mobile: '320x480',
+  desktop: '800x600'
 }
 
 const parseViewportArgument = viewportStr => {
@@ -45,10 +32,8 @@ const parseViewportArgument = viewportStr => {
 }
 
 module.exports = {
-  builtinViewports,
-  readConfig,
-  parseViewportArgument,
   sleep,
-  pathArgument,
-  urlArgument
+  readConfig,
+  builtinViewports,
+  parseViewportArgument
 }
