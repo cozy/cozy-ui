@@ -38,15 +38,17 @@ const Dialog = props => {
       <DialogContent>
         <div className="dialogContentInner withFluidActions">
           {content}
-          <DialogActions
-            {...dialogActionsProps}
-            disableSpacing
-            className={cx('dialogActionsFluid', {
-              columnLayout: actionsLayout == 'column'
-            })}
-          >
-            {actions}
-          </DialogActions>
+          {actions && (
+            <DialogActions
+              {...dialogActionsProps}
+              disableSpacing
+              className={cx('dialogActionsFluid', {
+                columnLayout: actionsLayout == 'column'
+              })}
+            >
+              {actions}
+            </DialogActions>
+          )}
         </div>
       </DialogContent>
     </MUIDialog>

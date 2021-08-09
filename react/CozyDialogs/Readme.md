@@ -137,7 +137,8 @@ initialState = {
   withCloseButton: true,
   content: 'default',
   theme: 'normal',
-  align: 'middle'
+  align: 'middle',
+  showActions: true
 };
 
 <>
@@ -159,6 +160,10 @@ initialState = {
       <StateRadio value='small' name='size' /> small {' '}
       <StateRadio value='medium' name='size' /> medium {' '}
       <StateRadio value='large' name='size' /> large
+    </p>
+    <p>With actions:
+      <StateRadio value={true} name='showActions' /> yes
+      <StateRadio value={false} name='showActions' /> no
     </p>
     <p>Actions layout:
       <StateRadio value='row' name='actionsLayout' /> row{' '}
@@ -186,7 +191,7 @@ initialState = {
             : content.ada.short}<br/>
           <Button className='u-mt-1 u-ml-0' label="Show an alert" onClick={() => Alerter.success('Hello', { duration: 100000 })}/>
         </Typography>}
-      actions={dialogActions[DialogComponent.name]}
+      actions={state.showActions && dialogActions[DialogComponent.name]}
       actionsLayout={state.actionsLayout}
     />
   </BreakpointsProvider>

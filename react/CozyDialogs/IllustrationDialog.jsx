@@ -33,15 +33,17 @@ const IllustrationDialog = props => {
             <div className="u-flex u-flex-justify-center">{title}</div>
           </DialogTitle>
           {content}
-          <DialogActions
-            {...dialogActionsProps}
-            disableSpacing
-            className={cx('dialogActionsFluid', {
-              columnLayout: actionsLayout == 'column'
-            })}
-          >
-            {actions}
-          </DialogActions>
+          {actions && (
+            <DialogActions
+              {...dialogActionsProps}
+              disableSpacing
+              className={cx('dialogActionsFluid', {
+                columnLayout: actionsLayout == 'column'
+              })}
+            >
+              {actions}
+            </DialogActions>
+          )}
         </div>
       </DialogContent>
     </Dialog>

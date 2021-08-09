@@ -39,13 +39,15 @@ const FixedDialog = props => {
         <div className="dialogContentInner">{content}</div>
       </DialogContent>
       <Divider />
-      <DialogActions
-        {...dialogActionsProps}
-        disableSpacing
-        className={cx({ columnLayout: actionsLayout == 'column' })}
-      >
-        {actions}
-      </DialogActions>
+      {actions && (
+        <DialogActions
+          {...dialogActionsProps}
+          disableSpacing
+          className={cx({ columnLayout: actionsLayout == 'column' })}
+        >
+          {actions}
+        </DialogActions>
+      )}
     </Dialog>
   )
 }
