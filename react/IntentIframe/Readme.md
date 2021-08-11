@@ -1,7 +1,32 @@
+### Simple usecase
+
 The IntentIframe is the basic and minimal component to open an intent.
 See [the documentation](https://docs.cozy.io/en/cozy-stack/intents/) for more information about intents.
 
-The IntentOpener component is useful to start an new intent modal from a click on a button. But sometimes you want/have to handle the modal opening state on the application side so you need to just render an Intent inside a modal. You can then use IntentIframe wrapped in a Dialog for that use case.
+Here a simple example :
+
+```jsx
+import IntentIframe from 'cozy-ui/transpiled/react/IntentIframe'
+import utils from '../../docs/utils'
+
+;
+
+<IntentIframe
+  action="PICK"
+  create={utils.fakeIntentCreate}
+  data={{folder: '840af7e7be6c41bed3c5b76d03f66328'}}
+  type="io.cozy.files"
+  onCancel={() => alert('intent cancelled')}
+  onError={(error) => alert('intent has failed with error: ' + error.message)}
+  onTerminate={doc => alert('intent has completed ! ' + JSON.stringify(doc))}
+/>
+```
+
+### Within an application side controled Dialog
+
+Sometimes you have to render an Intent inside a modal, and handle the modal opening state on the application side. You can then use IntentIframe wrapped in a Dialog for that use case, instead of using IntentDialogOpener component (that is useful to start a new intent modal from a click on a button).
+
+This method replaces deprecated `IntentModal` component.
 
 ```jsx
 import { withStyles } from '@material-ui/core/styles'
@@ -50,26 +75,11 @@ const IntentDialog = () => {
 }
 
 ;
+
 <BreakpointsProvider>
   <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
     Toggle an IntentDialog OPEN io.cozy.files
   </button>
   <IntentDialog />
 </BreakpointsProvider>
-```
-
-Here a simple example :
-
-```jsx
-import IntentIframe from 'cozy-ui/transpiled/react/IntentIframe';
-import utils from '../../docs/utils';
-  <IntentIframe
-    action="PICK"
-    create={utils.fakeIntentCreate}
-    data={{folder: '840af7e7be6c41bed3c5b76d03f66328'}}
-    type="io.cozy.files"
-    onCancel={() => alert('intent cancelled')}
-    onError={(error) => alert('intent has failed with error: ' + error.message)}
-    onTerminate={doc => alert('intent has completed ! ' + JSON.stringify(doc))}
-  />
 ```
