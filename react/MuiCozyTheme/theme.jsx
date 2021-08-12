@@ -178,6 +178,9 @@ const makeOverrides = theme => ({
       },
       '&$focused $notchedOutline': {
         borderWidth: '0.0625rem'
+      },
+      '&:hover $notchedOutline': {
+        borderColor: theme.palette.grey[300]
       }
     },
     notchedOutline: {
