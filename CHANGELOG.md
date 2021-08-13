@@ -1,3 +1,10 @@
+## [51.5.1](https://github.com/cozy/cozy-ui/compare/v51.5.0...v51.5.1) (2021-08-13)
+
+
+### Bug Fixes
+
+* Correct border-color on hover for text fields ([b2117a2](https://github.com/cozy/cozy-ui/commit/b2117a2))
+
 # [51.5.0](https://github.com/cozy/cozy-ui/compare/v51.4.0...v51.5.0) (2021-08-09)
 
 
