@@ -5,8 +5,8 @@ const rootDirectory = path.join(__dirname, '../')
 
 const formatViewport = viewport => `${viewport.width}x${viewport.height}`
 
-const defaultGetScreenshotName = ({ component, viewport, suffix }) =>
-  `${component.testId}-${suffix ? `${suffix}-` : ''}${formatViewport(
+const defaultGetScreenshotName = ({ component, viewport, suffix, theme }) =>
+  `${component.testId}-${suffix ? `${suffix}-` : ''}${theme}-${formatViewport(
     viewport
   )}.png`
 
@@ -16,8 +16,14 @@ const defaultGetScreenshotName = ({ component, viewport, suffix }) =>
  * component.
  */
 const screenshotComponent = async (page, options) => {
-  const { component, screenshotDir, viewport } = options
+  const { component, screenshotDir, viewport, theme } = options
   const { link, name } = component
+
+  // Need to use page.goto twice to set localStorage correctly
+  await page.goto(link, { waitUntil: 'load', timeout: 0 })
+  await page.evaluate(theme => {
+    localStorage.setItem('theme', theme)
+  }, theme)
   await page.goto(link, { waitUntil: 'load', timeout: 0 })
   await sleep(100)
 
@@ -28,7 +34,7 @@ const screenshotComponent = async (page, options) => {
     await page.screenshot({
       path: path.join(
         screenshotDir,
-        getScreenshotName({ component, viewport, suffix })
+        getScreenshotName({ component, viewport, suffix, theme })
       ),
       fullPage: true,
       captureBeyondViewport: false
@@ -45,7 +51,9 @@ const screenshotComponent = async (page, options) => {
     console.log(`Executing custom script for ${name}`)
     await componentScript(page, screenshot)
   } else {
-    console.log(`Screenshotting ${name} at ${formatViewport(viewport)}`)
+    console.log(
+      `Screenshotting ${name} for ${theme} theme at ${formatViewport(viewport)}`
+    )
     await screenshot()
   }
 }
