@@ -1,3 +1,10 @@
+## [51.5.2](https://github.com/cozy/cozy-ui/compare/v51.5.1...v51.5.2) (2021-08-19)
+
+
+### Bug Fixes
+
+* Change text orientation in MidEllipsis ([ccb2e6b](https://github.com/cozy/cozy-ui/commit/ccb2e6b))
+
 ## [51.5.1](https://github.com/cozy/cozy-ui/compare/v51.5.0...v51.5.1) (2021-08-13)
 
 
