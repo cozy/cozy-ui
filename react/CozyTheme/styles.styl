@@ -1,4 +1,5 @@
 @require 'settings/palette.styl'
+palette=json('../../theme/palette.json', { hash: true })
 
 $translucentWhite1=rgba(255, 255, 255, 0.24)
 $translucentWhite2=rgba(255, 255, 255, 0.88)
@@ -31,13 +32,13 @@ $translucentWhite3=rgba(255, 255, 255, 0.16)
     --secondaryButtonActiveColor: $translucentWhite1
     --secondaryButtonContrastColor: var(--invertedContrastTextColor)
 
-    --errorColor: lighten($errorColor, 70%)
-    --successColor: lighten($successColor, 70%)
-    --warningColor: lighten($warningColor, 70%)
+    --errorColor: palette.Error['200']
+    --successColor: palette.Success['200']
+    --warningColor: palette.Warning['200']
 
     --paperBackgroundColor: var(--primaryColor)
     --defaultBackgroundColor: var(--primaryColorDark)
     --dividerColor: $translucentWhite3
     --dividerColor2: $translucentWhite3
-    --errorBackground: darken($errorColor, 70%)
+    --errorBackground: palette.Error['700']
 

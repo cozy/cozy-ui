@@ -695,7 +695,7 @@ const invertedPalette = {
     main: defaultPalette.Success['400']
   },
   error: {
-    main: '#fcc0c0' // lighten($errorColor, 70%)
+    main: '#fcc0c0' // lighten(--errorColor, 70%)
   },
   divider: '#FFFFFF29' // 16% opacity
 }
