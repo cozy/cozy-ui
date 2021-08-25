@@ -15,10 +15,19 @@ import PropTypes from 'prop-types'
 const LRM = <>&#8206;</>
 
 const MidEllipsis = props => {
-  const { text, className } = props
-  const partLength = Math.round(text.length / 2)
-  const firstPart = text.substr(0, partLength)
-  const lastPart = text.substr(partLength, text.length)
+  const { text, className, children } = props
+
+  if (text && typeof text !== 'string')
+    throw new Error('The "text" prop of MidEllipsis can only be a string')
+
+  if (children && typeof children !== 'string')
+    throw new Error('The children of MidEllipsis can only be a string')
+
+  const str = text || children
+
+  const partLength = Math.round(str.length / 2)
+  const firstPart = str.substr(0, partLength)
+  const lastPart = str.substr(partLength, str.length)
 
   return (
     <div className={cx('u-midellipsis', className)}>
@@ -33,7 +42,7 @@ const MidEllipsis = props => {
 }
 
 MidEllipsis.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   className: PropTypes.string
 }
 
