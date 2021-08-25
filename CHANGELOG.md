@@ -1,3 +1,10 @@
+# [51.6.0](https://github.com/cozy/cozy-ui/compare/v51.5.2...v51.6.0) (2021-08-25)
+
+
+### Features
+
+* Add file path component ([6a9e745](https://github.com/cozy/cozy-ui/commit/6a9e745))
+
 ## [51.5.2](https://github.com/cozy/cozy-ui/compare/v51.5.1...v51.5.2) (2021-08-19)
 
 
