@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/cozy/cozy-ui",
   "scripts": {
-    "argos:upload": "argos upload screenshots/",
+    "argos:upload": "argos upload",
     "stylus-build": "stylus -c --include stylus  --use ./node_modules/autoprefixer-stylus",
     "build:css:all": "yarn build:css && yarn build:css:utils",
     "build:css": "env CSSMODULES=false yarn run stylus-build -o dist/cozy-ui.min.css stylus/cozy-ui/build.styl",
