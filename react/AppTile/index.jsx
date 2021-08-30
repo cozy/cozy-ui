@@ -85,13 +85,15 @@ export const AppTile = ({
           />
         )}
       </TileIcon>
-      <TileDescription>
+      <TileDescription className={styles[`AppTile-description`]}>
         <TileTitle>{namePrefix ? `${namePrefix} ${name}` : name}</TileTitle>
         {developer.name && showDeveloper && (
           <TileSubtitle>{`${t('app_item.by')} ${developer.name}`}</TileSubtitle>
         )}
         {statusToDisplay && (
-          <TileFooter>{t(`app_item.${statusToDisplay}`)}</TileFooter>
+          <TileFooter className={styles[`AppTile-footer-${statusLabel}`]}>
+            {t(`app_item.${statusToDisplay}`)}
+          </TileFooter>
         )}
       </TileDescription>
     </Tile>

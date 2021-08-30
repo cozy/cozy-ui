@@ -11,8 +11,8 @@ const Tile = ({ children, className, tag: Tag, ...props }) => {
   )
 }
 
-export const TileDescription = ({ children }) => {
-  return <div className={styles['Tile-desc']}>{children}</div>
+export const TileDescription = ({ children, className }) => {
+  return <div className={`${styles['Tile-desc']} ${className}`}>{children}</div>
 }
 
 export const TileTitle = ({ children }) => (
@@ -27,8 +27,11 @@ export const TileSubtitle = ({ children }) => (
   </Typography>
 )
 
-export const TileFooter = ({ children }) => (
-  <Typography variant="caption" className={styles['Tile-status']}>
+export const TileFooter = ({ children, className }) => (
+  <Typography
+    variant="caption"
+    className={`${styles['Tile-status']} ${className}`}
+  >
     {children}
   </Typography>
 )
