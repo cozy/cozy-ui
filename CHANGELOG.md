@@ -1,3 +1,10 @@
+# [51.7.0](https://github.com/cozy/cozy-ui/compare/v51.6.0...v51.7.0) (2021-08-30)
+
+
+### Features
+
+* Decouple FilePathLink from stylesheet ([f95d386](https://github.com/cozy/cozy-ui/commit/f95d386))
+
 # [51.6.0](https://github.com/cozy/cozy-ui/compare/v51.5.2...v51.6.0) (2021-08-25)
 
 
