@@ -22247,14 +22247,6 @@ body {
   white-space: nowrap;
 }
 
-.c-file-path-link--1BAwF {
-  text-decoration: none;
-}
-.c-file-path-link--1BAwF :first-child:hover {
-  color: var(--secondaryTextColor);
-  text-decoration: underline;
-}
-
 html {
 /*
     Grey
