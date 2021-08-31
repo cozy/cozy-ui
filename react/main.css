@@ -25246,7 +25246,6 @@ html {
   max-width: 100%;
 }
 .Tile-title--3gbq- {
-  height: 1.25rem;
   color: var(--black);
 }
 .Tile-developer--2GOfB {
@@ -25313,6 +25312,20 @@ html {
 .AppTile-container-maintenance--u1a1M {
   filter: grayscale(1);
   opacity: 0.64;
+}
+.AppTile-container-installed--1RICW {
+  background: var(--defaultBackgroundColor);
+  border-color: var(--defaultBackgroundColor);
+}
+.AppTile-description--a0X20 .AppTile-title-2lines--1UQ_m {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  white-space: normal;
+}
+.AppTile-description--a0X20 .AppTile-footer-update--TddJ8 {
+  color: var(--primaryColor);
 }
 
 .Sections__section--2onYy {
