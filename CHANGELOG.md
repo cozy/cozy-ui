@@ -1,3 +1,12 @@
+# [51.8.0](https://github.com/cozy/cozy-ui/compare/v51.7.1...v51.8.0) (2021-08-31)
+
+
+### Features
+
+* Allow app tiles' names to be displayed on two lines ([f1a4142](https://github.com/cozy/cozy-ui/commit/f1a4142))
+* Highlight already installed app tiles ([b86055e](https://github.com/cozy/cozy-ui/commit/b86055e))
+* Highlight app tiles that have available update ([8e00950](https://github.com/cozy/cozy-ui/commit/8e00950))
+
 ## [51.7.1](https://github.com/cozy/cozy-ui/compare/v51.7.0...v51.7.1) (2021-08-31)
 
 
