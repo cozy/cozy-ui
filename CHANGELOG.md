@@ -1,3 +1,10 @@
+## [51.7.1](https://github.com/cozy/cozy-ui/compare/v51.7.0...v51.7.1) (2021-08-31)
+
+
+### Bug Fixes
+
+* Remove `height:auto` from `app-2panes-sticky` class ([fc93cef](https://github.com/cozy/cozy-ui/commit/fc93cef))
+
 # [51.7.0](https://github.com/cozy/cozy-ui/compare/v51.6.0...v51.7.0) (2021-08-30)
 
 
