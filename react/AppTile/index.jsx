@@ -20,6 +20,7 @@ import fr from './locales/fr.json'
 import Icon from '../Icon'
 import WrenchCircleIcon from '../Icons/WrenchCircle'
 import palette from '../palette'
+import cx from 'classnames'
 
 const locales = { en, fr }
 
@@ -64,11 +65,12 @@ export const AppTile = ({
       tag="button"
       type="button"
       onClick={onClick}
-      className={
-        isInMaintenanceWithSpecificDisplay
-          ? styles['AppTile-container-maintenance']
-          : undefined
-      }
+      className={cx({
+        [styles[
+          'AppTile-container-maintenance'
+        ]]: isInMaintenanceWithSpecificDisplay,
+        [styles['AppTile-container-installed']]: statusLabel === 'installed'
+      })}
     >
       <TileIcon>
         <IconComponent
@@ -85,13 +87,19 @@ export const AppTile = ({
           />
         )}
       </TileIcon>
-      <TileDescription>
-        <TileTitle>{namePrefix ? `${namePrefix} ${name}` : name}</TileTitle>
+      <TileDescription className={styles[`AppTile-description`]}>
+        <TileTitle
+          className={statusLabel ? '' : styles['AppTile-title-2lines']}
+        >
+          {namePrefix ? `${namePrefix} ${name}` : name}
+        </TileTitle>
         {developer.name && showDeveloper && (
           <TileSubtitle>{`${t('app_item.by')} ${developer.name}`}</TileSubtitle>
         )}
         {statusToDisplay && (
-          <TileFooter>{t(`app_item.${statusToDisplay}`)}</TileFooter>
+          <TileFooter className={styles[`AppTile-footer-${statusLabel}`]}>
+            {t(`app_item.${statusToDisplay}`)}
+          </TileFooter>
         )}
       </TileDescription>
     </Tile>
