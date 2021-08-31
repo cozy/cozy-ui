@@ -20,6 +20,7 @@ import fr from './locales/fr.json'
 import Icon from '../Icon'
 import WrenchCircleIcon from '../Icons/WrenchCircle'
 import palette from '../palette'
+import cx from 'classnames'
 
 const locales = { en, fr }
 
@@ -64,11 +65,12 @@ export const AppTile = ({
       tag="button"
       type="button"
       onClick={onClick}
-      className={
-        isInMaintenanceWithSpecificDisplay
-          ? styles['AppTile-container-maintenance']
-          : undefined
-      }
+      className={cx({
+        [styles[
+          'AppTile-container-maintenance'
+        ]]: isInMaintenanceWithSpecificDisplay,
+        [styles['AppTile-container-installed']]: statusLabel === 'installed'
+      })}
     >
       <TileIcon>
         <IconComponent
