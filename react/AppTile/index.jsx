@@ -88,7 +88,11 @@ export const AppTile = ({
         )}
       </TileIcon>
       <TileDescription className={styles[`AppTile-description`]}>
-        <TileTitle>{namePrefix ? `${namePrefix} ${name}` : name}</TileTitle>
+        <TileTitle
+          className={statusLabel ? '' : styles['AppTile-title-2lines']}
+        >
+          {namePrefix ? `${namePrefix} ${name}` : name}
+        </TileTitle>
         {developer.name && showDeveloper && (
           <TileSubtitle>{`${t('app_item.by')} ${developer.name}`}</TileSubtitle>
         )}

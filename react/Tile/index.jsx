@@ -15,8 +15,8 @@ export const TileDescription = ({ children, className }) => {
   return <div className={`${styles['Tile-desc']} ${className}`}>{children}</div>
 }
 
-export const TileTitle = ({ children }) => (
-  <Typography variant="h6" className={styles['Tile-title']}>
+export const TileTitle = ({ children, className }) => (
+  <Typography variant="h6" className={`${styles['Tile-title']} ${className}`}>
     {children}
   </Typography>
 )
