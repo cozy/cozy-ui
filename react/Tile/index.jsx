@@ -1,11 +1,21 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Typography from '../Typography'
 import styles from './styles.styl'
 
-const Tile = ({ children, className, tag: Tag, ...props }) => {
+const Tile = ({ children, className, tag: Tag, isSecondary, ...props }) => {
   return (
-    <Tag className={cx(styles.Tile, className)} {...props}>
+    <Tag
+      className={cx(
+        styles.Tile,
+        {
+          [styles['Tile-secondary']]: isSecondary
+        },
+        className
+      )}
+      {...props}
+    >
       {children}
     </Tag>
   )
@@ -40,7 +50,14 @@ export const TileIcon = ({ children }) => {
   return <div className={styles['Tile-icon-wrapper']}>{children}</div>
 }
 
+Tile.propTypes = {
+  className: PropTypes.string,
+  isSecondary: PropTypes.bool,
+  tag: PropTypes.string
+}
+
 Tile.defaultProps = {
+  isSecondary: false,
   tag: 'div'
 }
 

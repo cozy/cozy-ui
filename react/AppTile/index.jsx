@@ -68,9 +68,9 @@ export const AppTile = ({
       className={cx({
         [styles[
           'AppTile-container-maintenance'
-        ]]: isInMaintenanceWithSpecificDisplay,
-        [styles['AppTile-container-installed']]: statusLabel === 'installed'
+        ]]: isInMaintenanceWithSpecificDisplay
       })}
+      isSecondary={statusLabel === 'installed'}
     >
       <TileIcon>
         <IconComponent
