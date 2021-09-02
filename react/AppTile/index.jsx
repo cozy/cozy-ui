@@ -97,7 +97,7 @@ export const AppTile = ({
           <TileSubtitle>{`${t('app_item.by')} ${developer.name}`}</TileSubtitle>
         )}
         {statusToDisplay && (
-          <TileFooter className={styles[`AppTile-footer-${statusLabel}`]}>
+          <TileFooter isAccent={statusLabel === 'update'}>
             {t(`app_item.${statusToDisplay}`)}
           </TileFooter>
         )}
