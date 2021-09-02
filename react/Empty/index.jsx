@@ -60,6 +60,7 @@ Empty.propTypes = {
   title: PropTypes.node.isRequired,
   text: PropTypes.node,
   className: PropTypes.string,
+  /** Added vertical centering (only Mobile) */
   layout: PropTypes.bool
 }
 
