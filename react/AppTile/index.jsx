@@ -88,9 +88,7 @@ export const AppTile = ({
         )}
       </TileIcon>
       <TileDescription className={styles[`AppTile-description`]}>
-        <TileTitle
-          className={statusLabel ? '' : styles['AppTile-title-2lines']}
-        >
+        <TileTitle isMultiline={!statusLabel}>
           {namePrefix ? `${namePrefix} ${name}` : name}
         </TileTitle>
         {developer.name && showDeveloper && (

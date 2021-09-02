@@ -22,11 +22,20 @@ const Tile = ({ children, className, tag: Tag, isSecondary, ...props }) => {
 }
 
 export const TileDescription = ({ children, className }) => {
-  return <div className={`${styles['Tile-desc']} ${className}`}>{children}</div>
+  return <div className={cx(styles['Tile-desc'], className)}>{children}</div>
 }
 
-export const TileTitle = ({ children, className }) => (
-  <Typography variant="h6" className={`${styles['Tile-title']} ${className}`}>
+export const TileTitle = ({ children, className, isMultiline }) => (
+  <Typography
+    variant="h6"
+    className={cx(
+      styles['Tile-title'],
+      {
+        [styles['Tile-title-multiline']]: isMultiline
+      },
+      className
+    )}
+  >
     {children}
   </Typography>
 )
@@ -54,6 +63,15 @@ export const TileFooter = ({ children, className, isAccent }) => (
 
 export const TileIcon = ({ children }) => {
   return <div className={styles['Tile-icon-wrapper']}>{children}</div>
+}
+
+TileTitle.propTypes = {
+  className: PropTypes.string,
+  isMultiline: PropTypes.bool
+}
+
+TileTitle.defaultProps = {
+  isMultiline: false
 }
 
 TileFooter.propTypes = {
