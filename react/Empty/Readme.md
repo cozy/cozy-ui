@@ -53,3 +53,16 @@ const styles = {
   </Empty>
 </div>
 ```
+
+### With different sizes
+
+```
+import Empty from 'cozy-ui/transpiled/react/Empty';
+import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy';
+
+<>
+  <Empty icon={CozyIcon} layout={false} title="This list is empty" text="Try adding some content to this list"/>
+  <Empty icon={CozyIcon} layout={false} iconSize="medium" title="This list is empty" text="Try adding some content to this list" />
+  <Empty icon={CozyIcon} layout={false} iconSize="large" title="This list is empty" text="Try adding some content to this list" />
+</>
+```

@@ -10,6 +10,7 @@ const depreciationLogger = createDepreciationLogger()
 
 export const Empty = ({
   icon,
+  iconSize,
   title,
   text,
   children,
@@ -35,10 +36,11 @@ export const Empty = ({
     >
       {icon && (
         <Icon
-          className={styles['c-empty-img']}
+          className={cx(styles['c-empty-img'], {
+            [styles[`c-empty-img--${iconSize}`]]: iconSize !== 'normal'
+          })}
           icon={icon}
-          width="100%"
-          height="100%"
+          size="100%"
         />
       )}
       {title && (
@@ -54,6 +56,7 @@ export const Empty = ({
 
 Empty.propTypes = {
   icon: iconPropType,
+  iconSize: PropTypes.oneOf(['normal', 'medium', 'large']),
   title: PropTypes.node.isRequired,
   text: PropTypes.node,
   className: PropTypes.string,
@@ -61,6 +64,7 @@ Empty.propTypes = {
 }
 
 Empty.defaultProps = {
+  iconSize: 'normal',
   layout: true
 }
 

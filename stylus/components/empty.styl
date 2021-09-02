@@ -19,13 +19,25 @@ $empty
         transform translateY(-50%)
 
 $empty-img
-    display              block
-    margin               0 auto rem(16)
-    height               rem(140)
+    display block
+    margin 0 auto rem(16)
+    height rem(128)
 
     +medium-screen()
         margin-bottom rem(8)
-        height  rem(105)
+        height rem(96)
+
+$empty-img--medium
+    height rem(160)
+
+    +medium-screen()
+        height rem(128)
+
+$empty-img--large
+    height rem(192)
+
+    +medium-screen()
+        height rem(160)
 
 $empty-title
     margin 0 auto

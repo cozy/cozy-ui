@@ -7,6 +7,7 @@ import MidEllipsis from 'cozy-ui/transpiled/react/MidEllipsis';
 ```
 
 #### Ellipsis in directory tree
+
 ```jsx
 import MidEllipsis from 'cozy-ui/transpiled/react/MidEllipsis';
 
@@ -14,6 +15,7 @@ import MidEllipsis from 'cozy-ui/transpiled/react/MidEllipsis';
 ```
 
 #### Ellipsis with React string children
+
 ```jsx
 import MidEllipsis from 'cozy-ui/transpiled/react/MidEllipsis';
 
@@ -21,6 +23,7 @@ import MidEllipsis from 'cozy-ui/transpiled/react/MidEllipsis';
 ```
 
 #### Ellipsis in directory tree with complex names
+
 ```jsx
 import MidEllipsis from 'cozy-ui/transpiled/react/MidEllipsis';
 
@@ -28,6 +31,7 @@ import MidEllipsis from 'cozy-ui/transpiled/react/MidEllipsis';
 ```
 
 #### Ellipsis in directory tree with complex names and unusual characters
+
 ```jsx
 import MidEllipsis from 'cozy-ui/transpiled/react/MidEllipsis';
 
