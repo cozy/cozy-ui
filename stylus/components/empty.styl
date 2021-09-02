@@ -5,14 +5,14 @@
 contentHeight = barHeight + navHeight
 
 $empty
-    display          flex
-    flex-direction   column
-    justify-content  center
-    flex             1 0 auto
-    align-self       center
-    padding          rem(16) 0
-    text-align       center
-    max-width        100%
+    display flex
+    flex-direction column
+    justify-content center
+    flex 1 0 auto
+    align-self center
+    padding rem(16) 0
+    text-align center
+    max-width 100%
 
     +medium-screen()
         margin-top 'calc(50vh - %s)' % contentHeight
@@ -28,18 +28,18 @@ $empty-img
         height  rem(105)
 
 $empty-title
-    margin       0 auto
-    max-width    rem(1008)
-    line-height  1.3
+    margin 0 auto
+    max-width rem(1008)
+    line-height 1.3
 
     +medium-screen()
-        margin  0 rem(24)
+        margin 0 rem(24)
 
 $empty-text
-    margin   rem(5) auto 0
-    max-width    rem(1008)
-    color        var(--coolGrey)
-    line-height  1.5
+    margin rem(5) auto 0
+    max-width rem(1008)
+    color var(--coolGrey)
+    line-height 1.5
 
     +medium-screen()
-        margin  rem(5 24 0)
+        margin rem(5 24 0)
