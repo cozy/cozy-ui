@@ -1,3 +1,12 @@
+# [51.9.0](https://github.com/cozy/cozy-ui/compare/v51.8.0...v51.9.0) (2021-09-03)
+
+
+### Features
+
+* Move 2 lines title style to `Tile` component ([a69ab40](https://github.com/cozy/cozy-ui/commit/a69ab40))
+* Move installed app's greyed style to `Tile` component ([51efba8](https://github.com/cozy/cozy-ui/commit/51efba8))
+* Move updatable app's blue status style to `Tile` component ([9a2ce92](https://github.com/cozy/cozy-ui/commit/9a2ce92))
+
 # [51.8.0](https://github.com/cozy/cozy-ui/compare/v51.7.1...v51.8.0) (2021-08-31)
 
 
