@@ -13,7 +13,7 @@ import Tile, {
 import { createUseI18n } from '../I18n'
 import { AppDoctype } from '../proptypes'
 
-import { getCurrentStatusLabel } from './helpers'
+import { APP_STATUS, getCurrentStatusLabel } from './helpers'
 import styles from './styles.styl'
 import en from './locales/en.json'
 import fr from './locales/fr.json'
@@ -58,7 +58,7 @@ export const AppTile = ({
     : showStatus && statusLabel
   IconComponent = IconComponent || AppIcon
   const isInMaintenanceWithSpecificDisplay =
-    displaySpecificMaintenanceStyle && statusLabel === 'maintenance'
+    displaySpecificMaintenanceStyle && statusLabel === APP_STATUS.maintenance
 
   return (
     <Tile
@@ -68,9 +68,9 @@ export const AppTile = ({
       className={cx({
         [styles[
           'AppTile-container-maintenance'
-        ]]: isInMaintenanceWithSpecificDisplay,
-        [styles['AppTile-container-installed']]: statusLabel === 'installed'
+        ]]: isInMaintenanceWithSpecificDisplay
       })}
+      isSecondary={statusLabel === APP_STATUS.installed}
     >
       <TileIcon>
         <IconComponent
@@ -88,16 +88,14 @@ export const AppTile = ({
         )}
       </TileIcon>
       <TileDescription className={styles[`AppTile-description`]}>
-        <TileTitle
-          className={statusLabel ? '' : styles['AppTile-title-2lines']}
-        >
+        <TileTitle isMultiline={!statusLabel}>
           {namePrefix ? `${namePrefix} ${name}` : name}
         </TileTitle>
         {developer.name && showDeveloper && (
           <TileSubtitle>{`${t('app_item.by')} ${developer.name}`}</TileSubtitle>
         )}
         {statusToDisplay && (
-          <TileFooter className={styles[`AppTile-footer-${statusLabel}`]}>
+          <TileFooter isAccent={statusLabel === APP_STATUS.update}>
             {t(`app_item.${statusToDisplay}`)}
           </TileFooter>
         )}

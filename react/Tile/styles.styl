@@ -23,6 +23,10 @@ $tileMobileHeight = 3.75rem
   overflow hidden
   transition .15s ease all
 
+  &.Tile-secondary
+    background var(--defaultBackgroundColor)
+    border-color var(--defaultBackgroundColor)
+
 .Tile:hover,
 .Tile:active,
 .Tile:focus
@@ -72,12 +76,22 @@ $tileMobileHeight = 3.75rem
 .Tile-title
   color var(--black)
 
+  &.Tile-title-multiline
+    display -webkit-box
+    -webkit-line-clamp 2
+    -webkit-box-orient vertical
+    overflow hidden
+    white-space normal
+
 .Tile-developer
   height 1rem
 
 .Tile-status
   margin-top .5rem
   height 1rem
+
+  &.Tile-status-accent
+    color var(--primaryColor)
 
 
 +small-screen()
