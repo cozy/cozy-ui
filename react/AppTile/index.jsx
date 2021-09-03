@@ -13,7 +13,7 @@ import Tile, {
 import { createUseI18n } from '../I18n'
 import { AppDoctype } from '../proptypes'
 
-import { getCurrentStatusLabel } from './helpers'
+import { APP_STATUS, getCurrentStatusLabel } from './helpers'
 import styles from './styles.styl'
 import en from './locales/en.json'
 import fr from './locales/fr.json'
@@ -58,7 +58,7 @@ export const AppTile = ({
     : showStatus && statusLabel
   IconComponent = IconComponent || AppIcon
   const isInMaintenanceWithSpecificDisplay =
-    displaySpecificMaintenanceStyle && statusLabel === 'maintenance'
+    displaySpecificMaintenanceStyle && statusLabel === APP_STATUS.maintenance
 
   return (
     <Tile
@@ -70,7 +70,7 @@ export const AppTile = ({
           'AppTile-container-maintenance'
         ]]: isInMaintenanceWithSpecificDisplay
       })}
-      isSecondary={statusLabel === 'installed'}
+      isSecondary={statusLabel === APP_STATUS.installed}
     >
       <TileIcon>
         <IconComponent
@@ -95,7 +95,7 @@ export const AppTile = ({
           <TileSubtitle>{`${t('app_item.by')} ${developer.name}`}</TileSubtitle>
         )}
         {statusToDisplay && (
-          <TileFooter isAccent={statusLabel === 'update'}>
+          <TileFooter isAccent={statusLabel === APP_STATUS.update}>
             {t(`app_item.${statusToDisplay}`)}
           </TileFooter>
         )}
