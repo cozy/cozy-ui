@@ -105,27 +105,73 @@ const normalPalette = {
     contrastText: getCssVariableValue('secondaryContrastTextColor')
   },
   error: {
-    main: getCssVariableValue('errorColor')
+    light: getCssVariableValue('errorColorLight'),
+    main: getCssVariableValue('errorColor'),
+    dark: getCssVariableValue('errorColorDark'),
+    contrastText: getCssVariableValue('errorColorContrastText')
+  },
+  warning: {
+    light: getCssVariableValue('warningColorLight'),
+    main: getCssVariableValue('warningColor'),
+    dark: getCssVariableValue('warningColorDark'),
+    contrastText: getCssVariableValue('warningColorContrastText')
+  },
+  success: {
+    light: getCssVariableValue('successColorLight'),
+    main: getCssVariableValue('successColor'),
+    dark: getCssVariableValue('successColorDark'),
+    contrastText: getCssVariableValue('successColorContrastText')
+  },
+  info: {
+    light: getCssVariableValue('infoColorLight'),
+    main: getCssVariableValue('infoColor'),
+    dark: getCssVariableValue('infoColorDark'),
+    contrastText: getCssVariableValue('infoColorContrastText')
   },
   text: {
     primary: getCssVariableValue('primaryTextColor'),
-    secondary: getCssVariableValue('secondaryTextColor')
+    secondary: getCssVariableValue('secondaryTextColor'),
+    disabled: getCssVariableValue('disabledTextColor'),
+    hint: getCssVariableValue('hintTextColor'),
+    icon: getCssVariableValue('iconTextColor')
   },
   grey: {
-    0: getCssVariableValue('white'),
-    100: getCssVariableValue('paleGrey'),
-    200: getCssVariableValue('silver'),
-    300: getCssVariableValue('coolGrey'),
-    400: getCssVariableValue('slateGrey'),
-    800: getCssVariableValue('charcoalGrey'),
-    900: getCssVariableValue('black')
+    0: getCssVariableValue('grey0'),
+    50: getCssVariableValue('grey50'),
+    100: getCssVariableValue('grey100'),
+    200: getCssVariableValue('grey200'),
+    300: getCssVariableValue('grey300'),
+    400: getCssVariableValue('grey400'),
+    500: getCssVariableValue('grey500'),
+    600: getCssVariableValue('grey600'),
+    700: getCssVariableValue('grey700'),
+    800: getCssVariableValue('grey800'),
+    900: getCssVariableValue('grey900'),
+    A100: getCssVariableValue('greyA100'),
+    A200: getCssVariableValue('greyA200'),
+    A400: getCssVariableValue('greyA400'),
+    A700: getCssVariableValue('greyA700')
   },
   divider: getCssVariableValue('dividerColor'),
   actions: {
-    focus: getCssVariableValue('actionColorFocus')
+    active: getCssVariableValue('actionColorActive'),
+    hover: getCssVariableValue('actionColorHover'),
+    selected: getCssVariableValue('actionColorSelected'),
+    disabled: getCssVariableValue('actionColorDisabled'),
+    disabledBackground: getCssVariableValue('actionColorDisabledBackground'),
+    focus: getCssVariableValue('actionColorFocus'),
+    ghost: getCssVariableValue('actionColorGhost'),
+    hoverGhost: getCssVariableValue('actionColorHoverGhost')
+  },
+  border: {
+    main: getCssVariableValue('borderMainColor'),
+    disabled: getCssVariableValue('borderDisabledColor'),
+    ghost: getCssVariableValue('borderGhostColor'),
+    ghostDisabled: getCssVariableValue('borderGhostDisabledColor')
   },
   background: {
     default: getCssVariableValue('defaultBackgroundColor'),
+    paper: getCssVariableValue('paperBackgroundColor'),
     selected: '#F5FAFF'
   }
 }
