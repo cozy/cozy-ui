@@ -30,6 +30,12 @@ const ThemeLabel = ({ theme }) => {
   )
 }
 
+const paperStyle = theme => ({
+  ...styles.paper,
+  backgroundColor:
+    theme === themes.normal ? 'white' : 'var(--defaultBackgroundColor)'
+})
+
 export default ({ children }) => {
   const [theme, setTheme] = useState(
     localStorage.getItem('theme') || themes.normal
@@ -42,7 +48,7 @@ export default ({ children }) => {
   return (
     <CozyTheme>
       <CozyTheme variant={theme}>
-        <Paper elevation={0} square style={styles.paper}>
+        <Paper elevation={0} square style={paperStyle(theme)}>
           {isTesting() || isUsingDevStyleguidist() ? null : (
             <Button
               size="tiny"
@@ -61,7 +67,7 @@ export default ({ children }) => {
           <>
             <Divider />
             <CozyTheme key={otherTheme} variant={otherTheme}>
-              <Paper elevation={0} square style={styles.paper}>
+              <Paper elevation={0} square style={paperStyle(otherTheme)}>
                 <ThemeLabel theme={otherTheme} />
                 {children}
               </Paper>
