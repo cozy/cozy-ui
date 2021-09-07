@@ -3431,6 +3431,11 @@ exports[`Icon should render examples: Icon 1`] = `
       <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1\\">ShareCircle</p>
     </div>
     <div class=\\"makeStyles-iconTile-29 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path d=\\"M8 0c1.205 0 2.396.162 3.782.498 1.22.296 2.47.713 3.751 1.25.27.095.467.337.467.62 0 3.335-.483 5.931-1.687 8.083-1.205 2.166-3.104 3.874-5.907 5.448a.838.838 0 01-.798 0c-2.802-1.574-4.7-3.282-5.906-5.447C.497 8.298 0 5.702 0 2.366a.65.65 0 01.38-.576l.103-.043a23.733 23.733 0 013.75-1.25C5.605.162 6.81 0 8 0zm0 2c-1.014 0-2.06.139-3.3.443a20.91 20.91 0 00-2.44.75l-.246.093.014.362c.108 2.322.523 4.107 1.284 5.575l.138.256c.891 1.6 2.276 2.95 4.399 4.244l.158.095.157-.094c2.007-1.224 3.354-2.495 4.25-3.984l.154-.265c.84-1.502 1.292-3.35 1.404-5.82l.013-.372-.234-.09a22.272 22.272 0 00-1.962-.629l-.48-.123C10.056 2.137 9.024 2 8 2zm0 2c.761 0 1.538.092 2.478.301l.36.084.456.117.425.12.174.053-.004.058c-.151 1.44-.46 2.578-.933 3.514l-.134.251-.139.24-.136.218c-.516.786-1.23 1.522-2.209 2.247l-.331.237-.008-.005L8 4z\\" fill-rule=\\"evenodd\\"></path>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1\\">Shield</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-29 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
         <path d=\\"M7.937 13.323a.718.718 0 01-.72.719.72.72 0 01-.46-.166l-3.939-3.258H.72A.72.72 0 010 9.9V7.034a.72.72 0 01.72-.72h2.098l3.939-3.257a.72.72 0 011.18.554v9.712zm2.769-1.124a.72.72 0 01-.561-.209l-.097-.096a.718.718 0 01-.07-.937c.54-.726.825-1.587.825-2.49 0-.971-.323-1.882-.935-2.634a.718.718 0 01.05-.962l.096-.096a.722.722 0 011.067.053 5.681 5.681 0 011.297 3.64 5.705 5.705 0 01-1.147 3.444.721.721 0 01-.525.287zm2.978 2.222a.722.722 0 01-1.06.045l-.094-.094a.718.718 0 01-.042-.972 7.669 7.669 0 001.802-4.933 7.648 7.648 0 00-1.93-5.08.718.718 0 01.03-.985l.094-.094a.721.721 0 011.049.03 9.212 9.212 0 012.332 6.13 9.23 9.23 0 01-2.18 5.953z\\"></path>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1\\">Sound</p>
@@ -4606,6 +4611,11 @@ exports[`Icon should render examples: Icon 3`] = `
             <path d=\\"M165.082611,42.1593397 C164.543049,42.6798471 163.808912,43 163,43 C161.343146,43 160,41.6568542 160,40 C160,38.3431458 161.343146,37 163,37 C163.808912,37 164.543049,37.3201529 165.082611,37.8406603 L170.022669,35.3706317 C170.007705,35.2491857 170,35.1254927 170,35 C170,33.3431458 171.343146,32 173,32 C174.656854,32 176,33.3431458 176,35 C176,36.6568542 174.656854,38 173,38 C172.191088,38 171.456951,37.6798471 170.917389,37.1593397 L165.977331,39.6293683 C165.992295,39.7508143 166,39.8745073 166,40 C166,40.1254927 165.992295,40.2491857 165.977331,40.3706317 L170.917389,42.8406603 C171.456951,42.3201529 172.191088,42 173,42 C174.656854,42 176,43.3431458 176,45 C176,46.6568542 174.656854,48 173,48 C171.343146,48 170,46.6568542 170,45 C170,44.8745073 170.007705,44.7508143 170.022669,44.6293683 L165.082611,42.1593397 Z\\"></path>
           </g>
         </symbol>
+        <symbol id=\\"shield\\" viewBox=\\"0 0 16 16\\">
+          <g fill-rule=\\"evenodd\\">
+            <path d=\\"M8 0C9.20521 0 10.3958 0.161508 11.7816 0.497858C13.0017 0.79361 14.2524 1.21086 15.5333 1.74843C15.8038 1.84297 16 2.08508 16 2.3672C16 5.70315 15.5174 8.29912 14.3128 10.4515C13.1076 12.6172 11.2094 14.3253 8.40627 15.8989C8.16596 16.0337 7.84964 16.0337 7.60833 15.8989C4.80591 14.3253 2.90797 12.6172 1.70243 10.4515C0.49722 8.29912 0 5.70315 0 2.3672C0 2.12034 0.15019 1.90412 0.379636 1.79059L0.482616 1.74843C1.7479 1.21086 2.99826 0.79361 4.23334 0.497858C5.60485 0.161508 6.81039 0 8 0ZM8 2C6.98556 2 5.93935 2.13874 4.69909 2.44287C3.89685 2.63497 3.08355 2.88465 2.2592 3.19225L2.014 3.286L2.02834 3.64806C2.1358 5.97025 2.55108 7.75457 3.31204 9.22285L3.44993 9.47871C4.34101 11.0795 5.72634 12.4281 7.84879 13.723L8.007 13.818L8.16353 13.7244C10.1711 12.5 11.5185 11.2287 12.4142 9.73979L12.5676 9.47474C13.4082 7.97259 13.8602 6.12463 13.9721 3.65506L13.985 3.283L13.7512 3.19376C13.0851 2.94655 12.4311 2.73671 11.7891 2.564L11.3099 2.44143C10.0547 2.13679 9.02322 2 8 2ZM8 4C8.76147 4 9.53815 4.09217 10.4778 4.30112L10.8381 4.385L11.2935 4.50163L11.7186 4.62187L11.893 4.675L11.8889 4.73299C11.7379 6.17337 11.4298 7.31061 10.9557 8.24741L10.8223 8.49801L10.6832 8.73794L10.5465 8.95553C10.0314 9.74198 9.31695 10.4776 8.33818 11.203L8.007 11.44L7.999 11.435L8 4Z\\"></path>
+          </g>
+        </symbol>
         <symbol id=\\"sound\\" viewBox=\\"0 0 16 16\\">
           <path d=\\"M7.937 13.323a.718.718 0 0 1-.72.719.72.72 0 0 1-.46-.166l-3.939-3.258H.72A.72.72 0 0 1 0 9.9V7.034a.72.72 0 0 1 .72-.72h2.098l3.939-3.257a.72.72 0 0 1 1.18.554v9.712zm2.769-1.124a.72.72 0 0 1-.561-.209l-.097-.096a.718.718 0 0 1-.07-.937c.54-.726.825-1.587.825-2.49 0-.971-.323-1.882-.935-2.634a.718.718 0 0 1 .05-.962l.096-.096a.722.722 0 0 1 1.067.053 5.681 5.681 0 0 1 1.297 3.64 5.705 5.705 0 0 1-1.147 3.444.721.721 0 0 1-.525.287zm2.978 2.222a.722.722 0 0 1-1.06.045l-.094-.094a.718.718 0 0 1-.042-.972 7.669 7.669 0 0 0 1.802-4.933 7.648 7.648 0 0 0-1.93-5.08.718.718 0 0 1 .03-.985l.094-.094a.721.721 0 0 1 1.049.03 9.212 9.212 0 0 1 2.332 6.13 9.23 9.23 0 0 1-2.18 5.953z\\"></path>
         </symbol>
@@ -5673,6 +5683,11 @@ exports[`Icon should render examples: Icon 6`] = `
             <path d=\\"M165.082611,42.1593397 C164.543049,42.6798471 163.808912,43 163,43 C161.343146,43 160,41.6568542 160,40 C160,38.3431458 161.343146,37 163,37 C163.808912,37 164.543049,37.3201529 165.082611,37.8406603 L170.022669,35.3706317 C170.007705,35.2491857 170,35.1254927 170,35 C170,33.3431458 171.343146,32 173,32 C174.656854,32 176,33.3431458 176,35 C176,36.6568542 174.656854,38 173,38 C172.191088,38 171.456951,37.6798471 170.917389,37.1593397 L165.977331,39.6293683 C165.992295,39.7508143 166,39.8745073 166,40 C166,40.1254927 165.992295,40.2491857 165.977331,40.3706317 L170.917389,42.8406603 C171.456951,42.3201529 172.191088,42 173,42 C174.656854,42 176,43.3431458 176,45 C176,46.6568542 174.656854,48 173,48 C171.343146,48 170,46.6568542 170,45 C170,44.8745073 170.007705,44.7508143 170.022669,44.6293683 L165.082611,42.1593397 Z\\"></path>
           </g>
         </symbol>
+        <symbol id=\\"shield\\" viewBox=\\"0 0 16 16\\">
+          <g fill-rule=\\"evenodd\\">
+            <path d=\\"M8 0C9.20521 0 10.3958 0.161508 11.7816 0.497858C13.0017 0.79361 14.2524 1.21086 15.5333 1.74843C15.8038 1.84297 16 2.08508 16 2.3672C16 5.70315 15.5174 8.29912 14.3128 10.4515C13.1076 12.6172 11.2094 14.3253 8.40627 15.8989C8.16596 16.0337 7.84964 16.0337 7.60833 15.8989C4.80591 14.3253 2.90797 12.6172 1.70243 10.4515C0.49722 8.29912 0 5.70315 0 2.3672C0 2.12034 0.15019 1.90412 0.379636 1.79059L0.482616 1.74843C1.7479 1.21086 2.99826 0.79361 4.23334 0.497858C5.60485 0.161508 6.81039 0 8 0ZM8 2C6.98556 2 5.93935 2.13874 4.69909 2.44287C3.89685 2.63497 3.08355 2.88465 2.2592 3.19225L2.014 3.286L2.02834 3.64806C2.1358 5.97025 2.55108 7.75457 3.31204 9.22285L3.44993 9.47871C4.34101 11.0795 5.72634 12.4281 7.84879 13.723L8.007 13.818L8.16353 13.7244C10.1711 12.5 11.5185 11.2287 12.4142 9.73979L12.5676 9.47474C13.4082 7.97259 13.8602 6.12463 13.9721 3.65506L13.985 3.283L13.7512 3.19376C13.0851 2.94655 12.4311 2.73671 11.7891 2.564L11.3099 2.44143C10.0547 2.13679 9.02322 2 8 2ZM8 4C8.76147 4 9.53815 4.09217 10.4778 4.30112L10.8381 4.385L11.2935 4.50163L11.7186 4.62187L11.893 4.675L11.8889 4.73299C11.7379 6.17337 11.4298 7.31061 10.9557 8.24741L10.8223 8.49801L10.6832 8.73794L10.5465 8.95553C10.0314 9.74198 9.31695 10.4776 8.33818 11.203L8.007 11.44L7.999 11.435L8 4Z\\"></path>
+          </g>
+        </symbol>
         <symbol id=\\"sound\\" viewBox=\\"0 0 16 16\\">
           <path d=\\"M7.937 13.323a.718.718 0 0 1-.72.719.72.72 0 0 1-.46-.166l-3.939-3.258H.72A.72.72 0 0 1 0 9.9V7.034a.72.72 0 0 1 .72-.72h2.098l3.939-3.257a.72.72 0 0 1 1.18.554v9.712zm2.769-1.124a.72.72 0 0 1-.561-.209l-.097-.096a.718.718 0 0 1-.07-.937c.54-.726.825-1.587.825-2.49 0-.971-.323-1.882-.935-2.634a.718.718 0 0 1 .05-.962l.096-.096a.722.722 0 0 1 1.067.053 5.681 5.681 0 0 1 1.297 3.64 5.705 5.705 0 0 1-1.147 3.444.721.721 0 0 1-.525.287zm2.978 2.222a.722.722 0 0 1-1.06.045l-.094-.094a.718.718 0 0 1-.042-.972 7.669 7.669 0 0 0 1.802-4.933 7.648 7.648 0 0 0-1.93-5.08.718.718 0 0 1 .03-.985l.094-.094a.721.721 0 0 1 1.049.03 9.212 9.212 0 0 1 2.332 6.13 9.23 9.23 0 0 1-2.18 5.953z\\"></path>
         </symbol>
@@ -6580,131 +6595,136 @@ exports[`Icon should render examples: Icon 6`] = `
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">share</p>
     </div>
     <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"#shield\\"></use>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">shield</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#sound\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">sound</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#spinner\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">spinner</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#stack\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">stack</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#star\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">star</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#stats\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">stats</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#sync-cozy\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">sync-cozy</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#sync\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">sync</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#target\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">target</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#team\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">team</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#telephone\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">telephone</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#to-the-cloud\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">to-the-cloud</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#top\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">top</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#trash\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">trash</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#trophy\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">trophy</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#unlink\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">unlink</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#unlock\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">unlock</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#up\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">up</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#upload\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">upload</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#videos\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">videos</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#wallet-add\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">wallet-add</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#wallet-new\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">wallet-new</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#wallet\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">wallet</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#warn\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">warn</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#warning-circle\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">warning-circle</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#warning\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">warning</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#wrench-circle\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">wrench-circle</p>
