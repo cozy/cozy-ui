@@ -98,14 +98,14 @@ const normalPalette = {
     dark: getCssVariableValue('primaryColorDark'),
     contrastText: getCssVariableValue('primaryContrastTextColor')
   },
-  error: {
-    main: getCssVariableValue('errorColor')
-  },
   secondary: {
     light: getCssVariableValue('secondaryColorLight'),
     main: getCssVariableValue('secondaryColor'),
     dark: getCssVariableValue('secondaryColorDark'),
     contrastText: getCssVariableValue('secondaryContrastTextColor')
+  },
+  error: {
+    main: getCssVariableValue('errorColor')
   },
   text: {
     primary: getCssVariableValue('primaryTextColor'),
@@ -122,13 +122,12 @@ const normalPalette = {
   },
   divider: getCssVariableValue('dividerColor'),
   actions: {
-    focus: 'rgba(0, 0, 0, 0.12)'
+    focus: getCssVariableValue('actionColorFocus')
+  },
+  background: {
+    default: getCssVariableValue('defaultBackgroundColor'),
+    selected: '#F5FAFF'
   }
-}
-
-normalPalette.background = {
-  default: normalPalette.grey[100],
-  selected: '#F5FAFF'
 }
 
 const themesCommonConfig = {
