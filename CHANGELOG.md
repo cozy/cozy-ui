@@ -1,3 +1,10 @@
+# [51.10.0](https://github.com/cozy/cozy-ui/compare/v51.9.1...v51.10.0) (2021-09-08)
+
+
+### Features
+
+* Add shield icon ([d94e7aa](https://github.com/cozy/cozy-ui/commit/d94e7aa))
+
 ## [51.9.1](https://github.com/cozy/cozy-ui/compare/v51.9.0...v51.9.1) (2021-09-08)
 
 
