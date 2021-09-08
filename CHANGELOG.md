@@ -1,3 +1,10 @@
+## [51.9.1](https://github.com/cozy/cozy-ui/compare/v51.9.0...v51.9.1) (2021-09-08)
+
+
+### Bug Fixes
+
+* Desactivate MUI transition for inverted theme if is testing ([6c3f32e](https://github.com/cozy/cozy-ui/commit/6c3f32e))
+
 # [51.9.0](https://github.com/cozy/cozy-ui/compare/v51.8.0...v51.9.0) (2021-09-03)
 
 
