@@ -684,7 +684,8 @@ const invertedTypography = makeTypography(invertedPalette)
 export const invertedTheme = createMuiTheme({
   palette: invertedPalette,
   typography: invertedTypography,
-  shadows
+  shadows,
+  ...(isTesting() && { transitions: { create: () => 'none' } })
 })
 
 invertedTheme.overrides = {
