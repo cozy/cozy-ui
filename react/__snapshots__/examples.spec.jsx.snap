@@ -257,6 +257,43 @@ exports[`Badge should render examples: Badge 2`] = `
 </div>"
 `;
 
+exports[`Banner should render examples: Banner 1`] = `
+"<div>
+  <div class=\\"u-m-1\\">
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">icon<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">longText<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">buttonOne<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">buttonTwo<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">inline<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">backgroundColor<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+  </div>
+  <div class=\\"MuiPaper-root MuiPaper-elevation0\\">
+    <div class=\\"styles__c-banner-wrapper___3KlaG\\">
+      <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-justify-xs-space-between\\">
+        <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-center MuiGrid-grid-xs-12 MuiGrid-grid-lg-8\\">
+          <div class=\\"MuiGrid-root MuiGrid-item\\">
+            <div class=\\"styles__c-banner-icon___1f_LM\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+                <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+                  <path fill=\\"#32363F\\" d=\\"M2 25V5.995C2 4.893 2.9 4 3.991 4H28.01C29.109 4 30 4.902 30 5.995V25H2z\\"></path>
+                  <path fill=\\"#5D6165\\" d=\\"M4 6h24v16H4z\\"></path>
+                  <path fill=\\"#95999D\\" d=\\"M19 24.5c0 .276-.233.5-.503.5h-5.994a.507.507 0 01-.503-.5c0-.276-.229-.5-.5-.5H.5c-.276 0-.5.215-.5.49V26c0 1.105.89 2 2.002 2h27.996A1.996 1.996 0 0032 26v-1.51c0-.27-.226-.49-.494-.49H19.494a.502.502 0 00-.494.5z\\"></path>
+                </g>
+              </svg></div>
+          </div>
+          <div class=\\"MuiGrid-root styles__c-banner-text___1sTVC MuiGrid-item\\">
+            <p class=\\"MuiTypography-root MuiTypography-body2\\">Get Cozy Drive for Desktop and synchronise your files safely to make them accessible at all times.</p>
+          </div>
+        </div>
+        <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-flex-end MuiGrid-grid-xs-12 MuiGrid-grid-lg-4\\">
+          <div class=\\"MuiGrid-root styles__c-banner-buttons___3sLgG MuiGrid-item\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path></svg><span>Download</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>No, thanks!</span></span></button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class=\\"MuiDivider-root\\">
+</div>"
+`;
+
 exports[`BarButton should render examples: BarButton 1`] = `
 "<div>
   <div class=\\"styles__BarButton___3z5Er styles__BarButton--disabled___5e3Ll\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__BarButtonIcon___1pSOT styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
@@ -545,6 +582,136 @@ exports[`Checkbox should render examples: Checkbox 2`] = `
 exports[`Checkbox should render examples: Checkbox 3`] = `
 "<div>
   <div><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-15 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-18\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">This is a <strong>complex</strong> text</span></label></div>
+</div>"
+`;
+
+exports[`CompositeRow should render examples: CompositeRow 1`] = `
+"<div>
+  <div class=\\"u-m-1\\">
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">chips<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">secondaryText<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">dots<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">icon<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">extraInformation<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+  </div>
+  <div class=\\"styles__media___cSJMp styles__CompositeRow___3KCwt\\" style=\\"box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); box-sizing: border-box;\\">
+    <div class=\\"u-media u-media-grow u-row-m\\">
+      <div class=\\"styles__img___3SHpG u-flex-self-start\\">
+        <div class=\\"styles__c-circle___1DuMR\\" style=\\"background-color: rgb(253, 116, 97); --circleSize: 40px;\\"><span class=\\"styles__c-circle-text___1jFgD\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M2 0h11a1 1 0 011 1v3h1a1 1 0 011 1v10a1 1 0 01-1 1H2a2 2 0 01-2-2V2a2 2 0 012-2zm1 2a1 1 0 100 2h9V2H3zm8 9a1 1 0 100-2 1 1 0 000 2z\\"></path></svg></span></div>
+      </div>
+      <div class=\\"u-media-grow u-stack-xs\\">
+        <div class=\\"u-media u-row-m\\">
+          <div class=\\"styles__bd___1Uv-F styles__CompositeRow__body___3nEEv\\">
+            <p class=\\"MuiTypography-root MuiTypography-body1\\">Primary text</p><span class=\\"MuiTypography-root MuiTypography-caption MuiTypography-colorTextSecondary\\">Secondary Text</span>
+          </div>
+          <div class=\\"styles__img___3SHpG\\">
+            <h6 class=\\"MuiTypography-root MuiTypography-h6\\" tag=\\"span\\">12,15€</h6>
+          </div>
+          <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
+              <path fill-rule=\\"evenodd\\" d=\\"M2 10a2 2 0 100-4 2 2 0 000 4zm12 0a2 2 0 100-4 2 2 0 000 4zm-6 0a2 2 0 100-4 2 2 0 000 4z\\"></path>
+            </svg></div>
+        </div>
+        <div class=\\"styles__media___cSJMp\\">
+          <div class=\\"styles__bd___1Uv-F u-row-xs\\">
+            <div class=\\"styles__c-chip___2aPqg styles__c-chip--smallSize___3i9gj styles__c-chip--outlinedVariant___BP7oS styles__c-chip--normalTheme___kVm5M u-breakword styles__c-chip--outlinedNormalTheme___itU6s styles__c-chip--hoverableNormalTheme___271-M u-mr-0 u-mb-0\\"><img class=\\"u-mr-half\\" src=\\"https://upload.wikimedia.org/wikipedia/commons/2/2e/Fnac_Logo.svg\\" height=\\"50%\\"> Fnac</div>
+            <div class=\\"styles__c-chip___2aPqg styles__c-chip--smallSize___3i9gj styles__c-chip--outlinedVariant___BP7oS styles__c-chip--normalTheme___kVm5M u-breakword styles__c-chip--outlinedNormalTheme___itU6s styles__c-chip--hoverableNormalTheme___271-M u-mr-0 u-mb-0\\"><img class=\\"u-mr-half\\" src=\\"https://upload.wikimedia.org/wikipedia/commons/2/2e/Fnac_Logo.svg\\" height=\\"50%\\"> Fnac</div>
+          </div>
+          <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiTypography-root MuiTypography-caption MuiTypography-colorTextSecondary\\">Extra information to the right of the card</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=\\"u-m-1\\">
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">chips<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">secondaryText<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">icon<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">dots<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+  </div>
+  <div class=\\"styles__media___cSJMp styles__CompositeRow___3KCwt\\" style=\\"box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); box-sizing: border-box;\\">
+    <div class=\\"u-media u-media-grow u-row-m\\">
+      <div class=\\"styles__img___3SHpG u-flex-self-start\\">
+        <div class=\\"styles__c-circle___1DuMR\\" style=\\"background-color: rgb(253, 116, 97); --circleSize: 40px;\\"><span class=\\"styles__c-circle-text___1jFgD\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M2 0h11a1 1 0 011 1v3h1a1 1 0 011 1v10a1 1 0 01-1 1H2a2 2 0 01-2-2V2a2 2 0 012-2zm1 2a1 1 0 100 2h9V2H3zm8 9a1 1 0 100-2 1 1 0 000 2z\\"></path></svg></span></div>
+      </div>
+      <div class=\\"u-media-grow u-stack-xs\\">
+        <div class=\\"u-media u-row-m\\">
+          <div class=\\"styles__bd___1Uv-F styles__CompositeRow__body___3nEEv\\">
+            <p class=\\"MuiTypography-root MuiTypography-body1\\">Primary text</p><span class=\\"MuiTypography-root MuiTypography-caption MuiTypography-colorTextSecondary\\">Secondary Text</span>
+          </div>
+          <div class=\\"styles__img___3SHpG\\">
+            <h6 class=\\"MuiTypography-root MuiTypography-h6\\" tag=\\"span\\">12,15€</h6>
+          </div>
+          <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
+              <path fill-rule=\\"evenodd\\" d=\\"M2 10a2 2 0 100-4 2 2 0 000 4zm12 0a2 2 0 100-4 2 2 0 000 4zm-6 0a2 2 0 100-4 2 2 0 000 4z\\"></path>
+            </svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=\\"u-m-1\\">
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">dense<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">chips<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">secondaryText<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">dots<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">icon<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+  </div>
+  <div class=\\"styles__media___cSJMp styles__CompositeRow___3KCwt styles__CompositeRow__dense___3EPKf\\" style=\\"height: 48px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); box-sizing: border-box;\\">
+    <div class=\\"u-media u-media-grow u-row-m\\">
+      <div class=\\"styles__img___3SHpG u-flex-self-start\\">
+        <div class=\\"styles__c-circle___1DuMR\\" style=\\"background-color: rgb(253, 116, 97); --circleSize: 40px;\\"><span class=\\"styles__c-circle-text___1jFgD\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M2 0h11a1 1 0 011 1v3h1a1 1 0 011 1v10a1 1 0 01-1 1H2a2 2 0 01-2-2V2a2 2 0 012-2zm1 2a1 1 0 100 2h9V2H3zm8 9a1 1 0 100-2 1 1 0 000 2z\\"></path></svg></span></div>
+      </div>
+      <div class=\\"u-media-grow u-stack-xs\\">
+        <div class=\\"u-media u-row-m\\">
+          <div class=\\"styles__bd___1Uv-F styles__CompositeRow__body___3nEEv\\">
+            <p class=\\"MuiTypography-root MuiTypography-body1\\">Primary text</p>
+          </div>
+          <div class=\\"styles__img___3SHpG\\">
+            <h6 class=\\"MuiTypography-root MuiTypography-h6\\" tag=\\"span\\">12,15€</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=\\"u-m-1\\">
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">chips<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">secondaryText<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">dots<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">icon<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></div>
+  </div>
+  <div class=\\"styles__media___cSJMp styles__CompositeRow___3KCwt\\" style=\\"box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); box-sizing: border-box;\\">
+    <div class=\\"u-media u-media-grow u-row-m\\">
+      <div class=\\"u-media-grow u-stack-xs\\">
+        <div class=\\"u-media u-row-m\\">
+          <div class=\\"styles__bd___1Uv-F styles__CompositeRow__body___3nEEv\\">
+            <p class=\\"MuiTypography-root MuiTypography-body1\\">Primary text</p>
+          </div>
+          <div class=\\"styles__img___3SHpG\\">
+            <h6 class=\\"MuiTypography-root MuiTypography-h6\\" tag=\\"span\\">12,15€</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=\\"u-m-1\\">
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">dense<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">chips<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">secondaryText<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">dots<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">icon<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></div>
+  </div>
+  <div class=\\"styles__media___cSJMp styles__CompositeRow___3KCwt styles__CompositeRow__dense___3EPKf\\" style=\\"height: 48px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); box-sizing: border-box;\\">
+    <div class=\\"u-media u-media-grow u-row-m\\">
+      <div class=\\"u-media-grow u-stack-xs\\">
+        <div class=\\"u-media u-row-m\\">
+          <div class=\\"styles__bd___1Uv-F styles__CompositeRow__body___3nEEv\\">
+            <p class=\\"MuiTypography-root MuiTypography-body1\\">Primary text</p>
+          </div>
+          <div class=\\"styles__img___3SHpG\\">
+            <h6 class=\\"MuiTypography-root MuiTypography-h6\\" tag=\\"span\\">12,15€</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>"
 `;
 
@@ -7159,13 +7326,13 @@ exports[`Menu should render examples: Menu 4`] = `
 exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
 "<div>
   <div class=\\"styles__Stack--xs___2R5lW\\">
-    <div class=\\"MuiBox-root MuiBox-root-30\\">
+    <div class=\\"MuiBox-root MuiBox-root-33\\">
       <p class=\\"MuiTypography-root MuiTypography-body1\\">primary</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-15 MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-checked-16 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-18 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
-    <div class=\\"MuiBox-root MuiBox-root-31\\">
+    <div class=\\"MuiBox-root MuiBox-root-34\\">
       <p class=\\"MuiTypography-root MuiTypography-body1\\">secondary</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-15 MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-checked-16 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-18 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
-    <div class=\\"MuiBox-root MuiBox-root-32\\">
+    <div class=\\"MuiBox-root MuiBox-root-35\\">
       <p class=\\"MuiTypography-root MuiTypography-body1\\">default</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-15 MuiSwitch-switchBase\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-18 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
   </div>
@@ -7194,6 +7361,58 @@ exports[`OrderedList should render examples: OrderedList 1`] = `
 </div>"
 `;
 
+exports[`Paper should render examples: Paper 1`] = `
+"<div>
+  <div class=\\"u-m-1\\">
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">square<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+  </div>
+  <div class=\\"styles__Stack--m___1tSpV\\">
+    <div class=\\"MuiPaper-root PaperExample-root-30 MuiPaper-elevation0\\">
+      <h3 class=\\"MuiTypography-root MuiTypography-h3\\">This is a sheet of paper</h3>
+      <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
+        <h6 class=\\"MuiTypography-root MuiTypography-subtitle1\\">elevation 0</h6>
+      </div>
+      <p class=\\"MuiTypography-root MuiTypography-body1\\">Paper can be used to build surface or other elements for your application.</p>
+    </div>
+    <div class=\\"MuiPaper-root PaperExample-root-30 MuiPaper-elevation1\\">
+      <h3 class=\\"MuiTypography-root MuiTypography-h3\\">This is a sheet of paper</h3>
+      <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
+        <h6 class=\\"MuiTypography-root MuiTypography-subtitle1\\">elevation 1</h6>
+      </div>
+      <p class=\\"MuiTypography-root MuiTypography-body1\\">Paper can be used to build surface or other elements for your application.</p>
+    </div>
+    <div class=\\"MuiPaper-root PaperExample-root-30 MuiPaper-elevation4\\">
+      <h3 class=\\"MuiTypography-root MuiTypography-h3\\">This is a sheet of paper</h3>
+      <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
+        <h6 class=\\"MuiTypography-root MuiTypography-subtitle1\\">elevation 4</h6>
+      </div>
+      <p class=\\"MuiTypography-root MuiTypography-body1\\">Paper can be used to build surface or other elements for your application.</p>
+    </div>
+    <div class=\\"MuiPaper-root PaperExample-root-30 MuiPaper-elevation12\\">
+      <h3 class=\\"MuiTypography-root MuiTypography-h3\\">This is a sheet of paper</h3>
+      <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
+        <h6 class=\\"MuiTypography-root MuiTypography-subtitle1\\">elevation 12</h6>
+      </div>
+      <p class=\\"MuiTypography-root MuiTypography-body1\\">Paper can be used to build surface or other elements for your application.</p>
+    </div>
+    <div class=\\"MuiPaper-root PaperExample-root-30 MuiPaper-elevation16\\">
+      <h3 class=\\"MuiTypography-root MuiTypography-h3\\">This is a sheet of paper</h3>
+      <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
+        <h6 class=\\"MuiTypography-root MuiTypography-subtitle1\\">elevation 16</h6>
+      </div>
+      <p class=\\"MuiTypography-root MuiTypography-body1\\">Paper can be used to build surface or other elements for your application.</p>
+    </div>
+    <div class=\\"MuiPaper-root PaperExample-root-30 MuiPaper-elevation24\\">
+      <h3 class=\\"MuiTypography-root MuiTypography-h3\\">This is a sheet of paper</h3>
+      <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
+        <h6 class=\\"MuiTypography-root MuiTypography-subtitle1\\">elevation 24</h6>
+      </div>
+      <p class=\\"MuiTypography-root MuiTypography-body1\\">Paper can be used to build surface or other elements for your application.</p>
+    </div>
+  </div>
+</div>"
+`;
+
 exports[`PasswordExample should render examples: PasswordExample 1`] = `"<div><span class=\\"styles__c-inline-card___1sri1\\"><span class=\\"\\">C</span><span class=\\"\\">l</span><span class=\\"styles__Token--number___2EzoN\\">4</span><span class=\\"\\">u</span><span class=\\"\\">d</span><span class=\\"\\">e</span><span class=\\"styles__Token--special___3_rSu\\">€</span><span class=\\"\\">s</span><span class=\\"\\">t</span><span class=\\"styles__Token--number___2EzoN\\">1</span><span class=\\"\\">N</span><span class=\\"\\">u</span><span class=\\"styles__Token--special___3_rSu\\">@</span><span class=\\"\\">g</span><span class=\\"\\">e</span></span></div>"`;
 
 exports[`PasswordExample should render examples: PasswordExample 2`] = `"<div><span class=\\"styles__c-inline-card___1sri1\\"><span class=\\"\\">C</span><span class=\\"\\">l</span><span class=\\"\\">a</span><span class=\\"\\">u</span><span class=\\"\\">d</span><span class=\\"\\">e</span><span class=\\"\\"> </span><span class=\\"\\">e</span><span class=\\"\\">s</span><span class=\\"\\">t</span><span class=\\"\\"> </span><span class=\\"\\">l</span><span class=\\"\\">e</span><span class=\\"\\"> </span><span class=\\"\\">m</span><span class=\\"\\">e</span><span class=\\"\\">i</span><span class=\\"\\">l</span><span class=\\"\\">l</span><span class=\\"\\">e</span><span class=\\"\\">u</span><span class=\\"\\">r</span><span class=\\"\\"> </span><span class=\\"\\">n</span><span class=\\"\\">u</span><span class=\\"\\">a</span><span class=\\"\\">g</span><span class=\\"\\">e</span><span class=\\"\\"> </span><span class=\\"\\">!</span></span></div>"`;
@@ -7210,6 +7429,56 @@ exports[`PercentageBar should render examples: PercentageBar 1`] = `
 
 exports[`PercentageLine should render examples: PercentageLine 1`] = `
 "<div><button>Random percentage</button>50.00% <div class=\\"PercentageLine__PercentageLine___3koWP\\" style=\\"transform: scaleX(0.5);\\"></div>
+</div>"
+`;
+
+exports[`Progress should render examples: Progress 1`] = `
+"<div>
+  <div class=\\"u-m-1\\">
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">withValue<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+  </div>
+  <div class=\\"MuiLinearProgress-root MuiLinearProgress-colorPrimary MuiLinearProgress-determinate\\" role=\\"progressbar\\" aria-valuenow=\\"0\\" aria-valuemin=\\"0\\" aria-valuemax=\\"100\\">
+    <div class=\\"MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Determinate\\" style=\\"transform: translateX(-100%);\\"></div>
+  </div><br>
+  <div class=\\"MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-determinate\\" style=\\"width: 40px; height: 40px; transform: rotate(-90deg);\\" role=\\"progressbar\\" aria-valuenow=\\"0\\"><svg class=\\"MuiCircularProgress-svg\\" viewBox=\\"22 22 44 44\\">
+      <circle class=\\"MuiCircularProgress-circle MuiCircularProgress-circleDeterminate\\" style=\\"stroke-dasharray: 126.920; stroke-dashoffset: 126.920px;\\" cx=\\"44\\" cy=\\"44\\" r=\\"20.2\\" fill=\\"none\\" stroke-width=\\"3.6\\"></circle>
+    </svg></div>
+</div>"
+`;
+
+exports[`ProgressionBanner should render examples: ProgressionBanner 1`] = `
+"<div>
+  <div class=\\"u-m-1\\">
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">withValue<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">progressBar<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">withButton<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\"></div>
+  </div>
+  <div class=\\"MuiPaper-root MuiPaper-elevation0\\">
+    <div class=\\"styles__c-banner-wrapper___3KlaG Component-banner-31\\">
+      <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-justify-xs-space-between\\">
+        <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-center MuiGrid-grid-xs-12 MuiGrid-grid-lg-8\\">
+          <div class=\\"MuiGrid-root MuiGrid-item\\">
+            <div class=\\"styles__c-banner-icon___1f_LM\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+                <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+                  <path fill=\\"#B2D3FF\\" d=\\"M8.889 27.892A8.889 8.889 0 010 19.003a8.892 8.892 0 017.26-8.74c.765-4.13 4.387-7.26 8.74-7.26 4.353 0 7.975 3.13 8.74 7.26a8.892 8.892 0 017.26 8.74 8.888 8.888 0 01-8.627 8.885l-.262.004H8.89z\\"></path>
+                  <path fill=\\"#297EF1\\" d=\\"M22.052 19.17a.89.89 0 01.405 1.19c-1.201 2.435-3.707 4.032-6.457 4.032-2.103 0-4.04-.962-5.373-2.471a.875.875 0 01-.85.693.889.889 0 01-.888-.889V18.17c0-.056.014-.106.023-.158.005-.024.004-.048.01-.071a.866.866 0 01.132-.285l.022-.024a.896.896 0 01.879-.327c.024.005.047.012.07.018a.842.842 0 01.22.102c.024.015.048.026.071.043.01.008.021.011.031.02l2.667 2.221a.89.89 0 01.113 1.252c-.166.2-.4.301-.64.313.96.832 2.198 1.34 3.513 1.34 2.065 0 3.958-1.206 4.862-3.04a.889.889 0 011.19-.404zm1.031-2.589c-.003.018-.002.036-.007.053a.862.862 0 01-.138.28c-.011.016-.024.026-.035.039a.88.88 0 01-.19.171c-.023.016-.043.03-.067.043a.91.91 0 01-.295.103c-.003 0-.005.002-.007.003-.008 0-.015-.003-.023-.002a.85.85 0 01-.362-.036.884.884 0 01-.225-.11c-.02-.014-.042-.023-.06-.038-.007-.005-.015-.006-.02-.012l-2.668-2.223a.888.888 0 01-.113-1.251.872.872 0 01.713-.305A5.448 5.448 0 0016 11.948c-2.103 0-4.007 1.213-4.89 3.06a.887.887 0 11-1.604-.764C10.682 11.78 13.21 10.17 16 10.17c2.127 0 4.061.93 5.385 2.412a.876.876 0 01.837-.634.89.89 0 01.889.888v3.556c0 .068-.014.128-.028.19z\\"></path>
+                </g>
+              </svg></div>
+          </div>
+          <div class=\\"MuiGrid-root styles__c-banner-text___1sTVC MuiGrid-item\\">
+            <p class=\\"MuiTypography-root MuiTypography-body2\\">
+              <h6 class=\\"MuiTypography-root MuiTypography-h6\\">4 remaining items</h6>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class=\\"MuiDivider-root\\">
+  <div class=\\"MuiLinearProgress-root MuiLinearProgress-colorPrimary Component-progress-32 MuiLinearProgress-indeterminate\\" role=\\"progressbar\\">
+    <div class=\\"MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Indeterminate\\"></div>
+    <div class=\\"MuiLinearProgress-bar MuiLinearProgress-bar2Indeterminate MuiLinearProgress-barColorPrimary\\"></div>
+  </div>
 </div>"
 `;
 
@@ -7847,6 +8116,62 @@ exports[`UnorderedList should render examples: UnorderedList 1`] = `
     <li class=\\"styles__ListItem___3cRoI\\">And this</li>
     <li class=\\"styles__ListItem___3cRoI\\">Oh, and this, too</li>
   </ul>
+</div>"
+`;
+
+exports[`Viewer should render examples: Viewer 1`] = `
+"<div>
+  <div class=\\"u-m-1\\">
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">navigation<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">toolbar<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+    <div class=\\"MuiTypography-root u-db MuiTypography-button\\">onlyOfficeEnabled<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
+  </div>
+  <div class=\\"styles__c-card___YgP7B u-mb-1\\">
+    <div class=\\"u-dib u-mr-1\\">Toolbar props :</div><label class=\\"MuiFormControlLabel-root u-dib\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-15 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-16 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-18\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">Close</span></label>
+  </div><button>Open viewer</button>
+  <div class=\\"styles__c-overlay___31iWd\\">
+    <div>
+      <div id=\\"viewer-wrapper\\" class=\\"styles__viewer-wrapper___2GIXH\\">
+        <div class=\\"styles__viewer-controls___2j5Xl withBreakpoints(ViewerControls)-viewerControlsWithInfo-36\\" style=\\"user-select: none; webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\\">
+          <div data-testid=\\"viewer-toolbar\\" class=\\"styles__viewer-toolbar___27_8W\\"><button class=\\"MuiButtonBase-root MuiIconButton-root makeStyles-iconButton-37 u-white\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path d=\\"M3.414 7h11.58C15.548 7 16 7.444 16 8c0 .552-.45 1-1.007 1H3.414l5.293 5.293a1 1 0 01-1.414 1.414l-7-7a1 1 0 010-1.414l7-7a1 1 0 111.414 1.414L3.414 7z\\" fill-rule=\\"evenodd\\"></path></svg></span></button>
+            <h3 class=\\"MuiTypography-root u-pl-half MuiTypography-h3 MuiTypography-colorInherit MuiTypography-noWrap\\">Sample.mp3</h3>
+            <div class=\\"u-ml-auto u-ph-1\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh u-white\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path></svg><span>Download</span></span></button></div>
+          </div>
+          <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--middle___RwyII styles__c-spinner--nomargin___13JyW\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: white;\\" width=\\"80\\" height=\\"80\\" role=\\"progressbar\\" aria-busy=\\"true\\">
+              <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
+              <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
+            </svg></div>
+          <div role=\\"button\\" class=\\"styles__viewer-nav--next___1aavz styles__viewer-nav___qsl4h styles__viewer-nav--visible___13A7g\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__viewer-nav-arrow___1X0Jq styles__icon___23x3R\\" width=\\"32\\" height=\\"32\\">
+              <path fill-rule=\\"evenodd\\" d=\\"M0 8c0-4.416 3.584-8 8-8s8 3.584 8 8-3.584 8-8 8-8-3.584-8-8zm6.293 2.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 00-1.414 1.414L8.586 8l-2.293 2.293z\\"></path>
+            </svg></div>
+        </div>
+        <div class=\\"MuiDrawer-root MuiDrawer-docked InformationPanel-drawer-38\\">
+          <div class=\\"MuiPaper-root MuiDrawer-paper InformationPanel-drawerPaper-39 MuiDrawer-paperAnchorRight MuiDrawer-paperAnchorDockedRight MuiPaper-elevation0\\">
+            <div class=\\"u-flex u-flex-column u-h-100 styles__Stack--s___22WMg\\">
+              <div class=\\"MuiPaper-root u-ph-2 u-flex u-flex-items-center u-h-3 MuiPaper-elevation2\\">
+                <h4 class=\\"MuiTypography-root MuiTypography-h4\\">Informations utiles</h4>
+              </div>
+              <div class=\\"MuiPaper-root u-ph-2 u-pv-1-half MuiPaper-elevation2\\">
+                <p class=\\"MuiTypography-root MuiTypography-body1\\">Titre du fichier : Sample.mp3</p>
+              </div>
+              <div class=\\"MuiPaper-root u-ph-2 u-pv-1-half u-flex-grow-1 MuiPaper-elevation2\\">
+                <h4 class=\\"MuiTypography-root MuiTypography-h4\\">
+                  <div class=\\"styles__media___cSJMp u-mb-half\\">
+                    <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-mr-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+                        <path fill-rule=\\"evenodd\\" d=\\"M5.58 1.38a2.8 2.8 0 014.83-.02l.1.18.03.06h.07a2.8 2.8 0 012.93 2.29l.02.17.02.17a2.8 2.8 0 01-.36 1.54l-.1.17-.04.06.13.22a2.8 2.8 0 01-.6 3.5l-.14.12-.15.1c-.4.26-.85.42-1.32.46v5.3a.3.3 0 01-.48.23L8 14l-2.52 1.93a.3.3 0 01-.48-.24v-5.3a2.8 2.8 0 01-2.53-2.27l-.03-.18-.02-.17a2.8 2.8 0 01.36-1.53l.1-.18.04-.06-.04-.06a2.8 2.8 0 01.5-3.66l.15-.12.15-.1c.45-.3.97-.46 1.5-.47h.2l.08.01.12-.22zm2.78.7a.8.8 0 00-1.02.26l-.06.1-.62 1.24-1.4-.08a.8.8 0 00-.76 1.14l.05.1L5.32 6l-.77 1.16a.8.8 0 00.62 1.24h.1l1.39-.08.62 1.25a.8.8 0 00.6.43h.25a.8.8 0 00.53-.33l.06-.1.62-1.25 1.4.08a.8.8 0 00.76-1.14l-.05-.1L10.68 6l.77-1.16a.8.8 0 00-.62-1.24h-.1l-1.39.08-.62-1.25a.8.8 0 00-.36-.36z\\"></path>
+                      </svg></div>
+                    <div class=\\"styles__bd___1Uv-F\\">
+                      <p class=\\"MuiTypography-root MuiTypography-body1\\">Copie conforme</p>
+                    </div>
+                  </div><span class=\\"MuiTypography-root MuiTypography-caption\\">Ce document a été fourni par Grand Lyon. Il est défini “authentique et original” par Cozy Cloud, hébergeur de votre Cozy, car il peut affirmer qu'il provient directement du service du Grand Lyon, sans qu’il n’ait subit aucune modification.</span>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>"
 `;
 

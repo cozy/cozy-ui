@@ -5,23 +5,23 @@ Once rendered, the `Viewer` will take up all the available space in it's contain
 The `Viewer` can display an **information panel** to show additional information about the current file (e.g. whether a file is certified).
 
 ```jsx
-import { makeStyles } from '@material-ui/core/styles'
-import Variants from 'docs/components/Variants'
-import Card from 'cozy-ui/transpiled/react/Card'
-import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
-import Viewer from 'cozy-ui/transpiled/react/Viewer'
-import Stack from 'cozy-ui/transpiled/react/Stack'
-import Paper from 'cozy-ui/transpiled/react/Paper'
-import Typography from 'cozy-ui/transpiled/react/Typography'
-import { Media, Img, Bd } from 'cozy-ui/transpiled/react/Media'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import CarbonCopyIcon from 'cozy-ui/transpiled/react/Icons/CarbonCopy'
+import { makeStyles } from '@material-ui/core/styles';
+import Variants from 'cozy-ui/docs/components/Variants';
+import Card from 'cozy-ui/transpiled/react/Card';
+import Checkbox from 'cozy-ui/transpiled/react/Checkbox';
+import Viewer from 'cozy-ui/transpiled/react/Viewer';
+import Stack from 'cozy-ui/transpiled/react/Stack';
+import Paper from 'cozy-ui/transpiled/react/Paper';
+import Typography from 'cozy-ui/transpiled/react/Typography';
+import { Media, Img, Bd } from 'cozy-ui/transpiled/react/Media';
+import Icon from 'cozy-ui/transpiled/react/Icon';
+import CarbonCopyIcon from 'cozy-ui/transpiled/react/Icons/CarbonCopy';
 // The DemoProvider inserts a fake cozy-client in the React context.
-import DemoProvider from './docs/DemoProvider'
-import Overlay from 'cozy-ui/transpiled/react/Overlay'
-import Button from 'cozy-ui/transpiled/react/Button'
-import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
-import ShareIcon from 'cozy-ui/transpiled/react/Icons/Share'
+import DemoProvider from './docs/DemoProvider';
+import Overlay from 'cozy-ui/transpiled/react/Overlay';
+import Button from 'cozy-ui/transpiled/react/Button';
+import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download';
+import ShareIcon from 'cozy-ui/transpiled/react/Icons/Share';
 
 // We provide a collection of (fake) io.cozy.files to be rendered
 const files = [
@@ -70,22 +70,22 @@ const files = [
     name: 'Unsupported file type',
     mime: '???/???'
   }
-]
+];
 
 // The host app will usually need a small wrapper to display the Viewer. This is a very small example of such a wrapper that handles opening, closing, and navigating between files.
 initialState = {
   viewerOpened: isTesting(),
   currentIndex: 0,
   showToolbarCloseButton: true
-}
+};
 
 const initialVariants = [
   { navigation: true, toolbar: true, onlyOfficeEnabled: true }
-]
+];
 
-const toggleViewer = () => setState({ viewerOpened: !state.viewerOpened })
-const handleToggleToolbarClose = () => setState({ showToolbarCloseButton: !state.showToolbarCloseButton })
-const onFileChange = (file, nextIndex) => setState({ currentIndex: nextIndex })
+const toggleViewer = () => setState({ viewerOpened: !state.viewerOpened });
+const handleToggleToolbarClose = () => setState({ showToolbarCloseButton: !state.showToolbarCloseButton });
+const onFileChange = (file, nextIndex) => setState({ currentIndex: nextIndex });
 
 const PanelContent = ({ file }) => {
   return (
@@ -114,7 +114,7 @@ const PanelContent = ({ file }) => {
       </Paper>
     </Stack>
   )
-}
+};
 
 const useStyles = makeStyles({
   footer: {
@@ -126,7 +126,7 @@ const useStyles = makeStyles({
     paddingRight: '1rem',
     borderTop: '1px solid var(--dividerColor)'
   }
-})
+});
 
 const FooterContent = () => {
   const styles = useStyles()
@@ -148,9 +148,7 @@ const FooterContent = () => {
       />
     </div>
   )
-}
-
-;
+};
 
 <DemoProvider>
   <Variants initialVariants={initialVariants}>{
@@ -218,10 +216,10 @@ With this alias, a specific JS file for the worker will be created in the build 
 One way to do this is to explicitly load the web worker in your application like this:
 
 ```js static
-import createWorker from 'react-pdf/dist/pdf.worker.entry.js'
-import { pdfjs } from 'react-pdf'
+import createWorker from 'react-pdf/dist/pdf.worker.entry.js';
+import { pdfjs } from 'react-pdf';
 
-pdfjs.GlobalWorkerOptions.workerPort = createWorker()
+pdfjs.GlobalWorkerOptions.workerPort = createWorker();
 ```
 
 And then configure the [webpack worker-loader](https://github.com/webpack-contrib/worker-loader) to output the file in a publicly served directory:
