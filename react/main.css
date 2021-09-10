@@ -22124,12 +22124,28 @@ body {
 .c-empty-img--2GC4d {
   display: block;
   margin: 0 auto 1rem;
-  height: 8.75rem;
+  height: 8rem;
 }
 @media (max-width: 63.938rem) {
   .c-empty-img--2GC4d {
     margin-bottom: 0.5rem;
-    height: 6.563rem;
+    height: 6rem;
+  }
+}
+.c-empty-img--medium--1d2Zd {
+  height: 10rem;
+}
+@media (max-width: 63.938rem) {
+  .c-empty-img--medium--1d2Zd {
+    height: 8rem;
+  }
+}
+.c-empty-img--large--3s3vC {
+  height: 12rem;
+}
+@media (max-width: 63.938rem) {
+  .c-empty-img--large--3s3vC {
+    height: 10rem;
   }
 }
 .c-empty-title--2HduE {
