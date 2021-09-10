@@ -1,3 +1,13 @@
+# [51.11.0](https://github.com/cozy/cozy-ui/compare/v51.10.0...v51.11.0) (2021-09-10)
+
+
+### Features
+
+* Add & fix snaps with Variants ([9d6ab89](https://github.com/cozy/cozy-ui/commit/9d6ab89))
+* Add prop iconSize ([5398f53](https://github.com/cozy/cozy-ui/commit/5398f53))
+* Delete useless spaces ([b5e21a4](https://github.com/cozy/cozy-ui/commit/b5e21a4))
+* Refactor Empty Readme with Variants ([ddf999e](https://github.com/cozy/cozy-ui/commit/ddf999e))
+
 # [51.10.0](https://github.com/cozy/cozy-ui/compare/v51.9.1...v51.10.0) (2021-09-08)
 
 
