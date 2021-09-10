@@ -4,17 +4,23 @@
     @extend $empty
 
 .c-empty-container
-    display          flex
-    flex-direction   column
-    justify-content  center
-    flex             1 0 auto
-    align-self       center
-    padding          rem(16) 0
-    text-align       center
-    max-width        100%
+    display flex
+    flex-direction column
+    justify-content center
+    flex 1 0 auto
+    align-self center
+    padding rem(16) 0
+    text-align center
+    max-width 100%
 
 .c-empty-img
     @extend $empty-img
+
+.c-empty-img--medium
+    @extend $empty-img--medium
+
+.c-empty-img--large
+    @extend $empty-img--large
 
 .c-empty-title
     @extend $empty-title

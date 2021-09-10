@@ -1,5 +1,5 @@
 ```jsx
-import Variants from 'docs/components/Variants';
+import Variants from 'cozy-ui/docs/components/Variants';
 
 import Paper from 'cozy-ui/transpiled/react/Paper';
 import Stack from 'cozy-ui/transpiled/react/Stack';
@@ -29,7 +29,7 @@ const PaperExample = ({ classes, square, elevation }) => {
       </Typography>
     </Paper>
   )
-}
+};
 
 
 const StyledPaperExample = withStyles(styles)(PaperExample);

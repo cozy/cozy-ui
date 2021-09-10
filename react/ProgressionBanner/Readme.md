@@ -1,14 +1,14 @@
 A banner with a progress bar at the bottom.
 
 ```jsx
-import useProgression from 'cozy-ui/transpiled/react/helpers/useProgression'
-import ProgressionBanner from 'cozy-ui/transpiled/react/ProgressionBanner'
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import CloudSync from 'cozy-ui/transpiled/react/Icons/CloudSync'
-import Variants from 'docs/components/Variants'
-import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons'
+import useProgression from 'cozy-ui/transpiled/react/helpers/useProgression';
+import ProgressionBanner from 'cozy-ui/transpiled/react/ProgressionBanner';
+import Icon from 'cozy-ui/transpiled/react/Icon';
+import CloudSync from 'cozy-ui/transpiled/react/Icons/CloudSync';
+import Variants from 'cozy-ui/docs/components/Variants';
+import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons';
 
-const { progression } = useProgression()
+const { progression } = useProgression();
 
 const initialVariants = [
   { withValue: true, progressBar: true, withButton: false }
