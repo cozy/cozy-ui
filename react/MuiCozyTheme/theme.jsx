@@ -622,7 +622,8 @@ const makeOverrides = theme => ({
     track: {
       width: SWITCH_BAR_WIDTH,
       height: 12,
-      backgroundColor: theme.palette.grey[200]
+      opacity: 1,
+      backgroundColor: getCssVariableValue('disabledTextColor')
     },
     colorPrimary: {
       '&$checked': {
@@ -804,10 +805,6 @@ invertedTheme.overrides = {
       color: getCssVariableValue('primaryContrastTextColor')
     },
     colorPrimary: {
-      '& + $track': {
-        backgroundColor: getCssVariableValue('primaryContrastTextColor')
-      },
-
       '&$checked': {
         '& + $track': {
           boxSizing: 'border-box',
