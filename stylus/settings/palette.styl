@@ -123,34 +123,38 @@ html
 */
 html, .CozyTheme--normal
     /*
-    Primary
+    Primary colors
 
+    Stylus: primaryColorLightest     - #B3D3FF, CSS: var(--primaryColorLightest)
+    Stylus: primaryColorLight        - #5C9DF5, CSS: var(--primaryColorLight)
     Stylus: primaryColor             - #297EF2, CSS: var(--primaryColor)
     Stylus: primaryColorDark         - #0B61D6, CSS: var(--primaryColorDark)
-    Stylus: primaryColorLight        - #5C9DF5, CSS: var(--primaryColorLight)
-    Stylus: primaryColorLightest     - #B3D3FF, CSS: var(--primaryColorLightest)
+    Stylus: primaryContrastTextColor - #FFF, CSS: var(--primaryContrastTextColor)
 
     Styleguide Settings.theme.primary
     */
+    --primaryColorLightest palette.Primary['300']
+    --primaryColorLight palette.Primary['500']
     --primaryColor palette.Primary['600']
     --primaryColorDark palette.Primary['700']
-    --primaryColorLight palette.Primary['500']
-    --primaryColorLightest palette.Primary['300']
+    --primaryContrastTextColor palette.Common['white']
 
     /*
-    Secondary
+    Secondary colors
 
-    Stylus: secondaryColor   - #EA3F3F, CSS: var(--secondaryColor)
-    Stylus: secondaryColorDark   - #D31F1F, CSS: var(--secondaryColorDark)
-    Stylus: secondaryColorLight   - #F96B6B, CSS: var(--secondaryColorLight)
-    Stylus: secondaryColorLightest   - #FFD3D3, CSS: var(--secondaryColorLightest)
+    Stylus: secondaryColorLightest     - #FFD3D3, CSS: var(--secondaryColorLightest)
+    Stylus: secondaryColorLight        - #F96B6B, CSS: var(--secondaryColorLight)
+    Stylus: secondaryColor             - #EA3F3F, CSS: var(--secondaryColor)
+    Stylus: secondaryColorDark         - #D31F1F, CSS: var(--secondaryColorDark)
+    Stylus: secondaryContrastTextColor -  #FFF, CSS: var(--secondaryContrastTextColor)
 
     Styleguide Settings.theme.secondary
     */
+    --secondaryColorLightest palette.Error['200']
+    --secondaryColorLight palette.Error['500']
     --secondaryColor palette.Error['600']
     --secondaryColorDark palette.Error['700']
-    --secondaryColorLight palette.Error['500']
-    --secondaryColorLightest palette.Error['200']
+    --secondaryContrastTextColor palette.Common['white']
 
     /*
     Background colors
@@ -173,47 +177,71 @@ html, .CozyTheme--normal
 
     Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
     Stylus: secondaryTextColor - #9D9EA1, CSS: var(--secondaryTextColor)
-    Stylus: primaryContrastTextColor -  #FFF, CSS: var(--primaryContrastTextColor)
-    Stylus: secondaryContrastTextColor -  #FFF, CSS: var(--secondaryContrastTextColor)
 
     Styleguide Settings.theme.text
     */
     --primaryTextColor alpha(palette.Grey['900'], 0.9)
     --secondaryTextColor alpha(palette.Grey['900'], 0.48)
-    --primaryContrastTextColor palette.Common['white']
-    --secondaryContrastTextColor palette.Common['white']
-
 
     /*
-    Components colors
+    Divider colors
 
-    Be careful to use the semantic variable, not the hexa color.
-    In this case the real color is `#1D212A1F`, and becomes `#E3E4E5` on a white background.
+    These colors use the alpha layer. Be careful to use the semantic variable.
+    Hexadecimal colors are here only as an example on a white background.
 
     Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
 
-    Styleguide Settings.theme.components
+    Styleguide Settings.theme.divider
     */
     --dividerColor alpha(palette.Grey['900'], 0.12)
 
     /*
-    Intention colors
+    Success colors
 
     Stylus: successColor -  #09AE1C, CSS: var(--successColor)
-    Stylus: warningColor -  #CB8100, CSS: var(--warningColor)
-    Stylus: errorColor -  #EA3F3F, CSS: var(--errorColor)
-    Stylus: infoColor -  #009FA2, CSS: var(--infoColor)
 
-    Styleguide Settings.theme.intention
+    Styleguide Settings.theme.success
     */
     --successColor palette.Success['600']
+
+    /*
+    Warning colors
+
+    Stylus: warningColor -  #CB8100, CSS: var(--warningColor)
+
+    Styleguide Settings.theme.warning
+    */
     --warningColor palette.Warning['600']
+
+    /*
+    Error colors
+
+    Stylus: errorColorLightest     -  #FFECEC, CSS: var(--errorColorLightest)
+    Stylus: errorColorLight        -  #F96B6B, CSS: var(--errorColorLight)
+    Stylus: errorColor             -  #EA3F3F, CSS: var(--errorColor)
+    Stylus: errorColorDark         -  #D31F1F, CSS: var(--errorColorDark)
+    Stylus: errorBackground        -  #FFECEC, CSS: var(--errorBackground)
+
+    Styleguide Settings.theme.error
+    */
+    --errorColorLightest palette.Error['100']
+    --errorColorLight palette.Error['500']
     --errorColor palette.Error['600']
     --errorColorDark palette.Error['700']
-    --errorColorLight palette.Error['500']
-    --errorColorLightest palette.Error['100']
-    --infoColor palette.Info['600']
     --errorBackground palette.Error['100']
+
+    /*
+    Info colors
+
+    Stylus: infoColor -  #009FA2, CSS: var(--infoColor)
+
+    Styleguide Settings.theme.info
+    */
+    --infoColor palette.Info['600']
+
+    /*
+    ---------------------------------------------------------------------
+    */
 
     /*
     The CSS variables below are historic and we should strive not to
