@@ -7761,6 +7761,29 @@ html,
   color: var(--coolGrey);
 }
 
+.divider---oC9I {
+  align-items: center;
+  display: flex;
+}
+.divider---oC9I::after,
+.divider---oC9I::before {
+  content: '';
+  height: 1px;
+  background-color: var(--dividerColor);
+}
+.divider---oC9I::before {
+  display: none;
+  margin-right: 0.5rem;
+}
+.divider---oC9I::after {
+  flex: 1;
+  margin-left: 0.5rem;
+}
+.center--2jZEg::before {
+  display: block;
+  flex: 1;
+}
+
 .BarButton--3z5Er {
   display: flex;
   align-items: center;
