@@ -27,3 +27,19 @@ import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid';
   <Typography variant="body1" className="u-ml-1">Right block</Typography>
 </Grid>
 ```
+
+Divider with default textAlign (left)
+
+```jsx
+import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider';
+
+<Divider>Text Left</Divider>
+```
+
+Divider with textAlign (center)
+
+```jsx
+import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider';
+
+<Divider textAlign="center">Text Center</Divider>
+```

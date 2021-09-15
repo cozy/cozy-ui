@@ -1,6 +1,23 @@
-import Divider from '@material-ui/core/Divider'
+import React from 'react'
+import MuiDivider from '@material-ui/core/Divider'
 import { withStyles } from '@material-ui/core/styles'
 import { defaultValues, normalTheme } from '../theme'
+import TextDivider from './TextDivider'
+
+/**
+ * @desc If this component is provided a string children, it will render a `<TextDivider>` component
+ * and will handle the `textAlign` prop that accepts a `"center"` or undefined value
+ */
+const Divider = props =>
+  typeof props.children === 'string' ? (
+    <TextDivider {...props} />
+  ) : (
+    <MuiDivider {...props} />
+  )
+
+Divider.propTypes = {
+  ...TextDivider.propTypes
+}
 
 export default Divider
 
