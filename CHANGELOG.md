@@ -1,3 +1,10 @@
+# [51.12.0](https://github.com/cozy/cozy-ui/compare/v51.11.0...v51.12.0) (2021-09-15)
+
+
+### Features
+
+* Add text features to `Divider` component ([e509bb9](https://github.com/cozy/cozy-ui/commit/e509bb9))
+
 # [51.11.0](https://github.com/cozy/cozy-ui/compare/v51.10.0...v51.11.0) (2021-09-10)
 
 
