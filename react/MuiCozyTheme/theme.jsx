@@ -265,10 +265,10 @@ const makeOverrides = theme => ({
   MuiTab: {
     // This overrides the disabled color of the MuiTab
     textColorPrimary: {
-      color: theme.palette.grey[300]
+      color: theme.palette.grey[500]
     },
     textColorSecondary: {
-      color: theme.palette.grey[300]
+      color: theme.palette.grey[500]
     },
     root: {
       fontSize: normalTheme.typography.subtitle1.fontSize,
