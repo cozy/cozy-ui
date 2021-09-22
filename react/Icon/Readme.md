@@ -659,7 +659,8 @@ import WarningIcon from "cozy-ui/transpiled/react/Icons/Warning"
 
 ```jsx
 import Icon from 'cozy-ui/transpiled/react/Icon'
-import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite'
+// Sprite is necessary in order to add in the html rendering
+import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite' 
 import Typography from 'cozy-ui/transpiled/react/Typography'
 
 const colors = ['#297EF2', '#08b442', '#B449E7', '#F52D2D', '#FF962F']
