@@ -101,4 +101,3 @@ Icon.defaultProps = {
 }
 
 export default Icon
-export { default as Sprite } from './Sprite'
