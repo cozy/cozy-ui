@@ -1,3 +1,20 @@
+# [52.0.0](https://github.com/cozy/cozy-ui/compare/v51.12.0...v52.0.0) (2021-09-22)
+
+
+### Bug Fixes
+
+* Remove export Sprite from Icon (index.jsx) ([478e9d2](https://github.com/cozy/cozy-ui/commit/478e9d2))
+* Remove unused import ([adee11b](https://github.com/cozy/cozy-ui/commit/adee11b))
+
+
+### BREAKING CHANGES
+
+*  `<Sprite>` is no longer exported by `<Icon>`. However, you can import it directly with `import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite'`. Be carful, it's no longer possible to set an icon with a string like this `<Icon icon="myIcon" />` without importing `<Sprite>`. If don't need the sprite, you can still use svgr icons:
+```
+import MyIcon from 'cozy-ui/transpiled/react/Icons/MyIcon'
+<Icon icon={MyIcon} />
+```
+
 # [51.12.0](https://github.com/cozy/cozy-ui/compare/v51.11.0...v51.12.0) (2021-09-15)
 
 
