@@ -12,7 +12,7 @@ import {
   Button,
   Chip,
   Hero,
-  IconSprite,
+  Sprite,
   NavItem,
   NavText,
   NavIcon,
@@ -181,7 +181,7 @@ class App extends React.Component {
             <IconSection />
             <ChipSection />
           </Content>
-          <IconSprite />
+          <Sprite />
         </Main>
       </Layout>
     )

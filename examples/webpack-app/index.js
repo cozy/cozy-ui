@@ -11,14 +11,13 @@ import {
   Button,
   Chip,
   Hero,
-  IconSprite,
+  Sprite,
   NavItem,
   NavText,
   NavIcon,
   genNavLink
 } from '../../transpiled/react'
 import '../../transpiled/react/stylesheet.css'
-
 
 const RRNavLink = props => <div {...props} />
 
