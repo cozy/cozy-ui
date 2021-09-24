@@ -3,7 +3,7 @@ import React from 'react'
 
 const displayNone = { display: 'none' }
 
-const IconSprite = () => {
+const Sprite = () => {
   return (
     <div
       style={displayNone}
@@ -12,4 +12,4 @@ const IconSprite = () => {
   )
 }
 
-export default IconSprite
+export default Sprite

@@ -37,7 +37,7 @@ Alternatively, you can use a webpack alias. Inside `webpack.config.js` :
 ### 4. Add the icon sprite
 
 ```patch
-import { IconSprite } from 'cozy-ui/transpiled/react'
+import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite'
 
  const App = () => {
    return (
@@ -46,7 +46,7 @@ import { IconSprite } from 'cozy-ui/transpiled/react'
        <Main>
          ...
        </Main>
-+      <IconSprite />
++      <Sprite />
     </Layout>
    )
  }

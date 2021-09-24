@@ -1,4 +1,4 @@
-import React, { Fragment} from 'react'
+import React, { Fragment } from 'react'
 import { hot } from 'react-hot-loader'
 
 import {
@@ -12,7 +12,7 @@ import {
   Button,
   Chip,
   Hero,
-  IconSprite,
+  Sprite,
   NavItem,
   NavText,
   NavIcon,
@@ -26,9 +26,15 @@ const NavLink = genNavLink(RRNavLink)
 
 const ContactChip = ({ contact }) => (
   <Chip style={{ paddingLeft: '0.25rem' }}>
-    <Avatar textId={ contact.name } text={contact.initials} size='small' style={{ marginRight: '0.5rem' }}/> {contact.name}
+    <Avatar
+      textId={contact.name}
+      text={contact.initials}
+      size="small"
+      style={{ marginRight: '0.5rem' }}
+    />{' '}
+    {contact.name}
   </Chip>
-);
+)
 
 const icons = [
   'arrow',
@@ -88,33 +94,30 @@ const icons = [
   'spinner-blue',
   'spinner-grey',
   'spinner-red',
-  'spinner-white',
+  'spinner-white'
 ]
 
-const colors = [
-  'crimson',
-  'royalblue',
-  'green',
-  'orange',
-  'crimson'
-]
+const colors = ['crimson', 'royalblue', 'green', 'orange', 'crimson']
 
 const IconSection = () => {
   let colorIndex = 0
   return (
     <Fragment>
       <h2>Icon</h2>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(max-content, 200px))' }}>
-        {
-          icons.map(iconId => (
-            <div key={iconId}>
-              <span style={{ color: colors[colorIndex++ % colors.length] }}>
-                <Icon icon={`#${iconId}`} style={{ marginRight: '0.5rem' }}/>
-              </span>
-              { iconId }
-            </div>
-          ))
-        }
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(max-content, 200px))'
+        }}
+      >
+        {icons.map(iconId => (
+          <div key={iconId}>
+            <span style={{ color: colors[colorIndex++ % colors.length] }}>
+              <Icon icon={`#${iconId}`} style={{ marginRight: '0.5rem' }} />
+            </span>
+            {iconId}
+          </div>
+        ))}
       </div>
     </Fragment>
   )
@@ -125,49 +128,53 @@ const ChipSection = () => {
     <Fragment>
       <h2>Chip</h2>
       <p>
-        {
-          [
-            'Charles Babbage',
-            'Grace Hopper',
-            'John McCarthy',
-            'Donald Knuth',
-            'Barbara Liskov'
-          ].map(name => <ContactChip key={name} contact={{
-            initials: name.split(' ').map(x => x[0]).join(''),
-            name
-          }} />)
-        }
-
+        {[
+          'Charles Babbage',
+          'Grace Hopper',
+          'John McCarthy',
+          'Donald Knuth',
+          'Barbara Liskov'
+        ].map(name => (
+          <ContactChip
+            key={name}
+            contact={{
+              initials: name
+                .split(' ')
+                .map(x => x[0])
+                .join(''),
+              name
+            }}
+          />
+        ))}
       </p>
     </Fragment>
   )
 }
 
-
 class App extends React.Component {
-  constructor () {
+  constructor() {
     super()
     this.state = { count: 0 }
   }
-  componentDidMount () {
+  componentDidMount() {
     setInterval(() => {
-      this.setState({ count: this.state.count + 1})
+      this.setState({ count: this.state.count + 1 })
     }, 1000)
   }
-  render () {
+  render() {
     return (
       <Layout>
         <Sidebar>
           <Nav>
             <NavItem>
               <NavLink>
-                <NavIcon icon="#icon-warning"/>
+                <NavIcon icon="#icon-warning" />
                 <NavText>Section 1</NavText>
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink>
-                <NavIcon icon="#icon-file"/>
+                <NavIcon icon="#icon-file" />
                 <NavText>Section 2</NavText>
               </NavLink>
             </NavItem>
@@ -176,16 +183,15 @@ class App extends React.Component {
         <Main>
           <Content>
             <p>
-              <Button label='A button' />
+              <Button label="A button" />
             </p>
             <IconSection />
             <ChipSection />
           </Content>
-          <IconSprite />
+          <Sprite />
         </Main>
       </Layout>
     )
-
   }
 }
 

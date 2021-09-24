@@ -7,7 +7,8 @@ export { default as ButtonAction } from './ButtonAction'
 export { default as BottomDrawer } from './BottomDrawer'
 export { default as BarButton } from './BarButton'
 export { default as I18n, translate, useI18n } from './I18n'
-export { default as Icon, Sprite as IconSprite } from './Icon'
+export { default as Icon } from './Icon'
+export { default as Sprite } from './Icon/Sprite'
 export { default as Sidebar } from './Sidebar'
 export {
   default as Nav,
