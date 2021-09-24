@@ -1,3 +1,11 @@
+## [52.0.1](https://github.com/cozy/cozy-ui/compare/v52.0.0...v52.0.1) (2021-09-24)
+
+
+### Bug Fixes
+
+* Change import about Sprite ([5f0b88f](https://github.com/cozy/cozy-ui/commit/5f0b88f))
+* Lint ([53ef0ce](https://github.com/cozy/cozy-ui/commit/53ef0ce))
+
 # [52.0.0](https://github.com/cozy/cozy-ui/compare/v51.12.0...v52.0.0) (2021-09-22)
 
 
