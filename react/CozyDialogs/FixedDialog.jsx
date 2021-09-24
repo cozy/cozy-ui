@@ -10,7 +10,7 @@ import DialogBackButton from './DialogBackButton'
 import DialogCloseButton from './DialogCloseButton'
 
 const FixedDialog = props => {
-  const { onClose, title, content, actions, actionsLayout } = props
+  const { onClose, onBack, title, content, actions, actionsLayout } = props
   const {
     dialogProps,
     dialogTitleProps,
@@ -18,6 +18,8 @@ const FixedDialog = props => {
     id,
     dialogActionsProps
   } = useCozyDialog(props)
+
+  const onBackOrClose = onBack || onClose
 
   return (
     <Dialog {...dialogProps}>
@@ -29,9 +31,10 @@ const FixedDialog = props => {
       )}
       <DialogTitle
         {...dialogTitleProps}
-        className={cx('u-ellipsis', { dialogTitleFull: !onClose })}
+        className={cx('u-ellipsis', { dialogTitleFull: !onBackOrClose })}
       >
-        {fullScreen && onClose && <DialogBackButton onClick={onClose} />}
+        {!fullScreen && onBack && <DialogBackButton onClick={onBack} />}
+        {fullScreen && onBackOrClose && <DialogBackButton onClick={onBackOrClose} />}
         {title}
       </DialogTitle>
       <Divider />

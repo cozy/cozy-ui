@@ -16,6 +16,10 @@ Will automatically:
 * size : `<string>` Can be "s", "m" (default) or "l"
 * opened : `<boolean>` (required) To open/close the modal
 * onClose : `<function>` (required) Triggered function on modal close action
+* onBack : `<function>` (optional) Triggered function on modal back action
+  * if defined and in desktop mode then a back button is shown in addition to the close button and it will trigger onBack() on click
+  * if defined and in mobile mode then the back button will trigger onBack() instead of onClose()
+  * if not defined and in mobile mode then the back button will trigger onClose()
 * title : `<node>` Title of the modal
 * content : `<node>` Content of the modal
 * actions : `<node>` Actions of the modal
@@ -42,6 +46,10 @@ import Typography from 'cozy-ui/transpiled/react/Typography'
 import CloudIcon from "cozy-ui/transpiled/react/Icons/Cloud";
 
 const handleClose = () => setState({ modalOpened: !state.modalOpened })
+const handleBack = () => {
+  Alerter.success('Back button has been pressed', { duration: 5000 })
+  setState({ modalOpened: !state.modalOpened })
+}
 
 const DialogComponent = state.modal
 
@@ -135,6 +143,7 @@ initialState = {
   actionsLayout: 'row',
   title: 'short',
   withCloseButton: true,
+  withBackButton: false,
   content: 'default',
   theme: 'normal',
   align: 'middle',
@@ -146,6 +155,10 @@ initialState = {
     <p>With close button:
       <StateRadio value={true} name='withCloseButton' /> yes{' '}
       <StateRadio value={false} name='withCloseButton' /> no
+    </p>
+    <p>With back button:
+      <StateRadio value={true} name='withBackButton' /> yes{' '}
+      <StateRadio value={false} name='withBackButton' /> no
     </p>
     <p>Title:
       <StateRadio value='short' name='title' /> short{' '}
@@ -177,6 +190,7 @@ initialState = {
       size={DialogComponent !== ConfirmDialog ? state.size : undefined}
       open={state.modalOpened}
       onClose={state.withCloseButton ? handleClose : undefined}
+      onBack={state.withBackButton ? handleBack : undefined}
       align={state.align}
       title={DialogComponent !== IllustrationDialog && state.title === "long"
         ? `${dialogTitles[DialogComponent.name]} - ${content.ada.short}`
