@@ -45,7 +45,7 @@ const variantThemes = {
 }
 
 export const SquareAppIcon = ({ app, name: nameProp, variant }) => {
-  const name = nameProp || get(app, 'name')
+  const name = nameProp || get(app, 'name') || app
   const { className: variantClassName, mainIcon, mainColor, icon, color } = get(
     variantThemes,
     variant,

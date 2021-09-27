@@ -8,11 +8,11 @@ import SquareAppIcon from './index'
 
 const appMock = {
   slug: 'test',
-  name: 'Test'
+  name: 'Test',
 }
 
 const client = new CozyClient({})
-const Wrapper = props => {
+const Wrapper = (props) => {
   return (
     <CozyProvider client={client}>
       <SquareAppIcon {...props} />
@@ -30,6 +30,12 @@ describe('SquareAppIcon component', () => {
   it('should render an app correctly with the app name', () => {
     const root = render(<Wrapper app={appMock} />)
     expect(root.getByText('Test')).toBeTruthy()
+    expect(root.getByTestId('square-app-icon')).toMatchSnapshot()
+  })
+
+  it('should render an app with the app slug if no name prop and app is a string', () => {
+    const root = render(<Wrapper app="testslug" />)
+    expect(root.getByText('testslug')).toBeTruthy()
     expect(root.getByTestId('square-app-icon')).toMatchSnapshot()
   })
 
