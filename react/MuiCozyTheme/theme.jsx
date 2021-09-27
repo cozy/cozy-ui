@@ -610,6 +610,15 @@ const makeOverrides = theme => ({
     root: {
       color: theme.palette.text.secondary
     }
+  },
+  MuiBadge: {
+    badge: {
+      padding: 0
+    },
+    dot: {
+      borderRadius: '100%',
+      padding: 0
+    }
   }
 })
 

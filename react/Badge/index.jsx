@@ -2,21 +2,16 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import MuiBadge from '@material-ui/core/Badge'
-import { withStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
 const LARGE_BADGE = '1.25rem'
 const MEDIUM_BADGE = '1.125rem'
 const SMALL_BADGE = '1rem'
 
-const LARGE_DOT = '.875rem'
-const MEDIUM_DOT = '.75rem'
-const SMALL_DOT = '.625rem'
-
-const customStyles = theme => ({
+const useStyles = makeStyles({
   badge: {
     padding: 0
   },
-  root: {},
   top: {
     top: '16%'
   },
@@ -49,74 +44,57 @@ const customStyles = theme => ({
     lineHeight: '0',
     padding: '0 3px'
   },
-  colorPrimary: {
-    border: `2px solid ${theme.palette.primary.contrastText}`
-  },
-  colorSecondary: {
-    border: `2px solid ${theme.palette.secondary.contrastText}`
-  },
-  colorError: {
-    border: `2px solid ${theme.palette.error.contrastText}`
-  },
   dot: {
-    borderRadius: '100%',
-    padding: 0,
     '&$large': {
-      height: LARGE_DOT,
-      minWidth: LARGE_DOT
+      height: '.875rem',
+      minWidth: '.875rem'
     },
     '&$medium': {
-      height: MEDIUM_DOT,
-      minWidth: MEDIUM_DOT
+      height: '.75rem',
+      minWidth: '.75rem'
     },
     '&$small': {
-      height: SMALL_DOT,
-      minWidth: SMALL_DOT
+      height: '.625rem',
+      minWidth: '.625rem'
     }
   }
 })
 
-const Badge = withStyles(customStyles)(
-  ({ classes, anchorOrigin, size, ...props }) => {
-    const {
-      badge,
-      colorPrimary,
-      colorSecondary,
-      colorError,
-      dot,
-      top,
-      bottom,
-      left,
-      right,
-      large,
-      medium,
-      small,
-      ...customClasses
-    } = classes
-    const verticalClasses = { top, bottom }
-    const horizontalClasses = { left, right }
-    const sizeClasses = { large, medium, small }
+const Badge = ({ anchorOrigin, size, ...props }) => {
+  const classes = useStyles(props)
+  const {
+    badge,
+    top,
+    bottom,
+    left,
+    right,
+    large,
+    medium,
+    small,
+    dot,
+    ...customClasses
+  } = classes
 
-    return (
-      <MuiBadge
-        classes={{
-          colorPrimary,
-          colorSecondary,
-          colorError,
-          dot,
-          badge: cx(
-            badge,
-            verticalClasses[anchorOrigin.vertical],
-            horizontalClasses[anchorOrigin.horizontal],
-            sizeClasses[size]
-          ),
-          ...customClasses
-        }}
-        {...props}
-      />
-    )
-  }
-)
+  const verticalClasses = { top, bottom }
+  const horizontalClasses = { left, right }
+  const sizeClasses = { large, medium, small }
+
+  return (
+    <MuiBadge
+      classes={{
+        dot,
+        badge: cx(
+          badge,
+          verticalClasses[anchorOrigin.vertical],
+          horizontalClasses[anchorOrigin.horizontal],
+          sizeClasses[size]
+        ),
+        ...customClasses
+      }}
+      {...props}
+    />
+  )
+}
 
 Badge.propTypes = {
   anchorOrigin: PropTypes.shape({
