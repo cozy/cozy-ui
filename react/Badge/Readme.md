@@ -14,9 +14,9 @@ import Variants from 'cozy-ui/docs/components/Variants';
 import CircleFilledIcon from "cozy-ui/transpiled/react/Icons/CircleFilled";
 
 const initialVariants = [
-  { error: false, dot: false, large: false, small: false },
-  { error: true, dot: true, large: false, small: false },
-  { error: false, dot: false, large: false, small: false },
+  { error: false, dot: false, large: false, small: false, withBorder: false },
+  { error: true, dot: true, large: false, small: false, withBorder: true },
+  { error: false, dot: false, large: false, small: false, withBorder: false },
 ];
 
 testingProps = [
@@ -43,7 +43,7 @@ testingProps = [
   : <Variants initialVariants={initialVariants}>{
   variant => (
     <p>
-      <Badge badgeContent={4} color={variant.error ? 'error' : variant.secondaryColor ? 'secondary' : 'primary'} variant={variant.dot ? 'dot' : 'standard'} size={variant.large ? 'large' : variant.small ? 'small' : 'medium'} anchorOrigin={{vertical: variant.bottom ? 'bottom' : 'top', 'horizontal': variant.left ? 'left' : 'right'}}>
+      <Badge badgeContent={4} color={variant.error ? 'error' : variant.secondaryColor ? 'secondary' : 'primary'} variant={variant.dot ? 'dot' : 'standard'} size={variant.large ? 'large' : variant.small ? 'small' : 'medium'} anchorOrigin={{vertical: variant.bottom ? 'bottom' : 'top', 'horizontal': variant.left ? 'left' : 'right'}} withBorder={variant.withBorder}>
         <Icon icon={CircleFilledIcon} size={variant.large ? '32' : variant.small ? '16' : '24'} color="var(--slateGrey)" />
       </Badge>
     </p>

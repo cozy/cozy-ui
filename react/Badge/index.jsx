@@ -8,7 +8,16 @@ const LARGE_BADGE = '1.25rem'
 const MEDIUM_BADGE = '1.125rem'
 const SMALL_BADGE = '1rem'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
+  colorPrimary: ({ withBorder }) => ({
+    border: withBorder ? `2px solid ${theme.palette.background.paper}` : 'none'
+  }),
+  colorSecondary: ({ withBorder }) => ({
+    border: withBorder ? `2px solid ${theme.palette.background.paper}` : 'none'
+  }),
+  colorError: ({ withBorder }) => ({
+    border: withBorder ? `2px solid ${theme.palette.background.paper}` : 'none'
+  }),
   top: {
     top: '16%'
   },
@@ -55,10 +64,13 @@ const useStyles = makeStyles({
       minWidth: '.625rem'
     }
   }
-})
+}))
 
-const Badge = ({ classes={}, anchorOrigin, size, ...props }) => {
+const Badge = ({ classes = {}, anchorOrigin, size, ...props }) => {
   const {
+    colorPrimary,
+    colorSecondary,
+    colorError,
     top,
     bottom,
     left,
@@ -83,6 +95,9 @@ const Badge = ({ classes={}, anchorOrigin, size, ...props }) => {
           verticalClasses[anchorOrigin.vertical],
           horizontalClasses[anchorOrigin.horizontal],
           sizeClasses[size],
+          colorPrimary,
+          colorSecondary,
+          colorError,
           customBadge
         ),
         ...customClasses
@@ -99,13 +114,15 @@ Badge.propTypes = {
   }),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   showZero: PropTypes.bool,
-  variant: PropTypes.oneOf(['standard', 'dot'])
+  variant: PropTypes.oneOf(['standard', 'dot']),
+  withBorder: PropTypes.bool
 }
 
 Badge.defaultProps = {
   anchorOrigin: { horizontal: 'right', vertical: 'top' },
   size: 'medium',
-  showZero: true
+  showZero: true,
+  withBorder: true
 }
 
 export default Badge
