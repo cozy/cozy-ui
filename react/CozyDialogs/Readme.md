@@ -20,6 +20,9 @@ Will automatically:
   * if defined and in desktop mode then a back button is shown in addition to the close button and it will trigger onBack() on click
   * if defined and in mobile mode then the back button will trigger onBack() instead of onClose()
   * if not defined and in mobile mode then the back button will trigger onClose()
+* disableTitleAutoPadding : `<boolean>` (optional) Disable title padding calculation that would prevent overlapping with close and back buttons
+  * if set to `true` then you should handle those CSS properties by yourself or title will take 100% of width
+  * if set to `false` then title will take only available space between close and back buttons regarding which of `onClose` or `onBack` props are defined or not
 * title : `<node>` Title of the modal
 * content : `<node>` Content of the modal
 * actions : `<node>` Actions of the modal
@@ -142,6 +145,7 @@ initialState = {
   size: 'medium',
   actionsLayout: 'row',
   title: 'short',
+  disableTitleAutoPadding: false,
   withCloseButton: true,
   withBackButton: false,
   content: 'default',
@@ -159,6 +163,10 @@ initialState = {
     <p>With back button:
       <StateRadio value={true} name='withBackButton' /> yes{' '}
       <StateRadio value={false} name='withBackButton' /> no
+    </p>
+    <p>Disable Title auto-positionning:
+      <StateRadio value={true} name='disableTitleAutoPadding' /> yes{' '}
+      <StateRadio value={false} name='disableTitleAutoPadding' /> no
     </p>
     <p>Title:
       <StateRadio value='short' name='title' /> short{' '}
@@ -191,6 +199,7 @@ initialState = {
       open={state.modalOpened}
       onClose={state.withCloseButton ? handleClose : undefined}
       onBack={state.withBackButton ? handleBack : undefined}
+      disableTitleAutoPadding={state.disableTitleAutoPadding}
       align={state.align}
       title={DialogComponent !== IllustrationDialog && state.title === "long"
         ? `${dialogTitles[DialogComponent.name]} - ${content.ada.short}`

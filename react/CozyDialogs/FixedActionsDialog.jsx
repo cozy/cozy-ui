@@ -1,5 +1,5 @@
 import React from 'react'
-import cx from 'classnames'
+import cx from 'classnames/dedupe'
 
 import useCozyDialog from './useCozyDialog'
 import Dialog, { DialogTitle, DialogActions, DialogContent } from '../Dialog'
@@ -29,13 +29,30 @@ const FixedActionsDialog = props => {
           onClick={onClose}
         />
       )}
+      {!fullScreen && onBack && (
+        <DialogBackButton
+          data-test-id={`modal-back-button-${id}`}
+          onClick={onBack}
+        />
+      )}
+      {fullScreen && onBackOrClose && (
+        <DialogBackButton
+          data-test-id={`modal-backclose-button-${id}`}
+          onClick={onBackOrClose}
+        />
+      )}
       <DialogContent>
         <div className="dialogContentInner">
-          <DialogTitle {...dialogTitleProps} className="dialogTitleFluid">
-            {!fullScreen && onBack && <DialogBackButton onClick={onBack} />}
-            {fullScreen && onBackOrClose && <DialogBackButton onClick={onBackOrClose} />}
-            {title}
-          </DialogTitle>
+          <div className="dialogTitleFluidContainer">
+            <DialogTitle
+              {...dialogTitleProps}
+              className={cx(dialogTitleProps.className, 'dialogTitleFluid', {
+                'u-ellipsis': false
+              })}
+            >
+              {title}
+            </DialogTitle>
+          </div>
           {content}
         </div>
       </DialogContent>
