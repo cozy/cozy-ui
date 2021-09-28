@@ -27,6 +27,8 @@ import Icon from '../Icon'
 import AddContactButton from './AddContactButton'
 import EmptyMessage from './EmptyMessage'
 
+import cx from 'classnames'
+
 const thirtySeconds = 30000
 const olderThan30s = fetchPolicies.olderThan(thirtySeconds)
 
@@ -115,7 +117,9 @@ const ContactsListModal = props => {
       </CozyTheme>
       <DialogTitle
         {...dialogTitleProps}
-        className={isMobile ? 'u-p-0 u-w-100' : undefined}
+        className={cx(dialogTitleProps.className, {
+          'u-p-0 u-w-100': isMobile
+        })}
       >
         {isMobile ? (
           <>
