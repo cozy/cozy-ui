@@ -617,7 +617,13 @@ const makeOverrides = theme => ({
   },
   MuiIconButton: {
     root: {
-      color: theme.palette.text.secondary
+      color: theme.palette.text.secondary,
+      '&.dialogIconButton': {
+        backgroundColor: theme.palette.background.paper,
+        '&:hover': {
+          backgroundColor: theme.palette.background.selected
+        }
+      }
     }
   }
 })

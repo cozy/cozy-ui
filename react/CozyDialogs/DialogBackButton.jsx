@@ -20,6 +20,7 @@ const DialogBackButton = ({ onClick, ...props }) => {
         onClick={onClick}
         {...props}
         aria-label={t('backButton')}
+        className="dialogIconButton"
       >
         <Icon icon={PreviousIcon} />
       </IconButton>
