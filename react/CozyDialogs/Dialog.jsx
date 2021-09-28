@@ -10,7 +10,7 @@ import DialogBackButton from './DialogBackButton'
 import DialogCloseButton from './DialogCloseButton'
 
 const Dialog = props => {
-  const { onClose, title, content, actions, actionsLayout } = props
+  const { onClose, onBack, title, content, actions, actionsLayout } = props
   const {
     dialogProps,
     dialogTitleProps,
@@ -18,6 +18,8 @@ const Dialog = props => {
     id,
     dialogActionsProps
   } = useCozyDialog(props)
+
+  const onBackOrClose = onBack || onClose
 
   return (
     <MUIDialog {...dialogProps}>
@@ -27,13 +29,19 @@ const Dialog = props => {
           data-test-id={`modal-close-button-${id}`}
         />
       )}
-      <DialogTitle
-        {...dialogTitleProps}
-        className={cx('u-ellipsis', { dialogTitleFull: !onClose })}
-      >
-        {fullScreen && onClose && <DialogBackButton onClick={onClose} />}
-        {title}
-      </DialogTitle>
+      {!fullScreen && onBack && (
+        <DialogBackButton
+          onClick={onBack}
+          data-test-id={`modal-back-button-${id}`}
+        />
+      )}
+      {fullScreen && onBackOrClose && (
+        <DialogBackButton
+          data-test-id={`modal-backclose-button-${id}`}
+          onClick={onBackOrClose}
+        />
+      )}
+      <DialogTitle {...dialogTitleProps}>{title}</DialogTitle>
       <Divider />
       <DialogContent>
         <div className="dialogContentInner withFluidActions">

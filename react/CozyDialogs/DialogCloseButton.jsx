@@ -15,7 +15,12 @@ const CloseButton = ({ onClick, ...props }) => {
   const { t } = useI18n()
   return (
     <div className={styles.DialogCloseButton}>
-      <IconButton onClick={onClick} {...props} aria-label={t('closeButton')}>
+      <IconButton
+        onClick={onClick}
+        {...props}
+        aria-label={t('closeButton')}
+        className="dialogIconButton"
+      >
         <Icon icon={CrossMediumIcon} />
       </IconButton>
     </div>

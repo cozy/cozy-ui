@@ -1,5 +1,5 @@
 import React from 'react'
-import cx from 'classnames'
+import cx from 'classnames/dedupe'
 
 import useCozyDialog from './useCozyDialog'
 import Dialog, { DialogTitle, DialogActions, DialogContent } from '../Dialog'
@@ -9,14 +9,16 @@ import DialogBackButton from './DialogBackButton'
 import DialogCloseButton from './DialogCloseButton'
 
 const IllustrationDialog = props => {
-  const { onClose, title, content, actions, actionsLayout } = props
+  const { onClose, onBack, title, content, actions, actionsLayout } = props
   const {
     dialogProps,
     dialogTitleProps,
     id,
     fullScreen,
     dialogActionsProps
-  } = useCozyDialog(props)
+  } = useCozyDialog({ ...props, isFluidTitle: true })
+
+  const onBackOrClose = onBack || onClose
 
   return (
     <Dialog {...dialogProps}>
@@ -26,10 +28,21 @@ const IllustrationDialog = props => {
           onClick={onClose}
         />
       )}
+      {!fullScreen && onBack && (
+        <DialogBackButton
+          onClick={onBack}
+          data-test-id={`modal-back-button-${id}`}
+        />
+      )}
+      {fullScreen && onBackOrClose && (
+        <DialogBackButton
+          data-test-id={`modal-backclose-button-${id}`}
+          onClick={onBackOrClose}
+        />
+      )}
       <DialogContent>
         <div className="dialogContentInner withFluidActions">
-          <DialogTitle {...dialogTitleProps} className="dialogTitleFluid">
-            {fullScreen && onClose && <DialogBackButton onClick={onClose} />}
+          <DialogTitle {...dialogTitleProps}>
             <div className="u-flex u-flex-justify-center">{title}</div>
           </DialogTitle>
           {content}

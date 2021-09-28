@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import useBreakpoints from '../hooks/useBreakpoints'
 import DialogTransition from './DialogTransition'
+import cx from 'classnames'
 
 let globalId = 0
 
@@ -21,8 +22,11 @@ const useCozyDialog = props => {
     content, // eslint-disable-line no-unused-vars
     open,
     opened,
+    onBack,
     onClose,
     align,
+    disableTitleAutoPadding,
+    isFluidTitle,
     ...otherProps
   } = props
   const { isMobile } = useBreakpoints()
@@ -52,10 +56,18 @@ const useCozyDialog = props => {
     }
   }
 
+  const showCloseButton = !fullScreen && onClose
+  const showBackButton = onBack || (fullScreen && onClose) // back and close buttons are merged in fullScreen
+
   const dialogTitleProps = {
     id: `modal-title-${id}`,
     disableTypography: true,
-    className: 'u-ellipsis'
+    className: cx({
+      'u-ellipsis': !isFluidTitle,
+      dialogTitleFluid: isFluidTitle,
+      dialogTitleWithClose: showCloseButton && !disableTitleAutoPadding,
+      dialogTitleWithBack: showBackButton && !disableTitleAutoPadding
+    })
   }
 
   const listItemClassName = 'listItem--dialog'

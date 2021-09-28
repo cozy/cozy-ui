@@ -1,11 +1,14 @@
 export default {
   en: {
-    closeButton: 'Close'
+    closeButton: 'Close',
+    backButton: 'Back'
   },
   fr: {
-    closeButton: 'Fermer'
+    closeButton: 'Fermer',
+    backButton: 'Retour'
   },
   es: {
-    closeButton: 'Cerrar'
+    closeButton: 'Cerrar',
+    backButton: 'Atrás'
   }
 }

@@ -131,8 +131,7 @@ normalPalette.background = {
   selected: '#F5FAFF'
 }
 
-export const normalTheme = createMuiTheme({
-  typography: makeTypography(normalPalette),
+const themesCommonConfig = {
   shape: {
     borderRadius: defaultValues.borderRadius
   },
@@ -148,7 +147,6 @@ export const normalTheme = createMuiTheme({
   zIndex: {
     modal: getCssVariableValue('zIndex-modal')
   },
-  palette: normalPalette,
   props: {
     MuiTabs: {
       textColor: 'primary',
@@ -168,6 +166,12 @@ export const normalTheme = createMuiTheme({
     }
   },
   ...(isTesting() && { transitions: { create: () => 'none' } })
+}
+
+export const normalTheme = createMuiTheme({
+  ...themesCommonConfig,
+  typography: makeTypography(normalPalette),
+  palette: normalPalette
 })
 
 const makeOverrides = theme => ({
@@ -465,27 +469,27 @@ const makeOverrides = theme => ({
   MuiDialogTitle: {
     root: {
       ...theme.typography.h3,
-      width: 'calc(100% - (64px + 24px))', // remove padding and close button width + margin
-      padding: '24px 32px',
+      boxSizing: 'border-box',
+      width: '100%',
+      padding: '1.5rem 2rem',
       [theme.breakpoints.down('sm')]: {
         ...theme.typography.h4,
-        width: 'calc(100% - 32px)', // remove padding
-        padding: '13px 16px 12px'
+        padding: '0.75rem 1rem'
+      },
+      '&.dialogTitleWithBack': {
+        paddingLeft: '4rem', // padding base (2rem) + buttonWidth (1rem) + buttonMargin (1rem)
+        [theme.breakpoints.down('sm')]: {
+          paddingLeft: '3rem' // padding base (1rem) + buttonWidth (1rem) + buttonMargin (1rem)
+        }
+      },
+      '&.dialogTitleWithClose': {
+        paddingRight: '4rem', // padding base (2rem) + buttonWidth (1rem) + buttonMargin (1rem)
+        [theme.breakpoints.down('sm')]: {
+          paddingRight: '3rem' // padding base (1rem) + buttonWidth (1rem) + buttonMargin (1rem)
+        }
       },
       '&.dialogTitleFluid': {
-        width: '100%',
-        paddingTop: 0,
-        paddingLeft: 0,
-        paddingRight: 0,
-        [theme.breakpoints.down('sm')]: {
-          padding: '0 0 24px 0'
-        }
-      },
-      '&.dialogTitleFull': {
-        width: 'calc(100% - 64px)', // remove padding
-        [theme.breakpoints.down('sm')]: {
-          width: 'calc(100% - 32px)' // remove padding
-        }
+        paddingTop: 0
       }
     }
   },
@@ -500,6 +504,15 @@ const makeOverrides = theme => ({
         '&.withFluidActions': {
           [theme.breakpoints.down('sm')]: {
             marginBottom: '16px'
+          }
+        },
+        '& .dialogTitleFluidContainer': {
+          marginLeft: '-2rem',
+          marginRight: '-2rem',
+          [theme.breakpoints.down('sm')]: {
+            marginLeft: '-1rem',
+            marginRight: '-1rem',
+            marginTop: '-0.75rem'
           }
         }
       }
@@ -608,7 +621,13 @@ const makeOverrides = theme => ({
   },
   MuiIconButton: {
     root: {
-      color: theme.palette.text.secondary
+      color: theme.palette.text.secondary,
+      '&.dialogIconButton': {
+        backgroundColor: theme.palette.background.paper,
+        '&:hover': {
+          backgroundColor: theme.palette.background.selected
+        }
+      }
     }
   }
 })
@@ -682,10 +701,10 @@ invertedPalette.action = {
 
 const invertedTypography = makeTypography(invertedPalette)
 export const invertedTheme = createMuiTheme({
+  ...themesCommonConfig,
   palette: invertedPalette,
   typography: invertedTypography,
-  shadows,
-  ...(isTesting() && { transitions: { create: () => 'none' } })
+  shadows
 })
 
 invertedTheme.overrides = {
