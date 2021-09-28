@@ -1,3 +1,40 @@
+# [54.0.0](https://github.com/cozy/cozy-ui/compare/v53.0.0...v54.0.0) (2021-09-28)
+
+
+### Bug Fixes
+
+* Add missing config properties to inverted theme ([85c9026](https://github.com/cozy/cozy-ui/commit/85c9026))
+* Correctly override DialogTitle's className in `ContactsListModal` ([69e0fa6](https://github.com/cozy/cozy-ui/commit/69e0fa6))
+
+
+### Features
+
+* Add `isFluidTitle` prop to `useCozyDialog` ([2d4f8b7](https://github.com/cozy/cozy-ui/commit/2d4f8b7))
+* Add plain background to dialogs buttons ([82a4b78](https://github.com/cozy/cozy-ui/commit/82a4b78))
+* Add tests for Dialog ([ec468db](https://github.com/cozy/cozy-ui/commit/ec468db))
+* Handle `onBack` prop on CozyDialogs ([eb86578](https://github.com/cozy/cozy-ui/commit/eb86578))
+* Rework CozyDialogs style to fit latest UI specs ([8ff3766](https://github.com/cozy/cozy-ui/commit/8ff3766))
+* Set DialogBackButton's position to absolute ([98fe795](https://github.com/cozy/cozy-ui/commit/98fe795))
+
+
+### BREAKING CHANGES
+
+* `<DialogBackButton>` is now using absolute positioning. To prevent
+`<DialogTitle>` to overlap with this button, `useCozyDialog()` handles
+its positioning with `dialogTitleProps`.
+If you use `cozy-ui/transpiled/react/Dialog` with `useCozyDialog()` but
+without `<DialogBackButton>` then you may be impacted as a left margin
+will be applied on `<DialogTitle>` on mobile, which would leave a blank
+space if no `<DialogBackButton>` is present.
+In this case, please add `disableTitleAutoPadding` to
+`useCozyDialog()` props. Then title will take all available space and
+you will be able to handle its positionning by yourself.
+```js
+const {
+  dialogTitleProps
+} = useCozyDialog({ ...props, disableTitleAutoPadding: true })
+```
+
 # [53.0.0](https://github.com/cozy/cozy-ui/compare/v52.0.1...v53.0.0) (2021-09-28)
 
 
