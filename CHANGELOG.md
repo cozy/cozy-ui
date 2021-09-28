@@ -1,3 +1,27 @@
+# [53.0.0](https://github.com/cozy/cozy-ui/compare/v52.0.1...v53.0.0) (2021-09-28)
+
+
+### Features
+
+* Remove layout prop ([e78fe34](https://github.com/cozy/cozy-ui/commit/e78fe34))
+
+
+### BREAKING CHANGES
+
+* Deleting the layout prop & mobile style associated
+
+    - If you were not using the `layout` prop or if it was set to `true` on the `Empty` component, to get the previous centering, then you will need to add the following style on the `Empty` component:
+    ```styl
+    @require 'settings/breakpoints'
+
+    +small-screen()
+        margin-top: calc(50vh - 6rem);
+        transform: translateY(-50%);
+
+    ```
+
+    - If you were using the `layout` prop at `false`, you can simply delete the prop that is no longer needed
+
 ## [52.0.1](https://github.com/cozy/cozy-ui/compare/v52.0.0...v52.0.1) (2021-09-24)
 
 
