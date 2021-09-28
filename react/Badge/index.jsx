@@ -9,9 +9,6 @@ const MEDIUM_BADGE = '1.125rem'
 const SMALL_BADGE = '1rem'
 
 const useStyles = makeStyles({
-  badge: {
-    padding: 0
-  },
   top: {
     top: '16%'
   },
@@ -60,10 +57,8 @@ const useStyles = makeStyles({
   }
 })
 
-const Badge = ({ anchorOrigin, size, ...props }) => {
-  const classes = useStyles(props)
+const Badge = ({ classes={}, anchorOrigin, size, ...props }) => {
   const {
-    badge,
     top,
     bottom,
     left,
@@ -71,9 +66,10 @@ const Badge = ({ anchorOrigin, size, ...props }) => {
     large,
     medium,
     small,
-    dot,
-    ...customClasses
-  } = classes
+    dot
+  } = useStyles(props)
+
+  const { badge: customBadge, ...customClasses } = classes
 
   const verticalClasses = { top, bottom }
   const horizontalClasses = { left, right }
@@ -84,10 +80,10 @@ const Badge = ({ anchorOrigin, size, ...props }) => {
       classes={{
         dot,
         badge: cx(
-          badge,
           verticalClasses[anchorOrigin.vertical],
           horizontalClasses[anchorOrigin.horizontal],
-          sizeClasses[size]
+          sizeClasses[size],
+          customBadge
         ),
         ...customClasses
       }}
