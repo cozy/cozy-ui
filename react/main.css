@@ -12756,14 +12756,26 @@ html,
 
 .DialogCloseButton--cxKPO {
   position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
+  top: 1.15rem;
+  right: 1.15rem;
   z-index: var(--zIndex-modal);
 }
 @media (max-width: 48rem) {
   .DialogCloseButton--cxKPO {
     top: 0.25rem;
     right: 0.25rem;
+  }
+}
+.DialogBackButton--1c7yH {
+  position: absolute;
+  top: 1.15rem;
+  left: 1.15rem;
+  z-index: var(--zIndex-modal);
+}
+@media (max-width: 48rem) {
+  .DialogBackButton--1c7yH {
+    top: 0.25rem;
+    left: 0.25rem;
   }
 }
 
