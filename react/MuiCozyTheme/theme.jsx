@@ -131,8 +131,7 @@ normalPalette.background = {
   selected: '#F5FAFF'
 }
 
-export const normalTheme = createMuiTheme({
-  typography: makeTypography(normalPalette),
+const themesCommonConfig = {
   shape: {
     borderRadius: defaultValues.borderRadius
   },
@@ -148,7 +147,6 @@ export const normalTheme = createMuiTheme({
   zIndex: {
     modal: getCssVariableValue('zIndex-modal')
   },
-  palette: normalPalette,
   props: {
     MuiTabs: {
       textColor: 'primary',
@@ -168,6 +166,12 @@ export const normalTheme = createMuiTheme({
     }
   },
   ...(isTesting() && { transitions: { create: () => 'none' } })
+}
+
+export const normalTheme = createMuiTheme({
+  ...themesCommonConfig,
+  typography: makeTypography(normalPalette),
+  palette: normalPalette
 })
 
 const makeOverrides = theme => ({
@@ -697,10 +701,10 @@ invertedPalette.action = {
 
 const invertedTypography = makeTypography(invertedPalette)
 export const invertedTheme = createMuiTheme({
+  ...themesCommonConfig,
   palette: invertedPalette,
   typography: invertedTypography,
-  shadows,
-  ...(isTesting() && { transitions: { create: () => 'none' } })
+  shadows
 })
 
 invertedTheme.overrides = {
