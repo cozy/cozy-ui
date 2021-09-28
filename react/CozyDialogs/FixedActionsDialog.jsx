@@ -17,7 +17,7 @@ const FixedActionsDialog = props => {
     fullScreen,
     id,
     dialogActionsProps
-  } = useCozyDialog(props)
+  } = useCozyDialog({ ...props, isFluidTitle: true })
 
   const onBackOrClose = onBack || onClose
 
@@ -44,14 +44,7 @@ const FixedActionsDialog = props => {
       <DialogContent>
         <div className="dialogContentInner">
           <div className="dialogTitleFluidContainer">
-            <DialogTitle
-              {...dialogTitleProps}
-              className={cx(dialogTitleProps.className, 'dialogTitleFluid', {
-                'u-ellipsis': false
-              })}
-            >
-              {title}
-            </DialogTitle>
+            <DialogTitle {...dialogTitleProps}>{title}</DialogTitle>
           </div>
           {content}
         </div>

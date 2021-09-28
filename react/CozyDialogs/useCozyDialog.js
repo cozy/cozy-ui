@@ -26,6 +26,7 @@ const useCozyDialog = props => {
     onClose,
     align,
     disableTitleAutoPadding,
+    isFluidTitle,
     ...otherProps
   } = props
   const { isMobile } = useBreakpoints()
@@ -62,7 +63,8 @@ const useCozyDialog = props => {
     id: `modal-title-${id}`,
     disableTypography: true,
     className: cx({
-      'u-ellipsis': true,
+      'u-ellipsis': !isFluidTitle,
+      dialogTitleFluid: isFluidTitle,
       dialogTitleWithClose: showCloseButton && !disableTitleAutoPadding,
       dialogTitleWithBack: showBackButton && !disableTitleAutoPadding
     })
