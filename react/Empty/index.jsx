@@ -4,9 +4,6 @@ import PropTypes from 'prop-types'
 import Icon, { iconPropType } from '../Icon'
 import styles from './styles.styl'
 import Typography from '../Typography'
-import createDepreciationLogger from '../helpers/createDepreciationLogger'
-
-const depreciationLogger = createDepreciationLogger()
 
 export const Empty = ({
   icon,
@@ -15,25 +12,10 @@ export const Empty = ({
   text,
   children,
   className,
-  layout,
   ...restProps
 }) => {
-  if (layout) {
-    depreciationLogger(`Please add layout=false in the props of the Empty component, and implement the vertical
-    centering with a custom layout component. The use of Empty without layout=false is deprecated.`)
-  }
-
   return (
-    <div
-      className={cx(
-        {
-          [styles['c-empty']]: layout,
-          [styles['c-empty-container']]: !layout
-        },
-        className
-      )}
-      {...restProps}
-    >
+    <div className={cx(styles['c-empty'], className)} {...restProps}>
       {icon && (
         <Icon
           className={cx(styles['c-empty-img'], {
@@ -59,14 +41,11 @@ Empty.propTypes = {
   iconSize: PropTypes.oneOf(['normal', 'medium', 'large']),
   title: PropTypes.node.isRequired,
   text: PropTypes.node,
-  className: PropTypes.string,
-  /** Added vertical centering (only Mobile) */
-  layout: PropTypes.bool
+  className: PropTypes.string
 }
 
 Empty.defaultProps = {
-  iconSize: 'normal',
-  layout: true
+  iconSize: 'normal'
 }
 
 export const EmptySubTitle = ({ ...restProps }) => (

@@ -1,8 +1,5 @@
 @require '../settings/breakpoints'
 @require '../tools/mixins'
-@require '../objects/layouts'
-
-contentHeight = barHeight + navHeight
 
 $empty
     display flex
@@ -13,10 +10,6 @@ $empty
     padding rem(16) 0
     text-align center
     max-width 100%
-
-    +medium-screen()
-        margin-top 'calc(50vh - %s)' % contentHeight
-        transform translateY(-50%)
 
 $empty-img
     display block
@@ -50,7 +43,7 @@ $empty-title
 $empty-text
     margin rem(5) auto 0
     max-width rem(1008)
-    color var(--coolGrey)
+    color var(--secondaryTextColor)
     line-height 1.5
 
     +medium-screen()
