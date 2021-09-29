@@ -14,21 +14,43 @@ import Variants from 'cozy-ui/docs/components/Variants';
 import CircleFilledIcon from "cozy-ui/transpiled/react/Icons/CircleFilled";
 
 const initialVariants = [
-  { error: false, dot: false, large: false, small: false },
-  { error: true, dot: true, large: false, small: false },
-  { error: false, dot: false, large: false, small: false },
+  { error: false, dot: false, large: false, small: false, withBorder: false },
+  { error: true, dot: true, large: false, small: false, withBorder: true },
+  { error: false, dot: false, large: false, small: false, withBorder: false },
 ];
 
+testingProps = [
+  { color: 'primary', variant: 'standard', size: 'small', vertical: 'top', horizontal: 'left', withBorder: false},
+  { color: 'secondary', variant: 'dot', size: 'medium', vertical: 'bottom', horizontal: 'right', withBorder: true},
+  { color: 'error', variant: 'standard', size: 'large', vertical: 'top', horizontal: 'left', withBorder: false},
+  { color: 'secondary', variant: 'dot', size: 'small', vertical: 'top', horizontal: 'right', withBorder: true},
+  { color: 'error', variant: 'standard', size: 'medium', vertical: 'bottom', horizontal: 'left', withBorder: false},
+  { color: 'primary', variant: 'dot', size: 'large', vertical: 'top', horizontal: 'right', withBorder: true}
+];
 
-<Variants initialVariants={initialVariants}>{
+<>
+  {isTesting()
+    ? <>
+        {testingProps.map(({color, variant, size, vertical, horizontal, withBorder}) =>
+          <p>
+            <h5>color = {color}, variant = {variant}, size = {size}, vertical = {vertical}, horizontal = {horizontal}, withBorder = {withBorder.toString()}</h5>
+            <Badge badgeContent={4} color={color} variant={variant} size={size} anchorOrigin={{vertical, horizontal}} withBorder={withBorder}>
+              <Icon icon={CircleFilledIcon} size={size === 'large' ? '32' : size === 'small' ? '16' : '24'} color="var(--slateGrey)" />
+            </Badge>
+          </p>
+        )}
+  </>
+  : <Variants initialVariants={initialVariants}>{
   variant => (
     <p>
-      <Badge badgeContent={4} color={variant.error ? 'error' : variant.secondaryColor ? 'secondary' : 'primary'} variant={variant.dot ? 'dot' : 'standard'} size={variant.large ? 'large' : variant.small ? 'small' : 'medium'} anchorOrigin={{vertical: variant.bottom ? 'bottom' : 'top', 'horizontal': variant.left ? 'left' : 'right'}}>
+      <Badge badgeContent={4} color={variant.error ? 'error' : variant.secondaryColor ? 'secondary' : 'primary'} variant={variant.dot ? 'dot' : 'standard'} size={variant.large ? 'large' : variant.small ? 'small' : 'medium'} anchorOrigin={{vertical: variant.bottom ? 'bottom' : 'top', 'horizontal': variant.left ? 'left' : 'right'}} withBorder={variant.withBorder}>
         <Icon icon={CircleFilledIcon} size={variant.large ? '32' : variant.small ? '16' : '24'} color="var(--slateGrey)" />
       </Badge>
     </p>
   )
 }</Variants>
+}
+</>
 ```
 
 ### Double badges
