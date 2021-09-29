@@ -1,3 +1,15 @@
+# [54.1.0](https://github.com/cozy/cozy-ui/compare/v54.0.0...v54.1.0) (2021-09-29)
+
+
+### Bug Fixes
+
+* Allow badge class to be extended ([ec2f6d5](https://github.com/cozy/cozy-ui/commit/ec2f6d5))
+
+
+### Features
+
+* Add withBorder prop ([87339a2](https://github.com/cozy/cozy-ui/commit/87339a2))
+
 # [54.0.0](https://github.com/cozy/cozy-ui/compare/v53.0.0...v54.0.0) (2021-09-28)
 
 
