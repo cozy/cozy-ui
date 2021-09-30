@@ -19,7 +19,7 @@
   "scripts": {
     "argos:upload": "argos upload",
     "stylus-build": "stylus -c --include stylus  --use ./node_modules/autoprefixer-stylus",
-    "build:css:all": "yarn build:css && yarn build:css:utils",
+    "build:css:all": "yarn build:css && yarn build:css:utils && yarn run removeEmptyCss",
     "build:css": "env CSSMODULES=false yarn run stylus-build -o dist/cozy-ui.min.css stylus/cozy-ui/build.styl",
     "build:css:utils": "env CSSMODULES=false yarn run stylus-build -o dist/cozy-ui.utils.min.css stylus/cozy-ui/utils.styl",
     "build:css:kss": "env CSSMODULES=false yarn run stylus-build -o build/styleguide/app.css stylus/cozy-ui/build.styl",
@@ -58,7 +58,8 @@
     "prestart:doc": "yarn sprite",
     "start:doc": "env BUILD_ENV=watch-styleguidist styleguidist server --config docs/styleguide.config.js",
     "start:doc:kss": "nodemon --ext styl,md --watch stylus --exec 'yarn build:doc:kss && http-server build/styleguide -p 4242'",
-    "start": "yarn build --watch"
+    "start": "yarn build --watch",
+    "removeEmptyCss": "node scripts/removeEmptyCss.js"
   },
   "sideEffects": [
     "*.css",
@@ -129,6 +130,7 @@
     "remark-cli": "^8.0.1",
     "remark-jscodeshift": "^1.1.0",
     "remark-preset-lint-recommended": "^4.0.1",
+    "replace-in-file": "^6.2.0",
     "semantic-release": "17.3.7",
     "style-loader": "0.23.1",
     "stylint": "1.5.9",
