@@ -4846,17 +4846,17 @@ cosmiconfig@^7.0.0:
     path-type "^4.0.0"
     yaml "^1.10.0"
 
-cozy-client@^18.1.2:
-  version "18.1.2"
-  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-18.1.2.tgz#cffb75a1e05fcd844b4d07735b61beb53d0ff960"
-  integrity sha512-68QE1kF26I8IJscH4UqZ2G8AAawfSiqaqFFOgQsXrwivaVTr+ztaswwJv13N44VGHhmFfBCAzKp5nVm50zB3uA==
+cozy-client@18.1.3:
+  version "18.1.3"
+  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-18.1.3.tgz#096644db6044cd3631181d959aa4937624efafda"
+  integrity sha512-X0Q22FA2XuzauFE2qairTMV3au+GcfaEuhtLXMhs/TmefPMfMo2tC0/ho+7Qfza2CjZd/XcJyY7nttwIo5C1Bw==
   dependencies:
     "@cozy/minilog" "1.0.0"
     "@types/jest" "^26.0.20"
     btoa "^1.2.1"
     cozy-device-helper "^1.7.3"
     cozy-logger "^1.6.0"
-    cozy-stack-client "^18.0.0"
+    cozy-stack-client "^18.1.3"
     lodash "^4.17.13"
     microee "^0.0.6"
     node-fetch "^2.6.1"
@@ -4888,10 +4888,10 @@ cozy-doctypes@^1.69.0:
     lodash "4.17.15"
     prop-types "^15.7.2"
 
-cozy-flags@^2.5.0:
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/cozy-flags/-/cozy-flags-2.5.3.tgz#5f9748bc6b9d4b378b5cef1b801716f26c0f2cf3"
-  integrity sha512-ZZ2dSUbR+pUOh/vjTk0iJxJ7EKwBDxkSVDFgrQmSuyEw8q3QflqG/SxwElAlwz5IXz/h5hM4eix9ya18MsPMoQ==
+cozy-flags@^2.5.4:
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/cozy-flags/-/cozy-flags-2.7.2.tgz#eb0138c7538a1be3eaf94c28358075208f43351a"
+  integrity sha512-ZGuuVTiZXVlCEQ+ZWlpyCna4xb50qcgDMR7IuLd0n4O2XkUCkND6awjepGqq4F1/EE/ydZb4Zj2JGcLjUluxuQ==
   dependencies:
     microee "^0.0.6"
 
@@ -4908,12 +4908,12 @@ cozy-logger@^1.6.0:
     chalk "^2.4.2"
     json-stringify-safe "5.0.1"
 
-cozy-stack-client@^18.0.0:
-  version "18.0.0"
-  resolved "https://registry.yarnpkg.com/cozy-stack-client/-/cozy-stack-client-18.0.0.tgz#283bf6938d31eabbea9e29cd43b0b0b20f9b6db7"
-  integrity sha512-IPSOgO2t6eHU+zxJ3fvtJ4UYh5ueIuyPcShp9RmxuIzLQLZCU6gO2shHcK1jMi+1dBD48EgO44sEh8g8gU54zg==
+cozy-stack-client@^18.1.3:
+  version "18.1.3"
+  resolved "https://registry.yarnpkg.com/cozy-stack-client/-/cozy-stack-client-18.1.3.tgz#92a8ca604d6c9cd62087f98780005b93db61cfbe"
+  integrity sha512-o3hGAsruH/olNv2UB4r22qL2ljQx/1YPptyjJbKNJ/YUQQ5bezFZiUVeIuFAeVdaS4movfkgVi2JNlVGhVPh8A==
   dependencies:
-    cozy-flags "^2.5.0"
+    cozy-flags "^2.5.4"
     detect-node "^2.0.4"
     mime "^2.4.0"
     qs "^6.7.0"
