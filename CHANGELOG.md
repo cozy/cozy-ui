@@ -1,3 +1,10 @@
+## [54.1.1](https://github.com/cozy/cozy-ui/compare/v54.1.0...v54.1.1) (2021-09-30)
+
+
+### Bug Fixes
+
+* Add scripts to remove empty blocks ([8e5b3f5](https://github.com/cozy/cozy-ui/commit/8e5b3f5))
+
 # [54.1.0](https://github.com/cozy/cozy-ui/compare/v54.0.0...v54.1.0) (2021-09-29)
 
 
