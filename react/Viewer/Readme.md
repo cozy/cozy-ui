@@ -4,12 +4,20 @@ Once rendered, the `Viewer` will take up all the available space in it's contain
 
 The `Viewer` can display an **information panel** to show additional information about the current file (e.g. whether a file is certified).
 
+:warning: Important :
+- To have the panels, the app need to have [cozy-harvest-lib](https://github.com/cozy/cozy-libs/tree/master/packages/cozy-harvest-lib) installed
+
+- To have a working footer, the app need to have a [CozySharing Provider](https://github.com/cozy/cozy-libs/tree/master/packages/cozy-sharing).
+
+- If the footer will be used on MobileApp, the app should have this Cordova plugin [4db7f8f#diff-8c7901258747b81ed60cc2d9cbb254344fae11f8a602e56c1ae42d9eef11d318R50](https://github.com/cozy/cozy-ui/commit/4db7f8fba866bffe04d81d42c716a8dea5c50157#diff-8c7901258747b81ed60cc2d9cbb254344fae11f8a602e56c1ae42d9eef11d318R50)
+
 ```jsx
 import { makeStyles } from '@material-ui/core/styles';
+import cx from 'classnames';
 import Variants from 'cozy-ui/docs/components/Variants';
 import Card from 'cozy-ui/transpiled/react/Card';
 import Checkbox from 'cozy-ui/transpiled/react/Checkbox';
-import Viewer from 'cozy-ui/transpiled/react/Viewer';
+import { ViewerWithCustomPanelAndFooter as Viewer } from 'cozy-ui/transpiled/react/Viewer';
 import Stack from 'cozy-ui/transpiled/react/Stack';
 import Paper from 'cozy-ui/transpiled/react/Paper';
 import Typography from 'cozy-ui/transpiled/react/Typography';
@@ -22,6 +30,9 @@ import Overlay from 'cozy-ui/transpiled/react/Overlay';
 import Button from 'cozy-ui/transpiled/react/Button';
 import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download';
 import ShareIcon from 'cozy-ui/transpiled/react/Icons/Share';
+import BottomSheetWrapper from 'cozy-ui/transpiled/react/Viewer/Footer/BottomSheetWrapper';
+import { isValidForPanel } from 'cozy-ui/transpiled/react/Viewer/helpers';
+import getPanelBlocks, { panelBlocksSpecs } from 'cozy-ui/transpiled/react/Viewer/Panel/getPanelBlocks';
 
 // We provide a collection of (fake) io.cozy.files to be rendered
 const files = [
@@ -44,6 +55,9 @@ const files = [
     mime: 'application/pdf',
     links: {
       preview: 'https://viewerdemo.cozycloud.cc/IMG_0062.PNG'
+    },
+    metadata: {
+      carbonCopy: true
     }
   },
   {
@@ -128,8 +142,52 @@ const useStyles = makeStyles({
   }
 });
 
-const FooterContent = () => {
+const FooterContent = ({ file, toolbarRef }) => {
   const styles = useStyles()
+  const actionButtonsRef = React.useRef()
+  const panelBlocks = getPanelBlocks({ panelBlocksSpecs, file })
+
+  if (isValidForPanel({ file })) {
+    return (
+      <BottomSheetWrapper
+        file={file}
+        actionButtonsRef={actionButtonsRef}
+        toolbarRef={toolbarRef}
+      >
+        <Stack
+          spacing="s"
+          className={cx('u-flex u-flex-column u-ov-hidden', styles.stack)}
+        >
+          <Paper className={'u-flex u-ph-1 u-pb-1'} elevation={2} square ref={actionButtonsRef}>
+            <Button
+              className="u-mr-half"
+              extension="full"
+              theme="secondary"
+              icon={ShareIcon}
+              label="Share"
+            />
+            <Button
+              extension="full"
+              theme="secondary"
+              icon={DownloadIcon}
+              label="Download"
+            />
+          </Paper>
+          {panelBlocks.map((PanelBlock, index) => (
+            <Paper
+              key={index}
+              elevation={index === panelBlocks.length - 1 ? 0 : 2}
+              square
+            >
+              <Typography variant="h4">
+                <PanelBlock file={file} />
+              </Typography>
+            </Paper>
+          ))}
+        </Stack>
+      </BottomSheetWrapper>
+    )
+  }
 
   return (
     <div className={styles.footer}>
@@ -148,7 +206,7 @@ const FooterContent = () => {
       />
     </div>
   )
-};
+}
 
 <DemoProvider>
   <Variants initialVariants={initialVariants}>{
@@ -183,7 +241,7 @@ const FooterContent = () => {
                   showClose: state.showToolbarCloseButton
                 }}
                 panelInfoProps={{
-                  showPanel: ({ file }) => file.class === "pdf" || file.class === "audio",
+                  showPanel: isValidForPanel,
                   PanelContent
                 }}
                 footerProps={{

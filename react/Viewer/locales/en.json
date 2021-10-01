@@ -1,20 +1,47 @@
 {
   "Viewer": {
-    "download": "Download",
-    "openWith": "Open with...",
-    "openInOnlyOffice": "Open with Only Office",
-    "retry": "Retry",
-    "error": {
-      "network": "This file could not be loaded. Do you have a working internet connection right now?",
-      "noapp": "No application on your device can open this file with mime type: %{fileMime} ",
-      "missing": "This file is missing",
-      "offline": "You should be connected to open this file"
+    "actions": {
+      "download": "Download",
+      "forward": "Forward"
+    },
+    "alert": {
+      "preparing": "Preparing your files…"
     },
     "close": "close",
+    "download": "Download",
+    "error": {
+      "downloadFile": {
+        "offline": "You should be connected to download this file"
+      },
+      "generic": "An error occurred when opening this file, please try again.",
+      "missing": "This file is missing",
+      "network": "This file could not be loaded. Do you have a working internet connection right now?",
+      "noapp": "No application on your device can open this file with mime type: %{fileMime} ",
+      "offline": "You should be connected to open this file"
+    },
     "goto": "Go to %{url}",
     "next": "Next",
+    "openWith": "Open with...",
+    "openInOnlyOffice": "Open with Only Office",
+    "panel": {
+      "certifications": {
+        "carbonCopy": {
+          "title": "Carbon Copy",
+          "caption": "Indicates whether the document is defined as \"authentic and original\" by Cozy Cloud, the host of your Cozy, as it can claim that it comes directly from a third-party service, without having undergone any modification."
+        },
+        "electronicSafe": {
+          "title": "Electronic Safe",
+          "caption": "Indicates whether the original document is secured by your personal digital safe with the certifications that give it probative value and a 50-year retention guarantee beyond its deposit."
+        }
+      },
+      "title": "Useful information"
+    },
     "previous": "Previous",
+    "retry": "Retry",
     "scaledown": "Zoom out",
-    "scaleup": "Zoom in"
+    "scaleup": "Zoom in",
+    "share": {
+      "success": "Your file has been shared with success"
+    }
   }
 }

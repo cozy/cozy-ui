@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { CozyProvider } from 'cozy-client'
+import { BreakpointsProvider } from '../../hooks/useBreakpoints'
 
 import { I18nContext } from '../../I18n'
 
@@ -47,9 +48,11 @@ class Wrapper extends React.Component {
   render() {
     return (
       <CozyProvider client={mockClient}>
-        <I18nContext.Provider value={{ t: x => x, lang: 'en' }}>
-          {this.props.children}
-        </I18nContext.Provider>
+        <BreakpointsProvider>
+          <I18nContext.Provider value={{ t: x => x, lang: 'en' }}>
+            {this.props.children}
+          </I18nContext.Provider>
+        </BreakpointsProvider>
       </CozyProvider>
     )
   }
