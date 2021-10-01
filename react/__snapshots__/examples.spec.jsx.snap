@@ -8126,51 +8126,8 @@ exports[`Viewer should render examples: Viewer 1`] = `
     <div class=\\"MuiTypography-root u-db MuiTypography-button\\">onlyOfficeEnabled<input class=\\"u-ml-1 u-mr-1\\" type=\\"checkbox\\" checked=\\"\\"></div>
   </div>
   <div class=\\"styles__c-card___YgP7B u-mb-1\\">
-    <div class=\\"u-dib u-mr-1\\">Toolbar props :</div><label class=\\"MuiFormControlLabel-root u-dib\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-37 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-38 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-40\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">Close</span></label>
+    <div class=\\"u-dib u-mr-1\\">Toolbar props :</div><label class=\\"MuiFormControlLabel-root u-dib\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-37 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-40\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">Close</span></label>
   </div><button>Open viewer</button>
-  <div class=\\"styles__c-overlay___31iWd\\">
-    <div>
-      <div id=\\"viewer-wrapper\\" class=\\"styles__viewer-wrapper___2GIXH\\">
-        <div class=\\"styles__viewer-controls___2j5Xl withBreakpoints(ViewerControls)-viewerControlsWithInfo-58\\" style=\\"user-select: none; webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\\">
-          <div data-testid=\\"viewer-toolbar\\" class=\\"styles__viewer-toolbar___27_8W\\"><button class=\\"MuiButtonBase-root MuiIconButton-root makeStyles-iconButton-59 u-white\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path d=\\"M3.414 7h11.58C15.548 7 16 7.444 16 8c0 .552-.45 1-1.007 1H3.414l5.293 5.293a1 1 0 01-1.414 1.414l-7-7a1 1 0 010-1.414l7-7a1 1 0 111.414 1.414L3.414 7z\\" fill-rule=\\"evenodd\\"></path></svg></span></button>
-            <h3 class=\\"MuiTypography-root u-pl-half MuiTypography-h3 MuiTypography-colorInherit MuiTypography-noWrap\\">Sample.mp3</h3>
-            <div class=\\"u-ml-auto u-ph-1\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh u-white\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path></svg><span>Download</span></span></button></div>
-          </div>
-          <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--middle___RwyII styles__c-spinner--nomargin___13JyW\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: white;\\" width=\\"80\\" height=\\"80\\" role=\\"progressbar\\" aria-busy=\\"true\\">
-              <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
-              <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-            </svg></div>
-          <div role=\\"button\\" class=\\"styles__viewer-nav--next___1aavz styles__viewer-nav___qsl4h styles__viewer-nav--visible___13A7g\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__viewer-nav-arrow___1X0Jq styles__icon___23x3R\\" width=\\"32\\" height=\\"32\\">
-              <path fill-rule=\\"evenodd\\" d=\\"M0 8c0-4.416 3.584-8 8-8s8 3.584 8 8-3.584 8-8 8-8-3.584-8-8zm6.293 2.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 00-1.414 1.414L8.586 8l-2.293 2.293z\\"></path>
-            </svg></div>
-        </div>
-        <div class=\\"MuiDrawer-root MuiDrawer-docked InformationPanel-drawer-60\\">
-          <div class=\\"MuiPaper-root MuiDrawer-paper InformationPanel-drawerPaper-61 MuiDrawer-paperAnchorRight MuiDrawer-paperAnchorDockedRight MuiPaper-elevation0\\">
-            <div class=\\"u-flex u-flex-column u-h-100 styles__Stack--s___22WMg\\">
-              <div class=\\"MuiPaper-root u-ph-2 u-flex u-flex-items-center u-h-3 MuiPaper-elevation2\\">
-                <h4 class=\\"MuiTypography-root MuiTypography-h4\\">Informations utiles</h4>
-              </div>
-              <div class=\\"MuiPaper-root u-ph-2 u-pv-1-half MuiPaper-elevation2\\">
-                <p class=\\"MuiTypography-root MuiTypography-body1\\">Titre du fichier : Sample.mp3</p>
-              </div>
-              <div class=\\"MuiPaper-root u-ph-2 u-pv-1-half u-flex-grow-1 MuiPaper-elevation2\\">
-                <h4 class=\\"MuiTypography-root MuiTypography-h4\\">
-                  <div class=\\"styles__media___cSJMp u-mb-half\\">
-                    <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-mr-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-                        <path fill-rule=\\"evenodd\\" d=\\"M5.58 1.38a2.8 2.8 0 014.83-.02l.1.18.03.06h.07a2.8 2.8 0 012.93 2.29l.02.17.02.17a2.8 2.8 0 01-.36 1.54l-.1.17-.04.06.13.22a2.8 2.8 0 01-.6 3.5l-.14.12-.15.1c-.4.26-.85.42-1.32.46v5.3a.3.3 0 01-.48.23L8 14l-2.52 1.93a.3.3 0 01-.48-.24v-5.3a2.8 2.8 0 01-2.53-2.27l-.03-.18-.02-.17a2.8 2.8 0 01.36-1.53l.1-.18.04-.06-.04-.06a2.8 2.8 0 01.5-3.66l.15-.12.15-.1c.45-.3.97-.46 1.5-.47h.2l.08.01.12-.22zm2.78.7a.8.8 0 00-1.02.26l-.06.1-.62 1.24-1.4-.08a.8.8 0 00-.76 1.14l.05.1L5.32 6l-.77 1.16a.8.8 0 00.62 1.24h.1l1.39-.08.62 1.25a.8.8 0 00.6.43h.25a.8.8 0 00.53-.33l.06-.1.62-1.25 1.4.08a.8.8 0 00.76-1.14l-.05-.1L10.68 6l.77-1.16a.8.8 0 00-.62-1.24h-.1l-1.39.08-.62-1.25a.8.8 0 00-.36-.36z\\"></path>
-                      </svg></div>
-                    <div class=\\"styles__bd___1Uv-F\\">
-                      <p class=\\"MuiTypography-root MuiTypography-body1\\">Copie conforme</p>
-                    </div>
-                  </div><span class=\\"MuiTypography-root MuiTypography-caption\\">Ce document a été fourni par Grand Lyon. Il est défini “authentique et original” par Cozy Cloud, hébergeur de votre Cozy, car il peut affirmer qu'il provient directement du service du Grand Lyon, sans qu’il n’ait subit aucune modification.</span>
-                </h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>"
 `;
 

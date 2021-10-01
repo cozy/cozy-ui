@@ -1,7 +1,7 @@
 import React, { Component, createRef } from 'react'
 import PropTypes from 'prop-types'
 
-import withBreakpoints from '../helpers/withBreakpoints'
+import useBreakpoints from '../hooks/useBreakpoints'
 import { FileDoctype } from '../proptypes'
 
 import ViewerWrapper from './ViewerWrapper'
@@ -9,6 +9,9 @@ import ViewerControls from './ViewerControls'
 import InformationPanel from './InformationPanel'
 import Footer from './Footer'
 import ViewerByFile from './ViewerByFile'
+import { isValidForPanel } from './helpers'
+import PanelContent from './Panel/PanelContent'
+import FooterContent from './Footer/FooterContent'
 
 const KEY_CODE_LEFT = 37
 const KEY_CODE_RIGHT = 39
@@ -17,7 +20,6 @@ const KEY_CODE_ESCAPE = 27
 export class Viewer extends Component {
   constructor() {
     super()
-    this.toolbarRef = createRef()
   }
   componentDidMount() {
     document.addEventListener('keyup', this.onKeyUp, false)
@@ -67,31 +69,22 @@ export class Viewer extends Component {
 
   render() {
     const {
-      files,
-      className,
-      currentIndex,
+      currentFile,
+      hasPrevious,
+      hasNext,
       toolbarProps,
-      panelInfoProps,
+      toolbarRef,
       showNavigation,
-      breakpoints: { isDesktop },
-      footerProps,
       renderFallbackExtraContent,
+      validForPanel,
       onlyOfficeProps
     } = this.props
 
-    const currentFile = files[currentIndex]
-    const fileCount = files.length
-    const hasPrevious = currentIndex > 0
-    const hasNext = currentIndex < fileCount - 1
     // this `expanded` property makes the next/previous controls cover the displayed image
     const expanded = currentFile && currentFile.class === 'image'
-    const showInfoPanel =
-      isDesktop &&
-      panelInfoProps &&
-      panelInfoProps.showPanel({ file: currentFile })
 
     return (
-      <ViewerWrapper className={className}>
+      <>
         <ViewerControls
           file={currentFile}
           onClose={this.onClose}
@@ -100,9 +93,9 @@ export class Viewer extends Component {
           onPrevious={this.onPrevious}
           onNext={this.onNext}
           expanded={expanded}
-          toolbarProps={{ ...toolbarProps, toolbarRef: this.toolbarRef }}
+          toolbarProps={{ ...toolbarProps, toolbarRef }}
           showNavigation={showNavigation}
-          showInfoPanel={showInfoPanel}
+          showInfoPanel={validForPanel}
         >
           <ViewerByFile
             file={currentFile}
@@ -111,20 +104,7 @@ export class Viewer extends Component {
             onlyOfficeProps={onlyOfficeProps}
           />
         </ViewerControls>
-        {footerProps && (
-          <Footer>
-            <footerProps.FooterContent
-              file={currentFile}
-              toolbarRef={this.toolbarRef}
-            />
-          </Footer>
-        )}
-        {showInfoPanel && (
-          <InformationPanel>
-            <panelInfoProps.PanelContent file={currentFile} />
-          </InformationPanel>
-        )}
-      </ViewerWrapper>
+      </>
     )
   }
 }
@@ -138,6 +118,92 @@ export const toolbarPropsPropType = {
 }
 
 Viewer.propTypes = {
+  /** One `io.cozy.files` to display */
+  currentFile: PropTypes.shape(FileDoctype).isRequired,
+  hasNext: PropTypes.bool,
+  hasPrevious: PropTypes.bool,
+  /** Called when the user wants to leave the Viewer */
+  onCloseRequest: PropTypes.func,
+  /** Called with (nextFile, nextIndex) when the user requests to navigate to another file */
+  onChangeRequest: PropTypes.func,
+  toolbarProps: PropTypes.shape(toolbarPropsPropType),
+  toolbarRef: PropTypes.object,
+  /** Whether to show left and right arrows to navigate between files */
+  showNavigation: PropTypes.bool,
+  /** A render prop that is called when a file can't be displayed */
+  renderFallbackExtraContent: PropTypes.func,
+  /** Used to open an Only Office file */
+  onlyOfficeProps: PropTypes.shape({
+    /** Whether Only Office is enabled on the server */
+    isEnabled: PropTypes.bool,
+    /** To open the Only Office file */
+    opener: PropTypes.func
+  }),
+  validForPanel: PropTypes.bool
+}
+
+const ViewerInformationsWrapper = ({
+  currentFile,
+  disableFooter,
+  validForPanel,
+  toolbarRef
+}) => {
+  return (
+    <>
+      {!disableFooter && (
+        <Footer>
+          <FooterContent file={currentFile} toolbarRef={toolbarRef} />
+        </Footer>
+      )}
+      {validForPanel && (
+        <InformationPanel>
+          <PanelContent file={currentFile} />
+        </InformationPanel>
+      )}
+    </>
+  )
+}
+
+ViewerInformationsWrapper.propTypes = {
+  currentFile: PropTypes.shape(FileDoctype).isRequired,
+  disableFooter: PropTypes.bool,
+  validForPanel: PropTypes.bool,
+  toolbarRef: PropTypes.object
+}
+
+export const ViewerContainer = props => {
+  const { className, disableFooter, disablePanel, ...rest } = props
+  const { currentIndex, files } = props
+  const toolbarRef = createRef()
+  const { isDesktop } = useBreakpoints()
+  const currentFile = files[currentIndex]
+  const fileCount = files.length
+  const hasPrevious = currentIndex > 0
+  const hasNext = currentIndex < fileCount - 1
+  const validForPanel =
+    isValidForPanel({ file: currentFile }) && isDesktop && !disablePanel
+
+  return (
+    <ViewerWrapper className={className}>
+      <Viewer
+        {...rest}
+        currentFile={currentFile}
+        hasPrevious={hasPrevious}
+        hasNext={hasNext}
+        validForPanel={validForPanel}
+        toolbarRef={toolbarRef}
+      />
+      <ViewerInformationsWrapper
+        disableFooter={disableFooter}
+        validForPanel={validForPanel}
+        currentFile={currentFile}
+        toolbarRef={toolbarRef}
+      />
+    </ViewerWrapper>
+  )
+}
+
+ViewerContainer.propTypes = {
   /** One or more `io.cozy.files` to display */
   files: PropTypes.arrayOf(FileDoctype).isRequired,
   /** Index of the file to show */
@@ -159,23 +225,58 @@ Viewer.propTypes = {
     /** To open the Only Office file */
     opener: PropTypes.func
   }),
-  panelInfoProps: PropTypes.shape({
-    /** Whether to show the panel containing more information about the file */
-    showPanel: PropTypes.func,
-    /** Content to be shown  */
-    PanelContent: PropTypes.func
-  }),
-  /** File actions on mobile (to share or download the file, for example) */
-  footerProps: PropTypes.shape({
-    footerContent: PropTypes.elementType
-  })
+  /** Show the panel containing more information about the file only on Desktop */
+  disablePanel: PropTypes.bool,
+  /** Show the panel containing more information about the file only on Phone & Tablet devices */
+  disableFooter: PropTypes.bool
 }
 
-Viewer.defaultProps = {
+ViewerContainer.defaultProps = {
   currentIndex: 0,
   toolbarProps: { showToolbar: true, showClose: true },
-  showNavigation: true,
-  panelInfoProps: { showPanel: () => false }
+  showNavigation: true
 }
 
-export default withBreakpoints()(Viewer)
+export const ViewerWithCustomPanelAndFooter = props => {
+  console.warn(
+    'Warning: Please do not use the "ViewerWithCustomPanelAndFooter" Component, replace it with the default export component'
+  )
+  const { footerProps, panelInfoProps, ...rest } = props
+  const { files, currentIndex } = props
+  const fileCount = files.length
+  const hasPrevious = currentIndex > 0
+  const hasNext = currentIndex < fileCount - 1
+  const { isDesktop } = useBreakpoints()
+  const toolbarRef = createRef()
+  const currentFile = files[currentIndex]
+
+  const showInfoPanel =
+    isDesktop &&
+    panelInfoProps &&
+    panelInfoProps.showPanel({ file: currentFile })
+
+  return (
+    <ViewerWrapper>
+      <Viewer
+        {...rest}
+        disablePanel={true}
+        disableFooter={true}
+        currentFile={currentFile}
+        hasPrevious={hasPrevious}
+        hasNext={hasNext}
+        validForPanel={showInfoPanel}
+        toolbarRef={toolbarRef}
+      />
+      <Footer>
+        <footerProps.FooterContent file={currentFile} toolbarRef={toolbarRef} />
+      </Footer>
+      {showInfoPanel && (
+        <InformationPanel>
+          <panelInfoProps.PanelContent file={currentFile} />
+        </InformationPanel>
+      )}
+    </ViewerWrapper>
+  )
+}
+
+export default ViewerContainer
