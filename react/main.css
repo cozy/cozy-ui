@@ -28058,6 +28058,18 @@ html {
   width: 100%;
 }
 
+.CompositeRow--3KCwt {
+  min-height: 3rem;
+  padding: 1rem;
+}
+.CompositeRow__dense--3EPKf {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.CompositeRow__body--3nEEv > * + * {
+  margin-top: 2px;
+}
+
 .gridItem-container--387sO {
   text-align: center;
   box-sizing: border-box;
@@ -33156,18 +33168,6 @@ html {
   .Panel-side--327EK {
     flex-basis: auto;
   }
-}
-
-.CompositeRow--3KCwt {
-  min-height: 3rem;
-  padding: 1rem;
-}
-.CompositeRow__dense--3EPKf {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-.CompositeRow__body--3nEEv > * + * {
-  margin-top: 2px;
 }
 
 .intentModal--1aYIb {
