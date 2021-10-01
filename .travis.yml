@@ -15,11 +15,9 @@ script:
   - mkdir ./screenshots
   - yarn screenshots --mode react --viewport desktop --screenshot-dir ./screenshots/reactDesktop
   - yarn screenshots --mode react --viewport 300x600 --screenshot-dir ./screenshots/reactMobile
-  - yarn screenshots --mode stack --screenshot-dir ./screenshots/stack
   - yarn screenshots --mode kss --screenshot-dir ./screenshots/kss
   - yarn argos:upload screenshots/reactDesktop/ --token $ARGOS_TOKEN --branch $TRAVIS_BRANCH --commit $TRAVIS_COMMIT --batchCount 4 --external-build-id $TRAVIS_COMMIT
   - yarn argos:upload screenshots/reactMobile/ --token $ARGOS_TOKEN --branch $TRAVIS_BRANCH --commit $TRAVIS_COMMIT --batchCount 4 --external-build-id $TRAVIS_COMMIT
-  - yarn argos:upload screenshots/stack/ --token $ARGOS_TOKEN --branch $TRAVIS_BRANCH --commit $TRAVIS_COMMIT --batchCount 4 --external-build-id $TRAVIS_COMMIT
   - yarn argos:upload screenshots/kss/ --token $ARGOS_TOKEN --branch $TRAVIS_BRANCH --commit $TRAVIS_COMMIT --batchCount 4 --external-build-id $TRAVIS_COMMIT
 deploy:
   - provider: script
