@@ -1,3 +1,38 @@
+# [55.0.0](https://github.com/cozy/cozy-ui/compare/v54.1.1...v55.0.0) (2021-10-01)
+
+
+### Bug Fixes
+
+* MuiTabs color ([4aba58f](https://github.com/cozy/cozy-ui/commit/4aba58f))
+* PercentageBar colors ([c6e65b3](https://github.com/cozy/cozy-ui/commit/c6e65b3))
+* Remove useless background utility class ([66f7583](https://github.com/cozy/cozy-ui/commit/66f7583))
+* Switch track color ([652632a](https://github.com/cozy/cozy-ui/commit/652632a))
+
+
+### Features
+
+* Add Info and Common color in Mui json palette ([e0a5f72](https://github.com/cozy/cozy-ui/commit/e0a5f72))
+* Add missing colors in Mui palette for normal theme ([528506a](https://github.com/cozy/cozy-ui/commit/528506a))
+* Add new semantic variable colors ([e7a6b12](https://github.com/cozy/cozy-ui/commit/e7a6b12))
+* Define colors of css variable for inverted theme ([63acc69](https://github.com/cozy/cozy-ui/commit/63acc69))
+* Remove some css stylus variables ([d044c6f](https://github.com/cozy/cozy-ui/commit/d044c6f))
+* Reorganize palette ([8c4d1d0](https://github.com/cozy/cozy-ui/commit/8c4d1d0))
+* Replace palette colors in stylus by Mui palette colors ([3524a71](https://github.com/cozy/cozy-ui/commit/3524a71))
+* Use correct css variable for Mui theme ([635eddb](https://github.com/cozy/cozy-ui/commit/635eddb))
+
+
+### BREAKING CHANGES
+
+* We removed these stylus variables  :
+```
+- $errorColor
+- $errorBackground
+- $successColor
+- $warningColor
+- $infoColor
+```
+* As we have replaced the colors associated with css variables, after this update the color of some elements may have changed
+
 ## [54.1.1](https://github.com/cozy/cozy-ui/compare/v54.1.0...v54.1.1) (2021-09-30)
 
 
