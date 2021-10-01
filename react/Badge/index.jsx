@@ -3,6 +3,7 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import MuiBadge from '@material-ui/core/Badge'
 import { makeStyles } from '@material-ui/core/styles'
+import omit from 'lodash/omit'
 
 const LARGE_BADGE = '1.25rem'
 const MEDIUM_BADGE = '1.125rem'
@@ -18,20 +19,17 @@ const useStyles = makeStyles(theme => ({
   colorError: ({ withBorder }) => ({
     border: withBorder ? `2px solid ${theme.palette.background.paper}` : 'none'
   }),
-  top: {
-    top: '16%'
+  top: ({ overlap }) => {
+    return overlap ? { top: '16%' } : undefined
   },
-  bottom: {
-    top: '82%',
-    '&$large': {
-      top: '86%'
-    }
+  bottom: ({ overlap }) => {
+    return overlap ? { top: '82%', '&$large': { top: '86%' } } : undefined
   },
-  left: {
-    right: '90%'
+  left: ({ overlap }) => {
+    return overlap ? { right: '90%' } : undefined
   },
-  right: {
-    right: '10%'
+  right: ({ overlap }) => {
+    return overlap ? { right: '10%' } : undefined
   },
   large: {
     height: LARGE_BADGE,
@@ -87,6 +85,11 @@ const Badge = ({ classes = {}, anchorOrigin, size, ...props }) => {
   const horizontalClasses = { left, right }
   const sizeClasses = { large, medium, small }
 
+  const { overlap, ...customProps } = props
+  if (!overlap) {
+    customProps.overlap = 'rectangle'
+  }
+
   return (
     <MuiBadge
       classes={{
@@ -102,7 +105,7 @@ const Badge = ({ classes = {}, anchorOrigin, size, ...props }) => {
         ),
         ...customClasses
       }}
-      {...props}
+      {...omit(customProps, 'withBorder')}
     />
   )
 }
@@ -115,14 +118,16 @@ Badge.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   showZero: PropTypes.bool,
   variant: PropTypes.oneOf(['standard', 'dot']),
-  withBorder: PropTypes.bool
+  withBorder: PropTypes.bool,
+  overlap: PropTypes.bool
 }
 
 Badge.defaultProps = {
   anchorOrigin: { horizontal: 'right', vertical: 'top' },
   size: 'medium',
   showZero: true,
-  withBorder: true
+  withBorder: true,
+  overlap: true
 }
 
 export default Badge

@@ -14,27 +14,29 @@ import Variants from 'cozy-ui/docs/components/Variants';
 import CircleFilledIcon from "cozy-ui/transpiled/react/Icons/CircleFilled";
 
 const initialVariants = [
-  { error: false, dot: false, large: false, small: false, withBorder: false },
-  { error: true, dot: true, large: false, small: false, withBorder: true },
-  { error: false, dot: false, large: false, small: false, withBorder: false },
+  { error: false, dot: false, large: false, small: false, withBorder: false, overlap: true},
+  { error: true, dot: true, large: false, small: false, withBorder: true, overlap: false},
+  { error: false, dot: false, large: false, small: false, withBorder: false, overlap: true },
 ];
 
 testingProps = [
-  { color: 'primary', variant: 'standard', size: 'small', vertical: 'top', horizontal: 'left', withBorder: false},
-  { color: 'secondary', variant: 'dot', size: 'medium', vertical: 'bottom', horizontal: 'right', withBorder: true},
-  { color: 'error', variant: 'standard', size: 'large', vertical: 'top', horizontal: 'left', withBorder: false},
-  { color: 'secondary', variant: 'dot', size: 'small', vertical: 'top', horizontal: 'right', withBorder: true},
-  { color: 'error', variant: 'standard', size: 'medium', vertical: 'bottom', horizontal: 'left', withBorder: false},
-  { color: 'primary', variant: 'dot', size: 'large', vertical: 'top', horizontal: 'right', withBorder: true}
+  { color: 'primary', variant: 'standard', size: 'small', vertical: 'top', horizontal: 'left', withBorder: false, overlap: true},
+  { color: 'secondary', variant: 'dot', size: 'medium', vertical: 'bottom', horizontal: 'right', withBorder: true, overlap: true},
+  { color: 'error', variant: 'standard', size: 'large', vertical: 'top', horizontal: 'left', withBorder: false, overlap: true},
+  { color: 'secondary', variant: 'dot', size: 'small', vertical: 'top', horizontal: 'right', withBorder: true, overlap: true},
+  { color: 'error', variant: 'standard', size: 'medium', vertical: 'bottom', horizontal: 'left', withBorder: false, overlap: true},
+  { color: 'primary', variant: 'dot', size: 'large', vertical: 'top', horizontal: 'right', withBorder: true, overlap: true},
+  { color: 'error', variant: 'standard', size: 'medium', vertical: 'bottom', horizontal: 'left', withBorder: false, overlap: false},
+  { color: 'primary', variant: 'dot', size: 'large', vertical: 'top', horizontal: 'right', withBorder: true, overlap: false}
 ];
 
 <>
   {isTesting()
     ? <>
-        {testingProps.map(({color, variant, size, vertical, horizontal, withBorder}) =>
+        {testingProps.map(({color, variant, size, vertical, horizontal, withBorder, overlap}) =>
           <p>
-            <h5>color = {color}, variant = {variant}, size = {size}, vertical = {vertical}, horizontal = {horizontal}, withBorder = {withBorder.toString()}</h5>
-            <Badge badgeContent={4} color={color} variant={variant} size={size} anchorOrigin={{vertical, horizontal}} withBorder={withBorder}>
+            <h5>color = {color}, variant = {variant}, size = {size}, vertical = {vertical}, horizontal = {horizontal}, withBorder = {withBorder.toString()}, overlap = {overlap.toString()}</h5>
+            <Badge overlap={overlap} badgeContent={4} color={color} variant={variant} size={size} anchorOrigin={{vertical, horizontal}} withBorder={withBorder}>
               <Icon icon={CircleFilledIcon} size={size === 'large' ? '32' : size === 'small' ? '16' : '24'} color="var(--slateGrey)" />
             </Badge>
           </p>
@@ -43,7 +45,7 @@ testingProps = [
   : <Variants initialVariants={initialVariants}>{
   variant => (
     <p>
-      <Badge badgeContent={4} color={variant.error ? 'error' : variant.secondaryColor ? 'secondary' : 'primary'} variant={variant.dot ? 'dot' : 'standard'} size={variant.large ? 'large' : variant.small ? 'small' : 'medium'} anchorOrigin={{vertical: variant.bottom ? 'bottom' : 'top', 'horizontal': variant.left ? 'left' : 'right'}} withBorder={variant.withBorder}>
+      <Badge overlap={variant.overlap} badgeContent={4} color={variant.error ? 'error' : variant.secondaryColor ? 'secondary' : 'primary'} variant={variant.dot ? 'dot' : 'standard'} size={variant.large ? 'large' : variant.small ? 'small' : 'medium'} anchorOrigin={{vertical: variant.bottom ? 'bottom' : 'top', 'horizontal': variant.left ? 'left' : 'right'}} withBorder={variant.withBorder}>
         <Icon icon={CircleFilledIcon} size={variant.large ? '32' : variant.small ? '16' : '24'} color="var(--slateGrey)" />
       </Badge>
     </p>
