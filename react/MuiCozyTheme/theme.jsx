@@ -2,10 +2,12 @@ import React from 'react'
 import { createMuiTheme } from '@material-ui/core/styles'
 import merge from 'lodash/merge'
 
-import { getCssVariableValue } from '../utils/color'
+import {
+  getCssVariableValue,
+  getInvertedCssVariableValue
+} from '../utils/color'
 import isTesting from '../helpers/isTesting'
 import AccordionExpandIcon from './AccordionExpandIcon'
-import defaultPalette from '../../theme/palette.json'
 
 export const defaultValues = {
   borderRadius: 6,
@@ -720,38 +722,91 @@ const shadows = [
 normalTheme.shadows = shadows
 
 const invertedPalette = {
-  ...normalTheme.palette,
   type: 'dark',
-  background: {
-    default: getCssVariableValue('primaryColorDark'),
-    paper: getCssVariableValue('primaryColor'),
-    selected: getCssVariableValue('primaryColorDark')
-  },
   primary: {
-    main: '#FFFFFF'
+    light: getInvertedCssVariableValue('primaryColorLight'),
+    main: getInvertedCssVariableValue('primaryColor'),
+    dark: getInvertedCssVariableValue('primaryColorDark'),
+    contrastText: getInvertedCssVariableValue('primaryContrastTextColor')
   },
   secondary: {
-    main: '#FFFFFF'
-  },
-  text: {
-    primary: '#FFFFFF',
-    secondary: '#FFFFFF'
-  },
-  success: {
-    main: defaultPalette.Success['400']
+    light: getInvertedCssVariableValue('secondaryColorLight'),
+    main: getInvertedCssVariableValue('secondaryColor'),
+    dark: getInvertedCssVariableValue('secondaryColorDark'),
+    contrastText: getInvertedCssVariableValue('secondaryContrastTextColor')
   },
   error: {
-    main: '#fcc0c0' // lighten(--errorColor, 70%)
+    light: getInvertedCssVariableValue('errorColorLight'),
+    main: getInvertedCssVariableValue('errorColor'),
+    dark: getInvertedCssVariableValue('errorColorDark'),
+    contrastText: getInvertedCssVariableValue('errorColorContrastText')
   },
-  divider: '#FFFFFF29' // 16% opacity
-}
-invertedPalette.action = {
-  active: `${invertedPalette.primary.main}8A`, // 54% opacity
-  hover: `${invertedPalette.primary.main}0A`, // 4% opacity
-  selected: `${invertedPalette.primary.main}14`, // 8% opacity
-  disabled: `${invertedPalette.primary.main}40`, // 26% opacity
-  disabledBackground: `${invertedPalette.primary.main}1F`, // 12% opacity
-  focus: `${invertedPalette.primary.main}1F` // 12% opacity
+  warning: {
+    light: getInvertedCssVariableValue('warningColorLight'),
+    main: getInvertedCssVariableValue('warningColor'),
+    dark: getInvertedCssVariableValue('warningColorDark'),
+    contrastText: getInvertedCssVariableValue('warningColorContrastText')
+  },
+  success: {
+    light: getInvertedCssVariableValue('successColorLight'),
+    main: getInvertedCssVariableValue('successColor'),
+    dark: getInvertedCssVariableValue('successColorDark'),
+    contrastText: getInvertedCssVariableValue('successColorContrastText')
+  },
+  info: {
+    light: getInvertedCssVariableValue('infoColorLight'),
+    main: getInvertedCssVariableValue('infoColor'),
+    dark: getInvertedCssVariableValue('infoColorDark'),
+    contrastText: getInvertedCssVariableValue('infoColorContrastText')
+  },
+  text: {
+    primary: getInvertedCssVariableValue('primaryTextColor'),
+    secondary: getInvertedCssVariableValue('secondaryTextColor'),
+    disabled: getInvertedCssVariableValue('disabledTextColor'),
+    hint: getInvertedCssVariableValue('hintTextColor'),
+    icon: getInvertedCssVariableValue('iconTextColor')
+  },
+  grey: {
+    0: getInvertedCssVariableValue('grey0'),
+    50: getInvertedCssVariableValue('grey50'),
+    100: getInvertedCssVariableValue('grey100'),
+    200: getInvertedCssVariableValue('grey200'),
+    300: getInvertedCssVariableValue('grey300'),
+    400: getInvertedCssVariableValue('grey400'),
+    500: getInvertedCssVariableValue('grey500'),
+    600: getInvertedCssVariableValue('grey600'),
+    700: getInvertedCssVariableValue('grey700'),
+    800: getInvertedCssVariableValue('grey800'),
+    900: getInvertedCssVariableValue('grey900'),
+    A100: getInvertedCssVariableValue('greyA100'),
+    A200: getInvertedCssVariableValue('greyA200'),
+    A400: getInvertedCssVariableValue('greyA400'),
+    A700: getInvertedCssVariableValue('greyA700')
+  },
+  divider: getInvertedCssVariableValue('dividerColor'),
+  action: {
+    active: getInvertedCssVariableValue('actionColorActive'),
+    hover: getInvertedCssVariableValue('actionColorHover'),
+    selected: getInvertedCssVariableValue('actionColorSelected'),
+    disabled: getInvertedCssVariableValue('actionColorDisabled'),
+    disabledBackground: getInvertedCssVariableValue(
+      'actionColorDisabledBackground'
+    ),
+    focus: getInvertedCssVariableValue('actionColorFocus'),
+    ghost: getInvertedCssVariableValue('actionColorGhost'),
+    hoverGhost: getInvertedCssVariableValue('actionColorHoverGhost')
+  },
+  border: {
+    main: getInvertedCssVariableValue('borderMainColor'),
+    disabled: getInvertedCssVariableValue('borderDisabledColor'),
+    ghost: getInvertedCssVariableValue('borderGhostColor'),
+    ghostDisabled: getInvertedCssVariableValue('borderGhostDisabledColor')
+  },
+  background: {
+    default: getInvertedCssVariableValue('defaultBackgroundColor'),
+    paper: getInvertedCssVariableValue('paperBackgroundColor'),
+    selected: '#F5FAFF'
+  }
 }
 
 const invertedTypography = makeTypography(invertedPalette)
