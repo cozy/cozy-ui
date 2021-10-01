@@ -153,7 +153,7 @@ const normalPalette = {
     A700: getCssVariableValue('greyA700')
   },
   divider: getCssVariableValue('dividerColor'),
-  actions: {
+  action: {
     active: getCssVariableValue('actionColorActive'),
     hover: getCssVariableValue('actionColorHover'),
     selected: getCssVariableValue('actionColorSelected'),
