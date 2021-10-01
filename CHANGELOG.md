@@ -1,3 +1,35 @@
+# [56.0.0](https://github.com/cozy/cozy-ui/compare/v55.0.0...v56.0.0) (2021-10-01)
+
+
+### Features
+
+* Add cozy-harvest-lib package ([68407f7](https://github.com/cozy/cozy-ui/commit/68407f7))
+* Add cozy-sharing package ([6f816d8](https://github.com/cozy/cozy-ui/commit/6f816d8))
+* Add mui-bottom-sheet package ([1f6d6c3](https://github.com/cozy/cozy-ui/commit/1f6d6c3))
+* Upgrade Viewer ([936a537](https://github.com/cozy/cozy-ui/commit/936a537))
+
+
+### BREAKING CHANGES
+
+* - The `Viewer` will automatically display information panels,
+   if the file comes from a Konnector and/or if it is certified
+
+- Removed the `panelInfoProps` & `footerProps` props
+   which are now managed by the `Viewer`.
+
+- Adding the `disablePanel` &` disableFooter` props to return
+  to a simple `Viewer` (without the informations panels),
+  on Desktop and/or on Mobile.
+
+Exemple :
+```javascript
+// Only on Mobile
+<Viewer ... disablePanel = {true} />
+
+ // Only on Desktop
+<Viewer ... disableFooter = {true} />
+```
+
 # [55.0.0](https://github.com/cozy/cozy-ui/compare/v54.1.1...v55.0.0) (2021-10-01)
 
 
