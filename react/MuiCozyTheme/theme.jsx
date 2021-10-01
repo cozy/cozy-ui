@@ -9,8 +9,6 @@ import AccordionExpandIcon from './AccordionExpandIcon'
 
 const SWITCH_BAR_WIDTH = 25
 
-const normalPalette = makePalette('light')
-
 const themesCommonConfig = {
   shape: {
     borderRadius: 6
@@ -47,6 +45,8 @@ const themesCommonConfig = {
   },
   ...(isTesting() && { transitions: { create: () => 'none' } })
 }
+
+const normalPalette = makePalette('light')
 
 export const normalTheme = createMuiTheme({
   ...themesCommonConfig,
@@ -106,9 +106,9 @@ const makeOverrides = theme => ({
       color: theme.palette.grey[500]
     },
     root: {
-      fontSize: normalTheme.typography.subtitle1.fontSize,
-      [normalTheme.breakpoints.up('md')]: {
-        fontSize: normalTheme.typography.subtitle1.fontSize
+      fontSize: theme.typography.subtitle1.fontSize,
+      [theme.breakpoints.up('md')]: {
+        fontSize: theme.typography.subtitle1.fontSize
       }
     }
   },
@@ -198,7 +198,7 @@ const makeOverrides = theme => ({
     gutters: {
       paddingLeft: '1rem',
       paddingRight: '1rem',
-      [normalTheme.breakpoints.up('md')]: {
+      [theme.breakpoints.up('md')]: {
         '&.listItem--dialog': {
           paddingLeft: '2rem',
           paddingRight: '2rem'
@@ -314,7 +314,7 @@ const makeOverrides = theme => ({
       '&.small': {
         width: '480px',
         maxWidth: '480px',
-        [normalTheme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('md')]: {
           margin: '16px',
           padding: '0 8px 8px',
           height: 'auto',
@@ -323,13 +323,13 @@ const makeOverrides = theme => ({
         }
       },
       '&.medium': {
-        [normalTheme.breakpoints.up('md')]: {
+        [theme.breakpoints.up('md')]: {
           width: '544px',
           maxWidth: '544px'
         }
       },
       '&.large': {
-        [normalTheme.breakpoints.up('md')]: {
+        [theme.breakpoints.up('md')]: {
           width: '800px',
           maxWidth: '800px'
         }
