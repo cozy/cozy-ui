@@ -1,7 +1,7 @@
 import React from 'react'
 import MuiDivider from '@material-ui/core/Divider'
 import { withStyles } from '@material-ui/core/styles'
-import { defaultValues, normalTheme } from '../theme'
+import { normalTheme } from '../theme'
 import TextDivider from './TextDivider'
 
 /**
@@ -20,6 +20,18 @@ Divider.propTypes = {
 }
 
 export default Divider
+
+const defaultValues = {
+  borderRadius: 6,
+  dialog: {
+    sm: {
+      padding: 16
+    },
+    md: {
+      padding: 32
+    }
+  }
+}
 
 export const DeprecatedDivider = withStyles({
   /**

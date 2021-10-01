@@ -7,25 +7,13 @@ import { makePalette, makeTypography } from './helpers'
 import isTesting from '../helpers/isTesting'
 import AccordionExpandIcon from './AccordionExpandIcon'
 
-export const defaultValues = {
-  borderRadius: 6,
-  dialog: {
-    sm: {
-      padding: 16
-    },
-    md: {
-      padding: 32
-    }
-  }
-}
-
 const SWITCH_BAR_WIDTH = 25
 
 const normalPalette = makePalette('light')
 
 const themesCommonConfig = {
   shape: {
-    borderRadius: defaultValues.borderRadius
+    borderRadius: 6
   },
   breakpoints: {
     values: {
@@ -126,7 +114,7 @@ const makeOverrides = theme => ({
   },
   MuiAccordion: {
     rounded: {
-      borderRadius: defaultValues.borderRadius
+      borderRadius: theme.shape.borderRadius
     },
     root: {
       boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.08)',
