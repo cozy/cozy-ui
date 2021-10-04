@@ -518,7 +518,7 @@ exports[`Checkbox should render examples: Checkbox 1`] = `
       <div><label class=\\"MuiFormControlLabel-root Mui-disabled\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-37 MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-indeterminate PrivateSwitchBase-checked-38 Mui-checked PrivateSwitchBase-disabled-39 Mui-disabled MuiIconButton-colorPrimary Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" aria-disabled=\\"true\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-40\\" disabled=\\"\\" type=\\"checkbox\\" data-indeterminate=\\"true\\" aria-checked=\\"mixed\\" aria-disabled=\\"true\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label Mui-disabled MuiTypography-body1\\">This is a disabled mixed checked checkbox</span></label></div>
     </div>
   </div>
-  <div class=\\"styles__CozyTheme--inverted___1ygHa\\">
+  <div class=\\"palette__CozyTheme--inverted___UL0fq\\">
     <div class=\\"MuiPaper-root u-p-1 MuiPaper-elevation1 MuiPaper-rounded\\">
       <div class=\\"MuiGrid-root MuiGrid-container\\">
         <div class=\\"MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6\\">
@@ -555,7 +555,7 @@ exports[`Checkbox should render examples: Checkbox 2`] = `
       <div><label class=\\"MuiFormControlLabel-root FormControlLabel-error Mui-disabled\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-37 MuiCheckbox-root MuiCheckbox-colorSecondary MuiCheckbox-indeterminate PrivateSwitchBase-checked-38 Mui-checked PrivateSwitchBase-disabled-39 Mui-disabled MuiIconButton-colorSecondary Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" aria-disabled=\\"true\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-40\\" disabled=\\"\\" type=\\"checkbox\\" data-indeterminate=\\"true\\" aria-checked=\\"mixed\\" aria-disabled=\\"true\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label Mui-disabled MuiTypography-body1\\">This is a disabled mixed checked checkbox with an error</span></label></div>
     </div>
   </div>
-  <div class=\\"styles__CozyTheme--inverted___1ygHa\\">
+  <div class=\\"palette__CozyTheme--inverted___UL0fq\\">
     <div class=\\"MuiPaper-root u-p-1 MuiPaper-elevation1 MuiPaper-rounded\\">
       <div class=\\"MuiGrid-root MuiGrid-container\\">
         <div class=\\"MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6\\">
