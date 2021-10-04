@@ -1,5 +1,3 @@
-import merge from 'lodash/merge'
-
 import { getCssVariableValue } from '../utils/color'
 import { makePalette, makeOverrides, makeTheme } from './helpers'
 
@@ -46,19 +44,6 @@ invertedTheme.overrides = {
       opacity: 1
     }
   },
-  MuiSwitch: merge({}, normalTheme.overrides.MuiSwitch, {
-    switchBase: {
-      color: getCssVariableValue('primaryContrastTextColor')
-    },
-    colorPrimary: {
-      '&$checked': {
-        '& + $track': {
-          boxSizing: 'border-box',
-          backgroundColor: '#34CE68'
-        }
-      }
-    }
-  }),
   MuiLinearProgress: {
     colorPrimary: {
       backgroundColor: 'rgba(255,255,255,0.2)'
@@ -89,6 +74,21 @@ invertedTheme.overrides = {
     colorSecondary: {
       '&.Mui-checked:not(.Mui-disabled)': {
         color: invertedTheme.palette.error.main
+      }
+    }
+  }
+}
+invertedTheme.overrides.MuiSwitch = {
+  ...invertedTheme.overrides.MuiSwitch,
+  switchBase: {
+    ...invertedTheme.overrides.MuiSwitch.switchBase,
+    color: getCssVariableValue('primaryContrastTextColor')
+  },
+  colorPrimary: {
+    '&$checked': {
+      '& + $track': {
+        boxSizing: 'border-box',
+        backgroundColor: '#34CE68'
       }
     }
   }
