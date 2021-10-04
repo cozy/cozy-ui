@@ -1,4 +1,4 @@
-import { makeTheme } from './helpers'
+import { makeTheme } from './makeTheme'
 
 export const normalTheme = makeTheme('light')
 export const invertedTheme = makeTheme('dark')
