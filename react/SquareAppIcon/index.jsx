@@ -3,6 +3,7 @@ import get from 'lodash/get'
 import classnames from 'classnames'
 
 import AppIcon from '../AppIcon'
+import Badge from '../Badge'
 import PropTypes from 'prop-types'
 
 import { AppDoctype } from '../proptypes'
@@ -10,7 +11,6 @@ import { AppDoctype } from '../proptypes'
 import styles from './styles.styl'
 import Icon from '../Icon'
 import iconPlus from '../Icons/Plus'
-import warning from '../Icons/WarningCircle'
 import uiPalette from '../../theme/palette.json'
 
 const variantThemes = {
@@ -19,28 +19,28 @@ const variantThemes = {
     mainIcon: null,
     mainColor: null,
     icon: null,
-    color: null
+    color: undefined
   },
   maintenance: {
     className: styles['SquareAppIcon-maintenance'],
     mainIcon: null,
     mainColor: null,
     icon: null,
-    color: null
+    color: undefined
   },
   error: {
     className: null,
     mainIcon: null,
     mainColor: null,
-    icon: warning,
-    color: uiPalette.Error[600]
+    icon: '!',
+    color: 'error'
   },
   add: {
     className: styles['SquareAppIcon-add'],
     mainIcon: iconPlus,
-    mainColor: '#FFFFFF',
+    mainColor: uiPalette.Primary.ContrastText,
     icon: null,
-    color: null
+    color: undefined
   }
 }
 
@@ -52,29 +52,16 @@ export const SquareAppIcon = ({ app, name: nameProp, variant }) => {
     {}
   )
   return (
-    <div>
-      <div
-        data-testid="square-app-icon"
-        className={classnames(
-          styles['SquareAppIcon-icon-wrapper'],
-          variantClassName
-        )}
-      >
+    <div data-testid="square-app-icon">
+      <Badge className={classnames( styles['SquareAppIcon-icon-wrapper'], variantClassName)} badgeContent={icon} color={color} withBorder={false} overlap={false}>
         <div>
           {mainIcon ? (
             <Icon icon={mainIcon} color={mainColor} />
           ) : (
             <AppIcon app={app} />
           )}
-          {icon && (
-            <Icon
-              icon={icon}
-              className={styles['SquareAppIcon-icon-icon']}
-              color={color}
-            />
-          )}
         </div>
-      </div>
+      </Badge>
       <h3 className={styles['SquareAppIcon-title']}>{name}</h3>
     </div>
   )
