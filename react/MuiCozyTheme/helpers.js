@@ -116,7 +116,7 @@ const makeTypography = palette => ({
   }
 })
 
-export const makePalette = type => {
+const makePalette = type => {
   const getCssValue =
     type === 'dark' ? getInvertedCssVariableValue : getCssVariableValue
 
@@ -207,7 +207,7 @@ export const makePalette = type => {
   }
 }
 
-export const makeOverrides = theme => ({
+const makeOverrides = theme => ({
   MuiOutlinedInput: {
     root: {
       '&$disabled': {
@@ -675,6 +675,99 @@ export const makeOverrides = theme => ({
   }
 })
 
+const makeInvertedOverrides = invertedTheme => {
+  const invertedOverrides = {
+    ...makeOverrides(invertedTheme),
+    MuiOutlinedInput: {
+      root: {
+        boxSizing: 'border-box',
+        '&$focused $notchedOutline': {
+          borderColor: invertedTheme.palette.text.primary,
+          borderWidth: '0.0625rem'
+        },
+        '& $notchedOutline': {
+          borderColor: invertedTheme.palette.text.primary
+        }
+      }
+    },
+    MuiFormLabel: {
+      root: {
+        '&$focused': {
+          color: invertedTheme.palette.text.primary
+        }
+      }
+    },
+    MuiTab: {
+      root: {
+        color: 'rgb(255,255,255) !important'
+      },
+      // This overrides the disabled color of the MuiTab
+      textColorPrimary: {
+        color: 'rgb(255,255,255) !important',
+        opacity: 0.64
+      },
+      textColorSecondary: {
+        color: 'rgb(255,255,255)',
+        opacity: 0.64
+      },
+      selected: {
+        opacity: 1
+      }
+    },
+    MuiLinearProgress: {
+      colorPrimary: {
+        backgroundColor: 'rgba(255,255,255,0.2)'
+      },
+      colorSecondary: {
+        backgroundColor: 'rgba(255,255,255,0.2)'
+      }
+    },
+    MuiListItem: {
+      button: {
+        '&$selected, &$selected:hover': {
+          backgroundColor: invertedTheme.palette.background.selected
+        },
+        '&:hover': {
+          backgroundColor: invertedTheme.palette.background.selected
+        },
+        '&:focus': {
+          backgroundColor: invertedTheme.palette.background.selected
+        }
+      }
+    },
+    MuiCheckbox: {
+      colorPrimary: {
+        '&.Mui-checked:not(.Mui-disabled)': {
+          color: invertedTheme.palette.success.main
+        }
+      },
+      colorSecondary: {
+        '&.Mui-checked:not(.Mui-disabled)': {
+          color: invertedTheme.palette.error.main
+        }
+      }
+    }
+  }
+
+  invertedOverrides.MuiSwitch = {
+    ...invertedOverrides.MuiSwitch,
+    switchBase: {
+      ...invertedOverrides.MuiSwitch.switchBase,
+      color: getCssVariableValue('primaryContrastTextColor')
+    },
+    colorPrimary: {
+      '&$checked': {
+        '& + $track': {
+          boxSizing: 'border-box',
+          backgroundColor: '#34CE68'
+        }
+      }
+    }
+  }
+
+  return invertedOverrides
+}
+
 const makeShadows = () => [
   'none',
   'rgba(29, 33, 42, 0.08) 0px 2px 4px 0px, rgba(29, 33, 42, 0.06) 0px 4px 16px 0px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
@@ -703,10 +796,25 @@ const makeShadows = () => [
   'rgba(29, 33, 42, 0.16) 0px 24px 32px 4px, rgba(29, 33, 42, 0.12) 0px 12px 48px 8px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px'
 ]
 
-export const makeTheme = palette =>
-  createMuiTheme({
+const makeThemeOverrides = theme => {
+  const createOverrides =
+    theme.palette.type === 'dark' ? makeInvertedOverrides : makeOverrides
+
+  return createOverrides(theme)
+}
+
+export const makeTheme = type => {
+  const palette = makePalette(type)
+  const theme = createMuiTheme({
     ...themesCommonConfig,
     typography: makeTypography(palette),
-    palette: palette,
+    palette,
     shadows: makeShadows()
   })
+  const overrides = makeThemeOverrides(theme)
+
+  return {
+    ...theme,
+    overrides
+  }
+}
