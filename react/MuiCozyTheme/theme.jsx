@@ -1,74 +1,13 @@
-import React from 'react'
-import { createMuiTheme } from '@material-ui/core/styles'
 import merge from 'lodash/merge'
 
 import { getCssVariableValue } from '../utils/color'
-import {
-  makePalette,
-  makeTypography,
-  makeOverrides,
-  makeShadows
-} from './helpers'
-import isTesting from '../helpers/isTesting'
-import AccordionExpandIcon from './AccordionExpandIcon'
+import { makePalette, makeOverrides, makeTheme } from './helpers'
 
-const themesCommonConfig = {
-  shape: {
-    borderRadius: 6
-  },
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 480,
-      md: 768,
-      lg: 1023,
-      xl: 1200
-    }
-  },
-  zIndex: {
-    modal: getCssVariableValue('zIndex-modal')
-  },
-  props: {
-    MuiTabs: {
-      textColor: 'primary',
-      TabIndicatorProps: { color: 'primary' }
-    },
-    MuiButton: {
-      disableRipple: true
-    },
-    MuiListItem: {
-      disableRipple: true
-    },
-    MuiTooltip: {
-      arrow: true
-    },
-    MuiAccordionSummary: {
-      expandIcon: <AccordionExpandIcon />
-    }
-  },
-  ...(isTesting() && { transitions: { create: () => 'none' } })
-}
-
-const normalPalette = makePalette('light')
-
-export const normalTheme = createMuiTheme({
-  ...themesCommonConfig,
-  typography: makeTypography(normalPalette),
-  palette: normalPalette
-})
+export const normalTheme = makeTheme(makePalette('light'))
 normalTheme.overrides = makeOverrides(normalTheme)
-normalTheme.shadows = makeShadows()
 
 const invertedPalette = makePalette('dark')
-
-const invertedTypography = makeTypography(invertedPalette)
-export const invertedTheme = createMuiTheme({
-  ...themesCommonConfig,
-  palette: invertedPalette,
-  typography: invertedTypography,
-  shadows: makeShadows()
-})
-
+export const invertedTheme = makeTheme(invertedPalette)
 invertedTheme.overrides = {
   ...makeOverrides(invertedTheme),
   MuiOutlinedInput: {

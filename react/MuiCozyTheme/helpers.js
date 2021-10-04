@@ -1,11 +1,53 @@
+import React from 'react'
+import { createMuiTheme } from '@material-ui/core/styles'
+
 import {
   getCssVariableValue,
   getInvertedCssVariableValue
 } from '../utils/color'
+import isTesting from '../helpers/isTesting'
+import AccordionExpandIcon from './AccordionExpandIcon'
 
 const SWITCH_BAR_WIDTH = 25
 
-export const makeTypography = palette => ({
+const themesCommonConfig = {
+  shape: {
+    borderRadius: 6
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 480,
+      md: 768,
+      lg: 1023,
+      xl: 1200
+    }
+  },
+  zIndex: {
+    modal: getCssVariableValue('zIndex-modal')
+  },
+  props: {
+    MuiTabs: {
+      textColor: 'primary',
+      TabIndicatorProps: { color: 'primary' }
+    },
+    MuiButton: {
+      disableRipple: true
+    },
+    MuiListItem: {
+      disableRipple: true
+    },
+    MuiTooltip: {
+      arrow: true
+    },
+    MuiAccordionSummary: {
+      expandIcon: <AccordionExpandIcon />
+    }
+  },
+  ...(isTesting() && { transitions: { create: () => 'none' } })
+}
+
+const makeTypography = palette => ({
   fontFamily: getCssVariableValue('primaryFont') || 'Lato',
   h1: {
     fontSize: 48,
@@ -633,7 +675,7 @@ export const makeOverrides = theme => ({
   }
 })
 
-export const makeShadows = () => [
+const makeShadows = () => [
   'none',
   'rgba(29, 33, 42, 0.08) 0px 2px 4px 0px, rgba(29, 33, 42, 0.06) 0px 4px 16px 0px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
   'rgba(29, 33, 42, 0.08) 0px 3px 5px 0px, rgba(29, 33, 42, 0.06) 0px 4px 17px 0px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
@@ -660,3 +702,11 @@ export const makeShadows = () => [
   'rgba(29, 33, 42, 0.16) 0px 23px 31px 4px, rgba(29, 33, 42, 0.12) 0px 12px 47px 8px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px',
   'rgba(29, 33, 42, 0.16) 0px 24px 32px 4px, rgba(29, 33, 42, 0.12) 0px 12px 48px 8px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px'
 ]
+
+export const makeTheme = palette =>
+  createMuiTheme({
+    ...themesCommonConfig,
+    typography: makeTypography(palette),
+    palette: palette,
+    shadows: makeShadows()
+  })
