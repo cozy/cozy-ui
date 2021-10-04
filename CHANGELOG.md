@@ -1,3 +1,10 @@
+## [56.0.1](https://github.com/cozy/cozy-ui/compare/v56.0.0...v56.0.1) (2021-10-04)
+
+
+### Bug Fixes
+
+* Action prop in mui palette ([d4a0d3a](https://github.com/cozy/cozy-ui/commit/d4a0d3a))
+
 # [56.0.0](https://github.com/cozy/cozy-ui/compare/v55.0.0...v56.0.0) (2021-10-01)
 
 
