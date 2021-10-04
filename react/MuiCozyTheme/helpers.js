@@ -753,7 +753,7 @@ const makeInvertedOverrides = invertedTheme => {
     ...invertedOverrides.MuiSwitch,
     switchBase: {
       ...invertedOverrides.MuiSwitch.switchBase,
-      color: getCssVariableValue('primaryContrastTextColor')
+      color: invertedTheme.palette.grey['100']
     },
     colorPrimary: {
       '&$checked': {
