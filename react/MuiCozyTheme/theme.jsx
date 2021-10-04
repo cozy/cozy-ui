@@ -70,13 +70,13 @@ invertedTheme.overrides = {
   MuiListItem: {
     button: {
       '&$selected, &$selected:hover': {
-        backgroundColor: invertedPalette.background.selected
+        backgroundColor: invertedTheme.palette.background.selected
       },
       '&:hover': {
-        backgroundColor: invertedPalette.background.selected
+        backgroundColor: invertedTheme.palette.background.selected
       },
       '&:focus': {
-        backgroundColor: invertedPalette.background.selected
+        backgroundColor: invertedTheme.palette.background.selected
       }
     }
   },
