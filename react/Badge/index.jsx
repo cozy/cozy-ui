@@ -86,8 +86,10 @@ const Badge = ({ classes = {}, anchorOrigin, size, ...props }) => {
   const sizeClasses = { large, medium, small }
 
   const { overlap, ...customProps } = props
+  const anchorProps = {}
   if (!overlap) {
     customProps.overlap = 'rectangle'
+    anchorProps.anchorOrigin = anchorOrigin
   }
 
   return (
@@ -106,6 +108,7 @@ const Badge = ({ classes = {}, anchorOrigin, size, ...props }) => {
         ...customClasses
       }}
       {...omit(customProps, 'withBorder')}
+      {...anchorProps}
     />
   )
 }
