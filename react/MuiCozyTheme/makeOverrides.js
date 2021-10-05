@@ -1,5 +1,3 @@
-import { getCssVariableValue } from '../utils/color'
-
 const SWITCH_BAR_WIDTH = 25
 
 export const makeThemeOverrides = theme => {
@@ -170,13 +168,13 @@ const makeOverrides = theme => ({
     },
     button: {
       '&$selected, &$selected:hover': {
-        backgroundColor: theme.palette.background.selected
+        backgroundColor: theme.palette.action.selected
       },
       '&:hover': {
-        backgroundColor: theme.palette.grey[100]
+        backgroundColor: theme.palette.background.default
       },
       '&:focus': {
-        backgroundColor: theme.palette.grey[100]
+        backgroundColor: theme.palette.background.default
       }
     }
   },
@@ -209,7 +207,7 @@ const makeOverrides = theme => ({
       marginBottom: '-1px',
       padding: 0,
       height: '2rem',
-      backgroundColor: theme.palette.background.default,
+      backgroundColor: theme.palette.background.paper,
       textIndent: '2rem',
       fontWeight: 'bold',
       fontSize: '.75rem',
@@ -407,25 +405,20 @@ const makeOverrides = theme => ({
     },
     thumb: {
       width: 16,
-      height: 16
+      height: 16,
+      backgroundColor: theme.palette.grey[0]
     },
     track: {
       width: SWITCH_BAR_WIDTH,
       height: 12,
       opacity: 1,
-      backgroundColor: getCssVariableValue('disabledTextColor')
-    },
-    colorPrimary: {
-      '&$checked': {
-        color: getCssVariableValue('primaryContrastTextColor')
-      }
+      backgroundColor: theme.palette.text.disabled
     },
     colorSecondary: {
       '&$checked': {
         '& + $track': {
-          backgroundColor: getCssVariableValue('successColor')
-        },
-        color: getCssVariableValue('primaryContrastTextColor')
+          backgroundColor: theme.palette.success.main
+        }
       }
     },
     disabled: {
@@ -439,8 +432,7 @@ const makeOverrides = theme => ({
   },
   MuiTooltip: {
     tooltip: {
-      // TODO should be grey[700] when grey[700] is supported
-      backgroundColor: theme.palette.grey[800],
+      backgroundColor: theme.palette.grey[700],
       borderRadius: '8px',
       fontSize: '1rem',
       color: 'white',
@@ -448,8 +440,7 @@ const makeOverrides = theme => ({
       padding: '16px'
     },
     arrow: {
-      // TODO should be grey[700] when grey[700] is supported
-      color: theme.palette.grey[800]
+      color: theme.palette.grey[700]
     },
     popper: {
       opacity: 0.9
@@ -461,7 +452,7 @@ const makeOverrides = theme => ({
       '&.dialogIconButton': {
         backgroundColor: theme.palette.background.paper,
         '&:hover': {
-          backgroundColor: theme.palette.background.selected
+          backgroundColor: theme.palette.action.selected
         }
       }
     }
@@ -524,19 +515,6 @@ const makeInvertedOverrides = invertedTheme => {
         backgroundColor: 'rgba(255,255,255,0.2)'
       }
     },
-    MuiListItem: {
-      button: {
-        '&$selected, &$selected:hover': {
-          backgroundColor: invertedTheme.palette.background.selected
-        },
-        '&:hover': {
-          backgroundColor: invertedTheme.palette.background.selected
-        },
-        '&:focus': {
-          backgroundColor: invertedTheme.palette.background.selected
-        }
-      }
-    },
     MuiCheckbox: {
       colorPrimary: {
         '&.Mui-checked:not(.Mui-disabled)': {
@@ -555,13 +533,19 @@ const makeInvertedOverrides = invertedTheme => {
     ...invertedOverrides.MuiSwitch,
     switchBase: {
       ...invertedOverrides.MuiSwitch.switchBase,
-      color: invertedTheme.palette.grey['100']
+      color: invertedTheme.palette.grey[100]
     },
     colorPrimary: {
       '&$checked': {
         '& + $track': {
-          boxSizing: 'border-box',
-          backgroundColor: '#34CE68'
+          backgroundColor: invertedTheme.palette.success.dark
+        }
+      }
+    },
+    colorSecondary: {
+      '&$checked': {
+        '& + $track': {
+          backgroundColor: invertedTheme.palette.success.dark
         }
       }
     }
