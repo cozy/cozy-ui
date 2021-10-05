@@ -1,29 +1,29 @@
 import React from 'react'
 import cx from 'classnames'
 import Badge from '../Badge'
-import { withStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
-const customStyles = () => ({
+const useStyles = makeStyles(() => ({
   qualifier: {
-    top: '80%',
-    right: '12%',
+    top: ({ overlap }) => (overlap ? '80%' : undefined),
+    right: ({ overlap }) => (overlap ? '12%' : undefined),
     backgroundColor: 'white',
     color: 'var(--slateGrey)',
     border: '1px solid var(--silver)'
   }
-})
+}))
 
-const InfosBadge = withStyles(customStyles)(({ classes, ...props }) => {
-  const { qualifier, ...customClasses } = classes
+const InfosBadge = ({ classes, ...props }) => {
+  const { qualifier } = useStyles(props)
   return (
     <Badge
       classes={{
-        badge: cx(qualifier, customClasses)
+        badge: cx(qualifier, classes)
       }}
       anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
       {...props}
     />
   )
-})
+}
 
 export default InfosBadge
