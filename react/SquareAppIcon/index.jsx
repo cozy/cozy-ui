@@ -4,7 +4,9 @@ import classnames from 'classnames'
 
 import AppIcon from '../AppIcon'
 import Badge from '../Badge'
+import Typography from '../Typography'
 import PropTypes from 'prop-types'
+import { makeStyles } from '@material-ui/core/styles'
 
 import { AppDoctype } from '../proptypes'
 
@@ -44,7 +46,19 @@ const variantThemes = {
   }
 }
 
+const useStyles = makeStyles(theme => ({
+  iconTitle: {
+    color: theme.palette.primary.contrastText,
+    fontSize: '0.875rem',
+    fontWeight: 700,
+    lineHeight: '1.188rem',
+    margin: '.5rem 0 0'
+  }
+}))
+
 export const SquareAppIcon = ({ app, name: nameProp, variant }) => {
+  const { iconTitle } = useStyles()
+
   const name = nameProp || get(app, 'name') || app
   const { className: variantClassName, mainIcon, mainColor, icon, color } = get(
     variantThemes,
@@ -53,7 +67,16 @@ export const SquareAppIcon = ({ app, name: nameProp, variant }) => {
   )
   return (
     <div data-testid="square-app-icon">
-      <Badge className={classnames( styles['SquareAppIcon-icon-wrapper'], variantClassName)} badgeContent={icon} color={color} withBorder={false} overlap={false}>
+      <Badge
+        className={classnames(
+          styles['SquareAppIcon-icon-wrapper'],
+          variantClassName
+        )}
+        badgeContent={icon}
+        color={color}
+        withBorder={false}
+        overlap={false}
+      >
         <div>
           {mainIcon ? (
             <Icon icon={mainIcon} color={mainColor} />
@@ -62,7 +85,11 @@ export const SquareAppIcon = ({ app, name: nameProp, variant }) => {
           )}
         </div>
       </Badge>
-      <h3 className={styles['SquareAppIcon-title']}>{name}</h3>
+      <Typography
+        className={classnames(styles['SquareAppIcon-title'], iconTitle)}
+      >
+        {name}
+      </Typography>
     </div>
   )
 }

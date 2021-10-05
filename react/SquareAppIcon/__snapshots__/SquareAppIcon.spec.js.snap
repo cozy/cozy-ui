@@ -21,14 +21,14 @@ exports[`SquareAppIcon component should render an app correctly with the app nam
       </svg>
     </div>
     <span
-      class="MuiBadge-badge makeStyles-top-22 makeStyles-top-33 makeStyles-right-25 makeStyles-right-36 makeStyles-medium-27 makeStyles-colorPrimary-19 makeStyles-colorPrimary-30 makeStyles-colorSecondary-20 makeStyles-colorSecondary-31 makeStyles-colorError-21 makeStyles-colorError-32 MuiBadge-anchorOriginTopRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge makeStyles-top-24 makeStyles-top-35 makeStyles-right-27 makeStyles-right-38 makeStyles-medium-29 makeStyles-colorPrimary-21 makeStyles-colorPrimary-32 makeStyles-colorSecondary-22 makeStyles-colorSecondary-33 makeStyles-colorError-23 makeStyles-colorError-34 MuiBadge-anchorOriginTopRightRectangle MuiBadge-invisible"
     />
   </span>
-  <h3
-    class="styles__SquareAppIcon-title___2yy0h"
+  <p
+    class="MuiTypography-root styles__SquareAppIcon-title___2yy0h makeStyles-iconTitle-20 MuiTypography-body1"
   >
     Test
-  </h3>
+  </p>
 </div>
 `;
 
@@ -53,14 +53,14 @@ exports[`SquareAppIcon component should render an app correctly with the given n
       </svg>
     </div>
     <span
-      class="MuiBadge-badge makeStyles-top-4 makeStyles-top-15 makeStyles-right-7 makeStyles-right-18 makeStyles-medium-9 makeStyles-colorPrimary-1 makeStyles-colorPrimary-12 makeStyles-colorSecondary-2 makeStyles-colorSecondary-13 makeStyles-colorError-3 makeStyles-colorError-14 MuiBadge-anchorOriginTopRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge makeStyles-top-5 makeStyles-top-16 makeStyles-right-8 makeStyles-right-19 makeStyles-medium-10 makeStyles-colorPrimary-2 makeStyles-colorPrimary-13 makeStyles-colorSecondary-3 makeStyles-colorSecondary-14 makeStyles-colorError-4 makeStyles-colorError-15 MuiBadge-anchorOriginTopRightRectangle MuiBadge-invisible"
     />
   </span>
-  <h3
-    class="styles__SquareAppIcon-title___2yy0h"
+  <p
+    class="MuiTypography-root styles__SquareAppIcon-title___2yy0h makeStyles-iconTitle-1 MuiTypography-body1"
   >
     modified
-  </h3>
+  </p>
 </div>
 `;
 
@@ -85,14 +85,14 @@ exports[`SquareAppIcon component should render an app with the app slug if no na
       </svg>
     </div>
     <span
-      class="MuiBadge-badge makeStyles-top-40 makeStyles-top-51 makeStyles-right-43 makeStyles-right-54 makeStyles-medium-45 makeStyles-colorPrimary-37 makeStyles-colorPrimary-48 makeStyles-colorSecondary-38 makeStyles-colorSecondary-49 makeStyles-colorError-39 makeStyles-colorError-50 MuiBadge-anchorOriginTopRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge makeStyles-top-43 makeStyles-top-54 makeStyles-right-46 makeStyles-right-57 makeStyles-medium-48 makeStyles-colorPrimary-40 makeStyles-colorPrimary-51 makeStyles-colorSecondary-41 makeStyles-colorSecondary-52 makeStyles-colorError-42 makeStyles-colorError-53 MuiBadge-anchorOriginTopRightRectangle MuiBadge-invisible"
     />
   </span>
-  <h3
-    class="styles__SquareAppIcon-title___2yy0h"
+  <p
+    class="MuiTypography-root styles__SquareAppIcon-title___2yy0h makeStyles-iconTitle-39 MuiTypography-body1"
   >
     testslug
-  </h3>
+  </p>
 </div>
 `;
 
@@ -124,11 +124,11 @@ exports[`SquareAppIcon component should render correctly an app in add state 1`]
       </svg>
     </div>
     <span
-      class="MuiBadge-badge makeStyles-top-112 makeStyles-top-123 makeStyles-right-115 makeStyles-right-126 makeStyles-medium-117 makeStyles-colorPrimary-109 makeStyles-colorPrimary-120 makeStyles-colorSecondary-110 makeStyles-colorSecondary-121 makeStyles-colorError-111 makeStyles-colorError-122 MuiBadge-anchorOriginTopRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge makeStyles-top-119 makeStyles-top-130 makeStyles-right-122 makeStyles-right-133 makeStyles-medium-124 makeStyles-colorPrimary-116 makeStyles-colorPrimary-127 makeStyles-colorSecondary-117 makeStyles-colorSecondary-128 makeStyles-colorError-118 makeStyles-colorError-129 MuiBadge-anchorOriginTopRightRectangle MuiBadge-invisible"
     />
   </span>
-  <h3
-    class="styles__SquareAppIcon-title___2yy0h"
+  <p
+    class="MuiTypography-root styles__SquareAppIcon-title___2yy0h makeStyles-iconTitle-115 MuiTypography-body1"
   />
 </div>
 `;
@@ -154,16 +154,16 @@ exports[`SquareAppIcon component should render correctly an app in error state 1
       </svg>
     </div>
     <span
-      class="MuiBadge-badge makeStyles-top-94 makeStyles-top-105 makeStyles-right-97 makeStyles-right-108 makeStyles-medium-99 makeStyles-colorPrimary-91 makeStyles-colorPrimary-102 makeStyles-colorSecondary-92 makeStyles-colorSecondary-103 makeStyles-colorError-93 makeStyles-colorError-104 MuiBadge-anchorOriginTopRightRectangle MuiBadge-colorError"
+      class="MuiBadge-badge makeStyles-top-100 makeStyles-top-111 makeStyles-right-103 makeStyles-right-114 makeStyles-medium-105 makeStyles-colorPrimary-97 makeStyles-colorPrimary-108 makeStyles-colorSecondary-98 makeStyles-colorSecondary-109 makeStyles-colorError-99 makeStyles-colorError-110 MuiBadge-anchorOriginTopRightRectangle MuiBadge-colorError"
     >
       !
     </span>
   </span>
-  <h3
-    class="styles__SquareAppIcon-title___2yy0h"
+  <p
+    class="MuiTypography-root styles__SquareAppIcon-title___2yy0h makeStyles-iconTitle-96 MuiTypography-body1"
   >
     Test
-  </h3>
+  </p>
 </div>
 `;
 
@@ -188,14 +188,14 @@ exports[`SquareAppIcon component should render correctly an app in ghost state 1
       </svg>
     </div>
     <span
-      class="MuiBadge-badge makeStyles-top-76 makeStyles-top-87 makeStyles-right-79 makeStyles-right-90 makeStyles-medium-81 makeStyles-colorPrimary-73 makeStyles-colorPrimary-84 makeStyles-colorSecondary-74 makeStyles-colorSecondary-85 makeStyles-colorError-75 makeStyles-colorError-86 MuiBadge-anchorOriginTopRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge makeStyles-top-81 makeStyles-top-92 makeStyles-right-84 makeStyles-right-95 makeStyles-medium-86 makeStyles-colorPrimary-78 makeStyles-colorPrimary-89 makeStyles-colorSecondary-79 makeStyles-colorSecondary-90 makeStyles-colorError-80 makeStyles-colorError-91 MuiBadge-anchorOriginTopRightRectangle MuiBadge-invisible"
     />
   </span>
-  <h3
-    class="styles__SquareAppIcon-title___2yy0h"
+  <p
+    class="MuiTypography-root styles__SquareAppIcon-title___2yy0h makeStyles-iconTitle-77 MuiTypography-body1"
   >
     Test
-  </h3>
+  </p>
 </div>
 `;
 
@@ -220,13 +220,13 @@ exports[`SquareAppIcon component should render correctly an app in maintenance s
       </svg>
     </div>
     <span
-      class="MuiBadge-badge makeStyles-top-58 makeStyles-top-69 makeStyles-right-61 makeStyles-right-72 makeStyles-medium-63 makeStyles-colorPrimary-55 makeStyles-colorPrimary-66 makeStyles-colorSecondary-56 makeStyles-colorSecondary-67 makeStyles-colorError-57 makeStyles-colorError-68 MuiBadge-anchorOriginTopRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge makeStyles-top-62 makeStyles-top-73 makeStyles-right-65 makeStyles-right-76 makeStyles-medium-67 makeStyles-colorPrimary-59 makeStyles-colorPrimary-70 makeStyles-colorSecondary-60 makeStyles-colorSecondary-71 makeStyles-colorError-61 makeStyles-colorError-72 MuiBadge-anchorOriginTopRightRectangle MuiBadge-invisible"
     />
   </span>
-  <h3
-    class="styles__SquareAppIcon-title___2yy0h"
+  <p
+    class="MuiTypography-root styles__SquareAppIcon-title___2yy0h makeStyles-iconTitle-58 MuiTypography-body1"
   >
     Test
-  </h3>
+  </p>
 </div>
 `;

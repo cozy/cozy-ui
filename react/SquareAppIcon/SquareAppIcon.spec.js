@@ -8,11 +8,11 @@ import SquareAppIcon from './index'
 
 const appMock = {
   slug: 'test',
-  name: 'Test',
+  name: 'Test'
 }
 
 const client = new CozyClient({})
-const Wrapper = (props) => {
+const Wrapper = props => {
   return (
     <CozyProvider client={client}>
       <SquareAppIcon {...props} />
