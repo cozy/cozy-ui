@@ -9,7 +9,7 @@ import Icon, { iconPropType } from '../Icon'
 import PeopleIcon from '../Icons/People'
 import { createSizeStyle } from '../Circle'
 
-const nameToColor = (name = '') => {
+export const nameToColor = (name = '') => {
   const colors = [
     palette['azure'],
     palette['melon'],

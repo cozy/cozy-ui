@@ -10,5 +10,6 @@ import SquareAppIcon from '.';
   <SquareAppIcon app="testapp" name="Maintenance" variant="maintenance" />
   <SquareAppIcon app="testapp" name="Error" variant="error" />
   <SquareAppIcon name="Add" variant="add" />
+  <SquareAppIcon name="Shortcut" variant="shortcut" />
 </div>
 ```
