@@ -2,12 +2,12 @@ Used to present a binary choice to the user.
 
 Uses [Material UI's Switch](https://material-ui.com/components/switches/).
 
-```
+```jsx
 import { useState, useCallback } from 'react'
 import { Media, Img } from '../../Media'
 import Switch from '.'
-import Typography from "cozy-ui/transpiled/react/Typography";
-import Stack from "cozy-ui/transpiled/react/Stack";
+import Typography from "cozy-ui/transpiled/react/Typography"
+import Stack from "cozy-ui/transpiled/react/Stack"
 import Box from '@material-ui/core/Box'
 
 initialState = {
@@ -24,7 +24,7 @@ const StateSwitch = ({ id, color }) => {
     checked={checked}
     onChange={handleClick}
   />
-} 
+}
 
 const Switches = () => {
   return <Stack spacing='xs'>
@@ -38,8 +38,10 @@ const Switches = () => {
         </Box>
       )
     })}
-  </Stack>;
-};
+  </Stack>
+}
+
+;
 
 <Switches />
 ```

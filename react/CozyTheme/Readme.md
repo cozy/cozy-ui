@@ -28,7 +28,7 @@ const themesSupportingContext = [
 ;
 
 <CozyTheme variant='inverted' className='u-stack-m'>
-  <Paper className='u-p-1' style={{backgroundColor: 'var(--defaultBackgroundColor)'}}>
+  <Paper className='u-p-1'>
     <Title className='u-white u-mb-1'>Inverted theme</Title>
     <SubTitle className='u-white'>Buttons</SubTitle>
     {themesSupportingContext.map(theme =>
@@ -67,7 +67,7 @@ const themesSupportingContext = [
       </Paper>
     </CozyTheme>
   </Paper>
-  <Paper className='u-p-1 u-stack-s' style={{backgroundColor: 'var(--defaultBackgroundColor)'}}>
+  <Paper className='u-p-1 u-stack-s'>
     <div class='u-error'>
       Error text : "Please enter the right password."
     </div>

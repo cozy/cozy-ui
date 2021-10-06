@@ -4,6 +4,7 @@ import Paper from '../../react/Paper'
 import Button from '../../react/Button'
 import isTesting from '../../react/helpers/isTesting'
 import themes from '../../theme/themes'
+import palette from '../../theme/palette.json'
 import Typography from '../../react/Typography'
 import Divider from '../../react/MuiCozyTheme/Divider'
 import { isUsingDevStyleguidist } from '../../scripts/build-utils'
@@ -32,8 +33,7 @@ const ThemeLabel = ({ theme }) => {
 
 const paperStyle = theme => ({
   ...styles.paper,
-  backgroundColor:
-    theme === themes.normal ? 'white' : 'var(--defaultBackgroundColor)'
+  backgroundColor: theme === themes.normal ? 'white' : palette.Primary['600']
 })
 
 export default ({ children }) => {
