@@ -1,3 +1,25 @@
+# [57.0.0](https://github.com/cozy/cozy-ui/compare/v56.0.1...v57.0.0) (2021-10-06)
+
+
+### Bug Fixes
+
+* Adjust some comp color in inverted theme ([057302f](https://github.com/cozy/cozy-ui/commit/057302f))
+* Switch inverted default color ([12b92a0](https://github.com/cozy/cozy-ui/commit/12b92a0))
+* Use relative theme in makeOverrides() and don't force normalTheme ([d7d1a88](https://github.com/cozy/cozy-ui/commit/d7d1a88))
+
+
+### Features
+
+* Add getInvertedCssVariableValue() ([8708bf4](https://github.com/cozy/cozy-ui/commit/8708bf4))
+* Move inverted stylus theme in global css ([f72082e](https://github.com/cozy/cozy-ui/commit/f72082e))
+* Remove defaultValues from Mui theme ([48ccfb3](https://github.com/cozy/cozy-ui/commit/48ccfb3))
+* Use correct css value for inverted Mui theme ([69291db](https://github.com/cozy/cozy-ui/commit/69291db))
+
+
+### BREAKING CHANGES
+
+* You can't use `defaultValues` from `cozy-ui/transpiled/react/MuiCozyTheme` anymore, please use `theme` object instead
+
 ## [56.0.1](https://github.com/cozy/cozy-ui/compare/v56.0.0...v56.0.1) (2021-10-04)
 
 
