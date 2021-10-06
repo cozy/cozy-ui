@@ -1,14 +1,13 @@
 import React, { createContext, useContext } from 'react'
 import MuiCozyTheme from '../MuiCozyTheme'
-import styles from './styles.styl'
-import paletteStyles from '../../stylus/settings/palette.styl'
+import themesStyles from '../../stylus/settings/palette.styl'
 import cx from 'classnames'
 
 export const CozyThemeContext = createContext()
 
 const allStyles = {
-  ...styles,
-  'CozyTheme--normal': paletteStyles['CozyTheme--normal']
+  'CozyTheme--normal': themesStyles['CozyTheme--normal'],
+  'CozyTheme--inverted': themesStyles['CozyTheme--inverted']
 }
 
 const CozyTheme = ({ variant, children, className }) => (

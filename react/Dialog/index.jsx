@@ -3,8 +3,7 @@ import { default as MUIDialog } from '@material-ui/core/Dialog'
 import { RemoveScroll } from 'react-remove-scroll'
 import useBreakpoints from '../hooks/useBreakpoints'
 import { useCozyTheme } from '../CozyTheme'
-
-import cozyThemeStyles from '../CozyTheme/styles.styl'
+import themesStyles from '../../stylus/settings/palette.styl'
 
 const Dialog = props => {
   const { isMobile, isTablet } = useBreakpoints()
@@ -27,10 +26,7 @@ const Dialog = props => {
 
   return (
     <Wrapper>
-      <MUIDialog
-        className={cozyThemeStyles[`CozyTheme--${theme}`]}
-        {...props}
-      />
+      <MUIDialog className={themesStyles[`CozyTheme--${theme}`]} {...props} />
     </Wrapper>
   )
 }

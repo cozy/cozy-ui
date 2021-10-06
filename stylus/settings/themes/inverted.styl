@@ -1,16 +1,13 @@
-@require 'settings/palette.styl'
-palette=json('../../theme/palette.json', { hash: true })
 
-$translucentWhite1=rgba(255, 255, 255, 0.24)
-$translucentWhite2=rgba(255, 255, 255, 0.88)
-$translucentWhite3=rgba(255, 255, 255, 0.16)
+palette=json('../../../theme/palette.json', { hash: true })
 
-/*
-root overrides are only for depracted variables.
-*/
+// @stylint off
+
+// root variables are deprecated.
+// Prefer to use directly semantic colors below.
 :root
-    --invertedBackgroundColor: var(--primaryColor)
-    --invertedContrastTextColor: var(--primaryContrastTextColor)
+    --invertedBackgroundColor palette.Primary['600']
+    --invertedContrastTextColor palette.Common['white']
 
 .CozyTheme--inverted
     --primaryTextColor palette.Common['white']
@@ -74,23 +71,24 @@ root overrides are only for depracted variables.
     use them. Prefer to use directly semantic colors above.
     */
     --iconColor var(--secondaryTextColor)
-    --textIconColor var(--invertedContrastTextColor)
-    --barIconColor var(--invertedContrastTextColor)
-    --barIconColorDisabled $translucentWhite2
+    --textIconColor palette.Common['white']
+    --barIconColor palette.Common['white']
+    --barIconColorDisabled rgba(255, 255, 255, 0.88)
 
-    --spinnerColor var(--invertedContrastTextColor)
-    --linkColor var(--invertedContrastTextColor)
-    --linkColorActive var(--invertedContrastTextColor)
+    --spinnerColor palette.Common['white']
+    --linkColor palette.Common['white']
+    --linkColorActive palette.Common['white']
     --linkTextDecoration underline
 
-    --regularButtonPrimaryColor var(--invertedContrastTextColor)
-    --regularButtonSecondaryColor: var(--invertedContrastTextColor)
-    --regularButtonActiveColor $translucentWhite2
-    --regularButtonConstrastColor var(--invertedBackgroundColor)
+    --regularButtonPrimaryColor palette.Common['white']
+    --regularButtonSecondaryColor palette.Common['white']
+    --regularButtonActiveColor rgba(255, 255, 255, 0.88)
+    --regularButtonConstrastColor palette.Primary['600']
 
-    --secondaryButtonPrimaryColor var(--invertedBackgroundColor)
-    --secondaryButtonSecondaryColor var(--invertedContrastTextColor)
-    --secondaryButtonActiveColor $translucentWhite1
-    --secondaryButtonContrastColor: var(--invertedContrastTextColor)
+    --secondaryButtonPrimaryColor palette.Primary['600']
+    --secondaryButtonSecondaryColor palette.Common['white']
+    --secondaryButtonActiveColor rgba(255, 255, 255, 0.24)
+    --secondaryButtonContrastColor palette.Common['white']
 
-    --dividerColor2: $translucentWhite3
+    --dividerColor2: rgba(255, 255, 255, 0.16)
+// @stylint on
