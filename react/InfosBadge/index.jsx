@@ -5,8 +5,6 @@ import { withStyles } from '@material-ui/core/styles'
 
 const customStyles = () => ({
   qualifier: {
-    top: '80%',
-    right: '12%',
     backgroundColor: 'white',
     color: 'var(--slateGrey)',
     border: '1px solid var(--silver)'
