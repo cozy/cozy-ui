@@ -84,7 +84,7 @@ export const SquareAppIcon = props => {
     <div data-testid="square-app-icon">
       <InfosBadge
         badgeContent={infoBadgeContent}
-        overlap={false}
+        overlap="rectangle"
         showZero={false}
       >
         <Badge
@@ -96,7 +96,7 @@ export const SquareAppIcon = props => {
           badgeContent={icon}
           color={color}
           withBorder={false}
-          overlap={false}
+          overlap="rectangle"
         >
           {variant === 'shortcut' ? (
             <Typography
