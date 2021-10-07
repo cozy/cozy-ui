@@ -459,11 +459,42 @@ const makeOverrides = theme => ({
   },
   MuiBadge: {
     badge: {
-      padding: 0
+      boxSizing: 'content-box',
+      padding: 0,
+      '&.badgeBorder': {
+        border: `2px solid ${theme.palette.background.paper}`
+      },
+      '&.badgeSizeLarge': {
+        fontSize: '.6875rem',
+        height: '1rem',
+        minWidth: '1rem'
+      },
+      '&.badgeSizeMedium': {
+        height: '.875rem',
+        minWidth: '.875rem',
+        fontSize: '.625rem'
+      },
+      '&.badgeSizeSmall': {
+        height: '.75rem',
+        minWidth: '.75rem',
+        fontSize: '.5rem'
+      }
     },
     dot: {
       borderRadius: '100%',
-      padding: 0
+      padding: 0,
+      '&.badgeSizeLarge': {
+        height: '.625rem',
+        minWidth: '.625rem'
+      },
+      '&.badgeSizeMedium': {
+        height: '.5rem',
+        minWidth: '.5rem'
+      },
+      '&.badgeSizeSmall': {
+        height: '.375rem',
+        minWidth: '.375rem'
+      }
     }
   }
 })

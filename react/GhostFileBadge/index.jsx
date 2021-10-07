@@ -5,8 +5,6 @@ import { withStyles } from '@material-ui/core/styles'
 
 const customStyles = () => ({
   ghost: {
-    top: '76%',
-    right: '12%',
     backgroundColor: 'white',
     color: 'var(--coolGrey)',
     border: '1px solid var(--silver)',
