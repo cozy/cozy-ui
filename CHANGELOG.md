@@ -1,3 +1,10 @@
+# [57.1.0](https://github.com/cozy/cozy-ui/compare/v57.0.0...v57.1.0) (2021-10-07)
+
+
+### Features
+
+* New sizes for badges according to spec ([b933c96](https://github.com/cozy/cozy-ui/commit/b933c96))
+
 # [57.0.0](https://github.com/cozy/cozy-ui/compare/v56.0.1...v57.0.0) (2021-10-06)
 
 
