@@ -2,14 +2,27 @@ Component used to show an app status, can be used in a list of apps and connecto
 application.
 
 ```
+import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid';
 import SquareAppIcon from '.';
 
-<div className='u-flex u-bg-primaryColor' style={{padding: "1em", gap: "1em"}}>
-  <SquareAppIcon app="testapp" name="Normal"  />
-  <SquareAppIcon app="testapp" name="NoAccount" variant="ghost"  />
-  <SquareAppIcon app="testapp" name="Maintenance" variant="maintenance" />
-  <SquareAppIcon app="testapp" name="Error" variant="error" />
-  <SquareAppIcon name="Add" variant="add" />
-  <SquareAppIcon name="Shortcut" variant="shortcut" />
-</div>
+<Grid container spacing={1} className='u-bg-primaryColor'>
+  <Grid item>
+    <SquareAppIcon app="testapp" name="Normal"  />
+  </Grid>
+  <Grid item>
+    <SquareAppIcon app="testapp" name="NoAccount" variant="ghost"  />
+  </Grid>
+  <Grid item>
+    <SquareAppIcon app="testapp" name="Maintenance" variant="maintenance" />
+  </Grid>
+  <Grid item>
+    <SquareAppIcon app="testapp" name="Error" variant="error" />
+  </Grid>
+  <Grid item>
+    <SquareAppIcon name="Add" variant="add" />
+  </Grid>
+  <Grid item>
+    <SquareAppIcon name="Shortcut" variant="shortcut" />
+  </Grid>
+</Grid>
 ```
