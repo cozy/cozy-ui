@@ -34,7 +34,7 @@
     "makeSvgr": "scripts/generate-svgr-icon.sh",
     "lint": "npm-run-all 'lint:*'",
     "lint:commit": "git merge-base HEAD master && commitlint --from=$(git merge-base HEAD master) --to=HEAD || true",
-    "lint:js": "eslint 'react/**/*.jsx' 'react/**/*.js'",
+    "lint:js": "eslint 'react/**/*.jsx' 'react/**/*.js' 'docs/styleguide.config.js'",
     "lint:stylus": "stylint stylus --config .stylintrc",
     "lint:md": "remark . -o -S",
     "palette": "scripts/make-palette.sh",

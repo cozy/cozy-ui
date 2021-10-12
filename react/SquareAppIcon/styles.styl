@@ -1,0 +1,75 @@
+@require 'settings/breakpoints.styl'
+
+iconSize = 4rem
+iconPadding = rem(10)
+mobileIconSize = 3rem
+mobileIconPadding = rem(8)
+
+.SquareAppIcon-name
+    max-width rem(68)
+    overflow hidden
+    text-align center
+    text-overflow ellipsis
+    white-space nowrap
+    color var(--primaryContrastTextColor) !important
+    font-size .875rem !important
+    font-weight 700 !important
+    line-height 1.188rem !important
+    margin .5rem 0 0 !important
+    +small-screen()
+        font-size rem(11)
+        line-height 1rem
+        margin .25rem 0 0 0
+        max-width mobileIconSize
+
+.SquareAppIcon-icon-wrapper
+    box-sizing border-box
+    background-color var(--defaultBackgroundColor)
+    border-radius rem(12)
+    height iconSize
+    position relative
+    width iconSize
+    +small-screen()
+        height mobileIconSize
+        width mobileIconSize
+    div
+        padding iconPadding
+        border-radius rem(12)
+        height 'calc(%s - 2 * %s)' % (iconSize iconPadding)
+        +small-screen()
+            padding mobileIconPadding
+            height 'calc(%s - 2 * %s)' % (mobileIconSize mobileIconPadding)
+
+.SquareAppIcon-variant-wrapper
+    background-color alpha(#fff, .32) // hard-coded color, because the component is currently only used in the Home
+    border 1px dashed var(--white)
+    @supports not (backdrop-filter: blur(48px))
+        background-color alpha(#fff, .48)
+    div
+        backdrop-filter blur(48px)
+
+.SquareAppIcon-ghost
+    div
+        mix-blend-mode overlay // need to apply backdrop-filter and mix blend-mode in a separated element to have the proper effect
+        svg, img
+            filter saturate(0%)
+
+.SquareAppIcon-add
+    div
+        mix-blend-mode normal
+        svg, img
+            height 1rem
+            width 1rem
+            margin 'calc((%s - 1rem - %s * 2) / 2)' % (iconSize iconPadding)
+            +small-screen()
+                margin 'calc((%s - 1rem - %s * 2) / 2)' % (mobileIconSize mobileIconPadding)
+
+.SquareAppIcon-maintenance
+    div
+        mix-blend-mode luminosity
+        svg, img
+            opacity .5
+
+.SquareAppIcon-shortcut-letter
+    color var(--primaryContrastTextColor) !important
+    margin auto !important
