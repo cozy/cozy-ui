@@ -5,13 +5,13 @@ iconPadding = rem(10)
 mobileIconSize = 3rem
 mobileIconPadding = rem(8)
 
-.SquareAppIcon-title
+.SquareAppIcon-name
   max-width rem(68)
   overflow hidden
   text-align center
   text-overflow ellipsis
   white-space nowrap
-  +tiny-screen()
+  +small-screen()
       font-size rem(11)
       line-height 1rem
       margin .25rem 0 0 0
@@ -19,19 +19,19 @@ mobileIconPadding = rem(8)
 
 .SquareAppIcon-icon-wrapper
   box-sizing border-box
-  background-color var(--white)
+  background-color var(--defaultBackgroundColor)
   border-radius rem(12)
   height iconSize
   position relative
   width iconSize
-  +tiny-screen()
+  +small-screen()
     height mobileIconSize
     width mobileIconSize
   div
     padding iconPadding
     border-radius rem(12)
     height 'calc(%s - 2 * %s)' % (iconSize iconPadding)
-    +tiny-screen()
+    +small-screen()
        padding mobileIconPadding
        height 'calc(%s - 2 * %s)' % (mobileIconSize mobileIconPadding)
 
@@ -58,7 +58,7 @@ mobileIconPadding = rem(8)
       height 1rem
       width 1rem
       margin 'calc((%s - 1rem - %s * 2) / 2)' % (iconSize iconPadding)
-      +tiny-screen()
+      +small-screen()
         margin 'calc((%s - 1rem - %s * 2) / 2)' % (mobileIconSize mobileIconPadding)
 
 .SquareAppIcon-maintenance
