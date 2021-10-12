@@ -125,7 +125,7 @@ exports[`SquareAppIcon component should render correctly an app in add state 1`]
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-icon-wrapper___2LcSe styles__SquareAppIcon-add___3zlpa"
+      class="MuiBadge-root styles__SquareAppIcon-icon-wrapper___2LcSe styles__SquareAppIcon-add___3zlpa styles__SquareAppIcon-ghost-add___3QEtv"
     >
       <div>
         <svg
@@ -210,7 +210,7 @@ exports[`SquareAppIcon component should render correctly an app in ghost state 1
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-icon-wrapper___2LcSe styles__SquareAppIcon-ghost___g1-TE"
+      class="MuiBadge-root styles__SquareAppIcon-icon-wrapper___2LcSe styles__SquareAppIcon-ghost___g1-TE styles__SquareAppIcon-ghost-add___3QEtv"
     >
       <div>
         <svg

@@ -33,6 +33,9 @@ export const SquareAppIcon = ({ app, name, variant }) => {
 
   const infoBadgeContent =
     variant === 'shortcut' ? <Icon size="10" icon={iconOut} /> : null
+  const ghostAddSharedClass = ['ghost', 'add'].includes(variant)
+    ? styles['SquareAppIcon-ghost-add']
+    : null
   return (
     <div data-testid="square-app-icon">
       <InfosBadge
@@ -43,7 +46,8 @@ export const SquareAppIcon = ({ app, name, variant }) => {
         <Badge
           className={classnames(
             styles['SquareAppIcon-icon-wrapper'],
-            styles[`SquareAppIcon-${variant}`]
+            styles[`SquareAppIcon-${variant}`],
+            ghostAddSharedClass
           )}
           badgeContent={variant === 'error' ? '!' : ''}
           color={variant === 'error' ? 'error' : undefined}
@@ -58,7 +62,7 @@ export const SquareAppIcon = ({ app, name, variant }) => {
           {variant === 'shortcut' ? (
             <Typography
               className={classnames(
-                styles[SquareAppIcon - name],
+                styles['SquareAppIcon-name'],
                 'u-primaryContrastTextColor',
                 'u-m-auto'
               )}
