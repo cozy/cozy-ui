@@ -2,7 +2,6 @@ import React from 'react'
 import get from 'lodash/get'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
-import { makeStyles } from '@material-ui/core/styles'
 
 import AppIcon from '../AppIcon'
 import Badge from '../Badge'
@@ -14,27 +13,14 @@ import styles from './styles.styl'
 import Icon from '../Icon'
 import iconPlus from '../Icons/Plus'
 import iconOut from '../Icons/LinkOut'
-import uiPalette from '../../theme/palette.json'
-
-const useStyles = makeStyles({
-  iconName: {
-    color: 'var(--primaryContrastTextColor)',
-    fontSize: '0.875rem',
-    fontWeight: 700,
-    lineHeight: '1.188rem',
-    margin: '.5rem 0 0'
-  }
-})
 
 export const SquareAppIcon = ({ app, name, variant }) => {
   const appName = name || get(app, 'name') || app
 
-  const classes = useStyles()
-
   const infoBadgeContent =
     variant === 'shortcut' ? <Icon size="10" icon={iconOut} /> : null
   const ghostAddSharedClass = ['ghost', 'add'].includes(variant)
-    ? styles['SquareAppIcon-ghost-add']
+    ? styles['SquareAppIcon-variant-wrapper']
     : null
   return (
     <div data-testid="square-app-icon">
@@ -61,11 +47,7 @@ export const SquareAppIcon = ({ app, name, variant }) => {
         >
           {variant === 'shortcut' ? (
             <Typography
-              className={classnames(
-                styles['SquareAppIcon-name'],
-                'u-primaryContrastTextColor',
-                'u-m-auto'
-              )}
+              className={styles['SquareAppIcon-shortcut-letter']}
               align="center"
               variant="h2"
             >
@@ -74,7 +56,7 @@ export const SquareAppIcon = ({ app, name, variant }) => {
           ) : (
             <div>
               {variant === 'add' ? (
-                <Icon icon={iconPlus} color={uiPalette.Primary.ContrastText} />
+                <Icon icon={iconPlus} className="u-primaryContrastTextColor" />
               ) : (
                 <AppIcon app={app} />
               )}
@@ -82,9 +64,7 @@ export const SquareAppIcon = ({ app, name, variant }) => {
           )}
         </Badge>
       </InfosBadge>
-      <Typography
-        className={classnames(styles['SquareAppIcon-name'], classes.iconName)}
-      >
+      <Typography className={classnames(styles['SquareAppIcon-name'])}>
         {appName}
       </Typography>
     </div>

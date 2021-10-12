@@ -11,6 +11,11 @@ mobileIconPadding = rem(8)
     text-align center
     text-overflow ellipsis
     white-space nowrap
+    color var(--primaryContrastTextColor) !important
+    font-size .875rem !important
+    font-weight 700 !important
+    line-height 1.188rem !important
+    margin .5rem 0 0 !important
     +small-screen()
         font-size rem(11)
         line-height 1rem
@@ -35,8 +40,8 @@ mobileIconPadding = rem(8)
             padding mobileIconPadding
             height 'calc(%s - 2 * %s)' % (mobileIconSize mobileIconPadding)
 
-.SquareAppIcon-ghost-add
-    background-color alpha(#fff, .32) // need to apply opacity in background-color or else mix-blend-mode does not work
+.SquareAppIcon-variant-wrapper
+    background-color alpha(#fff, .32) // hard-coded color, because the component is currently only used in the Home
     border 1px dashed var(--white)
     @supports not (backdrop-filter: blur(48px))
         background-color alpha(#fff, .48)
@@ -64,3 +69,7 @@ mobileIconPadding = rem(8)
         mix-blend-mode luminosity
         svg, img
             opacity .5
+
+.SquareAppIcon-shortcut-letter
+    color var(--primaryContrastTextColor) !important
+    margin auto !important
