@@ -6,64 +6,64 @@ mobileIconSize = 3rem
 mobileIconPadding = rem(8)
 
 .SquareAppIcon-name
-  max-width rem(68)
-  overflow hidden
-  text-align center
-  text-overflow ellipsis
-  white-space nowrap
-  +small-screen()
-      font-size rem(11)
-      line-height 1rem
-      margin .25rem 0 0 0
-      max-width mobileIconSize
+    max-width rem(68)
+    overflow hidden
+    text-align center
+    text-overflow ellipsis
+    white-space nowrap
+    +small-screen()
+        font-size rem(11)
+        line-height 1rem
+        margin .25rem 0 0 0
+        max-width mobileIconSize
 
 .SquareAppIcon-icon-wrapper
-  box-sizing border-box
-  background-color var(--defaultBackgroundColor)
-  border-radius rem(12)
-  height iconSize
-  position relative
-  width iconSize
-  +small-screen()
-    height mobileIconSize
-    width mobileIconSize
-  div
-    padding iconPadding
+    box-sizing border-box
+    background-color var(--defaultBackgroundColor)
     border-radius rem(12)
-    height 'calc(%s - 2 * %s)' % (iconSize iconPadding)
+    height iconSize
+    position relative
+    width iconSize
     +small-screen()
-       padding mobileIconPadding
-       height 'calc(%s - 2 * %s)' % (mobileIconSize mobileIconPadding)
+        height mobileIconSize
+        width mobileIconSize
+    div
+        padding iconPadding
+        border-radius rem(12)
+        height 'calc(%s - 2 * %s)' % (iconSize iconPadding)
+        +small-screen()
+            padding mobileIconPadding
+            height 'calc(%s - 2 * %s)' % (mobileIconSize mobileIconPadding)
 
 .SquareAppIcon-ghost
-  background-color rgba(255, 255, 255, 0.32) // need to apply opacity in background-color or else mix-blend-mode does not work
-  border 1px dashed var(--white)
-  @supports not (backdrop-filter: blur(48px))
-    background-color rgba(255, 255, 255, 0.48)
-  div
-    backdrop-filter blur(48px)
-    mix-blend-mode overlay // need to apply backdrop-filter and mix blend-mode in a separated element to have the proper effect
-    svg, img
-      filter saturate(0%)
+    background-color rgba(255, 255, 255, 0.32) // need to apply opacity in background-color or else mix-blend-mode does not work
+    border 1px dashed var(--white)
+    @supports not (backdrop-filter: blur(48px))
+        background-color rgba(255, 255, 255, 0.48)
+    div
+        backdrop-filter blur(48px)
+        mix-blend-mode overlay // need to apply backdrop-filter and mix blend-mode in a separated element to have the proper effect
+        svg, img
+            filter saturate(0%)
 
 .SquareAppIcon-add
-  background-color rgba(255, 255, 255, 0.32) // need to apply opacity in background-color or else mix-blend-mode does not work
-  border 1px dashed var(--white)
-  @supports not (backdrop-filter: blur(48px))
-    background-color rgba(255, 255, 255, 0.48)
-  div
-    backdrop-filter blur(48px)
-    mix-blend-mode normal
-    svg, img
-      height 1rem
-      width 1rem
-      margin 'calc((%s - 1rem - %s * 2) / 2)' % (iconSize iconPadding)
-      +small-screen()
-        margin 'calc((%s - 1rem - %s * 2) / 2)' % (mobileIconSize mobileIconPadding)
+    background-color rgba(255, 255, 255, 0.32) // need to apply opacity in background-color or else mix-blend-mode does not work
+    border 1px dashed var(--white)
+    @supports not (backdrop-filter: blur(48px))
+        background-color rgba(255, 255, 255, 0.48)
+    div
+        backdrop-filter blur(48px)
+        mix-blend-mode normal
+        svg, img
+            height 1rem
+            width 1rem
+            margin 'calc((%s - 1rem - %s * 2) / 2)' % (iconSize iconPadding)
+            +small-screen()
+                margin 'calc((%s - 1rem - %s * 2) / 2)' % (mobileIconSize mobileIconPadding)
 
 .SquareAppIcon-maintenance
-  box-shadow: 0px 0px 0px 0.5px rgba(29, 33, 42, 0.12), 0px 2px 4px rgba(29, 33, 42, 0.0793047), 0px 4px 16px rgba(29, 33, 42, 0.06);
-  div
-    mix-blend-mode luminosity
-    svg, img
-      opacity .5
+    box-shadow: 0px 0px 0px 0.5px rgba(29, 33, 42, 0.12), 0px 2px 4px rgba(29, 33, 42, 0.0793047), 0px 4px 16px rgba(29, 33, 42, 0.06);
+    div
+        mix-blend-mode luminosity
+        svg, img
+            opacity .5
