@@ -1,3 +1,22 @@
+# [57.2.0](https://github.com/cozy/cozy-ui/compare/v57.1.0...v57.2.0) (2021-10-12)
+
+
+### Bug Fixes
+
+* Adapt to new Badge overlap api ([7ea416f](https://github.com/cozy/cozy-ui/commit/7ea416f))
+* Handle no app.slug and no name prop with app prop ([21cfc92](https://github.com/cozy/cozy-ui/commit/21cfc92))
+* SquareAppIcon wrapper border size ([1e7783e](https://github.com/cozy/cozy-ui/commit/1e7783e))
+* Use Grid component in Readme ([f6886ab](https://github.com/cozy/cozy-ui/commit/f6886ab))
+* Use Typography instead of h3 in SquareAppIcon ([ee43ec0](https://github.com/cozy/cozy-ui/commit/ee43ec0))
+
+
+### Features
+
+* Add docs/styleguide.config.js to lint:js ([6c61504](https://github.com/cozy/cozy-ui/commit/6c61504))
+* Add shortcut variant ([3ccd351](https://github.com/cozy/cozy-ui/commit/3ccd351))
+* Add SquareAppIcon react component ([370d06a](https://github.com/cozy/cozy-ui/commit/370d06a))
+* Use Badge Component ([a62f5e6](https://github.com/cozy/cozy-ui/commit/a62f5e6))
+
 # [57.1.0](https://github.com/cozy/cozy-ui/compare/v57.0.0...v57.1.0) (2021-10-07)
 
 
