@@ -7731,6 +7731,12 @@ exports[`Radio should render examples: Radio 4`] = `
 </div>"
 `;
 
+exports[`Radio should render examples: Radio 5`] = `
+"<div>
+  <div class=\\"MuiFormGroup-root\\" role=\\"radiogroup\\"><label class=\\"MuiFormControlLabel-root\\"><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" name=\\"radioGroup1\\" value=\\"item1\\" checked=\\"\\"><span></span></label><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">Item 1</span></label><label class=\\"MuiFormControlLabel-root\\"><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" name=\\"radioGroup1\\" value=\\"item2\\"><span></span></label><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">Item 2</span></label><label class=\\"MuiFormControlLabel-root\\"><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" name=\\"radioGroup1\\" value=\\"item3\\"><span></span></label><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">Item 3</span></label></div>
+</div>"
+`;
+
 exports[`SelectBox should render examples: SelectBox 1`] = `
 "<div>
   <div style=\\"background: whitesmoke; padding: .5em;\\">

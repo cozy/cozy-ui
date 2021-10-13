@@ -59,3 +59,44 @@ initialState.bbox = isTesting();
 </>
 
 ```
+
+### In a RadioGroup
+
+```jsx
+import { useCallback, useMemo, useState } from 'react'
+
+import Radio from 'cozy-ui/transpiled/react/Radio'
+import RadioGroup from 'cozy-ui/transpiled/react/RadioGroup'
+import FormControlLabel from 'cozy-ui/transpiled/react/FormControlLabel'
+import uniqueId from 'lodash/uniqueId'
+
+const radioGroupId = uniqueId('radioGroup')
+
+const [radioValue, setRadioValue] = useState('item1')
+
+const onChange = event => {
+  setRadioValue(event.target.value)
+}
+
+<RadioGroup
+  name={radioGroupId}
+  value={radioValue.toString()}
+  onChange={onChange}
+>
+  <FormControlLabel
+    value="item1"
+    control={<Radio />}
+    label="Item 1"
+  />
+  <FormControlLabel
+    value="item2"
+    control={<Radio />}
+    label="Item 2"
+  />
+  <FormControlLabel
+    value="item3"
+    control={<Radio />}
+    label="Item 3"
+  />
+</RadioGroup>
+```

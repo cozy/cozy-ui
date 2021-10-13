@@ -2,19 +2,39 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
+import { useRadioGroup } from '@material-ui/core/RadioGroup'
 
 const Radio = props => {
   const {
     className,
     value,
-    name,
+    name: nameProp,
     label,
     error,
     disabled,
     style,
     gutter,
+    onChange: onChangeProp,
+    checked: checkedProp,
     ...restProps
   } = props
+  const radioGroup = useRadioGroup()
+
+  let checked = checkedProp
+  let name = nameProp
+
+  if (radioGroup) {
+    if (typeof checked === 'undefined') {
+      checked = radioGroup.value === props.value
+    }
+    if (typeof name === 'undefined') {
+      name = radioGroup.name
+    }
+  }
+
+  const onChange =
+    onChangeProp || (radioGroup && radioGroup.onChange) || (() => {})
+
   return (
     <label
       className={cx(
@@ -33,6 +53,8 @@ const Radio = props => {
         value={value}
         name={name}
         disabled={disabled}
+        onChange={onChange}
+        checked={checked}
         {...restProps}
       />
       <span>{label}</span>
