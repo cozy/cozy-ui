@@ -28,14 +28,14 @@ exports[`SquareAppIcon component should render an app correctly with the app nam
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-2 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-6 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
-  <p
-    class="MuiTypography-root styles__SquareAppIcon-name___v8EcQ MuiTypography-body1"
+  <h6
+    class="MuiTypography-root makeStyles-name-4 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
   >
     Test
-  </p>
+  </h6>
 </div>
 `;
 
@@ -67,14 +67,14 @@ exports[`SquareAppIcon component should render an app correctly with the given n
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-1 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-3 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
-  <p
-    class="MuiTypography-root styles__SquareAppIcon-name___v8EcQ MuiTypography-body1"
+  <h6
+    class="MuiTypography-root makeStyles-name-1 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
   >
     modified
-  </p>
+  </h6>
 </div>
 `;
 
@@ -106,14 +106,14 @@ exports[`SquareAppIcon component should render an app with the app slug if no na
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-3 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-9 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
-  <p
-    class="MuiTypography-root styles__SquareAppIcon-name___v8EcQ MuiTypography-body1"
+  <h6
+    class="MuiTypography-root makeStyles-name-7 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
   >
     testslug
-  </p>
+  </h6>
 </div>
 `;
 
@@ -151,11 +151,11 @@ exports[`SquareAppIcon component should render correctly an app in add state 1`]
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-7 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-21 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
-  <p
-    class="MuiTypography-root styles__SquareAppIcon-name___v8EcQ MuiTypography-body1"
+  <h6
+    class="MuiTypography-root makeStyles-name-19 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
   />
 </div>
 `;
@@ -190,14 +190,14 @@ exports[`SquareAppIcon component should render correctly an app in error state 1
       </span>
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-6 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-18 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
-  <p
-    class="MuiTypography-root styles__SquareAppIcon-name___v8EcQ MuiTypography-body1"
+  <h6
+    class="MuiTypography-root makeStyles-name-16 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
   >
     Test
-  </p>
+  </h6>
 </div>
 `;
 
@@ -229,14 +229,14 @@ exports[`SquareAppIcon component should render correctly an app in ghost state 1
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-5 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-15 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
-  <p
-    class="MuiTypography-root styles__SquareAppIcon-name___v8EcQ MuiTypography-body1"
+  <h6
+    class="MuiTypography-root makeStyles-name-13 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
   >
     Test
-  </p>
+  </h6>
 </div>
 `;
 
@@ -268,13 +268,13 @@ exports[`SquareAppIcon component should render correctly an app in maintenance s
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-4 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-12 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
-  <p
-    class="MuiTypography-root styles__SquareAppIcon-name___v8EcQ MuiTypography-body1"
+  <h6
+    class="MuiTypography-root makeStyles-name-10 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
   >
     Test
-  </p>
+  </h6>
 </div>
 `;
