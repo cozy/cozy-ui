@@ -1,3 +1,10 @@
+## [57.2.1](https://github.com/cozy/cozy-ui/compare/v57.2.0...v57.2.1) (2021-10-13)
+
+
+### Bug Fixes
+
+* Title is not required ([53976ad](https://github.com/cozy/cozy-ui/commit/53976ad))
+
 # [57.2.0](https://github.com/cozy/cozy-ui/compare/v57.1.0...v57.2.0) (2021-10-12)
 
 
