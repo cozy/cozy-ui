@@ -88,7 +88,7 @@ export {
   ExperimentalDialogActions,
   ExperimentalDialogTitle
 } from './Labs/ExperimentalDialog'
-
+export { default as Navbar } from './Navbar'
 export { default as BarContextProvider } from './BarContextProvider'
 export { default as BarTitle } from './BarTitle'
 export { default as UploadQueue } from './UploadQueue'

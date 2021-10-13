@@ -125,7 +125,8 @@ module.exports = {
         '../react/AppLinker/index.jsx',
         '../react/Breadcrumbs/index.jsx',
         '../react/Tabs/index.jsx',
-        '../react/NavigationList/index.jsx'
+        '../react/NavigationList/index.jsx',
+        '../react/Navbar/index.jsx'
       ]
     },
     {
