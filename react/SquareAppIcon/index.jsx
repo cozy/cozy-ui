@@ -52,10 +52,10 @@ export const SquareAppIcon = ({ app, name, variant }) => {
       >
         <Badge
           className={cx(
-            styles['SquareAppIcon-icon-wrapper'],
-            styles[`SquareAppIcon-${variant}`],
+            styles['SquareAppIcon-wrapper'],
+            styles[`SquareAppIcon-wrapper-${variant}`],
             {
-              [`${styles['SquareAppIcon-variant-wrapper']}`]: [
+              [`${styles['SquareAppIcon-wrapper-fx']}`]: [
                 'ghost',
                 'add'
               ].includes(variant)
@@ -76,7 +76,7 @@ export const SquareAppIcon = ({ app, name, variant }) => {
               {letter}
             </Typography>
           ) : (
-            <div>
+            <div className={styles['SquareAppIcon-icon-container']}>
               {variant === 'add' ? (
                 <Icon icon={iconPlus} color={color} />
               ) : (

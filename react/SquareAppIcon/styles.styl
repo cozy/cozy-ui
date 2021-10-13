@@ -7,7 +7,7 @@ $mobileIconSize = constants['mobileIconSize']
 $mobileIconPadding = constants['mobileIconPadding']
 $color = constants['color'] // hard-coded color, because the component is currently only used in the Home
 
-.SquareAppIcon-icon-wrapper
+.SquareAppIcon-wrapper
     box-sizing border-box
     background-color var(--defaultBackgroundColor)
     border-radius rem(12)
@@ -17,30 +17,31 @@ $color = constants['color'] // hard-coded color, because the component is curren
     +small-screen()
         height $mobileIconSize
         width $mobileIconSize
-    div
-        padding $iconPadding
-        border-radius rem(12)
-        height 'calc(%s - 2px * %s)' % ($iconSize $iconPadding)
-        +small-screen()
-            padding $mobileIconPadding
-            height 'calc(%s - 2px * %s)' % ($mobileIconSize $mobileIconPadding)
 
-.SquareAppIcon-variant-wrapper
+.SquareAppIcon-icon-container
+    padding $iconPadding
+    border-radius rem(12)
+    height 'calc(%s - 2px * %s)' % ($iconSize $iconPadding)
+    +small-screen()
+        padding $mobileIconPadding
+        height 'calc(%s - 2px * %s)' % ($mobileIconSize $mobileIconPadding)
+
+.SquareAppIcon-wrapper-fx
     background-color alpha($color, .32)
     border 1px dashed var(--white)
     @supports not (backdrop-filter: blur(48px))
         background-color alpha($color, .48)
-    div
+    .SquareAppIcon-icon-container
         backdrop-filter blur(48px)
 
-.SquareAppIcon-ghost
-    div
+.SquareAppIcon-wrapper-ghost
+    .SquareAppIcon-icon-container
         mix-blend-mode overlay // need to apply backdrop-filter and mix blend-mode in a separated element to have the proper effect
         svg, img
             filter saturate(0%)
 
-.SquareAppIcon-add
-    div
+.SquareAppIcon-wrapper-add
+    .SquareAppIcon-icon-container
         mix-blend-mode normal
         svg, img
             height calc(1rem - 2px)
@@ -49,8 +50,8 @@ $color = constants['color'] // hard-coded color, because the component is curren
             +small-screen()
                 margin 'calc((%s - 1rem - %s * 2) / 2)' % ($mobileIconSize $mobileIconPadding)
 
-.SquareAppIcon-maintenance
-    div
+.SquareAppIcon-wrapper-maintenance
+    .SquareAppIcon-icon-container
         mix-blend-mode luminosity
         svg, img
             opacity .5
