@@ -1,6 +1,5 @@
 import React from 'react'
-import get from 'lodash/get'
-import classnames from 'classnames'
+import cx from 'classnames'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/styles'
 
@@ -39,25 +38,28 @@ const useStyles = makeStyles(theme => ({
 
 export const SquareAppIcon = ({ app, name, variant }) => {
   const classes = useStyles()
-  const appName = name || get(app, 'name') || app
+  const appName = name || (app && app.name) || app || ''
+  const letter = appName[0] || ''
 
-  const infoBadgeContent =
-    variant === 'shortcut' ? <Icon size="10" icon={iconOut} /> : null
-  const ghostAddSharedClass = ['ghost', 'add'].includes(variant)
-    ? styles['SquareAppIcon-variant-wrapper']
-    : null
   return (
     <div data-testid="square-app-icon">
       <InfosBadge
-        badgeContent={infoBadgeContent}
+        badgeContent={
+          variant === 'shortcut' ? <Icon size="10" icon={iconOut} /> : null
+        }
         overlap="rectangle"
         invisible={variant !== 'shortcut'}
       >
         <Badge
-          className={classnames(
+          className={cx(
             styles['SquareAppIcon-icon-wrapper'],
             styles[`SquareAppIcon-${variant}`],
-            ghostAddSharedClass
+            {
+              [`${styles['SquareAppIcon-variant-wrapper']}`]: [
+                'ghost',
+                'add'
+              ].includes(variant)
+            }
           )}
           badgeContent={variant === 'error' ? '!' : ''}
           color={variant === 'error' ? 'error' : undefined}
@@ -71,12 +73,12 @@ export const SquareAppIcon = ({ app, name, variant }) => {
         >
           {variant === 'shortcut' ? (
             <Typography className={classes.letter} variant="h2" align="center">
-              {get(appName, '[0]', '')}
+              {letter}
             </Typography>
           ) : (
             <div>
               {variant === 'add' ? (
-                <Icon icon={iconPlus} className="u-primaryContrastTextColor" />
+                <Icon icon={iconPlus} color={color} />
               ) : (
                 <AppIcon app={app} />
               )}
