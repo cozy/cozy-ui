@@ -20,10 +20,10 @@ $color = constants['color'] // hard-coded color, because the component is curren
     div
         padding $iconPadding
         border-radius rem(12)
-        height 'calc(%s - 2 * %s)' % ($iconSize $iconPadding)
+        height 'calc(%s - 2px * %s)' % ($iconSize $iconPadding)
         +small-screen()
             padding $mobileIconPadding
-            height 'calc(%s - 2 * %s)' % ($mobileIconSize $mobileIconPadding)
+            height 'calc(%s - 2px * %s)' % ($mobileIconSize $mobileIconPadding)
 
 .SquareAppIcon-variant-wrapper
     background-color alpha($color, .32)
@@ -43,8 +43,8 @@ $color = constants['color'] // hard-coded color, because the component is curren
     div
         mix-blend-mode normal
         svg, img
-            height 1rem
-            width 1rem
+            height calc(1rem - 2px)
+            width calc(1rem - 2px)
             margin 'calc((%s - 1rem - %s * 2) / 2)' % ($iconSize $iconPadding)
             +small-screen()
                 margin 'calc((%s - 1rem - %s * 2) / 2)' % ($mobileIconSize $mobileIconPadding)
