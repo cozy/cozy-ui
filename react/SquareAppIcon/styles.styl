@@ -12,19 +12,22 @@ $color = constants['color'] // hard-coded color, because the component is curren
     background-color var(--defaultBackgroundColor)
     border-radius rem(12)
     height $iconSize
-    position relative
     width $iconSize
     +small-screen()
         height $mobileIconSize
         width $mobileIconSize
 
 .SquareAppIcon-icon-container
+    display flex
+    align-items center
+    justify-content center
     padding $iconPadding
     border-radius rem(12)
-    height 'calc(%s - 2px * %s)' % ($iconSize $iconPadding)
+    width 100%
     +small-screen()
         padding $mobileIconPadding
-        height 'calc(%s - 2px * %s)' % ($mobileIconSize $mobileIconPadding)
+    svg, img
+        width 100%
 
 .SquareAppIcon-wrapper-fx
     background-color alpha($color, .32)
@@ -39,16 +42,6 @@ $color = constants['color'] // hard-coded color, because the component is curren
         mix-blend-mode overlay // need to apply backdrop-filter and mix blend-mode in a separated element to have the proper effect
         svg, img
             filter saturate(0%)
-
-.SquareAppIcon-wrapper-add
-    .SquareAppIcon-icon-container
-        mix-blend-mode normal
-        svg, img
-            height calc(1rem - 2px)
-            width calc(1rem - 2px)
-            margin 'calc((%s - 1rem - %s * 2) / 2)' % ($iconSize $iconPadding)
-            +small-screen()
-                margin 'calc((%s - 1rem - %s * 2) / 2)' % ($mobileIconSize $mobileIconPadding)
 
 .SquareAppIcon-wrapper-maintenance
     .SquareAppIcon-icon-container
