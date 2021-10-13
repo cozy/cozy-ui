@@ -39,7 +39,7 @@ export const Empty = ({
 Empty.propTypes = {
   icon: iconPropType,
   iconSize: PropTypes.oneOf(['normal', 'medium', 'large']),
-  title: PropTypes.node.isRequired,
+  title: PropTypes.node,
   text: PropTypes.node,
   className: PropTypes.string
 }
