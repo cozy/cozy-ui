@@ -8,9 +8,11 @@ exports[`SquareAppIcon component should render an app correctly with the app nam
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-icon-wrapper___2LcSe"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM"
     >
-      <div>
+      <div
+        class="styles__SquareAppIcon-icon-container___39MRl"
+      >
         <svg
           class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
           height="100%"
@@ -28,14 +30,14 @@ exports[`SquareAppIcon component should render an app correctly with the app nam
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-2 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-6 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
-  <p
-    class="MuiTypography-root styles__SquareAppIcon-name___v8EcQ MuiTypography-body1"
+  <h6
+    class="MuiTypography-root makeStyles-name-4 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
   >
     Test
-  </p>
+  </h6>
 </div>
 `;
 
@@ -47,48 +49,11 @@ exports[`SquareAppIcon component should render an app correctly with the given n
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-icon-wrapper___2LcSe"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM"
     >
-      <div>
-        <svg
-          class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
-          height="100%"
-          style="fill: var(--coolGrey);"
-          viewBox="0 0 16 16"
-          width="100%"
-        >
-          <path
-            d="M1 11.009V5.5c0-.55.39-.773.872-.498l5.256 3.003c.476.272.872.944.872 1.495v5.508c0 .549-.39.772-.872.497l-5.256-3.003C1.396 12.231 1 11.56 1 11.01zm15 0c0 .55-.396 1.222-.872 1.494l-5.256 3.003c-.481.275-.872.052-.872-.497V9.5c0-.55.396-1.223.872-1.495l5.256-3.003c.481-.275.872-.052.872.498v5.508zM9.35 6.982c-.47.288-1.237.284-1.7 0l-4.8-2.954c-.47-.29-.463-.732.027-.995L7.623.477c.485-.261 1.264-.264 1.754 0l4.746 2.556c.485.26.49.71.027.995l-4.8 2.954z"
-          />
-        </svg>
-      </div>
-      <span
-        class="MuiBadge-badge badgeSizeMedium MuiBadge-anchorOriginTopRightRectangle"
-      />
-    </span>
-    <span
-      class="MuiBadge-badge Component-qualifier-1 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
-    />
-  </span>
-  <p
-    class="MuiTypography-root styles__SquareAppIcon-name___v8EcQ MuiTypography-body1"
-  >
-    modified
-  </p>
-</div>
-`;
-
-exports[`SquareAppIcon component should render an app with the app slug if no name prop and app is a string 1`] = `
-<div
-  data-testid="square-app-icon"
->
-  <span
-    class="MuiBadge-root"
-  >
-    <span
-      class="MuiBadge-root styles__SquareAppIcon-icon-wrapper___2LcSe"
-    >
-      <div>
+      <div
+        class="styles__SquareAppIcon-icon-container___39MRl"
+      >
         <svg
           class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
           height="100%"
@@ -109,11 +74,52 @@ exports[`SquareAppIcon component should render an app with the app slug if no na
       class="MuiBadge-badge Component-qualifier-3 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
-  <p
-    class="MuiTypography-root styles__SquareAppIcon-name___v8EcQ MuiTypography-body1"
+  <h6
+    class="MuiTypography-root makeStyles-name-1 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
+  >
+    modified
+  </h6>
+</div>
+`;
+
+exports[`SquareAppIcon component should render an app with the app slug if no name prop and app is a string 1`] = `
+<div
+  data-testid="square-app-icon"
+>
+  <span
+    class="MuiBadge-root"
+  >
+    <span
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM"
+    >
+      <div
+        class="styles__SquareAppIcon-icon-container___39MRl"
+      >
+        <svg
+          class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
+          height="100%"
+          style="fill: var(--coolGrey);"
+          viewBox="0 0 16 16"
+          width="100%"
+        >
+          <path
+            d="M1 11.009V5.5c0-.55.39-.773.872-.498l5.256 3.003c.476.272.872.944.872 1.495v5.508c0 .549-.39.772-.872.497l-5.256-3.003C1.396 12.231 1 11.56 1 11.01zm15 0c0 .55-.396 1.222-.872 1.494l-5.256 3.003c-.481.275-.872.052-.872-.497V9.5c0-.55.396-1.223.872-1.495l5.256-3.003c.481-.275.872-.052.872.498v5.508zM9.35 6.982c-.47.288-1.237.284-1.7 0l-4.8-2.954c-.47-.29-.463-.732.027-.995L7.623.477c.485-.261 1.264-.264 1.754 0l4.746 2.556c.485.26.49.71.027.995l-4.8 2.954z"
+          />
+        </svg>
+      </div>
+      <span
+        class="MuiBadge-badge badgeSizeMedium MuiBadge-anchorOriginTopRightRectangle"
+      />
+    </span>
+    <span
+      class="MuiBadge-badge Component-qualifier-9 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+    />
+  </span>
+  <h6
+    class="MuiTypography-root makeStyles-name-7 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
   >
     testslug
-  </p>
+  </h6>
 </div>
 `;
 
@@ -125,12 +131,15 @@ exports[`SquareAppIcon component should render correctly an app in add state 1`]
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-icon-wrapper___2LcSe styles__SquareAppIcon-add___3zlpa styles__SquareAppIcon-variant-wrapper___2WqQG"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-fx___3rcF6"
     >
-      <div>
+      <div
+        class="styles__SquareAppIcon-icon-container___39MRl"
+      >
         <svg
-          class="u-primaryContrastTextColor styles__icon___23x3R"
+          class="styles__icon___23x3R"
           height="16"
+          style="fill: #fff;"
           viewBox="0 0 16 16"
           width="16"
         >
@@ -151,11 +160,11 @@ exports[`SquareAppIcon component should render correctly an app in add state 1`]
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-7 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-21 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
-  <p
-    class="MuiTypography-root styles__SquareAppIcon-name___v8EcQ MuiTypography-body1"
+  <h6
+    class="MuiTypography-root makeStyles-name-19 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
   />
 </div>
 `;
@@ -168,9 +177,11 @@ exports[`SquareAppIcon component should render correctly an app in error state 1
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-icon-wrapper___2LcSe"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM"
     >
-      <div>
+      <div
+        class="styles__SquareAppIcon-icon-container___39MRl"
+      >
         <svg
           class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
           height="100%"
@@ -190,14 +201,14 @@ exports[`SquareAppIcon component should render correctly an app in error state 1
       </span>
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-6 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-18 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
-  <p
-    class="MuiTypography-root styles__SquareAppIcon-name___v8EcQ MuiTypography-body1"
+  <h6
+    class="MuiTypography-root makeStyles-name-16 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
   >
     Test
-  </p>
+  </h6>
 </div>
 `;
 
@@ -209,9 +220,11 @@ exports[`SquareAppIcon component should render correctly an app in ghost state 1
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-icon-wrapper___2LcSe styles__SquareAppIcon-ghost___g1-TE styles__SquareAppIcon-variant-wrapper___2WqQG"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-ghost___1ZALZ styles__SquareAppIcon-wrapper-fx___3rcF6"
     >
-      <div>
+      <div
+        class="styles__SquareAppIcon-icon-container___39MRl"
+      >
         <svg
           class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
           height="100%"
@@ -229,14 +242,14 @@ exports[`SquareAppIcon component should render correctly an app in ghost state 1
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-5 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-15 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
-  <p
-    class="MuiTypography-root styles__SquareAppIcon-name___v8EcQ MuiTypography-body1"
+  <h6
+    class="MuiTypography-root makeStyles-name-13 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
   >
     Test
-  </p>
+  </h6>
 </div>
 `;
 
@@ -248,9 +261,11 @@ exports[`SquareAppIcon component should render correctly an app in maintenance s
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-icon-wrapper___2LcSe styles__SquareAppIcon-maintenance___1IuVc"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-maintenance___2ne2n"
     >
-      <div>
+      <div
+        class="styles__SquareAppIcon-icon-container___39MRl"
+      >
         <svg
           class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
           height="100%"
@@ -268,13 +283,13 @@ exports[`SquareAppIcon component should render correctly an app in maintenance s
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-4 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-12 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
-  <p
-    class="MuiTypography-root styles__SquareAppIcon-name___v8EcQ MuiTypography-body1"
+  <h6
+    class="MuiTypography-root makeStyles-name-10 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
   >
     Test
-  </p>
+  </h6>
 </div>
 `;

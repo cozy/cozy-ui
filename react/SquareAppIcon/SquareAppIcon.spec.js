@@ -3,6 +3,7 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import CozyClient, { CozyProvider } from 'cozy-client'
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
 
 import SquareAppIcon from './index'
 
@@ -15,7 +16,9 @@ const client = new CozyClient({})
 const Wrapper = props => {
   return (
     <CozyProvider client={client}>
-      <SquareAppIcon {...props} />
+      <MuiCozyTheme>
+        <SquareAppIcon {...props} />
+      </MuiCozyTheme>
     </CozyProvider>
   )
 }

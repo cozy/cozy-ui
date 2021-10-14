@@ -1,7 +1,7 @@
 import React from 'react'
-import get from 'lodash/get'
-import classnames from 'classnames'
+import cx from 'classnames'
 import PropTypes from 'prop-types'
+import { makeStyles } from '@material-ui/styles'
 
 import AppIcon from '../AppIcon'
 import Badge from '../Badge'
@@ -9,31 +9,57 @@ import InfosBadge from '../InfosBadge'
 import { nameToColor } from '../Avatar'
 import Typography from '../Typography'
 import { AppDoctype } from '../proptypes'
-import styles from './styles.styl'
 import Icon from '../Icon'
 import iconPlus from '../Icons/Plus'
 import iconOut from '../Icons/LinkOut'
 
-export const SquareAppIcon = ({ app, name, variant }) => {
-  const appName = name || get(app, 'name') || app
+import { mobileIconSize, color } from './constants.json'
+import styles from './styles.styl'
 
-  const infoBadgeContent =
-    variant === 'shortcut' ? <Icon size="10" icon={iconOut} /> : null
-  const ghostAddSharedClass = ['ghost', 'add'].includes(variant)
-    ? styles['SquareAppIcon-variant-wrapper']
-    : null
+const useStyles = makeStyles(theme => ({
+  name: {
+    color,
+    maxWidth: '4.25rem',
+    fontSize: '0.875rem',
+    lineHeight: '1.188rem',
+    marginTop: '0.5rem',
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: mobileIconSize,
+      fontSize: '0.6875rem',
+      lineHeight: '1rem',
+      marginTop: '0.25rem'
+    }
+  },
+  letter: {
+    color,
+    margin: 'auto'
+  }
+}))
+
+export const SquareAppIcon = ({ app, name, variant }) => {
+  const classes = useStyles()
+  const appName = name || (app && app.name) || app || ''
+  const letter = appName[0] || ''
+
   return (
     <div data-testid="square-app-icon">
       <InfosBadge
-        badgeContent={infoBadgeContent}
+        badgeContent={
+          variant === 'shortcut' ? <Icon size="10" icon={iconOut} /> : null
+        }
         overlap="rectangle"
         invisible={variant !== 'shortcut'}
       >
         <Badge
-          className={classnames(
-            styles['SquareAppIcon-icon-wrapper'],
-            styles[`SquareAppIcon-${variant}`],
-            ghostAddSharedClass
+          className={cx(
+            styles['SquareAppIcon-wrapper'],
+            styles[`SquareAppIcon-wrapper-${variant}`],
+            {
+              [`${styles['SquareAppIcon-wrapper-fx']}`]: [
+                'ghost',
+                'add'
+              ].includes(variant)
+            }
           )}
           badgeContent={variant === 'error' ? '!' : ''}
           color={variant === 'error' ? 'error' : undefined}
@@ -46,17 +72,13 @@ export const SquareAppIcon = ({ app, name, variant }) => {
           }
         >
           {variant === 'shortcut' ? (
-            <Typography
-              className={styles['SquareAppIcon-shortcut-letter']}
-              align="center"
-              variant="h2"
-            >
-              {get(appName, '[0]', '')}
+            <Typography className={classes.letter} variant="h2" align="center">
+              {letter}
             </Typography>
           ) : (
-            <div>
+            <div className={styles['SquareAppIcon-icon-container']}>
               {variant === 'add' ? (
-                <Icon icon={iconPlus} className="u-primaryContrastTextColor" />
+                <Icon icon={iconPlus} color={color} />
               ) : (
                 <AppIcon app={app} />
               )}
@@ -64,7 +86,7 @@ export const SquareAppIcon = ({ app, name, variant }) => {
           )}
         </Badge>
       </InfosBadge>
-      <Typography className={classnames(styles['SquareAppIcon-name'])}>
+      <Typography className={classes.name} variant="h6" align="center" noWrap>
         {appName}
       </Typography>
     </div>
