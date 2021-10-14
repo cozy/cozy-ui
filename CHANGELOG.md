@@ -1,3 +1,15 @@
+# [57.3.0](https://github.com/cozy/cozy-ui/compare/v57.2.1...v57.3.0) (2021-10-14)
+
+
+### Bug Fixes
+
+* SquareAppIcon background on Chrome ([dea5fd6](https://github.com/cozy/cozy-ui/commit/dea5fd6))
+
+
+### Features
+
+* Expose SquareAppIcon component ([b11a9aa](https://github.com/cozy/cozy-ui/commit/b11a9aa))
+
 ## [57.2.1](https://github.com/cozy/cozy-ui/compare/v57.2.0...v57.2.1) (2021-10-13)
 
 
