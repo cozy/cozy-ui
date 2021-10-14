@@ -8,9 +8,11 @@ exports[`SquareAppIcon component should render an app correctly with the app nam
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-icon-wrapper___2LcSe"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM"
     >
-      <div>
+      <div
+        class="styles__SquareAppIcon-icon-container___39MRl"
+      >
         <svg
           class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
           height="100%"
@@ -47,9 +49,11 @@ exports[`SquareAppIcon component should render an app correctly with the given n
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-icon-wrapper___2LcSe"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM"
     >
-      <div>
+      <div
+        class="styles__SquareAppIcon-icon-container___39MRl"
+      >
         <svg
           class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
           height="100%"
@@ -86,9 +90,11 @@ exports[`SquareAppIcon component should render an app with the app slug if no na
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-icon-wrapper___2LcSe"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM"
     >
-      <div>
+      <div
+        class="styles__SquareAppIcon-icon-container___39MRl"
+      >
         <svg
           class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
           height="100%"
@@ -125,12 +131,15 @@ exports[`SquareAppIcon component should render correctly an app in add state 1`]
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-icon-wrapper___2LcSe styles__SquareAppIcon-add___3zlpa styles__SquareAppIcon-variant-wrapper___2WqQG"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-fx___3rcF6"
     >
-      <div>
+      <div
+        class="styles__SquareAppIcon-icon-container___39MRl"
+      >
         <svg
-          class="u-primaryContrastTextColor styles__icon___23x3R"
+          class="styles__icon___23x3R"
           height="16"
+          style="fill: #fff;"
           viewBox="0 0 16 16"
           width="16"
         >
@@ -168,9 +177,11 @@ exports[`SquareAppIcon component should render correctly an app in error state 1
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-icon-wrapper___2LcSe"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM"
     >
-      <div>
+      <div
+        class="styles__SquareAppIcon-icon-container___39MRl"
+      >
         <svg
           class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
           height="100%"
@@ -209,9 +220,11 @@ exports[`SquareAppIcon component should render correctly an app in ghost state 1
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-icon-wrapper___2LcSe styles__SquareAppIcon-ghost___g1-TE styles__SquareAppIcon-variant-wrapper___2WqQG"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-ghost___1ZALZ styles__SquareAppIcon-wrapper-fx___3rcF6"
     >
-      <div>
+      <div
+        class="styles__SquareAppIcon-icon-container___39MRl"
+      >
         <svg
           class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
           height="100%"
@@ -248,9 +261,11 @@ exports[`SquareAppIcon component should render correctly an app in maintenance s
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-icon-wrapper___2LcSe styles__SquareAppIcon-maintenance___1IuVc"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-maintenance___2ne2n"
     >
-      <div>
+      <div
+        class="styles__SquareAppIcon-icon-container___39MRl"
+      >
         <svg
           class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
           height="100%"
