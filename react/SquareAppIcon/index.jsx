@@ -73,7 +73,7 @@ export const SquareAppIcon = ({ app, name, variant }) => {
         >
           {variant === 'shortcut' ? (
             <Typography className={classes.letter} variant="h2" align="center">
-              {letter}
+              {letter.toUpperCase()}
             </Typography>
           ) : (
             <div className={styles['SquareAppIcon-icon-container']}>

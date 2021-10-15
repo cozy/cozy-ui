@@ -61,4 +61,9 @@ describe('SquareAppIcon component', () => {
     const root = render(<Wrapper variant="add" />)
     expect(root.getByTestId('square-app-icon')).toMatchSnapshot()
   })
+
+  it('should render correctly an app in shortcut state', () => {
+    const root = render(<Wrapper variant="shortcut" name="shortcut" />)
+    expect(root.getByTestId('square-app-icon')).toMatchSnapshot()
+  })
 })
