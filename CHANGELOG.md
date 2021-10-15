@@ -1,3 +1,10 @@
+## [57.3.1](https://github.com/cozy/cozy-ui/compare/v57.3.0...v57.3.1) (2021-10-15)
+
+
+### Bug Fixes
+
+* Display shortcut letter as upper case in SquareAppIcon ([3792d10](https://github.com/cozy/cozy-ui/commit/3792d10))
+
 # [57.3.0](https://github.com/cozy/cozy-ui/compare/v57.2.1...v57.3.0) (2021-10-14)
 
 
