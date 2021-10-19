@@ -1,3 +1,10 @@
+# [57.4.0](https://github.com/cozy/cozy-ui/compare/v57.3.1...v57.4.0) (2021-10-19)
+
+
+### Features
+
+* Add piwik-react-router package ([e3bd229](https://github.com/cozy/cozy-ui/commit/e3bd229))
+
 ## [57.3.1](https://github.com/cozy/cozy-ui/compare/v57.3.0...v57.3.1) (2021-10-15)
 
 
