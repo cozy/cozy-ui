@@ -19,7 +19,7 @@ const makeParser = () => {
   const parser = new ArgumentParser()
 
   parser.addArgument('--mode', {
-    choices: ['react', 'stack', 'kss'],
+    choices: ['react', 'kss'],
     defaultValue: 'react'
   })
   parser.addArgument('--screenshot-dir', {

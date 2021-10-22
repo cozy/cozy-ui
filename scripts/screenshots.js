@@ -2,7 +2,6 @@
 
 const { prepareFS, prepareBrowser } = require('./screenshots/prepares')
 const screenshotReactStyleguide = require('./screenshots/screenshotReactStyleguide')
-const screenshotStackExamples = require('./screenshots/screenshotStackExamples')
 const screenshotKSSStyleguide = require('./screenshots/screenshotKSSStyleguide')
 const makeParser = require('./screenshots/parser')
 const { readConfig, parseViewportArgument } = require('./screenshots/helpers')
@@ -38,8 +37,6 @@ const main = async () => {
 
   if (args.mode == 'react') {
     await screenshotReactStyleguide(page, args, config)
-  } else if (args.mode == 'stack') {
-    await screenshotStackExamples(page, args)
   } else if (args.mode == 'kss') {
     await screenshotKSSStyleguide(page, args)
   }
