@@ -34,10 +34,10 @@ remark -o --use remark-jscodeshift=allowNoLang:true,transform:\"codemods/transfo
 * Screenshot the new one inside screenshots
 * Run pixelmatch-server, which shows screenshots side by side like on Argos (you need the `pixelmatch` binary to be available)
 
-```
+```bash
 # Screenshot all the components
 yarn build:doc:react
-yarn screenshots'
+yarn screenshots
 cp -r screenshots pristine_screenshots
 
 # yarn watch:doc:react
