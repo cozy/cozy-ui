@@ -106,7 +106,7 @@ export const AppTile = ({
 
 AppTile.propTypes = {
   app: AppDoctype,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   namePrefix: PropTypes.string,
   onClick: PropTypes.func,
   IconComponent: PropTypes.element,
