@@ -1,21 +1,24 @@
 Component used to show an app status, can be used in
 a list of apps for example in the Store.
 
-```
+```jsx
 import AppTile from '.'
 import mockApps from '../AppSections/_mockApps'
 import { I18n } from '../I18n'
+import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
 
 const locale = {}
+const app = mockApps[0]
 
-const app = mockApps[0];
+;
 
 <I18n dictRequire={lang => locale} lang="en">
-  <div className='u-flex'>
+  <Grid container>
     <AppTile app={app} />
     <AppTile app={{...app, maintenance: true}} />
+    <AppTile app={{...app, maintenance: true}} displaySpecificMaintenanceStyle={true} />
     <AppTile app={{...app, availableVersion: true}} />
     <AppTile app={{...app, availableVersion: true}} showStatus={['maintenance']} />
-  </div>
+  </Grid>
 </I18n>
 ```
