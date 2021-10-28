@@ -11,6 +11,7 @@ import Typography from '../Typography'
 import { AppDoctype } from '../proptypes'
 import Icon from '../Icon'
 import iconPlus from '../Icons/Plus'
+import iconWarning from '../Icons/WarningCircle'
 import iconOut from '../Icons/LinkOut'
 
 import { mobileIconSize, color } from './constants.json'
@@ -37,10 +38,15 @@ const useStyles = makeStyles(theme => ({
   },
   shadow: {
     boxShadow: theme.shadows[2]
+  },
+  errorIcon: {
+    fill: 'var(--errorColor)',
+    backgroundColor: 'var(--primaryContrastTextColor)',
+    borderRadius: '1rem'
   }
 }))
 
-export const SquareAppIcon = ({ app, name, variant}) => {
+export const SquareAppIcon = ({ app, name, variant }) => {
   const classes = useStyles()
   const appName = name || (app && app.name) || app || ''
   const letter = appName[0] || ''
@@ -66,9 +72,20 @@ export const SquareAppIcon = ({ app, name, variant}) => {
               [classes.shadow]: !['add', 'ghost'].includes(variant)
             }
           )}
-          badgeContent={variant === 'error' ? '!' : ''}
+          badgeContent={
+            variant === 'error' ? (
+              <Icon
+                size="16"
+                className={cx(classes.errorIcon)}
+                icon={iconWarning}
+              />
+            ) : (
+              ''
+            )
+          }
           color={variant === 'error' ? 'error' : undefined}
           withBorder={false}
+          size="large"
           overlap="rectangle"
           style={
             variant === 'shortcut'
