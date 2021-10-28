@@ -1,3 +1,18 @@
+# [57.5.0](https://github.com/cozy/cozy-ui/compare/v57.4.0...v57.5.0) (2021-10-28)
+
+
+### Bug Fixes
+
+* SquareAppIcon error badge appearance ([b1c0275](https://github.com/cozy/cozy-ui/commit/b1c0275))
+* Various style updates after review ([2d6f829](https://github.com/cozy/cozy-ui/commit/2d6f829))
+
+
+### Features
+
+* Add shadows on SquareAppIcon text and icon background ([5008d63](https://github.com/cozy/cozy-ui/commit/5008d63))
+* Allow more width for the name ([12b280c](https://github.com/cozy/cozy-ui/commit/12b280c))
+* Allow two lines for the name ([64776ea](https://github.com/cozy/cozy-ui/commit/64776ea))
+
 # [57.4.0](https://github.com/cozy/cozy-ui/compare/v57.3.1...v57.4.0) (2021-10-19)
 
 
