@@ -26738,7 +26738,7 @@ html {
 
 .SquareAppIcon-wrapper--2SEuM {
   box-sizing: border-box;
-  background-color: var(--defaultBackgroundColor);
+  background-color: var(--paperBackgroundColor);
   border-radius: 0.75rem;
   height: 4rem;
   width: 4rem;
@@ -26779,7 +26779,7 @@ html {
   backdrop-filter: blur(48px);
 }
 .SquareAppIcon-wrapper-ghost--1ZALZ .SquareAppIcon-icon-container--39MRl {
-  mix-blend-mode: overlay;
+  mix-blend-mode: screen;
 }
 .SquareAppIcon-wrapper-ghost--1ZALZ .SquareAppIcon-icon-container--39MRl svg,
 .SquareAppIcon-wrapper-ghost--1ZALZ .SquareAppIcon-icon-container--39MRl img {
