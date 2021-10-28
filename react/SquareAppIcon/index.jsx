@@ -120,7 +120,11 @@ export const SquareAppIcon = ({ app, name, variant }) => {
           )}
         </Badge>
       </InfosBadge>
-      <Typography className={classes.name} variant="h6" align="center" noWrap>
+      <Typography
+        className={cx(classes.name, 'u-ellipsis', 'u-ov-hidden')}
+        variant="h6"
+        align="center"
+      >
         {appName}
       </Typography>
     </div>
