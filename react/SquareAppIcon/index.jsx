@@ -14,22 +14,25 @@ import iconPlus from '../Icons/Plus'
 import iconWarning from '../Icons/WarningCircle'
 import iconOut from '../Icons/LinkOut'
 
-import { mobileIconSize, color } from './constants.json'
+import { color } from './constants.json'
 import styles from './styles.styl'
 
 const useStyles = makeStyles(theme => ({
   name: {
     color,
-    maxWidth: '4.25rem',
+    width: '5.5rem',
+    textAlign: 'center',
     fontSize: '0.875rem',
     lineHeight: '1.188rem',
-    marginTop: '0.5rem',
+    margin: '0.5rem 0.25rem 0 0.25rem',
     textShadow: theme.textShadows[1],
+    height: '2.375rem',
     [theme.breakpoints.down('sm')]: {
-      maxWidth: mobileIconSize,
+      width: '3.75rem',
       fontSize: '0.6875rem',
       lineHeight: '1rem',
-      marginTop: '0.25rem'
+      margin: '0.25rem 0.25rem 0 0.25rem',
+      height: '2rem'
     }
   },
   letter: {
@@ -43,6 +46,15 @@ const useStyles = makeStyles(theme => ({
     fill: 'var(--errorColor)',
     backgroundColor: 'var(--primaryContrastTextColor)',
     borderRadius: '1rem'
+  },
+  tileWrapper: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '6rem',
+    [theme.breakpoints.down('sm')]: {
+      width: '4.25rem'
+    }
   }
 }))
 
@@ -52,7 +64,7 @@ export const SquareAppIcon = ({ app, name, variant }) => {
   const letter = appName[0] || ''
 
   return (
-    <div data-testid="square-app-icon">
+    <div data-testid="square-app-icon" className={cx(classes.tileWrapper)}>
       <InfosBadge
         badgeContent={
           variant === 'shortcut' ? <Icon size="10" icon={iconOut} /> : null
