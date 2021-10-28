@@ -23,6 +23,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: '0.875rem',
     lineHeight: '1.188rem',
     marginTop: '0.5rem',
+    textShadow: theme.textShadows[1],
     [theme.breakpoints.down('sm')]: {
       maxWidth: mobileIconSize,
       fontSize: '0.6875rem',
@@ -33,10 +34,13 @@ const useStyles = makeStyles(theme => ({
   letter: {
     color,
     margin: 'auto'
+  },
+  shadow: {
+    boxShadow: theme.shadows[2]
   }
 }))
 
-export const SquareAppIcon = ({ app, name, variant }) => {
+export const SquareAppIcon = ({ app, name, variant}) => {
   const classes = useStyles()
   const appName = name || (app && app.name) || app || ''
   const letter = appName[0] || ''
@@ -58,7 +62,8 @@ export const SquareAppIcon = ({ app, name, variant }) => {
               [`${styles['SquareAppIcon-wrapper-fx']}`]: [
                 'ghost',
                 'add'
-              ].includes(variant)
+              ].includes(variant),
+              [classes.shadow]: !['add', 'ghost'].includes(variant)
             }
           )}
           badgeContent={variant === 'error' ? '!' : ''}
