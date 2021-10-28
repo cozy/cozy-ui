@@ -480,6 +480,18 @@ const makeOverrides = theme => ({
         fontSize: '.5rem'
       }
     },
+    anchorOriginTopRightRectangle: {
+      transform: 'scale(1) translate(37%, -37%)'
+    },
+    anchorOriginBottomRightRectangle: {
+      transform: 'scale(1) translate(37%, 37%)'
+    },
+    anchorOriginBottomLeftRectangle: {
+      transform: 'scale(1) translate(-37%, 37%)'
+    },
+    anchorOriginTopLeftRectangle: {
+      transform: 'scale(1) translate(-37%, -37%)'
+    },
     dot: {
       borderRadius: '100%',
       padding: 0,

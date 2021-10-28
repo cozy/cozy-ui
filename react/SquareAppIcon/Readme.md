@@ -12,7 +12,7 @@ const theme = useCozyTheme()
 ;
 
 
-<Grid container spacing={3} style={{ background: `center / cover no-repeat url(${cloudWallpaper})` }}
+<Grid container spacing={1} style={{ background: `center / cover no-repeat url(${cloudWallpaper})` }}
 >
   <Grid item>
     <SquareAppIcon app="testapp" name="Normal" />
@@ -27,7 +27,7 @@ const theme = useCozyTheme()
     <SquareAppIcon name="Add" variant="add" />
   </Grid>
   <Grid item>
-    <SquareAppIcon app="testapp" name="NoAccount" variant="ghost" />
+    <SquareAppIcon app="testapp" name="No Account" variant="ghost" />
   </Grid>
   <Grid item>
     <SquareAppIcon name="Shortcut" variant="shortcut" />

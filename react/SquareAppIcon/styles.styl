@@ -9,7 +9,7 @@ $color = constants['color'] // hard-coded color, because the component is curren
 
 .SquareAppIcon-wrapper
     box-sizing border-box
-    background-color var(--defaultBackgroundColor)
+    background-color var(--paperBackgroundColor)
     border-radius rem(12)
     height $iconSize
     width $iconSize
@@ -39,7 +39,7 @@ $color = constants['color'] // hard-coded color, because the component is curren
 
 .SquareAppIcon-wrapper-ghost
     .SquareAppIcon-icon-container
-        mix-blend-mode overlay // need to apply backdrop-filter and mix blend-mode in a separated element to have the proper effect
+        mix-blend-mode screen // need to apply backdrop-filter and mix blend-mode in a separated element to have the proper effect
         svg, img
             filter saturate(0%)
 

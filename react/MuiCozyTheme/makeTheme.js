@@ -25,6 +25,11 @@ const themesCommonConfig = {
   zIndex: {
     modal: getCssVariableValue('zIndex-modal')
   },
+  textShadows: [
+    'none',
+    '0px 2px 8px rgba(29, 33, 42, 0.16), 0px 0px 1px rgba(29, 33, 42, 0.48)'
+  ],
+  shadows: makeShadows(), // Shadow ar not linked to themes
   props: {
     MuiTabs: {
       textColor: 'primary',
@@ -51,8 +56,7 @@ export const makeTheme = type => {
   const theme = createMuiTheme({
     ...themesCommonConfig,
     typography: makeTypography(palette),
-    palette,
-    shadows: makeShadows()
+    palette
   })
   const overrides = makeThemeOverrides(theme)
 

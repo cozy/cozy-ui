@@ -2,13 +2,14 @@
 
 exports[`SquareAppIcon component should render an app correctly with the app name 1`] = `
 <div
+  class="makeStyles-tileWrapper-11"
   data-testid="square-app-icon"
 >
   <span
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-9"
     >
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
@@ -26,15 +27,15 @@ exports[`SquareAppIcon component should render an app correctly with the app nam
         </svg>
       </div>
       <span
-        class="MuiBadge-badge badgeSizeMedium MuiBadge-anchorOriginTopRightRectangle"
+        class="MuiBadge-badge badgeSizeLarge MuiBadge-anchorOriginTopRightRectangle"
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-6 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-12 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
   <h6
-    class="MuiTypography-root makeStyles-name-4 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
+    class="MuiTypography-root makeStyles-name-7 u-ellipsis u-ov-hidden MuiTypography-h6 MuiTypography-alignCenter"
   >
     Test
   </h6>
@@ -43,13 +44,14 @@ exports[`SquareAppIcon component should render an app correctly with the app nam
 
 exports[`SquareAppIcon component should render an app correctly with the given name 1`] = `
 <div
+  class="makeStyles-tileWrapper-5"
   data-testid="square-app-icon"
 >
   <span
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-3"
     >
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
@@ -67,15 +69,15 @@ exports[`SquareAppIcon component should render an app correctly with the given n
         </svg>
       </div>
       <span
-        class="MuiBadge-badge badgeSizeMedium MuiBadge-anchorOriginTopRightRectangle"
+        class="MuiBadge-badge badgeSizeLarge MuiBadge-anchorOriginTopRightRectangle"
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-3 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-6 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
   <h6
-    class="MuiTypography-root makeStyles-name-1 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
+    class="MuiTypography-root makeStyles-name-1 u-ellipsis u-ov-hidden MuiTypography-h6 MuiTypography-alignCenter"
   >
     modified
   </h6>
@@ -84,13 +86,14 @@ exports[`SquareAppIcon component should render an app correctly with the given n
 
 exports[`SquareAppIcon component should render an app with the app slug if no name prop and app is a string 1`] = `
 <div
+  class="makeStyles-tileWrapper-17"
   data-testid="square-app-icon"
 >
   <span
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-15"
     >
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
@@ -108,15 +111,15 @@ exports[`SquareAppIcon component should render an app with the app slug if no na
         </svg>
       </div>
       <span
-        class="MuiBadge-badge badgeSizeMedium MuiBadge-anchorOriginTopRightRectangle"
+        class="MuiBadge-badge badgeSizeLarge MuiBadge-anchorOriginTopRightRectangle"
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-9 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-18 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
   <h6
-    class="MuiTypography-root makeStyles-name-7 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
+    class="MuiTypography-root makeStyles-name-13 u-ellipsis u-ov-hidden MuiTypography-h6 MuiTypography-alignCenter"
   >
     testslug
   </h6>
@@ -125,6 +128,7 @@ exports[`SquareAppIcon component should render an app with the app slug if no na
 
 exports[`SquareAppIcon component should render correctly an app in add state 1`] = `
 <div
+  class="makeStyles-tileWrapper-41"
   data-testid="square-app-icon"
 >
   <span
@@ -156,28 +160,29 @@ exports[`SquareAppIcon component should render correctly an app in add state 1`]
         </svg>
       </div>
       <span
-        class="MuiBadge-badge badgeSizeMedium MuiBadge-anchorOriginTopRightRectangle"
+        class="MuiBadge-badge badgeSizeLarge MuiBadge-anchorOriginTopRightRectangle"
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-21 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-42 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
   <h6
-    class="MuiTypography-root makeStyles-name-19 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
+    class="MuiTypography-root makeStyles-name-37 u-ellipsis u-ov-hidden MuiTypography-h6 MuiTypography-alignCenter"
   />
 </div>
 `;
 
 exports[`SquareAppIcon component should render correctly an app in error state 1`] = `
 <div
+  class="makeStyles-tileWrapper-35"
   data-testid="square-app-icon"
 >
   <span
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-33"
     >
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
@@ -195,17 +200,27 @@ exports[`SquareAppIcon component should render correctly an app in error state 1
         </svg>
       </div>
       <span
-        class="MuiBadge-badge badgeSizeMedium MuiBadge-anchorOriginTopRightRectangle MuiBadge-colorError"
+        class="MuiBadge-badge badgeSizeLarge MuiBadge-anchorOriginTopRightRectangle MuiBadge-colorError"
       >
-        !
+        <svg
+          class="makeStyles-errorIcon-34 styles__icon___23x3R"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0ZM8 9.75C7.30964 9.75 6.75 10.3096 6.75 11C6.75 11.6904 7.30964 12.25 8 12.25C8.69036 12.25 9.25 11.6904 9.25 11C9.25 10.3096 8.69036 9.75 8 9.75ZM8 4C7.48716 4 7.06449 4.38604 7.00673 4.88338L7 5V8C7 8.55228 7.44772 9 8 9C8.51284 9 8.93551 8.61396 8.99327 8.11662L9 8V5C9 4.44772 8.55228 4 8 4Z"
+            fill-rule="evenodd"
+          />
+        </svg>
       </span>
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-18 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-36 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
   <h6
-    class="MuiTypography-root makeStyles-name-16 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
+    class="MuiTypography-root makeStyles-name-31 u-ellipsis u-ov-hidden MuiTypography-h6 MuiTypography-alignCenter"
   >
     Test
   </h6>
@@ -214,6 +229,7 @@ exports[`SquareAppIcon component should render correctly an app in error state 1
 
 exports[`SquareAppIcon component should render correctly an app in ghost state 1`] = `
 <div
+  class="makeStyles-tileWrapper-29"
   data-testid="square-app-icon"
 >
   <span
@@ -238,15 +254,15 @@ exports[`SquareAppIcon component should render correctly an app in ghost state 1
         </svg>
       </div>
       <span
-        class="MuiBadge-badge badgeSizeMedium MuiBadge-anchorOriginTopRightRectangle"
+        class="MuiBadge-badge badgeSizeLarge MuiBadge-anchorOriginTopRightRectangle"
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-15 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-30 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
   <h6
-    class="MuiTypography-root makeStyles-name-13 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
+    class="MuiTypography-root makeStyles-name-25 u-ellipsis u-ov-hidden MuiTypography-h6 MuiTypography-alignCenter"
   >
     Test
   </h6>
@@ -255,13 +271,14 @@ exports[`SquareAppIcon component should render correctly an app in ghost state 1
 
 exports[`SquareAppIcon component should render correctly an app in maintenance state 1`] = `
 <div
+  class="makeStyles-tileWrapper-23"
   data-testid="square-app-icon"
 >
   <span
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-maintenance___2ne2n"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-maintenance___2ne2n makeStyles-shadow-21"
     >
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
@@ -279,15 +296,15 @@ exports[`SquareAppIcon component should render correctly an app in maintenance s
         </svg>
       </div>
       <span
-        class="MuiBadge-badge badgeSizeMedium MuiBadge-anchorOriginTopRightRectangle"
+        class="MuiBadge-badge badgeSizeLarge MuiBadge-anchorOriginTopRightRectangle"
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-12 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-24 MuiBadge-anchorOriginBottomRightRectangle MuiBadge-invisible"
     />
   </span>
   <h6
-    class="MuiTypography-root makeStyles-name-10 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
+    class="MuiTypography-root makeStyles-name-19 u-ellipsis u-ov-hidden MuiTypography-h6 MuiTypography-alignCenter"
   >
     Test
   </h6>
@@ -296,26 +313,27 @@ exports[`SquareAppIcon component should render correctly an app in maintenance s
 
 exports[`SquareAppIcon component should render correctly an app in shortcut state 1`] = `
 <div
+  class="makeStyles-tileWrapper-47"
   data-testid="square-app-icon"
 >
   <span
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-45"
       style="background-color: rgb(61, 166, 126);"
     >
       <h2
-        class="MuiTypography-root makeStyles-letter-23 MuiTypography-h2 MuiTypography-alignCenter"
+        class="MuiTypography-root makeStyles-letter-44 MuiTypography-h2 MuiTypography-alignCenter"
       >
         S
       </h2>
       <span
-        class="MuiBadge-badge badgeSizeMedium MuiBadge-anchorOriginTopRightRectangle"
+        class="MuiBadge-badge badgeSizeLarge MuiBadge-anchorOriginTopRightRectangle"
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-24 MuiBadge-anchorOriginBottomRightRectangle"
+      class="MuiBadge-badge Component-qualifier-48 MuiBadge-anchorOriginBottomRightRectangle"
     >
       <svg
         class="styles__icon___23x3R"
@@ -331,7 +349,7 @@ exports[`SquareAppIcon component should render correctly an app in shortcut stat
     </span>
   </span>
   <h6
-    class="MuiTypography-root makeStyles-name-22 MuiTypography-h6 MuiTypography-noWrap MuiTypography-alignCenter"
+    class="MuiTypography-root makeStyles-name-43 u-ellipsis u-ov-hidden MuiTypography-h6 MuiTypography-alignCenter"
   >
     shortcut
   </h6>
