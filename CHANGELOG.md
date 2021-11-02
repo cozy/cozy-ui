@@ -1,3 +1,10 @@
+## [57.5.1](https://github.com/cozy/cozy-ui/compare/v57.5.0...v57.5.1) (2021-11-02)
+
+
+### Bug Fixes
+
+* Set correct argos batchCount ([8a6179d](https://github.com/cozy/cozy-ui/commit/8a6179d)), closes [cozy/cozy-ui#1917](https://github.com/cozy/cozy-ui/issues/1917)
+
 # [57.5.0](https://github.com/cozy/cozy-ui/compare/v57.4.0...v57.5.0) (2021-10-28)
 
 
