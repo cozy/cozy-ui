@@ -26,6 +26,9 @@ const useStyles = makeStyles(theme => ({
     lineHeight: '1.188rem',
     margin: '0.5rem 0.25rem 0 0.25rem',
     textShadow: theme.textShadows[1],
+    lineClamp: '2',
+    boxOrient: 'vertical',
+    display: '-webkit-box',
     height: '2.375rem',
     [theme.breakpoints.down('sm')]: {
       width: '3.75rem',
@@ -121,7 +124,7 @@ export const SquareAppIcon = ({ app, name, variant }) => {
         </Badge>
       </InfosBadge>
       <Typography
-        className={cx(classes.name, 'u-ellipsis', 'u-ov-hidden')}
+        className={cx(classes.name, 'u-spacellipsis')}
         variant="h6"
         align="center"
       >

@@ -27,7 +27,7 @@ const theme = useCozyTheme()
     <SquareAppIcon name="Add" variant="add" />
   </Grid>
   <Grid item>
-    <SquareAppIcon app="testapp" name="No Account" variant="ghost" />
+    <SquareAppIcon app="testapp" name="No Account long name very very very very long" variant="ghost" />
   </Grid>
   <Grid item>
     <SquareAppIcon name="Shortcut" variant="shortcut" />
