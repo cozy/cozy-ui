@@ -1,3 +1,10 @@
+## [57.5.2](https://github.com/cozy/cozy-ui/compare/v57.5.1...v57.5.2) (2021-11-02)
+
+
+### Bug Fixes
+
+* Use u-spacellipsis instead of u-ellipsis ([3a4a6c3](https://github.com/cozy/cozy-ui/commit/3a4a6c3))
+
 ## [57.5.1](https://github.com/cozy/cozy-ui/compare/v57.5.0...v57.5.1) (2021-11-02)
 
 
