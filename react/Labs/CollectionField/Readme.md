@@ -4,22 +4,24 @@ will receive `null` as its value, which can be handy for example for
 the ContactPicker to remove one click.
 
 ```jsx
-import CollectionField from 'cozy-ui/transpiled/react/Labs/CollectionField';
-import ContactPicker from 'cozy-ui/transpiled/react/ContactPicker';
-import DemoProvider from '../../ContactsListModal/DemoProvider';
-import contacts from '../../ContactsList/data.json';
-import Variants from 'cozy-ui/docs/components/Variants';
+import CollectionField from 'cozy-ui/transpiled/react/Labs/CollectionField'
+import ContactPicker from 'cozy-ui/transpiled/react/ContactPicker'
+import DemoProvider from '../../ContactsListModal/DemoProvider'
+import contacts from '../../ContactsList/data.json'
+import Variants from 'cozy-ui/docs/components/Variants'
 
-initialState = { contacts: [contacts[0]] };
+initialState = { contacts: [contacts[0]] }
 
 const initialVariants = [{
   inline: false,
   emptyData: false,
   nullData: false
-}];
+}]
 
-<Variants initialVariants={initialVariants}>{
-  variant => (
+;
+
+<Variants initialVariants={initialVariants} screenshotAllVariants>
+  {variant => (
     <DemoProvider>
       <CollectionField
         values={variant.emptyData ? [] : variant.nullData ? [null] : state.contacts}
@@ -33,7 +35,6 @@ const initialVariants = [{
         variant={variant.inline ? "inline" : null}
       />
     </DemoProvider>
-  )
-}
+  )}
 </Variants>
 ```
