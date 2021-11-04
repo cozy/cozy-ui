@@ -30,7 +30,7 @@ const PanelContent = ({ file, t }) => {
           elevation={2}
           square
         >
-          <Typography variant="h4">
+          <Typography variant="h4" className={'u-pv-1 u-ph-2'}>
             <PanelBlock file={file} />
           </Typography>
         </Paper>

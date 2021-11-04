@@ -119,7 +119,7 @@ export const toolbarPropsPropType = {
 
 Viewer.propTypes = {
   /** One `io.cozy.files` to display */
-  currentFile: PropTypes.shape(FileDoctype).isRequired,
+  currentFile: FileDoctype.isRequired,
   hasNext: PropTypes.bool,
   hasPrevious: PropTypes.bool,
   /** Called when the user wants to leave the Viewer */
@@ -165,7 +165,7 @@ const ViewerInformationsWrapper = ({
 }
 
 ViewerInformationsWrapper.propTypes = {
-  currentFile: PropTypes.shape(FileDoctype).isRequired,
+  currentFile: FileDoctype.isRequired,
   disableFooter: PropTypes.bool,
   validForPanel: PropTypes.bool,
   toolbarRef: PropTypes.object

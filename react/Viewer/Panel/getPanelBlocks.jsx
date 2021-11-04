@@ -1,9 +1,18 @@
 import KonnectorBlock from 'cozy-harvest-lib/dist/components/KonnectorBlock'
 
-import { hasCertifications, isFromKonnector } from '../helpers'
+import {
+  hasCertifications,
+  hasQualifications,
+  isFromKonnector
+} from '../helpers'
 import Certifications from './Certifications'
+import Qualification from './Qualification'
 
 export const panelBlocksSpecs = {
+  qualifications: {
+    condition: hasQualifications,
+    component: Qualification
+  },
   konnector: {
     condition: isFromKonnector,
     component: KonnectorBlock

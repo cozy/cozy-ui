@@ -40,7 +40,7 @@ const BottomSheetContent = forwardRef(({ file }, ref) => {
           elevation={index === panelBlocks.length - 1 ? 0 : 2}
           square
         >
-          <Typography variant="h4">
+          <Typography variant="h4" className={'u-pv-1 u-ph-1'}>
             <PanelBlock file={file} />
           </Typography>
         </Paper>

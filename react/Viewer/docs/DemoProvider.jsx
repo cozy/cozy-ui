@@ -25,6 +25,7 @@ const mockClient = {
       unsubscribeAll: () => {}
     }
   },
+  on: () => {},
   collection: () => ({
     getDownloadLinkById: id =>
       new Promise(resolve => resolve(demoFilesByClass[id])),
@@ -48,7 +49,14 @@ const mockClient = {
     uri: '',
     fetch: () => new Promise(resolve => resolve(demoTextFileResponse))
   }),
-  getClient: () => mockClient
+  getClient: () => mockClient,
+  store: {
+    getState: () => {},
+    subscribe: () => {},
+    unsubscribe: () => {}
+  },
+  getQueryFromState: () => {},
+  query: () => {}
 }
 
 class Wrapper extends React.Component {

@@ -18,7 +18,7 @@ import cx from 'classnames';
 import Variants from 'cozy-ui/docs/components/Variants';
 import Card from 'cozy-ui/transpiled/react/Card';
 import Checkbox from 'cozy-ui/transpiled/react/Checkbox';
-import { ViewerWithCustomPanelAndFooter as Viewer } from 'cozy-ui/transpiled/react/Viewer';
+import Viewer from 'cozy-ui/transpiled/react/Viewer';
 import Stack from 'cozy-ui/transpiled/react/Stack';
 import Paper from 'cozy-ui/transpiled/react/Paper';
 import Typography from 'cozy-ui/transpiled/react/Typography';
@@ -54,18 +54,19 @@ const files = [
     class: 'pdf',
     name: 'Demo.pdf',
     mime: 'application/pdf',
-    links: {
-      preview: 'https://viewerdemo.cozycloud.cc/IMG_0062.PNG'
-    },
     metadata: {
-      carbonCopy: true
+      carbonCopy: true,
+      datetime: "2021-01-01T12:00:00.000Z",
+      datetimeLabel: "referencedDate",
+      referencedDate: "2021-01-01T12:00:00.000Z",
+      qualification: {
+        label: "isp_invoice",
+        purpose: "invoice",
+        sourceCategory: "telecom",
+        sourceSubCategory: "internet",
+        subjects: ["subscription"]
+      }
     }
-  },
-  {
-    _id: 'pdf',
-    class: 'pdf',
-    name: 'Demo.pdf',
-    mime: 'application/pdf'
   },
   {
     _id: 'text',
@@ -102,113 +103,6 @@ const toggleViewer = () => setState({ viewerOpened: !state.viewerOpened });
 const handleToggleToolbarClose = () => setState({ showToolbarCloseButton: !state.showToolbarCloseButton });
 const onFileChange = (file, nextIndex) => setState({ currentIndex: nextIndex });
 
-const PanelContent = ({ file }) => {
-  return (
-    <Stack
-      spacing="s"
-      className="u-flex u-flex-column u-h-100"
-    >
-      <Paper className={'u-ph-2 u-flex u-flex-items-center u-h-3'} elevation={2} square>
-        <Typography variant="h4">Informations utiles</Typography>
-      </Paper>
-      <Paper className={'u-ph-2 u-pv-1-half'} elevation={2} square>
-        <Typography variant="body1">Titre du fichier : {file.name}</Typography>
-      </Paper>
-      <Paper className={'u-ph-2 u-pv-1-half u-flex-grow-1'} elevation={2} square>
-        <Typography variant="h4">
-          <Media className="u-mb-half">
-            <Img>
-              <Icon icon={CarbonCopyIcon} className="u-mr-half" />
-            </Img>
-            <Bd>
-              <Typography variant="body1">Copie conforme</Typography>
-            </Bd>
-          </Media>
-          <Typography variant="caption">Ce document a été fourni par Grand Lyon. Il est défini “authentique et original” par Cozy Cloud, hébergeur de votre Cozy, car il peut affirmer qu'il provient directement du service du Grand Lyon, sans qu’il n’ait subit aucune modification.</Typography>
-        </Typography>
-      </Paper>
-    </Stack>
-  )
-};
-
-const useStyles = makeStyles({
-  footer: {
-    display: 'flex',
-    alignItems: 'center',
-    width: 'calc(100% - 2rem)',
-    height: '100%',
-    paddingLeft: '1rem',
-    paddingRight: '1rem',
-    borderTop: '1px solid var(--dividerColor)'
-  }
-});
-
-const FooterContent = ({ file, toolbarRef }) => {
-  const styles = useStyles()
-  const actionButtonsRef = React.useRef()
-  const panelBlocks = getPanelBlocks({ panelBlocksSpecs, file })
-
-  if (isValidForPanel({ file })) {
-    return (
-      <BottomSheetWrapper
-        file={file}
-        actionButtonsRef={actionButtonsRef}
-        toolbarRef={toolbarRef}
-      >
-        <Stack
-          spacing="s"
-          className={cx('u-flex u-flex-column u-ov-hidden', styles.stack)}
-        >
-          <Paper className={'u-flex u-ph-1 u-pb-1'} elevation={2} square ref={actionButtonsRef}>
-            <Button
-              className="u-mr-half"
-              extension="full"
-              theme="secondary"
-              icon={ShareIcon}
-              label="Share"
-            />
-            <Button
-              extension="full"
-              theme="secondary"
-              icon={DownloadIcon}
-              label="Download"
-            />
-          </Paper>
-          {panelBlocks.map((PanelBlock, index) => (
-            <Paper
-              key={index}
-              elevation={index === panelBlocks.length - 1 ? 0 : 2}
-              square
-            >
-              <Typography variant="h4">
-                <PanelBlock file={file} />
-              </Typography>
-            </Paper>
-          ))}
-        </Stack>
-      </BottomSheetWrapper>
-    )
-  }
-
-  return (
-    <div className={styles.footer}>
-      <Button
-        className="u-mr-half"
-        extension="full"
-        theme="secondary"
-        icon={ShareIcon}
-        label="Share"
-      />
-      <Button
-        extension="full"
-        theme="secondary"
-        icon={DownloadIcon}
-        label="Download"
-      />
-    </div>
-  )
-}
-
 <DemoProvider>
   <Variants initialVariants={initialVariants}>{
       variant => (
@@ -240,13 +134,6 @@ const FooterContent = ({ file, toolbarRef }) => {
                 toolbarProps={{
                   showToolbar: variant.toolbar,
                   showClose: state.showToolbarCloseButton
-                }}
-                panelInfoProps={{
-                  showPanel: isValidForPanel,
-                  PanelContent
-                }}
-                footerProps={{
-                  FooterContent
                 }}
               />
             </Overlay>
