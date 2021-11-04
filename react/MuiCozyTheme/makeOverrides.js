@@ -73,7 +73,7 @@ const makeOverrides = theme => ({
       boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.08)',
       borderWidth: '0.0625rem',
       borderStyle: 'solid',
-      borderColor: theme.palette.grey[200],
+      borderColor: theme.palette.border.main,
       overflow: 'hidden',
       marginBottom: '1rem'
     }
@@ -119,7 +119,7 @@ const makeOverrides = theme => ({
   MuiAccordionDetails: {
     root: {
       padding: 0,
-      borderTop: `0.0625rem solid ${theme.palette.grey[200]}`
+      borderTop: `0.0625rem solid ${theme.palette.border.main}`
     }
   },
   MuiStepConnector: {
