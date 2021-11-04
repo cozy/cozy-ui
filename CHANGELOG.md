@@ -1,3 +1,10 @@
+## [57.5.4](https://github.com/cozy/cozy-ui/compare/v57.5.3...v57.5.4) (2021-11-04)
+
+
+### Bug Fixes
+
+* AppTile doesn't require name prop ([3a74932](https://github.com/cozy/cozy-ui/commit/3a74932))
+
 ## [57.5.3](https://github.com/cozy/cozy-ui/compare/v57.5.2...v57.5.3) (2021-11-04)
 
 
