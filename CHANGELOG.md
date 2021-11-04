@@ -1,3 +1,10 @@
+## [57.5.3](https://github.com/cozy/cozy-ui/compare/v57.5.2...v57.5.3) (2021-11-04)
+
+
+### Bug Fixes
+
+* Border color of Accordion ([4628488](https://github.com/cozy/cozy-ui/commit/4628488))
+
 ## [57.5.2](https://github.com/cozy/cozy-ui/compare/v57.5.1...v57.5.2) (2021-11-02)
 
 
