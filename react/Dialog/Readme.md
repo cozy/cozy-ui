@@ -6,27 +6,27 @@ and returns props to spread on the components used in your custom Dialog. Those 
 will make sure that even your custom Dialogs will behave as CozyDialogs.
 
 ```jsx
-import Dialog, { DialogTitle, DialogActions } from 'cozy-ui/transpiled/react/Dialog';
-import { DialogBackButton, DialogCloseButton, useCozyDialog } from 'cozy-ui/transpiled/react/CozyDialogs';
+import Dialog, { DialogTitle, DialogActions } from 'cozy-ui/transpiled/react/Dialog'
+import { DialogBackButton, DialogCloseButton, useCozyDialog } from 'cozy-ui/transpiled/react/CozyDialogs'
 import useBreakpoints, {
   BreakpointsProvider
 } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
-import Alerter from 'cozy-ui/transpiled/react/Alerter';
+import Alerter from 'cozy-ui/transpiled/react/Alerter'
 
 import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
 import Button from 'cozy-ui/transpiled/react/Button'
-import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List';
-import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem';
-import ListItemIcon from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon';
-import ListItemText from 'cozy-ui/transpiled/react/ListItemText';
-import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemSecondaryAction';
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import Menu from 'cozy-ui/transpiled/react/MuiCozyTheme/Menus';
+import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List'
+import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem'
+import ListItemIcon from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon'
+import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
+import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemSecondaryAction'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import Menu from 'cozy-ui/transpiled/react/MuiCozyTheme/Menus'
 import MenuItem from '@material-ui/core/MenuItem'
 import FileTypeFolderIcon from 'cozy-ui/transpiled/react/Icons/FileTypeFolder'
 import FileTypeText from 'cozy-ui/transpiled/react/Icons/FileTypeText'
 
-import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots";
+import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots"
 
 const handleClose = () => setState({ modalOpened: !state.modalOpened })
 
@@ -125,15 +125,18 @@ const ExampleDialog = ({ open, onClose }) => {
         />
       </DialogActions>
     </Dialog>
-  );
+  )
 }
 
-;<>
+;
+
+<>
   <button onClick={() => setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
   </button>
   <BreakpointsProvider>
-    <><Alerter /><ExampleDialog open={state.modalOpened} onClose={handleClose} /></>
+    <Alerter />
+    <ExampleDialog open={state.modalOpened} onClose={handleClose} />
   </BreakpointsProvider>
 </>
 ```
