@@ -1,7 +1,7 @@
 import { sortLastNameFirst, sortHeaders } from './helpers'
 describe('Sort contacts', () => {
   describe('By Last Name', () => {
-    it('should sort contact by last name', () => {
+    test('should sort contact by last name', () => {
       const contacts = [
         { name: { givenName: '', familyName: '' } },
         { name: { givenName: 'A', familyName: 'A' } },
@@ -32,8 +32,7 @@ describe('Sort contacts', () => {
         { name: { givenName: 'B', familyName: 'C' } }
       ])
     })
-
-    it('should work with incomplete data', () => {
+    test('should work with incomplete data', () => {
       const contacts = [
         { name: { givenName: '' } },
         { name: { givenName: 'A' } },
