@@ -2480,9 +2480,7 @@ exports[`Field should render examples: Field 2`] = `
 
 exports[`Field should render examples: Field 3`] = `
 "<div>
-  <p>
-    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"controlled-field\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\"></label><input type=\\"text\\" id=\\"controlled-field\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" value=\\"\\"></div>
-  </p>
+  <div class=\\"styles__o-field___3n5HM\\"><label for=\\"controlled-field\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\"></label><input type=\\"text\\" id=\\"controlled-field\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" value=\\"\\"></div>
 </div>"
 `;
 
@@ -7360,70 +7358,17 @@ exports[`Media should render examples: Media 3`] = `
 </div>"
 `;
 
-exports[`Menu should render examples: Menu 1`] = `
-"<div>
-  <div class=\\"styles__c-menu___2YTiU styles__c-menu--left___3wamY\\" id=\\"menu\\"><button role=\\"button\\" class=\\"c-btn styles__c-menu__btn___18qF8\\">Click me !</button>
-    <div class=\\"styles__c-menu__inner___2g_mC styles__c-menu__inner--opened___sJHKG\\">
-      <div data=\\"hello\\" class=\\"styles__c-menu__item___1sXjs\\">Hello !</div>
-      <div data=\\"bonjour\\" class=\\"styles__c-menu__item___1sXjs styles__c-menu__item--disabled___OHDks\\">Bonjour !</div>
-      <hr>
-      <div data=\\"hola\\" class=\\"styles__c-menu__item___1sXjs\\">
-        <div class=\\"styles__media___cSJMp styles__media--top___K9w0I\\">
-          <div class=\\"styles__img___3SHpG styles__c-menu__item-icon___kzdkW\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-              <path d=\\"M16 0l-6 15-2.5-2.5L4 15l-1-4 10-8.5-10 6L0 6z\\" fill-rule=\\"evenodd\\"></path>
-            </svg></div>
-          <div class=\\"styles__bd___1Uv-F\\">
-            <div>¡Hola!</div>
-            <div>¿Qué tal?</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>"
-`;
-
-exports[`Menu should render examples: Menu 2`] = `
-"<div>
-  <div class=\\"styles__c-menu___2YTiU styles__c-menu--right___3wxbb\\"><button role=\\"button\\" class=\\"c-btn styles__c-menu__btn___18qF8\\">Click me !</button>
-    <div class=\\"styles__c-menu__inner___2g_mC styles__c-menu__inner--opened___sJHKG\\">
-      <div data=\\"hello\\" class=\\"styles__c-menu__item___1sXjs\\">Hello !</div>
-      <div data=\\"bonjour\\" class=\\"styles__c-menu__item___1sXjs styles__c-menu__item--disabled___OHDks\\">Bonjour !</div>
-      <div data=\\"hola\\" class=\\"styles__c-menu__item___1sXjs\\">¡Hola!</div>
-    </div>
-  </div>
-</div>"
-`;
-
-exports[`Menu should render examples: Menu 3`] = `
-"<div>
-  <div class=\\"styles__c-menu___2YTiU styles__c-menu--left___3wamY\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Greetings with custom component</span></span></button>
-    <div class=\\"styles__c-menu__inner___2g_mC styles__c-menu__inner--opened___sJHKG\\">
-      <div data=\\"hello\\" class=\\"styles__c-menu__item___1sXjs\\">Hello !</div>
-      <div data=\\"bonjour\\" class=\\"styles__c-menu__item___1sXjs styles__c-menu__item--disabled___OHDks\\">Bonjour !</div>
-      <div data=\\"hola\\" class=\\"styles__c-menu__item___1sXjs\\">¡Hola!</div>
-    </div>
-  </div>
-</div>"
-`;
-
-exports[`Menu should render examples: Menu 4`] = `
-"<div>
-  <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Click me !</span></span></button></div>
-</div>"
-`;
-
 exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
 "<div>
   <div class=\\"styles__Stack--xs___2R5lW\\">
     <div class=\\"MuiBox-root MuiBox-root-20\\">
-      <p class=\\"MuiTypography-root MuiTypography-body1\\">primary</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-checked-2 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
+      <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-displayInline\\">primary</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-checked-2 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
     <div class=\\"MuiBox-root MuiBox-root-21\\">
-      <p class=\\"MuiTypography-root MuiTypography-body1\\">secondary</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-checked-2 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
+      <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-displayInline\\">secondary</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-checked-2 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
     <div class=\\"MuiBox-root MuiBox-root-22\\">
-      <p class=\\"MuiTypography-root MuiTypography-body1\\">default</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
+      <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-displayInline\\">default</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
   </div>
 </div>"
@@ -7554,9 +7499,7 @@ exports[`ProgressionBanner should render examples: ProgressionBanner 1`] = `
               </svg></div>
           </div>
           <div class=\\"MuiGrid-root styles__c-banner-text___1sTVC MuiGrid-item\\">
-            <p class=\\"MuiTypography-root MuiTypography-body2\\">
-              <h6 class=\\"MuiTypography-root MuiTypography-h6\\">4 remaining items</h6>
-            </p>
+            <p class=\\"MuiTypography-root MuiTypography-body2\\"><span class=\\"MuiTypography-root MuiTypography-h6\\">4 remaining items</span></p>
           </div>
         </div>
       </div>
@@ -7601,11 +7544,11 @@ exports[`Radio should render examples: Radio 1`] = `
 
 exports[`Radio should render examples: Radio 2`] = `
 "<div>
-  <p><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" value=\\"\\" checked=\\"\\"><span>View bounding box</span></label></p>
+  <p><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">View bounding box</span></label></p>
   <p>Default gutter</p>
-  <div style=\\"height: 3rem; width: 3rem; border: 2px dashed #ccc; display: flex; justify-content: center; align-items: center;\\"><label class=\\"styles__c-input-radio___XJQt1\\" style=\\"border: 1px solid red;\\"><input type=\\"radio\\" value=\\"\\" checked=\\"\\"><span></span></label></div>
+  <div style=\\"height: 3rem; width: 3rem; border: 2px dashed #ccc; display: flex; justify-content: center; align-items: center;\\"><label class=\\"styles__c-input-radio___XJQt1\\" style=\\"border: 1px solid red;\\"><input type=\\"radio\\" readonly=\\"\\" value=\\"\\" checked=\\"\\"><span></span></label></div>
   <p>Gutter set to false</p>
-  <div style=\\"height: 3rem; width: 3rem; border: 2px dashed #ccc; display: flex; justify-content: center; align-items: center;\\"><label class=\\"styles__c-input-radio___XJQt1 styles__c-input-radio--noGutter___3WtC2\\" style=\\"border: 1px solid red;\\"><input type=\\"radio\\" value=\\"\\" checked=\\"\\"><span></span></label></div>
+  <div style=\\"height: 3rem; width: 3rem; border: 2px dashed #ccc; display: flex; justify-content: center; align-items: center;\\"><label class=\\"styles__c-input-radio___XJQt1 styles__c-input-radio--noGutter___3WtC2\\" style=\\"border: 1px solid red;\\"><input type=\\"radio\\" readonly=\\"\\" value=\\"\\" checked=\\"\\"><span></span></label></div>
 </div>"
 `;
 
