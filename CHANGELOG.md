@@ -1,3 +1,11 @@
+## [57.5.5](https://github.com/cozy/cozy-ui/compare/v57.5.4...v57.5.5) (2021-11-08)
+
+
+### Bug Fixes
+
+* Do not stretch small screenshots ([4c7f48f](https://github.com/cozy/cozy-ui/commit/4c7f48f))
+* Revert "Merge pull request [#1956](https://github.com/cozy/cozy-ui/issues/1956) from cozy/test/waitFor" ([#1962](https://github.com/cozy/cozy-ui/issues/1962)) ([374bda4](https://github.com/cozy/cozy-ui/commit/374bda4))
+
 ## [57.5.4](https://github.com/cozy/cozy-ui/compare/v57.5.3...v57.5.4) (2021-11-04)
 
 
