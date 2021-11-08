@@ -16,6 +16,7 @@ import ContactPicker from '../ContactPicker'
  * for example
  */
 const inputSpecificPropTypes = {
+  autoCapitalize: PropTypes.string,
   autoComplete: PropTypes.string,
   onKeyUp: PropTypes.func
 }
@@ -102,6 +103,7 @@ const FieldContainer = props => {
 
 const Field = props => {
   const {
+    autoCapitalize,
     autoComplete,
     className,
     disabled,
@@ -146,6 +148,7 @@ const Field = props => {
       case 'textarea':
         return (
           <Textarea
+            autoCapitalize={autoCapitalize}
             disabled={disabled}
             id={id}
             name={name}
@@ -161,6 +164,7 @@ const Field = props => {
       case 'password':
         return (
           <InputPassword
+            autoCapitalize={autoCapitalize}
             autoComplete={autoComplete}
             disabled={disabled}
             fullwidth={fullwidth}
@@ -198,6 +202,7 @@ const Field = props => {
       case 'number':
         return (
           <Input
+            autoCapitalize={autoCapitalize}
             autoComplete={autoComplete}
             disabled={disabled}
             fullwidth={fullwidth}

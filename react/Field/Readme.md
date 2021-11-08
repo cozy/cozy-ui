@@ -6,7 +6,7 @@ Like `Input` component, it can have the following properties:
 
 ##### Example
 
-```
+```jsx
 import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
@@ -21,7 +21,7 @@ import Field from 'cozy-ui/transpiled/react/Field';
 
 ##### Inline variant
 
-```
+```jsx
 import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
@@ -39,7 +39,7 @@ import Field from 'cozy-ui/transpiled/react/Field';
 
 An input is controlled if `props.value` is passed, even if it is empty.
 
-```
+```jsx
 import Field from 'cozy-ui/transpiled/react/Field';
 
 initialState = { value: '' }
@@ -58,7 +58,7 @@ It gives access to the underlying `<input />` element, for example to give focus
 
 ##### Example
 
-```
+```jsx
 import Field from 'cozy-ui/transpiled/react/Field';
 import Button from 'cozy-ui/transpiled/react/Button';
 class FieldWithFocus extends React.Component {
@@ -91,7 +91,7 @@ Name of the form field, injected into `Input`, `TextArea` or `SelectBox` compone
 
 ##### Exemple
 
-```
+```jsx
 import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
@@ -103,7 +103,7 @@ import Field from 'cozy-ui/transpiled/react/Field';
 
 #### Field when there's an error
 
-```
+```jsx
 import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
@@ -118,7 +118,7 @@ import Field from 'cozy-ui/transpiled/react/Field';
 
 #### Field with SelectBox
 
-```
+```jsx
 import Field from 'cozy-ui/transpiled/react/Field';
 const options = [
 {
@@ -168,7 +168,7 @@ initialState = { selectedContact: null };
 
 #### Password field with show/hide button
 
-```
+```jsx
 import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
@@ -185,7 +185,7 @@ import Field from 'cozy-ui/transpiled/react/Field';
 
 #### Password field without show/hide button
 
-```
+```jsx
 import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
@@ -198,7 +198,7 @@ import Field from 'cozy-ui/transpiled/react/Field';
 
 #### Side element
 
-```
+```jsx
 import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
@@ -210,7 +210,7 @@ import Field from 'cozy-ui/transpiled/react/Field';
 
 #### Side element with fullwidth element
 
-```
+```jsx
 import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
@@ -223,7 +223,7 @@ import Field from 'cozy-ui/transpiled/react/Field';
 
 #### Customized label and input
 
-```
+```jsx
 import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
@@ -240,7 +240,7 @@ import Field from 'cozy-ui/transpiled/react/Field';
 
 #### Password with custom secondaryComponent
 
-```
+```jsx
 import Field from 'cozy-ui/transpiled/react/Field';
 import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons';
 
@@ -271,7 +271,7 @@ import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons';
 
 #### Controlled Field
 
-```
+```jsx
 import Field from 'cozy-ui/transpiled/react/Field';
 <form>
   <Field
@@ -281,4 +281,30 @@ import Field from 'cozy-ui/transpiled/react/Field';
   />
   Value: { state.value }
 </form>
+```
+
+#### Mobile specific props
+
+On mobile devices, following props may be useful to control on-screen keyboard's behavior
+
+Note that `autoCapitalize` property is not handled by all mobile browsers and it also depends on the on-screen keyboard installed by the user and its configuration (i.e. [Android SwiftKey configuration](https://support.swiftkey.com/hc/en-us/articles/201468481-How-do-I-turn-off-Auto-Capitalize-))
+
+```jsx
+import Field from 'cozy-ui/transpiled/react/Field';
+import Variants from 'cozy-ui/docs/components/Variants';
+
+const initialVariants = [
+  { autoCapitalize: false, autoComplete: false }
+];
+
+<Variants initialVariants={initialVariants}>{
+  variant => (
+    <form>
+      <Field
+        autoCapitalize={variant.autoCapitalize ? 'on' : 'none'}
+        autoComplete={variant.autoComplete ? 'on' : 'off'}
+      />
+    </form>
+  )
+}</Variants>
 ```
