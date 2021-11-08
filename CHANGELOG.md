@@ -1,3 +1,10 @@
+# [57.6.0](https://github.com/cozy/cozy-ui/compare/v57.5.5...v57.6.0) (2021-11-08)
+
+
+### Features
+
+* Add `autoCapitalize` prop in Fields ([54efb34](https://github.com/cozy/cozy-ui/commit/54efb34))
+
 ## [57.5.5](https://github.com/cozy/cozy-ui/compare/v57.5.4...v57.5.5) (2021-11-08)
 
 
