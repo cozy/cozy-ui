@@ -2,7 +2,7 @@ import React from 'react'
 
 import CozyClient, { CozyProvider } from 'cozy-client'
 import I18n from '../I18n'
-import { render, waitFor } from '@testing-library/react'
+import { render, wait } from '@testing-library/react'
 
 import ShortcutViewer from './ShortcutViewer'
 
@@ -26,8 +26,7 @@ const setup = () => {
 describe('Shortcutviewer', () => {
   it('renders the component', async () => {
     const { container } = render(setup())
-    await waitFor(() => {
-      expect(container).toMatchSnapshot()
-    })
+    expect(container).toMatchSnapshot()
+    await wait()
   })
 })
