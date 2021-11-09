@@ -73,12 +73,19 @@ export const makePalette = type => {
     action: {
       active: getCssValue('actionColorActive'),
       hover: getCssValue('actionColorHover'),
+      hoverOpacity: 0.04,
       selected: getCssValue('actionColorSelected'),
+      selectedOpacity: 0.08,
       disabled: getCssValue('actionColorDisabled'),
       disabledBackground: getCssValue('actionColorDisabledBackground'),
+      disabledOpacity: 0.32,
       focus: getCssValue('actionColorFocus'),
+      focusOpacity: 0.12,
       ghost: getCssValue('actionColorGhost'),
-      hoverGhost: getCssValue('actionColorHoverGhost')
+      ghostOpacity: 0.08,
+      hoverGhost: getCssValue('actionColorHoverGhost'),
+      hoverGhostOpacity: 0.16,
+      activatedOpacity: 0.12
     },
     border: {
       main: getCssValue('borderMainColor'),
