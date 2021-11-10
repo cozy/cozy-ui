@@ -1,3 +1,5 @@
+import { fade as alpha } from '@material-ui/core/styles'
+
 const SWITCH_BAR_WIDTH = 25
 
 export const makeThemeOverrides = theme => {
@@ -6,6 +8,47 @@ export const makeThemeOverrides = theme => {
 
   return createOverrides(theme)
 }
+
+const makeSecondaryButtonStyle = (theme, color) => ({
+  color: theme.palette[color].main,
+  borderColor: theme.palette[color].main,
+  '&:hover': {
+    backgroundColor: alpha(
+      theme.palette[color].main,
+      theme.palette.action.hoverOpacity
+    )
+  },
+  '&.ghost': {
+    backgroundColor: alpha(
+      theme.palette[color].main,
+      theme.palette.action.ghostOpacity
+    ),
+    '&:hover': {
+      backgroundColor: alpha(
+        theme.palette[color].main,
+        theme.palette.action.hoverGhostOpacity
+      )
+    }
+  }
+})
+
+const makeTextButtonStyle = (theme, color) => ({
+  color: theme.palette[color].main,
+  '&:hover': {
+    backgroundColor: alpha(
+      theme.palette[color].main,
+      theme.palette.action.hoverOpacity
+    )
+  }
+})
+
+const makeContainedButtonStyle = (theme, color) => ({
+  color: theme.palette[color].contrastText,
+  backgroundColor: theme.palette[color].main,
+  '&:hover': {
+    backgroundColor: theme.palette[color].dark
+  }
+})
 
 const makeOverrides = theme => ({
   MuiOutlinedInput: {
@@ -27,27 +70,94 @@ const makeOverrides = theme => ({
   MuiButton: {
     root: {
       height: '2.5rem',
-      padding: '0px 1rem'
+      padding: '0 1rem',
+      '&.ghost': {
+        borderStyle: 'dashed !important', // important needed to override disable state
+        '&:hover': {
+          borderStyle: 'dashed !important' // important needed to override disable state
+        }
+      }
     },
     sizeSmall: {
       height: '2rem',
-      padding: '0px 0.75rem'
+      padding: '0 0.75rem',
+      '&$text': {
+        padding: '8px 6px'
+      }
     },
     sizeLarge: {
-      padding: '0px 1.25rem',
-      height: '3rem'
+      height: '3rem',
+      padding: '0 1.25rem',
+      '&$text': {
+        padding: '14px 10px'
+      }
+    },
+    text: {
+      minWidth: 'auto',
+      borderRadius: 2,
+      padding: '11px 8px',
+      '&:not($disabled)': {
+        '&.customColor': {
+          '&-success': makeTextButtonStyle(theme, 'success'),
+          '&-warning': makeTextButtonStyle(theme, 'warning'),
+          '&-error': makeTextButtonStyle(theme, 'error'),
+          '&-info': makeTextButtonStyle(theme, 'info')
+        }
+      }
     },
     outlined: {
       borderRadius: 2,
-      minWidth: 112
+      '&:not($disabled)': {
+        '&.ghost': {
+          backgroundColor: alpha(
+            theme.palette.primary.main,
+            theme.palette.action.ghostOpacity
+          ),
+          '&:hover': {
+            backgroundColor: alpha(
+              theme.palette.primary.main,
+              theme.palette.action.hoverGhostOpacity
+            )
+          }
+        },
+        '&.customColor': {
+          '&-primary': {
+            color: theme.palette.text.primary,
+            borderColor: theme.palette.border.main,
+            '&:hover': {
+              backgroundColor: theme.palette.action.hover
+            },
+            '&.ghost': {
+              color: theme.palette.primary.main,
+              borderColor: alpha(
+                theme.palette.primary.main,
+                theme.palette.border.ghostOpacity
+              )
+            }
+          },
+          '&-success': makeSecondaryButtonStyle(theme, 'success'),
+          '&-warning': makeSecondaryButtonStyle(theme, 'warning'),
+          '&-error': makeSecondaryButtonStyle(theme, 'error'),
+          '&-info': makeSecondaryButtonStyle(theme, 'info')
+        }
+      }
     },
     contained: {
       borderRadius: 2,
       boxShadow: 0,
-      minWidth: 112
+      '&:not($disabled)': {
+        '&.customColor': {
+          '&-success': makeContainedButtonStyle(theme, 'success'),
+          '&-warning': makeContainedButtonStyle(theme, 'warning'),
+          '&-error': makeContainedButtonStyle(theme, 'error'),
+          '&-info': makeContainedButtonStyle(theme, 'info')
+        }
+      }
     },
-    containedSecondary: {
-      color: 'white'
+    startIcon: {
+      // !important needed to override all sizes
+      // should be remove when https://github.com/cozy/cozy-ui/issues/1808 is fixed
+      marginLeft: '0 !important'
     }
   },
   MuiTab: {
