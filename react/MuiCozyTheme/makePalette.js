@@ -89,9 +89,11 @@ export const makePalette = type => {
     },
     border: {
       main: getCssValue('borderMainColor'),
+      opacity: 0.16,
       disabled: getCssValue('borderDisabledColor'),
       ghost: getCssValue('borderGhostColor'),
-      ghostDisabled: getCssValue('borderGhostDisabledColor')
+      ghostDisabled: getCssValue('borderGhostDisabledColor'),
+      ghostOpacity: 0.48
     },
     background: {
       default: getCssValue('defaultBackgroundColor'),
