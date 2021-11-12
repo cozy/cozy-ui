@@ -3911,7 +3911,7 @@ exports[`Icon should render examples: Icon 2`] = `
         </svg>
         <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1\\">Google</p>
       </div>
-      <div class=\\"u-ta-center u-mb-1\\"><svg class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+      <div class=\\"u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 44 44\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <g fill=\\"none\\" fill-rule=\\"evenodd\\">
             <rect width=\\"27.5\\" height=\\"32.5\\" x=\\"1.25\\" y=\\"1.25\\" fill=\\"#D9DDE1\\" rx=\\"2\\"></rect>
             <path fill=\\"#95999D\\" d=\\"M4.74 1.45l13.75 5.91A2.5 2.5 0 0120 9.65v27.61a2.5 2.5 0 01-3.49 2.29L2.76 33.64a2.49 2.49 0 01-1.51-2.29V3.74a2.5 2.5 0 013.49-2.29z\\"></path>
