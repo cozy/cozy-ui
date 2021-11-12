@@ -26769,14 +26769,7 @@ html {
 .SquareAppIcon-wrapper-fx--3rcF6 {
   background-color: rgba(255,255,255,0.32);
   border: 1px dashed var(--white);
-}
-@supports not (backdrop-filter: blur(48px)) {
-  .SquareAppIcon-wrapper-fx--3rcF6 {
-    background-color: rgba(255,255,255,0.48);
-  }
-}
-.SquareAppIcon-wrapper-fx--3rcF6 .SquareAppIcon-icon-container--39MRl {
-  backdrop-filter: blur(48px);
+  background-color: rgba(255,255,255,0.48);
 }
 .SquareAppIcon-wrapper-ghost--1ZALZ .SquareAppIcon-icon-container--39MRl {
   mix-blend-mode: screen;
