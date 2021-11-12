@@ -4,6 +4,8 @@ application.
 ```jsx
 import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
 import SquareAppIcon from 'cozy-ui/transpiled/react/SquareAppIcon'
+import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
+import Icon from 'cozy-ui/transpiled/react/Icon'
 import { useCozyTheme } from 'cozy-ui/transpiled/react/CozyTheme'
 import cloudWallpaper from '../../docs/cloud-wallpaper.jpg'
 
@@ -31,6 +33,27 @@ const theme = useCozyTheme()
   </Grid>
   <Grid item>
     <SquareAppIcon name="Shortcut" variant="shortcut" />
+  </Grid>
+  <Grid item>
+    <SquareAppIcon name="Custom Icon" IconContent={<Icon icon={CozyIcon} size="48" />} />
+  </Grid>
+  <Grid item>
+    <SquareAppIcon name="Icon Grid" IconContent={(
+      <Grid container spacing={0}>
+        <Grid item xs={6}>
+          <Icon icon={CozyIcon} />
+        </Grid>
+        <Grid item xs={6}>
+          <Icon icon={CozyIcon} />
+        </Grid>
+          <Grid item xs={6}>
+            <Icon icon={CozyIcon} />
+          </Grid>
+          <Grid item xs={6}>
+            <Icon icon={CozyIcon} />
+          </Grid>
+        </Grid>
+    )} />
   </Grid>
 </Grid>
 ```
