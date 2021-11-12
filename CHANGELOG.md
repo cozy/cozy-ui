@@ -1,3 +1,17 @@
+# [57.7.0](https://github.com/cozy/cozy-ui/compare/v57.6.0...v57.7.0) (2021-11-12)
+
+
+### Bug Fixes
+
+* Add viewBox to LogoutLarge icon ([6196caa](https://github.com/cozy/cozy-ui/commit/6196caa))
+
+
+### Features
+
+* Add IconComponent prop to SquareAppIcon ([22591ff](https://github.com/cozy/cozy-ui/commit/22591ff))
+* Add type prop to SquareAppIcon ([d9799c7](https://github.com/cozy/cozy-ui/commit/d9799c7))
+* Do not use backdrop-filter on SquareAppIcon anymore ([451d54f](https://github.com/cozy/cozy-ui/commit/451d54f))
+
 # [57.6.0](https://github.com/cozy/cozy-ui/compare/v57.5.5...v57.6.0) (2021-11-08)
 
 
