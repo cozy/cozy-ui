@@ -4,6 +4,8 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import CozyClient, { CozyProvider } from 'cozy-client'
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
 
 import SquareAppIcon from './index'
 
@@ -64,6 +66,13 @@ describe('SquareAppIcon component', () => {
 
   it('should render correctly an app in shortcut state', () => {
     const root = render(<Wrapper variant="shortcut" name="shortcut" />)
+    expect(root.getByTestId('square-app-icon')).toMatchSnapshot()
+  })
+
+  it('should render correctly an app with custom content', () => {
+    const root = render(
+      <Wrapper name="custom icon" IconContent={<Icon icon={CozyIcon} />} />
+    )
     expect(root.getByTestId('square-app-icon')).toMatchSnapshot()
   })
 })
