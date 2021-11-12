@@ -32,14 +32,11 @@ $color = constants['color'] // hard-coded color, because the component is curren
 .SquareAppIcon-wrapper-fx
     background-color alpha($color, .32)
     border 1px dashed var(--white)
-    @supports not (backdrop-filter: blur(48px))
-        background-color alpha($color, .48)
-    .SquareAppIcon-icon-container
-        backdrop-filter blur(48px)
+    background-color alpha($color, .48)
 
 .SquareAppIcon-wrapper-ghost
     .SquareAppIcon-icon-container
-        mix-blend-mode screen // need to apply backdrop-filter and mix blend-mode in a separated element to have the proper effect
+        mix-blend-mode screen
         svg, img
             filter saturate(0%)
 
