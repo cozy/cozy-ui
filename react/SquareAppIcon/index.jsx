@@ -61,7 +61,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export const SquareAppIcon = ({ app, name, variant, IconContent }) => {
+export const SquareAppIcon = ({ app, type, name, variant, IconContent }) => {
   const classes = useStyles()
   const appName = name || (app && app.name) || app || ''
   const letter = appName[0] || ''
@@ -119,7 +119,7 @@ export const SquareAppIcon = ({ app, name, variant, IconContent }) => {
               ) : IconContent ? (
                 IconContent
               ) : (
-                <AppIcon app={app} />
+                <AppIcon app={app} type={type} />
               )}
             </div>
           )}
@@ -146,7 +146,8 @@ SquareAppIcon.propTypes = {
     'add',
     'shortcut'
   ]),
-  IconContent: PropTypes.node
+  IconContent: PropTypes.node,
+  type: PropTypes.oneOf(['app', 'konnector'])
 }
 
 export default SquareAppIcon
