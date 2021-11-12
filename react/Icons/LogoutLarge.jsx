@@ -3,7 +3,7 @@ import React from 'react'
 
 function SvgLogoutLarge(props) {
   return (
-    <svg {...props}>
+    <svg viewBox="0 0 44 44" {...props}>
       <g fill="none" fillRule="evenodd">
         <rect
           width={27.5}
