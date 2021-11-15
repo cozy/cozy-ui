@@ -35,9 +35,6 @@ const themesCommonConfig = {
       textColor: 'primary',
       TabIndicatorProps: { color: 'primary' }
     },
-    MuiButton: {
-      disableRipple: true
-    },
     MuiListItem: {
       disableRipple: true
     },
