@@ -1,3 +1,16 @@
+# [57.8.0](https://github.com/cozy/cozy-ui/compare/v57.7.0...v57.8.0) (2021-11-15)
+
+
+### Bug Fixes
+
+* Set correct action opacity for Mui theme ([ebb4f45](https://github.com/cozy/cozy-ui/commit/ebb4f45))
+* Set correct border opacities in Mui theme ([7b4c6e0](https://github.com/cozy/cozy-ui/commit/7b4c6e0))
+
+
+### Features
+
+* New Button component conform to the figma specifications ([46e551b](https://github.com/cozy/cozy-ui/commit/46e551b))
+
 # [57.7.0](https://github.com/cozy/cozy-ui/compare/v57.6.0...v57.7.0) (2021-11-12)
 
 
