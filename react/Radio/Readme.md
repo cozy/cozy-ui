@@ -56,6 +56,7 @@ You can set `gutter` to `false` to cancel the default gutter.
 
 ```jsx
 import Radio from 'cozy-ui/transpiled/react/Radio'
+import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
 
 const Box = ({ children }) => {
   return   <div style={{ height: '3rem', width: '3rem', border: '2px dashed #CCC', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -65,22 +66,23 @@ const Box = ({ children }) => {
 
 const bboxStyle = { border: '1px solid red' }
 
-initialState.bbox = isTesting();
+initialState.bbox = isTesting()
+
+;
 
 <>
   <p>
-    <Radio checked={state.bbox} onClick={() => setState({ bbox: !state.bbox })} label="View bounding box" />
+    <Checkbox checked={state.bbox} onClick={() => setState({ bbox: !state.bbox })} label="View bounding box" />
   </p>
   <p>Default gutter</p>
   <Box>
-    <Radio checked style={state.bbox ? bboxStyle : null}/>
+    <Radio checked style={state.bbox ? bboxStyle : null} readOnly />
   </Box>
   <p>Gutter set to false</p>
   <Box>
-    <Radio gutter={false} checked style={state.bbox ? bboxStyle : null} />
+    <Radio gutter={false} checked style={state.bbox ? bboxStyle : null} readOnly />
   </Box>
 </>
-
 ```
 
 ### In a RadioGroup
