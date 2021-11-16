@@ -46,7 +46,7 @@ import Alerter from 'cozy-ui/transpiled/react/Alerter'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 
-import CloudIcon from "cozy-ui/transpiled/react/Icons/Cloud";
+import CloudIcon from "cozy-ui/transpiled/react/Icons/Cloud"
 
 const handleClose = () => setState({ modalOpened: !state.modalOpened })
 const handleBack = () => {
@@ -120,7 +120,7 @@ const dialogs = [
   IllustrationDialog,
   FixedDialog,
   FixedActionsDialog
-];
+]
 
 const StateRadio = ({ name, ...props }) => {
   return <input
@@ -152,7 +152,9 @@ initialState = {
   theme: 'normal',
   align: 'middle',
   showActions: true
-};
+}
+
+;
 
 <>
   <BreakpointsProvider>
@@ -218,8 +220,13 @@ initialState = {
       actionsLayout={state.actionsLayout}
     />
   </BreakpointsProvider>
+
   {dialogs.map(dialog => (
-    <button key={`open-btn-${dialog.name}`} data-test-id={`open-btn-${dialog.name}`} onClick={() => toggleDialog(dialog)}>
+    <button
+      key={`open-btn-${dialog.name}`}
+      data-test-id={`open-btn-${dialog.name}`}
+      onClick={() => toggleDialog(dialog)}
+    >
       Open {dialog.name}
     </button>
   ))}
