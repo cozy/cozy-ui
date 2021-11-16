@@ -1,6 +1,9 @@
-There's two kinds of Button at your disposal : `<Button />` & `<ButtonLink />`.
+⚠️  This `<Button />` is going to be deprecated, please use [Buttons](#/Buttons) instead.
+
+There's two kinds of Button at your disposal : `<Button />` and `<ButtonLink />`.
+
 The first is a basic `<button>` for a click event, the second is a `<a>`, a link.
-Both look exactly the same, they share the same `className`, `disabled`, `onClick` & `theme` parameters but `<Button>` has also:
+Both look exactly the same, they share the same `className`, `disabled`, `onClick` and `theme` parameters but `<Button>` has also:
 
 * `busy` that adds a spinner (default `false`)
 * `type`, eg. `submit` or `reset` (default `submit`)
