@@ -10,6 +10,7 @@ import { useCozyTheme } from 'cozy-ui/transpiled/react/CozyTheme'
 import cloudWallpaper from '../../docs/cloud-wallpaper.jpg'
 
 const theme = useCozyTheme()
+const app = { name: "Test App", slug: "testapp", type: "app" }
 
 ;
 
@@ -17,13 +18,13 @@ const theme = useCozyTheme()
 <Grid container spacing={1} style={{ background: `center / cover no-repeat url(${cloudWallpaper})` }}
 >
   <Grid item>
-    <SquareAppIcon app="testapp" name="Normal" />
+    <SquareAppIcon app={app} name="Normal" />
   </Grid>
   <Grid item>
-    <SquareAppIcon app="testapp" name="Maintenance" variant="maintenance" />
+    <SquareAppIcon app={app} name="Maintenance" variant="maintenance" />
   </Grid>
   <Grid item>
-    <SquareAppIcon app="testapp" name="Error" variant="error" />
+    <SquareAppIcon app={app} name="Error" variant="error" />
   </Grid>
   <Grid item>
     <SquareAppIcon name="Add" variant="add" />
