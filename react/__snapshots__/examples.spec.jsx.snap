@@ -7703,25 +7703,28 @@ exports[`QuotaAlert should render examples: QuotaAlert 1`] = `
 
 exports[`Radio should render examples: Radio 1`] = `
 "<div>
+  <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
+    <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-2 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-5\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">ERROR</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-2 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-5\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">DISABLED</span></label>
+  </div>
   <form>
-    <div><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue1\\"><span>This is a radio button</span></label><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue2\\"><span>This is also a radio button</span></label><label class=\\"styles__c-input-radio___XJQt1\\" style=\\"background: cadetblue; padding: 0.5rem; height: 3rem;\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue2\\"><span>This is a radio button with a custom style</span></label></div>
+    <div><label class=\\"styles__c-input-radio___XJQt1\\" aria-disabled=\\"false\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue1\\"><span>This is a radio button</span></label><label class=\\"styles__c-input-radio___XJQt1\\" aria-disabled=\\"false\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue2\\"><span>This is also a radio button</span></label><label class=\\"styles__c-input-radio___XJQt1\\" aria-disabled=\\"false\\" style=\\"background: cadetblue; padding: 0.5rem; height: 3rem;\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue3\\"><span>This is a radio button with a custom style</span></label></div>
+  </form>
+  <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
+    <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-2 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-3 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-5\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">ERROR</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-2 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-5\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">DISABLED</span></label>
+  </div>
+  <form>
+    <div><label class=\\"styles__c-input-radio___XJQt1 styles__is-error___2-12P\\" aria-disabled=\\"false\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue1\\"><span>This is a radio button</span></label><label class=\\"styles__c-input-radio___XJQt1 styles__is-error___2-12P\\" aria-disabled=\\"false\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue2\\"><span>This is also a radio button</span></label><label class=\\"styles__c-input-radio___XJQt1 styles__is-error___2-12P\\" aria-disabled=\\"false\\" style=\\"background: cadetblue; padding: 0.5rem; height: 3rem;\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue3\\"><span>This is a radio button with a custom style</span></label></div>
+  </form>
+  <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
+    <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-2 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-5\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">ERROR</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-2 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-3 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-5\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">DISABLED</span></label>
+  </div>
+  <form>
+    <div><label class=\\"styles__c-input-radio___XJQt1\\" aria-disabled=\\"true\\"><input type=\\"radio\\" name=\\"radioForm\\" disabled=\\"\\" value=\\"radioValue1\\"><span>This is a radio button</span></label><label class=\\"styles__c-input-radio___XJQt1\\" aria-disabled=\\"true\\"><input type=\\"radio\\" name=\\"radioForm\\" disabled=\\"\\" value=\\"radioValue2\\"><span>This is also a radio button</span></label><label class=\\"styles__c-input-radio___XJQt1\\" aria-disabled=\\"true\\" style=\\"background: cadetblue; padding: 0.5rem; height: 3rem;\\"><input type=\\"radio\\" name=\\"radioForm\\" disabled=\\"\\" value=\\"radioValue3\\"><span>This is a radio button with a custom style</span></label></div>
   </form>
 </div>"
 `;
 
 exports[`Radio should render examples: Radio 2`] = `
-"<div>
-  <div><label class=\\"styles__c-input-radio___XJQt1 styles__is-error___2-12P\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue1\\"><span>This is a radio button</span></label></div>
-</div>"
-`;
-
-exports[`Radio should render examples: Radio 3`] = `
-"<div>
-  <div><label class=\\"styles__c-input-radio___XJQt1\\" aria-disabled=\\"true\\"><input type=\\"radio\\" name=\\"radioForm\\" disabled=\\"\\" value=\\"radioValue1\\"><span>This is a disabled radio button</span></label></div>
-</div>"
-`;
-
-exports[`Radio should render examples: Radio 4`] = `
 "<div>
   <p><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" value=\\"\\" checked=\\"\\"><span>View bounding box</span></label></p>
   <p>Default gutter</p>
@@ -7731,7 +7734,7 @@ exports[`Radio should render examples: Radio 4`] = `
 </div>"
 `;
 
-exports[`Radio should render examples: Radio 5`] = `
+exports[`Radio should render examples: Radio 3`] = `
 "<div>
   <div class=\\"MuiFormGroup-root\\" role=\\"radiogroup\\"><label class=\\"MuiFormControlLabel-root\\"><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" name=\\"radioGroup1\\" value=\\"item1\\" checked=\\"\\"><span></span></label><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">Item 1</span></label><label class=\\"MuiFormControlLabel-root\\"><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" name=\\"radioGroup1\\" value=\\"item2\\"><span></span></label><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">Item 2</span></label><label class=\\"MuiFormControlLabel-root\\"><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" name=\\"radioGroup1\\" value=\\"item3\\"><span></span></label><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">Item 3</span></label></div>
 </div>"
