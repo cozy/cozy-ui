@@ -1,3 +1,15 @@
+# [57.9.0](https://github.com/cozy/cozy-ui/compare/v57.8.0...v57.9.0) (2021-11-17)
+
+
+### Bug Fixes
+
+* Allow `Radio` to be part of a `RadioGroup` ([0e3cb6c](https://github.com/cozy/cozy-ui/commit/0e3cb6c)), closes [cozy/cozy-ui#1901](https://github.com/cozy/cozy-ui/issues/1901)
+
+
+### Features
+
+* Refactor Radio documentation with variants ([fa2efc4](https://github.com/cozy/cozy-ui/commit/fa2efc4))
+
 # [57.8.0](https://github.com/cozy/cozy-ui/compare/v57.7.0...v57.8.0) (2021-11-15)
 
 
