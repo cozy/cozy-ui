@@ -13,8 +13,7 @@ const variants = ['primary', 'secondary', 'ghost', 'text']
 const propsArr = [{}, { disabled: true }, { busy: true }]
 
 ;
-<>
-<Button label="variant" />
+
 <Grid container>
   {propsArr.map(props =>
     <Grid item xs={12} sm={4} className="u-mb-1" key={JSON.stringify(props)}>
@@ -29,7 +28,6 @@ const propsArr = [{}, { disabled: true }, { busy: true }]
     </Grid>
   )}
 </Grid>
-</>
 ```
 
 ### Sizes
