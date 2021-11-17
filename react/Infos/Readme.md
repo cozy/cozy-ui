@@ -1,16 +1,18 @@
 ### Infos display
 
-```
-import Infos from 'cozy-ui/transpiled/react/Infos';
-import Button from 'cozy-ui/transpiled/react/Button';
-import Typography from 'cozy-ui/transpiled/react/Typography';
-import Variants from 'cozy-ui/docs/components/Variants';
+```jsx
+import Infos from 'cozy-ui/transpiled/react/Infos'
+import Button from 'cozy-ui/transpiled/react/Button'
+import Typography from 'cozy-ui/transpiled/react/Typography'
+import Variants from 'cozy-ui/docs/components/Variants'
 
 const initialVariants = [
   { title: true, action: false, secondaryTheme: false, secondaryTheme: false },
   { title: true, action: true, dangerTheme: true },
   { title: true, multiActions: true, dangerTheme: false, dismissAction: true },
-];
+]
+
+;
 
 <div className='u-stack-m'>
     <Variants initialVariants={initialVariants}>{
@@ -23,7 +25,9 @@ const initialVariants = [
           </>}
           action={(variant.action || variant.multiActions) && <>
             {variant.action && <Button label="ok" theme={variant.dangerTheme ? 'danger' : 'primary'} />}
-            {variant.multiActions && ['one', 'two', 'three'].map(label => <Button label={label} theme={variant.dangerTheme ? 'danger' : 'primary'} />)}
+            {variant.multiActions && ['one', 'two', 'three'].map((label, index) =>
+              <Button key={index} label={label} theme={variant.dangerTheme ? 'danger' : 'primary'} />
+            )}
           </>}
           dismissAction={variant.dismissAction ? () => alert('dismissed') : null}
         />
