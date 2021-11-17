@@ -1,12 +1,11 @@
 A component suitable to be used when an Icon should be used as a button.
 Provides hover, active styles + accessible size (48px).
 
-```
+```jsx
 import IconButton from 'cozy-ui/transpiled/react/IconButton'
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import Stack from 'cozy-ui/transpiled/react/Stack';
-import Typography from 'cozy-ui/transpiled/react/Typography';
-
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import Stack from 'cozy-ui/transpiled/react/Stack'
+import Typography from 'cozy-ui/transpiled/react/Typography'
 import LeftIcon from 'cozy-ui/transpiled/react/Icons/Left'
 import RestoreIcon from 'cozy-ui/transpiled/react/Icons/Restore'
 import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
@@ -39,13 +38,15 @@ initialState = {
   color: 'default'
 }
 
-const colors = ['default', 'primary', 'secondary'];
+const colors = ['default', 'primary', 'secondary']
+
+;
 
 <>
   { isTesting ()
     ? <Stack spacing='l'>
-        {colors.map(color => (
-          <div>
+        {colors.map((color, index) => (
+          <div key={index}>
             <Typography variant='h3' gutterBottom>color: {color}</Typography>
             <Example color={color} key={color} />
           </div>
