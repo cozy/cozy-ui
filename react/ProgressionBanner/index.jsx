@@ -28,7 +28,11 @@ const ProgressionBanner = withStyles(styles)(
         <Banner
           className={classes.banner}
           icon={icon}
-          text={<Typography variant="h6">{text}</Typography>}
+          text={
+            <Typography component="span" variant="h6">
+              {text}
+            </Typography>
+          }
           buttonOne={button}
           inline
         />
