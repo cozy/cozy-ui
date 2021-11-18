@@ -1,3 +1,11 @@
+## [57.9.1](https://github.com/cozy/cozy-ui/compare/v57.9.0...v57.9.1) (2021-11-18)
+
+
+### Bug Fixes
+
+* ProgressionBanner use styled span instead of h6 to show text ([5f32367](https://github.com/cozy/cozy-ui/commit/5f32367))
+* Use contact model from cozy-client in ContactsList ([5b0707e](https://github.com/cozy/cozy-ui/commit/5b0707e))
+
 # [57.9.0](https://github.com/cozy/cozy-ui/compare/v57.8.0...v57.9.0) (2021-11-17)
 
 
