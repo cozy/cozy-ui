@@ -18,9 +18,7 @@ import NextIcon from 'cozy-ui/transpiled/react/Icons/Next'
 
 const t = x => x
 const isTiny = false
-const error = true
 const fetching = false
-const onboarding = false
 
 const WizardExample = ({ onNext, onRegister }) => {
   return (
