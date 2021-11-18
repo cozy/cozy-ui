@@ -1,4 +1,4 @@
-```
+```jsx
 import {
   Wizard,
   WizardWrapper,
@@ -12,17 +12,17 @@ import {
 } from '.'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Field from 'cozy-ui/transpiled/react/Field'
-import Button from 'cozy-ui/transpiled/react/Button';
-import PreviousIcon from 'cozy-ui/transpiled/react/Icons/Previous' 
-import NextIcon from 'cozy-ui/transpiled/react/Icons/Next';
+import Button from 'cozy-ui/transpiled/react/Button'
+import PreviousIcon from 'cozy-ui/transpiled/react/Icons/Previous'
+import NextIcon from 'cozy-ui/transpiled/react/Icons/Next'
 
-const t = x => x;
-const isTiny = false;
-const error = true;
-const fetching = false;
-const onboarding = false;
+const t = x => x
+const isTiny = false
+const error = true
+const fetching = false
+const onboarding = false
 
-const WizardExample = ({ onNext, onRegister }) => { 
+const WizardExample = ({ onNext, onRegister }) => {
   return (
     <Wizard>
       <WizardWrapper>
@@ -63,24 +63,26 @@ const WizardExample = ({ onNext, onRegister }) => {
             subtle={true}
             type={'button'}
             theme="text"
-            onboarding={onboarding}
             onClick={onRegister}
           />
         </WizardFooter>
       </WizardWrapper>
     </Wizard>
-  );
+  )
 }
 
-initialState = { showExample: isTesting() };
+initialState = { showExample: isTesting() }
+
+;
 
 <>
   <button onClick={() => setState({ showExample: true })}>Show wizard</button><br />
   { state.lastButton ? <>You clicked the "{state.lastButton}" button</> : null}
-  { state.showExample && 
+  { state.showExample &&
     <WizardExample
       onRegister={() => setState({ showExample: false, lastButton: 'register' })}
       onNext={() => setState({ showExample: false, lastButton: 'next' })}
-      /> }
+    />
+  }
 </>
 ```

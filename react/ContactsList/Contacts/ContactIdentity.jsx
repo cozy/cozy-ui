@@ -1,9 +1,12 @@
 import React from 'react'
 import { Contact } from 'cozy-doctypes'
+import { models } from 'cozy-client'
 
 import { Avatar } from '../../Avatar'
 import ContactName from './ContactName'
 import styles from '../styles.styl'
+
+const { contact: contactModel } = models
 
 const MyselfMarker = (props, { t }) => (
   <span className={styles['contact-myself']}>({t('me')})</span>
@@ -15,7 +18,7 @@ const ContactIdentity = ({ contact }) => {
   return (
     <div className={styles['contact-identity']}>
       <Avatar
-        text={Contact.getInitials(contact)}
+        text={contactModel.getInitials(contact)}
         size="small"
         className={styles['contact-avatar']}
       />

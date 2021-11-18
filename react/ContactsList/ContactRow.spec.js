@@ -24,14 +24,14 @@ const setup = ({ contact }) => {
 }
 
 describe('ContactRow', () => {
-  test('should accept the strict minimum', () => {
+  it('should accept the strict minimum', () => {
     const contact = makeContact({ email: [{ address: 'johndoe@localhost' }] })
     const { root } = setup({ contact })
     const contactrowemail = root.find('ContactEmail')
     expect(contactrowemail.text()).toBe(contact.email[0].address)
   })
 
-  test('should display data', () => {
+  it('should display data', () => {
     const contact = makeContact({
       name: { familyName: 'Doe', givenName: 'John' },
       phone: [{ number: '0123456789' }],
@@ -56,7 +56,7 @@ describe('ContactRow', () => {
     expect(contactrowcozyurl.text()).toBe(contact.cozy[0].url)
   })
 
-  test('should display empty string for missing information', () => {
+  it('should display empty string for missing information', () => {
     const contact = makeContact({
       email: [{ address: 'johndoe@localhost' }]
     })
@@ -72,7 +72,7 @@ describe('ContactRow', () => {
     expect(contactrowcozyurl.text().trim()).toBe('—')
   })
 
-  test('should accept empty array', () => {
+  it('should accept empty array', () => {
     const contact = makeContact({ email: [] })
     const { root } = setup({ contact })
     const contactrowemail = root.find('ContactEmail')
@@ -80,7 +80,7 @@ describe('ContactRow', () => {
     expect(contactrowemail.text()).toBe('—')
   })
 
-  test('should match the contact snapshot', () => {
+  it('should match the contact snapshot', () => {
     const contact = makeContact({
       name: { familyName: 'Doe', givenName: 'John' },
       phone: [{ number: '0123456789' }],

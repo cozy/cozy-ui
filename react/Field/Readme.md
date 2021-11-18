@@ -7,7 +7,10 @@ Like `Input` component, it can have the following properties:
 ##### Example
 
 ```jsx
-import Field from 'cozy-ui/transpiled/react/Field';
+import Field from 'cozy-ui/transpiled/react/Field'
+
+;
+
 <form>
   <Field
     id="idField"
@@ -22,7 +25,10 @@ import Field from 'cozy-ui/transpiled/react/Field';
 ##### Inline variant
 
 ```jsx
-import Field from 'cozy-ui/transpiled/react/Field';
+import Field from 'cozy-ui/transpiled/react/Field'
+
+;
+
 <form>
   <Field
     id="idField"
@@ -40,15 +46,15 @@ import Field from 'cozy-ui/transpiled/react/Field';
 An input is controlled if `props.value` is passed, even if it is empty.
 
 ```jsx
-import Field from 'cozy-ui/transpiled/react/Field';
+import Field from 'cozy-ui/transpiled/react/Field'
 
 initialState = { value: '' }
 
-const handleChange = ev => setState({ value: ev.target.value });
+const handleChange = ev => setState({ value: ev.target.value })
 
-<p>
-  <Field id='controlled-field' onChange={handleChange} value={state.value} />
-</p>
+;
+
+<Field id='controlled-field' onChange={handleChange} value={state.value} />
 ```
 
 * `inputRef`
@@ -59,8 +65,9 @@ It gives access to the underlying `<input />` element, for example to give focus
 ##### Example
 
 ```jsx
-import Field from 'cozy-ui/transpiled/react/Field';
-import Button from 'cozy-ui/transpiled/react/Button';
+import Field from 'cozy-ui/transpiled/react/Field'
+import Button from 'cozy-ui/transpiled/react/Button'
+
 class FieldWithFocus extends React.Component {
   constructor() {
     super()
@@ -82,7 +89,10 @@ class FieldWithFocus extends React.Component {
     )
   }
 }
-;<FieldWithFocus />
+
+;
+
+<FieldWithFocus />
 ```
 
 * `name`
@@ -92,7 +102,10 @@ Name of the form field, injected into `Input`, `TextArea` or `SelectBox` compone
 ##### Exemple
 
 ```jsx
-import Field from 'cozy-ui/transpiled/react/Field';
+import Field from 'cozy-ui/transpiled/react/Field'
+
+;
+
 <form>
   <Field
     label="I got a name"
@@ -104,7 +117,10 @@ import Field from 'cozy-ui/transpiled/react/Field';
 #### Field when there's an error
 
 ```jsx
-import Field from 'cozy-ui/transpiled/react/Field';
+import Field from 'cozy-ui/transpiled/react/Field'
+
+;
+
 <form>
   <Field
     id="idFieldError"
@@ -119,7 +135,8 @@ import Field from 'cozy-ui/transpiled/react/Field';
 #### Field with SelectBox
 
 ```jsx
-import Field from 'cozy-ui/transpiled/react/Field';
+import Field from 'cozy-ui/transpiled/react/Field'
+
 const options = [
 {
   label: 'Choice 1',
@@ -127,7 +144,9 @@ const options = [
 }, {
   label: 'Choice 2',
   value: '2'
-}];
+}]
+
+;
 
 <form>
   <Field
@@ -149,27 +168,36 @@ const options = [
 #### Field with ContactPicker
 
 ```jsx
-import Field from 'cozy-ui/transpiled/react/Field';
-import DemoProvider from '../ContactsListModal/DemoProvider';
-initialState = { selectedContact: null };
+import Field from 'cozy-ui/transpiled/react/Field'
+import DemoProvider from '../ContactsListModal/DemoProvider'
+import { BreakpointsProvider } from '../hooks/useBreakpoints'
 
-<DemoProvider>
-  <form>
-    <Field
-      label="Contact"
-      type="contact"
-      placeholder="Select a contact"
-      value={state.selectedContact}
-      onChange={selectedContact => setState({ selectedContact })}
-    />
-  </form>
-</DemoProvider>
+initialState = { selectedContact: null }
+
+;
+
+<BreakpointsProvider>
+  <DemoProvider>
+    <form>
+      <Field
+        label="Contact"
+        type="contact"
+        placeholder="Select a contact"
+        value={state.selectedContact}
+        onChange={selectedContact => setState({ selectedContact })}
+      />
+    </form>
+  </DemoProvider>
+</BreakpointsProvider>
 ```
 
 #### Password field with show/hide button
 
 ```jsx
-import Field from 'cozy-ui/transpiled/react/Field';
+import Field from 'cozy-ui/transpiled/react/Field'
+
+;
+
 <form>
   <Field
     id="idFieldPassword"
@@ -186,7 +214,10 @@ import Field from 'cozy-ui/transpiled/react/Field';
 #### Password field without show/hide button
 
 ```jsx
-import Field from 'cozy-ui/transpiled/react/Field';
+import Field from 'cozy-ui/transpiled/react/Field'
+
+;
+
 <form>
   <Field
     id="idFieldPassword"
@@ -199,7 +230,10 @@ import Field from 'cozy-ui/transpiled/react/Field';
 #### Side element
 
 ```jsx
-import Field from 'cozy-ui/transpiled/react/Field';
+import Field from 'cozy-ui/transpiled/react/Field'
+
+;
+
 <form>
   <Field
     label="I'm a label"
@@ -211,7 +245,10 @@ import Field from 'cozy-ui/transpiled/react/Field';
 #### Side element with fullwidth element
 
 ```jsx
-import Field from 'cozy-ui/transpiled/react/Field';
+import Field from 'cozy-ui/transpiled/react/Field'
+
+;
+
 <form>
   <Field
     label="I'm a label"
@@ -224,7 +261,10 @@ import Field from 'cozy-ui/transpiled/react/Field';
 #### Customized label and input
 
 ```jsx
-import Field from 'cozy-ui/transpiled/react/Field';
+import Field from 'cozy-ui/transpiled/react/Field'
+
+;
+
 <form>
   <Field
     label="I'm a label"
@@ -241,8 +281,10 @@ import Field from 'cozy-ui/transpiled/react/Field';
 #### Password with custom secondaryComponent
 
 ```jsx
-import Field from 'cozy-ui/transpiled/react/Field';
-import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons';
+import Field from 'cozy-ui/transpiled/react/Field'
+import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons'
+
+;
 
 <form>
   <br/>
@@ -272,12 +314,16 @@ import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons';
 #### Controlled Field
 
 ```jsx
-import Field from 'cozy-ui/transpiled/react/Field';
+import Field from 'cozy-ui/transpiled/react/Field'
+
+;
+
 <form>
   <Field
     side="(optional)"
     fullwidth={true}
-    value={state.value} onChange={ev => setState({value: ev.target.value})}
+    value={state.value}
+    onChange={ev => setState({value: ev.target.value})}
   />
   Value: { state.value }
 </form>

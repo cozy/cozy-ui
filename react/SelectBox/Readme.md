@@ -286,13 +286,13 @@ const options = [
 
 ### Fixed SelectBox
 
-When you use a SelectBox within a Modal / Dialog, you can want to have 
+When you use a SelectBox within a Modal / Dialog, you can want to have
 a custom CSS position for your SelectBox's options. `fixed` position makes
-the options to be displayed on top of all the layers. 
+the options to be displayed on top of all the layers.
 
 ```jsx
 import { useState, useEffect } from 'react'
-import { Dialog } from 'cozy-ui/transpiled/react/CozyDialogs';
+import { Dialog } from 'cozy-ui/transpiled/react/CozyDialogs'
 import {
   BreakpointsProvider
 } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
@@ -300,13 +300,13 @@ import {
 import Button from 'cozy-ui/transpiled/react/Button'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 
-import SelectBox from 'cozy-ui/transpiled/react/SelectBox';
+import SelectBox from 'cozy-ui/transpiled/react/SelectBox'
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry', isDisabled: true },
   { value: 'vanilla', label: 'Vanilla' },
   { value: 'long', label: 'Salt and vinegar crisps with vegamite and brussel sprouts, double chai latte sauce' },
-];
+]
 
 const handleClose = () => setState({ modalOpened: false })
 
@@ -327,13 +327,13 @@ const ExampleDialog = ({ open, onClose }) => {
   // transition. Otherwise the position for the selectbox is computed
   // wrongly. See the `transitionDuration` prop.
   return (
-    <Dialog 
-      open={open} 
-      onClose={onClose} 
+    <Dialog
+      open={open}
+      onClose={onClose}
       title='Ada Lovelace'
       transitionDuration={0}
       content={
-        <Typography variant='body1'>
+        <Typography variant="body1" component="div">
           Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815
           – 27 November 1852) was an English mathematician and writer, chiefly
           known for her work on Charles Babbage's proposed mechanical
@@ -347,7 +347,8 @@ const ExampleDialog = ({ open, onClose }) => {
             menuIsOpen={menuIsOpen}
             onMenuOpen={() => setMenuIsOpen(true) }
             onMenuClose={() => setMenuIsOpen(false) }
-           menuPosition='fixed'/>
+            menuPosition='fixed'
+          />
         </Typography>
       }
       actions={
@@ -365,11 +366,12 @@ const ExampleDialog = ({ open, onClose }) => {
         </>
       }
     />
-    
   )
 }
 
-;<>
+;
+
+<>
   <button onClick={() => setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
   </button>

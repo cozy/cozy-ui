@@ -1,20 +1,22 @@
 import React from 'react'
 import cx from 'classnames'
 import { Contact } from 'cozy-doctypes'
-import ContactPhone from './Contacts/ContactPhone'
+import { models } from 'cozy-client'
 
+import ContactPhone from './Contacts/ContactPhone'
 import ContactIdentity from './Contacts/ContactIdentity'
 import ContactCozy from './Contacts/ContactCozy'
 import ContactEmail from './Contacts/ContactEmail'
-import styles from './styles.styl'
 import useBreakpoints from '../hooks/useBreakpoints'
+import styles from './styles.styl'
 
-const ContactRow = props => {
+const { contact: contactModel } = models
+
+const ContactRow = ({ className, contact, onClick, ...rest }) => {
   const { isMobile } = useBreakpoints()
-  const { className, contact, onClick, ...rest } = props
-  const phone = Contact.getPrimaryPhone(contact)
-  const email = Contact.getPrimaryEmail(contact)
-  const cozyUrl = Contact.getPrimaryCozy(contact)
+  const phone = contactModel.getPrimaryPhone(contact) || undefined
+  const email = contactModel.getPrimaryEmail(contact) || undefined
+  const cozyUrl = contactModel.getPrimaryCozy(contact) || undefined
 
   return (
     <div

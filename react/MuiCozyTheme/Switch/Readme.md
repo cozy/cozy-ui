@@ -31,7 +31,7 @@ const Switches = () => {
     {['primary', 'secondary', 'default'].map((color, i) => {
       return (
         <Box display='flex' alignItems='center' key={i}>
-          <Typography variant='body1' inline>
+          <Typography variant='body1' display="inline">
             { color }
           </Typography>
           <StateSwitch id={i} color={color} />
