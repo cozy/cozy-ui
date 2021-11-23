@@ -1,3 +1,10 @@
+## [57.9.2](https://github.com/cozy/cozy-ui/compare/v57.9.1...v57.9.2) (2021-11-23)
+
+
+### Bug Fixes
+
+* Update LogoutLarge icon properly from the source ([48e3810](https://github.com/cozy/cozy-ui/commit/48e3810)), closes [/github.com/cozy/cozy-ui/pull/1968#discussion_r750010959](https://github.com//github.com/cozy/cozy-ui/pull/1968/issues/discussion_r750010959)
+
 ## [57.9.1](https://github.com/cozy/cozy-ui/compare/v57.9.0...v57.9.1) (2021-11-18)
 
 
