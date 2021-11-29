@@ -2,13 +2,13 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/styles'
+import get from 'lodash/get'
 
 import AppIcon from '../AppIcon'
 import Badge from '../Badge'
 import InfosBadge from '../InfosBadge'
 import { nameToColor } from '../Avatar'
 import Typography from '../Typography'
-import { AppDoctype } from '../proptypes'
 import Icon from '../Icon'
 import iconPlus from '../Icons/Plus'
 import iconWarning from '../Icons/WarningCircle'
@@ -61,9 +61,15 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export const SquareAppIcon = ({ app, type, name, variant, IconContent }) => {
+export const SquareAppIcon = ({
+  name,
+  variant,
+  IconContent,
+  ...appIconProps
+}) => {
   const classes = useStyles()
-  const appName = name || (app && app.name) || app || ''
+  const appName =
+    name || get(appIconProps, 'app.name') || get(appIconProps, 'app') || ''
   const letter = appName[0] || ''
 
   return (
@@ -119,7 +125,7 @@ export const SquareAppIcon = ({ app, type, name, variant, IconContent }) => {
               ) : IconContent ? (
                 IconContent
               ) : (
-                <AppIcon app={app} type={type} />
+                <AppIcon {...appIconProps} />
               )}
             </div>
           )}
@@ -137,7 +143,6 @@ export const SquareAppIcon = ({ app, type, name, variant, IconContent }) => {
 }
 
 SquareAppIcon.propTypes = {
-  app: PropTypes.oneOfType([AppDoctype, PropTypes.string]),
   name: PropTypes.string,
   variant: PropTypes.oneOf([
     'ghost',
@@ -146,8 +151,7 @@ SquareAppIcon.propTypes = {
     'add',
     'shortcut'
   ]),
-  IconContent: PropTypes.node,
-  type: PropTypes.oneOf(['app', 'konnector'])
+  IconContent: PropTypes.node
 }
 
 export default SquareAppIcon
