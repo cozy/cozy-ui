@@ -1,3 +1,10 @@
+# [57.10.0](https://github.com/cozy/cozy-ui/compare/v57.9.2...v57.10.0) (2021-11-29)
+
+
+### Features
+
+* Forward remaining props to AppIcon ([ed86adf](https://github.com/cozy/cozy-ui/commit/ed86adf))
+
 ## [57.9.2](https://github.com/cozy/cozy-ui/compare/v57.9.1...v57.9.2) (2021-11-23)
 
 
