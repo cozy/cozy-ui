@@ -93,7 +93,7 @@ If you want to add a new component, you must follow these steps:
 
 If you want to add a new icon to cozy-ui, you must follow these steps:
 
-* First verify that the SVG doesn't have any `fill` properties. Remove them if necessary
+* First verify that the SVG doesn't have any `fill` or `fill-opacity` properties. Remove them if necessary
 * Add the SVG in the `assets/icons` folder
 * Optimize it with `yarn optimizeIcons`
 * Generate the react component by running
@@ -101,7 +101,7 @@ If you want to add a new icon to cozy-ui, you must follow these steps:
   * `yarn makeSvgr assets/icons/[new icon folder]/[new icon file name]`
 * Update the documentation by adding the icon in `react/Icon/Readme.md` inside `SVGr icons` and `Available UI icons` sections
 * Don't forget to check the icon's color on different theme (inverted, etc.)
-* Update the tests by running `yarn build && yarn test -u`
+* Update the tests by running `yarn sprite && yarn build && yarn test -u`
 
 ### Develop inside an app
 
