@@ -17391,10 +17391,10 @@ svgo@^1.0.0, svgo@^1.2.2:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-svgstore-cli@1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/svgstore-cli/-/svgstore-cli-1.3.1.tgz#f785fffa4bdc0ceaa1bbaeedba1c4d82bb110297"
-  integrity sha512-OcuHdWNwMXoUpjTOztuZ28x4mQ/3Yj/6S1jMY5aHZFQjVS0w9vrHu9GYgpG7xRsBEsfssvVzVd8/P5A4jsxTOw==
+svgstore-cli@1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/svgstore-cli/-/svgstore-cli-1.3.2.tgz#05629f5f769d20a37c7c8d775742262ccbc8bee5"
+  integrity sha512-lzCfCu6UwhuDXFMzTJatRkvTCHKkmkogS10Ocz3I5G8LqhYIkkeGGWClPJ0Tr/FeoTTPcAd5X2JchLtJ0qIwlg==
   dependencies:
     glob "^7.0.5"
     svgstore "^2.0.2"
