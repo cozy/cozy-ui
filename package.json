@@ -69,7 +69,7 @@
     "@babel/cli": "7.11.5",
     "@babel/core": "7.11.5",
     "@cozy/codemods": "^1.9.0",
-    "@material-ui/core": "4.11.4",
+    "@material-ui/core": "4.12.3",
     "@semantic-release/changelog": "5.0.1",
     "@semantic-release/git": "7.0.18",
     "@semantic-release/npm": "5.3.4",
