@@ -181,7 +181,7 @@ rsg-screenshots --screenshot-dir screenshots/ --styleguide-dir docs/react
 screenshots/ directory
 ```
 
-See our [travis configuration](./travis.yml) for more information.
+See our [travis configuration](https://github.com/cozy/cozy-ui/blob/master/.travis.yml) for more information.
 
 ## License
 
