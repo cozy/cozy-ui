@@ -629,6 +629,35 @@ const makeOverrides = theme => ({
         minWidth: '.375rem'
       }
     }
+  },
+  MuiRadio: {
+    root: {
+      padding: '12px',
+      '&.Mui-disabled svg': {
+        borderRadius: '50%',
+        backgroundColor: theme.palette.background.default,
+        fill: theme.palette.border.disabled
+      },
+      '&:not(.Mui-checked) svg': {
+        fill: theme.palette.border.main
+      }
+    },
+    colorPrimary: {
+      '&.Mui-checked svg': {
+        fill: theme.palette.primary.main
+      },
+      '&.Mui-disabled&.Mui-checked svg': {
+        fill: theme.palette.text.disabled
+      }
+    },
+    colorSecondary: {
+      '&.Mui-checked svg': {
+        fill: theme.palette.error.main
+      },
+      '&.Mui-disabled&.Mui-checked svg': {
+        fill: theme.palette.text.disabled
+      }
+    }
   }
 })
 
