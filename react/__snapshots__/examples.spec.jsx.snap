@@ -3610,6 +3610,16 @@ exports[`Icon should render examples: Icon 1`] = `
       <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1\\">Qualify</p>
     </div>
     <div class=\\"makeStyles-iconTile-16 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" d=\\"M8 16A8 8 0 108 0a8 8 0 000 16zm0-6a2 2 0 100-4 2 2 0 000 4z\\" clip-rule=\\"evenodd\\"></path>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1\\">RadioChecked</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-16 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1\\">RadioUnchecked</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-16 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
         <path fill-rule=\\"evenodd\\" d=\\"M9.5 3.5L0 13.025V16h3.038L12.5 6.5l-3-3zM14.912.912A1.995 1.995 0 0012.09.911L11 2l3.03 3 1.062-1.075a2.019 2.019 0 00-.004-2.837l-.176-.176zM7 14h5.997a.999.999 0 11.005 2H5l2-2z\\"></path>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1\\">Rename</p>
@@ -4870,6 +4880,12 @@ exports[`Icon should render examples: Icon 3`] = `
         <symbol id=\\"qualify\\" viewBox=\\"0 0 16 16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M2 2h8.002a2 2 0 0 1 1.414.586l4 4a2 2 0 0 1 0 2.828l-4 4a2 2 0 0 1-1.414.586H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z\\"></path>
         </symbol>
+        <symbol id=\\"radio-checked\\" viewBox=\\"0 0 16 16\\">
+          <path fill-rule=\\"evenodd\\" d=\\"M8 16A8 8 0 108 0a8 8 0 000 16zm0-6a2 2 0 100-4 2 2 0 000 4z\\" clip-rule=\\"evenodd\\"></path>
+        </symbol>
+        <symbol id=\\"radio-unchecked\\" viewBox=\\"0 0 16 16\\">
+          <path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path>
+        </symbol>
         <symbol id=\\"rename\\" viewBox=\\"0 0 16 16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M201.5,99.5 L192,109.025391 L192,112 L195.03772,112 L204.5,102.5 L201.5,99.5 Z M206.912154,96.9121541 C206.132243,96.1322429 204.869144,96.1308556 204.089264,96.9107361 L203,98 L206.030762,101 L207.092271,99.9252663 C207.869738,99.1381134 207.863777,97.8637772 207.087846,97.0878459 L206.912154,96.9121541 Z M199,110 L204.997071,110 C205.550973,110 206,110.443865 206,111 C206,111.552285 205.553689,112 205.002455,112 L197,112 L199,110 Z\\" transform=\\"translate(-192 -96)\\"></path>
         </symbol>
@@ -5985,6 +6001,12 @@ exports[`Icon should render examples: Icon 6`] = `
         <symbol id=\\"qualify\\" viewBox=\\"0 0 16 16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M2 2h8.002a2 2 0 0 1 1.414.586l4 4a2 2 0 0 1 0 2.828l-4 4a2 2 0 0 1-1.414.586H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z\\"></path>
         </symbol>
+        <symbol id=\\"radio-checked\\" viewBox=\\"0 0 16 16\\">
+          <path fill-rule=\\"evenodd\\" d=\\"M8 16A8 8 0 108 0a8 8 0 000 16zm0-6a2 2 0 100-4 2 2 0 000 4z\\" clip-rule=\\"evenodd\\"></path>
+        </symbol>
+        <symbol id=\\"radio-unchecked\\" viewBox=\\"0 0 16 16\\">
+          <path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path>
+        </symbol>
         <symbol id=\\"rename\\" viewBox=\\"0 0 16 16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M201.5,99.5 L192,109.025391 L192,112 L195.03772,112 L204.5,102.5 L201.5,99.5 Z M206.912154,96.9121541 C206.132243,96.1322429 204.869144,96.1308556 204.089264,96.9107361 L203,98 L206.030762,101 L207.092271,99.9252663 C207.869738,99.1381134 207.863777,97.8637772 207.087846,97.0878459 L206.912154,96.9121541 Z M199,110 L204.997071,110 C205.550973,110 206,110.443865 206,111 C206,111.552285 205.553689,112 205.002455,112 L197,112 L199,110 Z\\" transform=\\"translate(-192 -96)\\"></path>
         </symbol>
@@ -6941,246 +6963,251 @@ exports[`Icon should render examples: Icon 6`] = `
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">qualify</p>
     </div>
     <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
-        <use xlink:href=\\"#rename\\"></use>
+        <use xlink:href=\\"#radio-checked\\"></use>
       </svg>
-      <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">rename</p>
+      <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">radio-checked</p>
     </div>
     <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+        <use xlink:href=\\"#radio-unchecked\\"></use>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">radio-unchecked</p>
+    </div>
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#repare\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">repare</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#reply\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">reply</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#restaurant\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">restaurant</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#restore-straight\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">restore-straight</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#restore\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">restore</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#right\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">right</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#rise\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">rise</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#rotate-left\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">rotate-left</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#rotate-right\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">rotate-right</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#sad-cozy\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">sad-cozy</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#safe\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">safe</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#school\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">school</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#select-all\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">select-all</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#setting\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">setting</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#share-circle\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">share-circle</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#share\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">share</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#shield\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">shield</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#shop\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">shop</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#sound\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">sound</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#spinner\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">spinner</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#stack\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">stack</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#star\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">star</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#stats\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">stats</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#subway\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">subway</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#sync-cozy\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">sync-cozy</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#sync\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">sync</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#target\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">target</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#team\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">team</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#telephone\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">telephone</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#to-the-cloud\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">to-the-cloud</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#top\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">top</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#train\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">train</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#trash\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">trash</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#trophy\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">trophy</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#unknow\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">unknow</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#unlink\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">unlink</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#unlock\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">unlock</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#up\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">up</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#upload\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">upload</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#videos\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">videos</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#walk\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">walk</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#wallet-add\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">wallet-add</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#wallet-new\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">wallet-new</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#wallet\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">wallet</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #08b442;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#warn\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">warn</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #B449E7;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#warning-circle\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">warning-circle</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #F52D2D;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#warning\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">warning</p>
     </div>
-    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #FF962F;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"text-align: center;\\"><svg class=\\"styles__icon___23x3R\\" style=\\"fill: #297EF2;\\" width=\\"16\\" height=\\"16\\">
         <use xlink:href=\\"#wrench-circle\\"></use>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half u-mb-1 MuiTypography-body1\\">wrench-circle</p>
@@ -7716,42 +7743,20 @@ exports[`QuotaAlert should render examples: QuotaAlert 1`] = `
 </div>"
 `;
 
-exports[`Radio should render examples: Radio 1`] = `
+exports[`Radios should render examples: Radios 1`] = `
 "<div>
+  <div class=\\"MuiFormGroup-root\\" role=\\"radiogroup\\" aria-label=\\"radio\\"><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" name=\\"radioName\\" type=\\"radio\\" value=\\"item1\\" checked=\\"\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 16A8 8 0 108 0a8 8 0 000 16zm0-6a2 2 0 100-4 2 2 0 000 4z\\" clip-rule=\\"evenodd\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">This is a radio button</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorSecondary MuiIconButton-colorSecondary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" name=\\"radioName\\" type=\\"radio\\" value=\\"item2\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">This is an intent radio button</span></label><label class=\\"MuiFormControlLabel-root Mui-disabled\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-disabled-3 Mui-disabled MuiIconButton-colorPrimary Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" aria-disabled=\\"true\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" disabled=\\"\\" name=\\"radioName\\" type=\\"radio\\" value=\\"item3\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label Mui-disabled MuiTypography-body1\\">This is a disabled radio button</span></label><label class=\\"MuiFormControlLabel-root Mui-disabled\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-checked-2 Mui-checked PrivateSwitchBase-disabled-3 Mui-disabled MuiIconButton-colorPrimary Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" aria-disabled=\\"true\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" disabled=\\"\\" name=\\"radioName\\" type=\\"radio\\" value=\\"item4\\" checked=\\"\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 16A8 8 0 108 0a8 8 0 000 16zm0-6a2 2 0 100-4 2 2 0 000 4z\\" clip-rule=\\"evenodd\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label Mui-disabled MuiTypography-body1\\">This is a checked disabled radio button</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary MuiIconButton-colorPrimary MuiIconButton-edgeStart\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" name=\\"radioName\\" type=\\"radio\\" value=\\"item5\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">This is a edge start radio button</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary MuiIconButton-colorPrimary MuiIconButton-edgeEnd\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" name=\\"radioName\\" type=\\"radio\\" value=\\"item6\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">This is a edge end radio button</span></label></div>
   <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
-    <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">ERROR</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">DISABLED</span></label>
-  </div>
-  <form>
-    <div><label class=\\"styles__c-input-radio___XJQt1\\" aria-disabled=\\"false\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue1\\"><span>This is a radio button</span></label><label class=\\"styles__c-input-radio___XJQt1\\" aria-disabled=\\"false\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue2\\"><span>This is also a radio button</span></label><label class=\\"styles__c-input-radio___XJQt1\\" aria-disabled=\\"false\\" style=\\"background: cadetblue; padding: 0.5rem; height: 3rem;\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue3\\"><span>This is a radio button with a custom style</span></label></div>
-  </form>
-  <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
-    <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">ERROR</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">DISABLED</span></label>
-  </div>
-  <form>
-    <div><label class=\\"styles__c-input-radio___XJQt1 styles__is-error___2-12P\\" aria-disabled=\\"false\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue1\\"><span>This is a radio button</span></label><label class=\\"styles__c-input-radio___XJQt1 styles__is-error___2-12P\\" aria-disabled=\\"false\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue2\\"><span>This is also a radio button</span></label><label class=\\"styles__c-input-radio___XJQt1 styles__is-error___2-12P\\" aria-disabled=\\"false\\" style=\\"background: cadetblue; padding: 0.5rem; height: 3rem;\\"><input type=\\"radio\\" name=\\"radioForm\\" value=\\"radioValue3\\"><span>This is a radio button with a custom style</span></label></div>
-  </form>
-  <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
-    <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">ERROR</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">DISABLED</span></label>
-  </div>
-  <form>
-    <div><label class=\\"styles__c-input-radio___XJQt1\\" aria-disabled=\\"true\\"><input type=\\"radio\\" name=\\"radioForm\\" disabled=\\"\\" value=\\"radioValue1\\"><span>This is a radio button</span></label><label class=\\"styles__c-input-radio___XJQt1\\" aria-disabled=\\"true\\"><input type=\\"radio\\" name=\\"radioForm\\" disabled=\\"\\" value=\\"radioValue2\\"><span>This is also a radio button</span></label><label class=\\"styles__c-input-radio___XJQt1\\" aria-disabled=\\"true\\" style=\\"background: cadetblue; padding: 0.5rem; height: 3rem;\\"><input type=\\"radio\\" name=\\"radioForm\\" disabled=\\"\\" value=\\"radioValue3\\"><span>This is a radio button with a custom style</span></label></div>
-  </form>
+    <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">CHECKED</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">DISABLED</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">SECONDARY</span></label>
+  </div><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"radio\\" value=\\"\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path></svg></span></span>
 </div>"
 `;
 
-exports[`Radio should render examples: Radio 2`] = `
+exports[`Radios should render examples: Radios 2`] = `
 "<div>
-  <p><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">View bounding box</span></label></p>
-  <p>Default gutter</p>
-  <div style=\\"height: 3rem; width: 3rem; border: 2px dashed #ccc; display: flex; justify-content: center; align-items: center;\\"><label class=\\"styles__c-input-radio___XJQt1\\" style=\\"border: 1px solid red;\\"><input type=\\"radio\\" readonly=\\"\\" value=\\"\\" checked=\\"\\"><span></span></label></div>
-  <p>Gutter set to false</p>
-  <div style=\\"height: 3rem; width: 3rem; border: 2px dashed #ccc; display: flex; justify-content: center; align-items: center;\\"><label class=\\"styles__c-input-radio___XJQt1 styles__c-input-radio--noGutter___3WtC2\\" style=\\"border: 1px solid red;\\"><input type=\\"radio\\" readonly=\\"\\" value=\\"\\" checked=\\"\\"><span></span></label></div>
-</div>"
-`;
-
-exports[`Radio should render examples: Radio 3`] = `
-"<div>
-  <div class=\\"MuiFormGroup-root\\" role=\\"radiogroup\\"><label class=\\"MuiFormControlLabel-root\\"><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" name=\\"radioGroup1\\" value=\\"item1\\" checked=\\"\\"><span></span></label><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">Item 1</span></label><label class=\\"MuiFormControlLabel-root\\"><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" name=\\"radioGroup1\\" value=\\"item2\\"><span></span></label><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">Item 2</span></label><label class=\\"MuiFormControlLabel-root\\"><label class=\\"styles__c-input-radio___XJQt1\\"><input type=\\"radio\\" name=\\"radioGroup1\\" value=\\"item3\\"><span></span></label><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">Item 3</span></label></div>
+  <div style=\\"height: 3rem; width: 3rem; border: 2px dashed #ccc; display: flex; justify-content: center; align-items: center;\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\" style=\\"border: 1px solid red;\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"radio\\" value=\\"\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path></svg></span></span></div>
+  <div style=\\"height: 3rem; width: 3rem; border: 2px dashed #ccc; display: flex; justify-content: center; align-items: center;\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary MuiIconButton-colorPrimary MuiIconButton-edgeStart\\" aria-disabled=\\"false\\" style=\\"border: 1px solid red;\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"radio\\" value=\\"\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path></svg></span></span></div>
+  <div style=\\"height: 3rem; width: 3rem; border: 2px dashed #ccc; display: flex; justify-content: center; align-items: center;\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary MuiIconButton-colorPrimary MuiIconButton-edgeEnd\\" aria-disabled=\\"false\\" style=\\"border: 1px solid red;\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"radio\\" value=\\"\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path></svg></span></span></div>
 </div>"
 `;
 
