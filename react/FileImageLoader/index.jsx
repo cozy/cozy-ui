@@ -1,4 +1,4 @@
-import React from 'react'
+import { Component } from 'react'
 import PropTypes from 'prop-types'
 import { withClient } from 'cozy-client'
 import logger from 'cozy-logger'
@@ -11,7 +11,8 @@ const FAILED = 'FAILED'
 const GET_LINK = 'GET_LINK'
 
 import { checkImageSource } from './checkImageSource'
-export class ImageLoader extends React.Component {
+
+export class FileImageLoader extends Component {
   state = {
     src: null
   }
@@ -51,6 +52,7 @@ export class ImageLoader extends React.Component {
     const response = await this.props.client
       .collection('io.cozy.files')
       .get(this.getFileId(file))
+
     if (!response.data.links) throw new Error('Could not fetch file links')
     return response.data.links
   }
@@ -63,6 +65,7 @@ export class ImageLoader extends React.Component {
       const link = file.links ? file.links[linkType] : false
 
       if (!link) throw new Error(`${linkType} link is not available`)
+
       const src = client.getStackClient().uri + link
       await checkImageSource(src)
       if (this._mounted) {
@@ -72,10 +75,10 @@ export class ImageLoader extends React.Component {
         })
       }
     } catch (e) {
-      logger.error(e)
       this.loadNextSrc(e)
     }
   }
+
   async loadLink() {
     this.status = LOADING_LINK
     const { file, linkType, client } = this.props
@@ -105,7 +108,7 @@ export class ImageLoader extends React.Component {
     const { file, client } = this.props
 
     try {
-      // ImageLoader can also be used for pdf files, because on mobile a preview image is
+      // FileImageLoader can also be used for pdf files, because on mobile a preview image is
       // generated and the pdf is therefore treated as an image.
       // But the fallback allows to display the original file as an image if there is an error
       // during the preview recovery. This principle is not possible with a pdf file.
@@ -137,17 +140,17 @@ export class ImageLoader extends React.Component {
   }
 }
 
-ImageLoader.propTypes = {
+FileImageLoader.propTypes = {
   file: PropTypes.object.isRequired,
   render: PropTypes.func.isRequired,
-  linkType: PropTypes.oneOf(['small', 'medium', 'large', 'preview']),
+  linkType: PropTypes.oneOf(['small', 'medium', 'large', 'preview', 'icon']),
   onError: PropTypes.func,
   renderFallback: PropTypes.func
 }
 
-ImageLoader.defaultProps = {
+FileImageLoader.defaultProps = {
   linkType: 'small',
   onError: () => {}
 }
 
-export default withClient(ImageLoader)
+export default withClient(FileImageLoader)

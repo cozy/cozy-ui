@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import Hammer from 'hammerjs'
 
+import FileImageLoader from '../FileImageLoader'
+
 import ViewerSpinner from './ViewerSpinner'
-import ImageLoader from './ImageLoader'
 import NoNetworkViewer from './NoNetworkViewer'
 
 import styles from './styles.styl'
@@ -222,7 +223,7 @@ class ImageViewer extends Component {
       <div className={styles['viewer-imageviewer']}>
         {loading && <ViewerSpinner />}
         {file && (
-          <ImageLoader
+          <FileImageLoader
             file={file}
             linkType="large"
             onError={this.onImageError}

@@ -4,7 +4,7 @@ import { render, waitFor } from '@testing-library/react'
 import { createMockClient } from 'cozy-client'
 import logger from 'cozy-logger'
 
-import { ImageLoader } from './ImageLoader'
+import { FileImageLoader } from '.'
 import { checkImageSource } from './checkImageSource'
 
 jest.mock('./checkImageSource', () => ({
@@ -34,11 +34,18 @@ const file = {
 
 const setup = ({ file }) => {
   const root = render(
-    <ImageLoader
+    <FileImageLoader
       file={file}
       linkType="large"
       key={file.id}
       render={src => <img alt={file.name} src={src} data-testid="img_image" />}
+      renderFallback={() => (
+        <img
+          alt="render fallback"
+          src="http://url.img_image_render_fallback/"
+          data-testid="img_image_renderFallback"
+        />
+      )}
       client={client}
     />
   )
@@ -46,10 +53,11 @@ const setup = ({ file }) => {
   return { root }
 }
 
-describe('ImageLoader', () => {
+describe('FileImageLoader', () => {
   afterEach(() => {
     jest.restoreAllMocks()
   })
+
   it('should set the source of image to links.large if no error', async () => {
     const { root } = setup({ file })
     const { getByTestId } = root
@@ -114,5 +122,31 @@ describe('ImageLoader', () => {
 
     const img = getByTestId('img_image')
     expect(img.src).toEqual('http://valid/')
+  })
+
+  it('should render fallback component if other request failed & file is a PDF', async () => {
+    const file = {
+      _id: 'pdf',
+      class: 'pdf',
+      name: 'Demo.pdf',
+      mime: 'application/pdf',
+      links: {
+        icon: 'https://url.not.valid.anymore'
+      }
+    }
+    checkImageSource.mockRejectedValueOnce('KO')
+    const { root } = setup({ file })
+    const { getByTestId } = root
+    getMock.mockResolvedValue({
+      data: {
+        links: {
+          icon: 'http://urlnotvalidneither'
+        }
+      }
+    })
+    await waitFor(() => getByTestId('img_image_renderFallback'))
+
+    const img = getByTestId('img_image_renderFallback')
+    expect(img.src).toEqual('http://url.img_image_render_fallback/')
   })
 })
