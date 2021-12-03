@@ -1,3 +1,24 @@
+# [58.0.0](https://github.com/cozy/cozy-ui/compare/v57.10.0...v58.0.0) (2021-12-03)
+
+
+### Features
+
+* Renamed ImageLoader & Exposed it directly ([2ca789b](https://github.com/cozy/cozy-ui/commit/2ca789b))
+
+
+### BREAKING CHANGES
+
+* `ImageLoader` is rename `FileImageLoader`.
+If you were previously importing `ImageLoader`
+via the `Viewer`like this
+`import ImageLoader from 'cozy-ui/transpiled/react/Viewer/ImageLoader'`
+this no longer works, there is a more direct path:
+`import ImageLoader from 'cozy-ui/transpiled/react/ImageLoader`.
+The method `checkImageSource` has been moved also
+from `Viewer` folder to `ImageLoader` folder.
+
+Co-authored-by: JF-Cozy
+
 # [57.10.0](https://github.com/cozy/cozy-ui/compare/v57.9.2...v57.10.0) (2021-11-29)
 
 
