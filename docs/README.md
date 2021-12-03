@@ -76,6 +76,15 @@ yarn build:css:all # Build CSS files needed by the documentation
 yarn start:doc # Run the styleguide in watch mode
 ```
 
+### Add a component
+
+If you want to add a new component, you must follow these steps:
+
+* Add the new component in `/react` folder with its `README.md` file
+* Expose it in the API by adding it in `react/index.js`
+* Add it in the documentation by modifying `docs/styleguide.config.js`
+* If necessary you can add snapshots for it by modifying `react/examples.spec.jsx` and updating them `yarn build && yarn test -u`
+
 ### Add an Icon
 
 If you want to add a new icon to cozy-ui, you must follow these steps:

@@ -4,11 +4,11 @@ import { render, waitFor } from '@testing-library/react'
 import { BreakpointsProvider } from '../hooks/useBreakpoints'
 
 import DemoProvider from './docs/DemoProvider'
-import { checkImageSource } from './checkImageSource'
+import { checkImageSource } from '../FileImageLoader/checkImageSource'
 import ImageViewer from './ImageViewer'
 
-jest.mock('./checkImageSource', () => ({
-  ...jest.requireActual('./checkImageSource'),
+jest.mock('../FileImageLoader/checkImageSource', () => ({
+  ...jest.requireActual('../FileImageLoader/checkImageSource'),
   checkImageSource: jest.fn()
 }))
 

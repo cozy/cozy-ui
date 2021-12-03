@@ -1,8 +1,12 @@
-const TTL = 10000
-
-export const checkImageSource = src => {
+/**
+ * @param {string} src - Image source
+ * @returns {Promise<void>}
+ */
+export const checkImageSource = async src => {
+  const TTL = 10000
   let timeout = null
   let img = null
+
   const cleanImageLoader = () => {
     clearTimeout(timeout)
     img.onload = img.onerror = null

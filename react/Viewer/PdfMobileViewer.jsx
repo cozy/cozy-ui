@@ -7,10 +7,10 @@ import { isMobileApp } from 'cozy-device-helper'
 import Alerter from '../Alerter'
 import Spinner from '../Spinner'
 import Button from '../Button'
+import FileImageLoader from '../FileImageLoader'
 
 import { withViewerLocales } from './withViewerLocales'
 import DownloadButton from './NoViewer/DownloadButton'
-import ImageLoader from './ImageLoader'
 import NoViewer from './NoViewer'
 
 import styles from './styles.styl'
@@ -80,7 +80,7 @@ export const PdfMobileViewer = ({ file, t, gestures }) => {
     <div className={styles['viewer-pdfMobile']}>
       {loading && <Spinner size="xxlarge" middle noMargin />}
       {file && (
-        <ImageLoader
+        <FileImageLoader
           file={file}
           linkType="preview"
           onError={onImageError}
