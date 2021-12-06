@@ -20,9 +20,13 @@ export class FileImageLoader extends Component {
   _mounted = false
 
   componentDidMount() {
+    const { client } = this.props
     this._mounted = true
     this.status = PENDING
     this.loadNextSrc()
+    this.realtime = client.plugins.realtime
+    this.type = 'io.cozy.files.thumbnails'
+    this.realtime.subscribe('created', this.type, this.handleCreate)
   }
 
   componentWillUnmount() {
@@ -30,6 +34,19 @@ export class FileImageLoader extends Component {
     if (this.img) {
       this.img.onload = this.img.onerror = null
       this.img.src = ''
+    }
+    this.realtime &&
+      this.realtime.unsubscribe('created', this.type, this.handleCreate)
+  }
+
+  /**
+   * Reload the link when realtime tell us that the
+   * thumbnail is created. By default linkType === small
+   */
+  handleCreate = doc => {
+    const { file, linkType } = this.props
+    if (file._id === doc._id && doc.format === linkType) {
+      this.loadLink()
     }
   }
 
