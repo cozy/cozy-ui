@@ -18,6 +18,13 @@ const demoFilesByClass = {
 }
 
 const mockClient = {
+  plugins: {
+    realtime: {
+      subscribe: jest.fn(),
+      unsubscribe: jest.fn(),
+      unsubscribeAll: jest.fn()
+    }
+  },
   collection: () => ({
     getDownloadLinkById: id =>
       new Promise(resolve => resolve(demoFilesByClass[id])),

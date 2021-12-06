@@ -21,6 +21,11 @@ client.collection = jest.fn(() => ({
   getDownloadLinkById: getDownloadLinkByIdMock,
   get: getMock
 }))
+client.plugins.realtime = {
+  subscribe: jest.fn(),
+  unsubscribe: jest.fn(),
+  unsubscribeAll: jest.fn()
+}
 
 const file = {
   _id: 'image',

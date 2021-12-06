@@ -20,6 +20,11 @@ const client = createMockClient({})
 client.collection = jest.fn(() => ({
   getDownloadLinkById: jest.fn()
 }))
+client.plugins.realtime = {
+  subscribe: jest.fn(),
+  unsubscribe: jest.fn(),
+  unsubscribeAll: jest.fn()
+}
 
 const file = {
   _id: 'pdf',
