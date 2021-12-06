@@ -1,3 +1,10 @@
+# [58.1.0](https://github.com/cozy/cozy-ui/compare/v58.0.0...v58.1.0) (2021-12-06)
+
+
+### Features
+
+* Add realtime to FileImageLoader component ([621fe47](https://github.com/cozy/cozy-ui/commit/621fe47))
+
 # [58.0.0](https://github.com/cozy/cozy-ui/compare/v57.10.0...v58.0.0) (2021-12-03)
 
 
