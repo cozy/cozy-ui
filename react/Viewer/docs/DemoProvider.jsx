@@ -20,9 +20,9 @@ const demoFilesByClass = {
 const mockClient = {
   plugins: {
     realtime: {
-      subscribe: jest.fn(),
-      unsubscribe: jest.fn(),
-      unsubscribeAll: jest.fn()
+      subscribe: () => {},
+      unsubscribe: () => {},
+      unsubscribeAll: () => {}
     }
   },
   collection: () => ({
