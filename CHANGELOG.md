@@ -1,3 +1,10 @@
+## [58.1.1](https://github.com/cozy/cozy-ui/compare/v58.1.0...v58.1.1) (2021-12-07)
+
+
+### Bug Fixes
+
+* Replace jest function in documentation ([cdbc01f](https://github.com/cozy/cozy-ui/commit/cdbc01f))
+
 # [58.1.0](https://github.com/cozy/cozy-ui/compare/v58.0.0...v58.1.0) (2021-12-06)
 
 
