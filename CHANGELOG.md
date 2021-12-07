@@ -1,3 +1,10 @@
+## [58.1.2](https://github.com/cozy/cozy-ui/compare/v58.1.1...v58.1.2) (2021-12-07)
+
+
+### Bug Fixes
+
+* Correct colors about Alerter buttons ([050c2b9](https://github.com/cozy/cozy-ui/commit/050c2b9))
+
 ## [58.1.1](https://github.com/cozy/cozy-ui/compare/v58.1.0...v58.1.1) (2021-12-07)
 
 
