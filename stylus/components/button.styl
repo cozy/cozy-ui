@@ -188,47 +188,56 @@ $button-alert
 
 $button-alert--error
     @extend $button-alert
-    color:   palette['pomegranate']  // @stylint ignore
+    color: palette['pomegranate'] !important // @stylint ignore
+    background-color: var(--white) !important // @stylint ignore
+    border-color: var(--white) !important // @stylint ignore
 
     &:visited
-        color: palette['pomegranate']  // @stylint ignore
+        color: palette['pomegranate'] !important // @stylint ignore
 
     &:active
     &:hover
     &:focus
-        color  var(--monza)
-        background-color: palette['yourPink']  // @stylint ignore
+        color: var(--monza) !important // @stylint ignore
+        background-color: palette['yourPink'] !important // @stylint ignore
+        border-color: palette['yourPink'] !important // @stylint ignore
+
 
 $button-alert--info
     @extend           $button-alert
-    color             var(--white)
-    background-color  var(--coolGrey)
+    color: var(--white) !important // @stylint ignore
+    background-color: var(--coolGrey) !important // @stylint ignore
+    border-color: var(--coolGrey) !important // @stylint ignore
 
     &[disabled]
     &[aria-disabled=true]
         &:hover
-            background-color var(--coolGrey)
+            background-color: var(--coolGrey) !important // @stylint ignore // @stylint ignore
 
     &:visited
-        color var(--white)
+        color: var(--white) !important // @stylint ignore
 
     &:active
     &:hover
     &:focus
-        background-color var(--charcoalGrey)
+        background-color: var(--charcoalGrey) !important // @stylint ignore
+        border-color: var(--charcoalGrey) !important // @stylint ignore
 
 $button-alert--success
     @extend $button-alert
-    color:   palette['emerald']  // @stylint ignore
+    color: palette['emerald'] !important // @stylint ignore
+    background-color: var(--white) !important // @stylint ignore
+    border-color: var(--white) !important // @stylint ignore
 
     &:visited
-        color: palette['emerald']  // @stylint ignore
+        color: palette['emerald'] !important  // @stylint ignore
 
     &:active
     &:hover
     &:focus
-        color:  palette['malachite']  // @stylint ignore
-        background-color: palette['grannyApple']  // @stylint ignore
+        color: palette['malachite'] !important // @stylint ignore
+        background-color: palette['grannyApple'] !important // @stylint ignore
+        border-color: palette['grannyApple'] !important // @stylint ignore
 
 $button-client
     @extend $button
