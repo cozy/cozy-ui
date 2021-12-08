@@ -1,3 +1,10 @@
+# [58.2.0](https://github.com/cozy/cozy-ui/compare/v58.1.2...v58.2.0) (2021-12-08)
+
+
+### Features
+
+* Add `noWrap` prop on BarTitle ([74e3742](https://github.com/cozy/cozy-ui/commit/74e3742))
+
 ## [58.1.2](https://github.com/cozy/cozy-ui/compare/v58.1.1...v58.1.2) (2021-12-07)
 
 
