@@ -15,12 +15,22 @@ const MyPage = () => {
 }
 ```
 
-### Display
+### Basic usage
 
-The border is here to show the area of the bar.
+The red border is here only to show the area of the bar.
 
-```
-<div style={{ height: '3rem', border: '1px solid var(--dividerColor) ' }}>
+```jsx
+<div style={{ border: '1px solid red' }}>
   <BarTitle>My transactions</BarTitle>
+</div>
+```
+
+### Long title with ellipsis
+
+The red border is here only to show the area of the bar.
+
+```jsx
+<div style={{ border: '1px solid red' }}>
+  <BarTitle noWrap>{content.ada.short}</BarTitle>
 </div>
 ```
