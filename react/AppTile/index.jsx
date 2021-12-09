@@ -28,12 +28,14 @@ let dataset
 const getDataset = () => {
   if (dataset) return dataset
   const root = document.querySelector('[role=application]')
-  dataset = root && root.dataset
+  if (root) {
+    dataset = root.dataset.cozy ? JSON.parse(root.dataset.cozy) : root.dataset
+  }
   return dataset
 }
 
 const getAppIconProps = () => ({
-  domain: getDataset() && getDataset().cozyDomain,
+  domain: getDataset() && (getDataset().cozyDomain || getDataset().domain),
   secure: window.location.protocol === 'https:'
 })
 
