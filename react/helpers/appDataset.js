@@ -36,7 +36,16 @@ export const readCozyDataFromDOM = memoize(attrName => {
 
   const attrName2 = `cozy${attrName[0].toUpperCase()}${attrName.substring(1)}`
   const value = appDataset[attrName2]
-  return value === undefined ? undefined : value === '' || JSON.parse(value)
+
+  if (value === undefined) {
+    return undefined
+  }
+
+  if (value === 'true' || value === 'false') {
+    return JSON.parse(value)
+  }
+
+  return value === '' || value
 })
 
 export const resetCache = () => {
