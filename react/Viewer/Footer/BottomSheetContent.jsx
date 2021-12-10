@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const BottomSheetContent = forwardRef(({ file }, ref) => {
+const BottomSheetContent = forwardRef(({ file, disableSharing }, ref) => {
   const panelBlocks = getPanelBlocks({ panelBlocksSpecs, file })
   const FileActionButton = isMobileApp() ? ForwardButton : DownloadButton
   const styles = useStyles()
@@ -31,7 +31,7 @@ const BottomSheetContent = forwardRef(({ file }, ref) => {
       className={cx('u-flex u-flex-column u-ov-hidden', styles.stack)}
     >
       <Paper className={'u-flex u-ph-1 u-pb-1'} elevation={2} square ref={ref}>
-        <Sharing file={file} />
+        {!disableSharing && <Sharing file={file} />}
         <FileActionButton file={file} />
       </Paper>
       {panelBlocks.map((PanelBlock, index) => (
@@ -50,7 +50,8 @@ const BottomSheetContent = forwardRef(({ file }, ref) => {
 })
 
 BottomSheetContent.propTypes = {
-  file: PropTypes.object.isRequired
+  file: PropTypes.object.isRequired,
+  disableSharing: PropTypes.bool
 }
 
 export default BottomSheetContent

@@ -145,6 +145,7 @@ Viewer.propTypes = {
 const ViewerInformationsWrapper = ({
   currentFile,
   disableFooter,
+  disableSharing,
   validForPanel,
   toolbarRef
 }) => {
@@ -152,7 +153,11 @@ const ViewerInformationsWrapper = ({
     <>
       {!disableFooter && (
         <Footer>
-          <FooterContent file={currentFile} toolbarRef={toolbarRef} />
+          <FooterContent
+            file={currentFile}
+            toolbarRef={toolbarRef}
+            disableSharing={disableSharing}
+          />
         </Footer>
       )}
       {validForPanel && (
@@ -167,12 +172,19 @@ const ViewerInformationsWrapper = ({
 ViewerInformationsWrapper.propTypes = {
   currentFile: PropTypes.shape(FileDoctype).isRequired,
   disableFooter: PropTypes.bool,
+  disableSharing: PropTypes.bool,
   validForPanel: PropTypes.bool,
   toolbarRef: PropTypes.object
 }
 
 export const ViewerContainer = props => {
-  const { className, disableFooter, disablePanel, ...rest } = props
+  const {
+    className,
+    disableFooter,
+    disablePanel,
+    disableSharing,
+    ...rest
+  } = props
   const { currentIndex, files } = props
   const toolbarRef = createRef()
   const { isDesktop } = useBreakpoints()
@@ -195,6 +207,7 @@ export const ViewerContainer = props => {
       />
       <ViewerInformationsWrapper
         disableFooter={disableFooter}
+        disableSharing={disableSharing}
         validForPanel={validForPanel}
         currentFile={currentFile}
         toolbarRef={toolbarRef}
@@ -225,10 +238,12 @@ ViewerContainer.propTypes = {
     /** To open the Only Office file */
     opener: PropTypes.func
   }),
-  /** Show the panel containing more information about the file only on Desktop */
+  /** Show/Hide the panel containing more information about the file only on Desktop */
   disablePanel: PropTypes.bool,
-  /** Show the panel containing more information about the file only on Phone & Tablet devices */
-  disableFooter: PropTypes.bool
+  /** Show/Hide the panel containing more information about the file only on Phone & Tablet devices */
+  disableFooter: PropTypes.bool,
+  /** Show/Hide cozy share button  */
+  disableSharing: PropTypes.bool
 }
 
 ViewerContainer.defaultProps = {

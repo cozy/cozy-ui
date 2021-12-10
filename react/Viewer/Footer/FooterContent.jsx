@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const FooterContent = ({ file, toolbarRef }) => {
+const FooterContent = ({ file, toolbarRef, disableSharing }) => {
   const styles = useStyles()
   const FileActionButton = isMobileApp() ? ForwardButton : DownloadButton
   const actionButtonsRef = useRef()
@@ -35,21 +35,27 @@ const FooterContent = ({ file, toolbarRef }) => {
         actionButtonsRef={actionButtonsRef}
         toolbarRef={toolbarRef}
       >
-        <BottomSheetContent file={file} ref={actionButtonsRef} />
+        <BottomSheetContent
+          file={file}
+          disableSharing={disableSharing}
+          ref={actionButtonsRef}
+        />
       </BottomSheetWrapper>
     )
   }
 
   return (
     <div className={styles.footer}>
-      <Sharing file={file} />
+      {!disableSharing && <Sharing file={file} />}
       <FileActionButton file={file} />
     </div>
   )
 }
 
 FooterContent.propTypes = {
-  file: PropTypes.object.isRequired
+  file: PropTypes.object.isRequired,
+  toolbarRef: PropTypes.object,
+  disableSharing: PropTypes.bool
 }
 
 export default FooterContent
