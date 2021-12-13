@@ -1,3 +1,10 @@
+# [58.3.0](https://github.com/cozy/cozy-ui/compare/v58.2.0...v58.3.0) (2021-12-13)
+
+
+### Features
+
+* Disable sharing button on Viewer ([c7303b3](https://github.com/cozy/cozy-ui/commit/c7303b3))
+
 # [58.2.0](https://github.com/cozy/cozy-ui/compare/v58.1.2...v58.2.0) (2021-12-08)
 
 
