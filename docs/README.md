@@ -11,13 +11,13 @@ CSS classes and React components designed to build [Cozy](https://cozy.io/) apps
 
 If you plan to build a webapp to run on Cozy, you'll probably want to use a simple and elegant solution to build your interfaces without the mess of dealing with complex markup and CSS. Then Cozy UI is here for you!
 
+## React components (styleguidist)
+
+Check out [UI components](./react/) to see how to use ready made React components.
+
 ## CSS Styleguide
 
-Check the [styleguide](https://docs.cozy.io/cozy-ui/styleguide) to see all the variables, mixins, classes, utilities and how to use them with only CSS classes.
-
-## React components
-
-Check out [UI components](https://docs.cozy.io/cozy-ui/react/) to see how to use ready made React components.
+Check the [styleguide](./styleguide/) to see all the variables, mixins, classes, utilities and how to use them with only CSS classes.
 
 ## Usage
 
@@ -26,7 +26,7 @@ Check out [UI components](https://docs.cozy.io/cozy-ui/react/) to see how to use
 Add Cozy UI to a dependency to your project.
 
 ```
-npm install cozy-ui
+yarn add cozy-ui
 ```
 
 If you use the transpiled components (from `cozy-ui/transpiled/react`), you need to import the stylesheet (once):
@@ -38,7 +38,7 @@ import 'cozy-ui/transpiled/react/stylesheet.css'
 <Button />
 ```
 
-You're now ready to use [Cozy UI's React components](https://docs.cozy.io/cozy-ui/react/)
+You're now ready to use [Cozy UI's React components](./react/)
 
 ### Utility classes
 
@@ -50,7 +50,7 @@ To do so you have at your disposal a special CSS build `cozy-ui.utils.min.css` t
 import 'cozy-ui/dist/cozy-ui.utils.min.css'
 ```
 
-### As a vanilla CSS library
+### As a vanilla CSS library (deprecated)
 
 The entire library is also available as a good ol’ CSS library. You can simply add it to your app by linking the distributed minified file.
 
@@ -121,12 +121,13 @@ yarn start
 All your modifications in your local Cozy UI will now be visible in your application!
 
 When sending a PR, if your changes have graphic impacts, it is useful for the reviewers if
-you have deployed a version of the styleguidist containing your changes to your repository.
+you have deployed a version of the styleguidist containing your changes to your fork's repository.
 
 ```bash
 yarn build:doc:react
 yarn deploy:doc --repo git@github.com:USERNAME/cozy-ui.git
 ```
+:warning: If the `deploy:doc` failed, you need to checkout your dev branch by doing `git checkout -`
 
 ## Guidelines for component development
 
