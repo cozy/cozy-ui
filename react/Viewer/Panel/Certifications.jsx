@@ -36,7 +36,7 @@ const Certifications = ({ file, t }) => {
   const hasElectronicSafe = has(file, 'metadata.electronicSafe')
 
   return (
-    <div className="u-pv-1-half u-ph-2">
+    <>
       {hasCarbonCopy && (
         <Certification
           icon={CarbonCopyIcon}
@@ -51,7 +51,7 @@ const Certifications = ({ file, t }) => {
           caption={t('Viewer.panel.certifications.electronicSafe.caption')}
         />
       )}
-    </div>
+    </>
   )
 }
 

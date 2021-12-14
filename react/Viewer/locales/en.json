@@ -34,6 +34,25 @@
           "caption": "Indicates whether the original document is secured by your personal digital safe with the certifications that give it probative value and a 50-year retention guarantee beyond its deposit."
         }
       },
+      "qualification": {
+        "date": {
+          "title": {
+            "addedOn": "Added on",
+            "obtentionDate": "Delivered on",
+            "issueDate": "Delivered on",
+            "expirationDate": "Expiration date",
+            "referencedDate": "Referenced date",
+            "shootingDate": "Shooting date"
+          }
+        },
+        "identity": "Identity",
+        "label": {
+          "title": "Label",
+          "front": "Front side",
+          "back": "Back side"
+        },
+        "qualification": "Qualification"
+      },
       "title": "Useful information"
     },
     "previous": "Previous",

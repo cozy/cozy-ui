@@ -34,6 +34,25 @@
           "caption": "Indique si le document original est sécurisé par votre coffre-fort numérique personnel avec les certifications qui lui confèrent une valeur probante et une garantie de conservation de 50 ans au-delà de son dépôt."
         }
       },
+      "qualification": {
+        "date": {
+          "title": {
+            "addedOn": "Ajouté le",
+            "obtentionDate": "Délivré le",
+            "issueDate": "Délivré le",
+            "expirationDate": "Expire le",
+            "referencedDate": "Date de référence",
+            "shootingDate": "Date de prise de vue"
+          }
+        },
+        "identity": "Identité",
+        "label": {
+          "title": "Label",
+          "front": "Face avant",
+          "back": "Face arrière"
+        },
+        "qualification": "Qualification"
+      },
       "title": "Informations utiles"
     },
     "previous": "Précédente",
