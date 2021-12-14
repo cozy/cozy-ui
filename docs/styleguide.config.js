@@ -201,6 +201,7 @@ module.exports = {
         '../react/BottomNavigation/index.js',
         '../react/BottomNavigationAction/index.js',
         '../react/Box/index.js',
+        '../react/BreadcrumbsMUI/index.js',
         '../react/MuiCozyTheme/Buttons',
         '../react/CardActionArea/index.js',
         '../react/CardActions/index.js',
