@@ -1,3 +1,11 @@
+# [58.4.0](https://github.com/cozy/cozy-ui/compare/v58.3.0...v58.4.0) (2021-12-14)
+
+
+### Features
+
+* Added Qualification panel block ([9fbaaa6](https://github.com/cozy/cozy-ui/commit/9fbaaa6))
+* Upgrade cozy-client ([8820f81](https://github.com/cozy/cozy-ui/commit/8820f81))
+
 # [58.3.0](https://github.com/cozy/cozy-ui/compare/v58.2.0...v58.3.0) (2021-12-13)
 
 
