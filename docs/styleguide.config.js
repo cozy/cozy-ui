@@ -140,6 +140,7 @@ module.exports = {
         '../react/AppSections/index.jsx',
         '../react/CipherIcon/index.jsx',
         '../react/CozyTheme/index.jsx',
+        '../react/FilePicker/index.jsx',
         '../react/Overlay/index.jsx',
         '../react/PasswordExample/index.jsx',
         '../react/Popup/index.jsx',
