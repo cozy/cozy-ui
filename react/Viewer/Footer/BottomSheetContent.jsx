@@ -20,34 +20,41 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const BottomSheetContent = forwardRef(({ file, disableSharing }, ref) => {
-  const panelBlocks = getPanelBlocks({ panelBlocksSpecs, file })
-  const FileActionButton = isMobileApp() ? ForwardButton : DownloadButton
-  const styles = useStyles()
+const BottomSheetContent = forwardRef(
+  ({ file, disableSharing, contactsFullname }, ref) => {
+    const panelBlocks = getPanelBlocks({ panelBlocksSpecs, file })
+    const FileActionButton = isMobileApp() ? ForwardButton : DownloadButton
+    const styles = useStyles()
 
-  return (
-    <Stack
-      spacing="s"
-      className={cx('u-flex u-flex-column u-ov-hidden', styles.stack)}
-    >
-      <Paper className={'u-flex u-ph-1 u-pb-1'} elevation={2} square ref={ref}>
-        {!disableSharing && <Sharing file={file} />}
-        <FileActionButton file={file} />
-      </Paper>
-      {panelBlocks.map((PanelBlock, index) => (
+    return (
+      <Stack
+        spacing="s"
+        className={cx('u-flex u-flex-column u-ov-hidden', styles.stack)}
+      >
         <Paper
-          key={index}
-          elevation={index === panelBlocks.length - 1 ? 0 : 2}
+          className={'u-flex u-ph-1 u-pb-1'}
+          elevation={2}
           square
+          ref={ref}
         >
-          <Typography variant="h4" className={'u-pv-1 u-ph-1'}>
-            <PanelBlock file={file} />
-          </Typography>
+          {!disableSharing && <Sharing file={file} />}
+          <FileActionButton file={file} />
         </Paper>
-      ))}
-    </Stack>
-  )
-})
+        {panelBlocks.map((PanelBlock, index) => (
+          <Paper
+            key={index}
+            elevation={index === panelBlocks.length - 1 ? 0 : 2}
+            square
+          >
+            <Typography variant="h4" className={'u-pv-1 u-ph-1'}>
+              <PanelBlock file={file} contactsFullname={contactsFullname} />
+            </Typography>
+          </Paper>
+        ))}
+      </Stack>
+    )
+  }
+)
 
 BottomSheetContent.propTypes = {
   file: PropTypes.object.isRequired,
