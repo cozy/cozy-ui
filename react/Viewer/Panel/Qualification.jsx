@@ -1,22 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { useQuery, models, getReferencedBy } from 'cozy-client'
+import { models } from 'cozy-client'
 
 import List from '../../MuiCozyTheme/List'
 import ListItem from '../../MuiCozyTheme/ListItem'
 import QualificationListItemText from './QualificationListItemText'
 import { withViewerLocales } from '../withViewerLocales'
-import { buildContactByIdsQuery } from '../queries'
 
 const {
-  contact: { getDisplayName },
   document: {
     locales: { getBoundT }
   }
 } = models
 
-const Qualification = ({ file = {}, t, f, lang }) => {
+const Qualification = ({ file = {}, contactsFullname, t, f, lang }) => {
   const scannerT = getBoundT(lang)
 
   const { name: filename, metadata = {} } = file
@@ -26,20 +24,6 @@ const Qualification = ({ file = {}, t, f, lang }) => {
     datetime,
     datetimeLabel
   } = metadata
-
-  const contactIds = getReferencedBy(file, 'io.cozy.contacts').map(
-    ref => ref.id
-  )
-
-  const contactByIdsQuery = buildContactByIdsQuery(contactIds)
-  const { data: contactList } = useQuery(
-    contactByIdsQuery.definition,
-    contactByIdsQuery.options
-  )
-
-  const contactsFullname = Array.isArray(contactList)
-    ? contactList.map(contact => `${getDisplayName(contact)}`).join(', ')
-    : ''
 
   return (
     <List>
