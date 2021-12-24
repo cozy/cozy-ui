@@ -10,7 +10,7 @@ the upload queue:
 * underneath the top-bar on mobile
 
 ```jsx
-import isTesting from 'cozy-ui/transpiled/react/helpers/isTesting'
+import isTesting from '../helpers/isTesting'
 import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
 
 const initialState = {

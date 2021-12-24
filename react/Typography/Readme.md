@@ -59,30 +59,30 @@ const tdStyle = { borderRight: '1px solid gray'};
 
 <table className='u-w-100'>
   <tbody>
-    <tr style={trStyle}>
-      <td style={tdStyle}><MainTitle>MainTitle</MainTitle></td>
-      <td><Typography variant='h3'>is replaced by &lt;Typography variant="h3" &gt;</Typography></td>
-    </tr>
-    <tr style={trStyle}>
-      <td style={tdStyle}><Title>Title</Title></td>
-      <td><Typography variant='h4'>is replaced by &lt;Typography variant="h4" &gt;</Typography></td>
-    </tr>
-    <tr style={trStyle}>
-      <td style={tdStyle}><SubTitle>SubTitle</SubTitle></td>
-      <td><Typography variant='h5'>is replaced by &lt;Typography variant="h5" &gt;</Typography></td>
-    </tr>
-    <tr style={trStyle}>
-      <td style={tdStyle}><Bold>Bold</Bold></td>
-      <td><Typography variant='h6'>is replaced by &lt;Typography variant="h6" &gt;</Typography></td>
-    </tr>
-    <tr style={trStyle}>
-      <td style={tdStyle}><Caption>Caption</Caption></td>
-      <td><Typography variant='caption' color='textSecondary'>is replaced by &lt;Typography variant="caption" color="textSecondary" /&gt; </Typography></td>
-    </tr>
-    <tr style={trStyle}>
-      <td style={tdStyle}><ErrorMessage>ErrorMessage</ErrorMessage></td>
-      <td><Typography variant='body1' color='error'>is replaced by &lt;Typography color="error"  variant='body1' /&gt; </Typography></td>
-    </tr>
+  <tr style={trStyle}>
+    <td style={tdStyle}><MainTitle>MainTitle</MainTitle></td>
+    <td><Typography variant='h3'>is replaced by &lt;Typography variant="h3" &gt;</Typography></td>
+  </tr>
+  <tr style={trStyle}>
+    <td style={tdStyle}><Title>Title</Title></td>
+    <td><Typography variant='h4'>is replaced by &lt;Typography variant="h4" &gt;</Typography></td>
+  </tr>
+  <tr style={trStyle}>
+    <td style={tdStyle}><SubTitle>SubTitle</SubTitle></td>
+    <td><Typography variant='h5'>is replaced by &lt;Typography variant="h5" &gt;</Typography></td>
+  </tr>
+  <tr style={trStyle}>
+    <td style={tdStyle}><Bold>Bold</Bold></td>
+    <td><Typography variant='h6'>is replaced by &lt;Typography variant="h6" &gt;</Typography></td>
+  </tr>
+  <tr style={trStyle}>
+    <td style={tdStyle}><Caption>Caption</Caption></td>
+    <td><Typography variant='caption' color='textSecondary'>is replaced by &lt;Typography variant="caption" color="textSecondary" /&gt; </Typography></td>
+  </tr>
+  <tr style={trStyle}>
+    <td style={tdStyle}><ErrorMessage>ErrorMessage</ErrorMessage></td>
+    <td><Typography variant='body1' color='error'>is replaced by &lt;Typography color="error"  variant='body1' /&gt; </Typography></td>
+  </tr>
   </tbody>
 </table>
 

@@ -7,7 +7,7 @@ import SquareAppIcon from 'cozy-ui/transpiled/react/SquareAppIcon'
 import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import { useCozyTheme } from 'cozy-ui/transpiled/react/CozyTheme'
-import cloudWallpaper from 'cozy-ui/transpiled/react/../docs/cloud-wallpaper.jpg'
+import cloudWallpaper from '../../docs/cloud-wallpaper.jpg'
 
 const theme = useCozyTheme()
 const app = { name: "Test App", slug: "testapp", type: "app" }
