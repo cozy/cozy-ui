@@ -1,6 +1,6 @@
 Displays content coming up from the bottom of the screen.
 
-```
+```jsx
 import BottomDrawer from 'cozy-ui/transpiled/react/BottomDrawer';
 import Card from 'cozy-ui/transpiled/react/Card';
 import Button from 'cozy-ui/transpiled/react/Button';

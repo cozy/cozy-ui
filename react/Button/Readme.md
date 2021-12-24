@@ -15,7 +15,7 @@ when `<ButtonLink>` has:
 
 #### Themes
 
-```
+```jsx
 import Button from 'cozy-ui/transpiled/react/Button';
 const props = [{}, { disabled: true}, { busy: true }];
 const themes = ['regular', 'ghost', 'danger', 'highlight', 'secondary', 'danger-outline', 'alpha', 'text'];
@@ -33,7 +33,7 @@ const themes = ['regular', 'ghost', 'danger', 'highlight', 'secondary', 'danger-
 
 #### Sizes
 
-```
+```jsx
 import Button from 'cozy-ui/transpiled/react/Button';
 
 <div>
@@ -50,7 +50,7 @@ import Button from 'cozy-ui/transpiled/react/Button';
 * `narrow` to ignore Button's `min-width`
 * `full` to enable full width
 
-```
+```jsx
 import Button from 'cozy-ui/transpiled/react/Button';
 import Stack from 'cozy-ui/transpiled/react/Stack';
 
@@ -67,7 +67,7 @@ import Stack from 'cozy-ui/transpiled/react/Stack';
 * `right` to align the label to the right
 * `center` to center the label (default)
 
-```
+```jsx
 import Button from 'cozy-ui/transpiled/react/Button';
 
 <div>
@@ -80,7 +80,7 @@ import Button from 'cozy-ui/transpiled/react/Button';
 
 #### Extra right content
 
-```
+```jsx
 import Button from 'cozy-ui/transpiled/react/Button';
 import Chip from 'cozy-ui/transpiled/react/Chip';
 
@@ -91,19 +91,19 @@ import Chip from 'cozy-ui/transpiled/react/Chip';
 
 #### Add a action on click
 
-```
+```jsx
 import Button from 'cozy-ui/transpiled/react/Button';
 <Button theme='danger-outline' onClick={ () => alert('yay !') } label='Show alert' />
 ```
 
 #### When loading, put a spinner
 
-```
+```jsx
 import Button from 'cozy-ui/transpiled/react/Button';
 <Button busy label='Loading'/>
 ```
 
-```
+```jsx
 import Button from 'cozy-ui/transpiled/react/Button';
 initialState = { busy:false };
 <Button onClick={() => {setState(state => ({busy: !state.busy}))}} busy={state.busy} label='Toggle busy'/>
@@ -111,7 +111,7 @@ initialState = { busy:false };
 
 #### Disable a button
 
-```
+```jsx
 import Button, { ButtonLink } from 'cozy-ui/transpiled/react/Button';
 <div>
   <Button disabled label='Loading' />
@@ -124,7 +124,7 @@ import Button, { ButtonLink } from 'cozy-ui/transpiled/react/Button';
 The color of the icon is taken care of by the button style, there's no need to specify it.
 If you want a button with only an icon as content, you must set the `iconOnly` prop.
 
-```
+```jsx
 import Button from 'cozy-ui/transpiled/react/Button';
 import TrashIcon from "cozy-ui/transpiled/react/Icons/Trash";
 import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots";
@@ -136,7 +136,7 @@ import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots";
 
 You can also pass an Icon directly if you need more flexibility.
 
-```
+```jsx
 import Button from 'cozy-ui/transpiled/react/Button';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import TrashIcon from "cozy-ui/transpiled/react/Icons/Trash";
@@ -147,7 +147,7 @@ import TrashIcon from "cozy-ui/transpiled/react/Icons/Trash";
 
 #### Create a round button with an icon
 
-```
+```jsx
 import Button from 'cozy-ui/transpiled/react/Button';
 import PlusIcon from "cozy-ui/transpiled/react/Icons/Plus";
 import CrossIcon from "cozy-ui/transpiled/react/Icons/Cross";
@@ -161,7 +161,7 @@ import CrossIcon from "cozy-ui/transpiled/react/Icons/Cross";
 
 Subtle buttons are buttons without background and borders, wich look "inverted" compared to the basic Buttons.
 
-```
+```jsx
 import Button from 'cozy-ui/transpiled/react/Button';
 import PlusIcon from "cozy-ui/transpiled/react/Icons/Plus";
 import CozyIcon from "cozy-ui/transpiled/react/Icons/Cozy";
@@ -197,7 +197,7 @@ import CozyIcon from "cozy-ui/transpiled/react/Icons/Cozy";
 
 #### Using Links
 
-```
+```jsx
 import { ButtonLink } from 'cozy-ui/transpiled/react/Button';
 import CozyIcon from "cozy-ui/transpiled/react/Icons/Cozy";
 <div>
@@ -226,7 +226,7 @@ Sometimes you want to change the tag or component used to render the Button. For
 You can pass `tag={NavLink}` and `NavLink` will be used. Any props that you
 pass to the `Button` will be passed down to the component.
 
-```
+```jsx
 import Button from 'cozy-ui/transpiled/react/Button';
 const NavLink = props => (
   <span onClick={() => alert(`Navigating to ${props.to}`)} {...props}>{

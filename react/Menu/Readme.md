@@ -9,7 +9,7 @@ an item in the `Menu`.
 `onSelect` will not be called. `MenuItem`s `onSelect` is not called if
 the item is `disabled`.
 
-```
+```jsx
 import Menu, { MenuItem } from 'cozy-ui/transpiled/react/Menu';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import PaperplaneIcon from "cozy-ui/transpiled/react/Icons/Paperplane";
@@ -29,7 +29,7 @@ const showWarning = itemData => alert(itemData + ' is disabled');
 
 Use the `position` attribute to put the menu to the right.
 
-```
+```jsx
 import Menu, { MenuItem } from 'cozy-ui/transpiled/react/Menu';
 
 <Menu initialOpen={isTesting()} position='right' label='Click me !' onSelect={ itemData => alert(JSON.stringify(itemData)) }>
@@ -42,7 +42,7 @@ import Menu, { MenuItem } from 'cozy-ui/transpiled/react/Menu';
 Use the `component` attribute if you want to use a custom component for the
 opener.
 
-```
+```jsx
 import Menu, { MenuItem } from 'cozy-ui/transpiled/react/Menu';
 import Button from 'cozy-ui/transpiled/react/Button';
 
@@ -69,7 +69,7 @@ Clicks are now handled on the `ActionMenuItem` directly through the `onClick` pr
 
 #### Putting it all together
 
-```
+```jsx
 import ActionMenu, { ActionMenuItem } from 'cozy-ui/transpiled/react/ActionMenu';
 import Button from 'cozy-ui/transpiled/react/Button';
 

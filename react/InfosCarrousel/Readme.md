@@ -2,7 +2,7 @@
 
 Displays several Infos component in a Carrousel. [react-swipeable-views](https://react-swipeable-views.com/) is used under the hood and can be configured.
 
-```
+```jsx
 import InfosCarrousel from 'cozy-ui/transpiled/react/InfosCarrousel'
 import Infos from 'cozy-ui/transpiled/react/Infos'
 import Button from 'cozy-ui/transpiled/react/Button'
@@ -41,7 +41,7 @@ const handleDismissAction = () => {
 
 Arrows are not displayed if there is only 1 info.
 
-```
+```jsx
 import InfosCarrousel from 'cozy-ui/transpiled/react/InfosCarrousel'
 import Infos from 'cozy-ui/transpiled/react/Infos'
 import Button from 'cozy-ui/transpiled/react/Button'

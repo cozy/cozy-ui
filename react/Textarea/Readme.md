@@ -1,27 +1,27 @@
 #### Textarea for long text
 
-```
+```jsx
 import Textarea from 'cozy-ui/transpiled/react/Textarea';
 <Textarea placeholder="Once upon a time…"></Textarea>
 ```
 
 #### Textarea when there's an error
 
-```
+```jsx
 import Textarea from 'cozy-ui/transpiled/react/Textarea';
 <Textarea error placeholder="Once upon a time, there was an error…"></Textarea>
 ```
 
 #### Disabled Textarea
 
-```
+```jsx
 import Textarea from 'cozy-ui/transpiled/react/Textarea';
 <Textarea disabled defaultValue="Don't edit me." />
 ```
 
 #### Alternative textarea sizes
 
-```
+```jsx
 import Textarea from 'cozy-ui/transpiled/react/Textarea';
 <div>
   <p>
@@ -35,7 +35,7 @@ import Textarea from 'cozy-ui/transpiled/react/Textarea';
 
 #### Full width textarea
 
-```
+```jsx
 import Textarea from 'cozy-ui/transpiled/react/Textarea';
 <div>
   <p>
@@ -48,7 +48,7 @@ import Textarea from 'cozy-ui/transpiled/react/Textarea';
 
 `Textarea` forwards unknown props to the underlying `<textarea />` element.
 
-```
+```jsx
 import Textarea from 'cozy-ui/transpiled/react/Textarea';
 <div>
   <Textarea name='my-field' />

@@ -13,7 +13,7 @@ const NavLink = genNavLink(RRNavLink)
 
 In action :
 
-```
+```jsx
 import Sidebar from 'cozy-ui/transpiled/react/Sidebar';
 import Nav, { NavItem, NavIcon, NavText, genNavLink } from 'cozy-ui/transpiled/react/Nav';
 import cx from 'classnames';

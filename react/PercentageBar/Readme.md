@@ -1,4 +1,4 @@
-```
+```jsx
 import PercentageBar from 'cozy-ui/transpiled/react/PercentageBar';
 initialState = { percentage: 0.5 * 100 };
 

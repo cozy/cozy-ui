@@ -1,6 +1,6 @@
 ### InputGroup with an appended text
 
-```
+```jsx
 import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
 import Input from 'cozy-ui/transpiled/react/Input';
 <form>
@@ -14,7 +14,7 @@ import Input from 'cozy-ui/transpiled/react/Input';
 
 ### InputGroup with a prepended text
 
-```
+```jsx
 import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
 import Input from 'cozy-ui/transpiled/react/Input';
 import Typography from "cozy-ui/transpiled/react/Typography";
@@ -31,7 +31,7 @@ import Typography from "cozy-ui/transpiled/react/Typography";
 
 You will need to set a width to the side component, with a utility class for example.
 
-```
+```jsx
 import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
 import Input from 'cozy-ui/transpiled/react/Input';
 <form>
@@ -47,7 +47,7 @@ import Input from 'cozy-ui/transpiled/react/Input';
 
 You will need to set a width to the side component, with a utility class for example.
 
-```
+```jsx
 import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
 import Input from 'cozy-ui/transpiled/react/Input';
 import SelectBox from 'cozy-ui/transpiled/react/SelectBox';
@@ -66,7 +66,7 @@ const options = [
 
 ### Full width InputGroup with an appended text
 
-```
+```jsx
 import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
 import Input from 'cozy-ui/transpiled/react/Input';
 import Typography from "cozy-ui/transpiled/react/Typography";
@@ -81,7 +81,7 @@ import Typography from "cozy-ui/transpiled/react/Typography";
 
 ### Errored InputGroup with an appended text
 
-```
+```jsx
 import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
 import Input from 'cozy-ui/transpiled/react/Input';
 import Typography from "cozy-ui/transpiled/react/Typography";
@@ -96,7 +96,7 @@ import Typography from "cozy-ui/transpiled/react/Typography";
 
 ### InputGroup with a prepended text and a custom classname (border-radius)
 
-```
+```jsx
 import InputGroup from 'cozy-ui/transpiled/react/InputGroup';
 import Input from 'cozy-ui/transpiled/react/Input';
 import Typography from "cozy-ui/transpiled/react/Typography";

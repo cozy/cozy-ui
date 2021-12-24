@@ -10,7 +10,7 @@ Displays a List of items, with several metadata
 
 Note the use of inset Divider to separate each ListItem.
 
-```
+```jsx
 import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List';
 import ListSubheader from 'cozy-ui/transpiled/react/MuiCozyTheme/ListSubheader';
 import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem';
@@ -87,7 +87,7 @@ import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots";
 
 Reduces the space around a list item
 
-```
+```jsx
 import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List';
 import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem';
 import ListItemIcon from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon';
@@ -125,7 +125,7 @@ import FiletypeTextIcon from 'cozy-ui/transpiled/react/Icons/FileTypeText';
 
 Highlight a selected item from the list
 
-```
+```jsx
 import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List';
 import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem';
 import ListItemIcon from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon';
@@ -167,7 +167,7 @@ List components are used in the [NavigationList](#/NavigationList) component.
 
 If you do not need the inset behavior, you can use `divider` on the `ListItem`s.
 
-```
+```jsx
 import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem';
 import ListItemIcon from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon';
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText';

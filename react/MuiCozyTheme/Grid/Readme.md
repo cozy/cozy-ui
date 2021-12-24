@@ -4,7 +4,7 @@ Displays a Grid of items
 
 ### Default usage
 
-```
+```jsx
 import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid';
 import Card from 'cozy-ui/transpiled/react/Card';
 
@@ -35,7 +35,7 @@ import Card from 'cozy-ui/transpiled/react/Card';
 
 ### Responsive usage
 
-```
+```jsx
 import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid';
 import Card from 'cozy-ui/transpiled/react/Card';
 

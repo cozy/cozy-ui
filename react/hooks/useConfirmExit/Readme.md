@@ -1,4 +1,4 @@
-```
+```jsx
 import { useState } from 'react'
 import Button from 'cozy-ui/transpiled/react/Button'
 import useConfirmExit from 'cozy-ui/transpiled/react/hooks/useConfirmExit'

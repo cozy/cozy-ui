@@ -14,7 +14,7 @@ Handles several cases:
 As it uses the render props pattern, it is flexible and can be used to build components that are more complex than a simple
 anchor.
 
-```
+```jsx
 import AppLinker from 'cozy-ui/transpiled/react/AppLinker';
 <AppLinker slug='banks' href='http://dalailama-banks.mycozy.cloud'>{
   ({ onClick, href, name }) => (

@@ -7,7 +7,7 @@ import PasswordExample from 'cozy-ui/transpiled/react/PasswordExample';
 
 Color can be deactivated:
 
-```
+```jsx
 import PasswordExample from 'cozy-ui/transpiled/react/PasswordExample';
 <PasswordExample password="Claude est le meilleur nuage !" color={false} />
 ```

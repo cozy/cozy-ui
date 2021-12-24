@@ -2,7 +2,7 @@
 
 #### Standard text
 
-```
+```jsx
 import Text from 'cozy-ui/transpiled/react/Text';
 
 <Text>This a standard text</Text>
@@ -10,7 +10,7 @@ import Text from 'cozy-ui/transpiled/react/Text';
 
 #### Main title
 
-```
+```jsx
 import { MainTitle } from 'cozy-ui/transpiled/react/Text';
 
 <MainTitle>This a main title text</MainTitle>
@@ -18,7 +18,7 @@ import { MainTitle } from 'cozy-ui/transpiled/react/Text';
 
 #### Title
 
-```
+```jsx
 import { Title } from 'cozy-ui/transpiled/react/Text';
 
 <Title>This a title text</Title>
@@ -26,7 +26,7 @@ import { Title } from 'cozy-ui/transpiled/react/Text';
 
 #### SubTitle
 
-```
+```jsx
 import { SubTitle } from 'cozy-ui/transpiled/react/Text';
 
 <SubTitle>This a subtitle text</SubTitle>
@@ -34,7 +34,7 @@ import { SubTitle } from 'cozy-ui/transpiled/react/Text';
 
 #### Bold text
 
-```
+```jsx
 import { Bold } from 'cozy-ui/transpiled/react/Text';
 
 <Bold>This a bold text</Bold>
@@ -42,7 +42,7 @@ import { Bold } from 'cozy-ui/transpiled/react/Text';
 
 #### Uppercase test
 
-```
+```jsx
 import { Uppercase } from 'cozy-ui/transpiled/react/Text';
 
 <Uppercase>This is an uppercase text</Uppercase>
@@ -50,7 +50,7 @@ import { Uppercase } from 'cozy-ui/transpiled/react/Text';
 
 #### Caption text
 
-```
+```jsx
 import { Caption } from 'cozy-ui/transpiled/react/Text';
 
 <Caption>This a caption text</Caption>
@@ -58,7 +58,7 @@ import { Caption } from 'cozy-ui/transpiled/react/Text';
 
 #### ErrorMessage text
 
-```
+```jsx
 import { ErrorMessage } from 'cozy-ui/transpiled/react/Text';
 
 <ErrorMessage>This is an error message text</ErrorMessage>
@@ -68,7 +68,7 @@ import { ErrorMessage } from 'cozy-ui/transpiled/react/Text';
 
 Utility classes can be used for status texts
 
-```
+```jsx
 <>
   <p className='u-error'>This is an error message styled with u-error.</p>
   <p className='u-warning'>This is a warning message styled with u-warning.</p>

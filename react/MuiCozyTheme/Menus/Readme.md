@@ -1,4 +1,4 @@
-```
+```jsx
 import Menu from 'cozy-ui/transpiled/react/MuiCozyTheme/Menus';
 import MenuItem from '@material-ui/core/MenuItem';
 import Button from 'cozy-ui/transpiled/react/Button';

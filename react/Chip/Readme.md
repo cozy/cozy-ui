@@ -1,6 +1,6 @@
 Chips represent complex entities in small blocks, such as a contact.
 
-```
+```jsx
 import Chip from 'cozy-ui/transpiled/react/Chip';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import Avatar from 'cozy-ui/transpiled/react/Avatar';
@@ -26,7 +26,7 @@ const ContactChip = ({ contact }) => (
 
 ### Round chip
 
-```
+```jsx
 import Chip from 'cozy-ui/transpiled/react/Chip';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
@@ -37,7 +37,7 @@ import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
 
 ### Chip separator
 
-```
+```jsx
 import Chip from 'cozy-ui/transpiled/react/Chip';
 <Chip>
   Something
@@ -48,7 +48,7 @@ import Chip from 'cozy-ui/transpiled/react/Chip';
 
 ### Chip buttons
 
-```
+```jsx
 import Chip from 'cozy-ui/transpiled/react/Chip';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import RightIcon from "cozy-ui/transpiled/react/Icons/Right";
@@ -61,7 +61,7 @@ import LeftIcon from "cozy-ui/transpiled/react/Icons/Left";
 
 ### Specify underlying tag/component
 
-```
+```jsx
 import Chip from 'cozy-ui/transpiled/react/Chip';
 <div>
   <Chip component="button" onClick={() => alert('You clicked')}>This is a button</Chip>
@@ -72,7 +72,7 @@ import Chip from 'cozy-ui/transpiled/react/Chip';
 
 ### Sizes
 
-```
+```jsx
 import Chip from 'cozy-ui/transpiled/react/Chip';
 <div>
   <Chip size="tiny">This is a tiny Chip</Chip>
@@ -83,7 +83,7 @@ import Chip from 'cozy-ui/transpiled/react/Chip';
 
 ### Variants
 
-```
+```jsx
 import Chip from 'cozy-ui/transpiled/react/Chip';
 <div>
   <Chip variant="normal">This is a normal Chip (default)</Chip>
@@ -94,7 +94,7 @@ import Chip from 'cozy-ui/transpiled/react/Chip';
 
 ### Themes
 
-```
+```jsx
 import Chip from 'cozy-ui/transpiled/react/Chip';
 <div>
   <div>
@@ -117,7 +117,7 @@ import Chip from 'cozy-ui/transpiled/react/Chip';
 
 ### Mix sizes, variants and themes
 
-```
+```jsx
 import Chip from 'cozy-ui/transpiled/react/Chip';
 <div>
   <div>
@@ -140,7 +140,7 @@ import Chip from 'cozy-ui/transpiled/react/Chip';
 
 ### Complete example
 
-```
+```jsx
 import Chip from 'cozy-ui/transpiled/react/Chip';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import FileIcon from "cozy-ui/transpiled/react/Icons/File";

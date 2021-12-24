@@ -1,6 +1,6 @@
 See [Material UI documentation](https://material-ui.com/demos/expansion-panels/) to learn more about Accordion.
 
-```
+```jsx
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
