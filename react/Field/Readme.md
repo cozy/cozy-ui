@@ -169,8 +169,8 @@ const options = [
 
 ```jsx
 import Field from 'cozy-ui/transpiled/react/Field'
-import DemoProvider from '../ContactsListModal/DemoProvider'
-import { BreakpointsProvider } from '../hooks/useBreakpoints'
+import DemoProvider from 'cozy-ui/transpiled/react/ContactsListModal/DemoProvider'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 
 initialState = { selectedContact: null }
 

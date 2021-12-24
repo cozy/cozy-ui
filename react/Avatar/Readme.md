@@ -1,7 +1,7 @@
 ### Default, with specific icon, with initials, with image, with specific style
 
 ```jsx
-import cozyLogo from '../../docs/cozy-logo_white_128.png'
+import cozyLogo from 'cozy-ui/transpiled/react/../docs/cozy-logo_white_128.png'
 import Avatar from 'cozy-ui/transpiled/react/Avatar';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 
@@ -22,7 +22,7 @@ import palette from 'cozy-ui/transpiled/react/palette';
 ### With disabled color
 
 ```jsx
-import cozyLogo from '../../docs/cozy-logo_white_128.png'
+import cozyLogo from 'cozy-ui/transpiled/react/../docs/cozy-logo_white_128.png'
 import Avatar from 'cozy-ui/transpiled/react/Avatar';
 
 import LinkIcon from "cozy-ui/transpiled/react/Icons/Link";
@@ -39,7 +39,7 @@ import LinkIcon from "cozy-ui/transpiled/react/Icons/Link";
 ### With overlap
 
 ```jsx
-import cozyLogo from '../../docs/cozy-logo_white_128.png'
+import cozyLogo from 'cozy-ui/transpiled/react/../docs/cozy-logo_white_128.png'
 import Avatar from 'cozy-ui/transpiled/react/Avatar'
 import LinkIcon from "cozy-ui/transpiled/react/Icons/Link";
 const style={
@@ -63,7 +63,7 @@ const style={
 The size can also be specifically defined using a number of pixels.
 
 ```jsx
-import cozyLogo from '../../docs/cozy-logo_white_128.png'
+import cozyLogo from 'cozy-ui/transpiled/react/../docs/cozy-logo_white_128.png'
 import Avatar from 'cozy-ui/transpiled/react/Avatar';
 
 import LinkIcon from "cozy-ui/transpiled/react/Icons/Link";

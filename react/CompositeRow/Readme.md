@@ -1,8 +1,8 @@
-```js
-import { Media, Bd, Img } from '../Media'
-import UIChip from '../Chip'
-import Icon from '../Icon'
-import Circle from '../Circle'
+```jsx
+import { Media, Bd, Img } from 'cozy-ui/transpiled/react/Media'
+import UIChip from 'cozy-ui/transpiled/react/Chip'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import Circle from 'cozy-ui/transpiled/react/Circle'
 import Variants from 'cozy-ui/docs/components/Variants'
 import CompositeRow from 'cozy-ui/transpiled/react/CompositeRow'
 

@@ -16,10 +16,10 @@ jscodeshift -t node_modules/cozy-ui/codemods/transform-typography.js --parser ba
 
 </details>
 
-```
-import Typography from '.'
-import MuiCozyTheme from '../MuiCozyTheme'
-import Stack from '../Stack'
+```jsx
+import Typography from 'cozy-ui/transpiled/react/Typography'
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
+import Stack from 'cozy-ui/transpiled/react/Stack'
 
 const variants = [
   'h1',
@@ -49,10 +49,10 @@ You can use `color="textSecondary"`:
 
 From old to new :
 
-```
-import { Text, Caption, MainTitle, SubTitle, Title, Bold, ErrorMessage } from '../Text'
-import MuiCozyTheme from '../MuiCozyTheme'
-import Typography from '.';
+```jsx
+import { Text, Caption, MainTitle, SubTitle, Title, Bold, ErrorMessage } from 'cozy-ui/transpiled/react/Text'
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
+import Typography from 'cozy-ui/transpiled/react/Typography';
 
 const trStyle = { borderBottom: '1px solid gray'}
 const tdStyle = { borderRight: '1px solid gray'};

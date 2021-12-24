@@ -4,10 +4,10 @@ of the application.
 Below is an example where the breadcrumbs are used in a file application
 context.
 
-```
+```jsx
 import { Component } from 'react'
-import Breadcrumbs from '.';
-import Icon from '../Icon';
+import Breadcrumbs from 'cozy-ui/transpiled/react/Breadcrumbs';
+import Icon from 'cozy-ui/transpiled/react/Icon';
 import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
 import FolderIcon from 'cozy-ui/transpiled/react/Icons/Folder'
 

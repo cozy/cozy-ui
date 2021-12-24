@@ -1,7 +1,7 @@
 ```jsx
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 import ContactPicker from 'cozy-ui/transpiled/react/ContactPicker'
-import DemoProvider from '../ContactsListModal/DemoProvider'
+import DemoProvider from 'cozy-ui/transpiled/react/ContactsListModal/DemoProvider'
 
 initialState = { selectedContact: null }
 

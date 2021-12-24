@@ -3,7 +3,7 @@
 A component to get the image in `links` prop of a file, according to its class (could be `image` or `pdf`).
 
 ```jsx
-import DemoProvider from '../Viewer/docs/DemoProvider'
+import DemoProvider from 'cozy-ui/transpiled/react/Viewer/docs/DemoProvider'
 
 import FileImageLoader from 'cozy-ui/transpiled/react/FileImageLoader'
 import Icon from 'cozy-ui/transpiled/react/Icon'

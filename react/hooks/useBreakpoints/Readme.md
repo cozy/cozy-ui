@@ -15,8 +15,8 @@ completely change the content, the layout, or prune away complete
 subtrees (useful on mobile where space is at a premium). Here for
 example, the square contents changes on desktop or mobile.
 
-```
-import useBreakpoints, { BreakpointsProvider } from '.'
+```jsx
+import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 
 const styles = {
   responsiveDiv: {

@@ -9,7 +9,7 @@ import {
   WizardMain,
   WizardFooter,
   WizardErrors
-} from '.'
+} from 'cozy-ui/transpiled/react/Wizard'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Field from 'cozy-ui/transpiled/react/Field'
 import Button from 'cozy-ui/transpiled/react/Button'
