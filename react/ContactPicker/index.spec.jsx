@@ -3,7 +3,7 @@ import React from 'react'
 
 import DemoProvider from '../ContactsListModal/DemoProvider'
 import { BreakpointsProvider } from '../hooks/useBreakpoints'
-import contacts from '../ContactsList/data.json'
+import contacts from '../ContactsList/_mockContacts.json'
 
 import ContactPicker from '.'
 
