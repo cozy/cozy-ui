@@ -2,7 +2,7 @@ Steppers convey progress through numbered steps. They provide a wizard-like work
 
 See <https://material-ui.com/components/steppers/> for more information.
 
-```
+```jsx
 import React, { useState } from 'react'
 import { Stepper, Step, StepButton, StepLabel } from './index'
 

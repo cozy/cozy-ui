@@ -1,4 +1,4 @@
-```
+```jsx
 import I18n from 'cozy-ui/transpiled/react/I18n';
 import DateMonthPicker from 'cozy-ui/transpiled/react/DateMonthPicker';
 import Stack from 'cozy-ui/transpiled/react/Stack';

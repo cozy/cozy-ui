@@ -4,7 +4,7 @@ A select box for more advanced use cases, based on [`react-select` v2](https://r
 
 You can use this exactly like you would use `react-select`. See the [official documentation](https://react-select.com) for more examples.
 
-```
+```jsx
 import SelectBox from 'cozy-ui/transpiled/react/SelectBox';
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
@@ -23,7 +23,7 @@ const options = [
 
 For example if you want to force the menu to be open:
 
-```
+```jsx
 import SelectBox from 'cozy-ui/transpiled/react/SelectBox';
 const options = [
   { value: 'chocolate', label: 'Chocolate' }
@@ -41,7 +41,7 @@ option list is shown.
 
 This example should not cause an overflow on the SelectBoxWrapper component.
 
-```
+```jsx
 import SelectBox from 'cozy-ui/transpiled/react/SelectBox';
 const options = [
   { value: 'banana', label: 'Banana' },
@@ -84,7 +84,7 @@ class SelectBoxWrapper extends React.Component {
 
 Disable the SelectBox
 
-```
+```jsx
 import SelectBox from 'cozy-ui/transpiled/react/SelectBox';
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
@@ -100,7 +100,7 @@ const options = [
 
 Set the select to spread to 100% of the available width (default: `false`).
 
-```
+```jsx
 import SelectBox from 'cozy-ui/transpiled/react/SelectBox';
 const options = [
 { value: 'chocolate', label: 'Chocolate' },
@@ -116,7 +116,7 @@ const options = [
 
 This property gives access to the underlying `<input />` element contained into a `ReactSelect` component, for example to give focus or move the caret.
 
-```
+```jsx
 import SelectBox from 'cozy-ui/transpiled/react/SelectBox';
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
@@ -137,7 +137,7 @@ let inputElement;
 
 Set the text size between `tiny`, `medium` and `large` (default: `large`).
 
-```
+```jsx
 import SelectBox from 'cozy-ui/transpiled/react/SelectBox';
 const tinyOptions = [
   { value: '1', label: 'I am a tiny SelectBox' },
@@ -168,7 +168,7 @@ const largeOptions = [
 
 You can use the `reactSelectControl` HOC to turn an existing, custom component into the control button for the `Select`:
 
-```
+```jsx
 import SelectBox, { reactSelectControl } from 'cozy-ui/transpiled/react/SelectBox';
 const MyControl = <button>toggle options</button>;
 const options = [
@@ -189,7 +189,7 @@ const options = [
 
 There is a `CheckboxOption` component that can be used as an `Option`, and renders like this:
 
-```
+```jsx
 import SelectBox, { CheckboxOption } from 'cozy-ui/transpiled/react/SelectBox';
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
@@ -210,7 +210,7 @@ const options = [
 
 You can display additional actions inside an Option with the ActionsOption component.
 
-```
+```jsx
 import SelectBox, { ActionsOption } from 'cozy-ui/transpiled/react/SelectBox';
 import TrashIcon from 'cozy-ui/transpiled/react/Icons/Trash';
 import RenameIcon from 'cozy-ui/transpiled/react/Icons/Rename';
@@ -235,7 +235,7 @@ const CustomOption = (props) => (<ActionsOption {...props} actions={[
 
 ### Fixed options
 
-```
+```jsx
 import { SelectBoxWithFixedOptions } from 'cozy-ui/transpiled/react/SelectBox';
 const options = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(x => ({ value:x, label: x }));
 
@@ -254,7 +254,7 @@ from `react-select` for you to further customize the components.
 
 Here a custom class is applied to the `ValueContainer`.
 
-```
+```jsx
 import SelectBox, { components } from 'cozy-ui/transpiled/react/SelectBox';
 
 const ValueContainer = props => {
@@ -275,7 +275,7 @@ const ValueContainer = props => {
 
 Add a prefix className:
 
-```
+```jsx
 import SelectBox from 'cozy-ui/transpiled/react/SelectBox';
 const options = [
   { value: 'chocolate', label: 'Chocolate' }

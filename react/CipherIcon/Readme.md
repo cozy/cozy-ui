@@ -1,6 +1,6 @@
 This is an icon representing a cipher for a given konnector
 
-```
+```jsx
 import CipherIcon from 'cozy-ui/transpiled/react/CipherIcon';
 
 <div>

@@ -1,6 +1,6 @@
 This component can be used as a trigger to open menus, for example an ActionMenu component.
 
-```
+```jsx
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton';
 import Typography from "cozy-ui/transpiled/react/Typography";
 

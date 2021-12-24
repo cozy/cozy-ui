@@ -2,14 +2,14 @@ Show a spinner when loading something.
 
 ### Default
 
-```
+```jsx
 import Spinner from 'cozy-ui/transpiled/react/Spinner';
 <Spinner />
 ```
 
 ### Color
 
-```
+```jsx
 import Spinner from 'cozy-ui/transpiled/react/Spinner';
 <div>
   blue (default): <Spinner /> or <Spinner color='blue' />
@@ -21,7 +21,7 @@ import Spinner from 'cozy-ui/transpiled/react/Spinner';
 
 ### Placement
 
-```
+```jsx
 import Spinner from 'cozy-ui/transpiled/react/Spinner';
 <div>
   <Spinner noMargin={ true }/>
@@ -30,7 +30,7 @@ import Spinner from 'cozy-ui/transpiled/react/Spinner';
 
 ### Sizes
 
-```
+```jsx
 import Spinner from 'cozy-ui/transpiled/react/Spinner';
 <div>
   tiny: <Spinner size='tiny' /><br/>
@@ -50,7 +50,7 @@ When you use `loadingType`, `<Spinner />` needs to be in an `<I18n />` wrapper a
 <Spinner loadingType="salut" />
 ```
 
-```
+```jsx
 import Spinner from 'cozy-ui/transpiled/react/Spinner';
 import I18n from 'cozy-ui/transpiled/react/I18n';
 

@@ -1,6 +1,6 @@
 A card is a small block used to separate some content from the rest of the UI.
 
-```
+```jsx
 import Card from 'cozy-ui/transpiled/react/Card';
 import Button from 'cozy-ui/transpiled/react/Button';
 import Typography from "cozy-ui/transpiled/react/Typography";
@@ -18,7 +18,7 @@ import Typography from "cozy-ui/transpiled/react/Typography";
 
 Renders the Card with increased margins.
 
-```
+```jsx
 import Card from 'cozy-ui/transpiled/react/Card';
 import Typography from "cozy-ui/transpiled/react/Typography";
 
@@ -31,7 +31,7 @@ import Typography from "cozy-ui/transpiled/react/Typography";
 
 Uses the provided tag to render the root element of the Card
 
-```
+```jsx
 import Card from 'cozy-ui/transpiled/react/Card';
 import Typography from "cozy-ui/transpiled/react/Typography";
 

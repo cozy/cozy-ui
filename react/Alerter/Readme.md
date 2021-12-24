@@ -1,7 +1,7 @@
 Display notications!
 Include the `<Alerter />` component somewhere in your app, but only once. After that, you can use the static methods `Alerter.info`, `Alerter.success` and `Alerter.error` to trigger a notification.
 
-```
+```jsx
 import Alerter from 'cozy-ui/transpiled/react/Alerter';
 
 if (isTesting()) {
@@ -23,7 +23,7 @@ if (isTesting()) {
 
 The `Alerter` methods support an optionnal second parameter, which can be used to add a button to the notification, with the `buttonText` and `buttonAction` keys:
 
-```
+```jsx
 import Alerter from 'cozy-ui/transpiled/react/Alerter';
 const triggerAlert = () => {
   Alerter.info("Accept our terms and conditions and subscribe to our newsletter", {
@@ -56,7 +56,7 @@ const triggerAlertSuccess = () => {
 
 A dismiss function is provided to the `buttonAction` as argument which allow you to dismiss the alert before the duration ends from anywhere in your `buttonAction` code:
 
-```
+```jsx
 import Alerter from 'cozy-ui/transpiled/react/Alerter';
 
 const triggerAlertWithDismiss = () => {

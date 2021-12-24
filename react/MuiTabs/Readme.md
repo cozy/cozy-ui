@@ -1,6 +1,6 @@
 Content needs to be separated into sections and accessed via a single content area using a flat navigation structure that does not refresh the page when selected.
 
-```
+```jsx
 import { useState } from 'react'
 import { Tabs, Tab } from 'cozy-ui/transpiled/react/MuiTabs'
 import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider';

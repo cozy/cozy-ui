@@ -2,7 +2,7 @@
 
 The Load More component can be used at the bottom of infinite lists where it will automatically start loading the next batch of data when it scrolls into view.
 
-```
+```jsx
 import LoadMore from 'cozy-ui/transpiled/react/LoadMore';
 
 initialState = { elements: [1, 2] };
@@ -28,7 +28,7 @@ const fetchMore = async () => {
 If for some reason the loading doesn't happen automatically, the component displays a button that can be used to manually load the next batch of data.
 This next example loads nothing, it's just there to show what the button looks like.
 
-```
+```jsx
 import LoadMore from 'cozy-ui/transpiled/react/LoadMore';
 
 <div>

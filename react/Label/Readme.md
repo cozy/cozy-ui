@@ -1,6 +1,6 @@
 #### Label element for forms
 
-```
+```jsx
 import Label from 'cozy-ui/transpiled/react/Label';
 import Input from 'cozy-ui/transpiled/react/Input';
 <form>
@@ -13,7 +13,7 @@ import Input from 'cozy-ui/transpiled/react/Input';
 
 #### Inline Label (Labels are displayed `block` by default)
 
-```
+```jsx
 import Label from 'cozy-ui/transpiled/react/Label';
 import Input from 'cozy-ui/transpiled/react/Input';
 <form>
@@ -26,7 +26,7 @@ import Input from 'cozy-ui/transpiled/react/Input';
 
 #### Label when there's an error
 
-```
+```jsx
 import Label from 'cozy-ui/transpiled/react/Label';
 import Input from 'cozy-ui/transpiled/react/Input';
 <form>

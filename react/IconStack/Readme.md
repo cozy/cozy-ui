@@ -5,7 +5,7 @@ other component on the foreground.
 
 Use IconStack when the resulting combination of icons is considered a single entity.
 
-```
+```jsx
 import IconStack from 'cozy-ui/transpiled/react/IconStack';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import FileDuotoneIcon from "cozy-ui/transpiled/react/Icons/FileDuotone";

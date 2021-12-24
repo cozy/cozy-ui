@@ -43,7 +43,7 @@ const variants = [
 
 You can use `color="textSecondary"`:
 
-```
+```jsx
 <Typography variant='body1' color="textSecondary">A text written in secondary text color.</Typography>
 ```
 

@@ -3,7 +3,7 @@ It will be rendered slightly differently on desktop or mobile, with
 desktop sections rendered into cards while on mobile, it will rendered
 simply as a list with subheaders.
 
-```
+```jsx
 import { useState } from 'react'
 import { Tabs, Tab } from 'cozy-ui/transpiled/react/MuiTabs'
 import Icon from 'cozy-ui/transpiled/react/Icon';
