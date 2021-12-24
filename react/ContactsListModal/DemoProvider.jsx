@@ -1,5 +1,5 @@
 import React from 'react'
-import contacts from '../ContactsList/data.json'
+import contacts from '../ContactsList/_mockContacts.json'
 import CozyClient, { CozyProvider } from 'cozy-client'
 
 const mockClient = new CozyClient({

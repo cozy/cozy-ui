@@ -3,7 +3,7 @@
 ```jsx
 import ContactsList from 'cozy-ui/transpiled/react/ContactsList';
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
-import contacts from './data.json';
+import contacts from './_mockContacts.json';
 
 <BreakpointsProvider>
   <div style={{ height: 500, overflowY: 'scroll' }}>
@@ -16,7 +16,7 @@ import contacts from './data.json';
 
 ```jsx
 import ContactsList from 'cozy-ui/transpiled/react/ContactsList';
-import contacts from './data.json';
+import contacts from './_mockContacts.json';
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
 
 initialState = { contact: null };

@@ -7,7 +7,7 @@ the ContactPicker to remove one click.
 import CollectionField from 'cozy-ui/transpiled/react/Labs/CollectionField'
 import ContactPicker from 'cozy-ui/transpiled/react/ContactPicker'
 import DemoProvider from 'cozy-ui/transpiled/react/ContactsListModal/DemoProvider'
-import contacts from '../../ContactsList/data.json'
+import contacts from '../../ContactsList/_mockContacts.json'
 import Variants from 'cozy-ui/docs/components/Variants'
 
 initialState = { contacts: [contacts[0]] }
