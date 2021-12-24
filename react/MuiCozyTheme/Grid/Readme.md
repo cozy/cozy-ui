@@ -36,8 +36,8 @@ import Card from 'cozy-ui/transpiled/react/Card';
 ### Responsive usage
 
 ```
-import Grid from '.';
-import Card from '../../Card';
+import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid';
+import Card from 'cozy-ui/transpiled/react/Card';
 
 <Grid container spacing={1}>
     <Grid item xs={12}>
