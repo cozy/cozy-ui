@@ -3,7 +3,7 @@ a list of apps for example in the Store.
 
 ```jsx
 import AppTile from 'cozy-ui/transpiled/react/AppTile'
-import mockApps from 'cozy-ui/transpiled/react/AppSections/_mockApps'
+import mockApps from '../AppSections/_mockApps'
 import { I18n } from 'cozy-ui/transpiled/react/I18n'
 import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
 

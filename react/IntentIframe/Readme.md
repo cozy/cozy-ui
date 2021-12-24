@@ -7,7 +7,7 @@ Here a simple example :
 
 ```jsx
 import IntentIframe from 'cozy-ui/transpiled/react/IntentIframe'
-import utils from 'cozy-ui/transpiled/react/../docs/utils'
+import utils from '../../docs/utils'
 
 ;
 
