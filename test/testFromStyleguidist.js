@@ -68,8 +68,8 @@ const testFromStyleguidist = (
           options
         )
         await sleep(delay) // some components (like the ActionMenu) are flaky due to external libs
-        requestAnimationFrame(() => {
-          root.update()
+        requestAnimationFrame(async () => {
+          await root.update()
           rendered.push(pretty(removeTouchRipples(root.html())))
           doneCounter++
           if (doneCounter === codes.length) {
