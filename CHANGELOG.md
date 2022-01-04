@@ -1,3 +1,10 @@
+## [58.4.1](https://github.com/cozy/cozy-ui/compare/v58.4.0...v58.4.1) (2022-01-04)
+
+
+### Bug Fixes
+
+* BottomSheet no longer opens fully ([ddb8715](https://github.com/cozy/cozy-ui/commit/ddb8715))
+
 # [58.4.0](https://github.com/cozy/cozy-ui/compare/v58.3.0...v58.4.0) (2021-12-14)
 
 
