@@ -43,25 +43,35 @@ describe('sorter', () => {
   it('should return a categories list alphabetically except for all and others', () => {
     const catList = prepareCategories([
       'cozy',
-      'all',
       'isp',
+      'all',
+      'telecom',
       'others',
-      'telecom'
+      'banking'
     ])
     expect(catList.sort(catUtils.sorter).map(x => x.value)).toEqual([
       'all',
+      'cozy',
+      'banking',
       'isp',
       'telecom',
+      'others'
+    ])
+  })
+
+  it('should test with all and others at the border', () => {
+    const catList2 = prepareCategories([
+      'all',
+      'telecom',
+      'banking',
       'cozy',
       'others'
     ])
-
-    // test with all and others at the border
-    const catList2 = prepareCategories(['all', 'cozy', 'telecom', 'others'])
     expect(catList2.sort(catUtils.sorter).map(x => x.value)).toEqual([
       'all',
-      'telecom',
       'cozy',
+      'banking',
+      'telecom',
       'others'
     ])
   })
@@ -77,16 +87,16 @@ describe('generateOptionsFromApps', () => {
       })
     ).toEqual([
       {
-        label: 'Partners',
-        secondary: false,
-        type: 'webapp',
-        value: 'partners'
-      },
-      {
         label: 'The essentials',
         secondary: false,
         type: 'webapp',
         value: 'cozy'
+      },
+      {
+        label: 'Partners',
+        secondary: false,
+        type: 'webapp',
+        value: 'partners'
       },
       {
         label: 'Others',
@@ -129,16 +139,16 @@ describe('generateOptionsFromApps', () => {
         value: 'all'
       },
       {
-        label: 'Partners',
-        secondary: false,
-        type: 'webapp',
-        value: 'partners'
-      },
-      {
         label: 'The essentials',
         secondary: false,
         type: 'webapp',
         value: 'cozy'
+      },
+      {
+        label: 'Partners',
+        secondary: false,
+        type: 'webapp',
+        value: 'partners'
       },
       {
         label: 'Others',
