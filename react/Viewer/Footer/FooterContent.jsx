@@ -1,16 +1,17 @@
-import React, { useRef } from 'react'
+import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/core/styles'
 
 import { isMobileApp } from 'cozy-device-helper'
 import { getReferencedBy, useQuery, models } from 'cozy-client'
 
+import BottomSheet from '../../BottomSheet'
+
 import { buildContactByIdsQuery } from '../queries'
 import { isValidForPanel } from '../helpers'
 import Sharing from './Sharing'
 import ForwardButton from './ForwardButton'
 import DownloadButton from './DownloadButton'
-import BottomSheetWrapper from './BottomSheetWrapper'
 import BottomSheetContent from './BottomSheetContent'
 
 const {
@@ -29,10 +30,12 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
+const classes = { header: 'u-ph-1 u-pb-1' }
+
 const FooterContent = ({ file, toolbarRef, disableSharing }) => {
   const styles = useStyles()
   const FileActionButton = isMobileApp() ? ForwardButton : DownloadButton
-  const actionButtonsRef = useRef()
+  const toolbarProps = useMemo(() => ({ ref: toolbarRef }), [toolbarRef])
 
   const contactIds = getReferencedBy(file, 'io.cozy.contacts').map(
     ref => ref.id
@@ -52,18 +55,19 @@ const FooterContent = ({ file, toolbarRef, disableSharing }) => {
     (contactsFullname || contactIds.length === 0)
   ) {
     return (
-      <BottomSheetWrapper
-        file={file}
-        actionButtonsRef={actionButtonsRef}
-        toolbarRef={toolbarRef}
-      >
-        <BottomSheetContent
-          file={file}
-          disableSharing={disableSharing}
-          contactsFullname={contactsFullname}
-          ref={actionButtonsRef}
-        />
-      </BottomSheetWrapper>
+      <BottomSheet
+        toolbarProps={toolbarProps}
+        classes={classes}
+        header={
+          <>
+            {!disableSharing && <Sharing file={file} />}
+            <FileActionButton file={file} />
+          </>
+        }
+        content={
+          <BottomSheetContent file={file} contactsFullname={contactsFullname} />
+        }
+      />
     )
   }
 

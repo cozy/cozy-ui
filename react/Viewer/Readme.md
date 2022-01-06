@@ -31,7 +31,6 @@ import Overlay from 'cozy-ui/transpiled/react/Overlay';
 import Button from 'cozy-ui/transpiled/react/Button';
 import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download';
 import ShareIcon from 'cozy-ui/transpiled/react/Icons/Share';
-import BottomSheetWrapper from 'cozy-ui/transpiled/react/Viewer/Footer/BottomSheetWrapper';
 import { isValidForPanel } from 'cozy-ui/transpiled/react/Viewer/helpers';
 import getPanelBlocks, { panelBlocksSpecs } from 'cozy-ui/transpiled/react/Viewer/Panel/getPanelBlocks';
 
