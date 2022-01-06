@@ -6,7 +6,8 @@ import {
   isMobileApp,
   isMobile,
   openDeeplinkOrRedirect,
-  isAndroid
+  isAndroid,
+  isFlagshipApp
 } from 'cozy-device-helper'
 
 import {
@@ -16,6 +17,7 @@ import {
 } from './native'
 import { NATIVE_APP_INFOS } from './native.config'
 import expiringMemoize from './expiringMemoize'
+import { WebviewContext, WebviewApps } from 'cozy-intent'
 
 const expirationDelay = 10 * 1000
 const memoizedCheckApp = expiringMemoize(
@@ -25,6 +27,8 @@ const memoizedCheckApp = expiringMemoize(
 )
 
 export class AppLinker extends React.Component {
+  static contextType = WebviewContext
+
   state = {
     nativeAppIsAvailable: null,
     isFetchingAppInfo: false
@@ -49,12 +53,20 @@ export class AppLinker extends React.Component {
     }
   }
 
-  static getOnClickHref(props, nativeAppIsAvailable) {
+  getOnClickHref(props, nativeAppIsAvailable) {
     const { slug, nativePath } = props
     let href = props.href
     let onClick = null
     const usingNativeApp = isMobileApp()
     const appInfo = NATIVE_APP_INFOS[slug]
+
+    if (isFlagshipApp()) {
+      return {
+        onClick: () => this.context.call('openWebview', href),
+        href: '#'
+      }
+    }
+
     if (usingNativeApp) {
       if (nativeAppIsAvailable) {
         // If we are on the native app and the other native app is available,
@@ -75,8 +87,8 @@ export class AppLinker extends React.Component {
       if (isAndroid()) {
         onClick = AppLinker.openNativeFromWeb.bind(this, props)
       } else {
-        //Since generateUniversalLink can rise an error, let's catch it to not crash
-        //all the page.
+        // Since generateUniversalLink can rise an error, let's catch it to not crash
+        // all the page.
         try {
           href = generateUniversalLink({ slug, nativePath, fallbackUrl: href })
         } catch (err) {
@@ -134,7 +146,7 @@ export class AppLinker extends React.Component {
     const { children, slug } = this.props
     const { nativeAppIsAvailable } = this.state
     const appInfo = NATIVE_APP_INFOS[slug]
-    const { href, onClick } = AppLinker.getOnClickHref(
+    const { href, onClick } = this.getOnClickHref(
       this.props,
       nativeAppIsAvailable
     )
@@ -146,7 +158,7 @@ AppLinker.defaultProps = {
   nativePath: '/'
 }
 AppLinker.propTypes = {
-  //Slug of the app : drive / banks ...
+  // Slug of the app : drive / banks ...
   slug: PropTypes.string.isRequired,
   /*
   Full web url : Used by default on desktop browser
