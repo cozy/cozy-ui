@@ -13,46 +13,6 @@ exports[`AppsSection component should be rendered correctly with apps list, subt
         appsList={
           Array [
             Object {
-              "availableVersion": "3.0.0",
-              "categories": Array [
-                "partners",
-              ],
-              "icon": "<svg></svg>",
-              "installed": true,
-              "isInRegistry": true,
-              "name": "Tasky",
-              "slug": "tasky",
-              "type": "webapp",
-              "uninstallable": true,
-              "versions": Object {
-                "beta": Array [
-                  "3.0.0",
-                  "1.0.0",
-                ],
-                "dev": Array [
-                  "3.0.0",
-                  "1.0.0",
-                ],
-                "stable": Array [
-                  "3.0.0",
-                  "1.0.0",
-                ],
-              },
-            },
-          ]
-        }
-        displaySpecificMaintenanceStyle={false}
-        onAppClick={[MockFunction]}
-        subtitle={
-          <SectionSubtitle>
-            Partners
-          </SectionSubtitle>
-        }
-      />
-      <AppsSection
-        appsList={
-          Array [
-            Object {
               "categories": Array [
                 "cozy",
               ],
@@ -165,6 +125,46 @@ exports[`AppsSection component should be rendered correctly with apps list, subt
         subtitle={
           <SectionSubtitle>
             The essentials
+          </SectionSubtitle>
+        }
+      />
+      <AppsSection
+        appsList={
+          Array [
+            Object {
+              "availableVersion": "3.0.0",
+              "categories": Array [
+                "partners",
+              ],
+              "icon": "<svg></svg>",
+              "installed": true,
+              "isInRegistry": true,
+              "name": "Tasky",
+              "slug": "tasky",
+              "type": "webapp",
+              "uninstallable": true,
+              "versions": Object {
+                "beta": Array [
+                  "3.0.0",
+                  "1.0.0",
+                ],
+                "dev": Array [
+                  "3.0.0",
+                  "1.0.0",
+                ],
+                "stable": Array [
+                  "3.0.0",
+                  "1.0.0",
+                ],
+              },
+            },
+          ]
+        }
+        displaySpecificMaintenanceStyle={false}
+        onAppClick={[MockFunction]}
+        subtitle={
+          <SectionSubtitle>
+            Partners
           </SectionSubtitle>
         }
       />
@@ -354,46 +354,6 @@ exports[`AppsSection component should not render dropdown filter on mobile if na
         appsList={
           Array [
             Object {
-              "availableVersion": "3.0.0",
-              "categories": Array [
-                "partners",
-              ],
-              "icon": "<svg></svg>",
-              "installed": true,
-              "isInRegistry": true,
-              "name": "Tasky",
-              "slug": "tasky",
-              "type": "webapp",
-              "uninstallable": true,
-              "versions": Object {
-                "beta": Array [
-                  "3.0.0",
-                  "1.0.0",
-                ],
-                "dev": Array [
-                  "3.0.0",
-                  "1.0.0",
-                ],
-                "stable": Array [
-                  "3.0.0",
-                  "1.0.0",
-                ],
-              },
-            },
-          ]
-        }
-        displaySpecificMaintenanceStyle={false}
-        onAppClick={[MockFunction]}
-        subtitle={
-          <SectionSubtitle>
-            Partners
-          </SectionSubtitle>
-        }
-      />
-      <AppsSection
-        appsList={
-          Array [
-            Object {
               "categories": Array [
                 "cozy",
               ],
@@ -506,6 +466,46 @@ exports[`AppsSection component should not render dropdown filter on mobile if na
         subtitle={
           <SectionSubtitle>
             The essentials
+          </SectionSubtitle>
+        }
+      />
+      <AppsSection
+        appsList={
+          Array [
+            Object {
+              "availableVersion": "3.0.0",
+              "categories": Array [
+                "partners",
+              ],
+              "icon": "<svg></svg>",
+              "installed": true,
+              "isInRegistry": true,
+              "name": "Tasky",
+              "slug": "tasky",
+              "type": "webapp",
+              "uninstallable": true,
+              "versions": Object {
+                "beta": Array [
+                  "3.0.0",
+                  "1.0.0",
+                ],
+                "dev": Array [
+                  "3.0.0",
+                  "1.0.0",
+                ],
+                "stable": Array [
+                  "3.0.0",
+                  "1.0.0",
+                ],
+              },
+            },
+          ]
+        }
+        displaySpecificMaintenanceStyle={false}
+        onAppClick={[MockFunction]}
+        subtitle={
+          <SectionSubtitle>
+            Partners
           </SectionSubtitle>
         }
       />
@@ -698,46 +698,6 @@ exports[`AppsSection component should not render dropdown filter on tablet if na
         appsList={
           Array [
             Object {
-              "availableVersion": "3.0.0",
-              "categories": Array [
-                "partners",
-              ],
-              "icon": "<svg></svg>",
-              "installed": true,
-              "isInRegistry": true,
-              "name": "Tasky",
-              "slug": "tasky",
-              "type": "webapp",
-              "uninstallable": true,
-              "versions": Object {
-                "beta": Array [
-                  "3.0.0",
-                  "1.0.0",
-                ],
-                "dev": Array [
-                  "3.0.0",
-                  "1.0.0",
-                ],
-                "stable": Array [
-                  "3.0.0",
-                  "1.0.0",
-                ],
-              },
-            },
-          ]
-        }
-        displaySpecificMaintenanceStyle={false}
-        onAppClick={[MockFunction]}
-        subtitle={
-          <SectionSubtitle>
-            Partners
-          </SectionSubtitle>
-        }
-      />
-      <AppsSection
-        appsList={
-          Array [
-            Object {
               "categories": Array [
                 "cozy",
               ],
@@ -850,6 +810,46 @@ exports[`AppsSection component should not render dropdown filter on tablet if na
         subtitle={
           <SectionSubtitle>
             The essentials
+          </SectionSubtitle>
+        }
+      />
+      <AppsSection
+        appsList={
+          Array [
+            Object {
+              "availableVersion": "3.0.0",
+              "categories": Array [
+                "partners",
+              ],
+              "icon": "<svg></svg>",
+              "installed": true,
+              "isInRegistry": true,
+              "name": "Tasky",
+              "slug": "tasky",
+              "type": "webapp",
+              "uninstallable": true,
+              "versions": Object {
+                "beta": Array [
+                  "3.0.0",
+                  "1.0.0",
+                ],
+                "dev": Array [
+                  "3.0.0",
+                  "1.0.0",
+                ],
+                "stable": Array [
+                  "3.0.0",
+                  "1.0.0",
+                ],
+              },
+            },
+          ]
+        }
+        displaySpecificMaintenanceStyle={false}
+        onAppClick={[MockFunction]}
+        subtitle={
+          <SectionSubtitle>
+            Partners
           </SectionSubtitle>
         }
       />
@@ -1107,46 +1107,6 @@ exports[`AppsSection component should render dropdown filter on mobile if no nav
         appsList={
           Array [
             Object {
-              "availableVersion": "3.0.0",
-              "categories": Array [
-                "partners",
-              ],
-              "icon": "<svg></svg>",
-              "installed": true,
-              "isInRegistry": true,
-              "name": "Tasky",
-              "slug": "tasky",
-              "type": "webapp",
-              "uninstallable": true,
-              "versions": Object {
-                "beta": Array [
-                  "3.0.0",
-                  "1.0.0",
-                ],
-                "dev": Array [
-                  "3.0.0",
-                  "1.0.0",
-                ],
-                "stable": Array [
-                  "3.0.0",
-                  "1.0.0",
-                ],
-              },
-            },
-          ]
-        }
-        displaySpecificMaintenanceStyle={false}
-        onAppClick={[MockFunction]}
-        subtitle={
-          <SectionSubtitle>
-            Partners
-          </SectionSubtitle>
-        }
-      />
-      <AppsSection
-        appsList={
-          Array [
-            Object {
               "categories": Array [
                 "cozy",
               ],
@@ -1259,6 +1219,46 @@ exports[`AppsSection component should render dropdown filter on mobile if no nav
         subtitle={
           <SectionSubtitle>
             The essentials
+          </SectionSubtitle>
+        }
+      />
+      <AppsSection
+        appsList={
+          Array [
+            Object {
+              "availableVersion": "3.0.0",
+              "categories": Array [
+                "partners",
+              ],
+              "icon": "<svg></svg>",
+              "installed": true,
+              "isInRegistry": true,
+              "name": "Tasky",
+              "slug": "tasky",
+              "type": "webapp",
+              "uninstallable": true,
+              "versions": Object {
+                "beta": Array [
+                  "3.0.0",
+                  "1.0.0",
+                ],
+                "dev": Array [
+                  "3.0.0",
+                  "1.0.0",
+                ],
+                "stable": Array [
+                  "3.0.0",
+                  "1.0.0",
+                ],
+              },
+            },
+          ]
+        }
+        displaySpecificMaintenanceStyle={false}
+        onAppClick={[MockFunction]}
+        subtitle={
+          <SectionSubtitle>
+            Partners
           </SectionSubtitle>
         }
       />
@@ -1511,46 +1511,6 @@ exports[`AppsSection component should render dropdown filter on tablet if no nav
         appsList={
           Array [
             Object {
-              "availableVersion": "3.0.0",
-              "categories": Array [
-                "partners",
-              ],
-              "icon": "<svg></svg>",
-              "installed": true,
-              "isInRegistry": true,
-              "name": "Tasky",
-              "slug": "tasky",
-              "type": "webapp",
-              "uninstallable": true,
-              "versions": Object {
-                "beta": Array [
-                  "3.0.0",
-                  "1.0.0",
-                ],
-                "dev": Array [
-                  "3.0.0",
-                  "1.0.0",
-                ],
-                "stable": Array [
-                  "3.0.0",
-                  "1.0.0",
-                ],
-              },
-            },
-          ]
-        }
-        displaySpecificMaintenanceStyle={false}
-        onAppClick={[MockFunction]}
-        subtitle={
-          <SectionSubtitle>
-            Partners
-          </SectionSubtitle>
-        }
-      />
-      <AppsSection
-        appsList={
-          Array [
-            Object {
               "categories": Array [
                 "cozy",
               ],
@@ -1663,6 +1623,46 @@ exports[`AppsSection component should render dropdown filter on tablet if no nav
         subtitle={
           <SectionSubtitle>
             The essentials
+          </SectionSubtitle>
+        }
+      />
+      <AppsSection
+        appsList={
+          Array [
+            Object {
+              "availableVersion": "3.0.0",
+              "categories": Array [
+                "partners",
+              ],
+              "icon": "<svg></svg>",
+              "installed": true,
+              "isInRegistry": true,
+              "name": "Tasky",
+              "slug": "tasky",
+              "type": "webapp",
+              "uninstallable": true,
+              "versions": Object {
+                "beta": Array [
+                  "3.0.0",
+                  "1.0.0",
+                ],
+                "dev": Array [
+                  "3.0.0",
+                  "1.0.0",
+                ],
+                "stable": Array [
+                  "3.0.0",
+                  "1.0.0",
+                ],
+              },
+            },
+          ]
+        }
+        displaySpecificMaintenanceStyle={false}
+        onAppClick={[MockFunction]}
+        subtitle={
+          <SectionSubtitle>
+            Partners
           </SectionSubtitle>
         }
       />
