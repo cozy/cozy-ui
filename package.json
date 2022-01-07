@@ -148,7 +148,7 @@
     "@babel/runtime": "^7.3.4",
     "@popperjs/core": "^2.4.4",
     "classnames": "^2.2.5",
-    "cozy-intent": "^1.1.0",
+    "cozy-intent": "^1.1.1",
     "cozy-interapp": "^0.5.4",
     "date-fns": "^1.28.5",
     "hammerjs": "^2.0.8",
