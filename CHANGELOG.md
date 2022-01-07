@@ -1,3 +1,17 @@
+# [58.5.0](https://github.com/cozy/cozy-ui/compare/v58.4.1...v58.5.0) (2022-01-07)
+
+
+### Bug Fixes
+
+* Update cozy-intent version ([a1640c6](https://github.com/cozy/cozy-ui/commit/a1640c6))
+
+
+### Features
+
+* Go back to static method ([a1cf102](https://github.com/cozy/cozy-ui/commit/a1cf102))
+* Update applinker to work with intents ([72d8dcb](https://github.com/cozy/cozy-ui/commit/72d8dcb))
+* Update applinker to work with intents ([ef68367](https://github.com/cozy/cozy-ui/commit/ef68367))
+
 ## [58.4.1](https://github.com/cozy/cozy-ui/compare/v58.4.0...v58.4.1) (2022-01-04)
 
 
