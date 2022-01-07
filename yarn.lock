@@ -5128,17 +5128,17 @@ cozy-client@^27.5.1:
     sift "^6.0.0"
     url-search-params-polyfill "^8.0.0"
 
-cozy-device-helper@1.14.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/cozy-device-helper/-/cozy-device-helper-1.14.0.tgz#ef834e4c731130348cde830f26f56b7e04c3b700"
-  integrity sha512-qZPg41xksIiLkSrOm+5+u3qOBp1V6EavetyV7/QNzuNwA7Ibtbi3kFmnwH28Pi0QNlalk0uktJaquowwv/uYcA==
-  dependencies:
-    lodash "^4.17.19"
-
 cozy-device-helper@^1.12.0:
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/cozy-device-helper/-/cozy-device-helper-1.12.0.tgz#619a24b0d3caf2d3f616a1524daef7c7b71eab7a"
   integrity sha512-7pFbltgkD8rSO0PEf8pd6aBB37RUnNYH7fb3pkbcvo5rk4quCfSLREV94gZwXxowzP4vjZcAumTM09DfI42mJA==
+  dependencies:
+    lodash "^4.17.19"
+
+cozy-device-helper@^1.16.0:
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/cozy-device-helper/-/cozy-device-helper-1.16.0.tgz#76f124724b340cac222d33789787e3c841f4b123"
+  integrity sha512-VcHkceUaYT79wu0wiYR8BrcTloVqY+GrLMGgJAFPdH1d8r3Vzcs3v/juor77TTOPcYEWuG702U93kx1u5rXpCg==
   dependencies:
     lodash "^4.17.19"
 
@@ -5190,6 +5190,15 @@ cozy-harvest-lib@^6.7.3:
     react-final-form "^3.7.0"
     react-markdown "^4.2.2"
     uuid "^3.3.2"
+
+cozy-intent@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/cozy-intent/-/cozy-intent-1.1.0.tgz#07463bfc3b88ab38ace124ed44b4257477948040"
+  integrity sha512-PYlxWBWfoOyEdENfouo84OWnMVCUmLvKN9IL4BfkwOjiNTA2rDu7soqZwyFDwxoKTSnG2YfoJc87jMa/NELM8g==
+  dependencies:
+    cozy-device-helper "^1.16.0"
+    post-me "0.4.5"
+    typescript "^4.5.2"
 
 cozy-interapp@^0.5.4:
   version "0.5.7"
@@ -13451,6 +13460,11 @@ posix-character-classes@^0.1.0:
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
   integrity sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=
 
+post-me@0.4.5:
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/post-me/-/post-me-0.4.5.tgz#6171b721c7b86230c51cfbe48ddea047ef8831ce"
+  integrity sha512-XgPdktF/2M5jglgVDULr9NUb/QNv3bY3g6RG22iTb5MIMtB07/5FJB5fbVmu5Eaopowc6uZx7K3e7x1shPwnXw==
+
 postcss-calc@^5.2.0:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-5.3.1.tgz#77bae7ca928ad85716e2fda42f261bf7c1d65b5e"
@@ -17976,6 +17990,11 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typescript@^4.5.2:
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.5.4.tgz#a17d3a0263bf5c8723b9c52f43c5084edf13c2e8"
+  integrity sha512-VgYs2A2QIRuGphtzFV7aQJduJ2gyfTljngLzjpfW9FoYZF6xuw1W0vW9ghCKLfcWrCFxK81CSGRAvS1pn4fIUg==
 
 uc.micro@^1.0.1, uc.micro@^1.0.5:
   version "1.0.6"
