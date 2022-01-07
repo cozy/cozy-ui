@@ -4,6 +4,13 @@ import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import { useRadioGroup } from '@material-ui/core/RadioGroup'
 
+import createDepreciationLogger from '../helpers/createDepreciationLogger'
+
+const logRadioDepecrated = createDepreciationLogger()
+
+/**
+ * @deprecated Please use [Radios](#/Radios)
+ */
 const Radio = props => {
   const {
     className,
@@ -18,6 +25,9 @@ const Radio = props => {
     checked: checkedProp,
     ...restProps
   } = props
+  logRadioDepecrated(
+    'The Radio component is deprecated, please use `<Radios />` instead. You can replace `<Radio value="" label="" />` by `<FormControlLabel value="" label="" control={<Radios />} />`. See documentation for more details.'
+  )
   const radioGroup = useRadioGroup()
 
   let checked = checkedProp
