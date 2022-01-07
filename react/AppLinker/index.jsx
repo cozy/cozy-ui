@@ -17,7 +17,7 @@ import {
 } from './native'
 import { NATIVE_APP_INFOS } from './native.config'
 import expiringMemoize from './expiringMemoize'
-import { WebviewContext, WebviewApps } from 'cozy-intent'
+import { WebviewContext } from 'cozy-intent'
 
 const expirationDelay = 10 * 1000
 const memoizedCheckApp = expiringMemoize(
@@ -53,7 +53,7 @@ export class AppLinker extends React.Component {
     }
   }
 
-  getOnClickHref(props, nativeAppIsAvailable) {
+  static getOnClickHref(props, nativeAppIsAvailable, context) {
     const { slug, nativePath } = props
     let href = props.href
     let onClick = null
@@ -61,8 +61,13 @@ export class AppLinker extends React.Component {
     const appInfo = NATIVE_APP_INFOS[slug]
 
     if (isFlagshipApp()) {
+      if (!context)
+        return console.warn(
+          'FlagshipApp detected but no context found. Is the app wrapped in WebviewIntentProvider?'
+        )
+
       return {
-        onClick: () => this.context.call('openWebview', href),
+        onClick: () => context.call('openApp', href),
         href: '#'
       }
     }
@@ -146,9 +151,10 @@ export class AppLinker extends React.Component {
     const { children, slug } = this.props
     const { nativeAppIsAvailable } = this.state
     const appInfo = NATIVE_APP_INFOS[slug]
-    const { href, onClick } = this.getOnClickHref(
+    const { href, onClick } = AppLinker.getOnClickHref(
       this.props,
-      nativeAppIsAvailable
+      nativeAppIsAvailable,
+      this.context
     )
     return children({ ...appInfo, onClick: onClick, href })
   }
