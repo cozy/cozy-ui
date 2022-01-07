@@ -62,13 +62,15 @@ export class AppLinker extends React.Component {
 
     if (isFlagshipApp()) {
       if (!context)
-        return console.warn(
+        console.warn(
           'FlagshipApp detected but no context found. Is the app wrapped in WebviewIntentProvider?'
         )
 
-      return {
-        onClick: () => context.call('openApp', href),
-        href: '#'
+      if (context) {
+        return {
+          onClick: () => context.call('openApp', href),
+          href: '#'
+        }
       }
     }
 
