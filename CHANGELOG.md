@@ -1,3 +1,10 @@
+## [58.5.1](https://github.com/cozy/cozy-ui/compare/v58.5.0...v58.5.1) (2022-01-07)
+
+
+### Bug Fixes
+
+* Handle context flow without undefined return ([68a33ff](https://github.com/cozy/cozy-ui/commit/68a33ff))
+
 # [58.5.0](https://github.com/cozy/cozy-ui/compare/v58.4.1...v58.5.0) (2022-01-07)
 
 
