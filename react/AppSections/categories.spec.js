@@ -15,10 +15,17 @@ const i18nContext = I18nContext({
 const tMock = i18nContext.t
 
 describe('groupApps', () => {
-  it('should return apps sorted in a dictionnary by categories', () => {
+  it('should return apps sorted in a dictionary by categories', () => {
     expect(
       mapValues(catUtils.groupApps(mockApps), apps => apps.map(x => x.slug))
-    ).toMatchSnapshot()
+    ).toEqual({
+      cozy: ['collect', 'drive', 'photos'],
+      isp: ['konnector-bouilligue'],
+      others: ['devonly'],
+      partners: ['tasky'],
+      telecom: ['konnector-bouilligue'],
+      transport: ['konnector-trinlane']
+    })
   })
 })
 
@@ -41,11 +48,22 @@ describe('sorter', () => {
       'others',
       'telecom'
     ])
-    expect(catList.sort(catUtils.sorter).map(x => x.value)).toMatchSnapshot()
+    expect(catList.sort(catUtils.sorter).map(x => x.value)).toEqual([
+      'all',
+      'isp',
+      'telecom',
+      'cozy',
+      'others'
+    ])
 
     // test with all and others at the border
     const catList2 = prepareCategories(['all', 'cozy', 'telecom', 'others'])
-    expect(catList2.sort(catUtils.sorter).map(x => x.value)).toMatchSnapshot()
+    expect(catList2.sort(catUtils.sorter).map(x => x.value)).toEqual([
+      'all',
+      'telecom',
+      'cozy',
+      'others'
+    ])
   })
 })
 
@@ -57,24 +75,112 @@ describe('generateOptionsFromApps', () => {
         includeAll: false,
         addLabel
       })
-    ).toMatchSnapshot()
+    ).toEqual([
+      {
+        label: 'Partners',
+        secondary: false,
+        type: 'webapp',
+        value: 'partners'
+      },
+      {
+        label: 'The essentials',
+        secondary: false,
+        type: 'webapp',
+        value: 'cozy'
+      },
+      {
+        label: 'Others',
+        secondary: false,
+        type: 'webapp',
+        value: 'others'
+      },
+      {
+        label: 'Services',
+        secondary: false,
+        value: 'konnectors'
+      },
+      {
+        label: 'ISP',
+        secondary: true,
+        type: 'konnector',
+        value: 'isp'
+      },
+      {
+        label: 'Telecom',
+        secondary: true,
+        type: 'konnector',
+        value: 'telecom'
+      },
+      {
+        label: 'Transportation',
+        secondary: true,
+        type: 'konnector',
+        value: 'transport'
+      }
+    ])
   })
 
   it('should return include the all categories if includeAll option true', () => {
     expect(
       catUtils.generateOptionsFromApps(mockApps, { includeAll: true, addLabel })
-    ).toMatchSnapshot()
+    ).toEqual([
+      {
+        secondary: false,
+        value: 'all'
+      },
+      {
+        label: 'Partners',
+        secondary: false,
+        type: 'webapp',
+        value: 'partners'
+      },
+      {
+        label: 'The essentials',
+        secondary: false,
+        type: 'webapp',
+        value: 'cozy'
+      },
+      {
+        label: 'Others',
+        secondary: false,
+        type: 'webapp',
+        value: 'others'
+      },
+      {
+        label: 'Services',
+        secondary: false,
+        value: 'konnectors'
+      },
+      {
+        label: 'ISP',
+        secondary: true,
+        type: 'konnector',
+        value: 'isp'
+      },
+      {
+        label: 'Telecom',
+        secondary: true,
+        type: 'konnector',
+        value: 'telecom'
+      },
+      {
+        label: 'Transportation',
+        secondary: true,
+        type: 'konnector',
+        value: 'transport'
+      }
+    ])
   })
 
   it('should return an empty list if empty apps list provided', () => {
     expect(
       catUtils.generateOptionsFromApps([], { includeAll: false, addLabel })
-    ).toMatchSnapshot()
+    ).toEqual([])
   })
 
   it('should return an empty list if no apps provided', () => {
     expect(
       catUtils.generateOptionsFromApps(null, { includeAll: false, addLabel })
-    ).toMatchSnapshot()
+    ).toEqual([])
   })
 })
