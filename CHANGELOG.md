@@ -1,3 +1,16 @@
+# [59.0.0](https://github.com/cozy/cozy-ui/compare/v58.5.1...v59.0.0) (2022-01-10)
+
+
+### Features
+
+* Change cozy-intent dependency mode ([cec9b4a](https://github.com/cozy/cozy-ui/commit/cec9b4a))
+
+
+### BREAKING CHANGES
+
+* cozy-intent@1.1.2 or later is now required
+otherwise, AppLinker will crash
+
 ## [58.5.1](https://github.com/cozy/cozy-ui/compare/v58.5.0...v58.5.1) (2022-01-07)
 
 
