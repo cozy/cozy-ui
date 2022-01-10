@@ -1,1 +1,1 @@
-Re-export of @material-ui. See [the official API](https://material-ui.com/api/linear-progress/).
+Re-export of @material-ui. See [the official API](https://v4.mui.com/api/linear-progress/).
