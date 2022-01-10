@@ -1,1 +1,1 @@
-Re-export of @material-ui. See [the official API](https://material-ui.com/api/outlined-input/).
+Re-export of @material-ui. See [the official API](https://v4.mui.com/api/outlined-input/).

@@ -1,1 +1,1 @@
-Re-export of @material-ui. See [the official API](https://material-ui.com/api/circular-progress/).
+Re-export of @material-ui. See [the official API](https://v4.mui.com/api/circular-progress/).
