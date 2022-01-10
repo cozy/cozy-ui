@@ -7,7 +7,7 @@ exports[`Figure should render correctly -100 coloredPositive: false, coloredNega
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    -100.00
+    -100,00
   </span>
 </div>
 `;
@@ -19,7 +19,7 @@ exports[`Figure should render correctly -100 coloredPositive: false, coloredNega
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    -100.00
+    -100,00
   </span>
 </div>
 `;
@@ -31,7 +31,7 @@ exports[`Figure should render correctly -100 coloredPositive: false, coloredNega
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    -100.00
+    -100,00
   </span>
 </div>
 `;
@@ -43,7 +43,7 @@ exports[`Figure should render correctly -100 coloredPositive: false, coloredNega
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    -100.00
+    -100,00
   </span>
 </div>
 `;
@@ -55,7 +55,7 @@ exports[`Figure should render correctly -100 coloredPositive: true, coloredNegat
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    -100.00
+    -100,00
   </span>
 </div>
 `;
@@ -67,7 +67,7 @@ exports[`Figure should render correctly -100 coloredPositive: true, coloredNegat
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    -100.00
+    -100,00
   </span>
 </div>
 `;
@@ -79,7 +79,7 @@ exports[`Figure should render correctly -100 coloredPositive: true, coloredNegat
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    -100.00
+    -100,00
   </span>
 </div>
 `;
@@ -91,7 +91,7 @@ exports[`Figure should render correctly -100 coloredPositive: true, coloredNegat
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    -100.00
+    -100,00
   </span>
 </div>
 `;
@@ -103,7 +103,7 @@ exports[`Figure should render correctly 4 coloredPositive: false, coloredNegativ
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    4.00
+    4,00
   </span>
 </div>
 `;
@@ -115,7 +115,7 @@ exports[`Figure should render correctly 4 coloredPositive: false, coloredNegativ
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    4.00
+    4,00
   </span>
 </div>
 `;
@@ -127,7 +127,7 @@ exports[`Figure should render correctly 4 coloredPositive: false, coloredNegativ
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    4.00
+    4,00
   </span>
 </div>
 `;
@@ -139,7 +139,7 @@ exports[`Figure should render correctly 4 coloredPositive: false, coloredNegativ
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    4.00
+    4,00
   </span>
 </div>
 `;
@@ -151,7 +151,7 @@ exports[`Figure should render correctly 4 coloredPositive: true, coloredNegative
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    4.00
+    4,00
   </span>
 </div>
 `;
@@ -163,7 +163,7 @@ exports[`Figure should render correctly 4 coloredPositive: true, coloredNegative
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    4.00
+    4,00
   </span>
 </div>
 `;
@@ -175,7 +175,7 @@ exports[`Figure should render correctly 4 coloredPositive: true, coloredNegative
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    4.00
+    4,00
   </span>
 </div>
 `;
@@ -187,7 +187,7 @@ exports[`Figure should render correctly 4 coloredPositive: true, coloredNegative
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    4.00
+    4,00
   </span>
 </div>
 `;
@@ -199,7 +199,7 @@ exports[`Figure should render correctly 100 coloredPositive: false, coloredNegat
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    100.00
+    100,00
   </span>
 </div>
 `;
@@ -211,7 +211,7 @@ exports[`Figure should render correctly 100 coloredPositive: false, coloredNegat
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    100.00
+    100,00
   </span>
 </div>
 `;
@@ -223,7 +223,7 @@ exports[`Figure should render correctly 100 coloredPositive: false, coloredNegat
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    100.00
+    100,00
   </span>
 </div>
 `;
@@ -235,7 +235,7 @@ exports[`Figure should render correctly 100 coloredPositive: false, coloredNegat
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    100.00
+    100,00
   </span>
 </div>
 `;
@@ -247,7 +247,7 @@ exports[`Figure should render correctly 100 coloredPositive: true, coloredNegati
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    100.00
+    100,00
   </span>
 </div>
 `;
@@ -259,7 +259,7 @@ exports[`Figure should render correctly 100 coloredPositive: true, coloredNegati
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    100.00
+    100,00
   </span>
 </div>
 `;
@@ -271,7 +271,7 @@ exports[`Figure should render correctly 100 coloredPositive: true, coloredNegati
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    100.00
+    100,00
   </span>
 </div>
 `;
@@ -283,7 +283,7 @@ exports[`Figure should render correctly 100 coloredPositive: true, coloredNegati
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    100.00
+    100,00
   </span>
 </div>
 `;
@@ -295,7 +295,7 @@ exports[`Figure should render correctly 500 coloredPositive: false, coloredNegat
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    500.00
+    500,00
   </span>
 </div>
 `;
@@ -307,7 +307,7 @@ exports[`Figure should render correctly 500 coloredPositive: false, coloredNegat
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    500.00
+    500,00
   </span>
 </div>
 `;
@@ -319,7 +319,7 @@ exports[`Figure should render correctly 500 coloredPositive: false, coloredNegat
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    500.00
+    500,00
   </span>
 </div>
 `;
@@ -331,7 +331,7 @@ exports[`Figure should render correctly 500 coloredPositive: false, coloredNegat
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    500.00
+    500,00
   </span>
 </div>
 `;
@@ -343,7 +343,7 @@ exports[`Figure should render correctly 500 coloredPositive: true, coloredNegati
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    500.00
+    500,00
   </span>
 </div>
 `;
@@ -355,7 +355,7 @@ exports[`Figure should render correctly 500 coloredPositive: true, coloredNegati
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    500.00
+    500,00
   </span>
 </div>
 `;
@@ -367,7 +367,7 @@ exports[`Figure should render correctly 500 coloredPositive: true, coloredNegati
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    500.00
+    500,00
   </span>
 </div>
 `;
@@ -379,7 +379,7 @@ exports[`Figure should render correctly 500 coloredPositive: true, coloredNegati
   <span
     className="Figure__Figure-total___MZ7Xt"
   >
-    500.00
+    500,00
   </span>
 </div>
 `;

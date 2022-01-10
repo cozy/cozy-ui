@@ -19,12 +19,12 @@ describe('Sort contacts', () => {
       const sortedContact = [...contacts].sort(sortLastNameFirst)
       expect(sortedContact).toEqual([
         { name: { givenName: '', familyName: '' } },
-        { name: { givenName: '', familyName: 'A' } },
         { name: { givenName: 'A', familyName: '' } },
+        { name: { givenName: '', familyName: 'A' } },
         { name: { givenName: 'A', familyName: 'A' } },
         { name: { givenName: 'B', familyName: 'A' } },
-        { name: { givenName: '', familyName: 'B' } },
         { name: { givenName: 'B', familyName: '' } },
+        { name: { givenName: '', familyName: 'B' } },
         { name: { givenName: 'A', familyName: 'B' } },
         { name: { givenName: 'B', familyName: 'B' } },
         { name: { givenName: 'C', familyName: 'B' } },
@@ -53,14 +53,14 @@ describe('Sort contacts', () => {
       const sortedContact = [...contacts].sort(sortLastNameFirst)
       expect(sortedContact).toEqual([
         { name: { givenName: '' } },
-        { name: { givenName: '', familyName: 'A' } },
         { name: { givenName: 'A' } },
         { name: { givenName: 'A', familyName: '' } },
+        { name: { givenName: '', familyName: 'A' } },
         { name: { givenName: 'A', familyName: 'A' } },
         { name: { givenName: 'B', familyName: 'A' } },
         { name: { familyName: 'B' } },
-        { name: { givenName: '', familyName: 'B' } },
         { name: { givenName: 'B', familyName: '' } },
+        { name: { givenName: '', familyName: 'B' } },
         { name: { givenName: 'B', familyName: 'B' } },
         { name: { givenName: 'C', familyName: 'B' } },
         { name: { familyName: 'C' } },
