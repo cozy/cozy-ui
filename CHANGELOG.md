@@ -1,3 +1,10 @@
+# [59.1.0](https://github.com/cozy/cozy-ui/compare/v59.0.0...v59.1.0) (2022-01-11)
+
+
+### Features
+
+* Add ListItemAvatar from Mui ([84f9d3c](https://github.com/cozy/cozy-ui/commit/84f9d3c))
+
 # [59.0.0](https://github.com/cozy/cozy-ui/compare/v58.5.1...v59.0.0) (2022-01-10)
 
 
