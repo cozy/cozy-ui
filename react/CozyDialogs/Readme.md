@@ -1,10 +1,12 @@
 Pre-built modals ready to be directly used in applications, based on MUI Dialog.
 
-* Dialog : default Cozy modal
-* ConfirmDialog : used for confirmation popups
-* IllustrationDialog : used for illustration as title
-* FixedDialog : default one but with both title/actions fixed
-* FixedActionsDialog : default one but with title fluid and actions fixed
+### Usage
+
+* **Dialog** : default Cozy modal
+* **ConfirmDialog** : used for confirmation popups
+* **IllustrationDialog** : used for illustration as title
+* **FixedDialog** : default one but with both title/actions fixed
+* **FixedActionsDialog** : default one but with title fluid and actions fixed
 
 Will automatically:
 
@@ -13,23 +15,25 @@ Will automatically:
 
 ### Props
 
-* size : `<string>` Can be "s", "m" (default) or "l"
-* opened : `<boolean>` (required) To open/close the modal
-* onClose : `<function>` (required) Triggered function on modal close action
-* onBack : `<function>` (optional) Triggered function on modal back action
+* **size** : `<string>` – Can be "s", "m" (default) or "l"
+* **open** : `<boolean>` (required) – To open/close the modal
+* **onClose** : `<function>` (required) – Triggered function on modal close action
+* **onBack** : `<function>` (optional) – Triggered function on modal back action
   * if defined and in desktop mode then a back button is shown in addition to the close button and it will trigger onBack() on click
   * if defined and in mobile mode then the back button will trigger onBack() instead of onClose()
   * if not defined and in mobile mode then the back button will trigger onClose()
-* disableTitleAutoPadding : `<boolean>` (optional) Disable title padding calculation that would prevent overlapping with close and back buttons
+* **disableTitleAutoPadding** : `<boolean>` (optional) – Disable title padding calculation that would prevent overlapping with close and back buttons
   * if set to `true` then you should handle those CSS properties by yourself or title will take 100% of width
   * if set to `false` then title will take only available space between close and back buttons regarding which of `onClose` or `onBack` props are defined or not
-* disableGutters : `<boolean>` To disable the margins and paddings of the inner content
-* title : `<node>` Title of the modal
-* content : `<node>` Content of the modal
-* actions : `<node>` Actions of the modal
-* actionsLayout : `<string>` Can be "row" or "column"
+* **disableGutters** : `<boolean>` – To disable the margins and paddings of the inner content
+* **title** : `<node>` – Title of the modal
+* **content** : `<node>` – Content of the modal
+* **actions** : `<node>` – Actions of the modal
+* **actionsLayout** : `<string>` – Can be "row" or "column"
 
 Additionally, all the CozyDialogs support [MUI Dialog's props](https://v3.material-ui.com/api/dialog/).
+
+### Exemples
 
 ```jsx
 import {
