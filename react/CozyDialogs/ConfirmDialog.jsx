@@ -43,9 +43,11 @@ const ConfirmDialog = props => {
       )}
       <DialogContent {...dialogContentProps}>
         <div className="dialogContentInner withFluidActions">
-          <div className="dialogTitleFluidContainer">
-            <DialogTitle {...dialogTitleProps}>{title}</DialogTitle>
-          </div>
+          {title && (
+            <div className="dialogTitleFluidContainer">
+              <DialogTitle {...dialogTitleProps}>{title}</DialogTitle>
+            </div>
+          )}
           {content}
           {actions && (
             <DialogActions

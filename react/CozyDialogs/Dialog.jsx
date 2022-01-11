@@ -42,8 +42,12 @@ const Dialog = props => {
           onClick={onBackOrClose}
         />
       )}
-      <DialogTitle {...dialogTitleProps}>{title}</DialogTitle>
-      <Divider />
+      {title && (
+        <>
+          <DialogTitle {...dialogTitleProps}>{title}</DialogTitle>
+          <Divider />
+        </>
+      )}
       <DialogContent {...dialogContentProps}>
         <div className="dialogContentInner withFluidActions">
           {content}

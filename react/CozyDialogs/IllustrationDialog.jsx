@@ -43,9 +43,11 @@ const IllustrationDialog = props => {
       )}
       <DialogContent {...dialogContentProps}>
         <div className="dialogContentInner withFluidActions">
-          <DialogTitle {...dialogTitleProps}>
-            <div className="u-flex u-flex-justify-center">{title}</div>
-          </DialogTitle>
+          {title && (
+            <DialogTitle {...dialogTitleProps}>
+              <div className="u-flex u-flex-justify-center">{title}</div>
+            </DialogTitle>
+          )}
           {content}
           {actions && (
             <DialogActions
