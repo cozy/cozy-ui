@@ -1,3 +1,19 @@
+# [59.2.0](https://github.com/cozy/cozy-ui/compare/v59.1.0...v59.2.0) (2022-01-11)
+
+
+### Bug Fixes
+
+* **mixins:** Name correctly mixins in styleguide tools ([ce0c7a8](https://github.com/cozy/cozy-ui/commit/ce0c7a8))
+* **sorter:** Categories sorted alphabetically + cozy value goes second ([f493f89](https://github.com/cozy/cozy-ui/commit/f493f89))
+* **stylus:** Remove warning accessing non existing property error ([b756060](https://github.com/cozy/cozy-ui/commit/b756060)), closes [/github.com/stylus/stylus/issues/2534#issuecomment-659414984](https://github.com//github.com/stylus/stylus/issues/2534/issues/issuecomment-659414984)
+* **test:** Resolve each failing tests ([cb09aa8](https://github.com/cozy/cozy-ui/commit/cb09aa8))
+* **test:** Use async/await in testFromStyleguidist ([fd6ca37](https://github.com/cozy/cozy-ui/commit/fd6ca37))
+
+
+### Features
+
+* **node16:** Upgrade to node 16 ([5e647b2](https://github.com/cozy/cozy-ui/commit/5e647b2))
+
 # [59.1.0](https://github.com/cozy/cozy-ui/compare/v59.0.0...v59.1.0) (2022-01-11)
 
 
