@@ -15,7 +15,8 @@ const ConfirmDialog = props => {
     dialogTitleProps,
     fullScreen,
     id,
-    dialogActionsProps
+    dialogActionsProps,
+    dialogContentProps
   } = useCozyDialog({ ...props, isFluidTitle: true })
 
   const onBackOrClose = onBack || onClose
@@ -40,7 +41,7 @@ const ConfirmDialog = props => {
           onClick={onBackOrClose}
         />
       )}
-      <DialogContent>
+      <DialogContent {...dialogContentProps}>
         <div className="dialogContentInner withFluidActions">
           <div className="dialogTitleFluidContainer">
             <DialogTitle {...dialogTitleProps}>{title}</DialogTitle>

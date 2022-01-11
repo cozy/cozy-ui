@@ -27,6 +27,7 @@ const useCozyDialog = props => {
     align,
     disableTitleAutoPadding,
     isFluidTitle,
+    disableGutters,
     ...otherProps
   } = props
   const { isMobile } = useBreakpoints()
@@ -91,6 +92,14 @@ const useCozyDialog = props => {
     }
   }
 
+  const dialogContentProps = {
+    classes: {
+      root: cx({
+        disableGutters
+      })
+    }
+  }
+
   return {
     dialogProps,
     dialogTitleProps,
@@ -98,7 +107,8 @@ const useCozyDialog = props => {
     id,
     fullScreen,
     dividerProps,
-    dialogActionsProps
+    dialogActionsProps,
+    dialogContentProps
   }
 }
 
