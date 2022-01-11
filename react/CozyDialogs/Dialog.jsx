@@ -16,7 +16,8 @@ const Dialog = props => {
     dialogTitleProps,
     fullScreen,
     id,
-    dialogActionsProps
+    dialogActionsProps,
+    dialogContentProps
   } = useCozyDialog(props)
 
   const onBackOrClose = onBack || onClose
@@ -43,7 +44,7 @@ const Dialog = props => {
       )}
       <DialogTitle {...dialogTitleProps}>{title}</DialogTitle>
       <Divider />
-      <DialogContent>
+      <DialogContent {...dialogContentProps}>
         <div className="dialogContentInner withFluidActions">
           {content}
           {actions && (

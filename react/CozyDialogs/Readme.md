@@ -23,6 +23,7 @@ Will automatically:
 * disableTitleAutoPadding : `<boolean>` (optional) Disable title padding calculation that would prevent overlapping with close and back buttons
   * if set to `true` then you should handle those CSS properties by yourself or title will take 100% of width
   * if set to `false` then title will take only available space between close and back buttons regarding which of `onClose` or `onBack` props are defined or not
+* disableGutters : `<boolean>` To disable the margins and paddings of the inner content
 * title : `<node>` Title of the modal
 * content : `<node>` Content of the modal
 * actions : `<node>` Actions of the modal
@@ -151,7 +152,8 @@ initialState = {
   content: 'default',
   theme: 'normal',
   align: 'middle',
-  showActions: true
+  showActions: true,
+  disableGutters: false
 }
 
 ;
@@ -196,6 +198,10 @@ initialState = {
       <StateRadio value='middle' name='align' /> middle
       <StateRadio value='top' name='align' /> top{' '}
     </p>
+    <p>Disable gutters (inner padding):
+      <StateRadio value={true} name='disableGutters' /> yes
+      <StateRadio value={false} name='disableGutters' /> no{' '}
+    </p>
     <DialogComponent
       size={DialogComponent !== ConfirmDialog ? state.size : undefined}
       open={state.modalOpened}
@@ -207,6 +213,7 @@ initialState = {
         ? `${dialogTitles[DialogComponent.name]} - ${content.ada.short}`
         : dialogTitles[DialogComponent.name]
       }
+      disableGutters={state.disableGutters}
       content={
         <Typography variant='body1' color='textPrimary'>
           { state.content == 'default'

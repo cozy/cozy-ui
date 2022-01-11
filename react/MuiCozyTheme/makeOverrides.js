@@ -442,6 +442,17 @@ const makeOverrides = theme => ({
       [theme.breakpoints.down('sm')]: {
         padding: '24px 16px 0'
       },
+      '&.disableGutters': {
+        padding: 0,
+        '& .dialogContentInner': {
+          marginBottom: 0
+        },
+        '& .dialogTitleFluidContainer': {
+          marginLeft: 0,
+          marginRight: 0,
+          marginTop: 0
+        }
+      },
       '& .dialogContentInner': {
         marginBottom: '24px',
         '&.withFluidActions': {
