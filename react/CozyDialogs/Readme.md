@@ -153,7 +153,8 @@ initialState = {
   theme: 'normal',
   align: 'middle',
   showActions: true,
-  disableGutters: false
+  disableGutters: false,
+  hideTitle: false
 }
 
 ;
@@ -175,6 +176,10 @@ initialState = {
     <p>Title:
       <StateRadio value='short' name='title' /> short{' '}
       <StateRadio value='long' name='title' /> long
+    </p>
+    <p>Hide title:
+      <StateRadio value={true} name='hideTitle' /> yes{' '}
+      <StateRadio value={false} name='hideTitle' /> no
     </p>
     <p>Content:
       <StateRadio value='default' name='content' /> default{' '}
@@ -209,9 +214,11 @@ initialState = {
       onBack={state.withBackButton ? handleBack : undefined}
       disableTitleAutoPadding={state.disableTitleAutoPadding}
       align={state.align}
-      title={DialogComponent !== IllustrationDialog && state.title === "long"
-        ? `${dialogTitles[DialogComponent.name]} - ${content.ada.short}`
-        : dialogTitles[DialogComponent.name]
+      title={state.hideTitle
+        ? undefined
+        : DialogComponent !== IllustrationDialog && state.title === "long"
+          ? `${dialogTitles[DialogComponent.name]} - ${content.ada.short}`
+          : dialogTitles[DialogComponent.name]
       }
       disableGutters={state.disableGutters}
       content={

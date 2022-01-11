@@ -44,9 +44,11 @@ const FixedActionsDialog = props => {
       )}
       <DialogContent {...dialogContentProps}>
         <div className="dialogContentInner">
-          <div className="dialogTitleFluidContainer">
-            <DialogTitle {...dialogTitleProps}>{title}</DialogTitle>
-          </div>
+          {title && (
+            <div className="dialogTitleFluidContainer">
+              <DialogTitle {...dialogTitleProps}>{title}</DialogTitle>
+            </div>
+          )}
           {content}
         </div>
       </DialogContent>
