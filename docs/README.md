@@ -66,6 +66,10 @@ If you want to develop inside cozy-ui, you need a local version cozy-ui.
 git clone git@github.com:cozy/cozy-ui.git
 ```
 
+### Install
+
+First `nvm use` (to set node version as defined in .nvmrc) then `yarn install`
+
 ### Develop inside the styleguidist
 
 It is convenient when modifying a component to use the styleguide site.
