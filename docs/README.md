@@ -89,7 +89,7 @@ If you want to add a new component, you must follow these steps:
 * Add it in the documentation by modifying `docs/styleguide.config.js`
 * If necessary you can add snapshots for it by modifying `react/examples.spec.jsx` and updating them `yarn build && yarn test -u`
 
-### Add an Icon
+### Add an icon
 
 If you want to add a new icon to cozy-ui, you must follow these steps:
 
