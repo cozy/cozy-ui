@@ -242,7 +242,7 @@ initialState = {
   {dialogs.map(dialog => (
     <button
       key={`open-btn-${dialog.name}`}
-      data-test-id={`open-btn-${dialog.name}`}
+      data-testid={`open-btn-${dialog.name}`}
       onClick={() => toggleDialog(dialog)}
     >
       Open {dialog.name}

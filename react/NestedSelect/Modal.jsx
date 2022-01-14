@@ -52,7 +52,7 @@ const NestedSelectModal = props => {
     >
       <DialogCloseButton
         onClick={props.onClose}
-        data-test-id={`modal-close-button-nested-select`}
+        data-testid={`modal-close-button-nested-select`}
       />
       <NestedSelect
         HeaderComponent={NestedSelectDialogHeader}

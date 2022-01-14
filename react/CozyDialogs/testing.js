@@ -20,20 +20,20 @@ export const getDialog = root => {
 export const getCloseButton = dialogRoot => {
   const buttons = within(dialogRoot).getAllByRole('button')
   return buttons.find(
-    x => x.dataset.testId && x.dataset.testId.includes('modal-close-button')
+    x => x.dataset.testid && x.dataset.testid.includes('modal-close-button')
   )
 }
 
 export const getBackButton = dialogRoot => {
   const buttons = within(dialogRoot).getAllByRole('button')
   return buttons.find(
-    x => x.dataset.testId && x.dataset.testId.includes('modal-back-button')
+    x => x.dataset.testid && x.dataset.testid.includes('modal-back-button')
   )
 }
 
 export const getBackCloseButton = dialogRoot => {
   const buttons = within(dialogRoot).getAllByRole('button')
   return buttons.find(
-    x => x.dataset.testId && x.dataset.testId.includes('modal-backclose-button')
+    x => x.dataset.testid && x.dataset.testid.includes('modal-backclose-button')
   )
 }
