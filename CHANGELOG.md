@@ -1,3 +1,15 @@
+# [59.3.0](https://github.com/cozy/cozy-ui/compare/v59.2.0...v59.3.0) (2022-01-14)
+
+
+### Bug Fixes
+
+* CozyDialogs doesn't show title block anymore if undefined ([1c7170c](https://github.com/cozy/cozy-ui/commit/1c7170c))
+
+
+### Features
+
+* Add `disableGutters` prop to CozyDialogs ([a55f5fb](https://github.com/cozy/cozy-ui/commit/a55f5fb))
+
 # [59.2.0](https://github.com/cozy/cozy-ui/compare/v59.1.0...v59.2.0) (2022-01-11)
 
 
