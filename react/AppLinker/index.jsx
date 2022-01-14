@@ -54,7 +54,7 @@ export class AppLinker extends React.Component {
   }
 
   static getOnClickHref(props, nativeAppIsAvailable, context) {
-    const { slug, nativePath } = props
+    const { slug, nativePath, app } = props
     let href = props.href
     let onClick = null
     const usingNativeApp = isMobileApp()
@@ -68,7 +68,7 @@ export class AppLinker extends React.Component {
 
       if (context) {
         return {
-          onClick: () => context.call('openApp', href),
+          onClick: () => context.call('openApp', href, app),
           href: '#'
         }
       }
