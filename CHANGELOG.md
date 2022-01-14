@@ -1,3 +1,15 @@
+# [60.0.0](https://github.com/cozy/cozy-ui/compare/v59.3.0...v60.0.0) (2022-01-14)
+
+
+### Features
+
+* Replace `data-test-id` by `data-testid` on some components ([8087cb1](https://github.com/cozy/cozy-ui/commit/8087cb1))
+
+
+### BREAKING CHANGES
+
+* If you were using `data-test-id` prop to test `NestedSelect` or `UploadQueue` components, you should now use `data-testid`. Besides if something fail on `CozyDialog` components, take a look at our helpers in `react/CozyDialogs` to know how to test these components.
+
 # [59.3.0](https://github.com/cozy/cozy-ui/compare/v59.2.0...v59.3.0) (2022-01-14)
 
 
