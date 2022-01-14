@@ -8,8 +8,8 @@ module.exports = async (page, screenshot) => {
   ]) {
     console.log(`Screenshotting dialog type ${dialogType}`)
 
-    const openBtnSel = `[data-test-id=open-btn-${dialogType}]`
-    const closeBtnSel = '[data-test-id*=modal-close-button]'
+    const openBtnSel = `[data-testid=open-btn-${dialogType}]`
+    const closeBtnSel = '[data-testid*=modal-close-button]'
     await page.waitForSelector(openBtnSel)
     await page.click(openBtnSel)
     await page.waitForSelector(closeBtnSel)

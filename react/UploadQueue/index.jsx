@@ -171,7 +171,7 @@ const Item = translate()(
     return (
       <ListItem
         divider
-        data-test-id="upload-queue-item"
+        data-testid="upload-queue-item"
         className={cx('u-ph-1', {
           [styles['upload-queue-item--done']]: done,
           [styles['upload-queue-item--error']]: error
@@ -187,7 +187,7 @@ const Item = translate()(
           </ListItemIcon>
         ) : null}
         <ListItemText disableTypography>
-          <div data-test-id="upload-queue-item-name" className="u-ellipsis">
+          <div data-testid="upload-queue-item-name" className="u-ellipsis">
             <Typography variant="body1" className="u-ellipsis">
               {filename}
               {extension && (
@@ -233,7 +233,7 @@ class UploadQueue extends Component {
     const { collapsed } = this.state
     return (
       <div
-        data-test-id="upload-queue"
+        data-testid="upload-queue"
         className={cx(styles['upload-queue'], {
           [styles['upload-queue--visible']]: queue.length !== 0,
           [styles['upload-queue--collapsed']]: collapsed,
@@ -263,7 +263,7 @@ class UploadQueue extends Component {
           )}
           {doneCount >= queue.length && (
             <div
-              data-test-id="upload-queue-success"
+              data-testid="upload-queue-success"
               className={styles['upload-queue-header-inner']}
             >
               <Typography variant="h6">

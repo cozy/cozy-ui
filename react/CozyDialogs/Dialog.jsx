@@ -26,18 +26,18 @@ const Dialog = props => {
       {!fullScreen && onClose && (
         <DialogCloseButton
           onClick={onClose}
-          data-test-id={`modal-close-button-${id}`}
+          data-testid={`modal-close-button-${id}`}
         />
       )}
       {!fullScreen && onBack && (
         <DialogBackButton
           onClick={onBack}
-          data-test-id={`modal-back-button-${id}`}
+          data-testid={`modal-back-button-${id}`}
         />
       )}
       {fullScreen && onBackOrClose && (
         <DialogBackButton
-          data-test-id={`modal-backclose-button-${id}`}
+          data-testid={`modal-backclose-button-${id}`}
           onClick={onBackOrClose}
         />
       )}
