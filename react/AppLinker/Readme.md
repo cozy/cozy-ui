@@ -5,6 +5,12 @@ If the app is known to Cozy (for example Drive or Banks), and
 the user has installed it on its device, the native app will
 be opened.
 
+The app's manifest can be set in the `app` prop. Then, in a
+ReactNative environment, the AppLinker will be able to send
+`openApp` message to the native environment with this `app`
+data. Ideally the `mobile` member should be set with all data
+needed to open the native app ([more info](https://github.com/cozy/cozy-stack/blob/master/docs/apps.md#mobile))
+
 Handles several cases:
 
 * On mobile app and other mobile app available
