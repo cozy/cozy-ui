@@ -59,7 +59,8 @@
     "start:doc": "env BUILD_ENV=watch-styleguidist styleguidist server --config docs/styleguide.config.js",
     "start:doc:kss": "nodemon --ext styl,md --watch stylus --exec 'yarn build:doc:kss && http-server build/styleguide -p 4242'",
     "start": "yarn build --watch",
-    "removeEmptyCss": "node scripts/removeEmptyCss.js"
+    "removeEmptyCss": "node scripts/removeEmptyCss.js",
+    "optimizeIcons": "svgo -r --folder assets/icons"
   },
   "sideEffects": [
     "*.css",
