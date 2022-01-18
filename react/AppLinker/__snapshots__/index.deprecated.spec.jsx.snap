@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app icon should not crash if no href 1`] = `
+<div>
+  <a
+    onClick={[Function]}
+  >
+    Open 
+    Cozy Drive
+  </a>
+</div>
+`;
+
+exports[`app icon should render correctly 1`] = `
+<div>
+  <a
+    href="https://fake.link"
+    onClick={null}
+  >
+    Open 
+    Cozy Drive
+  </a>
+</div>
+`;
