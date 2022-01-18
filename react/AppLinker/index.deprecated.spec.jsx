@@ -1,3 +1,11 @@
+/**
+ * Those tests are here to test previous AppLinker implementation base on
+ * `slug` prop.
+ * Now that AppLinkers implements `app` prop and uses `app.slug`, the old
+ * `slug` prop is deprecated
+ * Those tests should be kept until `slug` prop is completely removed
+ */
+
 import React from 'react'
 import { shallow } from 'enzyme'
 import {
@@ -14,11 +22,15 @@ jest.useFakeTimers()
 
 const tMock = x => x
 
-class AppItem extends React.Component {
+class DeprecatedAppItem extends React.Component {
   render() {
     const { app, onAppSwitch } = this.props
     return (
-      <AppLinker onAppSwitch={onAppSwitch} href={'https://fake.link'} app={app}>
+      <AppLinker
+        onAppSwitch={onAppSwitch}
+        slug={app.slug}
+        href={'https://fake.link'}
+      >
         {({ onClick, href, name }) => (
           <div>
             <a href={href} onClick={onClick}>
@@ -50,16 +62,14 @@ const app = {
 }
 
 describe('app icon', () => {
-  let spyConsoleError, openNativeFromNativeSpy, appSwitchMock
+  let spyConsoleError, spyConsoleWarn, openNativeFromNativeSpy, appSwitchMock
 
   beforeEach(() => {
     isMobileApp.mockReturnValue(false)
     spyConsoleError = jest.spyOn(console, 'error')
-    spyConsoleError.mockImplementation(message => {
-      if (message.lastIndexOf('Warning: Failed prop type:') === 0) {
-        throw new Error(message)
-      }
-    })
+    spyConsoleError.mockImplementation(() => {})
+    spyConsoleWarn = jest.spyOn(console, 'warn')
+    spyConsoleWarn.mockImplementation(() => {})
     openNativeFromNativeSpy = jest.spyOn(AppLinker, 'openNativeFromNative')
     isMobileApp.mockReturnValue(false)
     isMobile.mockReturnValue(false)
@@ -69,17 +79,18 @@ describe('app icon', () => {
 
   afterEach(() => {
     spyConsoleError.mockRestore()
+    spyConsoleWarn.mockRestore()
     jest.restoreAllMocks()
   })
 
   it('should render correctly', () => {
-    const root = shallow(<AppItem t={tMock} app={app} />).dive()
+    const root = shallow(<DeprecatedAppItem t={tMock} app={app} />).dive()
     expect(root.getElement()).toMatchSnapshot()
   })
 
   it('should work for native -> native', () => {
     const root = shallow(
-      <AppItem t={tMock} app={app} onAppSwitch={appSwitchMock} />
+      <DeprecatedAppItem t={tMock} app={app} onAppSwitch={appSwitchMock} />
     ).dive()
     root.find('a').simulate('click')
     expect(appSwitchMock).not.toHaveBeenCalled()
@@ -95,11 +106,11 @@ describe('app icon', () => {
     expect(appSwitchMock).toHaveBeenCalled()
   })
 
-  it('should work for web -> native for Android (custom schema) ', () => {
+  it('should work for web -> native for Android (custom schema)', () => {
     isMobile.mockReturnValue(true)
     isAndroid.mockResolvedValue(true)
     const root = shallow(
-      <AppItem t={tMock} app={app} onAppSwitch={appSwitchMock} />
+      <DeprecatedAppItem t={tMock} app={app} onAppSwitch={appSwitchMock} />
     ).dive()
     root.find('a').simulate('click', { preventDefault: () => {} })
     expect(openDeeplinkOrRedirect).toHaveBeenCalledWith(
@@ -112,7 +123,7 @@ describe('app icon', () => {
   it('should work for web -> native for iOS (universal link)', () => {
     isMobile.mockReturnValue(true)
     const root = shallow(
-      <AppItem t={tMock} app={app} onAppSwitch={appSwitchMock} />
+      <DeprecatedAppItem t={tMock} app={app} onAppSwitch={appSwitchMock} />
     ).dive()
     root.find('a').simulate('click', { preventDefault: () => {} })
 
@@ -122,7 +133,7 @@ describe('app icon', () => {
   it('should work for native -> web', () => {
     isMobileApp.mockReturnValue(true)
     const root = shallow(
-      <AppItem t={tMock} app={app} onAppSwitch={appSwitchMock} />
+      <DeprecatedAppItem t={tMock} app={app} onAppSwitch={appSwitchMock} />
     ).dive()
     root.find('a').simulate('click')
     expect(appSwitchMock).toHaveBeenCalled()
@@ -130,9 +141,8 @@ describe('app icon', () => {
 
   it('should not crash if no href', () => {
     isMobileApp.mockReturnValue(true)
-    spyConsoleError.mockImplementation(() => {})
     const root = shallow(
-      <AppLinker onAppSwitch={appSwitchMock} app={app}>
+      <AppLinker onAppSwitch={appSwitchMock} slug={app.slug}>
         {({ onClick, href, name }) => (
           <div>
             <a href={href} onClick={onClick}>

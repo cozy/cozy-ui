@@ -22,7 +22,35 @@ anchor.
 
 ```jsx
 import AppLinker from 'cozy-ui/transpiled/react/AppLinker';
-<AppLinker slug='banks' href='http://dalailama-banks.mycozy.cloud'>{
+
+const app = {
+  slug: 'banks'
+};
+
+<AppLinker app={app} href='http://dalailama-banks.mycozy.cloud'>{
+  ({ onClick, href, name }) => (
+    <a href={href} onClick={onClick}>
+      Open { name }
+    </a>
+  )
+}</AppLinker>
+```
+
+### Exemple with mobile data
+
+```jsx
+import AppLinker from 'cozy-ui/transpiled/react/AppLinker';
+
+const app = {
+  slug: 'passwords',
+  mobile: {
+    schema: 'cozypass://',
+    id_playstore: 'io.cozy.pass',
+    id_appstore: 'cozy-pass/id1502262449'
+  }
+};
+
+<AppLinker app={app} href='http://dalailama-passwords.mycozy.cloud'>{
   ({ onClick, href, name }) => (
     <a href={href} onClick={onClick}>
       Open { name }

@@ -45,7 +45,7 @@ export class AppLinker extends React.Component {
   }
 
   async checkAppAvailability() {
-    const { slug } = this.props
+    const slug = AppLinker.getSlug(this.props)
     const appInfo = NATIVE_APP_INFOS[slug]
     if (appInfo) {
       const nativeAppIsAvailable = Boolean(await memoizedCheckApp(appInfo))
@@ -53,8 +53,25 @@ export class AppLinker extends React.Component {
     }
   }
 
+  static getSlug(props) {
+    if (props.app && props.app.slug) {
+      return props.app.slug
+    }
+
+    return props.slug
+  }
+
+  static deprecateSlug(props) {
+    if (props.slug) {
+      console.warn(
+        `AppLinker's 'slug' prop is deprecated, please use 'app.slug' instead`
+      )
+    }
+  }
+
   static getOnClickHref(props, nativeAppIsAvailable, context) {
-    const { slug, nativePath, app } = props
+    const { app, nativePath } = props
+    const slug = AppLinker.getSlug(props)
     let href = props.href
     let onClick = null
     const usingNativeApp = isMobileApp()
@@ -111,7 +128,8 @@ export class AppLinker extends React.Component {
     }
   }
   static openNativeFromWeb(props, ev) {
-    const { href, slug, nativePath, onAppSwitch } = props
+    const { href, nativePath, onAppSwitch } = props
+    const slug = AppLinker.getSlug(props)
     const appInfo = NATIVE_APP_INFOS[slug]
 
     if (ev) {
@@ -134,7 +152,8 @@ export class AppLinker extends React.Component {
   }
 
   static openNativeFromNative(props, ev) {
-    const { slug, onAppSwitch } = props
+    const { onAppSwitch } = props
+    const slug = AppLinker.getSlug(props)
     if (ev) {
       ev.preventDefault()
     }
@@ -150,7 +169,9 @@ export class AppLinker extends React.Component {
   }
 
   render() {
-    const { children, slug } = this.props
+    const { children } = this.props
+    AppLinker.deprecateSlug(this.props)
+    const slug = AppLinker.getSlug(this.props)
     const { nativeAppIsAvailable } = this.state
     const appInfo = NATIVE_APP_INFOS[slug]
     const { href, onClick } = AppLinker.getOnClickHref(
@@ -166,8 +187,8 @@ AppLinker.defaultProps = {
   nativePath: '/'
 }
 AppLinker.propTypes = {
-  // Slug of the app : drive / banks ...
-  slug: PropTypes.string.isRequired,
+  /** DEPRECATED: please use app.slug prop */
+  slug: PropTypes.string,
   /*
   Full web url : Used by default on desktop browser
   Used as a fallback_uri on mobile web
@@ -177,7 +198,17 @@ AppLinker.propTypes = {
     Path used for "native link"
   */
   nativePath: PropTypes.string,
-  onAppSwitch: PropTypes.func
+  onAppSwitch: PropTypes.func,
+  app: PropTypes.shape({
+    // Slug of the app : drive / banks ...
+    slug: PropTypes.string.isRequired,
+    // Information about mobile native app
+    mobile: PropTypes.shape({
+      schema: PropTypes.string,
+      id_playstore: PropTypes.string,
+      id_appstore: PropTypes.string
+    })
+  }).isRequired
 }
 
 export default AppLinker
