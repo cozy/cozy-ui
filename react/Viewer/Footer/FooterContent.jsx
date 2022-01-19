@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import { isMobileApp } from 'cozy-device-helper'
 import { getReferencedBy, useQuery, models } from 'cozy-client'
 
-import BottomSheet from '../../BottomSheet'
+import BottomSheet, { BottomSheetHeader } from '../../BottomSheet'
 
 import { buildContactByIdsQuery } from '../queries'
 import { isValidForPanel } from '../helpers'
@@ -30,8 +30,6 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const classes = { header: 'u-ph-1 u-pb-1' }
-
 const FooterContent = ({ file, toolbarRef, disableSharing }) => {
   const styles = useStyles()
   const FileActionButton = isMobileApp() ? ForwardButton : DownloadButton
@@ -55,19 +53,13 @@ const FooterContent = ({ file, toolbarRef, disableSharing }) => {
     (contactsFullname || contactIds.length === 0)
   ) {
     return (
-      <BottomSheet
-        toolbarProps={toolbarProps}
-        classes={classes}
-        header={
-          <>
-            {!disableSharing && <Sharing file={file} />}
-            <FileActionButton file={file} />
-          </>
-        }
-        content={
-          <BottomSheetContent file={file} contactsFullname={contactsFullname} />
-        }
-      />
+      <BottomSheet toolbarProps={toolbarProps}>
+        <BottomSheetHeader className="u-ph-1 u-pb-1">
+          {!disableSharing && <Sharing file={file} />}
+          <FileActionButton file={file} />
+        </BottomSheetHeader>
+        <BottomSheetContent file={file} contactsFullname={contactsFullname} />
+      </BottomSheet>
     )
   }
 
