@@ -1,3 +1,10 @@
+# [60.2.0](https://github.com/cozy/cozy-ui/compare/v60.1.0...v60.2.0) (2022-01-19)
+
+
+### Features
+
+* Add `titleRef` on CozyDialogs ([9bd885b](https://github.com/cozy/cozy-ui/commit/9bd885b))
+
 # [60.1.0](https://github.com/cozy/cozy-ui/compare/v60.0.0...v60.1.0) (2022-01-19)
 
 
