@@ -31629,6 +31629,24 @@ progress.upload-queue-progress--1CmN- {
   }
 }
 
+.intentModal--1aYIb {
+  height: 90vh;
+}
+@media (max-width: 48rem) {
+  .intentModal--1aYIb {
+    height: 100%;
+    width: 100%;
+  }
+}
+.intentModal--1aYIb > div {
+  height: 100%;
+  max-width: unset !important;
+}
+.intentModal--1aYIb .intentModal__cross--1Hfuz {
+  top: 0.25rem;
+  right: 0.5rem;
+}
+
 html {
   --zIndex-below: -1;
   --zIndex-app: 0;
@@ -33911,23 +33929,5 @@ html {
   .Panel-side--327EK {
     flex-basis: auto;
   }
-}
-
-.intentModal--1aYIb {
-  height: 90vh;
-}
-@media (max-width: 48rem) {
-  .intentModal--1aYIb {
-    height: 100%;
-    width: 100%;
-  }
-}
-.intentModal--1aYIb > div {
-  height: 100%;
-  max-width: unset !important;
-}
-.intentModal--1aYIb .intentModal__cross--1Hfuz {
-  top: 0.25rem;
-  right: 0.5rem;
 }
 
