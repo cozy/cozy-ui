@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { BottomSheet as MuiBottomSheet } from 'mui-bottom-sheet'
-import cx from 'classnames'
 
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Paper from 'cozy-ui/transpiled/react/Paper'
@@ -54,7 +53,7 @@ const computeMaxHeight = toolbarProps => {
   return window.innerHeight - computedToolbarHeight
 }
 
-const BottomSheet = ({ toolbarProps, classes, header, content, settings }) => {
+const BottomSheet = ({ toolbarProps, settings, children }) => {
   const innerContentRef = useRef()
   const headerRef = useRef()
   const headerContentRef = useRef()
@@ -78,16 +77,18 @@ const BottomSheet = ({ toolbarProps, classes, header, content, settings }) => {
   }, [])
 
   useEffect(() => {
+    const headerContent = headerContentRef.current
     const maxHeight = computeMaxHeight(toolbarProps)
     const mediumHeight = Math.round(maxHeight * mediumHeightRatio)
-    const actionButtonsHeight = parseFloat(
-      getComputedStyle(headerContentRef.current).getPropertyValue('height')
-    )
-    const actionButtonsBottomMargin = parseFloat(
-      getComputedStyle(headerContentRef.current).getPropertyValue(
-        'padding-bottom'
-      )
-    )
+
+    const actionButtonsHeight = headerContent
+      ? parseFloat(getComputedStyle(headerContent).getPropertyValue('height'))
+      : 0
+    const actionButtonsBottomMargin = headerContent
+      ? parseFloat(
+          getComputedStyle(headerContent).getPropertyValue('padding-bottom')
+        )
+      : 0
     const minHeight =
       headerRef.current.offsetHeight +
       actionButtonsHeight +
@@ -100,7 +101,12 @@ const BottomSheet = ({ toolbarProps, classes, header, content, settings }) => {
     setPeekHeights([minHeight, mediumHeight, maxHeight])
     setInitPos(mediumHeight)
     setBottomSpacerHeight(bottomSpacerHeight)
-  }, [innerContentRef, headerContentRef, toolbarProps, mediumHeightRatio])
+  }, [
+    innerContentRef,
+    headerContentRef.current,
+    toolbarProps,
+    mediumHeightRatio
+  ])
 
   const handleOnIndexChange = snapIndex => {
     const maxHeightSnapIndex = peekHeights.length - 1
@@ -112,6 +118,13 @@ const BottomSheet = ({ toolbarProps, classes, header, content, settings }) => {
       setIsTopPosition(false)
     }
   }
+
+  const overriddenChildren = React.Children.map(children, child => {
+    if (child.type.name === 'BottomSheetHeader') {
+      return React.cloneElement(child, { headerContentRef })
+    }
+    return child
+  })
 
   return (
     <MuiBottomSheet
@@ -146,17 +159,7 @@ const BottomSheet = ({ toolbarProps, classes, header, content, settings }) => {
           className="u-flex u-flex-column u-ov-hidden"
           spacing="s"
         >
-          <Paper
-            ref={headerContentRef}
-            className={cx('u-flex u-flex-items-center', {
-              [classes['header']]: classes.header
-            })}
-            elevation={0}
-            square
-          >
-            {header}
-          </Paper>
-          {content}
+          {overriddenChildren}
         </Stack>
       </div>
       <div style={{ height: bottomSpacerHeight }} />
@@ -177,15 +180,6 @@ BottomSheet.propTypes = {
     /** Toolbar height value */
     height: PropTypes.func
   }),
-  /** Css classes to pass for some elements */
-  classes: PropTypes.shape({
-    /** Css classes of the header element */
-    header: PropTypes.string
-  }),
-  /** Content of the bottomsheet's header */
-  header: PropTypes.object,
-  /** Content of the bottomsheet's body */
-  content: PropTypes.object,
   /** Settings that can be modified */
   settings: PropTypes.shape({
     /** Height of the middle snap point, expressed as a percentage of the viewport height */
