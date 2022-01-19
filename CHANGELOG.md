@@ -1,3 +1,12 @@
+# [60.1.0](https://github.com/cozy/cozy-ui/compare/v60.0.0...v60.1.0) (2022-01-19)
+
+
+### Features
+
+* Add optimized new Icons ([1bae76a](https://github.com/cozy/cozy-ui/commit/1bae76a))
+* Add svgo package ([427e409](https://github.com/cozy/cozy-ui/commit/427e409))
+* Svgr generator script can now deal with folder ([cb65cb5](https://github.com/cozy/cozy-ui/commit/cb65cb5))
+
 # [60.0.0](https://github.com/cozy/cozy-ui/compare/v59.3.0...v60.0.0) (2022-01-14)
 
 
