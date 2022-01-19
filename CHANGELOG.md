@@ -1,3 +1,12 @@
+# [60.3.0](https://github.com/cozy/cozy-ui/compare/v60.2.0...v60.3.0) (2022-01-19)
+
+
+### Features
+
+* Add new icons radio-checked and radio-unchecked ([d441d6c](https://github.com/cozy/cozy-ui/commit/d441d6c))
+* Add new Radios button ([13cf089](https://github.com/cozy/cozy-ui/commit/13cf089))
+* Deprecates old Radio component ([b5785b4](https://github.com/cozy/cozy-ui/commit/b5785b4))
+
 # [60.2.0](https://github.com/cozy/cozy-ui/compare/v60.1.0...v60.2.0) (2022-01-19)
 
 
