@@ -81,6 +81,7 @@ module.exports = {
         '../react/AppTitle/index.jsx',
         '../react/Avatar/index.jsx',
         '../react/BottomDrawer/index.jsx',
+        '../react/BottomSheet/index.jsx',
         '../react/Empty/index.jsx',
         '../react/Figure/Figure.jsx',
         '../react/Figure/FigureBlock.jsx',
