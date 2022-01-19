@@ -193,7 +193,7 @@ AppLinker.propTypes = {
   Full web url : Used by default on desktop browser
   Used as a fallback_uri on mobile web
   */
-  href: PropTypes.string.isRequired,
+  href: PropTypes.string,
   /*
     Path used for "native link"
   */
