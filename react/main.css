@@ -26824,6 +26824,28 @@ html {
   justify-content: flex-start;
 }
 
+.filePickerBreadcrumb-previousPath--3LKJH {
+  color: var(--actionColorActive);
+  cursor: pointer;
+}
+.filePickerBreadcrumb-icon--3aFyd {
+  color: var(--actionColorActive);
+  margin: 0 0.25rem;
+}
+@supports (display: contents) {
+  .filePickerBreadcrumb-wrapper--3pu1w {
+    display: contents;
+  }
+}
+@supports not (display: contents) {
+  .filePickerBreadcrumb-wrapper--3pu1w {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    width: 100%;
+  }
+}
+
 .Token--number--2EzoN {
   color: #297ef2;
 }
