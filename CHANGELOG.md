@@ -1,3 +1,11 @@
+# [60.4.0](https://github.com/cozy/cozy-ui/compare/v60.3.0...v60.4.0) (2022-01-20)
+
+
+### Features
+
+* Add new BottomSheet component ([7064202](https://github.com/cozy/cozy-ui/commit/7064202))
+* Replace the Viewer BottomSheet by the new one ([184b5af](https://github.com/cozy/cozy-ui/commit/184b5af))
+
 # [60.3.0](https://github.com/cozy/cozy-ui/compare/v60.2.0...v60.3.0) (2022-01-19)
 
 
