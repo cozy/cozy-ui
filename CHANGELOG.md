@@ -1,3 +1,17 @@
+# [60.6.0](https://github.com/cozy/cozy-ui/compare/v60.5.0...v60.6.0) (2022-01-20)
+
+
+### Bug Fixes
+
+* Remove `isRequired` on AppLinker's `href` prop ([5c8b799](https://github.com/cozy/cozy-ui/commit/5c8b799))
+
+
+### Features
+
+* Open apps using their native mobile version when available ([d4bd421](https://github.com/cozy/cozy-ui/commit/d4bd421))
+* Replace `slug` prop by `app.slug` in `AppLinker` ([fc9cd87](https://github.com/cozy/cozy-ui/commit/fc9cd87))
+* Upgrade cozy-intent to 1.3.0 ([e65af63](https://github.com/cozy/cozy-ui/commit/e65af63))
+
 # [60.5.0](https://github.com/cozy/cozy-ui/compare/v60.4.0...v60.5.0) (2022-01-20)
 
 
