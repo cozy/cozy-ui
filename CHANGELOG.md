@@ -1,3 +1,11 @@
+# [60.5.0](https://github.com/cozy/cozy-ui/compare/v60.4.0...v60.5.0) (2022-01-20)
+
+
+### Features
+
+* Add FilePicker component ([288d047](https://github.com/cozy/cozy-ui/commit/288d047))
+* Add filesize package ([9286dcd](https://github.com/cozy/cozy-ui/commit/9286dcd))
+
 # [60.4.0](https://github.com/cozy/cozy-ui/compare/v60.3.0...v60.4.0) (2022-01-20)
 
 
