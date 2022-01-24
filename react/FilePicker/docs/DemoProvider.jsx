@@ -52,7 +52,7 @@ const createMockClientForDoc = ({ queries = {} }) => {
 const setupClient = () => {
   const client = createMockClientForDoc({
     queries: {
-      'buildCurrentFolderQuery-io.cozy.files.root-dir': {
+      'onlyfolder-io.cozy.files.root-dir': {
         data: [
           {
             _id: 'io.cozy.files.root-dir',
@@ -131,7 +131,7 @@ const setupClient = () => {
         }
       },
 
-      'buildCurrentFolderQuery-folder.01.id': {
+      'onlyfolder-folder.01.id': {
         data: [
           {
             _id: 'folder.01.id',
@@ -186,7 +186,7 @@ const setupClient = () => {
         }
       },
 
-      'buildCurrentFolderQuery-folder.02.id': {
+      'onlyfolder-folder.02.id': {
         data: [
           {
             _id: 'folder.02.id',
@@ -230,7 +230,7 @@ const setupClient = () => {
         }
       },
 
-      'buildCurrentFolderQuery-folder.03.id': {
+      'onlyfolder-folder.03.id': {
         data: [
           {
             _id: 'folder.03.id',
