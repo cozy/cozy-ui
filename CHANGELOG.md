@@ -1,3 +1,11 @@
+## [60.6.1](https://github.com/cozy/cozy-ui/compare/v60.6.0...v60.6.1) (2022-01-24)
+
+
+### Bug Fixes
+
+* Bump cozy-device-helper ([04463f7](https://github.com/cozy/cozy-ui/commit/04463f7))
+* Show breadcrumb on FilePicker documentation ([8f92f09](https://github.com/cozy/cozy-ui/commit/8f92f09))
+
 # [60.6.0](https://github.com/cozy/cozy-ui/compare/v60.5.0...v60.6.0) (2022-01-20)
 
 
