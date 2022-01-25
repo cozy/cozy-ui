@@ -1,3 +1,10 @@
+# [60.7.0](https://github.com/cozy/cozy-ui/compare/v60.6.1...v60.7.0) (2022-01-25)
+
+
+### Features
+
+* Add FolderMoveto icon ([7d68e72](https://github.com/cozy/cozy-ui/commit/7d68e72))
+
 ## [60.6.1](https://github.com/cozy/cozy-ui/compare/v60.6.0...v60.6.1) (2022-01-24)
 
 
