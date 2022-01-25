@@ -1,3 +1,10 @@
+# [60.8.0](https://github.com/cozy/cozy-ui/compare/v60.7.0...v60.8.0) (2022-01-25)
+
+
+### Features
+
+* Add PhoneUpload icon ([d88c4ba](https://github.com/cozy/cozy-ui/commit/d88c4ba))
+
 # [60.7.0](https://github.com/cozy/cozy-ui/compare/v60.6.1...v60.7.0) (2022-01-25)
 
 
