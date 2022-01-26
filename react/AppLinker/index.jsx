@@ -85,7 +85,10 @@ export class AppLinker extends React.Component {
 
       if (context) {
         return {
-          onClick: () => context.call('openApp', href, app),
+          onClick: event => {
+            event.preventDefault()
+            context.call('openApp', href, app)
+          },
           href: '#'
         }
       }
