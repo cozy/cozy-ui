@@ -120,7 +120,10 @@ const BottomSheet = ({ toolbarProps, settings, children }) => {
   }
 
   const overriddenChildren = React.Children.map(children, child => {
-    if (child.type.name === 'BottomSheetHeader') {
+    if (
+      child.type.name === 'BottomSheetHeader' ||
+      child.type.displayName === 'BottomSheetHeader'
+    ) {
       return React.cloneElement(child, { headerContentRef })
     }
     return child
@@ -176,9 +179,9 @@ BottomSheet.propTypes = {
   /** Toolbar properties */
   toolbarProps: PropTypes.shape({
     /** React reference of the toolbar node */
-    ref: PropTypes.bool,
+    ref: PropTypes.object,
     /** Toolbar height value */
-    height: PropTypes.func
+    height: PropTypes.number
   }),
   /** Settings that can be modified */
   settings: PropTypes.shape({
