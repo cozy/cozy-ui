@@ -1,3 +1,10 @@
+## [60.8.1](https://github.com/cozy/cozy-ui/compare/v60.8.0...v60.8.1) (2022-01-26)
+
+
+### Bug Fixes
+
+* PreventDefault on cozy-intent event ([f0ad95b](https://github.com/cozy/cozy-ui/commit/f0ad95b))
+
 # [60.8.0](https://github.com/cozy/cozy-ui/compare/v60.7.0...v60.8.0) (2022-01-25)
 
 
