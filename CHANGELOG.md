@@ -1,3 +1,10 @@
+## [60.8.2](https://github.com/cozy/cozy-ui/compare/v60.8.1...v60.8.2) (2022-01-26)
+
+
+### Bug Fixes
+
+* Auto ref on BottomSheet Header now use displayName too ([0f1e067](https://github.com/cozy/cozy-ui/commit/0f1e067))
+
 ## [60.8.1](https://github.com/cozy/cozy-ui/compare/v60.8.0...v60.8.1) (2022-01-26)
 
 
