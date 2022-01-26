@@ -4,6 +4,7 @@ import { BreakpointsProvider } from '../hooks/useBreakpoints'
 
 import { CozyProvider } from 'cozy-client'
 import { Provider } from 'react-redux'
+import { WebviewIntentProvider } from 'cozy-intent'
 
 const BarContextProvider = props => {
   if (!props.children) return null
@@ -13,7 +14,9 @@ const BarContextProvider = props => {
         <I18nContext.Provider
           value={{ f: props.f, t: props.t, lang: props.lang }}
         >
-          <BreakpointsProvider>{props.children}</BreakpointsProvider>
+          <BreakpointsProvider>
+            <WebviewIntentProvider>{props.children}</WebviewIntentProvider>
+          </BreakpointsProvider>
         </I18nContext.Provider>
       </CozyProvider>
     </Provider>
