@@ -15,7 +15,9 @@ const BarContextProvider = props => {
           value={{ f: props.f, t: props.t, lang: props.lang }}
         >
           <BreakpointsProvider>
-            <WebviewIntentProvider>{props.children}</WebviewIntentProvider>
+            <WebviewIntentProvider webviewService={props.webviewService}>
+              {props.children}
+            </WebviewIntentProvider>
           </BreakpointsProvider>
         </I18nContext.Provider>
       </CozyProvider>
