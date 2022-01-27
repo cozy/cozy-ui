@@ -9,13 +9,13 @@ const mockFile01 = {
   _id: '001',
   type: 'file',
   name: 'Filename',
-  attributes: { updated_at: '2021-01-01T12:00:00.000000+01:00' }
+  updated_at: '2021-01-01T12:00:00.000000+01:00'
 }
 const mockFolder01 = {
   _id: '002',
   type: 'directory',
   name: 'Foldername',
-  attributes: { updated_at: '2021-01-01T12:00:00.000000+01:00' }
+  updated_at: '2021-01-01T12:00:00.000000+01:00'
 }
 
 jest.mock('filesize', () => jest.fn())
