@@ -54,10 +54,9 @@ const FilePickerBodyItem = ({
   const Input = multiple ? Checkbox : Radio
 
   const listItemSecondaryContent = isFile(file)
-    ? `${f(file.attributes.updated_at, 'DD MMM YYYY')} - ${filesize(
-        file.attributes.size,
-        { base: 10 }
-      )}`
+    ? `${f(file.updated_at, 'DD MMM YYYY')} - ${filesize(file.size, {
+        base: 10
+      })}`
     : null
 
   return (

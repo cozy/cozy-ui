@@ -61,9 +61,7 @@ const setupClient = () => {
             type: 'directory',
             dir_id: 'io.cozy.files.root-dir',
             name: 'io.cozy.files.root-dir',
-            attributes: {
-              updated_at: '2021-01-01T12:00:00.000000+01:00'
-            }
+            updated_at: '2021-01-01T12:00:00.000000+01:00'
           }
         ],
         definition: {
@@ -83,9 +81,7 @@ const setupClient = () => {
             type: 'directory',
             dir_id: 'io.cozy.files.root-dir',
             name: 'Folder one',
-            attributes: {
-              updated_at: '2021-01-01T12:00:00.000000+01:00'
-            }
+            updated_at: '2021-01-01T12:00:00.000000+01:00'
           },
           {
             _id: 'folder.02.id',
@@ -94,9 +90,7 @@ const setupClient = () => {
             type: 'directory',
             dir_id: 'io.cozy.files.root-dir',
             name: 'Folder two',
-            attributes: {
-              updated_at: '2021-01-01T12:00:00.000000+01:00'
-            }
+            updated_at: '2021-01-01T12:00:00.000000+01:00'
           },
           {
             _id: 'file.a.id',
@@ -105,10 +99,8 @@ const setupClient = () => {
             type: 'file',
             dir_id: 'io.cozy.files.root-dir',
             name: 'File A',
-            attributes: {
-              updated_at: '2021-01-01T12:00:00.000000+01:00',
-              size: '111609'
-            }
+            updated_at: '2021-01-01T12:00:00.000000+01:00',
+            size: '111609'
           },
           {
             _id: 'file.b.id',
@@ -117,10 +109,8 @@ const setupClient = () => {
             type: 'file',
             dir_id: 'io.cozy.files.root-dir',
             name: 'File B',
-            attributes: {
-              updated_at: '2021-01-01T12:00:00.000000+01:00',
-              size: '11160963'
-            }
+            updated_at: '2021-01-01T12:00:00.000000+01:00',
+            size: '11160963'
           }
         ],
         definition: {
@@ -140,9 +130,7 @@ const setupClient = () => {
             type: 'directory',
             dir_id: 'io.cozy.files.root-dir',
             name: 'Folder One',
-            attributes: {
-              updated_at: '2021-01-01T12:00:00.000000+01:00'
-            }
+            updated_at: '2021-01-01T12:00:00.000000+01:00'
           }
         ],
         definition: {
@@ -161,9 +149,7 @@ const setupClient = () => {
             type: 'directory',
             dir_id: 'io.cozy.files.root-dir',
             name: 'Folder One',
-            attributes: {
-              updated_at: '2021-01-01T12:00:00.000000+01:00'
-            }
+            updated_at: '2021-01-01T12:00:00.000000+01:00'
           },
           {
             _id: 'file.c.id',
@@ -172,10 +158,8 @@ const setupClient = () => {
             type: 'file',
             dir_id: 'folder.01.id',
             name: 'File C',
-            attributes: {
-              updated_at: '2021-01-01T12:00:00.000000+01:00',
-              size: '111609'
-            }
+            updated_at: '2021-01-01T12:00:00.000000+01:00',
+            size: '111609'
           }
         ],
         definition: {
@@ -195,9 +179,7 @@ const setupClient = () => {
             type: 'directory',
             dir_id: 'io.cozy.files.root-dir',
             name: 'Folder Two',
-            attributes: {
-              updated_at: '2021-01-01T12:00:00.000000+01:00'
-            }
+            updated_at: '2021-01-01T12:00:00.000000+01:00'
           }
         ],
         definition: {
@@ -216,10 +198,8 @@ const setupClient = () => {
             type: 'file',
             dir_id: 'folder.02.id',
             name: 'File D',
-            attributes: {
-              updated_at: '2021-01-01T12:00:00.000000+01:00',
-              size: '222111'
-            }
+            updated_at: '2021-01-01T12:00:00.000000+01:00',
+            size: '222111'
           }
         ],
         definition: {
@@ -239,9 +219,7 @@ const setupClient = () => {
             type: 'directory',
             dir_id: 'folder.01.id',
             name: 'Folder Three',
-            attributes: {
-              updated_at: '2021-01-01T12:00:00.000000+01:00'
-            }
+            updated_at: '2021-01-01T12:00:00.000000+01:00'
           }
         ],
         definition: {
@@ -260,10 +238,8 @@ const setupClient = () => {
             type: 'file',
             dir_id: 'folder.03.id',
             name: 'File E',
-            attributes: {
-              updated_at: '2021-01-01T12:00:00.000000+01:00',
-              size: '222111'
-            }
+            updated_at: '2021-01-01T12:00:00.000000+01:00',
+            size: '222111'
           }
         ],
         definition: {
