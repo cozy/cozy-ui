@@ -1,3 +1,10 @@
+# [60.9.0](https://github.com/cozy/cozy-ui/compare/v60.8.2...v60.9.0) (2022-01-27)
+
+
+### Features
+
+* Add WebviewProvider in BarProvider ([bd2823e](https://github.com/cozy/cozy-ui/commit/bd2823e))
+
 ## [60.8.2](https://github.com/cozy/cozy-ui/compare/v60.8.1...v60.8.2) (2022-01-26)
 
 
