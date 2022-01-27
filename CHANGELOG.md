@@ -1,3 +1,10 @@
+## [60.9.1](https://github.com/cozy/cozy-ui/compare/v60.9.0...v60.9.1) (2022-01-27)
+
+
+### Bug Fixes
+
+* Error when attributes doesn't exists ([f2d4e41](https://github.com/cozy/cozy-ui/commit/f2d4e41))
+
 # [60.9.0](https://github.com/cozy/cozy-ui/compare/v60.8.2...v60.9.0) (2022-01-27)
 
 
