@@ -162,6 +162,7 @@
 
 * cozy-intent@1.1.2 or later is now required
 otherwise, AppLinker will crash
+* Wrap your App in the WebviewIntentProvider (via import { WebviewIntentProvider } from 'cozy-intent)
 
 ## [58.5.1](https://github.com/cozy/cozy-ui/compare/v58.5.0...v58.5.1) (2022-01-07)
 
