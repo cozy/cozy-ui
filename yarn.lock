@@ -5145,13 +5145,6 @@ cozy-device-helper@^1.12.0:
   dependencies:
     lodash "^4.17.19"
 
-cozy-device-helper@^1.16.0:
-  version "1.16.0"
-  resolved "https://registry.yarnpkg.com/cozy-device-helper/-/cozy-device-helper-1.16.0.tgz#76f124724b340cac222d33789787e3c841f4b123"
-  integrity sha512-VcHkceUaYT79wu0wiYR8BrcTloVqY+GrLMGgJAFPdH1d8r3Vzcs3v/juor77TTOPcYEWuG702U93kx1u5rXpCg==
-  dependencies:
-    lodash "^4.17.19"
-
 cozy-device-helper@^1.16.1:
   version "1.16.1"
   resolved "https://registry.yarnpkg.com/cozy-device-helper/-/cozy-device-helper-1.16.1.tgz#559b6c3f104541b53603590ccd6fc89296878f26"
@@ -5208,10 +5201,10 @@ cozy-harvest-lib@^6.7.3:
     react-markdown "^4.2.2"
     uuid "^3.3.2"
 
-cozy-intent@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/cozy-intent/-/cozy-intent-1.4.0.tgz#83f2111497624804886a3d6d39aef4bd0ef12d98"
-  integrity sha512-DF81Wz2tCo2rubf5/AMnU9cAkyzfmC8FVtD67Zs3vPNnImoJ+JeRrcsJJBTHrJmDENDpfiz9gA/HhMhWZJT9jw==
+cozy-intent@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/cozy-intent/-/cozy-intent-1.6.0.tgz#0fb0bd941219abc905121db8016a72f4f05aa258"
+  integrity sha512-HccShcWnG2jpoCnfbviUtImqLAkYHS9nB+rXyJ1rC+vkeQkY4Wo24EG98A8QIz0oXWCxOcYefbsR1l+7ogapOQ==
   dependencies:
     cozy-device-helper "^1.16.1"
     post-me "0.4.5"
