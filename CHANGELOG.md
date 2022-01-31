@@ -1,3 +1,17 @@
+# [60.10.0](https://github.com/cozy/cozy-ui/compare/v60.9.1...v60.10.0) (2022-01-31)
+
+
+### Bug Fixes
+
+* Update cozy-intent and device helper ([87d612c](https://github.com/cozy/cozy-ui/commit/87d612c))
+
+
+### Features
+
+* Inject webviewService into BarContext ([b6c269f](https://github.com/cozy/cozy-ui/commit/b6c269f))
+* Update BarContext testing ([15803f4](https://github.com/cozy/cozy-ui/commit/15803f4))
+* Upgrade cozy-intent to latest ([8653ad1](https://github.com/cozy/cozy-ui/commit/8653ad1))
+
 ## [60.9.1](https://github.com/cozy/cozy-ui/compare/v60.9.0...v60.9.1) (2022-01-27)
 
 
