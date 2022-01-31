@@ -146,7 +146,7 @@ const BottomSheet = ({ toolbarProps, settings, children }) => {
       onIndexChange={snapIndex => handleOnIndexChange(snapIndex)}
       styles={{ root: styles.root }}
       threshold={0}
-      // springConfig doc : https://www.react-spring.io/docs/hooks/api
+      // springConfig doc : https://docs.pmnd.rs/react-spring/common/configs
       springConfig={{
         tension: defaultBottomSheetSpringConfig.tension,
         friction: defaultBottomSheetSpringConfig.friction,
