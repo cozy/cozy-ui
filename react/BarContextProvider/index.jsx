@@ -6,18 +6,29 @@ import { CozyProvider } from 'cozy-client'
 import { Provider } from 'react-redux'
 import { WebviewIntentProvider } from 'cozy-intent'
 
-const BarContextProvider = props => {
-  if (!props.children) return null
+const BarContextProvider = ({
+  children,
+  store,
+  client,
+  f,
+  t,
+  lang,
+  webviewService
+}) => {
+  if (!children) return null
+
   return (
-    <Provider store={props.store}>
-      <CozyProvider client={props.client}>
-        <I18nContext.Provider
-          value={{ f: props.f, t: props.t, lang: props.lang }}
-        >
+    <Provider store={store}>
+      <CozyProvider client={client}>
+        <I18nContext.Provider value={{ f, t, lang }}>
           <BreakpointsProvider>
-            <WebviewIntentProvider webviewService={props.webviewService}>
-              {props.children}
-            </WebviewIntentProvider>
+            {webviewService ? (
+              <WebviewIntentProvider webviewService={webviewService}>
+                {children}
+              </WebviewIntentProvider>
+            ) : (
+              children
+            )}
           </BreakpointsProvider>
         </I18nContext.Provider>
       </CozyProvider>
