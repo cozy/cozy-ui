@@ -1,5 +1,5 @@
 import React from 'react'
-import { createMuiTheme } from '@material-ui/core/styles'
+import { createTheme } from '@material-ui/core/styles'
 
 import { getCssVariableValue } from '../utils/color'
 import isTesting from '../helpers/isTesting'
@@ -50,7 +50,7 @@ const themesCommonConfig = {
 
 export const makeTheme = type => {
   const palette = makePalette(type)
-  const theme = createMuiTheme({
+  const theme = createTheme({
     ...themesCommonConfig,
     typography: makeTypography(palette),
     palette
