@@ -1,3 +1,10 @@
+# [60.11.0](https://github.com/cozy/cozy-ui/compare/v60.10.1...v60.11.0) (2022-02-02)
+
+
+### Features
+
+* BottomSheet settings accept `mediumHeight` new prop ([0e2b254](https://github.com/cozy/cozy-ui/commit/0e2b254))
+
 ## [60.10.1](https://github.com/cozy/cozy-ui/compare/v60.10.0...v60.10.1) (2022-02-02)
 
 
