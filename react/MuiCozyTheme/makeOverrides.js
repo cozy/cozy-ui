@@ -633,28 +633,28 @@ const makeOverrides = theme => ({
   MuiRadio: {
     root: {
       padding: '12px',
-      '&.Mui-disabled svg': {
+      '&$disabled svg': {
         borderRadius: '50%',
         backgroundColor: theme.palette.background.default,
         fill: theme.palette.border.disabled
       },
-      '&:not(.Mui-checked) svg': {
+      '&:not($checked) svg': {
         fill: theme.palette.border.main
       }
     },
     colorPrimary: {
-      '&.Mui-checked svg': {
+      '&$checked svg': {
         fill: theme.palette.primary.main
       },
-      '&.Mui-disabled&.Mui-checked svg': {
+      '&$disabled&$checked svg': {
         fill: theme.palette.text.disabled
       }
     },
     colorSecondary: {
-      '&.Mui-checked svg': {
+      '&$checked svg': {
         fill: theme.palette.error.main
       },
-      '&.Mui-disabled&.Mui-checked svg': {
+      '&$disabled&$checked svg': {
         fill: theme.palette.text.disabled
       }
     }
@@ -710,12 +710,12 @@ const makeInvertedOverrides = invertedTheme => {
     },
     MuiCheckbox: {
       colorPrimary: {
-        '&.Mui-checked:not(.Mui-disabled)': {
+        '&$checked:not($disabled)': {
           color: invertedTheme.palette.success.main
         }
       },
       colorSecondary: {
-        '&.Mui-checked:not(.Mui-disabled)': {
+        '&$checked:not($disabled)': {
           color: invertedTheme.palette.error.main
         }
       }
