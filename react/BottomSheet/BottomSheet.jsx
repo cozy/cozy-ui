@@ -37,7 +37,8 @@ export const defaultBottomSheetSpringConfig = {
 }
 
 const defaultSettings = {
-  mediumHeightRatio: 0.33
+  mediumHeightRatio: 0.33,
+  mediumHeight: null
 }
 
 const computeMaxHeight = toolbarProps => {
@@ -54,17 +55,22 @@ const computeMaxHeight = toolbarProps => {
 }
 
 const BottomSheet = ({ toolbarProps, settings, children }) => {
+  const { mediumHeightRatio, mediumHeight } = useMemo(
+    () => ({
+      ...defaultSettings,
+      ...settings
+    }),
+    [settings]
+  )
+
   const innerContentRef = useRef()
   const headerRef = useRef()
   const headerContentRef = useRef()
   const [isTopPosition, setIsTopPosition] = useState(false)
   const [peekHeights, setPeekHeights] = useState(null)
-  const [initPos, setInitPos] = useState(null)
   const [bottomSpacerHeight, setBottomSpacerHeight] = useState(0)
+  const [initPos, setInitPos] = useState(mediumHeight)
 
-  const { mediumHeightRatio } = useMemo(() => settings || defaultSettings, [
-    settings
-  ])
   const styles = useMemo(() => makeStyles({ isTopPosition }), [isTopPosition])
 
   // hack to prevent pull-down-to-refresh behavior when dragging down the bottom sheet.
@@ -79,7 +85,8 @@ const BottomSheet = ({ toolbarProps, settings, children }) => {
   useEffect(() => {
     const headerContent = headerContentRef.current
     const maxHeight = computeMaxHeight(toolbarProps)
-    const mediumHeight = Math.round(maxHeight * mediumHeightRatio)
+    const computedMediumHeight =
+      mediumHeight || Math.round(maxHeight * mediumHeightRatio)
 
     const actionButtonsHeight = headerContent
       ? parseFloat(getComputedStyle(headerContent).getPropertyValue('height'))
@@ -98,14 +105,15 @@ const BottomSheet = ({ toolbarProps, settings, children }) => {
     // without stopping at the content height
     const bottomSpacerHeight = maxHeight - innerContentRef.current.offsetHeight
 
-    setPeekHeights([minHeight, mediumHeight, maxHeight])
-    setInitPos(mediumHeight)
+    setPeekHeights([minHeight, computedMediumHeight, maxHeight])
+    setInitPos(computedMediumHeight)
     setBottomSpacerHeight(bottomSpacerHeight)
   }, [
     innerContentRef,
     headerContentRef.current,
     toolbarProps,
-    mediumHeightRatio
+    mediumHeightRatio,
+    mediumHeight
   ])
 
   const handleOnIndexChange = snapIndex => {
