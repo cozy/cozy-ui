@@ -1,4 +1,4 @@
-Displays content coming up from the bottom of the screen. The pane can be swiped to the top of the screen.
+Displays content coming up from the bottom of the screen. The pane can be swiped to the top of the screen. [API documentation is here](https://github.com/cozy/mui-bottom-sheet#props-options)
 
 ```jsx
 import BottomSheet, { BottomSheetItem, BottomSheetHeader } from 'cozy-ui/transpiled/react/BottomSheet'
@@ -8,7 +8,7 @@ import Button from 'cozy-ui/transpiled/react/Buttons'
 initialState = { isBottomSheetDisplayed: isTesting() }
 const showBottomSheet = () => setState({ isBottomSheetDisplayed: true })
 
-const settings = { mediumHeightRatio: isTesting() ? 0.90 : 0.33 }
+const settings = isTesting() ? { mediumHeight: 450 } : undefined
 // -->
 
 ;
