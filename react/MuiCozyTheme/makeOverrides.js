@@ -1,4 +1,4 @@
-import { fade as alpha } from '@material-ui/core/styles'
+import { alpha } from '@material-ui/core/styles'
 
 const SWITCH_BAR_WIDTH = 25
 
