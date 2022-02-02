@@ -1,3 +1,10 @@
+## [60.10.1](https://github.com/cozy/cozy-ui/compare/v60.10.0...v60.10.1) (2022-02-02)
+
+
+### Bug Fixes
+
+* Radios and Checkbox css to use correct primary/secondary colors ([a81e5e3](https://github.com/cozy/cozy-ui/commit/a81e5e3))
+
 # [60.10.0](https://github.com/cozy/cozy-ui/compare/v60.9.1...v60.10.0) (2022-01-31)
 
 
