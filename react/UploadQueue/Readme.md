@@ -12,6 +12,7 @@ the upload queue:
 ```jsx
 import isTesting from '../helpers/isTesting'
 import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
+import UploadQueue from 'cozy-ui/transpiled/react/UploadQueue';
 
 const initialState = {
   popover: false
@@ -51,7 +52,7 @@ const data = {
 };
 
 <>
-  popover: <input type="checkbox" value={state.popover} onChange={() => setState({ popover: !state.popover })} />
+  popover: <input type="checkbox" value={state.popover} onChange={() => setState({ popover: !state.popover })}/>
   <UploadQueue
     lang='fr'
     app='Cozy Drive'

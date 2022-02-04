@@ -1,12 +1,15 @@
 import format from 'date-fns/format'
 import { DEFAULT_LANG } from '.'
+import formatDistanceToNow from 'date-fns/distance_in_words_to_now'
+
+const locales = {}
+let lang = DEFAULT_LANG
 
 const getWarningMessage = lang =>
   `The "${lang}" locale isn't supported by date-fns. or has not been included in the build. Check if you have configured a ContextReplacementPlugin that is too restrictive.`
 
-export const initFormat = (lang, defaultLang = DEFAULT_LANG) => {
-  const locales = {}
-
+export const provideDateFnsLocale = (userLang, defaultLang = DEFAULT_LANG) => {
+  lang = userLang
   try {
     locales[defaultLang] = require(`date-fns/locale/${defaultLang}/index.js`)
   } catch (err) {
@@ -20,5 +23,16 @@ export const initFormat = (lang, defaultLang = DEFAULT_LANG) => {
       console.warn(getWarningMessage(lang))
     }
   }
-  return (date, formatStr) => format(date, formatStr, { locale: locales[lang] })
+  return locales[lang]
 }
+
+export const initFormat = (userLang, defaultLang = DEFAULT_LANG) => (
+  date,
+  formatStr
+) => {
+  const locale = provideDateFnsLocale(userLang, defaultLang)
+  return format(date, formatStr, { locale })
+}
+
+export const formatLocallyDistanceToNow = date =>
+  formatDistanceToNow(date, { locale: locales[lang] })
