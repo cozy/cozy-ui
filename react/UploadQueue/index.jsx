@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import cx from 'classnames'
 import { withStyles } from '@material-ui/core/styles'
 import LinearProgress from '@material-ui/core/LinearProgress'
-import formatDistanceToNow from 'date-fns/distance_in_words_to_now'
 
 import { splitFilename } from 'cozy-client/dist/models/file'
 
@@ -25,6 +24,7 @@ import styles from './styles.styl'
 import localeEn from './locales/en.json'
 import localeEs from './locales/es.json'
 import localeFr from './locales/fr.json'
+import { formatLocallyDistanceToNow } from '../I18n/format'
 
 const locales = {
   en: localeEn,
@@ -64,20 +64,26 @@ const Pending = translate()(props => (
   </Typography>
 ))
 
-const formatRemainingTime = durationInSec => {
+export const formatRemainingTime = durationInSec => {
   const later = Date.now() + durationInSec * 1000
-  return formatDistanceToNow(later)
+  return formatLocallyDistanceToNow(later)
 }
+
+// https://date-fns.org/v2.28.0/docs/formatDistanceToNow
+const numberOfReferencesForPluralForm = durationInSec =>
+  durationInSec < 90 || (durationInSec > 2670 && durationInSec < 5370) ? 1 : 2
 
 const RemainingTime = ({ durationInSec }) => {
   const { t } = useI18n()
+
   return (
     <Typography
       variant="caption"
       className={cx(styles['upload-queue__progress-caption'], 'u-ellipsis')}
     >
       {t('item.remainingTime', {
-        time: formatRemainingTime(durationInSec)
+        time: formatRemainingTime(durationInSec),
+        smart_count: numberOfReferencesForPluralForm(durationInSec)
       })}
     </Typography>
   )
@@ -127,7 +133,7 @@ const Item = translate()(
     let done = false
     let error = false
     /**
-     * Status cames from the Upload Queue, but sometimes we're using
+     * Status came from the Upload Queue, but sometimes we're using
      * manual upload without using the Upload Queue system but we're still
      * using the UI component. When this is the case, the file handles on
      * his own its status.
@@ -210,7 +216,7 @@ const Item = translate()(
   }
 )
 
-class UploadQueue extends Component {
+export class UploadQueue extends Component {
   state = {
     collapsed: false
   }
@@ -256,7 +262,7 @@ class UploadQueue extends Component {
               >
                 {t('header_mobile', {
                   done: doneCount,
-                  total: queue.length
+                  smart_count: queue.length
                 })}
               </Typography>
             </div>
@@ -269,7 +275,7 @@ class UploadQueue extends Component {
               <Typography variant="h6">
                 {t('header_done', {
                   done: successCount,
-                  total: queue.length
+                  smart_count: queue.length
                 })}
               </Typography>
               <Button
