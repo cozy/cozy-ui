@@ -14,7 +14,7 @@ import Icon from '../Icon'
 import FileTypeText from '../Icons/FileTypeText'
 import FileTypeFolder from '../Icons/FileTypeFolder'
 import Checkbox from '../Checkbox'
-import Radio from '../Radio'
+import Radio from '../Radios'
 import { useI18n } from '../I18n'
 
 import styles from './styles.styl'
@@ -93,7 +93,6 @@ const FilePickerBodyItem = ({
         >
           <Input
             data-testid={multiple ? 'checkbox-btn' : 'radio-btn'}
-            gutter={false}
             onChange={() => {
               // handled by onClick on the container
             }}

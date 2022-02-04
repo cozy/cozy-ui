@@ -119,13 +119,14 @@ describe('FilePickerBodyItem components:', () => {
       })
       const radioBtn = getByTestId('radio-btn')
 
-      expect(radioBtn.getAttribute('disabled')).toBe('')
+      expect(radioBtn.getAttribute('disabled')).toBe(null)
     })
+
     it('should disable and not display the Radio button if it is a Folder and is not accepted', () => {
       const { getByTestId } = setup({ file: mockFolder01 })
       const radioBtn = getByTestId('radio-btn')
 
-      expect(radioBtn.getAttribute('disabled')).toBe('')
+      expect(radioBtn.getAttribute('disabled')).toBe(null)
     })
   })
 })

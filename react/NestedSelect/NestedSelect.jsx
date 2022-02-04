@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core'
-import Icon from '../Icon'
-import UIRadio from '../Radio'
 import omit from 'lodash/omit'
+
+import Icon from '../Icon'
+import Radio from '../Radios'
 import ListItem from '../MuiCozyTheme/ListItem'
 import ListItemText from '../ListItemText'
 import Divider from '../MuiCozyTheme/Divider'
@@ -246,10 +247,6 @@ NestedSelect.propTypes = {
 }
 
 export default NestedSelect
-
-export const Radio = ({ ...props }) => (
-  <UIRadio label="" gutter={false} {...props} />
-)
 
 const NestedSelectListItemText = withStyles({
   root: {
