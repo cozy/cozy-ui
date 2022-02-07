@@ -1,3 +1,10 @@
+# [60.12.0](https://github.com/cozy/cozy-ui/compare/v60.11.0...v60.12.0) (2022-02-07)
+
+
+### Features
+
+* Use new Radio button for FilePicker and NestedSelect ([a602dca](https://github.com/cozy/cozy-ui/commit/a602dca))
+
 # [60.11.0](https://github.com/cozy/cozy-ui/compare/v60.10.1...v60.11.0) (2022-02-02)
 
 
