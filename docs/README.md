@@ -131,7 +131,9 @@ When sending a PR, if your changes have graphic impacts, it is useful for the re
 you have deployed a version of the styleguidist containing your changes to your fork's repository.
 
 ```bash
-yarn build:doc:react
+yarn build
+yarn build:css:all
+yarn build:doc
 yarn deploy:doc --repo git@github.com:USERNAME/cozy-ui.git
 ```
 
