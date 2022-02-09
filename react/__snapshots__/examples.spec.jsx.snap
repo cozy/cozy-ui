@@ -201,7 +201,7 @@ exports[`Banner should render examples: Banner 1`] = `
   </div>
   <div class=\\"MuiPaper-root MuiPaper-elevation0\\">
     <div class=\\"styles__c-banner-wrapper___3KlaG\\">
-      <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-justify-xs-space-between\\">
+      <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-justify-content-xs-space-between\\">
         <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-center MuiGrid-grid-xs-12 MuiGrid-grid-lg-8\\">
           <div class=\\"MuiGrid-root MuiGrid-item\\">
             <div class=\\"styles__c-banner-icon___1f_LM\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
@@ -216,7 +216,7 @@ exports[`Banner should render examples: Banner 1`] = `
             <p class=\\"MuiTypography-root MuiTypography-body2\\">Get Cozy Drive for Desktop and synchronise your files safely to make them accessible at all times.</p>
           </div>
         </div>
-        <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-xs-flex-end MuiGrid-grid-xs-12 MuiGrid-grid-lg-4\\">
+        <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-flex-end MuiGrid-grid-xs-12 MuiGrid-grid-lg-4\\">
           <div class=\\"MuiGrid-root styles__c-banner-buttons___3sLgG MuiGrid-item\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path></svg><span>Download</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>No, thanks!</span></span></button></div>
         </div>
       </div>
@@ -7744,7 +7744,7 @@ exports[`ProgressionBanner should render examples: ProgressionBanner 1`] = `
   </div>
   <div class=\\"MuiPaper-root MuiPaper-elevation0\\">
     <div class=\\"styles__c-banner-wrapper___3KlaG Component-banner-18\\">
-      <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-justify-xs-space-between\\">
+      <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-justify-content-xs-space-between\\">
         <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-center MuiGrid-grid-xs-12 MuiGrid-grid-lg-8\\">
           <div class=\\"MuiGrid-root MuiGrid-item\\">
             <div class=\\"styles__c-banner-icon___1f_LM\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
