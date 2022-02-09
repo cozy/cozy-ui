@@ -1,3 +1,15 @@
+# [61.0.0](https://github.com/cozy/cozy-ui/compare/v60.12.0...v61.0.0) (2022-02-09)
+
+
+### Features
+
+* Upgrade mui to 4.12.3 ([b1b83d8](https://github.com/cozy/cozy-ui/commit/b1b83d8))
+
+
+### BREAKING CHANGES
+
+* Use must have `@material-ui/core` version `>= 4.12` in your application
+
 # [60.12.0](https://github.com/cozy/cozy-ui/compare/v60.11.0...v60.12.0) (2022-02-07)
 
 
