@@ -1,3 +1,10 @@
+## [61.1.1](https://github.com/cozy/cozy-ui/compare/v61.1.0...v61.1.1) (2022-02-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency handlebars to v4.7.7 [security] ([3df65a0](https://github.com/cozy/cozy-ui/commit/3df65a0))
+
 # [61.1.0](https://github.com/cozy/cozy-ui/compare/v61.0.0...v61.1.0) (2022-02-10)
 
 
