@@ -711,7 +711,7 @@ const makeInvertedOverrides = invertedTheme => {
     MuiCheckbox: {
       colorPrimary: {
         '&$checked:not($disabled)': {
-          color: invertedTheme.palette.success.main
+          color: invertedTheme.palette.primary.light
         }
       },
       colorSecondary: {
