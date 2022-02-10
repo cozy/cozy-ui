@@ -1,3 +1,10 @@
+# [61.1.0](https://github.com/cozy/cozy-ui/compare/v61.0.0...v61.1.0) (2022-02-10)
+
+
+### Features
+
+* **import-cost:** Decrease size of import of date-fns ([9f2dc1f](https://github.com/cozy/cozy-ui/commit/9f2dc1f))
+
 # [61.0.0](https://github.com/cozy/cozy-ui/compare/v60.12.0...v61.0.0) (2022-02-09)
 
 
