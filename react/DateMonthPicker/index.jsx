@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import range from 'lodash/range'
-import { format } from 'date-fns'
+import format from 'date-fns/format'
 import cx from 'classnames'
 
 import { useI18n } from '../I18n'
@@ -13,7 +13,7 @@ import styles from './styles.styl'
 
 const MonthButton = ({ monthNum, onClick, isSelected }) => {
   const { f } = useI18n()
-  // We do not care care about year and day since we are creating the date
+  // We do not care about year and day since we are creating the date
   // only to be able to format it into a monthName
   const d = new Date(2019, monthNum, 15)
   const handleClick = () => {
