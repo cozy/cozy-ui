@@ -1,3 +1,21 @@
+# [62.0.0](https://github.com/cozy/cozy-ui/compare/v61.1.1...v62.0.0) (2022-02-11)
+
+
+### Bug Fixes
+
+* Use correct color for checkbox in inverted theme ([878c8ad](https://github.com/cozy/cozy-ui/commit/878c8ad))
+* **UploadQueue:** UploadQueue manage internationalized progress message ([ecb00e1](https://github.com/cozy/cozy-ui/commit/ecb00e1))
+
+
+### Features
+
+* Remove useless IconButton stylus ([7749774](https://github.com/cozy/cozy-ui/commit/7749774))
+
+
+### BREAKING CHANGES
+
+* The .IconButton css class is no longer available in the stylesheet
+
 ## [61.1.1](https://github.com/cozy/cozy-ui/compare/v61.1.0...v61.1.1) (2022-02-10)
 
 
