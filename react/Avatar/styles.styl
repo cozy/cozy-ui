@@ -19,6 +19,15 @@
         filter grayscale(1)
         opacity .3
 
+.c-avatar--ghost
+    background-color transparent !important // to override inline style props
+    border 1px dashed var(--borderGhostColor)
+    color var(--secondaryTextColor)
+
+    & .c-avatar-image
+        filter grayscale(1)
+        opacity .3
+
 .c-avatar--xsmall
     @extend $circle--xsmall
 
