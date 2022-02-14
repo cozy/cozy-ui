@@ -46,6 +46,7 @@ export const Avatar = ({
   className,
   style,
   disabled,
+  ghost,
   icon
 }) => {
   const sizeStyle = createSizeStyle(size)
@@ -59,6 +60,7 @@ export const Avatar = ({
         text ? styles['c-avatar--text'] : '',
         image ? styles['c-avatar--image'] : '',
         disabled ? styles['c-avatar--disabled'] : '',
+        ghost ? styles['c-avatar--ghost'] : '',
         className
       )}
       style={avatarStyle}
@@ -82,6 +84,7 @@ Avatar.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   icon: PropTypes.oneOfType([PropTypes.node, iconPropType]),
+  ghost: PropTypes.bool,
   style: PropTypes.object
 }
 
@@ -92,6 +95,7 @@ Avatar.defaultProps = {
   className: '',
   disabled: false,
   icon: PeopleIcon,
+  ghost: false,
   style: {}
 }
 

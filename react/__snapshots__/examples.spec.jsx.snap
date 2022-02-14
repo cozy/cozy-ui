@@ -60,7 +60,52 @@ exports[`AppTitle should render examples: AppTitle 1`] = `
 
 exports[`Avatar should render examples: Avatar 1`] = `
 "<div>
-  <div class=\\"u-flex\\">
+  <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
+    <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">DISABLED</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">GHOST</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">OVERLAP</span></label>
+  </div>
+  <div class=\\"u-flex u-mv-half u-flex-wrap\\">
+    <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 16px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
+      </svg></div>
+    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 16px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--image___jDBci\\" style=\\"--circleSize: 16px;\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
+    <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 16px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" d=\\"M9.259 4.045a1.043 1.043 0 11-1.475-1.474L9.44.915a3.126 3.126 0 014.417-.002l1.23 1.23a3.126 3.126 0 01-.007 4.422l-3.612 3.612c-1.6 1.6-4.244 1.65-5.77.124a1.043 1.043 0 111.475-1.474c.699.698 2.023.673 2.82-.125l3.613-3.612a1.04 1.04 0 00.006-1.473l-1.23-1.23a1.04 1.04 0 00-1.468.003L9.26 4.045zm-2.518 7.91a1.043 1.043 0 011.475 1.474L6.56 15.085a3.126 3.126 0 01-4.417.002l-1.23-1.23a3.126 3.126 0 01.006-4.422l3.613-3.612c1.6-1.6 4.243-1.65 5.77-.124a1.043 1.043 0 01-1.475 1.474c-.7-.698-2.023-.673-2.82.125L2.393 10.91a1.04 1.04 0 00-.007 1.473l1.23 1.23a1.04 1.04 0 001.469-.003l1.655-1.655z\\"></path>
+      </svg></div>
+    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 16px; color: black;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+    <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 16px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" d=\\"M7.022 1.736c.543-.959 1.428-.95 1.966 0l6.532 11.529c.543.958.094 1.735-1.016 1.735h-13C.399 15-.051 14.215.487 13.265l6.535-11.53zM7.004 13c0-.552.443-1 1-1 .552 0 1 .444 1 1 0 .553-.444 1-1 1-.553 0-1-.444-1-1zm0-7.997a.999.999 0 011-1.003c.552 0 1 .438 1 1.003v4.994a.999.999 0 01-1 1.003c-.553 0-1-.438-1-1.003V5.003z\\"></path>
+      </svg></div>
+  </div>
+  <div class=\\"u-flex u-mv-half u-flex-wrap\\">
+    <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 24px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
+      </svg></div>
+    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 24px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--image___jDBci\\" style=\\"--circleSize: 24px;\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
+    <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 24px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" d=\\"M9.259 4.045a1.043 1.043 0 11-1.475-1.474L9.44.915a3.126 3.126 0 014.417-.002l1.23 1.23a3.126 3.126 0 01-.007 4.422l-3.612 3.612c-1.6 1.6-4.244 1.65-5.77.124a1.043 1.043 0 111.475-1.474c.699.698 2.023.673 2.82-.125l3.613-3.612a1.04 1.04 0 00.006-1.473l-1.23-1.23a1.04 1.04 0 00-1.468.003L9.26 4.045zm-2.518 7.91a1.043 1.043 0 011.475 1.474L6.56 15.085a3.126 3.126 0 01-4.417.002l-1.23-1.23a3.126 3.126 0 01.006-4.422l3.613-3.612c1.6-1.6 4.243-1.65 5.77-.124a1.043 1.043 0 01-1.475 1.474c-.7-.698-2.023-.673-2.82.125L2.393 10.91a1.04 1.04 0 00-.007 1.473l1.23 1.23a1.04 1.04 0 001.469-.003l1.655-1.655z\\"></path>
+      </svg></div>
+    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 24px; color: black;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+    <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 24px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" d=\\"M7.022 1.736c.543-.959 1.428-.95 1.966 0l6.532 11.529c.543.958.094 1.735-1.016 1.735h-13C.399 15-.051 14.215.487 13.265l6.535-11.53zM7.004 13c0-.552.443-1 1-1 .552 0 1 .444 1 1 0 .553-.444 1-1 1-.553 0-1-.444-1-1zm0-7.997a.999.999 0 011-1.003c.552 0 1 .438 1 1.003v4.994a.999.999 0 01-1 1.003c-.553 0-1-.438-1-1.003V5.003z\\"></path>
+      </svg></div>
+  </div>
+  <div class=\\"u-flex u-mv-half u-flex-wrap\\">
+    <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 32px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
+      </svg></div>
+    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--image___jDBci\\" style=\\"--circleSize: 32px;\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
+    <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 32px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" d=\\"M9.259 4.045a1.043 1.043 0 11-1.475-1.474L9.44.915a3.126 3.126 0 014.417-.002l1.23 1.23a3.126 3.126 0 01-.007 4.422l-3.612 3.612c-1.6 1.6-4.244 1.65-5.77.124a1.043 1.043 0 111.475-1.474c.699.698 2.023.673 2.82-.125l3.613-3.612a1.04 1.04 0 00.006-1.473l-1.23-1.23a1.04 1.04 0 00-1.468.003L9.26 4.045zm-2.518 7.91a1.043 1.043 0 011.475 1.474L6.56 15.085a3.126 3.126 0 01-4.417.002l-1.23-1.23a3.126 3.126 0 01.006-4.422l3.613-3.612c1.6-1.6 4.243-1.65 5.77-.124a1.043 1.043 0 01-1.475 1.474c-.7-.698-2.023-.673-2.82.125L2.393 10.91a1.04 1.04 0 00-.007 1.473l1.23 1.23a1.04 1.04 0 001.469-.003l1.655-1.655z\\"></path>
+      </svg></div>
+    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px; color: black;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+    <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 32px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" d=\\"M7.022 1.736c.543-.959 1.428-.95 1.966 0l6.532 11.529c.543.958.094 1.735-1.016 1.735h-13C.399 15-.051 14.215.487 13.265l6.535-11.53zM7.004 13c0-.552.443-1 1-1 .552 0 1 .444 1 1 0 .553-.444 1-1 1-.553 0-1-.444-1-1zm0-7.997a.999.999 0 011-1.003c.552 0 1 .438 1 1.003v4.994a.999.999 0 01-1 1.003c-.553 0-1-.438-1-1.003V5.003z\\"></path>
+      </svg></div>
+  </div>
+  <div class=\\"u-flex u-mv-half u-flex-wrap\\">
     <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 40px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
         <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
       </svg></div>
@@ -74,112 +119,33 @@ exports[`Avatar should render examples: Avatar 1`] = `
         <path fill-rule=\\"evenodd\\" d=\\"M7.022 1.736c.543-.959 1.428-.95 1.966 0l6.532 11.529c.543.958.094 1.735-1.016 1.735h-13C.399 15-.051 14.215.487 13.265l6.535-11.53zM7.004 13c0-.552.443-1 1-1 .552 0 1 .444 1 1 0 .553-.444 1-1 1-.553 0-1-.444-1-1zm0-7.997a.999.999 0 011-1.003c.552 0 1 .438 1 1.003v4.994a.999.999 0 01-1 1.003c-.553 0-1-.438-1-1.003V5.003z\\"></path>
       </svg></div>
   </div>
-</div>"
-`;
-
-exports[`Avatar should render examples: Avatar 2`] = `
-"<div>
-  <div class=\\"u-flex\\">
-    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--disabled___xoLOy\\" style=\\"--circleSize: 40px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+  <div class=\\"u-flex u-mv-half u-flex-wrap\\">
+    <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 48px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
         <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
       </svg></div>
-    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna styles__c-avatar--disabled___xoLOy\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 40px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
-    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--image___jDBci styles__c-avatar--disabled___xoLOy\\" style=\\"--circleSize: 40px;\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
-    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--disabled___xoLOy\\" style=\\"--circleSize: 40px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 48px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--image___jDBci\\" style=\\"--circleSize: 48px;\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
+    <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 48px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
         <path fill-rule=\\"evenodd\\" d=\\"M9.259 4.045a1.043 1.043 0 11-1.475-1.474L9.44.915a3.126 3.126 0 014.417-.002l1.23 1.23a3.126 3.126 0 01-.007 4.422l-3.612 3.612c-1.6 1.6-4.244 1.65-5.77.124a1.043 1.043 0 111.475-1.474c.699.698 2.023.673 2.82-.125l3.613-3.612a1.04 1.04 0 00.006-1.473l-1.23-1.23a1.04 1.04 0 00-1.468.003L9.26 4.045zm-2.518 7.91a1.043 1.043 0 011.475 1.474L6.56 15.085a3.126 3.126 0 01-4.417.002l-1.23-1.23a3.126 3.126 0 01.006-4.422l3.613-3.612c1.6-1.6 4.243-1.65 5.77-.124a1.043 1.043 0 01-1.475 1.474c-.7-.698-2.023-.673-2.82.125L2.393 10.91a1.04 1.04 0 00-.007 1.473l1.23 1.23a1.04 1.04 0 001.469-.003l1.655-1.655z\\"></path>
       </svg></div>
-    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna styles__c-avatar--disabled___xoLOy\\" style=\\"--circleSize: 40px; color: black;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
-  </div>
-</div>"
-`;
-
-exports[`Avatar should render examples: Avatar 3`] = `
-"<div>
-  <div class=\\"u-flex\\">
-    <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 40px; margin-left: -1rem;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-        <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
-      </svg></div>
-    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 40px; margin-left: -1rem;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
-    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--image___jDBci\\" style=\\"--circleSize: 40px; margin-left: -1rem;\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
-    <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 40px; margin-left: -1rem;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-        <path fill-rule=\\"evenodd\\" d=\\"M9.259 4.045a1.043 1.043 0 11-1.475-1.474L9.44.915a3.126 3.126 0 014.417-.002l1.23 1.23a3.126 3.126 0 01-.007 4.422l-3.612 3.612c-1.6 1.6-4.244 1.65-5.77.124a1.043 1.043 0 111.475-1.474c.699.698 2.023.673 2.82-.125l3.613-3.612a1.04 1.04 0 00.006-1.473l-1.23-1.23a1.04 1.04 0 00-1.468.003L9.26 4.045zm-2.518 7.91a1.043 1.043 0 011.475 1.474L6.56 15.085a3.126 3.126 0 01-4.417.002l-1.23-1.23a3.126 3.126 0 01.006-4.422l3.613-3.612c1.6-1.6 4.243-1.65 5.77-.124a1.043 1.043 0 01-1.475 1.474c-.7-.698-2.023-.673-2.82.125L2.393 10.91a1.04 1.04 0 00-.007 1.473l1.23 1.23a1.04 1.04 0 001.469-.003l1.655-1.655z\\"></path>
-      </svg></div>
-    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--disabled___xoLOy\\" style=\\"--circleSize: 40px; margin-left: -1rem;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-        <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
-      </svg></div>
-    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna styles__c-avatar--disabled___xoLOy\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 40px; margin-left: -1rem;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
-    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--image___jDBci styles__c-avatar--disabled___xoLOy\\" style=\\"--circleSize: 40px; margin-left: -1rem;\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
-    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--disabled___xoLOy\\" style=\\"--circleSize: 40px; margin-left: -1rem;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-        <path fill-rule=\\"evenodd\\" d=\\"M9.259 4.045a1.043 1.043 0 11-1.475-1.474L9.44.915a3.126 3.126 0 014.417-.002l1.23 1.23a3.126 3.126 0 01-.007 4.422l-3.612 3.612c-1.6 1.6-4.244 1.65-5.77.124a1.043 1.043 0 111.475-1.474c.699.698 2.023.673 2.82-.125l3.613-3.612a1.04 1.04 0 00.006-1.473l-1.23-1.23a1.04 1.04 0 00-1.468.003L9.26 4.045zm-2.518 7.91a1.043 1.043 0 011.475 1.474L6.56 15.085a3.126 3.126 0 01-4.417.002l-1.23-1.23a3.126 3.126 0 01.006-4.422l3.613-3.612c1.6-1.6 4.243-1.65 5.77-.124a1.043 1.043 0 01-1.475 1.474c-.7-.698-2.023-.673-2.82.125L2.393 10.91a1.04 1.04 0 00-.007 1.473l1.23 1.23a1.04 1.04 0 001.469-.003l1.655-1.655z\\"></path>
+    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 48px; color: black;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+    <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 48px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" d=\\"M7.022 1.736c.543-.959 1.428-.95 1.966 0l6.532 11.529c.543.958.094 1.735-1.016 1.735h-13C.399 15-.051 14.215.487 13.265l6.535-11.53zM7.004 13c0-.552.443-1 1-1 .552 0 1 .444 1 1 0 .553-.444 1-1 1-.553 0-1-.444-1-1zm0-7.997a.999.999 0 011-1.003c.552 0 1 .438 1 1.003v4.994a.999.999 0 01-1 1.003c-.553 0-1-.438-1-1.003V5.003z\\"></path>
       </svg></div>
   </div>
-</div>"
-`;
-
-exports[`Avatar should render examples: Avatar 4`] = `
-"<div>
-  <div>
-    <div class=\\"u-flex\\">
-      <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 16px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
-        </svg></div>
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 16px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--image___jDBci\\" style=\\"--circleSize: 16px;\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
-      <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 16px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <path fill-rule=\\"evenodd\\" d=\\"M9.259 4.045a1.043 1.043 0 11-1.475-1.474L9.44.915a3.126 3.126 0 014.417-.002l1.23 1.23a3.126 3.126 0 01-.007 4.422l-3.612 3.612c-1.6 1.6-4.244 1.65-5.77.124a1.043 1.043 0 111.475-1.474c.699.698 2.023.673 2.82-.125l3.613-3.612a1.04 1.04 0 00.006-1.473l-1.23-1.23a1.04 1.04 0 00-1.468.003L9.26 4.045zm-2.518 7.91a1.043 1.043 0 011.475 1.474L6.56 15.085a3.126 3.126 0 01-4.417.002l-1.23-1.23a3.126 3.126 0 01.006-4.422l3.613-3.612c1.6-1.6 4.243-1.65 5.77-.124a1.043 1.043 0 01-1.475 1.474c-.7-.698-2.023-.673-2.82.125L2.393 10.91a1.04 1.04 0 00-.007 1.473l1.23 1.23a1.04 1.04 0 001.469-.003l1.655-1.655z\\"></path>
-        </svg></div>
-    </div>
-    <div class=\\"u-flex\\">
-      <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 32px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
-        </svg></div>
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--image___jDBci\\" style=\\"--circleSize: 32px;\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
-      <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 32px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <path fill-rule=\\"evenodd\\" d=\\"M9.259 4.045a1.043 1.043 0 11-1.475-1.474L9.44.915a3.126 3.126 0 014.417-.002l1.23 1.23a3.126 3.126 0 01-.007 4.422l-3.612 3.612c-1.6 1.6-4.244 1.65-5.77.124a1.043 1.043 0 111.475-1.474c.699.698 2.023.673 2.82-.125l3.613-3.612a1.04 1.04 0 00.006-1.473l-1.23-1.23a1.04 1.04 0 00-1.468.003L9.26 4.045zm-2.518 7.91a1.043 1.043 0 011.475 1.474L6.56 15.085a3.126 3.126 0 01-4.417.002l-1.23-1.23a3.126 3.126 0 01.006-4.422l3.613-3.612c1.6-1.6 4.243-1.65 5.77-.124a1.043 1.043 0 01-1.475 1.474c-.7-.698-2.023-.673-2.82.125L2.393 10.91a1.04 1.04 0 00-.007 1.473l1.23 1.23a1.04 1.04 0 001.469-.003l1.655-1.655z\\"></path>
-        </svg></div>
-    </div>
-    <div class=\\"u-flex\\">
-      <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 40px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
-        </svg></div>
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 40px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--image___jDBci\\" style=\\"--circleSize: 40px;\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
-      <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 40px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <path fill-rule=\\"evenodd\\" d=\\"M9.259 4.045a1.043 1.043 0 11-1.475-1.474L9.44.915a3.126 3.126 0 014.417-.002l1.23 1.23a3.126 3.126 0 01-.007 4.422l-3.612 3.612c-1.6 1.6-4.244 1.65-5.77.124a1.043 1.043 0 111.475-1.474c.699.698 2.023.673 2.82-.125l3.613-3.612a1.04 1.04 0 00.006-1.473l-1.23-1.23a1.04 1.04 0 00-1.468.003L9.26 4.045zm-2.518 7.91a1.043 1.043 0 011.475 1.474L6.56 15.085a3.126 3.126 0 01-4.417.002l-1.23-1.23a3.126 3.126 0 01.006-4.422l3.613-3.612c1.6-1.6 4.243-1.65 5.77-.124a1.043 1.043 0 01-1.475 1.474c-.7-.698-2.023-.673-2.82.125L2.393 10.91a1.04 1.04 0 00-.007 1.473l1.23 1.23a1.04 1.04 0 001.469-.003l1.655-1.655z\\"></path>
-        </svg></div>
-    </div>
-    <div class=\\"u-flex\\">
-      <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 48px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
-        </svg></div>
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 48px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--image___jDBci\\" style=\\"--circleSize: 48px;\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
-      <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 48px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <path fill-rule=\\"evenodd\\" d=\\"M9.259 4.045a1.043 1.043 0 11-1.475-1.474L9.44.915a3.126 3.126 0 014.417-.002l1.23 1.23a3.126 3.126 0 01-.007 4.422l-3.612 3.612c-1.6 1.6-4.244 1.65-5.77.124a1.043 1.043 0 111.475-1.474c.699.698 2.023.673 2.82-.125l3.613-3.612a1.04 1.04 0 00.006-1.473l-1.23-1.23a1.04 1.04 0 00-1.468.003L9.26 4.045zm-2.518 7.91a1.043 1.043 0 011.475 1.474L6.56 15.085a3.126 3.126 0 01-4.417.002l-1.23-1.23a3.126 3.126 0 01.006-4.422l3.613-3.612c1.6-1.6 4.243-1.65 5.77-.124a1.043 1.043 0 01-1.475 1.474c-.7-.698-2.023-.673-2.82.125L2.393 10.91a1.04 1.04 0 00-.007 1.473l1.23 1.23a1.04 1.04 0 001.469-.003l1.655-1.655z\\"></path>
-        </svg></div>
-    </div>
-    <div class=\\"u-flex\\">
-      <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 64px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
-        </svg></div>
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 64px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--image___jDBci\\" style=\\"--circleSize: 64px;\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
-      <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 64px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <path fill-rule=\\"evenodd\\" d=\\"M9.259 4.045a1.043 1.043 0 11-1.475-1.474L9.44.915a3.126 3.126 0 014.417-.002l1.23 1.23a3.126 3.126 0 01-.007 4.422l-3.612 3.612c-1.6 1.6-4.244 1.65-5.77.124a1.043 1.043 0 111.475-1.474c.699.698 2.023.673 2.82-.125l3.613-3.612a1.04 1.04 0 00.006-1.473l-1.23-1.23a1.04 1.04 0 00-1.468.003L9.26 4.045zm-2.518 7.91a1.043 1.043 0 011.475 1.474L6.56 15.085a3.126 3.126 0 01-4.417.002l-1.23-1.23a3.126 3.126 0 01.006-4.422l3.613-3.612c1.6-1.6 4.243-1.65 5.77-.124a1.043 1.043 0 01-1.475 1.474c-.7-.698-2.023-.673-2.82.125L2.393 10.91a1.04 1.04 0 00-.007 1.473l1.23 1.23a1.04 1.04 0 001.469-.003l1.655-1.655z\\"></path>
-        </svg></div>
-    </div>
-    <hr>
-    <div class=\\"u-flex\\">
-      <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 24px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
-        </svg></div>
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 24px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
-      <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--image___jDBci\\" style=\\"--circleSize: 24px;\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
-      <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 24px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-          <path fill-rule=\\"evenodd\\" d=\\"M9.259 4.045a1.043 1.043 0 11-1.475-1.474L9.44.915a3.126 3.126 0 014.417-.002l1.23 1.23a3.126 3.126 0 01-.007 4.422l-3.612 3.612c-1.6 1.6-4.244 1.65-5.77.124a1.043 1.043 0 111.475-1.474c.699.698 2.023.673 2.82-.125l3.613-3.612a1.04 1.04 0 00.006-1.473l-1.23-1.23a1.04 1.04 0 00-1.468.003L9.26 4.045zm-2.518 7.91a1.043 1.043 0 011.475 1.474L6.56 15.085a3.126 3.126 0 01-4.417.002l-1.23-1.23a3.126 3.126 0 01.006-4.422l3.613-3.612c1.6-1.6 4.243-1.65 5.77-.124a1.043 1.043 0 01-1.475 1.474c-.7-.698-2.023-.673-2.82.125L2.393 10.91a1.04 1.04 0 00-.007 1.473l1.23 1.23a1.04 1.04 0 001.469-.003l1.655-1.655z\\"></path>
-        </svg></div>
-    </div>
+  <div class=\\"u-flex u-mv-half u-flex-wrap\\">
+    <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 64px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
+      </svg></div>
+    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 64px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--image___jDBci\\" style=\\"--circleSize: 64px;\\"><img src=\\"test-file-stub\\" class=\\"styles__c-avatar-image___3yJnb\\" alt=\\"\\"></div>
+    <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 64px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" d=\\"M9.259 4.045a1.043 1.043 0 11-1.475-1.474L9.44.915a3.126 3.126 0 014.417-.002l1.23 1.23a3.126 3.126 0 01-.007 4.422l-3.612 3.612c-1.6 1.6-4.244 1.65-5.77.124a1.043 1.043 0 111.475-1.474c.699.698 2.023.673 2.82-.125l3.613-3.612a1.04 1.04 0 00.006-1.473l-1.23-1.23a1.04 1.04 0 00-1.468.003L9.26 4.045zm-2.518 7.91a1.043 1.043 0 011.475 1.474L6.56 15.085a3.126 3.126 0 01-4.417.002l-1.23-1.23a3.126 3.126 0 01.006-4.422l3.613-3.612c1.6-1.6 4.243-1.65 5.77-.124a1.043 1.043 0 01-1.475 1.474c-.7-.698-2.023-.673-2.82.125L2.393 10.91a1.04 1.04 0 00-.007 1.473l1.23 1.23a1.04 1.04 0 001.469-.003l1.655-1.655z\\"></path>
+      </svg></div>
+    <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 64px; color: black;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div>
+    <div class=\\"styles__c-avatar___PpDI-\\" style=\\"--circleSize: 64px;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" d=\\"M7.022 1.736c.543-.959 1.428-.95 1.966 0l6.532 11.529c.543.958.094 1.735-1.016 1.735h-13C.399 15-.051 14.215.487 13.265l6.535-11.53zM7.004 13c0-.552.443-1 1-1 .552 0 1 .444 1 1 0 .553-.444 1-1 1-.553 0-1-.444-1-1zm0-7.997a.999.999 0 011-1.003c.552 0 1 .438 1 1.003v4.994a.999.999 0 01-1 1.003c-.553 0-1-.438-1-1.003V5.003z\\"></path>
+      </svg></div>
   </div>
 </div>"
 `;
