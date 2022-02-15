@@ -1,3 +1,15 @@
+# [62.1.0](https://github.com/cozy/cozy-ui/compare/v62.0.0...v62.1.0) (2022-02-15)
+
+
+### Bug Fixes
+
+* **upload:** Make progress bar size fixed ([1f58eee](https://github.com/cozy/cozy-ui/commit/1f58eee))
+
+
+### Features
+
+* **Avatar:** Add ghost property ([d09135c](https://github.com/cozy/cozy-ui/commit/d09135c))
+
 # [62.0.0](https://github.com/cozy/cozy-ui/compare/v61.1.1...v62.0.0) (2022-02-11)
 
 
