@@ -110,7 +110,7 @@ const QueueLinearProgress = withStyles({
 const FileUploadProgress = ({ progress }) => {
   return (
     <div className={styles['upload-queue__upload-progress']}>
-      <div className="u-flex-grow-1 u-pr-1">
+      <div className={styles['upload-queue__progress-container']}>
         <FileLinearProgress
           variant="determinate"
           value={(progress.loaded / progress.total) * 100}
