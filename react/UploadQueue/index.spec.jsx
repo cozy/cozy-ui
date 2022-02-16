@@ -29,6 +29,7 @@ describe('UploadQueue', () => {
           format ? `${key} ${format.time} ${format.smart_count}` : key
       })
     })
+
     it('should set singular value when "1 minute remaining"', () => {
       const item = {
         file: { name: 'file' },
@@ -123,6 +124,38 @@ describe('UploadQueue', () => {
       expect(
         container.getElementsByClassName('u-flex-shrink')[0]
       ).toHaveTextContent('item.remainingTime about 2 hours 2')
+    })
+
+    it('should not update time and bar everytime loaded/remaining time update', () => {
+      const item = (remainingTime, loaded) => ({
+        file: { name: 'file' },
+        status: 'status',
+        isDirectory: 'isDirectory',
+        progress: { loaded, total: 4936, remainingTime },
+        getMimeTypeIcon: 'getMimeTypeIcon'
+      })
+
+      const { rerender, getAllByRole, container } = render(
+        <UploadQueue queue={[item(5371, 1234)]} />
+      )
+
+      expect(
+        container.getElementsByClassName('u-flex-shrink')[0]
+      ).toHaveTextContent('item.remainingTime about 2 hours 2')
+      expect(getAllByRole('progressbar')[1]).toHaveAttribute(
+        'aria-valuenow',
+        '25'
+      )
+
+      rerender(<UploadQueue queue={[item(1, 5677)]} />)
+
+      expect(
+        container.getElementsByClassName('u-flex-shrink')[0]
+      ).toHaveTextContent('item.remainingTime about 2 hours 2')
+      expect(getAllByRole('progressbar')[1]).toHaveAttribute(
+        'aria-valuenow',
+        '25'
+      )
     })
   })
 })

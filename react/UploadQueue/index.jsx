@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect, useState } from 'react'
 import cx from 'classnames'
 import { withStyles } from '@material-ui/core/styles'
 import LinearProgress from '@material-ui/core/LinearProgress'
@@ -107,7 +107,27 @@ const QueueLinearProgress = withStyles({
   }
 })(LinearProgress)
 
-const FileUploadProgress = ({ progress }) => {
+const FileUploadProgress = ({ progress: progressProps }) => {
+  const [progress, setProgress] = useState(progressProps)
+  const [isWaiting, setIsWaiting] = useState(false)
+
+  useEffect(() => {
+    let interval
+    if (!isWaiting) {
+      setProgress(progressProps)
+      interval = setInterval(() => {
+        setIsWaiting(false)
+      }, 1000)
+      setIsWaiting(true)
+    }
+    return () => {
+      if (interval) {
+        clearInterval(interval)
+      }
+      setIsWaiting(false)
+    }
+  }, [])
+
   return (
     <div className={styles['upload-queue__upload-progress']}>
       <div className="u-flex-grow-1 u-pr-1">
