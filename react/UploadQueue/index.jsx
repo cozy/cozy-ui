@@ -313,7 +313,7 @@ export class UploadQueue extends Component {
         />
         <div className={styles['upload-queue-content']}>
           <List>
-            {queue.map((item, index) => (
+            {queue.reverse().map((item, index) => (
               <Item key={index} {...item} getMimeTypeIcon={getMimeTypeIcon} />
             ))}
           </List>
