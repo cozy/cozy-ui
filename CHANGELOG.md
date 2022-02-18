@@ -1,3 +1,10 @@
+## [62.0.1](https://github.com/cozy/cozy-ui/compare/v62.0.0...v62.0.1) (2022-02-18)
+
+
+### Bug Fixes
+
+* **deps:** bump url-parse from 1.4.3 to 1.5.7 in /examples/webpack-app ([af9429c](https://github.com/cozy/cozy-ui/commit/af9429c))
+
 # [62.0.0](https://github.com/cozy/cozy-ui/compare/v61.1.1...v62.0.0) (2022-02-11)
 
 
