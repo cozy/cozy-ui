@@ -40,7 +40,7 @@ const NavigationListExample = ({ style }) => {
             <Icon
               icon={RightIcon}
               size={smallSize}
-              className="u-mr-1 u-coolGrey"
+              className="u-mr-1"
             />
           </ListItemSecondaryAction>
         </ListItem>
@@ -54,10 +54,10 @@ const NavigationListExample = ({ style }) => {
             <Icon
               icon={RightIcon}
               size={smallSize}
-              className="u-mr-1 u-coolGrey"
+              className="u-mr-1"
             />
           </ListItemSecondaryAction>
-        </ListItem>        
+        </ListItem>
         <Divider variant="inset" />
         <ListItem>
           <ListItemIcon>
@@ -71,7 +71,7 @@ const NavigationListExample = ({ style }) => {
             <Icon
               icon={RightIcon}
               size={smallSize}
-              className="u-mr-1 u-coolGrey"
+              className="u-mr-1"
             />
           </ListItemSecondaryAction>
         </ListItem>
@@ -99,7 +99,7 @@ const NavigationListExample = ({ style }) => {
             <Icon
               icon={RightIcon}
               size={smallSize}
-              className="u-mr-1 u-coolGrey"
+              className="u-mr-1"
             />
           </ListItemSecondaryAction>
         </ListItem>
@@ -130,7 +130,7 @@ const TabsExample = () => {
       <Divider className='u-mb-1' />
       { tab == 'nav' ?
         <NavigationListExample /> : null }
-      { tab == 'details' ? 
+      { tab == 'details' ?
         <Typography variant='body1'>
           { content.ada.short }
         </Typography> : null
