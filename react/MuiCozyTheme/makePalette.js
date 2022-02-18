@@ -1,13 +1,48 @@
+import merge from 'lodash/merge'
+
 import {
   getCssVariableValue,
   getInvertedCssVariableValue
 } from '../utils/color'
 
+const opacityByTheme = {
+  light: {
+    action: {
+      hoverOpacity: 0.04,
+      selectedOpacity: 0.08,
+      disabledOpacity: 0.32,
+      focusOpacity: 0.12,
+      activatedOpacity: 0.12,
+      ghostOpacity: 0.08,
+      hoverGhostOpacity: 0.16
+    },
+    border: {
+      opacity: 0.16,
+      ghostOpacity: 0.48
+    }
+  },
+  dark: {
+    action: {
+      hoverOpacity: 0.08,
+      selectedOpacity: 0.16,
+      disabledOpacity: 0.32,
+      focusOpacity: 0.25,
+      activatedOpacity: 0.24,
+      ghostOpacity: 0.08,
+      hoverGhostOpacity: 0.16
+    },
+    border: {
+      opacity: 0.24,
+      ghostOpacity: 0.48
+    }
+  }
+}
+
 export const makePalette = type => {
   const getCssValue =
     type === 'dark' ? getInvertedCssVariableValue : getCssVariableValue
 
-  return {
+  const paletteByTheme = {
     type,
     primary: {
       light: getCssValue('primaryColorLight'),
@@ -73,27 +108,18 @@ export const makePalette = type => {
     action: {
       active: getCssValue('actionColorActive'),
       hover: getCssValue('actionColorHover'),
-      hoverOpacity: 0.04,
       selected: getCssValue('actionColorSelected'),
-      selectedOpacity: 0.08,
       disabled: getCssValue('actionColorDisabled'),
       disabledBackground: getCssValue('actionColorDisabledBackground'),
-      disabledOpacity: 0.32,
       focus: getCssValue('actionColorFocus'),
-      focusOpacity: 0.12,
       ghost: getCssValue('actionColorGhost'),
-      ghostOpacity: 0.08,
-      hoverGhost: getCssValue('actionColorHoverGhost'),
-      hoverGhostOpacity: 0.16,
-      activatedOpacity: 0.12
+      hoverGhost: getCssValue('actionColorHoverGhost')
     },
     border: {
       main: getCssValue('borderMainColor'),
-      opacity: 0.16,
       disabled: getCssValue('borderDisabledColor'),
       ghost: getCssValue('borderGhostColor'),
-      ghostDisabled: getCssValue('borderGhostDisabledColor'),
-      ghostOpacity: 0.48
+      ghostDisabled: getCssValue('borderGhostDisabledColor')
     },
     background: {
       default: getCssValue('defaultBackgroundColor'),
@@ -101,4 +127,6 @@ export const makePalette = type => {
       selected: '#F5FAFF' // deprecated, should be removed. Use action.selected instead
     }
   }
+
+  return merge(paletteByTheme, opacityByTheme[type])
 }
