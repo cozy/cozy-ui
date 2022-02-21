@@ -34,7 +34,7 @@ const Banner = ({
           className={cx(styles['c-banner-wrapper'], className)}
           style={bgcolor && { backgroundColor: bgcolor }}
         >
-          <Grid container justify="space-between">
+          <Grid container justifyContent="space-between">
             <Grid
               container
               item
