@@ -1,3 +1,10 @@
+## [62.0.2](https://github.com/cozy/cozy-ui/compare/v62.0.1...v62.0.2) (2022-02-21)
+
+
+### Bug Fixes
+
+* Inverted palette opacity values ([c90b554](https://github.com/cozy/cozy-ui/commit/c90b554))
+
 ## [62.0.1](https://github.com/cozy/cozy-ui/compare/v62.0.0...v62.0.1) (2022-02-18)
 
 
