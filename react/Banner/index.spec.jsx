@@ -8,7 +8,7 @@ describe('Grid', () => {
     console.error = jest.fn()
 
     // When
-    const { container } = render(<Banner />)
+    const { container } = render(<Banner buttonOne={<button />} />)
 
     // Then
     expect(console.error).not.toHaveBeenCalled()

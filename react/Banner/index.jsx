@@ -58,7 +58,7 @@ const Banner = ({
                 item
                 xs={12}
                 lg={size[1]}
-                justify="flex-end"
+                justifyContent="flex-end"
                 alignItems="center"
               >
                 <Grid item className={styles['c-banner-buttons']}>
