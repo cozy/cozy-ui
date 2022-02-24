@@ -1,3 +1,10 @@
+## [62.1.2](https://github.com/cozy/cozy-ui/compare/v62.1.1...v62.1.2) (2022-02-24)
+
+
+### Bug Fixes
+
+* **changelog:** Update changelog with missing release ([b14fb86](https://github.com/cozy/cozy-ui/commit/b14fb86))
+
 # [62.1.1](https://github.com/cozy/cozy-ui/compare/v62.1.0...v62.1.1) (2022-02-24)
 
 
