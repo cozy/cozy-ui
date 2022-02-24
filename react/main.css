@@ -10410,6 +10410,15 @@ body {
   filter: grayscale(1);
   opacity: 0.3;
 }
+.c-avatar--ghost--3898R {
+  background-color: transparent !important;
+  border: 1px dashed var(--borderGhostColor);
+  color: var(--secondaryTextColor);
+}
+.c-avatar--ghost--3898R .c-avatar-image--3yJnb {
+  filter: grayscale(1);
+  opacity: 0.3;
+}
 
 .c-banner-wrapper--3KlaG {
   display: flex;
