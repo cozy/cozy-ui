@@ -1,3 +1,10 @@
+## [62.0.4](https://github.com/cozy/cozy-ui/compare/v62.0.3...v62.0.4) (2022-02-24)
+
+
+### Bug Fixes
+
+* **Grid:** Use justifyContent props inside Grid component ([9325ec1](https://github.com/cozy/cozy-ui/commit/9325ec1))
+
 ## [62.0.3](https://github.com/cozy/cozy-ui/compare/v62.0.2...v62.0.3) (2022-02-22)
 
 
