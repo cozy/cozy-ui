@@ -43,6 +43,44 @@ describe('AppIcon component', () => {
     expect(console.error).not.toHaveBeenCalled()
   })
 
+  it(`should provide appData to getIconUrl in order to get icon simply, when oauth not needed`, async done => {
+    const app = {
+      name: 'app name',
+      slug: 'slug',
+      links: {
+        icon: 'icon url'
+      },
+      latest_version: {
+        version: 'version'
+      }
+    }
+    const getIconURLMock = jest
+      .fn()
+      .mockImplementation(() => `https://${domain}`)
+    const mockClient = {
+      getStackClient: () => ({
+        uri: `https://${domain}`,
+        getIconURL: getIconURLMock
+      })
+    }
+    const wrapper = shallow(
+      <AppIcon
+        app={app}
+        client={mockClient}
+        onReady={() => {
+          wrapper.update()
+          expect(getIconURLMock).toHaveBeenNthCalledWith(1, {
+            appData: app,
+            priority: 'stack',
+            slug: 'slug',
+            type: 'app'
+          })
+          done()
+        }}
+      />
+    )
+  })
+
   it(`renders correctly`, async done => {
     const wrapper = shallow(
       <AppIcon
