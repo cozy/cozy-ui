@@ -6,7 +6,7 @@ import Icon from '../Icon'
 import { withClient } from 'cozy-client'
 import { AppDoctype } from '../proptypes'
 
-import KeychainIcon from 'cozy-ui/transpiled/react/Icons/Keychain'
+import KeychainIcon from '../Icons/Keychain'
 
 class CipherIcon extends React.PureComponent {
   constructor(props) {
@@ -17,9 +17,10 @@ class CipherIcon extends React.PureComponent {
   fetchIcon() {
     const { client, konnector } = this.props
 
-    return client.stackClient.getIconURL({
+    return client.getStackClient().getIconURL({
       type: 'konnector',
-      slug: konnector.slug || konnector
+      slug: konnector.slug || konnector,
+      appData: konnector
     })
   }
 

@@ -49,6 +49,7 @@ export class AppIcon extends Component {
     return client.getStackClient().getIconURL({
       type,
       slug: app.slug || app,
+      appData: app,
       priority
     })
   }
@@ -59,6 +60,7 @@ export class AppIcon extends Component {
 
   async load() {
     const { app, fetchIcon, onReady, client } = this.props
+
     const loadFn = fetchIcon || this.fetchIcon
     let loadedUrl
     let loadError
