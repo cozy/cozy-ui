@@ -1,3 +1,10 @@
+## [62.1.3](https://github.com/cozy/cozy-ui/compare/v62.1.2...v62.1.3) (2022-03-02)
+
+
+### Bug Fixes
+
+* **AppIcon:** Add appData to getIconUrl without using blob ([9e99569](https://github.com/cozy/cozy-ui/commit/9e99569))
+
 ## [62.1.2](https://github.com/cozy/cozy-ui/compare/v62.1.1...v62.1.2) (2022-02-24)
 
 
