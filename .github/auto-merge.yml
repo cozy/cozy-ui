@@ -1,7 +1,8 @@
 minApprovals:
   MEMBER: 1
 requiredLabels:
-- merge
+  - merge
 reportStatus: true
 blockingChecks:
   status: 'pending'
+mergeMethod: rebase
