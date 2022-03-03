@@ -1,3 +1,10 @@
+## [62.1.4](https://github.com/cozy/cozy-ui/compare/v62.1.3...v62.1.4) (2022-03-03)
+
+
+### Bug Fixes
+
+* Do not stretch small screenshots ([4af1a3f](https://github.com/cozy/cozy-ui/commit/4af1a3f))
+
 ## [62.1.3](https://github.com/cozy/cozy-ui/compare/v62.1.2...v62.1.3) (2022-03-02)
 
 
