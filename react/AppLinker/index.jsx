@@ -86,8 +86,33 @@ export class AppLinker extends React.Component {
       if (context) {
         return {
           onClick: event => {
+            //alert('test')
+            //console.log('event', event.target)
+            const elClicked = document.elementFromPoint(
+              event.clientX,
+              event.clientY
+            )
+            /* console.log(event.clientX)
+            console.log(event.clientY)
+            console.log({ elClicked })
+ */
+            let position = {}
+            try {
+              position = elClicked
+                .closest('.scale-hover')
+                .querySelector('img')
+                .getBoundingClientRect()
+            } catch (error) {
+              alert(error)
+              console.log({ error })
+            }
+            //alert('ici')
+            // console.log({ position })
             event.preventDefault()
-            context.call('openApp', href, app)
+            context.call('openApp', href, app, {
+              x: position.top,
+              y: position.left
+            })
           },
           href: '#'
         }
