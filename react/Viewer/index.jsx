@@ -12,6 +12,7 @@ import ViewerByFile from './ViewerByFile'
 import { isValidForPanel } from './helpers'
 import PanelContent from './Panel/PanelContent'
 import FooterContent from './Footer/FooterContent'
+import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
 
 const KEY_CODE_LEFT = 37
 const KEY_CODE_RIGHT = 39
@@ -149,6 +150,16 @@ const ViewerInformationsWrapper = ({
   validForPanel,
   toolbarRef
 }) => {
+  useSetFlagshipUI(
+    {
+      bottomBackground: 'background.paper',
+      bottomTheme: 'dark'
+    },
+    {
+      bottomBackground: 'background.default'
+    }
+  )
+
   return (
     <>
       {!disableFooter && (

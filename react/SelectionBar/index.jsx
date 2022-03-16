@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -11,6 +11,8 @@ import useBreakpoints from '../hooks/useBreakpoints'
 import styles from './styles.styl'
 
 import CrossIcon from 'cozy-ui/transpiled/react/Icons/Cross'
+import { useWebviewIntent } from 'cozy-intent'
+import { useTheme } from '@material-ui/core'
 
 /*
 
@@ -39,6 +41,35 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
       action.displayCondition === undefined || action.displayCondition(selected)
     )
   })
+  const webviewIntent = useWebviewIntent()
+  const theme = useTheme()
+
+  useEffect(() => {
+    if (!webviewIntent || !theme) return
+
+    selectedCount === 0 &&
+      webviewIntent &&
+      webviewIntent.call('setFlagshipUI', {
+        bottomBackground: theme.palette.background.default,
+        bottomTheme: 'dark'
+      })
+
+    selectedCount > 0 &&
+      webviewIntent &&
+      webviewIntent.call('setFlagshipUI', {
+        bottomBackground: theme.palette.grey[700],
+        bottomTheme: 'light'
+      })
+
+    return () =>
+      webviewIntent &&
+      theme &&
+      webviewIntent.call('setFlagshipUI', {
+        bottomBackground: theme.palette.background.default,
+        bottomTheme: 'dark'
+      })
+  }, [selectedCount, webviewIntent])
+
   return (
     <div
       data-testid="selectionBar"

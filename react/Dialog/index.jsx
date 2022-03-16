@@ -4,6 +4,7 @@ import { RemoveScroll } from 'react-remove-scroll'
 import useBreakpoints from '../hooks/useBreakpoints'
 import { useCozyTheme } from '../CozyTheme'
 import themesStyles from '../../stylus/settings/palette.styl'
+import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
 
 const Dialog = props => {
   const { isMobile, isTablet } = useBreakpoints()
@@ -23,6 +24,32 @@ const Dialog = props => {
       : React.Fragment
 
   const theme = useCozyTheme()
+
+  useSetFlagshipUI(
+    props.fullScreen
+      ? {
+          bottomBackground: 'background.paper',
+          bottomTheme: 'dark',
+          topBackground: 'background.paper',
+          topTheme: 'dark'
+        }
+      : {
+          bottomBackground: 'background.default',
+          bottomTheme: 'light',
+          bottomOverlay: 'rgba(0, 0, 0, 0.5)',
+          topOverlay: 'rgba(0, 0, 0, 0.5)',
+          topBackground: 'background.paper',
+          topTheme: 'light'
+        },
+    {
+      bottomBackground: 'background.default',
+      bottomTheme: 'dark',
+      bottomOverlay: 'transparent',
+      topOverlay: 'transparent',
+      topBackground: 'background.paper',
+      topTheme: 'dark'
+    }
+  )
 
   return (
     <Wrapper>

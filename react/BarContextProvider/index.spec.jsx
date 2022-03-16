@@ -172,27 +172,4 @@ describe('BarContextProvider', () => {
 
     expect(queryByText(mockVoidWebviewService)).toBeInTheDocument()
   })
-
-  it('should not try to provide a cozy-intent context if one is provided', () => {
-    // Set Web context
-    window.cozy.isFlagshipApp = false
-
-    const client = createMockClient({})
-    const mockStore = configureStore()
-    const store = mockStore(x => x)
-
-    const { queryByText } = render(
-      <Provider store={store}>
-        <CozyProvider client={client}>
-          <I18n lang="en" dictRequire={() => locales}>
-            <App webviewService={mockWebviewService}>
-              <IntentComponent />
-            </App>
-          </I18n>
-        </CozyProvider>
-      </Provider>
-    )
-
-    expect(queryByText(mockWebviewService.foo)).not.toBeInTheDocument()
-  })
 })
