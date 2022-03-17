@@ -92,7 +92,7 @@
     "cozy-device-helper": "^1.16.1",
     "cozy-doctypes": "^1.69.0",
     "cozy-harvest-lib": "^6.7.3",
-    "cozy-intent": "^1.6.0",
+    "cozy-intent": "^1.13.0",
     "cozy-sharing": "^3.10.0",
     "cozy-stack-client": "27.19.1",
     "css-loader": "0.28.11",
