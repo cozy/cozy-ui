@@ -11,6 +11,8 @@ import Radio from '../Radio'
 import { spacingProp } from '../Stack'
 import { usePopper } from 'react-popper'
 import createDepreciationLogger from '../helpers/createDepreciationLogger'
+import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import { useTheme } from '@material-ui/core'
 
 const ActionMenuWrapper = ({
   inline,
@@ -101,6 +103,26 @@ const ActionMenu = ({
   anchorElRef,
   containerElRef
 }) => {
+  const theme = useTheme()
+  const sidebar = document.querySelector('[class*="sidebar"]')
+
+  useSetFlagshipUI(
+    {
+      bottomBackground: theme.palette.background.paper,
+      bottomTheme: 'dark',
+      topOverlay: getCssVariableValue('overlay'),
+      topBackground: theme.palette.background.paper,
+      topTheme: 'light'
+    },
+    {
+      bottomBackground: theme.palette.background[sidebar ? 'default' : 'paper'],
+      bottomTheme: 'dark',
+      topOverlay: 'transparent',
+      topBackground: theme.palette.background.paper,
+      topTheme: 'dark'
+    }
+  )
+
   if (placement)
     logDepecratedPlacement(
       '<ActionMenu placement /> is deprecated, use <ActionMenu popperOptions={{ placement }} /> instead'
