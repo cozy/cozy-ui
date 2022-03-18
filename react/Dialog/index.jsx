@@ -4,6 +4,8 @@ import { RemoveScroll } from 'react-remove-scroll'
 import useBreakpoints from '../hooks/useBreakpoints'
 import { useCozyTheme } from '../CozyTheme'
 import themesStyles from '../../stylus/settings/palette.styl'
+import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import { useTheme } from '@material-ui/core'
 
 const Dialog = props => {
   const { isMobile, isTablet } = useBreakpoints()
@@ -21,12 +23,47 @@ const Dialog = props => {
     (props.open || props.opened) && shouldBlockScroll
       ? RemoveScroll
       : React.Fragment
+  const cozyTheme = useCozyTheme()
+  const theme = useTheme()
+  const cozBar = document.querySelector('.coz-bar-wrapper')
+  const sidebar = document.getElementById('sidebar')
 
-  const theme = useCozyTheme()
+  useSetFlagshipUI(
+    props.fullScreen
+      ? {
+          bottomBackground: theme.palette.background.paper,
+          bottomTheme: 'dark',
+          topBackground: theme.palette.background.paper,
+          topTheme: 'dark'
+        }
+      : {
+          bottomBackground: theme.palette.background.default,
+          bottomTheme: 'light',
+          bottomOverlay: 'rgba(0, 0, 0, 0.5)',
+          topOverlay: 'rgba(0, 0, 0, 0.5)',
+          topBackground: theme.palette.background.paper,
+          topTheme: 'light'
+        },
+    {
+      bottomBackground: theme.palette.background[sidebar ? 'default' : 'paper'],
+      bottomTheme: 'dark',
+      bottomOverlay: 'transparent',
+      topOverlay: 'transparent',
+      topBackground:
+        cozBar && getComputedStyle(cozBar).getPropertyValue('background-color'),
+      topTheme:
+        cozBar && cozBar.classList.contains('coz-theme-primary')
+          ? 'light'
+          : 'dark'
+    }
+  )
 
   return (
     <Wrapper>
-      <MUIDialog className={themesStyles[`CozyTheme--${theme}`]} {...props} />
+      <MUIDialog
+        className={themesStyles[`CozyTheme--${cozyTheme}`]}
+        {...props}
+      />
     </Wrapper>
   )
 }

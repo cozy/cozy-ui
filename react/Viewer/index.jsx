@@ -12,6 +12,8 @@ import ViewerByFile from './ViewerByFile'
 import { isValidForPanel } from './helpers'
 import PanelContent from './Panel/PanelContent'
 import FooterContent from './Footer/FooterContent'
+import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import { useTheme } from '@material-ui/core'
 
 const KEY_CODE_LEFT = 37
 const KEY_CODE_RIGHT = 39
@@ -149,6 +151,19 @@ const ViewerInformationsWrapper = ({
   validForPanel,
   toolbarRef
 }) => {
+  const theme = useTheme()
+  const sidebar = document.querySelector('[class*="sidebar"]')
+
+  useSetFlagshipUI(
+    {
+      bottomBackground: theme.palette.background.paper,
+      bottomTheme: 'dark'
+    },
+    {
+      bottomBackground: theme.palette.background[sidebar ? 'default' : 'paper']
+    }
+  )
+
   return (
     <>
       {!disableFooter && (
