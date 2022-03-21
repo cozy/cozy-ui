@@ -112,7 +112,7 @@ describe('PDFViewer', () => {
     })
 
     it('should render all the pages', () => {
-      const pages = component.find('.page-react-pdf')
+      const pages = component.find('Page')
       expect(pages.length).toEqual(MAX_PAGES)
     })
 
@@ -130,7 +130,7 @@ describe('PDFViewer', () => {
     })
 
     it('should render only the current page', () => {
-      const pages = component.find('.page-react-pdf')
+      const pages = component.find('Page')
       expect(pages.length).toEqual(1)
     })
 
