@@ -24,7 +24,7 @@ export const getStrength = password => {
     return { percentage: 0, label: 'weak' }
   }
 
-  const possibleChars = charsets.reduce(function(possibleChars, charset) {
+  const possibleChars = charsets.reduce(function (possibleChars, charset) {
     if (charset.regexp.test(password)) possibleChars += charset.size
     return possibleChars
   }, 0)

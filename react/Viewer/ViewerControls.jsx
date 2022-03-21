@@ -173,7 +173,4 @@ ViewerControls.propTypes = {
   showInfoPanel: PropTypes.bool
 }
 
-export default flow(
-  withBreakpoints(),
-  withStyles(customStyles)
-)(ViewerControls)
+export default flow(withBreakpoints(), withStyles(customStyles))(ViewerControls)

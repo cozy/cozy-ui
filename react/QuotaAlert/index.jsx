@@ -65,6 +65,7 @@ const QuotaAlert = ({ onClose }) => {
   if (isMobileApp()) {
     return <QuotaModalAlert onClose={onClose} />
   }
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const instanceInfo = useInstance(client)
   return <QuotaModalAlert instance={instanceInfo} onClose={onClose} />
 }

@@ -33,6 +33,7 @@ const IntentComponent = () => {
   let render
 
   try {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     webviewIntent = useWebviewIntent()
     render = webviewIntent.foo
   } catch {

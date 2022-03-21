@@ -23,11 +23,7 @@ describe('NestedSelect', () => {
     })
   }
 
-  const simulateClick = row =>
-    row
-      .find(ListItem)
-      .props()
-      .onClick()
+  const simulateClick = row => row.find(ListItem).props().onClick()
 
   const setup = ({ canSelectParent, itemSelected, searchOptions }) => {
     // Very crude notion of parenting

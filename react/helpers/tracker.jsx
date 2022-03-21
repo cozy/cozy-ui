@@ -180,7 +180,7 @@ export const trackEvent = (event, trackerForTest) => {
   if (tracker) {
     let trackEventArray = []
     if (event && event[0]) {
-      //Like that, we can do trackEvent(['Drive', 'option1']) without thinking of adding this `trackEvent` attr
+      // Like that, we can do trackEvent(['Drive', 'option1']) without thinking of adding this `trackEvent` attr
       if (event[0] !== 'trackEvent') {
         trackEventArray = event.unshift('trackEvent')
       }

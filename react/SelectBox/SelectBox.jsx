@@ -111,16 +111,15 @@ const DropdownIndicator = props => {
   )
 }
 
-const reactSelectControl = CustomControl => ({
-  innerProps,
-  innerRef,
-  children
-}) => (
-  <div {...innerProps} ref={innerRef}>
-    {CustomControl}
-    <div className={styles['select-control__input']}>{children}</div>
-  </div>
-)
+const reactSelectControl =
+  CustomControl =>
+  ({ innerProps, innerRef, children }) =>
+    (
+      <div {...innerProps} ref={innerRef}>
+        {CustomControl}
+        <div className={styles['select-control__input']}>{children}</div>
+      </div>
+    )
 
 const Option = ({
   children,

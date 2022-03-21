@@ -35,8 +35,9 @@ const withLocales = localesOrRequire => Component => {
     ...I18n.childContextTypes
   }
 
-  Wrapped.displayName = `withLocales(${Component.displayName ||
-    Component.name})`
+  Wrapped.displayName = `withLocales(${
+    Component.displayName || Component.name
+  })`
 
   // The outer component needs to receive lang
   return translate()(Wrapped)

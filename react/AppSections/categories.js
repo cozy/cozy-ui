@@ -21,6 +21,7 @@ const multiGroupBy = (iter, grouper) => {
   for (const obj of iter) {
     const values = grouper(obj) || []
     values.forEach(v => {
+      // eslint-disable-next-line no-prototype-builtins
       if (!groups.hasOwnProperty(v)) groups[v] = []
       groups[v].push(obj)
     })

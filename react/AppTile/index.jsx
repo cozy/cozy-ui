@@ -66,9 +66,8 @@ export const AppTile = ({
       type="button"
       onClick={onClick}
       className={cx({
-        [styles[
-          'AppTile-container-maintenance'
-        ]]: isInMaintenanceWithSpecificDisplay
+        [styles['AppTile-container-maintenance']]:
+          isInMaintenanceWithSpecificDisplay
       })}
       isSecondary={statusLabel === APP_STATUS.installed}
     >

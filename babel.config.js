@@ -37,7 +37,7 @@ module.exports = {
           }
         ]
       ],
-      ignore: ['**/*.spec.jsx', '**/*.spec.js']
+      ignore: ['**/*.spec.jsx', '**/*.spec.js', '**/*.spec.tsx', '**/*.spec.ts']
     },
     test: {
       presets: [['cozy-app', { transformRuntime: { helpers: true } }]],

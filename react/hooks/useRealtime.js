@@ -38,6 +38,7 @@ const useRealtime = (client, specs, deps) => {
     })
   }
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     subscribeRealtime()
 

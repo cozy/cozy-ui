@@ -4,10 +4,8 @@ import { Contact } from 'cozy-doctypes'
 
 const ContactName = ({ contact }) => {
   const name = contact.name || {}
-  const {
-    givenName: firstname = contact.fullname,
-    familyName: lastname = ''
-  } = name
+  const { givenName: firstname = contact.fullname, familyName: lastname = '' } =
+    name
 
   return (
     <div>

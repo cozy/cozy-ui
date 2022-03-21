@@ -90,7 +90,4 @@ Toolbar.propTypes = {
   onClose: PropTypes.func
 }
 
-export default flow(
-  withBreakpoints(),
-  withViewerLocales
-)(Toolbar)
+export default flow(withBreakpoints(), withViewerLocales)(Toolbar)
