@@ -104,7 +104,7 @@ const ActionMenu = ({
   containerElRef
 }) => {
   const theme = useTheme()
-  const sidebar = document.querySelector('[class*="sidebar"]')
+  const sidebar = document.getElementById('sidebar')
 
   useSetFlagshipUI(
     {
