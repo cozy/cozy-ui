@@ -12,6 +12,7 @@ import { isMobileApp } from 'cozy-device-helper'
  */
 // source https://stackoverflow.com/a/16861050
 export function popupCenter(w, h) {
+  // eslint-disable-next-line no-redeclare
   /* global screen */
   // Fixes dual-screen position
   //                      Most browsers      Firefox

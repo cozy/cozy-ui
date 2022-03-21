@@ -15,7 +15,7 @@ describe('ViewStack', () => {
 
     // Ignore act's warning, since act does not support async logic and we have
     // a sleep when popping to wait for the animation
-    jest.spyOn(console, 'error').mockImplementation(function(message) {
+    jest.spyOn(console, 'error').mockImplementation(function (message) {
       if (
         !message.includes(
           'An update to %s inside a test was not wrapped in act'
@@ -38,9 +38,7 @@ describe('ViewStack', () => {
     )
     expect(root.find(Slide).props().number).toBe(1)
     act(() => {
-      findButtonWithLabel(root, 'stack')
-        .props()
-        .onClick()
+      findButtonWithLabel(root, 'stack').props().onClick()
     })
     root.update()
 
@@ -50,9 +48,7 @@ describe('ViewStack', () => {
 
     let prom
     act(() => {
-      prom = findButtonWithLabel(root, 'pop')
-        .props()
-        .onClick()
+      prom = findButtonWithLabel(root, 'pop').props().onClick()
     })
     root.update()
     const swiperProps2 = root.find(SwipeableViews).props()

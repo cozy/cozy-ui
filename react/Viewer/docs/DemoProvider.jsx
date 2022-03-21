@@ -10,8 +10,7 @@ const demoTextFileResponse = {
 }
 
 const demoFilesByClass = {
-  pdf:
-    'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/examples/learning/helloworld.pdf',
+  pdf: 'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/examples/learning/helloworld.pdf',
   audio: 'https://viewerdemo.cozycloud.cc/Z.mp3',
   video: 'https://viewerdemo.cozycloud.cc/Nextcloud.mp4',
   text: 'https://viewerdemo.cozycloud.cc/notes.md'

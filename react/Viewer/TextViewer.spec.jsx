@@ -91,8 +91,7 @@ describe('TextViewer Component', () => {
     inst.setState({
       loading: false,
       isMarkdown: true,
-      text:
-        "It's very easy to make some words **bold** and other words *italic* with Markdown"
+      text: "It's very easy to make some words **bold** and other words *italic* with Markdown"
     })
     expect(comp.toJSON()).toMatchSnapshot()
   })

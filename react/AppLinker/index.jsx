@@ -142,7 +142,7 @@ export class AppLinker extends React.Component {
     AppLinker.onAppSwitch(onAppSwitch)
     openDeeplinkOrRedirect(
       appInfo.uri + (nativePath === '/' ? '' : nativePath),
-      function() {
+      function () {
         window.location.href = href
       }
     )

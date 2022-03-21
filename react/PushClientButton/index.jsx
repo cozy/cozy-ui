@@ -13,10 +13,11 @@ const ButtonClient = props => {
   return (
     <a
       href={href}
-      //eslint-disable-next-line react/jsx-no-target-blank
+      // eslint-disable-next-line react/jsx-no-target-blank
       target="_blank"
       className={cx(styles['c-btn-client'], className)}
       onClick={onClick}
+      rel="noreferrer"
     >
       <figure>
         <Icon icon={icon || DeviceLaptopIcon} size="32" />

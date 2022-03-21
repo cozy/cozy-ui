@@ -12,9 +12,10 @@ const FilePickerBreadcrumb = ({ path, onBreadcrumbClick }) => {
   const { isMobile } = useBreakpoints()
   const hasPath = path && path.length > 0
 
-  const navigateTo = useCallback(folder => () => onBreadcrumbClick(folder), [
-    onBreadcrumbClick
-  ])
+  const navigateTo = useCallback(
+    folder => () => onBreadcrumbClick(folder),
+    [onBreadcrumbClick]
+  )
 
   return (
     <Typography variant="h4" className="u-flex u-flex-items-center">

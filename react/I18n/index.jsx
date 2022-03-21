@@ -89,8 +89,9 @@ export const translate = () => WrappedComponent => {
       />
     )
   }
-  Wrapper.displayName = `withI18n(${WrappedComponent.displayName ||
-    WrappedComponent.name})`
+  Wrapper.displayName = `withI18n(${
+    WrappedComponent.displayName || WrappedComponent.name
+  })`
   return Wrapper
 }
 

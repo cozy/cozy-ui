@@ -39,7 +39,7 @@ const InfosCarrousel = ({
   const hasNextInfos = index === count - 1
 
   const onChangeIndex = useCallback(
-    function(index) {
+    function (index) {
       const { onChangeIndex: onChangeIndexProp } = swipeableProps
       if (onChangeIndexProp) {
         onChangeIndexProp(index)
