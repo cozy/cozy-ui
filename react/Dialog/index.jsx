@@ -1,7 +1,6 @@
 import React from 'react'
 import { RemoveScroll } from 'react-remove-scroll'
 import { default as MUIDialog } from '@material-ui/core/Dialog'
-import { styles } from '@material-ui/core/Backdrop/Backdrop'
 import { useTheme } from '@material-ui/core'
 
 import useBreakpoints from '../hooks/useBreakpoints'
@@ -41,8 +40,8 @@ const Dialog = props => {
       : {
           bottomBackground: theme.palette.background.default,
           bottomTheme: 'light',
-          bottomOverlay: styles.root.backgroundColor,
-          topOverlay: styles.root.backgroundColor,
+          bottomOverlay: 'rgba(0, 0, 0, 0.5)',
+          topOverlay: 'rgba(0, 0, 0, 0.5)',
           topBackground: theme.palette.background.paper,
           topTheme: 'light'
         },

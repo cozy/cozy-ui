@@ -68,8 +68,14 @@ const InfosMigration = React.memo(function InfosMigration(props) {
     props.text ||
     props.title
   if (isUsingDeprecatedProps) {
-    const { title, text, icon, actionButton, isImportant, ...otherProps } =
-      props
+    const {
+      title,
+      text,
+      icon,
+      actionButton,
+      isImportant,
+      ...otherProps
+    } = props
     logInfosDepecrated(
       'The Infos component API has changed, using any of the following props is deprecated: title, text, icon, actionButton, isImportant'
     )

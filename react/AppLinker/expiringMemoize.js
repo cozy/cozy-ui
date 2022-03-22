@@ -1,4 +1,4 @@
-export default function (fn, duration, keyFn) {
+export default function(fn, duration, keyFn) {
   const memo = {}
   return arg => {
     const key = keyFn(arg)

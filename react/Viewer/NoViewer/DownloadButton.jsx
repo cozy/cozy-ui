@@ -22,4 +22,7 @@ DownloadButton.propTypes = {
   file: FileDoctype
 }
 
-export default flow(withClient, withViewerLocales)(DownloadButton)
+export default flow(
+  withClient,
+  withViewerLocales
+)(DownloadButton)

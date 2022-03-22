@@ -22,7 +22,11 @@ describe('Modal', () => {
   }
 
   const clickNthButton = (root, n) =>
-    root.find('button').at(n).props().onClick()
+    root
+      .find('button')
+      .at(n)
+      .props()
+      .onClick()
 
   const mountFirstModal = root => clickNthButton(root, 0)
   const mountSecondModal = root => clickNthButton(root, 1)

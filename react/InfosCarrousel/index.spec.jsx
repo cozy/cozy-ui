@@ -37,7 +37,10 @@ const getArrowsDisabledProps = root =>
 
 const simulateSwipeToSlideIndex = (root, slideIndex) => {
   act(() => {
-    root.find(SwipeableViews).props().onChangeIndex(slideIndex)
+    root
+      .find(SwipeableViews)
+      .props()
+      .onChangeIndex(slideIndex)
   })
   root.update()
 }

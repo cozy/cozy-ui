@@ -22,8 +22,14 @@ class InputGroup extends Component {
   }
 
   render() {
-    const { children, prepend, append, error, fullwidth, className } =
-      this.props
+    const {
+      children,
+      prepend,
+      append,
+      error,
+      fullwidth,
+      className
+    } = this.props
     const { focused } = this.state
     return (
       <div

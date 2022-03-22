@@ -19,8 +19,15 @@ class IntentIframe extends React.Component {
   state = { loading: false }
 
   componentDidMount() {
-    const { action, data, type, onCancel, onError, onTerminate, client } =
-      this.props
+    const {
+      action,
+      data,
+      type,
+      onCancel,
+      onError,
+      onTerminate,
+      client
+    } = this.props
 
     console.warn(
       'Be carful to use `withBreakpoints()` and not `useBreakpoints()` in intents. See https://github.com/cozy/cozy-ui/issues/1807'

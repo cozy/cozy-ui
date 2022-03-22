@@ -25,44 +25,40 @@ import breakpoints, { getBreakpointsStatus } from './breakpoints'
  *
  *
  */
-const withBreakpoints =
-  (bp = breakpoints) =>
-  Wrapped => {
-    class Aware extends Component {
-      constructor(props) {
-        super(props)
-        this.state = {
-          breakpoints: getBreakpointsStatus(bp)
-        }
-        this.checkBreakpoints = throttle(
-          () => {
-            this.setState({ breakpoints: getBreakpointsStatus(bp) })
-          },
-          100,
-          { trailing: true }
-        )
+const withBreakpoints = (bp = breakpoints) => Wrapped => {
+  class Aware extends Component {
+    constructor(props) {
+      super(props)
+      this.state = {
+        breakpoints: getBreakpointsStatus(bp)
       }
-
-      componentDidMount() {
-        window.addEventListener('resize', this.checkBreakpoints)
-      }
-
-      componentWillUnmount() {
-        window.removeEventListener('resize', this.checkBreakpoints)
-      }
-
-      render() {
-        const props = this.props
-        const { breakpoints } = this.state
-        return <Wrapped {...props} breakpoints={breakpoints} />
-      }
+      this.checkBreakpoints = throttle(
+        () => {
+          this.setState({ breakpoints: getBreakpointsStatus(bp) })
+        },
+        100,
+        { trailing: true }
+      )
     }
 
-    Aware.displayName = `withBreakpoints(${
-      Wrapped.displayName || Wrapped.name
-    })`
-    return Aware
+    componentDidMount() {
+      window.addEventListener('resize', this.checkBreakpoints)
+    }
+
+    componentWillUnmount() {
+      window.removeEventListener('resize', this.checkBreakpoints)
+    }
+
+    render() {
+      const props = this.props
+      const { breakpoints } = this.state
+      return <Wrapped {...props} breakpoints={breakpoints} />
+    }
   }
+
+  Aware.displayName = `withBreakpoints(${Wrapped.displayName || Wrapped.name})`
+  return Aware
+}
 
 /**
  * PropTypes to use into the component Proptypes definition
