@@ -193,8 +193,13 @@ ViewerInformationsWrapper.propTypes = {
 }
 
 export const ViewerContainer = props => {
-  const { className, disableFooter, disablePanel, disableSharing, ...rest } =
-    props
+  const {
+    className,
+    disableFooter,
+    disablePanel,
+    disableSharing,
+    ...rest
+  } = props
   const { currentIndex, files } = props
   const toolbarRef = createRef()
   const { isDesktop } = useBreakpoints()

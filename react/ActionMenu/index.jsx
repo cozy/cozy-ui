@@ -1,18 +1,19 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
 import ClickAwayListener from '@material-ui/core/ClickAwayListener'
-import styles from './styles.styl'
-import { Media, Bd, Img } from '../Media'
-import BottomDrawer from '../BottomDrawer'
-import useBreakpoints from '../hooks/useBreakpoints'
-import { getCssVariableValue } from '../utils/color'
-import Radio from '../Radio'
-import { spacingProp } from '../Stack'
+import PropTypes from 'prop-types'
+import React from 'react'
+import cx from 'classnames'
 import { usePopper } from 'react-popper'
-import createDepreciationLogger from '../helpers/createDepreciationLogger'
-import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
 import { useTheme } from '@material-ui/core'
+
+import BottomDrawer from '../BottomDrawer'
+import Radio from '../Radio'
+import createDepreciationLogger from '../helpers/createDepreciationLogger'
+import styles from './styles.styl'
+import useBreakpoints from '../hooks/useBreakpoints'
+import { Media, Bd, Img } from '../Media'
+import { getCssVariableValue } from '../utils/color'
+import { spacingProp } from '../Stack'
+import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
 
 const ActionMenuWrapper = ({
   inline,
@@ -110,7 +111,7 @@ const ActionMenu = ({
     {
       bottomBackground: theme.palette.background.paper,
       bottomTheme: 'dark',
-      topOverlay: getCssVariableValue('overlay'),
+      topOverlay: getCssVariableValue('overlay'), // TODO: refactor to semantic variable
       topBackground: theme.palette.background.paper,
       topTheme: 'light'
     },

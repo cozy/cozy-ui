@@ -24,19 +24,16 @@ export const NavLink = {
   activeClassName: styles['is-active']
 }
 
-export const genNavLink =
-  RRNavLink =>
-  ({ to, children, ...rest }) =>
-    (
-      <RRNavLink
-        to={to}
-        className={NavLink.className}
-        activeClassName={NavLink.activeClassName}
-        {...rest}
-      >
-        {children}
-      </RRNavLink>
-    )
+export const genNavLink = RRNavLink => ({ to, children, ...rest }) => (
+  <RRNavLink
+    to={to}
+    className={NavLink.className}
+    activeClassName={NavLink.activeClassName}
+    {...rest}
+  >
+    {children}
+  </RRNavLink>
+)
 
 export const NavIcon = ({ icon }) => (
   <span className={cx(styles['c-nav-icon'])}>

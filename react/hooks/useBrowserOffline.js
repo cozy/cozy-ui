@@ -17,14 +17,12 @@ export default function useBrowserOffline() {
 
   const [isOffline, setOfflineSince] = useState(isOfflineNow)
 
-  const setNavigatorOffline = useCallback(
-    () => setOfflineSince(new Date()),
-    [setOfflineSince]
-  )
-  const setNavigatorOnline = useCallback(
-    () => setOfflineSince(false),
-    [setOfflineSince]
-  )
+  const setNavigatorOffline = useCallback(() => setOfflineSince(new Date()), [
+    setOfflineSince
+  ])
+  const setNavigatorOnline = useCallback(() => setOfflineSince(false), [
+    setOfflineSince
+  ])
 
   useEventListener(window, 'online', setNavigatorOnline)
   useEventListener(window, 'offline', setNavigatorOffline)

@@ -38,6 +38,7 @@ const useRealtime = (client, specs, deps) => {
     })
   }
 
+  // TODO: why is there a conditional hook here?
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
     subscribeRealtime()

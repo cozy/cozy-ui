@@ -65,6 +65,7 @@ const QuotaAlert = ({ onClose }) => {
   if (isMobileApp()) {
     return <QuotaModalAlert onClose={onClose} />
   }
+  // TODO: why is there a conditional hook here?
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const instanceInfo = useInstance(client)
   return <QuotaModalAlert instance={instanceInfo} onClose={onClose} />

@@ -140,10 +140,7 @@ export class PdfJsViewer extends Component {
                 pageNumber={page + 1}
                 width={pageWidth}
                 renderAnnotations={false}
-                className={cx(
-                  'u-mv-1 page-react-pdf',
-                  styles['viewer-pdfviewer-page']
-                )}
+                className={cx('u-mv-1', styles['viewer-pdfviewer-page'])}
               />
             ))
           ) : (
@@ -151,7 +148,7 @@ export class PdfJsViewer extends Component {
               pageNumber={currentPage}
               width={pageWidth}
               renderAnnotations={false}
-              className={cx('page-react-pdf', styles['viewer-pdfviewer-page'])}
+              className={styles['viewer-pdfviewer-page']}
             />
           )}
         </Document>
@@ -202,4 +199,7 @@ PdfJsViewer.propTypes = {
   renderFallbackExtraContent: PropTypes.func
 }
 
-export default flow(withFileUrl, withViewerLocales)(PdfJsViewer)
+export default flow(
+  withFileUrl,
+  withViewerLocales
+)(PdfJsViewer)

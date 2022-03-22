@@ -26,12 +26,13 @@ export const provideDateFnsLocale = (userLang, defaultLang = DEFAULT_LANG) => {
   return locales[lang]
 }
 
-export const initFormat =
-  (userLang, defaultLang = DEFAULT_LANG) =>
-  (date, formatStr) => {
-    const locale = provideDateFnsLocale(userLang, defaultLang)
-    return format(date, formatStr, { locale })
-  }
+export const initFormat = (userLang, defaultLang = DEFAULT_LANG) => (
+  date,
+  formatStr
+) => {
+  const locale = provideDateFnsLocale(userLang, defaultLang)
+  return format(date, formatStr, { locale })
+}
 
 export const formatLocallyDistanceToNow = date =>
   formatDistanceToNow(date, { locale: locales[lang] })

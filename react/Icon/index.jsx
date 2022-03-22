@@ -42,10 +42,9 @@ function Icon(props) {
     ...restProps
   } = props
 
-  const Svg = useMemo(
-    () => (isFunction(icon) ? icon : getSvgObject(icon)),
-    [icon]
-  )
+  const Svg = useMemo(() => (isFunction(icon) ? icon : getSvgObject(icon)), [
+    icon
+  ])
 
   let style = props.style
   style = Object.assign({}, style)

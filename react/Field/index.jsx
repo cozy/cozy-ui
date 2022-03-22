@@ -270,7 +270,7 @@ Field.propTypes = {
   name: PropTypes.string,
   type: PropTypes.oneOf(allowedTypes),
   // value should be an object for type=select and string for others
-  value: function (props, propName, componentName) {
+  value: function(props, propName, componentName) {
     // not a required props
     if (typeof props[propName] === 'undefined') return
     if (props.type === 'select' && typeof props[propName] !== 'object') {

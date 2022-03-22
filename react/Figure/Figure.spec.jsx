@@ -30,10 +30,7 @@ describe('Figure', () => {
   ]
 
   const combinations = combine
-    .apply(
-      null,
-      coloredAttributes.map(x => [{ [x]: true }, { [x]: false }])
-    )
+    .apply(null, coloredAttributes.map(x => [{ [x]: true }, { [x]: false }]))
     .map(attrs => {
       return merge.apply(null, [{}, ...attrs])
     })

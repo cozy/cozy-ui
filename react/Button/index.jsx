@@ -6,7 +6,7 @@ import Icon, { iconPropType } from '../Icon'
 
 import SpinnerIcon from 'cozy-ui/transpiled/react/Icons/Spinner'
 
-const btnClass = function (options) {
+const btnClass = function(options) {
   const { className, extension, size, theme, variant, round, align } = options
   return cx(
     styles['c-btn'],
