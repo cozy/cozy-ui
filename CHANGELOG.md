@@ -1,3 +1,18 @@
+# [62.2.0](https://github.com/cozy/cozy-ui/compare/v62.1.4...v62.2.0) (2022-03-22)
+
+
+### Bug Fixes
+
+* **deps:** Upgrade few packages ([5df4e2b](https://github.com/cozy/cozy-ui/commit/5df4e2b))
+
+
+### Features
+
+* Add Typescript support ([1ad1a48](https://github.com/cozy/cozy-ui/commit/1ad1a48))
+* Handle FlagshipUI for cozy-drive cases ([6fa0228](https://github.com/cozy/cozy-ui/commit/6fa0228))
+* Refactor setFlagshipUI feature ([64ca864](https://github.com/cozy/cozy-ui/commit/64ca864))
+* Update cozy-intent for flagship-UI ([2b3d026](https://github.com/cozy/cozy-ui/commit/2b3d026))
+
 ## [62.1.4](https://github.com/cozy/cozy-ui/compare/v62.1.3...v62.1.4) (2022-03-03)
 
 
