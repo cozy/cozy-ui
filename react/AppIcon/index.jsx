@@ -111,8 +111,9 @@ export class AppIcon extends Component {
           <img
             alt={alt}
             className={cx(styles['c-app-icon'], className)}
-            src={icon}
             onError={this.handleError}
+            ref={this.props.iconRef}
+            src={icon}
           />
         )
       case ERRORED:
@@ -128,6 +129,7 @@ export class AppIcon extends Component {
             icon={fallbackIcon || CubeIcon}
             width="100%"
             color={palette['coolGrey']}
+            iconRef={this.props.iconRef}
           />
         )
     }
