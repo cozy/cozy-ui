@@ -1,3 +1,10 @@
+# [62.3.0](https://github.com/cozy/cozy-ui/compare/v62.2.0...v62.3.0) (2022-03-25)
+
+
+### Features
+
+* Implement openApp animation from cozy-ui ([45e9e3b](https://github.com/cozy/cozy-ui/commit/45e9e3b))
+
 # [62.2.0](https://github.com/cozy/cozy-ui/compare/v62.1.4...v62.2.0) (2022-03-22)
 
 
