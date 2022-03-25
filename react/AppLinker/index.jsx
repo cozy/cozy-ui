@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import {
   checkApp,
   startApp,
@@ -9,6 +10,8 @@ import {
   isAndroid,
   isFlagshipApp
 } from 'cozy-device-helper'
+import { WebviewContext } from 'cozy-intent'
+import logger from 'cozy-logger'
 
 import {
   generateUniversalLink,
@@ -17,7 +20,6 @@ import {
 } from './native'
 import { NATIVE_APP_INFOS } from './native.config'
 import expiringMemoize from './expiringMemoize'
-import { WebviewContext } from 'cozy-intent'
 
 const expirationDelay = 10 * 1000
 const memoizedCheckApp = expiringMemoize(
@@ -36,6 +38,13 @@ export class AppLinker extends React.Component {
 
   constructor(props) {
     super(props)
+
+    this.imgRef = null
+  }
+
+  setImgRef = img => {
+    this.imgRef = img
+    this.setState({ imgRef: this.imgRef })
   }
 
   componentDidMount() {
@@ -69,7 +78,7 @@ export class AppLinker extends React.Component {
     }
   }
 
-  static getOnClickHref(props, nativeAppIsAvailable, context) {
+  static getOnClickHref(props, nativeAppIsAvailable, context, imgRef) {
     const { app, nativePath } = props
     const slug = AppLinker.getSlug(props)
     let href = props.href
@@ -79,15 +88,21 @@ export class AppLinker extends React.Component {
 
     if (isFlagshipApp()) {
       if (!context)
-        console.warn(
-          'FlagshipApp detected but no context found. Is the app wrapped in WebviewIntentProvider?'
+        logger.warn(
+          'FlagshipApp detected but no context found. Is the app wrapped in <WebviewIntentProvider? />'
         )
 
       if (context) {
+        const imgPayload =
+          imgRef &&
+          JSON.stringify({
+            ...imgRef.getBoundingClientRect().toJSON()
+          })
+
         return {
           onClick: event => {
             event.preventDefault()
-            context.call('openApp', href, app)
+            context.call('openApp', href, app, imgPayload)
           },
           href: '#'
         }
@@ -180,9 +195,16 @@ export class AppLinker extends React.Component {
     const { href, onClick } = AppLinker.getOnClickHref(
       this.props,
       nativeAppIsAvailable,
-      this.context
+      this.context,
+      this.state.imgRef
     )
-    return children({ ...appInfo, onClick: onClick, href })
+
+    return children({
+      ...appInfo,
+      iconRef: this.setImgRef,
+      onClick: onClick,
+      href
+    })
   }
 }
 
