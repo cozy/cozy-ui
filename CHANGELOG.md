@@ -1,3 +1,10 @@
+## [62.4.1](https://github.com/cozy/cozy-ui/compare/v62.4.0...v62.4.1) (2022-03-28)
+
+
+### Bug Fixes
+
+* bump @semantic-release/npm from 5.3.4 to 9.0.1 ([cfb30eb](https://github.com/cozy/cozy-ui/commit/cfb30eb))
+
 # [62.4.0](https://github.com/cozy/cozy-ui/compare/v62.3.0...v62.4.0) (2022-03-28)
 
 
