@@ -1,3 +1,10 @@
+# [62.4.0](https://github.com/cozy/cozy-ui/compare/v62.3.0...v62.4.0) (2022-03-28)
+
+
+### Features
+
+* Add tiny size for FileImageLoader ([ae6ba29](https://github.com/cozy/cozy-ui/commit/ae6ba29))
+
 # [62.3.0](https://github.com/cozy/cozy-ui/compare/v62.2.0...v62.3.0) (2022-03-25)
 
 
