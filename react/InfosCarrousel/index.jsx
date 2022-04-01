@@ -18,6 +18,8 @@ const useClampedValue = (initialValue, min, max) => {
 
   useEffect(() => {
     setClampedValue(value)
+    // TODO: validate the deps are correct
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [min, max])
 
   return [clamp(value, min, max), setClampedValue]
@@ -33,8 +35,8 @@ const InfosCarrousel = ({
 }) => {
   const count = React.Children.count(children)
   const [index, setIndex] = useClampedValue(0, 0, count - 1)
-  const goToNextInfos = useCallback(() => setIndex(index + 1), [index])
-  const goToPreviousInfos = useCallback(() => setIndex(index - 1), [index])
+  const goToNextInfos = () => setIndex(index + 1)
+  const goToPreviousInfos = () => setIndex(index - 1)
   const hasPreviousInfos = index === 0
   const hasNextInfos = index === count - 1
 

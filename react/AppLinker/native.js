@@ -29,7 +29,6 @@ export const generateWebLink = ({
   slug,
   subDomainType
 }) => {
-  nativePath = ensureFirstSlash(nativePath)
   const url = new URL(cozyUrl)
   url.host =
     subDomainType === 'nested'
@@ -38,7 +37,7 @@ export const generateWebLink = ({
           .split('.')
           .map((x, i) => (i === 0 ? x + '-' + slug : x))
           .join('.')
-  url.hash = nativePath
+  url.hash = ensureFirstSlash(nativePath)
   return url.toString()
 }
 

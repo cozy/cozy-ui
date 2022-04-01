@@ -56,6 +56,7 @@ export const PdfMobileViewer = ({ file, t, gestures }) => {
         gestures.off('tap doubletap pinchend')
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gestures])
 
   if (error) {

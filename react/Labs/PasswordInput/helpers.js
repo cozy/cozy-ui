@@ -14,7 +14,7 @@ const charsets = [
  *
  * @param {String} password
  * @returns {Object} An object with percentage and label properties
- * representing the strenght of the password
+ * representing the strength of the password
  */
 export const getStrength = password => {
   if (!password && password !== '') {
@@ -24,8 +24,10 @@ export const getStrength = password => {
     return { percentage: 0, label: 'weak' }
   }
 
-  const possibleChars = charsets.reduce(function(possibleChars, charset) {
-    if (charset.regexp.test(password)) possibleChars += charset.size
+  const possibleChars = charsets.reduce((possibleChars, charset) => {
+    if (charset.regexp.test(password)) {
+      return possibleChars + charset.size
+    }
     return possibleChars
   }, 0)
 
@@ -54,7 +56,9 @@ export const getStrength = password => {
   } else {
     // passwordStrength > 192
     strengthPercentage = (passwordStrength * 100) / _at100percent
-    if (strengthPercentage > 100) strengthPercentage = 100
+    if (strengthPercentage > 100) {
+      strengthPercentage = 100
+    }
     strengthLabel = 'strong'
   }
 

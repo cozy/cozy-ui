@@ -126,6 +126,8 @@ const FileUploadProgress = ({ progress: progressProps }) => {
       }
       setIsWaiting(false)
     }
+    // TODO: validate the deps are correct
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

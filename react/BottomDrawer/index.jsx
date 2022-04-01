@@ -91,14 +91,14 @@ class BottomDrawer extends Component {
   }
 
   /**
-   * Applies a css trasnform to the element, based on the progress of the gesture
-   * @param  {Float} progress - Amount of progress between 0 and 1
+   * Applies a css transform to the element, based on the progress of the gesture
+   * @param  {number} progress - Amount of progress between 0 and 1
    */
   applyTransformation(progress) {
     // constrain between 0 and 1.1 (go a bit further than 1 to be hidden completely)
-    progress = Math.min(1.1, Math.max(0, progress))
+    const progressToApply = Math.min(1.1, Math.max(0, progress))
     this.menuNode.current.style.transform =
-      'translateY(' + progress * 100 + '%)'
+      'translateY(' + progressToApply * 100 + '%)'
   }
 
   animateClose = () => {
