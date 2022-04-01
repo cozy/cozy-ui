@@ -46,7 +46,7 @@ export const AppTile = ({
   onClick,
   showDeveloper,
   showStatus,
-  IconComponent,
+  IconComponent: IconComponentProp,
   displaySpecificMaintenanceStyle
 }) => {
   const name = nameProp || app.name
@@ -56,7 +56,7 @@ export const AppTile = ({
   const statusToDisplay = Array.isArray(showStatus)
     ? showStatus.indexOf(statusLabel) > -1 && statusLabel
     : showStatus && statusLabel
-  IconComponent = IconComponent || AppIcon
+  const IconComponent = IconComponentProp || AppIcon
   const isInMaintenanceWithSpecificDisplay =
     displaySpecificMaintenanceStyle && statusLabel === APP_STATUS.maintenance
 

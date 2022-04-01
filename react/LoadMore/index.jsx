@@ -27,6 +27,8 @@ const LoadMore = ({ fetchMore, label }) => {
     observer.observe(elementRef.current)
 
     return () => {
+      // TODO: validate the deps are correct
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       observer.unobserve(elementRef.current)
       observer.disconnect()
     }

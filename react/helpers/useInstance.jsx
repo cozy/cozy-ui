@@ -27,6 +27,7 @@ const useInstance = client => {
       } catch (e) {} //eslint-disable-line
     }
     fetchData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return {

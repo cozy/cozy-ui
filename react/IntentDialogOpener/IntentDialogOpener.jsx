@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
 import IntentIframe from '../IntentIframe'
@@ -32,15 +32,15 @@ const IntentDialogOpener = props => {
   }
   const closeModal = () => setModalOpened(false)
 
-  const handleComplete = useCallback(result => {
+  const handleComplete = result => {
     closeModal()
     onComplete && onComplete(result)
-  }, [])
+  }
 
-  const handleDismiss = useCallback(() => {
+  const handleDismiss = () => {
     closeModal()
     onDismiss && onDismiss()
-  }, [])
+  }
 
   const Tag = tag // React needs uppercase element names
   const elements = [

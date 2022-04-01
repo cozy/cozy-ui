@@ -108,6 +108,8 @@ const BottomSheet = ({ toolbarProps, settings, children }) => {
     setPeekHeights([minHeight, computedMediumHeight, maxHeight])
     setInitPos(computedMediumHeight)
     setBottomSpacerHeight(bottomSpacerHeight)
+    // TODO: validate the deps are correct
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     innerContentRef,
     headerContentRef.current,

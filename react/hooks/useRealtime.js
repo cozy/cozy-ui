@@ -44,6 +44,7 @@ const useRealtime = (client, specs, deps) => {
     subscribeRealtime()
 
     return unsubscribeRealtime
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, deps)
 }
 

@@ -70,6 +70,8 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
         bottomBackground: theme.palette.background.default,
         bottomTheme: 'dark'
       })
+    // TODO: validate the deps are correct
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedCount, webviewIntent])
 
   return (
