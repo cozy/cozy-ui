@@ -1,3 +1,12 @@
+## [62.4.2](https://github.com/cozy/cozy-ui/compare/v62.4.1...v62.4.2) (2022-04-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency copyfiles to v2.4.1 ([c73b02b](https://github.com/cozy/cozy-ui/commit/c73b02b))
+* **deps:** update dependency normalize.css to v8 ([466af5b](https://github.com/cozy/cozy-ui/commit/466af5b))
+* **deps:** update dependency semantic-release to v17.4.7 ([de218b2](https://github.com/cozy/cozy-ui/commit/de218b2))
+
 ## [62.4.1](https://github.com/cozy/cozy-ui/compare/v62.4.0...v62.4.1) (2022-03-28)
 
 
