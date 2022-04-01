@@ -161,7 +161,7 @@
     "intersection-observer": "0.11.0",
     "mui-bottom-sheet": "https://github.com/cozy/mui-bottom-sheet.git#v1.0.6",
     "node-polyglot": "^2.2.2",
-    "normalize.css": "^7.0.0",
+    "normalize.css": "^8.0.0",
     "react-markdown": "^4.0.8",
     "react-pdf": "^4.0.5",
     "react-popper": "^2.2.3",
