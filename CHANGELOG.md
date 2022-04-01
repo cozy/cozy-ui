@@ -1,3 +1,12 @@
+## [62.4.3](https://github.com/cozy/cozy-ui/compare/v62.4.2...v62.4.3) (2022-04-01)
+
+
+### Bug Fixes
+
+* **deps:** update babel monorepo ([e0f7159](https://github.com/cozy/cozy-ui/commit/e0f7159))
+* **deps:** update dependency kss to v3.0.1 ([31d81b2](https://github.com/cozy/cozy-ui/commit/31d81b2))
+* **deps:** update dependency react-redux to v7.2.7 ([0af0356](https://github.com/cozy/cozy-ui/commit/0af0356))
+
 ## [62.4.2](https://github.com/cozy/cozy-ui/compare/v62.4.1...v62.4.2) (2022-04-01)
 
 
