@@ -67,8 +67,8 @@
     "intersection-observer"
   ],
   "devDependencies": {
-    "@babel/cli": "7.11.5",
-    "@babel/core": "7.16.12",
+    "@babel/cli": "7.17.6",
+    "@babel/core": "7.17.8",
     "@babel/helper-builder-react-jsx": "7.16.7",
     "@babel/helper-define-map": "7.16.7",
     "@babel/helper-regex": "7.10.5",
@@ -83,7 +83,7 @@
     "@testing-library/react-hooks": "^3.2.1",
     "argos-cli": "^0.3.3",
     "autoprefixer-stylus": "1.0.0",
-    "babel-loader": "8.1.0",
+    "babel-loader": "8.2.4",
     "babel-plugin-css-modules-transform": "1.6.2",
     "babel-plugin-inline-json-import": "0.3.2",
     "babel-preset-cozy-app": "2.0.2",
