@@ -1,5 +1,5 @@
-import { render, fireEvent } from '@testing-library/react'
 import React from 'react'
+import { render, fireEvent } from '@testing-library/react'
 
 import DemoProvider from '../ContactsListModal/DemoProvider'
 import { BreakpointsProvider } from '../hooks/useBreakpoints'
@@ -38,12 +38,15 @@ it('should call the onChange function when a contact is being selected', async (
   const btn = root.getByText('Select a contact')
   fireEvent.click(btn)
 
-  const row = await root.findByText('Alexis Bickers')
+  const row = await root.findByText('Mitch')
   fireEvent.click(row)
 
   expect(onChange).toHaveBeenCalledWith(
     expect.objectContaining({
-      fullname: 'Alexis Bickers'
+      name: {
+        familyName: 'Woodrum',
+        givenName: 'Mitch'
+      }
     })
   )
 })

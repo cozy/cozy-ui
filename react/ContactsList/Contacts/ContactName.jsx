@@ -1,25 +1,39 @@
 import React from 'react'
-import styles from '../styles.styl'
-import { Contact } from 'cozy-doctypes'
+import PropTypes from 'prop-types'
+import cx from 'classnames'
 
-const ContactName = ({ contact }) => {
-  const name = contact.name || {}
-  const {
-    givenName: firstname = contact.fullname,
-    familyName: lastname = ''
-  } = name
+import Typography from '../../Typography'
+
+const ContactName = ({ displayName, familyName }) => {
+  const namesToDisplay = (displayName && displayName.split(' ')) || []
 
   return (
-    <div>
-      <span className={styles['contact-firstname']}>{firstname}</span>
-      &nbsp;
-      <span className={styles['contact-lastname']}>{lastname}</span>
-    </div>
+    <Typography
+      className="u-ml-1"
+      variant="body1"
+      noWrap
+      gutterBottom
+      display="inline"
+    >
+      {namesToDisplay.map((name, key) => (
+        <span
+          key={`display-${key}`}
+          className={cx({ 'u-fw-bold': name === familyName })}
+        >
+          {name}
+          &nbsp;
+        </span>
+      ))}
+    </Typography>
   )
 }
 
 ContactName.propTypes = {
-  contact: Contact.propType.isRequired
+  displayName: PropTypes.string,
+  familyName: PropTypes.string
+}
+ContactName.defaultProps = {
+  displayName: ''
 }
 
 export default ContactName

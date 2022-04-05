@@ -56,14 +56,14 @@ describe('ContactRow', () => {
     expect(contactrowcozyurl.text()).toBe(contact.cozy[0].url)
   })
 
-  it('should display empty string for missing information', () => {
+  it('should display email for missing information', () => {
     const contact = makeContact({
       email: [{ address: 'johndoe@localhost' }]
     })
     const { root } = setup({ contact })
     const contactrowname = root.find('ContactName')
     expect(contactrowname).toBeDefined()
-    expect(contactrowname.text().trim()).toBe('')
+    expect(contactrowname.text().trim()).toBe('johndoe@localhost')
     const contactrowphone = root.find('ContactPhone')
     expect(contactrowphone).toBeDefined()
     expect(contactrowphone.text().trim()).toBe('—')

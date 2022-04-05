@@ -1,15 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ContactRow should match the contact snapshot 1`] = `
-<div
-  className="styles__contact___169nD"
+<li
+  className="MuiListItem-root MuiListItem-gutters"
+  data-testid="contact-listItem"
+  disabled={false}
   onClick={[Function]}
 >
   <div
-    className="styles__contact-identity___mL3IJ"
+    className="styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis"
   >
     <div
-      className="styles__c-avatar___PpDI- styles__c-avatar--text___2dvna styles__contact-avatar___3lZPs"
+      className="styles__c-avatar___PpDI- styles__c-avatar--text___2dvna"
       style={
         Object {
           "--circleSize": "32px",
@@ -24,34 +26,37 @@ exports[`ContactRow should match the contact snapshot 1`] = `
         JD
       </span>
     </div>
-    <div>
+    <p
+      className="MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline"
+    >
       <span
-        className="styles__contact-firstname___2GPEr"
+        className=""
       >
         John
+         
       </span>
-       
       <span
-        className="styles__contact-lastname___134MM"
+        className="u-fw-bold"
       >
         Doe
+         
       </span>
-    </div>
+    </p>
   </div>
   <div
-    className="styles__contact-email___3n3q2"
+    className="styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis"
   >
     johndoe@localhost
   </div>
   <div
-    className="styles__contact-phone___1sA_m"
+    className="styles__TableCell___yJCq7 styles__contact-phone___1sA_m u-ellipsis"
   >
     0123456789
   </div>
   <div
-    className="styles__contact-cozyurl___3kBp5"
+    className="styles__TableCell___yJCq7 styles__contact-cozyurl___3kBp5 u-ellipsis"
   >
     http://johndoe.mycozy.cloud
   </div>
-</div>
+</li>
 `;
