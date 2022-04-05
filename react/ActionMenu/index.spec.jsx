@@ -1,9 +1,16 @@
 import React from 'react'
 import { mount } from 'enzyme'
+import { render } from '@testing-library/react'
 import { act } from 'react-dom/test-utils'
-import ActionMenu, { ActionMenuItem } from './'
+
 import { fixPopperTesting } from '../Popper/testing'
 import { BreakpointsProvider } from '../hooks/useBreakpoints'
+import Typography from '../Typography'
+import Icon from '../Icon'
+import FileIcon from '../Icons/File'
+import WarningIcon from '../Icons/Warning'
+
+import ActionMenu, { ActionMenuItem, ActionMenuRadio } from './'
 
 describe('ActionMenu', () => {
   fixPopperTesting()
@@ -88,5 +95,33 @@ describe('ActionMenu', () => {
     })
     expect(menuAction1).toHaveBeenCalled()
     expect(closeMenu).toHaveBeenCalled()
+  })
+
+  it('should render as expected', async () => {
+    const { container } = render(
+      <BreakpointsProvider>
+        <ActionMenuItem
+          left={<Icon icon={FileIcon} />}
+          right={<Icon icon={WarningIcon} color="var(--errorColor)" />}
+          onClick={() => alert('click')}
+        >
+          Item 1 with onclick action
+        </ActionMenuItem>
+        <ActionMenuItem left={<Icon icon={FileIcon} />}>
+          Item 2 with dialog action
+        </ActionMenuItem>
+        <ActionMenuItem left={<ActionMenuRadio />}>Item 3</ActionMenuItem>
+        <ActionMenuItem left={<Icon icon={FileIcon} />}>
+          <Typography variant="body1" gutterBottom>
+            Item 4
+          </Typography>
+          <Typography variant="caption" color="textSecondary">
+            Descriptive text to elaborate on what item 3 does.
+          </Typography>
+        </ActionMenuItem>
+      </BreakpointsProvider>
+    )
+
+    expect(container).toMatchSnapshot()
   })
 })

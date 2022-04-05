@@ -1,57 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ActionMenu should render examples: ActionMenu 1`] = `
-"<div>
-  <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
-    <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">WITHMOBILEHEADER</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">WITHDESKTOPPLACEMENT</span></label>
-  </div><button role=\\"button\\" class=\\"styles__c-DropdownButton___1JXUA\\">Show action menu<svg viewBox=\\"0 0 24 24\\" class=\\"styles__c-DropdownButton-Icon___ohvD2 styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
-      <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
-    </svg></button>
-  <div>
-    <div style=\\"position: absolute; left: 0px; top: 0px; z-index: #fff; transform: translate(0px, 0px);\\" data-popper-reference-hidden=\\"true\\" data-popper-escaped=\\"true\\" data-popper-placement=\\"bottom-start\\">
-      <div class=\\"styles__c-actionmenu___22Fp1 styles__c-actionmenu--inline___1SXZa\\">
-        <div class=\\"styles__media___cSJMp styles__media--top___K9w0I styles__c-actionmenu-item___gODqd\\">
-          <div class=\\"styles__img___3SHpG u-mh-1\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-              <defs>
-                <path id=\\"file_svg__a\\" d=\\"M1 1c0-.552.446-1 .998-1H10v5h5v10.004a1 1 0 01-1.007.996H2.007A1.002 1.002 0 011 15V1zm10 3V0l4 4h-4z\\"></path>
-              </defs>
-              <use xlink:href=\\"#file_svg__a\\" fill-rule=\\"evenodd\\"></use>
-            </svg></div>
-          <div class=\\"styles__bd___1Uv-F u-mr-1 u-stack-xs\\">Item 1 with onclick action</div>
-          <div class=\\"styles__img___3SHpG u-mr-1\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--errorColor);\\" width=\\"16\\" height=\\"16\\">
-              <path fill-rule=\\"evenodd\\" d=\\"M7.022 1.736c.543-.959 1.428-.95 1.966 0l6.532 11.529c.543.958.094 1.735-1.016 1.735h-13C.399 15-.051 14.215.487 13.265l6.535-11.53zM7.004 13c0-.552.443-1 1-1 .552 0 1 .444 1 1 0 .553-.444 1-1 1-.553 0-1-.444-1-1zm0-7.997a.999.999 0 011-1.003c.552 0 1 .438 1 1.003v4.994a.999.999 0 01-1 1.003c-.553 0-1-.438-1-1.003V5.003z\\"></path>
-            </svg></div>
-        </div>
-        <div class=\\"styles__media___cSJMp styles__media--top___K9w0I styles__c-actionmenu-item___gODqd\\">
-          <div class=\\"styles__img___3SHpG u-mh-1\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-              <defs>
-                <path id=\\"file_svg__a\\" d=\\"M1 1c0-.552.446-1 .998-1H10v5h5v10.004a1 1 0 01-1.007.996H2.007A1.002 1.002 0 011 15V1zm10 3V0l4 4h-4z\\"></path>
-              </defs>
-              <use xlink:href=\\"#file_svg__a\\" fill-rule=\\"evenodd\\"></use>
-            </svg></div>
-          <div class=\\"styles__bd___1Uv-F u-mr-1 u-stack-xs\\">Item 2 with dialog action</div>
-        </div>
-        <div class=\\"styles__media___cSJMp styles__media--top___K9w0I styles__c-actionmenu-item___gODqd\\">
-          <div class=\\"styles__img___3SHpG u-mh-1\\"><label class=\\"styles__c-input-radio___XJQt1 styles__c-actionmenu-radio___Km9uj\\"><input type=\\"radio\\" value=\\"\\"><span></span></label></div>
-          <div class=\\"styles__bd___1Uv-F u-mr-1 u-stack-xs\\">Item 3</div>
-        </div>
-        <div class=\\"styles__media___cSJMp styles__media--top___K9w0I styles__c-actionmenu-item___gODqd\\">
-          <div class=\\"styles__img___3SHpG u-mh-1\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-              <defs>
-                <path id=\\"file_svg__a\\" d=\\"M1 1c0-.552.446-1 .998-1H10v5h5v10.004a1 1 0 01-1.007.996H2.007A1.002 1.002 0 011 15V1zm10 3V0l4 4h-4z\\"></path>
-              </defs>
-              <use xlink:href=\\"#file_svg__a\\" fill-rule=\\"evenodd\\"></use>
-            </svg></div>
-          <div class=\\"styles__bd___1Uv-F u-mr-1 u-stack-xs\\">
-            <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom\\">Item 4</p><span class=\\"MuiTypography-root MuiTypography-caption MuiTypography-colorTextSecondary\\">Descriptive text to elaborate on what item 3 does.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>"
-`;
-
 exports[`AppTitle should render examples: AppTitle 1`] = `
 "<div>
   <h1 class=\\"MuiTypography-root styles__c-apptitle___eqV9l MuiTypography-h4\\">Drive</h1>
