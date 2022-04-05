@@ -77,7 +77,7 @@ $footerHeight = 3.5rem
     +medium-screen()
         height $toolbarHeightMedium
         width calc(100% - 1rem)
-        padding 0 1rem 0 0
+        padding var(--flagship-top-height) 1rem 0 0
         background var(--paperBackgroundColor)
         border-bottom 1px solid var(--dividerColor)
 
@@ -87,5 +87,5 @@ $footerHeight = 3.5rem
     z-index $modal-footer-index
     width 100%
     height $footerHeight
-    padding-bottom env(safe-area-inset-bottom)
+    padding-bottom var(--flagship-bottom-height, env(safe-area-inset-bottom))
     background var(--paperBackgroundColor)

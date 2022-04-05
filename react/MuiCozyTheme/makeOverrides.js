@@ -411,6 +411,9 @@ const makeOverrides = theme => ({
   },
   MuiDialogTitle: {
     root: {
+      '.flagship-app &': {
+        paddingTop: 'calc(var(--flagship-top-height) + 0.75rem) !important'
+      },
       ...theme.typography.h3,
       boxSizing: 'border-box',
       width: '100%',
@@ -438,6 +441,9 @@ const makeOverrides = theme => ({
   },
   MuiDialogContent: {
     root: {
+      '.flagship-app &': {
+        marginBottom: 'var(--flagship-bottom-height) !important'
+      },
       padding: '24px 32px 0',
       [theme.breakpoints.down('sm')]: {
         padding: '24px 16px 0'

@@ -96,10 +96,19 @@ const BottomSheet = ({ toolbarProps, settings, children }) => {
           getComputedStyle(headerContent).getPropertyValue('padding-bottom')
         )
       : 0
+
+    // Will return 0 if the variable is not set
+    const flagshipBottomOffset = Number(
+      getComputedStyle(document.body)
+        .getPropertyValue('--flagship-bottom-height')
+        .replace('px', '')
+    )
+
     const minHeight =
       headerRef.current.offsetHeight +
       actionButtonsHeight +
-      actionButtonsBottomMargin
+      actionButtonsBottomMargin +
+      flagshipBottomOffset
 
     // Used so that the bottomSheet can be opened to the top,
     // without stopping at the content height
