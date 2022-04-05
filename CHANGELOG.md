@@ -1,3 +1,15 @@
+# [62.5.0](https://github.com/cozy/cozy-ui/compare/v62.4.3...v62.5.0) (2022-04-05)
+
+
+### Bug Fixes
+
+* Table use theme colors ([7339482](https://github.com/cozy/cozy-ui/commit/7339482))
+
+
+### Features
+
+* ContactsList behave as Contacts app does ([5a3837c](https://github.com/cozy/cozy-ui/commit/5a3837c))
+
 ## [62.4.3](https://github.com/cozy/cozy-ui/compare/v62.4.2...v62.4.3) (2022-04-01)
 
 
