@@ -24,7 +24,6 @@ const testComponent = (ComponentName, options) => {
 }
 
 // Please keep the list sorted
-testComponent('ActionMenu', { delay: 600 }) // Prints error because of Dialog usage
 testComponent('AppTitle')
 testComponent('Avatar')
 testComponent('Badge')
