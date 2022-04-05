@@ -1,9 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
+import { TableCell } from '../../Table'
 import styles from '../styles.styl'
 
 const ContactPhone = ({ phone }) => (
-  <div className={styles['contact-phone']}>{phone}</div>
+  <TableCell className={`${styles['contact-phone']} u-ellipsis`}>
+    {phone}
+  </TableCell>
 )
 
 ContactPhone.propTypes = {

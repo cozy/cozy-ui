@@ -1,39 +1,35 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 
+import { Table } from '../Table'
+import List from '../MuiCozyTheme/List'
+import ListSubheader from '../MuiCozyTheme/ListSubheader'
 import { sortContacts, categorizeContacts, sortHeaders } from './helpers'
 import ContactRow from './ContactRow'
-import ListSubheader from '../MuiCozyTheme/ListSubheader'
-import styles from './styles.styl'
 
-const ContactsList = props => {
-  const { contacts, className, onItemClick, ...rest } = props
-
+const ContactsList = ({ contacts, onItemClick, ...rest }) => {
   const sortedContacts = sortContacts(contacts)
   const categorizedContacts = categorizeContacts(sortedContacts)
   const sortedHeaders = sortHeaders(categorizedContacts)
 
   return (
-    <ol className={cx(styles['list-contact'], className)} {...rest}>
+    <Table {...rest}>
       {sortedHeaders.map(header => (
-        <li key={header}>
-          <ol className={styles['sublist-contact']}>
-            <ListSubheader>{header}</ListSubheader>
-            {categorizedContacts[header].map(contact => (
-              <li key={contact._id}>
-                <ContactRow
-                  id={contact._id}
-                  key={contact._id}
-                  contact={contact}
-                  onClick={onItemClick}
-                />
-              </li>
-            ))}
-          </ol>
-        </li>
+        <List key={header}>
+          <ListSubheader>{header}</ListSubheader>
+          {categorizedContacts[header].map((contact, index) => (
+            <List key={contact._id}>
+              <ContactRow
+                id={contact._id}
+                contact={contact}
+                divider={index !== contacts.length - 1}
+                onClick={onItemClick}
+              />
+            </List>
+          ))}
+        </List>
       ))}
-    </ol>
+    </Table>
   )
 }
 
