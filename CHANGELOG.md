@@ -1,3 +1,10 @@
+## [62.5.1](https://github.com/cozy/cozy-ui/compare/v62.5.0...v62.5.1) (2022-04-06)
+
+
+### Bug Fixes
+
+* Propagate the ref on the MUIButton ([86f52eb](https://github.com/cozy/cozy-ui/commit/86f52eb))
+
 # [62.5.0](https://github.com/cozy/cozy-ui/compare/v62.4.3...v62.5.0) (2022-04-05)
 
 
