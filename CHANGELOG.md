@@ -1,3 +1,10 @@
+## [62.5.2](https://github.com/cozy/cozy-ui/compare/v62.5.1...v62.5.2) (2022-04-07)
+
+
+### Bug Fixes
+
+* Implement flagship top/bottom spacing ([50f2ff9](https://github.com/cozy/cozy-ui/commit/50f2ff9))
+
 ## [62.5.1](https://github.com/cozy/cozy-ui/compare/v62.5.0...v62.5.1) (2022-04-06)
 
 
