@@ -1,3 +1,10 @@
+## [62.5.3](https://github.com/cozy/cozy-ui/compare/v62.5.2...v62.5.3) (2022-04-07)
+
+
+### Bug Fixes
+
+* **deps:** Upgrade caniuse-lite ([8881188](https://github.com/cozy/cozy-ui/commit/8881188))
+
 ## [62.5.2](https://github.com/cozy/cozy-ui/compare/v62.5.1...v62.5.2) (2022-04-07)
 
 
