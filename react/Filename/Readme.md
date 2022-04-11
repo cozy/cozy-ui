@@ -17,3 +17,13 @@ import FileIcon from 'cozy-ui/transpiled/react/Icons/File';
   <Filename icon={FileIcon} filename="my_awesome_paper" extension=".pdf" />
 </div>
 ```
+
+#### Filename with custom variant
+
+```jsx
+import Filename from 'cozy-ui/transpiled/react/Filename';
+
+<div>
+  <Filename variant={'body1'} filename="my_awesome_paper" extension=".pdf" />
+</div>
+```
