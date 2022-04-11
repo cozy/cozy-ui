@@ -1,3 +1,10 @@
+# [62.6.0](https://github.com/cozy/cozy-ui/compare/v62.5.3...v62.6.0) (2022-04-11)
+
+
+### Features
+
+* Add variant prop to Filename component ([eaaa770](https://github.com/cozy/cozy-ui/commit/eaaa770)), closes [#2018](https://github.com/cozy/cozy-ui/issues/2018)
+
 ## [62.5.3](https://github.com/cozy/cozy-ui/compare/v62.5.2...v62.5.3) (2022-04-07)
 
 
