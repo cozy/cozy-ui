@@ -7,7 +7,7 @@ import Icon from '../Icon'
 import Typography from '../Typography'
 import styles from './styles.styl'
 
-const Filename = ({ icon, filename, extension }) => {
+const Filename = ({ icon, filename, extension, variant }) => {
   return (
     <Media>
       {icon && (
@@ -17,14 +17,14 @@ const Filename = ({ icon, filename, extension }) => {
       )}
       <Bd className={styles['c-filename-wrapper']}>
         <Typography
-          variant="h6"
+          variant={variant}
           component="span"
           className={cx(styles['c-filename-name'], 'u-ellipsis')}
         >
           {filename}
         </Typography>
         {extension && (
-          <Typography variant="h6" component="span" color="textSecondary">
+          <Typography variant={variant} component="span" color="textSecondary">
             {extension}
           </Typography>
         )}
@@ -35,11 +35,20 @@ const Filename = ({ icon, filename, extension }) => {
 
 Filename.propTypes = {
   /** Filename icon */
-  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  icon: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+    PropTypes.func
+  ]),
   /** folder or file name */
   filename: PropTypes.string.isRequired,
   /** If a file name, you can specify the extension */
-  extension: PropTypes.string
+  extension: PropTypes.string,
+  variant: PropTypes.string
+}
+
+Filename.defaultProps = {
+  variant: 'h6'
 }
 
 export default Filename
