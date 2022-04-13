@@ -98,7 +98,7 @@ const setupClient = () => {
             _type: 'io.cozy.files',
             type: 'file',
             dir_id: 'io.cozy.files.root-dir',
-            name: 'File A',
+            name: 'File A.md',
             updated_at: '2021-01-01T12:00:00.000000+01:00',
             size: '111609'
           },
@@ -108,7 +108,7 @@ const setupClient = () => {
             _type: 'io.cozy.files',
             type: 'file',
             dir_id: 'io.cozy.files.root-dir',
-            name: 'File B',
+            name: 'File B.png',
             updated_at: '2021-01-01T12:00:00.000000+01:00',
             size: '11160963'
           }
@@ -157,7 +157,7 @@ const setupClient = () => {
             _type: 'io.cozy.files',
             type: 'file',
             dir_id: 'folder.01.id',
-            name: 'File C',
+            name: 'File C.txt',
             updated_at: '2021-01-01T12:00:00.000000+01:00',
             size: '111609'
           }
@@ -197,7 +197,7 @@ const setupClient = () => {
             _type: 'io.cozy.files',
             type: 'file',
             dir_id: 'folder.02.id',
-            name: 'File D',
+            name: 'File D.jpg',
             updated_at: '2021-01-01T12:00:00.000000+01:00',
             size: '222111'
           }
@@ -237,7 +237,7 @@ const setupClient = () => {
             _type: 'io.cozy.files',
             type: 'file',
             dir_id: 'folder.03.id',
-            name: 'File E',
+            name: 'File E.doc',
             updated_at: '2021-01-01T12:00:00.000000+01:00',
             size: '222111'
           }
