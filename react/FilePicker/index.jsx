@@ -21,20 +21,20 @@ const FilePicker = ({ onClose, onChange, accept, multiple }) => {
   const { isMobile } = useBreakpoints()
   const classes = useStyles()
   const [folderId, setFolderId] = useState(ROOT_DIR_ID)
-  const [filesIdsSelected, setFilesIdsSelected] = useState([])
+  const [itemsIdsSelected, setItemsIdsSelected] = useState([])
 
-  const onSelectFileId = fileId => {
+  const onSelectItemId = fileId => {
     if (!multiple) {
       handleConfirm(null, fileId)
     } else {
-      setFilesIdsSelected(fileId)
+      setItemsIdsSelected(fileId)
     }
   }
 
   const navigateTo = folder => setFolderId(folder.id)
 
   const handleConfirm = (_, fileId) => {
-    onChange(fileId ? fileId : filesIdsSelected)
+    onChange(fileId ? fileId : itemsIdsSelected)
     onClose()
   }
   const itemTypesAccepted = getCompliantTypes(accept)
@@ -58,10 +58,10 @@ const FilePicker = ({ onClose, onChange, accept, multiple }) => {
       content={
         <FilePickerBody
           navigateTo={navigateTo}
-          onSelectFileId={onSelectFileId}
-          filesIdsSelected={filesIdsSelected}
+          onSelectItemId={onSelectItemId}
+          itemsIdsSelected={itemsIdsSelected}
           folderId={folderId}
-          fileTypesAccepted={fileTypesAccepted}
+          itemTypesAccepted={itemTypesAccepted}
           multiple={multiple}
         />
       }
@@ -70,7 +70,7 @@ const FilePicker = ({ onClose, onChange, accept, multiple }) => {
           <FilePickerFooter
             onClose={onClose}
             onConfirm={handleConfirm}
-            disabledConfirm={filesIdsSelected.length === 0}
+            disabledConfirm={itemsIdsSelected.length === 0}
           />
         ) : null
       }
