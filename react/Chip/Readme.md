@@ -1,3 +1,5 @@
+⚠️  This `Chip` is going to be deprecated, please use [Chips](#/Chips) instead.
+
 Chips represent complex entities in small blocks, such as a contact.
 
 ```jsx

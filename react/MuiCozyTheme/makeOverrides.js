@@ -9,6 +9,96 @@ export const makeThemeOverrides = theme => {
   return createOverrides(theme)
 }
 
+const makeChipStyleByColor = (theme, color) => ({
+  color: theme.palette.text[color] || theme.palette[color].main,
+  borderColor:
+    color === 'primary'
+      ? theme.palette.border.main
+      : alpha(theme.palette[color].main, theme.palette.border.opacity),
+  '&$clickable, &$deletable': {
+    '&:hover, &:focus': {
+      borderColor:
+        color === 'primary'
+          ? theme.palette.border.main
+          : alpha(theme.palette[color].main, theme.palette.border.opacity),
+      backgroundColor:
+        color === 'primary'
+          ? theme.palette.action.hover
+          : alpha(theme.palette[color].main, theme.palette.action.hoverOpacity)
+    }
+  },
+  '& $icon': {
+    color:
+      color === 'primary' ? theme.palette.text.icon : theme.palette[color].main,
+    fill:
+      color === 'primary' ? theme.palette.text.icon : theme.palette[color].main
+  },
+  '& $deleteIcon': {
+    color:
+      color === 'primary'
+        ? theme.palette.text.secondary
+        : theme.palette[color].main,
+    fill:
+      color === 'primary'
+        ? theme.palette.text.secondary
+        : theme.palette[color].main
+  },
+  '&$colorPrimary': {
+    padding: '0 1px',
+    color: theme.palette[color].contrastText,
+    backgroundColor: theme.palette[color].main,
+    '& $icon, & $deleteIcon': {
+      color: theme.palette[color].contrastText,
+      fill: theme.palette[color].contrastText
+    },
+    '&$disabled': {
+      opacity: 1,
+      color: theme.palette.text.disabled,
+      backgroundColor: theme.palette.action.disabledBackground,
+      '& $icon, & $deleteIcon': {
+        color: theme.palette.text.disabled,
+        fill: theme.palette.text.disabled
+      }
+    },
+    '&$clickable, &$deletable': {
+      '&:hover, &:focus': {
+        backgroundColor: theme.palette[color].dark
+      }
+    }
+  },
+  '&.ghost': {
+    borderWidth: '1px',
+    borderStyle: 'dashed',
+    '&:not($disabled)': {
+      color: theme.palette[color].main,
+      borderColor: alpha(
+        theme.palette[color].main,
+        theme.palette.border.ghostOpacity
+      ),
+      backgroundColor: alpha(
+        theme.palette[color].main,
+        theme.palette.action.ghostOpacity
+      ),
+      '& $icon, & $deleteIcon': {
+        color: theme.palette[color].main,
+        fill: theme.palette[color].main
+      }
+    },
+    '&$clickable, &$deletable': {
+      '&:hover, &:focus': {
+        borderColor: alpha(
+          theme.palette[color].main,
+          theme.palette.border.ghostOpacity
+        ),
+        backgroundColor: alpha(
+          theme.palette[color].main,
+          theme.palette.action.hoverGhostOpacity
+        )
+      }
+    }
+  }
+})
+
 const makeSecondaryButtonStyle = (theme, color) => ({
   color: theme.palette[color].main,
   borderColor: theme.palette[color].main,
@@ -662,6 +752,26 @@ const makeOverrides = theme => ({
       },
       '&$disabled&$checked svg': {
         fill: theme.palette.text.disabled
+      }
+    }
+  },
+  MuiChip: {
+    root: {
+      '&.noLabel': {
+        width: '32px',
+        '& $label': {
+          display: 'none'
+        },
+        '& $icon': {
+          margin: 0
+        }
+      },
+      '&.customColor': {
+        '&-primary': makeChipStyleByColor(theme, 'primary'),
+        '&-success': makeChipStyleByColor(theme, 'success'),
+        '&-error': makeChipStyleByColor(theme, 'error'),
+        '&-warning': makeChipStyleByColor(theme, 'warning'),
+        '&-info': makeChipStyleByColor(theme, 'info')
       }
     }
   }
