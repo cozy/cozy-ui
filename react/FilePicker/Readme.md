@@ -12,7 +12,7 @@ initialState = {
 };
 
 const initialVariants = [
-  { acceptFile: true, acceptFolder: false, multiple: false }
+  { acceptFileTXT: false, acceptFileMD: false, acceptFolder: false, multiple: false }
 ];
 
 const toggleFilePicker = () => setState({ filePickerOpened: !state.filePickerOpened });
@@ -20,18 +20,15 @@ const onChange = (fileId) => alert(`ID of file selected : [${fileId}]`);
 <DemoProvider>
   <Variants initialVariants={initialVariants} screenshotAllVariants>
     {variant => {
-      let acceptRule = ''
-      if (variant.acceptFile) {
-        acceptRule = 'file'
-        if (variant.acceptFolder) {
-          acceptRule = 'file,folder'
-        }
+      const acceptRule = []
+      if (variant.acceptFileMD) {
+        acceptRule.push('.md')
+      }
+      if (variant.acceptFileTXT) {
+        acceptRule.push('.txt')
       }
       if (variant.acceptFolder) {
-        acceptRule = 'folder'
-        if (variant.acceptFile) {
-          acceptRule = 'folder,file'
-        }
+        acceptRule.push('folder')
       }
 
       return (
@@ -41,7 +38,7 @@ const onChange = (fileId) => alert(`ID of file selected : [${fileId}]`);
             <FilePicker
               onClose={toggleFilePicker}
               onChange={onChange}
-              accept={acceptRule}
+              accept={acceptRule.toString()}
               multiple={variant.multiple}
             />
           )}
