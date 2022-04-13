@@ -16,9 +16,9 @@ const {
 const FilePickerBody = ({
   navigateTo,
   folderId,
-  onSelectFileId,
-  filesIdsSelected,
-  fileTypesAccepted,
+  onSelectItemId,
+  itemsIdsSelected,
+  itemTypesAccepted,
   multiple
 }) => {
   const contentFolderQuery = buildContentFolderQuery(folderId)
@@ -28,68 +28,68 @@ const FilePickerBody = ({
   )
 
   const onCheck = useCallback(
-    fileId => {
-      const isChecked = filesIdsSelected.some(
-        fileIdSelected => fileIdSelected === fileId
+    itemId => {
+      const isChecked = itemsIdsSelected.some(
+        fileIdSelected => fileIdSelected === itemId
       )
       if (isChecked) {
-        onSelectFileId(
-          filesIdsSelected.filter(fileIdSelected => fileIdSelected !== fileId)
+        onSelectItemId(
+          itemsIdsSelected.filter(fileIdSelected => fileIdSelected !== itemId)
         )
-      } else onSelectFileId(prev => [...prev, fileId])
+      } else onSelectItemId(prev => [...prev, itemId])
     },
-    [filesIdsSelected, onSelectFileId]
+    [itemsIdsSelected, onSelectItemId]
   )
 
   // When click on checkbox/radio area...
   const handleChoiceClick = useCallback(
-    file => () => {
-      if (multiple) onCheck(file._id)
-      else onSelectFileId(file._id)
+    item => () => {
+      if (multiple) onCheck(item._id)
+      else onSelectItemId(item._id)
     },
-    [multiple, onCheck, onSelectFileId]
+    [multiple, onCheck, onSelectItemId]
   )
 
   // ...when click anywhere on the rest of the line
   const handleListItemClick = useCallback(
-    file => () => {
-      if (isDirectory(file)) {
-        navigateTo(contentFolder.find(f => f._id === file._id))
+    item => () => {
+      if (isDirectory(item)) {
+        navigateTo(contentFolder.find(it => it._id === item._id))
       }
 
-      if (isValidFile(file, fileTypesAccepted)) {
-        if (multiple) onCheck(file._id)
-        else onSelectFileId(file._id)
+      if (isValidFile(item, itemTypesAccepted)) {
+        if (multiple) onCheck(item._id)
+        else onSelectItemId(item._id)
       }
     },
     [
       contentFolder,
-      fileTypesAccepted,
+      itemTypesAccepted,
       multiple,
       navigateTo,
       onCheck,
-      onSelectFileId
+      onSelectItemId
     ]
   )
 
   return (
     <List>
       {contentFolder &&
-        contentFolder.map((file, idx) => {
+        contentFolder.map((item, idx) => {
           const hasDivider = contentFolder
             ? idx !== contentFolder.length - 1
             : false
 
           return (
             <FilePickerBodyItem
-              key={file._id}
-              file={file}
-              fileTypesAccepted={fileTypesAccepted}
+              key={item._id}
+              item={item}
+              itemTypesAccepted={itemTypesAccepted}
               multiple={multiple}
               handleChoiceClick={handleChoiceClick}
               handleListItemClick={handleListItemClick}
               onCheck={onCheck}
-              filesIdsSelected={filesIdsSelected}
+              itemsIdsSelected={itemsIdsSelected}
               hasDivider={hasDivider}
             />
           )
@@ -100,11 +100,11 @@ const FilePickerBody = ({
 }
 
 FilePickerBody.propTypes = {
-  onSelectFileId: PropTypes.func.isRequired,
-  filesIdsSelected: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onSelectItemId: PropTypes.func.isRequired,
+  itemsIdsSelected: PropTypes.arrayOf(PropTypes.string).isRequired,
   folderId: PropTypes.string.isRequired,
   navigateTo: PropTypes.func.isRequired,
-  fileTypesAccepted: PropTypes.arrayOf(PropTypes.string).isRequired
+  itemTypesAccepted: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 
 export default FilePickerBody

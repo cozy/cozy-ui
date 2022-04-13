@@ -33,7 +33,7 @@ describe('FilePickerBodyItem components:', () => {
   filesize.mockReturnValue('111Ko')
 
   const setup = ({
-    file = mockFile01,
+    item = mockFile01,
     multiple = false,
     validFile = false,
     validFolder = false
@@ -44,12 +44,12 @@ describe('FilePickerBodyItem components:', () => {
     return render(
       <DemoProvider>
         <FilePickerBodyItem
-          file={file}
-          fileTypesAccepted={[]}
+          item={item}
+          itemTypesAccepted={[]}
           multiple={multiple}
           handleChoiceClick={mockHandleChoiceClick}
           handleListItemClick={mockHandleListItemClick}
-          filesIdsSelected={[]}
+          itemsIdsSelected={[]}
           hasDivider={false}
         />
       </DemoProvider>
@@ -73,14 +73,14 @@ describe('FilePickerBodyItem components:', () => {
   })
 
   it('should display foldername', () => {
-    const { getByText } = setup({ file: mockFolder01 })
+    const { getByText } = setup({ item: mockFolder01 })
 
     expect(getByText('Foldername'))
   })
 
   it("should item's line is not disabled when has not valid type & is File", () => {
     const { getByTestId } = setup({
-      file: mockFile01,
+      item: mockFile01,
       validFile: false,
       validFolder: false
     })
@@ -91,7 +91,7 @@ describe('FilePickerBodyItem components:', () => {
 
   it("should item's line is not disabled when has not valid type & is Folder", () => {
     const { getByTestId } = setup({
-      file: mockFolder01,
+      item: mockFolder01,
       validFile: false,
       validFolder: false
     })
@@ -110,7 +110,7 @@ describe('FilePickerBodyItem components:', () => {
 
     it('should NOT call "handleChoiceClick" function when click on checkbox/radio area, if is Folder & not accepted', () => {
       const { getByTestId } = setup({
-        file: mockFolder01,
+        item: mockFolder01,
         validFolder: false
       })
       fireEvent.click(getByTestId('choice-onclick'))
@@ -155,7 +155,7 @@ describe('FilePickerBodyItem components:', () => {
     })
 
     it('should disable and not display the Radio button if it is a Folder and is not accepted', () => {
-      const { getByTestId } = setup({ file: mockFolder01 })
+      const { getByTestId } = setup({ item: mockFolder01 })
       const radioBtn = getByTestId('radio-btn')
 
       expect(radioBtn.getAttribute('disabled')).toBe(null)

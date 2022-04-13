@@ -39,12 +39,12 @@ const useStyles = makeStyles(() => ({
 }))
 
 const FilePickerBodyItem = ({
-  file,
-  fileTypesAccepted,
+  item,
+  itemTypesAccepted,
   multiple,
   handleChoiceClick,
   handleListItemClick,
-  filesIdsSelected,
+  itemsIdsSelected,
   hasDivider
 }) => {
   const classes = useStyles()
@@ -55,8 +55,8 @@ const FilePickerBodyItem = ({
 
   const Input = multiple ? Checkbox : Radio
 
-  const listItemSecondaryContent = isFile(file)
-    ? `${f(file.updated_at, 'DD MMM YYYY')} - ${filesize(file.size, {
+  const listItemSecondaryContent = isFile(item)
+    ? `${f(item.updated_at, 'DD MMM YYYY')} - ${filesize(item.size, {
         base: 10
       })}`
     : null
@@ -64,7 +64,7 @@ const FilePickerBodyItem = ({
   return (
     <>
       <ListItem
-        disabled={!hasChoice && isFile(file)}
+        disabled={!hasChoice && isFile(item)}
         button
         className="u-p-0"
         data-testid="list-item"
@@ -72,21 +72,21 @@ const FilePickerBodyItem = ({
         <div
           data-testid="listitem-onclick"
           className={styles['filePickerBreadcrumb-wrapper']}
-          onClick={handleListItemClick(file)}
+          onClick={handleListItemClick(item)}
         >
           <ListItemIcon className={classes.listItemIcon}>
             <Icon
-              icon={isDirectory(file) ? FileTypeFolder : FileTypeText}
+              icon={isDirectory(item) ? FileTypeFolder : FileTypeText}
               width="32"
               height="32"
             />
           </ListItemIcon>
           <ListItemText
-            primary={file.name}
+            primary={item.name}
             secondary={listItemSecondaryContent}
           />
         </div>
-        {isDirectory(file) && hasChoice && (
+        {isDirectory(item) && hasChoice && (
           <Divider
             orientation="vertical"
             flexItem
@@ -96,15 +96,15 @@ const FilePickerBodyItem = ({
         <div
           data-testid="choice-onclick"
           className="u-ph-1 u-pv-half u-h-2 u-flex u-flex-items-center"
-          onClick={hasChoice ? handleChoiceClick(file) : undefined}
+          onClick={hasChoice ? handleChoiceClick(item) : undefined}
         >
           <Input
             data-testid={multiple ? 'checkbox-btn' : 'radio-btn'}
             onChange={() => {
               // handled by onClick on the container
             }}
-            checked={filesIdsSelected.includes(file._id)}
-            value={file._id}
+            checked={itemsIdsSelected.includes(item._id)}
+            value={item._id}
             className={cx('u-p-0', {
               'u-o-100': hasChoice,
               'u-o-0': !hasChoice
@@ -119,12 +119,12 @@ const FilePickerBodyItem = ({
 }
 
 FilePickerBodyItem.propTypes = {
-  file: PropTypes.object.isRequired,
-  fileTypesAccepted: PropTypes.arrayOf(PropTypes.string).isRequired,
+  item: PropTypes.object.isRequired,
+  itemTypesAccepted: PropTypes.arrayOf(PropTypes.string).isRequired,
   multiple: PropTypes.bool,
   handleChoiceClick: PropTypes.func.isRequired,
   handleListItemClick: PropTypes.func.isRequired,
-  filesIdsSelected: PropTypes.arrayOf(PropTypes.string).isRequired,
+  itemsIdsSelected: PropTypes.arrayOf(PropTypes.string).isRequired,
   hasDivider: PropTypes.bool.isRequired
 }
 
