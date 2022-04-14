@@ -1,3 +1,11 @@
+# [62.7.0](https://github.com/cozy/cozy-ui/compare/v62.6.0...v62.7.0) (2022-04-14)
+
+
+### Features
+
+* Add `radio` prop to `Variants` comp ([95f5d6a](https://github.com/cozy/cozy-ui/commit/95f5d6a))
+* Add new `Chips` component ([97039de](https://github.com/cozy/cozy-ui/commit/97039de))
+
 # [62.6.0](https://github.com/cozy/cozy-ui/compare/v62.5.3...v62.6.0) (2022-04-11)
 
 
