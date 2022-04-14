@@ -19,6 +19,7 @@ script:
   - yarn argos:upload screenshots/reactDesktop/ --token $ARGOS_TOKEN --branch $TRAVIS_BRANCH --commit $TRAVIS_COMMIT --batchCount 3 --external-build-id $TRAVIS_COMMIT
   - yarn argos:upload screenshots/reactMobile/ --token $ARGOS_TOKEN --branch $TRAVIS_BRANCH --commit $TRAVIS_COMMIT --batchCount 3 --external-build-id $TRAVIS_COMMIT
   - yarn argos:upload screenshots/kss/ --token $ARGOS_TOKEN --branch $TRAVIS_BRANCH --commit $TRAVIS_COMMIT --batchCount 3 --external-build-id $TRAVIS_COMMIT
+  - yarn bundlemon
 deploy:
   - provider: script
     repo: cozy/cozy-ui
