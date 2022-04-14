@@ -1,0 +1,20 @@
+{
+  "baseDir": ".",
+  "files": [
+    {
+      "path": "dist/cozy-ui.min.css",
+      "maxPercentIncrease": 5,
+    },
+    {
+      "path": "dist/cozy-ui.utils.min.css",
+      "maxPercentIncrease": 5,
+    },
+  ],
+  "groups": [
+    {
+        "path": "transpiled/react/**",
+        "maxPercentIncrease": 0.5,
+    },
+],
+  "reportOutput": ["github"]
+}
