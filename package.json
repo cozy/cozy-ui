@@ -105,6 +105,7 @@
     "enzyme-adapter-react-16": "1.15.6",
     "enzyme-to-json": "3.6.2",
     "eslint-config-cozy-app": "4.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "express": "^4.17.1",
     "focus-trap-react": "^6.0.0",
     "git-directory-deploy": "1.5.1",
