@@ -40,7 +40,9 @@ const DumbAddContactButton = props => {
 
   return (
     <AppLinker
-      slug={installedApp ? installedApp.attributes.slug : 'store'}
+      app={{
+        slug: installedApp ? installedApp.attributes.slug : 'store'
+      }}
       href={href}
     >
       {({ onClick, href }) => (
