@@ -9,4 +9,4 @@ updates:
       interval: "weekly"
       day: "saturday"
     labels:
-      - "dependencies"
+      - ":package: dependencies"
