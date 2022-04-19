@@ -1,3 +1,17 @@
+# [62.8.0](https://github.com/cozy/cozy-ui/compare/v62.7.0...v62.8.0) (2022-04-19)
+
+
+### Bug Fixes
+
+* **deps:** Piwik-react-router should be a dependency ([ba6130b](https://github.com/cozy/cozy-ui/commit/ba6130b))
+
+
+### Features
+
+* Add mime-types package ([cc96d4a](https://github.com/cozy/cozy-ui/commit/cc96d4a))
+* Improve FilePicker component ([d52c45d](https://github.com/cozy/cozy-ui/commit/d52c45d)), closes [#2026](https://github.com/cozy/cozy-ui/issues/2026)
+* Update documentation ([dbb6098](https://github.com/cozy/cozy-ui/commit/dbb6098))
+
 # [62.7.0](https://github.com/cozy/cozy-ui/compare/v62.6.0...v62.7.0) (2022-04-14)
 
 
