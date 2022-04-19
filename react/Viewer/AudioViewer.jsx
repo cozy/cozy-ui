@@ -1,10 +1,10 @@
 import React from 'react'
 import Icon from '../Icon'
+import FileTypeAudioIcon from '../Icons/FileTypeAudio'
 
 import withFileUrl from './withFileUrl'
 import styles from './styles.styl'
 
-import FileTypeAudioIcon from 'cozy-ui/transpiled/react/Icons/FileTypeAudio'
 
 const AudioViewer = ({ file, url }) => (
   <div className={styles['viewer-audioviewer']}>
