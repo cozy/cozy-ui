@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import filesize from 'filesize'
@@ -16,6 +16,8 @@ import FileTypeFolder from '../Icons/FileTypeFolder'
 import Checkbox from '../Checkbox'
 import Radio from '../Radios'
 import { useI18n } from '../I18n'
+
+import { isValidFile, isValidFolder } from '../helpers/acceptedTypes'
 
 import styles from './styles.styl'
 
@@ -48,8 +50,8 @@ const FilePickerBodyItem = ({
   const classes = useStyles()
   const { f } = useI18n()
   const hasChoice =
-    (fileTypesAccepted.file && isFile(file)) ||
-    (fileTypesAccepted.folder && isDirectory(file))
+    isValidFile(item, itemTypesAccepted) ||
+    isValidFolder(item, itemTypesAccepted)
 
   const Input = multiple ? Checkbox : Radio
 
@@ -61,7 +63,12 @@ const FilePickerBodyItem = ({
 
   return (
     <>
-      <ListItem button className="u-p-0">
+      <ListItem
+        disabled={!hasChoice && isFile(file)}
+        button
+        className="u-p-0"
+        data-testid="list-item"
+      >
         <div
           data-testid="listitem-onclick"
           className={styles['filePickerBreadcrumb-wrapper']}
@@ -113,10 +120,7 @@ const FilePickerBodyItem = ({
 
 FilePickerBodyItem.propTypes = {
   file: PropTypes.object.isRequired,
-  fileTypesAccepted: PropTypes.exact({
-    file: PropTypes.bool,
-    folder: PropTypes.bool
-  }),
+  fileTypesAccepted: PropTypes.arrayOf(PropTypes.string).isRequired,
   multiple: PropTypes.bool,
   handleChoiceClick: PropTypes.func.isRequired,
   handleListItemClick: PropTypes.func.isRequired,
@@ -124,4 +128,4 @@ FilePickerBodyItem.propTypes = {
   hasDivider: PropTypes.bool.isRequired
 }
 
-export default memo(FilePickerBodyItem)
+export default FilePickerBodyItem

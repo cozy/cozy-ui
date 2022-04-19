@@ -7,22 +7,7 @@ import FilePickerHeader from './FilePickerHeader'
 import FilePickerFooter from './FilePickerFooter'
 import FilePickerBody from './FilePickerBody'
 import useBreakpoints from '../hooks/useBreakpoints'
-
-/**
- * @param {string} fileType - Defines the file types that should be accepted ("file" and/or "folder"), separated by commas
- * @returns {{ file: boolean, folder: boolean }}
- */
-const getFileTypesAccepted = fileType => {
-  // If accept is falsy, set default to file
-  const acceptedFileType = fileType
-    ? fileType.replaceAll(' ', '').split(',')
-    : ['file']
-
-  return {
-    file: acceptedFileType.includes('file'),
-    folder: acceptedFileType.includes('folder')
-  }
-}
+import { getCompliantTypes } from '../helpers/acceptedTypes'
 
 const useStyles = makeStyles(() => ({
   paper: {
@@ -52,7 +37,7 @@ const FilePicker = ({ onClose, onChange, accept, multiple }) => {
     onChange(fileId ? fileId : filesIdsSelected)
     onClose()
   }
-  const fileTypesAccepted = getFileTypesAccepted(accept)
+  const itemTypesAccepted = getCompliantTypes(accept)
 
   return (
     <FixedDialog
@@ -101,7 +86,7 @@ FilePicker.propTypes = {
 }
 
 FilePicker.defaultProps = {
-  accept: 'file',
+  accept: '',
   multiple: false
 }
 
