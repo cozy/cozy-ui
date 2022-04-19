@@ -4,11 +4,13 @@ import filesize from 'filesize'
 
 import DemoProvider from './docs/DemoProvider'
 import FilePickerBodyItem from './FilePickerBodyItem'
+import { isValidFile, isValidFolder } from '../helpers/acceptedTypes'
 
 const mockFile01 = {
   _id: '001',
   type: 'file',
-  name: 'Filename',
+  name: 'Filename.pdf',
+  mime: 'application/pdf',
   updated_at: '2021-01-01T12:00:00.000000+01:00'
 }
 const mockFolder01 = {
@@ -19,6 +21,11 @@ const mockFolder01 = {
 }
 
 jest.mock('filesize', () => jest.fn())
+jest.mock('../helpers/acceptedTypes', () => ({
+  ...jest.requireActual('../helpers/acceptedTypes'),
+  isValidFile: jest.fn(),
+  isValidFolder: jest.fn()
+}))
 
 describe('FilePickerBodyItem components:', () => {
   const mockHandleChoiceClick = jest.fn()
@@ -28,13 +35,17 @@ describe('FilePickerBodyItem components:', () => {
   const setup = ({
     file = mockFile01,
     multiple = false,
-    fileTypesAccepted = { file: true, folder: false }
-  }) => {
+    validFile = false,
+    validFolder = false
+  } = {}) => {
+    isValidFile.mockReturnValue(validFile)
+    isValidFolder.mockReturnValue(validFolder)
+
     return render(
       <DemoProvider>
         <FilePickerBodyItem
           file={file}
-          fileTypesAccepted={fileTypesAccepted}
+          fileTypesAccepted={[]}
           multiple={multiple}
           handleChoiceClick={mockHandleChoiceClick}
           handleListItemClick={mockHandleListItemClick}
@@ -50,15 +61,15 @@ describe('FilePickerBodyItem components:', () => {
   })
 
   it('should be rendered correctly', () => {
-    const { container } = setup({})
+    const { container } = setup()
 
     expect(container).toBeDefined()
   })
 
   it('should display filename', () => {
-    const { getByText } = setup({})
+    const { getByText } = setup()
 
-    expect(getByText('Filename'))
+    expect(getByText('Filename.pdf'))
   })
 
   it('should display foldername', () => {
@@ -67,31 +78,54 @@ describe('FilePickerBodyItem components:', () => {
     expect(getByText('Foldername'))
   })
 
+  it("should item's line is not disabled when has not valid type & is File", () => {
+    const { getByTestId } = setup({
+      file: mockFile01,
+      validFile: false,
+      validFolder: false
+    })
+    const listItem = getByTestId('list-item')
+
+    expect(listItem).toHaveAttribute('aria-disabled', 'true')
+  })
+
+  it("should item's line is not disabled when has not valid type & is Folder", () => {
+    const { getByTestId } = setup({
+      file: mockFolder01,
+      validFile: false,
+      validFolder: false
+    })
+    const listItem = getByTestId('list-item')
+
+    expect(listItem).toHaveAttribute('aria-disabled', 'false')
+  })
+
   describe('Functions called', () => {
     it('should call "handleChoiceClick" function when click on checkbox/radio area', () => {
-      const { getByTestId } = setup({})
+      const { getByTestId } = setup({ validFile: true })
       fireEvent.click(getByTestId('choice-onclick'))
 
       expect(mockHandleChoiceClick).toHaveBeenCalled()
     })
 
     it('should NOT call "handleChoiceClick" function when click on checkbox/radio area, if is Folder & not accepted', () => {
-      const { getByTestId } = setup({ file: mockFolder01 })
+      const { getByTestId } = setup({
+        file: mockFolder01,
+        validFolder: false
+      })
       fireEvent.click(getByTestId('choice-onclick'))
 
       expect(mockHandleChoiceClick).not.toHaveBeenCalled()
     })
     it('should NOT call "handleChoiceClick" function when click on checkbox/radio area, if is File & not accepted', () => {
-      const { getByTestId } = setup({
-        fileTypesAccepted: { file: false, folder: true }
-      })
+      const { getByTestId } = setup({ validFile: false })
       fireEvent.click(getByTestId('choice-onclick'))
 
       expect(mockHandleChoiceClick).not.toHaveBeenCalled()
     })
 
     it('should call "handleListItemClick" function when click on ListItem node', () => {
-      const { getByTestId } = setup({})
+      const { getByTestId } = setup()
       fireEvent.click(getByTestId('listitem-onclick'))
 
       expect(mockHandleListItemClick).toHaveBeenCalled()
@@ -100,7 +134,7 @@ describe('FilePickerBodyItem components:', () => {
 
   describe('Attribute "multiple"', () => {
     it('should radio button exists if "multiple" atribute is False', () => {
-      const { getByTestId } = setup({})
+      const { getByTestId } = setup()
       const radioBtn = getByTestId('radio-btn')
       expect(radioBtn).not.toBeNull()
     })
@@ -114,9 +148,7 @@ describe('FilePickerBodyItem components:', () => {
 
   describe('Radio/Checkbox button', () => {
     it('should disable and not display the Radio button if it is a File and is not accepted', () => {
-      const { getByTestId } = setup({
-        fileTypesAccepted: { file: false }
-      })
+      const { getByTestId } = setup({ validFile: false })
       const radioBtn = getByTestId('radio-btn')
 
       expect(radioBtn.getAttribute('disabled')).toBe(null)

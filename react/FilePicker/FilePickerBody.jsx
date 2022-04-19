@@ -1,4 +1,4 @@
-import React, { useCallback, memo } from 'react'
+import React, { useCallback } from 'react'
 import PropTypes from 'prop-types'
 
 import { models, useQuery } from 'cozy-client'
@@ -7,9 +7,10 @@ import LoadMore from '../LoadMore'
 
 import { buildContentFolderQuery } from './queries'
 import FilePickerBodyItem from './FilePickerBodyItem'
+import { isValidFile } from '../helpers/acceptedTypes'
 
 const {
-  file: { isDirectory, isFile }
+  file: { isDirectory }
 } = models
 
 const FilePickerBody = ({
@@ -56,14 +57,14 @@ const FilePickerBody = ({
         navigateTo(contentFolder.find(f => f._id === file._id))
       }
 
-      if (isFile(file) && fileTypesAccepted.file) {
+      if (isValidFile(file, fileTypesAccepted)) {
         if (multiple) onCheck(file._id)
         else onSelectFileId(file._id)
       }
     },
     [
       contentFolder,
-      fileTypesAccepted.file,
+      fileTypesAccepted,
       multiple,
       navigateTo,
       onCheck,
@@ -103,10 +104,7 @@ FilePickerBody.propTypes = {
   filesIdsSelected: PropTypes.arrayOf(PropTypes.string).isRequired,
   folderId: PropTypes.string.isRequired,
   navigateTo: PropTypes.func.isRequired,
-  fileTypesAccepted: PropTypes.exact({
-    file: PropTypes.bool,
-    folder: PropTypes.bool
-  })
+  fileTypesAccepted: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 
-export default memo(FilePickerBody)
+export default FilePickerBody
