@@ -35,6 +35,7 @@ exports[`AudioViewer should render a spinner then the audio viewer 1`] = `
     </p>
     <audio
       controls=""
+      preload="auto"
       src="https://viewerdemo.cozycloud.cc/Z.mp3"
     />
   </div>
