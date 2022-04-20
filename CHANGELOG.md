@@ -1,3 +1,10 @@
+# [62.9.0](https://github.com/cozy/cozy-ui/compare/v62.8.0...v62.9.0) (2022-04-20)
+
+
+### Features
+
+* Add makeStyles helper from Mui ([7962227](https://github.com/cozy/cozy-ui/commit/7962227))
+
 # [62.8.0](https://github.com/cozy/cozy-ui/compare/v62.7.0...v62.8.0) (2022-04-19)
 
 
