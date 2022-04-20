@@ -7577,13 +7577,13 @@ exports[`Media should render examples: Media 3`] = `
 exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
 "<div>
   <div class=\\"styles__Stack--xs___2R5lW\\">
-    <div class=\\"MuiBox-root MuiBox-root-16\\">
+    <div class=\\"MuiBox-root MuiBox-root-24\\">
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-displayInline\\">primary</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-checked-2 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
-    <div class=\\"MuiBox-root MuiBox-root-17\\">
+    <div class=\\"MuiBox-root MuiBox-root-25\\">
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-displayInline\\">secondary</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-checked-2 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
-    <div class=\\"MuiBox-root MuiBox-root-18\\">
+    <div class=\\"MuiBox-root MuiBox-root-26\\">
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-displayInline\\">default</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
   </div>
@@ -7683,6 +7683,31 @@ exports[`PercentageLine should render examples: PercentageLine 1`] = `
 </div>"
 `;
 
+exports[`PieChart should render examples: PieChart 1`] = `
+"<div>
+  <div class=\\"MuiGrid-root MuiGrid-container\\">
+    <div class=\\"MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6\\">
+      <div class=\\"makeStyles-container-14\\">
+        <div class=\\"makeStyles-background-15 makeStyles-background-18\\"></div><canvas role=\\"img\\" height=\\"150\\" width=\\"300\\"></canvas>
+        <div class=\\"makeStyles-centerText-16\\">
+          <h3 class=\\"MuiTypography-root makeStyles-typography-17 makeStyles-typography-19 MuiTypography-h3\\">60 %</h3>
+          <p class=\\"MuiTypography-root makeStyles-typography-17 makeStyles-typography-19 MuiTypography-body2\\">of the total</p>
+        </div>
+      </div>
+    </div>
+    <div class=\\"MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6\\">
+      <div class=\\"makeStyles-container-14\\">
+        <div class=\\"makeStyles-background-15 makeStyles-background-20\\"></div><canvas role=\\"img\\" height=\\"150\\" width=\\"300\\"></canvas>
+        <div class=\\"makeStyles-centerText-16\\">
+          <h3 class=\\"MuiTypography-root makeStyles-typography-17 makeStyles-typography-21 MuiTypography-h3\\">105 €</h3>
+          <p class=\\"MuiTypography-root makeStyles-typography-17 makeStyles-typography-21 MuiTypography-body2\\">on the period</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
 exports[`Progress should render examples: Progress 1`] = `
 "<div>
   <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
@@ -7703,7 +7728,7 @@ exports[`ProgressionBanner should render examples: ProgressionBanner 1`] = `
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">WITHVALUE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">PROGRESSBAR</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">WITHBUTTON</span></label>
   </div>
   <div class=\\"MuiPaper-root MuiPaper-elevation0\\">
-    <div class=\\"styles__c-banner-wrapper___3KlaG Component-banner-14\\">
+    <div class=\\"styles__c-banner-wrapper___3KlaG Component-banner-22\\">
       <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-justify-content-xs-space-between\\">
         <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-center MuiGrid-grid-xs-12 MuiGrid-grid-lg-8\\">
           <div class=\\"MuiGrid-root MuiGrid-item\\">
@@ -7722,7 +7747,7 @@ exports[`ProgressionBanner should render examples: ProgressionBanner 1`] = `
     </div>
   </div>
   <hr class=\\"MuiDivider-root\\">
-  <div class=\\"MuiLinearProgress-root MuiLinearProgress-colorPrimary Component-progress-15 MuiLinearProgress-indeterminate\\" role=\\"progressbar\\">
+  <div class=\\"MuiLinearProgress-root MuiLinearProgress-colorPrimary Component-progress-23 MuiLinearProgress-indeterminate\\" role=\\"progressbar\\">
     <div class=\\"MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Indeterminate\\"></div>
     <div class=\\"MuiLinearProgress-bar MuiLinearProgress-bar2Indeterminate MuiLinearProgress-barColorPrimary\\"></div>
   </div>
