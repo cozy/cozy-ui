@@ -38,6 +38,7 @@ testComponent('CompositeRow')
 testComponent('ContactsList')
 testComponent('ContactsListModal')
 testComponent('DateMonthPicker')
+testComponent('DropdownText')
 testComponent('Dialog') // Prints error: Functions are not valid as a React child
 testComponent('Empty')
 testComponent('Field')
