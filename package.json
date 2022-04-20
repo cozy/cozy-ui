@@ -153,6 +153,7 @@
   "dependencies": {
     "@babel/runtime": "^7.3.4",
     "@popperjs/core": "^2.4.4",
+    "chart.js": "3.7.1",
     "classnames": "^2.2.5",
     "cozy-interapp": "^0.5.4",
     "date-fns": "^1.28.5",
@@ -164,6 +165,7 @@
     "node-polyglot": "^2.2.2",
     "normalize.css": "^8.0.0",
     "piwik-react-router": "0.12.1",
+    "react-chartjs-2": "4.1.0",
     "react-markdown": "^4.0.8",
     "react-pdf": "^4.0.5",
     "react-popper": "^2.2.3",
