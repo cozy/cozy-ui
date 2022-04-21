@@ -113,6 +113,7 @@
     "http-server": "0.13.0",
     "husky": "0.14.3",
     "identity-obj-proxy": "3.0.0",
+    "jest-canvas-mock": "2.3.1",
     "jest-cli": "^26.6.3",
     "kss": "3.0.1",
     "kss-webpack-plugin": "1.5.0",
@@ -202,7 +203,8 @@
   },
   "jest": {
     "setupFilesAfterEnv": [
-      "./test/jestsetup.js"
+      "./test/jestsetup.js",
+      "jest-canvas-mock"
     ],
     "moduleFileExtensions": [
       "js",
