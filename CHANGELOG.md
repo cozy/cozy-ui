@@ -1,3 +1,11 @@
+# [62.10.0](https://github.com/cozy/cozy-ui/compare/v62.9.1...v62.10.0) (2022-04-21)
+
+
+### Features
+
+* Add chart.js and react-chartjs-2 packages ([16df033](https://github.com/cozy/cozy-ui/commit/16df033))
+* Add PieChart component ([b7ce49f](https://github.com/cozy/cozy-ui/commit/b7ce49f))
+
 ## [62.9.1](https://github.com/cozy/cozy-ui/compare/v62.9.0...v62.9.1) (2022-04-21)
 
 
