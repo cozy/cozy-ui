@@ -1,3 +1,10 @@
+## [62.9.1](https://github.com/cozy/cozy-ui/compare/v62.9.0...v62.9.1) (2022-04-21)
+
+
+### Bug Fixes
+
+* bump convict from 6.0.0 to 6.2.2 ([403c38e](https://github.com/cozy/cozy-ui/commit/403c38e))
+
 # [62.9.0](https://github.com/cozy/cozy-ui/compare/v62.8.0...v62.9.0) (2022-04-20)
 
 
