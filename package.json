@@ -43,7 +43,6 @@
     "prebuild:css:kss": "mkdir -p build/styleguide && stylus -C node_modules/normalize.css/normalize.css node_modules/normalize.css/normalize.styl",
     "prebuild:doc:kss": "run-s clean:doc:kss build:css:kss",
     "prepare": "yarn release",
-    "prepush": "[[ $(git rev-parse --abbrev-ref HEAD) != 'gh-pages' ]] && yarn lint || true",
     "release": "npm-run-all --parallel sprite palette && yarn build",
     "semantic-release": "semantic-release",
     "sprite": "scripts/make-icon-sprite.sh",
