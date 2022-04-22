@@ -1,3 +1,10 @@
+# [62.11.0](https://github.com/cozy/cozy-ui/compare/v62.10.0...v62.11.0) (2022-04-22)
+
+
+### Features
+
+* Add dropdown ([ee214f8](https://github.com/cozy/cozy-ui/commit/ee214f8))
+
 # [62.10.0](https://github.com/cozy/cozy-ui/compare/v62.9.1...v62.10.0) (2022-04-21)
 
 
