@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef, useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { BottomSheet as MuiBottomSheet } from 'mui-bottom-sheet'
 
+import { flagshipMetadata } from 'cozy-device-helper'
+
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Paper from 'cozy-ui/transpiled/react/Paper'
 
@@ -27,6 +29,15 @@ const makeStyles = ({ isTopPosition }) => ({
   },
   stack: {
     backgroundColor: 'var(--defaultBackgroundColor)'
+  },
+  flagshipImmersive: {
+    backgroundColor: 'var(--paperBackgroundColor)',
+    bottom: 0,
+    content: '',
+    height: 'var(--flagship-bottom-height)',
+    position: 'fixed',
+    width: '100%',
+    zIndex: 'var(--zIndex-modal)'
   }
 })
 
@@ -97,18 +108,11 @@ const BottomSheet = ({ toolbarProps, settings, children }) => {
         )
       : 0
 
-    // Will return 0 if the variable is not set
-    const flagshipBottomOffset = Number(
-      getComputedStyle(document.body)
-        .getPropertyValue('--flagship-bottom-height')
-        .replace('px', '')
-    )
-
     const minHeight =
       headerRef.current.offsetHeight +
       actionButtonsHeight +
       actionButtonsBottomMargin +
-      flagshipBottomOffset
+      (flagshipMetadata.navbarHeight || 0)
 
     // Used so that the bottomSheet can be opened to the top,
     // without stopping at the content height
@@ -149,43 +153,47 @@ const BottomSheet = ({ toolbarProps, settings, children }) => {
   })
 
   return (
-    <MuiBottomSheet
-      peekHeights={peekHeights}
-      defaultHeight={initPos}
-      backdrop={false}
-      fullHeight={false}
-      onIndexChange={snapIndex => handleOnIndexChange(snapIndex)}
-      styles={{ root: styles.root }}
-      threshold={0}
-      // springConfig doc : https://docs.pmnd.rs/react-spring/common/configs
-      springConfig={{
-        tension: defaultBottomSheetSpringConfig.tension,
-        friction: defaultBottomSheetSpringConfig.friction,
-        clamp: defaultBottomSheetSpringConfig.clamp
-      }}
-      disabledClosing={true}
-      snapPointSeekerMode="next"
-    >
-      <div ref={innerContentRef}>
-        <Paper
-          data-testid="bottomSheet-header"
-          className="u-w-100 u-h-2-half u-pos-relative u-flex u-flex-items-center u-flex-justify-center"
-          ref={headerRef}
-          elevation={0}
-          square
-        >
-          <div style={styles.indicator} />
-        </Paper>
-        <Stack
-          style={styles.stack}
-          className="u-flex u-flex-column u-ov-hidden"
-          spacing="s"
-        >
-          {overriddenChildren}
-        </Stack>
-      </div>
-      <div style={{ height: bottomSpacerHeight }} />
-    </MuiBottomSheet>
+    <>
+      {flagshipMetadata.immersive && <span style={styles.flagshipImmersive} />}
+
+      <MuiBottomSheet
+        peekHeights={peekHeights}
+        defaultHeight={initPos}
+        backdrop={false}
+        fullHeight={false}
+        onIndexChange={snapIndex => handleOnIndexChange(snapIndex)}
+        styles={{ root: styles.root }}
+        threshold={0}
+        // springConfig doc : https://docs.pmnd.rs/react-spring/common/configs
+        springConfig={{
+          tension: defaultBottomSheetSpringConfig.tension,
+          friction: defaultBottomSheetSpringConfig.friction,
+          clamp: defaultBottomSheetSpringConfig.clamp
+        }}
+        disabledClosing={true}
+        snapPointSeekerMode="next"
+      >
+        <div ref={innerContentRef}>
+          <Paper
+            data-testid="bottomSheet-header"
+            className="u-w-100 u-h-2-half u-pos-relative u-flex u-flex-items-center u-flex-justify-center"
+            ref={headerRef}
+            elevation={0}
+            square
+          >
+            <div style={styles.indicator} />
+          </Paper>
+          <Stack
+            style={styles.stack}
+            className="u-flex u-flex-column u-ov-hidden"
+            spacing="s"
+          >
+            {overriddenChildren}
+          </Stack>
+        </div>
+        <div style={{ height: bottomSpacerHeight }} />
+      </MuiBottomSheet>
+    </>
   )
 }
 
