@@ -3,6 +3,8 @@ import { RemoveScroll } from 'react-remove-scroll'
 import { default as MUIDialog } from '@material-ui/core/Dialog'
 import { useTheme } from '@material-ui/core'
 
+import { flagshipMetadata } from 'cozy-device-helper'
+
 import useBreakpoints from '../hooks/useBreakpoints'
 import { useCozyTheme } from '../CozyTheme'
 import themesStyles from '../../stylus/settings/palette.styl'
@@ -47,16 +49,18 @@ const Dialog = props => {
         },
     {
       bottomBackground: theme.palette.background[sidebar ? 'default' : 'paper'],
-      bottomTheme: 'dark',
+      bottomTheme: flagshipMetadata.immersive ? 'light' : 'dark',
       bottomOverlay: 'transparent',
       topOverlay: 'transparent',
       topBackground:
         cozBar && getComputedStyle(cozBar).getPropertyValue('background-color'),
       topTheme:
-        cozBar && cozBar.classList.contains('coz-theme-primary')
+        flagshipMetadata.immersive ||
+        (cozBar && cozBar.classList.contains('coz-theme-primary'))
           ? 'light'
           : 'dark'
-    }
+    },
+    'cozy-ui/Dialog'
   )
 
   return (
