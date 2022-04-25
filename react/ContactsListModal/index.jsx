@@ -46,17 +46,16 @@ const mkFilter = filterStr => contacts => {
   })
 }
 
-const ContactsListModal = props => {
+const ContactsListModal = ({
+  onItemClick,
+  placeholder,
+  addContactLabel,
+  emptyMessage,
+  contacts,
+  client,
+  dismissAction
+}) => {
   const { isMobile } = useBreakpoints()
-  const {
-    onItemClick,
-    placeholder,
-    addContactLabel,
-    emptyMessage,
-    contacts,
-    client,
-    ...rest
-  } = props
 
   const [filter, setFilter] = useState('')
 
@@ -72,7 +71,7 @@ const ContactsListModal = props => {
     }
 
     onItemClick(contact)
-    rest.dismissAction()
+    dismissAction()
   }
 
   const loading =
@@ -98,13 +97,13 @@ const ContactsListModal = props => {
   const { dialogProps, dialogTitleProps } = useCozyDialog({
     size: 'large',
     open: true,
-    onClose: props.dismissAction
+    onClose: dismissAction
   })
 
   return (
     <TopAnchoredDialog {...dialogProps}>
       <CozyTheme variant={isMobile ? 'inverted' : 'normal'}>
-        <DialogCloseButton onClick={props.dismissAction} />
+        <DialogCloseButton onClick={dismissAction} />
       </CozyTheme>
       <DialogTitle
         {...dialogTitleProps}
@@ -117,7 +116,7 @@ const ContactsListModal = props => {
             filter={filter}
             placeholder={placeholder}
             onChange={handleFilterChange}
-            onDismiss={rest.dismissAction}
+            onDismiss={dismissAction}
           />
         ) : (
           <TextField
