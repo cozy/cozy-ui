@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import compose from 'lodash/flowRight'
-import IconButton from '@material-ui/core/IconButton'
-import Input from '@material-ui/core/Input'
 import TextField from '@material-ui/core/TextField'
 
 import { Contact } from 'cozy-doctypes'
 import { Q, withClient, fetchPolicies, queryConnect } from 'cozy-client'
+
 import { DialogTitle, DialogContent } from '../Dialog'
-import Paper from '../Paper'
 import CozyTheme from '../CozyTheme'
 import {
   TopAnchoredDialog,
@@ -17,17 +16,13 @@ import {
 } from '../CozyDialogs'
 import useRealtime from '../hooks/useRealtime'
 import useEventListener from '../hooks/useEventListener.js'
-import PreviousIcon from '../Icons/Previous'
 import useBreakpoints from '../hooks/useBreakpoints'
-
 import ContactsList from '../ContactsList'
 import Spinner from '../Spinner'
-import styles from './styles.styl'
-import Icon from '../Icon'
+import MobileHeader from './MobileHeader'
 import AddContactButton from './AddContactButton'
 import EmptyMessage from './EmptyMessage'
-
-import cx from 'classnames'
+import styles from './styles.styl'
 
 const thirtySeconds = 30000
 const olderThan30s = fetchPolicies.olderThan(thirtySeconds)
@@ -49,10 +44,6 @@ const mkFilter = filterStr => contacts => {
 
     return displayName.toLowerCase().includes(f)
   })
-}
-
-const barStyle = {
-  height: 48
 }
 
 const ContactsListModal = props => {
@@ -122,29 +113,12 @@ const ContactsListModal = props => {
         })}
       >
         {isMobile ? (
-          <>
-            <CozyTheme variant="inverted">
-              <Paper
-                square
-                elevation={0}
-                className="u-flex u-flex-items-center u-pr-3 u-pl-half"
-                style={barStyle}
-              >
-                <IconButton className="u-mr-half" onClick={rest.dismissAction}>
-                  <Icon icon={PreviousIcon} />
-                </IconButton>
-                <Input
-                  type="text"
-                  placeholder={placeholder}
-                  value={filter}
-                  onChange={handleFilterChange}
-                  autoFocus
-                  fullWidth
-                  disableUnderline
-                />
-              </Paper>
-            </CozyTheme>
-          </>
+          <MobileHeader
+            filter={filter}
+            placeholder={placeholder}
+            onChange={handleFilterChange}
+            onDismiss={rest.dismissAction}
+          />
         ) : (
           <TextField
             variant="outlined"
