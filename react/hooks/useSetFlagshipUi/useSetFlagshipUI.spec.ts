@@ -38,25 +38,91 @@ it('should call webviewIntent with the correct params, once at mount and once at
     )
   )
 
-  expect(mockCall).toHaveBeenNthCalledWith(1, 'setFlagshipUI', {
-    bottomBackground: mockCSSValue,
-    bottomOverlay: 'transparent',
-    bottomTheme: 'dark',
-    topBackground: mockCSSValue,
-    topOverlay: 'transparent',
-    topTheme: 'dark'
-  })
+  expect(mockCall).toHaveBeenNthCalledWith(
+    1,
+    'setFlagshipUI',
+    {
+      bottomBackground: mockCSSValue,
+      bottomOverlay: 'transparent',
+      bottomTheme: 'dark',
+      topBackground: mockCSSValue,
+      topOverlay: 'transparent',
+      topTheme: 'dark'
+    },
+    undefined
+  )
 
   unmount()
 
-  expect(mockCall).toHaveBeenNthCalledWith(2, 'setFlagshipUI', {
-    bottomBackground: mockCSSValue,
-    bottomOverlay: 'transparent',
-    bottomTheme: 'light',
-    topBackground: mockCSSValue,
-    topOverlay: 'transparent',
-    topTheme: 'light'
-  })
+  expect(mockCall).toHaveBeenNthCalledWith(
+    2,
+    'setFlagshipUI',
+    {
+      bottomBackground: mockCSSValue,
+      bottomOverlay: 'transparent',
+      bottomTheme: 'light',
+      topBackground: mockCSSValue,
+      topOverlay: 'transparent',
+      topTheme: 'light'
+    },
+    undefined
+  )
+})
+
+it('should call webviewIntent with the correct params and forward the caller argument', () => {
+  const caller = 'cozy-ui/someComponent'
+
+  const { unmount } = renderHook(() =>
+    useSetFlagshipUI(
+      {
+        bottomBackground: mockCSSValue,
+        bottomOverlay: 'transparent',
+        bottomTheme: 'dark',
+        topBackground: mockCSSValue,
+        topOverlay: 'transparent',
+        topTheme: 'dark'
+      },
+      {
+        bottomBackground: mockCSSValue,
+        bottomOverlay: 'transparent',
+        bottomTheme: 'light',
+        topBackground: mockCSSValue,
+        topOverlay: 'transparent',
+        topTheme: 'light'
+      },
+      caller
+    )
+  )
+
+  expect(mockCall).toHaveBeenNthCalledWith(
+    1,
+    'setFlagshipUI',
+    {
+      bottomBackground: mockCSSValue,
+      bottomOverlay: 'transparent',
+      bottomTheme: 'dark',
+      topBackground: mockCSSValue,
+      topOverlay: 'transparent',
+      topTheme: 'dark'
+    },
+    caller
+  )
+
+  unmount()
+
+  expect(mockCall).toHaveBeenNthCalledWith(
+    2,
+    'setFlagshipUI',
+    {
+      bottomBackground: mockCSSValue,
+      bottomOverlay: 'transparent',
+      bottomTheme: 'light',
+      topBackground: mockCSSValue,
+      topOverlay: 'transparent',
+      topTheme: 'light'
+    },
+    caller
+  )
 })
 
 it('should call webviewIntent with the correct params with few args, once at mount and once at unmount', () => {
@@ -67,15 +133,25 @@ it('should call webviewIntent with the correct params with few args, once at mou
     )
   )
 
-  expect(mockCall).toHaveBeenNthCalledWith(1, 'setFlagshipUI', {
-    bottomBackground: mockCSSValue
-  })
+  expect(mockCall).toHaveBeenNthCalledWith(
+    1,
+    'setFlagshipUI',
+    {
+      bottomBackground: mockCSSValue
+    },
+    undefined
+  )
 
   unmount()
 
-  expect(mockCall).toHaveBeenNthCalledWith(2, 'setFlagshipUI', {
-    bottomBackground: mockCSSValue
-  })
+  expect(mockCall).toHaveBeenNthCalledWith(
+    2,
+    'setFlagshipUI',
+    {
+      bottomBackground: mockCSSValue
+    },
+    undefined
+  )
 })
 
 it('should call nothing with no webviewIntent and not throw', () => {
@@ -129,9 +205,14 @@ it('should refuse to call when no arg in second arg', () => {
     useSetFlagshipUI({ bottomBackground: mockCSSValue })
   )
 
-  expect(mockCall).toHaveBeenNthCalledWith(1, 'setFlagshipUI', {
-    bottomBackground: mockCSSValue
-  })
+  expect(mockCall).toHaveBeenNthCalledWith(
+    1,
+    'setFlagshipUI',
+    {
+      bottomBackground: mockCSSValue
+    },
+    undefined
+  )
 
   unmount()
 
@@ -190,13 +271,23 @@ it('should sanitize bad objects', () => {
     )
   )
 
-  expect(mockCall).toHaveBeenNthCalledWith(1, 'setFlagshipUI', {
-    topBackground: 'red'
-  })
+  expect(mockCall).toHaveBeenNthCalledWith(
+    1,
+    'setFlagshipUI',
+    {
+      topBackground: 'red'
+    },
+    undefined
+  )
 
   unmount()
 
-  expect(mockCall).toHaveBeenNthCalledWith(2, 'setFlagshipUI', {
-    topBackground: 'blue'
-  })
+  expect(mockCall).toHaveBeenNthCalledWith(
+    2,
+    'setFlagshipUI',
+    {
+      topBackground: 'blue'
+    },
+    undefined
+  )
 })

@@ -121,7 +121,8 @@ const ActionMenu = ({
       topOverlay: 'transparent',
       topBackground: theme.palette.background.paper,
       topTheme: 'dark'
-    }
+    },
+    'cozy-ui/ActionMenu'
   )
 
   if (placement)

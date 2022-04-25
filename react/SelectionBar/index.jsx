@@ -66,10 +66,14 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
     return () =>
       webviewIntent &&
       theme &&
-      webviewIntent.call('setFlagshipUI', {
-        bottomBackground: theme.palette.background.default,
-        bottomTheme: 'dark'
-      })
+      webviewIntent.call(
+        'setFlagshipUI',
+        {
+          bottomBackground: theme.palette.background.default,
+          bottomTheme: 'dark'
+        },
+        'cozy-ui/SelectionBar'
+      )
     // TODO: validate the deps are correct
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedCount, webviewIntent])
