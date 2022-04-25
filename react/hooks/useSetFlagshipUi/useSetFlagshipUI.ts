@@ -10,26 +10,28 @@ import { WebviewService } from 'cozy-intent/dist/api/services/WebviewService'
 
 const parseArg = (
   webviewIntent?: WebviewService | void,
-  arg?: FlagshipUI
+  arg?: FlagshipUI,
+  caller?: string
 ): void => {
   if (!webviewIntent) return
 
   const sanitized = isObject(arg) && pickBy(arg, identity)
   const validUI = !isEmpty(sanitized) && sanitized
 
-  validUI && webviewIntent.call('setFlagshipUI', validUI)
+  validUI && webviewIntent.call('setFlagshipUI', validUI, caller)
 }
 
 export const useSetFlagshipUI = (
   onMount: FlagshipUI,
-  onUnmount?: FlagshipUI
+  onUnmount?: FlagshipUI,
+  caller?: string
 ): void => {
   const webviewIntent = useWebviewIntent()
 
   useEffect(() => {
-    parseArg(webviewIntent, onMount)
+    parseArg(webviewIntent, onMount, caller)
 
-    return () => parseArg(webviewIntent, onUnmount)
+    return () => parseArg(webviewIntent, onUnmount, caller)
 
     /**
      * We don't want to listen to onMount/onUnmount arguments

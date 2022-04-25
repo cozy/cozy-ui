@@ -15,7 +15,8 @@ const Sidebar = ({ children, className, ...restProps }) => {
     },
     {
       bottomBackground: theme.palette.background.paper
-    }
+    },
+    'cozy-ui/Sidebar'
   )
 
   return (
