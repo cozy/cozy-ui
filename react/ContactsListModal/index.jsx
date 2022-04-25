@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import TextField from '@material-ui/core/TextField'
 
-import { Contact } from 'cozy-doctypes'
 import { Q, fetchPolicies, useClient, useQuery } from 'cozy-client'
 
 import { DialogTitle, DialogContent } from '../Dialog'
@@ -16,34 +15,13 @@ import {
 import useRealtime from '../hooks/useRealtime'
 import useEventListener from '../hooks/useEventListener.js'
 import useBreakpoints from '../hooks/useBreakpoints'
-import ContactsList from '../ContactsList'
-import Spinner from '../Spinner'
 import MobileHeader from './MobileHeader'
 import AddContactButton from './AddContactButton'
-import EmptyMessage from './EmptyMessage'
+import ContactsListContent from './ContactsListContent'
 import styles from './styles.styl'
 
 const thirtySeconds = 30000
 const olderThan30s = fetchPolicies.olderThan(thirtySeconds)
-
-const mkFilter = filterStr => contacts => {
-  if (!filterStr) {
-    return contacts
-  }
-
-  const f = filterStr.toLowerCase()
-
-  // TODO better filtering methods can be extracted from drive. See https://github.com/cozy/cozy-ui/pull/1273#discussion_r351845385
-  return contacts.filter(contact => {
-    const displayName = Contact.getDisplayName(contact)
-
-    if (!displayName) {
-      return false
-    }
-
-    return displayName.toLowerCase().includes(f)
-  })
-}
 
 const contactsQuery = {
   definition: Q('io.cozy.contacts').UNSAFE_noLimit(),
@@ -62,31 +40,13 @@ const ContactsListModal = ({
 }) => {
   const [filter, setFilter] = useState('')
   const { isMobile } = useBreakpoints()
+  const { dialogProps, dialogTitleProps } = useCozyDialog({
+    size: 'large',
+    open: true,
+    onClose: dismissAction
+  })
   const client = useClient()
   const contacts = useQuery(contactsQuery.definition, contactsQuery.options)
-
-  const handleFilterChange = e => {
-    setFilter(e.target.value)
-  }
-
-  const filterContacts = mkFilter(filter)
-
-  const handleItemClick = contact => {
-    if (!onItemClick) {
-      return
-    }
-
-    onItemClick(contact)
-    dismissAction()
-  }
-
-  const loading =
-    (contacts.fetchStatus === 'loading' ||
-      contacts.fetchStatus === 'pending') &&
-    !contacts.lastFetch
-
-  const filteredContacts = filterContacts(contacts.data)
-
   useRealtime(
     client,
     {
@@ -97,14 +57,11 @@ const ContactsListModal = ({
     },
     []
   )
-
   useEventListener(document, 'resume', contacts.fetch)
 
-  const { dialogProps, dialogTitleProps } = useCozyDialog({
-    size: 'large',
-    open: true,
-    onClose: dismissAction
-  })
+  const handleFilterChange = e => {
+    setFilter(e.target.value)
+  }
 
   return (
     <TopAnchoredDialog {...dialogProps}>
@@ -144,20 +101,13 @@ const ContactsListModal = ({
               label={addContactLabel}
             />
           </div>
-          {loading && (
-            <div className="u-mv-2">
-              <Spinner size="xxlarge" />
-            </div>
-          )}
-          {!loading && filteredContacts.length === 0 && (
-            <EmptyMessage>{emptyMessage}</EmptyMessage>
-          )}
-          {!loading && filteredContacts.length > 0 && (
-            <ContactsList
-              contacts={filteredContacts}
-              onItemClick={handleItemClick}
-            />
-          )}
+          <ContactsListContent
+            filter={filter}
+            contacts={contacts}
+            onItemClick={onItemClick}
+            emptyMessage={emptyMessage}
+            dismissAction={dismissAction}
+          />
         </div>
       </DialogContent>
     </TopAnchoredDialog>
