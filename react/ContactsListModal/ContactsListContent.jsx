@@ -49,23 +49,20 @@ const ContactsListContent = ({
     dismissAction()
   }
 
+  if (loading) {
+    return (
+      <div className="u-mv-2">
+        <Spinner size="xxlarge" />
+      </div>
+    )
+  }
+
+  if (filteredContacts.length === 0) {
+    return <EmptyMessage>{emptyMessage}</EmptyMessage>
+  }
+
   return (
-    <>
-      {loading && (
-        <div className="u-mv-2">
-          <Spinner size="xxlarge" />
-        </div>
-      )}
-      {!loading && filteredContacts.length === 0 && (
-        <EmptyMessage>{emptyMessage}</EmptyMessage>
-      )}
-      {!loading && filteredContacts.length > 0 && (
-        <ContactsList
-          contacts={filteredContacts}
-          onItemClick={handleItemClick}
-        />
-      )}
-    </>
+    <ContactsList contacts={filteredContacts} onItemClick={handleItemClick} />
   )
 }
 
