@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import compose from 'lodash/flowRight'
 import TextField from '@material-ui/core/TextField'
 
 import { Contact } from 'cozy-doctypes'
-import { Q, withClient, fetchPolicies, queryConnect } from 'cozy-client'
+import { Q, fetchPolicies, useClient, useQuery } from 'cozy-client'
 
 import { DialogTitle, DialogContent } from '../Dialog'
 import CozyTheme from '../CozyTheme'
@@ -46,18 +45,25 @@ const mkFilter = filterStr => contacts => {
   })
 }
 
+const contactsQuery = {
+  definition: Q('io.cozy.contacts').UNSAFE_noLimit(),
+  options: {
+    as: 'contacts',
+    fetchPolicy: olderThan30s
+  }
+}
+
 const ContactsListModal = ({
   onItemClick,
   placeholder,
   addContactLabel,
   emptyMessage,
-  contacts,
-  client,
   dismissAction
 }) => {
-  const { isMobile } = useBreakpoints()
-
   const [filter, setFilter] = useState('')
+  const { isMobile } = useBreakpoints()
+  const client = useClient()
+  const contacts = useQuery(contactsQuery.definition, contactsQuery.options)
 
   const handleFilterChange = e => {
     setFilter(e.target.value)
@@ -162,13 +168,4 @@ ContactsListModal.propTypes = {
   onItemClick: PropTypes.func
 }
 
-export default compose(
-  withClient,
-  queryConnect({
-    contacts: {
-      query: () => Q('io.cozy.contacts').UNSAFE_noLimit(),
-      as: 'contacts',
-      fetchPolicy: olderThan30s
-    }
-  })
-)(ContactsListModal)
+export default ContactsListModal
