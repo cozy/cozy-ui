@@ -5991,19 +5991,16 @@ cozy-bi-auth@0.0.23:
     lodash "^4.17.20"
     node-jose "^1.1.4"
 
-cozy-client@27.19.1:
-  version "27.19.1"
-  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-27.19.1.tgz#f7cab0257e290118e295d29436dd4731c014c7fc"
-  integrity sha512-kqDzQ/qgqwGBW6KTBppCxc1d00DEV1i0c7YpQXSAylTTXMk/FW6GF2Y51RJaESLYrTBJcLKmfkP79G/x0kQtrA==
+cozy-client@28.1.0:
+  version "28.1.0"
+  resolved "https://registry.yarnpkg.com/cozy-client/-/cozy-client-28.1.0.tgz#2863dfd64fd7e61e3a3fd0efba291e7ae9ca0590"
+  integrity sha512-rIsaQaQjazNaQqXxO4JYRx6s9dJEGkN9nofaKfFZDwb+kuGZ555+qq+5jNR0PQHKFshy+eiI2mSh2RVw0Ag9QQ==
   dependencies:
     "@cozy/minilog" "1.0.0"
     "@types/jest" "^26.0.20"
     "@types/lodash" "^4.14.170"
     btoa "^1.2.1"
-    cozy-device-helper "^1.12.0"
-    cozy-flags "2.7.1"
-    cozy-logger "^1.6.0"
-    cozy-stack-client "^27.19.1"
+    cozy-stack-client "^28.0.1"
     json-stable-stringify "^1.0.1"
     lodash "^4.17.13"
     microee "^0.0.6"
@@ -6124,12 +6121,21 @@ cozy-sharing@^3.10.0:
     react-tooltip "^3.11.1"
     snarkdown "^2.0.0"
 
-cozy-stack-client@27.19.1, cozy-stack-client@^27.19.1:
+cozy-stack-client@27.19.1:
   version "27.19.1"
   resolved "https://registry.yarnpkg.com/cozy-stack-client/-/cozy-stack-client-27.19.1.tgz#679253c6e028273b480b350583627389d98c6a69"
   integrity sha512-DdJCi0lHofWsnT4ZvX02uaELsvgNquuPFPaXulo8gw1x/mVoHsPn+Lpt9xCw35CvhJm3ajJQ709f7JT4lPbCSQ==
   dependencies:
     cozy-flags "2.7.1"
+    detect-node "^2.0.4"
+    mime "^2.4.0"
+    qs "^6.7.0"
+
+cozy-stack-client@^28.0.1:
+  version "28.0.1"
+  resolved "https://registry.yarnpkg.com/cozy-stack-client/-/cozy-stack-client-28.0.1.tgz#736cd74bdfe8e96d70b9b5f4ca35c922fe48553e"
+  integrity sha512-DBu3uWkoVLW0cbPv7H6U1vFQ1DNbe5oOZLr6yJGBOp/s/MrAzflqvM2pN0khpBtnSIm9KTwNzqRn4oOHRpagGg==
+  dependencies:
     detect-node "^2.0.4"
     mime "^2.4.0"
     qs "^6.7.0"
