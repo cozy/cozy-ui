@@ -1,3 +1,17 @@
+# [62.12.0](https://github.com/cozy/cozy-ui/compare/v62.11.0...v62.12.0) (2022-04-26)
+
+
+### Bug Fixes
+
+* Hide bottom of screen in immersive mode ([65fcc5f](https://github.com/cozy/cozy-ui/commit/65fcc5f))
+* Revert icons to white in immersive mode ([43bc925](https://github.com/cozy/cozy-ui/commit/43bc925))
+* Upgrade cozy-intent and cozy-device-helper ([44904b4](https://github.com/cozy/cozy-ui/commit/44904b4))
+
+
+### Features
+
+* Use new caller API in components ([10742b0](https://github.com/cozy/cozy-ui/commit/10742b0))
+
 # [62.11.0](https://github.com/cozy/cozy-ui/compare/v62.10.0...v62.11.0) (2022-04-22)
 
 
