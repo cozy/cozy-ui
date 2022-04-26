@@ -8,18 +8,22 @@ import { FileDoctype } from '../../proptypes'
 import Button from '../../Button'
 
 import { withViewerLocales } from '../withViewerLocales'
+import { downloadFile } from '../helpers'
 
-const DownloadButton = ({ t, client, file }) => (
-  <Button
-    onClick={() => client.collection('io.cozy.files').download(file)}
-    label={t('Viewer.download')}
-  />
-)
+const DownloadButton = ({ t, client, file, url }) => {
+  return (
+    <Button
+      onClick={() => downloadFile({ client, file, url })}
+      label={t('Viewer.download')}
+    />
+  )
+}
 
 DownloadButton.propTypes = {
   t: PropTypes.func.isRequired,
   client: PropTypes.object.isRequired,
-  file: FileDoctype
+  file: FileDoctype,
+  url: PropTypes.string
 }
 
 export default flow(

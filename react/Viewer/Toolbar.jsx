@@ -15,7 +15,7 @@ import PreviousIcon from '../Icons/Previous'
 import DownloadIcon from '../Icons/Download'
 
 import { withViewerLocales } from './withViewerLocales'
-
+import { downloadFile } from './helpers'
 import styles from './styles.styl'
 
 const useClasses = makeStyles(theme => ({
@@ -34,7 +34,8 @@ const Toolbar = ({
   onClose,
   t,
   toolbarRef,
-  breakpoints: { isDesktop }
+  breakpoints: { isDesktop },
+  url
 }) => {
   const client = useClient()
   const classes = useClasses()
@@ -72,9 +73,7 @@ const Toolbar = ({
             icon={DownloadIcon}
             label={t('Viewer.download')}
             subtle
-            onClick={() => {
-              client.collection('io.cozy.files').download(file)
-            }}
+            onClick={() => downloadFile({ client, file, url })}
           />
         )}
       </div>

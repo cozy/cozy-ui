@@ -35,4 +35,11 @@ export const isValidForPanel = ({ file }) => {
   )
 }
 
+export const downloadFile = async ({ client, file, url }) => {
+  if (isEncrypted(file)) {
+    return client.collection('io.cozy.files').forceFileDownload(url, file.name)
+  }
+  return client.collection('io.cozy.files').download(file)
+}
+
 export const isFileEncrypted = file => isEncrypted(file)

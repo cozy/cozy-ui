@@ -1,4 +1,5 @@
-import { isPlainText } from './helpers'
+import { downloadFile, isPlainText } from './helpers'
+import { createMockClient } from 'cozy-client'
 
 describe('helpers', () => {
   describe('isPlainText', () => {
@@ -43,6 +44,29 @@ describe('helpers', () => {
         expect(isPlainText(undefined, 'file.csv')).toBe(false)
         expect(isPlainText(undefined, 'file.vcf')).toBe(false)
       })
+    })
+  })
+  describe('download', () => {
+    const client = new createMockClient({})
+    const mockDownload = jest.fn()
+    const mockForceFileDownload = jest.fn()
+    client.collection = jest.fn(() => ({
+      download: mockDownload,
+      forceFileDownload: mockForceFileDownload
+    }))
+
+    it('should call download when file is not encrypted', async () => {
+      const file = { name: 'toto.txt' }
+
+      await downloadFile({ client, file })
+      expect(mockDownload).toHaveBeenCalledWith(file)
+    })
+
+    it('should call forceFileDownload when file is encrypted', async () => {
+      const file = { name: 'encrypted-toto.txt', encrypted: true }
+      const url = 'blob:http://thedecryptedtoto'
+      await downloadFile({ client, file, url })
+      expect(mockForceFileDownload).toHaveBeenCalledWith(url, file.name)
     })
   })
 })
