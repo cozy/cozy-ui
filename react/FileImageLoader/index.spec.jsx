@@ -37,10 +37,11 @@ const file = {
   }
 }
 
-const setup = ({ file }) => {
+const setup = ({ file, url }) => {
   const root = render(
     <FileImageLoader
       file={file}
+      url={url}
       linkType="large"
       key={file.id}
       render={src => <img alt={file.name} src={src} data-testid="img_image" />}
@@ -66,11 +67,24 @@ describe('FileImageLoader', () => {
   it('should set the source of image to links.large if no error', async () => {
     const { root } = setup({ file })
     const { getByTestId } = root
+
     checkImageSource.mockResolvedValue('ok')
     await waitFor(() => getByTestId('img_image'))
 
     const img = getByTestId('img_image')
     expect(img.src).toEqual(file.links.large)
+  })
+
+  it('should use URL when set', async () => {
+    const url = 'blob:http://theimageblob'
+    const { root } = setup({ file, url })
+    const { getByTestId } = root
+    checkImageSource.mockResolvedValue('ok')
+    await waitFor(() => getByTestId('img_image'))
+
+    const img = getByTestId('img_image')
+    expect(img.src).toEqual(url)
+    expect(getMock).not.toHaveBeenCalled()
   })
 
   it('should makes a request to fetch links if the links is not right anymore', async () => {
@@ -99,6 +113,7 @@ describe('FileImageLoader', () => {
 
     const img = getByTestId('img_image')
     expect(img.src).toEqual('http://urlvalid/')
+    expect(getMock).toHaveBeenCalled()
   })
 
   it('should fallback to fallback if other request failed ', async () => {
