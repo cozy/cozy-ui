@@ -10,14 +10,12 @@ import Button from '../../Button'
 import { withViewerLocales } from '../withViewerLocales'
 import { downloadFile } from '../helpers'
 
-const DownloadButton = ({ t, client, file, url }) => {
-  return (
-    <Button
-      onClick={() => downloadFile({ client, file, url })}
-      label={t('Viewer.download')}
-    />
-  )
-}
+const DownloadButton = ({ t, client, file, url }) => (
+  <Button
+    onClick={() => downloadFile({ client, file, url })}
+    label={t('Viewer.download')}
+  />
+)
 
 DownloadButton.propTypes = {
   t: PropTypes.func.isRequired,
