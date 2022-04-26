@@ -1,3 +1,16 @@
+# [63.0.0](https://github.com/cozy/cozy-ui/compare/v62.12.0...v63.0.0) (2022-04-26)
+
+
+### Features
+
+* **Viewer:** Improve ForwardButton ([2195cb4](https://github.com/cozy/cozy-ui/commit/2195cb4))
+* Update cozy-client ([45a4a48](https://github.com/cozy/cozy-ui/commit/45a4a48))
+
+
+### BREAKING CHANGES
+
+* You need to update `cozy-client` to `>28.1.0`.
+
 # [62.12.0](https://github.com/cozy/cozy-ui/compare/v62.11.0...v62.12.0) (2022-04-26)
 
 
