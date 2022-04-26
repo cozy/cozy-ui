@@ -1,3 +1,16 @@
+# [64.0.0](https://github.com/cozy/cozy-ui/compare/v63.0.0...v64.0.0) (2022-04-26)
+
+
+### Features
+
+* Add AddContactDialog to add a contact from the contact list ([7333bf9](https://github.com/cozy/cozy-ui/commit/7333bf9))
+* Add ContactsList locales and HOC to get them ([e315f40](https://github.com/cozy/cozy-ui/commit/e315f40))
+
+
+### BREAKING CHANGES
+
+* the app must now have `POST` permission on `io.cozy.contacts` doctype to use `ContactsListModal`
+
 # [63.0.0](https://github.com/cozy/cozy-ui/compare/v62.12.0...v63.0.0) (2022-04-26)
 
 
