@@ -18617,6 +18617,29 @@ html {
   flex-shrink: 0;
 }
 
+.media--cSJMp {
+  display: flex;
+  align-items: center;
+}
+.media--top--K9w0I {
+  align-items: flex-start;
+}
+.media--bottom--21YWJ {
+  align-items: flex-end;
+}
+.bd--1Uv-F {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+.img--3SHpG {
+  line-height: 0;
+  flex: 0 0 auto;
+}
+
+.icon--gvQ89 {
+  margin: 1rem 1.5rem 0 0.5rem;
+}
+
 .CollectionField__addBtn--Z0FO- {
   margin-left: 0;
   margin-right: 0;
@@ -19337,25 +19360,6 @@ html {
   padding-left: 1rem;
   padding-right: 1rem;
   font-weight: bold;
-}
-
-.media--cSJMp {
-  display: flex;
-  align-items: center;
-}
-.media--top--K9w0I {
-  align-items: flex-start;
-}
-.media--bottom--21YWJ {
-  align-items: flex-end;
-}
-.bd--1Uv-F {
-  flex: 1 1 auto;
-  overflow: hidden;
-}
-.img--3SHpG {
-  line-height: 0;
-  flex: 0 0 auto;
 }
 
 .Modal__back--qxUn_ {
