@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import ViewerSpinner from './ViewerSpinner'
 import NoNetworkViewer from './NoNetworkViewer'
+import { isFileEncrypted } from './helpers'
 
 const TTL = 6000
 
@@ -24,7 +25,10 @@ const withFileUrl = BaseComponent =>
     }
 
     componentWillReceiveProps(nextProps) {
-      if (nextProps.file.id !== this.props.file.id) {
+      if (
+        nextProps.file.id !== this.props.file.id ||
+        nextProps.url !== this.props.url
+      ) {
         this.reset()
       }
     }
@@ -36,14 +40,23 @@ const withFileUrl = BaseComponent =>
     }
 
     async loadDownloadUrl() {
+      const { file, url } = this.props
       this.timeout = setTimeout(
         () => this.setState(state => ({ ...state, status: FAILED })),
         TTL
       )
       try {
-        const url = await this.getDownloadLink(this.props.file)
+        if (isFileEncrypted(file)) {
+          // The download link cannot be provided by the stack if the file is encrypted
+          if (url) {
+            this.clearTimeout()
+            this.setState({ downloadUrl: url, status: LOADED })
+          }
+          return
+        }
+        const downloadUrl = await this.getDownloadLink(file)
         this.clearTimeout()
-        this.setState({ downloadUrl: url, status: LOADED })
+        this.setState({ downloadUrl, status: LOADED })
       } catch (err) {
         this.clearTimeout()
         this.setState(state => ({ ...state, status: FAILED }))

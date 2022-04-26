@@ -15,7 +15,7 @@ import NoViewer from './NoViewer'
 
 import styles from './styles.styl'
 
-export const PdfMobileViewer = ({ file, t, gestures }) => {
+export const PdfMobileViewer = ({ file, url, t, gestures }) => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
   const imgRef = useRef(null)
@@ -83,6 +83,7 @@ export const PdfMobileViewer = ({ file, t, gestures }) => {
       {file && (
         <FileImageLoader
           file={file}
+          url={url}
           linkType="preview"
           onError={onImageError}
           key={file.id}

@@ -18,7 +18,7 @@ const ViewerContainer = props => {
     disableSharing,
     ...rest
   } = props
-  const { currentIndex, files } = props
+  const { currentIndex, files, currentURL } = props
   const toolbarRef = createRef()
   const { isDesktop } = useBreakpoints()
   const currentFile = files[currentIndex]
@@ -37,6 +37,7 @@ const ViewerContainer = props => {
         hasNext={hasNext}
         validForPanel={validForPanel}
         toolbarRef={toolbarRef}
+        currentURL={currentURL}
       />
       <ViewerInformationsWrapper
         disableFooter={disableFooter}
@@ -54,6 +55,8 @@ ViewerContainer.propTypes = {
   files: PropTypes.arrayOf(FileDoctype).isRequired,
   /** Index of the file to show */
   currentIndex: PropTypes.number,
+  /** Optionnal URL of the file */
+  currentURL: PropTypes.string,
   className: PropTypes.string,
   /** Called when the user wants to leave the Viewer */
   onCloseRequest: PropTypes.func,

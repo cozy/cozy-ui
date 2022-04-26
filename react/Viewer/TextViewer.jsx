@@ -12,6 +12,7 @@ import withFileUrl from './withFileUrl'
 import NoViewer from './NoViewer'
 
 import styles from './styles.styl'
+import { isFileEncrypted } from './helpers'
 
 const MarkdownRenderer = ({ text }) => (
   <ReactMarkdown
@@ -61,10 +62,15 @@ export class TextViewer extends React.Component {
   async loadFile() {
     const { url, file } = this.props
     try {
-      const parsedURL = new URL(url)
-      const client = this.props.client.getStackClient()
-      const response = await client.fetch('GET', parsedURL.pathname)
-      const text = await response.text()
+      let resp
+      if (isFileEncrypted(file)) {
+        resp = await fetch(url)
+      } else {
+        const parsedURL = new URL(url)
+        const client = this.props.client.getStackClient()
+        resp = await client.fetch('GET', parsedURL.pathname)
+      }
+      const text = await resp.text()
 
       if (this._mounted) {
         this.setState({
