@@ -81,3 +81,20 @@ exports[`TextViewer Component should display the text viewer 1`] = `
   </pre>
 </div>
 `;
+
+exports[`TextViewer Component should display the text viewer when an URL is given 1`] = `
+<div
+  className="styles__viewer-textviewer___cISlz"
+>
+  <h2
+    className="styles__viewer-filename___36bWW u-mt-3 u-mb-1"
+  >
+    My File
+  </h2>
+  <pre
+    className="styles__viewer-textviewer-content___q2RzR u-mh-auto u-mv-2"
+  >
+    The content of my file
+  </pre>
+</div>
+`;

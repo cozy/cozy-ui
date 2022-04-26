@@ -9,8 +9,9 @@ import { TextViewer, isMarkdown } from './TextViewer'
 
 const client = createMockClient({})
 
+const mockText = jest.fn()
 const mockFetch = responseText => async () => ({
-  text: async () => responseText
+  text: mockText.mockResolvedValue(responseText)
 })
 
 client.stackClient.fetch = mockFetch('Text')
@@ -78,6 +79,7 @@ describe('TextViewer Component', () => {
       text: 'The content of my file'
     })
     expect(comp.toJSON()).toMatchSnapshot()
+    expect(mockText).toHaveBeenCalled()
   })
 
   it('should display the markdown viewer', () => {
@@ -95,5 +97,23 @@ describe('TextViewer Component', () => {
         "It's very easy to make some words **bold** and other words *italic* with Markdown"
     })
     expect(comp.toJSON()).toMatchSnapshot()
+  })
+
+  it('should display the text viewer when an URL is given', () => {
+    const url = 'blob:http://foo.mycozy.cloud'
+    const comp = renderer.create(
+      <BreakpointsProvider>
+        <TextViewer {...props} url={url} />
+      </BreakpointsProvider>
+    )
+
+    const inst = comp.root.children[0].instance
+    inst.setState({
+      loading: false,
+      isMarkdown: false,
+      text: 'The content of my file'
+    })
+    expect(comp.toJSON()).toMatchSnapshot()
+    expect(mockText).toHaveBeenCalled()
   })
 })
