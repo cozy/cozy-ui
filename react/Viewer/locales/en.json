@@ -60,6 +60,9 @@
     "scaledown": "Zoom out",
     "scaleup": "Zoom in",
     "share": {
+      "title": "Link to my document %{name}",
+      "text": "Here is a link to my document %{name}: ",
+      "error": "Problem with link recovery: %{error}",
       "success": "Your file has been shared with success"
     }
   }

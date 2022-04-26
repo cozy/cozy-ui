@@ -2,8 +2,7 @@ import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/core/styles'
 
-import { isMobileApp } from 'cozy-device-helper'
-import { getReferencedBy, useQuery, models } from 'cozy-client'
+import { getReferencedBy, useQuery, models, useClient } from 'cozy-client'
 
 import BottomSheet, { BottomSheetHeader } from '../../BottomSheet'
 
@@ -13,6 +12,7 @@ import Sharing from './Sharing'
 import ForwardButton from './ForwardButton'
 import DownloadButton from './DownloadButton'
 import BottomSheetContent from './BottomSheetContent'
+import { shouldBeForwardButton } from './helpers'
 
 const {
   contact: { getDisplayName }
@@ -32,7 +32,10 @@ const useStyles = makeStyles(theme => ({
 
 const FooterContent = ({ file, toolbarRef, disableSharing }) => {
   const styles = useStyles()
-  const FileActionButton = isMobileApp() ? ForwardButton : DownloadButton
+  const client = useClient()
+  const FileActionButton = shouldBeForwardButton(client)
+    ? ForwardButton
+    : DownloadButton
   const toolbarProps = useMemo(() => ({ ref: toolbarRef }), [toolbarRef])
 
   const contactIds = getReferencedBy(file, 'io.cozy.contacts').map(
