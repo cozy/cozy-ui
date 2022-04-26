@@ -49,6 +49,7 @@ export const getViewerComponentName = ({
 
 const ViewerByFile = ({
   file,
+  url,
   onClose,
   renderFallbackExtraContent,
   gestures,
@@ -73,6 +74,7 @@ const ViewerByFile = ({
   return (
     <ComponentName
       file={file}
+      url={url}
       onClose={onClose}
       renderFallbackExtraContent={renderFallbackExtraContent}
       gestures={gestures}

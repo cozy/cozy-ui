@@ -101,6 +101,7 @@ class ViewerControls extends Component {
   render() {
     const {
       file,
+      url,
       onClose,
       hasPrevious,
       hasNext,
@@ -131,6 +132,7 @@ class ViewerControls extends Component {
           <Toolbar
             toolbarRef={toolbarRef}
             file={file}
+            url={url}
             onClose={showClose && onClose}
             onMouseEnter={this.showControls}
             onMouseLeave={this.hideControls}

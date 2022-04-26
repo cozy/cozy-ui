@@ -5,21 +5,24 @@ import DownloadButton from './DownloadButton'
 import styles from '../styles.styl'
 import { FileDoctype } from '../../proptypes'
 
-const NoViewer = ({ file, renderFallbackExtraContent }) => (
+const NoViewer = ({ file, url, renderFallbackExtraContent }) => (
   <div className={styles['viewer-noviewer']}>
     <FileIcon type={file.class} />
     <p className={styles['viewer-filename']}>{file.name}</p>
-    {renderFallbackExtraContent(file)}
+    {renderFallbackExtraContent(file, url)}
   </div>
 )
 
 NoViewer.propTypes = {
   file: FileDoctype.isRequired,
-  renderFallbackExtraContent: PropTypes.func
+  renderFallbackExtraContent: PropTypes.func,
+  url: PropTypes.string
 }
 
 NoViewer.defaultProps = {
-  renderFallbackExtraContent: file => <DownloadButton file={file} />
+  renderFallbackExtraContent: (file, url) => (
+    <DownloadButton file={file} url={url} />
+  )
 }
 
 export default NoViewer

@@ -1,4 +1,6 @@
 import has from 'lodash/has'
+import { models } from 'cozy-client'
+const { isEncrypted } = models.file
 
 /**
  * @typedef {object} Reference
@@ -32,3 +34,5 @@ export const isValidForPanel = ({ file }) => {
     isFromKonnector({ file })
   )
 }
+
+export const isFileEncrypted = file => isEncrypted(file)

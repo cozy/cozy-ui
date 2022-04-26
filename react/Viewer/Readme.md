@@ -185,3 +185,8 @@ And then configure the [webpack worker-loader](https://github.com/webpack-contri
 ### Only works with React
 
 The `Viewer` can be used only in a `React` Application. You can't use it with `Preact`.
+
+### Special case: client-side encrypted files
+
+When a file is client-side encrypted, it is not possible to get the download link from the server anymore. 
+Hence, an additional `currentURL` prop must be given to the `<Viewer>`, that redirects to the decrypted file. 

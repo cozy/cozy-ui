@@ -64,6 +64,7 @@ class Viewer extends Component {
   render() {
     const {
       currentFile,
+      currentURL,
       hasPrevious,
       hasNext,
       toolbarProps,
@@ -81,6 +82,7 @@ class Viewer extends Component {
       <>
         <ViewerControls
           file={currentFile}
+          url={currentURL}
           onClose={this.onClose}
           hasPrevious={hasPrevious}
           hasNext={hasNext}
@@ -93,6 +95,7 @@ class Viewer extends Component {
         >
           <ViewerByFile
             file={currentFile}
+            url={currentURL}
             onClose={this.onClose}
             renderFallbackExtraContent={renderFallbackExtraContent}
             onlyOfficeProps={onlyOfficeProps}
@@ -106,6 +109,8 @@ class Viewer extends Component {
 Viewer.propTypes = {
   /** One `io.cozy.files` to display */
   currentFile: FileDoctype.isRequired,
+  /** Optionnal URL of the file */
+  currentURL: PropTypes.string,
   hasNext: PropTypes.bool,
   hasPrevious: PropTypes.bool,
   /** Called when the user wants to leave the Viewer */
