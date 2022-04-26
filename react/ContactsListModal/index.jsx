@@ -15,9 +15,13 @@ import {
 import useRealtime from '../hooks/useRealtime'
 import useEventListener from '../hooks/useEventListener.js'
 import useBreakpoints from '../hooks/useBreakpoints'
+import Button from '../Buttons'
+import PlusIcon from '../Icons/Plus'
+import Icon from '../Icon'
 import MobileHeader from './MobileHeader'
-import AddContactButton from './AddContactButton'
 import ContactsListContent from './ContactsListContent'
+import AddContactDialog from './AddContact/AddContactDialog'
+
 import styles from './styles.styl'
 
 const thirtySeconds = 30000
@@ -39,6 +43,7 @@ const ContactsListModal = ({
   dismissAction
 }) => {
   const [filter, setFilter] = useState('')
+  const [showAddDialog, setShowAddDialog] = useState(false)
   const { isMobile } = useBreakpoints()
   const { dialogProps, dialogTitleProps } = useCozyDialog({
     size: 'large',
@@ -96,9 +101,13 @@ const ContactsListModal = ({
       <DialogContent className="u-p-0">
         <div className="dialogContentInner">
           <div className={styles.ContactsListModal__addContactContainer}>
-            <AddContactButton
+            <Button
               className={isMobile && 'u-mt-1'}
+              variant="secondary"
+              theme="secondary"
               label={addContactLabel}
+              startIcon={<Icon icon={PlusIcon} />}
+              onClick={setShowAddDialog}
             />
           </div>
           <ContactsListContent
@@ -110,6 +119,13 @@ const ContactsListModal = ({
           />
         </div>
       </DialogContent>
+      {showAddDialog && (
+        <AddContactDialog
+          onListClose={dismissAction}
+          onCreate={onItemClick}
+          onClose={() => setShowAddDialog(false)}
+        />
+      )}
     </TopAnchoredDialog>
   )
 }

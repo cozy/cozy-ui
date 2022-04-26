@@ -42,6 +42,8 @@ mockClient.plugins = {
   }
 }
 
+mockClient.save = () => ({ data: contacts[0] })
+
 const Wrapper = ({ children }) => {
   return <CozyProvider client={mockClient}>{children}</CozyProvider>
 }
