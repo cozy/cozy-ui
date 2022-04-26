@@ -62,15 +62,15 @@ export class TextViewer extends React.Component {
   async loadFile() {
     const { url, file } = this.props
     try {
-      let resp
+      let response
       if (isFileEncrypted(file)) {
-        resp = await fetch(url)
+        response = await fetch(url)
       } else {
-        const parsedURL = new URL(url)
+        const { pathname } = new URL(url)
         const client = this.props.client.getStackClient()
-        resp = await client.fetch('GET', parsedURL.pathname)
+        response = await client.fetch('GET', pathname)
       }
-      const text = await resp.text()
+      const text = await response.text()
 
       if (this._mounted) {
         this.setState({
