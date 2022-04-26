@@ -1,7 +1,13 @@
 import { saveFileWithCordova } from 'cozy-client/dist/models/fsnative'
-import { isIOS } from 'cozy-device-helper'
+import { isIOS, isMobileApp } from 'cozy-device-helper'
 
 import Alerter from '../../Alerter'
+
+export const shouldBeForwardButton = client => {
+  const isDrive = client?.appMetadata?.slug === 'drive'
+  if (isMobileApp() || (navigator.share && !isDrive)) return true
+  return false
+}
 
 const isMissingFileError = error => error.status === 404
 const downloadFileError = error => {

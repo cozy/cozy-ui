@@ -60,6 +60,9 @@
     "scaledown": "Zoom arrière",
     "scaleup": "Zoom avant",
     "share": {
+      "title": "Lien vers mon document %{name}",
+      "text": "Voici un lien vers mon document %{name} : ",
+      "error": "Problème avec la récupération du lien : %{error}",
       "success": "Votre fichier a été partagé avec succès"
     }
   }
