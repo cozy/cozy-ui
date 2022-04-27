@@ -33,7 +33,7 @@ const ForwardButton = ({ file }) => {
     } else {
       try {
         const isFlatDomain = capabilities?.data?.attributes?.flat_subdomains
-        const url = await getSharingLink(client, file, isFlatDomain)
+        const url = await getSharingLink(client, [file.id], isFlatDomain)
         const shareData = {
           title: t('Viewer.share.title', { name: file.name }),
           text: t('Viewer.share.text', { name: file.name }),
