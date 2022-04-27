@@ -189,4 +189,5 @@ The `Viewer` can be used only in a `React` Application. You can't use it with `P
 ### Special case: client-side encrypted files
 
 When a file is client-side encrypted, it is not possible to get the download link from the server anymore. 
-Hence, an additional `currentURL` prop must be given to the `<Viewer>`, that redirects to the decrypted file. 
+Hence, an additional `currentURL` prop must be eventually given to the `<Viewer>`. This URL is the decrypted
+file, asynchronously provided by the app.
