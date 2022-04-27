@@ -6,6 +6,7 @@ import { BreakpointsProvider } from '../hooks/useBreakpoints'
 import DemoProvider from './docs/DemoProvider'
 import { checkImageSource } from '../FileImageLoader/checkImageSource'
 import ImageViewer from './ImageViewer'
+import EncryptedProvider from './EncryptedProvider'
 
 jest.mock('../FileImageLoader/checkImageSource', () => ({
   ...jest.requireActual('../FileImageLoader/checkImageSource'),
@@ -32,12 +33,14 @@ const setup = () => {
   const root = render(
     <DemoProvider>
       <BreakpointsProvider>
-        <ImageViewer
-          file={file}
-          gestures={gestures}
-          gesturesRef={{}}
-          onSwipe={jest.fn()}
-        />
+        <EncryptedProvider url={''}>
+          <ImageViewer
+            file={file}
+            gestures={gestures}
+            gesturesRef={{}}
+            onSwipe={jest.fn()}
+          />
+        </EncryptedProvider>
       </BreakpointsProvider>
     </DemoProvider>
   )

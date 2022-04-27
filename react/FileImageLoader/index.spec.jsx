@@ -6,6 +6,7 @@ import logger from 'cozy-logger'
 
 import { FileImageLoader } from '.'
 import { checkImageSource } from './checkImageSource'
+import EncryptedProvider from '../Viewer/EncryptedProvider'
 
 jest.mock('./checkImageSource', () => ({
   ...jest.requireActual('./checkImageSource'),
@@ -39,21 +40,24 @@ const file = {
 
 const setup = ({ file, url }) => {
   const root = render(
-    <FileImageLoader
-      file={file}
-      url={url}
-      linkType="large"
-      key={file.id}
-      render={src => <img alt={file.name} src={src} data-testid="img_image" />}
-      renderFallback={() => (
-        <img
-          alt="render fallback"
-          src="http://url.img_image_render_fallback/"
-          data-testid="img_image_renderFallback"
-        />
-      )}
-      client={client}
-    />
+    <EncryptedProvider url={url}>
+      <FileImageLoader
+        file={file}
+        linkType="large"
+        key={file.id}
+        render={src => (
+          <img alt={file.name} src={src} data-testid="img_image" />
+        )}
+        renderFallback={() => (
+          <img
+            alt="render fallback"
+            src="http://url.img_image_render_fallback/"
+            data-testid="img_image_renderFallback"
+          />
+        )}
+        client={client}
+      />
+    </EncryptedProvider>
   )
 
   return { root }

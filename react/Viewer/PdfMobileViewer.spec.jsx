@@ -8,6 +8,7 @@ import logger from 'cozy-logger'
 import { I18n } from '../I18n'
 
 import { PdfMobileViewer } from './PdfMobileViewer'
+import EncryptedProvider from './EncryptedProvider'
 
 logger.error = logger.warn = jest.fn()
 
@@ -40,7 +41,9 @@ const setup = ({ file }) => {
   const root = render(
     <CozyProvider client={client}>
       <I18n lang="en" dictRequire={() => ''}>
-        <PdfMobileViewer file={file} t={x => x} />
+        <EncryptedProvider url={''}>
+          <PdfMobileViewer file={file} t={x => x} />
+        </EncryptedProvider>
       </I18n>
     </CozyProvider>
   )

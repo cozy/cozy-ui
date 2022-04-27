@@ -17,6 +17,7 @@ import DownloadIcon from '../Icons/Download'
 import { withViewerLocales } from './withViewerLocales'
 import { downloadFile } from './helpers'
 import styles from './styles.styl'
+import { useEncrypted } from './EncryptedProvider'
 
 const useClasses = makeStyles(theme => ({
   iconButton: {
@@ -34,11 +35,12 @@ const Toolbar = ({
   onClose,
   t,
   toolbarRef,
-  breakpoints: { isDesktop },
-  url
+  breakpoints: { isDesktop }
 }) => {
   const client = useClient()
   const classes = useClasses()
+
+  const { url } = useEncrypted()
 
   return (
     <div
