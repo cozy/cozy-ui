@@ -1,30 +1,58 @@
 A component suitable to be used when an Icon should be used as a button.
-Provides hover, active styles + accessible size (48px).
+Provides hover, active styles + accessible size.
 
 ```jsx
 import IconButton from 'cozy-ui/transpiled/react/IconButton'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 
+// <-- only useful for the documentation
 import TrashIcon from 'cozy-ui/transpiled/react/Icons/Trash'
-import LeftIcon from 'cozy-ui/transpiled/react/Icons/Left'
 import RestoreIcon from 'cozy-ui/transpiled/react/Icons/Restore'
-import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
 import CrossIcon from 'cozy-ui/transpiled/react/Icons/Cross'
+import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Stack from 'cozy-ui/transpiled/react/Stack'
+import Typography from 'cozy-ui/transpiled/react/Typography'
+import Variants from 'cozy-ui/docs/components/Variants'
+
+const columns = [{ title: 'default', disabled: false }, { title: 'disabled', disabled: true }]
+const initialVariants = [{ small: false, medium: true, large: false }]
+// -->
 
 ;
 
-<>
-  <IconButton>
-    <Icon icon={TrashIcon} />
-  </IconButton>
-  <IconButton disabled>
-    <Icon icon={TrashIcon} />
-  </IconButton>
-  <IconButton color="primary">
-    <Icon icon={RestoreIcon} />
-  </IconButton>
-  <IconButton color="secondary">
-    <Icon icon={CrossIcon} />
-  </IconButton>
-</>
+<Variants initialVariants={initialVariants} radio screenshotAllVariants>
+  {variant => (
+    <Grid container>
+      {columns.map(column =>
+        <Grid item xs={12} sm={6} className="u-mb-1" key={JSON.stringify(column)}>
+          <Stack spacing="s">
+            <Typography>{Object.values(column)[0]}</Typography>
+            <p>
+              <IconButton
+                disabled={Object.values(column)[1]}
+                size={Object.keys(variant).find(key => variant[key])}
+              >
+                <Icon icon={TrashIcon}/>
+              </IconButton>
+              <IconButton
+                color="primary"
+                disabled={Object.values(column)[1]}
+                size={Object.keys(variant).find(key => variant[key])}
+              >
+                <Icon icon={RestoreIcon} />
+              </IconButton>
+              <IconButton
+                color="secondary"
+                disabled={Object.values(column)[1]}
+                size={Object.keys(variant).find(key => variant[key])}
+              >
+                <Icon icon={CrossIcon}/>
+              </IconButton>
+            </p>
+          </Stack>
+        </Grid>
+      )}
+    </Grid>
+  )}
+</Variants>
 ```
