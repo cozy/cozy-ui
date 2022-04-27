@@ -12,16 +12,18 @@ const GET_LINK = 'GET_LINK'
 
 import { checkImageSource } from './checkImageSource'
 import { isFileEncrypted } from '../Viewer/helpers'
+import { EncryptedContext } from '../Viewer/EncryptedProvider'
 
 export class FileImageLoader extends Component {
   state = {
     src: null
   }
-
+  static contextType = EncryptedContext
   _mounted = false
 
   componentDidMount() {
     const { client } = this.props
+
     this._mounted = true
     this.status = PENDING
     this.loadNextSrc()
@@ -155,10 +157,10 @@ export class FileImageLoader extends Component {
 
   render() {
     const { src } = this.state
-    const { url } = this.props
+
     const { render, renderFallback } = this.props
-    if (url) {
-      return render(url)
+    if (this.context && this.context.url) {
+      return render(this.context.url)
     }
     if (src) return render(src)
     else if (renderFallback) return renderFallback()
@@ -168,7 +170,6 @@ export class FileImageLoader extends Component {
 
 FileImageLoader.propTypes = {
   file: PropTypes.object.isRequired,
-  url: PropTypes.url,
   render: PropTypes.func.isRequired,
   linkType: PropTypes.oneOf([
     'tiny',

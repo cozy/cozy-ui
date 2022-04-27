@@ -9,6 +9,7 @@ import { isValidForPanel } from './helpers'
 import ViewerWrapper from './ViewerWrapper'
 import Viewer from './Viewer'
 import ViewerInformationsWrapper from './ViewerInformationsWrapper'
+import EncryptedProvider from './EncryptedProvider'
 
 const ViewerContainer = props => {
   const {
@@ -30,15 +31,16 @@ const ViewerContainer = props => {
 
   return (
     <ViewerWrapper className={className}>
-      <Viewer
-        {...rest}
-        currentFile={currentFile}
-        hasPrevious={hasPrevious}
-        hasNext={hasNext}
-        validForPanel={validForPanel}
-        toolbarRef={toolbarRef}
-        currentURL={currentURL}
-      />
+      <EncryptedProvider url={currentURL}>
+        <Viewer
+          {...rest}
+          currentFile={currentFile}
+          hasPrevious={hasPrevious}
+          hasNext={hasNext}
+          validForPanel={validForPanel}
+          toolbarRef={toolbarRef}
+        />
+      </EncryptedProvider>
       <ViewerInformationsWrapper
         disableFooter={disableFooter}
         disableSharing={disableSharing}

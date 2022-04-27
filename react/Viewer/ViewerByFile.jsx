@@ -16,6 +16,8 @@ import NoViewer from './NoViewer'
 import ShortcutViewer from './ShortcutViewer'
 import OnlyOfficeViewer from './OnlyOfficeViewer'
 
+import { useEncrypted } from './EncryptedProvider'
+
 export const getViewerComponentName = ({
   file,
   isDesktop,
@@ -49,7 +51,6 @@ export const getViewerComponentName = ({
 
 const ViewerByFile = ({
   file,
-  url,
   onClose,
   renderFallbackExtraContent,
   gestures,
@@ -60,6 +61,8 @@ const ViewerByFile = ({
 }) => {
   const isOnlyOfficeEnabled = onlyOfficeProps && onlyOfficeProps.isEnabled
   const onlyOfficeOpener = onlyOfficeProps && onlyOfficeProps.opener
+
+  const { url } = useEncrypted()
 
   const ComponentName = useMemo(
     () =>
