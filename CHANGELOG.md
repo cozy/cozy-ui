@@ -1,3 +1,20 @@
+# [65.0.0](https://github.com/cozy/cozy-ui/compare/v64.0.0...v65.0.0) (2022-04-27)
+
+
+### Bug Fixes
+
+* Upgrade cozy-device-helper in peerDeps ([9d926bb](https://github.com/cozy/cozy-ui/commit/9d926bb))
+
+
+### BREAKING CHANGES
+
+* cozy-ui needs this updated version
+The Flagship App API changed in cozy-device-helper.
+Some components will break if the parent app does not have
+cozy-device-helper at ^1.18.0
+All components importing flagshipMetadata are impacted
+Resolve with yarn upgrade cozy-device-helper@^1.8.0
+
 # [64.0.0](https://github.com/cozy/cozy-ui/compare/v63.0.0...v64.0.0) (2022-04-26)
 
 
