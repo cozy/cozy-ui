@@ -1,3 +1,10 @@
+## [65.0.1](https://github.com/cozy/cozy-ui/compare/v65.0.0...v65.0.1) (2022-04-27)
+
+
+### Bug Fixes
+
+* **Viewer:** Forward button on web mobile ([eb1c65a](https://github.com/cozy/cozy-ui/commit/eb1c65a))
+
 # [65.0.0](https://github.com/cozy/cozy-ui/compare/v64.0.0...v65.0.0) (2022-04-27)
 
 
