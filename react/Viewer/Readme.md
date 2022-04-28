@@ -73,6 +73,14 @@ const files = [
     name: 'Demo.txt',
     mime: 'text/plain'
   },
+    {
+    _id: 'text',
+    class: 'text',
+    name: 'encrypted-example.txt',
+    mime: 'text/plain',
+    encrypted: true
+  },
+  
   {
     _id: 'image',
     class: 'image',
@@ -98,9 +106,20 @@ const initialVariants = [
   { navigation: true, toolbar: true, onlyOfficeEnabled: true }
 ];
 
+const getURL = (file) => {
+  if (file.encrypted && file.class === 'text') {
+    const text = 'Well, hello there. This file is served through an URL'
+    const textBlob = new Blob([text], {
+      type: 'text/plain'
+    })
+    return URL.createObjectURL(textBlob)
+  }
+  return null
+}
+
 const toggleViewer = () => setState({ viewerOpened: !state.viewerOpened });
 const handleToggleToolbarClose = () => setState({ showToolbarCloseButton: !state.showToolbarCloseButton });
-const onFileChange = (file, nextIndex) => setState({ currentIndex: nextIndex });
+const onFileChange = (file, nextIndex) => setState({ currentIndex: nextIndex, currentURL: getURL(file) });
 
 <DemoProvider>
   <Variants initialVariants={initialVariants}>{
@@ -123,6 +142,7 @@ const onFileChange = (file, nextIndex) => setState({ currentIndex: nextIndex });
               <Viewer
                 files={files}
                 currentIndex={state.currentIndex}
+                currentURL={state.currentURL}
                 onCloseRequest={toggleViewer}
                 onChangeRequest={onFileChange}
                 showNavigation={variant.navigation}
