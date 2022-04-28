@@ -1,3 +1,12 @@
+# [65.1.0](https://github.com/cozy/cozy-ui/compare/v65.0.1...v65.1.0) (2022-04-28)
+
+
+### Features
+
+* Display client-side encrypted files ([06425c3](https://github.com/cozy/cozy-ui/commit/06425c3))
+* Download file through URL ([923eb49](https://github.com/cozy/cozy-ui/commit/923eb49))
+* Upgrade cozy-client ([618bed1](https://github.com/cozy/cozy-ui/commit/618bed1))
+
 ## [65.0.1](https://github.com/cozy/cozy-ui/compare/v65.0.0...v65.0.1) (2022-04-27)
 
 
