@@ -41,7 +41,7 @@ const setup = ({ file }) => {
   const root = render(
     <CozyProvider client={client}>
       <I18n lang="en" dictRequire={() => ''}>
-        <EncryptedProvider url={''}>
+        <EncryptedProvider>
           <PdfMobileViewer file={file} t={x => x} />
         </EncryptedProvider>
       </I18n>

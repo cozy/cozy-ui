@@ -33,7 +33,7 @@ const setup = () => {
   const root = render(
     <DemoProvider>
       <BreakpointsProvider>
-        <EncryptedProvider url={''}>
+        <EncryptedProvider>
           <ImageViewer
             file={file}
             gestures={gestures}
