@@ -4,7 +4,7 @@ Once rendered, the `Viewer` will take up all the available space in it's contain
 
 The `Viewer` can display an **information panel** to show additional information about the current file (e.g. whether a file is certified).
 
-:warning: Important :
+⚠️ Important :
 
 * To have the panels, the app need to have [cozy-harvest-lib](https://github.com/cozy/cozy-libs/tree/master/packages/cozy-harvest-lib) installed
 
@@ -80,7 +80,7 @@ const files = [
     mime: 'text/plain',
     encrypted: true
   },
-  
+
   {
     _id: 'image',
     class: 'image',
@@ -208,6 +208,6 @@ The `Viewer` can be used only in a `React` Application. You can't use it with `P
 
 ### Special case: client-side encrypted files
 
-When a file is client-side encrypted, it is not possible to get the download link from the server anymore. 
+When a file is client-side encrypted, it is not possible to get the download link from the server anymore.
 Hence, an additional `currentURL` prop must be eventually given to the `<Viewer>`. This URL is the decrypted
 file, asynchronously provided by the app.

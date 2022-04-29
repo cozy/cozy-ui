@@ -137,7 +137,7 @@ yarn build:doc
 yarn deploy:doc --repo git@github.com:USERNAME/cozy-ui.git
 ```
 
-:warning: If the `deploy:doc` failed, you need to checkout your dev branch by doing `git checkout -`
+⚠️ If the `deploy:doc` failed, you need to checkout your dev branch by doing `git checkout -`
 
 ## Guidelines for component development
 
