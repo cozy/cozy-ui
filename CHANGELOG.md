@@ -1,3 +1,10 @@
+## [65.1.2](https://github.com/cozy/cozy-ui/compare/v65.1.1...v65.1.2) (2022-04-29)
+
+
+### Bug Fixes
+
+* Use `circular | rectangular` on Badge overlap ([ae374ff](https://github.com/cozy/cozy-ui/commit/ae374ff))
+
 ## [65.1.1](https://github.com/cozy/cozy-ui/compare/v65.1.0...v65.1.1) (2022-04-29)
 
 
