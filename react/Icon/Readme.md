@@ -450,8 +450,7 @@ const icons = [
 const wrapperStyle = {
   fontSize: '2rem',
   display: 'grid',
-  gridTemplateColumns: 'repeat(6, 1fr)',
-  color: '#444'
+  gridTemplateColumns: 'repeat(6, 1fr)'
 }
 
 initialState = { size: 16 };
