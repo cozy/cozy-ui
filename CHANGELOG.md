@@ -1,3 +1,10 @@
+## [65.1.3](https://github.com/cozy/cozy-ui/compare/v65.1.2...v65.1.3) (2022-04-29)
+
+
+### Bug Fixes
+
+* Export toolbarPropsPropType correctly ([ccf994f](https://github.com/cozy/cozy-ui/commit/ccf994f))
+
 ## [65.1.2](https://github.com/cozy/cozy-ui/compare/v65.1.1...v65.1.2) (2022-04-29)
 
 
