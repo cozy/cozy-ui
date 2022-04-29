@@ -32,7 +32,7 @@ export const Infos = ({
       {dismissAction && (
         <div className={styles['Info-close']}>
           <IconButton onClick={dismissAction} {...dismissButtonProps}>
-            <Icon icon={CrossIcon} size="12" className="u-coolGrey" />
+            <Icon icon={CrossIcon} size="12" />
           </IconButton>
         </div>
       )}
