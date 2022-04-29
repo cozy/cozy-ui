@@ -1,3 +1,15 @@
+## [65.1.1](https://github.com/cozy/cozy-ui/compare/v65.1.0...v65.1.1) (2022-04-29)
+
+
+### Bug Fixes
+
+* `--iconColor` value for inverted theme ([4263ff7](https://github.com/cozy/cozy-ui/commit/4263ff7))
+* ActionMenu colors ([39dd4b7](https://github.com/cozy/cozy-ui/commit/39dd4b7))
+* Colors on Infos and InfosCarrousel ([3feaf2d](https://github.com/cozy/cozy-ui/commit/3feaf2d))
+* DateMonthPicker colors ([c37d1e7](https://github.com/cozy/cozy-ui/commit/c37d1e7))
+* DropdownButton colors ([d6d0a25](https://github.com/cozy/cozy-ui/commit/d6d0a25))
+* Menu colors ([13bc805](https://github.com/cozy/cozy-ui/commit/13bc805))
+
 # [65.1.0](https://github.com/cozy/cozy-ui/compare/v65.0.1...v65.1.0) (2022-04-28)
 
 
