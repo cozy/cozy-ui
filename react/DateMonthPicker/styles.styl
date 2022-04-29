@@ -4,12 +4,11 @@
 buttonHeight=3rem
 
 $buttonHover
-  background var(--paleGrey)
-  color var(--charcoalGrey)
+  background var(--defaultBackgroundColor)
+  color var(--primaryTextColor)
 
 $buttonActive
-  background-color var(--silver)
-  color var(--charcoalGrey)
+  background-color var(--actionColorFocus)
   font-weight bold
   outline 0
 
@@ -19,7 +18,7 @@ $button
   min-width 3rem
   display inline-block
   border-width 0
-  color var(--coolGrey)
+  color var(--secondaryTextColor)
   cursor pointer
 
   &:hover
@@ -36,7 +35,7 @@ $select
   display flex
   align-items center
   border-radius radius-8
-  border 1px solid var(--silver)
+  border 1px solid var(--borderMainColor)
   overflow hidden
 
 .DateMonthPicker__YearControls
