@@ -697,16 +697,16 @@ const makeOverrides = theme => ({
         fontSize: '.5rem'
       }
     },
-    anchorOriginTopRightRectangle: {
+    anchorOriginTopRightRectangular: {
       transform: 'scale(1) translate(37%, -37%)'
     },
-    anchorOriginBottomRightRectangle: {
+    anchorOriginBottomRightRectangular: {
       transform: 'scale(1) translate(37%, 37%)'
     },
-    anchorOriginBottomLeftRectangle: {
+    anchorOriginBottomLeftRectangular: {
       transform: 'scale(1) translate(-37%, 37%)'
     },
-    anchorOriginTopLeftRectangle: {
+    anchorOriginTopLeftRectangular: {
       transform: 'scale(1) translate(-37%, -37%)'
     },
     dot: {

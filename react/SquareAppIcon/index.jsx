@@ -78,7 +78,7 @@ export const SquareAppIcon = ({
         badgeContent={
           variant === 'shortcut' ? <Icon size="10" icon={iconOut} /> : null
         }
-        overlap="rectangle"
+        overlap="rectangular"
         invisible={variant !== 'shortcut'}
       >
         <Badge
@@ -107,7 +107,7 @@ export const SquareAppIcon = ({
           color={variant === 'error' ? 'error' : undefined}
           withBorder={false}
           size="large"
-          overlap="rectangle"
+          overlap="rectangular"
           style={
             variant === 'shortcut'
               ? { backgroundColor: nameToColor(name) }

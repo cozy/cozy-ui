@@ -3,12 +3,27 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import MuiBadge from '@material-ui/core/Badge'
 
-const Badge = ({ classes = {}, size, withBorder, ...props }) => {
+const Badge = ({
+  classes = {},
+  size,
+  withBorder,
+  overlap: overlapProp,
+  ...props
+}) => {
   const sizeClasses = {
     small: 'badgeSizeSmall',
     medium: 'badgeSizeMedium',
     large: 'badgeSizeLarge'
   }
+
+  // due to deprecated prop circle and rectangle
+  // https://github.com/mui/material-ui/releases/tag/v4.12.4
+  const overlap =
+    overlapProp === 'circle'
+      ? 'circular'
+      : overlapProp === 'rectangle'
+      ? 'rectangular'
+      : overlapProp
 
   return (
     <MuiBadge
@@ -16,6 +31,7 @@ const Badge = ({ classes = {}, size, withBorder, ...props }) => {
         badge: cx(sizeClasses[size], withBorder ? 'badgeBorder' : null),
         ...classes
       }}
+      overlap={overlap}
       {...props}
     />
   )
@@ -37,7 +53,7 @@ Badge.defaultProps = {
   size: 'medium',
   showZero: true,
   withBorder: true,
-  overlap: 'circle'
+  overlap: 'circular'
 }
 
 export default Badge

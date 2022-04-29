@@ -33,7 +33,7 @@ const initialVariants = [
         horizontal: variant.left ? "left" : "right",
       }}
       withBorder={variant.withBorder}
-      overlap={variant.overlap ? "circle" : "rectangle"}
+      overlap={variant.overlap ? "circular" : "rectangular"}
     >
       <Icon
         icon={CircleFilledIcon}
