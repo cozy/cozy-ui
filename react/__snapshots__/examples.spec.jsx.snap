@@ -2855,7 +2855,7 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
 exports[`Icon should render examples: Icon 1`] = `
 "<div>
   <p class=\\"MuiTypography-root u-mb-1 MuiTypography-body1\\">Font size: <input type=\\"range\\" min=\\"8\\" max=\\"48\\" value=\\"16\\"> 16px</p>
-  <div style=\\"font-size: 2rem; display: grid; grid-template-columns: repeat(6, 1fr); color: rgb(68, 68, 68);\\">
+  <div style=\\"font-size: 2rem; display: grid; grid-template-columns: repeat(6, 1fr);\\">
     <div class=\\"makeStyles-iconTile-36 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
         <path fill-rule=\\"evenodd\\" d=\\"M1 3.01A3.005 3.005 0 014.003 0h9.99C14.55 0 15 .444 15 1c0 .552-.456 1-1.002 1H4.002a1 1 0 00-.012 2H8.51C8.78 4 9 4.228 9 4.491V10l1.5-1 1.5 1V4.491A.49.49 0 0112.495 4h1.506c.552 0 .999.456.999 1.002v9.996C15 15.55 14.55 16 13.993 16h-9.99A3 3 0 011 12.99V3.01z\\"></path>
       </svg>
@@ -7391,7 +7391,7 @@ exports[`Infos should render examples: Infos 1`] = `
         </div>
         <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>one</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>two</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>three</span></span></button></div>
       </div>
-      <div class=\\"styles__Info-close___1RVQP\\"><button class=\\"MuiButtonBase-root MuiIconButton-root\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 24 24\\" class=\\"u-coolGrey styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\"><path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path></svg></span></button></div>
+      <div class=\\"styles__Info-close___1RVQP\\"><button class=\\"MuiButtonBase-root MuiIconButton-root\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\"><path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path></svg></span></button></div>
     </div>
   </div>
 </div>"
@@ -7414,7 +7414,7 @@ exports[`InfosCarrousel should render examples: InfosCarrousel 1`] = `
                 </div>
                 <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>A CTA button</span></span></button></div>
               </div>
-              <div class=\\"styles__Info-close___1RVQP\\"><button class=\\"MuiButtonBase-root MuiIconButton-root\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 24 24\\" class=\\"u-coolGrey styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\"><path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path></svg></span></button></div>
+              <div class=\\"styles__Info-close___1RVQP\\"><button class=\\"MuiButtonBase-root MuiIconButton-root\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\"><path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path></svg></span></button></div>
             </div>
           </div>
           <div style=\\"width: 100%; flex-shrink: 0; overflow: auto; overflow-y: hidden;\\" aria-hidden=\\"true\\" data-swipeable=\\"true\\">
@@ -7428,7 +7428,7 @@ exports[`InfosCarrousel should render examples: InfosCarrousel 1`] = `
                 </div>
                 <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>A CTA button</span></span></button></div>
               </div>
-              <div class=\\"styles__Info-close___1RVQP\\"><button class=\\"MuiButtonBase-root MuiIconButton-root\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 24 24\\" class=\\"u-coolGrey styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\"><path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path></svg></span></button></div>
+              <div class=\\"styles__Info-close___1RVQP\\"><button class=\\"MuiButtonBase-root MuiIconButton-root\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\"><path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path></svg></span></button></div>
             </div>
           </div>
         </div>
