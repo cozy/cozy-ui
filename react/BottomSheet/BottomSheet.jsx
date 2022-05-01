@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { BottomSheet as MuiBottomSheet } from 'mui-bottom-sheet'
 
-import { flagshipMetadata } from 'cozy-device-helper'
+import { getFlagshipMetadata } from 'cozy-device-helper'
 
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Paper from 'cozy-ui/transpiled/react/Paper'
@@ -112,7 +112,7 @@ const BottomSheet = ({ toolbarProps, settings, children }) => {
       headerRef.current.offsetHeight +
       actionButtonsHeight +
       actionButtonsBottomMargin +
-      (flagshipMetadata.navbarHeight || 0)
+      (getFlagshipMetadata().navbarHeight || 0)
 
     // Used so that the bottomSheet can be opened to the top,
     // without stopping at the content height
@@ -154,7 +154,9 @@ const BottomSheet = ({ toolbarProps, settings, children }) => {
 
   return (
     <>
-      {flagshipMetadata.immersive && <span style={styles.flagshipImmersive} />}
+      {getFlagshipMetadata().immersive && (
+        <span style={styles.flagshipImmersive} />
+      )}
 
       <MuiBottomSheet
         peekHeights={peekHeights}
