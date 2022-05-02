@@ -1,3 +1,16 @@
+# [66.0.0](https://github.com/cozy/cozy-ui/compare/v65.1.3...v66.0.0) (2022-05-02)
+
+
+### Bug Fixes
+
+* Upgrade cozy-device-helper API ([45b22fa](https://github.com/cozy/cozy-ui/commit/45b22fa))
+
+
+### BREAKING CHANGES
+
+* This will use a more robust CDH API.
+In order to support the update, it is need to upgrade CDH to >=2.0.0
+
 ## [65.1.3](https://github.com/cozy/cozy-ui/compare/v65.1.2...v65.1.3) (2022-04-29)
 
 
