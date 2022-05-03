@@ -1,3 +1,10 @@
+# [66.1.0](https://github.com/cozy/cozy-ui/compare/v66.0.0...v66.1.0) (2022-05-03)
+
+
+### Features
+
+* Add large size on IconButton ([2a58a7a](https://github.com/cozy/cozy-ui/commit/2a58a7a))
+
 # [66.0.0](https://github.com/cozy/cozy-ui/compare/v65.1.3...v66.0.0) (2022-05-02)
 
 
