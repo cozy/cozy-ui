@@ -1,3 +1,15 @@
+# [66.2.0](https://github.com/cozy/cozy-ui/compare/v66.1.0...v66.2.0) (2022-05-03)
+
+
+### Bug Fixes
+
+* Small size for IconButton ([63b6f70](https://github.com/cozy/cozy-ui/commit/63b6f70))
+
+
+### Features
+
+* Add CircleButton ([bd2692a](https://github.com/cozy/cozy-ui/commit/bd2692a))
+
 # [66.1.0](https://github.com/cozy/cozy-ui/compare/v66.0.0...v66.1.0) (2022-05-03)
 
 
