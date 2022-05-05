@@ -1,3 +1,10 @@
+## [66.2.1](https://github.com/cozy/cozy-ui/compare/v66.2.0...v66.2.1) (2022-05-05)
+
+
+### Bug Fixes
+
+* IconButton propagates ref ([0aba625](https://github.com/cozy/cozy-ui/commit/0aba625))
+
 # [66.2.0](https://github.com/cozy/cozy-ui/compare/v66.1.0...v66.2.0) (2022-05-03)
 
 
