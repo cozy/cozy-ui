@@ -18,7 +18,11 @@ const useStyles = makeStyles(theme => ({
       active ? theme.palette.primary.contrastText : theme.palette.text.icon,
     '&:hover': {
       backgroundColor: ({ active }) =>
-        active ? theme.palette.primary.dark : theme.palette.action.hover
+        active ? theme.palette.primary.dark : theme.palette.action.hover,
+      '@media (hover: none)': {
+        backgroundColor: ({ active }) =>
+          active ? theme.palette.primary.main : 'transparent'
+      }
     }
   },
   typography: {
