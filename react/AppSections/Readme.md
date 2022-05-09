@@ -5,9 +5,10 @@ import { I18n } from 'cozy-ui/transpiled/react/I18n'
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 import Sections from 'cozy-ui/transpiled/react/AppSections'
 import Variants from 'cozy-ui/docs/components/Variants'
+import CozyClient, { CozyProvider } from "cozy-client";
 
 const locale = {}
-
+const client = new CozyClient()
 const WrapperSections = () => {
   const handleAppClick = app => {
     alert(JSON.stringify(app, null, 2))
@@ -31,8 +32,10 @@ const WrapperSections = () => {
 ;
 
 <BreakpointsProvider>
-  <I18n dictRequire={lang => locale} lang="en">
-     <WrapperSections />
-  </I18n>
+  <CozyProvider client={client}>
+    <I18n dictRequire={lang => locale} lang="en">
+      <WrapperSections />
+    </I18n>
+  </CozyProvider>
 </BreakpointsProvider>
 ```
