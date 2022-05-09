@@ -129,6 +129,29 @@ export const apps = [
     uninstallable: true,
     isInRegistry: true
   },
+  {
+    slug: 'konnector-withlowername',
+    name: 'easyflight',
+    icon: '<svg></svg>',
+    developer: { name: 'Author with long name' },
+    type: 'konnector',
+    categories: ['transport'],
+    tags: ['transport', 'files', 'bills'],
+    permissions: {
+      mock: {
+        type: 'io.mock.doctype'
+      }
+    },
+    version: '0.1.0',
+    versions: {
+      stable: ['0.1.0'],
+      beta: ['0.1.0'],
+      dev: ['0.1.0']
+    },
+    installed: true,
+    uninstallable: true,
+    isInRegistry: true
+  },
   // don't add permissions to Photos for testing
   {
     slug: 'photos',
