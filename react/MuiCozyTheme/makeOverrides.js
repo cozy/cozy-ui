@@ -106,7 +106,10 @@ const makeSecondaryButtonStyle = (theme, color) => ({
     backgroundColor: alpha(
       theme.palette[color].main,
       theme.palette.action.hoverOpacity
-    )
+    ),
+    '@media (hover: none)': {
+      backgroundColor: 'transparent'
+    }
   },
   '&.ghost': {
     backgroundColor: alpha(
@@ -117,7 +120,13 @@ const makeSecondaryButtonStyle = (theme, color) => ({
       backgroundColor: alpha(
         theme.palette[color].main,
         theme.palette.action.hoverGhostOpacity
-      )
+      ),
+      '@media (hover: none)': {
+        backgroundColor: alpha(
+          theme.palette[color].main,
+          theme.palette.action.ghostOpacity
+        )
+      }
     }
   }
 })
@@ -128,7 +137,10 @@ const makeTextButtonStyle = (theme, color) => ({
     backgroundColor: alpha(
       theme.palette[color].main,
       theme.palette.action.hoverOpacity
-    )
+    ),
+    '@media (hover: none)': {
+      backgroundColor: 'transparent'
+    }
   }
 })
 
@@ -136,7 +148,10 @@ const makeContainedButtonStyle = (theme, color) => ({
   color: theme.palette[color].contrastText,
   backgroundColor: theme.palette[color].main,
   '&:hover': {
-    backgroundColor: theme.palette[color].dark
+    backgroundColor: theme.palette[color].dark,
+    '@media (hover: none)': {
+      backgroundColor: theme.palette[color].main
+    }
   }
 })
 
@@ -207,7 +222,13 @@ const makeOverrides = theme => ({
             backgroundColor: alpha(
               theme.palette.primary.main,
               theme.palette.action.hoverGhostOpacity
-            )
+            ),
+            '@media (hover: none)': {
+              backgroundColor: alpha(
+                theme.palette.primary.main,
+                theme.palette.action.ghostOpacity
+              )
+            }
           }
         },
         '&.customColor': {
@@ -215,7 +236,10 @@ const makeOverrides = theme => ({
             color: theme.palette.text.primary,
             borderColor: theme.palette.border.main,
             '&:hover': {
-              backgroundColor: theme.palette.action.hover
+              backgroundColor: theme.palette.action.hover,
+              '@media (hover: none)': {
+                backgroundColor: 'transparent'
+              }
             },
             '&.ghost': {
               color: theme.palette.primary.main,
