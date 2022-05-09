@@ -1,3 +1,10 @@
+## [66.2.3](https://github.com/cozy/cozy-ui/compare/v66.2.2...v66.2.3) (2022-05-09)
+
+
+### Bug Fixes
+
+* LowerCase the app name ([558da08](https://github.com/cozy/cozy-ui/commit/558da08))
+
 ## [66.2.2](https://github.com/cozy/cozy-ui/compare/v66.2.1...v66.2.2) (2022-05-09)
 
 
