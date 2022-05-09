@@ -1,3 +1,10 @@
+## [66.2.2](https://github.com/cozy/cozy-ui/compare/v66.2.1...v66.2.2) (2022-05-09)
+
+
+### Bug Fixes
+
+* **IconButton:** Implementation of forwardRef ([a6405ba](https://github.com/cozy/cozy-ui/commit/a6405ba))
+
 ## [66.2.1](https://github.com/cozy/cozy-ui/compare/v66.2.0...v66.2.1) (2022-05-05)
 
 
