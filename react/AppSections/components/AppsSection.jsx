@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { useI18n } from '../../I18n'
 import useBreakpoints from '../../hooks/useBreakpoints'
@@ -9,6 +9,13 @@ import styles from './AppsSection.styl'
 
 const makeNameGetter = t => app => getTranslatedManifestProperty(app, 'name', t)
 
+const makeAppsListNameLowerCased = appsList => {
+  return appsList.map(app => ({
+    ...app,
+    name: app.name.toLowerCase()
+  }))
+}
+
 export const AppsSection = ({
   appsList,
   subtitle,
@@ -18,23 +25,41 @@ export const AppsSection = ({
 }) => {
   const { isMobile } = useBreakpoints()
   const { t } = useI18n()
+  const apps = useMemo(() => makeAppsListNameLowerCased(appsList), [appsList])
+  const sortedApps = useMemo(() => {
+    return sortBy(apps, makeNameGetter(t))
+  }, [apps, t])
+  const getAppBySlug = useMemo(
+    () => slug => appsList.find(app => app.slug === slug),
+    [appsList]
+  )
+
   return (
     <div className={styles.AppsSection}>
       {subtitle}
-      {appsList && !!appsList.length && (
+      {apps && !!apps.length && (
         <div className={styles.AppsSection__list}>
-          {sortBy(appsList, makeNameGetter(t)).map(app => (
-            <AppTile
-              app={app}
-              namePrefix={getTranslatedManifestProperty(app, 'name_prefix', t)}
-              name={getTranslatedManifestProperty(app, 'name', t)}
-              onClick={() => onAppClick(app.slug)}
-              key={app.slug}
-              showDeveloper={!isMobile}
-              displaySpecificMaintenanceStyle={displaySpecificMaintenanceStyle}
-              IconComponent={IconComponent}
-            />
-          ))}
+          {sortedApps.map(app => {
+            const realApp = getAppBySlug(app.slug)
+            return (
+              <AppTile
+                app={realApp}
+                namePrefix={getTranslatedManifestProperty(
+                  realApp,
+                  'name_prefix',
+                  t
+                )}
+                name={getTranslatedManifestProperty(realApp, 'name', t)}
+                onClick={() => onAppClick(realApp.slug)}
+                key={realApp.slug}
+                showDeveloper={!isMobile}
+                displaySpecificMaintenanceStyle={
+                  displaySpecificMaintenanceStyle
+                }
+                IconComponent={IconComponent}
+              />
+            )
+          })}
         </div>
       )}
     </div>
