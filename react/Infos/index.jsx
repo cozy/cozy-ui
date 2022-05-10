@@ -2,8 +2,7 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-import IconButton from '@material-ui/core/IconButton'
-
+import IconButton from '../IconButton'
 import Icon from '../Icon'
 import Typography from '../Typography'
 import Stack from '../Stack'
@@ -31,7 +30,11 @@ export const Infos = ({
       </Stack>
       {dismissAction && (
         <div className={styles['Info-close']}>
-          <IconButton onClick={dismissAction} {...dismissButtonProps}>
+          <IconButton
+            size="medium"
+            onClick={dismissAction}
+            {...dismissButtonProps}
+          >
             <Icon icon={CrossIcon} size="12" />
           </IconButton>
         </div>

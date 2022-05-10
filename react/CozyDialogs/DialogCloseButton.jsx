@@ -20,6 +20,7 @@ const CloseButton = ({ onClick, ...props }) => {
         {...props}
         aria-label={t('closeButton')}
         className="dialogIconButton"
+        size="medium"
       >
         <Icon icon={CrossMediumIcon} />
       </IconButton>

@@ -57,6 +57,7 @@ const Breadcrumbs = ({ items, className, style }) => {
         <IconButton
           onClick={lastPreviousItem.onClick}
           className={styles.Breadcrumb__previousButton}
+          size="medium"
         >
           <Icon icon={LeftIcon} />
         </IconButton>

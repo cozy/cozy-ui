@@ -23,7 +23,7 @@ const NestedSelectDialogHeader = ({ onClickBack, showBack, title }) => {
       <Media>
         {showBack && (
           <Img className={styles.Modal__back}>
-            <IconButton onClick={onClickBack}>
+            <IconButton size="medium" onClick={onClickBack}>
               <Icon icon={LeftIcon} />
             </IconButton>
           </Img>

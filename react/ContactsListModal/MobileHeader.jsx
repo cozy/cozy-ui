@@ -20,7 +20,7 @@ const MobileHeader = ({ filter, placeholder, onChange, onDismiss }) => {
         className="u-flex u-flex-items-center u-pr-3 u-pl-half"
         style={barStyle}
       >
-        <IconButton className="u-mr-half" onClick={onDismiss}>
+        <IconButton className="u-mr-half" onClick={onDismiss} size="medium">
           <Icon icon={PreviousIcon} />
         </IconButton>
         <Input

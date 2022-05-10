@@ -68,6 +68,7 @@ const InfosCarrousel = ({
           <IconButton
             onClick={goToPreviousInfos}
             disabled={hasPreviousInfos}
+            size="medium"
             {...previousButtonProps}
           >
             <Icon icon={LeftIcon} />
@@ -76,6 +77,7 @@ const InfosCarrousel = ({
           <IconButton
             onClick={goToNextInfos}
             disabled={hasNextInfos}
+            size="medium"
             {...nextButtonProps}
           >
             <Icon icon={RightIcon} />
