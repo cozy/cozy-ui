@@ -54,6 +54,7 @@ const Toolbar = ({
     >
       {onClose && (
         <IconButton
+          size="medium"
           onClick={onClose}
           className={cx(classes.iconButton, { 'u-white': isDesktop })}
         >

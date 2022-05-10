@@ -130,6 +130,7 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
                 ? selectedCount < 1 // to avoid breaking change
                 : actions[actionName].disabled(selected)
             }
+            size="medium"
             onClick={() => actions[actionName].action(selected)}
           >
             <Icon icon={actions[actionName].icon || actionName.toLowerCase()} />
@@ -143,6 +144,7 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
           styles['SelectionBar-action--close']
         )}
         label={t('SelectionBar.close')}
+        size="medium"
         onClick={hideSelectionBar}
       >
         <Icon icon={CrossIcon} />
