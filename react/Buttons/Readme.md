@@ -72,7 +72,6 @@ import Paper from 'cozy-ui/transpiled/react/Paper'
 import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
 import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
 import Icon from 'cozy-ui/transpiled/react/Icon'
-import IconButton from 'cozy-ui/transpiled/react/IconButton'
 
 const variants = ['primary', 'secondary', 'ghost', 'text']
 const iconPositions = ['startIcon', 'endIcon']
