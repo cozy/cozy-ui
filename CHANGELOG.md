@@ -1,3 +1,20 @@
+# [67.0.0](https://github.com/cozy/cozy-ui/compare/v66.2.4...v67.0.0) (2022-05-10)
+
+
+### Bug Fixes
+
+* Set size of IconButton to `medium` because of previous BC ([56fc346](https://github.com/cozy/cozy-ui/commit/56fc346))
+
+
+### Features
+
+* Set default size of IconButton to `large` ([c7d405a](https://github.com/cozy/cozy-ui/commit/c7d405a))
+
+
+### BREAKING CHANGES
+
+* `IconButton`'s default props has been changed from `medium` to `large`. To keep the old behavior, you can use a codemods `transform-iconButton.js` to automatically handle this breaking change by setting `IconButton` size to `medium`. [See the codemods documentation](https://github.com/cozy/cozy-libs/tree/master/packages/cozy-codemods). Using linter js auto-correction can be a good idea after that. Here a common example (don't forget to change `src` value): `jscodeshift -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/transform-iconButton.js src --parser babel --extensions js,jsx && yarn lint:js --fix`
+
 ## [66.2.4](https://github.com/cozy/cozy-ui/compare/v66.2.3...v66.2.4) (2022-05-10)
 
 
