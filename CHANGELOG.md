@@ -1,3 +1,11 @@
+## [66.2.4](https://github.com/cozy/cozy-ui/compare/v66.2.3...v66.2.4) (2022-05-10)
+
+
+### Bug Fixes
+
+* Buttons hover on mobile ([9407c76](https://github.com/cozy/cozy-ui/commit/9407c76))
+* CircleButton hover on mobile ([ab9fa0e](https://github.com/cozy/cozy-ui/commit/ab9fa0e))
+
 ## [66.2.3](https://github.com/cozy/cozy-ui/compare/v66.2.2...v66.2.3) (2022-05-09)
 
 
