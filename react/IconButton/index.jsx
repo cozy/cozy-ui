@@ -4,7 +4,7 @@ import cx from 'classnames'
 import MuiIconButton from '@material-ui/core/IconButton'
 
 const IconButton = forwardRef(
-  ({ size = 'medium', className, children, ...props }, ref) => {
+  ({ size = 'large', className, children, ...props }, ref) => {
     return (
       <MuiIconButton ref={ref} className={cx(className, size)} {...props}>
         {children}
