@@ -103,8 +103,8 @@ $viewerMarginTopMedium = $toolbarHeightMedium - $footerHeight
 
 .viewer-pdfMobile
     width 100%
-    height 'calc(100% - %s)' % $viewerHeightMedium
-    margin-top $viewerMarginTopMedium
+    height 'calc(100% - %s - var(--flagship-top-height))' % $viewerHeightMedium
+    margin-top 'calc(var(--flagship-top-height) + %s)' % $viewerMarginTopMedium
 
     &--image
         width 100%
