@@ -28580,8 +28580,8 @@ html {
 }
 .viewer-pdfMobile--2V75t {
   width: 100%;
-  height: calc(100% - 6.5rem);
-  margin-top: -0.5rem;
+  height: calc(100% - 6.5rem - var(--flagship-top-height));
+  margin-top: calc(var(--flagship-top-height) + -0.5rem);
 }
 .viewer-pdfMobile--image--2xo_a {
   width: 100%;
