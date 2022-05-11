@@ -1,3 +1,10 @@
+## [67.0.1](https://github.com/cozy/cozy-ui/compare/v67.0.0...v67.0.1) (2022-05-11)
+
+
+### Bug Fixes
+
+* **viewer:** Amiral displays PDF without enouggh margin-top ([875ebba](https://github.com/cozy/cozy-ui/commit/875ebba))
+
 # [67.0.0](https://github.com/cozy/cozy-ui/compare/v66.2.4...v67.0.0) (2022-05-10)
 
 
