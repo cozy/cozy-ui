@@ -81,40 +81,26 @@ export const configureTracker = (options = {}) => {
   }
 
   let appName
-  let cozyDomain
-  let userIdFromCozyDomain
 
   const root = document.querySelector('[role=application]')
 
   if (root && root.dataset) {
-    appName = readCozyDataFromDOM('appName')
-    cozyDomain = readCozyDataFromDOM('cozyDomain')
+    appName = readCozyDataFromDOM('appName') || readCozyDataFromDOM('app').name
   }
-
-  if (cozyDomain) {
-    userIdFromCozyDomain = cozyDomain
-    let indexOfPort = cozyDomain.indexOf(':')
-    if (indexOfPort >= 0) {
-      userIdFromCozyDomain = userIdFromCozyDomain.substring(0, indexOfPort)
-    }
-  }
-
   // merge default options with what has been provided
-  const { heartbeat, userId, app, appDimensionId } = Object.assign(
+  const { app, appDimensionId } = Object.assign(
     {
-      userId: userIdFromCozyDomain,
       appDimensionId: __PIWIK_DIMENSION_ID_APP__,
-      app: appName,
-      heartbeat: 15
+      app: appName
     },
     options
   )
 
-  // apply them
-  if (parseInt(heartbeat) > 0)
-    trackerInstance.push(['enableHeartBeatTimer', parseInt(heartbeat, 10)])
-  trackerInstance.push(['setUserId', userId])
   trackerInstance.push(['setCustomDimension', appDimensionId, app])
+  trackerInstance.push([
+    'setCustomUrl',
+    window.location.pathname.substr(1) + location.search
+  ])
 }
 
 /**
