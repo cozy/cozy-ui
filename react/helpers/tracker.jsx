@@ -87,8 +87,8 @@ export const configureTracker = (options = {}) => {
   const root = document.querySelector('[role=application]')
 
   if (root && root.dataset) {
-    appName = readCozyDataFromDOM('appName')
-    cozyDomain = readCozyDataFromDOM('cozyDomain')
+    appName = readCozyDataFromDOM('appName') || readCozyDataFromDOM('app').name
+    cozyDomain = readCozyDataFromDOM('domain')
   }
 
   if (cozyDomain) {

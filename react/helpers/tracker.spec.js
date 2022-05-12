@@ -48,10 +48,40 @@ describe('configureTracker', () => {
     trackerFile.getTracker.mockImplementation(() => ({ push: jest.fn() }))
   })
 
-  it('should read the correct values from DOM', () => {
+  it('should read the correct values from DOM (with old data-cozy-* mechanism)', () => {
     const tracker = trackerFile.getTracker()
     trackerFile.setTracker(tracker)
-    const data = { cozyDomain: 'cozy.tools:8080', appName: 'banks' }
+    document.body.innerHTML = `<div role="application" data-cozy-domain='cozy.tools:8080' data-cozy-app-name='banks' />`
+
+    trackerFile.configureTracker()
+    expect(tracker.push).toHaveBeenCalledWith(['enableHeartBeatTimer', 15])
+    expect(tracker.push).toHaveBeenCalledWith(['setUserId', 'cozy.tools'])
+    expect(tracker.push).toHaveBeenCalledWith([
+      'setCustomDimension',
+      1234,
+      'banks'
+    ])
+  })
+
+  it('should read the correct values from DOM (with old data-cozy-* mechanism) and override tracker options', () => {
+    const tracker = trackerFile.getTracker()
+    trackerFile.setTracker(tracker)
+    document.body.innerHTML = `<div role="application" data-cozy-domain='cozy.tools:8080' data-cozy-app-name='banks' />`
+
+    trackerFile.configureTracker({ app: 'banks2' })
+    expect(tracker.push).toHaveBeenCalledWith(['enableHeartBeatTimer', 15])
+    expect(tracker.push).toHaveBeenCalledWith(['setUserId', 'cozy.tools'])
+    expect(tracker.push).toHaveBeenCalledWith([
+      'setCustomDimension',
+      1234,
+      'banks2'
+    ])
+  })
+
+  it('should read the correct values from DOM (with new data-cozy mechanism)', () => {
+    const tracker = trackerFile.getTracker()
+    trackerFile.setTracker(tracker)
+    const data = { domain: 'cozy.tools:8080', app: { name: 'banks' } }
     document.body.innerHTML = `<div role="application" data-cozy='${JSON.stringify(
       data
     )}' />`

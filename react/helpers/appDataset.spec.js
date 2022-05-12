@@ -68,5 +68,11 @@ describe('appdataset', () => {
         '<div role="application" data-cozy-tracking="false"></div>'
       expect(readCozyDataFromDOM('tracking')).toBe(false)
     })
+
+    it('should work for string values', () => {
+      document.body.innerHTML =
+        '<div role="application" data-cozy-token="abcd456"></div>'
+      expect(readCozyDataFromDOM('token')).toBe('abcd456')
+    })
   })
 })
