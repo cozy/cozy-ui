@@ -57,8 +57,6 @@ describe('configureTracker', () => {
     )}' />`
 
     trackerFile.configureTracker({ app: 'banks2' })
-    expect(tracker.push).toHaveBeenCalledWith(['enableHeartBeatTimer', 15])
-    expect(tracker.push).toHaveBeenCalledWith(['setUserId', 'cozy.tools'])
     expect(tracker.push).toHaveBeenCalledWith([
       'setCustomDimension',
       1234,
