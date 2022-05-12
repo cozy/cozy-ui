@@ -1,12 +1,24 @@
 test
 build
-
+react
+scripts
+.bundlemonrc
+.nvmrc
 .editorconfig
 .eslintignore
 .eslintrc.json
+.nvmrc
 .stylintrc
 .travis.yml
+babel.config.js
+CODEOWNERS
+index.js
+preprocess.js
+release.config.js
 renovate.json
+rsgscreenshots.json
+svgo.config.js
+tsconfig.json
 yarn.lock
 
 .changelog
