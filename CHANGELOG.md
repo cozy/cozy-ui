@@ -1,3 +1,10 @@
+## [67.0.2](https://github.com/cozy/cozy-ui/compare/v67.0.1...v67.0.2) (2022-05-12)
+
+
+### Bug Fixes
+
+* Matomo tracking ([2156cde](https://github.com/cozy/cozy-ui/commit/2156cde))
+
 ## [67.0.1](https://github.com/cozy/cozy-ui/compare/v67.0.0...v67.0.1) (2022-05-11)
 
 
