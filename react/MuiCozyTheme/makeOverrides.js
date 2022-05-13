@@ -577,7 +577,19 @@ const makeOverrides = theme => ({
         marginBottom: '24px',
         '&.withFluidActions': {
           [theme.breakpoints.down('sm')]: {
-            marginBottom: '16px'
+            marginBottom: 0,
+            display: 'flex',
+            flexDirection: 'column',
+            height: '100%',
+            '& .dialogContentWrapper': {
+              flexGrow: 1,
+              '&:not(.withActions)': {
+                paddingBottom: '16px'
+              }
+            },
+            '& .cozyDialogActions': {
+              paddingBottom: '16px'
+            }
           }
         },
         '& .dialogTitleFluidContainer': {
