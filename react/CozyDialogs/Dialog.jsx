@@ -50,7 +50,13 @@ const Dialog = props => {
       )}
       <DialogContent {...dialogContentProps}>
         <div className="dialogContentInner withFluidActions">
-          {content}
+          <div
+            className={cx('dialogContentWrapper', {
+              withActions: Boolean(actions)
+            })}
+          >
+            {content}
+          </div>
           {actions && (
             <DialogActions
               {...dialogActionsProps}

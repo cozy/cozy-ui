@@ -48,7 +48,13 @@ const ConfirmDialog = props => {
               <DialogTitle {...dialogTitleProps}>{title}</DialogTitle>
             </div>
           )}
-          {content}
+          <div
+            className={cx('dialogContentWrapper', {
+              withActions: Boolean(actions)
+            })}
+          >
+            {content}
+          </div>
           {actions && (
             <DialogActions
               {...dialogActionsProps}

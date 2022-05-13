@@ -48,7 +48,13 @@ const IllustrationDialog = props => {
               <div className="u-flex u-flex-justify-center">{title}</div>
             </DialogTitle>
           )}
-          {content}
+          <div
+            className={cx('dialogContentWrapper', {
+              withActions: Boolean(actions)
+            })}
+          >
+            {content}
+          </div>
           {actions && (
             <DialogActions
               {...dialogActionsProps}
