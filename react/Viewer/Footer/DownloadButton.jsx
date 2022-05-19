@@ -31,7 +31,7 @@ const DownloadButton = ({ file, t }) => {
 }
 
 DownloadButton.propTypes = {
-  file: PropTypes.object.isRequired
+  file: PropTypes.object
 }
 
 export default withViewerLocales(DownloadButton)
