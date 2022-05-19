@@ -37,7 +37,7 @@ const Sharing = ({ file }) => {
 }
 
 Sharing.propTypes = {
-  file: PropTypes.object.isRequired
+  file: PropTypes.object
 }
 
 export default Sharing
