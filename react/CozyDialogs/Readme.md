@@ -50,6 +50,7 @@ import Button from 'cozy-ui/transpiled/react/Button'
 import Alerter from 'cozy-ui/transpiled/react/Alerter'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
+import Variants from 'cozy-ui/docs/components/Variants'
 
 import CloudIcon from "cozy-ui/transpiled/react/Icons/Cloud"
 
@@ -148,105 +149,76 @@ initialState = {
   modalOpened: isTesting(),
   modal: Dialog,
   size: 'medium',
+  content: 'default',
+  theme: 'normal',
+}
+
+const initialVariants = [{
   actionsLayoutColumn: false,
   titleLong: false,
   disableTitleAutoPadding: false,
   withCloseButton: true,
   withBackButton: false,
-  content: 'default',
-  theme: 'normal',
   alignTop: false,
   showActions: true,
   disableGutters: false,
   hideTitle: false
-}
+}]
 
 ;
 
-<>
-  <BreakpointsProvider>
-    <p>With close button:
-      <StateRadio value={true} name='withCloseButton' /> yes{' '}
-      <StateRadio value={false} name='withCloseButton' /> no
-    </p>
-    <p>With back button:
-      <StateRadio value={true} name='withBackButton' /> yes{' '}
-      <StateRadio value={false} name='withBackButton' /> no
-    </p>
-    <p>Disable Title auto-positionning:
-      <StateRadio value={true} name='disableTitleAutoPadding' /> yes{' '}
-      <StateRadio value={false} name='disableTitleAutoPadding' /> no
-    </p>
-    <p>Title:
-      <StateRadio value={false} name='titleLong' /> short{' '}
-      <StateRadio value={true} name='titleLong' /> long
-    </p>
-    <p>Hide title:
-      <StateRadio value={true} name='hideTitle' /> yes{' '}
-      <StateRadio value={false} name='hideTitle' /> no
-    </p>
-    <p>Content:
-      <StateRadio value='default' name='content' /> default{' '}
-      <StateRadio value='short' name='content' /> short{' '}
-      <StateRadio value='long' name='content' /> long
-    </p>
-    <p>Size:
-      <StateRadio value='small' name='size' /> small {' '}
-      <StateRadio value='medium' name='size' /> medium {' '}
-      <StateRadio value='large' name='size' /> large
-    </p>
-    <p>With actions:
-      <StateRadio value={true} name='showActions' /> yes
-      <StateRadio value={false} name='showActions' /> no
-    </p>
-    <p>Actions layout:
-      <StateRadio value={false} name='actionsLayoutColumn' /> row{' '}
-      <StateRadio value={true} name='actionsLayoutColumn' /> column
-    </p>
-    <p>Alignment:
-      <StateRadio value={false} name='alignTop' /> middle
-      <StateRadio value={true} name='alignTop' /> top{' '}
-    </p>
-    <p>Disable gutters (inner padding):
-      <StateRadio value={true} name='disableGutters' /> yes
-      <StateRadio value={false} name='disableGutters' /> no{' '}
-    </p>
-    <DialogComponent
-      size={DialogComponent !== ConfirmDialog ? state.size : undefined}
-      open={state.modalOpened}
-      onClose={state.withCloseButton ? handleClose : undefined}
-      onBack={state.withBackButton ? handleBack : undefined}
-      disableTitleAutoPadding={state.disableTitleAutoPadding}
-      align={state.alignTop ? 'top': 'middle'}
-      title={state.hideTitle
-        ? undefined
-        : DialogComponent !== IllustrationDialog && state.titleLong
-          ? `${dialogTitles[DialogComponent.name]} - ${content.ada.short}`
-          : dialogTitles[DialogComponent.name]
-      }
-      disableGutters={state.disableGutters}
-      content={
-        <Typography variant='body1' color='textPrimary'>
-          { state.content == 'default'
-          ? dialogContents[DialogComponent.name]
-          : state.content == 'long'
-            ? content.ada.long
-            : content.ada.short}<br/>
-          <Button className='u-mt-1 u-ml-0' label="Show an alert" onClick={() => Alerter.success('Hello', { duration: 100000 })}/>
-        </Typography>}
-      actions={state.showActions && dialogActions[DialogComponent.name]}
-      actionsLayout={state.actionsLayoutColumn ? 'column' : 'row'}
-    />
-  </BreakpointsProvider>
+<BreakpointsProvider>
+  <Variants initialVariants={initialVariants}>
+    {variant => (
+      <>
+        <p>Content:
+          <StateRadio value='default' name='content' /> default{' '}
+          <StateRadio value='short' name='content' /> short{' '}
+          <StateRadio value='long' name='content' /> long
+        </p>
+        <p>Size:
+          <StateRadio value='small' name='size' /> small {' '}
+          <StateRadio value='medium' name='size' /> medium {' '}
+          <StateRadio value='large' name='size' /> large
+        </p>
+        <DialogComponent
+          size={DialogComponent !== ConfirmDialog ? state.size : undefined}
+          open={state.modalOpened}
+          onClose={variant.withCloseButton ? handleClose : undefined}
+          onBack={variant.withBackButton ? handleBack : undefined}
+          disableTitleAutoPadding={variant.disableTitleAutoPadding}
+          align={variant.alignTop ? 'top': 'middle'}
+          title={variant.hideTitle
+            ? undefined
+            : DialogComponent !== IllustrationDialog && variant.titleLong
+              ? `${dialogTitles[DialogComponent.name]} - ${content.ada.short}`
+              : dialogTitles[DialogComponent.name]
+          }
+          disableGutters={variant.disableGutters}
+          content={
+            <Typography variant='body1' color='textPrimary'>
+              { state.content == 'default'
+              ? dialogContents[DialogComponent.name]
+              : state.content == 'long'
+                ? content.ada.long
+                : content.ada.short}<br/>
+              <Button className='u-mt-1 u-ml-0' label="Show an alert" onClick={() => Alerter.success('Hello', { duration: 100000 })}/>
+            </Typography>}
+          actions={variant.showActions && dialogActions[DialogComponent.name]}
+          actionsLayout={variant.actionsLayoutColumn ? 'column' : 'row'}
+        />
 
-  {dialogs.map(dialog => (
-    <button
-      key={`open-btn-${dialog.name}`}
-      data-testid={`open-btn-${dialog.name}`}
-      onClick={() => toggleDialog(dialog)}
-    >
-      Open {dialog.name}
-    </button>
-  ))}
-</>
+        {dialogs.map(dialog => (
+          <button
+            key={`open-btn-${dialog.name}`}
+            data-testid={`open-btn-${dialog.name}`}
+            onClick={() => toggleDialog(dialog)}
+          >
+            Open {dialog.name}
+          </button>
+        ))}
+      </>
+    )}
+  </Variants>
+</BreakpointsProvider>
 ```
