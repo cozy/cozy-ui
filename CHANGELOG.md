@@ -1,3 +1,10 @@
+## [67.0.3](https://github.com/cozy/cozy-ui/compare/v67.0.2...v67.0.3) (2022-05-20)
+
+
+### Bug Fixes
+
+* Action buttons at the bottom of Dialog/IllustrationDialog on mobile ([b924001](https://github.com/cozy/cozy-ui/commit/b924001))
+
 ## [67.0.2](https://github.com/cozy/cozy-ui/compare/v67.0.1...v67.0.2) (2022-05-12)
 
 
