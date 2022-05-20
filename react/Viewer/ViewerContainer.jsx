@@ -12,13 +12,7 @@ import ViewerInformationsWrapper from './ViewerInformationsWrapper'
 import EncryptedProvider from './EncryptedProvider'
 
 const ViewerContainer = props => {
-  const {
-    className,
-    disableFooter,
-    disablePanel,
-    disableSharing,
-    ...rest
-  } = props
+  const { className, disableFooter, disablePanel, children, ...rest } = props
   const { currentIndex, files, currentURL } = props
   const toolbarRef = createRef()
   const { isDesktop } = useBreakpoints()
@@ -43,11 +37,12 @@ const ViewerContainer = props => {
       </EncryptedProvider>
       <ViewerInformationsWrapper
         disableFooter={disableFooter}
-        disableSharing={disableSharing}
         validForPanel={validForPanel}
         currentFile={currentFile}
         toolbarRef={toolbarRef}
-      />
+      >
+        {children}
+      </ViewerInformationsWrapper>
     </ViewerWrapper>
   )
 }
@@ -79,9 +74,7 @@ ViewerContainer.propTypes = {
   /** Show/Hide the panel containing more information about the file only on Desktop */
   disablePanel: PropTypes.bool,
   /** Show/Hide the panel containing more information about the file only on Phone & Tablet devices */
-  disableFooter: PropTypes.bool,
-  /** Show/Hide cozy share button  */
-  disableSharing: PropTypes.bool
+  disableFooter: PropTypes.bool
 }
 
 ViewerContainer.defaultProps = {

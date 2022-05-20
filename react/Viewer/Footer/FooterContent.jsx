@@ -1,16 +1,14 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, Children, cloneElement } from 'react'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/core/styles'
 
-import { getReferencedBy, useQuery, models, useClient } from 'cozy-client'
+import { getReferencedBy, useQuery, models } from 'cozy-client'
 
 import BottomSheet, { BottomSheetHeader } from '../../BottomSheet'
 
 import { buildContactByIdsQuery } from '../queries'
 import { isValidForPanel } from '../helpers'
-import Sharing from './Sharing'
 import BottomSheetContent from './BottomSheetContent'
-import ForwardOrDownloadButton from './ForwardOrDownloadButton'
 
 const {
   contact: { getDisplayName }
@@ -28,9 +26,9 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const FooterContent = ({ file, toolbarRef, disableSharing }) => {
+const FooterContent = ({ file, toolbarRef, children }) => {
   const styles = useStyles()
-  const client = useClient()
+
   const toolbarProps = useMemo(() => ({ ref: toolbarRef }), [toolbarRef])
 
   const contactIds = getReferencedBy(file, 'io.cozy.contacts').map(
@@ -46,6 +44,17 @@ const FooterContent = ({ file, toolbarRef, disableSharing }) => {
     ? contactList.map(contact => `${getDisplayName(contact)}`).join(', ')
     : ''
 
+  const FooterActionButtons = Children.toArray(children).find(child => {
+    return (
+      child.type.name === 'FooterActionButtons' ||
+      child.type.displayName === 'FooterActionButtons'
+    )
+  })
+
+  const FooterActionButtonsWithFile = cloneElement(FooterActionButtons, {
+    file
+  })
+
   if (
     isValidForPanel({ file }) &&
     (contactsFullname || contactIds.length === 0)
@@ -53,26 +62,26 @@ const FooterContent = ({ file, toolbarRef, disableSharing }) => {
     return (
       <BottomSheet toolbarProps={toolbarProps}>
         <BottomSheetHeader className="u-ph-1 u-pb-1">
-          {!disableSharing && <Sharing file={file} />}
-          <ForwardOrDownloadButton file={file} />
+          {FooterActionButtonsWithFile}
         </BottomSheetHeader>
         <BottomSheetContent file={file} contactsFullname={contactsFullname} />
       </BottomSheet>
     )
   }
 
-  return (
-    <div className={styles.footer}>
-      {!disableSharing && <Sharing file={file} />}
-      <FileActionButton file={file} />
-    </div>
-  )
+  // If `FooterActionButtons` hasn't children
+  if (!FooterActionButtons) return null
+
+  return <div className={styles.footer}>{FooterActionButtonsWithFile}</div>
 }
 
 FooterContent.propTypes = {
   file: PropTypes.object.isRequired,
   toolbarRef: PropTypes.object,
-  disableSharing: PropTypes.bool
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ])
 }
 
 export default FooterContent

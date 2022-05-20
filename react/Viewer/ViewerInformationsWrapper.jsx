@@ -13,9 +13,9 @@ import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
 const ViewerInformationsWrapper = ({
   currentFile,
   disableFooter,
-  disableSharing,
   validForPanel,
-  toolbarRef
+  toolbarRef,
+  children
 }) => {
   const theme = useTheme()
   const sidebar = document.querySelector('[class*="sidebar"]')
@@ -34,11 +34,9 @@ const ViewerInformationsWrapper = ({
     <>
       {!disableFooter && (
         <Footer>
-          <FooterContent
-            file={currentFile}
-            toolbarRef={toolbarRef}
-            disableSharing={disableSharing}
-          />
+          <FooterContent file={currentFile} toolbarRef={toolbarRef}>
+            {children}
+          </FooterContent>
         </Footer>
       )}
       {validForPanel && (
@@ -53,9 +51,12 @@ const ViewerInformationsWrapper = ({
 ViewerInformationsWrapper.propTypes = {
   currentFile: FileDoctype.isRequired,
   disableFooter: PropTypes.bool,
-  disableSharing: PropTypes.bool,
   validForPanel: PropTypes.bool,
-  toolbarRef: PropTypes.object
+  toolbarRef: PropTypes.object,
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ])
 }
 
 export default ViewerInformationsWrapper
