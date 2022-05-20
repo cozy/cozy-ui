@@ -46,11 +46,16 @@ import {
 
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 
-import Button from 'cozy-ui/transpiled/react/Button'
+import Button from 'cozy-ui/transpiled/react/Buttons'
 import Alerter from 'cozy-ui/transpiled/react/Alerter'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Variants from 'cozy-ui/docs/components/Variants'
+import FormControlLabel from 'cozy-ui/transpiled/react/FormControlLabel'
+import RadioGroup from 'cozy-ui/transpiled/react/RadioGroup'
+import Radio from 'cozy-ui/transpiled/react/Radios'
+import FormControl from 'cozy-ui/transpiled/react/FormControl'
+import FormLabel from 'cozy-ui/transpiled/react/FormLabel'
 
 import CloudIcon from "cozy-ui/transpiled/react/Icons/Cloud"
 
@@ -66,12 +71,12 @@ const ExampleDialogActions = () => {
   return (
     <>
       <Button
-        theme="secondary"
-        onClick={handleClose}
+        variant="secondary"
         label={'Close Modal'}
+        onClick={handleClose}
       />
       <Button
-        theme="primary"
+        variant="primary"
         label='Do something'
         onClick={() => alert('click')}
       />
@@ -83,12 +88,12 @@ const ConfirmDialogActions = () => {
   return (
     <>
       <Button
-        theme="secondary"
-        onClick={handleClose}
+        variant="secondary"
         label={'Close Modal'}
+        onClick={handleClose}
       />
       <Button
-        theme="danger"
+        color="error"
         label='Do something destructive'
         onClick={() => alert('click')}
       />
@@ -171,16 +176,72 @@ const initialVariants = [{
   <Variants initialVariants={initialVariants}>
     {variant => (
       <>
-        <p>Content:
-          <StateRadio value='default' name='content' /> default{' '}
-          <StateRadio value='short' name='content' /> short{' '}
-          <StateRadio value='long' name='content' /> long
-        </p>
-        <p>Size:
-          <StateRadio value='small' name='size' /> small {' '}
-          <StateRadio value='medium' name='size' /> medium {' '}
-          <StateRadio value='large' name='size' /> large
-        </p>
+        <FormControl component="fieldset" fullWidth>
+          <FormLabel component="legend">Content</FormLabel>
+          <RadioGroup
+            aria-label="radio"
+            name="content"
+            row
+            value={state.content}
+            onChange={event => { setState({ content: event.target.value }) }}
+          >
+            <FormControlLabel
+              value="default"
+              label="Default"
+              control={<Radio />}
+            />
+            <FormControlLabel
+              value="short"
+              label="Short"
+              control={<Radio />}
+            />
+            <FormControlLabel
+              value="long"
+              label="Long"
+              control={<Radio />}
+            />
+          </RadioGroup>
+        </FormControl>
+        <FormControl component="fieldset" >
+          <FormLabel component="legend">Size</FormLabel>
+          <RadioGroup
+            aria-label="radio"
+            name="size"
+            row
+            value={state.size}
+            onChange={event => { setState({ size: event.target.value }) }}
+          >
+            <FormControlLabel
+              value="small"
+              label="Small"
+              control={<Radio />}
+            />
+            <FormControlLabel
+              value="medium"
+              label="Medium"
+              control={<Radio />}
+            />
+            <FormControlLabel
+              value="large"
+              label="Large"
+              control={<Radio />}
+            />
+          </RadioGroup>
+        </FormControl>
+        <div className="u-mt-1">
+          {dialogs.map(dialog => (
+            <Button
+              key={`open-btn-${dialog.name}`}
+              data-testid={`open-btn-${dialog.name}`}
+              className="u-m-half"
+              label={`Open ${dialog.name}`}
+              variant="ghost"
+              size="small"
+              onClick={() => toggleDialog(dialog)}
+            />
+          ))}
+        </div>
+
         <DialogComponent
           size={DialogComponent !== ConfirmDialog ? state.size : undefined}
           open={state.modalOpened}
@@ -207,16 +268,6 @@ const initialVariants = [{
           actions={variant.showActions && dialogActions[DialogComponent.name]}
           actionsLayout={variant.actionsLayoutColumn ? 'column' : 'row'}
         />
-
-        {dialogs.map(dialog => (
-          <button
-            key={`open-btn-${dialog.name}`}
-            data-testid={`open-btn-${dialog.name}`}
-            onClick={() => toggleDialog(dialog)}
-          >
-            Open {dialog.name}
-          </button>
-        ))}
       </>
     )}
   </Variants>
