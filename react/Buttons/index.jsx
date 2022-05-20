@@ -37,12 +37,12 @@ DefaultButton.defaultProps = {
   color: 'primary'
 }
 
-const Buttons = forwardRef(({ variant, ...props }, ref) => {
+const Buttons = forwardRef(({ variant, className = '', ...props }, ref) => {
   switch (variant) {
     case 'ghost':
       return (
         <DefaultButton
-          className="ghost"
+          className={`ghost ${className}`}
           variant="outlined"
           {...props}
           ref={ref}
@@ -50,16 +50,30 @@ const Buttons = forwardRef(({ variant, ...props }, ref) => {
       )
 
     case 'secondary':
-      return <DefaultButton variant="outlined" {...props} ref={ref} />
+      return (
+        <DefaultButton
+          variant="outlined"
+          className={className}
+          {...props}
+          ref={ref}
+        />
+      )
 
     case 'text':
-      return <DefaultButton variant="text" {...props} ref={ref} />
+      return (
+        <DefaultButton
+          variant="text"
+          className={className}
+          {...props}
+          ref={ref}
+        />
+      )
 
     case 'primary':
-      return <DefaultButton {...props} ref={ref} />
+      return <DefaultButton className={className} {...props} ref={ref} />
 
     default:
-      return <DefaultButton {...props} ref={ref} />
+      return <DefaultButton className={className} {...props} ref={ref} />
   }
 })
 Buttons.displayName = 'Buttons'
