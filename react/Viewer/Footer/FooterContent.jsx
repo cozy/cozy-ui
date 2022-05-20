@@ -9,10 +9,8 @@ import BottomSheet, { BottomSheetHeader } from '../../BottomSheet'
 import { buildContactByIdsQuery } from '../queries'
 import { isValidForPanel } from '../helpers'
 import Sharing from './Sharing'
-import ForwardButton from './ForwardButton'
-import DownloadButton from './DownloadButton'
 import BottomSheetContent from './BottomSheetContent'
-import { shouldBeForwardButton } from './helpers'
+import ForwardOrDownloadButton from './ForwardOrDownloadButton'
 
 const {
   contact: { getDisplayName }
@@ -33,9 +31,6 @@ const useStyles = makeStyles(theme => ({
 const FooterContent = ({ file, toolbarRef, disableSharing }) => {
   const styles = useStyles()
   const client = useClient()
-  const FileActionButton = shouldBeForwardButton(client)
-    ? ForwardButton
-    : DownloadButton
   const toolbarProps = useMemo(() => ({ ref: toolbarRef }), [toolbarRef])
 
   const contactIds = getReferencedBy(file, 'io.cozy.contacts').map(
@@ -59,7 +54,7 @@ const FooterContent = ({ file, toolbarRef, disableSharing }) => {
       <BottomSheet toolbarProps={toolbarProps}>
         <BottomSheetHeader className="u-ph-1 u-pb-1">
           {!disableSharing && <Sharing file={file} />}
-          <FileActionButton file={file} />
+          <ForwardOrDownloadButton file={file} />
         </BottomSheetHeader>
         <BottomSheetContent file={file} contactsFullname={contactsFullname} />
       </BottomSheet>
