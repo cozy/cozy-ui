@@ -1,3 +1,10 @@
+## [67.0.4](https://github.com/cozy/cozy-ui/compare/v67.0.3...v67.0.4) (2022-05-20)
+
+
+### Bug Fixes
+
+* **Buttons:** Classname when using ghost variant ([c070c0c](https://github.com/cozy/cozy-ui/commit/c070c0c))
+
 ## [67.0.3](https://github.com/cozy/cozy-ui/compare/v67.0.2...v67.0.3) (2022-05-20)
 
 
