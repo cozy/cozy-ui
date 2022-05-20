@@ -148,14 +148,14 @@ initialState = {
   modalOpened: isTesting(),
   modal: Dialog,
   size: 'medium',
-  actionsLayout: 'row',
-  title: 'short',
+  actionsLayoutColumn: false,
+  titleLong: false,
   disableTitleAutoPadding: false,
   withCloseButton: true,
   withBackButton: false,
   content: 'default',
   theme: 'normal',
-  align: 'middle',
+  alignTop: false,
   showActions: true,
   disableGutters: false,
   hideTitle: false
@@ -178,8 +178,8 @@ initialState = {
       <StateRadio value={false} name='disableTitleAutoPadding' /> no
     </p>
     <p>Title:
-      <StateRadio value='short' name='title' /> short{' '}
-      <StateRadio value='long' name='title' /> long
+      <StateRadio value={false} name='titleLong' /> short{' '}
+      <StateRadio value={true} name='titleLong' /> long
     </p>
     <p>Hide title:
       <StateRadio value={true} name='hideTitle' /> yes{' '}
@@ -200,12 +200,12 @@ initialState = {
       <StateRadio value={false} name='showActions' /> no
     </p>
     <p>Actions layout:
-      <StateRadio value='row' name='actionsLayout' /> row{' '}
-      <StateRadio value='column' name='actionsLayout' /> column
+      <StateRadio value={false} name='actionsLayoutColumn' /> row{' '}
+      <StateRadio value={true} name='actionsLayoutColumn' /> column
     </p>
     <p>Alignment:
-      <StateRadio value='middle' name='align' /> middle
-      <StateRadio value='top' name='align' /> top{' '}
+      <StateRadio value={false} name='alignTop' /> middle
+      <StateRadio value={true} name='alignTop' /> top{' '}
     </p>
     <p>Disable gutters (inner padding):
       <StateRadio value={true} name='disableGutters' /> yes
@@ -217,10 +217,10 @@ initialState = {
       onClose={state.withCloseButton ? handleClose : undefined}
       onBack={state.withBackButton ? handleBack : undefined}
       disableTitleAutoPadding={state.disableTitleAutoPadding}
-      align={state.align}
+      align={state.alignTop ? 'top': 'middle'}
       title={state.hideTitle
         ? undefined
-        : DialogComponent !== IllustrationDialog && state.title === "long"
+        : DialogComponent !== IllustrationDialog && state.titleLong
           ? `${dialogTitles[DialogComponent.name]} - ${content.ada.short}`
           : dialogTitles[DialogComponent.name]
       }
@@ -235,7 +235,7 @@ initialState = {
           <Button className='u-mt-1 u-ml-0' label="Show an alert" onClick={() => Alerter.success('Hello', { duration: 100000 })}/>
         </Typography>}
       actions={state.showActions && dialogActions[DialogComponent.name]}
-      actionsLayout={state.actionsLayout}
+      actionsLayout={state.actionsLayoutColumn ? 'column' : 'row'}
     />
   </BreakpointsProvider>
 
