@@ -1,3 +1,4 @@
+import { isValidElement, Children, cloneElement } from 'react'
 import { saveFileWithCordova } from 'cozy-client/dist/models/fsnative'
 import { isIOS, isMobileApp } from 'cozy-device-helper'
 
@@ -72,4 +73,19 @@ export const exportFilesNative = async (client, files, filename) => {
   } catch (error) {
     Alerter.error(downloadFileError(error))
   }
+}
+
+export const mapToAllChildren = (children, cb) => {
+  return Children.map(children, child => {
+    if (!isValidElement(child)) return child
+
+    const grandchildren = child.props.children
+    if (grandchildren) {
+      return cloneElement(child, {
+        children: mapToAllChildren(grandchildren, cb)
+      })
+    }
+
+    return cb(child)
+  })
 }
