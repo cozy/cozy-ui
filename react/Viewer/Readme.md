@@ -28,11 +28,14 @@ import CarbonCopyIcon from 'cozy-ui/transpiled/react/Icons/CarbonCopy';
 // The DemoProvider inserts a fake cozy-client in the React context.
 import DemoProvider from './docs/DemoProvider';
 import Overlay from 'cozy-ui/transpiled/react/Overlay';
-import Button from 'cozy-ui/transpiled/react/Button';
+import Button from 'cozy-ui/transpiled/react/Buttons';
 import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download';
 import ShareIcon from 'cozy-ui/transpiled/react/Icons/Share';
 import { isValidForPanel } from 'cozy-ui/transpiled/react/Viewer/helpers';
 import getPanelBlocks, { panelBlocksSpecs } from 'cozy-ui/transpiled/react/Viewer/Panel/getPanelBlocks';
+import FooterActionButtons from 'cozy-ui/transpiled/react/Viewer/Footer/FooterActionButtons';
+import ForwardOrDownloadButton from 'cozy-ui/transpiled/react/Viewer/Footer/ForwardOrDownloadButton';
+
 
 // We provide a collection of (fake) io.cozy.files to be rendered
 const files = [
@@ -95,6 +98,20 @@ const files = [
   }
 ];
 
+const ShareButtonFake = () => {
+  return (
+    <Button
+      label="Share"
+      className="u-w-100 u-ml-0 u-mr-half"
+      variant="secondary"
+      startIcon={<Icon icon={ShareIcon} />}
+      onClick={() => {
+        return alert("This is a demo, there's no actual Cozy to share the file from ¯\\_(ツ)_/¯")
+      }}
+    />
+  )
+};
+
 // The host app will usually need a small wrapper to display the Viewer. This is a very small example of such a wrapper that handles opening, closing, and navigating between files.
 initialState = {
   viewerOpened: isTesting(),
@@ -136,7 +153,7 @@ const onFileChange = (file, nextIndex) => setState({ currentIndex: nextIndex, cu
               />
             </Card>
           )}
-          <button onClick={toggleViewer}>Open viewer</button>
+          <Button label="Open viewer" variant="ghost" size="small" onClick={toggleViewer} />
           {state.viewerOpened && (
             <Overlay>
               <Viewer
@@ -154,7 +171,12 @@ const onFileChange = (file, nextIndex) => setState({ currentIndex: nextIndex, cu
                   showToolbar: variant.toolbar,
                   showClose: state.showToolbarCloseButton
                 }}
-              />
+              >
+                <FooterActionButtons>
+                  <ShareButtonFake />
+                  <ForwardOrDownloadButton />
+                </FooterActionButtons>
+              </Viewer>
             </Overlay>
           )}
         </>
