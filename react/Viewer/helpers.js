@@ -27,6 +27,16 @@ export const isFromKonnector = ({ file }) => {
   return has(file, 'cozyMetadata.sourceAccount')
 }
 
+/**
+ * Checks if the file matches one of the following conditions:
+ * - Is certified
+ * - Is Qualified
+ * - From a Connector
+ *
+ * @param {object} param
+ * @param {IOCozyFile} param.file
+ * @returns {boolean}
+ */
 export const isValidForPanel = ({ file }) => {
   return (
     hasCertifications({ file }) ||
