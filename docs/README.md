@@ -11,6 +11,8 @@ CSS classes and React components designed to build [Cozy](https://cozy.io/) apps
 
 If you plan to build a webapp to run on Cozy, you'll probably want to use a simple and elegant solution to build your interfaces without the mess of dealing with complex markup and CSS. Then Cozy UI is here for you!
 
+Cozy UI relies heavily on [Material UI v4](https://v4.mui.com/) and it can be useful to know how it works.
+
 ## React components (styleguidist)
 
 Check out [UI components](https://docs.cozy.io/cozy-ui/react/) to see how to use ready made React components.
@@ -88,24 +90,14 @@ If you want to add a new component, you must follow these steps:
 * Expose it in the API by adding it in `react/index.js`
 * Add it in the documentation by modifying `docs/styleguide.config.js`
 * If necessary you can add snapshots for it by modifying `react/examples.spec.jsx` and updating them `yarn build && yarn test -u`
-* Remember to propagate the possible `ref` with `React.forwardRef`. (<https://en.reactjs.org/docs/forwarding-refs.html>)
+* Remember to propagate the possible `ref` with `React.forwardRef`. [See forwardRef documentation](https://en.reactjs.org/docs/forwarding-refs.html)
 
 ### Guidelines for component development
 
 * Use material UI whenever possible
-* Override material UI components inside theme.js when necessary
-* Avoid stylus to style new components
-* Prefer withStyles / useStyles from material UI
-* Use semantic variables for colors
-
-```patch
-withStyles(theme => ({
-    root: {
--        backgroundColor: 'var(--paleGrey)',
-+        backgroundColor: theme.palette.background.default
-    }
-}))
-```
+* Override material UI components inside `makeOverrides.js` when necessary
+* Avoid stylus to style new components based on MUI and prefer `/helpers/makeStyles`
+* Use semantic variables for colors from `stylus/settings/palette.styl`, or color from `theme` objects in `makeStyles`
 
 ### Add an icon
 
@@ -136,9 +128,9 @@ yarn release # if you change icons or palette
 ```
 
 Then in your application folder, you can link to your local Cozy UI.
-You can use [rlink](https://gist.github.com/ptbrowne/add609bdcf4396d32072acc4674fff23)
-instead of `yarn link`. It will prevent common build problems due
-to module resolution inside symlinked folders.
+You can use [rlink](https://gist.github.com/ptbrowne/add609bdcf4396d32072acc4674fff23) instead of `yarn link`. It will prevent common build problems due to module resolution inside symlinked folders.
+If your application doesn't use cozy-ui directly as dependency but through a library, you have to use `rlink` inside your application folder, not inside the library's one.
+`rlink` only copies the build and not the node_modules of cozy-ui, so you have to install a version of cozy-ui before making a `rlink`.
 
 ```bash
 cd my-app
