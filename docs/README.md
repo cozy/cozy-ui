@@ -107,12 +107,15 @@ If you want to add a new icon to cozy-ui, you must follow these steps:
 ### Develop inside an app
 
 Sometimes, you want to develop on a component, from the context of an app.
-Then you need to link cozy-ui with `yarn link`.
+Then you need to link cozy-ui with `yarn link`. Since `cozy-ui` is transpiled, when linking you must first `yarn release`. If you change the icons, or the palette, you must run `yarn release` again.
+
 
 ```bash
 cd cozy-ui
+yarn release # if first time
 yarn link
 yarn start # Launch transpilation
+yarn release # if you change icons or palette
 ```
 
 Then in your application folder, you can link to your local Cozy UI.
