@@ -28454,7 +28454,7 @@ html {
 @media (max-width: 63.938rem) {
   .viewer-toolbar--27_8W {
     height: 3rem;
-    width: calc(100% - 1rem);
+    width: 100%;
     padding: var(--flagship-top-height) 1rem 0 0;
     background: var(--paperBackgroundColor);
     border-bottom: 1px solid var(--dividerColor);
