@@ -11,6 +11,7 @@ const BottomSheetContent = ({ file, contactsFullname }) => {
   return panelBlocks.map((PanelBlock, index) => (
     <BottomSheetItem
       key={index}
+      disableGutters
       disableElevation={index === panelBlocks.length - 1}
     >
       <PanelBlock file={file} contactsFullname={contactsFullname} />

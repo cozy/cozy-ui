@@ -26,9 +26,9 @@ const Qualification = ({ file = {}, contactsFullname, t, f, lang }) => {
   } = metadata
 
   return (
-    <List>
+    <List className={'u-pv-1'}>
       {datetime && (
-        <ListItem className={'u-ph-0'}>
+        <ListItem className={'u-ph-2'}>
           <QualificationListItemText
             primary={t(
               `Viewer.panel.qualification.date.title.${
@@ -42,14 +42,14 @@ const Qualification = ({ file = {}, contactsFullname, t, f, lang }) => {
         </ListItem>
       )}
       {contactsFullname && (
-        <ListItem className={'u-ph-0'}>
+        <ListItem className={'u-ph-2'}>
           <QualificationListItemText
             primary={t('Viewer.panel.qualification.identity')}
             secondary={contactsFullname}
           />
         </ListItem>
       )}
-      <ListItem className={'u-ph-0'}>
+      <ListItem className={'u-ph-2'}>
         <QualificationListItemText
           primary={t('Viewer.panel.qualification.label.title')}
           secondary={
@@ -59,7 +59,7 @@ const Qualification = ({ file = {}, contactsFullname, t, f, lang }) => {
           }
         />
       </ListItem>
-      <ListItem className={'u-ph-0'}>
+      <ListItem className={'u-ph-2'}>
         <QualificationListItemText
           primary={t('Viewer.panel.qualification.qualification')}
           secondary={scannerT(`Scan.items.${qualification.label}`)}
