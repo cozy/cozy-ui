@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import cx from 'classnames'
 import { usePopper } from 'react-popper'
-import { useTheme } from '@material-ui/core'
 
 import BottomDrawer from '../BottomDrawer'
 import Radio from '../Radio'
@@ -13,7 +12,8 @@ import useBreakpoints from '../hooks/useBreakpoints'
 import { Media, Bd, Img } from '../Media'
 import { getCssVariableValue } from '../utils/color'
 import { spacingProp } from '../Stack'
-import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import { isFlagshipApp } from 'cozy-device-helper'
+import { ActionMenuEffects } from './ActionMenuEffects'
 
 const ActionMenuWrapper = ({
   inline,
@@ -104,27 +104,6 @@ const ActionMenu = ({
   anchorElRef,
   containerElRef
 }) => {
-  const theme = useTheme()
-  const sidebar = document.getElementById('sidebar')
-
-  useSetFlagshipUI(
-    {
-      bottomBackground: theme.palette.background.paper,
-      bottomTheme: 'dark',
-      topOverlay: getCssVariableValue('overlay'), // TODO: refactor to semantic variable
-      topBackground: theme.palette.background.paper,
-      topTheme: 'light'
-    },
-    {
-      bottomBackground: theme.palette.background[sidebar ? 'default' : 'paper'],
-      bottomTheme: 'dark',
-      topOverlay: 'transparent',
-      topBackground: theme.palette.background.paper,
-      topTheme: 'dark'
-    },
-    'cozy-ui/ActionMenu'
-  )
-
   if (placement)
     logDepecratedPlacement(
       '<ActionMenu placement /> is deprecated, use <ActionMenu popperOptions={{ placement }} /> instead'
@@ -148,6 +127,8 @@ const ActionMenu = ({
       ref={containerRef}
       onClick={autoclose ? onClose : null}
     >
+      {isFlagshipApp() && <ActionMenuEffects />}
+
       <ActionMenuWrapper
         onClose={onClose}
         inline={shouldDisplayInline}
