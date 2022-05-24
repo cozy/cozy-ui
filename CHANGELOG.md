@@ -1,3 +1,11 @@
+# [68.1.0](https://github.com/cozy/cozy-ui/compare/v68.0.1...v68.1.0) (2022-05-24)
+
+
+### Features
+
+* Update the Viewer buttons to use the new cozy-ui Buttons ([5fa2868](https://github.com/cozy/cozy-ui/commit/5fa2868))
+* **Banner:** Add disableIconStyles props ([fb6d274](https://github.com/cozy/cozy-ui/commit/fb6d274))
+
 ## [68.0.1](https://github.com/cozy/cozy-ui/compare/v68.0.0...v68.0.1) (2022-05-24)
 
 
