@@ -19,7 +19,8 @@ const Banner = ({
   text,
   buttonOne,
   buttonTwo,
-  inline
+  inline,
+  disableIconStyles
 }) => {
   const position = {
     row: [8, 4],
@@ -40,12 +41,18 @@ const Banner = ({
               item
               xs={12}
               lg={size[0]}
-              alignItems="center"
+              alignItems={disableIconStyles ? 'flex-start' : 'center'}
               wrap="nowrap"
             >
               {icon && (
                 <Grid item>
-                  <div className={styles['c-banner-icon']}>{icon}</div>
+                  <div
+                    className={cx({
+                      [styles['c-banner-icon']]: !disableIconStyles
+                    })}
+                  >
+                    {icon}
+                  </div>
                 </Grid>
               )}
               <Grid item className={styles['c-banner-text']}>
@@ -87,7 +94,9 @@ Banner.propTypes = {
   /** Button to be displayed in second, the right one */
   buttonTwo: PropTypes.node,
   /** Show banner on one line (only desktop) */
-  inline: PropTypes.bool
+  inline: PropTypes.bool,
+  /** Disables the styles of the wrapper around the icon */
+  disableIconWrapper: PropTypes.bool
 }
 
 export default Banner
