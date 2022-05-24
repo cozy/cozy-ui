@@ -1,3 +1,41 @@
+# [68.0.0](https://github.com/cozy/cozy-ui/compare/v67.0.4...v68.0.0) (2022-05-24)
+
+
+### Bug Fixes
+
+* Warning of proptypes ([7b2c464](https://github.com/cozy/cozy-ui/commit/7b2c464))
+
+
+### Features
+
+* Add FooterActionButtons component ([1c3efc1](https://github.com/cozy/cozy-ui/commit/1c3efc1))
+* Refactor the viewer to let the app handle the action buttons ([60084d6](https://github.com/cozy/cozy-ui/commit/60084d6))
+
+
+### BREAKING CHANGES
+
+* The management of action buttons
+should now be handled on the application side
+via the `FooterActionButtons` component.
+The `disableSharing` prop has also been removed, as it is no longer needed.
+
+Example:
+```
+<Viewer {...props}>
+   <FooterActionButtons>
+      <SharingButton />
+      <ForwardOrDownloadButton />
+   </FooterActionButtons>
+</Viewer>
+```
+You can use a codemods `transform-viewer.js` to automatically handle this breaking change.
+[See the codemods documentation](https://github.com/cozy/cozy-libs/tree/master/packages/cozy-codemods).
+Using linter js auto-correction can be a good idea after that.
+Here a common example (don't forget to change `src` value):
+```
+jscodeshift -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/transform-viewer.js src --parser babel --extensions js,jsx && yarn lint:js --fix
+```
+
 ## [67.0.4](https://github.com/cozy/cozy-ui/compare/v67.0.3...v67.0.4) (2022-05-20)
 
 
