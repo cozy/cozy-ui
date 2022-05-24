@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 
 import { useClient } from 'cozy-client'
 
+import Icon from '../../Icon'
 import DownloadIcon from '../../Icons/Download'
-import Button from '../../Button'
+import Button from '../../Buttons'
 import Alerter from '../../Alerter'
 import { withViewerLocales } from '../withViewerLocales'
 
@@ -21,9 +22,9 @@ const DownloadButton = ({ file, t }) => {
 
   return (
     <Button
-      extension="full"
-      theme="secondary"
-      icon={DownloadIcon}
+      fullWidth
+      variant="secondary"
+      startIcon={<Icon icon={DownloadIcon} />}
       label={t('Viewer.download')}
       onClick={() => handleClick(file)}
     />
