@@ -7,7 +7,6 @@ import Typography from '../../Typography'
 const QualificationListItemText = ({ primary, secondary }) => {
   return (
     <ListItemText
-      className={'u-pv-0'}
       disableTypography
       primary={<Typography variant={'caption'}>{primary}</Typography>}
       secondary={<Typography variant={'body1'}>{secondary}</Typography>}

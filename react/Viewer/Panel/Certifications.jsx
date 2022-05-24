@@ -11,7 +11,7 @@ import { withViewerLocales } from '../withViewerLocales'
 
 const Certification = ({ icon, title, caption }) => {
   return (
-    <div className="u-mb-1-half">
+    <div className={'u-ph-2 u-pv-1'}>
       <Media className="u-mb-half" align="top">
         <Img className="u-mr-half">
           <Icon icon={icon} />
