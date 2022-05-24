@@ -1,14 +1,12 @@
 import React from 'react'
 import { RemoveScroll } from 'react-remove-scroll'
 import { default as MUIDialog } from '@material-ui/core/Dialog'
-import { useTheme } from '@material-ui/core'
-
-import { getFlagshipMetadata } from 'cozy-device-helper'
 
 import useBreakpoints from '../hooks/useBreakpoints'
 import { useCozyTheme } from '../CozyTheme'
 import themesStyles from '../../stylus/settings/palette.styl'
-import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import { isFlagshipApp } from 'cozy-device-helper'
+import { DialogEffects } from './DialogEffects'
 
 const Dialog = props => {
   const { isMobile, isTablet } = useBreakpoints()
@@ -27,44 +25,11 @@ const Dialog = props => {
       ? RemoveScroll
       : React.Fragment
   const cozyTheme = useCozyTheme()
-  const theme = useTheme()
-  const cozBar = document.querySelector('.coz-bar-wrapper')
-  const sidebar = document.getElementById('sidebar')
-
-  useSetFlagshipUI(
-    props.fullScreen
-      ? {
-          bottomBackground: theme.palette.background.paper,
-          bottomTheme: 'dark',
-          topBackground: theme.palette.background.paper,
-          topTheme: 'dark'
-        }
-      : {
-          bottomBackground: theme.palette.background.default,
-          bottomTheme: 'light',
-          bottomOverlay: 'rgba(0, 0, 0, 0.5)',
-          topOverlay: 'rgba(0, 0, 0, 0.5)',
-          topBackground: theme.palette.background.paper,
-          topTheme: 'light'
-        },
-    {
-      bottomBackground: theme.palette.background[sidebar ? 'default' : 'paper'],
-      bottomTheme: getFlagshipMetadata().immersive ? 'light' : 'dark',
-      bottomOverlay: 'transparent',
-      topOverlay: 'transparent',
-      topBackground:
-        cozBar && getComputedStyle(cozBar).getPropertyValue('background-color'),
-      topTheme:
-        getFlagshipMetadata().immersive ||
-        (cozBar && cozBar.classList.contains('coz-theme-primary'))
-          ? 'light'
-          : 'dark'
-    },
-    'cozy-ui/Dialog'
-  )
 
   return (
     <Wrapper>
+      {isFlagshipApp() && <DialogEffects fullScreen={props.fullScreen} />}
+
       <MUIDialog
         className={themesStyles[`CozyTheme--${cozyTheme}`]}
         {...props}
