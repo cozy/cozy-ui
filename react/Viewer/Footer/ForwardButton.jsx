@@ -5,9 +5,10 @@ import { useClient, useCapabilities, models } from 'cozy-client'
 import { isIOS, isMobileApp } from 'cozy-device-helper'
 
 import { useI18n } from '../../I18n'
-import Button from '../../Button'
+import Icon from '../../Icon'
 import ReplyIcon from '../../Icons/Reply'
 import ShareIosIcon from '../../Icons/ShareIos'
+import Button from '../../Buttons'
 import Alerter from '../../Alerter'
 import { withViewerLocales } from '../withViewerLocales'
 import { exportFilesNative } from './helpers'
@@ -48,10 +49,10 @@ const ForwardButton = ({ file }) => {
 
   return (
     <Button
-      extension="full"
+      fullWidth
+      variant="secondary"
+      startIcon={<Icon icon={ForwardIcon} />}
       data-testid="openFileButton"
-      theme="secondary"
-      icon={ForwardIcon}
       label={t('Viewer.actions.forward')}
       onClick={() => onFileOpen(file)}
     />
