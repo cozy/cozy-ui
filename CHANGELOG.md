@@ -1,3 +1,10 @@
+## [68.0.1](https://github.com/cozy/cozy-ui/compare/v68.0.0...v68.0.1) (2022-05-24)
+
+
+### Bug Fixes
+
+* Style of Viewer ([d6cfb28](https://github.com/cozy/cozy-ui/commit/d6cfb28))
+
 # [68.0.0](https://github.com/cozy/cozy-ui/compare/v67.0.4...v68.0.0) (2022-05-24)
 
 
