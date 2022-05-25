@@ -9,6 +9,8 @@ const FooterActionButtons = ({ children, file }) => {
   return mapToAllChildren(children, child => cloneElement(child, { file }))
 }
 
+FooterActionButtons.displayName = 'FooterActionButtons'
+
 FooterActionButtons.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.node,
