@@ -1,3 +1,11 @@
+## [68.1.1](https://github.com/cozy/cozy-ui/compare/v68.1.0...v68.1.1) (2022-05-25)
+
+
+### Bug Fixes
+
+* Do not crash if the component does not find the child ([57f296b](https://github.com/cozy/cozy-ui/commit/57f296b))
+* The name "FooterActionButtons" does not exist in the build version ([2d13777](https://github.com/cozy/cozy-ui/commit/2d13777))
+
 # [68.1.0](https://github.com/cozy/cozy-ui/compare/v68.0.1...v68.1.0) (2022-05-24)
 
 
