@@ -1,4 +1,4 @@
-import React, { useMemo, Children, cloneElement } from 'react'
+import React, { useMemo, Children, cloneElement, isValidElement } from 'react'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -27,16 +27,19 @@ const FooterContent = ({ file, toolbarRef, children }) => {
 
   const { contactName, isLoadingContacts } = useReferencedContactName(file)
 
-  const FooterActionButtons = Children.toArray(children).find(child => {
-    return (
-      child.type.name === 'FooterActionButtons' ||
-      child.type.displayName === 'FooterActionButtons'
-    )
-  })
+  const FooterActionButtons =
+    Children.toArray(children).find(child => {
+      return (
+        child.type.name === 'FooterActionButtons' ||
+        child.type.displayName === 'FooterActionButtons'
+      )
+    }) || null
 
-  const FooterActionButtonsWithFile = cloneElement(FooterActionButtons, {
-    file
-  })
+  const FooterActionButtonsWithFile = isValidElement(FooterActionButtons)
+    ? cloneElement(FooterActionButtons, {
+        file
+      })
+    : null
 
   // We have to wait for the Contact request to finish before rendering `BottomSheet`, because it doesn't handle async well.
   if (isValidForPanel({ file }) && !isLoadingContacts) {
