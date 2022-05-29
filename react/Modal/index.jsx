@@ -15,7 +15,6 @@ import ModalButtons from './ModalButtons'
 import AnimatedContentHeader from './AnimatedContentHeader'
 import ModalBackButton from './ModalBackButton'
 import { ModalEffects } from './ModalEffects'
-import { isFlagshipApp } from 'cozy-device-helper'
 
 const ModalDescription = ModalContent
 
@@ -96,7 +95,7 @@ class Modal extends Component {
 
     return (
       <Portal into={into}>
-        {isFlagshipApp() && <ModalEffects />}
+        <ModalEffects />
         <div className={cx(styles['c-modal-container'], containerClassName)}>
           <Overlay
             onEscape={closable ? dismissAction : undefined}
