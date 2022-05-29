@@ -12,8 +12,7 @@ import useBreakpoints from '../hooks/useBreakpoints'
 import { Media, Bd, Img } from '../Media'
 import { getCssVariableValue } from '../utils/color'
 import { spacingProp } from '../Stack'
-import { isFlagshipApp } from 'cozy-device-helper'
-import { ActionMenuEffects } from './ActionMenuEffects'
+import { useActionMenuEffects } from './ActionMenuEffects'
 
 const ActionMenuWrapper = ({
   inline,
@@ -118,17 +117,17 @@ const ActionMenu = ({
     )
 
   const { isMobile } = useBreakpoints()
-
   const shouldDisplayInline = !isMobile
   const containerRef = React.createRef()
+
+  useActionMenuEffects()
+
   return (
     <div
       className={className}
       ref={containerRef}
       onClick={autoclose ? onClose : null}
     >
-      {isFlagshipApp() && <ActionMenuEffects />}
-
       <ActionMenuWrapper
         onClose={onClose}
         inline={shouldDisplayInline}

@@ -29,9 +29,10 @@ export const useSetFlagshipUI = (
   const webviewIntent = useWebviewIntent()
 
   useEffect(() => {
-    parseArg(webviewIntent, onMount, caller)
+    parseArg(webviewIntent, onMount, `${caller || 'unknown'} (onMount)`)
 
-    return () => parseArg(webviewIntent, onUnmount, caller)
+    return () =>
+      parseArg(webviewIntent, onUnmount, `${caller || 'unknown'} (onUnmount)`)
 
     /**
      * We don't want to listen to onMount/onUnmount arguments

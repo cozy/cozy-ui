@@ -49,7 +49,7 @@ it('should call webviewIntent with the correct params, once at mount and once at
       topOverlay: 'transparent',
       topTheme: 'dark'
     },
-    undefined
+    'unknown (onMount)'
   )
 
   unmount()
@@ -65,7 +65,7 @@ it('should call webviewIntent with the correct params, once at mount and once at
       topOverlay: 'transparent',
       topTheme: 'light'
     },
-    undefined
+    'unknown (onUnmount)'
   )
 })
 
@@ -105,7 +105,7 @@ it('should call webviewIntent with the correct params and forward the caller arg
       topOverlay: 'transparent',
       topTheme: 'dark'
     },
-    caller
+    caller + ' (onMount)'
   )
 
   unmount()
@@ -121,7 +121,7 @@ it('should call webviewIntent with the correct params and forward the caller arg
       topOverlay: 'transparent',
       topTheme: 'light'
     },
-    caller
+    caller + ' (onUnmount)'
   )
 })
 
@@ -139,7 +139,7 @@ it('should call webviewIntent with the correct params with few args, once at mou
     {
       bottomBackground: mockCSSValue
     },
-    undefined
+    'unknown (onMount)'
   )
 
   unmount()
@@ -150,7 +150,7 @@ it('should call webviewIntent with the correct params with few args, once at mou
     {
       bottomBackground: mockCSSValue
     },
-    undefined
+    'unknown (onUnmount)'
   )
 })
 
@@ -211,7 +211,7 @@ it('should refuse to call when no arg in second arg', () => {
     {
       bottomBackground: mockCSSValue
     },
-    undefined
+    'unknown (onMount)'
   )
 
   unmount()
@@ -277,7 +277,7 @@ it('should sanitize bad objects', () => {
     {
       topBackground: 'red'
     },
-    undefined
+    'unknown (onMount)'
   )
 
   unmount()
@@ -288,6 +288,6 @@ it('should sanitize bad objects', () => {
     {
       topBackground: 'blue'
     },
-    undefined
+    'unknown (onUnmount)'
   )
 })

@@ -2,11 +2,10 @@ import React from 'react'
 import { RemoveScroll } from 'react-remove-scroll'
 import { default as MUIDialog } from '@material-ui/core/Dialog'
 
+import themesStyles from '../../stylus/settings/palette.styl'
 import useBreakpoints from '../hooks/useBreakpoints'
 import { useCozyTheme } from '../CozyTheme'
-import themesStyles from '../../stylus/settings/palette.styl'
-import { isFlagshipApp } from 'cozy-device-helper'
-import { DialogEffects } from './DialogEffects'
+import { useDialogEffects } from './DialogEffects'
 
 const Dialog = props => {
   const { isMobile, isTablet } = useBreakpoints()
@@ -26,10 +25,10 @@ const Dialog = props => {
       : React.Fragment
   const cozyTheme = useCozyTheme()
 
+  useDialogEffects(props.fullScreen)
+
   return (
     <Wrapper>
-      {isFlagshipApp() && <DialogEffects fullScreen={props.fullScreen} />}
-
       <MUIDialog
         className={themesStyles[`CozyTheme--${cozyTheme}`]}
         {...props}
