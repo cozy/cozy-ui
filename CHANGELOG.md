@@ -1,3 +1,15 @@
+# [68.2.0](https://github.com/cozy/cozy-ui/compare/v68.1.1...v68.2.0) (2022-05-30)
+
+
+### Bug Fixes
+
+* Improve react-native calls ([bca2877](https://github.com/cozy/cozy-ui/commit/bca2877))
+
+
+### Features
+
+* Improve callername logging ([c2f0471](https://github.com/cozy/cozy-ui/commit/c2f0471))
+
 ## [68.1.1](https://github.com/cozy/cozy-ui/compare/v68.1.0...v68.1.1) (2022-05-25)
 
 
