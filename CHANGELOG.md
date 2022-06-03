@@ -1,3 +1,10 @@
+# [68.3.0](https://github.com/cozy/cozy-ui/compare/v68.2.0...v68.3.0) (2022-06-03)
+
+
+### Features
+
+* **ListItem:** Active ripple effect ([cd7e169](https://github.com/cozy/cozy-ui/commit/cd7e169))
+
 # [68.2.0](https://github.com/cozy/cozy-ui/compare/v68.1.1...v68.2.0) (2022-05-30)
 
 
