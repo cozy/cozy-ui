@@ -631,7 +631,7 @@ const makeOverrides = theme => ({
 
       // To keep muiV3 behavior
       // TODO check later if we need this behavior
-      '& > :not(:first-child):not(:first-child)': {
+      '&:not(.columnLayout) > :not(:first-child):not(:first-child)': {
         marginLeft: 4
       }
     }
