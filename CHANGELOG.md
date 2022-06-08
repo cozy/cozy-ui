@@ -1,3 +1,10 @@
+# [68.5.0](https://github.com/cozy/cozy-ui/compare/v68.4.0...v68.5.0) (2022-06-08)
+
+
+### Features
+
+* **DropdownText:** Add possibility to ellipsis text and pass more props ([8971e52](https://github.com/cozy/cozy-ui/commit/8971e52))
+
 # [68.4.0](https://github.com/cozy/cozy-ui/compare/v68.3.1...v68.4.0) (2022-06-08)
 
 
