@@ -168,7 +168,8 @@
     "react-popper": "^2.2.3",
     "react-remove-scroll": "^2.4.0",
     "react-select": "^4.3.0",
-    "react-swipeable-views": "^0.13.3"
+    "react-swipeable-views": "^0.13.3",
+    "rooks": "^5.11.2"
   },
   "peerDependencies": {
     "@material-ui/core": ">=4.12",
