@@ -1,7 +1,8 @@
-import React, { Component, useEffect, useState } from 'react'
+import React, { Component, useState } from 'react'
 import cx from 'classnames'
 import { withStyles } from '@material-ui/core/styles'
 import LinearProgress from '@material-ui/core/LinearProgress'
+import { useIntervalWhen } from 'rooks'
 
 import { splitFilename } from 'cozy-client/dist/models/file'
 
@@ -109,26 +110,14 @@ const QueueLinearProgress = withStyles({
 
 const FileUploadProgress = ({ progress: progressProps }) => {
   const [progress, setProgress] = useState(progressProps)
-  const [isWaiting, setIsWaiting] = useState(false)
-
-  useEffect(() => {
-    let interval
-    if (!isWaiting) {
+  useIntervalWhen(
+    () => {
       setProgress(progressProps)
-      interval = setInterval(() => {
-        setIsWaiting(false)
-      }, 1000)
-      setIsWaiting(true)
-    }
-    return () => {
-      if (interval) {
-        clearInterval(interval)
-      }
-      setIsWaiting(false)
-    }
-    // TODO: validate the deps are correct
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+    },
+    1000,
+    true,
+    true
+  )
 
   return (
     <div className={styles['upload-queue__upload-progress']}>
