@@ -1,3 +1,10 @@
+## [68.3.1](https://github.com/cozy/cozy-ui/compare/v68.3.0...v68.3.1) (2022-06-08)
+
+
+### Bug Fixes
+
+* **CozyDialogs:** Remove margin on action buttons for column layout ([6afd50f](https://github.com/cozy/cozy-ui/commit/6afd50f))
+
 # [68.3.0](https://github.com/cozy/cozy-ui/compare/v68.2.0...v68.3.0) (2022-06-03)
 
 
