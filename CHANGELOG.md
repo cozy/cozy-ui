@@ -1,3 +1,15 @@
+# [68.4.0](https://github.com/cozy/cozy-ui/compare/v68.3.1...v68.4.0) (2022-06-08)
+
+
+### Bug Fixes
+
+* **UploadQueue:** The progress bar changes correctly every second ([e57a609](https://github.com/cozy/cozy-ui/commit/e57a609))
+
+
+### Features
+
+* **Chore:** Add rooks lib to use useIntervalWhen hook ([256e86d](https://github.com/cozy/cozy-ui/commit/256e86d))
+
 ## [68.3.1](https://github.com/cozy/cozy-ui/compare/v68.3.0...v68.3.1) (2022-06-08)
 
 
