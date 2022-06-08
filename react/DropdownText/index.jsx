@@ -7,15 +7,20 @@ import Icon from '../Icon'
 import BottomIcon from '../Icons/Bottom'
 
 const useStyles = makeStyles(theme => ({
-  endIcon: {
-    marginLeft: '5px'
+  container: {
+    display: 'flex',
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: ({ spaceBetween }) =>
+      spaceBetween ? 'space-between' : 'left'
   },
   typography: {
+    color: ({ disabled }) =>
+      theme.palette.text[disabled ? 'disabled' : 'primary']
+  },
+  endIcon: {
     display: 'flex',
-    alignItems: 'center',
-    width: '100%',
-    justifyContent: ({ spaceBetween }) =>
-      spaceBetween ? 'space-between' : 'left',
+    marginLeft: '5px',
     color: ({ disabled }) =>
       theme.palette.text[disabled ? 'disabled' : 'primary']
   }
@@ -41,27 +46,39 @@ const DropdownText = forwardRef(
       spaceBetween = false,
       variant = 'body1',
       disabled = false,
+      noWrap = false,
+      color = 'primary',
       children,
+      innerTextProps,
+      innerIconContainerProps,
+      innerIconProps,
       ...props
     },
     ref
   ) => {
-    const styles = useStyles({ spaceBetween, disabled })
+    const styles = useStyles({ spaceBetween, disabled, color })
 
     return (
-      <Typography
-        ref={ref}
-        classes={{ root: styles.typography }}
-        variant={variant}
-        {...props}
-      >
-        {children}
-        <Icon
-          className={styles.endIcon}
-          icon={BottomIcon}
-          size={endIconSizeByVariant[variant]}
-        />
-      </Typography>
+      <div ref={ref} className={styles.container} {...props}>
+        <Typography
+          classes={{ root: styles.typography }}
+          variant={variant}
+          noWrap={noWrap}
+          {...innerTextProps}
+        >
+          {children}
+        </Typography>
+        <Typography
+          classes={{ root: styles.endIcon }}
+          {...innerIconContainerProps}
+        >
+          <Icon
+            icon={BottomIcon}
+            size={endIconSizeByVariant[variant]}
+            {...innerIconProps}
+          />
+        </Typography>
+      </div>
     )
   }
 )
@@ -73,6 +90,14 @@ DropdownText.propTypes = {
   variant: PropTypes.string,
   /** Whether the component is disabled */
   disabled: PropTypes.bool,
+  /** Whether using ellipsis on text */
+  noWrap: PropTypes.bool,
+  /** Props passed to the text */
+  innerTextProps: PropTypes.object,
+  /** Props passed to the icon container */
+  innerIconContainerProps: PropTypes.object,
+  /** Props passed to the icon */
+  innerIconProps: PropTypes.object,
   children: PropTypes.node
 }
 

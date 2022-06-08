@@ -43,6 +43,12 @@ const variants = [
       ))}
     </Grid>
   </Grid>
+  <DropdownText style={{ border: '1px solid var(--borderMainColor)', width: '150px', marginBottom: '1rem' }}  color="error">
+    This is a long text without ellipsis
+  </DropdownText>
+  <DropdownText noWrap style={{ border: '1px solid var(--borderMainColor)', width: '150px', marginBottom: '1rem' }}>
+    This is a long text with ellipsis
+  </DropdownText>
   <DropdownText spaceBetween style={{ border: '1px solid var(--borderMainColor)', width: '100%', marginBottom: '1rem' }}>
     Space between text and icon
   </DropdownText>
