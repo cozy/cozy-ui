@@ -87,25 +87,23 @@ export class AppLinker extends React.Component {
     const appInfo = NATIVE_APP_INFOS[slug]
 
     if (isFlagshipApp()) {
-      if (!context)
-        logger.warn(
-          'FlagshipApp detected but no context found. Is the app wrapped in <WebviewIntentProvider? />'
-        )
+      const imgPayload =
+        imgRef &&
+        JSON.stringify({
+          ...imgRef.getBoundingClientRect().toJSON()
+        })
 
-      if (context) {
-        const imgPayload =
-          imgRef &&
-          JSON.stringify({
-            ...imgRef.getBoundingClientRect().toJSON()
-          })
+      return {
+        onClick: event => {
+          event.preventDefault()
 
-        return {
-          onClick: event => {
-            event.preventDefault()
-            context.call('openApp', href, app, imgPayload)
-          },
-          href: '#'
-        }
+          context
+            ? context.call('openApp', href, app, imgPayload)
+            : logger.error(
+                `Failed to "openApp(${app})". WebviewService has the following falsy value "${context}" in AppLinker's context.`
+              )
+        },
+        href: '#'
       }
     }
 
