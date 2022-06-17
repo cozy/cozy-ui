@@ -473,7 +473,7 @@ const InfoModal = ({ icon }) => {
       <>
         <Typography variant='body1'>To import {iconName}, copy/paste the following line:</Typography>
         <pre>
-          import {iconName}Icon from 'cozy-ui/transpiled/react/icons/{iconName}'
+          import {iconName}Icon from 'cozy-ui/transpiled/react/Icons/{iconName}'
         </pre>
       </>
     }
