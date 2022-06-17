@@ -1,3 +1,10 @@
+## [68.5.1](https://github.com/cozy/cozy-ui/compare/v68.5.0...v68.5.1) (2022-06-17)
+
+
+### Bug Fixes
+
+* Reduce console spam by AppLinker ([27d9064](https://github.com/cozy/cozy-ui/commit/27d9064))
+
 # [68.5.0](https://github.com/cozy/cozy-ui/compare/v68.4.0...v68.5.0) (2022-06-08)
 
 
