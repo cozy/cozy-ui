@@ -92,6 +92,10 @@ If you want to add a new component, you must follow these steps:
 * If necessary you can add snapshots for it by modifying `react/examples.spec.jsx` and updating them `yarn build && yarn test -u`
 * Remember to propagate the possible `ref` with `React.forwardRef`. [See forwardRef documentation](https://en.reactjs.org/docs/forwarding-refs.html)
 
+### Rename/Move a component
+
+When renaming or moving a Cozy-UI component, it may cause a breaking change. In this case, you should provide a codemod as much as possible to fix it.
+
 ### Guidelines for component development
 
 * Use material UI whenever possible
