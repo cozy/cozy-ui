@@ -1,3 +1,10 @@
+# [68.6.0](https://github.com/cozy/cozy-ui/compare/v68.5.1...v68.6.0) (2022-06-23)
+
+
+### Features
+
+* **Icon:** Add hand icon ([c7c814f](https://github.com/cozy/cozy-ui/commit/c7c814f))
+
 ## [68.5.1](https://github.com/cozy/cozy-ui/compare/v68.5.0...v68.5.1) (2022-06-17)
 
 
