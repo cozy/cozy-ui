@@ -7462,7 +7462,7 @@ exports[`IconStack should render examples: IconStack 1`] = `
         <path d=\\"M18.5 0c-.276 0-.5.23-.5.5V8h7.5c.276 0 .5-.232.5-.5V7l-7-7h-.5z\\"></path>
       </g>
     </svg>
-    <div class=\\"styles__IconStack-foregroundIcon___ZvY-t optional-fg-wrapper-class\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" style=\\"fill: red;\\" width=\\"16\\" height=\\"16\\">
+    <div style=\\"margin-top: 3px;\\" class=\\"styles__IconStack-foregroundIcon___ZvY-t optional-fg-wrapper-class\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" style=\\"fill: red;\\" width=\\"16\\" height=\\"16\\">
         <path fill-rule=\\"evenodd\\" d=\\"M7.979 0L0 5.066v1.966h15.958V5.066L7.979 0zm4 13.063h2v-5h-2v5zm-5 0h2v-5h-2v5zm-5 0h2v-5h-2v5zm-1.979 3h15.958v-2H0v2z\\"></path>
       </svg></div>
   </div>
