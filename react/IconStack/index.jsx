@@ -8,7 +8,8 @@ const IconStack = ({
   backgroundClassName,
   foregroundClassName,
   backgroundIcon,
-  foregroundIcon
+  foregroundIcon,
+  offset
 }) => {
   return (
     <div
@@ -16,6 +17,7 @@ const IconStack = ({
     >
       {backgroundIcon}
       <div
+        style={{ marginTop: offset?.vertical, marginLeft: offset?.horizontal }}
         className={classNames(
           styles['IconStack-foregroundIcon'],
           foregroundClassName
