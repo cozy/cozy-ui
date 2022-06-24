@@ -3,7 +3,7 @@ import cx from 'classnames'
 
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Button from 'cozy-ui/transpiled/react/Button'
-import { MainTitle } from 'cozy-ui/transpiled/react/Text'
+import Typography from 'cozy-ui/transpiled/react/Typography'
 import Input from 'cozy-ui/transpiled/react/Input'
 
 import styles from './styles.styl'
@@ -58,12 +58,12 @@ export const WizardDescription = ({ children }) => {
 
 export const WizardTitle = ({ children, tag, className }) => {
   return (
-    <MainTitle
-      tag={tag || 'h1'}
+    <Typography
+      variant={tag || 'h3'}
       className={cx(styles['wizard-title'], className)}
     >
       {children}
-    </MainTitle>
+    </Typography>
   )
 }
 
