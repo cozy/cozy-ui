@@ -27,7 +27,7 @@ exports[`ContactRow should match the contact snapshot 1`] = `
       </span>
     </div>
     <p
-      className="MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline"
+      className="MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline"
     >
       <span
         className=""

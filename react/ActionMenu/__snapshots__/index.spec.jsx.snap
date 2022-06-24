@@ -128,7 +128,7 @@ exports[`ActionMenu should render as expected 1`] = `
       class="styles__bd___1Uv-F u-mr-1 u-stack-xs"
     >
       <p
-        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-gutterBottom"
       >
         Item 4
       </p>

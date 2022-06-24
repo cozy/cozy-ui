@@ -9,7 +9,6 @@ The inverted theme is not supported for several components but the work
 
 ```jsx
 import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
-import { Title, SubTitle } from 'cozy-ui/transpiled/react/Text'
 import Button from 'cozy-ui/transpiled/react/Button'
 import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons'
 import TextField from 'cozy-ui/transpiled/react/MuiCozyTheme/TextField'
@@ -29,8 +28,8 @@ const themesSupportingContext = [
 
 <CozyTheme variant='inverted' className='u-stack-m'>
   <Paper className='u-p-1'>
-    <Title className='u-white u-mb-1'>Inverted theme</Title>
-    <SubTitle className='u-white'>Buttons</SubTitle>
+    <Typography className='u-white u-mb-1' variant="h4">Inverted theme</Typography>
+    <Typography className='u-white' variant="h5">Buttons</Typography>
     {themesSupportingContext.map(theme =>
       <p key={theme}>{
         props.map(
@@ -38,13 +37,13 @@ const themesSupportingContext = [
         )
       }</p>
     )}
-    <SubTitle className='u-white u-mt-1'>BarButton</SubTitle>
+    <Typography className='u-white u-mt-1' variant="h5">BarButton</Typography>
     <BarButton icon={DotsIcon} />
-    <SubTitle className='u-white u-mb-1'>MUI Buttons</SubTitle>
+    <Typography className='u-white u-mb-1' variant="h5">MUI Buttons</Typography>
     <MuiButton variant='outlined' color='primary'>
       A MUI button
     </MuiButton>
-    <SubTitle className='u-white u-mt-1'>MUI TextField</SubTitle>
+    <Typography className='u-white u-mt-1' variant="h5">MUI TextField</Typography>
     <TextField
       id="inverted-field"
       label="A field"
@@ -53,7 +52,7 @@ const themesSupportingContext = [
       variant="outlined"
       placeholder="placeholder"
     />
-    <SubTitle className='u-white u-mt-1'>Normal theme inside inverted theme</SubTitle>
+    <Typography className='u-white u-mt-1' variant="h5">Normal theme inside inverted theme</Typography>
     <CozyTheme variant='normal'>
       <Paper className='u-p-1 u-mv-1'>
           <Typography variant='body1'>
