@@ -1,3 +1,10 @@
+# [68.7.0](https://github.com/cozy/cozy-ui/compare/v68.6.0...v68.7.0) (2022-06-27)
+
+
+### Features
+
+* **IconStack:** Add offset prop ([2e22160](https://github.com/cozy/cozy-ui/commit/2e22160))
+
 # [68.6.0](https://github.com/cozy/cozy-ui/compare/v68.5.1...v68.6.0) (2022-06-23)
 
 
