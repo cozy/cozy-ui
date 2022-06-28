@@ -1,3 +1,10 @@
+# [68.8.0](https://github.com/cozy/cozy-ui/compare/v68.7.0...v68.8.0) (2022-06-28)
+
+
+### Features
+
+* **Icon:** Add paper icon ([c17df6f](https://github.com/cozy/cozy-ui/commit/c17df6f))
+
 # [68.7.0](https://github.com/cozy/cozy-ui/compare/v68.6.0...v68.7.0) (2022-06-27)
 
 
