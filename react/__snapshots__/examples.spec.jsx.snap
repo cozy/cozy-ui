@@ -3878,7 +3878,7 @@ exports[`Icon should render examples: Icon 1`] = `
       <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1\\">SelectAll</p>
     </div>
     <div class=\\"makeStyles-iconTile-87 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-        <path fill-rule=\\"evenodd\\" d=\\"M0 13v2h5v-2H0zM0 1v2h9V1H0zm9 15v-1h7v-2H9v-1H7v4h2zM3 6v1H0v2h3v1h2V6H3zm13 3V7H7v2h9zm-5-5h2V3h3V1h-3V0h-2v4z\\"></path>
+        <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M13.855 5a3.502 3.502 0 01-6.71 0H1a1 1 0 010-2h6.145a3.502 3.502 0 016.71 0H15a1 1 0 110 2h-1.145zM12 4a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM5.5 15.5A3.502 3.502 0 008.855 13H15a1 1 0 100-2H8.855a3.502 3.502 0 00-6.71 0H1a1 1 0 100 2h1.145A3.502 3.502 0 005.5 15.5zM7 12a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z\\"></path>
       </svg>
       <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1\\">Setting</p>
     </div>
@@ -5131,7 +5131,7 @@ exports[`Icon should render examples: Icon 3`] = `
           <path fill-rule=\\"evenodd\\" d=\\"M14.7 8.713a1 1 0 1 0-1.4-1.427l-4.391 4.312L7.7 10.411A.999.999 0 1 0 6.3 11.838l1.909 1.875a.997.997 0 0 0 1.4 0l5.092-5zM15 4c.55 0 1 .45 1 1v10c0 .55-.45 1-1 1H5c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1h10zm-3-2H5C3.346 2 2 3.346 2 5v7H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1v1z\\"></path>
         </symbol>
         <symbol id=\\"setting\\" viewBox=\\"0 0 16 16\\">
-          <path fill-rule=\\"evenodd\\" d=\\"M0 13v2h5v-2H0zM0 1v2h9V1H0zm9 15v-1h7v-2H9v-1H7v4h2zM3 6v1H0v2h3v1h2V6H3zm13 3V7H7v2h9zm-5-5h2V3h3V1h-3V0h-2v4z\\"></path>
+          <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M13.855 5a3.502 3.502 0 0 1-6.71 0H1a1 1 0 0 1 0-2h6.145a3.502 3.502 0 0 1 6.71 0H15a1 1 0 1 1 0 2h-1.145ZM12 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM5.5 15.5A3.502 3.502 0 0 0 8.855 13H15a1 1 0 1 0 0-2H8.855a3.502 3.502 0 0 0-6.71 0H1a1 1 0 1 0 0 2h1.145A3.502 3.502 0 0 0 5.5 15.5ZM7 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z\\"></path>
         </symbol>
         <symbol id=\\"share-circle\\" viewBox=\\"0 0 16 16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM6.541 6.92a1.5 1.5 0 1 0 0 2.16l2.47 1.235a1.5 1.5 0 1 0 .447-.894l-2.47-1.236a1.515 1.515 0 0 0 0-.37l2.47-1.235a1.5 1.5 0 1 0-.447-.894L6.541 6.92z\\"></path>
@@ -6264,7 +6264,7 @@ exports[`Icon should render examples: Icon 6`] = `
           <path fill-rule=\\"evenodd\\" d=\\"M14.7 8.713a1 1 0 1 0-1.4-1.427l-4.391 4.312L7.7 10.411A.999.999 0 1 0 6.3 11.838l1.909 1.875a.997.997 0 0 0 1.4 0l5.092-5zM15 4c.55 0 1 .45 1 1v10c0 .55-.45 1-1 1H5c-.55 0-1-.45-1-1V5c0-.55.45-1 1-1h10zm-3-2H5C3.346 2 2 3.346 2 5v7H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1v1z\\"></path>
         </symbol>
         <symbol id=\\"setting\\" viewBox=\\"0 0 16 16\\">
-          <path fill-rule=\\"evenodd\\" d=\\"M0 13v2h5v-2H0zM0 1v2h9V1H0zm9 15v-1h7v-2H9v-1H7v4h2zM3 6v1H0v2h3v1h2V6H3zm13 3V7H7v2h9zm-5-5h2V3h3V1h-3V0h-2v4z\\"></path>
+          <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M13.855 5a3.502 3.502 0 0 1-6.71 0H1a1 1 0 0 1 0-2h6.145a3.502 3.502 0 0 1 6.71 0H15a1 1 0 1 1 0 2h-1.145ZM12 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM5.5 15.5A3.502 3.502 0 0 0 8.855 13H15a1 1 0 1 0 0-2H8.855a3.502 3.502 0 0 0-6.71 0H1a1 1 0 1 0 0 2h1.145A3.502 3.502 0 0 0 5.5 15.5ZM7 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z\\"></path>
         </symbol>
         <symbol id=\\"share-circle\\" viewBox=\\"0 0 16 16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM6.541 6.92a1.5 1.5 0 1 0 0 2.16l2.47 1.235a1.5 1.5 0 1 0 .447-.894l-2.47-1.236a1.515 1.515 0 0 0 0-.37l2.47-1.235a1.5 1.5 0 1 0-.447-.894L6.541 6.92z\\"></path>
