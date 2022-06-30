@@ -1,3 +1,10 @@
+## [68.9.1](https://github.com/cozy/cozy-ui/compare/v68.9.0...v68.9.1) (2022-06-30)
+
+
+### Bug Fixes
+
+* **ListSubheader:** Only 1rem of text indent on mobile ([af38d1d](https://github.com/cozy/cozy-ui/commit/af38d1d))
+
 # [68.9.0](https://github.com/cozy/cozy-ui/compare/v68.8.0...v68.9.0) (2022-06-30)
 
 
