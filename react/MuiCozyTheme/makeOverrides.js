@@ -432,14 +432,17 @@ const makeOverrides = theme => ({
       padding: 0,
       height: '2rem',
       backgroundColor: theme.palette.background.paper,
-      textIndent: '2rem',
+      textIndent: '1rem',
       fontWeight: 'bold',
       fontSize: '.75rem',
       textTransform: 'uppercase',
       alignItems: 'center',
       display: 'flex',
       lineHeight: 1.33,
-      color: theme.palette.text.secondary
+      color: theme.palette.text.secondary,
+      [theme.breakpoints.up('sm')]: {
+        textIndent: '2rem'
+      }
     },
     gutters: {
       paddingLeft: 0,
