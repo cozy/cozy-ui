@@ -1,3 +1,10 @@
+# [68.9.0](https://github.com/cozy/cozy-ui/compare/v68.8.0...v68.9.0) (2022-06-30)
+
+
+### Features
+
+* **Icon:** Change `setting` icon ([32f4d5a](https://github.com/cozy/cozy-ui/commit/32f4d5a))
+
 # [68.8.0](https://github.com/cozy/cozy-ui/compare/v68.7.0...v68.8.0) (2022-06-28)
 
 
