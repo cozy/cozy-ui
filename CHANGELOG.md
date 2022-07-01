@@ -1,3 +1,19 @@
+# [69.0.0](https://github.com/cozy/cozy-ui/compare/v68.9.1...v69.0.0) (2022-07-01)
+
+
+### Bug Fixes
+
+* **Typography:** Removed forced color ([1880d93](https://github.com/cozy/cozy-ui/commit/1880d93))
+
+
+### BREAKING CHANGES
+
+* **Typography:** Old deprecated texts components are removed : `Text`, `Title`, `MainTitle`, `SubTitle`, `Bold`, `Uppercase`, `Caption`, `ErrorMessage`, `NewSubTitle` from `/react/Text`. You now have to rely on `Typography` component. You can use a codemod for that :
+```
+$ yarn global add @cozy/codemods
+$ jscodeshift -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/transform-typography.js src --parser babel --ignore-pattern=src/targets/ --extensions js,jsx
+```
+
 ## [68.9.1](https://github.com/cozy/cozy-ui/compare/v68.9.0...v68.9.1) (2022-06-30)
 
 
