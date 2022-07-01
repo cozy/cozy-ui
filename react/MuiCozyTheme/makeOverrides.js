@@ -922,6 +922,12 @@ const makeOverrides = theme => ({
       width: '100%',
       fontWeight: 'bold'
     }
+  },
+  MuiSnackbarContent: {
+    root: {
+      padding: '4px 12px',
+      backgroundColor: theme.palette.grey[600]
+    }
   }
 })
 
@@ -996,6 +1002,13 @@ const makeInvertedOverrides = invertedTheme => {
           '&-warning': makeAlertInvertedColor(invertedTheme, 'warning'),
           '&-info': makeAlertInvertedColor(invertedTheme, 'info')
         }
+      }
+    },
+    MuiSnackbarContent: {
+      ...makeOverrides(invertedTheme).MuiSnackbarContent,
+      root: {
+        ...makeOverrides(invertedTheme).MuiSnackbarContent.root,
+        backgroundColor: invertedTheme.palette.grey[200]
       }
     }
   }
