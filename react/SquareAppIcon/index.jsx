@@ -149,7 +149,11 @@ SquareAppIcon.propTypes = {
     'maintenance',
     'error',
     'add',
-    'shortcut'
+    'shortcut',
+    'executing', // IDLE => RUNNING
+    'ending', // RUNNING => IDLE
+    'failing', // IDLE => error
+    'succeeding' // IDLE => success
   ]),
   IconContent: PropTypes.node
 }

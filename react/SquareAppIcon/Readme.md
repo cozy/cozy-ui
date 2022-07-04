@@ -11,7 +11,14 @@ import cloudWallpaper from '../../docs/cloud-wallpaper.jpg'
 
 const theme = useCozyTheme()
 const app = { name: "Test App", slug: "testapp", type: "app" }
+const executeKonnector = () => setState({ variant: 'executing' })
+const endKonnector = () => setState({ variant: 'ending' })
+const succeedKonnector = () => setState({ variant: 'succeeding' })
+const failKonnector = () => setState({ variant: 'failing' })
 
+initialState = {
+  variant: undefined
+};
 ;
 
 
@@ -56,5 +63,12 @@ const app = { name: "Test App", slug: "testapp", type: "app" }
         </Grid>
     )} />
   </Grid>
+  <Grid item>
+    <SquareAppIcon app={app} variant={state.variant} name={state.variant ? ' Konnector executing' : 'Normal'} type="konnector" />
+  </Grid>
+  <button onClick={executeKonnector}>EXECUTE KONNECTOR</button>
+  <button onClick={endKonnector}>END KONNECTOR</button>
+  <button onClick={succeedKonnector}>SUCCEED KONNECTOR</button>
+  <button onClick={failKonnector}>FAIL KONNECTOR</button>
 </Grid>
 ```
