@@ -1,3 +1,10 @@
+# [69.1.0](https://github.com/cozy/cozy-ui/compare/v69.0.0...v69.1.0) (2022-07-05)
+
+
+### Features
+
+* **Icon:** Add new tag icon ([514402f](https://github.com/cozy/cozy-ui/commit/514402f))
+
 # [69.0.0](https://github.com/cozy/cozy-ui/compare/v68.9.1...v69.0.0) (2022-07-01)
 
 
