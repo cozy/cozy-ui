@@ -27,14 +27,14 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
         <Grid item xs={12} sm={6} className="u-mb-1" key={JSON.stringify(column)}>
           <Stack spacing="s">
             <Typography>{Object.values(column)[0]}</Typography>
-            <p>
+            <div>
               <Chip
                 label="Simple chip"
                 disabled={Object.values(column)[1]}
                 variant={Object.keys(variant).find(key => variant[key])}
               />
-            </p>
-            <p>
+            </div>
+            <div>
               <Chip
                 icon={<Icon icon={FileOutlineIcon} className="u-ml-half" />}
                 label="Clickable chip"
@@ -42,16 +42,16 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
                 disabled={Object.values(column)[1]}
                 variant={Object.keys(variant).find(key => variant[key])}
               />
-            </p>
-            <p>
+            </div>
+            <div>
               <Chip
                 avatar={<Avatar textId="Ada Lovelace" text="AL" size='xsmall' />}
                 label="Avatar chip"
                 disabled={Object.values(column)[1]}
                 variant={Object.keys(variant).find(key => variant[key])}
               />
-            </p>
-            <p>
+            </div>
+            <div>
               <Chip
                 label="Deletable chip"
                 clickable
@@ -59,8 +59,8 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
                 disabled={Object.values(column)[1]}
                 variant={Object.keys(variant).find(key => variant[key])}
               />
-            </p>
-            <p>
+            </div>
+            <div>
               <Chip
                 icon={<Icon icon={FileOutlineIcon} className="u-ml-half" />}
                 label="Deletable chip with icon"
@@ -69,8 +69,8 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
                 disabled={Object.values(column)[1]}
                 variant={Object.keys(variant).find(key => variant[key])}
               />
-            </p>
-            <p>
+            </div>
+            <div>
               <Chip
                 icon={<Icon icon={FileOutlineIcon} className="u-ml-half" />}
                 label="1 invoice"
@@ -81,14 +81,25 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
                 disabled={Object.values(column)[1]}
                 variant={Object.keys(variant).find(key => variant[key])}
               />
-            </p>
-            <p>
+            </div>
+            <div>
+              <Chip
+                className="u-ml-1"
+                icon={<Icon icon={FileOutlineIcon} className="u-ml-half" />}
+                label="Deletable chip with icon and class"
+                clickable
+                onDelete={() => alert('You clicked on delete icon')}
+                disabled={Object.values(column)[1]}
+                variant={Object.keys(variant).find(key => variant[key])}
+              />
+            </div>
+            <div>
               <Chip
                 icon={<Icon icon={RightIcon} />}
                 disabled={Object.values(column)[1]}
                 variant={Object.keys(variant).find(key => variant[key])}
               />
-            </p>
+            </div>
           </Stack>
         </Grid>
       )}
@@ -124,7 +135,7 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
         <Grid item xs={12} sm={6} md={3} className="u-mb-1" key={JSON.stringify(color)}>
           <Stack spacing="s">
             <Typography>{color}</Typography>
-            <p>
+            <div>
               <Chip
                 icon={<Icon icon={FileOutlineIcon} className="u-ml-half" />}
                 label="1 invoice"
@@ -135,8 +146,8 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
                 color={color}
                 variant={Object.keys(variant).find(key => variant[key])}
               />
-            </p>
-            <p>
+            </div>
+            <div>
               <Chip
                 icon={<Icon icon={FileOutlineIcon} className="u-ml-half" />}
                 label="1 invoice"
@@ -148,7 +159,7 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
                 disabled
                 variant={Object.keys(variant).find(key => variant[key])}
               />
-            </p>
+            </div>
           </Stack>
         </Grid>
       )}
