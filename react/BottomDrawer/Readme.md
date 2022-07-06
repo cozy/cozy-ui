@@ -1,25 +1,34 @@
 Displays content coming up from the bottom of the screen.
 
 ```jsx
-import BottomDrawer from 'cozy-ui/transpiled/react/BottomDrawer';
-import Card from 'cozy-ui/transpiled/react/Card';
-import Button from 'cozy-ui/transpiled/react/Button';
-import Typography from "cozy-ui/transpiled/react/Typography";
+import BottomDrawer from 'cozy-ui/transpiled/react/BottomDrawer'
+import Paper from 'cozy-ui/transpiled/react/Paper'
+import Button from 'cozy-ui/transpiled/react/Buttons'
+import Typography from "cozy-ui/transpiled/react/Typography"
+import Variants from 'cozy-ui/docs/components/Variants'
 
-initialState = { isDrawerDisplayed: isTesting() };
+const initialState = { isDrawerDisplayed: isTesting() }
+const initialVariants = [{ longText: false }]
 
 const showDrawer = () => setState({ isDrawerDisplayed: true });
-const hideDrawer = () => setState({ isDrawerDisplayed: false });
+const hideDrawer = () => setState({ isDrawerDisplayed: false })
 
-<div>
-  <Button onClick={showDrawer}>Open drawer</Button>
-  {state.isDrawerDisplayed &&
-    <BottomDrawer onClose={hideDrawer}>
-      <Card className="u-bg-white">
-        <Typography className="u-mb-1" variant="h5">This is a card in a drawer</Typography>
-        <Typography className="u-mb-1" variant="body1">This is some card content. Content can be small or huge.</Typography>
-        <Button className="u-ml-0" label="Demo button" />
-      </Card>
-  </BottomDrawer>}
-</div>
+;
+
+<Variants initialVariants={initialVariants}>
+  {variant => (
+    <>
+      <Button variant="ghost" size="small" onClick={showDrawer} label="Open drawer" />
+
+      {state.isDrawerDisplayed &&
+        <BottomDrawer onClose={hideDrawer}>
+          <Paper className="u-p-1" style={{ borderRadius: '1rem 1rem 0 0' }}>
+            <Typography variant="h5" paragraph>This is a paper in a drawer</Typography>
+            <Typography paragraph>{variant.longText ? content.ada.long : content.ada.short}</Typography>
+            <Button label="Demo button" onClick={() => console.info('huhu')} />
+          </Paper>
+      </BottomDrawer>}
+    </>
+  )}
+</Variants>
 ```
