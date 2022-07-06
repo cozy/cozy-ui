@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, createRef } from 'react'
 import PropTypes from 'prop-types'
 import Hammer from 'hammerjs'
 import once from 'lodash/once'
@@ -13,6 +13,8 @@ class BottomDrawer extends Component {
   constructor(props) {
     super(props)
     this.state = { closing: false }
+    this.menuRef = createRef()
+    this.wrapperRef = createRef()
   }
 
   componentDidMount() {
@@ -22,7 +24,7 @@ class BottomDrawer extends Component {
 
   componentWillUnmount() {
     this.gesturesHandler.destroy()
-    this.menuNode.current.style = '' // Drops the node style in case it gets recycled, see https://github.com/cozy/cozy-ui/pull/602
+    this.menuRef.current.style = '' // Drops the node style in case it gets recycled, see https://github.com/cozy/cozy-ui/pull/602
   }
 
   initialAppear() {
@@ -35,21 +37,21 @@ class BottomDrawer extends Component {
   }
 
   turnTransitionsOn() {
-    this.menuNode.current.classList.add(styles['with-transition'])
+    this.menuRef.current.classList.add(styles['with-transition'])
   }
 
   turnTransitionsOff() {
-    this.menuNode.current.classList.remove(styles['with-transition'])
+    this.menuRef.current.classList.remove(styles['with-transition'])
   }
 
   attachEvents() {
-    this.gesturesHandler = new Hammer.Manager(this.wrapperNode.current, {
+    this.gesturesHandler = new Hammer.Manager(this.wrapperRef.current, {
       recognizers: [[Hammer.Pan, { direction: Hammer.DIRECTION_VERTICAL }]]
     })
 
     // to be completely accurate, `maximumGestureDelta` should be the difference between the top of the menu and the
     // bottom of the page; but using the height is much easier to compute and accurate enough.
-    const maximumGestureDistance = this.menuNode.current.getBoundingClientRect()
+    const maximumGestureDistance = this.menuRef.current.getBoundingClientRect()
       .height
     // between 0 and 1, how far down the gesture must be to be considered complete upon release
     const minimumCloseDistance = 0.6
@@ -97,47 +99,47 @@ class BottomDrawer extends Component {
   applyTransformation(progress) {
     // constrain between 0 and 1.1 (go a bit further than 1 to be hidden completely)
     const progressToApply = Math.min(1.1, Math.max(0, progress))
-    this.menuNode.current.style.transform =
+    this.menuRef.current.style.transform =
       'translateY(' + progressToApply * 100 + '%)'
   }
 
   animateClose = () => {
+    const { current: menuNode } = this.menuRef
     this.setState({ closing: true })
 
     // we need to transition the menu to the bottom before dismissing it
-    const close = once(() => {
-      this.menuNode.current &&
-        this.menuNode.current.removeEventListener('transitionend', close)
-      this.close()
-    })
+    const close = menuNode =>
+      once(() => {
+        menuNode?.removeEventListener('transitionend', close(menuNode))
+        this.close()
+      })
 
-    this.menuNode.current &&
-      this.menuNode.current.addEventListener('transitionend', close, false)
+    menuNode?.addEventListener('transitionend', close(menuNode), false)
     // in case transitionend is not called, for example if the element is removed
-    setTimeout(close, TRANSITION_DURATION)
+    setTimeout(close(menuNode), TRANSITION_DURATION)
 
     this.applyTransformation(1.1)
   }
 
   close = () => {
+    const { onClose } = this.props
     this.setState({ closing: true })
-    this.props.onClose && this.props.onClose()
+    onClose && onClose()
   }
 
   render() {
     const { children } = this.props
     const { closing } = this.state
-    this.menuNode = React.createRef()
-    this.wrapperNode = React.createRef()
+
     return (
       <RemoveScroll>
-        <div ref={this.wrapperNode}>
+        <div ref={this.wrapperRef}>
           <Overlay
             style={{ opacity: closing ? 0 : 1 }}
             onClick={this.animateClose}
             onEscape={this.animateClose}
           >
-            <div ref={this.menuNode} className={styles['BottomDrawer-content']}>
+            <div ref={this.menuRef} className={styles['BottomDrawer-content']}>
               {children}
             </div>
           </Overlay>
