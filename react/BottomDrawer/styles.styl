@@ -8,11 +8,12 @@
     @extends $transition-transform-ease-out
 
 .BottomDrawer-content
-    z-index        $drawer-index
-    position       fixed
-    bottom         0
-    left           0
-    right          0
-    width          100%
-    margin         0
-
+    z-index $drawer-index
+    position fixed
+    bottom 0
+    left 0
+    right 0
+    width 100%
+    margin 0
+    max-height 100vh
+    overflow-y auto
