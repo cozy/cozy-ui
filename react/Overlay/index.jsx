@@ -7,7 +7,7 @@ import { RemoveScroll } from 'react-remove-scroll'
 
 const ESC_KEYCODE = 27
 
-const nonDOMProps = ['onEscape', 'children', 'className']
+const nonDOMProps = ['onEscape', 'children', 'className', 'innerRef']
 
 const bodyTallerThanWindow = () => {
   return document.body.getBoundingClientRect().height > window.innerHeight
@@ -45,7 +45,7 @@ class Overlay extends Component {
   }
 
   render() {
-    const { children, className } = this.props
+    const { children, className, innerRef } = this.props
     const domProps = omit(this.props, nonDOMProps)
     // We use Overlay when opening an ActionMenu.
     // We don't want to block the scroll on Desktop if the ActionMenu
@@ -53,10 +53,12 @@ class Overlay extends Component {
     // @todo Overlay should not RemoveScroll by itself. It should
     // be done by lower component (like ActionMenu / Dialog / Modal...)
     const Wrapper = bodyTallerThanWindow() ? React.Fragment : RemoveScroll
+
     return (
       <div
-        onClick={this.handleClick}
+        ref={innerRef}
         className={cx(styles['c-overlay'], className)}
+        onClick={this.handleClick}
         {...domProps}
       >
         <Wrapper>{children}</Wrapper>
@@ -71,4 +73,6 @@ Overlay.propTypes = {
   onEscape: PropTypes.func
 }
 
-export default Overlay
+export default React.forwardRef((props, ref) => (
+  <Overlay innerRef={ref} {...props} />
+))
