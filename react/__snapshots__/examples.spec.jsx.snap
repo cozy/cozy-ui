@@ -630,85 +630,99 @@ exports[`Chips should render examples: Chips 1`] = `
     <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6\\">
       <div class=\\"styles__Stack--s___22WMg\\">
         <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">default</p>
-        <p>
+        <div>
           <div class=\\"MuiChip-root customColor-primary MuiChip-outlined\\"><span class=\\"MuiChip-label\\">Simple chip</span></div>
-        </p>
-        <p>
+        </div>
+        <div>
           <div class=\\"MuiButtonBase-root MuiChip-root customColor-primary MuiChip-outlined MuiChip-clickable\\" tabindex=\\"0\\" role=\\"button\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M13 5h-3V2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V5zm2-.999v11.003a1 1 0 01-1.007.996H2.007A1.001 1.001 0 011 14.999V1.001A.999.999 0 011.998 0H11l4 4.001z\\"></path>
             </svg><span class=\\"MuiChip-label\\">Clickable chip</span></div>
-        </p>
-        <p>
+        </div>
+        <div>
           <div class=\\"MuiChip-root customColor-primary MuiChip-outlined\\">
             <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna MuiChip-avatar\\" style=\\"background-color: rgb(253, 116, 97); --circleSize: 16px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AL</span></div><span class=\\"MuiChip-label\\">Avatar chip</span>
           </div>
-        </p>
-        <p>
+        </div>
+        <div>
           <div class=\\"MuiButtonBase-root MuiChip-root customColor-primary MuiChip-outlined MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\"><span class=\\"MuiChip-label\\">Deletable chip</span><svg class=\\"MuiSvgIcon-root MuiChip-deleteIcon\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\">
               <path d=\\"M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z\\"></path>
             </svg></div>
-        </p>
-        <p>
+        </div>
+        <div>
           <div class=\\"MuiButtonBase-root MuiChip-root customColor-primary MuiChip-outlined MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M13 5h-3V2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V5zm2-.999v11.003a1 1 0 01-1.007.996H2.007A1.001 1.001 0 011 14.999V1.001A.999.999 0 011.998 0H11l4 4.001z\\"></path>
             </svg><span class=\\"MuiChip-label\\">Deletable chip with icon</span><svg class=\\"MuiSvgIcon-root MuiChip-deleteIcon\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\">
               <path d=\\"M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z\\"></path>
             </svg></div>
-        </p>
-        <p>
+        </div>
+        <div>
           <div class=\\"MuiButtonBase-root MuiChip-root customColor-primary MuiChip-outlined MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M13 5h-3V2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V5zm2-.999v11.003a1 1 0 01-1.007.996H2.007A1.001 1.001 0 011 14.999V1.001A.999.999 0 011.998 0H11l4 4.001z\\"></path>
             </svg><span class=\\"MuiChip-label\\">1 invoice</span><svg viewBox=\\"0 0 16 16\\" class=\\"u-h-1 MuiChip-deleteIcon styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path d=\\"M9 0v2h3.5L6 8.5 7.5 10 14 3.5V7h2V1.003A.996.996 0 0014.997 0H9zM7 2V0H1.003A1 1 0 000 1v14c0 .552.445 1 1 1h14c.552 0 1-.438 1-1.003V9h-2v5H2V2h5z\\" fill-rule=\\"evenodd\\"></path>
             </svg></div>
-        </p>
-        <p>
+        </div>
+        <div>
+          <div class=\\"MuiButtonBase-root MuiChip-root u-ml-1 customColor-primary MuiChip-outlined MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+              <path fill-rule=\\"evenodd\\" d=\\"M13 5h-3V2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V5zm2-.999v11.003a1 1 0 01-1.007.996H2.007A1.001 1.001 0 011 14.999V1.001A.999.999 0 011.998 0H11l4 4.001z\\"></path>
+            </svg><span class=\\"MuiChip-label\\">Deletable chip with icon and class</span><svg class=\\"MuiSvgIcon-root MuiChip-deleteIcon\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\">
+              <path d=\\"M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z\\"></path>
+            </svg></div>
+        </div>
+        <div>
           <div class=\\"MuiChip-root noLabel customColor-primary MuiChip-outlined\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M12.707 7.293l-6-6a.999.999 0 10-1.414 1.414L10.586 8l-5.293 5.293a.999.999 0 101.414 1.414l6-6a.999.999 0 000-1.414\\"></path>
             </svg><span class=\\"MuiChip-label\\"></span></div>
-        </p>
+        </div>
       </div>
     </div>
     <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6\\">
       <div class=\\"styles__Stack--s___22WMg\\">
         <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">disabled</p>
-        <p>
+        <div>
           <div class=\\"MuiChip-root customColor-primary MuiChip-outlined Mui-disabled\\" aria-disabled=\\"true\\"><span class=\\"MuiChip-label\\">Simple chip</span></div>
-        </p>
-        <p>
+        </div>
+        <div>
           <div class=\\"MuiButtonBase-root MuiChip-root customColor-primary MuiChip-outlined Mui-disabled MuiChip-clickable\\" tabindex=\\"0\\" role=\\"button\\" aria-disabled=\\"true\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M13 5h-3V2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V5zm2-.999v11.003a1 1 0 01-1.007.996H2.007A1.001 1.001 0 011 14.999V1.001A.999.999 0 011.998 0H11l4 4.001z\\"></path>
             </svg><span class=\\"MuiChip-label\\">Clickable chip</span></div>
-        </p>
-        <p>
+        </div>
+        <div>
           <div class=\\"MuiChip-root customColor-primary MuiChip-outlined Mui-disabled\\" aria-disabled=\\"true\\">
             <div class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna MuiChip-avatar\\" style=\\"background-color: rgb(253, 116, 97); --circleSize: 16px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AL</span></div><span class=\\"MuiChip-label\\">Avatar chip</span>
           </div>
-        </p>
-        <p>
+        </div>
+        <div>
           <div class=\\"MuiButtonBase-root MuiChip-root customColor-primary MuiChip-outlined Mui-disabled MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\" aria-disabled=\\"true\\"><span class=\\"MuiChip-label\\">Deletable chip</span><svg class=\\"MuiSvgIcon-root MuiChip-deleteIcon\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\">
               <path d=\\"M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z\\"></path>
             </svg></div>
-        </p>
-        <p>
+        </div>
+        <div>
           <div class=\\"MuiButtonBase-root MuiChip-root customColor-primary MuiChip-outlined Mui-disabled MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\" aria-disabled=\\"true\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M13 5h-3V2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V5zm2-.999v11.003a1 1 0 01-1.007.996H2.007A1.001 1.001 0 011 14.999V1.001A.999.999 0 011.998 0H11l4 4.001z\\"></path>
             </svg><span class=\\"MuiChip-label\\">Deletable chip with icon</span><svg class=\\"MuiSvgIcon-root MuiChip-deleteIcon\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\">
               <path d=\\"M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z\\"></path>
             </svg></div>
-        </p>
-        <p>
+        </div>
+        <div>
           <div class=\\"MuiButtonBase-root MuiChip-root customColor-primary MuiChip-outlined Mui-disabled MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\" aria-disabled=\\"true\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M13 5h-3V2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V5zm2-.999v11.003a1 1 0 01-1.007.996H2.007A1.001 1.001 0 011 14.999V1.001A.999.999 0 011.998 0H11l4 4.001z\\"></path>
             </svg><span class=\\"MuiChip-label\\">1 invoice</span><svg viewBox=\\"0 0 16 16\\" class=\\"u-h-1 MuiChip-deleteIcon styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path d=\\"M9 0v2h3.5L6 8.5 7.5 10 14 3.5V7h2V1.003A.996.996 0 0014.997 0H9zM7 2V0H1.003A1 1 0 000 1v14c0 .552.445 1 1 1h14c.552 0 1-.438 1-1.003V9h-2v5H2V2h5z\\" fill-rule=\\"evenodd\\"></path>
             </svg></div>
-        </p>
-        <p>
+        </div>
+        <div>
+          <div class=\\"MuiButtonBase-root MuiChip-root u-ml-1 customColor-primary MuiChip-outlined Mui-disabled MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\" aria-disabled=\\"true\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+              <path fill-rule=\\"evenodd\\" d=\\"M13 5h-3V2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V5zm2-.999v11.003a1 1 0 01-1.007.996H2.007A1.001 1.001 0 011 14.999V1.001A.999.999 0 011.998 0H11l4 4.001z\\"></path>
+            </svg><span class=\\"MuiChip-label\\">Deletable chip with icon and class</span><svg class=\\"MuiSvgIcon-root MuiChip-deleteIcon\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\">
+              <path d=\\"M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z\\"></path>
+            </svg></div>
+        </div>
+        <div>
           <div class=\\"MuiChip-root noLabel customColor-primary MuiChip-outlined Mui-disabled\\" aria-disabled=\\"true\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M12.707 7.293l-6-6a.999.999 0 10-1.414 1.414L10.586 8l-5.293 5.293a.999.999 0 101.414 1.414l6-6a.999.999 0 000-1.414\\"></path>
             </svg><span class=\\"MuiChip-label\\"></span></div>
-        </p>
+        </div>
       </div>
     </div>
   </div>
@@ -725,77 +739,77 @@ exports[`Chips should render examples: Chips 2`] = `
     <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
       <div class=\\"styles__Stack--s___22WMg\\">
         <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">success</p>
-        <p>
+        <div>
           <div class=\\"MuiButtonBase-root MuiChip-root customColor-success MuiChip-outlined MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M13 5h-3V2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V5zm2-.999v11.003a1 1 0 01-1.007.996H2.007A1.001 1.001 0 011 14.999V1.001A.999.999 0 011.998 0H11l4 4.001z\\"></path>
             </svg><span class=\\"MuiChip-label\\">1 invoice</span><svg viewBox=\\"0 0 16 16\\" class=\\"u-h-1 MuiChip-deleteIcon styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path d=\\"M9 0v2h3.5L6 8.5 7.5 10 14 3.5V7h2V1.003A.996.996 0 0014.997 0H9zM7 2V0H1.003A1 1 0 000 1v14c0 .552.445 1 1 1h14c.552 0 1-.438 1-1.003V9h-2v5H2V2h5z\\" fill-rule=\\"evenodd\\"></path>
             </svg></div>
-        </p>
-        <p>
+        </div>
+        <div>
           <div class=\\"MuiButtonBase-root MuiChip-root customColor-success MuiChip-outlined Mui-disabled MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\" aria-disabled=\\"true\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M13 5h-3V2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V5zm2-.999v11.003a1 1 0 01-1.007.996H2.007A1.001 1.001 0 011 14.999V1.001A.999.999 0 011.998 0H11l4 4.001z\\"></path>
             </svg><span class=\\"MuiChip-label\\">1 invoice</span><svg viewBox=\\"0 0 16 16\\" class=\\"u-h-1 MuiChip-deleteIcon styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path d=\\"M9 0v2h3.5L6 8.5 7.5 10 14 3.5V7h2V1.003A.996.996 0 0014.997 0H9zM7 2V0H1.003A1 1 0 000 1v14c0 .552.445 1 1 1h14c.552 0 1-.438 1-1.003V9h-2v5H2V2h5z\\" fill-rule=\\"evenodd\\"></path>
             </svg></div>
-        </p>
+        </div>
       </div>
     </div>
     <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
       <div class=\\"styles__Stack--s___22WMg\\">
         <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">error</p>
-        <p>
+        <div>
           <div class=\\"MuiButtonBase-root MuiChip-root customColor-error MuiChip-outlined MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M13 5h-3V2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V5zm2-.999v11.003a1 1 0 01-1.007.996H2.007A1.001 1.001 0 011 14.999V1.001A.999.999 0 011.998 0H11l4 4.001z\\"></path>
             </svg><span class=\\"MuiChip-label\\">1 invoice</span><svg viewBox=\\"0 0 16 16\\" class=\\"u-h-1 MuiChip-deleteIcon styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path d=\\"M9 0v2h3.5L6 8.5 7.5 10 14 3.5V7h2V1.003A.996.996 0 0014.997 0H9zM7 2V0H1.003A1 1 0 000 1v14c0 .552.445 1 1 1h14c.552 0 1-.438 1-1.003V9h-2v5H2V2h5z\\" fill-rule=\\"evenodd\\"></path>
             </svg></div>
-        </p>
-        <p>
+        </div>
+        <div>
           <div class=\\"MuiButtonBase-root MuiChip-root customColor-error MuiChip-outlined Mui-disabled MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\" aria-disabled=\\"true\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M13 5h-3V2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V5zm2-.999v11.003a1 1 0 01-1.007.996H2.007A1.001 1.001 0 011 14.999V1.001A.999.999 0 011.998 0H11l4 4.001z\\"></path>
             </svg><span class=\\"MuiChip-label\\">1 invoice</span><svg viewBox=\\"0 0 16 16\\" class=\\"u-h-1 MuiChip-deleteIcon styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path d=\\"M9 0v2h3.5L6 8.5 7.5 10 14 3.5V7h2V1.003A.996.996 0 0014.997 0H9zM7 2V0H1.003A1 1 0 000 1v14c0 .552.445 1 1 1h14c.552 0 1-.438 1-1.003V9h-2v5H2V2h5z\\" fill-rule=\\"evenodd\\"></path>
             </svg></div>
-        </p>
+        </div>
       </div>
     </div>
     <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
       <div class=\\"styles__Stack--s___22WMg\\">
         <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">warning</p>
-        <p>
+        <div>
           <div class=\\"MuiButtonBase-root MuiChip-root customColor-warning MuiChip-outlined MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M13 5h-3V2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V5zm2-.999v11.003a1 1 0 01-1.007.996H2.007A1.001 1.001 0 011 14.999V1.001A.999.999 0 011.998 0H11l4 4.001z\\"></path>
             </svg><span class=\\"MuiChip-label\\">1 invoice</span><svg viewBox=\\"0 0 16 16\\" class=\\"u-h-1 MuiChip-deleteIcon styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path d=\\"M9 0v2h3.5L6 8.5 7.5 10 14 3.5V7h2V1.003A.996.996 0 0014.997 0H9zM7 2V0H1.003A1 1 0 000 1v14c0 .552.445 1 1 1h14c.552 0 1-.438 1-1.003V9h-2v5H2V2h5z\\" fill-rule=\\"evenodd\\"></path>
             </svg></div>
-        </p>
-        <p>
+        </div>
+        <div>
           <div class=\\"MuiButtonBase-root MuiChip-root customColor-warning MuiChip-outlined Mui-disabled MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\" aria-disabled=\\"true\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M13 5h-3V2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V5zm2-.999v11.003a1 1 0 01-1.007.996H2.007A1.001 1.001 0 011 14.999V1.001A.999.999 0 011.998 0H11l4 4.001z\\"></path>
             </svg><span class=\\"MuiChip-label\\">1 invoice</span><svg viewBox=\\"0 0 16 16\\" class=\\"u-h-1 MuiChip-deleteIcon styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path d=\\"M9 0v2h3.5L6 8.5 7.5 10 14 3.5V7h2V1.003A.996.996 0 0014.997 0H9zM7 2V0H1.003A1 1 0 000 1v14c0 .552.445 1 1 1h14c.552 0 1-.438 1-1.003V9h-2v5H2V2h5z\\" fill-rule=\\"evenodd\\"></path>
             </svg></div>
-        </p>
+        </div>
       </div>
     </div>
     <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
       <div class=\\"styles__Stack--s___22WMg\\">
         <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">info</p>
-        <p>
+        <div>
           <div class=\\"MuiButtonBase-root MuiChip-root customColor-info MuiChip-outlined MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M13 5h-3V2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V5zm2-.999v11.003a1 1 0 01-1.007.996H2.007A1.001 1.001 0 011 14.999V1.001A.999.999 0 011.998 0H11l4 4.001z\\"></path>
             </svg><span class=\\"MuiChip-label\\">1 invoice</span><svg viewBox=\\"0 0 16 16\\" class=\\"u-h-1 MuiChip-deleteIcon styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path d=\\"M9 0v2h3.5L6 8.5 7.5 10 14 3.5V7h2V1.003A.996.996 0 0014.997 0H9zM7 2V0H1.003A1 1 0 000 1v14c0 .552.445 1 1 1h14c.552 0 1-.438 1-1.003V9h-2v5H2V2h5z\\" fill-rule=\\"evenodd\\"></path>
             </svg></div>
-        </p>
-        <p>
+        </div>
+        <div>
           <div class=\\"MuiButtonBase-root MuiChip-root customColor-info MuiChip-outlined Mui-disabled MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\" aria-disabled=\\"true\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M13 5h-3V2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V5zm2-.999v11.003a1 1 0 01-1.007.996H2.007A1.001 1.001 0 011 14.999V1.001A.999.999 0 011.998 0H11l4 4.001z\\"></path>
             </svg><span class=\\"MuiChip-label\\">1 invoice</span><svg viewBox=\\"0 0 16 16\\" class=\\"u-h-1 MuiChip-deleteIcon styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path d=\\"M9 0v2h3.5L6 8.5 7.5 10 14 3.5V7h2V1.003A.996.996 0 0014.997 0H9zM7 2V0H1.003A1 1 0 000 1v14c0 .552.445 1 1 1h14c.552 0 1-.438 1-1.003V9h-2v5H2V2h5z\\" fill-rule=\\"evenodd\\"></path>
             </svg></div>
-        </p>
+        </div>
       </div>
     </div>
   </div>
