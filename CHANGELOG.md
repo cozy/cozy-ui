@@ -1,3 +1,15 @@
+# [69.3.0](https://github.com/cozy/cozy-ui/compare/v69.2.0...v69.3.0) (2022-07-07)
+
+
+### Bug Fixes
+
+* **Chips:** Using classname doesn't break style anymore ([3272df1](https://github.com/cozy/cozy-ui/commit/3272df1))
+
+
+### Features
+
+* **Chips:** Add ref forwarding ([8d7513e](https://github.com/cozy/cozy-ui/commit/8d7513e))
+
 # [69.2.0](https://github.com/cozy/cozy-ui/compare/v69.1.0...v69.2.0) (2022-07-07)
 
 
