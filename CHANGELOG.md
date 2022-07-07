@@ -1,3 +1,11 @@
+# [69.2.0](https://github.com/cozy/cozy-ui/compare/v69.1.0...v69.2.0) (2022-07-07)
+
+
+### Features
+
+* **BottomDrawer:** Add possibility to use it with long content ([59296f0](https://github.com/cozy/cozy-ui/commit/59296f0))
+* **Overlay:** Add ref propagation ([6a0b3f0](https://github.com/cozy/cozy-ui/commit/6a0b3f0))
+
 # [69.1.0](https://github.com/cozy/cozy-ui/compare/v69.0.0...v69.1.0) (2022-07-05)
 
 
