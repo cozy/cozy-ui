@@ -22107,6 +22107,8 @@ html {
   right: 0;
   width: 100%;
   margin: 0;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 html {
