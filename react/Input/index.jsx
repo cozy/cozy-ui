@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
-const Input = props => {
+const Input = forwardRef((props, ref) => {
   const {
     autoComplete,
     disabled,
@@ -15,7 +15,6 @@ const Input = props => {
     error,
     size,
     fullwidth,
-    inputRef,
     ...restProps
   } = props
   return (
@@ -24,7 +23,7 @@ const Input = props => {
       autoComplete={autoComplete}
       type={type}
       id={id}
-      ref={inputRef}
+      ref={ref}
       className={cx(
         styles['c-input-text'],
         {
@@ -40,7 +39,9 @@ const Input = props => {
       {...restProps}
     />
   )
-}
+})
+
+Input.displayName = 'Input'
 
 Input.propTypes = {
   autoComplete: PropTypes.string,
