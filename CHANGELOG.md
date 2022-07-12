@@ -1,3 +1,10 @@
+# [69.4.0](https://github.com/cozy/cozy-ui/compare/v69.3.0...v69.4.0) (2022-07-12)
+
+
+### Features
+
+* **Input:** Ref must be passed by forwardRef ([da7c553](https://github.com/cozy/cozy-ui/commit/da7c553))
+
 # [69.3.0](https://github.com/cozy/cozy-ui/compare/v69.2.0...v69.3.0) (2022-07-07)
 
 
