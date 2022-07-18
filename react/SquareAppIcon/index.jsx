@@ -109,12 +109,12 @@ export const SquareAppIcon = ({
           size="large"
           overlap="rectangular"
           style={
-            variant === 'shortcut'
+            variant === 'shortcut' && !IconContent
               ? { backgroundColor: nameToColor(name) }
               : null
           }
         >
-          {variant === 'shortcut' ? (
+          {variant === 'shortcut' && !IconContent ? (
             <Typography className={classes.letter} variant="h2" align="center">
               {letter.toUpperCase()}
             </Typography>
