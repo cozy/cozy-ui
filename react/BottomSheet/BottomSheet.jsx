@@ -121,15 +121,7 @@ const BottomSheet = ({ toolbarProps, settings, children }) => {
     setPeekHeights([minHeight, computedMediumHeight, maxHeight])
     setInitPos(computedMediumHeight)
     setBottomSpacerHeight(bottomSpacerHeight)
-    // TODO: validate the deps are correct
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [
-    innerContentRef,
-    headerContentRef.current,
-    toolbarProps,
-    mediumHeightRatio,
-    mediumHeight
-  ])
+  }, [innerContentRef, toolbarProps, mediumHeightRatio, mediumHeight])
 
   const handleOnIndexChange = snapIndex => {
     const maxHeightSnapIndex = peekHeights.length - 1
@@ -163,7 +155,7 @@ const BottomSheet = ({ toolbarProps, settings, children }) => {
         defaultHeight={initPos}
         backdrop={false}
         fullHeight={false}
-        onIndexChange={snapIndex => handleOnIndexChange(snapIndex)}
+        onIndexChange={handleOnIndexChange}
         styles={{ root: styles.root }}
         threshold={0}
         // springConfig doc : https://docs.pmnd.rs/react-spring/common/configs
