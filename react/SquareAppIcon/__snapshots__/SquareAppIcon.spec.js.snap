@@ -358,14 +358,14 @@ exports[`SquareAppIcon component should render correctly an app in shortcut stat
 
 exports[`SquareAppIcon component should render correctly an app with custom content 1`] = `
 <div
-  class="makeStyles-tileWrapper-53"
+  class="makeStyles-tileWrapper-59"
   data-testid="square-app-icon"
 >
   <span
     class="MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-51"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-57"
     >
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
@@ -388,11 +388,11 @@ exports[`SquareAppIcon component should render correctly an app with custom cont
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-54 MuiBadge-anchorOriginBottomRightRectangular MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-60 MuiBadge-anchorOriginBottomRightRectangular MuiBadge-invisible"
     />
   </span>
   <h6
-    class="MuiTypography-root makeStyles-name-49 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
+    class="MuiTypography-root makeStyles-name-55 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
   >
     custom icon
   </h6>

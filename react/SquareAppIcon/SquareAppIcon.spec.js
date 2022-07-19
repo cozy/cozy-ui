@@ -69,6 +69,17 @@ describe('SquareAppIcon component', () => {
     expect(root.getByTestId('square-app-icon')).toMatchSnapshot()
   })
 
+  it('should display icon-content an app with icon content in shortcut state', () => {
+    const { queryByTestId } = render(
+      <Wrapper
+        variant="shortcut"
+        name="shortcut"
+        IconContent={<Icon data-testid="icon-content" icon={CozyIcon} />}
+      />
+    )
+    expect(queryByTestId('icon-content')).toBeTruthy()
+  })
+
   it('should render correctly an app with custom content', () => {
     const root = render(
       <Wrapper name="custom icon" IconContent={<Icon icon={CozyIcon} />} />
