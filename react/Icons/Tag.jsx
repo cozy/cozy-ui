@@ -3,7 +3,7 @@ import React from 'react'
 
 function SvgTag(props) {
   return (
-    <svg viewBox="0 0 16 16" fill="none" {...props}>
+    <svg viewBox="0 0 16 16" {...props}>
       <path d="M5 6a1 1 0 100-2 1 1 0 000 2z" />
       <path
         clipRule="evenodd"
