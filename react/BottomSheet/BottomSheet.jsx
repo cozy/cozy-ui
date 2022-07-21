@@ -1,24 +1,41 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 import PropTypes from 'prop-types'
 import { BottomSheet as MuiBottomSheet } from 'mui-bottom-sheet'
+import { useTimeoutWhen } from 'rooks'
+import Fade from '@material-ui/core/Fade'
 
 import { getFlagshipMetadata } from 'cozy-device-helper'
 
-import Stack from 'cozy-ui/transpiled/react/Stack'
-import Paper from 'cozy-ui/transpiled/react/Paper'
+import Stack from '../Stack'
+import Paper from '../Paper'
+import ClickAwayListener from '../ClickAwayListener'
+import BackdropOrFragment from './BackdropOrFragment'
+import {
+  computeMaxHeight,
+  computeMediumHeight,
+  computeMinHeight,
+  makeOverridenChildren,
+  setTopPosition,
+  setBottomPosition
+} from './helpers'
 
-const makeStyles = ({ isTopPosition }) => ({
+const ANIMATION_DURATION = 250
+
+const createStyles = ({ squared, hasToolbarProps }) => ({
   root: {
     borderTopLeftRadius: '1rem',
     borderTopRightRadius: '1rem',
     transition: 'border-radius 0.5s',
     zIndex: 'var(--zIndex-drawer)',
-    boxShadow: '0 6px 16px 0 rgba(0, 0, 0, 0.5)',
+    boxShadow:
+      '0 -0.5px 0px 0 rgba(0, 0, 0, 0.10), 0 -2px 2px 0 rgba(0, 0, 0, 0.02), 0 -4px 4px 0 rgba(0, 0, 0, 0.02), 0 -8px 8px 0 rgba(0, 0, 0, 0.02), 0 -16px 16px 0 rgba(0, 0, 0, 0.02)',
     backgroundColor: 'var(--paperBackgroundColor)',
-    ...(isTopPosition && {
+    ...(squared && {
       borderTopLeftRadius: 0,
       borderTopRightRadius: 0,
-      boxShadow: '0 0 1px 0 rgba(0, 0, 0, 0.5)'
+      boxShadow: hasToolbarProps
+        ? '0 0 1px 0 rgba(0, 0, 0, 0.5)'
+        : '0 -1px 0 0 rgba(255, 255, 255, 1)'
     })
   },
   indicator: {
@@ -29,6 +46,14 @@ const makeStyles = ({ isTopPosition }) => ({
   },
   stack: {
     backgroundColor: 'var(--defaultBackgroundColor)'
+  },
+  bounceSafer: {
+    height: 50,
+    width: '100%',
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    backgroundColor: 'var(--paperBackgroundColor)'
   },
   flagshipImmersive: {
     backgroundColor: 'var(--paperBackgroundColor)',
@@ -48,41 +73,77 @@ export const defaultBottomSheetSpringConfig = {
 }
 
 const defaultSettings = {
-  mediumHeightRatio: 0.33,
+  mediumHeightRatio: 0.75,
   mediumHeight: null
 }
 
-const computeMaxHeight = toolbarProps => {
-  const { ref, height } = toolbarProps
-  let computedToolbarHeight = 1
-
-  if (height) {
-    computedToolbarHeight = height
-  } else if (ref && ref.current) {
-    computedToolbarHeight = ref.current.offsetHeight
+const BottomSheet = ({
+  toolbarProps,
+  settings,
+  backdrop,
+  onClose,
+  children
+}) => {
+  const { mediumHeightRatio, mediumHeight } = {
+    ...defaultSettings,
+    ...settings
   }
-
-  return window.innerHeight - computedToolbarHeight
-}
-
-const BottomSheet = ({ toolbarProps, settings, children }) => {
-  const { mediumHeightRatio, mediumHeight } = useMemo(
-    () => ({
-      ...defaultSettings,
-      ...settings
-    }),
-    [settings]
-  )
 
   const innerContentRef = useRef()
   const headerRef = useRef()
   const headerContentRef = useRef()
   const [isTopPosition, setIsTopPosition] = useState(false)
+  const [isBottomPosition, setIsBottomPosition] = useState(false)
+  const [isHidden, setIsHidden] = useState(false)
+  const [showBackdrop, setShowBackdrop] = useState(backdrop)
   const [peekHeights, setPeekHeights] = useState(null)
+  const [currentIndex, setCurrentIndex] = useState()
   const [bottomSpacerHeight, setBottomSpacerHeight] = useState(0)
-  const [initPos, setInitPos] = useState(mediumHeight)
+  const [initPos, setInitPos] = useState(0)
 
-  const styles = useMemo(() => makeStyles({ isTopPosition }), [isTopPosition])
+  const squared = backdrop
+    ? isTopPosition && bottomSpacerHeight <= 0
+    : isTopPosition
+  const hasToolbarProps = !!Object.keys(toolbarProps).length
+  const isClosable = !!onClose || backdrop
+
+  const styles = createStyles({
+    squared,
+    hasToolbarProps
+  })
+  const overriddenChildren = makeOverridenChildren(children, headerContentRef)
+
+  if (backdrop && !onClose) {
+    throw new Error(
+      'BottomSheet must have `onClose` method to work properly when setting `backdrop` to `true`'
+    )
+  }
+
+  const handleClose = useCallback(() => {
+    setShowBackdrop(false)
+    setIsHidden(true)
+    onClose && onClose()
+  }, [onClose])
+
+  const handleMinimizeAndClose = () => {
+    if (backdrop) {
+      setCurrentIndex(0)
+      setTimeout(handleClose, ANIMATION_DURATION)
+    }
+  }
+
+  const handleOnIndexChange = snapIndex => {
+    const maxHeightSnapIndex = peekHeights.length - 1
+
+    setCurrentIndex(snapIndex)
+    setTopPosition({
+      snapIndex,
+      maxHeightSnapIndex,
+      isTopPosition,
+      setIsTopPosition
+    })
+    setBottomPosition({ snapIndex, isBottomPosition, setIsBottomPosition })
+  }
 
   // hack to prevent pull-down-to-refresh behavior when dragging down the bottom sheet.
   // Needed for iOS Safari
@@ -93,12 +154,17 @@ const BottomSheet = ({ toolbarProps, settings, children }) => {
     }
   }, [])
 
+  // close the bottom sheet by swaping it below the minimum height
+  useTimeoutWhen(
+    () => handleClose(),
+    ANIMATION_DURATION,
+    isClosable && isBottomPosition
+  )
+
   useEffect(() => {
     const headerContent = headerContentRef.current
-    const maxHeight = computeMaxHeight(toolbarProps)
-    const computedMediumHeight =
-      mediumHeight || Math.round(maxHeight * mediumHeightRatio)
-
+    const innerContent = innerContentRef.current
+    const innerContentHeight = innerContent.offsetHeight
     const actionButtonsHeight = headerContent
       ? parseFloat(getComputedStyle(headerContent).getPropertyValue('height'))
       : 0
@@ -108,92 +174,102 @@ const BottomSheet = ({ toolbarProps, settings, children }) => {
         )
       : 0
 
-    const minHeight =
-      headerRef.current.offsetHeight +
-      actionButtonsHeight +
-      actionButtonsBottomMargin +
-      (getFlagshipMetadata().navbarHeight || 0)
+    const maxHeight = computeMaxHeight(toolbarProps)
+    const computedMediumHeight = computeMediumHeight({
+      backdrop,
+      maxHeight,
+      mediumHeight,
+      mediumHeightRatio,
+      innerContentHeight
+    })
+    const minHeight = computeMinHeight({
+      isClosable,
+      headerRef,
+      actionButtonsHeight,
+      actionButtonsBottomMargin
+    })
+    const bottomSpacerHeight = maxHeight - innerContentHeight
 
-    // Used so that the bottomSheet can be opened to the top,
-    // without stopping at the content height
-    const bottomSpacerHeight = maxHeight - innerContentRef.current.offsetHeight
-
-    setPeekHeights([minHeight, computedMediumHeight, maxHeight])
-    setInitPos(computedMediumHeight)
-    setBottomSpacerHeight(bottomSpacerHeight)
-  }, [innerContentRef, toolbarProps, mediumHeightRatio, mediumHeight])
-
-  const handleOnIndexChange = snapIndex => {
-    const maxHeightSnapIndex = peekHeights.length - 1
-
-    if (snapIndex === maxHeightSnapIndex && !isTopPosition) {
+    if (computedMediumHeight >= maxHeight) {
       setIsTopPosition(true)
     }
-    if (snapIndex !== maxHeightSnapIndex && isTopPosition) {
-      setIsTopPosition(false)
-    }
-  }
-
-  const overriddenChildren = React.Children.map(children, child => {
-    if (
-      child.type.name === 'BottomSheetHeader' ||
-      child.type.displayName === 'BottomSheetHeader'
-    ) {
-      return React.cloneElement(child, { headerContentRef })
-    }
-    return child
-  })
+    setPeekHeights([...new Set([minHeight, computedMediumHeight, maxHeight])])
+    setInitPos(computedMediumHeight)
+    // Used so that the BottomSheet can be opened to the top without stopping at the content height
+    setBottomSpacerHeight(bottomSpacerHeight)
+  }, [
+    innerContentRef,
+    toolbarProps,
+    mediumHeightRatio,
+    mediumHeight,
+    showBackdrop,
+    backdrop,
+    isClosable
+  ])
 
   return (
     <>
       {getFlagshipMetadata().immersive && (
         <span style={styles.flagshipImmersive} />
       )}
-
-      <MuiBottomSheet
-        peekHeights={peekHeights}
-        defaultHeight={initPos}
-        backdrop={false}
-        fullHeight={false}
-        onIndexChange={handleOnIndexChange}
-        styles={{ root: styles.root }}
-        threshold={0}
-        // springConfig doc : https://docs.pmnd.rs/react-spring/common/configs
-        springConfig={{
-          tension: defaultBottomSheetSpringConfig.tension,
-          friction: defaultBottomSheetSpringConfig.friction,
-          clamp: defaultBottomSheetSpringConfig.clamp
-        }}
-        disabledClosing={true}
-        snapPointSeekerMode="next"
-      >
-        <div ref={innerContentRef}>
-          <Paper
-            data-testid="bottomSheet-header"
-            className="u-w-100 u-h-2-half u-pos-relative u-flex u-flex-items-center u-flex-justify-center"
-            ref={headerRef}
-            elevation={0}
-            square
-          >
-            <div style={styles.indicator} />
-          </Paper>
-          <Stack
-            style={styles.stack}
-            className="u-flex u-flex-column u-ov-hidden"
-            spacing="s"
-          >
-            {overriddenChildren}
-          </Stack>
-        </div>
-        <div style={{ height: bottomSpacerHeight }} />
-      </MuiBottomSheet>
+      <BackdropOrFragment showBackdrop={showBackdrop}>
+        <MuiBottomSheet
+          peekHeights={peekHeights}
+          defaultHeight={initPos}
+          backdrop={false}
+          fullHeight={hasToolbarProps ? false : true}
+          currentIndex={currentIndex}
+          onIndexChange={handleOnIndexChange}
+          styles={{ root: styles.root }}
+          threshold={0}
+          // springConfig doc : https://docs.pmnd.rs/react-spring/common/configs
+          springConfig={{
+            tension: defaultBottomSheetSpringConfig.tension,
+            friction: defaultBottomSheetSpringConfig.friction,
+            clamp: defaultBottomSheetSpringConfig.clamp
+          }}
+          disabledClosing={!onClose}
+          hidden={isHidden}
+          snapPointSeekerMode="next"
+        >
+          <ClickAwayListener onClickAway={handleMinimizeAndClose}>
+            <span>
+              <div ref={innerContentRef}>
+                <Paper
+                  data-testid="bottomSheet-header"
+                  className="u-w-100 u-h-2-half u-pos-relative u-flex u-flex-items-center u-flex-justify-center"
+                  ref={headerRef}
+                  elevation={0}
+                  square
+                >
+                  <div style={styles.indicator} />
+                </Paper>
+                <Stack
+                  style={styles.stack}
+                  className="u-flex u-flex-column u-ov-hidden"
+                  spacing="s"
+                >
+                  {overriddenChildren}
+                </Stack>
+              </div>
+              <div style={{ height: backdrop ? 0 : bottomSpacerHeight }} />
+            </span>
+          </ClickAwayListener>
+        </MuiBottomSheet>
+        {!isBottomPosition && (
+          <Fade in timeout={ANIMATION_DURATION}>
+            <div style={styles.bounceSafer} />
+          </Fade>
+        )}
+      </BackdropOrFragment>
     </>
   )
 }
 
 BottomSheet.defaultProps = {
   classes: {},
-  toolbarProps: {}
+  toolbarProps: {},
+  backdrop: false
 }
 
 BottomSheet.propTypes = {
@@ -206,9 +282,15 @@ BottomSheet.propTypes = {
   }),
   /** Settings that can be modified */
   settings: PropTypes.shape({
+    /** Height in pixel of the middle snap point */
+    mediumHeight: PropTypes.number,
     /** Height of the middle snap point, expressed as a percentage of the viewport height */
     mediumHeightRatio: PropTypes.number
-  })
+  }),
+  /** To add a backdrop */
+  backdrop: PropTypes.bool,
+  /** To totally close the BottomSheet by swaping it down */
+  onClose: PropTypes.func
 }
 
 export default React.memo(BottomSheet)
