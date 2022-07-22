@@ -1,3 +1,20 @@
+# [70.0.0](https://github.com/cozy/cozy-ui/compare/v69.4.1...v70.0.0) (2022-07-22)
+
+
+### Features
+
+* **deps:** Material UI is dependency of CozyUI ([1e2d1e8](https://github.com/cozy/cozy-ui/commit/1e2d1e8)), closes [#1865](https://github.com/cozy/cozy-ui/issues/1865)
+
+
+### BREAKING CHANGES
+
+* **deps:** Material UI is not needed any more as a peer
+dependency of Cozy-UI.
+
+For application that uses CozyUI only for Icon, it is possible to
+mock Material UI to {} in order not to increase the bundle size of
+the app (if there is no deep import in the codebase)
+
 ## [69.4.1](https://github.com/cozy/cozy-ui/compare/v69.4.0...v69.4.1) (2022-07-22)
 
 
