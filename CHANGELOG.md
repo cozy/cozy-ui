@@ -1,3 +1,10 @@
+## [69.4.1](https://github.com/cozy/cozy-ui/compare/v69.4.0...v69.4.1) (2022-07-22)
+
+
+### Bug Fixes
+
+* **Icon:** Remove fill on Tag icon ([f678665](https://github.com/cozy/cozy-ui/commit/f678665))
+
 # [69.4.0](https://github.com/cozy/cozy-ui/compare/v69.3.0...v69.4.0) (2022-07-12)
 
 
