@@ -16,10 +16,10 @@ import {
   computeMinHeight,
   makeOverridenChildren,
   setTopPosition,
-  setBottomPosition
+  setBottomPosition,
+  minimizeAndClose
 } from './helpers'
-
-const ANIMATION_DURATION = 250
+import { ANIMATION_DURATION } from './constants'
 
 const createStyles = ({ squared, hasToolbarProps }) => ({
   root: {
@@ -125,15 +125,6 @@ const BottomSheet = ({
     onClose && onClose()
   }, [onClose])
 
-  const handleMinimizeAndClose = () => {
-    if (backdrop) {
-      setCurrentIndex(0)
-      setIsTopPosition(false)
-      setIsBottomPosition(true)
-      setTimeout(handleClose, ANIMATION_DURATION)
-    }
-  }
-
   const handleOnIndexChange = snapIndex => {
     const maxHeightSnapIndex = peekHeights.length - 1
 
@@ -234,7 +225,17 @@ const BottomSheet = ({
           hidden={isHidden}
           snapPointSeekerMode="next"
         >
-          <ClickAwayListener onClickAway={handleMinimizeAndClose}>
+          <ClickAwayListener
+            onClickAway={() =>
+              minimizeAndClose({
+                backdrop,
+                setCurrentIndex,
+                setIsTopPosition,
+                setIsBottomPosition,
+                handleClose
+              })
+            }
+          >
             <span>
               <div ref={innerContentRef}>
                 <Paper

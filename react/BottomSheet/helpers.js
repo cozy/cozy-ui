@@ -1,6 +1,8 @@
 import React from 'react'
 import { getFlagshipMetadata } from 'cozy-device-helper'
 
+import { ANIMATION_DURATION } from './constants'
+
 export const computeMaxHeight = toolbarProps => {
   const { ref, height } = toolbarProps
   let computedToolbarHeight = 1
@@ -92,5 +94,20 @@ export const setBottomPosition = ({
   }
   if (snapIndex !== 0 && isBottomPosition) {
     setIsBottomPosition(false)
+  }
+}
+
+export const minimizeAndClose = ({
+  backdrop,
+  setCurrentIndex,
+  setIsTopPosition,
+  setIsBottomPosition,
+  handleClose
+}) => {
+  if (backdrop) {
+    setCurrentIndex(0)
+    setIsTopPosition(false)
+    setIsBottomPosition(true)
+    setTimeout(handleClose, ANIMATION_DURATION)
   }
 }

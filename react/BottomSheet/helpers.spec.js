@@ -3,7 +3,8 @@ import {
   computeMediumHeight,
   computeMinHeight,
   setTopPosition,
-  setBottomPosition
+  setBottomPosition,
+  minimizeAndClose
 } from './helpers'
 
 jest.mock('cozy-device-helper', () => ({
@@ -231,5 +232,53 @@ describe('setBottomPosition', () => {
 
       expect(setIsBottomPosition).not.toHaveBeenCalled()
     })
+  })
+})
+
+describe('minimizeAndClose', () => {
+  jest.useFakeTimers()
+
+  it('should not trigger function if no backdrop', () => {
+    const setCurrentIndex = jest.fn()
+    const setIsTopPosition = jest.fn()
+    const setIsBottomPosition = jest.fn()
+    const handleClose = jest.fn()
+
+    minimizeAndClose({
+      backdrop: false,
+      setCurrentIndex,
+      setIsTopPosition,
+      setIsBottomPosition,
+      handleClose
+    })
+
+    jest.runAllTimers()
+
+    expect(setCurrentIndex).not.toHaveBeenCalled()
+    expect(setIsTopPosition).not.toHaveBeenCalled()
+    expect(setIsBottomPosition).not.toHaveBeenCalled()
+    expect(handleClose).not.toHaveBeenCalled()
+  })
+
+  it('should trigger every function if backdrop is true', () => {
+    const setCurrentIndex = jest.fn()
+    const setIsTopPosition = jest.fn()
+    const setIsBottomPosition = jest.fn()
+    const handleClose = jest.fn()
+
+    minimizeAndClose({
+      backdrop: true,
+      setCurrentIndex,
+      setIsTopPosition,
+      setIsBottomPosition,
+      handleClose
+    })
+
+    jest.runAllTimers()
+
+    expect(setCurrentIndex).toHaveBeenCalledWith(0)
+    expect(setIsTopPosition).toHaveBeenCalledWith(false)
+    expect(setIsBottomPosition).toHaveBeenCalledWith(true)
+    expect(handleClose).toHaveBeenCalled()
   })
 })
