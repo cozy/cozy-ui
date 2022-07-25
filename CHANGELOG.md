@@ -1,3 +1,10 @@
+# [70.2.0](https://github.com/cozy/cozy-ui/compare/v70.1.0...v70.2.0) (2022-07-25)
+
+
+### Features
+
+* Add withStyles and useTheme helpers from MUI ([578db69](https://github.com/cozy/cozy-ui/commit/578db69))
+
 # [70.1.0](https://github.com/cozy/cozy-ui/compare/v70.0.0...v70.1.0) (2022-07-25)
 
 
