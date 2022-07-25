@@ -1,3 +1,10 @@
+# [70.1.0](https://github.com/cozy/cozy-ui/compare/v70.0.0...v70.1.0) (2022-07-25)
+
+
+### Features
+
+* **BottomSheet:** Add backdrop and onClose props ([097e4e4](https://github.com/cozy/cozy-ui/commit/097e4e4))
+
 # [70.0.0](https://github.com/cozy/cozy-ui/compare/v69.4.1...v70.0.0) (2022-07-22)
 
 
