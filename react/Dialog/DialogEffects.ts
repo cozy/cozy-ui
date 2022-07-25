@@ -5,34 +5,6 @@ import { FlagshipUI } from 'cozy-intent'
 
 import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
 
-function lightOrDark(color: string): 'light' | 'dark' {
-  let r, g, b, hsp
-
-  if (color.match(/^rgb/)) {
-    color = color.match(
-      /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/
-    )
-
-    r = color[1]
-    g = color[2]
-    b = color[3]
-  } else {
-    color = +('0x' + color.slice(1).replace(color.length < 5 && /./g, '$&$&'))
-
-    r = color >> 16
-    g = (color >> 8) & 255
-    b = color & 255
-  }
-
-  hsp = Math.sqrt(0.299 * (r * r) + 0.587 * (g * g) + 0.114 * (b * b))
-
-  if (hsp > 127.5) {
-    return 'light'
-  } else {
-    return 'dark'
-  }
-}
-
 const makeOnMount = (
   fullScreen: boolean,
   hasAnotherDialog: boolean,
@@ -73,34 +45,28 @@ const makeOnUnmount = (
   immersive: boolean,
   sidebar: Element | null,
   cozyBar: Element | null
-): FlagshipUI => {
-  const otherDialogStyles = hasAnotherDialog ? getOtherDialogStyles() : undefined
-  const otherDialogBackground = otherDialogStyles?.color
-  const isDark = otherDialogBackground && lightOrDark(otherDialogBackground) === "dark"
-
-  return {
-    ...(hasAnotherDialog
-      ? {}
-      : {
-          bottomBackground:
-            theme.palette.background[sidebar ? 'default' : 'paper']
-        }),
-    bottomTheme: isDark ? 'dark' : immersive ? 'light' : 'dark',
-    bottomOverlay:  'transparent',
-    topOverlay:  'transparent',
-    ...(hasAnotherDialog || !cozyBar
-      ? {}
-      : {
-          topBackground:
-            cozyBar &&
-            getComputedStyle(cozyBar).getPropertyValue('background-color')
-        }),
-    topTheme:
-      isDark ? 'dark': immersive || (cozyBar && cozyBar.classList.contains('coz-theme-primary'))
-        ? 'light'
-        : 'dark'
-  }
-}
+): FlagshipUI => ({
+  ...(hasAnotherDialog
+    ? {}
+    : {
+        bottomBackground:
+          theme.palette.background[sidebar ? 'default' : 'paper']
+      }),
+  bottomTheme: immersive ? 'light' : 'dark',
+  bottomOverlay: 'transparent',
+  topOverlay: 'transparent',
+  ...(hasAnotherDialog || !cozyBar
+    ? {}
+    : {
+        topBackground:
+          cozyBar &&
+          getComputedStyle(cozyBar).getPropertyValue('background-color')
+      }),
+  topTheme:
+    immersive || (cozyBar && cozyBar.classList.contains('coz-theme-primary'))
+      ? 'light'
+      : 'dark'
+})
 
 const makeCaller = (
   fullScreen: boolean,
@@ -114,26 +80,13 @@ const makeCaller = (
     immersive ? '--immersive' : ''
   ].join('')
 
-const getOtherDialogStyles = (): {
-  color: string
-} | null => {
-  const innerDialog = document.querySelector('.MuiPaper-root')
-
-  if (!innerDialog) return null
-
-  const styles = getComputedStyle(innerDialog)
-
-  return {
-    color: styles.getPropertyValue('color')
-  }
-}
-
 const useHook = (fullScreen?: boolean): void => {
   const theme = useTheme()
   const cozyBar = document.querySelector('.coz-bar-wrapper')
   const sidebar = document.getElementById('sidebar')
-  const otherDialog = document.querySelector('[role="presentation"]')
-  const hasAnotherDialog = !!otherDialog
+  const hasAnotherDialog = Boolean(
+    document.querySelector('[role="presentation"]')
+  )
   const immersive = Boolean(getFlagshipMetadata().immersive)
 
   useSetFlagshipUI(
