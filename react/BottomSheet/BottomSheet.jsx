@@ -128,6 +128,8 @@ const BottomSheet = ({
   const handleMinimizeAndClose = () => {
     if (backdrop) {
       setCurrentIndex(0)
+      setIsTopPosition(false)
+      setIsBottomPosition(true)
       setTimeout(handleClose, ANIMATION_DURATION)
     }
   }
