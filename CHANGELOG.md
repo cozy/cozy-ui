@@ -1,3 +1,11 @@
+## [70.2.3](https://github.com/cozy/cozy-ui/compare/v70.2.2...v70.2.3) (2022-07-26)
+
+
+### Bug Fixes
+
+* **BottomSheet:** Remove bouncerSafer when clicking in backdrop ([93233dd](https://github.com/cozy/cozy-ui/commit/93233dd))
+* **CozyDialogs:** Close and Back button z-index ([a943399](https://github.com/cozy/cozy-ui/commit/a943399))
+
 ## [70.2.2](https://github.com/cozy/cozy-ui/compare/v70.2.1...v70.2.2) (2022-07-26)
 
 
