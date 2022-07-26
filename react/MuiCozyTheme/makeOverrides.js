@@ -1,4 +1,4 @@
-import { alpha } from '@material-ui/core/styles'
+import { alpha, lighten, darken } from '@material-ui/core/styles'
 
 const SWITCH_BAR_WIDTH = 25
 
@@ -7,6 +7,71 @@ export const makeThemeOverrides = theme => {
     theme.palette.type === 'dark' ? makeInvertedOverrides : makeOverrides
 
   return createOverrides(theme)
+}
+
+const makeAlertColor = (theme, color) => {
+  const themeColorByColor = {
+    primary: theme.palette[color].main,
+    secondary: theme.palette.text.primary
+  }
+
+  // same approach as Mui, see https://github.com/mui/material-ui/blob/v4.x/packages/material-ui-lab/src/Alert/Alert.js#L28
+  return {
+    '&-standard': {
+      color: darken(themeColorByColor[color], 0.6),
+      backgroundColor: lighten(themeColorByColor[color], 0.9),
+      '& $icon': {
+        color: themeColorByColor[color]
+      },
+      '& $action': {
+        '& button[title="Close"]': {
+          color: theme.palette.text.secondary
+        }
+      }
+    },
+    '&-outlined': {
+      color: darken(themeColorByColor[color], 0.6),
+      border: `1px solid ${themeColorByColor[color]}`,
+      '& $icon': {
+        color: themeColorByColor[color]
+      }
+    },
+    '&-filled': {
+      backgroundColor:
+        color === 'secondary'
+          ? theme.palette.grey[600]
+          : themeColorByColor[color]
+    }
+  }
+}
+
+const makeAlertInvertedColor = (theme, color) => {
+  return {
+    '&-standard': {
+      color: theme.palette.primary.main,
+      backgroundColor: theme.palette.background.default,
+      '& $icon': {
+        color: theme.palette[color].main
+      }
+    },
+    '&-outlined': {
+      color: theme.palette.primary.main,
+      border: `1px solid ${theme.palette.primary.main}`,
+      '& $icon': {
+        color: theme.palette[color].main
+      }
+    },
+    '&-filled': {
+      color: theme.palette[color].contrastText,
+      backgroundColor:
+        color === 'secondary'
+          ? theme.palette.grey[200]
+          : theme.palette[color].main,
+      '& $icon': {
+        color: theme.palette[color].contrastText
+      }
+    }
+  }
 }
 
 const makeChipStyleByColor = (theme, color) => ({
@@ -822,6 +887,41 @@ const makeOverrides = theme => ({
         '&-info': makeChipStyleByColor(theme, 'info')
       }
     }
+  },
+  MuiAlert: {
+    root: {
+      padding: '8px 16px',
+      '&.cozyAlert': {
+        '&-primary': makeAlertColor(theme, 'primary'),
+        '&-secondary': makeAlertColor(theme, 'secondary')
+      },
+      '& $icon': {
+        paddingTop: '9px'
+      },
+      '&.block': {
+        flexWrap: 'wrap',
+        '& $action': {
+          display: 'block',
+          width: '100%',
+          paddingLeft: 0,
+          textAlign: 'right'
+        }
+      }
+    },
+    message: {
+      display: 'flex',
+      alignItems: 'center',
+      flexWrap: 'wrap'
+    },
+    action: {
+      marginRight: '-6px'
+    }
+  },
+  MuiAlertTitle: {
+    root: {
+      width: '100%',
+      fontWeight: 'bold'
+    }
   }
 })
 
@@ -881,6 +981,20 @@ const makeInvertedOverrides = invertedTheme => {
       colorSecondary: {
         '&$checked:not($disabled)': {
           color: invertedTheme.palette.error.main
+        }
+      }
+    },
+    MuiAlert: {
+      ...makeOverrides(invertedTheme).MuiAlert,
+      root: {
+        ...makeOverrides(invertedTheme).MuiAlert.root,
+        '&.cozyAlert': {
+          '&-primary': makeAlertInvertedColor(invertedTheme, 'primary'),
+          '&-secondary': makeAlertInvertedColor(invertedTheme, 'secondary'),
+          '&-success': makeAlertInvertedColor(invertedTheme, 'success'),
+          '&-error': makeAlertInvertedColor(invertedTheme, 'error'),
+          '&-warning': makeAlertInvertedColor(invertedTheme, 'warning'),
+          '&-info': makeAlertInvertedColor(invertedTheme, 'info')
         }
       }
     }
