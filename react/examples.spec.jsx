@@ -24,6 +24,7 @@ const testComponent = (ComponentName, options) => {
 }
 
 // Please keep the list sorted
+testComponent('Alert')
 testComponent('AppTitle')
 testComponent('Avatar')
 testComponent('Badge')
