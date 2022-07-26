@@ -1,3 +1,10 @@
+## [70.2.4](https://github.com/cozy/cozy-ui/compare/v70.2.3...v70.2.4) (2022-07-26)
+
+
+### Bug Fixes
+
+* **BottomSheet:** Backdrop click behavior ([7fdb297](https://github.com/cozy/cozy-ui/commit/7fdb297))
+
 ## [70.2.3](https://github.com/cozy/cozy-ui/compare/v70.2.2...v70.2.3) (2022-07-26)
 
 
