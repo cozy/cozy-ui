@@ -1,3 +1,10 @@
+## [70.2.2](https://github.com/cozy/cozy-ui/compare/v70.2.1...v70.2.2) (2022-07-26)
+
+
+### Bug Fixes
+
+* Shortcut with IconContent ([a83c320](https://github.com/cozy/cozy-ui/commit/a83c320))
+
 ## [70.2.1](https://github.com/cozy/cozy-ui/compare/v70.2.0...v70.2.1) (2022-07-25)
 
 
