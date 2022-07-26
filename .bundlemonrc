@@ -12,8 +12,7 @@
   ],
   "groups": [
     {
-        "path": "transpiled/react/**",
-        "maxPercentIncrease": 0.5,
+        "path": "transpiled/react/**"
     },
 ],
   "reportOutput": ["github"]
