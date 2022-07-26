@@ -8,7 +8,6 @@ import { getFlagshipMetadata } from 'cozy-device-helper'
 
 import Stack from '../Stack'
 import Paper from '../Paper'
-import ClickAwayListener from '../ClickAwayListener'
 import BackdropOrFragment from './BackdropOrFragment'
 import {
   computeMaxHeight,
@@ -53,7 +52,8 @@ const createStyles = ({ squared, hasToolbarProps }) => ({
     position: 'fixed',
     bottom: 0,
     left: 0,
-    backgroundColor: 'var(--paperBackgroundColor)'
+    backgroundColor: 'var(--paperBackgroundColor)',
+    zIndex: 'var(--zIndex-overlay)'
   },
   flagshipImmersive: {
     backgroundColor: 'var(--paperBackgroundColor)',
@@ -205,66 +205,62 @@ const BottomSheet = ({
       {getFlagshipMetadata().immersive && (
         <span style={styles.flagshipImmersive} />
       )}
-      <BackdropOrFragment showBackdrop={showBackdrop}>
-        <MuiBottomSheet
-          peekHeights={peekHeights}
-          defaultHeight={initPos}
-          backdrop={false}
-          fullHeight={hasToolbarProps ? false : true}
-          currentIndex={currentIndex}
-          onIndexChange={handleOnIndexChange}
-          styles={{ root: styles.root }}
-          threshold={0}
-          // springConfig doc : https://docs.pmnd.rs/react-spring/common/configs
-          springConfig={{
-            tension: defaultBottomSheetSpringConfig.tension,
-            friction: defaultBottomSheetSpringConfig.friction,
-            clamp: defaultBottomSheetSpringConfig.clamp
-          }}
-          disabledClosing={!onClose}
-          hidden={isHidden}
-          snapPointSeekerMode="next"
-        >
-          <ClickAwayListener
-            onClickAway={() =>
-              minimizeAndClose({
-                backdrop,
-                setCurrentIndex,
-                setIsTopPosition,
-                setIsBottomPosition,
-                handleClose
-              })
-            }
+      <BackdropOrFragment
+        showBackdrop={showBackdrop}
+        onClick={() =>
+          minimizeAndClose({
+            backdrop,
+            setCurrentIndex,
+            setIsTopPosition,
+            setIsBottomPosition,
+            handleClose
+          })
+        }
+      />
+      <MuiBottomSheet
+        peekHeights={peekHeights}
+        defaultHeight={initPos}
+        backdrop={false}
+        fullHeight={hasToolbarProps ? false : true}
+        currentIndex={currentIndex}
+        onIndexChange={handleOnIndexChange}
+        styles={{ root: styles.root }}
+        threshold={0}
+        // springConfig doc : https://docs.pmnd.rs/react-spring/common/configs
+        springConfig={{
+          tension: defaultBottomSheetSpringConfig.tension,
+          friction: defaultBottomSheetSpringConfig.friction,
+          clamp: defaultBottomSheetSpringConfig.clamp
+        }}
+        disabledClosing={!onClose}
+        hidden={isHidden}
+        snapPointSeekerMode="next"
+      >
+        <div ref={innerContentRef}>
+          <Paper
+            data-testid="bottomSheet-header"
+            className="u-w-100 u-h-2-half u-pos-relative u-flex u-flex-items-center u-flex-justify-center"
+            ref={headerRef}
+            elevation={0}
+            square
           >
-            <span>
-              <div ref={innerContentRef}>
-                <Paper
-                  data-testid="bottomSheet-header"
-                  className="u-w-100 u-h-2-half u-pos-relative u-flex u-flex-items-center u-flex-justify-center"
-                  ref={headerRef}
-                  elevation={0}
-                  square
-                >
-                  <div style={styles.indicator} />
-                </Paper>
-                <Stack
-                  style={styles.stack}
-                  className="u-flex u-flex-column u-ov-hidden"
-                  spacing="s"
-                >
-                  {overriddenChildren}
-                </Stack>
-              </div>
-              <div style={{ height: backdrop ? 0 : bottomSpacerHeight }} />
-            </span>
-          </ClickAwayListener>
-        </MuiBottomSheet>
-        {!isBottomPosition && (
-          <Fade in timeout={ANIMATION_DURATION}>
-            <div style={styles.bounceSafer} />
-          </Fade>
-        )}
-      </BackdropOrFragment>
+            <div style={styles.indicator} />
+          </Paper>
+          <Stack
+            style={styles.stack}
+            className="u-flex u-flex-column u-ov-hidden"
+            spacing="s"
+          >
+            {overriddenChildren}
+          </Stack>
+        </div>
+        <div style={{ height: backdrop ? 0 : bottomSpacerHeight }} />
+      </MuiBottomSheet>
+      {!isBottomPosition && (
+        <Fade in timeout={ANIMATION_DURATION}>
+          <div style={styles.bounceSafer} />
+        </Fade>
+      )}
     </>
   )
 }
