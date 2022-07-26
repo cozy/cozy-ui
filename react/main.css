@@ -13434,7 +13434,7 @@ html,
   position: absolute;
   top: 1.15rem;
   right: 1.15rem;
-  z-index: var(--zIndex-modal);
+  z-index: 1;
   transform: translateY(var(--flagship-top-height));
 }
 @media (max-width: 48rem) {
@@ -13447,7 +13447,7 @@ html,
   position: absolute;
   top: 1.15rem;
   left: 1.15rem;
-  z-index: var(--zIndex-modal);
+  z-index: 1;
 }
 @media (max-width: 48rem) {
   .DialogBackButton--1c7yH {
