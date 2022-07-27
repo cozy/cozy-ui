@@ -1,3 +1,11 @@
+# [70.4.0](https://github.com/cozy/cozy-ui/compare/v70.3.0...v70.4.0) (2022-07-27)
+
+
+### Features
+
+* **ButtomSheet:** Add `skipAnimation` prop ([36651ed](https://github.com/cozy/cozy-ui/commit/36651ed))
+* **ButtomSheet:** Upgrade mui-bottom-sheet to 1.0.8 ([876c751](https://github.com/cozy/cozy-ui/commit/876c751))
+
 # [70.3.0](https://github.com/cozy/cozy-ui/compare/v70.2.4...v70.3.0) (2022-07-27)
 
 
