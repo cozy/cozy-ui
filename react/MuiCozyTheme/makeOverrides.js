@@ -239,6 +239,7 @@ const makeOverrides = theme => ({
   },
   MuiButton: {
     root: {
+      borderRadius: 2,
       height: '2.5rem',
       padding: '0 1rem',
       '&.ghost': {
@@ -264,7 +265,6 @@ const makeOverrides = theme => ({
     },
     text: {
       minWidth: 'auto',
-      borderRadius: 2,
       padding: '11px 8px',
       '&:not($disabled)': {
         '&.customColor': {
@@ -276,7 +276,6 @@ const makeOverrides = theme => ({
       }
     },
     outlined: {
-      borderRadius: 2,
       '&:not($disabled)': {
         '&.ghost': {
           backgroundColor: alpha(
@@ -322,7 +321,6 @@ const makeOverrides = theme => ({
       }
     },
     contained: {
-      borderRadius: 2,
       boxShadow: 0,
       '&:not($disabled)': {
         '&.customColor': {
