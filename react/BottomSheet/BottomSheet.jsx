@@ -81,6 +81,7 @@ const BottomSheet = ({
   toolbarProps,
   settings,
   backdrop,
+  skipAnimation,
   onClose,
   children
 }) => {
@@ -235,6 +236,7 @@ const BottomSheet = ({
         disabledClosing={!onClose}
         hidden={isHidden}
         snapPointSeekerMode="next"
+        skipAnimation={skipAnimation}
       >
         <div ref={innerContentRef}>
           <Paper
@@ -288,6 +290,8 @@ BottomSheet.propTypes = {
   }),
   /** To add a backdrop */
   backdrop: PropTypes.bool,
+  /** To remove animations */
+  skipAnimation: PropTypes.bool,
   /** To totally close the BottomSheet by swaping it down */
   onClose: PropTypes.func
 }

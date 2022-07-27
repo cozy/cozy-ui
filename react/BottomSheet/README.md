@@ -11,6 +11,7 @@ Display content coming up from the bottom of the screen. The pane can be swiped 
   * **mediumHeight** : `<number>` – Height in pixel of the middle snap point
   * **mediumHeightRatio** : `<number>` – Height of the middle snap point, expressed as a percentage of the viewport height
 * **backdrop** : `<boolean>` – To add a backdrop
+* **skipAnimation** : `<boolean>` – To remove animations
 * **onClose** : `<function>` – To totally close the BottomSheet by swaping it down
 
 ⚠️ If **`backdrop`** is set to **`true`**, you must pass an **`onClose`** method.
@@ -104,6 +105,7 @@ const settings = state.mediumHeight === undefined && state.mediumHeightRatio ===
           toolbarProps={variant.withFakeToolbar ? { height: 50 } : undefined}
           settings={settings}
           backdrop={variant.backdrop}
+          skipAnimation={isTesting()}
           onClose={variant.closable ? hideBottomSheet : undefined}
         >
           {variant.withHeader && (
