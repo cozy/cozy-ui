@@ -6,6 +6,8 @@ cache:
   directories:
     - node_modules
 script:
+  - git fetch --tags -f
+  - yarn cache clean
   - yarn lint
   - yarn build
   - yarn build:css:all
