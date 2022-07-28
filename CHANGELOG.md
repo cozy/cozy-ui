@@ -1,3 +1,11 @@
+## [70.4.1](https://github.com/cozy/cozy-ui/compare/v70.4.0...v70.4.1) (2022-07-28)
+
+
+### Bug Fixes
+
+* Improve double dialog onUnmount ([996be83](https://github.com/cozy/cozy-ui/commit/996be83))
+* Temporary fix ESLint version ([2d7a8c2](https://github.com/cozy/cozy-ui/commit/2d7a8c2))
+
 # [70.4.0](https://github.com/cozy/cozy-ui/compare/v70.3.0...v70.4.0) (2022-07-27)
 
 
