@@ -1,80 +1,107 @@
-import { Theme, useTheme } from '@material-ui/core'
+import { getLuminance, Theme, useTheme } from '@material-ui/core'
 
 import { getFlagshipMetadata, isFlagshipApp } from 'cozy-device-helper'
-import { FlagshipUI } from 'cozy-intent'
 
-import { lightOrDark } from '../helpers/lightOrDark'
-import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import {
+  FlagshipUI,
+  ThemeColor,
+  useSetFlagshipUI
+} from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
 
-const makeOnMount = (
-  fullScreen: boolean,
-  hasAnotherDialog: boolean,
-  theme: Theme,
-  sidebar: Element | null,
-  cozyBar: Element | null
-): FlagshipUI =>
-  fullScreen
+interface DialogEffectsOptions {
+  cozybar?: Element | null
+  fullscreen?: boolean
+  immersive?: boolean
+  sidebar?: HTMLElement | Element | null
+  rootModal?: HTMLElement | Element | null
+  theme: Theme
+}
+
+export enum DOMStrings {
+  BackgroundDefault = 'default',
+  BackgroundPaper = 'paper',
+  CozyBarBackground = 'background-color',
+  CozyBarClass = '.coz-bar-wrapper',
+  CozyBarPrimaryClass = 'coz-theme-primary',
+  DialogClass = '.MuiPaper-root',
+  OverlayActive = 'rgba(0, 0, 0, 0.5)',
+  OverlayTransparent = 'transparent',
+  RootModalColor = 'color',
+  SidebarID = 'sidebar'
+}
+
+const LUMINANCE_BREAKPOINT = 0.5
+
+export const makeOnMount = ({
+  cozybar,
+  fullscreen,
+  sidebar,
+  rootModal,
+  theme
+}: DialogEffectsOptions): FlagshipUI => {
+  const hasBottomBackground = !rootModal
+  const hasTopBackground = cozybar && !rootModal
+
+  return fullscreen
     ? {
         bottomBackground: theme.palette.background.paper,
-        bottomTheme: 'dark',
+        bottomTheme: ThemeColor.Dark,
         topBackground: theme.palette.background.paper,
-        topTheme: 'dark'
+        topTheme: ThemeColor.Dark
       }
     : {
-        ...(hasAnotherDialog
-          ? {}
-          : {
-              bottomBackground:
-                theme.palette.background[sidebar ? 'default' : 'paper']
-            }),
-        bottomTheme: 'light',
-        bottomOverlay: 'rgba(0, 0, 0, 0.5)',
-        topOverlay: 'rgba(0, 0, 0, 0.5)',
-        ...(hasAnotherDialog || !cozyBar
-          ? {}
-          : {
-              topBackground: getComputedStyle(cozyBar).getPropertyValue(
-                'background-color'
-              )
-            }),
-        topTheme: 'light'
+        bottomBackground: hasBottomBackground
+          ? theme.palette.background[
+              sidebar
+                ? DOMStrings.BackgroundDefault
+                : DOMStrings.BackgroundPaper
+            ]
+          : undefined,
+        bottomTheme: ThemeColor.Light,
+        bottomOverlay: DOMStrings.OverlayActive,
+        topOverlay: DOMStrings.OverlayActive,
+        topBackground: hasTopBackground
+          ? getComputedStyle(cozybar).getPropertyValue(
+              DOMStrings.CozyBarBackground
+            )
+          : undefined,
+        topTheme: ThemeColor.Light
       }
+}
 
-const makeOnUnmount = (
-  hasAnotherDialog: boolean,
-  theme: Theme,
-  immersive: boolean,
-  sidebar: Element | null,
-  cozyBar: Element | null
-): FlagshipUI => {
-  const otherDialogStyles = getFirstDialogStyles()
-  const isDark =
-    otherDialogStyles !== null &&
-    lightOrDark(otherDialogStyles.color) === 'dark'
+export const makeOnUnmount = ({
+  rootModal,
+  theme,
+  immersive,
+  sidebar,
+  cozybar
+}: DialogEffectsOptions): FlagshipUI => {
+  const hasDarkRoot =
+    rootModal &&
+    getLuminance(
+      getComputedStyle(rootModal).getPropertyValue(DOMStrings.RootModalColor)
+    ) < LUMINANCE_BREAKPOINT
+  const hasBottomBackground = !rootModal
+  const hasDarkBottomTheme = hasDarkRoot || !immersive
+  const hasTopBackground = cozybar && !rootModal
+  const hasDarkTopTheme =
+    hasDarkRoot ||
+    (!immersive &&
+      !(cozybar && cozybar.classList.contains(DOMStrings.CozyBarPrimaryClass)))
 
   return {
-    ...(hasAnotherDialog
-      ? {}
-      : {
-          bottomBackground:
-            theme.palette.background[sidebar ? 'default' : 'paper']
-        }),
-    bottomTheme: isDark ? 'dark' : immersive ? 'light' : 'dark',
-    bottomOverlay: 'transparent',
-    topOverlay: 'transparent',
-    ...(hasAnotherDialog || !cozyBar
-      ? {}
-      : {
-          topBackground:
-            cozyBar &&
-            getComputedStyle(cozyBar).getPropertyValue('background-color')
-        }),
-    topTheme: isDark
-      ? 'dark'
-      : immersive ||
-        (cozyBar && cozyBar.classList.contains('coz-theme-primary'))
-      ? 'light'
-      : 'dark'
+    bottomBackground: hasBottomBackground
+      ? theme.palette.background[
+          sidebar ? DOMStrings.BackgroundDefault : DOMStrings.BackgroundPaper
+        ]
+      : undefined,
+    bottomTheme: hasDarkBottomTheme ? ThemeColor.Dark : ThemeColor.Light,
+    bottomOverlay: DOMStrings.OverlayTransparent,
+    topOverlay: DOMStrings.OverlayTransparent,
+    topBackground: hasTopBackground
+      ? getComputedStyle(cozybar).getPropertyValue(DOMStrings.CozyBarBackground)
+      : undefined,
+    topTheme: hasDarkTopTheme ? ThemeColor.Dark : ThemeColor.Light
   }
 }
 
@@ -90,31 +117,23 @@ const makeCaller = (
     immersive ? '--immersive' : ''
   ].join('')
 
-const getFirstDialogStyles = (): {
-  color: string
-} | null => {
-  const innerDialog = document.querySelector('.MuiPaper-root')
+const getRootModal = (): HTMLElement | null => {
+  const modals = document.querySelectorAll(DOMStrings.DialogClass)
 
-  if (!innerDialog) return null
-
-  const styles = getComputedStyle(innerDialog)
-
-  return {
-    color: styles.getPropertyValue('color')
-  }
+  return modals.length > 0 ? (modals[0] as HTMLElement) : null
 }
 
-const useHook = (fullScreen?: boolean): void => {
+const useHook = (fullscreen?: boolean): void => {
   const theme = useTheme()
-  const cozyBar = document.querySelector('.coz-bar-wrapper')
-  const sidebar = document.getElementById('sidebar')
-  const hasAnotherDialog = !!document.querySelector('[role="presentation"]')
+  const cozybar = document.querySelector(DOMStrings.CozyBarClass)
+  const sidebar = document.getElementById(DOMStrings.SidebarID)
+  const rootModal = getRootModal()
   const immersive = Boolean(getFlagshipMetadata().immersive)
 
   useSetFlagshipUI(
-    makeOnMount(Boolean(fullScreen), hasAnotherDialog, theme, sidebar, cozyBar),
-    makeOnUnmount(hasAnotherDialog, theme, immersive, sidebar, cozyBar),
-    makeCaller(Boolean(fullScreen), hasAnotherDialog, immersive)
+    makeOnMount({ fullscreen, theme, sidebar, rootModal, cozybar }),
+    makeOnUnmount({ rootModal, theme, immersive, sidebar, cozybar }),
+    makeCaller(!!fullscreen, !!rootModal, immersive)
   )
 }
 
