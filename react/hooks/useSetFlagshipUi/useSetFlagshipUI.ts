@@ -5,8 +5,18 @@ import isEmpty from 'lodash/isEmpty'
 import isObject from 'lodash/isObject'
 
 import { useWebviewIntent } from 'cozy-intent'
-import { FlagshipUI } from 'cozy-intent/dist/api/models/applications'
+import { FlagshipUI as IntentInterface } from 'cozy-intent/dist/api/models/applications'
 import { WebviewService } from 'cozy-intent/dist/api/services/WebviewService'
+
+export enum ThemeColor {
+  Dark = 'dark',
+  Light = 'light'
+}
+export interface FlagshipUI
+  extends Omit<IntentInterface, 'topTheme' | 'bottomTheme'> {
+  topTheme: ThemeColor
+  bottomTheme: ThemeColor
+}
 
 const parseArg = (
   webviewIntent?: WebviewService | void,
