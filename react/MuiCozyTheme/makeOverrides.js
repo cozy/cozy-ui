@@ -591,7 +591,7 @@ const makeOverrides = theme => ({
   },
   MuiDialogTitle: {
     root: {
-      '.flagship-app &': {
+      '.flagship-app .MuiDialog-paperFullScreen &': {
         paddingTop: 'calc(var(--flagship-top-height) + 0.75rem) !important'
       },
       ...theme.typography.h3,
@@ -621,7 +621,7 @@ const makeOverrides = theme => ({
   },
   MuiDialogContent: {
     root: {
-      '.flagship-app &': {
+      '.flagship-app .MuiDialog-paperFullScreen &': {
         marginBottom: 'var(--flagship-bottom-height) !important'
       },
       padding: '24px 32px 0',
