@@ -50,6 +50,7 @@ const FilePickerHeader = ({ navigateTo, folderId, onClose }) => {
     currentFolderQuery.options
   )
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const path = hasQueryBeenLoaded(restCurrentFolder)
     ? getBreadcrumbPath(currentFolder[0])
     : []
