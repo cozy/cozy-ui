@@ -1,3 +1,10 @@
+## [70.4.2](https://github.com/cozy/cozy-ui/compare/v70.4.1...v70.4.2) (2022-07-29)
+
+
+### Bug Fixes
+
+* Apply top/bottom spacing on dialog fullscreen ([1a3aebb](https://github.com/cozy/cozy-ui/commit/1a3aebb))
+
 ## [70.4.1](https://github.com/cozy/cozy-ui/compare/v70.4.0...v70.4.1) (2022-07-28)
 
 
