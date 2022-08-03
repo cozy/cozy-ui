@@ -5682,6 +5682,416 @@ exports[`Icon should render examples: Icon 3`] = `
 
 exports[`Icon should render examples: Icon 4`] = `
 "<div>
+  <p class=\\"MuiTypography-root u-mb-1 MuiTypography-body1 MuiTypography-colorTextPrimary\\">Font size: <input type=\\"range\\" min=\\"8\\" max=\\"48\\" value=\\"16\\"> 16px</p>
+  <div style=\\"font-size: 2rem; display: grid; grid-template-columns: repeat(6, 1fr);\\">
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path fill=\\"#d6d8da\\" fill-rule=\\"nonzero\\" d=\\"M3 9c0 29.178 11.311 34.3 20.997 39C33.682 43.3 45 38.178 45 9L23.998 0 3 9z\\"></path>
+          <path fill=\\"#5d6165\\" d=\\"M22.5 25.244V30.5a1 1 0 001 1h1a1 1 0 001-1v-5.256A4.502 4.502 0 0024 16.5a4.5 4.5 0 00-1.5 8.744zM24 37.5c-8.284 0-15-6.716-15-15 0-8.284 6.716-15 15-15 8.284 0 15 6.716 15 15 0 8.284-6.716 15-15 15z\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Accounts</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path fill=\\"#d6d8da\\" d=\\"M25.342 24.67l20.87 10.436a1 1 0 010 1.788L25.341 47.33a3 3 0 01-2.684 0L1.788 36.894a1 1 0 010-1.788l20.87-10.435a3 3 0 012.684 0z\\"></path>
+          <path fill=\\"#95999d\\" d=\\"M25.342 12.67l20.87 10.436a1 1 0 010 1.788L25.341 35.33a3 3 0 01-2.684 0L1.788 24.894a1 1 0 010-1.788l20.87-10.435a3 3 0 012.684 0z\\"></path>
+          <path fill=\\"#5d6165\\" d=\\"M25.342.67l20.87 10.436a1 1 0 010 1.788L25.341 23.33a3 3 0 01-2.684 0L1.788 12.894a1 1 0 010-1.788L22.659.67a3 3 0 012.684 0z\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Apps</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path fill=\\"#d6d8da\\" d=\\"M0 4h46v40H0z\\"></path>
+          <path fill=\\"#5d6165\\" d=\\"M38 18h8a2 2 0 012 2v8a2 2 0 01-2 2h-8a6 6 0 110-12zm0 8a2 2 0 100-4 2 2 0 000 4z\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">BankAccounts</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path fill=\\"#d6d8da\\" d=\\"M0 0h38v32H0z\\"></path>
+          <path fill=\\"#5d6165\\" d=\\"M31 12h7a2 2 0 012 2v6a2 2 0 01-2 2h-7a5 5 0 010-10zm0 7a2 2 0 100-4 2 2 0 000 4z\\"></path>
+          <g transform=\\"translate(24 24)\\">
+            <circle cx=\\"12\\" cy=\\"12\\" r=\\"12\\" fill=\\"#5d6165\\"></circle>
+            <path fill=\\"#FFF\\" fill-rule=\\"nonzero\\" d=\\"M20.29 13.71a1.01 1.01 0 000-1.42l-6.58-6.58c-.392-.392-1.163-.71-1.707-.71H5.997C5.447 5 5 5.453 5 5.997v6.006c0 .55.324 1.32.71 1.707l6.58 6.58a1.01 1.01 0 001.42 0l6.58-6.58zM9.002 11a2 2 0 110-4 2 2 0 010 4z\\"></path>
+          </g>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">BankGroups</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path d=\\"M24 0C10.766 0 0 10.766 0 24c0 13.232 10.766 24 24 24 13.232 0 24-10.768 24-24C48 10.766 37.232 0 24 0z\\" fill=\\"#d6d8da\\" fill-rule=\\"nonzero\\"></path>
+          <path d=\\"M33.933 16.376C32.149 13.856 29.827 12 25.72 12c-4.779 0-8.211 3.215-9.558 7.69H13v2.818h2.625c-.067.498-.067 1.028-.067 1.525 0 .431 0 .862.033 1.26H13v2.85h3.063C17.375 32.852 20.875 36 25.855 36c3.836 0 6.226-1.923 8.144-4.674l-2.962-2.155c-1.548 2.022-2.894 3.183-5.149 3.183-2.625 0-4.543-1.592-5.485-4.21h7.27v-2.851h-7.91c-.033-.431-.033-.862-.033-1.326 0-.497 0-.995.067-1.459h7.875v-2.817h-7.235c.942-2.487 2.793-4.045 5.182-4.045 2.356 0 3.736 1.061 5.183 3.017l3.13-2.287z\\" fill=\\"#5d6165\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">BankOperations</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\">
+          <path d=\\"M24 0C10.766 0 0 10.766 0 24c0 13.232 10.766 24 24 24 13.232 0 24-10.768 24-24C48 10.766 37.232 0 24 0z\\" fill=\\"#D6D8DA\\"></path>
+          <path d=\\"M29.958 19.735C28.854 18.16 27.417 17 24.875 17c-2.958 0-5.083 2.01-5.917 4.807H17v1.76h1.625c-.042.311-.042.643-.042.954 0 .27 0 .538.021.787H17v1.782h1.896c.812 2.942 2.979 4.91 6.062 4.91 2.375 0 3.855-1.202 5.042-2.921l-1.833-1.347c-.959 1.264-1.792 1.989-3.188 1.989-1.625 0-2.812-.994-3.396-2.631h4.5v-1.782h-4.895c-.021-.27-.021-.539-.021-.829 0-.31 0-.621.041-.911h4.875v-1.761h-4.479c.584-1.554 1.73-2.528 3.209-2.528 1.458 0 2.312.663 3.208 1.885l1.937-1.43z\\" fill=\\"#5D6165\\"></path>
+          <path d=\\"M24 6c8.984 0 16.593 6.625 17.829 15.524 1.235 8.9-4.28 17.347-12.925 19.795-8.644 2.448-17.77-1.853-21.384-10.079l-.2-.45a2 2 0 013.64-1.65l.1.23a14 14 0 102.04-14.15 2 2 0 012.33.38l.1.12a2 2 0 01-.13 2.7l-.12.12-6 5a2 2 0 01-3.27-1.39L6 22v-8a2 2 0 013.74-.99A17.98 17.98 0 0124 6z\\" fill=\\"#5D6165\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">BankRecurrence</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path fill=\\"#d6d8da\\" d=\\"M9 47c-1.105 0-2-.898-2-2.006V3.006C7 1.898 7.89 1 8.991 1H29l12 12v32c0 1.105-.892 2-2 2H9z\\"></path>
+          <path fill=\\"#5d6165\\" d=\\"M29 1v9.991A2.01 2.01 0 0031.009 13H41L29 1z\\"></path>
+          <path stroke=\\"#5d6165\\" stroke-width=\\"2\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" d=\\"M35 41H13V17h22zM13 22h22m-22 6h22m-22 6h22M20 17v24\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Bill</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" fill=\\"none\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M0 2.996A2.992 2.992 0 013.003 0h41.994A3 3 0 0148 2.996v33.008A3.006 3.006 0 0145.009 39H27L9 48v-9H3c-1.657 0-3-1.343-3-2.995V2.995z\\" fill=\\"#D6D8DA\\"></path>
+        <path d=\\"M24 7a2.807 2.807 0 00-2.8 2.993l.667 10.011a2.138 2.138 0 004.266 0l.667-10.01A2.807 2.807 0 0024 7zm-3 21a3 3 0 116 0 3 3 0 01-6 0z\\" fill=\\"#5D6165\\"></path>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">BugReport</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" fill=\\"none\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <rect y=\\"4\\" width=\\"48\\" height=\\"44\\" rx=\\"8\\" fill=\\"#D1D5DB\\"></rect>
+        <path d=\\"M0 12a8 8 0 018-8h32a8 8 0 018 8v4H0v-4zm6 15a3 3 0 116 0 3 3 0 01-6 0zm3 7a3 3 0 100 6 3 3 0 000-6zm7-7a3 3 0 116 0 3 3 0 01-6 0zm3 7a3 3 0 100 6 3 3 0 000-6zm7-7a3 3 0 116 0 3 3 0 01-6 0zm3 7a3 3 0 100 6 3 3 0 000-6zm7-7a3 3 0 116 0 3 3 0 01-6 0zm3 7a3 3 0 100 6 3 3 0 000-6z\\" fill=\\"#5D6165\\"></path>
+        <path d=\\"M12 0a3 3 0 00-3 3v6a3 3 0 106 0V3a3 3 0 00-3-3zm24 0a3 3 0 00-3 3v6a3 3 0 106 0V3a3 3 0 00-3-3z\\" fill=\\"#95999D\\"></path>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Calendar</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" fill=\\"none\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M21 48C9.402 48 0 38.598 0 27S9.402 6 21 6v21h21c0 11.598-9.402 21-21 21z\\" fill=\\"#D6D8DA\\"></path>
+        <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M27 21V0c11.598 0 21 9.402 21 21H27z\\" fill=\\"#5D6165\\"></path>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Category</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\" transform=\\"translate(6)\\">
+          <path fill=\\"#95999D\\" d=\\"M9 30h18v17.08a.9.9 0 01-1.45.71L18 42l-7.55 5.79A.9.9 0 019 47.08V30z\\"></path>
+          <path fill=\\"#5D6165\\" d=\\"M10.87 3.6l-2.84.3A4.45 4.45 0 004.1 7.8l-.36 2.83c-.1.82-.43 1.6-.95 2.25l-1.8 2.21a4.45 4.45 0 00-.04 5.54l1.75 2.25c.51.65.83 1.44.92 2.26l.3 2.84a4.45 4.45 0 003.88 3.94l2.83.36c.82.1 1.6.43 2.24.95l2.23 1.8a4.45 4.45 0 005.53.04l2.25-1.75a4.45 4.45 0 012.26-.92l2.84-.3a4.45 4.45 0 003.94-3.88l.36-2.83c.1-.82.43-1.6.95-2.25l1.8-2.21a4.45 4.45 0 00.04-5.54l-1.75-2.25a4.45 4.45 0 01-.92-2.26l-.3-2.84a4.45 4.45 0 00-3.88-3.94l-2.83-.36c-.82-.1-1.6-.43-2.25-.95L20.92.98a4.45 4.45 0 00-5.54-.04l-2.25 1.75c-.65.51-1.44.83-2.26.92z\\"></path>
+          <circle cx=\\"18\\" cy=\\"18\\" r=\\"9\\" fill=\\"#D6D8DA\\"></circle>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Certified</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path d=\\"M35 48H13c-2.21 0-4-1.87-4-4.174V4.174C9 1.87 10.79 0 13 0h22c2.208 0 4 1.87 4 4.174v39.652C39 46.13 37.208 48 35 48z\\" fill=\\"#d6d8da\\"></path>
+          <path d=\\"M21 3h6\\" stroke=\\"#5d6165\\" stroke-width=\\"2\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"></path>
+          <path d=\\"M26 44a2 2 0 11-4.001-.001A2 2 0 0126 44zM12 6h24v34H12z\\" fill=\\"#5d6165\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">ConnectedClients</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path fill=\\"#d6d8da\\" d=\\"M24 47C11.297 47 1 36.703 1 24S11.297 1 24 1s23 10.297 23 23-10.297 23-23 23zm19-23h-4a1 1 0 000 2h4a1 1 0 000-2zm-1.83-8.194l-3.696 1.53a1 1 0 00.765 1.848l3.696-1.53a1 1 0 00-.765-1.848zM30.346 6.063l-1.53 3.696a1 1 0 001.848.765l1.53-3.696a1 1 0 00-1.848-.765zM23 5v4a1 1 0 002 0V5a1 1 0 00-2 0zm-7.194 1.828l1.53 3.696a1 1 0 001.848-.765l-1.53-3.696a1 1 0 10-1.848.765zm-5.948 4.44l2.824 2.833a1 1 0 101.417-1.413l-2.824-2.832a1 1 0 10-1.417 1.413zm-3.793 6.386l3.694 1.53a1 1 0 10.765-1.847l-3.694-1.53a1 1 0 10-.765 1.847zM5 26h4a1 1 0 000-2H5a1 1 0 000 2z\\"></path>
+          <path stroke=\\"#5d6165\\" stroke-width=\\"2\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" d=\\"M22 33h4v8h-4zm8 0h4v8h-4zm-16 0h4v8h-4zm13-9a3.001 3.001 0 01-6 0 3.001 3.001 0 016 0h0zm-.879-2.121l9.9-9.898\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Consumption</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path d=\\"M48 40c0 1.105-.902 2-2.009 2H36v-4.501C36 36.67 35.336 36 34.502 36h-1.504c-.827 0-1.498.665-1.498 1.499V42h-15v-4.501c0-.828-.664-1.499-1.498-1.499h-1.504c-.827 0-1.498.665-1.498 1.499V42H2.009A2 2 0 010 40V8a2 2 0 012.001-2H46c1.104 0 2 .89 2 2v32z\\" fill=\\"#d6d8da\\"></path>
+          <path d=\\"M25.5 13.5h9V15h-9v-1.5zm0 4.5H42v1.5H25.5V18zm0 4.5H42V24H25.5v-1.5zm0 4.5H42v1.5H25.5V27zm-12-4.875c-2.485 0-4.5-2.267-4.5-5.063C9 14.268 11.015 12 13.5 12s4.5 2.267 4.5 5.063c0 2.795-2.015 5.062-4.5 5.062zm-9 5.625c0-1.125 2.25-4.5 4.5-4.5s1.125 1.125 4.5 1.125 2.25-1.125 4.5-1.125 4.5 3.375 4.5 4.5 0 2.25-1.125 2.25H5.625C4.5 30 4.5 28.875 4.5 27.75z\\" fill=\\"#5d6165\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">ContactsAccounts</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path d=\\"M43 9c.552 0 1 .438 1 1.003v36.994A.996.996 0 0142.997 48H8.99C6.787 48 5 46.206 5 43.99V4.01A4 4 0 018.995 0h32.502A.998.998 0 0142.5.999v1.002a1 1 0 01-.995.999H10.004A2.003 2.003 0 008 4.998v2.004C8 8.106 8.89 9 10 9h33zM9.5 6a1.5 1.5 0 011.498-1.5h28.504a1.5 1.5 0 010 3H10.998A1.495 1.495 0 019.5 6z\\" fill=\\"#d6d8da\\"></path>
+          <path d=\\"M24.5 30c-3.314 0-6-3.022-6-6.75s2.686-6.75 6-6.75 6 3.022 6 6.75-2.686 6.75-6 6.75zm-12 7.5c0-1.5 3-6 6-6s1.5 1.5 6 1.5 3-1.5 6-1.5 6 4.5 6 6 0 3-1.5 3H14c-1.5 0-1.5-1.5-1.5-3z\\" fill=\\"#5d6165\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">ContactsGroups</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path d=\\"M48 40c0 1.105-.902 2-2.009 2H36v-4.501C36 36.67 35.336 36 34.502 36h-1.504c-.827 0-1.498.665-1.498 1.499V42h-15v-4.501c0-.828-.664-1.499-1.498-1.499h-1.504c-.827 0-1.498.665-1.498 1.499V42H2.009A2 2 0 010 40V8a2 2 0 012.001-2H46c1.104 0 2 .89 2 2v32z\\" fill=\\"#d6d8da\\"></path>
+          <path d=\\"M25.5 13.5h9V15h-9v-1.5zm0 4.5H42v1.5H25.5V18zm0 4.5H42V24H25.5v-1.5zm0 4.5H42v1.5H25.5V27zm-12-4.875c-2.485 0-4.5-2.267-4.5-5.063C9 14.268 11.015 12 13.5 12s4.5 2.267 4.5 5.063c0 2.795-2.015 5.062-4.5 5.062zm-9 5.625c0-1.125 2.25-4.5 4.5-4.5s1.125 1.125 4.5 1.125 2.25-1.125 4.5-1.125 4.5 3.375 4.5 4.5 0 2.25-1.125 2.25H5.625C4.5 30 4.5 28.875 4.5 27.75z\\" fill=\\"#5d6165\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Contacts</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" d=\\"M12.5 4h-3a.5.5 0 010-1h3a.5.5 0 010 1zm0 3h-3a.5.5 0 010-1h3a.5.5 0 010 1zm0 3h-9a.5.5 0 010-1h9a.5.5 0 010 1zm0 3h-9a.5.5 0 010-1h9a.5.5 0 010 1zM3 5V2h4v6L5 6 3 8V5zm11-5H2c-.55 0-1 .45-1 1v14c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V1c0-.55-.45-1-1-1z\\"></path>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Contract</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 16 16\\" fill=\\"none\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill=\\"#fff\\" d=\\"M0 0h16v16H0z\\"></path>
+        <path d=\\"M8 15.059c6.828-2.67 6.298-6.466 5.944-12.128C11.75 2.834 9.804 2.159 8 1.033 6.196 2.159 4.25 2.834 2.056 2.93 1.703 8.593 1.172 12.389 8 15.059z\\" fill=\\"#383941\\"></path>
+        <path d=\\"M8 0l-.463.289c-1.691 1.055-3.493 1.677-5.52 1.766l-.785.035-.049.786-.045.697c-.162 2.486-.314 4.817.369 6.826.787 2.317 2.614 4.084 6.175 5.477L8 16v-.941c-6.56-2.566-6.328-6.17-5.986-11.47l.042-.658C4.25 2.834 6.196 2.159 8 1.033V0z\\" fill=\\"#E0E0E0\\"></path>
+        <path d=\\"M8 0l.463.289c1.691 1.055 3.493 1.677 5.52 1.766l.785.035.049.786.045.697c.162 2.486.314 4.817-.369 6.826-.787 2.317-2.614 4.084-6.175 5.477L8 16v-.941c6.56-2.566 6.328-6.17 5.986-11.47l-.042-.658C11.75 2.834 9.804 2.159 8 1.033V0z\\" fill=\\"#A0A0A0\\"></path>
+        <path d=\\"M5.842 5.514h.31a.47.47 0 01.331.136.46.46 0 01.137.327v4.699H5.375V5.977c0-.123.05-.24.137-.327a.47.47 0 01.33-.136zM8 7.802h.31a.47.47 0 01.331.136.46.46 0 01.137.327v2.41H7.532v-2.41c0-.123.049-.24.137-.327a.47.47 0 01.33-.136zm2.285-.885h.31a.47.47 0 01.331.136.46.46 0 01.137.327v3.296H9.817V7.38c0-.123.05-.24.137-.327a.47.47 0 01.33-.136z\\" fill=\\"#E0E0E0\\"></path>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Ecolyo</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 16 16\\" fill=\\"none\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill=\\"#fff\\" d=\\"M0 0h16v16H0z\\"></path>
+        <path d=\\"M8.276 5.908h-.552a.835.835 0 00-.587.24.818.818 0 00-.243.582v5.855h2.212V6.73a.818.818 0 00-.243-.582.835.835 0 00-.587-.24zm3.552-2.493h-.551a.834.834 0 00-.587.241.818.818 0 00-.243.582v8.347h2.212V4.238a.818.818 0 00-.244-.582.834.834 0 00-.587-.24zM4.723 7.48H4.17a.835.835 0 00-.587.24.818.818 0 00-.243.582v4.283h2.212V8.302a.818.818 0 00-.243-.581.835.835 0 00-.587-.241z\\" fill=\\"#7B7B7B\\"></path>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Energy</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\">
+          <path d=\\"M43.302 1.481a2 2 0 01.217 2.82l-12 14a2 2 0 01-2.151.596L18.424 15.25 7.28 24.536a2 2 0 11-2.56-3.072l12-10a2 2 0 011.913-.361l10.724 3.574L40.48 1.698a2 2 0 012.82-.217z\\" fill=\\"#D6D8DA\\"></path>
+          <path d=\\"M42 6a3 3 0 100-6 3 3 0 000 6zM18 16a3 3 0 100-6 3 3 0 000 6zM6 26a3 3 0 100-6 3 3 0 000 6zm27-9a3 3 0 11-6 0 3 3 0 016 0z\\" fill=\\"#95999D\\"></path>
+          <path d=\\"M40 16a2 2 0 00-2 2v28a2 2 0 002 2h4a2 2 0 002-2V18a2 2 0 00-2-2h-4zM16 26a2 2 0 00-2 2v18a2 2 0 002 2h4a2 2 0 002-2V28a2 2 0 00-2-2h-4zM4 36a2 2 0 00-2 2v8a2 2 0 002 2h4a2 2 0 002-2v-8a2 2 0 00-2-2H4zm22-4a2 2 0 012-2h4a2 2 0 012 2v14a2 2 0 01-2 2h-4a2 2 0 01-2-2V32z\\" fill=\\"#5D6165\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Energybreakdown</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path fill=\\"#d6d8da\\" d=\\"M8 0h25.086a1 1 0 01.707.293l9.914 9.914a1 1 0 01.293.707V45a3 3 0 01-3 3H8a3 3 0 01-3-3V3a3 3 0 013-3z\\"></path>
+          <path fill=\\"#5d6165\\" d=\\"M32 0v12h12v-1.086a1 1 0 00-.293-.707L33.793.293A1 1 0 0033.086 0H32z\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Fallback</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <defs>
+          <path id=\\"family_svg__a\\" d=\\"M46 23c0 12.704-10.298 23-23 23C10.296 46 0 35.704 0 23 0 10.3 10.296 0 23 0c12.702 0 23 10.3 23 23z\\"></path>
+        </defs>
+        <g transform=\\"translate(1 1)\\" fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <mask id=\\"family_svg__b\\" fill=\\"#fff\\">
+            <use xlink:href=\\"#family_svg__a\\"></use>
+          </mask>
+          <use fill=\\"#d6d8da\\" xlink:href=\\"#family_svg__a\\"></use>
+          <path fill=\\"#5d6165\\" d=\\"M9 25a6 6 0 016 6v16H3V31a6 6 0 016-6zm0-2a6 6 0 110-12 6 6 0 010 12zm28 0a6 6 0 110-12 6 6 0 010 12zm-14 8a6 6 0 110-12 6 6 0 010 12zm14-6a6 6 0 016 6v16H31V31a6 6 0 016-6zm-14 8a6 6 0 016 6v8H17v-8a6 6 0 016-6z\\" mask=\\"url(#family_svg__b)\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Family</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path fill=\\"#d6d8da\\" d=\\"M3.002 43A2.001 2.001 0 011 41.003V2.997C1 1.894 1.89 1 2.991 1H23l10 10v32H3.002z\\"></path>
+          <path fill=\\"#5d6165\\" d=\\"M23 1l10 10h-8c-1.113 0-2-.895-2-2V1zm3.931 45.452c-1.066.305-1.686-.306-1.38-1.38L27 40.005l13.59-13.592a2 2 0 012.831.007l2.162 2.162c.784.784.784 2.054.008 2.83L32 45.005l-5.069 1.448zM16 38h10v2H16v-2z\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">FilesPen</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path fill=\\"#D6D8DA\\" d=\\"M42 0H6a6 6 0 00-6 6v36a6 6 0 006 6h36a6 6 0 006-6V6a6 6 0 00-6-6\\"></path>
+          <path fill=\\"#5D6165\\" d=\\"M24 6A18 18 0 117.52 31.24l-.2-.45a2 2 0 013.64-1.65l.1.23a14 14 0 102.04-14.15 2 2 0 012.33.38l.1.12a2 2 0 01-.13 2.7l-.12.12-6 5a2 2 0 01-3.27-1.39L6 22v-8a2 2 0 013.74-.99A17.98 17.98 0 0124 6zm0 8a2 2 0 012 2v7.17l3.41 3.42a2 2 0 11-2.82 2.82l-4-4A2.05 2.05 0 0122 24v-8c0-1.1.9-2 2-2z\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">FilesVersions</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <rect width=\\"48\\" height=\\"39\\" y=\\"6\\" fill=\\"#d6d8da\\" rx=\\"2\\"></rect>
+          <path fill=\\"#5d6165\\" d=\\"M2 3h18.172a2 2 0 011.414.586l1.828 1.828A2 2 0 0024.828 6H45a3 3 0 013 3H24.828a2 2 0 00-1.414.586l-1.828 1.828a2 2 0 01-1.414.586H0V5a2 2 0 012-2z\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Files</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path fill=\\"#5d6165\\" d=\\"M6.001 21v26h36V21l4.292 4.293a1 1 0 001.414 0l.086-.086a1 1 0 000-1.414L38 14V4a1 1 0 00-1-1h-5a1 1 0 00-1 1v3L24.707.707a1 1 0 00-1.414 0L.207 23.793a1 1 0 000 1.414l.087.086a1 1 0 001.414 0L6 21z\\"></path>
+          <path fill=\\"#d6d8da\\" d=\\"M14 33h8v14h-8z\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Home</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path fill=\\"#D6D8DA\\" d=\\"M48 40a2 2 0 01-2 2H36v-4.5c0-.83-.66-1.5-1.5-1.5H33c-.83 0-1.5.67-1.5 1.5V42h-15v-4.5c0-.83-.66-1.5-1.5-1.5h-1.5c-.83 0-1.5.67-1.5 1.5V42H2a2 2 0 01-2-2V8c0-1.1.9-2 2-2h44a2 2 0 012 2v32z\\"></path>
+          <path fill=\\"#5D6165\\" d=\\"M25.5 13.5h9V15h-9v-1.5zm0 4.5H42v1.5H25.5V18zm0 4.5H42V24H25.5v-1.5zm0 4.5H42v1.5H25.5V27zm-12-4.88c-2.49 0-4.5-2.26-4.5-5.06S11.01 12 13.5 12s4.5 2.27 4.5 5.06c0 2.8-2.01 5.06-4.5 5.06zm-9 5.63c0-1.13 2.25-4.5 4.5-4.5s1.13 1.13 4.5 1.13c3.38 0 2.25-1.13 4.5-1.13s4.5 3.38 4.5 4.5c0 1.13 0 2.25-1.13 2.25H5.63C4.5 30 4.5 28.87 4.5 27.75z\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Identities</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <circle cx=\\"24\\" cy=\\"24\\" r=\\"24\\" fill=\\"#d6d8da\\"></circle>
+          <path fill=\\"#5d6165\\" d=\\"M24 14a6 6 0 110-12 6 6 0 010 12zm8.66 5a6 6 0 1110.393-6 6 6 0 01-10.393 6zm0 10a6 6 0 1110.393 6 6 6 0 01-10.393-6zM24 34a6 6 0 110 12 6 6 0 010-12zm-8.66-5a6 6 0 11-10.393 6 6 6 0 0110.393-6zm0-10a6 6 0 11-10.393-6 6 6 0 0110.393 6zM24 30a6 6 0 110-12 6 6 0 010 12z\\"></path>
+          <circle cx=\\"36\\" cy=\\"36\\" r=\\"12\\" fill=\\"#5d6165\\"></circle>
+          <path fill=\\"#FFF\\" fill-rule=\\"nonzero\\" d=\\"M31.707 37.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l8-8a1 1 0 00-1.414-1.414L33 38.586l-1.293-1.293z\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">KonnectorsResult</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <circle cx=\\"24\\" cy=\\"24\\" r=\\"24\\" fill=\\"#d6d8da\\"></circle>
+          <path fill=\\"#5d6165\\" d=\\"M24 14a6 6 0 110-12 6 6 0 010 12zm8.66 5a6 6 0 1110.393-6 6 6 0 01-10.393 6zm0 10a6 6 0 1110.393 6 6 6 0 01-10.393-6zM24 34a6 6 0 110 12 6 6 0 010-12zm-8.66-5a6 6 0 11-10.393 6 6 6 0 0110.393-6zm0-10a6 6 0 11-10.393-6 6 6 0 0110.393 6zM24 30a6 6 0 110-12 6 6 0 010 12z\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Konnectors</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path d=\\"M8 0c3.99 0 7 2.866 7 6.667 0 4.782-6.508 9.089-6.784 9.27a.398.398 0 01-.432 0C7.507 15.756 1 11.45 1 6.667 1 2.866 4.01 0 8 0zm0 9a2.5 2.5 0 100-5 2.5 2.5 0 000 5z\\" fill=\\"#5d6165\\" fill-rule=\\"evenodd\\"></path>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Location</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path d=\\"M24 0c13.255 0 24 10.745 24 24S37.255 48 24 48 0 37.255 0 24 10.745 0 24 0\\" fill=\\"#d6d8da\\"></path>
+          <path d=\\"M26.536 36.393l6.928-4 .006.01A3.984 3.984 0 0132 37.857a3.997 3.997 0 01-5.458-1.454l-.006-.01zm-1-1.732l-6.917 3.993a2.002 2.002 0 01-2.744-.726 2.007 2.007 0 01.733-2.731l-2-3.464c-2.45-4.243-3.257-10.974.301-15.48l-.379-.655A3.985 3.985 0 0116 10.144a3.995 3.995 0 015.458 1.454l.38.656c5.68-.828 11.104 3.236 13.554 7.478l2 3.465a1.994 1.994 0 012.732.732 2.004 2.004 0 01-.743 2.738l-6.917 3.994-6.928 4z\\" fill=\\"#5d6165\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Notifications</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" fill=\\"none\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M24 36L9.893 43.416l2.694-15.708L1.175 16.584l15.772-2.292L24 0l7.053 14.292 15.772 2.292-11.412 11.124 2.694 15.708L24 36z\\" fill=\\"#D1D5DB\\"></path>
+        <path d=\\"M12.587 27.708L9.893 43.416 24 36V0l-7.053 14.292-15.772 2.292 11.412 11.124z\\" fill=\\"#5D6165\\"></path>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Opinions</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path fill=\\"#5d6165\\" d=\\"M19 24h10v16H19z\\"></path>
+          <path fill=\\"#d6d8da\\" d=\\"M24 28c1.102 0 2 .896 2 2 0 .736-.406 1.374-1 1.72V37c0 .55-.45 1-1 1-.552 0-1-.45-1-1v-5.28c-.596-.346-1-.984-1-1.72a2 2 0 012-2zM6 21v24a3 3 0 003 3h30a3 3 0 003-3V21a3 3 0 00-3-3h-3v-6c0-6.618-5.384-12-12-12-6.618 0-12 5.382-12 12h2c0-5.514 4.484-10 10-10 5.514 0 10 4.486 10 10v6H9a3 3 0 00-3 3z\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Passwords</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path fill=\\"#5d6165\\" d=\\"M19 24h10v16H19z\\"></path>
+          <path fill=\\"#d6d8da\\" d=\\"M24 28c1.102 0 2 .896 2 2 0 .736-.406 1.374-1 1.72V37c0 .55-.45 1-1 1-.552 0-1-.45-1-1v-5.28c-.596-.346-1-.984-1-1.72a2 2 0 012-2zM6 21v24a3 3 0 003 3h30a3 3 0 003-3V21a3 3 0 00-3-3h-3v-6c0-6.618-5.384-12-12-12-6.618 0-12 5.382-12 12h2c0-5.514 4.484-10 10-10 5.514 0 10 4.486 10 10v6H9a3 3 0 00-3 3z\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Permissions</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <defs>
+          <path id=\\"photos-album_svg__a\\" d=\\"M0 0h32v26H0V0zm0 0v20h23a3 3 0 003-3V0H0z\\"></path>
+          <path id=\\"photos-album_svg__c\\" d=\\"M0 0h32v26H0V0zm0 0v20h23a3 3 0 003-3V0H0z\\"></path>
+        </defs>
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <g transform=\\"translate(8 11)\\">
+            <mask id=\\"photos-album_svg__b\\" fill=\\"#fff\\">
+              <use xlink:href=\\"#photos-album_svg__a\\"></use>
+            </mask>
+            <rect width=\\"32\\" height=\\"26\\" fill=\\"#d6d8da\\" mask=\\"url(#photos-album_svg__b)\\" rx=\\"2\\"></rect>
+            <path fill=\\"#5d6165\\" d=\\"M0 20l6.29-6.29a.999.999 0 011.416-.004L11 17l8.294-8.294a1.003 1.003 0 011.412 0L32 20v4.002C32 25.106 31.11 26 29.998 26H2.002A2.002 2.002 0 010 24.002V20z\\" mask=\\"url(#photos-album_svg__b)\\"></path>
+          </g>
+          <g transform=\\"translate(16 19)\\">
+            <mask id=\\"photos-album_svg__d\\" fill=\\"#fff\\">
+              <use xlink:href=\\"#photos-album_svg__c\\"></use>
+            </mask>
+            <rect width=\\"32\\" height=\\"26\\" fill=\\"#d6d8da\\" mask=\\"url(#photos-album_svg__d)\\" rx=\\"2\\"></rect>
+            <path fill=\\"#5d6165\\" d=\\"M0 20l6.29-6.29a.999.999 0 011.416-.004L11 17l8.294-8.294a1.003 1.003 0 011.412 0L32 20v4.002C32 25.106 31.11 26 29.998 26H2.002A2.002 2.002 0 010 24.002V20z\\" mask=\\"url(#photos-album_svg__d)\\"></path>
+          </g>
+          <g transform=\\"translate(0 3)\\">
+            <rect width=\\"32\\" height=\\"26\\" fill=\\"#d6d8da\\" rx=\\"2\\"></rect>
+            <path fill=\\"#5d6165\\" d=\\"M0 20l6.29-6.29a.999.999 0 011.416-.004L11 17l8.294-8.294a1.003 1.003 0 011.412 0L32 20v4.002C32 25.106 31.11 26 29.998 26H2.002A2.002 2.002 0 010 24.002V20z\\"></path>
+            <circle cx=\\"8\\" cy=\\"7\\" r=\\"3\\" fill=\\"#FFF\\"></circle>
+            <path stroke=\\"#d6d8da\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" d=\\"M11 16l-5.5 5.5L11 16z\\"></path>
+          </g>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">PhotosAlbum</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" fill=\\"none\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M0 6.872A2.369 2.369 0 012.376 4.5h33.248A2.374 2.374 0 0138 6.872v26.132a2.37 2.37 0 01-2.376 2.371H2.376A2.375 2.375 0 010 33.004V6.872z\\" fill=\\"#D1D5DB\\"></path>
+        <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M9.5 16.375a3.562 3.562 0 100-7.125 3.562 3.562 0 000 7.125\\" fill=\\"#fff\\"></path>
+        <circle cx=\\"36\\" cy=\\"36\\" r=\\"12\\" fill=\\"#5D6165\\"></circle>
+        <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M42.25 35.078c.051.26.077.568.077.926 0 .358-.026.665-.078.925l1.62 1.333c.131.086.163.203.099.352-.325.95-.859 1.826-1.602 2.628-.104.124-.229.155-.37.094l-2.032-.668c-.52.396-1.08.705-1.68.926l-.409 2c-.026.146-.117.233-.273.258-.56.1-1.094.148-1.602.148a9.212 9.212 0 01-1.601-.148c-.157-.024-.248-.11-.274-.259l-.409-1.999a5.979 5.979 0 01-1.68-.926l-2.03.668c-.145.062-.268.03-.372-.094-.742-.802-1.275-1.677-1.602-2.628-.065-.148-.032-.266.099-.352l1.62-1.333a4.757 4.757 0 01-.078-.925c0-.358.026-.667.078-.926l-1.62-1.332c-.13-.086-.164-.204-.099-.352.326-.95.86-1.826 1.602-2.627.104-.123.228-.154.371-.093l2.031.666a5.988 5.988 0 011.68-.925l.41-1.999c.025-.148.117-.234.273-.259a8.22 8.22 0 013.202 0c.156.024.247.111.273.26l.41 1.998c.6.223 1.159.53 1.68.925l2.03-.666c.143-.062.267-.03.371.093.742.802 1.276 1.678 1.602 2.627.064.148.032.266-.098.352l-1.62 1.332zM36 32.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z\\" fill=\\"#fff\\"></path>
+        <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M22.912 14.838a1.188 1.188 0 011.676 0l7.668 7.668c-5.722 1.584-9.972 6.71-10.242 12.87H2.377A2.384 2.384 0 010 32.997V28.25l7.474-7.474a1.185 1.185 0 011.677 0l2.712 2.711-5.673 5.694a.841.841 0 001.19 1.188l5.683-5.681 9.849-9.85z\\" fill=\\"#5D6165\\"></path>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">PhotosSettings</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <defs>
+          <path id=\\"profile_svg__a\\" d=\\"M46 23c0 12.704-10.298 23-23 23C10.296 46 0 35.704 0 23 0 10.3 10.296 0 23 0c12.702 0 23 10.3 23 23z\\"></path>
+        </defs>
+        <g transform=\\"translate(1 1)\\" fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <mask id=\\"profile_svg__b\\" fill=\\"#fff\\">
+            <use xlink:href=\\"#profile_svg__a\\"></use>
+          </mask>
+          <use fill=\\"#d6d8da\\" xlink:href=\\"#profile_svg__a\\"></use>
+          <path fill=\\"#5d6165\\" d=\\"M23 27c-5.523 0-10-4.701-10-10.5S17.477 6 23 6s10 4.701 10 10.5S28.523 27 23 27zm0 38c-9.941 0-18-8.059-18-18s8.059-18 18-18 18 8.059 18 18-8.059 18-18 18z\\" mask=\\"url(#profile_svg__b)\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Profile</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path fill=\\"#5D6165\\" d=\\"M42 0a6 6 0 016 6v33a6 6 0 01-6 6h-3v3h-9v-3H18v3H9v-3H6a6 6 0 01-6-6V6a6 6 0 016-6h36z\\"></path>
+          <path fill=\\"#D1D5DB\\" d=\\"M39 6H9a3 3 0 00-2.98 2.65L6 9v3H4a1 1 0 00-1 1v4a1 1 0 001 1h2v9H4a1 1 0 00-1 1v4a1 1 0 001 1h2v3a3 3 0 002.65 2.98L9 39h30a3 3 0 002.98-2.65L42 36V9a3 3 0 00-2.65-2.98L39 6z\\"></path>
+          <path fill=\\"#5D6165\\" d=\\"M24 34a11.5 11.5 0 100-23 11.5 11.5 0 000 23zm-7.92-7.07l-2.25 1-.67-1.5 2.25-1a.82.82 0 11.67 1.5zm5.45 4.3l-.88 2.3-1.54-.59.89-2.3a.82.82 0 111.53.59zm-5.2-11.67a.82.82 0 01-1.06.47l-2.3-.88.59-1.54 2.3.89c.42.16.63.63.47 1.06zM27 21.16a3.29 3.29 0 11-6 2.68 3.29 3.29 0 016-2.68zm2.43 11.51l-1.5.67-1-2.25a.82.82 0 111.5-.67l1 2.25zM20.66 15c-.42.18-.9 0-1.09-.42l-1-2.25 1.5-.67 1 2.25c.19.42 0 .9-.41 1.09zm14.37 10.85l-.59 1.54-2.3-.89a.82.82 0 11.59-1.53l2.3.88zm-6.14-13.8l-.89 2.3a.82.82 0 11-1.53-.58l.88-2.3 1.54.59zm5.95 6.52l-2.25 1a.82.82 0 11-.67-1.5l2.25-1 .67 1.5z\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Safe</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"#5d6165\\" fill-rule=\\"evenodd\\">
+          <path d=\\"M36.243 8.821L39.51 6.28a.577.577 0 01.75.04l1.42 1.42a.58.58 0 01.04.75l-2.542 3.268c.73.905 1.382 1.876 1.943 2.904l3.99-1.097a.577.577 0 01.677.323l.769 1.857a.58.58 0 01-.25.707l-3.596 2.045a19.41 19.41 0 01.679 3.428l4.108.513a.577.577 0 01.501.558v2.01a.58.58 0 01-.501.558l-4.108.513a19.41 19.41 0 01-.679 3.428l3.596 2.045a.577.577 0 01.25.707l-.77 1.857a.58.58 0 01-.676.323l-3.99-1.097a19.534 19.534 0 01-1.943 2.904l2.542 3.268a.577.577 0 01-.04.75l-1.42 1.42a.58.58 0 01-.75.04l-3.268-2.542a19.534 19.534 0 01-2.904 1.943l1.097 3.99a.577.577 0 01-.323.677l-1.857.769a.58.58 0 01-.707-.25l-2.045-3.596a19.41 19.41 0 01-3.428.679l-.513 4.108a.577.577 0 01-.558.501h-2.01a.58.58 0 01-.558-.501l-.513-4.108a19.41 19.41 0 01-3.428-.679l-2.045 3.596a.577.577 0 01-.707.25l-1.857-.77a.58.58 0 01-.323-.676l1.097-3.99a19.534 19.534 0 01-2.904-1.943L8.49 41.72a.577.577 0 01-.75-.04l-1.42-1.42a.58.58 0 01-.04-.75l2.542-3.268a19.534 19.534 0 01-1.943-2.904l-3.99 1.097a.577.577 0 01-.677-.323l-.769-1.857a.58.58 0 01.25-.707l3.596-2.045a19.41 19.41 0 01-.679-3.428l-4.108-.513A.577.577 0 010 25.005v-2.01a.58.58 0 01.501-.558l4.108-.513a19.41 19.41 0 01.679-3.428L1.692 16.45a.577.577 0 01-.25-.707l.77-1.857a.58.58 0 01.676-.323l3.99 1.097a19.534 19.534 0 011.943-2.904L6.28 8.49a.577.577 0 01.04-.75l1.42-1.42a.58.58 0 01.75-.04l3.268 2.542a19.534 19.534 0 012.904-1.943l-1.097-3.99a.577.577 0 01.323-.677l1.857-.769a.58.58 0 01.707.25l2.045 3.596a19.41 19.41 0 013.428-.679l.513-4.108A.577.577 0 0122.995 0h2.01a.58.58 0 01.558.501l.513 4.108a19.41 19.41 0 013.428.679l2.045-3.596a.577.577 0 01.707-.25l1.857.77a.58.58 0 01.323.676l-1.097 3.99a19.534 19.534 0 012.904 1.943zM9 24c0 8.284 6.716 15 15 15 8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15-8.284 0-15 6.716-15 15z\\"></path>
+          <path d=\\"M24 19.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9zm0 6a1.5 1.5 0 100-3 1.5 1.5 0 000 3z\\"></path>
+          <path d=\\"M20.951 25.869l-7.2 10.799 2.497 1.664 7.2-10.8zm6.178-.766l13.49-.99-.219-2.992-13.49.99zm-3.288-4.774l-6-12-2.683 1.341 6 12z\\" fill-rule=\\"nonzero\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Settings</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" fill=\\"none\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M24 0c13.255 0 24 10.745 24 24S37.255 48 24 48 0 37.255 0 24 10.745 0 24 0\\" fill=\\"#D6D8DA\\"></path>
+        <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M17.26 20.491l8.027-4.014a4.875 4.875 0 111.454 2.907l-8.028 4.014a4.928 4.928 0 010 1.204l8.028 4.014a4.875 4.875 0 11-1.454 2.907l-8.028-4.014a4.875 4.875 0 110-7.018z\\" fill=\\"#5D6165\\"></path>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Sharings</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <path fill=\\"#d6d8da\\" d=\\"M46.813 45.349L24.895 1.508c-.34-.678-1.45-.678-1.788 0l-22 44A1 1 0 002 46.956h44.02c.55 0 1-.449 1-1 0-.23-.078-.44-.208-.608z\\"></path>
+          <path fill=\\"#5d6165\\" d=\\"M24 41.172a1.912 1.912 0 11-.003-3.824 1.912 1.912 0 01.004 3.825zm-1-23.911a1 1 0 012 0v15.303a1 1 0 01-2 0V17.261z\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Sinister</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 16 16\\" fill=\\"#5d6165\\" fill-rule=\\"evenodd\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path d=\\"M5 6a1 1 0 100-2 1 1 0 000 2z\\"></path>
+        <path clip-rule=\\"evenodd\\" d=\\"M2 0a2 2 0 00-2 2v5.89a2 2 0 00.586 1.415l5.98 5.973a2.462 2.462 0 003.481 0l5.236-5.237.002-.002a2.461 2.461 0 000-3.47L9.303.587A2 2 0 007.888 0H2zm0 2h5.888l5.978 5.98a.461.461 0 010 .649l-5.234 5.236a.46.46 0 01-.652 0L2 7.89V2z\\"></path>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Tags</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <rect fill=\\"#d6d8da\\" width=\\"38\\" height=\\"38\\" rx=\\"2\\"></rect>
+          <g transform=\\"matrix(1 0 0 -1 11 32)\\" fill=\\"#5d6165\\">
+            <rect width=\\"10\\" height=\\"4\\" rx=\\"2\\"></rect>
+            <rect y=\\"8\\" width=\\"15\\" height=\\"4\\" rx=\\"2\\"></rect>
+            <rect y=\\"16\\" width=\\"23\\" height=\\"4\\" rx=\\"2\\"></rect>
+            <rect y=\\"24\\" width=\\"23\\" height=\\"4\\" rx=\\"2\\"></rect>
+          </g>
+          <g transform=\\"translate(24 24)\\">
+            <circle fill=\\"#5d6165\\" cx=\\"12\\" cy=\\"12\\" r=\\"12\\"></circle>
+            <path d=\\"M12.328 12.333V5.667a.667.667 0 00-1.333 0v8h5.333a.667.667 0 000-1.334h-4z\\" stroke=\\"#d6d8da\\" fill=\\"#d6d8da\\"></path>
+          </g>
+          <circle fill=\\"#5d6165\\" cx=\\"6\\" cy=\\"14\\" r=\\"2\\"></circle>
+          <circle fill=\\"#5d6165\\" cx=\\"6\\" cy=\\"6\\" r=\\"2\\"></circle>
+          <circle fill=\\"#5d6165\\" cx=\\"6\\" cy=\\"22\\" r=\\"2\\"></circle>
+          <circle fill=\\"#5d6165\\" cx=\\"6\\" cy=\\"30\\" r=\\"2\\"></circle>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">TaskToEffectuate</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <g fill=\\"none\\" fill-rule=\\"evenodd\\">
+          <ellipse cx=\\"24\\" cy=\\"24.5\\" fill=\\"#5d6165\\" rx=\\"18\\" ry=\\"18.5\\"></ellipse>
+          <path fill=\\"#d6d8da\\" d=\\"M42 0c3.308 0 6 2.692 6 6v36c0 3.308-2.692 6-6 6H6c-3.308 0-6-2.692-6-6V6c0-3.308 2.692-6 6-6h36zM24 40c8.822 0 16-7.178 16-16S32.822 8 24 8 8 15.178 8 24s7.178 16 16 16zm6-16a1 1 0 010 2h-8V14a1 1 0 012 0v10h6z\\"></path>
+        </g>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Triggers</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" fill=\\"none\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M42 0H6C2.692 0 0 2.692 0 6v36c0 3.308 2.692 6 6 6h36c3.308 0 6-2.692 6-6V6c0-3.308-2.692-6-6-6z\\" fill=\\"#D6D8DA\\"></path>
+        <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M24 6c9.941 0 18 8.06 18 18 0 9.941-8.059 18-18 18A18.003 18.003 0 017.516 31.24l-.192-.452a2 2 0 013.64-1.652l.102.233A14.003 14.003 0 0024 38c7.732 0 14-6.268 14-14s-6.268-14-14-14c-4.317 0-8.288 1.97-10.904 5.217a1.999 1.999 0 012.33.38l.11.123a2 2 0 01-.134 2.706l-.122.11-6 5c-1.263 1.053-3.16.214-3.275-1.384L6 22v-8a2 2 0 013.74-.987A17.981 17.981 0 0124 6zm0 8a2 2 0 012 2v7.172l3.414 3.414A1.998 1.998 0 0128 30a1.995 1.995 0 01-1.414-.586l-4-3.998A2.05 2.05 0 0122 24v-8a2 2 0 012-2z\\" fill=\\"#5D6165\\"></path>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Versioning</p>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Icon should render examples: Icon 5`] = `
+"<div>
   <div><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: #0bda51;\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
       <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
       <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
@@ -5691,7 +6101,7 @@ exports[`Icon should render examples: Icon 4`] = `
 </div>"
 `;
 
-exports[`Icon should render examples: Icon 5`] = `
+exports[`Icon should render examples: Icon 6`] = `
 "<div>
   <div><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--errorColor);\\" width=\\"32\\" height=\\"32\\">
       <path fill-rule=\\"evenodd\\" d=\\"M7.022 1.736c.543-.959 1.428-.95 1.966 0l6.532 11.529c.543.958.094 1.735-1.016 1.735h-13C.399 15-.051 14.215.487 13.265l6.535-11.53zM7.004 13c0-.552.443-1 1-1 .552 0 1 .444 1 1 0 .553-.444 1-1 1-.553 0-1-.444-1-1zm0-7.997a.999.999 0 011-1.003c.552 0 1 .438 1 1.003v4.994a.999.999 0 01-1 1.003c-.553 0-1-.438-1-1.003V5.003z\\"></path>
@@ -5699,7 +6109,7 @@ exports[`Icon should render examples: Icon 5`] = `
 </div>"
 `;
 
-exports[`Icon should render examples: Icon 6`] = `
+exports[`Icon should render examples: Icon 7`] = `
 "<div>
   <div style=\\"font-size: 2rem; display: grid; grid-template-columns: repeat(6, 1fr);\\">
     <div style=\\"display: none;\\"><svg>
@@ -8108,13 +8518,13 @@ exports[`Media should render examples: Media 3`] = `
 exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
 "<div>
   <div class=\\"styles__Stack--xs___2R5lW\\">
-    <div class=\\"MuiBox-root MuiBox-root-119\\">
+    <div class=\\"MuiBox-root MuiBox-root-120\\">
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-displayInline\\">primary</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-checked-2 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
-    <div class=\\"MuiBox-root MuiBox-root-120\\">
+    <div class=\\"MuiBox-root MuiBox-root-121\\">
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-displayInline\\">secondary</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-checked-2 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
-    <div class=\\"MuiBox-root MuiBox-root-121\\">
+    <div class=\\"MuiBox-root MuiBox-root-122\\">
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-displayInline\\">default</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
   </div>
@@ -8149,42 +8559,42 @@ exports[`Paper should render examples: Paper 1`] = `
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">SQUARE</span></label>
   </div>
   <div class=\\"styles__Stack--m___1tSpV\\">
-    <div class=\\"MuiPaper-root PaperExample-root-108 MuiPaper-elevation0\\">
+    <div class=\\"MuiPaper-root PaperExample-root-109 MuiPaper-elevation0\\">
       <h3 class=\\"MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary\\">This is a sheet of paper</h3>
       <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
         <h6 class=\\"MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary\\">elevation 0</h6>
       </div>
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Paper can be used to build surface or other elements for your application.</p>
     </div>
-    <div class=\\"MuiPaper-root PaperExample-root-108 MuiPaper-elevation1\\">
+    <div class=\\"MuiPaper-root PaperExample-root-109 MuiPaper-elevation1\\">
       <h3 class=\\"MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary\\">This is a sheet of paper</h3>
       <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
         <h6 class=\\"MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary\\">elevation 1</h6>
       </div>
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Paper can be used to build surface or other elements for your application.</p>
     </div>
-    <div class=\\"MuiPaper-root PaperExample-root-108 MuiPaper-elevation4\\">
+    <div class=\\"MuiPaper-root PaperExample-root-109 MuiPaper-elevation4\\">
       <h3 class=\\"MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary\\">This is a sheet of paper</h3>
       <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
         <h6 class=\\"MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary\\">elevation 4</h6>
       </div>
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Paper can be used to build surface or other elements for your application.</p>
     </div>
-    <div class=\\"MuiPaper-root PaperExample-root-108 MuiPaper-elevation12\\">
+    <div class=\\"MuiPaper-root PaperExample-root-109 MuiPaper-elevation12\\">
       <h3 class=\\"MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary\\">This is a sheet of paper</h3>
       <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
         <h6 class=\\"MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary\\">elevation 12</h6>
       </div>
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Paper can be used to build surface or other elements for your application.</p>
     </div>
-    <div class=\\"MuiPaper-root PaperExample-root-108 MuiPaper-elevation16\\">
+    <div class=\\"MuiPaper-root PaperExample-root-109 MuiPaper-elevation16\\">
       <h3 class=\\"MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary\\">This is a sheet of paper</h3>
       <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
         <h6 class=\\"MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary\\">elevation 16</h6>
       </div>
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Paper can be used to build surface or other elements for your application.</p>
     </div>
-    <div class=\\"MuiPaper-root PaperExample-root-108 MuiPaper-elevation24\\">
+    <div class=\\"MuiPaper-root PaperExample-root-109 MuiPaper-elevation24\\">
       <h3 class=\\"MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary\\">This is a sheet of paper</h3>
       <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
         <h6 class=\\"MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary\\">elevation 24</h6>
@@ -8218,20 +8628,20 @@ exports[`PieChart should render examples: PieChart 1`] = `
 "<div>
   <div class=\\"MuiGrid-root MuiGrid-container\\">
     <div class=\\"MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6\\">
-      <div class=\\"makeStyles-container-109\\">
-        <div class=\\"makeStyles-background-110 makeStyles-background-113\\"></div><canvas role=\\"img\\" height=\\"150\\" width=\\"300\\"></canvas>
-        <div class=\\"makeStyles-centerText-111\\">
-          <h3 class=\\"MuiTypography-root makeStyles-typography-112 makeStyles-typography-114 MuiTypography-h3 MuiTypography-colorTextPrimary\\">60 %</h3>
-          <p class=\\"MuiTypography-root makeStyles-typography-112 makeStyles-typography-114 MuiTypography-body2 MuiTypography-colorTextPrimary\\">of the total</p>
+      <div class=\\"makeStyles-container-110\\">
+        <div class=\\"makeStyles-background-111 makeStyles-background-114\\"></div><canvas role=\\"img\\" height=\\"150\\" width=\\"300\\"></canvas>
+        <div class=\\"makeStyles-centerText-112\\">
+          <h3 class=\\"MuiTypography-root makeStyles-typography-113 makeStyles-typography-115 MuiTypography-h3 MuiTypography-colorTextPrimary\\">60 %</h3>
+          <p class=\\"MuiTypography-root makeStyles-typography-113 makeStyles-typography-115 MuiTypography-body2 MuiTypography-colorTextPrimary\\">of the total</p>
         </div>
       </div>
     </div>
     <div class=\\"MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6\\">
-      <div class=\\"makeStyles-container-109\\">
-        <div class=\\"makeStyles-background-110 makeStyles-background-115\\"></div><canvas role=\\"img\\" height=\\"150\\" width=\\"300\\"></canvas>
-        <div class=\\"makeStyles-centerText-111\\">
-          <h3 class=\\"MuiTypography-root makeStyles-typography-112 makeStyles-typography-116 MuiTypography-h3 MuiTypography-colorTextPrimary\\">105 €</h3>
-          <p class=\\"MuiTypography-root makeStyles-typography-112 makeStyles-typography-116 MuiTypography-body2 MuiTypography-colorTextPrimary\\">on the period</p>
+      <div class=\\"makeStyles-container-110\\">
+        <div class=\\"makeStyles-background-111 makeStyles-background-116\\"></div><canvas role=\\"img\\" height=\\"150\\" width=\\"300\\"></canvas>
+        <div class=\\"makeStyles-centerText-112\\">
+          <h3 class=\\"MuiTypography-root makeStyles-typography-113 makeStyles-typography-117 MuiTypography-h3 MuiTypography-colorTextPrimary\\">105 €</h3>
+          <p class=\\"MuiTypography-root makeStyles-typography-113 makeStyles-typography-117 MuiTypography-body2 MuiTypography-colorTextPrimary\\">on the period</p>
         </div>
       </div>
     </div>
@@ -8259,7 +8669,7 @@ exports[`ProgressionBanner should render examples: ProgressionBanner 1`] = `
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">WITHVALUE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">PROGRESSBAR</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">WITHBUTTON</span></label>
   </div>
   <div class=\\"MuiPaper-root MuiPaper-elevation0\\">
-    <div class=\\"styles__c-banner-wrapper___3KlaG Component-banner-117\\">
+    <div class=\\"styles__c-banner-wrapper___3KlaG Component-banner-118\\">
       <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-justify-content-xs-space-between\\">
         <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-center MuiGrid-grid-xs-12 MuiGrid-grid-lg-8\\">
           <div class=\\"MuiGrid-root MuiGrid-item\\">
@@ -8278,7 +8688,7 @@ exports[`ProgressionBanner should render examples: ProgressionBanner 1`] = `
     </div>
   </div>
   <hr class=\\"MuiDivider-root\\">
-  <div class=\\"MuiLinearProgress-root MuiLinearProgress-colorPrimary Component-progress-118 MuiLinearProgress-indeterminate\\" role=\\"progressbar\\">
+  <div class=\\"MuiLinearProgress-root MuiLinearProgress-colorPrimary Component-progress-119 MuiLinearProgress-indeterminate\\" role=\\"progressbar\\">
     <div class=\\"MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Indeterminate\\"></div>
     <div class=\\"MuiLinearProgress-bar MuiLinearProgress-bar2Indeterminate MuiLinearProgress-barColorPrimary\\"></div>
   </div>

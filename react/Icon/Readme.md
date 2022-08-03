@@ -2,7 +2,7 @@ Provides an easy way to use SVG icons included in Cozy-UI as well
 as your custom icons.
 
 ⚠️ When using `Icon`, you can either give a React component or use the identifier
-of an already loaded one. `cozy-ui` ships with built-in icons that you can
+of an already loaded one. `cozy-ui` is shipped with built-in icons, containing Illustrations and SVGr Icons that you can
 include via `Sprite`. See the example below for how to include `Sprite`.
 `Sprite` can for example be included in the main `Layout` of your application.
 
@@ -639,6 +639,138 @@ const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'd
     </div>
   )}
 </div>
+```
+
+### Permissions Icons
+
+```jsx
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import Typography from 'cozy-ui/transpiled/react/Typography'
+import Dialog from 'cozy-ui/transpiled/react/CozyDialogs/Dialog'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { makeStyles } from '@material-ui/styles'
+import cx from 'classnames'
+
+import Accounts from 'cozy-ui/transpiled/react/Icons/Accounts'
+import Apps from 'cozy-ui/transpiled/react/Icons/Apps'
+import BankAccounts from 'cozy-ui/transpiled/react/Icons/BankAccounts'
+import BankGroups from 'cozy-ui/transpiled/react/Icons/BankGroups'
+import BankOperations from 'cozy-ui/transpiled/react/Icons/BankOperations'
+import BankRecurrence from 'cozy-ui/transpiled/react/Icons/BankRecurrence'
+import BillPermissions from 'cozy-ui/transpiled/react/Icons/BillPermissions'
+import BugReport from 'cozy-ui/transpiled/react/Icons/BugReport'
+import CalendarPermissions from 'cozy-ui/transpiled/react/Icons/CalendarPermissions'
+import Category from 'cozy-ui/transpiled/react/Icons/Category'
+import CertifiedPermissions from 'cozy-ui/transpiled/react/Icons/CertifiedPermissions'
+import ConnectedClients from 'cozy-ui/transpiled/react/Icons/ConnectedClients'
+import Consumption from 'cozy-ui/transpiled/react/Icons/Consumption'
+import ContactsAccounts from 'cozy-ui/transpiled/react/Icons/ContactsAccounts'
+import ContactsGroups from 'cozy-ui/transpiled/react/Icons/ContactsGroups'
+import Contacts from 'cozy-ui/transpiled/react/Icons/Contacts'
+import Contract from 'cozy-ui/transpiled/react/Icons/Contract'
+import Ecolyo from 'cozy-ui/transpiled/react/Icons/Ecolyo'
+import Energy from 'cozy-ui/transpiled/react/Icons/Energy'
+import Energybreakdown from 'cozy-ui/transpiled/react/Icons/Energybreakdown'
+import Fallback from 'cozy-ui/transpiled/react/Icons/Fallback'
+import Family from 'cozy-ui/transpiled/react/Icons/Family'
+import FilesPen from 'cozy-ui/transpiled/react/Icons/FilesPen'
+import FilesVersions from 'cozy-ui/transpiled/react/Icons/FilesVersions'
+import Files from 'cozy-ui/transpiled/react/Icons/Files'
+import HomePermissions from 'cozy-ui/transpiled/react/Icons/HomePermissions'
+import Identities from 'cozy-ui/transpiled/react/Icons/Identities'
+import KonnectorsResult from 'cozy-ui/transpiled/react/Icons/KonnectorsResult'
+import Konnectors from 'cozy-ui/transpiled/react/Icons/Konnectors'
+import LocationPermissions from 'cozy-ui/transpiled/react/Icons/LocationPermissions'
+import Notifications from 'cozy-ui/transpiled/react/Icons/Notifications'
+import Opinions from 'cozy-ui/transpiled/react/Icons/Opinions'
+import Passwords from 'cozy-ui/transpiled/react/Icons/Passwords'
+import Permissions from 'cozy-ui/transpiled/react/Icons/Permissions'
+import PhotosAlbum from 'cozy-ui/transpiled/react/Icons/PhotosAlbum'
+import PhotosSettings from 'cozy-ui/transpiled/react/Icons/PhotosSettings'
+import Profile from 'cozy-ui/transpiled/react/Icons/Profile'
+import SafePermissions from 'cozy-ui/transpiled/react/Icons/SafePermissions'
+import Settings from 'cozy-ui/transpiled/react/Icons/Settings'
+import Sharings from 'cozy-ui/transpiled/react/Icons/Sharings'
+import Sinister from 'cozy-ui/transpiled/react/Icons/Sinister'
+import Tags from 'cozy-ui/transpiled/react/Icons/Tags'
+import TaskToEffectuate from 'cozy-ui/transpiled/react/Icons/TaskToEffectuate'
+import Triggers from 'cozy-ui/transpiled/react/Icons/Triggers'
+import Versioning from 'cozy-ui/transpiled/react/Icons/Versioning'
+
+const icons = [Accounts, Apps, BankAccounts, BankGroups, BankOperations, BankRecurrence, BillPermissions, BugReport, CalendarPermissions, Category, CertifiedPermissions, ConnectedClients, Consumption, ContactsAccounts, ContactsGroups, Contacts, Contract, Ecolyo, Energy, Energybreakdown, Fallback, Family, FilesPen, FilesVersions, Files, HomePermissions, Identities, KonnectorsResult, Konnectors, LocationPermissions, Notifications, Opinions, Passwords, Permissions, PhotosAlbum, PhotosSettings, Profile, SafePermissions, Settings, Sharings, Sinister, Tags,TaskToEffectuate, Triggers, Versioning]
+
+const wrapperStyle = {
+  fontSize: '2rem',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(6, 1fr)'
+}
+
+initialState = { size: 16 };
+
+const handleInputRangeChange = ev => {
+  setState({ size: parseInt(ev.target.value, 10) })
+}
+
+const getNameFromIcon = icon => {
+  return icon.name.replace(/^Svg/, '')
+}
+
+const InfoModal = ({ icon }) => {
+  const iconName = getNameFromIcon(icon)
+  return <Dialog
+    size='large'
+    open={true}
+    title={<div className='u-ta-center'>{ iconName }</div>}
+    onClose={() => setState({ selected: null })}
+    content={
+      <>
+        <Typography variant='body1'>To import {iconName}, copy/paste the following line:</Typography>
+        <pre>
+          import {iconName}Icon from 'cozy-ui/transpiled/react/Icons/{iconName}'
+        </pre>
+      </>
+    }
+  />
+}
+
+const useStyles = makeStyles({
+  iconTile: {
+    cursor: 'pointer',
+    '&:hover': {
+      'text-decoration': 'underline'
+    }
+  }
+})
+
+const Example = () => {
+  const classes = useStyles()
+  return (
+    <BreakpointsProvider>
+      <Typography component='p' variant='body1' className='u-mb-1'>
+        Font size: <input type='range' min='8' max='48' value={state.size} onChange={handleInputRangeChange} /> {state.size}px
+      </Typography>
+      <div style={wrapperStyle}>
+        {
+        icons.map(icon => <div
+            key={icon}
+            className={cx(classes.iconTile, 'u-ta-center u-mb-1')}
+            onClick={() => setState({ selected: icon })}
+          >
+            <Icon icon={ icon } size={state.size} />
+            <Typography variant='body1' className='u-mt-half'>
+              { getNameFromIcon(icon) }
+            </Typography>
+          </div>
+        )}
+      { state.selected ? <InfoModal icon={state.selected} /> : null }
+      </div>
+    </BreakpointsProvider>
+  )
+}
+
+;
+
+<Example />
 ```
 
 ### Transform properties
