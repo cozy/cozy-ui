@@ -1,3 +1,10 @@
+# [70.5.0](https://github.com/cozy/cozy-ui/compare/v70.4.2...v70.5.0) (2022-08-04)
+
+
+### Features
+
+* **Permissions:** add permissions icons ([d8ffdd3](https://github.com/cozy/cozy-ui/commit/d8ffdd3))
+
 ## [70.4.2](https://github.com/cozy/cozy-ui/compare/v70.4.1...v70.4.2) (2022-07-29)
 
 
