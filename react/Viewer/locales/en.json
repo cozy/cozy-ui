@@ -42,7 +42,8 @@
             "issueDate": "Delivered on",
             "expirationDate": "Expiration date",
             "referencedDate": "Referenced date",
-            "shootingDate": "Shooting date"
+            "shootingDate": "Shooting date",
+            "date": "Document date"
           }
         },
         "identity": "Identity",

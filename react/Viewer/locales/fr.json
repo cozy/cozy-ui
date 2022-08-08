@@ -42,7 +42,8 @@
             "issueDate": "Délivré le",
             "expirationDate": "Expire le",
             "referencedDate": "Date de référence",
-            "shootingDate": "Date de prise de vue"
+            "shootingDate": "Date de prise de vue",
+            "date": "Date du document"
           }
         },
         "identity": "Identité",
