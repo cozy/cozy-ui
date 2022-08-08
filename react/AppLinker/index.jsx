@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { withClient } from 'cozy-client'
 
 import {
   checkApp,
@@ -79,7 +80,7 @@ export class AppLinker extends React.Component {
   }
 
   static getOnClickHref(props, nativeAppIsAvailable, context, imgRef) {
-    const { app, nativePath } = props
+    const { app, client, nativePath } = props
     const slug = AppLinker.getSlug(props)
     let href = props.href
     let onClick = null
@@ -87,23 +88,29 @@ export class AppLinker extends React.Component {
     const appInfo = NATIVE_APP_INFOS[slug]
 
     if (isFlagshipApp()) {
-      const imgPayload =
-        imgRef &&
-        JSON.stringify({
-          ...imgRef.getBoundingClientRect().toJSON()
-        })
+      const { app: currentApp } = client
+        ? client.getInstanceOptions()
+        : undefined
 
-      return {
-        onClick: event => {
-          event.preventDefault()
+      if (currentApp === undefined || app.slug !== currentApp.slug) {
+        const imgPayload =
+          imgRef &&
+          JSON.stringify({
+            ...imgRef.getBoundingClientRect().toJSON()
+          })
 
-          context
-            ? context.call('openApp', href, app, imgPayload)
-            : logger.error(
-                `Failed to "openApp(${app})". WebviewService has the following falsy value "${context}" in AppLinker's context.`
-              )
-        },
-        href: '#'
+        return {
+          onClick: event => {
+            event.preventDefault()
+
+            context
+              ? context.call('openApp', href, app, imgPayload)
+              : logger.error(
+                  `Failed to "openApp(${app})". WebviewService has the following falsy value "${context}" in AppLinker's context.`
+                )
+          },
+          href: '#'
+        }
       }
     }
 
@@ -234,7 +241,7 @@ AppLinker.propTypes = {
   }).isRequired
 }
 
-export default AppLinker
+export default withClient(AppLinker)
 export {
   NATIVE_APP_INFOS,
   getUniversalLinkDomain,
