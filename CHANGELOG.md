@@ -1,3 +1,10 @@
+## [70.5.1](https://github.com/cozy/cozy-ui/compare/v70.5.0...v70.5.1) (2022-08-08)
+
+
+### Bug Fixes
+
+* Add missing document date label in the viewer ([ace3449](https://github.com/cozy/cozy-ui/commit/ace3449))
+
 # [70.5.0](https://github.com/cozy/cozy-ui/compare/v70.4.2...v70.5.0) (2022-08-04)
 
 
