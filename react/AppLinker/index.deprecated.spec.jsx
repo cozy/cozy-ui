@@ -7,25 +7,26 @@
  */
 
 import React from 'react'
-import { shallow } from 'enzyme'
+import { render } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+
 import {
   isMobileApp,
   isMobile,
   openDeeplinkOrRedirect,
   startApp,
-  isAndroid
+  isAndroid,
+  checkApp
 } from 'cozy-device-helper'
 
 import AppLinker from './index'
 import { generateUniversalLink } from './native'
 jest.useFakeTimers()
 
-const tMock = x => x
-
-class DeprecatedAppItem extends React.Component {
-  render() {
-    const { app, onAppSwitch } = this.props
-    return (
+const setup = ({ app, onAppSwitch }) => {
+  return {
+    user: userEvent.setup({ delay: null }),
+    ...render(
       <AppLinker
         onAppSwitch={onAppSwitch}
         slug={app.slug}
@@ -42,6 +43,7 @@ class DeprecatedAppItem extends React.Component {
     )
   }
 }
+
 jest.mock('./native', () => ({
   ...jest.requireActual('./native'),
   generateUniversalLink: jest.fn()
@@ -53,7 +55,8 @@ jest.mock('cozy-device-helper', () => ({
   isMobile: jest.fn(),
   openDeeplinkOrRedirect: jest.fn(),
   startApp: jest.fn().mockResolvedValue(),
-  isAndroid: jest.fn()
+  isAndroid: jest.fn(),
+  checkApp: jest.fn()
 }))
 
 const app = {
@@ -62,7 +65,7 @@ const app = {
 }
 
 describe('app icon', () => {
-  let spyConsoleError, spyConsoleWarn, openNativeFromNativeSpy, appSwitchMock
+  let spyConsoleError, spyConsoleWarn, appSwitchMock
 
   beforeEach(() => {
     isMobileApp.mockReturnValue(false)
@@ -70,7 +73,6 @@ describe('app icon', () => {
     spyConsoleError.mockImplementation(() => {})
     spyConsoleWarn = jest.spyOn(console, 'warn')
     spyConsoleWarn.mockImplementation(() => {})
-    openNativeFromNativeSpy = jest.spyOn(AppLinker, 'openNativeFromNative')
     isMobileApp.mockReturnValue(false)
     isMobile.mockReturnValue(false)
     isAndroid.mockReturnValue(false)
@@ -84,20 +86,26 @@ describe('app icon', () => {
   })
 
   it('should render correctly', () => {
-    const root = shallow(<DeprecatedAppItem t={tMock} app={app} />).dive()
-    expect(root.getElement()).toMatchSnapshot()
+    const { container } = setup({ app })
+    expect(container).toMatchSnapshot()
   })
 
-  it('should work for native -> native', () => {
-    const root = shallow(
-      <DeprecatedAppItem t={tMock} app={app} onAppSwitch={appSwitchMock} />
-    ).dive()
-    root.find('a').simulate('click')
+  it('should work for web -> web', async () => {
+    isMobileApp.mockReturnValue(false)
+    const { container, user } = setup({ app, onAppSwitch: appSwitchMock })
+    const link = container.querySelector('a')
+    await user.click(link)
     expect(appSwitchMock).not.toHaveBeenCalled()
+    expect(startApp).not.toHaveBeenCalled()
+  })
+
+  it('should work for native -> native', async () => {
     isMobileApp.mockReturnValue(true)
-    root.setState({ nativeAppIsAvailable: true })
-    root.find('a').simulate('click')
-    expect(openNativeFromNativeSpy).toHaveBeenCalled()
+    checkApp.mockResolvedValue(true)
+    const { container, user } = setup({ app, onAppSwitch: appSwitchMock })
+    const link = container.querySelector('a')
+    await user.click(link)
+
     expect(startApp).toHaveBeenCalledWith({
       appId: 'io.cozy.drive.mobile',
       name: 'Cozy Drive',
@@ -106,13 +114,12 @@ describe('app icon', () => {
     expect(appSwitchMock).toHaveBeenCalled()
   })
 
-  it('should work for web -> native for Android (custom schema)', () => {
+  it('should work for web -> native for Android (custom schema)', async () => {
     isMobile.mockReturnValue(true)
     isAndroid.mockResolvedValue(true)
-    const root = shallow(
-      <DeprecatedAppItem t={tMock} app={app} onAppSwitch={appSwitchMock} />
-    ).dive()
-    root.find('a').simulate('click', { preventDefault: () => {} })
+    const { container, user } = setup({ app, onAppSwitch: appSwitchMock })
+    const link = container.querySelector('a')
+    await user.click(link)
     expect(openDeeplinkOrRedirect).toHaveBeenCalledWith(
       'cozydrive://',
       expect.any(Function)
@@ -120,28 +127,26 @@ describe('app icon', () => {
     expect(appSwitchMock).toHaveBeenCalled()
   })
 
-  it('should work for web -> native for iOS (universal link)', () => {
+  it('should work for web -> native for iOS (universal link)', async () => {
     isMobile.mockReturnValue(true)
-    const root = shallow(
-      <DeprecatedAppItem t={tMock} app={app} onAppSwitch={appSwitchMock} />
-    ).dive()
-    root.find('a').simulate('click', { preventDefault: () => {} })
+    const { container, user } = setup({ app, onAppSwitch: appSwitchMock })
+    const link = container.querySelector('a')
+    await user.click(link)
 
     expect(generateUniversalLink).toHaveBeenCalled()
   })
 
-  it('should work for native -> web', () => {
+  it('should work for native -> web', async () => {
     isMobileApp.mockReturnValue(true)
-    const root = shallow(
-      <DeprecatedAppItem t={tMock} app={app} onAppSwitch={appSwitchMock} />
-    ).dive()
-    root.find('a').simulate('click')
+    const { container, user } = setup({ app, onAppSwitch: appSwitchMock })
+    const link = container.querySelector('a')
+    await user.click(link)
     expect(appSwitchMock).toHaveBeenCalled()
   })
 
   it('should not crash if no href', () => {
     isMobileApp.mockReturnValue(true)
-    const root = shallow(
+    const { container } = render(
       <AppLinker onAppSwitch={appSwitchMock} slug={app.slug}>
         {({ onClick, href, name }) => (
           <div>
@@ -152,6 +157,6 @@ describe('app icon', () => {
         )}
       </AppLinker>
     )
-    expect(root.getElement()).toMatchSnapshot()
+    expect(container).toMatchSnapshot()
   })
 })

@@ -2,23 +2,24 @@
 
 exports[`app icon should not crash if no href 1`] = `
 <div>
-  <a
-    onClick={[Function]}
-  >
-    Open 
-    Cozy Drive
-  </a>
+  <div>
+    <a>
+      Open 
+      Cozy Drive
+    </a>
+  </div>
 </div>
 `;
 
 exports[`app icon should render correctly 1`] = `
 <div>
-  <a
-    href="https://fake.link"
-    onClick={null}
-  >
-    Open 
-    Cozy Drive
-  </a>
+  <div>
+    <a
+      href="https://fake.link"
+    >
+      Open 
+      Cozy Drive
+    </a>
+  </div>
 </div>
 `;
