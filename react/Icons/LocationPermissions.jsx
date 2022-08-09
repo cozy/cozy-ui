@@ -1,7 +1,7 @@
 // Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/location.svg` to regenerate;
 import React from 'react'
 
-function SvgLocation(props) {
+function SvgLocationPermissions(props) {
   return (
     <svg viewBox="0 0 16 16" {...props}>
       <path
@@ -13,4 +13,4 @@ function SvgLocation(props) {
   )
 }
 
-export default SvgLocation
+export default SvgLocationPermissions

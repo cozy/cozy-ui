@@ -5745,7 +5745,7 @@ exports[`Icon should render examples: Icon 4`] = `
           <path stroke=\\"#5d6165\\" stroke-width=\\"2\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" d=\\"M35 41H13V17h22zM13 22h22m-22 6h22m-22 6h22M20 17v24\\"></path>
         </g>
       </svg>
-      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Bill</p>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">BillPermissions</p>
     </div>
     <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" fill=\\"none\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
         <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M0 2.996A2.992 2.992 0 013.003 0h41.994A3 3 0 0148 2.996v33.008A3.006 3.006 0 0145.009 39H27L9 48v-9H3c-1.657 0-3-1.343-3-2.995V2.995z\\" fill=\\"#D6D8DA\\"></path>
@@ -5758,7 +5758,7 @@ exports[`Icon should render examples: Icon 4`] = `
         <path d=\\"M0 12a8 8 0 018-8h32a8 8 0 018 8v4H0v-4zm6 15a3 3 0 116 0 3 3 0 01-6 0zm3 7a3 3 0 100 6 3 3 0 000-6zm7-7a3 3 0 116 0 3 3 0 01-6 0zm3 7a3 3 0 100 6 3 3 0 000-6zm7-7a3 3 0 116 0 3 3 0 01-6 0zm3 7a3 3 0 100 6 3 3 0 000-6zm7-7a3 3 0 116 0 3 3 0 01-6 0zm3 7a3 3 0 100 6 3 3 0 000-6z\\" fill=\\"#5D6165\\"></path>
         <path d=\\"M12 0a3 3 0 00-3 3v6a3 3 0 106 0V3a3 3 0 00-3-3zm24 0a3 3 0 00-3 3v6a3 3 0 106 0V3a3 3 0 00-3-3z\\" fill=\\"#95999D\\"></path>
       </svg>
-      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Calendar</p>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">CalendarPermissions</p>
     </div>
     <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" fill=\\"none\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
         <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M21 48C9.402 48 0 38.598 0 27S9.402 6 21 6v21h21c0 11.598-9.402 21-21 21z\\" fill=\\"#D6D8DA\\"></path>
@@ -5773,7 +5773,7 @@ exports[`Icon should render examples: Icon 4`] = `
           <circle cx=\\"18\\" cy=\\"18\\" r=\\"9\\" fill=\\"#D6D8DA\\"></circle>
         </g>
       </svg>
-      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Certified</p>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">CertifiedPermissions</p>
     </div>
     <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
         <g fill=\\"none\\" fill-rule=\\"evenodd\\">
@@ -5897,7 +5897,7 @@ exports[`Icon should render examples: Icon 4`] = `
           <path fill=\\"#d6d8da\\" d=\\"M14 33h8v14h-8z\\"></path>
         </g>
       </svg>
-      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Home</p>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">HomePermissions</p>
     </div>
     <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
         <g fill=\\"none\\" fill-rule=\\"evenodd\\">
@@ -5928,7 +5928,7 @@ exports[`Icon should render examples: Icon 4`] = `
     <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
         <path d=\\"M8 0c3.99 0 7 2.866 7 6.667 0 4.782-6.508 9.089-6.784 9.27a.398.398 0 01-.432 0C7.507 15.756 1 11.45 1 6.667 1 2.866 4.01 0 8 0zm0 9a2.5 2.5 0 100-5 2.5 2.5 0 000 5z\\" fill=\\"#5d6165\\" fill-rule=\\"evenodd\\"></path>
       </svg>
-      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Location</p>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">LocationPermissions</p>
     </div>
     <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
         <g fill=\\"none\\" fill-rule=\\"evenodd\\">
@@ -6020,7 +6020,7 @@ exports[`Icon should render examples: Icon 4`] = `
           <path fill=\\"#5D6165\\" d=\\"M24 34a11.5 11.5 0 100-23 11.5 11.5 0 000 23zm-7.92-7.07l-2.25 1-.67-1.5 2.25-1a.82.82 0 11.67 1.5zm5.45 4.3l-.88 2.3-1.54-.59.89-2.3a.82.82 0 111.53.59zm-5.2-11.67a.82.82 0 01-1.06.47l-2.3-.88.59-1.54 2.3.89c.42.16.63.63.47 1.06zM27 21.16a3.29 3.29 0 11-6 2.68 3.29 3.29 0 016-2.68zm2.43 11.51l-1.5.67-1-2.25a.82.82 0 111.5-.67l1 2.25zM20.66 15c-.42.18-.9 0-1.09-.42l-1-2.25 1.5-.67 1 2.25c.19.42 0 .9-.41 1.09zm14.37 10.85l-.59 1.54-2.3-.89a.82.82 0 11.59-1.53l2.3.88zm-6.14-13.8l-.89 2.3a.82.82 0 11-1.53-.58l.88-2.3 1.54.59zm5.95 6.52l-2.25 1a.82.82 0 11-.67-1.5l2.25-1 .67 1.5z\\"></path>
         </g>
       </svg>
-      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">Safe</p>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">SafePermissions</p>
     </div>
     <div class=\\"makeStyles-iconTile-108 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
         <g fill=\\"#5d6165\\" fill-rule=\\"evenodd\\">

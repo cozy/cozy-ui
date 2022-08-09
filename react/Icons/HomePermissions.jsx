@@ -1,7 +1,7 @@
 // Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/home.svg` to regenerate;
 import React from 'react'
 
-function SvgHome(props) {
+function SvgHomePermissions(props) {
   return (
     <svg viewBox="0 0 48 48" {...props}>
       <g fill="none" fillRule="evenodd">
@@ -15,4 +15,4 @@ function SvgHome(props) {
   )
 }
 
-export default SvgHome
+export default SvgHomePermissions

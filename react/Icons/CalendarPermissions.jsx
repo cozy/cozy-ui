@@ -1,7 +1,7 @@
 // Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/calendar.svg` to regenerate;
 import React from 'react'
 
-function SvgCalendar(props) {
+function SvgCalendarPermissions(props) {
   return (
     <svg viewBox="0 0 48 48" fill="none" {...props}>
       <rect y={4} width={48} height={44} rx={8} fill="#D1D5DB" />
@@ -17,4 +17,4 @@ function SvgCalendar(props) {
   )
 }
 
-export default SvgCalendar
+export default SvgCalendarPermissions

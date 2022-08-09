@@ -1,7 +1,7 @@
 // Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/certified.svg` to regenerate;
 import React from 'react'
 
-function SvgCertified(props) {
+function SvgCertifiedPermissions(props) {
   return (
     <svg viewBox="0 0 48 48" {...props}>
       <g fill="none" fillRule="evenodd" transform="translate(6)">
@@ -19,4 +19,4 @@ function SvgCertified(props) {
   )
 }
 
-export default SvgCertified
+export default SvgCertifiedPermissions
