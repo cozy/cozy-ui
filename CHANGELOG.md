@@ -1,3 +1,15 @@
+# [70.6.0](https://github.com/cozy/cozy-ui/compare/v70.5.1...v70.6.0) (2022-08-09)
+
+
+### Bug Fixes
+
+* Prevent `AppLinker` to call openApp when target link has same slug ([3c87b96](https://github.com/cozy/cozy-ui/commit/3c87b96))
+
+
+### Features
+
+* Add `@testing-library/user-event` to devDependencies ([a5beaf0](https://github.com/cozy/cozy-ui/commit/a5beaf0))
+
 ## [70.5.1](https://github.com/cozy/cozy-ui/compare/v70.5.0...v70.5.1) (2022-08-08)
 
 
