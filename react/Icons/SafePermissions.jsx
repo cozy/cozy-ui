@@ -1,7 +1,7 @@
 // Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/safe.svg` to regenerate;
 import React from 'react'
 
-function SvgSafe(props) {
+function SvgSafePermissions(props) {
   return (
     <svg viewBox="0 0 48 48" {...props}>
       <g fill="none" fillRule="evenodd">
@@ -22,4 +22,4 @@ function SvgSafe(props) {
   )
 }
 
-export default SvgSafe
+export default SvgSafePermissions

@@ -1,7 +1,7 @@
 // Automatically created, please run `scripts/generate-svgr-icon.sh /Users/vdnj/Documents/CozyCloud/cozy-ui/assets/icons/ui/permissions/bill.svg` to regenerate;
 import React from 'react'
 
-function SvgBill(props) {
+function SvgBillPermissions(props) {
   return (
     <svg viewBox="0 0 48 48" {...props}>
       <g fill="none" fillRule="evenodd">
@@ -22,4 +22,4 @@ function SvgBill(props) {
   )
 }
 
-export default SvgBill
+export default SvgBillPermissions
