@@ -154,11 +154,10 @@ const BottomSheet = ({
     ANIMATION_DURATION,
     isClosable && isBottomPosition
   )
+  const innerContentHeight = innerContentRef?.current?.offsetHeight ?? 0
 
   useEffect(() => {
     const headerContent = headerContentRef.current
-    const innerContent = innerContentRef.current
-    const innerContentHeight = innerContent.offsetHeight
     const actionButtonsHeight = headerContent
       ? parseFloat(getComputedStyle(headerContent).getPropertyValue('height'))
       : 0
@@ -192,7 +191,7 @@ const BottomSheet = ({
     // Used so that the BottomSheet can be opened to the top without stopping at the content height
     setBottomSpacerHeight(bottomSpacerHeight)
   }, [
-    innerContentRef,
+    innerContentHeight,
     toolbarProps,
     mediumHeightRatio,
     mediumHeight,
