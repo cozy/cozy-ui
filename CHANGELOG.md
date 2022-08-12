@@ -1,3 +1,10 @@
+## [70.6.1](https://github.com/cozy/cozy-ui/compare/v70.6.0...v70.6.1) (2022-08-12)
+
+
+### Bug Fixes
+
+* To refresh the BottomSheet when the height of the content changes ([d5d66bf](https://github.com/cozy/cozy-ui/commit/d5d66bf))
+
 # [70.6.0](https://github.com/cozy/cozy-ui/compare/v70.5.1...v70.6.0) (2022-08-09)
 
 
