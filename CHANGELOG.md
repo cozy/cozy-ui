@@ -1,3 +1,10 @@
+## [70.6.2](https://github.com/cozy/cozy-ui/compare/v70.6.1...v70.6.2) (2022-08-16)
+
+
+### Bug Fixes
+
+* **Permissions:** Display correct Icon names in readme ([3e38d4c](https://github.com/cozy/cozy-ui/commit/3e38d4c))
+
 ## [70.6.1](https://github.com/cozy/cozy-ui/compare/v70.6.0...v70.6.1) (2022-08-12)
 
 
