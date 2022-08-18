@@ -16,6 +16,9 @@
     "url": "https://github.com/cozy/cozy-ui/issues"
   },
   "homepage": "https://github.com/cozy/cozy-ui",
+  "engines": {
+    "node": ">=16.16"
+  },
   "scripts": {
     "argos:upload": "argos upload",
     "stylus-build": "stylus -c --include stylus  --use ./node_modules/autoprefixer-stylus",
