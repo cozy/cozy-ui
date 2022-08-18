@@ -164,6 +164,7 @@ import Note from 'cozy-ui/transpiled/react/Icons/Note'
 import NotificationEmail from 'cozy-ui/transpiled/react/Icons/NotificationEmail'
 import Offline from 'cozy-ui/transpiled/react/Icons/Offline'
 import Online from 'cozy-ui/transpiled/react/Icons/Online'
+import Openapp from 'cozy-ui/transpiled/react/Icons/Openapp'
 import Openwith from 'cozy-ui/transpiled/react/Icons/Openwith'
 import Palette from 'cozy-ui/transpiled/react/Icons/Palette'
 import Paper from 'cozy-ui/transpiled/react/Icons/Paper'
@@ -377,6 +378,7 @@ const icons = [
   NotificationEmail,
   Offline,
   Online,
+  Openapp,
   Openwith,
   Palette,
   Paper,
