@@ -17,22 +17,28 @@ const LoadMore = ({ fetchMore, label }) => {
     }
   }, [isLoading, fetchMore])
 
-  const checkIntersectionsEntries = intersectionEntries => {
-    if (intersectionEntries.filter(entry => entry.isIntersecting).length > 0)
-      startFetchMore()
-  }
+  const checkIntersectionsEntries = useCallback(
+    intersectionEntries => {
+      if (intersectionEntries.filter(entry => entry.isIntersecting).length > 0)
+        startFetchMore()
+    },
+    [startFetchMore]
+  )
 
   useEffect(() => {
     const observer = new IntersectionObserver(checkIntersectionsEntries)
-    observer.observe(elementRef.current)
+    /*
+      The ref value 'elementRef.current' will likely have changed by the time this effect cleanup function runs
+      It is better to copy the ref to a variable inside the effect
+    */
+    const observerRefValue = elementRef.current
+    observer.observe(observerRefValue)
 
     return () => {
-      // TODO: validate the deps are correct
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      observer.unobserve(elementRef.current)
+      observer.unobserve(observerRefValue)
       observer.disconnect()
     }
-  })
+  }, [checkIntersectionsEntries])
 
   return (
     <span ref={elementRef}>
