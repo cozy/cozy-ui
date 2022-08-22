@@ -16,7 +16,8 @@ const useStyles = makeStyles(theme => ({
     height: '100%',
     paddingLeft: '1rem',
     paddingRight: '1rem',
-    borderTop: `1px solid ${theme.palette.divider}`
+    borderTop: `1px solid ${theme.palette.divider}`,
+    columnGap: '0.5rem'
   }
 }))
 
