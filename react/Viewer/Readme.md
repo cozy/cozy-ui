@@ -102,7 +102,7 @@ const ShareButtonFake = () => {
   return (
     <Button
       label="Share"
-      className="u-w-100 u-ml-0 u-mr-half"
+      className="u-w-100 u-ml-0 u-mr-0"
       variant="secondary"
       startIcon={<Icon icon={ShareIcon} />}
       onClick={() => {

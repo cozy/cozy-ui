@@ -25,7 +25,6 @@ const Sharing = ({ file }) => {
           />
         )}
         <ShareButton
-          className="u-mr-half"
           extension="full"
           useShortLabel
           docId={file.id}
