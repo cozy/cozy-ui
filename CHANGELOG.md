@@ -1,3 +1,15 @@
+# [70.7.0](https://github.com/cozy/cozy-ui/compare/v70.6.2...v70.7.0) (2022-08-23)
+
+
+### Bug Fixes
+
+* LoadMore component effect ([b196201](https://github.com/cozy/cozy-ui/commit/b196201))
+
+
+### Features
+
+* add openapp icon ([545883b](https://github.com/cozy/cozy-ui/commit/545883b))
+
 ## [70.6.2](https://github.com/cozy/cozy-ui/compare/v70.6.1...v70.6.2) (2022-08-16)
 
 
