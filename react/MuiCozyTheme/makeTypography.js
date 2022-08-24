@@ -36,8 +36,14 @@ export const makeTypography = palette => ({
   },
   subtitle1: {
     fontWeight: 'bold',
+    fontSize: 14,
+    lineHeight: 1.358,
+    textTransform: 'uppercase'
+  },
+  subtitle2: {
+    fontWeight: 'bold',
     fontSize: 12,
-    lineHeight: 1.313,
+    lineHeight: 1.334,
     textTransform: 'uppercase'
   },
   body1: {
