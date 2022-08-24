@@ -1,3 +1,28 @@
+# [71.0.0](https://github.com/cozy/cozy-ui/compare/v70.7.0...v71.0.0) (2022-08-24)
+
+
+### Features
+
+* Exports all MUI styles functions ([8e9228c](https://github.com/cozy/cozy-ui/commit/8e9228c))
+
+
+### BREAKING CHANGES
+
+* Imports of `makeStyles`, `useTheme` and `withStyles`
+are no longer done like this
+`import ... from cozy-ui/transpiled/react/helpers/[makeStyles|useTheme|withStyles]`
+but instead
+`import { ... } from cozy-ui/transpiled/react/styles`
+
+You can use a codemods `transform-mui-styles-imports.js`
+to automatically handle this breaking change.
+[See the codemods documentation](https://github.com/cozy/cozy-libs/tree/master/packages/cozy-codemods).
+Using linter js auto-correction can be a good idea after that.
+Here a common example (don't forget to change `src` value):
+```
+jscodeshift -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/transform-mui-styles-imports.js src --parser babel --extensions js,jsx && yarn lint:js --fix
+```
+
 # [70.7.0](https://github.com/cozy/cozy-ui/compare/v70.6.2...v70.7.0) (2022-08-23)
 
 
