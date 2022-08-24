@@ -124,6 +124,7 @@ export const makePalette = type => {
     background: {
       default: getCssValue('defaultBackgroundColor'),
       paper: getCssValue('paperBackgroundColor'),
+      contrast: getCssValue('contrastBackgroundColor'),
       selected: '#F5FAFF' // deprecated, should be removed. Use action.selected instead
     }
   }
