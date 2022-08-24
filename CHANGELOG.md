@@ -1,3 +1,22 @@
+# [72.0.0](https://github.com/cozy/cozy-ui/compare/v71.0.0...v72.0.0) (2022-08-24)
+
+
+### Bug Fixes
+
+* Do not display Viewer's Download button on iOS Flagship app ([db2303d](https://github.com/cozy/cozy-ui/commit/db2303d))
+
+
+### Code Refactoring
+
+* Handle footer items' gap in `FooterContent` container ([22776e2](https://github.com/cozy/cozy-ui/commit/22776e2))
+
+
+### BREAKING CHANGES
+
+* Items inside of `FooterActionButtons` should not have
+specified margins anymore as those are now handled by its container.
+Remove them to avoid duplicate margins
+
 # [71.0.0](https://github.com/cozy/cozy-ui/compare/v70.7.0...v71.0.0) (2022-08-24)
 
 
