@@ -47,11 +47,6 @@ class ViewerControls extends Component {
     }
   }
 
-  onTap = () => {
-    if (this.state.hidden) this.showControls()
-    else this.hideAfterDelay()
-  }
-
   hideAfterDelay = () => {
     clearTimeout(this.hideTimeout)
     this.hideTimeout = setTimeout(() => {
@@ -65,13 +60,18 @@ class ViewerControls extends Component {
   }
 
   initGestures = () => {
-    const gestures = new Hammer(this.wrapped)
-    gestures.on('swipe', this.onSwipe)
-    gestures.on('tap', this.onTap)
-    const tap = gestures.get('tap')
-    const doubleTap = gestures.get('doubletap')
-    doubleTap.recognizeWith(tap)
-    tap.requireFailure(doubleTap)
+    const gestures = new Hammer(
+      this.wrapped,
+      this.props.breakpoints.isDesktop
+        ? {
+            cssProps: {
+              userSelect: 'auto'
+            }
+          }
+        : {}
+    )
+    if (!this.props.breakpoints.isDesktop) gestures.on('swipe', this.onSwipe)
+
     return gestures
   }
 
@@ -116,7 +116,6 @@ class ViewerControls extends Component {
     } = this.props
     const { showToolbar, showClose, toolbarRef } = toolbarProps
     const { hidden } = this.state
-
     return (
       <div
         className={cx(styles['viewer-controls'], {
