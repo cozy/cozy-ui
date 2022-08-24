@@ -337,18 +337,56 @@ const makeOverrides = theme => ({
       marginLeft: '0 !important'
     }
   },
-  MuiTab: {
-    // This overrides the disabled color of the MuiTab
-    textColorPrimary: {
-      color: theme.palette.grey[500]
-    },
-    textColorSecondary: {
-      color: theme.palette.grey[500]
-    },
+  MuiTabs: {
     root: {
-      fontSize: theme.typography.subtitle1.fontSize,
-      [theme.breakpoints.up('md')]: {
-        fontSize: theme.typography.subtitle1.fontSize
+      '&.segmented': {
+        borderRadius: '99px',
+        backgroundColor: theme.palette.background.contrast,
+        overflow: 'visible',
+        minHeight: '2.5rem',
+        '& $indicator': {
+          top: '1px',
+          height: 'calc(100% - 2px)',
+          transform: 'scale(0.99)',
+          borderRadius: '99px',
+          zIndex: 0,
+          boxShadow: theme.shadows[1],
+          backgroundColor: theme.palette.background.paper
+        },
+        '& $fixed': {
+          overflow: 'visible !important'
+        },
+        '& $scrollButtons': {
+          borderRadius: '99px'
+        }
+      }
+    }
+  },
+  MuiTab: {
+    root: {
+      ...theme.typography.subtitle2,
+      '&:hover': {
+        color: theme.palette.text.primary,
+        opacity: 1
+      },
+      '&:focus': {
+        color: theme.palette.text.primary
+      },
+      '&.narrowed': {
+        minWidth: 'auto',
+        [theme.breakpoints.up('sm')]: {
+          minWidth: 'auto'
+        }
+      },
+      '&.segmented': {
+        ...theme.typography.body2,
+        textTransform: 'initial',
+        zIndex: 1,
+        borderRadius: '99px',
+        minHeight: '2.5rem',
+        '&$selected': {
+          color: theme.palette.text.primary
+        }
       }
     }
   },
@@ -951,23 +989,6 @@ const makeInvertedOverrides = invertedTheme => {
         }
       }
     },
-    MuiTab: {
-      root: {
-        color: 'rgb(255,255,255) !important'
-      },
-      // This overrides the disabled color of the MuiTab
-      textColorPrimary: {
-        color: 'rgb(255,255,255) !important',
-        opacity: 0.64
-      },
-      textColorSecondary: {
-        color: 'rgb(255,255,255)',
-        opacity: 0.64
-      },
-      selected: {
-        opacity: 1
-      }
-    },
     MuiLinearProgress: {
       colorPrimary: {
         backgroundColor: 'rgba(255,255,255,0.2)'
@@ -1010,6 +1031,13 @@ const makeInvertedOverrides = invertedTheme => {
       }
     }
   }
+
+  invertedOverrides.MuiTabs.root['&.segmented'][
+    '& $indicator'
+  ].backgroundColor = invertedTheme.palette.primary.main
+
+  invertedOverrides.MuiTab.root['&.segmented']['&$selected'].color =
+    invertedTheme.palette.primary.contrastText
 
   invertedOverrides.MuiSwitch = {
     ...invertedOverrides.MuiSwitch,
