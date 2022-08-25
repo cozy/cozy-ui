@@ -1,3 +1,10 @@
+# [72.1.0](https://github.com/cozy/cozy-ui/compare/v72.0.0...v72.1.0) (2022-08-25)
+
+
+### Features
+
+* Let the user able to select content ([7efff3d](https://github.com/cozy/cozy-ui/commit/7efff3d))
+
 # [72.0.0](https://github.com/cozy/cozy-ui/compare/v71.0.0...v72.0.0) (2022-08-24)
 
 
