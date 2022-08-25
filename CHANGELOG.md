@@ -1,3 +1,15 @@
+# [73.0.0](https://github.com/cozy/cozy-ui/compare/v72.1.0...v73.0.0) (2022-08-25)
+
+
+### Features
+
+* Upgrade cozy-client to 33.0.0 ([e449adc](https://github.com/cozy/cozy-ui/commit/e449adc)), closes [cozy/cozy-client#1227](https://github.com/cozy/cozy-client/issues/1227)
+
+
+### BREAKING CHANGES
+
+* You need to update `cozy-client` to `>33.0.0`.
+
 # [72.1.0](https://github.com/cozy/cozy-ui/compare/v72.0.0...v72.1.0) (2022-08-25)
 
 
