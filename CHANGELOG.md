@@ -1,3 +1,10 @@
+## [73.0.1](https://github.com/cozy/cozy-ui/compare/v73.0.0...v73.0.1) (2022-08-25)
+
+
+### Bug Fixes
+
+* Remove useless exports already processed ([1c7d283](https://github.com/cozy/cozy-ui/commit/1c7d283))
+
 # [73.0.0](https://github.com/cozy/cozy-ui/compare/v72.1.0...v73.0.0) (2022-08-25)
 
 
