@@ -1289,6 +1289,7 @@ body {
   --borderGhostDisabledColor: rgba(255,255,255,0.24);
   --paperBackgroundColor: #297ef2;
   --defaultBackgroundColor: #579eff;
+  --contrastBackgroundColor: rgba(255,255,255,0.12);
   --primaryColorLight: #fff;
   --primaryColor: #fff;
   --primaryColorDark: #eaf3ff;
@@ -1478,12 +1479,14 @@ html,
     Stylus: primaryBackgroundLight -  #F7FAFF, CSS: var(--primaryBackgroundLight)
     Stylus: paperBackgroundColor -  #FFF, CSS: var(--paperBackgroundColor)
     Stylus: defaultBackgroundColor -  #F4F5F6, CSS: var(--defaultBackgroundColor)
+    Stylus: contrastBackgroundColor -  #F5F5F6, CSS: var(--contrastBackgroundColor)
 
     Styleguide Settings.theme.background
     */
   --primaryBackgroundLight: #f7faff;
   --paperBackgroundColor: #fff;
   --defaultBackgroundColor: #f4f5f6;
+  --contrastBackgroundColor: rgba(29,33,42,0.048);
 /*
     Text colors
 
@@ -6289,6 +6292,7 @@ body {
   --borderGhostDisabledColor: rgba(255,255,255,0.24);
   --paperBackgroundColor: #297ef2;
   --defaultBackgroundColor: #579eff;
+  --contrastBackgroundColor: rgba(255,255,255,0.12);
   --primaryColorLight: #fff;
   --primaryColor: #fff;
   --primaryColorDark: #eaf3ff;
@@ -6519,12 +6523,14 @@ html,
     Stylus: primaryBackgroundLight -  #F7FAFF, CSS: var(--primaryBackgroundLight)
     Stylus: paperBackgroundColor -  #FFF, CSS: var(--paperBackgroundColor)
     Stylus: defaultBackgroundColor -  #F4F5F6, CSS: var(--defaultBackgroundColor)
+    Stylus: contrastBackgroundColor -  #F5F5F6, CSS: var(--contrastBackgroundColor)
 
     Styleguide Settings.theme.background
     */
   --primaryBackgroundLight: #f7faff;
   --paperBackgroundColor: #fff;
   --defaultBackgroundColor: #f4f5f6;
+  --contrastBackgroundColor: rgba(29,33,42,0.048);
 /*
     Text colors
 
@@ -8731,6 +8737,7 @@ body {
   --borderGhostDisabledColor: rgba(255,255,255,0.24);
   --paperBackgroundColor: #297ef2;
   --defaultBackgroundColor: #579eff;
+  --contrastBackgroundColor: rgba(255,255,255,0.12);
   --primaryColorLight: #fff;
   --primaryColor: #fff;
   --primaryColorDark: #eaf3ff;
@@ -8920,12 +8927,14 @@ html,
     Stylus: primaryBackgroundLight -  #F7FAFF, CSS: var(--primaryBackgroundLight)
     Stylus: paperBackgroundColor -  #FFF, CSS: var(--paperBackgroundColor)
     Stylus: defaultBackgroundColor -  #F4F5F6, CSS: var(--defaultBackgroundColor)
+    Stylus: contrastBackgroundColor -  #F5F5F6, CSS: var(--contrastBackgroundColor)
 
     Styleguide Settings.theme.background
     */
   --primaryBackgroundLight: #f7faff;
   --paperBackgroundColor: #fff;
   --defaultBackgroundColor: #f4f5f6;
+  --contrastBackgroundColor: rgba(29,33,42,0.048);
 /*
     Text colors
 
@@ -12547,6 +12556,7 @@ body {
   --borderGhostDisabledColor: rgba(255,255,255,0.24);
   --paperBackgroundColor: #297ef2;
   --defaultBackgroundColor: #579eff;
+  --contrastBackgroundColor: rgba(255,255,255,0.12);
   --primaryColorLight: #fff;
   --primaryColor: #fff;
   --primaryColorDark: #eaf3ff;
@@ -12736,12 +12746,14 @@ html,
     Stylus: primaryBackgroundLight -  #F7FAFF, CSS: var(--primaryBackgroundLight)
     Stylus: paperBackgroundColor -  #FFF, CSS: var(--paperBackgroundColor)
     Stylus: defaultBackgroundColor -  #F4F5F6, CSS: var(--defaultBackgroundColor)
+    Stylus: contrastBackgroundColor -  #F5F5F6, CSS: var(--contrastBackgroundColor)
 
     Styleguide Settings.theme.background
     */
   --primaryBackgroundLight: #f7faff;
   --paperBackgroundColor: #fff;
   --defaultBackgroundColor: #f4f5f6;
+  --contrastBackgroundColor: rgba(29,33,42,0.048);
 /*
     Text colors
 
@@ -13032,6 +13044,7 @@ html,
   --borderGhostDisabledColor: rgba(255,255,255,0.24);
   --paperBackgroundColor: #297ef2;
   --defaultBackgroundColor: #579eff;
+  --contrastBackgroundColor: rgba(255,255,255,0.12);
   --primaryColorLight: #fff;
   --primaryColor: #fff;
   --primaryColorDark: #eaf3ff;
@@ -13221,12 +13234,14 @@ html,
     Stylus: primaryBackgroundLight -  #F7FAFF, CSS: var(--primaryBackgroundLight)
     Stylus: paperBackgroundColor -  #FFF, CSS: var(--paperBackgroundColor)
     Stylus: defaultBackgroundColor -  #F4F5F6, CSS: var(--defaultBackgroundColor)
+    Stylus: contrastBackgroundColor -  #F5F5F6, CSS: var(--contrastBackgroundColor)
 
     Styleguide Settings.theme.background
     */
   --primaryBackgroundLight: #f7faff;
   --paperBackgroundColor: #fff;
   --defaultBackgroundColor: #f4f5f6;
+  --contrastBackgroundColor: rgba(29,33,42,0.048);
 /*
     Text colors
 
@@ -13509,6 +13524,7 @@ html,
   --borderGhostDisabledColor: rgba(255,255,255,0.24);
   --paperBackgroundColor: #297ef2;
   --defaultBackgroundColor: #579eff;
+  --contrastBackgroundColor: rgba(255,255,255,0.12);
   --primaryColorLight: #fff;
   --primaryColor: #fff;
   --primaryColorDark: #eaf3ff;
@@ -13698,12 +13714,14 @@ html,
     Stylus: primaryBackgroundLight -  #F7FAFF, CSS: var(--primaryBackgroundLight)
     Stylus: paperBackgroundColor -  #FFF, CSS: var(--paperBackgroundColor)
     Stylus: defaultBackgroundColor -  #F4F5F6, CSS: var(--defaultBackgroundColor)
+    Stylus: contrastBackgroundColor -  #F5F5F6, CSS: var(--contrastBackgroundColor)
 
     Styleguide Settings.theme.background
     */
   --primaryBackgroundLight: #f7faff;
   --paperBackgroundColor: #fff;
   --defaultBackgroundColor: #f4f5f6;
+  --contrastBackgroundColor: rgba(29,33,42,0.048);
 /*
     Text colors
 
@@ -16674,6 +16692,7 @@ html,
   --borderGhostDisabledColor: rgba(255,255,255,0.24);
   --paperBackgroundColor: #297ef2;
   --defaultBackgroundColor: #579eff;
+  --contrastBackgroundColor: rgba(255,255,255,0.12);
   --primaryColorLight: #fff;
   --primaryColor: #fff;
   --primaryColorDark: #eaf3ff;
@@ -16863,12 +16882,14 @@ html,
     Stylus: primaryBackgroundLight -  #F7FAFF, CSS: var(--primaryBackgroundLight)
     Stylus: paperBackgroundColor -  #FFF, CSS: var(--paperBackgroundColor)
     Stylus: defaultBackgroundColor -  #F4F5F6, CSS: var(--defaultBackgroundColor)
+    Stylus: contrastBackgroundColor -  #F5F5F6, CSS: var(--contrastBackgroundColor)
 
     Styleguide Settings.theme.background
     */
   --primaryBackgroundLight: #f7faff;
   --paperBackgroundColor: #fff;
   --defaultBackgroundColor: #f4f5f6;
+  --contrastBackgroundColor: rgba(29,33,42,0.048);
 /*
     Text colors
 
@@ -20332,6 +20353,7 @@ body {
   --borderGhostDisabledColor: rgba(255,255,255,0.24);
   --paperBackgroundColor: #297ef2;
   --defaultBackgroundColor: #579eff;
+  --contrastBackgroundColor: rgba(255,255,255,0.12);
   --primaryColorLight: #fff;
   --primaryColor: #fff;
   --primaryColorDark: #eaf3ff;
@@ -20521,12 +20543,14 @@ html,
     Stylus: primaryBackgroundLight -  #F7FAFF, CSS: var(--primaryBackgroundLight)
     Stylus: paperBackgroundColor -  #FFF, CSS: var(--paperBackgroundColor)
     Stylus: defaultBackgroundColor -  #F4F5F6, CSS: var(--defaultBackgroundColor)
+    Stylus: contrastBackgroundColor -  #F5F5F6, CSS: var(--contrastBackgroundColor)
 
     Styleguide Settings.theme.background
     */
   --primaryBackgroundLight: #f7faff;
   --paperBackgroundColor: #fff;
   --defaultBackgroundColor: #f4f5f6;
+  --contrastBackgroundColor: rgba(29,33,42,0.048);
 /*
     Text colors
 
@@ -20931,6 +20955,7 @@ html {
   --borderGhostDisabledColor: rgba(255,255,255,0.24);
   --paperBackgroundColor: #297ef2;
   --defaultBackgroundColor: #579eff;
+  --contrastBackgroundColor: rgba(255,255,255,0.12);
   --primaryColorLight: #fff;
   --primaryColor: #fff;
   --primaryColorDark: #eaf3ff;
@@ -21120,12 +21145,14 @@ html,
     Stylus: primaryBackgroundLight -  #F7FAFF, CSS: var(--primaryBackgroundLight)
     Stylus: paperBackgroundColor -  #FFF, CSS: var(--paperBackgroundColor)
     Stylus: defaultBackgroundColor -  #F4F5F6, CSS: var(--defaultBackgroundColor)
+    Stylus: contrastBackgroundColor -  #F5F5F6, CSS: var(--contrastBackgroundColor)
 
     Styleguide Settings.theme.background
     */
   --primaryBackgroundLight: #f7faff;
   --paperBackgroundColor: #fff;
   --defaultBackgroundColor: #f4f5f6;
+  --contrastBackgroundColor: rgba(29,33,42,0.048);
 /*
     Text colors
 
@@ -22304,6 +22331,7 @@ html {
   --borderGhostDisabledColor: rgba(255,255,255,0.24);
   --paperBackgroundColor: #297ef2;
   --defaultBackgroundColor: #579eff;
+  --contrastBackgroundColor: rgba(255,255,255,0.12);
   --primaryColorLight: #fff;
   --primaryColor: #fff;
   --primaryColorDark: #eaf3ff;
@@ -22493,12 +22521,14 @@ html,
     Stylus: primaryBackgroundLight -  #F7FAFF, CSS: var(--primaryBackgroundLight)
     Stylus: paperBackgroundColor -  #FFF, CSS: var(--paperBackgroundColor)
     Stylus: defaultBackgroundColor -  #F4F5F6, CSS: var(--defaultBackgroundColor)
+    Stylus: contrastBackgroundColor -  #F5F5F6, CSS: var(--contrastBackgroundColor)
 
     Styleguide Settings.theme.background
     */
   --primaryBackgroundLight: #f7faff;
   --paperBackgroundColor: #fff;
   --defaultBackgroundColor: #f4f5f6;
+  --contrastBackgroundColor: rgba(29,33,42,0.048);
 /*
     Text colors
 
@@ -22725,6 +22755,7 @@ html,
   --borderGhostDisabledColor: rgba(255,255,255,0.24);
   --paperBackgroundColor: #297ef2;
   --defaultBackgroundColor: #579eff;
+  --contrastBackgroundColor: rgba(255,255,255,0.12);
   --primaryColorLight: #fff;
   --primaryColor: #fff;
   --primaryColorDark: #eaf3ff;
@@ -22914,12 +22945,14 @@ html,
     Stylus: primaryBackgroundLight -  #F7FAFF, CSS: var(--primaryBackgroundLight)
     Stylus: paperBackgroundColor -  #FFF, CSS: var(--paperBackgroundColor)
     Stylus: defaultBackgroundColor -  #F4F5F6, CSS: var(--defaultBackgroundColor)
+    Stylus: contrastBackgroundColor -  #F5F5F6, CSS: var(--contrastBackgroundColor)
 
     Styleguide Settings.theme.background
     */
   --primaryBackgroundLight: #f7faff;
   --paperBackgroundColor: #fff;
   --defaultBackgroundColor: #f4f5f6;
+  --contrastBackgroundColor: rgba(29,33,42,0.048);
 /*
     Text colors
 
@@ -23142,6 +23175,7 @@ html,
   --borderGhostDisabledColor: rgba(255,255,255,0.24);
   --paperBackgroundColor: #297ef2;
   --defaultBackgroundColor: #579eff;
+  --contrastBackgroundColor: rgba(255,255,255,0.12);
   --primaryColorLight: #fff;
   --primaryColor: #fff;
   --primaryColorDark: #eaf3ff;
@@ -23331,12 +23365,14 @@ html,
     Stylus: primaryBackgroundLight -  #F7FAFF, CSS: var(--primaryBackgroundLight)
     Stylus: paperBackgroundColor -  #FFF, CSS: var(--paperBackgroundColor)
     Stylus: defaultBackgroundColor -  #F4F5F6, CSS: var(--defaultBackgroundColor)
+    Stylus: contrastBackgroundColor -  #F5F5F6, CSS: var(--contrastBackgroundColor)
 
     Styleguide Settings.theme.background
     */
   --primaryBackgroundLight: #f7faff;
   --paperBackgroundColor: #fff;
   --defaultBackgroundColor: #f4f5f6;
+  --contrastBackgroundColor: rgba(29,33,42,0.048);
 /*
     Text colors
 
@@ -26710,6 +26746,7 @@ html {
   --borderGhostDisabledColor: rgba(255,255,255,0.24);
   --paperBackgroundColor: #297ef2;
   --defaultBackgroundColor: #579eff;
+  --contrastBackgroundColor: rgba(255,255,255,0.12);
   --primaryColorLight: #fff;
   --primaryColor: #fff;
   --primaryColorDark: #eaf3ff;
@@ -26899,12 +26936,14 @@ html,
     Stylus: primaryBackgroundLight -  #F7FAFF, CSS: var(--primaryBackgroundLight)
     Stylus: paperBackgroundColor -  #FFF, CSS: var(--paperBackgroundColor)
     Stylus: defaultBackgroundColor -  #F4F5F6, CSS: var(--defaultBackgroundColor)
+    Stylus: contrastBackgroundColor -  #F5F5F6, CSS: var(--contrastBackgroundColor)
 
     Styleguide Settings.theme.background
     */
   --primaryBackgroundLight: #f7faff;
   --paperBackgroundColor: #fff;
   --defaultBackgroundColor: #f4f5f6;
+  --contrastBackgroundColor: rgba(29,33,42,0.048);
 /*
     Text colors
 
@@ -27829,6 +27868,7 @@ html,
   --borderGhostDisabledColor: rgba(255,255,255,0.24);
   --paperBackgroundColor: #297ef2;
   --defaultBackgroundColor: #579eff;
+  --contrastBackgroundColor: rgba(255,255,255,0.12);
   --primaryColorLight: #fff;
   --primaryColor: #fff;
   --primaryColorDark: #eaf3ff;
@@ -28018,12 +28058,14 @@ html,
     Stylus: primaryBackgroundLight -  #F7FAFF, CSS: var(--primaryBackgroundLight)
     Stylus: paperBackgroundColor -  #FFF, CSS: var(--paperBackgroundColor)
     Stylus: defaultBackgroundColor -  #F4F5F6, CSS: var(--defaultBackgroundColor)
+    Stylus: contrastBackgroundColor -  #F5F5F6, CSS: var(--contrastBackgroundColor)
 
     Styleguide Settings.theme.background
     */
   --primaryBackgroundLight: #f7faff;
   --paperBackgroundColor: #fff;
   --defaultBackgroundColor: #f4f5f6;
+  --contrastBackgroundColor: rgba(29,33,42,0.048);
 /*
     Text colors
 
@@ -30868,6 +30910,7 @@ html {
   --borderGhostDisabledColor: rgba(255,255,255,0.24);
   --paperBackgroundColor: #297ef2;
   --defaultBackgroundColor: #579eff;
+  --contrastBackgroundColor: rgba(255,255,255,0.12);
   --primaryColorLight: #fff;
   --primaryColor: #fff;
   --primaryColorDark: #eaf3ff;
@@ -31057,12 +31100,14 @@ html,
     Stylus: primaryBackgroundLight -  #F7FAFF, CSS: var(--primaryBackgroundLight)
     Stylus: paperBackgroundColor -  #FFF, CSS: var(--paperBackgroundColor)
     Stylus: defaultBackgroundColor -  #F4F5F6, CSS: var(--defaultBackgroundColor)
+    Stylus: contrastBackgroundColor -  #F5F5F6, CSS: var(--contrastBackgroundColor)
 
     Styleguide Settings.theme.background
     */
   --primaryBackgroundLight: #f7faff;
   --paperBackgroundColor: #fff;
   --defaultBackgroundColor: #f4f5f6;
+  --contrastBackgroundColor: rgba(29,33,42,0.048);
 /*
     Text colors
 
