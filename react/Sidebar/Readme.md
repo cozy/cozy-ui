@@ -2,6 +2,8 @@ On desktop shows a vertical menu on the left. On mobile, shows a horizontal bott
 
 ⚠️ `NavLink` must be imported normally from `react-router-dom` and used as follows.
 
+⚠️ You must use `genNavLinkForV6` instead of `genNavLink` for `react-router-dom` version 6.
+
 ```jsx static
 import { NavLink as RouterLink } from 'react-router'
 import { genNavLink } from 'cozy-ui/transpiled/react/Nav'
