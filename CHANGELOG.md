@@ -1,3 +1,16 @@
+# [73.1.0](https://github.com/cozy/cozy-ui/compare/v73.0.1...v73.1.0) (2022-08-26)
+
+
+### Bug Fixes
+
+* **Typography:** Modify subtitle1 and subtitle2 properties ([39f4ba4](https://github.com/cozy/cozy-ui/commit/39f4ba4))
+
+
+### Features
+
+* **palette:** Add background.contrast value and --contrastBackgroundColor ([a09c7fc](https://github.com/cozy/cozy-ui/commit/a09c7fc))
+* **Tabs/Tab:** Add react/Tabs and react/Tab component ([123e3e1](https://github.com/cozy/cozy-ui/commit/123e3e1))
+
 ## [73.0.1](https://github.com/cozy/cozy-ui/compare/v73.0.0...v73.0.1) (2022-08-25)
 
 
