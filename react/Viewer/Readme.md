@@ -73,8 +73,15 @@ const files = [
   {
     _id: 'text',
     class: 'text',
-    name: 'Demo.txt',
-    mime: 'text/plain'
+    name: 'LoremipsumdolorsitametconsecteturadipiscingelitSednonrisusSuspendisselectustortordignissimsitametadipiscingnecultriciesseddolorCraselementumultricesdiamMaecenasligulamassavariusasempercongueeuismodnonmiProinporttitororcinecnonummymolestieenimesteleifendminonfermentumdiamnislsitameteratDuissemperDuisarcumassascelerisquevitaeconsequatinpretiumaenimPellentesquecongueUtinrisusvolutpatliberopharetratemporCrasvestibulumbibendumauguePraesentegestasleoinpedePraesentblanditodioeuenimPellentesquesedduiutaugueblanditsodalesVestibulumanteipsumprimisinfaucibusorciluctusetultricesposuerecubiliaCuraeAliquamnibhMaurisacmaurissedpedepellentesquefermentumMaecenasadipiscingantenondiamsodaleshendrerit.txt',
+    mime: 'text/plain',
+    metadata: {
+      datetime: "2022-01-01T12:00:00.000Z",
+      datetimeLabel: "datetime",
+      qualification: {
+        label: 'tax_notice'
+      }
+    }
   },
     {
     _id: 'text',
