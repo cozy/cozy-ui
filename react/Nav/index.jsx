@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import Icon from '../Icon'
 import styles from './styles.styl'
 import cx from 'classnames'
@@ -24,6 +24,7 @@ export const NavLink = {
   activeClassName: styles['is-active']
 }
 
+// Generates a styled NavLink for react-routeur v5 and older
 export const genNavLink = RRNavLink => ({ to, children, ...rest }) => (
   <RRNavLink
     to={to}
@@ -34,6 +35,18 @@ export const genNavLink = RRNavLink => ({ to, children, ...rest }) => (
     {children}
   </RRNavLink>
 )
+
+// Generates a styled NavLink for react-routeur v6
+export const genNavLinkForV6 = RRNavLink =>
+  forwardRef((props, ref) => (
+    <RRNavLink
+      ref={ref}
+      className={({ isActive }) =>
+        styles['c-nav-link'] + (isActive ? ` ${styles['is-active']}` : '')
+      }
+      {...props}
+    />
+  ))
 
 export const NavIcon = ({ icon }) => (
   <span className={cx(styles['c-nav-icon'])}>
