@@ -1,3 +1,10 @@
+# [73.2.0](https://github.com/cozy/cozy-ui/compare/v73.1.0...v73.2.0) (2022-08-26)
+
+
+### Features
+
+* Add genNavLinkForV6() in Nav component ([b5df157](https://github.com/cozy/cozy-ui/commit/b5df157))
+
 # [73.1.0](https://github.com/cozy/cozy-ui/compare/v73.0.1...v73.1.0) (2022-08-26)
 
 
