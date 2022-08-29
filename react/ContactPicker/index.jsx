@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { Contact } from 'cozy-doctypes'
+import { models } from 'cozy-client'
+const { getDisplayName } = models.contact
 
 import ContactsListModal from '../ContactsListModal'
 import styles from './styles.styl'
@@ -58,7 +59,7 @@ class ContactPicker extends React.Component {
     return (
       <>
         <SelectControl {...rest} onClick={this.open}>
-          {value ? Contact.getDisplayName(value) : placeholder}
+          {value ? getDisplayName(value) : placeholder}
         </SelectControl>
         {opened && (
           <ContactsListModal

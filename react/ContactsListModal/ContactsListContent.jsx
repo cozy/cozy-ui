@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { Contact } from 'cozy-doctypes'
+import { models } from 'cozy-client'
+const { getDisplayName } = models.contact
 
 import ContactsList from '../ContactsList'
 import Spinner from '../Spinner'
@@ -15,7 +16,7 @@ const mkFilter = filterStr => contacts => {
 
   // TODO better filtering methods can be extracted from drive. See https://github.com/cozy/cozy-ui/pull/1273#discussion_r351845385
   return contacts.filter(contact => {
-    const displayName = Contact.getDisplayName(contact)
+    const displayName = getDisplayName(contact)
 
     if (!displayName) {
       return false
