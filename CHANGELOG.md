@@ -1,3 +1,10 @@
+## [73.2.1](https://github.com/cozy/cozy-ui/compare/v73.2.0...v73.2.1) (2022-08-29)
+
+
+### Bug Fixes
+
+* Don't rely on cozy-doctypes ([784e9c7](https://github.com/cozy/cozy-ui/commit/784e9c7))
+
 # [73.2.0](https://github.com/cozy/cozy-ui/compare/v73.1.0...v73.2.0) (2022-08-26)
 
 
