@@ -1,6 +1,6 @@
 import React from 'react'
-import { Contact } from 'cozy-doctypes'
 import { models } from 'cozy-client'
+import PropTypes from 'prop-types'
 
 import { Avatar } from '../../Avatar'
 import { TableCell } from '../../Table'
@@ -32,7 +32,7 @@ const ContactIdentity = ({ contact }) => {
 }
 
 ContactIdentity.propTypes = {
-  contact: Contact.propType.isRequired
+  contact: PropTypes.object.isRequired
 }
 
 export default ContactIdentity

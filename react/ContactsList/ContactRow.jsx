@@ -2,7 +2,6 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-import { Contact } from 'cozy-doctypes'
 import { models } from 'cozy-client'
 
 import ListItem from '../MuiCozyTheme/ListItem'
@@ -37,7 +36,7 @@ const ContactRow = ({ className, contact, onClick, divider, ...rest }) => {
 }
 
 ContactRow.propTypes = {
-  contact: Contact.propType.isRequired,
+  contact: PropTypes.object.isRequired,
   onClick: PropTypes.func,
   divider: PropTypes.bool
 }
