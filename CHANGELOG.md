@@ -1,3 +1,10 @@
+## [73.2.2](https://github.com/cozy/cozy-ui/compare/v73.2.1...v73.2.2) (2022-08-30)
+
+
+### Bug Fixes
+
+* bump semantic-release and @semantic-release/changelog ([00b75b8](https://github.com/cozy/cozy-ui/commit/00b75b8))
+
 ## [73.2.1](https://github.com/cozy/cozy-ui/compare/v73.2.0...v73.2.1) (2022-08-29)
 
 
