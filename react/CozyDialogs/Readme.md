@@ -56,6 +56,8 @@ import RadioGroup from 'cozy-ui/transpiled/react/RadioGroup'
 import Radio from 'cozy-ui/transpiled/react/Radios'
 import FormControl from 'cozy-ui/transpiled/react/FormControl'
 import FormLabel from 'cozy-ui/transpiled/react/FormLabel'
+import BottomSheet, { BottomSheetItem } from 'cozy-ui/transpiled/react/BottomSheet'
+import Stack from 'cozy-ui/transpiled/react/Stack'
 
 import CloudIcon from "cozy-ui/transpiled/react/Icons/Cloud"
 
@@ -64,6 +66,12 @@ const handleBack = () => {
   Alerter.success('Back button has been pressed', { duration: 5000 })
   setState({ modalOpened: !state.modalOpened })
 }
+const hideBottomSheet = () => setState({ bottomSheetOpened: false })
+const showBottomSheet = () => setState({ bottomSheetOpened: true })
+const hideSecondConfirmDialog = () => setState({ secondConfirmDialogOpened: false })
+const showSecondConfirmDialog = () => setState({ secondConfirmDialogOpened: true })
+const hideBSConfirmDialog = () => setState({ BSConfirmDialogOpened: false })
+const showBSConfirmDialog = () => setState({ BSConfirmDialogOpened: true })
 
 const DialogComponent = state.modal
 
@@ -152,6 +160,9 @@ const toggleDialog = dialog => {
 
 initialState = {
   modalOpened: isTesting(),
+  bottomSheetOpened: false,
+  secondConfirmDialogOpened: false,
+  BSConfirmDialogOpened: false,
   modal: Dialog,
   size: 'medium',
   content: 'default',
@@ -257,14 +268,52 @@ const initialVariants = [{
           }
           disableGutters={variant.disableGutters}
           content={
-            <Typography variant='body1' color='textPrimary'>
-              { state.content == 'default'
-              ? dialogContents[DialogComponent.name]
-              : state.content == 'long'
-                ? content.ada.long
-                : content.ada.short}<br/>
-              <Button className='u-mt-1 u-ml-0' label="Show an alert" onClick={() => Alerter.success('Hello', { duration: 100000 })}/>
-            </Typography>}
+            <>
+              <Typography component="div" variant="body1">
+                { state.content == 'default'
+                  ? dialogContents[DialogComponent.name]
+                  : state.content == 'long'
+                    ? content.ada.long
+                    : content.ada.short
+                }
+                <Stack className="u-mt-1" spacing="s">
+                  <div>
+                    <Button label="Show an alert" onClick={() => Alerter.success('Hello', { duration: 100000 })}/>
+                  </div>
+                  <div>
+                    <Button label="Show inner bottom sheet" onClick={showBottomSheet}/>
+                  </div>
+                  <div>
+                    <Button label="Show inner confirm dialog" onClick={showSecondConfirmDialog}/>
+                  </div>
+                </Stack>
+              </Typography>
+
+              {state.secondConfirmDialogOpened && (
+                <ConfirmDialog open onClose={hideSecondConfirmDialog}
+                  title="This is a simple title"
+                  content="This is a simple content"
+                />
+              )}
+
+              {state.bottomSheetOpened && (
+                <BottomSheet backdrop onClose={hideBottomSheet}>
+                  <BottomSheetItem>
+                    <div className="u-mb-1">
+                      <Button label="Show inner confirm dialog" onClick={showBSConfirmDialog}/>
+                    </div>
+                    {content.ada.long}
+                    {state.BSConfirmDialogOpened && (
+                      <ConfirmDialog open onClose={hideBSConfirmDialog}
+                        title="This is a simple title"
+                        content="This is a simple content"
+                      />
+                    )}
+                  </BottomSheetItem>
+                </BottomSheet>
+              )}
+            </>
+          }
           actions={variant.showActions && dialogActions[DialogComponent.name]}
           actionsLayout={variant.actionsLayoutColumn ? 'column' : 'row'}
         />
