@@ -16,7 +16,7 @@ const ensureFirstSlash = path => {
  * generateWebLink - Construct a link to a web app
  *
  * @param {object} Options               Object of options
- * @param {string}   options.cozyUrl       Base URL of the cozy, eg. cozy.tools or test.mycozy.cloud
+ * @param {string}   options.cozyUrl       Base URL of the cozy, eg. http://cozy.localhost:8080 or https://test.mycozy.cloud:8080
  * @param {string}   options.nativePath    Path inside the app, eg. /files/test.jpg
  * @param {string}   options.slug          Slug of the app
  * @param {string}   options.subDomainType Whether the cozy is using flat or nested subdomains. Defaults to flat.
