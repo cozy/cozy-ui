@@ -74,6 +74,7 @@ import Compass from 'cozy-ui/transpiled/react/Icons/Compass'
 import Connector from 'cozy-ui/transpiled/react/Icons/Connector'
 import Contract from 'cozy-ui/transpiled/react/Icons/Contract'
 import Contrast from 'cozy-ui/transpiled/react/Icons/Contrast'
+import CozyCircle from 'cozy-ui/transpiled/react/Icons/CozyCircle'
 import CozyLaugh from 'cozy-ui/transpiled/react/Icons/CozyLaugh'
 import CozyText from 'cozy-ui/transpiled/react/Icons/CozyText'
 import Credit from 'cozy-ui/transpiled/react/Icons/Credit'
@@ -146,6 +147,7 @@ import LinkOut from 'cozy-ui/transpiled/react/Icons/LinkOut'
 import List from 'cozy-ui/transpiled/react/Icons/List'
 import Location from 'cozy-ui/transpiled/react/Icons/Location'
 import Lock from 'cozy-ui/transpiled/react/Icons/Lock'
+import LockScreen from 'cozy-ui/transpiled/react/Icons/LockScreen'
 import Logout from 'cozy-ui/transpiled/react/Icons/Logout'
 import MagicTrick from 'cozy-ui/transpiled/react/Icons/MagicTrick'
 import Magnet from 'cozy-ui/transpiled/react/Icons/Magnet'
@@ -288,6 +290,7 @@ const icons = [
   Connector,
   Contract,
   Contrast,
+  CozyCircle,
   CozyLaugh,
   CozyText,
   Credit,
@@ -360,6 +363,7 @@ const icons = [
   List,
   Location,
   Lock,
+  LockScreen,
   Logout,
   MagicTrick,
   Magnet,
@@ -840,7 +844,7 @@ import Typography from 'cozy-ui/transpiled/react/Typography'
 
 const colors = ['#297EF2', '#08b442', '#B449E7', '#F52D2D', '#FF962F']
 let i = 0
-const availableIcons = ['album-add','album-remove','album','answer','apple','archive','attachment','attention','bank','banking-add','banking','bell','bike','bill','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-edge-chromium','browser-firefox','browser-ie','browser-opera','browser-safari','burger','bus','calendar','camera','car','carbonCopy','categories','certified','check-circle','check-list','check-square','check','checkbox','circle-filled','clock','cloud-happy','cloud','collect','comment','company','compass','connector','contract','contrast','cozy-laugh','cozy-text','credit-card-add','credit-card','credit','crop','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','debit','devices','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','email-notification','email','eu','euro','exchange','eye-closed','eye','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','fitness','flag-outlined','flag','flash-auto','flashlight','folder-add','folder-moveto','folder','forbidden','from-user','gear','globe','graph-circle','grid','group-list','groups','hand','heart','help','history','home','hourglass','image','info-outlined','info','key','laptop','left','lightbulb','link-out','link','list','location','lock','logout','magic-trick','magnet','magnifier','merge','mountain','movement-in','movement-out','mouvement','moveto','multi-files','music','new','next','note','notification-email','offline','online','openapp','openwith','palette','paper','paperplane','password','pen','people','percent-circle','percent','personal-data','phone-download','phone-upload','phone','pie-chart','pin','plane','plus-small','plus','previous','printer','qualify','radio-checked','radio-unchecked','repare','reply','restaurant','restore-straight','restore','right','rise','rotate-left','rotate-right','sad-cozy','safe','school','select-all','setting','share-circle','share','shield','shop','sound','spinner','stack','star','stats','subway','sync-cozy','sync','tag','target','team','telephone','to-the-cloud','top','train','trash','trophy','unknow','unlink','unlock','up','upload','videos','walk','wallet-add','wallet-new','wallet','warn','warning-circle','warning','wrench-circle']
+const availableIcons = ['album-add','album-remove','album','answer','apple','archive','attachment','attention','bank','banking-add','banking','bell','bike','bill','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-edge-chromium','browser-firefox','browser-ie','browser-opera','browser-safari','burger','bus','calendar','camera','car','carbonCopy','categories','certified','check-circle','check-list','check-square','check',  'checkbox','circle-filled','clock','cloud-happy','cloud','collect','comment','company','compass','connector','contract','contrast','cozy-circle','cozy-laugh','cozy-text','credit-card-add','credit-card','credit','crop','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','debit','devices','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','email-notification','email','eu','euro','exchange','eye-closed','eye','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','fitness','flag-outlined','flag','flash-auto','flashlight','folder-add','folder-moveto','folder','forbidden','from-user','gear','globe','graph-circle','grid','group-list','groups','hand','heart','help','history','home','hourglass','image','info-outlined','info','key','laptop','left','lightbulb','link-out','link','list','location','lock', 'lock-screen', 'logout','magic-trick','magnet','magnifier','merge','mountain','movement-in','movement-out','mouvement','moveto','multi-files','music','new','next','note','notification-email','offline','online', 'openapp', 'openwith','palette','paper','paperplane','password','pen','people','percent-circle','percent','personal-data','phone-download','phone-upload','phone','pie-chart','pin','plane','plus-small','plus','previous','printer','qualify','radio-checked','radio-unchecked','repare','reply','restaurant','restore-straight','restore','right','rise','rotate-left','rotate-right','sad-cozy','safe','school','select-all','setting','share-circle','share','shield','shop','sound','spinner','stack','star','stats','subway','sync-cozy','sync','tag','target','team','telephone','to-the-cloud','top','train','trash','trophy','unknow','unlink','unlock','up','upload','videos','walk','wallet-add','wallet-new','wallet','warn','warning-circle','warning','wrench-circle']
 ;
 <div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
   <Sprite />
