@@ -1,3 +1,10 @@
+## [73.2.3](https://github.com/cozy/cozy-ui/compare/v73.2.2...v73.2.3) (2022-08-31)
+
+
+### Bug Fixes
+
+* Add openapp icon to Available UI Icons section ([4ee16ee](https://github.com/cozy/cozy-ui/commit/4ee16ee))
+
 ## [73.2.2](https://github.com/cozy/cozy-ui/compare/v73.2.1...v73.2.2) (2022-08-30)
 
 
