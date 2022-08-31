@@ -38,7 +38,6 @@ const initialVariants = [{ narrowed: false, segmented: false }]
 </BreakpointsProvider>
 ```
 
-
 ```jsx
 import Tabs from 'cozy-ui/transpiled/react/Tabs'
 import Tab from 'cozy-ui/transpiled/react/Tab'
