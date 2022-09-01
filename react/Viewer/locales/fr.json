@@ -38,15 +38,22 @@
         "date": {
           "title": {
             "addedOn": "Ajouté le",
-            "obtentionDate": "Délivré le",
+            "AObtentionDate": "Permis A, délivré le",
+            "BObtentionDate": "Permis B, délivré le",
+            "CObtentionDate": "Permis C, délivré le",
+            "DObtentionDate": "Permis D, délivré le",
             "issueDate": "Délivré le",
             "expirationDate": "Expire le",
             "referencedDate": "Date de référence",
             "shootingDate": "Date de prise de vue",
-            "date": "Date du document"
+            "date": "Date du document",
+            "number": "numéro du permis",
+            "cardNumber": "Numéro de la carte d'identité",
+            "vinNumber": "Numéro de la carte grise (VIN)",
+            "ibanNumber": "Numéro d'IBAN"
           }
         },
-        "identity": "Identité",
+        "owner": "Titulaire",
         "label": {
           "title": "Label",
           "front": "Face avant",

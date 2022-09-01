@@ -38,15 +38,22 @@
         "date": {
           "title": {
             "addedOn": "Added on",
-            "obtentionDate": "Delivered on",
+            "AObtentionDate": "Permis A, delivered on",
+            "BObtentionDate": "Permis B, delivered on",
+            "CObtentionDate": "Permis C, delivered on",
+            "DObtentionDate": "Permis D, delivered on",
             "issueDate": "Delivered on",
             "expirationDate": "Expiration date",
             "referencedDate": "Referenced date",
             "shootingDate": "Shooting date",
-            "date": "Document date"
+            "date": "Document date",
+            "number": "permis number",
+            "cardNumber": "National ID card number",
+            "vinNumber": "Vehicle registration number (VIN)",
+            "ibanNumber": "IBAN number"
           }
         },
-        "identity": "Identity",
+        "owner": "Owner",
         "label": {
           "title": "Label",
           "front": "Front side",

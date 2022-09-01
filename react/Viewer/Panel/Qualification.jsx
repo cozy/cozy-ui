@@ -53,7 +53,7 @@ const Qualification = ({ file = {}, t, f, lang }) => {
         contactName && (
           <ListItem className={'u-ph-2'}>
             <QualificationListItemText
-              primary={t('Viewer.panel.qualification.identity')}
+              primary={t('Viewer.panel.qualification.owner')}
               secondary={contactName}
             />
           </ListItem>
