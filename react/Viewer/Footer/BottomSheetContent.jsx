@@ -5,7 +5,7 @@ import { BottomSheetItem } from '../../BottomSheet'
 
 import getPanelBlocks, { panelBlocksSpecs } from '../Panel/getPanelBlocks'
 
-const BottomSheetContent = ({ file, contactsFullname }) => {
+const BottomSheetContent = ({ file }) => {
   const panelBlocks = getPanelBlocks({ panelBlocksSpecs, file })
 
   return panelBlocks.map((PanelBlock, index) => (
@@ -14,7 +14,7 @@ const BottomSheetContent = ({ file, contactsFullname }) => {
       disableGutters
       disableElevation={index === panelBlocks.length - 1}
     >
-      <PanelBlock file={file} contactsFullname={contactsFullname} />
+      <PanelBlock file={file} />
     </BottomSheetItem>
   ))
 }

@@ -15,8 +15,10 @@ const {
   }
 } = models
 
-const Qualification = ({ file = {}, contactsFullname, t, f, lang }) => {
+const Qualification = ({ file = {}, t, f, lang }) => {
   const scannerT = getBoundT(lang)
+
+  const { contactName, isLoadingContacts } = useReferencedContactName(file)
 
   const { name: filename, metadata = {} } = file
   const {
@@ -42,13 +44,20 @@ const Qualification = ({ file = {}, contactsFullname, t, f, lang }) => {
           />
         </ListItem>
       )}
-      {contactsFullname && (
+
+      {isLoadingContacts ? (
         <ListItem className={'u-ph-2'}>
-          <QualificationListItemText
-            primary={t('Viewer.panel.qualification.identity')}
-            secondary={contactsFullname}
-          />
+          <Spinner color="var(--secondaryTextColor)" />
         </ListItem>
+      ) : (
+        contactName && (
+          <ListItem className={'u-ph-2'}>
+            <QualificationListItemText
+              primary={t('Viewer.panel.qualification.identity')}
+              secondary={contactName}
+            />
+          </ListItem>
+        )
       )}
       <ListItem className={'u-ph-2'}>
         <QualificationListItemText
