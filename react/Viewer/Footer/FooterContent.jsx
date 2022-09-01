@@ -7,7 +7,7 @@ import BottomSheet, { BottomSheetHeader } from '../../BottomSheet'
 
 import { isValidForPanel } from '../helpers'
 import BottomSheetContent from './BottomSheetContent'
-import useReferencedContactName from './useReferencedContactName'
+import useReferencedContactName from '../hooks/useReferencedContactName'
 
 const useStyles = makeStyles(theme => ({
   footer: {
