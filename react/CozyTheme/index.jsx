@@ -1,7 +1,8 @@
 import React, { createContext, useContext } from 'react'
+import cx from 'classnames'
+
 import MuiCozyTheme from '../MuiCozyTheme'
 import themesStyles from '../../stylus/settings/palette.styl'
-import cx from 'classnames'
 
 export const CozyThemeContext = createContext()
 

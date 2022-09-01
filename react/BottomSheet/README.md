@@ -1,8 +1,11 @@
 Display content coming up from the bottom of the screen. The pane can be swiped to the top of the screen. Based on cozy
-/ mui-bottom-sheet: [API documentation is here](https://github.com/cozy/mui-bottom-sheet#props-options).
+/ mui-bottom-sheet: [API documentation is here](https://github.com/cozy/mui-bottom-sheet#props-options). It uses `Portal` to have the same behavior as `Dialogs` / `Modals` (can be disabled with the `disablePortal` prop).
 
 ### Props
 
+* **portalProps** : `<object>` – Portal properties
+  * **container** : `<HTMLElement> | <function> | <React.Component>` – Portal container
+  * **disablePortal** : `<boolean>` – Disable the portal behavior
 * **toolbarProps** : `<object>` – Toolbar properties
   * **ref** : `<object>` – React reference of the toolbar node
   * **height** : `<number>` – Toolbar height value
