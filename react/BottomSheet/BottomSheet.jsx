@@ -30,12 +30,25 @@ import {
 } from './helpers'
 import { ANIMATION_DURATION } from './constants'
 
-const createStyles = ({ squared, hasToolbarProps }) => ({
+const createContainerWrapperStyles = () => ({
   container: {
     position: 'fixed',
     zIndex: 'var(--zIndex-modal)',
     inset: 0
-  },
+  }
+})
+
+const ContainerWrapper = ({ showBackdrop, children }) => {
+  const styles = createContainerWrapperStyles()
+
+  if (showBackdrop) {
+    return <div style={styles.container}>{children}</div>
+  }
+
+  return children
+}
+
+const createStyles = ({ squared, hasToolbarProps }) => ({
   root: {
     borderTopLeftRadius: '1rem',
     borderTopRightRadius: '1rem',
@@ -208,7 +221,7 @@ const BottomSheet = memo(
     ])
 
     return (
-      <div style={styles.container}>
+      <ContainerWrapper showBackdrop={showBackdrop}>
         {getFlagshipMetadata().immersive && (
           <span style={styles.flagshipImmersive} />
         )}
@@ -269,7 +282,7 @@ const BottomSheet = memo(
             <div style={styles.bounceSafer} />
           </Fade>
         )}
-      </div>
+      </ContainerWrapper>
     )
   }
 )
