@@ -7,7 +7,6 @@ import BottomSheet, { BottomSheetHeader } from '../../BottomSheet'
 
 import { isValidForPanel } from '../helpers'
 import BottomSheetContent from './BottomSheetContent'
-import useReferencedContactName from '../hooks/useReferencedContactName'
 
 const useStyles = makeStyles(theme => ({
   footer: {
@@ -30,8 +29,6 @@ const FooterContent = ({ file, toolbarRef, children }) => {
 
   const toolbarProps = useMemo(() => ({ ref: toolbarRef }), [toolbarRef])
 
-  const { contactName, isLoadingContacts } = useReferencedContactName(file)
-
   const FooterActionButtons =
     Children.toArray(children).find(child => {
       return (
@@ -46,8 +43,7 @@ const FooterContent = ({ file, toolbarRef, children }) => {
       })
     : null
 
-  // We have to wait for the Contact request to finish before rendering `BottomSheet`, because it doesn't handle async well.
-  if (isValidForPanel({ file }) && !isLoadingContacts) {
+  if (isValidForPanel({ file })) {
     return (
       <BottomSheet toolbarProps={toolbarProps}>
         <BottomSheetHeader
@@ -55,7 +51,7 @@ const FooterContent = ({ file, toolbarRef, children }) => {
         >
           {FooterActionButtonsWithFile}
         </BottomSheetHeader>
-        <BottomSheetContent file={file} contactsFullname={contactName} />
+        <BottomSheetContent file={file} />
       </BottomSheet>
     )
   }
