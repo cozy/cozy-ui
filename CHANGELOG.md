@@ -1,3 +1,15 @@
+# [74.0.0](https://github.com/cozy/cozy-ui/compare/v73.3.0...v74.0.0) (2022-09-01)
+
+
+### Features
+
+* Wrap BottomSheet in Portal ([00156fe](https://github.com/cozy/cozy-ui/commit/00156fe))
+
+
+### BREAKING CHANGES
+
+* BottomSheet now use Portal by default to work as a modal, and so is attached to the body. If for some reasons you need to use the BottomSheet inside a specific place in the DOM, you can use `disablePortal` prop.
+
 # [73.3.0](https://github.com/cozy/cozy-ui/compare/v73.2.3...v73.3.0) (2022-09-01)
 
 
