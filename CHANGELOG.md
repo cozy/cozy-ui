@@ -1,3 +1,10 @@
+# [73.3.0](https://github.com/cozy/cozy-ui/compare/v73.2.3...v73.3.0) (2022-09-01)
+
+
+### Features
+
+* Adding CozyCircle and LockScreen icons ([5e8886b](https://github.com/cozy/cozy-ui/commit/5e8886b))
+
 ## [73.2.3](https://github.com/cozy/cozy-ui/compare/v73.2.2...v73.2.3) (2022-08-31)
 
 
