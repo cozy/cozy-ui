@@ -51,11 +51,14 @@ const initialVariants = [{
 }]
 const initialState = {
   isBottomSheetDisplayed: isTesting(),
+  isSecondBottomSheetDisplayed: false,
   mediumHeight: isTesting() ? 450 : undefined,
   mediumHeightRatio: undefined
 }
 const showBottomSheet = () => setState({ isBottomSheetDisplayed: true })
 const hideBottomSheet = () => setState({ isBottomSheetDisplayed: false })
+const showSecondBottomSheet = () => setState({ isSecondBottomSheetDisplayed: true })
+const hideSecondBottomSheet = () => setState({ isSecondBottomSheetDisplayed: false })
 
 const handleChangeMediumHeight = el => {
   setState({ mediumHeight: Number(el.target.value) })
@@ -112,8 +115,22 @@ const settings = state.mediumHeight === undefined && state.mediumHeightRatio ===
         >
           {variant.withHeader && (
             <BottomSheetHeader className="u-ph-1 u-pb-1">
-              <Button className="u-mr-half" variant="secondary" label="Button 1" fullWidth />
+              <Button
+                className="u-mr-half"
+                variant="secondary"
+                label="Open BottomSheet"
+                fullWidth
+                onClick={showSecondBottomSheet}
+              />
               <Button variant="secondary" label="Button 2" fullWidth />
+
+              {state.isSecondBottomSheetDisplayed && (
+                <BottomSheet backdrop onClose={hideSecondBottomSheet}>
+                  <BottomSheetItem>
+                    {content.ada.short}
+                  </BottomSheetItem>
+                </BottomSheet>
+              )}
             </BottomSheetHeader>
           )}
           {!variant.withListContent && (
