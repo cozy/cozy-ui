@@ -175,10 +175,10 @@ const BottomSheet = memo(
       ANIMATION_DURATION,
       isClosable && isBottomPosition
     )
-    const innerContentHeight = innerContentRef?.current?.offsetHeight ?? 0
 
     useEffect(() => {
       const headerContent = headerContentRef.current
+      const innerContentHeight = innerContentRef.current.offsetHeight
       const actionButtonsHeight = headerContent
         ? parseFloat(getComputedStyle(headerContent).getPropertyValue('height'))
         : 0
@@ -212,13 +212,14 @@ const BottomSheet = memo(
       // Used so that the BottomSheet can be opened to the top without stopping at the content height
       setBottomSpacerHeight(bottomSpacerHeight)
     }, [
-      innerContentHeight,
+      innerContentRef,
       toolbarProps,
       mediumHeightRatio,
       mediumHeight,
       showBackdrop,
       backdrop,
-      isClosable
+      isClosable,
+      children // to recompute data if content changes
     ])
 
     return (
