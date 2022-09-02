@@ -1,3 +1,18 @@
+# [74.2.0](https://github.com/cozy/cozy-ui/compare/v74.1.0...v74.2.0) (2022-09-02)
+
+
+### Bug Fixes
+
+* **BottomSheet:** Adjust height when content changes ([1c0ad64](https://github.com/cozy/cozy-ui/commit/1c0ad64))
+* **BottomSheet:** Force modal zindex value for BottomSheet ([a22405d](https://github.com/cozy/cozy-ui/commit/a22405d))
+* **BottomSheet:** Remove container if no backdrop ([3830e52](https://github.com/cozy/cozy-ui/commit/3830e52))
+* **BottomSheet:** Remove fragment prop if no portal ([cc49949](https://github.com/cozy/cozy-ui/commit/cc49949))
+
+
+### Features
+
+* **BottomSheet:** Upgrade mui-bottom-sheet to 1.0.9 ([59484ae](https://github.com/cozy/cozy-ui/commit/59484ae))
+
 # [74.1.0](https://github.com/cozy/cozy-ui/compare/v74.0.0...v74.1.0) (2022-09-02)
 
 
