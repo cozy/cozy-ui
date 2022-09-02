@@ -2,6 +2,26 @@ import has from 'lodash/has'
 import { models } from 'cozy-client'
 const { isEncrypted } = models.file
 
+export const knownDateMetadataNames = [
+  'AObtentionDate',
+  'BObtentionDate',
+  'CObtentionDate',
+  'DObtentionDate',
+  'expirationDate',
+  'referencedDate',
+  'issueDate',
+  'shootingDate',
+  'date',
+  'datetime'
+]
+export const knowNumberMetadataNames = [
+  'number',
+  'cardNumber',
+  'vinNumber',
+  'ibanNumber'
+]
+export const knowOtherMetadataNames = ['owner', 'page', 'qualification']
+
 /**
  * @typedef {object} Reference
  * @property {string} id - id of the document
