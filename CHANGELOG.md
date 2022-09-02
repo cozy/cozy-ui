@@ -1,3 +1,10 @@
+# [74.3.0](https://github.com/cozy/cozy-ui/compare/v74.2.0...v74.3.0) (2022-09-02)
+
+
+### Features
+
+* Add copy icon ([f6c9275](https://github.com/cozy/cozy-ui/commit/f6c9275))
+
 # [74.2.0](https://github.com/cozy/cozy-ui/compare/v74.1.0...v74.2.0) (2022-09-02)
 
 
