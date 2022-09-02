@@ -1,3 +1,10 @@
+# [74.1.0](https://github.com/cozy/cozy-ui/compare/v74.0.0...v74.1.0) (2022-09-02)
+
+
+### Features
+
+* Add help-outlined and refresh icons ([b33458c](https://github.com/cozy/cozy-ui/commit/b33458c))
+
 # [74.0.0](https://github.com/cozy/cozy-ui/compare/v73.3.0...v74.0.0) (2022-09-01)
 
 
