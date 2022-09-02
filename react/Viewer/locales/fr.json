@@ -59,7 +59,11 @@
           "front": "Face avant",
           "back": "Face arrière"
         },
-        "qualification": "Qualification"
+        "qualification": "Qualification",
+        "actions": {
+          "copy": "Copier",
+          "copyClipboard": "Copier dans le presse-papier"
+        }
       },
       "title": "Informations utiles"
     },
