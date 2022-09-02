@@ -56,6 +56,7 @@ const createStyles = ({ squared, hasToolbarProps }) => ({
     boxShadow:
       '0 -0.5px 0px 0 rgba(0, 0, 0, 0.10), 0 -2px 2px 0 rgba(0, 0, 0, 0.02), 0 -4px 4px 0 rgba(0, 0, 0, 0.02), 0 -8px 8px 0 rgba(0, 0, 0, 0.02), 0 -16px 16px 0 rgba(0, 0, 0, 0.02)',
     backgroundColor: 'var(--paperBackgroundColor)',
+    zIndex: 'var(--zIndex-modal)',
     ...(squared && {
       borderTopLeftRadius: 0,
       borderTopRightRadius: 0,
