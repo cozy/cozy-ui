@@ -10,6 +10,8 @@ import ViewerWrapper from './ViewerWrapper'
 import Viewer from './Viewer'
 import ViewerInformationsWrapper from './ViewerInformationsWrapper'
 import EncryptedProvider from './EncryptedProvider'
+import { ViewerSnackbarProvider } from './snackbar/ViewerSnackbarProvider'
+import ViewerSnackbar from './snackbar/ViewerSnackbar'
 
 const ViewerContainer = props => {
   const { className, disableFooter, disablePanel, children, ...rest } = props
@@ -24,26 +26,29 @@ const ViewerContainer = props => {
     isValidForPanel({ file: currentFile }) && isDesktop && !disablePanel
 
   return (
-    <ViewerWrapper className={className}>
-      <EncryptedProvider url={currentURL}>
-        <Viewer
-          {...rest}
-          currentFile={currentFile}
-          hasPrevious={hasPrevious}
-          hasNext={hasNext}
+    <ViewerSnackbarProvider>
+      <ViewerWrapper className={className}>
+        <EncryptedProvider url={currentURL}>
+          <Viewer
+            {...rest}
+            currentFile={currentFile}
+            hasPrevious={hasPrevious}
+            hasNext={hasNext}
+            validForPanel={validForPanel}
+            toolbarRef={toolbarRef}
+          />
+        </EncryptedProvider>
+        <ViewerInformationsWrapper
+          disableFooter={disableFooter}
           validForPanel={validForPanel}
+          currentFile={currentFile}
           toolbarRef={toolbarRef}
-        />
-      </EncryptedProvider>
-      <ViewerInformationsWrapper
-        disableFooter={disableFooter}
-        validForPanel={validForPanel}
-        currentFile={currentFile}
-        toolbarRef={toolbarRef}
-      >
-        {children}
-      </ViewerInformationsWrapper>
-    </ViewerWrapper>
+        >
+          {children}
+        </ViewerInformationsWrapper>
+      </ViewerWrapper>
+      <ViewerSnackbar />
+    </ViewerSnackbarProvider>
   )
 }
 
