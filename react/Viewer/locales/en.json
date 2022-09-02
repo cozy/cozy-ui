@@ -59,7 +59,11 @@
           "front": "Front side",
           "back": "Back side"
         },
-        "qualification": "Qualification"
+        "qualification": "Qualification",
+        "actions": {
+          "copy": "Copy",
+          "copyClipboard": "Copy to clipboard"
+        }
       },
       "title": "Useful information"
     },
