@@ -7,6 +7,7 @@ import List from '../../MuiCozyTheme/List'
 import ListItem from '../../MuiCozyTheme/ListItem'
 import QualificationListItemText from './QualificationListItemText'
 import { withViewerLocales } from '../withViewerLocales'
+import MidEllipsis from '../../MidEllipsis'
 
 const {
   document: {
@@ -53,9 +54,13 @@ const Qualification = ({ file = {}, contactsFullname, t, f, lang }) => {
         <QualificationListItemText
           primary={t('Viewer.panel.qualification.label.title')}
           secondary={
-            pageLabel
-              ? t(`Viewer.panel.qualification.label.${pageLabel}`)
-              : filename
+            <MidEllipsis
+              text={
+                pageLabel
+                  ? t(`Viewer.panel.qualification.label.${pageLabel}`)
+                  : filename
+              }
+            />
           }
         />
       </ListItem>
