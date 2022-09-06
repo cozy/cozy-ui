@@ -1,6 +1,7 @@
 import React, { useMemo, Children, cloneElement, isValidElement } from 'react'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/core/styles'
+import cx from 'classnames'
 
 import BottomSheet, { BottomSheetHeader } from '../../BottomSheet'
 
@@ -17,6 +18,9 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: '1rem',
     paddingRight: '1rem',
     borderTop: `1px solid ${theme.palette.divider}`,
+    columnGap: '0.5rem'
+  },
+  bottomSheetHeader: {
     columnGap: '0.5rem'
   }
 }))
@@ -46,7 +50,9 @@ const FooterContent = ({ file, toolbarRef, children }) => {
   if (isValidForPanel({ file }) && !isLoadingContacts) {
     return (
       <BottomSheet toolbarProps={toolbarProps}>
-        <BottomSheetHeader className="u-ph-1 u-pb-1">
+        <BottomSheetHeader
+          className={cx('u-ph-1 u-pb-1', styles.bottomSheetHeader)}
+        >
           {FooterActionButtonsWithFile}
         </BottomSheetHeader>
         <BottomSheetContent file={file} contactsFullname={contactName} />
