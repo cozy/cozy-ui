@@ -38,10 +38,10 @@
         "date": {
           "title": {
             "datetime": "Added on",
-            "AObtentionDate": "Permis A, delivered on",
-            "BObtentionDate": "Permis B, delivered on",
-            "CObtentionDate": "Permis C, delivered on",
-            "DObtentionDate": "Permis D, delivered on",
+            "AObtentionDate": "License A, delivered on",
+            "BObtentionDate": "License B, delivered on",
+            "CObtentionDate": "License C, delivered on",
+            "DObtentionDate": "License D, delivered on",
             "issueDate": "Delivered on",
             "expirationDate": "Expiration date",
             "referencedDate": "Referenced date",
@@ -51,7 +51,7 @@
         },
         "number": {
           "title": {
-            "number": "permis number",
+            "number": "License number",
             "cardNumber": "National ID card number",
             "vinNumber": "Vehicle registration number (VIN)",
             "ibanNumber": "IBAN number"
