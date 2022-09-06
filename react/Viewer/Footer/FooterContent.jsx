@@ -45,7 +45,10 @@ const FooterContent = ({ file, toolbarRef, children }) => {
 
   if (isValidForPanel({ file })) {
     return (
-      <BottomSheet toolbarProps={toolbarProps}>
+      <BottomSheet
+        toolbarProps={toolbarProps}
+        portalProps={{ disablePortal: true }}
+      >
         <BottomSheetHeader
           className={cx('u-ph-1 u-pb-1', styles.bottomSheetHeader)}
         >
