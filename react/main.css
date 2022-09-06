@@ -28596,6 +28596,7 @@ html {
 .viewer-filename--36bWW {
   max-width: 90%;
   text-overflow: ellipsis;
+  overflow: hidden;
 }
 .viewer-pdfviewer-pdf--1jXZ1 {
   overflow: auto;
