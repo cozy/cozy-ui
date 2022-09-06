@@ -1,3 +1,16 @@
+# [74.4.0](https://github.com/cozy/cozy-ui/compare/v74.3.0...v74.4.0) (2022-09-06)
+
+
+### Bug Fixes
+
+* Add a mid ellipsis to the filename in the qualification list ([4f30229](https://github.com/cozy/cozy-ui/commit/4f30229))
+* Add a missing `overflow: hidden;` property to the viewer filename ([6d9b5c2](https://github.com/cozy/cozy-ui/commit/6d9b5c2))
+
+
+### Features
+
+* Display Viewer's Download button on iOS Flagship app ([b21726c](https://github.com/cozy/cozy-ui/commit/b21726c)), closes [cozy/cozy-ui#2215](https://github.com/cozy/cozy-ui/issues/2215)
+
 # [74.3.0](https://github.com/cozy/cozy-ui/compare/v74.2.0...v74.3.0) (2022-09-02)
 
 
