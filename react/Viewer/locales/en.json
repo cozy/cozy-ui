@@ -78,6 +78,12 @@
       "text": "Here is a link to my document %{name}: ",
       "error": "Problem with link recovery: %{error}",
       "success": "Your file has been shared with success"
+    },
+    "snackbar": {
+      "copiedToClipboard": {
+        "success": "Copied to clipboard",
+        "error": "Cannot copy to clipboard"
+      }
     }
   }
 }

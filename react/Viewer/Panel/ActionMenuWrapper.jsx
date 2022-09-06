@@ -12,13 +12,23 @@ import ActionMenu, { ActionMenuItem } from '../../ActionMenu'
 import Typography from '../../Typography'
 import useBreakpoints from '../../hooks/useBreakpoints'
 import { useI18n } from '../../I18n'
+import useViewerSnackbar from '../snackbar/ViewerSnackbarProvider'
 
 const ActionMenuWrapper = forwardRef(({ onClose, value }, ref) => {
   const { isMobile } = useBreakpoints()
   const { t } = useI18n()
+  const { showViewerSnackbar } = useViewerSnackbar()
 
   const handleCopy = () => {
-    navigator?.clipboard?.writeText(value)
+    if (navigator?.clipboard) {
+      navigator.clipboard.writeText(value)
+      showViewerSnackbar(
+        'secondary',
+        t(`Viewer.snackbar.copiedToClipboard.success`)
+      )
+    } else {
+      showViewerSnackbar('error', t(`Viewer.snackbar.copiedToClipboard.error`))
+    }
     onClose()
   }
 

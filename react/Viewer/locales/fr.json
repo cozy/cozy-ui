@@ -78,6 +78,12 @@
       "text": "Voici un lien vers mon document %{name} : ",
       "error": "Problème avec la récupération du lien : %{error}",
       "success": "Votre fichier a été partagé avec succès"
+    },
+    "snackbar": {
+      "copiedToClipboard": {
+        "success": "Copié dans le presse-papier",
+        "error": "Impossible de copier dans le presse-papier"
+      }
     }
   }
 }
