@@ -1,93 +1,107 @@
-import React from 'react'
+import React, { useRef, useState, createRef, useMemo, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-import { models } from 'cozy-client'
-
 import List from '../../MuiCozyTheme/List'
-import ListItem from '../../MuiCozyTheme/ListItem'
-import QualificationListItemText from './QualificationListItemText'
 import { withViewerLocales } from '../withViewerLocales'
-import MidEllipsis from '../../MidEllipsis'
+import {
+  formatMetadataQualification,
+  knownDateMetadataNames,
+  knowNumberMetadataNames,
+  knowOtherMetadataNames
+} from '../helpers'
+import QualificationListItemContact from './QualificationListItemContact'
+import ActionMenuWrapper from './ActionMenuWrapper'
+import QualificationListItemDate from './QualificationListItemDate'
+import QualificationListItemNumber from './QualificationListItemNumber'
+import QualificationListItemOther from './QualificationListItemOther'
 
-const {
-  document: {
-    locales: { getBoundT }
+const Qualification = ({ file = {} }) => {
+  const { metadata = {} } = file
+  const actionBtnRef = useRef([])
+  const [optionFile, setOptionFile] = useState({
+    isOpen: false,
+    id: '',
+    value: ''
+  })
+
+  const hideActionsMenu = () => {
+    setOptionFile({ isOpen: false, id: '', value: '' })
   }
-} = models
 
-const Qualification = ({ file = {}, t, f, lang }) => {
-  const scannerT = getBoundT(lang)
+  const toggleActionsMenu = (id, value) => {
+    setOptionFile(prev => {
+      if (prev.isOpen) return { isOpen: false, id: '', value: '' }
+      return { isOpen: true, id, value }
+    })
+  }
 
-  const { contactName, isLoadingContacts } = useReferencedContactName(file)
+  const metadataComputed = useMemo(() => {
+    return formatMetadataQualification(metadata)
+  }, [metadata])
 
-  const { name: filename, metadata = {} } = file
-  const {
-    qualification = {},
-    page: pageLabel,
-    datetime,
-    datetimeLabel
-  } = metadata
+  useEffect(() => {
+    actionBtnRef.current = metadataComputed.map(
+      (_, idx) => actionBtnRef.current[idx] ?? createRef()
+    )
+  }, [metadataComputed])
 
   return (
     <List className={'u-pv-1'}>
-      {datetime && (
-        <ListItem className={'u-ph-2'}>
-          <QualificationListItemText
-            primary={t(
-              `Viewer.panel.qualification.date.title.${
-                datetimeLabel === 'datetime' || datetimeLabel === undefined
-                  ? 'addedOn'
-                  : datetimeLabel
-              }`
-            )}
-            secondary={f(datetime, 'DD/MM/YYYY')}
-          />
-        </ListItem>
-      )}
+      {metadataComputed.map((meta, idx) => {
+        const { name } = meta
 
-      {isLoadingContacts ? (
-        <ListItem className={'u-ph-2'}>
-          <Spinner color="var(--secondaryTextColor)" />
-        </ListItem>
-      ) : (
-        contactName && (
-          <ListItem className={'u-ph-2'}>
-            <QualificationListItemText
-              primary={t('Viewer.panel.qualification.owner')}
-              secondary={contactName}
+        if (knownDateMetadataNames.includes(name)) {
+          return (
+            <QualificationListItemDate
+              key={idx}
+              ref={actionBtnRef.current[idx]}
+              metadataComputed={meta}
+              toggleActionsMenu={val => toggleActionsMenu(idx, val)}
             />
-          </ListItem>
-        )
-      )}
-      <ListItem className={'u-ph-2'}>
-        <QualificationListItemText
-          primary={t('Viewer.panel.qualification.label.title')}
-          secondary={
-            <MidEllipsis
-              text={
-                pageLabel
-                  ? t(`Viewer.panel.qualification.label.${pageLabel}`)
-                  : filename
-              }
+          )
+        }
+
+        if (knowNumberMetadataNames.includes(name)) {
+          return (
+            <QualificationListItemNumber
+              key={idx}
+              ref={actionBtnRef.current[idx]}
+              metadataComputed={meta}
+              toggleActionsMenu={val => toggleActionsMenu(idx, val)}
             />
+          )
+        }
+
+        if (knowOtherMetadataNames.includes(name)) {
+          if (name === 'owner') {
+            return <QualificationListItemContact key={idx} file={file} />
           }
+
+          return (
+            <QualificationListItemOther
+              key={idx}
+              ref={actionBtnRef.current[idx]}
+              filename={file.name}
+              metadataComputed={meta}
+              toggleActionsMenu={val => toggleActionsMenu(idx, val)}
+            />
+          )
+        }
+      })}
+
+      {optionFile.isOpen && (
+        <ActionMenuWrapper
+          onClose={hideActionsMenu}
+          value={optionFile.value}
+          ref={actionBtnRef.current[optionFile.id]}
         />
-      </ListItem>
-      <ListItem className={'u-ph-2'}>
-        <QualificationListItemText
-          primary={t('Viewer.panel.qualification.qualification')}
-          secondary={scannerT(`Scan.items.${qualification.label}`)}
-        />
-      </ListItem>
+      )}
     </List>
   )
 }
 
 Qualification.propTypes = {
-  file: PropTypes.object.isRequired,
-  t: PropTypes.func.isRequired,
-  f: PropTypes.func.isRequired,
-  lang: PropTypes.string.isRequired
+  file: PropTypes.object
 }
 
-export default withViewerLocales(Qualification)
+export default withViewerLocales(React.memo(Qualification))
