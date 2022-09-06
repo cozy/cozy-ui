@@ -51,7 +51,7 @@
         },
         "number": {
           "title": {
-            "number": "numéro du permis",
+            "number": "Numéro du permis",
             "cardNumber": "Numéro de la carte d'identité",
             "vinNumber": "Numéro de la carte grise (VIN)",
             "ibanNumber": "Numéro d'IBAN"
