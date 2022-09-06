@@ -54,19 +54,18 @@ const files = [
   {
     _id: 'pdf',
     class: 'pdf',
-    name: 'Demo.pdf',
+    name: 'My vehicle registration.pdf',
     mime: 'application/pdf',
     metadata: {
       carbonCopy: true,
-      datetime: "2021-01-01T12:00:00.000Z",
-      datetimeLabel: "referencedDate",
-      referencedDate: "2021-01-01T12:00:00.000Z",
+      datetime: "2022-02-09T09:05:38.000Z",
+      datetimeLabel: "datetime",
       qualification: {
-        label: "isp_invoice",
-        purpose: "invoice",
-        sourceCategory: "telecom",
-        sourceSubCategory: "internet",
-        subjects: ["subscription"]
+        label: "vehicle_registration",
+        purpose: "attestation",
+        sourceCategory: "gov",
+        sourceSubCategory: "transport",
+        subjects: ["vehicule", "indentity", "right"]
       }
     }
   },
