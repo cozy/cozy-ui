@@ -37,7 +37,7 @@
       "qualification": {
         "date": {
           "title": {
-            "addedOn": "Added on",
+            "datetime": "Added on",
             "AObtentionDate": "Permis A, delivered on",
             "BObtentionDate": "Permis B, delivered on",
             "CObtentionDate": "Permis C, delivered on",
@@ -46,7 +46,11 @@
             "expirationDate": "Expiration date",
             "referencedDate": "Referenced date",
             "shootingDate": "Shooting date",
-            "date": "Document date",
+            "date": "Document date"
+          }
+        },
+        "number": {
+          "title": {
             "number": "permis number",
             "cardNumber": "National ID card number",
             "vinNumber": "Vehicle registration number (VIN)",
@@ -54,11 +58,9 @@
           }
         },
         "owner": "Owner",
-        "label": {
-          "title": "Label",
-          "front": "Front side",
-          "back": "Back side"
-        },
+        "page": "Label",
+        "front": "Front side",
+        "back": "Back side",
         "qualification": "Qualification",
         "actions": {
           "copy": "Copy",
