@@ -16,9 +16,9 @@ script:
   - yarn screenshots --mode react --viewport desktop --screenshot-dir ./screenshots/reactDesktop
   - yarn screenshots --mode react --viewport 300x600 --screenshot-dir ./screenshots/reactMobile
   - yarn screenshots --mode kss --screenshot-dir ./screenshots/kss
-  - yarn argos:upload screenshots/reactDesktop/ --token $ARGOS_TOKEN --branch $TRAVIS_BRANCH --commit $TRAVIS_COMMIT --batchCount 3 --external-build-id $TRAVIS_COMMIT
-  - yarn argos:upload screenshots/reactMobile/ --token $ARGOS_TOKEN --branch $TRAVIS_BRANCH --commit $TRAVIS_COMMIT --batchCount 3 --external-build-id $TRAVIS_COMMIT
-  - yarn argos:upload screenshots/kss/ --token $ARGOS_TOKEN --branch $TRAVIS_BRANCH --commit $TRAVIS_COMMIT --batchCount 3 --external-build-id $TRAVIS_COMMIT
+  - yarn argos:upload screenshots/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_COMMIT
+  - yarn argos:upload screenshots/reactMobile/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_COMMIT
+  - yarn argos:upload screenshots/kss/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_COMMIT
   - yarn bundlemon
 deploy:
   - provider: script
