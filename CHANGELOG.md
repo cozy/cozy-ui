@@ -1,3 +1,10 @@
+## [74.4.2](https://github.com/cozy/cozy-ui/compare/v74.4.1...v74.4.2) (2022-09-08)
+
+
+### Bug Fixes
+
+* isLoadingContacts on useReferencedContactName hook  ([dab3e09](https://github.com/cozy/cozy-ui/commit/dab3e09))
+
 ## [74.4.1](https://github.com/cozy/cozy-ui/compare/v74.4.0...v74.4.1) (2022-09-08)
 
 
