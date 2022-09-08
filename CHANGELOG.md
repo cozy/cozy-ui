@@ -1,3 +1,10 @@
+## [74.4.1](https://github.com/cozy/cozy-ui/compare/v74.4.0...v74.4.1) (2022-09-08)
+
+
+### Bug Fixes
+
+* Restore BottomSheet items' gap in `FooterContent` container ([7ba1caf](https://github.com/cozy/cozy-ui/commit/7ba1caf))
+
 # [74.4.0](https://github.com/cozy/cozy-ui/compare/v74.3.0...v74.4.0) (2022-09-06)
 
 
