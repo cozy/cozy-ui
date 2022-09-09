@@ -7,6 +7,9 @@ import IconButton from 'cozy-ui/transpiled/react/IconButton'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import InfoIcon from 'cozy-ui/transpiled/react/Icons/Info'
+import {
+  BreakpointsProvider
+} from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 
 initialState = { open: false }
 
@@ -14,7 +17,7 @@ const handleToggle = () => {setState(state => ({ open: !state.open }))}
 
 ;
 
-<>
+<BreakpointsProvider>
   <Button
     variant="ghost"
     size="small"
@@ -34,7 +37,7 @@ const handleToggle = () => {setState(state => ({ open: !state.open }))}
     }
     onClose={handleToggle}
   />
-</>
+</BreakpointsProvider>
 ```
 
 ### With `Alert` inside the `Snackbar`
@@ -44,6 +47,9 @@ import Snackbar from 'cozy-ui/transpiled/react/Snackbar'
 import Alert from 'cozy-ui/transpiled/react/Alert'
 import Button from 'cozy-ui/transpiled/react/Buttons'
 import Variants from 'cozy-ui/docs/components/Variants'
+import {
+  BreakpointsProvider
+} from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 
 initialState = { open: isTesting() }
 
@@ -54,7 +60,7 @@ const initialVariants = [{ primary: true, secondary: true, success: false, error
 
 ;
 
-<>
+<BreakpointsProvider>
   <Variants initialVariants={initialVariants} radio>
     {variant => (
       <>
@@ -77,5 +83,5 @@ const initialVariants = [{ primary: true, secondary: true, success: false, error
     label="Open snackbar"
     onClick={handleToggle}
   />
-</>
+</BreakpointsProvider>
 ```
