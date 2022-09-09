@@ -1,3 +1,27 @@
+# [74.5.0](https://github.com/cozy/cozy-ui/compare/v74.4.2...v74.5.0) (2022-09-09)
+
+
+### Bug Fixes
+
+* Change defaultProps to Snackbar component ([c749957](https://github.com/cozy/cozy-ui/commit/c749957))
+* Disabling the Portal on the BottomSheet component in the Viewer ([35ede40](https://github.com/cozy/cozy-ui/commit/35ede40))
+* Translations of the Qualification Viewer ([489f27a](https://github.com/cozy/cozy-ui/commit/489f27a))
+
+
+### Features
+
+* Add ActionMenuWrapper component ([653e7d5](https://github.com/cozy/cozy-ui/commit/653e7d5))
+* Add arrays of known metadata names ([ab84458](https://github.com/cozy/cozy-ui/commit/ab84458))
+* Add helper for formatting all known metadata ([2fa5906](https://github.com/cozy/cozy-ui/commit/2fa5906))
+* Add QualificationListItem's components ([93f2dd1](https://github.com/cozy/cozy-ui/commit/93f2dd1))
+* Add QualificationListItem's components to Qualification ([c987346](https://github.com/cozy/cozy-ui/commit/c987346))
+* Add ViewerSnackbar component to display alerts in Viewer ([1aef68c](https://github.com/cozy/cozy-ui/commit/1aef68c))
+* Add ViewerSnackbarContext to manage internal Snackbar component ([ce4d2f1](https://github.com/cozy/cozy-ui/commit/ce4d2f1))
+* Create an alert when the attribute is copied ([ccbd467](https://github.com/cozy/cozy-ui/commit/ccbd467))
+* Implement ViewerSnackbar in ViewerContainer component ([3c5eeae](https://github.com/cozy/cozy-ui/commit/3c5eeae))
+* Move `useReferencedContactName` call to Qualification component ([39ccd6e](https://github.com/cozy/cozy-ui/commit/39ccd6e))
+* Update Viewer locales files ([f418f95](https://github.com/cozy/cozy-ui/commit/f418f95))
+
 ## [74.4.2](https://github.com/cozy/cozy-ui/compare/v74.4.1...v74.4.2) (2022-09-08)
 
 
