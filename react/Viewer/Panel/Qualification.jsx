@@ -19,19 +19,18 @@ const Qualification = ({ file = {} }) => {
   const { metadata = {} } = file
   const actionBtnRef = useRef([])
   const [optionFile, setOptionFile] = useState({
-    isOpen: false,
     id: '',
     value: ''
   })
 
   const hideActionsMenu = () => {
-    setOptionFile({ isOpen: false, id: '', value: '' })
+    setOptionFile({ id: '', value: '' })
   }
 
   const toggleActionsMenu = (id, value) => {
     setOptionFile(prev => {
-      if (prev.isOpen) return { isOpen: false, id: '', value: '' }
-      return { isOpen: true, id, value }
+      if (prev.value) return { id: '', value: '' }
+      return { id, value }
     })
   }
 
@@ -89,7 +88,7 @@ const Qualification = ({ file = {} }) => {
         }
       })}
 
-      {optionFile.isOpen && (
+      {optionFile.value && (
         <ActionMenuWrapper
           onClose={hideActionsMenu}
           value={optionFile.value}
