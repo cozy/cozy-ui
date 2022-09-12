@@ -1,3 +1,10 @@
+# [74.6.0](https://github.com/cozy/cozy-ui/compare/v74.5.0...v74.6.0) (2022-09-12)
+
+
+### Features
+
+* Add Swap icon ([cb3dc06](https://github.com/cozy/cozy-ui/commit/cb3dc06))
+
 # [74.5.0](https://github.com/cozy/cozy-ui/compare/v74.4.2...v74.5.0) (2022-09-09)
 
 
