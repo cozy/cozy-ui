@@ -490,17 +490,6 @@ const makeOverrides = theme => ({
     },
     secondaryAction: {
       paddingRight: '2rem'
-    },
-    button: {
-      '&$selected, &$selected:hover': {
-        backgroundColor: theme.palette.action.selected
-      },
-      '&:hover': {
-        backgroundColor: theme.palette.background.default
-      },
-      '&:focus': {
-        backgroundColor: theme.palette.background.default
-      }
     }
   },
   MuiListItemText: {
