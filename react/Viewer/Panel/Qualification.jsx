@@ -20,17 +20,18 @@ const Qualification = ({ file = {} }) => {
   const actionBtnRef = useRef([])
   const [optionFile, setOptionFile] = useState({
     id: '',
+    name: '',
     value: ''
   })
 
   const hideActionsMenu = () => {
-    setOptionFile({ id: '', value: '' })
+    setOptionFile({ id: '', name: '', value: '' })
   }
 
-  const toggleActionsMenu = (id, value) => {
+  const toggleActionsMenu = (id, name, value) => {
     setOptionFile(prev => {
-      if (prev.value) return { id: '', value: '' }
-      return { id, value }
+      if (prev.value) return { id: '', name: '', value: '' }
+      return { id, name, value }
     })
   }
 
@@ -55,7 +56,7 @@ const Qualification = ({ file = {} }) => {
               key={idx}
               ref={actionBtnRef.current[idx]}
               metadataComputed={meta}
-              toggleActionsMenu={val => toggleActionsMenu(idx, val)}
+              toggleActionsMenu={val => toggleActionsMenu(idx, name, val)}
             />
           )
         }
@@ -66,7 +67,7 @@ const Qualification = ({ file = {} }) => {
               key={idx}
               ref={actionBtnRef.current[idx]}
               metadataComputed={meta}
-              toggleActionsMenu={val => toggleActionsMenu(idx, val)}
+              toggleActionsMenu={val => toggleActionsMenu(idx, name, val)}
             />
           )
         }
@@ -82,7 +83,7 @@ const Qualification = ({ file = {} }) => {
               ref={actionBtnRef.current[idx]}
               filename={file.name}
               metadataComputed={meta}
-              toggleActionsMenu={val => toggleActionsMenu(idx, val)}
+              toggleActionsMenu={val => toggleActionsMenu(idx, name, val)}
             />
           )
         }
@@ -91,6 +92,8 @@ const Qualification = ({ file = {} }) => {
       {optionFile.value && (
         <ActionMenuWrapper
           onClose={hideActionsMenu}
+          fileId={file._id}
+          name={optionFile.name}
           value={optionFile.value}
           ref={actionBtnRef.current[optionFile.id]}
         />
