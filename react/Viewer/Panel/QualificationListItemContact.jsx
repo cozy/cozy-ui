@@ -16,14 +16,15 @@ const QualificationListItemContact = ({ file }) => {
   const { t } = useI18n()
   const actionBtnRef = useRef()
   const [optionFile, setOptionFile] = useState({
+    name: '',
     value: ''
   })
 
-  const hideActionsMenu = () => setOptionFile({ value: '' })
-  const toggleActionsMenu = value =>
+  const hideActionsMenu = () => setOptionFile({ name: '', value: '' })
+  const toggleActionsMenu = (name, value) =>
     setOptionFile(prev => {
-      if (prev.value) return { value: '' }
-      return { value }
+      if (prev.value) return { name: '', value: '' }
+      return { name, value }
     })
 
   const { contactName, isLoadingContacts } = useReferencedContactName(file)
@@ -50,7 +51,7 @@ const QualificationListItemContact = ({ file }) => {
         <ListItemSecondaryAction>
           <IconButton
             ref={actionBtnRef}
-            onClick={() => toggleActionsMenu(contactName)}
+            onClick={() => toggleActionsMenu('contact', contactName)}
           >
             <Icon icon={Dots} />
           </IconButton>
@@ -60,6 +61,8 @@ const QualificationListItemContact = ({ file }) => {
       {optionFile.value && (
         <ActionMenuWrapper
           onClose={hideActionsMenu}
+          fileId={file._id}
+          name={optionFile.name}
           value={optionFile.value}
           ref={actionBtnRef}
         />
