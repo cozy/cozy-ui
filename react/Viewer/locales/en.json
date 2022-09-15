@@ -64,7 +64,8 @@
         "qualification": "Qualification",
         "actions": {
           "copy": "Copy",
-          "copyClipboard": "Copy to clipboard"
+          "copyClipboard": "Copy to clipboard",
+          "edit": "Edit"
         }
       },
       "title": "Useful information"
