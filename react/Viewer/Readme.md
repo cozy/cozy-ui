@@ -58,14 +58,14 @@ const files = [
     mime: 'application/pdf',
     metadata: {
       carbonCopy: true,
-      datetime: "2022-02-09T09:05:38.000Z",
-      datetimeLabel: "datetime",
+      BObtentionDate: "2022-02-09T09:05:38.000Z",
+      datetimeLabel: "BObtentionDate",
       qualification: {
-        label: "vehicle_registration",
+        label: "driver_license",
         purpose: "attestation",
         sourceCategory: "gov",
         sourceSubCategory: "transport",
-        subjects: ["vehicule", "indentity", "right"]
+        subjects: ["permit", "driving"]
       }
     }
   },
@@ -143,6 +143,10 @@ const getURL = (file) => {
 const toggleViewer = () => setState({ viewerOpened: !state.viewerOpened });
 const handleToggleToolbarClose = () => setState({ showToolbarCloseButton: !state.showToolbarCloseButton });
 const onFileChange = (file, nextIndex) => setState({ currentIndex: nextIndex, currentURL: getURL(file) });
+const editPathByModelProps = {
+  information: `#!/Viewer?metadata=__NAME__`,
+  page: `#!/Viewer`
+};
 
 <DemoProvider>
   <Variants initialVariants={initialVariants}>{
@@ -169,6 +173,7 @@ const onFileChange = (file, nextIndex) => setState({ currentIndex: nextIndex, cu
                 onCloseRequest={toggleViewer}
                 onChangeRequest={onFileChange}
                 showNavigation={variant.navigation}
+                editPathByModelProps={editPathByModelProps}
                 onlyOfficeProps={{
                   isEnabled: variant.onlyOfficeEnabled,
                   opener: () => alert('This is a demo, no Only Office opener here')
