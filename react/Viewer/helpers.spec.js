@@ -5,6 +5,7 @@ import {
   isPlainText,
   formatMetadataQualification,
   getCurrentModel,
+  buildEditAttributePath,
   knownDateMetadataNames,
   knowNumberMetadataNames
 } from './helpers'
@@ -130,5 +131,29 @@ describe('helpers', () => {
         expect(getCurrentModel(input)).toBe(expected)
       }
     )
+  })
+  describe('buildEditAttributePath', () => {
+    it('should build correct path', () => {
+      const editPathByModelProps = {
+        information: `#/paper/edit/information/01?metadata=__NAME__&backgroundPath=$/path`,
+        page: `#/paper/edit/page/01?backgroundPath=/path`
+      }
+
+      const buildInformationPath = buildEditAttributePath(
+        editPathByModelProps,
+        'information',
+        'cardNumber'
+      )
+      const buildPagePath = buildEditAttributePath(
+        editPathByModelProps,
+        'page',
+        'cardNumber'
+      )
+
+      expect(buildInformationPath).toBe(
+        '#/paper/edit/information/01?metadata=cardNumber&backgroundPath=$/path'
+      )
+      expect(buildPagePath).toBe('#/paper/edit/page/01?backgroundPath=/path')
+    })
   })
 })

@@ -128,3 +128,18 @@ export const formatDate = ({ f, lang, date }) => {
   }
   return f(date, 'DD/MM/YYYY')
 }
+
+/**
+ * @param {{ information: string, page: string }} editPathByModelProps
+ * @param {string} currentModel
+ * @param {string} name
+ * @returns {string}
+ */
+export const buildEditAttributePath = (
+  editPathByModelProps,
+  currentModel,
+  name
+) => {
+  const currentPath = editPathByModelProps[currentModel]
+  return currentPath?.replace(/__NAME__/, name) ?? ''
+}
