@@ -19,35 +19,33 @@ const {
 } = models
 
 const QualificationListItemOther = forwardRef(
-  ({ metadataComputed, toggleActionsMenu, filename }, ref) => {
+  ({ metadataComputed, toggleActionsMenu }, ref) => {
     const { t, lang } = useI18n()
     const scannerT = getBoundT(lang)
     const { name, value } = metadataComputed
 
+    if (!value) return null
+
     const currentValueTranslated =
       name === 'qualification'
         ? scannerT(`Scan.items.${value}`)
-        : value
-        ? t(`Viewer.panel.qualification.${value}`)
-        : filename
+        : t(`Viewer.panel.qualification.${value}`)
 
     return (
-      currentValueTranslated && (
-        <ListItem className={'u-pl-2 u-pr-3'}>
-          <QualificationListItemText
-            primary={t(`Viewer.panel.qualification.${name}`)}
-            secondary={<MidEllipsis text={currentValueTranslated} />}
-          />
-          <ListItemSecondaryAction>
-            <IconButton
-              ref={ref}
-              onClick={() => toggleActionsMenu(currentValueTranslated)}
-            >
-              <Icon icon={Dots} />
-            </IconButton>
-          </ListItemSecondaryAction>
-        </ListItem>
-      )
+      <ListItem className={'u-pl-2 u-pr-3'}>
+        <QualificationListItemText
+          primary={t(`Viewer.panel.qualification.${name}`)}
+          secondary={<MidEllipsis text={currentValueTranslated} />}
+        />
+        <ListItemSecondaryAction>
+          <IconButton
+            ref={ref}
+            onClick={() => toggleActionsMenu(currentValueTranslated)}
+          >
+            <Icon icon={Dots} />
+          </IconButton>
+        </ListItemSecondaryAction>
+      </ListItem>
     )
   }
 )
