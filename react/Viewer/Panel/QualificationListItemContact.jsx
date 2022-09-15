@@ -61,9 +61,8 @@ const QualificationListItemContact = ({ file }) => {
       {optionFile.value && (
         <ActionMenuWrapper
           onClose={hideActionsMenu}
-          fileId={file._id}
-          name={optionFile.name}
-          value={optionFile.value}
+          file={file}
+          optionFile={optionFile}
           ref={actionBtnRef}
         />
       )}
