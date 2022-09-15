@@ -6,36 +6,38 @@ import { useAppLinkWithStoreFallback, useClient } from 'cozy-client'
 import useBreakpoints from '../../hooks/useBreakpoints'
 import { useI18n } from '../../I18n'
 import useViewerSnackbar from '../snackbar/ViewerSnackbarProvider'
-import { getCurrentModel } from '../helpers'
+import { buildEditAttributePath, getCurrentModel } from '../helpers'
+import useActionMenuContext from './ActionMenuProvider'
 import ActionMenuMobile from './ActionMenuMobile'
 import ActionMenuDesktop from './ActionMenuDesktop'
 
 const mespapiersAppSlug = 'mespapiers'
+
 const checkEditableAttribute = name => {
   const isNotEditableAttributes = ['datetime', 'qualification', 'contact']
   return !isNotEditableAttributes.includes(name)
 }
 
-const ActionMenuWrapper = forwardRef(({ onClose, file, optionFile }, ref) => {
+const ActionMenuWrapper = forwardRef(({ onClose, optionFile }, ref) => {
   const { name, value } = optionFile
+  const editPathByModelProps = useActionMenuContext()
   const { isMobile } = useBreakpoints()
   const { t } = useI18n()
   const { showViewerSnackbar } = useViewerSnackbar()
   const client = useClient()
 
   const isEditableAttribute = checkEditableAttribute(name)
-  const currentAppSlug = client.getInstanceOptions().app.slug
   const currentModel = getCurrentModel(name)
-
-  const currentURL = `/paper/${window.location.href.split('/paper/')[1]}`
-  const path = `#/paper/edit/${currentModel}/${file._id}?${
-    currentModel === 'information' ? `metadata=${name}&` : ''
-  }backgroundPath=${currentURL}`
+  const editPath = buildEditAttributePath(
+    editPathByModelProps,
+    currentModel,
+    optionFile.name
+  )
 
   const { fetchStatus, url } = useAppLinkWithStoreFallback(
     mespapiersAppSlug,
     client,
-    path
+    editPath
   )
   const isAppLinkLoaded = fetchStatus === 'loaded'
 
@@ -59,14 +61,11 @@ const ActionMenuWrapper = forwardRef(({ onClose, file, optionFile }, ref) => {
     }
   }
 
-  // Currently, the editing option should not be present on the "drive" or "photos" applications.
-  const isInDriveOrPhotosApp = ['drive', 'photos'].includes(currentAppSlug)
-
   if (isMobile) {
     return (
       <ActionMenuMobile
         onClose={onClose}
-        isEditable={!isInDriveOrPhotosApp && isEditableAttribute}
+        isEditable={editPath && isEditableAttribute}
         actions={{ handleCopy, handleEdit }}
         appLink={url}
         appSlug={mespapiersAppSlug}
@@ -78,7 +77,7 @@ const ActionMenuWrapper = forwardRef(({ onClose, file, optionFile }, ref) => {
     <ActionMenuDesktop
       ref={ref}
       onClose={onClose}
-      isEditable={!isInDriveOrPhotosApp && isEditableAttribute}
+      isEditable={editPath && isEditableAttribute}
       actions={{ handleCopy, handleEdit }}
       appLink={url}
       appSlug={mespapiersAppSlug}
@@ -89,9 +88,10 @@ ActionMenuWrapper.displayName = 'ActionMenuWrapper'
 
 ActionMenuWrapper.propTypes = {
   onClose: PropTypes.func,
-  fileId: PropTypes.string,
-  name: PropTypes.string,
-  value: PropTypes.string
+  optionFile: PropTypes.shape({
+    name: PropTypes.string,
+    value: PropTypes.string
+  })
 }
 
 export default ActionMenuWrapper
