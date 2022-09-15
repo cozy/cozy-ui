@@ -64,7 +64,8 @@
         "qualification": "Qualification",
         "actions": {
           "copy": "Copier",
-          "copyClipboard": "Copier dans le presse-papier"
+          "copyClipboard": "Copier dans le presse-papier",
+          "edit": "Modifier"
         }
       },
       "title": "Informations utiles"
