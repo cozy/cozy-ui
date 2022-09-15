@@ -1,3 +1,10 @@
+## [74.6.1](https://github.com/cozy/cozy-ui/compare/v74.6.0...v74.6.1) (2022-09-15)
+
+
+### Bug Fixes
+
+* **ListItem:** Focus effect remains after a click on button ListItem ([c45c506](https://github.com/cozy/cozy-ui/commit/c45c506))
+
 # [74.6.0](https://github.com/cozy/cozy-ui/compare/v74.5.0...v74.6.0) (2022-09-12)
 
 
