@@ -57,7 +57,7 @@
             "ibanNumber": "IBAN number"
           }
         },
-        "owner": "Owner",
+        "contact": "Owner",
         "page": "Label",
         "front": "Front side",
         "back": "Back side",

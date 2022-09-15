@@ -73,7 +73,7 @@ const Qualification = ({ file = {} }) => {
         }
 
         if (knowOtherMetadataNames.includes(name)) {
-          if (name === 'owner') {
+          if (name === 'contact') {
             return <QualificationListItemContact key={idx} file={file} />
           }
 

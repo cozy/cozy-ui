@@ -20,7 +20,7 @@ export const knowNumberMetadataNames = [
   'vinNumber',
   'ibanNumber'
 ]
-export const knowOtherMetadataNames = ['owner', 'page', 'qualification']
+export const knowOtherMetadataNames = ['contact', 'page', 'qualification']
 
 /**
  * @typedef {object} Reference
