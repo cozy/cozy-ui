@@ -22,7 +22,7 @@ const fakeMetadata = {
   datetime: '2029-12-10T23:00:00.000Z',
   qualification: { label: 'fake_label' },
   page: 'front',
-  owner: 'Alice Durand'
+  contact: 'Alice Durand'
 }
 
 const computedMetadata = [
@@ -39,7 +39,7 @@ const computedMetadata = [
   { name: 'cardNumber', value: '222222' },
   { name: 'vinNumber', value: '333333' },
   { name: 'ibanNumber', value: '444444' },
-  { name: 'owner', value: 'Alice Durand' },
+  { name: 'contact', value: 'Alice Durand' },
   { name: 'page', value: 'front' },
   { name: 'qualification', value: 'fake_label' }
 ]

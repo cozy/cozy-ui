@@ -45,7 +45,7 @@ const QualificationListItemContact = ({ file }) => {
     <>
       <ListItem className={'u-ph-2'}>
         <QualificationListItemText
-          primary={t('Viewer.panel.qualification.owner')}
+          primary={t('Viewer.panel.qualification.contact')}
           secondary={contactName}
         />
         <ListItemSecondaryAction>

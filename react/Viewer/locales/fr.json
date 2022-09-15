@@ -57,7 +57,7 @@
             "ibanNumber": "Numéro d'IBAN"
           }
         },
-        "owner": "Titulaire",
+        "contact": "Titulaire",
         "page": "Label",
         "front": "Face avant",
         "back": "Face arrière",
