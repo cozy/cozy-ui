@@ -56,7 +56,10 @@ const mockClient = {
     unsubscribe: () => {}
   },
   getQueryFromState: () => {},
-  query: () => {}
+  query: () => ({
+    data: [{ attributes: { slug: 'mespapiers' }, links: { related: '' } }]
+  }),
+  getInstanceOptions: () => ({ app: { slug: 'mespapiers' } })
 }
 
 class Wrapper extends React.Component {
