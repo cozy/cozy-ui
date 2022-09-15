@@ -81,7 +81,6 @@ const Qualification = ({ file = {} }) => {
             <QualificationListItemOther
               key={idx}
               ref={actionBtnRef.current[idx]}
-              filename={file.name}
               metadataComputed={meta}
               toggleActionsMenu={val => toggleActionsMenu(idx, name, val)}
             />
