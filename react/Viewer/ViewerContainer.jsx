@@ -12,9 +12,17 @@ import ViewerInformationsWrapper from './ViewerInformationsWrapper'
 import EncryptedProvider from './EncryptedProvider'
 import { ViewerSnackbarProvider } from './snackbar/ViewerSnackbarProvider'
 import ViewerSnackbar from './snackbar/ViewerSnackbar'
+import { ActionMenuProvider } from './Panel/ActionMenuProvider'
 
 const ViewerContainer = props => {
-  const { className, disableFooter, disablePanel, children, ...rest } = props
+  const {
+    className,
+    disableFooter,
+    disablePanel,
+    editPathByModelProps,
+    children,
+    ...rest
+  } = props
   const { currentIndex, files, currentURL } = props
   const toolbarRef = createRef()
   const { isDesktop } = useBreakpoints()
@@ -27,27 +35,29 @@ const ViewerContainer = props => {
 
   return (
     <ViewerSnackbarProvider>
-      <ViewerWrapper className={className}>
-        <EncryptedProvider url={currentURL}>
-          <Viewer
-            {...rest}
-            currentFile={currentFile}
-            hasPrevious={hasPrevious}
-            hasNext={hasNext}
+      <ActionMenuProvider editPathByModelProps={editPathByModelProps}>
+        <ViewerWrapper className={className}>
+          <EncryptedProvider url={currentURL}>
+            <Viewer
+              {...rest}
+              currentFile={currentFile}
+              hasPrevious={hasPrevious}
+              hasNext={hasNext}
+              validForPanel={validForPanel}
+              toolbarRef={toolbarRef}
+            />
+          </EncryptedProvider>
+          <ViewerInformationsWrapper
+            disableFooter={disableFooter}
             validForPanel={validForPanel}
+            currentFile={currentFile}
             toolbarRef={toolbarRef}
-          />
-        </EncryptedProvider>
-        <ViewerInformationsWrapper
-          disableFooter={disableFooter}
-          validForPanel={validForPanel}
-          currentFile={currentFile}
-          toolbarRef={toolbarRef}
-        >
-          {children}
-        </ViewerInformationsWrapper>
-      </ViewerWrapper>
-      <ViewerSnackbar />
+          >
+            {children}
+          </ViewerInformationsWrapper>
+        </ViewerWrapper>
+        <ViewerSnackbar />
+      </ActionMenuProvider>
     </ViewerSnackbarProvider>
   )
 }
