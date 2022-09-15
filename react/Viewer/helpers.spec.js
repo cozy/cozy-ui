@@ -1,9 +1,13 @@
+import { createMockClient } from 'cozy-client'
+
 import {
   downloadFile,
   isPlainText,
-  formatMetadataQualification
+  formatMetadataQualification,
+  getCurrentModel,
+  knownDateMetadataNames,
+  knowNumberMetadataNames
 } from './helpers'
-import { createMockClient } from 'cozy-client'
 
 const fakeMetadata = {
   number: '111111',
@@ -117,5 +121,14 @@ describe('helpers', () => {
       const res = formatMetadataQualification(fakeMetadata)
       expect(res).toEqual(computedMetadata)
     })
+  })
+  describe('getCurrentModel', () => {
+    const expected = 'information'
+    it.each([...knownDateMetadataNames, ...knowNumberMetadataNames])(
+      `getCurrentModel(%s) should return ${expected}`,
+      input => {
+        expect(getCurrentModel(input)).toBe(expected)
+      }
+    )
   })
 })
