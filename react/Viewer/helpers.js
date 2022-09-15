@@ -22,6 +22,17 @@ export const knowNumberMetadataNames = [
 ]
 export const knowOtherMetadataNames = ['contact', 'page', 'qualification']
 
+export const getCurrentModel = metadataName => {
+  if (
+    knownDateMetadataNames.includes(metadataName) ||
+    knowNumberMetadataNames.includes(metadataName)
+  ) {
+    return 'information'
+  }
+  if (metadataName === 'contact') return 'contact'
+  if (metadataName === 'page') return 'page'
+}
+
 /**
  * @typedef {object} Reference
  * @property {string} id - id of the document
