@@ -21,6 +21,7 @@ const useStyles = makeStyles(theme => ({
   endIcon: {
     display: 'flex',
     marginLeft: '5px',
+    marginTop: ({ variant }) => (variant === 'body1' ? '3px' : undefined),
     color: ({ disabled }) =>
       theme.palette.text[disabled ? 'disabled' : 'primary']
   }
@@ -56,7 +57,7 @@ const DropdownText = forwardRef(
     },
     ref
   ) => {
-    const styles = useStyles({ spaceBetween, disabled, color })
+    const styles = useStyles({ spaceBetween, disabled, color, variant })
 
     return (
       <div ref={ref} className={styles.container} {...props}>
