@@ -43,17 +43,30 @@ const variants = [
       ))}
     </Grid>
   </Grid>
-  <DropdownText style={{ border: '1px solid var(--borderMainColor)', width: '150px', marginBottom: '1rem' }}  color="error">
-    This is a long text without ellipsis
-  </DropdownText>
-  <DropdownText noWrap style={{ border: '1px solid var(--borderMainColor)', width: '150px', marginBottom: '1rem' }}>
-    This is a long text with ellipsis
-  </DropdownText>
-  <DropdownText spaceBetween style={{ border: '1px solid var(--borderMainColor)', width: '100%', marginBottom: '1rem' }}>
-    Space between text and icon
-  </DropdownText>
-  <DropdownText style={{ border: '1px solid var(--borderMainColor)' }}>
-    Text with<br />breaking spaces<br />inside content
-  </DropdownText>
+  <div style={{ border: '1px dashed var(--borderMainColor)', marginBottom: '1rem' }}>
+    <DropdownText>
+      This is a long text without ellipsis without restrictive container
+    </DropdownText>
+  </div>
+  <div style={{ border: '1px dashed var(--borderMainColor)', width: '150px', marginBottom: '1rem' }}>
+    <DropdownText>
+      This is a long text without ellipsis inside a restrictive container
+    </DropdownText>
+  </div>
+  <div style={{ border: '1px dashed var(--borderMainColor)', width: '150px', marginBottom: '1rem' }}>
+    <DropdownText noWrap>
+      This is a long text with ellipsis inside a container
+    </DropdownText>
+  </div>
+  <div style={{ border: '1px dashed var(--borderMainColor)', width: '100%', marginBottom: '1rem' }}>
+    <DropdownText>
+      Text with<br />breaking spaces<br />inside content
+    </DropdownText>
+  </div>
+  <div style={{ border: '1px dashed var(--borderMainColor)', width: '100%' }}>
+    <DropdownText spaceBetween>
+      Space between text and icon
+    </DropdownText>
+  </div>
 </>
 ```
