@@ -1,3 +1,19 @@
+# [74.7.0](https://github.com/cozy/cozy-ui/compare/v74.6.1...v74.7.0) (2022-09-16)
+
+
+### Features
+
+* **Viewer:** Add "edit" option ([f40c926](https://github.com/cozy/cozy-ui/commit/f40c926))
+* **Viewer:** Add ActionMenuDesktop component ([e5db778](https://github.com/cozy/cozy-ui/commit/e5db778))
+* **Viewer:** Add ActionMenuMobile component ([87dac4d](https://github.com/cozy/cozy-ui/commit/87dac4d))
+* **Viewer:** Add ActionMenuProvider component ([7938117](https://github.com/cozy/cozy-ui/commit/7938117))
+* **Viewer:** Add buildEditAttributePath helper ([677bff7](https://github.com/cozy/cozy-ui/commit/677bff7))
+* **Viewer:** Add editPathByModelProps prop to ViewerContainer ([c615600](https://github.com/cozy/cozy-ui/commit/c615600))
+* **Viewer:** Add name & fileId props to ActionMenuWrapper ([fbcf1bc](https://github.com/cozy/cozy-ui/commit/fbcf1bc))
+* **Viewer:** Add optionFile & file props to ActionMenuWrapper ([a5f0b2d](https://github.com/cozy/cozy-ui/commit/a5f0b2d))
+* **Viewer:** Remove filename attribute in Viewer information ([8f76f46](https://github.com/cozy/cozy-ui/commit/8f76f46))
+* **Viewer:** Use actionMenuContext in ActionMenuWrapper ([89518aa](https://github.com/cozy/cozy-ui/commit/89518aa))
+
 ## [74.6.1](https://github.com/cozy/cozy-ui/compare/v74.6.0...v74.6.1) (2022-09-15)
 
 
