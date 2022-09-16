@@ -1,93 +1,17 @@
-import ClickAwayListener from '@material-ui/core/ClickAwayListener'
-import PropTypes from 'prop-types'
 import React from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { usePopper } from 'react-popper'
 
-import BottomDrawer from '../BottomDrawer'
-import Radio from '../Radio'
 import createDepreciationLogger from '../helpers/createDepreciationLogger'
-import styles from './styles.styl'
 import useBreakpoints from '../hooks/useBreakpoints'
-import { Media, Bd, Img } from '../Media'
-import { getCssVariableValue } from '../utils/color'
-import { spacingProp } from '../Stack'
+import ActionMenuWrapper from './ActionMenuWrapper'
+import { ActionMenuHeader } from './ActionMenuHeader'
+import { ActionMenuItem } from './ActionMenuItem'
+import { ActionMenuRadio } from './ActionMenuRadio'
 import { useActionMenuEffects } from './ActionMenuEffects'
 
-const ActionMenuWrapper = ({
-  inline,
-  onClose,
-  anchorElRef,
-  popperOptions,
-  placement,
-  preventOverflow,
-  children
-}) => {
-  if (!inline) return <BottomDrawer onClose={onClose}>{children}</BottomDrawer>
-  return (
-    <NotInlineWrapper
-      anchorElRef={anchorElRef}
-      popperOptions={popperOptions}
-      placement={placement}
-      preventOverflow={preventOverflow}
-      onClose={onClose}
-    >
-      {children}
-    </NotInlineWrapper>
-  )
-}
+import styles from './styles.styl'
 
-const NotInlineWrapper = ({
-  anchorElRef,
-  popperOptions,
-  placement,
-  preventOverflow,
-  onClose,
-  children
-}) => {
-  const [popperElement, setPopperElement] = React.useState(null)
-  const referenceElement = anchorElRef ? anchorElRef.current : null
-
-  const normalOverflowModifiers = [
-    {
-      name: 'preventOverflow',
-      enabled: false
-    },
-    {
-      name: 'hide',
-      enabled: false
-    }
-  ]
-  const options = popperOptions || {
-    placement,
-    modifiers: preventOverflow ? undefined : normalOverflowModifiers
-  }
-
-  const { styles, attributes } = usePopper(
-    referenceElement,
-    popperElement,
-    options
-  )
-
-  const handleClose = e => {
-    if (referenceElement.contains(e.target)) return
-    onClose(e)
-  }
-  return (
-    <div
-      ref={setPopperElement}
-      style={{
-        ...styles.popper,
-        zIndex: getCssVariableValue('zIndex-popover')
-      }}
-      {...attributes.popper}
-    >
-      <ClickAwayListener onClickAway={handleClose}>
-        {children}
-      </ClickAwayListener>
-    </div>
-  )
-}
 const logDepecratedPlacement = createDepreciationLogger()
 const logDepecratedOverflow = createDepreciationLogger()
 const logDepecratedContainer = createDepreciationLogger()
@@ -181,62 +105,6 @@ ActionMenu.propTypes = {
 ActionMenu.defaultProps = {
   popperOptions: { placement: 'bottom-start' },
   autoclose: false
-}
-
-const ActionMenuHeader = ({ children, className }) => {
-  return (
-    <div className={cx(styles['c-actionmenu-header'], className)}>
-      {children}
-    </div>
-  )
-}
-
-ActionMenuHeader.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string
-}
-
-const ActionMenuItem = ({
-  left,
-  children,
-  right,
-  onClick,
-  className,
-  contentSpacing
-}) => {
-  return (
-    <Media
-      className={cx(styles['c-actionmenu-item'], className)}
-      onClick={onClick}
-      align="top"
-    >
-      {left && <Img className="u-mh-1">{left}</Img>}
-      <Bd
-        className={cx(left ? 'u-mr-1' : 'u-mh-1', `u-stack-${contentSpacing}`)}
-      >
-        {children}
-      </Bd>
-      {right && <Img className="u-mr-1">{right}</Img>}
-    </Media>
-  )
-}
-
-const ActionMenuRadio = props => {
-  return <Radio {...props} className={styles['c-actionmenu-radio']} />
-}
-
-ActionMenuItem.propTypes = {
-  left: PropTypes.node,
-  right: PropTypes.node,
-  children: PropTypes.node,
-  onClick: PropTypes.func,
-  className: PropTypes.string,
-  /** Controls spacing between between children of the ActionMenuItem */
-  contentSpacing: spacingProp
-}
-
-ActionMenuItem.defaultProps = {
-  contentSpacing: 'xs'
 }
 
 export default ActionMenu
