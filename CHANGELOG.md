@@ -1,3 +1,20 @@
+# [75.0.0](https://github.com/cozy/cozy-ui/compare/v74.7.0...v75.0.0) (2022-09-16)
+
+
+### Bug Fixes
+
+* **DropdownText:** Icon and text was misaligned for `body1` variant ([53cd532](https://github.com/cozy/cozy-ui/commit/53cd532))
+
+
+### Features
+
+* **DropdownButton:** Add ripple effect and some props ([cecf1f0](https://github.com/cozy/cozy-ui/commit/cecf1f0))
+
+
+### BREAKING CHANGES
+
+* **DropdownButton:** Horizontal alignment could be different. You have to use `className="u-mh-half"` if you want the old behavior.
+
 # [74.7.0](https://github.com/cozy/cozy-ui/compare/v74.6.1...v74.7.0) (2022-09-16)
 
 
