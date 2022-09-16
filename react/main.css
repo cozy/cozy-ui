@@ -13430,21 +13430,6 @@ html,
   }
 }
 
-.c-DropdownButton--1JXUA {
-  display: inline-flex;
-  align-items: center;
-  background: none;
-  border: 0;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  color: var(--primaryTextColor);
-}
-.c-DropdownButton-Icon--ohvD2 {
-  color: var(--iconTextColor);
-  margin-top: 0.25rem;
-  margin-left: 0.25rem;
-}
-
 .DialogCloseButton--cxKPO {
   position: absolute;
   top: 1.15rem;
