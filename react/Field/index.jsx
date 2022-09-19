@@ -26,6 +26,7 @@ const InputPassword = ({
   showLabel,
   fullwidth,
   secondaryComponent,
+  inputRef,
   ...restProps
 }) => {
   const [visible, setVisible] = useState(false)
@@ -60,6 +61,7 @@ const InputPassword = ({
       )}
       <Input
         {...restProps}
+        ref={inputRef}
         fullwidth={fullwidth}
         type={visible ? 'text' : 'password'}
       />
@@ -198,7 +200,7 @@ const Field = props => {
             disabled={disabled}
             fullwidth={fullwidth}
             id={id}
-            inputRef={inputRef}
+            ref={inputRef}
             name={name}
             type={type}
             placeholder={placeholder}
