@@ -62,10 +62,6 @@ Input.propTypes = {
   error: PropTypes.bool,
   size: PropTypes.oneOf(['tiny', 'medium', 'large']),
   fullwidth: PropTypes.bool,
-  /**
-   * Use that property to pass a ref callback to the native input component.
-   */
-  inputRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   onChange: PropTypes.func,
   onKeyUp: PropTypes.func
 }
