@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import cx from 'classnames'
 import omit from 'lodash/omit'
 import PropTypes from 'prop-types'
@@ -21,59 +21,50 @@ const inputSpecificPropTypes = {
   onKeyUp: PropTypes.func
 }
 
-class InputPassword extends React.Component {
-  state = {
-    visible: false
+const InputPassword = ({
+  hideLabel,
+  showLabel,
+  fullwidth,
+  secondaryComponent,
+  ...restProps
+}) => {
+  const [visible, setVisible] = useState(false)
+
+  const toggleVisibility = () => {
+    setVisible(visible => !visible)
   }
 
-  toggleVisibility() {
-    this.setState({ visible: !this.state.visible })
-  }
-
-  render() {
-    const {
-      hideLabel,
-      showLabel,
-      fullwidth,
-      secondaryComponent,
-      ...restProps
-    } = this.props
-    const { visible } = this.state
-
-    return (
-      <div className={styles['o-field-input']}>
-        {!secondaryComponent && (
-          <div
-            className={cx(
-              labelStyles['c-label'],
-              styles['o-field-input-action'],
-              { [styles['o-side-fullwidth']]: fullwidth }
-            )}
-            onClick={() => this.toggleVisibility()}
-          >
-            {visible ? hideLabel : showLabel}
-          </div>
-        )}
-        {secondaryComponent && (
-          <div
-            className={cx(styles['o-field-input-action'], {
-              [styles['o-side-fullwidth']]: fullwidth
-            })}
-            onClick={() => this.toggleVisibility()}
-          >
-            {secondaryComponent({
-              visible
-            })}
-          </div>
-        )}
-        <Input
-          {...restProps}
-          fullwidth={fullwidth}
-          type={visible ? 'text' : 'password'}
-        />
-      </div>
-    )
-  }
+  return (
+    <div className={styles['o-field-input']}>
+      {!secondaryComponent && (
+        <div
+          className={cx(
+            labelStyles['c-label'],
+            styles['o-field-input-action'],
+            { [styles['o-side-fullwidth']]: fullwidth }
+          )}
+          onClick={toggleVisibility}
+        >
+          {visible ? hideLabel : showLabel}
+        </div>
+      )}
+      {secondaryComponent && (
+        <div
+          className={cx(styles['o-field-input-action'], {
+            [styles['o-side-fullwidth']]: fullwidth
+          })}
+          onClick={toggleVisibility}
+        >
+          {secondaryComponent({ visible })}
+        </div>
+      )}
+      <Input
+        {...restProps}
+        fullwidth={fullwidth}
+        type={visible ? 'text' : 'password'}
+      />
+    </div>
+  )
 }
 
 InputPassword.propTypes = {
