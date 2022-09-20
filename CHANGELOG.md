@@ -1,3 +1,10 @@
+## [75.0.1](https://github.com/cozy/cozy-ui/compare/v75.0.0...v75.0.1) (2022-09-20)
+
+
+### Bug Fixes
+
+* **Field:** Use ref instead of inputRef when using Input comp ([d7317a9](https://github.com/cozy/cozy-ui/commit/d7317a9))
+
 # [75.0.0](https://github.com/cozy/cozy-ui/compare/v74.7.0...v75.0.0) (2022-09-16)
 
 
