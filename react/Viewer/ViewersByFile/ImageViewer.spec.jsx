@@ -5,7 +5,7 @@ import { BreakpointsProvider } from '../../hooks/useBreakpoints'
 import { checkImageSource } from '../../FileImageLoader/checkImageSource'
 
 import DemoProvider from '../docs/DemoProvider'
-import EncryptedProvider from '../EncryptedProvider'
+import EncryptedProvider from '../providers/EncryptedProvider'
 
 import ImageViewer from './ImageViewer'
 

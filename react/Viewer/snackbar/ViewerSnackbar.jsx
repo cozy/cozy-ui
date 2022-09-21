@@ -2,7 +2,7 @@ import React from 'react'
 
 import Snackbar from '../../Snackbar'
 import Alert from '../../Alert'
-import useViewerSnackbar from './ViewerSnackbarProvider'
+import useViewerSnackbar from '../providers/ViewerSnackbarProvider'
 
 const ViewerSnackbar = () => {
   const {

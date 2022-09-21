@@ -7,7 +7,7 @@ import logger from 'cozy-logger'
 
 import { I18n } from '../../I18n'
 
-import EncryptedProvider from '../EncryptedProvider'
+import EncryptedProvider from '../providers/EncryptedProvider'
 import { PdfMobileViewer } from './PdfMobileViewer'
 
 logger.error = logger.warn = jest.fn()

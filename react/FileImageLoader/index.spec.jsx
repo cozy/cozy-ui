@@ -6,7 +6,7 @@ import logger from 'cozy-logger'
 
 import { FileImageLoader } from '.'
 import { checkImageSource } from './checkImageSource'
-import EncryptedProvider from '../Viewer/EncryptedProvider'
+import EncryptedProvider from '../Viewer/providers/EncryptedProvider'
 
 jest.mock('./checkImageSource', () => ({
   ...jest.requireActual('./checkImageSource'),
