@@ -7,7 +7,7 @@ import { withClient, models } from 'cozy-client'
 
 import { FileDoctype } from '../../proptypes'
 
-import ViewerSpinner from '../ViewerSpinner'
+import ViewerSpinner from '../components/ViewerSpinner'
 import withFileUrl from '../hoc/withFileUrl'
 import NoViewer from '../NoViewer'
 import { isFileEncrypted } from '../helpers'

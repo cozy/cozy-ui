@@ -5,9 +5,9 @@ import cx from 'classnames'
 import Hammer from 'hammerjs'
 import { withStyles } from '@material-ui/core/styles'
 
-import withBreakpoints from '../helpers/withBreakpoints'
+import withBreakpoints from '../../helpers/withBreakpoints'
 
-import { toolbarPropsPropType } from './index'
+import { toolbarPropsPropType } from '../index'
 import { infoWidth } from './InformationPanel'
 import Toolbar from './Toolbar'
 import Navigation from './Navigation'

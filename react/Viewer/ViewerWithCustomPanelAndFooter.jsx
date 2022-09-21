@@ -3,8 +3,8 @@ import React, { createRef } from 'react'
 import useBreakpoints from '../hooks/useBreakpoints'
 
 import ViewerWrapper from './ViewerWrapper'
-import InformationPanel from './InformationPanel'
-import Footer from './Footer'
+import InformationPanel from './components/InformationPanel'
+import Footer from './components/Footer'
 import Viewer from './Viewer'
 
 const ViewerWithCustomPanelAndFooter = props => {

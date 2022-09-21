@@ -6,18 +6,19 @@ import { makeStyles } from '@material-ui/core/styles'
 
 import { useClient } from 'cozy-client'
 
-import withBreakpoints from '../helpers/withBreakpoints'
-import Button from '../Button'
-import IconButton from '../IconButton'
-import Icon from '../Icon'
-import Typography from '../Typography'
-import PreviousIcon from '../Icons/Previous'
-import DownloadIcon from '../Icons/Download'
+import withBreakpoints from '../../helpers/withBreakpoints'
+import Button from '../../Button'
+import IconButton from '../../IconButton'
+import Icon from '../../Icon'
+import Typography from '../../Typography'
+import PreviousIcon from '../../Icons/Previous'
+import DownloadIcon from '../../Icons/Download'
 
-import { withViewerLocales } from './hoc/withViewerLocales'
-import { downloadFile } from './helpers'
+import { withViewerLocales } from '../hoc/withViewerLocales'
+import { downloadFile } from '../helpers'
+import { useEncrypted } from '../EncryptedProvider'
+
 import styles from './styles.styl'
-import { useEncrypted } from './EncryptedProvider'
 
 const useClasses = makeStyles(theme => ({
   iconButton: {

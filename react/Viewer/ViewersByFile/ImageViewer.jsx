@@ -3,7 +3,7 @@ import Hammer from 'hammerjs'
 
 import FileImageLoader from '../../FileImageLoader'
 
-import ViewerSpinner from '../ViewerSpinner'
+import ViewerSpinner from '../components/ViewerSpinner'
 import NoNetworkViewer from './NoNetworkViewer'
 
 import styles from './styles.styl'
