@@ -1,4 +1,4 @@
-module.exports = async (page, screenshot) => {
+export default async (page, screenshot) => {
   for (const dialogType of [
     'Dialog',
     'ConfirmDialog',
