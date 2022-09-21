@@ -3,7 +3,7 @@
 exports[`Shortcutviewer renders the component 1`] = `
 <div>
   <div
-    class="styles__viewer-noviewer___3heA6"
+    class="styles__viewer-noviewer___auG-6"
   >
     <svg
       class="styles__icon___23x3R"
@@ -26,7 +26,7 @@ exports[`Shortcutviewer renders the component 1`] = `
       </g>
     </svg>
     <p
-      class="styles__viewer-filename___36bWW"
+      class="styles__viewer-filename___3jZCt"
     />
     <a
       class="styles__c-btn___-2Vnj"

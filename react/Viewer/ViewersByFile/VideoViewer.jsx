@@ -1,6 +1,7 @@
 import React from 'react'
 
-import withFileUrl from './withFileUrl'
+import withFileUrl from '../withFileUrl'
+
 import styles from './styles.styl'
 
 const VideoViewer = ({ file, url }) => (

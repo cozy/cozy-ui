@@ -3,7 +3,7 @@
 exports[`AudioViewer should render a spinner then the audio viewer 1`] = `
 <div>
   <div
-    class="styles__viewer-audioviewer___2HBWZ"
+    class="styles__viewer-audioviewer___1OQPB"
   >
     <svg
       class="styles__icon___23x3R"
@@ -29,7 +29,7 @@ exports[`AudioViewer should render a spinner then the audio viewer 1`] = `
       </g>
     </svg>
     <p
-      class="styles__viewer-filename___36bWW"
+      class="styles__viewer-filename___3jZCt"
     >
       sample.mp3
     </p>

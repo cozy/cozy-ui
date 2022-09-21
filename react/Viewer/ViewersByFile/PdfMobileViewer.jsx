@@ -4,14 +4,14 @@ import { useClient } from 'cozy-client'
 import { openFileWith } from 'cozy-client/dist/models/fsnative'
 import { isMobileApp } from 'cozy-device-helper'
 
-import Alerter from '../Alerter'
-import Spinner from '../Spinner'
-import Button from '../Button'
-import FileImageLoader from '../FileImageLoader'
+import Alerter from '../../Alerter'
+import Spinner from '../../Spinner'
+import Button from '../../Button'
+import FileImageLoader from '../../FileImageLoader'
 
-import { withViewerLocales } from './withViewerLocales'
-import DownloadButton from './NoViewer/DownloadButton'
-import NoViewer from './NoViewer'
+import { withViewerLocales } from '../withViewerLocales'
+import DownloadButton from '../NoViewer/DownloadButton'
+import NoViewer from '../NoViewer'
 
 import styles from './styles.styl'
 

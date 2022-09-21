@@ -1,23 +1,23 @@
 import React from 'react'
 import { render, waitFor } from '@testing-library/react'
 
-import { BreakpointsProvider } from '../hooks/useBreakpoints'
-import DemoProvider from './docs/DemoProvider'
+import { BreakpointsProvider } from '../../hooks/useBreakpoints'
+import DemoProvider from '../docs/DemoProvider'
 
-import AudioViewer from './AudioViewer'
+import VideoViewer from './VideoViewer'
 
 const file = {
-  _id: 'audio',
-  class: 'audio',
-  mime: 'audio/mp3',
-  name: 'sample.mp3'
+  _id: 'video',
+  class: 'video',
+  mime: 'video/mp4',
+  name: 'sample.mp4'
 }
 
 const setup = () => {
   const root = render(
     <DemoProvider>
       <BreakpointsProvider>
-        <AudioViewer file={file} />
+        <VideoViewer file={file} />
       </BreakpointsProvider>
     </DemoProvider>
   )
@@ -25,8 +25,8 @@ const setup = () => {
   return { root }
 }
 
-describe('AudioViewer', () => {
-  it('should render a spinner then the audio viewer', async () => {
+describe('VideoViewer', () => {
+  it('should render a spinner then the video viewer', async () => {
     const { root } = setup()
     const { container, queryByRole } = root
 

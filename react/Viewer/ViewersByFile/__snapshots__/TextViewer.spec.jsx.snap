@@ -2,7 +2,7 @@
 
 exports[`TextViewer Component should display the error component and render with renderFallback 1`] = `
 <div
-  className="styles__viewer-noviewer___3heA6"
+  className="styles__viewer-noviewer___auG-6"
 >
   <svg
     className="styles__icon___23x3R"
@@ -26,7 +26,7 @@ exports[`TextViewer Component should display the error component and render with
     </g>
   </svg>
   <p
-    className="styles__viewer-filename___36bWW"
+    className="styles__viewer-filename___3jZCt"
   >
     My File
   </p>
@@ -40,15 +40,15 @@ exports[`TextViewer Component should display the loader  1`] = `<Loader />`;
 
 exports[`TextViewer Component should display the markdown viewer 1`] = `
 <div
-  className="styles__viewer-textviewer___cISlz"
+  className="styles__viewer-textviewer___3u5Zw"
 >
   <h2
-    className="styles__viewer-filename___36bWW u-mt-3 u-mb-1"
+    className="styles__viewer-filename___3jZCt u-mt-3 u-mb-1"
   >
     My File
   </h2>
   <div
-    className="styles__viewer-textviewer-content___q2RzR u-p-1"
+    className="styles__viewer-textviewer-content___PB-c3 u-p-1"
   >
     <p>
       It's very easy to make some words 
@@ -67,15 +67,15 @@ exports[`TextViewer Component should display the markdown viewer 1`] = `
 
 exports[`TextViewer Component should display the text viewer 1`] = `
 <div
-  className="styles__viewer-textviewer___cISlz"
+  className="styles__viewer-textviewer___3u5Zw"
 >
   <h2
-    className="styles__viewer-filename___36bWW u-mt-3 u-mb-1"
+    className="styles__viewer-filename___3jZCt u-mt-3 u-mb-1"
   >
     My File
   </h2>
   <pre
-    className="styles__viewer-textviewer-content___q2RzR u-mh-auto u-mv-2"
+    className="styles__viewer-textviewer-content___PB-c3 u-mh-auto u-mv-2"
   >
     The content of my file
   </pre>
@@ -84,15 +84,15 @@ exports[`TextViewer Component should display the text viewer 1`] = `
 
 exports[`TextViewer Component should display the text viewer when an URL is given 1`] = `
 <div
-  className="styles__viewer-textviewer___cISlz"
+  className="styles__viewer-textviewer___3u5Zw"
 >
   <h2
-    className="styles__viewer-filename___36bWW u-mt-3 u-mb-1"
+    className="styles__viewer-filename___3jZCt u-mt-3 u-mb-1"
   >
     My File
   </h2>
   <pre
-    className="styles__viewer-textviewer-content___q2RzR u-mh-auto u-mv-2"
+    className="styles__viewer-textviewer-content___PB-c3 u-mh-auto u-mv-2"
   >
     The content of my file
   </pre>

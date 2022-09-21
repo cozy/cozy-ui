@@ -1,12 +1,12 @@
 import React from 'react'
 
 import CozyClient, { CozyProvider } from 'cozy-client'
-import I18n from '../I18n'
 import { render, waitFor } from '@testing-library/react'
+import I18n from '../../I18n'
+
+import en from '../locales/en.json'
 
 import ShortcutViewer from './ShortcutViewer'
-
-import en from './locales/en.json'
 
 export const locales = {
   en

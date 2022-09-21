@@ -1,10 +1,11 @@
 import React from 'react'
 
-import Icon from '../Icon'
-import CloudBrokenIcon from '../Icons/CloudBroken'
-import Button from '../Button'
+import Icon from '../../Icon'
+import CloudBrokenIcon from '../../Icons/CloudBroken'
+import Button from '../../Button'
 
-import { withViewerLocales } from './withViewerLocales'
+import { withViewerLocales } from '../withViewerLocales'
+
 import styles from './styles.styl'
 
 const NoNetworkViewer = ({ t, onReload }) => (

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import Hammer from 'hammerjs'
 
-import FileImageLoader from '../FileImageLoader'
+import FileImageLoader from '../../FileImageLoader'
 
-import ViewerSpinner from './ViewerSpinner'
+import ViewerSpinner from '../ViewerSpinner'
 import NoNetworkViewer from './NoNetworkViewer'
 
 import styles from './styles.styl'
