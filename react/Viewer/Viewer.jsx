@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 import { FileDoctype } from '../proptypes'
 
-import ViewerControls from './ViewerControls'
-import ViewerByFile from './ViewerByFile'
+import ViewerControls from './components/ViewerControls'
+import ViewerByFile from './components/ViewerByFile'
 import { toolbarPropsPropType } from './index'
 
 const KEY_CODE_LEFT = 37

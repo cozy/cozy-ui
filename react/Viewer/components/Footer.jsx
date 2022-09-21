@@ -1,6 +1,6 @@
 import React from 'react'
 
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../../hooks/useBreakpoints'
 
 import styles from './styles.styl'
 

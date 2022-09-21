@@ -4,10 +4,10 @@ import { render } from '@testing-library/react'
 import ViewerInformationsWrapper from './ViewerInformationsWrapper'
 
 /* eslint-disable react/display-name */
-jest.mock('./Footer', () => ({ children }) => (
+jest.mock('./components/Footer', () => ({ children }) => (
   <div data-testid="Footer">{children}</div>
 ))
-jest.mock('./InformationPanel', () => ({ children }) => (
+jest.mock('./components/InformationPanel', () => ({ children }) => (
   <div data-testid="InformationPanel">{children}</div>
 ))
 jest.mock('./Panel/PanelContent', () => () => (

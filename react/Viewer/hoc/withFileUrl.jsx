@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import ViewerSpinner from '../ViewerSpinner'
+import ViewerSpinner from '../components/ViewerSpinner'
 import NoNetworkViewer from '../ViewersByFile/NoNetworkViewer'
 import { isFileEncrypted } from '../helpers'
 

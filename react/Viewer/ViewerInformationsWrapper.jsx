@@ -4,8 +4,8 @@ import { useTheme } from '@material-ui/core'
 
 import { FileDoctype } from '../proptypes'
 
-import InformationPanel from './InformationPanel'
-import Footer from './Footer'
+import InformationPanel from './components/InformationPanel'
+import Footer from './components/Footer'
 import PanelContent from './Panel/PanelContent'
 import FooterContent from './Footer/FooterContent'
 import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'

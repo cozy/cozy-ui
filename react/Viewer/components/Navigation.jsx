@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Icon from '../Icon'
-import { default as ArrowIcon } from '../Icons/DropdownClose'
+import Icon from '../../Icon'
+import { default as ArrowIcon } from '../../Icons/DropdownClose'
 
 import styles from './styles.styl'
 

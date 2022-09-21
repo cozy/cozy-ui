@@ -6,16 +6,16 @@ jest.mock('cozy-device-helper', () => ({
   ...jest.requireActual('cozy-device-helper'),
   isMobile: jest.fn()
 }))
-jest.mock('./ViewersByFile/ShortcutViewer', () => 'ShortcutViewer')
-jest.mock('./ViewersByFile/ImageViewer', () => 'ImageViewer')
-jest.mock('./ViewersByFile/AudioViewer', () => 'AudioViewer')
-jest.mock('./ViewersByFile/AudioViewer', () => 'AudioViewer')
-jest.mock('./ViewersByFile/VideoViewer', () => 'VideoViewer')
-jest.mock('./ViewersByFile/PdfJsViewer', () => 'PdfJsViewer')
-jest.mock('./ViewersByFile/PdfMobileViewer', () => 'PdfMobileViewer')
-jest.mock('./ViewersByFile/TextViewer', () => 'TextViewer')
-jest.mock('./ViewersByFile/OnlyOfficeViewer', () => 'OnlyOfficeViewer')
-jest.mock('./NoViewer', () => 'NoViewer')
+jest.mock('../ViewersByFile/ShortcutViewer', () => 'ShortcutViewer')
+jest.mock('../ViewersByFile/ImageViewer', () => 'ImageViewer')
+jest.mock('../ViewersByFile/AudioViewer', () => 'AudioViewer')
+jest.mock('../ViewersByFile/AudioViewer', () => 'AudioViewer')
+jest.mock('../ViewersByFile/VideoViewer', () => 'VideoViewer')
+jest.mock('../ViewersByFile/PdfJsViewer', () => 'PdfJsViewer')
+jest.mock('../ViewersByFile/PdfMobileViewer', () => 'PdfMobileViewer')
+jest.mock('../ViewersByFile/TextViewer', () => 'TextViewer')
+jest.mock('../ViewersByFile/OnlyOfficeViewer', () => 'OnlyOfficeViewer')
+jest.mock('../NoViewer', () => 'NoViewer')
 
 describe('getViewerComponentName', () => {
   beforeEach(() => {
