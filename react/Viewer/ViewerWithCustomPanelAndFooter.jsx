@@ -1,17 +1,19 @@
 import React, { createRef } from 'react'
+import cx from 'classnames'
 
 import useBreakpoints from '../hooks/useBreakpoints'
 
-import ViewerWrapper from './ViewerWrapper'
 import InformationPanel from './components/InformationPanel'
 import Footer from './components/Footer'
 import Viewer from './Viewer'
+
+import styles from './styles.styl'
 
 const ViewerWithCustomPanelAndFooter = props => {
   console.warn(
     'Warning: Please do not use the "ViewerWithCustomPanelAndFooter" Component, replace it with the default export component'
   )
-  const { footerProps, panelInfoProps, ...rest } = props
+  const { footerProps, panelInfoProps, className, ...rest } = props
   const { files, currentIndex } = props
   const fileCount = files.length
   const hasPrevious = currentIndex > 0
@@ -26,7 +28,10 @@ const ViewerWithCustomPanelAndFooter = props => {
     panelInfoProps.showPanel({ file: currentFile })
 
   return (
-    <ViewerWrapper>
+    <div
+      id="viewer-wrapper"
+      className={cx(styles['viewer-wrapper'], className)}
+    >
       <Viewer
         {...rest}
         disablePanel={true}
@@ -45,7 +50,7 @@ const ViewerWithCustomPanelAndFooter = props => {
           <panelInfoProps.PanelContent file={currentFile} />
         </InformationPanel>
       )}
-    </ViewerWrapper>
+    </div>
   )
 }
 

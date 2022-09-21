@@ -1,18 +1,20 @@
 import React, { createRef } from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 
 import useBreakpoints from '../hooks/useBreakpoints'
 import { FileDoctype } from '../proptypes'
 
 import { toolbarPropsPropType } from './proptypes'
 import { isValidForPanel } from './helpers'
-import ViewerWrapper from './ViewerWrapper'
 import Viewer from './Viewer'
 import ViewerInformationsWrapper from './ViewerInformationsWrapper'
 import EncryptedProvider from './providers/EncryptedProvider'
 import { ViewerSnackbarProvider } from './providers/ViewerSnackbarProvider'
 import ViewerSnackbar from './snackbar/ViewerSnackbar'
 import { ActionMenuProvider } from './providers/ActionMenuProvider'
+
+import styles from './styles.styl'
 
 const ViewerContainer = props => {
   const {
@@ -36,7 +38,10 @@ const ViewerContainer = props => {
   return (
     <ViewerSnackbarProvider>
       <ActionMenuProvider editPathByModelProps={editPathByModelProps}>
-        <ViewerWrapper className={className}>
+        <div
+          id="viewer-wrapper"
+          className={cx(styles['viewer-wrapper'], className)}
+        >
           <EncryptedProvider url={currentURL}>
             <Viewer
               {...rest}
@@ -55,7 +60,7 @@ const ViewerContainer = props => {
           >
             {children}
           </ViewerInformationsWrapper>
-        </ViewerWrapper>
+        </div>
         <ViewerSnackbar />
       </ActionMenuProvider>
     </ViewerSnackbarProvider>
