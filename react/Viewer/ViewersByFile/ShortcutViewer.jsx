@@ -2,7 +2,7 @@ import React from 'react'
 import { useClient, useFetchShortcut } from 'cozy-client'
 import get from 'lodash/get'
 
-import { withViewerLocales } from '../withViewerLocales'
+import { withViewerLocales } from '../hoc/withViewerLocales'
 import { ButtonLink } from '../../Button'
 import { FileDoctype } from '../../proptypes'
 import OpenwithIcon from '../../Icons/Openwith'
