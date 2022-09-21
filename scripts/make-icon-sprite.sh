@@ -2,7 +2,7 @@
 
 set -eu
 
-outfile="react/Icon/icons-sprite.js"
+outfile="react/Icon/icons-sprite.ts"
 
 icons="$(ls assets/icons/*/*.svg | sort -d)"
 
