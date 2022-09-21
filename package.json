@@ -33,7 +33,7 @@
     "deploy:doc": "git-directory-deploy --directory build/ --branch gh-pages",
     "makeSvgr": "scripts/generate-svgr-icon.sh",
     "lint": "npm-run-all 'lint:*'",
-    "lint:js": "eslint 'react/**/*.jsx' 'react/**/*.js' 'react/**/*.ts' 'docs/styleguide.config.js'",
+    "lint:js": "eslint 'react/**/*.{jsx,js,tsx,ts}' 'docs/styleguide.config.js'",
     "lint:stylus": "stylint stylus --config .stylintrc",
     "lint:md": "remark . -o -S",
     "palette": "scripts/make-palette.sh",
