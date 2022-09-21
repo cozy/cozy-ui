@@ -16,7 +16,7 @@ import DownloadIcon from '../../Icons/Download'
 
 import { withViewerLocales } from '../hoc/withViewerLocales'
 import { downloadFile } from '../helpers'
-import { useEncrypted } from '../EncryptedProvider'
+import { useEncrypted } from '../providers/EncryptedProvider'
 
 import styles from './styles.styl'
 

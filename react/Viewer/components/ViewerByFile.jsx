@@ -16,7 +16,7 @@ import NoViewer from '../NoViewer'
 import ShortcutViewer from '../ViewersByFile/ShortcutViewer'
 import OnlyOfficeViewer from '../ViewersByFile/OnlyOfficeViewer'
 
-import { useEncrypted } from '../EncryptedProvider'
+import { useEncrypted } from '../providers/EncryptedProvider'
 
 export const getViewerComponentName = ({
   file,

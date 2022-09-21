@@ -9,10 +9,10 @@ import { isValidForPanel } from './helpers'
 import ViewerWrapper from './ViewerWrapper'
 import Viewer from './Viewer'
 import ViewerInformationsWrapper from './ViewerInformationsWrapper'
-import EncryptedProvider from './EncryptedProvider'
-import { ViewerSnackbarProvider } from './snackbar/ViewerSnackbarProvider'
+import EncryptedProvider from './providers/EncryptedProvider'
+import { ViewerSnackbarProvider } from './providers/ViewerSnackbarProvider'
 import ViewerSnackbar from './snackbar/ViewerSnackbar'
-import { ActionMenuProvider } from './Panel/ActionMenuProvider'
+import { ActionMenuProvider } from './providers/ActionMenuProvider'
 
 const ViewerContainer = props => {
   const {

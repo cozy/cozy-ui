@@ -12,7 +12,7 @@ const GET_LINK = 'GET_LINK'
 
 import { checkImageSource } from './checkImageSource'
 import { isFileEncrypted } from '../Viewer/helpers'
-import { EncryptedContext } from '../Viewer/EncryptedProvider'
+import { EncryptedContext } from '../Viewer/providers/EncryptedProvider'
 
 export class FileImageLoader extends Component {
   state = {

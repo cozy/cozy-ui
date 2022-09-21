@@ -5,9 +5,9 @@ import { useAppLinkWithStoreFallback, useClient } from 'cozy-client'
 
 import useBreakpoints from '../../hooks/useBreakpoints'
 import { useI18n } from '../../I18n'
-import useViewerSnackbar from '../snackbar/ViewerSnackbarProvider'
+import useViewerSnackbar from '../providers/ViewerSnackbarProvider'
 import { buildEditAttributePath, getCurrentModel } from '../helpers'
-import useActionMenuContext from './ActionMenuProvider'
+import useActionMenuContext from '../providers/ActionMenuProvider'
 import ActionMenuMobile from './ActionMenuMobile'
 import ActionMenuDesktop from './ActionMenuDesktop'
 
