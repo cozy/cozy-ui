@@ -14,7 +14,7 @@ import ActionMenuDesktop from './ActionMenuDesktop'
 const mespapiersAppSlug = 'mespapiers'
 
 const checkEditableAttribute = name => {
-  const isNotEditableAttributes = ['datetime', 'qualification', 'contact']
+  const isNotEditableAttributes = ['datetime', 'qualification']
   return !isNotEditableAttributes.includes(name)
 }
 
