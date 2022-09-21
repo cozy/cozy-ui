@@ -2,7 +2,7 @@ import React, { useRef, useState, createRef, useMemo, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 import List from '../../MuiCozyTheme/List'
-import { withViewerLocales } from '../withViewerLocales'
+import { withViewerLocales } from '../hoc/withViewerLocales'
 import {
   formatMetadataQualification,
   knownDateMetadataNames,

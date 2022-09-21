@@ -4,7 +4,7 @@ import Icon from '../../Icon'
 import FileTypeAudioIcon from '../../Icons/FileTypeAudio'
 import isTesting from '../../helpers/isTesting'
 
-import withFileUrl from '../withFileUrl'
+import withFileUrl from '../hoc/withFileUrl'
 
 import styles from './styles.styl'
 

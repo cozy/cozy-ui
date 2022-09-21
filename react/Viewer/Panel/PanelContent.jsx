@@ -5,7 +5,7 @@ import cx from 'classnames'
 import Stack from '../../Stack'
 import Paper from '../../Paper'
 import Typography from '../../Typography'
-import { withViewerLocales } from '../withViewerLocales'
+import { withViewerLocales } from '../hoc/withViewerLocales'
 
 import getPanelBlocks, { panelBlocksSpecs } from './getPanelBlocks'
 

@@ -7,7 +7,7 @@ import Icon from '../../Icon'
 import DownloadIcon from '../../Icons/Download'
 import Button from '../../Buttons'
 import Alerter from '../../Alerter'
-import { withViewerLocales } from '../withViewerLocales'
+import { withViewerLocales } from '../hoc/withViewerLocales'
 
 const DownloadButton = ({ file, t }) => {
   const client = useClient()

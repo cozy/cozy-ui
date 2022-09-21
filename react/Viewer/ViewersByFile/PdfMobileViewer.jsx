@@ -9,7 +9,7 @@ import Spinner from '../../Spinner'
 import Button from '../../Button'
 import FileImageLoader from '../../FileImageLoader'
 
-import { withViewerLocales } from '../withViewerLocales'
+import { withViewerLocales } from '../hoc/withViewerLocales'
 import DownloadButton from '../NoViewer/DownloadButton'
 import NoViewer from '../NoViewer'
 

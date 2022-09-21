@@ -14,7 +14,7 @@ import Typography from '../Typography'
 import PreviousIcon from '../Icons/Previous'
 import DownloadIcon from '../Icons/Download'
 
-import { withViewerLocales } from './withViewerLocales'
+import { withViewerLocales } from './hoc/withViewerLocales'
 import { downloadFile } from './helpers'
 import styles from './styles.styl'
 import { useEncrypted } from './EncryptedProvider'

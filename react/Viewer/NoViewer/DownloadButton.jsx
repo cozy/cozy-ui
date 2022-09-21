@@ -7,7 +7,7 @@ import { withClient } from 'cozy-client'
 import { FileDoctype } from '../../proptypes'
 import Button from '../../Button'
 
-import { withViewerLocales } from '../withViewerLocales'
+import { withViewerLocales } from '../hoc/withViewerLocales'
 import { downloadFile } from '../helpers'
 
 const DownloadButton = ({ t, client, file, url }) => (

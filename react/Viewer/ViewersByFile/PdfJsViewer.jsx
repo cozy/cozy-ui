@@ -6,8 +6,8 @@ import throttle from 'lodash/throttle'
 import flow from 'lodash/flow'
 
 import ViewerSpinner from '../ViewerSpinner'
-import { withViewerLocales } from '../withViewerLocales'
-import withFileUrl from '../withFileUrl'
+import { withViewerLocales } from '../hoc/withViewerLocales'
+import withFileUrl from '../hoc/withFileUrl'
 import ToolbarButton from '../PdfToolbarButton'
 import NoViewer from '../NoViewer'
 

@@ -7,7 +7,7 @@ import { Media, Img, Bd } from '../../Media'
 import Icon, { iconPropType } from '../../Icon'
 import CarbonCopyIcon from '../../Icons/CarbonCopy'
 import SafeIcon from '../../Icons/Safe'
-import { withViewerLocales } from '../withViewerLocales'
+import { withViewerLocales } from '../hoc/withViewerLocales'
 
 const Certification = ({ icon, title, caption }) => {
   return (
