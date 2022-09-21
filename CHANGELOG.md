@@ -1,3 +1,10 @@
+# [75.1.0](https://github.com/cozy/cozy-ui/compare/v75.0.1...v75.1.0) (2022-09-21)
+
+
+### Features
+
+* **Viewer:** Contact can now be edited ([2b9cee9](https://github.com/cozy/cozy-ui/commit/2b9cee9))
+
 ## [75.0.1](https://github.com/cozy/cozy-ui/compare/v75.0.0...v75.0.1) (2022-09-20)
 
 
