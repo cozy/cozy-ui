@@ -5,10 +5,10 @@ import { CozyProvider, createMockClient } from 'cozy-client'
 import { isMobileApp } from 'cozy-device-helper'
 import logger from 'cozy-logger'
 
-import { I18n } from '../I18n'
+import { I18n } from '../../I18n'
 
+import EncryptedProvider from '../EncryptedProvider'
 import { PdfMobileViewer } from './PdfMobileViewer'
-import EncryptedProvider from './EncryptedProvider'
 
 logger.error = logger.warn = jest.fn()
 

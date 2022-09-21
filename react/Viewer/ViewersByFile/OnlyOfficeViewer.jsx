@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Button from '../Button'
-import { FileDoctype } from '../proptypes'
+import Button from '../../Button'
+import { FileDoctype } from '../../proptypes'
 
-import { withViewerLocales } from './withViewerLocales'
-import NoViewer from './NoViewer'
+import { withViewerLocales } from '../withViewerLocales'
+import NoViewer from '../NoViewer'
 
 const OnlyOfficeViewer = ({ file, onlyOfficeOpener, t }) => {
   return (

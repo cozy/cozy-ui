@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import FileIcon from './FileIcon'
 import DownloadButton from './DownloadButton'
-import styles from '../styles.styl'
+import styles from '../ViewersByFile/styles.styl'
 import { FileDoctype } from '../../proptypes'
 
 const NoViewer = ({ file, url, renderFallbackExtraContent }) => (

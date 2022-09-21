@@ -5,11 +5,11 @@ import cx from 'classnames'
 import throttle from 'lodash/throttle'
 import flow from 'lodash/flow'
 
-import ViewerSpinner from './ViewerSpinner'
-import { withViewerLocales } from './withViewerLocales'
-import withFileUrl from './withFileUrl'
-import ToolbarButton from './PdfToolbarButton'
-import NoViewer from './NoViewer'
+import ViewerSpinner from '../ViewerSpinner'
+import { withViewerLocales } from '../withViewerLocales'
+import withFileUrl from '../withFileUrl'
+import ToolbarButton from '../PdfToolbarButton'
+import NoViewer from '../NoViewer'
 
 import styles from './styles.styl'
 

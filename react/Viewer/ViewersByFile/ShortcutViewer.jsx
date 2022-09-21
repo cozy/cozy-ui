@@ -2,11 +2,12 @@ import React from 'react'
 import { useClient, useFetchShortcut } from 'cozy-client'
 import get from 'lodash/get'
 
-import { withViewerLocales } from './withViewerLocales'
-import { ButtonLink } from '../Button'
-import NoViewer from './NoViewer'
-import { FileDoctype } from '../proptypes'
-import OpenwithIcon from '../Icons/Openwith'
+import { withViewerLocales } from '../withViewerLocales'
+import { ButtonLink } from '../../Button'
+import { FileDoctype } from '../../proptypes'
+import OpenwithIcon from '../../Icons/Openwith'
+
+import NoViewer from '../NoViewer'
 
 const ShortcutViewer = ({ t, file }) => {
   const client = useClient()

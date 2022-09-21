@@ -5,14 +5,14 @@ import cx from 'classnames'
 
 import { withClient, models } from 'cozy-client'
 
-import ViewerSpinner from './ViewerSpinner'
-import { FileDoctype } from '../proptypes'
+import { FileDoctype } from '../../proptypes'
 
-import withFileUrl from './withFileUrl'
-import NoViewer from './NoViewer'
+import ViewerSpinner from '../ViewerSpinner'
+import withFileUrl from '../withFileUrl'
+import NoViewer from '../NoViewer'
+import { isFileEncrypted } from '../helpers'
 
 import styles from './styles.styl'
-import { isFileEncrypted } from './helpers'
 
 const MarkdownRenderer = ({ text }) => (
   <ReactMarkdown
