@@ -9,7 +9,7 @@ import Dots from '../../Icons/Dots'
 import QualificationListItemText from './QualificationListItemText'
 import { useI18n } from '../../I18n'
 
-const QualificationListItemNumber = forwardRef(
+const QualificationListItemInformation = forwardRef(
   ({ metadataComputed, toggleActionsMenu }, ref) => {
     const { t } = useI18n()
     const { name, value } = metadataComputed
@@ -29,9 +29,9 @@ const QualificationListItemNumber = forwardRef(
     )
   }
 )
-QualificationListItemNumber.displayName = 'QualificationListItemNumber'
+QualificationListItemInformation.displayName = 'QualificationListItemNumber'
 
-QualificationListItemNumber.propTypes = {
+QualificationListItemInformation.propTypes = {
   metadataComputed: PropTypes.shape({
     name: PropTypes.string,
     value: PropTypes.string
@@ -39,4 +39,4 @@ QualificationListItemNumber.propTypes = {
   toggleActionsMenu: PropTypes.func.isRequired
 }
 
-export default QualificationListItemNumber
+export default QualificationListItemInformation
