@@ -17,7 +17,7 @@ const QualificationListItemNumber = forwardRef(
     return (
       <ListItem className={'u-pl-2 u-pr-3'}>
         <QualificationListItemText
-          primary={t(`Viewer.panel.qualification.number.title.${name}`)}
+          primary={t(`Viewer.panel.qualification.information.title.${name}`)}
           secondary={value}
         />
         <ListItemSecondaryAction>
