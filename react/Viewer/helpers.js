@@ -114,10 +114,12 @@ export const formatMetadataQualification = metadata => {
 
   const others = knowOtherMetadataNames
     .map(otherName => {
-      if (otherName === 'qualification') {
-        return { name: otherName, value: metadata[otherName]?.label }
-      }
-      return { name: otherName, value: metadata[otherName] }
+      const value =
+        otherName === 'qualification'
+          ? metadata[otherName]?.label
+          : metadata[otherName]
+
+      return { name: otherName, value }
     })
     .filter(Boolean)
 
