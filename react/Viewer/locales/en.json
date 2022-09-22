@@ -46,6 +46,7 @@
             "expirationDate": "Expiration date",
             "referencedDate": "Referenced date",
             "shootingDate": "Shooting date",
+            "obtentionDate": "Date obtained",
             "date": "Document date"
           }
         },
@@ -54,7 +55,8 @@
             "number": "License number",
             "cardNumber": "National ID card number",
             "vinNumber": "Vehicle registration number (VIN)",
-            "ibanNumber": "IBAN number"
+            "ibanNumber": "IBAN number",
+            "country": "Country of delivery"
           }
         },
         "contact": "Owner",

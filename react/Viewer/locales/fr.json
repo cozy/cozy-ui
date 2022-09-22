@@ -46,6 +46,7 @@
             "expirationDate": "Expire le",
             "referencedDate": "Date de référence",
             "shootingDate": "Date de prise de vue",
+            "obtentionDate": "Date d'obtention",
             "date": "Date du document"
           }
         },
@@ -54,7 +55,8 @@
             "number": "Numéro du permis",
             "cardNumber": "Numéro de la carte d'identité",
             "vinNumber": "Numéro de la carte grise (VIN)",
-            "ibanNumber": "Numéro d'IBAN"
+            "ibanNumber": "Numéro d'IBAN",
+            "country": "Pays de délivrance"
           }
         },
         "contact": "Titulaire",
