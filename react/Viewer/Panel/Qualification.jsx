@@ -12,7 +12,7 @@ import {
 import QualificationListItemContact from './QualificationListItemContact'
 import ActionMenuWrapper from './ActionMenuWrapper'
 import QualificationListItemDate from './QualificationListItemDate'
-import QualificationListItemNumber from './QualificationListItemNumber'
+import QualificationListItemInformation from './QualificationListItemInformation'
 import QualificationListItemOther from './QualificationListItemOther'
 
 const Qualification = ({ file = {} }) => {
@@ -63,7 +63,7 @@ const Qualification = ({ file = {} }) => {
 
         if (knowInformationMetadataNames.includes(name)) {
           return (
-            <QualificationListItemNumber
+            <QualificationListItemInformation
               key={idx}
               ref={actionBtnRef.current[idx]}
               metadataComputed={meta}
