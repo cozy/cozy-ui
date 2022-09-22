@@ -7,6 +7,7 @@ export const knownDateMetadataNames = [
   'BObtentionDate',
   'CObtentionDate',
   'DObtentionDate',
+  'obtentionDate',
   'expirationDate',
   'referencedDate',
   'issueDate',
@@ -18,7 +19,8 @@ export const knowNumberMetadataNames = [
   'number',
   'cardNumber',
   'vinNumber',
-  'ibanNumber'
+  'ibanNumber',
+  'country'
 ]
 export const knowOtherMetadataNames = ['contact', 'page', 'qualification']
 
