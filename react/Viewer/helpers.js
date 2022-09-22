@@ -15,7 +15,7 @@ export const knownDateMetadataNames = [
   'date',
   'datetime'
 ]
-export const knowNumberMetadataNames = [
+export const knowInformationMetadataNames = [
   'number',
   'cardNumber',
   'vinNumber',
@@ -27,7 +27,7 @@ export const knowOtherMetadataNames = ['contact', 'page', 'qualification']
 export const getCurrentModel = metadataName => {
   if (
     knownDateMetadataNames.includes(metadataName) ||
-    knowNumberMetadataNames.includes(metadataName)
+    knowInformationMetadataNames.includes(metadataName)
   ) {
     return 'information'
   }
@@ -104,7 +104,7 @@ export const formatMetadataQualification = metadata => {
       return data
     })
 
-  const numbers = knowNumberMetadataNames
+  const numbers = knowInformationMetadataNames
     .map(numberName => {
       if (metadata[numberName]) {
         return { name: numberName, value: metadata[numberName] }
