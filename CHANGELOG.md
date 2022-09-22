@@ -1,3 +1,10 @@
+# [75.2.0](https://github.com/cozy/cozy-ui/compare/v75.1.0...v75.2.0) (2022-09-22)
+
+
+### Features
+
+* **Viewer:** Change wording for the side of the document ([d04c206](https://github.com/cozy/cozy-ui/commit/d04c206))
+
 # [75.1.0](https://github.com/cozy/cozy-ui/compare/v75.0.1...v75.1.0) (2022-09-21)
 
 
