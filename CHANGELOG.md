@@ -1,3 +1,10 @@
+# [75.3.0](https://github.com/cozy/cozy-ui/compare/v75.2.0...v75.3.0) (2022-09-22)
+
+
+### Features
+
+* **Viewer:** Add metadata for stranger driver license ([95ba1f5](https://github.com/cozy/cozy-ui/commit/95ba1f5))
+
 # [75.2.0](https://github.com/cozy/cozy-ui/compare/v75.1.0...v75.2.0) (2022-09-22)
 
 
