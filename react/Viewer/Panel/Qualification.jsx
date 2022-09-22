@@ -15,6 +15,20 @@ import QualificationListItemDate from './QualificationListItemDate'
 import QualificationListItemInformation from './QualificationListItemInformation'
 import QualificationListItemOther from './QualificationListItemOther'
 
+const makeQualificationListItemComp = metadataName => {
+  if (knownDateMetadataNames.includes(metadataName)) {
+    return QualificationListItemDate
+  }
+
+  if (knowInformationMetadataNames.includes(metadataName)) {
+    return QualificationListItemInformation
+  }
+
+  if (knowOtherMetadataNames.includes(metadataName)) {
+    return QualificationListItemOther
+  }
+}
+
 const Qualification = ({ file = {} }) => {
   const { metadata = {} } = file
   const actionBtnRef = useRef([])
@@ -54,38 +68,16 @@ const Qualification = ({ file = {} }) => {
           return <QualificationListItemContact key={idx} file={file} />
         }
 
-        if (knownDateMetadataNames.includes(name)) {
-          return (
-            <QualificationListItemDate
-              key={idx}
-              ref={actionBtnRef.current[idx]}
-              metadataComputed={meta}
-              toggleActionsMenu={val => toggleActionsMenu(idx, name, val)}
-            />
-          )
-        }
+        const QualificationListItemComp = makeQualificationListItemComp(name)
 
-        if (knowInformationMetadataNames.includes(name)) {
-          return (
-            <QualificationListItemInformation
-              key={idx}
-              ref={actionBtnRef.current[idx]}
-              metadataComputed={meta}
-              toggleActionsMenu={val => toggleActionsMenu(idx, name, val)}
-            />
-          )
-        }
-
-        if (knowOtherMetadataNames.includes(name)) {
-          return (
-            <QualificationListItemOther
-              key={idx}
-              ref={actionBtnRef.current[idx]}
-              metadataComputed={meta}
-              toggleActionsMenu={val => toggleActionsMenu(idx, name, val)}
-            />
-          )
-        }
+        return (
+          <QualificationListItemComp
+            key={idx}
+            ref={actionBtnRef.current[idx]}
+            metadataComputed={meta}
+            toggleActionsMenu={val => toggleActionsMenu(idx, name, val)}
+          />
+        )
       })}
 
       {optionFile.value && (
