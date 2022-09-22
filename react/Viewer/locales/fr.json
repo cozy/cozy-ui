@@ -50,7 +50,7 @@
             "date": "Date du document"
           }
         },
-        "number": {
+        "information": {
           "title": {
             "number": "Numéro du permis",
             "cardNumber": "Numéro de la carte d'identité",

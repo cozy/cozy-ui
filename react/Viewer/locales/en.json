@@ -50,7 +50,7 @@
             "date": "Document date"
           }
         },
-        "number": {
+        "information": {
           "title": {
             "number": "License number",
             "cardNumber": "National ID card number",
