@@ -104,4 +104,4 @@ Qualification.propTypes = {
   file: PropTypes.object
 }
 
-export default withViewerLocales(React.memo(Qualification))
+export default withViewerLocales(Qualification)
