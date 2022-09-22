@@ -50,6 +50,10 @@ const Qualification = ({ file = {} }) => {
       {metadataComputed.map((meta, idx) => {
         const { name } = meta
 
+        if (name === 'contact') {
+          return <QualificationListItemContact key={idx} file={file} />
+        }
+
         if (knownDateMetadataNames.includes(name)) {
           return (
             <QualificationListItemDate
@@ -73,10 +77,6 @@ const Qualification = ({ file = {} }) => {
         }
 
         if (knowOtherMetadataNames.includes(name)) {
-          if (name === 'contact') {
-            return <QualificationListItemContact key={idx} file={file} />
-          }
-
           return (
             <QualificationListItemOther
               key={idx}
