@@ -49,19 +49,19 @@ const Qualification = ({ file = {} }) => {
     })
   }
 
-  const metadataComputed = useMemo(() => {
+  const formatedMetadataQualification = useMemo(() => {
     return formatMetadataQualification(metadata)
   }, [metadata])
 
   useEffect(() => {
-    actionBtnRef.current = metadataComputed.map(
+    actionBtnRef.current = formatedMetadataQualification.map(
       (_, idx) => actionBtnRef.current[idx] ?? createRef()
     )
-  }, [metadataComputed])
+  }, [formatedMetadataQualification])
 
   return (
     <List className={'u-pv-1'}>
-      {metadataComputed.map((meta, idx) => {
+      {formatedMetadataQualification.map((meta, idx) => {
         const { name } = meta
 
         if (name === 'contact') {
@@ -74,7 +74,7 @@ const Qualification = ({ file = {} }) => {
           <QualificationListItemComp
             key={idx}
             ref={actionBtnRef.current[idx]}
-            metadataComputed={meta}
+            formatedMetadataQualification={meta}
             toggleActionsMenu={val => toggleActionsMenu(idx, name, val)}
           />
         )

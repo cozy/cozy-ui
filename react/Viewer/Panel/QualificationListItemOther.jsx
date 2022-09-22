@@ -19,10 +19,10 @@ const {
 } = models
 
 const QualificationListItemOther = forwardRef(
-  ({ metadataComputed, toggleActionsMenu }, ref) => {
+  ({ formatedMetadataQualification, toggleActionsMenu }, ref) => {
     const { t, lang } = useI18n()
     const scannerT = getBoundT(lang)
-    const { name, value } = metadataComputed
+    const { name, value } = formatedMetadataQualification
 
     if (!value) return null
 
@@ -52,7 +52,7 @@ const QualificationListItemOther = forwardRef(
 QualificationListItemOther.displayName = 'QualificationListItemOther'
 
 QualificationListItemOther.propTypes = {
-  metadataComputed: PropTypes.shape({
+  formatedMetadataQualification: PropTypes.shape({
     name: PropTypes.string,
     value: PropTypes.string
   }).isRequired,

@@ -10,9 +10,9 @@ import QualificationListItemText from './QualificationListItemText'
 import { useI18n } from '../../I18n'
 
 const QualificationListItemInformation = forwardRef(
-  ({ metadataComputed, toggleActionsMenu }, ref) => {
+  ({ formatedMetadataQualification, toggleActionsMenu }, ref) => {
     const { t } = useI18n()
-    const { name, value } = metadataComputed
+    const { name, value } = formatedMetadataQualification
 
     return (
       <ListItem className={'u-pl-2 u-pr-3'}>
@@ -32,7 +32,7 @@ const QualificationListItemInformation = forwardRef(
 QualificationListItemInformation.displayName = 'QualificationListItemNumber'
 
 QualificationListItemInformation.propTypes = {
-  metadataComputed: PropTypes.shape({
+  formatedMetadataQualification: PropTypes.shape({
     name: PropTypes.string,
     value: PropTypes.string
   }).isRequired,
