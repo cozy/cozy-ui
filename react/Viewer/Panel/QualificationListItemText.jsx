@@ -8,15 +8,19 @@ const QualificationListItemText = ({ primary, secondary }) => {
   return (
     <ListItemText
       disableTypography
-      primary={<Typography variant={'caption'}>{primary}</Typography>}
-      secondary={<Typography variant={'body1'}>{secondary}</Typography>}
+      primary={<Typography variant="caption">{primary}</Typography>}
+      secondary={
+        <Typography component="div" variant="body1">
+          {secondary}
+        </Typography>
+      }
     />
   )
 }
 
 QualificationListItemText.propTypes = {
   primary: PropTypes.string.isRequired,
-  secondary: PropTypes.string.isRequired
+  secondary: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired
 }
 
 export default QualificationListItemText
