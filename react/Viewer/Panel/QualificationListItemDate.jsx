@@ -11,9 +11,9 @@ import { useI18n } from '../../I18n'
 import { formatDate } from '../helpers'
 
 const QualificationListItemDate = forwardRef(
-  ({ metadataComputed, toggleActionsMenu }, ref) => {
+  ({ formatedMetadataQualification, toggleActionsMenu }, ref) => {
     const { t, f, lang } = useI18n()
-    const { name, value } = metadataComputed
+    const { name, value } = formatedMetadataQualification
     const formattedDate = formatDate({ f, lang, date: value })
 
     return (
@@ -37,7 +37,7 @@ const QualificationListItemDate = forwardRef(
 QualificationListItemDate.displayName = 'QualificationListItemDate'
 
 QualificationListItemDate.propTypes = {
-  metadataComputed: PropTypes.shape({
+  formatedMetadataQualification: PropTypes.shape({
     name: PropTypes.string,
     value: PropTypes.string
   }).isRequired,
