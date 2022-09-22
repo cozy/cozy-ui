@@ -6,7 +6,7 @@ import { withViewerLocales } from '../hoc/withViewerLocales'
 import {
   formatMetadataQualification,
   knownDateMetadataNames,
-  knowNumberMetadataNames,
+  knowInformationMetadataNames,
   knowOtherMetadataNames
 } from '../helpers'
 import QualificationListItemContact from './QualificationListItemContact'
@@ -61,7 +61,7 @@ const Qualification = ({ file = {} }) => {
           )
         }
 
-        if (knowNumberMetadataNames.includes(name)) {
+        if (knowInformationMetadataNames.includes(name)) {
           return (
             <QualificationListItemNumber
               key={idx}
