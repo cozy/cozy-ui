@@ -80,7 +80,7 @@ const Qualification = ({ file = {} }) => {
         )
       })}
 
-      {optionFile.value && (
+      {optionFile.name && (
         <ActionMenuWrapper
           onClose={hideActionsMenu}
           file={file}

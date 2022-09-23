@@ -87,9 +87,13 @@ export const downloadFile = async ({ client, file, url }) => {
 
 export const isFileEncrypted = file => isEncrypted(file)
 
-const makeMetadataQualification = (name, value) => {
-  if (value) {
-    return { name, value }
+const makeMetadataQualification = ({ metadata, knownMetadataName, value }) => {
+  const shouldReturnThisMetadata = Object.keys(metadata).includes(
+    knownMetadataName
+  )
+
+  if (shouldReturnThisMetadata) {
+    return { name: knownMetadataName, value: value || null }
   }
 }
 
@@ -99,7 +103,13 @@ const makeMetadataQualification = (name, value) => {
  */
 export const formatMetadataQualification = metadata => {
   const dates = knownDateMetadataNames
-    .map(dateName => makeMetadataQualification(dateName, metadata[dateName]))
+    .map(dateName =>
+      makeMetadataQualification({
+        metadata,
+        knownMetadataName: dateName,
+        value: metadata[dateName]
+      })
+    )
     .filter(Boolean)
     .filter((data, _, arr) => {
       if (arr.length > 1) return data.name !== 'datetime'
@@ -108,7 +118,11 @@ export const formatMetadataQualification = metadata => {
 
   const numbers = knowInformationMetadataNames
     .map(numberName =>
-      makeMetadataQualification(numberName, metadata[numberName])
+      makeMetadataQualification({
+        metadata,
+        knownMetadataName: numberName,
+        value: metadata[numberName]
+      })
     )
     .filter(Boolean)
 
@@ -119,7 +133,11 @@ export const formatMetadataQualification = metadata => {
           ? metadata[otherName]?.label
           : metadata[otherName]
 
-      return makeMetadataQualification(otherName, value)
+      return makeMetadataQualification({
+        metadata,
+        knownMetadataName: otherName,
+        value
+      })
     })
     .filter(Boolean)
 
