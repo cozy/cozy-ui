@@ -3,7 +3,7 @@ import {
   ensureFirstSlash
 } from 'cozy-client'
 
-import { UNIVERSAL_LINK_URL } from './native.config.js'
+import { UNIVERSAL_LINK_URL } from './native.config'
 
 export const getUniversalLinkDomain = () => {
   return UNIVERSAL_LINK_URL
