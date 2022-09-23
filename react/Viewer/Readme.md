@@ -58,8 +58,14 @@ const files = [
     mime: 'application/pdf',
     metadata: {
       carbonCopy: true,
+      AObtentionDate: null,
       BObtentionDate: "2022-02-09T09:05:38.000Z",
+      CObtentionDate: null,
+      DObtentionDate: null,
+      datetime: "2022-09-23T07:50:22.000Z",
       datetimeLabel: "BObtentionDate",
+      number: "",
+      page: "front",
       qualification: {
         label: "driver_license",
         purpose: "attestation",
@@ -170,8 +176,6 @@ const editPathByModelProps = {
                 files={files}
                 currentIndex={state.currentIndex}
                 currentURL={state.currentURL}
-                onCloseRequest={toggleViewer}
-                onChangeRequest={onFileChange}
                 showNavigation={variant.navigation}
                 editPathByModelProps={editPathByModelProps}
                 onlyOfficeProps={{
@@ -182,6 +186,8 @@ const editPathByModelProps = {
                   showToolbar: variant.toolbar,
                   showClose: state.showToolbarCloseButton
                 }}
+                onCloseRequest={toggleViewer}
+                onChangeRequest={onFileChange}
               >
                 <FooterActionButtons>
                   <ShareButtonFake />
