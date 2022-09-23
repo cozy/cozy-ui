@@ -65,7 +65,7 @@ const ActionMenuWrapper = forwardRef(({ onClose, optionFile }, ref) => {
     return (
       <ActionMenuMobile
         onClose={onClose}
-        isEditable={editPath && isEditableAttribute}
+        isEditable={Boolean(editPath) && isEditableAttribute}
         actions={{ handleCopy, handleEdit }}
         appLink={url}
         appSlug={mespapiersAppSlug}
@@ -77,7 +77,7 @@ const ActionMenuWrapper = forwardRef(({ onClose, optionFile }, ref) => {
     <ActionMenuDesktop
       ref={ref}
       onClose={onClose}
-      isEditable={editPath && isEditableAttribute}
+      isEditable={Boolean(editPath) && isEditableAttribute}
       actions={{ handleCopy, handleEdit }}
       appLink={url}
       appSlug={mespapiersAppSlug}
