@@ -7,7 +7,7 @@ import {
   getCurrentModel,
   buildEditAttributePath,
   knownDateMetadataNames,
-  knowInformationMetadataNames
+  knownInformationMetadataNames
 } from './helpers'
 
 const fakeMetadata = {
@@ -125,7 +125,7 @@ describe('helpers', () => {
   })
   describe('getCurrentModel', () => {
     const expected = 'information'
-    it.each([...knownDateMetadataNames, ...knowInformationMetadataNames])(
+    it.each([...knownDateMetadataNames, ...knownInformationMetadataNames])(
       `getCurrentModel(%s) should return ${expected}`,
       input => {
         expect(getCurrentModel(input)).toBe(expected)

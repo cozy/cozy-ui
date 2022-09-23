@@ -6,8 +6,8 @@ import { withViewerLocales } from '../hoc/withViewerLocales'
 import {
   formatMetadataQualification,
   knownDateMetadataNames,
-  knowInformationMetadataNames,
-  knowOtherMetadataNames
+  knownInformationMetadataNames,
+  knownOtherMetadataNames
 } from '../helpers'
 import QualificationListItemContact from './QualificationListItemContact'
 import ActionMenuWrapper from './ActionMenuWrapper'
@@ -20,11 +20,11 @@ const makeQualificationListItemComp = metadataName => {
     return QualificationListItemDate
   }
 
-  if (knowInformationMetadataNames.includes(metadataName)) {
+  if (knownInformationMetadataNames.includes(metadataName)) {
     return QualificationListItemInformation
   }
 
-  if (knowOtherMetadataNames.includes(metadataName)) {
+  if (knownOtherMetadataNames.includes(metadataName)) {
     return QualificationListItemOther
   }
 }
