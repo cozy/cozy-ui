@@ -18,7 +18,8 @@ const QualificationListItemInformation = forwardRef(
       <ListItem className={'u-pl-2 u-pr-3'}>
         <QualificationListItemText
           primary={t(`Viewer.panel.qualification.information.title.${name}`)}
-          secondary={value}
+          secondary={value || t('Viewer.panel.qualification.noInfo')}
+          disabled={!value}
         />
         <ListItemSecondaryAction>
           <IconButton ref={ref} onClick={() => toggleActionsMenu(value)}>
@@ -29,6 +30,7 @@ const QualificationListItemInformation = forwardRef(
     )
   }
 )
+
 QualificationListItemInformation.displayName = 'QualificationListItemNumber'
 
 QualificationListItemInformation.propTypes = {

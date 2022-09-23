@@ -14,13 +14,16 @@ const QualificationListItemDate = forwardRef(
   ({ formatedMetadataQualification, toggleActionsMenu }, ref) => {
     const { t, f, lang } = useI18n()
     const { name, value } = formatedMetadataQualification
-    const formattedDate = formatDate({ f, lang, date: value })
+    const formattedDate = value
+      ? formatDate({ f, lang, date: value })
+      : t('Viewer.panel.qualification.noInfo')
 
     return (
       <ListItem className={'u-pl-2 u-pr-3'}>
         <QualificationListItemText
           primary={t(`Viewer.panel.qualification.date.title.${name}`)}
           secondary={formattedDate}
+          disabled={!value}
         />
         <ListItemSecondaryAction>
           <IconButton
@@ -34,6 +37,7 @@ const QualificationListItemDate = forwardRef(
     )
   }
 )
+
 QualificationListItemDate.displayName = 'QualificationListItemDate'
 
 QualificationListItemDate.propTypes = {

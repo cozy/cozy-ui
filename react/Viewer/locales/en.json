@@ -64,6 +64,7 @@
         "front": "Front side",
         "back": "Back side",
         "qualification": "Qualification",
+        "noInfo": "No information",
         "actions": {
           "copy": "Copy",
           "copyClipboard": "Copy to clipboard",
