@@ -36,6 +36,7 @@ const Input = forwardRef((props, ref) => {
       disabled={disabled}
       placeholder={placeholder}
       value={value}
+      spellCheck={false}
       {...restProps}
     />
   )
