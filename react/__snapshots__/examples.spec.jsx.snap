@@ -2882,21 +2882,21 @@ exports[`Field should render examples: Field 1`] = `
 exports[`Field should render examples: Field 2`] = `
 "<div>
   <form>
-    <div class=\\"styles__o-field___3n5HM styles__o-field--inline___7JWZ8\\"><label for=\\"idField\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm a label</label><input type=\\"text\\" id=\\"idField\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--medium___28jPV\\" placeholder=\\"Write something\\" value=\\"\\"></div>
+    <div class=\\"styles__o-field___3n5HM styles__o-field--inline___7JWZ8\\"><label for=\\"idField\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm a label</label><input type=\\"text\\" id=\\"idField\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--medium___28jPV\\" placeholder=\\"Write something\\" spellcheck=\\"false\\" value=\\"\\"></div>
   </form>
 </div>"
 `;
 
 exports[`Field should render examples: Field 3`] = `
 "<div>
-  <div class=\\"styles__o-field___3n5HM\\"><label for=\\"controlled-field\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\"></label><input type=\\"text\\" id=\\"controlled-field\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" value=\\"\\"></div>
+  <div class=\\"styles__o-field___3n5HM\\"><label for=\\"controlled-field\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\"></label><input type=\\"text\\" id=\\"controlled-field\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" spellcheck=\\"false\\" value=\\"\\"></div>
 </div>"
 `;
 
 exports[`Field should render examples: Field 4`] = `
 "<div>
   <div>
-    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I can have focus</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Focus please\\" value=\\"\\"></div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Focus!</span>Set Focus</span></button>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I can have focus</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Focus please\\" spellcheck=\\"false\\" value=\\"\\"></div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Focus!</span>Set Focus</span></button>
   </div>
 </div>"
 `;
@@ -2904,7 +2904,7 @@ exports[`Field should render examples: Field 4`] = `
 exports[`Field should render examples: Field 5`] = `
 "<div>
   <form>
-    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I got a name</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" name=\\"foo\\" value=\\"\\"></div>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I got a name</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" spellcheck=\\"false\\" name=\\"foo\\" value=\\"\\"></div>
   </form>
 </div>"
 `;
@@ -2912,7 +2912,7 @@ exports[`Field should render examples: Field 5`] = `
 exports[`Field should render examples: Field 6`] = `
 "<div>
   <form>
-    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idFieldError\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm an error label</label><input type=\\"text\\" id=\\"idFieldError\\" class=\\"styles__c-input-text___3TAv1 styles__is-error___3lsCJ styles__c-input-text--large___28EaR\\" placeholder=\\"I'm an error input[type=text]\\" value=\\"\\"></div>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idFieldError\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm an error label</label><input type=\\"text\\" id=\\"idFieldError\\" class=\\"styles__c-input-text___3TAv1 styles__is-error___3lsCJ styles__c-input-text--large___28EaR\\" placeholder=\\"I'm an error input[type=text]\\" spellcheck=\\"false\\" value=\\"\\"></div>
   </form>
 </div>"
 `;
@@ -2975,7 +2975,7 @@ exports[`Field should render examples: Field 9`] = `
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idFieldPassword\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm a password label</label>
       <div class=\\"styles__o-field-input___vCqdV\\">
-        <div class=\\"styles__c-label___o4ozG styles__o-field-input-action___2k7a8\\">Show</div><input type=\\"password\\" id=\\"idFieldPassword\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" value=\\"\\">
+        <div class=\\"styles__c-label___o4ozG styles__o-field-input-action___2k7a8\\">Show</div><input type=\\"password\\" id=\\"idFieldPassword\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" spellcheck=\\"false\\" value=\\"\\">
       </div>
     </div>
   </form>
@@ -2987,7 +2987,7 @@ exports[`Field should render examples: Field 10`] = `
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"idFieldPassword\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm a password label</label>
       <div class=\\"styles__o-field-input___vCqdV\\">
-        <div class=\\"styles__c-label___o4ozG styles__o-field-input-action___2k7a8\\"></div><input type=\\"password\\" id=\\"idFieldPassword\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" value=\\"\\">
+        <div class=\\"styles__c-label___o4ozG styles__o-field-input-action___2k7a8\\"></div><input type=\\"password\\" id=\\"idFieldPassword\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" spellcheck=\\"false\\" value=\\"\\">
       </div>
     </div>
   </form>
@@ -2998,7 +2998,7 @@ exports[`Field should render examples: Field 11`] = `
 "<div>
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm a label</label>
-      <div class=\\"styles__o-side___tXbXL styles__c-label___o4ozG\\">(optional)</div><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" value=\\"\\">
+      <div class=\\"styles__o-side___tXbXL styles__c-label___o4ozG\\">(optional)</div><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" spellcheck=\\"false\\" value=\\"\\">
     </div>
   </form>
 </div>"
@@ -3008,7 +3008,7 @@ exports[`Field should render examples: Field 12`] = `
 "<div>
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">I'm a label</label>
-      <div class=\\"styles__o-side___tXbXL styles__c-label___o4ozG styles__o-side-fullwidth___7WcCI\\">(optional)</div><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR styles__c-input-text--fullwidth___33o_f\\" placeholder=\\"\\" value=\\"\\">
+      <div class=\\"styles__o-side___tXbXL styles__c-label___o4ozG styles__o-side-fullwidth___7WcCI\\">(optional)</div><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR styles__c-input-text--fullwidth___33o_f\\" placeholder=\\"\\" spellcheck=\\"false\\" value=\\"\\">
     </div>
   </form>
 </div>"
@@ -3017,7 +3017,7 @@ exports[`Field should render examples: Field 12`] = `
 exports[`Field should render examples: Field 13`] = `
 "<div>
   <form>
-    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\" style=\\"color: teal;\\">I'm a label</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" style=\\"border-color: teal;\\" value=\\"\\"></div>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\" style=\\"color: teal;\\">I'm a label</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" spellcheck=\\"false\\" style=\\"border-color: teal;\\" value=\\"\\"></div>
   </form>
 </div>"
 `;
@@ -3029,7 +3029,7 @@ exports[`Field should render examples: Field 14`] = `
       <div class=\\"styles__o-field-input___vCqdV\\">
         <div class=\\"styles__o-field-input-action___2k7a8\\">
           <div style=\\"margin-top: -0.5rem;\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textSecondary MuiButton-textSizeSmall MuiButton-sizeSmall\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">Show</span></button></div>
-        </div><input type=\\"password\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" style=\\"border-color: teal;\\" value=\\"\\">
+        </div><input type=\\"password\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" spellcheck=\\"false\\" style=\\"border-color: teal;\\" value=\\"\\">
       </div>
     </div>
   </form>
@@ -3040,7 +3040,7 @@ exports[`Field should render examples: Field 15`] = `
 "<div>
   <form>
     <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\"></label>
-      <div class=\\"styles__o-side___tXbXL styles__c-label___o4ozG styles__o-side-fullwidth___7WcCI\\">(optional)</div><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR styles__c-input-text--fullwidth___33o_f\\" placeholder=\\"\\" value=\\"\\">
+      <div class=\\"styles__o-side___tXbXL styles__c-label___o4ozG styles__o-side-fullwidth___7WcCI\\">(optional)</div><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR styles__c-input-text--fullwidth___33o_f\\" placeholder=\\"\\" spellcheck=\\"false\\" value=\\"\\">
     </div>Value:
   </form>
 </div>"
@@ -3052,7 +3052,7 @@ exports[`Field should render examples: Field 16`] = `
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">AUTOCAPITALIZE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">AUTOCOMPLETE</span></label>
   </div>
   <form>
-    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\"></label><input autocomplete=\\"off\\" type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" autocapitalize=\\"none\\" value=\\"\\"></div>
+    <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\"></label><input autocomplete=\\"off\\" type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" spellcheck=\\"false\\" autocapitalize=\\"none\\" value=\\"\\"></div>
   </form>
 </div>"
 `;
@@ -8437,7 +8437,7 @@ exports[`InputGroup should render examples: InputGroup 1`] = `
   <form>
     <div>
       <div class=\\"styles__c-inputgroup___12OVJ\\">
-        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Placeholder\\" value=\\"\\"></div>
+        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Placeholder\\" spellcheck=\\"false\\" value=\\"\\"></div>
         <div class=\\"styles__c-inputgroup-side___60v0v\\"><span class=\\"styles__c-inputgroup-unit___bFj9a\\">€</span></div>
       </div>
     </div>
@@ -8453,7 +8453,7 @@ exports[`InputGroup should render examples: InputGroup 2`] = `
         <div class=\\"styles__c-inputgroup-side___60v0v\\">
           <h6 class=\\"MuiTypography-root u-pl-1 MuiTypography-h6 MuiTypography-colorTextPrimary\\">text</h6>
         </div>
-        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Placeholder\\" value=\\"\\"></div>
+        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Placeholder\\" spellcheck=\\"false\\" value=\\"\\"></div>
       </div>
     </div>
   </form>
@@ -8465,8 +8465,8 @@ exports[`InputGroup should render examples: InputGroup 3`] = `
   <form>
     <div>
       <div class=\\"styles__c-inputgroup___12OVJ\\">
-        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Email\\" value=\\"\\"></div>
-        <div class=\\"styles__c-inputgroup-side___60v0v\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR u-w-4\\" placeholder=\\"@domain.tld\\" value=\\"\\"></div>
+        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Email\\" spellcheck=\\"false\\" value=\\"\\"></div>
+        <div class=\\"styles__c-inputgroup-side___60v0v\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR u-w-4\\" placeholder=\\"@domain.tld\\" spellcheck=\\"false\\" value=\\"\\"></div>
       </div>
     </div>
   </form>
@@ -8478,7 +8478,7 @@ exports[`InputGroup should render examples: InputGroup 4`] = `
   <form>
     <div>
       <div class=\\"styles__c-inputgroup___12OVJ\\">
-        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"URL\\" value=\\"\\"></div>
+        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"URL\\" spellcheck=\\"false\\" value=\\"\\"></div>
         <div class=\\"styles__c-inputgroup-side___60v0v\\">
           <div class=\\"styles__select--autowidth___16AEp u-w-4 css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
             <div class=\\" css-1x8e986-control\\">
@@ -8509,7 +8509,7 @@ exports[`InputGroup should render examples: InputGroup 5`] = `
   <form>
     <div>
       <div class=\\"styles__c-inputgroup___12OVJ styles__c-inputgroup--fullwidth___3nuay\\">
-        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Placeholder\\" value=\\"\\"></div>
+        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Placeholder\\" spellcheck=\\"false\\" value=\\"\\"></div>
         <div class=\\"styles__c-inputgroup-side___60v0v\\">
           <h6 class=\\"MuiTypography-root u-pr-1 MuiTypography-h6 MuiTypography-colorTextPrimary\\">text</h6>
         </div>
@@ -8524,7 +8524,7 @@ exports[`InputGroup should render examples: InputGroup 6`] = `
   <form>
     <div>
       <div class=\\"styles__c-inputgroup___12OVJ styles__c-inputgroup--error___1JNbu\\">
-        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Placeholder\\" value=\\"\\"></div>
+        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Placeholder\\" spellcheck=\\"false\\" value=\\"\\"></div>
         <div class=\\"styles__c-inputgroup-side___60v0v\\">
           <h6 class=\\"MuiTypography-root u-pr-1 MuiTypography-h6 MuiTypography-colorTextPrimary\\">text</h6>
         </div>
@@ -8542,7 +8542,7 @@ exports[`InputGroup should render examples: InputGroup 7`] = `
         <div class=\\"styles__c-inputgroup-side___60v0v\\">
           <h6 class=\\"MuiTypography-root u-pl-1 MuiTypography-h6 MuiTypography-colorTextPrimary\\">text</h6>
         </div>
-        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Placeholder\\" value=\\"\\"></div>
+        <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Placeholder\\" spellcheck=\\"false\\" value=\\"\\"></div>
       </div>
     </div>
   </form>
@@ -8552,7 +8552,7 @@ exports[`InputGroup should render examples: InputGroup 7`] = `
 exports[`Label should render examples: Label 1`] = `
 "<div>
   <form>
-    <div><label for=\\"idInput\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">This is a label</label><input type=\\"text\\" id=\\"idInput\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Recherche\\" value=\\"\\"></div>
+    <div><label for=\\"idInput\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">This is a label</label><input type=\\"text\\" id=\\"idInput\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Recherche\\" spellcheck=\\"false\\" value=\\"\\"></div>
   </form>
 </div>"
 `;
@@ -8560,7 +8560,7 @@ exports[`Label should render examples: Label 1`] = `
 exports[`Label should render examples: Label 2`] = `
 "<div>
   <form>
-    <div><label for=\\"idInput2\\" class=\\"styles__c-label___o4ozG\\">This is an inline label</label><input type=\\"text\\" id=\\"idInput2\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Recherche\\" value=\\"\\"></div>
+    <div><label for=\\"idInput2\\" class=\\"styles__c-label___o4ozG\\">This is an inline label</label><input type=\\"text\\" id=\\"idInput2\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Recherche\\" spellcheck=\\"false\\" value=\\"\\"></div>
   </form>
 </div>"
 `;
@@ -8568,7 +8568,7 @@ exports[`Label should render examples: Label 2`] = `
 exports[`Label should render examples: Label 3`] = `
 "<div>
   <form>
-    <div><label for=\\"idInput2\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7 styles__is-error___2Dwem\\">This is an error label</label><input type=\\"text\\" id=\\"idInput2\\" class=\\"styles__c-input-text___3TAv1 styles__is-error___3lsCJ styles__c-input-text--large___28EaR\\" placeholder=\\"Recherche\\" value=\\"\\"></div>
+    <div><label for=\\"idInput2\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7 styles__is-error___2Dwem\\">This is an error label</label><input type=\\"text\\" id=\\"idInput2\\" class=\\"styles__c-input-text___3TAv1 styles__is-error___3lsCJ styles__c-input-text--large___28EaR\\" placeholder=\\"Recherche\\" spellcheck=\\"false\\" value=\\"\\"></div>
   </form>
 </div>"
 `;
@@ -9403,8 +9403,8 @@ exports[`Wizard should render examples: Wizard 1`] = `
         <h3 class=\\"MuiTypography-root styles__wizard-title___11Dzr MuiTypography-h3 MuiTypography-colorTextPrimary\\">Connect to your Cozy</h3>
       </header>
       <div class=\\"styles__wizard-main___ObvId\\">
-        <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">Login</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"dalailama@cozycloud.cc\\" value=\\"\\"></div>
-        <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">Password</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" value=\\"\\"></div>
+        <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">Login</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"dalailama@cozycloud.cc\\" spellcheck=\\"false\\" value=\\"\\"></div>
+        <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">Password</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" spellcheck=\\"false\\" value=\\"\\"></div>
         <p class=\\"styles__wizard-errors___1ufSE u-error\\">There is an error</p>
       </div>
       <footer class=\\"styles__wizard-footer___-ZrgM u-pb-2\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN styles__c-btn--center___16_Xh styles__wizard-next___38lPl\\"><span><span>Next step</span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" style=\\"fill: white;\\" width=\\"16\\" height=\\"16\\">
