@@ -1,3 +1,17 @@
+# [75.4.0](https://github.com/cozy/cozy-ui/compare/v75.3.0...v75.4.0) (2022-09-26)
+
+
+### Bug Fixes
+
+* **Viewer:** Ensute bool type for isEditable in ActionMenuWrapper ([464caac](https://github.com/cozy/cozy-ui/commit/464caac))
+* **Viewer:** QualificationListItemText was using bad dom structure and prop ([53c351b](https://github.com/cozy/cozy-ui/commit/53c351b))
+
+
+### Features
+
+* **Input:** Disables spell checking ([43040df](https://github.com/cozy/cozy-ui/commit/43040df))
+* **Viewer:** Show all possible qualification data, uninformed if empty ([c3d13d5](https://github.com/cozy/cozy-ui/commit/c3d13d5))
+
 # [75.3.0](https://github.com/cozy/cozy-ui/compare/v75.2.0...v75.3.0) (2022-09-22)
 
 
