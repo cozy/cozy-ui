@@ -20,11 +20,11 @@ const withFileUrl = BaseComponent =>
     static contextTypes = {
       client: PropTypes.object.isRequired
     }
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       this.loadDownloadUrl()
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
       if (
         nextProps.file.id !== this.props.file.id ||
         nextProps.url !== this.props.url
