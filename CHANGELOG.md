@@ -1,3 +1,10 @@
+## [75.4.1](https://github.com/cozy/cozy-ui/compare/v75.4.0...v75.4.1) (2022-09-27)
+
+
+### Bug Fixes
+
+* Rename componentWill* to UNSAFE_componentWill* ([10b5fba](https://github.com/cozy/cozy-ui/commit/10b5fba))
+
 # [75.4.0](https://github.com/cozy/cozy-ui/compare/v75.3.0...v75.4.0) (2022-09-26)
 
 
