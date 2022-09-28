@@ -8,7 +8,7 @@ import { useI18n } from '../../I18n'
 import useViewerSnackbar from '../providers/ViewerSnackbarProvider'
 import {
   buildEditAttributePath,
-  checkEditableAttribute,
+  isEditableAttribute,
   getCurrentModel
 } from '../helpers'
 import useActionMenuContext from '../providers/ActionMenuProvider'
@@ -25,7 +25,6 @@ const ActionMenuWrapper = forwardRef(({ onClose, optionFile }, ref) => {
   const { showViewerSnackbar } = useViewerSnackbar()
   const client = useClient()
 
-  const isEditableAttribute = checkEditableAttribute(name)
   const currentModel = getCurrentModel(name)
   const editPath = buildEditAttributePath(
     editPathByModelProps,
@@ -64,7 +63,7 @@ const ActionMenuWrapper = forwardRef(({ onClose, optionFile }, ref) => {
     return (
       <ActionMenuMobile
         onClose={onClose}
-        isEditable={Boolean(editPath) && isEditableAttribute}
+        isEditable={Boolean(editPath) && isEditableAttribute(name)}
         actions={{ handleCopy, handleEdit }}
         appLink={url}
         appSlug={mespapiersAppSlug}
@@ -76,7 +75,7 @@ const ActionMenuWrapper = forwardRef(({ onClose, optionFile }, ref) => {
     <ActionMenuDesktop
       ref={ref}
       onClose={onClose}
-      isEditable={Boolean(editPath) && isEditableAttribute}
+      isEditable={Boolean(editPath) && isEditableAttribute(name)}
       actions={{ handleCopy, handleEdit }}
       appLink={url}
       appSlug={mespapiersAppSlug}
