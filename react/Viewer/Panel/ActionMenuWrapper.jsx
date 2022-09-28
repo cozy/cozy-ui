@@ -6,17 +6,16 @@ import { useAppLinkWithStoreFallback, useClient } from 'cozy-client'
 import useBreakpoints from '../../hooks/useBreakpoints'
 import { useI18n } from '../../I18n'
 import useViewerSnackbar from '../providers/ViewerSnackbarProvider'
-import { buildEditAttributePath, getCurrentModel } from '../helpers'
+import {
+  buildEditAttributePath,
+  checkEditableAttribute,
+  getCurrentModel
+} from '../helpers'
 import useActionMenuContext from '../providers/ActionMenuProvider'
 import ActionMenuMobile from './ActionMenuMobile'
 import ActionMenuDesktop from './ActionMenuDesktop'
 
 const mespapiersAppSlug = 'mespapiers'
-
-const checkEditableAttribute = name => {
-  const isNotEditableAttributes = ['datetime', 'qualification']
-  return !isNotEditableAttributes.includes(name)
-}
 
 const ActionMenuWrapper = forwardRef(({ onClose, optionFile }, ref) => {
   const { name, value } = optionFile

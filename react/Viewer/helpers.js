@@ -165,3 +165,8 @@ export const buildEditAttributePath = (
   const currentPath = editPathByModelProps[currentModel]
   return currentPath?.replace(/__NAME__/, name) ?? ''
 }
+
+export const checkEditableAttribute = name => {
+  const isNotEditableAttributes = ['datetime', 'qualification']
+  return !isNotEditableAttributes.includes(name)
+}
