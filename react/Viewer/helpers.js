@@ -1,6 +1,10 @@
-import has from 'lodash/has'
 import { models } from 'cozy-client'
-const { isEncrypted } = models.file
+const {
+  isEncrypted,
+  isFromKonnector,
+  hasQualifications,
+  hasCertifications
+} = models.file
 
 export const knownDateMetadataNames = [
   'AObtentionDate',
@@ -41,25 +45,6 @@ export const getCurrentModel = metadataName => {
  * @property {string} type - doctype of the document
  */
 
-// TODO : should be in file model of cozy-client
-export const isPlainText = (mimeType = '', fileName = '') => {
-  return mimeType ? /^text\//.test(mimeType) : /\.(txt|md)$/.test(fileName)
-}
-
-export const hasQualifications = ({ file }) => {
-  return has(file, 'metadata.qualification')
-}
-
-export const hasCertifications = ({ file }) => {
-  return (
-    has(file, 'metadata.carbonCopy') || has(file, 'metadata.electronicSafe')
-  )
-}
-
-export const isFromKonnector = ({ file }) => {
-  return has(file, 'cozyMetadata.sourceAccount')
-}
-
 /**
  * Checks if the file matches one of the following conditions:
  * - Is certified
@@ -72,9 +57,7 @@ export const isFromKonnector = ({ file }) => {
  */
 export const isValidForPanel = ({ file }) => {
   return (
-    hasCertifications({ file }) ||
-    hasQualifications({ file }) ||
-    isFromKonnector({ file })
+    hasCertifications(file) || hasQualifications(file) || isFromKonnector(file)
   )
 }
 
@@ -171,7 +154,6 @@ export const isEditableAttribute = (name, file) => {
 
   return (
     !isNotEditableAttributes.includes(name) &&
-    ((name === 'issueDate' && !isFromKonnector({ file })) ||
-      name !== 'issueDate')
+    ((name === 'issueDate' && !isFromKonnector(file)) || name !== 'issueDate')
   )
 }

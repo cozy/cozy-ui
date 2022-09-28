@@ -1,12 +1,10 @@
 import KonnectorBlock from 'cozy-harvest-lib/dist/components/KonnectorBlock'
+import { models } from 'cozy-client'
 
-import {
-  hasCertifications,
-  hasQualifications,
-  isFromKonnector
-} from '../helpers'
 import Certifications from './Certifications'
 import Qualification from './Qualification'
+
+const { isFromKonnector, hasQualifications, hasCertifications } = models.file
 
 export const panelBlocksSpecs = {
   qualifications: {
@@ -27,7 +25,7 @@ const getPanelBlocks = ({ panelBlocksSpecs, file }) => {
   const panelBlocks = []
 
   Object.values(panelBlocksSpecs).forEach(panelBlock => {
-    panelBlock.condition({ file }) && panelBlocks.push(panelBlock.component)
+    panelBlock.condition(file) && panelBlocks.push(panelBlock.component)
   })
 
   return panelBlocks
