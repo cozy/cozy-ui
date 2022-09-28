@@ -166,7 +166,7 @@ export const buildEditAttributePath = (
   return currentPath?.replace(/__NAME__/, name) ?? ''
 }
 
-export const checkEditableAttribute = name => {
+export const isEditableAttribute = name => {
   const isNotEditableAttributes = ['datetime', 'qualification']
   return !isNotEditableAttributes.includes(name)
 }
