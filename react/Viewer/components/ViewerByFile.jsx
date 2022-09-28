@@ -2,10 +2,11 @@ import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
 
 import { isMobile as isMobileDevice } from 'cozy-device-helper'
+import { models } from 'cozy-client'
+
 import { FileDoctype } from '../../proptypes'
 import withBreakpoints from '../../helpers/withBreakpoints'
 
-import { isPlainText } from '../helpers'
 import ImageViewer from '../ViewersByFile/ImageViewer'
 import AudioViewer from '../ViewersByFile/AudioViewer'
 import VideoViewer from '../ViewersByFile/VideoViewer'
@@ -17,6 +18,8 @@ import ShortcutViewer from '../ViewersByFile/ShortcutViewer'
 import OnlyOfficeViewer from '../ViewersByFile/OnlyOfficeViewer'
 
 import { useEncrypted } from '../providers/EncryptedProvider'
+
+const { isPlainText } = models.file
 
 export const getViewerComponentName = ({
   file,
