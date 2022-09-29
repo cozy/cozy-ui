@@ -7,7 +7,8 @@ import {
   getCurrentModel,
   buildEditAttributePath,
   knownDateMetadataNames,
-  knownInformationMetadataNames
+  knownInformationMetadataNames,
+  isEditableAttribute
 } from './helpers'
 
 const fakeMetadata = {
@@ -154,6 +155,55 @@ describe('helpers', () => {
         '#/paper/edit/information/01?metadata=cardNumber&backgroundPath=$/path'
       )
       expect(buildPagePath).toBe('#/paper/edit/page/01?backgroundPath=/path')
+    })
+  })
+  describe('isEditableAttribute', () => {
+    const makeFile = ({ fromConnector } = {}) => ({
+      _id: '00',
+      name: 'file',
+      cozyMetadata: fromConnector ? { sourceAccount: '123' } : {}
+    })
+    describe('file provided by a Connector', () => {
+      it('"issueDate" should not be a editable attribute', () => {
+        const issueDate = isEditableAttribute(
+          'issueDate',
+          makeFile({ fromConnector: true })
+        )
+        expect(issueDate).toBe(false)
+      })
+      it('"cardNumber" should be an editable attribute', () => {
+        const cardNumber = isEditableAttribute(
+          'cardNumber',
+          makeFile({ fromConnector: true })
+        )
+        expect(cardNumber).toBe(true)
+      })
+      it('"datetime" should not be an editable attribute', () => {
+        const datetime = isEditableAttribute('datetime', makeFile())
+        expect(datetime).toBe(false)
+      })
+      it('"qualification" should not be an editable attribute', () => {
+        const qualification = isEditableAttribute('qualification', makeFile())
+        expect(qualification).toBe(false)
+      })
+    })
+    describe('file NOT provided by a Connector', () => {
+      it('"issueDate" should not be a editable attribute', () => {
+        const issueDate = isEditableAttribute('issueDate', makeFile())
+        expect(issueDate).toBe(true)
+      })
+      it('"cardNumber" should be a editable attribute', () => {
+        const cardNumber = isEditableAttribute('cardNumber', makeFile())
+        expect(cardNumber).toBe(true)
+      })
+      it('"datetime" should not be an editable attribute', () => {
+        const datetime = isEditableAttribute('datetime', makeFile())
+        expect(datetime).toBe(false)
+      })
+      it('"qualification" should not be an editable attribute', () => {
+        const qualification = isEditableAttribute('qualification', makeFile())
+        expect(qualification).toBe(false)
+      })
     })
   })
 })

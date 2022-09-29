@@ -166,7 +166,12 @@ export const buildEditAttributePath = (
   return currentPath?.replace(/__NAME__/, name) ?? ''
 }
 
-export const isEditableAttribute = name => {
+export const isEditableAttribute = (name, file) => {
   const isNotEditableAttributes = ['datetime', 'qualification']
-  return !isNotEditableAttributes.includes(name)
+
+  return (
+    !isNotEditableAttributes.includes(name) &&
+    ((name === 'issueDate' && !isFromKonnector({ file })) ||
+      name !== 'issueDate')
+  )
 }
