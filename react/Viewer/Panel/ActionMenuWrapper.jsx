@@ -17,7 +17,7 @@ import ActionMenuDesktop from './ActionMenuDesktop'
 
 const mespapiersAppSlug = 'mespapiers'
 
-const ActionMenuWrapper = forwardRef(({ onClose, optionFile }, ref) => {
+const ActionMenuWrapper = forwardRef(({ onClose, file, optionFile }, ref) => {
   const { name, value } = optionFile
   const editPathByModelProps = useActionMenuContext()
   const { isMobile } = useBreakpoints()
@@ -63,7 +63,7 @@ const ActionMenuWrapper = forwardRef(({ onClose, optionFile }, ref) => {
     return (
       <ActionMenuMobile
         onClose={onClose}
-        isEditable={Boolean(editPath) && isEditableAttribute(name)}
+        isEditable={Boolean(editPath) && isEditableAttribute(name, file)}
         actions={{ handleCopy, handleEdit }}
         appLink={url}
         appSlug={mespapiersAppSlug}
@@ -75,7 +75,7 @@ const ActionMenuWrapper = forwardRef(({ onClose, optionFile }, ref) => {
     <ActionMenuDesktop
       ref={ref}
       onClose={onClose}
-      isEditable={Boolean(editPath) && isEditableAttribute(name)}
+      isEditable={Boolean(editPath) && isEditableAttribute(name, file)}
       actions={{ handleCopy, handleEdit }}
       appLink={url}
       appSlug={mespapiersAppSlug}
@@ -86,6 +86,7 @@ ActionMenuWrapper.displayName = 'ActionMenuWrapper'
 
 ActionMenuWrapper.propTypes = {
   onClose: PropTypes.func,
+  file: PropTypes.object,
   optionFile: PropTypes.shape({
     name: PropTypes.string,
     value: PropTypes.string
