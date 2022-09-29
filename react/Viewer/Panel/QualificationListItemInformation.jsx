@@ -8,6 +8,7 @@ import Icon from '../../Icon'
 import Dots from '../../Icons/Dots'
 import QualificationListItemText from './QualificationListItemText'
 import { useI18n } from '../../I18n'
+import MidEllipsis from '../../MidEllipsis'
 
 const QualificationListItemInformation = forwardRef(
   ({ formatedMetadataQualification, toggleActionsMenu }, ref) => {
@@ -18,7 +19,10 @@ const QualificationListItemInformation = forwardRef(
       <ListItem className={'u-pl-2 u-pr-3'}>
         <QualificationListItemText
           primary={t(`Viewer.panel.qualification.information.title.${name}`)}
-          secondary={value || t('Viewer.panel.qualification.noInfo')}
+          secondary={
+            <MidEllipsis text={value} /> ||
+            t('Viewer.panel.qualification.noInfo')
+          }
           disabled={!value}
         />
         <ListItemSecondaryAction>
