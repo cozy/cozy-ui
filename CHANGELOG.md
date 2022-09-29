@@ -1,3 +1,10 @@
+# [75.5.0](https://github.com/cozy/cozy-ui/compare/v75.4.1...v75.5.0) (2022-09-29)
+
+
+### Features
+
+* **Viewer:** Add new condition for isEditableAttribute helper ([af99054](https://github.com/cozy/cozy-ui/commit/af99054))
+
 ## [75.4.1](https://github.com/cozy/cozy-ui/compare/v75.4.0...v75.4.1) (2022-09-27)
 
 
