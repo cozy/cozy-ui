@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+
+// TODO: remove eslint-disable and @ts-ignore rules
+
 import { Theme, useTheme } from '@material-ui/core'
 
 import { getFlagshipMetadata, isFlagshipApp } from 'cozy-device-helper'
@@ -22,8 +26,10 @@ const useHook = (): void => {
   useSetFlagshipUI(
     {
       bottomBackground: theme.palette.background.paper,
+      // @ts-ignore
       bottomTheme: 'dark',
       topBackground: theme.palette.background.paper,
+      // @ts-ignore
       topTheme: 'dark'
     },
     {
