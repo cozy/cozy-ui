@@ -75,7 +75,7 @@ const makeMetadataQualification = ({ metadata, knownMetadataName, value }) => {
     knownMetadataName
   )
 
-  if (shouldReturnThisMetadata) {
+  if (shouldReturnThisMetadata || knownMetadataName === 'contact') {
     return { name: knownMetadataName, value: value || null }
   }
 }

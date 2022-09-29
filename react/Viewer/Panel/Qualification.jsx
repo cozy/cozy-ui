@@ -25,6 +25,9 @@ const makeQualificationListItemComp = metadataName => {
   }
 
   if (knownOtherMetadataNames.includes(metadataName)) {
+    if (metadataName === 'contact') {
+      return QualificationListItemContact
+    }
     return QualificationListItemOther
   }
 }
@@ -63,16 +66,12 @@ const Qualification = ({ file = {} }) => {
     <List className={'u-pv-1'}>
       {formatedMetadataQualification.map((meta, idx) => {
         const { name } = meta
-
-        if (name === 'contact') {
-          return <QualificationListItemContact key={idx} file={file} />
-        }
-
         const QualificationListItemComp = makeQualificationListItemComp(name)
 
         return (
           <QualificationListItemComp
             key={idx}
+            file={file}
             ref={actionBtnRef.current[idx]}
             formatedMetadataQualification={meta}
             toggleActionsMenu={val => toggleActionsMenu(idx, name, val)}
