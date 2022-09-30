@@ -2,11 +2,13 @@
 
 set -euo pipefail
 
+streamEditor=$([[ $(uname -s) == "Linux" ]] && echo sed || echo gsed)
+
 createSvgr()
 {
   svgFileFullPath=$1
   svgFilename=`basename $svgFileFullPath`
-  jsFilename=`echo $svgFilename | gsed -E 's/^([a-z])/\U\1/g; s/-([a-z])/\U\1/g; s/svg$/jsx/g'`
+  jsFilename=`echo $svgFilename | $streamEditor -E 's/^([a-z])/\U\1/g; s/-([a-z])/\U\1/g; s/svg$/jsx/g'`
   jsFileFullPath="react/Icons/${jsFilename}"
 
   echo $svgFileFullPath
