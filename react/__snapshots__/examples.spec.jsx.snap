@@ -3646,6 +3646,11 @@ exports[`Icon should render examples: Icon 1`] = `
       <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">EyeClosed</p>
     </div>
     <div class=\\"makeStyles-iconTile-110 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+        <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M2 3a1 1 0 011-1h2a1 1 0 000-2H3a3 3 0 00-3 3v2a1 1 0 002 0V3zm12 0a1 1 0 00-1-1h-2a1 1 0 110-2h2a3 3 0 013 3v2a1 1 0 11-2 0V3zM3 14a1 1 0 01-1-1v-2a1 1 0 10-2 0v2a3 3 0 003 3h2a1 1 0 100-2H3zm11-1a1 1 0 01-1 1h-2a1 1 0 100 2h2a3 3 0 003-3v-2a1 1 0 10-2 0v2zM6 6a1 1 0 11-2 0 1 1 0 012 0zm5 1a1 1 0 100-2 1 1 0 000 2zM7 6a1 1 0 012 0v2a1 1 0 01-2 0V6zm-1.386 4.21a1 1 0 10-1.228 1.58C5.364 12.55 6.63 13 8 13c1.369 0 2.636-.45 3.614-1.21a1 1 0 10-1.228-1.58C9.765 10.695 8.932 11 8 11c-.932 0-1.765-.306-2.386-.79z\\"></path>
+      </svg>
+      <p class=\\"MuiTypography-root u-mt-half MuiTypography-body1 MuiTypography-colorTextPrimary\\">FaceId</p>
+    </div>
+    <div class=\\"makeStyles-iconTile-110 u-ta-center u-mb-1\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
         <defs>
           <path id=\\"file_svg__a\\" d=\\"M1 1c0-.552.446-1 .998-1H10v5h5v10.004a1 1 0 01-1.007.996H2.007A1.002 1.002 0 011 15V1zm10 3V0l4 4h-4z\\"></path>
         </defs>
@@ -5116,6 +5121,9 @@ exports[`Icon should render examples: Icon 3`] = `
         </symbol>
         <symbol id=\\"eye\\" viewBox=\\"0 0 20 20\\">
           <path fill-rule=\\"evenodd\\" d=\\"M21,10 C21,10 24,4 30,4 C36,4 39,10 39,10 C39,10 36,16 30,16 C24,16 21,10 21,10 Z M30,14 C32.2091391,14 34,12.2091391 34,10 C34,7.79086089 32.2091391,6 30,6 C27.7908609,6 26,7.79086089 26,10 C26,12.2091391 27.7908609,14 30,14 Z M30,12 C31.1045696,12 32,11.1045696 32,10 C32,8.89543045 31.1045696,8 30,8 C28.8954304,8 28,8.89543045 28,10 C28,11.1045696 28.8954304,12 30,12 Z\\" transform=\\"translate(-20)\\"></path>
+        </symbol>
+        <symbol id=\\"face-id\\" viewBox=\\"0 0 16 16\\">
+          <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M2 3a1 1 0 0 1 1-1h2a1 1 0 0 0 0-2H3a3 3 0 0 0-3 3v2a1 1 0 0 0 2 0V3Zm12 0a1 1 0 0 0-1-1h-2a1 1 0 1 1 0-2h2a3 3 0 0 1 3 3v2a1 1 0 1 1-2 0V3ZM3 14a1 1 0 0 1-1-1v-2a1 1 0 1 0-2 0v2a3 3 0 0 0 3 3h2a1 1 0 1 0 0-2H3Zm11-1a1 1 0 0 1-1 1h-2a1 1 0 1 0 0 2h2a3 3 0 0 0 3-3v-2a1 1 0 1 0-2 0v2ZM6 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm5 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM7 6a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0V6Zm-1.386 4.21a1 1 0 1 0-1.228 1.58C5.364 12.55 6.63 13 8 13c1.369 0 2.636-.45 3.614-1.21a1 1 0 1 0-1.228-1.58C9.765 10.695 8.932 11 8 11c-.932 0-1.765-.306-2.386-.79Z\\"></path>
         </symbol>
         <symbol id=\\"file-add\\" viewBox=\\"0 0 16 16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M1 1c0-.552.446-1 .998-1H10v5h5v10.004a1 1 0 0 1-1.007.996H2.007A1.002 1.002 0 0 1 1 15V1zm10 3V0l4 4h-4zM7 6v3H4v2h3v3h2v-3h3V9H9V6H7z\\"></path>
@@ -6685,6 +6693,9 @@ exports[`Icon should render examples: Icon 7`] = `
         </symbol>
         <symbol id=\\"eye\\" viewBox=\\"0 0 20 20\\">
           <path fill-rule=\\"evenodd\\" d=\\"M21,10 C21,10 24,4 30,4 C36,4 39,10 39,10 C39,10 36,16 30,16 C24,16 21,10 21,10 Z M30,14 C32.2091391,14 34,12.2091391 34,10 C34,7.79086089 32.2091391,6 30,6 C27.7908609,6 26,7.79086089 26,10 C26,12.2091391 27.7908609,14 30,14 Z M30,12 C31.1045696,12 32,11.1045696 32,10 C32,8.89543045 31.1045696,8 30,8 C28.8954304,8 28,8.89543045 28,10 C28,11.1045696 28.8954304,12 30,12 Z\\" transform=\\"translate(-20)\\"></path>
+        </symbol>
+        <symbol id=\\"face-id\\" viewBox=\\"0 0 16 16\\">
+          <path fill-rule=\\"evenodd\\" clip-rule=\\"evenodd\\" d=\\"M2 3a1 1 0 0 1 1-1h2a1 1 0 0 0 0-2H3a3 3 0 0 0-3 3v2a1 1 0 0 0 2 0V3Zm12 0a1 1 0 0 0-1-1h-2a1 1 0 1 1 0-2h2a3 3 0 0 1 3 3v2a1 1 0 1 1-2 0V3ZM3 14a1 1 0 0 1-1-1v-2a1 1 0 1 0-2 0v2a3 3 0 0 0 3 3h2a1 1 0 1 0 0-2H3Zm11-1a1 1 0 0 1-1 1h-2a1 1 0 1 0 0 2h2a3 3 0 0 0 3-3v-2a1 1 0 1 0-2 0v2ZM6 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm5 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM7 6a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0V6Zm-1.386 4.21a1 1 0 1 0-1.228 1.58C5.364 12.55 6.63 13 8 13c1.369 0 2.636-.45 3.614-1.21a1 1 0 1 0-1.228-1.58C9.765 10.695 8.932 11 8 11c-.932 0-1.765-.306-2.386-.79Z\\"></path>
         </symbol>
         <symbol id=\\"file-add\\" viewBox=\\"0 0 16 16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M1 1c0-.552.446-1 .998-1H10v5h5v10.004a1 1 0 0 1-1.007.996H2.007A1.002 1.002 0 0 1 1 15V1zm10 3V0l4 4h-4zM7 6v3H4v2h3v3h2v-3h3V9H9V6H7z\\"></path>
