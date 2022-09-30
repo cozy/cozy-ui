@@ -106,6 +106,7 @@ import Euro from 'cozy-ui/transpiled/react/Icons/Euro'
 import Exchange from 'cozy-ui/transpiled/react/Icons/Exchange'
 import Eye from 'cozy-ui/transpiled/react/Icons/Eye'
 import EyeClosed from 'cozy-ui/transpiled/react/Icons/EyeClosed'
+import FaceId from 'cozy-ui/transpiled/react/Icons/FaceId'
 import File from 'cozy-ui/transpiled/react/Icons/File'
 import FileAdd from 'cozy-ui/transpiled/react/Icons/FileAdd'
 import FileDuotone from 'cozy-ui/transpiled/react/Icons/FileDuotone'
@@ -326,6 +327,7 @@ const icons = [
   Exchange,
   Eye,
   EyeClosed,
+  FaceId,
   File,
   FileAdd,
   FileDuotone,
