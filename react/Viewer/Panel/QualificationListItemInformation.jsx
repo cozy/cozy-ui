@@ -15,18 +15,25 @@ const QualificationListItemInformation = forwardRef(
     const { t } = useI18n()
     const { name, value } = formatedMetadataQualification
 
+    const currentValue = value ? (
+      <MidEllipsis text={value} />
+    ) : (
+      t('Viewer.panel.qualification.noInfo')
+    )
+
     return (
       <ListItem className={'u-pl-2 u-pr-3'}>
         <QualificationListItemText
           primary={t(`Viewer.panel.qualification.information.title.${name}`)}
-          secondary={
-            <MidEllipsis text={value} /> ||
-            t('Viewer.panel.qualification.noInfo')
-          }
+          secondary={currentValue}
           disabled={!value}
         />
         <ListItemSecondaryAction>
-          <IconButton ref={ref} onClick={() => toggleActionsMenu(value)}>
+          <IconButton
+            ref={ref}
+            onClick={() => toggleActionsMenu(value)}
+            data-testid="toggleActionsMenuBtn"
+          >
             <Icon icon={Dots} />
           </IconButton>
         </ListItemSecondaryAction>
