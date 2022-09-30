@@ -1,3 +1,16 @@
+# [75.6.0](https://github.com/cozy/cozy-ui/compare/v75.5.0...v75.6.0) (2022-09-30)
+
+
+### Bug Fixes
+
+* **Viewer:** Contacts no longer display in the Viewer ([2d3e379](https://github.com/cozy/cozy-ui/commit/2d3e379))
+* **Viewer:** The country name must be limited in size ([8b8fa84](https://github.com/cozy/cozy-ui/commit/8b8fa84))
+
+
+### Features
+
+* Add FaceId icon ([6571aed](https://github.com/cozy/cozy-ui/commit/6571aed))
+
 # [75.5.0](https://github.com/cozy/cozy-ui/compare/v75.4.1...v75.5.0) (2022-09-29)
 
 
