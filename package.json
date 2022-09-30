@@ -27,7 +27,8 @@
     "build:doc:config": "copyfiles -u 1 docs/*.md docs/_config.yml build",
     "build:doc:kss": "kss --destination build/styleguide --title 'Cozy-UI Styleguide' --source stylus --builder node_modules/michelangelo/kss_styleguide/custom-template --homepage stylus/styleguide.md --css app.css",
     "build:doc:react": "styleguidist build --config docs/styleguide.config.js",
-    "build": "env BABEL_ENV=transpilation babel --extensions .ts,.tsx,.js,.jsx react/ --out-dir transpiled/react --verbose",
+    "build:types": "tsc -p tsconfig-build.json",
+    "build": "yarn build:types && env BABEL_ENV=transpilation babel --extensions .ts,.tsx,.js,.jsx react/ --out-dir transpiled/react --verbose",
     "clean:doc:kss": "rm -rf build/styleguide",
     "deploy:doc": "git-directory-deploy --directory build/ --branch gh-pages",
     "makeSvgr": "scripts/generate-svgr-icon.sh",
@@ -60,6 +61,7 @@
     "removeEmptyCss": "node scripts/removeEmptyCss.js",
     "optimizeIcons": "svgo -r --folder assets/icons"
   },
+  "types": "dist/index.d.ts",
   "sideEffects": [
     "*.css",
     "intersection-observer"

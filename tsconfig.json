@@ -4,14 +4,14 @@
   ],
   "exclude": [
     "node_modules",
-    "dist"
+    "transpiled"
   ],
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./src",
     "declaration": true,
-    "declarationDir": "./dist",
+    "declarationDir": "./transpiled/react",
     "emitDeclarationOnly": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
