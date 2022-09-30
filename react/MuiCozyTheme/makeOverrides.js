@@ -464,14 +464,16 @@ const makeOverrides = theme => ({
       marginRight: '1rem',
       padding: 0,
       width: 32,
-      justifyContent: 'center'
+      justifyContent: 'center',
+      color: theme.palette.text.icon
     }
   },
   MuiListItem: {
     root: {
       paddingTop: 0,
       paddingBottom: 0,
-      minHeight: '3.5rem'
+      minHeight: '3.5rem',
+      color: theme.palette.text.secondary
     },
     gutters: {
       paddingLeft: '1rem',
@@ -487,9 +489,6 @@ const makeOverrides = theme => ({
       minHeight: '3.5rem',
       paddingTop: 0,
       paddingBottom: 0
-    },
-    secondaryAction: {
-      paddingRight: '2rem'
     }
   },
   MuiListItemText: {
@@ -500,6 +499,7 @@ const makeOverrides = theme => ({
       fontSize: null
     },
     primary: {
+      color: theme.palette.text.primary,
       '&$dense': {
         fontSize: null
       }
@@ -518,7 +518,7 @@ const makeOverrides = theme => ({
     root: {
       borderTop: '1px solid transparent',
       borderBottom: '1px solid transparent',
-      marginBottom: '-1px',
+      marginBottom: '0.5rem',
       padding: 0,
       height: '2rem',
       backgroundColor: theme.palette.background.paper,
@@ -544,7 +544,6 @@ const makeOverrides = theme => ({
   },
   MuiListItemSecondaryAction: {
     root: {
-      zIndex: 1,
       right: 0
     }
   },
