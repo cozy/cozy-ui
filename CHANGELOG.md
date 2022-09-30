@@ -1,3 +1,10 @@
+## [75.6.1](https://github.com/cozy/cozy-ui/compare/v75.6.0...v75.6.1) (2022-09-30)
+
+
+### Bug Fixes
+
+* **Viewer:** Do not use MidEllipsys component if text prop is falsy ([abefe41](https://github.com/cozy/cozy-ui/commit/abefe41))
+
 # [75.6.0](https://github.com/cozy/cozy-ui/compare/v75.5.0...v75.6.0) (2022-09-30)
 
 
