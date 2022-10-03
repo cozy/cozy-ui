@@ -28,7 +28,7 @@ const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
   const { isMobile } = useBreakpoints()
   return (
     <ListItem dense button divider onClick={() => onClick(item)}>
-      {radioPosition === 'left' ? (
+      {radioPosition === 'left' && (
         <ListItemIcon className="u-mr-0">
           <Radio
             readOnly
@@ -37,12 +37,12 @@ const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
             checked={!!isSelected}
           />
         </ListItemIcon>
-      ) : null}
-      {item.icon ? (
+      )}
+      {item.icon && (
         <ListItemIcon className={`${isMobile ? 'u-ml-half' : 'u-ml-1'} u-mr-1`}>
           {item.icon}
         </ListItemIcon>
-      ) : null}
+      )}
       <NestedSelectListItemText
         primary={item.title}
         ellipsis
@@ -53,23 +53,23 @@ const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
           className: 'u-ellipsis'
         }}
       />
-      {item.children && item.children.length > 0 ? (
+      {item.children && item.children.length > 0 && (
         <NestedSelectListRightIcon>
           <Icon icon={RightIcon} />
         </NestedSelectListRightIcon>
-      ) : null}
+      )}
 
       {radioPosition === 'right' &&
-      !(item.children && item.children.length > 0) ? (
-        <NestedSelectListRightIcon>
-          <Radio
-            readOnly
-            name={item.title}
-            value={item.title}
-            checked={!!isSelected}
-          />
-        </NestedSelectListRightIcon>
-      ) : null}
+        !(item.children && item.children.length > 0) && (
+          <NestedSelectListRightIcon>
+            <Radio
+              readOnly
+              name={item.title}
+              value={item.title}
+              checked={!!isSelected}
+            />
+          </NestedSelectListRightIcon>
+        )}
     </ListItem>
   )
 }
