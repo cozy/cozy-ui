@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import omit from 'lodash/omit'
 
-import Divider from '../MuiCozyTheme/Divider'
 import Input from '../Input'
 import Typography from '../Typography'
 import ItemRow from './ItemRow'
@@ -120,7 +119,6 @@ class NestedSelect extends Component {
                 onClick={this.handleClickItem}
                 isSelected={isSelectedWithLevel(parentItem)}
               />
-              <Divider />
             </>
           ) : null}
           {searchOptions && level === 0 && (
