@@ -1,8 +1,8 @@
-```
+```jsx
 import { useState } from 'react'
 import Button from '../Button'
 import Circle from '../Circle'
-import NestedSelectModal from './Modal';
+import NestedSelectModal from './Modal'
 import ListItem from '../MuiCozyTheme/ListItem'
 import ListItemText from '../ListItemText'
 import Checkbox from '../Checkbox'
@@ -27,7 +27,7 @@ const options = {
   children: [
     letterOption('A', 'is for Apple'),
     {
-      ...letterOption('B', 'is for Balloon'), 
+      ...letterOption('B', 'is for Balloon'),
       children: [
         letterOption('B1'),
         letterOption('B2')
@@ -35,7 +35,7 @@ const options = {
     },
     letterOption('C', 'is for crayon'),
     letterOption('D', 'is for Drums !'),
-    letterOption('E. A very long option, that should be ellipsed. And it goes on, and on...', 'Its description is also very long and will be ellipsed. E is the 5th letter from the roman alphabet...'),
+    letterOption(`E. A very long option, that should be ellipsed. ${content.ada.short}`, `Its description is also very long and will be ellipsed. ${content.ada.short}`),
     letterOption('F'),
     letterOption('G'),
     letterOption('H', 'H for hero', 'hero'),
@@ -85,7 +85,7 @@ const InteractiveExample = () => {
   const showModal = () => setShowingModal(true)
   const hideModal = () => setShowingModal(false)
   const isSelected = (item, level) => {
-    if (!selectedItem) { 
+    if (!selectedItem) {
       return false
     } else if (level === 0 && isParent(item, selectedItem)) {
       return true
@@ -98,30 +98,28 @@ const InteractiveExample = () => {
   const handleClickLeftRadio = () => {
     setLeftRadio(!leftRadio)
   }
-  
-  const handleClickWithSearch = (e) => {
+
+  const handleClickWithSearch = e => {
     if (e.target.checked) {
       const searchOpts = {
-          placeholderSearch: 'Placeholder Search',
-          noDataLabel: 'No Data Found',
-          onSearch: (value) => {
-            return options.children.filter(o => o.description && o.description.toLowerCase().includes(value.toLowerCase()))
-          },
-          displaySearchResultItem: item =>
-          <ListItem key={item.id} dense button divider>
-             <ListItemText
-               primary={item.description}
-               ellipsis />
-          </ListItem>
-        }
+        placeholderSearch: 'Placeholder Search',
+        noDataLabel: 'No Data Found',
+        onSearch: (value) => {
+          return options.children.filter(o => o.description && o.description.toLowerCase().includes(value.toLowerCase()))
+        },
+        displaySearchResultItem: item =>
+        <ListItem key={item.id} dense button divider>
+          <ListItemText
+            primary={item.description}
+            ellipsis
+          />
+        </ListItem>
+      }
       setSearchOptions(searchOpts)
     } else {
       setSearchOptions(null)
     }
-    
   }
-  
-  
 
   const handleSelect = item => {
     setSelected(item)
@@ -132,12 +130,27 @@ const InteractiveExample = () => {
 
   return (
     <>
-      <Checkbox label='radio to the left' readOnly name='leftRadio' value={leftRadio} checked={leftRadio} onClick={handleClickLeftRadio} />
-      <Checkbox label='with search' readOnly name='withSearch' value={!!searchOptions} checked={!!searchOptions} onClick={handleClickWithSearch} />
-      { selectedItem ? <>Selected: { selectedItem.title }<br/></> : null }
- 
-      <Button className='u-ml-0' label='Select' onClick={showModal} ></Button>
-      { showingModal ?
+      <Checkbox
+        label='radio to the left'
+        readOnly
+        name='leftRadio'
+        value={leftRadio}
+        checked={leftRadio}
+        onClick={handleClickLeftRadio}
+      />
+      <Checkbox
+        label='with search'
+        readOnly
+        name='withSearch'
+        value={!!searchOptions}
+        checked={!!searchOptions}
+        onClick={handleClickWithSearch}
+      />
+      { selectedItem && (
+        <>Selected: { selectedItem.title }<br/></>
+      )}
+      <Button className='u-ml-0' label='Select' onClick={showModal} />
+      { showingModal && (
         <NestedSelectModal
           canSelectParent={true}
           onSelect={handleSelect}
@@ -148,16 +161,20 @@ const InteractiveExample = () => {
           title="Please select letter"
           transformParentItem={transformParentItem}
           searchOptions={searchOptions}
-        /> : null }
+        />
+      )}
     </>
   )
-};
+}
+
+;
 
 <>
-  <BreakpointsProvider>{
-    isTesting()
+  <BreakpointsProvider>
+    {isTesting()
       ? <StaticExample />
       : <InteractiveExample />
-  }</BreakpointsProvider>
+    }
+  </BreakpointsProvider>
 </>
 ```
