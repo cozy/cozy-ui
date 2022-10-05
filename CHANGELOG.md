@@ -1,3 +1,22 @@
+# [76.0.0](https://github.com/cozy/cozy-ui/compare/v75.6.1...v76.0.0) (2022-10-05)
+
+
+### Bug Fixes
+
+* **List:** Change default color and position of List element ([2f11d48](https://github.com/cozy/cozy-ui/commit/2f11d48))
+* **NestedSelect:** Remove useless divider in header ([b4c4f46](https://github.com/cozy/cozy-ui/commit/b4c4f46))
+* **NestedSelect:** Remove useless style override in ItemRow ([b9e347e](https://github.com/cozy/cozy-ui/commit/b9e347e))
+
+
+### Features
+
+* Add CircularChart component ([d1b7283](https://github.com/cozy/cozy-ui/commit/d1b7283))
+
+
+### BREAKING CHANGES
+
+* **List:** Style, color and position of List elements have been readjusted. The result may not be appropriate for your use case, refer to the documentation to apply adjustments if necessary.
+
 ## [75.6.1](https://github.com/cozy/cozy-ui/compare/v75.6.0...v75.6.1) (2022-09-30)
 
 
