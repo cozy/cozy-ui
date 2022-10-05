@@ -25523,25 +25523,6 @@ iframe {
   font-size: 1.5em;
 }
 
-.OrderedList--17A_o {
-  list-style: none;
-  counter-reset: cozy-ui-ordered-list;
-  padding-left: 0;
-  line-height: 1.5;
-}
-.ListItem--2Lu4a {
-  counter-increment: cozy-ui-ordered-list;
-  position: relative;
-  padding-left: 1.5rem;
-}
-.ListItem--2Lu4a::before {
-  content: counter(cozy-ui-ordered-list) ". ";
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
 html {
   --zIndex-below: -1;
   --zIndex-app: 0;
@@ -26337,6 +26318,25 @@ html {
 @media (max-width: 48rem) {
 }
 @media (max-width: 48rem) {
+}
+
+.OrderedList--17A_o {
+  list-style: none;
+  counter-reset: cozy-ui-ordered-list;
+  padding-left: 0;
+  line-height: 1.5;
+}
+.ListItem--2Lu4a {
+  counter-increment: cozy-ui-ordered-list;
+  position: relative;
+  padding-left: 1.5rem;
+}
+.ListItem--2Lu4a::before {
+  content: counter(cozy-ui-ordered-list) ". ";
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .Breadcrumb--lSOZg {
