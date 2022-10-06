@@ -1,5 +1,10 @@
 Pre-built modals ready to be directly used in applications, based on MUI Dialog.
 
+Will automatically:
+
+* Be aria-labelled via the title
+* Switch to fullscreen on mobile unless the size is small
+
 ### Usage
 
 * **Dialog** : default Cozy modal
@@ -8,10 +13,20 @@ Pre-built modals ready to be directly used in applications, based on MUI Dialog.
 * **FixedDialog** : default one but with both title/actions fixed
 * **FixedActionsDialog** : default one but with title fluid and actions fixed
 
-Will automatically:
+```bash
+import { Dialog } from  'cozy-ui/transpiled/react/CozyDialogs'
+import Button from  'cozy-ui/transpiled/react/Buttons'
 
-* Be aria-labelled via the title
-* Switch to fullscreen on mobile unless the size is small
+<Dialog
+  open
+  title="the title"
+  content="the content"
+  actions={
+    <Button label="the button action" />
+  }
+  onClose={someFunction}
+/>
+```
 
 ### Props
 
