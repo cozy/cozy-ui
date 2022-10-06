@@ -1,10 +1,11 @@
 import React from 'react'
 
+import useBreakpoints from '../hooks/useBreakpoints'
 import BottomDrawer from '../BottomDrawer'
+
 import NotInlineWrapper from './NotInlineWrapper'
 
 const ActionMenuWrapper = ({
-  inline,
   onClose,
   anchorElRef,
   popperOptions,
@@ -12,7 +13,9 @@ const ActionMenuWrapper = ({
   preventOverflow,
   children
 }) => {
-  if (!inline) {
+  const { isMobile } = useBreakpoints()
+
+  if (isMobile) {
     return <BottomDrawer onClose={onClose}>{children}</BottomDrawer>
   }
 
@@ -20,9 +23,9 @@ const ActionMenuWrapper = ({
     <NotInlineWrapper
       anchorElRef={anchorElRef}
       popperOptions={popperOptions}
+      onClose={onClose}
       placement={placement}
       preventOverflow={preventOverflow}
-      onClose={onClose}
     >
       {children}
     </NotInlineWrapper>
