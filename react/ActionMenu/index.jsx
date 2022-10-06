@@ -4,6 +4,7 @@ import cx from 'classnames'
 
 import createDepreciationLogger from '../helpers/createDepreciationLogger'
 import useBreakpoints from '../hooks/useBreakpoints'
+
 import ActionMenuWrapper from './ActionMenuWrapper'
 import { ActionMenuHeader } from './ActionMenuHeader'
 import { ActionMenuItem } from './ActionMenuItem'
@@ -17,14 +18,14 @@ const logDepecratedOverflow = createDepreciationLogger()
 const logDepecratedContainer = createDepreciationLogger()
 
 const ActionMenu = ({
-  children,
-  autoclose,
   className,
+  anchorElRef,
+  autoclose,
+  popperOptions,
+  children,
   onClose,
   placement,
   preventOverflow,
-  popperOptions,
-  anchorElRef,
   containerElRef
 }) => {
   if (placement)
@@ -53,12 +54,12 @@ const ActionMenu = ({
       onClick={autoclose ? onClose : null}
     >
       <ActionMenuWrapper
-        onClose={onClose}
-        inline={shouldDisplayInline}
         anchorElRef={anchorElRef || containerRef}
+        inline={shouldDisplayInline}
+        popperOptions={popperOptions}
+        onClose={onClose}
         placement={placement}
         preventOverflow={preventOverflow}
-        popperOptions={popperOptions}
       >
         <div
           className={cx(styles['c-actionmenu'], {
@@ -77,8 +78,8 @@ const ActionMenu = ({
 ActionMenu.propTypes = {
   /** Extra class */
   className: PropTypes.string,
-  /** What to do on close */
-  onClose: PropTypes.func,
+  /** The reference element for the menu placement and overflow prevention. */
+  anchorElRef: PropTypes.object,
   /** Whether the menu should automatically close itself when an item is clicked */
   autoclose: PropTypes.bool,
   /** Options passed to popper.js to control menu behaviour on desktop */
@@ -98,8 +99,16 @@ ActionMenu.propTypes = {
       'top'
     ])
   }),
-  /** The reference element for the menu placement and overflow prevention. */
-  anchorElRef: PropTypes.object
+  /** Elements of the menu */
+  children: PropTypes.node,
+  /** What to do on close */
+  onClose: PropTypes.func,
+  /** Deprecated */
+  placement: PropTypes.string,
+  /** Deprecated */
+  preventOverflow: PropTypes.bool,
+  /** Deprecated */
+  containerElRef: PropTypes.object
 }
 
 ActionMenu.defaultProps = {
