@@ -4,7 +4,7 @@ Use an ActionMenu to show a list of actions. ActionMenus automatically switch th
 
 You can pass a reference to a custom DOM element through the `anchorElRef` prop to attach the menu to that element. This is useful is you want to be able to have autoclose true and be able to close the menu by clicking on the same component that opens it.
 
-A header can be used to provide context on the menu actions. Since on desktop, we display a popper and not a BottomDrawer, context for the user is not lost, so the ActionMenuHeader would be redundant. This is why it is not rendered unless we are on mobile.
+A header can be used to provide context on the menu actions. Since on desktop, we display a popper and not a `BottomSheet`, context for the user is not lost, so the ActionMenuHeader would be redundant. This is why it is not rendered unless we are on mobile.
 
 We use [popper.js](https://popper.js.org/docs/v2/) under the hood. You can use the `popperOptions` prop to pass options to the popper.js instance. This lets you control things like placement relative to the anchor, positioning strategies and more — refer to the popper doc for all the details. The positionning is only relevant on desktop.
 
