@@ -1,7 +1,7 @@
 import React from 'react'
 
 import useBreakpoints from '../hooks/useBreakpoints'
-import BottomDrawer from '../BottomDrawer'
+import BottomSheet from '../BottomSheet'
 
 import NotInlineWrapper from './NotInlineWrapper'
 
@@ -16,7 +16,11 @@ const ActionMenuWrapper = ({
   const { isMobile } = useBreakpoints()
 
   if (isMobile) {
-    return <BottomDrawer onClose={onClose}>{children}</BottomDrawer>
+    return (
+      <BottomSheet backdrop onClose={onClose}>
+        {children}
+      </BottomSheet>
+    )
   }
 
   return (
