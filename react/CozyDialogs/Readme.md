@@ -32,19 +32,20 @@ import Button from  'cozy-ui/transpiled/react/Buttons'
 
 * **size** : `<string>` – Can be "s", "m" (default) or "l"
 * **open** : `<boolean>` (required) – To open/close the modal
+* **disableTitleAutoPadding** : `<boolean>` (optional) – Disable title padding calculation that would prevent overlapping with close and back buttons
+  * if set to `true` then you should handle those CSS properties by yourself or title will take 100% of width
+  * if set to `false` then title will take only available space between close and back buttons regarding which of `onClose` or `onBack` props are defined or not
+* **disableGutters** : `<boolean>` – To disable the margins and paddings of the inner content
+* **background** : `<string>` – Background css prop
+* **title** : `<node>` – Title of the modal
+* **content** : `<node>` – Content of the modal
+* **actions** : `<node>` – Actions of the modal
+* **actionsLayout** : `<string>` – Can be "row" or "column"
 * **onClose** : `<function>` (required) – Triggered function on modal close action
 * **onBack** : `<function>` (optional) – Triggered function on modal back action
   * if defined and in desktop mode then a back button is shown in addition to the close button and it will trigger onBack() on click
   * if defined and in mobile mode then the back button will trigger onBack() instead of onClose()
   * if not defined and in mobile mode then the back button will trigger onClose()
-* **disableTitleAutoPadding** : `<boolean>` (optional) – Disable title padding calculation that would prevent overlapping with close and back buttons
-  * if set to `true` then you should handle those CSS properties by yourself or title will take 100% of width
-  * if set to `false` then title will take only available space between close and back buttons regarding which of `onClose` or `onBack` props are defined or not
-* **disableGutters** : `<boolean>` – To disable the margins and paddings of the inner content
-* **title** : `<node>` – Title of the modal
-* **content** : `<node>` – Content of the modal
-* **actions** : `<node>` – Actions of the modal
-* **actionsLayout** : `<string>` – Can be "row" or "column"
 
 Additionally, all the CozyDialogs support [MUI Dialog's props](https://v3.material-ui.com/api/dialog/).
 
@@ -75,6 +76,7 @@ import BottomSheet, { BottomSheetItem } from 'cozy-ui/transpiled/react/BottomShe
 import Stack from 'cozy-ui/transpiled/react/Stack'
 
 import CloudIcon from "cozy-ui/transpiled/react/Icons/Cloud"
+import BackgroundImg from './background.png'
 
 const handleClose = () => setState({ modalOpened: !state.modalOpened })
 const handleBack = () => {
@@ -193,7 +195,8 @@ const initialVariants = [{
   alignTop: false,
   showActions: true,
   disableGutters: false,
-  hideTitle: false
+  hideTitle: false,
+  withBackground: false
 }]
 
 ;
@@ -282,6 +285,7 @@ const initialVariants = [{
               : dialogTitles[DialogComponent.name]
           }
           disableGutters={variant.disableGutters}
+          background={variant.withBackground ? `var(--paperBackgroundColor) repeat-x url(${BackgroundImg})` : undefined}
           content={
             <>
               <Typography component="div" variant="body1">
