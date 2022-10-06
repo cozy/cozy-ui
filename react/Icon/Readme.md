@@ -502,17 +502,7 @@ const InfoModal = ({ icon }) => {
   />
 }
 
-const useStyles = makeStyles({
-  iconTile: {
-    cursor: 'pointer',
-    '&:hover': {
-      'text-decoration': 'underline'
-    }
-  }
-})
-
 const Example = () => {
-  const classes = useStyles()
   return (
     <BreakpointsProvider>
       <Typography component='p' variant='body1' className='u-mb-1'>
@@ -522,7 +512,7 @@ const Example = () => {
         {
         icons.map(icon => <div
             key={icon}
-            className={cx(classes.iconTile, 'u-ta-center u-mb-1')}
+            className="u-c-pointer u-ta-center u-mb-1"
             onClick={() => setState({ selected: icon })}
           >
             <Icon icon={ icon } size={state.size} />
@@ -749,17 +739,7 @@ const InfoModal = ({ icon }) => {
   />
 }
 
-const useStyles = makeStyles({
-  iconTile: {
-    cursor: 'pointer',
-    '&:hover': {
-      'text-decoration': 'underline'
-    }
-  }
-})
-
 const Example = () => {
-  const classes = useStyles()
   return (
     <BreakpointsProvider>
       <Typography component='p' variant='body1' className='u-mb-1'>
@@ -769,7 +749,7 @@ const Example = () => {
         {
         icons.map(icon => <div
             key={icon}
-            className={cx(classes.iconTile, 'u-ta-center u-mb-1')}
+            className="u-c-pointer u-ta-center u-mb-1"
             onClick={() => setState({ selected: icon })}
           >
             <Icon icon={ icon } size={state.size} />
