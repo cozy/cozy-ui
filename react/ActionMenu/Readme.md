@@ -1,12 +1,121 @@
 Use an ActionMenu to show a list of actions. ActionMenus automatically switch their display between desktop and mobile.
 
-### Example
 
 You can pass a reference to a custom DOM element through the `anchorElRef` prop to attach the menu to that element. This is useful is you want to be able to have autoclose true and be able to close the menu by clicking on the same component that opens it.
 
 A header can be used to provide context on the menu actions. Since on desktop, we display a popper and not a `BottomSheet`, context for the user is not lost, so the ActionMenuHeader would be redundant. This is why it is not rendered unless we are on mobile.
 
 We use [popper.js](https://popper.js.org/docs/v2/) under the hood. You can use the `popperOptions` prop to pass options to the popper.js instance. This lets you control things like placement relative to the anchor, positioning strategies and more — refer to the popper doc for all the details. The positionning is only relevant on desktop.
+
+```jsx
+import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton'
+import ActionMenu, { ActionMenuItem, ActionMenuRadio, ActionMenuHeader } from 'cozy-ui/transpiled/react/ActionMenu'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import Variants from 'cozy-ui/docs/components/Variants'
+import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List'
+import ListSubheader from 'cozy-ui/transpiled/react/MuiCozyTheme/ListSubheader'
+import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem'
+import ListItemIcon from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon'
+import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
+import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemSecondaryAction'
+import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import PeopleIcon from 'cozy-ui/transpiled/react/Icons/People'
+import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
+import Radio from 'cozy-ui/transpiled/react/Radios'
+import Typography from 'cozy-ui/transpiled/react/Typography'
+import DotsIcon from 'cozy-ui/transpiled/react/Icons/Dots'
+import IconButton from 'cozy-ui/transpiled/react/IconButton'
+
+const initialVariants = [
+  { withMobileHeader: isTesting(), withDesktopPlacement: false }
+]
+
+initialState = { menuDisplayed: isTesting(), modalOpened: false }
+
+const anchorRef = React.useRef()
+const showMenu = () => setState({ menuDisplayed: true })
+const hideMenu = () => setState({ menuDisplayed: false })
+const toggleMenu = () => {setState(state => ({ menuDisplayed: !state.menuDisplayed }))}
+const onClose = () => setState({ modalOpened: !state.modalOpened })
+
+;
+
+<BreakpointsProvider>
+  <Variants initialVariants={initialVariants}>
+    {variant => (
+      <>
+        <DropdownButton onClick={toggleMenu} ref={anchorRef}>Show action menu</DropdownButton>
+        {state.menuDisplayed && (
+          <ActionMenu
+            anchorElRef={anchorRef}
+            autoclose
+            disableStyle
+            popperOptions={{ placement: variant.withDesktopPlacement ? 'bottom-end' : 'bottom-start'}}
+            onClose={hideMenu}
+          >
+            <List>
+              <ListItem button>
+                <ListItemIcon>
+                  <Radio />
+                </ListItemIcon>
+                <ListItemText primary="Profil" />
+                <Icon icon={RightIcon} />
+              </ListItem>
+
+              <Divider component="li" />
+
+              <ListItem button>
+                <ListItemIcon>
+                  <Icon icon={PeopleIcon} />
+                </ListItemIcon>
+                <ListItemText primary="Actions" />
+                <ListItemSecondaryAction>
+                  <IconButton>
+                    <Icon icon={DotsIcon} />
+                  </IconButton>
+                </ListItemSecondaryAction>
+              </ListItem>
+
+              <Divider component="li" variant="inset" />
+
+              <ListItem button>
+                <ListItemIcon>
+                  <Icon icon={PeopleIcon} />
+                </ListItemIcon>
+                <ListItemText primary={content.ada.short} secondary={content.ada.short} />
+                <Radio edge="end" />
+              </ListItem>
+
+              <Divider component="li" variant="inset" />
+
+              <ListItem button>
+                <ListItemIcon>
+                  <Icon icon={PeopleIcon} />
+                </ListItemIcon>
+                <ListItemText primary="Storage" />
+                <Typography
+                  style={{ color: "var(--secondaryTextColor)" }}
+                  className="u-mr-half"
+                  variant="body2"
+                >
+                  82% used
+                </Typography>
+                <Icon icon={RightIcon} />
+              </ListItem>
+            </List>
+          </ActionMenu>
+        )}
+      </>
+    )}
+  </Variants>
+
+</BreakpointsProvider>
+```
+
+
+
+### Example with old ActionMenuItem components
 
 ```jsx
 import ActionMenu, { ActionMenuItem, ActionMenuRadio, ActionMenuHeader } from 'cozy-ui/transpiled/react/ActionMenu'

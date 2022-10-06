@@ -2,22 +2,32 @@
 @require '../tools/mixins'
 @require '../settings/spaces.styl'
 @require '../settings/breakpoints.styl'
+@require '../settings/z-index'
 
 $smallScreenPaddingTop=.5rem
 
 $actionmenu
-    @extend $popover
-    color var(--primaryTextColor)
-    --iconColor: var(--actionMenuIconColor)
     padding-bottom rem(9)
     padding-bottom env(safe-area-inset-bottom)
+    z-index           $popover-index
+    border            rem(1) solid var(--dividerColor)
+    border-radius     rem(4)
+    box-shadow        rem(0 1 3 0) rgba(50, 54, 63, .19), rem(0 6 18 0) rgba(50, 54, 63, .19)
+    background-color  var(--paperBackgroundColor)
 
     hr
         margin-top 0
+        border      0
+        border-top  rem(1) solid var(--dividerColor)
 
     +small-screen()
         border 0
         border-radius 0
+
+$actionmenu--withPopoverStyle
+    @extend $popover
+    color var(--primaryTextColor)
+    --iconColor: var(--actionMenuIconColor)
 
 $actionmenu--inline
     width rem(256)

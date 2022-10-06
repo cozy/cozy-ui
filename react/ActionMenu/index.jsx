@@ -22,6 +22,7 @@ const ActionMenu = ({
   anchorElRef,
   autoclose,
   popperOptions,
+  disableStyle,
   children,
   onClose,
   placement,
@@ -61,7 +62,8 @@ const ActionMenu = ({
       >
         <div
           className={cx(styles['c-actionmenu'], {
-            [styles['c-actionmenu--inline']]: !isMobile
+            [styles['c-actionmenu--inline']]: !isMobile,
+            [styles['c-actionmenu--withPopoverStyle']]: !disableStyle
           })}
         >
           {React.Children.map(children, child =>
