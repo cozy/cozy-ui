@@ -1,7 +1,8 @@
 import React from 'react'
 
 import useBreakpoints from '../hooks/useBreakpoints'
-import BottomDrawer from '../BottomDrawer'
+import isTesting from '../helpers/isTesting'
+import BottomSheet from '../BottomSheet'
 
 import NotInlineWrapper from './NotInlineWrapper'
 
@@ -16,7 +17,11 @@ const ActionMenuWrapper = ({
   const { isMobile } = useBreakpoints()
 
   if (isMobile) {
-    return <BottomDrawer onClose={onClose}>{children}</BottomDrawer>
+    return (
+      <BottomSheet skipAnimation={isTesting()} backdrop onClose={onClose}>
+        {children}
+      </BottomSheet>
+    )
   }
 
   return (
