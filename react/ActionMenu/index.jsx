@@ -42,7 +42,6 @@ const ActionMenu = ({
     )
 
   const { isMobile } = useBreakpoints()
-  const shouldDisplayInline = !isMobile
   const containerRef = React.createRef()
 
   useActionMenuEffects()
@@ -55,7 +54,6 @@ const ActionMenu = ({
     >
       <ActionMenuWrapper
         anchorElRef={anchorElRef || containerRef}
-        inline={shouldDisplayInline}
         popperOptions={popperOptions}
         onClose={onClose}
         placement={placement}
@@ -63,7 +61,7 @@ const ActionMenu = ({
       >
         <div
           className={cx(styles['c-actionmenu'], {
-            [styles['c-actionmenu--inline']]: shouldDisplayInline
+            [styles['c-actionmenu--inline']]: !isMobile
           })}
         >
           {React.Children.map(children, child =>
