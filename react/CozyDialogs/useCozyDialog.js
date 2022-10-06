@@ -1,18 +1,20 @@
 import { useState } from 'react'
-import useBreakpoints from '../hooks/useBreakpoints'
-import DialogTransition from './DialogTransition'
 import cx from 'classnames'
 
-let globalId = 0
+import useBreakpoints from '../hooks/useBreakpoints'
+import { makeStyles } from '../styles'
 
+import DialogTransition from './DialogTransition'
+
+let globalId = 0
 const modalSizes = ['small', 'medium', 'large']
-/**
- * Returns the className and isFullscreen bool to be used in the Dialog
- * according to the size of the modal.
- *
- * @param {string} size - Size of the modal (small, medium, large)
- * @returns {object} className, isFullscreen and id
- */
+
+const useStyles = makeStyles({
+  paper: {
+    background: ({ background }) => background ?? 'var(--paperBackgroundColor)'
+  }
+})
+
 const useCozyDialog = props => {
   const {
     size,
@@ -29,6 +31,7 @@ const useCozyDialog = props => {
     isFluidTitle,
     disableGutters,
     titleRef,
+    background,
     ...otherProps
   } = props
   const { isMobile } = useBreakpoints()
@@ -37,6 +40,7 @@ const useCozyDialog = props => {
   const scrollPaperClassName = align == 'top' ? `alignTop` : ''
   const fullScreen = size !== 'small' && isMobile
   const TransitionComponent = DialogTransition
+  const styles = useStyles({ background })
 
   const dialogProps = {
     'aria-labelledby': `modal-title-${id}`,
@@ -47,7 +51,7 @@ const useCozyDialog = props => {
     ...otherProps,
     classes: {
       ...otherProps.classes,
-      paper: `${paperClassName} ${
+      paper: `${paperClassName} ${styles.paper} ${
         otherProps.classes ? otherProps.classes.paper : ''
       }`,
       scrollPaper: scrollPaperClassName
