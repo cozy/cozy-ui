@@ -2,6 +2,7 @@ import React from 'react'
 import { getFlagshipMetadata } from 'cozy-device-helper'
 
 import { ANIMATION_DURATION } from './constants'
+import { getSafeAreaValue } from '../helpers/getSafeArea'
 
 export const computeMaxHeight = toolbarProps => {
   const { ref, height } = toolbarProps
@@ -47,11 +48,13 @@ export const computeMinHeight = ({
   actionButtonsBottomMargin
 }) => {
   if (isClosable) return 0
+
   return (
     headerRef.current.offsetHeight +
     actionButtonsHeight +
     actionButtonsBottomMargin +
-    (getFlagshipMetadata().navbarHeight || 0)
+    (getFlagshipMetadata().navbarHeight || 0) +
+    getSafeAreaValue('bottom')
   )
 }
 

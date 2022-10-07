@@ -7,6 +7,9 @@ import {
   minimizeAndClose
 } from './helpers'
 
+jest.mock('../helpers/getSafeArea', () => ({
+  getSafeAreaValue: jest.fn().mockReturnValue(15)
+}))
 jest.mock('cozy-device-helper', () => ({
   getFlagshipMetadata: jest.fn(() => ({ navbarHeight: 10 }))
 }))
@@ -107,7 +110,7 @@ describe('computeMinHeight', () => {
       actionButtonsBottomMargin: 30
     })
 
-    expect(res).toBe(70)
+    expect(res).toBe(85)
   })
 })
 
