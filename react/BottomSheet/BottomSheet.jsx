@@ -262,7 +262,7 @@ const BottomSheet = memo(
           <div ref={innerContentRef}>
             <Paper
               data-testid="bottomSheet-header"
-              className="u-w-100 u-h-2-half u-pos-relative u-flex u-flex-items-center u-flex-justify-center"
+              className="u-w-100 u-h-3 u-pos-relative u-flex u-flex-items-center u-flex-justify-center"
               ref={headerRef}
               elevation={0}
               square
