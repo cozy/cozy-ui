@@ -1,3 +1,18 @@
+# [76.2.0](https://github.com/cozy/cozy-ui/compare/v76.1.0...v76.2.0) (2022-10-10)
+
+
+### Bug Fixes
+
+* **BottomSheet:** Add safe area ([06b0ff3](https://github.com/cozy/cozy-ui/commit/06b0ff3))
+
+
+### Features
+
+* **ActionMenu:** Use BottomSheet instead of BottomDrawer on mobile ([9967d0c](https://github.com/cozy/cozy-ui/commit/9967d0c))
+* Add helper to get safe area value ([650e901](https://github.com/cozy/cozy-ui/commit/650e901))
+* Add safe area inset css value in root variable ([abe1b48](https://github.com/cozy/cozy-ui/commit/abe1b48))
+* **BottomSheet:** Larger handle for easier handling ([7e7baba](https://github.com/cozy/cozy-ui/commit/7e7baba))
+
 # [76.1.0](https://github.com/cozy/cozy-ui/compare/v76.0.0...v76.1.0) (2022-10-10)
 
 
