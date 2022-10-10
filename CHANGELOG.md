@@ -1,3 +1,10 @@
+# [76.1.0](https://github.com/cozy/cozy-ui/compare/v76.0.0...v76.1.0) (2022-10-10)
+
+
+### Features
+
+* **CozyDialogs:** Add background prop to set a background ([38bf008](https://github.com/cozy/cozy-ui/commit/38bf008))
+
 # [76.0.0](https://github.com/cozy/cozy-ui/compare/v75.6.1...v76.0.0) (2022-10-05)
 
 
