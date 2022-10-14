@@ -452,12 +452,6 @@ const makeOverrides = theme => ({
       borderColor: theme.palette.grey[300]
     }
   },
-  MuiList: {
-    padding: {
-      paddingTop: 0,
-      paddingBottom: 0
-    }
-  },
   MuiListItemIcon: {
     root: {
       minWidth: 'auto',
