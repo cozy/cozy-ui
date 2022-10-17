@@ -15,17 +15,15 @@ const ContactsList = ({ contacts, onItemClick, ...rest }) => {
   return (
     <Table {...rest}>
       {sortedHeaders.map(header => (
-        <List key={header}>
-          <ListSubheader>{header}</ListSubheader>
+        <List key={header} subheader={<ListSubheader>{header}</ListSubheader>}>
           {categorizedContacts[header].map((contact, index) => (
-            <List key={contact._id}>
-              <ContactRow
-                id={contact._id}
-                contact={contact}
-                divider={index !== contacts.length - 1}
-                onClick={onItemClick}
-              />
-            </List>
+            <ContactRow
+              key={contact._id}
+              id={contact._id}
+              contact={contact}
+              divider={index !== categorizedContacts[header].length - 1}
+              onClick={onItemClick}
+            />
           ))}
         </List>
       ))}
