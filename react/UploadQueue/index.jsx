@@ -303,7 +303,7 @@ export class UploadQueue extends Component {
           value={(doneCount / queue.length) * 100}
         />
         <div className={styles['upload-queue-content']}>
-          <List>
+          <List className="u-pv-0">
             {queue.map((item, index) => (
               <Item key={index} {...item} getMimeTypeIcon={getMimeTypeIcon} />
             ))}
