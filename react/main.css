@@ -447,6 +447,12 @@ body select,
 body textarea {
   font-family: var(--primaryFont);
 }
+:root {
+  --safe-area-inset-top: env(safe-area-inset-top);
+  --safe-area-inset-right: env(safe-area-inset-right);
+  --safe-area-inset-bottom: env(safe-area-inset-bottom);
+  --safe-area-inset-left: env(safe-area-inset-left);
+}
 html {
   font-size: 100%;
 }
@@ -7905,6 +7911,12 @@ body select,
 body textarea {
   font-family: var(--primaryFont);
 }
+:root {
+  --safe-area-inset-top: env(safe-area-inset-top);
+  --safe-area-inset-right: env(safe-area-inset-right);
+  --safe-area-inset-bottom: env(safe-area-inset-bottom);
+  --safe-area-inset-left: env(safe-area-inset-left);
+}
 html {
   font-size: 100%;
 }
@@ -9740,6 +9752,12 @@ body optgroup,
 body select,
 body textarea {
   font-family: var(--primaryFont);
+}
+:root {
+  --safe-area-inset-top: env(safe-area-inset-top);
+  --safe-area-inset-right: env(safe-area-inset-right);
+  --safe-area-inset-bottom: env(safe-area-inset-bottom);
+  --safe-area-inset-left: env(safe-area-inset-left);
 }
 html {
   font-size: 100%;
@@ -19470,6 +19488,12 @@ body select,
 body textarea {
   font-family: var(--primaryFont);
 }
+:root {
+  --safe-area-inset-top: env(safe-area-inset-top);
+  --safe-area-inset-right: env(safe-area-inset-right);
+  --safe-area-inset-bottom: env(safe-area-inset-bottom);
+  --safe-area-inset-left: env(safe-area-inset-left);
+}
 html {
   font-size: 100%;
 }
@@ -24339,6 +24363,12 @@ body optgroup,
 body select,
 body textarea {
   font-family: var(--primaryFont);
+}
+:root {
+  --safe-area-inset-top: env(safe-area-inset-top);
+  --safe-area-inset-right: env(safe-area-inset-right);
+  --safe-area-inset-bottom: env(safe-area-inset-bottom);
+  --safe-area-inset-left: env(safe-area-inset-left);
 }
 html {
   font-size: 100%;
