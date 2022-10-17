@@ -1,3 +1,21 @@
+# [77.0.0](https://github.com/cozy/cozy-ui/compare/v76.2.0...v77.0.0) (2022-10-17)
+
+
+### Bug Fixes
+
+* **ContactsList:** Adjust list construction ([f301927](https://github.com/cozy/cozy-ui/commit/f301927))
+* **UploadQueue:** Remove default vertical paddings ([830bad3](https://github.com/cozy/cozy-ui/commit/830bad3))
+
+
+### Features
+
+* **List:** Add vertical padding of 8px inside List ([f17d0b7](https://github.com/cozy/cozy-ui/commit/f17d0b7))
+
+
+### BREAKING CHANGES
+
+* **List:** List elements have been readjusted. The result may not be appropriate for your use case, refer to the documentation to apply adjustments if necessary. A simple trick might be to remove the vertical paddings `<List className="u-pv-0">`
+
 # [76.2.0](https://github.com/cozy/cozy-ui/compare/v76.1.0...v76.2.0) (2022-10-10)
 
 
