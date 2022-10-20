@@ -1,3 +1,10 @@
+# [77.1.0](https://github.com/cozy/cozy-ui/compare/v77.0.0...v77.1.0) (2022-10-20)
+
+
+### Features
+
+* **Icon:** Add compare and clock-outline icons ([97e00db](https://github.com/cozy/cozy-ui/commit/97e00db))
+
 # [77.0.0](https://github.com/cozy/cozy-ui/compare/v76.2.0...v77.0.0) (2022-10-17)
 
 
