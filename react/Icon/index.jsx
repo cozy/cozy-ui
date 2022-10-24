@@ -54,6 +54,8 @@ function Icon(props) {
   if (rotate) {
     style['transform'] = `rotate(${rotate}deg)`
   }
+  style['minWidth'] = width || size || DEFAULT_SIZE
+  style['minHeight'] = height || size || DEFAULT_SIZE
 
   const iconClassName = preserveColor ? 'icon--preserveColor' : 'icon'
   const iconClass = cx(className, styles[iconClassName], {
