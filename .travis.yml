@@ -9,12 +9,12 @@ env:
   global:
     - PR_TITLE=$(curl https://github.com/${TRAVIS_REPO_SLUG}/pull/${TRAVIS_PULL_REQUEST} 2> /dev/null | grep "title" | head -1)
 script:
-  - yarn lint
+  # - yarn lint
   - yarn build
   - yarn build:css:all
   - yarn build:doc:react
   - yarn build:doc:kss
-  - yarn test
+  # - yarn test
   - |
     if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
       mkdir ./screenshots
@@ -25,7 +25,7 @@ script:
       yarn argos:upload --parallel screenshots/reactMobile/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID
       yarn argos:upload --parallel screenshots/kss/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID
     fi
-  - yarn bundlemon
+  # - yarn bundlemon
 deploy:
   - provider: script
     repo: cozy/cozy-ui
