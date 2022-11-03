@@ -21,6 +21,27 @@ directions = {
     h: horizontal
 }
 
+gapTypes = {
+    g: gap
+}
+
+gapSizes = {
+    'auto': normal,
+    '0': 0,
+    'half': rem(8),
+    '1': rem(16),
+    '1-half': rem(24),
+    '2': rem(32),
+    '2-half': rem(40),
+    '3': rem(48)
+}
+
+gapDirections = {
+    '': all,
+    v: row,
+    h: column
+}
+
 // Placeholders generation
 for kType, vType in types
     for kSize, vSize in sizes
@@ -39,6 +60,15 @@ for kType, vType in types
             else
                 ${kType}{kDir}-{kSize}
                     {vType}-{vDir}: vSize !important
+for kType, vType in gapTypes
+    for kSize, vSize in gapSizes
+        for kDir, vDir in gapDirections
+            if vDir == all
+                ${kType}-{kSize}
+                    {vType}: vSize !important
+            else
+                ${kType}{kDir}-{kSize}
+                    {vDir}-{vType}: vSize !important
 
 // Classes generation
 cssModulesSpacingUtils()
@@ -77,6 +107,24 @@ cssModulesSpacingUtils()
                             else
                                 :global(.u-{kType}{kDir}-{kSize}-{vBp})
                                     {vType}-{vDir}: vSize !important
+        for kType, vType in gapTypes
+            for kSize, vSize in gapSizes
+                for kDir, vDir in gapDirections
+                    if vBp == ''
+                        if vDir == all
+                            :global(.u-{kType}-{kSize})
+                                {vType}: vSize !important
+                        else
+                            :global(.u-{kType}{kDir}-{kSize})
+                                {vDir}-{vType}: vSize !important
+                    else
+                        @media (max-width: rem(lookup('BP-'+kBp)))
+                            if vDir == all
+                                :global(.u-{kType}-{kSize}-{vBp})
+                                    {vType}: vSize !important
+                            else
+                                :global(.u-{kType}{kDir}-{kSize}-{vBp})
+                                    {vDir}-{vType}: vSize !important
 
 nativeSpacingUtils()
     for kBp, vBp in breakpoints
@@ -114,6 +162,25 @@ nativeSpacingUtils()
                             else
                                 .u-{kType}{kDir}-{kSize}-{vBp}
                                     {vType}-{vDir}: vSize !important
+        for kType, vType in gapTypes
+            for kSize, vSize in gapSizes
+                for kDir, vDir in gapDirections
+                    if vBp == ''
+                        if vDir == all
+                            .u-{kType}-{kSize}
+                                {vType}: vSize !important
+                        else
+                            .u-{kType}{kDir}-{kSize}
+                                {vDir}-{vType}: vSize !important
+                    else
+                        @media (max-width: rem(lookup('BP-'+kBp)))
+                            if vDir == all
+                                .u-{kType}-{kSize}-{vBp}
+                                    {vType}: vSize !important
+                            else
+                                .u-{kType}{kDir}-{kSize}-{vBp}
+                                    {vDir}-{vType}: vSize !important
+
 if cssmodules == true
     cssModulesSpacingUtils()
 else
