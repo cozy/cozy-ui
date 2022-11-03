@@ -449,7 +449,23 @@ const makeOverrides = theme => ({
   },
   MuiStepConnector: {
     line: {
-      borderColor: theme.palette.grey[300]
+      borderColor: theme.palette.divider
+    }
+  },
+  MuiStepContent: {
+    root: {
+      borderColor: theme.palette.divider
+    }
+  },
+  MuiStepLabel: {
+    label: {
+      ...theme.typography.body1,
+      '&$active': {
+        ...theme.typography.h6
+      },
+      '&$completed': {
+        ...theme.typography.h6
+      }
     }
   },
   MuiListItemIcon: {
