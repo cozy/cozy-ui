@@ -1283,6 +1283,49 @@ Display an chip that represents complex identity
 */
 
 /*
+    Gaps
+
+    Classes to add gaps between children nodes, vertically, horizontally or in both directions based on default font-size (16px)<br>
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-g-auto - Auto gaps in both directions
+    .u-g-0 - No gaps in both directions
+    .u-g-half - Gaps in both directions with half a line (8px)
+    .u-g-1 - Gaps in both directions with 1 line (16px)
+    .u-g-1-half - Gaps in both directions with 1 line an a half (24px)
+    .u-g-2 - Gaps in both directions with 2 lines (32px)
+    .u-g-2-half - Gaps in both directions with 2 lines an a half (40px)
+    .u-g-3 - Gaps in both directions with 3 lines (48px)
+    .u-gv-auto - Auto vertically gaps
+    .u-gv-0 - No vertically gaps
+    .u-gv-half - Vertically gaps with half a line (8px)
+    .u-gv-1 - Vertically gaps with 1 line (16px)
+    .u-gv-1-half - Vertically gaps with 1 line an a half (24px)
+    .u-gv-2 - Vertically gaps with 2 lines (32px)
+    .u-gv-2-half - Vertically gaps with 2 lines an a half (40px)
+    .u-gv-3 - Vertically gaps with 3 lines (48px)
+    .u-gh-auto - Auto horizontally gaps
+    .u-gh-0 - No horizontally gaps
+    .u-gh-half - Horizontally gaps with half a line (8px)
+    .u-gh-1 - Horizontally gaps with 1 line (16px)
+    .u-gh-1-half - Horizontally gaps with 1 line an a half (24px)
+    .u-gh-2 - Horizontally gaps with 2 lines (32px)
+    .u-gh-2-half - Horizontally gaps with 2 lines an a half (40px)
+    .u-gh-3 - Horizontally gaps with 3 lines (48px)
+
+    Markup:
+    <div style="background-color: dimgrey; border: 1px solid black; line-height: 2.5rem;" class="u-flex u-flex-wrap u-w-4 u-ta-center {{modifier_class}}">
+        <div style="background-color: gainsboro;" class="u-w-2-half u-h-2-half">🎶</div>
+        <div style="background-color: gainsboro;" class="u-w-2-half u-h-2-half">🎵</div>
+        <div style="background-color: gainsboro;" class="u-w-2-half u-h-2-half">🎼</div>
+        <div style="background-color: gainsboro;" class="u-w-2-half u-h-2-half">💃</div>
+    </div>
+
+    Styleguide utilities.gaps
+*/
+
+
+/*
     Spacing
 
     Classes to add spacing between the children elements.
