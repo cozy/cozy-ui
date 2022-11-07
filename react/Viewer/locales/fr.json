@@ -56,7 +56,8 @@
             "cardNumber": "Numéro de la carte d'identité",
             "vinNumber": "Numéro de la carte grise (VIN)",
             "ibanNumber": "Numéro d'IBAN",
-            "country": "Pays de délivrance"
+            "country": "Pays de délivrance",
+            "passportNumber": "Numéro du passeport"
           }
         },
         "contact": "Titulaire",

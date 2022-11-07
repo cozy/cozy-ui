@@ -56,7 +56,8 @@
             "cardNumber": "National ID card number",
             "vinNumber": "Vehicle registration number (VIN)",
             "ibanNumber": "IBAN number",
-            "country": "Country of delivery"
+            "country": "Country of delivery",
+            "passportNumber": "Passport number"
           }
         },
         "contact": "Owner",
