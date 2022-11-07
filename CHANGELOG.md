@@ -1,3 +1,10 @@
+# [77.2.0](https://github.com/cozy/cozy-ui/compare/v77.1.0...v77.2.0) (2022-11-07)
+
+
+### Features
+
+* **Viewer:** Add passport qualif locales ([47bc84f](https://github.com/cozy/cozy-ui/commit/47bc84f))
+
 # [77.1.0](https://github.com/cozy/cozy-ui/compare/v77.0.0...v77.1.0) (2022-10-20)
 
 
