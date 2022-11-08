@@ -1,3 +1,10 @@
+# [77.3.0](https://github.com/cozy/cozy-ui/compare/v77.2.0...v77.3.0) (2022-11-08)
+
+
+### Features
+
+* Override `StepConnector`, `StepContent` and `StepLabel` ([49e1f3d](https://github.com/cozy/cozy-ui/commit/49e1f3d))
+
 # [77.2.0](https://github.com/cozy/cozy-ui/compare/v77.1.0...v77.2.0) (2022-11-07)
 
 
