@@ -1,3 +1,10 @@
+# [77.5.0](https://github.com/cozy/cozy-ui/compare/v77.4.0...v77.5.0) (2022-11-09)
+
+
+### Features
+
+* Table components now forward ref ([f599a39](https://github.com/cozy/cozy-ui/commit/f599a39))
+
 # [77.4.0](https://github.com/cozy/cozy-ui/compare/v77.3.0...v77.4.0) (2022-11-09)
 
 
