@@ -1,3 +1,10 @@
+# [77.4.0](https://github.com/cozy/cozy-ui/compare/v77.3.0...v77.4.0) (2022-11-09)
+
+
+### Features
+
+* **CozyDialogs:** Add possibility to override DialogTitle props ([c4a1995](https://github.com/cozy/cozy-ui/commit/c4a1995))
+
 # [77.3.0](https://github.com/cozy/cozy-ui/compare/v77.2.0...v77.3.0) (2022-11-08)
 
 
