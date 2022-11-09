@@ -32,6 +32,7 @@ const useCozyDialog = props => {
     disableGutters,
     titleRef,
     background,
+    componentsProps,
     ...otherProps
   } = props
   const { isMobile } = useBreakpoints()
@@ -66,15 +67,19 @@ const useCozyDialog = props => {
   const showBackButton = onBack || (fullScreen && onClose) // back and close buttons are merged in fullScreen
 
   const dialogTitleProps = {
+    ...componentsProps?.dialogTitle,
     id: `modal-title-${id}`,
     ref: titleRef,
     disableTypography: true,
-    className: cx({
-      'u-ellipsis': !isFluidTitle,
-      dialogTitleFluid: isFluidTitle,
-      dialogTitleWithClose: showCloseButton && !disableTitleAutoPadding,
-      dialogTitleWithBack: showBackButton && !disableTitleAutoPadding
-    })
+    className: cx(
+      {
+        'u-ellipsis': !isFluidTitle,
+        dialogTitleFluid: isFluidTitle,
+        dialogTitleWithClose: showCloseButton && !disableTitleAutoPadding,
+        dialogTitleWithBack: showBackButton && !disableTitleAutoPadding
+      },
+      componentsProps?.dialogTitle?.className
+    )
   }
 
   const listItemClassName = 'listItem--dialog'
