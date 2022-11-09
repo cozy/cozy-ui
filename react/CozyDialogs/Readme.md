@@ -30,6 +30,8 @@ import Button from  'cozy-ui/transpiled/react/Buttons'
 
 ### Props
 
+* **componentsProps** : `<object>` – overriden properties of specific components
+  * **dialogTitle** : `<object>` – DialogTitle component properties
 * **size** : `<string>` – Can be "s", "m" (default) or "l"
 * **open** : `<boolean>` (required) – To open/close the modal
 * **disableTitleAutoPadding** : `<boolean>` (optional) – Disable title padding calculation that would prevent overlapping with close and back buttons
@@ -339,5 +341,59 @@ const initialVariants = [{
       </>
     )}
   </Variants>
+</BreakpointsProvider>
+```
+
+
+### Dialogs with title button
+
+```jsx
+import cx from 'classnames'
+import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+
+import { Dialog } from  'cozy-ui/transpiled/react/CozyDialogs'
+import Button from  'cozy-ui/transpiled/react/Buttons'
+import IconButton from 'cozy-ui/transpiled/react/IconButton'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import DotsIcon from 'cozy-ui/transpiled/react/Icons/Dots'
+
+initialState = { showModal: false }
+
+const Modal = () => {
+  const { isMobile } = useBreakpoints()
+
+  return (
+    <Dialog
+      open
+      title={
+        <>
+          This is the title
+          <IconButton>
+            <Icon icon={DotsIcon} />
+          </IconButton>
+        </>
+      }
+      content="Here's the content"
+      actions={
+        <Button label="Close" onClick={() => setState({ showModal: false })} />
+      }
+      componentsProps={{
+        dialogTitle: {
+          className: "u-flex u-flex-items-center u-flex-justify-between u-pv-0-s u-pv-1 u-pr-0-s"
+        }
+      }}
+      onClose={() => setState({ showModal: false })}
+    />
+  )
+}
+
+;
+
+<BreakpointsProvider>
+  <Button label="Open modal" onClick={() => setState({ showModal: true })}/>
+
+  {state.showModal && (
+    <Modal />
+  )}
 </BreakpointsProvider>
 ```
