@@ -1,3 +1,10 @@
+# [77.6.0](https://github.com/cozy/cozy-ui/compare/v77.5.0...v77.6.0) (2022-11-15)
+
+
+### Features
+
+* Add skeleton from mui ([20cc960](https://github.com/cozy/cozy-ui/commit/20cc960))
+
 # [77.5.0](https://github.com/cozy/cozy-ui/compare/v77.4.0...v77.5.0) (2022-11-09)
 
 
