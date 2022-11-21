@@ -1,3 +1,10 @@
+# [77.7.0](https://github.com/cozy/cozy-ui/compare/v77.6.0...v77.7.0) (2022-11-21)
+
+
+### Features
+
+* Add cozy-lock and cozy-release icons ([360e7e4](https://github.com/cozy/cozy-ui/commit/360e7e4))
+
 # [77.6.0](https://github.com/cozy/cozy-ui/compare/v77.5.0...v77.6.0) (2022-11-15)
 
 
