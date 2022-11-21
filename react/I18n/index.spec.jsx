@@ -87,3 +87,40 @@ describe('use i18n with custom locales', () => {
     expect(root.getByText('Bonjour le monde')).toBeTruthy()
   })
 })
+
+describe('use i18n with custom locales and fallback to default', () => {
+  const locales = {
+    en: {
+      'hello-world': 'Hello world',
+      'how-are-you': 'How are you ?'
+    },
+    fr: {
+      'hello-world': 'Bonjour le monde'
+    }
+  }
+  const useI18n = createUseI18n(locales)
+  const Child = () => {
+    const { t } = useI18n()
+    return (
+      <div>
+        <div>{t('hello-world')}</div>
+        <div>{t('how-are-you')}</div>
+      </div>
+    )
+  }
+  const Parent = () => {
+    return (
+      <>
+        <I18n lang="fr" dictRequire={() => ({})}>
+          <Child />
+        </I18n>
+      </>
+    )
+  }
+
+  it('should display missing key in default langage', () => {
+    const root = render(<Parent />)
+    expect(root.getByText('Bonjour le monde')).toBeInTheDocument()
+    expect(root.getByText('How are you ?')).toBeInTheDocument()
+  })
+})
