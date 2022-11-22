@@ -1,3 +1,10 @@
+## [77.7.1](https://github.com/cozy/cozy-ui/compare/v77.7.0...v77.7.1) (2022-11-22)
+
+
+### Bug Fixes
+
+* Load default langage when using createUseI18n ([5ce65fe](https://github.com/cozy/cozy-ui/commit/5ce65fe))
+
 # [77.7.0](https://github.com/cozy/cozy-ui/compare/v77.6.0...v77.7.0) (2022-11-21)
 
 
