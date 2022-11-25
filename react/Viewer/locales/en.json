@@ -57,8 +57,10 @@
             "vinNumber": "Vehicle registration number (VIN)",
             "ibanNumber": "IBAN number",
             "country": "Country of delivery",
-            "passportNumber": "Passport number"
-          }
+            "passportNumber": "Passport number",
+            "noticePeriod": "Time to expiration alert"
+          },
+          "day": "day |||| days"
         },
         "contact": "Owner",
         "page": "Side of the document",

@@ -2,7 +2,10 @@ import React from 'react'
 import { fireEvent, render } from '@testing-library/react'
 import DemoProvider from '../docs/DemoProvider'
 
-import QualificationListItemInformation from './QualificationListItemInformation'
+import QualificationListItemInformation, {
+  makeInformationValue
+} from './QualificationListItemInformation'
+import MidEllipsis from '../../MidEllipsis'
 
 const setup = ({
   formatedMetadataQualification = {},
@@ -47,6 +50,36 @@ describe('QualificationListItemInformation', () => {
       fireEvent.click(toggleActionsMenuBtn)
 
       expect(toggleActionsMenu).toBeCalledWith('Italie')
+    })
+  })
+  describe('makeInformationValue', () => {
+    let mockT
+    beforeEach(() => {
+      mockT = jest.fn(key => key)
+    })
+    afterEach(() => {
+      mockT = jest.fn(key => key)
+    })
+
+    it('should return "MidEllipsis" component with the value', () => {
+      const res = makeInformationValue('metadataName', 'metadataValue', mockT)
+
+      expect(res).toEqual(<MidEllipsis text="metadataValue" />)
+    })
+    it('should return value with suffix locale', () => {
+      const res = makeInformationValue('noticePeriod', '88', mockT)
+
+      expect(res).toEqual('88 Viewer.panel.qualification.information.day')
+    })
+    it('should return "noInfo" value', () => {
+      const res = makeInformationValue('metadataName', '', mockT)
+
+      expect(res).toEqual('Viewer.panel.qualification.noInfo')
+    })
+    it('should return noInfo value with "noticePeriod" metadata name', () => {
+      const res = makeInformationValue('noticePeriod', '', mockT)
+
+      expect(res).toEqual('Viewer.panel.qualification.noInfo')
     })
   })
 })

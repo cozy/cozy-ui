@@ -57,8 +57,10 @@
             "vinNumber": "Numéro de la carte grise (VIN)",
             "ibanNumber": "Numéro d'IBAN",
             "country": "Pays de délivrance",
-            "passportNumber": "Numéro du passeport"
-          }
+            "passportNumber": "Numéro du passeport",
+            "noticePeriod": "Délai avant l’alerte d’expiration"
+          },
+          "day": "jour |||| jours"
         },
         "contact": "Titulaire",
         "page": "Face du document",
