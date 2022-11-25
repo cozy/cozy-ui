@@ -25,7 +25,8 @@ export const knownInformationMetadataNames = [
   'vinNumber',
   'ibanNumber',
   'country',
-  'passportNumber'
+  'passportNumber',
+  'noticePeriod'
 ]
 export const knownOtherMetadataNames = ['contact', 'page', 'qualification']
 
