@@ -1,3 +1,10 @@
+# [77.9.0](https://github.com/cozy/cozy-ui/compare/v77.8.0...v77.9.0) (2022-11-28)
+
+
+### Features
+
+* **Viewer:** Add notice period metadata ([956fd83](https://github.com/cozy/cozy-ui/commit/956fd83))
+
 # [77.8.0](https://github.com/cozy/cozy-ui/compare/v77.7.1...v77.8.0) (2022-11-28)
 
 
