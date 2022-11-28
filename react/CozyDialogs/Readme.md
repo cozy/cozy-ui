@@ -344,7 +344,6 @@ const initialVariants = [{
 </BreakpointsProvider>
 ```
 
-
 ### Dialogs with title button
 
 ```jsx
