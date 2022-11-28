@@ -1,3 +1,10 @@
+# [77.8.0](https://github.com/cozy/cozy-ui/compare/v77.7.1...v77.8.0) (2022-11-28)
+
+
+### Features
+
+* Add InputAdornment component ([b92a034](https://github.com/cozy/cozy-ui/commit/b92a034))
+
 ## [77.7.1](https://github.com/cozy/cozy-ui/compare/v77.7.0...v77.7.1) (2022-11-22)
 
 
