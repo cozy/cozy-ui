@@ -26,7 +26,6 @@ export const computeMediumHeight = ({
 }) => {
   const mediumHeightOrWithRatio =
     mediumHeight || Math.round(maxHeight * mediumHeightRatio)
-
   if (backdrop) {
     if (mediumHeightOrWithRatio < innerContentHeight) {
       return mediumHeightOrWithRatio < maxHeight
@@ -35,7 +34,7 @@ export const computeMediumHeight = ({
     }
     return innerContentHeight > maxHeight ? maxHeight : innerContentHeight
   }
-
+  if (innerContentHeight < mediumHeightOrWithRatio) return innerContentHeight
   return mediumHeightOrWithRatio > maxHeight
     ? maxHeight
     : mediumHeightOrWithRatio

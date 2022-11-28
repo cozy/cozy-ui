@@ -57,6 +57,17 @@ describe('computeMediumHeight', () => {
 
       expect(res).toBe(800)
     })
+
+    it('should return the innerContentHeight if innerContentHeight < mediumHeight', () => {
+      const res = computeMediumHeight({
+        backdrop: false,
+        maxHeight: 800,
+        mediumHeight: 400,
+        innerContentHeight: 200
+      })
+
+      expect(res).toBe(200)
+    })
   })
 
   describe('with backdrop', () => {
