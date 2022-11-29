@@ -25,7 +25,7 @@ const Dialog = props => {
       : React.Fragment
   const cozyTheme = useCozyTheme()
 
-  useDialogEffects(props.fullScreen)
+  useDialogEffects(props.open, props.fullScreen)
 
   return (
     <Wrapper>

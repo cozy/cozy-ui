@@ -1,11 +1,13 @@
 import { getLuminance, Theme, useTheme } from '@material-ui/core'
+import { useEffect } from 'react'
 
 import { getFlagshipMetadata, isFlagshipApp } from 'cozy-device-helper'
+import { useWebviewIntent } from 'cozy-intent'
 
 import {
   FlagshipUI,
   ThemeColor,
-  useSetFlagshipUI
+  parseArg
 } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
 
 interface DialogEffectsOptions {
@@ -120,21 +122,74 @@ const makeCaller = (
 const getRootModal = (): HTMLElement | null => {
   const modals = document.querySelectorAll(DOMStrings.DialogClass)
 
-  return modals.length > 0 ? (modals[0] as HTMLElement) : null
+  /**
+   * If we have more than one modal, we are in a stacked dialog scenario.
+   * In this case we want to have access to the DOM element of the root modal.
+   * This will allow us to apply the correct background color if a root modal exists, for instance.
+   */
+  return modals.length > 1 ? (modals[0] as HTMLElement) : null
 }
 
-const useHook = (fullscreen?: boolean): void => {
+const useHook = (open: boolean, fullscreen?: boolean): void => {
   const theme = useTheme()
   const cozybar = document.querySelector(DOMStrings.CozyBarClass)
   const sidebar = document.getElementById(DOMStrings.SidebarID)
   const rootModal = getRootModal()
   const immersive = Boolean(getFlagshipMetadata().immersive)
 
-  useSetFlagshipUI(
+  useDialogSetFlagshipUI(
+    open,
     makeOnMount({ fullscreen, theme, sidebar, rootModal, cozybar }),
     makeOnUnmount({ rootModal, theme, immersive, sidebar, cozybar }),
     makeCaller(!!fullscreen, !!rootModal, immersive)
   )
+}
+
+/**
+ * Custom version of useSetFlagshipUi() that is aware of the Dialog component.
+ *
+ * The difference here is that we send messages to the Native app when a props change.
+ * In the original version, we send the mount message as soon as the component is rendered.
+ *
+ * Dialog can be rendered but hidden, so we need to wait for the open prop to be true
+ */
+export const useDialogSetFlagshipUI = (
+  open: boolean,
+  onMount: FlagshipUI,
+  onUnmount?: FlagshipUI,
+  caller?: string
+): void => {
+  const webviewIntent = useWebviewIntent()
+
+  useEffect(() => {
+    if (open)
+      parseArg(webviewIntent, onMount, `${caller || 'unknown'} (onOpenMount)`)
+
+    return () => {
+      /**
+       * As we are listening to the open prop, we still want to send an unmount message when the prop changes to false.
+       * To avoid false positives, we need to ensure the component is currently showing.
+       * We do that by checking if value of open during this cleanup cycle is false,
+       * if it is, that means the component is currently showing and is in the process of hiding.
+       *
+       * Note that this will also handle abrupt unmounting, as in hiding the dialog without using the open prop.
+       */
+      if (open === false || open === undefined) return
+
+      parseArg(
+        webviewIntent,
+        onUnmount,
+        `${caller || 'unknown'} (onOpenUnmount)`
+      )
+    }
+
+    /**
+     * We don't want to listen to onMount/onUnmount arguments
+     * It will create far too many unwanted calls
+     * We only care about webviewIntent or open props presence,
+     * Open should always be present, webviewIntent is more uncertain
+     */
+  }, [open, webviewIntent]) // eslint-disable-line react-hooks/exhaustive-deps
 }
 
 export const useDialogEffects = isFlagshipApp()
