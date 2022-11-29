@@ -1,3 +1,11 @@
+## [77.9.1](https://github.com/cozy/cozy-ui/compare/v77.9.0...v77.9.1) (2022-11-29)
+
+
+### Bug Fixes
+
+* Fix bottomSheet height if the content is pretty small ([884f89d](https://github.com/cozy/cozy-ui/commit/884f89d))
+* Remove duplicate paths in icons ([5233668](https://github.com/cozy/cozy-ui/commit/5233668))
+
 # [77.9.0](https://github.com/cozy/cozy-ui/compare/v77.8.0...v77.9.0) (2022-11-28)
 
 
