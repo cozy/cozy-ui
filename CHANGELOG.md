@@ -1,3 +1,10 @@
+## [77.9.2](https://github.com/cozy/cozy-ui/compare/v77.9.1...v77.9.2) (2022-11-29)
+
+
+### Bug Fixes
+
+* handle `open` prop in Dialog component ([ecff9fa](https://github.com/cozy/cozy-ui/commit/ecff9fa))
+
 ## [77.9.1](https://github.com/cozy/cozy-ui/compare/v77.9.0...v77.9.1) (2022-11-29)
 
 
