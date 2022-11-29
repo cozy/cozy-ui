@@ -18,7 +18,7 @@ export interface FlagshipUI
   bottomTheme: ThemeColor
 }
 
-const parseArg = (
+export const parseArg = (
   webviewIntent?: WebviewService | void,
   arg?: FlagshipUI,
   caller?: string
