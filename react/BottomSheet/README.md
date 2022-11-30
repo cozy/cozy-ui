@@ -36,6 +36,10 @@ import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListI
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
 import FileTypeTextIcon from 'cozy-ui/transpiled/react/Icons/FileTypeText'
+import FileTypeSheetIcon from 'cozy-ui/transpiled/react/Icons/FileTypeSheet'
+import FileTypeSlideIcon from 'cozy-ui/transpiled/react/Icons/FileTypeSlide'
+import FileTypeVideoIcon from 'cozy-ui/transpiled/react/Icons/FileTypeVideo'
+import FileTypePdfIcon from 'cozy-ui/transpiled/react/Icons/FileTypePdf'
 import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
 import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
 import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
@@ -147,12 +151,14 @@ const settings = state.mediumHeight === undefined && state.mediumHeightRatio ===
                   </ListItemIcon>
                   <ListItemText primary="Title" />
                 </ListItem>
-                <ListSubheader>Section 1</ListSubheader>
+              </List>
+
+              <List subheader={<ListSubheader>Section 1</ListSubheader>}>
                 <ListItem button>
                   <ListItemIcon>
                     <Icon icon={FileIcon} />
                   </ListItemIcon>
-                  <ListItemText primary="Item with icon" />
+                  <ListItemText primary="Item with icon" secondary=" and with secondary text" />
                 </ListItem>
                 <Divider variant="inset" />
                 <ListItem button>
@@ -173,19 +179,43 @@ const settings = state.mediumHeight === undefined && state.mediumHeightRatio ===
                   <ListItemIcon>
                     <Icon icon={FileIcon} />
                   </ListItemIcon>
-                  <ListItemText primary="Item with secondary" secondary="With secondary text" />
+                  <ListItemText primary="Item with secondary action" />
+                  <Icon icon={RightIcon} />
                 </ListItem>
-                <Divider variant="inset" />
+              </List>
+
+              <Divider />
+
+              <List>
                 <ListItem button>
                   <ListItemIcon>
-                    <Icon icon={FileIcon} />
+                    <Icon icon={FileTypeTextIcon} size={32} />
                   </ListItemIcon>
-                  <ListItemText primary="Item with secondary action" />
-                  <ListItemSecondaryAction className="u-mr-1">
-                    <Icon icon={RightIcon} color="var(--iconTextColor)" />
-                  </ListItemSecondaryAction>
+                  <ListItemText primary="Files" />
                 </ListItem>
-                <Divider variant="inset" />
+                <ListItem button>
+                  <ListItemIcon>
+                    <Icon icon={FileTypeSheetIcon} size={32} />
+                  </ListItemIcon>
+                  <ListItemText primary="Sheets" />
+                </ListItem>
+              </List>
+
+              <Divider variant="inset" />
+
+              <List>
+                <ListItem button>
+                  <ListItemIcon>
+                    <Icon icon={FileTypeSlideIcon} size={32} />
+                  </ListItemIcon>
+                  <ListItemText primary="Slides" />
+                </ListItem>
+                <ListItem button>
+                  <ListItemIcon>
+                    <Icon icon={FileTypeVideoIcon} size={32} />
+                  </ListItemIcon>
+                  <ListItemText primary="Videos" />
+                </ListItem>
               </List>
             </BottomSheetItem>
           )}
