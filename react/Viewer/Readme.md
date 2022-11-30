@@ -1,16 +1,38 @@
-The `Viewer` component can be used to display the content of various file types. In order to download and display the files, it will need a `cozy-client` instance in the React context.
+The `Viewer` component can be used to display the content of various file types.
 
 Once rendered, the `Viewer` will take up all the available space in it's container (using `position: absolute`). It can be paired with the `Overlay` component to take up the whole screen.
 
 The `Viewer` can display an **information panel** to show additional information about the current file (e.g. whether a file is certified).
 
-⚠️ Important :
+### ⚠️ Important
 
+* In order to download and display the files, it will need a `cozy-client` instance in the React context.
 * To have the panels, the app need to have [cozy-harvest-lib](https://github.com/cozy/cozy-libs/tree/master/packages/cozy-harvest-lib) installed
-
 * To have a working footer, the app need to have a [CozySharing Provider](https://github.com/cozy/cozy-libs/tree/master/packages/cozy-sharing).
-
 * If the footer will be used on MobileApp, the app should have this Cordova plugin [4db7f8f#diff-8c7901258747b81ed60cc2d9cbb254344fae11f8a602e56c1ae42d9eef11d318R50](https://github.com/cozy/cozy-ui/commit/4db7f8fba866bffe04d81d42c716a8dea5c50157#diff-8c7901258747b81ed60cc2d9cbb254344fae11f8a602e56c1ae42d9eef11d318R50)
+
+### Props
+
+* **files** : `<array>` – One or more `io.cozy.files` to display
+* **currentIndex** : `<number>` – Index of the file to show
+* **currentURL** : `<string>` – Optionnal URL of the file
+* **className** : `<string>` – CSS classes
+* **toolbarProps** : `<object>` – Toolbar properties
+  * **toolbarRef** : `<object>` – React reference of the toolbar node
+  * **showToolbar** : `<boolean>` – Whether to show the toolbar or not. Note that the built-in close button is in the toolbar
+  * **showClose** : `<boolean>` – Whether to show close button in toolbar
+* **showNavigation** : `<boolean>` – Whether to show left and right arrows to navigate between files
+* **renderFallbackExtraContent** : `<function>` – A render prop that is called when a file can't be displayed
+* **onlyOfficeProps** : `<object>` – Used to open an Only Office file
+* **disablePanel** : `<boolean>` – Show/Hide the panel containing more information about the file only on Desktop
+* **disableFooter** : `<boolean>` – Show/Hide the panel containing more information about the file only on Phone & Tablet devices
+* **editPathByModelProps** : `<object>` – Edit path by model properties
+  * **information** : `<string>` – URL used to edit the file when editing a `information` type metadata (text, date)
+  * **page** : `<string>` – URL used to edit the file when editing a `page` type metadata (side of the document)
+* **onChangeRequest** : `<function>` - Called with (nextFile, nextIndex) when the user requests to navigate to another file
+* **onCloseRequest** : `<function>` - Called when the user wants to leave the Viewer
+
+### Demo
 
 ```jsx
 import { makeStyles } from '@material-ui/core/styles';
