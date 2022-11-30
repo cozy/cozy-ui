@@ -79,6 +79,7 @@ ViewerContainer.propTypes = {
   onCloseRequest: PropTypes.func,
   /** Called with (nextFile, nextIndex) when the user requests to navigate to another file */
   onChangeRequest: PropTypes.func,
+  /** Toolbar properties */
   toolbarProps: PropTypes.shape(toolbarPropsPropType),
   /** Whether to show left and right arrows to navigate between files */
   showNavigation: PropTypes.bool,
@@ -90,6 +91,13 @@ ViewerContainer.propTypes = {
     isEnabled: PropTypes.bool,
     /** To open the Only Office file */
     opener: PropTypes.func
+  }),
+  /** Edit path by model properties */
+  editPathByModelProps: PropTypes.shape({
+    /** URL used to edit the file when editing a `information` type metadata (text, date) */
+    information: PropTypes.string,
+    /** URL used to edit the file when editing a `page` type metadata (side of the document) */
+    page: PropTypes.string
   }),
   /** Show/Hide the panel containing more information about the file only on Desktop */
   disablePanel: PropTypes.bool,
