@@ -122,7 +122,16 @@ const files = [
     _id: 'image',
     class: 'image',
     name: 'Demo.jpg',
-    mime: 'image/jpg'
+    mime: 'image/jpg',
+    metadata: {
+      carbonCopy: true,
+      electronicSafe: true,
+      referencedDate: new Date(Date.now() - 357 * 24 * 60 * 60 * 1000).toISOString(),
+      datetimeLabel: "referencedDate",
+      qualification: {
+        label: 'personal_sporting_licence'
+      }
+    }
   },
   {
     _id: 'none',
