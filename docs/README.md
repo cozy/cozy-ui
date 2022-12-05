@@ -108,11 +108,11 @@ When renaming or moving a Cozy-UI component, it may cause a breaking change. In 
 
 If you want to add a new icon to cozy-ui, you must follow these steps:
 
-* First verify that the SVG doesn't have any `fill` or `fill-opacity` properties. Remove them if necessary
+* If you SVG file is an icon (not an illustration), verify that the file doesn't have any fill or fill-opacity properties. Remove them if necessary
 * Add the SVG in the `assets/icons/[ui || illus]` folder
 * Optimize it with `yarn svgo assets/icons/[ui || illus]/[new icon file name]`
 * Generate the react component by running `yarn makeSvgr assets/icons/[ui || illus]/[new icon file name]`
-* Update the documentation by adding the icon in `react/Icon/Readme.md` inside `SVGr icons` and `Available UI icons` sections
+* Update the documentation by adding the new file in react/Icon/Readme.md. If it's an icon, add it in SVGr icons and Available UI icons sections, or in SVGr illustrations and Available illustrations sections if it's an illustration
 * Don't forget to check the icon's color on different theme (inverted, etc.)
 * Update the tests by running `yarn sprite && yarn build && yarn test -u`
 
