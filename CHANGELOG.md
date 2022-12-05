@@ -1,3 +1,10 @@
+# [77.10.0](https://github.com/cozy/cozy-ui/compare/v77.9.2...v77.10.0) (2022-12-05)
+
+
+### Features
+
+* **search.js:** add maintenance activated matcher ([633c7b2](https://github.com/cozy/cozy-ui/commit/633c7b2))
+
 ## [77.9.2](https://github.com/cozy/cozy-ui/compare/v77.9.1...v77.9.2) (2022-11-29)
 
 
