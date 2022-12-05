@@ -565,6 +565,10 @@ import FileTypeSlideIcon from 'cozy-ui/transpiled/react/Icons/FileTypeSlide'
 import FileTypeTextIcon from 'cozy-ui/transpiled/react/Icons/FileTypeText'
 import FileTypeVideoIcon from 'cozy-ui/transpiled/react/Icons/FileTypeVideo'
 import FileTypeZipIcon from 'cozy-ui/transpiled/react/Icons/FileTypeZip'
+import FileTypeBankingAccountIcon from 'cozy-ui/transpiled/react/Icons/FileTypeBankingAccount'
+import ContactsIcon from 'cozy-ui/transpiled/react/Icons/Contacts'
+import PapersIcon from 'cozy-ui/transpiled/react/Icons/Papers'
+import StoreIcon from 'cozy-ui/transpiled/react/Icons/Store'
 import ForbiddenSignIcon from 'cozy-ui/transpiled/react/Icons/ForbiddenSign'
 import GoogleIcon from 'cozy-ui/transpiled/react/Icons/Google'
 import LogoutLargeIcon from 'cozy-ui/transpiled/react/Icons/LogoutLarge'
@@ -594,6 +598,10 @@ const icons = [
   FileTypeTextIcon,
   FileTypeVideoIcon,
   FileTypeZipIcon,
+  FileTypeBankingAccountIcon,
+  ContactsIcon,
+  PapersIcon,
+  StoreIcon,
   ForbiddenSignIcon,
   GoogleIcon,
   LogoutLargeIcon,
@@ -641,7 +649,7 @@ import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite'
 
-const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'device-phone', 'device-tablet', 'device-browser', 'file-type-audio', 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'forbidden-sign', 'google', 'logout-large', 'top-select', 'bottom-select', 'check-white', 'dash-white', 'keychain']
+const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'device-phone', 'device-tablet', 'device-browser', 'file-type-audio', 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'file-type-banking-account' , 'forbidden-sign', 'google', 'logout-large', 'top-select', 'bottom-select', 'check-white', 'dash-white', 'keychain', 'contacts', 'papers', 'store']
 
 ;
 
