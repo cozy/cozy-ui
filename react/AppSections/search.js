@@ -27,12 +27,17 @@ const doctypeMatcher = doctype => app => {
 }
 const pendingUpdateMatcher = () => app => !!app.availableVersion
 
+const underMaintenanceMatcher = isUnderMaintenance => app => {
+  return (app.maintenance !== undefined) === isUnderMaintenance
+}
+
 const searchAttrToMatcher = {
   type: typeMatcher,
   category: categoryMatcher,
   tag: tagMatcher,
   doctype: doctypeMatcher,
-  pendingUpdate: pendingUpdateMatcher
+  pendingUpdate: pendingUpdateMatcher,
+  underMaintenance: underMaintenanceMatcher
 }
 
 /**

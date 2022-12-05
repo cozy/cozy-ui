@@ -5,6 +5,20 @@
 import { makeMatcherFromSearch } from './search'
 import mockApps from '../mocks/apps'
 
+const mockMaintenanceApps = [
+  { slug: 'collect' },
+  { slug: 'drive' },
+  {
+    slug: 'konnectorInMaintenance',
+    maintenance: {
+      flag_infra_maintenance: true,
+      flag_short_maintenance: true,
+      flag_disallow_manual_exec: true,
+      messages: []
+    }
+  }
+]
+
 describe('makeMatcherFromSearch', () => {
   it('should filter correctly on type', () => {
     const matcher = makeMatcherFromSearch({ type: 'webapp' })
@@ -29,6 +43,29 @@ describe('makeMatcherFromSearch', () => {
   it('should filter correctly on pending update apps', () => {
     const matcher = makeMatcherFromSearch({ pendingUpdate: true })
     expect(mockApps.filter(matcher)).toMatchSnapshot()
+  })
+
+  it('should filter correctly when under maintenance is false', () => {
+    const matcher = makeMatcherFromSearch({ underMaintenance: false })
+    expect(mockMaintenanceApps.filter(matcher)).toStrictEqual([
+      { slug: 'collect' },
+      { slug: 'drive' }
+    ])
+  })
+
+  it('should filter correctly when under maintenance is true', () => {
+    const matcher = makeMatcherFromSearch({ underMaintenance: true })
+    expect(mockMaintenanceApps.filter(matcher)).toStrictEqual([
+      {
+        maintenance: {
+          flag_disallow_manual_exec: true,
+          flag_infra_maintenance: true,
+          flag_short_maintenance: true,
+          messages: []
+        },
+        slug: 'konnectorInMaintenance'
+      }
+    ])
   })
 
   it('should handle correctly multi filters', () => {
