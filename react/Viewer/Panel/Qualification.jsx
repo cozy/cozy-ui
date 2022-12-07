@@ -1,6 +1,8 @@
 import React, { useRef, useState, createRef, useMemo, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
+import { models } from 'cozy-client'
+
 import List from '../../MuiCozyTheme/List'
 import { withViewerLocales } from '../hoc/withViewerLocales'
 import {
@@ -9,11 +11,14 @@ import {
   knownInformationMetadataNames,
   knownOtherMetadataNames
 } from '../helpers'
+import ExpirationAlert from '../components/ExpirationAlert'
 import QualificationListItemContact from './QualificationListItemContact'
 import ActionMenuWrapper from './ActionMenuWrapper'
 import QualificationListItemDate from './QualificationListItemDate'
 import QualificationListItemInformation from './QualificationListItemInformation'
 import QualificationListItemOther from './QualificationListItemOther'
+
+const { isExpiringSoon } = models.paper
 
 const makeQualificationListItemComp = metadataName => {
   if (knownDateMetadataNames.includes(metadataName)) {
@@ -63,31 +68,36 @@ const Qualification = ({ file = {} }) => {
   }, [formatedMetadataQualification])
 
   return (
-    <List className={'u-pv-1'}>
-      {formatedMetadataQualification.map((meta, idx) => {
-        const { name } = meta
-        const QualificationListItemComp = makeQualificationListItemComp(name)
-
-        return (
-          <QualificationListItemComp
-            key={idx}
-            file={file}
-            ref={actionBtnRef.current[idx]}
-            formatedMetadataQualification={meta}
-            toggleActionsMenu={val => toggleActionsMenu(idx, name, val)}
-          />
-        )
-      })}
-
-      {optionFile.name && (
-        <ActionMenuWrapper
-          onClose={hideActionsMenu}
-          file={file}
-          optionFile={optionFile}
-          ref={actionBtnRef.current[optionFile.id]}
-        />
+    <>
+      {isExpiringSoon(file) && !file?.metadata?.hideExpirationAlert && (
+        <ExpirationAlert file={file} />
       )}
-    </List>
+      <List className={'u-pv-1'}>
+        {formatedMetadataQualification.map((meta, idx) => {
+          const { name } = meta
+          const QualificationListItemComp = makeQualificationListItemComp(name)
+
+          return (
+            <QualificationListItemComp
+              key={idx}
+              file={file}
+              ref={actionBtnRef.current[idx]}
+              formatedMetadataQualification={meta}
+              toggleActionsMenu={val => toggleActionsMenu(idx, name, val)}
+            />
+          )
+        })}
+
+        {optionFile.name && (
+          <ActionMenuWrapper
+            onClose={hideActionsMenu}
+            file={file}
+            optionFile={optionFile}
+            ref={actionBtnRef.current[optionFile.id]}
+          />
+        )}
+      </List>
+    </>
   )
 }
 
