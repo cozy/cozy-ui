@@ -37,7 +37,11 @@ const makeQualificationListItemComp = metadataName => {
   }
 }
 
-const Qualification = ({ file = {} }) => {
+const isExpirationAlertHidden = file => {
+  return file?.metadata?.hideExpirationAlert ?? false
+}
+
+const Qualification = ({ file }) => {
   const { metadata = {} } = file
   const actionBtnRef = useRef([])
   const [optionFile, setOptionFile] = useState({
@@ -69,7 +73,7 @@ const Qualification = ({ file = {} }) => {
 
   return (
     <>
-      {isExpiringSoon(file) && !file?.metadata?.hideExpirationAlert && (
+      {isExpiringSoon(file) && !isExpirationAlertHidden(file) && (
         <ExpirationAlert file={file} />
       )}
       <List className={'u-pv-1'}>
@@ -102,7 +106,7 @@ const Qualification = ({ file = {} }) => {
 }
 
 Qualification.propTypes = {
-  file: PropTypes.object
+  file: PropTypes.object.isRequired
 }
 
 export default withViewerLocales(Qualification)
