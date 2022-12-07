@@ -1,3 +1,24 @@
+# [78.0.0](https://github.com/cozy/cozy-ui/compare/v77.10.0...v78.0.0) (2022-12-07)
+
+
+### Bug Fixes
+
+* Require `file` prop in `Qualification` ([c29f5c7](https://github.com/cozy/cozy-ui/commit/c29f5c7))
+
+
+### Features
+
+* Add an `ExpirationAlert` component ([9793851](https://github.com/cozy/cozy-ui/commit/9793851))
+* Add an `ExpirationAnnotation` component ([50109bc](https://github.com/cozy/cozy-ui/commit/50109bc))
+* Add expiration annotations to date qualifications ([a48496d](https://github.com/cozy/cozy-ui/commit/a48496d))
+* Add the expiration alert to the qualification block ([651be00](https://github.com/cozy/cozy-ui/commit/651be00))
+* Update `cozy-client` to 34.4.0 ([6bdaa34](https://github.com/cozy/cozy-ui/commit/6bdaa34))
+
+
+### BREAKING CHANGES
+
+* You need to update `cozy-client` to `>34.4.0`.
+
 # [77.10.0](https://github.com/cozy/cozy-ui/compare/v77.9.2...v77.10.0) (2022-12-05)
 
 
