@@ -72,7 +72,9 @@
           "copy": "Copy",
           "copyClipboard": "Copy to clipboard",
           "edit": "Edit"
-        }
+        },
+        "expired": "Expired",
+        "expiresIn": "Expires in %{duration}"
       },
       "title": "Useful information"
     },
