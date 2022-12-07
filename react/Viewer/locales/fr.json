@@ -76,6 +76,10 @@
         "expired": "Expiré",
         "expiresIn": "Expire dans %{duration}"
       },
+      "expiration": {
+        "description": "Ce document expirera dans %{duration}, pensez à le renouveler",
+        "dismiss": "J'ai compris"
+      },
       "title": "Informations utiles"
     },
     "previous": "Précédente",
