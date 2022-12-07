@@ -13,6 +13,7 @@ const BottomSheetContent = ({ file }) => {
       key={index}
       disableGutters
       disableElevation={index === panelBlocks.length - 1}
+      className="u-pv-1"
     >
       <PanelBlock file={file} />
     </BottomSheetItem>

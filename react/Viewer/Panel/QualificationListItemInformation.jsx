@@ -32,7 +32,7 @@ const QualificationListItemInformation = forwardRef(
     const currentValue = makeInformationValue(name, value, t)
 
     return (
-      <ListItem className={'u-pl-2 u-pr-3'}>
+      <ListItem>
         <QualificationListItemText
           primary={t(`Viewer.panel.qualification.information.title.${name}`)}
           secondary={currentValue}

@@ -11,7 +11,7 @@ import { withViewerLocales } from '../hoc/withViewerLocales'
 
 const Certification = ({ icon, title, caption }) => {
   return (
-    <div className={'u-ph-2 u-pv-1'}>
+    <div className="u-ph-1 u-pv-half">
       <Media className="u-mb-half" align="top">
         <Img className="u-mr-half">
           <Icon icon={icon} />
@@ -36,7 +36,7 @@ const Certifications = ({ file, t }) => {
   const hasElectronicSafe = has(file, 'metadata.electronicSafe')
 
   return (
-    <>
+    <div className="u-flex u-flex-column" style={{ rowGap: '.5rem' }}>
       {hasCarbonCopy && (
         <Certification
           icon={CarbonCopyIcon}
@@ -51,7 +51,7 @@ const Certifications = ({ file, t }) => {
           caption={t('Viewer.panel.certifications.electronicSafe.caption')}
         />
       )}
-    </>
+    </div>
   )
 }
 

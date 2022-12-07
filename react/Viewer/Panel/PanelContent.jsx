@@ -24,15 +24,13 @@ const PanelContent = ({ file, t }) => {
       {panelBlocks.map((PanelBlock, index) => (
         <Paper
           key={index}
-          className={cx({
+          className={cx('u-p-1', {
             'u-flex-grow-1': index === panelBlocks.length - 1
           })}
           elevation={2}
           square
         >
-          <Typography variant="h4" className={'u-pv-1'}>
-            <PanelBlock file={file} />
-          </Typography>
+          <PanelBlock file={file} />
         </Paper>
       ))}
     </Stack>

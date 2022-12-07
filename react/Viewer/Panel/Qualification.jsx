@@ -72,11 +72,11 @@ const Qualification = ({ file }) => {
   }, [formatedMetadataQualification])
 
   return (
-    <>
+    <div className="u-flex u-flex-column" style={{ rowGap: '1rem' }}>
       {isExpiringSoon(file) && !isExpirationAlertHidden(file) && (
         <ExpirationAlert file={file} />
       )}
-      <List className={'u-pv-1'}>
+      <List className="u-pv-0">
         {formatedMetadataQualification.map((meta, idx) => {
           const { name } = meta
           const QualificationListItemComp = makeQualificationListItemComp(name)
@@ -101,7 +101,7 @@ const Qualification = ({ file }) => {
           />
         )}
       </List>
-    </>
+    </div>
   )
 }
 
