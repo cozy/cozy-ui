@@ -1,7 +1,7 @@
 import format from 'date-fns/format'
 import { DEFAULT_LANG } from '.'
-import formatDistanceToNow from 'date-fns/distance_in_words_to_now'
-import formatDistanceStrict from 'date-fns/distance_in_words_strict'
+import formatDistanceToNow from 'date-fns/formatDistanceToNow'
+import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict'
 
 const locales = {}
 let lang = DEFAULT_LANG
@@ -39,4 +39,4 @@ export const formatLocallyDistanceToNow = date =>
   formatDistanceToNow(date, { locale: locales[lang] })
 
 export const formatLocallyDistanceToNowStrict = date =>
-  formatDistanceStrict(Date.now(), date, { locale: locales[lang] })
+  formatDistanceToNowStrict(date, { locale: locales[lang] })
