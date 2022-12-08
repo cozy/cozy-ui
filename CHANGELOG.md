@@ -1,3 +1,10 @@
+# [78.1.0](https://github.com/cozy/cozy-ui/compare/v78.0.0...v78.1.0) (2022-12-08)
+
+
+### Features
+
+* Add FileTypeBankingAccount, Contacts, Papers and Store illustration ([4d4a1b8](https://github.com/cozy/cozy-ui/commit/4d4a1b8))
+
 # [78.0.0](https://github.com/cozy/cozy-ui/compare/v77.10.0...v78.0.0) (2022-12-07)
 
 
