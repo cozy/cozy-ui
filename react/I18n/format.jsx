@@ -4,26 +4,31 @@ import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict'
 
 const locales = {}
-let lang = DEFAULT_LANG
+let lang = DEFAULT_LANG === 'en' ? 'en-US' : DEFAULT_LANG
 
 const getWarningMessage = lang =>
   `The "${lang}" locale isn't supported by date-fns. or has not been included in the build. Check if you have configured a ContextReplacementPlugin that is too restrictive.`
 
 export const provideDateFnsLocale = (userLang, defaultLang = DEFAULT_LANG) => {
-  lang = userLang
+  const resolvedDefaultLang = defaultLang === 'en' ? 'en-US' : defaultLang
+  const resolvedUserLang = userLang === 'en' ? 'en-US' : userLang
   try {
-    locales[defaultLang] = require(`date-fns/locale/${defaultLang}/index.js`)
+    locales[
+      resolvedDefaultLang
+    ] = require(`date-fns/locale/${resolvedDefaultLang}/index.js`)
   } catch (err) {
-    console.warn(getWarningMessage(defaultLang))
+    console.warn(getWarningMessage(resolvedDefaultLang))
   }
-
-  if (lang && lang !== defaultLang) {
+  if (resolvedUserLang && resolvedUserLang !== resolvedDefaultLang) {
     try {
-      locales[lang] = require(`date-fns/locale/${lang}/index.js`)
+      locales[
+        resolvedUserLang
+      ] = require(`date-fns/locale/${resolvedUserLang}/index.js`)
     } catch (e) {
-      console.warn(getWarningMessage(lang))
+      console.warn(getWarningMessage(resolvedUserLang))
     }
   }
+  lang = resolvedUserLang
   return locales[lang]
 }
 
