@@ -58,7 +58,7 @@
             "ibanNumber": "IBAN number",
             "country": "Country of delivery",
             "passportNumber": "Passport number",
-            "noticePeriod": "Time to expiration alert"
+            "noticePeriod": "Expiration alert"
           },
           "day": "day |||| days"
         },

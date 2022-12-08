@@ -43,7 +43,7 @@
             "CObtentionDate": "Permis C, délivré le",
             "DObtentionDate": "Permis D, délivré le",
             "issueDate": "Délivré le",
-            "expirationDate": "Expire le",
+            "expirationDate": "Date d'expiration",
             "referencedDate": "Date de référence",
             "shootingDate": "Date de prise de vue",
             "obtentionDate": "Date d'obtention",
@@ -58,7 +58,7 @@
             "ibanNumber": "Numéro d'IBAN",
             "country": "Pays de délivrance",
             "passportNumber": "Numéro du passeport",
-            "noticePeriod": "Délai avant l’alerte d’expiration"
+            "noticePeriod": "Alerte d’expiration"
           },
           "day": "jour |||| jours"
         },
