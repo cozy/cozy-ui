@@ -1,3 +1,10 @@
+## [78.1.1](https://github.com/cozy/cozy-ui/compare/v78.1.0...v78.1.1) (2022-12-08)
+
+
+### Bug Fixes
+
+* Update expiration date and notice period wordings ([d6169ba](https://github.com/cozy/cozy-ui/commit/d6169ba))
+
 # [78.1.0](https://github.com/cozy/cozy-ui/compare/v78.0.0...v78.1.0) (2022-12-08)
 
 
