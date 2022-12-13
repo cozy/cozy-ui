@@ -36,12 +36,17 @@ export const initFormat = (userLang, defaultLang = DEFAULT_LANG) => (
   date,
   formatStr
 ) => {
+  const dateObject = new Date(date)
   const locale = provideDateFnsLocale(userLang, defaultLang)
-  return format(date, formatStr, { locale })
+  return format(dateObject, formatStr, { locale })
 }
 
-export const formatLocallyDistanceToNow = date =>
-  formatDistanceToNow(date, { locale: locales[lang] })
+export const formatLocallyDistanceToNow = date => {
+  const dateObject = new Date(date)
+  return formatDistanceToNow(dateObject, { locale: locales[lang] })
+}
 
-export const formatLocallyDistanceToNowStrict = date =>
-  formatDistanceToNowStrict(date, { locale: locales[lang] })
+export const formatLocallyDistanceToNowStrict = date => {
+  const dateObject = new Date(date)
+  return formatDistanceToNowStrict(dateObject, { locale: locales[lang] })
+}
