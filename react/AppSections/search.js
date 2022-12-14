@@ -27,8 +27,9 @@ const doctypeMatcher = doctype => app => {
 }
 const pendingUpdateMatcher = () => app => !!app.availableVersion
 
-const underMaintenanceMatcher = isUnderMaintenance => app => {
-  return (app.maintenance !== undefined) === isUnderMaintenance
+const showMaintenanceMatcher = isShowMaintenance => app => {
+  if (isShowMaintenance) return true
+  return app.maintenance === undefined
 }
 
 const searchAttrToMatcher = {
@@ -37,7 +38,7 @@ const searchAttrToMatcher = {
   tag: tagMatcher,
   doctype: doctypeMatcher,
   pendingUpdate: pendingUpdateMatcher,
-  underMaintenance: underMaintenanceMatcher
+  showMaintenance: showMaintenanceMatcher
 }
 
 /**

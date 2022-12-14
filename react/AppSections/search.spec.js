@@ -45,17 +45,19 @@ describe('makeMatcherFromSearch', () => {
     expect(mockApps.filter(matcher)).toMatchSnapshot()
   })
 
-  it('should filter correctly when under maintenance is false', () => {
-    const matcher = makeMatcherFromSearch({ underMaintenance: false })
+  it('should filter correctly when show maintenance is false', () => {
+    const matcher = makeMatcherFromSearch({ showMaintenance: false })
     expect(mockMaintenanceApps.filter(matcher)).toStrictEqual([
       { slug: 'collect' },
       { slug: 'drive' }
     ])
   })
 
-  it('should filter correctly when under maintenance is true', () => {
-    const matcher = makeMatcherFromSearch({ underMaintenance: true })
+  it('should filter correctly when show maintenance is true', () => {
+    const matcher = makeMatcherFromSearch({ showMaintenance: true })
     expect(mockMaintenanceApps.filter(matcher)).toStrictEqual([
+      { slug: 'collect' },
+      { slug: 'drive' },
       {
         maintenance: {
           flag_disallow_manual_exec: true,
