@@ -99,7 +99,11 @@ export { default as Fab } from './Fab'
 export { default as SquareAppIcon } from './SquareAppIcon'
 export { default as FileImageLoader } from './FileImageLoader'
 export { default as Radios } from './Radios'
-export { default as BottomSheet, BottomSheetItem } from './BottomSheet'
+export {
+  default as BottomSheet,
+  BottomSheetItem,
+  BottomSheetHeader
+} from './BottomSheet'
 export { default as FilePicker } from './FilePicker'
 export { default as Chips } from './Chips'
 export { default as PieChart } from './PieChart'
