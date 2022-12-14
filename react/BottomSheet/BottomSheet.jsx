@@ -48,7 +48,7 @@ const ContainerWrapper = ({ showBackdrop, children }) => {
   return children
 }
 
-const createStyles = ({ squared, hasToolbarProps }) => ({
+const createStyles = ({ squared, hasToolbarProps, immersive }) => ({
   root: {
     borderTopLeftRadius: '1rem',
     borderTopRightRadius: '1rem',
@@ -72,7 +72,8 @@ const createStyles = ({ squared, hasToolbarProps }) => ({
     backgroundColor: 'var(--secondaryTextColor)'
   },
   stack: {
-    backgroundColor: 'var(--defaultBackgroundColor)'
+    backgroundColor: 'var(--defaultBackgroundColor)',
+    paddingBottom: immersive ? 'var(--flagship-bottom-height)' : 0
   },
   bounceSafer: {
     height: 50,
@@ -131,7 +132,8 @@ const BottomSheet = memo(
 
     const styles = createStyles({
       squared,
-      hasToolbarProps
+      hasToolbarProps,
+      immersive: getFlagshipMetadata().immersive
     })
     const overriddenChildren = makeOverridenChildren(children, headerContentRef)
 
@@ -224,9 +226,6 @@ const BottomSheet = memo(
 
     return (
       <ContainerWrapper showBackdrop={showBackdrop}>
-        {getFlagshipMetadata().immersive && (
-          <span style={styles.flagshipImmersive} />
-        )}
         <BackdropOrFragment
           showBackdrop={showBackdrop}
           onClick={() =>
@@ -279,6 +278,9 @@ const BottomSheet = memo(
           </div>
           <div style={{ height: backdrop ? 0 : bottomSpacerHeight }} />
         </MuiBottomSheet>
+        {getFlagshipMetadata().immersive && (
+          <span style={styles.flagshipImmersive} />
+        )}
         {!isBottomPosition && (
           <Fade in timeout={ANIMATION_DURATION}>
             <div style={styles.bounceSafer} />
