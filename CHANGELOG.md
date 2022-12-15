@@ -1,3 +1,15 @@
+# [79.0.0](https://github.com/cozy/cozy-ui/compare/v78.1.1...v79.0.0) (2022-12-15)
+
+
+### Bug Fixes
+
+* **search.js:** rename underMaintenance to showMaintenance ([295058a](https://github.com/cozy/cozy-ui/commit/295058a))
+
+
+### BREAKING CHANGES
+
+* **search.js:** You need to use showMaintenance instead underMaintenance matcher in AppSection filters
+
 ## [78.1.1](https://github.com/cozy/cozy-ui/compare/v78.1.0...v78.1.1) (2022-12-08)
 
 
