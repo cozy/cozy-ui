@@ -5,7 +5,7 @@ import { models } from 'cozy-client'
 
 import Typography from '../../Typography'
 import { useI18n } from '../../I18n'
-import { formatLocallyDistanceToNow } from '../../I18n/format'
+import { formatLocallyDistanceToNowStrict } from '../../I18n/format'
 
 const { computeExpirationDate, isExpired } = models.paper
 
@@ -25,7 +25,7 @@ const ExpirationAnnotation = ({ file }) => {
   return (
     <Typography component="span" variant="inherit" className="u-warning">
       {t('Viewer.panel.qualification.expiresIn', {
-        duration: formatLocallyDistanceToNow(expirationDate)
+        duration: formatLocallyDistanceToNowStrict(expirationDate)
       })}
     </Typography>
   )
