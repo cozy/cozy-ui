@@ -9,7 +9,7 @@ import Link from '../../Link'
 import Typography from '../../Typography'
 import { withViewerLocales } from '../hoc/withViewerLocales'
 import { useI18n } from '../../I18n'
-import { formatLocallyDistanceToNow } from '../../I18n/format'
+import { formatLocallyDistanceToNowStrict } from '../../I18n/format'
 
 const FILES_DOCTYPE = 'io.cozy.files'
 
@@ -51,7 +51,7 @@ const ExpirationAlert = ({ file }) => {
       <Typography component="span" variant="inherit">
         <Typography component="span" variant="inherit">
           {t('Viewer.panel.expiration.description', {
-            duration: formatLocallyDistanceToNow(expirationDate)
+            duration: formatLocallyDistanceToNowStrict(expirationDate)
           })}
         </Typography>
         {expirationNoticeLink && (
