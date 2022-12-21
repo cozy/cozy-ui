@@ -14,7 +14,7 @@ describe('initFormat', () => {
 
 describe('formatLocallyDistanceToNow', () => {
   it('should formatDistanceToNow with small value', () => {
-    const date = Date.now() + 29 * 1000
+    const date = Date.now() + 29 * 1000 // 29s
 
     const result = formatLocallyDistanceToNow(date)
 
@@ -22,7 +22,7 @@ describe('formatLocallyDistanceToNow', () => {
   })
 
   it('should formatDistanceToNow with medium value', () => {
-    const date = Date.now() + 2671 * 1000
+    const date = Date.now() + (44 * 60 + 31) * 1000 // 44min 31s
 
     const result = formatLocallyDistanceToNow(date)
 
@@ -30,18 +30,18 @@ describe('formatLocallyDistanceToNow', () => {
   })
 
   it('should formatDistanceToNow with high value', () => {
-    const date = Date.now() + 5371 * 1000
+    const date = Date.now() + (89 * 60 + 31) * 1000 // 89min 31s
 
     const result = formatLocallyDistanceToNow(date)
 
     expect(result).toEqual('about 2 hours')
   })
 
-  it('should not throw if a date-fns locale can not be found', () => {
-    jest.spyOn(console, 'warn').mockImplementation()
+  it('should formatDistanceToNow with very high value', () => {
+    const date = Date.now() + 42 * 24 * 60 * 60 * 1000 // 42d
 
-    expect(() => formatLocallyDistanceToNow('unknown-lang')).not.toThrow()
+    const result = formatLocallyDistanceToNow(date)
 
-    console.warn.mockRestore()
+    expect(result).toEqual('about 1 month')
   })
 })
