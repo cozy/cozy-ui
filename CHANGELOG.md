@@ -1,3 +1,10 @@
+# [79.1.0](https://github.com/cozy/cozy-ui/compare/v79.0.0...v79.1.0) (2022-12-21)
+
+
+### Features
+
+* Add a `formatLocallyDistanceToNowStrict` helper ([ff6b565](https://github.com/cozy/cozy-ui/commit/ff6b565))
+
 # [79.0.0](https://github.com/cozy/cozy-ui/compare/v78.1.1...v79.0.0) (2022-12-15)
 
 
