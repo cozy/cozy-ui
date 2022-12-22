@@ -684,6 +684,67 @@ exports[`Buttons should render examples: Buttons 3`] = `
 exports[`Buttons should render examples: Buttons 4`] = `
 "<div>
   <div class=\\"MuiGrid-root MuiGrid-container\\">
+    <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4\\">
+      <div class=\\"styles__Stack--s___22WMg\\">
+        <div>startIcon - small</div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\"><span class=\\"MuiButton-startIcon MuiButton-iconSizeSmall\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span>primary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary MuiButton-outlinedPrimary MuiButton-outlinedSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\"><span class=\\"MuiButton-startIcon MuiButton-iconSizeSmall\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span>secondary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary ghost  MuiButton-outlinedPrimary MuiButton-outlinedSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\"><span class=\\"MuiButton-startIcon MuiButton-iconSizeSmall\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span>ghost</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\"><span class=\\"MuiButton-startIcon MuiButton-iconSizeSmall\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span>text</span></button></div>
+      </div>
+    </div>
+    <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4\\">
+      <div class=\\"styles__Stack--s___22WMg\\">
+        <div>startIcon - medium</div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\"><span class=\\"MuiButton-startIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span>primary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary MuiButton-outlinedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\"><span class=\\"MuiButton-startIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span>secondary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary ghost  MuiButton-outlinedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\"><span class=\\"MuiButton-startIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span>ghost</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\"><span class=\\"MuiButton-startIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span>text</span></button></div>
+      </div>
+    </div>
+    <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4\\">
+      <div class=\\"styles__Stack--s___22WMg\\">
+        <div>startIcon - large</div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-containedSizeLarge MuiButton-sizeLarge MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\"><span class=\\"MuiButton-startIcon MuiButton-iconSizeLarge\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span>primary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary MuiButton-outlinedPrimary MuiButton-outlinedSizeLarge MuiButton-sizeLarge MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\"><span class=\\"MuiButton-startIcon MuiButton-iconSizeLarge\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span>secondary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary ghost  MuiButton-outlinedPrimary MuiButton-outlinedSizeLarge MuiButton-sizeLarge MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\"><span class=\\"MuiButton-startIcon MuiButton-iconSizeLarge\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span>ghost</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textPrimary MuiButton-textSizeLarge MuiButton-sizeLarge MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\"><span class=\\"MuiButton-startIcon MuiButton-iconSizeLarge\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span>text</span></button></div>
+      </div>
+    </div>
+    <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4\\">
+      <div class=\\"styles__Stack--s___22WMg\\">
+        <div>endIcon - small</div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">primary<span class=\\"MuiButton-endIcon MuiButton-iconSizeSmall\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary MuiButton-outlinedPrimary MuiButton-outlinedSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">secondary<span class=\\"MuiButton-endIcon MuiButton-iconSizeSmall\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary ghost  MuiButton-outlinedPrimary MuiButton-outlinedSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ghost<span class=\\"MuiButton-endIcon MuiButton-iconSizeSmall\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">text<span class=\\"MuiButton-endIcon MuiButton-iconSizeSmall\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span></span></button></div>
+      </div>
+    </div>
+    <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4\\">
+      <div class=\\"styles__Stack--s___22WMg\\">
+        <div>endIcon - medium</div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">primary<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary MuiButton-outlinedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">secondary<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary ghost  MuiButton-outlinedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ghost<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">text<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span></span></button></div>
+      </div>
+    </div>
+    <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4\\">
+      <div class=\\"styles__Stack--s___22WMg\\">
+        <div>endIcon - large</div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-containedSizeLarge MuiButton-sizeLarge MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">primary<span class=\\"MuiButton-endIcon MuiButton-iconSizeLarge\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary MuiButton-outlinedPrimary MuiButton-outlinedSizeLarge MuiButton-sizeLarge MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">secondary<span class=\\"MuiButton-endIcon MuiButton-iconSizeLarge\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary ghost  MuiButton-outlinedPrimary MuiButton-outlinedSizeLarge MuiButton-sizeLarge MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ghost<span class=\\"MuiButton-endIcon MuiButton-iconSizeLarge\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textPrimary MuiButton-textSizeLarge MuiButton-sizeLarge MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">text<span class=\\"MuiButton-endIcon MuiButton-iconSizeLarge\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span></span></button></div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Buttons should render examples: Buttons 5`] = `
+"<div>
+  <div class=\\"MuiGrid-root MuiGrid-container\\">
     <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
       <div class=\\"styles__Stack--s___22WMg\\">
         <div>success</div>
@@ -724,7 +785,7 @@ exports[`Buttons should render examples: Buttons 4`] = `
 </div>"
 `;
 
-exports[`Buttons should render examples: Buttons 5`] = `
+exports[`Buttons should render examples: Buttons 6`] = `
 "<div>
   <div class=\\"MuiGrid-root MuiGrid-container\\">
     <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
@@ -767,7 +828,7 @@ exports[`Buttons should render examples: Buttons 5`] = `
 </div>"
 `;
 
-exports[`Buttons should render examples: Buttons 6`] = `
+exports[`Buttons should render examples: Buttons 7`] = `
 "<div>
   <div class=\\"MuiGrid-root MuiGrid-container\\">
     <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
