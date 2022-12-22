@@ -4,7 +4,8 @@ import {
   computeMinHeight,
   setTopPosition,
   setBottomPosition,
-  minimizeAndClose
+  minimizeAndClose,
+  computeBottomSpacer
 } from './helpers'
 
 jest.mock('../helpers/getSafeArea', () => ({
@@ -63,10 +64,24 @@ describe('computeMediumHeight', () => {
         backdrop: false,
         maxHeight: 800,
         mediumHeight: 400,
-        innerContentHeight: 200
+        innerContentHeight: 200,
+        offset: 0
       })
 
       expect(res).toBe(200)
+    })
+
+    it('should return the innerContentHeight with offset if innerContentHeight < mediumHeight and offset set', () => {
+      const res = computeMediumHeight({
+        backdrop: false,
+        maxHeight: 800,
+        mediumHeight: 400,
+        innerContentHeight: 200,
+        bottomSpacerHeight: 0,
+        offset: 48
+      })
+
+      expect(res).toBe(248)
     })
   })
 
@@ -76,10 +91,23 @@ describe('computeMediumHeight', () => {
         backdrop: true,
         maxHeight: 800,
         mediumHeight: 400,
-        innerContentHeight: 300
+        innerContentHeight: 300,
+        bottomSpacerHeight: 0
       })
 
       expect(res).toBe(300)
+    })
+
+    it('should return innerContentHeight and bottomSpacerHeight value if lower than mediumHeight and bottomSpacerHeight set', () => {
+      const res = computeMediumHeight({
+        backdrop: true,
+        maxHeight: 800,
+        mediumHeight: 400,
+        innerContentHeight: 300,
+        bottomSpacerHeight: 48
+      })
+
+      expect(res).toBe(348)
     })
 
     it('should return mediumHeight value if lower than innerContentHeight', () => {
@@ -294,5 +322,107 @@ describe('minimizeAndClose', () => {
     expect(setIsTopPosition).toHaveBeenCalledWith(false)
     expect(setIsBottomPosition).toHaveBeenCalledWith(true)
     expect(handleClose).toHaveBeenCalled()
+  })
+})
+
+describe('computeBottomSpacer', () => {
+  describe('without backdrop', () => {
+    describe('inner content longer than max height', () => {
+      it('should return maxHeight - innerContentHeight if no offset', () => {
+        const res = computeBottomSpacer({
+          backdrop: false,
+          maxHeight: 800,
+          innerContentHeight: 200,
+          offset: 0
+        })
+
+        expect(res).toBe(600)
+      })
+
+      it('should return maxHeight - innerContentHeight even with an offset', () => {
+        const res = computeBottomSpacer({
+          backdrop: false,
+          maxHeight: 800,
+          innerContentHeight: 200,
+          offset: 48
+        })
+
+        expect(res).toBe(600)
+      })
+    })
+
+    describe('inner content shorter than max height', () => {
+      it('should', () => {
+        const res = computeBottomSpacer({
+          backdrop: false,
+          maxHeight: 800,
+          innerContentHeight: 1000,
+          offset: 0
+        })
+
+        expect(res).toBe(0)
+      })
+
+      it('should', () => {
+        const res = computeBottomSpacer({
+          backdrop: false,
+          maxHeight: 800,
+          innerContentHeight: 1000,
+          offset: 48
+        })
+
+        expect(res).toBe(48)
+      })
+    })
+  })
+
+  describe('with backdrop', () => {
+    describe('inner content longer than max height', () => {
+      it('should return the offset value even if zero', () => {
+        const res = computeBottomSpacer({
+          backdrop: true,
+          maxHeight: 800,
+          innerContentHeight: 200,
+          offset: 0
+        })
+
+        expect(res).toBe(0)
+      })
+
+      it('should return the offset value ', () => {
+        const res = computeBottomSpacer({
+          backdrop: true,
+          maxHeight: 800,
+          innerContentHeight: 200,
+          offset: 48
+        })
+
+        expect(res).toBe(48)
+      })
+    })
+
+    describe('inner content shorter than max height', () => {
+      it('should return the offset value even if zero', () => {
+        const res = computeBottomSpacer({
+          backdrop: true,
+          maxHeight: 800,
+          innerContentHeight: 1000,
+          offset: 0
+        })
+
+        expect(res).toBe(0)
+      })
+
+      it('should return the offset value', () => {
+        const res = computeBottomSpacer({
+          backdrop: true,
+          maxHeight: 800,
+          innerContentHeight: 1000,
+          offset: 48
+        })
+
+        expect(res).toBe(48)
+      })
+    })
   })
 })
