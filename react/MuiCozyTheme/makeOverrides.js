@@ -241,6 +241,7 @@ const makeOverrides = theme => ({
     root: {
       borderRadius: 2,
       height: '2.5rem',
+      lineHeight: 'normal',
       padding: '0 1rem',
       '&.ghost': {
         borderStyle: 'dashed !important', // important needed to override disable state

@@ -112,6 +112,46 @@ const iconPositions = ['startIcon', 'endIcon']
 </Grid>
 ```
 
+### Icons with sizes
+
+```jsx
+import Button from 'cozy-ui/transpiled/react/Buttons'
+import Stack from 'cozy-ui/transpiled/react/Stack'
+import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Paper from 'cozy-ui/transpiled/react/Paper'
+import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
+import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+
+const variants = ['primary', 'secondary', 'ghost', 'text']
+const iconPositions = ['startIcon', 'endIcon']
+const sizes = ['small', 'medium', 'large']
+
+;
+
+<Grid container>
+{iconPositions.map(iconPosition =>
+  sizes.map(size =>
+  <Grid item xs={12} sm={4} className="u-mb-1" key={size}>
+      <Stack spacing="s">
+        <div>{`${iconPosition} - ${size}`}</div>
+        {variants.map(variant =>
+          <div key={variant + size}>
+            <Button
+              label={variant}
+              variant={variant}
+              size={size}
+              {...({[`${iconPosition}`]: <Icon icon={PlusIcon}/>})}
+            />
+          </div>
+        )}
+      </Stack>
+    </Grid>
+  )
+)}
+</Grid>
+```
+
 ### Colors
 
 ```jsx
