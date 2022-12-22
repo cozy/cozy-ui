@@ -26,7 +26,8 @@ import {
   makeOverridenChildren,
   setTopPosition,
   setBottomPosition,
-  minimizeAndClose
+  minimizeAndClose,
+  computeBottomSpacer
 } from './helpers'
 import { ANIMATION_DURATION } from './constants'
 
@@ -48,7 +49,12 @@ const ContainerWrapper = ({ showBackdrop, children }) => {
   return children
 }
 
-const createStyles = ({ squared, hasToolbarProps }) => ({
+const createStyles = ({
+  squared,
+  hasToolbarProps,
+  offset,
+  isBottomPosition
+}) => ({
   root: {
     borderTopLeftRadius: '1rem',
     borderTopRightRadius: '1rem',
@@ -90,6 +96,17 @@ const createStyles = ({ squared, hasToolbarProps }) => ({
     position: 'fixed',
     width: '100%',
     zIndex: 'var(--zIndex-modal)'
+  },
+  offsetSafer: {
+    opacity: isBottomPosition ? 0 : 1,
+    height: `${offset}px`,
+    width: '100%',
+    position: 'fixed',
+    bottom: 0,
+    left: 0,
+    backgroundColor: 'var(--paperBackgroundColor)',
+    zIndex: 'calc(var(--zIndex-modal) + 10)',
+    transition: `opacity ${ANIMATION_DURATION}ms`
   }
 })
 
@@ -105,7 +122,15 @@ const defaultSettings = {
 }
 
 const BottomSheet = memo(
-  ({ toolbarProps, settings, backdrop, skipAnimation, onClose, children }) => {
+  ({
+    toolbarProps,
+    settings,
+    backdrop,
+    skipAnimation,
+    onClose,
+    offset,
+    children
+  }) => {
     const { mediumHeightRatio, mediumHeight } = {
       ...defaultSettings,
       ...settings
@@ -131,7 +156,9 @@ const BottomSheet = memo(
 
     const styles = createStyles({
       squared,
-      hasToolbarProps
+      hasToolbarProps,
+      offset,
+      isBottomPosition
     })
     const overriddenChildren = makeOverridenChildren(children, headerContentRef)
 
@@ -189,12 +216,21 @@ const BottomSheet = memo(
         : 0
 
       const maxHeight = computeMaxHeight(toolbarProps)
+
+      const bottomSpacerHeight = computeBottomSpacer({
+        backdrop,
+        maxHeight,
+        innerContentHeight,
+        offset
+      })
       const computedMediumHeight = computeMediumHeight({
         backdrop,
         maxHeight,
         mediumHeight,
         mediumHeightRatio,
-        innerContentHeight
+        innerContentHeight,
+        bottomSpacerHeight,
+        offset
       })
       const minHeight = computeMinHeight({
         isClosable,
@@ -202,7 +238,6 @@ const BottomSheet = memo(
         actionButtonsHeight,
         actionButtonsBottomMargin
       })
-      const bottomSpacerHeight = maxHeight - innerContentHeight
 
       if (computedMediumHeight >= maxHeight) {
         setIsTopPosition(true)
@@ -219,6 +254,7 @@ const BottomSheet = memo(
       showBackdrop,
       backdrop,
       isClosable,
+      offset,
       children // to recompute data if content changes
     ])
 
@@ -277,11 +313,18 @@ const BottomSheet = memo(
               {overriddenChildren}
             </Stack>
           </div>
-          <div style={{ height: backdrop ? 0 : bottomSpacerHeight }} />
+          <div style={{ height: bottomSpacerHeight }} />
         </MuiBottomSheet>
         {!isBottomPosition && (
+          <>
+            <Fade in timeout={ANIMATION_DURATION}>
+              <div style={styles.bounceSafer} />
+            </Fade>
+          </>
+        )}
+        {Boolean(offset) && (
           <Fade in timeout={ANIMATION_DURATION}>
-            <div style={styles.bounceSafer} />
+            <div id="bottomSheet-offsetSafer" style={styles.offsetSafer} />
           </Fade>
         )}
       </ContainerWrapper>
@@ -294,7 +337,8 @@ BottomSheet.displayName = 'BottomSheet'
 BottomSheet.defaultProps = {
   classes: {},
   toolbarProps: {},
-  backdrop: false
+  backdrop: false,
+  offset: 0
 }
 
 BottomSheet.propTypes = {
@@ -316,6 +360,8 @@ BottomSheet.propTypes = {
   backdrop: PropTypes.bool,
   /** To remove animations */
   skipAnimation: PropTypes.bool,
+  /** Add an offset at the bottom */
+  offset: PropTypes.number,
   /** To totally close the BottomSheet by swaping it down */
   onClose: PropTypes.func
 }

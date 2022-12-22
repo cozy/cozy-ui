@@ -14,6 +14,7 @@ Display content coming up from the bottom of the screen. The pane can be swiped 
   * **mediumHeightRatio** : `<number>` – Height of the middle snap point, expressed as a percentage of the viewport height
 * **backdrop** : `<boolean>` – To add a backdrop
 * **skipAnimation** : `<boolean>` – To remove animations
+* **offset** : `<number>` – Add an offset at the bottom
 * **onClose** : `<function>` – To totally close the BottomSheet by swaping it down
 
 ⚠️ If **`backdrop`** is set to **`true`**, you must pass an **`onClose`** method.
@@ -57,7 +58,8 @@ const initialState = {
   isBottomSheetDisplayed: isTesting(),
   isSecondBottomSheetDisplayed: false,
   mediumHeight: isTesting() ? 450 : undefined,
-  mediumHeightRatio: undefined
+  mediumHeightRatio: undefined,
+  offset: 0
 }
 const showBottomSheet = () => setState({ isBottomSheetDisplayed: true })
 const hideBottomSheet = () => setState({ isBottomSheetDisplayed: false })
@@ -69,6 +71,9 @@ const handleChangeMediumHeight = el => {
 }
 const handleChangeMediumHeightRatio = el => {
   setState({ mediumHeightRatio: Number(el.target.value) })
+}
+const handleChangeOffset = el => {
+  setState({ offset: Number(el.target.value) })
 }
 
 const settings = state.mediumHeight === undefined && state.mediumHeightRatio === undefined
@@ -100,6 +105,15 @@ const settings = state.mediumHeight === undefined && state.mediumHeightRatio ===
           helperText="Height ratio of the medium snap point"
           onChange={handleChangeMediumHeightRatio}
         />
+        <TextField
+          className="u-ml-0-s u-ml-half"
+          type="number"
+          margin="dense"
+          label="offset"
+          variant="outlined"
+          helperText="Bottom offset"
+          onChange={handleChangeOffset}
+        />
         <Button
           className="u-ml-0-s u-ml-half u-mt-1"
           size="small"
@@ -115,6 +129,7 @@ const settings = state.mediumHeight === undefined && state.mediumHeightRatio ===
           settings={settings}
           backdrop={variant.backdrop}
           skipAnimation={isTesting()}
+          offset={state.offset}
           onClose={variant.closable ? hideBottomSheet : undefined}
         >
           {variant.withHeader && (

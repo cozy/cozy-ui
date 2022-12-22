@@ -22,19 +22,26 @@ export const computeMediumHeight = ({
   maxHeight,
   mediumHeight,
   mediumHeightRatio,
-  innerContentHeight
+  innerContentHeight,
+  bottomSpacerHeight,
+  offset
 }) => {
   const mediumHeightOrWithRatio =
     mediumHeight || Math.round(maxHeight * mediumHeightRatio)
+
   if (backdrop) {
     if (mediumHeightOrWithRatio < innerContentHeight) {
       return mediumHeightOrWithRatio < maxHeight
         ? mediumHeightOrWithRatio
         : maxHeight
     }
-    return innerContentHeight > maxHeight ? maxHeight : innerContentHeight
+    return innerContentHeight > maxHeight
+      ? maxHeight
+      : innerContentHeight + bottomSpacerHeight
   }
-  if (innerContentHeight < mediumHeightOrWithRatio) return innerContentHeight
+
+  if (innerContentHeight < mediumHeightOrWithRatio)
+    return innerContentHeight + offset
   return mediumHeightOrWithRatio > maxHeight
     ? maxHeight
     : mediumHeightOrWithRatio
@@ -112,4 +119,20 @@ export const minimizeAndClose = ({
     setIsBottomPosition(true)
     setTimeout(handleClose, ANIMATION_DURATION)
   }
+}
+
+export const computeBottomSpacer = ({
+  backdrop,
+  maxHeight,
+  innerContentHeight,
+  offset
+}) => {
+  // "maxHeight - innerContentHeight <= 0" happens for
+  // content longer than the window
+  if (maxHeight - innerContentHeight <= 0 || backdrop) {
+    return offset
+  }
+
+  // without backdrop, we want the bottomsheet to open to the top of the window
+  return maxHeight - innerContentHeight
 }
