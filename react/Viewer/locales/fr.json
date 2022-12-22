@@ -77,7 +77,7 @@
         "expiresIn": "Expire dans %{duration}"
       },
       "expiration": {
-        "description": "Ce document expirera dans %{duration}, pensez à le renouveler",
+        "description": "Ce document expire dans %{duration}, pensez à le renouveler",
         "dismiss": "J'ai compris"
       },
       "title": "Informations utiles"
