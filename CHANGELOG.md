@@ -1,3 +1,10 @@
+# [79.2.0](https://github.com/cozy/cozy-ui/compare/v79.1.0...v79.2.0) (2022-12-22)
+
+
+### Features
+
+* **BottomSheet:** Add `offset` prop to set bottom offset ([490461a](https://github.com/cozy/cozy-ui/commit/490461a))
+
 # [79.1.0](https://github.com/cozy/cozy-ui/compare/v79.0.0...v79.1.0) (2022-12-21)
 
 
