@@ -1,3 +1,10 @@
+## [79.2.1](https://github.com/cozy/cozy-ui/compare/v79.2.0...v79.2.1) (2022-12-22)
+
+
+### Bug Fixes
+
+* **Viewer:** Wording of expiration description ([56b72f1](https://github.com/cozy/cozy-ui/commit/56b72f1))
+
 # [79.2.0](https://github.com/cozy/cozy-ui/compare/v79.1.0...v79.2.0) (2022-12-22)
 
 
