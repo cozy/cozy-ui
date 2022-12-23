@@ -1,3 +1,10 @@
+## [79.2.2](https://github.com/cozy/cozy-ui/compare/v79.2.1...v79.2.2) (2022-12-23)
+
+
+### Bug Fixes
+
+* **Buttons:** LineHeight property ([5ba65be](https://github.com/cozy/cozy-ui/commit/5ba65be))
+
 ## [79.2.1](https://github.com/cozy/cozy-ui/compare/v79.2.0...v79.2.1) (2022-12-22)
 
 
