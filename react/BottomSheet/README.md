@@ -168,7 +168,7 @@ const settings = state.mediumHeight === undefined && state.mediumHeightRatio ===
                 </ListItem>
               </List>
 
-              <List subheader={<ListSubheader>Section 1</ListSubheader>}>
+              <List>
                 <ListItem button>
                   <ListItemIcon>
                     <Icon icon={FileIcon} />
