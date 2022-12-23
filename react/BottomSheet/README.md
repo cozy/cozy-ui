@@ -21,7 +21,7 @@ Display content coming up from the bottom of the screen. The pane can be swiped 
 In this documentation, **`closable`** variant must be checked if **`backdrop`** is checked too.
 
 ```jsx
-import BottomSheet, { BottomSheetItem, BottomSheetHeader } from 'cozy-ui/transpiled/react/BottomSheet'
+import BottomSheet, { BottomSheetItem, BottomSheetHeader, BottomSheetTitle } from 'cozy-ui/transpiled/react/BottomSheet'
 import Button from 'cozy-ui/transpiled/react/Buttons'
 
 // <-- only useful for the documentation
@@ -51,7 +51,8 @@ const initialVariants = [{
   longContent: false,
   withFakeToolbar: false,
   withHeader: true,
-  withListContent: false
+  withListContent: false,
+  withTitle: false
 }]
 const initialState = {
   isBottomSheetDisplayed: isTesting(),
@@ -138,21 +139,23 @@ const settings = state.mediumHeight === undefined && state.mediumHeightRatio ===
             </BottomSheetHeader>
           )}
           {!variant.withListContent && (
-            <BottomSheetItem disableElevation>
-              {variant.longContent ? content.ada.long : content.ada.short}
-            </BottomSheetItem>
+            <>
+              {variant.withTitle && (
+                <BottomSheetTitle label="Title"/>
+              )}
+              <BottomSheetItem disableElevation>
+                {variant.longContent ? content.ada.long : content.ada.short}
+              </BottomSheetItem>
+            </>
           )}
           {variant.withListContent && (
             <BottomSheetItem disableGutters>
-              <List>
-                <ListItem button>
-                  <ListItemIcon>
-                    <Icon icon={FileTypeTextIcon} size={32} />
-                  </ListItemIcon>
-                  <ListItemText primary="Title" />
-                </ListItem>
-              </List>
-
+              {variant.withTitle && (
+                <>
+                  <BottomSheetTitle icon={FileTypeTextIcon} label="Title" />
+                  <Divider />
+                </>
+              )}
               <List>
                 <ListItem button>
                   <ListItemIcon>
