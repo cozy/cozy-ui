@@ -73,7 +73,7 @@
     "@babel/helper-builder-react-jsx": "7.16.7",
     "@babel/helper-define-map": "7.16.7",
     "@babel/helper-regex": "7.10.5",
-    "@cozy/codemods": "^1.9.0",
+    "@cozy/codemods": "1.18.5",
     "@cozy/minilog": "^1.0.0",
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/git": "7.0.18",
