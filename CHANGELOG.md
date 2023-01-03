@@ -1,3 +1,10 @@
+# [79.3.0](https://github.com/cozy/cozy-ui/compare/v79.2.3...v79.3.0) (2023-01-03)
+
+
+### Features
+
+* adapt BottomSheet to flagship app ([18e93f8](https://github.com/cozy/cozy-ui/commit/18e93f8))
+
 ## [79.2.3](https://github.com/cozy/cozy-ui/compare/v79.2.2...v79.2.3) (2023-01-03)
 
 
