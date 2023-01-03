@@ -1,3 +1,10 @@
+## [79.2.3](https://github.com/cozy/cozy-ui/compare/v79.2.2...v79.2.3) (2023-01-03)
+
+
+### Bug Fixes
+
+* **AppSections:** MakeMatcherFromSearch now accept unsupported filter ([1652d1c](https://github.com/cozy/cozy-ui/commit/1652d1c))
+
 ## [79.2.2](https://github.com/cozy/cozy-ui/compare/v79.2.1...v79.2.2) (2022-12-23)
 
 
