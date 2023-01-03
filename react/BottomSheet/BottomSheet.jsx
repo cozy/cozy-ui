@@ -30,6 +30,7 @@ import {
   computeBottomSpacer
 } from './helpers'
 import { ANIMATION_DURATION } from './constants'
+import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
 
 const createContainerWrapperStyles = () => ({
   container: {
@@ -258,6 +259,12 @@ const BottomSheet = memo(
       children // to recompute data if content changes
     ])
 
+    useSetFlagshipUI(
+      { bottomTheme: 'dark' },
+      { bottomTheme: getFlagshipMetadata().immersive ? 'light' : 'dark' },
+      'cozy-ui/BottomSheet'
+    )
+
     return (
       <ContainerWrapper showBackdrop={showBackdrop}>
         {getFlagshipMetadata().immersive && (
@@ -338,7 +345,8 @@ BottomSheet.defaultProps = {
   classes: {},
   toolbarProps: {},
   backdrop: false,
-  offset: 0
+  offset:
+    (getFlagshipMetadata().immersive && getFlagshipMetadata().navbarHeight) ?? 0
 }
 
 BottomSheet.propTypes = {
