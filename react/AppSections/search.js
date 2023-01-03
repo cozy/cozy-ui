@@ -52,7 +52,7 @@ export const makeMatcherFromSearch = (search = {}) => {
   // Create all predicates from the search object
   const predicates = Object.values(
     mapValues(search, (value, name) => {
-      return searchAttrToMatcher[name](value)
+      return searchAttrToMatcher[name]?.(value)
     })
   )
   // Return a function returning true if all predicates pass

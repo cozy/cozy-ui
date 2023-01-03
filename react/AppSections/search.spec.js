@@ -150,4 +150,9 @@ describe('makeMatcherFromSearch', () => {
     const matcher = makeMatcherFromSearch({ category: 'cozy' })
     expect([appWithoutCategories].filter(matcher)).toMatchSnapshot()
   })
+
+  it('should work even for an unsupported filter', () => {
+    const matcher = makeMatcherFromSearch({ unsupportedKey: 'omg' })
+    expect(mockApps.filter(matcher)).toMatchSnapshot()
+  })
 })
