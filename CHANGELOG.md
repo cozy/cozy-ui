@@ -1,3 +1,10 @@
+# [79.4.0](https://github.com/cozy/cozy-ui/compare/v79.3.0...v79.4.0) (2023-01-06)
+
+
+### Features
+
+* Add CrossCircleOutline icon ([2048f8c](https://github.com/cozy/cozy-ui/commit/2048f8c))
+
 # [79.3.0](https://github.com/cozy/cozy-ui/compare/v79.2.3...v79.3.0) (2023-01-03)
 
 
