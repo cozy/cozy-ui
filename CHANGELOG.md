@@ -1,3 +1,12 @@
+# [79.5.0](https://github.com/cozy/cozy-ui/compare/v79.4.0...v79.5.0) (2023-01-10)
+
+
+### Features
+
+* **BottomSheet:** Add BottomSheetTitle component ([4fa2484](https://github.com/cozy/cozy-ui/commit/4fa2484))
+* **BottomSheet:** Add missing BottomSheetHeader export in react/index.js ([c29fb3a](https://github.com/cozy/cozy-ui/commit/c29fb3a))
+* **BottomSheet:** Forward ref in BottomSheetItem ([2e9ab47](https://github.com/cozy/cozy-ui/commit/2e9ab47))
+
 # [79.4.0](https://github.com/cozy/cozy-ui/compare/v79.3.0...v79.4.0) (2023-01-06)
 
 
