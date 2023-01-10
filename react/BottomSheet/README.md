@@ -1,6 +1,38 @@
 Display content coming up from the bottom of the screen. The pane can be swiped to the top of the screen. Based on cozy
 / mui-bottom-sheet: [API documentation is here](https://github.com/cozy/mui-bottom-sheet#props-options). It uses `Portal` to have the same behavior as `Dialogs` / `Modals` (can be disabled with the `disablePortal` prop).
 
+### Usages
+
+* BottomSheet with header, text title and text content
+```bash
+import BottomSheet, { BottomSheetHeader, BottomSheetItem, BottomSheetTitle } from  'cozy-ui/transpiled/react/BottomSheet'
+
+<BottomSheet {...props}>
+  <BottomSheetHeader>
+    {...}
+  </BottomSheetHeader>
+  <BottomSheetTitle label="Title" />
+  <BottomSheetItem>
+    {...}
+  </BottomSheetItem>
+</BottomSheet>
+```
+
+* BottomSheet with list title and list content
+```bash
+import BottomSheet, { BottomSheetItem, BottomSheetTitle } from  'cozy-ui/transpiled/react/BottomSheet'
+
+<BottomSheet {...props}>
+  <BottomSheetItem disableGutters>
+    <BottomSheetTitle icon={...} label="Title" />
+    <Divider />
+    <List>
+      {...}
+    </List>
+  </BottomSheetItem>
+</BottomSheet>
+```
+
 ### Props
 
 * **portalProps** : `<object>` – Portal properties
