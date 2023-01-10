@@ -1,23 +1,19 @@
 import React from 'react'
 import cx from 'classnames'
 
-import Paper from 'cozy-ui/transpiled/react/Paper'
+import { BottomSheetItem } from 'cozy-ui/transpiled/react/BottomSheet'
 
 const BottomSheetHeader = ({ className, headerContentRef, children }) => {
   return (
-    <Paper
+    <BottomSheetItem
       ref={headerContentRef}
       className={cx('u-flex u-flex-items-center', className)}
-      elevation={0}
-      square
+      disableGutters
+      disableElevation
     >
       {children}
-    </Paper>
+    </BottomSheetItem>
   )
-}
-
-BottomSheetHeader.defaultProps = {
-  classes: {}
 }
 
 export default BottomSheetHeader
