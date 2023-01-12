@@ -1,4 +1,4 @@
-import { alpha, lighten, darken } from '@material-ui/core/styles'
+import { alpha, lighten, darken } from '../styles'
 
 const SWITCH_BAR_WIDTH = 25
 

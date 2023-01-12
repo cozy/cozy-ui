@@ -29,7 +29,7 @@ Sometimes you have to render an Intent inside a modal, and handle the modal open
 This method replaces deprecated `IntentModal` component.
 
 ```jsx
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles } from 'cozy-ui/transpiled/react/styles'
 import { DialogCloseButton } from 'cozy-ui/transpiled/react/CozyDialogs'
 import Dialog from 'cozy-ui/transpiled/react/Dialog'
 import IntentIframe from 'cozy-ui/transpiled/react/IntentIframe'

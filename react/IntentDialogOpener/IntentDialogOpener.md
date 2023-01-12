@@ -1,5 +1,5 @@
 ```jsx
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles } from 'cozy-ui/transpiled/react/styles'
 import IntentDialogOpener from 'cozy-ui/transpiled/react/IntentDialogOpener'
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 

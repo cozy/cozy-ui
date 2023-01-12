@@ -1,11 +1,11 @@
 import React, { Component, useState } from 'react'
 import cx from 'classnames'
-import { withStyles } from '@material-ui/core/styles'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import { useIntervalWhen } from 'rooks'
 
 import { splitFilename } from 'cozy-client/dist/models/file'
 
+import { withStyles } from '../styles'
 import CrossIcon from '../Icons/Cross'
 import WarningIcon from '../Icons/Warning'
 import CheckIcon from '../Icons/Check'

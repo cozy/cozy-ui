@@ -1,5 +1,6 @@
 import React from 'react'
-import { withStyles } from '@material-ui/core/styles'
+
+import { withStyles } from '../styles'
 import Dialog from '../Dialog'
 
 /**

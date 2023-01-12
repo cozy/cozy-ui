@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withStyles } from '@material-ui/core/styles'
 
+import { withStyles } from '../styles'
 import Banner from '../Banner'
 import { LinearProgress } from '../Progress'
 import Typography from '../Typography'
