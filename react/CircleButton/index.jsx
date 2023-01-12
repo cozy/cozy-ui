@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { makeStyles } from '@material-ui/core/styles'
 
+import { makeStyles } from '../styles'
 import Box from '../Box'
 import IconButton from '../IconButton'
 import Typography from '../Typography'

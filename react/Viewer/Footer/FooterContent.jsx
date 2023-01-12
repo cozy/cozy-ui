@@ -1,10 +1,9 @@
 import React, { useMemo, Children, cloneElement, isValidElement } from 'react'
 import PropTypes from 'prop-types'
-import { makeStyles } from '@material-ui/core/styles'
 import cx from 'classnames'
 
 import BottomSheet, { BottomSheetHeader } from '../../BottomSheet'
-
+import { makeStyles } from '../../styles'
 import { isValidForPanel } from '../helpers'
 import BottomSheetContent from './BottomSheetContent'
 

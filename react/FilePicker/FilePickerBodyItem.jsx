@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import filesize from 'filesize'
-import { makeStyles } from '@material-ui/core/styles'
 
 import { models } from 'cozy-client'
 
+import { makeStyles } from '../styles'
 import ListItem from '../MuiCozyTheme/ListItem'
 import ListItemIcon from '../MuiCozyTheme/ListItemIcon'
 import ListItemText from '../ListItemText'
