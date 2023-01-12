@@ -35,8 +35,8 @@ The `Viewer` can display an **information panel** to show additional information
 ### Demo
 
 ```jsx
-import { makeStyles } from '@material-ui/core/styles';
 import cx from 'classnames';
+import { makeStyles } from 'cozy-ui/transpiled/react/styles';
 import Variants from 'cozy-ui/docs/components/Variants';
 import Card from 'cozy-ui/transpiled/react/Card';
 import Checkbox from 'cozy-ui/transpiled/react/Checkbox';

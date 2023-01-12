@@ -1,7 +1,7 @@
 import React, { useState, memo } from 'react'
-import { makeStyles } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
 
+import { makeStyles } from '../styles'
 import { FixedDialog } from '../CozyDialogs'
 import FilePickerHeader from './FilePickerHeader'
 import FilePickerFooter from './FilePickerFooter'

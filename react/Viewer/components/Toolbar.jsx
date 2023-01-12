@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import flow from 'lodash/flow'
-import { makeStyles } from '@material-ui/core/styles'
 
 import { useClient } from 'cozy-client'
 
 import withBreakpoints from '../../helpers/withBreakpoints'
+import { makeStyles } from '../../styles'
 import Button from '../../Button'
 import IconButton from '../../IconButton'
 import Icon from '../../Icon'

@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
-import { makeStyles } from '@material-ui/core/styles'
 
+import { makeStyles } from '../styles'
 import Typography from '../Typography'
 import Icon from '../Icon'
 import BottomIcon from '../Icons/Bottom'

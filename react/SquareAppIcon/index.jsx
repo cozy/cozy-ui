@@ -1,9 +1,9 @@
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-import { makeStyles } from '@material-ui/styles'
 import get from 'lodash/get'
 
+import { makeStyles } from '../styles'
 import AppIcon from '../AppIcon'
 import Badge from '../Badge'
 import InfosBadge from '../InfosBadge'
