@@ -1,3 +1,3 @@
-import MuiAlertTitle from '@material-ui/lab/AlertTitle'
+import AlertTitle from '@mui/material/AlertTitle'
 
-export default MuiAlertTitle
+export default AlertTitle
