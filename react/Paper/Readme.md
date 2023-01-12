@@ -4,7 +4,7 @@ import Variants from 'cozy-ui/docs/components/Variants';
 import Paper from 'cozy-ui/transpiled/react/Paper';
 import Stack from 'cozy-ui/transpiled/react/Stack';
 import Typography from 'cozy-ui/transpiled/react/Typography';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from 'cozy-ui/transpiled/react/styles';
 
 const styles = theme => ({
   root: {

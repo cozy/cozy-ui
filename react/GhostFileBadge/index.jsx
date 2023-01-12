@@ -1,7 +1,8 @@
 import React from 'react'
 import cx from 'classnames'
+
 import Badge from '../Badge'
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles } from '../styles'
 
 const customStyles = () => ({
   ghost: {

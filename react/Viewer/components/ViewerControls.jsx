@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import flow from 'lodash/flow'
 import cx from 'classnames'
 import Hammer from 'hammerjs'
-import { withStyles } from '@material-ui/core/styles'
 
+import { withStyles } from '../../styles'
 import withBreakpoints from '../../helpers/withBreakpoints'
 
 import { toolbarPropsPropType } from '../index'

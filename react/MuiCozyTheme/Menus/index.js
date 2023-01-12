@@ -3,16 +3,15 @@
 // we have to recompose the Menu component ourselves with basic Mui component
 
 import React, { Component } from 'react'
-
-import MenuButton from '../../Button'
 import PropTypes from 'prop-types'
-
 import ClickAwayListener from '@material-ui/core/ClickAwayListener'
 import Grow from '@material-ui/core/Grow'
 import Popper from '@material-ui/core/Popper'
 import Paper from '@material-ui/core/Paper'
 import MenuList from '@material-ui/core/MenuList'
-import { withStyles } from '@material-ui/core/styles'
+
+import { withStyles } from '../../styles'
+import MenuButton from '../../Button'
 
 const styles = {
   root: {

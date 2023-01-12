@@ -1,6 +1,7 @@
 import React from 'react'
 import MuiDivider from '@material-ui/core/Divider'
-import { withStyles } from '@material-ui/core/styles'
+
+import { withStyles } from '../../styles'
 import { normalTheme } from '../theme'
 import TextDivider from './TextDivider'
 

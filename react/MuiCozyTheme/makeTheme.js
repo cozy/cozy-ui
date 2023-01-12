@@ -1,6 +1,6 @@
 import React from 'react'
-import { createTheme } from '@material-ui/core/styles'
 
+import { createTheme } from '../styles'
 import { getCssVariableValue } from '../utils/color'
 import isTesting from '../helpers/isTesting'
 import AccordionExpandIcon from './AccordionExpandIcon'
