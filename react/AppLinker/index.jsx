@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withClient } from 'cozy-client'
 
+import { withClient } from 'cozy-client'
 import {
   checkApp,
   startApp,
