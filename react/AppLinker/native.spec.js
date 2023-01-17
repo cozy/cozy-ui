@@ -1,11 +1,14 @@
-import { generateUniversalLink, generateWebLink } from './native'
+import { generateWebLink } from 'cozy-client'
+
+import { generateUniversalLink } from './native'
 
 describe('native functions', () => {
   describe('generating a web link', () => {
     it('should generate a web link', () => {
       const webLink = generateWebLink({
         cozyUrl: 'https://test.cozy.tools:8080',
-        nativePath: '/files/1',
+        pathname: '/',
+        hash: '/files/1',
         slug: 'drive'
       })
 
@@ -15,7 +18,8 @@ describe('native functions', () => {
     it('should handle both types of subdomains', () => {
       const flatLink = generateWebLink({
         cozyUrl: 'https://test.cozy.tools:8080',
-        nativePath: '/files/1',
+        pathname: '/',
+        hash: '/files/1',
         slug: 'drive',
         subDomainType: 'flat'
       })
@@ -23,7 +27,8 @@ describe('native functions', () => {
 
       const nestedLink = generateWebLink({
         cozyUrl: 'https://cozy.tools:8080',
-        nativePath: '/files/1',
+        pathname: '/',
+        hash: '/files/1',
         slug: 'drive',
         subDomainType: 'nested'
       })
