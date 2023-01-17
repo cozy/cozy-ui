@@ -131,9 +131,9 @@ export const formatMetadataQualification = metadata => {
 
 export const formatDate = ({ f, lang, date }) => {
   if (lang === 'en') {
-    return f(date, 'MM/DD/YYYY')
+    return f(new Date(date), 'MM/dd/yyyy')
   }
-  return f(date, 'DD/MM/YYYY')
+  return f(new Date(date), 'dd/MM/yyyy')
 }
 
 /**

@@ -64,7 +64,7 @@ describe('formatLocallyDistanceToNowStrict', () => {
 
     const result = formatLocallyDistanceToNowStrict(date)
 
-    expect(result).toEqual('44 minutes')
+    expect(result).toEqual('45 minutes')
   })
 
   it('should formatDistanceToNowStrict with high value', () => {

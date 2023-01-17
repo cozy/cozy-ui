@@ -51,7 +51,7 @@ const DateMonthPicker = ({ initialValue, onSelect }) => {
 
   const handleClickMonth = month => {
     const d = new Date(year, month, 1)
-    onSelect(format(d, 'YYYY-MM-DD'))
+    onSelect(format(d, 'yyyy-MM-dd'))
   }
   return (
     <div>
@@ -94,7 +94,7 @@ const dateMonthProp = function(props, propName, componentName) {
         '` supplied to' +
         ' `' +
         componentName +
-        '`. Should be in the form YYYY-MM.'
+        '`. Should be in the form yyyy-MM.'
     )
   }
 }

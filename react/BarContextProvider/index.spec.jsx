@@ -22,7 +22,7 @@ const DumbHelloWorld = translate()(({ t, f, lang }) => (
   <div>
     {t('helloworld')}
     <br />
-    {f('2020-01-06', 'DDD MMM')}
+    {f(new Date('2020-01-06'), 'd MMM')}
     <br />
     {lang}
   </div>
