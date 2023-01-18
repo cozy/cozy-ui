@@ -17,7 +17,11 @@ const IllustrationDialog = props => {
     fullScreen,
     dialogActionsProps,
     dialogContentProps
-  } = useCozyDialog({ ...props, isFluidTitle: true })
+  } = useCozyDialog({
+    ...props,
+    isFluidTitle: true,
+    disableTitleAutoPadding: true
+  })
 
   const onBackOrClose = onBack || onClose
 
@@ -44,9 +48,17 @@ const IllustrationDialog = props => {
       <DialogContent {...dialogContentProps}>
         <div className="dialogContentInner withFluidActions">
           {title && (
-            <DialogTitle {...dialogTitleProps}>
-              <div className="u-flex u-flex-justify-center">{title}</div>
-            </DialogTitle>
+            <div className="dialogTitleFluidContainer">
+              <DialogTitle
+                {...dialogTitleProps}
+                className={cx(
+                  `u-flex u-flex-justify-center`,
+                  dialogTitleProps.className
+                )}
+              >
+                {title}
+              </DialogTitle>
+            </div>
           )}
           <div
             className={cx('dialogContentWrapper', {
