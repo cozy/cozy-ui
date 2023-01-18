@@ -1,3 +1,16 @@
+# [80.0.0](https://github.com/cozy/cozy-ui/compare/v79.5.0...v80.0.0) (2023-01-18)
+
+
+### Features
+
+* Deprecates `generateWebLink` in AppLinker ([3ab64e9](https://github.com/cozy/cozy-ui/commit/3ab64e9))
+* Upgrade cozy-client from 34.4.0 to 34.8.0 ([2a40c08](https://github.com/cozy/cozy-ui/commit/2a40c08))
+
+
+### BREAKING CHANGES
+
+* `cozy-client` must be `>=34.8.0`
+
 # [79.5.0](https://github.com/cozy/cozy-ui/compare/v79.4.0...v79.5.0) (2023-01-10)
 
 
