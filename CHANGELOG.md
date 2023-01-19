@@ -1,3 +1,10 @@
+## [80.0.1](https://github.com/cozy/cozy-ui/compare/v80.0.0...v80.0.1) (2023-01-19)
+
+
+### Bug Fixes
+
+* **IllustrationDialog:** The title was not centered properly ([584a58c](https://github.com/cozy/cozy-ui/commit/584a58c))
+
 # [80.0.0](https://github.com/cozy/cozy-ui/compare/v79.5.0...v80.0.0) (2023-01-18)
 
 
