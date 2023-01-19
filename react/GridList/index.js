@@ -1,3 +1,3 @@
-import MuiGridList from '@mui/material/GridList'
+import ImageList from '@mui/material/ImageList'
 
-export default MuiGridList
+export default ImageList
