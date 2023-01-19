@@ -75,6 +75,7 @@
     "@babel/helper-regex": "7.10.5",
     "@cozy/codemods": "^1.9.0",
     "@cozy/minilog": "^1.0.0",
+    "@mui/codemod": "^5.11.5",
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/git": "7.0.18",
     "@semantic-release/npm": "9.0.1",
