@@ -1,3 +1,5 @@
+process.env.TZ = 'UTC'
+
 module.exports = {
   testURL: 'http://localhost/',
   moduleFileExtensions: ['js', 'jsx', 'json', 'styl', 'ts', 'tsx'],
