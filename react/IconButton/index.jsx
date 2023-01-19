@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import MuiIconButton from '@material-ui/core/IconButton'
+import MuiIconButton from '@mui/material/IconButton'
 
 const IconButton = forwardRef(
   ({ size = 'large', className, children, ...props }, ref) => {

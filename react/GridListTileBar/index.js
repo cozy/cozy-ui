@@ -1,3 +1,3 @@
-import MuiGridListTileBar from '@material-ui/core/GridListTileBar'
+import MuiGridListTileBar from '@mui/material/GridListTileBar'
 
 export default MuiGridListTileBar

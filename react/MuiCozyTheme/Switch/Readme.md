@@ -8,7 +8,7 @@ import { Media, Img } from 'cozy-ui/transpiled/react/Media'
 import Switch from 'cozy-ui/transpiled/react/MuiCozyTheme/Switch'
 import Typography from "cozy-ui/transpiled/react/Typography"
 import Stack from "cozy-ui/transpiled/react/Stack"
-import Box from '@material-ui/core/Box'
+import Box from '@mui/material/Box'
 
 initialState = {
   switch0: true,

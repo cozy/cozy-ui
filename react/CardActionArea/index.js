@@ -1,3 +1,3 @@
-import MuiCardActionArea from '@material-ui/core/CardActionArea'
+import MuiCardActionArea from '@mui/material/CardActionArea'
 
 export default MuiCardActionArea

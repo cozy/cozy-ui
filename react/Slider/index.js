@@ -1,3 +1,3 @@
-import MuiSlider from '@material-ui/core/Slider'
+import MuiSlider from '@mui/material/Slider'
 
 export default MuiSlider

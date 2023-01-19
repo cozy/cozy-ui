@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import MuiTypography from '@material-ui/core/Typography'
+import MuiTypography from '@mui/material/Typography'
 
 const Typography = forwardRef(({ color, variant, children, ...props }, ref) => {
   const madeColor =

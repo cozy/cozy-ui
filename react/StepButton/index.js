@@ -1,3 +1,3 @@
-import MuiStepButton from '@material-ui/core/StepButton'
+import MuiStepButton from '@mui/material/StepButton'
 
 export default MuiStepButton

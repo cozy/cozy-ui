@@ -1,3 +1,3 @@
-import MuiDialogContent from '@material-ui/core/DialogContent'
+import MuiDialogContent from '@mui/material/DialogContent'
 
 export default MuiDialogContent

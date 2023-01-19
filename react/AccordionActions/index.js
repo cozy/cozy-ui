@@ -1,3 +1,3 @@
-import MuiAccordionActions from '@material-ui/core/AccordionActions'
+import MuiAccordionActions from '@mui/material/AccordionActions'
 
 export default MuiAccordionActions

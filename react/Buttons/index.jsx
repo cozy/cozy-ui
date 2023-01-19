@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import MuiButton from '@material-ui/core/Button'
+import MuiButton from '@mui/material/Button'
 
 import Icon from '../Icon'
 import SpinnerIcon from '../Icons/Spinner'

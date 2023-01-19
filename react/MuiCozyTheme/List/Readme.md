@@ -38,7 +38,7 @@ import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListI
 import ActionMenu, { ActionMenuItem, ActionMenuRadio, ActionMenuHeader } from 'cozy-ui/transpiled/react/ActionMenu'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Menu from 'cozy-ui/transpiled/react/MuiCozyTheme/Menus'
-import MenuItem from '@material-ui/core/MenuItem'
+import MenuItem from '@mui/material/MenuItem'
 import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
 import FileTypeFolderIcon from 'cozy-ui/transpiled/react/Icons/FileTypeFolder'
 import FiletypeTextIcon from 'cozy-ui/transpiled/react/Icons/FileTypeText'

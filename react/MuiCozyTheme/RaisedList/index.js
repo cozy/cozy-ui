@@ -1,6 +1,6 @@
 import React from 'react'
-import List from '@material-ui/core/List'
-import Paper from '@material-ui/core/Paper'
+import List from '@mui/material/List'
+import Paper from '@mui/material/Paper'
 import createDepreciationLogger from '../../helpers/createDepreciationLogger'
 
 const logRaisedListDepecrated = createDepreciationLogger()

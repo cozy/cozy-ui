@@ -12,7 +12,7 @@ import styles from './styles.styl'
 
 import CrossIcon from 'cozy-ui/transpiled/react/Icons/Cross'
 import { useWebviewIntent } from 'cozy-intent'
-import { useTheme } from '@material-ui/core'
+import { useTheme } from '@mui/material'
 
 /*
 

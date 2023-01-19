@@ -1,3 +1,3 @@
-import MuiFormControl from '@material-ui/core/FormControl'
+import MuiFormControl from '@mui/material/FormControl'
 
 export default MuiFormControl

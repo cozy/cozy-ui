@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
-import MuiTabs from '@material-ui/core/Tabs'
+import MuiTabs from '@mui/material/Tabs'
 import cx from 'classnames'
 
 import useBreakpoints from '../hooks/useBreakpoints'

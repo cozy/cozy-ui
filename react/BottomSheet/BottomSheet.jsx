@@ -10,8 +10,8 @@ import React, {
 import PropTypes from 'prop-types'
 import { BottomSheet as MuiBottomSheet } from 'mui-bottom-sheet'
 import { useTimeoutWhen } from 'rooks'
-import Fade from '@material-ui/core/Fade'
-import Portal from '@material-ui/core/Portal'
+import Fade from '@mui/material/Fade'
+import Portal from '@mui/material/Portal'
 
 import { getFlagshipMetadata } from 'cozy-device-helper'
 

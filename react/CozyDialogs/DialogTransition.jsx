@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
-import MuiSlide from '@material-ui/core/Slide'
-import MuiGrow from '@material-ui/core/Grow'
+import MuiSlide from '@mui/material/Slide'
+import MuiGrow from '@mui/material/Grow'
 
 const DialogTransition = forwardRef(
   ({ fullScreen, isFullscreen, ...props }, ref) => {

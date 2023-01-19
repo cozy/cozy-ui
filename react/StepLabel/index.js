@@ -1,3 +1,3 @@
-import MuiStepLabel from '@material-ui/core/StepLabel'
+import MuiStepLabel from '@mui/material/StepLabel'
 
 export default MuiStepLabel

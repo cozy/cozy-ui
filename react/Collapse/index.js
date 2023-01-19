@@ -1,3 +1,3 @@
-import MuiCollapse from '@material-ui/core/Collapse'
+import MuiCollapse from '@mui/material/Collapse'
 
 export default MuiCollapse

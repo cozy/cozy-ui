@@ -1,3 +1,3 @@
-import MuiTab from '@material-ui/core/Tab'
+import MuiTab from '@mui/material/Tab'
 
 export default MuiTab

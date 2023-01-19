@@ -1,3 +1,3 @@
-import MuiStepIcon from '@material-ui/core/StepIcon'
+import MuiStepIcon from '@mui/material/StepIcon'
 
 export default MuiStepIcon

@@ -1,3 +1,3 @@
-import MuiSwipeableDrawer from '@material-ui/core/SwipeableDrawer'
+import MuiSwipeableDrawer from '@mui/material/SwipeableDrawer'
 
 export default MuiSwipeableDrawer

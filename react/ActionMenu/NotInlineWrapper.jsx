@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { usePopper } from 'react-popper'
-import ClickAwayListener from '@material-ui/core/ClickAwayListener'
+import ClickAwayListener from '@mui/material/ClickAwayListener'
 
 import { getCssVariableValue } from '../utils/color'
 

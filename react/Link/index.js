@@ -1,3 +1,3 @@
-import MuiLink from '@material-ui/core/Link'
+import MuiLink from '@mui/material/Link'
 
 export default MuiLink

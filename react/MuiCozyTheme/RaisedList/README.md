@@ -1,7 +1,7 @@
 ```jsx
 import RaisedList from 'cozy-ui/transpiled/react/MuiCozyTheme/RaisedList';
 import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider';
-import ListItem from '@material-ui/core/ListItem';
+import ListItem from '@mui/material/ListItem';
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText';
 
 <RaisedList>

@@ -1,3 +1,3 @@
-import MuiMenuList from '@material-ui/core/MenuList'
+import MuiMenuList from '@mui/material/MenuList'
 
 export default MuiMenuList

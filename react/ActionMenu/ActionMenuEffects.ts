@@ -2,7 +2,7 @@
 
 // TODO: remove eslint-disable and @ts-ignore rules
 
-import { Theme, useTheme } from '@material-ui/core'
+import { Theme, useTheme } from '@mui/material'
 
 import { isFlagshipApp } from 'cozy-device-helper'
 

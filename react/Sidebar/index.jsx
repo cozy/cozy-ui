@@ -3,7 +3,7 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
-import { useTheme } from '@material-ui/core'
+import { useTheme } from '@mui/material'
 
 const Sidebar = ({ children, className, ...restProps }) => {
   const theme = useTheme()

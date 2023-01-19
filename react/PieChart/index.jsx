@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js'
 import { Doughnut } from 'react-chartjs-2'
-import { useTheme } from '@material-ui/core'
+import { useTheme } from '@mui/material'
 import set from 'lodash/set'
 import cloneDeep from 'lodash/cloneDeep'
 

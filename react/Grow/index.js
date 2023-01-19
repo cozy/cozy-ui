@@ -1,3 +1,3 @@
-import MuiGrow from '@material-ui/core/Grow'
+import MuiGrow from '@mui/material/Grow'
 
 export default MuiGrow

@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
 import React from 'react'
-import { Theme } from '@material-ui/core'
+import { Theme } from '@mui/material'
 import { render } from '@testing-library/react'
 
 import { WebviewIntentProvider, WebviewService } from 'cozy-intent'

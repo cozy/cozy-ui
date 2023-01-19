@@ -1,6 +1,6 @@
 ```jsx static
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
-import Button from '@material-ui/core/Button'
+import Button from '@mui/material/Button'
 
 const DisplayButtonWithCozyTheme = () => (
   <MuiCozyTheme>
