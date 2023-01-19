@@ -1,7 +1,13 @@
 import format from 'date-fns/format'
+import distanceInWordsToNow from 'date-fns/distance_in_words_to_now'
+import distanceInWordsStrict from 'date-fns/distance_in_words_strict'
+import differenceInCalendarDays from 'date-fns/difference_in_calendar_days'
+import getHours from 'date-fns/get_hours'
+import setHours from 'date-fns/set_hours'
+import setMinutes from 'date-fns/set_minutes'
+import getMinutes from 'date-fns/get_minutes'
+
 import { DEFAULT_LANG } from '.'
-import formatDistanceToNow from 'date-fns/distance_in_words_to_now'
-import formatDistanceStrict from 'date-fns/distance_in_words_strict'
 
 const locales = {}
 let lang = DEFAULT_LANG
@@ -36,7 +42,32 @@ export const initFormat = (userLang, defaultLang = DEFAULT_LANG) => (
 }
 
 export const formatLocallyDistanceToNow = date =>
-  formatDistanceToNow(date, { locale: locales[lang] })
+  distanceInWordsToNow(date, { locale: locales[lang] })
 
-export const formatLocallyDistanceToNowStrict = date =>
-  formatDistanceStrict(Date.now(), date, { locale: locales[lang] })
+export const setHoursAndMinutesFromDate = (date, refDate) => {
+  let newDate = date
+  newDate = setHours(newDate, getHours(refDate))
+  newDate = setMinutes(newDate, getMinutes(refDate))
+  return newDate
+}
+
+/**
+ * Return the distance between the given dates in words, using strict units.
+ * If the distance is in days, we force the time to be a whole number of days
+ * @param {Date} date - Future date compared to the current date
+ * @returns {string} Number of hours/day/month that separates the date from the present moment
+ */
+export const formatLocallyDistanceToNowStrict = date => {
+  const now = new Date()
+  const days = differenceInCalendarDays(date, now)
+  const isSameDay = days === 0
+  const isInMonth = days > 0 && days < 32
+
+  const refDate = isSameDay ? date : setHoursAndMinutesFromDate(date, now)
+  const unit = isInMonth ? 'd' : undefined
+
+  return distanceInWordsStrict(now, refDate, {
+    locale: locales[lang],
+    unit
+  })
+}

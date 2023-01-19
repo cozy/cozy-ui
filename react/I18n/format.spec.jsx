@@ -1,7 +1,10 @@
+import MockDate from 'mockdate'
+
 import {
   initFormat,
   formatLocallyDistanceToNow,
-  formatLocallyDistanceToNowStrict
+  formatLocallyDistanceToNowStrict,
+  setHoursAndMinutesFromDate
 } from './format'
 
 describe('initFormat', () => {
@@ -75,11 +78,189 @@ describe('formatLocallyDistanceToNowStrict', () => {
     expect(result).toEqual('1 hour')
   })
 
+  it('should formatDistanceToNowStrict with one day', () => {
+    const date = Date.now() + 24 * 60 * 60 * 1000 // 1d
+
+    const result = formatLocallyDistanceToNowStrict(date)
+
+    expect(result).toEqual('1 day')
+  })
+
+  it('should formatDistanceToNowStrict with two days', () => {
+    const date = Date.now() + 2 * 24 * 60 * 60 * 1000 // 2d
+
+    const result = formatLocallyDistanceToNowStrict(date)
+
+    expect(result).toEqual('2 days')
+  })
+
   it('should formatDistanceToNowStrict with very high value', () => {
     const date = Date.now() + 42 * 24 * 60 * 60 * 1000 // 42d
 
     const result = formatLocallyDistanceToNowStrict(date)
 
     expect(result).toEqual('1 month')
+  })
+
+  describe('for hours', () => {
+    afterEach(() => {
+      MockDate.reset()
+    })
+
+    it('should return 1 hour', () => {
+      MockDate.set('2023-01-01T00:00:00')
+      const date = new Date('2023-01-01T01:00:00')
+
+      const result = formatLocallyDistanceToNowStrict(date)
+
+      expect(result).toEqual('1 hour')
+    })
+
+    it('should return 23 hours', () => {
+      MockDate.set('2023-01-01T00:00:00')
+      const date = new Date('2023-01-01T23:59:00')
+
+      const result = formatLocallyDistanceToNowStrict(date)
+
+      expect(result).toEqual('23 hours')
+    })
+
+    it('should return 11 hours', () => {
+      MockDate.set('2023-01-01T12:00:00')
+      const date = new Date('2023-01-01T23:59:00')
+
+      const result = formatLocallyDistanceToNowStrict(date)
+
+      expect(result).toEqual('11 hours')
+    })
+  })
+
+  describe('for days', () => {
+    describe('at midnight', () => {
+      beforeEach(() => {
+        MockDate.set('2023-01-01T00:00:00')
+      })
+
+      afterEach(() => {
+        MockDate.reset()
+      })
+
+      it('should return 1 day when 00:00:00', () => {
+        const date = new Date('2023-01-02T00:00:00')
+
+        const result = formatLocallyDistanceToNowStrict(date)
+
+        expect(result).toEqual('1 day')
+      })
+
+      it('should return 1 day when 01:00:00', () => {
+        const date = new Date('2023-01-02T01:00:00')
+
+        const result = formatLocallyDistanceToNowStrict(date)
+
+        expect(result).toEqual('1 day')
+      })
+
+      it('should return 1 day when 23:59:00', () => {
+        const date = new Date('2023-01-02T23:59:00')
+
+        const result = formatLocallyDistanceToNowStrict(date)
+
+        expect(result).toEqual('1 day')
+      })
+
+      it('should return 2 days when 00:00:00', () => {
+        const date = new Date('2023-01-03T00:00:00')
+
+        const result = formatLocallyDistanceToNowStrict(date)
+
+        expect(result).toEqual('2 days')
+      })
+
+      it('should return 2 days when 01:00:00', () => {
+        const date = new Date('2023-01-03T01:00:00')
+
+        const result = formatLocallyDistanceToNowStrict(date)
+
+        expect(result).toEqual('2 days')
+      })
+
+      it('should return 2 days when 23:59:00', () => {
+        const date = new Date('2023-01-03T23:59:00')
+
+        const result = formatLocallyDistanceToNowStrict(date)
+
+        expect(result).toEqual('2 days')
+      })
+    })
+
+    describe('at midday', () => {
+      beforeEach(() => {
+        MockDate.set('2023-01-01T12:00:00')
+      })
+
+      afterEach(() => {
+        MockDate.reset()
+      })
+
+      it('should return 1 day when 00:00:00', () => {
+        const date = new Date('2023-01-02T00:00:00')
+
+        const result = formatLocallyDistanceToNowStrict(date)
+
+        expect(result).toEqual('1 day')
+      })
+
+      it('should return 1 day when 11:00:00', () => {
+        const date = new Date('2023-01-02T11:00:00')
+
+        const result = formatLocallyDistanceToNowStrict(date)
+
+        expect(result).toEqual('1 day')
+      })
+
+      it('should return 1 day when 23:59:00', () => {
+        const date = new Date('2023-01-02T23:59:00')
+
+        const result = formatLocallyDistanceToNowStrict(date)
+
+        expect(result).toEqual('1 day')
+      })
+
+      it('should return 2 days when 00:00:00', () => {
+        const date = new Date('2023-01-03T00:00:00')
+
+        const result = formatLocallyDistanceToNowStrict(date)
+
+        expect(result).toEqual('2 days')
+      })
+
+      it('should return 2 days when 01:00:00', () => {
+        const date = new Date('2023-01-03T01:00:00')
+
+        const result = formatLocallyDistanceToNowStrict(date)
+
+        expect(result).toEqual('2 days')
+      })
+
+      it('should return 2 days when 23:59:00', () => {
+        const date = new Date('2023-01-03T23:59:00')
+
+        const result = formatLocallyDistanceToNowStrict(date)
+
+        expect(result).toEqual('2 days')
+      })
+    })
+  })
+})
+
+describe('setHoursAndMinutesFromDate', () => {
+  it('should return correct date', () => {
+    const res = setHoursAndMinutesFromDate(
+      new Date('2023-01-03T00:00:30'),
+      new Date('2023-01-01T12:24:00')
+    )
+
+    expect(res).toStrictEqual(new Date('2023-01-03T12:24:30'))
   })
 })
