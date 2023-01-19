@@ -1,4 +1,4 @@
-import { getLuminance, Theme, useTheme } from '@material-ui/core'
+import { getLuminance, Theme, useTheme } from '@mui/material'
 import { useEffect } from 'react'
 
 import { getFlagshipMetadata, isFlagshipApp } from 'cozy-device-helper'

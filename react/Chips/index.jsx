@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-import MuiChip from '@material-ui/core/Chip'
+import MuiChip from '@mui/material/Chip'
 
 const Chips = forwardRef(
   (

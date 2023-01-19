@@ -1,3 +1,3 @@
-import MuiTextareaAutosize from '@material-ui/core/TextareaAutosize'
+import MuiTextareaAutosize from '@mui/material/TextareaAutosize'
 
 export default MuiTextareaAutosize

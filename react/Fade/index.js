@@ -1,3 +1,3 @@
-import MuiFade from '@material-ui/core/Fade'
+import MuiFade from '@mui/material/Fade'
 
 export default MuiFade

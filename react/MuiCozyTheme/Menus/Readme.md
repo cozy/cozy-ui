@@ -1,6 +1,6 @@
 ```jsx
 import Menu from 'cozy-ui/transpiled/react/MuiCozyTheme/Menus';
-import MenuItem from '@material-ui/core/MenuItem';
+import MenuItem from '@mui/material/MenuItem';
 import Button from 'cozy-ui/transpiled/react/Button';
 
 import DotsIcon from "cozy-ui/transpiled/react/Icons/Dots";

@@ -1,3 +1,3 @@
-import MUITooltip from '@material-ui/core/Tooltip'
+import MUITooltip from '@mui/material/Tooltip'
 
 export default MUITooltip

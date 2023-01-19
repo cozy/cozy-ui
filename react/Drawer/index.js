@@ -1,3 +1,3 @@
-import MuiDrawer from '@material-ui/core/Drawer'
+import MuiDrawer from '@mui/material/Drawer'
 
 export default MuiDrawer

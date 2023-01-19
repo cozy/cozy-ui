@@ -1,3 +1,3 @@
-import MuiGridListTile from '@material-ui/core/GridListTile'
+import MuiGridListTile from '@mui/material/GridListTile'
 
 export default MuiGridListTile

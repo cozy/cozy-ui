@@ -1,8 +1,8 @@
 Used when you want a cyclical variable, for example for a carousel.
 
 ```jsx
-import IconButton from '@material-ui/core/IconButton'
-import Typography from '@material-ui/core/Typography'
+import IconButton from '@mui/material/IconButton'
+import Typography from '@mui/material/Typography'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import LeftIcon from 'cozy-ui/transpiled/react/Icons/Left'
 import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'

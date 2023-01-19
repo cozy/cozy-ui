@@ -1,3 +1,3 @@
-import MuiStepConnector from '@material-ui/core/StepConnector'
+import MuiStepConnector from '@mui/material/StepConnector'
 
 export default MuiStepConnector

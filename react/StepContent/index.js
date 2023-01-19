@@ -1,3 +1,3 @@
-import MuiStepContent from '@material-ui/core/StepContent'
+import MuiStepContent from '@mui/material/StepContent'
 
 export default MuiStepContent

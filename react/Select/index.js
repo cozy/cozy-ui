@@ -1,3 +1,3 @@
-import MuiSelect from '@material-ui/core/Select'
+import MuiSelect from '@mui/material/Select'
 
 export default MuiSelect

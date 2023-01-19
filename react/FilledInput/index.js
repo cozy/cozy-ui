@@ -1,3 +1,3 @@
-import MuiFilledInput from '@material-ui/core/FilledInput'
+import MuiFilledInput from '@mui/material/FilledInput'
 
 export default MuiFilledInput

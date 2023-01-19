@@ -1,3 +1,3 @@
-import Accordion from '@material-ui/core/Accordion'
+import Accordion from '@mui/material/Accordion'
 
 export default Accordion

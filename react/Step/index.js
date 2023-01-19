@@ -1,3 +1,3 @@
-import MuiStep from '@material-ui/core/Step'
+import MuiStep from '@mui/material/Step'
 
 export default MuiStep

@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo } from 'react'
 import cx from 'classnames'
-import MUIListItemText from '@material-ui/core/ListItemText'
+import MUIListItemText from '@mui/material/ListItemText'
 import once from 'lodash/once'
 
 const logDeprecatedWarning = once(() => {

@@ -1,3 +1,3 @@
-import MuiNativeSelect from '@material-ui/core/NativeSelect'
+import MuiNativeSelect from '@mui/material/NativeSelect'
 
 export default MuiNativeSelect

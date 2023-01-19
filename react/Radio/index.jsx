@@ -2,7 +2,7 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
-import { useRadioGroup } from '@material-ui/core/RadioGroup'
+import { useRadioGroup } from '@mui/material/RadioGroup'
 
 import createDepreciationLogger from '../helpers/createDepreciationLogger'
 

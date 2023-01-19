@@ -1,6 +1,6 @@
 import React from 'react'
 import { RemoveScroll } from 'react-remove-scroll'
-import { default as MUIDialog } from '@material-ui/core/Dialog'
+import { default as MUIDialog } from '@mui/material/Dialog'
 
 import themesStyles from '../../stylus/settings/palette.styl'
 import useBreakpoints from '../hooks/useBreakpoints'

@@ -1,3 +1,3 @@
-import MuiFormGroup from '@material-ui/core/FormGroup'
+import MuiFormGroup from '@mui/material/FormGroup'
 
 export default MuiFormGroup

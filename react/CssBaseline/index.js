@@ -1,3 +1,3 @@
-import MuiCssBaseline from '@material-ui/core/CssBaseline'
+import MuiCssBaseline from '@mui/material/CssBaseline'
 
 export default MuiCssBaseline

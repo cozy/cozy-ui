@@ -1,3 +1,3 @@
-import MuiMenuItem from '@material-ui/core/MenuItem'
+import MuiMenuItem from '@mui/material/MenuItem'
 
 export default MuiMenuItem

@@ -1,3 +1,3 @@
-import Fab from '@material-ui/core/Fab'
+import Fab from '@mui/material/Fab'
 
 export default Fab

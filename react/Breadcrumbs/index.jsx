@@ -4,7 +4,7 @@ import cx from 'classnames'
 import styles from './styles.styl'
 import Icon from '../Icon'
 import Typography from '../Typography'
-import IconButton from '@material-ui/core/IconButton'
+import IconButton from '@mui/material/IconButton'
 import LeftIcon from '../Icons/Left'
 
 const BreadcrumbSeparator = () => (

@@ -1,3 +1,3 @@
-import MuiNoSsr from '@material-ui/core/NoSsr'
+import MuiNoSsr from '@mui/material/NoSsr'
 
 export default MuiNoSsr

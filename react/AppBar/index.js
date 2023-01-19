@@ -1,3 +1,3 @@
-import MuiAppBar from '@material-ui/core/AppBar'
+import MuiAppBar from '@mui/material/AppBar'
 
 export default MuiAppBar

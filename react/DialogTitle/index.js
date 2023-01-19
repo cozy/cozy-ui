@@ -1,3 +1,3 @@
-import MuiDialogTitle from '@material-ui/core/DialogTitle'
+import MuiDialogTitle from '@mui/material/DialogTitle'
 
 export default MuiDialogTitle

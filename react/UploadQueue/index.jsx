@@ -1,6 +1,6 @@
 import React, { Component, useState } from 'react'
 import cx from 'classnames'
-import LinearProgress from '@material-ui/core/LinearProgress'
+import LinearProgress from '@mui/material/LinearProgress'
 import { useIntervalWhen } from 'rooks'
 
 import { splitFilename } from 'cozy-client/dist/models/file'

@@ -1,3 +1,3 @@
-import AccordionSummary from '@material-ui/core/AccordionSummary'
+import AccordionSummary from '@mui/material/AccordionSummary'
 
 export default AccordionSummary

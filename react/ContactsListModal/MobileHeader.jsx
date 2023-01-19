@@ -4,8 +4,8 @@ import CozyTheme from '../CozyTheme'
 import Icon from '../Icon'
 import PreviousIcon from '../Icons/Previous'
 import Paper from '../Paper'
-import IconButton from '@material-ui/core/IconButton'
-import Input from '@material-ui/core/Input'
+import IconButton from '@mui/material/IconButton'
+import Input from '@mui/material/Input'
 
 const barStyle = {
   height: 48

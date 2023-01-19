@@ -22,7 +22,7 @@ import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemSecondaryAction'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Menu from 'cozy-ui/transpiled/react/MuiCozyTheme/Menus'
-import MenuItem from '@material-ui/core/MenuItem'
+import MenuItem from '@mui/material/MenuItem'
 import FileTypeFolderIcon from 'cozy-ui/transpiled/react/Icons/FileTypeFolder'
 import FileTypeText from 'cozy-ui/transpiled/react/Icons/FileTypeText'
 
