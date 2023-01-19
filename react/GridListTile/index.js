@@ -1,3 +1,3 @@
-import MuiGridListTile from '@mui/material/GridListTile'
+import ImageListItem from '@mui/material/ImageListItem'
 
-export default MuiGridListTile
+export default ImageListItem

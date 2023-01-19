@@ -1,3 +1,3 @@
-import MuiGridListTileBar from '@mui/material/GridListTileBar'
+import ImageListItemBar from '@mui/material/ImageListItemBar'
 
-export default MuiGridListTileBar
+export default ImageListItemBar
