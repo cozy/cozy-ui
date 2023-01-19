@@ -1,3 +1,10 @@
+## [80.0.2](https://github.com/cozy/cozy-ui/compare/v80.0.1...v80.0.2) (2023-01-19)
+
+
+### Bug Fixes
+
+* Force formatLocallyDistanceToNowStrict to use whole number of day ([a30442f](https://github.com/cozy/cozy-ui/commit/a30442f))
+
 ## [80.0.1](https://github.com/cozy/cozy-ui/compare/v80.0.0...v80.0.1) (2023-01-19)
 
 
