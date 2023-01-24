@@ -22,10 +22,10 @@ export const makeOverrides = theme =>
   addStyleOverrides({
     MuiOutlinedInput: {
       root: {
-        '&$disabled': {
+        '&.Mui-disabled': {
           background: theme.palette.grey[100]
         },
-        '&$focused $notchedOutline': {
+        '&.Mui-focused $notchedOutline': {
           borderWidth: '0.0625rem'
         },
         '&:hover $notchedOutline': {
@@ -52,14 +52,14 @@ export const makeOverrides = theme =>
       sizeSmall: {
         height: '2rem',
         padding: '0 0.75rem',
-        '&$text': {
+        '&.Mui-text': {
           padding: '8px 6px'
         }
       },
       sizeLarge: {
         height: '3rem',
         padding: '0 1.25rem',
-        '&$text': {
+        '&.Mui-text': {
           padding: '14px 10px'
         }
       },
@@ -184,7 +184,7 @@ export const makeOverrides = theme =>
           zIndex: 1,
           borderRadius: '99px',
           minHeight: '2.5rem',
-          '&$selected': {
+          '&.Mui-selected': {
             color: theme.palette.text.primary
           }
         }
@@ -213,7 +213,7 @@ export const makeOverrides = theme =>
         minHeight: '3.5rem',
         padding: 0,
         color: theme.palette.text.primary,
-        '&$expanded': {
+        '&.Mui-expanded': {
           minHeight: '3.5rem'
         }
       },
@@ -223,7 +223,7 @@ export const makeOverrides = theme =>
           marginLeft: '0.3125rem'
         },
         transform: 'rotate(-90deg)',
-        '&$expanded': {
+        '&.Mui-expanded': {
           marginLeft: '0.3125rem',
           transform: 'rotate(0)'
         }
@@ -236,7 +236,7 @@ export const makeOverrides = theme =>
         '& > :last-child': {
           paddingRight: 0
         },
-        '&$expanded': {
+        '&.Mui-expanded': {
           margin: '0.75rem 0'
         }
       }
@@ -260,10 +260,10 @@ export const makeOverrides = theme =>
     MuiStepLabel: {
       label: {
         ...theme.typography.body1,
-        '&$active': {
+        '&.Mui-active': {
           ...theme.typography.h6
         },
-        '&$completed': {
+        '&.Mui-completed': {
           ...theme.typography.h6
         }
       }
@@ -310,12 +310,12 @@ export const makeOverrides = theme =>
       },
       primary: {
         color: theme.palette.text.primary,
-        '&$dense': {
+        '&.Mui-dense': {
           fontSize: null
         }
       },
       secondary: {
-        '&$dense': {
+        '&.Mui-dense': {
           fontSize: null
         }
       },
@@ -554,7 +554,7 @@ export const makeOverrides = theme =>
       },
       switchBase: {
         top: 1,
-        '&$checked': {
+        '&.Mui-checked': {
           transform: 'translateX(15px)'
         }
       },
@@ -570,14 +570,14 @@ export const makeOverrides = theme =>
         backgroundColor: theme.palette.text.disabled
       },
       colorSecondary: {
-        '&$checked': {
+        '&.Mui-checked': {
           '& + $track': {
             backgroundColor: theme.palette.success.main
           }
         }
       },
       disabled: {
-        '&$checked + $track': {
+        '&.Mui-checked + $track': {
           backgroundColor: `${theme.palette.grey[200]} !important`
         },
         '& $thumb': {
@@ -676,7 +676,7 @@ export const makeOverrides = theme =>
     MuiRadio: {
       root: {
         padding: '12px',
-        '&$disabled svg': {
+        '&.Mui-disabled svg': {
           borderRadius: '50%',
           backgroundColor: theme.palette.background.default,
           fill: theme.palette.border.disabled
@@ -686,18 +686,18 @@ export const makeOverrides = theme =>
         }
       },
       colorPrimary: {
-        '&$checked svg': {
+        '&.Mui-checked svg': {
           fill: theme.palette.primary.main
         },
-        '&$disabled&$checked svg': {
+        '&.Mui-disabled&.Mui-checked svg': {
           fill: theme.palette.text.disabled
         }
       },
       colorSecondary: {
-        '&$checked svg': {
+        '&.Mui-checked svg': {
           fill: theme.palette.error.main
         },
-        '&$disabled&$checked svg': {
+        '&.Mui-disabled&.Mui-checked svg': {
           fill: theme.palette.text.disabled
         }
       }
