@@ -11,10 +11,10 @@ export const makeAlertColor = (theme, color) => {
     '&-standard': {
       color: darken(themeColorByColor[color], 0.6),
       backgroundColor: lighten(themeColorByColor[color], 0.9),
-      '& $icon': {
+      '& .MuiAlert-icon': {
         color: themeColorByColor[color]
       },
-      '& $action': {
+      '& .MuiAlert-action': {
         '& button[title="Close"]': {
           color: theme.palette.text.secondary
         }
@@ -23,7 +23,7 @@ export const makeAlertColor = (theme, color) => {
     '&-outlined': {
       color: darken(themeColorByColor[color], 0.6),
       border: `1px solid ${themeColorByColor[color]}`,
-      '& $icon': {
+      '& .MuiAlert-icon': {
         color: themeColorByColor[color]
       }
     },
@@ -41,14 +41,14 @@ export const makeAlertInvertedColor = (theme, color) => {
     '&-standard': {
       color: theme.palette.primary.main,
       backgroundColor: theme.palette.background.default,
-      '& $icon': {
+      '& .MuiAlert-icon': {
         color: theme.palette[color].main
       }
     },
     '&-outlined': {
       color: theme.palette.primary.main,
       border: `1px solid ${theme.palette.primary.main}`,
-      '& $icon': {
+      '& .MuiAlert-icon': {
         color: theme.palette[color].main
       }
     },
@@ -58,7 +58,7 @@ export const makeAlertInvertedColor = (theme, color) => {
         color === 'secondary'
           ? theme.palette.grey[200]
           : theme.palette[color].main,
-      '& $icon': {
+      '& .MuiAlert-icon': {
         color: theme.palette[color].contrastText
       }
     }
@@ -83,13 +83,13 @@ export const makeChipStyleByColor = (theme, color) => ({
           : alpha(theme.palette[color].main, theme.palette.action.hoverOpacity)
     }
   },
-  '& $icon': {
+  '& .MuiChip-icon': {
     color:
       color === 'primary' ? theme.palette.text.icon : theme.palette[color].main,
     fill:
       color === 'primary' ? theme.palette.text.icon : theme.palette[color].main
   },
-  '& $deleteIcon': {
+  '& .MuiChip-deleteIcon': {
     color:
       color === 'primary'
         ? theme.palette.text.secondary
@@ -103,7 +103,7 @@ export const makeChipStyleByColor = (theme, color) => ({
     padding: '0 1px',
     color: theme.palette[color].contrastText,
     backgroundColor: theme.palette[color].main,
-    '& $icon, & $deleteIcon': {
+    '& .MuiChip-icon, & .MuiChip-deleteIcon': {
       color: theme.palette[color].contrastText,
       fill: theme.palette[color].contrastText
     },
@@ -111,7 +111,7 @@ export const makeChipStyleByColor = (theme, color) => ({
       opacity: 1,
       color: theme.palette.text.disabled,
       backgroundColor: theme.palette.action.disabledBackground,
-      '& $icon, & $deleteIcon': {
+      '& .MuiChip-icon, & .MuiChip-deleteIcon': {
         color: theme.palette.text.disabled,
         fill: theme.palette.text.disabled
       }
@@ -135,7 +135,7 @@ export const makeChipStyleByColor = (theme, color) => ({
         theme.palette[color].main,
         theme.palette.action.ghostOpacity
       ),
-      '& $icon, & $deleteIcon': {
+      '& .MuiChip-icon, & .MuiChip-deleteIcon': {
         color: theme.palette[color].main,
         fill: theme.palette[color].main
       }
