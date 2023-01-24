@@ -52,7 +52,12 @@ const CircleButton = ({
       flexBasis="64px"
       padding="8px 0 4px 0"
     >
-      <IconButton className={styles.iconButton} disabled={disabled} {...props}>
+      <IconButton
+        className={styles.iconButton}
+        disabled={disabled}
+        {...props}
+        size="large"
+      >
         {children}
       </IconButton>
       {label && (

@@ -49,6 +49,7 @@ const QualificationListItemDate = forwardRef(
           <IconButton
             ref={ref}
             onClick={() => toggleActionsMenu(formattedDate)}
+            size="large"
           >
             <Icon icon={Dots} />
           </IconButton>
