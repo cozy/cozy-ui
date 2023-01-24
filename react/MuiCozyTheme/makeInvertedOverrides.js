@@ -16,7 +16,7 @@ export const makeInvertedOverrides = invertedTheme => {
             borderColor: invertedTheme.palette.text.primary,
             borderWidth: '0.0625rem'
           },
-          '& $notchedOutline': {
+          '& .MuiOutlinedInput-notchedOutline': {
             borderColor: invertedTheme.palette.text.primary
           }
         }
@@ -68,7 +68,7 @@ export const makeInvertedOverrides = invertedTheme => {
       MuiTabs: {
         root: {
           '&.segmented': {
-            '& $indicator': {
+            '& .MuiTabs-indicator': {
               backgroundColor: invertedTheme.palette.primary.main
             }
           }

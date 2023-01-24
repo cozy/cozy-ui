@@ -144,7 +144,7 @@ export const makeOverrides = theme =>
           backgroundColor: theme.palette.background.contrast,
           overflow: 'visible',
           minHeight: '2.5rem',
-          '& $indicator': {
+          '& .MuiTabs-indicator': {
             top: '1px',
             height: 'calc(100% - 2px)',
             transform: 'scale(0.99)',
@@ -153,10 +153,10 @@ export const makeOverrides = theme =>
             boxShadow: theme.shadows[1],
             backgroundColor: theme.palette.background.paper
           },
-          '& $fixed': {
+          '& .MuiTabs-fixed': {
             overflow: 'visible !important'
           },
-          '& $scrollButtons': {
+          '& .MuiTabs-scrollButtons': {
             borderRadius: '99px'
           }
         }
@@ -580,7 +580,7 @@ export const makeOverrides = theme =>
         '&.Mui-checked + $track': {
           backgroundColor: `${theme.palette.grey[200]} !important`
         },
-        '& $thumb': {
+        '& .MuiSwitch-thumb': {
           backgroundColor: 'white'
         }
       }
@@ -706,10 +706,10 @@ export const makeOverrides = theme =>
       root: {
         '&.noLabel': {
           width: '32px',
-          '& $label': {
+          '& .MuiChip-label': {
             display: 'none'
           },
-          '& $icon': {
+          '& .MuiChip-icon': {
             margin: 0
           }
         },
@@ -729,12 +729,12 @@ export const makeOverrides = theme =>
           '&-primary': makeAlertColor(theme, 'primary'),
           '&-secondary': makeAlertColor(theme, 'secondary')
         },
-        '& $icon': {
+        '& .MuiAlert-icon': {
           paddingTop: '9px'
         },
         '&.block': {
           flexWrap: 'wrap',
-          '& $action': {
+          '& .MuiAlert-action': {
             display: 'block',
             width: '100%',
             paddingLeft: 0,
