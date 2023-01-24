@@ -1,9 +1,11 @@
 See [Material UI documentation](https://material-ui.com/demos/expansion-panels/) to learn more about Accordion.
 
 ```jsx
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
+import Accordion from 'cozy-ui/transpiled/react/MuiCozyTheme/Accordion'
+import AccordionSummary from 'cozy-ui/transpiled/react/MuiCozyTheme/AccordionSummary'
+import AccordionDetails from 'cozy-ui/transpiled/react/MuiCozyTheme/AccordionDetails'
+
+;
 
 <>
   <Accordion>
