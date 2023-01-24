@@ -22,7 +22,7 @@ import styles from './styles.styl'
 
 const useClasses = makeStyles(theme => ({
   iconButton: {
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       marginLeft: '0.25rem'
     }
   }

@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     boxOrient: 'vertical',
     display: '-webkit-box',
     height: '2.375rem',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       width: '3.75rem',
       fontSize: '0.6875rem',
       lineHeight: '1rem',
@@ -55,7 +55,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     alignItems: 'center',
     width: '6rem',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       width: '4.25rem'
     }
   }
