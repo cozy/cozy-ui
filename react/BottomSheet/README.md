@@ -123,25 +123,25 @@ const settings = state.mediumHeight === undefined && state.mediumHeightRatio ===
       <div>
         <TextField
           type="number"
-          margin="dense"
+          size="small"
           label="mediumHeight"
           variant="outlined"
           helperText="Height of the medium snap point"
           onChange={handleChangeMediumHeight}
         />
         <TextField
-          className="u-ml-0-s u-ml-half"
+          className="u-ml-0-s u-ml-half u-mt-1-s"
           type="number"
-          margin="dense"
+          size="small"
           label="mediumHeightRatio"
           variant="outlined"
           helperText="Height ratio of the medium snap point"
           onChange={handleChangeMediumHeightRatio}
         />
         <TextField
-          className="u-ml-0-s u-ml-half"
+          className="u-ml-0-s u-ml-half u-mt-1-s"
           type="number"
-          margin="dense"
+          size="small"
           label="offset"
           variant="outlined"
           helperText="Bottom offset"

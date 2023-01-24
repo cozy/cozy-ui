@@ -21,7 +21,10 @@ const variants = [
   'body2',
   'caption',
 ]
-const colors = ['initial', 'inherit', 'primary', 'secondary', 'textPrimary', 'textSecondary', 'error']
+const colors = ['initial', 'primary', 'secondary', 'primaryText', 'secondaryText', 'error']
+
+const makeStyles = color =>
+  color === 'initial' ? undefined : { color:  `var(--${color}Color)` }
 
 ;
 
@@ -32,7 +35,7 @@ const colors = ['initial', 'inherit', 'primary', 'secondary', 'textPrimary', 'te
         <div>{color}</div>
         {variants.map(variant =>
           <div key={variant + color}>
-            <Typography variant={variant} color={color}>{variant}</Typography>
+            <Typography style={makeStyles(color)} variant={variant}>{variant}</Typography>
           </div>
         )}
       </Stack>

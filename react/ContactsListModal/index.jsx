@@ -104,7 +104,6 @@ const ContactsListModal = ({
             <Button
               className={isMobile && 'u-mt-1'}
               variant="secondary"
-              theme="secondary"
               label={addContactLabel}
               startIcon={<Icon icon={PlusIcon} />}
               onClick={setShowAddDialog}

@@ -13,13 +13,13 @@ const Component = () => {
   const [index, setPrev, setNext] = useCycle(2, 0, arr.length - 1)
 
   return <div className='u-flex u-flex-items-center'>
-    <IconButton onClick={setPrev} size="medium"><Icon icon={LeftIcon} /></IconButton>
+    <IconButton onClick={setPrev} size="large"><Icon icon={LeftIcon} /></IconButton>
     <Typography variant='body1'>
       {arr.map((item, i) => {
         return index === i ? '●' : '○'
       })}
     </Typography>
-    <IconButton onClick={setNext} size="medium"><Icon icon={RightIcon} /></IconButton>
+    <IconButton onClick={setNext} size="large"><Icon icon={RightIcon} /></IconButton>
   </div>
 };
 

@@ -25,11 +25,17 @@ export const makeOverrides = theme =>
         '&.Mui-disabled': {
           background: theme.palette.grey[100]
         },
-        '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-          borderWidth: '0.0625rem'
+        '&.Mui-focused': {
+          '.MuiOutlinedInput-notchedOutline': {
+            borderWidth: '0.0625rem'
+          }
         },
-        '&:hover .MuiOutlinedInput-notchedOutline': {
-          borderColor: theme.palette.grey[300]
+        '&:hover': {
+          '&:not(.Mui-focused, .Mui-error, .Mui-disabled)': {
+            '.MuiOutlinedInput-notchedOutline': {
+              borderColor: theme.palette.grey[300]
+            }
+          }
         }
       },
       notchedOutline: {
@@ -165,6 +171,11 @@ export const makeOverrides = theme =>
     MuiTab: {
       root: {
         ...theme.typography.subtitle2,
+        paddingTop: '6px',
+        paddingBottom: '6px',
+        [theme.breakpoints.up('md')]: {
+          minWidth: '160px'
+        },
         '&:hover': {
           color: theme.palette.text.primary,
           opacity: 1
@@ -217,14 +228,14 @@ export const makeOverrides = theme =>
           minHeight: '3.5rem'
         }
       },
-      expandIcon: {
+      expandIconWrapper: {
         order: 0,
         '&&': {
-          marginLeft: '0.3125rem'
+          marginLeft: '1rem'
         },
         transform: 'rotate(-90deg)',
         '&.Mui-expanded': {
-          marginLeft: '0.3125rem',
+          marginLeft: '1rem',
           transform: 'rotate(0)'
         }
       },
@@ -299,6 +310,9 @@ export const makeOverrides = theme =>
         minHeight: '3.5rem',
         paddingTop: 0,
         paddingBottom: 0
+      },
+      secondaryAction: {
+        paddingRight: '48px'
       }
     },
     MuiListItemText: {
@@ -525,15 +539,12 @@ export const makeOverrides = theme =>
           '& button': {
             width: '100%',
             margin: 0,
-            '&:not(:first-child)': {
+            '&:not(:first-of-type)': {
               marginBottom: '8px'
             }
           }
         },
-
-        // To keep muiV3 behavior
-        // TODO check later if we need this behavior
-        '&:not(.columnLayout) > :not(:first-child):not(:first-child)': {
+        '&:not(.columnLayout) > :not(:first-of-type):not(:first-of-type)': {
           marginLeft: 4
         }
       }
@@ -547,15 +558,13 @@ export const makeOverrides = theme =>
       }
     },
     MuiSwitch: {
-      checked: {
-        '& + .MuiSwitch-track.MuiSwitch-track': {
-          opacity: 1
-        }
-      },
       switchBase: {
         top: 1,
         '&.Mui-checked': {
-          transform: 'translateX(15px)'
+          transform: 'translateX(15px)',
+          '& + .MuiSwitch-track': {
+            opacity: 1
+          }
         }
       },
       thumb: {
@@ -602,8 +611,21 @@ export const makeOverrides = theme =>
       }
     },
     MuiIconButton: {
-      root: {
-        color: theme.palette.text.secondary,
+      root: ({ ownerState: { color } }) => ({
+        color:
+          color === 'default'
+            ? theme.palette.text.secondary
+            : [
+                'primary',
+                'secondary',
+                'error',
+                'success',
+                'warning',
+                'info'
+              ].includes(color)
+            ? theme.palette[color].main
+            : undefined,
+
         '&.small': {
           padding: 3
         },
@@ -619,7 +641,7 @@ export const makeOverrides = theme =>
             backgroundColor: theme.palette.action.selected
           }
         }
-      }
+      })
     },
     MuiBadge: {
       badge: {
@@ -673,6 +695,13 @@ export const makeOverrides = theme =>
         }
       }
     },
+    MuiCheckbox: {
+      indeterminate: {
+        '&:not(.Mui-checked, .Mui-disabled)': {
+          color: theme.palette.text.secondary
+        }
+      }
+    },
     MuiRadio: {
       root: {
         padding: '12px',
@@ -719,6 +748,9 @@ export const makeOverrides = theme =>
           '&-error': makeChipStyleByColor(theme, 'error'),
           '&-warning': makeChipStyleByColor(theme, 'warning'),
           '&-info': makeChipStyleByColor(theme, 'info')
+        },
+        '&.Mui-disabled': {
+          opacity: '0.5'
         }
       }
     },
@@ -727,7 +759,11 @@ export const makeOverrides = theme =>
         padding: '8px 16px',
         '&.cozyAlert': {
           '&-primary': makeAlertColor(theme, 'primary'),
-          '&-secondary': makeAlertColor(theme, 'secondary')
+          '&-secondary': makeAlertColor(theme, 'secondary'),
+          '&-success': makeAlertColor(theme, 'success'),
+          '&-error': makeAlertColor(theme, 'error'),
+          '&-warning': makeAlertColor(theme, 'warning'),
+          '&-info': makeAlertColor(theme, 'info')
         },
         '& .MuiAlert-icon': {
           paddingTop: '9px'
@@ -738,6 +774,7 @@ export const makeOverrides = theme =>
             display: 'block',
             width: '100%',
             paddingLeft: 0,
+            paddingTop: 0,
             textAlign: 'right'
           }
         }
@@ -748,7 +785,8 @@ export const makeOverrides = theme =>
         flexWrap: 'wrap'
       },
       action: {
-        marginRight: '-6px'
+        paddingTop: 0,
+        alignItems: 'center'
       }
     },
     MuiAlertTitle: {
