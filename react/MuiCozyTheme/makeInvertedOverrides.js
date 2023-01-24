@@ -12,7 +12,7 @@ export const makeInvertedOverrides = invertedTheme => {
           '&.Mui-disabled': {
             background: 'initial'
           },
-          '&.Mui-focused $notchedOutline': {
+          '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
             borderColor: invertedTheme.palette.text.primary,
             borderWidth: '0.0625rem'
           },
@@ -38,12 +38,12 @@ export const makeInvertedOverrides = invertedTheme => {
       },
       MuiCheckbox: {
         colorPrimary: {
-          '&.Mui-checked:not($disabled)': {
+          '&.Mui-checked:not(.MuiCheckbox-disabled)': {
             color: invertedTheme.palette.primary.light
           }
         },
         colorSecondary: {
-          '&.Mui-checked:not($disabled)': {
+          '&.Mui-checked:not(.MuiCheckbox-disabled)': {
             color: invertedTheme.palette.error.main
           }
         }
@@ -89,14 +89,14 @@ export const makeInvertedOverrides = invertedTheme => {
         },
         colorPrimary: {
           '&.Mui-checked': {
-            '& + $track': {
+            '& + .MuiSwitch-track': {
               backgroundColor: invertedTheme.palette.success.dark
             }
           }
         },
         colorSecondary: {
           '&.Mui-checked': {
-            '& + $track': {
+            '& + .MuiSwitch-track': {
               backgroundColor: invertedTheme.palette.success.dark
             }
           }
