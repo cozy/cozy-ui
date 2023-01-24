@@ -84,7 +84,7 @@ export const makePalette = mode => {
       primary: getCssValue('primaryTextColor'),
       secondary: getCssValue('secondaryTextColor'),
       disabled: getCssValue('disabledTextColor'),
-      hint: getCssValue('hintTextColor'),
+      hint: getCssValue('hintTextColor'), // has been removed in mui v5
       icon: getCssValue('iconTextColor')
     },
     grey: {
