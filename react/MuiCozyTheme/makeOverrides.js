@@ -1,3 +1,5 @@
+import merge from 'lodash/merge'
+
 import { alpha, lighten, darken } from '../styles'
 
 const SWITCH_BAR_WIDTH = 25
@@ -967,11 +969,13 @@ const makeOverrides = theme => ({
 })
 
 const makeInvertedOverrides = invertedTheme => {
-  const invertedOverrides = {
-    ...makeOverrides(invertedTheme),
+  const makeOverridesForInvertedTheme = invertedTheme => ({
     MuiOutlinedInput: {
       root: {
         boxSizing: 'border-box',
+        '&$disabled': {
+          background: 'initial'
+        },
         '&$focused $notchedOutline': {
           borderColor: invertedTheme.palette.text.primary,
           borderWidth: '0.0625rem'
@@ -1009,9 +1013,7 @@ const makeInvertedOverrides = invertedTheme => {
       }
     },
     MuiAlert: {
-      ...makeOverrides(invertedTheme).MuiAlert,
       root: {
-        ...makeOverrides(invertedTheme).MuiAlert.root,
         '&.cozyAlert': {
           '&-primary': makeAlertInvertedColor(invertedTheme, 'primary'),
           '&-secondary': makeAlertInvertedColor(invertedTheme, 'secondary'),
@@ -1023,42 +1025,53 @@ const makeInvertedOverrides = invertedTheme => {
       }
     },
     MuiSnackbarContent: {
-      ...makeOverrides(invertedTheme).MuiSnackbarContent,
       root: {
-        ...makeOverrides(invertedTheme).MuiSnackbarContent.root,
         backgroundColor: invertedTheme.palette.grey[200]
       }
-    }
-  }
-
-  invertedOverrides.MuiTabs.root['&.segmented'][
-    '& $indicator'
-  ].backgroundColor = invertedTheme.palette.primary.main
-
-  invertedOverrides.MuiTab.root['&.segmented']['&$selected'].color =
-    invertedTheme.palette.primary.contrastText
-
-  invertedOverrides.MuiSwitch = {
-    ...invertedOverrides.MuiSwitch,
-    switchBase: {
-      ...invertedOverrides.MuiSwitch.switchBase,
-      color: invertedTheme.palette.grey[100]
     },
-    colorPrimary: {
-      '&$checked': {
-        '& + $track': {
-          backgroundColor: invertedTheme.palette.success.dark
+    MuiTabs: {
+      root: {
+        '&.segmented': {
+          '& $indicator': {
+            backgroundColor: invertedTheme.palette.primary.main
+          }
         }
       }
     },
-    colorSecondary: {
-      '&$checked': {
-        '& + $track': {
-          backgroundColor: invertedTheme.palette.success.dark
+    MuiTab: {
+      root: {
+        '&.segmented': {
+          '&$selected': {
+            color: invertedTheme.palette.primary.contrastText
+          }
+        }
+      }
+    },
+    MuiSwitch: {
+      switchBase: {
+        color: invertedTheme.palette.grey[100]
+      },
+      colorPrimary: {
+        '&$checked': {
+          '& + $track': {
+            backgroundColor: invertedTheme.palette.success.dark
+          }
+        }
+      },
+      colorSecondary: {
+        '&$checked': {
+          '& + $track': {
+            backgroundColor: invertedTheme.palette.success.dark
+          }
         }
       }
     }
-  }
+  })
+
+  const invertedOverrides = merge(
+    makeOverrides(invertedTheme),
+    makeOverridesForInvertedTheme(invertedTheme)
+  )
 
   return invertedOverrides
 }
