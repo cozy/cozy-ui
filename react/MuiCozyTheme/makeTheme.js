@@ -37,10 +37,10 @@ export const makeTheme = mode => {
     typography: makeTypography(palette),
     palette
   })
-  const overrides = makeThemeOverrides(theme)
+  const components = makeThemeOverrides(theme)
 
   return {
     ...theme,
-    overrides
+    components
   }
 }
