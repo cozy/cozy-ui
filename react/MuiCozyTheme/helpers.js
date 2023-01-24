@@ -210,3 +210,14 @@ export const makeContainedButtonStyle = (theme, color) => ({
     }
   }
 })
+
+export const addStyleOverrides = overrides => {
+  const components = {}
+  Object.entries(overrides)
+    .map(([key, value]) => ({
+      [key]: { styleOverrides: value }
+    }))
+    .forEach(value => Object.assign(components, value))
+
+  return components
+}
