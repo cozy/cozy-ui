@@ -9,10 +9,10 @@ export const makeInvertedOverrides = invertedTheme => {
       MuiOutlinedInput: {
         root: {
           boxSizing: 'border-box',
-          '&$disabled': {
+          '&.Mui-disabled': {
             background: 'initial'
           },
-          '&$focused $notchedOutline': {
+          '&.Mui-focused $notchedOutline': {
             borderColor: invertedTheme.palette.text.primary,
             borderWidth: '0.0625rem'
           },
@@ -23,7 +23,7 @@ export const makeInvertedOverrides = invertedTheme => {
       },
       MuiFormLabel: {
         root: {
-          '&$focused': {
+          '&.Mui-focused': {
             color: invertedTheme.palette.text.primary
           }
         }
@@ -38,12 +38,12 @@ export const makeInvertedOverrides = invertedTheme => {
       },
       MuiCheckbox: {
         colorPrimary: {
-          '&$checked:not($disabled)': {
+          '&.Mui-checked:not($disabled)': {
             color: invertedTheme.palette.primary.light
           }
         },
         colorSecondary: {
-          '&$checked:not($disabled)': {
+          '&.Mui-checked:not($disabled)': {
             color: invertedTheme.palette.error.main
           }
         }
@@ -77,7 +77,7 @@ export const makeInvertedOverrides = invertedTheme => {
       MuiTab: {
         root: {
           '&.segmented': {
-            '&$selected': {
+            '&.Mui-selected': {
               color: invertedTheme.palette.primary.contrastText
             }
           }
@@ -88,14 +88,14 @@ export const makeInvertedOverrides = invertedTheme => {
           color: invertedTheme.palette.grey[100]
         },
         colorPrimary: {
-          '&$checked': {
+          '&.Mui-checked': {
             '& + $track': {
               backgroundColor: invertedTheme.palette.success.dark
             }
           }
         },
         colorSecondary: {
-          '&$checked': {
+          '&.Mui-checked': {
             '& + $track': {
               backgroundColor: invertedTheme.palette.success.dark
             }

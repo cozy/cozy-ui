@@ -71,7 +71,7 @@ export const makeChipStyleByColor = (theme, color) => ({
     color === 'primary'
       ? theme.palette.border.main
       : alpha(theme.palette[color].main, theme.palette.border.opacity),
-  '&$clickable, &$deletable': {
+  '&.Mui-clickable, &.Mui-deletable': {
     '&:hover, &:focus': {
       borderColor:
         color === 'primary'
@@ -99,7 +99,7 @@ export const makeChipStyleByColor = (theme, color) => ({
         ? theme.palette.text.secondary
         : theme.palette[color].main
   },
-  '&$colorPrimary': {
+  '&.Mui-colorPrimary': {
     padding: '0 1px',
     color: theme.palette[color].contrastText,
     backgroundColor: theme.palette[color].main,
@@ -107,7 +107,7 @@ export const makeChipStyleByColor = (theme, color) => ({
       color: theme.palette[color].contrastText,
       fill: theme.palette[color].contrastText
     },
-    '&$disabled': {
+    '&.Mui-disabled': {
       opacity: 1,
       color: theme.palette.text.disabled,
       backgroundColor: theme.palette.action.disabledBackground,
@@ -116,7 +116,7 @@ export const makeChipStyleByColor = (theme, color) => ({
         fill: theme.palette.text.disabled
       }
     },
-    '&$clickable, &$deletable': {
+    '&.Mui-clickable, &.Mui-deletable': {
       '&:hover, &:focus': {
         backgroundColor: theme.palette[color].dark
       }
@@ -140,7 +140,7 @@ export const makeChipStyleByColor = (theme, color) => ({
         fill: theme.palette[color].main
       }
     },
-    '&$clickable, &$deletable': {
+    '&.Mui-clickable, &.Mui-deletable': {
       '&:hover, &:focus': {
         borderColor: alpha(
           theme.palette[color].main,
