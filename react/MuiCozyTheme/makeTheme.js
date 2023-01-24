@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { adaptV4Theme } from '@mui/material/styles'
+
 import { createTheme } from '../styles'
 import { getCssVariableValue } from '../utils/color'
 import isTesting from '../helpers/isTesting'
@@ -47,11 +49,13 @@ const themesCommonConfig = {
 
 export const makeTheme = mode => {
   const palette = makePalette(mode)
-  const theme = createTheme({
-    ...themesCommonConfig,
-    typography: makeTypography(palette),
-    palette
-  })
+  const theme = createTheme(
+    adaptV4Theme({
+      ...themesCommonConfig,
+      typography: makeTypography(palette),
+      palette
+    })
+  )
   const overrides = makeThemeOverrides(theme)
 
   return {

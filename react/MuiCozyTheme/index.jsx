@@ -1,12 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { ThemeProvider } from '../styles'
+import { ThemeProvider, StyledEngineProvider } from '../styles'
 import { getTheme } from './theme'
 
 const MuiCozyTheme = ({ variant, children }) => {
   const theme = getTheme(variant)
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>
+  return (
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    </StyledEngineProvider>
+  )
 }
 
 MuiCozyTheme.propTypes = {
