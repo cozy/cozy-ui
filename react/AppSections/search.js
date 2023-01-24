@@ -32,13 +32,19 @@ const showMaintenanceMatcher = isShowMaintenance => app => {
   return app.maintenance === undefined
 }
 
+const qualificationLabelsMatcher = label => app => {
+  if (!Array.isArray(app.qualification_labels)) return false
+  return app.qualification_labels.includes(label)
+}
+
 const searchAttrToMatcher = {
   type: typeMatcher,
   category: categoryMatcher,
   tag: tagMatcher,
   doctype: doctypeMatcher,
   pendingUpdate: pendingUpdateMatcher,
-  showMaintenance: showMaintenanceMatcher
+  showMaintenance: showMaintenanceMatcher,
+  qualificationLabels: qualificationLabelsMatcher
 }
 
 /**
