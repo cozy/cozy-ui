@@ -25,10 +25,10 @@ export const makeOverrides = theme =>
         '&.Mui-disabled': {
           background: theme.palette.grey[100]
         },
-        '&.Mui-focused $notchedOutline': {
+        '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
           borderWidth: '0.0625rem'
         },
-        '&:hover $notchedOutline': {
+        '&:hover .MuiOutlinedInput-notchedOutline': {
           borderColor: theme.palette.grey[300]
         }
       },
@@ -66,7 +66,7 @@ export const makeOverrides = theme =>
       text: {
         minWidth: 'auto',
         padding: '11px 8px',
-        '&:not($disabled)': {
+        '&:not(.Mui-disabled)': {
           '&.customColor': {
             '&-success': makeTextButtonStyle(theme, 'success'),
             '&-warning': makeTextButtonStyle(theme, 'warning'),
@@ -76,7 +76,7 @@ export const makeOverrides = theme =>
         }
       },
       outlined: {
-        '&:not($disabled)': {
+        '&:not(.Mui-disabled)': {
           '&.ghost': {
             backgroundColor: alpha(
               theme.palette.primary.main,
@@ -122,7 +122,7 @@ export const makeOverrides = theme =>
       },
       contained: {
         boxShadow: 0,
-        '&:not($disabled)': {
+        '&:not(.Mui-disabled)': {
           '&.customColor': {
             '&-success': makeContainedButtonStyle(theme, 'success'),
             '&-warning': makeContainedButtonStyle(theme, 'warning'),
@@ -548,7 +548,7 @@ export const makeOverrides = theme =>
     },
     MuiSwitch: {
       checked: {
-        '& + $track$track': {
+        '& + .MuiSwitch-track.MuiSwitch-track': {
           opacity: 1
         }
       },
@@ -571,13 +571,13 @@ export const makeOverrides = theme =>
       },
       colorSecondary: {
         '&.Mui-checked': {
-          '& + $track': {
+          '& + .MuiSwitch-track': {
             backgroundColor: theme.palette.success.main
           }
         }
       },
       disabled: {
-        '&.Mui-checked + $track': {
+        '&.Mui-checked + .MuiSwitch-track': {
           backgroundColor: `${theme.palette.grey[200]} !important`
         },
         '& .MuiSwitch-thumb': {
@@ -681,7 +681,7 @@ export const makeOverrides = theme =>
           backgroundColor: theme.palette.background.default,
           fill: theme.palette.border.disabled
         },
-        '&:not($checked) svg': {
+        '&:not(.MuiRadio-checked) svg': {
           fill: theme.palette.border.main
         }
       },

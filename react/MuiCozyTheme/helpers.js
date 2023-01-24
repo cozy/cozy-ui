@@ -125,7 +125,7 @@ export const makeChipStyleByColor = (theme, color) => ({
   '&.ghost': {
     borderWidth: '1px',
     borderStyle: 'dashed',
-    '&:not($disabled)': {
+    '&:not(.MuiChip-disabled)': {
       color: theme.palette[color].main,
       borderColor: alpha(
         theme.palette[color].main,
