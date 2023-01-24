@@ -12,13 +12,16 @@ export const makeInvertedOverrides = invertedTheme => {
           '&.Mui-disabled': {
             background: 'initial'
           },
-          '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-            borderColor: invertedTheme.palette.text.primary,
-            borderWidth: '0.0625rem'
-          },
-          '& .MuiOutlinedInput-notchedOutline': {
-            borderColor: invertedTheme.palette.text.primary
+          '&:hover': {
+            '&:not(.Mui-focused, .Mui-error, .Mui-disabled)': {
+              '.MuiOutlinedInput-notchedOutline': {
+                borderColor: invertedTheme.palette.text.primary
+              }
+            }
           }
+        },
+        notchedOutline: {
+          borderColor: invertedTheme.palette.text.primary
         }
       },
       MuiFormLabel: {
@@ -38,12 +41,12 @@ export const makeInvertedOverrides = invertedTheme => {
       },
       MuiCheckbox: {
         colorPrimary: {
-          '&.Mui-checked:not(.MuiCheckbox-disabled)': {
+          '&.Mui-checked:not(.Mui-disabled)': {
             color: invertedTheme.palette.primary.light
           }
         },
         colorSecondary: {
-          '&.Mui-checked:not(.MuiCheckbox-disabled)': {
+          '&.Mui-checked:not(.Mui-disabled)': {
             color: invertedTheme.palette.error.main
           }
         }
@@ -100,6 +103,11 @@ export const makeInvertedOverrides = invertedTheme => {
               backgroundColor: invertedTheme.palette.success.dark
             }
           }
+        }
+      },
+      MuiPaper: {
+        root: {
+          backgroundImage: 'none' // overrides `dark` theme legacy
         }
       }
     })

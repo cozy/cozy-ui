@@ -70,7 +70,6 @@ const useCozyDialog = props => {
     ...componentsProps?.dialogTitle,
     id: `modal-title-${id}`,
     ref: titleRef,
-    disableTypography: true,
     className: cx(
       {
         'u-ellipsis': !isFluidTitle,

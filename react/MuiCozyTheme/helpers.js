@@ -3,7 +3,11 @@ import { alpha, lighten, darken } from '../styles'
 export const makeAlertColor = (theme, color) => {
   const themeColorByColor = {
     primary: theme.palette[color].main,
-    secondary: theme.palette.text.primary
+    secondary: theme.palette.text.primary,
+    success: theme.palette[color].main,
+    error: theme.palette[color].main,
+    warning: theme.palette[color].main,
+    info: theme.palette[color].main
   }
 
   // same approach as Mui, see https://github.com/mui/material-ui/blob/v4.x/packages/material-ui-lab/src/Alert/Alert.js#L28
@@ -16,7 +20,7 @@ export const makeAlertColor = (theme, color) => {
       },
       '& .MuiAlert-action': {
         '& button[title="Close"]': {
-          color: theme.palette.text.secondary
+          color: darken(themeColorByColor[color], 0.6)
         }
       }
     },
@@ -25,13 +29,24 @@ export const makeAlertColor = (theme, color) => {
       border: `1px solid ${themeColorByColor[color]}`,
       '& .MuiAlert-icon': {
         color: themeColorByColor[color]
+      },
+      '& .MuiAlert-action': {
+        '& button[title="Close"]': {
+          color: darken(themeColorByColor[color], 0.6)
+        }
       }
     },
     '&-filled': {
+      color: '#fff',
       backgroundColor:
         color === 'secondary'
           ? theme.palette.grey[600]
-          : themeColorByColor[color]
+          : themeColorByColor[color],
+      '& .MuiAlert-action': {
+        '& button[title="Close"]': {
+          color: '#fff'
+        }
+      }
     }
   }
 }
@@ -43,6 +58,11 @@ export const makeAlertInvertedColor = (theme, color) => {
       backgroundColor: theme.palette.background.default,
       '& .MuiAlert-icon': {
         color: theme.palette[color].main
+      },
+      '& .MuiAlert-action': {
+        '& button[title="Close"]': {
+          color: theme.palette.primary.main
+        }
       }
     },
     '&-outlined': {
@@ -50,6 +70,11 @@ export const makeAlertInvertedColor = (theme, color) => {
       border: `1px solid ${theme.palette.primary.main}`,
       '& .MuiAlert-icon': {
         color: theme.palette[color].main
+      },
+      '& .MuiAlert-action': {
+        '& button[title="Close"]': {
+          color: theme.palette.primary.main
+        }
       }
     },
     '&-filled': {
@@ -60,6 +85,11 @@ export const makeAlertInvertedColor = (theme, color) => {
           : theme.palette[color].main,
       '& .MuiAlert-icon': {
         color: theme.palette[color].contrastText
+      },
+      '& .MuiAlert-action': {
+        '& button[title="Close"]': {
+          color: theme.palette[color].contrastText
+        }
       }
     }
   }
@@ -99,7 +129,7 @@ export const makeChipStyleByColor = (theme, color) => ({
         ? theme.palette.text.secondary
         : theme.palette[color].main
   },
-  '&.Mui-colorPrimary': {
+  '&.MuiChip-colorPrimary': {
     padding: '0 1px',
     color: theme.palette[color].contrastText,
     backgroundColor: theme.palette[color].main,
@@ -125,7 +155,7 @@ export const makeChipStyleByColor = (theme, color) => ({
   '&.ghost': {
     borderWidth: '1px',
     borderStyle: 'dashed',
-    '&:not(.MuiChip-disabled)': {
+    '&:not(.Mui-disabled)': {
       color: theme.palette[color].main,
       borderColor: alpha(
         theme.palette[color].main,
