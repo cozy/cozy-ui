@@ -596,7 +596,7 @@ const makeOverrides = theme => ({
       '&.small': {
         width: '480px',
         maxWidth: '480px',
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('lg')]: {
           margin: '16px',
           padding: '0 8px 8px',
           height: 'auto',
@@ -637,19 +637,19 @@ const makeOverrides = theme => ({
       boxSizing: 'border-box',
       width: '100%',
       padding: '1.5rem 2rem',
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         ...theme.typography.h4,
         padding: '0.75rem 1rem'
       },
       '&.dialogTitleWithBack': {
         paddingLeft: '4rem', // padding base (2rem) + buttonWidth (1rem) + buttonMargin (1rem)
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
           paddingLeft: '3rem' // padding base (1rem) + buttonWidth (1rem) + buttonMargin (1rem)
         }
       },
       '&.dialogTitleWithClose': {
         paddingRight: '4rem', // padding base (2rem) + buttonWidth (1rem) + buttonMargin (1rem)
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('md')]: {
           paddingRight: '3rem' // padding base (1rem) + buttonWidth (1rem) + buttonMargin (1rem)
         }
       },
@@ -664,7 +664,7 @@ const makeOverrides = theme => ({
         marginBottom: 'var(--flagship-bottom-height) !important'
       },
       padding: '24px 32px 0',
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         padding: '24px 16px 0'
       },
       '&.disableGutters': {
@@ -681,7 +681,7 @@ const makeOverrides = theme => ({
       '& .dialogContentInner': {
         marginBottom: '24px',
         '&.withFluidActions': {
-          [theme.breakpoints.down('sm')]: {
+          [theme.breakpoints.down('md')]: {
             marginBottom: 0,
             display: 'flex',
             flexDirection: 'column',
@@ -700,7 +700,7 @@ const makeOverrides = theme => ({
         '& .dialogTitleFluidContainer': {
           marginLeft: '-2rem',
           marginRight: '-2rem',
-          [theme.breakpoints.down('sm')]: {
+          [theme.breakpoints.down('md')]: {
             marginLeft: '-1rem',
             marginRight: '-1rem',
             marginTop: '-0.75rem'
@@ -713,7 +713,7 @@ const makeOverrides = theme => ({
     root: {
       margin: '16px 32px',
       padding: 0,
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         margin: '8px 16px',
         '& button': {
           flexGrow: 1

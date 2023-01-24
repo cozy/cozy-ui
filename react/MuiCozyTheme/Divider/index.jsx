@@ -41,7 +41,7 @@ export const DeprecatedDivider = withStyles({
    * in order to have the divider takes the full width of the Modal
    */
   root: {
-    [normalTheme.breakpoints.down('md')]: {
+    [normalTheme.breakpoints.down('lg')]: {
       width: `calc(100% + ${defaultValues.dialog.sm.padding}*2px)`,
       marginLeft: `-${defaultValues.dialog.sm.padding}px`
     },
