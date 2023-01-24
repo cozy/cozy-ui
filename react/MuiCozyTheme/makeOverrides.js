@@ -6,7 +6,7 @@ const SWITCH_BAR_WIDTH = 25
 
 export const makeThemeOverrides = theme => {
   const createOverrides =
-    theme.palette.type === 'dark' ? makeInvertedOverrides : makeOverrides
+    theme.palette.mode === 'dark' ? makeInvertedOverrides : makeOverrides
 
   return createOverrides(theme)
 }

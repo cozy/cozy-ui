@@ -45,8 +45,8 @@ const themesCommonConfig = {
   ...(isTesting() && { transitions: { create: () => 'none' } })
 }
 
-export const makeTheme = type => {
-  const palette = makePalette(type)
+export const makeTheme = mode => {
+  const palette = makePalette(mode)
   const theme = createTheme({
     ...themesCommonConfig,
     typography: makeTypography(palette),
