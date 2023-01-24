@@ -52,6 +52,7 @@ const QualificationListItemContact = ({ file }) => {
           <IconButton
             ref={actionBtnRef}
             onClick={() => toggleActionsMenu('contact', contactName)}
+            size="large"
           >
             <Icon icon={Dots} />
           </IconButton>

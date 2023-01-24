@@ -41,6 +41,7 @@ const QualificationListItemOther = forwardRef(
           <IconButton
             ref={ref}
             onClick={() => toggleActionsMenu(currentValueTranslated)}
+            size="large"
           >
             <Icon icon={Dots} />
           </IconButton>

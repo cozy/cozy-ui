@@ -43,6 +43,7 @@ const QualificationListItemInformation = forwardRef(
             ref={ref}
             onClick={() => toggleActionsMenu(value)}
             data-testid="toggleActionsMenuBtn"
+            size="large"
           >
             <Icon icon={Dots} />
           </IconButton>
