@@ -38,12 +38,12 @@ const opacityByTheme = {
   }
 }
 
-export const makePalette = type => {
+export const makePalette = mode => {
   const getCssValue =
-    type === 'dark' ? getInvertedCssVariableValue : getCssVariableValue
+    mode === 'dark' ? getInvertedCssVariableValue : getCssVariableValue
 
   const paletteByTheme = {
-    type,
+    mode,
     primary: {
       light: getCssValue('primaryColorLight'),
       main: getCssValue('primaryColor'),
@@ -129,5 +129,5 @@ export const makePalette = type => {
     }
   }
 
-  return merge(paletteByTheme, opacityByTheme[type])
+  return merge(paletteByTheme, opacityByTheme[mode])
 }
