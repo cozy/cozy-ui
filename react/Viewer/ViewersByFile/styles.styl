@@ -83,7 +83,7 @@
 .viewer-pdfMobile
     width 100%
     height 'calc(100% - %s - var(--flagship-top-height))' % $viewerHeightMedium
-    margin-top 'calc(var(--flagship-top-height) + %s)' % $viewerMarginTopMedium
+    margin-top 'calc(var(--flagship-top-height, 0rem) + %s)' % $viewerMarginTopMedium
 
     &--image
         width 100%
