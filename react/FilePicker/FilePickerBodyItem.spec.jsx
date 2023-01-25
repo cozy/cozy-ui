@@ -97,7 +97,7 @@ describe('FilePickerBodyItem components:', () => {
     })
     const listItem = getByTestId('list-item')
 
-    expect(listItem).toHaveAttribute('aria-disabled', 'false')
+    expect(listItem).not.toHaveAttribute('aria-disabled')
   })
 
   describe('Functions called', () => {

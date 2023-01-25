@@ -6,10 +6,10 @@ exports[`SquareAppIcon component should render an app correctly with the app nam
   data-testid="square-app-icon"
 >
   <span
-    class="MuiBadge-root"
+    class="MuiBadge-root MuiBadge-root css-1c32n2y-MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-9"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-9 MuiBadge-root css-1c32n2y-MuiBadge-root"
     >
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
@@ -27,15 +27,15 @@ exports[`SquareAppIcon component should render an app correctly with the app nam
         </svg>
       </div>
       <span
-        class="MuiBadge-badge badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular"
+        class="MuiBadge-badge badgeSizeLarge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-badge css-rrbbhu-MuiBadge-badge"
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-12 MuiBadge-anchorOriginBottomRightRectangular MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-12 MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginBottomRight MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-badge MuiBadge-invisible css-iyhki7-MuiBadge-badge"
     />
   </span>
   <h6
-    class="MuiTypography-root makeStyles-name-7 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter makeStyles-name-7 u-spacellipsis css-185rb1w-MuiTypography-root"
   >
     Test
   </h6>
@@ -48,10 +48,10 @@ exports[`SquareAppIcon component should render an app correctly with the given n
   data-testid="square-app-icon"
 >
   <span
-    class="MuiBadge-root"
+    class="MuiBadge-root MuiBadge-root css-1c32n2y-MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-3"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-3 MuiBadge-root css-1c32n2y-MuiBadge-root"
     >
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
@@ -69,15 +69,15 @@ exports[`SquareAppIcon component should render an app correctly with the given n
         </svg>
       </div>
       <span
-        class="MuiBadge-badge badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular"
+        class="MuiBadge-badge badgeSizeLarge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-badge css-rrbbhu-MuiBadge-badge"
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-6 MuiBadge-anchorOriginBottomRightRectangular MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-6 MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginBottomRight MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-badge MuiBadge-invisible css-iyhki7-MuiBadge-badge"
     />
   </span>
   <h6
-    class="MuiTypography-root makeStyles-name-1 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter makeStyles-name-1 u-spacellipsis css-185rb1w-MuiTypography-root"
   >
     modified
   </h6>
@@ -90,10 +90,10 @@ exports[`SquareAppIcon component should render an app with the app slug if no na
   data-testid="square-app-icon"
 >
   <span
-    class="MuiBadge-root"
+    class="MuiBadge-root MuiBadge-root css-1c32n2y-MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-15"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-15 MuiBadge-root css-1c32n2y-MuiBadge-root"
     >
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
@@ -111,15 +111,15 @@ exports[`SquareAppIcon component should render an app with the app slug if no na
         </svg>
       </div>
       <span
-        class="MuiBadge-badge badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular"
+        class="MuiBadge-badge badgeSizeLarge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-badge css-rrbbhu-MuiBadge-badge"
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-18 MuiBadge-anchorOriginBottomRightRectangular MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-18 MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginBottomRight MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-badge MuiBadge-invisible css-iyhki7-MuiBadge-badge"
     />
   </span>
   <h6
-    class="MuiTypography-root makeStyles-name-13 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter makeStyles-name-13 u-spacellipsis css-185rb1w-MuiTypography-root"
   >
     testslug
   </h6>
@@ -132,10 +132,10 @@ exports[`SquareAppIcon component should render correctly an app in add state 1`]
   data-testid="square-app-icon"
 >
   <span
-    class="MuiBadge-root"
+    class="MuiBadge-root MuiBadge-root css-1c32n2y-MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-fx___3rcF6"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-fx___3rcF6 MuiBadge-root css-1c32n2y-MuiBadge-root"
     >
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
@@ -160,15 +160,15 @@ exports[`SquareAppIcon component should render correctly an app in add state 1`]
         </svg>
       </div>
       <span
-        class="MuiBadge-badge badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular"
+        class="MuiBadge-badge badgeSizeLarge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-badge css-rrbbhu-MuiBadge-badge"
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-42 MuiBadge-anchorOriginBottomRightRectangular MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-42 MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginBottomRight MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-badge MuiBadge-invisible css-iyhki7-MuiBadge-badge"
     />
   </span>
   <h6
-    class="MuiTypography-root makeStyles-name-37 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter makeStyles-name-37 u-spacellipsis css-185rb1w-MuiTypography-root"
   />
 </div>
 `;
@@ -179,10 +179,10 @@ exports[`SquareAppIcon component should render correctly an app in error state 1
   data-testid="square-app-icon"
 >
   <span
-    class="MuiBadge-root"
+    class="MuiBadge-root MuiBadge-root css-1c32n2y-MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-33"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-33 MuiBadge-root css-1c32n2y-MuiBadge-root"
     >
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
@@ -200,7 +200,7 @@ exports[`SquareAppIcon component should render correctly an app in error state 1
         </svg>
       </div>
       <span
-        class="MuiBadge-badge badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular MuiBadge-colorError"
+        class="MuiBadge-badge badgeSizeLarge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorError MuiBadge-badge css-1vsg346-MuiBadge-badge"
       >
         <svg
           class="makeStyles-errorIcon-34 styles__icon___23x3R"
@@ -216,11 +216,11 @@ exports[`SquareAppIcon component should render correctly an app in error state 1
       </span>
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-36 MuiBadge-anchorOriginBottomRightRectangular MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-36 MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginBottomRight MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-badge MuiBadge-invisible css-iyhki7-MuiBadge-badge"
     />
   </span>
   <h6
-    class="MuiTypography-root makeStyles-name-31 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter makeStyles-name-31 u-spacellipsis css-185rb1w-MuiTypography-root"
   >
     Test
   </h6>
@@ -233,10 +233,10 @@ exports[`SquareAppIcon component should render correctly an app in ghost state 1
   data-testid="square-app-icon"
 >
   <span
-    class="MuiBadge-root"
+    class="MuiBadge-root MuiBadge-root css-1c32n2y-MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-ghost___1ZALZ styles__SquareAppIcon-wrapper-fx___3rcF6"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-ghost___1ZALZ styles__SquareAppIcon-wrapper-fx___3rcF6 MuiBadge-root css-1c32n2y-MuiBadge-root"
     >
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
@@ -254,15 +254,15 @@ exports[`SquareAppIcon component should render correctly an app in ghost state 1
         </svg>
       </div>
       <span
-        class="MuiBadge-badge badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular"
+        class="MuiBadge-badge badgeSizeLarge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-badge css-rrbbhu-MuiBadge-badge"
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-30 MuiBadge-anchorOriginBottomRightRectangular MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-30 MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginBottomRight MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-badge MuiBadge-invisible css-iyhki7-MuiBadge-badge"
     />
   </span>
   <h6
-    class="MuiTypography-root makeStyles-name-25 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter makeStyles-name-25 u-spacellipsis css-185rb1w-MuiTypography-root"
   >
     Test
   </h6>
@@ -275,10 +275,10 @@ exports[`SquareAppIcon component should render correctly an app in maintenance s
   data-testid="square-app-icon"
 >
   <span
-    class="MuiBadge-root"
+    class="MuiBadge-root MuiBadge-root css-1c32n2y-MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-maintenance___2ne2n makeStyles-shadow-21"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM styles__SquareAppIcon-wrapper-maintenance___2ne2n makeStyles-shadow-21 MuiBadge-root css-1c32n2y-MuiBadge-root"
     >
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
@@ -296,15 +296,15 @@ exports[`SquareAppIcon component should render correctly an app in maintenance s
         </svg>
       </div>
       <span
-        class="MuiBadge-badge badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular"
+        class="MuiBadge-badge badgeSizeLarge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-badge css-rrbbhu-MuiBadge-badge"
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-24 MuiBadge-anchorOriginBottomRightRectangular MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-24 MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginBottomRight MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-badge MuiBadge-invisible css-iyhki7-MuiBadge-badge"
     />
   </span>
   <h6
-    class="MuiTypography-root makeStyles-name-19 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter makeStyles-name-19 u-spacellipsis css-185rb1w-MuiTypography-root"
   >
     Test
   </h6>
@@ -317,23 +317,23 @@ exports[`SquareAppIcon component should render correctly an app in shortcut stat
   data-testid="square-app-icon"
 >
   <span
-    class="MuiBadge-root"
+    class="MuiBadge-root MuiBadge-root css-1c32n2y-MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-45"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-45 MuiBadge-root css-1c32n2y-MuiBadge-root"
       style="background-color: rgb(61, 166, 126);"
     >
       <h2
-        class="MuiTypography-root makeStyles-letter-44 MuiTypography-h2 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
+        class="MuiTypography-root MuiTypography-h2 MuiTypography-alignCenter makeStyles-letter-44 css-yw2jgw-MuiTypography-root"
       >
         S
       </h2>
       <span
-        class="MuiBadge-badge badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular"
+        class="MuiBadge-badge badgeSizeLarge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-badge css-rrbbhu-MuiBadge-badge"
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-48 MuiBadge-anchorOriginBottomRightRectangular"
+      class="MuiBadge-badge Component-qualifier-48 MuiBadge-standard MuiBadge-anchorOriginBottomRight MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-badge css-115ja0x-MuiBadge-badge"
     >
       <svg
         class="styles__icon___23x3R"
@@ -349,7 +349,7 @@ exports[`SquareAppIcon component should render correctly an app in shortcut stat
     </span>
   </span>
   <h6
-    class="MuiTypography-root makeStyles-name-43 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter makeStyles-name-43 u-spacellipsis css-185rb1w-MuiTypography-root"
   >
     shortcut
   </h6>
@@ -362,10 +362,10 @@ exports[`SquareAppIcon component should render correctly an app with custom cont
   data-testid="square-app-icon"
 >
   <span
-    class="MuiBadge-root"
+    class="MuiBadge-root MuiBadge-root css-1c32n2y-MuiBadge-root"
   >
     <span
-      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-57"
+      class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-57 MuiBadge-root css-1c32n2y-MuiBadge-root"
     >
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
@@ -384,15 +384,15 @@ exports[`SquareAppIcon component should render correctly an app with custom cont
         </svg>
       </div>
       <span
-        class="MuiBadge-badge badgeSizeLarge MuiBadge-anchorOriginTopRightRectangular"
+        class="MuiBadge-badge badgeSizeLarge MuiBadge-standard MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-badge css-rrbbhu-MuiBadge-badge"
       />
     </span>
     <span
-      class="MuiBadge-badge Component-qualifier-60 MuiBadge-anchorOriginBottomRightRectangular MuiBadge-invisible"
+      class="MuiBadge-badge Component-qualifier-60 MuiBadge-standard MuiBadge-invisible MuiBadge-anchorOriginBottomRight MuiBadge-anchorOriginBottomRightRectangular MuiBadge-overlapRectangular MuiBadge-badge MuiBadge-invisible css-iyhki7-MuiBadge-badge"
     />
   </span>
   <h6
-    class="MuiTypography-root makeStyles-name-55 u-spacellipsis MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-alignCenter"
+    class="MuiTypography-root MuiTypography-h6 MuiTypography-alignCenter makeStyles-name-55 u-spacellipsis css-185rb1w-MuiTypography-root"
   >
     custom icon
   </h6>
