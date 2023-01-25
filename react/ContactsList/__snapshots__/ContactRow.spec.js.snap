@@ -2,7 +2,7 @@
 
 exports[`ContactRow should match the contact snapshot 1`] = `
 <li
-  className="MuiListItem-root MuiListItem-gutters"
+  className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
   data-testid="contact-listItem"
   disabled={false}
   onClick={[Function]}
@@ -27,7 +27,7 @@ exports[`ContactRow should match the contact snapshot 1`] = `
       </span>
     </div>
     <p
-      className="MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline"
+      className="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom MuiTypography-noWrap u-ml-1 css-anxs48-MuiTypography-root"
     >
       <span
         className=""

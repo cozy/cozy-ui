@@ -7,6 +7,11 @@ jest.mock('../I18n/withLocales', () =>
   jest.fn().mockImplementation(() => x => x)
 )
 
+jest.mock('../styles', () => ({
+  ...jest.requireActual('../styles'),
+  withStyles: jest.fn().mockImplementation(() => x => x)
+}))
+
 jest.mock('../I18n', () => ({
   translate: jest.fn().mockImplementation(() => x => x),
   useI18n: jest.fn(),
