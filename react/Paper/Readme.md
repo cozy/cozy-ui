@@ -8,7 +8,8 @@ import { withStyles } from 'cozy-ui/transpiled/react/styles';
 
 const styles = theme => ({
   root: {
-    ...theme.mixins.gutters(),
+    paddingLeft: theme.spacing(3),
+    paddingRight: theme.spacing(3),
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
     position: 'relative'
