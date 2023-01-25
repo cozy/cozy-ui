@@ -1,3 +1,10 @@
+# [80.1.0](https://github.com/cozy/cozy-ui/compare/v80.0.2...v80.1.0) (2023-01-25)
+
+
+### Features
+
+* Add Filter on qualificationLabels ([539111f](https://github.com/cozy/cozy-ui/commit/539111f))
+
 ## [80.0.2](https://github.com/cozy/cozy-ui/compare/v80.0.1...v80.0.2) (2023-01-19)
 
 
