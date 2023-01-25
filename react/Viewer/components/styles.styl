@@ -56,6 +56,11 @@
     margin-top 0
     width 40%
 
+.viewer-controls--display-content-top
+    +medium-screen()
+        justify-content flex-start
+        padding-top $toolbarHeightMedium - $viewerMarginTopMedium
+
 .viewer-toolbar
     position absolute
     top 0
