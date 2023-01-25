@@ -7,6 +7,7 @@ import Hammer from 'hammerjs'
 import { withStyles } from '../../styles'
 import withBreakpoints from '../../helpers/withBreakpoints'
 
+import { isValidForPanel } from '../helpers'
 import { toolbarPropsPropType } from '../index'
 import { infoWidth } from './InformationPanel'
 import Toolbar from './Toolbar'
@@ -116,10 +117,16 @@ class ViewerControls extends Component {
     } = this.props
     const { showToolbar, showClose, toolbarRef } = toolbarProps
     const { hidden } = this.state
+
+    const shouldDisplayContentTop = isValidForPanel({ file })
+
     return (
       <div
         className={cx(styles['viewer-controls'], {
           [styles['viewer-controls--expanded']]: expanded,
+          [styles[
+            'viewer-controls--display-content-top'
+          ]]: shouldDisplayContentTop,
           [classes.viewerControlsWithInfo]: showInfoPanel
         })}
         ref={wrapped => {
