@@ -19,6 +19,10 @@ import OnlyOfficeViewer from '../ViewersByFile/OnlyOfficeViewer'
 
 import { useEncrypted } from '../providers/EncryptedProvider'
 
+import createDepreciationLogger from '../../helpers/createDepreciationLogger'
+
+const logDepecratedOnlyOfficeProps = createDepreciationLogger()
+
 const { isPlainText } = models.file
 
 export const getViewerComponentName = ({
@@ -60,10 +64,19 @@ const ViewerByFile = ({
   gesturesRef,
   onSwipe,
   onlyOfficeProps,
-  breakpoints: { isDesktop }
+  breakpoints: { isDesktop },
+  componentsProps
 }) => {
-  const isOnlyOfficeEnabled = onlyOfficeProps && onlyOfficeProps.isEnabled
-  const onlyOfficeOpener = onlyOfficeProps && onlyOfficeProps.opener
+  if (onlyOfficeProps) {
+    logDepecratedOnlyOfficeProps(
+      'onlyOfficeProps in Viewer is deprecated. Please use componentsProps.OnlyOfficeViewer instead.'
+    )
+  }
+
+  const isOnlyOfficeEnabled =
+    componentsProps?.OnlyOfficeViewer?.isEnabled || onlyOfficeProps?.isEnabled
+  const onlyOfficeOpener =
+    componentsProps?.OnlyOfficeViewer?.opener || onlyOfficeProps?.opener
 
   const { url } = useEncrypted()
 
@@ -99,7 +112,8 @@ ViewerByFile.propTypes = {
   // gestures, gesturesRef and onSwipe are got from ViewerControls
   gestures: PropTypes.object,
   gesturesRef: PropTypes.object,
-  onSwipe: PropTypes.func
+  onSwipe: PropTypes.func,
+  componentsProps: PropTypes.object
 }
 
 export default withBreakpoints()(ViewerByFile)
