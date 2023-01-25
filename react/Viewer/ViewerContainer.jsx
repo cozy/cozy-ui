@@ -102,7 +102,17 @@ ViewerContainer.propTypes = {
   /** Show/Hide the panel containing more information about the file only on Desktop */
   disablePanel: PropTypes.bool,
   /** Show/Hide the panel containing more information about the file only on Phone & Tablet devices */
-  disableFooter: PropTypes.bool
+  disableFooter: PropTypes.bool,
+  /* Props passed to components with the same name */
+  componentsProps: PropTypes.shape({
+    /** Used to open an Only Office file */
+    OnlyOfficeViewer: PropTypes.shape({
+      /** Whether Only Office is enabled on the server */
+      isEnabled: PropTypes.bool,
+      /** To open the Only Office file */
+      opener: PropTypes.func
+    })
+  })
 }
 
 ViewerContainer.defaultProps = {

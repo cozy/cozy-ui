@@ -71,7 +71,8 @@ class Viewer extends Component {
       showNavigation,
       renderFallbackExtraContent,
       validForPanel,
-      onlyOfficeProps
+      onlyOfficeProps,
+      componentsProps
     } = this.props
 
     // this `expanded` property makes the next/previous controls cover the displayed image
@@ -96,6 +97,7 @@ class Viewer extends Component {
             onClose={this.onClose}
             renderFallbackExtraContent={renderFallbackExtraContent}
             onlyOfficeProps={onlyOfficeProps}
+            componentsProps={componentsProps}
           />
         </ViewerControls>
       </>
@@ -125,7 +127,17 @@ Viewer.propTypes = {
     /** To open the Only Office file */
     opener: PropTypes.func
   }),
-  validForPanel: PropTypes.bool
+  validForPanel: PropTypes.bool,
+  /* Props passed to components with the same name */
+  componentsProps: PropTypes.shape({
+    /** Used to open an Only Office file */
+    OnlyOfficeViewer: PropTypes.shape({
+      /** Whether Only Office is enabled on the server */
+      isEnabled: PropTypes.bool,
+      /** To open the Only Office file */
+      opener: PropTypes.func
+    })
+  })
 }
 
 export default Viewer
