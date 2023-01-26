@@ -38,6 +38,7 @@ const CircleButton = ({
   disabled,
   fullWidth = false,
   children,
+  size,
   ...props
 }) => {
   const styles = useStyles({ active: variant === 'active', disabled })
@@ -55,8 +56,8 @@ const CircleButton = ({
       <IconButton
         className={styles.iconButton}
         disabled={disabled}
+        size={size}
         {...props}
-        size="large"
       >
         {children}
       </IconButton>
@@ -80,7 +81,12 @@ CircleButton.propTypes = {
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   variant: PropTypes.oneOf(['default', 'active']),
   disabled: PropTypes.bool,
-  fullWidth: PropTypes.bool
+  fullWidth: PropTypes.bool,
+  size: PropTypes.string
+}
+
+CircleButton.defaultProps = {
+  size: 'large'
 }
 
 export default CircleButton
