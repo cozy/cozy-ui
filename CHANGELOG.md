@@ -1,3 +1,11 @@
+## [80.1.1](https://github.com/cozy/cozy-ui/compare/v80.1.0...v80.1.1) (2023-01-27)
+
+
+### Bug Fixes
+
+* Allow overriding `Alert` classes ([62f18bf](https://github.com/cozy/cozy-ui/commit/62f18bf))
+* Make sure the message fills all the width available inside `Alert` ([2f0a608](https://github.com/cozy/cozy-ui/commit/2f0a608))
+
 # [80.1.0](https://github.com/cozy/cozy-ui/compare/v80.0.2...v80.1.0) (2023-01-25)
 
 
