@@ -35,7 +35,7 @@ const makeIcon = (icon, severity) => {
 const useStyles = makeStyles({
   message: {
     maxWidth: ({ block, iconSize }) =>
-      block && `calc(100% - ${iconSize + 16}px)`
+      block && `calc(100% - ${iconSize}px - 12px)`
   }
 })
 
