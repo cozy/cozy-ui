@@ -780,6 +780,7 @@ export const makeOverrides = theme =>
         }
       },
       message: {
+        flex: 'auto',
         display: 'flex',
         alignItems: 'center',
         flexWrap: 'wrap'
