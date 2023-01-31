@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import merge from 'lodash/merge'
 import MuiAlert from '@mui/material/Alert'
 
 import { makeStyles } from '../styles'
@@ -43,6 +44,7 @@ const Alert = forwardRef(
   (
     {
       className,
+      classes,
       icon,
       severity,
       block,
@@ -72,7 +74,7 @@ const Alert = forwardRef(
           { block },
           { action: Boolean(action) }
         )}
-        classes={styles}
+        classes={merge(styles, classes)}
         variant={variant}
         severity={madeSeverity}
         iconMapping={defaultIconMapping}
