@@ -3,8 +3,7 @@ import MockDate from 'mockdate'
 import {
   initFormat,
   formatLocallyDistanceToNow,
-  formatLocallyDistanceToNowStrict,
-  setHoursAndMinutesFromDate
+  formatLocallyDistanceToNowStrict
 } from './format'
 
 describe('initFormat', () => {
@@ -251,16 +250,5 @@ describe('formatLocallyDistanceToNowStrict', () => {
         expect(result).toEqual('2 days')
       })
     })
-  })
-})
-
-describe('setHoursAndMinutesFromDate', () => {
-  it('should return correct date', () => {
-    const res = setHoursAndMinutesFromDate(
-      new Date('2023-01-03T00:00:30'),
-      new Date('2023-01-01T12:24:00')
-    )
-
-    expect(res).toStrictEqual(new Date('2023-01-03T12:24:30'))
   })
 })
