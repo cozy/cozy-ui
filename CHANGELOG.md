@@ -1,3 +1,16 @@
+# [80.2.0](https://github.com/cozy/cozy-ui/compare/v80.1.1...v80.2.0) (2023-02-01)
+
+
+### Bug Fixes
+
+* **Viewer:** Add default value to calc to avoid undefined ([fd13e45](https://github.com/cozy/cozy-ui/commit/fd13e45))
+
+
+### Features
+
+* **Viewer:** Add componentsProps and support OnlyOfficeViewer inside ([bf205e1](https://github.com/cozy/cozy-ui/commit/bf205e1))
+* **Viewer:** Display content top when file from konnector ([070ab58](https://github.com/cozy/cozy-ui/commit/070ab58))
+
 ## [80.1.1](https://github.com/cozy/cozy-ui/compare/v80.1.0...v80.1.1) (2023-01-27)
 
 
