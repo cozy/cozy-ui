@@ -28491,6 +28491,12 @@ html,
   margin-top: 0;
   width: 40%;
 }
+@media (max-width: 63.938rem) {
+  .viewer-controls--display-content-top--3I1xq {
+    justify-content: flex-start;
+    padding-top: 3.5rem;
+  }
+}
 .viewer-toolbar--2zPR7 {
   position: absolute;
   top: 0;
@@ -29029,7 +29035,7 @@ html {
 .viewer-pdfMobile--25FPg {
   width: 100%;
   height: calc(100% - 6.5rem - var(--flagship-top-height));
-  margin-top: calc(var(--flagship-top-height) + -0.5rem);
+  margin-top: calc(var(--flagship-top-height, 0rem) + -0.5rem);
 }
 .viewer-pdfMobile--image--3gpFL {
   width: 100%;
