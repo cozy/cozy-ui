@@ -1,3 +1,3 @@
-import DefaultViewer from './index'
+import DefaultViewer from '.'
 
 export default DefaultViewer

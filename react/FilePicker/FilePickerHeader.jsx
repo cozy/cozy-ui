@@ -12,7 +12,7 @@ import Previous from '../Icons/Previous'
 
 import FilePickerBreadcrumb from './FilePickerBreadcrumb'
 import { buildCurrentFolderQuery } from './queries'
-import { ROOT_DIR_ID } from './index'
+import { ROOT_DIR_ID } from '.'
 
 /**
  * @param {IOCozyFolder} displayedFolder - An io.cozy.files folder

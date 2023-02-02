@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import Banner from './index'
+import Banner from '.'
 
 describe('Grid', () => {
   it('should render correctly justify content', () => {

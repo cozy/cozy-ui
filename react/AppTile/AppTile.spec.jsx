@@ -9,7 +9,7 @@ import CozyClient, { CozyProvider } from 'cozy-client'
 import en from '../AppSections/locales/en.json'
 import I18n from '../I18n'
 
-import AppTile from './index'
+import AppTile from '.'
 
 const appMock = {
   slug: 'test',

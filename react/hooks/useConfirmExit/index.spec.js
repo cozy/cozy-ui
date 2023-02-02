@@ -1,4 +1,4 @@
-import useConfirmExit from './'
+import useConfirmExit from '.'
 import { renderHook, act } from '@testing-library/react-hooks'
 import { isElement } from 'react-dom/test-utils'
 
