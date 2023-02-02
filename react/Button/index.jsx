@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import Icon, { iconPropType } from '../Icon'
 
-import SpinnerIcon from 'cozy-ui/transpiled/react/Icons/Spinner'
+import SpinnerIcon from '../Icons/Spinner'
 
 const btnClass = function(options) {
   const { className, extension, size, theme, variant, round, align } = options

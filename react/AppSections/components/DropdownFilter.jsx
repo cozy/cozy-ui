@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-
-import SelectBox from '../../SelectBox'
-import Icon from '../../Icon'
 import PropTypes from 'prop-types'
-import styles from './DropdownFilter.styl'
 import cx from 'classnames'
 
-import BottomIcon from 'cozy-ui/transpiled/react/Icons/Bottom'
+import Icon from '../../Icon'
+import BottomIcon from '../../Icons/Bottom'
+import SelectBox from '../../SelectBox'
+
+import styles from './DropdownFilter.styl'
 
 const SmallArrow = () => (
   <Icon
