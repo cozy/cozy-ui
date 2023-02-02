@@ -10,7 +10,7 @@ import Icon from '../Icon'
 import FileIcon from '../Icons/File'
 import WarningIcon from '../Icons/Warning'
 
-import ActionMenu, { ActionMenuItem, ActionMenuRadio } from './'
+import ActionMenu, { ActionMenuItem, ActionMenuRadio } from '.'
 
 describe('ActionMenu', () => {
   fixPopperTesting()

@@ -1,4 +1,4 @@
-import { makeOptions, makeData } from './index'
+import { makeOptions, makeData } from '.'
 
 describe('makeOptions', () => {
   it('should return default options', () => {

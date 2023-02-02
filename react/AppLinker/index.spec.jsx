@@ -11,7 +11,7 @@ import {
   checkApp
 } from 'cozy-device-helper'
 
-import AppLinker from './index'
+import AppLinker from '.'
 import { generateUniversalLink } from './native'
 jest.useFakeTimers()
 

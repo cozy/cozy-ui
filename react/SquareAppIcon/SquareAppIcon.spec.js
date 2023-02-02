@@ -8,7 +8,7 @@ import CozyClient, { CozyProvider } from 'cozy-client'
 import Icon from '../Icon'
 import CozyIcon from '../Icons/Cozy'
 import MuiCozyTheme from '../MuiCozyTheme'
-import SquareAppIcon from './index'
+import SquareAppIcon from '.'
 
 const appMock = {
   slug: 'test',

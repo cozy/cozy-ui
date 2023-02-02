@@ -2,7 +2,7 @@ import React from 'react'
 
 import { render } from '@testing-library/react'
 
-import PushClientButton from './'
+import PushClientButton from '.'
 
 jest.mock('../Icons/DeviceLaptop', () => () => (
   <div data-testid="device-laptop" />

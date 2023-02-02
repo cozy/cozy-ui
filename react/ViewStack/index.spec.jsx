@@ -2,7 +2,7 @@ import { mount } from 'enzyme'
 import React from 'react'
 import { act } from 'react-dom/test-utils'
 import { Slide } from './example'
-import ViewStack from './index'
+import ViewStack from '.'
 import Button from '../Button'
 import SwipeableViews from 'react-swipeable-views'
 

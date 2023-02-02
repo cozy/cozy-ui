@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 
 import { isMobileApp } from 'cozy-device-helper'
 
-import { Popup } from './'
+import { Popup } from '.'
 
 jest.mock('cozy-device-helper', () => ({
   ...jest.requireActual('cozy-device-helper'),
