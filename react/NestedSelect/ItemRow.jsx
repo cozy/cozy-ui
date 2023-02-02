@@ -1,13 +1,13 @@
 import React from 'react'
 
 import Icon from '../Icon'
-import Radio from '../Radios'
-import ListItem from '../MuiCozyTheme/ListItem'
+import RightIcon from '../Icons/Right'
 import ListItemText from '../ListItemText'
-import ListItemIcon from '../MuiCozyTheme/ListItemIcon'
 import Divider from '../MuiCozyTheme/Divider'
+import ListItem from '../MuiCozyTheme/ListItem'
+import ListItemIcon from '../MuiCozyTheme/ListItemIcon'
+import Radio from '../Radios'
 import useBreakpoints from '../hooks/useBreakpoints'
-import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
 
 const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
   const { isMobile } = useBreakpoints()

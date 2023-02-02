@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import Circle from '../Circle'
+import Icon from '../Icon'
+import DownloadIcon from '../Icons/Download'
+import FileIcon from '../Icons/File'
 import { Media, Bd, Img } from '../Media'
 import Typography from '../Typography'
-import Icon from '../Icon'
 
 import styles from './styles.styl'
-
-import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
-import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
 
 /**
  *

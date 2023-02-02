@@ -1,16 +1,15 @@
 import React from 'react'
-import cx from 'classnames'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 
-import IconButton from '../IconButton'
 import Icon from '../Icon'
-import Typography from '../Typography'
+import IconButton from '../IconButton'
+import CrossIcon from '../Icons/Cross'
 import Stack from '../Stack'
+import Typography from '../Typography'
 import createDepreciationLogger from '../helpers/createDepreciationLogger'
 
 import styles from './styles.styl'
-
-import CrossIcon from 'cozy-ui/transpiled/react/Icons/Cross'
 
 export const Infos = ({
   description,
