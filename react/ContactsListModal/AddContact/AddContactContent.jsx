@@ -1,12 +1,12 @@
 import { Typography } from '@mui/material'
 import React from 'react'
 
-import { Media, Img, Bd } from '../../Media'
 import Icon from '../../Icon'
-import PeopleIcon from 'cozy-ui/transpiled/react/Icons/People'
+import PeopleIcon from '../../Icons/People'
+import { Media, Img, Bd } from '../../Media'
 import TextField from '../../MuiCozyTheme/TextField'
-
 import { withContactsListLocales } from '../withContactsListLocales'
+
 import styles from './styles.styl'
 
 const AddContactContent = ({ t, setContactValues }) => {

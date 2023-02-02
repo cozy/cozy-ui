@@ -1,11 +1,13 @@
-import { act } from 'react-dom/test-utils'
 import React from 'react'
-import InfosCarrousel from '.'
+import { act } from 'react-dom/test-utils'
+import SwipeableViews from 'react-swipeable-views'
+
+import Button from '../Button'
 import IconButton from '../IconButton'
 import Infos from '../Infos'
-import Button from '../Button'
-import SwipeableViews from 'react-swipeable-views'
-import Typography from 'cozy-ui/transpiled/react/Typography'
+import Typography from '../Typography'
+
+import InfosCarrousel from '.'
 
 // This is necessary for tests to be predictable
 const swipeableProps = { disableLazyLoading: true }

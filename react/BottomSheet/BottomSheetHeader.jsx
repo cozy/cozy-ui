@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 
-import { BottomSheetItem } from 'cozy-ui/transpiled/react/BottomSheet'
+import { BottomSheetItem } from '../BottomSheet'
 
 const BottomSheetHeader = ({ className, headerContentRef, children }) => {
   return (

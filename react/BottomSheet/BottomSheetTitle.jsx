@@ -2,13 +2,13 @@ import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List'
-import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem'
-import ListItemIcon from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon'
-import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
-import Typography from 'cozy-ui/transpiled/react/Typography'
-import Icon, { iconPropType } from 'cozy-ui/react/Icon'
-import { BottomSheetItem } from 'cozy-ui/transpiled/react/BottomSheet'
+import { BottomSheetItem } from '../BottomSheet'
+import Icon, { iconPropType } from '../Icon'
+import ListItemText from '../ListItemText'
+import List from '../MuiCozyTheme/List'
+import ListItem from '../MuiCozyTheme/ListItem'
+import ListItemIcon from '../MuiCozyTheme/ListItemIcon'
+import Typography from '../Typography'
 
 const BottomSheetTitle = forwardRef(({ className, label, icon }, ref) => {
   if (icon) {

@@ -1,14 +1,13 @@
 import React from 'react'
 import cx from 'classnames'
 
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import Button from 'cozy-ui/transpiled/react/Button'
-import Typography from 'cozy-ui/transpiled/react/Typography'
-import Input from 'cozy-ui/transpiled/react/Input'
+import Button from '../Button'
+import Icon from '../Icon'
+import CloudIcon from '../Icons/Cloud'
+import Input from '../Input'
+import Typography from '../Typography'
 
 import styles from './styles.styl'
-
-import CloudIcon from 'cozy-ui/transpiled/react/Icons/Cloud'
 
 export const Wizard = ({ children, tag, ...props }) => {
   const Component = tag || 'div'

@@ -4,7 +4,7 @@ import { render } from '@testing-library/react'
 
 import PushClientButton from './'
 
-jest.mock('cozy-ui/transpiled/react/Icons/DeviceLaptop', () => () => (
+jest.mock('../Icons/DeviceLaptop', () => () => (
   <div data-testid="device-laptop" />
 ))
 
