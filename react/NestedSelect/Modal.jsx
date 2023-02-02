@@ -1,18 +1,14 @@
 import React from 'react'
-import Icon from '../Icon'
 
-import { Media, Bd, Img } from '../Media'
-import NestedSelect from './NestedSelect'
-import Dialog, {
-  DialogTitle,
-  DialogContent
-} from 'cozy-ui/transpiled/react/Dialog'
-import IconButton from 'cozy-ui/transpiled/react/IconButton'
 import { useCozyDialog, DialogCloseButton } from '../CozyDialogs'
+import Dialog, { DialogTitle, DialogContent } from '../Dialog'
+import Icon from '../Icon'
+import IconButton from '../IconButton'
+import LeftIcon from '../Icons/Left'
+import { Media, Bd, Img } from '../Media'
 
+import NestedSelect from './NestedSelect'
 import styles from './styles.styl'
-
-import LeftIcon from 'cozy-ui/transpiled/react/Icons/Left'
 
 const NestedSelectDialogHeader = ({ onClickBack, showBack, title }) => {
   const { dialogTitleProps } = useCozyDialog({

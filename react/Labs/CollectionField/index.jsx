@@ -1,14 +1,15 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
-import Button from '../../Button'
-import Label from '../../Label'
-import styles from './styles.styl'
-import Stack from '../../Stack'
-import Icon from '../../Icon'
-import { FieldContainer } from '../../Field'
 
-import CrossSmallIcon from 'cozy-ui/transpiled/react/Icons/CrossSmall'
-import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
+import Button from '../../Button'
+import { FieldContainer } from '../../Field'
+import Icon from '../../Icon'
+import Label from '../../Label'
+import CrossSmallIcon from '../../Icons/CrossSmall'
+import PlusIcon from '../../Icons/Plus'
+import Stack from '../../Stack'
+
+import styles from './styles.styl'
 
 /**
  * Handles a collection of form fields.

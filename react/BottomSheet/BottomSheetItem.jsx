@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Paper from 'cozy-ui/transpiled/react/Paper'
+import Paper from '../Paper'
 
 const BottomSheetItem = forwardRef(
   (

@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { useTheme } from '@material-ui/core'
+
+import { useWebviewIntent } from 'cozy-intent'
 
 import { useI18n } from '../I18n'
 import Icon from '../Icon'
-import Button from '../MuiCozyTheme/Buttons'
 import IconButton from '../IconButton'
+import CrossIcon from '../Icons/Cross'
+import Button from '../MuiCozyTheme/Buttons'
 import useBreakpoints from '../hooks/useBreakpoints'
 
 import styles from './styles.styl'
-
-import CrossIcon from 'cozy-ui/transpiled/react/Icons/Cross'
-import { useWebviewIntent } from 'cozy-intent'
-import { useTheme } from '@material-ui/core'
 
 /*
 

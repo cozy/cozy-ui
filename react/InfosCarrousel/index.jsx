@@ -4,12 +4,13 @@ import cx from 'classnames'
 import clamp from 'lodash/clamp'
 import SwipeableViews from 'react-swipeable-views'
 
-import styles from './styles.styl'
 import Icon from '../Icon'
 import IconButton from '../IconButton'
 
-import LeftIcon from 'cozy-ui/transpiled/react/Icons/Left'
-import RightIcon from 'cozy-ui/transpiled/react/Icons/Right'
+import styles from './styles.styl'
+
+import LeftIcon from '../Icons/Left'
+import RightIcon from '../Icons/Right'
 
 const useClampedValue = (initialValue, min, max) => {
   const [value, setValue] = useState(initialValue)
