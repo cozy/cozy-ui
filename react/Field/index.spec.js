@@ -1,5 +1,5 @@
 import React from 'react'
-import Field from './'
+import Field from '.'
 import { shallow } from 'enzyme'
 
 describe('Field component', () => {
