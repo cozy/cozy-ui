@@ -1,3 +1,10 @@
+## [80.2.1](https://github.com/cozy/cozy-ui/compare/v80.2.0...v80.2.1) (2023-02-02)
+
+
+### Bug Fixes
+
+* **format:** FormatLocallyDistanceToNowStrict wasn't returning correct ([4fb7425](https://github.com/cozy/cozy-ui/commit/4fb7425))
+
 # [80.2.0](https://github.com/cozy/cozy-ui/compare/v80.1.1...v80.2.0) (2023-02-01)
 
 
