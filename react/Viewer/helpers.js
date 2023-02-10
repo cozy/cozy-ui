@@ -21,11 +21,13 @@ export const knownDateMetadataNames = [
 ]
 export const knownInformationMetadataNames = [
   'number',
+  'cafFileNumber',
   'cardNumber',
   'vinNumber',
   'ibanNumber',
   'country',
   'passportNumber',
+  'refTaxIncome',
   'noticePeriod'
 ]
 export const knownOtherMetadataNames = ['contact', 'page', 'qualification']

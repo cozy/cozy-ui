@@ -53,11 +53,13 @@
         "information": {
           "title": {
             "number": "Numéro du permis",
+            "cafFileNumber": "Numéro de dossier CAF",
             "cardNumber": "Numéro de la carte d'identité",
             "vinNumber": "Numéro de la carte grise (VIN)",
             "ibanNumber": "Numéro d'IBAN",
             "country": "Pays de délivrance",
             "passportNumber": "Numéro du passeport",
+            "refTaxIncome": "Revenu fiscal de référence",
             "noticePeriod": "Alerte d’expiration"
           },
           "day": "jour |||| jours"
