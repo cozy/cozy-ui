@@ -1,3 +1,10 @@
+# [80.3.0](https://github.com/cozy/cozy-ui/compare/v80.2.1...v80.3.0) (2023-02-13)
+
+
+### Features
+
+* Show CAF file number and reference tax income in the viewer ([1431b3d](https://github.com/cozy/cozy-ui/commit/1431b3d))
+
 ## [80.2.1](https://github.com/cozy/cozy-ui/compare/v80.2.0...v80.2.1) (2023-02-02)
 
 
