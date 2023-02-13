@@ -62,22 +62,42 @@ describe('QualificationListItemInformation', () => {
     })
 
     it('should return "MidEllipsis" component with the value', () => {
-      const res = makeInformationValue('metadataName', 'metadataValue', mockT)
+      const res = makeInformationValue({
+        name: 'metadataName',
+        value: 'metadataValue',
+        t: mockT,
+        scannerT: mockT
+      })
 
       expect(res).toEqual(<MidEllipsis text="metadataValue" />)
     })
     it('should return value with suffix locale', () => {
-      const res = makeInformationValue('noticePeriod', '88', mockT)
+      const res = makeInformationValue({
+        name: 'noticePeriod',
+        value: '88',
+        t: mockT,
+        scannerT: mockT
+      })
 
       expect(res).toEqual('88 Viewer.panel.qualification.information.day')
     })
     it('should return "noInfo" value', () => {
-      const res = makeInformationValue('metadataName', '', mockT)
+      const res = makeInformationValue({
+        name: 'metadataName',
+        value: '',
+        t: mockT,
+        scannerT: mockT
+      })
 
       expect(res).toEqual('Viewer.panel.qualification.noInfo')
     })
     it('should return noInfo value with "noticePeriod" metadata name', () => {
-      const res = makeInformationValue('noticePeriod', '', mockT)
+      const res = makeInformationValue({
+        name: 'noticePeriod',
+        value: '',
+        t: mockT,
+        scannerT: mockT
+      })
 
       expect(res).toEqual('Viewer.panel.qualification.noInfo')
     })
