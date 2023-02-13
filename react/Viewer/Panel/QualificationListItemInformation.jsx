@@ -1,6 +1,8 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 
+import { models } from 'cozy-client'
+
 import ListItem from '../../MuiCozyTheme/ListItem'
 import ListItemSecondaryAction from '../../MuiCozyTheme/ListItemSecondaryAction'
 import IconButton from '../../IconButton'
@@ -10,7 +12,13 @@ import QualificationListItemText from './QualificationListItemText'
 import { useI18n } from '../../I18n'
 import MidEllipsis from '../../MidEllipsis'
 
-export const makeInformationValue = (name, value, t) => {
+const {
+  document: {
+    locales: { getBoundT }
+  }
+} = models
+
+export const makeInformationValue = ({ name, value, t, scannerT }) => {
   if (!value) {
     return t('Viewer.panel.qualification.noInfo')
   }
@@ -21,15 +29,20 @@ export const makeInformationValue = (name, value, t) => {
     })}`
   }
 
+  if (name === 'contractType') {
+    return scannerT(`Scan.attributes.contractType.${value}`)
+  }
+
   return <MidEllipsis text={value} />
 }
 
 const QualificationListItemInformation = forwardRef(
   ({ formatedMetadataQualification, toggleActionsMenu }, ref) => {
-    const { t } = useI18n()
+    const { t, lang } = useI18n()
+    const scannerT = getBoundT(lang)
     const { name, value } = formatedMetadataQualification
 
-    const currentValue = makeInformationValue(name, value, t)
+    const currentValue = makeInformationValue({ name, value, t, scannerT })
 
     return (
       <ListItem className={'u-pl-2 u-pr-3'}>

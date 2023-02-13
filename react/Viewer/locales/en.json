@@ -60,6 +60,7 @@
             "country": "Country of delivery",
             "passportNumber": "Passport number",
             "refTaxIncome": "Reference tax income",
+            "contractType": "Contract type",
             "noticePeriod": "Expiration alert"
           },
           "day": "day |||| days"
