@@ -28,6 +28,7 @@ export const knownInformationMetadataNames = [
   'country',
   'passportNumber',
   'refTaxIncome',
+  'contractType',
   'noticePeriod'
 ]
 export const knownOtherMetadataNames = ['contact', 'page', 'qualification']

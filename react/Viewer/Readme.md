@@ -38,29 +38,28 @@ The `Viewer` can display an **information panel** to show additional information
 ### Demo
 
 ```jsx
-import cx from 'classnames';
-import { makeStyles } from 'cozy-ui/transpiled/react/styles';
-import Variants from 'cozy-ui/docs/components/Variants';
-import Card from 'cozy-ui/transpiled/react/Card';
-import Checkbox from 'cozy-ui/transpiled/react/Checkbox';
-import Viewer from 'cozy-ui/transpiled/react/Viewer';
-import Stack from 'cozy-ui/transpiled/react/Stack';
-import Paper from 'cozy-ui/transpiled/react/Paper';
-import Typography from 'cozy-ui/transpiled/react/Typography';
-import { Media, Img, Bd } from 'cozy-ui/transpiled/react/Media';
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import CarbonCopyIcon from 'cozy-ui/transpiled/react/Icons/CarbonCopy';
+import cx from 'classnames'
+import { makeStyles } from 'cozy-ui/transpiled/react/styles'
+import Variants from 'cozy-ui/docs/components/Variants'
+import Card from 'cozy-ui/transpiled/react/Card'
+import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
+import Viewer from 'cozy-ui/transpiled/react/Viewer'
+import Stack from 'cozy-ui/transpiled/react/Stack'
+import Paper from 'cozy-ui/transpiled/react/Paper'
+import Typography from 'cozy-ui/transpiled/react/Typography'
+import { Media, Img, Bd } from 'cozy-ui/transpiled/react/Media'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import CarbonCopyIcon from 'cozy-ui/transpiled/react/Icons/CarbonCopy'
 // The DemoProvider inserts a fake cozy-client in the React context.
-import DemoProvider from './docs/DemoProvider';
-import Overlay from 'cozy-ui/transpiled/react/Overlay';
-import Button from 'cozy-ui/transpiled/react/Buttons';
-import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download';
-import ShareIcon from 'cozy-ui/transpiled/react/Icons/Share';
-import { isValidForPanel } from 'cozy-ui/transpiled/react/Viewer/helpers';
-import getPanelBlocks, { panelBlocksSpecs } from 'cozy-ui/transpiled/react/Viewer/Panel/getPanelBlocks';
-import FooterActionButtons from 'cozy-ui/transpiled/react/Viewer/Footer/FooterActionButtons';
-import ForwardOrDownloadButton from 'cozy-ui/transpiled/react/Viewer/Footer/ForwardOrDownloadButton';
-
+import DemoProvider from './docs/DemoProvider'
+import Overlay from 'cozy-ui/transpiled/react/Overlay'
+import Button from 'cozy-ui/transpiled/react/Buttons'
+import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
+import ShareIcon from 'cozy-ui/transpiled/react/Icons/Share'
+import { isValidForPanel } from 'cozy-ui/transpiled/react/Viewer/helpers'
+import getPanelBlocks, { panelBlocksSpecs } from 'cozy-ui/transpiled/react/Viewer/Panel/getPanelBlocks'
+import FooterActionButtons from 'cozy-ui/transpiled/react/Viewer/Footer/FooterActionButtons'
+import ForwardOrDownloadButton from 'cozy-ui/transpiled/react/Viewer/Footer/ForwardOrDownloadButton'
 
 // We provide a collection of (fake) io.cozy.files to be rendered
 const files = [
@@ -142,7 +141,7 @@ const files = [
     name: 'Unsupported file type',
     mime: '???/???'
   }
-];
+]
 
 const ShareButtonFake = () => {
   return (
@@ -156,18 +155,18 @@ const ShareButtonFake = () => {
       }}
     />
   )
-};
+}
 
 // The host app will usually need a small wrapper to display the Viewer. This is a very small example of such a wrapper that handles opening, closing, and navigating between files.
 initialState = {
   viewerOpened: isTesting(),
   currentIndex: 0,
   showToolbarCloseButton: true
-};
+}
 
 const initialVariants = [
   { navigation: true, toolbar: true, onlyOfficeEnabled: true }
-];
+]
 
 const getURL = (file) => {
   if (file.encrypted && file.class === 'text') {
@@ -180,13 +179,15 @@ const getURL = (file) => {
   return null
 }
 
-const toggleViewer = () => setState({ viewerOpened: !state.viewerOpened });
-const handleToggleToolbarClose = () => setState({ showToolbarCloseButton: !state.showToolbarCloseButton });
-const onFileChange = (file, nextIndex) => setState({ currentIndex: nextIndex, currentURL: getURL(file) });
+const toggleViewer = () => setState({ viewerOpened: !state.viewerOpened })
+const handleToggleToolbarClose = () => setState({ showToolbarCloseButton: !state.showToolbarCloseButton })
+const onFileChange = (file, nextIndex) => setState({ currentIndex: nextIndex, currentURL: getURL(file) })
 const editPathByModelProps = {
   information: `#!/Viewer?metadata=__NAME__`,
   page: `#!/Viewer`
-};
+}
+
+;
 
 <DemoProvider>
   <Variants initialVariants={initialVariants}>{
