@@ -1,3 +1,16 @@
+# [81.0.0](https://github.com/cozy/cozy-ui/compare/v80.3.0...v81.0.0) (2023-02-13)
+
+
+### Features
+
+* Upgrade cozy-client from 34.8.0 to 35.2.0 ([3d1c855](https://github.com/cozy/cozy-ui/commit/3d1c855))
+* **Viewer:** Add support of contract type in enhanced viewer ([69ca4c8](https://github.com/cozy/cozy-ui/commit/69ca4c8))
+
+
+### BREAKING CHANGES
+
+* you must have `cozy-client >= 35.2.0`
+
 # [80.3.0](https://github.com/cozy/cozy-ui/compare/v80.2.1...v80.3.0) (2023-02-13)
 
 
