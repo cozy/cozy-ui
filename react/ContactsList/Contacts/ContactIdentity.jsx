@@ -20,6 +20,7 @@ const ContactIdentity = ({ contact }) => {
 
   return (
     <TableCell
+      data-testid="ContactIdentity" // used by a test in cozy-contacts
       className={`${
         styles['contact-identity']
       } u-flex u-flex-items-center u-ellipsis`}
