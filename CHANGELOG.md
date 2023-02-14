@@ -1,3 +1,10 @@
+# [81.1.0](https://github.com/cozy/cozy-ui/compare/v81.0.0...v81.1.0) (2023-02-14)
+
+
+### Features
+
+* Use bare directories instead of index files in specifiers ([00dd09e](https://github.com/cozy/cozy-ui/commit/00dd09e))
+
 # [81.0.0](https://github.com/cozy/cozy-ui/compare/v80.3.0...v81.0.0) (2023-02-13)
 
 
