@@ -7,13 +7,15 @@ import { isIOSApp } from 'cozy-device-helper'
 
 import Icon from '../Icon'
 import CheckIcon from '../Icons/Check'
-import { dodgerBlue, silver, coolGrey, paleGrey } from '../palette'
+import palette from '../palette'
 import withBreakpoints from '../helpers/withBreakpoints'
 import TopIcon from '../Icons/Top'
 import BottomIcon from '../Icons/Bottom'
 
 import styles from './styles.styl'
 import ControlDefault from './ControlDefault'
+
+const { dodgerBlue, silver, coolGrey, paleGrey } = palette
 
 const heights = {
   tiny: '2rem',

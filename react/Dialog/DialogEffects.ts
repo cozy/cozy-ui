@@ -4,11 +4,7 @@ import { useEffect } from 'react'
 import { getFlagshipMetadata, isFlagshipApp } from 'cozy-device-helper'
 import { useWebviewIntent } from 'cozy-intent'
 
-import {
-  FlagshipUI,
-  ThemeColor,
-  parseArg
-} from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import { FlagshipUI, ThemeColor, parseArg } from '../hooks/useSetFlagshipUI'
 
 interface DialogEffectsOptions {
   cozybar?: Element | null
@@ -146,7 +142,7 @@ const useHook = (open: boolean, fullscreen?: boolean): void => {
 }
 
 /**
- * Custom version of useSetFlagshipUi() that is aware of the Dialog component.
+ * Custom version of useSetFlagshipUI() that is aware of the Dialog component.
  *
  * The difference here is that we send messages to the Native app when a props change.
  * In the original version, we send the mount message as soon as the component is rendered.

@@ -1,4 +1,4 @@
-import useBrowserOffline from './useBrowserOffline'
+import useBrowserOffline from '.'
 import { renderHook, act } from '@testing-library/react-hooks'
 
 const triggerEvent = (element, eventType) => {

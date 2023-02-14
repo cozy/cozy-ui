@@ -1,4 +1,4 @@
-import useEventListener from './useEventListener'
+import useEventListener from '.'
 import { renderHook } from '@testing-library/react-hooks'
 
 const triggerEvent = (element, eventType) => {

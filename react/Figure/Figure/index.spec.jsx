@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { flatten, merge } from 'lodash'
-import Figure from './Figure'
+import Figure from '.'
 
 const combine = (...iterables) => {
   if (iterables.length === 1) {

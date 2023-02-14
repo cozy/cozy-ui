@@ -7,7 +7,7 @@ import { Theme, useTheme } from '@material-ui/core'
 import { isFlagshipApp } from 'cozy-device-helper'
 
 import { getCssVariableValue } from '../utils/color'
-import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import { useSetFlagshipUI } from '../hooks/useSetFlagshipUI'
 
 const getBottomBackground = (theme: Theme): string => {
   const sidebar = document.getElementById('sidebar')

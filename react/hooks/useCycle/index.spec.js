@@ -1,5 +1,5 @@
 import { renderHook, act } from '@testing-library/react-hooks'
-import useCycle from './useCycle'
+import useCycle from '.'
 
 describe('useCycle', () => {
   it('should cycle through the number min and max', () => {

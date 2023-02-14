@@ -8,7 +8,7 @@ import { WebviewIntentProvider, WebviewService } from 'cozy-intent'
 import Dialog from '.'
 import { BreakpointsProvider } from '../hooks/useBreakpoints'
 import { DOMStrings, makeOnMount, makeOnUnmount } from './DialogEffects'
-import { ThemeColor } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import { ThemeColor } from '../hooks/useSetFlagshipUI'
 
 const theme = {
   palette: {
