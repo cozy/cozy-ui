@@ -5,7 +5,7 @@ import { FileDoctype } from '../proptypes'
 
 import ViewerControls from './components/ViewerControls'
 import ViewerByFile from './components/ViewerByFile'
-import { toolbarPropsPropType } from './index'
+import { toolbarPropsPropType } from '.'
 
 const KEY_CODE_LEFT = 37
 const KEY_CODE_RIGHT = 39

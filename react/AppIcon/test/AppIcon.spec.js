@@ -4,7 +4,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import { AppIcon } from '../'
+import { AppIcon } from '..'
 
 describe('AppIcon component', () => {
   const app = {}

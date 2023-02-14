@@ -1,7 +1,7 @@
 import React from 'react'
 import uniqueId from 'lodash/uniqueId'
 
-import FileInput from './index'
+import FileInput from '.'
 
 jest.mock('lodash/uniqueId')
 
