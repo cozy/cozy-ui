@@ -6,7 +6,7 @@ import { Theme, useTheme } from '@material-ui/core'
 
 import { getFlagshipMetadata, isFlagshipApp } from 'cozy-device-helper'
 
-import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import { useSetFlagshipUI } from '../hooks/useSetFlagshipUI'
 
 const getTopBackground = (theme: Theme, cozyBar: Element | null): string =>
   (cozyBar && getComputedStyle(cozyBar).getPropertyValue('background-color')) ||

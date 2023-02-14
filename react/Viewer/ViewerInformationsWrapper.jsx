@@ -8,7 +8,7 @@ import InformationPanel from './components/InformationPanel'
 import Footer from './components/Footer'
 import PanelContent from './Panel/PanelContent'
 import FooterContent from './Footer/FooterContent'
-import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import { useSetFlagshipUI } from '../hooks/useSetFlagshipUI'
 
 const ViewerInformationsWrapper = ({
   currentFile,

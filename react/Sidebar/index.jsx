@@ -2,7 +2,7 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
-import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import { useSetFlagshipUI } from '../hooks/useSetFlagshipUI'
 import { useTheme } from '@material-ui/core'
 
 const Sidebar = ({ children, className, ...restProps }) => {

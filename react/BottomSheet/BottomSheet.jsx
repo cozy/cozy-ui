@@ -30,7 +30,7 @@ import {
   computeBottomSpacer
 } from './helpers'
 import { ANIMATION_DURATION } from './constants'
-import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import { useSetFlagshipUI } from '../hooks/useSetFlagshipUI'
 
 const createContainerWrapperStyles = () => ({
   container: {

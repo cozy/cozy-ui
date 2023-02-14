@@ -86,8 +86,8 @@ module.exports = {
         '../react/BottomDrawer/index.jsx',
         '../react/BottomSheet/index.jsx',
         '../react/Empty/index.jsx',
-        '../react/Figure/Figure.jsx',
-        '../react/Figure/FigureBlock.jsx',
+        '../react/Figure/Figure/index.jsx',
+        '../react/Figure/FigureBlock/index.jsx',
         '../react/Filename/index.jsx',
         '../react/FilePath/index.jsx',
         '../react/FilePathLink/index.jsx',
@@ -161,11 +161,11 @@ module.exports = {
     {
       name: 'Hooks',
       components: () => [
-        '../react/hooks/useBrowserOffline.jsx',
+        '../react/hooks/useBrowserOffline/index.js',
         '../react/hooks/useConfirmExit/index.jsx',
-        '../react/hooks/useCycle.jsx',
-        '../react/hooks/useEventListener.js',
-        '../react/hooks/usePeriodicRender.js'
+        '../react/hooks/useCycle/index.js',
+        '../react/hooks/useEventListener/index.js',
+        '../react/hooks/usePeriodicRender/index.js'
       ]
     },
     {

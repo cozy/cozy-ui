@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react'
-import useEventListener from './useEventListener'
+import useEventListener from '../useEventListener'
 
 /**
  * Checks if the browser is offline

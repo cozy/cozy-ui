@@ -1,4 +1,4 @@
-import useRealtime from './useRealtime'
+import useRealtime from '.'
 import { renderHook } from '@testing-library/react-hooks'
 
 it('should subscribe to realtime events according to given specs', () => {

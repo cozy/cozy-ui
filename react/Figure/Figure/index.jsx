@@ -1,7 +1,7 @@
 import React from 'react'
 import Types from 'prop-types'
 import cx from 'classnames'
-import styles from './Figure.styl'
+import styles from './styles.styl'
 
 /**
  * Shows a number, typically a balance or an important financial
