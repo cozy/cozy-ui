@@ -5,7 +5,10 @@ import { TableCell } from '../../Table'
 import styles from '../styles.styl'
 
 const ContactCozy = ({ cozyUrl }) => (
-  <TableCell className={`${styles['contact-cozyurl']} u-ellipsis`}>
+  <TableCell
+    data-testid="ContactCozy" // used by a test in cozy-contacts
+    className={`${styles['contact-cozyurl']} u-ellipsis`}
+  >
     {cozyUrl}
   </TableCell>
 )

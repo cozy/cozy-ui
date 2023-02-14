@@ -55,6 +55,7 @@ export const Avatar = ({
   const IconToRender = Icon.isProperIcon(icon) ? <Icon icon={icon} /> : icon
   return (
     <div
+      data-testid="Avatar" // used by a test in cozy-contacts
       className={cx(
         styles['c-avatar'],
         text ? styles['c-avatar--text'] : '',
