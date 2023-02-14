@@ -2,7 +2,7 @@ import React from 'react'
 import { act } from 'react-dom/test-utils'
 import { useState } from 'react'
 import { mount } from 'enzyme'
-import Modal, { BODY_CLASS } from './index'
+import Modal, { BODY_CLASS } from '.'
 import { BreakpointsProvider } from '../hooks/useBreakpoints'
 
 describe('Modal', () => {

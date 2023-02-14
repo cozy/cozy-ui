@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Input from './index'
+import Input from '.'
 
 describe('Input component', () => {
   it('should support number type', () => {

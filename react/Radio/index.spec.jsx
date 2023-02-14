@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { render, fireEvent } from '@testing-library/react'
 
-import Radio from './'
+import Radio from '.'
 import RadioGroup from '../RadioGroup'
 import FormControlLabel from '../FormControlLabel'
 

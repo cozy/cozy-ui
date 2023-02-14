@@ -1,6 +1,6 @@
 import { mount } from 'enzyme'
 import React from 'react'
-import DateMonthPicker from './index'
+import DateMonthPicker from '.'
 import { act } from 'react-dom/test-utils'
 
 import I18n from '../I18n'

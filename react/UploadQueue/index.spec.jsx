@@ -1,5 +1,5 @@
 import React from 'react'
-import { UploadQueue, formatRemainingTime } from './index'
+import { UploadQueue, formatRemainingTime } from '.'
 import { render } from '@testing-library/react'
 import { useI18n } from '../I18n'
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useViewStack } from './index'
+import { useViewStack } from '.'
 import Button from '../Button'
 
 const PaddedParagraph = ({ children }) => (

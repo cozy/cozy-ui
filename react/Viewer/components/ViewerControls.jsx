@@ -8,7 +8,7 @@ import { withStyles } from '../../styles'
 import withBreakpoints from '../../helpers/withBreakpoints'
 
 import { isValidForPanel } from '../helpers'
-import { toolbarPropsPropType } from '../index'
+import { toolbarPropsPropType } from '..'
 import { infoWidth } from './InformationPanel'
 import Toolbar from './Toolbar'
 import Navigation from './Navigation'
