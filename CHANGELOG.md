@@ -1,3 +1,10 @@
+# [81.2.0](https://github.com/cozy/cozy-ui/compare/v81.1.0...v81.2.0) (2023-02-20)
+
+
+### Features
+
+* add new icon cloud sync ([9af423e](https://github.com/cozy/cozy-ui/commit/9af423e))
+
 # [81.1.0](https://github.com/cozy/cozy-ui/compare/v81.0.0...v81.1.0) (2023-02-14)
 
 
