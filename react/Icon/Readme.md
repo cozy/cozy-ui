@@ -550,6 +550,7 @@ import Typography from 'cozy-ui/transpiled/react/Typography'
 
 import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
 import CloudBrokenIcon from 'cozy-ui/transpiled/react/Icons/CloudBroken'
+import CloudSync2 from 'cozy-ui/transpiled/react/Icons/CloudSync2'
 import CozyLogoIcon from 'cozy-ui/transpiled/react/Icons/CozyLogo'
 import DeviceLaptopIcon from 'cozy-ui/transpiled/react/Icons/DeviceLaptop'
 import DevicePhoneIcon from 'cozy-ui/transpiled/react/Icons/DevicePhone'
@@ -583,6 +584,7 @@ import KeychainIcon from 'cozy-ui/transpiled/react/Icons/Keychain'
 const icons = [
   CozyIcon,
   CloudBrokenIcon,
+  CloudSync2,
   CozyLogoIcon,
   DeviceLaptopIcon,
   DevicePhoneIcon,
