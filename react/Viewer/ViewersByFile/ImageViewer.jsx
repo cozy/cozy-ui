@@ -85,14 +85,16 @@ class ImageViewer extends Component {
   }
 
   tearDownGestures() {
-    this.gestures.off('swipe')
-    this.gestures.on('swipe', this.props.onSwipe)
-    this.gestures.off('panstart')
-    this.gestures.off('pinchstart')
-    this.gestures.off('pinchend')
-    this.gestures.off('pan')
-    this.gestures.off('pinch')
-    this.gestures.off('panend')
+    if (this.gestures) {
+      this.gestures.off('swipe')
+      this.gestures.on('swipe', this.props.onSwipe)
+      this.gestures.off('panstart')
+      this.gestures.off('pinchstart')
+      this.gestures.off('pinchend')
+      this.gestures.off('pan')
+      this.gestures.off('pinch')
+      this.gestures.off('panend')
+    }
   }
 
   onSwipe = e => {
