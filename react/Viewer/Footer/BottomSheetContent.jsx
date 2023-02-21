@@ -1,0 +1,27 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+
+import { BottomSheetItem } from '../../BottomSheet'
+
+import getPanelBlocks, { panelBlocksSpecs } from '../Panel/getPanelBlocks'
+
+const BottomSheetContent = ({ file }) => {
+  const panelBlocks = getPanelBlocks({ panelBlocksSpecs, file })
+
+  return panelBlocks.map((PanelBlock, index) => (
+    <BottomSheetItem
+      key={index}
+      disableGutters
+      disableElevation={index === panelBlocks.length - 1}
+    >
+      <PanelBlock file={file} />
+    </BottomSheetItem>
+  ))
+}
+
+BottomSheetContent.propTypes = {
+  file: PropTypes.object.isRequired,
+  contactsFullname: PropTypes.string
+}
+
+export default BottomSheetContent

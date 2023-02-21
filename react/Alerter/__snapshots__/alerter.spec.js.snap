@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alerter component handles dismiss provided to buttonAction 1`] = `
+<div
+  className="styles__c-alert___f9mWB styles__c-alert--hidden___22Mz1"
+  role="alert"
+>
+  <div
+    className="styles__c-alert-wrapper___3fLCt styles__c-alert--info___3mqAh"
+  >
+    <p>
+      Test alert with button
+    </p>
+    <DefaultButton
+      className="styles__c-btn--alert-info___1BO12"
+      label="BTN"
+      onClick={[Function]}
+      size="tiny"
+    />
+  </div>
+</div>
+`;
+
+exports[`Alerter component renders button if buttonText provided 1`] = `
+<div
+  className="styles__c-alert___f9mWB styles__c-alert--hidden___22Mz1"
+  role="alert"
+>
+  <div
+    className="styles__c-alert-wrapper___3fLCt styles__c-alert--info___3mqAh"
+  >
+    <p>
+      Test alert with button
+    </p>
+    <DefaultButton
+      className="styles__c-btn--alert-info___1BO12"
+      label="BTN"
+      onClick={[Function]}
+      size="tiny"
+    />
+  </div>
+</div>
+`;
+
+exports[`Alerter component renders correctly an error alert 1`] = `
+<div
+  className="styles__c-alert___f9mWB styles__c-alert--hidden___22Mz1"
+  role="alert"
+>
+  <div
+    className="styles__c-alert-wrapper___3fLCt styles__c-alert--error___oA-NC"
+  >
+    <p>
+      Test error alert
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Alerter component renders correctly an info alert 1`] = `
+<div
+  className="styles__c-alert___f9mWB styles__c-alert--hidden___22Mz1"
+  role="alert"
+>
+  <div
+    className="styles__c-alert-wrapper___3fLCt styles__c-alert--info___3mqAh"
+  >
+    <p>
+      Test info alert
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Alerter component renders correctly an success alert 1`] = `
+<div
+  className="styles__c-alert___f9mWB styles__c-alert--hidden___22Mz1"
+  role="alert"
+>
+  <div
+    className="styles__c-alert-wrapper___3fLCt styles__c-alert--success___1Cs5b"
+  >
+    <p>
+      Test success alert
+    </p>
+  </div>
+</div>
+`;

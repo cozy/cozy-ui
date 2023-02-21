@@ -1,0 +1,396 @@
+@require '../tools/mixins'
+@require './themes/inverted'
+palette=json('../../theme/palette.json', { hash: true })
+
+// @stylint off
+/*------------------------------------*\
+  Palette
+  =====
+\*------------------------------------*/
+/*
+    Settings
+
+    Weight: -10
+
+    Styleguide Settings
+*/
+
+/*
+    Colors
+
+    Colors used in the user interface.
+
+    ℹ️  In general, you are advised to use [theme colors](#kssref-settings-theme) when
+    building your components: this will ensure your components react correctly when
+    changing the theme.
+
+    If you need to access an absolute color that is not semantic, you can use
+
+    ```
+    import palette from 'cozy-ui/transpiled/react/palette'
+    <div style={{ backgroundColor: palette.melon }} />
+    ```
+
+    Styleguide Settings.colors
+*/
+html
+    /*
+    Grey
+
+    Stylus: grey0        -  #FFFFFF, CSS: var(--grey0)
+    Stylus: grey50       -  #f9fafb, CSS: var(--grey50)
+    Stylus: grey100      -  #f4f5f6, CSS: var(--grey100)
+    Stylus: grey200      -  #eceff1, CSS: var(--grey200)
+    Stylus: grey300      -  #dde0e3, CSS: var(--grey300)
+    Stylus: grey400      -  #bfc3c7, CSS: var(--grey400)
+    Stylus: grey500      -  #9da2a6, CSS: var(--grey500)
+    Stylus: grey600      -  #7c8086, CSS: var(--grey600)
+    Stylus: grey700      -  #5d6169, CSS: var(--grey700)
+    Stylus: grey800      -  #3e424a, CSS: var(--grey800)
+    Stylus: grey900      -  #1d212a, CSS: var(--grey900)
+    Stylus: greyA100     -  #d3d6d8, CSS: var(--greyA100)
+    Stylus: greyA200     -  #a7abaf, CSS: var(--greyA200)
+    Stylus: greyA400     -  #2c3039, CSS: var(--greyA400)
+    Stylus: greyA700     -  #5d6169, CSS: var(--greyA700)
+    Stylus: white        -  #FFFFFF, CSS: var(--white)
+    Stylus: paleGrey     -  #F5F6F7, CSS: var(--paleGrey)
+    Stylus: silver       -  #D6D8Da, CSS: var(--silver)
+    Stylus: coolGrey     -  #95999D, CSS: var(--coolGrey)
+    Stylus: slateGrey    -  #5D6165, CSS: var(--slateGrey)
+    Stylus: charcoalGrey -  #32363F, CSS: var(--charcoalGrey)
+    Stylus: black        -  #000000, CSS: var(--black)
+
+    Styleguide Settings.colors.grey
+    */
+    --grey0         palette.Common['white']
+    --grey50        palette.Grey['50']
+    --grey100       palette.Grey['100']
+    --grey200       palette.Grey['200']
+    --grey300       palette.Grey['300']
+    --grey400       palette.Grey['400']
+    --grey500       palette.Grey['500']
+    --grey600       palette.Grey['600']
+    --grey700       palette.Grey['700']
+    --grey800       palette.Grey['800']
+    --grey900       palette.Grey['900']
+    --greyA100      palette.Grey['A100']
+    --greyA200      palette.Grey['A200']
+    --greyA400      palette.Grey['A400']
+    --greyA700      palette.Grey['A700']
+    --white         palette.Common['white']
+    --paleGrey      #F5F6F7
+    --silver        #D6D8Da
+    --coolGrey      #95999D
+    --slateGrey     #5D6165
+    --charcoalGrey  #32363F
+    --black         palette.Common['black']
+    --overlay       rgba(50, 54, 63, .5)
+
+    /*
+    Blue
+
+    Stylus: zircon       -  #F5FAFF, CSS: var(--zircon)
+    Stylus: dodgerBlue   -  #297EF2, CSS: var(--dodgerBlue)
+    Stylus: scienceBlue  -  #0B61D6, CSS: var(--scienceBlue)
+
+    Styleguide Settings.colors.blue
+    */
+    --zircon       #F5FAFF
+    --dodgerBlue   #297EF2
+    --scienceBlue  #0B61D6
+
+    /*
+    Green
+
+    Stylus: weirdGreen   - #40DE8E, CSS: var(--weirdGreen)
+    Stylus: emerald      - #35CE68, CSS: var(--emerald)
+    Stylus: malachite    - #08b442, CSS: var(--malachite)
+
+    Styleguide Settings.colors.green
+    */
+    --weirdGreen   #40DE8E
+    --emerald      #35CE68
+    --malachite    #08b442
+
+    /*
+    Orange
+
+    Stylus: mango         - #FF962F, CSS: var(--mango)
+
+    Styleguide Settings.colors.orange
+    */
+    --mango          #FF962F
+
+    /*
+    Red
+
+    Stylus: chablis      - #FFF2F2, CSS: var(--chablis)
+    Stylus: yourPink     - #FDCBCB, CSS: var(--yourPink)
+    Stylus: fuchsia      - #FC4C83, CSS: var(--fuchsia)
+    Stylus: pomegranate  - #F52D2D, CSS: var(--pomegranate)
+    Stylus: monza        - #DD0505, CSS: var(--monza)
+
+    Styleguide Settings.colors.red
+    */
+    --chablis      #FFF2F2
+    --yourPink     #FDCBCB
+    --fuchsia      #FC4C83
+    --pomegranate  #F52D2D
+    --monza        #DD0505
+
+/*
+    Theme
+
+    Semantic colors suitable for theming. We encourage users of cozy-ui to use semantic colors
+    instead of absolute colors to facilitate theming.
+
+    We try to use a naming schema that is close to what is use in [Material-UI React's theming](https://material-ui.com/customization/palette/#palette-colors).
+    It is possible that we have some discrepancies. If you see something that seems out
+    of the ordinary and where you think we could reduce the difference with MUI, please
+    do not hesitate to [open an issue](https://github.com/cozy/cozy-ui/issues/new).
+
+    Styleguide Settings.theme
+*/
+html, .CozyTheme--normal
+    /*
+    Primary colors
+
+    Stylus: primaryColorLightest     - #B3D3FF, CSS: var(--primaryColorLightest)
+    Stylus: primaryColorLight        - #5C9DF5, CSS: var(--primaryColorLight)
+    Stylus: primaryColor             - #297EF2, CSS: var(--primaryColor)
+    Stylus: primaryColorDark         - #0B61D6, CSS: var(--primaryColorDark)
+    Stylus: primaryContrastTextColor - #FFF, CSS: var(--primaryContrastTextColor)
+
+    Styleguide Settings.theme.primary
+    */
+    --primaryColorLightest palette.Primary['300']
+    --primaryColorLight palette.Primary['500']
+    --primaryColor palette.Primary['600']
+    --primaryColorDark palette.Primary['700']
+    --primaryContrastTextColor palette.Common['white']
+
+    /*
+    Secondary colors
+
+    Stylus: secondaryColorLightest     - #FFD3D3, CSS: var(--secondaryColorLightest)
+    Stylus: secondaryColorLight        - #F96B6B, CSS: var(--secondaryColorLight)
+    Stylus: secondaryColor             - #EA3F3F, CSS: var(--secondaryColor)
+    Stylus: secondaryColorDark         - #D31F1F, CSS: var(--secondaryColorDark)
+    Stylus: secondaryContrastTextColor -  #FFF, CSS: var(--secondaryContrastTextColor)
+
+    Styleguide Settings.theme.secondary
+    */
+    --secondaryColorLightest palette.Error['200']
+    --secondaryColorLight palette.Error['500']
+    --secondaryColor palette.Error['600']
+    --secondaryColorDark palette.Error['700']
+    --secondaryContrastTextColor palette.Common['white']
+
+    /*
+    Background colors
+
+    Stylus: primaryBackgroundLight -  #F7FAFF, CSS: var(--primaryBackgroundLight)
+    Stylus: paperBackgroundColor -  #FFF, CSS: var(--paperBackgroundColor)
+    Stylus: defaultBackgroundColor -  #F4F5F6, CSS: var(--defaultBackgroundColor)
+    Stylus: contrastBackgroundColor -  #F5F5F6, CSS: var(--contrastBackgroundColor)
+
+    Styleguide Settings.theme.background
+    */
+    --primaryBackgroundLight palette.Primary['50']
+    --paperBackgroundColor palette.Common['white']
+    --defaultBackgroundColor palette.Grey['100']
+    --contrastBackgroundColor alpha(palette.Grey['900'], 0.048)
+
+    /*
+    Text colors
+
+    These colors use the alpha layer. Be careful to use the semantic variable.
+    Hexadecimal colors are here only as an example on a white background.
+
+    Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
+    Stylus: secondaryTextColor - #9D9EA1, CSS: var(--secondaryTextColor)
+    Stylus: disabledTextColor - #BEBFC1, CSS: var(--disabledTextColor)
+    Stylus: hintTextColor - #BEBFC1, CSS: var(--hintTextColor)
+    Stylus: iconTextColor - #66686D, CSS: var(--iconTextColor)
+
+    Styleguide Settings.theme.text
+    */
+    --primaryTextColor alpha(palette.Grey['900'], 0.9)
+    --secondaryTextColor alpha(palette.Grey['900'], 0.48)
+    --disabledTextColor alpha(palette.Grey['900'], 0.32)
+    --hintTextColor alpha(palette.Grey['900'], 0.32)
+    --iconTextColor alpha(palette.Grey['900'], 0.72)
+
+    /*
+    Action colors
+
+    These colors use the alpha layer. Be careful to use the semantic variable.
+    Hexadecimal colors are here only as an example on a white background.
+
+    Stylus: actionColorActive   - #8A8C90, CSS: var(--actionColorActive)
+    Stylus: actionColorHover   - #F7F7F7, CSS: var(--actionColorHover)
+    Stylus: actionColorSelected   - #EFEFF0, CSS: var(--actionColorSelected)
+    Stylus: actionColorDisabled   - #CFCFD1, CSS: var(--actionColorDisabled)
+    Stylus: actionColorDisabledBackground   - #E7E7E8, CSS: var(--actionColorDisabledBackground)
+    Stylus: actionColorFocus   - #E7E7E8, CSS: var(--actionColorFocus)
+    Stylus: actionColorGhost   - #EFEFF0, CSS: var(--actionColorGhost)
+    Stylus: actionColorHoverGhost   - #DFE0E0, CSS: var(--actionColorHoverGhost)
+
+    Styleguide Settings.theme.action
+    */
+    --actionColorActive alpha(palette.Grey['900'], 0.56)
+    --actionColorHover alpha(palette.Grey['900'], 0.04)
+    --actionColorSelected alpha(palette.Grey['900'], 0.08)
+    --actionColorDisabled alpha(palette.Grey['900'], 0.24)
+    --actionColorDisabledBackground alpha(palette.Grey['900'], 0.12)
+    --actionColorFocus alpha(palette.Grey['900'], 0.12)
+    --actionColorGhost alpha(palette.Grey['900'], 0.08)
+    --actionColorHoverGhost alpha(palette.Grey['900'], 0.16)
+
+    /*
+    Border colors
+
+    These colors use the alpha layer. Be careful to use the semantic variable.
+    Hexadecimal colors are here only as an example on a white background.
+
+    Stylus: borderMainColor - #DFE0E0, CSS: var(--borderMainColor)
+    Stylus: borderDisabledColor - #EFEFF0, CSS: var(--borderDisabledColor)
+    Stylus: borderGhostColor - #9D9EA1, CSS: var(--borderGhostColor)
+    Stylus: borderGhostDisabledColor - #DFE0E0, CSS: var(--borderGhostDisabledColor)
+
+    Styleguide Settings.theme.border
+    */
+    --borderMainColor alpha(palette.Grey['900'], 0.16)
+    --borderDisabledColor alpha(palette.Grey['900'], 0.08)
+    --borderGhostColor alpha(palette.Grey['900'], 0.48)
+    --borderGhostDisabledColor alpha(palette.Grey['900'], 0.16)
+
+    /*
+    Divider colors
+
+    These colors use the alpha layer. Be careful to use the semantic variable.
+    Hexadecimal colors are here only as an example on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
+
+    Styleguide Settings.theme.divider
+    */
+    --dividerColor alpha(palette.Grey['900'], 0.12)
+
+    /*
+    Success colors
+
+    Stylus: successColorLight        -  #38C949, CSS: var(--successColorLight)
+    Stylus: successColor             -  #09AE1C, CSS: var(--successColor)
+    Stylus: successColorDark         -  #018711, CSS: var(--successColorDark)
+    Stylus: successColorContrastText -  #FFF, CSS: var(--successColorContrastText)
+
+    Styleguide Settings.theme.success
+    */
+    --successColorLight palette.Success['500']
+    --successColor palette.Success['600']
+    --successColorDark palette.Success['700']
+    --successColorContrastText palette.Common['white']
+
+    /*
+    Warning colors
+
+    Stylus: warningColorLight        -  #EFA82F, CSS: var(--warningColorLight)
+    Stylus: warningColor             -  #CB8100, CSS: var(--warningColor)
+    Stylus: warningColorDark         -  #986100, CSS: var(--warningColorDark)
+    Stylus: warningColorContrastText -  #FFF, CSS: var(--warningColorContrastText)
+
+    Styleguide Settings.theme.warning
+    */
+    --warningColorLight palette.Warning['500']
+    --warningColor palette.Warning['600']
+    --warningColorDark palette.Warning['700']
+    --warningColorContrastText palette.Common['white']
+
+    /*
+    Error colors
+
+    Stylus: errorColorLightest     -  #FFECEC, CSS: var(--errorColorLightest)
+    Stylus: errorColorLight        -  #F96B6B, CSS: var(--errorColorLight)
+    Stylus: errorColor             -  #EA3F3F, CSS: var(--errorColor)
+    Stylus: errorColorDark         -  #D31F1F, CSS: var(--errorColorDark)
+    Stylus: errorBackground        -  #FFECEC, CSS: var(--errorBackground)
+    Stylus: errorColorContrastText -  #FFF, CSS: var(--errorColorContrastText)
+
+    Styleguide Settings.theme.error
+    */
+    --errorColorLightest palette.Error['100']
+    --errorColorLight palette.Error['500']
+    --errorColor palette.Error['600']
+    --errorColorDark palette.Error['700']
+    --errorBackground palette.Error['100']
+    --errorColorContrastText palette.Common['white']
+
+    /*
+    Info colors
+
+    Stylus: infoColorLight        -  #0EC4C7, CSS: var(--infoColorLight)
+    Stylus: infoColor             -  #009FA2, CSS: var(--infoColor)
+    Stylus: infoColorDark         -  #007578, CSS: var(--infoColorDark)
+    Stylus: infoColorContrastText -  #FFF, CSS: var(--infoColorContrastText)
+
+    Styleguide Settings.theme.info
+    */
+    --infoColorLight palette.Info['500']
+    --infoColor palette.Info['600']
+    --infoColorDark palette.Info['700']
+    --infoColorContrastText palette.Common['white']
+
+    /*
+    ---------------------------------------------------------------------
+    */
+
+    /*
+    The CSS variables below are historic and we should strive not to
+    use them. Prefer to use directly semantic colors above.
+    */
+    --spinnerColor var(--primaryColor)
+
+    --linkColor var(--primaryColor)
+    --linkTextDecoration none
+    --linkColorActive var(--primaryColorDark)
+
+    --invertedTabsActiveTextColor var(--primaryContrastTextColor)
+    --invertedTabsInactiveTextColor var(--primaryContrastTextColor)
+    --invertedTabsIndicatorColor var(--primaryContrastTextColor)
+    --invertedTabsBackgroundColor var(--primaryColor)
+
+    --regularButtonPrimaryColor var(--primaryColor)
+    --regularButtonSecondaryColor var(--primaryColor)
+    --regularButtonActiveColor var(--primaryColorDark)
+    --regularButtonConstrastColor var(--primaryContrastTextColor)
+
+    --secondaryButtonPrimaryColor #FFF
+    --secondaryButtonSecondaryColor var(--silver)
+    --secondaryButtonActiveColor var(--silver)
+    --secondaryButtonContrastColor var(--black)
+
+    --dividerColor2 var(--coolGrey)
+
+    --iconColor currentColor
+    --textIconColor var(--charcoalGrey)
+    --actionMenuIconColor var(--slateGrey)
+
+    --neutralBackground var(--paleGrey)
+
+    --buttonTextTransform uppercase
+    --buttonBorderRadius rem(2)
+
+    --navTextColor var(--slateGrey)
+    --navTextActiveColor var(--slateGrey)
+    --navTextHoverColor var(--charcoalGrey)
+
+    --alertErrorColor #fff
+    --alertErrorBackgroundColor var(--errorColor)
+
+    --alertSuccessColor #fff
+    --alertSuccessBackgroundColor var(--successColor)
+
+    --alertInfoColor #fff
+    --alertInfoBackgroundColor var(--slateGrey)
+// @stylint on

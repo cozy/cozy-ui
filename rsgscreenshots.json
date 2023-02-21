@@ -1,0 +1,19 @@
+{
+  "UploadQueue": {
+    "viewports": {
+      "desktop": "1200x700"
+    }
+  },
+  "ActionMenu": {
+    "perExampleScreenshot": true
+  },
+  "Modal": {
+    "perExampleScreenshot": true
+  },
+  "Dialog": {
+    "perExampleScreenshot": true
+  },
+  "SelectBox": {
+    "perExampleScreenshot": true
+  }
+}

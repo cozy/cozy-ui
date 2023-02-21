@@ -1,0 +1,23 @@
+@require 'settings/breakpoints.styl'
+@require 'settings/palette.styl'
+@require 'settings/z-index.styl'
+@require './vars.styl'
+
+.viewer-wrapper
+    position        absolute
+    left            0
+    right           0
+    top             0
+    bottom          0
+    z-index         $overlay-index
+    overflow        hidden
+    background      var(--charcoalGrey)
+    color           var(--white)
+
+    .flagship-app &
+        padding-top var(--flagship-top-height)
+        padding-bottom var(--flagship-bottom-height)
+
+    +medium-screen()
+        color var(--charcoalGrey)
+        background var(--white)

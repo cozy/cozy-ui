@@ -1,0 +1,67 @@
+@require 'components/popover.styl'
+@require 'tools/mixins'
+
+.c-menu
+    position relative
+    display  inline-block
+
+.c-menu__inner
+    @extend    $popover
+    display    none
+    position   absolute
+    margin     0
+    margin-top rem(1)
+    padding rem(8 0)
+    min-width  rem(220)
+    // cuts the hover background properly (border-radius)
+    overflow   hidden
+    border     0
+    color      var(--primaryTextColor)
+
+.c-menu--left
+    .c-menu__inner
+        left 0
+
+.c-menu--right
+    .c-menu__inner
+        right 0
+
+.c-menu__inner--opened
+    display block
+
+.c-menu__btn
+    font-size rem(16)
+    border 0
+    cursor pointer
+
+.c-menu__btn:not([disabled]):not([aria-disabled=true]):hover
+.c-menu__btn:not([disabled]):not([aria-disabled=true]):active
+.c-menu__btn:not([disabled]):not([aria-disabled=true]):focus
+    background-color transparent
+
+$paddingItem = rem(8)
+
+.c-menu__item
+    cursor pointer
+    padding   $paddingItem
+    line-height 1.15
+    color var(--primaryTextColor)
+
+.c-menu__item-icon
+    $marginIcon = rem(12)
+    margin-top .125em
+    margin-right $marginIcon
+    // we need to compensate for the already present margin
+    margin-left $marginIcon - $paddingItem
+
+    svg
+        width 1em
+        height 1em
+
+.c-menu__item:hover
+.c-menu__item:focus
+    background-color var(--actionColorHover)
+    outline          none
+
+.c-menu__item--disabled
+    opacity .5

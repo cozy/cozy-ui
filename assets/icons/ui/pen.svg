@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16">
+  <defs>
+    <path id="pen" d="M9.5 3.5l3 3L3.04 16H0v-2.97L9.5 3.5zM14.91.92l.18.17c.77.78.78 2.05 0 2.84L14.03 5 11 2 12.09.91a2 2 0 0 1 2.82 0z"/>
+  </defs>
+  <use fill-rule="evenodd" xlink:href="#pen"/>
+</svg>

@@ -1,0 +1,17 @@
+@require 'settings/spaces.styl'
+
+// Cannot use spacing_values.m directly otherwise stylus
+// does not pick it up, we have to use a temporary variable
+row_padding=spacing_values.m
+
+.CompositeRow
+    min-height 3rem
+    padding row_padding
+
+    &__dense
+        padding-top 0
+        padding-bottom 0
+
+.CompositeRow__body
+    > * + *
+        margin-top 2px

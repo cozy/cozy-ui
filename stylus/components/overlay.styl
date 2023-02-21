@@ -1,0 +1,12 @@
+@require '../settings/z-index'
+
+$overlay
+    z-index     $overlay-index
+    position    fixed
+    top         0
+    left        0
+    height      100%
+    width       100%
+    background  var(--overlay)
+    visibility  visible
+    transition  opacity .3s, visibility 0s ease-out

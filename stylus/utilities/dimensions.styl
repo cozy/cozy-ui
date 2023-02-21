@@ -1,0 +1,92 @@
+// @stylint off
+@require '../settings/breakpoints'
+@require '../tools/mixins'
+
+minmax = {
+    'min-width': 'miw',
+    'max-width': 'maw',
+    'min-height': 'mih',
+    'max-height': 'mah'
+}
+
+minmaxscale = {
+ 'none': none, // Used for max-width
+ 'auto': auto, // Used for min-width, see is_valid below
+ 'half': rem(8),
+ '1': rem(16),
+ '1-half': rem(24),
+ '2': rem(32),
+ '2-half': rem(40),
+ '3': rem(64),
+ '4': rem(128),
+ '5': rem(256),
+ '6': rem(512),
+ '7': rem(768),
+ '8': rem(1024),
+ '9': rem(1536),
+ '100': 100%
+}
+
+dimensions = {
+    'width': 'w',
+    'height': 'h'
+}
+
+dimensionsscale = {
+ 'auto': auto,
+ 'half': rem(8),
+ '1': rem(16),
+ '1-half': rem(24),
+ '2': rem(32),
+ '2-half': rem(40),
+ '3': rem(64),
+ '4': rem(128),
+ '5': rem(256),
+ '6': rem(512),
+ '7': rem(768),
+ '8': rem(1024),
+ '9': rem(1536),
+ '100': 100%
+}
+
+is_valid(kProp, vScale)
+    if (kProp == max-width or kProp == max-height) and vScale == auto
+        return false
+    if (kProp == min-width or kProp == min-height) and vScale == none
+        return false
+    return true
+
+cssModulesDimensionsUtils(scale, props, breakpoints)
+    for kBp, vBp in breakpoints
+        for kScale, vScale in scale
+            for kProp, vProp in props
+                if is_valid(kProp, vScale)
+                    if vBp == ''
+                         :global(.u-{vProp}-{kScale})
+                            {kProp}: vScale !important
+                    else
+                        @media (max-width: rem(lookup('BP-'+kBp)))
+                             :global(.u-{vProp}-{kScale}-{vBp})
+                                {kProp}: vScale !important
+
+nativeDimensionsUtils(scale, props, breakpoints)
+    for kBp, vBp in breakpoints
+        for kScale, vScale in scale
+            for kProp, vProp in props
+                if is_valid(kProp, vScale)
+                    if vBp == ''
+                        .u-{vProp}-{kScale}
+                            {kProp}: vScale !important
+                    else
+                        @media (max-width: rem(lookup('BP-'+kBp)))
+                            .u-{vProp}-{kScale}-{vBp}
+                                {kProp}: vScale !important
+
+if cssmodules == true
+    cssModulesDimensionsUtils(minmaxscale, minmax, breakpoints)
+    cssModulesDimensionsUtils(dimensionsscale, dimensions, breakpoints)
+else
+    nativeDimensionsUtils(minmaxscale, minmax, breakpoints)
+    nativeDimensionsUtils(dimensionsscale, dimensions, breakpoints)
+
+// @stylint on

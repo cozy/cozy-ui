@@ -1,0 +1,19 @@
+@require '../settings/breakpoints'
+
+$section-header
+    background-color var(--paleGrey)
+    height rem(32)
+    display flex
+    align-items center
+    text-indent rem(32)
+    font-weight bold
+    font-size rem(12)
+    line-height 1.33
+    color var(--coolGrey)
+    text-transform uppercase
+
+    & + & // @stylint ignore
+        border-top 0
+
+    +small-screen()
+        text-indent rem(16)

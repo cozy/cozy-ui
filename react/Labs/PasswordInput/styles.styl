@@ -1,0 +1,49 @@
+@require 'tools/mixins'
+
+.PasswordInput
+    display inline-flex
+    flex-direction column
+    width 100%
+    max-width rem(512)
+
+.PasswordInput--withStrength
+    border-bottom-left-radius 0
+    border-bottom-right-radius 0
+
+.PasswordInput__strength
+    background-color var(--paleGrey)
+    border-radius rem(3)
+    border-top-left-radius 0
+    border-top-right-radius 0
+    border rem(1) solid var(--silver)
+    border-top 0
+    box-sizing border-box
+    height rem(4)
+
+.PasswordInput__strength--weak
+    color var(--pomegranate)
+    &::-webkit-progress-value
+        background-color var(--errorColor)
+    &::-moz-progress-bar
+        background-color var(--errorColor)
+
+.PasswordInput__strength--moderate
+    color var(--texasRose)
+    &::-webkit-progress-value
+        background-color var(--warningColor)
+    &::-moz-progress-bar
+        background-color var(--warningColor)
+
+
+.PasswordInput__strength--strong
+    color var(--emerald)
+    &::-webkit-progress-value
+        background-color var(--successColor)
+    &::-moz-progress-bar
+        background-color var(--successColor)
+
+.PasswordInput__visibilityButton
+    height 100%
+    width rem(48)
+    background-color transparent
+    border 0

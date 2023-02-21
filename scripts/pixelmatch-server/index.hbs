@@ -1,0 +1,33 @@
+<style>
+  .diff {
+    display: flex;
+    flex-wrap: none;
+  }
+
+  .diff img {
+    flex-basis: 1;
+    flex-shrink: 1;
+    flex-grow: 0;
+    min-width: auto;
+    max-width: 33%;
+  }
+</style>
+
+{{#if hasFilter}}
+  <a href='?'>Index</a>
+{{/if}}
+{{#each components }}
+  <h3>
+    <a href='?filter={{ this.filename }}'>{{ this.filename }}</a>
+  </h3>
+  <pre>
+    {{ tojson this.pixelmatchData }}
+  </pre>
+  {{#if this.show}}
+  <div class='diff'>
+      <img src='./old_screenshots/{{ this.filename }}' />
+      <img src='./screenshots/{{ this.filename }}' />
+      <img src='./diffs/{{ this.filename }}' />
+  </div>
+  {{/if}}
+{{/each}}

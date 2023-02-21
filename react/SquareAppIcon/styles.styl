@@ -1,0 +1,47 @@
+@require 'settings/breakpoints.styl'
+constants=json('constants.json', { hash: true })
+
+$iconSize = constants['iconSize']
+$iconPadding = constants['iconPadding']
+$mobileIconSize = constants['mobileIconSize']
+$mobileIconPadding = constants['mobileIconPadding']
+$color = constants['color'] // hard-coded color, because the component is currently only used in the Home
+
+.SquareAppIcon-wrapper
+    box-sizing border-box
+    background-color var(--paperBackgroundColor)
+    border-radius rem(12)
+    height $iconSize
+    width $iconSize
+    +small-screen()
+        height $mobileIconSize
+        width $mobileIconSize
+
+.SquareAppIcon-icon-container
+    display flex
+    align-items center
+    justify-content center
+    padding $iconPadding
+    border-radius rem(12)
+    width 100%
+    +small-screen()
+        padding $mobileIconPadding
+    svg, img
+        width 100%
+
+.SquareAppIcon-wrapper-fx
+    background-color alpha($color, .32)
+    border 1px dashed var(--white)
+    background-color alpha($color, .48)
+
+.SquareAppIcon-wrapper-ghost
+    .SquareAppIcon-icon-container
+        mix-blend-mode screen
+        svg, img
+            filter saturate(0%)
+
+.SquareAppIcon-wrapper-maintenance
+    .SquareAppIcon-icon-container
+        mix-blend-mode luminosity
+        svg, img
+            opacity .5

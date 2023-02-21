@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileInput component should pass props to the input 1`] = `
+<label
+  className="styles__c-file-input___YNZSh"
+  disabled={false}
+>
+  <span
+    aria-controls="file-input-123"
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    Click me
+  </span>
+  <input
+    accept="image/*"
+    hidden={true}
+    id="file-input-123"
+    multiple={false}
+    onChange={[Function]}
+    type="file"
+  />
+</label>
+`;
+
+exports[`FileInput component should render a default file selector 1`] = `
+<label
+  className="styles__c-file-input___YNZSh"
+  disabled={false}
+>
+  <input
+    hidden={false}
+    id="file-input-123"
+    multiple={false}
+    onChange={[Function]}
+    type="file"
+  />
+</label>
+`;
+
+exports[`FileInput component should render a disabled file selector 1`] = `
+<label
+  className="styles__c-file-input___YNZSh"
+  disabled={true}
+>
+  <span
+    aria-controls="file-input-123"
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    Click me
+  </span>
+  <input
+    hidden={true}
+    id="file-input-123"
+    multiple={false}
+    onChange={[Function]}
+    type="file"
+  />
+</label>
+`;
+
+exports[`FileInput component should render a file selector 1`] = `
+<label
+  className="styles__c-file-input___YNZSh"
+  disabled={false}
+>
+  <span
+    aria-controls="file-input-123"
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex={0}
+  >
+    Click me
+  </span>
+  <input
+    hidden={true}
+    id="file-input-123"
+    multiple={false}
+    onChange={[Function]}
+    type="file"
+  />
+</label>
+`;

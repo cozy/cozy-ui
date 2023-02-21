@@ -1,0 +1,63 @@
+@require '../settings/breakpoints'
+@require '../settings/z-index'
+@require '../utilities/display'
+@require '../tools/mixins'
+
+$selectionbar
+    position          fixed
+    z-index           $selection-index
+    top               0
+    left              0
+    box-sizing        border-box
+    display           flex
+    justify-content   center
+    align-items       center
+    width             100%
+    height            rem(52)
+    color             var(--white)
+    background-color  var(--slateGrey)
+    font-weight       bold
+
+    .SelectionBar-separator
+        margin            0 1rem 0 2rem
+        width             rem(4)
+        height            rem(4)
+        border-radius     50%
+        background-color  var(--black)
+
+    .SelectionBar-action
+        margin 0 .25rem
+        color var(--white)
+        &:hover
+            color var(--white)
+
+        &--withLabel
+            margin 0 .5rem
+
+        &--close
+            position absolute
+            top 50%
+            right 0
+            transform translateY(-50%)
+            margin 0 .5rem
+
+    +medium-screen()
+        &
+            top              auto
+            bottom           0
+            justify-content  flex-start
+            box-sizing       content-box
+            width            calc(100% - 2rem)
+            height           3rem
+            padding-left     1rem
+            padding-right    1rem
+            // iPhone X environment tweak
+            padding-bottom env(safe-area-inset-bottom)
+
+            .SelectionBar-separator
+                margin 0 0 0 1rem
+
+            .SelectionBar-action--close
+                top auto
+                transform none
+                margin 0 .5rem

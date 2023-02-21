@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app icon should not crash if no href 1`] = `
+<div>
+  <div>
+    <a>
+      Open 
+      Cozy Drive
+    </a>
+  </div>
+</div>
+`;
+
+exports[`app icon should render correctly 1`] = `
+<div>
+  <div>
+    <a
+      href="https://fake.link"
+    >
+      Open 
+      Cozy Drive
+    </a>
+  </div>
+</div>
+`;
