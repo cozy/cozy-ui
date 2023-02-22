@@ -1,3 +1,10 @@
+## [81.2.1](https://github.com/cozy/cozy-ui/compare/v81.2.0...v81.2.1) (2023-02-22)
+
+
+### Bug Fixes
+
+* ImageViewer crashes when render are too fast ([c9e7698](https://github.com/cozy/cozy-ui/commit/c9e7698))
+
 # [81.2.0](https://github.com/cozy/cozy-ui/compare/v81.1.0...v81.2.0) (2023-02-20)
 
 
