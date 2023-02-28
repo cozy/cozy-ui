@@ -1,3 +1,72 @@
+## [81.2.1](https://github.com/cozy/cozy-ui/compare/v81.2.0...v81.2.1) (2023-02-22)
+
+
+### Bug Fixes
+
+* ImageViewer crashes when render are too fast ([c9e7698](https://github.com/cozy/cozy-ui/commit/c9e7698))
+
+# [81.2.0](https://github.com/cozy/cozy-ui/compare/v81.1.0...v81.2.0) (2023-02-20)
+
+
+### Features
+
+* add new icon cloud sync ([9af423e](https://github.com/cozy/cozy-ui/commit/9af423e))
+
+# [81.1.0](https://github.com/cozy/cozy-ui/compare/v81.0.0...v81.1.0) (2023-02-14)
+
+
+### Features
+
+* Use bare directories instead of index files in specifiers ([00dd09e](https://github.com/cozy/cozy-ui/commit/00dd09e))
+
+# [81.0.0](https://github.com/cozy/cozy-ui/compare/v80.3.0...v81.0.0) (2023-02-13)
+
+
+### Features
+
+* Upgrade cozy-client from 34.8.0 to 35.2.0 ([3d1c855](https://github.com/cozy/cozy-ui/commit/3d1c855))
+* **Viewer:** Add support of contract type in enhanced viewer ([69ca4c8](https://github.com/cozy/cozy-ui/commit/69ca4c8))
+
+
+### BREAKING CHANGES
+
+* you must have `cozy-client >= 35.2.0`
+
+# [80.3.0](https://github.com/cozy/cozy-ui/compare/v80.2.1...v80.3.0) (2023-02-13)
+
+
+### Features
+
+* Show CAF file number and reference tax income in the viewer ([1431b3d](https://github.com/cozy/cozy-ui/commit/1431b3d))
+
+## [80.2.1](https://github.com/cozy/cozy-ui/compare/v80.2.0...v80.2.1) (2023-02-02)
+
+
+### Bug Fixes
+
+* **format:** FormatLocallyDistanceToNowStrict wasn't returning correct ([4fb7425](https://github.com/cozy/cozy-ui/commit/4fb7425))
+
+# [80.2.0](https://github.com/cozy/cozy-ui/compare/v80.1.1...v80.2.0) (2023-02-01)
+
+
+### Bug Fixes
+
+* **Viewer:** Add default value to calc to avoid undefined ([fd13e45](https://github.com/cozy/cozy-ui/commit/fd13e45))
+
+
+### Features
+
+* **Viewer:** Add componentsProps and support OnlyOfficeViewer inside ([bf205e1](https://github.com/cozy/cozy-ui/commit/bf205e1))
+* **Viewer:** Display content top when file from konnector ([070ab58](https://github.com/cozy/cozy-ui/commit/070ab58))
+
+## [80.1.1](https://github.com/cozy/cozy-ui/compare/v80.1.0...v80.1.1) (2023-01-27)
+
+
+### Bug Fixes
+
+* Allow overriding `Alert` classes ([62f18bf](https://github.com/cozy/cozy-ui/commit/62f18bf))
+* Make sure the message fills all the width available inside `Alert` ([2f0a608](https://github.com/cozy/cozy-ui/commit/2f0a608))
+
 # [80.1.0](https://github.com/cozy/cozy-ui/compare/v80.0.2...v80.1.0) (2023-01-25)
 
 
