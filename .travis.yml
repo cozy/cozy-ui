@@ -1,4 +1,5 @@
 language: node_js
+dist: jammy
 node_js:
   - 16
 cache:
@@ -8,28 +9,105 @@ cache:
 env:
   global:
     - PR_TITLE=$(curl https://github.com/${TRAVIS_REPO_SLUG}/pull/${TRAVIS_PULL_REQUEST} 2> /dev/null | grep "title" | head -1)
-script:
-  - yarn lint
-  - yarn build
-  - yarn build:css:all
-  - yarn build:doc:react
-  - yarn build:doc:kss
-  - yarn test
-  - |
-    if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
-      mkdir ./screenshots
-      yarn screenshots --mode react --viewport desktop --screenshot-dir ./screenshots/reactDesktop
-      yarn screenshots --mode react --viewport 300x600 --screenshot-dir ./screenshots/reactMobile
-      yarn screenshots --mode kss --screenshot-dir ./screenshots/kss
-      yarn argos:upload --parallel screenshots/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID
-      yarn argos:upload --parallel screenshots/reactMobile/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID
-      yarn argos:upload --parallel screenshots/kss/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID
-    fi
-  - yarn bundlemon
-deploy:
-  - provider: script
-    repo: cozy/cozy-ui
-    skip-cleanup: true
-    script: yarn deploy:doc -- --username cozycloud --email contact@cozycloud.cc --repo https://cozy-bot:$GH_TOKEN@github.com/cozy/cozy-ui.git && yarn semantic-release
-    on:
-      branch: master
+    - BUILD_TEMP_FILENAME=cozy-ui-tempbuild-${TRAVIS_BUILD_ID}.tar.gz
+stages:
+  - prebuild
+  - build
+  - postbuild
+  - deploy
+jobs:
+  include:
+    - name: 'Lint'
+      stage: 'prebuild'
+      script: yarn lint
+    - name: 'Sprite and Palette'
+      stage: 'prebuild'
+      script: yarn makeSpriteAndPalette
+      workspaces:
+        create:
+          name: sprite-palette-binaries
+          paths:
+            - ./react/Icon/icons-sprite.js
+            - ./react/palette.js
+    - name: 'Build JS'
+      stage: 'build'
+      script:
+        - yarn build
+      workspaces:
+        use:
+          - sprite-palette-binaries
+        create:
+          name: js-binaries
+          paths:
+            - ./transpiled
+    - name: 'Build CSS'
+      stage: 'build'
+      script:
+        - yarn build:css:all
+      workspaces:
+        create:
+          name: css-binaries
+          paths:
+            - ./dist
+    - name: 'Build docs'
+      stage: 'postbuild'
+      workspaces:
+        use:
+          - sprite-palette-binaries
+          - js-binaries
+          - css-binaries
+        create:
+          name: docs-binaries
+          paths:
+            - ./build
+      script:
+        - yarn build:doc:react
+        - yarn build:doc:kss
+    - name: 'Tests'
+      stage: 'postbuild'
+      workspaces:
+        use:
+          - sprite-palette-binaries
+          - js-binaries
+          - css-binaries
+      script:
+        - yarn test
+    - name: 'Argos'
+      stage: 'postbuild'
+      workspaces:
+        use:
+          - js-binaries
+          - css-binaries
+      script: |
+        if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
+          mkdir ./screenshots
+          yarn screenshots --mode react --viewport desktop --screenshot-dir ./screenshots/reactDesktop
+          yarn screenshots --mode react --viewport 300x600 --screenshot-dir ./screenshots/reactMobile
+          yarn screenshots --mode kss --screenshot-dir ./screenshots/kss
+          yarn argos:upload --parallel screenshots/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID
+          yarn argos:upload --parallel screenshots/reactMobile/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID
+          yarn argos:upload --parallel screenshots/kss/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID
+        fi
+    - name: 'Bundlemon'
+      stage: 'postbuild'
+      workspaces:
+        use:
+          - sprite-palette-binaries
+          - js-binaries
+          - css-binaries
+      script:
+        - yarn bundlemon
+    - name: 'Deploy'
+      stage: 'deploy'
+      workspaces:
+        use:
+          - sprite-palette-binaries
+          - js-binaries
+          - css-binaries
+          - docs-binaries
+      script: 'true'
+      deploy:
+        provider: script
+        script: yarn deploy:doc -- --username cozycloud --email contact@cozycloud.cc --repo https://cozy-bot:$GH_TOKEN@github.com/cozy/cozy-ui.git && yarn semantic-release
+        on:
+          branch: master

@@ -21,6 +21,7 @@ remark -o --use remark-jscodeshift=allowNoLang:true,transform:\"codemods/transfo
 
 ```bash
 # Screenshot all the components
+yarn makeSpriteAndPalette
 yarn build:doc:react
 yarn screenshots
 cp -r screenshots pristine_screenshots
