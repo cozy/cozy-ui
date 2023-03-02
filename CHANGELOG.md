@@ -1,3 +1,10 @@
+# [81.3.0](https://github.com/cozy/cozy-ui/compare/v81.2.1...v81.3.0) (2023-03-02)
+
+
+### Features
+
+* Add Mui Menu component ([2aa5f6b](https://github.com/cozy/cozy-ui/commit/2aa5f6b))
+
 ## [81.2.1](https://github.com/cozy/cozy-ui/compare/v81.2.0...v81.2.1) (2023-02-22)
 
 
