@@ -1,5 +1,6 @@
 module.exports = {
-  "branch": "master",
+  "branch": "next",
+  "tagFormat": "v${version}-next",
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",

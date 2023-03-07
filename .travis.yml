@@ -49,7 +49,7 @@ jobs:
           name: css-binaries
           paths:
             - ./dist
-    - name: 'Build docs'
+    - name: 'Fetch docs based on Muiv4 and Build Muiv5 docs'
       stage: 'postbuild'
       workspaces:
         use:
@@ -61,6 +61,9 @@ jobs:
           paths:
             - ./build
       script:
+        - mkdir build
+        - git-directory-deploy --directory build/ --branch gh-pages --ignore_removal --allow_empty
+        - rm -rf ./build/next
         - yarn build:doc:react
         - yarn build:doc:kss
     - name: 'Tests'
@@ -84,9 +87,9 @@ jobs:
           yarn screenshots --mode react --viewport desktop --screenshot-dir ./screenshots/reactDesktop
           yarn screenshots --mode react --viewport 300x600 --screenshot-dir ./screenshots/reactMobile
           yarn screenshots --mode kss --screenshot-dir ./screenshots/kss
-          yarn argos:upload --parallel screenshots/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID
-          yarn argos:upload --parallel screenshots/reactMobile/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID
-          yarn argos:upload --parallel screenshots/kss/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID
+          yarn argos:upload --parallel screenshots/next/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID
+          yarn argos:upload --parallel screenshots/next/reactMobile/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID
+          yarn argos:upload --parallel screenshots/next/kss/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID
         fi
     - name: 'Bundlemon'
       stage: 'postbuild'
@@ -110,4 +113,4 @@ jobs:
         provider: script
         script: yarn deploy:doc -- --username cozycloud --email contact@cozycloud.cc --repo https://cozy-bot:$GH_TOKEN@github.com/cozy/cozy-ui.git && yarn semantic-release
         on:
-          branch: master
+          branch: next

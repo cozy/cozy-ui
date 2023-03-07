@@ -313,7 +313,7 @@ module.exports = {
   }),
   serverPort: 6161,
   skipComponentsWithoutExample: true,
-  styleguideDir: path.resolve(__dirname, '../build/react'),
+  styleguideDir: path.resolve(__dirname, '../build/next/react'),
   require: [
     path.join(__dirname, './style.styl'),
     path.join(__dirname, './styleguide.setup')

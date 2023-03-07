@@ -22,14 +22,14 @@
     "build:css:all": "yarn build:css && yarn build:css:utils && yarn run removeEmptyCss",
     "build:css": "env CSSMODULES=false yarn run stylus-build -o dist/cozy-ui.min.css stylus/cozy-ui/build.styl",
     "build:css:utils": "env CSSMODULES=false yarn run stylus-build -o dist/cozy-ui.utils.min.css stylus/cozy-ui/utils.styl",
-    "build:css:kss": "env CSSMODULES=false yarn run stylus-build -o build/styleguide/app.css stylus/cozy-ui/build.styl",
+    "build:css:kss": "env CSSMODULES=false yarn run stylus-build -o build/next/styleguide/app.css stylus/cozy-ui/build.styl",
     "build:doc": "npm-run-all 'build:doc:*'",
     "build:doc:config": "copyfiles -u 1 docs/*.md docs/_config.yml build",
-    "build:doc:kss": "kss --destination build/styleguide --title 'Cozy-UI Styleguide' --source stylus --builder node_modules/michelangelo/kss_styleguide/custom-template --homepage stylus/styleguide.md --css app.css",
+    "build:doc:kss": "kss --destination build/next/styleguide --title 'Cozy-UI Styleguide' --source stylus --builder node_modules/michelangelo/kss_styleguide/custom-template --homepage stylus/styleguide.md --css app.css",
     "build:doc:react": "styleguidist build --config docs/styleguide.config.js",
     "build:types": "tsc -p tsconfig-build.json",
     "build": "yarn build:types && env BABEL_ENV=transpilation babel --extensions .ts,.tsx,.js,.jsx react/ --out-dir transpiled/react --verbose",
-    "clean:doc:kss": "rm -rf build/styleguide",
+    "clean:doc:kss": "rm -rf build/next/styleguide",
     "deploy:doc": "git-directory-deploy --directory build/ --branch gh-pages",
     "makeSvgr": "scripts/generate-svgr-icon.sh",
     "lint": "npm-run-all 'lint:*'",
@@ -39,13 +39,13 @@
     "palette": "scripts/make-palette.sh",
     "prebuild:css": "mkdir -p dist/ && stylus -C node_modules/normalize.css/normalize.css node_modules/normalize.css/normalize.styl",
     "prebuild:css:utils": "mkdir -p dist/",
-    "prebuild:css:kss": "mkdir -p build/styleguide && stylus -C node_modules/normalize.css/normalize.css node_modules/normalize.css/normalize.styl",
+    "prebuild:css:kss": "mkdir -p build/next/styleguide && stylus -C node_modules/normalize.css/normalize.css node_modules/normalize.css/normalize.styl",
     "prebuild:doc:kss": "run-s clean:doc:kss build:css:kss",
     "makeSpriteAndPalette": "npm-run-all --parallel sprite palette",
     "semantic-release": "semantic-release",
     "sprite": "scripts/make-icon-sprite.sh",
     "jest": "yarn test:jest",
-    "screenshots": "node scripts/screenshots.js --screenshot-dir ./screenshots --styleguide-url file://$(pwd)/build/react --kss-dir ./build/styleguide",
+    "screenshots": "node scripts/screenshots.js --screenshot-dir ./screenshots --styleguide-url file://$(pwd)/build/next/react --kss-dir ./build/next/styleguide",
     "test": "yarn test:jest",
     "test:update:expl": "yarn test react/examples.spec.jsx -u",
     "screenshots:server": "nodemon ./scripts/pixelmatch-server/server.js -e js,hbs",
@@ -55,7 +55,7 @@
     "start:css": "yarn build:css --watch",
     "prestart:doc": "yarn sprite",
     "start:doc": "env BUILD_ENV=watch-styleguidist styleguidist server --config docs/styleguide.config.js",
-    "start:doc:kss": "nodemon --ext styl,md --watch stylus --exec 'yarn build:doc:kss && http-server build/styleguide -p 4242'",
+    "start:doc:kss": "nodemon --ext styl,md --watch stylus --exec 'yarn build:doc:kss && http-server build/next/styleguide -p 4242'",
     "start": "yarn build --watch",
     "removeEmptyCss": "node scripts/removeEmptyCss.js",
     "optimizeIcons": "svgo -r --folder assets/icons"
@@ -208,5 +208,8 @@
   },
   "browserslist": [
     "extends browserslist-config-cozy"
-  ]
+  ],
+  "publishConfig": {
+    "tag": "next"
+  }
 }
