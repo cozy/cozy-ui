@@ -580,6 +580,7 @@ import BottomSelectIcon from 'cozy-ui/transpiled/react/Icons/BottomSelect'
 import CheckWhiteIcon from 'cozy-ui/transpiled/react/Icons/CheckWhite'
 import DashWhiteIcon from 'cozy-ui/transpiled/react/Icons/DashWhite'
 import KeychainIcon from 'cozy-ui/transpiled/react/Icons/Keychain'
+import CozyUpgradeIcon from 'cozy-ui/transpiled/react/Icons/CozyUpgrade'
 
 const icons = [
   CozyIcon,
@@ -614,6 +615,7 @@ const icons = [
   CheckWhiteIcon,
   DashWhiteIcon,
   KeychainIcon,
+  CozyUpgradeIcon
 ]
 
 const wrapperStyle = {
@@ -653,7 +655,7 @@ import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite'
 
-const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'device-phone', 'device-tablet', 'device-browser', 'file-type-audio', 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'file-type-banking-account' , 'forbidden-sign', 'google', 'logout-large', 'top-select', 'bottom-select', 'check-white', 'dash-white', 'keychain', 'contacts', 'papers', 'store']
+const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'device-phone', 'device-tablet', 'device-browser', 'file-type-audio', 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'file-type-banking-account' , 'forbidden-sign', 'google', 'logout-large', 'top-select', 'bottom-select', 'check-white', 'dash-white', 'keychain', 'contacts', 'papers', 'store', 'cozy-upgrade']
 
 ;
 
