@@ -1,0 +1,19 @@
+{
+  "onlyOfficePaywall": {
+    "premium": {
+      "title": "Reserved for the higher plan",
+      "content": "Your current offer does not allow you to take advantage of this feature. Please update your subscription.",
+      "action": "See packages"
+    },
+    "public": {
+      "title": "Information",
+      "content": "You cannot edit this file online. Please ask the document owner to update their Cozy subscription.",
+      "action": "I understood"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Your current offer does not allow you to take advantage of this feature. Please [contact us](mailto:%{mail}) to update your subscription.",
+      "action": "I understood"
+    }
+  }
+}
