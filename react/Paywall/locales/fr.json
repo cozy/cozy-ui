@@ -1,0 +1,19 @@
+{
+  "onlyOfficePaywall": {
+    "premium": {
+      "title": "Réservé au forfait supérieur",
+      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité. Merci de mettre à jour votre abonnement.",
+      "action": "Voir les forfaits"
+    },
+    "public": {
+      "title": "Information",
+      "content": "Vous ne pouvez pas éditer ce fichier en ligne. Merci de demander au propriétaire du document de mettre à jour son abonnement Cozy.",
+      "action": "J'ai compris"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité. Merci de [nous contacter](mailto:%{mail}) afin de mettre à jour votre abonnement.",
+      "action": "J'ai compris"
+    }
+  }
+}
