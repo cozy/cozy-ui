@@ -8,6 +8,28 @@ exports[`SquareAppIcon component should render an app correctly with the app nam
   <span
     class="MuiBadge-root MuiBadge-root css-1c32n2y-MuiBadge-root"
   >
+    <div
+      class="styles__c-spinner___1snK7 styles__SquareAppIcon-spinner___o0LO1"
+    >
+      <svg
+        aria-busy="true"
+        class="styles__icon___23x3R styles__icon--spin___ybfC1"
+        height="16"
+        role="progressbar"
+        style="fill: var(--spinnerColor);"
+        viewBox="0 0 32 32"
+        width="16"
+      >
+        <path
+          d="M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24"
+          opacity="0.25"
+        />
+        <path
+          d="M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z"
+        />
+      </svg>
+      
+    </div>
     <span
       class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-9 MuiBadge-root css-1c32n2y-MuiBadge-root"
     >
@@ -50,6 +72,28 @@ exports[`SquareAppIcon component should render an app correctly with the given n
   <span
     class="MuiBadge-root MuiBadge-root css-1c32n2y-MuiBadge-root"
   >
+    <div
+      class="styles__c-spinner___1snK7 styles__SquareAppIcon-spinner___o0LO1"
+    >
+      <svg
+        aria-busy="true"
+        class="styles__icon___23x3R styles__icon--spin___ybfC1"
+        height="16"
+        role="progressbar"
+        style="fill: var(--spinnerColor);"
+        viewBox="0 0 32 32"
+        width="16"
+      >
+        <path
+          d="M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24"
+          opacity="0.25"
+        />
+        <path
+          d="M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z"
+        />
+      </svg>
+      
+    </div>
     <span
       class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-3 MuiBadge-root css-1c32n2y-MuiBadge-root"
     >
@@ -92,6 +136,28 @@ exports[`SquareAppIcon component should render an app with the app slug if no na
   <span
     class="MuiBadge-root MuiBadge-root css-1c32n2y-MuiBadge-root"
   >
+    <div
+      class="styles__c-spinner___1snK7 styles__SquareAppIcon-spinner___o0LO1"
+    >
+      <svg
+        aria-busy="true"
+        class="styles__icon___23x3R styles__icon--spin___ybfC1"
+        height="16"
+        role="progressbar"
+        style="fill: var(--spinnerColor);"
+        viewBox="0 0 32 32"
+        width="16"
+      >
+        <path
+          d="M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24"
+          opacity="0.25"
+        />
+        <path
+          d="M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z"
+        />
+      </svg>
+      
+    </div>
     <span
       class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-15 MuiBadge-root css-1c32n2y-MuiBadge-root"
     >
@@ -364,6 +430,28 @@ exports[`SquareAppIcon component should render correctly an app with custom cont
   <span
     class="MuiBadge-root MuiBadge-root css-1c32n2y-MuiBadge-root"
   >
+    <div
+      class="styles__c-spinner___1snK7 styles__SquareAppIcon-spinner___o0LO1"
+    >
+      <svg
+        aria-busy="true"
+        class="styles__icon___23x3R styles__icon--spin___ybfC1"
+        height="16"
+        role="progressbar"
+        style="fill: var(--spinnerColor);"
+        viewBox="0 0 32 32"
+        width="16"
+      >
+        <path
+          d="M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24"
+          opacity="0.25"
+        />
+        <path
+          d="M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z"
+        />
+      </svg>
+      
+    </div>
     <span
       class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-57 MuiBadge-root css-1c32n2y-MuiBadge-root"
     >
