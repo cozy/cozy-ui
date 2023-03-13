@@ -1,3 +1,18 @@
+# [81.4.0](https://github.com/cozy/cozy-ui/compare/v81.3.0...v81.4.0) (2023-03-13)
+
+
+### Bug Fixes
+
+* CI wasn't deploying during deploy job ([3b967ca](https://github.com/cozy/cozy-ui/commit/3b967ca))
+
+
+### Features
+
+* Add CozyUpgrade illustration ([25821e1](https://github.com/cozy/cozy-ui/commit/25821e1))
+* Add OnlyOfficePaywall ([ad344d5](https://github.com/cozy/cozy-ui/commit/ad344d5))
+* Add state on useInstance ([9aa68fc](https://github.com/cozy/cozy-ui/commit/9aa68fc))
+* Remove codemods, use theme from `@cozy/codemods` instead ([a6502e8](https://github.com/cozy/cozy-ui/commit/a6502e8))
+
 # [81.3.0](https://github.com/cozy/cozy-ui/compare/v81.2.1...v81.3.0) (2023-03-02)
 
 
