@@ -8,6 +8,7 @@ import AppIcon from '../AppIcon'
 import Badge from '../Badge'
 import InfosBadge from '../InfosBadge'
 import { nameToColor } from '../Avatar'
+import Spinner from '../Spinner'
 import Typography from '../Typography'
 import Icon from '../Icon'
 import iconPlus from '../Icons/Plus'
@@ -81,6 +82,9 @@ export const SquareAppIcon = ({
         overlap="rectangular"
         invisible={variant !== 'shortcut'}
       >
+        {['default', 'loading'].includes(variant) && (
+          <Spinner className={styles['SquareAppIcon-spinner']} />
+        )}
         <Badge
           className={cx(
             styles['SquareAppIcon-wrapper'],
@@ -145,6 +149,8 @@ export const SquareAppIcon = ({
 SquareAppIcon.propTypes = {
   name: PropTypes.string,
   variant: PropTypes.oneOf([
+    'default',
+    'loading',
     'ghost',
     'maintenance',
     'error',
@@ -152,6 +158,10 @@ SquareAppIcon.propTypes = {
     'shortcut'
   ]),
   IconContent: PropTypes.node
+}
+
+SquareAppIcon.defaultProps = {
+  variant: 'default'
 }
 
 export default SquareAppIcon

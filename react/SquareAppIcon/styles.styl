@@ -13,6 +13,8 @@ $color = constants['color'] // hard-coded color, because the component is curren
     border-radius rem(12)
     height $iconSize
     width $iconSize
+    transition transform 300ms, border-radius 300ms
+
     +small-screen()
         height $mobileIconSize
         width $mobileIconSize
@@ -45,3 +47,15 @@ $color = constants['color'] // hard-coded color, because the component is curren
         mix-blend-mode luminosity
         svg, img
             opacity .5
+
+.SquareAppIcon-wrapper-loading
+    border-radius 50%
+    transform scale(0.875)
+    +small-screen()
+        transform scale(0.8334)
+
+.SquareAppIcon-spinner
+    svg
+        position absolute
+        height 100%
+        width 100%
