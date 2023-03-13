@@ -108,6 +108,7 @@ jobs:
       script: 'true'
       deploy:
         provider: script
+        skip-cleanup: true
         script: yarn deploy:doc -- --username cozycloud --email contact@cozycloud.cc --repo https://cozy-bot:$GH_TOKEN@github.com/cozy/cozy-ui.git && yarn semantic-release
         on:
           branch: master
