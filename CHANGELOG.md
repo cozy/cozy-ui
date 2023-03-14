@@ -1,3 +1,10 @@
+# [81.5.0](https://github.com/cozy/cozy-ui/compare/v81.4.0...v81.5.0) (2023-03-14)
+
+
+### Features
+
+* Add `loading` variant to SquareAppIcon ([f72b657](https://github.com/cozy/cozy-ui/commit/f72b657))
+
 # [81.4.0](https://github.com/cozy/cozy-ui/compare/v81.3.0...v81.4.0) (2023-03-13)
 
 
