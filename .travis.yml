@@ -63,7 +63,7 @@ jobs:
       script:
         - yarn build:doc:react
         - yarn build:doc:kss
-    - name: 'Tests'
+    - name: 'Tests without snapshots'
       stage: 'postbuild'
       workspaces:
         use:
@@ -71,7 +71,16 @@ jobs:
           - js-binaries
           - css-binaries
       script:
-        - yarn test
+        - yarn test:noSnapshots
+    - name: 'Tests snapshots'
+      stage: 'postbuild'
+      workspaces:
+        use:
+          - sprite-palette-binaries
+          - js-binaries
+          - css-binaries
+      script:
+        - yarn test:snapshots
     - name: 'Argos'
       stage: 'postbuild'
       workspaces:
