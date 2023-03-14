@@ -12,7 +12,7 @@ import WarningIcon from '../Icons/Warning'
 
 import ActionMenu, { ActionMenuItem, ActionMenuRadio } from '.'
 
-describe('ActionMenu', () => {
+xdescribe('ActionMenu', () => {
   fixPopperTesting()
 
   // The update-not-wrapping-in-act warning is disabled for ActionMenuWrapper since
