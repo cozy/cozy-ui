@@ -1,1 +1,1 @@
-Re-export of @material-ui. See [the official API](https://v4.mui.com/components/skeleton/).
+Re-export of @material-ui. See [the official API](https://mui.com/material-ui/components/skeleton/).

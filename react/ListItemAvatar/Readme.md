@@ -1,1 +1,1 @@
-Re-export of @material-ui. See [the official API](https://v4.mui.com/api/List-item-avatar/).
+Re-export of @material-ui. See [the official API](https://mui.com/material-ui/api/List-item-avatar/).
