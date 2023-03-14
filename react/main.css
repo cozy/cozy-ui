@@ -26631,6 +26631,7 @@ html {
   border-radius: 0.75rem;
   height: 4rem;
   width: 4rem;
+  transition: transform 300ms, border-radius 300ms;
 }
 @media (max-width: 48rem) {
   .SquareAppIcon-wrapper--2SEuM {
@@ -26673,6 +26674,20 @@ html {
 .SquareAppIcon-wrapper-maintenance--2ne2n .SquareAppIcon-icon-container--39MRl svg,
 .SquareAppIcon-wrapper-maintenance--2ne2n .SquareAppIcon-icon-container--39MRl img {
   opacity: 0.5;
+}
+.SquareAppIcon-wrapper-loading--3A1_X {
+  border-radius: 50%;
+  transform: scale(0.875);
+}
+@media (max-width: 48rem) {
+  .SquareAppIcon-wrapper-loading--3A1_X {
+    transform: scale(0.8334);
+  }
+}
+.SquareAppIcon-spinner--o0LO1 svg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .Sections__section--2onYy {
