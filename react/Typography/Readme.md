@@ -1,6 +1,6 @@
 Use typographic components to have sensible defaults for text content. The typography variants naming is based on material design.
 
-Read the original [Typography component](https://v4.mui.com/components/typography/) documentation for more information.
+Read the original [Typography component](https://mui.com/material-ui/components/typography/) documentation for more information.
 
 ```jsx
 import Typography from 'cozy-ui/transpiled/react/Typography'

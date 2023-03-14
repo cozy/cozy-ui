@@ -11,7 +11,7 @@ CSS classes and React components designed to build [Cozy](https://cozy.io/) apps
 
 If you plan to build a webapp to run on Cozy, you'll probably want to use a simple and elegant solution to build your interfaces without the mess of dealing with complex markup and CSS. Then Cozy UI is here for you!
 
-Cozy UI relies heavily on [Material UI v4](https://v4.mui.com/) and it can be useful to know how it works.
+Cozy UI relies heavily on [Material UI](https://mui.com/) and it can be useful to know how it works.
 
 ## React components (styleguidist)
 

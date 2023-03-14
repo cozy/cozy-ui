@@ -1,7 +1,7 @@
 ### Usage
 
 This component is imported from MUI and has the same API.
-Read the original [Tooltip component](https://v4.mui.com/api/tooltip/)
+Read the original [Tooltip component](https://mui.com/material-ui/api/tooltip/)
 documentation for more information.
 
 ```jsx

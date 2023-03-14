@@ -1,4 +1,4 @@
-A divider can be used when you want to separate the content. See [Mui documentation](https://v4.mui.com/api/divider/).
+A divider can be used when you want to separate the content. See [Mui documentation](https://mui.com/material-ui/api/divider/).
 
 Vertical division
 
