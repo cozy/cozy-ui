@@ -73,7 +73,14 @@
             "country": "Pays de délivrance",
             "refTaxIncome": "Revenu fiscal de référence",
             "contractType": "Type de contat",
-            "noticePeriod": "Alerte d’expiration"
+            "noticePeriod": "Alerte d’expiration",
+
+            "number": "Numéro du permis",
+            "cafFileNumber": "Numéro de dossier CAF",
+            "cardNumber": "Numéro de la carte d'identité",
+            "vinNumber": "Numéro de la carte grise (VIN)",
+            "ibanNumber": "Numéro d'IBAN",
+            "passportNumber": "Numéro du passeport"
           },
           "day": "jour |||| jours"
         },

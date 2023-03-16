@@ -73,7 +73,14 @@
             "country": "Country of delivery",
             "refTaxIncome": "Reference tax income",
             "contractType": "Contract type",
-            "noticePeriod": "Expiration alert"
+            "noticePeriod": "Expiration alert",
+
+            "number": "License number",
+            "cafFileNumber": "CAF file number",
+            "cardNumber": "National ID card number",
+            "vinNumber": "Vehicle registration number (VIN)",
+            "ibanNumber": "IBAN number",
+            "passportNumber": "Passport number"
           },
           "day": "day |||| days"
         },
