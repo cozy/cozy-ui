@@ -12,9 +12,6 @@ import {
 
 const fakeMetadata = {
   number: '111111',
-  cardNumber: '222222',
-  vinNumber: '333333',
-  ibanNumber: '444444',
   AObtentionDate: '2029-12-01T23:00:00.000Z',
   BObtentionDate: '2029-12-02T23:00:00.000Z',
   CObtentionDate: '2029-12-03T23:00:00.000Z',
@@ -41,9 +38,6 @@ const computedMetadata = [
   { name: 'shootingDate', value: '2029-12-08T23:00:00.000Z' },
   { name: 'date', value: '2029-12-09T23:00:00.000Z' },
   { name: 'number', value: '111111' },
-  { name: 'cardNumber', value: '222222' },
-  { name: 'vinNumber', value: '333333' },
-  { name: 'ibanNumber', value: '444444' },
   { name: 'contact', value: 'Alice Durand' },
   { name: 'page', value: 'front' },
   { name: 'qualification', value: 'fake_label' }
@@ -98,16 +92,16 @@ describe('helpers', () => {
       const buildInformationPath = buildEditAttributePath(
         editPathByModelProps,
         'information',
-        'cardNumber'
+        'number'
       )
       const buildPagePath = buildEditAttributePath(
         editPathByModelProps,
         'page',
-        'cardNumber'
+        'number'
       )
 
       expect(buildInformationPath).toBe(
-        '#/paper/edit/information/01?metadata=cardNumber&backgroundPath=$/path'
+        '#/paper/edit/information/01?metadata=number&backgroundPath=$/path'
       )
       expect(buildPagePath).toBe('#/paper/edit/page/01?backgroundPath=/path')
     })
@@ -126,12 +120,12 @@ describe('helpers', () => {
         )
         expect(issueDate).toBe(false)
       })
-      it('"cardNumber" should be an editable attribute', () => {
-        const cardNumber = isEditableAttribute(
-          'cardNumber',
+      it('"number" should be an editable attribute', () => {
+        const number = isEditableAttribute(
+          'number',
           makeFile({ fromConnector: true })
         )
-        expect(cardNumber).toBe(true)
+        expect(number).toBe(true)
       })
       it('"datetime" should not be an editable attribute', () => {
         const datetime = isEditableAttribute('datetime', makeFile())
@@ -147,9 +141,9 @@ describe('helpers', () => {
         const issueDate = isEditableAttribute('issueDate', makeFile())
         expect(issueDate).toBe(true)
       })
-      it('"cardNumber" should be a editable attribute', () => {
-        const cardNumber = isEditableAttribute('cardNumber', makeFile())
-        expect(cardNumber).toBe(true)
+      it('"number" should be a editable attribute', () => {
+        const number = isEditableAttribute('number', makeFile())
+        expect(number).toBe(true)
       })
       it('"datetime" should not be an editable attribute', () => {
         const datetime = isEditableAttribute('datetime', makeFile())
