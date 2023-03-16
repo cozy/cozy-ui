@@ -37,17 +37,24 @@ export const makeInformationValue = ({ name, value, t, scannerT }) => {
 }
 
 const QualificationListItemInformation = forwardRef(
-  ({ formatedMetadataQualification, toggleActionsMenu }, ref) => {
+  ({ formatedMetadataQualification, file, toggleActionsMenu }, ref) => {
     const { t, lang } = useI18n()
     const scannerT = getBoundT(lang)
     const { name, value } = formatedMetadataQualification
+    const qualificationLabel = file.metadata.qualification.label
 
     const currentValue = makeInformationValue({ name, value, t, scannerT })
+    const title =
+      name === 'number'
+        ? t(
+            `Viewer.panel.qualification.information.title.${qualificationLabel}.${name}`
+          )
+        : t(`Viewer.panel.qualification.information.title.${name}`)
 
     return (
       <ListItem className={'u-pl-2 u-pr-3'}>
         <QualificationListItemText
-          primary={t(`Viewer.panel.qualification.information.title.${name}`)}
+          primary={title}
           secondary={currentValue}
           disabled={!value}
         />
