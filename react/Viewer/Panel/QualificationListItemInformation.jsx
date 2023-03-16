@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 
 import { getBoundT } from 'cozy-client/dist/models/document/locales'
+import flag from 'cozy-flags'
 
 import ListItem from '../../MuiCozyTheme/ListItem'
 import ListItemSecondaryAction from '../../MuiCozyTheme/ListItemSecondaryAction'
@@ -39,7 +40,7 @@ const QualificationListItemInformation = forwardRef(
 
     const currentValue = makeInformationValue({ name, value, t, scannerT })
     const title =
-      name === 'number'
+      name === 'number' && flag('mespapiers.migrated.metadata') // TODO Remove duplicate translations when remove this flag
         ? t(
             `Viewer.panel.qualification.information.title.${qualificationLabel}.${name}`
           )
