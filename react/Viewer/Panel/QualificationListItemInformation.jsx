@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 
-import { models } from 'cozy-client'
+import { getBoundT } from 'cozy-client/dist/models/document/locales'
 
 import ListItem from '../../MuiCozyTheme/ListItem'
 import ListItemSecondaryAction from '../../MuiCozyTheme/ListItemSecondaryAction'
@@ -11,12 +11,6 @@ import Dots from '../../Icons/Dots'
 import QualificationListItemText from './QualificationListItemText'
 import { useI18n } from '../../I18n'
 import MidEllipsis from '../../MidEllipsis'
-
-const {
-  document: {
-    locales: { getBoundT }
-  }
-} = models
 
 export const makeInformationValue = ({ name, value, t, scannerT }) => {
   if (!value) {
