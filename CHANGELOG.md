@@ -1,3 +1,10 @@
+# [81.6.0](https://github.com/cozy/cozy-ui/compare/v81.5.0...v81.6.0) (2023-03-17)
+
+
+### Features
+
+* Add a flag around the attribute migration feature... ([93790ce](https://github.com/cozy/cozy-ui/commit/93790ce))
+
 # [81.5.0](https://github.com/cozy/cozy-ui/compare/v81.4.0...v81.5.0) (2023-03-14)
 
 
