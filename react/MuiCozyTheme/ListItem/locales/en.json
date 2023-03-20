@@ -1,0 +1,62 @@
+{
+  "ListItem": {
+    "attributes": {
+      "birthday": "Birthday",
+      "address": "Address",
+      "email": "Email address",
+      "phone": "Phone number",
+      "metadata": {
+        "datetime": "Added on",
+        "AObtentionDate": "License A, delivered on",
+        "BObtentionDate": "License B, delivered on",
+        "CObtentionDate": "License C, delivered on",
+        "DObtentionDate": "License D, delivered on",
+        "issueDate": "Delivered on",
+        "expirationDate": "Expiration date",
+        "referencedDate": "Referenced date",
+        "shootingDate": "Shooting date",
+        "obtentionDate": "Date obtained",
+        "date": "Document date",
+        "country": "Country of delivery",
+        "refTaxIncome": "Reference tax income",
+        "contractType": "Contract type",
+        "noticePeriod": "Expiration alert",
+        "number": {
+          "driver_license": "License number",
+          "caf": "CAF file number",
+          "vehicle_registration": "Vehicle registration number (VIN)",
+          "national_id_card": "National ID card number",
+          "bank_details": "IBAN number",
+          "passport": "Passport number"
+        }
+      }
+    },
+    "contact": {
+      "birthday": "Birthday",
+      "actions": {
+        "copy": "Copy",
+        "delete": "Delete"
+      }
+    },
+    "file": {
+      "expired": "Expired",
+      "expiresIn": "Expires in %{duration}",
+      "page": {
+        "back": "Back side",
+        "front": "Front side"
+      }
+    },
+    "snackbar": {
+      "copyToClipboard": {
+        "success": "Copied to clipboard",
+        "error": "Cannot copy to clipboard"
+      }
+    },
+    "renameModal": {
+      "title": "Rename",
+      "content": "You are about to change the file extension. Do you want to continue?",
+      "cancel": "Cancel",
+      "submit": "Continue"
+    }
+  }
+}
