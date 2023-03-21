@@ -6,13 +6,13 @@ context.
 
 ```jsx
 import { Component } from 'react'
-import Breadcrumbs from 'cozy-ui/transpiled/react/Breadcrumbs';
-import Icon from 'cozy-ui/transpiled/react/Icon';
+import Breadcrumbs from 'cozy-ui/transpiled/react/Breadcrumbs'
+import Icon from 'cozy-ui/transpiled/react/Icon'
 import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
 import FolderIcon from 'cozy-ui/transpiled/react/Icons/Folder'
 
 const items = [
-  { 
+  {
     name: 'Joe Hisaishi',
     items: [
       {
@@ -24,7 +24,7 @@ const items = [
       }
     ]
   },
-  { name: 'Rodrigo y Gabriella', 
+  { name: 'Rodrigo y Gabriella',
     items: [
       { name: 'Hanuman' },
       { name: 'Tamacun' }
@@ -79,6 +79,8 @@ class Example extends Component {
     </div>
   }
 }
+
+;
 
 <>
   <Example />
