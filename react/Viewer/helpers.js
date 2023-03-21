@@ -1,4 +1,6 @@
 import { models } from 'cozy-client'
+import flag from 'cozy-flags'
+
 const {
   isEncrypted,
   isFromKonnector,
@@ -19,13 +21,22 @@ export const knownDateMetadataNames = [
   'date',
   'datetime'
 ]
-export const knownInformationMetadataNames = [
-  'number',
-  'country',
-  'refTaxIncome',
-  'contractType',
-  'noticePeriod'
-]
+export const knownInformationMetadataNames = flag(
+  'mespapiers.migrated.metadata'
+)
+  ? ['number', 'country', 'refTaxIncome', 'contractType', 'noticePeriod']
+  : [
+      'number',
+      'cafFileNumber',
+      'cardNumber',
+      'vinNumber',
+      'ibanNumber',
+      'country',
+      'passportNumber',
+      'refTaxIncome',
+      'contractType',
+      'noticePeriod'
+    ]
 export const knownOtherMetadataNames = ['contact', 'page', 'qualification']
 
 export const getCurrentModel = metadataName => {
