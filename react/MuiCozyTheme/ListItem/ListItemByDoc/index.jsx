@@ -14,8 +14,8 @@ const ListItemByDoc = ({
   expandedAttributesProps,
   onClick
 }) => {
-  switch (true) {
-    case doc._type === 'io.cozy.contacts':
+  switch (doc._type) {
+    case 'io.cozy.contacts':
       return (
         <ListItemContact
           contact={doc}
@@ -29,7 +29,7 @@ const ListItemByDoc = ({
         />
       )
 
-    case doc._type === 'io.cozy.files':
+    case 'io.cozy.files':
       return (
         <ListItemFile
           file={doc}
