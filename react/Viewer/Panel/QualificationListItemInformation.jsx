@@ -14,7 +14,7 @@ import { useI18n } from '../../I18n'
 import MidEllipsis from '../../MidEllipsis'
 
 export const makeInformationValue = ({ name, value, t, scannerT }) => {
-  if (!value) {
+  if (typeof value !== 'number' && !value) {
     return t('Viewer.panel.qualification.noInfo')
   }
 
@@ -23,12 +23,11 @@ export const makeInformationValue = ({ name, value, t, scannerT }) => {
       smart_count: value
     })}`
   }
-
   if (name === 'contractType') {
     return scannerT(`Scan.attributes.contractType.${value}`)
   }
 
-  return <MidEllipsis text={value} />
+  return <MidEllipsis text={`${value}`} />
 }
 
 const QualificationListItemInformation = forwardRef(
@@ -73,7 +72,7 @@ QualificationListItemInformation.displayName = 'QualificationListItemNumber'
 QualificationListItemInformation.propTypes = {
   formatedMetadataQualification: PropTypes.shape({
     name: PropTypes.string,
-    value: PropTypes.string
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
   }).isRequired,
   toggleActionsMenu: PropTypes.func.isRequired
 }

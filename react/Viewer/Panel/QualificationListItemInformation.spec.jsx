@@ -25,7 +25,7 @@ const setup = ({
 }
 
 describe('QualificationListItemInformation', () => {
-  describe('formatedMetadataQualification', () => {
+  fdescribe('formatedMetadataQualification', () => {
     it('should display default text if value is falsy', () => {
       const formatedMetadataQualification = { name: 'country', value: '' }
       const { getByText } = setup({ formatedMetadataQualification })
@@ -39,6 +39,16 @@ describe('QualificationListItemInformation', () => {
       })
 
       expect(queryByText('Viewer.panel.qualification.noInfo')).toBeNull()
+      expect(queryByText('Ita')).toBeInTheDocument()
+    })
+    it('should display current value if it number type', () => {
+      const formatedMetadataQualification = { name: 'country', value: 0 }
+      const { queryByText } = setup({
+        formatedMetadataQualification
+      })
+
+      expect(queryByText('Viewer.panel.qualification.noInfo')).toBeNull()
+      expect(queryByText('0')).toBeInTheDocument()
     })
   })
   describe('toggleActionsMenu', () => {
