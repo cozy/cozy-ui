@@ -52,13 +52,25 @@
         },
         "information": {
           "title": {
-            "number": "Numéro du permis",
-            "cafFileNumber": "Numéro de dossier CAF",
-            "cardNumber": "Numéro de la carte d'identité",
-            "vinNumber": "Numéro de la carte grise (VIN)",
-            "ibanNumber": "Numéro d'IBAN",
+            "caf": {
+              "number": "Numéro de dossier CAF"
+            },
+            "vehicle_registration": {
+              "number": "Numéro de la carte grise (VIN)"
+            },
+            "national_id_card": {
+              "number": "Numéro de la carte d'identité"
+            },
+            "bank_details": {
+              "number": "Numéro d'IBAN"
+            },
+            "passport": {
+              "number": "Numéro du passeport"
+            },
+            "driver_license": {
+              "number": "Numéro du permis"
+            },
             "country": "Pays de délivrance",
-            "passportNumber": "Numéro du passeport",
             "refTaxIncome": "Revenu fiscal de référence",
             "contractType": "Type de contat",
             "noticePeriod": "Alerte d’expiration"

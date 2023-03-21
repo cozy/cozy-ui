@@ -16,6 +16,9 @@ const setup = ({
       <QualificationListItemInformation
         formatedMetadataQualification={formatedMetadataQualification}
         toggleActionsMenu={toggleActionsMenu}
+        file={{
+          metadata: { qualification: { label: 'label_of_qualification' } }
+        }}
       />
     </DemoProvider>
   )
