@@ -18,7 +18,7 @@ const ListItemContact = ({
   onClick
 }) => {
   const primaryText = primary || contact.displayName
-  const secondaryText = secondary || contact.email[0].address
+  const secondaryText = secondary || contact.email?.[0]?.address
   const itemIcon = icon || <Icon icon={ContactsIcon} width="32" height="32" />
 
   const itemExpandedAttributes = makeDefaultExpandedAttributes(
