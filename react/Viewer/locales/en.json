@@ -52,13 +52,25 @@
         },
         "information": {
           "title": {
-            "number": "License number",
-            "cafFileNumber": "CAF file number",
-            "cardNumber": "National ID card number",
-            "vinNumber": "Vehicle registration number (VIN)",
-            "ibanNumber": "IBAN number",
+            "caf": {
+              "number": "CAF file number"
+            },
+            "vehicle_registration": {
+              "number": "Vehicle registration number (VIN)"
+            },
+            "national_id_card": {
+              "number": "National ID card number"
+            },
+            "bank_details": {
+              "number": "IBAN number"
+            },
+            "passport": {
+              "number": "Passport number"
+            },
+            "driver_license": {
+              "number": "License number"
+            },
             "country": "Country of delivery",
-            "passportNumber": "Passport number",
             "refTaxIncome": "Reference tax income",
             "contractType": "Contract type",
             "noticePeriod": "Expiration alert"
