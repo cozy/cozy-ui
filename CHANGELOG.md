@@ -1,3 +1,10 @@
+## [81.6.1](https://github.com/cozy/cozy-ui/compare/v81.6.0...v81.6.1) (2023-03-21)
+
+
+### Bug Fixes
+
+* QualificationListItemInformation component ([2698d9f](https://github.com/cozy/cozy-ui/commit/2698d9f))
+
 # [81.6.0](https://github.com/cozy/cozy-ui/compare/v81.5.0...v81.6.0) (2023-03-17)
 
 
