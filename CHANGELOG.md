@@ -1,3 +1,10 @@
+# [81.7.0](https://github.com/cozy/cozy-ui/compare/v81.6.1-next...v81.7.0-next) (2023-03-21)
+
+
+### Features
+
+* Fake feat to trigger deploy ([87ae9a0](https://github.com/cozy/cozy-ui/commit/87ae9a0))
+
 ## [81.6.1](https://github.com/cozy/cozy-ui/compare/v81.6.0...v81.6.1) (2023-03-21)
 
 
