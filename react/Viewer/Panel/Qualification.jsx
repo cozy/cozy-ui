@@ -1,7 +1,7 @@
 import React, { useRef, useState, createRef, useMemo, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-import { models } from 'cozy-client'
+import { isExpiringSoon } from 'cozy-client/dist/models/paper'
 
 import List from '../../MuiCozyTheme/List'
 import { withViewerLocales } from '../hoc/withViewerLocales'
@@ -17,8 +17,6 @@ import ActionMenuWrapper from './ActionMenuWrapper'
 import QualificationListItemDate from './QualificationListItemDate'
 import QualificationListItemInformation from './QualificationListItemInformation'
 import QualificationListItemOther from './QualificationListItemOther'
-
-const { isExpiringSoon } = models.paper
 
 const makeQualificationListItemComp = metadataName => {
   if (knownDateMetadataNames.includes(metadataName)) {
