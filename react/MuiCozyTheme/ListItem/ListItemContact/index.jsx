@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import Filename from '../../../Filename'
 import Icon from '../../../Icon'
 import ContactsIcon from '../../../Icons/Contacts'
 import ListItemBase from '../ListItemBase'
@@ -36,6 +37,9 @@ const ListItemContact = ({
       secondary={secondaryText}
       icon={itemIcon}
       actions={itemActions}
+      actionMenuComp={{
+        Header: <Filename icon={ContactsIcon} filename={primaryText} />
+      }}
       selectProps={selectProps}
       expandedAttributesProps={{
         isExpandedAttributesActive,
