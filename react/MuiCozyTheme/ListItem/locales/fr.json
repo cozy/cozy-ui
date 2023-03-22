@@ -1,5 +1,12 @@
 {
   "ListItem": {
+    "actions": {
+      "viewInContacts": "Voir dans Cozy Contacts",
+      "modify": "Modifier",
+      "emailTo": "Envoyer un e-mail",
+      "smsTo": "Envoyer un message",
+      "call": "Appeler"
+    },
     "attributes": {
       "birthday": "Date de naissance",
       "address": "Adresse",
@@ -29,12 +36,6 @@
           "bank_details": "Numéro d'IBAN",
           "passport": "Numéro du passeport"
         }
-      }
-    },
-    "contact": {
-      "actions": {
-        "copy": "Copier",
-        "delete": "Supprimer"
       }
     },
     "file": {

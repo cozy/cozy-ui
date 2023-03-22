@@ -296,17 +296,26 @@ const mockClient = {
       unsubscribe: () => {},
       unsubscribeAll: () => {}
     }
-  }
+  },
+  getStackClient: () => ({
+    uri: 'https://cozy.io/'
+  }),
+  getInstanceOptions: () => ({
+    subdomain: ''
+  })
 }
 
 const contacts = [
   {
+    _id: 'id01',
     _type: 'io.cozy.contacts',
     displayName: 'John Doe',
     birthday: '25/10/2022',
-    email: [{ address: 'johndoe@cozy.cc', primary: true }]
+    email: [{ address: 'johndoe@cozy.cc', primary: true }],
+    phone: [{ number: '0102030405', primary: true }]
   },
   {
+    _id: 'id02',
     _type: 'io.cozy.contacts',
     displayName: 'Jason Bourne',
     birthday: '01/01/2020',
