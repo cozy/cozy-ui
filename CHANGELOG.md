@@ -1,3 +1,10 @@
+# [81.8.0](https://github.com/cozy/cozy-ui/compare/v81.7.0...v81.8.0) (2023-03-22)
+
+
+### Features
+
+* Fake commit to trigger CI deployment ([ea46474](https://github.com/cozy/cozy-ui/commit/ea46474))
+
 # [81.7.0](https://github.com/cozy/cozy-ui/compare/v81.6.1...v81.7.0) (2023-03-22)
 
 
