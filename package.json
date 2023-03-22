@@ -211,6 +211,6 @@
     "extends browserslist-config-cozy"
   ],
   "publishConfig": {
-    "tag": "next"
+    "tag": "muiv5"
   }
 }
