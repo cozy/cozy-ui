@@ -1,3 +1,17 @@
+# [81.7.0](https://github.com/cozy/cozy-ui/compare/v81.6.1...v81.7.0) (2023-03-22)
+
+
+### Features
+
+* Fake commit to trigger CI deployment ([149531b](https://github.com/cozy/cozy-ui/commit/149531b))
+* **ListItem:** Add ExpandedAttributes comp ([93c0471](https://github.com/cozy/cozy-ui/commit/93c0471))
+* **ListItem:** Add ListItemBase and its logic ([fd094e0](https://github.com/cozy/cozy-ui/commit/fd094e0))
+* **ListItem:** Add ListItemContact based on ListItemBase ([8138158](https://github.com/cozy/cozy-ui/commit/8138158))
+* **ListItem:** Add ListItemDoc ([6972163](https://github.com/cozy/cozy-ui/commit/6972163))
+* **ListItem:** Add ListItemFile based on ListItemBase ([8ae5ce7](https://github.com/cozy/cozy-ui/commit/8ae5ce7))
+* **ListItem:** Add locales and hoc to use them ([d83876f](https://github.com/cozy/cozy-ui/commit/d83876f))
+* Some minors fixes after review ([31f4e55](https://github.com/cozy/cozy-ui/commit/31f4e55))
+
 ## [81.6.1](https://github.com/cozy/cozy-ui/compare/v81.6.0...v81.6.1) (2023-03-21)
 
 
