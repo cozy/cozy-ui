@@ -1,6 +1,6 @@
 {
   "name": "cozy-ui",
-  "version": "45.0.0-beta.3",
+  "version": "1.0.0-next",
   "description": "Cozy apps UI SDK",
   "main": "./index.js",
   "bin": {
@@ -28,6 +28,7 @@
     "build:doc:kss": "kss --destination build/next/styleguide --title 'Cozy-UI Styleguide' --source stylus --builder node_modules/michelangelo/kss_styleguide/custom-template --homepage stylus/styleguide.md --css app.css",
     "build:doc:react": "styleguidist build --config docs/styleguide.config.js",
     "build:types": "tsc -p tsconfig-build.json",
+    "build:all": "yarn makeSpriteAndPalette && yarn build && yarn build:css:all && yarn build:doc",
     "build": "yarn build:types && env BABEL_ENV=transpilation babel --extensions .ts,.tsx,.js,.jsx react/ --out-dir transpiled/react --verbose",
     "clean:doc:kss": "rm -rf build/next/styleguide",
     "deploy:doc": "git-directory-deploy --directory build/ --branch gh-pages",
