@@ -5,7 +5,7 @@ import Button from '../../../../Buttons'
 import { ConfirmDialog } from '../../../../CozyDialogs'
 import { useI18n } from '../../../../I18n'
 
-import { withListItemLocales } from '../../hoc/withListItemLocales'
+import withListItemLocales from '../../hoc/withListItemLocales'
 
 const RenameDialog = ({ onSubmit, onCancel }) => {
   const { t } = useI18n()

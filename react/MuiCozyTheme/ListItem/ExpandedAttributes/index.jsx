@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Snackbar from '../../../Snackbar'
 import Alert from '../../../Alert'
-import { withListItemLocales } from '../hoc/withListItemLocales'
+import withListItemLocales from '../hoc/withListItemLocales'
 import ExpandedAttribute from './ExpandedAttribute'
 import { useI18n } from '../../../I18n'
 import { makeAttrsKeyAndFormatedValue } from './helpers'

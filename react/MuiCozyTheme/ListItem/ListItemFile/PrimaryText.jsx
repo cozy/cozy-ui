@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 import { useI18n } from '../../../I18n'
-import { withListItemLocales } from '../hoc/withListItemLocales'
+import withListItemLocales from '../hoc/withListItemLocales'
 
 const PrimaryText = ({ primary, file }) => {
   const { t } = useI18n()

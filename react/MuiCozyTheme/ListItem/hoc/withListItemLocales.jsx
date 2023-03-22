@@ -8,4 +8,4 @@ export const locales = {
   fr
 }
 
-export const withListItemLocales = withLocales(locales)
+export default withLocales(locales)

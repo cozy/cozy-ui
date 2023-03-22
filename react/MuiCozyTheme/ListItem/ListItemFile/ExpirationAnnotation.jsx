@@ -6,7 +6,7 @@ import { computeExpirationDate, isExpired } from 'cozy-client/dist/models/paper'
 import Typography from '../../../Typography'
 import { useI18n } from '../../../I18n'
 import { formatLocallyDistanceToNowStrict } from '../../../I18n/format'
-import { withListItemLocales } from '../hoc/withListItemLocales'
+import withListItemLocales from '../hoc/withListItemLocales'
 
 const ExpirationAnnotation = ({ file }) => {
   const { t } = useI18n()
