@@ -6,6 +6,7 @@ import ContactsIcon from '../../../Icons/Contacts'
 import ListItemBase from '../ListItemBase'
 
 import { makeDefaultExpandedAttributes } from '../ExpandedAttributes/helpers'
+import useActions from './useActions'
 
 const ListItemContact = ({
   contact,
@@ -17,6 +18,7 @@ const ListItemContact = ({
   expandedAttributesProps: { isExpandedAttributesActive, expandedAttributes },
   onClick
 }) => {
+  const defaultActions = useActions(contact)
   const primaryText = primary || contact.displayName
   const secondaryText = secondary || contact.email?.[0]?.address
   const itemIcon = icon || <Icon icon={ContactsIcon} width="32" height="32" />
@@ -25,6 +27,7 @@ const ListItemContact = ({
     contact,
     expandedAttributes
   )
+  const itemActions = defaultActions.concat(actions)
 
   return (
     <ListItemBase
@@ -32,7 +35,7 @@ const ListItemContact = ({
       primary={primaryText}
       secondary={secondaryText}
       icon={itemIcon}
-      actions={actions}
+      actions={itemActions}
       selectProps={selectProps}
       expandedAttributesProps={{
         isExpandedAttributesActive,
@@ -44,6 +47,7 @@ const ListItemContact = ({
 }
 
 ListItemContact.defaultProps = {
+  actions: [],
   expandedAttributesProps: {
     isExpandedAttributesActive: false
   }
