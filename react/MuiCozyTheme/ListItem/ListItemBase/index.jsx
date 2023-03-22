@@ -14,7 +14,7 @@ import { ActionMenuHeader } from '../../../ActionMenu'
 import ActionsItems from './ActionsMenu/ActionsItems'
 import useBreakpoints from '../../../hooks/useBreakpoints'
 import RenameInput from './Renaming/RenameInput'
-import { withListItemLocales } from '../hoc/withListItemLocales'
+import withListItemLocales from '../hoc/withListItemLocales'
 import Checkbox from '../../../Checkbox'
 
 const ListItemBase = ({
