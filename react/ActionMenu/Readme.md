@@ -35,14 +35,8 @@ import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import Variants from 'cozy-ui/docs/components/Variants'
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton'
 import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
-import ActionMenu, { ActionMenuItem, ActionMenuRadio, ActionMenuHeader } from 'cozy-ui/transpiled/react/ActionMenu'
-import ActionMenuWithClose from 'cozy-ui/transpiled/react/ActionMenu/ActionMenuWithClose'
-import ActionsItems from 'cozy-ui/transpiled/react/ActionMenu/Actions/ActionsItems'
-import ActionMenuItemWrapper from 'cozy-ui/transpiled/react/ActionMenu/ActionMenuItemWrapper'
-import { makeActions } from 'cozy-ui/transpiled/react/ActionMenu/Actions/helpers'
-import { hr } from 'cozy-ui/transpiled/react/ActionMenu/Actions/hr'
-import { modify } from 'cozy-ui/transpiled/react/ActionMenu/Actions/modify'
-import { call } from 'cozy-ui/transpiled/react/ActionMenu/Actions/call'
+import { ActionMenuItemWrapper, ActionMenuWithClose, ActionsItems } from 'cozy-ui/transpiled/react/ActionMenu'
+import { makeActions, hr, modify, call } from 'cozy-ui/transpiled/react/ActionMenu/Actions'
 
 initialState = { showMenu: isTesting() }
 
