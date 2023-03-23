@@ -1,3 +1,10 @@
+## [82.1.1](https://github.com/cozy/cozy-ui/compare/v82.1.0...v82.1.1) (2023-03-23)
+
+
+### Bug Fixes
+
+* remove margin on sqAppIcon spinner ([6d74024](https://github.com/cozy/cozy-ui/commit/6d74024))
+
 # [82.1.0](https://github.com/cozy/cozy-ui/compare/v82.0.0...v82.1.0) (2023-03-23)
 
 
