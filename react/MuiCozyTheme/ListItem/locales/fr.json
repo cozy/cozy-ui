@@ -1,12 +1,5 @@
 {
   "ListItem": {
-    "actions": {
-      "viewInContacts": "Voir dans Cozy Contacts",
-      "modify": "Modifier",
-      "emailTo": "Envoyer un e-mail",
-      "smsTo": "Envoyer un message",
-      "call": "Appeler"
-    },
     "attributes": {
       "birthday": "Date de naissance",
       "address": "Adresse",

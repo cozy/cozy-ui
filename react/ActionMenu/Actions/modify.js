@@ -5,13 +5,13 @@ import { generateWebLink, useClient } from 'cozy-client'
 import Link from '../../Link'
 import { useI18n } from '../../I18n'
 import PenIcon from '../../Icons/Pen'
-import withListItemLocales from '../../MuiCozyTheme/ListItem/hoc/withListItemLocales'
 import ActionMenuItemWrapper from '../ActionMenuItemWrapper'
+import withActionsLocales from './locales/withActionsLocales'
 
 export const modify = () => {
   return {
     name: 'modify',
-    Component: withListItemLocales(({ className, docs, onClick }) => {
+    Component: withActionsLocales(({ className, docs, onClick }) => {
       const { t } = useI18n()
       const client = useClient()
 
@@ -32,7 +32,7 @@ export const modify = () => {
           onClick={onClick}
         >
           <Link className="u-p-0" href={webLink} target="_blank">
-            {t('ListItem.actions.modify')}
+            {t('modify')}
           </Link>
         </ActionMenuItemWrapper>
       )

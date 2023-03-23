@@ -2,8 +2,8 @@ import React from 'react'
 
 import { useI18n } from '../../I18n'
 import CommentIcon from '../../Icons/Comment'
-import withListItemLocales from '../../MuiCozyTheme/ListItem/hoc/withListItemLocales'
 import ActionMenuItemWrapper from '../ActionMenuItemWrapper'
+import withActionsLocales from './locales/withActionsLocales'
 
 export const smsTo = () => {
   return {
@@ -12,7 +12,7 @@ export const smsTo = () => {
       const phoneNumber = docs?.[0]?.phone?.[0]?.number
       !!phoneNumber && window.open(`sms:${phoneNumber}`, '_self')
     },
-    Component: withListItemLocales(({ className, onClick }) => {
+    Component: withActionsLocales(({ className, onClick }) => {
       const { t } = useI18n()
 
       return (
@@ -21,7 +21,7 @@ export const smsTo = () => {
           icon={CommentIcon}
           onClick={onClick}
         >
-          {t('ListItem.actions.smsTo')}
+          {t('smsTo')}
         </ActionMenuItemWrapper>
       )
     })
