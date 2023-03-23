@@ -338,7 +338,7 @@ const files = [
 
 ;
 
-<DemoProvider mockClient={mockClient}>
+<DemoProvider client={mockClient}>
   <List>
     <ListItem button>
       <ListItemIcon>
