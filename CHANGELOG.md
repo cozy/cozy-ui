@@ -1,3 +1,17 @@
+# [81.9.0](https://github.com/cozy/cozy-ui/compare/v81.8.0...v81.9.0) (2023-03-23)
+
+
+### Bug Fixes
+
+* **ListItemBase:** Clicking on actions wasn't toggling the menu ([3fbfa31](https://github.com/cozy/cozy-ui/commit/3fbfa31))
+
+
+### Features
+
+* Add ActionMenuItemWrapper for actions menus item ([068f247](https://github.com/cozy/cozy-ui/commit/068f247))
+* **ListItemContact:** Add action menu header ([633ecf8](https://github.com/cozy/cozy-ui/commit/633ecf8))
+* **ListItemContact:** Add default actions ([9164e87](https://github.com/cozy/cozy-ui/commit/9164e87))
+
 # [81.8.0](https://github.com/cozy/cozy-ui/compare/v81.7.0...v81.8.0) (2023-03-22)
 
 
