@@ -33,6 +33,8 @@ const ListItemBase = ({
   const anchorRef = useRef()
   const { isMobile } = useBreakpoints()
 
+  const toggleMenu = () => setShowActionMenu(v => !v)
+
   const showActionMenuHeader = isMobile && actionMenuComp?.Header
   const isButton = !isRenaming && !!onClick
   const handleClick =
@@ -57,7 +59,7 @@ const ListItemBase = ({
         )}
         {actions && !isSelectActive && (
           <ListItemSecondaryAction>
-            <IconButton ref={anchorRef} onClick={() => setShowActionMenu(true)}>
+            <IconButton ref={anchorRef} onClick={toggleMenu}>
               <Icon icon={DotsIcon} />
             </IconButton>
           </ListItemSecondaryAction>
