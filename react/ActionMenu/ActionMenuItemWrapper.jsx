@@ -38,13 +38,15 @@ const ActionMenuItemWrapper = ({
         [styles.disabledItem]: !isEnabled
       })}
       left={
-        <Icon
-          icon={icon}
-          className={cx({
-            [styles.disabledIcon]: !isEnabled
-          })}
-          {...componentsProps?.iconProps}
-        />
+        icon && (
+          <Icon
+            icon={icon}
+            className={cx({
+              [styles.disabledIcon]: !isEnabled
+            })}
+            {...componentsProps?.iconProps}
+          />
+        )
       }
       onClick={onClick}
     >
