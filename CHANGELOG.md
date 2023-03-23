@@ -1,3 +1,20 @@
+# [82.0.0](https://github.com/cozy/cozy-ui/compare/v81.9.0...v82.0.0) (2023-03-23)
+
+
+### Features
+
+* Move ActionsMenu from ListItemBase into ActionMenu folder ([02a91b9](https://github.com/cozy/cozy-ui/commit/02a91b9))
+
+
+### BREAKING CHANGES
+
+* `react/MuiCozyTheme/ListItem/ListItemBase/ActionsMenu` has been removed. You need to change some imports :
+- `cozy-ui/transpiled/react/MuiCozyTheme/ListItem/ListItemBase/ActionsMenu/ActionMenuItemWrapper` to `cozy-ui/transpiled/react/ActionMenu/ActionMenuItemWrapper`
+- `cozy-ui/transpiled/react/MuiCozyTheme/ListItem/ListItemBase/ActionsMenu/ActionMenuWithClose` to `cozy-ui/transpiled/react/ActionMenu/ActionMenuWithClose`
+- `cozy-ui/transpiled/react/MuiCozyTheme/ListItem/ListItemBase/ActionsMenu/ActionsItems` to `cozy-ui/transpiled/react/ActionMenu/Actions/ActionsItems`
+- `cozy-ui/transpiled/react/MuiCozyTheme/ListItem/ListItemBase/ActionsMenu/helpers` to `cozy-ui/transpiled/react/ActionMenu/Actions/helpers`
+- `cozy-ui/transpiled/react/MuiCozyTheme/ListItem/ListItemBase/ActionsMenu/Actions/*` to `cozy-ui/transpiled/react/ActionMenu/Actions/*`
+
 # [81.9.0](https://github.com/cozy/cozy-ui/compare/v81.8.0...v81.9.0) (2023-03-23)
 
 
