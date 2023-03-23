@@ -73,7 +73,7 @@ export const copyToClipboard = ({ value, setAlertProps, t }) => () => {
     setAlertProps({
       open: true,
       severity: 'error',
-      message: t(`Viewer.snackbar.copyToClipboard.error`)
+      message: t(`ListItem.snackbar.copyToClipboard.error`)
     })
   }
 }
