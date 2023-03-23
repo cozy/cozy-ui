@@ -1,3 +1,17 @@
+# [82.1.0](https://github.com/cozy/cozy-ui/compare/v82.0.0...v82.1.0) (2023-03-23)
+
+
+### Bug Fixes
+
+* **ActionMenuItemWrapper:** Icon prop was required (now optional) ([58b98a6](https://github.com/cozy/cozy-ui/commit/58b98a6))
+* **ActionMenuWithClose:** Props wasn't propagated to ActionMenu ([0007d81](https://github.com/cozy/cozy-ui/commit/0007d81))
+* **ListItem:** ExpandedAttributes wasn't using correct local ([97c704a](https://github.com/cozy/cozy-ui/commit/97c704a))
+
+
+### Features
+
+* **ActionMenu:** Add some export to have better DX ([fda803a](https://github.com/cozy/cozy-ui/commit/fda803a))
+
 # [82.0.0](https://github.com/cozy/cozy-ui/compare/v81.9.0...v82.0.0) (2023-03-23)
 
 
