@@ -2,15 +2,15 @@ import React from 'react'
 
 import { generateWebLink, useClient } from 'cozy-client'
 
-import Link from '../../../../../Link'
-import { useI18n } from '../../../../../I18n'
-import PenIcon from '../../../../../Icons/Pen'
-import withListItemLocales from '../../../hoc/withListItemLocales'
+import Link from '../../Link'
+import { useI18n } from '../../I18n'
+import OpenappIcon from '../../Icons/Openapp'
+import withListItemLocales from '../../MuiCozyTheme/ListItem/hoc/withListItemLocales'
 import ActionMenuItemWrapper from '../ActionMenuItemWrapper'
 
-export const modify = () => {
+export const viewInContacts = () => {
   return {
-    name: 'modify',
+    name: 'viewInContacts',
     Component: withListItemLocales(({ className, docs, onClick }) => {
       const { t } = useI18n()
       const client = useClient()
@@ -22,17 +22,17 @@ export const modify = () => {
         cozyUrl: client.getStackClient().uri,
         subDomainType: client.getInstanceOptions().subdomain,
         pathname: '/',
-        hash: `/${contactId}/edit`
+        hash: `/${contactId}`
       })
 
       return (
         <ActionMenuItemWrapper
           className={className}
-          icon={PenIcon}
+          icon={OpenappIcon}
           onClick={onClick}
         >
           <Link className="u-p-0" href={webLink} target="_blank">
-            {t('ListItem.actions.modify')}
+            {t('ListItem.actions.viewInContacts')}
           </Link>
         </ActionMenuItemWrapper>
       )

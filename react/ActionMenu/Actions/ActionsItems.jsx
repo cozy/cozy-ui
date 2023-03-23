@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
 
-import { useI18n } from '../../../../I18n'
+import { useI18n } from '../../I18n'
 import { getActionName, getOnlyNeededActions } from './helpers'
 
 const ActionsItems = ({ doc, actions, isLast, setIsRenaming, onClose }) => {

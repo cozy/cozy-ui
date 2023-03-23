@@ -1,12 +1,12 @@
 import { useMemo } from 'react'
 
-import { makeActions } from '../ListItemBase/ActionsMenu/helpers'
-import { hr } from '../ListItemBase/ActionsMenu/Actions/hr'
-import { emailTo } from '../ListItemBase/ActionsMenu/Actions/emailTo'
-import { smsTo } from '../ListItemBase/ActionsMenu/Actions/smsTo'
-import { call } from '../ListItemBase/ActionsMenu/Actions/call'
-import { modify } from '../ListItemBase/ActionsMenu/Actions/modify'
-import { viewInContacts } from '../ListItemBase/ActionsMenu/Actions/viewInContacts'
+import { makeActions } from '../../../ActionMenu/Actions/helpers'
+import { hr } from '../../../ActionMenu/Actions/hr'
+import { emailTo } from '../../../ActionMenu/Actions/emailTo'
+import { smsTo } from '../../../ActionMenu/Actions/smsTo'
+import { call } from '../../../ActionMenu/Actions/call'
+import { modify } from '../../../ActionMenu/Actions/modify'
+import { viewInContacts } from '../../../ActionMenu/Actions/viewInContacts'
 
 const makeOptionalActions = contact => {
   const optionalActions = [hr, call, smsTo, emailTo]
