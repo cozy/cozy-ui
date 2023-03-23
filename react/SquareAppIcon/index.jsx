@@ -83,7 +83,7 @@ export const SquareAppIcon = ({
         invisible={variant !== 'shortcut'}
       >
         {['default', 'loading'].includes(variant) && (
-          <Spinner className={styles['SquareAppIcon-spinner']} />
+          <Spinner className={cx(styles['SquareAppIcon-spinner'], 'u-m-0')} />
         )}
         <Badge
           className={cx(

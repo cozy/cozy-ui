@@ -9,7 +9,7 @@ exports[`SquareAppIcon component should render an app correctly with the app nam
     class="MuiBadge-root"
   >
     <div
-      class="styles__c-spinner___1snK7 styles__SquareAppIcon-spinner___o0LO1"
+      class="styles__c-spinner___1snK7 styles__SquareAppIcon-spinner___o0LO1 u-m-0"
     >
       <svg
         aria-busy="true"
@@ -73,7 +73,7 @@ exports[`SquareAppIcon component should render an app correctly with the given n
     class="MuiBadge-root"
   >
     <div
-      class="styles__c-spinner___1snK7 styles__SquareAppIcon-spinner___o0LO1"
+      class="styles__c-spinner___1snK7 styles__SquareAppIcon-spinner___o0LO1 u-m-0"
     >
       <svg
         aria-busy="true"
@@ -137,7 +137,7 @@ exports[`SquareAppIcon component should render an app with the app slug if no na
     class="MuiBadge-root"
   >
     <div
-      class="styles__c-spinner___1snK7 styles__SquareAppIcon-spinner___o0LO1"
+      class="styles__c-spinner___1snK7 styles__SquareAppIcon-spinner___o0LO1 u-m-0"
     >
       <svg
         aria-busy="true"
@@ -431,7 +431,7 @@ exports[`SquareAppIcon component should render correctly an app with custom cont
     class="MuiBadge-root"
   >
     <div
-      class="styles__c-spinner___1snK7 styles__SquareAppIcon-spinner___o0LO1"
+      class="styles__c-spinner___1snK7 styles__SquareAppIcon-spinner___o0LO1 u-m-0"
     >
       <svg
         aria-busy="true"
