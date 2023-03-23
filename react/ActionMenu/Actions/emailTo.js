@@ -2,8 +2,8 @@ import React from 'react'
 
 import { useI18n } from '../../I18n'
 import EmailIcon from '../../Icons/Email'
-import withListItemLocales from '../../MuiCozyTheme/ListItem/hoc/withListItemLocales'
 import ActionMenuItemWrapper from '../ActionMenuItemWrapper'
+import withActionsLocales from './locales/withActionsLocales'
 
 export const emailTo = () => {
   return {
@@ -12,7 +12,7 @@ export const emailTo = () => {
       const emailAddress = docs?.[0]?.email?.[0]?.address
       !!emailAddress && window.open(`mailto:${emailAddress}`, '_self')
     },
-    Component: withListItemLocales(({ className, onClick }) => {
+    Component: withActionsLocales(({ className, onClick }) => {
       const { t } = useI18n()
 
       return (
@@ -21,7 +21,7 @@ export const emailTo = () => {
           icon={EmailIcon}
           onClick={onClick}
         >
-          {t('ListItem.actions.emailTo')}
+          {t('emailTo')}
         </ActionMenuItemWrapper>
       )
     })
