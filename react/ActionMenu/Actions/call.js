@@ -1,16 +1,16 @@
 import React from 'react'
 
-import { useI18n } from '../../../../../I18n'
-import CommentIcon from '../../../../../Icons/Comment'
-import withListItemLocales from '../../../hoc/withListItemLocales'
+import { useI18n } from '../../I18n'
+import TelephoneIcon from '../../Icons/Telephone'
+import withListItemLocales from '../../MuiCozyTheme/ListItem/hoc/withListItemLocales'
 import ActionMenuItemWrapper from '../ActionMenuItemWrapper'
 
-export const smsTo = () => {
+export const call = () => {
   return {
-    name: 'smsTo',
+    name: 'call',
     action: docs => {
       const phoneNumber = docs?.[0]?.phone?.[0]?.number
-      !!phoneNumber && window.open(`sms:${phoneNumber}`, '_self')
+      !!phoneNumber && window.open(`tel:${phoneNumber}`, '_self')
     },
     Component: withListItemLocales(({ className, onClick }) => {
       const { t } = useI18n()
@@ -18,10 +18,10 @@ export const smsTo = () => {
       return (
         <ActionMenuItemWrapper
           className={className}
-          icon={CommentIcon}
+          icon={TelephoneIcon}
           onClick={onClick}
         >
-          {t('ListItem.actions.smsTo')}
+          {t('ListItem.actions.call')}
         </ActionMenuItemWrapper>
       )
     })

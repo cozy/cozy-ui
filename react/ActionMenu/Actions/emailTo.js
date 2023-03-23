@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { useI18n } from '../../../../../I18n'
-import EmailIcon from '../../../../../Icons/Email'
-import withListItemLocales from '../../../hoc/withListItemLocales'
+import { useI18n } from '../../I18n'
+import EmailIcon from '../../Icons/Email'
+import withListItemLocales from '../../MuiCozyTheme/ListItem/hoc/withListItemLocales'
 import ActionMenuItemWrapper from '../ActionMenuItemWrapper'
 
 export const emailTo = () => {

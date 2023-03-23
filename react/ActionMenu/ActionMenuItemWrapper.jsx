@@ -2,10 +2,10 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-import { makeStyles } from '../../../../styles'
-import Typography from '../../../../Typography'
-import Icon, { iconPropType } from '../../../../Icon'
-import { ActionMenuItem } from '../../../../ActionMenu'
+import { makeStyles } from '../styles'
+import Typography from '../Typography'
+import Icon, { iconPropType } from '../Icon'
+import { ActionMenuItem } from '.'
 
 const useStyles = makeStyles(theme => ({
   disabledItem: {

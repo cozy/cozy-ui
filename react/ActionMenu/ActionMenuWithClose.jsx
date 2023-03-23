@@ -5,7 +5,7 @@ import React, {
   Children
 } from 'react'
 
-import ActionMenu from '../../../../ActionMenu'
+import ActionMenu from '.'
 
 /**
  * Add onClose method on every children, to close the menu when clicking them
