@@ -1,3 +1,10 @@
+## [82.1.2](https://github.com/cozy/cozy-ui/compare/v82.1.1...v82.1.2) (2023-03-24)
+
+
+### Bug Fixes
+
+* Missing Viewer translation keys ([0f79e7e](https://github.com/cozy/cozy-ui/commit/0f79e7e))
+
 ## [82.1.1](https://github.com/cozy/cozy-ui/compare/v82.1.0...v82.1.1) (2023-03-23)
 
 
