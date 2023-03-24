@@ -55,6 +55,9 @@
             "caf": {
               "number": "Numéro de dossier CAF"
             },
+            "payment_proof_family_allowance": {
+              "number":"Numéro de dossier CAF"
+            },
             "vehicle_registration": {
               "number": "Numéro de la carte grise (VIN)"
             },
@@ -70,7 +73,7 @@
             "driver_license": {
               "number": "Numéro du permis"
             },
-            "country": "Pays de délivrance",
+            "country": "Nationalité du bénéficiaire",
             "refTaxIncome": "Revenu fiscal de référence",
             "contractType": "Type de contat",
             "noticePeriod": "Alerte d’expiration",

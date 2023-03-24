@@ -55,6 +55,9 @@
             "caf": {
               "number": "CAF file number"
             },
+            "payment_proof_family_allowance": {
+              "number":"CAF file number"
+            },
             "vehicle_registration": {
               "number": "Vehicle registration number (VIN)"
             },
@@ -70,7 +73,7 @@
             "driver_license": {
               "number": "License number"
             },
-            "country": "Country of delivery",
+            "country": "Beneficiary nationality",
             "refTaxIncome": "Reference tax income",
             "contractType": "Contract type",
             "noticePeriod": "Expiration alert",
