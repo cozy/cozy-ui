@@ -1,3 +1,10 @@
+# [82.2.0](https://github.com/cozy/cozy-ui/compare/v82.1.2...v82.2.0) (2023-03-27)
+
+
+### Features
+
+* Export Breadcrumbs from MUI ([3bf0588](https://github.com/cozy/cozy-ui/commit/3bf0588))
+
 ## [82.1.2](https://github.com/cozy/cozy-ui/compare/v82.1.1...v82.1.2) (2023-03-24)
 
 
