@@ -9,11 +9,11 @@ cache:
 env:
   global:
     - PR_TITLE=$(curl https://github.com/${TRAVIS_REPO_SLUG}/pull/${TRAVIS_PULL_REQUEST} 2> /dev/null | grep "title" | head -1)
-    - BUILD_TEMP_FILENAME=cozy-ui-tempbuild-${TRAVIS_BUILD_ID}.tar.gz
 stages:
   - prebuild
   - build
-  - postbuild
+  - docs
+  - test
   - deploy
 jobs:
   include:
@@ -50,7 +50,10 @@ jobs:
           paths:
             - ./dist
     - name: 'Build docs'
-      stage: 'postbuild'
+      stage: 'docs'
+      script:
+        - yarn build:doc:react
+        - yarn build:doc:kss
       workspaces:
         use:
           - sprite-palette-binaries
@@ -60,61 +63,60 @@ jobs:
           name: docs-binaries
           paths:
             - ./build
-      script:
-        - yarn build:doc:react
-        - yarn build:doc:kss
     - name: 'Tests without snapshots'
-      stage: 'postbuild'
-      workspaces:
-        use:
-          - sprite-palette-binaries
-          - js-binaries
-          - css-binaries
+      stage: 'test'
       script:
         - yarn test:noSnapshots
-    - name: 'Tests snapshots'
-      stage: 'postbuild'
       workspaces:
         use:
           - sprite-palette-binaries
           - js-binaries
           - css-binaries
+    - name: 'Tests snapshots'
+      stage: 'test'
       script:
         - yarn test:snapshots
-    - name: 'Argos'
-      stage: 'postbuild'
       workspaces:
         use:
+          - sprite-palette-binaries
           - js-binaries
           - css-binaries
+    - name: 'Argos'
+      stage: 'test'
       script: |
         if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
           mkdir ./screenshots
           yarn screenshots --mode react --viewport desktop --screenshot-dir ./screenshots/reactDesktop
           yarn screenshots --mode react --viewport 300x600 --screenshot-dir ./screenshots/reactMobile
           yarn screenshots --mode kss --screenshot-dir ./screenshots/kss
-          yarn argos:upload --parallel screenshots/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID
-          yarn argos:upload --parallel screenshots/reactMobile/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID
-          yarn argos:upload --parallel screenshots/kss/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID
+          yarn argos:upload --parallel screenshots/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
+          yarn argos:upload --parallel screenshots/reactMobile/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
+          yarn argos:upload --parallel screenshots/kss/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
         fi
-    - name: 'Bundlemon'
-      stage: 'postbuild'
-      workspaces:
-        use:
-          - sprite-palette-binaries
-          - js-binaries
-          - css-binaries
-      script:
-        - yarn bundlemon
-    - name: 'Deploy'
-      stage: 'deploy'
       workspaces:
         use:
           - sprite-palette-binaries
           - js-binaries
           - css-binaries
           - docs-binaries
+    - name: 'Bundlemon'
+      stage: 'test'
+      script:
+        - yarn bundlemon
+      workspaces:
+        use:
+          - sprite-palette-binaries
+          - js-binaries
+          - css-binaries
+    - name: 'Deploy'
+      stage: 'deploy'
       script: 'true'
+      workspaces:
+        use:
+          - sprite-palette-binaries
+          - js-binaries
+          - css-binaries
+          - docs-binaries
       deploy:
         provider: script
         skip-cleanup: true
