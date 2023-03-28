@@ -37,10 +37,16 @@ const CircleButton = ({
   variant = 'default',
   disabled,
   fullWidth = false,
+  'aria-label': ariaLabel,
   children,
   ...props
 }) => {
   const styles = useStyles({ active: variant === 'active', disabled })
+  const uuid = crypto.randomUUID()
+
+  if (!ariaLabel && !label) {
+    console.warn(`The "aria-label" or "label" property must be filled in.`)
+  }
 
   return (
     <Box
@@ -52,7 +58,14 @@ const CircleButton = ({
       flexBasis="64px"
       padding="8px 0 4px 0"
     >
-      <IconButton className={styles.iconButton} disabled={disabled} {...props}>
+      <IconButton
+        className={styles.iconButton}
+        disabled={disabled}
+        {...(ariaLabel
+          ? { 'aria-label': ariaLabel }
+          : { 'aria-labelledby': uuid })}
+        {...props}
+      >
         {children}
       </IconButton>
       {label && (
@@ -62,6 +75,7 @@ const CircleButton = ({
           variant="caption"
           align="center"
           noWrap
+          {...(!ariaLabel && { id: uuid })}
         >
           {label}
         </Typography>
