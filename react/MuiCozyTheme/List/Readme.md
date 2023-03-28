@@ -134,34 +134,33 @@ const initialVariants = [{ dense: false, }]
               <Icon icon={CommentIcon} />
             </ListItemIcon>
             <ListItemText primary="Support" />
-            {state.showMenu && (
-              <ActionMenu
-                anchorElRef={anchorRef}
-                autoclose
-                onClose={hideMenu}
-              >
-                <ActionMenuItem left={<Icon icon={FileIcon} />}>
-                  <Typography variant="body1" gutterBottom>
-                    Item 1
-                  </Typography>
-                  <Typography variant="caption" color="textSecondary">
-                    Descriptive text to elaborate on what item 3 does.
-                  </Typography>
-                </ActionMenuItem>
-                <ActionMenuItem left={<Icon icon={FileIcon} />}>
-                  <Typography variant="body1" gutterBottom>
-                    Item 2
-                  </Typography>
-                </ActionMenuItem>
-              </ActionMenu>
-            )}
             <ListItemSecondaryAction>
               <IconButton ref={anchorRef} onClick={toggleMenu}>
                 <Icon icon={DotsIcon} />
               </IconButton>
             </ListItemSecondaryAction>
           </ListItem>
-
+          {state.showMenu && (
+            <ActionMenu
+              anchorElRef={anchorRef}
+              autoclose
+              onClose={hideMenu}
+            >
+              <ActionMenuItem left={<Icon icon={FileIcon} />}>
+                <Typography variant="body1" gutterBottom>
+                  Item 1
+                </Typography>
+                <Typography variant="caption" color="textSecondary">
+                  Descriptive text to elaborate on what item 3 does.
+                </Typography>
+              </ActionMenuItem>
+              <ActionMenuItem left={<Icon icon={FileIcon} />}>
+                <Typography variant="body1" gutterBottom>
+                  Item 2
+                </Typography>
+              </ActionMenuItem>
+            </ActionMenu>
+          )}
           <Divider component="li" variant="inset" />
 
           <ListItem button>
@@ -272,4 +271,105 @@ import FiletypeTextIcon from 'cozy-ui/transpiled/react/Icons/FileTypeText'
     <ListItemText primary="I'm a primary text" />
   </ListItem>
 </List>
+```
+
+### Contextualized item
+
+```jsx
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List'
+import ListItemContact from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem/ListItemContact'
+import ListItemFile from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem/ListItemFile'
+import ListItemByDoc from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem/ListItemByDoc'
+import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem'
+import ListItemIcon from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon'
+import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
+import FiletypeTextIcon from 'cozy-ui/transpiled/react/Icons/FileTypeText'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
+
+const mockClient = {
+  plugins: {
+    realtime: {
+      subscribe: () => {},
+      unsubscribe: () => {},
+      unsubscribeAll: () => {}
+    }
+  },
+  getStackClient: () => ({
+    uri: 'https://cozy.io/'
+  }),
+  getInstanceOptions: () => ({
+    subdomain: ''
+  })
+}
+
+const contacts = [
+  {
+    _id: 'id01',
+    _type: 'io.cozy.contacts',
+    displayName: 'John Doe',
+    birthday: '25/10/2022',
+    email: [{ address: 'johndoe@cozy.cc', primary: true }],
+    phone: [{ number: '0102030405', primary: true }]
+  },
+  {
+    _id: 'id02',
+    _type: 'io.cozy.contacts',
+    displayName: 'Jason Bourne',
+    birthday: '01/01/2020',
+    email: [{ address: 'jbourne@cozy.cc', primary: true }]
+  }
+]
+
+const files = [
+  {
+    _type: 'io.cozy.files',
+    name: 'File01.pdf',
+    metadata: {
+      number: 12345,
+      qualification: {
+        label: 'driver_license'
+      }
+    }
+  }
+]
+
+;
+
+<DemoProvider client={mockClient}>
+  <List>
+    <ListItem button>
+      <ListItemIcon>
+        <Icon icon={FiletypeTextIcon} width="32" height="32" />
+      </ListItemIcon>
+      <ListItemText primary="I'm a standard item" />
+    </ListItem>
+    <Divider variant="inset" />
+    <ListItemByDoc
+      doc={contacts[0]}
+      expandedAttributesProps={{ isExpandedAttributesActive: true, expandedAttributes: ['email', 'birthday'] }}
+      onClick={() => {}}
+    />
+    <Divider variant="inset" />
+    <ListItemByDoc
+      doc={contacts[1]}
+      onClick={() => {}}
+    />
+    <Divider variant="inset" />
+    <ListItemByDoc
+      doc={files[0]}
+      expandedAttributesProps={{ isExpandedAttributesActive: true, expandedAttributes: ['metadata.number'] }}
+      onClick={() => {}}
+    />
+    <Divider variant="inset" />
+    <ListItem button>
+      <ListItemIcon>
+        <Icon icon={FiletypeTextIcon} width="32" height="32" />
+      </ListItemIcon>
+      <ListItemText primary="I'm a standard item" />
+    </ListItem>
+  </List>
+</DemoProvider>
 ```

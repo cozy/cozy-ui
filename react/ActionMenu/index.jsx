@@ -10,6 +10,9 @@ import { ActionMenuHeader } from './ActionMenuHeader'
 import { ActionMenuItem } from './ActionMenuItem'
 import { ActionMenuRadio } from './ActionMenuRadio'
 import { useActionMenuEffects } from './ActionMenuEffects'
+import ActionMenuItemWrapper from './ActionMenuItemWrapper'
+import ActionMenuWithClose from './ActionMenuWithClose'
+import ActionsItems from './Actions/ActionsItems'
 
 import styles from './styles.styl'
 
@@ -115,4 +118,12 @@ ActionMenu.defaultProps = {
 }
 
 export default ActionMenu
-export { ActionMenuHeader, ActionMenuItem, ActionMenuRadio }
+export {
+  ActionMenuHeader,
+  ActionMenuItem,
+  ActionMenuRadio,
+  ActionMenuItemWrapper,
+  ActionMenuWithClose,
+  ActionMenuWrapper,
+  ActionsItems
+}

@@ -3,8 +3,7 @@ import MockDate from 'mockdate'
 import {
   initFormat,
   formatLocallyDistanceToNow,
-  formatLocallyDistanceToNowStrict,
-  setHoursAndMinutesFromDate
+  formatLocallyDistanceToNowStrict
 } from './format'
 
 describe('initFormat', () => {
@@ -117,7 +116,7 @@ describe('formatLocallyDistanceToNowStrict', () => {
     })
 
     it('should return 23 hours', () => {
-      MockDate.set('2023-01-01T00:00:00')
+      MockDate.set('2023-01-01T00:00:10')
       const date = new Date('2023-01-01T23:59:00')
 
       const result = formatLocallyDistanceToNowStrict(date)
@@ -126,7 +125,7 @@ describe('formatLocallyDistanceToNowStrict', () => {
     })
 
     it('should return 11 hours', () => {
-      MockDate.set('2023-01-01T12:00:00')
+      MockDate.set('2023-01-01T12:00:10')
       const date = new Date('2023-01-01T23:59:00')
 
       const result = formatLocallyDistanceToNowStrict(date)
@@ -138,7 +137,7 @@ describe('formatLocallyDistanceToNowStrict', () => {
   describe('for days', () => {
     describe('at midnight', () => {
       beforeEach(() => {
-        MockDate.set('2023-01-01T00:00:00')
+        MockDate.set('2023-01-01T00:00:01')
       })
 
       afterEach(() => {
@@ -196,7 +195,7 @@ describe('formatLocallyDistanceToNowStrict', () => {
 
     describe('at midday', () => {
       beforeEach(() => {
-        MockDate.set('2023-01-01T12:00:00')
+        MockDate.set('2023-01-01T12:00:10')
       })
 
       afterEach(() => {
@@ -251,16 +250,5 @@ describe('formatLocallyDistanceToNowStrict', () => {
         expect(result).toEqual('2 days')
       })
     })
-  })
-})
-
-describe('setHoursAndMinutesFromDate', () => {
-  it('should return correct date', () => {
-    const res = setHoursAndMinutesFromDate(
-      new Date('2023-01-03T00:00:30'),
-      new Date('2023-01-01T12:24:00')
-    )
-
-    expect(res).toStrictEqual(new Date('2023-01-03T12:24:30'))
   })
 })
