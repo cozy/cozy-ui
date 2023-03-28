@@ -1,11 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import Input from '@material-ui/core/Input'
 
 import CozyTheme from '../CozyTheme'
 import Icon from '../Icon'
 import PreviousIcon from '../Icons/Previous'
 import Paper from '../Paper'
-import IconButton from '@material-ui/core/IconButton'
-import Input from '@material-ui/core/Input'
+import IconButton from '../IconButton'
 
 const barStyle = {
   height: 48
@@ -26,6 +27,7 @@ const MobileHeader = ({ filter, placeholder, onChange, onDismiss }) => {
         <Input
           type="text"
           placeholder={placeholder}
+          id={placeholder}
           value={filter}
           onChange={onChange}
           autoFocus
@@ -35,6 +37,13 @@ const MobileHeader = ({ filter, placeholder, onChange, onDismiss }) => {
       </Paper>
     </CozyTheme>
   )
+}
+
+MobileHeader.propTypes = {
+  filter: PropTypes.string,
+  placeholder: PropTypes.string,
+  onChange: PropTypes.func,
+  onDismiss: PropTypes.func
 }
 
 export default MobileHeader
