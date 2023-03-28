@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import TextField from '@material-ui/core/TextField'
 
 import { Q, fetchPolicies, useClient, useQuery } from 'cozy-client'
 
@@ -21,6 +20,7 @@ import Icon from '../Icon'
 import MobileHeader from './MobileHeader'
 import ContactsListContent from './ContactsListContent'
 import AddContactDialog from './AddContact/AddContactDialog'
+import TextField from '../MuiCozyTheme/TextField'
 
 import styles from './styles.styl'
 
@@ -90,7 +90,8 @@ const ContactsListModal = ({
           <TextField
             variant="outlined"
             type="text"
-            placeholder={placeholder}
+            label={placeholder}
+            id={placeholder}
             fullWidth
             value={filter}
             onChange={handleFilterChange}
@@ -131,7 +132,11 @@ const ContactsListModal = ({
 }
 
 ContactsListModal.propTypes = {
-  onItemClick: PropTypes.func
+  onItemClick: PropTypes.func,
+  placeholder: PropTypes.string,
+  addContactLabel: PropTypes.string,
+  emptyMessage: PropTypes.string,
+  dismissAction: PropTypes.func
 }
 
 export default ContactsListModal
