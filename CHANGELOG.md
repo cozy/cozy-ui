@@ -1,9 +1,89 @@
-# [81.7.0](https://github.com/cozy/cozy-ui/compare/v81.6.1-next...v81.7.0-next) (2023-03-21)
+# [82.2.0](https://github.com/cozy/cozy-ui/compare/v82.1.2...v82.2.0) (2023-03-27)
 
 
 ### Features
 
-* Fake feat to trigger deploy ([87ae9a0](https://github.com/cozy/cozy-ui/commit/87ae9a0))
+* Export Breadcrumbs from MUI ([3bf0588](https://github.com/cozy/cozy-ui/commit/3bf0588))
+
+## [82.1.2](https://github.com/cozy/cozy-ui/compare/v82.1.1...v82.1.2) (2023-03-24)
+
+
+### Bug Fixes
+
+* Missing Viewer translation keys ([0f79e7e](https://github.com/cozy/cozy-ui/commit/0f79e7e))
+
+## [82.1.1](https://github.com/cozy/cozy-ui/compare/v82.1.0...v82.1.1) (2023-03-23)
+
+
+### Bug Fixes
+
+* remove margin on sqAppIcon spinner ([6d74024](https://github.com/cozy/cozy-ui/commit/6d74024))
+
+# [82.1.0](https://github.com/cozy/cozy-ui/compare/v82.0.0...v82.1.0) (2023-03-23)
+
+
+### Bug Fixes
+
+* **ActionMenuItemWrapper:** Icon prop was required (now optional) ([58b98a6](https://github.com/cozy/cozy-ui/commit/58b98a6))
+* **ActionMenuWithClose:** Props wasn't propagated to ActionMenu ([0007d81](https://github.com/cozy/cozy-ui/commit/0007d81))
+* **ListItem:** ExpandedAttributes wasn't using correct local ([97c704a](https://github.com/cozy/cozy-ui/commit/97c704a))
+
+
+### Features
+
+* **ActionMenu:** Add some export to have better DX ([fda803a](https://github.com/cozy/cozy-ui/commit/fda803a))
+
+# [82.0.0](https://github.com/cozy/cozy-ui/compare/v81.9.0...v82.0.0) (2023-03-23)
+
+
+### Features
+
+* Move ActionsMenu from ListItemBase into ActionMenu folder ([02a91b9](https://github.com/cozy/cozy-ui/commit/02a91b9))
+
+
+### BREAKING CHANGES
+
+* `react/MuiCozyTheme/ListItem/ListItemBase/ActionsMenu` has been removed. You need to change some imports :
+- `cozy-ui/transpiled/react/MuiCozyTheme/ListItem/ListItemBase/ActionsMenu/ActionMenuItemWrapper` to `cozy-ui/transpiled/react/ActionMenu/ActionMenuItemWrapper`
+- `cozy-ui/transpiled/react/MuiCozyTheme/ListItem/ListItemBase/ActionsMenu/ActionMenuWithClose` to `cozy-ui/transpiled/react/ActionMenu/ActionMenuWithClose`
+- `cozy-ui/transpiled/react/MuiCozyTheme/ListItem/ListItemBase/ActionsMenu/ActionsItems` to `cozy-ui/transpiled/react/ActionMenu/Actions/ActionsItems`
+- `cozy-ui/transpiled/react/MuiCozyTheme/ListItem/ListItemBase/ActionsMenu/helpers` to `cozy-ui/transpiled/react/ActionMenu/Actions/helpers`
+- `cozy-ui/transpiled/react/MuiCozyTheme/ListItem/ListItemBase/ActionsMenu/Actions/*` to `cozy-ui/transpiled/react/ActionMenu/Actions/*`
+
+# [81.9.0](https://github.com/cozy/cozy-ui/compare/v81.8.0...v81.9.0) (2023-03-23)
+
+
+### Bug Fixes
+
+* **ListItemBase:** Clicking on actions wasn't toggling the menu ([3fbfa31](https://github.com/cozy/cozy-ui/commit/3fbfa31))
+
+
+### Features
+
+* Add ActionMenuItemWrapper for actions menus item ([068f247](https://github.com/cozy/cozy-ui/commit/068f247))
+* **ListItemContact:** Add action menu header ([633ecf8](https://github.com/cozy/cozy-ui/commit/633ecf8))
+* **ListItemContact:** Add default actions ([9164e87](https://github.com/cozy/cozy-ui/commit/9164e87))
+
+# [81.8.0](https://github.com/cozy/cozy-ui/compare/v81.7.0...v81.8.0) (2023-03-22)
+
+
+### Features
+
+* Fake commit to trigger CI deployment ([ea46474](https://github.com/cozy/cozy-ui/commit/ea46474))
+
+# [81.7.0](https://github.com/cozy/cozy-ui/compare/v81.6.1...v81.7.0) (2023-03-22)
+
+
+### Features
+
+* Fake commit to trigger CI deployment ([149531b](https://github.com/cozy/cozy-ui/commit/149531b))
+* **ListItem:** Add ExpandedAttributes comp ([93c0471](https://github.com/cozy/cozy-ui/commit/93c0471))
+* **ListItem:** Add ListItemBase and its logic ([fd094e0](https://github.com/cozy/cozy-ui/commit/fd094e0))
+* **ListItem:** Add ListItemContact based on ListItemBase ([8138158](https://github.com/cozy/cozy-ui/commit/8138158))
+* **ListItem:** Add ListItemDoc ([6972163](https://github.com/cozy/cozy-ui/commit/6972163))
+* **ListItem:** Add ListItemFile based on ListItemBase ([8ae5ce7](https://github.com/cozy/cozy-ui/commit/8ae5ce7))
+* **ListItem:** Add locales and hoc to use them ([d83876f](https://github.com/cozy/cozy-ui/commit/d83876f))
+* Some minors fixes after review ([31f4e55](https://github.com/cozy/cozy-ui/commit/31f4e55))
 
 ## [81.6.1](https://github.com/cozy/cozy-ui/compare/v81.6.0...v81.6.1) (2023-03-21)
 

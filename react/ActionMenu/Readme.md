@@ -1,12 +1,90 @@
-Use an ActionMenu to show a list of actions. ActionMenus automatically switch their display between desktop and mobile.
-
-### Example
+Use an ActionMenu to show a list of actions. ActionMenus automatically switch their display between desktop and mobile. The action list can be created entirely with lower level components, but it is also possible to use a high level component and provide it with a previously created action list.
 
 You can pass a reference to a custom DOM element through the `anchorElRef` prop to attach the menu to that element. This is useful is you want to be able to have autoclose true and be able to close the menu by clicking on the same component that opens it.
 
 A header can be used to provide context on the menu actions. Since on desktop, we display a popper and not a `BottomSheet`, context for the user is not lost, so the ActionMenuHeader would be redundant. This is why it is not rendered unless we are on mobile.
 
 We use [popper.js](https://popper.js.org/docs/v2/) under the hood. You can use the `popperOptions` prop to pass options to the popper.js instance. This lets you control things like placement relative to the anchor, positioning strategies and more — refer to the popper doc for all the details. The positionning is only relevant on desktop.
+
+### With an automatic creation of actions
+
+Use `makeActions` method and create (or use the predefined actions) to build the actions to pass to `ActionsItems` high level component.
+
+#### How to create actions
+
+An action is a simple function that returns an object with specific keys:
+
+- **name** : `<string>` – Action's name
+- **action** : `<func>` – Method triggered when clicking the action
+- **isEnabled** : `<bool>` – Used to add `disable` effect (the action is still displayed)
+- **Component** : `<func>` – The returned component that manages the display
+
+
+```bash
+const expl = () => ({
+  name: 'expl',
+  action: () => {},
+  Component: props => {
+    return <SomeComponent {...props} />
+  }
+})
+```
+
+```jsx
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
+import Variants from 'cozy-ui/docs/components/Variants'
+import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton'
+import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
+import { ActionMenuItemWrapper, ActionMenuWithClose, ActionsItems } from 'cozy-ui/transpiled/react/ActionMenu'
+import { makeActions, hr, modify, call } from 'cozy-ui/transpiled/react/ActionMenu/Actions'
+
+initialState = { showMenu: isTesting() }
+
+const anchorRef = React.createRef()
+const showMenu = () => setState({ showMenu: true })
+const hideMenu = () => setState({ showMenu: false })
+const toggleMenu = () => setState(state => ({ showMenu: !state.showMenu }))
+
+const doc = {
+  _id: 'id01',
+  _type: 'io.cozy.contacts',
+  phone: [{ number: '0102030405' }]
+}
+
+const customAction = () => ({
+  name: 'customAction',
+  action: () => { alert('click') },
+  Component: props => {
+    return (
+      <ActionMenuItemWrapper icon={FileIcon} {...props}>
+        This is a custom action
+      </ActionMenuItemWrapper>
+    )
+  }
+})
+
+const actions = makeActions([ modify, hr, call, customAction ])
+
+;
+
+<DemoProvider>
+  <DropdownButton onClick={toggleMenu} ref={anchorRef}>Show action menu</DropdownButton>
+  {state.showMenu && (
+    <ActionMenuWithClose
+      ref={anchorRef}
+      onClose={hideMenu}
+    >
+      <ActionsItems
+        doc={doc}
+        actions={actions}
+      />
+    </ActionMenuWithClose>
+  )}
+</DemoProvider>
+```
+
+
+### With a manual creation of the actions
 
 ```jsx
 import ActionMenu, { ActionMenuItem, ActionMenuRadio, ActionMenuHeader } from 'cozy-ui/transpiled/react/ActionMenu'

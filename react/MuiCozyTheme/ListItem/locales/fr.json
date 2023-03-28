@@ -1,0 +1,55 @@
+{
+  "ListItem": {
+    "attributes": {
+      "birthday": "Date de naissance",
+      "address": "Adresse",
+      "email": "Adresse e-mail",
+      "phone": "Numéro de téléphone",
+      "metadata": {
+        "datetime": "Ajouté le",
+        "AObtentionDate": "Permis A, délivré le",
+        "BObtentionDate": "Permis B, délivré le",
+        "CObtentionDate": "Permis C, délivré le",
+        "DObtentionDate": "Permis D, délivré le",
+        "issueDate": "Délivré le",
+        "expirationDate": "Date d'expiration",
+        "referencedDate": "Date de référence",
+        "shootingDate": "Date de prise de vue",
+        "obtentionDate": "Date d'obtention",
+        "date": "Date du document",
+        "country": "Pays de délivrance",
+        "refTaxIncome": "Revenu fiscal de référence",
+        "contractType": "Type de contat",
+        "noticePeriod": "Alerte d’expiration",
+        "number": {
+          "driver_license": "Numéro du permis",
+          "caf": "Numéro de dossier CAF",
+          "vehicle_registration": "Numéro de la carte grise (VIN)",
+          "national_id_card": "Numéro de la carte d'identité",
+          "bank_details": "Numéro d'IBAN",
+          "passport": "Numéro du passeport"
+        }
+      }
+    },
+    "file": {
+      "expired": "Expiré",
+      "expiresIn": "Expire dans %{duration}",
+      "page": {
+        "back": "Face arrière",
+        "front": "Face avant"
+      }
+    },
+    "snackbar": {
+      "copyToClipboard": {
+        "success": "Copié dans le presse-papier",
+        "error": "Impossible de copier dans le presse-papier"
+      }
+    },
+    "renameModal": {
+      "title": "Renommer",
+      "content": "Vous êtes sur le point de changer l'extension du fichier. Voulez-vous continuer ?",
+      "cancel": "Annuler",
+      "submit": "Continuer"
+    }
+  }
+}
