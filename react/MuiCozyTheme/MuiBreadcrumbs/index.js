@@ -1,3 +1,3 @@
-import MuiBreadcrumbs from '@material-ui/core/Breadcrumbs'
+import MuiBreadcrumbs from '@mui/material/Breadcrumbs'
 
 export default MuiBreadcrumbs
