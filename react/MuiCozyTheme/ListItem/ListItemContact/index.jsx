@@ -6,7 +6,6 @@ import Icon from '../../../Icon'
 import ContactsIcon from '../../../Icons/Contacts'
 import ListItemBase from '../ListItemBase'
 
-import { makeDefaultExpandedAttributes } from '../ExpandedAttributes/helpers'
 import useActions from './useActions'
 
 const ListItemContact = ({
@@ -16,7 +15,7 @@ const ListItemContact = ({
   icon,
   actions,
   selectProps,
-  expandedAttributesProps: { isExpandedAttributesActive, expandedAttributes },
+  expandedAttributesProps,
   onClick
 }) => {
   const defaultActions = useActions(contact)
@@ -24,10 +23,6 @@ const ListItemContact = ({
   const secondaryText = secondary || contact.email?.[0]?.address
   const itemIcon = icon || <Icon icon={ContactsIcon} width="32" height="32" />
 
-  const itemExpandedAttributes = makeDefaultExpandedAttributes(
-    contact,
-    expandedAttributes
-  )
   const itemActions = defaultActions.concat(actions)
 
   return (
@@ -41,20 +36,14 @@ const ListItemContact = ({
         Header: <Filename icon={ContactsIcon} filename={primaryText} />
       }}
       selectProps={selectProps}
-      expandedAttributesProps={{
-        isExpandedAttributesActive,
-        expandedAttributes: itemExpandedAttributes
-      }}
+      expandedAttributesProps={expandedAttributesProps}
       onClick={onClick}
     />
   )
 }
 
 ListItemContact.defaultProps = {
-  actions: [],
-  expandedAttributesProps: {
-    isExpandedAttributesActive: false
-  }
+  actions: []
 }
 
 ListItemContact.propTypes = {

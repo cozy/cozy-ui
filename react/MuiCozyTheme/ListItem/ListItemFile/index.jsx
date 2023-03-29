@@ -6,7 +6,6 @@ import { splitFilename } from 'cozy-client/dist/models/file'
 import Filename from '../../../Filename'
 import FiletypePdfIcon from '../../../Icons/FileTypePdf'
 import ListItemBase from '../ListItemBase'
-import { makeDefaultExpandedAttributes } from '../ExpandedAttributes/helpers'
 import ItemIcon from './ItemIcon'
 import PrimaryText from './PrimaryText'
 import SecondaryText from './SecondaryText'
@@ -18,18 +17,13 @@ const ListItemFile = ({
   icon,
   actions,
   selectProps,
-  expandedAttributesProps: { isExpandedAttributesActive, expandedAttributes },
+  expandedAttributesProps,
   onClick
 }) => {
   const { filename, extension } = splitFilename({
     name: file.name,
     type: 'file'
   })
-
-  const itemExpandedAttributes = makeDefaultExpandedAttributes(
-    file,
-    expandedAttributes
-  )
 
   return (
     <ListItemBase
@@ -48,10 +42,7 @@ const ListItemFile = ({
         )
       }}
       selectProps={selectProps}
-      expandedAttributesProps={{
-        isExpandedAttributesActive,
-        expandedAttributes: itemExpandedAttributes
-      }}
+      expandedAttributesProps={expandedAttributesProps}
       onClick={onClick}
     />
   )

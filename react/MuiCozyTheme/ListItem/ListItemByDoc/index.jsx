@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import ListItemFile from '../ListItemFile'
 import ListItemContact from '../ListItemContact'
+import { makeDefaultExpandedAttributes } from '../ExpandedAttributes/helpers'
 
 const ListItemByDoc = ({
   doc,
@@ -11,9 +12,15 @@ const ListItemByDoc = ({
   icon,
   actions,
   selectProps,
-  expandedAttributesProps,
+  expandedAttributesProps: { isExpandedAttributesActive, expandedAttributes },
+
   onClick
 }) => {
+  const itemExpandedAttributes = makeDefaultExpandedAttributes(
+    doc,
+    expandedAttributes
+  )
+
   switch (doc._type) {
     case 'io.cozy.contacts':
       return (
@@ -24,7 +31,10 @@ const ListItemByDoc = ({
           icon={icon}
           actions={actions}
           selectProps={selectProps}
-          expandedAttributesProps={expandedAttributesProps}
+          expandedAttributesProps={{
+            isExpandedAttributesActive,
+            expandedAttributes: itemExpandedAttributes
+          }}
           onClick={onClick}
         />
       )
@@ -38,7 +48,10 @@ const ListItemByDoc = ({
           icon={icon}
           actions={actions}
           selectProps={selectProps}
-          expandedAttributesProps={expandedAttributesProps}
+          expandedAttributesProps={{
+            isExpandedAttributesActive,
+            expandedAttributes: itemExpandedAttributes
+          }}
           onClick={onClick}
         />
       )
@@ -52,7 +65,10 @@ const ListItemByDoc = ({
           icon={icon}
           actions={actions}
           selectProps={selectProps}
-          expandedAttributesProps={expandedAttributesProps}
+          expandedAttributesProps={{
+            isExpandedAttributesActive,
+            expandedAttributes: itemExpandedAttributes
+          }}
           onClick={onClick}
         />
       )
