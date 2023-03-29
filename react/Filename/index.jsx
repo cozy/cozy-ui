@@ -15,20 +15,28 @@ const Filename = ({ icon, filename, extension, variant }) => {
           <Icon className={'u-mr-1'} icon={icon} width={30} height={30} />
         </Img>
       )}
-      <Bd className={styles['c-filename-wrapper']}>
-        <Typography
-          variant={variant}
-          component="span"
-          className={cx(styles['c-filename-name'], 'u-ellipsis')}
-        >
-          {filename}
-        </Typography>
-        {extension && (
-          <Typography variant={variant} component="span" color="textSecondary">
-            {extension}
-          </Typography>
-        )}
-      </Bd>
+      {(filename || extension) && (
+        <Bd className={styles['c-filename-wrapper']}>
+          {filename && (
+            <Typography
+              variant={variant}
+              component="span"
+              className={cx(styles['c-filename-name'], 'u-ellipsis')}
+            >
+              {filename}
+            </Typography>
+          )}
+          {extension && (
+            <Typography
+              variant={variant}
+              component="span"
+              color="textSecondary"
+            >
+              {extension}
+            </Typography>
+          )}
+        </Bd>
+      )}
     </Media>
   )
 }
@@ -41,7 +49,7 @@ Filename.propTypes = {
     PropTypes.func
   ]),
   /** folder or file name */
-  filename: PropTypes.string.isRequired,
+  filename: PropTypes.string,
   /** If a file name, you can specify the extension */
   extension: PropTypes.string,
   variant: PropTypes.string
