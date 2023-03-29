@@ -2,9 +2,12 @@
   "ListItem": {
     "attributes": {
       "birthday": "Date de naissance",
+      "birthcity": "Lieu de naissance",
       "address": "Adresse",
       "email": "Adresse e-mail",
       "phone": "Numéro de téléphone",
+      "company": "Entreprise",
+      "jobTitle": "Fonction",
       "metadata": {
         "datetime": "Ajouté le",
         "AObtentionDate": "Permis A, délivré le",
@@ -19,11 +22,17 @@
         "date": "Date du document",
         "country": "Pays de délivrance",
         "refTaxIncome": "Revenu fiscal de référence",
-        "contractType": "Type de contat",
+        "contractType": "Type de contrat",
         "noticePeriod": "Alerte d’expiration",
+        "cafFileNumber": "Numéro de dossier CAF",
+        "vinNumber": "Numéro de la carte grise (VIN)",
+        "cardNumber": "Numéro de la carte d'identité",
+        "ibanNumber": "Numéro d'IBAN",
+        "passportNumber": "Numéro du passeport",
         "number": {
           "driver_license": "Numéro du permis",
           "caf": "Numéro de dossier CAF",
+          "payment_proof_family_allowance": "Numéro de dossier CAF",
           "vehicle_registration": "Numéro de la carte grise (VIN)",
           "national_id_card": "Numéro de la carte d'identité",
           "bank_details": "Numéro d'IBAN",

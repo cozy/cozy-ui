@@ -2,9 +2,12 @@
   "ListItem": {
     "attributes": {
       "birthday": "Birthday",
+      "birthcity": "Birth city",
       "address": "Address",
       "email": "Email address",
       "phone": "Phone number",
+      "company": "Company",
+      "jobTitle": "Job title",
       "metadata": {
         "datetime": "Added on",
         "AObtentionDate": "License A, delivered on",
@@ -21,9 +24,15 @@
         "refTaxIncome": "Reference tax income",
         "contractType": "Contract type",
         "noticePeriod": "Expiration alert",
+        "cafFileNumber": "CAF file number",
+        "vinNumber": "Vehicle registration number (VIN)",
+        "cardNumber": "National ID card number",
+        "ibanNumber": "IBAN number",
+        "passportNumber": "Passport number",
         "number": {
           "driver_license": "License number",
           "caf": "CAF file number",
+          "payment_proof_family_allowance": "CAF file number",
           "vehicle_registration": "Vehicle registration number (VIN)",
           "national_id_card": "National ID card number",
           "bank_details": "IBAN number",
