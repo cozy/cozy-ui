@@ -24,7 +24,7 @@ const ExpandedAttribute = ({ label, value, setAlertProps }) => {
       </ListItemIcon>
       <ListItemText
         primary={<Typography variant="caption">{label}</Typography>}
-        secondary={<Typography variant="body1">{value}</Typography>}
+        secondary={<Typography variant="body2">{value}</Typography>}
       />
     </ListItem>
   )
