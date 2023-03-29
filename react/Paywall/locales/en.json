@@ -18,5 +18,17 @@
       "content": "Your current offer does not allow you to take advantage of this feature. Please [contact us](mailto:%{mail}) to update your subscription.",
       "action": "I understood"
     }
+  },
+  "passwordSharingPaywall": {
+    "premium": {
+      "title": "Extended your Cozy!",
+      "content": "To unlock this feature, or simply support us, you can change your Cozy offer.",
+      "action": "Check our plans"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Your current offer does not allow you to take advantage of this feature. Please [contact us](mailto:%{mail}) to update your subscription.",
+      "action": "I understood"
+    }
   }
 }

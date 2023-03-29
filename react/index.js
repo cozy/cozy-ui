@@ -74,7 +74,7 @@ export { default as PercentageLine } from './PercentageLine'
 export { default as Popup } from './Popup'
 export { default as IconStack } from './IconStack'
 export { default as QuotaAlert } from './QuotaAlert'
-export { OnlyOfficePaywall } from './Paywall'
+export { OnlyOfficePaywall, PasswordSharingPaywall } from './Paywall'
 export {
   default as ViewStack,
   ModalStack,

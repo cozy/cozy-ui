@@ -1,9 +1,9 @@
-This modal is designed to restrict access to a feature to encourage upgrading
+A paywall is a modal designed to restrict access to a feature to encourage upgrading. There is different variant for each features so the wording can be different to adapt to the context of use.
 
-### Paywall for OnlyOffice
+### Variants
 
 ```jsx
-import { OnlyOfficePaywall } from "cozy-ui/transpiled/react/Paywall"
+import { OnlyOfficePaywall, PasswordSharingPaywall } from "cozy-ui/transpiled/react/Paywall"
 import { CozyProvider } from "cozy-client"
 import { BreakpointsProvider } from "cozy-ui/transpiled/react/hooks/useBreakpoints"
 import Variants from 'cozy-ui/docs/components/Variants'
@@ -38,15 +38,39 @@ const makeClient = (premiumLink) => ({
   })
 })
 
-;
+const PaywallComponent = state.modal
+
+const paywalls = [
+  OnlyOfficePaywall,
+  PasswordSharingPaywall
+]
+
+const togglePaywall = paywall => {
+  setState({
+    modalOpened: !state.modalOpened,
+    modal: paywall
+  })
+};
 
 <Variants initialVariants={initialVariants}>
   {variant => (
     <DemoProvider client={makeClient(variant.premiumLink)}>
       <div>
-        <Button onClick={() => setState({ modalOpened: !state.modalOpened })} label="Toggle modal"/>
+      <div className="u-mt-1">
+          {paywalls.map(paywall => (
+            <Button
+              key={`open-btn-${paywall.name}`}
+              data-testid={`open-btn-${paywall.name}`}
+              className="u-m-half"
+              label={`Open ${paywall.name.replace(/([A-Z])/g, ' $1').trim()}`}
+              variant="ghost"
+              size="small"
+              onClick={() => togglePaywall(paywall)}
+            />
+          ))}
+        </div>
         {state.modalOpened && (
-          <OnlyOfficePaywall
+          <PaywallComponent
             isPublic={variant.isPublic}
             onClose={() => setState({ modalOpened: false })} />
         )}
