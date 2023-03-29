@@ -1,3 +1,17 @@
+# [82.3.0](https://github.com/cozy/cozy-ui/compare/v82.2.0...v82.3.0) (2023-03-29)
+
+
+### Bug Fixes
+
+* **ExpandedAttributes:** Secondary font wasn't correct ([a9800df](https://github.com/cozy/cozy-ui/commit/a9800df))
+* **Filename:** Props `filename` was required ([910ff05](https://github.com/cozy/cozy-ui/commit/910ff05))
+
+
+### Features
+
+* **ExpandedAttributes:** Add some locales ([6fbcfe4](https://github.com/cozy/cozy-ui/commit/6fbcfe4))
+* **ExpandedAttributes:** Change supported attributes and modify logic ([238e359](https://github.com/cozy/cozy-ui/commit/238e359))
+
 # [82.2.0](https://github.com/cozy/cozy-ui/compare/v82.1.2...v82.2.0) (2023-03-27)
 
 
