@@ -1,7 +1,8 @@
-import { formatAttrValue } from './helpers'
+import { formatAttrValue, makeAttrKey } from './helpers'
 
 const f = () => 'someMockedDate'
 const lang = 'en'
+const doc = { metadata: { qualification: { label: 'qualifLabel' } } }
 
 describe('formatAttrValue', () => {
   it('should return primary formattedAddress from addresses', () => {
@@ -84,6 +85,17 @@ describe('formatAttrValue', () => {
     expect(res).toBe(12345)
   })
 
+  it('should return a number for a number value', () => {
+    const res = formatAttrValue({
+      attribute: 'metadata.number',
+      attrValue: '12345',
+      f,
+      lang
+    })
+
+    expect(res).toBe('12345')
+  })
+
   it('should return a date for an ISO string formated date', () => {
     const res = formatAttrValue({
       attribute: 'metadata.date',
@@ -93,5 +105,31 @@ describe('formatAttrValue', () => {
     })
 
     expect(res).toBe('someMockedDate')
+  })
+})
+
+describe('makeAttrKey', () => {
+  it('should return email', () => {
+    const res = makeAttrKey(doc, 'email[0].address')
+
+    expect(res).toBe('email')
+  })
+
+  it('should return phone', () => {
+    const res = makeAttrKey(doc, 'phone[1].number')
+
+    expect(res).toBe('phone')
+  })
+
+  it('should return metadata.number.qualifLabel', () => {
+    const res = makeAttrKey(doc, 'metadata.number')
+
+    expect(res).toBe('metadata.number.qualifLabel')
+  })
+
+  it('should return the attribute', () => {
+    const res = makeAttrKey(doc, 'civility')
+
+    expect(res).toBe('civility')
   })
 })

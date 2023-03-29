@@ -2,7 +2,11 @@ import get from 'lodash/get'
 
 import { formatDate } from '../../../Viewer/helpers'
 
-export const normalizeExpandedAttribute = attr => attr.split('[]')[0]
+export const normalizeExpandedAttribute = attr =>
+  attr
+    .split('[]')[0]
+    .replace(':', '.')
+    .replace('flexsearchProps.', '')
 
 // attributes not considered as expanded attributes
 export const notExpandedAttributes = {
@@ -26,10 +30,7 @@ export const defaultExpandedAttributes = {
     'metadata.CObtentionDate',
     'metadata.DObtentionDate',
     'metadata.obtentionDate',
-    'metadata.referencedDate',
     'metadata.issueDate',
-    'metadata.shootingDate',
-    'metadata.date',
     'metadata.datetime',
     'metadata.expirationDate',
     'metadata.country',
@@ -79,6 +80,7 @@ export const copyToClipboard = ({ value, setAlertProps, t }) => () => {
 }
 
 export const isDate = value => {
+  if (!isNaN(value)) return false
   const dateTime = new Date(value).getTime()
   const dateParsedValue = Date.parse(value)
 
@@ -106,6 +108,19 @@ export const formatAttrValue = ({ attribute, attrValue, f, lang }) => {
   }
 }
 
+export const makeAttrKey = (doc, expandedAttribute) => {
+  switch (true) {
+    case expandedAttribute === 'metadata.number':
+      return `${expandedAttribute}.${doc.metadata.qualification.label}`
+
+    case expandedAttribute.match(/\[.+\]/g) !== null:
+      return expandedAttribute.split('[')[0]
+
+    default:
+      return expandedAttribute
+  }
+}
+
 export const makeAttrsKeyAndFormatedValue = ({
   doc,
   expandedAttributes,
@@ -125,10 +140,7 @@ export const makeAttrsKeyAndFormatedValue = ({
 
       if (!attrFormatedValue) return undefined
 
-      const attrKey =
-        expandedAttribute === 'metadata.number'
-          ? `${expandedAttribute}.${doc.metadata.qualification.label}`
-          : expandedAttribute
+      const attrKey = makeAttrKey(doc, expandedAttribute)
 
       return { attrKey, attrFormatedValue }
     })
@@ -136,4 +148,25 @@ export const makeAttrsKeyAndFormatedValue = ({
     .slice(0, 3)
 
   return attrsKeyAndFormatedValue
+}
+
+export const hasExpandedAttributesDisplayed = ({
+  doc,
+  expandedAttributes,
+  f,
+  lang
+}) => {
+  const defaultExpandedAttributes = makeDefaultExpandedAttributes(
+    doc,
+    expandedAttributes
+  )
+
+  const attrsKeyAndFormatedValue = makeAttrsKeyAndFormatedValue({
+    doc,
+    expandedAttributes: defaultExpandedAttributes,
+    f,
+    lang
+  })
+
+  return attrsKeyAndFormatedValue?.length > 0 || false
 }
