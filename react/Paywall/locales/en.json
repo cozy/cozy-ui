@@ -1,4 +1,7 @@
 {
+  "mobileApp": {
+    "action": "I understood"
+  },
   "onlyOfficePaywall": {
     "premium": {
       "title": "Reserved for the higher plan",

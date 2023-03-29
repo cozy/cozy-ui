@@ -1,4 +1,7 @@
 {
+  "mobileApp": {
+    "action": "J'ai compris"
+  },
   "onlyOfficePaywall": {
     "premium": {
       "title": "Réservé au forfait supérieur",

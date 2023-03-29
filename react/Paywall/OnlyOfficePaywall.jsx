@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 
+import { isMobileApp } from 'cozy-device-helper'
 import { useClient } from 'cozy-client'
 import { buildPremiumLink } from 'cozy-client/dist/models/instance'
 
@@ -42,8 +43,11 @@ const OnlyOfficePaywall = ({ onClose, isPublic, t } = { isPublic: false }) => {
   const link = buildPremiumLink(instance)
   const type = makeType(instance, isPublic, link)
 
-  const onAction = () =>
-    type === 'premium' ? window.open(link, 'self') : onClose()
+  const onAction = () => {
+    return type === 'premium' && !isMobileApp()
+      ? window.open(link, 'self')
+      : onClose()
+  }
 
   return (
     <IllustrationDialog
@@ -61,7 +65,11 @@ const OnlyOfficePaywall = ({ onClose, isPublic, t } = { isPublic: false }) => {
       actions={
         <Button
           onClick={onAction}
-          label={t(`onlyOfficePaywall.${type}.action`)}
+          label={
+            isMobileApp()
+              ? t(`mobileApp.action`)
+              : t(`onlyOfficePaywall.${type}.action`)
+          }
         />
       }
       content={
