@@ -1,3 +1,10 @@
+## [82.5.1](https://github.com/cozy/cozy-ui/compare/v82.5.0...v82.5.1) (2023-03-30)
+
+
+### Bug Fixes
+
+* **ExpandedAttributes:** Translated label was forgotten for flexsearch ([46491bc](https://github.com/cozy/cozy-ui/commit/46491bc))
+
 # [82.5.0](https://github.com/cozy/cozy-ui/compare/v82.4.0...v82.5.0) (2023-03-30)
 
 
