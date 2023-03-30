@@ -11,7 +11,18 @@ export const normalizeExpandedAttribute = attr =>
 // attributes not considered as expanded attributes
 export const notExpandedAttributes = {
   'io.cozy.contacts': ['fullname', 'civility', 'note'],
-  'io.cozy.files': ['name', 'flexsearchProps:translated:qualificationLabel']
+  'io.cozy.files': [
+    'name',
+    'flexsearchProps:translated:qualificationLabel',
+    'flexsearchProps:translated:refTaxIncome',
+    'flexsearchProps:translated:contractType',
+    'flexsearchProps:translated:driverLicense',
+    'flexsearchProps:translated:paymentProofFamilyAllowance',
+    'flexsearchProps:translated:vehicleRegistration',
+    'flexsearchProps:translated:nationalIdCard',
+    'flexsearchProps:translated:bankDetails',
+    'flexsearchProps:translated:passport'
+  ]
 }
 
 // attributes that we want to display if no attribute of the document is related to the search
@@ -30,8 +41,6 @@ export const defaultExpandedAttributes = {
     'metadata.CObtentionDate',
     'metadata.DObtentionDate',
     'metadata.obtentionDate',
-    'metadata.issueDate',
-    'metadata.datetime',
     'metadata.expirationDate',
     'metadata.country',
     'metadata.refTaxIncome',
@@ -39,7 +48,7 @@ export const defaultExpandedAttributes = {
   ]
 }
 
-export const hasAllElement = (arr1, arr2) => arr1.every(x => arr2.includes(x))
+export const hasAllElement = (arr1, arr2) => arr1?.every(x => arr2.includes(x))
 
 export const makeDefaultExpandedAttributes = (doc, expandedAttributes) => {
   const doctype = doc?._type
