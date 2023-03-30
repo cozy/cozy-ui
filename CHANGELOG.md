@@ -1,3 +1,12 @@
+# [82.4.0](https://github.com/cozy/cozy-ui/compare/v82.3.0...v82.4.0) (2023-03-30)
+
+
+### Features
+
+* Change OnlyOffice paywall action for mobile app ([c3b3406](https://github.com/cozy/cozy-ui/commit/c3b3406))
+* **ExpandedAttributes:** Change flexsearchProps translated keys ([4b8c4ee](https://github.com/cozy/cozy-ui/commit/4b8c4ee))
+* Update OnlyOffice paywall wording ([58af6d8](https://github.com/cozy/cozy-ui/commit/58af6d8))
+
 # [82.3.0](https://github.com/cozy/cozy-ui/compare/v82.2.0...v82.3.0) (2023-03-29)
 
 
