@@ -1500,7 +1500,7 @@ html,
     Hexadecimal colors are here only as an example on a white background.
 
     Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
-    Stylus: secondaryTextColor - #9D9EA1, CSS: var(--secondaryTextColor)
+    Stylus: secondaryTextColor - #6F7177, CSS: var(--secondaryTextColor)
     Stylus: disabledTextColor - #BEBFC1, CSS: var(--disabledTextColor)
     Stylus: hintTextColor - #BEBFC1, CSS: var(--hintTextColor)
     Stylus: iconTextColor - #66686D, CSS: var(--iconTextColor)
@@ -1508,7 +1508,7 @@ html,
     Styleguide Settings.theme.text
     */
   --primaryTextColor: rgba(29,33,42,0.9);
-  --secondaryTextColor: rgba(29,33,42,0.48);
+  --secondaryTextColor: rgba(29,33,42,0.64);
   --disabledTextColor: rgba(29,33,42,0.32);
   --hintTextColor: rgba(29,33,42,0.32);
   --iconTextColor: rgba(29,33,42,0.72);
@@ -1569,14 +1569,14 @@ html,
     Success colors
 
     Stylus: successColorLight        -  #38C949, CSS: var(--successColorLight)
-    Stylus: successColor             -  #09AE1C, CSS: var(--successColor)
+    Stylus: successColor             -  #09AB1B, CSS: var(--successColor)
     Stylus: successColorDark         -  #018711, CSS: var(--successColorDark)
     Stylus: successColorContrastText -  #FFF, CSS: var(--successColorContrastText)
 
     Styleguide Settings.theme.success
     */
   --successColorLight: #38c949;
-  --successColor: #09ae1c;
+  --successColor: #09ab1b;
   --successColorDark: #018711;
   --successColorContrastText: #fff;
 /*
@@ -6544,7 +6544,7 @@ html,
     Hexadecimal colors are here only as an example on a white background.
 
     Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
-    Stylus: secondaryTextColor - #9D9EA1, CSS: var(--secondaryTextColor)
+    Stylus: secondaryTextColor - #6F7177, CSS: var(--secondaryTextColor)
     Stylus: disabledTextColor - #BEBFC1, CSS: var(--disabledTextColor)
     Stylus: hintTextColor - #BEBFC1, CSS: var(--hintTextColor)
     Stylus: iconTextColor - #66686D, CSS: var(--iconTextColor)
@@ -6552,7 +6552,7 @@ html,
     Styleguide Settings.theme.text
     */
   --primaryTextColor: rgba(29,33,42,0.9);
-  --secondaryTextColor: rgba(29,33,42,0.48);
+  --secondaryTextColor: rgba(29,33,42,0.64);
   --disabledTextColor: rgba(29,33,42,0.32);
   --hintTextColor: rgba(29,33,42,0.32);
   --iconTextColor: rgba(29,33,42,0.72);
@@ -6613,14 +6613,14 @@ html,
     Success colors
 
     Stylus: successColorLight        -  #38C949, CSS: var(--successColorLight)
-    Stylus: successColor             -  #09AE1C, CSS: var(--successColor)
+    Stylus: successColor             -  #09AB1B, CSS: var(--successColor)
     Stylus: successColorDark         -  #018711, CSS: var(--successColorDark)
     Stylus: successColorContrastText -  #FFF, CSS: var(--successColorContrastText)
 
     Styleguide Settings.theme.success
     */
   --successColorLight: #38c949;
-  --successColor: #09ae1c;
+  --successColor: #09ab1b;
   --successColorDark: #018711;
   --successColorContrastText: #fff;
 /*
@@ -8954,7 +8954,7 @@ html,
     Hexadecimal colors are here only as an example on a white background.
 
     Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
-    Stylus: secondaryTextColor - #9D9EA1, CSS: var(--secondaryTextColor)
+    Stylus: secondaryTextColor - #6F7177, CSS: var(--secondaryTextColor)
     Stylus: disabledTextColor - #BEBFC1, CSS: var(--disabledTextColor)
     Stylus: hintTextColor - #BEBFC1, CSS: var(--hintTextColor)
     Stylus: iconTextColor - #66686D, CSS: var(--iconTextColor)
@@ -8962,7 +8962,7 @@ html,
     Styleguide Settings.theme.text
     */
   --primaryTextColor: rgba(29,33,42,0.9);
-  --secondaryTextColor: rgba(29,33,42,0.48);
+  --secondaryTextColor: rgba(29,33,42,0.64);
   --disabledTextColor: rgba(29,33,42,0.32);
   --hintTextColor: rgba(29,33,42,0.32);
   --iconTextColor: rgba(29,33,42,0.72);
@@ -9023,14 +9023,14 @@ html,
     Success colors
 
     Stylus: successColorLight        -  #38C949, CSS: var(--successColorLight)
-    Stylus: successColor             -  #09AE1C, CSS: var(--successColor)
+    Stylus: successColor             -  #09AB1B, CSS: var(--successColor)
     Stylus: successColorDark         -  #018711, CSS: var(--successColorDark)
     Stylus: successColorContrastText -  #FFF, CSS: var(--successColorContrastText)
 
     Styleguide Settings.theme.success
     */
   --successColorLight: #38c949;
-  --successColor: #09ae1c;
+  --successColor: #09ab1b;
   --successColorDark: #018711;
   --successColorContrastText: #fff;
 /*
@@ -12779,7 +12779,7 @@ html,
     Hexadecimal colors are here only as an example on a white background.
 
     Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
-    Stylus: secondaryTextColor - #9D9EA1, CSS: var(--secondaryTextColor)
+    Stylus: secondaryTextColor - #6F7177, CSS: var(--secondaryTextColor)
     Stylus: disabledTextColor - #BEBFC1, CSS: var(--disabledTextColor)
     Stylus: hintTextColor - #BEBFC1, CSS: var(--hintTextColor)
     Stylus: iconTextColor - #66686D, CSS: var(--iconTextColor)
@@ -12787,7 +12787,7 @@ html,
     Styleguide Settings.theme.text
     */
   --primaryTextColor: rgba(29,33,42,0.9);
-  --secondaryTextColor: rgba(29,33,42,0.48);
+  --secondaryTextColor: rgba(29,33,42,0.64);
   --disabledTextColor: rgba(29,33,42,0.32);
   --hintTextColor: rgba(29,33,42,0.32);
   --iconTextColor: rgba(29,33,42,0.72);
@@ -12848,14 +12848,14 @@ html,
     Success colors
 
     Stylus: successColorLight        -  #38C949, CSS: var(--successColorLight)
-    Stylus: successColor             -  #09AE1C, CSS: var(--successColor)
+    Stylus: successColor             -  #09AB1B, CSS: var(--successColor)
     Stylus: successColorDark         -  #018711, CSS: var(--successColorDark)
     Stylus: successColorContrastText -  #FFF, CSS: var(--successColorContrastText)
 
     Styleguide Settings.theme.success
     */
   --successColorLight: #38c949;
-  --successColor: #09ae1c;
+  --successColor: #09ab1b;
   --successColorDark: #018711;
   --successColorContrastText: #fff;
 /*
@@ -13267,7 +13267,7 @@ html,
     Hexadecimal colors are here only as an example on a white background.
 
     Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
-    Stylus: secondaryTextColor - #9D9EA1, CSS: var(--secondaryTextColor)
+    Stylus: secondaryTextColor - #6F7177, CSS: var(--secondaryTextColor)
     Stylus: disabledTextColor - #BEBFC1, CSS: var(--disabledTextColor)
     Stylus: hintTextColor - #BEBFC1, CSS: var(--hintTextColor)
     Stylus: iconTextColor - #66686D, CSS: var(--iconTextColor)
@@ -13275,7 +13275,7 @@ html,
     Styleguide Settings.theme.text
     */
   --primaryTextColor: rgba(29,33,42,0.9);
-  --secondaryTextColor: rgba(29,33,42,0.48);
+  --secondaryTextColor: rgba(29,33,42,0.64);
   --disabledTextColor: rgba(29,33,42,0.32);
   --hintTextColor: rgba(29,33,42,0.32);
   --iconTextColor: rgba(29,33,42,0.72);
@@ -13336,14 +13336,14 @@ html,
     Success colors
 
     Stylus: successColorLight        -  #38C949, CSS: var(--successColorLight)
-    Stylus: successColor             -  #09AE1C, CSS: var(--successColor)
+    Stylus: successColor             -  #09AB1B, CSS: var(--successColor)
     Stylus: successColorDark         -  #018711, CSS: var(--successColorDark)
     Stylus: successColorContrastText -  #FFF, CSS: var(--successColorContrastText)
 
     Styleguide Settings.theme.success
     */
   --successColorLight: #38c949;
-  --successColor: #09ae1c;
+  --successColor: #09ab1b;
   --successColorDark: #018711;
   --successColorContrastText: #fff;
 /*
@@ -13732,7 +13732,7 @@ html,
     Hexadecimal colors are here only as an example on a white background.
 
     Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
-    Stylus: secondaryTextColor - #9D9EA1, CSS: var(--secondaryTextColor)
+    Stylus: secondaryTextColor - #6F7177, CSS: var(--secondaryTextColor)
     Stylus: disabledTextColor - #BEBFC1, CSS: var(--disabledTextColor)
     Stylus: hintTextColor - #BEBFC1, CSS: var(--hintTextColor)
     Stylus: iconTextColor - #66686D, CSS: var(--iconTextColor)
@@ -13740,7 +13740,7 @@ html,
     Styleguide Settings.theme.text
     */
   --primaryTextColor: rgba(29,33,42,0.9);
-  --secondaryTextColor: rgba(29,33,42,0.48);
+  --secondaryTextColor: rgba(29,33,42,0.64);
   --disabledTextColor: rgba(29,33,42,0.32);
   --hintTextColor: rgba(29,33,42,0.32);
   --iconTextColor: rgba(29,33,42,0.72);
@@ -13801,14 +13801,14 @@ html,
     Success colors
 
     Stylus: successColorLight        -  #38C949, CSS: var(--successColorLight)
-    Stylus: successColor             -  #09AE1C, CSS: var(--successColor)
+    Stylus: successColor             -  #09AB1B, CSS: var(--successColor)
     Stylus: successColorDark         -  #018711, CSS: var(--successColorDark)
     Stylus: successColorContrastText -  #FFF, CSS: var(--successColorContrastText)
 
     Styleguide Settings.theme.success
     */
   --successColorLight: #38c949;
-  --successColor: #09ae1c;
+  --successColor: #09ab1b;
   --successColorDark: #018711;
   --successColorContrastText: #fff;
 /*
@@ -16900,7 +16900,7 @@ html,
     Hexadecimal colors are here only as an example on a white background.
 
     Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
-    Stylus: secondaryTextColor - #9D9EA1, CSS: var(--secondaryTextColor)
+    Stylus: secondaryTextColor - #6F7177, CSS: var(--secondaryTextColor)
     Stylus: disabledTextColor - #BEBFC1, CSS: var(--disabledTextColor)
     Stylus: hintTextColor - #BEBFC1, CSS: var(--hintTextColor)
     Stylus: iconTextColor - #66686D, CSS: var(--iconTextColor)
@@ -16908,7 +16908,7 @@ html,
     Styleguide Settings.theme.text
     */
   --primaryTextColor: rgba(29,33,42,0.9);
-  --secondaryTextColor: rgba(29,33,42,0.48);
+  --secondaryTextColor: rgba(29,33,42,0.64);
   --disabledTextColor: rgba(29,33,42,0.32);
   --hintTextColor: rgba(29,33,42,0.32);
   --iconTextColor: rgba(29,33,42,0.72);
@@ -16969,14 +16969,14 @@ html,
     Success colors
 
     Stylus: successColorLight        -  #38C949, CSS: var(--successColorLight)
-    Stylus: successColor             -  #09AE1C, CSS: var(--successColor)
+    Stylus: successColor             -  #09AB1B, CSS: var(--successColor)
     Stylus: successColorDark         -  #018711, CSS: var(--successColorDark)
     Stylus: successColorContrastText -  #FFF, CSS: var(--successColorContrastText)
 
     Styleguide Settings.theme.success
     */
   --successColorLight: #38c949;
-  --successColor: #09ae1c;
+  --successColor: #09ab1b;
   --successColorDark: #018711;
   --successColorContrastText: #fff;
 /*
@@ -20567,7 +20567,7 @@ html,
     Hexadecimal colors are here only as an example on a white background.
 
     Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
-    Stylus: secondaryTextColor - #9D9EA1, CSS: var(--secondaryTextColor)
+    Stylus: secondaryTextColor - #6F7177, CSS: var(--secondaryTextColor)
     Stylus: disabledTextColor - #BEBFC1, CSS: var(--disabledTextColor)
     Stylus: hintTextColor - #BEBFC1, CSS: var(--hintTextColor)
     Stylus: iconTextColor - #66686D, CSS: var(--iconTextColor)
@@ -20575,7 +20575,7 @@ html,
     Styleguide Settings.theme.text
     */
   --primaryTextColor: rgba(29,33,42,0.9);
-  --secondaryTextColor: rgba(29,33,42,0.48);
+  --secondaryTextColor: rgba(29,33,42,0.64);
   --disabledTextColor: rgba(29,33,42,0.32);
   --hintTextColor: rgba(29,33,42,0.32);
   --iconTextColor: rgba(29,33,42,0.72);
@@ -20636,14 +20636,14 @@ html,
     Success colors
 
     Stylus: successColorLight        -  #38C949, CSS: var(--successColorLight)
-    Stylus: successColor             -  #09AE1C, CSS: var(--successColor)
+    Stylus: successColor             -  #09AB1B, CSS: var(--successColor)
     Stylus: successColorDark         -  #018711, CSS: var(--successColorDark)
     Stylus: successColorContrastText -  #FFF, CSS: var(--successColorContrastText)
 
     Styleguide Settings.theme.success
     */
   --successColorLight: #38c949;
-  --successColor: #09ae1c;
+  --successColor: #09ab1b;
   --successColorDark: #018711;
   --successColorContrastText: #fff;
 /*
@@ -21169,7 +21169,7 @@ html,
     Hexadecimal colors are here only as an example on a white background.
 
     Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
-    Stylus: secondaryTextColor - #9D9EA1, CSS: var(--secondaryTextColor)
+    Stylus: secondaryTextColor - #6F7177, CSS: var(--secondaryTextColor)
     Stylus: disabledTextColor - #BEBFC1, CSS: var(--disabledTextColor)
     Stylus: hintTextColor - #BEBFC1, CSS: var(--hintTextColor)
     Stylus: iconTextColor - #66686D, CSS: var(--iconTextColor)
@@ -21177,7 +21177,7 @@ html,
     Styleguide Settings.theme.text
     */
   --primaryTextColor: rgba(29,33,42,0.9);
-  --secondaryTextColor: rgba(29,33,42,0.48);
+  --secondaryTextColor: rgba(29,33,42,0.64);
   --disabledTextColor: rgba(29,33,42,0.32);
   --hintTextColor: rgba(29,33,42,0.32);
   --iconTextColor: rgba(29,33,42,0.72);
@@ -21238,14 +21238,14 @@ html,
     Success colors
 
     Stylus: successColorLight        -  #38C949, CSS: var(--successColorLight)
-    Stylus: successColor             -  #09AE1C, CSS: var(--successColor)
+    Stylus: successColor             -  #09AB1B, CSS: var(--successColor)
     Stylus: successColorDark         -  #018711, CSS: var(--successColorDark)
     Stylus: successColorContrastText -  #FFF, CSS: var(--successColorContrastText)
 
     Styleguide Settings.theme.success
     */
   --successColorLight: #38c949;
-  --successColor: #09ae1c;
+  --successColor: #09ab1b;
   --successColorDark: #018711;
   --successColorContrastText: #fff;
 /*
@@ -22545,7 +22545,7 @@ html,
     Hexadecimal colors are here only as an example on a white background.
 
     Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
-    Stylus: secondaryTextColor - #9D9EA1, CSS: var(--secondaryTextColor)
+    Stylus: secondaryTextColor - #6F7177, CSS: var(--secondaryTextColor)
     Stylus: disabledTextColor - #BEBFC1, CSS: var(--disabledTextColor)
     Stylus: hintTextColor - #BEBFC1, CSS: var(--hintTextColor)
     Stylus: iconTextColor - #66686D, CSS: var(--iconTextColor)
@@ -22553,7 +22553,7 @@ html,
     Styleguide Settings.theme.text
     */
   --primaryTextColor: rgba(29,33,42,0.9);
-  --secondaryTextColor: rgba(29,33,42,0.48);
+  --secondaryTextColor: rgba(29,33,42,0.64);
   --disabledTextColor: rgba(29,33,42,0.32);
   --hintTextColor: rgba(29,33,42,0.32);
   --iconTextColor: rgba(29,33,42,0.72);
@@ -22614,14 +22614,14 @@ html,
     Success colors
 
     Stylus: successColorLight        -  #38C949, CSS: var(--successColorLight)
-    Stylus: successColor             -  #09AE1C, CSS: var(--successColor)
+    Stylus: successColor             -  #09AB1B, CSS: var(--successColor)
     Stylus: successColorDark         -  #018711, CSS: var(--successColorDark)
     Stylus: successColorContrastText -  #FFF, CSS: var(--successColorContrastText)
 
     Styleguide Settings.theme.success
     */
   --successColorLight: #38c949;
-  --successColor: #09ae1c;
+  --successColor: #09ab1b;
   --successColorDark: #018711;
   --successColorContrastText: #fff;
 /*
@@ -22969,7 +22969,7 @@ html,
     Hexadecimal colors are here only as an example on a white background.
 
     Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
-    Stylus: secondaryTextColor - #9D9EA1, CSS: var(--secondaryTextColor)
+    Stylus: secondaryTextColor - #6F7177, CSS: var(--secondaryTextColor)
     Stylus: disabledTextColor - #BEBFC1, CSS: var(--disabledTextColor)
     Stylus: hintTextColor - #BEBFC1, CSS: var(--hintTextColor)
     Stylus: iconTextColor - #66686D, CSS: var(--iconTextColor)
@@ -22977,7 +22977,7 @@ html,
     Styleguide Settings.theme.text
     */
   --primaryTextColor: rgba(29,33,42,0.9);
-  --secondaryTextColor: rgba(29,33,42,0.48);
+  --secondaryTextColor: rgba(29,33,42,0.64);
   --disabledTextColor: rgba(29,33,42,0.32);
   --hintTextColor: rgba(29,33,42,0.32);
   --iconTextColor: rgba(29,33,42,0.72);
@@ -23038,14 +23038,14 @@ html,
     Success colors
 
     Stylus: successColorLight        -  #38C949, CSS: var(--successColorLight)
-    Stylus: successColor             -  #09AE1C, CSS: var(--successColor)
+    Stylus: successColor             -  #09AB1B, CSS: var(--successColor)
     Stylus: successColorDark         -  #018711, CSS: var(--successColorDark)
     Stylus: successColorContrastText -  #FFF, CSS: var(--successColorContrastText)
 
     Styleguide Settings.theme.success
     */
   --successColorLight: #38c949;
-  --successColor: #09ae1c;
+  --successColor: #09ab1b;
   --successColorDark: #018711;
   --successColorContrastText: #fff;
 /*
@@ -23389,7 +23389,7 @@ html,
     Hexadecimal colors are here only as an example on a white background.
 
     Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
-    Stylus: secondaryTextColor - #9D9EA1, CSS: var(--secondaryTextColor)
+    Stylus: secondaryTextColor - #6F7177, CSS: var(--secondaryTextColor)
     Stylus: disabledTextColor - #BEBFC1, CSS: var(--disabledTextColor)
     Stylus: hintTextColor - #BEBFC1, CSS: var(--hintTextColor)
     Stylus: iconTextColor - #66686D, CSS: var(--iconTextColor)
@@ -23397,7 +23397,7 @@ html,
     Styleguide Settings.theme.text
     */
   --primaryTextColor: rgba(29,33,42,0.9);
-  --secondaryTextColor: rgba(29,33,42,0.48);
+  --secondaryTextColor: rgba(29,33,42,0.64);
   --disabledTextColor: rgba(29,33,42,0.32);
   --hintTextColor: rgba(29,33,42,0.32);
   --iconTextColor: rgba(29,33,42,0.72);
@@ -23458,14 +23458,14 @@ html,
     Success colors
 
     Stylus: successColorLight        -  #38C949, CSS: var(--successColorLight)
-    Stylus: successColor             -  #09AE1C, CSS: var(--successColor)
+    Stylus: successColor             -  #09AB1B, CSS: var(--successColor)
     Stylus: successColorDark         -  #018711, CSS: var(--successColorDark)
     Stylus: successColorContrastText -  #FFF, CSS: var(--successColorContrastText)
 
     Styleguide Settings.theme.success
     */
   --successColorLight: #38c949;
-  --successColor: #09ae1c;
+  --successColor: #09ab1b;
   --successColorDark: #018711;
   --successColorContrastText: #fff;
 /*
@@ -26979,7 +26979,7 @@ html,
     Hexadecimal colors are here only as an example on a white background.
 
     Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
-    Stylus: secondaryTextColor - #9D9EA1, CSS: var(--secondaryTextColor)
+    Stylus: secondaryTextColor - #6F7177, CSS: var(--secondaryTextColor)
     Stylus: disabledTextColor - #BEBFC1, CSS: var(--disabledTextColor)
     Stylus: hintTextColor - #BEBFC1, CSS: var(--hintTextColor)
     Stylus: iconTextColor - #66686D, CSS: var(--iconTextColor)
@@ -26987,7 +26987,7 @@ html,
     Styleguide Settings.theme.text
     */
   --primaryTextColor: rgba(29,33,42,0.9);
-  --secondaryTextColor: rgba(29,33,42,0.48);
+  --secondaryTextColor: rgba(29,33,42,0.64);
   --disabledTextColor: rgba(29,33,42,0.32);
   --hintTextColor: rgba(29,33,42,0.32);
   --iconTextColor: rgba(29,33,42,0.72);
@@ -27048,14 +27048,14 @@ html,
     Success colors
 
     Stylus: successColorLight        -  #38C949, CSS: var(--successColorLight)
-    Stylus: successColor             -  #09AE1C, CSS: var(--successColor)
+    Stylus: successColor             -  #09AB1B, CSS: var(--successColor)
     Stylus: successColorDark         -  #018711, CSS: var(--successColorDark)
     Stylus: successColorContrastText -  #FFF, CSS: var(--successColorContrastText)
 
     Styleguide Settings.theme.success
     */
   --successColorLight: #38c949;
-  --successColor: #09ae1c;
+  --successColor: #09ab1b;
   --successColorDark: #018711;
   --successColorContrastText: #fff;
 /*
@@ -28286,7 +28286,7 @@ html,
     Hexadecimal colors are here only as an example on a white background.
 
     Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
-    Stylus: secondaryTextColor - #9D9EA1, CSS: var(--secondaryTextColor)
+    Stylus: secondaryTextColor - #6F7177, CSS: var(--secondaryTextColor)
     Stylus: disabledTextColor - #BEBFC1, CSS: var(--disabledTextColor)
     Stylus: hintTextColor - #BEBFC1, CSS: var(--hintTextColor)
     Stylus: iconTextColor - #66686D, CSS: var(--iconTextColor)
@@ -28294,7 +28294,7 @@ html,
     Styleguide Settings.theme.text
     */
   --primaryTextColor: rgba(29,33,42,0.9);
-  --secondaryTextColor: rgba(29,33,42,0.48);
+  --secondaryTextColor: rgba(29,33,42,0.64);
   --disabledTextColor: rgba(29,33,42,0.32);
   --hintTextColor: rgba(29,33,42,0.32);
   --iconTextColor: rgba(29,33,42,0.72);
@@ -28355,14 +28355,14 @@ html,
     Success colors
 
     Stylus: successColorLight        -  #38C949, CSS: var(--successColorLight)
-    Stylus: successColor             -  #09AE1C, CSS: var(--successColor)
+    Stylus: successColor             -  #09AB1B, CSS: var(--successColor)
     Stylus: successColorDark         -  #018711, CSS: var(--successColorDark)
     Stylus: successColorContrastText -  #FFF, CSS: var(--successColorContrastText)
 
     Styleguide Settings.theme.success
     */
   --successColorLight: #38c949;
-  --successColor: #09ae1c;
+  --successColor: #09ab1b;
   --successColorDark: #018711;
   --successColorContrastText: #fff;
 /*
@@ -28778,7 +28778,7 @@ html,
     Hexadecimal colors are here only as an example on a white background.
 
     Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
-    Stylus: secondaryTextColor - #9D9EA1, CSS: var(--secondaryTextColor)
+    Stylus: secondaryTextColor - #6F7177, CSS: var(--secondaryTextColor)
     Stylus: disabledTextColor - #BEBFC1, CSS: var(--disabledTextColor)
     Stylus: hintTextColor - #BEBFC1, CSS: var(--hintTextColor)
     Stylus: iconTextColor - #66686D, CSS: var(--iconTextColor)
@@ -28786,7 +28786,7 @@ html,
     Styleguide Settings.theme.text
     */
   --primaryTextColor: rgba(29,33,42,0.9);
-  --secondaryTextColor: rgba(29,33,42,0.48);
+  --secondaryTextColor: rgba(29,33,42,0.64);
   --disabledTextColor: rgba(29,33,42,0.32);
   --hintTextColor: rgba(29,33,42,0.32);
   --iconTextColor: rgba(29,33,42,0.72);
@@ -28847,14 +28847,14 @@ html,
     Success colors
 
     Stylus: successColorLight        -  #38C949, CSS: var(--successColorLight)
-    Stylus: successColor             -  #09AE1C, CSS: var(--successColor)
+    Stylus: successColor             -  #09AB1B, CSS: var(--successColor)
     Stylus: successColorDark         -  #018711, CSS: var(--successColorDark)
     Stylus: successColorContrastText -  #FFF, CSS: var(--successColorContrastText)
 
     Styleguide Settings.theme.success
     */
   --successColorLight: #38c949;
-  --successColor: #09ae1c;
+  --successColor: #09ab1b;
   --successColorDark: #018711;
   --successColorContrastText: #fff;
 /*
@@ -29286,7 +29286,7 @@ html,
     Hexadecimal colors are here only as an example on a white background.
 
     Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
-    Stylus: secondaryTextColor - #9D9EA1, CSS: var(--secondaryTextColor)
+    Stylus: secondaryTextColor - #6F7177, CSS: var(--secondaryTextColor)
     Stylus: disabledTextColor - #BEBFC1, CSS: var(--disabledTextColor)
     Stylus: hintTextColor - #BEBFC1, CSS: var(--hintTextColor)
     Stylus: iconTextColor - #66686D, CSS: var(--iconTextColor)
@@ -29294,7 +29294,7 @@ html,
     Styleguide Settings.theme.text
     */
   --primaryTextColor: rgba(29,33,42,0.9);
-  --secondaryTextColor: rgba(29,33,42,0.48);
+  --secondaryTextColor: rgba(29,33,42,0.64);
   --disabledTextColor: rgba(29,33,42,0.32);
   --hintTextColor: rgba(29,33,42,0.32);
   --iconTextColor: rgba(29,33,42,0.72);
@@ -29355,14 +29355,14 @@ html,
     Success colors
 
     Stylus: successColorLight        -  #38C949, CSS: var(--successColorLight)
-    Stylus: successColor             -  #09AE1C, CSS: var(--successColor)
+    Stylus: successColor             -  #09AB1B, CSS: var(--successColor)
     Stylus: successColorDark         -  #018711, CSS: var(--successColorDark)
     Stylus: successColorContrastText -  #FFF, CSS: var(--successColorContrastText)
 
     Styleguide Settings.theme.success
     */
   --successColorLight: #38c949;
-  --successColor: #09ae1c;
+  --successColor: #09ab1b;
   --successColorDark: #018711;
   --successColorContrastText: #fff;
 /*
@@ -31988,7 +31988,7 @@ html,
     Hexadecimal colors are here only as an example on a white background.
 
     Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
-    Stylus: secondaryTextColor - #9D9EA1, CSS: var(--secondaryTextColor)
+    Stylus: secondaryTextColor - #6F7177, CSS: var(--secondaryTextColor)
     Stylus: disabledTextColor - #BEBFC1, CSS: var(--disabledTextColor)
     Stylus: hintTextColor - #BEBFC1, CSS: var(--hintTextColor)
     Stylus: iconTextColor - #66686D, CSS: var(--iconTextColor)
@@ -31996,7 +31996,7 @@ html,
     Styleguide Settings.theme.text
     */
   --primaryTextColor: rgba(29,33,42,0.9);
-  --secondaryTextColor: rgba(29,33,42,0.48);
+  --secondaryTextColor: rgba(29,33,42,0.64);
   --disabledTextColor: rgba(29,33,42,0.32);
   --hintTextColor: rgba(29,33,42,0.32);
   --iconTextColor: rgba(29,33,42,0.72);
@@ -32057,14 +32057,14 @@ html,
     Success colors
 
     Stylus: successColorLight        -  #38C949, CSS: var(--successColorLight)
-    Stylus: successColor             -  #09AE1C, CSS: var(--successColor)
+    Stylus: successColor             -  #09AB1B, CSS: var(--successColor)
     Stylus: successColorDark         -  #018711, CSS: var(--successColorDark)
     Stylus: successColorContrastText -  #FFF, CSS: var(--successColorContrastText)
 
     Styleguide Settings.theme.success
     */
   --successColorLight: #38c949;
-  --successColor: #09ae1c;
+  --successColor: #09ab1b;
   --successColorDark: #018711;
   --successColorContrastText: #fff;
 /*
