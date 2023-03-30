@@ -1,3 +1,16 @@
+# [82.6.0](https://github.com/cozy/cozy-ui/compare/v82.5.1...v82.6.0) (2023-03-30)
+
+
+### Bug Fixes
+
+* Improve accessibility colors ([ce9e6f6](https://github.com/cozy/cozy-ui/commit/ce9e6f6))
+
+
+### Features
+
+* Improve CircleButton accessibility ([7da40e0](https://github.com/cozy/cozy-ui/commit/7da40e0))
+* Improve ContactListModal components accessibility ([4806067](https://github.com/cozy/cozy-ui/commit/4806067))
+
 ## [82.5.1](https://github.com/cozy/cozy-ui/compare/v82.5.0...v82.5.1) (2023-03-30)
 
 
