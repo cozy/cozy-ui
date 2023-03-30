@@ -1,3 +1,10 @@
+# [82.5.0](https://github.com/cozy/cozy-ui/compare/v82.4.0...v82.5.0) (2023-03-30)
+
+
+### Features
+
+* Update OnlyOffice paywall premium title ([1c62ee6](https://github.com/cozy/cozy-ui/commit/1c62ee6))
+
 # [82.4.0](https://github.com/cozy/cozy-ui/compare/v82.3.0...v82.4.0) (2023-03-30)
 
 
