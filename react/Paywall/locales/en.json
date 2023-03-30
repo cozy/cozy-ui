@@ -4,9 +4,9 @@
   },
   "onlyOfficePaywall": {
     "premium": {
-      "title": "Reserved for the higher plan",
-      "content": "Your current offer does not allow you to take advantage of this feature. Please update your subscription.",
-      "action": "See packages"
+      "title": "Free up your Cozy!",
+      "content": "To unlock this feature, or simply support us, you can change your Cozy offer.",
+      "action": "Check our plans"
     },
     "public": {
       "title": "Information",

@@ -4,9 +4,9 @@
   },
   "onlyOfficePaywall": {
     "premium": {
-      "title": "Réservé au forfait supérieur",
-      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité. Merci de mettre à jour votre abonnement.",
-      "action": "Voir les forfaits"
+      "title": "Libérer votre Cozy !",
+      "content": "Pour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
+      "action": "Voir les offres"
     },
     "public": {
       "title": "Information",
