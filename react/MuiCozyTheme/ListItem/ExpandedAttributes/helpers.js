@@ -11,7 +11,7 @@ export const normalizeExpandedAttribute = attr =>
 // attributes not considered as expanded attributes
 export const notExpandedAttributes = {
   'io.cozy.contacts': ['fullname', 'civility', 'note'],
-  'io.cozy.files': ['name', 'flexsearchProps:translatedQualificationLabel']
+  'io.cozy.files': ['name', 'flexsearchProps:translated:qualificationLabel']
 }
 
 // attributes that we want to display if no attribute of the document is related to the search
