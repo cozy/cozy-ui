@@ -6,6 +6,7 @@ import Box from '../Box'
 import IconButton from '../IconButton'
 import Typography from '../Typography'
 import { makeTypoColor, makeButtonShadow } from './helpers'
+import { getRandomUUID } from '../helpers/getRandomUUID'
 
 const useStyles = makeStyles(theme => ({
   iconButton: {
@@ -42,7 +43,7 @@ const CircleButton = ({
   ...props
 }) => {
   const styles = useStyles({ active: variant === 'active', disabled })
-  const uuid = crypto.randomUUID()
+  const uuid = getRandomUUID()
 
   if (!ariaLabel && !label) {
     console.warn(`The "aria-label" or "label" property must be filled in.`)
