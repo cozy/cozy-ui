@@ -1,3 +1,10 @@
+# [82.8.0](https://github.com/cozy/cozy-ui/compare/v82.7.0...v82.8.0) (2023-03-31)
+
+
+### Features
+
+* Use helper for get random UUID ([e659a9b](https://github.com/cozy/cozy-ui/commit/e659a9b))
+
 # [82.7.0](https://github.com/cozy/cozy-ui/compare/v82.6.1...v82.7.0) (2023-03-31)
 
 
