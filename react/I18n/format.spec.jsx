@@ -53,7 +53,12 @@ describe('formatLocallyDistanceToNow', () => {
 })
 
 describe('formatLocallyDistanceToNowStrict', () => {
+  afterEach(() => {
+    MockDate.reset()
+  })
+
   it('should formatDistanceToNowStrict with small value', () => {
+    MockDate.set('2023-01-01T00:00:00')
     const date = Date.now() + 29 * 1000 // 29s
 
     const result = formatLocallyDistanceToNowStrict(date)
@@ -62,6 +67,7 @@ describe('formatLocallyDistanceToNowStrict', () => {
   })
 
   it('should formatDistanceToNowStrict with medium value', () => {
+    MockDate.set('2023-01-01T00:00:00')
     const date = Date.now() + (44 * 60 + 31) * 1000 // 44min 31s
 
     const result = formatLocallyDistanceToNowStrict(date)
@@ -70,6 +76,7 @@ describe('formatLocallyDistanceToNowStrict', () => {
   })
 
   it('should formatDistanceToNowStrict with high value', () => {
+    MockDate.set('2023-01-01T00:00:00')
     const date = Date.now() + (89 * 60 + 31) * 1000 // 89min 31s
 
     const result = formatLocallyDistanceToNowStrict(date)
@@ -78,6 +85,7 @@ describe('formatLocallyDistanceToNowStrict', () => {
   })
 
   it('should formatDistanceToNowStrict with one day', () => {
+    MockDate.set('2023-01-01T00:00:00')
     const date = Date.now() + 24 * 60 * 60 * 1000 // 1d
 
     const result = formatLocallyDistanceToNowStrict(date)
@@ -86,6 +94,7 @@ describe('formatLocallyDistanceToNowStrict', () => {
   })
 
   it('should formatDistanceToNowStrict with two days', () => {
+    MockDate.set('2023-01-01T00:00:00')
     const date = Date.now() + 2 * 24 * 60 * 60 * 1000 // 2d
 
     const result = formatLocallyDistanceToNowStrict(date)
@@ -94,6 +103,7 @@ describe('formatLocallyDistanceToNowStrict', () => {
   })
 
   it('should formatDistanceToNowStrict with very high value', () => {
+    MockDate.set('2023-01-01T00:00:00')
     const date = Date.now() + 42 * 24 * 60 * 60 * 1000 // 42d
 
     const result = formatLocallyDistanceToNowStrict(date)
