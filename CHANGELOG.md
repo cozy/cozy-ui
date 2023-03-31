@@ -1,3 +1,10 @@
+## [82.6.1](https://github.com/cozy/cozy-ui/compare/v82.6.0...v82.6.1) (2023-03-31)
+
+
+### Bug Fixes
+
+* Detect flagship app on paywall ([593e135](https://github.com/cozy/cozy-ui/commit/593e135))
+
 # [82.6.0](https://github.com/cozy/cozy-ui/compare/v82.5.1...v82.6.0) (2023-03-30)
 
 
