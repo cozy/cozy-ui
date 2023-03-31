@@ -1,3 +1,11 @@
+# [82.7.0](https://github.com/cozy/cozy-ui/compare/v82.6.1...v82.7.0) (2023-03-31)
+
+
+### Features
+
+* Add passwordSharingPaywall ([64a5fa4](https://github.com/cozy/cozy-ui/commit/64a5fa4))
+* Override TextField for improve accessibility ([85b32d1](https://github.com/cozy/cozy-ui/commit/85b32d1))
+
 ## [82.6.1](https://github.com/cozy/cozy-ui/compare/v82.6.0...v82.6.1) (2023-03-31)
 
 
