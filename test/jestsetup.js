@@ -1,8 +1,15 @@
 import '@testing-library/jest-dom/extend-expect'
 import { configure, mount, shallow } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
+import nodeCrypto from 'crypto'
 
 configure({ adapter: new Adapter() })
+
+Object.defineProperty(global, 'crypto', {
+  value: {
+    randomUUID: () => nodeCrypto.randomUUID()
+  }
+})
 
 global.mount = mount
 global.shallow = shallow
