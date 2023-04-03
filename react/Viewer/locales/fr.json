@@ -73,11 +73,13 @@
             "driver_license": {
               "number": "Numéro du permis"
             },
+            "residence_permit": {
+              "number": "Numéro du permis"
+            },
             "country": "Nationalité du bénéficiaire",
             "refTaxIncome": "Revenu fiscal de référence",
             "contractType": "Type de contrat",
             "noticePeriod": "Alerte d’expiration",
-
             "number": "Numéro du permis",
             "cafFileNumber": "Numéro de dossier CAF",
             "cardNumber": "Numéro de la carte d'identité",
