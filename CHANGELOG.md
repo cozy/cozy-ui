@@ -1,3 +1,21 @@
+# [82.9.0](https://github.com/cozy/cozy-ui/compare/v82.8.0...v82.9.0) (2023-04-03)
+
+
+### Bug Fixes
+
+* **helpers:** GetRandomUUID was called even if undefined ([749f79b](https://github.com/cozy/cozy-ui/commit/749f79b))
+* **ListItemContact:** DisplayName wasn't compliant with old contact app ([1cd6ffb](https://github.com/cozy/cozy-ui/commit/1cd6ffb))
+* **ListItemContact:** UseActions wasn't executed correctly in prod env ([8c06496](https://github.com/cozy/cozy-ui/commit/8c06496))
+* **Viewer:** Typo for contractType ([382bf2e](https://github.com/cozy/cozy-ui/commit/382bf2e))
+
+
+### Features
+
+* **ExpandedAttributes:** Add localized contact address support ([52fffe3](https://github.com/cozy/cozy-ui/commit/52fffe3))
+* **ExpandedAttributes:** Add support for residence_permit... ([90c3af0](https://github.com/cozy/cozy-ui/commit/90c3af0))
+* **ExpandedAttributes:** Remove driver license obtention date support ([3b7db1b](https://github.com/cozy/cozy-ui/commit/3b7db1b))
+* **Viewer:** Add locales for residence permit ([f410942](https://github.com/cozy/cozy-ui/commit/f410942))
+
 # [82.8.0](https://github.com/cozy/cozy-ui/compare/v82.7.0...v82.8.0) (2023-03-31)
 
 
