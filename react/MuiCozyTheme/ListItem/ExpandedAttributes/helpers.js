@@ -16,7 +16,8 @@ export const notExpandedAttributes = {
     'note',
     'flexsearchProps:translated:phone',
     'flexsearchProps:translated:email',
-    'flexsearchProps:translated:birthday'
+    'flexsearchProps:translated:birthday',
+    'flexsearchProps:translated:address'
   ],
   'io.cozy.files': [
     'name',
