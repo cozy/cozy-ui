@@ -32,7 +32,8 @@
           "vehicle_registration": "Numéro de la carte grise (VIN)",
           "national_id_card": "Numéro de la carte d'identité",
           "bank_details": "Numéro d'IBAN",
-          "passport": "Numéro du passeport"
+          "passport": "Numéro du passeport",
+          "residence_permit": "Numéro du permis"
         }
       }
     },

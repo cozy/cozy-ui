@@ -32,7 +32,8 @@
           "vehicle_registration": "Vehicle registration number (VIN)",
           "national_id_card": "National ID card number",
           "bank_details": "IBAN number",
-          "passport": "Passport number"
+          "passport": "Passport number",
+          "residence_permit": "License number"
         }
       }
     },

@@ -10,7 +10,14 @@ export const normalizeExpandedAttribute = attr =>
 
 // attributes not considered as expanded attributes
 export const notExpandedAttributes = {
-  'io.cozy.contacts': ['fullname', 'civility', 'note'],
+  'io.cozy.contacts': [
+    'fullname',
+    'civility',
+    'note',
+    'flexsearchProps:translated:phone',
+    'flexsearchProps:translated:email',
+    'flexsearchProps:translated:birthday'
+  ],
   'io.cozy.files': [
     'name',
     'flexsearchProps:translated:qualificationLabel',
@@ -21,7 +28,9 @@ export const notExpandedAttributes = {
     'flexsearchProps:translated:vehicleRegistration',
     'flexsearchProps:translated:nationalIdCard',
     'flexsearchProps:translated:bankDetails',
-    'flexsearchProps:translated:passport'
+    'flexsearchProps:translated:passport',
+    'flexsearchProps:translated:residencePermit',
+    'flexsearchProps:translated:expirationDate'
   ]
 }
 
