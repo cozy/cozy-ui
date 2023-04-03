@@ -7,5 +7,5 @@ export const getRandomUUID = () => {
     return 'random-uuid-for-jest'
   }
 
-  return window.crypto.randomUUID()
+  return window?.crypto?.randomUUID?.()
 }
