@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { getDisplayName } from 'cozy-client/dist/models/contact'
+
 import Filename from '../../../Filename'
 import Icon from '../../../Icon'
 import ContactsIcon from '../../../Icons/Contacts'
@@ -19,7 +21,7 @@ const ListItemContact = ({
   onClick
 }) => {
   const defaultActions = useActions(contact)
-  const primaryText = primary || contact.displayName
+  const primaryText = primary || getDisplayName(contact)
   const secondaryText = secondary || contact.email?.[0]?.address
   const itemIcon = icon || <Icon icon={ContactsIcon} width="32" height="32" />
 
