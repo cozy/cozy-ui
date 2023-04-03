@@ -10,10 +10,6 @@
       "jobTitle": "Fonction",
       "metadata": {
         "datetime": "Ajouté le",
-        "AObtentionDate": "Permis A, délivré le",
-        "BObtentionDate": "Permis B, délivré le",
-        "CObtentionDate": "Permis C, délivré le",
-        "DObtentionDate": "Permis D, délivré le",
         "issueDate": "Délivré le",
         "expirationDate": "Date d'expiration",
         "referencedDate": "Date de référence",

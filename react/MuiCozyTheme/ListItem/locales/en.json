@@ -10,10 +10,6 @@
       "jobTitle": "Job title",
       "metadata": {
         "datetime": "Added on",
-        "AObtentionDate": "License A, delivered on",
-        "BObtentionDate": "License B, delivered on",
-        "CObtentionDate": "License C, delivered on",
-        "DObtentionDate": "License D, delivered on",
         "issueDate": "Delivered on",
         "expirationDate": "Expiration date",
         "referencedDate": "Referenced date",
