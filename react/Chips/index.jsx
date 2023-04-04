@@ -26,7 +26,7 @@ const Chips = forwardRef(
 )
 
 Chips.propTypes = {
-  label: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  label: PropTypes.string,
   variant: PropTypes.oneOf(['default', 'active', 'ghost']),
   color: PropTypes.oneOf(['primary', 'success', 'error', 'warning', 'info']),
   className: PropTypes.string
