@@ -966,6 +966,36 @@ const makeOverrides = theme => ({
       padding: '4px 12px',
       backgroundColor: theme.palette.grey[600]
     }
+  },
+  MuiFab: {
+    root: {
+      color: theme.palette.text.primary,
+      backgroundColor: theme.palette.background.paper,
+      '&:hover': {
+        backgroundColor: theme.palette.action.hover,
+        '@media (hover: none)': {
+          backgroundColor: theme.palette.background.paper
+        }
+      }
+    },
+    extended: {
+      borderRadius: 56 / 2,
+      height: 56,
+      minWidth: 56,
+      padding: '0 20px',
+      '&$sizeSmall': {
+        borderRadius: 40 / 2,
+        height: 40,
+        minWidth: 40,
+        padding: '0 12px'
+      },
+      '&$sizeMedium': {
+        borderRadius: 48 / 2,
+        height: 48,
+        minWidth: 48,
+        padding: '0 16px'
+      }
+    }
   }
 })
 
