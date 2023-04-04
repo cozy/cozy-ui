@@ -4,7 +4,7 @@
   },
   "onlyOfficePaywall": {
     "premium": {
-      "title": "Extended your Cozy!",
+      "title": "Upgrade your Cozy!",
       "content": "To unlock this feature, or simply support us, you can change your Cozy offer.",
       "action": "Check our plans"
     },
@@ -21,7 +21,7 @@
   },
   "passwordSharingPaywall": {
     "premium": {
-      "title": "Extended your Cozy!",
+      "title": "Upgrade your Cozy!",
       "content": "To unlock this feature, or simply support us, you can change your Cozy offer.",
       "action": "Check our plans"
     },
