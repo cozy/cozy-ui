@@ -14,6 +14,7 @@ stages:
   - build
   - docs
   - test
+  - screenshots
   - deploy
 jobs:
   include:
@@ -81,24 +82,6 @@ jobs:
           - sprite-palette-binaries
           - js-binaries
           - css-binaries
-    - name: 'Argos'
-      stage: 'test'
-      script: |
-        if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
-          mkdir ./screenshots
-          yarn screenshots --mode react --viewport desktop --screenshot-dir ./screenshots/reactDesktop
-          yarn screenshots --mode react --viewport 300x600 --screenshot-dir ./screenshots/reactMobile
-          yarn screenshots --mode kss --screenshot-dir ./screenshots/kss
-          yarn argos:upload --parallel screenshots/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
-          yarn argos:upload --parallel screenshots/reactMobile/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
-          yarn argos:upload --parallel screenshots/kss/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
-        fi
-      workspaces:
-        use:
-          - sprite-palette-binaries
-          - js-binaries
-          - css-binaries
-          - docs-binaries
     - name: 'Bundlemon'
       stage: 'test'
       script:
@@ -108,6 +91,48 @@ jobs:
           - sprite-palette-binaries
           - js-binaries
           - css-binaries
+    - name: 'Argos desktop'
+      stage: 'screenshots'
+      script: |
+        if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
+          mkdir ./screenshots
+          yarn screenshots --mode react --viewport desktop --screenshot-dir ./screenshots/reactDesktop
+          yarn argos:upload --parallel screenshots/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
+        fi
+      workspaces:
+        use:
+          - sprite-palette-binaries
+          - js-binaries
+          - css-binaries
+          - docs-binaries
+    - name: 'Argos mobile'
+      stage: 'screenshots'
+      script: |
+        if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
+          mkdir ./screenshots
+          yarn screenshots --mode react --viewport 300x600 --screenshot-dir ./screenshots/reactMobile
+          yarn argos:upload --parallel screenshots/reactMobile/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
+        fi
+      workspaces:
+        use:
+          - sprite-palette-binaries
+          - js-binaries
+          - css-binaries
+          - docs-binaries
+    - name: 'Argos kss'
+      stage: 'screenshots'
+      script: |
+        if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
+          mkdir ./screenshots
+          yarn screenshots --mode kss --screenshot-dir ./screenshots/kss
+          yarn argos:upload --parallel screenshots/kss/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
+        fi
+      workspaces:
+        use:
+          - sprite-palette-binaries
+          - js-binaries
+          - css-binaries
+          - docs-binaries
     - name: 'Deploy'
       stage: 'deploy'
       script: 'true'
