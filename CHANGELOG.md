@@ -1,3 +1,10 @@
+# [82.10.0](https://github.com/cozy/cozy-ui/compare/v82.9.0...v82.10.0) (2023-04-04)
+
+
+### Features
+
+* Updated English translation for premium title in paywall ([578836e](https://github.com/cozy/cozy-ui/commit/578836e))
+
 # [82.9.0](https://github.com/cozy/cozy-ui/compare/v82.8.0...v82.9.0) (2023-04-03)
 
 
