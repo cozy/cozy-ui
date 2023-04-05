@@ -1,3 +1,10 @@
+# [82.11.0](https://github.com/cozy/cozy-ui/compare/v82.10.0...v82.11.0) (2023-04-05)
+
+
+### Features
+
+* **ExpandedAttributes:** Add some translated attributes as expanded ([866bb00](https://github.com/cozy/cozy-ui/commit/866bb00))
+
 # [82.10.0](https://github.com/cozy/cozy-ui/compare/v82.9.0...v82.10.0) (2023-04-04)
 
 
