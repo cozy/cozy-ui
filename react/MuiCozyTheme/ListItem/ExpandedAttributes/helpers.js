@@ -4,34 +4,23 @@ import { formatDate } from '../../../Viewer/helpers'
 
 export const normalizeExpandedAttribute = attr =>
   attr
-    .split('[]')[0]
-    .replace(':', '.')
+    .replaceAll(':', '.')
     .replace('flexsearchProps.', '')
+    .replace('translated.', '')
 
 // attributes not considered as expanded attributes
 export const notExpandedAttributes = {
-  'io.cozy.contacts': [
-    'fullname',
-    'civility',
-    'note',
-    'flexsearchProps:translated:phone',
-    'flexsearchProps:translated:email',
-    'flexsearchProps:translated:birthday',
-    'flexsearchProps:translated:address'
-  ],
+  'io.cozy.contacts': ['fullname', 'civility', 'note'],
   'io.cozy.files': [
     'name',
     'flexsearchProps:translated:qualificationLabel',
-    'flexsearchProps:translated:refTaxIncome',
-    'flexsearchProps:translated:contractType',
     'flexsearchProps:translated:driverLicense',
     'flexsearchProps:translated:paymentProofFamilyAllowance',
     'flexsearchProps:translated:vehicleRegistration',
     'flexsearchProps:translated:nationalIdCard',
     'flexsearchProps:translated:bankDetails',
     'flexsearchProps:translated:passport',
-    'flexsearchProps:translated:residencePermit',
-    'flexsearchProps:translated:expirationDate'
+    'flexsearchProps:translated:residencePermit'
   ]
 }
 

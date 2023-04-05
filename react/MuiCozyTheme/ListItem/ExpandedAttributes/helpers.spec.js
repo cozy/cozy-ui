@@ -1,4 +1,8 @@
-import { formatAttrValue, makeAttrKey } from './helpers'
+import {
+  formatAttrValue,
+  makeAttrKey,
+  normalizeExpandedAttribute
+} from './helpers'
 
 const f = () => 'someMockedDate'
 const lang = 'en'
@@ -131,5 +135,41 @@ describe('makeAttrKey', () => {
     const res = makeAttrKey(doc, 'civility')
 
     expect(res).toBe('civility')
+  })
+})
+
+describe('normalizeExpandedAttribute', () => {
+  it('sould remove flexsearchProps and translated words', () => {
+    const res = normalizeExpandedAttribute(
+      'flexsearchProps:translated:qualificationLabel'
+    )
+
+    expect(res).toBe('qualificationLabel')
+  })
+
+  it('should keep metadata.x intact', () => {
+    const res = normalizeExpandedAttribute(
+      'flexsearchProps:translated:metadata.contractType'
+    )
+
+    expect(res).toBe('metadata.contractType')
+  })
+
+  it('should keep email[1] intact', () => {
+    const res = normalizeExpandedAttribute('flexsearchProps:email[1].address')
+
+    expect(res).toBe('email[1].address')
+  })
+
+  it('should replace : by .', () => {
+    const res = normalizeExpandedAttribute('metadata:number')
+
+    expect(res).toBe('metadata.number')
+  })
+
+  it('should do nothing for simple word', () => {
+    const res = normalizeExpandedAttribute('fullname')
+
+    expect(res).toBe('fullname')
   })
 })
