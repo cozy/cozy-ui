@@ -12,6 +12,8 @@ import useBreakpoints from '../hooks/useBreakpoints'
 
 import styles from './styles.styl'
 import SelectionBarAction from './SelectionBarAction'
+import SelectionBarMore from './SelectionBarMore'
+import { computeMaxAction } from './helpers'
 
 /*
 
@@ -30,7 +32,15 @@ actions = {
 
 */
 
-const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
+const SelectionBar = ({
+  actions,
+  selected,
+  hideSelectionBar,
+  maxAction = {
+    isLarge: 6,
+    isTiny: 3
+  }
+}) => {
   const { t } = useI18n()
   const webviewIntent = useWebviewIntent()
   const theme = useTheme()
@@ -50,6 +60,8 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
       name: actionName,
       ...actions[actionName]
     }))
+
+  const maxActionDisplayed = computeMaxAction(maxAction, breakpoints)
 
   // This component is always rendered but hidden with CSS if there is no selection
   // That is why we do not use useSetFlagship API here because that hook can not accept changing values
@@ -104,7 +116,7 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
         )}
       </span>
       <div>
-        {actionList.map((action, idx) => (
+        {actionList.slice(0, maxActionDisplayed).map((action, idx) => (
           <SelectionBarAction
             key={idx}
             selectedCount={selectedCount}
@@ -112,6 +124,13 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
             action={action}
           />
         ))}
+        {actionList.length > maxActionDisplayed && (
+          <SelectionBarMore
+            actions={actionList.slice(maxActionDisplayed)}
+            selectedCount={selectedCount}
+            selected={selected}
+          />
+        )}
       </div>
       <IconButton
         data-testid="selectionBar-action-close"
