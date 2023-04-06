@@ -1,3 +1,10 @@
+# [82.12.0](https://github.com/cozy/cozy-ui/compare/v82.11.0...v82.12.0) (2023-04-06)
+
+
+### Features
+
+* Update Fab component ([cd4f0a6](https://github.com/cozy/cozy-ui/commit/cd4f0a6))
+
 # [82.11.0](https://github.com/cozy/cozy-ui/compare/v82.10.0...v82.11.0) (2023-04-05)
 
 
