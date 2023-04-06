@@ -9,10 +9,9 @@ import { useI18n } from '../I18n'
 import Icon from '../Icon'
 import IconButton from '../IconButton'
 import CrossIcon from '../Icons/Cross'
-import Button from '../MuiCozyTheme/Buttons'
-import useBreakpoints from '../hooks/useBreakpoints'
 
 import styles from './styles.styl'
+import SelectionBarAction from './SelectionBarAction'
 
 /*
 
@@ -33,16 +32,23 @@ actions = {
 
 const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
   const { t } = useI18n()
-  const { isDesktop } = useBreakpoints()
-  const selectedCount = selected.length
-  const actionNames = Object.keys(actions).filter(actionName => {
-    const action = actions[actionName]
-    return (
-      action.displayCondition === undefined || action.displayCondition(selected)
-    )
-  })
   const webviewIntent = useWebviewIntent()
   const theme = useTheme()
+
+  const selectedCount = selected.length
+
+  const actionList = Object.keys(actions)
+    .filter(actionName => {
+      const action = actions[actionName]
+      return (
+        action.displayCondition === undefined ||
+        action.displayCondition(selected)
+      )
+    })
+    .map(actionName => ({
+      name: actionName,
+      ...actions[actionName]
+    }))
 
   // This component is always rendered but hidden with CSS if there is no selection
   // That is why we do not use useSetFlagship API here because that hook can not accept changing values
@@ -95,48 +101,14 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
         </span>
       </span>
       <span className={styles['SelectionBar-separator']} />
-      {actionNames.map((actionName, index) =>
-        isDesktop ? (
-          <Button
-            data-testid={`selectionBar-action-${actionName}`}
-            className={cx(
-              styles['SelectionBar-action'],
-              styles['SelectionBar-action--withLabel']
-            )}
-            variant="text"
-            key={index}
-            disabled={
-              actions[actionName].disabled === undefined
-                ? selectedCount < 1 // to avoid breaking change
-                : actions[actionName].disabled(selected)
-            }
-            onClick={() => actions[actionName].action(selected)}
-            startIcon={
-              <Icon
-                icon={actions[actionName].icon || actionName.toLowerCase()}
-              />
-            }
-          >
-            {t('SelectionBar.' + actionName)}
-          </Button>
-        ) : (
-          <IconButton
-            data-testid={`selectionBar-action-${actionName}`}
-            className={styles['SelectionBar-action']}
-            label={t('SelectionBar.' + actionName)}
-            key={index}
-            disabled={
-              actions[actionName].disabled === undefined
-                ? selectedCount < 1 // to avoid breaking change
-                : actions[actionName].disabled(selected)
-            }
-            size="medium"
-            onClick={() => actions[actionName].action(selected)}
-          >
-            <Icon icon={actions[actionName].icon || actionName.toLowerCase()} />
-          </IconButton>
-        )
-      )}
+      {actionList.map((action, idx) => (
+        <SelectionBarAction
+          key={idx}
+          selectedCount={selectedCount}
+          selected={selected}
+          action={action}
+        />
+      ))}
       <IconButton
         data-testid="selectionBar-action-close"
         className={cx(
