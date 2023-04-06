@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 import { useTheme } from '@material-ui/core'
 
 import { useWebviewIntent } from 'cozy-intent'
@@ -9,6 +8,7 @@ import { useI18n } from '../I18n'
 import Icon from '../Icon'
 import IconButton from '../IconButton'
 import CrossIcon from '../Icons/Cross'
+import useBreakpoints from '../hooks/useBreakpoints'
 
 import styles from './styles.styl'
 import SelectionBarAction from './SelectionBarAction'
@@ -34,6 +34,7 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
   const { t } = useI18n()
   const webviewIntent = useWebviewIntent()
   const theme = useTheme()
+  const breakpoints = useBreakpoints()
 
   const selectedCount = selected.length
 
@@ -95,26 +96,26 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
         className={styles['SelectionBar-count']}
       >
         {selectedCount}
-        <span>
-          {' '}
-          {t('SelectionBar.selected_count', { smart_count: selectedCount })}
-        </span>
+        {!breakpoints.isMobile && (
+          <span>
+            {' '}
+            {t('SelectionBar.selected_count', { smart_count: selectedCount })}
+          </span>
+        )}
       </span>
-      <span className={styles['SelectionBar-separator']} />
-      {actionList.map((action, idx) => (
-        <SelectionBarAction
-          key={idx}
-          selectedCount={selectedCount}
-          selected={selected}
-          action={action}
-        />
-      ))}
+      <div>
+        {actionList.map((action, idx) => (
+          <SelectionBarAction
+            key={idx}
+            selectedCount={selectedCount}
+            selected={selected}
+            action={action}
+          />
+        ))}
+      </div>
       <IconButton
         data-testid="selectionBar-action-close"
-        className={cx(
-          styles['SelectionBar-action'],
-          styles['SelectionBar-action--close']
-        )}
+        className={styles['SelectionBar-action']}
         label={t('SelectionBar.close')}
         size="medium"
         onClick={hideSelectionBar}
