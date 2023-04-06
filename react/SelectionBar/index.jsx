@@ -146,9 +146,24 @@ const SelectionBar = ({
 }
 
 SelectionBar.propTypes = {
-  actions: PropTypes.object.isRequired, // An object with actions
-  selected: PropTypes.array.isRequired, // selected items id.
-  hideSelectionBar: PropTypes.func.isRequired // function to close SelectionBar.
+  /**
+   * An object with actions
+   */
+  actions: PropTypes.object.isRequired,
+  /**
+   * List of ids of the selected items
+   */
+  selected: PropTypes.array.isRequired,
+  /**
+   * function to close SelectionBar.
+   */
+  hideSelectionBar: PropTypes.func.isRequired,
+  /**
+   * A number corresponding to the display of the maximum number of items.
+   * The other actions will be displayed in an additional menu.
+   * With an object, they can be detailed according to the breakpoints
+   */
+  maxAction: PropTypes.oneOfType([PropTypes.number, PropTypes.object])
 }
 
 export default SelectionBar

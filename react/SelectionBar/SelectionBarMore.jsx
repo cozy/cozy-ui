@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import PropTypes from 'prop-types'
 
 import Icon from '../Icon'
 import IconButton from '../IconButton'
@@ -55,6 +56,21 @@ const SelectionBarMore = ({ actions, selectedCount, selected }) => {
       )}
     </>
   )
+}
+
+SelectionBarMore.propTypes = {
+  /**
+   * List of object with the property of action and a name
+   */
+  actions: PropTypes.array.isRequired,
+  /**
+   * Number of item selected
+   */
+  selectedCount: PropTypes.number.isRequired,
+  /**
+   * List of ids of the selected items
+   */
+  selected: PropTypes.array.isRequired
 }
 
 export default SelectionBarMore

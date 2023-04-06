@@ -1,5 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
 
 import Button from '../MuiCozyTheme/Buttons'
 import useBreakpoints from '../hooks/useBreakpoints'
@@ -51,6 +52,21 @@ const SelectionBarAction = ({ selectedCount, selected, action }) => {
       <Icon icon={action.icon || action.name.toLowerCase()} />
     </IconButton>
   )
+}
+
+SelectionBarAction.propTypes = {
+  /**
+   * Number of item selected
+   */
+  selectedCount: PropTypes.number.isRequired,
+  /**
+   * List of ids of the selected items
+   */
+  selected: PropTypes.array.isRequired,
+  /**
+   * List of object with the property of action and a name
+   */
+  action: PropTypes.object.isRequired
 }
 
 export default SelectionBarAction

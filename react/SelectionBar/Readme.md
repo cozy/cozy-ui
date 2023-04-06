@@ -1,5 +1,3 @@
-SelectionBar 
-
 ### Usage
 
 ```jsx
@@ -8,6 +6,7 @@ import I18n from 'cozy-ui/transpiled/react/I18n';
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
 import TrashIcon from 'cozy-ui/transpiled/react/Icons/Trash'
 import RenameIcon from 'cozy-ui/transpiled/react/Icons/Rename'
+import ShareIcon from 'cozy-ui/transpiled/react/Icons/Share'
 
 const selectedItem = {
     _id: 1,
@@ -40,6 +39,11 @@ const actions = {
     action: selections => alert(JSON.stringify(selections)),
     displayCondition: selections => selections.length > 1,
     icon: RenameIcon
+  },
+  share: {
+    action: selections => alert(JSON.stringify(selections)),
+    displayCondition: selections => selections.length > 1,
+    icon: ShareIcon
   }
 };
 
@@ -52,6 +56,7 @@ const actions = {
         actions={actions}
         selected={state.selected}
         hideSelectionBar={() => setState({selected: []})}
+        maxAction={2}
         />
     </div>
     }
