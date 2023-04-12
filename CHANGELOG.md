@@ -1,3 +1,15 @@
+# [82.13.0](https://github.com/cozy/cozy-ui/compare/v82.12.0...v82.13.0) (2023-04-12)
+
+
+### Bug Fixes
+
+* **SelectionBar:** Limit the number of actions displayed ([bdfd9dd](https://github.com/cozy/cozy-ui/commit/bdfd9dd))
+
+
+### Features
+
+* **SelectionBar:** Remove separator between count and actions ([2930d3d](https://github.com/cozy/cozy-ui/commit/2930d3d))
+
 # [82.12.0](https://github.com/cozy/cozy-ui/compare/v82.11.0...v82.12.0) (2023-04-06)
 
 
