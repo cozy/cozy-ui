@@ -49,7 +49,7 @@ import Button from  'cozy-ui/transpiled/react/Buttons'
   * if defined and in mobile mode then the back button will trigger onBack() instead of onClose()
   * if not defined and in mobile mode then the back button will trigger onClose()
 
-Additionally, all the CozyDialogs support [MUI Dialog's props](https://v3.material-ui.com/api/dialog/).
+Additionally, all the CozyDialogs support [MUI Dialog's props](https://v4.mui.com/api/dialog/).
 
 ### Exemples
 

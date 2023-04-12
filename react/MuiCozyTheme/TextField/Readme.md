@@ -1,6 +1,4 @@
-Cozy themed MUI TextField. See
-[MUI V3 documentation](https://v3.material-ui.com/api/text-field/) to find the
-props.
+Cozy themed MUI TextField. See [the official API](https://v4.mui.com/api/text-field/) to find the props.
 
 ```jsx
 import TextField from 'cozy-ui/transpiled/react/MuiCozyTheme/TextField';

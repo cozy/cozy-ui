@@ -1,4 +1,5 @@
-`<Badge />` component wraps the element you want to apply a badge to. It is based on the [Badge component from Material-UI](https://v3.material-ui.com/api/badge/).
+`<Badge />` component wraps the element you want to apply a badge to. It is based on the [Badge component from Material-UI](https://v4.mui.com/api/badge/).
+
 
 ### Basic Badges
 
