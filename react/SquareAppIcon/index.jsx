@@ -1,19 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import get from 'lodash/get'
 
-import { makeStyles } from '../styles'
 import AppIcon from '../AppIcon'
 import Badge from '../Badge'
-import InfosBadge from '../InfosBadge'
-import { nameToColor } from '../Avatar'
-import Spinner from '../Spinner'
-import Typography from '../Typography'
 import Icon from '../Icon'
+import IconCheckAnimated from '../Icons/IconCheckAnimated'
+import InfosBadge from '../InfosBadge'
+import Spinner from '../Spinner'
+import SvgIconCrossAnimated from '../Icons/IconCrossAnimated'
+import Typography from '../Typography'
+import iconOut from '../Icons/LinkOut'
 import iconPlus from '../Icons/Plus'
 import iconWarning from '../Icons/WarningCircle'
-import iconOut from '../Icons/LinkOut'
+import { makeStyles } from '../styles'
+import { nameToColor } from '../Avatar'
 
 import { color } from './constants.json'
 import styles from './styles.styl'
@@ -72,6 +74,23 @@ export const SquareAppIcon = ({
   const appName =
     name || get(appIconProps, 'app.name') || get(appIconProps, 'app') || ''
   const letter = appName[0] || ''
+  const prevVariant = React.useRef(variant)
+  const [animationState, setAnimationState] = useState()
+
+  const handleAnimationEnd = e => {
+    if (e.animationName.startsWith('end')) setAnimationState()
+  }
+
+  useEffect(() => {
+    const curr = prevVariant.current
+
+    if (curr === 'loading' && variant === 'error') setAnimationState('failed')
+
+    if (curr === 'loading' && (variant === 'default' || variant === undefined))
+      setAnimationState('success')
+
+    prevVariant.current = variant
+  }, [variant])
 
   return (
     <div data-testid="square-app-icon" className={cx(classes.tileWrapper)}>
@@ -82,7 +101,7 @@ export const SquareAppIcon = ({
         overlap="rectangular"
         invisible={variant !== 'shortcut'}
       >
-        {['default', 'loading'].includes(variant) && (
+        {['default', 'loading', 'error'].includes(variant) && (
           <Spinner className={cx(styles['SquareAppIcon-spinner'], 'u-m-0')} />
         )}
         <Badge
@@ -124,6 +143,26 @@ export const SquareAppIcon = ({
             </Typography>
           ) : (
             <div className={styles['SquareAppIcon-icon-container']}>
+              <div
+                className={cx(
+                  styles['onEnd'],
+                  { [styles['isSuccess']]: animationState === 'success' },
+                  { [styles['isFailed']]: animationState === 'failed' }
+                )}
+                onAnimationEnd={handleAnimationEnd}
+              >
+                {animationState && (
+                  <Icon
+                    size="32"
+                    icon={
+                      animationState === 'success'
+                        ? IconCheckAnimated
+                        : SvgIconCrossAnimated
+                    }
+                  />
+                )}
+              </div>
+
               {variant === 'add' ? (
                 <Icon icon={iconPlus} color={color} />
               ) : IconContent ? (

@@ -36,6 +36,9 @@ exports[`SquareAppIcon component should render an app correctly with the app nam
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
       >
+        <div
+          class="styles__onEnd___1O6Q7"
+        />
         <svg
           class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
           height="100%"
@@ -100,6 +103,9 @@ exports[`SquareAppIcon component should render an app correctly with the given n
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
       >
+        <div
+          class="styles__onEnd___1O6Q7"
+        />
         <svg
           class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
           height="100%"
@@ -164,6 +170,9 @@ exports[`SquareAppIcon component should render an app with the app slug if no na
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
       >
+        <div
+          class="styles__onEnd___1O6Q7"
+        />
         <svg
           class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
           height="100%"
@@ -206,6 +215,9 @@ exports[`SquareAppIcon component should render correctly an app in add state 1`]
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
       >
+        <div
+          class="styles__onEnd___1O6Q7"
+        />
         <svg
           class="styles__icon___23x3R"
           height="16"
@@ -247,12 +259,37 @@ exports[`SquareAppIcon component should render correctly an app in error state 1
   <span
     class="MuiBadge-root"
   >
+    <div
+      class="styles__c-spinner___1snK7 styles__SquareAppIcon-spinner___o0LO1 u-m-0"
+    >
+      <svg
+        aria-busy="true"
+        class="styles__icon___23x3R styles__icon--spin___ybfC1"
+        height="16"
+        role="progressbar"
+        style="fill: var(--spinnerColor);"
+        viewBox="0 0 32 32"
+        width="16"
+      >
+        <path
+          d="M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24"
+          opacity="0.25"
+        />
+        <path
+          d="M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z"
+        />
+      </svg>
+      
+    </div>
     <span
       class="MuiBadge-root styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-33"
     >
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
       >
+        <div
+          class="styles__onEnd___1O6Q7"
+        />
         <svg
           class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
           height="100%"
@@ -307,6 +344,9 @@ exports[`SquareAppIcon component should render correctly an app in ghost state 1
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
       >
+        <div
+          class="styles__onEnd___1O6Q7"
+        />
         <svg
           class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
           height="100%"
@@ -349,6 +389,9 @@ exports[`SquareAppIcon component should render correctly an app in maintenance s
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
       >
+        <div
+          class="styles__onEnd___1O6Q7"
+        />
         <svg
           class="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt styles__icon___23x3R"
           height="100%"
@@ -458,6 +501,9 @@ exports[`SquareAppIcon component should render correctly an app with custom cont
       <div
         class="styles__SquareAppIcon-icon-container___39MRl"
       >
+        <div
+          class="styles__onEnd___1O6Q7"
+        />
         <svg
           class="styles__icon___23x3R"
           height="16"
