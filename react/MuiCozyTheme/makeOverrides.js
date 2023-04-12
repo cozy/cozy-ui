@@ -225,6 +225,7 @@ const makeContainedButtonStyle = (theme, color) => ({
 const makeOverrides = theme => ({
   MuiOutlinedInput: {
     root: {
+      borderRadius: 4,
       '&$disabled': {
         background: theme.palette.grey[100]
       },
@@ -237,6 +238,25 @@ const makeOverrides = theme => ({
     },
     notchedOutline: {
       borderColor: theme.palette.grey[200]
+    },
+    input: {
+      padding: '18.5px 16px'
+    },
+    inputMarginDense: {
+      paddingTop: 14,
+      paddingBottom: 15
+    }
+  },
+  MuiInputLabel: {
+    outlined: {
+      '&$marginDense': {
+        transform: 'translate(14px, 14px) scale(1)'
+      },
+      '&:not($shrink)': {
+        '&$error': {
+          color: theme.palette.text.secondary
+        }
+      }
     }
   },
   MuiButton: {
@@ -581,14 +601,20 @@ const makeOverrides = theme => ({
   },
   MuiFormLabel: {
     root: {
-      color: theme.palette.text.secondary
+      color: theme.palette.text.secondary,
+      '&$disabled&$error': {
+        color: theme.palette.text.disabled
+      }
     }
   },
   MuiFormHelperText: {
     root: {
       fontStyle: 'italic',
       fontSize: '0.875rem',
-      marginTop: 4
+      marginTop: 4,
+      '&$disabled&$error': {
+        color: theme.palette.text.disabled
+      }
     }
   },
   MuiDialog: {
