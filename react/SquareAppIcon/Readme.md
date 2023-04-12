@@ -13,12 +13,15 @@ import Button from 'cozy-ui/transpiled/react/Buttons'
 const theme = useCozyTheme()
 const app = { name: "Test App", slug: "testapp", type: "app" }
 const [isLoading, setLoading] = React.useState(false)
+const [isError, setIsError] = React.useState(false)
+
 
 
 ;
 
 <>
-  <Button className="u-mb-1" label="Toggle Loading" onClick={() => setLoading(!isLoading)} />
+  <Button className="u-mb-1 u-mr-1" label="Toggle Loading" onClick={() => setLoading(!isLoading)} />
+  <Button className="u-mb-1" label="Toggle Loading Error" onClick={() => setIsError(!isError)} />
 
   <Grid container spacing={1} style={{ background: `center / cover no-repeat url(${cloudWallpaper})` }}
   >
@@ -42,6 +45,9 @@ const [isLoading, setLoading] = React.useState(false)
     </Grid>
     <Grid item>
       <SquareAppIcon IconContent={<Icon icon={CozyIcon} size="48" />} name="Loading" variant={isLoading ? 'loading' : 'default'} />
+    </Grid>
+    <Grid item>
+      <SquareAppIcon IconContent={<Icon icon={CozyIcon} size="48" />} name="Loading" variant={isError ? 'error' : 'loading'} />
     </Grid>
     <Grid item>
       <SquareAppIcon name="Shortcut" variant="shortcut" IconContent={<img
