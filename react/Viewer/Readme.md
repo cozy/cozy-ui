@@ -60,6 +60,7 @@ import { isValidForPanel } from 'cozy-ui/transpiled/react/Viewer/helpers'
 import getPanelBlocks, { panelBlocksSpecs } from 'cozy-ui/transpiled/react/Viewer/Panel/getPanelBlocks'
 import FooterActionButtons from 'cozy-ui/transpiled/react/Viewer/Footer/FooterActionButtons'
 import ForwardOrDownloadButton from 'cozy-ui/transpiled/react/Viewer/Footer/ForwardOrDownloadButton'
+import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite'
 
 // We provide a collection of (fake) io.cozy.files to be rendered
 const files = [
@@ -237,6 +238,7 @@ const editPathByModelProps = {
       )
     }
   </Variants>
+  <Sprite />
 </DemoProvider>
 ```
 
