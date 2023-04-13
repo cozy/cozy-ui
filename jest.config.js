@@ -11,7 +11,7 @@ module.exports = {
     'react-styleguidist.+\\.jsx?$': 'babel-jest',
     '^rsg-components(.*)$':
       '<rootDir>/node_modules/react-styleguidist/lib/client/rsg-components$1',
-    'react-pdf/dist/entry.webpack.js': 'react-pdf',
+    'react-pdf/dist/esm/entry.webpack': 'react-pdf',
     '^cozy-client$': 'cozy-client/dist/index'
   },
   transformIgnorePatterns: ['node_modules/(?!(react-styleguidist)/)'],
