@@ -249,7 +249,7 @@ For performance reasons, it is important to use a web worker when showing PDF fi
 ```diff
 + resolve: {
 +   alias: {
-+     'react-pdf$' : 'react-pdf/dist/entry.webpack.js'
++     'react-pdf$' : 'react-pdf/dist/esm/entry.webpack'
 +   }
 + }
 ```
@@ -259,7 +259,7 @@ With this alias, a specific JS file for the worker will be created in the build 
 One way to do this is to explicitly load the web worker in your application like this:
 
 ```js static
-import createWorker from 'react-pdf/dist/pdf.worker.entry.js';
+import createWorker from 'react-pdf/dist/esm/pdf.worker.entry';
 import { pdfjs } from 'react-pdf';
 
 pdfjs.GlobalWorkerOptions.workerPort = createWorker();
