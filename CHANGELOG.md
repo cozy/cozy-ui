@@ -1,3 +1,10 @@
+# [82.14.0](https://github.com/cozy/cozy-ui/compare/v82.13.0...v82.14.0) (2023-04-13)
+
+
+### Features
+
+* **TextField:** Update style and documentation ([8ff4ae0](https://github.com/cozy/cozy-ui/commit/8ff4ae0))
+
 # [82.13.0](https://github.com/cozy/cozy-ui/compare/v82.12.0...v82.13.0) (2023-04-12)
 
 
