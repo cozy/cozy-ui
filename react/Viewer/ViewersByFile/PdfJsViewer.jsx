@@ -16,6 +16,8 @@ import styles from './styles.styl'
 export const MIN_SCALE = 0.25
 export const MAX_SCALE = 3
 export const MAX_PAGES = 3
+const KEY_CODE_UP = 38
+const KEY_CODE_DOWN = 40
 
 export class PdfJsViewer extends Component {
   state = {
@@ -32,10 +34,17 @@ export class PdfJsViewer extends Component {
     this.setWrapperSize()
     this.resizeListener = throttle(this.setWrapperSize, 500)
     window.addEventListener('resize', this.resizeListener)
+    document.addEventListener('keyup', this.onKeyUp, false)
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.resizeListener)
+    document.removeEventListener('keyup', this.onKeyUp, false)
+  }
+
+  onKeyUp = e => {
+    if (e.keyCode === KEY_CODE_UP) this.previousPage()
+    else if (e.keyCode === KEY_CODE_DOWN) this.nextPage()
   }
 
   toggleGestures(enable) {
