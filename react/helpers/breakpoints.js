@@ -1,12 +1,14 @@
 import mapValues from 'lodash/mapValues'
 
+const extraLarge = 1400
 const large = 1200
 const medium = 1023
 const small = 768
 const tiny = 543
 
 const breakpoints = {
-  isExtraLarge: [large + 1],
+  isExtraExtraLarge: [extraLarge + 1],
+  isExtraLarge: [large + 1, extraLarge],
   isLarge: [medium + 1, large],
   isMedium: [small + 1, medium],
   isSmall: [tiny + 1, small],
