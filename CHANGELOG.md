@@ -1,3 +1,24 @@
+# [83.0.0](https://github.com/cozy/cozy-ui/compare/v82.14.0...v83.0.0) (2023-04-17)
+
+
+### Features
+
+* Update react-pdf from 4.0.5 to 5.7.2 ([fe9608e](https://github.com/cozy/cozy-ui/commit/fe9608e))
+* **Viewer:** Navigate between pdf pages with keyboard ([d05f712](https://github.com/cozy/cozy-ui/commit/d05f712))
+
+
+### BREAKING CHANGES
+
+* This update requires the two changes above in your application if you use the `Viewer` to display PDF. You can find more detail in `Viewer` documentation : https://docs.cozy.io/cozy-ui/react/#!/Viewer
+
+Before :
+- react-pdf alias : `react-pdf/dist/entry.webpack.js`
+- public import for pdf worker : `react-pdf/dist/pdf.worker.entry.js`
+
+After :
+- react-pdf alias : `react-pdf/dist/esm/entry.webpack`
+- public import for pdf worker : `react-pdf/dist/esm/pdf.worker.entry`
+
 # [82.14.0](https://github.com/cozy/cozy-ui/compare/v82.13.0...v82.14.0) (2023-04-13)
 
 
