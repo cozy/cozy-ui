@@ -14,11 +14,10 @@ Use `makeActions` method and create (or use the predefined actions) to build the
 
 An action is a simple function that returns an object with specific keys:
 
-- **name** : `<string>` – Action's name
-- **action** : `<func>` – Method triggered when clicking the action
-- **isEnabled** : `<bool>` – Used to add `disable` effect (the action is still displayed)
-- **Component** : `<func>` – The returned component that manages the display
-
+* **name** : `<string>` – Action's name
+* **action** : `<func>` – Method triggered when clicking the action
+* **isEnabled** : `<bool>` – Used to add `disable` effect (the action is still displayed)
+* **Component** : `<func>` – The returned component that manages the display
 
 ```bash
 const expl = () => ({
@@ -82,7 +81,6 @@ const actions = makeActions([ modify, hr, call, customAction ])
   )}
 </DemoProvider>
 ```
-
 
 ### With a manual creation of the actions
 
