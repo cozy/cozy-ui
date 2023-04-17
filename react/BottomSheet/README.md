@@ -4,6 +4,7 @@ Display content coming up from the bottom of the screen. The pane can be swiped 
 ### Usages
 
 * BottomSheet with header, text title and text content
+
 ```bash
 import BottomSheet, { BottomSheetHeader, BottomSheetItem, BottomSheetTitle } from  'cozy-ui/transpiled/react/BottomSheet'
 
@@ -19,6 +20,7 @@ import BottomSheet, { BottomSheetHeader, BottomSheetItem, BottomSheetTitle } fr
 ```
 
 * BottomSheet with list title and list content
+
 ```bash
 import BottomSheet, { BottomSheetItem, BottomSheetTitle } from  'cozy-ui/transpiled/react/BottomSheet'
 
