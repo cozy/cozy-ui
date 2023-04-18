@@ -1,3 +1,10 @@
+# [83.1.0](https://github.com/cozy/cozy-ui/compare/v83.0.0...v83.1.0) (2023-04-18)
+
+
+### Features
+
+* Add success/fail animations to SquareAppIcon ([abbb4ed](https://github.com/cozy/cozy-ui/commit/abbb4ed))
+
 # [83.0.0](https://github.com/cozy/cozy-ui/compare/v82.14.0...v83.0.0) (2023-04-17)
 
 
