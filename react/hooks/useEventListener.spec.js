@@ -22,11 +22,37 @@ describe('useEventListener', () => {
     expect(cb).toHaveBeenCalledTimes(1)
   })
 
+  it('should subscribe to the given event on the given ref', async () => {
+    const cb = jest.fn()
+    const ref = {
+      current: document
+    }
+
+    const { unmount } = renderHook(() => useEventListener(ref, 'click', cb))
+
+    triggerEvent(document, 'click')
+    expect(cb).toHaveBeenCalledTimes(1)
+
+    unmount()
+
+    triggerEvent(document, 'click')
+    expect(cb).toHaveBeenCalledTimes(1)
+  })
+
   it('should not subscribe for an undefined element', async () => {
     const cb = jest.fn()
     const { result } = renderHook(() =>
       useEventListener(undefined, 'click', cb)
     )
+    expect(result.error).not.toBeDefined()
+  })
+
+  it('should not subscribe for an undefined ref element', async () => {
+    const cb = jest.fn()
+    const ref = {
+      current: undefined
+    }
+    const { result } = renderHook(() => useEventListener(ref, 'click', cb))
     expect(result.error).not.toBeDefined()
   })
 
