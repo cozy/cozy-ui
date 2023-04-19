@@ -13,7 +13,7 @@ import useBreakpoints from '../hooks/useBreakpoints'
 import styles from './styles.styl'
 import SelectionBarAction from './SelectionBarAction'
 import SelectionBarMore from './SelectionBarMore'
-import { computeMaxAction } from './helpers'
+import useMaxActions from './useMaxActions'
 
 /*
 
@@ -37,7 +37,10 @@ const SelectionBar = ({
   selected,
   hideSelectionBar,
   maxAction = {
-    isLarge: 6,
+    isWide: 6,
+    isLarge: 5,
+    isMedium: 8,
+    isSmall: 8,
     isTiny: 3
   }
 }) => {
@@ -61,7 +64,7 @@ const SelectionBar = ({
       ...actions[actionName]
     }))
 
-  const maxActionDisplayed = computeMaxAction(maxAction, breakpoints)
+  const maxActionDisplayed = useMaxActions(maxAction)
 
   // This component is always rendered but hidden with CSS if there is no selection
   // That is why we do not use useSetFlagship API here because that hook can not accept changing values
