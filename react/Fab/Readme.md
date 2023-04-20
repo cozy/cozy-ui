@@ -77,3 +77,41 @@ const props = [{ color: 'primary' }, { color: 'secondary' }, { color: 'inherit',
   )}
 </Grid>
 ```
+
+### ExtendableFab
+
+To increase discoverability, the FAB can be extended at first and then changed to standard when scrolling. The ExtendableFab will only revert to extended when the user has returned on to the top of the page.
+
+```jsx
+import { ExtendableFab } from 'cozy-ui/transpiled/react/Fab'
+import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
+import {useRef} from 'react'
+
+const Demo = ({ onClick, className }) => {
+  const box = useRef(null)
+
+  return (
+    <div className="u-h-4 u-ov-scroll" style={{border: '2px dotted red'}} ref={box}>
+      <ExtendableFab
+        label="Add"
+        follow={box}
+        color="primary"
+        className="u-mb-1"
+        icon={PlusIcon}
+        style={{position: 'sticky', top: 16, left: 16}}
+      />
+      <div className="u-p-1">Scroll Horizontally</div>
+      <div className="u-h-8"></div>
+    </div>
+  )
+};
+
+<DemoProvider>
+  <Demo />
+</DemoProvider>
+```
+
+**Note:**
+
+The element to follow for scrolling changes according to the screen size in general in Cozy applications. On mobile, the window should be targeted otherwhise it depends on the dom element that has a scroll overflow.
