@@ -1,4 +1,7 @@
 {
+  "common": {
+    "day": "%{smart_count} day |||| %{smart_count} days"
+  },
   "ListItem": {
     "attributes": {
       "birthday": "Birthday",

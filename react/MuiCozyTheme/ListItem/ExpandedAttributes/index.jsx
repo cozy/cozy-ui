@@ -6,7 +6,7 @@ import Alert from '../../../Alert'
 import withListItemLocales from '../hoc/withListItemLocales'
 import ExpandedAttribute from './ExpandedAttribute'
 import { useI18n } from '../../../I18n'
-import { makeAttrsKeyAndFormatedValue } from './helpers'
+import { getValueExtended, makeAttrsKeyAndFormatedValue } from './helpers'
 
 const ExpandedAttributes = ({ doc, expandedAttributes }) => {
   const { t, f, lang } = useI18n()
@@ -29,12 +29,17 @@ const ExpandedAttributes = ({ doc, expandedAttributes }) => {
     <>
       {attrsKeyAndFormatedValue.map(({ attrKey, attrFormatedValue }, index) => {
         const label = t(`ListItem.attributes.${attrKey}`)
+        const valueExtended = getValueExtended({
+          attrKey,
+          value: attrFormatedValue,
+          t
+        })
 
         return (
           <ExpandedAttribute
             key={index}
             label={label}
-            value={attrFormatedValue}
+            value={valueExtended}
             setAlertProps={setAlertProps}
           />
         )
