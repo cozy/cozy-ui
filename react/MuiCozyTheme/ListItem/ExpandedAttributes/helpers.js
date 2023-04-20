@@ -174,3 +174,17 @@ export const hasExpandedAttributesDisplayed = ({
 
   return attrsKeyAndFormatedValue?.length > 0 || false
 }
+
+export const getValueExtended = ({ attrKey, value, t }) => {
+  if (attrKey === 'metadata.noticePeriod') {
+    if (!isNaN(parseInt(value))) {
+      return t('common.day', { smart_count: parseInt(value) })
+    }
+  }
+  if (attrKey === 'metadata.refTaxIncome') {
+    if (!isNaN(parseInt(value))) {
+      return `${value} €`
+    }
+  }
+  return value
+}

@@ -1,8 +1,16 @@
 import {
   formatAttrValue,
+  getValueExtended,
   makeAttrKey,
   normalizeExpandedAttribute
 } from './helpers'
+import { I18nContext } from '../../../jestLib/I18n'
+import en from '../locales/en'
+
+const i18nContext = I18nContext({
+  locale: en
+})
+const tMock = i18nContext.t
 
 const f = () => 'someMockedDate'
 const lang = 'en'
@@ -172,4 +180,25 @@ describe('normalizeExpandedAttribute', () => {
 
     expect(res).toBe('fullname')
   })
+})
+
+describe('getValueExtended', () => {
+  it.each`
+    attrKey                    | value        | expected
+    ${'metadata.other'}        | ${'bar'}     | ${'bar'}
+    ${'metadata.noticePeriod'} | ${'1'}       | ${'1 day'}
+    ${'metadata.noticePeriod'} | ${'10'}      | ${'10 days'}
+    ${'metadata.noticePeriod'} | ${'foo'}     | ${'foo'}
+    ${'metadata.noticePeriod'} | ${undefined} | ${undefined}
+    ${'metadata.refTaxIncome'} | ${'1'}       | ${'1 €'}
+    ${'metadata.refTaxIncome'} | ${'foo'}     | ${'foo'}
+    ${'metadata.refTaxIncome'} | ${undefined} | ${undefined}
+  `(
+    'should return "$expected" if attribute "$attrKey" is "$value"',
+    ({ attrKey, value, expected }) => {
+      const res = getValueExtended({ attrKey, value, t: tMock })
+
+      expect(res).toBe(expected)
+    }
+  )
 })

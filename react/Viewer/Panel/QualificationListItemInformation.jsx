@@ -26,6 +26,9 @@ export const makeInformationValue = ({ name, value, t, scannerT }) => {
   if (name === 'contractType') {
     return scannerT(`Scan.attributes.contractType.${value}`)
   }
+  if (name === 'refTaxIncome') {
+    return `${value} €`
+  }
 
   return <MidEllipsis text={`${value}`} />
 }
