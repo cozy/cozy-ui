@@ -1,3 +1,10 @@
+# [83.2.0](https://github.com/cozy/cozy-ui/compare/v83.1.1...v83.2.0) (2023-04-21)
+
+
+### Features
+
+* Add units on two attributes on ExpandedAttributes component ([5410558](https://github.com/cozy/cozy-ui/commit/5410558))
+
 ## [83.1.1](https://github.com/cozy/cozy-ui/compare/v83.1.0...v83.1.1) (2023-04-21)
 
 
