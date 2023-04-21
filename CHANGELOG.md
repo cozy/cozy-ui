@@ -1,3 +1,10 @@
+## [83.1.1](https://github.com/cozy/cozy-ui/compare/v83.1.0...v83.1.1) (2023-04-21)
+
+
+### Bug Fixes
+
+* **SelectionBar:** Adapt max actions to wide device ([641f081](https://github.com/cozy/cozy-ui/commit/641f081))
+
 # [83.1.0](https://github.com/cozy/cozy-ui/compare/v83.0.0...v83.1.0) (2023-04-18)
 
 
