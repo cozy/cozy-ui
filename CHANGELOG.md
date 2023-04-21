@@ -1,3 +1,12 @@
+# [83.3.0](https://github.com/cozy/cozy-ui/compare/v83.2.0...v83.3.0) (2023-04-21)
+
+
+### Features
+
+* Add event listener on ref ([5fcc981](https://github.com/cozy/cozy-ui/commit/5fcc981))
+* Add ExtendableFab ([511b5fc](https://github.com/cozy/cozy-ui/commit/511b5fc))
+* Add useScroll hook to get scroll position from an element ([fdf2a74](https://github.com/cozy/cozy-ui/commit/fdf2a74))
+
 # [83.2.0](https://github.com/cozy/cozy-ui/compare/v83.1.1...v83.2.0) (2023-04-21)
 
 
