@@ -25,7 +25,7 @@ const setup = ({
 }
 
 describe('QualificationListItemInformation', () => {
-  fdescribe('formatedMetadataQualification', () => {
+  describe('formatedMetadataQualification', () => {
     it('should display default text if value is falsy', () => {
       const formatedMetadataQualification = { name: 'country', value: '' }
       const { getByText } = setup({ formatedMetadataQualification })
