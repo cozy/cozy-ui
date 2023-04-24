@@ -200,7 +200,6 @@ module.exports = {
         '../react/InlineCard/index.jsx',
         '../react/IntentModal/IntentModal.jsx',
         '../react/IntentOpener/IntentOpener.jsx',
-        '../react/Menu/index.jsx',
         '../react/Modal/index.jsx',
         '../react/MuiCozyTheme/RaisedList',
         '../react/PercentageLine/index.jsx',
