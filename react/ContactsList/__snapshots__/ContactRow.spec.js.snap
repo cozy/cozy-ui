@@ -2,10 +2,12 @@
 
 exports[`ContactRow should match the contact snapshot 1`] = `
 <li
-  className="MuiListItem-root MuiListItem-gutters"
+  className="MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-1 makeStyles-gutters-11"
   data-testid="contact-listItem"
   disabled={false}
+  gutters="double"
   onClick={[Function]}
+  size="medium"
 >
   <div
     className="styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis"
