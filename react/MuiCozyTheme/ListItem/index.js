@@ -1,4 +1,4 @@
-import React, { Fragment, forwardRef } from 'react'
+import React, { forwardRef } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import merge from 'lodash/merge'
@@ -6,6 +6,12 @@ import MuiListItem from '@material-ui/core/ListItem'
 import isMuiElement from '@material-ui/core/utils/isMuiElement'
 
 import { makeStyles } from '../../styles'
+import {
+  getLastChild,
+  getChildrenCount,
+  getComponentName,
+  getChildren
+} from '../../utils/react'
 
 const useStyles = makeStyles({
   gutters: {
@@ -17,29 +23,6 @@ const useStyles = makeStyles({
       secondaryActionPaddingRight
   }
 })
-
-const getComponentName = component => {
-  if (!component) return null
-  return component.type.displayName || component.type.name || 'Component'
-}
-
-const getChildren = props => {
-  return React.Children.toArray(props.children)
-}
-
-const getChildrenCount = props => {
-  const children = getChildren(props)
-  return children.length
-}
-
-const getLastChild = props => {
-  const children = getChildren(props)
-  const lastChild = children[children.length - 1]
-
-  return lastChild.type === Fragment
-    ? getChildren(lastChild.props)[0]
-    : lastChild
-}
 
 // Return secondaryAction padding right
 const useSecondaryAction = ({ gutters, ...props }) => {
