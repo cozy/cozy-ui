@@ -6,6 +6,9 @@ import BottomSheet from '../BottomSheet'
 
 import NotInlineWrapper from './NotInlineWrapper'
 
+/**
+ * @deprecated This component is depreacated, please use [ActionsMenu](#/ActionsMenu) instead.
+ */
 const ActionMenuWrapper = ({
   onClose,
   anchorElRef,

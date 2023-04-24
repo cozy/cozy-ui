@@ -16,10 +16,14 @@ import ActionsItems from './Actions/ActionsItems'
 
 import styles from './styles.styl'
 
+const logDepecratedMenu = createDepreciationLogger()
 const logDepecratedPlacement = createDepreciationLogger()
 const logDepecratedOverflow = createDepreciationLogger()
 const logDepecratedContainer = createDepreciationLogger()
 
+/**
+ * @deprecated This component is depreacated, please use [ActionsMenu](#/ActionsMenu) instead.
+ */
 const ActionMenu = ({
   className,
   anchorElRef,
@@ -43,6 +47,9 @@ const ActionMenu = ({
     logDepecratedContainer(
       '<ActionMenu containerElRef /> is not needed anymore, it can be removed.'
     )
+  logDepecratedMenu(
+    'The ActionMenu component has been deprecated and should be replaced by ActionsMenu. More infos: https://docs.cozy.io/cozy-ui/react/#!/ActionsMenu'
+  )
 
   const { isMobile } = useBreakpoints()
   const containerRef = React.createRef()
