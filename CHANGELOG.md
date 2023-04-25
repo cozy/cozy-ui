@@ -1,3 +1,13 @@
+# [83.4.0](https://github.com/cozy/cozy-ui/compare/v83.3.0...v83.4.0) (2023-04-25)
+
+
+### Features
+
+* **ContactsList:** Adjust style after modification on ListItem ([6049a7b](https://github.com/cozy/cozy-ui/commit/6049a7b))
+* **FilePicker:** Adjust style after ListItem modifications ([fa3b646](https://github.com/cozy/cozy-ui/commit/fa3b646))
+* **List:** Update List, ListItem, ListItemText, ListSubheader, ListItemIcon ([3e64e8e](https://github.com/cozy/cozy-ui/commit/3e64e8e))
+* **NestedSelect:** Adjust style after ListItem modifications ([b951426](https://github.com/cozy/cozy-ui/commit/b951426))
+
 # [83.3.0](https://github.com/cozy/cozy-ui/compare/v83.2.0...v83.3.0) (2023-04-21)
 
 
