@@ -494,85 +494,63 @@ const makeOverrides = theme => ({
   MuiListItemIcon: {
     root: {
       minWidth: 'auto',
-      marginRight: '1rem',
-      padding: 0,
       width: 32,
+      height: 32,
+      alignItems: 'center',
       justifyContent: 'center',
       color: theme.palette.text.icon
     }
   },
   MuiListItem: {
     root: {
-      paddingTop: 0,
-      paddingBottom: 0,
-      minHeight: '3.5rem',
-      color: theme.palette.text.secondary
-    },
-    gutters: {
-      paddingLeft: '1rem',
-      paddingRight: '1rem',
-      [theme.breakpoints.up('md')]: {
-        '&.listItem--dialog': {
-          paddingLeft: '2rem',
-          paddingRight: '2rem'
-        }
+      gap: 16,
+      paddingTop: 12,
+      paddingBottom: 12,
+      '&.small': {
+        paddingTop: 8,
+        paddingBottom: 8
+      },
+      '&.large': {
+        paddingTop: 16,
+        paddingBottom: 16
       }
     },
     dense: {
-      minHeight: '3.5rem',
-      paddingTop: 0,
-      paddingBottom: 0
-    }
-  },
-  MuiListItemText: {
-    root: {
-      padding: '14px 0'
-    },
-    dense: {
-      fontSize: null
-    },
-    primary: {
-      color: theme.palette.text.primary,
-      '&$dense': {
-        fontSize: null
+      paddingTop: 8,
+      paddingBottom: 8,
+      '&.small': {
+        paddingTop: 4,
+        paddingBottom: 4
+      },
+      '&.large': {
+        paddingTop: 12,
+        paddingBottom: 12
       }
-    },
-    secondary: {
-      '&$dense': {
-        fontSize: null
-      }
-    },
-    multiline: {
-      marginTop: 0,
-      marginBottom: 0
     }
   },
   MuiListSubheader: {
     root: {
-      borderTop: '1px solid transparent',
-      borderBottom: '1px solid transparent',
+      ...theme.typography.subtitle2,
+      paddingBottom: 8,
+      paddingTop: 8,
       marginBottom: '0.5rem',
-      padding: 0,
-      height: '2rem',
-      backgroundColor: theme.palette.background.paper,
-      textIndent: '1rem',
-      fontWeight: 'bold',
-      fontSize: '.75rem',
-      textTransform: 'uppercase',
-      alignItems: 'center',
-      display: 'flex',
-      lineHeight: 1.33,
-      color: theme.palette.text.secondary,
-      [theme.breakpoints.up('sm')]: {
-        textIndent: '2rem'
-      }
-    },
-    gutters: {
-      paddingLeft: 0,
-      paddingRight: 0
+      backgroundColor: theme.palette.background.default
     },
     sticky: {
       backgroundColor: theme.palette.background.default
+    }
+  },
+  MuiListItemText: {
+    root: {
+      marginTop: 1,
+      marginBottom: 1
+    },
+    multiline: {
+      marginTop: 1,
+      marginBottom: 1
+    },
+    secondary: {
+      marginTop: 1
     }
   },
   MuiListItemSecondaryAction: {
