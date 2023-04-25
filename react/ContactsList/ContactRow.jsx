@@ -18,12 +18,14 @@ const ContactRow = ({ className, contact, onClick, divider, ...rest }) => {
   const phone = getPrimaryPhone(contact) || undefined
   const email = getPrimaryEmail(contact) || undefined
   const cozyUrl = getPrimaryCozy(contact) || undefined
+  const { isDesktop } = useBreakpoints()
 
   return (
     <ListItem
       data-testid="contact-listItem"
       className={cx({ 'u-c-pointer': onClick }, className)}
       divider={divider}
+      gutters={isDesktop ? 'double' : 'default'}
       onClick={() => onClick(contact)}
       {...rest}
     >
