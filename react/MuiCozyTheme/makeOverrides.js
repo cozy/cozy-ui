@@ -560,18 +560,14 @@ const makeOverrides = theme => ({
   },
   MuiMenuItem: {
     root: {
-      minHeight: 'auto',
+      gap: 8,
+      minWidth: 256,
       paddingTop: 4,
-      paddingBottom: 4,
-      color: theme.palette.grey[800],
-      border: 0,
-      '&:last-child': {
-        borderBottom: 0
-      }
+      paddingBottom: 4
     },
     gutters: {
-      paddingLeft: 24,
-      paddingRight: 24
+      paddingLeft: 8,
+      paddingRight: 8
     }
   },
   MuiTextField: {
