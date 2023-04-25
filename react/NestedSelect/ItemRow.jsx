@@ -10,17 +10,16 @@ import Radio from '../Radios'
 import useBreakpoints from '../hooks/useBreakpoints'
 
 const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
-  const { isMobile } = useBreakpoints()
+  const { isDesktop } = useBreakpoints()
   return (
     <>
       <ListItem
-        className="u-pl-1 u-pr-1-half"
-        disableGutters
+        gutters={isDesktop ? 'double' : 'default'}
         button
         onClick={() => onClick(item)}
       >
         {radioPosition === 'left' && (
-          <ListItemIcon className="u-mr-0">
+          <ListItemIcon>
             <Radio
               readOnly
               name={item.title}
@@ -29,18 +28,8 @@ const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
             />
           </ListItemIcon>
         )}
-        {item.icon && (
-          <ListItemIcon
-            className={`${isMobile ? 'u-ml-half' : 'u-ml-1'} u-mr-1`}
-          >
-            {item.icon}
-          </ListItemIcon>
-        )}
-        <ListItemText
-          className="u-pv-0 u-ph-half"
-          primary={item.title}
-          secondary={item.description}
-        />
+        {item.icon && <ListItemIcon>{item.icon}</ListItemIcon>}
+        <ListItemText primary={item.title} secondary={item.description} />
 
         {item.children && item.children.length > 0 && <Icon icon={RightIcon} />}
 
