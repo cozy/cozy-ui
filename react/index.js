@@ -40,6 +40,7 @@ export {
   ActionMenuHeader,
   ActionMenuRadio
 } from './ActionMenu'
+export { default as ActionsMenu } from './ActionsMenu/ActionsMenu'
 export { default as Overlay } from './Overlay'
 export { default as Label } from './Label'
 export { default as Input } from './Input'

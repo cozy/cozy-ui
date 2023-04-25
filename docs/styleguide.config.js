@@ -128,6 +128,7 @@ module.exports = {
       name: 'Navigation',
       components: () => [
         '../react/ActionMenu/index.jsx',
+        '../react/ActionsMenu',
         '../react/MuiCozyTheme/Menus',
         '../react/AppLinker/index.jsx',
         '../react/Breadcrumbs/index.jsx',
