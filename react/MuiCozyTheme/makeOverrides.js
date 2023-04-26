@@ -561,7 +561,9 @@ const makeOverrides = theme => ({
   MuiMenuItem: {
     root: {
       gap: 8,
-      minWidth: 256,
+      maxWidth: 320,
+      whiteSpace: 'normal',
+      overflow: 'auto',
       paddingTop: 4,
       paddingBottom: 4
     },
