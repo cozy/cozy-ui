@@ -30,7 +30,8 @@ const initialVariants = [{
   smallIcons: false,
   multipleLeftIcons: false,
   multipleRightIcons: false,
-  withActions: false
+  withActions: false,
+  ellipsis: true
 }]
 
 ;
@@ -39,14 +40,15 @@ const initialVariants = [{
   {variant => {
     const gutters = variant.disabledGutters ? 'disabled' : variant.doubleGutters ? 'double' : 'default'
     const size = variant.small ? 'small' : variant.large ? 'large' : 'medium'
-    const props = { gutters, size }
+    const listItemProps = { gutters, size, ellipsis: variant.ellipsis }
+
     const iconSize = variant.smallIcons ? 8 : variant.bigIcons ? 32 : 16
     const text = variant.longText ? content.ada.short : "I'm a primary text"
 
     return (
       <>
         <List dense={variant.dense} subheader={<ListSubheader>Section 1</ListSubheader>}>
-          <ListItem {...props} button>
+          <ListItem {...listItemProps} button>
             <ListItemIcon>
               <Icon icon={CommentIcon} size={iconSize} />
             </ListItemIcon>

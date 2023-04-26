@@ -54,7 +54,8 @@ const useGutters = ({ gutters, ...props }) => {
 }
 
 // Add margin on ListItemSecondaryAction when gutters are double
-const useOverridenChildren = ({ gutters, ...props }) => {
+// Propagates ellipsis prop to ListItemText
+const useOverridenChildren = ({ gutters, ellipsis, ...props }) => {
   const children = getChildren(props)
   const childrenCount = getChildrenCount(props)
 
@@ -62,12 +63,18 @@ const useOverridenChildren = ({ gutters, ...props }) => {
     const isLastChild = index === childrenCount - 1
     const isSecondaryAction =
       (isLastChild && isMuiElement(child, ['ListItemSecondaryAction'])) || false
+    const isListItemText = getComponentName(child).includes('ListItemText')
 
     if (isSecondaryAction && gutters === 'double') {
       return React.cloneElement(child, {
         className: `${child.props.className} u-mr-1`
       })
     }
+
+    if (isListItemText) {
+      return React.cloneElement(child, { ellipsis })
+    }
+
     return child
   })
 }
@@ -101,7 +108,8 @@ ListItem.defaultProps = {
 
 ListItem.propTypes = {
   gutters: PropTypes.oneOf(['disabled', 'double', 'default']),
-  size: PropTypes.oneOf(['small', 'medium', 'large'])
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  ellipsis: PropTypes.bool
 }
 
 export default ListItem
