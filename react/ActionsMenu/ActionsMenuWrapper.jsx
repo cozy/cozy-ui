@@ -8,7 +8,13 @@ import isTesting from '../helpers/isTesting'
 import Paper from '../Paper'
 import { useActionMenuEffects } from '../ActionMenu/ActionMenuEffects'
 
-const ActionsMenuWrapper = ({ children, autoClose, onClose, ...props }) => {
+const ActionsMenuWrapper = ({
+  children,
+  autoClose,
+  open,
+  onClose,
+  ...props
+}) => {
   const { isMobile } = useBreakpoints()
 
   useActionMenuEffects()
@@ -18,16 +24,18 @@ const ActionsMenuWrapper = ({ children, autoClose, onClose, ...props }) => {
     autoClose && onClose?.()
   }
 
-  if (isMobile) {
+  if (isMobile && open) {
     return (
       <BottomSheet skipAnimation={isTesting()} backdrop onClose={onClose}>
         <Paper square>
           {React.Children.map(children, child =>
-            React.cloneElement(child, {
-              isListItem: true,
-              size: 'small',
-              onClick: overrideClick(child.props)
-            })
+            React.isValidElement(child)
+              ? React.cloneElement(child, {
+                  isListItem: true,
+                  size: 'small',
+                  onClick: overrideClick(child.props)
+                })
+              : null
           )}
         </Paper>
       </BottomSheet>
@@ -35,11 +43,13 @@ const ActionsMenuWrapper = ({ children, autoClose, onClose, ...props }) => {
   }
 
   return (
-    <Menu {...props} onClose={onClose}>
+    <Menu {...props} open={open} onClose={onClose}>
       {React.Children.map(children, child =>
-        React.cloneElement(child, {
-          onClick: overrideClick(child.props)
-        })
+        React.isValidElement(child)
+          ? React.cloneElement(child, {
+              onClick: overrideClick(child.props)
+            })
+          : null
       )}
     </Menu>
   )
