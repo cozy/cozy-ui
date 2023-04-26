@@ -1,3 +1,19 @@
+# [84.0.0](https://github.com/cozy/cozy-ui/compare/v83.4.0...v84.0.0) (2023-04-26)
+
+
+### Features
+
+* Add doc and adjust overrides for Menu from Mui. ([40b5f0d](https://github.com/cozy/cozy-ui/commit/40b5f0d))
+* Add new component ActionsMenu ([d1a57b1](https://github.com/cozy/cozy-ui/commit/d1a57b1))
+* Deprecates ActionMenu, use ActionsMenu instead ([c71f6d8](https://github.com/cozy/cozy-ui/commit/c71f6d8))
+* Remove old deprecated Menu ([36a4f6e](https://github.com/cozy/cozy-ui/commit/36a4f6e))
+* **Viewer:** Limit the average height of the BottomSheet ([ebd964f](https://github.com/cozy/cozy-ui/commit/ebd964f))
+
+
+### BREAKING CHANGES
+
+* You must replace `react/Menu` component by `react/ActionsMenu` or `react/MuiCozyTheme/Menu`. Since`react/Menu` has been depreciated for 3 years now, this should not be a problem.
+
 # [83.4.0](https://github.com/cozy/cozy-ui/compare/v83.3.0...v83.4.0) (2023-04-25)
 
 
