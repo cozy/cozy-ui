@@ -6,7 +6,16 @@ A header `ActionsMenuMobileHeader` can be used to provide context on the menu ac
 
 ### With an automatic creation of actions
 
-Use `makeActions` method and create (or use the predefined actions) to build the actions to pass to `ActionsMenu` high level component.
+Use `makeActions` method and create (or use the predefined actions) to build the actions to pass to `ActionsMenu` high level component. The method `makeActions` takes `actions` array as first argument, and `options` as second argument. `options` are then passed to the `actions` component as `props`.
+
+```bash
+const action1 = ({ option1, option2 }) => ({
+  name: action1,
+  Component: props => <SomeComponent {...props} />
+})
+
+const actions = makeActions([action1, action2], { option1, option2 })
+```
 
 #### How to create actions
 
@@ -14,13 +23,14 @@ An action is a simple function that returns an object with specific keys:
 
 * **name** : `<string>` – Action's name
 * **action** : `<func>` – Method triggered when clicking the action
-* **isEnabled** : `<bool>` – Used to add `disable` effect (the action is still displayed)
+* **disabled** : `<bool>` – Used to add `disable` effect (the action is still displayed)
 * **Component** : `<func>` – The returned component that manages the display
 
 ```bash
-const expl = () => ({
+const expl = makeActionOptions => ({
   name: 'expl',
   action: () => {},
+  disabled: false,
   Component: props => {
     return <SomeComponent {...props} />
   }
@@ -65,7 +75,7 @@ const customAction = () => ({
         <ListItemIcon>
           <Icon icon={FileIcon} />
         </ListItemIcon>
-        <ListItemText primary="This is a custom action" />
+        <ListItemText primary="This is a custom action, with a very long text to show how it is displayed" />
       </ActionsMenuItem>
     )
   })
@@ -84,27 +94,25 @@ const actions = makeActions([ modify, viewInContacts, divider, call, smsTo, emai
   >
     Show action menu
   </DropdownButton>
-  {state.showMenu && (
-    <ActionsMenu
-      ref={anchorRef}
-      open={state.showMenu}
-      doc={doc}
-      actions={actions}
-      anchorOrigin={{
-        vertical: 'bottom',
-        horizontal: 'left'
-      }}
-      autoClose
-      onClose={hideMenu}
-    >
-      <ActionsMenuMobileHeader>
-        <ListItemIcon>
-          <Icon icon={FileTypeText} size={32} />
-        </ListItemIcon>
-        <ListItemText primary="Title" primaryTypographyProps={{ variant: 'h6' }} />
-      </ActionsMenuMobileHeader>
-    </ActionsMenu>
-  )}
+  <ActionsMenu
+    ref={anchorRef}
+    open={state.showMenu}
+    doc={doc}
+    actions={actions}
+    anchorOrigin={{
+      vertical: 'bottom',
+      horizontal: 'left'
+    }}
+    autoClose
+    onClose={hideMenu}
+  >
+    <ActionsMenuMobileHeader>
+      <ListItemIcon>
+        <Icon icon={FileTypeText} size={32} />
+      </ListItemIcon>
+      <ListItemText primary="Title" primaryTypographyProps={{ variant: 'h6' }} />
+    </ActionsMenuMobileHeader>
+  </ActionsMenu>
 </DemoProvider>
 ```
 
