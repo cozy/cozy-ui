@@ -5,11 +5,9 @@ import MenuItem from 'cozy-ui/transpiled/react/MenuItem'
 import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem'
 
 const ActionsMenuItem = forwardRef(({ isListItem, ...props }, ref) => {
-  if (isListItem) {
-    return <ListItem {...props} ref={ref} button ellipsis={false} />
-  }
+  const Component = isListItem ? ListItem : MenuItem
 
-  return <MenuItem {...props} ref={ref} button />
+  return <Component {...props} ref={ref} button ellipsis={false} />
 })
 
 ActionsMenuItem.propTypes = {
