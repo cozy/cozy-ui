@@ -78,7 +78,7 @@ export const SquareAppIcon = ({
   const [animationState, setAnimationState] = useState()
 
   const handleAnimationEnd = e => {
-    if (e.animationName.startsWith('end')) setAnimationState()
+    if (e.animationName.includes('end')) setAnimationState()
   }
 
   useEffect(() => {
