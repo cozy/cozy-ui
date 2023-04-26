@@ -44,9 +44,9 @@ const useGutters = ({ gutters, ...props }) => {
   const guttersValue = gutters === 'double' ? 32 : 16
 
   const lastChild = getLastChild(props)
-  const isLastChildListItemIcon = getComponentName(lastChild).includes(
-    'ListItemIcon'
-  )
+  const isLastChildListItemIcon = lastChild
+    ? getComponentName(lastChild).includes('ListItemIcon')
+    : false
 
   const gutterRight = isLastChildListItemIcon ? guttersValue - 8 : guttersValue
 
@@ -106,10 +106,12 @@ ListItem.defaultProps = {
   size: 'medium'
 }
 
-ListItem.propTypes = {
+export const LitItemPropTypes = {
   gutters: PropTypes.oneOf(['disabled', 'double', 'default']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   ellipsis: PropTypes.bool
 }
+
+ListItem.propTypes = LitItemPropTypes
 
 export default ListItem

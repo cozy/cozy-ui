@@ -6,16 +6,20 @@ export const getComponentName = component => {
 }
 
 export const getChildren = props => {
-  return Children.toArray(props.children)
+  const children = Children.toArray(props.children)
+  return Children.count(children) > 0 ? children : null
 }
 
 export const getChildrenCount = props => {
   const children = getChildren(props)
-  return children.length
+  return Children.count(children) || null
 }
 
 export const getLastChild = props => {
   const children = getChildren(props)
+
+  if (!children) return null
+
   const lastChild = children[children.length - 1]
 
   return lastChild.type === Fragment
