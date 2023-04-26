@@ -18,7 +18,7 @@ const ActionsItems = forwardRef(
       const actionName = getActionName(actionObject)
       const actionDefinition = Object.values(actionObject)[0]
 
-      const { Component: ActionComponent, action, isEnabled } = actionDefinition
+      const { Component: ActionComponent, action, disabled } = actionDefinition
 
       const handleClick = () => {
         action && action(doc, { client, t, isLast })
@@ -31,8 +31,8 @@ const ActionsItems = forwardRef(
           {...props}
           ref={ref}
           key={actionName + idx}
-          isEnabled={isEnabled}
           doc={doc}
+          disabled={disabled}
           onClick={handleClick}
         />
       )
