@@ -1,3 +1,10 @@
+## [84.1.2](https://github.com/cozy/cozy-ui/compare/v84.1.1...v84.1.2) (2023-04-27)
+
+
+### Bug Fixes
+
+* ActionsMenu target wasn't good in global import ([cac334a](https://github.com/cozy/cozy-ui/commit/cac334a))
+
 ## [84.1.1](https://github.com/cozy/cozy-ui/compare/v84.1.0...v84.1.1) (2023-04-27)
 
 
