@@ -75,7 +75,10 @@ const customAction = () => ({
         <ListItemIcon>
           <Icon icon={FileIcon} />
         </ListItemIcon>
-        <ListItemText primary="This is a custom action, with a very long text to show how it is displayed" />
+        <ListItemText
+          primary="This is a custom action, with a very long text to show how it is displayed"
+          secondary="This is a custom action, with a very long text to show how it is displayed"
+        />
       </ActionsMenuItem>
     )
   })
