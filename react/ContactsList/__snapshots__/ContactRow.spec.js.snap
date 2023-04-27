@@ -5,7 +5,6 @@ exports[`ContactRow should match the contact snapshot 1`] = `
   className="MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-1 makeStyles-gutters-11"
   data-testid="contact-listItem"
   disabled={false}
-  gutters="double"
   onClick={[Function]}
   size="medium"
 >
