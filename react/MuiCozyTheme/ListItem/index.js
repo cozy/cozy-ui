@@ -79,25 +79,34 @@ const useOverridenChildren = ({ gutters, ellipsis, ...props }) => {
   })
 }
 
-const ListItem = forwardRef(({ className, ...props }, ref) => {
-  const secondaryActionPaddingRight = useSecondaryAction(props)
-  const guttersValue = useGutters(props)
+const ListItem = forwardRef(
+  ({ className, gutters, ellipsis, ...props }, ref) => {
+    const secondaryActionPaddingRight = useSecondaryAction({
+      gutters,
+      ...props
+    })
+    const guttersValue = useGutters({ gutters, ...props })
 
-  const styles = useStyles({ secondaryActionPaddingRight, guttersValue })
-  const overridenChildren = useOverridenChildren(props)
+    const styles = useStyles({ secondaryActionPaddingRight, guttersValue })
+    const overridenChildren = useOverridenChildren({
+      gutters,
+      ellipsis,
+      ...props
+    })
 
-  return (
-    <MuiListItem
-      {...props}
-      ref={ref}
-      classes={merge(props.classes, styles)}
-      className={cx(className, props.size)}
-      disableGutters={props.disableGutters || props.gutters === 'disabled'}
-    >
-      {overridenChildren}
-    </MuiListItem>
-  )
-})
+    return (
+      <MuiListItem
+        {...props}
+        ref={ref}
+        classes={merge(props.classes, styles)}
+        className={cx(className, props.size)}
+        disableGutters={props.disableGutters || gutters === 'disabled'}
+      >
+        {overridenChildren}
+      </MuiListItem>
+    )
+  }
+)
 
 ListItem.displayName = 'ListItem'
 
