@@ -1,3 +1,10 @@
+## [84.1.1](https://github.com/cozy/cozy-ui/compare/v84.1.0...v84.1.1) (2023-04-27)
+
+
+### Bug Fixes
+
+* use includes() not startsWith() in animation ([3c71bc6](https://github.com/cozy/cozy-ui/commit/3c71bc6))
+
 # [84.1.0](https://github.com/cozy/cozy-ui/compare/v84.0.0...v84.1.0) (2023-04-27)
 
 
