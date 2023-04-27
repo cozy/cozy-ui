@@ -26,7 +26,8 @@ export const viewInContacts = () => {
       window.open(webLink, '_blank')
     },
     Component: withActionsLocales(
-      forwardRef(({ t, ...props }, ref) => {
+      // eslint-disable-next-line no-unused-vars
+      forwardRef(({ t, f, lang, ...props }, ref) => {
         return (
           <ActionsMenuItem ref={ref} {...props}>
             <ListItemIcon>
