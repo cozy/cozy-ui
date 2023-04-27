@@ -1,3 +1,13 @@
+## [84.1.3](https://github.com/cozy/cozy-ui/compare/v84.1.2...v84.1.3) (2023-04-27)
+
+
+### Bug Fixes
+
+* **ActionsMenu actions:** Stop spreading `t`, `f`, `lang` into child ([4fa0cc0](https://github.com/cozy/cozy-ui/commit/4fa0cc0))
+* **ActionsMenuItem:** We used transpiled version of imports, and... ([233ae1f](https://github.com/cozy/cozy-ui/commit/233ae1f))
+* **ListItem:** Stop spreading `gutters` and `ellipsis` to children ([0de5e66](https://github.com/cozy/cozy-ui/commit/0de5e66))
+* **ListItemText:** DisplayName and forwardRef was missing ([a70322c](https://github.com/cozy/cozy-ui/commit/a70322c))
+
 ## [84.1.2](https://github.com/cozy/cozy-ui/compare/v84.1.1...v84.1.2) (2023-04-27)
 
 
