@@ -15,7 +15,8 @@ export const emailTo = () => {
       !!emailAddress && window.open(`mailto:${emailAddress}`, '_self')
     },
     Component: withActionsLocales(
-      forwardRef(({ t, ...props }, ref) => {
+      // eslint-disable-next-line no-unused-vars
+      forwardRef(({ t, f, lang, ...props }, ref) => {
         return (
           <ActionsMenuItem {...props} ref={ref}>
             <ListItemIcon>
