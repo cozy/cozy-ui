@@ -1,3 +1,21 @@
+# [84.1.0](https://github.com/cozy/cozy-ui/compare/v84.0.0...v84.1.0) (2023-04-27)
+
+
+### Bug Fixes
+
+* **ActionsMenuWrapper:** Use now React.isValidElement on children and... ([68c5b60](https://github.com/cozy/cozy-ui/commit/68c5b60))
+* **ListItem:** LastChild should be undefined in some case without crash ([0686bb3](https://github.com/cozy/cozy-ui/commit/0686bb3))
+
+
+### Features
+
+* **ActionsItems:** Rename prop `isEnabled` in `disabled` ([f4bcb0f](https://github.com/cozy/cozy-ui/commit/f4bcb0f))
+* **ActionsMenuItem:** Force `ellipsis` [secure] on MenuItem and ListItem ([8a1725e](https://github.com/cozy/cozy-ui/commit/8a1725e))
+* **ActionsMenuItem:** Set `ellipsis` to [secure] for ListItem chlidren ([cacf53c](https://github.com/cozy/cozy-ui/commit/cacf53c))
+* **ListItem:** Add `ellipsis` prop to set ListItemText ellipsis ([135ef2a](https://github.com/cozy/cozy-ui/commit/135ef2a))
+* **MenuItem:** Change maxWidth and whiteSpace ([e845f10](https://github.com/cozy/cozy-ui/commit/e845f10))
+* **MenuItem:** Use ListItem from cozy-ui and not from Mui ([607315f](https://github.com/cozy/cozy-ui/commit/607315f))
+
 # [84.0.0](https://github.com/cozy/cozy-ui/compare/v83.4.0...v84.0.0) (2023-04-26)
 
 
