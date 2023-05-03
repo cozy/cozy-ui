@@ -3,9 +3,15 @@ import MuiMenuItem from '@material-ui/core/MenuItem'
 
 import ListItem, { LitItemPropTypes } from '../MuiCozyTheme/ListItem'
 
-const MenuItem = forwardRef((props, ref) => {
+const MenuItem = forwardRef(({ component, ...props }, ref) => {
   return (
-    <MuiMenuItem ref={ref} component={ListItem} gutters="disabled" {...props} />
+    <MuiMenuItem
+      ref={ref}
+      component={ListItem}
+      componentElement={component}
+      gutters="disabled"
+      {...props}
+    />
   )
 })
 

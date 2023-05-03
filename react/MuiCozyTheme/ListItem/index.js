@@ -80,7 +80,7 @@ const useOverridenChildren = ({ gutters, ellipsis, ...props }) => {
 }
 
 const ListItem = forwardRef(
-  ({ className, gutters, ellipsis, ...props }, ref) => {
+  ({ className, gutters, ellipsis, componentElement, ...props }, ref) => {
     const secondaryActionPaddingRight = useSecondaryAction({
       gutters,
       ...props
@@ -97,6 +97,7 @@ const ListItem = forwardRef(
     return (
       <MuiListItem
         {...props}
+        component={componentElement || props.component}
         ref={ref}
         classes={merge(props.classes, styles)}
         className={cx(className, props.size)}
@@ -118,7 +119,9 @@ ListItem.defaultProps = {
 export const LitItemPropTypes = {
   gutters: PropTypes.oneOf(['disabled', 'double', 'default']),
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  ellipsis: PropTypes.bool
+  ellipsis: PropTypes.bool,
+  /** If the `component` prop is already used to return `ListItem`, this prop still allows you to choose a component to render in `ListItem`. cf:`MenuItem` component */
+  componentElement: PropTypes.elementType
 }
 
 ListItem.propTypes = LitItemPropTypes
