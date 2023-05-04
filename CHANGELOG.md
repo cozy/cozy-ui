@@ -1,3 +1,10 @@
+## [84.1.4](https://github.com/cozy/cozy-ui/compare/v84.1.3...v84.1.4) (2023-05-04)
+
+
+### Bug Fixes
+
+* **MenuItem:** Override `component` prop ([d816549](https://github.com/cozy/cozy-ui/commit/d816549))
+
 ## [84.1.3](https://github.com/cozy/cozy-ui/compare/v84.1.2...v84.1.3) (2023-04-27)
 
 
