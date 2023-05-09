@@ -23,7 +23,7 @@ const [isError, setIsError] = React.useState(false)
   <Button className="u-mb-1 u-mr-1" label="Toggle Loading" onClick={() => setLoading(!isLoading)} />
   <Button className="u-mb-1" label="Toggle Loading Error" onClick={() => setIsError(!isError)} />
 
-  <Grid container spacing={1} style={{ background: `center / cover no-repeat url(${cloudWallpaper})` }}
+  <Grid container spacing={1} style={{ background: theme === 'inverted' ? `center / cover no-repeat url(${cloudWallpaper})` : 'white' }}
   >
     <Grid item>
       <SquareAppIcon app={app} name="Normal" />
