@@ -16,6 +16,7 @@ import iconPlus from '../Icons/Plus'
 import iconWarning from '../Icons/WarningCircle'
 import { makeStyles } from '../styles'
 import { nameToColor } from '../Avatar'
+import CozyTheme, { useCozyTheme } from '../CozyTheme'
 
 import { color } from './constants.json'
 import styles from './styles.styl'
@@ -70,6 +71,7 @@ export const SquareAppIcon = ({
   IconContent,
   ...appIconProps
 }) => {
+  const theme = useCozyTheme()
   const classes = useStyles()
   const appName =
     name || get(appIconProps, 'app.name') || get(appIconProps, 'app') || ''
@@ -92,88 +94,96 @@ export const SquareAppIcon = ({
     prevVariant.current = variant
   }, [variant])
 
+  const squareTheme = ['add', 'ghost'].includes(variant) ? theme : 'normal'
+
   return (
     <div data-testid="square-app-icon" className={cx(classes.tileWrapper)}>
-      <InfosBadge
-        badgeContent={
-          variant === 'shortcut' ? <Icon size="10" icon={iconOut} /> : null
-        }
-        overlap="rectangular"
-        invisible={variant !== 'shortcut'}
-      >
-        {['default', 'loading', 'error'].includes(variant) && (
-          <Spinner className={cx(styles['SquareAppIcon-spinner'], 'u-m-0')} />
-        )}
-        <Badge
-          className={cx(
-            styles['SquareAppIcon-wrapper'],
-            styles[`SquareAppIcon-wrapper-${variant}`],
-            {
-              [`${styles['SquareAppIcon-wrapper-fx']}`]: [
-                'ghost',
-                'add'
-              ].includes(variant),
-              [classes.shadow]: !['add', 'ghost'].includes(variant)
-            }
-          )}
+      <CozyTheme variant={squareTheme}>
+        <InfosBadge
           badgeContent={
-            variant === 'error' ? (
-              <Icon
-                size="16"
-                className={cx(classes.errorIcon)}
-                icon={iconWarning}
-              />
-            ) : (
-              ''
-            )
+            variant === 'shortcut' ? <Icon size="10" icon={iconOut} /> : null
           }
-          color={variant === 'error' ? 'error' : undefined}
-          withBorder={false}
-          size="large"
           overlap="rectangular"
-          style={
-            variant === 'shortcut' && !IconContent
-              ? { backgroundColor: nameToColor(name) }
-              : null
-          }
+          invisible={variant !== 'shortcut'}
         >
-          {variant === 'shortcut' && !IconContent ? (
-            <Typography className={classes.letter} variant="h2" align="center">
-              {letter.toUpperCase()}
-            </Typography>
-          ) : (
-            <div className={styles['SquareAppIcon-icon-container']}>
-              <div
-                className={cx(
-                  styles['onEnd'],
-                  { [styles['isSuccess']]: animationState === 'success' },
-                  { [styles['isFailed']]: animationState === 'failed' }
-                )}
-                onAnimationEnd={handleAnimationEnd}
+          {['default', 'loading', 'error'].includes(variant) && (
+            <Spinner className={cx(styles['SquareAppIcon-spinner'], 'u-m-0')} />
+          )}
+          <Badge
+            className={cx(
+              styles['SquareAppIcon-wrapper'],
+              styles[`SquareAppIcon-wrapper-${variant}`],
+              {
+                [`${styles['SquareAppIcon-wrapper-fx']}`]: [
+                  'ghost',
+                  'add'
+                ].includes(variant),
+                [classes.shadow]: !['add', 'ghost'].includes(variant)
+              }
+            )}
+            badgeContent={
+              variant === 'error' ? (
+                <Icon
+                  size="16"
+                  className={cx(classes.errorIcon)}
+                  icon={iconWarning}
+                />
+              ) : (
+                ''
+              )
+            }
+            color={variant === 'error' ? 'error' : undefined}
+            withBorder={false}
+            size="large"
+            overlap="rectangular"
+            style={
+              variant === 'shortcut' && !IconContent
+                ? { backgroundColor: nameToColor(name) }
+                : null
+            }
+          >
+            {variant === 'shortcut' && !IconContent ? (
+              <Typography
+                className={classes.letter}
+                variant="h2"
+                align="center"
               >
-                {animationState && (
-                  <Icon
-                    size="32"
-                    icon={
-                      animationState === 'success'
-                        ? IconCheckAnimated
-                        : SvgIconCrossAnimated
-                    }
-                  />
+                {letter.toUpperCase()}
+              </Typography>
+            ) : (
+              <div className={styles['SquareAppIcon-icon-container']}>
+                <div
+                  className={cx(
+                    styles['onEnd'],
+                    { [styles['isSuccess']]: animationState === 'success' },
+                    { [styles['isFailed']]: animationState === 'failed' }
+                  )}
+                  onAnimationEnd={handleAnimationEnd}
+                >
+                  {animationState && (
+                    <Icon
+                      size="32"
+                      icon={
+                        animationState === 'success'
+                          ? IconCheckAnimated
+                          : SvgIconCrossAnimated
+                      }
+                    />
+                  )}
+                </div>
+
+                {variant === 'add' ? (
+                  <Icon icon={iconPlus} color={color} />
+                ) : IconContent ? (
+                  IconContent
+                ) : (
+                  <AppIcon {...appIconProps} />
                 )}
               </div>
-
-              {variant === 'add' ? (
-                <Icon icon={iconPlus} color={color} />
-              ) : IconContent ? (
-                IconContent
-              ) : (
-                <AppIcon {...appIconProps} />
-              )}
-            </div>
-          )}
-        </Badge>
-      </InfosBadge>
+            )}
+          </Badge>
+        </InfosBadge>
+      </CozyTheme>
       <Typography
         className={cx(classes.name, 'u-spacellipsis')}
         variant="h6"
