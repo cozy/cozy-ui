@@ -23,7 +23,7 @@ import styles from './styles.styl'
 
 const useStyles = makeStyles(theme => ({
   name: {
-    color,
+    color: 'var(--primaryTextColor)',
     width: '5.5rem',
     textAlign: 'center',
     fontSize: '0.875rem',
