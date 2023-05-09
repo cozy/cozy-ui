@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   letter: {
-    color,
+    color: 'white',
     margin: 'auto'
   },
   shadow: {
