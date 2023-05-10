@@ -28,7 +28,6 @@ const useStyles = makeStyles(theme => ({
     fontSize: '0.875rem',
     lineHeight: '1.188rem',
     margin: '0.5rem 0.25rem 0 0.25rem',
-    textShadow: theme.textShadows[1],
     lineClamp: '2',
     boxOrient: 'vertical',
     display: '-webkit-box',
@@ -40,6 +39,9 @@ const useStyles = makeStyles(theme => ({
       margin: '0.25rem 0.25rem 0 0.25rem',
       height: '2rem'
     }
+  },
+  nameInverted: {
+    textShadow: theme.textShadows[1]
   },
   squareAppIconGhost: {
     backgroundColor: alpha(
@@ -193,7 +195,11 @@ export const SquareAppIcon = ({
         </InfosBadge>
       </CozyTheme>
       <Typography
-        className={cx(classes.name, 'u-spacellipsis')}
+        className={cx(
+          classes.name,
+          { [classes.nameInverted]: theme === 'inverted' },
+          'u-spacellipsis'
+        )}
         variant="h6"
         align="center"
       >
