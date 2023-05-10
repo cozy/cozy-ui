@@ -161,7 +161,12 @@ export const SquareAppIcon = ({
                 {letter.toUpperCase()}
               </Typography>
             ) : (
-              <div className={styles['SquareAppIcon-icon-container']}>
+              <div
+                className={cx(styles['SquareAppIcon-icon-container'], {
+                  [styles['SquareAppIcon-icon-container-normal']]:
+                    theme === 'normal'
+                })}
+              >
                 <div
                   className={cx(
                     styles['onEnd'],
