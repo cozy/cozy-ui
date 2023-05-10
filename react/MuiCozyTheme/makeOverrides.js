@@ -627,6 +627,9 @@ const makeOverrides = theme => ({
     paperFullScreen: {
       '& .cozyDialogActions': {
         paddingBottom: 'env(safe-area-inset-bottom)'
+      },
+      '& [class*="DialogCloseButton"]': {
+        transform: 'translateY(var(--flagship-top-height))'
       }
     }
   },
