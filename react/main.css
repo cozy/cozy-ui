@@ -13453,7 +13453,6 @@ html,
   top: 1.15rem;
   right: 1.15rem;
   z-index: 1;
-  transform: translateY(var(--flagship-top-height));
 }
 @media (max-width: 48rem) {
   .DialogCloseButton--cxKPO {
