@@ -1,3 +1,10 @@
+## [84.1.5](https://github.com/cozy/cozy-ui/compare/v84.1.4...v84.1.5) (2023-05-11)
+
+
+### Bug Fixes
+
+* Apply flagship style to closebutton higher ([e11eb97](https://github.com/cozy/cozy-ui/commit/e11eb97))
+
 ## [84.1.4](https://github.com/cozy/cozy-ui/compare/v84.1.3...v84.1.4) (2023-05-04)
 
 
