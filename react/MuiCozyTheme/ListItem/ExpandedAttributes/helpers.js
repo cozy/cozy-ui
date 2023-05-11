@@ -16,6 +16,7 @@ export const notExpandedAttributes = {
     'flexsearchProps:translated:qualificationLabel',
     'flexsearchProps:translated:driverLicense',
     'flexsearchProps:translated:paymentProofFamilyAllowance',
+    'flexsearchProps:translated:caf',
     'flexsearchProps:translated:vehicleRegistration',
     'flexsearchProps:translated:nationalIdCard',
     'flexsearchProps:translated:bankDetails',
