@@ -1,3 +1,10 @@
+# [84.2.0](https://github.com/cozy/cozy-ui/compare/v84.1.6...v84.2.0) (2023-05-11)
+
+
+### Features
+
+* **ExpandedAttributes:** Add support for CAF file number ([3166693](https://github.com/cozy/cozy-ui/commit/3166693))
+
 ## [84.1.6](https://github.com/cozy/cozy-ui/compare/v84.1.5...v84.1.6) (2023-05-11)
 
 
