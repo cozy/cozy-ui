@@ -37,7 +37,7 @@ const SelectionBar = ({
   selected,
   hideSelectionBar,
   maxAction = {
-    isWide: 6,
+    isHuge: 6,
     isLarge: 5,
     isMedium: 8,
     isSmall: 8,
