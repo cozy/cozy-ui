@@ -1,3 +1,10 @@
+## [84.1.6](https://github.com/cozy/cozy-ui/compare/v84.1.5...v84.1.6) (2023-05-11)
+
+
+### Bug Fixes
+
+* **SelectionBar:** Mismatch between max action key ([7a66eda](https://github.com/cozy/cozy-ui/commit/7a66eda))
+
 ## [84.1.5](https://github.com/cozy/cozy-ui/compare/v84.1.4...v84.1.5) (2023-05-11)
 
 
