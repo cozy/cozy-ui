@@ -14,11 +14,10 @@ import Typography from '../Typography'
 import iconOut from '../Icons/LinkOut'
 import iconPlus from '../Icons/Plus'
 import iconWarning from '../Icons/WarningCircle'
-import { makeStyles } from '../styles'
+import { alpha, makeStyles } from '../styles'
 import { nameToColor } from '../Avatar'
 import CozyTheme, { useCozyTheme } from '../CozyTheme'
 
-import { color } from './constants.json'
 import styles from './styles.styl'
 
 const useStyles = makeStyles(theme => ({
@@ -41,6 +40,16 @@ const useStyles = makeStyles(theme => ({
       margin: '0.25rem 0.25rem 0 0.25rem',
       height: '2rem'
     }
+  },
+  squareAppIconGhost: {
+    backgroundColor: alpha(
+      theme.palette.primary.main,
+      theme.palette.action.ghostOpacity
+    ),
+    border: `1px dashed ${alpha(
+      theme.palette.primary.main,
+      theme.palette.border.ghostOpacity
+    )}`
   },
   letter: {
     color: 'white',
@@ -114,10 +123,9 @@ export const SquareAppIcon = ({
               styles['SquareAppIcon-wrapper'],
               styles[`SquareAppIcon-wrapper-${variant}`],
               {
-                [`${styles['SquareAppIcon-wrapper-fx']}`]: [
-                  'ghost',
-                  'add'
-                ].includes(variant),
+                [classes.squareAppIconGhost]: ['ghost', 'add'].includes(
+                  variant
+                ),
                 [classes.shadow]: !['add', 'ghost'].includes(variant)
               }
             )}
@@ -173,7 +181,7 @@ export const SquareAppIcon = ({
                 </div>
 
                 {variant === 'add' ? (
-                  <Icon icon={iconPlus} color={color} />
+                  <Icon icon={iconPlus} color="var(--primaryColor)" />
                 ) : IconContent ? (
                   IconContent
                 ) : (
