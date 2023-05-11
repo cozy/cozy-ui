@@ -11,28 +11,6 @@ exports[`SquareAppIcon component should render an app correctly with the app nam
     <span
       class="MuiBadge-root-40"
     >
-      <div
-        class="styles__c-spinner___1snK7 styles__SquareAppIcon-spinner___o0LO1 u-m-0"
-      >
-        <svg
-          aria-busy="true"
-          class="styles__icon___23x3R styles__icon--spin___ybfC1"
-          height="16"
-          role="progressbar"
-          style="fill: var(--spinnerColor);"
-          viewBox="0 0 32 32"
-          width="16"
-        >
-          <path
-            d="M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24"
-            opacity="0.25"
-          />
-          <path
-            d="M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z"
-          />
-        </svg>
-        
-      </div>
       <span
         class="MuiBadge-root-40 styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-36"
       >
@@ -82,28 +60,6 @@ exports[`SquareAppIcon component should render an app correctly with the given n
     <span
       class="MuiBadge-root-9"
     >
-      <div
-        class="styles__c-spinner___1snK7 styles__SquareAppIcon-spinner___o0LO1 u-m-0"
-      >
-        <svg
-          aria-busy="true"
-          class="styles__icon___23x3R styles__icon--spin___ybfC1"
-          height="16"
-          role="progressbar"
-          style="fill: var(--spinnerColor);"
-          viewBox="0 0 32 32"
-          width="16"
-        >
-          <path
-            d="M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24"
-            opacity="0.25"
-          />
-          <path
-            d="M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z"
-          />
-        </svg>
-        
-      </div>
       <span
         class="MuiBadge-root-9 styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-5"
       >
@@ -153,28 +109,6 @@ exports[`SquareAppIcon component should render an app with the app slug if no na
     <span
       class="MuiBadge-root-71"
     >
-      <div
-        class="styles__c-spinner___1snK7 styles__SquareAppIcon-spinner___o0LO1 u-m-0"
-      >
-        <svg
-          aria-busy="true"
-          class="styles__icon___23x3R styles__icon--spin___ybfC1"
-          height="16"
-          role="progressbar"
-          style="fill: var(--spinnerColor);"
-          viewBox="0 0 32 32"
-          width="16"
-        >
-          <path
-            d="M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24"
-            opacity="0.25"
-          />
-          <path
-            d="M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z"
-          />
-        </svg>
-        
-      </div>
       <span
         class="MuiBadge-root-71 styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-67"
       >
@@ -278,28 +212,6 @@ exports[`SquareAppIcon component should render correctly an app in error state 1
     <span
       class="MuiBadge-root-164"
     >
-      <div
-        class="styles__c-spinner___1snK7 styles__SquareAppIcon-spinner___o0LO1 u-m-0"
-      >
-        <svg
-          aria-busy="true"
-          class="styles__icon___23x3R styles__icon--spin___ybfC1"
-          height="16"
-          role="progressbar"
-          style="fill: var(--spinnerColor);"
-          viewBox="0 0 32 32"
-          width="16"
-        >
-          <path
-            d="M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24"
-            opacity="0.25"
-          />
-          <path
-            d="M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z"
-          />
-        </svg>
-        
-      </div>
       <span
         class="MuiBadge-root-164 styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-160"
       >
@@ -508,28 +420,6 @@ exports[`SquareAppIcon component should render correctly an app with custom cont
     <span
       class="MuiBadge-root-318"
     >
-      <div
-        class="styles__c-spinner___1snK7 styles__SquareAppIcon-spinner___o0LO1 u-m-0"
-      >
-        <svg
-          aria-busy="true"
-          class="styles__icon___23x3R styles__icon--spin___ybfC1"
-          height="16"
-          role="progressbar"
-          style="fill: var(--spinnerColor);"
-          viewBox="0 0 32 32"
-          width="16"
-        >
-          <path
-            d="M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24"
-            opacity="0.25"
-          />
-          <path
-            d="M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z"
-          />
-        </svg>
-        
-      </div>
       <span
         class="MuiBadge-root-318 styles__SquareAppIcon-wrapper___2SEuM makeStyles-shadow-314"
       >

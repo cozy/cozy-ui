@@ -76,6 +76,18 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
+const shouldRenderSpinner = (variant, animationState) => {
+  return ['loading'].includes(variant) || animationState
+}
+
+const SquareAppIconSpinner = ({ variant, animationState }) => {
+  if (!shouldRenderSpinner(variant, animationState)) {
+    return null
+  }
+
+  return <Spinner className={cx(styles['SquareAppIcon-spinner'], 'u-m-0')} />
+}
+
 export const SquareAppIcon = ({
   name,
   variant,
@@ -117,9 +129,10 @@ export const SquareAppIcon = ({
           overlap="rectangular"
           invisible={variant !== 'shortcut'}
         >
-          {['default', 'loading', 'error'].includes(variant) && (
-            <Spinner className={cx(styles['SquareAppIcon-spinner'], 'u-m-0')} />
-          )}
+          <SquareAppIconSpinner
+            variant={variant}
+            animationState={animationState}
+          />
           <Badge
             className={cx(
               styles['SquareAppIcon-wrapper'],
