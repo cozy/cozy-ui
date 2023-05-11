@@ -16,6 +16,7 @@ jobs:
     - name: 'Lint'
       stage: 'prebuild'
       script: yarn lint
+      if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string
     - name: 'Sprite and Palette'
       stage: 'prebuild'
       script: yarn makeSpriteAndPalette
@@ -68,6 +69,7 @@ jobs:
           - sprite-palette-binaries
           - js-binaries
           - css-binaries
+      if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string
     - name: 'Tests snapshots'
       stage: 'test'
       script:
@@ -77,6 +79,7 @@ jobs:
           - sprite-palette-binaries
           - js-binaries
           - css-binaries
+      if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string
     - name: 'Bundlemon'
       stage: 'test'
       script:
@@ -86,6 +89,7 @@ jobs:
           - sprite-palette-binaries
           - js-binaries
           - css-binaries
+      if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string
     - name: 'Argos desktop'
       stage: 'screenshots'
       script: |
@@ -143,3 +147,4 @@ jobs:
         script: yarn deploy:doc -- --username cozycloud --email contact@cozycloud.cc --repo https://cozy-bot:$GH_TOKEN@github.com/cozy/cozy-ui.git && yarn semantic-release
         on:
           branch: master
+      if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string
