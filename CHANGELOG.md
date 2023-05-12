@@ -1,3 +1,10 @@
+# [84.3.0](https://github.com/cozy/cozy-ui/compare/v84.2.0...v84.3.0) (2023-05-12)
+
+
+### Features
+
+* Use CSS vars for shadows ([13ef786](https://github.com/cozy/cozy-ui/commit/13ef786))
+
 # [84.2.0](https://github.com/cozy/cozy-ui/compare/v84.1.6...v84.2.0) (2023-05-11)
 
 
