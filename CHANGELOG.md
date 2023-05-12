@@ -1,3 +1,10 @@
+## [85.0.1](https://github.com/cozy/cozy-ui/compare/v85.0.0...v85.0.1) (2023-05-12)
+
+
+### Bug Fixes
+
+* show spinner when needed in squareappIcon ([0e92a42](https://github.com/cozy/cozy-ui/commit/0e92a42))
+
 # [85.0.0](https://github.com/cozy/cozy-ui/compare/v84.3.0...v85.0.0) (2023-05-12)
 
 
