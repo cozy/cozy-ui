@@ -1,3 +1,33 @@
+# [85.0.0](https://github.com/cozy/cozy-ui/compare/v84.3.0...v85.0.0) (2023-05-12)
+
+
+### Bug Fixes
+
+* Update SquareAppIcon tests snapshots ([360d29a](https://github.com/cozy/cozy-ui/commit/360d29a))
+
+
+### Features
+
+* Apply shadow to SquareAppIcon title only on inverted theme ([8c16952](https://github.com/cozy/cozy-ui/commit/8c16952))
+* Blend ghost SquareAppIcon with `luminosity` in normal theme ([9374e9b](https://github.com/cozy/cozy-ui/commit/9374e9b))
+* Force `normal` theme on SquareAppIcon badge (except for ghost/add) ([c15ea7c](https://github.com/cozy/cozy-ui/commit/c15ea7c))
+* Make SquareAppIcon ghost and add variants adapt to CozyTheme ([43364e7](https://github.com/cozy/cozy-ui/commit/43364e7))
+* Make SquareAppIcon shortcut's letter always white ([317a2fd](https://github.com/cozy/cozy-ui/commit/317a2fd))
+* Make SquareAppIcon's title adapt to CozyTheme ([620623c](https://github.com/cozy/cozy-ui/commit/620623c))
+
+
+### BREAKING CHANGES
+
+* To keep previous SquareAppIcon render, you should
+display it inside of an inverted Cozy Theme
+```js
+import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
+
+<CozyTheme variant="inverted">
+  <SquareAppIcon /* ... */ />
+</CozyTheme>
+```
+
 # [84.3.0](https://github.com/cozy/cozy-ui/compare/v84.2.0...v84.3.0) (2023-05-12)
 
 
