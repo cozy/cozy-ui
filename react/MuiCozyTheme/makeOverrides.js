@@ -977,10 +977,10 @@ const makeOverrides = theme => ({
       color: theme.palette.text.primary,
       backgroundColor: theme.palette.background.paper,
       '&:hover': {
-        backgroundColor: theme.palette.action.hover,
-        '@media (hover: none)': {
-          backgroundColor: theme.palette.background.paper
-        }
+        backgroundColor: darken(theme.palette.background.paper, 0.05)
+      },
+      '@media (hover: none)': {
+        backgroundColor: theme.palette.background.paper
       }
     },
     extended: {
