@@ -8,4 +8,9 @@ const Tabs = props => {
   return <MuiTabs variant={isMobile ? 'fullWidth' : undefined} {...props} />
 }
 
+Tabs.defaultProps = {
+  textColor: 'primary',
+  TabIndicatorProps: { color: 'primary' }
+}
+
 export { Tabs, Tab }
