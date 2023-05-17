@@ -4,7 +4,8 @@ import isTesting from '../helpers/isTesting'
 import { makePalette } from './makePalette'
 import { makeTypography } from './makeTypography'
 import { makeShadows } from './makeShadows'
-import { makeThemeOverrides } from './makeOverrides'
+import { makeOverrides } from './makeOverrides'
+import { makeInvertedOverrides } from './makeInvertedOverrides'
 
 const themesCommonConfig = {
   shape: {
@@ -37,7 +38,10 @@ export const makeTheme = type => {
     typography: makeTypography(palette),
     palette
   })
-  const overrides = makeThemeOverrides(theme)
+  const overrides =
+    theme.palette.type === 'dark'
+      ? makeInvertedOverrides(theme)
+      : makeOverrides(theme)
 
   return {
     ...theme,
