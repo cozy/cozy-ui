@@ -1,3 +1,10 @@
+## [85.0.2](https://github.com/cozy/cozy-ui/compare/v85.0.1...v85.0.2) (2023-05-17)
+
+
+### Bug Fixes
+
+* **Fab:** Hover background color is no longer transparent ([74b6f54](https://github.com/cozy/cozy-ui/commit/74b6f54))
+
 ## [85.0.1](https://github.com/cozy/cozy-ui/compare/v85.0.0...v85.0.1) (2023-05-12)
 
 
