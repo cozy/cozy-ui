@@ -71,15 +71,17 @@ const useCozyDialog = props => {
     id: `modal-title-${id}`,
     ref: titleRef,
     disableTypography: true,
-    className: cx(
-      {
-        'u-ellipsis': !isFluidTitle,
-        dialogTitleFluid: isFluidTitle,
-        dialogTitleWithClose: showCloseButton && !disableTitleAutoPadding,
-        dialogTitleWithBack: showBackButton && !disableTitleAutoPadding
-      },
-      componentsProps?.dialogTitle?.className
-    )
+    className:
+      'cozyDialogTitle ' +
+      cx(
+        {
+          'u-ellipsis': !isFluidTitle,
+          dialogTitleFluid: isFluidTitle,
+          dialogTitleWithClose: showCloseButton && !disableTitleAutoPadding,
+          dialogTitleWithBack: showBackButton && !disableTitleAutoPadding
+        },
+        componentsProps?.dialogTitle?.className
+      )
   }
 
   const listItemClassName = 'listItem--dialog'
@@ -108,7 +110,8 @@ const useCozyDialog = props => {
       root: cx({
         disableGutters
       })
-    }
+    },
+    className: 'cozyDialogContent'
   }
 
   return {
