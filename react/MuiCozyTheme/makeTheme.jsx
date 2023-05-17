@@ -1,9 +1,6 @@
-import React from 'react'
-
 import { createTheme } from '../styles'
 import { getCssVariableValue } from '../utils/color'
 import isTesting from '../helpers/isTesting'
-import AccordionExpandIcon from './AccordionExpandIcon'
 import { makePalette } from './makePalette'
 import { makeTypography } from './makeTypography'
 import { makeShadows } from './makeShadows'
@@ -30,18 +27,6 @@ const themesCommonConfig = {
     '0px 2px 8px rgba(29, 33, 42, 0.16), 0px 0px 1px rgba(29, 33, 42, 0.48)'
   ],
   shadows: makeShadows(), // Shadow ar not linked to themes
-  props: {
-    MuiTabs: {
-      textColor: 'primary',
-      TabIndicatorProps: { color: 'primary' }
-    },
-    MuiTooltip: {
-      arrow: true
-    },
-    MuiAccordionSummary: {
-      expandIcon: <AccordionExpandIcon />
-    }
-  },
   ...(isTesting() && { transitions: { create: () => 'none' } })
 }
 
