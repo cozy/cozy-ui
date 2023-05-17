@@ -626,18 +626,31 @@ const makeOverrides = theme => ({
     },
     paperFullScreen: {
       '& .cozyDialogActions': {
-        paddingBottom: 'env(safe-area-inset-bottom)'
+        paddingBottom:
+          'calc(env(safe-area-inset-bottom) + var(--flagship-bottom-height))'
       },
+      // Can't do that within the stylus file because we need to only target
+      // the fullscreen dialog
       '& [class*="DialogCloseButton"]': {
         transform: 'translateY(var(--flagship-top-height))'
+      },
+      '& [class*="DialogBackButton"]': {
+        transform: 'translateY(var(--flagship-top-height))'
+      },
+      // 0.75rm === MuiDialogTitle.root.sm
+      // we should not target specifically flagship-app since
+      // we should only rely on the css var. But this is for
+      // another time.
+      '.flagship-app & .cozyDialogTitle': {
+        paddingTop: 'calc(var(--flagship-top-height) + 0.75rem) !important'
+      },
+      '.flagship-app & .cozyDialogContent': {
+        marginBottom: 'var(--flagship-bottom-height) !important'
       }
     }
   },
   MuiDialogTitle: {
     root: {
-      '.flagship-app .MuiDialog-paperFullScreen &': {
-        paddingTop: 'calc(var(--flagship-top-height) + 0.75rem) !important'
-      },
       ...theme.typography.h3,
       boxSizing: 'border-box',
       width: '100%',
@@ -665,9 +678,6 @@ const makeOverrides = theme => ({
   },
   MuiDialogContent: {
     root: {
-      '.flagship-app .MuiDialog-paperFullScreen &': {
-        marginBottom: 'var(--flagship-bottom-height) !important'
-      },
       padding: '24px 32px 0',
       [theme.breakpoints.down('sm')]: {
         padding: '24px 16px 0'
