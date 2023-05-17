@@ -1,3 +1,15 @@
+# [85.1.0](https://github.com/cozy/cozy-ui/compare/v85.0.2...v85.1.0) (2023-05-17)
+
+
+### Bug Fixes
+
+* FullScreenCozyDialog on flagship ([273db8e](https://github.com/cozy/cozy-ui/commit/273db8e))
+
+
+### Features
+
+* Add className in order to be able to target them ([8ead89c](https://github.com/cozy/cozy-ui/commit/8ead89c))
+
 ## [85.0.2](https://github.com/cozy/cozy-ui/compare/v85.0.1...v85.0.2) (2023-05-17)
 
 
