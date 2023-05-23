@@ -3252,13 +3252,6 @@ exports[`Paper should render examples: Paper 1`] = `
       </div>
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Paper can be used to build surface or other elements for your application.</p>
     </div>
-    <div class=\\"MuiPaper-root PaperExample-root-560 MuiPaper-elevation12\\">
-      <h3 class=\\"MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary\\">This is a sheet of paper</h3>
-      <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
-        <h6 class=\\"MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary\\">elevation 12</h6>
-      </div>
-      <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Paper can be used to build surface or other elements for your application.</p>
-    </div>
     <div class=\\"MuiPaper-root PaperExample-root-560 MuiPaper-elevation16\\">
       <h3 class=\\"MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary\\">This is a sheet of paper</h3>
       <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
@@ -3270,6 +3263,13 @@ exports[`Paper should render examples: Paper 1`] = `
       <h3 class=\\"MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary\\">This is a sheet of paper</h3>
       <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
         <h6 class=\\"MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary\\">elevation 24</h6>
+      </div>
+      <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Paper can be used to build surface or other elements for your application.</p>
+    </div>
+    <div class=\\"MuiPaper-root PaperExample-root-560\\">
+      <h3 class=\\"MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary\\">This is a sheet of paper</h3>
+      <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
+        <h6 class=\\"MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary\\">elevation 25</h6>
       </div>
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Paper can be used to build surface or other elements for your application.</p>
     </div>
