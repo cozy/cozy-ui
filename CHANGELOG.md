@@ -1,3 +1,16 @@
+# [85.2.0](https://github.com/cozy/cozy-ui/compare/v85.1.0...v85.2.0) (2023-05-23)
+
+
+### Bug Fixes
+
+* Remove usage of theme.mixin.gutters ([faa161d](https://github.com/cozy/cozy-ui/commit/faa161d))
+
+
+### Features
+
+* **MidEllipsis:** We can now spread any prop and ref to the first child ([8082cec](https://github.com/cozy/cozy-ui/commit/8082cec))
+* Move default props def from theme creation to components ([233ea87](https://github.com/cozy/cozy-ui/commit/233ea87))
+
 # [85.1.0](https://github.com/cozy/cozy-ui/compare/v85.0.2...v85.1.0) (2023-05-17)
 
 
