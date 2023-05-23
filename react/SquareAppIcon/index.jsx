@@ -58,7 +58,7 @@ const useStyles = makeStyles(theme => ({
     margin: 'auto'
   },
   shadow: {
-    boxShadow: theme.shadows[2]
+    boxShadow: theme.shadows[1]
   },
   errorIcon: {
     fill: 'var(--errorColor)',
