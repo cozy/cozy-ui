@@ -1,3 +1,18 @@
+# [85.3.0](https://github.com/cozy/cozy-ui/compare/v85.2.0...v85.3.0) (2023-05-23)
+
+
+### Bug Fixes
+
+* **BottomSheetItem:** Use correct shadow value ([7779c1e](https://github.com/cozy/cozy-ui/commit/7779c1e))
+* **Shadows:** Adjust shadows value ([c5b4906](https://github.com/cozy/cozy-ui/commit/c5b4906))
+* **SquareAppIcon:** Use correct shadow value ([316d02d](https://github.com/cozy/cozy-ui/commit/316d02d))
+
+
+### Features
+
+* **Shadows:** Add shadow 25 ([a21ba12](https://github.com/cozy/cozy-ui/commit/a21ba12))
+* **Shadows:** Add shadow0 css variable ([43741b5](https://github.com/cozy/cozy-ui/commit/43741b5))
+
 # [85.2.0](https://github.com/cozy/cozy-ui/compare/v85.1.0...v85.2.0) (2023-05-23)
 
 
