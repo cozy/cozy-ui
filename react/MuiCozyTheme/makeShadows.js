@@ -1,5 +1,5 @@
 export const makeShadows = () => [
-  'none',
+  'var(--shadow0, none)',
   'var(--shadow1, rgba(29, 33, 42, 0.08) 0px 2px 4px 0px, rgba(29, 33, 42, 0.06) 0px 4px 16px 0px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px)',
   'var(--shadow2, rgba(29, 33, 42, 0.09) 0px 3px 5px 0px, rgba(29, 33, 42, 0.07) 0px 4px 17px 0px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px)',
   'var(--shadow3, rgba(29, 33, 42, 0.09) 0px 3px 5px -1px, rgba(29, 33, 42, 0.08) 0px 5px 19px 1px, rgba(29, 33, 42, 0.12) 0px 0px 0px 0.5px)',
