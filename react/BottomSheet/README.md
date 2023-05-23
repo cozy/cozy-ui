@@ -192,7 +192,7 @@ const settings = state.mediumHeight === undefined && state.mediumHeightRatio ===
               {variant.withTitle && (
                 <BottomSheetTitle label="Title"/>
               )}
-              <BottomSheetItem disableElevation>
+              <BottomSheetItem>
                 {variant.longContent ? content.ada.long : content.ada.short}
               </BottomSheetItem>
             </>
