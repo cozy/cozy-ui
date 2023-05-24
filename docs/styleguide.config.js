@@ -52,6 +52,7 @@ module.exports = {
         '../react/Label',
         '../react/NestedSelect/NestedSelect.jsx',
         '../react/Radios',
+        '../react/SearchBar',
         '../react/SelectBox/SelectBox.jsx',
         '../react/Stepper',
         '../react/Textarea',
