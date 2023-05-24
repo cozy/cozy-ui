@@ -241,6 +241,7 @@ module.exports = {
         '../react/GridListTileBar',
         '../react/Grow',
         '../react/Hidden',
+        '../react/InputBase',
         '../react/InputAdornment',
         '../react/LinearProgress',
         '../react/Link',
