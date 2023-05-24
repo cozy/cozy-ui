@@ -23,6 +23,7 @@ const QualificationListItemDate = forwardRef(
     const formattedDate = value
       ? formatDate({ f, lang, date: value })
       : t('Viewer.panel.qualification.noInfo')
+    const isExpirationDate = name === 'expirationDate'
 
     return (
       <ListItem className={'u-pl-2 u-pr-3'}>
@@ -33,7 +34,7 @@ const QualificationListItemDate = forwardRef(
               <Typography component="span" variant="inherit">
                 {formattedDate}
               </Typography>
-              {(isExpired(file) || isExpiringSoon(file)) && (
+              {isExpirationDate && (isExpired(file) || isExpiringSoon(file)) && (
                 <>
                   <Typography component="span" variant="inherit">
                     {' · '}
