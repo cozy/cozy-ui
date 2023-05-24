@@ -1,3 +1,10 @@
+## [85.3.1](https://github.com/cozy/cozy-ui/compare/v85.3.0...v85.3.1) (2023-05-24)
+
+
+### Bug Fixes
+
+* **QualificationListItemDate:** Expiration annotation was shown not only on expiration date ([d29e263](https://github.com/cozy/cozy-ui/commit/d29e263))
+
 # [85.3.0](https://github.com/cozy/cozy-ui/compare/v85.2.0...v85.3.0) (2023-05-23)
 
 
