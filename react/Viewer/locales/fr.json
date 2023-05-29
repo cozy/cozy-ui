@@ -2,7 +2,7 @@
   "Viewer": {
     "actions": {
       "download": "Télécharger",
-      "forward": "Transférer"
+      "forward": "Envoyer"
     },
     "alert": {
       "preparing": "Preparation de vos fichiers…"
