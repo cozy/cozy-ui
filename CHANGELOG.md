@@ -1,3 +1,10 @@
+# [85.4.0](https://github.com/cozy/cozy-ui/compare/v85.3.1...v85.4.0) (2023-05-30)
+
+
+### Features
+
+* **Viewer:** To be consistent with recent wording changes ([36d7d78](https://github.com/cozy/cozy-ui/commit/36d7d78))
+
 ## [85.3.1](https://github.com/cozy/cozy-ui/compare/v85.3.0...v85.3.1) (2023-05-24)
 
 
