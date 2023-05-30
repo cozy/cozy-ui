@@ -1,3 +1,11 @@
+# [85.5.0](https://github.com/cozy/cozy-ui/compare/v85.4.0...v85.5.0) (2023-05-30)
+
+
+### Features
+
+* Add InputBase component ([aef4a77](https://github.com/cozy/cozy-ui/commit/aef4a77))
+* Add SearchBar component ([a46e3ee](https://github.com/cozy/cozy-ui/commit/a46e3ee))
+
 # [85.4.0](https://github.com/cozy/cozy-ui/compare/v85.3.1...v85.4.0) (2023-05-30)
 
 
