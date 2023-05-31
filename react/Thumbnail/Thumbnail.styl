@@ -1,0 +1,41 @@
+.container
+  align-items center
+  box-sizing border-box
+  display flex
+  height 32px
+  justify-content center
+  position relative
+  width 32px
+
+.image__wrapper
+  background-color var(--paperBackgroundColor)
+  border 3px solid var(--paperBackgroundColor)
+  border-radius 3px
+  box-shadow 0px 0px 0px 1px rgba(29, 33, 42, 0.24), 0px 2px 4px rgba(29, 33, 42, 0.08), 0px 4px 16px rgba(29, 33, 42, 0.06)
+  box-sizing border-box
+  display inline-block
+  max-height 32px
+  max-width 32px
+  z-index 1
+
+
+  &.image__wrapper__background
+    position absolute
+    transform translate(3px, -3px)
+    z-index 0
+
+  &.image__wrapper__multiple
+    max-height 29px
+    max-width 29px
+
+.image
+  display block
+  max-height 26px
+  max-width 26px
+
+  &.image__background
+    opacity 0
+
+  &.image__multiple
+    max-height 23px
+    max-width 23px
