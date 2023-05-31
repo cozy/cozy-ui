@@ -4,9 +4,10 @@ import PropTypes from 'prop-types'
 import { useClient } from 'cozy-client'
 
 import Icon from '../../../Icon'
-import FileImageLoader from '../../../FileImageLoader'
-import CardMedia from '../../../CardMedia'
 import FiletypeTextIcon from '../../../Icons/FileTypeText'
+import FileImageLoader from '../../../FileImageLoader'
+import Thumbnail from '../../../Thumbnail'
+import Skeleton from '../../../Skeleton'
 
 const ItemIcon = ({ icon, file }) => {
   const client = useClient()
@@ -19,9 +20,21 @@ const ItemIcon = ({ icon, file }) => {
       file={file}
       linkType="tiny"
       render={src => {
-        return <CardMedia component="img" width={32} height={32} image={src} />
+        return (
+          <Thumbnail>
+            {src ? (
+              <img src={src} alt="" />
+            ) : (
+              <Skeleton variant="rect" animation="wave" />
+            )}
+          </Thumbnail>
+        )
       }}
-      renderFallback={() => <Icon icon={FiletypeTextIcon} size={32} />}
+      renderFallback={() => (
+        <Thumbnail>
+          <Icon icon={FiletypeTextIcon} />
+        </Thumbnail>
+      )}
     />
   )
 }
