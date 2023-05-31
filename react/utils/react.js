@@ -1,8 +1,15 @@
 import { Fragment, Children } from 'react'
 
-export const getComponentName = component => {
-  if (!component) return null
-  return component.type.displayName || component.type.name || 'Component'
+/**
+ * Get the name of the node
+ * @param {React.ElementType || string} node
+ * @returns
+ */
+export const getComponentName = node => {
+  if (!node) return null
+  // type is defined only if we use a node, but a string could be passed to
+  // and so, there is no type
+  return node.type?.displayName || node.type?.name || 'Node'
 }
 
 export const getChildren = props => {
