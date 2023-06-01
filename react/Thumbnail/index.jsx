@@ -2,30 +2,40 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import ThumbnailByType from './ThumbnailByType'
-
 import styles from './Thumbnail.styl'
 
 /**
- * Thumbnail component
- * The `icon` property takes precedence over the `image` property
- * @param {Object} props
- * @param {string} props.image - Image source
- * @param {React.ElementType} props.icon - Icon component
- * @param {boolean} props.isStacked - Is the image stacked
+ * Wrap an element with an outline or a stacked outline
+ * @param {object} params
+ * @param {string} params.className
+ * @param {boolean} params.isStacked - Either we want the stacking effect
+ * @param {node} params.children
+ * @returns Wrapped element
  */
-const Thumbnail = ({ className, image, icon, isStacked }) => {
+const Thumbnail = ({ className, isStacked, children, ...props }) => {
   return (
-    <div className={cx(className, styles['container'])} aria-hidden="true">
-      <ThumbnailByType image={image} icon={icon} isStacked={isStacked} />
-    </div>
+    <>
+      <div
+        {...props}
+        className={cx(className, styles['container'])}
+        aria-hidden="true"
+      >
+        <div
+          className={cx(styles['wrapper'], {
+            [styles['stacked']]: isStacked
+          })}
+        >
+          {children}
+        </div>
+      </div>
+    </>
   )
 }
 
 Thumbnail.propTypes = {
-  image: PropTypes.string,
-  icon: PropTypes.oneOfType([PropTypes.elementType, PropTypes.object]),
-  isStacked: PropTypes.bool
+  className: PropTypes.string,
+  isStacked: PropTypes.bool,
+  children: PropTypes.node
 }
 
 export default Thumbnail
