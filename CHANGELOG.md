@@ -1,3 +1,17 @@
+# [85.6.0](https://github.com/cozy/cozy-ui/compare/v85.5.0...v85.6.0) (2023-06-01)
+
+
+### Bug Fixes
+
+* GetComponentName was crashing when using string arg ([df8647f](https://github.com/cozy/cozy-ui/commit/df8647f))
+
+
+### Features
+
+* Add Thumbnail component ([f060e70](https://github.com/cozy/cozy-ui/commit/f060e70))
+* Export shadows value in --shadowX css variables ([d7a0f04](https://github.com/cozy/cozy-ui/commit/d7a0f04))
+* **ListItemFile:** Use Thumbnail in ItemIcon ([03eb7f0](https://github.com/cozy/cozy-ui/commit/03eb7f0))
+
 # [85.5.0](https://github.com/cozy/cozy-ui/compare/v85.4.0...v85.5.0) (2023-05-30)
 
 
