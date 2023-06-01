@@ -1,34 +1,14 @@
 import React, { useState } from 'react'
 import CozyTheme from '../../react/CozyTheme'
 import Paper from '../../react/Paper'
-import Button from '../../react/Button'
+import Button from '../../react/Buttons'
 import isTesting from '../../react/helpers/isTesting'
 import themes from '../../theme/themes'
-import palette from '../../theme/palette.json'
 import Typography from '../../react/Typography'
 import Divider from '../../react/MuiCozyTheme/Divider'
+import Box from '../../react/Box'
 import { isUsingDevStyleguidist } from '../../scripts/build-utils'
-
-const styles = {
-  button: {
-    position: 'absolute',
-    top: '0.75rem',
-    right: '0.75rem',
-    marginRight: 0,
-    zIndex: 10
-  },
-  buttonLang: {
-    position: 'absolute',
-    top: '0.75rem',
-    right: '6.75rem',
-    marginRight: 0,
-    zIndex: 10
-  },
-  paper: {
-    position: 'relative',
-    padding: '1rem'
-  }
-}
+import { addFlagshipElements, removeFlagshipElements } from './helpers'
 
 const ThemeLabel = ({ theme }) => {
   return (
@@ -38,45 +18,66 @@ const ThemeLabel = ({ theme }) => {
   )
 }
 
-const paperStyle = theme => ({
-  ...styles.paper,
-  backgroundColor: theme === themes.normal ? 'white' : palette.Primary['600']
-})
-
 export default ({ children }) => {
   const [theme, setTheme] = useState(
     localStorage.getItem('theme') || themes.normal
   )
-  const handleClick = () => {
+  const [lang, setLang] = useState(localStorage.getItem('lang') || 'en')
+  const [flagship, setFlagship] = useState(
+    localStorage.getItem('flagship') || 'off'
+  )
+
+  const otherThemes = Object.keys(themes).filter(v => v !== theme)
+
+  const handleThemeClick = () => {
     setTheme(theme === themes.normal ? themes.inverted : themes.normal)
   }
-  const otherThemes = Object.keys(themes).filter(v => v !== theme)
-  const [lang, setLang] = useState(localStorage.getItem('lang') || 'en')
+
   const handleLangClick = () => {
     const newLang = lang === 'fr' ? 'en' : 'fr'
     setLang(newLang)
     localStorage.setItem('lang', newLang)
   }
+
+  const handleFlagshipClick = () => {
+    const newFlagship = flagship === 'on' ? 'off' : 'on'
+    if (newFlagship === 'on') {
+      addFlagshipElements()
+    } else {
+      removeFlagshipElements()
+    }
+    setFlagship(newFlagship)
+    localStorage.setItem('flagship', newFlagship)
+  }
+
   return (
     <CozyTheme>
       <CozyTheme variant={theme}>
-        <Paper elevation={0} square style={paperStyle(theme)}>
-          <Button
-            size="tiny"
-            theme="secondary"
-            label={lang}
-            style={styles.buttonLang}
-            onClick={handleLangClick}
-          />
-          {isTesting() || isUsingDevStyleguidist() ? null : (
+        <Paper className="u-p-1" elevation={0} square>
+          <Box display="flex" justifyContent="end" gridGap={10}>
             <Button
-              size="tiny"
-              theme="secondary"
-              label={theme === themes.normal ? themes.inverted : themes.normal}
-              style={styles.button}
-              onClick={handleClick}
+              size="small"
+              variant="secondary"
+              label={flagship === 'on' ? 'Flagship Off' : 'Flagship On'}
+              onClick={handleFlagshipClick}
             />
-          )}
+            <Button
+              size="small"
+              variant="secondary"
+              label={lang}
+              onClick={handleLangClick}
+            />
+            {isTesting() || isUsingDevStyleguidist() ? null : (
+              <Button
+                size="small"
+                variant="secondary"
+                label={
+                  theme === themes.normal ? themes.inverted : themes.normal
+                }
+                onClick={handleThemeClick}
+              />
+            )}
+          </Box>
           {isUsingDevStyleguidist() && <ThemeLabel theme={theme} />}
           {children}
         </Paper>
@@ -86,7 +87,7 @@ export default ({ children }) => {
           <React.Fragment key={i}>
             <Divider />
             <CozyTheme key={otherTheme} variant={otherTheme}>
-              <Paper elevation={0} square style={paperStyle(otherTheme)}>
+              <Paper className="u-p-1" elevation={0} square>
                 <ThemeLabel theme={otherTheme} />
                 {children}
               </Paper>
