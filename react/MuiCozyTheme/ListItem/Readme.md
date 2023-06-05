@@ -1,5 +1,3 @@
-
-
 ```jsx
 import Variants from 'cozy-ui/docs/components/Variants'
 import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List'

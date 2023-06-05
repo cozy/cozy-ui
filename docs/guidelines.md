@@ -27,5 +27,6 @@ e.g. We want a Fab component with 2 variants _circular_ and _extended_ and we wa
 => We create a new component from scratch.
 
 Generally speaking :
-- _color_ prop changes color (and not shape). Possible values : _primary_, _secondary_, _success_, _error_, _warning_, _info_
-- _variant_ prop changes shape (and not color). Possible values : _filled_, _outlined_, _ghost_, …
+
+* _color_ prop changes color (and not shape). Possible values : _primary_, _secondary_, _success_, _error_, _warning_, _info_
+* _variant_ prop changes shape (and not color). Possible values : _filled_, _outlined_, _ghost_, …

@@ -1,6 +1,5 @@
 `<Badge />` component wraps the element you want to apply a badge to. It is based on the [Badge component from Material-UI](https://v4.mui.com/api/badge/).
 
-
 ### Basic Badges
 
 The default version of badges is used to indicate an amount of new things that the user should see. This could be a number of new messages in an inbox or the number of new files in a folder.
