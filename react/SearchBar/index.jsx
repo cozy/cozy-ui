@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import debounce from 'lodash/debounce'
 
-import withLocales from './locales/withLocales'
+import { useI18n } from '../I18n'
+import withOnlyLocales from './locales/withOnlyLocales'
 import { makeStyles } from '../styles'
 import Paper from '../Paper'
 import InputBase from '../InputBase'
@@ -79,9 +80,6 @@ const useStyles = makeStyles(theme => ({
 const SearchBar = forwardRef(
   (
     {
-      t,
-      f, // eslint-disable-line no-unused-vars
-      lang, // eslint-disable-line no-unused-vars
       placeholder: placeholderProp,
       className,
       defaultValue,
@@ -94,6 +92,7 @@ const SearchBar = forwardRef(
     },
     ref
   ) => {
+    const { t } = useI18n()
     const classes = useStyles()
     const [currentValue, setCurrentValue] = useState(defaultValue)
     const [isFocused, setIsFocused] = useState(false)
@@ -192,4 +191,4 @@ SearchBar.propTypes = {
   onBlur: PropTypes.func
 }
 
-export default withLocales(SearchBar)
+export default withOnlyLocales(SearchBar)
