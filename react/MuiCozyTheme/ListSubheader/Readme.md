@@ -1,5 +1,3 @@
-
-
 ```jsx
 import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List'
 import ListSubheader from 'cozy-ui/transpiled/react/MuiCozyTheme/ListSubheader'
