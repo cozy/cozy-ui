@@ -80,6 +80,8 @@ const SearchBar = forwardRef(
   (
     {
       t,
+      f, // eslint-disable-line no-unused-vars
+      lang, // eslint-disable-line no-unused-vars
       placeholder: placeholderProp,
       className,
       defaultValue,
