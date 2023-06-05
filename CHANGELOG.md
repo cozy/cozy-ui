@@ -1,3 +1,10 @@
+# [85.7.0](https://github.com/cozy/cozy-ui/compare/v85.6.0...v85.7.0) (2023-06-05)
+
+
+### Features
+
+* Add withOnlyLocales HOC  ([f7fd728](https://github.com/cozy/cozy-ui/commit/f7fd728))
+
 # [85.6.0](https://github.com/cozy/cozy-ui/compare/v85.5.0...v85.6.0) (2023-06-01)
 
 
