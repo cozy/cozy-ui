@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { I18n, useI18n } from '.'
 
 /**
@@ -13,15 +13,15 @@ const withOnlyLocales = localesOrRequire => Component => {
       ? localesOrRequire
       : localeCode => localesOrRequire[localeCode]
 
-  const Wrapped = props => {
+  const Wrapped = forwardRef((props, ref) => {
     const { lang } = useI18n()
 
     return (
       <I18n dictRequire={requireLocale} lang={lang}>
-        <Component {...props} />
+        <Component {...props} ref={ref} />
       </I18n>
     )
-  }
+  })
 
   Wrapped.propTypes = {
     ...(Component.propTypes || {})
