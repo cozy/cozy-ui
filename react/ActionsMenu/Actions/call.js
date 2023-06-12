@@ -6,6 +6,7 @@ import ActionsMenuItem from '../ActionsMenuItem'
 import ListItemIcon from '../../MuiCozyTheme/ListItemIcon'
 import Icon from '../../Icon'
 import ListItemText from '../../ListItemText'
+import { useI18n } from '../../I18n'
 
 export const call = () => {
   return {
@@ -15,8 +16,9 @@ export const call = () => {
       !!phoneNumber && window.open(`tel:${phoneNumber}`, '_self')
     },
     Component: withActionsLocales(
-      // eslint-disable-next-line no-unused-vars
-      forwardRef(({ t, f, lang, ...props }, ref) => {
+      forwardRef((props, ref) => {
+        const { t } = useI18n()
+
         return (
           <ActionsMenuItem {...props} ref={ref}>
             <ListItemIcon>

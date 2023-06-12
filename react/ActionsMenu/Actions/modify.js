@@ -8,6 +8,7 @@ import Icon from '../../Icon'
 import PenIcon from '../../Icons/Pen'
 import ActionsMenuItem from '../ActionsMenuItem'
 import withActionsLocales from './locales/withActionsLocales'
+import { useI18n } from '../../I18n'
 
 export const modify = () => {
   return {
@@ -26,8 +27,9 @@ export const modify = () => {
       window.open(webLink, '_blank')
     },
     Component: withActionsLocales(
-      // eslint-disable-next-line no-unused-vars
-      forwardRef(({ t, f, lang, ...props }, ref) => {
+      forwardRef((props, ref) => {
+        const { t } = useI18n()
+
         return (
           <ActionsMenuItem ref={ref} {...props}>
             <ListItemIcon>

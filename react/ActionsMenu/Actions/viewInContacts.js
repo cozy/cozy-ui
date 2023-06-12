@@ -8,6 +8,7 @@ import ActionsMenuItem from '../ActionsMenuItem'
 import ListItemIcon from '../../MuiCozyTheme/ListItemIcon'
 import Icon from '../../Icon'
 import ListItemText from '../../ListItemText'
+import { useI18n } from '../../I18n'
 
 export const viewInContacts = () => {
   return {
@@ -26,8 +27,9 @@ export const viewInContacts = () => {
       window.open(webLink, '_blank')
     },
     Component: withActionsLocales(
-      // eslint-disable-next-line no-unused-vars
-      forwardRef(({ t, f, lang, ...props }, ref) => {
+      forwardRef((props, ref) => {
+        const { t } = useI18n()
+
         return (
           <ActionsMenuItem ref={ref} {...props}>
             <ListItemIcon>
