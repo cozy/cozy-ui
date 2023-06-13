@@ -1,8 +1,10 @@
 import { useMemo } from 'react'
 
-import { makeActions } from '../../../ActionMenu/Actions/helpers'
-import { modify } from '../../../ActionMenu/Actions/modify'
-import { viewInContacts } from '../../../ActionMenu/Actions/viewInContacts'
+import {
+  makeActions,
+  modify,
+  viewInContacts
+} from '../../../ActionsMenu/Actions'
 import { makeOptionalActions } from './helpers'
 
 const useActions = contact => {

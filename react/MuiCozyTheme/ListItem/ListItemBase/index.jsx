@@ -9,13 +9,11 @@ import IconButton from '../../../IconButton'
 import Icon from '../../../Icon'
 import DotsIcon from '../../../Icons/Dots'
 import ExpandedAttributes from '../ExpandedAttributes'
-import ActionMenuWithClose from '../../../ActionMenu/ActionMenuWithClose'
-import { ActionMenuHeader } from '../../../ActionMenu'
-import ActionsItems from '../../../ActionMenu/Actions/ActionsItems'
-import useBreakpoints from '../../../hooks/useBreakpoints'
+import ActionsMenu from '../../../ActionsMenu'
 import RenameInput from './Renaming/RenameInput'
 import withListItemLocales from '../hoc/withListItemLocales'
 import Checkbox from '../../../Checkbox'
+import ActionsMenuMobileHeader from '../../../ActionsMenu/ActionsMenuMobileHeader'
 
 const ListItemBase = ({
   doc,
@@ -31,11 +29,10 @@ const ListItemBase = ({
   const [showActionMenu, setShowActionMenu] = useState(false)
   const [isRenaming, setIsRenaming] = useState(false)
   const anchorRef = useRef()
-  const { isMobile } = useBreakpoints()
 
   const toggleMenu = () => setShowActionMenu(v => !v)
 
-  const showActionMenuHeader = isMobile && actionMenuComp?.Header
+  const showActionMenuHeader = actionMenuComp?.Header
   const isButton = !isRenaming && !!onClick
   const handleClick =
     !isRenaming && !isSelected && onClick ? onClick : undefined
@@ -69,19 +66,24 @@ const ListItemBase = ({
         <ExpandedAttributes doc={doc} expandedAttributes={expandedAttributes} />
       )}
       {showActionMenu && (
-        <ActionMenuWithClose
+        <ActionsMenu
+          open
           ref={anchorRef}
+          doc={doc}
+          actions={actions}
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'right'
+          }}
+          autoClose
           onClose={() => setShowActionMenu(false)}
         >
           {showActionMenuHeader && (
-            <ActionMenuHeader>{actionMenuComp.Header}</ActionMenuHeader>
+            <ActionsMenuMobileHeader>
+              {actionMenuComp.Header}
+            </ActionsMenuMobileHeader>
           )}
-          <ActionsItems
-            doc={doc}
-            actions={actions}
-            setIsRenaming={setIsRenaming}
-          />
-        </ActionMenuWithClose>
+        </ActionsMenu>
       )}
     </>
   )
