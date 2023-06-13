@@ -32,6 +32,7 @@ const ActionsItems = forwardRef(
           ref={ref}
           key={actionName + idx}
           doc={doc}
+          autoFocus={idx === 0}
           disabled={disabled}
           onClick={handleClick}
         />
