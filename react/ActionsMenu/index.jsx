@@ -17,12 +17,12 @@ const ActionsMenu = forwardRef(
 
     return (
       <ActionsMenuWrapper
+        {...props}
         anchorEl={ref.current}
         getContentAnchorEl={null}
         anchorOrigin={anchorOrigin}
         transformOrigin={transformOrigin}
         keepMounted
-        {...props}
       >
         {children}
         <ActionsItems doc={doc} actions={actions} />
