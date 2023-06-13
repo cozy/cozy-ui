@@ -4,7 +4,7 @@
 
 'use strict'
 
-import React, { Component, useContext, useMemo } from 'react'
+import React, { Component, useContext, useMemo, forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import Polyglot from 'node-polyglot'
 
@@ -78,19 +78,23 @@ I18n.childContextTypes = {
 
 // higher order decorator for components that need `t` and/or `f`
 export const translate = () => WrappedComponent => {
-  const Wrapper = props => {
+  const Wrapper = forwardRef((props, ref) => {
     const i18nContext = useContext(I18nContext)
+
     return (
       <WrappedComponent
         {...props}
+        ref={ref}
         t={i18nContext && i18nContext.t}
         f={i18nContext && i18nContext.f}
         lang={i18nContext && i18nContext.lang}
       />
     )
-  }
+  })
+
   Wrapper.displayName = `withI18n(${WrappedComponent.displayName ||
     WrappedComponent.name})`
+
   return Wrapper
 }
 
