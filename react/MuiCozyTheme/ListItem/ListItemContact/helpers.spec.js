@@ -1,31 +1,31 @@
-import { hr, emailTo, smsTo, call } from '../../../ActionMenu/Actions'
+import { divider, emailTo, smsTo, call } from '../../../ActionsMenu/Actions'
 
 import { makeOptionalActions } from './helpers'
 
 describe('makeOptionalActions', () => {
-  it('should return hr, call, smsTo, emailTo', () => {
+  it('should return divider, call, smsTo, emailTo', () => {
     const res = makeOptionalActions({
       email: [{ address: 'mail@cozy.com' }],
       phone: [{ number: '123456' }]
     })
 
-    expect(res).toStrictEqual([hr, call, smsTo, emailTo])
+    expect(res).toStrictEqual([divider, call, smsTo, emailTo])
   })
 
-  it('should return hr, emailTo', () => {
+  it('should return divider, emailTo', () => {
     const res = makeOptionalActions({
       email: [{ address: 'mail@cozy.com' }]
     })
 
-    expect(res).toStrictEqual([hr, emailTo])
+    expect(res).toStrictEqual([divider, emailTo])
   })
 
-  it('should return hr, call, smsTo', () => {
+  it('should return divider, call, smsTo', () => {
     const res = makeOptionalActions({
       phone: [{ number: '123456' }]
     })
 
-    expect(res).toStrictEqual([hr, call, smsTo])
+    expect(res).toStrictEqual([divider, call, smsTo])
   })
 
   it('should empty array', () => {

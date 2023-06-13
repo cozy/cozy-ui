@@ -1,4 +1,4 @@
-import { hr, emailTo, smsTo, call } from '../../../ActionMenu/Actions'
+import { divider, emailTo, smsTo, call } from '../../../ActionsMenu/Actions'
 
 export const makeOptionalActions = contact => {
   const hasPhoneAction = contact.phone?.length > 0
@@ -6,7 +6,7 @@ export const makeOptionalActions = contact => {
   const hasMessageActions = hasPhoneAction || hasEmailAction
 
   const actionsAndOptions = [
-    { action: hr, condition: hasMessageActions },
+    { action: divider, condition: hasMessageActions },
     { action: call, condition: hasPhoneAction },
     { action: smsTo, condition: hasPhoneAction },
     { action: emailTo, condition: hasEmailAction }
