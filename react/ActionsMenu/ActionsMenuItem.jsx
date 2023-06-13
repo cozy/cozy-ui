@@ -1,13 +1,21 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+import omit from 'lodash/omit'
 
 import MenuItem from '../MenuItem'
 import ListItem from '../MuiCozyTheme/ListItem'
 
+const cleanPropsForDOM = props => {
+  const nonDOMProps = ['doc']
+
+  return omit(props, nonDOMProps)
+}
+
 const ActionsMenuItem = forwardRef(({ isListItem, ...props }, ref) => {
   const Component = isListItem ? ListItem : MenuItem
+  const compProps = cleanPropsForDOM(props)
 
-  return <Component {...props} ref={ref} button ellipsis={false} />
+  return <Component {...compProps} ref={ref} button ellipsis={false} />
 })
 
 ActionsMenuItem.displayName = 'ActionsMenuItem'
