@@ -15,7 +15,7 @@
     },
     "default": {
       "title": "Information",
-      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité. Merci de [nous contacter](mailto:%{mail}) afin de mettre à jour votre abonnement.",
+      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité.",
       "action": "J'ai compris"
     }
   },
@@ -27,7 +27,7 @@
     },
     "default": {
       "title": "Information",
-      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité. Merci de [nous contacter](mailto:%{mail}) afin de mettre à jour votre abonnement.",
+      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité.",
       "action": "J'ai compris"
     }
   },
@@ -40,7 +40,7 @@
     },
     "default": {
       "title": "Information",
-      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité. Merci de [nous contacter](mailto:%{mail}) afin de mettre à jour votre abonnement.",
+      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité.",
       "action": "J'ai compris"
     }
   },
@@ -52,7 +52,7 @@
     },
     "default": {
       "title": "Information",
-      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité. Merci de [nous contacter](mailto:%{mail}) afin de mettre à jour votre abonnement.",
+      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité.",
       "action": "J'ai compris"
     }
   }
