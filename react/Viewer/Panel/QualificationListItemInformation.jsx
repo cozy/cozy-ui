@@ -24,7 +24,7 @@ export const makeInformationValue = ({ name, value, t, scannerT }) => {
     })}`
   }
   if (name === 'contractType') {
-    return scannerT(`Scan.attributes.contractType.${value}`)
+    return scannerT(`Scan.attributes.contractType.${value}`, { _: value })
   }
   if (name === 'refTaxIncome') {
     return `${value} €`
