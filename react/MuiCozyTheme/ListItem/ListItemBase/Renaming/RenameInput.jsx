@@ -42,22 +42,6 @@ const RenameInput = ({ file, onClose }) => {
   const [isModalOpened, setIsModalOpened] = useState(false)
   const defaultValue = file.name
 
-  const handleKeyDown = async event => {
-    if (event.key === KEYS.ENTER) {
-      await check()
-    } else if (event.key === KEYS.ESCAPE) {
-      await cancel()
-    }
-  }
-
-  const handleBlur = async () => {
-    // On top of "normal" blurs, the event happens all the time after a submit or a cancel, because this component is removed from the DOM while having the focus.
-    // we want to do things only on "normal" blurs, *not* after a cancel
-    if (!isModalOpened && !isBusy) {
-      await check()
-    }
-  }
-
   const check = async () => {
     const { value } = textInput.current
     if (value === '' || value === '.' || value === '..') {
@@ -96,13 +80,34 @@ const RenameInput = ({ file, onClose }) => {
     onClose()
   }
 
-  useEffect(() => {
+  const handleKeyDown = async event => {
+    if (event.key === KEYS.ENTER) {
+      await check()
+    } else if (event.key === KEYS.ESCAPE) {
+      await cancel()
+    }
+  }
+
+  const handleBlur = async () => {
+    // On top of "normal" blurs, the event happens all the time after a submit or a cancel, because this component is removed from the DOM while having the focus.
+    // we want to do things only on "normal" blurs, *not* after a cancel
+    if (!isModalOpened && !isBusy) {
+      await check()
+    }
+  }
+
+  const handleFocus = () => {
     const { length } = splitFilename({
       name: defaultValue,
       type: 'file'
     }).filename
+
     textInput.current.setSelectionRange(0, length)
-  }, [defaultValue])
+  }
+
+  useEffect(() => {
+    textInput.current.focus()
+  }, [])
 
   return (
     <InputGroup className={styles.inputGroup}>
@@ -110,9 +115,9 @@ const RenameInput = ({ file, onClose }) => {
         ref={textInput}
         type="text"
         defaultValue={defaultValue}
-        autoFocus
         disabled={isModalOpened || isBusy}
         onBlur={handleBlur}
+        onFocus={handleFocus}
         onKeyDown={handleKeyDown}
       />
       {(isModalOpened || isBusy) && <Spinner className={styles.spinner} />}
