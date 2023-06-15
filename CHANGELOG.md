@@ -1,3 +1,18 @@
+# [85.8.0](https://github.com/cozy/cozy-ui/compare/v85.7.0...v85.8.0) (2023-06-15)
+
+
+### Bug Fixes
+
+* Linting format issue ([5b0c319](https://github.com/cozy/cozy-ui/commit/5b0c319))
+* **Viewer:** ContractType metadata must display default value ([b3c5ca8](https://github.com/cozy/cozy-ui/commit/b3c5ca8))
+
+
+### Features
+
+* Add MaxAccountByKonnectorPaywall ([16ea048](https://github.com/cozy/cozy-ui/commit/16ea048))
+* Add MaxAccountsPaywall ([b40765c](https://github.com/cozy/cozy-ui/commit/b40765c))
+* Add propTypes and jsDoc to Paywall ([f14d3d8](https://github.com/cozy/cozy-ui/commit/f14d3d8))
+
 # [85.7.0](https://github.com/cozy/cozy-ui/compare/v85.6.0...v85.7.0) (2023-06-05)
 
 
