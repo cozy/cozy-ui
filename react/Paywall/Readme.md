@@ -41,8 +41,14 @@ const makeClient = (premiumLink) => ({
 const PaywallComponent = state.modal
 
 const paywalls = [
-  OnlyOfficePaywall,
-  PasswordSharingPaywall
+  {
+    name: 'OnlyOfficePaywall',
+    component: OnlyOfficePaywall
+  },
+  {
+    name: 'PasswordSharingPaywall',
+    component: PasswordSharingPaywall
+  }
 ]
 
 const togglePaywall = paywall => {
@@ -65,7 +71,7 @@ const togglePaywall = paywall => {
               label={`Open ${paywall.name.replace(/([A-Z])/g, ' $1').trim()}`}
               variant="ghost"
               size="small"
-              onClick={() => togglePaywall(paywall)}
+              onClick={() => togglePaywall(paywall.component)}
             />
           ))}
         </div>

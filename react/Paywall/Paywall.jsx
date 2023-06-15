@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
+import PropTypes from 'prop-types'
 
 import { isMobileApp, isFlagshipApp } from 'cozy-device-helper'
 import { useClient } from 'cozy-client'
@@ -12,19 +13,17 @@ import Icon from '../Icon'
 import CozyUpgradeIcon from '../Icons/CozyUpgrade'
 import Button from '../Buttons'
 import Typography from '../Typography'
-import withLocales from '../I18n/withLocales'
 import { makeType } from './helpers'
-import fr from './locales/fr.json'
-import en from './locales/en.json'
+import { useI18n } from '../I18n'
+import withPaywallLocales from './locales/withPaywallLocales'
 
-const locales = {
-  en,
-  fr
-}
-
-const Paywall = ({ variant, onClose, isPublic, t } = { isPublic: false }) => {
+/**
+ * Component with the core logic of the paywall, which is then declined in several variants to adapt to the user case
+ */
+const Paywall = ({ variant, onClose, isPublic }) => {
   const client = useClient()
   const instance = useInstance(client)
+  const { t } = useI18n()
 
   if (instance.state === 'loading' && instance.state !== 'loaded')
     return (
@@ -94,4 +93,17 @@ const Paywall = ({ variant, onClose, isPublic, t } = { isPublic: false }) => {
   )
 }
 
-export default withLocales(locales)(Paywall)
+Paywall.propTypes = {
+  /** Type of paywall */
+  variant: PropTypes.string.isRequired,
+  /** Callback used when the user close the paywall */
+  onClose: PropTypes.func.isRequired,
+  /** Whether paywall is display in a public context */
+  isPublic: PropTypes.bool
+}
+
+Paywall.defaultProps = {
+  isPublic: false
+}
+
+export default withPaywallLocales(Paywall)
