@@ -15,7 +15,7 @@
     },
     "default": {
       "title": "Information",
-      "content": "Your current offer does not allow you to take advantage of this feature. Please [contact us](mailto:%{mail}) to update your subscription.",
+      "content": "Your current offer does not allow you to take advantage of this feature.",
       "action": "I understood"
     }
   },
@@ -27,7 +27,7 @@
     },
     "default": {
       "title": "Information",
-      "content": "Your current offer does not allow you to take advantage of this feature. Please [contact us](mailto:%{mail}) to update your subscription.",
+      "content": "Your current offer does not allow you to take advantage of this feature.",
       "action": "I understood"
     }
   },
@@ -40,7 +40,7 @@
     },
     "default": {
       "title": "Information",
-      "content": "Your current offer does not allow you to take advantage of this feature. Please [contact us](mailto:%{mail}) to update your subscription.",
+      "content": "Your current offer does not allow you to take advantage of this feature.",
       "action": "I understood"
     }
   },
@@ -52,7 +52,7 @@
     },
     "default": {
       "title": "Information",
-      "content": "Your current offer does not allow you to take advantage of this feature. Please [contact us](mailto:%{mail}) to update your subscription.",
+      "content": "Your current offer does not allow you to take advantage of this feature.",
       "action": "I understood"
     }
   }

@@ -75,7 +75,6 @@ const Paywall = ({ variant, onClose, isPublic, contentInterpolation }) => {
       content={
         <ReactMarkdown
           source={t(`${variant}Paywall.${type}.content`, {
-            mail: instance?.context?.data?.attributes?.reply_to,
             ...contentInterpolation
           })}
           renderers={{
