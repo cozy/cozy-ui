@@ -6,7 +6,7 @@ exports[`SquareAppIcon component should render an app correctly with the app nam
   data-testid="square-app-icon"
 >
   <div
-    class="palette__CozyTheme--normal___3UmMb"
+    class="CozyTheme--normal"
   >
     <span
       class="MuiBadge-root-40"
@@ -55,7 +55,7 @@ exports[`SquareAppIcon component should render an app correctly with the given n
   data-testid="square-app-icon"
 >
   <div
-    class="palette__CozyTheme--normal___3UmMb"
+    class="CozyTheme--normal"
   >
     <span
       class="MuiBadge-root-9"
@@ -104,7 +104,7 @@ exports[`SquareAppIcon component should render an app with the app slug if no na
   data-testid="square-app-icon"
 >
   <div
-    class="palette__CozyTheme--normal___3UmMb"
+    class="CozyTheme--normal"
   >
     <span
       class="MuiBadge-root-71"
@@ -207,7 +207,7 @@ exports[`SquareAppIcon component should render correctly an app in error state 1
   data-testid="square-app-icon"
 >
   <div
-    class="palette__CozyTheme--normal___3UmMb"
+    class="CozyTheme--normal"
   >
     <span
       class="MuiBadge-root-164"
@@ -317,7 +317,7 @@ exports[`SquareAppIcon component should render correctly an app in maintenance s
   data-testid="square-app-icon"
 >
   <div
-    class="palette__CozyTheme--normal___3UmMb"
+    class="CozyTheme--normal"
   >
     <span
       class="MuiBadge-root-102"
@@ -366,7 +366,7 @@ exports[`SquareAppIcon component should render correctly an app in shortcut stat
   data-testid="square-app-icon"
 >
   <div
-    class="palette__CozyTheme--normal___3UmMb"
+    class="CozyTheme--normal"
   >
     <span
       class="MuiBadge-root-226"
@@ -415,7 +415,7 @@ exports[`SquareAppIcon component should render correctly an app with custom cont
   data-testid="square-app-icon"
 >
   <div
-    class="palette__CozyTheme--normal___3UmMb"
+    class="CozyTheme--normal"
   >
     <span
       class="MuiBadge-root-318"
