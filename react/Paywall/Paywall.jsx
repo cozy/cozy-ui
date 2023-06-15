@@ -20,7 +20,7 @@ import withPaywallLocales from './locales/withPaywallLocales'
 /**
  * Component with the core logic of the paywall, which is then declined in several variants to adapt to the user case
  */
-const Paywall = ({ variant, onClose, isPublic }) => {
+const Paywall = ({ variant, onClose, isPublic, contentInterpolation }) => {
   const client = useClient()
   const instance = useInstance(client)
   const { t } = useI18n()
@@ -73,20 +73,15 @@ const Paywall = ({ variant, onClose, isPublic }) => {
         />
       }
       content={
-        type === 'default' ? (
-          <ReactMarkdown
-            source={t(`${variant}Paywall.default.content`, {
-              mail: instance?.context?.data?.attributes?.reply_to
-            })}
-            renderers={{
-              paragraph: props => (
-                <span className="u-mv-0">{props.children}</span>
-              )
-            }}
-          />
-        ) : (
-          t(`${variant}Paywall.${type}.content`)
-        )
+        <ReactMarkdown
+          source={t(`${variant}Paywall.${type}.content`, {
+            mail: instance?.context?.data?.attributes?.reply_to,
+            ...contentInterpolation
+          })}
+          renderers={{
+            paragraph: ({ children }) => <p className="u-mt-0">{children}</p>
+          }}
+        />
       }
       onClose={onClose}
     />
@@ -99,11 +94,14 @@ Paywall.propTypes = {
   /** Callback used when the user close the paywall */
   onClose: PropTypes.func.isRequired,
   /** Whether paywall is display in a public context */
-  isPublic: PropTypes.bool
+  isPublic: PropTypes.bool,
+  /** Translation interpolation for the content of the paywall */
+  contentInterpolation: PropTypes.object
 }
 
 Paywall.defaultProps = {
-  isPublic: false
+  isPublic: false,
+  contentInterpolation: {}
 }
 
 export default withPaywallLocales(Paywall)
