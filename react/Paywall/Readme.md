@@ -3,7 +3,11 @@ A paywall is a modal designed to restrict access to a feature to encourage upgra
 ### Variants
 
 ```jsx
-import { OnlyOfficePaywall, PasswordSharingPaywall } from "cozy-ui/transpiled/react/Paywall"
+import {
+  OnlyOfficePaywall,
+  PasswordSharingPaywall,
+  MaxAccountsByKonnectorPaywall
+} from "cozy-ui/transpiled/react/Paywall"
 import { CozyProvider } from "cozy-client"
 import { BreakpointsProvider } from "cozy-ui/transpiled/react/hooks/useBreakpoints"
 import Variants from 'cozy-ui/docs/components/Variants'
@@ -48,6 +52,10 @@ const paywalls = [
   {
     name: 'PasswordSharingPaywall',
     component: PasswordSharingPaywall
+  },
+  {
+    name: 'MaxAccountsByKonnectorPaywall',
+    component: MaxAccountsByKonnectorPaywall
   }
 ]
 
@@ -78,6 +86,8 @@ const togglePaywall = paywall => {
         {state.modalOpened && (
           <PaywallComponent
             isPublic={variant.isPublic}
+            max={4}
+            konnectorName="EDF"
             onClose={() => setState({ modalOpened: false })} />
         )}
       </div>

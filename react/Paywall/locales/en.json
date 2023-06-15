@@ -30,5 +30,18 @@
       "content": "Your current offer does not allow you to take advantage of this feature. Please [contact us](mailto:%{mail}) to update your subscription.",
       "action": "I understood"
     }
+  },
+  "maxAccount": "%{smart_count} account |||| %{smart_count} accounts",
+  "maxAccountsByKonnectorPaywall": {
+    "premium": {
+      "title": "Upgrade your Cozy!",
+      "content": "Your offer allows you to connect %{maxAccount} %{konnectorName} in your Cozy.  \n  \nTo unlock this feature, or simply support us, you can change your Cozy offer.",
+      "action": "Check our plans"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Your current offer does not allow you to take advantage of this feature. Please [contact us](mailto:%{mail}) to update your subscription.",
+      "action": "I understood"
+    }
   }
 }
