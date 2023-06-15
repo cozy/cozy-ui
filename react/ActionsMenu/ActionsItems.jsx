@@ -6,7 +6,7 @@ import { useI18n } from '../I18n'
 import { getActionName, getOnlyNeededActions } from './Actions/helpers'
 
 const ActionsItems = forwardRef(
-  ({ doc, actions, isLast, setIsRenaming, onClick, ...props }, ref) => {
+  ({ doc, actions, actionOptions, onClick, ...props }, ref) => {
     const client = useClient()
     const { t } = useI18n()
     const cleanedActions = useMemo(() => getOnlyNeededActions(actions, doc), [
@@ -21,8 +21,7 @@ const ActionsItems = forwardRef(
       const { Component: ActionComponent, action, disabled } = actionDefinition
 
       const handleClick = () => {
-        action && action(doc, { client, t, isLast })
-        actionName === 'rename' && setIsRenaming(true)
+        action && action(doc, { client, t, ...actionOptions })
         onClick && onClick()
       }
 
@@ -44,8 +43,8 @@ const ActionsItems = forwardRef(
 ActionsItems.propTypes = {
   doc: PropTypes.object,
   actions: PropTypes.array,
-  isLast: PropTypes.bool,
-  setIsRenaming: PropTypes.func,
+  /** Props spread to action method of Actions component */
+  actionOptions: PropTypes.object,
   onClick: PropTypes.func
 }
 
