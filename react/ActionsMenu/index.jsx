@@ -12,7 +12,18 @@ const useTransformOrigin = ({ vertical, horizontal }) => {
 }
 
 const ActionsMenu = forwardRef(
-  ({ doc, actions, anchorOrigin, children, ...props }, ref) => {
+  (
+    {
+      doc,
+      actions,
+      anchorOrigin,
+      children,
+      componentsProps,
+      onClose,
+      ...props
+    },
+    ref
+  ) => {
     const transformOrigin = useTransformOrigin(anchorOrigin)
 
     return (
@@ -23,9 +34,14 @@ const ActionsMenu = forwardRef(
         anchorOrigin={anchorOrigin}
         transformOrigin={transformOrigin}
         keepMounted
+        onClose={onClose}
       >
         {children}
-        <ActionsItems doc={doc} actions={actions} />
+        <ActionsItems
+          {...componentsProps.actionsItems}
+          doc={doc}
+          actions={actions}
+        />
       </ActionsMenuWrapper>
     )
   }
@@ -36,7 +52,8 @@ ActionsMenu.defaultProps = {
     vertical: 'bottom',
     horizontal: 'left'
   },
-  autoClose: true
+  autoClose: true,
+  componentsProps: {}
 }
 
 ActionsMenu.propTypes = {
@@ -53,6 +70,14 @@ ActionsMenu.propTypes = {
   }),
   /** Whether the menu should automatically close itself when an item is clicked */
   autoClose: PropTypes.bool,
+  /* Props passed to components with the same name */
+  componentsProps: PropTypes.shape({
+    /** Props spread to ActionsItems component */
+    actionsItems: PropTypes.shape({
+      /** Props spread to action method of Actions component */
+      actionOptions: PropTypes.object
+    })
+  }),
   /** Function triggered when closing the menu */
   onClose: PropTypes.func
 }

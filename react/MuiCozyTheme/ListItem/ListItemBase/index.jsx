@@ -75,7 +75,9 @@ const ListItemBase = ({
             vertical: 'bottom',
             horizontal: 'right'
           }}
-          autoClose
+          componentsProps={{
+            actionsItems: { actionOptions: { setIsRenaming } }
+          }}
           onClose={() => setShowActionMenu(false)}
         >
           {showActionMenuHeader && (
