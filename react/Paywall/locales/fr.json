@@ -43,5 +43,17 @@
       "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité. Merci de [nous contacter](mailto:%{mail}) afin de mettre à jour votre abonnement.",
       "action": "J'ai compris"
     }
+  },
+  "maxAccountsPaywall": {
+    "premium": {
+      "title": "Augmenter votre Cozy !",
+      "content": "Votre offre vous permet de connecter %{maxAccount} dans votre Cozy.  \n  \nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
+      "action": "Voir les offres"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité. Merci de [nous contacter](mailto:%{mail}) afin de mettre à jour votre abonnement.",
+      "action": "J'ai compris"
+    }
   }
 }

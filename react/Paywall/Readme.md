@@ -6,7 +6,8 @@ A paywall is a modal designed to restrict access to a feature to encourage upgra
 import {
   OnlyOfficePaywall,
   PasswordSharingPaywall,
-  MaxAccountsByKonnectorPaywall
+  MaxAccountsByKonnectorPaywall,
+  MaxAccountsPaywall
 } from "cozy-ui/transpiled/react/Paywall"
 import { CozyProvider } from "cozy-client"
 import { BreakpointsProvider } from "cozy-ui/transpiled/react/hooks/useBreakpoints"
@@ -56,6 +57,10 @@ const paywalls = [
   {
     name: 'MaxAccountsByKonnectorPaywall',
     component: MaxAccountsByKonnectorPaywall
+  },
+  {
+    name: 'MaxAccountsPaywall',
+    component: MaxAccountsPaywall
   }
 ]
 
