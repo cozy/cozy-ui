@@ -1,3 +1,10 @@
+## [85.8.1](https://github.com/cozy/cozy-ui/compare/v85.8.0...v85.8.1) (2023-06-16)
+
+
+### Bug Fixes
+
+* Change default wording for paywall ([87f2680](https://github.com/cozy/cozy-ui/commit/87f2680))
+
 # [85.8.0](https://github.com/cozy/cozy-ui/compare/v85.7.0...v85.8.0) (2023-06-15)
 
 
