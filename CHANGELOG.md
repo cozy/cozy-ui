@@ -1,3 +1,17 @@
+# [85.9.0](https://github.com/cozy/cozy-ui/compare/v85.8.1...v85.9.0) (2023-06-19)
+
+
+### Bug Fixes
+
+* **css:** Avoid importing palette.styl and utils.styl in each css of ([311644b](https://github.com/cozy/cozy-ui/commit/311644b))
+* **css:** Now import spaces stylus method from settings ([087245b](https://github.com/cozy/cozy-ui/commit/087245b))
+* Now remove useless import of display css utilities ([ee6553a](https://github.com/cozy/cozy-ui/commit/ee6553a))
+
+
+### Features
+
+* Remove direct import of palette.styl in legacy components ([95ac529](https://github.com/cozy/cozy-ui/commit/95ac529))
+
 ## [85.8.1](https://github.com/cozy/cozy-ui/compare/v85.8.0...v85.8.1) (2023-06-16)
 
 
