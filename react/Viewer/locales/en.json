@@ -79,13 +79,7 @@
             "country": "Beneficiary nationality",
             "refTaxIncome": "Reference tax income",
             "contractType": "Contract type",
-            "noticePeriod": "Expiration alert",
-            "number": "License number",
-            "cafFileNumber": "CAF file number",
-            "cardNumber": "National ID card number",
-            "vinNumber": "Vehicle registration number (VIN)",
-            "ibanNumber": "IBAN number",
-            "passportNumber": "Passport number"
+            "noticePeriod": "Expiration alert"
           },
           "day": "day |||| days"
         },
