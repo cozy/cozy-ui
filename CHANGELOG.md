@@ -1,3 +1,28 @@
+# [86.0.0](https://github.com/cozy/cozy-ui/compare/v85.9.0...v86.0.0) (2023-06-20)
+
+
+### Bug Fixes
+
+* **ActionsMenu:** Divider actions wasn't spreading ref ([15a9554](https://github.com/cozy/cozy-ui/commit/15a9554))
+* **ActionsMenu:** Now force autofocus on first item for better a11y ([4264903](https://github.com/cozy/cozy-ui/commit/4264903))
+* **ActionsMenu:** Now spread props first to avoid override ([c30e183](https://github.com/cozy/cozy-ui/commit/c30e183))
+* **ActionsMenu:** Prop `doc` was spread to ActionsMenuItem child ([a2160c1](https://github.com/cozy/cozy-ui/commit/a2160c1))
+* **Divider:** Ref wasn't spreaded ([8220dba](https://github.com/cozy/cozy-ui/commit/8220dba))
+* **I18n:** Translate() wasn't spreading ref ([b23c16f](https://github.com/cozy/cozy-ui/commit/b23c16f))
+* **I18n:** WithOnlyLocales wasn't spreading ref ([5ca4004](https://github.com/cozy/cozy-ui/commit/5ca4004))
+* **ListItem:** Remove autoFocus and set focus on mount in RenameInput ([04d9985](https://github.com/cozy/cozy-ui/commit/04d9985))
+
+
+### Features
+
+* **ActionsMenu:** Add possibility to spread props to ActionsItems ([20534cb](https://github.com/cozy/cozy-ui/commit/20534cb))
+* **ListItemContact:** Use new ActionsMenu to get better accessibility ([e77d043](https://github.com/cozy/cozy-ui/commit/e77d043))
+
+
+### BREAKING CHANGES
+
+* **ActionsMenu:** `ActionsItems` no longer support `isLast` and `setIsRenaming` props. You have to use `actionOptions` to pass them. You should not be worried about this BC, `ActionsItems` is generally not used directly in apps
+
 # [85.9.0](https://github.com/cozy/cozy-ui/compare/v85.8.1...v85.9.0) (2023-06-19)
 
 
