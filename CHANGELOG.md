@@ -1,3 +1,10 @@
+# [86.1.0](https://github.com/cozy/cozy-ui/compare/v86.0.0...v86.1.0) (2023-06-20)
+
+
+### Features
+
+* Remove `mespapiers.migrated.metadata` flag ([43bcc3e](https://github.com/cozy/cozy-ui/commit/43bcc3e))
+
 # [86.0.0](https://github.com/cozy/cozy-ui/compare/v85.9.0...v86.0.0) (2023-06-20)
 
 
