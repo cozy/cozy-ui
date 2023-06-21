@@ -1,3 +1,10 @@
+# [86.2.0](https://github.com/cozy/cozy-ui/compare/v86.1.0...v86.2.0) (2023-06-21)
+
+
+### Features
+
+* Add "ArrowUp" UI Icon ([b0c3711](https://github.com/cozy/cozy-ui/commit/b0c3711))
+
 # [86.1.0](https://github.com/cozy/cozy-ui/compare/v86.0.0...v86.1.0) (2023-06-20)
 
 
