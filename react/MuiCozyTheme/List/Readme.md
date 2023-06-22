@@ -35,7 +35,9 @@ import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem'
 import ListItemIcon from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemSecondaryAction'
-import ActionMenu, { ActionMenuItem, ActionMenuRadio, ActionMenuHeader } from 'cozy-ui/transpiled/react/ActionMenu'
+import ActionsMenu from 'cozy-ui/transpiled/react/ActionsMenu'
+import ActionsMenuItem from 'cozy-ui/transpiled/react/ActionsMenu/ActionsMenuItem'
+import ActionsMenuWrapper from 'cozy-ui/transpiled/react/ActionsMenu/ActionsMenuWrapper'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Menu from 'cozy-ui/transpiled/react/MuiCozyTheme/Menus'
 import MenuItem from '@material-ui/core/MenuItem'
@@ -127,25 +129,35 @@ const initialVariants = [{ dense: false, disabledGutters: false, doubleGutters: 
               </ListItemSecondaryAction>
             </ListItem>
             {state.showMenu && (
-              <ActionMenu
-                anchorElRef={anchorRef}
+              <ActionsMenuWrapper
+                anchorEl={anchorRef.current}
+                open
                 autoclose
+                getContentAnchorEl={null}
+                anchorOrigin={{
+                  vertical: 'bottom',
+                  horizontal: 'right'
+                }}
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right'
+                }}
+                keepMounted
                 onClose={hideMenu}
               >
-                <ActionMenuItem left={<Icon icon={FileIcon} />}>
-                  <Typography variant="body1" gutterBottom>
-                    Item 1
-                  </Typography>
-                  <Typography variant="caption" color="textSecondary">
-                    Descriptive text to elaborate on what item 3 does.
-                  </Typography>
-                </ActionMenuItem>
-                <ActionMenuItem left={<Icon icon={FileIcon} />}>
-                  <Typography variant="body1" gutterBottom>
-                    Item 2
-                  </Typography>
-                </ActionMenuItem>
-              </ActionMenu>
+                <ActionsMenuItem>
+                  <ListItemIcon>
+                    <Icon icon={FileIcon} />
+                  </ListItemIcon>
+                  <ListItemText primary="Item 1" secondary="Descriptive text to elaborate on what item 3 does."/>
+                </ActionsMenuItem>
+                <ActionsMenuItem>
+                  <ListItemIcon>
+                    <Icon icon={FileIcon} />
+                  </ListItemIcon>
+                  <ListItemText primary="Item 2" />
+                </ActionsMenuItem>
+              </ActionsMenuWrapper>
             )}
             <Divider component="li" variant="inset" />
 
