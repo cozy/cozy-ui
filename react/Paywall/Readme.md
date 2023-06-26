@@ -1,4 +1,7 @@
-A paywall is a modal designed to restrict access to a feature to encourage upgrading. There is different variant for each features so the wording can be different to adapt to the context of use.
+A paywall is a modal designed to restrict access to a feature to encourage upgrading.
+There is different variant for each features so the wording can be different to adapt to the context of use.
+
+On mobile devices, we display "I understand" instead of the action button label for reasons of compatibility with the mobile application store.
 
 ### Variants
 
