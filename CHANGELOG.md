@@ -1,3 +1,11 @@
+# [86.3.0](https://github.com/cozy/cozy-ui/compare/v86.2.0...v86.3.0) (2023-06-27)
+
+
+### Features
+
+* **Paywall:** Add MaxPapersPaywall ([a9b744f](https://github.com/cozy/cozy-ui/commit/a9b744f))
+* **Paywall:** Change `I understood` in `I understand` ([ba43862](https://github.com/cozy/cozy-ui/commit/ba43862))
+
 # [86.2.0](https://github.com/cozy/cozy-ui/compare/v86.1.0...v86.2.0) (2023-06-21)
 
 
