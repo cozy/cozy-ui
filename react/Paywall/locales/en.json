@@ -55,5 +55,17 @@
       "content": "Your current offer does not allow you to take advantage of this feature.",
       "action": "I understood"
     }
+  },
+  "maxPapersPaywall": {
+    "premium": {
+      "title": "Upgrade your Cozy!",
+      "content": "Your offer allows you to manually add up to %{smart_count} paper.\n\nTo unlock this feature, or simply support us, you can modify the offer of your Cozy. |||| Your offer allows you to manually add up to %{smart_count} papers.\n\nTo unlock this feature, or simply support us, you can modify the offer of your Cozy.",
+      "action": "Check our plans"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Your current offer does not allow you to take advantage of this feature.",
+      "action": "I understood"
+    }
   }
 }

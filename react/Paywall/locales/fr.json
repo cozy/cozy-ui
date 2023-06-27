@@ -55,5 +55,17 @@
       "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité.",
       "action": "J'ai compris"
     }
+  },
+  "maxPapersPaywall": {
+    "premium": {
+      "title": "Augmenter votre Cozy !",
+      "content": "Votre offre vous permet d'ajouter manuellement jusqu'à %{smart_count} papier.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy. |||| Votre offre vous permet d'ajouter manuellement jusqu'à %{smart_count} papiers.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
+      "action": "Voir les offres"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité.",
+      "action": "J'ai compris"
+    }
   }
 }
