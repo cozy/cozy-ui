@@ -1,6 +1,6 @@
 {
   "mobileApp": {
-    "action": "I understood"
+    "action": "I understand"
   },
   "onlyOfficePaywall": {
     "premium": {
@@ -11,12 +11,12 @@
     "public": {
       "title": "Information",
       "content": "You cannot edit this file online. Please ask the document owner to update their Cozy subscription.",
-      "action": "I understood"
+      "action": "I understand"
     },
     "default": {
       "title": "Information",
       "content": "Your current offer does not allow you to take advantage of this feature.",
-      "action": "I understood"
+      "action": "I understand"
     }
   },
   "passwordSharingPaywall": {
@@ -28,7 +28,7 @@
     "default": {
       "title": "Information",
       "content": "Your current offer does not allow you to take advantage of this feature.",
-      "action": "I understood"
+      "action": "I understand"
     }
   },
   "maxAccountsByKonnectorPaywall": {
@@ -40,7 +40,7 @@
     "default": {
       "title": "Information",
       "content": "Your current offer does not allow you to take advantage of this feature.",
-      "action": "I understood"
+      "action": "I understand"
     }
   },
   "maxAccountsPaywall": {
@@ -52,7 +52,7 @@
     "default": {
       "title": "Information",
       "content": "Your current offer does not allow you to take advantage of this feature.",
-      "action": "I understood"
+      "action": "I understand"
     }
   },
   "maxPapersPaywall": {
@@ -64,7 +64,7 @@
     "default": {
       "title": "Information",
       "content": "Your current offer does not allow you to take advantage of this feature.",
-      "action": "I understood"
+      "action": "I understand"
     }
   }
 }
