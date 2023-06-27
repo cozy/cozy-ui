@@ -3,5 +3,19 @@
     "title": "Scan the QR Code",
     "text": "or go directly to the <img src=%{iosIconSrc} /> <a href='%{iosUrl}' class='u-link' target='_blank' rel='noopener'>App Store</a><br>or <img src=%{androidIconSrc} /> <a href='%{androidUrl}' class='u-link' target='_blank' rel='noopener'>Play Store</a> to install the Cozy Cloud app",
     "a11n": "Go to the Cozy Cloud application download page"
+  },
+  "authentification-dialog": {
+    "title": "Login",
+    "title-oidc": "Cozy Pass",
+    "subtitle": "For security, please confirm your identity",
+    "label": "Cozy password",
+    "label-oidc": "Cozy Pass password",
+    "abort": "Leave",
+    "unlock": "Unlock",
+    "forgotten-password": "I forgot my password",
+    "errors": {
+      "invalid_password": "Incorrect password, try again.",
+      "server_error": "Something went wrong with the server. Please, reload the page."
+    }
   }
 }
