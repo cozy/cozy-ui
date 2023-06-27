@@ -3,5 +3,19 @@
     "title": "Scannez le QR Code",
     "text": "ou rendez vous directement sur <img src=%{iosIconSrc} /> <a href='%{iosUrl}' class='u-link' target='_blank' rel='noopener'>l’App Store</a><br>ou sur le <img src=%{androidIconSrc} /> <a href='%{androidUrl}' class='u-link' target='_blank' rel='noopener'>Play Store</a> pour installer l’app Cloud Personnel Cozy",
     "a11n": "Aller sur la page de téléchargement de l'application Cloud Personnel Cozy"
+  },
+  "authentification-dialog": {
+    "title": "Authentification",
+    "title-oidc": "Cozy Pass",
+    "subtitle": "Par sécurité, merci de confirmer votre identité",
+    "label": "Mot de passe Cozy",
+    "label-oidc": "Mot de passe Cozy Pass",
+    "abort": "Quitter",
+    "unlock": "Déverrouiller",
+    "forgotten-password": "J'ai oublié mon mot de passe",
+    "errors": {
+      "invalid_password": "Mot de passe incorrect, essayer à nouveau.",
+      "server_error": "Une erreur s'est produite. Merci de recharger la page."
+    }
   }
 }

@@ -9,4 +9,7 @@ export { default as IllustrationDialog } from './IllustrationDialog'
 export { default as PermissionDialog } from './PermissionDialog'
 export { default as useCozyDialog } from './useCozyDialog'
 export { default as TopAnchoredDialog } from './TopAnchoredDialog'
-export { InstallFlagshipAppDialog } from './SpecificDialogs'
+export {
+  InstallFlagshipAppDialog,
+  AuthentificationDialog
+} from './SpecificDialogs'
