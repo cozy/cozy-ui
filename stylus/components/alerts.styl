@@ -11,7 +11,7 @@ alert-width = rem(640)
 
 $alert
     position fixed
-    z-index $alert-index
+    z-index var(--zIndex-alert)
     right 0
     bottom calc(3rem + env(safe-area-inset-bottom))
     left 0
@@ -24,13 +24,13 @@ $alert
         transition none
 
     @media all and (min-width alert-width)
-        z-index $alert-index
+        z-index var(--zIndex-alert)
         top rem(16)
         bottom auto
         text-align center
 
 $alert--modal
-    z-index $alert-index
+    z-index var(--zIndex-alert)
     bottom 0
 
 $alert-wrapper
