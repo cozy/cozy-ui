@@ -31,11 +31,10 @@
       "action": "I understood"
     }
   },
-  "maxAccount": "%{smart_count} account |||| %{smart_count} accounts",
   "maxAccountsByKonnectorPaywall": {
     "premium": {
       "title": "Upgrade your Cozy!",
-      "content": "Your offer allows you to connect %{maxAccount} %{konnectorName} in your Cozy.  \n  \nTo unlock this feature, or simply support us, you can change your Cozy offer.",
+      "content": "Your offer allows you to connect %{smart_count} account %{konnectorName} in your Cozy.\n\nTo unlock this feature, or simply support us, you can change your Cozy offer. |||| Your offer allows you to connect %{smart_count} accounts %{konnectorName} in your Cozy.\n\nTo unlock this feature, or simply support us, you can change your Cozy offer.",
       "action": "Check our plans"
     },
     "default": {
@@ -47,7 +46,7 @@
   "maxAccountsPaywall": {
     "premium": {
       "title": "Upgrade your Cozy!",
-      "content": "Your offer allows you to connect %{maxAccount} in your Cozy.  \n  \nTo unlock this feature, or simply support us, you can change your Cozy offer.",
+      "content": "Your offer allows you to connect %{smart_count} account in your Cozy.\n\nTo unlock this feature, or simply support us, you can change your Cozy offer. |||| Your offer allows you to connect %{smart_count} accounts in your Cozy.\n\nTo unlock this feature, or simply support us, you can change your Cozy offer.",
       "action": "Check our plans"
     },
     "default": {
