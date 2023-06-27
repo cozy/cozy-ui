@@ -7,7 +7,7 @@
     position absolute
     top $toolbarHeight
     bottom 0
-    z-index $modal-toolbar-index
+    z-index var(--zIndex-modal-toolbar)
     width 20%
     cursor pointer
     background-color transparent
@@ -62,7 +62,7 @@
 .viewer-toolbar
     position absolute
     top 0
-    z-index $modal-toolbar-index
+    z-index var(--zIndex-modal-toolbar)
     display flex
     flex-shrink 0
     width calc(100% - 2rem)
@@ -86,7 +86,7 @@
 .viewer-footer
     position fixed
     bottom 0
-    z-index $modal-footer-index
+    z-index var(--zIndex-modal-footer)
     width 100%
     height $footerHeight
     padding-bottom var(--flagship-bottom-height, env(safe-area-inset-bottom))

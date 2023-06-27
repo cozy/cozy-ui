@@ -20,7 +20,7 @@ $nav
 
 $nav-item
     position        relative
-    z-index         $app-index
+    z-index         var(--zIndex-app)
     height          rem(48)
     box-sizing      border-box
     cursor          pointer
@@ -28,7 +28,7 @@ $nav-item
     &:hover::before
         content        ''
         position       absolute
-        z-index        $below-index
+        z-index        var(--zIndex-below)
         border-radius  rem(0 3 3 0)
         top 0
         left 0
@@ -143,7 +143,7 @@ $nav-item-secondary
     &:hover::before
         content        ''
         position       absolute
-        z-index        $below-index
+        z-index        var(--zIndex-below)
         border-radius  rem(3 0 0 3)
         top 0
         right 0
