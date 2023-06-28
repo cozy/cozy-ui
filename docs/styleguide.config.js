@@ -84,7 +84,7 @@ module.exports = {
         '../react/MenuItem',
         '../react/MenuList',
         '../react/MobileStepper',
-        '../react/MuiCozyTheme/MuiBreadcrumbs',
+        '../react/Breadcrumbs',
         '../react/NativeSelect',
         '../react/NoSsr',
         '../react/OutlinedInput',
