@@ -170,7 +170,7 @@ module.exports = {
         '../react/Avatar',
         '../react/BarButton',
         '../react/BarTitle',
-        '../react/Breadcrumbs',
+        '../react/legacy/Breadcrumbs',
         '../react/Card',
         '../react/Circle',
         '../react/Labs/CollectionField',
