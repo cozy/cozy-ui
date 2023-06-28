@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import Grid from '../../MuiCozyTheme/Grid'
+import Grid from '../../Grid'
 import styles from './styles.styl'
 
 const GridItem = ({ onClick, children }) => {

@@ -20,7 +20,7 @@ import Icon from '../Icon'
 import MobileHeader from './MobileHeader'
 import ContactsListContent from './ContactsListContent'
 import AddContactDialog from './AddContact/AddContactDialog'
-import TextField from '../MuiCozyTheme/TextField'
+import TextField from '../TextField'
 
 import styles from './styles.styl'
 

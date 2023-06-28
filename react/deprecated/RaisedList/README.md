@@ -1,6 +1,6 @@
 ```jsx
 import RaisedList from 'cozy-ui/transpiled/react/deprecated/RaisedList'
-import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
+import Divider from 'cozy-ui/transpiled/react/Divider'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 

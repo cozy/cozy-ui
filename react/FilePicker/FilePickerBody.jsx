@@ -2,7 +2,7 @@ import React, { useCallback } from 'react'
 import PropTypes from 'prop-types'
 
 import { models, useQuery } from 'cozy-client'
-import List from '../MuiCozyTheme/List'
+import List from '../List'
 import LoadMore from '../LoadMore'
 
 import { buildContentFolderQuery } from './queries'

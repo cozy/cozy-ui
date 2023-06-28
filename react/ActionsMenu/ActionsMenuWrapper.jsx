@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Menu from '../MuiCozyTheme/Menu'
+import Menu from '../Menu'
 import useBreakpoints from '../hooks/useBreakpoints'
 import BottomSheet from '../BottomSheet'
 import isTesting from '../helpers/isTesting'

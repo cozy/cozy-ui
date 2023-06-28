@@ -2840,22 +2840,6 @@ exports[`ListItemText should render examples: ListItemText 3`] = `
 </div>"
 `;
 
-exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
-"<div>
-  <div class=\\"styles__Stack--xs___2R5lW\\">
-    <div class=\\"MuiBox-root MuiBox-root-572\\">
-      <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-displayInline\\">primary</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-checked-2 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
-    </div>
-    <div class=\\"MuiBox-root MuiBox-root-573\\">
-      <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-displayInline\\">secondary</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-checked-2 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
-    </div>
-    <div class=\\"MuiBox-root MuiBox-root-574\\">
-      <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-displayInline\\">default</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
-    </div>
-  </div>
-</div>"
-`;
-
 exports[`OrderedList should render examples: OrderedList 1`] = `
 "<div>
   <ol class=\\"styles__OrderedList___17A_o styles__Stack--m___1tSpV\\">
@@ -3489,6 +3473,22 @@ exports[`Spinner should render examples: Spinner 5`] = `
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
       </svg>
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary\\">Hello world !</p>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Switch should render examples: Switch 1`] = `
+"<div>
+  <div class=\\"styles__Stack--xs___2R5lW\\">
+    <div class=\\"MuiBox-root MuiBox-root-572\\">
+      <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-displayInline\\">primary</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-checked-2 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
+    </div>
+    <div class=\\"MuiBox-root MuiBox-root-573\\">
+      <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-displayInline\\">secondary</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-checked-2 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
+    </div>
+    <div class=\\"MuiBox-root MuiBox-root-574\\">
+      <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-displayInline\\">default</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
   </div>
 </div>"

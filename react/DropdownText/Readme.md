@@ -3,7 +3,7 @@ This component can be used as a trigger to open menus, for example an ActionMenu
 ```jsx
 import DropdownText from 'cozy-ui/transpiled/react/DropdownText'
 import Typography from 'cozy-ui/transpiled/react/Typography'
-import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 
 const variants = [
   'h1',

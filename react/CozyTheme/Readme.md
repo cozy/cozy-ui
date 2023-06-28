@@ -9,9 +9,8 @@ The inverted theme is not supported for several components but the work
 
 ```jsx
 import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
-import Button from 'cozy-ui/transpiled/react/deprecated/Button'
-import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons'
-import TextField from 'cozy-ui/transpiled/react/MuiCozyTheme/TextField'
+import Buttons from 'cozy-ui/transpiled/react/Buttons'
+import TextField from 'cozy-ui/transpiled/react/TextField'
 import BarButton from 'cozy-ui/transpiled/react/BarButton'
 import Paper from 'cozy-ui/transpiled/react/Paper'
 import DotsIcon from 'cozy-ui/transpiled/react/Icons/Dots'
@@ -20,7 +19,7 @@ import Typography from 'cozy-ui/transpiled/react/Typography'
 const props = [{}, { disabled: true}, { busy: true }]
 
 const themesSupportingContext = [
-  'regular',
+  'primary',
   'secondary'
 ]
 
@@ -33,17 +32,15 @@ const themesSupportingContext = [
     {themesSupportingContext.map(theme =>
       <p key={theme}>{
         props.map(
-          props => <Button key={theme + JSON.stringify(props)} label={theme} theme={theme} {...props} />
+          props => <Buttons key={theme + JSON.stringify(props)} className="u-mr-half" label={theme} variant={theme} {...props} />
         )
       }</p>
     )}
     <Typography className='u-white u-mt-1' variant="h5">BarButton</Typography>
     <BarButton icon={DotsIcon} />
-    <Typography className='u-white u-mb-1' variant="h5">MUI Buttons</Typography>
-    <MuiButton variant='outlined' color='primary'>
-      A MUI button
-    </MuiButton>
-    <Typography className='u-white u-mt-1' variant="h5">MUI TextField</Typography>
+    <Typography className='u-white u-mb-1' variant="h5">Button</Typography>
+    <Buttons variant='secondary' label="button" />
+    <Typography className='u-white u-mt-1' variant="h5">TextField</Typography>
     <TextField
       id="inverted-field"
       label="A field"
@@ -59,7 +56,7 @@ const themesSupportingContext = [
             We can always go back to normal theme if a child must "get out"
           of the theme.
           </Typography>
-          <Button className='u-ml-0 u-mt-half' theme='primary' label='Primary button' />
+          <Buttons className='u-ml-0 u-mt-half' variant='primary' label='Primary button' />
           <p>
             <a href='#' className='u-link'>An u-link span</a>
           </p>
@@ -67,13 +64,13 @@ const themesSupportingContext = [
     </CozyTheme>
   </Paper>
   <Paper className='u-p-1 u-stack-s'>
-    <div class='u-error'>
+    <div className='u-error'>
       Error text : "Please enter the right password."
     </div>
-    <div class='u-success'>
+    <div className='u-success'>
       Valid text : "Success, you've connected EDF to your Cozy."
     </div>
-    <div class='u-warning'>
+    <div className='u-warning'>
       Warning text : "Something does not feel right, you may want to reload the page."
     </div>
 

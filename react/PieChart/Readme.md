@@ -1,7 +1,7 @@
 #### PieChart
 
 ```jsx
-import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 import PieChart from 'cozy-ui/transpiled/react/PieChart'
 
 ;

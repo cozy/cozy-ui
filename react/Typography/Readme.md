@@ -6,7 +6,7 @@ Read the original [Typography component](https://v4.mui.com/components/typograph
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
 import Stack from 'cozy-ui/transpiled/react/Stack'
-import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 
 const variants = [
   'h1',

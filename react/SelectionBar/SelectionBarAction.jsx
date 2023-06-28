@@ -2,7 +2,7 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-import Button from '../MuiCozyTheme/Buttons'
+import Button from '../Button'
 import useBreakpoints from '../hooks/useBreakpoints'
 import Icon from '../Icon'
 import IconButton from '../IconButton'

@@ -10,7 +10,7 @@ class Toggle extends Component {
     const handleToggle = toggled => {}
 
     - import Toggle from 'cozy-ui/transpiled/react/Toggle'
-    + import Switch from 'cozy-ui/transpiled/react/MuiCozyTheme/Switch'
+    + import Switch from 'cozy-ui/transpiled/react/Switch'
 
     - <Toggle onToggle={handleToggle} />
     + <Switch onClick={ ev => handleToggle(ev.target.checked) } />`)

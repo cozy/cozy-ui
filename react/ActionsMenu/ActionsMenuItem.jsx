@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import omit from 'lodash/omit'
 
 import MenuItem from '../MenuItem'
-import ListItem from '../MuiCozyTheme/ListItem'
+import ListItem from '../ListItem'
 
 const cleanPropsForDOM = props => {
   const nonDOMProps = ['doc']

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 import { getBoundT } from 'cozy-client/dist/models/document/locales'
 
-import ListItem from '../../MuiCozyTheme/ListItem'
-import ListItemSecondaryAction from '../../MuiCozyTheme/ListItemSecondaryAction'
+import ListItem from '../../ListItem'
+import ListItemSecondaryAction from '../../ListItemSecondaryAction'
 import IconButton from '../../IconButton'
 import Icon from '../../Icon'
 import Dots from '../../Icons/Dots'

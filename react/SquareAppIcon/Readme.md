@@ -2,7 +2,7 @@ Component used to show an app status, can be used in a list of apps and connecto
 application.
 
 ```jsx
-import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 import SquareAppIcon from 'cozy-ui/transpiled/react/SquareAppIcon'
 import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
 import Icon from 'cozy-ui/transpiled/react/Icon'

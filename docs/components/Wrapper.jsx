@@ -6,7 +6,7 @@ import isTesting from '../../react/helpers/isTesting'
 import themes from '../../theme/themes'
 import palette from '../../theme/palette.json'
 import Typography from '../../react/Typography'
-import Divider from '../../react/MuiCozyTheme/Divider'
+import Divider from '../../react/Divider'
 import { isUsingDevStyleguidist } from '../../scripts/build-utils'
 
 const styles = {
