@@ -7,7 +7,7 @@ import { useClient } from 'cozy-client'
 
 import withBreakpoints from '../../helpers/withBreakpoints'
 import { makeStyles } from '../../styles'
-import Button from '../../Button'
+import Button from '../../deprecated/Button'
 import IconButton from '../../IconButton'
 import Icon from '../../Icon'
 import Typography from '../../Typography'

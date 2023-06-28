@@ -65,7 +65,7 @@ import {
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 
 import Button from 'cozy-ui/transpiled/react/Buttons'
-import Alerter from 'cozy-ui/transpiled/react/Alerter'
+import Alerter from 'cozy-ui/transpiled/react/deprecated/Alerter'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Variants from 'cozy-ui/docs/components/Variants'
@@ -238,9 +238,9 @@ const setFlagshipVars = () => {
 ;
 
 <BreakpointsProvider>
-  <Button 
-    onClick={() => setFlagshipVars()}   
-    variant="secondary"        
+  <Button
+    onClick={() => setFlagshipVars()}
+    variant="secondary"
     label={'Simulate Immersive Flagship Mode'} />
   <Variants initialVariants={initialVariants}>
     {variant => (

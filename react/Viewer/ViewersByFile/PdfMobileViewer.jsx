@@ -4,9 +4,9 @@ import { useClient } from 'cozy-client'
 import { openFileWith } from 'cozy-client/dist/models/fsnative'
 import { isMobileApp } from 'cozy-device-helper'
 
-import Alerter from '../../Alerter'
+import Alerter from '../../deprecated/Alerter'
 import Spinner from '../../Spinner'
-import Button from '../../Button'
+import Button from '../../deprecated/Button'
 import FileImageLoader from '../../FileImageLoader'
 
 import { withViewerLocales } from '../hoc/withViewerLocales'

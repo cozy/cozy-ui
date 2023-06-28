@@ -5,7 +5,7 @@ import Variants from 'cozy-ui/docs/components/Variants'
 import palette from 'cozy-ui/transpiled/react/palette'
 
 import Banner from 'cozy-ui/transpiled/react/Banner'
-import Button from 'cozy-ui/transpiled/react/Button'
+import Button from 'cozy-ui/transpiled/react/deprecated/Button'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import DeviceLaptopIcon from 'cozy-ui/transpiled/react/Icons/DeviceLaptop'
 import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'

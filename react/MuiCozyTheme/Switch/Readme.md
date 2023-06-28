@@ -4,7 +4,7 @@ Uses [Material UI's Switch](https://material-ui.com/components/switches/).
 
 ```jsx
 import { useState, useCallback } from 'react'
-import { Media, Img } from 'cozy-ui/transpiled/react/Media'
+import { Media, Img } from 'cozy-ui/transpiled/react/deprecated/Media'
 import Switch from 'cozy-ui/transpiled/react/MuiCozyTheme/Switch'
 import Typography from "cozy-ui/transpiled/react/Typography"
 import Stack from "cozy-ui/transpiled/react/Stack"

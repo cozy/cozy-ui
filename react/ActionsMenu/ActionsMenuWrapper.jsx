@@ -6,7 +6,7 @@ import useBreakpoints from '../hooks/useBreakpoints'
 import BottomSheet from '../BottomSheet'
 import isTesting from '../helpers/isTesting'
 import Paper from '../Paper'
-import { useActionMenuEffects } from '../ActionMenu/ActionMenuEffects'
+import { useActionMenuEffects } from '../deprecated/ActionMenu/ActionMenuEffects'
 
 const ActionsMenuWrapper = ({
   children,

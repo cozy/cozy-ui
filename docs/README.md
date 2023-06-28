@@ -34,7 +34,7 @@ yarn add cozy-ui
 If you use the transpiled components (from `cozy-ui/transpiled/react`), you need to import the stylesheet (once):
 
 ```
-import Button from 'cozy-ui/transpiled/react/Button'
+import Button from 'cozy-ui/transpiled/react/deprecated/Button'
 import 'cozy-ui/transpiled/react/stylesheet.css'
 
 <Button />

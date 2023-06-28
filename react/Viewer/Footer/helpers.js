@@ -2,7 +2,7 @@ import { isValidElement, Children, cloneElement } from 'react'
 import { saveFileWithCordova } from 'cozy-client/dist/models/fsnative'
 import { isIOS, isMobileApp } from 'cozy-device-helper'
 
-import Alerter from '../../Alerter'
+import Alerter from '../../deprecated/Alerter'
 
 export const shouldBeForwardButton = client => {
   const isDrive = client?.appMetadata?.slug === 'drive'

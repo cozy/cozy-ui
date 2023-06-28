@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 
-import Button from '../Button'
+import Button from '../deprecated/Button'
 import Icon from '../Icon'
 import CloudIcon from '../Icons/Cloud'
 import Input from '../Input'

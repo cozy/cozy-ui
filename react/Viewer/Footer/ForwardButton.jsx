@@ -9,7 +9,7 @@ import Icon from '../../Icon'
 import ReplyIcon from '../../Icons/Reply'
 import ShareIosIcon from '../../Icons/ShareIos'
 import Button from '../../Buttons'
-import Alerter from '../../Alerter'
+import Alerter from '../../deprecated/Alerter'
 import { withViewerLocales } from '../hoc/withViewerLocales'
 import { exportFilesNative } from './helpers'
 

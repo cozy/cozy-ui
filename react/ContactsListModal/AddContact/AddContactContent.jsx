@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Icon from '../../Icon'
 import PeopleIcon from '../../Icons/People'
-import { Media, Img, Bd } from '../../Media'
+import { Media, Img, Bd } from '../../deprecated/Media'
 import TextField from '../../MuiCozyTheme/TextField'
 import Typography from '../../Typography'
 import { withContactsListLocales } from '../withContactsListLocales'
