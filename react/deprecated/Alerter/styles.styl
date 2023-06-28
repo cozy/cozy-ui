@@ -1,0 +1,37 @@
+@require 'tools/mixins'
+@require 'components/alerts'
+@require 'components/button'
+
+.c-alert
+    @extend $alert
+
+:global(.has-modal) .c-alert
+    @extend $alert--modal
+
+.c-alert-wrapper
+    @extend $alert-wrapper
+
+.c-alert-title
+    @extend $alert-title
+
+.c-alert--error
+    @extend $alert--error
+
+.c-alert--success
+    @extend $alert--success
+
+.c-alert--info
+    @extend $alert--info
+
+.c-alert--hidden
+    @extend $alert--hidden
+
+.c-btn--alert-error
+    @extend $button-alert--error
+
+.c-btn--alert-info
+    @extend $button-alert--info
+
+.c-btn--alert-success
+    @extend $button-alert--success
+

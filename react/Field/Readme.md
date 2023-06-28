@@ -66,7 +66,7 @@ It gives access to the underlying `<input />` element, for example to give focus
 
 ```jsx
 import Field from 'cozy-ui/transpiled/react/Field'
-import Button from 'cozy-ui/transpiled/react/Button'
+import Button from 'cozy-ui/transpiled/react/deprecated/Button'
 
 class FieldWithFocus extends React.Component {
   constructor() {

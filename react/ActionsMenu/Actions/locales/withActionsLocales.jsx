@@ -1,7 +1,7 @@
 import withOnlyLocales from '../../../I18n/withOnlyLocales'
 
-import en from '../../../ActionMenu/Actions/locales/en.json'
-import fr from '../../../ActionMenu/Actions/locales/fr.json'
+import en from '../../../deprecated/ActionMenu/Actions/locales/en.json'
+import fr from '../../../deprecated/ActionMenu/Actions/locales/fr.json'
 
 export const locales = {
   en,

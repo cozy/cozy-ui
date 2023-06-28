@@ -9,7 +9,7 @@ The inverted theme is not supported for several components but the work
 
 ```jsx
 import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
-import Button from 'cozy-ui/transpiled/react/Button'
+import Button from 'cozy-ui/transpiled/react/deprecated/Button'
 import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons'
 import TextField from 'cozy-ui/transpiled/react/MuiCozyTheme/TextField'
 import BarButton from 'cozy-ui/transpiled/react/BarButton'

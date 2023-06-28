@@ -5,7 +5,7 @@ import Dialog, { DialogTitle, DialogContent } from '../Dialog'
 import Icon from '../Icon'
 import IconButton from '../IconButton'
 import LeftIcon from '../Icons/Left'
-import { Media, Bd, Img } from '../Media'
+import { Media, Bd, Img } from '../deprecated/Media'
 
 import NestedSelect from './NestedSelect'
 import styles from './styles.styl'

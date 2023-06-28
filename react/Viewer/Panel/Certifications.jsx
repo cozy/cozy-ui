@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import has from 'lodash/has'
 
 import Typography from '../../Typography'
-import { Media, Img, Bd } from '../../Media'
+import { Media, Img, Bd } from '../../deprecated/Media'
 import Icon, { iconPropType } from '../../Icon'
 import CarbonCopyIcon from '../../Icons/CarbonCopy'
 import SafeIcon from '../../Icons/Safe'

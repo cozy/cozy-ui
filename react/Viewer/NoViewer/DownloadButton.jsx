@@ -5,7 +5,7 @@ import flow from 'lodash/flow'
 import { withClient } from 'cozy-client'
 
 import { FileDoctype } from '../../proptypes'
-import Button from '../../Button'
+import Button from '../../deprecated/Button'
 
 import { withViewerLocales } from '../hoc/withViewerLocales'
 import { downloadFile } from '../helpers'

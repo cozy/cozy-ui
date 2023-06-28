@@ -2,7 +2,7 @@
 import I18n from 'cozy-ui/transpiled/react/I18n';
 import DateMonthPicker from 'cozy-ui/transpiled/react/DateMonthPicker';
 import Stack from 'cozy-ui/transpiled/react/Stack';
-import Button from 'cozy-ui/transpiled/react/Button';
+import Button from 'cozy-ui/transpiled/react/deprecated/Button';
 import Dialog, { DialogContent, DialogTitle } from 'cozy-ui/transpiled/react/Dialog';
 import { useCozyDialog, DialogCloseButton } from 'cozy-ui/transpiled/react/CozyDialogs'
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
@@ -52,7 +52,7 @@ const Static = () => (
     f={x => x}
     onSelect={handleSelect}
     initialValue={state.monthDate}
-  /> 
+  />
 );
 
 <BreakpointsProvider>

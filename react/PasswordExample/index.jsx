@@ -1,6 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
-import InlineCard from '../InlineCard'
+import InlineCard from '../deprecated/InlineCard'
 import styles from './styles.styl'
 
 const alphaRegexp = /^[a-z]$/i

@@ -6,7 +6,7 @@ import { useClient } from 'cozy-client'
 import Icon from '../../Icon'
 import DownloadIcon from '../../Icons/Download'
 import Button from '../../Buttons'
-import Alerter from '../../Alerter'
+import Alerter from '../../deprecated/Alerter'
 import { withViewerLocales } from '../hoc/withViewerLocales'
 
 const DownloadButton = ({ file, t }) => {

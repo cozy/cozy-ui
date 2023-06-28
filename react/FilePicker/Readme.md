@@ -2,7 +2,7 @@ FilePicker allows you to select a file or folder in Drive
 
 ```jsx
 import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
-import Button from 'cozy-ui/transpiled/react/Button'
+import Button from 'cozy-ui/transpiled/react/deprecated/Button'
 import FilePicker from 'cozy-ui/transpiled/react/FilePicker'
 import Variants from 'cozy-ui/docs/components/Variants'
 import DemoProvider from './docs/DemoProvider';

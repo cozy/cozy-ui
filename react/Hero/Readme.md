@@ -11,7 +11,7 @@ import Hero, {
   CTA,
   Icon
 } from 'cozy-ui/transpiled/react/Hero';
-import Button from 'cozy-ui/transpiled/react/Button';
+import Button from 'cozy-ui/transpiled/react/deprecated/Button';
 import { t } from '../../docs/utils';
 
 import WarningIcon from "cozy-ui/transpiled/react/Icons/Warning";

@@ -2,7 +2,7 @@ A card is a small block used to separate some content from the rest of the UI.
 
 ```jsx
 import Card from 'cozy-ui/transpiled/react/Card';
-import Button from 'cozy-ui/transpiled/react/Button';
+import Button from 'cozy-ui/transpiled/react/deprecated/Button';
 import Typography from "cozy-ui/transpiled/react/Typography";
 
 <Card>

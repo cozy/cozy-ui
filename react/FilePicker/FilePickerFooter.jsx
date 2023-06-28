@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 
-import Button from '../Button'
+import Button from '../deprecated/Button'
 import { createUseI18n } from '../I18n'
 
 import en from './locales/en.json'

@@ -1,6 +1,6 @@
 ```jsx
 import { useState } from 'react'
-import Button from '../Button'
+import Button from '../deprecated/Button'
 import Circle from '../Circle'
 import NestedSelectModal from './Modal'
 import ListItem from '../MuiCozyTheme/ListItem'

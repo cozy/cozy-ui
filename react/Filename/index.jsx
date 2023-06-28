@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { Media, Bd, Img } from '../Media'
+import { Media, Bd, Img } from '../deprecated/Media'
 import Icon from '../Icon'
 import Typography from '../Typography'
 import styles from './styles.styl'

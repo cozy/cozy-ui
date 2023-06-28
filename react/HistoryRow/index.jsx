@@ -5,7 +5,7 @@ import Circle from '../Circle'
 import Icon from '../Icon'
 import DownloadIcon from '../Icons/Download'
 import FileIcon from '../Icons/File'
-import { Media, Bd, Img } from '../Media'
+import { Media, Bd, Img } from '../deprecated/Media'
 import Typography from '../Typography'
 
 import styles from './styles.styl'

@@ -386,7 +386,7 @@ exports[`Banner should render examples: Banner 1`] = `
           </div>
         </div>
         <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-flex-end MuiGrid-grid-xs-12 MuiGrid-grid-lg-4\\">
-          <div class=\\"MuiGrid-root styles__c-banner-buttons___3sLgG MuiGrid-item\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path></svg><span>Download</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>No, thanks!</span></span></button></div>
+          <div class=\\"MuiGrid-root styles__c-banner-buttons___3sLgG MuiGrid-item\\"><button type=\\"submit\\" class=\\"styles__c-btn___3kXsk styles__c-btn--text___33vmu styles__c-btn--center___Nny0n\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path></svg><span>Download</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___3kXsk styles__c-btn--text___33vmu styles__c-btn--center___Nny0n\\"><span><span>No, thanks!</span></span></button></div>
         </div>
       </div>
     </div>
@@ -422,160 +422,6 @@ exports[`BarButton should render examples: BarButton 4`] = `
   <div class=\\"styles__BarButton___3z5Er\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__BarButtonIcon___1pSOT styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
       <path d=\\"M14.25 7.078c.051.26.077.568.077.926 0 .358-.026.665-.078.925l1.62 1.333c.131.086.163.203.099.352-.325.95-.859 1.826-1.602 2.628-.104.124-.229.155-.37.094l-2.032-.668c-.52.396-1.08.705-1.68.926l-.409 2c-.026.146-.117.233-.273.258-.56.1-1.094.148-1.602.148a9.21 9.21 0 01-1.601-.148c-.157-.024-.248-.11-.274-.259l-.409-1.999a5.98 5.98 0 01-1.68-.926l-2.03.668c-.145.062-.268.03-.372-.094C.892 12.44.359 11.565.032 10.614c-.065-.148-.032-.266.098-.352L1.751 8.93a4.761 4.761 0 01-.078-.925c0-.358.026-.667.078-.926L.131 5.746C0 5.66-.034 5.542.031 5.394c.326-.95.86-1.826 1.602-2.627.104-.123.228-.154.371-.093l2.031.667a5.99 5.99 0 011.68-.926l.41-1.999c.025-.148.116-.234.273-.259a8.221 8.221 0 013.202 0c.156.024.247.111.273.26l.41 1.998c.6.223 1.159.53 1.68.926l2.03-.667c.143-.062.267-.03.371.093.742.802 1.276 1.678 1.602 2.627.064.148.032.266-.098.352l-1.62 1.332zM8 4.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z\\" fill-rule=\\"evenodd\\"></path>
     </svg></div>
-</div>"
-`;
-
-exports[`Button should render examples: Button 1`] = `
-"<div>
-  <div>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly styles__c-btn--center___16_Xh\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly styles__c-btn--center___16_Xh\\"><span><span>regular</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--regular___2HUly styles__c-btn--center___16_Xh\\"><span><span>regular</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
-          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
-          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-        </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--ghost___1HC3L styles__c-btn--center___16_Xh\\"><span><span>ghost</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--ghost___1HC3L styles__c-btn--center___16_Xh\\"><span><span>ghost</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--ghost___1HC3L styles__c-btn--center___16_Xh\\"><span><span>ghost</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
-          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
-          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-        </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>danger</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>danger</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
-          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
-          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-        </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--center___16_Xh\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--center___16_Xh\\"><span><span>highlight</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--center___16_Xh\\"><span><span>highlight</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
-          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
-          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-        </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>secondary</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>secondary</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
-          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
-          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-        </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>danger-outline</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>danger-outline</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
-          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
-          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-        </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi styles__c-btn--center___16_Xh\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi styles__c-btn--center___16_Xh\\"><span><span>alpha</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--alpha___2ECZi styles__c-btn--center___16_Xh\\"><span><span>alpha</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
-          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
-          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-        </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>text</span></span></button><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>text</span></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh\\"><span><span>text</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
-          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
-          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-        </svg></span></button></p>
-  </div>
-</div>"
-`;
-
-exports[`Button should render examples: Button 2`] = `
-"<div>
-  <div>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--tiny___1pFv6 styles__c-btn--center___16_Xh\\"><span><span>Tiny</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--small___3ArkI styles__c-btn--center___16_Xh\\"><span><span>Small</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Normal</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Normal</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN styles__c-btn--center___16_Xh\\"><span><span>Large</span></span></button></p>
-  </div>
-</div>"
-`;
-
-exports[`Button should render examples: Button 3`] = `
-"<div>
-  <div class=\\"styles__Stack--m___1tSpV\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh u-db\\"><span><span>Normal</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--narrow___27FHD styles__c-btn--center___16_Xh u-db\\"><span><span>N…</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--full___2VmR1 styles__c-btn--center___16_Xh u-db\\"><span><span>Full width</span></span></button></div>
-</div>"
-`;
-
-exports[`Button should render examples: Button 4`] = `
-"<div>
-  <div>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--full___2VmR1 styles__c-btn--center___16_Xh\\"><span><span>Default (center)</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--full___2VmR1 styles__c-btn--left___23VNa\\"><span><span>Left</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--full___2VmR1 styles__c-btn--right___wklLq\\"><span><span>Right</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--full___2VmR1 styles__c-btn--center___16_Xh\\"><span><span>Center</span></span></button></p>
-  </div>
-</div>"
-`;
-
-exports[`Button should render examples: Button 5`] = `
-"<div>
-  <div>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN styles__c-btn--full___2VmR1 styles__c-btn--center___16_Xh\\"><span><span>Label</span><span class=\\"u-ml-auto\\"><div class=\\"styles__c-chip___2aPqg styles__c-chip--smallSize___3i9gj styles__c-chip--primaryTheme___1ZNhX u-breakword styles__c-chip--normalPrimaryTheme___24yFt u-m-0\\">1/2</div></span></span></button></p>
-  </div>
-</div>"
-`;
-
-exports[`Button should render examples: Button 6`] = `"<div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger-outline___1mO1B styles__c-btn--center___16_Xh\\"><span><span>Show alert</span></span></button></div>"`;
-
-exports[`Button should render examples: Button 7`] = `
-"<div><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Loading</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
-      <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
-      <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-    </svg></span></button></div>"
-`;
-
-exports[`Button should render examples: Button 8`] = `"<div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Toggle busy</span></span></button></div>"`;
-
-exports[`Button should render examples: Button 9`] = `
-"<div>
-  <div><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>Loading</span></span></button><a href=\\"http://cozy.io\\" aria-disabled=\\"true\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Go to Cozy website</span></span></a></div>
-</div>"
-`;
-
-exports[`Button should render examples: Button 10`] = `
-"<div>
-  <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path d=\\"M4.5 1H2.007C1.45 1 1 1.448 1 2v1h14V2a1 1 0 00-1.007-1H11.5L11 0H5l-.5 1zM2 4h12v9.991A2.01 2.01 0 0111.991 16H4.01A2.01 2.01 0 012 13.991V4z\\" fill-rule=\\"evenodd\\"></path></svg><span>delete</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--narrow___27FHD styles__c-btn--center___16_Xh\\" title=\\"See more\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path fill-rule=\\"evenodd\\" d=\\"M2 10a2 2 0 100-4 2 2 0 000 4zm12 0a2 2 0 100-4 2 2 0 000 4zm-6 0a2 2 0 100-4 2 2 0 000 4z\\"></path></svg><span class=\\"u-visuallyhidden\\">See more</span></span></button></div>
-</div>"
-`;
-
-exports[`Button should render examples: Button 11`] = `
-"<div>
-  <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" style=\\"fill: yellow;\\" width=\\"16\\" height=\\"16\\"><path d=\\"M4.5 1H2.007C1.45 1 1 1.448 1 2v1h14V2a1 1 0 00-1.007-1H11.5L11 0H5l-.5 1zM2 4h12v9.991A2.01 2.01 0 0111.991 16H4.01A2.01 2.01 0 012 13.991V4z\\" fill-rule=\\"evenodd\\"></path></svg><span>delete</span></span></button></div>
-</div>"
-`;
-
-exports[`Button should render examples: Button 12`] = `
-"<div>
-  <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh styles__c-btn--round___1Lkyl\\" title=\\"Add\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg><span class=\\"u-visuallyhidden\\">Add</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh styles__c-btn--round___1Lkyl\\" title=\\"Delete\\"><span><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path></svg><span class=\\"u-visuallyhidden\\">Delete</span></span></button></div>
-</div>"
-`;
-
-exports[`Button should render examples: Button 13`] = `
-"<div>
-  <div>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--tiny___1pFv6 styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"8\\" height=\\"8\\" aria-hidden=\\"true\\" focusable=\\"false\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg><span>Tiny text</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--small___3ArkI styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\" aria-hidden=\\"true\\" focusable=\\"false\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg><span>Small text</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg><span>Regular text</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"18\\" height=\\"18\\" aria-hidden=\\"true\\" focusable=\\"false\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg><span>Large text</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Secondary theme</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Highlight theme</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>DANGER theme</span></span></button></p>
-    <p><button type=\\"submit\\" aria-disabled=\\"true\\" disabled=\\"\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Disabled</span></span></button></p>
-    <p><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
-          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
-          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy secondary</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
-          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
-          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--highlight___2jRfu styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy highlight</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
-          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
-          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-        </svg></span></button><button type=\\"submit\\" aria-busy=\\"true\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Busy danger</span><svg viewBox=\\"0 0 32 32\\" class=\\"u-ml-half styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\">
-          <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
-          <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-        </svg></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><svg viewBox=\\"0 0 52 52\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path fill=\\"#297EF2\\" fill-rule=\\"evenodd\\" d=\\"M38.231 44H13.769C6.175 44 0 37.756 0 30.08c0-3.66 1.394-7.117 3.927-9.733 2.219-2.29 5.093-3.715 8.203-4.086a13.887 13.887 0 014.042-8.292A13.608 13.608 0 0125.801 4c3.62 0 7.04 1.407 9.629 3.968a13.897 13.897 0 014.038 8.25C46.482 16.853 52 22.828 52 30.082 52 37.756 45.82 44 38.23 44h.001zm-.163-3.001h.104c5.97 0 10.828-4.91 10.828-10.947 0-6.035-4.857-10.946-10.828-10.946h-.11c-.779 0-1.417-.627-1.435-1.417C36.492 11.794 31.637 7 25.803 7c-5.835 0-10.692 4.796-10.826 10.69a1.445 1.445 0 01-1.403 1.42C7.744 19.244 3 24.153 3 30.052 3 36.09 7.857 41 13.828 41h.088l.035-.002c.03 0 .062 0 .093.002h24.021l.003-.001zm-4.302-11.776c-.875-.585-.918-1.659-.92-1.706A.52.52 0 0032.32 27a.523.523 0 00-.506.536c.002.039.016.543.251 1.137a7.99 7.99 0 01-11.138.019 3.554 3.554 0 00.257-1.155.523.523 0 00-.503-.536.526.526 0 00-.528.515c0 .043-.042 1.121-.92 1.706a.536.536 0 00-.15.731.51.51 0 00.714.154c.225-.15.414-.322.572-.505a9.006 9.006 0 0012.251-.01c.16.184.35.36.582.515a.503.503 0 00.281.085.516.516 0 00.432-.24.537.537 0 00-.15-.731v.002z\\"></path></svg><span>Cozy</span></span></button></p>
-    <p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg><span>Subtle Secondary Cozy</span></span></button></p>
-  </div>
-</div>"
-`;
-
-exports[`Button should render examples: Button 14`] = `
-"<div>
-  <div>
-    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--tiny___1pFv6\\"><span><span>Link to Cozy.io</span></span></a></p>
-    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--small___3ArkI\\"><span><span>Link to Cozy.io</span></span></a></p>
-    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"styles__c-btn___-2Vnj\\"><span><span>Link to Cozy.io</span></span></a></p>
-    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN\\"><span><span>Link to Cozy.io</span></span></a></p>
-    <p><a href=\\"https://cozy.io\\" target=\\"_blank\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf\\"><span><svg viewBox=\\"0 0 52 52\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path fill=\\"#297EF2\\" fill-rule=\\"evenodd\\" d=\\"M38.231 44H13.769C6.175 44 0 37.756 0 30.08c0-3.66 1.394-7.117 3.927-9.733 2.219-2.29 5.093-3.715 8.203-4.086a13.887 13.887 0 014.042-8.292A13.608 13.608 0 0125.801 4c3.62 0 7.04 1.407 9.629 3.968a13.897 13.897 0 014.038 8.25C46.482 16.853 52 22.828 52 30.082 52 37.756 45.82 44 38.23 44h.001zm-.163-3.001h.104c5.97 0 10.828-4.91 10.828-10.947 0-6.035-4.857-10.946-10.828-10.946h-.11c-.779 0-1.417-.627-1.435-1.417C36.492 11.794 31.637 7 25.803 7c-5.835 0-10.692 4.796-10.826 10.69a1.445 1.445 0 01-1.403 1.42C7.744 19.244 3 24.153 3 30.052 3 36.09 7.857 41 13.828 41h.088l.035-.002c.03 0 .062 0 .093.002h24.021l.003-.001zm-4.302-11.776c-.875-.585-.918-1.659-.92-1.706A.52.52 0 0032.32 27a.523.523 0 00-.506.536c.002.039.016.543.251 1.137a7.99 7.99 0 01-11.138.019 3.554 3.554 0 00.257-1.155.523.523 0 00-.503-.536.526.526 0 00-.528.515c0 .043-.042 1.121-.92 1.706a.536.536 0 00-.15.731.51.51 0 00.714.154c.225-.15.414-.322.572-.505a9.006 9.006 0 0012.251-.01c.16.184.35.36.582.515a.503.503 0 00.281.085.516.516 0 00.432-.24.537.537 0 00-.15-.731v.002z\\"></path></svg><span>Link to Cozy.io</span></span></a></p>
-  </div>
-</div>"
-`;
-
-exports[`Button should render examples: Button 15`] = `
-"<div>
-  <div><span to=\\"/destination\\" class=\\"styles__c-btn___-2Vnj\\"><span>I'm a (false) NavLink</span></span></div>
 </div>"
 `;
 
@@ -875,7 +721,7 @@ exports[`Card should render examples: Card 1`] = `
 "<div>
   <div class=\\"styles__c-card___YgP7B\\">
     <h6 class=\\"MuiTypography-root u-mb-1 MuiTypography-h6 MuiTypography-colorTextPrimary\\">This is a card</h6>
-    <p class=\\"MuiTypography-root u-mb-1 MuiTypography-body1 MuiTypography-colorTextPrimary\\">This is some card content. Content can be small or huge.</p><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh u-ml-0\\"><span><span>Demo button</span></span></button>
+    <p class=\\"MuiTypography-root u-mb-1 MuiTypography-body1 MuiTypography-colorTextPrimary\\">This is some card content. Content can be small or huge.</p><button type=\\"submit\\" class=\\"styles__c-btn___3kXsk styles__c-btn--center___Nny0n u-ml-0\\"><span><span>Demo button</span></span></button>
   </div>
 </div>"
 `;
@@ -1121,41 +967,6 @@ exports[`Chips should render examples: Chips 2`] = `
             </svg><span class=\\"MuiChip-label\\">1 invoice</span><svg viewBox=\\"0 0 16 16\\" class=\\"u-h-1 MuiChip-deleteIcon styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path d=\\"M9 0v2h3.5L6 8.5 7.5 10 14 3.5V7h2V1.003A.996.996 0 0014.997 0H9zM7 2V0H1.003A1 1 0 000 1v14c0 .552.445 1 1 1h14c.552 0 1-.438 1-1.003V9h-2v5H2V2h5z\\" fill-rule=\\"evenodd\\"></path>
             </svg></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>"
-`;
-
-exports[`CompositeRow should render examples: CompositeRow 1`] = `
-"<div>
-  <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
-    <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">CHIPS</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">DENSE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">SECONDARYTEXT</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">DOTS</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">ICON</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">EXTRAINFORMATION</span></label>
-  </div>
-  <div class=\\"styles__media___cSJMp styles__CompositeRow___3KCwt\\" style=\\"box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); box-sizing: border-box;\\">
-    <div class=\\"u-media u-media-grow u-row-m\\">
-      <div class=\\"styles__img___3SHpG u-flex-self-start\\">
-        <div class=\\"styles__c-circle___1DuMR\\" style=\\"background-color: rgb(253, 116, 97); --circleSize: 40px;\\"><span class=\\"styles__c-circle-text___1jFgD\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M2 0h11a1 1 0 011 1v3h1a1 1 0 011 1v10a1 1 0 01-1 1H2a2 2 0 01-2-2V2a2 2 0 012-2zm1 2a1 1 0 100 2h9V2H3zm8 9a1 1 0 100-2 1 1 0 000 2z\\"></path></svg></span></div>
-      </div>
-      <div class=\\"u-media-grow u-stack-xs\\">
-        <div class=\\"u-media u-row-m\\">
-          <div class=\\"styles__bd___1Uv-F styles__CompositeRow__body___3nEEv\\">
-            <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Primary text</p><span class=\\"MuiTypography-root MuiTypography-caption MuiTypography-colorTextSecondary\\">Secondary Text</span>
-          </div>
-          <div class=\\"styles__img___3SHpG\\">
-            <h6 class=\\"MuiTypography-root MuiTypography-h6 MuiTypography-colorTextPrimary\\" tag=\\"span\\">12,15€</h6>
-          </div>
-          <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"16\\" height=\\"16\\">
-              <path fill-rule=\\"evenodd\\" d=\\"M2 10a2 2 0 100-4 2 2 0 000 4zm12 0a2 2 0 100-4 2 2 0 000 4zm-6 0a2 2 0 100-4 2 2 0 000 4z\\"></path>
-            </svg></div>
-        </div>
-        <div class=\\"styles__media___cSJMp\\">
-          <div class=\\"styles__bd___1Uv-F u-row-xs\\">
-            <div class=\\"styles__c-chip___2aPqg styles__c-chip--smallSize___3i9gj styles__c-chip--outlinedVariant___BP7oS styles__c-chip--normalTheme___kVm5M u-breakword styles__c-chip--outlinedNormalTheme___itU6s styles__c-chip--hoverableNormalTheme___271-M u-mr-0 u-mb-0\\"><img class=\\"u-mr-half\\" src=\\"https://upload.wikimedia.org/wikipedia/commons/2/2e/Fnac_Logo.svg\\" height=\\"50%\\"> Fnac</div>
-            <div class=\\"styles__c-chip___2aPqg styles__c-chip--smallSize___3i9gj styles__c-chip--outlinedVariant___BP7oS styles__c-chip--normalTheme___kVm5M u-breakword styles__c-chip--outlinedNormalTheme___itU6s styles__c-chip--hoverableNormalTheme___271-M u-mr-0 u-mb-0\\"><img class=\\"u-mr-half\\" src=\\"https://upload.wikimedia.org/wikipedia/commons/2/2e/Fnac_Logo.svg\\" height=\\"50%\\"> Fnac</div>
-          </div>
-          <div class=\\"styles__img___3SHpG\\"><span class=\\"MuiTypography-root MuiTypography-caption MuiTypography-colorTextSecondary\\">Extra information to the right of the card</span></div>
         </div>
       </div>
     </div>
@@ -2701,134 +2512,134 @@ exports[`Hero should render examples: Hero 1`] = `
         <p class=\\" \\">Automatic follow-up of your medical expenses</p>
       </div>
     </div>
-    <p class=\\" styles__Hero-cta___2KhwU\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--full___2VmR1 styles__c-btn--center___16_Xh\\"><span><span>Connect your bank accounts</span></span></button></p>
+    <p class=\\" styles__Hero-cta___2KhwU\\"><button type=\\"submit\\" class=\\"styles__c-btn___3kXsk styles__c-btn--full___1VumB styles__c-btn--center___Nny0n\\"><span><span>Connect your bank accounts</span></span></button></p>
   </div>
 </div>"
 `;
 
 exports[`HistoryRow should render examples: HistoryRow 1`] = `
 "<div>
-  <div class=\\"styles__media___cSJMp styles__HistoryRowMedia___2jgYN\\">
+  <div class=\\"styles__media___1rIBu styles__HistoryRowMedia___2jgYN\\">
     <div class=\\"u-media u-media-grow u-row-m\\">
       <div class=\\"styles__HistoryRowCircleWrapper___3r8Uo\\">
-        <div class=\\"styles__img___3SHpG styles__HistoryRowMediaImg___1J9OI\\">
+        <div class=\\"styles__img___3sztD styles__HistoryRowMediaImg___1J9OI\\">
           <div class=\\"styles__c-circle___1DuMR styles__HistoryRowCircle___4FWWa\\" style=\\"--circleSize: 32px;\\"><span class=\\"styles__c-circle-text___1jFgD\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--primaryTextColor);\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"file_svg__a\\" d=\\"M1 1c0-.552.446-1 .998-1H10v5h5v10.004a1 1 0 01-1.007.996H2.007A1.002 1.002 0 011 15V1zm10 3V0l4 4h-4z\\"></path></defs><use xlink:href=\\"#file_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span></div>
         </div>
       </div>
       <div class=\\"u-media u-media-grow u-stack-xs u-row-m\\">
-        <div class=\\"styles__bd___1Uv-F\\">
+        <div class=\\"styles__bd___3SAX2\\">
           <h6 class=\\"MuiTypography-root MuiTypography-h6 MuiTypography-colorTextPrimary\\">12/12/12 12:12</h6>
           <h6 class=\\"MuiTypography-root MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-gutterBottom\\">Current Version</h6><span class=\\"MuiTypography-root MuiTypography-caption MuiTypography-colorTextSecondary MuiTypography-gutterBottom\\">10ko</span>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
+        <div class=\\"styles__img___3sztD\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
             <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
           </svg></div>
       </div>
     </div>
   </div>
-  <div class=\\"styles__media___cSJMp styles__HistoryRowMedia___2jgYN\\">
+  <div class=\\"styles__media___1rIBu styles__HistoryRowMedia___2jgYN\\">
     <div class=\\"u-media u-media-grow u-row-m\\">
       <div class=\\"styles__HistoryRowCircleWrapper___3r8Uo\\">
-        <div class=\\"styles__img___3SHpG styles__HistoryRowMediaImg___1J9OI\\">
+        <div class=\\"styles__img___3sztD styles__HistoryRowMediaImg___1J9OI\\">
           <div class=\\"styles__c-circle___1DuMR styles__HistoryRowCircle___4FWWa\\" style=\\"--circleSize: 16px;\\"><span class=\\"styles__c-circle-text___1jFgD\\"></span></div>
         </div>
       </div>
       <div class=\\"u-media u-media-grow u-stack-xs u-row-m\\">
-        <div class=\\"styles__bd___1Uv-F\\">
+        <div class=\\"styles__bd___3SAX2\\">
           <h6 class=\\"MuiTypography-root MuiTypography-h6 MuiTypography-colorTextPrimary\\">12/12/12 12:10</h6>
           <h6 class=\\"MuiTypography-root MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-gutterBottom\\"></h6><span class=\\"MuiTypography-root MuiTypography-caption MuiTypography-colorTextSecondary MuiTypography-gutterBottom\\">9ko</span>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
+        <div class=\\"styles__img___3sztD\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
             <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
           </svg></div>
       </div>
     </div>
   </div>
-  <div class=\\"styles__media___cSJMp styles__HistoryRowMedia___2jgYN\\">
+  <div class=\\"styles__media___1rIBu styles__HistoryRowMedia___2jgYN\\">
     <div class=\\"u-media u-media-grow u-row-m\\">
       <div class=\\"styles__HistoryRowCircleWrapper___3r8Uo\\">
-        <div class=\\"styles__img___3SHpG styles__HistoryRowMediaImg___1J9OI\\">
+        <div class=\\"styles__img___3sztD styles__HistoryRowMediaImg___1J9OI\\">
           <div class=\\"styles__c-circle___1DuMR styles__HistoryRowCircle___4FWWa\\" style=\\"--circleSize: 32px;\\"><span class=\\"styles__c-circle-text___1jFgD\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--primaryTextColor);\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"file_svg__a\\" d=\\"M1 1c0-.552.446-1 .998-1H10v5h5v10.004a1 1 0 01-1.007.996H2.007A1.002 1.002 0 011 15V1zm10 3V0l4 4h-4z\\"></path></defs><use xlink:href=\\"#file_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span></div>
         </div>
       </div>
       <div class=\\"u-media u-media-grow u-stack-xs u-row-m\\">
-        <div class=\\"styles__bd___1Uv-F\\">
+        <div class=\\"styles__bd___3SAX2\\">
           <h6 class=\\"MuiTypography-root MuiTypography-h6 MuiTypography-colorTextPrimary\\">12/12/12 12:09</h6>
           <h6 class=\\"MuiTypography-root MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-gutterBottom\\">V2</h6><span class=\\"MuiTypography-root MuiTypography-caption MuiTypography-colorTextSecondary MuiTypography-gutterBottom\\">9ko</span>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
+        <div class=\\"styles__img___3sztD\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
             <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
           </svg></div>
       </div>
     </div>
   </div>
-  <div class=\\"styles__media___cSJMp styles__HistoryRowMedia___2jgYN\\">
+  <div class=\\"styles__media___1rIBu styles__HistoryRowMedia___2jgYN\\">
     <div class=\\"u-media u-media-grow u-row-m\\">
       <div class=\\"styles__HistoryRowCircleWrapper___3r8Uo\\">
-        <div class=\\"styles__img___3SHpG styles__HistoryRowMediaImg___1J9OI\\">
+        <div class=\\"styles__img___3sztD styles__HistoryRowMediaImg___1J9OI\\">
           <div class=\\"styles__c-circle___1DuMR styles__HistoryRowCircle___4FWWa\\" style=\\"--circleSize: 16px;\\"><span class=\\"styles__c-circle-text___1jFgD\\"></span></div>
         </div>
       </div>
       <div class=\\"u-media u-media-grow u-stack-xs u-row-m\\">
-        <div class=\\"styles__bd___1Uv-F\\">
+        <div class=\\"styles__bd___3SAX2\\">
           <h6 class=\\"MuiTypography-root MuiTypography-h6 MuiTypography-colorTextPrimary\\">12/12/12 12:07</h6>
           <h6 class=\\"MuiTypography-root MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-gutterBottom\\"></h6><span class=\\"MuiTypography-root MuiTypography-caption MuiTypography-colorTextSecondary MuiTypography-gutterBottom\\">9ko</span>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
+        <div class=\\"styles__img___3sztD\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
             <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
           </svg></div>
       </div>
     </div>
   </div>
-  <div class=\\"styles__media___cSJMp styles__HistoryRowMedia___2jgYN\\">
+  <div class=\\"styles__media___1rIBu styles__HistoryRowMedia___2jgYN\\">
     <div class=\\"u-media u-media-grow u-row-m\\">
       <div class=\\"styles__HistoryRowCircleWrapper___3r8Uo\\">
-        <div class=\\"styles__img___3SHpG styles__HistoryRowMediaImg___1J9OI\\">
+        <div class=\\"styles__img___3sztD styles__HistoryRowMediaImg___1J9OI\\">
           <div class=\\"styles__c-circle___1DuMR styles__HistoryRowCircle___4FWWa\\" style=\\"--circleSize: 16px;\\"><span class=\\"styles__c-circle-text___1jFgD\\"></span></div>
         </div>
       </div>
       <div class=\\"u-media u-media-grow u-stack-xs u-row-m\\">
-        <div class=\\"styles__bd___1Uv-F\\">
+        <div class=\\"styles__bd___3SAX2\\">
           <h6 class=\\"MuiTypography-root MuiTypography-h6 MuiTypography-colorTextPrimary\\">12/12/12 12:05</h6>
           <h6 class=\\"MuiTypography-root MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-gutterBottom\\"></h6><span class=\\"MuiTypography-root MuiTypography-caption MuiTypography-colorTextSecondary MuiTypography-gutterBottom\\">9ko</span>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
+        <div class=\\"styles__img___3sztD\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
             <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
           </svg></div>
       </div>
     </div>
   </div>
-  <div class=\\"styles__media___cSJMp styles__HistoryRowMedia___2jgYN\\">
+  <div class=\\"styles__media___1rIBu styles__HistoryRowMedia___2jgYN\\">
     <div class=\\"u-media u-media-grow u-row-m\\">
       <div class=\\"styles__HistoryRowCircleWrapper___3r8Uo\\">
-        <div class=\\"styles__img___3SHpG styles__HistoryRowMediaImg___1J9OI\\">
+        <div class=\\"styles__img___3sztD styles__HistoryRowMediaImg___1J9OI\\">
           <div class=\\"styles__c-circle___1DuMR styles__HistoryRowCircle___4FWWa\\" style=\\"--circleSize: 16px;\\"><span class=\\"styles__c-circle-text___1jFgD\\"></span></div>
         </div>
       </div>
       <div class=\\"u-media u-media-grow u-stack-xs u-row-m\\">
-        <div class=\\"styles__bd___1Uv-F\\">
+        <div class=\\"styles__bd___3SAX2\\">
           <h6 class=\\"MuiTypography-root MuiTypography-h6 MuiTypography-colorTextPrimary\\">12/12/12 12:04</h6>
           <h6 class=\\"MuiTypography-root MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-gutterBottom\\"></h6><span class=\\"MuiTypography-root MuiTypography-caption MuiTypography-colorTextSecondary MuiTypography-gutterBottom\\">9ko</span>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
+        <div class=\\"styles__img___3sztD\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
             <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
           </svg></div>
       </div>
     </div>
   </div>
-  <div class=\\"styles__media___cSJMp styles__HistoryRowMedia___2jgYN\\">
+  <div class=\\"styles__media___1rIBu styles__HistoryRowMedia___2jgYN\\">
     <div class=\\"u-media u-media-grow u-row-m\\">
       <div class=\\"styles__HistoryRowCircleWrapper___3r8Uo\\">
-        <div class=\\"styles__img___3SHpG styles__HistoryRowMediaImg___1J9OI\\">
+        <div class=\\"styles__img___3sztD styles__HistoryRowMediaImg___1J9OI\\">
           <div class=\\"styles__c-circle___1DuMR styles__HistoryRowCircle___4FWWa\\" style=\\"--circleSize: 32px;\\"><span class=\\"styles__c-circle-text___1jFgD\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--primaryTextColor);\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"file_svg__a\\" d=\\"M1 1c0-.552.446-1 .998-1H10v5h5v10.004a1 1 0 01-1.007.996H2.007A1.002 1.002 0 011 15V1zm10 3V0l4 4h-4z\\"></path></defs><use xlink:href=\\"#file_svg__a\\" fill-rule=\\"evenodd\\"></use></svg></span></div>
         </div>
       </div>
       <div class=\\"u-media u-media-grow u-stack-xs u-row-m\\">
-        <div class=\\"styles__bd___1Uv-F\\">
+        <div class=\\"styles__bd___3SAX2\\">
           <h6 class=\\"MuiTypography-root MuiTypography-h6 MuiTypography-colorTextPrimary\\">12/12/12 12:03</h6>
           <h6 class=\\"MuiTypography-root MuiTypography-h6 MuiTypography-colorTextPrimary MuiTypography-gutterBottom\\">V1</h6><span class=\\"MuiTypography-root MuiTypography-caption MuiTypography-colorTextSecondary MuiTypography-gutterBottom\\">9ko</span>
         </div>
-        <div class=\\"styles__img___3SHpG\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
+        <div class=\\"styles__img___3sztD\\"><svg viewBox=\\"0 0 16 16\\" class=\\"u-c-pointer styles__icon___23x3R\\" style=\\"fill: var(--secondaryTextColor);\\" width=\\"16\\" height=\\"16\\">
             <path fill-rule=\\"evenodd\\" d=\\"M7 9.586L5.707 8.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L9 9.586V2a1 1 0 10-2 0v7.586zM1 14h14a1 1 0 110 2H1a1 1 0 110-2z\\"></path>
           </svg></div>
       </div>
@@ -2853,125 +2664,6 @@ exports[`IconStack should render examples: IconStack 1`] = `
   </div>
 </div>"
 `;
-
-exports[`Infos should render examples: Infos 1`] = `
-"<div>
-  <div class=\\"u-stack-m\\">
-    <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
-      <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">TITLE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">ACTION</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">SECONDARYTHEME</span></label>
-    </div>
-    <div class=\\"styles__Infos___2ZZVs styles__Infos--primary___3i4ll\\">
-      <div class=\\"styles__Stack--m___1tSpV\\">
-        <div class=\\"styles__Infos-description___7P1NP\\">
-          <div class=\\"styles__Stack--xs___2R5lW\\">
-            <h5 class=\\"MuiTypography-root MuiTypography-h5 MuiTypography-colorTextPrimary\\">Date of birth</h5>
-            <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">10 December 1815</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
-      <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">TITLE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">ACTION</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">DANGERTHEME</span></label>
-    </div>
-    <div class=\\"styles__Infos___2ZZVs styles__Infos--danger___3wKYc\\">
-      <div class=\\"styles__Stack--m___1tSpV\\">
-        <div class=\\"styles__Infos-description___7P1NP\\">
-          <div class=\\"styles__Stack--xs___2R5lW\\">
-            <h5 class=\\"MuiTypography-root u-error MuiTypography-h5 MuiTypography-colorTextPrimary\\">Date of birth</h5>
-            <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">10 December 1815</p>
-          </div>
-        </div>
-        <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--danger___17T_C styles__c-btn--center___16_Xh\\"><span><span>ok</span></span></button></div>
-      </div>
-    </div>
-    <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
-      <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">TITLE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">MULTIACTIONS</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">DANGERTHEME</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">DISMISSACTION</span></label>
-    </div>
-    <div class=\\"styles__Infos___2ZZVs styles__Infos--primary___3i4ll\\">
-      <div class=\\"styles__Stack--m___1tSpV\\">
-        <div class=\\"styles__Infos-description___7P1NP\\">
-          <div class=\\"styles__Stack--xs___2R5lW\\">
-            <h5 class=\\"MuiTypography-root MuiTypography-h5 MuiTypography-colorTextPrimary\\">Date of birth</h5>
-            <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">10 December 1815</p>
-          </div>
-        </div>
-        <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>one</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>two</span></span></button><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--center___16_Xh\\"><span><span>three</span></span></button></div>
-      </div>
-      <div class=\\"styles__Info-close___1RVQP\\"><button class=\\"MuiButtonBase-root MuiIconButton-root medium\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\"><path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path></svg></span></button></div>
-    </div>
-  </div>
-</div>"
-`;
-
-exports[`InfosCarrousel should render examples: InfosCarrousel 1`] = `
-"<div>
-  <div class=\\"u-stack-m\\"><br>
-    <div class=\\"styles__InfosCarrousel___3rCyB\\">
-      <div style=\\"overflow-x: hidden;\\">
-        <div style=\\"height: 0px; flex-direction: row; transition: all 0s ease 0s; transform: translate(0%, 0); direction: ltr; display: flex; will-change: transform;\\" class=\\"react-swipeable-view-container\\">
-          <div style=\\"width: 100%; flex-shrink: 0; overflow: auto; overflow-y: hidden;\\" aria-hidden=\\"false\\" data-swipeable=\\"true\\">
-            <div class=\\"styles__Infos___2ZZVs styles__Infos--danger___3wKYc\\">
-              <div class=\\"styles__Stack--m___1tSpV\\">
-                <div class=\\"styles__Infos-description___7P1NP\\">
-                  <div class=\\"styles__Stack--xs___2R5lW\\">
-                    <h6 class=\\"MuiTypography-root MuiTypography-h6 MuiTypography-colorTextPrimary\\">News 1</h6>
-                    <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Breaking news 1</p>
-                  </div>
-                </div>
-                <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>A CTA button</span></span></button></div>
-              </div>
-              <div class=\\"styles__Info-close___1RVQP\\"><button class=\\"MuiButtonBase-root MuiIconButton-root medium\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\"><path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path></svg></span></button></div>
-            </div>
-          </div>
-          <div style=\\"width: 100%; flex-shrink: 0; overflow: auto; overflow-y: hidden;\\" aria-hidden=\\"true\\" data-swipeable=\\"true\\">
-            <div class=\\"styles__Infos___2ZZVs styles__Infos--primary___3i4ll\\">
-              <div class=\\"styles__Stack--m___1tSpV\\">
-                <div class=\\"styles__Infos-description___7P1NP\\">
-                  <div class=\\"styles__Stack--xs___2R5lW\\">
-                    <h6 class=\\"MuiTypography-root MuiTypography-h6 MuiTypography-colorTextPrimary\\">News 2</h6>
-                    <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Breaking news 2</p>
-                  </div>
-                </div>
-                <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>A CTA button</span></span></button></div>
-              </div>
-              <div class=\\"styles__Info-close___1RVQP\\"><button class=\\"MuiButtonBase-root MuiIconButton-root medium\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\"><path fill-rule=\\"evenodd\\" d=\\"M10.586 12L.293 1.707A1 1 0 011.707.293L12 10.586 22.293.293a1 1 0 011.414 1.414L13.414 12l10.293 10.293a1 1 0 01-1.414 1.414L12 13.414 1.707 23.707a1 1 0 01-1.414-1.414L10.586 12z\\"></path></svg></span></button></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class=\\"styles__InfosCarrousel-navigation___3s_hu\\"><button class=\\"MuiButtonBase-root MuiIconButton-root medium Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M10.707 2.707a.999.999 0 10-1.414-1.414l-6 6a.999.999 0 000 1.414l6 6a.999.999 0 101.414-1.414L5.414 8l5.293-5.293z\\"></path></svg></span></button><span class=\\"styles__InfosCarrousel-separator___AvH5m\\"></span><button class=\\"MuiButtonBase-root MuiIconButton-root medium\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiIconButton-label\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M12.707 7.293l-6-6a.999.999 0 10-1.414 1.414L10.586 8l-5.293 5.293a.999.999 0 101.414 1.414l6-6a.999.999 0 000-1.414\\"></path></svg></span></button></div>
-    </div>
-  </div>
-</div>"
-`;
-
-exports[`InfosCarrousel should render examples: InfosCarrousel 2`] = `
-"<div>
-  <div class=\\"u-stack-m\\">
-    <div class=\\"styles__InfosCarrousel___3rCyB\\">
-      <div style=\\"overflow-x: hidden;\\">
-        <div style=\\"height: 0px; flex-direction: row; transition: all 0s ease 0s; transform: translate(0%, 0); direction: ltr; display: flex; will-change: transform;\\" class=\\"react-swipeable-view-container\\">
-          <div style=\\"width: 100%; flex-shrink: 0; overflow: auto; overflow-y: hidden;\\" aria-hidden=\\"false\\" data-swipeable=\\"true\\">
-            <div class=\\"styles__Infos___2ZZVs styles__Infos--danger___3wKYc\\">
-              <div class=\\"styles__Stack--m___1tSpV\\">
-                <div class=\\"styles__Infos-description___7P1NP\\">
-                  <div class=\\"styles__Stack--xs___2R5lW\\">
-                    <h6 class=\\"MuiTypography-root MuiTypography-h6 MuiTypography-colorTextPrimary\\">News 1</h6>
-                    <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Breaking news 1</p>
-                  </div>
-                </div>
-                <div><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh\\"><span><span>A CTA button</span></span></button></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>"
-`;
-
-exports[`InlineCard should render examples: InlineCard 1`] = `"<div><span class=\\"styles__c-inline-card___1sri1\\">I am an inline card</span></div>"`;
 
 exports[`InputGroup should render examples: InputGroup 1`] = `
 "<div>
@@ -3122,8 +2814,8 @@ exports[`Labs/CollectionField should render examples: Labs/CollectionField 1`] =
   <div class=\\"styles__o-field___3n5HM\\"><label class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">Contacts</label>
     <div class=\\"styles__Stack--m___1tSpV\\">
       <div class=\\"styles__Stack--s___22WMg\\">
-        <div class=\\"styles__CollectionField__row___Z7bbf\\"><button type=\\"button\\" class=\\"styles__SelectControl___2OxoO\\">isabelle.durand@cozycloud.cc</button><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--secondary___3Br_N styles__c-btn--center___16_Xh styles__c-btn--round___1Lkyl\\" title=\\"Remove this contact\\"><span><svg viewBox=\\"0 0 12 12\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"16\\" height=\\"16\\"><path d=\\"M6 4.59l2.3-2.3a1 1 0 011.4 1.42L7.42 6l2.3 2.3A1 1 0 118.3 9.7L6 7.42l-2.3 2.3A1 1 0 112.3 8.3L4.58 6l-2.3-2.3A1 1 0 013.7 2.3L6 4.58z\\"></path></svg><span class=\\"u-visuallyhidden\\">Remove this contact</span></span></button></div>
-      </div><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--center___16_Xh styles__CollectionField__addBtn___Z0FO-\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__CollectionField__addBtnIcon___1hA5b styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg><span>Add a contact</span></span></button>
+        <div class=\\"styles__CollectionField__row___Z7bbf\\"><button type=\\"button\\" class=\\"styles__SelectControl___2OxoO\\">isabelle.durand@cozycloud.cc</button><button type=\\"button\\" class=\\"styles__c-btn___3kXsk styles__c-btn--secondary___1hLVM styles__c-btn--center___Nny0n styles__c-btn--round___35GfW\\" title=\\"Remove this contact\\"><span><svg viewBox=\\"0 0 12 12\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"16\\" height=\\"16\\"><path d=\\"M6 4.59l2.3-2.3a1 1 0 011.4 1.42L7.42 6l2.3 2.3A1 1 0 118.3 9.7L6 7.42l-2.3 2.3A1 1 0 112.3 8.3L4.58 6l-2.3-2.3A1 1 0 013.7 2.3L6 4.58z\\"></path></svg><span class=\\"u-visuallyhidden\\">Remove this contact</span></span></button></div>
+      </div><button type=\\"button\\" class=\\"styles__c-btn___3kXsk styles__c-btn--text___33vmu styles__c-btn--center___Nny0n styles__CollectionField__addBtn___Z0FO-\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__CollectionField__addBtnIcon___1hA5b styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg><span>Add a contact</span></span></button>
     </div>
   </div>
 </div>"
@@ -3148,45 +2840,6 @@ exports[`ListItemText should render examples: ListItemText 3`] = `
 </div>"
 `;
 
-exports[`Media should render examples: Media 1`] = `
-"<div>
-  <div class=\\"styles__media___cSJMp\\">
-    <div class=\\"styles__img___3SHpG\\" style=\\"padding-right: 1rem;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-        <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
-      </svg></div>
-    <div class=\\"styles__bd___1Uv-F\\">
-      <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a \\"computing machine\\" and the first computer programmer.</p>
-    </div>
-  </div>
-</div>"
-`;
-
-exports[`Media should render examples: Media 2`] = `
-"<div>
-  <div class=\\"styles__media___cSJMp styles__media--top___K9w0I\\">
-    <div class=\\"styles__img___3SHpG\\" style=\\"padding-right: 1rem;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-        <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
-      </svg></div>
-    <div class=\\"styles__bd___1Uv-F\\">
-      <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a \\"computing machine\\" and the first computer programmer.</p>
-    </div>
-  </div>
-</div>"
-`;
-
-exports[`Media should render examples: Media 3`] = `
-"<div>
-  <div class=\\"styles__media___cSJMp styles__media--bottom___21YWJ\\">
-    <div class=\\"styles__img___3SHpG\\" style=\\"padding-right: 1rem;\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
-        <path fill-rule=\\"evenodd\\" d=\\"M8 9c2.21 0 4-2.015 4-4.5S10.21 0 8 0 4 2.015 4 4.5 5.79 9 8 9zm-8 5c0-1 2-4 4-4s1 1 4 1 2-1 4-1 4 3 4 4 0 2-1 2H1c-1 0-1-1-1-2z\\"></path>
-      </svg></div>
-    <div class=\\"styles__bd___1Uv-F\\">
-      <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a \\"computing machine\\" and the first computer programmer.</p>
-    </div>
-  </div>
-</div>"
-`;
-
 exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
 "<div>
   <div class=\\"styles__Stack--xs___2R5lW\\">
@@ -3199,18 +2852,6 @@ exports[`MuiCozyTheme/Switch should render examples: MuiCozyTheme/Switch 1`] = `
     <div class=\\"MuiBox-root MuiBox-root-574\\">
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-displayInline\\">default</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
-  </div>
-</div>"
-`;
-
-exports[`NarrowContent should render examples: NarrowContent 1`] = `
-"<div>
-  <div class=\\"styles__NarrowContent___Zq8oI\\">
-    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, soluta. Voluptas ipsa ullam a totam veniam itaque, iusto ducimus, sequi eveniet debitis recusandae incidunt, fugiat architecto et distinctio, optio! Deserunt.</div>
-    <div>Velit neque, repellendus explicabo voluptates veritatis itaque saepe nemo et! Impedit veniam, voluptates. Aliquid laborum voluptate, non commodi magnam, soluta perferendis sapiente nemo harum, eligendi saepe beatae cum quam fugiat.</div>
-    <div>Quam tempora, similique pariatur, vitae atque ducimus. Quidem tempore, nulla est. Dolor quisquam quia placeat molestiae, nulla beatae voluptatem labore sit mollitia repudiandae animi iure maxime maiores quidem delectus ad.</div>
-    <div>Iste reiciendis reprehenderit et similique, rem. Architecto quasi debitis hic, voluptatum in possimus soluta sit, praesentium nisi provident pariatur culpa mollitia repellendus earum reiciendis animi. Sunt voluptates, assumenda esse perspiciatis.</div>
-    <div>Alias quae sequi aliquid sed, nobis veniam magnam rerum amet velit dignissimos dicta a dolorem! Dolorem soluta perferendis error, voluptate dolorum quas, fuga ad repellendus tenetur amet sit assumenda dignissimos.</div>
   </div>
 </div>"
 `;
@@ -3277,24 +2918,9 @@ exports[`Paper should render examples: Paper 1`] = `
 </div>"
 `;
 
-exports[`PasswordExample should render examples: PasswordExample 1`] = `"<div><span class=\\"styles__c-inline-card___1sri1\\"><span class=\\"\\">C</span><span class=\\"\\">l</span><span class=\\"styles__Token--number___2EzoN\\">4</span><span class=\\"\\">u</span><span class=\\"\\">d</span><span class=\\"\\">e</span><span class=\\"styles__Token--special___3_rSu\\">€</span><span class=\\"\\">s</span><span class=\\"\\">t</span><span class=\\"styles__Token--number___2EzoN\\">1</span><span class=\\"\\">N</span><span class=\\"\\">u</span><span class=\\"styles__Token--special___3_rSu\\">@</span><span class=\\"\\">g</span><span class=\\"\\">e</span></span></div>"`;
+exports[`PasswordExample should render examples: PasswordExample 1`] = `"<div><span class=\\"styles__c-inline-card___1a8Og\\"><span class=\\"\\">C</span><span class=\\"\\">l</span><span class=\\"styles__Token--number___2EzoN\\">4</span><span class=\\"\\">u</span><span class=\\"\\">d</span><span class=\\"\\">e</span><span class=\\"styles__Token--special___3_rSu\\">€</span><span class=\\"\\">s</span><span class=\\"\\">t</span><span class=\\"styles__Token--number___2EzoN\\">1</span><span class=\\"\\">N</span><span class=\\"\\">u</span><span class=\\"styles__Token--special___3_rSu\\">@</span><span class=\\"\\">g</span><span class=\\"\\">e</span></span></div>"`;
 
-exports[`PasswordExample should render examples: PasswordExample 2`] = `"<div><span class=\\"styles__c-inline-card___1sri1\\"><span class=\\"\\">C</span><span class=\\"\\">l</span><span class=\\"\\">a</span><span class=\\"\\">u</span><span class=\\"\\">d</span><span class=\\"\\">e</span><span class=\\"\\"> </span><span class=\\"\\">e</span><span class=\\"\\">s</span><span class=\\"\\">t</span><span class=\\"\\"> </span><span class=\\"\\">l</span><span class=\\"\\">e</span><span class=\\"\\"> </span><span class=\\"\\">m</span><span class=\\"\\">e</span><span class=\\"\\">i</span><span class=\\"\\">l</span><span class=\\"\\">l</span><span class=\\"\\">e</span><span class=\\"\\">u</span><span class=\\"\\">r</span><span class=\\"\\"> </span><span class=\\"\\">n</span><span class=\\"\\">u</span><span class=\\"\\">a</span><span class=\\"\\">g</span><span class=\\"\\">e</span><span class=\\"\\"> </span><span class=\\"\\">!</span></span></div>"`;
-
-exports[`PercentageBar should render examples: PercentageBar 1`] = `
-"<div><button>Random percentage</button>50.00% <div class=\\"styles__PercentageBar___12TWu\\" style=\\"margin-bottom: 2rem;\\">
-    <div class=\\"styles__PercentageBar__line___1DAnN PercentageLine__PercentageLine___3koWP\\" style=\\"transform: scaleX(0.5);\\"></div>
-  </div>
-  <div class=\\"styles__PercentageBar___12TWu\\">
-    <div class=\\"styles__PercentageBar__line___1DAnN PercentageLine__PercentageLine___3koWP\\" style=\\"transform: scaleX(0.5);\\"></div>
-  </div>
-</div>"
-`;
-
-exports[`PercentageLine should render examples: PercentageLine 1`] = `
-"<div><button>Random percentage</button>50.00% <div class=\\"PercentageLine__PercentageLine___3koWP\\" style=\\"transform: scaleX(0.5);\\"></div>
-</div>"
-`;
+exports[`PasswordExample should render examples: PasswordExample 2`] = `"<div><span class=\\"styles__c-inline-card___1a8Og\\"><span class=\\"\\">C</span><span class=\\"\\">l</span><span class=\\"\\">a</span><span class=\\"\\">u</span><span class=\\"\\">d</span><span class=\\"\\">e</span><span class=\\"\\"> </span><span class=\\"\\">e</span><span class=\\"\\">s</span><span class=\\"\\">t</span><span class=\\"\\"> </span><span class=\\"\\">l</span><span class=\\"\\">e</span><span class=\\"\\"> </span><span class=\\"\\">m</span><span class=\\"\\">e</span><span class=\\"\\">i</span><span class=\\"\\">l</span><span class=\\"\\">l</span><span class=\\"\\">e</span><span class=\\"\\">u</span><span class=\\"\\">r</span><span class=\\"\\"> </span><span class=\\"\\">n</span><span class=\\"\\">u</span><span class=\\"\\">a</span><span class=\\"\\">g</span><span class=\\"\\">e</span><span class=\\"\\"> </span><span class=\\"\\">!</span></span></div>"`;
 
 exports[`PieChart should render examples: PieChart 1`] = `
 "<div>
@@ -3364,12 +2990,6 @@ exports[`ProgressionBanner should render examples: ProgressionBanner 1`] = `
     <div class=\\"MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Indeterminate\\"></div>
     <div class=\\"MuiLinearProgress-bar MuiLinearProgress-bar2Indeterminate MuiLinearProgress-barColorPrimary\\"></div>
   </div>
-</div>"
-`;
-
-exports[`QuotaAlert should render examples: QuotaAlert 1`] = `
-"<div>
-  <div><button>Toggle modal</button></div>
 </div>"
 `;
 
@@ -3940,7 +3560,7 @@ exports[`Wizard should render examples: Wizard 1`] = `
 "<div><button>Show wizard</button><br>
   <div class=\\"styles__wizard___m6AMR\\">
     <div class=\\"styles__wizard-wrapper___38V4s\\">
-      <header class=\\"styles__wizard-header___2_r05\\"><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--subtle___OknKf styles__c-btn--narrow___27FHD styles__c-btn--center___16_Xh styles__wizard-previous___2StGt\\" title=\\"Previous\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path d=\\"M3.414 7h11.58C15.548 7 16 7.444 16 8c0 .552-.45 1-1.007 1H3.414l5.293 5.293a1 1 0 01-1.414 1.414l-7-7a1 1 0 010-1.414l7-7a1 1 0 111.414 1.414L3.414 7z\\" fill-rule=\\"evenodd\\"></path></svg><span class=\\"u-visuallyhidden\\">Previous</span></span></button>
+      <header class=\\"styles__wizard-header___2_r05\\"><button type=\\"button\\" class=\\"styles__c-btn___3kXsk styles__c-btn--subtle___2rRQ0 styles__c-btn--narrow___erKsd styles__c-btn--center___Nny0n styles__wizard-previous___2StGt\\" title=\\"Previous\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path d=\\"M3.414 7h11.58C15.548 7 16 7.444 16 8c0 .552-.45 1-1.007 1H3.414l5.293 5.293a1 1 0 01-1.414 1.414l-7-7a1 1 0 010-1.414l7-7a1 1 0 111.414 1.414L3.414 7z\\" fill-rule=\\"evenodd\\"></path></svg><span class=\\"u-visuallyhidden\\">Previous</span></span></button>
         <h3 class=\\"MuiTypography-root styles__wizard-title___11Dzr MuiTypography-h3 MuiTypography-colorTextPrimary\\">Connect to your Cozy</h3>
       </header>
       <div class=\\"styles__wizard-main___ObvId\\">
@@ -3948,9 +3568,9 @@ exports[`Wizard should render examples: Wizard 1`] = `
         <div class=\\"styles__o-field___3n5HM\\"><label for=\\"\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">Password</label><input type=\\"text\\" id=\\"\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"\\" spellcheck=\\"false\\" value=\\"\\"></div>
         <p class=\\"styles__wizard-errors___1ufSE u-error\\">There is an error</p>
       </div>
-      <footer class=\\"styles__wizard-footer___-ZrgM u-pb-2\\"><button type=\\"submit\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--large___2gatN styles__c-btn--center___16_Xh styles__wizard-next___38lPl\\"><span><span>Next step</span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" style=\\"fill: white;\\" width=\\"16\\" height=\\"16\\">
+      <footer class=\\"styles__wizard-footer___-ZrgM u-pb-2\\"><button type=\\"submit\\" class=\\"styles__c-btn___3kXsk styles__c-btn--large___3PnsT styles__c-btn--center___Nny0n styles__wizard-next___38lPl\\"><span><span>Next step</span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" style=\\"fill: white;\\" width=\\"16\\" height=\\"16\\">
             <path d=\\"M12.586 7H1.006C.452 7 0 7.444 0 8c0 .552.45 1 1.007 1h11.579l-5.293 5.293a1 1 0 001.414 1.414l7-7a1 1 0 000-1.414l-7-7a1 1 0 10-1.414 1.414L12.586 7z\\" fill-rule=\\"evenodd\\"></path>
-          </svg></span></button><button type=\\"button\\" class=\\"styles__c-btn___-2Vnj styles__c-btn--text___2Vp-2 styles__c-btn--large___2gatN styles__c-btn--subtle___OknKf styles__c-btn--center___16_Xh\\"><span><span>Register an account</span></span></button></footer>
+          </svg></span></button><button type=\\"button\\" class=\\"styles__c-btn___3kXsk styles__c-btn--text___33vmu styles__c-btn--large___3PnsT styles__c-btn--subtle___2rRQ0 styles__c-btn--center___Nny0n\\"><span><span>Register an account</span></span></button></footer>
     </div>
   </div>
 </div>"
