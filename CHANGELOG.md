@@ -1,3 +1,23 @@
+# [87.0.0](https://github.com/cozy/cozy-ui/compare/v86.3.0...v87.0.0) (2023-06-28)
+
+
+### Features
+
+* Deprecates some component ([85404bd](https://github.com/cozy/cozy-ui/commit/85404bd))
+
+
+### BREAKING CHANGES
+
+* This is the list of deprecated component
+`ActionMenu`, `Alerter`, `BottomDrawer`, `Button`, `ButtonAction`, `Chip`, `CompositeRow`, `GridItem`, `Infos`, `InfosCarrousel`, `InlineCard`, `IntentModal`, `IntentOpener`, `Media`, `Menus`, `Modal`, `NarrowContent`, `Overlay`, `PercentageBar`, `PercentageLine`, `PushClientButton`, `QuotaAlert`, `Radio`, `RaisedList`, `ViewStack`
+
+These components are now in a `deprecated` subfolder. Use this codemods to migrate: 
+
+```
+$ yarn global add @cozy/codemods
+$ jscodeshift -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/transform-ui-deprecated-imports.js src --parser babel --ignore-pattern=src/targets/ --extensions js,jsx
+```
+
 # [86.3.0](https://github.com/cozy/cozy-ui/compare/v86.2.0...v86.3.0) (2023-06-27)
 
 
