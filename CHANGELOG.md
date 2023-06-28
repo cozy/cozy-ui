@@ -1,3 +1,30 @@
+# [88.0.0](https://github.com/cozy/cozy-ui/compare/v87.0.0...v88.0.0) (2023-06-28)
+
+
+### Features
+
+* **AccordionExpandIcon:** Moved to `./AccordionSummary` folder ([d58dd51](https://github.com/cozy/cozy-ui/commit/d58dd51))
+* Deprecation and fallback for some components in MuiCozyTheme ([c2f4acd](https://github.com/cozy/cozy-ui/commit/c2f4acd))
+* Move `MuiCozyTheme/MuiBreadcrumbs` in `/Breadcrumbs` ([1678047](https://github.com/cozy/cozy-ui/commit/1678047))
+* Move Breadcrumbs component into `./legacy` folder ([ffc9c9b](https://github.com/cozy/cozy-ui/commit/ffc9c9b))
+* Move components from `MuiCozyTheme` folder to `react` folder ([b9f5324](https://github.com/cozy/cozy-ui/commit/b9f5324))
+* Remove `MuiCozyTheme/Dialog` content ([549c20a](https://github.com/cozy/cozy-ui/commit/549c20a))
+
+
+### BREAKING CHANGES
+
+* We moved these components into `/react` folder.
+
+This is the list of impacted components: `MuiCozyTheme/Buttons`, `MuiCozyTheme/MuiBreadcrumbs`, `MuiCozyTheme/Dialog`, `MuiCozyTheme/Accordion`, `MuiCozyTheme/AccordionDetails`, `MuiCozyTheme/AccordionSummary`, `MuiCozyTheme/Divider`, `MuiCozyTheme/Grid`, `MuiCozyTheme/List`, `MuiCozyTheme/ListItem`, `MuiCozyTheme/ListItemIcon`, `MuiCozyTheme/ListItemSecondaryAction`, `MuiCozyTheme/ListSubheader`, `MuiCozyTheme/Menu`, `MuiCozyTheme/Switch`, `MuiCozyTheme/TextField`
+
+You can use this codemods to migrate: 
+
+```
+$ yarn global add @cozy/codemods
+$ jscodeshift -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/transform-ui-muicozytheme-imports.js src --parser babel --ignore-pattern=src/targets/ --extensions js,jsx
+```
+* you must replace `cozy-ui/transpiled/react/Breadcrumbs` by `cozy-ui/transpiled/react/legacy/Breadcrumbs`
+
 # [87.0.0](https://github.com/cozy/cozy-ui/compare/v86.3.0...v87.0.0) (2023-06-28)
 
 
