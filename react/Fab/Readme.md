@@ -6,7 +6,7 @@ See [Material UI documentation](https://material-ui.com/components/floating-acti
 import Fab from 'cozy-ui/transpiled/react/Fab'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
-import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Variants from 'cozy-ui/docs/components/Variants'
 
@@ -48,7 +48,7 @@ const initialVariants = [{ small: false, medium: false, large: true }]
 import Fab from 'cozy-ui/transpiled/react/Fab'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
-import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 
 const props = [{ color: 'primary' }, { color: 'secondary' }, { color: 'inherit', default: true }]

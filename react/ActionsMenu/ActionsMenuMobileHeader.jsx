@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 
 import ActionsMenuItem from './ActionsMenuItem'
-import Divider from '../MuiCozyTheme/Divider'
+import Divider from '../Divider'
 import useBreakpoints from '../hooks/useBreakpoints'
 
 const ActionsMenuMobileHeader = forwardRef(({ children, ...props }, ref) => {

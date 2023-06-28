@@ -5,7 +5,7 @@ import HeartIcon from 'cozy-ui/transpiled/react/Icons/Heart'
 import PeopleIcon from 'cozy-ui/transpiled/react/Icons/People'
 
 // <-- only useful for the documentation
-import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Variants from 'cozy-ui/docs/components/Variants'

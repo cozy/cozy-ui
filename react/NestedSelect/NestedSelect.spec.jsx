@@ -2,7 +2,7 @@ import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 
 import NestedSelect, { ItemRow } from './NestedSelect'
-import ListItem from '../MuiCozyTheme/ListItem'
+import ListItem from '../ListItem'
 import { BreakpointsProvider } from '../hooks/useBreakpoints'
 
 describe('NestedSelect', () => {

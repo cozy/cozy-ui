@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react'
 
 import { generateWebLink } from 'cozy-client'
 
-import ListItemIcon from '../../MuiCozyTheme/ListItemIcon'
+import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
 import Icon from '../../Icon'
 import PenIcon from '../../Icons/Pen'

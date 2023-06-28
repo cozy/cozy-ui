@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
 
-import Divider from '../../MuiCozyTheme/Divider'
+import Divider from '../../Divider'
 
 export const divider = () => {
   return {

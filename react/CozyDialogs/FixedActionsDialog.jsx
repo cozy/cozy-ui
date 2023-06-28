@@ -3,7 +3,7 @@ import cx from 'classnames/dedupe'
 
 import useCozyDialog from './useCozyDialog'
 import Dialog, { DialogTitle, DialogActions, DialogContent } from '../Dialog'
-import Divider from '../MuiCozyTheme/Divider'
+import Divider from '../Divider'
 
 import dialogPropTypes from './dialogPropTypes'
 import DialogBackButton from './DialogBackButton'

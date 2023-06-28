@@ -282,7 +282,7 @@ import Field from 'cozy-ui/transpiled/react/Field'
 
 ```jsx
 import Field from 'cozy-ui/transpiled/react/Field'
-import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons'
+import MuiButton from 'cozy-ui/transpiled/react/Button'
 
 ;
 

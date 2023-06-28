@@ -3,8 +3,8 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 
 import Paper from '../Paper'
-import Grid from '../MuiCozyTheme/Grid'
-import Divider from '../MuiCozyTheme/Divider'
+import Grid from '../Grid'
+import Divider from '../Divider'
 import Typography from '../Typography'
 
 import styles from './styles.styl'

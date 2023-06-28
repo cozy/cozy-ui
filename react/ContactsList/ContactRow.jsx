@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import { models } from 'cozy-client'
 
-import ListItem from '../MuiCozyTheme/ListItem'
+import ListItem from '../ListItem'
 import ContactPhone from './Contacts/ContactPhone'
 import ContactIdentity from './Contacts/ContactIdentity'
 import ContactCozy from './Contacts/ContactCozy'

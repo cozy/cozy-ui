@@ -3,7 +3,7 @@ Chips represent complex entities in small blocks, such as a contact.
 ### Default
 
 ```jsx
-import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 import Chip from 'cozy-ui/transpiled/react/Chips'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Typography from 'cozy-ui/transpiled/react/Typography'
@@ -12,7 +12,7 @@ import FileOutlineIcon from "cozy-ui/transpiled/react/Icons/FileOutline"
 import Avatar from 'cozy-ui/transpiled/react/Avatar'
 import RightIcon from "cozy-ui/transpiled/react/Icons/Right"
 import OpenwithIcon from "cozy-ui/transpiled/react/Icons/Openwith"
-import Divider from "cozy-ui/transpiled/react/MuiCozyTheme/Divider"
+import Divider from "cozy-ui/transpiled/react/Divider"
 import Variants from 'cozy-ui/docs/components/Variants'
 
 const columns = [{ title: 'default', disabled: false }, { title: 'disabled', disabled: true }]
@@ -111,7 +111,7 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
 ### Colors
 
 ```jsx
-import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 import Chip from 'cozy-ui/transpiled/react/Chips'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Typography from 'cozy-ui/transpiled/react/Typography'
@@ -120,7 +120,7 @@ import FileOutlineIcon from "cozy-ui/transpiled/react/Icons/FileOutline"
 import Avatar from 'cozy-ui/transpiled/react/Avatar'
 import RightIcon from "cozy-ui/transpiled/react/Icons/Right"
 import OpenwithIcon from "cozy-ui/transpiled/react/Icons/Openwith"
-import Divider from "cozy-ui/transpiled/react/MuiCozyTheme/Divider"
+import Divider from "cozy-ui/transpiled/react/Divider"
 import Variants from 'cozy-ui/docs/components/Variants'
 
 const colors = ['success', 'error', 'warning', 'info']

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { isExpiringSoon } from 'cozy-client/dist/models/paper'
 
-import List from '../../MuiCozyTheme/List'
+import List from '../../List'
 import { withViewerLocales } from '../hoc/withViewerLocales'
 import {
   formatMetadataQualification,
