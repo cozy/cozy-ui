@@ -76,6 +76,9 @@
             "residence_permit": {
               "number": "Numéro du permis"
             },
+            "national_health_insurance_card": {
+              "number": "Numéro de la carte vitale"
+            },
             "country": "Nationalité du bénéficiaire",
             "refTaxIncome": "Revenu fiscal de référence",
             "contractType": "Type de contrat",
