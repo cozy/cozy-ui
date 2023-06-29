@@ -76,6 +76,9 @@
             "residence_permit": {
               "number": "License number"
             },
+            "national_health_insurance_card": {
+              "number": "National health insurance card number"
+            },
             "country": "Beneficiary nationality",
             "refTaxIncome": "Reference tax income",
             "contractType": "Contract type",
