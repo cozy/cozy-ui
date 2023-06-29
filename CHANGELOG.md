@@ -1,3 +1,17 @@
+# [88.1.0](https://github.com/cozy/cozy-ui/compare/v88.0.0...v88.1.0) (2023-06-29)
+
+
+### Bug Fixes
+
+* **css:** Add two missing z-index in CSS var ([f7ef7d4](https://github.com/cozy/cozy-ui/commit/f7ef7d4))
+* **css:** Avoid importing z-index.styl in each css of legacy component ([8bc65ee](https://github.com/cozy/cozy-ui/commit/8bc65ee))
+
+
+### Features
+
+* **css:** Use z-index from CSS var instead of stylus var ([bc2f05e](https://github.com/cozy/cozy-ui/commit/bc2f05e))
+* **Viewer:** Add missing translation ([58014bf](https://github.com/cozy/cozy-ui/commit/58014bf))
+
 # [88.0.0](https://github.com/cozy/cozy-ui/compare/v87.0.0...v88.0.0) (2023-06-28)
 
 
