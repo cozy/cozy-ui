@@ -1,3 +1,10 @@
+## [88.1.1](https://github.com/cozy/cozy-ui/compare/v88.1.0...v88.1.1) (2023-06-30)
+
+
+### Bug Fixes
+
+* **Viewer:** Force style of ActionMenuDesktop ([3cf40c4](https://github.com/cozy/cozy-ui/commit/3cf40c4))
+
 # [88.1.0](https://github.com/cozy/cozy-ui/compare/v88.0.0...v88.1.0) (2023-06-29)
 
 
