@@ -16588,7 +16588,7 @@ progress.upload-queue-progress--1CmN- {
 }
 
 .ActionMenuDesktop-ActionMenu--1iicy a {
-  padding: 0;
+  padding: 0 !important;
 }
 .ActionMenuDesktop-ActionMenu--1iicy .ActionMenuDesktop-ActionMenu-link-disabled--3QHjm > div {
   cursor: default;
