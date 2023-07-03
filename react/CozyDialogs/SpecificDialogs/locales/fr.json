@@ -1,0 +1,7 @@
+{
+  "install-flagship-app-dialog": {
+    "title": "Scannez le QR Code",
+    "text": "ou rendez vous directement sur <img src=%{iosIconSrc} /> <a href='%{iosUrl}' class='u-link' target='_blank' rel='noopener'>l’App Store</a><br>ou sur le <img src=%{androidIconSrc} /> <a href='%{androidUrl}' class='u-link' target='_blank' rel='noopener'>Play Store</a> pour installer l’app Cloud Personnel Cozy",
+    "a11n": "Aller sur la page de téléchargement de l'application Cloud Personnel Cozy"
+  }
+}
