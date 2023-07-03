@@ -139,6 +139,7 @@ module.exports = {
         '../react/ContactsListModal',
         '../react/ContactPicker',
         '../react/CozyDialogs',
+        '../react/CozyDialogs/SpecificDialogs',
         '../react/CozyTheme',
         '../react/FileImageLoader',
         '../react/FilePicker',
