@@ -59,7 +59,8 @@ import {
   ConfirmDialog,
   IllustrationDialog,
   FixedDialog,
-  FixedActionsDialog
+  FixedActionsDialog,
+  PermissionDialog
 } from  'cozy-ui/transpiled/react/CozyDialogs'
 
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
@@ -77,6 +78,7 @@ import FormLabel from 'cozy-ui/transpiled/react/FormLabel'
 import BottomSheet, { BottomSheetItem } from 'cozy-ui/transpiled/react/BottomSheet'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 
+import ToTheCloudIcon from 'cozy-ui/transpiled/react/Icons/ToTheCloud'
 import CloudIcon from "cozy-ui/transpiled/react/Icons/Cloud"
 import BackgroundImg from './background.png'
 
@@ -133,7 +135,8 @@ const dialogTitles = {
   IllustrationDialog: <Icon icon={CloudIcon} size="140" />,
   FixedDialog: 'Fixed Dialog',
   FixedActionsDialog: 'Fixed Actions Dialog',
-  Dialog: 'Dialog'
+  Dialog: 'Dialog',
+  PermissionDialog: 'Are you sure ?'
 }
 
 const dialogContents = {
@@ -141,7 +144,8 @@ const dialogContents = {
   IllustrationDialog: "An IllustrationDialog contains short content." + content.ada.short,
   FixedDialog: "A FixedDialog can contain very long content. Actions are at the bottom of the content are not visible to the user if she has not scrolled to the bottom. " + content.ada.long,
   FixedActionsDialog: "A FixedActionsDialog can contain very long content. Actions are visible even without scrolling. " + content.ada.long,
-  Dialog: "A normal Dialog should contain short content. " + content.ada.short
+  Dialog: "A normal Dialog should contain short content. " + content.ada.short,
+  PermissionDialog: "Content of a confirm dialog, precising what the actions will do, and asking the user if she is sure.",
 }
 
 const dialogActions = {
@@ -149,7 +153,8 @@ const dialogActions = {
   IllustrationDialog: <ExampleDialogActions />,
   FixedDialog: <ExampleDialogActions />,
   FixedActionsDialog: <ExampleDialogActions />,
-  Dialog: <ExampleDialogActions />
+  Dialog: <ExampleDialogActions />,
+  PermissionDialog: <ExampleDialogActions />,
 }
 
 const dialogs = [
@@ -157,7 +162,8 @@ const dialogs = [
   ConfirmDialog,
   IllustrationDialog,
   FixedDialog,
-  FixedActionsDialog
+  FixedActionsDialog,
+  PermissionDialog
 ]
 
 const StateRadio = ({ name, ...props }) => {
@@ -326,6 +332,7 @@ const setFlagshipVars = () => {
           }
           disableGutters={variant.disableGutters}
           background={variant.withBackground ? `var(--paperBackgroundColor) repeat-x url(${BackgroundImg})` : undefined}
+          icon={DialogComponent === PermissionDialog ? CloudIcon : undefined}
           content={
             <>
               <Typography component="div" variant="body1">
