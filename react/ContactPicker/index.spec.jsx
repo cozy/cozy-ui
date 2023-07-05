@@ -1,6 +1,7 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 
+import { I18nContext } from '../I18n'
 import DemoProvider from '../ContactsListModal/DemoProvider'
 import { BreakpointsProvider } from '../hooks/useBreakpoints'
 import contacts from '../ContactsList/_mockContacts.json'
@@ -8,9 +9,21 @@ import contacts from '../ContactsList/_mockContacts.json'
 import ContactPicker from '.'
 
 const Wrapper = ({ children }) => {
+  const lang = localStorage.getItem('lang') || 'en'
+
   return (
     <DemoProvider>
-      <BreakpointsProvider>{children}</BreakpointsProvider>
+      <BreakpointsProvider>
+        <I18nContext.Provider
+          value={{
+            t: x => x,
+            f: () => '01 Jan. 2022',
+            lang
+          }}
+        >
+          {children}
+        </I18nContext.Provider>
+      </BreakpointsProvider>
     </DemoProvider>
   )
 }

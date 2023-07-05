@@ -63,7 +63,7 @@ import {
   PermissionDialog
 } from  'cozy-ui/transpiled/react/CozyDialogs'
 
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import DemoProvider from 'cozy-ui/transpiled/react/providers/DemoProvider'
 
 import Button from 'cozy-ui/transpiled/react/Buttons'
 import Alerter from 'cozy-ui/transpiled/react/deprecated/Alerter'
@@ -243,7 +243,7 @@ const setFlagshipVars = () => {
 }
 ;
 
-<BreakpointsProvider>
+<DemoProvider>
   <Button
     onClick={() => setFlagshipVars()}
     variant="secondary"
@@ -386,14 +386,15 @@ const setFlagshipVars = () => {
       </>
     )}
   </Variants>
-</BreakpointsProvider>
+</DemoProvider>
 ```
 
 ### Dialogs with title button
 
 ```jsx
 import cx from 'classnames'
-import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import DemoProvider from 'cozy-ui/transpiled/react/providers/DemoProvider'
 
 import { Dialog } from  'cozy-ui/transpiled/react/CozyDialogs'
 import Button from  'cozy-ui/transpiled/react/Buttons'
@@ -433,11 +434,11 @@ const Modal = () => {
 
 ;
 
-<BreakpointsProvider>
+<DemoProvider>
   <Button label="Open modal" onClick={() => setState({ showModal: true })}/>
 
   {state.showModal && (
     <Modal />
   )}
-</BreakpointsProvider>
+</DemoProvider>
 ```

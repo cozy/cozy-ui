@@ -21,26 +21,37 @@ client.registerPlugin(RealtimePlugin)
 ```
 
 ```jsx
-import ContactsListModal from 'cozy-ui/transpiled/react/ContactsListModal';
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
-import DemoProvider from './DemoProvider';
+import ContactsListModal from 'cozy-ui/transpiled/react/ContactsListModal'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { I18nContext } from 'cozy-ui/transpiled/react/I18n'
+import DemoProvider from './DemoProvider'
 
-initialState = { opened: isTesting() };
+initialState = { opened: isTesting() }
+
+;
 
 <DemoProvider>
   <BreakpointsProvider>
-    <button type="button" onClick={() => setState({ opened: true })}>
-      Open contacts list
-    </button>
-    {state.opened && (
-      <ContactsListModal
-        placeholder="Search a contact"
-        dismissAction={() => setState({ opened: false })}
-        onItemClick={contact => alert(`Clicked on ${contact._id}`)}
-        addContactLabel="Add a contact"
-        emptyMessage="No contact"
-      />
-    )}
+    <I18nContext.Provider
+      value={{
+        t: x => x,
+        f: () => '01 Jan. 2022',
+        lang: localStorage.getItem('lang') || 'en'
+      }}
+    >
+      <button type="button" onClick={() => setState({ opened: true })}>
+        Open contacts list
+      </button>
+      {state.opened && (
+        <ContactsListModal
+          placeholder="Search a contact"
+          dismissAction={() => setState({ opened: false })}
+          onItemClick={contact => alert(`Clicked on ${contact._id}`)}
+          addContactLabel="Add a contact"
+          emptyMessage="No contact"
+        />
+      )}
+    </I18nContext.Provider>
   </BreakpointsProvider>
 </DemoProvider>
 ```

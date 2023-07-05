@@ -8,9 +8,8 @@ will make sure that even your custom Dialogs will behave as CozyDialogs.
 ```jsx
 import Dialog, { DialogTitle, DialogActions } from 'cozy-ui/transpiled/react/Dialog'
 import { DialogBackButton, DialogCloseButton, useCozyDialog } from 'cozy-ui/transpiled/react/CozyDialogs'
-import useBreakpoints, {
-  BreakpointsProvider
-} from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import DemoProvider from 'cozy-ui/transpiled/react/providers/DemoProvider'
 import Alerter from 'cozy-ui/transpiled/react/deprecated/Alerter'
 
 import Divider from 'cozy-ui/transpiled/react/Divider'
@@ -134,9 +133,9 @@ const ExampleDialog = ({ open, onClose }) => {
   <button onClick={() => setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
   </button>
-  <BreakpointsProvider>
+  <DemoProvider>
     <Alerter />
     <ExampleDialog open={state.modalOpened} onClose={handleClose} />
-  </BreakpointsProvider>
+  </DemoProvider>
 </>
 ```
