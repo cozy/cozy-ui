@@ -6,9 +6,9 @@ import { useI18n } from '../../I18n'
 import Link from '../../Link'
 import Typography from '../../Typography'
 
-import DefaultQRCode from './assets/QRCodeInstallFlagshipAppDialog.png'
-import appStoreIcon from './assets/appstore.png'
-import playStoreIcon from './assets/playstore.png'
+import DefaultQRCode from 'cozy-ui/assets/images/QRCodeInstallFlagshipAppDialog.png'
+import appStoreIcon from 'cozy-ui/assets/images/appstore.png'
+import playStoreIcon from 'cozy-ui/assets/images/playstore.png'
 import withSpecificDialogsLocales from './withSpecificDialogsLocales'
 
 const InstallFlagshipAppDialog = forwardRef(
