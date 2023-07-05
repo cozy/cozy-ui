@@ -14,6 +14,18 @@ export const DEFAULT_LANG = 'en'
 
 export const I18nContext = React.createContext()
 
+export const useI18n = () => {
+  const context = useContext(I18nContext)
+
+  if (!context) {
+    throw new Error(
+      '`I18nContext` is missing. `useI18n()` must be used within a `<I18n>`'
+    )
+  }
+
+  return context
+}
+
 // Provider root component
 export class I18n extends Component {
   constructor(props) {
@@ -73,10 +85,6 @@ I18n.childContextTypes = {
   t: PropTypes.func,
   f: PropTypes.func,
   lang: PropTypes.string
-}
-
-export const useI18n = () => {
-  return useContext(I18nContext)
 }
 
 export { initTranslation, extend } from './translation'

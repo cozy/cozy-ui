@@ -6,7 +6,8 @@ import NestedSelectModal from './Modal'
 import ListItem from '../ListItem'
 import ListItemText from '../ListItemText'
 import Checkbox from '../Checkbox'
-import useBreakpoints, { BreakpointsProvider } from '../hooks/useBreakpoints'
+import useBreakpoints from '../hooks/useBreakpoints'
+import DemoProvider from '../providers/DemoProvider'
 import palette from 'cozy-ui/transpiled/react/palette'
 
 const Image = ({ letter }) => (
@@ -170,11 +171,11 @@ const InteractiveExample = () => {
 ;
 
 <>
-  <BreakpointsProvider>
+  <DemoProvider>
     {isTesting()
       ? <StaticExample />
       : <InteractiveExample />
     }
-  </BreakpointsProvider>
+  </DemoProvider>
 </>
 ```

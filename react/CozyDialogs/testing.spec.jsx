@@ -9,7 +9,8 @@ import {
   getBackButton,
   getBackCloseButton
 } from './testing'
-import useBreakpoints, { BreakpointsProvider } from '../hooks/useBreakpoints'
+import useBreakpoints from '../hooks/useBreakpoints'
+import DemoProvider from '../providers/DemoProvider'
 
 jest.mock('../hooks/useBreakpoints', () => ({
   ...jest.requireActual('../hooks/useBreakpoints'),
@@ -22,7 +23,7 @@ describe('testing utils for dialog', () => {
   const setup = ({ isMobile = false, onClose, onBack } = {}) => {
     useBreakpoints.mockReturnValue({ isMobile })
     const root = render(
-      <BreakpointsProvider>
+      <DemoProvider>
         <Dialog
           open
           title="Title"
@@ -30,7 +31,7 @@ describe('testing utils for dialog', () => {
           onClose={onClose}
           onBack={onBack}
         />
-      </BreakpointsProvider>
+      </DemoProvider>
     )
     return { root }
   }
