@@ -404,6 +404,9 @@ export const makeOverrides = theme => ({
           width: '800px',
           maxWidth: '800px'
         }
+      },
+      '&.overflow': {
+        overflowY: 'visible !important' // Allow the icon to overflow the dialog, otherwise it will be cut off
       }
     },
     scrollPaper: {
