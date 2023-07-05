@@ -1,3 +1,10 @@
+# [88.2.0](https://github.com/cozy/cozy-ui/compare/v88.1.1...v88.2.0) (2023-07-05)
+
+
+### Features
+
+* **InstallFlagshipAppDialog:** Add InstallFlagshipAppDialog new component ([6c984e9](https://github.com/cozy/cozy-ui/commit/6c984e9))
+
 ## [88.1.1](https://github.com/cozy/cozy-ui/compare/v88.1.0...v88.1.1) (2023-06-30)
 
 
