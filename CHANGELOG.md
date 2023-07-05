@@ -1,3 +1,18 @@
+# [88.3.0](https://github.com/cozy/cozy-ui/compare/v88.2.1...v88.3.0) (2023-07-05)
+
+
+### Bug Fixes
+
+* **EyeClosed:** Remove withe stroke to adapt color change ([047cf55](https://github.com/cozy/cozy-ui/commit/047cf55))
+
+
+### Features
+
+* Add AuthentificationDialog ([52ee385](https://github.com/cozy/cozy-ui/commit/52ee385))
+* Add CozyAuthentification illustration ([a63249a](https://github.com/cozy/cozy-ui/commit/a63249a))
+* Add PasswordField ([4e2a854](https://github.com/cozy/cozy-ui/commit/4e2a854))
+* Add PermissionDialog ([cf85f4c](https://github.com/cozy/cozy-ui/commit/cf85f4c))
+
 ## [88.2.1](https://github.com/cozy/cozy-ui/compare/v88.2.0...v88.2.1) (2023-07-05)
 
 
