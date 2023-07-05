@@ -93,6 +93,7 @@ module.exports = {
         '../react/NoSsr',
         '../react/OutlinedInput',
         '../react/Paper',
+        '../react/PasswordField',
         '../react/PieChart',
         '../react/Progress',
         '../react/ProgressionBanner',
