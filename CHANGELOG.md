@@ -1,3 +1,10 @@
+## [88.2.1](https://github.com/cozy/cozy-ui/compare/v88.2.0...v88.2.1) (2023-07-05)
+
+
+### Bug Fixes
+
+* **InstallFlagshipAppDialog:** Assets were not in the good directory ([512bcef](https://github.com/cozy/cozy-ui/commit/512bcef))
+
 # [88.2.0](https://github.com/cozy/cozy-ui/compare/v88.1.1...v88.2.0) (2023-07-05)
 
 
