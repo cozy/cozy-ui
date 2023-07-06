@@ -20,7 +20,8 @@ const AuthentificationDialog = ({
   onSubmit,
   isLoading,
   isOIDC,
-  error
+  error,
+  resetRedirection
 }) => {
   const { t } = useI18n()
   const client = useClient()
@@ -37,8 +38,11 @@ const AuthentificationDialog = ({
 
   const passphraseResetUrl = useMemo(() => {
     const url = new URL('/auth/passphrase_reset', client.getStackClient().uri)
+    if (resetRedirection) {
+      url.searchParams.set('from', resetRedirection)
+    }
     return url.href
-  }, [client])
+  }, [client, resetRedirection])
 
   return (
     <PermissionDialog
@@ -103,7 +107,9 @@ AuthentificationDialog.propTypes = {
   /** Show specific wording for OIDC */
   isOIDC: PropTypes.bool,
   /** Error key to display a message */
-  error: PropTypes.string
+  error: PropTypes.string,
+  /** Application slug where to redirect the user after a password reset */
+  resetRedirection: PropTypes.string
 }
 
 export default withSpecificDialogsLocales(AuthentificationDialog)
