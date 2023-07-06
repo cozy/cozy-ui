@@ -1,0 +1,115 @@
+// @stylint off
+
+// FONTS
+@require '../settings/fontstack'
+@require '../settings/breakpoints'
+@require '../tools/mixins'
+
+:root
+    --safe-area-inset-top env(safe-area-inset-top)
+    --safe-area-inset-right env(safe-area-inset-right)
+    --safe-area-inset-bottom env(safe-area-inset-bottom)
+    --safe-area-inset-left env(safe-area-inset-left)
+
+html
+    font-size 100%
+
+body
+    font 100%/1.5
+    -moz-osx-font-smoothing grayscale
+    -webkit-font-smoothing antialiased
+    @extend $font-labor
+
+    // Overrides Normalize.css default style
+    button,
+    input,
+    optgroup,
+    select,
+    textarea
+        @extend $font-labor
+
+// LAYOUT
+html
+  height  100%
+
+body
+  display         flex
+  flex-direction  column
+  align-items     stretch
+  width           100vw
+  height          100%
+  margin 0
+
+html
+body
+    +medium-screen()
+        display block
+        height auto
+
+[role=application]
+    display     flex
+    height      inherit
+    flex        1 1 100%
+    overflow-x  hidden
+    overflow-y  auto
+
+    +medium-screen()
+        overflow visible
+
+// COLORS
+html,
+body
+    background-color var(--white)
+    color            var(--black)
+
+// FORMS
+@require '../components/forms'
+
+[data-input=radio]
+    @extend $form-checkbox
+
+    label::before
+        border-radius 50%
+        border        rem(2) solid var(--coolGrey)
+        box-shadow    inset 0 0 0 checkbox-size transparent
+
+    input[type=radio]:checked + label::before
+        box-shadow inset 0 0 0 rem(3) var(--paleGrey), inset 0 0 0 checkbox-size var(--dodgerBlue)
+
+
+[data-input=checkbox]
+    @extend $form-checkbox
+
+    label
+        &::before
+        &::after
+            border-radius rem(2)
+
+        &::before
+            background-color  var(--white)
+            box-shadow        inset 0 0 0 rem(2) var(--silver)
+
+            &:hover
+                box-shadow inset 0 0 0 rem(2) var(--dodgerBlue)
+
+        &::after
+            background-image  embedurl('../../assets/icons/illus/check-white.svg')
+            background-size   contain
+
+    &[aria-checked='mixed'] label::after
+            background-image  embedurl('../../assets/icons/illus/dash-white.svg')
+            background-size   contain
+
+    input[type=checkbox]
+        &:checked
+            & + label::before
+                box-shadow inset 0 0 0 checkbox-size var(--dodgerBlue)
+
+            & + label::after
+                opacity   1
+                transform scale(1)
+
+        &:not(:checked) + label::after
+            opacity   0
+            transform scale(0)
+// @stylint on

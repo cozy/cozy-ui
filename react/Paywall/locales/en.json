@@ -1,0 +1,70 @@
+{
+  "mobileApp": {
+    "action": "I understand"
+  },
+  "onlyOfficePaywall": {
+    "premium": {
+      "title": "Upgrade your Cozy!",
+      "content": "To unlock this feature, or simply support us, you can change your Cozy offer.",
+      "action": "Check our plans"
+    },
+    "public": {
+      "title": "Information",
+      "content": "You cannot edit this file online. Please ask the document owner to update their Cozy subscription.",
+      "action": "I understand"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Your current offer does not allow you to take advantage of this feature.",
+      "action": "I understand"
+    }
+  },
+  "passwordSharingPaywall": {
+    "premium": {
+      "title": "Upgrade your Cozy!",
+      "content": "To unlock this feature, or simply support us, you can change your Cozy offer.",
+      "action": "Check our plans"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Your current offer does not allow you to take advantage of this feature.",
+      "action": "I understand"
+    }
+  },
+  "maxAccountsByKonnectorPaywall": {
+    "premium": {
+      "title": "Upgrade your Cozy!",
+      "content": "Your offer allows you to connect %{smart_count} account %{konnectorName} in your Cozy.\n\nTo unlock this feature, or simply support us, you can change your Cozy offer. |||| Your offer allows you to connect %{smart_count} accounts %{konnectorName} in your Cozy.\n\nTo unlock this feature, or simply support us, you can change your Cozy offer.",
+      "action": "Check our plans"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Your current offer does not allow you to take advantage of this feature.",
+      "action": "I understand"
+    }
+  },
+  "maxAccountsPaywall": {
+    "premium": {
+      "title": "Upgrade your Cozy!",
+      "content": "Your offer allows you to connect %{smart_count} account in your Cozy.\n\nTo unlock this feature, or simply support us, you can change your Cozy offer. |||| Your offer allows you to connect %{smart_count} accounts in your Cozy.\n\nTo unlock this feature, or simply support us, you can change your Cozy offer.",
+      "action": "Check our plans"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Your current offer does not allow you to take advantage of this feature.",
+      "action": "I understand"
+    }
+  },
+  "maxPapersPaywall": {
+    "premium": {
+      "title": "Upgrade your Cozy!",
+      "content": "Your offer allows you to manually add up to %{smart_count} paper.\n\nTo unlock this feature, or simply support us, you can modify the offer of your Cozy. |||| Your offer allows you to manually add up to %{smart_count} papers.\n\nTo unlock this feature, or simply support us, you can modify the offer of your Cozy.",
+      "action": "Check our plans"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Your current offer does not allow you to take advantage of this feature.",
+      "action": "I understand"
+    }
+  }
+}

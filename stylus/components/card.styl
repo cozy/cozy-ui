@@ -1,0 +1,15 @@
+@require 'settings/breakpoints'
+@require 'tools/mixins'
+
+$card
+    border rem(1) solid var(--dividerColor)
+    border-radius rem(8)
+    padding rem(16)
+    text-decoration none
+    display block
+
+$card--inset
+    margin rem(16 32)
+
+    +small-screen()
+        margin rem(8)

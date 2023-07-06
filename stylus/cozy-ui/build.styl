@@ -1,0 +1,1983 @@
+/*------------------------------------*\
+  CSS classes for those who want the
+  full library loaded kinda like
+  Bootstrap.
+\*------------------------------------*/
+
+/*------------------------------------*\
+  Required dependencies
+\*------------------------------------*/
+@require '../settings/*'
+@require '../tools/*'
+@require '../generic/animations'
+@require '../../node_modules/normalize.css/normalize'
+@require '../elements/*'
+@require '../objects/*'
+@require '../components/*'
+@require '../utilities/*'
+
+/*------------------------------------*\
+  Objects
+\*------------------------------------*/
+// Layout
+@require '../../react/Layout/styles.styl'
+
+// Sidebar
+@require '../../react/Sidebar/styles.styl'
+
+// Form field
+.o-field
+    @extend $field
+
+.o-field-inline
+    @extend $field-inline
+
+.c-double-field
+    @extend $double-field
+
+.c-double-field--with-button
+    @extend $double-field--with-button
+
+.c-double-field-label
+    @extend $double-field-label
+
+.c-double-field-button
+    @extend $double-field-button
+
+.c-double-field-wrapper
+    @extend $double-field-wrapper
+
+.c-double-field-input
+    @extend $double-field-input
+
+/*------------------------------------*\
+  Components
+\*------------------------------------*/
+/*
+ Buttons
+
+ Buttons in different flavour
+
+ Markup:
+ <div class="u-p-1">
+     <button class="c-btn {{modifier_class}}"><span>Click me, I'm a button!</span></button>
+     <button class="c-btn c-btn--subtle {{modifier_class}}"><span>Click me, I'm a button!</span></button>
+ </div>
+
+ .c-btn--secondary - Basic alternative
+ .c-btn--danger - Danger
+ .c-btn--danger-outline - Danger outlined
+ .c-btn--highlight - Highlighted button to catch the eye
+ .c-btn--text - Text only button
+
+ Weight: 1
+
+ Styleguide Components.buttons
+*/
+
+/*
+ Button sizes
+
+ Different sizes of buttons
+
+ Markup:
+ <div class="u-p-1">
+     <button class="c-btn {{modifier_class}}"><span>Click me</span></button>
+     <button class="c-btn c-btn--subtle {{modifier_class}}"><span>Click me</span></button>
+ </div>
+
+ .c-btn--tiny - Tiny button (for Alerts mostly)
+ .c-btn--small - Small button
+ .c-btn--large - Large button
+
+ Weight: 2
+
+ Styleguide Components.buttons.sizes
+*/
+
+/*
+ Button extensions
+
+ Different extensions of buttons
+
+ Markup:
+ <div class="u-p-1">
+     <button class="c-btn {{modifier_class}}"><span>Click</span></button>
+     <button class="c-btn c-btn--subtle {{modifier_class}}"><span>Click</span></button>
+ </div>
+
+ .c-btn--narrow - Narrow button (ignore button's min-width)
+ .c-btn--full - Full button
+
+ Weight: 3
+
+ Styleguide Components.buttons.extension
+*/
+
+/*
+ Buttons with icons
+
+ Those buttons can inherit any flavour of buttons described above.
+
+ The SVG icon is filled with a color consistent with the theme of its button.
+
+ Markup:
+ <div class="u-p-1">
+    <button class="c-btn {{modifier_class}}">
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+            </svg>
+            <span>Click me, I'm a button!</span>
+        </span>
+    </button>
+    <button class="c-btn c-btn--subtle {{modifier_class}}">
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+            </svg>
+            <span>Click me, I'm a button!</span>
+        </span>
+    </button>
+ </div>
+
+ .c-btn--secondary - Basic alternative
+ .c-btn--danger - Danger
+ .c-btn--danger-outline - Danger outlined
+ .c-btn--highlight - Highlighted button to catch the eye
+
+ Weight: 4
+
+ Styleguide Components.buttons.icons
+*/
+@require '../../react/deprecated/Button/styles.styl'
+
+/*------------------------------------*\
+  Alert's specific buttons
+\*------------------------------------*/
+/*
+ Alert's buttons
+
+ Buttons that look like links, with icons
+
+ Markup:
+ <div class="u-p-1">
+     <button class="c-btn-alert {{modifier_class}} u-m-1"><span>Click me, I'm a button!</span></button>
+     <a href="#" class="c-btn-alert {{modifier_class}} u-m-1"><span>Click me, I'm a link!</span></a>
+ </div>
+
+ .c-btn-alert--error - Error button
+ .c-btn-alert--info - Information button
+ .c-btn-alert--success - Success button
+
+ Weight: 10
+
+ Styleguide Components.buttons.alert
+*/
+.c-btn-alert
+    @extend $button-alert
+
+.c-btn-alert--error
+    @extend $button-alert--error
+
+.c-btn-alert--info
+    @extend $button-alert--info
+
+.c-btn-alert--success
+    @extend $button-alert--success
+
+/*------------------------------------*\
+  Special buttons
+\*------------------------------------*/
+/*
+ Special buttons
+
+ Special link that look like buttons (<a> only)
+
+ Markup:
+ <div class="u-p-1" style="background-color: darkgrey; width: 50%;">
+     <a hre="#" class="{{modifier_class}} u-mb-1"><span>Click me, I'm a link!</span></a>
+ </div>
+
+ .c-btn-client - Button to download Cozy client app
+ .c-btn-client-mobile - Button to download Cozy client app on mobile
+
+ Weight: 20
+
+ Styleguide Components.buttons.special
+*/
+.c-btn-client
+    @extend $button-client
+
+.c-btn-client-mobile
+    @extend $button-client-mobile
+
+/*
+    Navigation
+
+    Navigation component that displays a list of item link to other pages
+
+    Markup:
+    <nav style="width: 220px">
+        <ul class="c-nav">
+            <li class="c-nav-item">
+                <a class="c-nav-link is-active" href="#">
+                    <span class="c-nav-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+                        </svg>
+                    </span>
+                    <span class="c-nav-text">Link 1</span>
+                </a>
+            </li>
+            <li class="c-nav-item">
+                <a class="c-nav-link" href="#">
+                    <span class="c-nav-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+                        </svg>
+                    </span>
+                    <span class="c-nav-text">Link 2</span>
+                </a>
+            </li>
+            <li class="c-nav-item">
+                <a class="c-nav-link" href="#">
+                    <span class="c-nav-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+                        </svg>
+                    </span>
+                    <span class="c-nav-text">Link 3</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    Styleguide Components.nav
+*/
+@require '../../react/Nav/styles.styl'
+
+/*------------------------------------*\
+  Forms
+\*------------------------------------*/
+/*
+ Form
+
+ Form elements
+
+ Styleguide Components.form
+
+*/
+
+/*
+ Label
+
+ Label element coupled with any other form elements like inputs, textareas, select,etc
+
+ Markup:
+ <form>
+    <div>
+        <label class="c-label {{modifier_class}}" for="">Hello, I'm a label</label>
+    </div>
+ </form>
+
+ .is-error - Error variant
+
+ Weight: 1
+
+ Styleguide Components.form.label
+*/
+@require '../../react/Label/styles.styl'
+
+/*
+ Input text
+
+ Input element for text but also password, url, email
+
+ Markup:
+ <form>
+    <div class="u-mb-1">
+        <input type="text" class="c-input-text {{modifier_class}}" placeholder="I'm an input[type=text]" value="" />
+    </div>
+    <div class="u-mb-1">
+        <input type="password" class="c-input-text {{modifier_class}}" placeholder="I'm an input[type=password]" value="" />
+    </div>
+    <div class="u-mb-1">
+        <input type="url" class="c-input-text {{modifier_class}}" placeholder="I'm an input[type=url]" value="" />
+    </div>
+    <div class="u-mb-1">
+        <input type="email" class="c-input-text {{modifier_class}}" placeholder="I'm an input[type=email]" value="" />
+    </div>
+ </form>
+
+ .is-error - Error variant
+ .c-input-text--tiny - Tiny size variant
+ .c-input-text--medium - Medium size variant
+ .c-input-text--large - Large size variant (default)
+ .c-input-text--fullwidth - Full width variant
+
+ Weight: 2
+
+ Styleguide Components.form.input-text
+*/
+@require '../../react/Input/styles.styl'
+
+/*
+ Input Checkbox
+
+ Markup:
+ <form>
+    <h3>Standard checkbox</h3>
+    <div>
+        <label class="c-input-checkbox {{modifier_class}}">
+            <input type="checkbox" />
+            <span>I'm a checkbox</span>
+        </label>
+    </div>
+    <h3>Mixed checkbox</h3>
+    <div>
+        <label class="c-input-checkbox {{modifier_class}}" aria-checked="mixed">
+            <input type="checkbox" />
+            <span>I'm a checkbox</span>
+        </label>
+    </div>
+ </form>
+
+ .is-error - Error variant
+
+ Weight: 3
+
+ Styleguide Components.form.input-checkbox
+*/
+@require '../../react/Checkbox/styles.styl'
+
+/*
+ Input Radio
+
+ Markup:
+ <form>
+    <div>
+        <label class="u-mb-half c-input-radio {{modifier_class}}">
+            <input type="radio" name="radio"/>
+            <span>I'm a radio one</span>
+        </label>
+        <label class="u-mb-half c-input-radio {{modifier_class}}">
+            <input type="radio" name="radio"/>
+            <span>I'm a radio two</span>
+        </label>
+    </div>
+ </form>
+
+ .is-error - Error variant
+
+ Weight: 4
+
+ Styleguide Components.form.input-radio
+*/
+@require '../../react/deprecated/Radio/styles.styl'
+
+
+/*
+ Textarea
+
+ Markup:
+ <form>
+    <div>
+        <textarea class="c-textarea {{modifier_class}}" placeholder="Once upon a time…"></textarea>
+    </div>
+ </form>
+
+ .is-error - Error variant
+ .c-textarea--tiny - Tiny size variant
+ .c-textarea--medium - Medium size variant
+ .c-textarea--fullwidth - Full width variant
+
+ Weight: 5
+
+ Styleguide Components.form.textarea
+*/
+@require '../../react/Textarea/styles.styl'
+
+/*
+ Select
+
+ Markup:
+ <form>
+    <div>
+        <select class="c-select {{modifier_class}}">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+            <option value="4">Option 4</option>
+        </select>
+    </div>
+ </form>
+
+ .is-error - Error variant
+ .c-select--tiny - Tiny size variant
+ .c-select--medium - Medium size variant
+ .c-select--fullwidth - Full width variant
+
+ Weight: 6
+
+ Styleguide Components.form.select
+*/
+.c-select
+    @extend $select
+
+.c-select--tiny
+    @extend $select--tiny
+
+.c-select--medium
+    @extend $select--medium
+
+.c-select--fullwidth
+    @extend $select--fullwidth
+
+/*
+ Table
+
+ For a flexibility purpose, complex tables use `<div>` element instead of `<table>` but you still can use `<table>` for simpler tables, see **table-legacy** below.
+
+ By default, only `.c-table-cell--primary` has an ellipsis effect, but you can have it on any cell by applying the `.c-table-ellipsis` class.
+
+ NB: You should decide by yourself the sizes of the columns. In those examples we use the style tag but you definitely should use CSS classes.
+
+ Markup:
+ <div>
+    <h2>Table with div element</h2>
+    <div class="c-table">
+        <div class="c-table-head">
+            <div class="c-table-row-head">
+                <div class="c-table-header" style="width:50%">Header 1</div>
+                <div class="c-table-header" style="width:25%">Header 2</div>
+                <div class="c-table-header" style="width:25%">Header 3</div>
+            </div>
+        </div>
+        <div class="c-table-body">
+            <div class="c-table-row is-selected">
+                <div class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet</div>
+                <div class="c-table-cell" style="width:25%">lorem</div>
+                <div class="c-table-cell c-table-ellipsis" style="width:25%">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+            </div>
+            <div class="c-table-row">
+                <div class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</div>
+                <div class="c-table-cell" style="width:25%">corporis</div>
+                <div class="c-table-cell" style="width:25%">placeat</div>
+            </div>
+            <div class="c-table-divider">Divider</div>
+            <div class="c-table-row">
+                <div class="c-table-cell c-table-cell--primary" style="width:50%">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</div>
+                <div class="c-table-cell" style="width:25%">corporis</div>
+                <div class="c-table-cell" style="width:25%">placeat</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ Styleguide Components.table
+*/
+div.c-table
+    @extend $table
+
+.c-table-head
+    @extend $table-head
+
+.c-table-body
+    @extend $table-body
+
+.c-table-row
+    @extend $table-row
+
+    &.is-selected
+        @extend $table-row-selected
+
+
+.c-table-row-head
+    @extend $table-row-head
+
+.c-table-cell
+    @extend $table-cell
+
+.c-table-cell--primary
+    @extend $table-cell--primary
+
+.c-table-header
+    @extend $table-header
+
+.c-table-divider
+    @extend $table-divider
+
+.c-table-ellipsis
+    @extend $table-ellipsis
+
+/*
+ Table legacy
+
+ You also can use the `<table>` if you want although it could be tricky for complex tables.
+
+ List of utility classes for table
+
+ - `.is-selected` on a `<tr>` to highlight an entire line
+ - `.c-table-divider` on a `<tr>` to create a divider in your data table
+ - `.c-table-cell--primary` on a `<td>` to bring out a cell
+ - `.c-table-ellipsis` on a `<td>` to add an ellipsis effect without adding `table-layout: fixed` property to the table. In order for this to work you **MUST** have **2** `<div>` nested inside you `<td>`. *See example*
+
+ NB: Unlike the `<div>` table, the cell with `.c-table-cell--primary` does **not** have an ellipsis effect by default, if you want it must you add the `.c-table-ellipsis` class and the needed DOM.
+
+ Markup:
+ <div>
+    <h2>Table with table element</h2>
+    <table class="c-table">
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="is-selected">
+                <td class="c-table-cell--primary">Lorem ipsum dolor sit amet</td>
+                <td>lorem</td>
+                <td>ipsum</td>
+            </tr>
+            <tr>
+                <td class="c-table-cell--primary c-table-ellipsis">
+                    <div>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</div>
+                    </div>
+                </td>
+                <td>corporis</td>
+                <td>placeat</td>
+            </tr>
+            <tr class="c-table-divider">
+                <td colspan="3">Divider</td>
+            </tr>
+            <tr>
+                <td class="c-table-cell--primary c-table-ellipsis">
+                     <div>
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus voluptate officia culpa debitis, vero quia quae vel laboriosam</div>
+                    </div>
+                </td>
+                <td>corporis</td>
+                <td>placeat</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+ Styleguide Components.table-legacy
+*/
+
+table.c-table
+    @extend $table--legacy
+
+    tr.c-table-divider
+        @extend $table-divider--legacy
+
+    tr.is-selected
+        @extend $table-row-selected
+
+    td.c-table-cell--primary
+        @extend $table-cell--primary
+
+    td.c-table-ellipsis
+        @extend $table-ellipsis--legacy
+
+
+/*
+ Avatar
+
+Display an avatar of a user or contact with initials or an image
+
+ Markup:
+<div class="c-avatar {{modifier_class}}">
+    <span class="c-avatar-initials">CD</span>
+</div>
+<div class="c-avatar {{modifier_class}}">
+    <img src="https://cozy.io/fr/images/cozy-logo_white.png" class="c-avatar-image" alt="">
+</div>
+
+ .c-avatar--xsmall - Extra small size variant
+ .c-avatar--small - Small size variant
+ .c-avatar--large - Large size variant
+ .c-avatar--xlarge - Extra large variant
+
+ Styleguide Components.avatar
+*/
+@require '../../react/Avatar/styles.styl'
+
+/*
+ Chip
+
+Display an chip that represents complex identity
+
+ Markup:
+<div>
+    <div class="c-chip">
+        <svg class="u-mr-half" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+        </svg>
+        File
+    </div>
+</div>
+<div>
+    <div class="c-chip">
+        <div class="c-avatar c-avatar--small u-mr-half">
+            <img src="https://cozy.io/fr/images/cozy-logo_white.png" class="c-avatar-image" alt="">
+        </div>
+        Ada Lovelace
+    </div>
+</div>
+<div>
+    <div class="c-chip">
+        Developer
+        <span class="c-chip-separator"></span>
+        Ada Lovelace
+    </div>
+</div>
+<div>
+    <div class="c-chip c-chip--round">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+            <path d="M14,5c0,-1.656 -1.344,-3 -3,-3l-6,0c-1.656,0 -3,1.344 -3,3l0,6c0,1.656 1.344,3 3,3l6,0c1.656,0 3,-1.344 3,-3l0,-6Z"/>
+        </svg>
+    </div>
+</div>
+
+ Styleguide Components.chip
+*/
+@require '../../react/deprecated/Chip/styles.styl'
+
+
+/*------------------------------------*\
+  Utilities
+\*------------------------------------*/
+/*
+    Utilities
+
+    Ready-to-use utility classes
+
+    Weight: -4
+
+    Styleguide utilities
+*/
+
+/*
+    Cursor
+
+    Utilities that change cursor when hovering an element.
+
+     Markup:
+    <a href="https://cozy.io" class="{{modifier_class}}">I'm a link</a>
+
+    .u-c-default - Force default cursor
+    .u-c-help - help cursor for help and/or tips
+    .u-c-pointer - pointer cursor showing the element is clickable
+    .u-c-wait - wait cursor to express that an action is pending
+    .u-c-not-allowed - not allowed cursor, often used on a disabled element, to express your inhability to make an action
+
+    Styleguide utilities.cursor
+*/
+
+/*
+    Hide
+
+    Utilities that show or hide an element for a giving viewport size.
+
+    Markup:
+    <p class="{{modifier_class}}">I'm visible! 🎉</p>
+
+    .u-visuallyhidden - Element is visually hidden but still readable by screen-readers
+    .u-hide - Element is totally hidden (even for screen readers)
+    .u-hide--desk - Element is hidden on desktop (>768px)
+    .u-hide--tablet - Element is hidden on tablet (>1024px)
+    .u-hide--mob - Element is hidden on mobile (<1023px)
+
+    Styleguide utilities.hide
+*/
+
+/*
+    Text
+
+    Utilities to control text styling.
+
+    Styleguide utilities.text
+*/
+
+
+/*
+    Intentions
+
+    Utilities to style texts that have an intention behind them.
+
+    Markup: <p class="{{modifier_class}}">A message with an intention</p>
+
+    .u-success - Success text, can be used to indicate that everything is OK.
+    .u-warning - Warning text, something seems to be wrong.
+    .u-error - Error text, something is definitely wrong. Use with parcimony.
+    .u-info - Info text, can be used to add informations.
+
+    Styleguide utilities.text.intentions
+*/
+
+
+/*
+    Colored text
+
+    Utilities that give text a color from the existing palette.
+    In general, try to use variables with [semantic names](#kssref-utilities-text-intentions)
+    instead of variables with names referring to colors. This will help to
+    support theming.
+
+    Markup: <p class="{{modifier_class}}">Hello World!</p>
+
+    .u-primaryColor - primaryColor color
+    .u-primaryColorLight - primaryColorLight color
+    .u-primaryContrastTextColor - primaryContrastTextColor color
+    .u-black - block color
+    .u-white - white color
+    .u-paleGrey - paleGrey color
+    .u-silver - silver color
+    .u-coolGrey - coolGrey color
+    .u-slateGrey - slateGrey color
+    .u-charcoalGrey - charcoalGrey color
+    .u-dodgerBlue - dodgerBlue color
+    .u-weirdGreen - weirdGreen color
+    .u-pomegranate - pomegranate color
+    .u-monza - monza color
+    .u-overlay - overlay color
+    .u-lightishPurple - lightishPurple color
+
+    Weight: 1
+
+    Styleguide utilities.text.colors
+*/
+
+/*
+ Line-height
+
+ Sets various line-height to a text
+
+ Markup:
+ <p style="background-color: silver;" class="{{modifier_class}}">Aliquam etiam natoque</p>
+
+ .u-lh-tiny - Sets a tiny line-height (1)
+ .u-lh-xsmall - Sets a xsmall line-height (1.1)
+ .u-lh-small - Sets a small line-height (1.2)
+ .u-lh-medium - Sets a medium line-height (1.3)
+ .u-lh-large - Sets a large line-height (1.4)
+ .u-lh-xlarge - Sets a large line-height (1.5)
+
+ Weight: 6
+
+ Styleguide utilities.text.line-height
+*/
+
+/*
+ Font-size
+
+ Sets various font-size to a text<br>
+[Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+ Markup:
+ <p class="{{modifier_class}}">Aliquam etiam natoque phasellus habitant interdum a hendrerit ac aliquet</p>
+
+ .u-fz-tiny - Sets a tiny font-size (12px)
+ .u-fz-xsmall - Sets a xsmall font-size (13px)
+ .u-fz-small - Sets a small font-size (14px)
+ .u-fz-medium - Sets a medium font-size (16px)
+ .u-fz-large - Sets a large font-size (18px)
+
+ Weight: 7
+
+ Styleguide utilities.text.fontsize
+*/
+
+/*
+ Font-style
+
+ Sets a font-style to a text<br>
+[Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+ Markup:
+ <p class="{{modifier_class}}">Facilisis eget nam turpis id adipiscing facilisi odio ut fames, aliquet laoreet felis habitasse tincidunt litora leo senectus.</p>
+
+ .u-fs-normal - Sets a normal font style
+ .u-fs-italic - Sets an italic font style
+
+ Weight: 8
+
+ Styleguide utilities.text.fontstyle
+*/
+
+/*
+ Font-weight
+
+ Sets a font-weight to a text<br>
+[Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+ Markup:
+ <p class="{{modifier_class}}">Facilisis eget nam turpis id adipiscing facilisi odio ut fames, aliquet laoreet felis habitasse tincidunt litora leo senectus.</p>
+
+ .u-fw-normal - Sets a normal font weight
+ .u-fw-bold - Sets a bold font weight
+
+ Weight: 9
+
+ Styleguide utilities.text.fontweight
+*/
+
+/*
+ Text alignement
+
+ Sets a text alignement to a text<br>
+[Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+ Markup:
+ <p class="{{modifier_class}}">Facilisis eget nam turpis id adipiscing facilisi odio ut fames, aliquet laoreet felis habitasse tincidunt litora leo senectus.</p>
+
+ .u-ta-left - Sets a left alignment
+ .u-ta-right - Sets a right alignment
+ .u-ta-center - Sets a center alignment
+ .u-ta-justify - Sets a justify alignment
+
+ Weight: 10
+
+ Styleguide utilities.text.alignment
+*/
+
+/*
+ Ellipsis
+
+ Adds ellipsis to a long text
+
+ Markup: <p class="{{modifier_class}}">
+    Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise
+ </p>
+
+ .u-ellipsis - Ellipsis at the end
+
+ Weight: 11
+
+ Styleguide utilities.text.ellipsis
+*/
+
+/*
+ Space Ellipsis
+
+ Adds ellipsis to a long text but keeps breaking spaces<br>
+[Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+ Markup: <p class="{{modifier_class}}">
+    Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise
+ </p>
+
+ .u-spacellipsis - Ellipsis at the end but keeps breaking spaces
+
+ Weight: 12
+
+ Styleguide utilities.text.spacellipsis
+*/
+
+/*
+ Middle Ellipsis
+
+ Allows some text to have the ellipsis right in the middle
+
+ Markup: <p class="{{modifier_class}}">
+    <span>Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise</span>
+    <span>that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a "computing machine" and the first computer programmer.</span>
+ </p>
+
+ .u-midellipsis - Ellipsis in the middle
+
+ Weight: 13
+
+ Styleguide utilities.text.midellipsis
+*/
+
+/*
+ Link
+
+ Style for a simple link
+
+ Markup: <a href="#" class="{{modifier_class}}">Link</a>
+
+ .u-link - Link style
+
+ Weight: 14
+
+ Styleguide utilities.text.link
+*/
+
+/*
+ Typography
+
+ Titles & texts styles.
+ NB: You can use any class with any HTML tag.
+
+ Markup:
+ <h1 class="u-title-h1">Heading 1</h1>
+ <h2 class="u-title-h2">Heading 2</h2>
+ <h3 class="u-title-h3">Heading 3</h3>
+ <h4 class="u-title-h4">Heading 4</h4>
+ <p class="u-text">Basic text</p>
+ <p class="u-caption">Caption text</p>
+ <p class="u-uppercase">Upper cased text</p>
+ <p class="u-lowercase">Lower cased text (default)</p>
+
+ Weight: -1
+
+ Styleguide utilities.typography
+*/
+
+.wizard
+    @extend $wizard
+
+.wizard--waiting
+    @extend $wizard--waiting
+
+.wizard--scroll
+    @extend $wizard--scroll
+
+.wizard--dual
+    @extend $wizard--dual
+
+.wizard-wrapper
+    @extend $wizard-wrapper
+
+.wizard-header
+    @extend $wizard-header
+
+.wizard-footer
+    @extend $wizard-footer
+
+.wizard--welcome
+    .wizard-title
+        @extend $wizard-title--welcome
+    .wizard-footer
+        @extend $wizard-footer--welcome
+
+.wizard-wrapper--center
+    @extend $wizard-wrapper--center
+
+.wizard-wrapper--bleed
+    @extend $wizard-wrapper--bleed
+
+.wizard-wrapper--dual
+    @extend $wizard-wrapper--dual
+
+.wizard-dual
+    @extend $wizard-dual
+
+    .wizard-header
+        @extend $wizard-header--dual
+    .wizard-footer
+        @extend $wizard-footer--dual
+
+.wizard-errors
+    @extend $wizard-errors
+
+.wizard-main
+    @extend $wizard-main
+
+.wizard-logo
+    @extend $wizard-logo
+
+.wizard-logo-img
+    @extend $wizard-logo-img
+
+.wizard-logo-badge
+    @extend $wizard-logo-badge
+
+.wizard-disclaimer
+    @extend $wizard-disclaimer
+
+.wizard-desc
+    @extend $wizard-desc
+
+.wizard-desc--footer
+    @extend $wizard-desc--footer
+
+.wizard-header-help
+    @extend $wizard-header-help
+
+.wizard-header-fixed
+    @extend $wizard-header-fixed
+
+.wizard-previous
+    @extend $wizard-previous
+
+.wizard-brand
+    @extend $wizard-brand
+
+.wizard-brand--invert
+    @extend $wizard-brand--invert
+
+.wizard-previous + .wizard-brand
+    @extend $wizard-brand-with
+
+.wizard-next
+    @extend $wizard-next
+
+.wizard-button
+    @extend $wizard-button
+
+.wizard-buttonlink
+    @extend $wizard-buttonlink
+
+.wizard-input
+    @extend $wizard-input
+
+.wizard-dual-btn
+    @extend $wizard-dual-btn
+
+.wizard-waiting-icon
+    @extend $wizard-waiting-icon
+
+.wizard-dual-icon
+    @extend $wizard-dual-icon
+
+.wizard-title
+    @extend $wizard-title
+
+.wizard-dual-title
+    @extend $wizard-dual-title
+
+.wizard-title-sub
+    @extend $wizard-title-sub
+
+.wizard-subtitle
+    @extend $wizard-subtitle
+
+.wizard-dual-subtitle
+    @extend $wizard-dual-subtitle
+
+.wizard-showbutton
+    @extend $wizard-showbutton
+
+.wizard-dualfield
+    @extend $wizard-dualfield
+
+.wizard-dualfield--focus
+    @extend $wizard-dualfield--focus
+
+.wizard-dualfield--error
+    @extend $wizard-dualfield--error
+
+.wizard-dualfield-wrapper
+    @extend $wizard-dualfield-wrapper
+
+.wizard-dualfield-input
+    @extend $wizard-dualfield-input
+
+.wizard-protocol
+    @extend $wizard-protocol
+
+.wizard-domain
+    @extend $wizard-domain
+
+.wizard-select
+    @extend $wizard-select
+
+.wizard-select--medium
+    @extend $wizard-select--medium
+
+.wizard-requirements
+    @extend $wizard-requirements
+
+.wizard-agreements
+    @extend $wizard-agreements
+
+.wizard-agreements-item
+    @extend $wizard-agreements-item
+
+.wizard-agreements-desc
+    @extend $wizard-agreements-desc
+
+.wizard-agreements-icon
+    @extend $wizard-agreements-icon
+
+// @stylint off
+.wizard-agreements-item:nth-child(1)
+    .wizard-agreements-icon
+        --bgcolor var(--weirdGreen)
+
+.wizard-agreements-item:nth-child(2)
+    .wizard-agreements-icon
+        --bgcolor var(--mango)
+
+.wizard-agreements-item:nth-child(3)
+    .wizard-agreements-icon
+        --bgcolor var(--lightishPurple)
+
+.wizard-agreements-item:nth-child(4)
+    .wizard-agreements-icon
+        --bgcolor var(--pomegranate)
+
+.wizard-agreements-item:nth-child(5)
+    .wizard-agreements-icon
+        --bgcolor var(--azure)
+
+.wizard-agreements-item:nth-child(6)
+    .wizard-agreements-icon
+        --bgcolor var(--brightSun)
+// @stylint on
+
+.wizard-updated
+    @extend $wizard-updated
+
+.wizard-progress
+    @extend $wizard-progress
+
+.wizard-progress-bar
+    @extend $wizard-progress-bar
+
+.wizard-notice
+    @extend $wizard-notice
+
+.wizard-notice--lost
+    @extend $wizard-notice--lost
+
+
+/*
+    Margins
+
+    Classes to add margins on top, bottom, right, left or all of them based on
+    default font-size (16px)<br>
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-m-auto - Auto margin on all sides
+    .u-m-0 - No margins on all sides
+    .u-m-half - Margins on all sides with half a line (8px)
+    .u-m-1 - Margins on all sides with 1 line (16px)
+    .u-m-1-half - Margins on all sides with 1 line an a half (24px)
+    .u-m-2 - Margins on all sides with 2 lines (32px)
+    .u-m-2-half - Margins on all sides with 1 line an a half (40px)
+    .u-m-3 - Margins on all sides with 2 lines (48px)
+    .u-mv-auto - Auto vertically margins
+    .u-mv-0 - No vertically margins
+    .u-mv-half - Vertically margins with half a line (8px)
+    .u-mv-1 - Vertically margins with 1 line (16px)
+    .u-mv-1-half - Vertically margins with 1 line an a half (24px)
+    .u-mv-2 - Vertically margins with 2 lines (32px)
+    .u-mv-2-half - Vertically margins with 1 line an a half (40px)
+    .u-mv-3 - Vertically margins with 2 lines (48px)
+    .u-mh-auto - Auto horizontally margins
+    .u-mh-0 - No horizontally margins
+    .u-mh-half - Horizontally margins with half a line (8px)
+    .u-mh-1 - Horizontally margins with 1 line (16px)
+    .u-mh-1-half - Horizontally margins with 1 line an a half (24px)
+    .u-mh-2 - Horizontally margins with 2 lines (32px)
+    .u-mh-2-half - Horizontally margins with 1 line an a half (40px)
+    .u-mh-3 - Horizontally margins with 2 lines (48px)
+    .u-mt-auto - Margin Top auto
+    .u-mt-0 - No margin Top
+    .u-mt-half - Margin Top with half a line (8px)
+    .u-mt-1 - Margin Top with 1 line (16px)
+    .u-mt-1-half - Margin Top with 1 line an a half (24px)
+    .u-mt-2 - Margin Top with 2 lines (32px)
+    .u-mt-2-half - Margin Top with 1 line an a half (40px)
+    .u-mt-3 - Margin Top with 2 lines (48px)
+    .u-mb-auto - Margin Bottom auto
+    .u-mb-0 - No margin Bottom
+    .u-mb-half - Margin Bottom with half a line (8px)
+    .u-mb-1 - Margin Bottom with 1 line (16px)
+    .u-mb-1-half - Margin Bottom with 1 line an a half (24px)
+    .u-mb-2 - Margin Bottom with 2 lines (32px)
+    .u-mb-2-half - Margin Bottom with 1 line an a half (40px)
+    .u-mb-3 - Margin Bottom with 2 lines (48px)
+    .u-ml-auto - Margin Left auto
+    .u-ml-0 - No margin Left
+    .u-ml-half - Margin Left with half a line (8px)
+    .u-ml-1 - Margin Left with 1 line (16px)
+    .u-ml-1-half - Margin Left with 1 line an a half (24px)
+    .u-ml-2 - Margin Left with 2 lines (32px)
+    .u-ml-2-half - Margin Left with 1 line an a half (40px)
+    .u-ml-3 - Margin Left with 2 lines (48px)
+    .u-mr-auto - Margin Right auto
+    .u-mr-0 - No margin Right
+    .u-mr-half - Margin Right with half a line (8px)
+    .u-mr-1 - Margin Right with 1 line (16px)
+    .u-mr-1-half - Margin Right with 1 line an a half (24px)
+    .u-mr-2 - Margin Right with 2 lines (32px)
+    .u-mr-2-half - Margin Right with 1 line an a half (40px)
+    .u-mr-3 - Margin Right with 2 lines (48px)
+
+    Markup:
+    <div style="background-color:dimgrey; border: 1px solid black;"><div style="padding:.5rem; background-color:gainsboro;" class="{{modifier_class}}">🎶 Gimme some margin 🎵 </div></div>
+
+    Styleguide utilities.margins
+*/
+
+/*
+    Paddings
+
+    Classes to add paddings on top, bottom, right, left or all of them based on
+    default font-size (16px)<br>
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-p-auto - Auto paddings on all sides
+    .u-p-0 - No paddings on all sides
+    .u-p-half - Paddings on all sides with half a line (8px)
+    .u-p-1 - Paddings on all sides with 1 line (16px)
+    .u-p-1-half - Paddings on all sides with 1 line an a half (24px)
+    .u-p-2 - Paddings on all sides with 2 lines (32px)
+    .u-p-2-half - Paddings on all sides with 1 line an a half (40px)
+    .u-p-3 - Paddings on all sides with 2 lines (48px)
+    .u-pv-auto - Auto vertically paddings
+    .u-pv-0 - No vertically paddings
+    .u-pv-half - Vertically paddings with half a line (8px)
+    .u-pv-1 - Vertically paddings with 1 line (16px)
+    .u-pv-1-half - Vertically paddings with 1 line an a half (24px)
+    .u-pv-2 - Vertically paddings with 2 lines (32px)
+    .u-pv-2-half - Vertically paddings with 1 line an a half (40px)
+    .u-pv-3 - Vertically paddings with 2 lines (48px)
+    .u-ph-auto - Auto horizontally paddings
+    .u-ph-0 - No horizontally paddings
+    .u-ph-half - Horizontally paddings with half a line (8px)
+    .u-ph-1 - Horizontally paddings with 1 line (16px)
+    .u-ph-1-half - Horizontally paddings with 1 line an a half (24px)
+    .u-ph-2 - Horizontally paddings with 2 lines (32px)
+    .u-ph-2-half - Horizontally paddings with 1 line an a half (40px)
+    .u-ph-3 - Horizontally paddings with 2 lines (48px)
+    .u-pt-auto - Padding Top auto
+    .u-pt-0 - No padding Top
+    .u-pt-half - Padding Top with half a line (8px)
+    .u-pt-1 - Padding Top with 1 line (16px)
+    .u-pt-1-half - Padding Top with 1 line an a half (24px)
+    .u-pt-2 - Padding Top with 2 lines (32px)
+    .u-pt-2-half - Padding Top with 1 line an a half (40px)
+    .u-pt-3 - Padding Top with 2 lines (48px)
+    .u-pb-auto - Padding Bottom auto
+    .u-pb-0 - No padding Bottom
+    .u-pb-half - Padding Bottom with half a line (8px)
+    .u-pb-1 - Padding Bottom with 1 line (16px)
+    .u-pb-1-half - Padding Bottom with 1 line an a half (24px)
+    .u-pb-2 - Padding Bottom with 2 lines (32px)
+    .u-pb-2-half - Padding Bottom with 1 line an a half (40px)
+    .u-pb-3 - Padding Bottom with 2 lines (48px)
+    .u-pl-auto - Padding Left auto
+    .u-pl-0 - No padding Left
+    .u-pl-half - Padding Left with half a line (8px)
+    .u-pl-1 - Padding Left with 1 line (16px)
+    .u-pl-1-half - Padding Left with 1 line an a half (24px)
+    .u-pl-2 - Padding Left with 2 lines (32px)
+    .u-pl-2-half - Padding Left with 1 line an a half (40px)
+    .u-pl-3 - Padding Left with 2 lines (48px)
+    .u-pr-auto - Padding Right auto
+    .u-pr-0 - No padding Right
+    .u-pr-half - Padding Right with half a line (8px)
+    .u-pr-1 - Padding Right with 1 line (16px)
+    .u-pr-1-half - Padding Right with 1 line an a half (24px)
+    .u-pr-2 - Padding Right with 2 lines (32px)
+    .u-pr-2-half - Padding Right with 1 line an a half (40px)
+    .u-pr-3 - Padding Right with 2 lines (48px)
+
+    Markup:
+    <div style="background-color:gainsboro; display: inline-block;" class="{{modifier_class}}"><span style="background-color:bisque;">🎼 Gimme some padding 💃</span></div>
+
+    Styleguide utilities.paddings
+*/
+
+/*
+    Spacing
+
+    Classes to add spacing between the children elements.
+
+    .u-stack-xs - Adds extra small spacing between its children
+    .u-stack-s - Adds small spacing between its children
+    .u-stack-m - Adds medium spacing between its children
+    .u-stack-l - Adds large spacing between its children
+    .u-stack-xl - Adds extra large spacing between its children
+    .u-stack-xxl - Adds extra extra large spacing between its children
+
+    Markup:
+    <div class="{{modifier_class}}">
+        <div class="u-card">First children</div>
+        <div class="u-card">Second children</div>
+        <div class="u-card">Third children</div>
+    </div>
+
+    Styleguide utilities.spacings
+*/
+
+/*
+    Card
+
+    .u-card - Adds a rounded outline
+
+    Markup:
+    <div class="{{modifier_class}}">
+        Content of a card
+    </div>
+
+    Weight: 1
+
+    Styleguide utilities.card
+*/
+
+/*
+    Elevation
+
+    .u-elevation-1 - Adds a box shadow
+
+    Markup:
+    <div class="{{modifier_class}}">
+        Content of a card
+    </div>
+
+    Weight: 1
+
+    Styleguide utilities.elevation
+*/
+
+
+/*
+    List
+
+    List options<br>
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-nolist - Remove the bullet point from a list
+
+    Markup:
+    <ul class="{{modifier_class}}">
+        <li>Suspendisse mauris</li>
+        <li>Nulla ex aptent</li>
+        <li>Nullam praesent</li>
+    </ul>
+
+    Weight: 1
+
+    Styleguide utilities.list
+*/
+
+/*
+    Border
+
+    Styleguide utilities.border
+*/
+
+/*
+    Border-radius
+
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-bdrs-1 - 1st step of border-radius (2px)
+    .u-bdrs-2 - 2nd step of border-radius (3px)
+    .u-bdrs-3 - 3rd step of border-radius (4px)
+    .u-bdrs-4 - 4th step of border-radius (8px)
+    .u-bdrs-circle - Round element with border-radius (100%)
+
+    Markup:
+    <div class="{{modifier_class}}  u-bg-dodgerBlue" style="width:4rem; height:4rem; "></div>
+
+    Styleguide utilities.border.radius
+*/
+
+/*
+    Border-width
+
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-bdw-0 - 1st step of border-width (0px)
+    .u-bdw-1 - 2nd step of border-width (2px)
+
+    Markup:
+    <div class="{{modifier_class}}  u-bg-dodgerBlue" style="width:4rem; height:4rem; border-color:red; border-style: solid "></div>
+
+    Weight: 1
+
+ Styleguide utilities.border.width
+
+*/
+
+/*
+    Box-sizing
+
+    .u-bxz - Sets the box-sizing of an element to `border-box`
+
+    Markup:
+    <div class="{{modifier_class}} u-w-4 u-p-1 u-bg-silver"></div>
+
+    Weight: 1
+
+    Styleguide utilities.boxsizing
+*/
+
+/*
+    Display
+
+    Classes to change the box model of an element<br>
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)<br><br>
+
+    NB: `flex` being much more complex, it has its own set of utility classes, [see further](section-utilities.html#kssref-utilities-flexbox).
+
+    .u-dn - Display none
+    .u-di - Display inline
+    .u-db - Display block
+    .u-dib - Display inline-block
+    .u-dit - Display inline-table
+    .u-dt - Display table
+    .u-dtc - Display table-cell
+    .u-dt-row - Display table-row
+    .u-dt-row-group - Display table-row-group
+    .u-dt-column - Display table-column
+    .u-dt-column-group - Display table-column-group
+
+    Markup:
+    <div class="{{modifier_class}}" style="margin: 1rem; padding: .125rem .25rem; background-color:gainsboro; border: 1px solid black;">
+        <span>Suspendisse mauris</span>
+        <span>Nulla ex aptent</span>
+        <span>Nullam praesent</span>
+    </div>
+
+    Weight: 1
+
+    Styleguide utilities.display
+*/
+
+/*
+    Position
+
+    Classes to change the position of an element<br>
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-pos-absolute - Absolute position
+    .u-pos-relative - Relative position
+    .u-pos-fixed - Fixed position (relative to the viewport)
+    .u-pos-sticky - Sticky position
+    .u-pos-static - Static position
+
+    Markup:
+    <div style="position: relative; margin: 1rem; padding: .125rem .25rem; background-color:gainsboro; border: 1px solid black;">
+        <div class="{{modifier_class}}" style="background-color:green;">Nulla ex aptent</div>
+    </div>
+
+    Weight: 1
+
+    Styleguide utilities.position
+*/
+
+/*
+    Position directions
+
+    Classes to change the directional position of an element<br>
+
+    .u-top-0 - Top 0
+    .u-top-xs - Top XS
+    .u-top-s - Top S
+    .u-top-m - Top M
+    .u-top-l - Top L
+    .u-top-xl - Top XL
+    .u-top-xxl - Top XXL
+    .u-bottom-0 - Bottom 0
+    .u-bottom-xs - Bottom XS
+    .u-bottom-s - Bottom S
+    .u-bottom-m - Bottom M
+    .u-bottom-l - Bottom L
+    .u-bottom-xl - Bottom XL
+    .u-bottom-xxl - Bottom XXL
+    .u-left-0 - Left 0
+    .u-left-xs - Left XS
+    .u-left-s - Left S
+    .u-left-m - Left M
+    .u-left-l - Left L
+    .u-left-xl - Left XL
+    .u-left-xxl - Left XXL
+    .u-right-0 - Right 0
+    .u-right-xs - Right XS
+    .u-right-s - Right S
+    .u-right-m - Right M
+    .u-right-l - Right L
+    .u-right-xl - Right XL
+    .u-right-xxl - Right XXL
+
+    Markup:
+    <div style="position: relative; margin: 1rem; padding: .125rem .25rem; background-color:gainsboro; border: 1px solid black; height: 100px;">
+        <div class="u-pos-absolute u-w-1 u-h-1 {{modifier_class}}" style="background-color:green;"></div>
+    </div>
+
+    Weight: 1
+
+    Styleguide utilities.position-directions
+*/
+
+/*
+    Flexbox display
+
+    Classes to make Flexbox containers<br>
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-flex - Display a flex element
+    .u-inline-flex - Display an inline-flex element
+    .u-flex-none - Undisplay a flex element
+
+    Markup:
+    <div class="{{modifier_class}}" style="background-color:dimgrey; border: 1px solid black;">
+        <div style="padding:.5rem; background-color:gainsboro;">Suspendisse mauris montes elementum varius lectus ullamcorper per, ac praesent maximus curabitur parturient vitae.</div>
+        <div style="padding:.5rem; background-color:gainsboro;">Nulla ex aptent eleifend tempus mauris habitant imperdiet porta, ac mattis lobortis felis per dictum.</div>
+        <div style="padding:.5rem; background-color:gainsboro;">Nullam praesent iaculis phasellus vel turpis taciti facilisis, fermentum bibendum himenaeos class efficitur urna, per nam ut parturient enim dapibus.</div>
+    </div>
+
+    Weight: 1
+
+    Styleguide utilities.flexbox
+*/
+
+/*
+    Flexbox direction
+
+    Classes to set Flexbox container's direction<br>
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-flex-column - Set the direction to column
+    .u-flex-row - Set the direction to row
+    .u-flex-column-reverse - Set the direction to column-reverse
+    .u-flex-row-reverse - Set the direction to row-reverse
+
+    Markup:
+    <div class="u-flex {{modifier_class}}" style="background-color:dimgrey; border: 1px solid black;">
+        <div style="padding:.5rem; background-color:gainsboro;">Suspendisse mauris montes elementum varius lectus ullamcorper per, ac praesent maximus curabitur parturient vitae.</div>
+        <div style="padding:.5rem; background-color:gainsboro;">Nulla ex aptent eleifend tempus mauris habitant imperdiet porta, ac mattis lobortis felis per dictum.</div>
+        <div style="padding:.5rem; background-color:gainsboro;">Nullam praesent iaculis phasellus vel turpis taciti facilisis, fermentum bibendum himenaeos class efficitur urna, per nam ut parturient enim dapibus.</div>
+    </div>
+
+    Weight: 2
+
+    Styleguide utilities.flexbox.direction
+*/
+
+/*
+    Flexbox wrap
+
+    Classes to set Flexbox container's wrapping<br>
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-flex-wrap - Set the wrapping to true
+    .u-flex-nowrap - Set the wrapping to false
+    .u-flex-wrap-reverse - Set the reverse wrapping to true
+
+    Markup:
+    <div class="u-flex {{modifier_class}}" style="background-color:dimgrey; border: 1px solid black;">
+        <div style="padding:.5rem; background-color:gainsboro; flex-basis: calc(50% -1rem);">Suspendisse mauris montes elementum varius lectus ullamcorper per, ac praesent maximus curabitur parturient vitae.</div>
+        <div style="padding:.5rem; background-color:gainsboro; flex-basis: calc(50% -1rem);">Nulla ex aptent eleifend tempus mauris habitant imperdiet porta, ac mattis lobortis felis per dictum.</div>
+        <div style="padding:.5rem; background-color:gainsboro; flex-basis: calc(50% -1rem);">Nullam praesent iaculis phasellus vel turpis taciti facilisis, fermentum bibendum himenaeos class efficitur urna, per nam ut parturient enim dapibus.</div>
+    </div>
+
+    Weight: 3
+
+    Styleguide utilities.flexbox.wrap
+*/
+
+/*
+    Flexbox align items
+
+    Classes to set Flexbox items alignment<br>
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-flex-items-start - Flex items aligned to flex-start
+    .u-flex-items-end - Flex items aligned to flex-end
+    .u-flex-items-center - Flex items aligned to center
+    .u-flex-items-baseline - Flex items aligned to baseline
+    .u-flex-items-stretch - Flex items aligned to stretch
+
+    Markup:
+    <div class="u-flex u-flex-nowrap {{modifier_class}}" style="background-color:dimgrey; border: 1px solid black; height: 100px";>
+        <div style="padding:.5rem; background-color:gainsboro;">Suspendisse mauris montes elementum varius lectus ullamcorper per, ac praesent maximus curabitur parturient vitae.</div>
+        <div style="padding:.5rem; background-color:gainsboro;">Nulla ex aptent eleifend tempus mauris habitant imperdiet porta, ac mattis lobortis felis per dictum.</div>
+        <div style="padding:.5rem; background-color:gainsboro;">Nullam praesent iaculis phasellus vel turpis taciti facilisis, fermentum bibendum himenaeos class efficitur urna, per nam ut parturient enim dapibus.</div>
+    </div>
+
+    Weight: 4
+
+    Styleguide utilities.flexbox.items
+*/
+
+/*
+    Flexbox justify content
+
+    Classes to set Flexbox items main axis alignment<br>
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-flex-justify-start - Set main axis alignment of flex items to flex-start
+    .u-flex-justify-end - Set main axis alignment of flex items to flex-end
+    .u-flex-justify-center - Set main axis alignment of flex items to center
+    .u-flex-justify-between - Set main axis alignment of flex items to space-between
+    .u-flex-justify-around - Set main axis alignment of flex items to space-around
+    .u-flex-content-start - Set container lines alignment to flex-start
+
+    Markup:
+    <div class="u-flex u-flex-nowrap {{modifier_class}}" style="background-color:dimgrey; border: 1px solid black; height: 100px";>
+        <div style="padding:.5rem; background-color:gainsboro; flex: 0 1 20%">Suspendisse mauris montes elementum varius lectus ullamcorper per, ac praesent maximus curabitur parturient vitae.</div>
+        <div style="padding:.5rem; background-color:gainsboro; flex: 0 1 20%">Nulla ex aptent eleifend tempus mauris habitant imperdiet porta, ac mattis lobortis felis per dictum.</div>
+        <div style="padding:.5rem; background-color:gainsboro; flex: 0 1 20%">Nullam praesent iaculis phasellus vel turpis taciti facilisis, fermentum bibendum himenaeos class efficitur urna, per nam ut parturient enim dapibus.</div>
+    </div>
+
+    Weight: 5
+
+    Styleguide utilities.flexbox.justify
+*/
+
+/*
+    Flexbox content alignment (lines)
+
+    Classes to set Flexbox line items alignment<br>
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-flex-content-start - Set container lines alignment to flex-start
+    .u-flex-content-end - Set container lines alignment to flex-end
+    .u-flex-content-center - Set container lines alignment to center
+    .u-flex-content-between -  Set container lines alignment to space-between
+    .u-flex-content-around -  Set container lines alignment to space-around
+    .u-flex-content-stretch - Set container lines alignment to stretch
+
+    Markup:
+    <div class="u-flex u-flex-wrap u-flex-items-start {{modifier_class}}" style="background-color:dimgrey; border: 1px solid black; height: 300px";>
+        <div style="padding:.5rem; background-color:gainsboro; flex: 0 0 100%">Suspendisse mauris montes elementum varius lectus ullamcorper per, ac praesent maximus curabitur parturient vitae.</div>
+        <div style="padding:.5rem; background-color:gainsboro; flex: 0 0 100%">Nulla ex aptent eleifend tempus mauris habitant imperdiet porta, ac mattis lobortis felis per dictum.</div>
+        <div style="padding:.5rem; background-color:gainsboro; flex: 0 0 100%">Nullam praesent iaculis phasellus vel turpis taciti facilisis, fermentum bibendum himenaeos class efficitur urna, per nam ut parturient enim dapibus.</div>
+    </div>
+
+    Weight: 6
+
+    Styleguide utilities.flexbox.content
+*/
+
+/*
+    Flexbox align-self
+
+    Classes to set align-self on items<br>
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-flex-self-start - Specific flex item aligned to flex-start
+    .u-flex-self-end - Specific flex item aligned to flex-end
+    .u-flex-self-center - Specific flex item aligned to center
+    .u-flex-self-baseline - Specific flex item aligned to baseline
+    .u-flex-self-stretch - Specific flex item aligned to stretch
+
+    Markup:
+    <div class="u-flex u-flex-nowrap u-flex-items-start" style="background-color:dimgrey; border: 1px solid black; height: 300px";>
+        <div style="padding:.5rem; background-color:gainsboro; flex: 0 0 30%">Suspendisse mauris montes elementum varius lectus ullamcorper per, ac praesent maximus curabitur parturient vitae.</div>
+        <div class="{{modifier_class}}" style="padding:.5rem; background-color:gainsboro; flex: 0 0 30%">Nulla ex aptent eleifend tempus mauris habitant imperdiet porta, ac mattis lobortis felis per dictum.</div>
+        <div style="padding:.5rem; background-color:gainsboro; flex: 0 0 30%">Nullam praesent iaculis phasellus vel turpis taciti facilisis, fermentum bibendum himenaeos class efficitur urna, per nam ut parturient enim dapibus.</div>
+    </div>
+
+    Weight: 7
+
+    Styleguide utilities.flexbox.self
+*/
+
+/*
+    Flexbox order
+
+    Classes to set order on items<br>
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-flex-order-0 - Set flex item order to 0
+    .u-flex-order-1 - Set flex item order to 1
+    .u-flex-order-2 - Set flex item order to 2
+    .u-flex-order-3 - Set flex item order to 3
+    .u-flex-order-4 - Set flex item order to 4
+    .u-flex-order-5 - Set flex item order to 5
+    .u-flex-order-6 - Set flex item order to 6
+    .u-flex-order-7 - Set flex item order to 7
+    .u-flex-order-8 - Set flex item order to 8
+    .u-flex-order-last - Set flex item order to the last position (99999)
+
+    Markup:
+    <div class="u-flex u-flex-nowrap u-flex-items-start" style="background-color:dimgrey; border: 1px solid black;">
+        <div class="u-title-h1 {{modifier_class}}" style="padding:.5rem; background-color:red; flex: 0 0 5%">item</div>
+        <div class="u-title-h1" style="order:1 ;padding:.5rem; background-color:gainsboro; flex: 0 0 5%">1</div>
+        <div class="u-title-h1" style="order:2 ;padding:.5rem; background-color:gainsboro; flex: 0 0 5%">2</div>
+        <div class="u-title-h1" style="order:3 ;padding:.5rem; background-color:gainsboro; flex: 0 0 5%">3</div>
+        <div class="u-title-h1" style="order:4 ;padding:.5rem; background-color:gainsboro; flex: 0 0 5%">4</div>
+        <div class="u-title-h1" style="order:5 ;padding:.5rem; background-color:gainsboro; flex: 0 0 5%">5</div>
+        <div class="u-title-h1" style="order:6 ;padding:.5rem; background-color:gainsboro; flex: 0 0 5%">6</div>
+        <div class="u-title-h1" style="order:7 ;padding:.5rem; background-color:gainsboro; flex: 0 0 5%">7</div>
+        <div class="u-title-h1" style="order:8 ;padding:.5rem; background-color:gainsboro; flex: 0 0 5%">8</div>
+        <div class="u-title-h1" style="order:9 ;padding:.5rem; background-color:gainsboro; flex: 0 0 5%">9</div>
+    </div>
+
+    Weight: 8
+
+    Styleguide utilities.flexbox.order
+*/
+
+/*
+    Flexbox items grow
+
+    Classes to set items growth<br>
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-flex-auto - Make a flex item fill the space
+    .u-flex-grow-0 - Flex item doesn't grow
+    .u-flex-grow-1 - Flex item grows
+
+    Markup:
+    <div class="u-flex u-flex-nowrap u-flex-items-start" style="background-color:dimgrey; border: 1px solid black;">
+        <div style="padding:.5rem; background-color:gainsboro;">Tincidunt at porttitor augue ac</div>
+        <div class="{{modifier_class}}" style="padding:.5rem; background-color:bisque;">Nulla ex aptent eleifend tempus mauris habitant imperdiet porta, ac mattis lobortis felis per dictum.</div>
+        <div style="padding:.5rem; background-color:darkkhaki;">Cubilia pharetra faucibus</div>
+    </div>
+
+    Weight: 9
+
+    Styleguide utilities.flexbox.grow
+*/
+
+/*
+    Flexbox items shrink
+
+    Classes to set items shrink<br>
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-flex-shrink-0 - Flex item doesn't shrink
+    .u-flex-shrink-1 - Flex item shrinks
+
+    Markup:
+    <div class="u-flex u-flex-nowrap u-flex-items-start" style="background-color:dimgrey; border: 1px solid black;">
+        <div style="padding:.5rem; background-color:gainsboro;">Tincidunt at porttitor augue ac</div>
+        <div class="{{modifier_class}}" style="padding:.5rem; background-color:bisque;">Nulla ex aptent eleifend tempus mauris habitant imperdiet porta, ac mattis lobortis felis per dictum commodo parturient condimentum.</div>
+        <div style="padding:.5rem; background-color:darkkhaki;">Cubilia pharetra faucibus commodo parturient condimentum inceptos montes nisl egestas facilisis.</div>
+    </div>
+
+    Weight: 10
+
+    Styleguide utilities.flexbox.shrink
+*/
+
+/*
+    width/height
+
+    Classes to set width/height on elements<br>
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-w-auto - Cancel width
+    .u-w-half - Apply width half step in scale (0.5rem = 8px)
+    .u-w-1 - Apply width 1st step in scale (1rem = 16px)
+    .u-w-1-half - Apply width 1st step + half in scale (1.5rem = 24px)
+    .u-w-2 - Apply width 2nd step in scale (2rem = 32px)
+    .u-w-2-half - Apply width 2nd step + half in scale (2.5rem = 40px)
+    .u-w-3 - Apply width 3rd step in scale (4rem = 64px)
+    .u-w-4 - Apply width 4th step in scale (8rem = 128px)
+    .u-w-5 - Apply width 5th step in scale (16rem = 256px)
+    .u-w-6 - Apply width 6th step in scale (32rem = 512px)
+    .u-w-7 - Apply width 7th step in scale (48rem = 768px)
+    .u-w-8 - Apply width 8th step in scale (64rem = 1024px)
+    .u-w-9 - Apply width 9th step in scale (96rem = 1536px)
+    .u-w-100 - Apply width 100%
+    .u-h-auto - Cancel height
+    .u-h-half - Apply height half step in scale (0.5rem = 8px)
+    .u-h-1 - Apply height 1st step in scale (1rem = 16px)
+    .u-h-1-half - Apply height 1st step + half in scale (1.5rem = 24px)
+    .u-h-2 - Apply height 2nd step in scale (2rem = 32px)
+    .u-h-2-half - Apply height 2nd step + half in scale (2.5rem = 40px)
+    .u-h-3 - Apply height 3rd step in scale (4rem = 64px)
+    .u-h-4 - Apply height 4th step in scale (8rem = 128px)
+    .u-h-5 - Apply height 5th step in scale (16rem = 256px)
+    .u-h-6 - Apply height 6th step in scale (32rem = 512px)
+    .u-h-7 - Apply height 7th step in scale (48rem = 768px)
+    .u-h-8 - Apply height 8th step in scale (64rem = 1024px)
+    .u-h-9 - Apply height 9th step in scale (96rem = 1536px)
+    .u-h-100 - Apply height 100%
+
+    Markup:
+    <div class="{{modifier_class}}" style="display: inline-block;background-color:gainsboro; border: 1px solid black;">&nbsp;</div>
+
+    Weight: 11
+
+    Styleguide utilities.dimensions
+*/
+
+/*
+    Min-width/height
+
+    Classes to set min-width/height on elements<br>
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-miw-auto - Cancel min-width
+    .u-miw-half - Apply min-width half step in scale (0.5rem = 8px)
+    .u-miw-1 - Apply min-width 1st step in scale (1rem = 16px)
+    .u-miw-1-half - Apply min-width 1st step + half step in scale (1.5rem = 24px)
+    .u-miw-2 - Apply min-width 2nd step in scale (2rem = 32px)
+    .u-miw-2-half - Apply min-width 2nd step + half step in scale (2.5rem = 40px)
+    .u-miw-3 - Apply min-width 3rd step in scale (4rem = 64px)
+    .u-miw-4 - Apply min-width 4th step in scale (8rem = 128px)
+    .u-miw-5 - Apply min-width 5th step in scale (16rem = 256px)
+    .u-miw-6 - Apply min-width 6th step in scale (32rem = 512px)
+    .u-miw-7 - Apply min-width 7th step in scale (48rem = 768px)
+    .u-miw-8 - Apply min-width 8th step in scale (64rem = 1024px)
+    .u-miw-9 - Apply min-width 9th step in scale (96rem = 1536px)
+    .u-miw-100 - Apply min-width 100%
+    .u-mih-auto - Cancel min-height
+    .u-mih-half - Apply min-height half step in scale (0.5rem = 8px)
+    .u-mih-1 - Apply min-height 1st step in scale (1rem = 16px)
+    .u-mih-1-half - Apply min-height 1st step + half step in scale (1.5rem = 24px)
+    .u-mih-2 - Apply min-height 2nd step in scale (2rem = 32px)
+    .u-mih-2-half - Apply min-height 2nd step + half step in scale (2.5rem = 40px)
+    .u-mih-3 - Apply min-height 3rd step in scale (4rem = 64px)
+    .u-mih-4 - Apply min-height 4th step in scale (8rem = 128px)
+    .u-mih-5 - Apply min-height 5th step in scale (16rem = 256px)
+    .u-mih-6 - Apply min-height 6th step in scale (32rem = 512px)
+    .u-mih-7 - Apply min-height 7th step in scale (48rem = 768px)
+    .u-mih-8 - Apply min-height 8th step in scale (64rem = 1024px)
+    .u-mih-9 - Apply min-height 9th step in scale (96rem = 1536px)
+    .u-mih-100 - Apply min-height 100%
+
+    Markup:
+    <div class="{{modifier_class}}" style="display: inline-block;background-color:gainsboro; border: 1px solid black; min-width: 20px;">&nbsp;</div>
+
+    Weight: 12
+
+    Styleguide utilities.dimensions.min
+*/
+
+/*
+    Max-width/height
+
+    Classes to set max-width/height on elements<br>
+    [Can be used with breakpoints modifier suffixes (`-t`,`-s`,`-m`)](section-settings.html#kssref-settings-breakpoints)
+
+    .u-maw-auto - Cancel max-width
+    .u-maw-1 - Apply max-width 1st step in scale (1rem = 16px)
+    .u-maw-2 - Apply max-width 2nd step in scale (2rem = 32px)
+    .u-maw-3 - Apply max-width 3rd step in scale (4rem = 64px)
+    .u-maw-4 - Apply max-width 4th step in scale (8rem = 128px)
+    .u-maw-5 - Apply max-width 5th step in scale (16rem = 256px)
+    .u-maw-6 - Apply max-width 6th step in scale (32rem = 512px)
+    .u-maw-7 - Apply max-width 7th step in scale (48rem = 768px)
+    .u-maw-8 - Apply max-width 8th step in scale (64rem = 1024px)
+    .u-maw-9 - Apply max-width 9th step in scale (96rem = 1536px)
+    .u-maw-100 - Apply max-width 100%
+    .u-mah-auto - Cancel max-height
+    .u-mah-1 - Apply max-height 1st step in scale (1rem = 16px)
+    .u-mah-2 - Apply max-height 2nd step in scale (2rem = 32px)
+    .u-mah-3 - Apply max-height 3rd step in scale (4rem = 64px)
+    .u-mah-4 - Apply max-height 4th step in scale (8rem = 128px)
+    .u-mah-5 - Apply max-height 5th step in scale (16rem = 256px)
+    .u-mah-6 - Apply max-height 6th step in scale (32rem = 512px)
+    .u-mah-7 - Apply max-height 7th step in scale (48rem = 768px)
+    .u-mah-8 - Apply max-height 8th step in scale (64rem = 1024px)
+    .u-mah-9 - Apply max-height 9th step in scale (96rem = 1536px)
+    .u-mah-100 - Apply max-height 100%
+
+    Markup:
+    <div class="{{modifier_class}}" style="background-color:gainsboro; border: 1px solid black;">&nbsp;</div>
+
+    Weight: 13
+
+    Styleguide utilities.dimensions.max
+*/
+
+/*
+    Background-color
+
+    Classes to set a background-color on elements
+
+    .u-bg-black - block color
+    .u-bg-white - white color
+    .u-bg-paleGrey - paleGrey color
+    .u-bg-silver - silver color
+    .u-bg-coolGrey - coolGrey color
+    .u-bg-slateGrey - slateGrey color
+    .u-bg-charcoalGrey - charcoalGrey color
+    .u-bg-dodgerBlue - dodgerBlue color
+    .u-bg-pomegranate - pomegranate color
+    .u-bg-monza - monza color
+    .u-bg-lightishPurple - lightishPurple color
+    .u-bg-weirdGreen - weirdGreen color
+    .u-bg-overlay - overlay color
+    .u-bg-primaryColor - primaryColor color
+    .u-bg-primaryBackgroundLight - primaryBackgroundLight color
+    .u-bg-errorBackground - errorBackground color
+    .u-bg-neutralBackgroundLight - neutralBackgroundLight color
+
+    Markup:
+    <div class="{{modifier_class}}" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div>
+
+    Weight: 14
+
+    Styleguide utilities.bgcolor
+*/
+
+/*
+    Opacity
+
+    Classes to set the opacity
+
+    .u-o-100 - opacity: 1
+    .u-o-90  - opacity: .9
+    .u-o-80  - opacity: .8
+    .u-o-70  - opacity: .7
+    .u-o-60  - opacity: .6
+    .u-o-50  - opacity: .5
+    .u-o-40  - opacity: .4
+    .u-o-30  - opacity: .3
+    .u-o-20  - opacity: .2
+    .u-o-10  - opacity: .1
+    .u-o-05  - opacity: .05
+    .u-o-025 - opacity: .025
+    .u-o-0   - opacity: 0
+
+
+    Markup:
+    <div class="{{modifier_class}}" style="display: inline-block; width: 10rem; height: 2rem; border: 1px solid black;"></div>
+
+    Weight: 15
+
+    Styleguide utilities.opacity
+*/
+
+/*
+    Effects and animations
+
+    Classes to trigger CSS effects and animations.
+
+
+    .u-shake - Item will be shaked
+
+    Markup:
+    <div class="{{modifier_class}}">
+        Will be shaked
+    </div>
+
+    Styleguide utilities.effects
+
+    Weight: 16
+*/
+
+/*
+    Overflow
+
+    Tells a container how its exceeding content behaves
+
+    Markup: <div style="border:1px solid var(--dividerColor);" class="u-mb-2 u-p-half u-w-5 u-h-4 {{modifier_class}}">Non habitant lobortis hac maecenas eleifend donec parturient, lacinia aenean ac varius mattis purus scelerisque, congue montes dapibus tempor semper proin. Ullamcorper malesuada proin nec accumsan fermentum ac suspendisse posuere, lectus tristique tortor lorem faucibus primis sodales.</div>
+
+    .u-ov-visible - Sets a visible overflow
+    .u-ov-hidden - Sets an hidden overflow
+    .u-ov-scroll - Sets a scroll overflow
+    .u-ov-auto - Sets an auto overflow
+
+    Weight: 17
+
+    Styleguide utilities.overflow
+*/
+
+/*
+    Filter
+
+    Applies graphical effects like grayscale to an element. Filters are commonly used to adjust the rendering of images, backgrounds, and borders.
+
+    .u-filter-gray-100 - filter: grayscale(1)
+
+    Markup:
+    <img class="{{modifier_class}}" src="https://cozy.io/fr/images/cozy-logo_white.png" alt="" width="50" heigh="50">
+
+    Styleguide utilities.filter
+
+    Weight: 18
+*/

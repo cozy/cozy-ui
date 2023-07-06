@@ -1,0 +1,104 @@
+@require 'tools/mixins'
+
+$chip-height-tiny = rem(24)
+$chip-font-size-tiny = rem(12)
+
+$chip-height-small = rem(32)
+$chip-font-size-small = rem(14)
+
+$chip-height-normal = rem(40)
+$chip-font-size-normal = rem(16)
+
+$chip
+    box-sizing border-box
+    line-height 1
+    display inline-flex
+    align-items center
+    margin-right rem(4)
+    margin-bottom rem(4)
+    border 0
+
+$round-chip
+    width $chip-height-normal
+    text-align center
+    justify-content center
+
+$tiny-size-chip
+    height $chip-height-tiny
+    padding 0 (($chip-height-tiny - $chip-font-size-tiny) / 2)
+    border-radius ($chip-height-tiny / 2)
+    font-size $chip-font-size-tiny
+
+$small-size-chip
+    height $chip-height-small
+    padding 0 (($chip-height-small - $chip-font-size-small) / 2)
+    border-radius ($chip-height-small / 2)
+    font-size $chip-font-size-small
+
+$normal-size-chip
+    height $chip-height-normal
+    padding 0 (($chip-height-normal - $chip-font-size-normal) / 2)
+    border-radius ($chip-height-normal / 2)
+
+$outlined-variant-chip
+    border 1px solid
+
+$dashed-variant-chip
+    border 1px dashed
+
+$normal-theme-chip
+    border-color var(--silver)
+    background-color var(--paleGrey)
+    color inherit
+
+$primary-theme-chip
+    border-color var(--primaryColorLightest)
+    background-color var(--primaryBackgroundLight)
+    color var(--primaryColor)
+
+$error-theme-chip
+    border-color var(--errorColorLight)
+    background-color var(--errorColorLightest)
+    color var(--errorColor)
+
+$chip--hoverableNormalTheme
+    color var(--charcoalGrey)
+
+    &:hover,
+    &:focus
+        background-color var(--silver)
+
+$chip--hoverablePrimaryTheme
+    &:hover,
+    &:focus
+        background-color var(--primaryBackgroundLight)
+
+$chip--normalPrimaryTheme
+    background-color var(--primaryColor)
+    color var(--white)
+
+$chip--hoverableErrorTheme
+    &:hover,
+    &:focus
+        background-color var(--errorColorLight)
+
+$chip--outlinedNormalTheme
+    background-color transparent
+
+$chip--clickable
+    cursor pointer
+
+$chip-separator
+    width rem(1)
+    border-left rem(1) solid var(--dividerColor)
+    display inline-block
+    height 40%
+    margin-left rem(8)
+    margin-right rem(8)
+
+$chip-button
+    cursor pointer
+    color var(--slateGrey)
+
+$chip-button--disabled
+    color var(--coolGrey)

@@ -1,0 +1,10 @@
+{
+  "header": "Uploading %{smart_count} photo to %{app} |||| Uploading %{smart_count} photos to %{app}",
+  "header_mobile": "Uploading %{done} of %{smart_count}",
+  "header_done": "Uploaded %{done} out of %{smart_count} successfully",
+  "close": "close",
+  "item": {
+    "pending": "Pending",
+    "remainingTime": "%{time} remaining"
+  }
+}

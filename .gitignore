@@ -1,0 +1,28 @@
+node_modules
+package-lock.json
+build
+dist
+.changelog
+yarn-error.log
+coverage
+
+# Users Environment Variables
+.lock-wscript
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+.cache
+transpiled
+
+# Generated files
+react/Icon/icons-sprite.js
+react/palette.js
+/screenshots

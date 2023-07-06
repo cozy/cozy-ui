@@ -1,0 +1,41 @@
+@require '../settings/breakpoints'
+@require '../tools/mixins'
+
+bdrs-0()
+    border-radius rem(0)
+
+bdrs-1()
+    border-radius rem(2)
+
+bdrs-2()
+    border-radius rem(3)
+
+bdrs-3()
+    border-radius rem(4)
+
+bdrs-4()
+    border-radius rem(8)
+
+bdrs-circle()
+    border-radius 100%
+
+bdw-0()
+    border-width rem(0)
+bdw-1()
+    border-width rem(2)
+
+props = {
+    'bdrs-0': 'bdrs-0',
+    'bdrs-1': 'bdrs-1',
+    'bdrs-2': 'bdrs-2',
+    'bdrs-3': 'bdrs-3',
+    'bdrs-4': 'bdrs-4',
+    'bdrs-circle': 'bdrs-circle',
+    'bdw-0': 'bdw-0',
+    'bdw-1': 'bdw-1'
+}
+
+if cssmodules == true
+    cssModulesUtils(props, breakpoints)
+else
+    nativeUtils(props, breakpoints)

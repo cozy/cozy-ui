@@ -1,0 +1,44 @@
+@require '../settings/breakpoints'
+@require '../tools/mixins'
+
+$selectionbar
+    position          fixed
+    z-index           var(--zIndex-selection)
+    top               0
+    left              0
+    box-sizing        border-box
+    display           flex
+    justify-content   space-between
+    align-items       center
+    width             100%
+    height            rem(52)
+    color             var(--white)
+    background-color  var(--slateGrey)
+    font-weight       bold
+
+    .SelectionBar-count
+        padding 0 1rem
+        min-width 3rem
+
+        +mobile()
+            &
+                padding 0
+                text-align center
+
+    .SelectionBar-action
+        margin 0 .25rem
+        color var(--white)
+        &:hover
+            color var(--white)
+
+        &--withLabel
+            margin 0 .5rem
+
+    +medium-screen()
+        &
+            top              auto
+            bottom           0
+            box-sizing       content-box
+            height           3rem
+            // iPhone X environment tweak
+            padding-bottom   env(safe-area-inset-bottom)

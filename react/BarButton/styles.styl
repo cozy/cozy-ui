@@ -1,0 +1,19 @@
+@require 'tools/mixins'
+
+.BarButton
+  display flex
+  align-items center
+  justify-content center
+  width rem(48)
+  height rem(48)
+
+:root
+    --barIconColor var(--coolGrey)
+    --barIconColorDisabled var(--silver)
+
+.BarButtonIcon
+    color var(--barIconColor)
+
+.BarButton--disabled
+    .BarButtonIcon
+        color var(--barIconColorDisabled)

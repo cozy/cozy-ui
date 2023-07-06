@@ -1,0 +1,31 @@
+{
+  "app_categories": {
+    "all": "Toutes les catégories",
+    "banking": "Banques",
+    "cozy": "Les essentielles",
+    "education": "Éducation",
+    "energy": "Energie",
+    "health": "Santé",
+    "host_provider": "Hébergeur",
+    "insurance": "Assurance",
+    "isp": "Internet",
+    "konnectors": "Services",
+    "list_separator": ", ",
+    "mes_infos": "Expérimentation MesInfos",
+    "online_services": "Services en ligne",
+    "others": "Autres",
+    "partners": "Partenaires",
+    "press": "Presse",
+    "productivity": "Productivité",
+    "ptnb": "Expérimentation Carnet du Logement",
+    "public_service": "Services publics",
+    "shopping": "Shopping",
+    "social": "Social",
+    "telecom": "Mobile",
+    "transport": "Voyage et transport"
+  },
+  "sections": {
+    "applications": "Applications",
+    "konnectors": "Services"
+  }
+}

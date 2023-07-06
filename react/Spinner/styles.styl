@@ -1,0 +1,32 @@
+@require '../../stylus/settings/icons'
+@require '../../stylus/tools/mixins'
+
+.c-spinner
+    display inline-block
+    margin 0 rem(8)
+
+
+
+    &:before
+        content ''
+
+    p
+        margin-top  rem(15)
+        line-height 1.5
+
+// === Modifiers ===
+
+// Box-model
+.c-spinner--middle
+    position   absolute
+    top        50%
+    left       50%
+    transform  translateX(-50%) translateY(-50%)
+    text-align  center
+
+    &:before
+        display     block
+        margin      0 auto
+
+.c-spinner--nomargin
+    margin 0

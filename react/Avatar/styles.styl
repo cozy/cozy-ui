@@ -1,0 +1,47 @@
+@require '../../stylus/components/avatar'
+@require '../../stylus/components/circle'
+
+.c-avatar
+    @extend $circle
+    @extend $avatar
+
+.c-avatar--text
+    color white
+
+.c-avatar--disabled
+    &.c-avatar--image
+        background-color white !important // to override inline style props
+
+    &:not(.c-avatar--image)
+        background-color var(--silver) !important // to override inline style props
+
+    & .c-avatar-image
+        filter grayscale(1)
+        opacity .3
+
+.c-avatar--ghost
+    background-color transparent !important // to override inline style props
+    border 1px dashed var(--borderGhostColor)
+    color var(--secondaryTextColor)
+
+    & .c-avatar-image
+        filter grayscale(1)
+        opacity .3
+
+.c-avatar--xsmall
+    @extend $circle--xsmall
+
+.c-avatar--small
+    @extend $circle--small
+
+.c-avatar--large
+    @extend $circle--large
+
+.c-avatar--xlarge
+    @extend $circle--xlarge
+
+.c-avatar-initials
+    @extend $circle-text
+
+.c-avatar-image
+    @extend $avatar-image

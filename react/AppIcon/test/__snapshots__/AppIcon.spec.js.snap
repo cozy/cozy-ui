@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppIcon component renders as loading 1`] = `
+<div
+  className="styles__c-loading-placeholder___3L6Gz styles__c-app-icon___2_O40"
+  role="progressbar"
+/>
+`;
+
+exports[`AppIcon component renders correctly 1`] = `
+<img
+  className="styles__c-app-icon___2_O40"
+  onError={[Function]}
+  src="http://cozy.tools/apps/test/icon"
+/>
+`;
+
+exports[`AppIcon component renders default when fetch error occurs 1`] = `
+<Icon
+  className="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt"
+  color="var(--coolGrey)"
+  height="100%"
+  icon={[Function]}
+  spin={false}
+  width="100%"
+/>
+`;
+
+exports[`AppIcon component renders provided fallbackIcon on img error 1`] = `
+<Icon
+  className="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt"
+  color="var(--coolGrey)"
+  height="100%"
+  icon="warning"
+  spin={false}
+  width="100%"
+/>
+`;
+
+exports[`AppIcon component renders provided fallbackIcon when fetch error occurs 1`] = `
+<Icon
+  className="styles__c-app-icon___2_O40 styles__c-app-icon-default___3CEmt"
+  color="var(--coolGrey)"
+  height="100%"
+  icon="warning"
+  spin={false}
+  width="100%"
+/>
+`;

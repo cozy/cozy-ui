@@ -1,0 +1,157 @@
+@require '../settings/breakpoints'
+@require '../tools/mixins'
+@require './sections'
+
+$table
+    position relative
+    display flex
+    flex-direction column
+    flex 1 1 100%
+    height 100%
+    text-align left
+    color var(--secondaryTextColor)
+
+$table-head
+    flex 0 0 rem(32)
+
+    +small-screen()
+        display none
+
+$table-body
+    flex 1 1 auto
+    display flex
+    flex-direction column
+    overflow auto
+
+    +small-screen()
+        max-height 100%
+
+$table-row
+    box-sizing border-box
+    display flex
+    flex-direction row
+    align-items center
+    flex 0 0 auto
+    height rem(48)
+    width 100%
+    border-top rem(1) solid var(--dividerColor)
+
+    &:hover
+        background-color var(--actionColorHover)
+        // Prevent hover effect when scrolling on touch devices
+        @media (hover: none)
+            background-color transparent
+
+    &:last-child
+        border-bottom rem(1) solid var(--dividerColor)
+
+    +medium-screen()
+        max-width 100vw
+
+$table-row-head
+    @extend $table-row
+    border 0
+
+    &:hover
+        background-color transparent
+
+    &:last-child
+        border-bottom 0
+
+$table-row-selected
+    &
+    &:hover
+        background-color var(--zircon)
+
+$table-cell
+    box-sizing border-box
+    padding rem(14 16)
+    font-size rem(14)
+    line-height 1.3
+
+
+$table-header
+    @extend $table-cell
+    padding rem(8 16)
+    font-size rem(12)
+    font-weight bold
+    text-transform uppercase
+
+$table-ellipsis
+    white-space nowrap
+    overflow hidden
+    text-overflow ellipsis
+
+$table-cell--primary
+    @extend $table-ellipsis
+    font-size rem(16)
+    line-height 1.15
+    color var(--charcoalGrey)
+
+    +small-screen()
+        flex 1 1 auto
+
+$table-divider
+    @extend $section-header
+    position sticky
+    z-index var(--zIndex-low)
+    top 0
+
+// Legacy table
+$table--legacy
+    width 100%
+    border 0
+    text-align left
+    color var(--secondaryTextColor)
+    border-collapse collapse
+
+    tr
+        @extend $table-row
+        display table-row
+
+    thead tr
+        @extend $table-row-head
+        display table-row
+
+    th
+        @extend $table-header
+
+    td
+        @extend $table-cell
+
+$table-divider--legacy
+    border 0
+    width auto
+    height auto
+    background-color var(--zircon)
+
+    &::before
+        content none
+
+    td
+        font-weight bold
+        color var(--secondaryTextColor)
+        padding 0
+        font-size rem(12)
+        line-height 1.33
+
+    & + * // @stylint ignore
+        border-top 0
+
+$table-ellipsis--legacy
+    position relative
+
+    > div
+        box-sizing border-box
+        position absolute
+        top rem(14)
+        right rem(16)
+        bottom rem(14)
+        left rem(16)
+        display block
+        width calc(100% - rem(32))
+        > div
+            box-sizing border-box
+            white-space nowrap
+            overflow hidden
+            text-overflow ellipsis

@@ -1,0 +1,150 @@
+language: node_js
+dist: jammy
+cache: yarn
+env:
+  global:
+    - PR_TITLE=$(curl https://github.com/${TRAVIS_REPO_SLUG}/pull/${TRAVIS_PULL_REQUEST} 2> /dev/null | grep "title" | head -1)
+stages:
+  - prebuild
+  - build
+  - docs
+  - test
+  - screenshots
+  - deploy
+jobs:
+  include:
+    - name: 'Lint'
+      stage: 'prebuild'
+      script: yarn lint
+      if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string
+    - name: 'Sprite and Palette'
+      stage: 'prebuild'
+      script: yarn makeSpriteAndPalette
+      workspaces:
+        create:
+          name: sprite-palette-binaries
+          paths:
+            - ./react/Icon/icons-sprite.js
+            - ./react/palette.js
+    - name: 'Build JS'
+      stage: 'build'
+      script:
+        - yarn build
+      workspaces:
+        use:
+          - sprite-palette-binaries
+        create:
+          name: js-binaries
+          paths:
+            - ./transpiled
+    - name: 'Build CSS'
+      stage: 'build'
+      script:
+        - yarn build:css:all
+      workspaces:
+        create:
+          name: css-binaries
+          paths:
+            - ./dist
+    - name: 'Build docs'
+      stage: 'docs'
+      script:
+        - yarn build:doc:react
+        - yarn build:doc:kss
+      workspaces:
+        use:
+          - sprite-palette-binaries
+          - js-binaries
+          - css-binaries
+        create:
+          name: docs-binaries
+          paths:
+            - ./build
+    - name: 'Tests without snapshots'
+      stage: 'test'
+      script:
+        - yarn test:noSnapshots
+      workspaces:
+        use:
+          - sprite-palette-binaries
+          - js-binaries
+          - css-binaries
+      if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string
+    - name: 'Tests snapshots'
+      stage: 'test'
+      script:
+        - yarn test:snapshots
+      workspaces:
+        use:
+          - sprite-palette-binaries
+          - js-binaries
+          - css-binaries
+      if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string
+    - name: 'Bundlemon'
+      stage: 'test'
+      script:
+        - yarn bundlemon
+      workspaces:
+        use:
+          - sprite-palette-binaries
+          - js-binaries
+          - css-binaries
+      if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string
+    - name: 'Argos desktop'
+      stage: 'screenshots'
+      script: |
+        if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
+          mkdir ./screenshots
+          yarn screenshots --mode react --viewport desktop --screenshot-dir ./screenshots/reactDesktop
+          yarn argos:upload --parallel screenshots/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
+        fi
+      workspaces:
+        use:
+          - sprite-palette-binaries
+          - js-binaries
+          - css-binaries
+          - docs-binaries
+    - name: 'Argos mobile'
+      stage: 'screenshots'
+      script: |
+        if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
+          mkdir ./screenshots
+          yarn screenshots --mode react --viewport 300x600 --screenshot-dir ./screenshots/reactMobile
+          yarn argos:upload --parallel screenshots/reactMobile/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
+        fi
+      workspaces:
+        use:
+          - sprite-palette-binaries
+          - js-binaries
+          - css-binaries
+          - docs-binaries
+    - name: 'Argos kss'
+      stage: 'screenshots'
+      script: |
+        if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
+          mkdir ./screenshots
+          yarn screenshots --mode kss --screenshot-dir ./screenshots/kss
+          yarn argos:upload --parallel screenshots/kss/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
+        fi
+      workspaces:
+        use:
+          - sprite-palette-binaries
+          - js-binaries
+          - css-binaries
+          - docs-binaries
+    - name: 'Deploy'
+      stage: 'deploy'
+      script: 'true'
+      workspaces:
+        use:
+          - sprite-palette-binaries
+          - js-binaries
+          - css-binaries
+          - docs-binaries
+      deploy:
+        provider: script
+        skip-cleanup: true
+        script: yarn deploy:doc -- --username cozycloud --email contact@cozycloud.cc --repo https://cozy-bot:$GH_TOKEN@github.com/cozy/cozy-ui.git && yarn semantic-release
+        on:
+          branch: master
+      if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string

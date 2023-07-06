@@ -1,0 +1,39 @@
+@require '../../stylus/tools/mixins'
+
+.toggle
+    display inline-block
+    width   rem(40)
+    height  rem(24)
+
+.checkbox
+    display none
+
+.label
+    position      relative
+    display       inline-block
+    width         100%
+    height        100%
+    border-radius rem(16)
+    background    var(--silver)
+    transition    all .2s ease-out
+    cursor        pointer
+
+.label:before
+    position      absolute
+    top           0
+    bottom        0
+    left          rem(2)
+    display       inline-block
+    width         rem(20)
+    height        rem(20)
+    margin        auto
+    border-radius 50%
+    content       ''
+    background    var(--white)
+    transition    all .2s ease-out
+
+.checkbox:checked + .label
+    background var(--emerald)
+
+    &:before
+        left rem(18)

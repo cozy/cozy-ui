@@ -1,0 +1,114 @@
+@require 'tools/mixins'
+@require 'components/button'
+@require 'components/modals'
+
+.c-modal-container
+    @extend $modals
+
+.c-modal-wrapper
+    @extend $modal-wrapper
+
+    &.c-modal-wrapper--fullscreen
+        @extend $modal-wrapper--fullscreen
+
+.c-modal
+    @extend $modal
+
+    &.c-modal--fullscreen
+        @extend $modal--fullscreen
+
+.c-modal--xsmall
+    @extend $modal--xsmall
+
+.c-modal--small
+    @extend $modal--small
+
+.c-modal--medium
+    @extend $modal--medium
+
+.c-modal--large
+    @extend $modal--large
+
+.c-modal--xlarge
+    @extend $modal--xlarge
+
+.c-modal--xxlarge
+    @extend $modal--xxlarge
+
+
+.c-modal-header
+    @extend $modal-header
+
+    .c-modal--closable &
+        @extend $modal-header--closable
+
+.c-modal-header--branded
+    @extend $modal-header--branded
+
+.c-modal-illu-header
+    @extend $modal-header-icon
+
+.c-modal-illu-header--ghost
+    @extend $modal-header-icon--ghost
+
+    &.is-active
+        @extend $modal-header-icon--ghost-active
+
+.c-modal-app
+    @extend $modal-header-app
+
+.c-app-editor
+    @extend $modal-header-app-editor
+
+.c-modal-app-icon
+    @extend $modal-header-app-icon
+
+.c-modal-footer
+    @extend $modal-footer
+
+.c-modal-footer--button
+    @extend $modal-footer--button
+
+.c-modal-section
+    @extend $modal-section
+
+.c-modal-content
+    @extend $modal-content
+
+.c-modal-content-fixed
+    @extend $modal-content-fixed
+
+.c-modal--small-spacing
+    .c-modal-close
+        @extend $modal-close--small
+    .c-modal-header
+        @extend $modal-header--small
+    .c-modal-content
+        @extend $modal-content--small
+    .c-modal-content-fixed
+        @extend $modal-content-fixed--small
+
+.c-modal--large-spacing
+    .c-modal-close
+        @extend $modal-close--large
+    .c-modal-header
+        @extend $modal-header--large
+    .c-modal-content
+        @extend $modal-content--large
+    .c-modal-content-fixed
+        @extend $modal-content-fixed--large
+
+.c-modal-close
+    @extend $modal-close
+
+.c-modal-close--notitle
+    @extend $modal-close--notitle
+
+.c-modal--overflowHidden
+    @extend $modal--hidden
+
+.c-modal-close--notitle + .c-modal-content
+    margin-top rem(48)
+
+.c-modal-back-button
+    @extend $modal-back-button

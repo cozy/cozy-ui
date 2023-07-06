@@ -1,0 +1,176 @@
+@require '../settings/breakpoints'
+@require '../settings/typography'
+@require '../tools/mixins'
+
+/*------------------------------------*\
+  Navigation
+\*------------------------------------*/
+
+$nav
+    margin     rem(24) 0
+    padding    0
+    list-style none
+
+    +medium-screen()
+        display          flex
+        justify-content  space-around
+        margin           rem(5 0 4)
+        padding-right    0
+
+
+$nav-item
+    position        relative
+    z-index         var(--zIndex-app)
+    height          rem(48)
+    box-sizing      border-box
+    cursor          pointer
+
+    &:hover::before
+        content        ''
+        position       absolute
+        z-index        var(--zIndex-below)
+        border-radius  rem(0 3 3 0)
+        top 0
+        left 0
+        right rem(16)
+        bottom 0
+        background     rgba(0, 0, 0, .10)
+
+        // Prevent double tap on tablets
+        @media (hover: none)
+            content none
+
+    +medium-screen()
+        margin 0 rem(12)
+        height        auto
+        display       block
+        flex          0 0 rem(40)
+        padding-right 0
+        &:hover::before
+            content  none
+
+
+$nav-item-icon
+    display inline-block
+    margin-right rem(11)
+    color var(--coolGrey)
+    fill currentColor
+
+    svg
+        display block
+
+    .is-active &
+        color var(--primaryColor)
+
+    :hover > &
+        color var(--navTextColor)
+
+    +medium-screen()
+        display block
+        margin-right 0
+
+        svg
+            margin 0 auto 3px
+            width rem(24)
+            height rem(24)
+
+$nav-item-text
+    +medium-screen()
+        display block
+        text-align center
+        white-space nowrap
+
+$nav-link
+    display              flex
+    box-shadow           border-box
+    padding-left         rem(24)
+    padding-right        rem(16)
+    line-height          1.5
+    text-decoration      none
+    color                var(--navTextColor)
+    height               100%
+    align-items          center
+    flex                 1
+    background-repeat    no-repeat
+    background-position  rem(24) center
+
+    &:visited
+        color  var(--navTextColor)
+
+    &:hover:not(.is-active)
+        color  var(--navTextHoverColor)
+
+    &.is-active
+        box-shadow   inset rem(4) 0 0 0 var(--primaryColor)
+        font-weight  bold
+        color  var(--navTextActiveColor)
+
+        .c-nav-icon
+            color var(--primaryColor)
+
+    +medium-screen()
+        display              block
+        height               auto
+        padding              0
+        text-align           center
+        font-size            rem(10)
+        line-height          rem(12)
+        background-position  center top
+        background-size      rem(24)
+
+        &.is-active
+        &:hover
+            box-shadow   none
+            font-weight  normal
+
+    // Prevent double tap on tablets
+    @media not all and (pointer: fine)
+        &:hover:not(.is-active)
+            color var(--navTextColor)
+
+
+$nav-item-secondary
+    height auto
+
+    & + &
+        margin-top .125rem
+
+    +medium-screen()
+        &
+            display none
+
+
+    &:hover::before
+        content        ''
+        position       absolute
+        z-index        var(--zIndex-below)
+        border-radius  rem(3 0 0 3)
+        top 0
+        right 0
+        left rem(48)
+        bottom 0
+        background     rgba(0, 0, 0, .10)
+
+        // Prevent double tap on tablets
+        @media (hover: none)
+            content none
+
+$nav-link-secondary
+    padding .5rem 1rem
+    margin-left 3rem
+    border-radius 4px 0 0 4px
+    box-shadow none
+    font-size $small-font-size
+    color var(--navTextColor)
+    text-decoration none
+    height auto
+
+    &:hover:not(.is-active)
+        color var(--navTextHoverColor)
+
+    &.is-active
+        color white
+        border-right 1px solid var(--navTextColor)
+        background-color var(--navTextColor)
+
+

@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shortcutviewer renders the component 1`] = `
+<div>
+  <div
+    class="styles__viewer-noviewer___auG-6"
+  >
+    <svg
+      class="styles__icon___23x3R"
+      height="140"
+      viewBox="0 0 32 32"
+      width="160"
+    >
+      <g
+        fill="none"
+        fill-rule="evenodd"
+      >
+        <path
+          d="M3 2.002C3 .896 3.89 0 4.997 0H22l7 7v22.996A2 2 0 0127.003 32H4.997A1.995 1.995 0 013 29.998V2.002z"
+          fill="#D1D5DB"
+        />
+        <path
+          d="M21.5 0c-.276 0-.5.23-.5.5V8h7.5c.276 0 .5-.232.5-.5V7l-7-7h-.5z"
+          fill="#A3ACB8"
+        />
+      </g>
+    </svg>
+    <p
+      class="styles__viewer-filename___3jZCt"
+    />
+    <a
+      class="styles__c-btn___3kXsk"
+      href=""
+      target="_blank"
+    >
+      <span>
+        <svg
+          aria-hidden="true"
+          class="styles__icon___23x3R"
+          focusable="false"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M9 0v2h3.5L6 8.5 7.5 10 14 3.5V7h2V1.003A.996.996 0 0014.997 0H9zM7 2V0H1.003A1 1 0 000 1v14c0 .552.445 1 1 1h14c.552 0 1-.438 1-1.003V9h-2v5H2V2h5z"
+            fill-rule="evenodd"
+          />
+        </svg>
+        <span>
+          Go to 
+        </span>
+      </span>
+    </a>
+  </div>
+</div>
+`;
