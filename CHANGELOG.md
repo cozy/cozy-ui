@@ -1,3 +1,16 @@
+# [88.5.0](https://github.com/cozy/cozy-ui/compare/v88.4.0...v88.5.0) (2023-07-06)
+
+
+### Features
+
+* Add images to transpiled folder ([17c2440](https://github.com/cozy/cozy-ui/commit/17c2440)), closes [/github.com/babel/babel/issues/11394#issuecomment-649014113](https://github.com//github.com/babel/babel/issues/11394/issues/issuecomment-649014113)
+* Move InstallFlagshipAppDialog images from ./assets to ./icons folder ([e8100e9](https://github.com/cozy/cozy-ui/commit/e8100e9))
+
+
+### Reverts
+
+* Assets were not in the good directory ([aaf3fc3](https://github.com/cozy/cozy-ui/commit/aaf3fc3))
+
 # [88.4.0](https://github.com/cozy/cozy-ui/compare/v88.3.0...v88.4.0) (2023-07-06)
 
 
