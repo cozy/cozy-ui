@@ -29,7 +29,7 @@
     "build:doc:react": "styleguidist build --config docs/styleguide.config.js",
     "build:types": "tsc -p tsconfig-build.json",
     "build:all": "yarn makeSpriteAndPalette && yarn build && yarn build:css:all && yarn build:doc",
-    "build:js": "env BABEL_ENV=transpilation babel --extensions .ts,.tsx,.js,.jsx,.md,.styl,.json,.snap react/ --out-dir transpiled/react --copy-files --no-copy-ignored --verbose",
+    "build:js": "env BABEL_ENV=transpilation babel --extensions .ts,.tsx,.js,.jsx react/ --out-dir transpiled/react --verbose",
     "build": "yarn build:types && yarn build:js",
     "clean:doc:kss": "rm -rf build/styleguide",
     "deploy:doc": "git-directory-deploy --directory build/ --branch gh-pages",

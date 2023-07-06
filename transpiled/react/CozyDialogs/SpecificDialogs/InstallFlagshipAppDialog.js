@@ -4,9 +4,9 @@ import { IllustrationDialog } from "cozy-ui/transpiled/react/CozyDialogs";
 import { useI18n } from "cozy-ui/transpiled/react/I18n";
 import Link from "cozy-ui/transpiled/react/Link";
 import Typography from "cozy-ui/transpiled/react/Typography";
-import DefaultQRCode from "cozy-ui/transpiled/react/CozyDialogs/SpecificDialogs/assets/QRCodeInstallFlagshipAppDialog.png";
-import appStoreIcon from "cozy-ui/transpiled/react/CozyDialogs/SpecificDialogs/assets/appstore.png";
-import playStoreIcon from "cozy-ui/transpiled/react/CozyDialogs/SpecificDialogs/assets/playstore.png";
+import DefaultQRCode from 'cozy-ui/assets/icons/images/QRCodeInstallFlagshipAppDialog.png';
+import appStoreIcon from 'cozy-ui/assets/icons/images/appstore.png';
+import playStoreIcon from 'cozy-ui/assets/icons/images/playstore.png';
 import withSpecificDialogsLocales from "cozy-ui/transpiled/react/CozyDialogs/SpecificDialogs/withSpecificDialogsLocales";
 var InstallFlagshipAppDialog = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var onClose = _ref.onClose,
