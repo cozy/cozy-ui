@@ -6,9 +6,9 @@ import { useI18n } from '../../I18n'
 import Link from '../../Link'
 import Typography from '../../Typography'
 
-import DefaultQRCode from './assets/QRCodeInstallFlagshipAppDialog.png'
-import appStoreIcon from './assets/appstore.png'
-import playStoreIcon from './assets/playstore.png'
+import DefaultQRCode from './icons/QRCodeInstallFlagshipAppDialog.png'
+import appStoreIcon from './icons/appstore.png'
+import playStoreIcon from './icons/playstore.png'
 import withSpecificDialogsLocales from './withSpecificDialogsLocales'
 
 const InstallFlagshipAppDialog = forwardRef(
