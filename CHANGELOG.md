@@ -1,3 +1,10 @@
+# [88.4.0](https://github.com/cozy/cozy-ui/compare/v88.3.0...v88.4.0) (2023-07-06)
+
+
+### Features
+
+* **AuthentificationDialog:** Allow redirection after password reset ([0ba12cc](https://github.com/cozy/cozy-ui/commit/0ba12cc)), closes [cozy/cozy-stack#4040](https://github.com/cozy/cozy-stack/issues/4040)
+
 # [88.3.0](https://github.com/cozy/cozy-ui/compare/v88.2.1...v88.3.0) (2023-07-05)
 
 
