@@ -44,5 +44,5 @@ module.exports = {
       plugins: plugins
     }
   },
-  ignore: ['examples/**/*']
+  ignore: ['examples/**/*', '**/*.md', '**/*.styl', '**/*.json', '**/*.snap']
 }
