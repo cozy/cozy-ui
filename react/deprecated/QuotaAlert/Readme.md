@@ -3,47 +3,38 @@
 The link to the manager is only displayed if there is a managerUrl
 in the stack response
 
-```jsx noeditor
+```jsx
 import QuotaAlert from "cozy-ui/transpiled/react/deprecated/QuotaAlert";
-import { CozyProvider } from "cozy-client";
-import { BreakpointsProvider } from "cozy-ui/transpiled/react/hooks/useBreakpoints";
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 
-<BreakpointsProvider>
-  <div>
+const mockClient = {
+  getStackClient: () => ({
+    fetchJSON: (_, url) => {
+      let attributes = {}
+      if(url === '/settings/context') {
+        attributes = {
+          attributes: {
+            enable_premium_links: true,
+            manager_url: "http://mycozy.cloud",
+          }
+        }
+      } else if(url === '/settings/instance') {
+        attributes = {
+          attributes: { uuid: "1223" }
+        }
+      }
+
+      return Promise.resolve({ data: attributes  })
+    }
+  })
+};
+
+<DemoProvider client={mockClient}>
     <button onClick={() => setState({ modalOpened: !state.modalOpened })}>
       Toggle modal
     </button>
-
     {state.modalOpened && (
-      <CozyProvider
-        client={{
-          getStackClient: () => ({
-            fetchJSON: () =>
-              Promise.resolve({
-                data: {
-                  attributes: { uuid: "1223", manager_url: "http://mycozy.cloud" }
-                }
-              })
-          })
-        }}
-      >
-        <QuotaAlert onClose={() => setState({ modalOpened: false })} />
-      </CozyProvider>
+      <QuotaAlert onClose={() => setState({ modalOpened: false })} />
     )}
-  </div>
-</BreakpointsProvider>;
-```
-
-```jsx static
-import QuotaAlert from "cozy-ui/transpiled/react/deprecated/QuotaAlert";
-
-<div>
-  <button onClick={() => setState({ modalOpened: !state.modalOpened })}>
-    Toggle modal
-  </button>
-
-  {state.modalOpened && (
-    <QuotaAlert onClose={() => setState({ modalOpened: false })} />
-  )}
-</div>;
+</DemoProvider>
 ```

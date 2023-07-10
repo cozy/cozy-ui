@@ -1,8 +1,0 @@
-{
-  "quotaalert": {
-    "title": "Votre espace disque est plein :(",
-    "desc": "Veuillez supprimer des fichiers, vider votre corbeille ou augmenter votre espace disque avant d'importer de nouveau fichier.",
-    "confirm": "OK",
-    "increase": "Augmenter votre espace disque"
-  }
-}
