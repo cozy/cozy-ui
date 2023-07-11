@@ -66,5 +66,17 @@
       "content": "Your current offer does not allow you to take advantage of this feature.",
       "action": "I understand"
     }
+  },
+  "quotaPaywall": {
+    "premium": {
+      "title": "Upgrade your plan",
+      "content": "Your disk storage is full.\n\nPlease remove files, empty your trash or upgrade your plan before uploading files.",
+      "action": "Check our plans"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Your disk storage is full.\n\nPlease remove files, empty your trash before uploading files.",
+      "action": "I understand"
+    }
   }
 }

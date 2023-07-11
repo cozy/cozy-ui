@@ -11,7 +11,8 @@ import {
   PasswordSharingPaywall,
   MaxAccountsByKonnectorPaywall,
   MaxAccountsPaywall,
-  MaxPapersPaywall
+  MaxPapersPaywall,
+  QuotaPaywall
 } from "cozy-ui/transpiled/react/Paywall"
 import { CozyProvider } from "cozy-client"
 import { BreakpointsProvider } from "cozy-ui/transpiled/react/hooks/useBreakpoints"
@@ -69,6 +70,10 @@ const paywalls = [
   {
     name: 'MaxPapersPaywall',
     component: MaxPapersPaywall
+  },
+  {
+    name: 'QuotaPaywall',
+    component: QuotaPaywall
   }
 ]
 

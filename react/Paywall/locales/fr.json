@@ -66,5 +66,17 @@
       "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité.",
       "action": "J'ai compris"
     }
+  },
+  "quotaPaywall": {
+    "premium": {
+      "title": "Augmentez votre offre",
+      "content": "Votre espace de stockage est plein.\n\nVeuillez supprimer des fichiers, vider votre corbeille ou changer d'offre avant d'importer de nouveaux fichiers.",
+      "action": "Voir les offres"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Votre espace de stockage est plein.\n\nVeuillez supprimer des fichiers, et vider votre corbeille avant d'importer de nouveaux fichiers.",
+      "action": "J'ai compris"
+    }
   }
 }

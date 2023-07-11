@@ -5,3 +5,4 @@ export {
 } from './MaxAccountsByKonnectorPaywall'
 export { default as MaxAccountsPaywall } from './MaxAccountsPaywall'
 export { default as MaxPapersPaywall } from './MaxPapersPaywall'
+export { default as QuotaPaywall } from './QuotaPaywall'
