@@ -4,8 +4,8 @@
   },
   "onlyOfficePaywall": {
     "premium": {
-      "title": "Augmenter votre Cozy !",
-      "content": "Pour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
+      "title": "Augmentez votre offre",
+      "content": "Votre offre ne vous permet pas de **modifier vos documents en ligne**.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
       "action": "Voir les offres"
     },
     "public": {
@@ -21,8 +21,8 @@
   },
   "passwordSharingPaywall": {
     "premium": {
-      "title": "Augmenter votre Cozy !",
-      "content": "Pour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
+      "title": "Augmentez votre offre",
+      "content": "Votre offre ne vous permet pas de **partager vos mots de passe**.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
       "action": "Voir les offres"
     },
     "default": {
@@ -33,8 +33,8 @@
   },
   "maxAccountsByKonnectorPaywall": {
     "premium": {
-      "title": "Augmenter votre Cozy !",
-      "content": "Votre offre vous permet de connecter %{smart_count} compte %{konnectorName} dans votre Cozy.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy. |||| Votre offre vous permet de connecter %{smart_count} comptes %{konnectorName} dans votre Cozy.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
+      "title": "Augmentez votre offre",
+      "content": "Votre offre vous permet de connecter jusqu'à **%{smart_count} compte %{konnectorName}** dans votre Cozy.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy. |||| Votre offre vous permet de connecter jusqu'à **%{smart_count} comptes %{konnectorName}** dans votre Cozy.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
       "action": "Voir les offres"
     },
     "default": {
@@ -45,8 +45,8 @@
   },
   "maxAccountsPaywall": {
     "premium": {
-      "title": "Augmenter votre Cozy !",
-      "content": "Votre offre vous permet de connecter %{smart_count} compte dans votre Cozy.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy. |||| Votre offre vous permet de connecter %{smart_count} comptes dans votre Cozy.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
+      "title": "Augmentez votre offre",
+      "content": "Votre offre vous permet de connecter jusqu'à **%{smart_count} compte** dans votre Cozy.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy. |||| Votre offre vous permet de connecter jusqu'à **%{smart_count} comptes** dans votre Cozy.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
       "action": "Voir les offres"
     },
     "default": {
@@ -57,8 +57,8 @@
   },
   "maxPapersPaywall": {
     "premium": {
-      "title": "Augmenter votre Cozy !",
-      "content": "Votre offre vous permet d'ajouter manuellement jusqu'à %{smart_count} papier.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy. |||| Votre offre vous permet d'ajouter manuellement jusqu'à %{smart_count} papiers.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
+      "title": "Augmentez votre offre",
+      "content": "Votre offre vous permet d'ajouter manuellement jusqu'à **%{smart_count} papier**.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy. |||| Votre offre vous permet d'ajouter manuellement jusqu'à **%{smart_count} papiers**.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
       "action": "Voir les offres"
     },
     "default": {
