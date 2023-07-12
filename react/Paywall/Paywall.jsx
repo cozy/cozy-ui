@@ -45,7 +45,7 @@ const Paywall = ({ variant, onClose, isPublic, contentInterpolation }) => {
 
   const onAction = () => {
     return type === 'premium' && !isMobileAppVersion
-      ? window.open(link, 'self')
+      ? window.open(link, '_self')
       : onClose()
   }
 
