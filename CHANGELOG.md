@@ -1,3 +1,17 @@
+# [88.6.0](https://github.com/cozy/cozy-ui/compare/v88.5.0...v88.6.0) (2023-07-12)
+
+
+### Bug Fixes
+
+* **Paywall:** Improve wording to be more explicite ([d21b311](https://github.com/cozy/cozy-ui/commit/d21b311))
+* **Paywall:** Open the premium link in the current window ([95ac4b7](https://github.com/cozy/cozy-ui/commit/95ac4b7))
+
+
+### Features
+
+* Add QuotaPaywall ([1263285](https://github.com/cozy/cozy-ui/commit/1263285))
+* Update QuotaAlert design by exposing QuotaPaywall ([8a11f9b](https://github.com/cozy/cozy-ui/commit/8a11f9b))
+
 # [88.5.0](https://github.com/cozy/cozy-ui/compare/v88.4.0...v88.5.0) (2023-07-06)
 
 
