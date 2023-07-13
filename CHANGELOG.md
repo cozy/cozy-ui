@@ -1,3 +1,15 @@
+# [89.0.0](https://github.com/cozy/cozy-ui/compare/v88.6.0...v89.0.0) (2023-07-13)
+
+
+### Bug Fixes
+
+* **Alerts:** Use correct CSS variable for z-index property ([efd32d1](https://github.com/cozy/cozy-ui/commit/efd32d1))
+
+
+### BREAKING CHANGES
+
+* **Alerts:** Rename `--zindex-alert` CSS variable to `--zIndex-alert`
+
 # [88.6.0](https://github.com/cozy/cozy-ui/compare/v88.5.0...v88.6.0) (2023-07-12)
 
 
