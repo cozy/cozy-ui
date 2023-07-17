@@ -2,9 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { useClient } from 'cozy-client'
+import { isNote } from 'cozy-client/dist/models/file'
 
 import Icon from '../../Icon'
 import FiletypeTextIcon from '../../Icons/FileTypeText'
+import FiletypeNoteIcon from '../../Icons/FileTypeNote'
 import FileImageLoader from '../../FileImageLoader'
 import Thumbnail from '../../Thumbnail'
 import Skeleton from '../../Skeleton'
@@ -32,7 +34,7 @@ const ItemIcon = ({ icon, file }) => {
       }}
       renderFallback={() => (
         <Thumbnail>
-          <Icon icon={FiletypeTextIcon} />
+          <Icon icon={isNote(file) ? FiletypeNoteIcon : FiletypeTextIcon} />
         </Thumbnail>
       )}
     />
