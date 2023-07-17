@@ -285,8 +285,6 @@ import FiletypeTextIcon from 'cozy-ui/transpiled/react/Icons/FileTypeText'
 ```jsx
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 import List from 'cozy-ui/transpiled/react/List'
-import ListItemContact from 'cozy-ui/transpiled/react/ListItem/ListItemContact'
-import ListItemFile from 'cozy-ui/transpiled/react/ListItem/ListItemFile'
 import ListItemByDoc from 'cozy-ui/transpiled/react/ListItem/ListItemByDoc'
 import ListItem from 'cozy-ui/transpiled/react/ListItem'
 import ListItemIcon from 'cozy-ui/transpiled/react/ListItemIcon'
@@ -340,6 +338,15 @@ const files = [
         label: 'driver_license'
       }
     }
+  },
+  {
+    _type: 'io.cozy.files',
+    type: 'file',
+    name: 'Note01.cozy-note',
+    metadata: {
+      title: 'note title',
+      version: 0
+    }
   }
 ]
 
@@ -368,6 +375,11 @@ const files = [
     <ListItemByDoc
       doc={files[0]}
       expandedAttributesProps={{ isExpandedAttributesActive: true, expandedAttributes: ['metadata.number'] }}
+      onClick={() => {}}
+    />
+    <Divider variant="inset" />
+    <ListItemByDoc
+      doc={files[1]}
       onClick={() => {}}
     />
     <Divider variant="inset" />
