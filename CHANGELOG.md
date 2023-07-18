@@ -1,3 +1,10 @@
+# [89.1.0](https://github.com/cozy/cozy-ui/compare/v89.0.0...v89.1.0) (2023-07-18)
+
+
+### Features
+
+* **ListItemFile:** Show correct icon for notes ([ab03f13](https://github.com/cozy/cozy-ui/commit/ab03f13))
+
 # [89.0.0](https://github.com/cozy/cozy-ui/compare/v88.6.0...v89.0.0) (2023-07-13)
 
 
