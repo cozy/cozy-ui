@@ -29,6 +29,7 @@ module.exports = {
         '../react/Box',
         '../react/Breadcrumbs',
         '../react/Button',
+        '../react/ButtonBase',
         '../react/Buttons',
         '../react/CardActions',
         '../react/CardActionArea',
