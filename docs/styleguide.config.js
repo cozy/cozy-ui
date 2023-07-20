@@ -155,6 +155,8 @@ module.exports = {
         '../react/Paywall',
         '../react/Sidebar',
         '../react/SquareAppIcon',
+        '../react/QualificationGrid',
+        '../react/QualificationItem',
         '../react/UploadQueue',
         '../react/Viewer'
       ]
