@@ -1,3 +1,17 @@
+# [90.0.0](https://github.com/cozy/cozy-ui/compare/v89.1.0...v90.0.0) (2023-07-20)
+
+
+### Features
+
+* Add ButtonBase component ([9e77485](https://github.com/cozy/cozy-ui/commit/9e77485))
+* Add QualificationGrid and QualificationItem components ([b773099](https://github.com/cozy/cozy-ui/commit/b773099))
+* Upgrade cozy-client from 35.2.0 to 38.11.1 ([d59b93b](https://github.com/cozy/cozy-ui/commit/d59b93b))
+
+
+### BREAKING CHANGES
+
+* you must have `cozy-client >= 38.11.1`
+
 # [89.1.0](https://github.com/cozy/cozy-ui/compare/v89.0.0...v89.1.0) (2023-07-18)
 
 
