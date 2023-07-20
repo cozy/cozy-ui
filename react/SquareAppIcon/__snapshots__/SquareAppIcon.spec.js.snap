@@ -153,7 +153,7 @@ exports[`SquareAppIcon component should render correctly an app in add state 1`]
   data-testid="square-app-icon"
 >
   <div
-    class=""
+    class="CozyTheme--normal"
   >
     <span
       class="MuiBadge-root-195"
@@ -268,7 +268,7 @@ exports[`SquareAppIcon component should render correctly an app in ghost state 1
   data-testid="square-app-icon"
 >
   <div
-    class=""
+    class="CozyTheme--normal"
   >
     <span
       class="MuiBadge-root-133"

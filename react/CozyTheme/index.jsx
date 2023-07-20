@@ -1,11 +1,14 @@
 import React, { createContext, useContext } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import MuiCozyTheme from '../MuiCozyTheme'
 
 export const CozyThemeContext = createContext()
 
-const CozyTheme = ({ variant, children, className }) => (
+export const useCozyTheme = () => useContext(CozyThemeContext)
+
+const CozyTheme = ({ variant, className, children }) => (
   <CozyThemeContext.Provider value={variant}>
     <MuiCozyTheme variant={variant}>
       <div
@@ -19,6 +22,14 @@ const CozyTheme = ({ variant, children, className }) => (
   </CozyThemeContext.Provider>
 )
 
-export const useCozyTheme = () => useContext(CozyThemeContext)
+CozyTheme.propTypes = {
+  variant: PropTypes.oneOf(['normal', 'inverted']),
+  className: PropTypes.string,
+  children: PropTypes.node
+}
+
+CozyTheme.defaultProps = {
+  variant: 'normal'
+}
 
 export default CozyTheme
