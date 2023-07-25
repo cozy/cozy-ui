@@ -6,7 +6,7 @@
  * @returns {object[]} Array of actions
  */
 export const makeActions = (actions = [], options = {}) => {
-  return actions.map(action => {
+  return actions.filter(Boolean).map(action => {
     const actionMenu = action(options)
     const name = actionMenu.name || action.name
 
