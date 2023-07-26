@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Alert should render examples: Alert 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">LONGTEXT</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">TITLE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">BLOCK</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">COLOR</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">LARGEICON</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">NOICON</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">SQUARE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">ACTIONONE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">ACTIONTWO</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">CLOSE</span></label>
   </div>
@@ -18,7 +18,7 @@ exports[`Alert should render examples: Alert 1`] = `
 `;
 
 exports[`Alert should render examples: Alert 2`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">TITLE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">BLOCK</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">CLOSE</span></label>
   </div>
@@ -255,13 +255,13 @@ exports[`Alert should render examples: Alert 2`] = `
 `;
 
 exports[`AppTitle should render examples: AppTitle 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <h1 class=\\"MuiTypography-root styles__c-apptitle___eqV9l MuiTypography-h4\\">Drive</h1>
 </div>"
 `;
 
 exports[`Avatar should render examples: Avatar 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">DISABLED</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">GHOST</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">OVERLAP</span></label>
   </div>
@@ -354,17 +354,17 @@ exports[`Avatar should render examples: Avatar 1`] = `
 `;
 
 exports[`Badge should render examples: Badge 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">OVERLAP</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">ERROR</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">DOT</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">WITHBORDER</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">LEFT</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">BOTTOM</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">SMALL</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">LARGE</span></label>
   </div><span class=\\"MuiBadge-root u-m-half\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"24\\" height=\\"24\\"><circle cx=\\"8\\" cy=\\"8\\" r=\\"8\\" fill-rule=\\"evenodd\\"></circle></svg><span class=\\"MuiBadge-badge badgeSizeMedium MuiBadge-anchorOriginTopRightCircular MuiBadge-colorPrimary\\">4</span></span>
 </div>"
 `;
 
-exports[`Badge should render examples: Badge 2`] = `"<div><span class=\\"MuiBadge-root\\"><div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div><span class=\\"MuiBadge-badge Component-qualifier-25 MuiBadge-anchorOriginBottomRightCircular\\"><span class=\\"MuiBadge-root\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"10\\" height=\\"10\\"><path fill-rule=\\"evenodd\\" d=\\"M9.259 4.045a1.043 1.043 0 11-1.475-1.474L9.44.915a3.126 3.126 0 014.417-.002l1.23 1.23a3.126 3.126 0 01-.007 4.422l-3.612 3.612c-1.6 1.6-4.244 1.65-5.77.124a1.043 1.043 0 111.475-1.474c.699.698 2.023.673 2.82-.125l3.613-3.612a1.04 1.04 0 00.006-1.473l-1.23-1.23a1.04 1.04 0 00-1.468.003L9.26 4.045zm-2.518 7.91a1.043 1.043 0 011.475 1.474L6.56 15.085a3.126 3.126 0 01-4.417.002l-1.23-1.23a3.126 3.126 0 01.006-4.422l3.613-3.612c1.6-1.6 4.243-1.65 5.77-.124a1.043 1.043 0 01-1.475 1.474c-.7-.698-2.023-.673-2.82.125L2.393 10.91a1.04 1.04 0 00-.007 1.473l1.23 1.23a1.04 1.04 0 001.469-.003l1.655-1.655z\\"></path></svg><span class=\\"MuiBadge-badge badgeSizeSmall badgeBorder MuiBadge-anchorOriginTopRightCircular MuiBadge-colorError MuiBadge-dot\\"></span></span></span></span></div>"`;
+exports[`Badge should render examples: Badge 2`] = `"<div data-testid=\\"mountNode\\"><span class=\\"MuiBadge-root\\"><div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CD</span></div><span class=\\"MuiBadge-badge Component-qualifier-25 MuiBadge-anchorOriginBottomRightCircular\\"><span class=\\"MuiBadge-root\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"10\\" height=\\"10\\"><path fill-rule=\\"evenodd\\" d=\\"M9.259 4.045a1.043 1.043 0 11-1.475-1.474L9.44.915a3.126 3.126 0 014.417-.002l1.23 1.23a3.126 3.126 0 01-.007 4.422l-3.612 3.612c-1.6 1.6-4.244 1.65-5.77.124a1.043 1.043 0 111.475-1.474c.699.698 2.023.673 2.82-.125l3.613-3.612a1.04 1.04 0 00.006-1.473l-1.23-1.23a1.04 1.04 0 00-1.468.003L9.26 4.045zm-2.518 7.91a1.043 1.043 0 011.475 1.474L6.56 15.085a3.126 3.126 0 01-4.417.002l-1.23-1.23a3.126 3.126 0 01.006-4.422l3.613-3.612c1.6-1.6 4.243-1.65 5.77-.124a1.043 1.043 0 01-1.475 1.474c-.7-.698-2.023-.673-2.82.125L2.393 10.91a1.04 1.04 0 00-.007 1.473l1.23 1.23a1.04 1.04 0 001.469-.003l1.655-1.655z\\"></path></svg><span class=\\"MuiBadge-badge badgeSizeSmall badgeBorder MuiBadge-anchorOriginTopRightCircular MuiBadge-colorError MuiBadge-dot\\"></span></span></span></span></div>"`;
 
 exports[`Banner should render examples: Banner 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">ICON</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">LONGTEXT</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">BUTTONONE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">BUTTONTWO</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">INLINE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">BACKGROUNDCOLOR</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">DISABLEICONSTYLES</span></label>
   </div>
@@ -396,7 +396,7 @@ exports[`Banner should render examples: Banner 1`] = `
 `;
 
 exports[`BarButton should render examples: BarButton 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__BarButton___3z5Er styles__BarButton--disabled___5e3Ll\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__BarButtonIcon___1pSOT styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
       <path d=\\"M3.414 7h11.58C15.548 7 16 7.444 16 8c0 .552-.45 1-1.007 1H3.414l5.293 5.293a1 1 0 01-1.414 1.414l-7-7a1 1 0 010-1.414l7-7a1 1 0 111.414 1.414L3.414 7z\\" fill-rule=\\"evenodd\\"></path>
     </svg></div>
@@ -404,13 +404,13 @@ exports[`BarButton should render examples: BarButton 1`] = `
 `;
 
 exports[`BarButton should render examples: BarButton 2`] = `
-"<div><a href=\\"http://cozy.io\\" class=\\"styles__BarButton___3z5Er\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__BarButtonIcon___1pSOT styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+"<div data-testid=\\"mountNode\\"><a href=\\"http://cozy.io\\" class=\\"styles__BarButton___3z5Er\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__BarButtonIcon___1pSOT styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
       <path fill-rule=\\"evenodd\\" d=\\"M7 6.414L5.707 7.707a1 1 0 01-1.414-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L9 6.414V14a1 1 0 11-2 0V6.414zM1 2h14a1 1 0 100-2H1a1 1 0 100 2z\\"></path>
     </svg></a></div>"
 `;
 
 exports[`BarButton should render examples: BarButton 3`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__BarButton___3z5Er\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__BarButtonIcon___1pSOT styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
       <path d=\\"M1 11.009V5.5c0-.55.39-.773.872-.498l5.256 3.003c.476.272.872.944.872 1.495v5.508c0 .549-.39.772-.872.497l-5.256-3.003C1.396 12.231 1 11.56 1 11.01zm15 0c0 .55-.396 1.222-.872 1.494l-5.256 3.003c-.481.275-.872.052-.872-.497V9.5c0-.55.396-1.223.872-1.495l5.256-3.003c.481-.275.872-.052.872.498v5.508zM9.35 6.982c-.47.288-1.237.284-1.7 0l-4.8-2.954c-.47-.29-.463-.732.027-.995L7.623.477c.485-.261 1.264-.264 1.754 0l4.746 2.556c.485.26.49.71.027.995l-4.8 2.954z\\"></path>
     </svg></div>
@@ -418,7 +418,7 @@ exports[`BarButton should render examples: BarButton 3`] = `
 `;
 
 exports[`BarButton should render examples: BarButton 4`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__BarButton___3z5Er\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__BarButtonIcon___1pSOT styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
       <path d=\\"M14.25 7.078c.051.26.077.568.077.926 0 .358-.026.665-.078.925l1.62 1.333c.131.086.163.203.099.352-.325.95-.859 1.826-1.602 2.628-.104.124-.229.155-.37.094l-2.032-.668c-.52.396-1.08.705-1.68.926l-.409 2c-.026.146-.117.233-.273.258-.56.1-1.094.148-1.602.148a9.21 9.21 0 01-1.601-.148c-.157-.024-.248-.11-.274-.259l-.409-1.999a5.98 5.98 0 01-1.68-.926l-2.03.668c-.145.062-.268.03-.372-.094C.892 12.44.359 11.565.032 10.614c-.065-.148-.032-.266.098-.352L1.751 8.93a4.761 4.761 0 01-.078-.925c0-.358.026-.667.078-.926L.131 5.746C0 5.66-.034 5.542.031 5.394c.326-.95.86-1.826 1.602-2.627.104-.123.228-.154.371-.093l2.031.667a5.99 5.99 0 011.68-.926l.41-1.999c.025-.148.116-.234.273-.259a8.221 8.221 0 013.202 0c.156.024.247.111.273.26l.41 1.998c.6.223 1.159.53 1.68.926l2.03-.667c.143-.062.267-.03.371.093.742.802 1.276 1.678 1.602 2.627.064.148.032.266-.098.352l-1.62 1.332zM8 4.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z\\" fill-rule=\\"evenodd\\"></path>
     </svg></div>
@@ -426,7 +426,7 @@ exports[`BarButton should render examples: BarButton 4`] = `
 `;
 
 exports[`Buttons should render examples: Buttons 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiGrid-root MuiGrid-container\\">
     <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4\\">
       <div class=\\"styles__Stack--s___22WMg\\">
@@ -460,7 +460,7 @@ exports[`Buttons should render examples: Buttons 1`] = `
 `;
 
 exports[`Buttons should render examples: Buttons 2`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiGrid-root MuiGrid-container\\">
     <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4\\">
       <div class=\\"styles__Stack--s___22WMg\\">
@@ -494,7 +494,7 @@ exports[`Buttons should render examples: Buttons 2`] = `
 `;
 
 exports[`Buttons should render examples: Buttons 3`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiGrid-root MuiGrid-container\\">
     <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4\\">
       <div class=\\"styles__Stack--s___22WMg\\">
@@ -528,7 +528,7 @@ exports[`Buttons should render examples: Buttons 3`] = `
 `;
 
 exports[`Buttons should render examples: Buttons 4`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiGrid-root MuiGrid-container\\">
     <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4\\">
       <div class=\\"styles__Stack--s___22WMg\\">
@@ -589,7 +589,7 @@ exports[`Buttons should render examples: Buttons 4`] = `
 `;
 
 exports[`Buttons should render examples: Buttons 5`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiGrid-root MuiGrid-container\\">
     <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
       <div class=\\"styles__Stack--s___22WMg\\">
@@ -632,7 +632,7 @@ exports[`Buttons should render examples: Buttons 5`] = `
 `;
 
 exports[`Buttons should render examples: Buttons 6`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiGrid-root MuiGrid-container\\">
     <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
       <div class=\\"styles__Stack--s___22WMg\\">
@@ -675,7 +675,7 @@ exports[`Buttons should render examples: Buttons 6`] = `
 `;
 
 exports[`Buttons should render examples: Buttons 7`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiGrid-root MuiGrid-container\\">
     <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
       <div class=\\"styles__Stack--s___22WMg\\">
@@ -718,7 +718,7 @@ exports[`Buttons should render examples: Buttons 7`] = `
 `;
 
 exports[`Card should render examples: Card 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__c-card___YgP7B\\">
     <h6 class=\\"MuiTypography-root u-mb-1 MuiTypography-h6 MuiTypography-colorTextPrimary\\">This is a card</h6>
     <p class=\\"MuiTypography-root u-mb-1 MuiTypography-body1 MuiTypography-colorTextPrimary\\">This is some card content. Content can be small or huge.</p><button type=\\"submit\\" class=\\"styles__c-btn___3kXsk styles__c-btn--center___Nny0n u-ml-0\\"><span><span>Demo button</span></span></button>
@@ -727,7 +727,7 @@ exports[`Card should render examples: Card 1`] = `
 `;
 
 exports[`Card should render examples: Card 2`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__c-card___YgP7B styles__c-card--inset___2pofc\\">
     <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">This is some card content. Content can be small or huge. Also, it has margins.</p>
   </div>
@@ -735,14 +735,14 @@ exports[`Card should render examples: Card 2`] = `
 `;
 
 exports[`Card should render examples: Card 3`] = `
-"<div><a class=\\"styles__c-card___YgP7B\\" href=\\"https://cozy.io\\" target=\\"_blank\\">
+"<div data-testid=\\"mountNode\\"><a class=\\"styles__c-card___YgP7B\\" href=\\"https://cozy.io\\" target=\\"_blank\\">
     <h6 class=\\"MuiTypography-root MuiTypography-h6 MuiTypography-colorTextPrimary\\">Visit cozy.io</h6>
     <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">To learn more about us</p>
   </a></div>"
 `;
 
 exports[`Checkbox should render examples: Checkbox 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiGrid-root MuiGrid-container\\">
     <div class=\\"MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-3\\">
       <div><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">Checkbox</span></label></div>
@@ -773,13 +773,13 @@ exports[`Checkbox should render examples: Checkbox 1`] = `
 `;
 
 exports[`Checkbox should render examples: Checkbox 2`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">This is a <strong>complex</strong> text</span></label></div>
 </div>"
 `;
 
 exports[`Chips should render examples: Chips 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5>
     <div class=\\"MuiFormGroup-root MuiFormGroup-row\\" role=\\"radiogroup\\" aria-label=\\"radio\\"><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" name=\\"variantRadioSelector\\" type=\\"radio\\" value=\\"default\\" checked=\\"\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 16A8 8 0 108 0a8 8 0 000 16zm0-6a2 2 0 100-4 2 2 0 000 4z\\" clip-rule=\\"evenodd\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">DEFAULT</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" name=\\"variantRadioSelector\\" type=\\"radio\\" value=\\"active\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">ACTIVE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" name=\\"variantRadioSelector\\" type=\\"radio\\" value=\\"ghost\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">GHOST</span></label></div>
@@ -888,7 +888,7 @@ exports[`Chips should render examples: Chips 1`] = `
 `;
 
 exports[`Chips should render examples: Chips 2`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5>
     <div class=\\"MuiFormGroup-root MuiFormGroup-row\\" role=\\"radiogroup\\" aria-label=\\"radio\\"><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" name=\\"variantRadioSelector\\" type=\\"radio\\" value=\\"default\\" checked=\\"\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 16A8 8 0 108 0a8 8 0 000 16zm0-6a2 2 0 100-4 2 2 0 000 4z\\" clip-rule=\\"evenodd\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">DEFAULT</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" name=\\"variantRadioSelector\\" type=\\"radio\\" value=\\"active\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">ACTIVE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" name=\\"variantRadioSelector\\" type=\\"radio\\" value=\\"ghost\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">GHOST</span></label></div>
@@ -975,7 +975,7 @@ exports[`Chips should render examples: Chips 2`] = `
 `;
 
 exports[`ContactsList should render examples: ContactsList 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div style=\\"height: 500px; overflow-y: scroll;\\">
     <div class=\\"styles__Table___x3ZsI\\">
       <ul class=\\"MuiList-root MuiList-padding MuiList-subheader\\">
@@ -1611,7 +1611,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
 `;
 
 exports[`ContactsList should render examples: ContactsList 2`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <p>No contact clicked</p>
   <div style=\\"height: 500px; overflow-y: scroll;\\">
     <div class=\\"styles__Table___x3ZsI\\">
@@ -2247,10 +2247,10 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
 </div>"
 `;
 
-exports[`ContactsListModal should render examples: ContactsListModal 1`] = `"<div><button type=\\"button\\">Open contacts list</button></div>"`;
+exports[`ContactsListModal should render examples: ContactsListModal 1`] = `"<div data-testid=\\"mountNode\\"><button type=\\"button\\">Open contacts list</button></div>"`;
 
 exports[`DateMonthPicker should render examples: DateMonthPicker 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div>
     <div class=\\"styles__DateMonthPicker__YearControls___1DGlB\\"><button class=\\"styles__DateMonthPicker__YearButton___3zNDK\\" title=\\"2018\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M10.707 2.707a.999.999 0 10-1.414-1.414l-6 6a.999.999 0 000 1.414l6 6a.999.999 0 101.414-1.414L5.414 8l5.293-5.293z\\"></path>
@@ -2264,10 +2264,10 @@ exports[`DateMonthPicker should render examples: DateMonthPicker 1`] = `
 </div>"
 `;
 
-exports[`Dialog should render examples: Dialog 1`] = `"<div><button>Toggle modal</button></div>"`;
+exports[`Dialog should render examples: Dialog 1`] = `"<div data-testid=\\"mountNode\\"><button>Toggle modal</button></div>"`;
 
 exports[`DropdownText should render examples: DropdownText 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiGrid-root MuiGrid-container\\">
     <div class=\\"MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6\\">Default <div class=\\"u-mb-1\\">
         <div class=\\"makeStyles-container-475 makeStyles-container-478\\">
@@ -2474,7 +2474,7 @@ exports[`DropdownText should render examples: DropdownText 1`] = `
 `;
 
 exports[`Empty should render examples: Empty 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">LARGE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">MEDIUM</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">WITHCONTENT</span></label>
   </div>
@@ -2489,7 +2489,7 @@ exports[`Empty should render examples: Empty 1`] = `
 `;
 
 exports[`Hero should render examples: Hero 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__Hero___14z7_\\">
     <h2 class=\\" styles__Hero-title___256Uz\\">Connect your bank accounts</h2>
     <div class=\\" styles__Hero-sections___ETV6e\\">
@@ -2518,7 +2518,7 @@ exports[`Hero should render examples: Hero 1`] = `
 `;
 
 exports[`HistoryRow should render examples: HistoryRow 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__media___1rIBu styles__HistoryRowMedia___2jgYN\\">
     <div class=\\"u-media u-media-grow u-row-m\\">
       <div class=\\"styles__HistoryRowCircleWrapper___3r8Uo\\">
@@ -2649,7 +2649,7 @@ exports[`HistoryRow should render examples: HistoryRow 1`] = `
 `;
 
 exports[`IconStack should render examples: IconStack 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__IconStack-wrapper___10dhG optional-bg-wrapper-class\\"><svg viewBox=\\"0 0 26 32\\" class=\\"styles__icon___23x3R\\" style=\\"fill: blue;\\" width=\\"32\\" height=\\"32\\">
       <g fill-rule=\\"evenodd\\">
         <path d=\\"M0 2.002C0 .896.89 0 1.997 0H19l7 7v22.996A2 2 0 0124.003 32H1.997A1.995 1.995 0 010 29.998C.048 16 0 16 0 2.002z\\" fill=\\"#FFF\\"></path>
@@ -2666,7 +2666,7 @@ exports[`IconStack should render examples: IconStack 1`] = `
 `;
 
 exports[`InputGroup should render examples: InputGroup 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <form>
     <div>
       <div class=\\"styles__c-inputgroup___12OVJ\\">
@@ -2679,7 +2679,7 @@ exports[`InputGroup should render examples: InputGroup 1`] = `
 `;
 
 exports[`InputGroup should render examples: InputGroup 2`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <form>
     <div>
       <div class=\\"styles__c-inputgroup___12OVJ\\">
@@ -2694,7 +2694,7 @@ exports[`InputGroup should render examples: InputGroup 2`] = `
 `;
 
 exports[`InputGroup should render examples: InputGroup 3`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <form>
     <div>
       <div class=\\"styles__c-inputgroup___12OVJ\\">
@@ -2707,7 +2707,7 @@ exports[`InputGroup should render examples: InputGroup 3`] = `
 `;
 
 exports[`InputGroup should render examples: InputGroup 4`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <form>
     <div>
       <div class=\\"styles__c-inputgroup___12OVJ\\">
@@ -2738,7 +2738,7 @@ exports[`InputGroup should render examples: InputGroup 4`] = `
 `;
 
 exports[`InputGroup should render examples: InputGroup 5`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <form>
     <div>
       <div class=\\"styles__c-inputgroup___12OVJ styles__c-inputgroup--fullwidth___3nuay\\">
@@ -2753,7 +2753,7 @@ exports[`InputGroup should render examples: InputGroup 5`] = `
 `;
 
 exports[`InputGroup should render examples: InputGroup 6`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <form>
     <div>
       <div class=\\"styles__c-inputgroup___12OVJ styles__c-inputgroup--error___1JNbu\\">
@@ -2768,7 +2768,7 @@ exports[`InputGroup should render examples: InputGroup 6`] = `
 `;
 
 exports[`InputGroup should render examples: InputGroup 7`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <form>
     <div>
       <div class=\\"styles__c-inputgroup___12OVJ u-bdrs-3\\">
@@ -2783,7 +2783,7 @@ exports[`InputGroup should render examples: InputGroup 7`] = `
 `;
 
 exports[`Label should render examples: Label 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <form>
     <div><label for=\\"idInput\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">This is a label</label><input type=\\"text\\" id=\\"idInput\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Recherche\\" spellcheck=\\"false\\" value=\\"\\"></div>
   </form>
@@ -2791,7 +2791,7 @@ exports[`Label should render examples: Label 1`] = `
 `;
 
 exports[`Label should render examples: Label 2`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <form>
     <div><label for=\\"idInput2\\" class=\\"styles__c-label___o4ozG\\">This is an inline label</label><input type=\\"text\\" id=\\"idInput2\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"Recherche\\" spellcheck=\\"false\\" value=\\"\\"></div>
   </form>
@@ -2799,7 +2799,7 @@ exports[`Label should render examples: Label 2`] = `
 `;
 
 exports[`Label should render examples: Label 3`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <form>
     <div><label for=\\"idInput2\\" class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7 styles__is-error___2Dwem\\">This is an error label</label><input type=\\"text\\" id=\\"idInput2\\" class=\\"styles__c-input-text___3TAv1 styles__is-error___3lsCJ styles__c-input-text--large___28EaR\\" placeholder=\\"Recherche\\" spellcheck=\\"false\\" value=\\"\\"></div>
   </form>
@@ -2807,7 +2807,7 @@ exports[`Label should render examples: Label 3`] = `
 `;
 
 exports[`Labs/CollectionField should render examples: Labs/CollectionField 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">INLINE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">EMPTYDATA</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">NULLDATA</span></label>
   </div>
@@ -2822,26 +2822,26 @@ exports[`Labs/CollectionField should render examples: Labs/CollectionField 1`] =
 `;
 
 exports[`ListItemText should render examples: ListItemText 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiListItemText-root\\"><span class=\\"MuiTypography-root u-db u-ellipsis MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock\\">I'm a list item text</span></div>
 </div>"
 `;
 
 exports[`ListItemText should render examples: ListItemText 2`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiListItemText-root MuiListItemText-multiline\\"><span class=\\"MuiTypography-root u-db u-ellipsis MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock\\">I'm a primary text</span><span class=\\"MuiTypography-root u-db u-ellipsis MuiListItemText-secondary MuiTypography-caption MuiTypography-colorTextSecondary MuiTypography-displayBlock\\">I'm a secondary text</span></div>
 </div>"
 `;
 
 exports[`ListItemText should render examples: ListItemText 3`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiListItemText-root\\"><span class=\\"MuiTypography-root u-db u-ellipsis MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock\\"><p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">I'm a primary text</p><span class=\\"MuiTypography-root MuiTypography-caption MuiTypography-colorTextSecondary\\" tag=\\"a\\" href=\\"http://cozy.io\\"><div class=\\"u-midellipsis\\"><span>Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognis</span><span>‎e that the machine had applications beyond pure calculation, and published the first algorithm intended to be carried out by such a machine. As a result, she is often regarded as the first to recognise the full potential of a \\"computing machine\\" and the first computer programmer.‎</span></div></span></span>
 </div>
 </div>"
 `;
 
 exports[`OrderedList should render examples: OrderedList 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <ol class=\\"styles__OrderedList___17A_o styles__Stack--m___1tSpV\\">
     <li class=\\"styles__ListItem___2Lu4a\\">Do this</li>
     <li class=\\"styles__ListItem___2Lu4a\\">Then do this</li>
@@ -2851,7 +2851,7 @@ exports[`OrderedList should render examples: OrderedList 1`] = `
 `;
 
 exports[`Paper should render examples: Paper 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">SQUARE</span></label>
   </div>
@@ -2902,12 +2902,12 @@ exports[`Paper should render examples: Paper 1`] = `
 </div>"
 `;
 
-exports[`PasswordExample should render examples: PasswordExample 1`] = `"<div><span class=\\"styles__c-inline-card___1a8Og\\"><span class=\\"\\">C</span><span class=\\"\\">l</span><span class=\\"styles__Token--number___2EzoN\\">4</span><span class=\\"\\">u</span><span class=\\"\\">d</span><span class=\\"\\">e</span><span class=\\"styles__Token--special___3_rSu\\">€</span><span class=\\"\\">s</span><span class=\\"\\">t</span><span class=\\"styles__Token--number___2EzoN\\">1</span><span class=\\"\\">N</span><span class=\\"\\">u</span><span class=\\"styles__Token--special___3_rSu\\">@</span><span class=\\"\\">g</span><span class=\\"\\">e</span></span></div>"`;
+exports[`PasswordExample should render examples: PasswordExample 1`] = `"<div data-testid=\\"mountNode\\"><span class=\\"styles__c-inline-card___1a8Og\\"><span class=\\"\\">C</span><span class=\\"\\">l</span><span class=\\"styles__Token--number___2EzoN\\">4</span><span class=\\"\\">u</span><span class=\\"\\">d</span><span class=\\"\\">e</span><span class=\\"styles__Token--special___3_rSu\\">€</span><span class=\\"\\">s</span><span class=\\"\\">t</span><span class=\\"styles__Token--number___2EzoN\\">1</span><span class=\\"\\">N</span><span class=\\"\\">u</span><span class=\\"styles__Token--special___3_rSu\\">@</span><span class=\\"\\">g</span><span class=\\"\\">e</span></span></div>"`;
 
-exports[`PasswordExample should render examples: PasswordExample 2`] = `"<div><span class=\\"styles__c-inline-card___1a8Og\\"><span class=\\"\\">C</span><span class=\\"\\">l</span><span class=\\"\\">a</span><span class=\\"\\">u</span><span class=\\"\\">d</span><span class=\\"\\">e</span><span class=\\"\\"> </span><span class=\\"\\">e</span><span class=\\"\\">s</span><span class=\\"\\">t</span><span class=\\"\\"> </span><span class=\\"\\">l</span><span class=\\"\\">e</span><span class=\\"\\"> </span><span class=\\"\\">m</span><span class=\\"\\">e</span><span class=\\"\\">i</span><span class=\\"\\">l</span><span class=\\"\\">l</span><span class=\\"\\">e</span><span class=\\"\\">u</span><span class=\\"\\">r</span><span class=\\"\\"> </span><span class=\\"\\">n</span><span class=\\"\\">u</span><span class=\\"\\">a</span><span class=\\"\\">g</span><span class=\\"\\">e</span><span class=\\"\\"> </span><span class=\\"\\">!</span></span></div>"`;
+exports[`PasswordExample should render examples: PasswordExample 2`] = `"<div data-testid=\\"mountNode\\"><span class=\\"styles__c-inline-card___1a8Og\\"><span class=\\"\\">C</span><span class=\\"\\">l</span><span class=\\"\\">a</span><span class=\\"\\">u</span><span class=\\"\\">d</span><span class=\\"\\">e</span><span class=\\"\\"> </span><span class=\\"\\">e</span><span class=\\"\\">s</span><span class=\\"\\">t</span><span class=\\"\\"> </span><span class=\\"\\">l</span><span class=\\"\\">e</span><span class=\\"\\"> </span><span class=\\"\\">m</span><span class=\\"\\">e</span><span class=\\"\\">i</span><span class=\\"\\">l</span><span class=\\"\\">l</span><span class=\\"\\">e</span><span class=\\"\\">u</span><span class=\\"\\">r</span><span class=\\"\\"> </span><span class=\\"\\">n</span><span class=\\"\\">u</span><span class=\\"\\">a</span><span class=\\"\\">g</span><span class=\\"\\">e</span><span class=\\"\\"> </span><span class=\\"\\">!</span></span></div>"`;
 
 exports[`PieChart should render examples: PieChart 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiGrid-root MuiGrid-container\\">
     <div class=\\"MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6\\">
       <div class=\\"makeStyles-container-561\\">
@@ -2932,7 +2932,7 @@ exports[`PieChart should render examples: PieChart 1`] = `
 `;
 
 exports[`Progress should render examples: Progress 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">WITHVALUE</span></label>
   </div>
@@ -2946,7 +2946,7 @@ exports[`Progress should render examples: Progress 1`] = `
 `;
 
 exports[`ProgressionBanner should render examples: ProgressionBanner 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">WITHVALUE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">PROGRESSBAR</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">WITHBUTTON</span></label>
   </div>
@@ -2978,7 +2978,7 @@ exports[`ProgressionBanner should render examples: ProgressionBanner 1`] = `
 `;
 
 exports[`Radios should render examples: Radios 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"MuiFormGroup-root\\" role=\\"radiogroup\\" aria-label=\\"radio\\"><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" name=\\"radioName\\" type=\\"radio\\" value=\\"item1\\" checked=\\"\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 16A8 8 0 108 0a8 8 0 000 16zm0-6a2 2 0 100-4 2 2 0 000 4z\\" clip-rule=\\"evenodd\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">This is a radio button</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorSecondary MuiIconButton-colorSecondary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" name=\\"radioName\\" type=\\"radio\\" value=\\"item2\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">This is an intent radio button</span></label><label class=\\"MuiFormControlLabel-root Mui-disabled\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-disabled-3 Mui-disabled MuiIconButton-colorPrimary Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" aria-disabled=\\"true\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" disabled=\\"\\" name=\\"radioName\\" type=\\"radio\\" value=\\"item3\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label Mui-disabled MuiTypography-body1\\">This is a disabled radio button</span></label><label class=\\"MuiFormControlLabel-root Mui-disabled\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-checked-2 Mui-checked PrivateSwitchBase-disabled-3 Mui-disabled MuiIconButton-colorPrimary Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" aria-disabled=\\"true\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" disabled=\\"\\" name=\\"radioName\\" type=\\"radio\\" value=\\"item4\\" checked=\\"\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 16A8 8 0 108 0a8 8 0 000 16zm0-6a2 2 0 100-4 2 2 0 000 4z\\" clip-rule=\\"evenodd\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label Mui-disabled MuiTypography-body1\\">This is a checked disabled radio button</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary MuiIconButton-colorPrimary MuiIconButton-edgeStart\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" name=\\"radioName\\" type=\\"radio\\" value=\\"item5\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">This is a edge start radio button</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary MuiIconButton-colorPrimary MuiIconButton-edgeEnd\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" name=\\"radioName\\" type=\\"radio\\" value=\\"item6\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">This is a edge end radio button</span></label></div>
   <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">CHECKED</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">DISABLED</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">SECONDARY</span></label>
@@ -2987,7 +2987,7 @@ exports[`Radios should render examples: Radios 1`] = `
 `;
 
 exports[`Radios should render examples: Radios 2`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div style=\\"height: 3rem; width: 3rem; border: 2px dashed #ccc; display: flex; justify-content: center; align-items: center;\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\" style=\\"border: 1px solid red;\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"radio\\" value=\\"\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path></svg></span></span></div>
   <div style=\\"height: 3rem; width: 3rem; border: 2px dashed #ccc; display: flex; justify-content: center; align-items: center;\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary MuiIconButton-colorPrimary MuiIconButton-edgeStart\\" aria-disabled=\\"false\\" style=\\"border: 1px solid red;\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"radio\\" value=\\"\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path></svg></span></span></div>
   <div style=\\"height: 3rem; width: 3rem; border: 2px dashed #ccc; display: flex; justify-content: center; align-items: center;\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiRadio-root MuiRadio-colorPrimary MuiIconButton-colorPrimary MuiIconButton-edgeEnd\\" aria-disabled=\\"false\\" style=\\"border: 1px solid red;\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"radio\\" value=\\"\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><path fill-rule=\\"evenodd\\" d=\\"M8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 108 2a6 6 0 000 12z\\" clip-rule=\\"evenodd\\"></path></svg></span></span></div>
@@ -2995,7 +2995,7 @@ exports[`Radios should render examples: Radios 2`] = `
 `;
 
 exports[`SelectBox should render examples: SelectBox 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div style=\\"background: whitesmoke; padding: .5em;\\">
     <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
       <div class=\\" css-fg5tdu-control\\">
@@ -3019,7 +3019,7 @@ exports[`SelectBox should render examples: SelectBox 1`] = `
 `;
 
 exports[`SelectBox should render examples: SelectBox 2`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
     <div class=\\" css-fg5tdu-control\\">
       <div class=\\" css-11jzfys-ValueContainer\\">
@@ -3046,7 +3046,7 @@ exports[`SelectBox should render examples: SelectBox 2`] = `
 `;
 
 exports[`SelectBox should render examples: SelectBox 3`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div style=\\"height: 12rem; padding: .5rem; overflow: auto;\\">Container height: 12rem. <button>Change container height</button>
     <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
       <div class=\\" css-fg5tdu-control\\">
@@ -3070,7 +3070,7 @@ exports[`SelectBox should render examples: SelectBox 3`] = `
 `;
 
 exports[`SelectBox should render examples: SelectBox 4`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__select--autowidth___16AEp styles__select--disabled___1W3en css-14jk2my-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
     <div class=\\" css-ofrup8-control\\">
       <div class=\\" css-11jzfys-ValueContainer\\">
@@ -3092,7 +3092,7 @@ exports[`SelectBox should render examples: SelectBox 4`] = `
 `;
 
 exports[`SelectBox should render examples: SelectBox 5`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__select--fullwidth___2l_xM css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
     <div class=\\" css-fg5tdu-control\\">
       <div class=\\" css-11jzfys-ValueContainer\\">
@@ -3114,7 +3114,7 @@ exports[`SelectBox should render examples: SelectBox 5`] = `
 `;
 
 exports[`SelectBox should render examples: SelectBox 6`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div>
     <div class=\\"styles__select--autowidth___16AEp styles__select--disabled___1W3en css-14jk2my-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
       <div class=\\" css-ofrup8-control\\">
@@ -3138,7 +3138,7 @@ exports[`SelectBox should render examples: SelectBox 6`] = `
 `;
 
 exports[`SelectBox should render examples: SelectBox 7`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div>
     <div class=\\"u-mb-1\\">
       <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
@@ -3202,7 +3202,7 @@ exports[`SelectBox should render examples: SelectBox 7`] = `
 `;
 
 exports[`SelectBox should render examples: SelectBox 8`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
     <div><button>toggle options</button>
       <div class=\\"styles__select-control__input___1xDlj\\">
@@ -3226,7 +3226,7 @@ exports[`SelectBox should render examples: SelectBox 8`] = `
 `;
 
 exports[`SelectBox should render examples: SelectBox 9`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
     <div class=\\" css-fg5tdu-control\\">
       <div class=\\" css-11jzfys-ValueContainer\\">
@@ -3248,7 +3248,7 @@ exports[`SelectBox should render examples: SelectBox 9`] = `
 `;
 
 exports[`SelectBox should render examples: SelectBox 10`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
     <div class=\\" css-fg5tdu-control\\">
       <div class=\\" css-11jzfys-ValueContainer\\">
@@ -3270,7 +3270,7 @@ exports[`SelectBox should render examples: SelectBox 10`] = `
 `;
 
 exports[`SelectBox should render examples: SelectBox 11`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
     <div class=\\" css-fg5tdu-control\\">
       <div class=\\" css-11jzfys-ValueContainer\\">
@@ -3330,7 +3330,7 @@ exports[`SelectBox should render examples: SelectBox 11`] = `
 `;
 
 exports[`SelectBox should render examples: SelectBox 12`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
     <div class=\\" css-fg5tdu-control\\">
       <div class=\\"needsclick css-11jzfys-ValueContainer\\">
@@ -3352,7 +3352,7 @@ exports[`SelectBox should render examples: SelectBox 12`] = `
 `;
 
 exports[`SelectBox should render examples: SelectBox 13`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
     <div class=\\"needsclick cz__control needsclick cz__control--menu-is-open css-fg5tdu-control\\">
       <div class=\\"needsclick cz__value-container css-11jzfys-ValueContainer\\">
@@ -3378,10 +3378,10 @@ exports[`SelectBox should render examples: SelectBox 13`] = `
 </div>"
 `;
 
-exports[`SelectBox should render examples: SelectBox 14`] = `"<div><button>Toggle modal</button></div>"`;
+exports[`SelectBox should render examples: SelectBox 14`] = `"<div data-testid=\\"mountNode\\"><button>Toggle modal</button></div>"`;
 
 exports[`Sidebar should render examples: Sidebar 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <aside id=\\"sidebar\\" class=\\"styles__o-sidebar___1295j\\">
     <nav role=\\"navigation\\">
       <ul class=\\"styles__c-nav___33dZy\\">
@@ -3396,7 +3396,7 @@ exports[`Sidebar should render examples: Sidebar 1`] = `
 `;
 
 exports[`Spinner should render examples: Spinner 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--spinnerColor);\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
       <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
       <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
@@ -3405,7 +3405,7 @@ exports[`Spinner should render examples: Spinner 1`] = `
 `;
 
 exports[`Spinner should render examples: Spinner 2`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div>blue (default): <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--spinnerColor);\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
@@ -3427,7 +3427,7 @@ exports[`Spinner should render examples: Spinner 2`] = `
 `;
 
 exports[`Spinner should render examples: Spinner 3`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div>
     <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--nomargin___13JyW\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--spinnerColor);\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
@@ -3438,7 +3438,7 @@ exports[`Spinner should render examples: Spinner 3`] = `
 `;
 
 exports[`Spinner should render examples: Spinner 4`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div>tiny: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--spinnerColor);\\" width=\\"8\\" height=\\"8\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
@@ -3466,7 +3466,7 @@ exports[`Spinner should render examples: Spinner 4`] = `
 `;
 
 exports[`Spinner should render examples: Spinner 5`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div>
     <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--spinnerColor);\\" width=\\"80\\" height=\\"80\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
@@ -3479,7 +3479,7 @@ exports[`Spinner should render examples: Spinner 5`] = `
 `;
 
 exports[`Switch should render examples: Switch 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__Stack--xs___2R5lW\\">
     <div class=\\"MuiBox-root MuiBox-root-572\\">
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-displayInline\\">primary</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-checked-2 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
@@ -3495,7 +3495,7 @@ exports[`Switch should render examples: Switch 1`] = `
 `;
 
 exports[`Table should render examples: Table 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div class=\\"styles__Table___x3ZsI\\">
     <div class=\\"styles__TableHead___1rqhM\\">
       <div class=\\"styles__TableRow___1D62H\\">
@@ -3517,14 +3517,14 @@ exports[`Table should render examples: Table 1`] = `
 </div>"
 `;
 
-exports[`Textarea should render examples: Textarea 1`] = `"<div><textarea placeholder=\\"Once upon a time…\\" class=\\"styles__c-textarea___D7EEH\\"></textarea></div>"`;
+exports[`Textarea should render examples: Textarea 1`] = `"<div data-testid=\\"mountNode\\"><textarea placeholder=\\"Once upon a time…\\" class=\\"styles__c-textarea___D7EEH\\"></textarea></div>"`;
 
-exports[`Textarea should render examples: Textarea 2`] = `"<div><textarea placeholder=\\"Once upon a time, there was an error…\\" class=\\"styles__c-textarea___D7EEH styles__is-error___1kGLj\\"></textarea></div>"`;
+exports[`Textarea should render examples: Textarea 2`] = `"<div data-testid=\\"mountNode\\"><textarea placeholder=\\"Once upon a time, there was an error…\\" class=\\"styles__c-textarea___D7EEH styles__is-error___1kGLj\\"></textarea></div>"`;
 
-exports[`Textarea should render examples: Textarea 3`] = `"<div><textarea aria-disabled=\\"true\\" disabled=\\"\\" placeholder=\\"\\" class=\\"styles__c-textarea___D7EEH\\">Don't edit me.</textarea></div>"`;
+exports[`Textarea should render examples: Textarea 3`] = `"<div data-testid=\\"mountNode\\"><textarea aria-disabled=\\"true\\" disabled=\\"\\" placeholder=\\"\\" class=\\"styles__c-textarea___D7EEH\\">Don't edit me.</textarea></div>"`;
 
 exports[`Textarea should render examples: Textarea 4`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div>
     <p><textarea placeholder=\\"I'm have a tiny size\\" class=\\"styles__c-textarea___D7EEH styles__c-textarea--tiny___3fmPW\\"></textarea></p>
     <p><textarea placeholder=\\"I'm have a medium size\\" class=\\"styles__c-textarea___D7EEH styles__c-textarea--medium___T8f3b\\"></textarea></p>
@@ -3533,7 +3533,7 @@ exports[`Textarea should render examples: Textarea 4`] = `
 `;
 
 exports[`Textarea should render examples: Textarea 5`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div>
     <p><textarea placeholder=\\"I'm full width\\" class=\\"styles__c-textarea___D7EEH styles__c-textarea--fullwidth___Ih_mg\\"></textarea></p>
   </div>
@@ -3541,13 +3541,13 @@ exports[`Textarea should render examples: Textarea 5`] = `
 `;
 
 exports[`Textarea should render examples: Textarea 6`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <div><textarea placeholder=\\"\\" class=\\"styles__c-textarea___D7EEH\\" name=\\"my-field\\"></textarea></div>
 </div>"
 `;
 
 exports[`UnorderedList should render examples: UnorderedList 1`] = `
-"<div>
+"<div data-testid=\\"mountNode\\">
   <ul class=\\"styles__UnorderedList___2uFFY styles__Stack--m___1tSpV\\">
     <li class=\\"styles__ListItem___3cRoI\\">Do this</li>
     <li class=\\"styles__ListItem___3cRoI\\">And this</li>
@@ -3557,7 +3557,7 @@ exports[`UnorderedList should render examples: UnorderedList 1`] = `
 `;
 
 exports[`Wizard should render examples: Wizard 1`] = `
-"<div><button>Show wizard</button><br>
+"<div data-testid=\\"mountNode\\"><button>Show wizard</button><br>
   <div class=\\"styles__wizard___m6AMR\\">
     <div class=\\"styles__wizard-wrapper___38V4s\\">
       <header class=\\"styles__wizard-header___2_r05\\"><button type=\\"button\\" class=\\"styles__c-btn___3kXsk styles__c-btn--subtle___2rRQ0 styles__c-btn--narrow___erKsd styles__c-btn--center___Nny0n styles__wizard-previous___2StGt\\" title=\\"Previous\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\"><path d=\\"M3.414 7h11.58C15.548 7 16 7.444 16 8c0 .552-.45 1-1.007 1H3.414l5.293 5.293a1 1 0 01-1.414 1.414l-7-7a1 1 0 010-1.414l7-7a1 1 0 111.414 1.414L3.414 7z\\" fill-rule=\\"evenodd\\"></path></svg><span class=\\"u-visuallyhidden\\">Previous</span></span></button>
