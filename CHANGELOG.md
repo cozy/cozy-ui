@@ -1,3 +1,15 @@
+# [90.1.0](https://github.com/cozy/cozy-ui/compare/v90.0.0...v90.1.0) (2023-07-26)
+
+
+### Bug Fixes
+
+* **CozyTheme:** Set default variant to "normal" ([816034d](https://github.com/cozy/cozy-ui/commit/816034d))
+
+
+### Features
+
+* **ActionsMenu:** MakeActions() can now receive nullish actions ([de39ce7](https://github.com/cozy/cozy-ui/commit/de39ce7))
+
 # [90.0.0](https://github.com/cozy/cozy-ui/compare/v89.1.0...v90.0.0) (2023-07-20)
 
 
