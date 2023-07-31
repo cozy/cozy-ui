@@ -1,4 +1,5 @@
 import get from 'lodash/get'
+import copy from 'copy-text-to-clipboard'
 
 import { formatDate } from '../../Viewer/helpers'
 
@@ -67,9 +68,8 @@ export const makeDefaultExpandedAttributes = (doc, expandedAttributes) => {
 }
 
 export const copyToClipboard = ({ value, setAlertProps, t }) => () => {
-  if (navigator?.clipboard) {
-    navigator.clipboard.writeText(value)
-
+  const hasCopied = copy(value)
+  if (hasCopied) {
     setAlertProps({
       open: true,
       severity: 'success',
