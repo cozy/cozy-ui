@@ -1,3 +1,16 @@
+# [90.2.0](https://github.com/cozy/cozy-ui/compare/v90.1.0...v90.2.0) (2023-07-31)
+
+
+### Bug Fixes
+
+* **Viewer:** Success alert for copied item is now with a success style ([f934e3c](https://github.com/cozy/cozy-ui/commit/f934e3c))
+
+
+### Features
+
+* Add copy-text-to-clipboard 3.2.0 package ([c79456f](https://github.com/cozy/cozy-ui/commit/c79456f))
+* Replace navigator.clipboard by copy-text-to-clipboard ([2884a37](https://github.com/cozy/cozy-ui/commit/2884a37))
+
 # [90.1.0](https://github.com/cozy/cozy-ui/compare/v90.0.0...v90.1.0) (2023-07-26)
 
 
