@@ -4,6 +4,8 @@ jest.mock('cozy-harvest-lib/dist/components/KonnectorBlock', () => jest.fn())
 const block1Component = jest.fn()
 const block2Component = jest.fn()
 
+jest.mock('copy-text-to-clipboard', () => ({ copy: jest.fn() }))
+
 describe('getPanelBlocks', () => {
   it('should return only blocks with truthy condition', () => {
     // with two truthy component
