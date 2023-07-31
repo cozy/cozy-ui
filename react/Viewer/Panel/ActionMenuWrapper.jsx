@@ -43,7 +43,7 @@ const ActionMenuWrapper = forwardRef(({ onClose, file, optionFile }, ref) => {
     if (navigator?.clipboard) {
       navigator.clipboard.writeText(value)
       showViewerSnackbar(
-        'secondary',
+        'success',
         t(`Viewer.snackbar.copiedToClipboard.success`)
       )
     } else {
