@@ -20,8 +20,8 @@ const ActionsItems = forwardRef(
 
       const { Component: ActionComponent, action, disabled } = actionDefinition
 
-      const handleClick = () => {
-        action && action(doc, { client, t, ...actionOptions })
+      const handleClick = clickProps => {
+        action && action(doc, { client, t, ...actionOptions, ...clickProps })
         overridedClick && overridedClick()
       }
 
