@@ -6,7 +6,7 @@ import { useI18n } from '../I18n'
 import { getActionName, getOnlyNeededActions } from './Actions/helpers'
 
 const ActionsItems = forwardRef(
-  ({ doc, actions, actionOptions, onClick, ...props }, ref) => {
+  ({ doc, actions, actionOptions, onClick: overridedClick, ...props }, ref) => {
     const client = useClient()
     const { t } = useI18n()
     const cleanedActions = useMemo(() => getOnlyNeededActions(actions, doc), [
@@ -22,7 +22,7 @@ const ActionsItems = forwardRef(
 
       const handleClick = () => {
         action && action(doc, { client, t, ...actionOptions })
-        onClick && onClick()
+        overridedClick && overridedClick()
       }
 
       return (
@@ -45,6 +45,7 @@ ActionsItems.propTypes = {
   actions: PropTypes.array,
   /** Props spread to action method of Actions component */
   actionOptions: PropTypes.object,
+  /** The overrideClick function from ActionsMenuWrapper */
   onClick: PropTypes.func
 }
 
