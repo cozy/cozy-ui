@@ -1,3 +1,10 @@
+# [90.3.0](https://github.com/cozy/cozy-ui/compare/v90.2.0...v90.3.0) (2023-08-02)
+
+
+### Features
+
+* **ActionsItems:** Add possibility to spread arg between onClick and actions ([ef54841](https://github.com/cozy/cozy-ui/commit/ef54841))
+
 # [90.2.0](https://github.com/cozy/cozy-ui/compare/v90.1.0...v90.2.0) (2023-07-31)
 
 
