@@ -11,10 +11,13 @@ Use `makeActions` method and create (or use the predefined actions) to build the
 ```bash
 const action1 = ({ option1, option2 }) => ({
   name: action1,
-  Component: props => <SomeComponent {...props} />
+  action: ({ option3, option4 }) => {}
+  Component: ({ onClick, ...props }) => <SomeComponent {...props} onClick={() => onClick({ option3 })}} />
 })
 
 const actions = makeActions([action1, action2], { option1, option2 })
+
+<ActionsMenu actions={actions} componentsProps={{ actionsItems: { actionOptions: { option4 }} }}
 ```
 
 #### How to create actions
