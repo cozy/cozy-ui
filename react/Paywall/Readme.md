@@ -14,8 +14,6 @@ import {
   MaxPapersPaywall,
   QuotaPaywall
 } from "cozy-ui/transpiled/react/Paywall"
-import { CozyProvider } from "cozy-client"
-import { BreakpointsProvider } from "cozy-ui/transpiled/react/hooks/useBreakpoints"
 import Variants from 'cozy-ui/docs/components/Variants'
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import Button from  'cozy-ui/transpiled/react/Buttons'
