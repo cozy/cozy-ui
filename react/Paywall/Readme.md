@@ -1,7 +1,7 @@
 A paywall is a modal designed to restrict access to a feature to encourage upgrading.
 There is different variant for each features so the wording can be different to adapt to the context of use.
 
-On mobile devices, we display "I understand" instead of the action button label for reasons of compatibility with the mobile application store.
+When we're in our mobile app called Flagship, we can't display the premium action instead, we just display "I understand" which closes the paywall. This is because our subscription process does not comply with the app store policies. When In app payement (iap) will be implemented we can display premium action back with flag `flagship.iap.enabled`
 
 ### Variants
 

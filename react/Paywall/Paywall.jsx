@@ -2,9 +2,10 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import PropTypes from 'prop-types'
 
-import { isMobileApp, isFlagshipApp } from 'cozy-device-helper'
+import { isFlagshipApp } from 'cozy-device-helper'
 import { useClient } from 'cozy-client'
 import { buildPremiumLink } from 'cozy-client/dist/models/instance'
+import flag from 'cozy-flags'
 
 import useInstance from '../helpers/useInstance'
 import Spinner from '../Spinner'
@@ -39,12 +40,14 @@ const Paywall = ({ variant, onClose, isPublic, contentInterpolation }) => {
       />
     )
 
-  const isMobileAppVersion = isMobileApp() || isFlagshipApp()
+  const canOpenPremiumLink =
+    !isFlagshipApp() || (isFlagshipApp() && !!flag('flagship.iap.enabled'))
+
   const link = buildPremiumLink(instance)
   const type = makeType(instance, isPublic, link)
 
   const onAction = () => {
-    return type === 'premium' && !isMobileAppVersion
+    return type === 'premium' && canOpenPremiumLink
       ? window.open(link, '_self')
       : onClose()
   }
@@ -66,9 +69,9 @@ const Paywall = ({ variant, onClose, isPublic, contentInterpolation }) => {
         <Button
           onClick={onAction}
           label={
-            isMobileAppVersion
-              ? t(`mobileApp.action`)
-              : t(`${variant}Paywall.${type}.action`)
+            canOpenPremiumLink
+              ? t(`${variant}Paywall.${type}.action`)
+              : t(`mobileApp.action`)
           }
         />
       }
