@@ -3,6 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react'
 
 import { CozyProvider, createMockClient } from 'cozy-client'
 import { isFlagshipApp } from 'cozy-device-helper'
+import flag from 'cozy-flags'
 
 import { I18n } from '../I18n'
 import Paywall from './Paywall'
@@ -14,6 +15,8 @@ jest.mock('cozy-device-helper', () => ({
   ...jest.requireActual('cozy-device-helper'),
   isFlagshipApp: jest.fn()
 }))
+
+jest.mock('cozy-flags')
 
 describe('Paywall', () => {
   const onCloseSpy = jest.fn()
@@ -27,7 +30,8 @@ describe('Paywall', () => {
     isPublic,
     enablePremiumLinks = false,
     hasUuid = false,
-    isFlagshipApp: isFlagshipAppReturnValue = false
+    isFlagshipApp: isFlagshipAppReturnValue = false,
+    isIapEnabled = null
   } = {}) => {
     useInstance.mockReturnValue({
       context: {
@@ -47,6 +51,7 @@ describe('Paywall', () => {
     })
 
     isFlagshipApp.mockReturnValue(isFlagshipAppReturnValue)
+    flag.mockReturnValue(isIapEnabled)
 
     const mockClient = createMockClient({})
     return render(
@@ -159,6 +164,43 @@ describe('Paywall', () => {
       })
       fireEvent.click(actionButton)
       expect(onCloseSpy).toBeCalledTimes(1)
+    })
+
+    it('should display the premium case without an action button to access the premium link when flag flagship.iap.enabled is false', () => {
+      setup({
+        hasUuid: true,
+        enablePremiumLinks: true,
+        isFlagshipApp: true,
+        isIapEnabled: false
+      })
+
+      expect(screen.getByText('Upgrade your plan')).toBeInTheDocument()
+
+      const actionButton = screen.getByRole('button', {
+        name: 'I understand'
+      })
+      fireEvent.click(actionButton)
+      expect(onCloseSpy).toBeCalledTimes(1)
+    })
+
+    it('should display the premium case with an action button to access the premium link when flag flagship.iap.enabled is true', () => {
+      setup({
+        hasUuid: true,
+        enablePremiumLinks: true,
+        isFlagshipApp: true,
+        isIapEnabled: true
+      })
+
+      expect(screen.getByText('Upgrade your plan')).toBeInTheDocument()
+
+      const actionButton = screen.getByRole('button', {
+        name: 'Check our plans'
+      })
+      fireEvent.click(actionButton)
+      expect(openSpy).toBeCalledWith(
+        'http://mycozy.cloud/cozy/instances/123/premium',
+        '_self'
+      )
     })
   })
 })
