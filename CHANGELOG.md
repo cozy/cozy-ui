@@ -1,3 +1,11 @@
+# [90.5.0](https://github.com/cozy/cozy-ui/compare/v90.4.0...v90.5.0) (2023-08-07)
+
+
+### Features
+
+* Add DemoProvider to simplify doc and tests ([73efeb4](https://github.com/cozy/cozy-ui/commit/73efeb4))
+* **useI18n:** Throw error if not used inside I18n provider ([a54de0f](https://github.com/cozy/cozy-ui/commit/a54de0f))
+
 # [90.4.0](https://github.com/cozy/cozy-ui/compare/v90.3.0...v90.4.0) (2023-08-07)
 
 
