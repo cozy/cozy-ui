@@ -1,3 +1,10 @@
+# [90.4.0](https://github.com/cozy/cozy-ui/compare/v90.3.0...v90.4.0) (2023-08-07)
+
+
+### Features
+
+* **Paywall:** Allow to open premium on flagship when iap will be enabled ([b53abad](https://github.com/cozy/cozy-ui/commit/b53abad))
+
 # [90.3.0](https://github.com/cozy/cozy-ui/compare/v90.2.0...v90.3.0) (2023-08-02)
 
 
