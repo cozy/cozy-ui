@@ -4,5 +4,6 @@
   "newContact": "New contact",
   "coordinates": "Coordinates",
   "givenName": "Firstname",
-  "familyName": "Lastname"
+  "familyName": "Lastname",
+  "loadMore": "Load more"
 }

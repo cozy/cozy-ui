@@ -21,19 +21,22 @@ import MobileHeader from './MobileHeader'
 import ContactsListContent from './ContactsListContent'
 import AddContactDialog from './AddContact/AddContactDialog'
 import TextField from '../TextField'
+import { useI18n } from '../I18n'
+import LoadMore from '../LoadMore'
 
 import styles from './styles.styl'
+import { withContactsListLocales } from './withContactsListLocales'
 
 const thirtySeconds = 30000
 const olderThan30s = fetchPolicies.olderThan(thirtySeconds)
 
-const contactsQuery = {
-  definition: Q('io.cozy.contacts').UNSAFE_noLimit(),
+const buildContactsQuery = () => ({
+  definition: () => Q('io.cozy.contacts').limitBy(500),
   options: {
     as: 'contacts',
     fetchPolicy: olderThan30s
   }
-}
+})
 
 const ContactsListModal = ({
   onItemClick,
@@ -51,6 +54,8 @@ const ContactsListModal = ({
     onClose: dismissAction
   })
   const client = useClient()
+  const { t } = useI18n()
+  const contactsQuery = buildContactsQuery()
   const contacts = useQuery(contactsQuery.definition, contactsQuery.options)
   useRealtime(
     client,
@@ -118,6 +123,9 @@ const ContactsListModal = ({
             emptyMessage={emptyMessage}
             dismissAction={dismissAction}
           />
+          {contacts.hasMore && (
+            <LoadMore label={t('loadMore')} fetchMore={contacts.fetchMore} />
+          )}
         </div>
       </DialogContent>
       {showAddDialog && (
@@ -139,4 +147,4 @@ ContactsListModal.propTypes = {
   dismissAction: PropTypes.func
 }
 
-export default ContactsListModal
+export default withContactsListLocales(ContactsListModal)
