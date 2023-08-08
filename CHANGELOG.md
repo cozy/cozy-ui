@@ -1,3 +1,10 @@
+# [90.6.0](https://github.com/cozy/cozy-ui/compare/v90.5.0...v90.6.0) (2023-08-08)
+
+
+### Features
+
+* **Filename:** Add midEllipsis prop ([1f9df73](https://github.com/cozy/cozy-ui/commit/1f9df73))
+
 # [90.5.0](https://github.com/cozy/cozy-ui/compare/v90.4.0...v90.5.0) (2023-08-07)
 
 
