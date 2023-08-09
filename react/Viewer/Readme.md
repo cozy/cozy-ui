@@ -34,6 +34,8 @@ The `Viewer` can display an **information panel** to show additional information
     * **toolbarRef** : `<object>` – React reference of the toolbar node
     * **showToolbar** : `<boolean>` – Whether to show the toolbar or not. Note that the built-in close button is in the toolbar
     * **showClose** : `<boolean>` – Whether to show close button in toolbar
+    * **showFilePath** : `<boolean>` – Whether to show file path below his name
+
 
 ### Demo
 
@@ -68,13 +70,15 @@ const files = [
     _id: 'audio',
     class: 'audio',
     name: 'Sample.mp3',
-    mime: 'audio/mp3'
+    mime: 'audio/mp3',
+    dir_id: 'parent_folder'
   },
   {
     _id: 'slide',
     class: 'slide',
     name: 'Slide.pptx',
-    mime: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+    mime: 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+    dir_id: 'parent_folder'
   },
   {
     _id: 'pdf',
@@ -98,7 +102,8 @@ const files = [
         sourceSubCategory: "transport",
         subjects: ["permit", "driving"]
       }
-    }
+    },
+    dir_id: 'parent_folder'
   },
   {
     _id: 'text',
@@ -162,7 +167,8 @@ const ShareButtonFake = () => {
 initialState = {
   viewerOpened: isTesting(),
   currentIndex: 0,
-  showToolbarCloseButton: true
+  showToolbarCloseButton: true,
+  showToolbarWithPath: false
 }
 
 const initialVariants = [
@@ -182,13 +188,12 @@ const getURL = (file) => {
 
 const toggleViewer = () => setState({ viewerOpened: !state.viewerOpened })
 const handleToggleToolbarClose = () => setState({ showToolbarCloseButton: !state.showToolbarCloseButton })
+const handleToggleToolbarWithPath = () => setState({ showToolbarWithPath: !state.showToolbarWithPath })
 const onFileChange = (file, nextIndex) => setState({ currentIndex: nextIndex, currentURL: getURL(file) })
 const editPathByModelProps = {
   information: `#!/Viewer?metadata=__NAME__`,
   page: `#!/Viewer`
-}
-
-;
+};
 
 <DemoProvider>
   <Variants initialVariants={initialVariants}>{
@@ -202,6 +207,12 @@ const editPathByModelProps = {
                 label="Close"
                 checked={state.showToolbarCloseButton}
                 onChange={handleToggleToolbarClose}
+              />
+              <Checkbox
+                className="u-dib"
+                label="Show path"
+                checked={state.showToolbarWithPath}
+                onChange={handleToggleToolbarWithPath}
               />
             </Card>
           )}
@@ -223,7 +234,8 @@ const editPathByModelProps = {
                   },
                   toolbarProps:{
                     showToolbar: variant.toolbar,
-                    showClose: state.showToolbarCloseButton
+                    showClose: state.showToolbarCloseButton,
+                    showFilePath: state.showToolbarWithPath
                   }
                 }}
               >

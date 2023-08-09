@@ -41,7 +41,7 @@ const ViewerContainer = props => {
     toolbarProps: {
       showToolbar: true,
       showClose: true,
-      ...componentsProps.toolbarProps
+      ...componentsProps?.toolbarProps
     }
   }
 

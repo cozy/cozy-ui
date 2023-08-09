@@ -1,11 +1,12 @@
-import { models } from 'cozy-client'
+import { models, generateWebLink } from 'cozy-client'
 import flag from 'cozy-flags'
 
 const {
   isEncrypted,
   isFromKonnector,
   hasQualifications,
-  hasCertifications
+  hasCertifications,
+  normalize
 } = models.file
 
 export const knownDateMetadataNames = [
@@ -167,4 +168,38 @@ export const isEditableAttribute = (name, file) => {
     !isNotEditableAttributes.includes(name) &&
     ((name === 'issueDate' && !isFromKonnector(file)) || name !== 'issueDate')
   )
+}
+
+export const normalizeAndSpreadAttributes = rawFile => {
+  const normalizedFile = normalize(rawFile)
+
+  return {
+    ...normalizedFile,
+    ...normalizedFile?.attributes
+  }
+}
+
+/**
+ * Return a web link to an application in the Cozy environment with the specified path
+ * @param {object} param
+ * @param {CozyClient} param.client - Instance of CozyClient
+ * @param {string} param.slug - Slug of the application
+ * @param {string} param.path - Path into the application
+ * @returns {string} web link
+ */
+export const makeWebLink = ({ client, slug, path }) => {
+  try {
+    const cozyURL = new URL(client.getStackClient().uri)
+    const { subdomain: subDomainType } = client.getInstanceOptions()
+
+    return generateWebLink({
+      pathname: '/',
+      cozyUrl: cozyURL.origin,
+      slug,
+      hash: path,
+      subDomainType
+    })
+  } catch (e) {
+    return null
+  }
 }

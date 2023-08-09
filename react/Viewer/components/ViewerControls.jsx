@@ -115,7 +115,7 @@ class ViewerControls extends Component {
       classes,
       breakpoints: { isDesktop }
     } = this.props
-    const { showToolbar, showClose, toolbarRef } = toolbarProps
+    const { showToolbar, showClose, toolbarRef, showFilePath } = toolbarProps
     const { hidden } = this.state
 
     const shouldDisplayContentTop = isValidForPanel({ file })
@@ -140,6 +140,7 @@ class ViewerControls extends Component {
             onClose={showClose && onClose}
             onMouseEnter={this.showControls}
             onMouseLeave={this.hideControls}
+            showFilePath={showFilePath}
           />
         )}
         {showNavigation && isDesktop && hasPrevious && (

@@ -9,3 +9,12 @@ export const buildContactByIdsQuery = (ids = []) => ({
     fetchPolicy: defaultFetchPolicy
   }
 })
+
+export const buildFileByIdQuery = fileId => ({
+  definition: () => Q('io.cozy.files').getById(fileId),
+  options: {
+    as: `io.cozy.files/${fileId}`,
+    fetchPolicy: defaultFetchPolicy,
+    singleDocData: true
+  }
+})

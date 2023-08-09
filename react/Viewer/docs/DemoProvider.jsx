@@ -55,11 +55,20 @@ const mockClient = {
     subscribe: () => {},
     unsubscribe: () => {}
   },
-  getQueryFromState: () => {},
+  getQueryFromState: queryName => {
+    if (queryName === 'io.cozy.files/parent_folder') {
+      return {
+        data: {
+          _id: 'parent_id',
+          path: '/Parent'
+        }
+      }
+    }
+  },
   query: () => ({
     data: [{ attributes: { slug: 'mespapiers' }, links: { related: '' } }]
   }),
-  getInstanceOptions: () => ({ app: { slug: 'mespapiers' } })
+  getInstanceOptions: () => ({ app: { slug: 'mespapiers' }, subdomain: 'flat' })
 }
 
 class Wrapper extends React.Component {
