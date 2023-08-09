@@ -71,7 +71,6 @@ class Viewer extends Component {
       showNavigation,
       renderFallbackExtraContent,
       validForPanel,
-      onlyOfficeProps,
       componentsProps
     } = this.props
 
@@ -96,7 +95,6 @@ class Viewer extends Component {
             file={currentFile}
             onClose={this.onClose}
             renderFallbackExtraContent={renderFallbackExtraContent}
-            onlyOfficeProps={onlyOfficeProps}
             componentsProps={componentsProps}
           />
         </ViewerControls>
@@ -120,13 +118,6 @@ Viewer.propTypes = {
   showNavigation: PropTypes.bool,
   /** A render prop that is called when a file can't be displayed */
   renderFallbackExtraContent: PropTypes.func,
-  /** Used to open an Only Office file */
-  onlyOfficeProps: PropTypes.shape({
-    /** Whether Only Office is enabled on the server */
-    isEnabled: PropTypes.bool,
-    /** To open the Only Office file */
-    opener: PropTypes.func
-  }),
   validForPanel: PropTypes.bool,
   /* Props passed to components with the same name */
   componentsProps: PropTypes.shape({

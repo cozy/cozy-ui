@@ -23,7 +23,6 @@ The `Viewer` can display an **information panel** to show additional information
   * **showClose** : `<boolean>` – Whether to show close button in toolbar
 * **showNavigation** : `<boolean>` – Whether to show left and right arrows to navigate between files
 * **renderFallbackExtraContent** : `<function>` – A render prop that is called when a file can't be displayed
-* **onlyOfficeProps** : `<object>` – Used to open an Only Office file (deprecated)
 * **disablePanel** : `<boolean>` – Show/Hide the panel containing more information about the file only on Desktop
 * **disableFooter** : `<boolean>` – Show/Hide the panel containing more information about the file only on Phone & Tablet devices
 * **editPathByModelProps** : `<object>` – Edit path by model properties

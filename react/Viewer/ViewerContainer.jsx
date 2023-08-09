@@ -85,13 +85,6 @@ ViewerContainer.propTypes = {
   showNavigation: PropTypes.bool,
   /** A render prop that is called when a file can't be displayed */
   renderFallbackExtraContent: PropTypes.func,
-  /** Used to open an Only Office file */
-  onlyOfficeProps: PropTypes.shape({
-    /** Whether Only Office is enabled on the server */
-    isEnabled: PropTypes.bool,
-    /** To open the Only Office file */
-    opener: PropTypes.func
-  }),
   /** Edit path by model properties */
   editPathByModelProps: PropTypes.shape({
     /** URL used to edit the file when editing a `information` type metadata (text, date) */
