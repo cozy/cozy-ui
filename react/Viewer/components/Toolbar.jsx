@@ -17,6 +17,7 @@ import DownloadIcon from '../../Icons/Download'
 import { withViewerLocales } from '../hoc/withViewerLocales'
 import { downloadFile } from '../helpers'
 import { useEncrypted } from '../providers/EncryptedProvider'
+import { ToolbarFilePath } from './ToolbarFilePath'
 
 import styles from './styles.styl'
 
@@ -36,7 +37,8 @@ const Toolbar = ({
   onClose,
   t,
   toolbarRef,
-  breakpoints: { isDesktop }
+  breakpoints: { isDesktop },
+  showFilePath
 }) => {
   const client = useClient()
   const classes = useClasses()
@@ -62,14 +64,17 @@ const Toolbar = ({
           <Icon icon={PreviousIcon} />
         </IconButton>
       )}
-      <Typography
-        className="u-pl-half"
-        variant="h3"
-        color={isDesktop ? 'inherit' : 'textPrimary'}
-        noWrap
-      >
-        {file.name}
-      </Typography>
+      <div className="u-pl-half">
+        <Typography
+          variant="h3"
+          color={isDesktop ? 'inherit' : 'textPrimary'}
+          noWrap
+        >
+          {file.name}
+        </Typography>
+        {showFilePath ? <ToolbarFilePath file={file} /> : null}
+      </div>
+
       <div className="u-ml-auto u-ph-1">
         {isDesktop && (
           <Button
@@ -90,7 +95,8 @@ Toolbar.propTypes = {
   onMouseEnter: PropTypes.func.isRequired,
   onMouseLeave: PropTypes.func.isRequired,
   file: PropTypes.object.isRequired,
-  onClose: PropTypes.func
+  onClose: PropTypes.func,
+  showFilePath: PropTypes.bool
 }
 
 export default flow(

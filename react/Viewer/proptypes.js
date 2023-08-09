@@ -6,5 +6,7 @@ export const toolbarPropsPropType = {
   /** Whether to show close button in toolbar */
   showClose: PropTypes.bool,
   /** React reference of the toolbar node */
-  toolbarRef: PropTypes.object
+  toolbarRef: PropTypes.object,
+  /** Whether to show file path below his name */
+  showFilePath: PropTypes.bool
 }
