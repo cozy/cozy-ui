@@ -1,3 +1,10 @@
+# [90.7.0](https://github.com/cozy/cozy-ui/compare/v90.6.0...v90.7.0) (2023-08-09)
+
+
+### Features
+
+* **ListItemFile:** Use Filename to show the primary text ([38c2bd2](https://github.com/cozy/cozy-ui/commit/38c2bd2))
+
 # [90.6.0](https://github.com/cozy/cozy-ui/compare/v90.5.0...v90.6.0) (2023-08-08)
 
 
