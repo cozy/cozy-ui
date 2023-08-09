@@ -1,19 +1,34 @@
+import React from 'react'
 import PropTypes from 'prop-types'
 
-import { useI18n } from '../../I18n'
+import { splitFilename } from 'cozy-client/dist/models/file'
 
-import withListItemLocales from '../hoc/withListItemLocales'
+import Filename from '../../Filename'
+import useBreakpoints from '../../hooks/useBreakpoints'
 
 const PrimaryText = ({ primary, file }) => {
-  const { t } = useI18n()
+  const { isMobile } = useBreakpoints()
 
   if (primary) return primary
 
-  const pageQualification = file?.metadata?.qualification?.page
-
-  return pageQualification === 'front' || pageQualification === 'back'
-    ? t(`ListItem.file.page.${pageQualification}`)
-    : file.name
+  return (
+    <Filename
+      variant="body1"
+      midEllipsis={isMobile}
+      filename={
+        splitFilename({
+          name: file.name,
+          type: 'file'
+        }).filename
+      }
+      extension={
+        splitFilename({
+          name: file.name,
+          type: 'file'
+        }).extension
+      }
+    />
+  )
 }
 
 PrimaryText.propTypes = {
@@ -21,4 +36,4 @@ PrimaryText.propTypes = {
   file: PropTypes.object
 }
 
-export default withListItemLocales(PrimaryText)
+export default PrimaryText
