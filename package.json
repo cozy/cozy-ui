@@ -52,7 +52,7 @@
     "test:snapshots": "jest react/examples.spec.jsx",
     "test:update:snapshots": "jest react/examples.spec.jsx -u",
     "screenshots:server": "nodemon ./scripts/pixelmatch-server/server.js -e js,hbs",
-    "postbuild": "postcss transpiled/react/stylesheet.css --replace",
+    "postbuild": "postcss dist/stylesheet.css --replace",
     "travis-deploy-once": "travis-deploy-once",
     "start:css": "yarn build:css --watch",
     "prestart:doc": "yarn sprite",
