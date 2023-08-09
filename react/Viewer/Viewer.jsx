@@ -66,7 +66,6 @@ class Viewer extends Component {
       currentFile,
       hasPrevious,
       hasNext,
-      toolbarProps,
       toolbarRef,
       showNavigation,
       renderFallbackExtraContent,
@@ -87,7 +86,7 @@ class Viewer extends Component {
           onPrevious={this.onPrevious}
           onNext={this.onNext}
           expanded={expanded}
-          toolbarProps={{ ...toolbarProps, toolbarRef }}
+          toolbarProps={{ ...componentsProps.toolbarProps, toolbarRef }}
           showNavigation={showNavigation}
           showInfoPanel={validForPanel}
         >
@@ -112,7 +111,6 @@ Viewer.propTypes = {
   onCloseRequest: PropTypes.func,
   /** Called with (nextFile, nextIndex) when the user requests to navigate to another file */
   onChangeRequest: PropTypes.func,
-  toolbarProps: PropTypes.shape(toolbarPropsPropType),
   toolbarRef: PropTypes.object,
   /** Whether to show left and right arrows to navigate between files */
   showNavigation: PropTypes.bool,
@@ -127,7 +125,8 @@ Viewer.propTypes = {
       isEnabled: PropTypes.bool,
       /** To open the Only Office file */
       opener: PropTypes.func
-    })
+    }),
+    toolbarProps: PropTypes.shape(toolbarPropsPropType)
   })
 }
 
