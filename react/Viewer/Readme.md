@@ -17,10 +17,6 @@ The `Viewer` can display an **information panel** to show additional information
 * **currentIndex** : `<number>` – Index of the file to show
 * **currentURL** : `<string>` – Optionnal URL of the file
 * **className** : `<string>` – CSS classes
-* **toolbarProps** : `<object>` – Toolbar properties
-  * **toolbarRef** : `<object>` – React reference of the toolbar node
-  * **showToolbar** : `<boolean>` – Whether to show the toolbar or not. Note that the built-in close button is in the toolbar
-  * **showClose** : `<boolean>` – Whether to show close button in toolbar
 * **showNavigation** : `<boolean>` – Whether to show left and right arrows to navigate between files
 * **renderFallbackExtraContent** : `<function>` – A render prop that is called when a file can't be displayed
 * **disablePanel** : `<boolean>` – Show/Hide the panel containing more information about the file only on Desktop
@@ -34,6 +30,10 @@ The `Viewer` can display an **information panel** to show additional information
   * **OnlyOfficeViewer** : `<object>` – Used to open an Only Office file
     * **isEnabled** : `<boolean>` – Whether Only Office is enabled on the server
     * **opener** : `<function>` – To open the Only Office file
+  * **toolbarProps** : `<object>` – Toolbar properties
+    * **toolbarRef** : `<object>` – React reference of the toolbar node
+    * **showToolbar** : `<boolean>` – Whether to show the toolbar or not. Note that the built-in close button is in the toolbar
+    * **showClose** : `<boolean>` – Whether to show close button in toolbar
 
 ### Demo
 
@@ -214,16 +214,16 @@ const editPathByModelProps = {
                 currentURL={state.currentURL}
                 showNavigation={variant.navigation}
                 editPathByModelProps={editPathByModelProps}
-                toolbarProps={{
-                  showToolbar: variant.toolbar,
-                  showClose: state.showToolbarCloseButton
-                }}
                 onCloseRequest={toggleViewer}
                 onChangeRequest={onFileChange}
                 componentsProps={{
                   OnlyOfficeViewer: {
                     isEnabled: variant.onlyOfficeEnabled,
                     opener: () => alert('This is a demo, no Only Office opener here')
+                  },
+                  toolbarProps:{
+                    showToolbar: variant.toolbar,
+                    showClose: state.showToolbarCloseButton
                   }
                 }}
               >

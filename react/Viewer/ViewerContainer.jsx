@@ -23,6 +23,7 @@ const ViewerContainer = props => {
     disablePanel,
     editPathByModelProps,
     children,
+    componentsProps,
     ...rest
   } = props
   const { currentIndex, files, currentURL } = props
@@ -35,6 +36,15 @@ const ViewerContainer = props => {
   const validForPanel =
     isValidForPanel({ file: currentFile }) && isDesktop && !disablePanel
 
+  const componentsPropsWithDefault = {
+    ...componentsProps,
+    toolbarProps: {
+      showToolbar: true,
+      showClose: true,
+      ...componentsProps.toolbarProps
+    }
+  }
+
   return (
     <ViewerSnackbarProvider>
       <ActionMenuProvider editPathByModelProps={editPathByModelProps}>
@@ -45,6 +55,7 @@ const ViewerContainer = props => {
           <EncryptedProvider url={currentURL}>
             <Viewer
               {...rest}
+              componentsProps={componentsPropsWithDefault}
               currentFile={currentFile}
               hasPrevious={hasPrevious}
               hasNext={hasNext}
@@ -79,8 +90,6 @@ ViewerContainer.propTypes = {
   onCloseRequest: PropTypes.func,
   /** Called with (nextFile, nextIndex) when the user requests to navigate to another file */
   onChangeRequest: PropTypes.func,
-  /** Toolbar properties */
-  toolbarProps: PropTypes.shape(toolbarPropsPropType),
   /** Whether to show left and right arrows to navigate between files */
   showNavigation: PropTypes.bool,
   /** A render prop that is called when a file can't be displayed */
@@ -104,13 +113,14 @@ ViewerContainer.propTypes = {
       isEnabled: PropTypes.bool,
       /** To open the Only Office file */
       opener: PropTypes.func
-    })
+    }),
+    /** Toolbar properties */
+    toolbarProps: PropTypes.shape(toolbarPropsPropType)
   })
 }
 
 ViewerContainer.defaultProps = {
   currentIndex: 0,
-  toolbarProps: { showToolbar: true, showClose: true },
   showNavigation: true
 }
 
