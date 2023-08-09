@@ -19,10 +19,6 @@ import OnlyOfficeViewer from '../ViewersByFile/OnlyOfficeViewer'
 
 import { useEncrypted } from '../providers/EncryptedProvider'
 
-import createDepreciationLogger from '../../helpers/createDepreciationLogger'
-
-const logDepecratedOnlyOfficeProps = createDepreciationLogger()
-
 const { isPlainText } = models.file
 
 export const getViewerComponentName = ({
@@ -63,20 +59,11 @@ const ViewerByFile = ({
   gestures,
   gesturesRef,
   onSwipe,
-  onlyOfficeProps,
   breakpoints: { isDesktop },
   componentsProps
 }) => {
-  if (onlyOfficeProps) {
-    logDepecratedOnlyOfficeProps(
-      'onlyOfficeProps in Viewer is deprecated. Please use componentsProps.OnlyOfficeViewer instead.'
-    )
-  }
-
-  const isOnlyOfficeEnabled =
-    componentsProps?.OnlyOfficeViewer?.isEnabled || onlyOfficeProps?.isEnabled
-  const onlyOfficeOpener =
-    componentsProps?.OnlyOfficeViewer?.opener || onlyOfficeProps?.opener
+  const isOnlyOfficeEnabled = componentsProps?.OnlyOfficeViewer?.isEnabled
+  const onlyOfficeOpener = componentsProps?.OnlyOfficeViewer?.opener
 
   const { url } = useEncrypted()
 
@@ -108,7 +95,6 @@ ViewerByFile.propTypes = {
   file: FileDoctype.isRequired,
   onClose: PropTypes.func.isRequired,
   renderFallbackExtraContent: PropTypes.func,
-  onlyOfficeProps: PropTypes.object,
   // gestures, gesturesRef and onSwipe are got from ViewerControls
   gestures: PropTypes.object,
   gesturesRef: PropTypes.object,
