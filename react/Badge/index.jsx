@@ -9,12 +9,19 @@ const Badge = ({
   withBorder,
   withGreyBorder,
   overlap: overlapProp,
+  center,
   ...props
 }) => {
   const sizeClasses = {
     small: 'badgeSizeSmall',
     medium: 'badgeSizeMedium',
     large: 'badgeSizeLarge'
+  }
+
+  const centerClasses = {
+    small: 'badgeCenterSmall',
+    medium: 'badgeCenterMedium',
+    large: 'badgeCenterLarge'
   }
 
   // due to deprecated prop circle and rectangle
@@ -29,13 +36,15 @@ const Badge = ({
   return (
     <MuiBadge
       classes={{
+        root: cx(center ? centerClasses[size] : null),
         badge: cx(
           sizeClasses[size],
           withBorder
             ? withGreyBorder
               ? 'badgeGreyBorder'
               : 'badgeBorder'
-            : null
+            : null,
+          center ? 'badgeCenter' : null
         ),
         ...classes
       }}
@@ -56,7 +65,9 @@ Badge.propTypes = {
   /** Display a border around the badge */
   withBorder: PropTypes.bool,
   /** Set border color into grey */
-  withGreyBorder: PropTypes.bool
+  withGreyBorder: PropTypes.bool,
+  /** Center the badge */
+  center: PropTypes.bool
 }
 
 Badge.defaultProps = {
@@ -65,7 +76,8 @@ Badge.defaultProps = {
   showZero: true,
   withBorder: true,
   withGreyBorder: false,
-  overlap: 'circular'
+  overlap: 'circular',
+  center: false
 }
 
 export default Badge

@@ -630,6 +630,20 @@ export const makeOverrides = theme => ({
     }
   },
   MuiBadge: {
+    root: {
+      '&.badgeCenterLarge': {
+        height: '1rem',
+        minWidth: '1rem'
+      },
+      '&.badgeCenterMedium': {
+        height: '.875rem',
+        minWidth: '.875rem'
+      },
+      '&.badgeCenterSmall': {
+        height: '.75rem',
+        minWidth: '.75rem'
+      }
+    },
     badge: {
       boxSizing: 'content-box',
       padding: 0,
@@ -653,6 +667,12 @@ export const makeOverrides = theme => ({
         height: '.75rem',
         minWidth: '.75rem',
         fontSize: '.5rem'
+      },
+      '&.badgeCenter': {
+        position: 'relative',
+        top: 'auto',
+        right: 'auto',
+        transform: 'none'
       }
     },
     anchorOriginTopRightRectangular: {

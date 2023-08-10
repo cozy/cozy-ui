@@ -69,3 +69,32 @@ import LinkIcon from "cozy-ui/transpiled/react/Icons/Link"
   <Avatar text="CD" size="small" />
 </InfosBadge>
 ```
+
+### Center badge
+
+The `center` property is used to create a standalone badge that can be integrated into a ListItem, for example, to notify the user.
+
+```jsx
+import Badge from 'cozy-ui/transpiled/react/Badge'
+
+const centerProps = {
+  center: true,
+  color: 'error',
+  withBorder: false,
+  badgeContent: 10
+};
+
+<div class="u-flex u-flex-items-center">
+  <Badge
+    size="small"
+    {...centerProps} />
+  <Badge
+    className="u-ml-1"
+    size="medium"
+    {...centerProps} />
+  <Badge
+    className="u-ml-1"
+    center
+    {...centerProps} />
+</div>
+```
