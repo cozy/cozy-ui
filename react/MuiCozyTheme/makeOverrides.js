@@ -636,6 +636,9 @@ export const makeOverrides = theme => ({
       '&.badgeBorder': {
         border: `2px solid ${theme.palette.background.paper}`
       },
+      '&.badgeGreyBorder': {
+        border: `2px solid var(--paleGrey)`
+      },
       '&.badgeSizeLarge': {
         fontSize: '.6875rem',
         height: '1rem',

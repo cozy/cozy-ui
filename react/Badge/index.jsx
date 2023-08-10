@@ -7,6 +7,7 @@ const Badge = ({
   classes = {},
   size,
   withBorder,
+  withGreyBorder,
   overlap: overlapProp,
   ...props
 }) => {
@@ -28,7 +29,14 @@ const Badge = ({
   return (
     <MuiBadge
       classes={{
-        badge: cx(sizeClasses[size], withBorder ? 'badgeBorder' : null),
+        badge: cx(
+          sizeClasses[size],
+          withBorder
+            ? withGreyBorder
+              ? 'badgeGreyBorder'
+              : 'badgeBorder'
+            : null
+        ),
         ...classes
       }}
       overlap={overlap}
@@ -45,7 +53,10 @@ Badge.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   showZero: PropTypes.bool,
   variant: PropTypes.oneOf(['standard', 'dot']),
-  withBorder: PropTypes.bool
+  /** Display a border around the badge */
+  withBorder: PropTypes.bool,
+  /** Set border color into grey */
+  withGreyBorder: PropTypes.bool
 }
 
 Badge.defaultProps = {
@@ -53,6 +64,7 @@ Badge.defaultProps = {
   size: 'medium',
   showZero: true,
   withBorder: true,
+  withGreyBorder: false,
   overlap: 'circular'
 }
 

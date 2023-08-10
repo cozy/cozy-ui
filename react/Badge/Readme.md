@@ -13,7 +13,7 @@ import Variants from 'cozy-ui/docs/components/Variants'
 import CircleFilledIcon from "cozy-ui/transpiled/react/Icons/CircleFilled"
 
 const initialVariants = [
-  { overlap: true, error: false, dot: false, withBorder: false, left: false, bottom: false, small: false, large: false }
+  { overlap: true, error: false, dot: false, withBorder: false, withGreyBorder: false, left: false, bottom: false, small: false, large: false }
 ]
 
 ;
@@ -33,6 +33,7 @@ const initialVariants = [
         horizontal: variant.left ? "left" : "right",
       }}
       withBorder={variant.withBorder}
+      withGreyBorder={variant.withGreyBorder}
       overlap={variant.overlap ? "circular" : "rectangular"}
     >
       <Icon
