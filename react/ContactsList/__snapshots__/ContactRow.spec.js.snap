@@ -19,7 +19,6 @@ exports[`ContactRow should match the contact snapshot 1`] = `
         Object {
           "--circleSize": "32px",
           "backgroundColor": "#FFC644",
-          "zIndex": "auto",
         }
       }
     >
