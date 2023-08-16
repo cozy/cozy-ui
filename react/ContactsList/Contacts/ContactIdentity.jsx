@@ -25,7 +25,11 @@ const ContactIdentity = ({ contact }) => {
         styles['contact-identity']
       } u-flex u-flex-items-center u-ellipsis`}
     >
-      <Avatar text={getInitials(contact)} size="small" />
+      <Avatar
+        style={{ zIndex: 'auto' }}
+        text={getInitials(contact)}
+        size="small"
+      />
       <ContactName displayName={displayName} familyName={name.familyName} />
       {isMyself && <MyselfMarker />}
     </TableCell>
