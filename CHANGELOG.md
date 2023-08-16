@@ -1,3 +1,10 @@
+## [90.7.1](https://github.com/cozy/cozy-ui/compare/v90.7.0...v90.7.1) (2023-08-16)
+
+
+### Bug Fixes
+
+* **ContactsList:** Avatar is no longer above list subheader ([a3310d3](https://github.com/cozy/cozy-ui/commit/a3310d3))
+
 # [90.7.0](https://github.com/cozy/cozy-ui/compare/v90.6.0...v90.7.0) (2023-08-09)
 
 
