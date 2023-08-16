@@ -9229,7 +9229,6 @@ body {
   background-color: var(--paleGrey);
   color: var(--silver);
   position: relative;
-  z-index: var(--zIndex-low);
 }
 .c-avatar--PpDI- svg {
   width: 50%;
