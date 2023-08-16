@@ -1,3 +1,16 @@
+# [91.0.0](https://github.com/cozy/cozy-ui/compare/v90.7.1...v91.0.0) (2023-08-16)
+
+
+### Features
+
+* **Avatar:** Remove z-index ([3d95434](https://github.com/cozy/cozy-ui/commit/3d95434))
+
+
+### BREAKING CHANGES
+
+* **Avatar:** if you encounter some z-index problem with Avatar component, you must have to set it manually. Previously it was
+set to `1`
+
 ## [90.7.1](https://github.com/cozy/cozy-ui/compare/v90.7.0...v90.7.1) (2023-08-16)
 
 
