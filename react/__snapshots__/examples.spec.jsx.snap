@@ -982,7 +982,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-27\\" gutters=\\"double\\">EMPTY</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-30\\" data-testid=\\"contact-listItem\\" id=\\"013a6414-9727-4a4e-8b35-d3b9946a17c6\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(64, 222, 142); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">I</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(64, 222, 142); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">I</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">isabelle.durand@cozycloud.cc&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">isabelle.durand@cozycloud.cc</div>
@@ -994,7 +994,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-32\\" gutters=\\"double\\">A</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-33\\" data-testid=\\"contact-listItem\\" id=\\"013a6413-9726-4a4d-8b34-d3b9946a17c5\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(253, 116, 97); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">A</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(253, 116, 97); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">A</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">alexis.bickers@logico.club&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">alexis.bickers@logico.club</div>
@@ -1006,7 +1006,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-35\\" gutters=\\"double\\">B</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-36 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"799b0f99-3ad7-4f07-a689-9765b4e239c9\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 109, 0); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">B</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 109, 0); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">B</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Baramax&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">tyler.rhymer@baramax.eu</div>
@@ -1015,7 +1015,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-38 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"857a0db5-84ff-4efe-a16e-9fa6b6a843eb\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JB</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JB</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Jenette&nbsp;</span><span class=\\"u-fw-bold\\">Bourne&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">jenette.bourne@dynaair.mobi</div>
@@ -1024,7 +1024,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-40 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"3043b044-072b-464f-b301-46df3ae99aee\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Raylene&nbsp;</span><span class=\\"u-fw-bold\\">Bourne&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">raylene.bourne@tecomix.name</div>
@@ -1033,7 +1033,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-42 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"a9d28cf8-43a6-4fff-81a1-4a09048edf71\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Rico&nbsp;</span><span class=\\"u-fw-bold\\">Bourne&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">rico.bourne@citisys.org</div>
@@ -1042,7 +1042,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-44 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"d0c565de-f440-4d2f-83db-0e3d75f49d23\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Rosanne&nbsp;</span><span class=\\"u-fw-bold\\">Bourne&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">rosanne.bourne@creatonix.xyz</div>
@@ -1051,7 +1051,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-46 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"1be291a9-0836-4c94-876b-5269fa901ed4\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(194, 173, 244); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KB</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(194, 173, 244); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KB</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Katelin&nbsp;</span><span class=\\"u-fw-bold\\">Bourquin&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">katelin.bourquin@unilogic.biz</div>
@@ -1060,7 +1060,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-48 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"0ffe83ef-10cf-4be6-bf6c-a189f907e65a\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">SB</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">SB</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Shea&nbsp;</span><span class=\\"u-fw-bold\\">Brier&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">shea.brier@logico.club</div>
@@ -1069,7 +1069,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-50\\" data-testid=\\"contact-listItem\\" id=\\"24e83428-df51-46fd-97ed-1f7d94064548\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(245, 45, 45); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AB</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(245, 45, 45); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AB</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Aiden&nbsp;</span><span class=\\"u-fw-bold\\">Bryd&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">aiden.bryd@citisys.info</div>
@@ -1081,7 +1081,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-52\\" gutters=\\"double\\">C</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-53 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"507fcc3d-1423-46da-b5f9-8fbcfd3f3fe4\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 76, 131); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">LC</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 76, 131); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">LC</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Lorelei&nbsp;</span><span class=\\"u-fw-bold\\">Cadena&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">lorelei.cadena@dalserve.club</div>
@@ -1090,7 +1090,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-55 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"7cb3822f-3a2b-4978-9791-a1e19e792828\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RC</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RC</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Raisa&nbsp;</span><span class=\\"u-fw-bold\\">Cappel&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">raisa.cappel@zatheon.eu</div>
@@ -1099,7 +1099,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-57 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"9b05f823-53fd-48b7-ba50-e2abf7aa20bc\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RC</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RC</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Rosanne&nbsp;</span><span class=\\"u-fw-bold\\">Chapman&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">rosanne.chapman@peersys.gov</div>
@@ -1108,7 +1108,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-59\\" data-testid=\\"contact-listItem\\" id=\\"fc1f5295-a7e9-431c-a3cb-70259edd81e0\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(245, 45, 45); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">C</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(245, 45, 45); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">C</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">CoreMax&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">grace.muldoon@coremax.xyz</div>
@@ -1120,7 +1120,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-61\\" gutters=\\"double\\">F</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-62 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"7acdab81-52cb-46f6-9e81-42032e9843ae\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">FF</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">FF</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Francis&nbsp;</span><span class=\\"u-fw-bold\\">Flinn&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">francis.flinn@fortyfour.xyz</div>
@@ -1129,7 +1129,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-64\\" data-testid=\\"contact-listItem\\" id=\\"6f767688-7118-4837-818f-610d0565ce83\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">VF</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">VF</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Vaughn&nbsp;</span><span class=\\"u-fw-bold\\">Friedrich&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">vaughn.friedrich@seelogic.co</div>
@@ -1141,7 +1141,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-66\\" gutters=\\"double\\">G</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-67\\" data-testid=\\"contact-listItem\\" id=\\"8ba82505-25c3-4821-88df-2e11becc21e8\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 109, 0); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KG</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 109, 0); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KG</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Kurt&nbsp;</span><span class=\\"u-fw-bold\\">Goudy&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">kurt.goudy@amsquare.edu</div>
@@ -1153,7 +1153,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-69\\" gutters=\\"double\\">H</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-70 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"307c4e16-70b8-4328-af1c-1d762f788e16\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MH</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MH</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Max&nbsp;</span><span class=\\"u-fw-bold\\">Higgins&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">max.higgins@maxcast.com</div>
@@ -1162,7 +1162,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-72 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"155e4c33-f6ad-45ee-816d-5eb0874225f2\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">H</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">H</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Hivemind&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">neida.backer@hivemind.biz</div>
@@ -1171,7 +1171,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-74 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"f330db30-2c2b-4621-b40f-25bb737e2eba\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">LH</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">LH</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Lyn&nbsp;</span><span class=\\"u-fw-bold\\">Hollis&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">lyn.hollis@citisys.biz</div>
@@ -1180,7 +1180,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-76\\" data-testid=\\"contact-listItem\\" id=\\"42a330ca-a30c-489f-8939-4c1b137f84e9\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(194, 173, 244); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">EH</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(194, 173, 244); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">EH</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Eleanore&nbsp;</span><span class=\\"u-fw-bold\\">Hottle&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">eleanore.hottle@tomiatech.edu</div>
@@ -1192,7 +1192,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-78\\" gutters=\\"double\\">J</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-79\\" data-testid=\\"contact-listItem\\" id=\\"3e540ae7-4605-4f05-82c9-8cb901a0c34d\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MJ</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MJ</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Michelle&nbsp;</span><span class=\\"u-fw-bold\\">Jensen&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">michelle.jensen@pancast.club</div>
@@ -1204,7 +1204,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-81\\" gutters=\\"double\\">K</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-82 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"366f3eec-aaa0-4c82-9f27-80ad305ecec8\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AK</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AK</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Andy&nbsp;</span><span class=\\"u-fw-bold\\">Keesee&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">andy.keesee@fortyfour.mobi</div>
@@ -1213,7 +1213,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-84 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"6e109549-bbb7-4b23-a95e-794407001cd1\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(31, 168, 241); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">EK</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(31, 168, 241); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">EK</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Edward&nbsp;</span><span class=\\"u-fw-bold\\">Kelsey&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">edward.kelsey@hivemind.co</div>
@@ -1222,7 +1222,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-86\\" data-testid=\\"contact-listItem\\" id=\\"289a814a-0d7d-4c6d-aa6c-be8bd28456dd\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MK</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MK</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Maisha&nbsp;</span><span class=\\"u-fw-bold\\">Kilmer&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">maisha.kilmer@nitrosystems.eu</div>
@@ -1234,7 +1234,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-88\\" gutters=\\"double\\">L</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-89 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"3fe82c80-9da3-4a42-bab5-8274df1316e6\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 76, 131); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CL</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 76, 131); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CL</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Chloe&nbsp;</span><span class=\\"u-fw-bold\\">Leath&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">chloe.leath@iridimax.org</div>
@@ -1243,7 +1243,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-91 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"07719549-2087-412e-8da2-e5c0b55fe7b8\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 198, 68); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RL</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 198, 68); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RL</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Rosanne&nbsp;</span><span class=\\"u-fw-bold\\">Leath&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">rosanne.leath@conixco.name</div>
@@ -1252,7 +1252,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-93 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"083bf60c-287b-45e9-b3d6-0e64ee2eee2d\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 198, 68); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RL</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 198, 68); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RL</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Rosanne&nbsp;</span><span class=\\"u-fw-bold\\">Lenihan&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">rosanne.lenihan@corerobotics.info</div>
@@ -1261,7 +1261,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-95\\" data-testid=\\"contact-listItem\\" id=\\"0409957b-36c1-4a66-b4f7-316e1a06e8b8\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(194, 173, 244); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AL</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(194, 173, 244); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AL</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Alexa&nbsp;</span><span class=\\"u-fw-bold\\">Luck&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">alexa.luck@grafixmedia.name</div>
@@ -1273,7 +1273,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-97\\" gutters=\\"double\\">M</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-98 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"d50b7eea-6e71-4348-ad75-fc791d7a82d4\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 76, 131); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RM</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 76, 131); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RM</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Rico&nbsp;</span><span class=\\"u-fw-bold\\">Magby&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">rico.magby@freecast.eu</div>
@@ -1282,7 +1282,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-100 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"398e8336-de18-43c8-8b5a-86ab72005c41\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KM</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KM</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Kirstie&nbsp;</span><span class=\\"u-fw-bold\\">Mercer&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">kirstie.mercer@tomiatech.eu</div>
@@ -1291,7 +1291,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-102 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"f87951a3-f887-498c-b683-efbf59221da0\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(13, 203, 207); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MM</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(13, 203, 207); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MM</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Marcus&nbsp;</span><span class=\\"u-fw-bold\\">Milligan&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">marcus.milligan@fortyfour.me</div>
@@ -1300,7 +1300,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-104 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"9393e04d-90eb-4f47-b0d1-7cfd88ca9a3f\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(13, 203, 207); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MM</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(13, 203, 207); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MM</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Madeleine&nbsp;</span><span class=\\"u-fw-bold\\">Milling&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">madeleine.milling@acousticom.gov</div>
@@ -1309,7 +1309,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-106 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"a68a9b3c-f3f7-4f94-b3f2-f2d0363895a5\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(105, 132, 206); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">IM</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(105, 132, 206); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">IM</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Isabelle&nbsp;</span><span class=\\"u-fw-bold\\">Muldoon&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">isabelle.muldoon@fastmart.co</div>
@@ -1318,7 +1318,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-108\\" data-testid=\\"contact-listItem\\" id=\\"309067e3-81a5-45a4-8125-179185dc37da\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 76, 131); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RM</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 76, 131); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RM</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Raymond&nbsp;</span><span class=\\"u-fw-bold\\">Muldoon&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">raymond.muldoon@thermolock.info</div>
@@ -1330,7 +1330,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-110\\" gutters=\\"double\\">N</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-111\\" data-testid=\\"contact-listItem\\" id=\\"627ba975-1314-4813-8366-cea7ac4734bf\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JN</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JN</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Jetta&nbsp;</span><span class=\\"u-fw-bold\\">Neal&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">jetta.neal@multiserv.net</div>
@@ -1342,7 +1342,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-113\\" gutters=\\"double\\">O</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-114\\" data-testid=\\"contact-listItem\\" id=\\"3f6007f9-9284-4bfd-9350-1cbf294bd39b\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(64, 222, 142); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JO</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(64, 222, 142); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JO</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Jay&nbsp;</span><span class=\\"u-fw-bold\\">Okainmayle&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">—</div>
@@ -1354,7 +1354,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-116\\" gutters=\\"double\\">P</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-117 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"53c75e29-5c9b-4c4f-b802-e4a152551b23\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(13, 203, 207); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JP</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(13, 203, 207); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JP</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Jay&nbsp;</span><span class=\\"u-fw-bold\\">Padeutell&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">jay.padeutell@noemail.net</div>
@@ -1363,7 +1363,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-119 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"4bb1f622-5383-449e-a2d2-fc9e14006903\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">TP</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">TP</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Travis&nbsp;</span><span class=\\"u-fw-bold\\">Paquette&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">travis.paquette@zatheon.co</div>
@@ -1372,7 +1372,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-121 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"a83989ca-041d-4615-87e0-7d41f86acc5d\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(13, 203, 207); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JP</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(13, 203, 207); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JP</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Jamie&nbsp;</span><span class=\\"u-fw-bold\\">Paschall&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">jamie.paschall@acousticom.me</div>
@@ -1381,7 +1381,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-123\\" data-testid=\\"contact-listItem\\" id=\\"706364ef-f84c-4d84-896a-f96c1c6a554c\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 109, 0); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RP</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 109, 0); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RP</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Raylene&nbsp;</span><span class=\\"u-fw-bold\\">Pullman&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">raylene.pullman@viewtopia.me</div>
@@ -1393,7 +1393,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-125\\" gutters=\\"double\\">R</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-126 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"c55c831a-9869-4e14-b3aa-d004bced41b0\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(31, 168, 241); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">NR</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(31, 168, 241); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">NR</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Neida&nbsp;</span><span class=\\"u-fw-bold\\">Remus&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">neida.remus@dynalab.club</div>
@@ -1402,7 +1402,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-128\\" data-testid=\\"contact-listItem\\" id=\\"44bae7a3-04ed-4cc3-80f8-e15fc9b2399d\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(194, 173, 244); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KR</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(194, 173, 244); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KR</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Kurt&nbsp;</span><span class=\\"u-fw-bold\\">Rohloff&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">kurt.rohloff@corexts.org</div>
@@ -1414,7 +1414,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-130\\" gutters=\\"double\\">S</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-131 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"814f6f67-bcc0-498f-bb91-cab5ed315a12\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(53, 206, 104); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">HS</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(53, 206, 104); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">HS</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Hannah&nbsp;</span><span class=\\"u-fw-bold\\">Sager&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">hannah.sager@haltheon.eu</div>
@@ -1423,7 +1423,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-133 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"823d1ca9-4b10-456f-a603-231e3de5a774\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AS</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AS</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Aiden&nbsp;</span><span class=\\"u-fw-bold\\">Smit&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">aiden.smit@tomiatech.co</div>
@@ -1432,7 +1432,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-135 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"5c21e9fa-18a5-4999-b704-59b902db8542\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">TS</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">TS</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Travis&nbsp;</span><span class=\\"u-fw-bold\\">Sprowl&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">travis.sprowl@vtgrafix.name</div>
@@ -1441,7 +1441,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-137 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"29fdda84-d786-4890-9fd6-842fed02d193\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">DS</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">DS</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Danny&nbsp;</span><span class=\\"u-fw-bold\\">Stine&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">danny.stine@celmax.club</div>
@@ -1450,7 +1450,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-139 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"328b1bb6-8234-4efd-b18f-1aafd58dc83e\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RS</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RS</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Rosanne&nbsp;</span><span class=\\"u-fw-bold\\">Stine&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">rosanne.stine@infracom.edu</div>
@@ -1459,7 +1459,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-141\\" data-testid=\\"contact-listItem\\" id=\\"2a75a0e5-cc4b-4fdc-be4d-2ac24a802368\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(245, 45, 45); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">S</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(245, 45, 45); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">S</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">StrategyLine&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">ivan.bryd@strategyline.eu</div>
@@ -1471,7 +1471,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-143\\" gutters=\\"double\\">T</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-144 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"0ea42f4a-28f1-432e-934a-68f9c50fe38e\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">HT</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">HT</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Haydee&nbsp;</span><span class=\\"u-fw-bold\\">Tindel&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">haydee.tindel@galcom.com</div>
@@ -1480,7 +1480,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-146 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"a749ffad-068e-4772-9060-4cb9bd7e8039\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(53, 206, 104); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">WT</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(53, 206, 104); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">WT</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Warren&nbsp;</span><span class=\\"u-fw-bold\\">Tindel&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">warren.tindel@fortyfour.info</div>
@@ -1489,7 +1489,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-148 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"1816abd3-d371-482c-ae9d-33385fb8780d\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">T</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">T</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Tomiatech&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">edward.carter@tomiatech.com</div>
@@ -1498,7 +1498,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-150\\" data-testid=\\"contact-listItem\\" id=\\"b21e4b4b-1df9-4992-b39b-cf844df864d5\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">T</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">T</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">TrioSys&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">rico.murphy@triosys.info</div>
@@ -1510,7 +1510,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-152\\" gutters=\\"double\\">V</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-153 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"23d3d724-d869-4def-841f-c85b499aa6a6\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(64, 222, 142); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CV</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(64, 222, 142); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CV</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Cory&nbsp;</span><span class=\\"u-fw-bold\\">Verde&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">cory.verde@peersys.xyz</div>
@@ -1519,7 +1519,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-155 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"8cbefa6a-41c9-4065-ad33-87618dfee702\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(245, 45, 45); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MV</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(245, 45, 45); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MV</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Madeleine&nbsp;</span><span class=\\"u-fw-bold\\">Verde&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">madeleine.verde@tomiatech.me</div>
@@ -1528,7 +1528,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-157\\" data-testid=\\"contact-listItem\\" id=\\"7a8b0143-ed8a-4e28-85ec-37c16d1904b6\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(105, 132, 206); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">V</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(105, 132, 206); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">V</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">VTGrafix&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">vernon.leath@vtgrafix.co</div>
@@ -1540,7 +1540,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-159\\" gutters=\\"double\\">W</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-160 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"b6f5fc43-4199-4cca-8372-d1fe4e75a168\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 198, 68); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">GW</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 198, 68); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">GW</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Gavin&nbsp;</span><span class=\\"u-fw-bold\\">Wallis&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">gavin.wallis@infratouch.biz</div>
@@ -1549,7 +1549,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-162 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"e93c6abd-4819-4873-b7fb-ea46e02816a2\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(64, 222, 142); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RW</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(64, 222, 142); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RW</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Raylene&nbsp;</span><span class=\\"u-fw-bold\\">Wallis&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">raylene.wallis@corerobotics.name</div>
@@ -1558,7 +1558,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-164 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"d2bda580-4df6-473e-89db-2af41364c44e\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">W</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">W</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Westercom&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">anton.brandt@westercom.me</div>
@@ -1567,7 +1567,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-166 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"63d70d1a-838b-4eb4-b9ca-c3ea15937d51\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">W</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">W</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">WestGate&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">selma.keesee@westgate.net</div>
@@ -1576,7 +1576,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-168 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"6ed104be-083e-4991-bacb-78e18f815210\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MW</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MW</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Madelyn&nbsp;</span><span class=\\"u-fw-bold\\">Woodrum&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">madelyn.woodrum@airconix.xyz</div>
@@ -1585,7 +1585,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         </li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-170\\" data-testid=\\"contact-listItem\\" id=\\"0c647009-9785-4d09-b18a-0f22d3bff233\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MW</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MW</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Mitch&nbsp;</span><span class=\\"u-fw-bold\\">Woodrum&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">mitch.woodrum@opticast.org</div>
@@ -1597,7 +1597,7 @@ exports[`ContactsList should render examples: ContactsList 1`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-172\\" gutters=\\"double\\">X</li>
         <li class=\\"MuiListItem-root medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-173\\" data-testid=\\"contact-listItem\\" id=\\"71967809-8e54-4413-aa8e-35b2b945e816\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">X</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">X</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Xenosys&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">cecilia.latshaw@xenosys.club</div>
@@ -1619,7 +1619,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-175\\" gutters=\\"double\\">EMPTY</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-176\\" data-testid=\\"contact-listItem\\" id=\\"013a6414-9727-4a4e-8b35-d3b9946a17c6\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(64, 222, 142); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">I</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(64, 222, 142); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">I</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">isabelle.durand@cozycloud.cc&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">isabelle.durand@cozycloud.cc</div>
@@ -1631,7 +1631,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-178\\" gutters=\\"double\\">A</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-179\\" data-testid=\\"contact-listItem\\" id=\\"013a6413-9726-4a4d-8b34-d3b9946a17c5\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(253, 116, 97); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">A</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(253, 116, 97); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">A</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">alexis.bickers@logico.club&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">alexis.bickers@logico.club</div>
@@ -1643,7 +1643,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-181\\" gutters=\\"double\\">B</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-182 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"799b0f99-3ad7-4f07-a689-9765b4e239c9\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 109, 0); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">B</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 109, 0); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">B</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Baramax&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">tyler.rhymer@baramax.eu</div>
@@ -1652,7 +1652,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-184 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"857a0db5-84ff-4efe-a16e-9fa6b6a843eb\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JB</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JB</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Jenette&nbsp;</span><span class=\\"u-fw-bold\\">Bourne&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">jenette.bourne@dynaair.mobi</div>
@@ -1661,7 +1661,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-186 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"3043b044-072b-464f-b301-46df3ae99aee\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Raylene&nbsp;</span><span class=\\"u-fw-bold\\">Bourne&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">raylene.bourne@tecomix.name</div>
@@ -1670,7 +1670,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-188 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"a9d28cf8-43a6-4fff-81a1-4a09048edf71\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Rico&nbsp;</span><span class=\\"u-fw-bold\\">Bourne&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">rico.bourne@citisys.org</div>
@@ -1679,7 +1679,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-190 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"d0c565de-f440-4d2f-83db-0e3d75f49d23\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RB</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Rosanne&nbsp;</span><span class=\\"u-fw-bold\\">Bourne&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">rosanne.bourne@creatonix.xyz</div>
@@ -1688,7 +1688,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-192 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"1be291a9-0836-4c94-876b-5269fa901ed4\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(194, 173, 244); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KB</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(194, 173, 244); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KB</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Katelin&nbsp;</span><span class=\\"u-fw-bold\\">Bourquin&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">katelin.bourquin@unilogic.biz</div>
@@ -1697,7 +1697,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-194 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"0ffe83ef-10cf-4be6-bf6c-a189f907e65a\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">SB</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">SB</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Shea&nbsp;</span><span class=\\"u-fw-bold\\">Brier&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">shea.brier@logico.club</div>
@@ -1706,7 +1706,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-196\\" data-testid=\\"contact-listItem\\" id=\\"24e83428-df51-46fd-97ed-1f7d94064548\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(245, 45, 45); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AB</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(245, 45, 45); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AB</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Aiden&nbsp;</span><span class=\\"u-fw-bold\\">Bryd&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">aiden.bryd@citisys.info</div>
@@ -1718,7 +1718,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-198\\" gutters=\\"double\\">C</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-199 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"507fcc3d-1423-46da-b5f9-8fbcfd3f3fe4\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 76, 131); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">LC</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 76, 131); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">LC</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Lorelei&nbsp;</span><span class=\\"u-fw-bold\\">Cadena&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">lorelei.cadena@dalserve.club</div>
@@ -1727,7 +1727,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-201 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"7cb3822f-3a2b-4978-9791-a1e19e792828\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RC</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RC</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Raisa&nbsp;</span><span class=\\"u-fw-bold\\">Cappel&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">raisa.cappel@zatheon.eu</div>
@@ -1736,7 +1736,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-203 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"9b05f823-53fd-48b7-ba50-e2abf7aa20bc\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RC</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RC</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Rosanne&nbsp;</span><span class=\\"u-fw-bold\\">Chapman&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">rosanne.chapman@peersys.gov</div>
@@ -1745,7 +1745,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-205\\" data-testid=\\"contact-listItem\\" id=\\"fc1f5295-a7e9-431c-a3cb-70259edd81e0\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(245, 45, 45); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">C</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(245, 45, 45); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">C</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">CoreMax&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">grace.muldoon@coremax.xyz</div>
@@ -1757,7 +1757,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-207\\" gutters=\\"double\\">F</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-208 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"7acdab81-52cb-46f6-9e81-42032e9843ae\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">FF</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">FF</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Francis&nbsp;</span><span class=\\"u-fw-bold\\">Flinn&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">francis.flinn@fortyfour.xyz</div>
@@ -1766,7 +1766,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-210\\" data-testid=\\"contact-listItem\\" id=\\"6f767688-7118-4837-818f-610d0565ce83\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">VF</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">VF</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Vaughn&nbsp;</span><span class=\\"u-fw-bold\\">Friedrich&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">vaughn.friedrich@seelogic.co</div>
@@ -1778,7 +1778,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-212\\" gutters=\\"double\\">G</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-213\\" data-testid=\\"contact-listItem\\" id=\\"8ba82505-25c3-4821-88df-2e11becc21e8\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 109, 0); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KG</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 109, 0); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KG</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Kurt&nbsp;</span><span class=\\"u-fw-bold\\">Goudy&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">kurt.goudy@amsquare.edu</div>
@@ -1790,7 +1790,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-215\\" gutters=\\"double\\">H</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-216 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"307c4e16-70b8-4328-af1c-1d762f788e16\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MH</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MH</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Max&nbsp;</span><span class=\\"u-fw-bold\\">Higgins&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">max.higgins@maxcast.com</div>
@@ -1799,7 +1799,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-218 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"155e4c33-f6ad-45ee-816d-5eb0874225f2\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">H</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">H</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Hivemind&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">neida.backer@hivemind.biz</div>
@@ -1808,7 +1808,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-220 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"f330db30-2c2b-4621-b40f-25bb737e2eba\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">LH</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">LH</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Lyn&nbsp;</span><span class=\\"u-fw-bold\\">Hollis&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">lyn.hollis@citisys.biz</div>
@@ -1817,7 +1817,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-222\\" data-testid=\\"contact-listItem\\" id=\\"42a330ca-a30c-489f-8939-4c1b137f84e9\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(194, 173, 244); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">EH</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(194, 173, 244); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">EH</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Eleanore&nbsp;</span><span class=\\"u-fw-bold\\">Hottle&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">eleanore.hottle@tomiatech.edu</div>
@@ -1829,7 +1829,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-224\\" gutters=\\"double\\">J</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-225\\" data-testid=\\"contact-listItem\\" id=\\"3e540ae7-4605-4f05-82c9-8cb901a0c34d\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MJ</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MJ</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Michelle&nbsp;</span><span class=\\"u-fw-bold\\">Jensen&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">michelle.jensen@pancast.club</div>
@@ -1841,7 +1841,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-227\\" gutters=\\"double\\">K</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-228 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"366f3eec-aaa0-4c82-9f27-80ad305ecec8\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AK</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AK</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Andy&nbsp;</span><span class=\\"u-fw-bold\\">Keesee&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">andy.keesee@fortyfour.mobi</div>
@@ -1850,7 +1850,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-230 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"6e109549-bbb7-4b23-a95e-794407001cd1\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(31, 168, 241); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">EK</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(31, 168, 241); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">EK</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Edward&nbsp;</span><span class=\\"u-fw-bold\\">Kelsey&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">edward.kelsey@hivemind.co</div>
@@ -1859,7 +1859,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-232\\" data-testid=\\"contact-listItem\\" id=\\"289a814a-0d7d-4c6d-aa6c-be8bd28456dd\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MK</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MK</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Maisha&nbsp;</span><span class=\\"u-fw-bold\\">Kilmer&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">maisha.kilmer@nitrosystems.eu</div>
@@ -1871,7 +1871,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-234\\" gutters=\\"double\\">L</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-235 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"3fe82c80-9da3-4a42-bab5-8274df1316e6\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 76, 131); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CL</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 76, 131); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CL</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Chloe&nbsp;</span><span class=\\"u-fw-bold\\">Leath&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">chloe.leath@iridimax.org</div>
@@ -1880,7 +1880,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-237 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"07719549-2087-412e-8da2-e5c0b55fe7b8\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 198, 68); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RL</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 198, 68); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RL</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Rosanne&nbsp;</span><span class=\\"u-fw-bold\\">Leath&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">rosanne.leath@conixco.name</div>
@@ -1889,7 +1889,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-239 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"083bf60c-287b-45e9-b3d6-0e64ee2eee2d\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 198, 68); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RL</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 198, 68); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RL</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Rosanne&nbsp;</span><span class=\\"u-fw-bold\\">Lenihan&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">rosanne.lenihan@corerobotics.info</div>
@@ -1898,7 +1898,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-241\\" data-testid=\\"contact-listItem\\" id=\\"0409957b-36c1-4a66-b4f7-316e1a06e8b8\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(194, 173, 244); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AL</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(194, 173, 244); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AL</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Alexa&nbsp;</span><span class=\\"u-fw-bold\\">Luck&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">alexa.luck@grafixmedia.name</div>
@@ -1910,7 +1910,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-243\\" gutters=\\"double\\">M</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-244 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"d50b7eea-6e71-4348-ad75-fc791d7a82d4\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 76, 131); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RM</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 76, 131); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RM</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Rico&nbsp;</span><span class=\\"u-fw-bold\\">Magby&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">rico.magby@freecast.eu</div>
@@ -1919,7 +1919,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-246 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"398e8336-de18-43c8-8b5a-86ab72005c41\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KM</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KM</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Kirstie&nbsp;</span><span class=\\"u-fw-bold\\">Mercer&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">kirstie.mercer@tomiatech.eu</div>
@@ -1928,7 +1928,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-248 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"f87951a3-f887-498c-b683-efbf59221da0\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(13, 203, 207); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MM</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(13, 203, 207); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MM</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Marcus&nbsp;</span><span class=\\"u-fw-bold\\">Milligan&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">marcus.milligan@fortyfour.me</div>
@@ -1937,7 +1937,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-250 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"9393e04d-90eb-4f47-b0d1-7cfd88ca9a3f\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(13, 203, 207); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MM</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(13, 203, 207); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MM</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Madeleine&nbsp;</span><span class=\\"u-fw-bold\\">Milling&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">madeleine.milling@acousticom.gov</div>
@@ -1946,7 +1946,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-252 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"a68a9b3c-f3f7-4f94-b3f2-f2d0363895a5\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(105, 132, 206); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">IM</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(105, 132, 206); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">IM</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Isabelle&nbsp;</span><span class=\\"u-fw-bold\\">Muldoon&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">isabelle.muldoon@fastmart.co</div>
@@ -1955,7 +1955,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-254\\" data-testid=\\"contact-listItem\\" id=\\"309067e3-81a5-45a4-8125-179185dc37da\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 76, 131); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RM</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 76, 131); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RM</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Raymond&nbsp;</span><span class=\\"u-fw-bold\\">Muldoon&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">raymond.muldoon@thermolock.info</div>
@@ -1967,7 +1967,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-256\\" gutters=\\"double\\">N</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-257\\" data-testid=\\"contact-listItem\\" id=\\"627ba975-1314-4813-8366-cea7ac4734bf\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JN</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JN</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Jetta&nbsp;</span><span class=\\"u-fw-bold\\">Neal&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">jetta.neal@multiserv.net</div>
@@ -1979,7 +1979,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-259\\" gutters=\\"double\\">O</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-260\\" data-testid=\\"contact-listItem\\" id=\\"3f6007f9-9284-4bfd-9350-1cbf294bd39b\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(64, 222, 142); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JO</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(64, 222, 142); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JO</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Jay&nbsp;</span><span class=\\"u-fw-bold\\">Okainmayle&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">—</div>
@@ -1991,7 +1991,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-262\\" gutters=\\"double\\">P</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-263 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"53c75e29-5c9b-4c4f-b802-e4a152551b23\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(13, 203, 207); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JP</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(13, 203, 207); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JP</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Jay&nbsp;</span><span class=\\"u-fw-bold\\">Padeutell&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">jay.padeutell@noemail.net</div>
@@ -2000,7 +2000,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-265 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"4bb1f622-5383-449e-a2d2-fc9e14006903\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">TP</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">TP</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Travis&nbsp;</span><span class=\\"u-fw-bold\\">Paquette&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">travis.paquette@zatheon.co</div>
@@ -2009,7 +2009,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-267 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"a83989ca-041d-4615-87e0-7d41f86acc5d\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(13, 203, 207); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JP</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(13, 203, 207); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">JP</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Jamie&nbsp;</span><span class=\\"u-fw-bold\\">Paschall&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">jamie.paschall@acousticom.me</div>
@@ -2018,7 +2018,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-269\\" data-testid=\\"contact-listItem\\" id=\\"706364ef-f84c-4d84-896a-f96c1c6a554c\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 109, 0); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RP</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(252, 109, 0); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RP</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Raylene&nbsp;</span><span class=\\"u-fw-bold\\">Pullman&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">raylene.pullman@viewtopia.me</div>
@@ -2030,7 +2030,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-271\\" gutters=\\"double\\">R</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-272 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"c55c831a-9869-4e14-b3aa-d004bced41b0\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(31, 168, 241); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">NR</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(31, 168, 241); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">NR</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Neida&nbsp;</span><span class=\\"u-fw-bold\\">Remus&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">neida.remus@dynalab.club</div>
@@ -2039,7 +2039,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-274\\" data-testid=\\"contact-listItem\\" id=\\"44bae7a3-04ed-4cc3-80f8-e15fc9b2399d\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(194, 173, 244); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KR</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(194, 173, 244); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">KR</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Kurt&nbsp;</span><span class=\\"u-fw-bold\\">Rohloff&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">kurt.rohloff@corexts.org</div>
@@ -2051,7 +2051,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-276\\" gutters=\\"double\\">S</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-277 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"814f6f67-bcc0-498f-bb91-cab5ed315a12\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(53, 206, 104); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">HS</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(53, 206, 104); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">HS</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Hannah&nbsp;</span><span class=\\"u-fw-bold\\">Sager&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">hannah.sager@haltheon.eu</div>
@@ -2060,7 +2060,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-279 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"823d1ca9-4b10-456f-a603-231e3de5a774\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AS</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">AS</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Aiden&nbsp;</span><span class=\\"u-fw-bold\\">Smit&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">aiden.smit@tomiatech.co</div>
@@ -2069,7 +2069,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-281 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"5c21e9fa-18a5-4999-b704-59b902db8542\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">TS</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">TS</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Travis&nbsp;</span><span class=\\"u-fw-bold\\">Sprowl&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">travis.sprowl@vtgrafix.name</div>
@@ -2078,7 +2078,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-283 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"29fdda84-d786-4890-9fd6-842fed02d193\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">DS</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">DS</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Danny&nbsp;</span><span class=\\"u-fw-bold\\">Stine&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">danny.stine@celmax.club</div>
@@ -2087,7 +2087,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-285 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"328b1bb6-8234-4efd-b18f-1aafd58dc83e\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RS</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 127, 27); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RS</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Rosanne&nbsp;</span><span class=\\"u-fw-bold\\">Stine&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">rosanne.stine@infracom.edu</div>
@@ -2096,7 +2096,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-287\\" data-testid=\\"contact-listItem\\" id=\\"2a75a0e5-cc4b-4fdc-be4d-2ac24a802368\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(245, 45, 45); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">S</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(245, 45, 45); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">S</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">StrategyLine&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">ivan.bryd@strategyline.eu</div>
@@ -2108,7 +2108,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-289\\" gutters=\\"double\\">T</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-290 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"0ea42f4a-28f1-432e-934a-68f9c50fe38e\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">HT</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(61, 166, 126); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">HT</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Haydee&nbsp;</span><span class=\\"u-fw-bold\\">Tindel&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">haydee.tindel@galcom.com</div>
@@ -2117,7 +2117,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-292 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"a749ffad-068e-4772-9060-4cb9bd7e8039\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(53, 206, 104); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">WT</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(53, 206, 104); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">WT</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Warren&nbsp;</span><span class=\\"u-fw-bold\\">Tindel&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">warren.tindel@fortyfour.info</div>
@@ -2126,7 +2126,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-294 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"1816abd3-d371-482c-ae9d-33385fb8780d\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">T</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">T</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Tomiatech&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">edward.carter@tomiatech.com</div>
@@ -2135,7 +2135,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-296\\" data-testid=\\"contact-listItem\\" id=\\"b21e4b4b-1df9-4992-b39b-cf844df864d5\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">T</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">T</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">TrioSys&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">rico.murphy@triosys.info</div>
@@ -2147,7 +2147,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-298\\" gutters=\\"double\\">V</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-299 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"23d3d724-d869-4def-841f-c85b499aa6a6\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(64, 222, 142); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CV</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(64, 222, 142); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">CV</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Cory&nbsp;</span><span class=\\"u-fw-bold\\">Verde&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">cory.verde@peersys.xyz</div>
@@ -2156,7 +2156,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-301 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"8cbefa6a-41c9-4065-ad33-87618dfee702\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(245, 45, 45); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MV</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(245, 45, 45); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MV</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Madeleine&nbsp;</span><span class=\\"u-fw-bold\\">Verde&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">madeleine.verde@tomiatech.me</div>
@@ -2165,7 +2165,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-303\\" data-testid=\\"contact-listItem\\" id=\\"7a8b0143-ed8a-4e28-85ec-37c16d1904b6\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(105, 132, 206); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">V</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(105, 132, 206); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">V</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">VTGrafix&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">vernon.leath@vtgrafix.co</div>
@@ -2177,7 +2177,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-305\\" gutters=\\"double\\">W</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-306 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"b6f5fc43-4199-4cca-8372-d1fe4e75a168\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 198, 68); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">GW</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 198, 68); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">GW</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Gavin&nbsp;</span><span class=\\"u-fw-bold\\">Wallis&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">gavin.wallis@infratouch.biz</div>
@@ -2186,7 +2186,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-308 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"e93c6abd-4819-4873-b7fb-ea46e02816a2\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(64, 222, 142); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RW</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(64, 222, 142); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">RW</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Raylene&nbsp;</span><span class=\\"u-fw-bold\\">Wallis&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">raylene.wallis@corerobotics.name</div>
@@ -2195,7 +2195,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-310 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"d2bda580-4df6-473e-89db-2af41364c44e\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">W</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">W</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Westercom&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">anton.brandt@westercom.me</div>
@@ -2204,7 +2204,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-312 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"63d70d1a-838b-4eb4-b9ca-c3ea15937d51\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">W</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(127, 107, 238); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">W</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">WestGate&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">selma.keesee@westgate.net</div>
@@ -2213,7 +2213,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-314 MuiListItem-divider\\" data-testid=\\"contact-listItem\\" id=\\"6ed104be-083e-4991-bacb-78e18f815210\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MW</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MW</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Madelyn&nbsp;</span><span class=\\"u-fw-bold\\">Woodrum&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">madelyn.woodrum@airconix.xyz</div>
@@ -2222,7 +2222,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         </li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-316\\" data-testid=\\"contact-listItem\\" id=\\"0c647009-9785-4d09-b18a-0f22d3bff233\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MW</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(255, 150, 47); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">MW</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Mitch&nbsp;</span><span class=\\"u-fw-bold\\">Woodrum&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">mitch.woodrum@opticast.org</div>
@@ -2234,7 +2234,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
         <li class=\\"MuiListSubheader-root MuiListSubheader-sticky MuiListSubheader-gutters makeStyles-gutters-26 makeStyles-gutters-318\\" gutters=\\"double\\">X</li>
         <li class=\\"MuiListItem-root u-c-pointer medium MuiListItem-gutters makeStyles-gutters-28 makeStyles-gutters-319\\" data-testid=\\"contact-listItem\\" id=\\"71967809-8e54-4413-aa8e-35b2b945e816\\">
           <div class=\\"styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis\\" data-testid=\\"ContactIdentity\\">
-            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">X</span></div>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna\\" style=\\"background-color: rgb(180, 73, 231); --circleSize: 32px; z-index: auto;\\"><span class=\\"styles__c-avatar-initials___310qC\\">X</span></div>
             <p class=\\"MuiTypography-root u-ml-1 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap MuiTypography-gutterBottom MuiTypography-displayInline\\" data-testid=\\"ContactName\\"><span class=\\"\\">Xenosys&nbsp;</span></p>
           </div>
           <div class=\\"styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis\\" data-testid=\\"ContactEmail\\">cecilia.latshaw@xenosys.club</div>
