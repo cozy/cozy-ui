@@ -223,7 +223,6 @@ const initialVariants = [{ dense: false, disabledGutters: false, doubleGutters: 
               <ListItemText primary="Storage" />
               <Typography
                 style={{ color: "var(--secondaryTextColor)" }}
-                className="u-mr-half"
                 variant="body2"
               >
                 82% used
