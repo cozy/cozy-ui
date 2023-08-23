@@ -21,7 +21,8 @@ export const AppsSection = ({
   subtitle,
   onAppClick,
   IconComponent,
-  displaySpecificMaintenanceStyle
+  displaySpecificMaintenanceStyle,
+  disableClick
 }) => {
   const { isMobile } = useBreakpoints()
   const { t } = useI18n()
@@ -41,6 +42,7 @@ export const AppsSection = ({
         <div className={styles.AppsSection__list}>
           {sortedApps.map(app => {
             const realApp = getAppBySlug(app.slug)
+            const isDisableClick = disableClick?.(realApp)
             return (
               <AppTile
                 app={realApp}
@@ -50,7 +52,7 @@ export const AppsSection = ({
                   t
                 )}
                 name={getTranslatedManifestProperty(realApp, 'name', t)}
-                onClick={() => onAppClick(realApp.slug)}
+                onClick={() => !isDisableClick && onAppClick(realApp.slug)}
                 key={realApp.slug}
                 showDeveloper={!isMobile}
                 displaySpecificMaintenanceStyle={
@@ -71,7 +73,8 @@ AppsSection.propTypes = {
   subtitle: PropTypes.element,
   onAppClick: PropTypes.func,
   IconComponent: PropTypes.element,
-  displaySpecificMaintenanceStyle: PropTypes.bool
+  displaySpecificMaintenanceStyle: PropTypes.bool,
+  disableClick: PropTypes.func
 }
 
 export default AppsSection
