@@ -1,3 +1,3 @@
-import Timeline from '@material-ui/lab/Timeline'
+import TimelineItem from '@material-ui/lab/TimelineItem'
 
-export default Timeline
+export default TimelineItem
