@@ -1,3 +1,10 @@
+# [91.1.0](https://github.com/cozy/cozy-ui/compare/v91.0.0...v91.1.0) (2023-08-24)
+
+
+### Features
+
+* Add components relative to Timeline ([c2203fc](https://github.com/cozy/cozy-ui/commit/c2203fc))
+
 # [91.0.0](https://github.com/cozy/cozy-ui/compare/v90.7.1...v91.0.0) (2023-08-16)
 
 
