@@ -1,3 +1,10 @@
+# [91.2.0](https://github.com/cozy/cozy-ui/compare/v91.1.1...v91.2.0) (2023-08-24)
+
+
+### Features
+
+* **Section:** Add prop to manage click on AppTile ([ce9e6b9](https://github.com/cozy/cozy-ui/commit/ce9e6b9))
+
 ## [91.1.1](https://github.com/cozy/cozy-ui/compare/v91.1.0...v91.1.1) (2023-08-24)
 
 
