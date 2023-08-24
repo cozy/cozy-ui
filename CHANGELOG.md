@@ -1,3 +1,10 @@
+## [91.1.1](https://github.com/cozy/cozy-ui/compare/v91.1.0...v91.1.1) (2023-08-24)
+
+
+### Bug Fixes
+
+* **TimelineItem:** Wasn't exporting correct MUI component ([b8bdfff](https://github.com/cozy/cozy-ui/commit/b8bdfff))
+
 # [91.1.0](https://github.com/cozy/cozy-ui/compare/v91.0.0...v91.1.0) (2023-08-24)
 
 
