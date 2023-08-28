@@ -1,3 +1,32 @@
+# [92.0.0](https://github.com/cozy/cozy-ui/compare/v91.2.0...v92.0.0) (2023-08-28)
+
+
+### Features
+
+* **Viewer:** Display file path into the toolbar ([e76e2f7](https://github.com/cozy/cozy-ui/commit/e76e2f7))
+* **Viewer:** Move toolbarProps into componentsProps ([b0582da](https://github.com/cozy/cozy-ui/commit/b0582da))
+* **Viewer:** Remove onlyOfficeProps ([9983c4a](https://github.com/cozy/cozy-ui/commit/9983c4a))
+
+
+### BREAKING CHANGES
+
+* **Viewer:** The `toolbarProps` attribute from Viewer property has been moved into the `componentsProps` attribute. 
+
+You can use this codemods to migrate. **Don't forget to run js linter after the codemods.**
+
+The `--parser` option is essential to manage any TSX files in the project.
+
+```
+yarn global add @cozy/codemods
+yarn global add jscodeshift@0.13.1
+jscodeshift -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/transform-viewer-components-props.js src babel --ignore-pattern=src/targets/ --extensions js,jsx,tsx --parser tsx
+```
+
+You can do this manually by transferring the contents of `toolbarProps` to `componentsProps` under a `toolbarProps` property.
+* **Viewer:** The `onlyOfficeProps` attribute from Viewer property has been moved into the `componentsProps` attribute. 
+
+You have to move the contents of `onlyOfficeProps ` to `componentsProps` under a `OnlyOfficeViewer` property.
+
 # [91.2.0](https://github.com/cozy/cozy-ui/compare/v91.1.1...v91.2.0) (2023-08-24)
 
 
