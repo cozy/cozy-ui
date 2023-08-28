@@ -16466,6 +16466,17 @@ progress.upload-queue-progress--1CmN- {
   background: var(--paperBackgroundColor);
 }
 
+.c-file-path--XvgNN {
+  display: block;
+  color: var(--secondaryTextColor);
+  font-size: 0.75rem;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .viewer-imageviewer--26k0p,
 .viewer-noviewer--auG-6,
 .viewer-audioviewer--1OQPB,
@@ -18752,17 +18763,6 @@ progress.upload-queue-progress--1CmN- {
   .FigureBlock--YyBoL {
     font-size: 0.7em;
   }
-}
-
-.c-file-path--XvgNN {
-  display: block;
-  color: var(--secondaryTextColor);
-  font-size: 0.75rem;
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .c-file-input--YNZSh {
