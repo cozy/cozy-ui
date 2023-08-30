@@ -7,7 +7,11 @@ import AppLinker from '../../AppLinker'
 import FilePath from '../../FilePath'
 import useBreakpoints from '../../hooks/useBreakpoints'
 
-import { makeWebLink, normalizeAndSpreadAttributes } from '../helpers'
+import {
+  makeWebLink,
+  normalizeAndSpreadAttributes,
+  removeFilenameFromPath
+} from '../helpers'
 import { buildFileByIdQuery } from '../queries'
 
 const { ensureFilePath } = models.file
@@ -35,7 +39,7 @@ const ToolbarFilePath = ({ file }) => {
   if (fileWithPath) {
     const appSlug = 'drive'
     const nativePath = `/folder/${fileWithPath.dir_id}`
-    const path = fileWithPath.path.replace(fileWithPath.name, '')
+    const path = removeFilenameFromPath(fileWithPath.path)
     const link = makeWebLink({ client, path: nativePath, slug: appSlug })
 
     if (isDesktop && link) {
