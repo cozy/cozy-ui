@@ -203,3 +203,13 @@ export const makeWebLink = ({ client, slug, path }) => {
     return null
   }
 }
+
+/**
+ * Remove the file name at the end of a path
+ * @param {string} path
+ * @returns {string} new path
+ */
+export const removeFilenameFromPath = path => {
+  const newPath = path.substring(0, path.lastIndexOf('/'))
+  return newPath === '' ? '/' : newPath
+}

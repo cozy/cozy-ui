@@ -7,7 +7,8 @@ import {
   buildEditAttributePath,
   knownDateMetadataNames,
   knownInformationMetadataNames,
-  isEditableAttribute
+  isEditableAttribute,
+  removeFilenameFromPath
 } from './helpers'
 
 const fakeMetadata = {
@@ -153,6 +154,21 @@ describe('helpers', () => {
         const qualification = isEditableAttribute('qualification', makeFile())
         expect(qualification).toBe(false)
       })
+    })
+  })
+  describe('removeFilenameFromPath', () => {
+    it('should handle all types of path', () => {
+      expect(removeFilenameFromPath('/folder/7IsD.gif', '7IsD.gif')).toBe(
+        '/folder'
+      )
+
+      expect(removeFilenameFromPath('/7IsD.gif', '7IsD.gif')).toBe('/')
+
+      expect(removeFilenameFromPath('//7IsD.gif', '7IsD.gif')).toBe('/')
+
+      expect(removeFilenameFromPath('/7IsD.gif/7IsD.gif', '7IsD.gif')).toBe(
+        '/7IsD.gif'
+      )
     })
   })
 })
