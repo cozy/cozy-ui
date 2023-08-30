@@ -31,17 +31,23 @@ const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
         {item.icon && <ListItemIcon>{item.icon}</ListItemIcon>}
         <ListItemText primary={item.title} secondary={item.description} />
 
-        {item.children && item.children.length > 0 && <Icon icon={RightIcon} />}
+        {item.children && item.children.length > 0 && (
+          <ListItemIcon>
+            <Icon icon={RightIcon} />
+          </ListItemIcon>
+        )}
 
         {radioPosition === 'right' &&
           !(item.children && item.children.length > 0) && (
-            <Radio
-              readOnly
-              edge="end"
-              name={item.title}
-              value={item.title}
-              checked={!!isSelected}
-            />
+            <ListItemIcon>
+              <Radio
+                readOnly
+                edge="end"
+                name={item.title}
+                value={item.title}
+                checked={!!isSelected}
+              />
+            </ListItemIcon>
           )}
       </ListItem>
       <Divider />
