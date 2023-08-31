@@ -1,3 +1,10 @@
+## [92.0.1](https://github.com/cozy/cozy-ui/compare/v92.0.0...v92.0.1) (2023-08-31)
+
+
+### Bug Fixes
+
+* **Viewer:** Remove filename on path ending with slash ([ad8b88c](https://github.com/cozy/cozy-ui/commit/ad8b88c))
+
 # [92.0.0](https://github.com/cozy/cozy-ui/compare/v91.2.0...v92.0.0) (2023-08-28)
 
 
