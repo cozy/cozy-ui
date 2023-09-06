@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import createDepreciationLogger from '../../helpers/createDepreciationLogger'
-import useBreakpoints from '../../hooks/useBreakpoints'
+import useBreakpoints from '../../providers/Breakpoints'
 
 import ActionMenuWrapper from './ActionMenuWrapper'
 import { ActionMenuHeader } from './ActionMenuHeader'

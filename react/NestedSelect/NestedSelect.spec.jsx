@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react'
 
 import NestedSelect, { ItemRow } from './NestedSelect'
 import ListItem from '../ListItem'
-import { BreakpointsProvider } from '../hooks/useBreakpoints'
+import { BreakpointsProvider } from '../providers/Breakpoints'
 
 describe('NestedSelect', () => {
   const options = {

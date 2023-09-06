@@ -5,7 +5,7 @@ import { useClient, useQuery, models } from 'cozy-client'
 import Link from '../../Link'
 import AppLinker from '../../AppLinker'
 import FilePath from '../../FilePath'
-import useBreakpoints from '../../hooks/useBreakpoints'
+import useBreakpoints from '../../providers/Breakpoints'
 
 import {
   makeWebLink,

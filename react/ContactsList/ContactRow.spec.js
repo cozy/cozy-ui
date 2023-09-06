@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 
-import { BreakpointsProvider } from '../hooks/useBreakpoints'
+import { BreakpointsProvider } from '../providers/Breakpoints'
 import ContactRow from './ContactRow'
 import renderer from 'react-test-renderer'
 import logger from 'cozy-logger'

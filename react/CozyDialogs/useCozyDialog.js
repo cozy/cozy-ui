@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import cx from 'classnames'
 
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
 import { makeStyles } from '../styles'
 
 import DialogTransition from './DialogTransition'

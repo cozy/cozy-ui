@@ -22,7 +22,7 @@ import Album from 'cozy-ui/transpiled/react/Icons/Album'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Dialog from 'cozy-ui/transpiled/react/CozyDialogs/Dialog'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import cx from 'classnames'
 
 import { makeStyles } from 'cozy-ui/transpiled/react/styles'
@@ -702,7 +702,7 @@ const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'd
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Dialog from 'cozy-ui/transpiled/react/CozyDialogs/Dialog'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import cx from 'classnames'
 
 import { makeStyles } from 'cozy-ui/transpiled/react/styles'

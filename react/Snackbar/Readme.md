@@ -9,7 +9,7 @@ import Icon from 'cozy-ui/transpiled/react/Icon'
 import InfoIcon from 'cozy-ui/transpiled/react/Icons/Info'
 import {
   BreakpointsProvider
-} from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+} from 'cozy-ui/transpiled/react/providers/Breakpoints'
 
 initialState = { open: false }
 
@@ -49,7 +49,7 @@ import Button from 'cozy-ui/transpiled/react/Buttons'
 import Variants from 'cozy-ui/docs/components/Variants'
 import {
   BreakpointsProvider
-} from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+} from 'cozy-ui/transpiled/react/providers/Breakpoints'
 
 initialState = { open: isTesting() }
 

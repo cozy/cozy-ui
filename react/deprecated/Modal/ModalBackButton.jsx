@@ -4,7 +4,7 @@ import Button from '../Button'
 import styles from './styles.styl'
 import PreviousIcon from '../../Icons/Previous'
 
-import useBreakpoints from '../../hooks/useBreakpoints'
+import useBreakpoints from '../../providers/Breakpoints'
 
 const DumbModalBackButton = props => {
   const { isMobile } = useBreakpoints()

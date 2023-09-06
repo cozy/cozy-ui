@@ -6,7 +6,7 @@ import List from '../List'
 import ListSubheader from '../ListSubheader'
 import { sortContacts, categorizeContacts, sortHeaders } from './helpers'
 import ContactRow from './ContactRow'
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
 
 const ContactsList = ({ contacts, onItemClick, ...rest }) => {
   const sortedContacts = sortContacts(contacts)

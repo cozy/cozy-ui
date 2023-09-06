@@ -10,7 +10,7 @@ import IconButton from 'cozy-ui/transpiled/react/IconButton'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 import ListItemSecondaryAction from 'cozy-ui/transpiled/react/ListItemSecondaryAction'
 import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
-import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import useBreakpoints from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import DemoProvider from 'cozy-ui/transpiled/react/providers/DemoProvider'
 import palette from 'cozy-ui/transpiled/react/palette'
 

@@ -2,7 +2,7 @@ import React, { createRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
 import { FileDoctype } from '../proptypes'
 
 import { toolbarPropsPropType } from './proptypes'

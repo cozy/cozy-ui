@@ -3,7 +3,7 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 
 import Button from '../Button'
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
 import Icon from '../Icon'
 import IconButton from '../IconButton'
 import { useI18n } from '../I18n'

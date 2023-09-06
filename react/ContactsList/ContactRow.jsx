@@ -9,7 +9,7 @@ import ContactPhone from './Contacts/ContactPhone'
 import ContactIdentity from './Contacts/ContactIdentity'
 import ContactCozy from './Contacts/ContactCozy'
 import ContactEmail from './Contacts/ContactEmail'
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
 
 const { getPrimaryCozy, getPrimaryPhone, getPrimaryEmail } = models.contact
 

@@ -9,11 +9,11 @@ import {
   getBackButton,
   getBackCloseButton
 } from './testing'
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
 import DemoProvider from '../providers/DemoProvider'
 
-jest.mock('../hooks/useBreakpoints', () => ({
-  ...jest.requireActual('../hooks/useBreakpoints'),
+jest.mock('../providers/Breakpoints', () => ({
+  ...jest.requireActual('../providers/Breakpoints'),
   __esModule: true,
   default: jest.fn(),
   useBreakpoints: jest.fn()

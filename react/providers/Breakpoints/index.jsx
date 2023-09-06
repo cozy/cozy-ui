@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react'
 import throttle from 'lodash/throttle'
+
 import breakpointDefs, {
   getBreakpointsStatus as _getBreakpointsStatus
 } from '../../helpers/breakpoints'
@@ -10,15 +11,19 @@ const BreakpointsCtx = createContext(null)
 
 export const BreakpointsProvider = ({ children }) => {
   const [breakpoints, setBreakpoints] = useState(getBreakpointsStatus())
+
   useEffect(() => {
     const handleResize = throttle(() => {
       setBreakpoints(getBreakpointsStatus())
     }, 100)
+
     window.addEventListener('resize', handleResize)
+
     return () => {
       window.removeEventListener('resize', handleResize)
     }
   }, [])
+
   return (
     <BreakpointsCtx.Provider value={breakpoints}>
       {children}
@@ -26,7 +31,7 @@ export const BreakpointsProvider = ({ children }) => {
   )
 }
 
-const useBreakpoints = () => {
+export const useBreakpoints = () => {
   const v = useContext(BreakpointsCtx)
   if (v === null) {
     throw new Error(

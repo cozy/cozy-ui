@@ -1,6 +1,6 @@
 import React from 'react'
 
-import useBreakpoints from '../../hooks/useBreakpoints'
+import useBreakpoints from '../../providers/Breakpoints'
 import isTesting from '../../helpers/isTesting'
 import BottomSheet from '../../BottomSheet'
 

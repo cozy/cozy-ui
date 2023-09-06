@@ -3,7 +3,7 @@
 ### Simple
 
 ```jsx
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Modal from 'cozy-ui/transpiled/react/deprecated/Modal'
 initialState = { modalOpened: false}
 
@@ -46,7 +46,7 @@ initialState = { modalOpened: false};
 ### Simple with no title
 
 ```jsx
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Modal from 'cozy-ui/transpiled/react/deprecated/Modal'
 initialState = { modalOpened: false}
 
@@ -66,7 +66,7 @@ Several sizes avalaible: `xsmall, small`, `medium`, `large`, `xlarge`, `xxlarge`
 `small` being the default one.
 
 ```jsx
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Modal from 'cozy-ui/transpiled/react/deprecated/Modal'
 
 initialState = { modalOpened: false}
@@ -94,7 +94,7 @@ const sizes = [
 Besides the default spacing inside a Modal, you can choose another type from this two available: `small` and `large`
 
 ```jsx
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Modal from 'cozy-ui/transpiled/react/deprecated/Modal'
 
 initialState = { modalOpened: false}
@@ -118,7 +118,7 @@ const spacings = [
 If you want the modal to fill all the available space, without margin, on mobile screen.
 
 ```jsx
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Modal from 'cozy-ui/transpiled/react/deprecated/Modal';
 initialState = { modalOpened: false};
 
@@ -153,7 +153,7 @@ import Modal from 'cozy-ui/transpiled/react/deprecated/Modal';
 If you have a long content, the modal's content will scroll. For the scrollbars to be displayed correctly, you must specify `overflowHidden=true`.
 
 ```jsx
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Modal from 'cozy-ui/transpiled/react/deprecated/Modal';
 <BreakpointsProvider>
   <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
@@ -172,7 +172,7 @@ import Modal from 'cozy-ui/transpiled/react/deprecated/Modal';
 You can specify primary and secondary actions. Use `primaryType` and `secondaryType` to choose the types of the buttons
 
 ```jsx
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Modal from 'cozy-ui/transpiled/react/deprecated/Modal';
 const showModal = () => setState({ modalOpened: true })
 const hideModal = () => setState({ modalOpened: false });
@@ -199,7 +199,7 @@ const hideModal = () => setState({ modalOpened: false });
 For more complex modals, you can use individual components.
 
 ```jsx
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Modal, { ModalDescription, ModalHeader, ModalFooter } from 'cozy-ui/transpiled/react/deprecated/Modal';
 const headerStyle = {
   background: 'linear-gradient(to right, #005c97, #363795)',
@@ -230,7 +230,7 @@ const headerStyle = {
 If you need a part of your modal content fixed (not scrollable) and the other part scrollable, you need to compose you own complex modal.
 
 ```jsx
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Modal, { ModalContent, ModalHeader, ModalFooter } from 'cozy-ui/transpiled/react/deprecated/Modal';
 
 <BreakpointsProvider>
@@ -260,7 +260,7 @@ If you need a modal with a branded header when you have a brand related content.
 #### with a background color
 
 ```jsx
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Modal, { ModalDescription, ModalBrandedHeader } from 'cozy-ui/transpiled/react/deprecated/Modal';
 
 <BreakpointsProvider>
@@ -283,7 +283,7 @@ import Modal, { ModalDescription, ModalBrandedHeader } from 'cozy-ui/transpiled/
 #### with a background gradient
 
 ```jsx
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Modal, { ModalDescription, ModalBrandedHeader } from 'cozy-ui/transpiled/react/deprecated/Modal';
 
 <BreakpointsProvider>
@@ -306,7 +306,7 @@ import Modal, { ModalDescription, ModalBrandedHeader } from 'cozy-ui/transpiled/
 #### Animated Content Header
 
 ```jsx
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Modal, { ModalContent, AnimatedContentHeader } from 'cozy-ui/transpiled/react/deprecated/Modal';
 
 // heigth 128px
@@ -362,7 +362,7 @@ class ModalCounterWithAnimatedHeader extends React.Component {
 When your modal contains a multi-step process, you may want to add a back button that takes care of going one step back in the inner process, but not close the modal. In that case, you can use the `ModalBackButton` component.
 
 ```jsx
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Modal, { ModalContent, ModalBackButton } from 'cozy-ui/transpiled/react/deprecated/Modal';
 const toggle = () => setState({ modalOpened: !state.modalOpened });
 const goToStep1 = () => setState({ step: 1 });
@@ -400,7 +400,7 @@ initialState = {
 ### Panes
 
 ```jsx
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Modal, { ModalBrandedHeader } from 'cozy-ui/transpiled/react/deprecated/Modal';
 import Panel from 'cozy-ui/transpiled/react/Panel';
 const toggle = () => setState({ modalOpened: !state.modalOpened });
@@ -434,7 +434,7 @@ const toggle = () => setState({ modalOpened: !state.modalOpened });
 You can use the `into` prop to wrap the `Modal` in a `Portal`. This `prop` will be set to `"body"` in future versions so try to put it now to check if your Modal does not break when rendered in a Portal.
 
 ```jsx
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Modal from 'cozy-ui/transpiled/react/deprecated/Modal';
 initialState = { modalOpened: false};
 
@@ -451,7 +451,7 @@ initialState = { modalOpened: false};
 FocusTrap can be useful used in conjuction with the Modal.
 
 ```jsx
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import FocusTrap from 'focus-trap-react'
 import Modal, { ModalContent } from 'cozy-ui/transpiled/react/deprecated/Modal';
 import Button from 'cozy-ui/transpiled/react/deprecated/Button';

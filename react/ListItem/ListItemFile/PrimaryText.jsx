@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { splitFilename } from 'cozy-client/dist/models/file'
 
 import Filename from '../../Filename'
-import useBreakpoints from '../../hooks/useBreakpoints'
+import useBreakpoints from '../../providers/Breakpoints'
 
 const PrimaryText = ({ primary, file }) => {
   const { isMobile } = useBreakpoints()

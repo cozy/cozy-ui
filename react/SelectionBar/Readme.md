@@ -3,7 +3,7 @@
 ```jsx
 import SelectionBar from 'cozy-ui/transpiled/react/SelectionBar';
 import I18n from 'cozy-ui/transpiled/react/I18n';
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints';
 import TrashIcon from 'cozy-ui/transpiled/react/Icons/Trash'
 import RenameIcon from 'cozy-ui/transpiled/react/Icons/Rename'
 import ShareIcon from 'cozy-ui/transpiled/react/Icons/Share'

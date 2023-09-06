@@ -12,7 +12,7 @@ import Divider from 'cozy-ui/transpiled/react/Divider'
 import ListItemIcon, {smallSize, mediumSize, largeSize} from 'cozy-ui/transpiled/react/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 import ListItemSecondaryAction from 'cozy-ui/transpiled/react/ListItemSecondaryAction'
-import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
+import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints';
 import NavigationList, {
   NavigationListSection,
   NavigationListHeader
