@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import mockApps from './_mockApps'
 import { I18n } from 'cozy-ui/transpiled/react/I18n'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Sections from 'cozy-ui/transpiled/react/AppSections'
 import Variants from 'cozy-ui/docs/components/Variants'
 import CozyClient, { CozyProvider } from "cozy-client";

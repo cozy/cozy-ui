@@ -89,9 +89,7 @@ import ActionMenu, { ActionMenuItem, ActionMenuRadio, ActionMenuHeader } from 'c
 import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
-import {
-  BreakpointsProvider
-} from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
 import Filename from 'cozy-ui/transpiled/react/Filename'
 import WarningIcon from 'cozy-ui/transpiled/react/Icons/Warning'

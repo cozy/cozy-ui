@@ -13,7 +13,7 @@ import {
 } from '../CozyDialogs'
 import useRealtime from '../hooks/useRealtime'
 import useEventListener from '../hooks/useEventListener'
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
 import Button from '../Buttons'
 import PlusIcon from '../Icons/Plus'
 import Icon from '../Icon'

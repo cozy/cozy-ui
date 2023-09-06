@@ -2,7 +2,7 @@
 
 ```jsx
 import ContactsList from 'cozy-ui/transpiled/react/ContactsList'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import contacts from './_mockContacts.json'
 
 ;
@@ -19,7 +19,7 @@ import contacts from './_mockContacts.json'
 ```jsx
 import ContactsList from 'cozy-ui/transpiled/react/ContactsList'
 import contacts from './_mockContacts.json'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 
 initialState = { contact: null }
 

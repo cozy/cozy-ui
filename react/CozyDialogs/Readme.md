@@ -393,7 +393,7 @@ const setFlagshipVars = () => {
 
 ```jsx
 import cx from 'classnames'
-import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import useBreakpoints from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 
 import { Dialog } from  'cozy-ui/transpiled/react/CozyDialogs'

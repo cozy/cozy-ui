@@ -101,7 +101,7 @@ const initialVariants = [{
 ### Contextualized items
 
 ```jsx
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import List from 'cozy-ui/transpiled/react/List'
 import ListItemByDoc from 'cozy-ui/transpiled/react/ListItem/ListItemByDoc'
 import ListItem from 'cozy-ui/transpiled/react/ListItem'

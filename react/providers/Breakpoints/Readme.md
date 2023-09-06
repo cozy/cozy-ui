@@ -16,7 +16,7 @@ subtrees (useful on mobile where space is at a premium). Here for
 example, the square contents changes on desktop or mobile.
 
 ```jsx
-import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 
 const styles = {
   responsiveDiv: {

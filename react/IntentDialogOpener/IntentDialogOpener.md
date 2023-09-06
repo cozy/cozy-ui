@@ -1,7 +1,7 @@
 ```jsx
 import { withStyles } from 'cozy-ui/transpiled/react/styles'
 import IntentDialogOpener from 'cozy-ui/transpiled/react/IntentDialogOpener'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 
 const customStyles = () => ({
   paper: {

@@ -2,7 +2,7 @@ import React from 'react'
 
 import { CozyProvider } from 'cozy-client'
 
-import { BreakpointsProvider } from '../hooks/useBreakpoints'
+import { BreakpointsProvider } from './Breakpoints'
 import CozyTheme from './CozyTheme'
 import { I18nContext } from '../I18n'
 

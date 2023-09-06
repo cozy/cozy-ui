@@ -33,7 +33,7 @@ import { withStyles } from 'cozy-ui/transpiled/react/styles'
 import { DialogCloseButton } from 'cozy-ui/transpiled/react/CozyDialogs'
 import Dialog from 'cozy-ui/transpiled/react/Dialog'
 import IntentIframe from 'cozy-ui/transpiled/react/IntentIframe'
-import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 
 initialState = { modalOpened: false}
 

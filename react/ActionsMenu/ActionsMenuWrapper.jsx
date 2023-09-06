@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Menu from '../Menu'
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
 import BottomSheet from '../BottomSheet'
 import isTesting from '../helpers/isTesting'
 import Paper from '../Paper'

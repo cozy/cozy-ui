@@ -1,7 +1,7 @@
 import React, { createRef } from 'react'
 import cx from 'classnames'
 
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
 
 import InformationPanel from './components/InformationPanel'
 import Footer from './components/Footer'

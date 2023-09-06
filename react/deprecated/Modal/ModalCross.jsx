@@ -3,7 +3,7 @@ import cx from 'classnames'
 
 import Icon from '../../Icon'
 import CrossIcon from '../../Icons/Cross'
-import useBreakpoints from '../../hooks/useBreakpoints'
+import useBreakpoints from '../../providers/Breakpoints'
 import palette from '../../palette'
 
 import styles from './styles.styl'

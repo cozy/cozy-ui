@@ -4,7 +4,7 @@ import { render } from '@testing-library/react'
 import { act } from 'react-dom/test-utils'
 
 import { fixPopperTesting } from '../../Popper/testing'
-import { BreakpointsProvider } from '../../hooks/useBreakpoints'
+import { BreakpointsProvider } from '../../providers/Breakpoints'
 import Typography from '../../Typography'
 import Icon from '../../Icon'
 import FileIcon from '../../Icons/File'

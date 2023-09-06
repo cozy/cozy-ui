@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { useI18n } from '../../I18n'
-import useBreakpoints from '../../hooks/useBreakpoints'
+import useBreakpoints from '../../providers/Breakpoints'
 import { getTranslatedManifestProperty } from '../helpers'
 import sortBy from 'lodash/sortBy'
 import AppTile from '../../AppTile'

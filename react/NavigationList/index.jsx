@@ -4,7 +4,7 @@ import List from '../List'
 import Stack from '../Stack'
 import Card from '../Card'
 import Typography from '../Typography'
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
 import ListSubheader from '../ListSubheader'
 import styles from './styles.styl'
 

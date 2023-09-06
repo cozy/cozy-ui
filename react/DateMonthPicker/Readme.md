@@ -5,7 +5,7 @@ import Stack from 'cozy-ui/transpiled/react/Stack';
 import Button from 'cozy-ui/transpiled/react/deprecated/Button';
 import Dialog, { DialogContent, DialogTitle } from 'cozy-ui/transpiled/react/Dialog';
 import { useCozyDialog, DialogCloseButton } from 'cozy-ui/transpiled/react/CozyDialogs'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 
 
 const dictRequire = x => ({})

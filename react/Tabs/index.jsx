@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import MuiTabs from '@material-ui/core/Tabs'
 import cx from 'classnames'
 
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
 
 const Tabs = forwardRef(
   ({ className, variant, narrowed, segmented, children, ...props }, ref) => {

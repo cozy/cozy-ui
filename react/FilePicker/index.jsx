@@ -6,7 +6,7 @@ import { FixedDialog } from '../CozyDialogs'
 import FilePickerHeader from './FilePickerHeader'
 import FilePickerFooter from './FilePickerFooter'
 import FilePickerBody from './FilePickerBody'
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
 import { getCompliantTypes } from '../helpers/acceptedTypes'
 
 const useStyles = makeStyles(() => ({

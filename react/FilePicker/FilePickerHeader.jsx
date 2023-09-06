@@ -5,7 +5,7 @@ import get from 'lodash/get'
 
 import { useQuery, hasQueryBeenLoaded } from 'cozy-client'
 
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
 import IconButton from '../IconButton'
 import Icon from '../Icon'
 import Previous from '../Icons/Previous'

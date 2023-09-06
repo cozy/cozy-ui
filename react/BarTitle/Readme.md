@@ -3,7 +3,7 @@ Used to display a title in the Cozy Bar.
 ### Usage
 
 ```jsx static
-import { useBreakpoints } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import useBreakpoints from 'cozy-ui/transpiled/react/providers/Breakpoints'
 
 const MyPage = () => {
   const { isMobile } = useBreakpoints()

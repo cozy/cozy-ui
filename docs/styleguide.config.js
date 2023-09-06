@@ -169,12 +169,14 @@ module.exports = {
     },
     {
       name: 'Providers',
-      components: () => ['../react/providers/CozyTheme']
+      components: () => [
+        '../react/providers/Breakpoints',
+        '../react/providers/CozyTheme'
+      ]
     },
     {
       name: 'Hooks',
       components: () => [
-        '../react/hooks/useBreakpoints/index.jsx',
         '../react/hooks/useBrowserOffline.jsx',
         '../react/hooks/useConfirmExit/index.jsx',
         '../react/hooks/useCycle.jsx',

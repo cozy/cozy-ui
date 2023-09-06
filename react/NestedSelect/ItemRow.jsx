@@ -7,7 +7,7 @@ import Divider from '../Divider'
 import ListItem from '../ListItem'
 import ListItemIcon from '../ListItemIcon'
 import Radio from '../Radios'
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
 import Typography from '../Typography'
 
 const infoStyle = { color: 'var(--secondaryTextColor)' }

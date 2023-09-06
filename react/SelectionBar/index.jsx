@@ -8,7 +8,7 @@ import { useI18n } from '../I18n'
 import Icon from '../Icon'
 import IconButton from '../IconButton'
 import CrossIcon from '../Icons/Cross'
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
 
 import styles from './styles.styl'
 import SelectionBarAction from './SelectionBarAction'

@@ -1,7 +1,7 @@
 ```jsx
 import Tabs from 'cozy-ui/transpiled/react/Tabs'
 import Tab from 'cozy-ui/transpiled/react/Tab'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Variants from 'cozy-ui/docs/components/Variants'
 
 initialState = { value: 0 }
@@ -41,7 +41,7 @@ const initialVariants = [{ narrowed: false, segmented: false }]
 ```jsx
 import Tabs from 'cozy-ui/transpiled/react/Tabs'
 import Tab from 'cozy-ui/transpiled/react/Tab'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Variants from 'cozy-ui/docs/components/Variants'
 
 initialState = { value: 0 }

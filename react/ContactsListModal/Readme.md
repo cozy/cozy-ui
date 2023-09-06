@@ -24,7 +24,7 @@ client.registerPlugin(RealtimePlugin)
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import ContactsListModal from 'cozy-ui/transpiled/react/ContactsListModal'
 import mockClient from 'cozy-ui/transpiled/react/ContactsListModal/mockClient'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import { I18nContext } from 'cozy-ui/transpiled/react/I18n'
 
 initialState = { opened: isTesting() }

@@ -8,7 +8,7 @@ will make sure that even your custom Dialogs will behave as CozyDialogs.
 ```jsx
 import Dialog, { DialogTitle, DialogActions } from 'cozy-ui/transpiled/react/Dialog'
 import { DialogBackButton, DialogCloseButton, useCozyDialog } from 'cozy-ui/transpiled/react/CozyDialogs'
-import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import useBreakpoints from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import DemoProvider from 'cozy-ui/transpiled/react/providers/DemoProvider'
 import Alerter from 'cozy-ui/transpiled/react/deprecated/Alerter'
 

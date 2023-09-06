@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Typography from '../Typography'
 import Icon from '../Icon'
 import RightIcon from '../Icons/Right'
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
 
 import styles from './styles.styl'
 
