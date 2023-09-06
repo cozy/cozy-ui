@@ -15,7 +15,7 @@ import Portal from '@material-ui/core/Portal'
 
 import { getFlagshipMetadata } from 'cozy-device-helper'
 
-import CozyTheme, { useCozyTheme } from '../CozyTheme'
+import CozyTheme, { useCozyTheme } from '../providers/CozyTheme'
 import Stack from '../Stack'
 import Paper from '../Paper'
 import BackdropOrFragment from './BackdropOrFragment'

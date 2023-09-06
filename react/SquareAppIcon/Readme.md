@@ -6,7 +6,7 @@ import Grid from 'cozy-ui/transpiled/react/Grid'
 import SquareAppIcon from 'cozy-ui/transpiled/react/SquareAppIcon'
 import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
 import Icon from 'cozy-ui/transpiled/react/Icon'
-import { useCozyTheme } from 'cozy-ui/transpiled/react/CozyTheme'
+import { useCozyTheme } from 'cozy-ui/transpiled/react/providers/CozyTheme'
 import cloudWallpaper from '../../docs/cloud-wallpaper.jpg'
 import Button from 'cozy-ui/transpiled/react/Buttons'
 

@@ -4,7 +4,6 @@
 import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
 import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
-import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
 
 ;
 

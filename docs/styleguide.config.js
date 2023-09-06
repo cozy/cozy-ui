@@ -149,7 +149,6 @@ module.exports = {
         '../react/ContactPicker',
         '../react/CozyDialogs',
         '../react/CozyDialogs/SpecificDialogs',
-        '../react/CozyTheme',
         '../react/FileImageLoader',
         '../react/FilePicker',
         '../react/HistoryRow',
@@ -167,6 +166,10 @@ module.exports = {
         '../react/UploadQueue',
         '../react/Viewer'
       ]
+    },
+    {
+      name: 'Providers',
+      components: () => ['../react/providers/CozyTheme']
     },
     {
       name: 'Hooks',

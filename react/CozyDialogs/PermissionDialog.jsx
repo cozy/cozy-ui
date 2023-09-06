@@ -2,7 +2,7 @@ import React from 'react'
 import cx from 'classnames'
 
 import { makeStyles } from '../styles'
-import CozyTheme from '../CozyTheme'
+import CozyTheme from '../providers/CozyTheme'
 import ConfirmDialog from './ConfirmDialog'
 import PropTypes from 'prop-types'
 import Icon from '../Icon'

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Input from '@material-ui/core/Input'
 
-import CozyTheme from '../CozyTheme'
+import CozyTheme from '../providers/CozyTheme'
 import Icon from '../Icon'
 import PreviousIcon from '../Icons/Previous'
 import Paper from '../Paper'

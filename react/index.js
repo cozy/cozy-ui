@@ -94,7 +94,7 @@ export {
 export { default as BarContextProvider } from './BarContextProvider'
 export { default as BarTitle } from './BarTitle'
 export { default as UploadQueue } from './UploadQueue'
-export { default as CozyTheme } from './CozyTheme'
+export { default as CozyTheme } from './providers/CozyTheme'
 export { default as Paper } from './Paper'
 export { default as ProgressionBanner } from './ProgressionBanner'
 export { default as Fab, ExtendableFab } from './Fab'
