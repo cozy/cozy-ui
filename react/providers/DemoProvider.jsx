@@ -3,7 +3,7 @@ import React from 'react'
 import { CozyProvider } from 'cozy-client'
 
 import { BreakpointsProvider } from '../hooks/useBreakpoints'
-import CozyTheme from '../CozyTheme'
+import CozyTheme from './CozyTheme'
 import { I18nContext } from '../I18n'
 
 const defaultClient = {

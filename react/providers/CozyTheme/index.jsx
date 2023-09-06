@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import log from 'cozy-logger'
 
-import MuiCozyTheme from '../MuiCozyTheme'
+import MuiCozyTheme from '../../MuiCozyTheme'
 
 export const CozyThemeContext = createContext()
 

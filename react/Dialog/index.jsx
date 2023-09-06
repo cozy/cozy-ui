@@ -3,7 +3,7 @@ import { RemoveScroll } from 'react-remove-scroll'
 import { default as MUIDialog } from '@material-ui/core/Dialog'
 
 import useBreakpoints from '../hooks/useBreakpoints'
-import { useCozyTheme } from '../CozyTheme'
+import { useCozyTheme } from '../providers/CozyTheme'
 import { useDialogEffects } from './DialogEffects'
 
 const Dialog = props => {

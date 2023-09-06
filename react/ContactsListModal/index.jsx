@@ -5,7 +5,7 @@ import cx from 'classnames'
 import { Q, fetchPolicies, useClient, useQuery } from 'cozy-client'
 
 import { DialogTitle, DialogContent } from '../Dialog'
-import CozyTheme from '../CozyTheme'
+import CozyTheme from '../providers/CozyTheme'
 import {
   TopAnchoredDialog,
   DialogCloseButton,

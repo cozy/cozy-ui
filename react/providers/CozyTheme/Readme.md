@@ -8,7 +8,7 @@ The inverted theme is not supported for several components but the work
 [is in progress](https://github.com/cozy/cozy-ui/issues/1692).
 
 ```jsx
-import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
+import CozyTheme from 'cozy-ui/transpiled/react/providers/CozyTheme'
 import Buttons from 'cozy-ui/transpiled/react/Buttons'
 import TextField from 'cozy-ui/transpiled/react/TextField'
 import BarButton from 'cozy-ui/transpiled/react/BarButton'
