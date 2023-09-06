@@ -1,6 +1,6 @@
-import React from 'react'
+import CozyClient from 'cozy-client'
+
 import contacts from '../ContactsList/_mockContacts.json'
-import CozyClient, { CozyProvider } from 'cozy-client'
 
 const mockClient = new CozyClient({
   uri: 'http://cozy.tools:8080',
@@ -44,8 +44,4 @@ mockClient.plugins = {
 
 mockClient.save = () => ({ data: contacts[0] })
 
-const Wrapper = ({ children }) => {
-  return <CozyProvider client={mockClient}>{children}</CozyProvider>
-}
-
-export default Wrapper
+export default mockClient

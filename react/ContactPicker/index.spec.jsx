@@ -1,31 +1,14 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 
-import { I18nContext } from '../I18n'
-import DemoProvider from '../ContactsListModal/DemoProvider'
-import { BreakpointsProvider } from '../hooks/useBreakpoints'
+import DemoProvider from '../providers/DemoProvider'
+import mockClient from '../ContactsListModal/mockClient'
 import contacts from '../ContactsList/_mockContacts.json'
 
 import ContactPicker from '.'
 
 const Wrapper = ({ children }) => {
-  const lang = localStorage.getItem('lang') || 'en'
-
-  return (
-    <DemoProvider>
-      <BreakpointsProvider>
-        <I18nContext.Provider
-          value={{
-            t: x => x,
-            f: () => '01 Jan. 2022',
-            lang
-          }}
-        >
-          {children}
-        </I18nContext.Provider>
-      </BreakpointsProvider>
-    </DemoProvider>
-  )
+  return <DemoProvider client={mockClient}>{children}</DemoProvider>
 }
 
 it('should show a contacts list modal when clicking the control', () => {

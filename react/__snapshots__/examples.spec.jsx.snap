@@ -2247,7 +2247,11 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
 </div>"
 `;
 
-exports[`ContactsListModal should render examples: ContactsListModal 1`] = `"<div data-testid=\\"mountNode\\"><button type=\\"button\\">Open contacts list</button></div>"`;
+exports[`ContactsListModal should render examples: ContactsListModal 1`] = `
+"<div data-testid=\\"mountNode\\">
+  <div class=\\"CozyTheme--normal\\"><button type=\\"button\\">Open contacts list</button></div>
+</div>"
+`;
 
 exports[`DateMonthPicker should render examples: DateMonthPicker 1`] = `
 "<div data-testid=\\"mountNode\\">
@@ -2264,166 +2268,170 @@ exports[`DateMonthPicker should render examples: DateMonthPicker 1`] = `
 </div>"
 `;
 
-exports[`Dialog should render examples: Dialog 1`] = `"<div data-testid=\\"mountNode\\"><button>Toggle modal</button></div>"`;
+exports[`Dialog should render examples: Dialog 1`] = `
+"<div data-testid=\\"mountNode\\"><button>Toggle modal</button>
+  <div class=\\"CozyTheme--normal\\"></div>
+</div>"
+`;
 
 exports[`DropdownText should render examples: DropdownText 1`] = `
 "<div data-testid=\\"mountNode\\">
   <div class=\\"MuiGrid-root MuiGrid-container\\">
     <div class=\\"MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6\\">Default <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-478\\">
-          <h1 class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-479 MuiTypography-h1 MuiTypography-colorTextPrimary\\">h1</h1>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-480 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"24\\" height=\\"24\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-500\\">
+          <h1 class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-501 MuiTypography-h1 MuiTypography-colorTextPrimary\\">h1</h1>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-502 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"24\\" height=\\"24\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
       </div>
       <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-481\\">
-          <h2 class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-482 MuiTypography-h2 MuiTypography-colorTextPrimary\\">h2</h2>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-483 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"17\\" height=\\"17\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-503\\">
+          <h2 class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-504 MuiTypography-h2 MuiTypography-colorTextPrimary\\">h2</h2>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-505 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"17\\" height=\\"17\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
       </div>
       <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-484\\">
-          <h3 class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-485 MuiTypography-h3 MuiTypography-colorTextPrimary\\">h3</h3>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-486 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"15\\" height=\\"15\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-506\\">
+          <h3 class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-507 MuiTypography-h3 MuiTypography-colorTextPrimary\\">h3</h3>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-508 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"15\\" height=\\"15\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
       </div>
       <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-487\\">
-          <h4 class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-488 MuiTypography-h4 MuiTypography-colorTextPrimary\\">h4</h4>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-489 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"14\\" height=\\"14\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-509\\">
+          <h4 class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-510 MuiTypography-h4 MuiTypography-colorTextPrimary\\">h4</h4>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-511 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"14\\" height=\\"14\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
       </div>
       <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-490\\">
-          <h5 class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-491 MuiTypography-h5 MuiTypography-colorTextPrimary\\">h5</h5>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-492 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"13\\" height=\\"13\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-512\\">
+          <h5 class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-513 MuiTypography-h5 MuiTypography-colorTextPrimary\\">h5</h5>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-514 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"13\\" height=\\"13\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
       </div>
       <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-493\\">
-          <h6 class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-494 MuiTypography-subtitle1 MuiTypography-colorTextPrimary\\">subtitle1</h6>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-495 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"11\\" height=\\"11\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-515\\">
+          <h6 class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-516 MuiTypography-subtitle1 MuiTypography-colorTextPrimary\\">subtitle1</h6>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-517 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"11\\" height=\\"11\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
       </div>
       <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-496\\">
-          <h6 class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-497 MuiTypography-subtitle2 MuiTypography-colorTextPrimary\\">subtitle2</h6>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-498 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"10\\" height=\\"10\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-518\\">
+          <h6 class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-519 MuiTypography-subtitle2 MuiTypography-colorTextPrimary\\">subtitle2</h6>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-520 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"10\\" height=\\"10\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
       </div>
       <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-499\\">
-          <p class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-500 MuiTypography-body1 MuiTypography-colorTextPrimary\\">body1</p>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-501 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-521\\">
+          <p class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-522 MuiTypography-body1 MuiTypography-colorTextPrimary\\">body1</p>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-523 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
       </div>
       <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-502\\">
-          <p class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-503 MuiTypography-body2 MuiTypography-colorTextPrimary\\">body2</p>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-504 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"11\\" height=\\"11\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-524\\">
+          <p class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-525 MuiTypography-body2 MuiTypography-colorTextPrimary\\">body2</p>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-526 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"11\\" height=\\"11\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
       </div>
       <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-505\\"><span class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-506 MuiTypography-caption MuiTypography-colorTextSecondary\\">caption</span>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-507 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"10\\" height=\\"10\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-527\\"><span class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-528 MuiTypography-caption MuiTypography-colorTextSecondary\\">caption</span>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-529 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"10\\" height=\\"10\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
       </div>
     </div>
     <div class=\\"MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6\\">Disabled <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-508\\">
-          <h1 class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-509 MuiTypography-h1 MuiTypography-colorTextPrimary\\">h1</h1>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-510 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"24\\" height=\\"24\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-530\\">
+          <h1 class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-531 MuiTypography-h1 MuiTypography-colorTextPrimary\\">h1</h1>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-532 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"24\\" height=\\"24\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
       </div>
       <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-511\\">
-          <h2 class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-512 MuiTypography-h2 MuiTypography-colorTextPrimary\\">h2</h2>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-513 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"17\\" height=\\"17\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-533\\">
+          <h2 class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-534 MuiTypography-h2 MuiTypography-colorTextPrimary\\">h2</h2>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-535 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"17\\" height=\\"17\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
       </div>
       <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-514\\">
-          <h3 class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-515 MuiTypography-h3 MuiTypography-colorTextPrimary\\">h3</h3>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-516 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"15\\" height=\\"15\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-536\\">
+          <h3 class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-537 MuiTypography-h3 MuiTypography-colorTextPrimary\\">h3</h3>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-538 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"15\\" height=\\"15\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
       </div>
       <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-517\\">
-          <h4 class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-518 MuiTypography-h4 MuiTypography-colorTextPrimary\\">h4</h4>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-519 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"14\\" height=\\"14\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-539\\">
+          <h4 class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-540 MuiTypography-h4 MuiTypography-colorTextPrimary\\">h4</h4>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-541 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"14\\" height=\\"14\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
       </div>
       <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-520\\">
-          <h5 class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-521 MuiTypography-h5 MuiTypography-colorTextPrimary\\">h5</h5>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-522 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"13\\" height=\\"13\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-542\\">
+          <h5 class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-543 MuiTypography-h5 MuiTypography-colorTextPrimary\\">h5</h5>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-544 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"13\\" height=\\"13\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
       </div>
       <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-523\\">
-          <h6 class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-524 MuiTypography-subtitle1 MuiTypography-colorTextPrimary\\">subtitle1</h6>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-525 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"11\\" height=\\"11\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-545\\">
+          <h6 class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-546 MuiTypography-subtitle1 MuiTypography-colorTextPrimary\\">subtitle1</h6>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-547 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"11\\" height=\\"11\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
       </div>
       <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-526\\">
-          <h6 class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-527 MuiTypography-subtitle2 MuiTypography-colorTextPrimary\\">subtitle2</h6>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-528 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"10\\" height=\\"10\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-548\\">
+          <h6 class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-549 MuiTypography-subtitle2 MuiTypography-colorTextPrimary\\">subtitle2</h6>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-550 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"10\\" height=\\"10\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
       </div>
       <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-529\\">
-          <p class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-530 MuiTypography-body1 MuiTypography-colorTextPrimary\\">body1</p>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-531 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-551\\">
+          <p class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-552 MuiTypography-body1 MuiTypography-colorTextPrimary\\">body1</p>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-553 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
       </div>
       <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-532\\">
-          <p class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-533 MuiTypography-body2 MuiTypography-colorTextPrimary\\">body2</p>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-534 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"11\\" height=\\"11\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-554\\">
+          <p class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-555 MuiTypography-body2 MuiTypography-colorTextPrimary\\">body2</p>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-556 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"11\\" height=\\"11\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
       </div>
       <div class=\\"u-mb-1\\">
-        <div class=\\"makeStyles-container-475 makeStyles-container-535\\"><span class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-536 MuiTypography-caption MuiTypography-colorTextSecondary\\">caption</span>
-          <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-537 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"10\\" height=\\"10\\">
+        <div class=\\"makeStyles-container-497 makeStyles-container-557\\"><span class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-558 MuiTypography-caption MuiTypography-colorTextSecondary\\">caption</span>
+          <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-559 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"10\\" height=\\"10\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></p>
         </div>
@@ -2431,41 +2439,41 @@ exports[`DropdownText should render examples: DropdownText 1`] = `
     </div>
   </div>
   <div style=\\"margin-bottom: 1rem;\\">
-    <div class=\\"makeStyles-container-475 makeStyles-container-538\\">
-      <p class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-539 MuiTypography-body1 MuiTypography-colorTextPrimary\\">This is a long text without ellipsis without restrictive container</p>
-      <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-540 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
+    <div class=\\"makeStyles-container-497 makeStyles-container-560\\">
+      <p class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-561 MuiTypography-body1 MuiTypography-colorTextPrimary\\">This is a long text without ellipsis without restrictive container</p>
+      <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-562 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
           <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
         </svg></p>
     </div>
   </div>
   <div style=\\"width: 150px; margin-bottom: 1rem;\\">
-    <div class=\\"makeStyles-container-475 makeStyles-container-541\\">
-      <p class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-542 MuiTypography-body1 MuiTypography-colorTextPrimary\\">This is a long text without ellipsis inside a restrictive container</p>
-      <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-543 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
+    <div class=\\"makeStyles-container-497 makeStyles-container-563\\">
+      <p class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-564 MuiTypography-body1 MuiTypography-colorTextPrimary\\">This is a long text without ellipsis inside a restrictive container</p>
+      <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-565 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
           <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
         </svg></p>
     </div>
   </div>
   <div style=\\"width: 150px; margin-bottom: 1rem;\\">
-    <div class=\\"makeStyles-container-475 makeStyles-container-544\\">
-      <p class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-545 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap\\">This is a long text with ellipsis inside a container</p>
-      <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-546 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
+    <div class=\\"makeStyles-container-497 makeStyles-container-566\\">
+      <p class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-567 MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-noWrap\\">This is a long text with ellipsis inside a container</p>
+      <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-568 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
           <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
         </svg></p>
     </div>
   </div>
   <div style=\\"width: 100%; margin-bottom: 1rem;\\">
-    <div class=\\"makeStyles-container-475 makeStyles-container-547\\">
-      <p class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-548 MuiTypography-body1 MuiTypography-colorTextPrimary\\">Text with<br>breaking spaces<br>inside content</p>
-      <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-549 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
+    <div class=\\"makeStyles-container-497 makeStyles-container-569\\">
+      <p class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-570 MuiTypography-body1 MuiTypography-colorTextPrimary\\">Text with<br>breaking spaces<br>inside content</p>
+      <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-571 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
           <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
         </svg></p>
     </div>
   </div>
   <div style=\\"width: 100%;\\">
-    <div class=\\"makeStyles-container-475 makeStyles-container-550\\">
-      <p class=\\"MuiTypography-root makeStyles-typography-476 makeStyles-typography-551 MuiTypography-body1 MuiTypography-colorTextPrimary\\">Space between text and icon</p>
-      <p class=\\"MuiTypography-root makeStyles-endIcon-477 makeStyles-endIcon-552 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
+    <div class=\\"makeStyles-container-497 makeStyles-container-572\\">
+      <p class=\\"MuiTypography-root makeStyles-typography-498 makeStyles-typography-573 MuiTypography-body1 MuiTypography-colorTextPrimary\\">Space between text and icon</p>
+      <p class=\\"MuiTypography-root makeStyles-endIcon-499 makeStyles-endIcon-574 MuiTypography-body1 MuiTypography-colorTextPrimary\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" width=\\"12\\" height=\\"12\\">
           <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
         </svg></p>
     </div>
@@ -2811,11 +2819,13 @@ exports[`Labs/CollectionField should render examples: Labs/CollectionField 1`] =
   <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">INLINE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">EMPTYDATA</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">NULLDATA</span></label>
   </div>
-  <div class=\\"styles__o-field___3n5HM\\"><label class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">Contacts</label>
-    <div class=\\"styles__Stack--m___1tSpV\\">
-      <div class=\\"styles__Stack--s___22WMg\\">
-        <div class=\\"styles__CollectionField__row___Z7bbf\\"><button type=\\"button\\" class=\\"styles__SelectControl___2OxoO\\">isabelle.durand@cozycloud.cc</button><button type=\\"button\\" class=\\"styles__c-btn___3kXsk styles__c-btn--secondary___1hLVM styles__c-btn--center___Nny0n styles__c-btn--round___35GfW\\" title=\\"Remove this contact\\"><span><svg viewBox=\\"0 0 12 12\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"16\\" height=\\"16\\"><path d=\\"M6 4.59l2.3-2.3a1 1 0 011.4 1.42L7.42 6l2.3 2.3A1 1 0 118.3 9.7L6 7.42l-2.3 2.3A1 1 0 112.3 8.3L4.58 6l-2.3-2.3A1 1 0 013.7 2.3L6 4.58z\\"></path></svg><span class=\\"u-visuallyhidden\\">Remove this contact</span></span></button></div>
-      </div><button type=\\"button\\" class=\\"styles__c-btn___3kXsk styles__c-btn--text___33vmu styles__c-btn--center___Nny0n styles__CollectionField__addBtn___Z0FO-\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__CollectionField__addBtnIcon___1hA5b styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg><span>Add a contact</span></span></button>
+  <div class=\\"CozyTheme--normal\\">
+    <div class=\\"styles__o-field___3n5HM\\"><label class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">Contacts</label>
+      <div class=\\"styles__Stack--m___1tSpV\\">
+        <div class=\\"styles__Stack--s___22WMg\\">
+          <div class=\\"styles__CollectionField__row___Z7bbf\\"><button type=\\"button\\" class=\\"styles__SelectControl___2OxoO\\">isabelle.durand@cozycloud.cc</button><button type=\\"button\\" class=\\"styles__c-btn___3kXsk styles__c-btn--secondary___1hLVM styles__c-btn--center___Nny0n styles__c-btn--round___35GfW\\" title=\\"Remove this contact\\"><span><svg viewBox=\\"0 0 12 12\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--slateGrey);\\" width=\\"16\\" height=\\"16\\"><path d=\\"M6 4.59l2.3-2.3a1 1 0 011.4 1.42L7.42 6l2.3 2.3A1 1 0 118.3 9.7L6 7.42l-2.3 2.3A1 1 0 112.3 8.3L4.58 6l-2.3-2.3A1 1 0 013.7 2.3L6 4.58z\\"></path></svg><span class=\\"u-visuallyhidden\\">Remove this contact</span></span></button></div>
+        </div><button type=\\"button\\" class=\\"styles__c-btn___3kXsk styles__c-btn--text___33vmu styles__c-btn--center___Nny0n styles__CollectionField__addBtn___Z0FO-\\"><span><svg viewBox=\\"0 0 16 16\\" class=\\"styles__CollectionField__addBtnIcon___1hA5b styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\"><defs><path id=\\"plus_svg__a\\" d=\\"M7 0h2v7h7v2H9v7H7V9H0V7h7z\\"></path></defs><use xlink:href=\\"#plus_svg__a\\" fill-rule=\\"evenodd\\"></use></svg><span>Add a contact</span></span></button>
+      </div>
     </div>
   </div>
 </div>"
@@ -2856,42 +2866,42 @@ exports[`Paper should render examples: Paper 1`] = `
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">SQUARE</span></label>
   </div>
   <div class=\\"styles__Stack--m___1tSpV\\">
-    <div class=\\"MuiPaper-root PaperExample-root-560 MuiPaper-elevation0\\">
+    <div class=\\"MuiPaper-root PaperExample-root-582 MuiPaper-elevation0\\">
       <h3 class=\\"MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary\\">This is a sheet of paper</h3>
       <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
         <h6 class=\\"MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary\\">elevation 0</h6>
       </div>
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Paper can be used to build surface or other elements for your application.</p>
     </div>
-    <div class=\\"MuiPaper-root PaperExample-root-560 MuiPaper-elevation1\\">
+    <div class=\\"MuiPaper-root PaperExample-root-582 MuiPaper-elevation1\\">
       <h3 class=\\"MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary\\">This is a sheet of paper</h3>
       <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
         <h6 class=\\"MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary\\">elevation 1</h6>
       </div>
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Paper can be used to build surface or other elements for your application.</p>
     </div>
-    <div class=\\"MuiPaper-root PaperExample-root-560 MuiPaper-elevation4\\">
+    <div class=\\"MuiPaper-root PaperExample-root-582 MuiPaper-elevation4\\">
       <h3 class=\\"MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary\\">This is a sheet of paper</h3>
       <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
         <h6 class=\\"MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary\\">elevation 4</h6>
       </div>
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Paper can be used to build surface or other elements for your application.</p>
     </div>
-    <div class=\\"MuiPaper-root PaperExample-root-560 MuiPaper-elevation16\\">
+    <div class=\\"MuiPaper-root PaperExample-root-582 MuiPaper-elevation16\\">
       <h3 class=\\"MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary\\">This is a sheet of paper</h3>
       <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
         <h6 class=\\"MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary\\">elevation 16</h6>
       </div>
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Paper can be used to build surface or other elements for your application.</p>
     </div>
-    <div class=\\"MuiPaper-root PaperExample-root-560 MuiPaper-elevation24\\">
+    <div class=\\"MuiPaper-root PaperExample-root-582 MuiPaper-elevation24\\">
       <h3 class=\\"MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary\\">This is a sheet of paper</h3>
       <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
         <h6 class=\\"MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary\\">elevation 24</h6>
       </div>
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary\\">Paper can be used to build surface or other elements for your application.</p>
     </div>
-    <div class=\\"MuiPaper-root PaperExample-root-560\\">
+    <div class=\\"MuiPaper-root PaperExample-root-582\\">
       <h3 class=\\"MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary\\">This is a sheet of paper</h3>
       <div style=\\"position: absolute; right: 1rem; top: 1rem;\\">
         <h6 class=\\"MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorTextPrimary\\">elevation 25</h6>
@@ -2910,20 +2920,20 @@ exports[`PieChart should render examples: PieChart 1`] = `
 "<div data-testid=\\"mountNode\\">
   <div class=\\"MuiGrid-root MuiGrid-container\\">
     <div class=\\"MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6\\">
-      <div class=\\"makeStyles-container-561\\">
-        <div class=\\"makeStyles-background-562 makeStyles-background-565\\"></div><canvas role=\\"img\\" height=\\"150\\" width=\\"300\\"></canvas>
-        <div class=\\"makeStyles-centerText-563\\">
-          <h3 class=\\"MuiTypography-root makeStyles-typography-564 makeStyles-typography-566 MuiTypography-h3 MuiTypography-colorTextPrimary\\">60 %</h3>
-          <p class=\\"MuiTypography-root makeStyles-typography-564 makeStyles-typography-566 MuiTypography-body2 MuiTypography-colorTextPrimary\\">of the total</p>
+      <div class=\\"makeStyles-container-583\\">
+        <div class=\\"makeStyles-background-584 makeStyles-background-587\\"></div><canvas role=\\"img\\" height=\\"150\\" width=\\"300\\"></canvas>
+        <div class=\\"makeStyles-centerText-585\\">
+          <h3 class=\\"MuiTypography-root makeStyles-typography-586 makeStyles-typography-588 MuiTypography-h3 MuiTypography-colorTextPrimary\\">60 %</h3>
+          <p class=\\"MuiTypography-root makeStyles-typography-586 makeStyles-typography-588 MuiTypography-body2 MuiTypography-colorTextPrimary\\">of the total</p>
         </div>
       </div>
     </div>
     <div class=\\"MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6\\">
-      <div class=\\"makeStyles-container-561\\">
-        <div class=\\"makeStyles-background-562 makeStyles-background-567\\"></div><canvas role=\\"img\\" height=\\"150\\" width=\\"300\\"></canvas>
-        <div class=\\"makeStyles-centerText-563\\">
-          <h3 class=\\"MuiTypography-root makeStyles-typography-564 makeStyles-typography-568 MuiTypography-h3 MuiTypography-colorTextPrimary\\">105 €</h3>
-          <p class=\\"MuiTypography-root makeStyles-typography-564 makeStyles-typography-568 MuiTypography-body2 MuiTypography-colorTextPrimary\\">on the period</p>
+      <div class=\\"makeStyles-container-583\\">
+        <div class=\\"makeStyles-background-584 makeStyles-background-589\\"></div><canvas role=\\"img\\" height=\\"150\\" width=\\"300\\"></canvas>
+        <div class=\\"makeStyles-centerText-585\\">
+          <h3 class=\\"MuiTypography-root makeStyles-typography-586 makeStyles-typography-590 MuiTypography-h3 MuiTypography-colorTextPrimary\\">105 €</h3>
+          <p class=\\"MuiTypography-root makeStyles-typography-586 makeStyles-typography-590 MuiTypography-body2 MuiTypography-colorTextPrimary\\">on the period</p>
         </div>
       </div>
     </div>
@@ -2951,7 +2961,7 @@ exports[`ProgressionBanner should render examples: ProgressionBanner 1`] = `
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">WITHVALUE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">PROGRESSBAR</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">WITHBUTTON</span></label>
   </div>
   <div class=\\"MuiPaper-root MuiPaper-elevation0\\">
-    <div class=\\"styles__c-banner-wrapper___3KlaG Component-banner-569\\">
+    <div class=\\"styles__c-banner-wrapper___3KlaG Component-banner-591\\">
       <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-justify-content-xs-space-between\\">
         <div class=\\"MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-wrap-xs-nowrap MuiGrid-align-items-xs-center MuiGrid-grid-xs-12 MuiGrid-grid-lg-8\\">
           <div class=\\"MuiGrid-root MuiGrid-item\\">
@@ -2970,7 +2980,7 @@ exports[`ProgressionBanner should render examples: ProgressionBanner 1`] = `
     </div>
   </div>
   <hr class=\\"MuiDivider-root\\">
-  <div class=\\"MuiLinearProgress-root MuiLinearProgress-colorPrimary Component-progress-570 MuiLinearProgress-indeterminate\\" role=\\"progressbar\\">
+  <div class=\\"MuiLinearProgress-root MuiLinearProgress-colorPrimary Component-progress-592 MuiLinearProgress-indeterminate\\" role=\\"progressbar\\">
     <div class=\\"MuiLinearProgress-bar MuiLinearProgress-barColorPrimary MuiLinearProgress-bar1Indeterminate\\"></div>
     <div class=\\"MuiLinearProgress-bar MuiLinearProgress-bar2Indeterminate MuiLinearProgress-barColorPrimary\\"></div>
   </div>
@@ -3378,7 +3388,11 @@ exports[`SelectBox should render examples: SelectBox 13`] = `
 </div>"
 `;
 
-exports[`SelectBox should render examples: SelectBox 14`] = `"<div data-testid=\\"mountNode\\"><button>Toggle modal</button></div>"`;
+exports[`SelectBox should render examples: SelectBox 14`] = `
+"<div data-testid=\\"mountNode\\"><button>Toggle modal</button>
+  <div class=\\"CozyTheme--normal\\"></div>
+</div>"
+`;
 
 exports[`Sidebar should render examples: Sidebar 1`] = `
 "<div data-testid=\\"mountNode\\">
@@ -3481,13 +3495,13 @@ exports[`Spinner should render examples: Spinner 5`] = `
 exports[`Switch should render examples: Switch 1`] = `
 "<div data-testid=\\"mountNode\\">
   <div class=\\"styles__Stack--xs___2R5lW\\">
-    <div class=\\"MuiBox-root MuiBox-root-572\\">
+    <div class=\\"MuiBox-root MuiBox-root-594\\">
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-displayInline\\">primary</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-checked-2 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
-    <div class=\\"MuiBox-root MuiBox-root-573\\">
+    <div class=\\"MuiBox-root MuiBox-root-595\\">
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-displayInline\\">secondary</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase MuiSwitch-colorSecondary PrivateSwitchBase-checked-2 Mui-checked\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\" checked=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
-    <div class=\\"MuiBox-root MuiBox-root-574\\">
+    <div class=\\"MuiBox-root MuiBox-root-596\\">
       <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextPrimary MuiTypography-displayInline\\">default</p><span class=\\"MuiSwitch-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4 MuiSwitch-input\\" type=\\"checkbox\\" value=\\"\\"><span class=\\"MuiSwitch-thumb\\"></span></span></span><span class=\\"MuiSwitch-track\\"></span></span>
     </div>
   </div>

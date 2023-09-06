@@ -3,6 +3,7 @@ import React from 'react'
 import { CozyProvider } from 'cozy-client'
 
 import { BreakpointsProvider } from '../hooks/useBreakpoints'
+import CozyTheme from '../CozyTheme'
 import { I18nContext } from '../I18n'
 
 const defaultClient = {
@@ -21,7 +22,7 @@ const defaultClient = {
   })
 }
 
-const DemoProvider = ({ client, children }) => {
+const DemoProvider = ({ client, theme, children }) => {
   const lang = localStorage.getItem('lang') || 'en'
 
   return (
@@ -34,7 +35,7 @@ const DemoProvider = ({ client, children }) => {
             lang
           }}
         >
-          {children}
+          <CozyTheme variant={theme}>{children}</CozyTheme>
         </I18nContext.Provider>
       </BreakpointsProvider>
     </CozyProvider>

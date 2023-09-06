@@ -63,7 +63,7 @@ import {
   PermissionDialog
 } from  'cozy-ui/transpiled/react/CozyDialogs'
 
-import DemoProvider from 'cozy-ui/transpiled/react/providers/DemoProvider'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 
 import Button from 'cozy-ui/transpiled/react/Buttons'
 import Alerter from 'cozy-ui/transpiled/react/deprecated/Alerter'
@@ -394,7 +394,7 @@ const setFlagshipVars = () => {
 ```jsx
 import cx from 'classnames'
 import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
-import DemoProvider from 'cozy-ui/transpiled/react/providers/DemoProvider'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 
 import { Dialog } from  'cozy-ui/transpiled/react/CozyDialogs'
 import Button from  'cozy-ui/transpiled/react/Buttons'
