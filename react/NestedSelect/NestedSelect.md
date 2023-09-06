@@ -1,14 +1,14 @@
 ```jsx
 import { useState } from 'react'
-import Button from '../deprecated/Button'
-import Circle from '../Circle'
-import NestedSelectModal from './Modal'
-import ListItem from '../ListItem'
-import ListItemText from '../ListItemText'
-import Checkbox from '../Checkbox'
-import useBreakpoints from '../hooks/useBreakpoints'
-import DemoProvider from '../providers/DemoProvider'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
+import Button from 'cozy-ui/transpiled/react/Buttons'
+import Circle from 'cozy-ui/transpiled/react/Circle'
+import ListItem from 'cozy-ui/transpiled/react/ListItem'
+import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
+import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
 import palette from 'cozy-ui/transpiled/react/palette'
+import NestedSelectModal from 'cozy-ui/transpiled/react/NestedSelect/Modal'
+import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 
 const Image = ({ letter }) => (
   <Circle backgroundColor={palette.melon}>

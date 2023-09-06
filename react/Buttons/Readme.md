@@ -9,7 +9,6 @@ import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
-import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
 
 const variants = ['primary', 'secondary', 'ghost', 'text']
 const propsArr = [{}, { disabled: true }, { busy: true }]
@@ -39,7 +38,6 @@ import Button from 'cozy-ui/transpiled/react/Buttons'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
-import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
 
 const variants = ['primary', 'secondary', 'ghost', 'text']
 const sizes = ['small', 'medium', 'large']
@@ -69,7 +67,6 @@ import Button from 'cozy-ui/transpiled/react/Buttons'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
-import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
 import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 
@@ -119,7 +116,6 @@ import Button from 'cozy-ui/transpiled/react/Buttons'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
-import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
 import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 
@@ -159,7 +155,6 @@ import Button from 'cozy-ui/transpiled/react/Buttons'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
-import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
 
 const variants = ['primary', 'secondary', 'ghost', 'text']
 const colors = ['success', 'error', 'warning', 'info']
@@ -189,7 +184,6 @@ import Button from 'cozy-ui/transpiled/react/Buttons'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
-import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
 
 const variants = ['primary', 'secondary', 'ghost', 'text']
 const colors = ['success', 'error', 'warning', 'info']
@@ -219,7 +213,6 @@ import Button from 'cozy-ui/transpiled/react/Buttons'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
-import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
 
 const variants = ['primary', 'secondary', 'ghost', 'text']
 const colors = ['success', 'error', 'warning', 'info']

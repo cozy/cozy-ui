@@ -6,7 +6,8 @@ the ContactPicker to remove one click.
 ```jsx
 import CollectionField from 'cozy-ui/transpiled/react/Labs/CollectionField'
 import ContactPicker from 'cozy-ui/transpiled/react/ContactPicker'
-import DemoProvider from 'cozy-ui/transpiled/react/ContactsListModal/DemoProvider'
+import mockClient from 'cozy-ui/transpiled/react/ContactsListModal/mockClient'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import contacts from '../../ContactsList/_mockContacts.json'
 import Variants from 'cozy-ui/docs/components/Variants'
 
@@ -22,7 +23,7 @@ const initialVariants = [{
 
 <Variants initialVariants={initialVariants} screenshotAllVariants>
   {variant => (
-    <DemoProvider>
+    <DemoProvider client={mockClient}>
       <CollectionField
         values={variant.emptyData ? [] : variant.nullData ? [null] : state.contacts}
         component={ContactPicker}

@@ -169,7 +169,8 @@ const options = [
 
 ```jsx
 import Field from 'cozy-ui/transpiled/react/Field'
-import DemoProvider from 'cozy-ui/transpiled/react/ContactsListModal/DemoProvider'
+import mockClient from 'cozy-ui/transpiled/react/ContactsListModal/mockClient'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 
 initialState = { selectedContact: null }
@@ -177,7 +178,7 @@ initialState = { selectedContact: null }
 ;
 
 <BreakpointsProvider>
-  <DemoProvider>
+  <DemoProvider client={mockClient}>
     <form>
       <Field
         label="Contact"

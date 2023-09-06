@@ -1,13 +1,12 @@
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 
-import { CozyProvider, createMockClient } from 'cozy-client'
+import { createMockClient } from 'cozy-client'
 import { isFlagshipApp } from 'cozy-device-helper'
 import flag from 'cozy-flags'
 
-import { I18n } from '../I18n'
+import DemoProvider from '../providers/DemoProvider'
 import Paywall from './Paywall'
-import { BreakpointsProvider } from '../hooks/useBreakpoints'
 import useInstance from '../helpers/useInstance'
 
 jest.mock('../helpers/useInstance')
@@ -55,17 +54,13 @@ describe('Paywall', () => {
 
     const mockClient = createMockClient({})
     return render(
-      <CozyProvider client={mockClient}>
-        <BreakpointsProvider>
-          <I18n lang="en" dictRequire={() => {}}>
-            <Paywall
-              variant="onlyOffice"
-              onClose={onCloseSpy}
-              isPublic={isPublic}
-            />
-          </I18n>
-        </BreakpointsProvider>
-      </CozyProvider>
+      <DemoProvider client={mockClient}>
+        <Paywall
+          variant="onlyOffice"
+          onClose={onCloseSpy}
+          isPublic={isPublic}
+        />
+      </DemoProvider>
     )
   }
 
