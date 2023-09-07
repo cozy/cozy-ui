@@ -13,8 +13,6 @@ import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
 import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 import DemoProvider from 'cozy-ui/transpiled/react/providers/DemoProvider'
 import palette from 'cozy-ui/transpiled/react/palette'
-import NestedSelectModal from 'cozy-ui/transpiled/react/NestedSelect/Modal'
-import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 
 const Image = ({ letter }) => (
   <Circle backgroundColor={palette.melon}>
@@ -30,9 +28,22 @@ const letterOption = (letter, description, key) => ({
   icon: <Image letter={letter[0]} />
 })
 
+const SettingAction = ({ item, onClick }) => {
+  return (
+    <ListItemSecondaryAction>
+      <IconButton onClick={() => onClick({ item })}>
+        <Icon icon={SettingIcon} />
+      </IconButton>
+    </ListItemSecondaryAction>
+  )
+}
+
 const options = {
   children: [
-    letterOption('A', 'is for Apple'),
+    {
+      ...letterOption('A', 'is for Apple'),
+      info: 'info'
+    },
     {
       ...letterOption('B', 'is for Balloon'),
       children: [
@@ -42,13 +53,12 @@ const options = {
     },
     {
       ...letterOption('C', 'is for crayon'),
-      actions: (
-        <ListItemSecondaryAction>
-          <IconButton>
-            <Icon icon={SettingIcon} />
-          </IconButton>
-        </ListItemSecondaryAction>
-      )
+      action: {
+        Component: SettingAction,
+        props: {
+          onClick: ({ item }) => alert('click action of ' + item.title)
+        }
+      }
 
     },
     letterOption('D', 'is for Drums !'),
