@@ -11,6 +11,7 @@ import useBreakpoints from '../hooks/useBreakpoints'
 
 const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
   const { isDesktop } = useBreakpoints()
+
   return (
     <>
       <ListItem
@@ -49,6 +50,13 @@ const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
               />
             </ListItemIcon>
           )}
+
+        {radioPosition === 'right' && !!item.action && (
+          <Divider orientation="vertical" flexItem />
+        )}
+        {item.action
+          ? item.action.Component({ item, ...item.action.props })
+          : null}
       </ListItem>
       <Divider />
     </>

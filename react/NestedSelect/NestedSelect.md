@@ -1,11 +1,17 @@
 ```jsx
 import { useState } from 'react'
-import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
-import Button from 'cozy-ui/transpiled/react/Buttons'
+import Button from 'cozy-ui/transpiled/react/deprecated/Button'
 import Circle from 'cozy-ui/transpiled/react/Circle'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import SettingIcon from 'cozy-ui/transpiled/react/Icons/Setting'
+import NestedSelectModal from 'cozy-ui/transpiled/react/NestedSelect/Modal'
 import ListItem from 'cozy-ui/transpiled/react/ListItem'
+import IconButton from 'cozy-ui/transpiled/react/IconButton'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
+import ListItemSecondaryAction from 'cozy-ui/transpiled/react/ListItemSecondaryAction'
 import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
+import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import DemoProvider from 'cozy-ui/transpiled/react/providers/DemoProvider'
 import palette from 'cozy-ui/transpiled/react/palette'
 import NestedSelectModal from 'cozy-ui/transpiled/react/NestedSelect/Modal'
 import useBreakpoints from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
@@ -34,7 +40,17 @@ const options = {
         letterOption('B2')
       ]
     },
-    letterOption('C', 'is for crayon'),
+    {
+      ...letterOption('C', 'is for crayon'),
+      actions: (
+        <ListItemSecondaryAction>
+          <IconButton>
+            <Icon icon={SettingIcon} />
+          </IconButton>
+        </ListItemSecondaryAction>
+      )
+
+    },
     letterOption('D', 'is for Drums !'),
     letterOption(`E. A very long option, that should be ellipsed. ${content.ada.short}`, `Its description is also very long and will be ellipsed. ${content.ada.short}`),
     letterOption('F'),
