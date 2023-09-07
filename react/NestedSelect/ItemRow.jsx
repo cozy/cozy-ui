@@ -8,6 +8,9 @@ import ListItem from '../ListItem'
 import ListItemIcon from '../ListItemIcon'
 import Radio from '../Radios'
 import useBreakpoints from '../hooks/useBreakpoints'
+import Typography from '../Typography'
+
+const infoStyle = { color: 'var(--secondaryTextColor)' }
 
 const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
   const { isDesktop } = useBreakpoints()
@@ -40,15 +43,22 @@ const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
 
         {radioPosition === 'right' &&
           !(item.children && item.children.length > 0) && (
-            <ListItemIcon>
-              <Radio
-                readOnly
-                edge="end"
-                name={item.title}
-                value={item.title}
-                checked={!!isSelected}
-              />
-            </ListItemIcon>
+            <div className="u-flex u-flex-items-center">
+              {!!item.info && (
+                <Typography style={infoStyle} variant="body2">
+                  {item.info}
+                </Typography>
+              )}
+              <ListItemIcon>
+                <Radio
+                  readOnly
+                  edge="end"
+                  name={item.title}
+                  value={item.title}
+                  checked={!!isSelected}
+                />
+              </ListItemIcon>
+            </div>
           )}
 
         {radioPosition === 'right' && !!item.action && (
