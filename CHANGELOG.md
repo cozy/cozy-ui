@@ -1,3 +1,10 @@
+# [92.1.0](https://github.com/cozy/cozy-ui/compare/v92.0.1...v92.1.0) (2023-09-07)
+
+
+### Features
+
+* **CozyTheme:** Add error log if useCozyTheme is used outside provider ([889c92c](https://github.com/cozy/cozy-ui/commit/889c92c))
+
 ## [92.0.1](https://github.com/cozy/cozy-ui/compare/v92.0.0...v92.0.1) (2023-08-31)
 
 
