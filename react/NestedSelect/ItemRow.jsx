@@ -12,7 +12,7 @@ import Typography from '../Typography'
 
 const infoStyle = { color: 'var(--secondaryTextColor)' }
 
-const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
+const ItemRow = ({ item, onClick, isSelected, radioPosition, isLast }) => {
   const { isDesktop } = useBreakpoints()
 
   return (
@@ -68,7 +68,7 @@ const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
           ? item.action.Component({ item, ...item.action.props })
           : null}
       </ListItem>
-      <Divider />
+      {!isLast && <Divider />}
     </>
   )
 }
