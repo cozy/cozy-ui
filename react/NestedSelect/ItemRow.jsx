@@ -37,7 +37,7 @@ const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
 
         {item.children && item.children.length > 0 && (
           <ListItemIcon>
-            <Icon icon={RightIcon} />
+            <Icon icon={RightIcon} color="var(--secondaryTextColor)" />
           </ListItemIcon>
         )}
 
