@@ -112,14 +112,12 @@ class NestedSelect extends Component {
         ) : null}
         <ContentComponent>
           {canSelectParent && level > 0 ? (
-            <>
-              <ItemRow
-                radioPosition={radioPosition}
-                item={parentItem}
-                onClick={this.handleClickItem}
-                isSelected={isSelectedWithLevel(parentItem)}
-              />
-            </>
+            <ItemRow
+              radioPosition={radioPosition}
+              item={parentItem}
+              onClick={this.handleClickItem}
+              isSelected={isSelectedWithLevel(parentItem)}
+            />
           ) : null}
           {searchOptions && level === 0 && (
             <div className="u-mh-1 u-mb-half">
