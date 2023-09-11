@@ -9,6 +9,7 @@ import { Media, Bd, Img } from '../deprecated/Media'
 
 import NestedSelect from './NestedSelect'
 import styles from './styles.styl'
+import List from '../List'
 
 const NestedSelectDialogHeader = ({ onClickBack, showBack, title }) => {
   const { dialogTitleProps } = useCozyDialog({
@@ -31,7 +32,11 @@ const NestedSelectDialogHeader = ({ onClickBack, showBack, title }) => {
 }
 
 const NestedSelectDialogContent = ({ children }) => {
-  return <DialogContent className="u-p-0">{children}</DialogContent>
+  return (
+    <DialogContent className="u-p-0">
+      <List>{children}</List>
+    </DialogContent>
+  )
 }
 
 const NestedSelectModal = props => {
