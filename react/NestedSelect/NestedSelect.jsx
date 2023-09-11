@@ -138,24 +138,26 @@ class NestedSelect extends Component {
                 {searchOptions.noDataLabel}
               </Typography>
             ) : (
-              searchResult.map(item => (
+              searchResult.map((item, index) => (
                 <ItemRow
                   radioPosition={radioPosition}
                   key={item.key || item.title}
                   item={item}
                   onClick={this.handleClickItem}
                   isSelected={isSelectedWithLevel(item)}
+                  isLast={index === searchResult.length - 1}
                 />
               ))
             )
           ) : (
-            children.map(item => (
+            children.map((item, index) => (
               <ItemRow
                 radioPosition={radioPosition}
                 key={item.key || item.title}
                 item={item}
                 onClick={this.handleClickItem}
                 isSelected={isSelectedWithLevel(item)}
+                isLast={index === children.length - 1}
               />
             ))
           )}
