@@ -1,3 +1,20 @@
+# [92.2.0](https://github.com/cozy/cozy-ui/compare/v92.1.0...v92.2.0) (2023-09-11)
+
+
+### Bug Fixes
+
+* Color of RightArrow icon ([ad5cc6b](https://github.com/cozy/cozy-ui/commit/ad5cc6b))
+* **ItemRow:** In ListItem, Icon & Radio should be wrap in ListItemIcon ([6aaa10a](https://github.com/cozy/cozy-ui/commit/6aaa10a))
+* The last ItemRow must not have a Divider ([0525a4c](https://github.com/cozy/cozy-ui/commit/0525a4c))
+
+
+### Features
+
+* Add multiple icons ([b7bf028](https://github.com/cozy/cozy-ui/commit/b7bf028))
+* **ItemRow:** Add information text ([7d3207c](https://github.com/cozy/cozy-ui/commit/7d3207c))
+* **ItemRow:** Add secondary actions ([2773d91](https://github.com/cozy/cozy-ui/commit/2773d91))
+* **NestedSelect:** Wrap NestedSelect with List component ([5773308](https://github.com/cozy/cozy-ui/commit/5773308))
+
 # [92.1.0](https://github.com/cozy/cozy-ui/compare/v92.0.1...v92.1.0) (2023-09-07)
 
 
