@@ -1,3 +1,10 @@
+# [92.3.0](https://github.com/cozy/cozy-ui/compare/v92.2.0...v92.3.0) (2023-09-12)
+
+
+### Features
+
+* Add BIC number attribute ([c5e94f6](https://github.com/cozy/cozy-ui/commit/c5e94f6))
+
 # [92.2.0](https://github.com/cozy/cozy-ui/compare/v92.1.0...v92.2.0) (2023-09-11)
 
 
