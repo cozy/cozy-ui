@@ -71,6 +71,7 @@ import ClockOutline from 'cozy-ui/transpiled/react/Icons/ClockOutline'
 import Cloud from 'cozy-ui/transpiled/react/Icons/Cloud'
 import CloudHappy from 'cozy-ui/transpiled/react/Icons/CloudHappy'
 import Collect from 'cozy-ui/transpiled/react/Icons/Collect'
+import Cocktail from 'cozy-ui/transpiled/react/Icons/Cocktail'
 import Comment from 'cozy-ui/transpiled/react/Icons/Comment'
 import Company from 'cozy-ui/transpiled/react/Icons/Company'
 import Compare from 'cozy-ui/transpiled/react/Icons/Compare'
@@ -228,6 +229,7 @@ import Shield from 'cozy-ui/transpiled/react/Icons/Shield'
 import Shop from 'cozy-ui/transpiled/react/Icons/Shop'
 import Sound from 'cozy-ui/transpiled/react/Icons/Sound'
 import Spinner from 'cozy-ui/transpiled/react/Icons/Spinner'
+import SportBag from 'cozy-ui/transpiled/react/Icons/SportBag'
 import Stack from 'cozy-ui/transpiled/react/Icons/Stack'
 import Star from 'cozy-ui/transpiled/react/Icons/Star'
 import Stats from 'cozy-ui/transpiled/react/Icons/Stats'
@@ -258,6 +260,7 @@ import WalletNew from 'cozy-ui/transpiled/react/Icons/WalletNew'
 import Warn from 'cozy-ui/transpiled/react/Icons/Warn'
 import Warning from 'cozy-ui/transpiled/react/Icons/Warning'
 import WarningCircle from 'cozy-ui/transpiled/react/Icons/WarningCircle'
+import Work from 'cozy-ui/transpiled/react/Icons/Work'
 import WrenchCircle from 'cozy-ui/transpiled/react/Icons/WrenchCircle'
 
 const icons = [
@@ -306,6 +309,7 @@ const icons = [
   Cloud,
   CloudHappy,
   Collect,
+  Cocktail,
   Comment,
   Company,
   Compare,
@@ -463,6 +467,7 @@ const icons = [
   Shop,
   Sound,
   Spinner,
+  SportBag,
   Stack,
   Star,
   Stats,
@@ -493,7 +498,8 @@ const icons = [
   Warn,
   Warning,
   WarningCircle,
-  WrenchCircle
+  WrenchCircle,
+  Work
 ]
 
 const wrapperStyle = {
@@ -699,7 +705,7 @@ import Dialog from 'cozy-ui/transpiled/react/CozyDialogs/Dialog'
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
 import cx from 'classnames'
 
-import { makeStyles } from 'cozy-ui/transpiled/react/styles';
+import { makeStyles } from 'cozy-ui/transpiled/react/styles'
 import Accounts from 'cozy-ui/transpiled/react/Icons/Accounts'
 import Apps from 'cozy-ui/transpiled/react/Icons/Apps'
 import BankAccounts from 'cozy-ui/transpiled/react/Icons/BankAccounts'
@@ -877,7 +883,7 @@ import Typography from 'cozy-ui/transpiled/react/Typography'
 
 const colors = ['#297EF2', '#08b442', '#B449E7', '#F52D2D', '#FF962F']
 let i = 0
-const availableIcons = ['album-add','album-remove','album','answer','apple','archive','arrowUp','attachment','attention','bank','banking-add','banking','bell','bike','bill','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-edge-chromium','browser-firefox','browser-ie','browser-opera','browser-safari','burger','bus','calendar','camera','car','carbonCopy','carpooling','categories','certified','check-circle','check-list','check-square','check','checkbox','circle-filled','clock','clock-outline','cloud-happy','cloud','collect','comment','company','compare','compass','connector','contract','contrast','copy','cozy-circle','cozy-laugh', 'cozy-lock', 'cozy-text', 'cozy-release', 'credit-card-add','credit-card','credit','crop','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','debit','devices','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','electric-bike','electric-car','electric-scooter','email-notification','email','eu','euro','exchange','eye-closed','eye','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','fitness','flag-outlined','flag','flash-auto','flashlight','folder-add','folder-moveto','folder','forbidden','from-user','gear','globe','graph-circle','grid','group-list','groups','hand','heart','help','help-outlined','history','home','hourglass','image','info-outlined','info','key','laptop','left','lightbulb','link-out','link','list','location','lock', 'lock-screen', 'logout','magic-trick','magnet','magnifier','merge','moped','motorcycle','mountain','movement-in','movement-out','mouvement','moveto','multi-files','music','new','next','note','notification-email','offline','online', 'openapp', 'openwith','palette','paper','paperplane','password','pen','people','percent-circle','percent','personal-data','phone-download','phone-upload','phone','pie-chart','pin','plane','plus-small','plus','previous','printer','qualify','radio-checked','radio-unchecked','refresh','repare','reply','restaurant','restore-straight','restore','right','rise','rotate-left','rotate-right','sad-cozy','safe','school','scooter','select-all','setting','share-circle','share','shield','shop','sound','spinner','stack','star','stats','subway', 'swap', 'sync-cozy','sync','tag','target','team','telephone','to-the-cloud','top','train','tram','trash','trophy','unknow','unlink','unlock','up','upload','videos','walk','wallet-add','wallet-new','wallet','warn','warning-circle','warning','wrench-circle']
+const availableIcons = ['album-add','album-remove','album','answer','apple','archive','arrowUp','attachment','attention','bank','banking-add','banking','bell','bike','bill','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-edge-chromium','browser-firefox','browser-ie','browser-opera','browser-safari','burger','bus','calendar','camera','car','carbonCopy','carpooling','categories','certified','check-circle','check-list','check-square','check','checkbox','circle-filled','clock','clock-outline','cloud-happy','cloud','collect','cocktail','comment','company','compare','compass','connector','contract','contrast','copy','cozy-circle','cozy-laugh', 'cozy-lock', 'cozy-text', 'cozy-release', 'credit-card-add','credit-card','credit','crop','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','debit','devices','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','electric-bike','electric-car','electric-scooter','email-notification','email','eu','euro','exchange','eye-closed','eye','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','fitness','flag-outlined','flag','flash-auto','flashlight','folder-add','folder-moveto','folder','forbidden','from-user','gear','globe','graph-circle','grid','group-list','groups','hand','heart','help','help-outlined','history','home','hourglass','image','info-outlined','info','key','laptop','left','lightbulb','link-out','link','list','location','lock', 'lock-screen', 'logout','magic-trick','magnet','magnifier','merge','moped','motorcycle','mountain','movement-in','movement-out','mouvement','moveto','multi-files','music','new','next','note','notification-email','offline','online', 'openapp', 'openwith','palette','paper','paperplane','password','pen','people','percent-circle','percent','personal-data','phone-download','phone-upload','phone','pie-chart','pin','plane','plus-small','plus','previous','printer','qualify','radio-checked','radio-unchecked','refresh','repare','reply','restaurant','restore-straight','restore','right','rise','rotate-left','rotate-right','sad-cozy','safe','school','scooter','select-all','setting','share-circle','share','shield','shop','sound','spinner','sport-bag','stack','star','stats','subway', 'swap', 'sync-cozy','sync','tag','target','team','telephone','to-the-cloud','top','train','tram','trash','trophy','unknow','unlink','unlock','up','upload','videos','walk','wallet-add','wallet-new','wallet','warn','warning-circle','warning','wrench-circle','work']
 ;
 <div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
   <Sprite />
