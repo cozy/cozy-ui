@@ -32,6 +32,7 @@ export const knownInformationMetadataNames = flag(
       'cardNumber',
       'vinNumber',
       'ibanNumber',
+      'bicNumber',
       'country',
       'passportNumber',
       'refTaxIncome',
