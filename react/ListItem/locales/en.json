@@ -27,6 +27,7 @@
         "vinNumber": "Vehicle registration number (VIN)",
         "cardNumber": "National ID card number",
         "ibanNumber": "IBAN number",
+        "bicNumber": "BIC number",
         "passportNumber": "Passport number",
         "number": {
           "driver_license": "License number",

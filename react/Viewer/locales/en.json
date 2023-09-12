@@ -82,7 +82,8 @@
             "country": "Beneficiary nationality",
             "refTaxIncome": "Reference tax income",
             "contractType": "Contract type",
-            "noticePeriod": "Expiration alert"
+            "noticePeriod": "Expiration alert",
+            "bicNumber": "BIC number"
           },
           "day": "day |||| days"
         },

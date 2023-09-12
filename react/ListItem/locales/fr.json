@@ -27,6 +27,7 @@
         "vinNumber": "Numéro de la carte grise (VIN)",
         "cardNumber": "Numéro de la carte d'identité",
         "ibanNumber": "Numéro d'IBAN",
+        "bicNumber": "Numéro BIC",
         "passportNumber": "Numéro du passeport",
         "number": {
           "driver_license": "Numéro du permis",

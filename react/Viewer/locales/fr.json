@@ -82,7 +82,8 @@
             "country": "Nationalité du bénéficiaire",
             "refTaxIncome": "Revenu fiscal de référence",
             "contractType": "Type de contrat",
-            "noticePeriod": "Alerte d’expiration"
+            "noticePeriod": "Alerte d’expiration",
+            "bicNumber": "Numéro BIC"
           },
           "day": "jour |||| jours"
         },
