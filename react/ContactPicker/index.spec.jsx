@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
+import { render, fireEvent, waitFor } from '@testing-library/react'
 
 import DemoProvider from '../providers/DemoProvider'
 import mockClient from '../ContactsListModal/mockClient'
@@ -11,7 +11,7 @@ const Wrapper = ({ children }) => {
   return <DemoProvider client={mockClient}>{children}</DemoProvider>
 }
 
-it('should show a contacts list modal when clicking the control', () => {
+it('should show a contacts list modal when clicking the control', async () => {
   const root = render(
     <Wrapper>
       <ContactPicker placeholder="Select a contact" />
@@ -20,7 +20,10 @@ it('should show a contacts list modal when clicking the control', () => {
 
   const btn = root.getByText('Select a contact')
   fireEvent.click(btn)
-  expect(root.getByRole('dialog')).toBeTruthy()
+
+  await waitFor(() => {
+    expect(root.getByRole('dialog')).toBeTruthy()
+  })
 })
 
 it('should call the onChange function when a contact is being selected', async () => {
