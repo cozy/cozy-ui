@@ -359,9 +359,6 @@ export const makeOverrides = theme => ({
       paddingRight: 8
     }
   },
-  MuiTextField: {
-    borderWidth: '0.0625rem'
-  },
   MuiFormLabel: {
     root: {
       color: theme.palette.text.secondary,
