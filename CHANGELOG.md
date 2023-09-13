@@ -1,3 +1,10 @@
+# [92.4.0](https://github.com/cozy/cozy-ui/compare/v92.3.0...v92.4.0) (2023-09-13)
+
+
+### Features
+
+* Add cocktail, work and sport-bag icons ([62ee735](https://github.com/cozy/cozy-ui/commit/62ee735))
+
 # [92.3.0](https://github.com/cozy/cozy-ui/compare/v92.2.0...v92.3.0) (2023-09-12)
 
 
