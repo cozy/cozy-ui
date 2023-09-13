@@ -9,7 +9,7 @@ import IconButton from '../../IconButton'
 import Icon from '../../Icon'
 import Dots from '../../Icons/Dots'
 import QualificationListItemText from './QualificationListItemText'
-import { useI18n } from '../../I18n'
+import { useI18n } from '../../providers/I18n'
 import MidEllipsis from '../../MidEllipsis'
 
 const {

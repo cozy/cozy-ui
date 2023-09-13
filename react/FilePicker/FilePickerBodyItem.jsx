@@ -15,7 +15,7 @@ import FileTypeText from '../Icons/FileTypeText'
 import FileTypeFolder from '../Icons/FileTypeFolder'
 import Checkbox from '../Checkbox'
 import Radio from '../Radios'
-import { useI18n } from '../I18n'
+import { useI18n } from '../providers/I18n'
 
 import { isValidFile, isValidFolder } from '../helpers/acceptedTypes'
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Typography from '../Typography'
-import { translate } from '../I18n'
+import { translate } from '../providers/I18n'
 import withBreakpoints from '../helpers/withBreakpoints'
 
 import AppsSection from './components/AppsSection'
@@ -15,7 +15,7 @@ import * as catUtils from './categories'
 
 import styles from './Sections.styl'
 
-import withLocales from '../I18n/withLocales'
+import withLocales from '../providers/I18n/withLocales'
 import en from './locales/en.json'
 import fr from './locales/fr.json'
 

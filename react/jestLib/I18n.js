@@ -1,6 +1,6 @@
 'use strict'
 
-import { I18n } from '../I18n'
+import { I18n } from '../providers/I18n'
 
 export const I18nContext = options => {
   const I18nComponent = new I18n({

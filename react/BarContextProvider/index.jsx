@@ -1,5 +1,5 @@
 import React from 'react'
-import { I18nContext } from '../I18n'
+import { I18nContext } from '../providers/I18n'
 import { BreakpointsProvider } from '../providers/Breakpoints'
 
 import { CozyProvider } from 'cozy-client'

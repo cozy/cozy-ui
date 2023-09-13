@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Button from '../../../Buttons'
 import { ConfirmDialog } from '../../../CozyDialogs'
-import { useI18n } from '../../../I18n'
+import { useI18n } from '../../../providers/I18n'
 
 import withListItemLocales from '../../hoc/withListItemLocales'
 

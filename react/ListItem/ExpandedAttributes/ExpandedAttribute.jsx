@@ -7,7 +7,7 @@ import ListItemIcon from '../../ListItemIcon'
 import Typography from '../../Typography'
 import Icon from '../../Icon'
 import CopyIcon from '../../Icons/Copy'
-import { useI18n } from '../../I18n'
+import { useI18n } from '../../providers/I18n'
 
 import { copyToClipboard } from './helpers'
 

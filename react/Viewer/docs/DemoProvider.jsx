@@ -3,7 +3,7 @@ import React from 'react'
 import { CozyProvider } from 'cozy-client'
 import { BreakpointsProvider } from '../../providers/Breakpoints'
 
-import { I18nContext } from '../../I18n'
+import { I18nContext } from '../../providers/I18n'
 
 const demoTextFileResponse = {
   text: () => new Promise(resolve => resolve('Hello World !'))

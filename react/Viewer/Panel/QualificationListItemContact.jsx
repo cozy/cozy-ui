@@ -9,7 +9,7 @@ import Dots from '../../Icons/Dots'
 import QualificationListItemText from './QualificationListItemText'
 import Spinner from '../../Spinner'
 import useReferencedContactName from '../hooks/useReferencedContactName'
-import { useI18n } from '../../I18n'
+import { useI18n } from '../../providers/I18n'
 import ActionMenuWrapper from './ActionMenuWrapper'
 
 const QualificationListItemContact = ({ file }) => {

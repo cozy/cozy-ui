@@ -7,7 +7,7 @@ import { render } from '@testing-library/react'
 import CozyClient, { CozyProvider } from 'cozy-client'
 
 import en from '../AppSections/locales/en.json'
-import I18n from '../I18n'
+import I18n from '../providers/I18n'
 
 import AppTile from '.'
 

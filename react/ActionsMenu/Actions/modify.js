@@ -8,7 +8,7 @@ import Icon from '../../Icon'
 import PenIcon from '../../Icons/Pen'
 import ActionsMenuItem from '../ActionsMenuItem'
 import withActionsLocales from './locales/withActionsLocales'
-import { useI18n } from '../../I18n'
+import { useI18n } from '../../providers/I18n'
 
 export const modify = () => {
   return {

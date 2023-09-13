@@ -2,7 +2,7 @@ import React, { forwardRef, useMemo } from 'react'
 import PropTypes from 'prop-types'
 
 import { useClient } from 'cozy-client'
-import { useI18n } from '../I18n'
+import { useI18n } from '../providers/I18n'
 import { getActionName, getOnlyNeededActions } from './Actions/helpers'
 
 const ActionsItems = forwardRef(

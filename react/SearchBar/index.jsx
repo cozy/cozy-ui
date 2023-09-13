@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import debounce from 'lodash/debounce'
 
-import { useI18n } from '../I18n'
+import { useI18n } from '../providers/I18n'
 import withOnlyLocales from './locales/withOnlyLocales'
 import { makeStyles } from '../styles'
 import Paper from '../Paper'

@@ -8,8 +8,8 @@ import Button from '../../Buttons'
 import Link from '../../Link'
 import Typography from '../../Typography'
 import { withViewerLocales } from '../hoc/withViewerLocales'
-import { useI18n } from '../../I18n'
-import { formatLocallyDistanceToNowStrict } from '../../I18n/format'
+import { useI18n } from '../../providers/I18n'
+import { formatLocallyDistanceToNowStrict } from '../../providers/I18n/format'
 
 const FILES_DOCTYPE = 'io.cozy.files'
 
