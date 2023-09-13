@@ -5,7 +5,7 @@ import Icon from '../Icon'
 import IconButton from '../IconButton'
 import DotsIcon from '../Icons/Dots'
 import { ActionMenuWithClose, ActionMenuItem } from '../deprecated/ActionMenu'
-import { useI18n } from '../I18n'
+import { useI18n } from '../providers/I18n'
 
 import styles from './styles.styl'
 

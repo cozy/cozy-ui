@@ -4,7 +4,7 @@ import { CozyProvider } from 'cozy-client'
 
 import { BreakpointsProvider } from './Breakpoints'
 import CozyTheme from './CozyTheme'
-import { I18nContext } from '../I18n'
+import { I18nContext } from '../providers/I18n'
 
 const defaultClient = {
   plugins: {

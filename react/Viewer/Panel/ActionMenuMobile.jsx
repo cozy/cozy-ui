@@ -9,7 +9,7 @@ import Icon from '../../Icon'
 import Copy from '../../Icons/Copy'
 import Edit from '../../Icons/Rename'
 import BottomSheet, { BottomSheetItem } from '../../BottomSheet'
-import { useI18n } from '../../I18n'
+import { useI18n } from '../../providers/I18n'
 import AppLinker from '../../AppLinker'
 
 const ActionMenuMobile = ({

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { useClient, useCapabilities, models } from 'cozy-client'
 import { isIOS, isMobileApp } from 'cozy-device-helper'
 
-import { useI18n } from '../../I18n'
+import { useI18n } from '../../providers/I18n'
 import Icon from '../../Icon'
 import ReplyIcon from '../../Icons/Reply'
 import ShareIosIcon from '../../Icons/ShareIos'

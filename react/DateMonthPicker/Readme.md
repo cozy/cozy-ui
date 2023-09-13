@@ -1,5 +1,5 @@
 ```jsx
-import I18n from 'cozy-ui/transpiled/react/I18n';
+import I18n from 'cozy-ui/transpiled/react/providers/I18n';
 import DateMonthPicker from 'cozy-ui/transpiled/react/DateMonthPicker';
 import Stack from 'cozy-ui/transpiled/react/Stack';
 import Button from 'cozy-ui/transpiled/react/deprecated/Button';

@@ -4,7 +4,7 @@ import { useTheme } from '@material-ui/core'
 
 import { useWebviewIntent } from 'cozy-intent'
 
-import { useI18n } from '../I18n'
+import { useI18n } from '../providers/I18n'
 import Icon from '../Icon'
 import IconButton from '../IconButton'
 import CrossIcon from '../Icons/Cross'

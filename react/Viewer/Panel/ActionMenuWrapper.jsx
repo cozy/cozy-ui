@@ -5,7 +5,7 @@ import copy from 'copy-text-to-clipboard'
 import { useAppLinkWithStoreFallback, useClient } from 'cozy-client'
 
 import useBreakpoints from '../../providers/Breakpoints'
-import { useI18n } from '../../I18n'
+import { useI18n } from '../../providers/I18n'
 import useViewerSnackbar from '../providers/ViewerSnackbarProvider'
 import {
   buildEditAttributePath,

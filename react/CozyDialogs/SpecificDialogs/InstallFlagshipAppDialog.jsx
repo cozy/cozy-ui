@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 
 import { IllustrationDialog } from '..'
-import { useI18n } from '../../I18n'
+import { useI18n } from '../../providers/I18n'
 import Link from '../../Link'
 import Typography from '../../Typography'
 

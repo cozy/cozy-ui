@@ -11,7 +11,7 @@ import Dots from '../../Icons/Dots'
 import Typography from '../../Typography'
 import ExpirationAnnotation from '../components/ExpirationAnnotation'
 import QualificationListItemText from './QualificationListItemText'
-import { useI18n } from '../../I18n'
+import { useI18n } from '../../providers/I18n'
 import { formatDate } from '../helpers'
 
 const { isExpired, isExpiringSoon } = models.paper

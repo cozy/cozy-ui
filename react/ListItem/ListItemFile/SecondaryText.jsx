@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { isExpired, isExpiringSoon } from 'cozy-client/dist/models/paper'
 
-import { useI18n } from '../../I18n'
+import { useI18n } from '../../providers/I18n'
 
 import ExpirationAnnotation from './ExpirationAnnotation'
 

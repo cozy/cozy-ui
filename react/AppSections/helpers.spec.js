@@ -1,5 +1,5 @@
 import { getTranslatedManifestProperty } from './helpers'
-import { extend as extendI18n } from '../I18n'
+import { extend as extendI18n } from '../providers/I18n'
 import en from './locales/en'
 import { I18nContext } from '../jestLib/I18n'
 

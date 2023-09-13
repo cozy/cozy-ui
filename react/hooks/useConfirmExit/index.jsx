@@ -2,7 +2,7 @@ import React, { useCallback, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 
 import useEventListener from '../useEventListener'
-import withLocales from '../../I18n/withLocales'
+import withLocales from '../../providers/I18n/withLocales'
 import { ConfirmDialog } from '../../CozyDialogs'
 import Button from '../../deprecated/Button'
 

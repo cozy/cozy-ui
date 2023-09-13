@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import IconButton from '../IconButton'
 import Icon from '../Icon'
 import CrossMediumIcon from '../Icons/CrossMedium'
-import { createUseI18n } from '../I18n'
+import { createUseI18n } from '../providers/I18n'
 
 import styles from './styles.styl'
 import locales from './locales'

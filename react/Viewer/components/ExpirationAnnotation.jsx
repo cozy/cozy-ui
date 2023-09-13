@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 import { models } from 'cozy-client'
 
 import Typography from '../../Typography'
-import { useI18n } from '../../I18n'
-import { formatLocallyDistanceToNowStrict } from '../../I18n/format'
+import { useI18n } from '../../providers/I18n'
+import { formatLocallyDistanceToNowStrict } from '../../providers/I18n/format'
 
 const { computeExpirationDate, isExpired } = models.paper
 

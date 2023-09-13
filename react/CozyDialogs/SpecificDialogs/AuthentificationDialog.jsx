@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import PermissionDialog from '../PermissionDialog'
 import Buttons from '../../Buttons'
-import { useI18n } from '../../I18n'
+import { useI18n } from '../../providers/I18n'
 import Typography from '../../Typography'
 import { useClient } from 'cozy-client'
 import CozyAuthentificationIcon from '../../Icons/CozyAuthentification'

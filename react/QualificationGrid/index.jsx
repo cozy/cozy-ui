@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Grid from '../Grid'
 import QualificationItem from '../QualificationItem'
-import { useI18n } from '../I18n'
+import { useI18n } from '../providers/I18n'
 import PeopleIcon from '../Icons/People'
 import TeamIcon from '../Icons/Team'
 import CompanyIcon from '../Icons/Company'

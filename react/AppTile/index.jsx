@@ -10,7 +10,7 @@ import Tile, {
   TileDescription
 } from '../Tile'
 
-import { createUseI18n } from '../I18n'
+import { createUseI18n } from '../providers/I18n'
 import { AppDoctype } from '../proptypes'
 
 import { APP_STATUS, getCurrentStatusLabel } from './helpers'

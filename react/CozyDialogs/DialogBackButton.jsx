@@ -8,7 +8,7 @@ import PreviousIcon from '../Icons/Previous'
 
 import styles from './styles.styl'
 import locales from './locales'
-import { createUseI18n } from '../I18n'
+import { createUseI18n } from '../providers/I18n'
 
 const useI18n = createUseI18n(locales)
 
