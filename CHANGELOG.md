@@ -1,3 +1,25 @@
+# [93.0.0](https://github.com/cozy/cozy-ui/compare/v92.4.0...v93.0.0) (2023-09-14)
+
+
+### Features
+
+* **CozyTheme:** Move it into providers folder ([c3cf47e](https://github.com/cozy/cozy-ui/commit/c3cf47e))
+* **I18n:** Move it into providers folder ([191f2d4](https://github.com/cozy/cozy-ui/commit/191f2d4))
+* **useBreakpoints:** Move it into providers folder ([4d5e882](https://github.com/cozy/cozy-ui/commit/4d5e882))
+
+
+### BREAKING CHANGES
+
+* **I18n:** `I18n` and relative tools has been moved. Use codemods to deal with the change.
+
+```
+yarn global add @cozy/codemods
+yarn global add jscodeshift@0.13.1
+jscodeshift -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/transform-ui-providers-imports.js src babel --ignore-pattern=src/targets/ --extensions js,jsx,tsx --parser tsx
+```
+* **useBreakpoints:** `useBreakpoints` has been moved. Use codemods to deal with the change.
+* **CozyTheme:** `CozyTheme` has been moved. Use codemods to deal with the change.
+
 # [92.4.0](https://github.com/cozy/cozy-ui/compare/v92.3.0...v92.4.0) (2023-09-13)
 
 
