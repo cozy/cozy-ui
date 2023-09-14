@@ -20,7 +20,6 @@ const DefaultCheckbox = ({ label, error, mixed, disabled, ...props }) => {
       color={error ? 'secondary' : 'primary'}
       indeterminate={mixed}
       disabled={disabled}
-      label={label}
       {...props}
     />
   )
@@ -43,14 +42,19 @@ const Checkbox = ({ className, label, onChange, children, ...props }) => {
           className
         )}
         label={label || children}
-        control={<DefaultCheckbox {...props} />}
+        control={<DefaultCheckbox {...props} label={label} />}
         onChange={onChange}
       />
     )
   }
 
   return (
-    <DefaultCheckbox className={className} onChange={onChange} {...props} />
+    <DefaultCheckbox
+      className={className}
+      onChange={onChange}
+      label={label}
+      {...props}
+    />
   )
 }
 
