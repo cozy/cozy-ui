@@ -1,3 +1,12 @@
+## [93.0.1](https://github.com/cozy/cozy-ui/compare/v93.0.0...v93.0.1) (2023-09-14)
+
+
+### Bug Fixes
+
+* **Checkbox:** Label wasn't spread to aria-label ([ffacda6](https://github.com/cozy/cozy-ui/commit/ffacda6))
+* **Dialog:** Remove usage of RemoveScroll ([0c4cf1e](https://github.com/cozy/cozy-ui/commit/0c4cf1e))
+* **TextField:** Remove error log because of wrong style override ([8c58b1f](https://github.com/cozy/cozy-ui/commit/8c58b1f))
+
 # [93.0.0](https://github.com/cozy/cozy-ui/compare/v92.4.0...v93.0.0) (2023-09-14)
 
 
