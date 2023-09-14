@@ -14789,24 +14789,6 @@ body {
 @media (max-width: 48rem) {
 }
 
-.BarButton--3z5Er {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 3rem;
-  height: 3rem;
-}
-:root {
-  --barIconColor: var(--coolGrey);
-  --barIconColorDisabled: var(--silver);
-}
-.BarButtonIcon--1pSOT {
-  color: var(--barIconColor);
-}
-.BarButton--disabled--5e3Ll .BarButtonIcon--1pSOT {
-  color: var(--barIconColorDisabled);
-}
-
 .filePickerBreadcrumb-previousPath--3LKJH {
   color: var(--actionColorActive);
   cursor: pointer;
@@ -16623,6 +16605,24 @@ progress.upload-queue-progress--1CmN- {
   background: var(--overlay);
   visibility: visible;
   transition: opacity 0.3s, visibility 0s ease-out;
+}
+
+.BarButton--3z5Er {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+}
+:root {
+  --barIconColor: var(--coolGrey);
+  --barIconColorDisabled: var(--silver);
+}
+.BarButtonIcon--1pSOT {
+  color: var(--barIconColor);
+}
+.BarButton--disabled--5e3Ll .BarButtonIcon--1pSOT {
+  color: var(--barIconColorDisabled);
 }
 
 .BarTitle--I5r2e {
