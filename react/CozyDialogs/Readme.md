@@ -215,32 +215,33 @@ const initialVariants = [{
 // flagship-bottom-height
 const setFlagshipVars = () => {
   const root = document.getElementsByTagName('body')[0]
-  root.style.setProperty('--flagship-top-height',  "40px");
-  root.style.setProperty('--flagship-bottom-height',  "40px");
+  root.style.setProperty('--flagship-top-height',  "40px")
+  root.style.setProperty('--flagship-bottom-height',  "40px")
   root.classList.add('flagship-app')
 
-  const statusBarDiv = document.createElement("div");
+  const statusBarDiv = document.createElement("div")
   statusBarDiv.style.cssText = "position:fixed;top:0;height:40px;z-index:10000000;background-color:red;width:100%"
   // and give it some content
-  const statusBarDivContent = document.createTextNode("Top Status Bar with clock");
+  const statusBarDivContent = document.createTextNode("Top Status Bar with clock")
 
   // add the text node to the newly created div
-  statusBarDiv.appendChild(statusBarDivContent);
+  statusBarDiv.appendChild(statusBarDivContent)
 
 
-  const bottomBarDiv = document.createElement("div");
+  const bottomBarDiv = document.createElement("div")
   bottomBarDiv.style.cssText = "position:fixed;bottom:0;height:40px;z-index:10000000;background-color:red;width:100%"
   // and give it some content
-  const bottomBarDivContent = document.createTextNode("BottomBar");
+  const bottomBarDivContent = document.createTextNode("BottomBar")
 
   // add the text node to the newly created div
-  bottomBarDiv.appendChild(bottomBarDivContent);
+  bottomBarDiv.appendChild(bottomBarDivContent)
 
   // add the newly created element and its content into the DOM
-  const currentDiv = document.getElementById("rsg-root");
-  document.body.insertBefore(statusBarDiv, currentDiv);
-  document.body.insertBefore(bottomBarDiv, currentDiv);
+  const currentDiv = document.getElementById("rsg-root")
+  document.body.insertBefore(statusBarDiv, currentDiv)
+  document.body.insertBefore(bottomBarDiv, currentDiv)
 }
+
 ;
 
 <DemoProvider>
@@ -317,72 +318,74 @@ const setFlagshipVars = () => {
           ))}
         </div>
 
-        <DialogComponent
-          size={DialogComponent !== ConfirmDialog ? state.size : undefined}
-          open={state.modalOpened}
-          onClose={variant.withCloseButton ? handleClose : undefined}
-          onBack={variant.withBackButton ? handleBack : undefined}
-          disableTitleAutoPadding={variant.disableTitleAutoPadding}
-          align={variant.alignTop ? 'top': 'middle'}
-          title={variant.hideTitle
-            ? undefined
-            : DialogComponent !== IllustrationDialog && variant.titleLong
-              ? `${dialogTitles[DialogComponent.name]} - ${content.ada.short}`
-              : dialogTitles[DialogComponent.name]
-          }
-          disableGutters={variant.disableGutters}
-          background={variant.withBackground ? `var(--paperBackgroundColor) repeat-x url(${BackgroundImg})` : undefined}
-          icon={DialogComponent === PermissionDialog ? CloudIcon : undefined}
-          content={
-            <>
-              <Typography component="div" variant="body1">
-                { state.content == 'default'
-                  ? dialogContents[DialogComponent.name]
-                  : state.content == 'long'
-                    ? content.ada.long
-                    : content.ada.short
-                }
-                <Stack className="u-mt-1" spacing="s">
-                  <div>
-                    <Button label="Show an alert" onClick={() => Alerter.success('Hello', { duration: 100000 })}/>
-                  </div>
-                  <div>
-                    <Button label="Show inner bottom sheet" onClick={showBottomSheet}/>
-                  </div>
-                  <div>
-                    <Button label="Show inner confirm dialog" onClick={showSecondConfirmDialog}/>
-                  </div>
-                </Stack>
-              </Typography>
-
-              {state.secondConfirmDialogOpened && (
-                <ConfirmDialog open onClose={hideSecondConfirmDialog}
-                  title="This is a simple title"
-                  content="This is a simple content"
-                />
-              )}
-
-              {state.bottomSheetOpened && (
-                <BottomSheet backdrop onClose={hideBottomSheet}>
-                  <BottomSheetItem>
-                    <div className="u-mb-1">
-                      <Button label="Show inner confirm dialog" onClick={showBSConfirmDialog}/>
+        {state.modalOpened && (
+          <DialogComponent
+            open
+            size={DialogComponent !== ConfirmDialog ? state.size : undefined}
+            onClose={variant.withCloseButton ? handleClose : undefined}
+            onBack={variant.withBackButton ? handleBack : undefined}
+            disableTitleAutoPadding={variant.disableTitleAutoPadding}
+            align={variant.alignTop ? 'top': 'middle'}
+            title={variant.hideTitle
+              ? undefined
+              : DialogComponent !== IllustrationDialog && variant.titleLong
+                ? `${dialogTitles[DialogComponent.name]} - ${content.ada.short}`
+                : dialogTitles[DialogComponent.name]
+            }
+            disableGutters={variant.disableGutters}
+            background={variant.withBackground ? `var(--paperBackgroundColor) repeat-x url(${BackgroundImg})` : undefined}
+            icon={DialogComponent === PermissionDialog ? CloudIcon : undefined}
+            content={
+              <>
+                <Typography component="div" variant="body1">
+                  { state.content == 'default'
+                    ? dialogContents[DialogComponent.name]
+                    : state.content == 'long'
+                      ? content.ada.long
+                      : content.ada.short
+                  }
+                  <Stack className="u-mt-1" spacing="s">
+                    <div>
+                      <Button label="Show an alert" onClick={() => Alerter.success('Hello', { duration: 100000 })}/>
                     </div>
-                    {content.ada.long}
-                    {state.BSConfirmDialogOpened && (
-                      <ConfirmDialog open onClose={hideBSConfirmDialog}
-                        title="This is a simple title"
-                        content="This is a simple content"
-                      />
-                    )}
-                  </BottomSheetItem>
-                </BottomSheet>
-              )}
-            </>
-          }
-          actions={variant.showActions && dialogActions[DialogComponent.name]}
-          actionsLayout={variant.actionsLayoutColumn ? 'column' : 'row'}
-        />
+                    <div>
+                      <Button label="Show inner bottom sheet" onClick={showBottomSheet}/>
+                    </div>
+                    <div>
+                      <Button label="Show inner confirm dialog" onClick={showSecondConfirmDialog}/>
+                    </div>
+                  </Stack>
+                </Typography>
+
+                {state.secondConfirmDialogOpened && (
+                  <ConfirmDialog open onClose={hideSecondConfirmDialog}
+                    title="This is a simple title"
+                    content="This is a simple content"
+                  />
+                )}
+
+                {state.bottomSheetOpened && (
+                  <BottomSheet backdrop onClose={hideBottomSheet}>
+                    <BottomSheetItem>
+                      <div className="u-mb-1">
+                        <Button label="Show inner confirm dialog" onClick={showBSConfirmDialog}/>
+                      </div>
+                      {content.ada.long}
+                      {state.BSConfirmDialogOpened && (
+                        <ConfirmDialog open onClose={hideBSConfirmDialog}
+                          title="This is a simple title"
+                          content="This is a simple content"
+                        />
+                      )}
+                    </BottomSheetItem>
+                  </BottomSheet>
+                )}
+              </>
+            }
+            actions={variant.showActions && dialogActions[DialogComponent.name]}
+            actionsLayout={variant.actionsLayoutColumn ? 'column' : 'row'}
+          />
+        )}
       </>
     )}
   </Variants>
