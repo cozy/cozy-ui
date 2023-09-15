@@ -12,13 +12,21 @@ import Typography from '../Typography'
 
 const infoStyle = { color: 'var(--secondaryTextColor)' }
 
-const ItemRow = ({ item, onClick, isSelected, radioPosition, isLast }) => {
+const ItemRow = ({
+  item,
+  onClick,
+  isSelected,
+  radioPosition,
+  isLast,
+  ellipsis
+}) => {
   const { isDesktop } = useBreakpoints()
 
   return (
     <>
       <ListItem
         gutters={isDesktop ? 'double' : 'default'}
+        {...(ellipsis === false && { ellipsis: false })}
         button
         onClick={() => onClick(item)}
       >

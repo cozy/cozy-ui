@@ -80,7 +80,8 @@ class NestedSelect extends Component {
       isSelected,
       title,
       transformParentItem,
-      radioPosition
+      radioPosition,
+      ellipsis
     } = this.props
     const { history, searchValue, searchResult } = this.state
     const current = history[0]
@@ -117,6 +118,7 @@ class NestedSelect extends Component {
               item={parentItem}
               onClick={this.handleClickItem}
               isSelected={isSelectedWithLevel(parentItem)}
+              ellipsis={ellipsis}
             />
           ) : null}
           {searchOptions && level === 0 && (
@@ -146,6 +148,7 @@ class NestedSelect extends Component {
                   onClick={this.handleClickItem}
                   isSelected={isSelectedWithLevel(item)}
                   isLast={index === searchResult.length - 1}
+                  ellipsis={ellipsis}
                 />
               ))
             )
@@ -158,6 +161,7 @@ class NestedSelect extends Component {
                 onClick={this.handleClickItem}
                 isSelected={isSelectedWithLevel(item)}
                 isLast={index === children.length - 1}
+                ellipsis={ellipsis}
               />
             ))
           )}
@@ -236,7 +240,12 @@ NestedSelect.propTypes = {
     placeholderSearch: PropTypes.string.isRequired,
     noDataLabel: PropTypes.string.isRequired,
     onSearch: PropTypes.func.isRequired
-  })
+  }),
+
+  /**
+   * To manage ellipsis on ItemRow
+   */
+  ellipsis: PropTypes.bool
 }
 
 export default NestedSelect

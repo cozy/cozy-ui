@@ -107,6 +107,7 @@ const isParent = (item, childItem) => {
 const InteractiveExample = () => {
   const [leftRadio, setLeftRadio] = useState(false)
   const [searchOptions, setSearchOptions] = useState(null)
+  const [withEllipsis, setWithEllipsis] = useState(true)
   const [showingModal, setShowingModal] = useState(false)
   const [selectedItem, setSelected] = useState({ title: 'A' })
   const showModal = () => setShowingModal(true)
@@ -124,6 +125,9 @@ const InteractiveExample = () => {
 
   const handleClickLeftRadio = () => {
     setLeftRadio(!leftRadio)
+  }
+  const handleClickWithEllipsis = () => {
+    setWithEllipsis(prev => !prev)
   }
 
   const handleClickWithSearch = e => {
@@ -173,6 +177,14 @@ const InteractiveExample = () => {
         checked={!!searchOptions}
         onClick={handleClickWithSearch}
       />
+      <Checkbox
+        label='without ellipsis'
+        readOnly
+        name='withEllipsis'
+        value={!!withEllipsis}
+        checked={!!withEllipsis}
+        onClick={handleClickWithEllipsis}
+      />
       { selectedItem && (
         <>Selected: { selectedItem.title }<br/></>
       )}
@@ -188,6 +200,7 @@ const InteractiveExample = () => {
           title="Please select letter"
           transformParentItem={transformParentItem}
           searchOptions={searchOptions}
+          ellipsis={withEllipsis}
         />
       )}
     </>
