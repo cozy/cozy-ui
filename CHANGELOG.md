@@ -1,3 +1,10 @@
+# [93.1.0](https://github.com/cozy/cozy-ui/compare/v93.0.1...v93.1.0) (2023-09-15)
+
+
+### Features
+
+* **NestedSelect:** Manage ellipsis ([adbabc9](https://github.com/cozy/cozy-ui/commit/adbabc9))
+
 ## [93.0.1](https://github.com/cozy/cozy-ui/compare/v93.0.0...v93.0.1) (2023-09-14)
 
 
