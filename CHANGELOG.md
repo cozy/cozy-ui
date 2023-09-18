@@ -1,3 +1,11 @@
+## [93.1.1](https://github.com/cozy/cozy-ui/compare/v93.1.0...v93.1.1) (2023-09-18)
+
+
+### Bug Fixes
+
+* Cozy-bar elements must appairs above the UploadQueue ([b6a2c92](https://github.com/cozy/cozy-ui/commit/b6a2c92))
+* **z-index:** Remove comment that no longer makes sense ([a250037](https://github.com/cozy/cozy-ui/commit/a250037)), closes [/github.com/cozy/cozy-bar/blob/71a45f8e73601861f4e312e27bb9b5cc1b149f17/src/styles/bar.css#L5](https://github.com//github.com/cozy/cozy-bar/blob/71a45f8e73601861f4e312e27bb9b5cc1b149f17/src/styles/bar.css/issues/L5)
+
 # [93.1.0](https://github.com/cozy/cozy-ui/compare/v93.0.1...v93.1.0) (2023-09-15)
 
 
