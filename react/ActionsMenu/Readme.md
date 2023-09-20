@@ -11,7 +11,7 @@ Use `makeActions` method and create (or use the predefined actions) to build the
 ```bash
 const action1 = ({ option1, option2 }) => ({
   name: action1,
-  action: ({ option3, option4 }) => {}
+  action: (doc, { option3, option4 }) => {}
   Component: ({ onClick, ...props }) => <SomeComponent {...props} onClick={() => onClick({ option3 })}} />
 })
 
