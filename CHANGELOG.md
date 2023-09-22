@@ -1,3 +1,10 @@
+# [93.2.0](https://github.com/cozy/cozy-ui/compare/v93.1.1...v93.2.0) (2023-09-22)
+
+
+### Features
+
+* **NestedSelectModal:** The dialog must be centered ([6d4447f](https://github.com/cozy/cozy-ui/commit/6d4447f))
+
 ## [93.1.1](https://github.com/cozy/cozy-ui/compare/v93.1.0...v93.1.1) (2023-09-18)
 
 
