@@ -40,10 +40,7 @@ const NestedSelectDialogContent = ({ children }) => {
 }
 
 const NestedSelectModal = props => {
-  const { dialogProps } = useCozyDialog({
-    open: true,
-    align: 'top'
-  })
+  const { dialogProps } = useCozyDialog({ open: true })
   return (
     <Dialog
       {...dialogProps}
