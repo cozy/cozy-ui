@@ -1,6 +1,8 @@
 You can use `react/NestedSelect/NestedSelectResponsive` wich provides automaticaly a modal on desktop and bottomsheet on mobile, or directly `react/NestedSelect/Modal` and `react/NestedSelect/BottomSheet`.
 
 ```jsx
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
+import Variants from 'cozy-ui/docs/components/Variants'
 import { useState } from 'react'
 import Button from 'cozy-ui/transpiled/react/Buttons'
 import Circle from 'cozy-ui/transpiled/react/Circle'
@@ -13,9 +15,7 @@ import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 import ListItemSecondaryAction from 'cozy-ui/transpiled/react/ListItemSecondaryAction'
 import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
 import useBreakpoints from 'cozy-ui/transpiled/react/providers/Breakpoints'
-import DemoProvider from 'cozy-ui/transpiled/react/providers/DemoProvider'
 import palette from 'cozy-ui/transpiled/react/palette'
-import Variants from 'cozy-ui/docs/components/Variants'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 
 const Image = ({ letter }) => (
