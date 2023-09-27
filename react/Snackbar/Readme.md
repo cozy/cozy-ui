@@ -55,7 +55,7 @@ initialState = { open: isTesting() }
 
 const handleToggle = () => {setState(state => ({ open: !state.open }))}
 
-const initialVariants = [{ primary: true, secondary: true, success: false, error: false, warning: false, info: false }]
+const initialVariants = [{ primary: true, secondary: false, success: false, error: false, warning: false, info: false }]
 
 ;
 
