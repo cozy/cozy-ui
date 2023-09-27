@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import omit from 'lodash/omit'
 
+import List from '../List'
 import Input from '../Input'
 import Typography from '../Typography'
 import ItemRow from './ItemRow'
@@ -81,7 +82,8 @@ class NestedSelect extends Component {
       title,
       transformParentItem,
       radioPosition,
-      ellipsis
+      ellipsis,
+      noDivider
     } = this.props
     const { history, searchValue, searchResult } = this.state
     const current = history[0]
@@ -119,6 +121,7 @@ class NestedSelect extends Component {
               onClick={this.handleClickItem}
               isSelected={isSelectedWithLevel(parentItem)}
               ellipsis={ellipsis}
+              noDivider={noDivider}
             />
           ) : null}
           {searchOptions && level === 0 && (
@@ -149,6 +152,7 @@ class NestedSelect extends Component {
                   isSelected={isSelectedWithLevel(item)}
                   isLast={index === searchResult.length - 1}
                   ellipsis={ellipsis}
+                  noDivider={noDivider}
                 />
               ))
             )
@@ -162,6 +166,7 @@ class NestedSelect extends Component {
                 isSelected={isSelectedWithLevel(item)}
                 isLast={index === children.length - 1}
                 ellipsis={ellipsis}
+                noDivider={noDivider}
               />
             ))
           )}
@@ -172,7 +177,7 @@ class NestedSelect extends Component {
 }
 
 NestedSelect.defaultProps = {
-  ContentComponent: 'div',
+  ContentComponent: List,
   HeaderComponent: null,
   transformParentItem: x => x,
   radioPosition: 'right'
@@ -191,25 +196,16 @@ const ItemPropType = PropTypes.shape({
 })
 
 NestedSelect.propTypes = {
-  /**
-   * Can be set to "right" or "left". Defaults to "right"
-   */
+  /** Can be set to "right" or "left". Defaults to "right" */
   radioPosition: PropTypes.oneOf(['left', 'right']),
 
-  /**
-   * The whole option item is passed to this function when selected
-   */
+  /** The whole option item is passed to this function when selected */
   onSelect: PropTypes.func.isRequired,
 
-  /**
-   * Determines if the row looks selected. The `option` is
-   * passed as an argument.
-   */
+  /** Determines if the row looks selected. The `option` is passed as an argument. */
   isSelected: PropTypes.func.isRequired,
 
-  /**
-   * Options that will be rendered as nested lists of choices
-   */
+  /** Options that will be rendered as nested lists of choices */
   options: PropTypes.shape({
     children: PropTypes.arrayOf(ItemPropType)
   }),
@@ -242,10 +238,11 @@ NestedSelect.propTypes = {
     onSearch: PropTypes.func.isRequired
   }),
 
-  /**
-   * To manage ellipsis on ItemRow
-   */
-  ellipsis: PropTypes.bool
+  /** To manage ellipsis on ItemRow */
+  ellipsis: PropTypes.bool,
+
+  /** Remove dividers after each row */
+  noDivider: PropTypes.bool
 }
 
 export default NestedSelect

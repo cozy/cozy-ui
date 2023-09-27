@@ -4,7 +4,7 @@ import Button from 'cozy-ui/transpiled/react/deprecated/Button'
 import Circle from 'cozy-ui/transpiled/react/Circle'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import SettingIcon from 'cozy-ui/transpiled/react/Icons/Setting'
-import NestedSelectModal from 'cozy-ui/transpiled/react/NestedSelect/Modal'
+import NestedSelectResponsive from 'cozy-ui/transpiled/react/NestedSelect/NestedSelectResponsive'
 import ListItem from 'cozy-ui/transpiled/react/ListItem'
 import IconButton from 'cozy-ui/transpiled/react/IconButton'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
@@ -84,7 +84,7 @@ const transformParentItem = item => ({
 const StaticExample = () => {
   const { isMobile } = useBreakpoints()
   return (
-    <NestedSelectModal
+    <NestedSelectResponsive
       radioPosition={isMobile ? 'left' : 'right'}
       canSelectParent={true}
       onSelect={x => x}
@@ -93,6 +93,7 @@ const StaticExample = () => {
       options={options}
       title="Please select letter"
       transformParentItem={transformParentItem}
+      onClose={() => {}}
     />
   )
 }
@@ -106,10 +107,12 @@ const isParent = (item, childItem) => {
 
 const InteractiveExample = () => {
   const [leftRadio, setLeftRadio] = useState(false)
+  const [noDivider, setNoDivider] = useState(false)
   const [searchOptions, setSearchOptions] = useState(null)
   const [withEllipsis, setWithEllipsis] = useState(true)
   const [showingModal, setShowingModal] = useState(false)
   const [selectedItem, setSelected] = useState({ title: 'A' })
+
   const showModal = () => setShowingModal(true)
   const hideModal = () => setShowingModal(false)
   const isSelected = (item, level) => {
@@ -126,6 +129,11 @@ const InteractiveExample = () => {
   const handleClickLeftRadio = () => {
     setLeftRadio(!leftRadio)
   }
+
+  const handleClickNoDivider = () => {
+    setNoDivider(!noDivider)
+  }
+
   const handleClickWithEllipsis = () => {
     setWithEllipsis(prev => !prev)
   }
@@ -162,6 +170,14 @@ const InteractiveExample = () => {
   return (
     <>
       <Checkbox
+        label='no divider'
+        readOnly
+        name='noDivider'
+        value={noDivider}
+        checked={noDivider}
+        onClick={handleClickNoDivider}
+      />
+      <Checkbox
         label='radio to the left'
         readOnly
         name='leftRadio'
@@ -190,7 +206,7 @@ const InteractiveExample = () => {
       )}
       <Button className='u-ml-0' label='Select' onClick={showModal} />
       { showingModal && (
-        <NestedSelectModal
+        <NestedSelectResponsive
           canSelectParent={true}
           onSelect={handleSelect}
           onClose={hideModal}
@@ -201,6 +217,7 @@ const InteractiveExample = () => {
           transformParentItem={transformParentItem}
           searchOptions={searchOptions}
           ellipsis={withEllipsis}
+          noDivider={noDivider}
         />
       )}
     </>
@@ -209,12 +226,10 @@ const InteractiveExample = () => {
 
 ;
 
-<>
-  <DemoProvider>
-    {isTesting()
-      ? <StaticExample />
-      : <InteractiveExample />
-    }
-  </DemoProvider>
-</>
+<DemoProvider>
+  {isTesting()
+    ? <StaticExample />
+    : <InteractiveExample />
+  }
+</DemoProvider>
 ```

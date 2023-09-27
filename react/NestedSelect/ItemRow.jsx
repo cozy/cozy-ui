@@ -18,7 +18,8 @@ const ItemRow = ({
   isSelected,
   radioPosition,
   isLast,
-  ellipsis
+  ellipsis,
+  noDivider
 }) => {
   const { isDesktop } = useBreakpoints()
 
@@ -76,7 +77,7 @@ const ItemRow = ({
           ? item.action.Component({ item, ...item.action.props })
           : null}
       </ListItem>
-      {!isLast && <Divider />}
+      {noDivider ? null : !isLast && <Divider />}
     </>
   )
 }
