@@ -293,7 +293,7 @@ the options to be displayed on top of all the layers.
 ```jsx
 import { useState, useEffect } from 'react'
 import { Dialog } from 'cozy-ui/transpiled/react/CozyDialogs'
-import DemoProvider from 'cozy-ui/transpiled/react/providers/DemoProvider'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 
 import Button from 'cozy-ui/transpiled/react/deprecated/Button'
 import Typography from 'cozy-ui/transpiled/react/Typography'
