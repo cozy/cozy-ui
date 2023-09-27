@@ -52,7 +52,7 @@ const ContactsListContent = ({
 
   if (loading) {
     return (
-      <div className="u-mv-2">
+      <div className="u-mv-2 u-ta-center">
         <Spinner size="xxlarge" />
       </div>
     )
