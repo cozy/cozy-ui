@@ -1,6 +1,8 @@
+You can use `react/NestedSelect/NestedSelectResponsive` wich provides automaticaly a modal on desktop and bottomsheet on mobile, or directly `react/NestedSelect/Modal` and `react/NestedSelect/BottomSheet`.
+
 ```jsx
 import { useState } from 'react'
-import Button from 'cozy-ui/transpiled/react/deprecated/Button'
+import Button from 'cozy-ui/transpiled/react/Buttons'
 import Circle from 'cozy-ui/transpiled/react/Circle'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import SettingIcon from 'cozy-ui/transpiled/react/Icons/Setting'
@@ -13,6 +15,8 @@ import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
 import useBreakpoints from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import DemoProvider from 'cozy-ui/transpiled/react/providers/DemoProvider'
 import palette from 'cozy-ui/transpiled/react/palette'
+import Variants from 'cozy-ui/docs/components/Variants'
+import Typography from 'cozy-ui/transpiled/react/Typography'
 
 const Image = ({ letter }) => (
   <Circle backgroundColor={palette.melon}>
@@ -83,6 +87,7 @@ const transformParentItem = item => ({
 
 const StaticExample = () => {
   const { isMobile } = useBreakpoints()
+
   return (
     <NestedSelectResponsive
       radioPosition={isMobile ? 'left' : 'right'}
@@ -106,15 +111,12 @@ const isParent = (item, childItem) => {
 }
 
 const InteractiveExample = () => {
-  const [leftRadio, setLeftRadio] = useState(false)
-  const [noDivider, setNoDivider] = useState(false)
-  const [searchOptions, setSearchOptions] = useState(null)
-  const [withEllipsis, setWithEllipsis] = useState(true)
   const [showingModal, setShowingModal] = useState(false)
   const [selectedItem, setSelected] = useState({ title: 'A' })
 
   const showModal = () => setShowingModal(true)
   const hideModal = () => setShowingModal(false)
+
   const isSelected = (item, level) => {
     if (!selectedItem) {
       return false
@@ -126,38 +128,19 @@ const InteractiveExample = () => {
     return false
   }
 
-  const handleClickLeftRadio = () => {
-    setLeftRadio(!leftRadio)
-  }
-
-  const handleClickNoDivider = () => {
-    setNoDivider(!noDivider)
-  }
-
-  const handleClickWithEllipsis = () => {
-    setWithEllipsis(prev => !prev)
-  }
-
-  const handleClickWithSearch = e => {
-    if (e.target.checked) {
-      const searchOpts = {
-        placeholderSearch: 'Placeholder Search',
-        noDataLabel: 'No Data Found',
-        onSearch: (value) => {
-          return options.children.filter(o => o.description && o.description.toLowerCase().includes(value.toLowerCase()))
-        },
-        displaySearchResultItem: item =>
-        <ListItem key={item.id} dense button divider>
-          <ListItemText
-            primary={item.description}
-            ellipsis
-          />
-        </ListItem>
-      }
-      setSearchOptions(searchOpts)
-    } else {
-      setSearchOptions(null)
-    }
+  const searchOptions = {
+    placeholderSearch: 'Placeholder Search',
+    noDataLabel: 'No Data Found',
+    onSearch: (value) => {
+      return options.children.filter(o => o.description && o.description.toLowerCase().includes(value.toLowerCase()))
+    },
+    displaySearchResultItem: item =>
+    <ListItem key={item.id} dense button divider>
+      <ListItemText
+        primary={item.description}
+        ellipsis
+      />
+    </ListItem>
   }
 
   const handleSelect = item => {
@@ -167,60 +150,34 @@ const InteractiveExample = () => {
     }, RADIO_BUTTON_ANIM_DURATION)
   }
 
+  const initialVariants = [{ noDivider: false, leftRadio: false, withSearch: false, withEllipsis: true }]
+
   return (
-    <>
-      <Checkbox
-        label='no divider'
-        readOnly
-        name='noDivider'
-        value={noDivider}
-        checked={noDivider}
-        onClick={handleClickNoDivider}
-      />
-      <Checkbox
-        label='radio to the left'
-        readOnly
-        name='leftRadio'
-        value={leftRadio}
-        checked={leftRadio}
-        onClick={handleClickLeftRadio}
-      />
-      <Checkbox
-        label='with search'
-        readOnly
-        name='withSearch'
-        value={!!searchOptions}
-        checked={!!searchOptions}
-        onClick={handleClickWithSearch}
-      />
-      <Checkbox
-        label='without ellipsis'
-        readOnly
-        name='withEllipsis'
-        value={!!withEllipsis}
-        checked={!!withEllipsis}
-        onClick={handleClickWithEllipsis}
-      />
-      { selectedItem && (
-        <>Selected: { selectedItem.title }<br/></>
+    <Variants initialVariants={initialVariants} screenshotAllVariants>
+      {variant => (
+        <>
+          {selectedItem && (
+            <Typography paragraph>Selected item: { selectedItem.title }</Typography>
+          )}
+          <Button className='u-ml-0' label='Select' onClick={showModal} />
+          {showingModal && (
+            <NestedSelectResponsive
+              canSelectParent={true}
+              onSelect={handleSelect}
+              onClose={hideModal}
+              isSelected={isSelected}
+              options={options}
+              radioPosition={variant.leftRadio ? 'left' : 'right'}
+              title="Please select letter"
+              transformParentItem={transformParentItem}
+              searchOptions={variant.withSearch ? searchOpts : undefined}
+              ellipsis={variant.withEllipsis}
+              noDivider={variant.noDivider}
+            />
+          )}
+        </>
       )}
-      <Button className='u-ml-0' label='Select' onClick={showModal} />
-      { showingModal && (
-        <NestedSelectResponsive
-          canSelectParent={true}
-          onSelect={handleSelect}
-          onClose={hideModal}
-          isSelected={isSelected}
-          options={options}
-          radioPosition={leftRadio ? 'left' : 'right'}
-          title="Please select letter"
-          transformParentItem={transformParentItem}
-          searchOptions={searchOptions}
-          ellipsis={withEllipsis}
-          noDivider={noDivider}
-        />
-      )}
-    </>
+    </Variants>
   )
 }
 
