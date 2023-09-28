@@ -23,7 +23,7 @@ const ContactIdentity = ({ contact }) => {
       data-testid="ContactIdentity" // used by a test in cozy-contacts
       className={`${
         styles['contact-identity']
-      } u-flex u-flex-items-center u-ellipsis`}
+      } u-flex u-flex-items-center u-ellipsis u-p-0`}
     >
       <Avatar text={getInitials(contact)} size="small" />
       <ContactName displayName={displayName} familyName={name.familyName} />

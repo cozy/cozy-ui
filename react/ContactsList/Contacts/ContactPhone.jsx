@@ -7,7 +7,7 @@ import styles from '../styles.styl'
 const ContactPhone = ({ phone }) => (
   <TableCell
     data-testid="ContactPhone" // used by a test in cozy-contacts
-    className={`${styles['contact-phone']} u-ellipsis`}
+    className={`${styles['contact-phone']} u-ellipsis u-p-0`}
   >
     {phone}
   </TableCell>
