@@ -1,3 +1,10 @@
+# [93.4.0](https://github.com/cozy/cozy-ui/compare/v93.3.0...v93.4.0) (2023-09-28)
+
+
+### Features
+
+* Add Alert provider ([ebccf42](https://github.com/cozy/cozy-ui/commit/ebccf42))
+
 # [93.3.0](https://github.com/cozy/cozy-ui/compare/v93.2.0...v93.3.0) (2023-09-28)
 
 
