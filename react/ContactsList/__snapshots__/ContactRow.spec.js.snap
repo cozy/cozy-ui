@@ -9,7 +9,7 @@ exports[`ContactRow should match the contact snapshot 1`] = `
   size="medium"
 >
   <div
-    className="styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis"
+    className="styles__TableCell___yJCq7 styles__contact-identity___mL3IJ u-flex u-flex-items-center u-ellipsis u-p-0"
     data-testid="ContactIdentity"
   >
     <div
@@ -48,19 +48,19 @@ exports[`ContactRow should match the contact snapshot 1`] = `
     </p>
   </div>
   <div
-    className="styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis"
+    className="styles__TableCell___yJCq7 styles__contact-email___3n3q2 u-ellipsis u-p-0"
     data-testid="ContactEmail"
   >
     johndoe@localhost
   </div>
   <div
-    className="styles__TableCell___yJCq7 styles__contact-phone___1sA_m u-ellipsis"
+    className="styles__TableCell___yJCq7 styles__contact-phone___1sA_m u-ellipsis u-p-0"
     data-testid="ContactPhone"
   >
     0123456789
   </div>
   <div
-    className="styles__TableCell___yJCq7 styles__contact-cozyurl___3kBp5 u-ellipsis"
+    className="styles__TableCell___yJCq7 styles__contact-cozyurl___3kBp5 u-ellipsis u-p-0"
     data-testid="ContactCozy"
   >
     http://johndoe.mycozy.cloud
