@@ -37,11 +37,8 @@ initialState = { opened: isTesting() }
   </button>
   {state.opened && (
     <ContactsListModal
-      placeholder="Search a contact"
       dismissAction={() => setState({ opened: false })}
       onItemClick={contact => alert(`Clicked on ${contact._id}`)}
-      addContactLabel="Add a contact"
-      emptyMessage="No contact"
     />
   )}
 </DemoProvider>
