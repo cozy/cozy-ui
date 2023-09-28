@@ -1,3 +1,10 @@
+# [93.3.0](https://github.com/cozy/cozy-ui/compare/v93.2.0...v93.3.0) (2023-09-28)
+
+
+### Features
+
+* **Icon:** Add LabelOutlined ([b0efd5a](https://github.com/cozy/cozy-ui/commit/b0efd5a))
+
 # [93.2.0](https://github.com/cozy/cozy-ui/compare/v93.1.1...v93.2.0) (2023-09-22)
 
 
