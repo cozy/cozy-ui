@@ -20,6 +20,7 @@ import { useEncrypted } from '../providers/EncryptedProvider'
 import { ToolbarFilePath } from './ToolbarFilePath'
 
 import styles from './styles.styl'
+import MidEllipsis from '../../MidEllipsis'
 
 const useClasses = makeStyles(theme => ({
   iconButton: {
@@ -64,13 +65,13 @@ const Toolbar = ({
           <Icon icon={PreviousIcon} />
         </IconButton>
       )}
-      <div className="u-pl-half">
+      <div className="u-pl-half u-ov-auto u-w-100">
         <Typography
           variant="h3"
           color={isDesktop ? 'inherit' : 'textPrimary'}
           noWrap
         >
-          {file.name}
+          <MidEllipsis text={file.name} />
         </Typography>
         {showFilePath ? <ToolbarFilePath file={file} /> : null}
       </div>
