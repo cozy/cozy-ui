@@ -1,3 +1,10 @@
+# [93.5.0](https://github.com/cozy/cozy-ui/compare/v93.4.0...v93.5.0) (2023-09-29)
+
+
+### Features
+
+* **Viewer:** On mobile, the title benefits well from the midEllipsis ([5bfd8b3](https://github.com/cozy/cozy-ui/commit/5bfd8b3))
+
 # [93.4.0](https://github.com/cozy/cozy-ui/compare/v93.3.0...v93.4.0) (2023-09-28)
 
 
