@@ -14077,15 +14077,12 @@ body {
 }
 .contact-phone--1sA_m {
   flex: 0 0 12rem;
-  padding: 0;
 }
 .contact-cozyurl--3kBp5 {
   flex: 0 0 12rem;
-  padding: 0;
 }
 .contact-email--3n3q2 {
   flex-basis: 30%;
-  padding: 0;
 }
 .contact-myself--1aOdx {
   color: var(--secondaryTextColor);
@@ -14093,7 +14090,6 @@ body {
 }
 .contact-identity--mL3IJ {
   flex-basis: 30%;
-  padding: 0;
 }
 @media (max-width: 48rem) {
   .contact-identity--mL3IJ {
