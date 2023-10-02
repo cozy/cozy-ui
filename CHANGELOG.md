@@ -1,3 +1,10 @@
+# [94.1.0](https://github.com/cozy/cozy-ui/compare/v94.0.0...v94.1.0) (2023-10-02)
+
+
+### Features
+
+* **NestedSelect:** Add NestedSelectResponsive and BottomSheet ([d1659fe](https://github.com/cozy/cozy-ui/commit/d1659fe))
+
 # [94.0.0](https://github.com/cozy/cozy-ui/compare/v93.5.0...v94.0.0) (2023-10-02)
 
 
