@@ -5,6 +5,8 @@ import cx from 'classnames'
 import useBreakpoints from '../providers/Breakpoints'
 import { FileDoctype } from '../proptypes'
 
+import Modal from '../Modal'
+import { useCozyTheme } from '../providers/CozyTheme'
 import { toolbarPropsPropType } from './proptypes'
 import { isValidForPanel } from './helpers'
 import Viewer from './Viewer'
@@ -124,4 +126,39 @@ ViewerContainer.defaultProps = {
   showNavigation: true
 }
 
-export default ViewerContainer
+const ViewerContainerWrapper = ({ disableModal, ...props }) => {
+  const cozyTheme = useCozyTheme()
+  const { modalProps = { open: true } } = props.componentsProps || {}
+
+  if (disableModal) {
+    return <ViewerContainer {...props} />
+  }
+
+  return (
+    <Modal {...modalProps} className={`CozyTheme--${cozyTheme}`}>
+      {/* This div is needed for the Modal ref */}
+      <div>
+        <ViewerContainer {...props} />
+      </div>
+    </Modal>
+  )
+}
+
+ViewerContainerWrapper.defaultProps = {
+  componentsProps: {
+    modalProps: {
+      open: true
+    }
+  }
+}
+
+ViewerContainerWrapper.propTypes = {
+  /** To avoid wrapping the Viewer with a Modal component */
+  disableModal: PropTypes.bool,
+  /** Props passed to Modal component */
+  componentsProps: PropTypes.shape({
+    modalProps: PropTypes.object
+  })
+}
+
+export default ViewerContainerWrapper

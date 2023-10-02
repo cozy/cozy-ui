@@ -1,6 +1,6 @@
 The `Viewer` component can be used to display the content of various file types.
 
-Once rendered, the `Viewer` will take up all the available space in it's container (using `position: absolute`). It can be paired with the `Overlay` component to take up the whole screen.
+Once rendered, the `Viewer` will take up all the available space in it's container (using `position: absolute`).
 
 The `Viewer` can display an **information panel** to show additional information about the current file (e.g. whether a file is certified).
 
@@ -21,12 +21,14 @@ The `Viewer` can display an **information panel** to show additional information
 * **renderFallbackExtraContent** : `<function>` – A render prop that is called when a file can't be displayed
 * **disablePanel** : `<boolean>` – Show/Hide the panel containing more information about the file only on Desktop
 * **disableFooter** : `<boolean>` – Show/Hide the panel containing more information about the file only on Phone & Tablet devices
+* **disableModal** : `<boolean>` – To avoid wrapping the Viewer with a Modal component (wrapper of Viewer)
 * **editPathByModelProps** : `<object>` – Edit path by model properties
   * **information** : `<string>` – URL used to edit the file when editing a `information` type metadata (text, date)
   * **page** : `<string>` – URL used to edit the file when editing a `page` type metadata (side of the document)
 * **onChangeRequest** : `<function>` - Called with (nextFile, nextIndex) when the user requests to navigate to another file
 * **onCloseRequest** : `<function>` - Called when the user wants to leave the Viewer
 * **componentsProps** : `<object>` – Props passed to components with the same name
+  * **modalProps** : `<object>` – Props passed to Modal component
   * **OnlyOfficeViewer** : `<object>` – Used to open an Only Office file
     * **isEnabled** : `<boolean>` – Whether Only Office is enabled on the server
     * **opener** : `<function>` – To open the Only Office file
@@ -54,7 +56,6 @@ import Icon from 'cozy-ui/transpiled/react/Icon'
 import CarbonCopyIcon from 'cozy-ui/transpiled/react/Icons/CarbonCopy'
 // The DemoProvider inserts a fake cozy-client in the React context.
 import DemoProvider from './docs/DemoProvider'
-import Overlay from 'cozy-ui/transpiled/react/deprecated/Overlay'
 import Button from 'cozy-ui/transpiled/react/Buttons'
 import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
 import ShareIcon from 'cozy-ui/transpiled/react/Icons/Share'
@@ -218,33 +219,31 @@ const editPathByModelProps = {
           )}
           <Button label="Open viewer" variant="ghost" size="small" onClick={toggleViewer} />
           {state.viewerOpened && (
-            <Overlay>
-              <Viewer
-                files={files}
-                currentIndex={state.currentIndex}
-                currentURL={state.currentURL}
-                showNavigation={variant.navigation}
-                editPathByModelProps={editPathByModelProps}
-                onCloseRequest={toggleViewer}
-                onChangeRequest={onFileChange}
-                componentsProps={{
-                  OnlyOfficeViewer: {
-                    isEnabled: variant.onlyOfficeEnabled,
-                    opener: () => alert('This is a demo, no Only Office opener here')
-                  },
-                  toolbarProps:{
-                    showToolbar: variant.toolbar,
-                    showClose: state.showToolbarCloseButton,
-                    showFilePath: state.showToolbarWithPath
-                  }
-                }}
-              >
-                <FooterActionButtons>
-                  <ShareButtonFake />
-                  <ForwardOrDownloadButton />
-                </FooterActionButtons>
-              </Viewer>
-            </Overlay>
+            <Viewer
+              files={files}
+              currentIndex={state.currentIndex}
+              currentURL={state.currentURL}
+              showNavigation={variant.navigation}
+              editPathByModelProps={editPathByModelProps}
+              onCloseRequest={toggleViewer}
+              onChangeRequest={onFileChange}
+              componentsProps={{
+                OnlyOfficeViewer: {
+                  isEnabled: variant.onlyOfficeEnabled,
+                  opener: () => alert('This is a demo, no Only Office opener here')
+                },
+                toolbarProps:{
+                  showToolbar: variant.toolbar,
+                  showClose: state.showToolbarCloseButton,
+                  showFilePath: state.showToolbarWithPath
+                }
+              }}
+            >
+              <FooterActionButtons>
+                <ShareButtonFake />
+                <ForwardOrDownloadButton />
+              </FooterActionButtons>
+            </Viewer>
           )}
         </>
       )
