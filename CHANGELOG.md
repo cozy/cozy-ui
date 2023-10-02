@@ -1,3 +1,22 @@
+# [94.0.0](https://github.com/cozy/cozy-ui/compare/v93.5.0...v94.0.0) (2023-10-02)
+
+
+### Bug Fixes
+
+* **ContactsList:** Center the spinner when fetching data ([52791a1](https://github.com/cozy/cozy-ui/commit/52791a1))
+* **ContactsList:** Remove padding on cells ([bb6c237](https://github.com/cozy/cozy-ui/commit/bb6c237))
+
+
+### Features
+
+* **ContactsListModal:** Use default text on search, add button, result ([652d52f](https://github.com/cozy/cozy-ui/commit/652d52f))
+* **getRandomUUID:** Returns something even without crypto API ([be65396](https://github.com/cozy/cozy-ui/commit/be65396))
+
+
+### BREAKING CHANGES
+
+* **ContactsListModal:** If you don't want any text in `ContactsListModal` for search input, add button and empty result, use respectively these props : `placeholder={[secure]}, addContactLabel={[secure]}, emptyMessage={[secure]}` instead of `undefined` values
+
 # [93.5.0](https://github.com/cozy/cozy-ui/compare/v93.4.0...v93.5.0) (2023-09-29)
 
 
