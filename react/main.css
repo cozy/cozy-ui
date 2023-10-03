@@ -16591,18 +16591,6 @@ progress.upload-queue-progress--1CmN- {
   color: var(--disabledTextColor);
 }
 
-.c-overlay--8W1LN {
-  z-index: var(--zIndex-overlay);
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: var(--overlay);
-  visibility: visible;
-  transition: opacity 0.3s, visibility 0s ease-out;
-}
-
 .BarButton--3z5Er {
   display: flex;
   align-items: center;
@@ -21090,6 +21078,18 @@ body {
   margin: 0;
   max-height: 100vh;
   overflow-y: auto;
+}
+
+.c-overlay--8W1LN {
+  z-index: var(--zIndex-overlay);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--overlay);
+  visibility: visible;
+  transition: opacity 0.3s, visibility 0s ease-out;
 }
 
 .CompositeRow--1Dmi2 {
