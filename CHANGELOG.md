@@ -1,3 +1,22 @@
+# [95.0.0](https://github.com/cozy/cozy-ui/compare/v94.1.0...v95.0.0) (2023-10-03)
+
+
+### Features
+
+* **Modal:** Re-export Modal component ([1ad81f6](https://github.com/cozy/cozy-ui/commit/1ad81f6))
+* **Viewer:** Use Modal by default instead Overlay in app ([7510557](https://github.com/cozy/cozy-ui/commit/7510557))
+
+
+### BREAKING CHANGES
+
+* **Viewer:** The Viewer is now wrapped with
+a Modal by default.
+You can remove the deprecated `Overlay` component
+(which wraps the `Viewer` component) from your applications.
+Or if you want to keep your implementation,
+please use the `disableModal` props
+on your `Viewer` components.
+
 # [94.1.0](https://github.com/cozy/cozy-ui/compare/v94.0.0...v94.1.0) (2023-10-02)
 
 
