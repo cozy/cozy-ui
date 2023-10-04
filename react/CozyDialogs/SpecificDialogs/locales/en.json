@@ -1,4 +1,10 @@
 {
+  "cancel": "Cancel",
+  "allow": "Allow",
+  "allow-location-dialog": {
+    "title": "Allow access to your location",
+    "description": "Cozy needs to be able to access your location in order to record your movements. This may consume a little battery power, but you can always disable the feature from your CO2 Coach settings."
+  },
   "install-flagship-app-dialog": {
     "title": "Scan the QR Code",
     "text": "or go directly to the <img src=%{iosIconSrc} /> <a href='%{iosUrl}' class='u-link' target='_blank' rel='noopener'>App Store</a><br>or <img src=%{androidIconSrc} /> <a href='%{androidUrl}' class='u-link' target='_blank' rel='noopener'>Play Store</a> to install the Cozy Cloud app",

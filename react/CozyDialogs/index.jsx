@@ -10,6 +10,7 @@ export { default as PermissionDialog } from './PermissionDialog'
 export { default as useCozyDialog } from './useCozyDialog'
 export { default as TopAnchoredDialog } from './TopAnchoredDialog'
 export {
+  AllowLocationDialog,
   InstallFlagshipAppDialog,
   AuthentificationDialog
 } from './SpecificDialogs'

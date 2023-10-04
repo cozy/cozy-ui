@@ -1,4 +1,10 @@
 {
+  "cancel": "Annuler",
+  "allow": "Autoriser",
+  "allow-location-dialog": {
+    "title": "Autoriser l'accès à votre position",
+    "description": "Cozy a besoin de pouvoir accéder à votre position pour enregistrer vos déplacements. Cela peut consommer un peu de batterie, mais il vous sera toujours possible de désactiver la fonctionnalité depuis les paramètres de votre Coach CO2."
+  },
   "install-flagship-app-dialog": {
     "title": "Scannez le QR Code",
     "text": "ou rendez vous directement sur <img src=%{iosIconSrc} /> <a href='%{iosUrl}' class='u-link' target='_blank' rel='noopener'>l’App Store</a><br>ou sur le <img src=%{androidIconSrc} /> <a href='%{androidUrl}' class='u-link' target='_blank' rel='noopener'>Play Store</a> pour installer l’app Cloud Personnel Cozy",
