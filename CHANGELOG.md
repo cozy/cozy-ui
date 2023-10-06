@@ -1,3 +1,10 @@
+# [95.1.0](https://github.com/cozy/cozy-ui/compare/v95.0.0...v95.1.0) (2023-10-06)
+
+
+### Features
+
+* Add AllowLocationDialog in SpecificDialogs ([1843f63](https://github.com/cozy/cozy-ui/commit/1843f63))
+
 # [95.0.0](https://github.com/cozy/cozy-ui/compare/v94.1.0...v95.0.0) (2023-10-03)
 
 
