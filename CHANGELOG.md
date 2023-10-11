@@ -1,3 +1,10 @@
+# [95.2.0](https://github.com/cozy/cozy-ui/compare/v95.1.0...v95.2.0) (2023-10-11)
+
+
+### Features
+
+* Add ListSkeleton and ListItemSkeleton components ([742ec65](https://github.com/cozy/cozy-ui/commit/742ec65))
+
 # [95.1.0](https://github.com/cozy/cozy-ui/compare/v95.0.0...v95.1.0) (2023-10-06)
 
 
