@@ -29,6 +29,7 @@ import {
   setTopPosition,
   setBottomPosition,
   minimizeAndClose,
+  getCssValue,
   computeBottomSpacer
 } from './helpers'
 import { ANIMATION_DURATION } from './constants'
@@ -208,14 +209,11 @@ const BottomSheet = memo(
     useEffect(() => {
       const headerContent = headerContentRef.current
       const innerContentHeight = innerContentRef.current.offsetHeight
-      const actionButtonsHeight = headerContent
-        ? parseFloat(getComputedStyle(headerContent).getPropertyValue('height'))
-        : 0
-      const actionButtonsBottomMargin = headerContent
-        ? parseFloat(
-            getComputedStyle(headerContent).getPropertyValue('padding-bottom')
-          )
-        : 0
+      const actionButtonsHeight = getCssValue(headerContent, 'height')
+      const actionButtonsBottomMargin = getCssValue(
+        headerContent,
+        'padding-bottom'
+      )
 
       const maxHeight = computeMaxHeight(toolbarProps)
 
