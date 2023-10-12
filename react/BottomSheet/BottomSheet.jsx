@@ -15,9 +15,11 @@ import Portal from '@material-ui/core/Portal'
 
 import { getFlagshipMetadata } from 'cozy-device-helper'
 
+import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
 import CozyTheme, { useCozyTheme } from '../providers/CozyTheme'
 import Stack from '../Stack'
 import Paper from '../Paper'
+
 import BackdropOrFragment from './BackdropOrFragment'
 import {
   computeMaxHeight,
@@ -30,7 +32,6 @@ import {
   computeBottomSpacer
 } from './helpers'
 import { ANIMATION_DURATION } from './constants'
-import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
 
 const createContainerWrapperStyles = () => ({
   container: {
@@ -242,6 +243,8 @@ const BottomSheet = memo(
 
       if (computedMediumHeight >= maxHeight) {
         setIsTopPosition(true)
+      } else {
+        setIsTopPosition(false)
       }
       setPeekHeights([...new Set([minHeight, computedMediumHeight, maxHeight])])
       setInitPos(computedMediumHeight)
