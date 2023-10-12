@@ -19,7 +19,6 @@ import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
 import CozyTheme, { useCozyTheme } from '../providers/CozyTheme'
 import Stack from '../Stack'
 import Paper from '../Paper'
-
 import BackdropOrFragment from './BackdropOrFragment'
 import {
   computeMaxHeight,
@@ -29,10 +28,11 @@ import {
   setTopPosition,
   setBottomPosition,
   minimizeAndClose,
-  getCssValue,
-  computeBottomSpacer
+  computeBottomSpacer,
+  getCssValue
 } from './helpers'
 import { ANIMATION_DURATION } from './constants'
+import stylescss from './styles.styl'
 
 const createContainerWrapperStyles = () => ({
   container: {
@@ -56,6 +56,7 @@ const createStyles = ({
   squared,
   hasToolbarProps,
   offset,
+  renderSaferHeight,
   isBottomPosition
 }) => ({
   root: {
@@ -110,6 +111,13 @@ const createStyles = ({
     backgroundColor: 'var(--paperBackgroundColor)',
     zIndex: 'calc(var(--zIndex-modal) + 10)',
     transition: `opacity ${ANIMATION_DURATION}ms`
+  },
+  renderSafer: {
+    height: renderSaferHeight,
+    width: '100%',
+    position: 'fixed',
+    bottom: 0,
+    pointerEvents: 'none'
   }
 })
 
@@ -150,17 +158,23 @@ const BottomSheet = memo(
     const [currentIndex, setCurrentIndex] = useState()
     const [bottomSpacerHeight, setBottomSpacerHeight] = useState(0)
     const [initPos, setInitPos] = useState(0)
+    const prevInitPos = useRef()
 
     const squared = backdrop
       ? isTopPosition && bottomSpacerHeight <= 0
       : isTopPosition
     const hasToolbarProps = !!Object.keys(toolbarProps).length
     const isClosable = !!onClose || backdrop
+    const renderSaferHeight =
+      initPos < prevInitPos.current ? prevInitPos.current - 16 : 0 // 16 because border radius
+    const showRenderSafer =
+      prevInitPos.current !== 0 && prevInitPos.current > initPos
 
     const styles = createStyles({
       squared,
       hasToolbarProps,
       offset,
+      renderSaferHeight,
       isBottomPosition
     })
     const overriddenChildren = makeOverridenChildren(children, headerContentRef)
@@ -244,11 +258,26 @@ const BottomSheet = memo(
       } else {
         setIsTopPosition(false)
       }
-      setPeekHeights([...new Set([minHeight, computedMediumHeight, maxHeight])])
+
+      const newPeekHeights = [
+        ...new Set([minHeight, computedMediumHeight, maxHeight])
+      ]
+
+      const hasPeekHeightsChanged = peekHeights !== newPeekHeights
+
+      if (hasPeekHeightsChanged && isTopPosition) {
+        setCurrentIndex(v => v - 1)
+      }
+
+      setPeekHeights(newPeekHeights)
+      prevInitPos.current = initPos
       setInitPos(computedMediumHeight)
       // Used so that the BottomSheet can be opened to the top without stopping at the content height
       setBottomSpacerHeight(bottomSpacerHeight)
+
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [
+      // initPos is missing, because we need the previous value
       innerContentRef,
       toolbarProps,
       mediumHeightRatio,
@@ -323,6 +352,15 @@ const BottomSheet = memo(
           </div>
           <div style={{ height: bottomSpacerHeight }} />
         </MuiBottomSheet>
+        {showRenderSafer && (
+          <div style={styles.renderSafer}>
+            <Paper
+              className={stylescss['renderSaferAnim']}
+              elevation={0}
+              square
+            />
+          </div>
+        )}
         {!isBottomPosition && (
           <>
             <Fade in timeout={ANIMATION_DURATION}>
