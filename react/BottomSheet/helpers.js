@@ -136,3 +136,6 @@ export const computeBottomSpacer = ({
   // without backdrop, we want the bottomsheet to open to the top of the window
   return maxHeight - innerContentHeight
 }
+
+export const getCssValue = (element, value) =>
+  element ? parseFloat(getComputedStyle(element).getPropertyValue(value)) : 0
