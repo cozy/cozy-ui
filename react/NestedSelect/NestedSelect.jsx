@@ -18,6 +18,7 @@ export { ItemRow }
 class NestedSelect extends Component {
   constructor(props) {
     super(props)
+    this.innerRef = React.createRef()
     this.state = {
       history: [props.options],
       searchValue: '',
@@ -27,6 +28,12 @@ class NestedSelect extends Component {
 
   componentWillUnmount() {
     this.unmounted = true
+  }
+
+  componentDidUpdate() {
+    const { setInnerContentHeight } = this.props
+
+    setInnerContentHeight?.(this.innerRef?.current?.offsetHeight)
   }
 
   resetHistory() {
@@ -105,7 +112,7 @@ class NestedSelect extends Component {
     }
 
     return (
-      <>
+      <span ref={this.innerRef}>
         {HeaderComponent ? (
           <HeaderComponent
             title={current.title || title}
@@ -171,7 +178,7 @@ class NestedSelect extends Component {
             ))
           )}
         </ContentComponent>
-      </>
+      </span>
     )
   }
 }
