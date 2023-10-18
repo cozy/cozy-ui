@@ -170,7 +170,7 @@ const InteractiveExample = () => {
               radioPosition={variant.leftRadio ? 'left' : 'right'}
               title="Please select letter"
               transformParentItem={transformParentItem}
-              searchOptions={variant.withSearch ? searchOpts : undefined}
+              searchOptions={variant.withSearch ? searchOptions : undefined}
               ellipsis={variant.withEllipsis}
               noDivider={variant.noDivider}
             />
