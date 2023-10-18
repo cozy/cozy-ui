@@ -1,3 +1,16 @@
+# [95.3.0](https://github.com/cozy/cozy-ui/compare/v95.2.0...v95.3.0) (2023-10-18)
+
+
+### Bug Fixes
+
+* **BottomSheet:** IsTopPosition wasn't set if condition [secure] ([4ae9ac0](https://github.com/cozy/cozy-ui/commit/4ae9ac0))
+
+
+### Features
+
+* **BottomSheet:** Add rerendering content compliancy ([c93efb2](https://github.com/cozy/cozy-ui/commit/c93efb2))
+* **NestedSelect:** Rerender BottomSheet if content change ([b26e6bd](https://github.com/cozy/cozy-ui/commit/b26e6bd))
+
 # [95.2.0](https://github.com/cozy/cozy-ui/compare/v95.1.0...v95.2.0) (2023-10-11)
 
 
