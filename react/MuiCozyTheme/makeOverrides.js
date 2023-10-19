@@ -353,16 +353,25 @@ export const makeOverrides = theme => ({
   },
   MuiMenuItem: {
     root: {
-      gap: 8,
       maxWidth: 320,
       whiteSpace: 'normal',
       overflow: 'auto',
       paddingTop: 4,
-      paddingBottom: 4
+      paddingBottom: 4,
+      [theme.breakpoints.up('sm')]: {
+        minHeight: 40
+      },
+      '&.cozyActionsMenuItem': {
+        minWidth: 256
+      },
+      '& .cozyListItemIcon': {
+        width: 16,
+        height: 16
+      }
     },
     gutters: {
-      paddingLeft: 8,
-      paddingRight: 8
+      paddingLeft: 16,
+      paddingRight: 16
     }
   },
   MuiFormLabel: {
