@@ -76,6 +76,9 @@ const hideMenu = () => setState({ showMenu: false })
       </ListItemIcon>
       <ListItemText primary="Attachment" />
     </MenuItem>
+    <MenuItem onClick={hideMenu}>
+      <ListItemText primary="Item without icon" />
+    </MenuItem>
 
     <Divider className="u-mv-half" />
 

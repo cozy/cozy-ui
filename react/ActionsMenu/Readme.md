@@ -209,6 +209,9 @@ const toggleMenu = () => setState(state => ({ showMenu: !state.showMenu }))
         </ListItemIcon>
         <ListItemText primary="Attachment" />
       </ActionsMenuItem>
+      <ActionsMenuItem>
+        <ListItemText primary="Item without icon" />
+      </ActionsMenuItem>
 
       <Divider className="u-mv-half" />
 
