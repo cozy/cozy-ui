@@ -44,13 +44,24 @@ const ActionsMenuWrapper = ({
 
   return (
     <Menu {...props} open={open} onClose={onClose}>
-      {React.Children.map(children, child =>
-        React.isValidElement(child)
+      {React.Children.map(children, (child, idx) => {
+        // To keep accessibility, we spread the autofocus on the second child
+        // if the first one is ActionsMenuMobileHeader
+        const firstChild = React.Children.toArray(children)[0]
+        const firstChildComponentName =
+          firstChild?.type?.name || firstChild?.type?.displayName
+        const isFirstChildActionsMenuMobileHeader =
+          firstChildComponentName === 'ActionsMenuMobileHeader'
+        const autoFocus =
+          isFirstChildActionsMenuMobileHeader && idx === 1 ? true : undefined
+
+        return React.isValidElement(child)
           ? React.cloneElement(child, {
+              autoFocus,
               onClick: overrideClick(child.props)
             })
           : null
-      )}
+      })}
     </Menu>
   )
 }
