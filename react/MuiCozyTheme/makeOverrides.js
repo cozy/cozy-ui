@@ -293,25 +293,31 @@ export const makeOverrides = theme => ({
       gap: 16,
       paddingTop: 12,
       paddingBottom: 12,
+      minHeight: 56,
       '&.small': {
         paddingTop: 8,
-        paddingBottom: 8
+        paddingBottom: 8,
+        minHeight: 48
       },
       '&.large': {
         paddingTop: 16,
-        paddingBottom: 16
+        paddingBottom: 16,
+        minHeight: 64
       }
     },
     dense: {
       paddingTop: 8,
       paddingBottom: 8,
+      minHeight: 48,
       '&.small': {
         paddingTop: 4,
-        paddingBottom: 4
+        paddingBottom: 4,
+        minHeight: 40
       },
       '&.large': {
         paddingTop: 12,
-        paddingBottom: 12
+        paddingBottom: 12,
+        minHeight: 56
       }
     }
   },
