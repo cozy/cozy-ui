@@ -1,3 +1,18 @@
+# [95.4.0](https://github.com/cozy/cozy-ui/compare/v95.3.0...v95.4.0) (2023-10-23)
+
+
+### Bug Fixes
+
+* **ActionsMenu:** ActionsMenuMobileHeader was unnecessarily in DOM on desktop ([805a030](https://github.com/cozy/cozy-ui/commit/805a030))
+* **Menu, ActionsMenu:** The margins between elements were not as expected ([e021fdc](https://github.com/cozy/cozy-ui/commit/e021fdc))
+
+
+### Features
+
+* **ActionsMenuItem:** Add `cozyActionsMenuItem` class to be able to target it ([fcd6dfa](https://github.com/cozy/cozy-ui/commit/fcd6dfa))
+* **ListItem:** Add min heights ([ceaba86](https://github.com/cozy/cozy-ui/commit/ceaba86))
+* **ListItemIcon:** Add `cozyListItemIcon` class to be able to target it ([f0b218f](https://github.com/cozy/cozy-ui/commit/f0b218f))
+
 # [95.3.0](https://github.com/cozy/cozy-ui/compare/v95.2.0...v95.3.0) (2023-10-18)
 
 
