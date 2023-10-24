@@ -1,3 +1,10 @@
+# [95.5.0](https://github.com/cozy/cozy-ui/compare/v95.4.0...v95.5.0) (2023-10-24)
+
+
+### Features
+
+* **Empty:** Add centered props, max width and paddings ([8c03660](https://github.com/cozy/cozy-ui/commit/8c03660))
+
 # [95.4.0](https://github.com/cozy/cozy-ui/compare/v95.3.0...v95.4.0) (2023-10-23)
 
 
