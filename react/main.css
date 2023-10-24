@@ -10155,9 +10155,19 @@ body {
   justify-content: center;
   flex: 1 0 auto;
   align-self: center;
-  padding: 1rem 0;
+  margin: 0 auto;
+  padding: 2rem;
   text-align: center;
-  max-width: 100%;
+  width: calc(100% - 4rem);
+  max-width: 32rem;
+}
+@media (max-width: 63.938rem) {
+  .c-empty--centered--2ijsY {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 .c-empty-img--2GC4d {
   display: block;
@@ -10197,15 +10207,9 @@ body {
   }
 }
 .c-empty-text--3HnvR {
-  margin: 0.313rem auto 0;
   max-width: 63rem;
   color: var(--secondaryTextColor);
   line-height: 1.5;
-}
-@media (max-width: 63.938rem) {
-  .c-empty-text--3HnvR {
-    margin: 0.313rem 1.5rem 0;
-  }
 }
 
 .iconGrid--7nBAB {
