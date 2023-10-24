@@ -1,9 +1,11 @@
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
+
 import Icon, { iconPropType } from '../Icon'
-import styles from './styles.styl'
 import Typography from '../Typography'
+
+import styles from './styles.styl'
 
 export const Empty = ({
   icon,
@@ -15,6 +17,8 @@ export const Empty = ({
   centered,
   ...restProps
 }) => {
+  const isReactIconElement = typeof icon === 'object' && !!icon.props
+
   return (
     <div
       className={cx(
@@ -24,15 +28,27 @@ export const Empty = ({
       )}
       {...restProps}
     >
-      {icon && (
-        <Icon
-          className={cx(styles['c-empty-img'], {
-            [styles[`c-empty-img--${iconSize}`]]: iconSize !== 'normal'
-          })}
-          icon={icon}
-          size="100%"
-        />
-      )}
+      {icon &&
+        (isReactIconElement ? (
+          React.cloneElement(icon, {
+            className: cx(
+              styles['c-empty-img'],
+              {
+                [styles[`c-empty-img--${iconSize}`]]: iconSize !== 'normal'
+              },
+              icon.props?.className
+            ),
+            size: icon.props?.size || (icon.type === Icon ? '100%' : undefined)
+          })
+        ) : (
+          <Icon
+            className={cx(styles['c-empty-img'], {
+              [styles[`c-empty-img--${iconSize}`]]: iconSize !== 'normal'
+            })}
+            icon={icon}
+            size="100%"
+          />
+        ))}
       {title && (
         <Typography gutterBottom variant="h3" color="textPrimary">
           {title}
@@ -51,6 +67,7 @@ Empty.propTypes = {
   text: PropTypes.node,
   /** Sets horizontal and vertical centring. The reference element is that of a fixed position */
   centered: PropTypes.bool,
+  children: PropTypes.node,
   className: PropTypes.string
 }
 

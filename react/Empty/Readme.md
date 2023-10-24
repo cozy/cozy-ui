@@ -28,3 +28,41 @@ const initialVariants = [
   )}
 </Variants>
 ```
+
+### With custom image
+
+```jsx
+import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
+import PeopleSVGIcon from '../../assets/icons/ui/people.svg'
+import Empty from 'cozy-ui/transpiled/react/Empty'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+
+;
+
+<>
+  <Empty
+    icon={CozyIcon}
+    title="With functional SVG"
+    text="Try adding some content to this list"
+  />
+  <Empty
+    icon={<img src='https://viewerdemo.cozycloud.cc/IMG_0062.PNG' />}
+    title="With IMG"
+    text="Try adding some content to this list"
+  />
+  <Empty
+    icon={
+      <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="var(--primaryColor)" strokeWidth="4" fill="var(--paperBackgroundColor)" />
+      </svg>
+    }
+    title="With SVG"
+    text="Try adding some content to this list"
+  />
+  <Empty
+    icon={<Icon icon={CozyIcon} />}
+    title="With Icon component"
+    text="Try adding some content to this list"
+  />
+</>
+```
