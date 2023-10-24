@@ -7,9 +7,18 @@ $empty
     justify-content center
     flex 1 0 auto
     align-self center
-    padding rem(16) 0
+    margin 0 auto
+    padding 2rem
     text-align center
-    max-width 100%
+    width calc(100% - 4rem)
+    max-width rem(512)
+
+$empty--centered
+    +medium-screen()
+        position fixed
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
 
 $empty-img
     display block
@@ -41,10 +50,6 @@ $empty-title
         margin 0 rem(24)
 
 $empty-text
-    margin rem(5) auto 0
     max-width rem(1008)
     color var(--secondaryTextColor)
     line-height 1.5
-
-    +medium-screen()
-        margin rem(5 24 0)

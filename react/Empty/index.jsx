@@ -12,10 +12,18 @@ export const Empty = ({
   text,
   children,
   className,
+  centered,
   ...restProps
 }) => {
   return (
-    <div className={cx(styles['c-empty'], className)} {...restProps}>
+    <div
+      className={cx(
+        styles['c-empty'],
+        { [styles['c-empty--centered']]: centered },
+        className
+      )}
+      {...restProps}
+    >
       {icon && (
         <Icon
           className={cx(styles['c-empty-img'], {
@@ -41,6 +49,8 @@ Empty.propTypes = {
   iconSize: PropTypes.oneOf(['normal', 'medium', 'large']),
   title: PropTypes.node,
   text: PropTypes.node,
+  /** Sets horizontal and vertical centring. The reference element is that of a fixed position */
+  centered: PropTypes.bool,
   className: PropTypes.string
 }
 
