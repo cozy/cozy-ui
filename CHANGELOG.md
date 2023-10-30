@@ -1,3 +1,15 @@
+# [95.6.0](https://github.com/cozy/cozy-ui/compare/v95.5.0...v95.6.0) (2023-10-30)
+
+
+### Bug Fixes
+
+* Update AllowLocationDialog to fit Play Store needs ([3a00bd2](https://github.com/cozy/cozy-ui/commit/3a00bd2))
+
+
+### Features
+
+* **Empty:** Accept now <Icon />, <img> and <svg> as icon prop value ([d13cf26](https://github.com/cozy/cozy-ui/commit/d13cf26))
+
 # [95.5.0](https://github.com/cozy/cozy-ui/compare/v95.4.0...v95.5.0) (2023-10-24)
 
 
