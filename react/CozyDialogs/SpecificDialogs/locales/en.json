@@ -3,7 +3,7 @@
   "allow": "Allow",
   "allow-location-dialog": {
     "title": "Allow access to your location",
-    "description": "Cozy needs to be able to access your location in order to record your movements. This may consume a little battery power, but you can always disable the feature from your CO2 Coach settings."
+    "description": "Your Cozy needs to always be authorised to access your phone's location in order to memorise and help you analyse your movements, even when the app is not in use.\n\nIt will NEVER be passed on to anyone without your request.\n\nYou can deactivate this feature from the Coach CO2 app settings."
   },
   "install-flagship-app-dialog": {
     "title": "Scan the QR Code",

@@ -10,9 +10,17 @@ import CozyLocation from './icons/CozyLocation'
 
 import withSpecificDialogsLocales from './withSpecificDialogsLocales'
 
+const createStyles = () => ({
+  typography: {
+    whiteSpace: 'pre-line'
+  }
+})
+
 const AllowLocationDialog = forwardRef(
   ({ onClose, onAllow, description }, ref) => {
     const { t } = useI18n()
+
+    const styles = createStyles()
 
     return (
       <IllustrationDialog
@@ -30,7 +38,12 @@ const AllowLocationDialog = forwardRef(
         }
         content={
           <div className="u-ta-center">
-            <Typography gutterBottom variant="body1" color="textPrimary">
+            <Typography
+              gutterBottom
+              variant="body1"
+              color="textPrimary"
+              style={styles.typography}
+            >
               {description || t('allow-location-dialog.description')}
             </Typography>
           </div>
