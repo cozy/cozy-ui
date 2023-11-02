@@ -24,8 +24,22 @@ class IntentModal extends Component {
     logIntentModalDepecrated(
       'The IntentModal component has been deprecated and should be replaced by IntentIframe wrapped in Dialog'
     )
+    this.state = {
+      closable: true
+    }
   }
 
+  hideCross = () => {
+    this.setState({
+      closable: false
+    })
+  }
+
+  showCross = () => {
+    this.setState({
+      closable: true
+    })
+  }
   // As dismissAction is passed twice to the modal, both for closing and for
   // intent cancellation, we need to ensure that it is only actually
   // called once.
@@ -45,6 +59,7 @@ class IntentModal extends Component {
     return (
       <Modal
         {...modalProps}
+        closable={this.state.closable}
         key="modal"
         className={styles.intentModal}
         closeBtnClassName={styles.intentModal__cross}
@@ -59,6 +74,8 @@ class IntentModal extends Component {
           onError={onError}
           onTerminate={onComplete}
           type={doctype}
+          onHideCross={this.hideCross}
+          onShowCross={this.showCross}
         />
       </Modal>
     )
