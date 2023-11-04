@@ -46,7 +46,7 @@ const ExpirationAlert = ({ file }) => {
           onClick={handleClose}
         />
       }
-      className="u-mt-1 u-mh-1"
+      className="u-mh-1-m"
     >
       <Typography component="span" variant="inherit">
         <Typography component="span" variant="inherit">

@@ -31,7 +31,7 @@ const QualificationListItemContact = ({ file }) => {
 
   if (isLoadingContacts) {
     return (
-      <ListItem className={'u-pl-2 u-pr-3'}>
+      <ListItem className="u-ph-1">
         <Spinner color="var(--secondaryTextColor)" />
       </ListItem>
     )
@@ -43,7 +43,7 @@ const QualificationListItemContact = ({ file }) => {
 
   return (
     <>
-      <ListItem className={'u-ph-2'}>
+      <ListItem>
         <QualificationListItemText
           primary={t('Viewer.panel.qualification.contact')}
           secondary={contactName}

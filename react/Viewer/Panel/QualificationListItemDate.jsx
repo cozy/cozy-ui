@@ -26,7 +26,7 @@ const QualificationListItemDate = forwardRef(
     const isExpirationDate = name === 'expirationDate'
 
     return (
-      <ListItem className={'u-pl-2 u-pr-3'}>
+      <ListItem>
         <QualificationListItemText
           primary={t(`Viewer.panel.qualification.date.title.${name}`)}
           secondary={
