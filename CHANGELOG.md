@@ -1,3 +1,10 @@
+# [95.7.0](https://github.com/cozy/cozy-ui/compare/v95.6.0...v95.7.0) (2023-11-07)
+
+
+### Features
+
+* Use the new onHide/onShowCross provided by cozy-interapp ([eb3ca57](https://github.com/cozy/cozy-ui/commit/eb3ca57))
+
 # [95.6.0](https://github.com/cozy/cozy-ui/compare/v95.5.0...v95.6.0) (2023-10-30)
 
 
