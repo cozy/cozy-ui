@@ -22,7 +22,8 @@
     "shopping": "Shopping",
     "social": "Social",
     "telecom": "Telecom",
-    "transport": "Transportation"
+    "transport": "Transportation",
+    "pro": "Work"
   },
   "sections": {
     "applications": "Applications",
