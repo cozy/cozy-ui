@@ -1,3 +1,10 @@
+# [95.8.0](https://github.com/cozy/cozy-ui/compare/v95.7.0...v95.8.0) (2023-11-09)
+
+
+### Features
+
+* Add pro category to Sections translation ([485c7c4](https://github.com/cozy/cozy-ui/commit/485c7c4))
+
 # [95.7.0](https://github.com/cozy/cozy-ui/compare/v95.6.0...v95.7.0) (2023-11-07)
 
 
