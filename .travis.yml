@@ -37,6 +37,7 @@ jobs:
           name: js-binaries
           paths:
             - ./transpiled
+            - ./dist
     - name: 'Build CSS'
       stage: 'build'
       script:
