@@ -46,7 +46,7 @@ const IllustrationDialog = props => {
         />
       )}
       <DialogContent {...dialogContentProps}>
-        <div className="dialogContentInner withFluidActions">
+        <div className="dialogContentInner withFluidActions u-pt-1-half">
           {title && (
             <div className="dialogTitleFluidContainer">
               <DialogTitle
