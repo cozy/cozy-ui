@@ -1,3 +1,10 @@
+# [95.9.0](https://github.com/cozy/cozy-ui/compare/v95.8.0...v95.9.0) (2023-11-13)
+
+
+### Features
+
+* Add content push to IllustrationDialog ([4880f78](https://github.com/cozy/cozy-ui/commit/4880f78))
+
 # [95.8.0](https://github.com/cozy/cozy-ui/compare/v95.7.0...v95.8.0) (2023-11-09)
 
 
