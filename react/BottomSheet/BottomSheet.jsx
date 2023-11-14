@@ -53,7 +53,7 @@ const ContainerWrapper = ({ showBackdrop, children }) => {
 }
 
 const createStyles = ({
-  squared,
+  isTopPosition,
   hasToolbarProps,
   offset,
   renderSaferHeight,
@@ -67,7 +67,7 @@ const createStyles = ({
       '0 -0.5px 0px 0 rgba(0, 0, 0, 0.10), 0 -2px 2px 0 rgba(0, 0, 0, 0.02), 0 -4px 4px 0 rgba(0, 0, 0, 0.02), 0 -8px 8px 0 rgba(0, 0, 0, 0.02), 0 -16px 16px 0 rgba(0, 0, 0, 0.02)',
     backgroundColor: 'var(--paperBackgroundColor)',
     zIndex: 'var(--zIndex-modal)',
-    ...(squared && {
+    ...(isTopPosition && {
       borderTopLeftRadius: 0,
       borderTopRightRadius: 0,
       boxShadow: hasToolbarProps
@@ -160,9 +160,6 @@ const BottomSheet = memo(
     const [initPos, setInitPos] = useState(0)
     const prevInitPos = useRef()
 
-    const squared = backdrop
-      ? isTopPosition && bottomSpacerHeight <= 0
-      : isTopPosition
     const hasToolbarProps = !!Object.keys(toolbarProps).length
     const isClosable = !!onClose || backdrop
     const renderSaferHeight =
@@ -171,7 +168,7 @@ const BottomSheet = memo(
       prevInitPos.current !== 0 && prevInitPos.current > initPos
 
     const styles = createStyles({
-      squared,
+      isTopPosition,
       hasToolbarProps,
       offset,
       renderSaferHeight,
@@ -235,6 +232,7 @@ const BottomSheet = memo(
         backdrop,
         maxHeight,
         innerContentHeight,
+        toolbarProps,
         offset
       })
       const computedMediumHeight = computeMediumHeight({
