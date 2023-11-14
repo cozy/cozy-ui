@@ -34,7 +34,11 @@ const SelfBottomSheet = props => {
   const [, setInnerContentHeight] = useState(0) // tricks to rerender BottomSheet
 
   return (
-    <BottomSheet backdrop onClose={props.onClose}>
+    <BottomSheet
+      {...props?.componentsProps?.bottomsheet}
+      backdrop
+      onClose={props.onClose}
+    >
       <BottomSheetItem disableGutters>
         <NestedSelect
           HeaderComponent={HeaderComponent}

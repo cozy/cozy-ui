@@ -98,6 +98,7 @@ const StaticExample = () => {
       options={options}
       title="Please select letter"
       transformParentItem={transformParentItem}
+      componentsProps={{ bottomsheet: { skipAnimation: isTesting() } }}
       onClose={() => {}}
     />
   )
@@ -172,6 +173,7 @@ const InteractiveExample = () => {
               transformParentItem={transformParentItem}
               searchOptions={variant.withSearch ? searchOptions : undefined}
               ellipsis={variant.withEllipsis}
+              componentsProps={{ bottomsheet: { skipAnimation: isTesting() } }}
               noDivider={variant.noDivider}
             />
           )}
