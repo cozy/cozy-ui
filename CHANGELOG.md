@@ -1,3 +1,15 @@
+# [95.10.0](https://github.com/cozy/cozy-ui/compare/v95.9.0...v95.10.0) (2023-11-14)
+
+
+### Bug Fixes
+
+* **BottomSheet:** Content was not displayed correctly with toolbar ([97e3198](https://github.com/cozy/cozy-ui/commit/97e3198))
+
+
+### Features
+
+* **NestedSelect:** Add `componentsProps` prop to spread to bottomsheet ([11af87c](https://github.com/cozy/cozy-ui/commit/11af87c))
+
 # [95.9.0](https://github.com/cozy/cozy-ui/compare/v95.8.0...v95.9.0) (2023-11-13)
 
 
