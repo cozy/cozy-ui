@@ -4,7 +4,7 @@ import { getFlagshipMetadata } from 'cozy-device-helper'
 import { ANIMATION_DURATION } from './constants'
 import { getSafeAreaValue } from '../helpers/getSafeArea'
 
-export const computeMaxHeight = toolbarProps => {
+export const computeToolbarHeight = (toolbarProps = {}) => {
   const { ref, height } = toolbarProps
   let computedToolbarHeight = 1
 
@@ -14,7 +14,13 @@ export const computeMaxHeight = toolbarProps => {
     computedToolbarHeight = ref.current.offsetHeight
   }
 
-  return window.innerHeight - computedToolbarHeight
+  return computedToolbarHeight
+}
+
+export const computeMaxHeight = toolbarProps => {
+  const toolbarHeight = computeToolbarHeight(toolbarProps)
+
+  return window.innerHeight - toolbarHeight
 }
 
 export const computeMediumHeight = ({
@@ -125,16 +131,19 @@ export const computeBottomSpacer = ({
   backdrop,
   maxHeight,
   innerContentHeight,
+  toolbarProps,
   offset
 }) => {
-  // "maxHeight - innerContentHeight <= 0" happens for
-  // content longer than the window
-  if (maxHeight - innerContentHeight <= 0 || backdrop) {
-    return offset
+  // "maxHeight - innerContentHeight <= 0" happens for content longer than the available height
+  // such as height window or height window minus toolbar height
+  if (maxHeight - innerContentHeight <= 0) {
+    const toolbarHeight = computeToolbarHeight(toolbarProps)
+
+    return offset + toolbarHeight
   }
 
   // without backdrop, we want the bottomsheet to open to the top of the window
-  return maxHeight - innerContentHeight
+  return backdrop ? offset : maxHeight - innerContentHeight
 }
 
 export const getCssValue = (element, value) =>
