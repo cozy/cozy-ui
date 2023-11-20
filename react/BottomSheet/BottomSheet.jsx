@@ -261,7 +261,8 @@ const BottomSheet = memo(
         ...new Set([minHeight, computedMediumHeight, maxHeight])
       ]
 
-      const hasPeekHeightsChanged = peekHeights !== newPeekHeights
+      const hasPeekHeightsChanged =
+        peekHeights?.toString() !== newPeekHeights?.toString()
 
       if (hasPeekHeightsChanged && isTopPosition) {
         setCurrentIndex(v => v - 1)
