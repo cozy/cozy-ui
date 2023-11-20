@@ -1,3 +1,11 @@
+# [95.11.0](https://github.com/cozy/cozy-ui/compare/v95.10.0...v95.11.0) (2023-11-20)
+
+
+### Features
+
+* Add missing `bicNumber` attribute ([ed37277](https://github.com/cozy/cozy-ui/commit/ed37277))
+* Remove last occurence of `mespapiers.migrated.metadata` flag ([11c3147](https://github.com/cozy/cozy-ui/commit/11c3147))
+
 # [95.10.0](https://github.com/cozy/cozy-ui/compare/v95.9.0...v95.10.0) (2023-11-14)
 
 
