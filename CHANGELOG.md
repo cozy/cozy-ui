@@ -1,3 +1,12 @@
+## [95.11.1](https://github.com/cozy/cozy-ui/compare/v95.11.0...v95.11.1) (2023-11-20)
+
+
+### Bug Fixes
+
+* **BottomSheet:** Did not compare peek heights correctly ([600c430](https://github.com/cozy/cozy-ui/commit/600c430))
+* **BottomSheet:** Did not set default currentIndex correctly ([e22c482](https://github.com/cozy/cozy-ui/commit/e22c482))
+* **BottomSheet:** Did not set topPosition and snapIndex correctly ([c23ee5a](https://github.com/cozy/cozy-ui/commit/c23ee5a))
+
 # [95.11.0](https://github.com/cozy/cozy-ui/compare/v95.10.0...v95.11.0) (2023-11-20)
 
 
