@@ -23,6 +23,7 @@ export const knownDateMetadataNames = [
 ]
 export const knownInformationMetadataNames = [
   'number',
+  'bicNumber',
   'country',
   'refTaxIncome',
   'contractType',
