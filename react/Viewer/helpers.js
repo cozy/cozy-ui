@@ -1,5 +1,4 @@
 import { models, generateWebLink } from 'cozy-client'
-import flag from 'cozy-flags'
 
 const {
   isEncrypted,
@@ -22,23 +21,13 @@ export const knownDateMetadataNames = [
   'date',
   'datetime'
 ]
-export const knownInformationMetadataNames = flag(
-  'mespapiers.migrated.metadata'
-)
-  ? ['number', 'country', 'refTaxIncome', 'contractType', 'noticePeriod']
-  : [
-      'number',
-      'cafFileNumber',
-      'cardNumber',
-      'vinNumber',
-      'ibanNumber',
-      'bicNumber',
-      'country',
-      'passportNumber',
-      'refTaxIncome',
-      'contractType',
-      'noticePeriod'
-    ]
+export const knownInformationMetadataNames = [
+  'number',
+  'country',
+  'refTaxIncome',
+  'contractType',
+  'noticePeriod'
+]
 export const knownOtherMetadataNames = ['contact', 'page', 'qualification']
 
 export const getCurrentModel = metadataName => {
