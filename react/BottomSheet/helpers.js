@@ -84,10 +84,12 @@ export const makeOverridenChildren = (children, headerContentRef) => {
 
 export const setTopPosition = ({
   snapIndex,
-  maxHeightSnapIndex,
+  peekHeights,
   isTopPosition,
   setIsTopPosition
 }) => {
+  const maxHeightSnapIndex = peekHeights.length - 1
+
   if (snapIndex > maxHeightSnapIndex) {
     setIsTopPosition(true)
   }

@@ -189,12 +189,10 @@ const BottomSheet = memo(
     }, [onClose])
 
     const handleOnIndexChange = snapIndex => {
-      const maxHeightSnapIndex = peekHeights.length - 1
-
       setCurrentIndex(snapIndex)
       setTopPosition({
         snapIndex,
-        maxHeightSnapIndex,
+        peekHeights,
         isTopPosition,
         setIsTopPosition
       })
@@ -251,12 +249,6 @@ const BottomSheet = memo(
         actionButtonsBottomMargin
       })
 
-      if (computedMediumHeight >= maxHeight) {
-        setIsTopPosition(true)
-      } else {
-        setIsTopPosition(false)
-      }
-
       const newPeekHeights = [
         ...new Set([minHeight, computedMediumHeight, maxHeight])
       ]
@@ -264,13 +256,22 @@ const BottomSheet = memo(
       const hasPeekHeightsChanged =
         peekHeights?.toString() !== newPeekHeights?.toString()
 
-      if (hasPeekHeightsChanged && isTopPosition) {
-        setCurrentIndex(v => v - 1)
-      }
+      // lower the BottomSheet after a refresh if it was as top position and peek changed
+      const snapIndex =
+        hasPeekHeightsChanged && isTopPosition
+          ? currentIndex - 1 - (currentIndex - (newPeekHeights.length - 1))
+          : currentIndex
 
+      setCurrentIndex(snapIndex)
       setPeekHeights(newPeekHeights)
       prevInitPos.current = initPos
       setInitPos(computedMediumHeight)
+      setTopPosition({
+        snapIndex,
+        peekHeights: newPeekHeights,
+        isTopPosition,
+        setIsTopPosition
+      })
       // Used so that the BottomSheet can be opened to the top without stopping at the content height
       setBottomSpacerHeight(bottomSpacerHeight)
 
