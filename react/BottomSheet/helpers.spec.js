@@ -161,7 +161,7 @@ describe('setTopPosition', () => {
 
       setTopPosition({
         snapIndex: 3,
-        maxHeightSnapIndex: 2,
+        peekHeights: [0, 100, 200],
         setIsTopPosition
       })
 
@@ -173,7 +173,7 @@ describe('setTopPosition', () => {
 
       setTopPosition({
         snapIndex: 2,
-        maxHeightSnapIndex: 2,
+        peekHeights: [0, 100, 200],
         isTopPosition: false,
         setIsTopPosition
       })
@@ -186,7 +186,7 @@ describe('setTopPosition', () => {
 
       setTopPosition({
         snapIndex: 1,
-        maxHeightSnapIndex: 2,
+        peekHeights: [0, 100, 200],
         isTopPosition: true,
         setIsTopPosition
       })
@@ -201,7 +201,7 @@ describe('setTopPosition', () => {
 
       setTopPosition({
         snapIndex: 2,
-        maxHeightSnapIndex: 2,
+        peekHeights: [0, 100, 200],
         isTopPosition: true,
         setIsTopPosition
       })
@@ -214,7 +214,7 @@ describe('setTopPosition', () => {
 
       setTopPosition({
         snapIndex: 1,
-        maxHeightSnapIndex: 2,
+        peekHeights: [0, 100, 200],
         isTopPosition: false,
         setIsTopPosition
       })
