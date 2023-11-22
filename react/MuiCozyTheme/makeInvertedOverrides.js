@@ -20,13 +20,6 @@ export const makeInvertedOverrides = invertedTheme => {
         }
       }
     },
-    MuiFormLabel: {
-      root: {
-        '&$focused': {
-          color: invertedTheme.palette.text.primary
-        }
-      }
-    },
     MuiLinearProgress: {
       colorPrimary: {
         backgroundColor: 'rgba(255,255,255,0.2)'
