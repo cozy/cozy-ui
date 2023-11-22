@@ -6,7 +6,6 @@ import { Theme, useTheme } from '@material-ui/core'
 
 import { isFlagshipApp } from 'cozy-device-helper'
 
-import { getCssVariableValue } from '../../utils/color'
 import { useSetFlagshipUI } from '../../hooks/useSetFlagshipUi/useSetFlagshipUI'
 
 const getBottomBackground = (theme: Theme): string => {
@@ -25,7 +24,7 @@ const useHook = (): void => {
       bottomBackground: theme.palette.background.paper,
       // @ts-ignore
       bottomTheme: 'dark',
-      topOverlay: getCssVariableValue('overlay'),
+      topOverlay: 'var(--overlay)',
       topBackground: theme.palette.background.paper,
       // @ts-ignore
       topTheme: 'light'

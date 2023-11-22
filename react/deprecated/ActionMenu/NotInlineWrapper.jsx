@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import { usePopper } from 'react-popper'
 import ClickAwayListener from '@material-ui/core/ClickAwayListener'
 
-import { getCssVariableValue } from '../../utils/color'
-
 const NotInlineWrapper = ({
   anchorElRef,
   popperOptions,
@@ -45,7 +43,7 @@ const NotInlineWrapper = ({
       ref={setPopperElement}
       style={{
         ...styles.popper,
-        zIndex: getCssVariableValue('zIndex-popover')
+        zIndex: 'var(--zIndex-popover)'
       }}
       {...attributes.popper}
     >
