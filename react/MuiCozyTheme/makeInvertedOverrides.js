@@ -28,18 +28,6 @@ export const makeInvertedOverrides = invertedTheme => {
         backgroundColor: 'rgba(255,255,255,0.2)'
       }
     },
-    MuiCheckbox: {
-      colorPrimary: {
-        '&$checked:not($disabled)': {
-          color: invertedTheme.palette.primary.light
-        }
-      },
-      colorSecondary: {
-        '&$checked:not($disabled)': {
-          color: invertedTheme.palette.error.main
-        }
-      }
-    },
     MuiAlert: {
       root: {
         '&.cozyAlert': {
