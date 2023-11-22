@@ -581,7 +581,7 @@ export const makeOverrides = theme => ({
     thumb: {
       width: 16,
       height: 16,
-      backgroundColor: theme.palette.grey[0]
+      backgroundColor: theme.palette.common.white
     },
     track: {
       width: SWITCH_BAR_WIDTH,
