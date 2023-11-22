@@ -607,18 +607,10 @@ export const makeOverrides = theme => ({
   },
   MuiTooltip: {
     tooltip: {
-      backgroundColor: theme.palette.grey[700],
       borderRadius: '8px',
       fontSize: '1rem',
-      color: theme.palette.common.white,
       lineHeight: '1.3',
       padding: '16px'
-    },
-    arrow: {
-      color: theme.palette.grey[700]
-    },
-    popper: {
-      opacity: 0.9
     }
   },
   MuiIconButton: {
