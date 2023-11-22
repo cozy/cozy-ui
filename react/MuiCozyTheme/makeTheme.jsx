@@ -1,5 +1,4 @@
 import { createTheme } from '../styles'
-import { getCssVariableValue } from '../utils/color'
 import isTesting from '../helpers/isTesting'
 import { makePalette } from './makePalette'
 import { makeTypography } from './makeTypography'
@@ -21,7 +20,7 @@ const themesCommonConfig = {
     }
   },
   zIndex: {
-    modal: getCssVariableValue('zIndex-modal')
+    modal: 'var(--zIndex-modal)'
   },
   textShadows: [
     'none',
