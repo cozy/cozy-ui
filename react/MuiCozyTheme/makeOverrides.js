@@ -601,7 +601,7 @@ export const makeOverrides = theme => ({
         backgroundColor: `${theme.palette.grey[200]} !important`
       },
       '& $thumb': {
-        backgroundColor: 'white'
+        backgroundColor: theme.palette.common.white
       }
     }
   },
@@ -610,7 +610,7 @@ export const makeOverrides = theme => ({
       backgroundColor: theme.palette.grey[700],
       borderRadius: '8px',
       fontSize: '1rem',
-      color: 'white',
+      color: theme.palette.common.white,
       lineHeight: '1.3',
       padding: '16px'
     },
