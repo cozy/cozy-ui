@@ -88,7 +88,6 @@ export const makePalette = type => {
       icon: getCssValue('iconTextColor')
     },
     grey: {
-      0: getCssValue('grey0'),
       50: getCssValue('grey50'),
       100: getCssValue('grey100'),
       200: getCssValue('grey200'),
