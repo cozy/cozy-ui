@@ -22,7 +22,7 @@ import Album from 'cozy-ui/transpiled/react/Icons/Album'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Dialog from 'cozy-ui/transpiled/react/CozyDialogs/Dialog'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import cx from 'classnames'
 
 import { makeStyles } from 'cozy-ui/transpiled/react/styles'
@@ -503,7 +503,7 @@ const icons = [
   WrenchCircle,
   Work
 ]
-
+const locale = {}
 const wrapperStyle = {
   fontSize: '2rem',
   display: 'grid',
@@ -540,7 +540,7 @@ const InfoModal = ({ icon }) => {
 
 const Example = () => {
   return (
-    <BreakpointsProvider>
+    <DemoProvider>
       <Typography component='p' variant='body1' className='u-mb-1'>
         Font size: <input type='range' min='8' max='48' value={state.size} onChange={handleInputRangeChange} /> {state.size}px
       </Typography>
@@ -559,7 +559,7 @@ const Example = () => {
         )}
       { state.selected ? <InfoModal icon={state.selected} /> : null }
       </div>
-    </BreakpointsProvider>
+    </DemoProvider>
   )
 }
 
@@ -704,7 +704,7 @@ const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'd
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Dialog from 'cozy-ui/transpiled/react/CozyDialogs/Dialog'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import cx from 'classnames'
 
 import { makeStyles } from 'cozy-ui/transpiled/react/styles'
@@ -755,7 +755,7 @@ import Triggers from 'cozy-ui/transpiled/react/Icons/Triggers'
 import Versioning from 'cozy-ui/transpiled/react/Icons/Versioning'
 
 const icons = [Accounts, Apps, BankAccounts, BankGroups, BankOperations, BankRecurrence, BillPermissions, BugReport, CalendarPermissions, Category, CertifiedPermissions, ConnectedClients, Consumption, ContactsAccounts, ContactsGroups, Contacts, Contract, Ecolyo, Energy, Energybreakdown, Fallback, Family, FilesPen, FilesVersions, Files, HomePermissions, Identities, KonnectorsResult, Konnectors, LocationPermissions, Notifications, Opinions, Passwords, Permissions, PhotosAlbum, PhotosSettings, Profile, SafePermissions, Settings, Sharings, Sinister, Tags,TaskToEffectuate, Triggers, Versioning]
-
+const locale = {}
 const wrapperStyle = {
   fontSize: '2rem',
   display: 'grid',
@@ -792,7 +792,7 @@ const InfoModal = ({ icon }) => {
 
 const Example = () => {
   return (
-    <BreakpointsProvider>
+    <DemoProvider>
       <Typography component='p' variant='body1' className='u-mb-1'>
         Font size: <input type='range' min='8' max='48' value={state.size} onChange={handleInputRangeChange} /> {state.size}px
       </Typography>
@@ -811,7 +811,7 @@ const Example = () => {
         )}
       { state.selected ? <InfoModal icon={state.selected} /> : null }
       </div>
-    </BreakpointsProvider>
+    </DemoProvider>
   )
 }
 
