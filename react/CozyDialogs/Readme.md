@@ -7,11 +7,12 @@ Will automatically:
 
 ### Usage
 
-* **Dialog** : default Cozy modal
-* **ConfirmDialog** : used for confirmation popups
-* **IllustrationDialog** : used for illustration as title
-* **FixedDialog** : default one but with both title/actions fixed
-* **FixedActionsDialog** : default one but with title fluid and actions fixed
+* **Dialog**: default Cozy modal
+* **ConfirmDialog**: used for confirmation popups
+* **IllustrationDialog**: used for illustration as title
+* **FixedDialog**: default one but with both title/actions fixed
+* **FixedActionsDialog**: default one but with title fluid and actions fixed
+* **PermissionDialog**: used to request permission
 
 ```bash
 import { Dialog } from  'cozy-ui/transpiled/react/CozyDialogs'
@@ -246,9 +247,11 @@ const setFlagshipVars = () => {
 
 <DemoProvider>
   <Button
-    onClick={() => setFlagshipVars()}
+    className="u-mb-1"
     variant="secondary"
-    label={'Simulate Immersive Flagship Mode'} />
+    label={'Simulate Immersive Flagship Mode'}
+    onClick={() => setFlagshipVars()}
+  />
   <Variants initialVariants={initialVariants}>
     {variant => (
       <>
