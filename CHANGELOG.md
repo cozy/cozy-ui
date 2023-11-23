@@ -1,3 +1,31 @@
+# [96.0.0](https://github.com/cozy/cozy-ui/compare/v95.11.1...v96.0.0) (2023-11-23)
+
+
+### Bug Fixes
+
+* **Body:** Use correct css var for color and bg color ([502234c](https://github.com/cozy/cozy-ui/commit/502234c))
+* **Checkbox:** Remove useless css properties for inverted theme ([57e3f10](https://github.com/cozy/cozy-ui/commit/57e3f10))
+* **FormLabel:** Remove useless css properties for inverted theme ([5014ba0](https://github.com/cozy/cozy-ui/commit/5014ba0))
+* **Nav:** Replace css var to be theme responsive ([580a1ca](https://github.com/cozy/cozy-ui/commit/580a1ca))
+* **Sidebar:** Use `defaultBackgroundColor` instead of `paleGrey bg color` ([2e3c378](https://github.com/cozy/cozy-ui/commit/2e3c378))
+* **Theme:** Replace `white` by theme.palette.common.white ([8e6e4ee](https://github.com/cozy/cozy-ui/commit/8e6e4ee))
+* **TooltIp:** Remove useless css properties ([7c62cd1](https://github.com/cozy/cozy-ui/commit/7c62cd1))
+
+
+### Features
+
+* Remove `navTextColor`, `navTextActiveColor`, `navTextHoverColor` ([e8aba76](https://github.com/cozy/cozy-ui/commit/e8aba76))
+* Remove palette.grey[0] from Mui palette ([9b8e53f](https://github.com/cozy/cozy-ui/commit/9b8e53f))
+
+
+### BREAKING CHANGES
+
+* You should replace css var like this :
+- `--navTextColor` -> `--actionColorActive`
+- `--navTextActiveColor` -> `--primaryTextColor`
+- `--navTextHoverColor` -> `--actionColorActive`
+* You must use `palette.common.white` instead of `palette.grey[0]`
+
 ## [95.11.1](https://github.com/cozy/cozy-ui/compare/v95.11.0...v95.11.1) (2023-11-20)
 
 
