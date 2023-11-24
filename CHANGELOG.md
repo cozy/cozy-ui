@@ -1,3 +1,10 @@
+# [96.1.0](https://github.com/cozy/cozy-ui/compare/v96.0.0...v96.1.0) (2023-11-24)
+
+
+### Features
+
+* Add TrashDuotone icon ([b3b26b5](https://github.com/cozy/cozy-ui/commit/b3b26b5))
+
 # [96.0.0](https://github.com/cozy/cozy-ui/compare/v95.11.1...v96.0.0) (2023-11-23)
 
 
