@@ -90,16 +90,18 @@ class NestedSelect extends Component {
       transformParentItem,
       radioPosition,
       ellipsis,
+      options,
+      searchOptions,
       noDivider
     } = this.props
     const { history, searchValue, searchResult } = this.state
+
     const current = history[0]
     const children = current.children || []
     const level = history.length - 1
     const isSelectedWithLevel = item => isSelected(item, level)
     const parentItem = transformParentItem(omit(current, 'children'))
 
-    const searchOptions = this.props.searchOptions
     const hasSearchResult = searchValue.length > 0
 
     const onChange = ev => {
@@ -120,6 +122,7 @@ class NestedSelect extends Component {
             onClickBack={this.handleBack}
           />
         ) : null}
+        {level > 0 ? options.childrenHeader : options.header}
         <ContentComponent>
           {canSelectParent && level > 0 ? (
             <ItemRow
@@ -214,6 +217,10 @@ NestedSelect.propTypes = {
 
   /** Options that will be rendered as nested lists of choices */
   options: PropTypes.shape({
+    /** Header shown above options list */
+    header: PropTypes.node,
+    /** Header shown above options list inside a children */
+    childrenHeader: PropTypes.node,
     children: PropTypes.arrayOf(ItemPropType)
   }),
 
