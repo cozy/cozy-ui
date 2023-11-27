@@ -506,11 +506,13 @@ export const makeOverrides = theme => ({
             '& .dialogContentWrapper': {
               flexGrow: 1,
               '&:not(.withActions)': {
-                paddingBottom: '16px'
+                paddingBottom:
+                  'calc(env(safe-area-inset-bottom) + var(--flagship-bottom-height) + 16px)'
               }
             },
             '& .cozyDialogActions': {
-              paddingBottom: '16px'
+              paddingBottom:
+                'calc(env(safe-area-inset-bottom) + var(--flagship-bottom-height) + 16px)'
             }
           }
         },
