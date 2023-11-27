@@ -1,3 +1,10 @@
+## [96.1.1](https://github.com/cozy/cozy-ui/compare/v96.1.0...v96.1.1) (2023-11-27)
+
+
+### Bug Fixes
+
+* Improve IllustrationDialog layout in native ([2946e9d](https://github.com/cozy/cozy-ui/commit/2946e9d))
+
 # [96.1.0](https://github.com/cozy/cozy-ui/compare/v96.0.0...v96.1.0) (2023-11-24)
 
 
