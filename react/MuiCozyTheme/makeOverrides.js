@@ -568,6 +568,13 @@ export const makeOverrides = theme => ({
       }
     }
   },
+  MuiCheckbox: {
+    colorSecondary: {
+      '&$checked': {
+        color: theme.palette.error.main
+      }
+    }
+  },
   MuiSwitch: {
     checked: {
       '& + $track$track': {
@@ -631,6 +638,20 @@ export const makeOverrides = theme => ({
         backgroundColor: theme.palette.background.paper,
         '&:hover': {
           backgroundColor: theme.palette.action.selected
+        }
+      },
+      '&.cozyStyles': {
+        '&-error': {
+          color: theme.palette.error.main,
+          '&:hover': {
+            backgroundColor: alpha(
+              theme.palette.error.main,
+              theme.palette.action.hoverOpacity
+            ),
+            '@media (hover: none)': {
+              backgroundColor: 'transparent'
+            }
+          }
         }
       }
     }

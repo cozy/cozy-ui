@@ -21,7 +21,7 @@ const variants = [
   'body2',
   'caption',
 ]
-const colors = ['initial', 'inherit', 'primary', 'secondary', 'textPrimary', 'textSecondary', 'error']
+const colors = ['initial', 'inherit', 'primary', 'textPrimary', 'textSecondary', 'error']
 
 ;
 
