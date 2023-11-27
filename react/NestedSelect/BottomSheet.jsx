@@ -11,6 +11,8 @@ import Divider from '../Divider'
 import NestedSelect from './NestedSelect'
 
 const HeaderComponent = ({ title, showBack, onClickBack }) => {
+  if (!title) return null
+
   return (
     <>
       <BottomSheetHeader

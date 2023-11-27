@@ -15,6 +15,9 @@ const NestedSelectDialogHeader = ({ onClickBack, showBack, title }) => {
   const { dialogTitleProps } = useCozyDialog({
     open: true
   })
+
+  if (!title) return null
+
   return (
     <DialogTitle {...dialogTitleProps}>
       <Media>

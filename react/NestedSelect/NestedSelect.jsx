@@ -195,7 +195,7 @@ const ItemPropType = PropTypes.shape({
   /** Key used for the item, if not passed, title is used */
   key: PropTypes.string,
   /** Label used for the item */
-  title: PropTypes.node.isRequired,
+  title: PropTypes.node,
   /** Description of the item */
   description: PropTypes.node,
   /** Options below the current one */

@@ -151,7 +151,7 @@ const InteractiveExample = () => {
     }, RADIO_BUTTON_ANIM_DURATION)
   }
 
-  const initialVariants = [{ noDivider: false, leftRadio: false, withSearch: false, withEllipsis: true }]
+  const initialVariants = [{ noTitle: false, noDivider: false, leftRadio: false, withSearch: false, withEllipsis: true }]
 
   return (
     <Variants initialVariants={initialVariants} screenshotAllVariants>
@@ -169,7 +169,7 @@ const InteractiveExample = () => {
               isSelected={isSelected}
               options={options}
               radioPosition={variant.leftRadio ? 'left' : 'right'}
-              title="Please select letter"
+              title={variant.noTitle ? undefined : "Please select letter"}
               transformParentItem={transformParentItem}
               searchOptions={variant.withSearch ? searchOptions : undefined}
               ellipsis={variant.withEllipsis}
