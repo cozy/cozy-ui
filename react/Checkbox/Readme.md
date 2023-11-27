@@ -3,7 +3,6 @@
 ```jsx
 import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
 import Grid from 'cozy-ui/transpiled/react/Grid'
-import Paper from 'cozy-ui/transpiled/react/Paper'
 
 ;
 
@@ -40,7 +39,9 @@ import Paper from 'cozy-ui/transpiled/react/Paper'
 ### Checkbox with complex children
 
 ```jsx
-import Checkbox from 'cozy-ui/transpiled/react/Checkbox';
+import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
+
+;
 
 <div>
   <Checkbox label={(<>This is a <strong>complex</strong> text</>)} />
