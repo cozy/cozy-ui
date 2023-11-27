@@ -17,6 +17,7 @@ import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
 import useBreakpoints from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import palette from 'cozy-ui/transpiled/react/palette'
 import Typography from 'cozy-ui/transpiled/react/Typography'
+import Alert from 'cozy-ui/transpiled/react/Alert'
 
 const Image = ({ letter }) => (
   <Circle backgroundColor={palette.melon}>
@@ -42,7 +43,13 @@ const SettingAction = ({ item, onClick }) => {
   )
 }
 
-const options = {
+const makeOptions = withHeaders => ({
+  header: withHeaders ?
+    <Alert className="u-mt-1 u-mh-1" serverity="info" icon={false}>This is a header for options</Alert>
+    : undefined,
+  childrenHeader: withHeaders ?
+    <Alert className="u-mt-1 u-mh-1" serverity="info">This is specific option header for children</Alert>
+    : undefined,
   children: [
     {
       ...letterOption('A', 'is for Apple'),
@@ -78,7 +85,7 @@ const options = {
     letterOption('M'),
     letterOption('N'),
   ]
-}
+})
 
 const transformParentItem = item => ({
   ...item,
@@ -95,7 +102,7 @@ const StaticExample = () => {
       onSelect={x => x}
       dismissAction={x => x}
       isSelected={x => x.title === 'C'}
-      options={options}
+      options={makeOptions()}
       title="Please select letter"
       transformParentItem={transformParentItem}
       componentsProps={{ bottomsheet: { skipAnimation: isTesting() } }}
@@ -151,7 +158,14 @@ const InteractiveExample = () => {
     }, RADIO_BUTTON_ANIM_DURATION)
   }
 
-  const initialVariants = [{ noTitle: false, noDivider: false, leftRadio: false, withSearch: false, withEllipsis: true }]
+  const initialVariants = [{
+    noTitle: false,
+    noDivider: false,
+    leftRadio: false,
+    withSearch: false,
+    withEllipsis: true,
+    withHeaders: false
+  }]
 
   return (
     <Variants initialVariants={initialVariants} screenshotAllVariants>
@@ -167,7 +181,7 @@ const InteractiveExample = () => {
               onSelect={handleSelect}
               onClose={hideModal}
               isSelected={isSelected}
-              options={options}
+              options={makeOptions(variant.withHeaders)}
               radioPosition={variant.leftRadio ? 'left' : 'right'}
               title={variant.noTitle ? undefined : "Please select letter"}
               transformParentItem={transformParentItem}
