@@ -91,7 +91,7 @@ const Alert = forwardRef(
 
 Alert.displayName = 'Alert'
 
-Alert.propTypes = {
+export const AlertPropTypes = {
   className: PropTypes.string,
   icon: PropTypes.oneOfType([PropTypes.element, PropTypes.bool]),
   severity: PropTypes.oneOf([
@@ -108,11 +108,15 @@ Alert.propTypes = {
   variant: PropTypes.oneOf(['standard', 'outlined', 'filled'])
 }
 
-Alert.defaultProps = {
+export const AlertDefaultProps = {
   severity: 'primary',
   block: false,
   square: false,
   variant: 'standard'
 }
+
+Alert.propTypes = AlertPropTypes
+
+Alert.defaultProps = AlertDefaultProps
 
 export default Alert

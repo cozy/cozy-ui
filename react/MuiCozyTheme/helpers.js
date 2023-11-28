@@ -1,14 +1,20 @@
 import { alpha } from '../styles'
 
+export const makeAlertBackgroundColor = ({ theme, severity }) => ({
+  standard: alpha(
+    theme.palette[severity].main,
+    theme.palette.background.contrastOpacity
+  ),
+  outlined: theme.palette[severity].main,
+  filled: theme.palette[severity].main
+})
+
 export const makeAlertColor = (theme, severity) => {
   // same approach as Mui, see https://github.com/mui/material-ui/blob/v4.x/packages/material-ui-lab/src/Alert/Alert.js#L28
   return {
     '&-standard': {
       color: theme.palette.text.primary,
-      backgroundColor: alpha(
-        theme.palette[severity].main,
-        theme.palette.background.contrastOpacity
-      ),
+      backgroundColor: makeAlertBackgroundColor({ theme, severity }).standard,
       '& $icon': {
         color:
           severity === 'secondary'
@@ -23,7 +29,9 @@ export const makeAlertColor = (theme, severity) => {
     },
     '&-outlined': {
       color: theme.palette.text.primary,
-      border: `1px solid ${theme.palette[severity].main}`,
+      border: `1px solid ${
+        makeAlertBackgroundColor({ theme, severity }).outlined
+      }`,
       '& $icon': {
         color:
           severity === 'secondary'
@@ -33,7 +41,7 @@ export const makeAlertColor = (theme, severity) => {
     },
     '&-filled': {
       color: theme.palette[severity].contrastText,
-      backgroundColor: theme.palette[severity].main,
+      backgroundColor: makeAlertBackgroundColor({ theme, severity }).filled,
       '& $action': {
         '& button[title="Close"]': {
           color: theme.palette[severity].contrastText
