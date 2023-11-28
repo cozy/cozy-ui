@@ -1,3 +1,16 @@
+# [97.1.0](https://github.com/cozy/cozy-ui/compare/v97.0.0...v97.1.0) (2023-11-28)
+
+
+### Bug Fixes
+
+* **Alert:** Adjust colors ([29a3b80](https://github.com/cozy/cozy-ui/commit/29a3b80))
+
+
+### Features
+
+* **MuiPalette:** Add `theme.palette.background.contrastOpacity` ([a09926b](https://github.com/cozy/cozy-ui/commit/a09926b))
+* **PointerAlert:** Add this new component based on Alert ([9d73f68](https://github.com/cozy/cozy-ui/commit/9d73f68))
+
 # [97.0.0](https://github.com/cozy/cozy-ui/compare/v96.2.0...v97.0.0) (2023-11-28)
 
 
