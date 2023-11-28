@@ -1,6 +1,5 @@
 import merge from 'lodash/merge'
 
-import { makeAlertInvertedColor } from './helpers'
 import { makeOverrides } from './makeOverrides'
 
 export const makeInvertedOverrides = invertedTheme => {
@@ -26,18 +25,6 @@ export const makeInvertedOverrides = invertedTheme => {
       },
       colorSecondary: {
         backgroundColor: 'rgba(255,255,255,0.2)'
-      }
-    },
-    MuiAlert: {
-      root: {
-        '&.cozyAlert': {
-          '&-primary': makeAlertInvertedColor(invertedTheme, 'primary'),
-          '&-secondary': makeAlertInvertedColor(invertedTheme, 'secondary'),
-          '&-success': makeAlertInvertedColor(invertedTheme, 'success'),
-          '&-error': makeAlertInvertedColor(invertedTheme, 'error'),
-          '&-warning': makeAlertInvertedColor(invertedTheme, 'warning'),
-          '&-info': makeAlertInvertedColor(invertedTheme, 'info')
-        }
       }
     },
     MuiSnackbarContent: {

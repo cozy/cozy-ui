@@ -1,18 +1,19 @@
-import { alpha, lighten, darken } from '../styles'
+import { alpha } from '../styles'
 
-export const makeAlertColor = (theme, color) => {
-  const themeColorByColor = {
-    primary: theme.palette[color].main,
-    secondary: theme.palette.text.primary
-  }
-
+export const makeAlertColor = (theme, severity) => {
   // same approach as Mui, see https://github.com/mui/material-ui/blob/v4.x/packages/material-ui-lab/src/Alert/Alert.js#L28
   return {
     '&-standard': {
-      color: darken(themeColorByColor[color], 0.6),
-      backgroundColor: lighten(themeColorByColor[color], 0.9),
+      color: theme.palette.text.primary,
+      backgroundColor: alpha(
+        theme.palette[severity].main,
+        theme.palette.background.contrastOpacity
+      ),
       '& $icon': {
-        color: themeColorByColor[color]
+        color:
+          severity === 'secondary'
+            ? theme.palette.text.primary
+            : theme.palette[severity].main
       },
       '& $action': {
         '& button[title="Close"]': {
@@ -21,45 +22,22 @@ export const makeAlertColor = (theme, color) => {
       }
     },
     '&-outlined': {
-      color: darken(themeColorByColor[color], 0.6),
-      border: `1px solid ${themeColorByColor[color]}`,
+      color: theme.palette.text.primary,
+      border: `1px solid ${theme.palette[severity].main}`,
       '& $icon': {
-        color: themeColorByColor[color]
+        color:
+          severity === 'secondary'
+            ? theme.palette.text.primary
+            : theme.palette[severity].main
       }
     },
     '&-filled': {
-      backgroundColor:
-        color === 'secondary'
-          ? theme.palette.grey[600]
-          : themeColorByColor[color]
-    }
-  }
-}
-
-export const makeAlertInvertedColor = (theme, color) => {
-  return {
-    '&-standard': {
-      color: theme.palette.primary.main,
-      backgroundColor: theme.palette.background.default,
-      '& $icon': {
-        color: theme.palette[color].main
-      }
-    },
-    '&-outlined': {
-      color: theme.palette.primary.main,
-      border: `1px solid ${theme.palette.primary.main}`,
-      '& $icon': {
-        color: theme.palette[color].main
-      }
-    },
-    '&-filled': {
-      color: theme.palette[color].contrastText,
-      backgroundColor:
-        color === 'secondary'
-          ? theme.palette.grey[200]
-          : theme.palette[color].main,
-      '& $icon': {
-        color: theme.palette[color].contrastText
+      color: theme.palette[severity].contrastText,
+      backgroundColor: theme.palette[severity].main,
+      '& $action': {
+        '& button[title="Close"]': {
+          color: theme.palette[severity].contrastText
+        }
       }
     }
   }

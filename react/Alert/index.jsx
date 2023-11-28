@@ -57,6 +57,7 @@ const Alert = forwardRef(
     },
     ref
   ) => {
+    // as primary and secondary doesn't exist on Mui Alert, we force success severity for those
     const madeSeverity = ['primary', 'secondary'].includes(severity)
       ? 'success'
       : severity
@@ -70,7 +71,7 @@ const Alert = forwardRef(
         style={{ backgroundColor: color, borderRadius: square && 0 }}
         className={cx(
           className,
-          `cozyAlert-${severity}-${variant}`,
+          `cozyStyles-${severity}-${variant}`,
           { block },
           { action: Boolean(action) }
         )}
