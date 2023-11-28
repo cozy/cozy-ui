@@ -760,9 +760,13 @@ export const makeOverrides = theme => ({
   MuiAlert: {
     root: {
       padding: '8px 16px',
-      '&.cozyAlert': {
+      '&.cozyStyles': {
         '&-primary': makeAlertColor(theme, 'primary'),
-        '&-secondary': makeAlertColor(theme, 'secondary')
+        '&-secondary': makeAlertColor(theme, 'secondary'),
+        '&-success': makeAlertColor(theme, 'success'),
+        '&-error': makeAlertColor(theme, 'error'),
+        '&-warning': makeAlertColor(theme, 'warning'),
+        '&-info': makeAlertColor(theme, 'info')
       },
       '& $icon': {
         paddingTop: '9px'
