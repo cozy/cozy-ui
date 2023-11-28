@@ -1,3 +1,11 @@
+# [96.2.0](https://github.com/cozy/cozy-ui/compare/v96.1.1...v96.2.0) (2023-11-28)
+
+
+### Features
+
+* **NestedSelect:** Add `header` and `childrenHeader` props on `options` ([bf31c73](https://github.com/cozy/cozy-ui/commit/bf31c73))
+* **NestedSelect:** Title is no longer required ([6a776cf](https://github.com/cozy/cozy-ui/commit/6a776cf))
+
 ## [96.1.1](https://github.com/cozy/cozy-ui/compare/v96.1.0...v96.1.1) (2023-11-27)
 
 
