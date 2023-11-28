@@ -1,3 +1,17 @@
+# [97.0.0](https://github.com/cozy/cozy-ui/compare/v96.2.0...v97.0.0) (2023-11-28)
+
+
+### Features
+
+* Change Secondary color values ([7085cdf](https://github.com/cozy/cozy-ui/commit/7085cdf))
+
+
+### BREAKING CHANGES
+
+* Secondary color was previously red like error color. You should not be very impacted by this change. Here's what you should be concerned about:
+- for `IconButton` and `Typography`: use `color="error"` instead of `color="secondary"`
+- for `Tabs` make sure you are using `indicatorColor="primary"` and `textColor="primary"`
+
 # [96.2.0](https://github.com/cozy/cozy-ui/compare/v96.1.1...v96.2.0) (2023-11-28)
 
 
