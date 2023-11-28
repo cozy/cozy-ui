@@ -3,9 +3,9 @@
 exports[`Alert should render examples: Alert 1`] = `
 "<div data-testid=\\"mountNode\\">
   <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
-    <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"LONGTEXT\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">LONGTEXT</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"TITLE\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">TITLE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"BLOCK\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">BLOCK</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"COLOR\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">COLOR</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"LARGEICON\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">LARGEICON</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"NOICON\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">NOICON</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"SQUARE\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">SQUARE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"ACTIONONE\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">ACTIONONE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"ACTIONTWO\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">ACTIONTWO</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"CLOSE\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">CLOSE</span></label>
+    <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"LONGTEXT\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">LONGTEXT</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"TITLE\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">TITLE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"BLOCK\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">BLOCK</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"COLOR\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">COLOR</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"LARGEICON\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">LARGEICON</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"NOICON\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">NOICON</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"SQUARE\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">SQUARE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"ACTIONONE\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">ACTIONONE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"ACTIONTWO\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">ACTIONTWO</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"FILLED\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">FILLED</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"CLOSE\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">CLOSE</span></label>
   </div>
-  <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-standardSuccess cozyAlert-primary-standard MuiPaper-elevation0\\" role=\\"alert\\">
+  <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-standardSuccess cozyStyles-primary-standard MuiPaper-elevation0\\" role=\\"alert\\">
     <div class=\\"MuiAlert-icon\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
         <defs>
           <path id=\\"info_svg__a\\" d=\\"M8 16A8 8 0 118 0a8 8 0 010 16zM7 4a1 1 0 102 0 1 1 0 10-2 0zm1 2H6v2h1v4a1 1 0 001 1h2v-2H9V7a1 1 0 00-1-1z\\"></path>
@@ -23,7 +23,7 @@ exports[`Alert should render examples: Alert 2`] = `
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-checked-2 Mui-checked MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"TITLE\\" aria-checked=\\"\\" value=\\"\\" checked=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">TITLE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"BLOCK\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">BLOCK</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"CLOSE\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">CLOSE</span></label>
   </div>
   <div class=\\"u-mb-1\\">
-    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-standardSuccess cozyAlert-primary-standard action MuiPaper-elevation0\\" role=\\"alert\\">
+    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-standardSuccess cozyStyles-primary-standard action MuiPaper-elevation0\\" role=\\"alert\\">
       <div class=\\"MuiAlert-icon\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <defs>
             <path id=\\"info_svg__a\\" d=\\"M8 16A8 8 0 118 0a8 8 0 010 16zM7 4a1 1 0 102 0 1 1 0 10-2 0zm1 2H6v2h1v4a1 1 0 001 1h2v-2H9V7a1 1 0 00-1-1z\\"></path>
@@ -31,13 +31,13 @@ exports[`Alert should render examples: Alert 2`] = `
           <use fill-rule=\\"evenodd\\" xlink:href=\\"#info_svg__a\\"></use>
         </svg></div>
       <div class=\\"MuiAlert-message makeStyles-message-5 makeStyles-message-7\\">
-        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">PRIMARY</div>This is a primary alert
+        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">primary</div>This is a primary alert
       </div>
       <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
     </div>
   </div>
   <div class=\\"u-mb-1\\">
-    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-standardSuccess cozyAlert-secondary-standard action MuiPaper-elevation0\\" role=\\"alert\\">
+    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-standardSuccess cozyStyles-secondary-standard action MuiPaper-elevation0\\" role=\\"alert\\">
       <div class=\\"MuiAlert-icon\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <defs>
             <path id=\\"info_svg__a\\" d=\\"M8 16A8 8 0 118 0a8 8 0 010 16zM7 4a1 1 0 102 0 1 1 0 10-2 0zm1 2H6v2h1v4a1 1 0 001 1h2v-2H9V7a1 1 0 00-1-1z\\"></path>
@@ -45,46 +45,46 @@ exports[`Alert should render examples: Alert 2`] = `
           <use fill-rule=\\"evenodd\\" xlink:href=\\"#info_svg__a\\"></use>
         </svg></div>
       <div class=\\"MuiAlert-message makeStyles-message-5 makeStyles-message-8\\">
-        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">SECONDARY</div>This is a secondary alert
+        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">secondary</div>This is a secondary alert
       </div>
       <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
     </div>
   </div>
   <div class=\\"u-mb-1\\">
-    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-standardSuccess cozyAlert-success-standard action MuiPaper-elevation0\\" role=\\"alert\\">
+    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-standardSuccess cozyStyles-success-standard action MuiPaper-elevation0\\" role=\\"alert\\">
       <div class=\\"MuiAlert-icon\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M24 48c13.255 0 24-10.745 24-24S37.255 0 24 0 0 10.745 0 24s10.745 24 24 24zM13.414 24.586a2 2 0 00-2.828 2.828l7 7a2 2 0 002.828 0l15-15a2 2 0 00-2.828-2.828L19 30.172l-5.586-5.586z\\"></path>
         </svg></div>
       <div class=\\"MuiAlert-message makeStyles-message-5 makeStyles-message-9\\">
-        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">SUCCESS</div>This is a success alert
+        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">success</div>This is a success alert
       </div>
       <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-success MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
     </div>
   </div>
   <div class=\\"u-mb-1\\">
-    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-standardError cozyAlert-error-standard action MuiPaper-elevation0\\" role=\\"alert\\">
+    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-standardError cozyStyles-error-standard action MuiPaper-elevation0\\" role=\\"alert\\">
       <div class=\\"MuiAlert-icon\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0ZM8 9.75C7.30964 9.75 6.75 10.3096 6.75 11C6.75 11.6904 7.30964 12.25 8 12.25C8.69036 12.25 9.25 11.6904 9.25 11C9.25 10.3096 8.69036 9.75 8 9.75ZM8 4C7.48716 4 7.06449 4.38604 7.00673 4.88338L7 5V8C7 8.55228 7.44772 9 8 9C8.51284 9 8.93551 8.61396 8.99327 8.11662L9 8V5C9 4.44772 8.55228 4 8 4Z\\"></path>
         </svg></div>
       <div class=\\"MuiAlert-message makeStyles-message-5 makeStyles-message-10\\">
-        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">ERROR</div>This is a error alert
+        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">error</div>This is a error alert
       </div>
       <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-error MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
     </div>
   </div>
   <div class=\\"u-mb-1\\">
-    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-standardWarning cozyAlert-warning-standard action MuiPaper-elevation0\\" role=\\"alert\\">
+    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-standardWarning cozyStyles-warning-standard action MuiPaper-elevation0\\" role=\\"alert\\">
       <div class=\\"MuiAlert-icon\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M7.022 1.736c.543-.959 1.428-.95 1.966 0l6.532 11.529c.543.958.094 1.735-1.016 1.735h-13C.399 15-.051 14.215.487 13.265l6.535-11.53zM7.004 13c0-.552.443-1 1-1 .552 0 1 .444 1 1 0 .553-.444 1-1 1-.553 0-1-.444-1-1zm0-7.997a.999.999 0 011-1.003c.552 0 1 .438 1 1.003v4.994a.999.999 0 01-1 1.003c-.553 0-1-.438-1-1.003V5.003z\\"></path>
         </svg></div>
       <div class=\\"MuiAlert-message makeStyles-message-5 makeStyles-message-11\\">
-        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">WARNING</div>This is a warning alert
+        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">warning</div>This is a warning alert
       </div>
       <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-warning MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
     </div>
   </div>
   <div class=\\"u-mb-1\\">
-    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-standardInfo cozyAlert-info-standard action MuiPaper-elevation0\\" role=\\"alert\\">
+    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-standardInfo cozyStyles-info-standard action MuiPaper-elevation0\\" role=\\"alert\\">
       <div class=\\"MuiAlert-icon\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <defs>
             <path id=\\"info_svg__a\\" d=\\"M8 16A8 8 0 118 0a8 8 0 010 16zM7 4a1 1 0 102 0 1 1 0 10-2 0zm1 2H6v2h1v4a1 1 0 001 1h2v-2H9V7a1 1 0 00-1-1z\\"></path>
@@ -92,7 +92,7 @@ exports[`Alert should render examples: Alert 2`] = `
           <use fill-rule=\\"evenodd\\" xlink:href=\\"#info_svg__a\\"></use>
         </svg></div>
       <div class=\\"MuiAlert-message makeStyles-message-5 makeStyles-message-12\\">
-        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">INFO</div>This is a info alert
+        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">info</div>This is a info alert
       </div>
       <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-info MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
     </div>
@@ -100,7 +100,7 @@ exports[`Alert should render examples: Alert 2`] = `
   <hr>
   <p class=\\"MuiTypography-root MuiTypography-h4 MuiTypography-colorTextPrimary MuiTypography-paragraph\\">Filled variant</p>
   <div class=\\"u-mb-1\\">
-    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-filledSuccess cozyAlert-primary-filled action MuiPaper-elevation0\\" role=\\"alert\\">
+    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-filledSuccess cozyStyles-primary-filled action MuiPaper-elevation0\\" role=\\"alert\\">
       <div class=\\"MuiAlert-icon\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <defs>
             <path id=\\"info_svg__a\\" d=\\"M8 16A8 8 0 118 0a8 8 0 010 16zM7 4a1 1 0 102 0 1 1 0 10-2 0zm1 2H6v2h1v4a1 1 0 001 1h2v-2H9V7a1 1 0 00-1-1z\\"></path>
@@ -108,13 +108,13 @@ exports[`Alert should render examples: Alert 2`] = `
           <use fill-rule=\\"evenodd\\" xlink:href=\\"#info_svg__a\\"></use>
         </svg></div>
       <div class=\\"MuiAlert-message makeStyles-message-5 makeStyles-message-13\\">
-        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">PRIMARY</div>This is a primary alert
+        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">primary</div>This is a primary alert
       </div>
-      <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
+      <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
     </div>
   </div>
   <div class=\\"u-mb-1\\">
-    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-filledSuccess cozyAlert-secondary-filled action MuiPaper-elevation0\\" role=\\"alert\\">
+    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-filledSuccess cozyStyles-secondary-filled action MuiPaper-elevation0\\" role=\\"alert\\">
       <div class=\\"MuiAlert-icon\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <defs>
             <path id=\\"info_svg__a\\" d=\\"M8 16A8 8 0 118 0a8 8 0 010 16zM7 4a1 1 0 102 0 1 1 0 10-2 0zm1 2H6v2h1v4a1 1 0 001 1h2v-2H9V7a1 1 0 00-1-1z\\"></path>
@@ -122,46 +122,46 @@ exports[`Alert should render examples: Alert 2`] = `
           <use fill-rule=\\"evenodd\\" xlink:href=\\"#info_svg__a\\"></use>
         </svg></div>
       <div class=\\"MuiAlert-message makeStyles-message-5 makeStyles-message-14\\">
-        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">SECONDARY</div>This is a secondary alert
+        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">secondary</div>This is a secondary alert
       </div>
-      <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
+      <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
     </div>
   </div>
   <div class=\\"u-mb-1\\">
-    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-filledSuccess cozyAlert-success-filled action MuiPaper-elevation0\\" role=\\"alert\\">
+    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-filledSuccess cozyStyles-success-filled action MuiPaper-elevation0\\" role=\\"alert\\">
       <div class=\\"MuiAlert-icon\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M24 48c13.255 0 24-10.745 24-24S37.255 0 24 0 0 10.745 0 24s10.745 24 24 24zM13.414 24.586a2 2 0 00-2.828 2.828l7 7a2 2 0 002.828 0l15-15a2 2 0 00-2.828-2.828L19 30.172l-5.586-5.586z\\"></path>
         </svg></div>
       <div class=\\"MuiAlert-message makeStyles-message-5 makeStyles-message-15\\">
-        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">SUCCESS</div>This is a success alert
+        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">success</div>This is a success alert
       </div>
-      <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-success MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
+      <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
     </div>
   </div>
   <div class=\\"u-mb-1\\">
-    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-filledError cozyAlert-error-filled action MuiPaper-elevation0\\" role=\\"alert\\">
+    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-filledError cozyStyles-error-filled action MuiPaper-elevation0\\" role=\\"alert\\">
       <div class=\\"MuiAlert-icon\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0ZM8 9.75C7.30964 9.75 6.75 10.3096 6.75 11C6.75 11.6904 7.30964 12.25 8 12.25C8.69036 12.25 9.25 11.6904 9.25 11C9.25 10.3096 8.69036 9.75 8 9.75ZM8 4C7.48716 4 7.06449 4.38604 7.00673 4.88338L7 5V8C7 8.55228 7.44772 9 8 9C8.51284 9 8.93551 8.61396 8.99327 8.11662L9 8V5C9 4.44772 8.55228 4 8 4Z\\"></path>
         </svg></div>
       <div class=\\"MuiAlert-message makeStyles-message-5 makeStyles-message-16\\">
-        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">ERROR</div>This is a error alert
+        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">error</div>This is a error alert
       </div>
-      <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-error MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
+      <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
     </div>
   </div>
   <div class=\\"u-mb-1\\">
-    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-filledWarning cozyAlert-warning-filled action MuiPaper-elevation0\\" role=\\"alert\\">
+    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-filledWarning cozyStyles-warning-filled action MuiPaper-elevation0\\" role=\\"alert\\">
       <div class=\\"MuiAlert-icon\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M7.022 1.736c.543-.959 1.428-.95 1.966 0l6.532 11.529c.543.958.094 1.735-1.016 1.735h-13C.399 15-.051 14.215.487 13.265l6.535-11.53zM7.004 13c0-.552.443-1 1-1 .552 0 1 .444 1 1 0 .553-.444 1-1 1-.553 0-1-.444-1-1zm0-7.997a.999.999 0 011-1.003c.552 0 1 .438 1 1.003v4.994a.999.999 0 01-1 1.003c-.553 0-1-.438-1-1.003V5.003z\\"></path>
         </svg></div>
       <div class=\\"MuiAlert-message makeStyles-message-5 makeStyles-message-17\\">
-        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">WARNING</div>This is a warning alert
+        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">warning</div>This is a warning alert
       </div>
-      <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-warning MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
+      <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
     </div>
   </div>
   <div class=\\"u-mb-1\\">
-    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-filledInfo cozyAlert-info-filled action MuiPaper-elevation0\\" role=\\"alert\\">
+    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-filledInfo cozyStyles-info-filled action MuiPaper-elevation0\\" role=\\"alert\\">
       <div class=\\"MuiAlert-icon\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <defs>
             <path id=\\"info_svg__a\\" d=\\"M8 16A8 8 0 118 0a8 8 0 010 16zM7 4a1 1 0 102 0 1 1 0 10-2 0zm1 2H6v2h1v4a1 1 0 001 1h2v-2H9V7a1 1 0 00-1-1z\\"></path>
@@ -169,15 +169,15 @@ exports[`Alert should render examples: Alert 2`] = `
           <use fill-rule=\\"evenodd\\" xlink:href=\\"#info_svg__a\\"></use>
         </svg></div>
       <div class=\\"MuiAlert-message makeStyles-message-5 makeStyles-message-18\\">
-        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">INFO</div>This is a info alert
+        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">info</div>This is a info alert
       </div>
-      <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-info MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
+      <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
     </div>
   </div>
   <hr>
   <p class=\\"MuiTypography-root MuiTypography-h4 MuiTypography-colorTextPrimary MuiTypography-paragraph\\">Outlined variant</p>
   <div class=\\"u-mb-1\\">
-    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-outlinedSuccess cozyAlert-primary-outlined action MuiPaper-elevation0\\" role=\\"alert\\">
+    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-outlinedSuccess cozyStyles-primary-outlined action MuiPaper-elevation0\\" role=\\"alert\\">
       <div class=\\"MuiAlert-icon\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <defs>
             <path id=\\"info_svg__a\\" d=\\"M8 16A8 8 0 118 0a8 8 0 010 16zM7 4a1 1 0 102 0 1 1 0 10-2 0zm1 2H6v2h1v4a1 1 0 001 1h2v-2H9V7a1 1 0 00-1-1z\\"></path>
@@ -185,13 +185,13 @@ exports[`Alert should render examples: Alert 2`] = `
           <use fill-rule=\\"evenodd\\" xlink:href=\\"#info_svg__a\\"></use>
         </svg></div>
       <div class=\\"MuiAlert-message makeStyles-message-5 makeStyles-message-19\\">
-        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">PRIMARY</div>This is a primary alert
+        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">primary</div>This is a primary alert
       </div>
       <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
     </div>
   </div>
   <div class=\\"u-mb-1\\">
-    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-outlinedSuccess cozyAlert-secondary-outlined action MuiPaper-elevation0\\" role=\\"alert\\">
+    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-outlinedSuccess cozyStyles-secondary-outlined action MuiPaper-elevation0\\" role=\\"alert\\">
       <div class=\\"MuiAlert-icon\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <defs>
             <path id=\\"info_svg__a\\" d=\\"M8 16A8 8 0 118 0a8 8 0 010 16zM7 4a1 1 0 102 0 1 1 0 10-2 0zm1 2H6v2h1v4a1 1 0 001 1h2v-2H9V7a1 1 0 00-1-1z\\"></path>
@@ -199,46 +199,46 @@ exports[`Alert should render examples: Alert 2`] = `
           <use fill-rule=\\"evenodd\\" xlink:href=\\"#info_svg__a\\"></use>
         </svg></div>
       <div class=\\"MuiAlert-message makeStyles-message-5 makeStyles-message-20\\">
-        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">SECONDARY</div>This is a secondary alert
+        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">secondary</div>This is a secondary alert
       </div>
       <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
     </div>
   </div>
   <div class=\\"u-mb-1\\">
-    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-outlinedSuccess cozyAlert-success-outlined action MuiPaper-elevation0\\" role=\\"alert\\">
+    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-outlinedSuccess cozyStyles-success-outlined action MuiPaper-elevation0\\" role=\\"alert\\">
       <div class=\\"MuiAlert-icon\\"><svg viewBox=\\"0 0 48 48\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M24 48c13.255 0 24-10.745 24-24S37.255 0 24 0 0 10.745 0 24s10.745 24 24 24zM13.414 24.586a2 2 0 00-2.828 2.828l7 7a2 2 0 002.828 0l15-15a2 2 0 00-2.828-2.828L19 30.172l-5.586-5.586z\\"></path>
         </svg></div>
       <div class=\\"MuiAlert-message makeStyles-message-5 makeStyles-message-21\\">
-        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">SUCCESS</div>This is a success alert
+        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">success</div>This is a success alert
       </div>
       <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-success MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
     </div>
   </div>
   <div class=\\"u-mb-1\\">
-    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-outlinedError cozyAlert-error-outlined action MuiPaper-elevation0\\" role=\\"alert\\">
+    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-outlinedError cozyStyles-error-outlined action MuiPaper-elevation0\\" role=\\"alert\\">
       <div class=\\"MuiAlert-icon\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0ZM8 9.75C7.30964 9.75 6.75 10.3096 6.75 11C6.75 11.6904 7.30964 12.25 8 12.25C8.69036 12.25 9.25 11.6904 9.25 11C9.25 10.3096 8.69036 9.75 8 9.75ZM8 4C7.48716 4 7.06449 4.38604 7.00673 4.88338L7 5V8C7 8.55228 7.44772 9 8 9C8.51284 9 8.93551 8.61396 8.99327 8.11662L9 8V5C9 4.44772 8.55228 4 8 4Z\\"></path>
         </svg></div>
       <div class=\\"MuiAlert-message makeStyles-message-5 makeStyles-message-22\\">
-        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">ERROR</div>This is a error alert
+        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">error</div>This is a error alert
       </div>
       <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-error MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
     </div>
   </div>
   <div class=\\"u-mb-1\\">
-    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-outlinedWarning cozyAlert-warning-outlined action MuiPaper-elevation0\\" role=\\"alert\\">
+    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-outlinedWarning cozyStyles-warning-outlined action MuiPaper-elevation0\\" role=\\"alert\\">
       <div class=\\"MuiAlert-icon\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <path fill-rule=\\"evenodd\\" d=\\"M7.022 1.736c.543-.959 1.428-.95 1.966 0l6.532 11.529c.543.958.094 1.735-1.016 1.735h-13C.399 15-.051 14.215.487 13.265l6.535-11.53zM7.004 13c0-.552.443-1 1-1 .552 0 1 .444 1 1 0 .553-.444 1-1 1-.553 0-1-.444-1-1zm0-7.997a.999.999 0 011-1.003c.552 0 1 .438 1 1.003v4.994a.999.999 0 01-1 1.003c-.553 0-1-.438-1-1.003V5.003z\\"></path>
         </svg></div>
       <div class=\\"MuiAlert-message makeStyles-message-5 makeStyles-message-23\\">
-        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">WARNING</div>This is a warning alert
+        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">warning</div>This is a warning alert
       </div>
       <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-warning MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
     </div>
   </div>
   <div class=\\"u-mb-1\\">
-    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-outlinedInfo cozyAlert-info-outlined action MuiPaper-elevation0\\" role=\\"alert\\">
+    <div class=\\"MuiPaper-root MuiAlert-root MuiAlert-outlinedInfo cozyStyles-info-outlined action MuiPaper-elevation0\\" role=\\"alert\\">
       <div class=\\"MuiAlert-icon\\"><svg viewBox=\\"0 0 16 16\\" class=\\"styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
           <defs>
             <path id=\\"info_svg__a\\" d=\\"M8 16A8 8 0 118 0a8 8 0 010 16zM7 4a1 1 0 102 0 1 1 0 10-2 0zm1 2H6v2h1v4a1 1 0 001 1h2v-2H9V7a1 1 0 00-1-1z\\"></path>
@@ -246,7 +246,7 @@ exports[`Alert should render examples: Alert 2`] = `
           <use fill-rule=\\"evenodd\\" xlink:href=\\"#info_svg__a\\"></use>
         </svg></div>
       <div class=\\"MuiAlert-message makeStyles-message-5 makeStyles-message-24\\">
-        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">INFO</div>This is a info alert
+        <div class=\\"MuiTypography-root MuiAlertTitle-root MuiTypography-body1 MuiTypography-gutterBottom\\">info</div>This is a info alert
       </div>
       <div class=\\"MuiAlert-action\\"><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-info MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ACTION</span></button></div>
     </div>
