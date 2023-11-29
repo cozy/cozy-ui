@@ -9,7 +9,7 @@ import { AlertPropTypes, AlertDefaultProps } from '../Alert'
 import Alert from '../Alert'
 
 const useStyles = makeStyles(theme => ({
-  top: {
+  topArrow: {
     // create the arrow
     borderLeft: '0.75rem solid transparent',
     borderRight: '0.75rem solid transparent',
@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
     left: ({ position }) => position,
     marginLeft: '-0.75rem'
   },
-  bottom: {
+  bottomArrow: {
     // create the arrow
     borderLeft: '0.75rem solid transparent',
     borderRight: '0.75rem solid transparent',
@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
     left: ({ position }) => position,
     marginLeft: '-0.75rem'
   },
-  left: {
+  leftArrow: {
     // create the arrow
     borderTop: '0.75rem solid transparent',
     borderBottom: '0.75rem solid transparent',
@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
     top: ({ position }) => position,
     marginTop: '-0.75rem'
   },
-  right: {
+  rightArrow: {
     // create the arrow
     borderTop: '0.75rem solid transparent',
     borderBottom: '0.75rem solid transparent',
@@ -56,6 +56,18 @@ const useStyles = makeStyles(theme => ({
     right: '-0.75rem',
     top: ({ position }) => position,
     marginTop: '-0.75rem'
+  },
+  topAlert: {
+    marginTop: '0.75rem'
+  },
+  bottomAlert: {
+    marginBottom: '0.75rem'
+  },
+  leftAlert: {
+    marginLeft: '0.75rem'
+  },
+  rightAlert: {
+    marginRight: '0.75rem'
   }
 }))
 
@@ -69,13 +81,13 @@ const PointerAlert = forwardRef(
     return (
       <Alert
         ref={ref}
-        className={cx(className, 'u-pos-relative')}
+        className={cx(className, styles[`${direction}Alert`], 'u-pos-relative')}
         variant={variant}
         severity={severity}
         {...props}
       >
         {children}
-        <span className={styles[direction]}></span>
+        <span className={styles[`${direction}Arrow`]}></span>
       </Alert>
     )
   }
