@@ -62,7 +62,7 @@ const handleChangePosition = el => {
         />
       </div>
       {directions.map(direction =>
-        <div className="u-mb-1" key={direction}>
+        <div className="u-mb-half" key={direction}>
             <PointerAlert
               direction={direction}
               position={state.position}
@@ -112,7 +112,7 @@ const makeButtonColor = color => ['primary', 'secondary'].includes(color) ? unde
 
 <>
   {colors.map(color =>
-    <div className="u-mb-1" key={color}>
+    <div className="u-mb-half" key={color}>
       <PointerAlert
         severity={color}
         action={<Button variant="text" size="small" color={makeButtonColor(color)} label="ACTION" />}
@@ -127,7 +127,7 @@ const makeButtonColor = color => ['primary', 'secondary'].includes(color) ? unde
   <Typography variant="h4" paragraph>Filled variant</Typography>
 
   {colors.map(color =>
-    <div className="u-mb-1" key={color}>
+    <div className="u-mb-half" key={color}>
       <PointerAlert
         variant="filled"
         severity={color}
@@ -149,7 +149,7 @@ const makeButtonColor = color => ['primary', 'secondary'].includes(color) ? unde
   <Typography variant="h4" paragraph>Outlined variant</Typography>
 
   {colors.map(color =>
-    <div className="u-mb-1" key={color}>
+    <div className="u-mb-half" key={color}>
       <PointerAlert
         variant="outlined"
         severity={color}
