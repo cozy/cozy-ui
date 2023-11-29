@@ -19,6 +19,9 @@ const opacityByTheme = {
     border: {
       opacity: 0.16,
       ghostOpacity: 0.48
+    },
+    background: {
+      contrastOpacity: 0.12
     }
   },
   dark: {
@@ -34,6 +37,9 @@ const opacityByTheme = {
     border: {
       opacity: 0.24,
       ghostOpacity: 0.48
+    },
+    background: {
+      contrastOpacity: 0.24
     }
   }
 }
@@ -124,7 +130,6 @@ export const makePalette = type => {
       default: getCssValue('defaultBackgroundColor'),
       paper: getCssValue('paperBackgroundColor'),
       contrast: getCssValue('contrastBackgroundColor'),
-      contrastOpacity: type === 'dark' ? 0.24 : 0.12,
       selected: '#F5FAFF' // deprecated, should be removed. Use action.selected instead
     }
   }
