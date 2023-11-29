@@ -1,3 +1,15 @@
+# [97.2.0](https://github.com/cozy/cozy-ui/compare/v97.1.0...v97.2.0) (2023-11-29)
+
+
+### Bug Fixes
+
+* **PointerAlert:** Reserve space for arrow ([3d7e4b4](https://github.com/cozy/cozy-ui/commit/3d7e4b4))
+
+
+### Features
+
+* **PointerAlert:** Make arrow position customisable ([2ed2cac](https://github.com/cozy/cozy-ui/commit/2ed2cac))
+
 # [97.1.0](https://github.com/cozy/cozy-ui/compare/v97.0.0...v97.1.0) (2023-11-28)
 
 
