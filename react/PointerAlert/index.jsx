@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     // position the arrow
     position: 'absolute',
     top: '-0.75rem',
-    left: '50%',
+    left: ({ position }) => position,
     marginLeft: '-0.75rem'
   },
   bottom: {
@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     // position the arrow
     position: 'absolute',
     bottom: '-0.75rem',
-    left: '50%',
+    left: ({ position }) => position,
     marginLeft: '-0.75rem'
   },
   left: {
@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
     // position the arrow
     position: 'absolute',
     left: '-0.75rem',
-    top: '50%',
+    top: ({ position }) => position,
     marginTop: '-0.75rem'
   },
   right: {
@@ -54,14 +54,17 @@ const useStyles = makeStyles(theme => ({
     // position the arrow
     position: 'absolute',
     right: '-0.75rem',
-    top: '50%',
+    top: ({ position }) => position,
     marginTop: '-0.75rem'
   }
 }))
 
 const PointerAlert = forwardRef(
-  ({ className, severity, children, variant, direction, ...props }, ref) => {
-    const styles = useStyles({ variant, severity })
+  (
+    { className, variant, severity, children, direction, position, ...props },
+    ref
+  ) => {
+    const styles = useStyles({ variant, severity, position })
 
     return (
       <Alert
@@ -82,12 +85,18 @@ PointerAlert.displayName = 'PointerAlert'
 
 PointerAlert.propTypes = {
   ...AlertPropTypes,
-  direction: PropTypes.oneOf(['top', 'right', 'bottom', 'left'])
+  /** Direction of the arrow.*/
+  direction: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+  /** Position of the arrow. Can be any length or percentage value like "100px" or "30%".
+   * If you want to position the arrow on the edge, you need to pay attention to the arrow width.
+   * For example, "calc(0% + 0.75rem)" will position the arrow at the starting edge. */
+  position: PropTypes.string
 }
 
 PointerAlert.defaultProps = {
   ...AlertDefaultProps,
-  direction: 'bottom'
+  direction: 'bottom',
+  position: '50%'
 }
 
 export default PointerAlert

@@ -17,6 +17,7 @@ import PointerAlert from 'cozy-ui/transpiled/react/PointerAlert'
 import AlertTitle from 'cozy-ui/transpiled/react/AlertTitle'
 import Button from 'cozy-ui/transpiled/react/Buttons'
 import Icon from 'cozy-ui/transpiled/react/Icon'
+import TextField from 'cozy-ui/transpiled/react/TextField'
 import Variants from 'cozy-ui/docs/components/Variants'
 import DeviceLaptopIcon from 'cozy-ui/transpiled/react/Icons/DeviceLaptop'
 import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
@@ -36,15 +37,35 @@ const initialVariants = [{
 
 const directions = ['top', 'bottom', 'left', 'right']
 
+const initialState = {
+  position: '50%'
+}
+const handleChangePosition = el => {
+  setState({ position: el.target.value })
+}
+
 ;
 
 <Variants initialVariants={initialVariants} screenshotAllVariants>
   {variant => (
     <>
+      <div>
+        <TextField
+          className="u-mb-1-half"
+          type="string"
+          margin="dense"
+          label="position"
+          variant="outlined"
+          helperText="Arrow position"
+          onChange={handleChangePosition}
+          value={state.position}
+        />
+      </div>
       {directions.map(direction =>
         <div className="u-mb-1" key={direction}>
             <PointerAlert
               direction={direction}
+              position={state.position}
               color={variant.color ? "#EFA82D" : undefined}
               block={variant.block}
               square={variant.square}
