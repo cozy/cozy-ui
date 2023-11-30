@@ -1,3 +1,11 @@
+## [97.2.1](https://github.com/cozy/cozy-ui/compare/v97.2.0...v97.2.1) (2023-11-30)
+
+
+### Bug Fixes
+
+* **Modals:** Use correct css var for zIndex ([b1317a3](https://github.com/cozy/cozy-ui/commit/b1317a3))
+* **MuiTheme:** Remove direct call to getCssVariableValue and use css var instead ([bc09ee7](https://github.com/cozy/cozy-ui/commit/bc09ee7))
+
 # [97.2.0](https://github.com/cozy/cozy-ui/compare/v97.1.0...v97.2.0) (2023-11-29)
 
 
