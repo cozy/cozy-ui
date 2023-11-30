@@ -8636,7 +8636,7 @@ body {
 }
 .c-modal-container--1AAl5 {
   position: relative;
-  z-index: var(--zindex-modal);
+  z-index: var(--zIndex-modal);
 }
 .c-modal-wrapper--y79-C {
   position: fixed;
