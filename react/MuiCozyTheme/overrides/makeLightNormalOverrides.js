@@ -1,4 +1,4 @@
-import { alpha, darken } from '../styles'
+import { alpha, darken } from '../../styles'
 import {
   makeAlertColor,
   makeChipStyleByColor,
@@ -6,11 +6,11 @@ import {
   makeTextButtonStyle,
   makeContainedButtonStyle,
   getFlagshipCssVar
-} from './helpers'
+} from '../helpers'
 
 const SWITCH_BAR_WIDTH = 25
 
-export const makeOverrides = theme => ({
+export const makeLightNormalOverrides = theme => ({
   MuiOutlinedInput: {
     root: {
       borderRadius: 4,

@@ -1,9 +1,9 @@
 import merge from 'lodash/merge'
 
-import { makeOverrides } from './makeOverrides'
+import { makeLightNormalOverrides } from './makeLightNormalOverrides'
 
-export const makeInvertedOverrides = invertedTheme => {
-  const makeOverridesForInvertedTheme = invertedTheme => ({
+export const makeLightInvertedOverrides = theme => {
+  const makeOverridesForInvertedTheme = theme => ({
     MuiOutlinedInput: {
       root: {
         boxSizing: 'border-box',
@@ -11,11 +11,11 @@ export const makeInvertedOverrides = invertedTheme => {
           background: 'initial'
         },
         '&$focused $notchedOutline': {
-          borderColor: invertedTheme.palette.text.primary,
+          borderColor: theme.palette.text.primary,
           borderWidth: '0.0625rem'
         },
         '& $notchedOutline': {
-          borderColor: invertedTheme.palette.text.primary
+          borderColor: theme.palette.text.primary
         }
       }
     },
@@ -29,14 +29,14 @@ export const makeInvertedOverrides = invertedTheme => {
     },
     MuiSnackbarContent: {
       root: {
-        backgroundColor: invertedTheme.palette.grey[200]
+        backgroundColor: theme.palette.grey[200]
       }
     },
     MuiTabs: {
       root: {
         '&.segmented': {
           '& $indicator': {
-            backgroundColor: invertedTheme.palette.primary.main
+            backgroundColor: theme.palette.primary.main
           }
         }
       }
@@ -45,26 +45,26 @@ export const makeInvertedOverrides = invertedTheme => {
       root: {
         '&.segmented': {
           '&$selected': {
-            color: invertedTheme.palette.primary.contrastText
+            color: theme.palette.primary.contrastText
           }
         }
       }
     },
     MuiSwitch: {
       switchBase: {
-        color: invertedTheme.palette.grey[100]
+        color: theme.palette.grey[100]
       },
       colorPrimary: {
         '&$checked': {
           '& + $track': {
-            backgroundColor: invertedTheme.palette.success.dark
+            backgroundColor: theme.palette.success.dark
           }
         }
       },
       colorSecondary: {
         '&$checked': {
           '& + $track': {
-            backgroundColor: invertedTheme.palette.success.dark
+            backgroundColor: theme.palette.success.dark
           }
         }
       }
@@ -72,8 +72,8 @@ export const makeInvertedOverrides = invertedTheme => {
   })
 
   const invertedOverrides = merge(
-    makeOverrides(invertedTheme),
-    makeOverridesForInvertedTheme(invertedTheme)
+    makeLightNormalOverrides(theme),
+    makeOverridesForInvertedTheme(theme)
   )
 
   return invertedOverrides
