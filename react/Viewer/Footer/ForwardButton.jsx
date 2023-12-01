@@ -16,7 +16,7 @@ import { getSharingLink } from 'cozy-client/dist/models/sharing'
 
 const ForwardIcon = isIOS() ? ShareIosIcon : ReplyIcon
 
-const ForwardButton = ({ file }) => {
+const ForwardButton = ({ file, onClick }) => {
   const { t } = useI18n()
   const client = useClient()
 
@@ -42,6 +42,11 @@ const ForwardButton = ({ file }) => {
     }
   }
 
+  const handleClick = () => {
+    if (onClick) onClick()
+    else onFileOpen(file)
+  }
+
   return (
     <Button
       fullWidth
@@ -49,13 +54,14 @@ const ForwardButton = ({ file }) => {
       startIcon={<Icon icon={ForwardIcon} />}
       data-testid="openFileButton"
       label={t('Viewer.actions.forward')}
-      onClick={() => onFileOpen(file)}
+      onClick={handleClick}
     />
   )
 }
 
 ForwardButton.propTypes = {
-  file: PropTypes.object.isRequired
+  file: PropTypes.object.isRequired,
+  onClick: PropTypes.func
 }
 
 export { exportFilesNative }
