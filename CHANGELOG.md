@@ -1,3 +1,16 @@
+# [98.0.0](https://github.com/cozy/cozy-ui/compare/v97.2.1...v98.0.0) (2023-12-01)
+
+
+### Features
+
+* **ForwardButton:** Add `onClick` prop ([a35d3b1](https://github.com/cozy/cozy-ui/commit/a35d3b1))
+* Upgrade cozy-client to 45.0.0 ([eb1b99e](https://github.com/cozy/cozy-ui/commit/eb1b99e))
+
+
+### BREAKING CHANGES
+
+* you must have `cozy-client >= 45.0.0`
+
 ## [97.2.1](https://github.com/cozy/cozy-ui/compare/v97.2.0...v97.2.1) (2023-11-30)
 
 
