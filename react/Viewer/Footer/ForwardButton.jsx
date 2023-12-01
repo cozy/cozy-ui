@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { useClient, useCapabilities, models } from 'cozy-client'
+import { useClient } from 'cozy-client'
 import { isIOS, isMobileApp } from 'cozy-device-helper'
 
 import { useI18n } from '../../providers/I18n'
@@ -12,17 +12,13 @@ import Button from '../../Buttons'
 import Alerter from '../../deprecated/Alerter'
 import { withViewerLocales } from '../hoc/withViewerLocales'
 import { exportFilesNative } from './helpers'
-
-const {
-  sharing: { getSharingLink }
-} = models
+import { getSharingLink } from 'cozy-client/dist/models/sharing'
 
 const ForwardIcon = isIOS() ? ShareIosIcon : ReplyIcon
 
 const ForwardButton = ({ file }) => {
   const { t } = useI18n()
   const client = useClient()
-  const { capabilities } = useCapabilities(client)
 
   const onFileOpen = async file => {
     if (isMobileApp()) {
@@ -33,8 +29,7 @@ const ForwardButton = ({ file }) => {
       }
     } else {
       try {
-        const isFlatDomain = capabilities?.flat_subdomains
-        const url = await getSharingLink(client, [file.id], isFlatDomain)
+        const url = await getSharingLink(client, [file.id])
         const shareData = {
           title: t('Viewer.share.title', { name: file.name }),
           text: t('Viewer.share.text', { name: file.name }),
