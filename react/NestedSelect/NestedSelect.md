@@ -60,9 +60,18 @@ const makeOptions = withHeaders => ({
     {
       ...letterOption('B', 'is for Balloon'),
       children: [
-        letterOption('B1'),
+        {
+          ...letterOption('B1'),
+          children: [
+            letterOption('B1a'),
+            letterOption('B1b')
+          ]
+        },
         {
           ...letterOption('B2'),
+          header: withHeaders
+            ? <Alert className="u-mt-1 u-mh-1" icon={false} severity="success">This is overriden specific option!</Alert>
+            : undefined,
           children: [
             letterOption('B2a'),
             letterOption('B2b')
