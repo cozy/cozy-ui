@@ -122,7 +122,11 @@ class NestedSelect extends Component {
             onClickBack={this.handleBack}
           />
         ) : null}
-        {level > 0 ? options.childrenHeader : options.header}
+        {level > 0
+          ? typeof options.childrenHeader === 'function'
+            ? options.childrenHeader(level)
+            : options.childrenHeader
+          : options.header}
         <ContentComponent>
           {canSelectParent && level > 0 ? (
             <ItemRow
@@ -220,7 +224,7 @@ NestedSelect.propTypes = {
     /** Header shown above options list */
     header: PropTypes.node,
     /** Header shown above options list inside a children */
-    childrenHeader: PropTypes.node,
+    childrenHeader: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
     children: PropTypes.arrayOf(ItemPropType)
   }),
 
