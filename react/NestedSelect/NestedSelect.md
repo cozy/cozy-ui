@@ -45,10 +45,12 @@ const SettingAction = ({ item, onClick }) => {
 
 const makeOptions = withHeaders => ({
   header: withHeaders ?
-    <Alert className="u-mt-1 u-mh-1" serverity="info" icon={false}>This is a header for options</Alert>
+    <Alert className="u-mt-1 u-mh-1" icon={false}>This is a header for options</Alert>
     : undefined,
-  childrenHeader: withHeaders ?
-    <Alert className="u-mt-1 u-mh-1" serverity="info">This is specific option header for children</Alert>
+  childrenHeader: withHeaders
+    ? level => level === 1
+      ? <Alert className="u-mt-1 u-mh-1">This is specific option header for first children</Alert>
+      : <Alert className="u-mt-1 u-mh-1" icon={false} severity="secondary">This is specific option header for other children</Alert>
     : undefined,
   children: [
     {
