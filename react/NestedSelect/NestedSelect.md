@@ -59,7 +59,14 @@ const makeOptions = withHeaders => ({
       ...letterOption('B', 'is for Balloon'),
       children: [
         letterOption('B1'),
-        letterOption('B2')
+        {
+          ...letterOption('B2'),
+          children: [
+            letterOption('B2a'),
+            letterOption('B2b')
+          ]
+        },
+        letterOption('B3'),
       ]
     },
     {
