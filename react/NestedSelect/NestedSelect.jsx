@@ -123,7 +123,9 @@ class NestedSelect extends Component {
           />
         ) : null}
         {level > 0
-          ? typeof options.childrenHeader === 'function'
+          ? current.header
+            ? current.header
+            : typeof options.childrenHeader === 'function'
             ? options.childrenHeader(level)
             : options.childrenHeader
           : options.header}
@@ -198,6 +200,8 @@ NestedSelect.defaultProps = {
 }
 
 const ItemPropType = PropTypes.shape({
+  /** Header shown above options list */
+  header: PropTypes.node,
   icon: PropTypes.element,
   /** Key used for the item, if not passed, title is used */
   key: PropTypes.string,
