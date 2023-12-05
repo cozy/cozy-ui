@@ -1,3 +1,11 @@
+# [98.1.0](https://github.com/cozy/cozy-ui/compare/v98.0.0...v98.1.0) (2023-12-05)
+
+
+### Features
+
+* **NestedSelect:** A header can be passed for specifics option children ([ad4606d](https://github.com/cozy/cozy-ui/commit/ad4606d))
+* **NestedSelect:** Add `level` arg at option.childrenHeader function ([5c48e2b](https://github.com/cozy/cozy-ui/commit/5c48e2b))
+
 # [98.0.0](https://github.com/cozy/cozy-ui/compare/v97.2.1...v98.0.0) (2023-12-01)
 
 
