@@ -210,3 +210,10 @@ export const makeContainedButtonStyle = (theme, color) => ({
     }
   }
 })
+
+/**
+ * @param {string} position one of `"top"` or `"bottom"`
+ * @returns {string} `var(--flagship-${position}-height, 0px)`
+ */
+export const getFlagshipCssVar = position =>
+  `var(--flagship-${position}-height, 0px)`

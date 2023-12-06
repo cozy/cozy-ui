@@ -4,7 +4,8 @@ import {
   makeChipStyleByColor,
   makeSecondaryButtonStyle,
   makeTextButtonStyle,
-  makeContainedButtonStyle
+  makeContainedButtonStyle,
+  getFlagshipCssVar
 } from './helpers'
 
 const SWITCH_BAR_WIDTH = 25
@@ -428,26 +429,27 @@ export const makeOverrides = theme => ({
     },
     paperFullScreen: {
       '& .cozyDialogActions': {
-        paddingBottom:
-          'calc(env(safe-area-inset-bottom) + var(--flagship-bottom-height))'
+        paddingBottom: `calc(env(safe-area-inset-bottom) + ${getFlagshipCssVar(
+          'bottom'
+        )})`
       },
       // Can't do that within the stylus file because we need to only target
       // the fullscreen dialog
       '& [class*="DialogCloseButton"]': {
-        transform: 'translateY(var(--flagship-top-height))'
+        transform: `translateY(${getFlagshipCssVar('top')})`
       },
       '& [class*="DialogBackButton"]': {
-        transform: 'translateY(var(--flagship-top-height))'
+        transform: `translateY(${getFlagshipCssVar('top')})`
       },
       // 0.75rm === MuiDialogTitle.root.sm
       // we should not target specifically flagship-app since
       // we should only rely on the css var. But this is for
       // another time.
       '.flagship-app & .cozyDialogTitle': {
-        paddingTop: 'calc(var(--flagship-top-height) + 0.75rem) !important'
+        paddingTop: `calc(${getFlagshipCssVar('top')} + 0.75rem) !important`
       },
       '.flagship-app & .cozyDialogContent': {
-        marginBottom: 'var(--flagship-bottom-height) !important'
+        marginBottom: `${getFlagshipCssVar('bottom')} !important`
       }
     }
   },
@@ -506,13 +508,15 @@ export const makeOverrides = theme => ({
             '& .dialogContentWrapper': {
               flexGrow: 1,
               '&:not(.withActions)': {
-                paddingBottom:
-                  'calc(env(safe-area-inset-bottom) + var(--flagship-bottom-height) + 16px)'
+                paddingBottom: `calc(env(safe-area-inset-bottom) + ${getFlagshipCssVar(
+                  'bottom'
+                )} + 16px)`
               }
             },
             '& .cozyDialogActions': {
-              paddingBottom:
-                'calc(env(safe-area-inset-bottom) + var(--flagship-bottom-height) + 16px)'
+              paddingBottom: `calc(env(safe-area-inset-bottom) + ${getFlagshipCssVar(
+                'bottom'
+              )} + 16px)`
             }
           }
         },
