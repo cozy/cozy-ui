@@ -37,14 +37,14 @@ const themesCommonConfig = {
   ...(isTesting() && { transitions: { create: () => 'none' } })
 }
 
-export const makeTheme = type => {
-  const palette = makePalette(type)
+export const makeTheme = (type, variant) => {
+  const palette = makePalette(type, variant)
   const theme = createTheme({
     ...themesCommonConfig,
     typography: makeTypography(palette),
     palette
   })
-  const overrides = makeOverridesByTheme(theme)['light'][type]
+  const overrides = makeOverridesByTheme(theme)[type][variant]
 
   return {
     ...theme,

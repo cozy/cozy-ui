@@ -1,22 +1,22 @@
-const getThemeNodeClassName = variant => `CozyTheme--light-${variant}`
+const getThemeNodeClassName = (type, variant) => `CozyTheme--${type}-${variant}`
 
-const getNodeWithThemeCssVars = variant => {
-  const className = getThemeNodeClassName(variant)
+const getNodeWithThemeCssVars = (type, variant) => {
+  const className = getThemeNodeClassName(type, variant)
 
   return document.getElementsByClassName(className)[0]
 }
 
-export const createNodeWithThemeCssVars = variant => {
-  if (!getNodeWithThemeCssVars(variant)) {
+export const createNodeWithThemeCssVars = (type, variant) => {
+  if (!getNodeWithThemeCssVars(type, variant)) {
     const node = document.createElement('div')
-    node.className = getThemeNodeClassName(variant)
+    node.className = getThemeNodeClassName(type, variant)
     node.style.display = 'none'
     document.body.prepend(node)
   }
 }
 
-const realGetCssVariableValue = (varName, variant) => {
-  const node = getNodeWithThemeCssVars(variant)
+const realGetCssVariableValue = (varName, type, variant) => {
+  const node = getNodeWithThemeCssVars(type, variant)
 
   return window
     .getComputedStyle(node)
@@ -24,7 +24,7 @@ const realGetCssVariableValue = (varName, variant) => {
     .trim()
 }
 
-export const getCssVariableValue = (varName, variant) =>
+export const getCssVariableValue = (varName, type, variant) =>
   process.env.NODE_ENV === 'test'
-    ? () => () => '#fff'
-    : realGetCssVariableValue(varName, variant)
+    ? '#fff'
+    : realGetCssVariableValue(varName, type, variant)
