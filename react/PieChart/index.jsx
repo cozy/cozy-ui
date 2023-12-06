@@ -31,11 +31,11 @@ const useStyles = makeStyles(theme => ({
     borderRadius: '100%',
     zIndex: -1,
     backgroundColor: ({ single }) =>
-      !single && theme.palette.type === 'dark'
+      !single && theme.palette.variant === 'inverted'
         ? theme.palette.primary.main
         : 'none',
     boxShadow: ({ single }) =>
-      !single && theme.palette.type === 'dark'
+      !single && theme.palette.variant === 'inverted'
         ? `0 0 0 2px ${theme.palette.primary.main}`
         : 'none'
   },
@@ -55,7 +55,7 @@ const useStyles = makeStyles(theme => ({
   },
   typography: {
     color: ({ single }) =>
-      !single && theme.palette.type === 'dark'
+      !single && theme.palette.variant === 'inverted'
         ? theme.palette.primary.contrastText
         : theme.palette.text.primary
   }
