@@ -22,7 +22,7 @@ const defaultClient = {
   })
 }
 
-const DemoProvider = ({ client, theme, children }) => {
+const DemoProvider = ({ client, variant, children }) => {
   const lang = localStorage.getItem('lang') || 'en'
 
   return (
@@ -35,7 +35,7 @@ const DemoProvider = ({ client, theme, children }) => {
             lang
           }}
         >
-          <CozyTheme variant={theme}>{children}</CozyTheme>
+          <CozyTheme variant={variant}>{children}</CozyTheme>
         </I18nContext.Provider>
       </BreakpointsProvider>
     </CozyProvider>
