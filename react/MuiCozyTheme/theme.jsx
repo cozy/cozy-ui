@@ -1,12 +1,18 @@
 import { makeTheme } from './makeTheme'
 
-export const normalTheme = makeTheme('light', 'normal')
-export const invertedTheme = makeTheme('light', 'inverted')
+export const lightNormalTheme = makeTheme('light', 'normal')
+export const lightInvertedTheme = makeTheme('light', 'inverted')
+export const darkNormalTheme = makeTheme('dark', 'normal')
+export const darkInvertedTheme = makeTheme('dark', 'inverted')
 
 const themes = {
   light: {
-    normal: normalTheme,
-    inverted: invertedTheme
+    normal: lightNormalTheme,
+    inverted: lightInvertedTheme
+  },
+  dark: {
+    normal: darkNormalTheme,
+    inverted: darkInvertedTheme
   }
 }
 

@@ -40,6 +40,44 @@ const opacityByTheme = {
         contrastOpacity: 0.24
       }
     }
+  },
+  dark: {
+    normal: {
+      action: {
+        hoverOpacity: 0.08,
+        selectedOpacity: 0.16,
+        disabledOpacity: 0.32,
+        focusOpacity: 0.24,
+        activatedOpacity: 0.24,
+        ghostOpacity: 0.08,
+        hoverGhostOpacity: 0.16
+      },
+      border: {
+        opacity: 0.24,
+        ghostOpacity: 0.48
+      },
+      background: {
+        contrastOpacity: 0.24
+      }
+    },
+    inverted: {
+      action: {
+        hoverOpacity: 0.04,
+        selectedOpacity: 0.08,
+        disabledOpacity: 0.32,
+        focusOpacity: 0.12,
+        activatedOpacity: 0.12,
+        ghostOpacity: 0.08,
+        hoverGhostOpacity: 0.16
+      },
+      border: {
+        opacity: 0.16,
+        ghostOpacity: 0.48
+      },
+      background: {
+        contrastOpacity: 0.12
+      }
+    }
   }
 }
 
