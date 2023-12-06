@@ -1,3 +1,10 @@
+## [98.1.1](https://github.com/cozy/cozy-ui/compare/v98.1.0...v98.1.1) (2023-12-06)
+
+
+### Bug Fixes
+
+* Add default values if flagship var not set ([8c14961](https://github.com/cozy/cozy-ui/commit/8c14961))
+
 # [98.1.0](https://github.com/cozy/cozy-ui/compare/v98.0.0...v98.1.0) (2023-12-05)
 
 
