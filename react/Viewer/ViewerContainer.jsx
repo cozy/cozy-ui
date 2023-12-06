@@ -127,7 +127,7 @@ ViewerContainer.defaultProps = {
 }
 
 const ViewerContainerWrapper = ({ disableModal, ...props }) => {
-  const cozyTheme = useCozyTheme()
+  const variant = useCozyTheme()
   const { modalProps = { open: true } } = props.componentsProps || {}
 
   if (disableModal) {
@@ -135,7 +135,7 @@ const ViewerContainerWrapper = ({ disableModal, ...props }) => {
   }
 
   return (
-    <Modal {...modalProps} className={`CozyTheme--light-${cozyTheme}`}>
+    <Modal {...modalProps} className={`CozyTheme--light-${variant}`}>
       {/* This div is needed for the Modal ref */}
       <div>
         <ViewerContainer {...props} />

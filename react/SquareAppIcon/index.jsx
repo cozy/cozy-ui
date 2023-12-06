@@ -94,7 +94,7 @@ export const SquareAppIcon = ({
   IconContent,
   ...appIconProps
 }) => {
-  const theme = useCozyTheme()
+  const themeVariant = useCozyTheme()
   const classes = useStyles()
   const appName =
     name || get(appIconProps, 'app.name') || get(appIconProps, 'app') || ''
@@ -117,7 +117,9 @@ export const SquareAppIcon = ({
     prevVariant.current = variant
   }, [variant])
 
-  const squareTheme = ['add', 'ghost'].includes(variant) ? theme : 'normal'
+  const squareTheme = ['add', 'ghost'].includes(variant)
+    ? themeVariant
+    : 'normal'
 
   return (
     <div data-testid="square-app-icon" className={cx(classes.tileWrapper)}>
@@ -177,7 +179,7 @@ export const SquareAppIcon = ({
               <div
                 className={cx(styles['SquareAppIcon-icon-container'], {
                   [styles['SquareAppIcon-icon-container-normal']]:
-                    theme === 'normal'
+                    themeVariant === 'normal'
                 })}
               >
                 <div
@@ -215,7 +217,7 @@ export const SquareAppIcon = ({
       <Typography
         className={cx(
           classes.name,
-          { [classes.nameInverted]: theme === 'inverted' },
+          { [classes.nameInverted]: themeVariant === 'inverted' },
           'u-spacellipsis'
         )}
         variant="h6"
