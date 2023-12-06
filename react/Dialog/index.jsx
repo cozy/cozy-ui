@@ -9,7 +9,7 @@ const Dialog = props => {
 
   useDialogEffects(props.open, props.fullScreen)
 
-  return <MUIDialog className={`CozyTheme--${cozyTheme}`} {...props} />
+  return <MUIDialog className={`CozyTheme--light-${cozyTheme}`} {...props} />
 }
 export default Dialog
 
