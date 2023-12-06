@@ -52,7 +52,7 @@ import Icon from 'cozy-ui/transpiled/react/Icon'
 import FileTypeText from 'cozy-ui/transpiled/react/Icons/FileTypeText'
 import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
 
-import { makeActions, modify, emailTo, viewInContacts, divider, smsTo, call } from 'cozy-ui/transpiled/react/ActionsMenu/Actions'
+import { makeActions, modify, emailTo, print, viewInContacts, divider, smsTo, call } from 'cozy-ui/transpiled/react/ActionsMenu/Actions'
 
 initialState = { showMenu: isTesting() }
 
@@ -87,7 +87,7 @@ const customAction = () => ({
   })
 })
 
-const actions = makeActions([ modify, viewInContacts, divider, call, smsTo, emailTo, divider, customAction ])
+const actions = makeActions([ modify, viewInContacts, divider, call, smsTo, emailTo, print, divider, customAction ])
 
 ;
 

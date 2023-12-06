@@ -61,3 +61,23 @@ export const getOnlyNeededActions = (actions, file) => {
       })
   )
 }
+
+/**
+ * Make a base64 string from a File object
+ * @param {File} file - File object
+ * @returns {Promise<string | null>} base64 string
+ */
+export const makeBase64FromFile = async file => {
+  const reader = new FileReader()
+  reader.readAsDataURL(file)
+
+  return new Promise((resolve, reject) => {
+    reader.onload = () => {
+      const base64 = reader.result
+      resolve(base64)
+    }
+    reader.onerror = err => {
+      reject(err)
+    }
+  })
+}

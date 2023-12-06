@@ -3,5 +3,6 @@
   "modify": "Modify",
   "emailTo": "Send an email",
   "smsTo": "Send a message",
+  "print": "Print",
   "call": "Call"
 }
