@@ -1,4 +1,4 @@
-import { makeActions } from './helpers'
+import { makeActions, makeBase64FromFile } from './helpers'
 
 describe('makeActions', () => {
   it('should have empty actions array', () => {
@@ -58,5 +58,23 @@ describe('makeActions', () => {
     const actions = makeActions([mockFuncActionWithoutName])
 
     expect(actions).toStrictEqual([{ mockConstructor: { propA: 0, propB: 1 } }])
+  })
+})
+
+describe('makeBase64FromFile', () => {
+  it('returns a base64 string for a given file', async () => {
+    const file = new File(['test'], 'test.txt', { type: 'text/plain' })
+    const base64String = await makeBase64FromFile(file)
+
+    expect(base64String).toMatch(
+      /^data:text\/plain;base64,[a-zA-Z0-9+/]+={0,2}$/
+    )
+  })
+
+  it('rejects with an error if the file cannot be read', async () => {
+    const file = new File(['test'], 'test.txt', { type: 'text/plain' })
+    const invalidFile = { ...file, size: -1 }
+
+    await expect(makeBase64FromFile(invalidFile)).rejects.toThrow()
   })
 })
