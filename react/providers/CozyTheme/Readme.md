@@ -4,9 +4,6 @@ will be automatically styled.
 `MuiCozyTheme` is used under the hood so that MaterialUI components are
 also styled.
 
-The inverted theme is not supported for several components but the work
-[is in progress](https://github.com/cozy/cozy-ui/issues/1692).
-
 ```jsx
 import CozyTheme from 'cozy-ui/transpiled/react/providers/CozyTheme'
 import Buttons from 'cozy-ui/transpiled/react/Buttons'
@@ -29,9 +26,9 @@ const themesSupportingContext = [
 
 <CozyTheme variant='inverted' className='u-stack-m'>
   <Paper className='u-p-1'>
-    <Typography className='u-white u-mb-1' variant="h4">Forced inverted theme</Typography>
-    <Typography className='u-white' variant="h4">➡️ Mui components</Typography>
-    <Typography className='u-white' variant="h5">Buttons</Typography>
+    <Typography className='u-mb-1' variant="h4">Forced inverted variant</Typography>
+    <Typography variant="h4">➡️ Mui components</Typography>
+    <Typography variant="h5">Buttons</Typography>
     {themesSupportingContext.map(theme =>
       <p key={theme}>{
         props.map(
@@ -39,7 +36,7 @@ const themesSupportingContext = [
         )
       }</p>
     )}
-    <Typography className='u-white u-mt-1' variant="h5">TextField</Typography>
+    <Typography className='u-mt-1' variant="h5">TextField</Typography>
     <TextField
       id="inverted-field"
       label="A field"
@@ -48,12 +45,11 @@ const themesSupportingContext = [
       variant="outlined"
       placeholder="placeholder"
     />
-    <Typography className='u-white u-mt-1' variant="h5">Normal theme inside inverted theme</Typography>
+    <Typography className='u-mt-1' variant="h5">Normal variant inside inverted one</Typography>
     <CozyTheme variant='normal'>
       <Paper className='u-p-1 u-mv-1'>
           <Typography variant='body1'>
-            We can always go back to normal theme if a child must "get out"
-          of the theme.
+            We can always go back to normal variant if a child must "get out" of the theme.
           </Typography>
           <Buttons className='u-ml-0 u-mt-half' variant='primary' label='Primary button' />
           <p>
@@ -62,14 +58,14 @@ const themesSupportingContext = [
       </Paper>
     </CozyTheme>
 
-    <Typography className='u-white' variant="h4">➡️ Not Mui components</Typography>
-    <Typography className='u-white u-mb-1' variant="h5">Avatar</Typography>
+    <Typography variant="h4">➡️ Not Mui components</Typography>
+    <Typography className=' u-mb-1' variant="h5">Avatar</Typography>
     <Avatar className="u-mb-1" ghost text="CD" />
-    <Typography className='u-white u-mb-1' variant="h5">Figure</Typography>
+    <Typography className='u-mb-1' variant="h5">Figure</Typography>
     <Figure total={1000} symbol='€' coloredPositive coloredNegative signed />
     <Figure total={-1000} symbol='€' coloredPositive coloredNegative signed />
     <Figure total={-1000} symbol='€' signed />
-    <Typography className='u-white u-mv-1' variant="h4">➡️ Utility classes only</Typography>
+    <Typography className='u-mv-1' variant="h4">➡️ Utility classes only</Typography>
     <div className='u-stack-s'>
       <div className='u-error'>
         Error text : "Please enter the right password."
