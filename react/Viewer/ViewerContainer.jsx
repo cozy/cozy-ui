@@ -135,7 +135,7 @@ const ViewerContainerWrapper = ({ disableModal, ...props }) => {
   }
 
   return (
-    <Modal {...modalProps} className={`CozyTheme--${cozyTheme}`}>
+    <Modal {...modalProps} className={`CozyTheme--light-${cozyTheme}`}>
       {/* This div is needed for the Modal ref */}
       <div>
         <ViewerContainer {...props} />

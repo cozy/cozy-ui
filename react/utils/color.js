@@ -10,7 +10,7 @@ const realGetCssVariableValue = memoize(variableName =>
 )
 
 const realGetInvertedCssVariableValue = variableName => {
-  const className = 'CozyTheme--inverted'
+  const className = 'CozyTheme--light-inverted'
   let node = document.getElementsByClassName(className)[0]
 
   if (!node) {

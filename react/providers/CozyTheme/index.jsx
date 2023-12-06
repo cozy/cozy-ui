@@ -28,7 +28,7 @@ const CozyTheme = ({ variant, className, ignoreItself, children }) => (
     <MuiCozyTheme variant={variant}>
       <div
         className={cx(className, {
-          [`CozyTheme--${variant}`]: Boolean(variant),
+          [`CozyTheme--light-${variant}`]: Boolean(variant),
           'u-dc': ignoreItself
         })}
       >

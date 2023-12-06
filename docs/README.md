@@ -105,7 +105,7 @@ When renaming or moving a Cozy-UI component, it may cause a breaking change. In 
 * Use material UI whenever possible
 * Override material UI components inside `makeOverrides.js` when necessary
 * Avoid stylus to style new components based on MUI and prefer `/helpers/makeStyles`
-* Use semantic variables for colors from `stylus/settings/palette.styl`, or color from `theme` objects in `makeStyles`
+* Use semantic variables for colors from `stylus/settings/palettes.styl`, or color from `theme` objects in `makeStyles`
 
 ### Add an icon
 
