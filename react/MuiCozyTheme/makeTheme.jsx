@@ -5,11 +5,17 @@ import { makeTypography } from './makeTypography'
 import { makeShadows } from './makeShadows'
 import { makeLightNormalOverrides } from './overrides/makeLightNormalOverrides'
 import { makeLightInvertedOverrides } from './overrides/makeLightInvertedOverrides'
+import { makeDarkNormalOverrides } from './overrides/makeDarkNormalOverrides'
+import { makeDarkInvertedOverrides } from './overrides/makeDarkInvertedOverrides'
 
 const makeOverridesByTheme = theme => ({
   light: {
     normal: makeLightNormalOverrides(theme),
     inverted: makeLightInvertedOverrides(theme)
+  },
+  dark: {
+    normal: makeDarkNormalOverrides(theme),
+    inverted: makeDarkInvertedOverrides(theme)
   }
 })
 

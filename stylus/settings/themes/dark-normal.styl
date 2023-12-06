@@ -1,0 +1,89 @@
+palette=json('../../../theme/palette.json', { hash: true })
+
+// @stylint off
+
+.CozyTheme--dark-normal
+    --primaryTextColor palette.Common['white']
+    --secondaryTextColor alpha(palette.Common['white'], 0.64)
+    --disabledTextColor alpha(palette.Common['white'], 0.4)
+    --hintTextColor alpha(palette.Common['white'], 0.4)
+    --iconTextColor palette.Common['white']
+
+    --actionColorActive palette.Common['white']
+    --actionColorHover alpha(palette.Common['white'], 0.08)
+    --actionColorSelected alpha(palette.Common['white'], 0.16)
+    --actionColorDisabled alpha(palette.Common['white'], 0.32)
+    --actionColorDisabledBackground alpha(palette.Common['white'], 0.12)
+    --actionColorFocus alpha(palette.Common['white'], 0.24)
+    --actionColorGhost alpha(palette.Common['white'], 0.08)
+    --actionColorHoverGhost alpha(palette.Common['white'], 0.16)
+
+    --dividerColor alpha(palette.Common['white'], 0.16)
+
+    --borderMainColor alpha(palette.Common['white'], 0.24)
+    --borderDisabledColor alpha(palette.Common['white'], 0.12)
+    --borderGhostColor alpha(palette.Common['white'], 0.48)
+    --borderGhostDisabledColor alpha(palette.Common['white'], 0.24)
+
+    --paperBackgroundColor palette.Grey['800']
+    --defaultBackgroundColor palette.Grey['A400']
+    --contrastBackgroundColor alpha(palette.Common['white'], 0.072)
+
+    --primaryColorLight palette.Primary['300']
+    --primaryColor palette.Primary['400']
+    --primaryColorDark palette.Primary['500']
+    --primaryContrastTextColor alpha(palette.Grey['900'], 0.9)
+
+    --secondaryColorLight palette.Grey['300']
+    --secondaryColor palette.Grey['400']
+    --secondaryColorDark palette.Grey['500']
+    --secondaryContrastTextColor alpha(palette.Grey['900'], 0.9)
+
+    --errorColorLight palette.Error['300']
+    --errorColor palette.Error['400']
+    --errorColorDark palette.Error['500']
+    --errorColorContrastText alpha(palette.Grey['900'], 0.9)
+    --errorBackground palette.Error['700']
+
+    --warningColorLight palette.Warning['300']
+    --warningColor palette.Warning['400']
+    --warningColorDark palette.Warning['500']
+    --warningColorContrastText alpha(palette.Grey['900'], 0.9)
+
+    --successColorLight palette.Success['300']
+    --successColor palette.Success['400']
+    --successColorDark palette.Success['500']
+    --successColorContrastText alpha(palette.Grey['900'], 0.9)
+
+    --infoColorLight palette.Info['300']
+    --infoColor palette.Info['400']
+    --infoColorDark palette.Info['500']
+    --infoColorContrastText alpha(palette.Grey['900'], 0.9)
+
+    /*
+    The CSS variables below are historic and we should strive not to
+    use them. Prefer to use directly semantic colors above.
+    */
+    --iconColor currentColor
+    --textIconColor palette.Common['white']
+    --actionMenuIconColor palette.Common['white']
+    --barIconColor palette.Common['white']
+    --barIconColorDisabled rgba(255, 255, 255, 0.88)
+
+    --spinnerColor palette.Common['white']
+    --linkColor palette.Common['white']
+    --linkColorActive palette.Common['white']
+    --linkTextDecoration underline
+
+    --regularButtonPrimaryColor palette.Common['white']
+    --regularButtonSecondaryColor palette.Common['white']
+    --regularButtonActiveColor rgba(255, 255, 255, 0.88)
+    --regularButtonConstrastColor palette.Primary['600']
+
+    --secondaryButtonPrimaryColor palette.Primary['600']
+    --secondaryButtonSecondaryColor palette.Common['white']
+    --secondaryButtonActiveColor rgba(255, 255, 255, 0.24)
+    --secondaryButtonContrastColor palette.Common['white']
+
+    --dividerColor2: rgba(255, 255, 255, 0.16)
+// @stylint on
