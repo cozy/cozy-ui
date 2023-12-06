@@ -10,7 +10,7 @@ import { useCozyTheme } from 'cozy-ui/transpiled/react/providers/CozyTheme'
 import cloudWallpaper from '../../docs/cloud-wallpaper.jpg'
 import Button from 'cozy-ui/transpiled/react/Buttons'
 
-const variant = useCozyTheme()
+const { variant } = useCozyTheme()
 const app = { name: "Test App", slug: "testapp", type: "app" }
 const [isLoading, setLoading] = React.useState(false)
 const [isError, setIsError] = React.useState(false)

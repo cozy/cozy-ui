@@ -5,11 +5,11 @@ import { useCozyTheme } from '../providers/CozyTheme'
 import { useDialogEffects } from './DialogEffects'
 
 const Dialog = props => {
-  const variant = useCozyTheme()
+  const { type, variant } = useCozyTheme()
 
   useDialogEffects(props.open, props.fullScreen)
 
-  return <MUIDialog className={`CozyTheme--light-${variant}`} {...props} />
+  return <MUIDialog className={`CozyTheme--${type}-${variant}`} {...props} />
 }
 export default Dialog
 

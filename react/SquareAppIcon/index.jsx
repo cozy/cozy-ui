@@ -94,7 +94,7 @@ export const SquareAppIcon = ({
   IconContent,
   ...appIconProps
 }) => {
-  const themeVariant = useCozyTheme()
+  const { variant: themeVariant } = useCozyTheme()
   const classes = useStyles()
   const appName =
     name || get(appIconProps, 'app.name') || get(appIconProps, 'app') || ''
