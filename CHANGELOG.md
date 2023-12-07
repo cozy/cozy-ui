@@ -1,3 +1,10 @@
+# [98.2.0](https://github.com/cozy/cozy-ui/compare/v98.1.1...v98.2.0) (2023-12-07)
+
+
+### Features
+
+* **ActionsMenu:** Add print action ([82d918d](https://github.com/cozy/cozy-ui/commit/82d918d))
+
 ## [98.1.1](https://github.com/cozy/cozy-ui/compare/v98.1.0...v98.1.1) (2023-12-06)
 
 
