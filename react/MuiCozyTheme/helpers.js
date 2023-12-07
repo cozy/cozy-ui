@@ -1,4 +1,5 @@
 import { alpha } from '../styles'
+import { getCssVariableValue } from '../utils/color'
 
 export const makeAlertBackgroundColor = ({ theme, severity }) => ({
   standard: alpha(
@@ -203,3 +204,13 @@ export const makeContainedButtonStyle = (theme, color) => ({
  */
 export const getFlagshipCssVar = position =>
   `var(--flagship-${position}-height, 0px)`
+
+/**
+ * @param {string} type - Type of the theme
+ * @param {string} variant - Variant of the theme
+ * @returns {array} Array of Mui shadows
+ */
+export const makeShadows = (type, variant) =>
+  [...Array(25)].map((_, index) =>
+    getCssVariableValue(`shadow${index}`, type, variant)
+  )
