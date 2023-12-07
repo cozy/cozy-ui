@@ -1,6 +1,6 @@
 import merge from 'lodash/merge'
 
-import { getCssVariableValue, createNodeWithThemeCssVars } from '../utils/color'
+import { getCssVariableValue } from '../utils/color'
 
 const opacityByTheme = {
   light: {
@@ -82,9 +82,6 @@ const opacityByTheme = {
 }
 
 export const makePalette = (type, variant) => {
-  // to hold the values of css variables, recoverable by getCssVariableValue()
-  createNodeWithThemeCssVars(type, variant)
-
   const paletteByTheme = {
     type,
     variant: variant,
