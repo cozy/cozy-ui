@@ -23,12 +23,13 @@ export const useCozyTheme = () => {
   return context
 }
 
-const CozyTheme = ({ variant, className, children }) => (
+const CozyTheme = ({ variant, className, ignoreItself, children }) => (
   <CozyThemeContext.Provider value={variant}>
     <MuiCozyTheme variant={variant}>
       <div
         className={cx(className, {
-          [`CozyTheme--${variant}`]: Boolean(variant)
+          [`CozyTheme--${variant}`]: Boolean(variant),
+          'u-dc': ignoreItself
         })}
       >
         {children}
@@ -39,12 +40,15 @@ const CozyTheme = ({ variant, className, children }) => (
 
 CozyTheme.propTypes = {
   variant: PropTypes.oneOf(['normal', 'inverted']),
+  /** Causes this element's children to appear as if they were direct children of the element's parent, ignoring the element itself. */
+  ignoreItself: PropTypes.bool,
   className: PropTypes.string,
   children: PropTypes.node
 }
 
 CozyTheme.defaultProps = {
-  variant: 'normal'
+  variant: 'normal',
+  ignoreItself: true
 }
 
 export default CozyTheme
