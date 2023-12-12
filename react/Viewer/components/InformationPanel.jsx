@@ -12,7 +12,7 @@ const styles = {
 
 const InformationPanel = ({ children }) => {
   return (
-    <div style={styles.panel} className="u-h-100 u-ov-scroll">
+    <div style={styles.panel} className="u-h-100 u-ov-auto">
       {children}
     </div>
   )
