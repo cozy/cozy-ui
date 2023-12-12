@@ -16740,6 +16740,7 @@ progress.upload-queue-progress--1CmN- {
   overflow: hidden;
   background: var(--charcoalGrey);
   color: var(--white);
+  display: flex;
 }
 .flagship-app--KFqbm .viewer-wrapper--2GIXH {
   padding-top: var(--flagship-top-height);
