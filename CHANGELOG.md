@@ -1,3 +1,10 @@
+## [99.0.1](https://github.com/cozy/cozy-ui/compare/v99.0.0...v99.0.1) (2023-12-12)
+
+
+### Bug Fixes
+
+* **Viewer:** InformationPanel doesn't use Drawer anymore ([10ad0c6](https://github.com/cozy/cozy-ui/commit/10ad0c6))
+
 # [99.0.0](https://github.com/cozy/cozy-ui/compare/v98.2.0...v99.0.0) (2023-12-12)
 
 
