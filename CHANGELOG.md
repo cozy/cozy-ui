@@ -1,3 +1,10 @@
+## [99.0.2](https://github.com/cozy/cozy-ui/compare/v99.0.1...v99.0.2) (2023-12-12)
+
+
+### Bug Fixes
+
+* **Viewer:** Remove vertical scrollbar in info panel when not necessary ([86715e1](https://github.com/cozy/cozy-ui/commit/86715e1))
+
 ## [99.0.1](https://github.com/cozy/cozy-ui/compare/v99.0.0...v99.0.1) (2023-12-12)
 
 
