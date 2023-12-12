@@ -173,7 +173,7 @@ initialState = {
 }
 
 const initialVariants = [
-  { navigation: true, toolbar: true, onlyOfficeEnabled: true }
+  { navigation: true, toolbar: true, onlyOfficeEnabled: true, disableModal: false }
 ]
 
 const getURL = (file) => {
@@ -223,6 +223,7 @@ const editPathByModelProps = {
               files={files}
               currentIndex={state.currentIndex}
               currentURL={state.currentURL}
+              disableModal={variant.disableModal}
               showNavigation={variant.navigation}
               editPathByModelProps={editPathByModelProps}
               onCloseRequest={toggleViewer}

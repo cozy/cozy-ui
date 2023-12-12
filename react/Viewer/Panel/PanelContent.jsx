@@ -15,7 +15,7 @@ const PanelContent = ({ file, t }) => {
   return (
     <Stack spacing="s" className={cx('u-flex u-flex-column u-h-100')}>
       <Paper
-        className={'u-ph-2 u-flex u-flex-items-center u-h-3'}
+        className="u-flex u-flex-items-center u-h-3 u-ph-2 u-flex-shrink-0"
         elevation={2}
         square
       >
