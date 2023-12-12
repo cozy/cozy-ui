@@ -4,6 +4,7 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import { createMockClient, useInstanceInfo } from 'cozy-client'
 import { isFlagshipApp } from 'cozy-device-helper'
 import flag from 'cozy-flags'
+import { useWebviewIntent } from 'cozy-intent'
 
 import DemoProvider from '../providers/DemoProvider'
 import Paywall from './Paywall'
@@ -15,6 +16,10 @@ jest.mock('cozy-device-helper', () => ({
 jest.mock('cozy-client', () => ({
   ...jest.requireActual('cozy-client'),
   useInstanceInfo: jest.fn()
+}))
+jest.mock('cozy-intent', () => ({
+  ...jest.requireActual('cozy-intent'),
+  useWebviewIntent: jest.fn()
 }))
 jest.mock('cozy-flags')
 
@@ -31,7 +36,8 @@ describe('Paywall', () => {
     enablePremiumLinks = false,
     hasUuid = false,
     isFlagshipApp: isFlagshipAppReturnValue = false,
-    isIapEnabled = null
+    isIapEnabled = null,
+    isIapAvailable = false
   } = {}) => {
     useInstanceInfo.mockReturnValue({
       context: {
@@ -52,6 +58,10 @@ describe('Paywall', () => {
 
     isFlagshipApp.mockReturnValue(isFlagshipAppReturnValue)
     flag.mockReturnValue(isIapEnabled)
+    const mockCall = jest.fn().mockResolvedValue(isIapAvailable)
+    useWebviewIntent.mockReturnValue({
+      call: mockCall
+    })
 
     const mockClient = createMockClient({})
     return render(
@@ -65,33 +75,33 @@ describe('Paywall', () => {
     )
   }
 
-  it('should display the default case when nothing is defined', () => {
+  it('should display the default case when nothing is defined', async () => {
     setup()
 
     expect(screen.getByText('Information')).toBeInTheDocument()
 
-    const actionButton = screen.getByRole('button', {
+    const actionButton = await screen.findByRole('button', {
       name: 'I understand'
     })
     fireEvent.click(actionButton)
     expect(onCloseSpy).toBeCalledTimes(1)
   })
 
-  it('should display the default case when there is a premium link but it is not enabled', () => {
+  it('should display the default case when there is a premium link but it is not enabled', async () => {
     setup({
       hasUuid: true
     })
 
     expect(screen.getByText('Information')).toBeInTheDocument()
 
-    const actionButton = screen.getByRole('button', {
+    const actionButton = await screen.findByRole('button', {
       name: 'I understand'
     })
     fireEvent.click(actionButton)
     expect(onCloseSpy).toBeCalledTimes(1)
   })
 
-  it('should display the premium case when the premium link is enabled and available', () => {
+  it('should display the premium case when the premium link is enabled and available', async () => {
     setup({
       hasUuid: true,
       enablePremiumLinks: true
@@ -99,7 +109,7 @@ describe('Paywall', () => {
 
     expect(screen.getByText('Upgrade your plan')).toBeInTheDocument()
 
-    const actionButton = screen.getByRole('button', {
+    const actionButton = await screen.findByRole('button', {
       name: 'Check our plans'
     })
     fireEvent.click(actionButton)
@@ -109,7 +119,7 @@ describe('Paywall', () => {
     )
   })
 
-  it('should display the public case when the premium link is available in public context (eg. sharing view)', () => {
+  it('should display the public case when the premium link is available in public context (eg. sharing view)', async () => {
     setup({
       hasUuid: true,
       enablePremiumLinks: true,
@@ -122,14 +132,14 @@ describe('Paywall', () => {
       )
     ).toBeInTheDocument()
 
-    const actionButton = screen.getByRole('button', {
+    const actionButton = await screen.findByRole('button', {
       name: 'I understand'
     })
     fireEvent.click(actionButton)
     expect(onCloseSpy).toBeCalledTimes(1)
   })
 
-  it('should display the default case when the premium link is not available in public context', () => {
+  it('should display the default case when the premium link is not available in public context', async () => {
     setup({
       hasUuid: true,
       enablePremiumLinks: false,
@@ -138,7 +148,7 @@ describe('Paywall', () => {
 
     expect(screen.getByText('Information')).toBeInTheDocument()
 
-    const actionButton = screen.getByRole('button', {
+    const actionButton = await screen.findByRole('button', {
       name: 'I understand'
     })
     fireEvent.click(actionButton)
@@ -146,7 +156,7 @@ describe('Paywall', () => {
   })
 
   describe('on flagship', () => {
-    it('should display the premium case without an action button to access the premium link', () => {
+    it('should display the premium case without an action button to access the premium link', async () => {
       setup({
         hasUuid: true,
         enablePremiumLinks: true,
@@ -155,14 +165,14 @@ describe('Paywall', () => {
 
       expect(screen.getByText('Upgrade your plan')).toBeInTheDocument()
 
-      const actionButton = screen.getByRole('button', {
+      const actionButton = await screen.findByRole('button', {
         name: 'I understand'
       })
       fireEvent.click(actionButton)
       expect(onCloseSpy).toBeCalledTimes(1)
     })
 
-    it('should display the premium case without an action button to access the premium link when flag flagship.iap.enabled is false', () => {
+    it('should display the premium case without an action button to access the premium link when flag flagship.iap.enabled is false', async () => {
       setup({
         hasUuid: true,
         enablePremiumLinks: true,
@@ -172,24 +182,44 @@ describe('Paywall', () => {
 
       expect(screen.getByText('Upgrade your plan')).toBeInTheDocument()
 
-      const actionButton = screen.getByRole('button', {
+      const actionButton = await screen.findByRole('button', {
         name: 'I understand'
       })
       fireEvent.click(actionButton)
       expect(onCloseSpy).toBeCalledTimes(1)
     })
 
-    it('should display the premium case with an action button to access the premium link when flag flagship.iap.enabled is true', () => {
+    it('should display the premium case without an action button to access the premium link when flag flagship.iap.enabled is false and iap is unavailable', async () => {
       setup({
         hasUuid: true,
         enablePremiumLinks: true,
         isFlagshipApp: true,
-        isIapEnabled: true
+        isIapEnabled: false,
+        isIapAvailable: false
       })
 
       expect(screen.getByText('Upgrade your plan')).toBeInTheDocument()
 
-      const actionButton = screen.getByRole('button', {
+      const actionButton = await screen.findByRole('button', {
+        name: 'I understand'
+      })
+
+      fireEvent.click(actionButton)
+      expect(onCloseSpy).toBeCalledTimes(1)
+    })
+
+    it('should display the premium case with an action button to access the premium link when flag flagship.iap.enabled is true and iap is available', async () => {
+      setup({
+        hasUuid: true,
+        enablePremiumLinks: true,
+        isFlagshipApp: true,
+        isIapEnabled: true,
+        isIapAvailable: true
+      })
+
+      expect(screen.getByText('Upgrade your plan')).toBeInTheDocument()
+
+      const actionButton = await screen.findByRole('button', {
         name: 'Check our plans'
       })
       fireEvent.click(actionButton)

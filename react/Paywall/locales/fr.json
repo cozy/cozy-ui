@@ -1,6 +1,7 @@
 {
-  "mobileApp": {
-    "action": "J'ai compris"
+  "action": {
+    "loading": "Chargement...",
+    "withoutIAP": "J'ai compris"
   },
   "onlyOfficePaywall": {
     "premium": {
