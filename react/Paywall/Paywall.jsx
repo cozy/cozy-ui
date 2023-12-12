@@ -3,11 +3,10 @@ import ReactMarkdown from 'react-markdown'
 import PropTypes from 'prop-types'
 
 import { isFlagshipApp } from 'cozy-device-helper'
-import { useClient } from 'cozy-client'
+import { useInstanceInfo } from 'cozy-client'
 import { buildPremiumLink } from 'cozy-client/dist/models/instance'
 import flag from 'cozy-flags'
 
-import useInstance from '../helpers/useInstance'
 import Spinner from '../Spinner'
 import { IllustrationDialog } from '../CozyDialogs'
 import Icon from '../Icon'
@@ -22,11 +21,10 @@ import withPaywallLocales from './locales/withPaywallLocales'
  * Component with the core logic of the paywall, which is then declined in several variants to adapt to the user case
  */
 const Paywall = ({ variant, onClose, isPublic, contentInterpolation }) => {
-  const client = useClient()
-  const instance = useInstance(client)
+  const instanceInfo = useInstanceInfo()
   const { t } = useI18n()
 
-  if (instance.state === 'loading' && instance.state !== 'loaded')
+  if (!instanceInfo.isLoaded)
     return (
       <IllustrationDialog
         open
@@ -43,8 +41,8 @@ const Paywall = ({ variant, onClose, isPublic, contentInterpolation }) => {
   const canOpenPremiumLink =
     !isFlagshipApp() || (isFlagshipApp() && !!flag('flagship.iap.enabled'))
 
-  const link = buildPremiumLink(instance)
-  const type = makeType(instance, isPublic, link)
+  const link = buildPremiumLink(instanceInfo)
+  const type = makeType(instanceInfo, isPublic, link)
 
   const onAction = () => {
     return type === 'premium' && canOpenPremiumLink

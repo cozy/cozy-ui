@@ -1,20 +1,21 @@
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 
-import { createMockClient } from 'cozy-client'
+import { createMockClient, useInstanceInfo } from 'cozy-client'
 import { isFlagshipApp } from 'cozy-device-helper'
 import flag from 'cozy-flags'
 
 import DemoProvider from '../providers/DemoProvider'
 import Paywall from './Paywall'
-import useInstance from '../helpers/useInstance'
 
-jest.mock('../helpers/useInstance')
 jest.mock('cozy-device-helper', () => ({
   ...jest.requireActual('cozy-device-helper'),
   isFlagshipApp: jest.fn()
 }))
-
+jest.mock('cozy-client', () => ({
+  ...jest.requireActual('cozy-client'),
+  useInstanceInfo: jest.fn()
+}))
 jest.mock('cozy-flags')
 
 describe('Paywall', () => {
@@ -32,7 +33,7 @@ describe('Paywall', () => {
     isFlagshipApp: isFlagshipAppReturnValue = false,
     isIapEnabled = null
   } = {}) => {
-    useInstance.mockReturnValue({
+    useInstanceInfo.mockReturnValue({
       context: {
         data: {
           attributes: {
@@ -46,7 +47,7 @@ describe('Paywall', () => {
           attributes: { uuid: hasUuid ? '123' : null }
         }
       },
-      state: 'loaded'
+      isLoaded: true
     })
 
     isFlagshipApp.mockReturnValue(isFlagshipAppReturnValue)
