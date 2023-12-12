@@ -13,38 +13,18 @@ import {
   MaxAccountsPaywall,
   MaxPapersPaywall,
   QuotaPaywall
-} from "cozy-ui/transpiled/react/Paywall"
+} from 'cozy-ui/transpiled/react/Paywall'
 import Variants from 'cozy-ui/docs/components/Variants'
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
-import Button from  'cozy-ui/transpiled/react/Buttons'
+import Button from 'cozy-ui/transpiled/react/Buttons'
+import { createDemoClient } from 'cozy-client'
 
-const initialVariants = [{
-  isPublic: false,
-  premiumLink: false
-}]
-
-const makeClient = (premiumLink) => ({
-  getStackClient: () => ({
-    fetchJSON: (_, url) => {
-      let attributes = {}
-      if(url === '/settings/context') {
-        attributes = {
-          attributes: {
-            enable_premium_links: premiumLink,
-            manager_url: "http://mycozy.cloud",
-            reply_to: "support@cozy.io"
-          }
-        }
-      } else if(url === '/settings/instance') {
-        attributes = {
-          attributes: { uuid: "1223" }
-        }
-      }
-
-      return Promise.resolve({ data: attributes  })
-    }
-  })
-})
+const initialVariants = [
+  {
+    isPublic: false,
+    premiumLink: false
+  }
+]
 
 const PaywallComponent = state.modal
 
@@ -80,13 +60,51 @@ const togglePaywall = paywall => {
     modalOpened: !state.modalOpened,
     modal: paywall
   })
-};
+}
 
-<Variants initialVariants={initialVariants}>
+const makeClient = premiumLink =>
+  createDemoClient({
+    queries: {
+      'io.cozy.settings/io.cozy.settings.instance': {
+        doctype: 'io.cozy.settings',
+        definition: {
+          doctype: 'io.cozy.settings',
+          id: 'io.cozy.settings/io.cozy.settings.instance'
+        },
+        data: [
+          {
+            id: 'io.cozy.settings/io.cozy.settings.instance',
+            attributes: {
+              uuid: '1223'
+            }
+          }
+        ]
+      },
+      'io.cozy.settings/context': {
+        doctype: 'io.cozy.settings',
+        definition: {
+          doctype: 'io.cozy.settings',
+          id: 'io.cozy.settings/context'
+        },
+        data: [
+          {
+            id: 'io.cozy.settings/context',
+            attributes: {
+              enable_premium_links: premiumLink,
+              manager_url: 'http://mycozy.cloud',
+              reply_to: 'support@cozy.io'
+            }
+          }
+        ]
+      }
+    }
+  })
+
+;<Variants initialVariants={initialVariants}>
   {variant => (
     <DemoProvider client={makeClient(variant.premiumLink)}>
       <div>
-      <div className="u-mt-1">
+        <div className="u-mt-1">
           {paywalls.map(paywall => (
             <Button
               key={`open-btn-${paywall.name}`}
@@ -104,7 +122,8 @@ const togglePaywall = paywall => {
             isPublic={variant.isPublic}
             max={4}
             konnectorName="EDF"
-            onClose={() => setState({ modalOpened: false })} />
+            onClose={() => setState({ modalOpened: false })}
+          />
         )}
       </div>
     </DemoProvider>
