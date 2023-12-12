@@ -1,3 +1,16 @@
+# [99.0.0](https://github.com/cozy/cozy-ui/compare/v98.2.0...v99.0.0) (2023-12-12)
+
+
+### Features
+
+* Add `u-dc` utility css class to force `display: contents` ([700df67](https://github.com/cozy/cozy-ui/commit/700df67))
+* **CozyTheme:** Add ignoreItself prop (add `u-dc` css class) ([8c82390](https://github.com/cozy/cozy-ui/commit/8c82390))
+
+
+### BREAKING CHANGES
+
+* **CozyTheme:** `CozyTheme` use now `display: contents` by default so as not to change the style of the page, since it's just a wrapper that supports styles and nothing else. If this causes problems in the structure of your app, you can always revert to the previous state by setting `<CozyTheme ignoreItself={[secure]}>`.
+
 # [98.2.0](https://github.com/cozy/cozy-ui/compare/v98.1.1...v98.2.0) (2023-12-07)
 
 
