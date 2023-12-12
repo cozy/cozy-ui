@@ -147,6 +147,30 @@ const files = [
     class: 'unknown',
     name: 'Unsupported file type',
     mime: '???/???'
+  },
+  {
+    _id: 'none',
+    class: 'unknown',
+    name: 'Unsupported file type',
+    mime: '???/???',
+    metadata: {
+      carbonCopy: true,
+      AObtentionDate: null,
+      BObtentionDate: "2022-02-09T09:05:38.000Z",
+      CObtentionDate: null,
+      DObtentionDate: null,
+      datetime: "2022-09-23T07:50:22.000Z",
+      datetimeLabel: "BObtentionDate",
+      number: "",
+      page: "front",
+      qualification: {
+        label: "driver_license",
+        purpose: "attestation",
+        sourceCategory: "gov",
+        sourceSubCategory: "transport",
+        subjects: ["permit", "driving"]
+      }
+    }
   }
 ]
 
