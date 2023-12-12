@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import PropTypes from 'prop-types'
 
@@ -6,6 +6,7 @@ import { isFlagshipApp } from 'cozy-device-helper'
 import { useInstanceInfo } from 'cozy-client'
 import { buildPremiumLink } from 'cozy-client/dist/models/instance'
 import flag from 'cozy-flags'
+import { useWebviewIntent } from 'cozy-intent'
 
 import Spinner from '../Spinner'
 import { IllustrationDialog } from '../CozyDialogs'
@@ -24,6 +25,19 @@ const Paywall = ({ variant, onClose, isPublic, contentInterpolation }) => {
   const instanceInfo = useInstanceInfo()
   const { t } = useI18n()
 
+  const webviewIntent = useWebviewIntent()
+  const [isFlagshipAppIapAvailable, setFlagshipAppIapAvailable] = useState(null)
+
+  useEffect(() => {
+    const fetchIapAvailability = async () => {
+      const isAvailable =
+        (await webviewIntent?.call('isAvailable', 'iap')) ?? false
+      setFlagshipAppIapAvailable(isAvailable)
+    }
+
+    fetchIapAvailability()
+  }, [webviewIntent])
+
   if (!instanceInfo.isLoaded)
     return (
       <IllustrationDialog
@@ -39,7 +53,10 @@ const Paywall = ({ variant, onClose, isPublic, contentInterpolation }) => {
     )
 
   const canOpenPremiumLink =
-    !isFlagshipApp() || (isFlagshipApp() && !!flag('flagship.iap.enabled'))
+    !isFlagshipApp() ||
+    (isFlagshipApp() &&
+      !!flag('flagship.iap.enabled') &&
+      isFlagshipAppIapAvailable)
 
   const link = buildPremiumLink(instanceInfo)
   const type = makeType(instanceInfo, isPublic, link)
@@ -67,10 +84,13 @@ const Paywall = ({ variant, onClose, isPublic, contentInterpolation }) => {
         <Button
           onClick={onAction}
           label={
-            canOpenPremiumLink
+            isFlagshipAppIapAvailable === null
+              ? t(`action.loading`)
+              : canOpenPremiumLink
               ? t(`${variant}Paywall.${type}.action`)
-              : t(`mobileApp.action`)
+              : t(`action.withoutIAP`)
           }
+          busy={isFlagshipAppIapAvailable === null}
         />
       }
       content={

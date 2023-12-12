@@ -1,7 +1,16 @@
 A paywall is a modal designed to restrict access to a feature to encourage upgrading.
 There is different variant for each features so the wording can be different to adapt to the context of use.
 
-When we're in our mobile app called Flagship, we can't display the premium action instead, we just display "I understand" which closes the paywall. This is because our subscription process does not comply with the app store policies. When In app payement (iap) will be implemented we can display premium action back with flag `flagship.iap.enabled`
+When we are in our mobile application called Flagship, we only display the premium action when IAP (In-App Payment) is activated.
+Otherwise our web subscription process does not comply with the app store policies.
+To check if IAP is enabled, the following points are verified:
+
+1. The functionality is available with `cozy-intent`.
+2. The flag `flagship.iap.enabled` is set to true.
+
+### Usage
+
+To use the Paywall component, it should be wrapped into a `WebviewContext` component.
 
 ### Variants
 
@@ -17,7 +26,7 @@ import {
 import Variants from 'cozy-ui/docs/components/Variants'
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import Button from 'cozy-ui/transpiled/react/Buttons'
-import { createDemoClient } from 'cozy-client'
+import { createFakeClient } from 'cozy-client'
 
 const initialVariants = [
   {
@@ -63,7 +72,7 @@ const togglePaywall = paywall => {
 }
 
 const makeClient = premiumLink =>
-  createDemoClient({
+  createFakeClient({
     queries: {
       'io.cozy.settings/io.cozy.settings.instance': {
         doctype: 'io.cozy.settings',

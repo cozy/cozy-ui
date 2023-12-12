@@ -1,6 +1,7 @@
 {
-  "mobileApp": {
-    "action": "I understand"
+  "action": {
+    "loading": "Loading...",
+    "withoutIAP": "I understand"
   },
   "onlyOfficePaywall": {
     "premium": {
