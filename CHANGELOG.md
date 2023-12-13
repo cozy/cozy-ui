@@ -1,3 +1,10 @@
+## [99.0.3](https://github.com/cozy/cozy-ui/compare/v99.0.2...v99.0.3) (2023-12-13)
+
+
+### Bug Fixes
+
+* **Viewer:** Adjust style when no thumbnail but with bottomSheet ([06dcf25](https://github.com/cozy/cozy-ui/commit/06dcf25))
+
 ## [99.0.2](https://github.com/cozy/cozy-ui/compare/v99.0.1...v99.0.2) (2023-12-12)
 
 
