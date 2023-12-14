@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import cx from 'classnames'
 
 import Icon from '../Icon'
@@ -33,8 +33,6 @@ const HeaderComponent = ({ title, showBack, onClickBack }) => {
 }
 
 const SelfBottomSheet = props => {
-  const [, setInnerContentHeight] = useState(0) // tricks to rerender BottomSheet
-
   return (
     <BottomSheet
       {...props?.componentsProps?.bottomsheet}
@@ -42,11 +40,7 @@ const SelfBottomSheet = props => {
       onClose={props.onClose}
     >
       <BottomSheetItem disableGutters>
-        <NestedSelect
-          HeaderComponent={HeaderComponent}
-          setInnerContentHeight={setInnerContentHeight}
-          {...props}
-        />
+        <NestedSelect HeaderComponent={HeaderComponent} {...props} />
       </BottomSheetItem>
     </BottomSheet>
   )
