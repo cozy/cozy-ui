@@ -9,7 +9,7 @@ import React, {
 } from 'react'
 import PropTypes from 'prop-types'
 import { BottomSheet as MuiBottomSheet } from 'mui-bottom-sheet'
-import { useTimeoutWhen } from 'rooks'
+import { useMutationObserver, useTimeoutWhen } from 'rooks'
 import Fade from '@material-ui/core/Fade'
 import Portal from '@material-ui/core/Portal'
 
@@ -159,6 +159,7 @@ const BottomSheet = memo(
     const [bottomSpacerHeight, setBottomSpacerHeight] = useState(0)
     const [initPos, setInitPos] = useState(0)
     const prevInitPos = useRef()
+    const [forceRender, setForceRender] = useState(0)
 
     const hasToolbarProps = !!Object.keys(toolbarProps).length
     const isClosable = !!onClose || backdrop
@@ -198,6 +199,12 @@ const BottomSheet = memo(
       })
       setBottomPosition({ snapIndex, isBottomPosition, setIsBottomPosition })
     }
+
+    // forces a rendering when one of the children has changed,
+    // typically after content loading or using content changer such as NestedSelect
+    useMutationObserver(innerContentRef, () => {
+      setForceRender(v => v + 1)
+    })
 
     // hack to prevent pull-down-to-refresh behavior when dragging down the bottom sheet.
     // Needed for iOS Safari
@@ -286,7 +293,7 @@ const BottomSheet = memo(
       backdrop,
       isClosable,
       offset,
-      children // to recompute data if content changes
+      forceRender // to recompute data when content has changed
     ])
 
     useSetFlagshipUI(
