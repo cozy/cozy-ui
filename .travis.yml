@@ -1,6 +1,9 @@
 language: node_js
 dist: jammy
 cache: yarn
+branches:
+  only:
+  - master
 env:
   global:
     - PR_TITLE=$(curl https://github.com/${TRAVIS_REPO_SLUG}/pull/${TRAVIS_PULL_REQUEST} 2> /dev/null | grep "title" | head -1)
