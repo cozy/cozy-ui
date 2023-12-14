@@ -33,7 +33,7 @@ const prepareFS = async options => {
  * Returns { browser, page }
  */
 const prepareBrowser = async (puppeteer, options) => {
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({ headless: 'new' })
   const page = await browser.newPage()
   // Put Argos in user agent
   await page.setUserAgent(
@@ -44,7 +44,10 @@ const prepareBrowser = async (puppeteer, options) => {
   ])
   page.setViewport(options.viewport)
   await page.setDefaultNavigationTimeout(0)
-  console.log('Browser opened and set up')
+  await page.evaluateOnNewDocument(theme => {
+    localStorage.clear()
+    localStorage.setItem('theme', theme)
+  }, options.theme)
   return { browser, page }
 }
 
