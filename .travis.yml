@@ -5,20 +5,21 @@ env:
   global:
     - PR_TITLE=$(curl https://github.com/${TRAVIS_REPO_SLUG}/pull/${TRAVIS_PULL_REQUEST} 2> /dev/null | grep "title" | head -1)
 stages:
-  - prebuild
-  - build
-  - docs
-  - test
-  - screenshots
-  - deploy
+  - Prebuild
+  - Build
+  - Docs
+  - Test
+  - Screenshots - Create
+  - Screenshots - Upload
+  - Deploy
 jobs:
   include:
     - name: 'Lint'
-      stage: 'prebuild'
+      stage: 'Prebuild'
       script: yarn lint
       if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string
-    - name: 'Sprite and Palette'
-      stage: 'prebuild'
+    - name: 'Generate Sprite and Palette'
+      stage: 'Prebuild'
       script: yarn makeSpriteAndPalette
       workspaces:
         create:
@@ -27,7 +28,7 @@ jobs:
             - ./react/Icon/icons-sprite.js
             - ./react/palette.js
     - name: 'Build JS'
-      stage: 'build'
+      stage: 'Build'
       script:
         - yarn build
       workspaces:
@@ -38,7 +39,7 @@ jobs:
           paths:
             - ./transpiled
     - name: 'Build CSS'
-      stage: 'build'
+      stage: 'Build'
       script:
         - yarn build:css:all
       workspaces:
@@ -47,7 +48,7 @@ jobs:
           paths:
             - ./dist
     - name: 'Build docs'
-      stage: 'docs'
+      stage: 'Docs'
       script:
         - yarn build:doc:react
         - yarn build:doc:kss
@@ -61,7 +62,7 @@ jobs:
           paths:
             - ./build
     - name: 'Tests without snapshots'
-      stage: 'test'
+      stage: 'Test'
       script:
         - yarn test:noSnapshots
       workspaces:
@@ -71,7 +72,7 @@ jobs:
           - css-binaries
       if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string
     - name: 'Tests snapshots'
-      stage: 'test'
+      stage: 'Test'
       script:
         - yarn test:snapshots
       workspaces:
@@ -81,7 +82,7 @@ jobs:
           - css-binaries
       if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string
     - name: 'Bundlemon'
-      stage: 'test'
+      stage: 'Test'
       script:
         - yarn bundlemon
       workspaces:
@@ -90,13 +91,13 @@ jobs:
           - js-binaries
           - css-binaries
       if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string
-    - name: 'Argos desktop'
-      stage: 'screenshots'
+    - name: '[Argos] Create desktop screenshots'
+      stage: 'Screenshots - Create'
       script: |
         if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
           mkdir ./screenshots
+          npx puppeteer browsers install chrome
           yarn screenshots --mode react --viewport desktop --screenshot-dir ./screenshots/reactDesktop
-          yarn argos:upload --parallel screenshots/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
         fi
       workspaces:
         use:
@@ -104,13 +105,17 @@ jobs:
           - js-binaries
           - css-binaries
           - docs-binaries
-    - name: 'Argos mobile'
-      stage: 'screenshots'
+        create:
+          name: screenshots-desktop-binaries
+          paths:
+            - ./screenshots
+    - name: '[Argos] Create mobile screenshots'
+      stage: 'Screenshots - Create'
       script: |
         if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
           mkdir ./screenshots
+          npx puppeteer browsers install chrome
           yarn screenshots --mode react --viewport 300x600 --screenshot-dir ./screenshots/reactMobile
-          yarn argos:upload --parallel screenshots/reactMobile/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
         fi
       workspaces:
         use:
@@ -118,12 +123,34 @@ jobs:
           - js-binaries
           - css-binaries
           - docs-binaries
-    - name: 'Argos kss'
-      stage: 'screenshots'
+        create:
+          name: screenshots-mobile-binaries
+          paths:
+            - ./screenshots
+    - name: '[Argos] Create kss screenshots'
+      stage: 'Screenshots - Create'
       script: |
         if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
           mkdir ./screenshots
+          npx puppeteer browsers install chrome
           yarn screenshots --mode kss --screenshot-dir ./screenshots/kss
+        fi
+      workspaces:
+        use:
+          - sprite-palette-binaries
+          - js-binaries
+          - css-binaries
+          - docs-binaries
+        create:
+          name: screenshots-kss-binaries
+          paths:
+            - ./screenshots
+    - name: '[Argos] Upload all screenshots'
+      stage: 'Screenshots - Upload'
+      script: |
+        if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
+          yarn argos:upload --parallel screenshots/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
+          yarn argos:upload --parallel screenshots/reactMobile/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
           yarn argos:upload --parallel screenshots/kss/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
         fi
       workspaces:
@@ -132,8 +159,11 @@ jobs:
           - js-binaries
           - css-binaries
           - docs-binaries
+          - screenshots-desktop-binaries
+          - screenshots-mobile-binaries
+          - screenshots-kss-binaries
     - name: 'Deploy'
-      stage: 'deploy'
+      stage: 'Deploy'
       script: 'true'
       workspaces:
         use:
