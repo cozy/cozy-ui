@@ -1,3 +1,11 @@
+## [99.0.4](https://github.com/cozy/cozy-ui/compare/v99.0.3...v99.0.4) (2023-12-14)
+
+
+### Bug Fixes
+
+* **BottomSheet:** Did not rerender correctly after a change to children ([4d97075](https://github.com/cozy/cozy-ui/commit/4d97075))
+* **NestedSelect:** Remove useless hack to force rerender when in BottomSheet ([0cbe62f](https://github.com/cozy/cozy-ui/commit/0cbe62f))
+
 ## [99.0.3](https://github.com/cozy/cozy-ui/compare/v99.0.2...v99.0.3) (2023-12-13)
 
 
