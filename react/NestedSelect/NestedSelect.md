@@ -154,10 +154,11 @@ const InteractiveExample = () => {
     return false
   }
 
-  const searchOptions = {
+  const searchOptions = withHeaders => ({
     placeholderSearch: 'Placeholder Search',
     noDataLabel: 'No Data Found',
     onSearch: (value) => {
+      const options = makeOptions(withHeaders)
       return options.children.filter(o => o.description && o.description.toLowerCase().includes(value.toLowerCase()))
     },
     displaySearchResultItem: item =>
@@ -167,7 +168,7 @@ const InteractiveExample = () => {
         ellipsis
       />
     </ListItem>
-  }
+  })
 
   const handleSelect = item => {
     setSelected(item)
@@ -203,7 +204,7 @@ const InteractiveExample = () => {
               radioPosition={variant.leftRadio ? 'left' : 'right'}
               title={variant.noTitle ? undefined : "Please select letter"}
               transformParentItem={transformParentItem}
-              searchOptions={variant.withSearch ? searchOptions : undefined}
+              searchOptions={variant.withSearch ? searchOptions(variant.withHeaders) : undefined}
               ellipsis={variant.withEllipsis}
               componentsProps={{ bottomsheet: { skipAnimation: isTesting() } }}
               noDivider={variant.noDivider}
