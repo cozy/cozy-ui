@@ -19,13 +19,8 @@ const screenshotComponent = async (page, options) => {
   const { component, screenshotDir, viewport, theme } = options
   const { link, name } = component
 
-  // Need to use page.goto twice to set localStorage correctly
-  await page.goto(link, { waitUntil: 'load', timeout: 0 })
-  await page.evaluate(theme => {
-    localStorage.setItem('theme', theme)
-  }, theme)
-  await page.goto(link, { waitUntil: 'load', timeout: 0 })
-  await sleep(100)
+  await page.goto(link)
+  await sleep(100) // to be sure the page is entirely loaded
 
   const getScreenshotName =
     options.getScreenshotName || defaultGetScreenshotName

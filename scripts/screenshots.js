@@ -5,6 +5,7 @@ const screenshotReactStyleguide = require('./screenshots/screenshotReactStylegui
 const screenshotKSSStyleguide = require('./screenshots/screenshotKSSStyleguide')
 const makeParser = require('./screenshots/parser')
 const { readConfig, parseViewportArgument } = require('./screenshots/helpers')
+const themes = require('../theme/themes')
 
 let puppeteer
 try {
@@ -27,21 +28,36 @@ const main = async () => {
 
   const parsedViewport = parseViewportArgument(args.viewport)
 
+  console.log('\n⌛ Preparing screenshot directory...')
   await prepareFS({
     screenshotDir: args.screenshotDir,
     emptyScreenshotDir: args.emptyScreenshotDir
   })
-  const { browser, page } = await prepareBrowser(puppeteer, {
-    viewport: parsedViewport
-  })
+  console.log('✅ Done. Screenshot directory prepared')
 
-  if (args.mode == 'react') {
-    await screenshotReactStyleguide(page, args, config)
-  } else if (args.mode == 'kss') {
-    await screenshotKSSStyleguide(page, args)
+  for (const theme of Object.keys(themes)) {
+    console.log(`\n✨ Running process for '${theme}' theme...`)
+    console.log('\n⌛ Preparing browser...')
+
+    const { browser, page } = await prepareBrowser(puppeteer, {
+      viewport: parsedViewport,
+      theme
+    })
+
+    console.log('✅ Done. Browser opened and set up')
+    console.log('\n⌛ Preparing screenshots...')
+
+    if (args.mode == 'react') {
+      await screenshotReactStyleguide(page, args, config, theme)
+    } else if (args.mode == 'kss') {
+      await screenshotKSSStyleguide(page, args)
+    }
+
+    console.log(`✅ Done. Screenshots completed for '${theme}' theme.`)
+
+    await browser.close()
+    console.log('Browser closed')
   }
-
-  await browser.close()
 }
 
 if (require.main === module) {

@@ -1,6 +1,5 @@
 const fs = require('fs')
 
-const themes = require('../../theme/themes')
 const { parseViewportArgument } = require('./helpers')
 const fetchAllComponents = require('./fetchAllComponents')
 const screenshotComponent = require('./screenshotComponent')
@@ -32,7 +31,7 @@ const cacheToDisk = (fnToCache, options) =>
     return res
   }
 
-const screenshotReactStyleguide = async (page, args, config) => {
+const screenshotReactStyleguide = async (page, args, config, theme) => {
   const cachedFetchAllComponents = cacheToDisk(fetchAllComponents, {
     cacheFile: args.cacheFile,
     onLoadCache: () =>
@@ -47,7 +46,7 @@ const screenshotReactStyleguide = async (page, args, config) => {
     )
   }
 
-  console.log('Screenshotting components')
+  console.log('⌛ Screenshotting components...')
 
   for (const component of components) {
     const componentConfig = config[component.name] || {}
@@ -58,15 +57,13 @@ const screenshotReactStyleguide = async (page, args, config) => {
       ? parseViewportArgument(componentViewportSpec)
       : parseViewportArgument(args.viewport)
     await page.setViewport(componentViewport)
-    for (const theme of Object.keys(themes)) {
-      await screenshotComponent(page, {
-        component,
-        componentConfig,
-        screenshotDir: args.screenshotDir,
-        viewport: componentViewport,
-        theme
-      })
-    }
+    await screenshotComponent(page, {
+      component,
+      componentConfig,
+      screenshotDir: args.screenshotDir,
+      viewport: componentViewport,
+      theme
+    })
   }
 }
 
