@@ -1,3 +1,25 @@
+# [100.0.0](https://github.com/cozy/cozy-ui/compare/v99.0.4...v100.0.0) (2023-12-15)
+
+
+### Features
+
+* **Paywall:** Add IAP support ([7b54299](https://github.com/cozy/cozy-ui/commit/7b54299))
+* Remove useInstance helper ([01ec4de](https://github.com/cozy/cozy-ui/commit/01ec4de))
+* Update cozy-client from 45.0.0 to 45.1.0 ([8f5ce38](https://github.com/cozy/cozy-ui/commit/8f5ce38))
+
+
+### BREAKING CHANGES
+
+* **Paywall:** To check if IAP is available, you need to wrap your Paywall into a `WebviewContext` component
+```
+import { WebviewIntentProvider } from 'cozy-intent'
+
+<WebviewIntentProvider>
+  <Paywall />
+</WebviewIntentProvider>
+```
+* you must have
+
 ## [99.0.4](https://github.com/cozy/cozy-ui/compare/v99.0.3...v99.0.4) (2023-12-14)
 
 
