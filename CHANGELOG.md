@@ -1,3 +1,10 @@
+# [100.1.0](https://github.com/cozy/cozy-ui/compare/v100.0.0...v100.1.0) (2023-12-18)
+
+
+### Features
+
+* **Icon:** Add support icon ([06eacfb](https://github.com/cozy/cozy-ui/commit/06eacfb))
+
 # [100.0.0](https://github.com/cozy/cozy-ui/compare/v99.0.4...v100.0.0) (2023-12-15)
 
 
