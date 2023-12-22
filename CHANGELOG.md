@@ -1,3 +1,10 @@
+# [100.2.0](https://github.com/cozy/cozy-ui/compare/v100.1.0...v100.2.0) (2023-12-22)
+
+
+### Features
+
+* Add MaxDaysToCapturePaywall component ([8b6bce6](https://github.com/cozy/cozy-ui/commit/8b6bce6))
+
 # [100.1.0](https://github.com/cozy/cozy-ui/compare/v100.0.0...v100.1.0) (2023-12-18)
 
 
