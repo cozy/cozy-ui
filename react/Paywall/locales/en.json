@@ -79,5 +79,17 @@
       "content": "Your disk storage is full.\n\nPlease remove files, empty your trash before uploading files.",
       "action": "I understand"
     }
+  },
+  "maxDaysToCapturePaywall": {
+    "premium": {
+      "title": "Upgrade your plan",
+      "content": "Your plan allows you to capture only **%{smart_count} day of trips**.\n\nTo unlock this feature, or simply support us, you can change your Cozy plan. |||| Your plan allows you to capture only **%{smart_count} days of trips**.\n\nTo unlock this feature, or simply support us, you can change your Cozy plan.",
+      "action": "Check our plans"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Your current plan does not allow you to take advantage of this feature.",
+      "action": "I understand"
+    }
   }
 }
