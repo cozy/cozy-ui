@@ -79,5 +79,17 @@
       "content": "Votre espace de stockage est plein.\n\nVeuillez supprimer des fichiers, et vider votre corbeille avant d'importer de nouveaux fichiers.",
       "action": "J'ai compris"
     }
+  },
+  "maxDaysToCapturePaywall": {
+    "premium": {
+      "title": "Augmentez votre offre",
+      "content": "Vous avez atteint la limite de **%{smart_count} jour de trajet sauvegardé** inclus dans votre offre.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy. |||| Vous avez atteint la limite des **%{smart_count} jours de trajets sauvegardés** inclus dans votre offre.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
+      "action": "Check our plans"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité.",
+      "action": "J'ai compris"
+    }
   }
 }

@@ -21,7 +21,8 @@ import {
   MaxAccountsByKonnectorPaywall,
   MaxAccountsPaywall,
   MaxPapersPaywall,
-  QuotaPaywall
+  QuotaPaywall,
+  MaxDaysToCapturePaywall
 } from 'cozy-ui/transpiled/react/Paywall'
 import Variants from 'cozy-ui/docs/components/Variants'
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
@@ -61,6 +62,10 @@ const paywalls = [
   {
     name: 'QuotaPaywall',
     component: QuotaPaywall
+  },
+  {
+    name: 'MaxDaysToCapturePaywall',
+    component: MaxDaysToCapturePaywall
   }
 ]
 
@@ -130,6 +135,7 @@ const makeClient = premiumLink =>
           <PaywallComponent
             isPublic={variant.isPublic}
             max={4}
+            days={30}
             konnectorName="EDF"
             onClose={() => setState({ modalOpened: false })}
           />
