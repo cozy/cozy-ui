@@ -5,10 +5,16 @@ const rootDirectory = path.join(__dirname, '../')
 
 const formatViewport = viewport => `${viewport.width}x${viewport.height}`
 
-const defaultGetScreenshotName = ({ component, viewport, suffix, theme }) =>
-  `${component.testId}-${suffix ? `${suffix}-` : ''}${theme}-${formatViewport(
-    viewport
-  )}.png`
+const defaultGetScreenshotName = ({
+  component,
+  viewport,
+  suffix,
+  type,
+  variant
+}) =>
+  `${component.testId}-${
+    suffix ? `${suffix}-` : ''
+  }${type}-${variant}-${formatViewport(viewport)}.png`
 
 /**
  * Screenshot a component to the screenshot directory, taking care of
@@ -16,7 +22,7 @@ const defaultGetScreenshotName = ({ component, viewport, suffix, theme }) =>
  * component.
  */
 const screenshotComponent = async (page, options) => {
-  const { component, screenshotDir, viewport, theme } = options
+  const { component, screenshotDir, viewport, type, variant } = options
   const { link, name } = component
 
   await page.goto(link)
@@ -29,7 +35,7 @@ const screenshotComponent = async (page, options) => {
     await page.screenshot({
       path: path.join(
         screenshotDir,
-        getScreenshotName({ component, viewport, suffix, theme })
+        getScreenshotName({ component, viewport, suffix, type, variant })
       ),
       fullPage: true,
       captureBeyondViewport: false
@@ -47,7 +53,9 @@ const screenshotComponent = async (page, options) => {
     await componentScript(page, screenshot)
   } else {
     console.log(
-      `Screenshotting ${name} for ${theme} theme at ${formatViewport(viewport)}`
+      `Screenshotting ${name} for ${type}-${variant} theme at ${formatViewport(
+        viewport
+      )}`
     )
     await screenshot()
   }

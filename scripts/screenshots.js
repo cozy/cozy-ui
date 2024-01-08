@@ -5,7 +5,6 @@ const screenshotReactStyleguide = require('./screenshots/screenshotReactStylegui
 const screenshotKSSStyleguide = require('./screenshots/screenshotKSSStyleguide')
 const makeParser = require('./screenshots/parser')
 const { readConfig, parseViewportArgument } = require('./screenshots/helpers')
-const themes = require('../theme/themes')
 
 let puppeteer
 try {
@@ -35,8 +34,15 @@ const main = async () => {
   })
   console.log('✅ Done. Screenshot directory prepared')
 
-  for (const theme of Object.keys(themes)) {
-    console.log(`\n✨ Running process for '${theme}' theme...`)
+  for (const theme of [
+    { type: 'light', variant: 'normal' },
+    { type: 'light', variant: 'inverted' },
+    { type: 'dark', variant: 'normal' },
+    { type: 'dark', variant: 'inverted' }
+  ]) {
+    console.log(
+      `\n✨ Running process for '${theme.type} ${theme.variant}' theme...`
+    )
     console.log('\n⌛ Preparing browser...')
 
     const { browser, page } = await prepareBrowser(puppeteer, {
@@ -53,7 +59,9 @@ const main = async () => {
       await screenshotKSSStyleguide(page, args)
     }
 
-    console.log(`✅ Done. Screenshots completed for '${theme}' theme.`)
+    console.log(
+      `✅ Done. Screenshots completed for '${theme.type} ${theme.variant}' theme.`
+    )
 
     await browser.close()
     console.log('Browser closed')
