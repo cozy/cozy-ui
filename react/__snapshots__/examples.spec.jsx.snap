@@ -2249,7 +2249,7 @@ exports[`ContactsList should render examples: ContactsList 2`] = `
 
 exports[`ContactsListModal should render examples: ContactsListModal 1`] = `
 "<div data-testid=\\"mountNode\\">
-  <div class=\\"CozyTheme--normal u-dc\\"><button type=\\"button\\">Open contacts list</button></div>
+  <div class=\\"CozyTheme--light-normal u-dc\\"><button type=\\"button\\">Open contacts list</button></div>
 </div>"
 `;
 
@@ -2270,7 +2270,7 @@ exports[`DateMonthPicker should render examples: DateMonthPicker 1`] = `
 
 exports[`Dialog should render examples: Dialog 1`] = `
 "<div data-testid=\\"mountNode\\"><button>Toggle modal</button>
-  <div class=\\"CozyTheme--normal u-dc\\"></div>
+  <div class=\\"CozyTheme--light-normal u-dc\\"></div>
 </div>"
 `;
 
@@ -2852,7 +2852,7 @@ exports[`Labs/CollectionField should render examples: Labs/CollectionField 1`] =
   <div class=\\"MuiPaper-root u-p-1 u-mb-1 MuiPaper-elevation1\\">
     <h5 class=\\"MuiTypography-root u-mb-1 MuiTypography-h5 MuiTypography-colorTextPrimary\\">Variant selector</h5><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"INLINE\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">INLINE</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"EMPTYDATA\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">EMPTYDATA</span></label><label class=\\"MuiFormControlLabel-root\\"><span class=\\"MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiCheckbox-root MuiCheckbox-colorPrimary MuiIconButton-colorPrimary\\" aria-disabled=\\"false\\"><span class=\\"MuiIconButton-label\\"><input class=\\"PrivateSwitchBase-input-4\\" type=\\"checkbox\\" data-indeterminate=\\"false\\" aria-label=\\"NULLDATA\\" aria-checked=\\"\\" value=\\"\\"><svg class=\\"MuiSvgIcon-root\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\"><path d=\\"M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\\"></path></svg></span></span><span class=\\"MuiTypography-root MuiFormControlLabel-label MuiTypography-body1\\">NULLDATA</span></label>
   </div>
-  <div class=\\"CozyTheme--normal u-dc\\">
+  <div class=\\"CozyTheme--light-normal u-dc\\">
     <div class=\\"styles__o-field___3n5HM\\"><label class=\\"styles__c-label___o4ozG styles__c-label--block___2ZV_7\\">Contacts</label>
       <div class=\\"styles__Stack--m___1tSpV\\">
         <div class=\\"styles__Stack--s___22WMg\\">
@@ -3423,7 +3423,7 @@ exports[`SelectBox should render examples: SelectBox 13`] = `
 
 exports[`SelectBox should render examples: SelectBox 14`] = `
 "<div data-testid=\\"mountNode\\"><button>Toggle modal</button>
-  <div class=\\"CozyTheme--normal u-dc\\"></div>
+  <div class=\\"CozyTheme--light-normal u-dc\\"></div>
 </div>"
 `;
 
@@ -3444,7 +3444,7 @@ exports[`Sidebar should render examples: Sidebar 1`] = `
 
 exports[`Spinner should render examples: Spinner 1`] = `
 "<div data-testid=\\"mountNode\\">
-  <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--spinnerColor);\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
+  <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
       <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
       <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
     </svg></div>
@@ -3453,7 +3453,7 @@ exports[`Spinner should render examples: Spinner 1`] = `
 
 exports[`Spinner should render examples: Spinner 2`] = `
 "<div data-testid=\\"mountNode\\">
-  <div>blue (default): <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--spinnerColor);\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
+  <div>blue (default): <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
       </svg></div> or <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: blue;\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
@@ -3476,7 +3476,7 @@ exports[`Spinner should render examples: Spinner 2`] = `
 exports[`Spinner should render examples: Spinner 3`] = `
 "<div data-testid=\\"mountNode\\">
   <div>
-    <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--nomargin___13JyW\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--spinnerColor);\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
+    <div class=\\"styles__c-spinner___1snK7 styles__c-spinner--nomargin___13JyW\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
       </svg></div>
@@ -3486,25 +3486,25 @@ exports[`Spinner should render examples: Spinner 3`] = `
 
 exports[`Spinner should render examples: Spinner 4`] = `
 "<div data-testid=\\"mountNode\\">
-  <div>tiny: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--spinnerColor);\\" width=\\"8\\" height=\\"8\\" role=\\"progressbar\\" aria-busy=\\"true\\">
+  <div>tiny: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"8\\" height=\\"8\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-      </svg></div><br>small: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--spinnerColor);\\" width=\\"12\\" height=\\"12\\" role=\\"progressbar\\" aria-busy=\\"true\\">
+      </svg></div><br>small: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"12\\" height=\\"12\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-      </svg></div><br>medium (default): <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--spinnerColor);\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
+      </svg></div><br>medium (default): <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-      </svg></div> or <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--spinnerColor);\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
+      </svg></div> or <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"16\\" height=\\"16\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-      </svg></div><br>large: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--spinnerColor);\\" width=\\"24\\" height=\\"24\\" role=\\"progressbar\\" aria-busy=\\"true\\">
+      </svg></div><br>large: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"24\\" height=\\"24\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-      </svg></div><br>xlarge: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--spinnerColor);\\" width=\\"36\\" height=\\"36\\" role=\\"progressbar\\" aria-busy=\\"true\\">
+      </svg></div><br>xlarge: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"36\\" height=\\"36\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
-      </svg></div><br>xxlarge: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--spinnerColor);\\" width=\\"80\\" height=\\"80\\" role=\\"progressbar\\" aria-busy=\\"true\\">
+      </svg></div><br>xxlarge: <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"80\\" height=\\"80\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
       </svg></div>
@@ -3515,7 +3515,7 @@ exports[`Spinner should render examples: Spinner 4`] = `
 exports[`Spinner should render examples: Spinner 5`] = `
 "<div data-testid=\\"mountNode\\">
   <div>
-    <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--spinnerColor);\\" width=\\"80\\" height=\\"80\\" role=\\"progressbar\\" aria-busy=\\"true\\">
+    <div class=\\"styles__c-spinner___1snK7\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" style=\\"fill: var(--primaryColor);\\" width=\\"80\\" height=\\"80\\" role=\\"progressbar\\" aria-busy=\\"true\\">
         <path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path>
         <path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path>
       </svg>
