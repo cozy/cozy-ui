@@ -44,9 +44,10 @@ const prepareBrowser = async (puppeteer, options) => {
   ])
   page.setViewport(options.viewport)
   await page.setDefaultNavigationTimeout(0)
-  await page.evaluateOnNewDocument(theme => {
+  await page.evaluateOnNewDocument(({ type, variant }) => {
     localStorage.clear()
-    localStorage.setItem('theme', theme)
+    localStorage.setItem('ui-theme-type', type)
+    localStorage.setItem('ui-theme-variant', variant)
   }, options.theme)
   return { browser, page }
 }
