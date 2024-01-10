@@ -1,3 +1,70 @@
+# [101.0.0](https://github.com/cozy/cozy-ui/compare/v100.2.0...v101.0.0) (2024-01-10)
+
+
+### Bug Fixes
+
+* **DeprecatedDivider:** Use responsive theme instead of light theme ([2c51cf6](https://github.com/cozy/cozy-ui/commit/2c51cf6))
+* **Theme:** Move global background-color and color from `body` to app node ([53a1b02](https://github.com/cozy/cozy-ui/commit/53a1b02))
+* **Theme:** Shadows are now relative to the theme ([8477d9c](https://github.com/cozy/cozy-ui/commit/8477d9c))
+
+
+### Features
+
+* Add dark mode ([cc1db83](https://github.com/cozy/cozy-ui/commit/cc1db83))
+* Add useMediaQuery hook ([f9edb8e](https://github.com/cozy/cozy-ui/commit/f9edb8e))
+* **CSS:** Rename CozyTheme--xxx classe into CozyTheme--light-xxx ([e3b98ff](https://github.com/cozy/cozy-ui/commit/e3b98ff))
+* Deal with useCozyTheme BC ([7a83553](https://github.com/cozy/cozy-ui/commit/7a83553))
+* **MuiCozyTheme:** Introduce `type` prop in addition to `variant` ([1d1f053](https://github.com/cozy/cozy-ui/commit/1d1f053))
+* Remove some css vars ([ffc71dc](https://github.com/cozy/cozy-ui/commit/ffc71dc))
+* Rename `theme` to `variant` when using `useCozyTheme` ([4a88038](https://github.com/cozy/cozy-ui/commit/4a88038))
+* **Theme:** Create specific node to hold theme css variables ([27f8995](https://github.com/cozy/cozy-ui/commit/27f8995))
+* Use dark mode in CozyTheme, docs and tests ([fe25d07](https://github.com/cozy/cozy-ui/commit/fe25d07))
+
+
+### BREAKING CHANGES
+
+* - Remove some css vars. You should use semantic var instead. List of removed css vars :
+
+```
+--invertedBackgroundColor
+--invertedContrastTextColor
+--spinnerColor
+--linkColor
+--linkTextDecoration
+--linkColorActive
+--invertedTabsActiveTextColor
+--invertedTabsInactiveTextColor
+--invertedTabsIndicatorColor
+--invertedTabsBackgroundColor
+--regularButtonPrimaryColor
+--regularButtonSecondaryColor
+--regularButtonActiveColor
+--regularButtonConstrastColor
+--secondaryButtonPrimaryColor
+--secondaryButtonSecondaryColor
+--secondaryButtonActiveColor
+--secondaryButtonContrastColor
+--dividerColor2
+--iconColor
+--textIconColor
+--actionMenuIconColor
+--neutralBackground
+--buttonTextTransform
+--buttonBorderRadius
+--alertErrorColor
+--alertErrorBackgroundColor
+--alertSuccessColor
+--alertSuccessBackgroundColor
+--alertInfoColor
+--alertInfoBackgroundColor
+```
+* - `useCozyTheme()` return now an object with `type` and `variant`. You must replace `const theme = useCozyTheme()` by `const { variant } = useCozyTheme()`
+- you can add `<meta name="color-scheme" content="only light" />` in your `index.ejs` app file to force Light Mode if Dark Mode not fully supported by your app.
+* **MuiCozyTheme:** You can't now longer rely on `theme.palette.type` to determine `normal` or `inverted` theme, you have to use `theme.palette.variant` instead.
+* **CSS:** if you want to get or override css var, you need to do it on new classes, see below:
+`CozyTheme--normal` -> `CozyTheme--light-normal`
+`CozyTheme--inverted` -> `CozyTheme--light-inverted`
+
 # [100.2.0](https://github.com/cozy/cozy-ui/compare/v100.1.0...v100.2.0) (2023-12-22)
 
 
