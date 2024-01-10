@@ -69,7 +69,7 @@ Spinner.defaultProps = {
   loadingType: '',
   middle: false,
   noMargin: false,
-  color: 'var(--spinnerColor)',
+  color: 'var(--primaryColor)',
   size: 'medium',
   className: ''
 }

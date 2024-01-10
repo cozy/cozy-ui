@@ -16,7 +16,7 @@
   "info": "var(--infoColor)",
   "errorBackground": "var(--errorBackground)",
   "primaryBackgroundLight": "var(--primaryBackgroundLight)",
-  "neutralBackground": "var(--neutralBackground)",
+  "neutralBackground": "var(--paleGrey)",
   "zircon": "#F5FAFF",
   "frenchPass": "#C2DCFF",
   "dodgerBlue": "#297EF2",

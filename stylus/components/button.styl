@@ -9,16 +9,16 @@ palette=json('../settings/palette.json', { hash: true })
   Variants
 \*------------------------------------*/
 regularTheme = {
-    primaryColor: var(--regularButtonPrimaryColor),
-    secondaryColor: var(--regularButtonSecondaryColor),
-    activeColor: var(--regularButtonActiveColor),
-    contrastColor: var(--regularButtonConstrastColor)
+    primaryColor: var(--primaryColor),
+    secondaryColor: var(--primaryColor),
+    activeColor: var(--primaryColorDark),
+    contrastColor: var(--primaryContrastTextColor)
 }
 secondaryTheme = {
-    primaryColor: var(--secondaryButtonPrimaryColor),
-    secondaryColor: var(--secondaryButtonSecondaryColor),
-    activeColor: var(--secondaryButtonActiveColor),
-    contrastColor: var(--secondaryButtonContrastColor)
+    primaryColor: var(--white),
+    secondaryColor: var(--silver),
+    activeColor: var(--silver),
+    contrastColor: var(--black)
 }
 ghostTheme = {
     primaryColor: var(--zircon), secondaryColor: palette['frenchPass'], activeColor: palette['frenchPass'], contrastColor: var(--primaryColor)
@@ -73,7 +73,7 @@ $button
     margin           0 rem(4)
     border-width     rem(1)
     border-style     solid
-    border-radius    var(--buttonBorderRadius)
+    border-radius    rem(2)
     min-height       rem(40)
     min-width        rem(112)
     padding          rem(3 16)
@@ -82,7 +82,7 @@ $button
     font-size        rem(14)
     font-weight      bold
     line-height      1
-    text-transform   var(--buttonTextTransform)
+    text-transform   uppercase
     text-decoration  none
     cursor           pointer
     align-items      center
