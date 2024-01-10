@@ -1,6 +1,7 @@
 language: node_js
 dist: jammy
-cache: yarn
+cache:
+  npm: false
 branches:
   only:
   - master
