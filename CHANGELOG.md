@@ -1,3 +1,10 @@
+# [101.1.0](https://github.com/cozy/cozy-ui/compare/v101.0.0...v101.1.0) (2024-01-10)
+
+
+### Features
+
+* Add growth icon ([6b9605f](https://github.com/cozy/cozy-ui/commit/6b9605f))
+
 # [101.0.0](https://github.com/cozy/cozy-ui/compare/v100.2.0...v101.0.0) (2024-01-10)
 
 
