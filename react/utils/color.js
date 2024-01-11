@@ -7,6 +7,8 @@ const getNodeWithThemeCssVars = (type, variant) => {
 }
 
 export const createNodeWithThemeCssVars = (type, variant) => {
+  if (process.env.NODE_ENV === 'test') return null
+
   if (!getNodeWithThemeCssVars(type, variant)) {
     const node = document.createElement('div')
     node.className = getThemeNodeClassName(type, variant)
