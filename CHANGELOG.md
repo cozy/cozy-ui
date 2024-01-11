@@ -1,3 +1,10 @@
+## [101.1.1](https://github.com/cozy/cozy-ui/compare/v101.1.0...v101.1.1) (2024-01-11)
+
+
+### Bug Fixes
+
+* The createNodeWithThemeCssVars must return null in test env ([a1ec359](https://github.com/cozy/cozy-ui/commit/a1ec359))
+
 # [101.1.0](https://github.com/cozy/cozy-ui/compare/v101.0.0...v101.1.0) (2024-01-10)
 
 
