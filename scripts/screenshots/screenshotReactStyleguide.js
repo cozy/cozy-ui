@@ -49,6 +49,9 @@ const screenshotReactStyleguide = async (page, args, config, theme) => {
   console.log('⌛ Screenshotting components...')
 
   for (const component of components) {
+    // Skip components in Deprecated folder
+    if (component.link.includes('Deprecated')) continue
+
     const componentConfig = config[component.name] || {}
     const componentViewportSpec =
       (componentConfig.viewports && componentConfig.viewports[args.viewport]) ||
