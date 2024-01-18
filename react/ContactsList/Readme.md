@@ -2,22 +2,26 @@
 
 ```jsx
 import ContactsList from 'cozy-ui/transpiled/react/ContactsList'
+import mockClient from 'cozy-ui/transpiled/react/ContactsListModal/mockClient'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import contacts from './_mockContacts.json'
 
 ;
 
-<BreakpointsProvider>
+<DemoProvider client={mockClient}>
   <div style={{ height: 500, overflowY: 'scroll' }}>
     <ContactsList contacts={contacts} />
   </div>
-</BreakpointsProvider>
+</DemoProvider>
 ```
 
 ### Clickable items
 
 ```jsx
 import ContactsList from 'cozy-ui/transpiled/react/ContactsList'
+import mockClient from 'cozy-ui/transpiled/react/ContactsListModal/mockClient'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import contacts from './_mockContacts.json'
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 
@@ -25,7 +29,7 @@ initialState = { contact: null }
 
 ;
 
-<BreakpointsProvider>
+<DemoProvider client={mockClient}>
   <p>
     {state.contact ? (
         `Clicked on contact ${state.contact._id}`
@@ -39,5 +43,5 @@ initialState = { contact: null }
       onItemClick={contact => setState({ contact })}
     />
   </div>
-</BreakpointsProvider>
+</DemoProvider>
 ```

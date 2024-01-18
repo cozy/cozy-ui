@@ -72,6 +72,7 @@ describe('Sort contacts', () => {
 })
 
 describe('sortHeaders', () => {
+  const t = jest.fn(x => x)
   it('should return headers sorted', () => {
     const contacts = {
       F: [],
@@ -79,21 +80,22 @@ describe('sortHeaders', () => {
       H: []
     }
 
-    const sortedHeaders = sortHeaders(contacts)
+    const sortedHeaders = sortHeaders(contacts, t)
 
     expect(sortedHeaders).toEqual(['B', 'F', 'H'])
   })
 
-  it('should put EMPTY header first', () => {
+  it('Should sort in the following order "me", "empty", "A", "..."', () => {
     const contacts = {
       F: [],
       B: [],
+      me: [],
       H: [],
-      EMPTY: []
+      empty: []
     }
 
-    const sortedHeaders = sortHeaders(contacts)
+    const sortedHeaders = sortHeaders(contacts, t)
 
-    expect(sortedHeaders).toEqual(['EMPTY', 'B', 'F', 'H'])
+    expect(sortedHeaders).toEqual(['me', 'empty', 'B', 'F', 'H'])
   })
 })
