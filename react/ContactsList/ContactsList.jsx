@@ -1,17 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { useI18n } from '../providers/I18n'
 import { Table } from '../Table'
 import List from '../List'
 import ListSubheader from '../ListSubheader'
 import { sortContacts, categorizeContacts, sortHeaders } from './helpers'
 import ContactRow from './ContactRow'
 import useBreakpoints from '../providers/Breakpoints'
+import withContactsListLocales from './locales/withContactsListLocales'
 
 const ContactsList = ({ contacts, onItemClick, ...rest }) => {
+  const { t } = useI18n()
   const sortedContacts = sortContacts(contacts)
-  const categorizedContacts = categorizeContacts(sortedContacts)
-  const sortedHeaders = sortHeaders(categorizedContacts)
+  const categorizedContacts = categorizeContacts(sortedContacts, t)
+  const sortedHeaders = sortHeaders(categorizedContacts, t)
   const { isDesktop } = useBreakpoints()
 
   return (
@@ -45,4 +48,4 @@ ContactsList.propTypes = {
   onItemClick: PropTypes.func
 }
 
-export default ContactsList
+export default withContactsListLocales(ContactsList)
