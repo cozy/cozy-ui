@@ -1,3 +1,15 @@
+# [101.2.0](https://github.com/cozy/cozy-ui/compare/v101.1.1...v101.2.0) (2024-01-19)
+
+
+### Bug Fixes
+
+* Translation into CoachCO2 paywall ([2efa596](https://github.com/cozy/cozy-ui/commit/2efa596))
+
+
+### Features
+
+* **ContactsList:** Show myself always at the top of the list ([c4bd940](https://github.com/cozy/cozy-ui/commit/c4bd940))
+
 ## [101.1.1](https://github.com/cozy/cozy-ui/compare/v101.1.0...v101.1.1) (2024-01-11)
 
 
