@@ -14,7 +14,7 @@ const useTransformOrigin = ({ vertical, horizontal }) => {
 const ActionsMenu = forwardRef(
   (
     {
-      doc,
+      docs,
       actions,
       anchorOrigin,
       children,
@@ -39,7 +39,7 @@ const ActionsMenu = forwardRef(
         {children}
         <ActionsItems
           {...componentsProps.actionsItems}
-          doc={doc}
+          docs={docs}
           actions={actions}
         />
       </ActionsMenuWrapper>
@@ -59,8 +59,8 @@ ActionsMenu.defaultProps = {
 ActionsMenu.propTypes = {
   /** Whether the menu is open */
   open: PropTypes.bool,
-  /** Reference document for the actions  */
-  doc: PropTypes.object,
+  /** Reference documents for the actions */
+  docs: PropTypes.array,
   /** List of actions */
   actions: PropTypes.array,
   /** Allows you to position the menu in relation to the anchor element */
@@ -75,7 +75,9 @@ ActionsMenu.propTypes = {
     /** Props spread to ActionsItems component */
     actionsItems: PropTypes.shape({
       /** Props spread to action method of Actions component */
-      actionOptions: PropTypes.object
+      actionOptions: PropTypes.object,
+      /** onClick method spread to action method of Actions component */
+      onClick: PropTypes.func
     })
   }),
   /** Function triggered when closing the menu */
