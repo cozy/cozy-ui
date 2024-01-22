@@ -2,12 +2,16 @@ import React, { forwardRef, useMemo } from 'react'
 import PropTypes from 'prop-types'
 
 import { useClient } from 'cozy-client'
+import { useWebviewIntent } from 'cozy-intent'
+
 import { useI18n } from '../providers/I18n'
 import { getActionName, getOnlyNeededActions } from './Actions/helpers'
 
 const ActionsItems = forwardRef(
   ({ doc, actions, actionOptions, onClick: overridedClick, ...props }, ref) => {
     const client = useClient()
+    const webviewIntent = useWebviewIntent()
+
     const { t } = useI18n()
     const cleanedActions = useMemo(() => getOnlyNeededActions(actions, doc), [
       actions,
@@ -21,7 +25,14 @@ const ActionsItems = forwardRef(
       const { Component: ActionComponent, action, disabled } = actionDefinition
 
       const handleClick = clickProps => {
-        action && action(doc, { client, t, ...actionOptions, ...clickProps })
+        action &&
+          action(doc, {
+            client,
+            t,
+            webviewIntent,
+            ...actionOptions,
+            ...clickProps
+          })
         overridedClick && overridedClick()
       }
 
