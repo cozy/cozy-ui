@@ -32,6 +32,9 @@ actions = {
 
 */
 
+/**
+ * @deprecated This component is depreacated, please use [ActionsBar](#/ActionsBar) instead.
+ */
 const SelectionBar = ({
   actions,
   selected,
@@ -44,6 +47,10 @@ const SelectionBar = ({
     isTiny: 3
   }
 }) => {
+  console.warn(
+    '<SelectionBar /> is deprecated, please use <ActionsBar /> instead'
+  )
+
   const { t } = useI18n()
   const webviewIntent = useWebviewIntent()
   const theme = useTheme()
