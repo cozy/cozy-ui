@@ -67,7 +67,7 @@ DropdownButton.defaultProps = {
 }
 
 DropdownButton.propTypes = {
-  /** Weither there is a space between the label and the icon */
+  /** Whether there is a space between the label and the icon */
   spaceBetween: PropTypes.bool,
   /** Like variant from Typography component */
   textVariant: PropTypes.string,
