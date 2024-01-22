@@ -1,10 +1,48 @@
 Provides an easy way to use SVG icons included in Cozy-UI as well
 as your custom icons.
 
-⚠️ When using `Icon`, you can either give a React component or use the identifier
-of an already loaded one. `cozy-ui` is shipped with built-in icons, containing Illustrations and SVGr Icons that you can
-include via `Sprite`. See the example below for how to include `Sprite`.
-`Sprite` can for example be included in the main `Layout` of your application.
+The `icon` attribute can take an arbitrary React component, a SVG, SVGr, Sprite or Icon component. It is expected that
+this component print an `<svg>` tag and forwards any props to it. You MUST use svg-sprite-loader
+to load your SVG (either explicitly or, better, implicitly in your `webpack.config.js`). Do not put a `fill` property on your icon.
+
+Be aware that Icon forwards unknown props to the underlying `<svg />` element, such as onClick prop.
+
+
+```jsx
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import People from 'cozy-ui/transpiled/react/Icons/People'
+import Box from 'cozy-ui/transpiled/react/Box'
+const MyIcon = (props) => <svg {...props}><circle cx="8" cy="8" r="7" stroke="var(--primaryColor)" strokeWidth="2" /></svg>
+
+;
+
+<>
+  <Box display="flex" gridGap={5}>
+    <Icon icon="people" />
+    <Icon icon={People} />
+    <Icon icon={MyIcon} width={16} height={16} color="var(--paperBackgroundColor)"/>
+    <Icon icon={<Icon icon={People} />} />
+  </Box>
+</>
+
+```
+
+### Transform properties
+
+Use `spin` and `rotate` if you want you to turn your icons upside down 🙃.
+
+```jsx
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import SpinnerIcon from "cozy-ui/transpiled/react/Icons/Spinner"
+import RightIcon from "cozy-ui/transpiled/react/Icons/Right"
+
+;
+
+<div>
+  <Icon icon={SpinnerIcon} color='#0bda51' spin/>{'\u00A0'}
+  <Icon icon={RightIcon} color='#c30017' rotate={45}/>
+</div>
+```
 
 ### SVGr icons
 
@@ -825,62 +863,12 @@ const Example = () => {
 <Example />
 ```
 
-### Transform properties
+### Available UI icons from Sprite
 
-Use `spin` and `rotate` if you want you to turn your icons upside down 🙃.
-
-```jsx
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import SpinnerIcon from "cozy-ui/transpiled/react/Icons/Spinner"
-import RightIcon from "cozy-ui/transpiled/react/Icons/Right"
-;
-<div>
-  <Icon icon={SpinnerIcon} color='#0bda51' spin/>{'\u00A0'}
-  <Icon icon={RightIcon} color='#c30017' rotate={45}/>
-</div>
-```
-
-### Custom icons
-
-The `icon` attribute can take a arbitrary React component. It is expected that
-this component print an `<svg>` tag and forwards any props to it.
-
-```jsx static
-const MyIcon = (props) => <svg {...props}>…</svg>;
-<Icon icon={myIcon} width={32} height={32} color="var(--errorColor)" />
-```
-
-You can also directly import an SVG to use it. You MUST use svg-sprite-loader
-to load your SVG (either explicitly or, better, implicitly in your `webpack.config.js`).
-
-⚠️ Do not put a `fill` property on your icon
-
-```jsx static
-import myIcon from 'my-icon.svg';
-<Icon icon={myIcon} width={32} height={32} color="var(--errorColor)" />
-```
-
-### Props forwarding
-
-Icon forwards unknown props to the underlying `<svg />` element.
-
-```jsx
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import WarningIcon from "cozy-ui/transpiled/react/Icons/Warning"
-;
-<div>
-  <Icon
-    icon={WarningIcon}
-    width={32}
-    height={32}
-    color="var(--errorColor)"
-    onClick={() => alert('Be careful !')}
-  />
-  <span>← Click it</span>
-</div>
-```
-
-### Available UI icons
+When using `Icon`, you can either give a React component or use the identifier
+of an already loaded one. `cozy-ui` is shipped with built-in icons, containing Illustrations and SVGr Icons that you can
+include via `Sprite`.
+`Sprite` can for example be included in the main `Layout` of your application.
 
 ```jsx
 import Icon from 'cozy-ui/transpiled/react/Icon'
