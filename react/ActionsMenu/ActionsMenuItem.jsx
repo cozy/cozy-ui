@@ -7,7 +7,7 @@ import MenuItem from '../MenuItem'
 import ListItem from '../ListItem'
 
 const cleanPropsForDOM = props => {
-  const nonDOMProps = ['doc']
+  const nonDOMProps = ['doc', 'action']
 
   return omit(props, nonDOMProps)
 }
