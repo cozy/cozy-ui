@@ -8,7 +8,17 @@ import { useI18n } from '../providers/I18n'
 import { getActionName, getOnlyNeededActions } from './Actions/helpers'
 
 const ActionsItems = forwardRef(
-  ({ doc, actions, actionOptions, onClick: overridedClick, ...props }, ref) => {
+  (
+    {
+      doc,
+      actions,
+      actionOptions,
+      component,
+      onClick: overridedClick,
+      ...props
+    },
+    ref
+  ) => {
     const client = useClient()
     const webviewIntent = useWebviewIntent()
 
@@ -36,8 +46,10 @@ const ActionsItems = forwardRef(
         overridedClick && overridedClick()
       }
 
+      const Component = component ?? ActionComponent
+
       return (
-        <ActionComponent
+        <Component
           {...props}
           ref={ref}
           key={actionName + idx}
@@ -53,6 +65,8 @@ const ActionsItems = forwardRef(
 
 ActionsItems.propTypes = {
   doc: PropTypes.object,
+  /** The returned component that manages the display */
+  component: PropTypes.object,
   actions: PropTypes.array,
   /** Props spread to action method of Actions component */
   actionOptions: PropTypes.object,
