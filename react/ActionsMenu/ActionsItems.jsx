@@ -53,6 +53,7 @@ const ActionsItems = forwardRef(
           {...props}
           ref={ref}
           key={actionName + idx}
+          action={actionDefinition}
           doc={doc}
           autoFocus={idx === 0}
           disabled={disabled}
