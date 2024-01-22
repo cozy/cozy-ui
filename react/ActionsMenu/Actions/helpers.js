@@ -55,7 +55,8 @@ export const getOnlyNeededActions = (actions, file) => {
       // We don't want to have an hr as the latest actions available
       .filter((cleanedAction, idx, cleanedActions) => {
         return !(
-          getActionName(cleanedAction) === 'hr' &&
+          (getActionName(cleanedAction) === 'hr' ||
+            getActionName(cleanedAction) === 'divider') &&
           idx === cleanedActions.length - 1
         )
       })
