@@ -1,11 +1,14 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './styles.styl'
 import cx from 'classnames'
+
+import styles from './styles.styl'
+
 const DEFAULT_SIZE = '16'
 
-function getSvgObject(icon) {
+function makeSvgObject(icon) {
   let anchor
+
   if (icon.id) {
     anchor = `#${icon.id}`
   } else if (icon[0] === '#') {
@@ -13,10 +16,12 @@ function getSvgObject(icon) {
   } else {
     anchor = '#' + icon
   }
+
   if (!anchor) {
     console.warn(`Icon not found ${icon}.`)
     return null
   }
+
   return props => (
     <svg {...props}>
       <use xlinkHref={anchor} />
@@ -34,6 +39,7 @@ function Icon(props) {
     width,
     height,
     color,
+    style,
     className,
     preserveColor,
     rotate,
@@ -42,17 +48,23 @@ function Icon(props) {
     ...restProps
   } = props
 
-  const Svg = useMemo(() => (isFunction(icon) ? icon : getSvgObject(icon)), [
-    icon
-  ])
+  if (!icon) return null
 
-  let style = props.style
-  style = Object.assign({}, style)
+  const isIconComp = icon.type === Icon
+
+  if (isIconComp) return icon
+
+  const Svg = isFunction(icon) ? icon : makeSvgObject(icon)
+
+  let selfStyle = style
+  selfStyle = Object.assign({}, selfStyle)
+
   if (color) {
-    style['fill'] = color
+    selfStyle['fill'] = color
   }
+
   if (rotate) {
-    style['transform'] = `rotate(${rotate}deg)`
+    selfStyle['transform'] = `rotate(${rotate}deg)`
   }
 
   const iconClassName = preserveColor ? 'icon--preserveColor' : 'icon'
@@ -63,7 +75,7 @@ function Icon(props) {
   return Svg ? (
     <Svg
       className={iconClass}
-      style={style}
+      style={selfStyle}
       width={width || size || DEFAULT_SIZE}
       height={height || size || DEFAULT_SIZE}
       {...restProps}
@@ -85,14 +97,16 @@ export const iconPropType = PropTypes.oneOfType([
 ])
 
 Icon.propTypes = {
-  icon: iconPropType.isRequired,
+  icon: iconPropType,
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   color: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  style: PropTypes.object,
   className: PropTypes.string,
   preserveColor: PropTypes.bool,
   /** Shorthand for both width and height */
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  rotate: PropTypes.number,
   spin: PropTypes.bool
 }
 
