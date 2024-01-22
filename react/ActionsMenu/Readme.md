@@ -25,8 +25,11 @@ const actions = makeActions([action1, action2], { option1, option2 })
 An action is a simple function that returns an object with specific keys:
 
 * **name** : `<string>` – Action's name
+* **icon** : `<iconPropType>` – Action's icon
+* **label** : `<string>` – Action's label
+* **disabled** : `<func>` – Used to add `disable` effect (the action is still displayed)
+* **displayCondition** : `<func>` – Whether the action is displayed. Must return a boolean
 * **action** : `<func>` – Method triggered when clicking the action
-* **disabled** : `<bool>` – Used to add `disable` effect (the action is still displayed)
 * **Component** : `<func>` – The returned component that manages the display
 
 ```bash
@@ -103,7 +106,7 @@ const actions = makeActions([ modify, viewInContacts, divider, call, smsTo, emai
   <ActionsMenu
     ref={anchorRef}
     open={state.showMenu}
-    doc={doc}
+    docs={[doc]}
     actions={actions}
     anchorOrigin={{
       vertical: 'bottom',

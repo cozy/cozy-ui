@@ -10,7 +10,7 @@ import { getActionName, getOnlyNeededActions } from './Actions/helpers'
 const ActionsItems = forwardRef(
   (
     {
-      doc,
+      docs,
       actions,
       actionOptions,
       component,
@@ -21,11 +21,11 @@ const ActionsItems = forwardRef(
   ) => {
     const client = useClient()
     const webviewIntent = useWebviewIntent()
-
     const { t } = useI18n()
-    const cleanedActions = useMemo(() => getOnlyNeededActions(actions, doc), [
+
+    const cleanedActions = useMemo(() => getOnlyNeededActions(actions, docs), [
       actions,
-      doc
+      docs
     ])
 
     return cleanedActions.map((actionObject, idx) => {
@@ -35,15 +35,14 @@ const ActionsItems = forwardRef(
       const { Component: ActionComponent, action, disabled } = actionDefinition
 
       const handleClick = clickProps => {
-        action &&
-          action(doc, {
-            client,
-            t,
-            webviewIntent,
-            ...actionOptions,
-            ...clickProps
-          })
-        overridedClick && overridedClick()
+        action?.(docs, {
+          client,
+          t,
+          webviewIntent,
+          ...actionOptions,
+          ...clickProps
+        })
+        overridedClick?.()
       }
 
       const Component = component ?? ActionComponent
@@ -54,9 +53,9 @@ const ActionsItems = forwardRef(
           ref={ref}
           key={actionName + idx}
           action={actionDefinition}
-          doc={doc}
+          docs={docs}
           autoFocus={idx === 0}
-          disabled={disabled}
+          disabled={disabled?.(docs)}
           onClick={handleClick}
         />
       )
@@ -65,7 +64,7 @@ const ActionsItems = forwardRef(
 )
 
 ActionsItems.propTypes = {
-  doc: PropTypes.object,
+  docs: PropTypes.array,
   /** The returned component that manages the display */
   component: PropTypes.object,
   actions: PropTypes.array,

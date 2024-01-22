@@ -1,33 +1,34 @@
 import React, { forwardRef } from 'react'
 
 import TelephoneIcon from '../../Icons/Telephone'
-import withActionsLocales from './locales/withActionsLocales'
+import { getActionsI18n } from './locales/withActionsLocales'
 import ActionsMenuItem from '../ActionsMenuItem'
 import ListItemIcon from '../../ListItemIcon'
 import Icon from '../../Icon'
 import ListItemText from '../../ListItemText'
-import { useI18n } from '../../providers/I18n'
 
 export const call = () => {
+  const { t } = getActionsI18n()
+  const icon = TelephoneIcon
+  const label = t('call')
+
   return {
     name: 'call',
-    action: doc => {
-      const phoneNumber = doc?.phone?.[0]?.number
+    icon,
+    label,
+    action: docs => {
+      const phoneNumber = docs?.[0]?.phone?.[0]?.number
       !!phoneNumber && window.open(`tel:${phoneNumber}`, '_self')
     },
-    Component: withActionsLocales(
-      forwardRef((props, ref) => {
-        const { t } = useI18n()
-
-        return (
-          <ActionsMenuItem {...props} ref={ref}>
-            <ListItemIcon>
-              <Icon icon={TelephoneIcon} />
-            </ListItemIcon>
-            <ListItemText primary={t('call')} />
-          </ActionsMenuItem>
-        )
-      })
-    )
+    Component: forwardRef((props, ref) => {
+      return (
+        <ActionsMenuItem {...props} ref={ref}>
+          <ListItemIcon>
+            <Icon icon={icon} />
+          </ListItemIcon>
+          <ListItemText primary={label} />
+        </ActionsMenuItem>
+      )
+    })
   }
 }

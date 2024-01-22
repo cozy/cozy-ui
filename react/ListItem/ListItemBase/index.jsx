@@ -70,7 +70,7 @@ const ListItemBase = ({
         <ActionsMenu
           open
           ref={anchorRef}
-          doc={doc}
+          docs={[doc]}
           actions={actions}
           anchorOrigin={{
             vertical: 'bottom',

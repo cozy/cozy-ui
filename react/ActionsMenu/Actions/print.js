@@ -1,22 +1,30 @@
 import React, { forwardRef } from 'react'
 
 import logger from 'cozy-logger'
-import { useWebviewIntent } from 'cozy-intent'
-import { fetchBlobFileById } from 'cozy-client/dist/models/file'
+import { fetchBlobFileById, isFile } from 'cozy-client/dist/models/file'
 
 import { makeBase64FromFile } from './helpers'
 import PrinterIcon from '../../Icons/Printer'
-import withActionsLocales from './locales/withActionsLocales'
+import { getActionsI18n } from './locales/withActionsLocales'
 import ActionsMenuItem from '../ActionsMenuItem'
 import ListItemIcon from '../../ListItemIcon'
 import Icon from '../../Icon'
 import ListItemText from '../../ListItemText'
-import { useI18n } from '../../providers/I18n'
 
 export const print = () => {
+  const { t } = getActionsI18n()
+  const icon = PrinterIcon
+  const label = t('print')
+
   return {
     name: 'print',
-    action: async (doc, { client, webviewIntent }) => {
+    icon,
+    label,
+    disabled: docs => docs.length === 0,
+    displayCondition: docs => isFile(docs[0]), // feature not yet supported for multi-files
+    action: async (docs, { client, webviewIntent }) => {
+      const doc = docs[0] // feature not yet supported for multi-files
+
       if (webviewIntent) {
         try {
           const blob = await fetchBlobFileById(client, doc._id)
@@ -42,26 +50,15 @@ export const print = () => {
         logger.error(`Error trying to print document: ${JSON.stringify(error)}`)
       }
     },
-    Component: withActionsLocales(
-      forwardRef(({ onClick, ...props }, ref) => {
-        const { t } = useI18n()
-        const webviewIntent = useWebviewIntent()
-
-        return (
-          <ActionsMenuItem
-            {...props}
-            ref={ref}
-            onClick={() => {
-              onClick({ webviewIntent })
-            }}
-          >
-            <ListItemIcon>
-              <Icon icon={PrinterIcon} />
-            </ListItemIcon>
-            <ListItemText primary={t('print')} />
-          </ActionsMenuItem>
-        )
-      })
-    )
+    Component: forwardRef((props, ref) => {
+      return (
+        <ActionsMenuItem {...props} ref={ref}>
+          <ListItemIcon>
+            <Icon icon={icon} />
+          </ListItemIcon>
+          <ListItemText primary={label} />
+        </ActionsMenuItem>
+      )
+    })
   }
 }

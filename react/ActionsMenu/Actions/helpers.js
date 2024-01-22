@@ -25,14 +25,14 @@ export const getActionName = actionObject => {
 // folder.
 // Or we can't know that we'll have two following hr if the
 // display condition for the actions between are true or false
-export const getOnlyNeededActions = (actions, file) => {
+export const getOnlyNeededActions = (actions, docs) => {
   let previousAction = ''
   const displayableActions = actions.filter(actionObject => {
     const actionDefinition = Object.values(actionObject)[0]
 
     return (
       !actionDefinition.displayCondition ||
-      actionDefinition.displayCondition([file])
+      actionDefinition.displayCondition(docs)
     )
   })
 

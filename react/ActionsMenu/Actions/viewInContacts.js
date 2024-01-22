@@ -3,19 +3,23 @@ import React, { forwardRef } from 'react'
 import { generateWebLink } from 'cozy-client'
 
 import OpenappIcon from '../../Icons/Openapp'
-import withActionsLocales from './locales/withActionsLocales'
+import { getActionsI18n } from './locales/withActionsLocales'
 import ActionsMenuItem from '../ActionsMenuItem'
 import ListItemIcon from '../../ListItemIcon'
 import Icon from '../../Icon'
 import ListItemText from '../../ListItemText'
-import { useI18n } from '../../providers/I18n'
 
 export const viewInContacts = () => {
+  const { t } = getActionsI18n()
+  const icon = OpenappIcon
+  const label = t('viewInContacts')
+
   return {
     name: 'viewInContacts',
-    action: (doc, { client }) => {
-      const contactId = doc._id
-
+    icon,
+    label,
+    action: (docs, { client }) => {
+      const contactId = docs[0]._id
       const webLink = generateWebLink({
         slug: 'contacts',
         cozyUrl: client.getStackClient().uri,
@@ -26,19 +30,15 @@ export const viewInContacts = () => {
 
       window.open(webLink, '_blank')
     },
-    Component: withActionsLocales(
-      forwardRef((props, ref) => {
-        const { t } = useI18n()
-
-        return (
-          <ActionsMenuItem ref={ref} {...props}>
-            <ListItemIcon>
-              <Icon icon={OpenappIcon} />
-            </ListItemIcon>
-            <ListItemText primary={t('viewInContacts')} />
-          </ActionsMenuItem>
-        )
-      })
-    )
+    Component: forwardRef((props, ref) => {
+      return (
+        <ActionsMenuItem ref={ref} {...props}>
+          <ListItemIcon>
+            <Icon icon={icon} />
+          </ListItemIcon>
+          <ListItemText primary={label} />
+        </ActionsMenuItem>
+      )
+    })
   }
 }
