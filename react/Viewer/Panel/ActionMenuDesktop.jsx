@@ -35,7 +35,7 @@ const ActionMenuDesktop = forwardRef(
                 >
                   <ActionMenuItem left={<Icon icon={Edit} />}>
                     <Typography>
-                      {t(`Viewer.panel.qualification.actions.edit`)}
+                      {t('Viewer.panel.qualification.actions.edit')}
                     </Typography>
                   </ActionMenuItem>
                 </a>
@@ -45,7 +45,7 @@ const ActionMenuDesktop = forwardRef(
         )}
         <ActionMenuItem onClick={handleCopy} left={<Icon icon={Copy} />}>
           <Typography>
-            {t(`Viewer.panel.qualification.actions.copy`)}
+            {t(`Viewer.panel.qualification.actions.copy`)}-TEST
           </Typography>
         </ActionMenuItem>
       </ActionMenu>

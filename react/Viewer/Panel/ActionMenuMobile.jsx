@@ -53,7 +53,9 @@ const ActionMenuMobile = ({
               <Icon icon={Copy} />
             </ListItemIcon>
             <ListItemText
-              primary={t(`Viewer.panel.qualification.actions.copyClipboard`)}
+              primary={`${t(
+                'Viewer.panel.qualification.actions.copyClipboard'
+              )}-TEST`}
             />
           </ListItem>
         </List>
