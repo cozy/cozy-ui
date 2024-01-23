@@ -1,3 +1,32 @@
+# [102.0.0](https://github.com/cozy/cozy-ui/compare/v101.2.0...v102.0.0) (2024-01-23)
+
+
+### Bug Fixes
+
+* **ActionsMenuItem:** Props `t`, `f`, `lang` was spread to DOM element ([3636fe3](https://github.com/cozy/cozy-ui/commit/3636fe3))
+* Func `getOnlyNeededActions` wasn't dealing with `divider` as `hr` ([ec4acf6](https://github.com/cozy/cozy-ui/commit/ec4acf6))
+
+
+### Features
+
+* **Actions:** Add `others` ([0186834](https://github.com/cozy/cozy-ui/commit/0186834))
+* **ActionsBar:** Add this new component ([d80e3cf](https://github.com/cozy/cozy-ui/commit/d80e3cf))
+* **ActionsItems:** Add `component` prop that manages the display ([db16d71](https://github.com/cozy/cozy-ui/commit/db16d71))
+* **ActionsItems:** Add `webviewIntent` in actions ([a64595b](https://github.com/cozy/cozy-ui/commit/a64595b))
+* **ActionsItems:** Spread the action to the displayed component ([a0a9aa4](https://github.com/cozy/cozy-ui/commit/a0a9aa4))
+* **ActionsMenu:** Replace `doc` prop by `docs` ([1049809](https://github.com/cozy/cozy-ui/commit/1049809))
+* **ActionsMenu:** Use own locales and add `getActionsI18n()` ([351595e](https://github.com/cozy/cozy-ui/commit/351595e))
+* **I18n:** Add `getI18n()` that work like `useI18n` but without React ([4b65a35](https://github.com/cozy/cozy-ui/commit/4b65a35))
+* **Icon:** Prop `icon` no longer required + can use Icon comp ([3bd5b9b](https://github.com/cozy/cozy-ui/commit/3bd5b9b))
+* **SelectionBar:** Deprecates the component ([6e72491](https://github.com/cozy/cozy-ui/commit/6e72491))
+
+
+### BREAKING CHANGES
+
+* **ActionsMenu:** When using ActionsMenu, we no longer imply we deal with one single document, but several documents. Who can do more can do less. Beside, `disabled` on actions is no longer a boolean but a function. So:
+- on `<ActionsMenu />` replace `doc` prop by `docs` and provide an array instead of object
+- on actions, `disabled` must be a func instead of a boolean
+
 # [101.2.0](https://github.com/cozy/cozy-ui/compare/v101.1.1...v101.2.0) (2024-01-19)
 
 
