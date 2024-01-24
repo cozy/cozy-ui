@@ -3,7 +3,7 @@ import React, { forwardRef } from 'react'
 import logger from 'cozy-logger'
 import { fetchBlobFileById, isFile } from 'cozy-client/dist/models/file'
 
-import { makeBase64FromFile } from './helpers'
+import { makeBase64FromFile, makePdfBlob } from './helpers'
 import PrinterIcon from '../../Icons/Printer'
 import { getActionsI18n } from './locales/withActionsLocales'
 import ActionsMenuItem from '../ActionsMenuItem'
@@ -21,33 +21,40 @@ export const print = () => {
     icon,
     label,
     disabled: docs => docs.length === 0,
-    displayCondition: docs => isFile(docs[0]), // feature not yet supported for multi-files
+    displayCondition: docs => docs.every(doc => isFile(doc)),
     action: async (docs, { client, webviewIntent }) => {
-      const doc = docs[0] // feature not yet supported for multi-files
+      const isSingleDoc = docs.length === 1
+      const firstDoc = docs[0]
 
-      if (webviewIntent) {
-        try {
-          const blob = await fetchBlobFileById(client, doc._id)
+      try {
+        // in flagship app
+        if (webviewIntent) {
+          const blob = isSingleDoc
+            ? await fetchBlobFileById(client, firstDoc._id)
+            : await makePdfBlob(client, docs)
           const base64 = await makeBase64FromFile(blob)
 
           return webviewIntent.call('print', base64)
-        } catch (error) {
-          logger.error(
-            `Error trying to print document with Flagship App: ${JSON.stringify(
-              error
-            )}`
-          )
         }
-      }
 
-      try {
-        const downloadURL = await client
-          .collection('io.cozy.files')
-          .getDownloadLinkById(doc._id, doc.name)
+        // not in flagship app
+        let docUrl = ''
+        if (isSingleDoc) {
+          docUrl = await client
+            .collection('io.cozy.files')
+            .getDownloadLinkById(firstDoc._id, firstDoc.name)
+        } else {
+          const blob = await makePdfBlob(client, docs)
+          docUrl = URL.createObjectURL(blob)
+        }
 
-        window.open(downloadURL, '_blank')
+        window.open(docUrl, '_blank')
       } catch (error) {
-        logger.error(`Error trying to print document: ${JSON.stringify(error)}`)
+        logger.error(
+          `Error trying to print document ${
+            webviewIntent ? 'inside flagship appp' : 'outside flagship app'
+          }: ${JSON.stringify(error)}`
+        )
       }
     },
     Component: forwardRef((props, ref) => {
