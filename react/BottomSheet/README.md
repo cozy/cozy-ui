@@ -94,7 +94,7 @@ const initialState = {
   isSecondBottomSheetDisplayed: false,
   mediumHeight: isTesting() ? 450 : undefined,
   mediumHeightRatio: undefined,
-  offset: 0
+  offset: undefined
 }
 const showBottomSheet = () => setState({ isBottomSheetDisplayed: true })
 const hideBottomSheet = () => setState({ isBottomSheetDisplayed: false })
