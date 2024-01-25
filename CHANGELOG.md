@@ -1,3 +1,11 @@
+# [102.1.0](https://github.com/cozy/cozy-ui/compare/v102.0.0...v102.1.0) (2024-01-25)
+
+
+### Features
+
+* **Action:** Print can now deal with multiple docs ([ee5695d](https://github.com/cozy/cozy-ui/commit/ee5695d))
+* Add pdf-lib package ([9b363e1](https://github.com/cozy/cozy-ui/commit/9b363e1))
+
 # [102.0.0](https://github.com/cozy/cozy-ui/compare/v101.2.0...v102.0.0) (2024-01-23)
 
 
