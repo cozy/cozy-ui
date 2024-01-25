@@ -392,7 +392,7 @@ BottomSheet.defaultProps = {
   toolbarProps: {},
   backdrop: false,
   offset:
-    (getFlagshipMetadata().immersive && getFlagshipMetadata().navbarHeight) ?? 0
+    (getFlagshipMetadata().immersive && getFlagshipMetadata().navbarHeight) || 0
 }
 
 BottomSheet.propTypes = {
