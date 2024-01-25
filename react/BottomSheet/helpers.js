@@ -1,8 +1,8 @@
 import React from 'react'
-import { getFlagshipMetadata } from 'cozy-device-helper'
 
 import { ANIMATION_DURATION } from './constants'
 import { getSafeAreaValue } from '../helpers/getSafeArea'
+import { getFlagshipMetadata } from '../hooks/useSetFlagshipUi/helpers'
 
 export const computeToolbarHeight = (toolbarProps = {}) => {
   const { ref, height } = toolbarProps

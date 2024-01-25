@@ -13,7 +13,7 @@ import { useMutationObserver, useTimeoutWhen } from 'rooks'
 import Fade from '@material-ui/core/Fade'
 import Portal from '@material-ui/core/Portal'
 
-import { getFlagshipMetadata } from 'cozy-device-helper'
+import { getFlagshipMetadata } from '../hooks/useSetFlagshipUi/helpers'
 
 import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
 import CozyTheme, { useCozyTheme } from '../providers/CozyTheme'

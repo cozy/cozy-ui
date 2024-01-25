@@ -238,8 +238,11 @@ it('should provide the inversed UI when Cozybar is not black on white, but white
 })
 
 jest.mock('cozy-device-helper', () => ({
-  isFlagshipApp: (): boolean => true,
-  getFlagshipMetadata: (): Record<string, never> => ({})
+  isFlagshipApp: (): boolean => true
+}))
+jest.mock('../hooks/useSetFlagshipUi/helpers', () => ({
+  getFlagshipMetadata: (): Record<string, never> => ({}),
+  setRsgFlagshipElements: (): null => null
 }))
 
 const onOpenMountExpected = {

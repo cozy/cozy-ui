@@ -7,6 +7,7 @@ import { Theme, useTheme } from '@material-ui/core'
 import { isFlagshipApp } from 'cozy-device-helper'
 
 import { useSetFlagshipUI } from '../../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import { isRsg } from '../../hooks/useSetFlagshipUi/helpers'
 
 const getBottomBackground = (theme: Theme): string => {
   const sidebar = document.getElementById('sidebar')
@@ -40,7 +41,8 @@ const useHook = (): void => {
   )
 }
 
-export const useActionMenuEffects = isFlagshipApp()
-  ? useHook
-  : // eslint-disable-next-line @typescript-eslint/no-empty-function
-    (): void => {}
+export const useActionMenuEffects =
+  isFlagshipApp() || isRsg
+    ? useHook
+    : // eslint-disable-next-line @typescript-eslint/no-empty-function
+      (): void => {}
