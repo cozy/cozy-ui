@@ -12,7 +12,7 @@ import {
 jest.mock('../helpers/getSafeArea', () => ({
   getSafeAreaValue: jest.fn().mockReturnValue(15)
 }))
-jest.mock('cozy-device-helper', () => ({
+jest.mock('../hooks/useSetFlagshipUi/helpers', () => ({
   getFlagshipMetadata: jest.fn(() => ({ navbarHeight: 10 }))
 }))
 const windowSpy = jest.spyOn(window, 'window', 'get')

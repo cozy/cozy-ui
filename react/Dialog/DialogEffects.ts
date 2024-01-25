@@ -1,7 +1,7 @@
 import { getLuminance, Theme, useTheme } from '@material-ui/core'
 import { useEffect } from 'react'
 
-import { getFlagshipMetadata, isFlagshipApp } from 'cozy-device-helper'
+import { isFlagshipApp } from 'cozy-device-helper'
 import { useWebviewIntent } from 'cozy-intent'
 
 import {
@@ -9,6 +9,8 @@ import {
   ThemeColor,
   parseArg
 } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import { getFlagshipMetadata } from '../hooks/useSetFlagshipUi/helpers'
+import { isRsg } from '../hooks/useSetFlagshipUi/helpers'
 
 interface DialogEffectsOptions {
   cozybar?: Element | null
@@ -192,7 +194,8 @@ export const useDialogSetFlagshipUI = (
   }, [open, webviewIntent]) // eslint-disable-line react-hooks/exhaustive-deps
 }
 
-export const useDialogEffects = isFlagshipApp()
-  ? useHook
-  : // eslint-disable-next-line @typescript-eslint/no-empty-function
-    (): void => {}
+export const useDialogEffects =
+  isFlagshipApp() || isRsg
+    ? useHook
+    : // eslint-disable-next-line @typescript-eslint/no-empty-function
+      (): void => {}
