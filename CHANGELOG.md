@@ -1,3 +1,10 @@
+## [102.1.1](https://github.com/cozy/cozy-ui/compare/v102.1.0...v102.1.1) (2024-01-29)
+
+
+### Bug Fixes
+
+* **BottomSheet:** Default offset value wasn't good if flagship immersive [secure] ([b1551d2](https://github.com/cozy/cozy-ui/commit/b1551d2))
+
 # [102.1.0](https://github.com/cozy/cozy-ui/compare/v102.0.0...v102.1.0) (2024-01-25)
 
 
