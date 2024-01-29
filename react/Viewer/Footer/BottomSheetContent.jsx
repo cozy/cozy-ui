@@ -5,9 +5,9 @@ import { BottomSheetItem } from '../../BottomSheet'
 
 import getPanelBlocks, { getPanelBlocksSpecs } from '../Panel/getPanelBlocks'
 
-const BottomSheetContent = ({ file }) => {
+const BottomSheetContent = ({ file, isPublic }) => {
   const panelBlocks = getPanelBlocks({
-    panelBlocksSpecs: getPanelBlocksSpecs(),
+    panelBlocksSpecs: getPanelBlocksSpecs(isPublic),
     file
   })
 
@@ -24,7 +24,7 @@ const BottomSheetContent = ({ file }) => {
 
 BottomSheetContent.propTypes = {
   file: PropTypes.object.isRequired,
-  contactsFullname: PropTypes.string
+  isPublic: PropTypes.bool
 }
 
 export default BottomSheetContent

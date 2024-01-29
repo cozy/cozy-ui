@@ -26,6 +26,7 @@ const ViewerContainer = props => {
     editPathByModelProps,
     children,
     componentsProps,
+    isPublic,
     ...rest
   } = props
   const { currentIndex, files, currentURL } = props
@@ -66,6 +67,7 @@ const ViewerContainer = props => {
             />
           </EncryptedProvider>
           <ViewerInformationsWrapper
+            isPublic={isPublic}
             disableFooter={disableFooter}
             validForPanel={validForPanel}
             currentFile={currentFile}
@@ -107,6 +109,8 @@ ViewerContainer.propTypes = {
   disablePanel: PropTypes.bool,
   /** Show/Hide the panel containing more information about the file only on Phone & Tablet devices */
   disableFooter: PropTypes.bool,
+  /** If the Viewer is in public view */
+  isPublic: PropTypes.bool,
   /* Props passed to components with the same name */
   componentsProps: PropTypes.shape({
     /** Used to open an Only Office file */

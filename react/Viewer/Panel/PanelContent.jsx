@@ -9,9 +9,9 @@ import { withViewerLocales } from '../hoc/withViewerLocales'
 
 import getPanelBlocks, { getPanelBlocksSpecs } from './getPanelBlocks'
 
-const PanelContent = ({ file, t }) => {
+const PanelContent = ({ file, isPublic, t }) => {
   const panelBlocks = getPanelBlocks({
-    panelBlocksSpecs: getPanelBlocksSpecs(),
+    panelBlocksSpecs: getPanelBlocksSpecs(isPublic),
     file
   })
 
@@ -43,7 +43,8 @@ const PanelContent = ({ file, t }) => {
 }
 
 PanelContent.propTypes = {
-  file: PropTypes.object.isRequired
+  file: PropTypes.object.isRequired,
+  isPublic: PropTypes.bool
 }
 
 export default withViewerLocales(PanelContent)
