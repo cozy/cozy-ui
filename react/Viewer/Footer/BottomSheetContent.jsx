@@ -3,10 +3,13 @@ import PropTypes from 'prop-types'
 
 import { BottomSheetItem } from '../../BottomSheet'
 
-import getPanelBlocks, { panelBlocksSpecs } from '../Panel/getPanelBlocks'
+import getPanelBlocks, { getPanelBlocksSpecs } from '../Panel/getPanelBlocks'
 
 const BottomSheetContent = ({ file }) => {
-  const panelBlocks = getPanelBlocks({ panelBlocksSpecs, file })
+  const panelBlocks = getPanelBlocks({
+    panelBlocksSpecs: getPanelBlocksSpecs(),
+    file
+  })
 
   return panelBlocks.map((PanelBlock, index) => (
     <BottomSheetItem

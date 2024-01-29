@@ -1,4 +1,4 @@
-import getPanelBlocks from './getPanelBlocks'
+import getPanelBlocks, { getPanelBlocksSpecs } from './getPanelBlocks'
 
 jest.mock('cozy-harvest-lib/dist/components/KonnectorBlock', () => jest.fn())
 const block1Component = jest.fn()
@@ -58,5 +58,24 @@ describe('getPanelBlocks', () => {
 
     // with no specs
     expect(getPanelBlocks({ panelBlocksSpecs: {} })).toMatchObject([])
+  })
+})
+
+describe('getPanelBlocksSpecs', () => {
+  it('should return the specs of the blocks to display in the panel', () => {
+    expect(getPanelBlocksSpecs()).toEqual({
+      qualifications: {
+        condition: expect.any(Function),
+        component: expect.anything()
+      },
+      konnector: {
+        condition: expect.any(Function),
+        component: expect.anything()
+      },
+      certifications: {
+        condition: expect.any(Function),
+        component: expect.anything()
+      }
+    })
   })
 })

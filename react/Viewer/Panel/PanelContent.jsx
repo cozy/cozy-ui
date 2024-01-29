@@ -7,10 +7,13 @@ import Paper from '../../Paper'
 import Typography from '../../Typography'
 import { withViewerLocales } from '../hoc/withViewerLocales'
 
-import getPanelBlocks, { panelBlocksSpecs } from './getPanelBlocks'
+import getPanelBlocks, { getPanelBlocksSpecs } from './getPanelBlocks'
 
 const PanelContent = ({ file, t }) => {
-  const panelBlocks = getPanelBlocks({ panelBlocksSpecs, file })
+  const panelBlocks = getPanelBlocks({
+    panelBlocksSpecs: getPanelBlocksSpecs(),
+    file
+  })
 
   return (
     <Stack spacing="s" className={cx('u-flex u-flex-column u-h-100')}>
