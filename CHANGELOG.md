@@ -1,3 +1,10 @@
+# [102.2.0](https://github.com/cozy/cozy-ui/compare/v102.1.1...v102.2.0) (2024-01-29)
+
+
+### Features
+
+* **Viewer:** Add isPublic prop for manage panel blocks displayed ([7f8668a](https://github.com/cozy/cozy-ui/commit/7f8668a))
+
 ## [102.1.1](https://github.com/cozy/cozy-ui/compare/v102.1.0...v102.1.1) (2024-01-29)
 
 
