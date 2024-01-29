@@ -15,6 +15,7 @@ const ViewerInformationsWrapper = ({
   disableFooter,
   validForPanel,
   toolbarRef,
+  isPublic,
   children
 }) => {
   const theme = useTheme()
@@ -34,14 +35,18 @@ const ViewerInformationsWrapper = ({
     <>
       {!disableFooter && (
         <Footer>
-          <FooterContent file={currentFile} toolbarRef={toolbarRef}>
+          <FooterContent
+            file={currentFile}
+            toolbarRef={toolbarRef}
+            isPublic={isPublic}
+          >
             {children}
           </FooterContent>
         </Footer>
       )}
       {validForPanel && (
         <InformationPanel>
-          <PanelContent file={currentFile} />
+          <PanelContent file={currentFile} isPublic={isPublic} />
         </InformationPanel>
       )}
     </>
@@ -53,6 +58,7 @@ ViewerInformationsWrapper.propTypes = {
   disableFooter: PropTypes.bool,
   validForPanel: PropTypes.bool,
   toolbarRef: PropTypes.object,
+  isPublic: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
