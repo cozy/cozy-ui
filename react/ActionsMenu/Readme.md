@@ -11,13 +11,15 @@ Use `makeActions` method and create (or use the predefined actions) to build the
 ```bash
 const action1 = ({ option1, option2 }) => ({
   name: action1,
-  action: (doc, { option3, option4 }) => {}
+  action: (doc, { option3, option4 }) => { option5(action1()) }
   Component: ({ onClick, ...props }) => <SomeComponent {...props} onClick={() => onClick({ option3 })}} />
 })
 
 const actions = makeActions([action1, action2], { option1, option2 })
 
-<ActionsMenu actions={actions} componentsProps={{ actionsItems: { actionOptions: { option4 }} }}
+<ActionsMenu actions={actions} componentsProps={{
+  actionsItems: { actionOptions: { option4 }}, onClick: option5
+}} />
 ```
 
 #### How to create actions
@@ -90,7 +92,7 @@ const customAction = () => ({
   })
 })
 
-const actions = makeActions([ modify, viewInContacts, divider, call, smsTo, emailTo, print, divider, customAction ])
+const actions = makeActions([ modify, viewInContacts, divider, call, { originalAction: smsTo, onClick: (docs, options) => console.info('added onClick fn') }, emailTo, print, divider, customAction ])
 
 ;
 
@@ -113,6 +115,7 @@ const actions = makeActions([ modify, viewInContacts, divider, call, smsTo, emai
       horizontal: 'left'
     }}
     autoClose
+    componentsProps={{ actionsItems: {onClick: action => { console.info('action name :', action.name) }} }}
     onClose={hideMenu}
   >
     <ActionsMenuMobileHeader>

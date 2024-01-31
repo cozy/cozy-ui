@@ -1,4 +1,5 @@
 import { PDFDocument } from 'pdf-lib'
+import isPlainObject from 'lodash/isPlainObject'
 import { fetchBlobFileById } from 'cozy-client/dist/models/file'
 
 // Should guarantee good resolution for different uses (printing, downloading, etc.)
@@ -12,9 +13,24 @@ const MAX_RESIZE_IMAGE_SIZE = 3840
  * @returns {object[]} Array of actions
  */
 export const makeActions = (actions = [], options = {}) => {
-  return actions.filter(Boolean).map(action => {
-    const actionMenu = action(options)
-    const name = actionMenu.name || action.name
+  return actions.filter(Boolean).map(actionDefinition => {
+    const actionMenu = isPlainObject(actionDefinition)
+      ? actionDefinition.originalAction(options)
+      : actionDefinition(options)
+
+    const name = actionMenu.name || actionDefinition.name
+
+    if (isPlainObject(actionDefinition)) {
+      const overriddenActionMenu = {
+        ...actionMenu,
+        action: async (docs, options) => {
+          await actionMenu.action(docs, options)
+          await actionDefinition.onClick(docs, options)
+        }
+      }
+
+      return { [name]: overriddenActionMenu }
+    }
 
     return { [name]: actionMenu }
   })

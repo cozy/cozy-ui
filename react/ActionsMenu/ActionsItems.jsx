@@ -42,7 +42,7 @@ const ActionsItems = forwardRef(
           ...actionOptions,
           ...clickProps
         })
-        overridedClick?.()
+        overridedClick?.(actionDefinition)
       }
 
       const Component = component ?? ActionComponent
