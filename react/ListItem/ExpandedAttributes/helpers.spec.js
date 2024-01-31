@@ -7,8 +7,6 @@ import {
 import { I18nContext } from '../../jestLib/I18n'
 import en from '../locales/en'
 
-jest.mock('copy-text-to-clipboard', () => ({ copy: jest.fn() }))
-
 const i18nContext = I18nContext({
   locale: en
 })
