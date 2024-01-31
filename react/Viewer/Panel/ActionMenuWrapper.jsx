@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
-import copy from 'copy-text-to-clipboard'
 
 import { useAppLinkWithStoreFallback, useClient } from 'cozy-client'
 
@@ -40,14 +39,14 @@ const ActionMenuWrapper = forwardRef(({ onClose, file, optionFile }, ref) => {
   )
   const isAppLinkLoaded = fetchStatus === 'loaded'
 
-  const handleCopy = () => {
-    const hasCopied = copy(value)
-    if (hasCopied) {
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(value)
       showViewerSnackbar(
         'success',
         t(`Viewer.snackbar.copiedToClipboard.success`)
       )
-    } else {
+    } catch (error) {
       showViewerSnackbar('error', t(`Viewer.snackbar.copiedToClipboard.error`))
     }
     onClose()
