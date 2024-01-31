@@ -1,3 +1,10 @@
+## [102.2.1](https://github.com/cozy/cozy-ui/compare/v102.2.0...v102.2.1) (2024-01-31)
+
+
+### Bug Fixes
+
+* Use navigator.clipboard instead of copy-text-to-clipboard ([ae42cb9](https://github.com/cozy/cozy-ui/commit/ae42cb9))
+
 # [102.2.0](https://github.com/cozy/cozy-ui/compare/v102.1.1...v102.2.0) (2024-01-29)
 
 
