@@ -1,3 +1,15 @@
+# [103.0.0](https://github.com/cozy/cozy-ui/compare/v102.2.1...v103.0.0) (2024-02-06)
+
+
+### Features
+
+* Add Popover and Popper from Mui ([e24016c](https://github.com/cozy/cozy-ui/commit/e24016c))
+
+
+### BREAKING CHANGES
+
+* Replace old Popover by Mui Popover. If you are using `import Popover from 'cozy-ui/transpiled/react/Popover'` in your app, see Mui documentation for migration.
+
 ## [102.2.1](https://github.com/cozy/cozy-ui/compare/v102.2.0...v102.2.1) (2024-01-31)
 
 
