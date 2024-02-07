@@ -151,36 +151,6 @@ module.exports = {
         '../react/UnorderedList',
         '../react/Wizard'
       ]
-    },
-    {
-      name: 'Deprecated',
-      components: () => [
-        '../react/deprecated/ActionMenu',
-        '../react/deprecated/Alerter',
-        '../react/deprecated/Button',
-        '../react/deprecated/ButtonAction',
-        '../react/deprecated/BottomDrawer',
-        '../react/deprecated/Chip',
-        '../react/deprecated/CompositeRow',
-        '../react/deprecated/GridItem',
-        '../react/deprecated/Infos',
-        '../react/deprecated/InfosCarrousel',
-        '../react/deprecated/InlineCard',
-        '../react/deprecated/IntentModal/IntentModal.jsx',
-        '../react/deprecated/IntentOpener/IntentOpener.jsx',
-        '../react/deprecated/Media/Media.jsx',
-        '../react/deprecated/Menus',
-        '../react/deprecated/Modal',
-        '../react/deprecated/NarrowContent',
-        '../react/deprecated/Overlay',
-        '../react/deprecated/PercentageBar',
-        '../react/deprecated/PercentageLine',
-        '../react/deprecated/QuotaAlert',
-        '../react/deprecated/PushClientButton',
-        '../react/deprecated/Radio',
-        '../react/deprecated/RaisedList',
-        '../react/deprecated/ViewStack'
-      ]
     }
   ],
   components: '../react/**/*.jsx',
