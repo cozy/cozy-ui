@@ -1,3 +1,16 @@
+# [103.1.0](https://github.com/cozy/cozy-ui/compare/v103.0.0...v103.1.0) (2024-02-07)
+
+
+### Bug Fixes
+
+* **Filename:** Adjust style and DOM structure ([7f000a6](https://github.com/cozy/cozy-ui/commit/7f000a6))
+
+
+### Features
+
+* **MidEllipsis:** Use `ui.midellipsis-lib.enabled` flag for better one ([b7b484e](https://github.com/cozy/cozy-ui/commit/b7b484e))
+* **Packages:** Add react-middle-ellipsis package ([a8991d9](https://github.com/cozy/cozy-ui/commit/a8991d9))
+
 # [103.0.0](https://github.com/cozy/cozy-ui/compare/v102.2.1...v103.0.0) (2024-02-06)
 
 
