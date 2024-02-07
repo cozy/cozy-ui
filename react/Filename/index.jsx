@@ -1,58 +1,35 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 
-import { Media, Bd, Img } from '../deprecated/Media'
-import Icon from '../Icon'
+import Icon, { iconPropType } from '../Icon'
 import Typography from '../Typography'
 import MidEllipsis from '../MidEllipsis'
 
-import styles from './styles.styl'
-
 const Filename = ({ icon, filename, extension, midEllipsis, variant }) => {
   return (
-    <Media>
+    <div className="u-flex u-flex-items-center">
       {icon && (
-        <Img>
-          <Icon className={'u-mr-1'} icon={icon} width={30} height={30} />
-        </Img>
+        <div className="u-mr-1">
+          <Icon icon={icon} width={30} height={30} />
+        </div>
       )}
-      {(filename || extension) && (
-        <Bd className={styles['c-filename-wrapper']}>
-          {filename && (
-            <Typography
-              variant={variant}
-              component="span"
-              className={cx(styles['c-filename-name'], {
-                'u-ellipsis': !midEllipsis,
-                'u-ov-hidden': midEllipsis
-              })}
-            >
-              {midEllipsis ? <MidEllipsis text={filename} /> : filename}
-            </Typography>
-          )}
-          {extension && (
-            <Typography
-              variant={variant}
-              component="span"
-              color="textSecondary"
-            >
-              {extension}
-            </Typography>
-          )}
-        </Bd>
+      {filename && (
+        <Typography variant={variant} component="span" noWrap>
+          {midEllipsis ? <MidEllipsis text={filename} /> : filename}
+        </Typography>
       )}
-    </Media>
+      {extension && (
+        <Typography variant={variant} component="span" color="textSecondary">
+          {extension}
+        </Typography>
+      )}
+    </div>
   )
 }
 
 Filename.propTypes = {
   /** Filename icon */
-  icon: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.object,
-    PropTypes.func
-  ]),
+  icon: iconPropType,
   /** folder or file name */
   filename: PropTypes.string,
   /** If a file name, you can specify the extension */
