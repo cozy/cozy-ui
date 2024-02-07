@@ -41,7 +41,9 @@ const fetchAllComponents = async (page, args, config) => {
     return Array.from(document.querySelectorAll(`${sidebarSelector} a`))
       .filter(v => !v.href.includes('?id='))
       .map(x => x.text)
+      .filter(x => x !== 'Cozy-ui documentation') // see section's name in styleguide.config.js
   })
+
   const sortedCategoriesNames = sortBy(
     categoriesName.map(catName => ({
       link: styleguideIndexURL + '#/' + catName,
