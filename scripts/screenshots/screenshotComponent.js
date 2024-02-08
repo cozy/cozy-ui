@@ -26,7 +26,7 @@ const screenshotComponent = async (page, options) => {
   const { link, name } = component
 
   await page.goto(link)
-  await sleep(100) // to be sure the page is entirely loaded
+  await sleep(200) // to be sure the page is entirely loaded
 
   const getScreenshotName =
     options.getScreenshotName || defaultGetScreenshotName
