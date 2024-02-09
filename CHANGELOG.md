@@ -1,3 +1,10 @@
+## [103.1.1](https://github.com/cozy/cozy-ui/compare/v103.1.0...v103.1.1) (2024-02-09)
+
+
+### Bug Fixes
+
+* Stop propagation of event ([167e50b](https://github.com/cozy/cozy-ui/commit/167e50b))
+
 # [103.1.0](https://github.com/cozy/cozy-ui/compare/v103.0.0...v103.1.0) (2024-02-07)
 
 
