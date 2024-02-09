@@ -46,9 +46,9 @@ class IntentModal extends Component {
   // FIXME: this should be fixed by diferenciating dismissAction (for closing
   // modal) and onCancel (for intent cancellation), but it implies deprecating
   // dismissAction first, ensure legacy, prevent regressions, etc.
-  dismiss = once(() => {
+  dismiss = once(evt => {
     const { dismissAction } = this.props
-    dismissAction && dismissAction()
+    dismissAction && dismissAction(evt)
   })
 
   render() {

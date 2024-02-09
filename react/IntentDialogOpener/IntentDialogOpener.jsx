@@ -28,6 +28,7 @@ const IntentDialogOpener = props => {
 
   const openModal = ev => {
     ev.preventDefault()
+    ev.stopPropagation()
     setModalOpened(true)
   }
   const closeModal = () => setModalOpened(false)
