@@ -35,7 +35,6 @@ const ActionMenuMobile = ({
                     component="a"
                     href={href}
                     onClick={() => handleEdit(onClick)}
-                    disabled={!appLink}
                   >
                     <ListItemIcon>
                       <Icon icon={Edit} />
