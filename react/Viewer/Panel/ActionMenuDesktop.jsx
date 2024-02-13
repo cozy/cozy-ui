@@ -25,14 +25,7 @@ const ActionMenuDesktop = forwardRef(
           <AppLinker app={{ slug: appSlug }} href={appLink}>
             {({ onClick, href }) => {
               return (
-                <a
-                  href={href}
-                  className={
-                    !appLink &&
-                    styles['ActionMenuDesktop-ActionMenu-link-disabled']
-                  }
-                  onClick={() => handleEdit(onClick)}
-                >
+                <a href={href} onClick={() => handleEdit(onClick)}>
                   <ActionMenuItem left={<Icon icon={Edit} />}>
                     <Typography>
                       {t(`Viewer.panel.qualification.actions.edit`)}
