@@ -1,3 +1,10 @@
+# [103.2.0](https://github.com/cozy/cozy-ui/compare/v103.1.1...v103.2.0) (2024-02-13)
+
+
+### Features
+
+* **Viewer:** Changing the behavior of the edit action ([3308336](https://github.com/cozy/cozy-ui/commit/3308336))
+
 ## [103.1.1](https://github.com/cozy/cozy-ui/compare/v103.1.0...v103.1.1) (2024-02-09)
 
 
