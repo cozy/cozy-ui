@@ -2447,6 +2447,22 @@
     }
   },
   {
+    "_id": "fc1f5295-a7e9-431c-a3cb-21657edd81e0",
+    "_type": "io.cozy.contacts",
+    "indexes": {
+      "byFamilyNameGivenNameEmailCozyUrl": "john.murdock@mediadime.net"
+    },
+    "email": [
+      {
+        "address": "john.murdock@mediadime.net",
+        "primary": true
+      }
+    ],
+    "metadata": {
+      "version": 1
+    }
+  },
+  {
     "_id": "fc1f5295-a7e9-431c-a3cb-70259edd81e0",
     "_type": "io.cozy.contacts",
     "address": [

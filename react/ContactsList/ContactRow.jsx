@@ -13,12 +13,12 @@ import useBreakpoints from '../providers/Breakpoints'
 
 const { getPrimaryCozy, getPrimaryPhone, getPrimaryEmail } = models.contact
 
-const ContactRow = ({ className, contact, onClick, divider, ...rest }) => {
-  const { isMobile } = useBreakpoints()
+const ContactRow = ({ className, contact, onClick, divider, ...props }) => {
+  const { isMobile, isDesktop } = useBreakpoints()
+
   const phone = getPrimaryPhone(contact) || undefined
   const email = getPrimaryEmail(contact) || undefined
   const cozyUrl = getPrimaryCozy(contact) || undefined
-  const { isDesktop } = useBreakpoints()
 
   return (
     <ListItem
@@ -27,7 +27,7 @@ const ContactRow = ({ className, contact, onClick, divider, ...rest }) => {
       divider={divider}
       gutters={isDesktop ? 'double' : 'default'}
       onClick={() => onClick(contact)}
-      {...rest}
+      {...props}
     >
       <ContactIdentity contact={contact} />
       {!isMobile && <ContactEmail email={email} />}

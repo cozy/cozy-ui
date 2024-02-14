@@ -1,3 +1,8 @@
+import get from 'lodash/get'
+import removeAccents from 'remove-accents'
+
+import { getContactsListI18n } from './locales/withContactsListLocales'
+
 export function buildLastNameFirst(contact) {
   const givenName =
     contact.name && contact.name.givenName
@@ -24,16 +29,19 @@ export const sortLastNameFirst = (contact, comparedContact) => {
 export const sortContacts = contacts => contacts.sort(sortLastNameFirst)
 
 /**
- * Build header for a contact (first letter of last name)
+ * Build header for a contact
  * @param {object} contact
  * @param {function} t translation function
  * @returns {string} header
  */
 const makeHeader = (contact, t) => {
-  if (contact.me) return t('me')
+  const _t = t || getContactsListI18n()?.t
 
-  const name = buildLastNameFirst(contact)
-  return name[0] || t('empty')
+  if (contact.me) return _t('me')
+
+  const index = get(contact, 'indexes.byFamilyNameGivenNameEmailCozyUrl', '')
+  const hasIndex = index !== null && index.length > 0
+  return (hasIndex && removeAccents(index[0])) || _t('empty')
 }
 
 /**
@@ -41,9 +49,10 @@ const makeHeader = (contact, t) => {
  */
 
 /**
- * Categorize contacts by first letter of last name
- * @param {object[]} contacts io.cozy.contacts documents
- * @param {function} t translation function
+ * Categorize contacts by first letter of their indexes.byFamilyNameGivenNameEmailCozyUrl
+ * Expl.: all contacts with A as first letter will be in A category
+ * @param {object[]} contacts - io.cozy.contacts documents
+ * @param {function} t - translation function
  * @returns {CategorizedContactsResult}
  */
 export const categorizeContacts = (contacts, t) =>

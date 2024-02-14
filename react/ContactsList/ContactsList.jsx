@@ -9,16 +9,33 @@ import { sortContacts, categorizeContacts, sortHeaders } from './helpers'
 import ContactRow from './ContactRow'
 import useBreakpoints from '../providers/Breakpoints'
 import withContactsListLocales from './locales/withContactsListLocales'
+import ContactsSubList from './ContactsSubList'
 
-const ContactsList = ({ contacts, onItemClick, ...rest }) => {
+const ContactsList = ({ contacts, onItemClick, ...props }) => {
   const { t } = useI18n()
   const sortedContacts = sortContacts(contacts)
-  const categorizedContacts = categorizeContacts(sortedContacts, t)
+  const categorizedContacts = categorizeContacts(contacts)
   const sortedHeaders = sortHeaders(categorizedContacts, t)
   const { isDesktop } = useBreakpoints()
 
+  console.info(' ')
+  console.info('contacts :', contacts)
+  console.info('categorizedContacts :', categorizedContacts)
+  console.info(' ')
+
   return (
-    <Table {...rest}>
+    <Table>
+      {Object.entries(categorizedContacts).map(([header, contacts]) => (
+        <List key={`cat-${header}`} className="u-pt-0">
+          <ListSubheader key={header}>{header}</ListSubheader>
+          <ContactsSubList contacts={contacts} onClick={onItemClick} />
+        </List>
+      ))}
+    </Table>
+  )
+
+  return (
+    <Table {...props}>
       {sortedHeaders.map(header => (
         <List
           key={header}
