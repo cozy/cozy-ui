@@ -15,17 +15,30 @@ export const makeLightNormalOverrides = theme => ({
     root: {
       borderRadius: 4,
       '&$disabled': {
-        background: theme.palette.grey[100]
+        background: theme.palette.background.contrast
       },
       '&$focused $notchedOutline': {
         borderWidth: '0.0625rem'
       },
+      '&$error $notchedOutline': {
+        borderColor: alpha(
+          theme.palette.error.main,
+          theme.palette.border.opacity
+        )
+      },
+      '&$focused&$error $notchedOutline': {
+        borderColor: theme.palette.error.main
+      },
       '&:hover $notchedOutline': {
-        borderColor: theme.palette.grey[300]
+        borderColor: theme.palette.text.hint
+      },
+      '&:hover&$error $notchedOutline': {
+        borderColor: theme.palette.error.main
       }
     },
     notchedOutline: {
-      borderColor: theme.palette.grey[200]
+      borderColor: theme.palette.border.main,
+      transition: `border-color ${theme.transitions.duration.shorter}ms`
     },
     input: {
       padding: '18.5px 16px'
@@ -328,10 +341,10 @@ export const makeLightNormalOverrides = theme => ({
       paddingBottom: 8,
       paddingTop: 8,
       marginBottom: '0.5rem',
-      backgroundColor: theme.palette.background.default
+      backgroundColor: theme.palette.background.contrast
     },
     sticky: {
-      backgroundColor: theme.palette.background.default
+      backgroundColor: theme.palette.background.contrast
     }
   },
   MuiListItemText: {
@@ -717,7 +730,7 @@ export const makeLightNormalOverrides = theme => ({
       padding: '12px',
       '&$disabled svg': {
         borderRadius: '50%',
-        backgroundColor: theme.palette.background.default,
+        backgroundColor: theme.palette.background.contrast,
         fill: theme.palette.border.disabled
       },
       '&:not($checked) svg': {
