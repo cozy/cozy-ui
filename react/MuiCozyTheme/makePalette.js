@@ -15,7 +15,7 @@ const opacityByTheme = {
         hoverGhostOpacity: 0.16
       },
       border: {
-        opacity: 0.16,
+        opacity: 0.32,
         ghostOpacity: 0.48
       },
       background: {
@@ -33,7 +33,7 @@ const opacityByTheme = {
         hoverGhostOpacity: 0.16
       },
       border: {
-        opacity: 0.24,
+        opacity: 0.48,
         ghostOpacity: 0.48
       },
       background: {
@@ -53,7 +53,7 @@ const opacityByTheme = {
         hoverGhostOpacity: 0.16
       },
       border: {
-        opacity: 0.24,
+        opacity: 0.48,
         ghostOpacity: 0.48
       },
       background: {
@@ -71,7 +71,7 @@ const opacityByTheme = {
         hoverGhostOpacity: 0.16
       },
       border: {
-        opacity: 0.16,
+        opacity: 0.32,
         ghostOpacity: 0.48
       },
       background: {
