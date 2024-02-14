@@ -4,21 +4,6 @@ import { makeLightNormalOverrides } from './makeLightNormalOverrides'
 
 export const makeLightInvertedOverrides = theme => {
   const makeOverridesForInvertedTheme = theme => ({
-    MuiOutlinedInput: {
-      root: {
-        boxSizing: 'border-box',
-        '&$disabled': {
-          background: 'initial'
-        },
-        '&$focused $notchedOutline': {
-          borderColor: theme.palette.text.primary,
-          borderWidth: '0.0625rem'
-        },
-        '& $notchedOutline': {
-          borderColor: theme.palette.text.primary
-        }
-      }
-    },
     MuiLinearProgress: {
       colorPrimary: {
         backgroundColor: 'rgba(255,255,255,0.2)'
