@@ -16,6 +16,7 @@ const FixedActionsDialog = props => {
     dialogTitleProps,
     fullScreen,
     id,
+    dividerProps,
     dialogActionsProps,
     dialogContentProps
   } = useCozyDialog({ ...props, isFluidTitle: true })
@@ -52,7 +53,7 @@ const FixedActionsDialog = props => {
           {content}
         </div>
       </DialogContent>
-      <Divider />
+      <Divider {...dividerProps} />
       {actions && (
         <DialogActions
           {...dialogActionsProps}

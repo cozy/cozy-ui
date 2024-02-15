@@ -416,7 +416,11 @@ export const makeLightNormalOverrides = theme => ({
           padding: '0 8px 8px',
           height: 'auto',
           maxHeight: 'calc(100% - 32px)',
-          borderRadius: '6px'
+          borderRadius: '6px',
+          '& .divider--dialog': {
+            marginLeft: '-8px',
+            marginRight: '-8px'
+          }
         }
       },
       '&.medium': {
