@@ -9102,8 +9102,8 @@ body {
   transition: 0.15s ease all;
 }
 .Tile--2SqRi.Tile-secondary--2zYdn {
-  background: var(--defaultBackgroundColor);
-  border-color: var(--defaultBackgroundColor);
+  background: var(--contrastBackgroundColor);
+  border-color: var(--contrastBackgroundColor);
 }
 .Tile--2SqRi:hover,
 .Tile--2SqRi:active,
