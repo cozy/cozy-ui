@@ -1,3 +1,13 @@
+# [103.3.0](https://github.com/cozy/cozy-ui/compare/v103.2.0...v103.3.0) (2024-02-15)
+
+
+### Features
+
+* **OutlinedInput:** Adjust styles according to specs ([ca960b2](https://github.com/cozy/cozy-ui/commit/ca960b2))
+* **ProgressionBanner:** Adjust background color ([d3b9c3e](https://github.com/cozy/cozy-ui/commit/d3b9c3e))
+* **Theme:** Adjust border opacity and contrastBackgroundColor ([346789c](https://github.com/cozy/cozy-ui/commit/346789c))
+* **Tile:** Adjust secondary background color ([6432d7a](https://github.com/cozy/cozy-ui/commit/6432d7a))
+
 # [103.2.0](https://github.com/cozy/cozy-ui/compare/v103.1.1...v103.2.0) (2024-02-13)
 
 
