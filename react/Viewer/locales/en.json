@@ -52,6 +52,9 @@
         },
         "information": {
           "title": {
+            "fidelity_card": {
+              "number": "Card number"
+            },
             "caf": {
               "number": "CAF file number"
             },
