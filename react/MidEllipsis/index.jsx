@@ -57,11 +57,11 @@ const styles = { whiteSpace: 'nowrap', overflow: 'hidden' }
 
 const MidEllipsisWithLib = forwardRef(({ text, ...props }, ref) => {
   return (
-    <span style={styles}>
+    <div style={styles}>
       <MiddleEllipsis {...props} ref={ref}>
         <span>{text}</span>
       </MiddleEllipsis>
-    </span>
+    </div>
   )
 })
 //
