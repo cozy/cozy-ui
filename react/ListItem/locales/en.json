@@ -30,6 +30,7 @@
         "bicNumber": "BIC number",
         "passportNumber": "Passport number",
         "number": {
+          "fidelity_card": "Card number",
           "driver_license": "License number",
           "caf": "CAF file number",
           "payment_proof_family_allowance": "CAF file number",
