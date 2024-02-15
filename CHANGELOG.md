@@ -1,3 +1,10 @@
+## [103.3.1](https://github.com/cozy/cozy-ui/compare/v103.3.0...v103.3.1) (2024-02-15)
+
+
+### Bug Fixes
+
+* **MidEllipsis:** Element width was incorrect on Safari ([e5d4b5a](https://github.com/cozy/cozy-ui/commit/e5d4b5a))
+
 # [103.3.0](https://github.com/cozy/cozy-ui/compare/v103.2.0...v103.3.0) (2024-02-15)
 
 
