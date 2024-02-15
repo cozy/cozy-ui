@@ -1,15 +1,12 @@
 import React, { forwardRef } from 'react'
 import MuiSnackbar from '@material-ui/core/Snackbar'
-import useBreakpoints from '../providers/Breakpoints'
 
 const Snackbar = forwardRef(({ children, ...props }, ref) => {
-  const { isDesktop } = useBreakpoints()
-
   return (
     <MuiSnackbar
       ref={ref}
       anchorOrigin={{
-        vertical: !isDesktop ? 'bottom' : 'top',
+        vertical: 'bottom',
         horizontal: 'center'
       }}
       {...props}
