@@ -1,3 +1,10 @@
+# [103.6.0](https://github.com/cozy/cozy-ui/compare/v103.5.0...v103.6.0) (2024-02-15)
+
+
+### Features
+
+* Add new translations for fine amount ([d7e681c](https://github.com/cozy/cozy-ui/commit/d7e681c))
+
 # [103.5.0](https://github.com/cozy/cozy-ui/compare/v103.4.0...v103.5.0) (2024-02-15)
 
 
