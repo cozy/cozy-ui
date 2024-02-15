@@ -32,7 +32,7 @@ const initialVariants = [{
   {variant => (
     <Banner
       bgcolor={
-        variant.backgroundColor ? 'var(--defaultBackgroundColor)' : 'transparent'
+        variant.backgroundColor ? 'var(--contrastBackgroundColor)' : 'transparent'
       }
       icon={variant.icon && icon}
       text={variant.longText ? longText : shortText}
