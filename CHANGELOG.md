@@ -1,3 +1,10 @@
+# [103.4.0](https://github.com/cozy/cozy-ui/compare/v103.3.1...v103.4.0) (2024-02-15)
+
+
+### Features
+
+* Add new translations for fidelity card number ([8288587](https://github.com/cozy/cozy-ui/commit/8288587))
+
 ## [103.3.1](https://github.com/cozy/cozy-ui/compare/v103.3.0...v103.3.1) (2024-02-15)
 
 
