@@ -52,6 +52,9 @@
         },
         "information": {
           "title": {
+            "fine": {
+              "number": "Amount of the fine"
+            },
             "fidelity_card": {
               "number": "Card number"
             },
