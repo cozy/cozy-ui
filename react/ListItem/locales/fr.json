@@ -30,6 +30,7 @@
         "bicNumber": "Numéro BIC",
         "passportNumber": "Numéro du passeport",
         "number": {
+          "fine": "Montant de l'amende",
           "fidelity_card": "Numéro de la carte",
           "driver_license": "Numéro du permis",
           "caf": "Numéro de dossier CAF",

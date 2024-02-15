@@ -30,6 +30,7 @@
         "bicNumber": "BIC number",
         "passportNumber": "Passport number",
         "number": {
+          "fine": "Amount of the fine",
           "fidelity_card": "Card number",
           "driver_license": "License number",
           "caf": "CAF file number",

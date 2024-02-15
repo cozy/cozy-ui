@@ -52,6 +52,9 @@
         },
         "information": {
           "title": {
+            "fine": {
+              "number": "Montant de l'amende"
+            },
             "fidelity_card": {
               "number": "Numéro de la carte"
             },
