@@ -16,6 +16,7 @@ const FixedDialog = props => {
     dialogTitleProps,
     fullScreen,
     id,
+    dividerProps,
     dialogActionsProps,
     dialogContentProps
   } = useCozyDialog(props)
@@ -45,7 +46,7 @@ const FixedDialog = props => {
       {title && (
         <>
           <DialogTitle {...dialogTitleProps}>{title}</DialogTitle>
-          <Divider />
+          <Divider {...dividerProps} />
         </>
       )}
       <DialogContent {...dialogContentProps}>
