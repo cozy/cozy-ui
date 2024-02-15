@@ -1,3 +1,10 @@
+# [103.5.0](https://github.com/cozy/cozy-ui/compare/v103.4.0...v103.5.0) (2024-02-15)
+
+
+### Features
+
+* **Snackbar:** Change position from `top` to `bottom` on desktop ([9278e06](https://github.com/cozy/cozy-ui/commit/9278e06))
+
 # [103.4.0](https://github.com/cozy/cozy-ui/compare/v103.3.1...v103.4.0) (2024-02-15)
 
 
