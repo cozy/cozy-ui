@@ -1,3 +1,10 @@
+## [103.6.1](https://github.com/cozy/cozy-ui/compare/v103.6.0...v103.6.1) (2024-02-19)
+
+
+### Bug Fixes
+
+* **CozyDialogs:** Divider for small dialog wasn't fullwidth ([594ec4e](https://github.com/cozy/cozy-ui/commit/594ec4e))
+
 # [103.6.0](https://github.com/cozy/cozy-ui/compare/v103.5.0...v103.6.0) (2024-02-15)
 
 
