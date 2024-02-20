@@ -29,7 +29,10 @@
         "ibanNumber": "IBAN number",
         "bicNumber": "BIC number",
         "passportNumber": "Passport number",
+        "netSocialAmount": "Net social amount",
+        "contentAuthor": "Name of employer",
         "number": {
+          "pay_sheet": "Gross remuneration",
           "fine": "Amount of the fine",
           "fidelity_card": "Card number",
           "driver_license": "License number",

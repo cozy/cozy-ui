@@ -35,6 +35,8 @@ export const defaultExpandedAttributes = {
     'metadata.vinNumber',
     'metadata.ibanNumber',
     'metadata.bicNumber',
+    'metadata.netSocialAmount',
+    'metadata.contentAuthor',
     'metadata.passportNumber',
     'metadata.noticePeriod',
     'metadata.obtentionDate',
