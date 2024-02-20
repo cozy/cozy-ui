@@ -1,3 +1,10 @@
+## [103.6.2](https://github.com/cozy/cozy-ui/compare/v103.6.1...v103.6.2) (2024-02-20)
+
+
+### Bug Fixes
+
+* **Viewer:** All files have konnector block ([a62c95b](https://github.com/cozy/cozy-ui/commit/a62c95b)), closes [#2563](https://github.com/cozy/cozy-ui/issues/2563)
+
 ## [103.6.1](https://github.com/cozy/cozy-ui/compare/v103.6.0...v103.6.1) (2024-02-19)
 
 
