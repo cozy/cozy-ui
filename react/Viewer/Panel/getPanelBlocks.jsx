@@ -27,7 +27,7 @@ export const getPanelBlocksSpecs = (isPublic = false) => ({
     component: Qualification
   },
   konnector: {
-    condition: () => isFromKonnector && !isPublic,
+    condition: file => isFromKonnector(file) && !isPublic,
     component: KonnectorBlock
   },
   certifications: {
