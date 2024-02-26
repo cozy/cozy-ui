@@ -1,3 +1,11 @@
+# [103.7.0](https://github.com/cozy/cozy-ui/compare/v103.6.2...v103.7.0) (2024-02-26)
+
+
+### Features
+
+* **ListItem:** Add `netSocialAmount` and `contentAuthor` metadata support ([d54faa6](https://github.com/cozy/cozy-ui/commit/d54faa6))
+* **Viewer:** Add `netSocialAmount` and `contentAuthor` metadata support ([63221f4](https://github.com/cozy/cozy-ui/commit/63221f4))
+
 ## [103.6.2](https://github.com/cozy/cozy-ui/compare/v103.6.1...v103.6.2) (2024-02-20)
 
 
