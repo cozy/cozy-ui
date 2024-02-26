@@ -85,10 +85,15 @@
             "national_health_insurance_card": {
               "number": "Numéro de la carte vitale"
             },
+            "pay_sheet": {
+              "number": "Rémunération brute"
+            },
             "country": "Nationalité du bénéficiaire",
             "refTaxIncome": "Revenu fiscal de référence",
             "contractType": "Type de contrat",
             "noticePeriod": "Alerte d’expiration",
+            "netSocialAmount": "Montant net social",
+            "contentAuthor": "Nom de l'employeur",
             "bicNumber": "Numéro BIC"
           },
           "day": "jour |||| jours"

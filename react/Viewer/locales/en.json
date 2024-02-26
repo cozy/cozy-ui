@@ -85,10 +85,15 @@
             "national_health_insurance_card": {
               "number": "National health insurance card number"
             },
+            "pay_sheet": {
+              "number": "Gross remuneration"
+            },
             "country": "Beneficiary nationality",
             "refTaxIncome": "Reference tax income",
             "contractType": "Contract type",
             "noticePeriod": "Expiration alert",
+            "netSocialAmount": "Net social amount",
+            "contentAuthor": "Name of employer",
             "bicNumber": "BIC number"
           },
           "day": "day |||| days"
