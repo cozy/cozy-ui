@@ -7,7 +7,6 @@ import { useClient } from 'cozy-client'
 
 import withBreakpoints from '../../helpers/withBreakpoints'
 import { makeStyles } from '../../styles'
-import Button from '../../deprecated/Button'
 import IconButton from '../../IconButton'
 import Icon from '../../Icon'
 import Typography from '../../Typography'
@@ -78,13 +77,13 @@ const Toolbar = ({
 
       <div className="u-ml-auto u-ph-1">
         {isDesktop && (
-          <Button
+          <IconButton
             className="u-white"
-            icon={DownloadIcon}
-            label={t('Viewer.download')}
-            subtle
+            aria-label={t('Viewer.download')}
             onClick={() => downloadFile({ client, file, url })}
-          />
+          >
+            <Icon icon={DownloadIcon} />
+          </IconButton>
         )}
       </div>
     </div>
