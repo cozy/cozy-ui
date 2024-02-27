@@ -1,3 +1,10 @@
+## [103.8.1](https://github.com/cozy/cozy-ui/compare/v103.8.0...v103.8.1) (2024-02-27)
+
+
+### Bug Fixes
+
+* The background of ListSubHeader should use the default background ([fa58546](https://github.com/cozy/cozy-ui/commit/fa58546))
+
 # [103.8.0](https://github.com/cozy/cozy-ui/compare/v103.7.0...v103.8.0) (2024-02-27)
 
 
