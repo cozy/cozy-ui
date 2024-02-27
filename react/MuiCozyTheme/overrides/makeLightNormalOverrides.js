@@ -344,7 +344,7 @@ export const makeLightNormalOverrides = theme => ({
       backgroundColor: theme.palette.background.contrast
     },
     sticky: {
-      backgroundColor: theme.palette.background.contrast
+      backgroundColor: theme.palette.background.default
     }
   },
   MuiListItemText: {
