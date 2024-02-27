@@ -1,3 +1,15 @@
+# [103.8.0](https://github.com/cozy/cozy-ui/compare/v103.7.0...v103.8.0) (2024-02-27)
+
+
+### Bug Fixes
+
+* **MidEllipsis:** Doesn't ellipsed anymore if not needed ([6830d0c](https://github.com/cozy/cozy-ui/commit/6830d0c))
+
+
+### Features
+
+* **MidEllipsis:** Remove react-middle-ellipsis lib and flag ([a75d1e8](https://github.com/cozy/cozy-ui/commit/a75d1e8))
+
 # [103.7.0](https://github.com/cozy/cozy-ui/compare/v103.6.2...v103.7.0) (2024-02-26)
 
 
