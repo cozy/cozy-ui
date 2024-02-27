@@ -57,9 +57,8 @@ const Toolbar = ({
     >
       {onClose && (
         <IconButton
-          size="medium"
-          onClick={onClose}
           className={cx(classes.iconButton, { 'u-white': isDesktop })}
+          onClick={onClose}
         >
           <Icon icon={PreviousIcon} />
         </IconButton>
@@ -75,7 +74,7 @@ const Toolbar = ({
         {showFilePath ? <ToolbarFilePath file={file} /> : null}
       </div>
 
-      <div className="u-ml-auto u-ph-1">
+      <div className="u-flex">
         {isDesktop && (
           <IconButton
             className="u-white"
