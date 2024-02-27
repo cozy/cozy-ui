@@ -1,8 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import MiddleEllipsis from 'react-middle-ellipsis'
-import flag from 'cozy-flags'
 
 /** The left-to-right mark (LRM) is a control character (an invisible formatting character)
  * used in computerized typesetting (including word processing in a program like Microsoft Word)
@@ -16,7 +14,7 @@ import flag from 'cozy-flags'
  * */
 const LRM = <>&#8206;</>
 
-const MidEllipsisLegacy = forwardRef(
+const MidEllipsis = forwardRef(
   ({ text, className, children, ...props }, ref) => {
     if (text && typeof text !== 'string')
       throw new Error('The "text" prop of MidEllipsis can only be a string')
@@ -27,8 +25,8 @@ const MidEllipsisLegacy = forwardRef(
     const str = text || children
 
     const partLength = Math.round(str.length / 2)
-    const firstPart = str.substr(0, partLength)
-    const lastPart = str.substr(partLength, str.length)
+    const firstPart = str.substring(0, partLength).trim()
+    const lastPart = str.substring(partLength, str.length).trim()
 
     return (
       <div className={cx('u-midellipsis', className)} ref={ref} {...props}>
@@ -43,36 +41,11 @@ const MidEllipsisLegacy = forwardRef(
   }
 )
 
-MidEllipsisLegacy.displayName = 'MidEllipsis'
+MidEllipsis.displayName = 'MidEllipsis'
 
-MidEllipsisLegacy.propTypes = {
+MidEllipsis.propTypes = {
   text: PropTypes.string,
   className: PropTypes.string
 }
-
-// --
-// This is new component based on react-middle-ellipsis
-// We will delete all other stuff if perf test are successful with this one
-const styles = { whiteSpace: 'nowrap', overflow: 'hidden' }
-
-const MidEllipsisWithLib = forwardRef(({ text, ...props }, ref) => {
-  return (
-    <div style={styles}>
-      <MiddleEllipsis {...props} ref={ref}>
-        <span>{text}</span>
-      </MiddleEllipsis>
-    </div>
-  )
-})
-//
-// --
-
-const MidEllipsis = forwardRef((props, ref) => {
-  if (flag('ui.midellipsis-lib.enabled')) {
-    return <MidEllipsisWithLib {...props} ref={ref} />
-  }
-
-  return <MidEllipsisLegacy {...props} ref={ref} />
-})
 
 export default MidEllipsis
