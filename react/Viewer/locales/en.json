@@ -15,9 +15,7 @@
       },
       "generic": "An error occurred when opening this file, please try again.",
       "missing": "This file is missing",
-      "network": "This file could not be loaded. Do you have a working internet connection right now?",
-      "noapp": "No application on your device can open this file with mime type: %{fileMime} ",
-      "offline": "You should be connected to open this file"
+      "network": "This file could not be loaded. Do you have a working internet connection right now?"
     },
     "goto": "Go to %{url}",
     "next": "Next",

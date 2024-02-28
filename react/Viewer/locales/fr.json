@@ -15,9 +15,7 @@
       },
       "generic": "Une erreur s'est produite lors de l'ouverture de ce fichier, veuillez réessayer.",
       "missing": "Le fichier est manquant",
-      "network": "Ce fichier n'a pas pu être chargé. Avez-vous une connexion internet qui fonctionne actuellement ?",
-      "noapp": "Aucune application de votre appareil ne peut ouvrir ce fichier avec le type mime : %{fileMime} ",
-      "offline": "Vous devez être connecté pour ouvrir ce fichier"
+      "network": "Ce fichier n'a pas pu être chargé. Avez-vous une connexion internet qui fonctionne actuellement ?"
     },
     "goto": "Ouvrir %{url}",
     "next": "Suivante",
