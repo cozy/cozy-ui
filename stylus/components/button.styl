@@ -1,6 +1,4 @@
 @require '../settings/icons'
-@require '../utilities/display'
-@require '../utilities/text'
 @require '../tools/mixins'
 
 palette=json('../settings/palette.json', { hash: true })
@@ -431,7 +429,7 @@ $actionbtn--compact
         justify-content center
 
     [data-action='label']
-        @extend $hide
+        hide()
 
     [data-action='icon']
         border-left none
@@ -476,7 +474,7 @@ $actionbtn--new
         border-style solid
 
 $actionbtn-label
-    @extend $ellipsis
+    ellipsis()
     padding-right rem(8)
 
 $actionbtn-icon
