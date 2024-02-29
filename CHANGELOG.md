@@ -1,3 +1,10 @@
+## [103.8.2](https://github.com/cozy/cozy-ui/compare/v103.8.1...v103.8.2) (2024-02-29)
+
+
+### Bug Fixes
+
+* **Styles:** Remove import of stylus file with global class creation in it ([41808d7](https://github.com/cozy/cozy-ui/commit/41808d7))
+
 ## [103.8.1](https://github.com/cozy/cozy-ui/compare/v103.8.0...v103.8.1) (2024-02-27)
 
 
