@@ -1,24 +1,24 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
+import PropTypes from 'prop-types'
 
 import { useClient } from 'cozy-client'
-import { openFileWith } from 'cozy-client/dist/models/fsnative'
-import { isMobileApp } from 'cozy-device-helper'
 
-import Alerter from '../../deprecated/Alerter'
 import Spinner from '../../Spinner'
-import Button from '../../deprecated/Button'
 import FileImageLoader from '../../FileImageLoader'
 
-import { withViewerLocales } from '../hoc/withViewerLocales'
 import DownloadButton from '../NoViewer/DownloadButton'
 import NoViewer from '../NoViewer'
 
 import styles from './styles.styl'
+import { FileDoctype } from '../../proptypes'
+import { useAlert } from '../../providers/Alert'
+import { withViewerLocales } from '../hoc/withViewerLocales'
 
 export const PdfMobileViewer = ({ file, url, t, gestures }) => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
   const imgRef = useRef(null)
+  const { showAlert } = useAlert()
 
   const client = useClient()
 
@@ -31,48 +31,37 @@ export const PdfMobileViewer = ({ file, url, t, gestures }) => {
     setLoading(false)
   }
 
-  const onFileOpen = async file => {
-    try {
-      await openFileWith(client, file)
-    } catch (error) {
-      Alerter.info(`Viewer.error.${error}`, { fileMime: file.mime })
-    }
-  }
-
-  const handleOnClick = file => {
-    !isMobileApp() && client.collection('io.cozy.files').download(file)
-  }
+  const handleOnClick = useCallback(
+    async file => {
+      try {
+        await client.collection('io.cozy.files').download(file)
+      } catch (error) {
+        showAlert(t('Viewer.error.generic'), 'error')
+      }
+    },
+    [client, showAlert, t]
+  )
 
   useEffect(() => {
-    if (gestures && isMobileApp()) {
+    if (gestures) {
       gestures.get('pinch').set({ enable: true })
-      gestures.on('tap doubletap pinchend', e => {
-        if (e.target === imgRef.current) {
-          onFileOpen(file)
+      gestures.on('pinchend tap', evt => {
+        if (evt.tapCount === 1) {
+          handleOnClick(file)
         }
       })
 
       return () => {
-        gestures.off('tap doubletap pinchend')
+        gestures.off('pinchend tap')
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [gestures])
+  }, [client, gestures, file, handleOnClick])
 
   if (error) {
     return (
       <NoViewer
         file={file}
-        renderFallbackExtraContent={
-          isMobileApp()
-            ? file => (
-                <Button
-                  onClick={() => onFileOpen(file)}
-                  label={t('Viewer.openWith')}
-                />
-              )
-            : file => <DownloadButton file={file} />
-        }
+        renderFallbackExtraContent={file => <DownloadButton file={file} />}
       />
     )
   }
@@ -94,13 +83,18 @@ export const PdfMobileViewer = ({ file, url, t, gestures }) => {
               alt={file.name}
               src={src}
               onLoad={onImageLoad}
-              onClick={() => handleOnClick(file)}
             />
           )}
         />
       )}
     </div>
   )
+}
+
+PdfMobileViewer.prototype = {
+  file: FileDoctype.isRequired,
+  url: PropTypes.string,
+  gestures: PropTypes.object
 }
 
 export default withViewerLocales(PdfMobileViewer)

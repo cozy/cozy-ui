@@ -2,7 +2,6 @@ import React from 'react'
 import { render, waitFor } from '@testing-library/react'
 
 import { CozyProvider, createMockClient } from 'cozy-client'
-import { isMobileApp } from 'cozy-device-helper'
 import logger from 'cozy-logger'
 
 import { I18n } from '../../providers/I18n'
@@ -11,11 +10,6 @@ import EncryptedProvider from '../providers/EncryptedProvider'
 import { PdfMobileViewer } from './PdfMobileViewer'
 
 logger.error = logger.warn = jest.fn()
-
-jest.mock('cozy-device-helper', () => ({
-  ...jest.requireActual('cozy-device-helper'),
-  isMobileApp: jest.fn()
-}))
 
 const client = createMockClient({})
 client.collection = jest.fn(() => ({
@@ -26,6 +20,9 @@ client.plugins.realtime = {
   unsubscribe: jest.fn(),
   unsubscribeAll: jest.fn()
 }
+jest.mock('../../providers/Alert', () => ({
+  useAlert: jest.fn().mockReturnValue({ showAlert: jest.fn() })
+}))
 
 const file = {
   _id: 'pdf',
@@ -67,27 +64,12 @@ describe('PdfMobileViewer', () => {
     })
 
     it('should show "download" button on browser', async () => {
-      isMobileApp.mockReturnValue(false)
-
       const { root } = setup({ file: fileWithoutLinks })
       const { getByText, queryByRole } = root
 
       await waitFor(() => {
         expect(queryByRole('progressbar')).toBeFalsy()
         expect(getByText('Download'))
-        expect(getByText(file.name))
-      })
-    })
-
-    it('should show "open with" button on native app', async () => {
-      isMobileApp.mockReturnValue(true)
-
-      const { root } = setup({ file: fileWithoutLinks })
-      const { getByText, queryByRole } = root
-
-      await waitFor(() => {
-        expect(queryByRole('progressbar')).toBeFalsy()
-        expect(getByText('Viewer.openWith'))
         expect(getByText(file.name))
       })
     })
