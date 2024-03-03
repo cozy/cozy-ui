@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { useI18n } from '../providers/I18n'
-import { Table } from '../Table'
+import { Table } from '../deprecated/Table'
 import List from '../List'
 import ListSubheader from '../ListSubheader'
 import { sortContacts, categorizeContacts, sortHeaders } from './helpers'

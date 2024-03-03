@@ -3,7 +3,7 @@ import { models } from 'cozy-client'
 import PropTypes from 'prop-types'
 
 import { Avatar } from '../../Avatar'
-import { TableCell } from '../../Table'
+import { TableCell } from '../../deprecated/Table'
 import ContactName from './ContactName'
 import styles from '../styles.styl'
 
