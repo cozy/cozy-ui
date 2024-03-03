@@ -6,7 +6,7 @@ import {
   TableRow,
   TableHeader,
   TableCell
-} from 'cozy-ui/transpiled/react/Table';
+} from 'cozy-ui/transpiled/react/deprecated/Table';
 
 let refRow = ''
 const cellStyles = { flexGrow: 1 };

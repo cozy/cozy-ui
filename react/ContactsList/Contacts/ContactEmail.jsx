@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { TableCell } from '../../Table'
+import { TableCell } from '../../deprecated/Table'
 import styles from '../styles.styl'
 
 const ContactEmail = ({ email }) => (
