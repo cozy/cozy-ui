@@ -1,3 +1,15 @@
+# [103.9.0](https://github.com/cozy/cozy-ui/compare/v103.8.2...v103.9.0) (2024-03-04)
+
+
+### Bug Fixes
+
+* **ListItem:** Remove `contentAuthor` metadata for expanded attributes ([9f26d7d](https://github.com/cozy/cozy-ui/commit/9f26d7d))
+
+
+### Features
+
+* **Viewer:** Replace `contentAuthor` by `employerName` info metadata ([abe1ab2](https://github.com/cozy/cozy-ui/commit/abe1ab2))
+
 ## [103.8.2](https://github.com/cozy/cozy-ui/compare/v103.8.1...v103.8.2) (2024-02-29)
 
 
