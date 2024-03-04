@@ -28,7 +28,7 @@ export const knownInformationMetadataNames = [
   'refTaxIncome',
   'contractType',
   'netSocialAmount',
-  'contentAuthor',
+  'employerName',
   'noticePeriod'
 ]
 export const knownOtherMetadataNames = ['contact', 'page', 'qualification']
