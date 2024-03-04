@@ -93,7 +93,7 @@
             "contractType": "Type de contrat",
             "noticePeriod": "Alerte d’expiration",
             "netSocialAmount": "Montant net social",
-            "contentAuthor": "Nom de l'employeur",
+            "employerName": "Nom de l'employeur",
             "bicNumber": "Numéro BIC"
           },
           "day": "jour |||| jours"
