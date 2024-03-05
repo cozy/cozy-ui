@@ -1,3 +1,11 @@
+# [103.10.0](https://github.com/cozy/cozy-ui/compare/v103.9.0...v103.10.0) (2024-03-05)
+
+
+### Features
+
+* **Viewer:** Add `€` for net social amount and pay_sheet number value ([a8e6800](https://github.com/cozy/cozy-ui/commit/a8e6800))
+* **Viewer:** Add translate for reference tax number ([99da6d6](https://github.com/cozy/cozy-ui/commit/99da6d6))
+
 # [103.9.0](https://github.com/cozy/cozy-ui/compare/v103.8.2...v103.9.0) (2024-03-04)
 
 
