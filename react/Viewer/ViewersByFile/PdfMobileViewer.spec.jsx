@@ -33,7 +33,7 @@ const file = {
   name: 'Demo.pdf',
   mime: 'application/pdf',
   links: {
-    preview: 'https://viewerdemo.cozycloud.cc/IMG_0062.PNG'
+    medium: 'https://viewerdemo.cozycloud.cc/IMG_0062.PNG'
   }
 }
 
@@ -59,7 +59,7 @@ describe('PdfMobileViewer', () => {
     expect(getByRole('progressbar'))
   })
 
-  describe('errors if file as no preview or failed to download', () => {
+  describe('errors if file as no medium or failed to download', () => {
     let fileWithoutLinks = file
 
     beforeAll(() => {

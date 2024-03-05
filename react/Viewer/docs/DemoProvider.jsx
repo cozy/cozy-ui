@@ -38,8 +38,7 @@ const mockClient = {
         resolve({
           data: {
             links: {
-              large: 'https://viewerdemo.cozycloud.cc/IMG_0062.PNG',
-              preview: 'https://viewerdemo.cozycloud.cc/IMG_0062.PNG'
+              large: 'https://viewerdemo.cozycloud.cc/IMG_0062.PNG'
             }
           }
         })

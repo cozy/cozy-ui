@@ -171,14 +171,7 @@ export class FileImageLoader extends Component {
 FileImageLoader.propTypes = {
   file: PropTypes.object.isRequired,
   render: PropTypes.func.isRequired,
-  linkType: PropTypes.oneOf([
-    'tiny',
-    'small',
-    'medium',
-    'large',
-    'preview',
-    'icon'
-  ]),
+  linkType: PropTypes.oneOf(['tiny', 'small', 'medium', 'large', 'icon']),
   onError: PropTypes.func,
   renderFallback: PropTypes.func
 }
