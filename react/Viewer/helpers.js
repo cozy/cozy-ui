@@ -8,35 +8,15 @@ const {
   normalize
 } = models.file
 
-export const knownDateMetadataNames = [
-  'AObtentionDate',
-  'BObtentionDate',
-  'CObtentionDate',
-  'DObtentionDate',
-  'obtentionDate',
-  'expirationDate',
-  'referencedDate',
-  'issueDate',
-  'shootingDate',
-  'date',
-  'datetime'
-]
-export const knownInformationMetadataNames = [
-  'number',
-  'bicNumber',
-  'country',
-  'refTaxIncome',
-  'contractType',
-  'netSocialAmount',
-  'employerName',
-  'noticePeriod'
-]
-export const knownOtherMetadataNames = ['contact', 'page', 'qualification']
+const {
+  KNOWN_DATE_METADATA_NAMES,
+  KNOWN_INFORMATION_METADATA_NAMES
+} = models.paper
 
 export const getCurrentModel = metadataName => {
   if (
-    knownDateMetadataNames.includes(metadataName) ||
-    knownInformationMetadataNames.includes(metadataName)
+    KNOWN_DATE_METADATA_NAMES.includes(metadataName) ||
+    KNOWN_INFORMATION_METADATA_NAMES.includes(metadataName)
   ) {
     return 'information'
   }
@@ -74,63 +54,6 @@ export const downloadFile = async ({ client, file, url }) => {
 }
 
 export const isFileEncrypted = file => isEncrypted(file)
-
-const makeMetadataQualification = ({ metadata, knownMetadataName, value }) => {
-  const shouldReturnThisMetadata = Object.keys(metadata).includes(
-    knownMetadataName
-  )
-
-  if (shouldReturnThisMetadata || knownMetadataName === 'contact') {
-    return { name: knownMetadataName, value: value || null }
-  }
-}
-
-/**
- * @param {Object} metadata
- * @returns {{ name: string, value: string }[]} Array of formated metadata
- */
-export const formatMetadataQualification = metadata => {
-  const dates = knownDateMetadataNames
-    .map(dateName =>
-      makeMetadataQualification({
-        metadata,
-        knownMetadataName: dateName,
-        value: metadata[dateName]
-      })
-    )
-    .filter(Boolean)
-    .filter((data, _, arr) => {
-      if (arr.length > 1) return data.name !== 'datetime'
-      return data
-    })
-
-  const informations = knownInformationMetadataNames
-    .map(numberName =>
-      makeMetadataQualification({
-        metadata,
-        knownMetadataName: numberName,
-        value: metadata[numberName]
-      })
-    )
-    .filter(Boolean)
-
-  const others = knownOtherMetadataNames
-    .map(otherName => {
-      const value =
-        otherName === 'qualification'
-          ? metadata[otherName]?.label
-          : metadata[otherName]
-
-      return makeMetadataQualification({
-        metadata,
-        knownMetadataName: otherName,
-        value
-      })
-    })
-    .filter(Boolean)
-
-  return [...dates, ...informations, ...others]
-}
 
 export const formatDate = ({ f, lang, date }) => {
   if (lang === 'en') {
