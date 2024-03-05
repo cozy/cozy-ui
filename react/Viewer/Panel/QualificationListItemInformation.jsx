@@ -12,7 +12,13 @@ import QualificationListItemText from './QualificationListItemText'
 import { useI18n } from '../../providers/I18n'
 import MidEllipsis from '../../MidEllipsis'
 
-export const makeInformationValue = ({ name, value, t, scannerT }) => {
+export const makeInformationValue = ({
+  name,
+  value,
+  qualificationLabel,
+  t,
+  scannerT
+}) => {
   if (typeof value !== 'number' && !value) {
     return t('Viewer.panel.qualification.noInfo')
   }
@@ -25,7 +31,11 @@ export const makeInformationValue = ({ name, value, t, scannerT }) => {
   if (name === 'contractType') {
     return scannerT(`Scan.attributes.contractType.${value}`, { _: value })
   }
-  if (name === 'refTaxIncome') {
+  if (
+    name === 'refTaxIncome' ||
+    name === 'netSocialAmount' ||
+    (name === 'number' && qualificationLabel === 'pay_sheet')
+  ) {
     return `${value} €`
   }
 
@@ -39,7 +49,13 @@ const QualificationListItemInformation = forwardRef(
     const { name, value } = formatedMetadataQualification
     const qualificationLabel = file.metadata.qualification.label
 
-    const currentValue = makeInformationValue({ name, value, t, scannerT })
+    const currentValue = makeInformationValue({
+      name,
+      value,
+      qualificationLabel,
+      t,
+      scannerT
+    })
     const title =
       name === 'number'
         ? t(
