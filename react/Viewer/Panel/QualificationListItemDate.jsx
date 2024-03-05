@@ -1,7 +1,12 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 
-import { models } from 'cozy-client'
+import {
+  isExpired,
+  isExpiringSoon,
+  getTranslatedNameForDateMetadata,
+  formatDateMetadataValue
+} from 'cozy-client/dist/models/paper'
 
 import ListItem from '../../ListItem'
 import ListItemSecondaryAction from '../../ListItemSecondaryAction'
@@ -12,23 +17,22 @@ import Typography from '../../Typography'
 import ExpirationAnnotation from '../components/ExpirationAnnotation'
 import QualificationListItemText from './QualificationListItemText'
 import { useI18n } from '../../providers/I18n'
-import { formatDate } from '../helpers'
-
-const { isExpired, isExpiringSoon } = models.paper
 
 const QualificationListItemDate = forwardRef(
   ({ file, formatedMetadataQualification, toggleActionsMenu }, ref) => {
-    const { t, f, lang } = useI18n()
+    const { f, lang } = useI18n()
     const { name, value } = formatedMetadataQualification
-    const formattedDate = value
-      ? formatDate({ f, lang, date: value })
-      : t('Viewer.panel.qualification.noInfo')
+    const formattedTitle = getTranslatedNameForDateMetadata(name, { lang })
+    const formattedDate = formatDateMetadataValue(value, {
+      f,
+      lang
+    })
     const isExpirationDate = name === 'expirationDate'
 
     return (
       <ListItem className={'u-pl-2 u-pr-3'}>
         <QualificationListItemText
-          primary={t(`Viewer.panel.qualification.date.title.${name}`)}
+          primary={formattedTitle}
           secondary={
             <>
               <Typography component="span" variant="inherit">
