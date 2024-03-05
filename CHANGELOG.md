@@ -1,3 +1,12 @@
+# [103.11.0](https://github.com/cozy/cozy-ui/compare/v103.10.0...v103.11.0) (2024-03-05)
+
+
+### Features
+
+* **ListItem:** Add `€` on net social amount and pay_sheet number values ([0c9f40f](https://github.com/cozy/cozy-ui/commit/0c9f40f))
+* **ListItem:** Add translated pay_sheet flexsearchProps ([e19aa0e](https://github.com/cozy/cozy-ui/commit/e19aa0e))
+* **ListItem:** Remove useless expanded attributes ([bd3dd4b](https://github.com/cozy/cozy-ui/commit/bd3dd4b)), closes [/github.com/cozy/mespapiers/blob/16c0b7bfc809518bd1e9fb2d54ad894ab77b74b0/src/helpers/migration/metadata.js#L17](https://github.com//github.com/cozy/mespapiers/blob/16c0b7bfc809518bd1e9fb2d54ad894ab77b74b0/src/helpers/migration/metadata.js/issues/L17)
+
 # [103.10.0](https://github.com/cozy/cozy-ui/compare/v103.9.0...v103.10.0) (2024-03-05)
 
 
