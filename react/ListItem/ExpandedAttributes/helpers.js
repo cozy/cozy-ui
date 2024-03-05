@@ -32,13 +32,8 @@ export const defaultExpandedAttributes = {
   'io.cozy.contacts': ['email', 'phone', 'address', 'birthday'],
   'io.cozy.files': [
     'metadata.number',
-    'metadata.cafFileNumber',
-    'metadata.cardNumber',
-    'metadata.vinNumber',
-    'metadata.ibanNumber',
     'metadata.bicNumber',
     'metadata.netSocialAmount',
-    'metadata.passportNumber',
     'metadata.noticePeriod',
     'metadata.obtentionDate',
     'metadata.expirationDate',
