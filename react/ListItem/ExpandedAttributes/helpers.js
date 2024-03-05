@@ -183,7 +183,11 @@ export const getValueExtended = ({ attrKey, value, t }) => {
       return t('common.day', { smart_count: parseInt(value) })
     }
   }
-  if (attrKey === 'metadata.refTaxIncome') {
+  if (
+    attrKey === 'metadata.refTaxIncome' ||
+    attrKey === 'metadata.netSocialAmount' ||
+    attrKey === 'metadata.number.pay_sheet'
+  ) {
     if (!isNaN(parseInt(value))) {
       return `${value} €`
     }
