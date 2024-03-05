@@ -88,6 +88,18 @@
             "pay_sheet": {
               "number": "Rémunération brute"
             },
+            "tax_return": {
+              "number": "Numéro fiscal de référence"
+            },
+            "tax_notice": {
+              "number": "Numéro fiscal de référence"
+            },
+            "real_estate_tax": {
+              "number": "Numéro fiscal de référence"
+            },
+            "tax_timetable": {
+              "number": "Numéro fiscal de référence"
+            },
             "country": "Nationalité du bénéficiaire",
             "refTaxIncome": "Revenu fiscal de référence",
             "contractType": "Type de contrat",

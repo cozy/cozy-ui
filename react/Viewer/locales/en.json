@@ -88,6 +88,18 @@
             "pay_sheet": {
               "number": "Gross remuneration"
             },
+            "tax_return": {
+              "number": "Reference tax number"
+            },
+            "tax_notice": {
+              "number": "Reference tax number"
+            },
+            "real_estate_tax": {
+              "number": "Reference tax number"
+            },
+            "tax_timetable": {
+              "number": "Reference tax number"
+            },
             "country": "Beneficiary nationality",
             "refTaxIncome": "Reference tax income",
             "contractType": "Contract type",
