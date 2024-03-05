@@ -4,35 +4,23 @@ import PropTypes from 'prop-types'
 import {
   isExpiringSoon,
   formatMetadataQualification,
-  KNOWN_DATE_METADATA_NAMES,
-  KNOWN_INFORMATION_METADATA_NAMES,
-  KNOWN_OTHER_METADATA_NAMES
+  getMetadataQualificationType
 } from 'cozy-client/dist/models/paper'
 
 import List from '../../List'
 import { withViewerLocales } from '../hoc/withViewerLocales'
 import ExpirationAlert from '../components/ExpirationAlert'
-import QualificationListItemContact from './QualificationListItemContact'
 import ActionMenuWrapper from './ActionMenuWrapper'
+import QualificationListItemContact from './QualificationListItemContact'
 import QualificationListItemDate from './QualificationListItemDate'
 import QualificationListItemInformation from './QualificationListItemInformation'
 import QualificationListItemOther from './QualificationListItemOther'
 
-const makeQualificationListItemComp = metadataName => {
-  if (KNOWN_DATE_METADATA_NAMES.includes(metadataName)) {
-    return QualificationListItemDate
-  }
-
-  if (KNOWN_INFORMATION_METADATA_NAMES.includes(metadataName)) {
-    return QualificationListItemInformation
-  }
-
-  if (KNOWN_OTHER_METADATA_NAMES.includes(metadataName)) {
-    if (metadataName === 'contact') {
-      return QualificationListItemContact
-    }
-    return QualificationListItemOther
-  }
+const ComponentFromMetadataQualificationType = {
+  contact: QualificationListItemContact,
+  date: QualificationListItemDate,
+  information: QualificationListItemInformation,
+  other: QualificationListItemOther
 }
 
 const isExpirationAlertHidden = file => {
@@ -77,7 +65,9 @@ const Qualification = ({ file }) => {
       <List className={'u-pv-1'}>
         {formatedMetadataQualification.map((meta, idx) => {
           const { name } = meta
-          const QualificationListItemComp = makeQualificationListItemComp(name)
+          const metadataQualificationType = getMetadataQualificationType(name)
+          const QualificationListItemComp =
+            ComponentFromMetadataQualificationType[metadataQualificationType]
 
           return (
             <QualificationListItemComp
