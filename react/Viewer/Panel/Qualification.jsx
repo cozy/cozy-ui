@@ -1,16 +1,16 @@
 import React, { useRef, useState, createRef, useMemo, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-import { isExpiringSoon } from 'cozy-client/dist/models/paper'
+import {
+  isExpiringSoon,
+  formatMetadataQualification,
+  KNOWN_DATE_METADATA_NAMES,
+  KNOWN_INFORMATION_METADATA_NAMES,
+  KNOWN_OTHER_METADATA_NAMES
+} from 'cozy-client/dist/models/paper'
 
 import List from '../../List'
 import { withViewerLocales } from '../hoc/withViewerLocales'
-import {
-  formatMetadataQualification,
-  knownDateMetadataNames,
-  knownInformationMetadataNames,
-  knownOtherMetadataNames
-} from '../helpers'
 import ExpirationAlert from '../components/ExpirationAlert'
 import QualificationListItemContact from './QualificationListItemContact'
 import ActionMenuWrapper from './ActionMenuWrapper'
@@ -19,15 +19,15 @@ import QualificationListItemInformation from './QualificationListItemInformation
 import QualificationListItemOther from './QualificationListItemOther'
 
 const makeQualificationListItemComp = metadataName => {
-  if (knownDateMetadataNames.includes(metadataName)) {
+  if (KNOWN_DATE_METADATA_NAMES.includes(metadataName)) {
     return QualificationListItemDate
   }
 
-  if (knownInformationMetadataNames.includes(metadataName)) {
+  if (KNOWN_INFORMATION_METADATA_NAMES.includes(metadataName)) {
     return QualificationListItemInformation
   }
 
-  if (knownOtherMetadataNames.includes(metadataName)) {
+  if (KNOWN_OTHER_METADATA_NAMES.includes(metadataName)) {
     if (metadataName === 'contact') {
       return QualificationListItemContact
     }
