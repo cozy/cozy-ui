@@ -1,3 +1,10 @@
+## [103.11.1](https://github.com/cozy/cozy-ui/compare/v103.11.0...v103.11.1) (2024-03-05)
+
+
+### Bug Fixes
+
+* Use /medium for PDF thumbnails ([d117ee6](https://github.com/cozy/cozy-ui/commit/d117ee6))
+
 # [103.11.0](https://github.com/cozy/cozy-ui/compare/v103.10.0...v103.11.0) (2024-03-05)
 
 
