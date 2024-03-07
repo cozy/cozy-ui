@@ -46,7 +46,7 @@ import { makeStyles } from 'cozy-ui/transpiled/react/styles'
 import Variants from 'cozy-ui/docs/components/Variants'
 import Card from 'cozy-ui/transpiled/react/Card'
 import Checkbox from 'cozy-ui/transpiled/react/Checkbox'
-import Viewer from 'cozy-ui/transpiled/react/Viewer'
+import Viewer, { ToolbarButtons, FooterActionButtons, ForwardOrDownloadButton } from 'cozy-ui/transpiled/react/Viewer'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Paper from 'cozy-ui/transpiled/react/Paper'
 import Typography from 'cozy-ui/transpiled/react/Typography'
@@ -60,9 +60,8 @@ import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
 import ShareIcon from 'cozy-ui/transpiled/react/Icons/Share'
 import { isValidForPanel } from 'cozy-ui/transpiled/react/Viewer/helpers'
 import getPanelBlocks, { panelBlocksSpecs } from 'cozy-ui/transpiled/react/Viewer/Panel/getPanelBlocks'
-import FooterActionButtons from 'cozy-ui/transpiled/react/Viewer/Footer/FooterActionButtons'
-import ForwardOrDownloadButton from 'cozy-ui/transpiled/react/Viewer/Footer/ForwardOrDownloadButton'
 import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite'
+import IconButton from 'cozy-ui/transpiled/react/IconButton'
 
 // We provide a collection of (fake) io.cozy.files to be rendered
 const files = [
@@ -263,6 +262,22 @@ const editPathByModelProps = {
                 }
               }}
             >
+              <ToolbarButtons>
+                <IconButton
+                  className="u-white"
+                  aria-label="Share"
+                  onClick={() => alert("Click Share toolbar button")}
+                >
+                  <Icon icon={ShareIcon} />
+                </IconButton>
+                <IconButton
+                  className="u-white"
+                  aria-label="Carbon Copy"
+                  onClick={() => alert("Click CarbonCopy toolbar button")}
+                >
+                  <Icon icon={CarbonCopyIcon} />
+                </IconButton>
+              </ToolbarButtons>
               <FooterActionButtons>
                 <ShareButtonFake />
                 <ForwardOrDownloadButton />
