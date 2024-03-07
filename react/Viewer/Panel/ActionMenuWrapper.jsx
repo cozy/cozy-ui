@@ -5,7 +5,7 @@ import { useAppLinkWithStoreFallback, useClient } from 'cozy-client'
 
 import useBreakpoints from '../../providers/Breakpoints'
 import { useI18n } from '../../providers/I18n'
-import useViewerSnackbar from '../providers/ViewerSnackbarProvider'
+import { useAlert } from '../../providers/Alert'
 import {
   buildEditAttributePath,
   isEditableAttribute,
@@ -22,7 +22,7 @@ const ActionMenuWrapper = forwardRef(({ onClose, file, optionFile }, ref) => {
   const editPathByModelProps = useActionMenuContext()
   const { isMobile } = useBreakpoints()
   const { t } = useI18n()
-  const { showViewerSnackbar } = useViewerSnackbar()
+  const { showAlert } = useAlert()
   const client = useClient()
 
   const currentModel = getCurrentModel(name)
@@ -42,12 +42,19 @@ const ActionMenuWrapper = forwardRef(({ onClose, file, optionFile }, ref) => {
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(value)
-      showViewerSnackbar(
-        'success',
-        t(`Viewer.snackbar.copiedToClipboard.success`)
-      )
+      showAlert({
+        message: t(`Viewer.snackbar.copiedToClipboard.success`),
+        severity: 'success',
+        variant: 'filled',
+        icon: false
+      })
     } catch (error) {
-      showViewerSnackbar('error', t(`Viewer.snackbar.copiedToClipboard.error`))
+      showAlert({
+        message: t(`Viewer.snackbar.copiedToClipboard.error`),
+        severity: 'error',
+        variant: 'filled',
+        icon: false
+      })
     }
     onClose()
   }
