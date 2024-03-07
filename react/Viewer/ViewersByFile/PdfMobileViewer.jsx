@@ -39,6 +39,7 @@ export const PdfMobileViewer = ({ file, url, t, gestures }) => {
         showAlert({
           message: t('Viewer.error.generic'),
           severity: 'error',
+          variant: 'filled',
           icon: false
         })
       }

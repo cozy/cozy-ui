@@ -12,8 +12,7 @@ import { isValidForPanel } from './helpers'
 import Viewer from './Viewer'
 import ViewerInformationsWrapper from './ViewerInformationsWrapper'
 import EncryptedProvider from './providers/EncryptedProvider'
-import { ViewerSnackbarProvider } from './providers/ViewerSnackbarProvider'
-import ViewerSnackbar from './snackbar/ViewerSnackbar'
+import AlertProvider from '../providers/Alert'
 import { ActionMenuProvider } from './providers/ActionMenuProvider'
 
 import styles from './styles.styl'
@@ -49,7 +48,7 @@ const ViewerContainer = props => {
   }
 
   return (
-    <ViewerSnackbarProvider>
+    <AlertProvider>
       <ActionMenuProvider editPathByModelProps={editPathByModelProps}>
         <div
           id="viewer-wrapper"
@@ -76,9 +75,8 @@ const ViewerContainer = props => {
             {children}
           </ViewerInformationsWrapper>
         </div>
-        <ViewerSnackbar />
       </ActionMenuProvider>
-    </ViewerSnackbarProvider>
+    </AlertProvider>
   )
 }
 
