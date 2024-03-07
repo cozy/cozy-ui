@@ -92,10 +92,18 @@ class ViewerControls extends Component {
 
   renderChildren(children) {
     if (!children) return null
-    return React.cloneElement(children, {
-      gestures: this.state.gestures,
-      gesturesRef: this.wrapped,
-      onSwipe: this.onSwipe
+
+    return React.Children.map(children, child => {
+      if (
+        child.type.name === 'ViewerByFile' ||
+        child.type.displayName === 'ViewerByFile'
+      ) {
+        return React.cloneElement(child, {
+          gestures: this.state.gestures,
+          gesturesRef: this.wrapped,
+          onSwipe: this.onSwipe
+        })
+      }
     })
   }
 
@@ -137,11 +145,13 @@ class ViewerControls extends Component {
           <Toolbar
             toolbarRef={toolbarRef}
             file={file}
-            onClose={showClose && onClose}
+            showFilePath={showFilePath}
             onMouseEnter={this.showControls}
             onMouseLeave={this.hideControls}
-            showFilePath={showFilePath}
-          />
+            onClose={showClose && onClose}
+          >
+            {children}
+          </Toolbar>
         )}
         {showNavigation && isDesktop && hasPrevious && (
           <Navigation

@@ -17,6 +17,7 @@ import { withViewerLocales } from '../hoc/withViewerLocales'
 import { downloadFile } from '../helpers'
 import { useEncrypted } from '../providers/EncryptedProvider'
 import { ToolbarFilePath } from './ToolbarFilePath'
+import { extractChildrenCompByName } from '../Footer/helpers'
 
 import styles from './styles.styl'
 import MidEllipsis from '../../MidEllipsis'
@@ -38,12 +39,19 @@ const Toolbar = ({
   t,
   toolbarRef,
   breakpoints: { isDesktop },
+  children,
   showFilePath
 }) => {
   const client = useClient()
   const classes = useClasses()
 
   const { url } = useEncrypted()
+
+  const ToolbarButtons = extractChildrenCompByName({
+    children,
+    file,
+    name: 'ToolbarButtons'
+  })
 
   return (
     <div
@@ -76,13 +84,16 @@ const Toolbar = ({
 
       <div className="u-flex">
         {isDesktop && (
-          <IconButton
-            className="u-white"
-            aria-label={t('Viewer.download')}
-            onClick={() => downloadFile({ client, file, url })}
-          >
-            <Icon icon={DownloadIcon} />
-          </IconButton>
+          <>
+            {ToolbarButtons}
+            <IconButton
+              className="u-white"
+              aria-label={t('Viewer.download')}
+              onClick={() => downloadFile({ client, file, url })}
+            >
+              <Icon icon={DownloadIcon} />
+            </IconButton>
+          </>
         )}
       </div>
     </div>

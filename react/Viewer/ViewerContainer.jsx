@@ -63,7 +63,9 @@ const ViewerContainer = props => {
               hasNext={hasNext}
               validForPanel={validForPanel}
               toolbarRef={toolbarRef}
-            />
+            >
+              {children}
+            </Viewer>
           </EncryptedProvider>
           <ViewerInformationsWrapper
             isPublic={isPublic}
