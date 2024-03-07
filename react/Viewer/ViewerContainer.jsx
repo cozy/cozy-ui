@@ -4,9 +4,10 @@ import cx from 'classnames'
 
 import useBreakpoints from '../providers/Breakpoints'
 import { FileDoctype } from '../proptypes'
-
-import Modal from '../Modal'
+import { useExtendI18n } from '../providers/I18n'
 import { useCozyTheme } from '../providers/CozyTheme'
+import Modal from '../Modal'
+
 import { toolbarPropsPropType } from './proptypes'
 import { isValidForPanel } from './helpers'
 import Viewer from './Viewer'
@@ -14,7 +15,7 @@ import ViewerInformationsWrapper from './ViewerInformationsWrapper'
 import EncryptedProvider from './providers/EncryptedProvider'
 import AlertProvider from '../providers/Alert'
 import { ActionMenuProvider } from './providers/ActionMenuProvider'
-
+import { locales } from './locales'
 import styles from './styles.styl'
 
 const ViewerContainer = props => {
@@ -31,6 +32,7 @@ const ViewerContainer = props => {
   const { currentIndex, files, currentURL } = props
   const toolbarRef = createRef()
   const { isDesktop } = useBreakpoints()
+  useExtendI18n(locales)
   const currentFile = files[currentIndex]
   const fileCount = files.length
   const hasPrevious = currentIndex > 0

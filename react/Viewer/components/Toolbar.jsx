@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import flow from 'lodash/flow'
 
 import { useClient } from 'cozy-client'
 
@@ -12,15 +11,15 @@ import Icon from '../../Icon'
 import Typography from '../../Typography'
 import PreviousIcon from '../../Icons/Previous'
 import DownloadIcon from '../../Icons/Download'
+import { useI18n } from '../../providers/I18n'
+import MidEllipsis from '../../MidEllipsis'
 
-import { withViewerLocales } from '../hoc/withViewerLocales'
 import { downloadFile } from '../helpers'
 import { useEncrypted } from '../providers/EncryptedProvider'
 import { ToolbarFilePath } from './ToolbarFilePath'
 import { extractChildrenCompByName } from '../Footer/helpers'
 
 import styles from './styles.styl'
-import MidEllipsis from '../../MidEllipsis'
 
 const useClasses = makeStyles(theme => ({
   iconButton: {
@@ -36,7 +35,6 @@ const Toolbar = ({
   onMouseLeave,
   file,
   onClose,
-  t,
   toolbarRef,
   breakpoints: { isDesktop },
   children,
@@ -44,6 +42,7 @@ const Toolbar = ({
 }) => {
   const client = useClient()
   const classes = useClasses()
+  const { t } = useI18n()
 
   const { url } = useEncrypted()
 
@@ -109,7 +108,4 @@ Toolbar.propTypes = {
   showFilePath: PropTypes.bool
 }
 
-export default flow(
-  withBreakpoints(),
-  withViewerLocales
-)(Toolbar)
+export default withBreakpoints()(Toolbar)
