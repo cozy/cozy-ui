@@ -46,6 +46,7 @@ export class I18n extends Component {
     return {
       t: this.t,
       f: this.format,
+      polyglot: (props || this.props).polyglot || this.translator,
       lang: (props || this.props).lang
     }
   }
@@ -84,6 +85,7 @@ I18n.defaultProps = {
 I18n.childContextTypes = {
   t: PropTypes.func,
   f: PropTypes.func,
+  polyglot: PropTypes.object,
   lang: PropTypes.string
 }
 
