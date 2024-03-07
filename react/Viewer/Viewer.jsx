@@ -70,6 +70,7 @@ class Viewer extends Component {
       showNavigation,
       renderFallbackExtraContent,
       validForPanel,
+      children,
       componentsProps
     } = this.props
 
@@ -90,6 +91,7 @@ class Viewer extends Component {
           showNavigation={showNavigation}
           showInfoPanel={validForPanel}
         >
+          {children}
           <ViewerByFile
             file={currentFile}
             onClose={this.onClose}

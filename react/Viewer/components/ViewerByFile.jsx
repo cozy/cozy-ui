@@ -52,44 +52,46 @@ export const getViewerComponentName = ({
   }
 }
 
-const ViewerByFile = ({
-  file,
-  onClose,
-  renderFallbackExtraContent,
-  gestures,
-  gesturesRef,
-  onSwipe,
-  breakpoints: { isDesktop },
-  componentsProps
-}) => {
-  const isOnlyOfficeEnabled = componentsProps?.OnlyOfficeViewer?.isEnabled
-  const onlyOfficeOpener = componentsProps?.OnlyOfficeViewer?.opener
+const ViewerByFile = withBreakpoints()(
+  ({
+    file,
+    onClose,
+    renderFallbackExtraContent,
+    gestures,
+    gesturesRef,
+    onSwipe,
+    breakpoints: { isDesktop },
+    componentsProps
+  }) => {
+    const isOnlyOfficeEnabled = componentsProps?.OnlyOfficeViewer?.isEnabled
+    const onlyOfficeOpener = componentsProps?.OnlyOfficeViewer?.opener
 
-  const { url } = useEncrypted()
+    const { url } = useEncrypted()
 
-  const ComponentName = useMemo(
-    () =>
-      getViewerComponentName({
-        file,
-        isDesktop,
-        isOnlyOfficeEnabled
-      }),
-    [file, isDesktop, isOnlyOfficeEnabled]
-  )
+    const ComponentName = useMemo(
+      () =>
+        getViewerComponentName({
+          file,
+          isDesktop,
+          isOnlyOfficeEnabled
+        }),
+      [file, isDesktop, isOnlyOfficeEnabled]
+    )
 
-  return (
-    <ComponentName
-      file={file}
-      url={url}
-      onClose={onClose}
-      renderFallbackExtraContent={renderFallbackExtraContent}
-      gestures={gestures}
-      gesturesRef={gesturesRef}
-      onSwipe={onSwipe}
-      onlyOfficeOpener={onlyOfficeOpener}
-    />
-  )
-}
+    return (
+      <ComponentName
+        file={file}
+        url={url}
+        onClose={onClose}
+        renderFallbackExtraContent={renderFallbackExtraContent}
+        gestures={gestures}
+        gesturesRef={gesturesRef}
+        onSwipe={onSwipe}
+        onlyOfficeOpener={onlyOfficeOpener}
+      />
+    )
+  }
+)
 
 ViewerByFile.propTypes = {
   file: FileDoctype.isRequired,
@@ -102,4 +104,6 @@ ViewerByFile.propTypes = {
   componentsProps: PropTypes.object
 }
 
-export default withBreakpoints()(ViewerByFile)
+ViewerByFile.displayName = 'ViewerByFile'
+
+export default ViewerByFile

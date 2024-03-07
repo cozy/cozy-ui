@@ -1,10 +1,11 @@
-import React, { useMemo, Children, cloneElement, isValidElement } from 'react'
+import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import BottomSheet, { BottomSheetHeader } from '../../BottomSheet'
 import { makeStyles } from '../../styles'
 import { isValidForPanel } from '../helpers'
+import { extractChildrenCompByName } from './helpers'
 import BottomSheetContent from './BottomSheetContent'
 
 const useStyles = makeStyles(theme => ({
@@ -28,19 +29,11 @@ const FooterContent = ({ file, toolbarRef, children, isPublic }) => {
 
   const toolbarProps = useMemo(() => ({ ref: toolbarRef }), [toolbarRef])
 
-  const FooterActionButtons =
-    Children.toArray(children).find(child => {
-      return (
-        child.type.name === 'FooterActionButtons' ||
-        child.type.displayName === 'FooterActionButtons'
-      )
-    }) || null
-
-  const FooterActionButtonsWithFile = isValidElement(FooterActionButtons)
-    ? cloneElement(FooterActionButtons, {
-        file
-      })
-    : null
+  const FooterActionButtonsWithFile = extractChildrenCompByName({
+    children,
+    file,
+    name: 'FooterActionButtons'
+  })
 
   if (isValidForPanel({ file })) {
     return (
@@ -60,7 +53,7 @@ const FooterContent = ({ file, toolbarRef, children, isPublic }) => {
   }
 
   // If `FooterActionButtons` hasn't children
-  if (!FooterActionButtons) return null
+  if (!FooterActionButtonsWithFile) return null
 
   return <div className={styles.footer}>{FooterActionButtonsWithFile}</div>
 }

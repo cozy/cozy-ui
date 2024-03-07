@@ -89,3 +89,18 @@ export const mapToAllChildren = (children, cb) => {
     return cb(child)
   })
 }
+
+export const extractChildrenCompByName = ({ children, file, name }) => {
+  const ChildrenComp =
+    Children.toArray(children).find(child => {
+      return child.type.name === name || child.type.displayName === name
+    }) || null
+
+  const ChildrenCompWithFile = isValidElement(ChildrenComp)
+    ? cloneElement(ChildrenComp, {
+        file
+      })
+    : null
+
+  return ChildrenCompWithFile
+}
