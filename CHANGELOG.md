@@ -1,3 +1,11 @@
+# [103.12.0](https://github.com/cozy/cozy-ui/compare/v103.11.1...v103.12.0) (2024-03-07)
+
+
+### Features
+
+* **viewer:** Remove useless locales ([476fe37](https://github.com/cozy/cozy-ui/commit/476fe37))
+* **viewer:** Use pinchend & tap events on mobile for download file ([8f4b2e7](https://github.com/cozy/cozy-ui/commit/8f4b2e7))
+
 ## [103.11.1](https://github.com/cozy/cozy-ui/compare/v103.11.0...v103.11.1) (2024-03-05)
 
 
