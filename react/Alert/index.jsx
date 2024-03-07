@@ -91,6 +91,17 @@ const Alert = forwardRef(
 
 Alert.displayName = 'Alert'
 
+/**
+ * @typedef {Object} AlertProps
+ * @property {string} className - Classname of the alert
+ * @property {React.FC<PropTypes.InferProps<typeof Icon.propTypes>>|false} icon - Icon component to display in the alert (or false to hide it)
+ * @property {'primary'|'secondary'|'success'|'error'|'warning'|'info'} severity - Severity of the alert (default: primary)
+ * @property {boolean} block - Block the alert to the full width of its container (default: false)
+ * @property {string} color - Background color of the alert
+ * @property {boolean} square - Square the alert corners (default: false)
+ * @property {'standard'|'outlined'|'filled'} variant - Variant of the alert (default: standard)
+ */
+
 export const AlertPropTypes = {
   className: PropTypes.string,
   icon: PropTypes.oneOfType([PropTypes.element, PropTypes.bool]),
