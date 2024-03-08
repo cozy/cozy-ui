@@ -3,6 +3,7 @@
 A new variant is essentially a set of translations adapted to a specific context of use.
 
 To create a new one, add your translation to the `src/react/Paywall/locales` directory. The translations for each case (default, premium or public) are grouped together under the name of your variant. A case includes a title, content and a label for the action.
+
 ```static
 "variantNamePaywall": {
     "premium": {
@@ -15,6 +16,7 @@ To create a new one, add your translation to the `src/react/Paywall/locales` dir
 ```
 
 Next, we create a new component returning the `Paywall`, specifying the name of the new variant. You can also use `contentInterpolation` to insert variables into the content translation.
+
 ```js static
 <Paywall
   variant="variantName"

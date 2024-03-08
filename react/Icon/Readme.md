@@ -7,7 +7,6 @@ to load your SVG (either explicitly or, better, implicitly in your `webpack.conf
 
 Be aware that Icon forwards unknown props to the underlying `<svg />` element, such as onClick prop.
 
-
 ```jsx
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import People from 'cozy-ui/transpiled/react/Icons/People'
