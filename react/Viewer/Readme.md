@@ -38,7 +38,6 @@ The `Viewer` can display an **information panel** to show additional information
     * **showClose** : `<boolean>` – Whether to show close button in toolbar
     * **showFilePath** : `<boolean>` – Whether to show file path below his name
 
-
 ### Demo
 
 ```jsx
