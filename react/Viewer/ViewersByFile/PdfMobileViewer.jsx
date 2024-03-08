@@ -36,7 +36,11 @@ export const PdfMobileViewer = ({ file, url, t, gestures }) => {
       try {
         await client.collection('io.cozy.files').download(file)
       } catch (error) {
-        showAlert(t('Viewer.error.generic'), 'error')
+        showAlert({
+          message: t('Viewer.error.generic'),
+          severity: 'error',
+          icon: false
+        })
       }
     },
     [client, showAlert, t]

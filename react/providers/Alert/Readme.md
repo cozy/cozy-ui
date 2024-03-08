@@ -3,23 +3,60 @@ import Variants from 'cozy-ui/docs/components/Variants'
 import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import AlertProvider, { useAlert } from 'cozy-ui/transpiled/react/providers/Alert'
 import Button from 'cozy-ui/transpiled/react/Buttons'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import DeviceLaptopIcon from 'cozy-ui/transpiled/react/Icons/DeviceLaptop'
 
-const initialVariants = [{ primary: true, secondary: false, success: false, error: false, warning: false, info: false }]
+const initialVariants = [{
+  title: false,
+  block: false,
+  color: false,
+  largeIcon: false,
+  noIcon: false,
+  square: false,
+  filled: false,
+  outlined: false,
+  close: true
+}]
 
 const Component = ({ variant }) => {
   const { showAlert } = useAlert()
 
-  return <Button label="show alert" onClick={() => showAlert('Alert message', variant)}/>
+  return (
+    <Button
+      label="show alert"
+      onClick={() =>
+        showAlert({
+          title: variant.title ? 'Alert title' : undefined,
+          severity: 'success',
+          message: 'Alert message',
+          color: variant.color ? "#EFA82D" : undefined,
+          variant: variant.filled
+            ? 'filled'
+            : variant.outlined
+            ? 'outlined'
+            : undefined,
+          block: variant.block,
+          square: variant.square,
+          icon: variant.noIcon
+            ? false
+            : variant.largeIcon
+            ? <Icon icon={DeviceLaptopIcon} color="var(--errorColor)" size={32} />
+            : undefined,
+          onClose: variant.close ? () => {} : undefined
+        })
+      }
+    />
+  )
 }
 
 ;
 
 <BreakpointsProvider>
   <AlertProvider>
-    <Variants initialVariants={initialVariants} radio>
+    <Variants initialVariants={initialVariants}>
       {variant => (
         <>
-          <Component variant={Object.keys(variant).find(key => variant[key])} />
+          <Component variant={variant} />
         </>
       )}
     </Variants>
