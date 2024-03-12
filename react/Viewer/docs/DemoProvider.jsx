@@ -3,7 +3,8 @@ import React from 'react'
 import { CozyProvider } from 'cozy-client'
 import { BreakpointsProvider } from '../../providers/Breakpoints'
 
-import { I18nContext } from '../../providers/I18n'
+import I18n from '../../providers/I18n'
+import { locales } from '../locales/index'
 
 const demoTextFileResponse = {
   text: () => new Promise(resolve => resolve('Hello World !'))
@@ -72,12 +73,14 @@ const mockClient = {
 
 class Wrapper extends React.Component {
   render() {
+    const lang = localStorage.getItem('lang') || 'en'
+
     return (
       <CozyProvider client={mockClient}>
         <BreakpointsProvider>
-          <I18nContext.Provider value={{ t: x => x, lang: 'en' }}>
+          <I18n dictRequire={lang => locales[lang]} lang={lang}>
             {this.props.children}
-          </I18nContext.Provider>
+          </I18n>
         </BreakpointsProvider>
       </CozyProvider>
     )
