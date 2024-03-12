@@ -5,8 +5,21 @@ import cx from 'classnames'
 import BottomSheet, { BottomSheetHeader } from '../../BottomSheet'
 import { makeStyles } from '../../styles'
 import { isValidForPanel } from '../helpers'
+import PrintButton from '../components/PrintButton'
 import { extractChildrenCompByName } from './helpers'
 import BottomSheetContent from './BottomSheetContent'
+
+const FooterButtons = ({
+  file,
+  FooterActionButtonsWithFile = { FooterActionButtonsWithFile }
+}) => {
+  return (
+    <>
+      {FooterActionButtonsWithFile}
+      <PrintButton file={file} variant="button" />
+    </>
+  )
+}
 
 const useStyles = makeStyles(theme => ({
   footer: {
@@ -45,7 +58,10 @@ const FooterContent = ({ file, toolbarRef, children, isPublic }) => {
         <BottomSheetHeader
           className={cx('u-ph-1 u-pb-1', styles.bottomSheetHeader)}
         >
-          {FooterActionButtonsWithFile}
+          <FooterButtons
+            file={file}
+            FooterActionButtonsWithFile={FooterActionButtonsWithFile}
+          />
         </BottomSheetHeader>
         <BottomSheetContent file={file} isPublic={isPublic} />
       </BottomSheet>
@@ -55,7 +71,14 @@ const FooterContent = ({ file, toolbarRef, children, isPublic }) => {
   // If `FooterActionButtons` hasn't children
   if (!FooterActionButtonsWithFile) return null
 
-  return <div className={styles.footer}>{FooterActionButtonsWithFile}</div>
+  return (
+    <div className={styles.footer}>
+      <FooterButtons
+        file={file}
+        FooterActionButtonsWithFile={FooterActionButtonsWithFile}
+      />
+    </div>
+  )
 }
 
 FooterContent.propTypes = {

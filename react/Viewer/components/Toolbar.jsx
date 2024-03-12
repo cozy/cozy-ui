@@ -16,8 +16,9 @@ import MidEllipsis from '../../MidEllipsis'
 
 import { downloadFile } from '../helpers'
 import { useEncrypted } from '../providers/EncryptedProvider'
-import { ToolbarFilePath } from './ToolbarFilePath'
 import { extractChildrenCompByName } from '../Footer/helpers'
+import { ToolbarFilePath } from './ToolbarFilePath'
+import PrintButton from './PrintButton'
 
 import styles from './styles.styl'
 
@@ -85,6 +86,7 @@ const Toolbar = ({
         {isDesktop && (
           <>
             {ToolbarButtons}
+            <PrintButton file={file} />
             <IconButton
               className="u-white"
               aria-label={t('Viewer.download')}
