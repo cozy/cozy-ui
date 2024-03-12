@@ -1,3 +1,10 @@
+# [104.1.0](https://github.com/cozy/cozy-ui/compare/v104.0.0...v104.1.0) (2024-03-12)
+
+
+### Features
+
+* **ListItem:** Add locales for reference tax numbers ([a7d66d2](https://github.com/cozy/cozy-ui/commit/a7d66d2))
+
 # [104.0.0](https://github.com/cozy/cozy-ui/compare/v103.12.0...v104.0.0) (2024-03-12)
 
 
