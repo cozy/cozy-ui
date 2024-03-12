@@ -615,6 +615,7 @@ const Example = () => {
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 
+import AccountIcon from 'cozy-ui/transpiled/react/Icons/Account'
 import BottomSelectIcon from 'cozy-ui/transpiled/react/Icons/BottomSelect'
 import CreditCardLargeIcon from 'cozy-ui/transpiled/react/Icons/CreditCardLarge'
 import CheckWhiteIcon from 'cozy-ui/transpiled/react/Icons/CheckWhite'
@@ -653,6 +654,7 @@ import TopSelectIcon from 'cozy-ui/transpiled/react/Icons/TopSelect'
 import TrashDuotoneIcon from 'cozy-ui/transpiled/react/Icons/TrashDuotone'
 
 const icons = [
+  AccountIcon,
   BottomSelectIcon,
   CheckWhiteIcon,
   CloudBrokenIcon,
