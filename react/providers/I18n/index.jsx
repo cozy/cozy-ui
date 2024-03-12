@@ -89,7 +89,7 @@ I18n.childContextTypes = {
   lang: PropTypes.string
 }
 
-export { initTranslation, extend } from './translation'
+export { initTranslation, extend, useExtendI18n } from './translation'
 export { default as translate } from './translate'
 export { default as createUseI18n } from './createUseI18n'
 
