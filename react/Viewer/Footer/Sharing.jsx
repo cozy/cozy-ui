@@ -5,9 +5,27 @@ import { useClient } from 'cozy-client'
 import { ShareModal, ShareButton } from 'cozy-sharing'
 import { SharingProvider } from 'cozy-sharing/dist/SharingProvider'
 
-const Sharing = ({ file }) => {
+import IconButton from '../../IconButton'
+import Icon from '../../Icon'
+import ShareIcon from '../../Icons/Share'
+
+const Sharing = ({ file, variant }) => {
   const client = useClient()
   const [showShareModal, setShowShareModal] = useState(false)
+
+  const SharingButton =
+    variant === 'iconButton' ? (
+      <IconButton className="u-white" onClick={() => setShowShareModal(true)}>
+        <Icon icon={ShareIcon} />
+      </IconButton>
+    ) : (
+      <ShareButton
+        extension="full"
+        useShortLabel
+        docId={file.id}
+        onClick={() => setShowShareModal(true)}
+      />
+    )
 
   return (
     <>
@@ -24,19 +42,19 @@ const Sharing = ({ file }) => {
             onClose={() => setShowShareModal(false)}
           />
         )}
-        <ShareButton
-          extension="full"
-          useShortLabel
-          docId={file.id}
-          onClick={() => setShowShareModal(true)}
-        />
+        {SharingButton}
       </SharingProvider>
     </>
   )
 }
 
 Sharing.propTypes = {
-  file: PropTypes.object
+  file: PropTypes.object,
+  variant: PropTypes.oneOf(['default', 'iconButton'])
+}
+
+Sharing.defaultProptypes = {
+  variant: 'default'
 }
 
 export default Sharing
