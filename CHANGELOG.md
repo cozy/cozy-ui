@@ -1,3 +1,32 @@
+# [104.2.0](https://github.com/cozy/cozy-ui/compare/v104.1.0...v104.2.0) (2024-03-12)
+
+
+### Bug Fixes
+
+* **Viewer:** Adjust toolbar spacing and button size ([6a2f8fe](https://github.com/cozy/cozy-ui/commit/6a2f8fe))
+
+
+### Features
+
+* **I18n:** Add useExtendI18n to be able to add locales to existing ones ([ad388b4](https://github.com/cozy/cozy-ui/commit/ad388b4))
+* **I18n:** Expose polyglot, so can be get with useI18n ([7770e7b](https://github.com/cozy/cozy-ui/commit/7770e7b))
+* Update cozy-client to 45.15.0 ([c5f2649](https://github.com/cozy/cozy-ui/commit/c5f2649))
+* **Viewer:** Add Print button, based on print action definition ([ba80052](https://github.com/cozy/cozy-ui/commit/ba80052))
+* **Viewer:** Add ToolbarButtons component ([e0b014c](https://github.com/cozy/cozy-ui/commit/e0b014c))
+* **Viewer:** Add variants on Download/Forward/Sharing buttons ([594b79a](https://github.com/cozy/cozy-ui/commit/594b79a))
+* **Viewer:** Add WebviewIntentProvider ([97f28ff](https://github.com/cozy/cozy-ui/commit/97f28ff))
+* **Viewer:** Expose Toolbarbutton, FooterActionsButtons and ForwardButton ([2b9130f](https://github.com/cozy/cozy-ui/commit/2b9130f))
+* **Viewer:** Modify default buttons on toolbar and footer ([d82013d](https://github.com/cozy/cozy-ui/commit/d82013d))
+* **Viewer:** Remove HOC for locals on no viewer DownloadButton ([edda4a9](https://github.com/cozy/cozy-ui/commit/edda4a9))
+* **Viewer:** Replace toolbar download button by icon button ([6f59eda](https://github.com/cozy/cozy-ui/commit/6f59eda))
+* **Viewer:** Use contact formatting from cozy-client ([eb9c596](https://github.com/cozy/cozy-ui/commit/eb9c596))
+* **Viewer:** Use date metadata qualification formatting from cozy-client ([14bc95d](https://github.com/cozy/cozy-ui/commit/14bc95d))
+* **Viewer:** Use formatMetadataQualification and METADATA_NAMES from ([450fb74](https://github.com/cozy/cozy-ui/commit/450fb74))
+* **Viewer:** Use getMetadataQualificationType from cozy-client ([ae133f4](https://github.com/cozy/cozy-ui/commit/ae133f4))
+* **Viewer:** Use information metadata qualification formatting from cozy-client ([1d106ef](https://github.com/cozy/cozy-ui/commit/1d106ef))
+* **Viewer:** Use other metadata qualification formatting from cozy-client ([98b6510](https://github.com/cozy/cozy-ui/commit/98b6510))
+* **Viewer:** Use useExtendI18n ([d93b97d](https://github.com/cozy/cozy-ui/commit/d93b97d))
+
 # [104.1.0](https://github.com/cozy/cozy-ui/compare/v104.0.0...v104.1.0) (2024-03-12)
 
 
