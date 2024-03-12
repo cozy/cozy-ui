@@ -69,7 +69,7 @@ describe('PdfMobileViewer', () => {
 
       await waitFor(() => {
         expect(queryByRole('progressbar')).toBeFalsy()
-        expect(getByText('Download'))
+        expect(getByText('Viewer.download'))
         expect(getByText(file.name))
       })
     })

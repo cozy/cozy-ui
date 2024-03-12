@@ -1,26 +1,27 @@
 import React from 'react'
 import { fireEvent, render } from '@testing-library/react'
-import DemoProvider from '../docs/DemoProvider'
 
 import QualificationListItemInformation, {
   makeInformationValue
 } from './QualificationListItemInformation'
 import MidEllipsis from '../../MidEllipsis'
 
+jest.mock('../../providers/I18n', () => ({
+  useI18n: jest.fn(() => ({ t: x => x }))
+}))
+
 const setup = ({
   formatedMetadataQualification = {},
   toggleActionsMenu = jest.fn()
 } = {}) => {
   return render(
-    <DemoProvider>
-      <QualificationListItemInformation
-        formatedMetadataQualification={formatedMetadataQualification}
-        toggleActionsMenu={toggleActionsMenu}
-        file={{
-          metadata: { qualification: { label: 'label_of_qualification' } }
-        }}
-      />
-    </DemoProvider>
+    <QualificationListItemInformation
+      formatedMetadataQualification={formatedMetadataQualification}
+      toggleActionsMenu={toggleActionsMenu}
+      file={{
+        metadata: { qualification: { label: 'label_of_qualification' } }
+      }}
+    />
   )
 }
 
