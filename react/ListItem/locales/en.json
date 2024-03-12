@@ -32,6 +32,10 @@
         "netSocialAmount": "Net social amount",
         "number": {
           "pay_sheet": "Gross remuneration",
+          "tax_return": "Reference tax number",
+          "tax_notice": "Reference tax number",
+          "real_estate_tax": "Reference tax number",
+          "tax_timetable": "Reference tax number",
           "fine": "Amount of the fine",
           "fidelity_card": "Card number",
           "driver_license": "License number",

@@ -32,6 +32,10 @@
         "netSocialAmount": "Montant net social",
         "number": {
           "pay_sheet": "Rémunération brute",
+          "tax_return": "Numéro fiscal de référence",
+          "tax_notice": "Numéro fiscal de référence",
+          "real_estate_tax": "Numéro fiscal de référence",
+          "tax_timetable": "Numéro fiscal de référence",
           "fine": "Montant de l'amende",
           "fidelity_card": "Numéro de la carte",
           "driver_license": "Numéro du permis",
