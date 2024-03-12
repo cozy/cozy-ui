@@ -1,3 +1,49 @@
+# [104.0.0](https://github.com/cozy/cozy-ui/compare/v103.12.0...v104.0.0) (2024-03-12)
+
+
+### Bug Fixes
+
+* Color & square props are ignored ([c37ad2f](https://github.com/cozy/cozy-ui/commit/c37ad2f)), closes [/github.com/mui/material-ui/blob/bda562b435a70e3e8f6d7fb04581c6816a5ba0c7/packages/material-ui/src/Snackbar/Snackbar.js#L235](https://github.com//github.com/mui/material-ui/blob/bda562b435a70e3e8f6d7fb04581c6816a5ba0c7/packages/material-ui/src/Snackbar/Snackbar.js/issues/L235) [#L193](https://github.com/cozy/cozy-ui/issues/L193)
+
+
+### Features
+
+* Add typedef to Alert component ([16f2097](https://github.com/cozy/cozy-ui/commit/16f2097))
+* Improve AlertProvider ([723a627](https://github.com/cozy/cozy-ui/commit/723a627))
+* Replace ViewerSnackbarProvider by AlertProvider ([374537a](https://github.com/cozy/cozy-ui/commit/374537a))
+
+
+### BREAKING CHANGES
+
+* The `showAlert` function returned by the `useAlert` hook changes signature.
+
+Also, the `variant` was set to `filled`,
+it now takes the default value of `Alert`, i.e. `standard`.
+
+Before:
+```
+const { showAlert } = useAlert()
+showAlert(t('foo.bar'), 'error',)
+```
+
+Now:
+```
+const { showAlert } = useAlert()
+showAlert({ message: t('foo.bar'), severity: 'error' })
+```
+
+Its options now support Alert component props.
+Example:
+```
+showAlert({
+   message: t('foo.bar'),
+   severity: 'info',
+   icon: [secure],
+   color: 'blue',
+   square: true
+})
+```
+
 # [103.12.0](https://github.com/cozy/cozy-ui/compare/v103.11.1...v103.12.0) (2024-03-07)
 
 
