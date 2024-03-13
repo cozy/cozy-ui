@@ -1,3 +1,12 @@
+# [104.3.0](https://github.com/cozy/cozy-ui/compare/v104.2.0...v104.3.0) (2024-03-13)
+
+
+### Features
+
+* Add Account illus ([72d249c](https://github.com/cozy/cozy-ui/commit/72d249c))
+* Add CreditCardLarge illus ([ee84462](https://github.com/cozy/cozy-ui/commit/ee84462))
+* Add PopInside icon ([69cd131](https://github.com/cozy/cozy-ui/commit/69cd131))
+
 # [104.2.0](https://github.com/cozy/cozy-ui/compare/v104.1.0...v104.2.0) (2024-03-12)
 
 
