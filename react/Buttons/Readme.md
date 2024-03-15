@@ -1,5 +1,3 @@
-The `ref` is forwarded to the root element
-
 ### Default
 
 ```jsx
