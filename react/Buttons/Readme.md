@@ -1,3 +1,11 @@
+Buttons are a wrapper arround [MuiButton](https://mui.com/material-ui/react-button/) integrated with Cozy's design system
+
+The `Button` component will produce an HTML `<button>`. The React component accepts classic HTML attributes (i.e. `type`) through React props.
+
+By default the HTML `<button>` is rendered with `type="button"` attribute, so its click effect must be controlled by React (i.e. by using `onClick` event).
+
+If the button is located inside of a form, you can set the props `type="submit"` to the React component, so clicking on it would trigger the form's `onSubmit` event.
+
 ### Default
 
 ```jsx
