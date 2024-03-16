@@ -8789,7 +8789,7 @@ body {
 
 @media (max-width: 48rem) {
 }
-.Table--x3ZsI {
+.Table--39nEw {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -8798,27 +8798,27 @@ body {
   text-align: left;
   color: var(--secondaryTextColor);
 }
-.TableHead--1rqhM {
+.TableHead--3ZqIs {
   flex: 0 0 2rem;
 }
 @media (max-width: 48rem) {
-  .TableHead--1rqhM {
+  .TableHead--3ZqIs {
     display: none;
   }
 }
-.TableBody--1EfpK {
+.TableBody--4ThMV {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   overflow: auto;
 }
 @media (max-width: 48rem) {
-  .TableBody--1EfpK {
+  .TableBody--4ThMV {
     max-height: 100%;
   }
 }
-.TableHead--1rqhM .TableRow--1D62H,
-.TableRow--1D62H {
+.TableHead--3ZqIs .TableRow--UyGEc,
+.TableRow--UyGEc {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -8828,43 +8828,43 @@ body {
   width: 100%;
   border-top: 0.063rem solid var(--dividerColor);
 }
-.TableHead--1rqhM .TableRow--1D62H:hover,
-.TableRow--1D62H:hover {
+.TableHead--3ZqIs .TableRow--UyGEc:hover,
+.TableRow--UyGEc:hover {
   background-color: var(--actionColorHover);
 }
 @media (hover: none) {
-  .TableHead--1rqhM .TableRow--1D62H:hover,
-  .TableRow--1D62H:hover {
+  .TableHead--3ZqIs .TableRow--UyGEc:hover,
+  .TableRow--UyGEc:hover {
     background-color: transparent;
   }
 }
-.TableHead--1rqhM .TableRow--1D62H:last-child,
-.TableRow--1D62H:last-child {
+.TableHead--3ZqIs .TableRow--UyGEc:last-child,
+.TableRow--UyGEc:last-child {
   border-bottom: 0.063rem solid var(--dividerColor);
 }
 @media (max-width: 63.938rem) {
-  .TableHead--1rqhM .TableRow--1D62H,
-  .TableRow--1D62H {
+  .TableHead--3ZqIs .TableRow--UyGEc,
+  .TableRow--UyGEc {
     max-width: 100vw;
   }
 }
-.TableHead--1rqhM .TableRow--1D62H {
+.TableHead--3ZqIs .TableRow--UyGEc {
   border: 0;
 }
-.TableHead--1rqhM .TableRow--1D62H:hover {
+.TableHead--3ZqIs .TableRow--UyGEc:hover {
   background-color: transparent;
 }
-.TableHead--1rqhM .TableRow--1D62H:last-child {
+.TableHead--3ZqIs .TableRow--UyGEc:last-child {
   border-bottom: 0;
 }
-.TableCell--yJCq7,
-.TableHeader--FWkmV {
+.TableCell--3vgVE,
+.TableHeader--ERsVK {
   box-sizing: border-box;
   padding: 0.875rem 1rem;
   font-size: 0.875rem;
   line-height: 1.3;
 }
-.TableHeader--FWkmV {
+.TableHeader--ERsVK {
   padding: 0.5rem 1rem;
   font-size: 0.75rem;
   font-weight: bold;
