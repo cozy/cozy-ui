@@ -1,3 +1,21 @@
+# [105.0.0](https://github.com/cozy/cozy-ui/compare/v104.3.0...v105.0.0) (2024-03-16)
+
+
+### Features
+
+* Add all Table components from MUI ([5c6438f](https://github.com/cozy/cozy-ui/commit/5c6438f))
+
+
+### BREAKING CHANGES
+
+* `Table` component has been deprecated. Use codemods to deal with the change.
+
+```
+yarn global add @cozy/codemods
+yarn global add jscodeshift@0.13.1
+jscodeshift -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/transform-ui-deprecated-table.js src babel --ignore-pattern=src/targets/ --extensions js,jsx,tsx --parser tsx
+```
+
 # [104.3.0](https://github.com/cozy/cozy-ui/compare/v104.2.0...v104.3.0) (2024-03-13)
 
 
