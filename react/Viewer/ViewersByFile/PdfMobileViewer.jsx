@@ -51,7 +51,7 @@ export const PdfMobileViewer = ({ file, url, t, gestures }) => {
     if (gestures) {
       gestures.get('pinch').set({ enable: true })
       gestures.on('pinchend tap', evt => {
-        if (evt.tapCount === 1) {
+        if (evt.type === 'pinchend' || evt.tapCount === 1) {
           handleOnClick(file)
         }
       })
