@@ -1,3 +1,10 @@
+## [105.0.1](https://github.com/cozy/cozy-ui/compare/v105.0.0...v105.0.1) (2024-03-19)
+
+
+### Bug Fixes
+
+* **Viewer:** The Pinch event doesn't have a "tapCount" property ([8cde71d](https://github.com/cozy/cozy-ui/commit/8cde71d))
+
 # [105.0.0](https://github.com/cozy/cozy-ui/compare/v104.3.0...v105.0.0) (2024-03-16)
 
 
