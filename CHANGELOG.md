@@ -1,3 +1,10 @@
+## [105.0.2](https://github.com/cozy/cozy-ui/compare/v105.0.1...v105.0.2) (2024-03-20)
+
+
+### Bug Fixes
+
+* **Viewer:** Events must be limited on the image ([548994d](https://github.com/cozy/cozy-ui/commit/548994d))
+
 ## [105.0.1](https://github.com/cozy/cozy-ui/compare/v105.0.0...v105.0.1) (2024-03-19)
 
 
