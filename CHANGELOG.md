@@ -1,3 +1,15 @@
+# [105.1.0](https://github.com/cozy/cozy-ui/compare/v105.0.2...v105.1.0) (2024-03-21)
+
+
+### Bug Fixes
+
+* **NestedSelect:** Remove title attribute on modal ([de57aff](https://github.com/cozy/cozy-ui/commit/de57aff))
+
+
+### Features
+
+* **NestedSelect:** Add ellipsis on modal title ([341db5a](https://github.com/cozy/cozy-ui/commit/341db5a))
+
 ## [105.0.2](https://github.com/cozy/cozy-ui/compare/v105.0.1...v105.0.2) (2024-03-20)
 
 
