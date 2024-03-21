@@ -1,3 +1,10 @@
+# [105.2.0](https://github.com/cozy/cozy-ui/compare/v105.1.0...v105.2.0) (2024-03-21)
+
+
+### Features
+
+* **Viewer:** Refactor PrintButton and use `ActionsItems` ([8b7a068](https://github.com/cozy/cozy-ui/commit/8b7a068))
+
 # [105.1.0](https://github.com/cozy/cozy-ui/compare/v105.0.2...v105.1.0) (2024-03-21)
 
 
