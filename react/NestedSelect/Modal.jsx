@@ -13,7 +13,8 @@ import List from '../List'
 
 const NestedSelectDialogHeader = ({ onClickBack, showBack, title }) => {
   const { dialogTitleProps } = useCozyDialog({
-    open: true
+    open: true,
+    onClose: true
   })
 
   if (!title) return null
@@ -28,7 +29,7 @@ const NestedSelectDialogHeader = ({ onClickBack, showBack, title }) => {
             </IconButton>
           </Img>
         )}
-        <Bd>{title}</Bd>
+        <Bd className="u-ellipsis">{title}</Bd>
       </Media>
     </DialogTitle>
   )
@@ -44,6 +45,7 @@ const NestedSelectDialogContent = ({ children }) => {
 
 const NestedSelectModal = props => {
   const { dialogProps } = useCozyDialog({ open: true })
+
   return (
     <Dialog {...dialogProps} onClose={props.onClose}>
       <DialogCloseButton
