@@ -5,18 +5,18 @@ import { fetchBlobFileById } from 'cozy-client/dist/models/file'
 const MAX_RESIZE_IMAGE_SIZE = 3840
 
 /**
- * Make array of actions for ActionsItems component
+ * Make array of actions and hydrate actions with options
  *
- * @param {Function[]} actions - Array of actions to create ActionsMenuItem components with associated actions and conditions
+ * @param {Function[]} actions - Array of actions with associated actions and conditions
  * @param {object} actionOptions - Options that need to be passed on actions
  * @returns {object[]} Array of actions
  */
 export const makeActions = (actions = [], options = {}) => {
-  return actions.filter(Boolean).map(action => {
-    const actionMenu = action(options)
-    const name = actionMenu.name || action.name
+  return actions.filter(Boolean).map(actionFn => {
+    const action = actionFn(options)
+    const name = action.name || actionFn.name
 
-    return { [name]: actionMenu }
+    return { [name]: action }
   })
 }
 
@@ -58,7 +58,7 @@ export const getOnlyNeededActions = (actions, docs) => {
         return actionObject
       })
       .filter(Boolean)
-      // We don't want to have an hr as the latest actions available
+      // We don't want to have an hr/divider as the latest actions available
       .filter((cleanedAction, idx, cleanedActions) => {
         return !(
           (getActionName(cleanedAction) === 'hr' ||
