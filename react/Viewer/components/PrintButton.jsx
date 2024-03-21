@@ -1,30 +1,57 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, forwardRef } from 'react'
 import PropTypes from 'prop-types'
 
-import { useClient } from 'cozy-client'
 import { useWebviewIntent } from 'cozy-intent'
 
 import Button from '../../Buttons'
 import IconButton from '../../IconButton'
 import Icon from '../../Icon'
+import ActionsItems, {
+  actionsItemsComponentPropTypes
+} from '../../ActionsMenu/ActionsItems'
 import { print } from '../../ActionsMenu/Actions/print'
+import { makeActions } from '../../ActionsMenu/Actions/helpers'
+
+const ActionComponent = forwardRef(({ action, variant, onClick }, ref) => {
+  const { label, icon } = action
+
+  if (variant === 'button') {
+    return (
+      <Button
+        ref={ref}
+        variant="secondary"
+        aria-label={label}
+        label={<Icon icon={icon} />}
+        onClick={onClick}
+      />
+    )
+  }
+
+  return (
+    <IconButton
+      ref={ref}
+      className="u-white"
+      aria-label={label}
+      onClick={onClick}
+    >
+      <Icon icon={icon} />
+    </IconButton>
+  )
+})
+
+ActionComponent.displayName = 'ActionComponent'
+
+ActionComponent.propTypes = {
+  ...actionsItemsComponentPropTypes,
+  variant: PropTypes.oneOf(['default', 'button'])
+}
 
 const PrintButton = ({ file, variant }) => {
   const [isPrintAvailable, setIsPrintAvailable] = useState(false)
-  const client = useClient()
   const webviewIntent = useWebviewIntent()
-  const {
-    icon: printIcon,
-    label: printLabel,
-    action: printAction,
-    displayCondition: printDisplayCondition
-  } = print()
 
   const isPDFDoc = file.mime === 'application/pdf'
-  const showPrintButton = printDisplayCondition && isPDFDoc && isPrintAvailable
-
-  const handleClick = async () =>
-    await printAction([file], { client, webviewIntent })
+  const showPrintButton = isPDFDoc && isPrintAvailable
 
   useEffect(() => {
     const init = async () => {
@@ -39,25 +66,15 @@ const PrintButton = ({ file, variant }) => {
 
   if (!showPrintButton) return null
 
-  if (variant === 'button') {
-    return (
-      <Button
-        variant="secondary"
-        aria-label={printLabel}
-        label={<Icon icon={printIcon} />}
-        onClick={handleClick}
-      />
-    )
-  }
+  const actions = makeActions([print])
 
   return (
-    <IconButton
-      className="u-white"
-      aria-label={printLabel}
-      onClick={handleClick}
-    >
-      <Icon icon={printIcon} />
-    </IconButton>
+    <ActionsItems
+      docs={[file]}
+      actions={actions}
+      component={ActionComponent}
+      variant={variant}
+    />
   )
 }
 

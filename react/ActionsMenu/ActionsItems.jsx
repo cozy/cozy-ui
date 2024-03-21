@@ -74,4 +74,12 @@ ActionsItems.propTypes = {
   onClick: PropTypes.func
 }
 
+export const actionsItemsComponentPropTypes = {
+  docs: PropTypes.array,
+  action: PropTypes.object,
+  autoFocus: PropTypes.bool,
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func
+}
+
 export default ActionsItems
