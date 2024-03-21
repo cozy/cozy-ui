@@ -45,7 +45,7 @@ const NestedSelectDialogContent = ({ children }) => {
 const NestedSelectModal = props => {
   const { dialogProps } = useCozyDialog({ open: true })
   return (
-    <Dialog {...dialogProps} title={props.title} onClose={props.onClose}>
+    <Dialog {...dialogProps} onClose={props.onClose}>
       <DialogCloseButton
         onClick={props.onClose}
         data-testid={`modal-close-button-nested-select`}
