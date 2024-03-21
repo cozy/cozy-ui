@@ -68,6 +68,7 @@ const files = [
   {
     _id: 'audio',
     class: 'audio',
+    type: 'file',
     name: 'Sample.mp3',
     mime: 'audio/mp3',
     dir_id: 'parent_folder'
@@ -75,6 +76,7 @@ const files = [
   {
     _id: 'slide',
     class: 'slide',
+    type: 'file',
     name: 'Slide.pptx',
     mime: 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
     dir_id: 'parent_folder'
@@ -82,6 +84,7 @@ const files = [
   {
     _id: 'pdf',
     class: 'pdf',
+    type: 'file',
     name: 'My vehicle registration.pdf',
     mime: 'application/pdf',
     metadata: {
@@ -107,6 +110,7 @@ const files = [
   {
     _id: 'text',
     class: 'text',
+    type: 'file',
     name: 'LoremipsumdolorsitametconsecteturadipiscingelitSednonrisusSuspendisselectustortordignissimsitametadipiscingnecultriciesseddolorCraselementumultricesdiamMaecenasligulamassavariusasempercongueeuismodnonmiProinporttitororcinecnonummymolestieenimesteleifendminonfermentumdiamnislsitameteratDuissemperDuisarcumassascelerisquevitaeconsequatinpretiumaenimPellentesquecongueUtinrisusvolutpatliberopharetratemporCrasvestibulumbibendumauguePraesentegestasleoinpedePraesentblanditodioeuenimPellentesquesedduiutaugueblanditsodalesVestibulumanteipsumprimisinfaucibusorciluctusetultricesposuerecubiliaCuraeAliquamnibhMaurisacmaurissedpedepellentesquefermentumMaecenasadipiscingantenondiamsodaleshendrerit.txt',
     mime: 'text/plain',
     metadata: {
@@ -120,6 +124,7 @@ const files = [
     {
     _id: 'text',
     class: 'text',
+    type: 'file',
     name: 'encrypted-example.txt',
     mime: 'text/plain',
     encrypted: true
@@ -128,6 +133,7 @@ const files = [
   {
     _id: 'image',
     class: 'image',
+    type: 'file',
     name: 'Demo.jpg',
     mime: 'image/jpg',
     metadata: {
@@ -143,12 +149,14 @@ const files = [
   {
     _id: 'none',
     class: 'unknown',
+    type: 'file',
     name: 'Unsupported file type',
     mime: '???/???'
   },
   {
     _id: 'none',
     class: 'unknown',
+    type: 'file',
     name: 'Unsupported file type',
     mime: '???/???',
     metadata: {
