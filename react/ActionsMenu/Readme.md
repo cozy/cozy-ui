@@ -4,23 +4,7 @@ You can pass a reference to a custom DOM element through the `ref` prop to attac
 
 A header `ActionsMenuMobileHeader` can be used to provide context on the menu actions. Since on desktop, we display a popper and not a `BottomSheet`, context for the user is not lost, so the header would be redundant. This is why it is not rendered unless we are on mobile.
 
-### With an automatic creation of actions
-
-Use `makeActions` method and create (or use the predefined actions) to build the actions to pass to `ActionsMenu` high level component. The method `makeActions` takes `actions` array as first argument, and `options` as second argument. `options` are then passed to the `actions` component as `props`.
-
-```bash
-const action1 = ({ option1, option2 }) => ({
-  name: action1,
-  action: (doc, { option3, option4 }) => {}
-  Component: ({ onClick, ...props }) => <SomeComponent {...props} onClick={() => onClick({ option3 })}} />
-})
-
-const actions = makeActions([action1, action2], { option1, option2 })
-
-<ActionsMenu actions={actions} componentsProps={{ actionsItems: { actionOptions: { option4 }} }}
-```
-
-#### How to create actions
+### How to create and use actions
 
 An action is a simple function that returns an object with specific keys:
 
@@ -33,7 +17,7 @@ An action is a simple function that returns an object with specific keys:
 * **Component** : `<func>` – The returned component that manages the display
 
 ```bash
-const expl = makeActionOptions => ({
+const actionExpl = options => ({
   name: 'expl',
   action: () => {},
   disabled: false,
@@ -41,6 +25,32 @@ const expl = makeActionOptions => ({
     return <SomeComponent {...props} />
   }
 })
+```
+
+The method `makeActions` takes `actions` array as first argument, and `options` as second argument. `options` are then passed to the `actions` component as `props`.
+
+```bash
+const action1 = ({ option1, option2, option5 }) => ({
+  name: action1,
+  action: (doc, { option3, option4 }) => {}
+  Component: ({ onClick, ...props }) => <SomeComponent {...props} onClick={() => onClick({ option3 })}} />
+})
+
+const actions = makeActions([action1, action2], { option1, option2 })
+```
+
+Then you can use `ActionsItems` to render the actions, and pass options (as simple props) and component (in `component` prop) to be used for rendering.
+
+```bash
+<ActionsItems actions={actions} docs={[file]} component={ActionComponent} option5="" />
+```
+
+### ActionsMenu with an automatic creation of actions
+
+Use `makeActions` method and create (or use the predefined actions) to build the actions to pass to `ActionsMenu`. You can pass options to actions with `componentsProps.actionsItems.actionOptions` prop.
+
+```bash
+<ActionsMenu actions={actions} componentsProps={{ actionsItems: { actionOptions: { option4 }} }} />
 ```
 
 ```jsx
@@ -125,7 +135,9 @@ const actions = makeActions([ modify, viewInContacts, divider, call, smsTo, emai
 </DemoProvider>
 ```
 
-### With a manual creation of the actions
+### ActionsMenu with a manual creation of the actions
+
+We don't use `makeActions` here, all actions are created "by hand". This is not the recommanded choice.
 
 ```jsx
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
