@@ -2,8 +2,6 @@ import React, { createRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { WebviewIntentProvider } from 'cozy-intent'
-
 import useBreakpoints from '../providers/Breakpoints'
 import { FileDoctype } from '../proptypes'
 import { useExtendI18n } from '../providers/I18n'
@@ -52,39 +50,37 @@ const ViewerContainer = props => {
   }
 
   return (
-    <WebviewIntentProvider>
-      <AlertProvider>
-        <ActionMenuProvider editPathByModelProps={editPathByModelProps}>
-          <div
-            id="viewer-wrapper"
-            className={cx(styles['viewer-wrapper'], className)}
-          >
-            <EncryptedProvider url={currentURL}>
-              <Viewer
-                {...rest}
-                componentsProps={componentsPropsWithDefault}
-                currentFile={currentFile}
-                hasPrevious={hasPrevious}
-                hasNext={hasNext}
-                validForPanel={validForPanel}
-                toolbarRef={toolbarRef}
-              >
-                {children}
-              </Viewer>
-            </EncryptedProvider>
-            <ViewerInformationsWrapper
-              isPublic={isPublic}
-              disableFooter={disableFooter}
-              validForPanel={validForPanel}
+    <AlertProvider>
+      <ActionMenuProvider editPathByModelProps={editPathByModelProps}>
+        <div
+          id="viewer-wrapper"
+          className={cx(styles['viewer-wrapper'], className)}
+        >
+          <EncryptedProvider url={currentURL}>
+            <Viewer
+              {...rest}
+              componentsProps={componentsPropsWithDefault}
               currentFile={currentFile}
+              hasPrevious={hasPrevious}
+              hasNext={hasNext}
+              validForPanel={validForPanel}
               toolbarRef={toolbarRef}
             >
               {children}
-            </ViewerInformationsWrapper>
-          </div>
-        </ActionMenuProvider>
-      </AlertProvider>
-    </WebviewIntentProvider>
+            </Viewer>
+          </EncryptedProvider>
+          <ViewerInformationsWrapper
+            isPublic={isPublic}
+            disableFooter={disableFooter}
+            validForPanel={validForPanel}
+            currentFile={currentFile}
+            toolbarRef={toolbarRef}
+          >
+            {children}
+          </ViewerInformationsWrapper>
+        </div>
+      </ActionMenuProvider>
+    </AlertProvider>
   )
 }
 
