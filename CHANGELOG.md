@@ -1,3 +1,10 @@
+## [105.2.1](https://github.com/cozy/cozy-ui/compare/v105.2.0...v105.2.1) (2024-03-26)
+
+
+### Bug Fixes
+
+* **Viewer:** Remove WebviewIntentProvider ([edfdc1d](https://github.com/cozy/cozy-ui/commit/edfdc1d))
+
 # [105.2.0](https://github.com/cozy/cozy-ui/compare/v105.1.0...v105.2.0) (2024-03-21)
 
 
