@@ -3,6 +3,7 @@ import { fetchBlobFileById } from 'cozy-client/dist/models/file'
 
 // Should guarantee good resolution for different uses (printing, downloading, etc.)
 const MAX_RESIZE_IMAGE_SIZE = 3840
+const MAX_IMAGE_SIDE_SIZE = 1920
 
 /**
  * Make array of actions and hydrate actions with options
@@ -125,6 +126,11 @@ const resizeImage = async ({
       const scaleRatio = getImageScaleRatio(newImage, maxSize)
       const scaledWidth = scaleRatio * newImage.width
       const scaledHeight = scaleRatio * newImage.height
+      const quality =
+        scaledWidth >= MAX_IMAGE_SIDE_SIZE ||
+        scaledHeight >= MAX_IMAGE_SIDE_SIZE
+          ? 0.35
+          : 0.75
 
       canvas.width = scaledWidth
       canvas.height = scaledHeight
@@ -132,7 +138,7 @@ const resizeImage = async ({
         .getContext('2d')
         .drawImage(newImage, 0, 0, scaledWidth, scaledHeight)
 
-      resolve(canvas.toDataURL(fileType))
+      resolve(canvas.toDataURL(fileType, quality))
     }
   })
 }
