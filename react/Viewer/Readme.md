@@ -4,12 +4,11 @@ Once rendered, the `Viewer` will take up all the available space in it's contain
 
 The `Viewer` can display an **information panel** to show additional information about the current file (e.g. whether a file is certified).
 
-### ⚠️ Important
+### ⚠️ Requirement
 
+* You must have [WebviewIntent Provider](https://github.com/cozy/cozy-libs/blob/b1ad6f5933b463878f641d9fbb63eddd4c45b0d0/packages/cozy-intent/src/view/components/WebviewIntentProvider.tsx#L89) & [CozySharing Provider](https://github.com/cozy/cozy-libs/tree/master/packages/cozy-sharing)
 * In order to download and display the files, it will need a `cozy-client` instance in the React context.
 * To have the panels, the app need to have [cozy-harvest-lib](https://github.com/cozy/cozy-libs/tree/master/packages/cozy-harvest-lib) installed
-* To have a working footer, the app need to have a [CozySharing Provider](https://github.com/cozy/cozy-libs/tree/master/packages/cozy-sharing).
-* If the footer will be used on MobileApp, the app should have this Cordova plugin [4db7f8f#diff-8c7901258747b81ed60cc2d9cbb254344fae11f8a602e56c1ae42d9eef11d318R50](https://github.com/cozy/cozy-ui/commit/4db7f8fba866bffe04d81d42c716a8dea5c50157#diff-8c7901258747b81ed60cc2d9cbb254344fae11f8a602e56c1ae42d9eef11d318R50)
 
 ### Props
 
