@@ -18,6 +18,7 @@ export {
   NavLink,
   genNavLink
 } from './Nav'
+export { NavLimiter } from './NavLimiter'
 export { default as ListItemText } from './ListItemText'
 export { default as SelectionBar } from './SelectionBar'
 export { default as IntentIframe } from './IntentIframe'

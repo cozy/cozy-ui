@@ -5,6 +5,8 @@ import { makeStyles } from '../styles'
 import Typography from '../Typography'
 import Icon from '../Icon'
 import BottomIcon from '../Icons/Bottom'
+import TopIcon from '../Icons/Top'
+import cx from 'classnames'
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -16,7 +18,7 @@ const useStyles = makeStyles(theme => ({
   },
   typography: {
     color: ({ disabled }) =>
-      theme.palette.text[disabled ? 'disabled' : 'primary']
+      disabled ? theme.palette.text.disabled : theme.palette.text.primary
   },
   endIcon: {
     display: 'flex',
@@ -24,6 +26,12 @@ const useStyles = makeStyles(theme => ({
     marginTop: ({ variant }) => (variant === 'body1' ? '3px' : undefined),
     color: ({ disabled }) =>
       theme.palette.text[disabled ? 'disabled' : 'primary']
+  },
+  startIcon: {
+    display: 'flex',
+    marginRight: '5px',
+    marginTop: ({ variant }) => (variant === 'body1' ? '3px' : undefined),
+    color: theme.palette.text.secondary
   }
 }))
 
@@ -53,6 +61,9 @@ const DropdownText = forwardRef(
       innerTextProps,
       innerIconContainerProps,
       innerIconProps,
+      active,
+      iconPosition = 'end',
+      className,
       ...props
     },
     ref
@@ -60,7 +71,19 @@ const DropdownText = forwardRef(
     const styles = useStyles({ spaceBetween, disabled, color, variant })
 
     return (
-      <div ref={ref} className={styles.container} {...props}>
+      <div ref={ref} className={cx(styles.container, className)} {...props}>
+        {iconPosition === 'start' && (
+          <Typography
+            classes={{ root: styles.startIcon }}
+            {...innerIconContainerProps}
+          >
+            <Icon
+              icon={active ? TopIcon : BottomIcon}
+              size={endIconSizeByVariant[variant]}
+              {...innerIconProps}
+            />
+          </Typography>
+        )}
         <Typography
           classes={{ root: styles.typography }}
           variant={variant}
@@ -69,16 +92,18 @@ const DropdownText = forwardRef(
         >
           {children}
         </Typography>
-        <Typography
-          classes={{ root: styles.endIcon }}
-          {...innerIconContainerProps}
-        >
-          <Icon
-            icon={BottomIcon}
-            size={endIconSizeByVariant[variant]}
-            {...innerIconProps}
-          />
-        </Typography>
+        {iconPosition === 'end' && (
+          <Typography
+            classes={{ root: styles.endIcon }}
+            {...innerIconContainerProps}
+          >
+            <Icon
+              icon={active ? TopIcon : BottomIcon}
+              size={endIconSizeByVariant[variant]}
+              {...innerIconProps}
+            />
+          </Typography>
+        )}
       </div>
     )
   }
