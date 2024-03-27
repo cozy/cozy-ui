@@ -1,3 +1,10 @@
+# [105.3.0](https://github.com/cozy/cozy-ui/compare/v105.2.1...v105.3.0) (2024-03-27)
+
+
+### Features
+
+* **resizeImage:** Reduce quality for big image ([2b6cacf](https://github.com/cozy/cozy-ui/commit/2b6cacf))
+
 ## [105.2.1](https://github.com/cozy/cozy-ui/compare/v105.2.0...v105.2.1) (2024-03-26)
 
 
