@@ -29,9 +29,10 @@ const NestedSelect = ({
   searchOptions,
   noDivider
 }) => {
+  const optionsHistory = Array.isArray(options) ? options : [options]
   const innerRef = useRef()
   const [state, setState] = useState({
-    history: [options],
+    history: optionsHistory,
     searchValue: '',
     searchResult: []
   })
@@ -47,7 +48,7 @@ const NestedSelect = ({
     if (unmounted) {
       return
     }
-    setState(state => ({ ...state, history: [options] }))
+    setState(state => ({ ...state, history: optionsHistory }))
   }
 
   const handleBack = () => {
@@ -213,13 +214,27 @@ NestedSelect.propTypes = {
   isSelected: PropTypes.func.isRequired,
 
   /** Options that will be rendered as nested lists of choices */
-  options: PropTypes.shape({
-    /** Header shown above options list */
-    header: PropTypes.node,
-    /** Header shown above options list inside a children */
-    childrenHeader: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-    children: PropTypes.arrayOf(ItemPropType)
-  }),
+  options: PropTypes.oneOfType([
+    PropTypes.shape({
+      /** Header shown above options list */
+      header: PropTypes.node,
+      /** Header shown above options list inside a children */
+      childrenHeader: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+      children: PropTypes.arrayOf(ItemPropType)
+    }),
+    PropTypes.arrayOf(
+      PropTypes.oneOfType([
+        ItemPropType,
+        PropTypes.shape({
+          /** Header shown above options list */
+          header: PropTypes.node,
+          /** Header shown above options list inside a children */
+          childrenHeader: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+          children: PropTypes.arrayOf(ItemPropType)
+        })
+      ])
+    )
+  ]),
 
   /** If true, parent option will be shown at the top of its children */
   canSelectParent: PropTypes.bool,
