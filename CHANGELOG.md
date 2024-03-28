@@ -1,3 +1,10 @@
+## [105.3.1](https://github.com/cozy/cozy-ui/compare/v105.3.0...v105.3.1) (2024-03-28)
+
+
+### Bug Fixes
+
+* Argos screenshots could not be validated ([4cc3a0d](https://github.com/cozy/cozy-ui/commit/4cc3a0d))
+
 # [105.3.0](https://github.com/cozy/cozy-ui/compare/v105.2.1...v105.3.0) (2024-03-27)
 
 
