@@ -15,7 +15,7 @@ import iconOut from '../Icons/LinkOut'
 import iconPlus from '../Icons/Plus'
 import iconWarning from '../Icons/WarningCircle'
 import { alpha, makeStyles } from '../styles'
-import { nameToColor } from '../Avatar'
+import { nameToColor } from '../Avatar/helpers'
 import CozyTheme, { useCozyTheme } from '../providers/CozyTheme'
 
 import styles from './styles.styl'
