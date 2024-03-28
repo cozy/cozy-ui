@@ -1,0 +1,15 @@
+@require 'components/nav'
+
+.c-nav-limiter
+    // Arbitrary 50vh max-height to prevent the unwrapped list to push the sidebar down
+    max-height 50vh
+    overflow-y auto
+    overflow-x hidden
+
+.c-nav-limiter-dropdown
+    @extend $nav-link-secondary
+
+    // Override `<DropdownText />` styles to match with `<NavLink />`
+    span,
+    svg
+        color var(--actionColorActive)

@@ -86,6 +86,7 @@ module.exports = {
         '../react/Layout/Layout.jsx',
         '../react/MidEllipsis',
         '../react/NavigationList',
+        '../react/NavLimiter',
         '../react/NestedSelect/NestedSelect.jsx',
         '../react/Paywall',
         '../react/Sidebar',
