@@ -1,3 +1,10 @@
+# [105.4.0](https://github.com/cozy/cozy-ui/compare/v105.3.1...v105.4.0) (2024-03-29)
+
+
+### Features
+
+* **Icons:** Add multiple icons for the new qualifications modal ([b5dca90](https://github.com/cozy/cozy-ui/commit/b5dca90))
+
 ## [105.3.1](https://github.com/cozy/cozy-ui/compare/v105.3.0...v105.3.1) (2024-03-28)
 
 
