@@ -132,6 +132,7 @@ import Crop from 'cozy-ui/transpiled/react/Icons/Crop'
 import Cross from 'cozy-ui/transpiled/react/Icons/Cross'
 import CrossCircle from 'cozy-ui/transpiled/react/Icons/CrossCircle'
 import CrossCircleOutline from 'cozy-ui/transpiled/react/Icons/CrossCircleOutline'
+import CrossMedium from 'cozy-ui/transpiled/react/Icons/CrossMedium'
 import CrossSmall from 'cozy-ui/transpiled/react/Icons/CrossSmall'
 import Cube from 'cozy-ui/transpiled/react/Icons/Cube'
 import Dash from 'cozy-ui/transpiled/react/Icons/Dash'
@@ -385,6 +386,7 @@ const icons = [
   Cross,
   CrossCircle,
   CrossCircleOutline,
+  CrossMedium,
   CrossSmall,
   Cube,
   Dash,
