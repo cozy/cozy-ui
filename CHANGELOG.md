@@ -1,3 +1,10 @@
+# [105.5.0](https://github.com/cozy/cozy-ui/compare/v105.4.0...v105.5.0) (2024-04-02)
+
+
+### Features
+
+* Update node-polyglot ([fb41dca](https://github.com/cozy/cozy-ui/commit/fb41dca))
+
 # [105.4.0](https://github.com/cozy/cozy-ui/compare/v105.3.1...v105.4.0) (2024-03-29)
 
 
