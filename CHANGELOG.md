@@ -1,3 +1,11 @@
+# [105.6.0](https://github.com/cozy/cozy-ui/compare/v105.5.0...v105.6.0) (2024-04-03)
+
+
+### Features
+
+* **ListItem:** Add licenseNumber and confidentialNumber in ExpandedAttr ([4de21ff](https://github.com/cozy/cozy-ui/commit/4de21ff))
+* Remove useless Viewer locales ([221a66f](https://github.com/cozy/cozy-ui/commit/221a66f))
+
 # [105.5.0](https://github.com/cozy/cozy-ui/compare/v105.4.0...v105.5.0) (2024-04-02)
 
 
