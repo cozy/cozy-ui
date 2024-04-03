@@ -30,6 +30,10 @@
         "bicNumber": "Numéro BIC",
         "passportNumber": "Numéro du passeport",
         "netSocialAmount": "Montant net social",
+        "vehicle": {
+          "licenseNumber": "Plaque d'immatriculation",
+          "confidentialNumber": "Code confidentiel"
+        },
         "number": {
           "pay_sheet": "Rémunération brute",
           "tax_return": "Numéro fiscal de référence",

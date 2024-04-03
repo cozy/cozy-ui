@@ -30,6 +30,10 @@
         "bicNumber": "BIC number",
         "passportNumber": "Passport number",
         "netSocialAmount": "Net social amount",
+        "vehicle": {
+          "licenseNumber": "Vehicle registration number",
+          "confidentialNumber": "Confidential code"
+        },
         "number": {
           "pay_sheet": "Gross remuneration",
           "tax_return": "Reference tax number",
