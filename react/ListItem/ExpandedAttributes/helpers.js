@@ -193,3 +193,29 @@ export const getValueExtended = ({ attrKey, value, t }) => {
   }
   return value
 }
+
+export const makeAttrsLabelAndValueExtended = ({
+  doc,
+  expandedAttributes,
+  t,
+  f,
+  lang
+}) => {
+  const attrsKeyAndFormatedValue = makeAttrsKeyAndFormatedValue({
+    doc,
+    expandedAttributes,
+    f,
+    lang
+  })
+
+  return attrsKeyAndFormatedValue.map(({ attrKey, attrFormatedValue }) => {
+    const label = t(`ListItem.attributes.${attrKey}`)
+    const valueExtended = getValueExtended({
+      attrKey,
+      value: attrFormatedValue,
+      t
+    })
+
+    return { attrKey, attrFormatedValue, label, valueExtended }
+  })
+}
