@@ -92,13 +92,11 @@ export const isDate = value => {
   return dateTime === dateParsedValue
 }
 
-export const formatAttrValue = ({ attribute, attrValue, f, lang }) => {
+export const getAttrValue = (doc, attribute) => {
+  const attrValue = get(doc, attribute)
   if (!attrValue || attrValue.length === 0) return undefined
 
   switch (true) {
-    case isDate(attrValue):
-      return formatDate({ f, lang, date: attrValue })
-
     case attribute === 'email':
       return attrValue.find(x => x.primary === true)?.address
 
@@ -126,62 +124,48 @@ export const makeAttrKey = (doc, expandedAttribute) => {
   }
 }
 
-export const makeAttrsKeyAndFormatedValue = ({
-  doc,
-  expandedAttributes,
-  f,
-  lang
-}) => {
-  const attrsKeyAndFormatedValue = expandedAttributes
+export const makeAttrsKeyAndValue = (doc, expandedAttributes) => {
+  const attrsKeyAndValue = expandedAttributes
     .map(expandedAttribute => {
-      const attrValue = get(doc, expandedAttribute)
+      const attrValue = getAttrValue(doc, expandedAttribute)
 
-      const attrFormatedValue = formatAttrValue({
-        attribute: expandedAttribute,
-        attrValue,
-        f,
-        lang
-      })
-
-      if (!attrFormatedValue) return undefined
+      if (!attrValue) return undefined
 
       const attrKey = makeAttrKey(doc, expandedAttribute)
 
-      return { attrKey, attrFormatedValue }
+      return {
+        attrKey,
+        attrValue
+      }
     })
     .filter(x => x)
     .slice(0, 3)
 
-  return attrsKeyAndFormatedValue
+  return attrsKeyAndValue
 }
 
-export const hasExpandedAttributesDisplayed = ({
-  doc,
-  expandedAttributes,
-  f,
-  lang
-}) => {
+export const hasExpandedAttributesDisplayed = ({ doc, expandedAttributes }) => {
   const defaultExpandedAttributes = makeDefaultExpandedAttributes(
     doc,
     expandedAttributes
   )
 
-  const attrsKeyAndFormatedValue = makeAttrsKeyAndFormatedValue({
-    doc,
-    expandedAttributes: defaultExpandedAttributes,
-    f,
-    lang
-  })
+  const attrsKeyAndValue = makeAttrsKeyAndValue(doc, defaultExpandedAttributes)
 
-  return attrsKeyAndFormatedValue?.length > 0 || false
+  return attrsKeyAndValue?.length > 0 || false
 }
 
-export const getValueExtended = ({ attrKey, value, t }) => {
+export const getFormatedValue = ({ attrKey, value, t, f, lang }) => {
+  if (isDate(value)) {
+    return formatDate({ f, lang, date: value })
+  }
+
   if (attrKey === 'metadata.noticePeriod') {
     if (!isNaN(parseInt(value))) {
       return t('common.day', { smart_count: parseInt(value) })
     }
   }
+
   if (
     attrKey === 'metadata.refTaxIncome' ||
     attrKey === 'metadata.netSocialAmount' ||
@@ -191,31 +175,29 @@ export const getValueExtended = ({ attrKey, value, t }) => {
       return `${value} €`
     }
   }
+
   return value
 }
 
-export const makeAttrsLabelAndValueExtended = ({
+export const makeAttrsLabelAndFormatedValue = ({
   doc,
   expandedAttributes,
   t,
   f,
   lang
 }) => {
-  const attrsKeyAndFormatedValue = makeAttrsKeyAndFormatedValue({
-    doc,
-    expandedAttributes,
-    f,
-    lang
-  })
+  const attrsKeyAndFormatedValue = makeAttrsKeyAndValue(doc, expandedAttributes)
 
-  return attrsKeyAndFormatedValue.map(({ attrKey, attrFormatedValue }) => {
+  return attrsKeyAndFormatedValue.map(({ attrKey, attrValue }) => {
     const label = t(`ListItem.attributes.${attrKey}`)
-    const valueExtended = getValueExtended({
+    const value = getFormatedValue({
       attrKey,
-      value: attrFormatedValue,
-      t
+      value: attrValue,
+      t,
+      f,
+      lang
     })
 
-    return { attrKey, attrFormatedValue, label, valueExtended }
+    return { label, value }
   })
 }

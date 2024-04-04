@@ -7,7 +7,7 @@ import { useI18n } from '../../providers/I18n'
 
 import withListItemLocales from '../hoc/withListItemLocales'
 import ExpandedAttribute from './ExpandedAttribute'
-import { makeAttrsLabelAndValueExtended } from './helpers'
+import { makeAttrsLabelAndFormatedValue } from './helpers'
 
 const ExpandedAttributes = ({ doc, expandedAttributes }) => {
   const { t, f, lang } = useI18n()
@@ -17,7 +17,7 @@ const ExpandedAttributes = ({ doc, expandedAttributes }) => {
     message: ''
   })
 
-  const attrslabelAndValueExtended = makeAttrsLabelAndValueExtended({
+  const attrsLabelAndFormatedValue = makeAttrsLabelAndFormatedValue({
     doc,
     expandedAttributes,
     t,
@@ -29,12 +29,12 @@ const ExpandedAttributes = ({ doc, expandedAttributes }) => {
 
   return (
     <>
-      {attrslabelAndValueExtended.map(({ valueExtended, label }, index) => {
+      {attrsLabelAndFormatedValue.map(({ label, value }, index) => {
         return (
           <ExpandedAttribute
             key={index}
             label={label}
-            value={valueExtended}
+            value={value}
             setAlertProps={setAlertProps}
           />
         )
