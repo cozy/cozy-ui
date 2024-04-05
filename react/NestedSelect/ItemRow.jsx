@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Icon from '../Icon'
 import RightIcon from '../Icons/Right'
@@ -80,6 +81,16 @@ const ItemRow = ({
       {noDivider ? null : !isLast && <Divider />}
     </>
   )
+}
+
+ItemRow.propTypes = {
+  item: PropTypes.object.isRequired,
+  onClick: PropTypes.func.isRequired,
+  isSelected: PropTypes.bool.isRequired,
+  radioPosition: PropTypes.oneOf(['left', 'right']),
+  isLast: PropTypes.bool,
+  ellipsis: PropTypes.bool,
+  noDivider: PropTypes.bool
 }
 
 export default ItemRow
