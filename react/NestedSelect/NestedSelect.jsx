@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 import omit from 'lodash/omit'
 
@@ -36,20 +36,6 @@ const NestedSelect = ({
     searchValue: '',
     searchResult: []
   })
-  const [unmounted, setUnmounted] = useState(false)
-
-  useEffect(() => {
-    return () => {
-      setUnmounted(true)
-    }
-  }, [])
-
-  const resetHistory = () => {
-    if (unmounted) {
-      return
-    }
-    setState(state => ({ ...state, history: [options] }))
-  }
 
   const handleBack = () => {
     const [item, ...newHistory] = state.history
@@ -66,16 +52,6 @@ const NestedSelect = ({
 
   const handleSelect = item => {
     onSelect(item)
-    // It is important to reset history if the NestedSelected is used
-    // multiple times in a row without being dismounted. For example
-    // if it displayed in Carousel that slides in the NestedSelect
-    // and slides it out on selection.
-    // But, we want in this case that the resetting does not happen
-    // while the animation is running.
-    // There is probably a better way to do this.
-    setTimeout(() => {
-      resetHistory()
-    }, 500)
   }
 
   const handleClickItem = item => {
