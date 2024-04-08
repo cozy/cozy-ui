@@ -2,6 +2,8 @@ import get from 'lodash/get'
 
 import { formatDate } from '../../Viewer/helpers'
 
+import { getTranslatedNameForInformationMetadata } from 'cozy-client/dist/models/paper'
+
 export const normalizeExpandedAttribute = attr =>
   attr
     .replaceAll(':', '.')
@@ -111,37 +113,23 @@ export const getAttrValue = (doc, attribute) => {
   }
 }
 
-export const makeAttrKey = (doc, expandedAttribute) => {
-  switch (true) {
-    case expandedAttribute === 'metadata.number':
-      return `${expandedAttribute}.${doc.metadata.qualification.label}`
-
-    case expandedAttribute.match(/\[.+\]/g) !== null:
-      return expandedAttribute.split('[')[0]
-
-    default:
-      return expandedAttribute
-  }
-}
-
-export const makeAttrsKeyAndValue = (doc, expandedAttributes) => {
-  const attrsKeyAndValue = expandedAttributes
+export const makeAttrsValues = (doc, expandedAttributes) => {
+  const attrsValues = expandedAttributes
     .map(expandedAttribute => {
       const attrValue = getAttrValue(doc, expandedAttribute)
 
       if (!attrValue) return undefined
 
-      const attrKey = makeAttrKey(doc, expandedAttribute)
-
       return {
-        attrKey,
+        doc,
+        expandedAttribute,
         attrValue
       }
     })
     .filter(x => x)
     .slice(0, 3)
 
-  return attrsKeyAndValue
+  return attrsValues
 }
 
 export const hasExpandedAttributesDisplayed = ({ doc, expandedAttributes }) => {
@@ -150,33 +138,53 @@ export const hasExpandedAttributesDisplayed = ({ doc, expandedAttributes }) => {
     expandedAttributes
   )
 
-  const attrsKeyAndValue = makeAttrsKeyAndValue(doc, defaultExpandedAttributes)
+  const attrsValues = makeAttrsValues(doc, defaultExpandedAttributes)
 
-  return attrsKeyAndValue?.length > 0 || false
+  return attrsValues?.length > 0 || false
 }
 
-export const getFormatedValue = ({ attrKey, value, t, f, lang }) => {
-  if (isDate(value)) {
-    return formatDate({ f, lang, date: value })
+export const getFormatedValue = ({
+  attrName,
+  attrValue,
+  qualificationLabel,
+  t,
+  f,
+  lang
+}) => {
+  if (isDate(attrValue)) {
+    return formatDate({ f, lang, date: attrValue })
   }
 
-  if (attrKey === 'metadata.noticePeriod') {
-    if (!isNaN(parseInt(value))) {
-      return t('common.day', { smart_count: parseInt(value) })
+  if (attrName === 'metadata.noticePeriod') {
+    if (!isNaN(parseInt(attrValue))) {
+      return t('common.day', { smart_count: parseInt(attrValue) })
     }
   }
 
   if (
-    attrKey === 'metadata.refTaxIncome' ||
-    attrKey === 'metadata.netSocialAmount' ||
-    attrKey === 'metadata.number.pay_sheet'
+    attrName === 'metadata.refTaxIncome' ||
+    attrName === 'metadata.netSocialAmount' ||
+    (attrName === 'metadata.number' && qualificationLabel === 'pay_sheet')
   ) {
-    if (!isNaN(parseInt(value))) {
-      return `${value} €`
+    if (!isNaN(parseInt(attrValue))) {
+      return `${attrValue} €`
     }
   }
 
-  return value
+  return attrValue
+}
+
+export const makeLabel = ({ attrName, qualificationLabel, t, lang }) => {
+  if (qualificationLabel) {
+    const name = attrName.split('metadata.')[1]
+    const label = getTranslatedNameForInformationMetadata(name, {
+      lang,
+      qualificationLabel
+    })
+    return label
+  }
+
+  return t(`ListItem.attributes.${attrName}`)
 }
 
 export const makeAttrsLabelAndFormatedValue = ({
@@ -186,18 +194,28 @@ export const makeAttrsLabelAndFormatedValue = ({
   f,
   lang
 }) => {
-  const attrsKeyAndFormatedValue = makeAttrsKeyAndValue(doc, expandedAttributes)
+  const attrsKeyAndFormatedValue = makeAttrsValues(doc, expandedAttributes)
 
-  return attrsKeyAndFormatedValue.map(({ attrKey, attrValue }) => {
-    const label = t(`ListItem.attributes.${attrKey}`)
-    const value = getFormatedValue({
-      attrKey,
-      value: attrValue,
-      t,
-      f,
-      lang
-    })
+  return attrsKeyAndFormatedValue.map(
+    ({ doc, expandedAttribute, attrValue }) => {
+      const attrName =
+        expandedAttribute.match(/\[.+\]/g) !== null
+          ? expandedAttribute.split('[')[0]
+          : expandedAttribute
+      const qualificationLabel = doc.metadata?.qualification?.label
 
-    return { label, value }
-  })
+      const label = makeLabel({ attrName, qualificationLabel, t, lang })
+
+      const value = getFormatedValue({
+        attrName,
+        attrValue,
+        qualificationLabel,
+        t,
+        f,
+        lang
+      })
+
+      return { label, value }
+    }
+  )
 }
