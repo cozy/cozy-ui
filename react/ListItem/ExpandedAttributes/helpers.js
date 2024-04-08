@@ -1,8 +1,12 @@
 import get from 'lodash/get'
 
-import { formatDate } from '../../Viewer/helpers'
-
-import { getTranslatedNameForInformationMetadata } from 'cozy-client/dist/models/paper'
+import {
+  getTranslatedNameForInformationMetadata,
+  KNOWN_INFORMATION_METADATA_NAMES,
+  KNOWN_DATE_METADATA_NAMES,
+  formatInformationMetadataValue,
+  formatDateMetadataValue
+} from 'cozy-client/dist/models/paper'
 
 export const normalizeExpandedAttribute = attr =>
   attr
@@ -33,17 +37,8 @@ export const notExpandedAttributes = {
 export const defaultExpandedAttributes = {
   'io.cozy.contacts': ['email', 'phone', 'address', 'birthday'],
   'io.cozy.files': [
-    'metadata.number',
-    'metadata.vehicle.licenseNumber',
-    'metadata.vehicle.confidentialNumber',
-    'metadata.bicNumber',
-    'metadata.netSocialAmount',
-    'metadata.noticePeriod',
-    'metadata.obtentionDate',
-    'metadata.expirationDate',
-    'metadata.country',
-    'metadata.refTaxIncome',
-    'metadata.contractType'
+    ...KNOWN_INFORMATION_METADATA_NAMES.map(x => `metadata.${x}`),
+    ...KNOWN_DATE_METADATA_NAMES.map(x => `metadata.${x}`)
   ]
 }
 
@@ -147,28 +142,19 @@ export const getFormatedValue = ({
   attrName,
   attrValue,
   qualificationLabel,
-  t,
   f,
   lang
 }) => {
   if (isDate(attrValue)) {
-    return formatDate({ f, lang, date: attrValue })
+    return formatDateMetadataValue(attrValue, { f, lang })
   }
 
-  if (attrName === 'metadata.noticePeriod') {
-    if (!isNaN(parseInt(attrValue))) {
-      return t('common.day', { smart_count: parseInt(attrValue) })
-    }
-  }
-
-  if (
-    attrName === 'metadata.refTaxIncome' ||
-    attrName === 'metadata.netSocialAmount' ||
-    (attrName === 'metadata.number' && qualificationLabel === 'pay_sheet')
-  ) {
-    if (!isNaN(parseInt(attrValue))) {
-      return `${attrValue} €`
-    }
+  if (qualificationLabel) {
+    return formatInformationMetadataValue(attrValue, {
+      lang,
+      name: attrName.split('metadata.')[1],
+      qualificationLabel
+    })
   }
 
   return attrValue
@@ -210,7 +196,6 @@ export const makeAttrsLabelAndFormatedValue = ({
         attrName,
         attrValue,
         qualificationLabel,
-        t,
         f,
         lang
       })
