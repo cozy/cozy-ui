@@ -152,6 +152,8 @@ const files = [
     name: 'File01.pdf',
     metadata: {
       number: 12345,
+      refTaxIncome: '153',
+      noticePeriod: '30',
       qualification: {
         label: 'driver_license'
       }
@@ -185,7 +187,7 @@ const files = [
       doc={files[0]}
       expandedAttributesProps={{
         isExpandedAttributesActive: true,
-        expandedAttributes: ['metadata.number']
+        expandedAttributes: ['metadata.number', 'metadata.refTaxIncome', 'metadata.noticePeriod']
       }}
       onClick={() => {}}
     />
