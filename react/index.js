@@ -15,6 +15,7 @@ export {
   NavItem,
   NavIcon,
   NavText,
+  NavDesktopLimiter,
   NavLink,
   genNavLink
 } from './Nav'

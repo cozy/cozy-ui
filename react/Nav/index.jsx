@@ -1,7 +1,12 @@
-import React, { forwardRef } from 'react'
+import React, { Children, isValidElement, useState, forwardRef } from 'react'
 import Icon from '../Icon'
 import styles from './styles.styl'
 import cx from 'classnames'
+import BottomIcon from '../Icons/Bottom'
+import TopIcon from '../Icons/Top'
+import { useI18n } from '../providers/I18n'
+import withNavLocales from './locales/withNavLocales'
+import useBreakpoints from '../providers/Breakpoints'
 
 export const NavItem = ({ children, secondary, ...restProps }) => (
   <li
@@ -61,6 +66,50 @@ const Nav = ({ children }) => {
     </nav>
   )
 }
+
+/**
+ * Component that limits the number of displayed children in a list
+ * and provides a dropdown button to toggle between displaying all children or a limited number of children.
+ * Provided children should be of type `<ListItem />` or similar.
+ */
+const _NavDesktopLimiter = ({ children, max = 5 }) => {
+  const [viewingAll, setViewingAll] = useState(false)
+  const childrenArray = Children.toArray(children).filter(isValidElement)
+  const amountHidden = Math.max(0, childrenArray.length - max)
+  const { t } = useI18n()
+  const displayedChildren = viewingAll
+    ? childrenArray
+    : childrenArray.slice(0, max)
+  const onToggle = () => setViewingAll(current => !current)
+  const { isMobile } = useBreakpoints()
+
+  if (isMobile) return null
+
+  return (
+    <>
+      {displayedChildren}
+
+      {amountHidden > 0 && (
+        <NavItem secondary>
+          <button
+            type="button"
+            className={cx(styles['c-nav-link'], styles['c-nav-limiter'])}
+            onClick={onToggle}
+          >
+            <NavIcon icon={viewingAll ? TopIcon : BottomIcon} />
+            <NavText>
+              {viewingAll
+                ? t('navLimiter.showLess')
+                : `${t('navLimiter.showMore')} (${amountHidden})`}
+            </NavText>
+          </button>
+        </NavItem>
+      )}
+    </>
+  )
+}
+
+export const NavDesktopLimiter = withNavLocales(_NavDesktopLimiter)
 
 export default Nav
 Nav.NavItem = NavItem
