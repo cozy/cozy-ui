@@ -89,18 +89,18 @@ export const isDate = value => {
   return dateTime === dateParsedValue
 }
 
-export const getAttrValue = (doc, attribute) => {
-  const attrValue = get(doc, attribute)
+export const getAttrValue = (doc, attrName) => {
+  const attrValue = get(doc, attrName)
   if (!attrValue || attrValue.length === 0) return undefined
 
   switch (true) {
-    case attribute === 'email':
+    case attrName === 'email':
       return attrValue.find(x => x.primary === true)?.address
 
-    case attribute === 'address':
+    case attrName === 'address':
       return attrValue.find(x => x.primary === true)?.formattedAddress
 
-    case attribute === 'phone':
+    case attrName === 'phone':
       return attrValue.find(x => x.primary === true)?.number
 
     default:
@@ -110,14 +110,13 @@ export const getAttrValue = (doc, attribute) => {
 
 export const makeAttrsValues = (doc, expandedAttributes) => {
   const attrsValues = expandedAttributes
-    .map(expandedAttribute => {
-      const attrValue = getAttrValue(doc, expandedAttribute)
+    .map(attrName => {
+      const attrValue = getAttrValue(doc, attrName)
 
       if (!attrValue) return undefined
 
       return {
-        doc,
-        expandedAttribute,
+        attrName,
         attrValue
       }
     })
@@ -127,6 +126,7 @@ export const makeAttrsValues = (doc, expandedAttributes) => {
   return attrsValues
 }
 
+// could be use in apps
 export const hasExpandedAttributesDisplayed = ({ doc, expandedAttributes }) => {
   const defaultExpandedAttributes = makeDefaultExpandedAttributes(
     doc,
@@ -182,25 +182,26 @@ export const makeAttrsLabelAndFormatedValue = ({
 }) => {
   const attrsKeyAndFormatedValue = makeAttrsValues(doc, expandedAttributes)
 
-  return attrsKeyAndFormatedValue.map(
-    ({ doc, expandedAttribute, attrValue }) => {
-      const attrName =
-        expandedAttribute.match(/\[.+\]/g) !== null
-          ? expandedAttribute.split('[')[0]
-          : expandedAttribute
-      const qualificationLabel = doc.metadata?.qualification?.label
+  return attrsKeyAndFormatedValue.map(({ attrName, attrValue }) => {
+    const _attrName =
+      attrName.match(/\[.+\]/g) !== null ? attrName.split('[')[0] : attrName
+    const qualificationLabel = doc.metadata?.qualification?.label
 
-      const label = makeLabel({ attrName, qualificationLabel, t, lang })
+    const label = makeLabel({
+      attrName: _attrName,
+      qualificationLabel,
+      t,
+      lang
+    })
 
-      const value = getFormatedValue({
-        attrName,
-        attrValue,
-        qualificationLabel,
-        f,
-        lang
-      })
+    const value = getFormatedValue({
+      attrName: _attrName,
+      attrValue,
+      qualificationLabel,
+      f,
+      lang
+    })
 
-      return { label, value }
-    }
-  )
+    return { label, value }
+  })
 }
