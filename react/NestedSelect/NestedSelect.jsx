@@ -170,6 +170,7 @@ const ItemPropType = PropTypes.shape({
   focusedId: PropTypes.string,
   /** Header shown above options list */
   header: PropTypes.node,
+  /** Icon shown on the left of the item */
   icon: PropTypes.element,
   /** Key used for the item, if not passed, title is used */
   key: PropTypes.string,
@@ -178,7 +179,16 @@ const ItemPropType = PropTypes.shape({
   /** Description of the item */
   description: PropTypes.node,
   /** Options below the current one */
-  children: PropTypes.array
+  children: PropTypes.array,
+  /** Additional information */
+  info: PropTypes.node,
+  /** Action displayed to the right of item */
+  action: PropTypes.shape({
+    /** Component to render */
+    Component: PropTypes.func,
+    /** Props to pass to the component */
+    props: PropTypes.object
+  })
 })
 
 NestedSelect.propTypes = {
@@ -197,6 +207,7 @@ NestedSelect.propTypes = {
     header: PropTypes.node,
     /** Header shown above options list inside a children */
     childrenHeader: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+    /** Array of options */
     children: PropTypes.arrayOf(ItemPropType)
   }),
 
@@ -232,7 +243,10 @@ NestedSelect.propTypes = {
   ellipsis: PropTypes.bool,
 
   /** Remove dividers after each row */
-  noDivider: PropTypes.bool
+  noDivider: PropTypes.bool,
+
+  /** Component to wrap the content  */
+  ContentComponent: PropTypes.elementType
 }
 
 export default NestedSelect
