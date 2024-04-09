@@ -16,9 +16,9 @@ import { useI18n } from '../../providers/I18n'
 import MidEllipsis from '../../MidEllipsis'
 
 const QualificationListItemOther = forwardRef(
-  ({ formatedMetadataQualification, toggleActionsMenu }, ref) => {
+  ({ formattedMetadataQualification, toggleActionsMenu }, ref) => {
     const { lang } = useI18n()
-    const { name, value } = formatedMetadataQualification
+    const { name, value } = formattedMetadataQualification
 
     if (!value) return null
 
@@ -51,7 +51,7 @@ const QualificationListItemOther = forwardRef(
 QualificationListItemOther.displayName = 'QualificationListItemOther'
 
 QualificationListItemOther.propTypes = {
-  formatedMetadataQualification: PropTypes.shape({
+  formattedMetadataQualification: PropTypes.shape({
     name: PropTypes.string,
     value: PropTypes.string
   }).isRequired,

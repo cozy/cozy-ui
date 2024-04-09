@@ -16,9 +16,9 @@ import { useI18n } from '../../providers/I18n'
 import MidEllipsis from '../../MidEllipsis'
 
 const QualificationListItemInformation = forwardRef(
-  ({ formatedMetadataQualification, file, toggleActionsMenu }, ref) => {
+  ({ formattedMetadataQualification, file, toggleActionsMenu }, ref) => {
     const { lang } = useI18n()
-    const { name, value } = formatedMetadataQualification
+    const { name, value } = formattedMetadataQualification
     const qualificationLabel = file.metadata.qualification.label
 
     const formattedTitle = getTranslatedNameForInformationMetadata(name, {
@@ -58,7 +58,7 @@ const QualificationListItemInformation = forwardRef(
 QualificationListItemInformation.displayName = 'QualificationListItemNumber'
 
 QualificationListItemInformation.propTypes = {
-  formatedMetadataQualification: PropTypes.shape({
+  formattedMetadataQualification: PropTypes.shape({
     name: PropTypes.string,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
   }).isRequired,
