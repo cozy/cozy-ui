@@ -98,8 +98,8 @@ const makeOptions = ({ withHeaders, focusedId } = {}) => ({
     letterOption(`E. A very long option, that should be ellipsed. ${content.ada.short}`, `Its description is also very long and will be ellipsed. ${content.ada.short}`),
     letterOption('F'),
     letterOption('G'),
-    letterOption('H', 'H for hero', 'hero'),
-    letterOption('H', 'H for helicopter', 'helicopter'),
+    letterOption('H', 'for hero', 'hero'),
+    letterOption('H', 'for helicopter', 'helicopter'),
     letterOption('I'),
     letterOption('J'),
     letterOption('K'),
@@ -178,35 +178,40 @@ const InteractiveExample = () => {
     leftRadio: false,
     withSearch: false,
     withEllipsis: true,
-    withHeaders: false
+    withHeaders: false,
+    canSelectParent: true,
+    withFocus: false
   }]
 
   return (
     <Variants initialVariants={initialVariants} screenshotAllVariants>
-      {variant => (
-        <>
-          {selectedItem && (
-            <Typography paragraph>Selected item: { selectedItem.title }</Typography>
-          )}
-          <Button className='u-ml-0' label='Select' onClick={showModal} />
-          {showingModal && (
-            <NestedSelectResponsive
-              canSelectParent={true}
-              onSelect={handleSelect}
-              onClose={hideModal}
-              isSelected={isSelected}
-              options={makeOptions({withHeaders: variant.withHeaders, focusedId: selectedItem.id})}
-              radioPosition={variant.leftRadio ? 'left' : 'right'}
-              title={variant.noTitle ? undefined : "Please select letter"}
-              transformParentItem={transformParentItem}
-              searchOptions={variant.withSearch ? searchOptions(variant.withHeaders) : undefined}
-              ellipsis={variant.withEllipsis}
-              componentsProps={{ bottomsheet: { skipAnimation: isTesting() } }}
-              noDivider={variant.noDivider}
-            />
-          )}
-        </>
-      )}
+      {variant => {
+        const options = makeOptions({withHeaders: variant.withHeaders, focusedId: variant.withFocus ? selectedItem.id : undefined})
+        return (
+          <>
+            {selectedItem && (
+              <Typography paragraph>Selected item: { selectedItem.title } { selectedItem.description ? selectedItem.description : null }</Typography>
+            )}
+            <Button className='u-ml-0' label='Select' onClick={showModal} />
+            {showingModal && (
+              <NestedSelectResponsive
+                canSelectParent={variant.canSelectParent}
+                onSelect={handleSelect}
+                onClose={hideModal}
+                isSelected={isSelected}
+                options={options}
+                radioPosition={variant.leftRadio ? 'left' : 'right'}
+                title={variant.noTitle ? undefined : "Please select letter"}
+                transformParentItem={transformParentItem}
+                searchOptions={variant.withSearch ? searchOptions(variant.withHeaders) : undefined}
+                ellipsis={variant.withEllipsis}
+                componentsProps={{ bottomsheet: { skipAnimation: isTesting() } }}
+                noDivider={variant.noDivider}
+              />
+            )}
+          </>
+        )
+      }}
     </Variants>
   )
 }
