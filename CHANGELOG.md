@@ -1,3 +1,12 @@
+# [105.8.0](https://github.com/cozy/cozy-ui/compare/v105.7.0...v105.8.0) (2024-04-09)
+
+
+### Features
+
+* Add missing proptypes to NestedSelect ([c474ece](https://github.com/cozy/cozy-ui/commit/c474ece))
+* Open NestedSelect to a specific element ([8cf959e](https://github.com/cozy/cozy-ui/commit/8cf959e))
+* Remove useless code in NestedSelect ([b88450c](https://github.com/cozy/cozy-ui/commit/b88450c))
+
 # [105.7.0](https://github.com/cozy/cozy-ui/compare/v105.6.0...v105.7.0) (2024-04-09)
 
 
