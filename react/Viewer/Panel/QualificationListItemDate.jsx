@@ -19,9 +19,9 @@ import QualificationListItemText from './QualificationListItemText'
 import { useI18n } from '../../providers/I18n'
 
 const QualificationListItemDate = forwardRef(
-  ({ file, formatedMetadataQualification, toggleActionsMenu }, ref) => {
+  ({ file, formattedMetadataQualification, toggleActionsMenu }, ref) => {
     const { f, lang } = useI18n()
-    const { name, value } = formatedMetadataQualification
+    const { name, value } = formattedMetadataQualification
     const formattedTitle = getTranslatedNameForDateMetadata(name, { lang })
     const formattedDate = formatDateMetadataValue(value, {
       f,
@@ -67,7 +67,7 @@ QualificationListItemDate.displayName = 'QualificationListItemDate'
 
 QualificationListItemDate.propTypes = {
   file: PropTypes.object.isRequired,
-  formatedMetadataQualification: PropTypes.shape({
+  formattedMetadataQualification: PropTypes.shape({
     name: PropTypes.string,
     value: PropTypes.string
   }).isRequired,

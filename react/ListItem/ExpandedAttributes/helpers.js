@@ -138,7 +138,7 @@ export const hasExpandedAttributesDisplayed = ({ doc, expandedAttributes }) => {
   return attrsValues?.length > 0 || false
 }
 
-export const getFormatedValue = ({
+export const getFormattedValue = ({
   attrName,
   attrValue,
   qualificationLabel,
@@ -173,16 +173,16 @@ export const makeLabel = ({ attrName, qualificationLabel, t, lang }) => {
   return t(`ListItem.attributes.${attrName}`)
 }
 
-export const makeAttrsLabelAndFormatedValue = ({
+export const makeAttrsLabelAndFormattedValue = ({
   doc,
   expandedAttributes,
   t,
   f,
   lang
 }) => {
-  const attrsKeyAndFormatedValue = makeAttrsValues(doc, expandedAttributes)
+  const attrsKeyAndFormattedValue = makeAttrsValues(doc, expandedAttributes)
 
-  return attrsKeyAndFormatedValue.map(({ attrName, attrValue }) => {
+  return attrsKeyAndFormattedValue.map(({ attrName, attrValue }) => {
     const _attrName =
       attrName.match(/\[.+\]/g) !== null ? attrName.split('[')[0] : attrName
     const qualificationLabel = doc.metadata?.qualification?.label
@@ -194,7 +194,7 @@ export const makeAttrsLabelAndFormatedValue = ({
       lang
     })
 
-    const value = getFormatedValue({
+    const value = getFormattedValue({
       attrName: _attrName,
       attrValue,
       qualificationLabel,

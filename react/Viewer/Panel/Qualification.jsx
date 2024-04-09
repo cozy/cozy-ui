@@ -47,15 +47,15 @@ const Qualification = ({ file }) => {
     })
   }
 
-  const formatedMetadataQualification = useMemo(() => {
+  const formattedMetadataQualification = useMemo(() => {
     return formatMetadataQualification(metadata)
   }, [metadata])
 
   useEffect(() => {
-    actionBtnRef.current = formatedMetadataQualification.map(
+    actionBtnRef.current = formattedMetadataQualification.map(
       (_, idx) => actionBtnRef.current[idx] ?? createRef()
     )
-  }, [formatedMetadataQualification])
+  }, [formattedMetadataQualification])
 
   return (
     <>
@@ -63,7 +63,7 @@ const Qualification = ({ file }) => {
         <ExpirationAlert file={file} />
       )}
       <List className={'u-pv-1'}>
-        {formatedMetadataQualification.map((meta, idx) => {
+        {formattedMetadataQualification.map((meta, idx) => {
           const { name } = meta
           const metadataQualificationType = getMetadataQualificationType(name)
           const QualificationListItemComp =
@@ -74,7 +74,7 @@ const Qualification = ({ file }) => {
               key={idx}
               file={file}
               ref={actionBtnRef.current[idx]}
-              formatedMetadataQualification={meta}
+              formattedMetadataQualification={meta}
               toggleActionsMenu={val => toggleActionsMenu(idx, name, val)}
             />
           )
