@@ -9485,6 +9485,11 @@ body {
   border-right: 1px solid var(--actionColorActive);
   background-color: var(--actionColorActive);
 }
+.c-nav-item-secondary--k14rf .c-nav-limiter--3oxQU {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
 
 .DesktopSectionWrapper--1rIWP {
   list-style-type: none;
