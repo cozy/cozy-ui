@@ -1,5 +1,8 @@
 You can use `react/NestedSelect/NestedSelectResponsive` wich provides automaticaly a modal on desktop and bottomsheet on mobile, or directly `react/NestedSelect/Modal` and `react/NestedSelect/BottomSheet`.
 
+You can open the NestedSelect where a specific item is located, for this your items must have a ***id*** attribute and add the ***focusedId*** attribute to the root of the options.
+See below for example
+
 ```jsx
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import Variants from 'cozy-ui/docs/components/Variants'
@@ -26,7 +29,7 @@ const Image = ({ letter }) => (
 )
 
 const letterOption = (letter, description, key) => ({
-  id: letter,
+  id: `${letter}${key ? `_${key}` : ''}`,
   title: letter,
   description,
   key,
@@ -43,7 +46,8 @@ const SettingAction = ({ item, onClick }) => {
   )
 }
 
-const makeOptions = withHeaders => ({
+const makeOptions = ({ withHeaders, focusedId } = {}) => ({
+  focusedId,
   header: withHeaders ?
     <Alert className="u-mt-1 u-mh-1" icon={false}>This is a header for options</Alert>
     : undefined,
@@ -131,34 +135,25 @@ const StaticExample = () => {
 
 const RADIO_BUTTON_ANIM_DURATION = 500
 
-// Crude parent-children relationship
-const isParent = (item, childItem) => {
-  return childItem.title.includes(item.title)
-}
-
 const InteractiveExample = () => {
   const [showingModal, setShowingModal] = useState(false)
-  const [selectedItem, setSelected] = useState({ title: 'A' })
+  const [selectedItem, setSelected] = useState(letterOption('A'))
 
   const showModal = () => setShowingModal(true)
   const hideModal = () => setShowingModal(false)
 
-  const isSelected = (item, level) => {
+  const isSelected = item => {
     if (!selectedItem) {
       return false
-    } else if (level === 0 && isParent(item, selectedItem)) {
-      return true
-    } else if (item.title === selectedItem.title) {
-      return true
     }
-    return false
+    return item.id === selectedItem.id
   }
 
   const searchOptions = withHeaders => ({
     placeholderSearch: 'Placeholder Search',
     noDataLabel: 'No Data Found',
     onSearch: (value) => {
-      const options = makeOptions(withHeaders)
+      const options = makeOptions({ withHeaders })
       return options.children.filter(o => o.description && o.description.toLowerCase().includes(value.toLowerCase()))
     },
     displaySearchResultItem: item =>
@@ -200,7 +195,7 @@ const InteractiveExample = () => {
               onSelect={handleSelect}
               onClose={hideModal}
               isSelected={isSelected}
-              options={makeOptions(variant.withHeaders)}
+              options={makeOptions({withHeaders: variant.withHeaders, focusedId: selectedItem.id})}
               radioPosition={variant.leftRadio ? 'left' : 'right'}
               title={variant.noTitle ? undefined : "Please select letter"}
               transformParentItem={transformParentItem}

@@ -6,6 +6,7 @@ import List from '../List'
 import Input from '../Input'
 import Typography from '../Typography'
 import ItemRow from './ItemRow'
+import { makeHistory } from './helpers'
 
 export { ItemRow }
 
@@ -31,7 +32,7 @@ const NestedSelect = ({
 }) => {
   const innerRef = useRef()
   const [state, setState] = useState({
-    history: [options],
+    history: makeHistory(options, canSelectParent),
     searchValue: '',
     searchResult: []
   })
@@ -189,6 +190,8 @@ NestedSelect.defaultProps = {
 }
 
 const ItemPropType = PropTypes.shape({
+  /** Used to open NestedSelect on the element with this "id" value */
+  focusedId: PropTypes.string,
   /** Header shown above options list */
   header: PropTypes.node,
   icon: PropTypes.element,
