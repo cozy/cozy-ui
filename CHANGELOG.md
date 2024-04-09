@@ -1,3 +1,17 @@
+# [105.7.0](https://github.com/cozy/cozy-ui/compare/v105.6.0...v105.7.0) (2024-04-09)
+
+
+### Bug Fixes
+
+* Add vertical scroll to sidebar when needed ([9e9e95c](https://github.com/cozy/cozy-ui/commit/9e9e95c))
+* update nav.styl after broken lint passed PR ([28333d8](https://github.com/cozy/cozy-ui/commit/28333d8))
+
+
+### Features
+
+* Add `<NavLimiter />` component ([8c7a14a](https://github.com/cozy/cozy-ui/commit/8c7a14a))
+* **ListItem:** Use cozy-client to make ExpandedAttributes label ([eb681e1](https://github.com/cozy/cozy-ui/commit/eb681e1))
+
 # [105.6.0](https://github.com/cozy/cozy-ui/compare/v105.5.0...v105.6.0) (2024-04-03)
 
 
