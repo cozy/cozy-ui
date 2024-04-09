@@ -9308,6 +9308,8 @@ body {
   width: 13.75rem;
   border-right: 0.063rem solid var(--dividerColor);
   background-color: var(--defaultBackgroundColor);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 @media (max-width: 63.938rem) {
   .o-sidebar--1295j {
