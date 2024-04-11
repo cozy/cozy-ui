@@ -1,3 +1,10 @@
+# [105.9.0](https://github.com/cozy/cozy-ui/compare/v105.8.0...v105.9.0) (2024-04-11)
+
+
+### Features
+
+* Exclude shared drives dir from filepicker ([c29b26d](https://github.com/cozy/cozy-ui/commit/c29b26d))
+
 # [105.8.0](https://github.com/cozy/cozy-ui/compare/v105.7.0...v105.8.0) (2024-04-09)
 
 
