@@ -47,12 +47,12 @@
   "maxAccountsPaywall": {
     "premium": {
       "title": "Augmentez votre offre",
-      "content": "Votre offre vous permet de connecter jusqu'à **%{smart_count} compte** dans votre Cozy.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy. |||| Votre offre vous permet de connecter jusqu'à **%{smart_count} comptes** dans votre Cozy.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
+      "content": "Votre offre vous permet de connecter jusqu'à **%{smart_count} compte** dans votre Cozy.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy - [En savoir plus](https://support.cozy.io/nombre-maximum-dappareils-connectes-autorises/) |||| Votre offre vous permet de connecter jusqu'à **%{smart_count} comptes** dans votre Cozy.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy - [En savoir plus](https://support.cozy.io/nombre-maximum-dappareils-connectes-autorises/)",
       "action": "Voir les offres"
     },
     "default": {
       "title": "Information",
-      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité.",
+      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité - [En savoir plus](https://support.cozy.io/nombre-maximum-dappareils-connectes-autorises/)",
       "action": "J'ai compris"
     }
   },

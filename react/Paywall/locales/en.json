@@ -47,12 +47,12 @@
   "maxAccountsPaywall": {
     "premium": {
       "title": "Upgrade your plan",
-      "content": "Your plan allows you to connect up to **%{smart_count} account** in your Cozy.\n\nTo unlock this feature, or simply support us, you can change your Cozy plan. |||| Your plan allows you to connect up to **%{smart_count} accounts** in your Cozy.\n\nTo unlock this feature, or simply support us, you can change your Cozy plan.",
+      "content": "Your plan allows you to connect up to **%{smart_count} account** in your Cozy.\n\nTo unlock this feature, or simply support us, you can change your Cozy plan - [Learn More](https://help.cozy.io/maximum-number-of-connected-devices-allowed/) |||| Your plan allows you to connect up to **%{smart_count} accounts** in your Cozy.\n\nTo unlock this feature, or simply support us, you can change your Cozy plan - [Learn More](https://help.cozy.io/maximum-number-of-connected-devices-allowed/)",
       "action": "Check our plans"
     },
     "default": {
       "title": "Information",
-      "content": "Your current plan does not allow you to take advantage of this feature.",
+      "content": "Your current plan does not allow you to take advantage of this feature - [Learn More](https://help.cozy.io/maximum-number-of-connected-devices-allowed/)",
       "action": "I understand"
     }
   },
