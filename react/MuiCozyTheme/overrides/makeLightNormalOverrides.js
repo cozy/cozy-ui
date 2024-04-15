@@ -365,9 +365,13 @@ export const makeLightNormalOverrides = theme => ({
       right: 0
     }
   },
+  MuiMenu: {
+    paper: {
+      maxWidth: 320
+    }
+  },
   MuiMenuItem: {
     root: {
-      maxWidth: 320,
       whiteSpace: 'normal',
       overflow: 'auto',
       paddingTop: 4,

@@ -77,6 +77,15 @@ const hideMenu = () => setState({ showMenu: false })
       <ListItemText primary="Attachment" />
     </MenuItem>
     <MenuItem onClick={hideMenu}>
+      <ListItemIcon>
+        <Icon icon={PeopleIcon} />
+      </ListItemIcon>
+      <ListItemText
+        primary="Item with a very long title to show how it should be displayed"
+        primaryTypographyProps={{ ellipsis: false }}
+      />
+    </MenuItem>
+    <MenuItem onClick={hideMenu}>
       <ListItemText primary="Item without icon" />
     </MenuItem>
 
