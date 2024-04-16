@@ -1,3 +1,10 @@
+## [105.9.1](https://github.com/cozy/cozy-ui/compare/v105.9.0...v105.9.1) (2024-04-16)
+
+
+### Bug Fixes
+
+* **MenuItem:** Remove maxWidth and add it on Menu instead ([291c8cd](https://github.com/cozy/cozy-ui/commit/291c8cd))
+
 # [105.9.0](https://github.com/cozy/cozy-ui/compare/v105.8.0...v105.9.0) (2024-04-11)
 
 
