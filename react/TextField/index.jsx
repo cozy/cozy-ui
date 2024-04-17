@@ -1,6 +1,8 @@
 import React, { forwardRef } from 'react'
 import MuiTextField from '@material-ui/core/TextField'
 
+import Icon from '../Icon'
+import BottomIcon from '../Icons/Bottom'
 import { getRandomUUID } from '../helpers/getRandomUUID'
 
 const TextField = forwardRef(({ children, ...props }, ref) => {
@@ -8,7 +10,24 @@ const TextField = forwardRef(({ children, ...props }, ref) => {
   const uuid = getRandomUUID()
 
   return (
-    <MuiTextField ref={ref} id={uuid} {...props}>
+    <MuiTextField
+      ref={ref}
+      id={uuid}
+      SelectProps={{
+        IconComponent: iconProps => (
+          <Icon
+            {...iconProps}
+            icon={BottomIcon}
+            color={
+              props.disabled
+                ? 'var(--disabledTextColor)'
+                : 'var(--iconTextColor)'
+            }
+          />
+        )
+      }}
+      {...props}
+    >
       {children}
     </MuiTextField>
   )
