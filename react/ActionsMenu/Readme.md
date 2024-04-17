@@ -201,7 +201,7 @@ const toggleMenu = () => setState(state => ({ showMenu: !state.showMenu }))
         </ListItemIcon>
         <ListItemText primary="Title" primaryTypographyProps={{ variant: 'h6' }} />
       </ActionsMenuMobileHeader>
-      <ActionsMenuItem onClick={() => alert('click')}>
+      <ActionsMenuItem autoFocus={true} onClick={() => alert('click')}>
         <ListItemIcon>
           <Icon icon={PenIcon} />
         </ListItemIcon>
