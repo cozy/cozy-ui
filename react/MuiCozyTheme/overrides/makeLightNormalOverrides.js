@@ -11,6 +11,17 @@ import {
 const SWITCH_BAR_WIDTH = 25
 
 export const makeLightNormalOverrides = theme => ({
+  MuiSelect: {
+    iconOutlined: {
+      top: 'auto',
+      right: 14
+    },
+    outlined: {
+      '&&': {
+        paddingRight: 39
+      }
+    }
+  },
   MuiOutlinedInput: {
     root: {
       borderRadius: 4,
