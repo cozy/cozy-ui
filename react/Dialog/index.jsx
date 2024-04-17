@@ -11,6 +11,11 @@ const Dialog = props => {
 
   return <MUIDialog className={`CozyTheme--${type}-${variant}`} {...props} />
 }
+
+Dialog.defaultProps = {
+  disableEnforceFocus: true
+}
+
 export default Dialog
 
 export { default as DialogActions } from './DialogActions'
