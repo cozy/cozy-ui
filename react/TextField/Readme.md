@@ -51,165 +51,165 @@ const handleChange = (event) => {
 ;
 
 <DemoProvider>
-<Variants initialVariants={initialVariants} screenshotAllVariants>
-  {variant => (
-    <>
-      <div className="u-mb-1">No label</div>
-      <TextField
-        error={variant.error}
-        size={variant.small ? 'small' : 'medium'}
-        helperText={variant.helperText ? 'This is an helper text' : undefined}
-        required={variant.required}
-        InputProps={variant.withIcons ? inputProps : undefined}
-        variant="outlined"
-      />
-      <TextField
-        className="u-ml-0-s u-ml-1 u-mt-half-s"
-        disabled
-        error={variant.error}
-        size={variant.small ? 'small' : 'medium'}
-        helperText={variant.helperText ? 'This is an helper text' : undefined}
-        required={variant.required}
-        InputProps={variant.withIcons ? inputProps : undefined}
-        variant="outlined"
-      />
+  <Variants initialVariants={initialVariants} screenshotAllVariants>
+    {variant => (
+      <>
+        <div className="u-mb-1">No label</div>
+        <TextField
+          error={variant.error}
+          size={variant.small ? 'small' : 'medium'}
+          helperText={variant.helperText ? 'This is an helper text' : undefined}
+          required={variant.required}
+          InputProps={variant.withIcons ? inputProps : undefined}
+          variant="outlined"
+        />
+        <TextField
+          className="u-ml-0-s u-ml-1 u-mt-half-s"
+          disabled
+          error={variant.error}
+          size={variant.small ? 'small' : 'medium'}
+          helperText={variant.helperText ? 'This is an helper text' : undefined}
+          required={variant.required}
+          InputProps={variant.withIcons ? inputProps : undefined}
+          variant="outlined"
+        />
 
-      <div className="u-mb-1 u-mt-2">Empty</div>
-      <TextField
-        error={variant.error}
-        size={variant.small ? 'small' : 'medium'}
-        helperText={variant.helperText ? 'This is an helper text' : undefined}
-        required={variant.required}
-        InputProps={variant.withIcons ? inputProps : undefined}
-        label="Label"
-        variant="outlined"
-      />
-      <TextField
-        className="u-ml-0-s u-ml-1 u-mt-half-s"
-        disabled
-        error={variant.error}
-        size={variant.small ? 'small' : 'medium'}
-        helperText={variant.helperText ? 'This is an helper text' : undefined}
-        required={variant.required}
-        InputProps={variant.withIcons ? inputProps : undefined}
-        label="Label"
-        variant="outlined"
-      />
+        <div className="u-mb-1 u-mt-2">Empty</div>
+        <TextField
+          error={variant.error}
+          size={variant.small ? 'small' : 'medium'}
+          helperText={variant.helperText ? 'This is an helper text' : undefined}
+          required={variant.required}
+          InputProps={variant.withIcons ? inputProps : undefined}
+          label="Label"
+          variant="outlined"
+        />
+        <TextField
+          className="u-ml-0-s u-ml-1 u-mt-half-s"
+          disabled
+          error={variant.error}
+          size={variant.small ? 'small' : 'medium'}
+          helperText={variant.helperText ? 'This is an helper text' : undefined}
+          required={variant.required}
+          InputProps={variant.withIcons ? inputProps : undefined}
+          label="Label"
+          variant="outlined"
+        />
 
-      <div className="u-mb-1 u-mt-2">Placeholder</div>
-      <TextField
-        placeholder="placeholder"
-        InputLabelProps={{ shrink: true }}
-        error={variant.error}
-        size={variant.small ? 'small' : 'medium'}
-        helperText={variant.helperText ? 'This is an helper text' : undefined}
-        required={variant.required}
-        InputProps={variant.withIcons ? inputProps : undefined}
-        label="Label"
-        variant="outlined"
-      />
-      <TextField
-        className="u-ml-0-s u-ml-1 u-mt-half-s"
-        placeholder="placeholder"
-        disabled
-        error={variant.error}
-        size={variant.small ? 'small' : 'medium'}
-        helperText={variant.helperText ? 'This is an helper text' : undefined}
-        required={variant.required}
-        InputProps={variant.withIcons ? inputProps : undefined}
-        label="Label"
-        variant="outlined"
-      />
+        <div className="u-mb-1 u-mt-2">Placeholder</div>
+        <TextField
+          placeholder="placeholder"
+          InputLabelProps={{ shrink: true }}
+          error={variant.error}
+          size={variant.small ? 'small' : 'medium'}
+          helperText={variant.helperText ? 'This is an helper text' : undefined}
+          required={variant.required}
+          InputProps={variant.withIcons ? inputProps : undefined}
+          label="Label"
+          variant="outlined"
+        />
+        <TextField
+          className="u-ml-0-s u-ml-1 u-mt-half-s"
+          placeholder="placeholder"
+          disabled
+          error={variant.error}
+          size={variant.small ? 'small' : 'medium'}
+          helperText={variant.helperText ? 'This is an helper text' : undefined}
+          required={variant.required}
+          InputProps={variant.withIcons ? inputProps : undefined}
+          label="Label"
+          variant="outlined"
+        />
 
-      <div className="u-mb-1 u-mt-2">Default value</div>
-      <TextField
-        defaultValue="Default value"
-        error={variant.error}
-        size={variant.small ? 'small' : 'medium'}
-        helperText={variant.helperText ? 'This is an helper text' : undefined}
-        required={variant.required}
-        InputProps={variant.withIcons ? inputProps : undefined}
-        label="Label"
-        variant="outlined"
-      />
-      <TextField
-        className="u-ml-0-s u-ml-1 u-mt-half-s"
-        defaultValue="Default value"
-        disabled
-        error={variant.error}
-        size={variant.small ? 'small' : 'medium'}
-        helperText={variant.helperText ? 'This is an helper text' : undefined}
-        required={variant.required}
-        InputProps={variant.withIcons ? inputProps : undefined}
-        label="Label"
-        variant="outlined"
-      />
+        <div className="u-mb-1 u-mt-2">Default value</div>
+        <TextField
+          defaultValue="Default value"
+          error={variant.error}
+          size={variant.small ? 'small' : 'medium'}
+          helperText={variant.helperText ? 'This is an helper text' : undefined}
+          required={variant.required}
+          InputProps={variant.withIcons ? inputProps : undefined}
+          label="Label"
+          variant="outlined"
+        />
+        <TextField
+          className="u-ml-0-s u-ml-1 u-mt-half-s"
+          defaultValue="Default value"
+          disabled
+          error={variant.error}
+          size={variant.small ? 'small' : 'medium'}
+          helperText={variant.helperText ? 'This is an helper text' : undefined}
+          required={variant.required}
+          InputProps={variant.withIcons ? inputProps : undefined}
+          label="Label"
+          variant="outlined"
+        />
 
-      <div className="u-mb-1 u-mt-2">Multiline</div>
-      <TextField
-        multiline
-        rows={4}
-        error={variant.error}
-        size={variant.small ? 'small' : 'medium'}
-        helperText={variant.helperText ? 'This is an helper text' : undefined}
-        required={variant.required}
-        InputProps={variant.withIcons ? inputProps : undefined}
-        label="Label"
-        variant="outlined"
-      />
-      <TextField
-        className="u-ml-0-s u-ml-1 u-mt-half-s"
-        multiline
-        rows={4}
-        disabled
-        error={variant.error}
-        size={variant.small ? 'small' : 'medium'}
-        helperText={variant.helperText ? 'This is an helper text' : undefined}
-        required={variant.required}
-        InputProps={variant.withIcons ? inputProps : undefined}
-        label="Label"
-        variant="outlined"
-      />
+        <div className="u-mb-1 u-mt-2">Multiline</div>
+        <TextField
+          multiline
+          rows={4}
+          error={variant.error}
+          size={variant.small ? 'small' : 'medium'}
+          helperText={variant.helperText ? 'This is an helper text' : undefined}
+          required={variant.required}
+          InputProps={variant.withIcons ? inputProps : undefined}
+          label="Label"
+          variant="outlined"
+        />
+        <TextField
+          className="u-ml-0-s u-ml-1 u-mt-half-s"
+          multiline
+          rows={4}
+          disabled
+          error={variant.error}
+          size={variant.small ? 'small' : 'medium'}
+          helperText={variant.helperText ? 'This is an helper text' : undefined}
+          required={variant.required}
+          InputProps={variant.withIcons ? inputProps : undefined}
+          label="Label"
+          variant="outlined"
+        />
 
-      <div className="u-mb-1 u-mt-2">Select</div>
-      <TextField
-        select
-        value={state.option}
-        error={variant.error}
-        size={variant.small ? 'small' : 'medium'}
-        helperText={variant.helperText ? 'This is an helper text' : undefined}
-        required={variant.required}
-        label="Label"
-        variant="outlined"
-        onChange={handleChange}
-      >
-        {options.map((option) => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
-      <TextField
-        className="u-ml-1"
-        select
-        value={state.option}
-        disabled
-        error={variant.error}
-        size={variant.small ? 'small' : 'medium'}
-        helperText={variant.helperText ? 'This is an helper text' : undefined}
-        required={variant.required}
-        label="Label"
-        variant="outlined"
-        onChange={handleChange}
-      >
-        {options.map((option) => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
-    </>
-  )}
-</Variants>
+        <div className="u-mb-1 u-mt-2">Select</div>
+        <TextField
+          select
+          value={state.option}
+          error={variant.error}
+          size={variant.small ? 'small' : 'medium'}
+          helperText={variant.helperText ? 'This is an helper text' : undefined}
+          required={variant.required}
+          label="Label"
+          variant="outlined"
+          onChange={handleChange}
+        >
+          {options.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+        <TextField
+          className="u-ml-1"
+          select
+          value={state.option}
+          disabled
+          error={variant.error}
+          size={variant.small ? 'small' : 'medium'}
+          helperText={variant.helperText ? 'This is an helper text' : undefined}
+          required={variant.required}
+          label="Label"
+          variant="outlined"
+          onChange={handleChange}
+        >
+          {options.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+      </>
+    )}
+  </Variants>
 </DemoProvider>
 ```
