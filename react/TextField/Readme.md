@@ -174,6 +174,7 @@ const handleChange = (event) => {
         <div className="u-mb-1 u-mt-2">Select</div>
         <TextField
           select
+          options={options}
           value={state.option}
           error={variant.error}
           size={variant.small ? 'small' : 'medium'}
@@ -192,6 +193,7 @@ const handleChange = (event) => {
         <TextField
           className="u-ml-1"
           select
+          options={options}
           value={state.option}
           disabled
           error={variant.error}
