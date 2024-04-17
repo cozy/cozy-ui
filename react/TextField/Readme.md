@@ -1,6 +1,7 @@
 Cozy themed MUI TextField. See [the official API](https://v4.mui.com/api/text-field/) to find the props.
 
 ```jsx
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import TextField, {StyledTextField} from 'cozy-ui/transpiled/react/TextField'
 import Variants from 'cozy-ui/docs/components/Variants'
 import FileIcon from 'cozy-ui/transpiled/react/Icons/File'
@@ -49,6 +50,7 @@ const handleChange = (event) => {
 
 ;
 
+<DemoProvider>
 <Variants initialVariants={initialVariants} screenshotAllVariants>
   {variant => (
     <>
@@ -62,7 +64,7 @@ const handleChange = (event) => {
         variant="outlined"
       />
       <TextField
-        className="u-ml-0-s u-ml-1"
+        className="u-ml-0-s u-ml-1 u-mt-half-s"
         disabled
         error={variant.error}
         size={variant.small ? 'small' : 'medium'}
@@ -83,7 +85,7 @@ const handleChange = (event) => {
         variant="outlined"
       />
       <TextField
-        className="u-ml-0-s u-ml-1"
+        className="u-ml-0-s u-ml-1 u-mt-half-s"
         disabled
         error={variant.error}
         size={variant.small ? 'small' : 'medium'}
@@ -107,7 +109,7 @@ const handleChange = (event) => {
         variant="outlined"
       />
       <TextField
-        className="u-ml-1"
+        className="u-ml-0-s u-ml-1 u-mt-half-s"
         placeholder="placeholder"
         disabled
         error={variant.error}
@@ -131,7 +133,7 @@ const handleChange = (event) => {
         variant="outlined"
       />
       <TextField
-        className="u-ml-1"
+        className="u-ml-0-s u-ml-1 u-mt-half-s"
         defaultValue="Default value"
         disabled
         error={variant.error}
@@ -156,7 +158,7 @@ const handleChange = (event) => {
         variant="outlined"
       />
       <TextField
-        className="u-ml-1"
+        className="u-ml-0-s u-ml-1 u-mt-half-s"
         multiline
         rows={4}
         disabled
@@ -209,4 +211,5 @@ const handleChange = (event) => {
     </>
   )}
 </Variants>
+</DemoProvider>
 ```
