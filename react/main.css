@@ -7735,6 +7735,46 @@ body {
   }
 }
 
+.renderSaferAnim--2rNtc {
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  animation: slidein--1E_4T 1s;
+}
+@-moz-keyframes slidein--1E_4T {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
+}
+@-webkit-keyframes slidein--1E_4T {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
+}
+@-o-keyframes slidein--1E_4T {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
+}
+@keyframes slidein--1E_4T {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
+}
+
 @-moz-keyframes spin--10b55 {
   from {
     transform: rotate(0deg);
@@ -8060,46 +8100,6 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-.renderSaferAnim--2rNtc {
-  position: absolute;
-  bottom: 0;
-  height: 0;
-  width: 100%;
-  animation: slidein--1E_4T 1s;
-}
-@-moz-keyframes slidein--1E_4T {
-  from {
-    height: 100%;
-  }
-  to {
-    height: 0;
-  }
-}
-@-webkit-keyframes slidein--1E_4T {
-  from {
-    height: 100%;
-  }
-  to {
-    height: 0;
-  }
-}
-@-o-keyframes slidein--1E_4T {
-  from {
-    height: 100%;
-  }
-  to {
-    height: 0;
-  }
-}
-@keyframes slidein--1E_4T {
-  from {
-    height: 100%;
-  }
-  to {
-    height: 0;
-  }
 }
 
 .c-inputgroup--12OVJ input[aria-disabled=true],
