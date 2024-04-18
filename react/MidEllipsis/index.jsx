@@ -25,8 +25,8 @@ const MidEllipsis = forwardRef(
     const str = text || children
 
     const partLength = Math.round(str.length / 2)
-    const firstPart = str.substring(0, partLength).trim()
-    const lastPart = str.substring(partLength, str.length).trim()
+    const firstPart = str.substring(0, partLength)
+    const lastPart = str.substring(partLength, str.length)
 
     return (
       <div className={cx('u-midellipsis', className)} ref={ref} {...props}>
