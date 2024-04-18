@@ -1,3 +1,16 @@
+# [105.10.0](https://github.com/cozy/cozy-ui/compare/v105.9.1...v105.10.0) (2024-04-18)
+
+
+### Bug Fixes
+
+* **Dialog:** Set disableEnforceFocus to true ([969c848](https://github.com/cozy/cozy-ui/commit/969c848))
+* **TextField:** Force specific icon component for Select usage ([f14f998](https://github.com/cozy/cozy-ui/commit/f14f998))
+
+
+### Features
+
+* **TextField:** Use BottomDrawer on mobile for Select input ([20a0030](https://github.com/cozy/cozy-ui/commit/20a0030))
+
 ## [105.9.1](https://github.com/cozy/cozy-ui/compare/v105.9.0...v105.9.1) (2024-04-16)
 
 
