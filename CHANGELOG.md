@@ -1,3 +1,10 @@
+## [105.10.2](https://github.com/cozy/cozy-ui/compare/v105.10.1...v105.10.2) (2024-04-18)
+
+
+### Bug Fixes
+
+* **MidEllipsis:** It should not trim strings ([311e92d](https://github.com/cozy/cozy-ui/commit/311e92d))
+
 ## [105.10.1](https://github.com/cozy/cozy-ui/compare/v105.10.0...v105.10.1) (2024-04-18)
 
 
