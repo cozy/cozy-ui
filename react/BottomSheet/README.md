@@ -60,6 +60,7 @@ import BottomSheet, { BottomSheetItem, BottomSheetHeader, BottomSheetTitle } fro
 import Button from 'cozy-ui/transpiled/react/Buttons'
 
 // <-- only useful for the documentation
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import Variants from 'cozy-ui/docs/components/Variants'
 import TextField from 'cozy-ui/transpiled/react/TextField'
 import List from 'cozy-ui/transpiled/react/List'
@@ -119,161 +120,163 @@ const settings = state.mediumHeight === undefined && state.mediumHeightRatio ===
 
 ;
 
-<Variants initialVariants={initialVariants}>
-  {variant => (
-    <>
-      <div>
-        <TextField
-          type="number"
-          margin="dense"
-          label="mediumHeight"
-          variant="outlined"
-          helperText="Height of the medium snap point"
-          onChange={handleChangeMediumHeight}
-        />
-        <TextField
-          className="u-ml-0-s u-ml-half"
-          type="number"
-          margin="dense"
-          label="mediumHeightRatio"
-          variant="outlined"
-          helperText="Height ratio of the medium snap point"
-          onChange={handleChangeMediumHeightRatio}
-        />
-        <TextField
-          className="u-ml-0-s u-ml-half"
-          type="number"
-          margin="dense"
-          label="offset"
-          variant="outlined"
-          helperText="Bottom offset"
-          onChange={handleChangeOffset}
-        />
-        <Button
-          className="u-ml-0-s u-ml-half u-mt-1"
-          size="small"
-          variant="ghost"
-          label="Open BottomSheet"
-          onClick={showBottomSheet}
-        />
-      </div>
+<DemoProvider>
+  <Variants initialVariants={initialVariants}>
+    {variant => (
+      <>
+        <div>
+          <TextField
+            type="number"
+            margin="dense"
+            label="mediumHeight"
+            variant="outlined"
+            helperText="Height of the medium snap point"
+            onChange={handleChangeMediumHeight}
+          />
+          <TextField
+            className="u-ml-0-s u-ml-half"
+            type="number"
+            margin="dense"
+            label="mediumHeightRatio"
+            variant="outlined"
+            helperText="Height ratio of the medium snap point"
+            onChange={handleChangeMediumHeightRatio}
+          />
+          <TextField
+            className="u-ml-0-s u-ml-half"
+            type="number"
+            margin="dense"
+            label="offset"
+            variant="outlined"
+            helperText="Bottom offset"
+            onChange={handleChangeOffset}
+          />
+          <Button
+            className="u-ml-0-s u-ml-half u-mt-1"
+            size="small"
+            variant="ghost"
+            label="Open BottomSheet"
+            onClick={showBottomSheet}
+          />
+        </div>
 
-      {state.isBottomSheetDisplayed && (
-        <BottomSheet
-          toolbarProps={variant.withFakeToolbar ? { height: 50 } : undefined}
-          settings={settings}
-          backdrop={variant.backdrop}
-          skipAnimation={isTesting()}
-          offset={state.offset}
-          onClose={variant.closable ? hideBottomSheet : undefined}
-        >
-          {variant.withHeader && (
-            <BottomSheetHeader className="u-ph-1 u-pb-1">
-              <Button
-                className="u-mr-half"
-                variant="secondary"
-                label="Open BottomSheet"
-                fullWidth
-                onClick={showSecondBottomSheet}
-              />
-              <Button variant="secondary" label="Button 2" fullWidth />
+        {state.isBottomSheetDisplayed && (
+          <BottomSheet
+            toolbarProps={variant.withFakeToolbar ? { height: 50 } : undefined}
+            settings={settings}
+            backdrop={variant.backdrop}
+            skipAnimation={isTesting()}
+            offset={state.offset}
+            onClose={variant.closable ? hideBottomSheet : undefined}
+          >
+            {variant.withHeader && (
+              <BottomSheetHeader className="u-ph-1 u-pb-1">
+                <Button
+                  className="u-mr-half"
+                  variant="secondary"
+                  label="Open BottomSheet"
+                  fullWidth
+                  onClick={showSecondBottomSheet}
+                />
+                <Button variant="secondary" label="Button 2" fullWidth />
 
-              {state.isSecondBottomSheetDisplayed && (
-                <BottomSheet backdrop onClose={hideSecondBottomSheet}>
-                  <BottomSheetItem>
-                    {content.ada.short}
-                  </BottomSheetItem>
-                </BottomSheet>
-              )}
-            </BottomSheetHeader>
-          )}
-          {!variant.withListContent && (
-            <>
-              {variant.withTitle && (
-                <BottomSheetTitle label="Title"/>
-              )}
-              <BottomSheetItem>
-                {variant.longContent ? content.ada.long : content.ada.short}
+                {state.isSecondBottomSheetDisplayed && (
+                  <BottomSheet backdrop onClose={hideSecondBottomSheet}>
+                    <BottomSheetItem>
+                      {content.ada.short}
+                    </BottomSheetItem>
+                  </BottomSheet>
+                )}
+              </BottomSheetHeader>
+            )}
+            {!variant.withListContent && (
+              <>
+                {variant.withTitle && (
+                  <BottomSheetTitle label="Title"/>
+                )}
+                <BottomSheetItem>
+                  {variant.longContent ? content.ada.long : content.ada.short}
+                </BottomSheetItem>
+              </>
+            )}
+            {variant.withListContent && (
+              <BottomSheetItem disableGutters>
+                {variant.withTitle && (
+                  <>
+                    <BottomSheetTitle icon={FileTypeTextIcon} label="Title" />
+                    <Divider />
+                  </>
+                )}
+                <List>
+                  <ListItem button>
+                    <ListItemIcon>
+                      <Icon icon={FileIcon} />
+                    </ListItemIcon>
+                    <ListItemText primary="Item with icon" secondary=" and with secondary text" />
+                  </ListItem>
+                  <Divider variant="inset" />
+                  <ListItem button>
+                    <ListItemIcon>
+                      <Checkbox />
+                    </ListItemIcon>
+                    <ListItemText primary="Item with checkbox" />
+                  </ListItem>
+                  <Divider variant="inset" />
+                  <ListItem button>
+                    <ListItemIcon>
+                      <Radio />
+                    </ListItemIcon>
+                    <ListItemText primary="Item with radio" />
+                  </ListItem>
+                  <Divider variant="inset" />
+                  <ListItem button>
+                    <ListItemIcon>
+                      <Icon icon={FileIcon} />
+                    </ListItemIcon>
+                    <ListItemText primary="Item with secondary action" />
+                    <Icon icon={RightIcon} />
+                  </ListItem>
+                </List>
+
+                <Divider />
+
+                <List>
+                  <ListItem button>
+                    <ListItemIcon>
+                      <Icon icon={FileTypeTextIcon} size={32} />
+                    </ListItemIcon>
+                    <ListItemText primary="Files" />
+                  </ListItem>
+                  <ListItem button>
+                    <ListItemIcon>
+                      <Icon icon={FileTypeSheetIcon} size={32} />
+                    </ListItemIcon>
+                    <ListItemText primary="Sheets" />
+                  </ListItem>
+                </List>
+
+                <Divider variant="inset" />
+
+                <List>
+                  <ListItem button>
+                    <ListItemIcon>
+                      <Icon icon={FileTypeSlideIcon} size={32} />
+                    </ListItemIcon>
+                    <ListItemText primary="Slides" />
+                  </ListItem>
+                  <ListItem button>
+                    <ListItemIcon>
+                      <Icon icon={FileTypeVideoIcon} size={32} />
+                    </ListItemIcon>
+                    <ListItemText primary="Videos" />
+                  </ListItem>
+                </List>
               </BottomSheetItem>
-            </>
-          )}
-          {variant.withListContent && (
-            <BottomSheetItem disableGutters>
-              {variant.withTitle && (
-                <>
-                  <BottomSheetTitle icon={FileTypeTextIcon} label="Title" />
-                  <Divider />
-                </>
-              )}
-              <List>
-                <ListItem button>
-                  <ListItemIcon>
-                    <Icon icon={FileIcon} />
-                  </ListItemIcon>
-                  <ListItemText primary="Item with icon" secondary=" and with secondary text" />
-                </ListItem>
-                <Divider variant="inset" />
-                <ListItem button>
-                  <ListItemIcon>
-                    <Checkbox />
-                  </ListItemIcon>
-                  <ListItemText primary="Item with checkbox" />
-                </ListItem>
-                <Divider variant="inset" />
-                <ListItem button>
-                  <ListItemIcon>
-                    <Radio />
-                  </ListItemIcon>
-                  <ListItemText primary="Item with radio" />
-                </ListItem>
-                <Divider variant="inset" />
-                <ListItem button>
-                  <ListItemIcon>
-                    <Icon icon={FileIcon} />
-                  </ListItemIcon>
-                  <ListItemText primary="Item with secondary action" />
-                  <Icon icon={RightIcon} />
-                </ListItem>
-              </List>
-
-              <Divider />
-
-              <List>
-                <ListItem button>
-                  <ListItemIcon>
-                    <Icon icon={FileTypeTextIcon} size={32} />
-                  </ListItemIcon>
-                  <ListItemText primary="Files" />
-                </ListItem>
-                <ListItem button>
-                  <ListItemIcon>
-                    <Icon icon={FileTypeSheetIcon} size={32} />
-                  </ListItemIcon>
-                  <ListItemText primary="Sheets" />
-                </ListItem>
-              </List>
-
-              <Divider variant="inset" />
-
-              <List>
-                <ListItem button>
-                  <ListItemIcon>
-                    <Icon icon={FileTypeSlideIcon} size={32} />
-                  </ListItemIcon>
-                  <ListItemText primary="Slides" />
-                </ListItem>
-                <ListItem button>
-                  <ListItemIcon>
-                    <Icon icon={FileTypeVideoIcon} size={32} />
-                  </ListItemIcon>
-                  <ListItemText primary="Videos" />
-                </ListItem>
-              </List>
-            </BottomSheetItem>
-          )}
-        </BottomSheet>
-      )}
-    </>
-  )}
-</Variants>
+            )}
+          </BottomSheet>
+        )}
+      </>
+    )}
+  </Variants>
+</DemoProvider>
 ```

@@ -13,6 +13,7 @@ import PointerAlert from 'cozy-ui/transpiled/react/PointerAlert'
 ### Demo
 
 ```jsx
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import PointerAlert from 'cozy-ui/transpiled/react/PointerAlert'
 import AlertTitle from 'cozy-ui/transpiled/react/AlertTitle'
 import Button from 'cozy-ui/transpiled/react/Buttons'
@@ -46,54 +47,56 @@ const handleChangePosition = el => {
 
 ;
 
-<Variants initialVariants={initialVariants} screenshotAllVariants>
-  {variant => (
-    <>
-      <div>
-        <TextField
-          className="u-mb-1-half"
-          type="string"
-          margin="dense"
-          label="position"
-          variant="outlined"
-          helperText="Arrow position"
-          onChange={handleChangePosition}
-          value={state.position}
-        />
-      </div>
-      {directions.map(direction =>
-        <div className="u-mb-half" key={direction}>
-            <PointerAlert
-              direction={direction}
-              position={state.position}
-              color={variant.color ? "#EFA82D" : undefined}
-              block={variant.block}
-              square={variant.square}
-              icon={variant.noIcon ? false : variant.largeIcon ? <Icon icon={DeviceLaptopIcon} color="var(--errorColor)" size={32} /> : undefined}
-              action={(variant.actionOne || variant.actionTwo) ?
-                <>
-                  {variant.actionOne &&
-                    <Button variant="text" size="small" label="Download" startIcon={<Icon icon={DownloadIcon} />} />
-                  }
-                  {variant.actionTwo &&
-                    <Button variant="text" size="small" label="No, thanks!" />
-                  }
-                </>
-                : undefined
-              }
-              onClose={variant.close ? () => {} : undefined}
-            >
-              {variant.title && <AlertTitle>This is the title</AlertTitle>}
-              {variant.longText
-                ? content.ada.short
-                : "Get Cozy Drive for Desktop and synchronise your files safely to make them accessible at all times."
-              }
-            </PointerAlert>
+<DemoProvider>
+  <Variants initialVariants={initialVariants} screenshotAllVariants>
+    {variant => (
+      <>
+        <div>
+          <TextField
+            className="u-mb-1-half"
+            type="string"
+            margin="dense"
+            label="position"
+            variant="outlined"
+            helperText="Arrow position"
+            onChange={handleChangePosition}
+            value={state.position}
+          />
         </div>
-      )}
-    </>
-  )}
-</Variants>
+        {directions.map(direction =>
+          <div className="u-mb-half" key={direction}>
+              <PointerAlert
+                direction={direction}
+                position={state.position}
+                color={variant.color ? "#EFA82D" : undefined}
+                block={variant.block}
+                square={variant.square}
+                icon={variant.noIcon ? false : variant.largeIcon ? <Icon icon={DeviceLaptopIcon} color="var(--errorColor)" size={32} /> : undefined}
+                action={(variant.actionOne || variant.actionTwo) ?
+                  <>
+                    {variant.actionOne &&
+                      <Button variant="text" size="small" label="Download" startIcon={<Icon icon={DownloadIcon} />} />
+                    }
+                    {variant.actionTwo &&
+                      <Button variant="text" size="small" label="No, thanks!" />
+                    }
+                  </>
+                  : undefined
+                }
+                onClose={variant.close ? () => {} : undefined}
+              >
+                {variant.title && <AlertTitle>This is the title</AlertTitle>}
+                {variant.longText
+                  ? content.ada.short
+                  : "Get Cozy Drive for Desktop and synchronise your files safely to make them accessible at all times."
+                }
+              </PointerAlert>
+          </div>
+        )}
+      </>
+    )}
+  </Variants>
+</DemoProvider>
 ```
 
 ### Colors
