@@ -15,7 +15,7 @@ const TextField = forwardRef(({ select, options, children, ...props }, ref) => {
   // options is not required to avoid breaking change but needed to have the mobile behavior
   if (isMobile && select && options) {
     return (
-      <MobileSelect {...props} ref={ref} id={uuid} options={options}>
+      <MobileSelect ref={ref} id={uuid} options={options} {...props}>
         {children}
       </MobileSelect>
     )
@@ -23,7 +23,6 @@ const TextField = forwardRef(({ select, options, children, ...props }, ref) => {
 
   return (
     <MuiTextField
-      {...props}
       ref={ref}
       id={uuid}
       select={select}
@@ -40,6 +39,7 @@ const TextField = forwardRef(({ select, options, children, ...props }, ref) => {
           />
         )
       }}
+      {...props}
     >
       {children}
     </MuiTextField>
