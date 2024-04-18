@@ -1,3 +1,10 @@
+## [105.10.1](https://github.com/cozy/cozy-ui/compare/v105.10.0...v105.10.1) (2024-04-18)
+
+
+### Bug Fixes
+
+* **TextField:** Props should not be overriden ([5636cf9](https://github.com/cozy/cozy-ui/commit/5636cf9))
+
 # [105.10.0](https://github.com/cozy/cozy-ui/compare/v105.9.1...v105.10.0) (2024-04-18)
 
 
