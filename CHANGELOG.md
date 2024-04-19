@@ -1,3 +1,10 @@
+# [105.11.0](https://github.com/cozy/cozy-ui/compare/v105.10.2...v105.11.0) (2024-04-19)
+
+
+### Features
+
+* **Icon:** Add Relationship icon ([06727bf](https://github.com/cozy/cozy-ui/commit/06727bf))
+
 ## [105.10.2](https://github.com/cozy/cozy-ui/compare/v105.10.1...v105.10.2) (2024-04-18)
 
 
