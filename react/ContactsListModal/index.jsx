@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { Q, fetchPolicies, useClient, useQuery } from 'cozy-client'
+import { useClient, useQueryAll } from 'cozy-client'
 
 import { DialogTitle, DialogContent } from '../Dialog'
 import CozyTheme from '../providers/CozyTheme'
@@ -25,17 +25,7 @@ import AddContactDialog from './AddContact/AddContactDialog'
 import { withContactsListLocales } from './withContactsListLocales'
 
 import styles from './styles.styl'
-
-const thirtySeconds = 30000
-const olderThan30s = fetchPolicies.olderThan(thirtySeconds)
-
-const contactsQuery = {
-  definition: Q('io.cozy.contacts').UNSAFE_noLimit(),
-  options: {
-    as: 'contacts',
-    fetchPolicy: olderThan30s
-  }
-}
+import { buildContactsQuery } from './queries'
 
 const ContactsListModal = ({
   onItemClick,
@@ -54,7 +44,10 @@ const ContactsListModal = ({
     onClose: dismissAction
   })
   const client = useClient()
-  const contacts = useQuery(contactsQuery.definition, contactsQuery.options)
+
+  const contactsQuery = buildContactsQuery()
+  const contacts = useQueryAll(contactsQuery.definition, contactsQuery.options)
+
   useRealtime(
     client,
     {
