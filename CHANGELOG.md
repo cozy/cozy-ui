@@ -1,3 +1,11 @@
+# [105.12.0](https://github.com/cozy/cozy-ui/compare/v105.11.0...v105.12.0) (2024-04-23)
+
+
+### Features
+
+* **ContactsListModal:** Add the contact prop to provide its own list ([8652fa6](https://github.com/cozy/cozy-ui/commit/8652fa6))
+* **ContactsListModal:** Split query to specific file ([b232fe0](https://github.com/cozy/cozy-ui/commit/b232fe0))
+
 # [105.11.0](https://github.com/cozy/cozy-ui/compare/v105.10.2...v105.11.0) (2024-04-19)
 
 
