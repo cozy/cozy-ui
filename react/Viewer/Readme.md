@@ -94,6 +94,8 @@ const files = [
       DObtentionDate: null,
       datetime: "2022-09-23T07:50:22.000Z",
       datetimeLabel: "BObtentionDate",
+      expirationDate: new Date(Date.now() + 10 * 24 * 60 * 60 * 1000).toISOString(),
+      noticePeriod: "90",
       number: "",
       page: "front",
       qualification: {
@@ -128,7 +130,6 @@ const files = [
     mime: 'text/plain',
     encrypted: true
   },
-
   {
     _id: 'image',
     class: 'image',
