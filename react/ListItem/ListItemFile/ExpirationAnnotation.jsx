@@ -1,21 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { computeExpirationDate, isExpired } from 'cozy-client/dist/models/paper'
+import {
+  computeExpirationDate,
+  isExpired,
+  makeExpiredMessage,
+  makeExpiresInMessage
+} from 'cozy-client/dist/models/paper'
 
 import Typography from '../../Typography'
 import { useI18n } from '../../providers/I18n'
-import { formatLocallyDistanceToNowStrict } from '../../providers/I18n/format'
 
 import withListItemLocales from '../hoc/withListItemLocales'
 
 const ExpirationAnnotation = ({ file }) => {
-  const { t } = useI18n()
+  const { lang } = useI18n()
 
   if (isExpired(file)) {
     return (
       <Typography component="span" variant="inherit" color="error">
-        {t('ListItem.file.expired')}
+        {makeExpiredMessage({ lang })}
       </Typography>
     )
   }
@@ -24,9 +28,7 @@ const ExpirationAnnotation = ({ file }) => {
 
   return (
     <Typography component="span" variant="inherit" className="u-warning">
-      {t('ListItem.file.expiresIn', {
-        duration: formatLocallyDistanceToNowStrict(expirationDate)
-      })}
+      {makeExpiresInMessage(expirationDate, { lang })}
     </Typography>
   )
 }

@@ -37,12 +37,9 @@
           "copy": "Copier",
           "copyClipboard": "Copier dans le presse-papier",
           "edit": "Modifier"
-        },
-        "expired": "Expiré",
-        "expiresIn": "Expire dans %{duration}"
+        }
       },
       "expiration": {
-        "description": "Ce document expire dans %{duration}, pensez à le renouveler",
         "dismiss": "J'ai compris"
       },
       "title": "Informations utiles"
