@@ -9,14 +9,17 @@ import Link from '../../Link'
 import Typography from '../../Typography'
 import { withViewerLocales } from '../hoc/withViewerLocales'
 import { useI18n } from '../../providers/I18n'
-import { formatLocallyDistanceToNowStrict } from '../../providers/I18n/format'
 
 const FILES_DOCTYPE = 'io.cozy.files'
 
-const { computeExpirationDate, computeExpirationNoticeLink } = models.paper
+const {
+  computeExpirationDate,
+  computeExpirationNoticeLink,
+  makeExpirationDescription
+} = models.paper
 
 const ExpirationAlert = ({ file }) => {
-  const { t } = useI18n()
+  const { t, lang } = useI18n()
   const client = useClient()
   const [isBusy, setIsBusy] = useState(false)
 
@@ -50,8 +53,8 @@ const ExpirationAlert = ({ file }) => {
     >
       <Typography component="span" variant="inherit">
         <Typography component="span" variant="inherit">
-          {t('Viewer.panel.expiration.description', {
-            duration: formatLocallyDistanceToNowStrict(expirationDate)
+          {makeExpirationDescription(expirationDate, {
+            lang
           })}
         </Typography>
         {expirationNoticeLink && (

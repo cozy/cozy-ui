@@ -37,12 +37,9 @@
           "copy": "Copy",
           "copyClipboard": "Copy to clipboard",
           "edit": "Edit"
-        },
-        "expired": "Expired",
-        "expiresIn": "Expires in %{duration}"
+        }
       },
       "expiration": {
-        "description": "This document expires in %{duration}, consider renewing it",
         "dismiss": "I understood"
       },
       "title": "Useful information"

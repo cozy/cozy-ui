@@ -54,8 +54,6 @@
       }
     },
     "file": {
-      "expired": "Expired",
-      "expiresIn": "Expires in %{duration}",
       "page": {
         "back": "Back side",
         "front": "Front side"
