@@ -5,7 +5,7 @@ import Alert from '../../Alert'
 import AlertTitle from '../../AlertTitle'
 
 /**
- * @typedef {import('../../Alert').AlertProps & { message: string, title: string }} ShowAlertArgs
+ * @typedef {import('../../Alert').AlertProps & { action?: JSX.Element, message: string, title: string }} ShowAlertArgs
  */
 /**
  * @typedef {object} UseAlertReturn
