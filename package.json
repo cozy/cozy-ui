@@ -91,7 +91,7 @@
     "babel-preset-cozy-app": "2.0.2",
     "browserslist-config-cozy": "0.4.0",
     "copyfiles": "2.4.1",
-    "cozy-client": "^45.15.0",
+    "cozy-client": "^46.10.0",
     "cozy-device-helper": "2.0.0",
     "cozy-flags": "^2.10.1",
     "cozy-harvest-lib": "^6.7.3",
