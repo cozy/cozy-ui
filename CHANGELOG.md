@@ -1,3 +1,18 @@
+# [106.0.0](https://github.com/cozy/cozy-ui/compare/v105.12.0...v106.0.0) (2024-04-25)
+
+
+### Features
+
+* Remove unused formatLocallyDistanceToNowStrict ([d9b09ca](https://github.com/cozy/cozy-ui/commit/d9b09ca))
+* Remove unused package mockdate ([7c123ea](https://github.com/cozy/cozy-ui/commit/7c123ea))
+* Update cozy-client ([09ee273](https://github.com/cozy/cozy-ui/commit/09ee273))
+* Use expiration date messages from cozy-client ([00cf70a](https://github.com/cozy/cozy-ui/commit/00cf70a))
+
+
+### BREAKING CHANGES
+
+* formatLocallyDistanceToNowStrict has been removed. Use 'date-fns/formatDistanceToNowStrict' instead.
+
 # [105.12.0](https://github.com/cozy/cozy-ui/compare/v105.11.0...v105.12.0) (2024-04-23)
 
 
