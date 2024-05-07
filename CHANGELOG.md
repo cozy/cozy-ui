@@ -1,3 +1,10 @@
+# [106.1.0](https://github.com/cozy/cozy-ui/compare/v106.0.0...v106.1.0) (2024-05-07)
+
+
+### Features
+
+* Add uncloud icon ([2dbb1bf](https://github.com/cozy/cozy-ui/commit/2dbb1bf))
+
 # [106.0.0](https://github.com/cozy/cozy-ui/compare/v105.12.0...v106.0.0) (2024-04-25)
 
 
