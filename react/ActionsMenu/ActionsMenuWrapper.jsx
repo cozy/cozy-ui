@@ -19,8 +19,8 @@ const ActionsMenuWrapper = ({
 
   useActionMenuEffects()
 
-  const overrideClick = props => () => {
-    props.onClick?.() // this is ActionsItems onClick prop
+  const overrideClick = props => ev => {
+    props.onClick?.(ev) // this is ActionsItems onClick prop
     autoClose && onClose?.()
   }
 
