@@ -1,4 +1,5 @@
 import React, { forwardRef, useEffect, useState } from 'react'
+import merge from 'lodash/merge'
 import MuiTextField from '@material-ui/core/TextField'
 import PropTypes from 'prop-types'
 
@@ -30,10 +31,8 @@ const MobileSelect = forwardRef(
       onClick?.()
     }
 
-    const handleItemClick = ({ value, children, onClick }) => {
-      if (onClick) {
-        return onClick()
-      }
+    const handleItemClick = ({ value, children, onClick }) => ev => {
+      onClick?.(merge({}, ev, { target: { value } }))
       setState({ label: children, value })
       onChange?.({ target: { value } })
     }
@@ -89,7 +88,7 @@ const MobileSelect = forwardRef(
                   {...child.props}
                   size="small"
                   autoFocus={child.props.value === value}
-                  onClick={() => handleItemClick(child.props)}
+                  onClick={handleItemClick(child.props)}
                 >
                   <ListItemIcon>
                     <Radio
