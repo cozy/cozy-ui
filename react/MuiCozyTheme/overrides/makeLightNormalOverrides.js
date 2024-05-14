@@ -328,6 +328,9 @@ export const makeLightNormalOverrides = theme => ({
         paddingTop: 16,
         paddingBottom: 16,
         minHeight: 64
+      },
+      '&.cozyActionsItem': {
+        wordBreak: 'break-word'
       }
     },
     dense: {
@@ -385,12 +388,13 @@ export const makeLightNormalOverrides = theme => ({
     root: {
       whiteSpace: 'normal',
       overflow: 'auto',
+      wordBreak: 'break-word',
       paddingTop: 4,
       paddingBottom: 4,
       [theme.breakpoints.up('sm')]: {
         minHeight: 40
       },
-      '&.cozyActionsMenuItem': {
+      '&.cozyActionsItem': {
         minWidth: 256
       },
       '& .cozyListItemIcon': {

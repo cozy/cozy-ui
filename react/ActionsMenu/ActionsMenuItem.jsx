@@ -20,7 +20,7 @@ const ActionsMenuItem = forwardRef(
     return (
       <Component
         {...compProps}
-        className={cx(className, { ['cozyActionsMenuItem']: !isListItem })}
+        className={cx(className, 'cozyActionsItem')}
         ref={ref}
         button
         ellipsis={false}
