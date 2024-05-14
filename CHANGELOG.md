@@ -1,3 +1,15 @@
+# [106.2.0](https://github.com/cozy/cozy-ui/compare/v106.1.1...v106.2.0) (2024-05-14)
+
+
+### Bug Fixes
+
+* **NestedSelect:** Search bar on desktop mode ([74938d9](https://github.com/cozy/cozy-ui/commit/74938d9))
+
+
+### Features
+
+* **ListItem/MenuItem:** Break word if text is too long ([6d87b42](https://github.com/cozy/cozy-ui/commit/6d87b42))
+
 ## [106.1.1](https://github.com/cozy/cozy-ui/compare/v106.1.0...v106.1.1) (2024-05-14)
 
 
