@@ -1,12 +1,14 @@
 import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 import omit from 'lodash/omit'
+import cx from 'classnames'
 
 import List from '../List'
 import Input from '../Input'
 import Typography from '../Typography'
 import ItemRow from './ItemRow'
 import { makeHistory } from './helpers'
+import styles from './styles.styl'
 
 export { ItemRow }
 
@@ -79,12 +81,13 @@ const NestedSelect = ({
 
   const hasSearchResult = state.searchValue?.length > 0
   const isSelectedWithLevel = item => isSelected(item, level)
+  const currentTitle = current.title || title
 
   return (
     <span ref={innerRef}>
       {HeaderComponent ? (
         <HeaderComponent
-          title={current.title || title}
+          title={currentTitle}
           showBack={state.history.length > 1}
           onClickBack={handleBack}
         />
@@ -108,7 +111,12 @@ const NestedSelect = ({
           />
         ) : null}
         {searchOptions && level === 0 && (
-          <div className="u-mh-1 u-mb-half">
+          <div
+            className={cx('u-ml-1 u-mb-half', {
+              'u-mr-1': currentTitle,
+              [styles['search-container--without-title']]: !currentTitle
+            })}
+          >
             <Input
               placeholder={searchOptions.placeholderSearch}
               onChange={onChange}
