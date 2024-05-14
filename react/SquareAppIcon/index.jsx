@@ -17,6 +17,7 @@ import iconWarning from '../Icons/WarningCircle'
 import { alpha, makeStyles } from '../styles'
 import { nameToColor } from '../Avatar/helpers'
 import CozyTheme, { useCozyTheme } from '../providers/CozyTheme'
+import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
 
 import styles from './styles.styl'
 
@@ -66,6 +67,7 @@ const useStyles = makeStyles(theme => ({
     borderRadius: '1rem'
   },
   tileWrapper: {
+    cursor: 'pointer', // Whole block is clickable so we should display the pointer
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -73,6 +75,10 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('sm')]: {
       width: '4.25rem'
     }
+  },
+  detailedTileWrapper: {
+    flexDirection: 'row',
+    width: 'auto'
   }
 }))
 
@@ -89,9 +95,11 @@ const SquareAppIconSpinner = ({ variant, animationState }) => {
 }
 
 export const SquareAppIcon = ({
+  display,
   name,
   variant,
   IconContent,
+  description,
   ...appIconProps
 }) => {
   const { variant: themeVariant } = useCozyTheme()
@@ -122,12 +130,18 @@ export const SquareAppIcon = ({
     : 'normal'
 
   return (
-    <div data-testid="square-app-icon" className={cx(classes.tileWrapper)}>
+    <div
+      data-testid="square-app-icon"
+      className={cx(classes.tileWrapper, {
+        [classes.detailedTileWrapper]: display === 'detailed'
+      })}
+    >
       <CozyTheme variant={squareTheme}>
         <InfosBadge
           badgeContent={
             variant === 'shortcut' ? <Icon size="10" icon={iconOut} /> : null
           }
+          className={cx({ ['u-mr-1']: display === 'detailed' })}
           overlap="rectangular"
           invisible={variant !== 'shortcut'}
         >
@@ -214,22 +228,35 @@ export const SquareAppIcon = ({
           </Badge>
         </InfosBadge>
       </CozyTheme>
-      <Typography
-        className={cx(
-          classes.name,
-          { [classes.nameInverted]: themeVariant === 'inverted' },
-          'u-spacellipsis'
-        )}
-        variant="h6"
-        align="center"
-      >
-        {appName}
-      </Typography>
+      {display === 'detailed' ? (
+        <ListItemText primary={appName} secondary={description} />
+      ) : (
+        <Typography
+          className={cx(
+            classes.name,
+            { [classes.nameInverted]: themeVariant === 'inverted' },
+            'u-spacellipsis'
+          )}
+          variant="h6"
+          align="center"
+        >
+          {appName}
+        </Typography>
+      )}
     </div>
   )
 }
 
+/**
+ * Having both a `display` and a `variant` prop is a bit confusing,
+ * but it's necessary since the `variant` prop can be used both in "compact" and "detailed" mode.
+ *
+ * As for the `description` prop, it will only be displayed in "detailed" mode.
+ * Providing it in "compact" mode will have no effect.
+ */
 SquareAppIcon.propTypes = {
+  display: PropTypes.oneOf(['compact', 'detailed']),
+  description: PropTypes.string,
   name: PropTypes.string,
   variant: PropTypes.oneOf([
     'default',
@@ -244,6 +271,7 @@ SquareAppIcon.propTypes = {
 }
 
 SquareAppIcon.defaultProps = {
+  display: 'compact',
   variant: 'default'
 }
 
