@@ -1,6 +1,6 @@
 You can use `react/NestedSelect/NestedSelectResponsive` wich provides automaticaly a modal on desktop and bottomsheet on mobile, or directly `react/NestedSelect/Modal` and `react/NestedSelect/BottomSheet`.
 
-You can open the NestedSelect where a specific item is located, for this your items must have a ***id*** attribute and add the ***focusedId*** attribute to the root of the options.
+You can open the NestedSelect where a specific item is located, for this your items must have a **_id_** attribute and add the **_focusedId_** attribute to the root of the options.
 See below for example
 
 ```jsx

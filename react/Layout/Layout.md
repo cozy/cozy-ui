@@ -22,7 +22,6 @@ It can be used to wrap any list of React elements, automatically providing funct
 * **Customizable Limit**: Users can specify how many items should be shown in the limited view.
 * **Ease of Use**: Seamlessly integrates with existing list components from cozy-ui or standard JSX elements.
 
-
 ```jsx
 import { useState } from 'react'
 import { Layout, Main, Content } from 'cozy-ui/transpiled/react/Layout';
