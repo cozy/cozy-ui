@@ -1,3 +1,11 @@
+## [106.1.1](https://github.com/cozy/cozy-ui/compare/v106.1.0...v106.1.1) (2024-05-14)
+
+
+### Bug Fixes
+
+* **ActionsMenuWrapper:** Spread ev on menu child clicks ([9b9a5ed](https://github.com/cozy/cozy-ui/commit/9b9a5ed))
+* **TextField:** Spread ev on MobileSelect item click ([49a71b0](https://github.com/cozy/cozy-ui/commit/49a71b0))
+
 # [106.1.0](https://github.com/cozy/cozy-ui/compare/v106.0.0...v106.1.0) (2024-05-07)
 
 
