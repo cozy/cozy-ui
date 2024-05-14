@@ -24,7 +24,7 @@ const [isError, setIsError] = React.useState(false)
   <Grid container spacing={1} style={{ background: variant === 'inverted' ? `center / cover no-repeat url(${cloudWallpaper})` : 'white' }}
   >
     <Grid item>
-      <SquareAppIcon app={app} name="Normal" />
+      <SquareAppIcon app={app} description="This description will be ignored as default display mode is compact" name="Normal" />
     </Grid>
     <Grid item>
       <SquareAppIcon app={app} name="Maintenance" variant="maintenance" />
@@ -82,6 +82,62 @@ const [isError, setIsError] = React.useState(false)
       )} />
     </Grid>
   </Grid>
+</>
+```
 
+### Using the "detailed" display mode
+
+Set the `display` prop to `detailed` to show the app `description` below the app `name`, provided the `description` prop is set.
+Otherwise, the app `name` will be centered vertically.
+
+```jsx
+import Grid from 'cozy-ui/transpiled/react/Grid'
+import SquareAppIcon from 'cozy-ui/transpiled/react/SquareAppIcon'
+import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import { useCozyTheme } from 'cozy-ui/transpiled/react/providers/CozyTheme'
+import cloudWallpaper from '../../docs/cloud-wallpaper.jpg'
+import Button from 'cozy-ui/transpiled/react/Buttons'
+
+const { variant } = useCozyTheme()
+const app = { name: "Test App", slug: "testapp", type: "app" }
+const [isLoading, setLoading] = React.useState(false)
+const [isError, setIsError] = React.useState(false)
+
+;
+
+<>
+  <Button className="u-mb-1 u-mr-1" label="Toggle Loading" onClick={() => setLoading(!isLoading)} />
+  <Button className="u-mb-1" label="Toggle Loading Error" onClick={() => setIsError(!isError)} />
+
+  <Grid container spacing={4}>
+    <Grid item xs={4}>
+      <SquareAppIcon display="detailed" name="Weather Wiz" description="Get real-time weather updates and forecasts" />
+    </Grid>
+    <Grid item xs={4}>
+      <SquareAppIcon display="detailed" name="Meal Planner" description="Plan your meals with nutrition tracking" variant="maintenance" />
+    </Grid>
+    <Grid item xs={4}>
+      <SquareAppIcon display="detailed" name="Travel Tracker" description="Explore and document your travel adventures" variant="error" />
+    </Grid>
+    <Grid item xs={4}>
+      <SquareAppIcon display="detailed" name="Fitness Friend" variant="add" />
+    </Grid>
+    <Grid item xs={4}>
+      <SquareAppIcon display="detailed" name="Mindful Moments" description="Guided meditations for daily mindfulness" variant="ghost" />
+    </Grid>
+    <Grid item xs={4}>
+      <SquareAppIcon display="detailed" name="Study Space" description="Organize your study schedule and resources" variant="shortcut" />
+    </Grid>
+    <Grid item xs={4}>
+      <SquareAppIcon display="detailed" name="Quick Notes" IconContent={<Icon icon={CozyIcon} size="48" />} variant={isLoading ? 'loading' : 'default'} />
+    </Grid>
+    <Grid item xs={4}>
+      <SquareAppIcon display="detailed" name="Daily Budget" description="Manage your daily expenses and budgets" IconContent={<Icon icon={CozyIcon} size="48" />} variant={isError ? 'error' : 'loading'} />
+    </Grid>
+    <Grid item xs={4}>
+      <SquareAppIcon display="detailed" name="Event Planner" description="Plan and schedule your events effectively" IconContent={<Icon icon={CozyIcon} size="48" />} />
+    </Grid>
+  </Grid>
 </>
 ```
