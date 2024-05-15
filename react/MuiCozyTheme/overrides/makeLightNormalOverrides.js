@@ -52,6 +52,7 @@ export const makeLightNormalOverrides = theme => ({
       transition: `border-color ${theme.transitions.duration.shorter}ms`
     },
     input: {
+      textAlign: 'left',
       padding: '18.5px 16px'
     },
     inputMarginDense: {
