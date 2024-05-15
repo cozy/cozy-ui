@@ -2759,9 +2759,9 @@ exports[`InputGroup should render examples: InputGroup 4`] = `
         <div class=\\"styles__c-inputgroup-main___1LP4B\\"><input type=\\"text\\" class=\\"styles__c-input-text___3TAv1 styles__c-input-text--large___28EaR\\" placeholder=\\"URL\\" spellcheck=\\"false\\" value=\\"\\"></div>
         <div class=\\"styles__c-inputgroup-side___60v0v\\">
           <div class=\\"styles__select--autowidth___16AEp u-w-4 css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
-            <div class=\\" css-1x8e986-control\\">
-              <div class=\\" css-11jzfys-ValueContainer\\">
-                <div class=\\" css-1wa3eu0-placeholder\\">Select...</div>
+            <div class=\\" css-102s2p7-control\\">
+              <div class=\\" css-blko0k-ValueContainer\\">
+                <div class=\\" css-1u3ujn0-placeholder\\">Select...</div>
                 <div class=\\"css-b8ldur-Input\\">
                   <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-2-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
                     <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
@@ -2769,7 +2769,7 @@ exports[`InputGroup should render examples: InputGroup 4`] = `
                 </div>
               </div>
               <div class=\\" css-1hb7zxy-IndicatorsContainer\\"><span class=\\" css-1xjgjl1-IndicatorSeparator\\"></span>
-                <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"20\\" height=\\"16\\">
+                <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--iconTextColor);\\" width=\\"20\\" height=\\"16\\">
                     <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
                   </svg></div>
               </div>
@@ -3045,9 +3045,9 @@ exports[`SelectBox should render examples: SelectBox 1`] = `
 "<div data-testid=\\"mountNode\\">
   <div style=\\"background: whitesmoke; padding: .5em;\\">
     <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
-      <div class=\\" css-fg5tdu-control\\">
-        <div class=\\" css-11jzfys-ValueContainer\\">
-          <div class=\\" css-1wa3eu0-placeholder\\">Select...</div>
+      <div class=\\" css-8ushqo-control\\">
+        <div class=\\" css-blko0k-ValueContainer\\">
+          <div class=\\" css-1u3ujn0-placeholder\\">Select...</div>
           <div class=\\"css-b8ldur-Input\\">
             <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-3-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
               <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
@@ -3055,7 +3055,7 @@ exports[`SelectBox should render examples: SelectBox 1`] = `
           </div>
         </div>
         <div class=\\" css-1hb7zxy-IndicatorsContainer\\"><span class=\\" css-1xjgjl1-IndicatorSeparator\\"></span>
-          <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"20\\" height=\\"16\\">
+          <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--iconTextColor);\\" width=\\"20\\" height=\\"16\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></div>
         </div>
@@ -3068,9 +3068,9 @@ exports[`SelectBox should render examples: SelectBox 1`] = `
 exports[`SelectBox should render examples: SelectBox 2`] = `
 "<div data-testid=\\"mountNode\\">
   <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
-    <div class=\\" css-fg5tdu-control\\">
-      <div class=\\" css-11jzfys-ValueContainer\\">
-        <div class=\\" css-1wa3eu0-placeholder\\">Select...</div>
+    <div class=\\" css-8ushqo-control\\">
+      <div class=\\" css-blko0k-ValueContainer\\">
+        <div class=\\" css-1u3ujn0-placeholder\\">Select...</div>
         <div class=\\"css-b8ldur-Input\\">
           <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-4-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
             <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
@@ -3078,12 +3078,12 @@ exports[`SelectBox should render examples: SelectBox 2`] = `
         </div>
       </div>
       <div class=\\" css-1hb7zxy-IndicatorsContainer\\"><span class=\\" css-1xjgjl1-IndicatorSeparator\\"></span>
-        <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"20\\" height=\\"16\\">
+        <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--iconTextColor);\\" width=\\"20\\" height=\\"16\\">
             <path d=\\"M20.603 17.825a1.571 1.571 0 002.222-2.222l-9.428-9.428a1.571 1.571 0 00-2.222 0l-9.429 9.428a1.571 1.571 0 002.222 2.222l8.318-8.317 8.317 8.317z\\" fill-rule=\\"evenodd\\"></path>
           </svg></div>
       </div>
     </div>
-    <div class=\\" css-govwq4-menu\\">
+    <div class=\\" css-t5wif0-menu\\">
       <div class=\\" css-4ljt47-MenuList\\">
         <div id=\\"react-select-4-option-0\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\"><span class=\\"u-ellipsis\\">Chocolate</span></span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
       </div>
@@ -3096,9 +3096,9 @@ exports[`SelectBox should render examples: SelectBox 3`] = `
 "<div data-testid=\\"mountNode\\">
   <div style=\\"height: 12rem; padding: .5rem; overflow: auto;\\">Container height: 12rem. <button>Change container height</button>
     <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
-      <div class=\\" css-fg5tdu-control\\">
-        <div class=\\" css-11jzfys-ValueContainer\\">
-          <div class=\\" css-1wa3eu0-placeholder\\">Select...</div>
+      <div class=\\" css-8ushqo-control\\">
+        <div class=\\" css-blko0k-ValueContainer\\">
+          <div class=\\" css-1u3ujn0-placeholder\\">Select...</div>
           <div class=\\"css-b8ldur-Input\\">
             <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-5-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
               <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
@@ -3106,7 +3106,7 @@ exports[`SelectBox should render examples: SelectBox 3`] = `
           </div>
         </div>
         <div class=\\" css-1hb7zxy-IndicatorsContainer\\"><span class=\\" css-1xjgjl1-IndicatorSeparator\\"></span>
-          <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"20\\" height=\\"16\\">
+          <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--iconTextColor);\\" width=\\"20\\" height=\\"16\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></div>
         </div>
@@ -3119,9 +3119,9 @@ exports[`SelectBox should render examples: SelectBox 3`] = `
 exports[`SelectBox should render examples: SelectBox 4`] = `
 "<div data-testid=\\"mountNode\\">
   <div class=\\"styles__select--autowidth___16AEp styles__select--disabled___1W3en css-14jk2my-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
-    <div class=\\" css-ofrup8-control\\">
-      <div class=\\" css-11jzfys-ValueContainer\\">
-        <div class=\\" css-1wa3eu0-placeholder\\">Select...</div>
+    <div class=\\" css-1r0x2f0-control\\">
+      <div class=\\" css-blko0k-ValueContainer\\">
+        <div class=\\" css-1u3ujn0-placeholder\\">Select...</div>
         <div class=\\"css-1bwsx9e-Input\\">
           <div class=\\"\\" style=\\"display: inline-block;\\"><input disabled=\\"\\" autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-6-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
             <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
@@ -3129,7 +3129,7 @@ exports[`SelectBox should render examples: SelectBox 4`] = `
         </div>
       </div>
       <div class=\\" css-1hb7zxy-IndicatorsContainer\\"><span class=\\" css-1xjgjl1-IndicatorSeparator\\"></span>
-        <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"20\\" height=\\"16\\">
+        <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--iconTextColor);\\" width=\\"20\\" height=\\"16\\">
             <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
           </svg></div>
       </div>
@@ -3141,9 +3141,9 @@ exports[`SelectBox should render examples: SelectBox 4`] = `
 exports[`SelectBox should render examples: SelectBox 5`] = `
 "<div data-testid=\\"mountNode\\">
   <div class=\\"styles__select--fullwidth___2l_xM css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
-    <div class=\\" css-fg5tdu-control\\">
-      <div class=\\" css-11jzfys-ValueContainer\\">
-        <div class=\\" css-1wa3eu0-placeholder\\">Select...</div>
+    <div class=\\" css-8ushqo-control\\">
+      <div class=\\" css-blko0k-ValueContainer\\">
+        <div class=\\" css-1u3ujn0-placeholder\\">Select...</div>
         <div class=\\"css-b8ldur-Input\\">
           <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-7-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
             <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
@@ -3151,7 +3151,7 @@ exports[`SelectBox should render examples: SelectBox 5`] = `
         </div>
       </div>
       <div class=\\" css-1hb7zxy-IndicatorsContainer\\"><span class=\\" css-1xjgjl1-IndicatorSeparator\\"></span>
-        <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"20\\" height=\\"16\\">
+        <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--iconTextColor);\\" width=\\"20\\" height=\\"16\\">
             <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
           </svg></div>
       </div>
@@ -3164,9 +3164,9 @@ exports[`SelectBox should render examples: SelectBox 6`] = `
 "<div data-testid=\\"mountNode\\">
   <div>
     <div class=\\"styles__select--autowidth___16AEp styles__select--disabled___1W3en css-14jk2my-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
-      <div class=\\" css-ofrup8-control\\">
-        <div class=\\" css-11jzfys-ValueContainer\\">
-          <div class=\\" css-1wa3eu0-placeholder\\">Select...</div>
+      <div class=\\" css-1r0x2f0-control\\">
+        <div class=\\" css-blko0k-ValueContainer\\">
+          <div class=\\" css-1u3ujn0-placeholder\\">Select...</div>
           <div class=\\"css-1bwsx9e-Input\\">
             <div class=\\"\\" style=\\"display: inline-block;\\"><input disabled=\\"\\" autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-8-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
               <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
@@ -3174,7 +3174,7 @@ exports[`SelectBox should render examples: SelectBox 6`] = `
           </div>
         </div>
         <div class=\\" css-1hb7zxy-IndicatorsContainer\\"><span class=\\" css-1xjgjl1-IndicatorSeparator\\"></span>
-          <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"20\\" height=\\"16\\">
+          <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--iconTextColor);\\" width=\\"20\\" height=\\"16\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></div>
         </div>
@@ -3189,9 +3189,9 @@ exports[`SelectBox should render examples: SelectBox 7`] = `
   <div>
     <div class=\\"u-mb-1\\">
       <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
-        <div class=\\" css-1ac6j6n-control\\">
-          <div class=\\" css-11jzfys-ValueContainer\\">
-            <div class=\\" css-1uccc91-singleValue\\">I am a tiny SelectBox</div>
+        <div class=\\" css-y839ce-control\\">
+          <div class=\\" css-blko0k-ValueContainer\\">
+            <div class=\\" css-12iw3je-singleValue\\">I am a tiny SelectBox</div>
             <div class=\\"css-b8ldur-Input\\">
               <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-9-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
                 <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
@@ -3199,7 +3199,7 @@ exports[`SelectBox should render examples: SelectBox 7`] = `
             </div>
           </div>
           <div class=\\" css-1hb7zxy-IndicatorsContainer\\"><span class=\\" css-1xjgjl1-IndicatorSeparator\\"></span>
-            <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"20\\" height=\\"16\\">
+            <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--iconTextColor);\\" width=\\"20\\" height=\\"16\\">
                 <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
               </svg></div>
           </div>
@@ -3208,9 +3208,9 @@ exports[`SelectBox should render examples: SelectBox 7`] = `
     </div>
     <div class=\\"u-mb-1\\">
       <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
-        <div class=\\" css-7stifj-control\\">
-          <div class=\\" css-11jzfys-ValueContainer\\">
-            <div class=\\" css-1uccc91-singleValue\\">I am a medium SelectBox</div>
+        <div class=\\" css-r96bzv-control\\">
+          <div class=\\" css-blko0k-ValueContainer\\">
+            <div class=\\" css-12iw3je-singleValue\\">I am a medium SelectBox</div>
             <div class=\\"css-b8ldur-Input\\">
               <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-10-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
                 <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
@@ -3218,7 +3218,7 @@ exports[`SelectBox should render examples: SelectBox 7`] = `
             </div>
           </div>
           <div class=\\" css-1hb7zxy-IndicatorsContainer\\"><span class=\\" css-1xjgjl1-IndicatorSeparator\\"></span>
-            <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"20\\" height=\\"16\\">
+            <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--iconTextColor);\\" width=\\"20\\" height=\\"16\\">
                 <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
               </svg></div>
           </div>
@@ -3227,9 +3227,9 @@ exports[`SelectBox should render examples: SelectBox 7`] = `
     </div>
     <div class=\\"u-mb-1\\">
       <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
-        <div class=\\" css-fg5tdu-control\\">
-          <div class=\\" css-11jzfys-ValueContainer\\">
-            <div class=\\" css-1uccc91-singleValue\\">I am a large SelectBox</div>
+        <div class=\\" css-8ushqo-control\\">
+          <div class=\\" css-blko0k-ValueContainer\\">
+            <div class=\\" css-12iw3je-singleValue\\">I am a large SelectBox</div>
             <div class=\\"css-b8ldur-Input\\">
               <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-11-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
                 <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
@@ -3237,7 +3237,7 @@ exports[`SelectBox should render examples: SelectBox 7`] = `
             </div>
           </div>
           <div class=\\" css-1hb7zxy-IndicatorsContainer\\"><span class=\\" css-1xjgjl1-IndicatorSeparator\\"></span>
-            <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"20\\" height=\\"16\\">
+            <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--iconTextColor);\\" width=\\"20\\" height=\\"16\\">
                 <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
               </svg></div>
           </div>
@@ -3253,8 +3253,8 @@ exports[`SelectBox should render examples: SelectBox 8`] = `
   <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
     <div><button>toggle options</button>
       <div class=\\"styles__select-control__input___1xDlj\\">
-        <div class=\\" css-11jzfys-ValueContainer\\">
-          <div class=\\" css-1wa3eu0-placeholder\\">Select...</div>
+        <div class=\\" css-blko0k-ValueContainer\\">
+          <div class=\\" css-1u3ujn0-placeholder\\">Select...</div>
           <div class=\\"css-b8ldur-Input\\">
             <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-12-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
               <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
@@ -3262,7 +3262,7 @@ exports[`SelectBox should render examples: SelectBox 8`] = `
           </div>
         </div>
         <div class=\\" css-1hb7zxy-IndicatorsContainer\\"><span class=\\" css-1xjgjl1-IndicatorSeparator\\"></span>
-          <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"20\\" height=\\"16\\">
+          <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--iconTextColor);\\" width=\\"20\\" height=\\"16\\">
               <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
             </svg></div>
         </div>
@@ -3275,9 +3275,9 @@ exports[`SelectBox should render examples: SelectBox 8`] = `
 exports[`SelectBox should render examples: SelectBox 9`] = `
 "<div data-testid=\\"mountNode\\">
   <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
-    <div class=\\" css-fg5tdu-control\\">
-      <div class=\\" css-11jzfys-ValueContainer\\">
-        <div class=\\" css-1wa3eu0-placeholder\\">Select...</div>
+    <div class=\\" css-8ushqo-control\\">
+      <div class=\\" css-blko0k-ValueContainer\\">
+        <div class=\\" css-1u3ujn0-placeholder\\">Select...</div>
         <div class=\\"css-b8ldur-Input\\">
           <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-13-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
             <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
@@ -3285,7 +3285,7 @@ exports[`SelectBox should render examples: SelectBox 9`] = `
         </div>
       </div>
       <div class=\\" css-1hb7zxy-IndicatorsContainer\\"><span class=\\" css-1xjgjl1-IndicatorSeparator\\"></span>
-        <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"20\\" height=\\"16\\">
+        <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--iconTextColor);\\" width=\\"20\\" height=\\"16\\">
             <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
           </svg></div>
       </div>
@@ -3297,9 +3297,9 @@ exports[`SelectBox should render examples: SelectBox 9`] = `
 exports[`SelectBox should render examples: SelectBox 10`] = `
 "<div data-testid=\\"mountNode\\">
   <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
-    <div class=\\" css-fg5tdu-control\\">
-      <div class=\\" css-11jzfys-ValueContainer\\">
-        <div class=\\" css-1wa3eu0-placeholder\\">Select...</div>
+    <div class=\\" css-8ushqo-control\\">
+      <div class=\\" css-blko0k-ValueContainer\\">
+        <div class=\\" css-1u3ujn0-placeholder\\">Select...</div>
         <div class=\\"css-b8ldur-Input\\">
           <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-14-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
             <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
@@ -3307,7 +3307,7 @@ exports[`SelectBox should render examples: SelectBox 10`] = `
         </div>
       </div>
       <div class=\\" css-1hb7zxy-IndicatorsContainer\\"><span class=\\" css-1xjgjl1-IndicatorSeparator\\"></span>
-        <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"20\\" height=\\"16\\">
+        <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--iconTextColor);\\" width=\\"20\\" height=\\"16\\">
             <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
           </svg></div>
       </div>
@@ -3319,9 +3319,9 @@ exports[`SelectBox should render examples: SelectBox 10`] = `
 exports[`SelectBox should render examples: SelectBox 11`] = `
 "<div data-testid=\\"mountNode\\">
   <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
-    <div class=\\" css-fg5tdu-control\\">
-      <div class=\\" css-11jzfys-ValueContainer\\">
-        <div class=\\" css-1wa3eu0-placeholder\\">Select...</div>
+    <div class=\\" css-8ushqo-control\\">
+      <div class=\\" css-blko0k-ValueContainer\\">
+        <div class=\\" css-1u3ujn0-placeholder\\">Select...</div>
         <div class=\\"css-b8ldur-Input\\">
           <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-15-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
             <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
@@ -3329,12 +3329,12 @@ exports[`SelectBox should render examples: SelectBox 11`] = `
         </div>
       </div>
       <div class=\\" css-1hb7zxy-IndicatorsContainer\\"><span class=\\" css-1xjgjl1-IndicatorSeparator\\"></span>
-        <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"20\\" height=\\"16\\">
+        <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--iconTextColor);\\" width=\\"20\\" height=\\"16\\">
             <path d=\\"M20.603 17.825a1.571 1.571 0 002.222-2.222l-9.428-9.428a1.571 1.571 0 00-2.222 0l-9.429 9.428a1.571 1.571 0 002.222 2.222l8.318-8.317 8.317 8.317z\\" fill-rule=\\"evenodd\\"></path>
           </svg></div>
       </div>
     </div>
-    <div class=\\" css-govwq4-menu\\">
+    <div class=\\" css-t5wif0-menu\\">
       <div class=\\"styles__MenuList___1H_pH css-4ljt47-MenuList\\">
         <div class=\\"styles__Group___J6s7k css-syji7d-Group\\">
           <div>
@@ -3379,9 +3379,9 @@ exports[`SelectBox should render examples: SelectBox 11`] = `
 exports[`SelectBox should render examples: SelectBox 12`] = `
 "<div data-testid=\\"mountNode\\">
   <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
-    <div class=\\" css-fg5tdu-control\\">
-      <div class=\\"needsclick css-11jzfys-ValueContainer\\">
-        <div class=\\" css-1wa3eu0-placeholder\\">Select...</div>
+    <div class=\\" css-8ushqo-control\\">
+      <div class=\\"needsclick css-blko0k-ValueContainer\\">
+        <div class=\\" css-1u3ujn0-placeholder\\">Select...</div>
         <div class=\\"css-b8ldur-Input\\">
           <div class=\\"\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-16-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
             <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
@@ -3389,7 +3389,7 @@ exports[`SelectBox should render examples: SelectBox 12`] = `
         </div>
       </div>
       <div class=\\" css-1hb7zxy-IndicatorsContainer\\"><span class=\\" css-1xjgjl1-IndicatorSeparator\\"></span>
-        <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"20\\" height=\\"16\\">
+        <div class=\\" css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--iconTextColor);\\" width=\\"20\\" height=\\"16\\">
             <path d=\\"M3.968 6.175a1.571 1.571 0 00-2.222 2.222l9.429 9.428a1.571 1.571 0 002.222 0l9.428-9.428a1.571 1.571 0 00-2.222-2.222l-8.317 8.317-8.318-8.317z\\" fill-rule=\\"evenodd\\"></path>
           </svg></div>
       </div>
@@ -3401,9 +3401,9 @@ exports[`SelectBox should render examples: SelectBox 12`] = `
 exports[`SelectBox should render examples: SelectBox 13`] = `
 "<div data-testid=\\"mountNode\\">
   <div class=\\"styles__select--autowidth___16AEp css-2b097c-container\\"><span aria-live=\\"polite\\" aria-atomic=\\"false\\" aria-relevant=\\"additions text\\" class=\\"css-1f43avz-a11yText-A11yText\\"></span>
-    <div class=\\"needsclick cz__control needsclick cz__control--menu-is-open css-fg5tdu-control\\">
-      <div class=\\"needsclick cz__value-container css-11jzfys-ValueContainer\\">
-        <div class=\\"needsclick cz__placeholder css-1wa3eu0-placeholder\\">Select...</div>
+    <div class=\\"needsclick cz__control needsclick cz__control--menu-is-open css-8ushqo-control\\">
+      <div class=\\"needsclick cz__value-container css-blko0k-ValueContainer\\">
+        <div class=\\"needsclick cz__placeholder css-1u3ujn0-placeholder\\">Select...</div>
         <div class=\\"css-b8ldur-Input\\">
           <div class=\\"needsclick cz__input\\" style=\\"display: inline-block;\\"><input autocapitalize=\\"none\\" autocomplete=\\"off\\" autocorrect=\\"off\\" id=\\"react-select-17-input\\" spellcheck=\\"false\\" tabindex=\\"0\\" type=\\"text\\" aria-autocomplete=\\"list\\" style=\\"box-sizing: content-box; width: 2px; border: 0px; opacity: 1; outline: 0; padding: 0px;\\" value=\\"\\">
             <div style=\\"position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-family: -webkit-small-control; letter-spacing: normal; text-transform: none;\\"></div>
@@ -3411,12 +3411,12 @@ exports[`SelectBox should render examples: SelectBox 13`] = `
         </div>
       </div>
       <div class=\\"needsclick cz__indicators css-1hb7zxy-IndicatorsContainer\\"><span class=\\"needsclick cz__indicator-separator css-1xjgjl1-IndicatorSeparator\\"></span>
-        <div class=\\"needsclick cz__indicator needsclick cz__dropdown-indicator css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--coolGrey);\\" width=\\"20\\" height=\\"16\\">
+        <div class=\\"needsclick cz__indicator needsclick cz__dropdown-indicator css-c1md1-indicatorContainer\\" aria-hidden=\\"true\\"><svg viewBox=\\"0 0 24 24\\" class=\\"styles__icon___23x3R\\" style=\\"fill: var(--iconTextColor);\\" width=\\"20\\" height=\\"16\\">
             <path d=\\"M20.603 17.825a1.571 1.571 0 002.222-2.222l-9.428-9.428a1.571 1.571 0 00-2.222 0l-9.429 9.428a1.571 1.571 0 002.222 2.222l8.318-8.317 8.317 8.317z\\" fill-rule=\\"evenodd\\"></path>
           </svg></div>
       </div>
     </div>
-    <div class=\\"needsclick cz__menu css-govwq4-menu\\">
+    <div class=\\"needsclick cz__menu css-t5wif0-menu\\">
       <div class=\\"needsclick cz__menu-list css-4ljt47-MenuList\\">
         <div id=\\"react-select-17-option-0\\" tabindex=\\"-1\\" class=\\"styles__select-option___ov_IT\\"><span class=\\"styles__select-option__label___1Xi5R\\"><span class=\\"u-ellipsis\\">Chocolate</span></span><span class=\\"styles__select-option__checkmark___ChXXs\\"></span></div>
       </div>
