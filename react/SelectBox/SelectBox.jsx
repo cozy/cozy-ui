@@ -7,7 +7,6 @@ import { isIOSApp } from 'cozy-device-helper'
 
 import Icon from '../Icon'
 import CheckIcon from '../Icons/Check'
-import { dodgerBlue, silver, coolGrey, paleGrey } from '../palette'
 import withBreakpoints from '../helpers/withBreakpoints'
 import TopIcon from '../Icons/Top'
 import BottomIcon from '../Icons/Bottom'
@@ -23,9 +22,11 @@ const heights = {
 
 const borderStyle = (props, state) => {
   if (props.inset) {
-    return '.125rem solid white'
+    return '.125rem solid var(--paperBackgroundColor)'
   }
-  return `.0625rem solid ${state.isFocused ? dodgerBlue : silver}`
+  return `.0625rem solid ${
+    state.isFocused ? 'var(--primaryColor)' : 'var(--borderMainColor)'
+  }`
 }
 
 const customStyles = props => ({
@@ -33,17 +34,27 @@ const customStyles = props => ({
     ...base,
     // The gray background color is managed via the select--disabled
     // class applied below
-    backgroundColor: props.disabled ? 'transparent' : 'white',
+    backgroundColor: props.disabled
+      ? 'transparent'
+      : 'var(--paperBackgroundColor)',
     border: borderStyle(props, state),
     ':hover': {
-      borderColor: props.inset ? 'white' : coolGrey,
-      backgroundColor: props.inset ? paleGrey : 'white',
+      borderColor: props.inset
+        ? 'var(--paperBackgroundColor)'
+        : 'var(--hintTextColor)',
+      backgroundColor: props.inset
+        ? 'var(--defaultBackgroundColor)'
+        : 'var(--paperBackgroundColor)',
       cursor: 'pointer'
     },
     borderRadius: '.1875rem',
     boxShadow: 'unset',
     height: heights[props.size],
     minHeight: heights[props.size]
+  }),
+  placeholder: base => ({
+    ...base,
+    color: 'var(--secondaryTextColor)'
   }),
   dropdownIndicator: base => ({
     ...base,
@@ -57,10 +68,19 @@ const customStyles = props => ({
   }),
   valueContainer: base => ({
     ...base,
-    color: 'black'
+    color: 'var(--primaryTextColor)'
+  }),
+  singleValue: base => ({
+    ...base,
+    color: 'var(--primaryTextColor)'
+  }),
+  multiValue: base => ({
+    ...base,
+    backgroundColor: 'var(--hintTextColor)'
   }),
   menu: base => ({
     ...base,
+    backgroundColor: 'var(--paperBackgroundColor)',
     zIndex: 10
   })
 })
@@ -103,7 +123,7 @@ const DropdownIndicator = props => {
     <components.DropdownIndicator {...props}>
       <Icon
         icon={props.selectProps.menuIsOpen ? TopIcon : BottomIcon}
-        color={coolGrey}
+        color="var(--iconTextColor)"
         width="20"
         height="16"
       />
@@ -158,7 +178,11 @@ const Option = ({
     {!withCheckbox && (
       <span className={styles['select-option__checkmark']}>
         {isSelected && (
-          <Icon icon={CheckIcon} color={dodgerBlue} className="u-ph-half" />
+          <Icon
+            icon={CheckIcon}
+            color="var(--primaryColor)"
+            className="u-ph-half"
+          />
         )}
       </span>
     )}
@@ -186,7 +210,9 @@ const ActionsOption = ({ actions, ...props }) => (
           {...action.iconProps}
           key={index}
           icon={action.icon}
-          color={props.isFocused ? coolGrey : silver}
+          color={
+            props.isFocused ? 'var(--iconTextColor)' : 'var(--hintTextColor)'
+          }
           className="u-ph-half"
           onClick={e => {
             e.stopPropagation()
