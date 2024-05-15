@@ -1,3 +1,10 @@
+# [106.4.0](https://github.com/cozy/cozy-ui/compare/v106.3.0...v106.4.0) (2024-05-15)
+
+
+### Features
+
+* **Flagship:** Mock getFlagshipMetadata if node_env = test ([5411534](https://github.com/cozy/cozy-ui/commit/5411534))
+
 # [106.3.0](https://github.com/cozy/cozy-ui/compare/v106.2.0...v106.3.0) (2024-05-15)
 
 
