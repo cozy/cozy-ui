@@ -89,15 +89,16 @@ export const isRsg = !!document.getElementById('rsg-root')
  * Overrides flagship metadata
  * See https://github.com/cozy/cozy-libs/blob/master/packages/cozy-device-helper/src/flagship.ts#L13
  */
-export const getFlagshipMetadata = isRsg
-  ? () => ({
-      immersive:
-        JSON.parse(localStorage.getItem('flagship-app'))?.contained === 'off' ||
-        false,
-      statusBarHeight: 40,
-      navbarHeight: 40
-    })
-  : getFlagshipMetadataFromDeviceHelper
+export const getFlagshipMetadata =
+  isRsg || process.env.NODE_ENV === 'test'
+    ? () => ({
+        immersive:
+          JSON.parse(localStorage.getItem('flagship-app'))?.contained ===
+            'off' || false,
+        statusBarHeight: 40,
+        navbarHeight: 40
+      })
+    : getFlagshipMetadataFromDeviceHelper
 
 /**
  * Set the css values for Status and Nav bar inside cozy-ui documentation
