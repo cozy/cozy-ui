@@ -1,3 +1,10 @@
+# [106.3.0](https://github.com/cozy/cozy-ui/compare/v106.2.0...v106.3.0) (2024-05-15)
+
+
+### Features
+
+* **TextField:** Force left text alignment for input ([d3ff3c2](https://github.com/cozy/cozy-ui/commit/d3ff3c2))
+
 # [106.2.0](https://github.com/cozy/cozy-ui/compare/v106.1.1...v106.2.0) (2024-05-14)
 
 
