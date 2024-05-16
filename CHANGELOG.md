@@ -1,3 +1,11 @@
+# [106.5.0](https://github.com/cozy/cozy-ui/compare/v106.4.0...v106.5.0) (2024-05-16)
+
+
+### Features
+
+* Add description variant for SquareAppIcon ([379f150](https://github.com/cozy/cozy-ui/commit/379f150))
+* Simplify making a demo documentation ([229e462](https://github.com/cozy/cozy-ui/commit/229e462))
+
 # [106.4.0](https://github.com/cozy/cozy-ui/compare/v106.3.0...v106.4.0) (2024-05-15)
 
 
