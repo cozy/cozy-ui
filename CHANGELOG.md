@@ -1,3 +1,10 @@
+# [106.6.0](https://github.com/cozy/cozy-ui/compare/v106.5.0...v106.6.0) (2024-05-16)
+
+
+### Features
+
+* Adjust style for old component Field and SelectBox ([0b4a907](https://github.com/cozy/cozy-ui/commit/0b4a907))
+
 # [106.5.0](https://github.com/cozy/cozy-ui/compare/v106.4.0...v106.5.0) (2024-05-16)
 
 
