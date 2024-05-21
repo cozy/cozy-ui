@@ -153,6 +153,8 @@ const files = [
     metadata: {
       number: 12345,
       refTaxIncome: '153',
+      datetime: new Date(Date.now()).toISOString(),
+      referencedDate: new Date(Date.now()).toISOString(),
       expirationDate: new Date(Date.now() + 10 * 24 * 60 * 60 * 1000).toISOString(),
       noticePeriod: '30',
       qualification: {

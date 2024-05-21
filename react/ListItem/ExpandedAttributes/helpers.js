@@ -20,6 +20,10 @@ export const notExpandedAttributes = {
   'io.cozy.contacts': ['fullname', 'civility', 'note'],
   'io.cozy.files': [
     'name',
+    'metadata.datetime',
+    'metadata.referencedDate',
+    'metadata.expirationDate',
+    'metadata.noticePeriod',
     'flexsearchProps:translated:qualificationLabel',
     'flexsearchProps:translated:driverLicense',
     'flexsearchProps:translated:paymentProofFamilyAllowance',
@@ -39,7 +43,7 @@ export const defaultExpandedAttributes = {
   'io.cozy.files': [
     ...KNOWN_INFORMATION_METADATA_NAMES.map(x => `metadata.${x}`),
     ...KNOWN_DATE_METADATA_NAMES.map(x => `metadata.${x}`)
-  ]
+  ].filter(x => !notExpandedAttributes['io.cozy.files'].includes(x))
 }
 
 export const hasAllElement = (arr1, arr2) => arr1?.every(x => arr2.includes(x))
