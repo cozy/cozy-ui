@@ -190,8 +190,13 @@ const files = [
       doc={files[0]}
       expandedAttributesProps={{
         isExpandedAttributesActive: true,
-        expandedAttributes: ['metadata.number', 'metadata.refTaxIncome', 'metadata.noticePeriod']
+        expandedAttributes: ['metadata.number']
       }}
+      onClick={() => {}}
+    />
+    <ListItemByDoc
+      doc={files[0]}
+      expandedAttributesProps={{ isExpandedAttributesActive: true }}
       onClick={() => {}}
     />
     <Divider variant="inset" />

@@ -51,11 +51,14 @@ export const hasAllElement = (arr1, arr2) => arr1?.every(x => arr2.includes(x))
 export const makeDefaultExpandedAttributes = (doc, expandedAttributes) => {
   const doctype = doc?._type
 
-  if (!expandedAttributes || !doc || !doctype) return undefined
+  if (!doc || !doctype) return undefined
 
   // checks if there are any expanded attributes.
   // If there are none, the default expanded attributes are returned
-  if (hasAllElement(expandedAttributes, notExpandedAttributes[doctype])) {
+  if (
+    !expandedAttributes ||
+    hasAllElement(expandedAttributes, notExpandedAttributes[doctype])
+  ) {
     return defaultExpandedAttributes[doctype]
   }
 
