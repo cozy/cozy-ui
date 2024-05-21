@@ -229,7 +229,11 @@ export const SquareAppIcon = ({
         </InfosBadge>
       </CozyTheme>
       {display === 'detailed' ? (
-        <ListItemText primary={appName} secondary={description} />
+        <ListItemText
+          primary={appName}
+          secondary={description}
+          primaryTypographyProps={{ color: 'textPrimary' }}
+        />
       ) : (
         <Typography
           className={cx(
