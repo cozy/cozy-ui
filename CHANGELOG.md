@@ -1,3 +1,11 @@
+# [106.7.0](https://github.com/cozy/cozy-ui/compare/v106.6.0...v106.7.0) (2024-05-21)
+
+
+### Features
+
+* **ListItem:** Default expanded attributes are chosen if prop undefined ([13e03e5](https://github.com/cozy/cozy-ui/commit/13e03e5))
+* **ListItem:** Exclude not expanded attributes from default ones ([105c8c4](https://github.com/cozy/cozy-ui/commit/105c8c4))
+
 # [106.6.0](https://github.com/cozy/cozy-ui/compare/v106.5.0...v106.6.0) (2024-05-16)
 
 
