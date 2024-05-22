@@ -34,6 +34,7 @@ html,
     --primaryColor palette.Primary['600']
     --primaryColorDark palette.Primary['700']
     --primaryContrastTextColor palette.Common['white']
+    --primaryBackground alpha(palette.Primary['600'], 0.12) // only for deprecated Info & Alerter
 
     /*
     Secondary colors
@@ -51,6 +52,7 @@ html,
     --secondaryColor palette.Grey['600']
     --secondaryColorDark palette.Grey['700']
     --secondaryContrastTextColor palette.Common['white']
+    --secondaryBackground alpha(palette.Grey['600'], 0.12) // only for deprecated Info & Alerter
 
     /*
     Background colors
@@ -157,6 +159,7 @@ html,
     --successColor palette.Success['600']
     --successColorDark palette.Success['700']
     --successColorContrastText palette.Common['white']
+    --successBackground alpha(palette.Success['600'], 0.12) // only for deprecated Info & Alerter
 
     /*
     Warning colors
@@ -189,7 +192,7 @@ html,
     --errorColorLight palette.Error['500']
     --errorColor palette.Error['600']
     --errorColorDark palette.Error['700']
-    --errorBackground palette.Error['100']
+    --errorBackground alpha(palette.Error['600'], 0.12)
     --errorColorContrastText palette.Common['white']
 
     /*

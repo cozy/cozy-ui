@@ -33,17 +33,20 @@ palette=json('../../../theme/palette.json', { hash: true })
     --primaryColor palette.Grey['800']
     --primaryColorDark palette.Grey['A400']
     --primaryContrastTextColor palette.Common['white']
+    --primaryBackground alpha(palette.Grey['800'], 0.12) // only for deprecated Info & Alerter
 
     --secondaryColorLight palette.Grey['700']
     --secondaryColor palette.Grey['800']
     --secondaryColorDark palette.Grey['A400']
     --secondaryContrastTextColor palette.Common['white']
+    --secondaryBackground alpha(palette.Grey['800'], 0.12) // only for deprecated Info & Alerter
 
     --errorColorLight palette.Error['700']
     --errorColor palette.Error['800']
     --errorColorDark palette.Error['A400']
     --errorColorContrastText palette.Common['white']
     --errorBackground palette.Error['A400']
+    --errorBackground alpha(palette.Error['800'], 0.12) // only for deprecated Info & Alerter
 
     --warningColorLight palette.Warning['700']
     --warningColor palette.Warning['800']
@@ -54,6 +57,7 @@ palette=json('../../../theme/palette.json', { hash: true })
     --successColor palette.Success['800']
     --successColorDark palette.Success['A400']
     --successColorContrastText palette.Common['white']
+    --successBackground alpha(palette.Success['800'], 0.12) // only for deprecated Info & Alerter
 
     --infoColorLight palette.Info['700']
     --infoColor palette.Info['800']
