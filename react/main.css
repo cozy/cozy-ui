@@ -7993,16 +7993,16 @@ body {
   font-weight: bold;
 }
 .c-alert--error--g5tIs {
-  color: var(--white);
-  background-color: var(--errorColor);
+  color: var(--primaryTextColor);
+  background-color: var(--errorBackground);
 }
 .c-alert--success--2DGDO {
-  color: var(--white);
-  background-color: var(--successColor);
+  color: var(--primaryTextColor);
+  background-color: var(--successBackground);
 }
 .c-alert--info--2EDwe {
-  color: var(--white);
-  background-color: var(--slateGrey);
+  color: var(--primaryTextColor);
+  background-color: var(--secondaryBackground);
 }
 
 .c-card--YgP7B {
