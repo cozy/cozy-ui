@@ -1,3 +1,12 @@
+# [106.8.0](https://github.com/cozy/cozy-ui/compare/v106.7.0...v106.8.0) (2024-05-23)
+
+
+### Features
+
+* Adjust colors for deprecated Infos and Alert components ([3e01fb9](https://github.com/cozy/cozy-ui/commit/3e01fb9))
+* **Icon:** Add Chess icon ([c833a8a](https://github.com/cozy/cozy-ui/commit/c833a8a))
+* **Theme:** Add `primaryBackground`, `secondaryBackground`, `successB.` ([49c12e1](https://github.com/cozy/cozy-ui/commit/49c12e1))
+
 # [106.7.0](https://github.com/cozy/cozy-ui/compare/v106.6.0...v106.7.0) (2024-05-21)
 
 
