@@ -86,6 +86,7 @@ const files = [
     type: 'file',
     name: 'My vehicle registration.pdf',
     mime: 'application/pdf',
+    bills: { data: [{ amount: '500' }] },
     metadata: {
       carbonCopy: true,
       AObtentionDate: null,
