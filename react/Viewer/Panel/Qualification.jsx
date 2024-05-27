@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import {
   isExpiringSoon,
   formatMetadataQualification,
+  KNOWN_BILLS_ATTRIBUTES_NAMES,
   getMetadataQualificationType
 } from 'cozy-client/dist/models/paper'
 
@@ -20,7 +21,8 @@ const ComponentFromMetadataQualificationType = {
   contact: QualificationListItemContact,
   date: QualificationListItemDate,
   information: QualificationListItemInformation,
-  other: QualificationListItemOther
+  other: QualificationListItemOther,
+  bills: QualificationListItemInformation
 }
 
 const isExpirationAlertHidden = file => {
@@ -48,8 +50,20 @@ const Qualification = ({ file }) => {
   }
 
   const formattedMetadataQualification = useMemo(() => {
+    const relatedBills = file.bills?.data?.[0]
+
+    if (relatedBills) {
+      const formattedBillsMetadata = KNOWN_BILLS_ATTRIBUTES_NAMES.map(
+        attrName => ({ name: attrName, value: relatedBills[attrName] })
+      )
+
+      return formatMetadataQualification(metadata).concat(
+        formattedBillsMetadata
+      )
+    }
+
     return formatMetadataQualification(metadata)
-  }, [metadata])
+  }, [metadata, file.bills?.data])
 
   useEffect(() => {
     actionBtnRef.current = formattedMetadataQualification.map(

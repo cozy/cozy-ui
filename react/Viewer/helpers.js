@@ -1,22 +1,24 @@
-import { models, generateWebLink } from 'cozy-client'
+import { generateWebLink } from 'cozy-client'
 
-const {
+import {
   isEncrypted,
   isFromKonnector,
   hasQualifications,
   hasCertifications,
   normalize
-} = models.file
+} from 'cozy-client/dist/models/file'
 
-const {
+import {
   KNOWN_DATE_METADATA_NAMES,
-  KNOWN_INFORMATION_METADATA_NAMES
-} = models.paper
+  KNOWN_INFORMATION_METADATA_NAMES,
+  KNOWN_BILLS_ATTRIBUTES_NAMES
+} from 'cozy-client/dist/models/paper'
 
 export const getCurrentModel = metadataName => {
   if (
     KNOWN_DATE_METADATA_NAMES.includes(metadataName) ||
-    KNOWN_INFORMATION_METADATA_NAMES.includes(metadataName)
+    KNOWN_INFORMATION_METADATA_NAMES.includes(metadataName) ||
+    KNOWN_BILLS_ATTRIBUTES_NAMES.includes(metadataName)
   ) {
     return 'information'
   }

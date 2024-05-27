@@ -38,6 +38,7 @@ const ActionMenuWrapper = forwardRef(({ onClose, file, optionFile }, ref) => {
     editPath
   )
   const isAppLinkLoaded = fetchStatus === 'loaded'
+  const isEditable = Boolean(editPath) && isEditableAttribute(name, file)
 
   const handleCopy = async () => {
     try {
@@ -70,7 +71,7 @@ const ActionMenuWrapper = forwardRef(({ onClose, file, optionFile }, ref) => {
     return (
       <ActionMenuMobile
         onClose={onClose}
-        isEditable={Boolean(editPath) && isEditableAttribute(name, file)}
+        isEditable={isEditable}
         actions={{ handleCopy, handleEdit }}
         appLink={url}
         appSlug={mespapiersAppSlug}
@@ -82,7 +83,7 @@ const ActionMenuWrapper = forwardRef(({ onClose, file, optionFile }, ref) => {
     <ActionMenuDesktop
       ref={ref}
       onClose={onClose}
-      isEditable={Boolean(editPath) && isEditableAttribute(name, file)}
+      isEditable={isEditable}
       actions={{ handleCopy, handleEdit }}
       appLink={url}
       appSlug={mespapiersAppSlug}
