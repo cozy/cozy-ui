@@ -53,7 +53,7 @@ const FooterContent = ({ file, toolbarRef, children, isPublic }) => {
       <BottomSheet
         toolbarProps={toolbarProps}
         portalProps={{ disablePortal: true }}
-        settings={{ mediumHeightRatio: 0.5 }}
+        settings={{ mediumHeightRatio: isPublic ? 0 : 0.5 }}
       >
         <BottomSheetHeader
           className={cx('u-ph-1 u-pb-1', styles.bottomSheetHeader)}
