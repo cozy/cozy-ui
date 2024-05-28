@@ -1,3 +1,10 @@
+# [106.9.0](https://github.com/cozy/cozy-ui/compare/v106.8.0...v106.9.0) (2024-05-28)
+
+
+### Features
+
+* **Viewer:** On public view, bottomSheet must be lowered ([277de56](https://github.com/cozy/cozy-ui/commit/277de56))
+
 # [106.8.0](https://github.com/cozy/cozy-ui/compare/v106.7.0...v106.8.0) (2024-05-23)
 
 
