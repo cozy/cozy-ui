@@ -208,6 +208,7 @@ import Lightning from 'cozy-ui/transpiled/react/Icons/Lightning'
 import Link from 'cozy-ui/transpiled/react/Icons/Link'
 import LinkOut from 'cozy-ui/transpiled/react/Icons/LinkOut'
 import List from 'cozy-ui/transpiled/react/Icons/List'
+import ListMin from 'cozy-ui/transpiled/react/Icons/ListMin'
 import Location from 'cozy-ui/transpiled/react/Icons/Location'
 import Lock from 'cozy-ui/transpiled/react/Icons/Lock'
 import LockScreen from 'cozy-ui/transpiled/react/Icons/LockScreen'
@@ -217,6 +218,7 @@ import Magnet from 'cozy-ui/transpiled/react/Icons/Magnet'
 import Magnifier from 'cozy-ui/transpiled/react/Icons/Magnifier'
 import Merge from 'cozy-ui/transpiled/react/Icons/Merge'
 import Moped from 'cozy-ui/transpiled/react/Icons/Moped'
+import MosaicMin from 'cozy-ui/transpiled/react/Icons/MosaicMin'
 import Motorcycle from 'cozy-ui/transpiled/react/Icons/Motorcycle'
 import Mountain from 'cozy-ui/transpiled/react/Icons/Mountain'
 import Movement from 'cozy-ui/transpiled/react/Icons/Movement'
@@ -465,6 +467,7 @@ const icons = [
   Link,
   LinkOut,
   List,
+  ListMin,
   Location,
   Lock,
   LockScreen,
@@ -474,6 +477,7 @@ const icons = [
   Magnifier,
   Merge,
   Moped,
+  MosaicMin,
   Motorcycle,
   Mountain,
   MovementIn,
@@ -913,7 +917,7 @@ import Typography from 'cozy-ui/transpiled/react/Typography'
 
 const colors = ['#297EF2', '#08b442', '#B449E7', '#F52D2D', '#FF962F']
 let i = 0
-const availableIcons = ['album-add','album-remove','album','answer','apple','archive','arrowUp','attachment','attention','bank-check','bank','banking-add','banking','bell','benefit','bike','bill','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-edge-chromium','browser-firefox','browser-ie','browser-opera','browser-safari','burger','bus','calendar','camera','car','carbonCopy','carpooling','categories','certified','check-circle','check-list','check-square','check','checkbox','chess','child','circle-filled','clock','clock-outline','cloud-happy','cloud','collect','cocktail','comment','company','compare','compass','connector','contract','contrast','copy','cozy-circle','cozy-laugh', 'cozy-lock', 'cozy-text', 'cozy-release', 'credit-card-add','credit-card','credit','crop','cross-circle-outline','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','debit','devices','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','electric-bike','electric-car','electric-scooter','email-notification','email','eu','euro','exchange','eye-closed','eye','face-id','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','fitness','flag-outlined','flag','flash-auto','flashlight','folder-add','folder-moveto','folder','forbidden','from-user','gear','globe','gouv','graph-circle','grid','group-list','groups','growth','hand','heart','help','help-outlined','history','home','hourglass','image','info-outlined','info','justice','key','label-outlined','laudry','laptop','left','library','lightbulb','lightning','link-out','link','list','location','lock', 'lock-screen', 'logout','magic-trick','magnet','magnifier','merge','moped','motorcycle','mountain','movement-in','movement-out','mouvement','moveto','multi-files','music','new','next','note','notification-email','offline','online', 'openapp', 'openwith','palette','paper','paperplane','password','pen','people','percent-circle','percent','personal-data','phone-download','phone-upload','phone','pie-chart','pin','plane','plus-small','plus', 'pop-inside', 'previous','printer','qualify','radio-checked','radio-unchecked','refresh','relationship','remboursement','rename','repare','reply','restaurant','restore-straight','restore','right','rise','rotate-left','rotate-right','sad-cozy','safe','school','scooter','select-all','setting','share-circle','share','shield','shop','sound','spinner','sport-bag','stack','star','stats','subway', 'support', 'swap', 'sync-cozy','sync','tag','target','team','telecom','telephone','to-the-cloud','top','train','tram','trash','trophy', 'uncloud', 'unknow','unlink','unlock','up','upload','videos','walk','wallet-add','wallet-new','wallet','warn','warning-circle','warning','water','wrench-circle','work']
+const availableIcons = ['album-add','album-remove','album','answer','apple','archive','arrowUp','attachment','attention','bank-check','bank','banking-add','banking','bell','benefit','bike','bill','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-edge-chromium','browser-firefox','browser-ie','browser-opera','browser-safari','burger','bus','calendar','camera','car','carbonCopy','carpooling','categories','certified','check-circle','check-list','check-square','check','checkbox','chess','child','circle-filled','clock','clock-outline','cloud-happy','cloud','collect','cocktail','comment','company','compare','compass','connector','contract','contrast','copy','cozy-circle','cozy-laugh', 'cozy-lock', 'cozy-text', 'cozy-release', 'credit-card-add','credit-card','credit','crop','cross-circle-outline','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','debit','devices','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','electric-bike','electric-car','electric-scooter','email-notification','email','eu','euro','exchange','eye-closed','eye','face-id','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','fitness','flag-outlined','flag','flash-auto','flashlight','folder-add','folder-moveto','folder','forbidden','from-user','gear','globe','gouv','graph-circle','grid','group-list','groups','growth','hand','heart','help','help-outlined','history','home','hourglass','image','info-outlined','info','justice','key','label-outlined','laudry','laptop','left','library','lightbulb','lightning','link-out','link','list','list-min','location','lock', 'lock-screen', 'logout','magic-trick','magnet','magnifier','merge','moped','mosaic-min','motorcycle','mountain','movement-in','movement-out','mouvement','moveto','multi-files','music','new','next','note','notification-email','offline','online', 'openapp', 'openwith','palette','paper','paperplane','password','pen','people','percent-circle','percent','personal-data','phone-download','phone-upload','phone','pie-chart','pin','plane','plus-small','plus', 'pop-inside', 'previous','printer','qualify','radio-checked','radio-unchecked','refresh','relationship','remboursement','rename','repare','reply','restaurant','restore-straight','restore','right','rise','rotate-left','rotate-right','sad-cozy','safe','school','scooter','select-all','setting','share-circle','share','shield','shop','sound','spinner','sport-bag','stack','star','stats','subway', 'support', 'swap', 'sync-cozy','sync','tag','target','team','telecom','telephone','to-the-cloud','top','train','tram','trash','trophy', 'uncloud', 'unknow','unlink','unlock','up','upload','videos','walk','wallet-add','wallet-new','wallet','warn','warning-circle','warning','water','wrench-circle','work']
 ;
 <div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
   <Sprite />
