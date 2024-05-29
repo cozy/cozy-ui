@@ -1,3 +1,22 @@
+# [107.0.0](https://github.com/cozy/cozy-ui/compare/v106.9.0...v107.0.0) (2024-05-29)
+
+
+### Bug Fixes
+
+* **Icon:** FileDuotone icon is now theme responsive ([582ced5](https://github.com/cozy/cozy-ui/commit/582ced5))
+
+
+### Features
+
+* **AppsSection:** Merge the ISP and telecom categories ([d5d4598](https://github.com/cozy/cozy-ui/commit/d5d4598))
+* **packages:** Upgrade cozy-client 46.10.0 to 47.6.0 ([74caa67](https://github.com/cozy/cozy-ui/commit/74caa67))
+* **Viewer:** Support for io.cozy.bills ([e3eeb6e](https://github.com/cozy/cozy-ui/commit/e3eeb6e))
+
+
+### BREAKING CHANGES
+
+* **packages:** you must have `cozy-client >= 47.6.0`
+
 # [106.9.0](https://github.com/cozy/cozy-ui/compare/v106.8.0...v106.9.0) (2024-05-28)
 
 
