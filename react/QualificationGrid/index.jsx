@@ -6,11 +6,11 @@ import QualificationItem from '../QualificationItem'
 import { useI18n } from '../providers/I18n'
 import PeopleIcon from '../Icons/People'
 import TeamIcon from '../Icons/Team'
-import CompanyIcon from '../Icons/Company'
+import WorkIcon from '../Icons/Work'
+import ChessIcon from '../Icons/Chess'
 import HeartIcon from '../Icons/Heart'
 import HomeIcon from '../Icons/Home'
 import CarIcon from '../Icons/Car'
-import CompassIcon from '../Icons/Compass'
 import BankIcon from '../Icons/Bank'
 import BillIcon from '../Icons/Bill'
 import DotsIcon from '../Icons/Dots'
@@ -21,11 +21,11 @@ import { getThemesList } from './helpers'
 const IconByName = {
   people: PeopleIcon,
   team: TeamIcon,
-  company: CompanyIcon,
+  work: WorkIcon,
   heart: HeartIcon,
   home: HomeIcon,
   car: CarIcon,
-  compass: CompassIcon,
+  chess: ChessIcon,
   bank: BankIcon,
   bill: BillIcon,
   dots: DotsIcon
