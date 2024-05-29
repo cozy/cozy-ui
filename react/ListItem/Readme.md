@@ -153,9 +153,10 @@ const files = [
     metadata: {
       number: 12345,
       refTaxIncome: '153',
-      datetime: new Date(Date.now()).toISOString(),
-      referencedDate: new Date(Date.now()).toISOString(),
-      expirationDate: new Date(Date.now() + 10 * 24 * 60 * 60 * 1000).toISOString(),
+      datetime: '2024-01-11T12:00:00.000Z',
+      datetimeLabel: 'expirationDate',
+      referencedDate: '2024-01-01T12:00:00.000Z',
+      expirationDate: '2024-01-11T12:00:00.000Z',
       noticePeriod: '30',
       qualification: {
         label: 'driver_license'
