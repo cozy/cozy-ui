@@ -1,3 +1,10 @@
+# [107.2.0](https://github.com/cozy/cozy-ui/compare/v107.1.0...v107.2.0) (2024-05-29)
+
+
+### Features
+
+* **IconStack:** The `foregroundIcon` container is not useful ([1895af7](https://github.com/cozy/cozy-ui/commit/1895af7))
+
 # [107.1.0](https://github.com/cozy/cozy-ui/compare/v107.0.0...v107.1.0) (2024-05-29)
 
 
