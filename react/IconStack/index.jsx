@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import PropTypes from 'prop-types'
 
 import migrateProps from '../helpers/migrateProps'
 import styles from './styles.styl'
@@ -32,6 +33,17 @@ const IconStack = ({
       )}
     </div>
   )
+}
+
+IconStack.propTypes = {
+  backgroundClassName: PropTypes.string,
+  foregroundClassName: PropTypes.string,
+  backgroundIcon: PropTypes.node,
+  foregroundIcon: PropTypes.node,
+  offset: PropTypes.shape({
+    vertical: PropTypes.string,
+    horizontal: PropTypes.string
+  })
 }
 
 export default migrateProps([
