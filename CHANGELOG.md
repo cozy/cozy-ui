@@ -1,3 +1,10 @@
+# [107.1.0](https://github.com/cozy/cozy-ui/compare/v107.0.0...v107.1.0) (2024-05-29)
+
+
+### Features
+
+* Add new icons ListMin and MosaicMin ([0418a8f](https://github.com/cozy/cozy-ui/commit/0418a8f))
+
 # [107.0.0](https://github.com/cozy/cozy-ui/compare/v106.9.0...v107.0.0) (2024-05-29)
 
 
