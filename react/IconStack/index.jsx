@@ -16,15 +16,20 @@ const IconStack = ({
       className={classNames(styles['IconStack-wrapper'], backgroundClassName)}
     >
       {backgroundIcon}
-      <div
-        style={{ marginTop: offset?.vertical, marginLeft: offset?.horizontal }}
-        className={classNames(
-          styles['IconStack-foregroundIcon'],
-          foregroundClassName
-        )}
-      >
-        {foregroundIcon}
-      </div>
+      {foregroundIcon && (
+        <div
+          style={{
+            marginTop: offset?.vertical,
+            marginLeft: offset?.horizontal
+          }}
+          className={classNames(
+            styles['IconStack-foregroundIcon'],
+            foregroundClassName
+          )}
+        >
+          {foregroundIcon}
+        </div>
+      )}
     </div>
   )
 }
