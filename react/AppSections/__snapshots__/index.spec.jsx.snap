@@ -217,7 +217,6 @@ exports[`AppsSection component should be rendered correctly with apps list, subt
             Object {
               "categories": Array [
                 "isp",
-                "telecom",
               ],
               "developer": Object {
                 "name": "Cozy",
@@ -246,46 +245,7 @@ exports[`AppsSection component should be rendered correctly with apps list, subt
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
-            ISP
-          </SectionSubSubtitle>
-        }
-      />
-      <AppsSection
-        appsList={
-          Array [
-            Object {
-              "categories": Array [
-                "isp",
-                "telecom",
-              ],
-              "developer": Object {
-                "name": "Cozy",
-              },
-              "icon": "<svg></svg>",
-              "isInRegistry": true,
-              "name": "Bouilligue",
-              "slug": "konnector-bouilligue",
-              "type": "konnector",
-              "uninstallable": true,
-              "versions": Object {
-                "beta": Array [
-                  "0.1.0",
-                ],
-                "dev": Array [
-                  "0.1.0",
-                ],
-                "stable": Array [
-                  "0.1.0",
-                ],
-              },
-            },
-          ]
-        }
-        displaySpecificMaintenanceStyle={false}
-        onAppClick={[MockFunction]}
-        subtitle={
-          <SectionSubSubtitle>
-            Telecom
+            Mobile and Internet
           </SectionSubSubtitle>
         }
       />
@@ -558,7 +518,6 @@ exports[`AppsSection component should not render dropdown filter on mobile if na
             Object {
               "categories": Array [
                 "isp",
-                "telecom",
               ],
               "developer": Object {
                 "name": "Cozy",
@@ -587,46 +546,7 @@ exports[`AppsSection component should not render dropdown filter on mobile if na
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
-            ISP
-          </SectionSubSubtitle>
-        }
-      />
-      <AppsSection
-        appsList={
-          Array [
-            Object {
-              "categories": Array [
-                "isp",
-                "telecom",
-              ],
-              "developer": Object {
-                "name": "Cozy",
-              },
-              "icon": "<svg></svg>",
-              "isInRegistry": true,
-              "name": "Bouilligue",
-              "slug": "konnector-bouilligue",
-              "type": "konnector",
-              "uninstallable": true,
-              "versions": Object {
-                "beta": Array [
-                  "0.1.0",
-                ],
-                "dev": Array [
-                  "0.1.0",
-                ],
-                "stable": Array [
-                  "0.1.0",
-                ],
-              },
-            },
-          ]
-        }
-        displaySpecificMaintenanceStyle={false}
-        onAppClick={[MockFunction]}
-        subtitle={
-          <SectionSubSubtitle>
-            Telecom
+            Mobile and Internet
           </SectionSubSubtitle>
         }
       />
@@ -902,7 +822,6 @@ exports[`AppsSection component should not render dropdown filter on tablet if na
             Object {
               "categories": Array [
                 "isp",
-                "telecom",
               ],
               "developer": Object {
                 "name": "Cozy",
@@ -931,46 +850,7 @@ exports[`AppsSection component should not render dropdown filter on tablet if na
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
-            ISP
-          </SectionSubSubtitle>
-        }
-      />
-      <AppsSection
-        appsList={
-          Array [
-            Object {
-              "categories": Array [
-                "isp",
-                "telecom",
-              ],
-              "developer": Object {
-                "name": "Cozy",
-              },
-              "icon": "<svg></svg>",
-              "isInRegistry": true,
-              "name": "Bouilligue",
-              "slug": "konnector-bouilligue",
-              "type": "konnector",
-              "uninstallable": true,
-              "versions": Object {
-                "beta": Array [
-                  "0.1.0",
-                ],
-                "dev": Array [
-                  "0.1.0",
-                ],
-                "stable": Array [
-                  "0.1.0",
-                ],
-              },
-            },
-          ]
-        }
-        displaySpecificMaintenanceStyle={false}
-        onAppClick={[MockFunction]}
-        subtitle={
-          <SectionSubSubtitle>
-            Telecom
+            Mobile and Internet
           </SectionSubSubtitle>
         }
       />
@@ -1081,16 +961,10 @@ exports[`AppsSection component should render dropdown filter on mobile if no nav
           "value": "konnectors",
         },
         Object {
-          "label": "ISP",
+          "label": "Mobile and Internet",
           "secondary": true,
           "type": "konnector",
           "value": "isp",
-        },
-        Object {
-          "label": "Telecom",
-          "secondary": true,
-          "type": "konnector",
-          "value": "telecom",
         },
         Object {
           "label": "Transportation",
@@ -1311,7 +1185,6 @@ exports[`AppsSection component should render dropdown filter on mobile if no nav
             Object {
               "categories": Array [
                 "isp",
-                "telecom",
               ],
               "developer": Object {
                 "name": "Cozy",
@@ -1340,46 +1213,7 @@ exports[`AppsSection component should render dropdown filter on mobile if no nav
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
-            ISP
-          </SectionSubSubtitle>
-        }
-      />
-      <AppsSection
-        appsList={
-          Array [
-            Object {
-              "categories": Array [
-                "isp",
-                "telecom",
-              ],
-              "developer": Object {
-                "name": "Cozy",
-              },
-              "icon": "<svg></svg>",
-              "isInRegistry": true,
-              "name": "Bouilligue",
-              "slug": "konnector-bouilligue",
-              "type": "konnector",
-              "uninstallable": true,
-              "versions": Object {
-                "beta": Array [
-                  "0.1.0",
-                ],
-                "dev": Array [
-                  "0.1.0",
-                ],
-                "stable": Array [
-                  "0.1.0",
-                ],
-              },
-            },
-          ]
-        }
-        displaySpecificMaintenanceStyle={false}
-        onAppClick={[MockFunction]}
-        subtitle={
-          <SectionSubSubtitle>
-            Telecom
+            Mobile and Internet
           </SectionSubSubtitle>
         }
       />
@@ -1482,16 +1316,10 @@ exports[`AppsSection component should render dropdown filter on tablet if no nav
           "value": "konnectors",
         },
         Object {
-          "label": "ISP",
+          "label": "Mobile and Internet",
           "secondary": true,
           "type": "konnector",
           "value": "isp",
-        },
-        Object {
-          "label": "Telecom",
-          "secondary": true,
-          "type": "konnector",
-          "value": "telecom",
         },
         Object {
           "label": "Transportation",
@@ -1715,7 +1543,6 @@ exports[`AppsSection component should render dropdown filter on tablet if no nav
             Object {
               "categories": Array [
                 "isp",
-                "telecom",
               ],
               "developer": Object {
                 "name": "Cozy",
@@ -1744,46 +1571,7 @@ exports[`AppsSection component should render dropdown filter on tablet if no nav
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
-            ISP
-          </SectionSubSubtitle>
-        }
-      />
-      <AppsSection
-        appsList={
-          Array [
-            Object {
-              "categories": Array [
-                "isp",
-                "telecom",
-              ],
-              "developer": Object {
-                "name": "Cozy",
-              },
-              "icon": "<svg></svg>",
-              "isInRegistry": true,
-              "name": "Bouilligue",
-              "slug": "konnector-bouilligue",
-              "type": "konnector",
-              "uninstallable": true,
-              "versions": Object {
-                "beta": Array [
-                  "0.1.0",
-                ],
-                "dev": Array [
-                  "0.1.0",
-                ],
-                "stable": Array [
-                  "0.1.0",
-                ],
-              },
-            },
-          ]
-        }
-        displaySpecificMaintenanceStyle={false}
-        onAppClick={[MockFunction]}
-        subtitle={
-          <SectionSubSubtitle>
-            Telecom
+            Mobile and Internet
           </SectionSubSubtitle>
         }
       />
