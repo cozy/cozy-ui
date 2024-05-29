@@ -623,7 +623,6 @@ Array [
   Object {
     "categories": Array [
       "isp",
-      "telecom",
     ],
     "developer": Object {
       "name": "Cozy",
@@ -849,7 +848,6 @@ Array [
   Object {
     "categories": Array [
       "isp",
-      "telecom",
     ],
     "developer": Object {
       "name": "Cozy",

@@ -8,7 +8,7 @@
     "health": "Health",
     "host_provider": "Host",
     "insurance": "Insurance",
-    "isp": "ISP",
+    "isp": "Mobile and Internet",
     "konnectors": "Services",
     "list_separator": ", ",
     "mes_infos": "MesInfos experimentation",
@@ -21,7 +21,6 @@
     "public_service": "Public services",
     "shopping": "Shopping",
     "social": "Social",
-    "telecom": "Telecom",
     "transport": "Transportation",
     "pro": "Work"
   },
