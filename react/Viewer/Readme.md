@@ -26,6 +26,7 @@ The `Viewer` can display an **information panel** to show additional information
   * **page** : `<string>` – URL used to edit the file when editing a `page` type metadata (side of the document)
 * **onChangeRequest** : `<function>` - Called with (nextFile, nextIndex) when the user requests to navigate to another file
 * **onCloseRequest** : `<function>` - Called when the user wants to leave the Viewer
+* **isPublic**: `<boolean>` - Whether the viewer is used in a public page or not
 * **componentsProps** : `<object>` – Props passed to components with the same name
   * **modalProps** : `<object>` – Props passed to Modal component
   * **OnlyOfficeViewer** : `<object>` – Used to open an Only Office file
@@ -204,7 +205,7 @@ initialState = {
 }
 
 const initialVariants = [
-  { navigation: true, toolbar: true, onlyOfficeEnabled: true, disableModal: false }
+  { navigation: true, toolbar: true, onlyOfficeEnabled: true, disableModal: false, isPublic: false }
 ]
 
 const getURL = (file) => {
@@ -252,6 +253,7 @@ const editPathByModelProps = {
           {state.viewerOpened && (
             <Viewer
               files={files}
+              isPublic={variant.isPublic}
               currentIndex={state.currentIndex}
               currentURL={state.currentURL}
               disableModal={variant.disableModal}
