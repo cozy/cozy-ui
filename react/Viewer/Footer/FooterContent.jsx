@@ -48,12 +48,17 @@ const FooterContent = ({ file, toolbarRef, children, isPublic }) => {
     name: 'FooterActionButtons'
   })
 
+  const bottomSheetSettings = {
+    isOpenMin: isPublic ? true : false,
+    mediumHeightRatio: isPublic ? undefined : 0.5
+  }
+
   if (isValidForPanel({ file })) {
     return (
       <BottomSheet
         toolbarProps={toolbarProps}
         portalProps={{ disablePortal: true }}
-        settings={{ mediumHeightRatio: isPublic ? 0 : 0.5 }}
+        settings={bottomSheetSettings}
       >
         <BottomSheetHeader
           className={cx('u-ph-1 u-pb-1', styles.bottomSheetHeader)}
