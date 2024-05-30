@@ -75,7 +75,7 @@ export const apps = [
     icon: '<svg></svg>',
     developer: { name: 'Cozy' },
     type: 'konnector',
-    categories: ['isp'],
+    categories: ['isp', 'telecom'],
     versions: {
       stable: ['0.1.0'],
       beta: ['0.1.0'],
