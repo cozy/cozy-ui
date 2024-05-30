@@ -91,13 +91,16 @@ export const isRsg = !!document.getElementById('rsg-root')
  */
 export const getFlagshipMetadata =
   isRsg || process.env.NODE_ENV === 'test'
-    ? () => ({
-        immersive:
-          JSON.parse(localStorage.getItem('flagship-app'))?.contained ===
-            'off' || false,
-        statusBarHeight: 40,
-        navbarHeight: 40
-      })
+    ? () => {
+        const isFlagshipAppContained =
+          JSON.parse(localStorage.getItem('flagship-app'))?.contained === 'on'
+
+        return {
+          immersive: isFlagshipAppContained ? false : true,
+          statusBarHeight: isFlagshipAppContained ? 0 : 40,
+          navbarHeight: isFlagshipAppContained ? 0 : 40
+        }
+      }
     : getFlagshipMetadataFromDeviceHelper
 
 /**
