@@ -23,6 +23,7 @@ describe('groupApps', () => {
       isp: ['konnector-bouilligue'],
       others: ['devonly'],
       partners: ['tasky'],
+      telecom: ['konnector-bouilligue'],
       transport: ['konnector-trinlane']
     })
   })
@@ -44,6 +45,7 @@ describe('sorter', () => {
       'cozy',
       'isp',
       'all',
+      'telecom',
       'others',
       'banking'
     ])
@@ -52,16 +54,24 @@ describe('sorter', () => {
       'cozy',
       'banking',
       'isp',
+      'telecom',
       'others'
     ])
   })
 
   it('should test with all and others at the border', () => {
-    const catList2 = prepareCategories(['all', 'banking', 'cozy', 'others'])
+    const catList2 = prepareCategories([
+      'all',
+      'telecom',
+      'banking',
+      'cozy',
+      'others'
+    ])
     expect(catList2.sort(catUtils.sorter).map(x => x.value)).toEqual([
       'all',
       'cozy',
       'banking',
+      'telecom',
       'others'
     ])
   })
@@ -104,6 +114,12 @@ describe('generateOptionsFromApps', () => {
         secondary: true,
         type: 'konnector',
         value: 'isp'
+      },
+      {
+        label: 'Telecom',
+        secondary: true,
+        type: 'konnector',
+        value: 'telecom'
       },
       {
         label: 'Transportation',
@@ -150,6 +166,12 @@ describe('generateOptionsFromApps', () => {
         secondary: true,
         type: 'konnector',
         value: 'isp'
+      },
+      {
+        label: 'Telecom',
+        secondary: true,
+        type: 'konnector',
+        value: 'telecom'
       },
       {
         label: 'Transportation',
