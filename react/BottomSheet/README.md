@@ -88,7 +88,8 @@ const initialVariants = [{
   withFakeToolbar: false,
   withHeader: true,
   withListContent: false,
-  withTitle: false
+  withTitle: false,
+  isOpenMin: false
 }]
 const initialState = {
   isBottomSheetDisplayed: isTesting(),
@@ -112,9 +113,13 @@ const handleChangeOffset = el => {
   setState({ offset: Number(el.target.value) })
 }
 
+const makeSettings = variant => {
 const settings = state.mediumHeight === undefined && state.mediumHeightRatio === undefined
   ? undefined
   : { mediumHeight: state.mediumHeight, mediumHeightRatio: state.mediumHeightRatio }
+
+  return { ...settings, isOpenMin: variant.isOpenMin }
+}
 
 // -->
 
@@ -163,7 +168,7 @@ const settings = state.mediumHeight === undefined && state.mediumHeightRatio ===
         {state.isBottomSheetDisplayed && (
           <BottomSheet
             toolbarProps={variant.withFakeToolbar ? { height: 50 } : undefined}
-            settings={settings}
+            settings={makeSettings(variant)}
             backdrop={variant.backdrop}
             skipAnimation={isTesting()}
             offset={state.offset}

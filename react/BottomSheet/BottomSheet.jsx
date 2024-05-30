@@ -129,7 +129,8 @@ export const defaultBottomSheetSpringConfig = {
 
 const defaultSettings = {
   mediumHeightRatio: 0.75,
-  mediumHeight: null
+  mediumHeight: null,
+  isOpenMin: false
 }
 
 const BottomSheet = memo(
@@ -142,7 +143,7 @@ const BottomSheet = memo(
     offset,
     children
   }) => {
-    const { mediumHeightRatio, mediumHeight } = {
+    const { mediumHeightRatio, mediumHeight, isOpenMin } = {
       ...defaultSettings,
       ...settings
     }
@@ -240,21 +241,25 @@ const BottomSheet = memo(
         toolbarProps,
         offset
       })
-      const computedMediumHeight = computeMediumHeight({
-        backdrop,
-        maxHeight,
-        mediumHeight,
-        mediumHeightRatio,
-        innerContentHeight,
-        bottomSpacerHeight,
-        offset
-      })
       const minHeight = computeMinHeight({
         isClosable,
+        isOpenMin,
         headerRef,
         actionButtonsHeight,
         actionButtonsBottomMargin
       })
+      const computedMediumHeight =
+        isOpenMin && actionButtonsHeight > 0
+          ? minHeight + 1
+          : computeMediumHeight({
+              backdrop,
+              maxHeight,
+              mediumHeight,
+              mediumHeightRatio,
+              innerContentHeight,
+              bottomSpacerHeight,
+              offset
+            })
 
       const newPeekHeights = [
         ...new Set([minHeight, computedMediumHeight, maxHeight])
@@ -408,7 +413,9 @@ BottomSheet.propTypes = {
     /** Height in pixel of the middle snap point */
     mediumHeight: PropTypes.number,
     /** Height of the middle snap point, expressed as a percentage of the viewport height */
-    mediumHeightRatio: PropTypes.number
+    mediumHeightRatio: PropTypes.number,
+    /** To open the BottomSheet at the minimum height, if have an header */
+    isOpenMin: PropTypes.bool
   }),
   /** To add a backdrop */
   backdrop: PropTypes.bool,
