@@ -55,11 +55,12 @@ export const computeMediumHeight = ({
 
 export const computeMinHeight = ({
   isClosable,
+  isOpenMin,
   headerRef,
   actionButtonsHeight,
   actionButtonsBottomMargin
 }) => {
-  if (isClosable) return 0
+  if (isClosable && !isOpenMin) return 0
 
   return (
     headerRef.current.offsetHeight +
