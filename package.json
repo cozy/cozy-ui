@@ -92,7 +92,7 @@
     "browserslist-config-cozy": "0.4.0",
     "copyfiles": "2.4.1",
     "cozy-client": "^47.6.0",
-    "cozy-device-helper": "2.0.0",
+    "cozy-device-helper": "2.7.0",
     "cozy-flags": "^2.10.1",
     "cozy-harvest-lib": "^6.7.3",
     "cozy-intent": "1.16.1",
