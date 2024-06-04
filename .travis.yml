@@ -19,7 +19,7 @@ jobs:
     - name: 'Lint'
       stage: 'Prebuild'
       script: yarn lint
-      if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string
+      if: commit_message =~ /^((?!\[only argos\]).)*$/ # skipped if commit message contains "[only argos]"
     - name: 'Generate Sprite and Palette'
       stage: 'Prebuild'
       script: yarn makeSpriteAndPalette
@@ -72,7 +72,7 @@ jobs:
           - sprite-palette-binaries
           - js-binaries
           - css-binaries
-      if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string
+      if: commit_message =~ /^((?!\[only argos\]).)*$/  # skipped if commit message contains "[only argos]"
     - name: 'Tests snapshots'
       stage: 'Test'
       script:
@@ -82,7 +82,7 @@ jobs:
           - sprite-palette-binaries
           - js-binaries
           - css-binaries
-      if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string
+      if: commit_message =~ /^((?!\[only argos\]).)*$/  # skipped if commit message contains "[only argos]"
     - name: 'Bundlemon'
       stage: 'Test'
       script:
@@ -92,9 +92,10 @@ jobs:
           - sprite-palette-binaries
           - js-binaries
           - css-binaries
-      if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string
+      if: commit_message =~ /^((?!\[only argos\]).)*$/  # skipped if commit message contains "[only argos]"
     - name: '[Argos] Create desktop screenshots'
       stage: 'Screenshots - Create'
+      if: branch != master
       script: |
         if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
           mkdir ./screenshots
@@ -113,6 +114,7 @@ jobs:
             - ./screenshots
     - name: '[Argos] Create mobile screenshots'
       stage: 'Screenshots - Create'
+      if: branch != master
       script: |
         if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
           mkdir ./screenshots
@@ -131,6 +133,7 @@ jobs:
             - ./screenshots
     - name: '[Argos] Create kss screenshots'
       stage: 'Screenshots - Create'
+      if: branch != master
       script: |
         if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
           mkdir ./screenshots
@@ -149,6 +152,7 @@ jobs:
             - ./screenshots
     - name: '[Argos] Upload all screenshots'
       stage: 'Screenshots - Upload'
+      if: branch != master
       script: |
         if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
           yarn argos:upload --parallel screenshots/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
@@ -179,4 +183,3 @@ jobs:
         script: yarn deploy:doc -- --username cozycloud --email contact@cozycloud.cc --repo https://cozy-bot:$GH_TOKEN@github.com/cozy/cozy-ui.git && yarn semantic-release
         on:
           branch: master
-      if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string
