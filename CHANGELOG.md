@@ -1,3 +1,10 @@
+# [107.3.0](https://github.com/cozy/cozy-ui/compare/v107.2.0...v107.3.0) (2024-06-04)
+
+
+### Features
+
+* Remove jobs for argos on branch master ([a4512d1](https://github.com/cozy/cozy-ui/commit/a4512d1))
+
 # [107.2.0](https://github.com/cozy/cozy-ui/compare/v107.1.0...v107.2.0) (2024-05-29)
 
 
