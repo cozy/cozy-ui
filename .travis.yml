@@ -19,7 +19,7 @@ jobs:
     - name: 'Lint'
       stage: 'Prebuild'
       script: yarn lint
-      if: commit_message =~ /^((?!\[only argos\]).)*$/  # if commit message doesn't contain "[only argos]" string
+      if: [[ ( branch = master ) && ( commit_message =~ /^((?!\[only argos\]).)*$/ ) ]] # if commit message doesn't contain "[only argos]" string
     - name: 'Generate Sprite and Palette'
       stage: 'Prebuild'
       script: yarn makeSpriteAndPalette

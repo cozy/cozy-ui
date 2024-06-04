@@ -15,7 +15,7 @@ const BarContextProvider = ({
   lang,
   webviewService
 }) => {
-  if (!children) return null
+  if (!children) return undefined
 
   return (
     <Provider store={store}>
