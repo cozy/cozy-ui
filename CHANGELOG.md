@@ -1,3 +1,10 @@
+## [107.4.1](https://github.com/cozy/cozy-ui/compare/v107.4.0...v107.4.1) (2024-06-05)
+
+
+### Bug Fixes
+
+* **AppsSection:** Change only ISP wording ([8542e61](https://github.com/cozy/cozy-ui/commit/8542e61))
+
 # [107.4.0](https://github.com/cozy/cozy-ui/compare/v107.3.0...v107.4.0) (2024-06-05)
 
 
