@@ -1,3 +1,16 @@
+# [107.4.0](https://github.com/cozy/cozy-ui/compare/v107.3.0...v107.4.0) (2024-06-05)
+
+
+### Bug Fixes
+
+* **useSetFlagshipUi:** The navbar and statusbar height should be dynamic ([bb931d1](https://github.com/cozy/cozy-ui/commit/bb931d1))
+
+
+### Features
+
+* **BottomSheet:** Open BottomSheet at minimum height ([53e00bb](https://github.com/cozy/cozy-ui/commit/53e00bb))
+* **Viewer:** Open BottomSheet at minimum height in public view ([479f998](https://github.com/cozy/cozy-ui/commit/479f998))
+
 # [107.3.0](https://github.com/cozy/cozy-ui/compare/v107.2.0...v107.3.0) (2024-06-04)
 
 
