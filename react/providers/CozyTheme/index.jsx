@@ -1,15 +1,12 @@
-import React, { createContext, useContext, useEffect } from 'react'
+import React, { createContext, useContext } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import flag from 'cozy-flags'
 
 import log from 'cozy-logger'
 
 import useMediaQuery from '../../hooks/useMediaQuery'
 import MuiCozyTheme from '../../MuiCozyTheme'
-import {
-  createOrUpdateColorSchemeMetaTag,
-  getColorSchemeMetaTagContent
-} from './helpers'
 
 export const CozyThemeContext = createContext()
 
@@ -32,20 +29,15 @@ const CozyTheme = ({ variant, className, ignoreItself, children }) => {
   const uiThemeType = localStorage.getItem('ui-theme-type') // use only for cozy-ui documentation and argos screenshots
   const uiThemeVariant = localStorage.getItem('ui-theme-variant') // use only for cozy-ui documentation and argos screenshots
 
+  const isOnlyLight = !!flag('ui.darkmode.enabled') // should be remove when dark mode is validated on all apps
   const deviceThemeType = useMediaQuery('(prefers-color-scheme: dark)')
-    ? 'dark'
+    ? isOnlyLight
+      ? 'dark'
+      : 'light'
     : 'light'
-  const isOnlyLight = getColorSchemeMetaTagContent() === 'only light'
-  const forcedThemeType = uiThemeType || deviceThemeType
 
-  const selfThemeType = isOnlyLight ? 'light' : forcedThemeType
+  const selfThemeType = uiThemeType || deviceThemeType
   const selfThemeVariant = uiThemeVariant || variant
-
-  useEffect(() => {
-    if (!isOnlyLight) {
-      createOrUpdateColorSchemeMetaTag(forcedThemeType)
-    }
-  }, [isOnlyLight, forcedThemeType])
 
   return (
     <CozyThemeContext.Provider
