@@ -157,6 +157,7 @@ const files = [
       datetimeLabel: 'expirationDate',
       referencedDate: '2024-01-01T12:00:00.000Z',
       expirationDate: '2024-01-11T12:00:00.000Z',
+      issueDate: '2024-01-11T12:00:00.000Z',
       noticePeriod: '30',
       qualification: {
         label: 'driver_license'
