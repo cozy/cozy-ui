@@ -20,7 +20,7 @@ const Sharing = ({ file, variant }) => {
       </IconButton>
     ) : (
       <ShareButton
-        extension="full"
+        fullWidth
         useShortLabel
         docId={file.id}
         onClick={() => setShowShareModal(true)}
