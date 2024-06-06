@@ -15,5 +15,6 @@ const BottomSheetHeader = ({ className, headerContentRef, children }) => {
     </BottomSheetItem>
   )
 }
+BottomSheetHeader.displayName = 'BottomSheetHeader'
 
 export default BottomSheetHeader
