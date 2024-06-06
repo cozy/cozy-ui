@@ -19,11 +19,9 @@ export const normalizeExpandedAttribute = attr =>
 export const notExpandedAttributes = {
   'io.cozy.contacts': ['fullname', 'civility', 'note'],
   'io.cozy.files': [
-    'name',
-    'metadata.datetime',
-    'metadata.referencedDate',
-    'metadata.expirationDate',
+    ...KNOWN_DATE_METADATA_NAMES.map(x => `metadata.${x}`),
     'metadata.noticePeriod',
+    'name',
     'flexsearchProps:translated:qualificationLabel',
     'flexsearchProps:translated:driverLicense',
     'flexsearchProps:translated:paymentProofFamilyAllowance',
