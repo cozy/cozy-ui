@@ -1,3 +1,10 @@
+# [108.1.0](https://github.com/cozy/cozy-ui/compare/v108.0.0...v108.1.0) (2024-06-06)
+
+
+### Features
+
+* Improve contacts list performances ([bc8bc84](https://github.com/cozy/cozy-ui/commit/bc8bc84))
+
 # [108.0.0](https://github.com/cozy/cozy-ui/compare/v107.4.1...v108.0.0) (2024-06-06)
 
 
