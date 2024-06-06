@@ -1,3 +1,10 @@
+## [109.0.1](https://github.com/cozy/cozy-ui/compare/v109.0.0...v109.0.1) (2024-06-06)
+
+
+### Bug Fixes
+
+* **ExpandedAttributes:** Use Client to get excluded metadata ([1b49153](https://github.com/cozy/cozy-ui/commit/1b49153))
+
 # [109.0.0](https://github.com/cozy/cozy-ui/compare/v108.1.0...v109.0.0) (2024-06-06)
 
 
