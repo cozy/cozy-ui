@@ -1,3 +1,21 @@
+# [109.0.0](https://github.com/cozy/cozy-ui/compare/v108.1.0...v109.0.0) (2024-06-06)
+
+
+### Bug Fixes
+
+* **Viewer:** Add displayName static property to `BottomSheetHeader` ([2b6dc97](https://github.com/cozy/cozy-ui/commit/2b6dc97))
+
+
+### Features
+
+* Change translation of `confidentialNumber` ([73e89fe](https://github.com/cozy/cozy-ui/commit/73e89fe))
+* Upgrade cozy-sharing peerDeps ([9c2c839](https://github.com/cozy/cozy-ui/commit/9c2c839))
+
+
+### BREAKING CHANGES
+
+* you must have `cozy-sharing >= 14.1.0`
+
 # [108.1.0](https://github.com/cozy/cozy-ui/compare/v108.0.0...v108.1.0) (2024-06-06)
 
 
