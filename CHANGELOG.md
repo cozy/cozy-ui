@@ -1,3 +1,16 @@
+# [108.0.0](https://github.com/cozy/cozy-ui/compare/v107.4.1...v108.0.0) (2024-06-06)
+
+
+### Features
+
+* Add flag to activate dark mode ([5df55a8](https://github.com/cozy/cozy-ui/commit/5df55a8))
+
+
+### BREAKING CHANGES
+
+* you can now use safely `<meta name="color-scheme" content="light dark" />` in your app, and so replace `<meta name="color-scheme" content="only light" />` if necessary.
+The light mode is forced by an other way, you can use `ui.darkmode.enabled` flag to enable the dark mode if you want.
+
 ## [107.4.1](https://github.com/cozy/cozy-ui/compare/v107.4.0...v107.4.1) (2024-06-05)
 
 
