@@ -95,7 +95,6 @@ jobs:
       if: commit_message =~ /^((?!\[only argos\]).)*$/  # skipped if commit message contains "[only argos]"
     - name: '[Argos] Create desktop screenshots'
       stage: 'Screenshots - Create'
-      if: branch != master
       script: |
         if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
           mkdir ./screenshots
@@ -114,7 +113,6 @@ jobs:
             - ./screenshots
     - name: '[Argos] Create mobile screenshots'
       stage: 'Screenshots - Create'
-      if: branch != master
       script: |
         if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
           mkdir ./screenshots
@@ -133,7 +131,6 @@ jobs:
             - ./screenshots
     - name: '[Argos] Create kss screenshots'
       stage: 'Screenshots - Create'
-      if: branch != master
       script: |
         if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
           mkdir ./screenshots
@@ -152,7 +149,6 @@ jobs:
             - ./screenshots
     - name: '[Argos] Upload all screenshots'
       stage: 'Screenshots - Upload'
-      if: branch != master
       script: |
         if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
           yarn argos:upload --parallel screenshots/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
@@ -171,6 +167,7 @@ jobs:
     - name: 'Deploy'
       stage: 'Deploy'
       script: 'true'
+      if: commit_message =~ /^((?!\[only argos\]).)*$/  # skipped if commit message contains "[only argos]"
       workspaces:
         use:
           - sprite-palette-binaries
