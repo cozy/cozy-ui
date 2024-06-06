@@ -32,7 +32,7 @@
         "netSocialAmount": "Montant net social",
         "vehicle": {
           "licenseNumber": "Plaque d'immatriculation",
-          "confidentialNumber": "Code confidentiel"
+          "confidentialNumber": "Code confidentiel de la carte grise"
         },
         "number": {
           "pay_sheet": "Rémunération brute",
