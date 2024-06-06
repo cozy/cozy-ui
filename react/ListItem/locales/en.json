@@ -32,7 +32,7 @@
         "netSocialAmount": "Net social amount",
         "vehicle": {
           "licenseNumber": "Vehicle registration number",
-          "confidentialNumber": "Confidential code"
+          "confidentialNumber": "Confidential vehicle registration code"
         },
         "number": {
           "pay_sheet": "Gross remuneration",
