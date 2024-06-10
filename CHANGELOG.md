@@ -1,3 +1,10 @@
+## [109.0.2](https://github.com/cozy/cozy-ui/compare/v109.0.1...v109.0.2) (2024-06-10)
+
+
+### Bug Fixes
+
+* **InfosBadge:** Color wasn't theme responsive ([c3cf75e](https://github.com/cozy/cozy-ui/commit/c3cf75e))
+
 ## [109.0.1](https://github.com/cozy/cozy-ui/compare/v109.0.0...v109.0.1) (2024-06-06)
 
 
