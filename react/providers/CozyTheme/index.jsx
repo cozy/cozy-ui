@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react'
+import React, { createContext, useContext, useLayoutEffect } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import flag from 'cozy-flags'
@@ -38,6 +38,15 @@ const CozyTheme = ({ variant, className, ignoreItself, children }) => {
 
   const selfThemeType = uiThemeType || deviceThemeType
   const selfThemeVariant = uiThemeVariant || variant
+
+  // add css var to body to be able to use them on it
+  useLayoutEffect(
+    () =>
+      document
+        .querySelector('body')
+        .classList.add(`CozyTheme--${selfThemeType}-normal`), // add omits if already present
+    [selfThemeType]
+  )
 
   return (
     <CozyThemeContext.Provider
