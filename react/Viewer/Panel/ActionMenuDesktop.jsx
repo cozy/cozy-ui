@@ -26,7 +26,9 @@ const ActionMenuDesktop = forwardRef(
             {({ onClick, href }) => {
               return (
                 <a href={href} onClick={() => handleEdit(onClick)}>
-                  <ActionMenuItem left={<Icon icon={Edit} />}>
+                  <ActionMenuItem
+                    left={<Icon icon={Edit} color="var(--iconTextColor)" />}
+                  >
                     <Typography>
                       {t(`Viewer.panel.qualification.actions.edit`)}
                     </Typography>
@@ -36,7 +38,10 @@ const ActionMenuDesktop = forwardRef(
             }}
           </AppLinker>
         )}
-        <ActionMenuItem onClick={handleCopy} left={<Icon icon={Copy} />}>
+        <ActionMenuItem
+          onClick={handleCopy}
+          left={<Icon icon={Copy} color="var(--iconTextColor)" />}
+        >
           <Typography>
             {t(`Viewer.panel.qualification.actions.copy`)}
           </Typography>
