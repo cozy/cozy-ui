@@ -8580,7 +8580,7 @@ body {
 }
 .c-actionmenu--IUGX7 {
   color: var(--primaryTextColor);
-  --iconColor: var(--slateGrey);
+  --iconColor: var(--iconTextColor);
   padding-bottom: 0.563rem;
   padding-bottom: env(safe-area-inset-bottom);
 }
