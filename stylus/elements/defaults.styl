@@ -13,12 +13,19 @@
 
 html
     font-size 100%
+    height  100%
 
 body
+    @extend $font-labor
     font 100%/1.5
     -moz-osx-font-smoothing grayscale
     -webkit-font-smoothing antialiased
-    @extend $font-labor
+    display         flex
+    flex-direction  column
+    align-items     stretch
+    width           100vw
+    height          100%
+    margin 0
 
     // Overrides Normalize.css default style
     button,
@@ -27,18 +34,6 @@ body
     select,
     textarea
         @extend $font-labor
-
-// LAYOUT
-html
-  height  100%
-
-body
-  display         flex
-  flex-direction  column
-  align-items     stretch
-  width           100vw
-  height          100%
-  margin 0
 
 html
 body
