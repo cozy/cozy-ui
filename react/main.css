@@ -455,22 +455,19 @@ body textarea {
 }
 html {
   font-size: 100%;
+  height: 100%;
 }
 body {
   font: 100%/1.5;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-html {
-  height: 100%;
-}
-body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   width: 100vw;
   height: 100%;
   margin: 0;
+  background-color: var(--paperBackgroundColor);
 }
 @media (max-width: 63.938rem) {
   html,
@@ -6540,22 +6537,19 @@ body textarea {
 }
 html {
   font-size: 100%;
+  height: 100%;
 }
 body {
   font: 100%/1.5;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-html {
-  height: 100%;
-}
-body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   width: 100vw;
   height: 100%;
   margin: 0;
+  background-color: var(--paperBackgroundColor);
 }
 @media (max-width: 63.938rem) {
   html,
@@ -6841,22 +6835,19 @@ body textarea {
 }
 html {
   font-size: 100%;
+  height: 100%;
 }
 body {
   font: 100%/1.5;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-html {
-  height: 100%;
-}
-body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   width: 100vw;
   height: 100%;
   margin: 0;
+  background-color: var(--paperBackgroundColor);
 }
 @media (max-width: 63.938rem) {
   html,
@@ -9091,22 +9082,19 @@ body textarea {
 }
 html {
   font-size: 100%;
+  height: 100%;
 }
 body {
   font: 100%/1.5;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-html {
-  height: 100%;
-}
-body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   width: 100vw;
   height: 100%;
   margin: 0;
+  background-color: var(--paperBackgroundColor);
 }
 @media (max-width: 63.938rem) {
   html,
@@ -10697,22 +10685,19 @@ body textarea {
 }
 html {
   font-size: 100%;
+  height: 100%;
 }
 body {
   font: 100%/1.5;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
-html {
-  height: 100%;
-}
-body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   width: 100vw;
   height: 100%;
   margin: 0;
+  background-color: var(--paperBackgroundColor);
 }
 @media (max-width: 63.938rem) {
   html,
