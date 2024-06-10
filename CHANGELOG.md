@@ -1,3 +1,10 @@
+## [109.1.1](https://github.com/cozy/cozy-ui/compare/v109.1.0...v109.1.1) (2024-06-10)
+
+
+### Bug Fixes
+
+* **Viewer:** Icon color wasn't correct on file options ([8575332](https://github.com/cozy/cozy-ui/commit/8575332))
+
 # [109.1.0](https://github.com/cozy/cozy-ui/compare/v109.0.2...v109.1.0) (2024-06-10)
 
 
