@@ -1,3 +1,10 @@
+# [109.1.0](https://github.com/cozy/cozy-ui/compare/v109.0.2...v109.1.0) (2024-06-10)
+
+
+### Features
+
+* Add background color on `<body>` ([a2041f2](https://github.com/cozy/cozy-ui/commit/a2041f2))
+
 ## [109.0.2](https://github.com/cozy/cozy-ui/compare/v109.0.1...v109.0.2) (2024-06-10)
 
 
