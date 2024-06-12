@@ -22,7 +22,14 @@ const getDefaultScreenshotName = ({
  * component.
  */
 const screenshotComponent = async (page, options) => {
-  const { component, screenshotDir, viewport, type, variant } = options
+  const {
+    component,
+    screenshotDir,
+    viewport,
+    type,
+    variant,
+    componentConfig
+  } = options
   const { link, name } = component
 
   await page.goto(link)
@@ -37,7 +44,8 @@ const screenshotComponent = async (page, options) => {
         screenshotDir,
         getScreenshotName({ component, viewport, suffix, type, variant })
       ),
-      fullPage: true,
+      fullPage: componentConfig?.fullPage ?? true,
+      optimizeForSpeed: true,
       captureBeyondViewport: false
     })
   }
