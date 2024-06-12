@@ -32,10 +32,10 @@ const initialVariants = [
 ### With custom image
 
 ```jsx
-import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
-import PeopleSVGIcon from '../../assets/icons/ui/people.svg'
 import Empty from 'cozy-ui/transpiled/react/Empty'
 import Icon from 'cozy-ui/transpiled/react/Icon'
+import CloudWallpaper from 'cozy-ui/docs/cloud-wallpaper.jpg'
+import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
 
 ;
 
@@ -46,7 +46,7 @@ import Icon from 'cozy-ui/transpiled/react/Icon'
     text="Try adding some content to this list"
   />
   <Empty
-    icon={<img src='https://viewerdemo.cozycloud.cc/IMG_0062.PNG' />}
+    icon={<img src={CloudWallpaper} />}
     title="With IMG"
     text="Try adding some content to this list"
   />

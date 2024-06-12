@@ -2511,7 +2511,7 @@ exports[`Empty should render examples: Empty 2`] = `
     <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-gutterBottom\\">Try adding some content to this list</p>
     <div class=\\"styles__c-empty-text___3HnvR\\"></div>
   </div>
-  <div class=\\"styles__c-empty___3w5oV\\"><img src=\\"https://viewerdemo.cozycloud.cc/IMG_0062.PNG\\" class=\\"styles__c-empty-img___2GC4d\\">
+  <div class=\\"styles__c-empty___3w5oV\\"><img src=\\"test-file-stub\\" class=\\"styles__c-empty-img___2GC4d\\">
     <h3 class=\\"MuiTypography-root MuiTypography-h3 MuiTypography-colorTextPrimary MuiTypography-gutterBottom\\">With IMG</h3>
     <p class=\\"MuiTypography-root MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-gutterBottom\\">Try adding some content to this list</p>
     <div class=\\"styles__c-empty-text___3HnvR\\"></div>
