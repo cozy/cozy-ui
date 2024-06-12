@@ -5,6 +5,7 @@ import { BreakpointsProvider } from '../../providers/Breakpoints'
 
 import I18n from '../../providers/I18n'
 import { locales } from '../locales/index'
+import CloudWallpaper from 'cozy-ui/docs/cloud-wallpaper.jpg'
 
 const demoTextFileResponse = {
   text: () => new Promise(resolve => resolve('Hello World !'))
@@ -39,7 +40,7 @@ const mockClient = {
         resolve({
           data: {
             links: {
-              large: 'https://viewerdemo.cozycloud.cc/IMG_0062.PNG'
+              large: CloudWallpaper
             }
           }
         })

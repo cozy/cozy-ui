@@ -4,6 +4,7 @@ import Skeleton from 'cozy-ui/transpiled/react/Skeleton'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import PeopleIcon from 'cozy-ui/transpiled/react/Icons/People'
 import Box from 'cozy-ui/transpiled/react/Box'
+import CloudWallpaper from 'cozy-ui/docs/cloud-wallpaper.jpg'
 
 ;
 
@@ -15,10 +16,10 @@ import Box from 'cozy-ui/transpiled/react/Box'
     <Skeleton variant="rect" animation="wave" />
   </Thumbnail>
   <Thumbnail className="u-mb-1">
-    <img src="https://viewerdemo.cozycloud.cc/IMG_0062.PNG" alt="" />
+    <img src={CloudWallpaper} alt="" />
   </Thumbnail>
   <Thumbnail className="u-mb-1" isStacked={true}>
-    <img src="https://viewerdemo.cozycloud.cc/IMG_0062.PNG" alt="" />
+    <img src={CloudWallpaper} alt="" />
   </Thumbnail>
   <Thumbnail className="u-mb-1" isStacked={true}>
     <Icon icon={PeopleIcon} />
