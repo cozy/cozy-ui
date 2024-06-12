@@ -185,11 +185,11 @@ const toggleMenu = () => setState(state => ({ showMenu: !state.showMenu }))
       getContentAnchorEl={null}
       anchorOrigin={{
         vertical: 'bottom',
-        horizontal: 'left'
+        horizontal: 'right'
       }}
       transformOrigin={{
         vertical: 'top',
-        horizontal: 'left'
+        horizontal: 'right'
       }}
       keepMounted
       autoClose
