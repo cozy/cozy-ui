@@ -5,7 +5,7 @@ const rootDirectory = path.join(__dirname, '../')
 
 const formatViewport = viewport => `${viewport.width}x${viewport.height}`
 
-const defaultGetScreenshotName = ({
+const getDefaultScreenshotName = ({
   component,
   viewport,
   suffix,
@@ -29,7 +29,7 @@ const screenshotComponent = async (page, options) => {
   await sleep(200) // to be sure the page is entirely loaded
 
   const getScreenshotName =
-    options.getScreenshotName || defaultGetScreenshotName
+    options.getScreenshotName || getDefaultScreenshotName
 
   const screenshot = async suffix => {
     await page.screenshot({
