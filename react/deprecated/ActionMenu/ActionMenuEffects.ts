@@ -25,7 +25,7 @@ const useHook = (): void => {
       bottomBackground: theme.palette.background.paper,
       // @ts-ignore
       bottomTheme: 'dark',
-      topOverlay: 'var(--overlay)',
+      topOverlay: 'rgba(0, 0, 0, 0.5)',
       topBackground: theme.palette.background.paper,
       // @ts-ignore
       topTheme: 'light'
