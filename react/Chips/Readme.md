@@ -9,6 +9,7 @@ import Stack from 'cozy-ui/transpiled/react/Stack'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import FileOutlineIcon from "cozy-ui/transpiled/react/Icons/FileOutline"
+import LightbulbIcon from 'cozy-ui/transpiled/react/Icons/Lightbulb'
 import Avatar from 'cozy-ui/transpiled/react/Avatar'
 import RightIcon from "cozy-ui/transpiled/react/Icons/Right"
 import OpenwithIcon from "cozy-ui/transpiled/react/Icons/Openwith"
@@ -78,6 +79,28 @@ const initialVariants = [{ default: true, active: false, ghost: false }]
                 onDelete={() => alert('You clicked on the icon')}
                 deleteIcon={<Icon icon={OpenwithIcon} className="u-h-1" />}
                 clickable
+                disabled={Object.values(column)[1]}
+                variant={Object.keys(variant).find(key => variant[key])}
+              />
+            </div>
+            <div>
+              <Chip
+                icon={<Icon icon={LightbulbIcon} className="u-ml-half" />}
+                label="Notion"
+                onClick={() => alert('You clicked')}
+                deleteIcon={
+                  <Avatar
+                    className="u-w-1 u-h-1"
+                    style={{
+                      backgroundColor: 'var(--primaryColor)',
+                      color: 'var(--primaryContrastTextColor)',
+                      fontSize: 11
+                    }}
+                    size="xsmall"
+                    text="9"
+                  />
+                }
+                onDelete={() => alert('You clicked on the icon')}
                 disabled={Object.values(column)[1]}
                 variant={Object.keys(variant).find(key => variant[key])}
               />
