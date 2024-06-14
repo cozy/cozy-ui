@@ -8,6 +8,7 @@ import { isFlagshipApp } from 'cozy-device-helper'
 
 import { useSetFlagshipUI } from '../../hooks/useSetFlagshipUi/useSetFlagshipUI'
 import { isRsg } from '../../hooks/useSetFlagshipUi/helpers'
+import { useCozyTheme } from '../../providers/CozyTheme'
 
 const getBottomBackground = (theme: Theme): string => {
   const sidebar = document.getElementById('sidebar')
@@ -20,11 +21,13 @@ const getBottomBackground = (theme: Theme): string => {
 const useHook = (): void => {
   const theme = useTheme()
 
+  const { isLight } = useCozyTheme()
+
   useSetFlagshipUI(
     {
       bottomBackground: theme.palette.background.paper,
       // @ts-ignore
-      bottomTheme: 'dark',
+      bottomTheme: isLight ? 'dark' : 'light',
       topOverlay: 'rgba(0, 0, 0, 0.5)',
       topBackground: theme.palette.background.paper,
       // @ts-ignore
@@ -32,10 +35,10 @@ const useHook = (): void => {
     },
     {
       bottomBackground: getBottomBackground(theme),
-      bottomTheme: 'dark',
+      bottomTheme: isLight ? 'dark' : 'light',
       topOverlay: 'transparent',
       topBackground: theme.palette.background.paper,
-      topTheme: 'dark'
+      topTheme: isLight ? 'dark' : 'light'
     },
     'cozy-ui/ActionMenu'
   )

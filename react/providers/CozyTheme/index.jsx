@@ -12,6 +12,9 @@ import CozyThemeWithQuery from './CozyThemeWithQuery'
 
 export const CozyThemeContext = createContext()
 
+/**
+ * @returns {{ type: 'light'|'dark', variant: 'normal'|'inverted', isLight: boolean }}
+ */
 export const useCozyTheme = () => {
   const context = useContext(CozyThemeContext)
 
@@ -21,7 +24,7 @@ export const useCozyTheme = () => {
       '`CozyThemeContext` is missing. `useCozyTheme()` must be used within a `<CozyTheme>`. `light normal` is returned as fallback value.'
     )
 
-    return { type: 'light', variant: 'normal' }
+    return { type: 'light', variant: 'normal', isLight: true }
   }
 
   return context
@@ -67,7 +70,11 @@ const DumbCozyTheme = ({
 
   return (
     <CozyThemeContext.Provider
-      value={{ type: selfThemeType, variant: selfThemeVariant }}
+      value={{
+        type: selfThemeType,
+        variant: selfThemeVariant,
+        isLight: selfThemeType === 'light'
+      }}
     >
       <MuiCozyTheme type={selfThemeType} variant={selfThemeVariant}>
         <div

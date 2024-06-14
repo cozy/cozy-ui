@@ -301,9 +301,14 @@ const BottomSheet = memo(
       forceRender // to recompute data when content has changed
     ])
 
+    const { isLight } = useCozyTheme()
+
     useSetFlagshipUI(
-      { bottomTheme: 'dark' },
-      { bottomTheme: getFlagshipMetadata().immersive ? 'light' : 'dark' },
+      { bottomTheme: isLight ? 'dark' : 'light' },
+      {
+        bottomTheme:
+          getFlagshipMetadata().immersive || !isLight ? 'light' : 'dark'
+      },
       'cozy-ui/BottomSheet'
     )
 

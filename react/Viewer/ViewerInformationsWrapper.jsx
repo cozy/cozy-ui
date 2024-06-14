@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import PanelContent from './Panel/PanelContent'
 import FooterContent from './Footer/FooterContent'
 import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import { useCozyTheme } from '../providers/CozyTheme'
 
 const ViewerInformationsWrapper = ({
   currentFile,
@@ -19,12 +20,13 @@ const ViewerInformationsWrapper = ({
   children
 }) => {
   const theme = useTheme()
+  const { isLight } = useCozyTheme()
   const sidebar = document.querySelector('[class*="sidebar"]')
 
   useSetFlagshipUI(
     {
       bottomBackground: theme.palette.background.paper,
-      bottomTheme: 'dark'
+      bottomTheme: isLight ? 'dark' : 'light'
     },
     {
       bottomBackground: theme.palette.background[sidebar ? 'default' : 'paper']

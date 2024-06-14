@@ -11,6 +11,7 @@ import {
 } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
 import { getFlagshipMetadata } from '../hooks/useSetFlagshipUi/helpers'
 import { isRsg } from '../hooks/useSetFlagshipUi/helpers'
+import { useCozyTheme } from '../providers/CozyTheme'
 
 interface DialogEffectsOptions {
   cozybar?: Element | null
@@ -19,6 +20,7 @@ interface DialogEffectsOptions {
   sidebar?: HTMLElement | Element | null
   rootModal?: HTMLElement | Element | null
   theme: Theme
+  isLight?: boolean
 }
 
 export enum DOMStrings {
@@ -41,7 +43,8 @@ export const makeOnMount = ({
   fullscreen,
   sidebar,
   rootModal,
-  theme
+  theme,
+  isLight
 }: DialogEffectsOptions): FlagshipUI => {
   const hasBottomBackground = !rootModal
   const hasTopBackground = cozybar && !rootModal
@@ -78,7 +81,8 @@ export const makeOnUnmount = ({
   theme,
   immersive,
   sidebar,
-  cozybar
+  cozybar,
+  isLight
 }: DialogEffectsOptions): FlagshipUI => {
   const hasDarkRoot =
     rootModal &&
@@ -86,12 +90,15 @@ export const makeOnUnmount = ({
       getComputedStyle(rootModal).getPropertyValue(DOMStrings.RootModalColor)
     ) < LUMINANCE_BREAKPOINT
   const hasBottomBackground = !rootModal
-  const hasDarkBottomTheme = hasDarkRoot || !immersive
+  const hasDarkBottomTheme = hasDarkRoot || (!immersive && isLight)
   const hasTopBackground = cozybar && !rootModal
   const hasDarkTopTheme =
     hasDarkRoot ||
     (!immersive &&
-      !(cozybar && cozybar.classList.contains(DOMStrings.CozyBarPrimaryClass)))
+      !(
+        cozybar && cozybar.classList.contains(DOMStrings.CozyBarPrimaryClass)
+      ) &&
+      isLight)
 
   return {
     bottomBackground: hasBottomBackground
@@ -134,6 +141,7 @@ const getRootModal = (): HTMLElement | null => {
 
 const useHook = (open: boolean, fullscreen?: boolean): void => {
   const theme = useTheme()
+  const { isLight } = useCozyTheme()
   const cozybar = document.querySelector(DOMStrings.CozyBarClass)
   const sidebar = document.getElementById(DOMStrings.SidebarID)
   const rootModal = getRootModal()
@@ -141,8 +149,8 @@ const useHook = (open: boolean, fullscreen?: boolean): void => {
 
   useDialogSetFlagshipUI(
     open,
-    makeOnMount({ fullscreen, theme, sidebar, rootModal, cozybar }),
-    makeOnUnmount({ rootModal, theme, immersive, sidebar, cozybar }),
+    makeOnMount({ fullscreen, theme, sidebar, rootModal, cozybar, isLight }),
+    makeOnUnmount({ rootModal, theme, immersive, sidebar, cozybar, isLight }),
     makeCaller(!!fullscreen, !!rootModal, immersive)
   )
 }
