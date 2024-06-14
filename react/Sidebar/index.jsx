@@ -3,15 +3,17 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import styles from './styles.styl'
 import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import { useCozyTheme } from '../providers/CozyTheme'
 import { useTheme } from '@material-ui/core'
 
 const Sidebar = ({ children, className, ...restProps }) => {
   const theme = useTheme()
+  const { isLight } = useCozyTheme()
 
   useSetFlagshipUI(
     {
       bottomBackground: theme.palette.background.default,
-      bottomTheme: 'dark'
+      bottomTheme: isLight ? 'dark' : 'light'
     },
     {
       bottomBackground: theme.palette.background.paper

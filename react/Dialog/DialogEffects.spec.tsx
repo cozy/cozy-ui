@@ -161,7 +161,8 @@ it('should provide a strong reset when unmounting a Dialog in presence of a Side
   expect(
     makeOnUnmount({
       sidebar,
-      theme
+      theme,
+      isLight: true
     })
   ).toEqual({
     bottomBackground: theme.palette.background[DOMStrings.BackgroundDefault],
@@ -176,7 +177,8 @@ it('should provide a strong reset when unmounting a Dialog in presence of a Side
 it('should provide the default black on white UI when unmounting in simple contexts', () => {
   expect(
     makeOnUnmount({
-      theme
+      theme,
+      isLight: true
     })
   ).toEqual({
     bottomBackground: theme.palette.background[DOMStrings.BackgroundPaper],
@@ -207,7 +209,8 @@ it('should provide the default black on white UI with the Cozybar background on 
   expect(
     makeOnUnmount({
       cozybar,
-      theme
+      theme,
+      isLight: true
     })
   ).toEqual({
     bottomBackground: theme.palette.background[DOMStrings.BackgroundPaper],
@@ -225,7 +228,8 @@ it('should provide the inversed UI when Cozybar is not black on white, but white
   expect(
     makeOnUnmount({
       cozybar,
-      theme
+      theme,
+      isLight: true
     })
   ).toEqual({
     bottomBackground: theme.palette.background[DOMStrings.BackgroundPaper],
