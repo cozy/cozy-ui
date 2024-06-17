@@ -1,3 +1,10 @@
+# [109.2.0](https://github.com/cozy/cozy-ui/compare/v109.1.1...v109.2.0) (2024-06-17)
+
+
+### Features
+
+* Add Task icon ([2f9d2bc](https://github.com/cozy/cozy-ui/commit/2f9d2bc))
+
 ## [109.1.1](https://github.com/cozy/cozy-ui/compare/v109.1.0...v109.1.1) (2024-06-10)
 
 
