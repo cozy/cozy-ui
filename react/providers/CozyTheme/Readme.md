@@ -24,6 +24,7 @@ const themesSupportingContext = [
 ]
 
 ;
+
 <DemoProvider>
   <CozyTheme variant='inverted' className='u-stack-m'>
     <Paper className='u-p-1'>
