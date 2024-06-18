@@ -1,3 +1,15 @@
+# [110.0.0](https://github.com/cozy/cozy-ui/compare/v109.2.0...v110.0.0) (2024-06-18)
+
+
+### Features
+
+* **CozyTheme:** Use `io.cozy.settings` to determine default type ([9c513d4](https://github.com/cozy/cozy-ui/commit/9c513d4))
+
+
+### BREAKING CHANGES
+
+* **CozyTheme:** To use `<CozyTheme>` properly, you must have permission in your app to get `io.cozy.settings` documents. The experience would be even better with realtime on this doctypes.
+
 # [109.2.0](https://github.com/cozy/cozy-ui/compare/v109.1.1...v109.2.0) (2024-06-17)
 
 
