@@ -48,7 +48,13 @@ export const print = () => {
           docUrl = URL.createObjectURL(blob)
         }
 
-        window.open(docUrl, '_blank')
+        /*
+          We need to write window.open in a setTimeout because
+          Safari does not allow window.open in an async function.
+        */
+        setTimeout(() => {
+          window.open(docUrl, '_blank')
+        })
       } catch (error) {
         logger.error(
           `Error trying to print document ${
