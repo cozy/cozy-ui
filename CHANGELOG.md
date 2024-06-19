@@ -1,3 +1,10 @@
+## [110.0.1](https://github.com/cozy/cozy-ui/compare/v110.0.0...v110.0.1) (2024-06-19)
+
+
+### Bug Fixes
+
+* Print in Safari ([03bab6b](https://github.com/cozy/cozy-ui/commit/03bab6b))
+
 # [110.0.0](https://github.com/cozy/cozy-ui/compare/v109.2.0...v110.0.0) (2024-06-18)
 
 
