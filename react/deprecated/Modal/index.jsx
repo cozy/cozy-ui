@@ -15,6 +15,7 @@ import ModalButtons from './ModalButtons'
 import AnimatedContentHeader from './AnimatedContentHeader'
 import ModalBackButton from './ModalBackButton'
 import { ModalEffects } from './ModalEffects'
+import { useCozyTheme } from '../../providers/CozyTheme'
 
 const ModalDescription = ModalContent
 
@@ -30,7 +31,7 @@ export const BODY_CLASS = 'has-modal'
 /**
  * @deprecated Please use [CozyDialogs](#/CozyDialogs) or [Dialog](#/Dialog).
  */
-class Modal extends Component {
+class ModalWithoutTheme extends Component {
   constructor(props) {
     super(props)
     this.titleID = uniqueId('modal_')
@@ -165,7 +166,7 @@ class Modal extends Component {
   }
 }
 
-Modal.propTypes = {
+ModalWithoutTheme.propTypes = {
   /** Modal title */
   title: PropTypes.node,
   /** Content for simple modals */
@@ -218,7 +219,7 @@ Modal.propTypes = {
   dismissAction: PropTypes.func
 }
 
-Modal.defaultProps = {
+ModalWithoutTheme.defaultProps = {
   primaryType: 'regular',
   secondaryType: 'secondary',
   closable: true,
@@ -246,6 +247,23 @@ ModalContent.propTypes = {
   iconDest: PropTypes.node,
   fixed: PropTypes.bool
 }
+
+const Modal = props => {
+  const { type, variant } = useCozyTheme()
+
+  return (
+    <ModalWithoutTheme
+      {...props}
+      containerClassName={cx(
+        props.containerClassName,
+        `CozyTheme--${type}-${variant}`
+      )}
+    />
+  )
+}
+
+Modal.propTypes = ModalWithoutTheme.propTypes
+Modal.defaultProps = ModalWithoutTheme.defaultProps
 
 const EnhancedModal = migrateProps([
   { src: 'withCross', dest: 'closable' }, // withCross -> closable
