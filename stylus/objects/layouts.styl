@@ -39,13 +39,8 @@ $elastic
     align-items stretch
 
 $elastic-content
-    // Those backgrounds give a visual information that the content is scrollable
-    background  linear-gradient(white 30%, rgba(255, 255, 255, 0)),
-                linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%,
-                linear-gradient(rgba(214, 216, 218, .25) 0, rgba(214, 216, 218, .25) 25%, rgba(255, 255, 255, 0) 26%, rgba(255, 255, 255, 0) 100%),
-                linear-gradient(rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0) 74%, rgba(214, 216, 218, .25) 75%, rgba(214, 216, 218, .25) 100%) 0 100%
     background-repeat no-repeat
-    background-color var(--white)
+    background-color var(--paperBackgroundColor)
     background-size 100% rem(32), 100% rem(32), 100% rem(8), 100% rem(8)
     background-attachment local, local, scroll, scroll
     background-clip padding-box
