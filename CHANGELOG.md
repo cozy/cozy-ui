@@ -1,3 +1,18 @@
+# [110.1.0](https://github.com/cozy/cozy-ui/compare/v110.0.1...v110.1.0) (2024-06-24)
+
+
+### Bug Fixes
+
+* Correct status bar overlay for BottomSheet in flagship app ([cd2c0dc](https://github.com/cozy/cozy-ui/commit/cd2c0dc))
+* **Intent:** Colors for component to be more dark mode compliant ([2c0bd99](https://github.com/cozy/cozy-ui/commit/2c0bd99))
+
+
+### Features
+
+* Adapt setFlagshipUI to dark mode ([51019b4](https://github.com/cozy/cozy-ui/commit/51019b4))
+* **Modal:** Add theme responsive support ([2168457](https://github.com/cozy/cozy-ui/commit/2168457))
+* Remove class creation on body and fix layout ([afdedbe](https://github.com/cozy/cozy-ui/commit/afdedbe))
+
 ## [110.0.1](https://github.com/cozy/cozy-ui/compare/v110.0.0...v110.0.1) (2024-06-19)
 
 
