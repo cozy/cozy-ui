@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useLayoutEffect } from 'react'
+import React, { createContext, useContext } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -50,20 +50,6 @@ const DumbCozyTheme = ({
       ? settingsThemeType
       : deviceThemeType)
   const selfThemeVariant = uiThemeVariant || variant
-
-  useLayoutEffect(() => {
-    const negativeThemeType = selfThemeType === 'light' ? 'dark' : 'light'
-
-    // remove "negative" value because can be changed without refresh
-    document
-      .querySelector('body')
-      .classList.remove(`CozyTheme--${negativeThemeType}-normal`)
-
-    // add css var to body to be able to use them on it
-    document
-      .querySelector('body')
-      .classList.add(`CozyTheme--${selfThemeType}-normal`) // `add` omits if already present
-  }, [selfThemeType])
 
   return (
     <CozyThemeContext.Provider
