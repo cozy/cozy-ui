@@ -1,7 +1,7 @@
 ```jsx
 import { withStyles } from 'cozy-ui/transpiled/react/styles'
 import IntentDialogOpener from 'cozy-ui/transpiled/react/IntentDialogOpener'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 
 const customStyles = () => ({
   paper: {
@@ -12,7 +12,8 @@ const customStyles = () => ({
 const StyledIntentDialogOpener = withStyles(customStyles)(IntentDialogOpener)
 
 ;
-<BreakpointsProvider>
+
+<DemoProvider>
   <StyledIntentDialogOpener
     onComplete={res => alert('intent has completed ! ' + JSON.stringify(res))}
     onDismiss={() => alert('intent has been dismissed !')}
@@ -27,5 +28,5 @@ const StyledIntentDialogOpener = withStyles(customStyles)(IntentDialogOpener)
   >
     <button>Launch Intent OPEN for doctype io.cozy.files</button>
   </StyledIntentDialogOpener>
-</BreakpointsProvider>
+</DemoProvider>
 ```

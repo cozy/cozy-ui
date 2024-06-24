@@ -33,28 +33,23 @@ import { withStyles } from 'cozy-ui/transpiled/react/styles'
 import { DialogCloseButton } from 'cozy-ui/transpiled/react/CozyDialogs'
 import Dialog from 'cozy-ui/transpiled/react/Dialog'
 import IntentIframe from 'cozy-ui/transpiled/react/IntentIframe'
-import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
+import useBreakpoints from 'cozy-ui/transpiled/react/providers/Breakpoints'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 
 initialState = { modalOpened: false}
 
-const customStyles = () => ({
-  paper: {
-    height: '100%'
-  }
-})
-
-const StyledDialog = withStyles(customStyles)(Dialog)
 const onClose = () => setState({ modalOpened: false })
 
 const IntentDialog = () => {
   const { isMobile } = useBreakpoints()
   return (
-    <StyledDialog
+    <Dialog
       open={state.modalOpened}
-      onClose={onClose}
+      classes={{ paper: 'u-h-100' }}
       fullScreen={isMobile}
       fullWidth
       maxWidth="md"
+      onClose={onClose}
     >
       <DialogCloseButton onClick={onClose} />
       <IntentIframe
@@ -70,16 +65,16 @@ const IntentDialog = () => {
         // cozy.client.intents.create
         create={utils.fakeIntentCreate}
       />
-    </StyledDialog>
+    </Dialog>
   )
 }
 
 ;
 
-<BreakpointsProvider>
+<DemoProvider>
   <button onClick={()=>setState({ modalOpened: !state.modalOpened })}>
     Toggle an IntentDialog OPEN io.cozy.files
   </button>
   <IntentDialog />
-</BreakpointsProvider>
+</DemoProvider>
 ```
