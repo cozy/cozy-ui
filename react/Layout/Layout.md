@@ -24,19 +24,20 @@ It can be used to wrap any list of React elements, automatically providing funct
 
 ```jsx
 import { useState } from 'react'
-import { Layout, Main, Content } from 'cozy-ui/transpiled/react/Layout';
-import Sidebar from 'cozy-ui/transpiled/react/Sidebar';
-import Nav, { NavItem, NavIcon, NavText, genNavLink, NavDesktopLimiter } from 'cozy-ui/transpiled/react/Nav';
+import { Layout, Main, Content } from 'cozy-ui/transpiled/react/Layout'
+import Sidebar from 'cozy-ui/transpiled/react/Sidebar'
+import Nav, { NavItem, NavIcon, NavText, genNavLink, NavDesktopLimiter } from 'cozy-ui/transpiled/react/Nav'
 import cx from 'classnames'
 import isEqual from 'lodash/isEqual'
 import WarnIcon from 'cozy-ui/transpiled/react/Icons/Warn'
 import CheckIcon from 'cozy-ui/transpiled/react/Icons/Check'
 import DownloadIcon from 'cozy-ui/transpiled/react/Icons/Download'
 import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
+import { makeStyles } from 'cozy-ui/transpiled/react/styles'
 
 /**
  * In a normal app, ExampleRouterNavLink is from react-router
- * 
+ *
  * import { NavLink } from 'react-router'
  * const NavLink = genNavLink(NavLink)
  */
@@ -54,10 +55,23 @@ const styles = {
     position: 'relative',
     transform: 'translateZ(0)'
   }
-};
+}
+
+const useStyles = makeStyles({
+  layout: {
+    position: 'relative',
+    transform: 'translateZ(0)',
+    '& > main': {
+      minHeight: 'unset'
+    }
+  }
+})
+
+;
 
 const Example = () => {
   const [active, setActive] = useState(['Section 1', 'Subsection 1'])
+  const styles = useStyles()
 
   // makeProps is not necessary in a normal app since react-router sets active
   // and onClick by itself
@@ -65,7 +79,8 @@ const Example = () => {
     const routeIsMatching = isEqual(active.slice(0, route.length), route)
     return { onClick: () => setActive(route), active: routeIsMatching }
   }
-  return <Layout style={styles.layout}>
+
+  return <Layout className={styles.layout}>
     <Sidebar>
       <Nav>
         <NavItem>
@@ -116,13 +131,36 @@ const Example = () => {
 `monoColumn` option (without sidebar)
 
 ```jsx
-import { Layout, Main, Content } from 'cozy-ui/transpiled/react/Layout';
+import { Layout, Main, Content } from 'cozy-ui/transpiled/react/Layout'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
+import { makeStyles } from 'cozy-ui/transpiled/react/styles'
 
-<Layout monoColumn>
-    <Main>
-      <Content className='u-p-1'>
-        { content.ada.short }
-      </Content>
-    </Main>
-</Layout>
+// Not necessary in a normal app
+const useStyles = makeStyles({
+  layout: {
+    '& > main': {
+      minHeight: 'unset'
+    }
+  }
+})
+
+const Example = () => {
+  const styles = useStyles()
+
+  return (
+    <Layout className={styles.layout} monoColumn>
+        <Main>
+          <Content className='u-p-1'>
+            { content.ada.short }
+          </Content>
+        </Main>
+    </Layout>
+  )
+}
+
+;
+
+<DemoProvider>
+  <Example />
+</DemoProvider>
 ```
