@@ -10146,8 +10146,8 @@ progress.upload-queue-progress--1CmN- {
 }
 @media (max-width: 63.938rem) {
   .viewer-wrapper--2GIXH {
-    color: var(--charcoalGrey);
-    background: var(--white);
+    color: var(--primaryTextColor);
+    background: var(--paperBackgroundColor);
   }
 }
 
