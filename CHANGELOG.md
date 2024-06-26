@@ -1,3 +1,10 @@
+## [110.1.1](https://github.com/cozy/cozy-ui/compare/v110.1.0...v110.1.1) (2024-06-26)
+
+
+### Bug Fixes
+
+* **Viewer:** On mobile, background and color are now theme responsive ([9da97dc](https://github.com/cozy/cozy-ui/commit/9da97dc))
+
 # [110.1.0](https://github.com/cozy/cozy-ui/compare/v110.0.1...v110.1.0) (2024-06-24)
 
 
