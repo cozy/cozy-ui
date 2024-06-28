@@ -2,9 +2,11 @@
   "app_categories": {
     "all": "Toutes les catégories",
     "banking": "Banques",
+    "clouds": "Clouds & coffres",
     "cozy": "Les essentielles",
     "education": "Éducation",
     "energy": "Energie",
+    "finance": "Emploi & finance",
     "health": "Santé",
     "host_provider": "Hébergeur",
     "insurance": "Assurance",
@@ -21,6 +23,7 @@
     "public_service": "Services publics",
     "shopping": "Shopping",
     "social": "Social",
+    "tech": "Tech",
     "telecom": "Mobile",
     "transport": "Voyage et transport",
     "pro": "Travail"
