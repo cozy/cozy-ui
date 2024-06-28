@@ -1,3 +1,10 @@
+# [110.2.0](https://github.com/cozy/cozy-ui/compare/v110.1.1...v110.2.0) (2024-06-28)
+
+
+### Features
+
+* Add new categories to appSections locales ([6830ab5](https://github.com/cozy/cozy-ui/commit/6830ab5))
+
 ## [110.1.1](https://github.com/cozy/cozy-ui/compare/v110.1.0...v110.1.1) (2024-06-26)
 
 
