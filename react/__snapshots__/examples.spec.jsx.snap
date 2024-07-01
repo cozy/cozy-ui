@@ -821,6 +821,13 @@ exports[`Chips should render examples: Chips 1`] = `
             </svg></div>
         </div>
         <div>
+          <div class=\\"MuiButtonBase-root MuiChip-root customColor-primary MuiChip-outlined MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+              <path fill-rule=\\"evenodd\\" d=\\"M4.977 12.513s.103-1.083-.956-2.022a6 6 0 117.99-.028c-.674.605-.907 2.05-.907 2.05a.635.635 0 01-.595.487H5.491a.524.524 0 01-.514-.487zM11 14l-1.652 1.652a1.355 1.355 0 01-.853.348h-.99c-.279 0-.662-.157-.853-.348L5 14h6zm1-8a4 4 0 00-4-4 1 1 0 100 2 2 2 0 012 2 1 1 0 002 0z\\"></path>
+            </svg><span class=\\"MuiChip-label\\">Notion</span>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna u-w-1 u-h-1 MuiChip-deleteIcon\\" style=\\"--circleSize: 16px; font-size: 11px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">9</span></div>
+          </div>
+        </div>
+        <div>
           <div class=\\"MuiButtonBase-root MuiChip-root u-ml-1 customColor-primary MuiChip-outlined MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path fill-rule=\\"evenodd\\" d=\\"M13 5h-3V2H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h8c.55 0 1-.45 1-1V5zm2-.999v11.003a1 1 0 01-1.007.996H2.007A1.001 1.001 0 011 14.999V1.001A.999.999 0 011.998 0H11l4 4.001z\\"></path>
             </svg><span class=\\"MuiChip-label\\">Deletable chip with icon and class</span><svg class=\\"MuiSvgIcon-root MuiChip-deleteIcon\\" focusable=\\"false\\" viewBox=\\"0 0 24 24\\" aria-hidden=\\"true\\">
@@ -868,6 +875,13 @@ exports[`Chips should render examples: Chips 1`] = `
             </svg><span class=\\"MuiChip-label\\">1 invoice</span><svg viewBox=\\"0 0 16 16\\" class=\\"u-h-1 MuiChip-deleteIcon styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
               <path d=\\"M9 0v2h3.5L6 8.5 7.5 10 14 3.5V7h2V1.003A.996.996 0 0014.997 0H9zM7 2V0H1.003A1 1 0 000 1v14c0 .552.445 1 1 1h14c.552 0 1-.438 1-1.003V9h-2v5H2V2h5z\\" fill-rule=\\"evenodd\\"></path>
             </svg></div>
+        </div>
+        <div>
+          <div class=\\"MuiButtonBase-root MuiChip-root customColor-primary MuiChip-outlined Mui-disabled MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\" aria-disabled=\\"true\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
+              <path fill-rule=\\"evenodd\\" d=\\"M4.977 12.513s.103-1.083-.956-2.022a6 6 0 117.99-.028c-.674.605-.907 2.05-.907 2.05a.635.635 0 01-.595.487H5.491a.524.524 0 01-.514-.487zM11 14l-1.652 1.652a1.355 1.355 0 01-.853.348h-.99c-.279 0-.662-.157-.853-.348L5 14h6zm1-8a4 4 0 00-4-4 1 1 0 100 2 2 2 0 012 2 1 1 0 002 0z\\"></path>
+            </svg><span class=\\"MuiChip-label\\">Notion</span>
+            <div data-testid=\\"Avatar\\" class=\\"styles__c-avatar___PpDI- styles__c-avatar--text___2dvna u-w-1 u-h-1 MuiChip-deleteIcon\\" style=\\"--circleSize: 16px; font-size: 11px;\\"><span class=\\"styles__c-avatar-initials___310qC\\">9</span></div>
+          </div>
         </div>
         <div>
           <div class=\\"MuiButtonBase-root MuiChip-root u-ml-1 customColor-primary MuiChip-outlined Mui-disabled MuiChip-clickable MuiChip-deletable\\" tabindex=\\"0\\" role=\\"button\\" aria-disabled=\\"true\\"><svg viewBox=\\"0 0 16 16\\" class=\\"MuiChip-icon u-ml-half styles__icon___23x3R\\" width=\\"16\\" height=\\"16\\">
