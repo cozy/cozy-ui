@@ -50,7 +50,6 @@
     "test": "jest",
     "test:noSnapshots": "jest --testPathIgnorePatterns 'react/examples.spec.jsx'",
     "test:snapshots": "jest react/examples.spec.jsx",
-    "test:snapshots:update": "jest react/examples.spec.jsx -u",
     "screenshots:server": "nodemon ./scripts/pixelmatch-server/server.js -e js,hbs",
     "postbuild": "postcss transpiled/react/stylesheet.css --replace",
     "travis-deploy-once": "travis-deploy-once",
