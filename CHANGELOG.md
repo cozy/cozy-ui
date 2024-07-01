@@ -1,3 +1,11 @@
+# [110.3.0](https://github.com/cozy/cozy-ui/compare/v110.2.0...v110.3.0) (2024-07-01)
+
+
+### Features
+
+* **PermissionDialog:** Force icon background to be white ([8c46e64](https://github.com/cozy/cozy-ui/commit/8c46e64))
+* **SquareAppIcon:** Force icon background to be white ([1ca2ab7](https://github.com/cozy/cozy-ui/commit/1ca2ab7))
+
 # [110.2.0](https://github.com/cozy/cozy-ui/compare/v110.1.1...v110.2.0) (2024-06-28)
 
 
