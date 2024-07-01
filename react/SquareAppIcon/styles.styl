@@ -9,7 +9,7 @@ $color = constants['color'] // hard-coded color, because the component is curren
 
 .SquareAppIcon-wrapper
     box-sizing border-box
-    background-color var(--paperBackgroundColor)
+    background-color var(--white) // we don't want to be theme responsive
     border-radius rem(12)
     height $iconSize
     width $iconSize
@@ -88,7 +88,7 @@ opacity-end = 1
         path:first-of-type
             animation-delay icon-start !important
 
-        // The second path is a part of the cross, 
+        // The second path is a part of the cross,
         // since it has its own hardcoded animation delay we need to add it again (.16s)
         path+path
             animation-delay icon-start + .16s !important
