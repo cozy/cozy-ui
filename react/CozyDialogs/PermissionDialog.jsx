@@ -56,7 +56,7 @@ const PermissionDialog = ({
                 elevation={2}
                 className={cx(
                   styles.floatingIcon,
-                  'u-pos-absolute u-bdrs-circle u-flex'
+                  'u-pos-absolute u-bdrs-circle u-flex u-bg-white'
                 )}
               >
                 <Icon className="u-m-auto" icon={icon} size={48} />
