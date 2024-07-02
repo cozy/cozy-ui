@@ -70,6 +70,10 @@ class IntentIframe extends React.Component {
     const { iframeProps } = this.props
     const { error, loading } = this.state
 
+    console.info(' ')
+    console.info('## UI IntentIframe')
+    console.info(' ')
+
     return (
       <div
         ref={intentViewer => (this.intentViewer = intentViewer)}

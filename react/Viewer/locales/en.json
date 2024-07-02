@@ -9,6 +9,8 @@
     },
     "close": "close",
     "download": "Download",
+    "complete": "Complete the document",
+    "noImage": "No image",
     "error": {
       "downloadFile": {
         "offline": "You should be connected to download this file"

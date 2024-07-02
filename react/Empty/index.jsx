@@ -15,6 +15,7 @@ export const Empty = ({
   children,
   className,
   centered,
+  componentsProps,
   ...restProps
 }) => {
   const isReactIconElement = typeof icon === 'object' && !!icon.props
@@ -38,7 +39,8 @@ export const Empty = ({
               },
               icon.props?.className
             ),
-            size: icon.props?.size || (icon.type === Icon ? '100%' : undefined)
+            size: icon.props?.size || (icon.type === Icon ? '100%' : undefined),
+            ...componentsProps?.icon
           })
         ) : (
           <Icon
@@ -47,15 +49,30 @@ export const Empty = ({
             })}
             icon={icon}
             size="100%"
+            {...componentsProps?.icon}
           />
         ))}
       {title && (
-        <Typography gutterBottom variant="h3" color="textPrimary">
+        <Typography
+          gutterBottom
+          variant="h3"
+          color="textPrimary"
+          {...componentsProps?.title}
+        >
           {title}
         </Typography>
       )}
-      {text && <EmptySubTitle gutterBottom>{text}</EmptySubTitle>}
-      <div className={styles['c-empty-text']}>{children}</div>
+      {text && (
+        <EmptySubTitle gutterBottom {...componentsProps?.text}>
+          {text}
+        </EmptySubTitle>
+      )}
+      <div
+        className={styles['c-empty-text']}
+        {...componentsProps?.childrenContainer}
+      >
+        {children}
+      </div>
     </div>
   )
 }
@@ -68,6 +85,12 @@ Empty.propTypes = {
   /** Sets horizontal and vertical centring. The reference element is that of a fixed position */
   centered: PropTypes.bool,
   children: PropTypes.node,
+  componentsProps: PropTypes.shape({
+    icon: PropTypes.object,
+    title: PropTypes.object,
+    text: PropTypes.object,
+    childrenContainer: PropTypes.object
+  }),
   className: PropTypes.string
 }
 

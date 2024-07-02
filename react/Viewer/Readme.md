@@ -66,6 +66,13 @@ import IconButton from 'cozy-ui/transpiled/react/IconButton'
 // We provide a collection of (fake) io.cozy.files to be rendered
 const files = [
   {
+    _id: 'blank',
+    class: 'pdf',
+    metadata: { paperProps: { isBlank: true } },
+    type: 'file',
+    name: 'Blank paper'
+  },
+  {
     _id: 'audio',
     class: 'audio',
     type: 'file',

@@ -1,9 +1,18 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 
 import IntentIframe from '../IntentIframe'
 import { DialogCloseButton } from '../CozyDialogs'
 import Dialog from '../Dialog'
+import Backdrop from '../Backdrop'
+import { makeStyles } from '../styles'
+
+const useStyles = makeStyles({
+  backdrop: {
+    zIndex: 'calc(var(--zIndex-modal-toolbar) + 1)' // to be over a modal if used inside it
+  }
+})
 
 /**
  * Wrapper that adds an `onClick` handler to its children that opens a dialog
@@ -22,9 +31,11 @@ const IntentDialogOpener = props => {
     onComplete,
     onDismiss,
     iframeProps,
+    onlyBackdrop,
     ...dialogProps
   } = props
   const [modalOpened, setModalOpened] = useState(false)
+  const styles = useStyles()
 
   const openModal = ev => {
     ev.preventDefault()
@@ -48,12 +59,17 @@ const IntentDialogOpener = props => {
     React.cloneElement(children, { key: 'opener', onClick: openModal })
   ]
 
+  const Component = onlyBackdrop ? Backdrop : Dialog
+
   if (modalOpened) {
     elements.push(
-      <Dialog
+      <Component
         key="intent-modal"
         open={modalOpened}
         onClose={closable && handleDismiss}
+        className={cx(dialogProps.className, {
+          [styles.backdrop]: onlyBackdrop
+        })}
         {...dialogProps}
       >
         {closable && showCloseButton && (
@@ -68,7 +84,7 @@ const IntentDialogOpener = props => {
           onTerminate={handleComplete}
           iframeProps={iframeProps}
         />
-      </Dialog>
+      </Component>
     )
   }
 
@@ -92,6 +108,8 @@ IntentDialogOpener.propTypes = {
   showCloseButton: PropTypes.bool.isRequired,
   /** Tag used to wrap children */
   tag: PropTypes.string.isRequired,
+  /** Whether the dialog is shown or only its backdrop */
+  onlyBackdrop: PropTypes.bool,
   /** Props to be passed to the iframe */
   iframeProps: PropTypes.shape({
     wrapperProps: PropTypes.object,
@@ -102,6 +120,7 @@ IntentDialogOpener.propTypes = {
 IntentDialogOpener.defaultProps = {
   tag: 'span',
   closable: true,
+  onlyBackdrop: false,
   showCloseButton: true
 }
 
