@@ -9,6 +9,8 @@
     },
     "close": "Fermer",
     "download": "Télécharger",
+    "complete": "Compléter le document",
+    "noImage": "Aucune image",
     "error": {
       "downloadFile": {
         "offline": "Vous devez être connecté pour télécharger ce fichier"

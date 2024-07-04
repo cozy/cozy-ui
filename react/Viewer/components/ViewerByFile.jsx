@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
 
 import { isMobile as isMobileDevice } from 'cozy-device-helper'
-import { models } from 'cozy-client'
+import { isPlainText } from 'cozy-client/dist/models/file'
 
 import { FileDoctype } from '../../proptypes'
 import withBreakpoints from '../../helpers/withBreakpoints'
@@ -11,6 +11,7 @@ import ImageViewer from '../ViewersByFile/ImageViewer'
 import AudioViewer from '../ViewersByFile/AudioViewer'
 import VideoViewer from '../ViewersByFile/VideoViewer'
 import PdfJsViewer from '../ViewersByFile/PdfJsViewer'
+import BlankPaperViewer from '../ViewersByFile/BlankPaperViewer'
 import TextViewer from '../ViewersByFile/TextViewer'
 import PdfMobileViewer from '../ViewersByFile/PdfMobileViewer'
 import NoViewer from '../NoViewer'
@@ -19,7 +20,7 @@ import OnlyOfficeViewer from '../ViewersByFile/OnlyOfficeViewer'
 
 import { useEncrypted } from '../providers/EncryptedProvider'
 
-const { isPlainText } = models.file
+const isBlankPaper = doc => doc.metadata?.paperProps?.isBlank
 
 export const getViewerComponentName = ({
   file,
@@ -36,7 +37,11 @@ export const getViewerComponentName = ({
     case 'video':
       return isMobileDevice() ? NoViewer : VideoViewer
     case 'pdf':
-      return isDesktop ? PdfJsViewer : PdfMobileViewer
+      return isBlankPaper(file)
+        ? BlankPaperViewer
+        : isDesktop
+        ? PdfJsViewer
+        : PdfMobileViewer
     case 'text':
       return isPlainText(file.mime, file.name)
         ? TextViewer
