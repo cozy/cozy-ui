@@ -1,1 +1,1 @@
-export { default } from './IntentIframe'
+export { default, iframeProps } from './IntentIframe'

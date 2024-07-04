@@ -57,13 +57,15 @@ class IntentIframe extends React.Component {
         result ? onTerminate && onTerminate(result) : onCancel()
       })
       .catch(error => {
-        ;(onError && onError(error)) ||
-          this.setState({ error: error, loading: false })
+        onError?.(error)
+        this.setState({ error: error, loading: false })
+        this.props.iframeProps?.setIsLoading?.(false)
       })
   }
 
   onFrameLoaded = () => {
     this.setState({ loading: false })
+    this.props.iframeProps?.setIsLoading?.(false)
   }
 
   render() {
@@ -89,6 +91,12 @@ class IntentIframe extends React.Component {
   }
 }
 
+export const iframeProps = PropTypes.shape({
+  wrapperProps: PropTypes.object,
+  spinnerProps: PropTypes.object,
+  setIsLoading: PropTypes.func
+})
+
 IntentIframe.propTypes = {
   action: PropTypes.string.isRequired,
   create: PropTypes.func,
@@ -97,10 +105,7 @@ IntentIframe.propTypes = {
   onCancel: PropTypes.func,
   onError: PropTypes.func,
   onTerminate: PropTypes.func.isRequired,
-  iframeProps: PropTypes.shape({
-    wrapperProps: PropTypes.object,
-    spinnerProps: PropTypes.object
-  }),
+  iframeProps: iframeProps,
   onHideCross: PropTypes.func,
   onShowCross: PropTypes.func
 }
