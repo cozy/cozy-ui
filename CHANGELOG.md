@@ -1,3 +1,15 @@
+# [110.5.0](https://github.com/cozy/cozy-ui/compare/v110.4.0...v110.5.0) (2024-07-04)
+
+
+### Features
+
+* **Backdrop:** Add `isOver` props ([67e6de7](https://github.com/cozy/cozy-ui/commit/67e6de7))
+* **Empty:** Add `componentsProps.icon/title/text/childrenContainer` props ([8d50ee6](https://github.com/cozy/cozy-ui/commit/8d50ee6))
+* **IntentDialogOpener:** Add `Component` prop to replace Dialog ([01a4499](https://github.com/cozy/cozy-ui/commit/01a4499))
+* **IntentIframe:** Add `iframeProps.setIsLoading` prop to wind it up ([bf0db3d](https://github.com/cozy/cozy-ui/commit/bf0db3d))
+* **IntentProvider:** Add provider to deal with intents ([b00b893](https://github.com/cozy/cozy-ui/commit/b00b893))
+* **Viewer:** Add BlankPaperViewer view and plug it to blank papers ([41ee4fe](https://github.com/cozy/cozy-ui/commit/41ee4fe))
+
 # [110.4.0](https://github.com/cozy/cozy-ui/compare/v110.3.0...v110.4.0) (2024-07-04)
 
 
