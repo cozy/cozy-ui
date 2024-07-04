@@ -1,3 +1,10 @@
+# [110.4.0](https://github.com/cozy/cozy-ui/compare/v110.3.0...v110.4.0) (2024-07-04)
+
+
+### Features
+
+* Add TextInfo icon ([25488eb](https://github.com/cozy/cozy-ui/commit/25488eb))
+
 # [110.3.0](https://github.com/cozy/cozy-ui/compare/v110.2.0...v110.3.0) (2024-07-01)
 
 
