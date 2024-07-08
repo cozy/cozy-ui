@@ -1,3 +1,10 @@
+# [110.6.0](https://github.com/cozy/cozy-ui/compare/v110.5.0...v110.6.0) (2024-07-08)
+
+
+### Features
+
+* Add StarOutline icon ([831b793](https://github.com/cozy/cozy-ui/commit/831b793))
+
 # [110.5.0](https://github.com/cozy/cozy-ui/compare/v110.4.0...v110.5.0) (2024-07-04)
 
 
