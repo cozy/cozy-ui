@@ -456,7 +456,10 @@ export const makeLightNormalOverrides = theme => ({
         }
       },
       '&.overflow': {
-        overflowY: 'visible !important' // Allow the icon to overflow the dialog, otherwise it will be cut off
+        overflowY: 'visible !important', // Allow the icon to overflow the dialog, otherwise it will be cut off,
+        '& .cozyDialogContent': {
+          overflowY: 'visible !important' // This allow the overflow to work also on iOS
+        }
       }
     },
     scrollPaper: {
