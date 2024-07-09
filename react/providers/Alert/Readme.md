@@ -13,7 +13,7 @@ const initialVariants = [{
   largeIcon: false,
   noIcon: false,
   square: false,
-  filled: false,
+  standard: false,
   outlined: false,
   close: true
 }]
@@ -30,17 +30,17 @@ const Component = ({ variant }) => {
           severity: 'success',
           message: 'Alert message',
           color: variant.color ? "#EFA82D" : undefined,
-          variant: variant.filled
-            ? 'filled'
+          variant: variant.standard
+            ? 'standard'
             : variant.outlined
             ? 'outlined'
-            : undefined,
+            : 'filled',
           block: variant.block,
           square: variant.square,
           icon: variant.noIcon
             ? false
             : variant.largeIcon
-            ? <Icon icon={DeviceLaptopIcon} color="var(--errorColor)" size={32} />
+            ? <Icon icon={DeviceLaptopIcon} size={32} />
             : undefined,
           onClose: variant.close ? () => {} : undefined
         })
