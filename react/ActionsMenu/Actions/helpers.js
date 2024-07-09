@@ -108,15 +108,10 @@ const getImageScaleRatio = (image, maxSize) => {
 /**
  * @param {object} opts
  * @param {string} opts.base64 - Base64 of image
- * @param {string} opts.type - Type of image
  * @param {number} opts.maxSize - Maximum size before being resized
  * @returns {Promise<string>}
  */
-const resizeImage = async ({
-  base64: fileDataUri,
-  type: fileType,
-  maxSize
-}) => {
+const resizeImage = async ({ base64: fileDataUri, maxSize }) => {
   return new Promise((resolve, reject) => {
     const newImage = new Image()
     newImage.src = fileDataUri
@@ -138,7 +133,7 @@ const resizeImage = async ({
         .getContext('2d')
         .drawImage(newImage, 0, 0, scaledWidth, scaledHeight)
 
-      resolve(canvas.toDataURL(fileType, quality))
+      resolve(canvas.toDataURL('image/jpeg', quality))
     }
   })
 }
@@ -157,6 +152,7 @@ const fileToDataUri = async file => {
 }
 
 /**
+ * Compress image and add it to pdf
  * @param {PDFDocument} pdfDoc
  * @param {File} file
  * @returns {Promise<void>}
@@ -165,13 +161,9 @@ const addImageToPdf = async (pdfDoc, file) => {
   const fileDataUri = await fileToDataUri(file)
   const resizedImage = await resizeImage({
     base64: fileDataUri,
-    type: file.type,
     maxSize: MAX_RESIZE_IMAGE_SIZE
   })
-
-  let img
-  if (file.type === 'image/png') img = await pdfDoc.embedPng(resizedImage)
-  if (file.type === 'image/jpeg') img = await pdfDoc.embedJpg(resizedImage)
+  const img = await pdfDoc.embedJpg(resizedImage)
 
   const page = pdfDoc.addPage([img.width, img.height])
   const { width: pageWidth, height: pageHeight } = page.getSize()
