@@ -1,3 +1,10 @@
+## [110.7.1](https://github.com/cozy/cozy-ui/compare/v110.7.0...v110.7.1) (2024-07-09)
+
+
+### Bug Fixes
+
+* **AlertProvider:** `filled` wasn't the default variant ([c4d545d](https://github.com/cozy/cozy-ui/commit/c4d545d))
+
 # [110.7.0](https://github.com/cozy/cozy-ui/compare/v110.6.0...v110.7.0) (2024-07-09)
 
 
