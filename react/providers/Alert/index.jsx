@@ -29,6 +29,7 @@ export const useAlert = () => {
 const defaultState = {
   title: '',
   message: '',
+  duration: null,
   open: false
 }
 const handleClose = (state, setState) => () => {
@@ -37,7 +38,7 @@ const handleClose = (state, setState) => () => {
 
 const AlertProvider = ({ children }) => {
   const [state, setState] = useState(defaultState)
-  const { open, message, title, ...alertProps } = state
+  const { open, message, title, duration, ...alertProps } = state
 
   const value = useMemo(
     () => ({
@@ -54,7 +55,11 @@ const AlertProvider = ({ children }) => {
   return (
     <AlertContext.Provider value={value}>
       {children}
-      <Snackbar open={open} onClose={handleClose(state, setState)}>
+      <Snackbar
+        open={open}
+        autoHideDuration={duration}
+        onClose={handleClose(state, setState)}
+      >
         <Alert
           variant="filled"
           elevation={6}
