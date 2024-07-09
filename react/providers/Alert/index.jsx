@@ -56,6 +56,7 @@ const AlertProvider = ({ children }) => {
       {children}
       <Snackbar open={open} onClose={handleClose(state, setState)}>
         <Alert
+          variant="filled"
           elevation={6}
           onClose={handleClose(state, setState)}
           {...alertProps}
