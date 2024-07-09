@@ -1,3 +1,15 @@
+# [110.7.0](https://github.com/cozy/cozy-ui/compare/v110.6.0...v110.7.0) (2024-07-09)
+
+
+### Bug Fixes
+
+* **ActionsMenu/addImageToPdf:** Correct excessive weight when adding img ([ee7e46c](https://github.com/cozy/cozy-ui/commit/ee7e46c))
+
+
+### Features
+
+* **ActionsMenu/resizeImage:** Remove unnecessary param ([c6d06e8](https://github.com/cozy/cozy-ui/commit/c6d06e8))
+
 # [110.6.0](https://github.com/cozy/cozy-ui/compare/v110.5.0...v110.6.0) (2024-07-08)
 
 
