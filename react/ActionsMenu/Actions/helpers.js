@@ -92,14 +92,13 @@ export const makeBase64FromFile = async file => {
 
 /**
  * @param {HTMLImageElement} image
- * @param {number} [maxSizeInPixel] - Maximum size before being resized
  * @returns {number}
  */
-const getImageScaleRatio = (image, maxSize) => {
+const getImageScaleRatio = image => {
   const longerSideSizeInPixel = Math.max(image.height, image.width)
   let scaleRatio = 1
-  if (maxSize < longerSideSizeInPixel) {
-    scaleRatio = maxSize / longerSideSizeInPixel
+  if (MAX_RESIZE_IMAGE_SIZE < longerSideSizeInPixel) {
+    scaleRatio = MAX_RESIZE_IMAGE_SIZE / longerSideSizeInPixel
   }
 
   return scaleRatio
@@ -108,17 +107,16 @@ const getImageScaleRatio = (image, maxSize) => {
 /**
  * @param {object} opts
  * @param {string} opts.base64 - Base64 of image
- * @param {number} opts.maxSize - Maximum size before being resized
  * @returns {Promise<string>}
  */
-const resizeImage = async ({ base64: fileDataUri, maxSize }) => {
+const resizeImage = async ({ base64: fileDataUri }) => {
   return new Promise((resolve, reject) => {
     const newImage = new Image()
     newImage.src = fileDataUri
     newImage.onerror = reject
     newImage.onload = () => {
       const canvas = document.createElement('canvas')
-      const scaleRatio = getImageScaleRatio(newImage, maxSize)
+      const scaleRatio = getImageScaleRatio(newImage)
       const scaledWidth = scaleRatio * newImage.width
       const scaledHeight = scaleRatio * newImage.height
       const quality =
@@ -160,8 +158,7 @@ const fileToDataUri = async file => {
 const addImageToPdf = async (pdfDoc, file) => {
   const fileDataUri = await fileToDataUri(file)
   const resizedImage = await resizeImage({
-    base64: fileDataUri,
-    maxSize: MAX_RESIZE_IMAGE_SIZE
+    base64: fileDataUri
   })
   const img = await pdfDoc.embedJpg(resizedImage)
 
