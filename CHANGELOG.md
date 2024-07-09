@@ -1,3 +1,10 @@
+# [110.8.0](https://github.com/cozy/cozy-ui/compare/v110.7.1...v110.8.0) (2024-07-09)
+
+
+### Features
+
+* **AlertProvider:** Add `duration` prop ([03b2f0e](https://github.com/cozy/cozy-ui/commit/03b2f0e))
+
 ## [110.7.1](https://github.com/cozy/cozy-ui/compare/v110.7.0...v110.7.1) (2024-07-09)
 
 
