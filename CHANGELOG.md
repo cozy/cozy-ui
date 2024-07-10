@@ -1,3 +1,10 @@
+## [110.8.1](https://github.com/cozy/cozy-ui/compare/v110.8.0...v110.8.1) (2024-07-10)
+
+
+### Bug Fixes
+
+* **PermissionDialog:** Show overflow icon on iOS ([f9f6073](https://github.com/cozy/cozy-ui/commit/f9f6073))
+
 # [110.8.0](https://github.com/cozy/cozy-ui/compare/v110.7.1...v110.8.0) (2024-07-09)
 
 
