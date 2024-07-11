@@ -95,8 +95,8 @@ class ViewerControls extends Component {
 
     return React.Children.map(children, child => {
       if (
-        child.type.name === 'ViewerByFile' ||
-        child.type.displayName === 'ViewerByFile'
+        child?.type?.name === 'ViewerByFile' ||
+        child?.type?.displayName === 'ViewerByFile'
       ) {
         return React.cloneElement(child, {
           gestures: this.state.gestures,
