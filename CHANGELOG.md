@@ -1,3 +1,10 @@
+## [110.8.2](https://github.com/cozy/cozy-ui/compare/v110.8.1...v110.8.2) (2024-07-11)
+
+
+### Bug Fixes
+
+* **ViewerControls:** children can contain undefined values ([506fd4c](https://github.com/cozy/cozy-ui/commit/506fd4c))
+
 ## [110.8.1](https://github.com/cozy/cozy-ui/compare/v110.8.0...v110.8.1) (2024-07-10)
 
 
