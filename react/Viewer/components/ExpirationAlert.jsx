@@ -1,7 +1,13 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-import { useClient, models } from 'cozy-client'
+import { useClient } from 'cozy-client'
+import {
+  isForeignPaper,
+  computeExpirationDate,
+  computeExpirationNoticeLink,
+  makeExpirationDescription
+} from 'cozy-client/dist/models/paper'
 
 import Alert from '../../Alert'
 import Button from '../../Buttons'
@@ -11,12 +17,6 @@ import { withViewerLocales } from '../hoc/withViewerLocales'
 import { useI18n } from '../../providers/I18n'
 
 const FILES_DOCTYPE = 'io.cozy.files'
-
-const {
-  computeExpirationDate,
-  computeExpirationNoticeLink,
-  makeExpirationDescription
-} = models.paper
 
 const ExpirationAlert = ({ file }) => {
   const { t, lang } = useI18n()
@@ -33,7 +33,9 @@ const ExpirationAlert = ({ file }) => {
   }
 
   const expirationDate = computeExpirationDate(file)
-  const expirationNoticeLink = computeExpirationNoticeLink(file)
+  const expirationNoticeLink = !isForeignPaper(file)
+    ? computeExpirationNoticeLink(file)
+    : null
 
   return (
     <Alert
