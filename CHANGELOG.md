@@ -1,3 +1,16 @@
+# [111.0.0](https://github.com/cozy/cozy-ui/compare/v110.8.2...v111.0.0) (2024-07-12)
+
+
+### Features
+
+* **ExpirationAlert:** Do not display expiration link for foreign file ([dfeaa6e](https://github.com/cozy/cozy-ui/commit/dfeaa6e))
+* Upgrade cozy-client to 48.8.0 ([03dbc6a](https://github.com/cozy/cozy-ui/commit/03dbc6a))
+
+
+### BREAKING CHANGES
+
+* you must have `cozy-client >= 48.8.0`
+
 ## [110.8.2](https://github.com/cozy/cozy-ui/compare/v110.8.1...v110.8.2) (2024-07-11)
 
 
