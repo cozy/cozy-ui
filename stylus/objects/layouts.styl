@@ -85,7 +85,7 @@ $app
             padding-left env(safe-area-inset-left)
             padding-right env(safe-area-inset-right)
             padding-bottom env(safe-area-inset-bottom)
-            min-height 'calc(100vh - %s - %s)' % (barHeight navHeight)
+            min-height 'calc(100vh - var(--sidebarHeight) - %s)' % barHeight
 
         main,
         main > [role=contentinfo], // Deprecated
