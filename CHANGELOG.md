@@ -1,3 +1,11 @@
+# [111.1.0](https://github.com/cozy/cozy-ui/compare/v111.0.0...v111.1.0) (2024-07-17)
+
+
+### Features
+
+* **Layout:** Use var css instead of stylus var to set Main min-height on mobile ([633f4ad](https://github.com/cozy/cozy-ui/commit/633f4ad))
+* **Layout:** Use var css instead of stylus var to set Main min-height on mobile ([d717582](https://github.com/cozy/cozy-ui/commit/d717582))
+
 # [111.0.0](https://github.com/cozy/cozy-ui/compare/v110.8.2...v111.0.0) (2024-07-12)
 
 
