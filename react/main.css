@@ -9234,7 +9234,7 @@ body {
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
     padding-bottom: env(safe-area-inset-bottom);
-    min-height: calc(100vh - 3rem - 3rem);
+    min-height: calc(100vh - var(--sidebarHeight) - 3rem);
   }
   .o-layout--3TSz9 main,
   .o-layout-2panes--1CDQw main,
