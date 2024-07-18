@@ -1,3 +1,10 @@
+## [111.1.1](https://github.com/cozy/cozy-ui/compare/v111.1.0...v111.1.1) (2024-07-18)
+
+
+### Bug Fixes
+
+* Replace commercial '&' by their equivalents ([4a679d1](https://github.com/cozy/cozy-ui/commit/4a679d1))
+
 # [111.1.0](https://github.com/cozy/cozy-ui/compare/v111.0.0...v111.1.0) (2024-07-17)
 
 
