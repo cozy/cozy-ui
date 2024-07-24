@@ -94,7 +94,8 @@ const CozyThemeProptypes = {
   /** Causes this element's children to appear as if they were direct children of the element's parent, ignoring the element itself. */
   ignoreItself: PropTypes.bool,
   className: PropTypes.string,
-  settingsThemeType: PropTypes.string,
+  /** Theme type from io.cozy.settings.instance */
+  settingsThemeType: PropTypes.oneOf(['light', 'dark', 'auto']),
   children: PropTypes.node
 }
 
