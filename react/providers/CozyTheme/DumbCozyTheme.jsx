@@ -24,12 +24,14 @@ const DumbCozyTheme = ({
       ? 'dark'
       : 'light'
     : 'light'
+  const filteredSettingsThemeType = ['light', 'dark'].includes(
+    settingsThemeType
+  )
+    ? settingsThemeType
+    : undefined
 
   const selfThemeType =
-    uiThemeType ||
-    (['light', 'dark'].includes(settingsThemeType)
-      ? settingsThemeType
-      : deviceThemeType)
+    uiThemeType || filteredSettingsThemeType || deviceThemeType
   const selfThemeVariant = uiThemeVariant || variant
 
   return (
