@@ -1,3 +1,10 @@
+# [111.2.0](https://github.com/cozy/cozy-ui/compare/v111.1.1...v111.2.0) (2024-07-25)
+
+
+### Features
+
+* **CozyTheme:** Add `ignoreCozySettings` prop to bypass settings query ([e49a312](https://github.com/cozy/cozy-ui/commit/e49a312))
+
 ## [111.1.1](https://github.com/cozy/cozy-ui/compare/v111.1.0...v111.1.1) (2024-07-18)
 
 
