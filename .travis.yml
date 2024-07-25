@@ -93,77 +93,77 @@ jobs:
           - js-binaries
           - css-binaries
       if: commit_message =~ /^((?!\[only argos\]).)*$/  # skipped if commit message contains "[only argos]"
-    - name: '[Argos] Create desktop screenshots'
-      stage: 'Screenshots - Create'
-      script: |
-        if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
-          mkdir ./screenshots
-          npx puppeteer browsers install chrome
-          yarn screenshots --mode react --viewport desktop --screenshot-dir ./screenshots/reactDesktop
-        fi
-      workspaces:
-        use:
-          - sprite-palette-binaries
-          - js-binaries
-          - css-binaries
-          - docs-binaries
-        create:
-          name: screenshots-desktop-binaries
-          paths:
-            - ./screenshots
-    - name: '[Argos] Create mobile screenshots'
-      stage: 'Screenshots - Create'
-      script: |
-        if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
-          mkdir ./screenshots
-          npx puppeteer browsers install chrome
-          yarn screenshots --mode react --viewport 300x600 --screenshot-dir ./screenshots/reactMobile
-        fi
-      workspaces:
-        use:
-          - sprite-palette-binaries
-          - js-binaries
-          - css-binaries
-          - docs-binaries
-        create:
-          name: screenshots-mobile-binaries
-          paths:
-            - ./screenshots
-    - name: '[Argos] Create kss screenshots'
-      stage: 'Screenshots - Create'
-      script: |
-        if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
-          mkdir ./screenshots
-          npx puppeteer browsers install chrome
-          yarn screenshots --mode kss --screenshot-dir ./screenshots/kss
-        fi
-      workspaces:
-        use:
-          - sprite-palette-binaries
-          - js-binaries
-          - css-binaries
-          - docs-binaries
-        create:
-          name: screenshots-kss-binaries
-          paths:
-            - ./screenshots
-    - name: '[Argos] Upload all screenshots'
-      stage: 'Screenshots - Upload'
-      script: |
-        if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
-          yarn argos:upload --parallel screenshots/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
-          yarn argos:upload --parallel screenshots/reactMobile/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
-          yarn argos:upload --parallel screenshots/kss/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
-        fi
-      workspaces:
-        use:
-          - sprite-palette-binaries
-          - js-binaries
-          - css-binaries
-          - docs-binaries
-          - screenshots-desktop-binaries
-          - screenshots-mobile-binaries
-          - screenshots-kss-binaries
+    # - name: '[Argos] Create desktop screenshots'
+    #   stage: 'Screenshots - Create'
+    #   script: |
+    #     if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
+    #       mkdir ./screenshots
+    #       npx puppeteer browsers install chrome
+    #       yarn screenshots --mode react --viewport desktop --screenshot-dir ./screenshots/reactDesktop
+    #     fi
+    #   workspaces:
+    #     use:
+    #       - sprite-palette-binaries
+    #       - js-binaries
+    #       - css-binaries
+    #       - docs-binaries
+    #     create:
+    #       name: screenshots-desktop-binaries
+    #       paths:
+    #         - ./screenshots
+    # - name: '[Argos] Create mobile screenshots'
+    #   stage: 'Screenshots - Create'
+    #   script: |
+    #     if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
+    #       mkdir ./screenshots
+    #       npx puppeteer browsers install chrome
+    #       yarn screenshots --mode react --viewport 300x600 --screenshot-dir ./screenshots/reactMobile
+    #     fi
+    #   workspaces:
+    #     use:
+    #       - sprite-palette-binaries
+    #       - js-binaries
+    #       - css-binaries
+    #       - docs-binaries
+    #     create:
+    #       name: screenshots-mobile-binaries
+    #       paths:
+    #         - ./screenshots
+    # - name: '[Argos] Create kss screenshots'
+    #   stage: 'Screenshots - Create'
+    #   script: |
+    #     if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
+    #       mkdir ./screenshots
+    #       npx puppeteer browsers install chrome
+    #       yarn screenshots --mode kss --screenshot-dir ./screenshots/kss
+    #     fi
+    #   workspaces:
+    #     use:
+    #       - sprite-palette-binaries
+    #       - js-binaries
+    #       - css-binaries
+    #       - docs-binaries
+    #     create:
+    #       name: screenshots-kss-binaries
+    #       paths:
+    #         - ./screenshots
+    # - name: '[Argos] Upload all screenshots'
+    #   stage: 'Screenshots - Upload'
+    #   script: |
+    #     if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
+    #       yarn argos:upload --parallel screenshots/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
+    #       yarn argos:upload --parallel screenshots/reactMobile/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
+    #       yarn argos:upload --parallel screenshots/kss/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $TRAVIS_BUILD_ID --ignore ''
+    #     fi
+    #   workspaces:
+    #     use:
+    #       - sprite-palette-binaries
+    #       - js-binaries
+    #       - css-binaries
+    #       - docs-binaries
+    #       - screenshots-desktop-binaries
+    #       - screenshots-mobile-binaries
+    #       - screenshots-kss-binaries
     - name: 'Deploy'
       stage: 'Deploy'
       script: 'true'
