@@ -20,7 +20,6 @@ const variants = ['primary', 'secondary', 'ghost', 'text']
 const propsArr = [{}, { disabled: true }, { busy: true }]
 
 ;
-
 <Grid container>
   {propsArr.map(props =>
     <Grid item xs={12} sm={4} className="u-mb-1" key={JSON.stringify(props)}>
@@ -163,7 +162,7 @@ import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
 
 const variants = ['primary', 'secondary', 'ghost', 'text']
-const colors = ['success', 'error', 'warning', 'info']
+const colors = ['default', 'inherit', 'primary', 'secondary', 'success', 'error', 'warning', 'info']
 
 ;
 
@@ -192,7 +191,7 @@ import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
 
 const variants = ['primary', 'secondary', 'ghost', 'text']
-const colors = ['success', 'error', 'warning', 'info']
+const colors = ['default', 'inherit', 'primary', 'secondary', 'success', 'error', 'warning', 'info']
 
 ;
 
@@ -221,7 +220,7 @@ import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
 
 const variants = ['primary', 'secondary', 'ghost', 'text']
-const colors = ['success', 'error', 'warning', 'info']
+const colors = ['default', 'inherit', 'primary', 'secondary', 'success', 'error', 'warning', 'info']
 
 ;
 

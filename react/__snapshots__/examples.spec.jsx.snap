@@ -593,6 +593,42 @@ exports[`Buttons should render examples: Buttons 5`] = `
   <div class=\\"MuiGrid-root MuiGrid-container\\">
     <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
       <div class=\\"styles__Stack--s___22WMg\\">
+        <div>default</div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">primary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary MuiButton-outlinedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">secondary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary ghost  MuiButton-outlinedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ghost</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">text</span></button></div>
+      </div>
+    </div>
+    <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
+      <div class=\\"styles__Stack--s___22WMg\\">
+        <div>inherit</div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">primary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary MuiButton-outlinedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">secondary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary ghost  MuiButton-outlinedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ghost</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-colorInherit MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">text</span></button></div>
+      </div>
+    </div>
+    <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
+      <div class=\\"styles__Stack--s___22WMg\\">
+        <div>primary</div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">primary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary MuiButton-outlinedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">secondary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary ghost  MuiButton-outlinedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ghost</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">text</span></button></div>
+      </div>
+    </div>
+    <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
+      <div class=\\"styles__Stack--s___22WMg\\">
+        <div>secondary</div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">primary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary MuiButton-outlinedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">secondary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary ghost  MuiButton-outlinedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">ghost</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textSecondary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">text</span></button></div>
+      </div>
+    </div>
+    <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
+      <div class=\\"styles__Stack--s___22WMg\\">
         <div>success</div>
         <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-success MuiButton-containedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">primary</span></button></div>
         <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-success MuiButton-outlinedPrimary MuiButton-disableElevation\\" tabindex=\\"0\\" type=\\"button\\"><span class=\\"MuiButton-label\\">secondary</span></button></div>
@@ -636,6 +672,42 @@ exports[`Buttons should render examples: Buttons 6`] = `
   <div class=\\"MuiGrid-root MuiGrid-container\\">
     <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
       <div class=\\"styles__Stack--s___22WMg\\">
+        <div>default</div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">primary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary MuiButton-outlinedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">secondary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary ghost  MuiButton-outlinedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">ghost</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">text</span></button></div>
+      </div>
+    </div>
+    <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
+      <div class=\\"styles__Stack--s___22WMg\\">
+        <div>inherit</div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">primary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary MuiButton-outlinedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">secondary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary ghost  MuiButton-outlinedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">ghost</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-colorInherit MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">text</span></button></div>
+      </div>
+    </div>
+    <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
+      <div class=\\"styles__Stack--s___22WMg\\">
+        <div>primary</div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">primary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary MuiButton-outlinedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">secondary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary ghost  MuiButton-outlinedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">ghost</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">text</span></button></div>
+      </div>
+    </div>
+    <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
+      <div class=\\"styles__Stack--s___22WMg\\">
+        <div>secondary</div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">primary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary MuiButton-outlinedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">secondary</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary ghost  MuiButton-outlinedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">ghost</span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textSecondary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">text</span></button></div>
+      </div>
+    </div>
+    <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
+      <div class=\\"styles__Stack--s___22WMg\\">
         <div>success</div>
         <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-success MuiButton-containedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">primary</span></button></div>
         <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-success MuiButton-outlinedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">secondary</span></button></div>
@@ -677,6 +749,42 @@ exports[`Buttons should render examples: Buttons 6`] = `
 exports[`Buttons should render examples: Buttons 7`] = `
 "<div data-testid=\\"mountNode\\">
   <div class=\\"MuiGrid-root MuiGrid-container\\">
+    <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
+      <div class=\\"styles__Stack--s___22WMg\\">
+        <div>default</div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">primary<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\"><path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path><path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary MuiButton-outlinedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">secondary<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\"><path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path><path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary ghost  MuiButton-outlinedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">ghost<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\"><path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path><path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">text<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\"><path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path><path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path></svg></span></span></button></div>
+      </div>
+    </div>
+    <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
+      <div class=\\"styles__Stack--s___22WMg\\">
+        <div>inherit</div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">primary<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\"><path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path><path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary MuiButton-outlinedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">secondary<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\"><path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path><path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary ghost  MuiButton-outlinedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">ghost<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\"><path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path><path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-colorInherit MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">text<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\"><path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path><path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path></svg></span></span></button></div>
+      </div>
+    </div>
+    <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
+      <div class=\\"styles__Stack--s___22WMg\\">
+        <div>primary</div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">primary<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\"><path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path><path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary MuiButton-outlinedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">secondary<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\"><path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path><path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary ghost  MuiButton-outlinedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">ghost<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\"><path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path><path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">text<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\"><path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path><path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path></svg></span></span></button></div>
+      </div>
+    </div>
+    <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
+      <div class=\\"styles__Stack--s___22WMg\\">
+        <div>secondary</div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-contained customColor-primary MuiButton-containedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">primary<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\"><path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path><path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary MuiButton-outlinedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">secondary<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\"><path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path><path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-outlined customColor-primary ghost  MuiButton-outlinedPrimary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">ghost<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\"><path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path><path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path></svg></span></span></button></div>
+        <div><button class=\\"MuiButtonBase-root MuiButton-root MuiButton-text customColor-primary MuiButton-textSecondary MuiButton-disableElevation Mui-disabled Mui-disabled\\" tabindex=\\"-1\\" type=\\"button\\" disabled=\\"\\"><span class=\\"MuiButton-label\\">text<span class=\\"MuiButton-endIcon MuiButton-iconSizeMedium\\"><svg viewBox=\\"0 0 32 32\\" class=\\"styles__icon___23x3R styles__icon--spin___ybfC1\\" width=\\"16\\" height=\\"16\\" aria-hidden=\\"true\\" focusable=\\"false\\" role=\\"progressbar\\" aria-busy=\\"true\\"><path opacity=\\"0.25\\" d=\\"M16 0a16 16 0 000 32 16 16 0 000-32m0 4a12 12 0 010 24 12 12 0 010-24\\"></path><path d=\\"M16 0a16 16 0 0116 16h-4A12 12 0 0016 4z\\"></path></svg></span></span></button></div>
+      </div>
+    </div>
     <div class=\\"MuiGrid-root u-mb-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-3\\">
       <div class=\\"styles__Stack--s___22WMg\\">
         <div>success</div>
