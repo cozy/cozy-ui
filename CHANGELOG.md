@@ -1,3 +1,10 @@
+# [111.3.0](https://github.com/cozy/cozy-ui/compare/v111.2.0...v111.3.0) (2024-08-07)
+
+
+### Features
+
+* **Buttons:** Support now `default, inherit, secondary` color for Text variant ([b9af84a](https://github.com/cozy/cozy-ui/commit/b9af84a))
+
 # [111.2.0](https://github.com/cozy/cozy-ui/compare/v111.1.1...v111.2.0) (2024-07-25)
 
 
