@@ -8,6 +8,7 @@ import CozyClient, { CozyProvider } from 'cozy-client'
 
 import en from '../AppSections/locales/en.json'
 import I18n from '../providers/I18n'
+import { BreakpointsProvider } from '../providers/Breakpoints'
 
 import AppTile from '.'
 
@@ -42,9 +43,11 @@ const client = new CozyClient({})
 const Wrapper = props => {
   return (
     <CozyProvider client={client}>
-      <I18n dictRequire={() => en} lang="en">
-        <AppTile {...props} />
-      </I18n>
+      <BreakpointsProvider>
+        <I18n dictRequire={() => en} lang="en">
+          <AppTile {...props} />
+        </I18n>
+      </BreakpointsProvider>
     </CozyProvider>
   )
 }

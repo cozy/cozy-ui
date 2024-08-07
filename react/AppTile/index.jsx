@@ -108,9 +108,9 @@ export const AppTile = ({
         <TileTitle isMultiline={!statusLabel}>
           {namePrefix ? `${namePrefix} ${name}` : name}
         </TileTitle>
-        {(developer.name || app.metadata.source) && showDeveloper && (
+        {(developer.name || app.metadata?.source) && showDeveloper && (
           <TileSubtitle>{`${t('app_item.by')} ${
-            developer.name || app.metadata.source
+            developer.name || app.metadata?.source
           }`}</TileSubtitle>
         )}
         {statusToDisplay && (

@@ -9,5 +9,8 @@ export const getTranslatedManifestProperty = (app, path, t) => {
   })
 }
 
-export const isShortcutFile = app =>
-  app.type === APP_TYPE.FILE && app.class === APP_CLASS.SHORTCUT
+export const isShortcutFile = app => {
+  if (!app) return false
+
+  return app.type === APP_TYPE.FILE && app.class === APP_CLASS.SHORTCUT
+}
