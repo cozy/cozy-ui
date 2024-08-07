@@ -1,0 +1,56 @@
+name: Build and Deploy Cozy-ui
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+env:
+  ARGOS_TOKEN: ${{ secrets.ARGOS_TOKEN }}
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+      - name: Install packages
+        run: yarn install --frozen-lockfile --ignore-optional
+      - name: Lint
+        run: yarn lint
+      - name: Generate Sprite and Palette
+        run: yarn makeSpriteAndPalette
+      - name: Build JS
+        run: yarn build
+      - name: Build CSS
+        run: yarn build:css:all
+      - name: Build docs
+        run: |
+          yarn build:doc:react
+          yarn build:doc:kss
+      - name: Tests without snapshots
+        run: yarn test:noSnapshots
+      - name: Tests snapshots
+        run: yarn test:snapshots
+      # - name: Bundlemon
+      #   run: yarn bundlemon
+      - name: Argos - Prepare env
+        run: |
+          yarn add puppeteer@"21.11.0" --dev --exact
+          mkdir ./screenshots
+      - name: Argos - Create desktop screenshots
+        run: yarn screenshots --mode react --viewport desktop --screenshot-dir ./screenshots/reactDesktop
+      - name: Argos - Create mobile screenshots
+        run: yarn screenshots --mode react --viewport 300x600 --screenshot-dir ./screenshots/reactMobile
+      - name: Argos - Create kss screenshots
+        run: yarn screenshots --mode kss --screenshot-dir ./screenshots/kss
+      - name: Argos - Upload all screenshots
+        run: |
+          yarn argos:upload --parallel screenshots/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $GITHUB_RUN_ID --ignore ''
+          yarn argos:upload --parallel screenshots/reactMobile/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $GITHUB_RUN_ID --ignore ''
+          yarn argos:upload --parallel screenshots/kss/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $GITHUB_RUN_ID --ignore ''
+      - name: Deploy
+        if: ${{ github.ref_name == 'master' }}
+        run: |
+          yarn deploy:doc --username cozycloud --email contact@cozycloud.cc --repo https://cozy-bot:$GH_TOKEN@github.com/cozy/cozy-ui.git
+          yarn semantic-release
