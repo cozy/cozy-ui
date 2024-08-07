@@ -1,7 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import AppIcon from '../AppIcon'
-import PropTypes from 'prop-types'
 import Tile, {
   TileTitle,
   TileSubtitle,
@@ -9,9 +9,12 @@ import Tile, {
   TileIcon,
   TileDescription
 } from '../Tile'
+import { ShortcutTile } from '../ShortcutTile'
+import useBreakpoints from '../providers/Breakpoints'
 
 import { createUseI18n } from '../providers/I18n'
 import { AppDoctype } from '../proptypes'
+import { isShortcutFile } from '../AppSections/helpers.js'
 
 import { APP_STATUS, getCurrentStatusLabel } from './helpers'
 import styles from './styles.styl'
@@ -49,14 +52,32 @@ export const AppTile = ({
   IconComponent: IconComponentProp,
   displaySpecificMaintenanceStyle
 }) => {
-  const name = nameProp || app.name
+  // Destructure necessary properties
   const { t } = useI18n()
   const { developer = {} } = app
+  const { isMobile } = useBreakpoints()
+
+  // Determine the app name
+  const name = nameProp || app.name
+
+  // Get the current status label of the app
   const statusLabel = getCurrentStatusLabel(app)
-  const statusToDisplay = Array.isArray(showStatus)
-    ? showStatus.indexOf(statusLabel) > -1 && statusLabel
-    : showStatus && statusLabel
+
+  // Determine the status to display based on certain conditions
+  const isStatusArray = Array.isArray(showStatus)
+
+  // Adjusted the condition for determining statusToDisplay
+  const statusToDisplay =
+    isShortcutFile(app) && statusLabel === APP_STATUS.installed && isMobile
+      ? 'favorite'
+      : isStatusArray
+      ? showStatus.indexOf(statusLabel) > -1 && statusLabel
+      : showStatus && statusLabel
+
+  // Determine which IconComponent to use
   const IconComponent = IconComponentProp || AppIcon
+
+  // Check if the app is in maintenance with specific display style
   const isInMaintenanceWithSpecificDisplay =
     displaySpecificMaintenanceStyle && statusLabel === APP_STATUS.maintenance
 
@@ -66,18 +87,21 @@ export const AppTile = ({
       type="button"
       onClick={onClick}
       className={cx({
-        [styles[
-          'AppTile-container-maintenance'
-        ]]: isInMaintenanceWithSpecificDisplay
+        [styles['AppTile-container-maintenance']]:
+          isInMaintenanceWithSpecificDisplay
       })}
       isSecondary={statusLabel === APP_STATUS.installed}
     >
       <TileIcon>
-        <IconComponent
-          app={app}
-          className={styles['AppTile-icon']}
-          {...getAppIconProps()}
-        />
+        {isShortcutFile(app) ? (
+          <ShortcutTile file={app} />
+        ) : (
+          <IconComponent
+            app={app}
+            className={styles['AppTile-icon']}
+            {...getAppIconProps()}
+          />
+        )}
         {isInMaintenanceWithSpecificDisplay && (
           <Icon
             data-testid="icon-maintenance"
@@ -91,8 +115,10 @@ export const AppTile = ({
         <TileTitle isMultiline={!statusLabel}>
           {namePrefix ? `${namePrefix} ${name}` : name}
         </TileTitle>
-        {developer.name && showDeveloper && (
-          <TileSubtitle>{`${t('app_item.by')} ${developer.name}`}</TileSubtitle>
+        {(developer.name || app.metadata.source) && showDeveloper && (
+          <TileSubtitle>{`${t('app_item.by')} ${
+            developer.name || app.metadata.source
+          }`}</TileSubtitle>
         )}
         {statusToDisplay && (
           <TileFooter isAccent={statusLabel === APP_STATUS.update}>

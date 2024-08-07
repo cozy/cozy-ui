@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { withClient } from 'cozy-client'
-import styles from './styles.styl'
 
+import styles from './styles.styl'
 import Icon, { iconPropType } from '../Icon'
 import CubeIcon from '../Icons/Cube'
-
 import palette from '../palette'
-
+import { ShortcutTile } from '../ShortcutTile'
 import { AppDoctype } from '../proptypes'
+import { isShortcutFile } from '../AppSections/helpers'
 
 const DONE = 'done'
 const ERRORED = 'errored'
@@ -45,6 +45,9 @@ export class AppIcon extends Component {
 
   fetchIcon() {
     const { app, type, priority, client } = this.props
+
+    // Shortcut files used in cozy-store have their own icon in their doctype metadata
+    if (isShortcutFile(app)) return
 
     return client.getStackClient().getIconURL({
       type,
@@ -93,6 +96,10 @@ export class AppIcon extends Component {
   render() {
     const { alt, className, fallbackIcon } = this.props
     const { icon, status } = this.state
+
+    if (this.props.app?.class === 'shortcut') {
+      return <ShortcutTile file={this.props.app} />
+    }
 
     switch (status) {
       case FETCHING:
