@@ -52,21 +52,16 @@ export const AppTile = ({
   IconComponent: IconComponentProp,
   displaySpecificMaintenanceStyle
 }) => {
-  // Destructure necessary properties
   const { t } = useI18n()
   const { developer = {} } = app
   const { isMobile } = useBreakpoints()
 
-  // Determine the app name
   const name = nameProp || app.name
 
-  // Get the current status label of the app
   const statusLabel = getCurrentStatusLabel(app)
 
-  // Determine the status to display based on certain conditions
   const isStatusArray = Array.isArray(showStatus)
 
-  // Adjusted the condition for determining statusToDisplay
   const statusToDisplay =
     isShortcutFile(app) && statusLabel === APP_STATUS.installed && isMobile
       ? 'favorite'
@@ -74,10 +69,8 @@ export const AppTile = ({
       ? showStatus.indexOf(statusLabel) > -1 && statusLabel
       : showStatus && statusLabel
 
-  // Determine which IconComponent to use
   const IconComponent = IconComponentProp || AppIcon
 
-  // Check if the app is in maintenance with specific display style
   const isInMaintenanceWithSpecificDisplay =
     displaySpecificMaintenanceStyle && statusLabel === APP_STATUS.maintenance
 

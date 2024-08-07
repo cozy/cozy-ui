@@ -97,7 +97,7 @@ export class AppIcon extends Component {
     const { alt, className, fallbackIcon } = this.props
     const { icon, status } = this.state
 
-    if (this.props.app?.class === 'shortcut') {
+    if (isShortcutFile(this.props.app)) {
       return <ShortcutTile file={this.props.app} />
     }
 
