@@ -86,7 +86,7 @@ const DateMonthPicker = ({ initialValue, onSelect }) => {
   )
 }
 
-const dateMonthProp = function(props, propName, componentName) {
+const dateMonthProp = function (props, propName, componentName) {
   if (!/^[0-9]{4}-[0-9]{2}$/.test(props[propName])) {
     return new Error(
       'Invalid prop `' +

@@ -27,8 +27,9 @@ const withOnlyLocales = localesOrRequire => Component => {
     ...(Component.propTypes || {})
   }
 
-  Wrapped.displayName = `withOnlyLocales(${Component.displayName ||
-    Component.name})`
+  Wrapped.displayName = `withOnlyLocales(${
+    Component.displayName || Component.name
+  })`
 
   return Wrapped
 }

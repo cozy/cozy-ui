@@ -23,10 +23,10 @@ const ActionsItems = forwardRef(
     const webviewIntent = useWebviewIntent()
     const { t } = useI18n()
 
-    const cleanedActions = useMemo(() => getOnlyNeededActions(actions, docs), [
-      actions,
-      docs
-    ])
+    const cleanedActions = useMemo(
+      () => getOnlyNeededActions(actions, docs),
+      [actions, docs]
+    )
 
     return cleanedActions.map((actionObject, idx) => {
       const actionName = getActionName(actionObject)

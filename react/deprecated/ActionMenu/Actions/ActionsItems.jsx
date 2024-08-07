@@ -6,10 +6,10 @@ import { getActionName, getOnlyNeededActions } from './helpers'
 
 const ActionsItems = ({ doc, actions, isLast, setIsRenaming, onClose }) => {
   const { t } = useI18n()
-  const cleanedActions = useMemo(() => getOnlyNeededActions(actions, doc), [
-    actions,
-    doc
-  ])
+  const cleanedActions = useMemo(
+    () => getOnlyNeededActions(actions, doc),
+    [actions, doc]
+  )
 
   return cleanedActions.map((actionObject, idx) => {
     const actionName = getActionName(actionObject)

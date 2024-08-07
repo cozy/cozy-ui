@@ -208,7 +208,4 @@ PdfJsViewer.propTypes = {
   renderFallbackExtraContent: PropTypes.func
 }
 
-export default flow(
-  withFileUrl,
-  withViewerLocales
-)(PdfJsViewer)
+export default flow(withFileUrl, withViewerLocales)(PdfJsViewer)

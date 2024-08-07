@@ -45,9 +45,8 @@ const DumbCozyTheme = ({
       <MuiCozyTheme type={selfThemeType} variant={selfThemeVariant}>
         <div
           className={cx(className, {
-            [`CozyTheme--${selfThemeType}-${selfThemeVariant}`]: Boolean(
-              selfThemeVariant
-            ),
+            [`CozyTheme--${selfThemeType}-${selfThemeVariant}`]:
+              Boolean(selfThemeVariant),
             'u-dc': ignoreItself
           })}
         >

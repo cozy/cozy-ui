@@ -8,8 +8,6 @@ export {
   reactSelectControl
 } from './SelectBox'
 
-export {
-  default as SelectBoxWithFixedOptions
-} from './SelectBoxWithFixedOptions'
+export { default as SelectBoxWithFixedOptions } from './SelectBoxWithFixedOptions'
 
 export { default as ControlDefault } from './ControlDefault'

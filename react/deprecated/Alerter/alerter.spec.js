@@ -17,12 +17,7 @@ describe('Alerter component', () => {
     it(`renders correctly an ${type} alert`, () => {
       const wrapper = shallow(<Alerter />)
       Alerter[type](`Test ${type} alert`)
-      expect(
-        wrapper
-          .find(Alert)
-          .dive()
-          .getElement()
-      ).toMatchSnapshot()
+      expect(wrapper.find(Alert).dive().getElement()).toMatchSnapshot()
     })
   })
 
@@ -39,12 +34,7 @@ describe('Alerter component', () => {
     Alerter.info(`Test alert with button`, {
       buttonText: 'BTN'
     })
-    expect(
-      wrapper
-        .find(Alert)
-        .dive()
-        .getElement()
-    ).toMatchSnapshot()
+    expect(wrapper.find(Alert).dive().getElement()).toMatchSnapshot()
   })
 
   it('handles dismiss provided to buttonAction', () => {
@@ -64,10 +54,7 @@ describe('Alerter component', () => {
     // we have to wait the same delay as in the Alerter didMount
     setTimeout(() => {
       expect(alert.state('hidden')).toBe(false)
-      alert
-        .children()
-        .find(Button)
-        .simulate('click')
+      alert.children().find(Button).simulate('click')
       expect(alert.state('hidden')).toBe(true)
     }, 20)
   })

@@ -20,10 +20,7 @@ export const createNodeWithThemeCssVars = (type, variant) => {
 const realGetCssVariableValue = (varName, type, variant) => {
   const node = getNodeWithThemeCssVars(type, variant)
 
-  return window
-    .getComputedStyle(node)
-    .getPropertyValue(`--${varName}`)
-    .trim()
+  return window.getComputedStyle(node).getPropertyValue(`--${varName}`).trim()
 }
 
 export const getCssVariableValue = (varName, type, variant) =>

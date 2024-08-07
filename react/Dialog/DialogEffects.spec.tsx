@@ -29,7 +29,13 @@ const rootModal = document.createElement('div')
 const rootModalColor = 'rgba(29, 33, 42, 0.9)'
 rootModal.style.color = rootModalColor
 
-const Wrapper = ({ open, service }) => {
+const Wrapper = ({
+  open,
+  service
+}: {
+  open?: boolean
+  service: WebviewService
+}): JSX.Element => {
   return (
     <WebviewIntentProvider webviewService={service}>
       <DemoProvider>

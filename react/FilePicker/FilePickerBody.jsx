@@ -22,10 +22,11 @@ const FilePickerBody = ({
   multiple
 }) => {
   const contentFolderQuery = buildContentFolderQuery(folderId)
-  const { data: contentFolder, hasMore, fetchMore } = useQuery(
-    contentFolderQuery.definition,
-    contentFolderQuery.options
-  )
+  const {
+    data: contentFolder,
+    hasMore,
+    fetchMore
+  } = useQuery(contentFolderQuery.definition, contentFolderQuery.options)
 
   const onCheck = useCallback(
     itemId => {

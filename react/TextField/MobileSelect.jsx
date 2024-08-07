@@ -31,11 +31,13 @@ const MobileSelect = forwardRef(
       onClick?.()
     }
 
-    const handleItemClick = ({ value, children, onClick }) => ev => {
-      onClick?.(merge({}, ev, { target: { value } }))
-      setState({ label: children, value })
-      onChange?.({ target: { value } })
-    }
+    const handleItemClick =
+      ({ value, children, onClick }) =>
+      ev => {
+        onClick?.(merge({}, ev, { target: { value } }))
+        setState({ label: children, value })
+        onChange?.({ target: { value } })
+      }
 
     const handleClose = () => {
       setShowDrawer(false)

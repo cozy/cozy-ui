@@ -7,10 +7,8 @@ import { makeSizeAndThickness } from './helpers'
 
 const CircularChart = forwardRef(
   ({ size, primaryProps, secondaryProps, children, ...props }, ref) => {
-    const {
-      primarySizeAndThickness,
-      secondarySizeAndThickness
-    } = makeSizeAndThickness(size, Boolean(secondaryProps))
+    const { primarySizeAndThickness, secondarySizeAndThickness } =
+      makeSizeAndThickness(size, Boolean(secondaryProps))
 
     return (
       <Box
