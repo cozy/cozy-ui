@@ -26,10 +26,15 @@
     "tech": "Tech",
     "telecom": "Mobile",
     "transport": "Voyage et transport",
-    "pro": "Travail"
+    "pro": "Travail",
+    "alternativeStore": "Applications Toutatice",
+    "espaces": "Espaces",
+    "info": "Info",
+    "shortcuts": "Raccourcis"
   },
   "sections": {
     "applications": "Applications",
-    "konnectors": "Services"
+    "konnectors": "Services",
+    "shortcuts": "Raccourcis"
   }
 }

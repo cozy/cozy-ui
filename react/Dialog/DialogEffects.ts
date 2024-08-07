@@ -43,8 +43,7 @@ export const makeOnMount = ({
   fullscreen,
   sidebar,
   rootModal,
-  theme,
-  isLight
+  theme
 }: DialogEffectsOptions): FlagshipUI => {
   const hasBottomBackground = !rootModal
   const hasTopBackground = cozybar && !rootModal

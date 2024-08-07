@@ -30,16 +30,19 @@ export const NavLink = {
 }
 
 // Generates a styled NavLink for react-routeur v5 and older
-export const genNavLink = RRNavLink => ({ to, children, ...rest }) => (
-  <RRNavLink
-    to={to}
-    className={NavLink.className}
-    activeClassName={NavLink.activeClassName}
-    {...rest}
-  >
-    {children}
-  </RRNavLink>
-)
+export const genNavLink =
+  RRNavLink =>
+  ({ to, children, ...rest }) =>
+    (
+      <RRNavLink
+        to={to}
+        className={NavLink.className}
+        activeClassName={NavLink.activeClassName}
+        {...rest}
+      >
+        {children}
+      </RRNavLink>
+    )
 
 // Generates a styled NavLink for react-routeur v6
 export const genNavLinkForV6 = RRNavLink =>

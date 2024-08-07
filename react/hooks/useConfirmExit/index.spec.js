@@ -30,14 +30,16 @@ expect.extend({
     ) {
       return {
         pass: true,
-        message: `expected ${typeof received} should be a function where arguments ${received &&
-          received.length} should be at least ${number}`
+        message: `expected ${typeof received} should be a function where arguments ${
+          received && received.length
+        } should be at least ${number}`
       }
     } else {
       return {
         pass: true,
-        message: `expected ${typeof received} should not be a function or where arguments ${received &&
-          received.length} should be less than ${number}`
+        message: `expected ${typeof received} should not be a function or where arguments ${
+          received && received.length
+        } should be less than ${number}`
       }
     }
   }

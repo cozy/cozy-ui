@@ -81,10 +81,10 @@ const ActionsBar = ({
   const showDesktopCloseButton = !!onClose && !isMobile
   const maxActionsDisplayed = isMobile ? 4 : maxDesktopActions
 
-  const cleanedActions = useMemo(() => getOnlyNeededActions(actions, docs), [
-    actions,
-    docs
-  ])
+  const cleanedActions = useMemo(
+    () => getOnlyNeededActions(actions, docs),
+    [actions, docs]
+  )
 
   const countActionsToDisplay =
     cleanedActions.length > maxActionsDisplayed

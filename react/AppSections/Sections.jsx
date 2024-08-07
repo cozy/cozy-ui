@@ -12,6 +12,7 @@ import DropdownFilter from './components/DropdownFilter'
 import { APP_TYPE } from './constants'
 import * as searchUtils from './search'
 import * as catUtils from './categories'
+import { isShortcutFile } from './helpers'
 
 import styles from './Sections.styl'
 
@@ -109,10 +110,17 @@ export class Sections extends Component {
     const webAppGroups = catUtils.groupApps(
       filteredApps.filter(a => a.type === APP_TYPE.WEBAPP)
     )
+    const shortcutsGroups = catUtils.groupApps(
+      filteredApps.filter(a => isShortcutFile(a))
+    )
+
     const webAppsCategories = Object.keys(webAppGroups)
       .map(cat => catUtils.addLabel({ value: cat }, t))
       .sort(catUtils.sorter)
     const konnectorsCategories = Object.keys(konnectorGroups)
+      .map(cat => catUtils.addLabel({ value: cat }, t))
+      .sort(catUtils.sorter)
+    const shortcutsCategories = Object.keys(shortcutsGroups)
       .map(cat => catUtils.addLabel({ value: cat }, t))
       .sort(catUtils.sorter)
 
@@ -150,6 +158,31 @@ export class Sections extends Component {
                     subtitle={<SectionSubtitle>{cat.label}</SectionSubtitle>}
                     onAppClick={onAppClick}
                     IconComponent={IconComponent}
+                    displaySpecificMaintenanceStyle={
+                      displaySpecificMaintenanceStyle
+                    }
+                  />
+                )
+              })}
+            </div>
+          )}
+          {!!shortcutsCategories.length && (
+            <div>
+              <SectionSubtitle>{t('sections.shortcuts')}</SectionSubtitle>
+
+              {shortcutsCategories.map(cat => {
+                return (
+                  <AppsSection
+                    key={cat.value}
+                    {...componentsProps?.appsSection}
+                    appsList={shortcutsGroups[cat.value]}
+                    subtitle={
+                      showSubSubTitles ? (
+                        <SectionSubSubtitle>{cat.label}</SectionSubSubtitle>
+                      ) : null
+                    }
+                    IconComponent={IconComponent}
+                    onAppClick={onAppClick}
                     displaySpecificMaintenanceStyle={
                       displaySpecificMaintenanceStyle
                     }

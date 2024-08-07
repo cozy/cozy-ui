@@ -1,4 +1,9 @@
 export const APP_TYPE = {
   KONNECTOR: 'konnector',
-  WEBAPP: 'webapp'
+  WEBAPP: 'webapp',
+  FILE: 'file'
+}
+
+export const APP_CLASS = {
+  SHORTCUT: 'shortcut'
 }
