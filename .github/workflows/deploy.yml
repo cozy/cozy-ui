@@ -21,16 +21,8 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Lint
         run: yarn lint
-      - name: Generate Sprite and Palette
-        run: yarn makeSpriteAndPalette
-      - name: Build JS
-        run: yarn build
-      - name: Build CSS
-        run: yarn build:css:all
-      - name: Build docs
-        run: |
-          yarn build:doc:react
-          yarn build:doc:kss
+      - name: Build JS/CSS/DOCS
+        run: yarn build:all
       - name: Tests without snapshots
         run: yarn test:noSnapshots
       - name: Tests snapshots
