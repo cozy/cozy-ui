@@ -21,6 +21,7 @@ remark -o --use remark-jscodeshift=allowNoLang:true,transform:\"codemods/transfo
 
 ```bash
 # Screenshot all the components
+yarn add puppeteer@"21.11.0" -DE
 yarn build:all
 mkdir ./screenshots
 yarn screenshots
