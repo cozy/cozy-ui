@@ -98,7 +98,7 @@ jobs:
       script: |
         if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
           mkdir ./screenshots
-          yarn add puppeteer@"21.11.0" --dev --exact
+          yarn add puppeteer@"21.11.0" --dev --exact --no-lockfile
           yarn screenshots --mode react --viewport desktop --screenshot-dir ./screenshots/reactDesktop
         fi
       workspaces:
@@ -116,7 +116,7 @@ jobs:
       script: |
         if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
           mkdir ./screenshots
-          yarn add puppeteer@"21.11.0" --dev --exact
+          yarn add puppeteer@"21.11.0" --dev --exact --no-lockfile
           yarn screenshots --mode react --viewport 300x600 --screenshot-dir ./screenshots/reactMobile
         fi
       workspaces:
@@ -134,7 +134,7 @@ jobs:
       script: |
         if [[ "${PR_TITLE}" != *"[skip argos]"* ]]; then
           mkdir ./screenshots
-          yarn add puppeteer@"21.11.0" --dev --exact
+          yarn add puppeteer@"21.11.0" --dev --exact --no-lockfile
           yarn screenshots --mode kss --screenshot-dir ./screenshots/kss
         fi
       workspaces:
