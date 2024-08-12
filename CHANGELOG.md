@@ -1,3 +1,10 @@
+## [111.3.1](https://github.com/cozy/cozy-ui/compare/v111.3.0...v111.3.1) (2024-08-12)
+
+
+### Bug Fixes
+
+* We moved unnecessarily `puppeteer` from devDep to dep ([cc024b9](https://github.com/cozy/cozy-ui/commit/cc024b9))
+
 # [111.3.0](https://github.com/cozy/cozy-ui/compare/v111.2.0...v111.3.0) (2024-08-07)
 
 
