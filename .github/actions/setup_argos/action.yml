@@ -1,0 +1,20 @@
+name: "Setup Argos"
+
+runs:
+  using: "composite"
+  steps:
+    - uses: ./.github/actions/setup_modules
+    - name: Cache puppeteer
+      id: cache-node-modules-puppeteer
+      uses: actions/cache@v4
+      env:
+        cache-name: cache-node-modules-puppeteer
+      with:
+        path: |
+          ${{ github.workspace }}/node_modules
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('yarn.lock') }}
+    - name: Argos - Prepare env
+      if: ${{ steps.cache-node-modules-puppeteer.outputs.cache-hit != 'true' }}
+      shell: bash
+      run: |
+        yarn add puppeteer@"22.15.0" --dev --exact
