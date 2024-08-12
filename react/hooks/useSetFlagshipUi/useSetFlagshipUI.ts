@@ -1,8 +1,8 @@
-import { useEffect } from 'react'
-import pickBy from 'lodash/pickBy'
 import identity from 'lodash/identity'
 import isEmpty from 'lodash/isEmpty'
 import isObject from 'lodash/isObject'
+import pickBy from 'lodash/pickBy'
+import { useEffect } from 'react'
 
 import { useWebviewIntent } from 'cozy-intent'
 import { FlagshipUI as IntentInterface } from 'cozy-intent/dist/api/models/applications'
@@ -32,7 +32,7 @@ export const parseArg = (
 
   if (!webviewIntent) return
 
-  validUI && webviewIntent.call('setFlagshipUI', validUI, caller)
+  validUI && void webviewIntent.call('setFlagshipUI', validUI, caller)
 }
 
 export const useSetFlagshipUI = (
