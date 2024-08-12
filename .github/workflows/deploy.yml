@@ -1,34 +1,34 @@
-# name: Build and Deploy Cozy-ui
-# on:
-#   push:
-#     branches: [ master ]
-#   pull_request:
-# env:
-#   ARGOS_TOKEN: ${{ secrets.ARGOS_TOKEN }}
-#   GH_TOKEN: ${{ secrets.GH_TOKEN }}
-#   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v4
-#         with:
-#           persist-credentials: false
-#       - uses: actions/setup-node@v4
-#         with:
-#           node-version-file: '.nvmrc'
-#       - name: Install packages
-#         run: yarn install --frozen-lockfile
-#       - name: Lint
-#         run: yarn lint
-#       - name: Build JS/CSS/DOCS
-#         run: yarn build:all
-#       - name: Tests without snapshots
-#         run: yarn test:noSnapshots
-#       - name: Tests snapshots
-#         run: yarn test:snapshots
-      # - name: Bundlemon
-      #   run: yarn bundlemon
+name: Build and Deploy Cozy-ui
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+env:
+  ARGOS_TOKEN: ${{ secrets.ARGOS_TOKEN }}
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+      # - name: Install packages
+      #   run: yarn install --frozen-lockfile
+      # - name: Lint
+      #   run: yarn lint
+      # - name: Build JS/CSS/DOCS
+      #   run: yarn build:all
+      # - name: Tests without snapshots
+      #   run: yarn test:noSnapshots
+      # - name: Tests snapshots
+      #   run: yarn test:snapshots
+      # # - name: Bundlemon
+      # #   run: yarn bundlemon
       # - name: Argos - Prepare env
       #   run: |
       #     yarn add puppeteer@"21.11.0" --dev --exact
