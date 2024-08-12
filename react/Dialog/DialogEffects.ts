@@ -4,13 +4,13 @@ import { useEffect } from 'react'
 import { isFlagshipApp } from 'cozy-device-helper'
 import { useWebviewIntent } from 'cozy-intent'
 
+import { getFlagshipMetadata } from '../hooks/useSetFlagshipUi/helpers'
+import { isRsg } from '../hooks/useSetFlagshipUi/helpers'
 import {
   FlagshipUI,
   ThemeColor,
   parseArg
 } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
-import { getFlagshipMetadata } from '../hooks/useSetFlagshipUi/helpers'
-import { isRsg } from '../hooks/useSetFlagshipUi/helpers'
 import { useCozyTheme } from '../providers/CozyTheme'
 
 interface DialogEffectsOptions {
@@ -43,8 +43,7 @@ export const makeOnMount = ({
   fullscreen,
   sidebar,
   rootModal,
-  theme,
-  isLight
+  theme
 }: DialogEffectsOptions): FlagshipUI => {
   const hasBottomBackground = !rootModal
   const hasTopBackground = cozybar && !rootModal
@@ -184,7 +183,7 @@ export const useDialogSetFlagshipUI = (
        *
        * Note that this will also handle abrupt unmounting, as in hiding the dialog without using the open prop.
        */
-      if (open === false || open === undefined) return
+      if (!open || open === undefined) return
 
       parseArg(
         webviewIntent,

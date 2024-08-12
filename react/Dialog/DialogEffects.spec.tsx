@@ -1,14 +1,14 @@
 import '@testing-library/jest-dom'
-import React from 'react'
 import { Theme } from '@material-ui/core'
 import { render } from '@testing-library/react'
+import React from 'react'
 
 import { WebviewIntentProvider, WebviewService } from 'cozy-intent'
 
 import Dialog from '.'
-import DemoProvider from '../providers/DemoProvider'
 import { DOMStrings, makeOnMount, makeOnUnmount } from './DialogEffects'
 import { ThemeColor } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import DemoProvider from '../providers/DemoProvider'
 
 const theme = {
   palette: {
@@ -29,7 +29,13 @@ const rootModal = document.createElement('div')
 const rootModalColor = 'rgba(29, 33, 42, 0.9)'
 rootModal.style.color = rootModalColor
 
-const Wrapper = ({ open, service }) => {
+const Wrapper = ({
+  open,
+  service
+}: {
+  open?: boolean
+  service: WebviewService
+}): JSX.Element => {
   return (
     <WebviewIntentProvider webviewService={service}>
       <DemoProvider>
@@ -269,7 +275,7 @@ it('should emit onMount() immediately and onUnmount() when the whole tree is del
   const caller = jest.fn<void, unknown[]>()
   const service = {
     call: (...args: unknown[]): void => caller(...args)
-  } as WebviewService
+  } as unknown as WebviewService
 
   const { unmount } = render(<Wrapper service={service} open={true} />)
 
@@ -294,7 +300,7 @@ it('should emit onMount() immediately and onUnmount() when Dialog is deleted fro
   const caller = jest.fn<void, unknown[]>()
   const service = {
     call: (...args: unknown[]): void => caller(...args)
-  } as WebviewService
+  } as unknown as WebviewService
 
   const { rerender } = render(<Wrapper service={service} open={true} />)
 
@@ -321,7 +327,7 @@ it('should not emit onMount() if mounted as open:false, then emit onMount() on o
   const caller = jest.fn<void, unknown[]>()
   const service = {
     call: (...args: unknown[]): void => caller(...args)
-  } as WebviewService
+  } as unknown as WebviewService
 
   const { rerender, unmount } = render(
     <Wrapper service={service} open={false} />
@@ -393,7 +399,7 @@ it('when provided with a faulty <Dialog /> that has no open prop, and then fixed
   const caller = jest.fn<void, unknown[]>()
   const service = {
     call: (...args: unknown[]): void => caller(...args)
-  } as WebviewService
+  } as unknown as WebviewService
 
   const { rerender, unmount } = render(<Wrapper service={service} />)
 

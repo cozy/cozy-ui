@@ -1,5 +1,5 @@
-import React from 'react'
 import { fireEvent, render } from '@testing-library/react'
+import React from 'react'
 
 import QualificationListItemInformation from './QualificationListItemInformation'
 
@@ -30,6 +30,7 @@ describe('QualificationListItemInformation', () => {
 
       expect(getByText('No information'))
     })
+    // eslint-disable-next-line jest/no-focused-tests
     it.only('should display current value if it is truthy', () => {
       const formattedMetadataQualification = {
         name: 'country',

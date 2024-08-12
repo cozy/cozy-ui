@@ -1,5 +1,4 @@
 // eslint-disable-next-line no-unused-vars
-import { FlagshipUI } from './useSetFlagshipUI'
 import { getFlagshipMetadata as getFlagshipMetadataFromDeviceHelper } from 'cozy-device-helper'
 
 /**

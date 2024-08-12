@@ -1,13 +1,12 @@
-import React from 'react'
 import cx from 'classnames'
+import React from 'react'
 
-import Button from '../deprecated/Button'
+import styles from './styles.styl'
 import Icon from '../Icon'
 import CloudIcon from '../Icons/Cloud'
 import Input from '../Input'
 import Typography from '../Typography'
-
-import styles from './styles.styl'
+import Button from '../deprecated/Button'
 
 export const Wizard = ({ children, tag, ...props }) => {
   const Component = tag || 'div'
@@ -73,6 +72,7 @@ export const WizardLogo = ({ src, badgeIcon, badgeColor }) => (
       src={src}
       alt=""
       aria-hidden="true"
+      // eslint-disable-next-line react/no-unknown-property
       focusable="false"
     />
     <div className={styles['wizard-logo-badge']}>
