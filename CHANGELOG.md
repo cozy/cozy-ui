@@ -1,3 +1,10 @@
+# [111.4.0](https://github.com/cozy/cozy-ui/compare/v111.3.1...v111.4.0) (2024-08-12)
+
+
+### Features
+
+* Simplify CI ([4c4badd](https://github.com/cozy/cozy-ui/commit/4c4badd))
+
 ## [111.3.1](https://github.com/cozy/cozy-ui/compare/v111.3.0...v111.3.1) (2024-08-12)
 
 
