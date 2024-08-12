@@ -199,8 +199,5 @@
   },
   "browserslist": [
     "extends browserslist-config-cozy"
-  ],
-  "optionalDependencies": {
-    "puppeteer": "21.11.0"
-  }
+  ]
 }
