@@ -137,7 +137,3 @@ export { default as AlertProvider, useAlert } from './Alert'
 export { default as Modal } from './Modal'
 export { ListSkeleton, ListItemSkeleton } from './Skeletons'
 export { default as ActionsBar } from './ActionsBar'
-
-console.log(' ')
-console.log('AHAH')
-console.log(' ')

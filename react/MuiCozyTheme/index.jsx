@@ -4,6 +4,10 @@ import PropTypes from 'prop-types'
 import { ThemeProvider } from '../styles'
 import { getTheme } from './theme'
 
+console.log(' ')
+console.log('🟢 BUILDED FROM LOCAL')
+console.log(' ')
+
 const MuiCozyTheme = ({ type, variant, children }) => {
   const theme = getTheme(type, variant)
 
