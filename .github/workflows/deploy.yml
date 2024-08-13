@@ -29,26 +29,26 @@ jobs:
         run: yarn test:snapshots
       # - name: Bundlemon
       #   run: yarn bundlemon
-      - name: Restore CSS
-        run: yarn postbuild
-      - name: Argos - Prepare env
-        run: |
-          yarn add puppeteer@"21.11.0" --dev --exact --no-lockfile
-          mkdir ./screenshots
-      - name: Argos - Create desktop screenshots
-        run: yarn screenshots --mode react --viewport desktop --screenshot-dir ./screenshots/reactDesktop
-      - name: Argos - Create mobile screenshots
-        run: yarn screenshots --mode react --viewport 300x600 --screenshot-dir ./screenshots/reactMobile
-      - name: Argos - Create kss screenshots
-        run: yarn screenshots --mode kss --screenshot-dir ./screenshots/kss
-      - name: Argos - Upload all screenshots
-        run: |
-          UUID=$(uuidgen)
-          yarn argos:upload --parallel screenshots/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $GITHUB_RUN_ID-${UUID} --ignore ''
-          yarn argos:upload --parallel screenshots/reactMobile/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $GITHUB_RUN_ID-${UUID} --ignore ''
-          yarn argos:upload --parallel screenshots/kss/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $GITHUB_RUN_ID-${UUID} --ignore ''
+      # - name: Restore CSS
+      #   run: yarn postbuild
+      # - name: Argos - Prepare env
+      #   run: |
+      #     yarn add puppeteer@"21.11.0" --dev --exact --no-lockfile
+      #     mkdir ./screenshots
+      # - name: Argos - Create desktop screenshots
+      #   run: yarn screenshots --mode react --viewport desktop --screenshot-dir ./screenshots/reactDesktop
+      # - name: Argos - Create mobile screenshots
+      #   run: yarn screenshots --mode react --viewport 300x600 --screenshot-dir ./screenshots/reactMobile
+      # - name: Argos - Create kss screenshots
+      #   run: yarn screenshots --mode kss --screenshot-dir ./screenshots/kss
+      # - name: Argos - Upload all screenshots
+      #   run: |
+      #     UUID=$(uuidgen)
+      #     yarn argos:upload --parallel screenshots/reactDesktop/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $GITHUB_RUN_ID-${UUID} --ignore ''
+      #     yarn argos:upload --parallel screenshots/reactMobile/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $GITHUB_RUN_ID-${UUID} --ignore ''
+      #     yarn argos:upload --parallel screenshots/kss/ --token $ARGOS_TOKEN  --parallel-total 3 --parallel-nonce $GITHUB_RUN_ID-${UUID} --ignore ''
       - name: Deploy
         # if: ${{ github.ref_name == 'master' }}
         # yarn deploy:doc --username cozycloud --email contact@cozycloud.cc --repo https://cozy-bot:$GH_TOKEN@github.com/cozy/cozy-ui.git
         # yarn semantic-release
-        run: git-directory-deploy --directory ./ --branch build-jf --repo origin
+        run: yarn git-directory-deploy --directory ./ --branch build-jf --username cozycloud --email contact@cozycloud.cc --repo https://cozy-bot:$GH_TOKEN@github.com/cozy/cozy-ui.git
