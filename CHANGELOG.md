@@ -1,3 +1,10 @@
+# [111.5.0](https://github.com/cozy/cozy-ui/compare/v111.4.0...v111.5.0) (2024-08-13)
+
+
+### Features
+
+* Reuse travis again since we have build problem with GA ([ebcb925](https://github.com/cozy/cozy-ui/commit/ebcb925))
+
 # [111.4.0](https://github.com/cozy/cozy-ui/compare/v111.3.1...v111.4.0) (2024-08-12)
 
 
