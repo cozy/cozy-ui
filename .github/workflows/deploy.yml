@@ -29,8 +29,8 @@ jobs:
         run: yarn test:snapshots
       # - name: Bundlemon
       #   run: yarn bundlemon
-      # - name: Restore CSS
-      #   run: yarn postbuild
+      - name: Restore CSS
+        run: yarn postbuild
       # - name: Argos - Prepare env
       #   run: |
       #     yarn add puppeteer@"21.11.0" --dev --exact --no-lockfile

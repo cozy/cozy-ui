@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from "cozy-ui/transpiled/react/styles";
 import { getTheme } from "cozy-ui/transpiled/react/MuiCozyTheme/theme";
 console.log(' ');
-console.log('🟢 BUILDED FROM GA - should be wrong');
+console.log('🟢 BUILDED FROM GA - should be right');
 console.log(' ');
 
 var MuiCozyTheme = function MuiCozyTheme(_ref) {

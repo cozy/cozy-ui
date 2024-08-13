@@ -5,7 +5,7 @@ import { ThemeProvider } from '../styles'
 import { getTheme } from './theme'
 
 console.log(' ')
-console.log('🟢 BUILDED FROM GA - should be wrong')
+console.log('🟢 BUILDED FROM GA - should be right')
 console.log(' ')
 
 const MuiCozyTheme = ({ type, variant, children }) => {
