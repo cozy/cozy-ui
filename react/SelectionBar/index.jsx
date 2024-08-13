@@ -1,18 +1,19 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
-import { useTheme } from '@mui/material'
+import { useTheme } from '@material-ui/core'
 
 import { useWebviewIntent } from 'cozy-intent'
 
-import { useI18n } from '../I18n'
+import { useI18n } from '../providers/I18n'
 import Icon from '../Icon'
 import IconButton from '../IconButton'
 import CrossIcon from '../Icons/Cross'
-import Button from '../MuiCozyTheme/Buttons'
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
 
 import styles from './styles.styl'
+import SelectionBarAction from './SelectionBarAction'
+import SelectionBarMore from './SelectionBarMore'
+import useMaxActions from './useMaxActions'
 
 /*
 
@@ -31,18 +32,46 @@ actions = {
 
 */
 
-const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
+/**
+ * @deprecated This component is depreacated, please use [ActionsBar](#/ActionsBar) instead.
+ */
+const SelectionBar = ({
+  actions,
+  selected,
+  hideSelectionBar,
+  maxAction = {
+    isHuge: 6,
+    isLarge: 5,
+    isMedium: 8,
+    isSmall: 8,
+    isTiny: 3
+  }
+}) => {
+  console.warn(
+    '<SelectionBar /> is deprecated, please use <ActionsBar /> instead'
+  )
+
   const { t } = useI18n()
-  const { isDesktop } = useBreakpoints()
-  const selectedCount = selected.length
-  const actionNames = Object.keys(actions).filter(actionName => {
-    const action = actions[actionName]
-    return (
-      action.displayCondition === undefined || action.displayCondition(selected)
-    )
-  })
   const webviewIntent = useWebviewIntent()
   const theme = useTheme()
+  const breakpoints = useBreakpoints()
+
+  const selectedCount = selected.length
+
+  const actionList = Object.keys(actions)
+    .filter(actionName => {
+      const action = actions[actionName]
+      return (
+        action.displayCondition === undefined ||
+        action.displayCondition(selected)
+      )
+    })
+    .map(actionName => ({
+      name: actionName,
+      ...actions[actionName]
+    }))
+
+  const maxActionDisplayed = useMaxActions(maxAction)
 
   // This component is always rendered but hidden with CSS if there is no selection
   // That is why we do not use useSetFlagship API here because that hook can not accept changing values
@@ -89,60 +118,33 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
         className={styles['SelectionBar-count']}
       >
         {selectedCount}
-        <span>
-          {' '}
-          {t('SelectionBar.selected_count', { smart_count: selectedCount })}
-        </span>
+        {!breakpoints.isMobile && (
+          <span>
+            {' '}
+            {t('SelectionBar.selected_count', { smart_count: selectedCount })}
+          </span>
+        )}
       </span>
-      <span className={styles['SelectionBar-separator']} />
-      {actionNames.map((actionName, index) =>
-        isDesktop ? (
-          <Button
-            data-testid={`selectionBar-action-${actionName}`}
-            className={cx(
-              styles['SelectionBar-action'],
-              styles['SelectionBar-action--withLabel']
-            )}
-            variant="text"
-            key={index}
-            disabled={
-              actions[actionName].disabled === undefined
-                ? selectedCount < 1 // to avoid breaking change
-                : actions[actionName].disabled(selected)
-            }
-            onClick={() => actions[actionName].action(selected)}
-            startIcon={
-              <Icon
-                icon={actions[actionName].icon || actionName.toLowerCase()}
-              />
-            }
-          >
-            {t('SelectionBar.' + actionName)}
-          </Button>
-        ) : (
-          <IconButton
-            data-testid={`selectionBar-action-${actionName}`}
-            className={styles['SelectionBar-action']}
-            label={t('SelectionBar.' + actionName)}
-            key={index}
-            disabled={
-              actions[actionName].disabled === undefined
-                ? selectedCount < 1 // to avoid breaking change
-                : actions[actionName].disabled(selected)
-            }
-            size="medium"
-            onClick={() => actions[actionName].action(selected)}
-          >
-            <Icon icon={actions[actionName].icon || actionName.toLowerCase()} />
-          </IconButton>
-        )
-      )}
+      <div>
+        {actionList.slice(0, maxActionDisplayed).map((action, idx) => (
+          <SelectionBarAction
+            key={idx}
+            selectedCount={selectedCount}
+            selected={selected}
+            action={action}
+          />
+        ))}
+        {actionList.length > maxActionDisplayed && (
+          <SelectionBarMore
+            actions={actionList.slice(maxActionDisplayed)}
+            selectedCount={selectedCount}
+            selected={selected}
+          />
+        )}
+      </div>
       <IconButton
         data-testid="selectionBar-action-close"
-        className={cx(
-          styles['SelectionBar-action'],
-          styles['SelectionBar-action--close']
-        )}
+        className={styles['SelectionBar-action']}
         label={t('SelectionBar.close')}
         size="medium"
         onClick={hideSelectionBar}
@@ -154,9 +156,24 @@ const SelectionBar = ({ actions, selected, hideSelectionBar }) => {
 }
 
 SelectionBar.propTypes = {
-  actions: PropTypes.object.isRequired, // An object with actions
-  selected: PropTypes.array.isRequired, // selected items id.
-  hideSelectionBar: PropTypes.func.isRequired // function to close SelectionBar.
+  /**
+   * An object with actions
+   */
+  actions: PropTypes.object.isRequired,
+  /**
+   * List of ids of the selected items
+   */
+  selected: PropTypes.array.isRequired,
+  /**
+   * function to close SelectionBar.
+   */
+  hideSelectionBar: PropTypes.func.isRequired,
+  /**
+   * A number corresponding to the display of the maximum number of items.
+   * The other actions will be displayed in an additional menu.
+   * With an object, they can be detailed according to the breakpoints
+   */
+  maxAction: PropTypes.oneOfType([PropTypes.number, PropTypes.object])
 }
 
 export default SelectionBar

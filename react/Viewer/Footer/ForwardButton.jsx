@@ -1,28 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { useClient, useCapabilities, models } from 'cozy-client'
+import { useClient } from 'cozy-client'
 import { isIOS, isMobileApp } from 'cozy-device-helper'
 
-import { useI18n } from '../../I18n'
+import { useI18n } from '../../providers/I18n'
 import Icon from '../../Icon'
+import IconButton from '../../IconButton'
 import ReplyIcon from '../../Icons/Reply'
 import ShareIosIcon from '../../Icons/ShareIos'
 import Button from '../../Buttons'
-import Alerter from '../../Alerter'
-import { withViewerLocales } from '../hoc/withViewerLocales'
+import Alerter from '../../deprecated/Alerter'
 import { exportFilesNative } from './helpers'
-
-const {
-  sharing: { getSharingLink }
-} = models
+import { getSharingLink } from 'cozy-client/dist/models/sharing'
 
 const ForwardIcon = isIOS() ? ShareIosIcon : ReplyIcon
 
-const ForwardButton = ({ file }) => {
+const ForwardButton = ({ file, variant, onClick }) => {
   const { t } = useI18n()
   const client = useClient()
-  const { capabilities } = useCapabilities(client)
+
+  const icon = <Icon icon={ForwardIcon} />
+  const label = t('Viewer.actions.forward')
 
   const onFileOpen = async file => {
     if (isMobileApp()) {
@@ -33,8 +32,7 @@ const ForwardButton = ({ file }) => {
       }
     } else {
       try {
-        const isFlatDomain = capabilities?.flat_subdomains
-        const url = await getSharingLink(client, [file.id], isFlatDomain)
+        const url = await getSharingLink(client, [file.id])
         const shareData = {
           title: t('Viewer.share.title', { name: file.name }),
           text: t('Viewer.share.text', { name: file.name }),
@@ -47,21 +45,51 @@ const ForwardButton = ({ file }) => {
     }
   }
 
+  const handleClick = () => {
+    if (onClick) onClick()
+    else onFileOpen(file)
+  }
+
+  if (variant === 'iconButton') {
+    return (
+      <IconButton className="u-white" aria-label={label} onClick={handleClick}>
+        {icon}
+      </IconButton>
+    )
+  }
+
+  if (variant === 'buttonIcon') {
+    return (
+      <Button
+        variant="secondary"
+        label={icon}
+        aria-label={label}
+        onClick={handleClick}
+      />
+    )
+  }
+
   return (
     <Button
       fullWidth
       variant="secondary"
-      startIcon={<Icon icon={ForwardIcon} />}
+      startIcon={icon}
       data-testid="openFileButton"
-      label={t('Viewer.actions.forward')}
-      onClick={() => onFileOpen(file)}
+      label={label}
+      onClick={handleClick}
     />
   )
 }
 
 ForwardButton.propTypes = {
-  file: PropTypes.object.isRequired
+  file: PropTypes.object.isRequired,
+  variant: PropTypes.oneOf(['default', 'iconButton', 'buttonIcon']),
+  onClick: PropTypes.func
+}
+
+ForwardButton.defaultProptypes = {
+  variant: 'default'
 }
 
 export { exportFilesNative }
-export default withViewerLocales(ForwardButton)
+export default ForwardButton

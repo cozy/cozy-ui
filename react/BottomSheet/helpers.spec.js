@@ -5,13 +5,14 @@ import {
   setTopPosition,
   setBottomPosition,
   minimizeAndClose,
+  computeToolbarHeight,
   computeBottomSpacer
 } from './helpers'
 
 jest.mock('../helpers/getSafeArea', () => ({
   getSafeAreaValue: jest.fn().mockReturnValue(15)
 }))
-jest.mock('cozy-device-helper', () => ({
+jest.mock('../hooks/useSetFlagshipUi/helpers', () => ({
   getFlagshipMetadata: jest.fn(() => ({ navbarHeight: 10 }))
 }))
 const windowSpy = jest.spyOn(window, 'window', 'get')
@@ -160,7 +161,7 @@ describe('setTopPosition', () => {
 
       setTopPosition({
         snapIndex: 3,
-        maxHeightSnapIndex: 2,
+        peekHeights: [0, 100, 200],
         setIsTopPosition
       })
 
@@ -172,7 +173,7 @@ describe('setTopPosition', () => {
 
       setTopPosition({
         snapIndex: 2,
-        maxHeightSnapIndex: 2,
+        peekHeights: [0, 100, 200],
         isTopPosition: false,
         setIsTopPosition
       })
@@ -185,7 +186,7 @@ describe('setTopPosition', () => {
 
       setTopPosition({
         snapIndex: 1,
-        maxHeightSnapIndex: 2,
+        peekHeights: [0, 100, 200],
         isTopPosition: true,
         setIsTopPosition
       })
@@ -200,7 +201,7 @@ describe('setTopPosition', () => {
 
       setTopPosition({
         snapIndex: 2,
-        maxHeightSnapIndex: 2,
+        peekHeights: [0, 100, 200],
         isTopPosition: true,
         setIsTopPosition
       })
@@ -213,7 +214,7 @@ describe('setTopPosition', () => {
 
       setTopPosition({
         snapIndex: 1,
-        maxHeightSnapIndex: 2,
+        peekHeights: [0, 100, 200],
         isTopPosition: false,
         setIsTopPosition
       })
@@ -339,6 +340,18 @@ describe('computeBottomSpacer', () => {
         expect(res).toBe(600)
       })
 
+      it('should return maxHeight - innerContentHeight if no offset even with toolbar', () => {
+        const res = computeBottomSpacer({
+          backdrop: false,
+          maxHeight: 800,
+          innerContentHeight: 200,
+          toolbarProps: { height: 50 },
+          offset: 0
+        })
+
+        expect(res).toBe(600)
+      })
+
       it('should return maxHeight - innerContentHeight even with an offset', () => {
         const res = computeBottomSpacer({
           backdrop: false,
@@ -349,10 +362,22 @@ describe('computeBottomSpacer', () => {
 
         expect(res).toBe(600)
       })
+
+      it('should return maxHeight - innerContentHeight even with an offset and toolbar', () => {
+        const res = computeBottomSpacer({
+          backdrop: false,
+          maxHeight: 800,
+          innerContentHeight: 200,
+          toolbarProps: { height: 50 },
+          offset: 48
+        })
+
+        expect(res).toBe(600)
+      })
     })
 
     describe('inner content shorter than max height', () => {
-      it('should', () => {
+      it('should return the offset value and border even if zero', () => {
         const res = computeBottomSpacer({
           backdrop: false,
           maxHeight: 800,
@@ -360,10 +385,22 @@ describe('computeBottomSpacer', () => {
           offset: 0
         })
 
-        expect(res).toBe(0)
+        expect(res).toBe(1)
       })
 
-      it('should', () => {
+      it('should return the toolbar height', () => {
+        const res = computeBottomSpacer({
+          backdrop: false,
+          maxHeight: 800,
+          innerContentHeight: 1000,
+          toolbarProps: { height: 50 },
+          offset: 0
+        })
+
+        expect(res).toBe(50)
+      })
+
+      it('should return the offset value and border', () => {
         const res = computeBottomSpacer({
           backdrop: false,
           maxHeight: 800,
@@ -371,7 +408,19 @@ describe('computeBottomSpacer', () => {
           offset: 48
         })
 
-        expect(res).toBe(48)
+        expect(res).toBe(49)
+      })
+
+      it('should return the offset value and border and toolbar height', () => {
+        const res = computeBottomSpacer({
+          backdrop: false,
+          maxHeight: 800,
+          innerContentHeight: 1000,
+          toolbarProps: { height: 50 },
+          offset: 48
+        })
+
+        expect(res).toBe(98)
       })
     })
   })
@@ -389,11 +438,35 @@ describe('computeBottomSpacer', () => {
         expect(res).toBe(0)
       })
 
-      it('should return the offset value ', () => {
+      it('should return the offset value even if zero and toolbar', () => {
         const res = computeBottomSpacer({
           backdrop: true,
           maxHeight: 800,
           innerContentHeight: 200,
+          toolbarProps: { height: 50 },
+          offset: 0
+        })
+
+        expect(res).toBe(0)
+      })
+
+      it('should return the offset value', () => {
+        const res = computeBottomSpacer({
+          backdrop: true,
+          maxHeight: 800,
+          innerContentHeight: 200,
+          offset: 48
+        })
+
+        expect(res).toBe(48)
+      })
+
+      it('should return the offset value even with toolbar', () => {
+        const res = computeBottomSpacer({
+          backdrop: true,
+          maxHeight: 800,
+          innerContentHeight: 200,
+          toolbarProps: { height: 50 },
           offset: 48
         })
 
@@ -410,7 +483,19 @@ describe('computeBottomSpacer', () => {
           offset: 0
         })
 
-        expect(res).toBe(0)
+        expect(res).toBe(1)
+      })
+
+      it('should return the toolbar height', () => {
+        const res = computeBottomSpacer({
+          backdrop: true,
+          maxHeight: 800,
+          innerContentHeight: 1000,
+          toolbarProps: { height: 50 },
+          offset: 0
+        })
+
+        expect(res).toBe(50)
       })
 
       it('should return the offset value', () => {
@@ -421,8 +506,40 @@ describe('computeBottomSpacer', () => {
           offset: 48
         })
 
-        expect(res).toBe(48)
+        expect(res).toBe(49)
+      })
+
+      it('should return the offset value and toolbar height', () => {
+        const res = computeBottomSpacer({
+          backdrop: true,
+          maxHeight: 800,
+          innerContentHeight: 1000,
+          toolbarProps: { height: 50 },
+          offset: 48
+        })
+
+        expect(res).toBe(98)
       })
     })
+  })
+})
+
+describe('computeToolbarHeight', () => {
+  it('should return the height prop', () => {
+    const res = computeToolbarHeight({ height: 50 })
+
+    expect(res).toBe(50)
+  })
+
+  it('should return the height from ref', () => {
+    const res = computeToolbarHeight({ ref: { current: { offsetHeight: 50 } } })
+
+    expect(res).toBe(50)
+  })
+
+  it('should return default value', () => {
+    const res = computeToolbarHeight()
+
+    expect(res).toBe(1)
   })
 })

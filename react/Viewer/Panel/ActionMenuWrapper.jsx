@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 
 import { useAppLinkWithStoreFallback, useClient } from 'cozy-client'
 
-import useBreakpoints from '../../hooks/useBreakpoints'
-import { useI18n } from '../../I18n'
-import useViewerSnackbar from '../providers/ViewerSnackbarProvider'
+import useBreakpoints from '../../providers/Breakpoints'
+import { useI18n } from '../../providers/I18n'
+import { useAlert } from '../../providers/Alert'
 import {
   buildEditAttributePath,
   isEditableAttribute,
@@ -22,7 +22,7 @@ const ActionMenuWrapper = forwardRef(({ onClose, file, optionFile }, ref) => {
   const editPathByModelProps = useActionMenuContext()
   const { isMobile } = useBreakpoints()
   const { t } = useI18n()
-  const { showViewerSnackbar } = useViewerSnackbar()
+  const { showAlert } = useAlert()
   const client = useClient()
 
   const currentModel = getCurrentModel(name)
@@ -38,16 +38,24 @@ const ActionMenuWrapper = forwardRef(({ onClose, file, optionFile }, ref) => {
     editPath
   )
   const isAppLinkLoaded = fetchStatus === 'loaded'
+  const isEditable = Boolean(editPath) && isEditableAttribute(name, file)
 
-  const handleCopy = () => {
-    if (navigator?.clipboard) {
-      navigator.clipboard.writeText(value)
-      showViewerSnackbar(
-        'secondary',
-        t(`Viewer.snackbar.copiedToClipboard.success`)
-      )
-    } else {
-      showViewerSnackbar('error', t(`Viewer.snackbar.copiedToClipboard.error`))
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(value)
+      showAlert({
+        message: t(`Viewer.snackbar.copiedToClipboard.success`),
+        severity: 'success',
+        variant: 'filled',
+        icon: false
+      })
+    } catch (error) {
+      showAlert({
+        message: t(`Viewer.snackbar.copiedToClipboard.error`),
+        severity: 'error',
+        variant: 'filled',
+        icon: false
+      })
     }
     onClose()
   }
@@ -63,7 +71,7 @@ const ActionMenuWrapper = forwardRef(({ onClose, file, optionFile }, ref) => {
     return (
       <ActionMenuMobile
         onClose={onClose}
-        isEditable={Boolean(editPath) && isEditableAttribute(name, file)}
+        isEditable={isEditable}
         actions={{ handleCopy, handleEdit }}
         appLink={url}
         appSlug={mespapiersAppSlug}
@@ -75,7 +83,7 @@ const ActionMenuWrapper = forwardRef(({ onClose, file, optionFile }, ref) => {
     <ActionMenuDesktop
       ref={ref}
       onClose={onClose}
-      isEditable={Boolean(editPath) && isEditableAttribute(name, file)}
+      isEditable={isEditable}
       actions={{ handleCopy, handleEdit }}
       appLink={url}
       appSlug={mespapiersAppSlug}

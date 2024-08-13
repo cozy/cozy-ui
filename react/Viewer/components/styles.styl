@@ -1,7 +1,5 @@
-@require 'settings/z-index.styl'
 @require 'components/selectionbar.styl'
 @require 'settings/breakpoints.styl'
-@require 'settings/palette.styl'
 
 @require '../vars.styl'
 
@@ -9,7 +7,7 @@
     position absolute
     top $toolbarHeight
     bottom 0
-    z-index $modal-toolbar-index
+    z-index var(--zIndex-modal-toolbar)
     width 20%
     cursor pointer
     background-color transparent
@@ -59,16 +57,16 @@
 .viewer-controls--display-content-top
     +medium-screen()
         justify-content flex-start
-        padding-top $toolbarHeightMedium - $viewerMarginTopMedium
+        padding-top $toolbarHeightMedium - $viewerMarginTopMedium + 1rem
 
 .viewer-toolbar
     position absolute
     top 0
-    z-index $modal-toolbar-index
+    z-index var(--zIndex-modal-toolbar)
     display flex
     flex-shrink 0
-    width calc(100% - 2rem)
-    padding 0 1rem
+    width calc(100% - 1rem)
+    padding 0 0.5rem
     height $toolbarHeight
     transition .4s opacity ease-out
     background linear-gradient(to bottom, var(--charcoalGrey), rgba(50, 54, 63, 0))
@@ -88,7 +86,7 @@
 .viewer-footer
     position fixed
     bottom 0
-    z-index $modal-footer-index
+    z-index var(--zIndex-modal-footer)
     width 100%
     height $footerHeight
     padding-bottom var(--flagship-bottom-height, env(safe-area-inset-bottom))

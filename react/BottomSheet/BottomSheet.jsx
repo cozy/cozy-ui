@@ -9,13 +9,14 @@ import React, {
 } from 'react'
 import PropTypes from 'prop-types'
 import { BottomSheet as MuiBottomSheet } from 'mui-bottom-sheet'
-import { useTimeoutWhen } from 'rooks'
-import Fade from '@mui/material/Fade'
-import Portal from '@mui/material/Portal'
+import { useMutationObserver, useTimeoutWhen } from 'rooks'
+import Fade from '@material-ui/core/Fade'
+import Portal from '@material-ui/core/Portal'
 
-import { getFlagshipMetadata } from 'cozy-device-helper'
+import { getFlagshipMetadata } from '../hooks/useSetFlagshipUi/helpers'
 
-import CozyTheme, { useCozyTheme } from '../CozyTheme'
+import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import CozyTheme, { useCozyTheme } from '../providers/CozyTheme'
 import Stack from '../Stack'
 import Paper from '../Paper'
 import BackdropOrFragment from './BackdropOrFragment'
@@ -27,10 +28,11 @@ import {
   setTopPosition,
   setBottomPosition,
   minimizeAndClose,
-  computeBottomSpacer
+  computeBottomSpacer,
+  getCssValue
 } from './helpers'
 import { ANIMATION_DURATION } from './constants'
-import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import stylescss from './styles.styl'
 
 const createContainerWrapperStyles = () => ({
   container: {
@@ -51,9 +53,10 @@ const ContainerWrapper = ({ showBackdrop, children }) => {
 }
 
 const createStyles = ({
-  squared,
+  isTopPosition,
   hasToolbarProps,
   offset,
+  renderSaferHeight,
   isBottomPosition
 }) => ({
   root: {
@@ -64,7 +67,7 @@ const createStyles = ({
       '0 -0.5px 0px 0 rgba(0, 0, 0, 0.10), 0 -2px 2px 0 rgba(0, 0, 0, 0.02), 0 -4px 4px 0 rgba(0, 0, 0, 0.02), 0 -8px 8px 0 rgba(0, 0, 0, 0.02), 0 -16px 16px 0 rgba(0, 0, 0, 0.02)',
     backgroundColor: 'var(--paperBackgroundColor)',
     zIndex: 'var(--zIndex-modal)',
-    ...(squared && {
+    ...(isTopPosition && {
       borderTopLeftRadius: 0,
       borderTopRightRadius: 0,
       boxShadow: hasToolbarProps
@@ -108,6 +111,13 @@ const createStyles = ({
     backgroundColor: 'var(--paperBackgroundColor)',
     zIndex: 'calc(var(--zIndex-modal) + 10)',
     transition: `opacity ${ANIMATION_DURATION}ms`
+  },
+  renderSafer: {
+    height: renderSaferHeight,
+    width: '100%',
+    position: 'fixed',
+    bottom: 0,
+    pointerEvents: 'none'
   }
 })
 
@@ -119,7 +129,8 @@ export const defaultBottomSheetSpringConfig = {
 
 const defaultSettings = {
   mediumHeightRatio: 0.75,
-  mediumHeight: null
+  mediumHeight: null,
+  isOpenMin: false
 }
 
 const BottomSheet = memo(
@@ -132,7 +143,7 @@ const BottomSheet = memo(
     offset,
     children
   }) => {
-    const { mediumHeightRatio, mediumHeight } = {
+    const { mediumHeightRatio, mediumHeight, isOpenMin } = {
       ...defaultSettings,
       ...settings
     }
@@ -145,20 +156,24 @@ const BottomSheet = memo(
     const [isHidden, setIsHidden] = useState(false)
     const [showBackdrop, setShowBackdrop] = useState(backdrop)
     const [peekHeights, setPeekHeights] = useState(null)
-    const [currentIndex, setCurrentIndex] = useState()
+    const [currentIndex, setCurrentIndex] = useState(1) // as setInitPos use computedMediumHeight
     const [bottomSpacerHeight, setBottomSpacerHeight] = useState(0)
     const [initPos, setInitPos] = useState(0)
+    const prevInitPos = useRef()
+    const [forceRender, setForceRender] = useState(0)
 
-    const squared = backdrop
-      ? isTopPosition && bottomSpacerHeight <= 0
-      : isTopPosition
     const hasToolbarProps = !!Object.keys(toolbarProps).length
     const isClosable = !!onClose || backdrop
+    const renderSaferHeight =
+      initPos < prevInitPos.current ? prevInitPos.current - 16 : 0 // 16 because border radius
+    const showRenderSafer =
+      prevInitPos.current !== 0 && prevInitPos.current > initPos
 
     const styles = createStyles({
-      squared,
+      isTopPosition,
       hasToolbarProps,
       offset,
+      renderSaferHeight,
       isBottomPosition
     })
     const overriddenChildren = makeOverridenChildren(children, headerContentRef)
@@ -176,17 +191,21 @@ const BottomSheet = memo(
     }, [onClose])
 
     const handleOnIndexChange = snapIndex => {
-      const maxHeightSnapIndex = peekHeights.length - 1
-
       setCurrentIndex(snapIndex)
       setTopPosition({
         snapIndex,
-        maxHeightSnapIndex,
+        peekHeights,
         isTopPosition,
         setIsTopPosition
       })
       setBottomPosition({ snapIndex, isBottomPosition, setIsBottomPosition })
     }
+
+    // forces a rendering when one of the children has changed,
+    // typically after content loading or using content changer such as NestedSelect
+    useMutationObserver(innerContentRef, () => {
+      setForceRender(v => v + 1)
+    })
 
     // hack to prevent pull-down-to-refresh behavior when dragging down the bottom sheet.
     // Needed for iOS Safari
@@ -207,14 +226,11 @@ const BottomSheet = memo(
     useEffect(() => {
       const headerContent = headerContentRef.current
       const innerContentHeight = innerContentRef.current.offsetHeight
-      const actionButtonsHeight = headerContent
-        ? parseFloat(getComputedStyle(headerContent).getPropertyValue('height'))
-        : 0
-      const actionButtonsBottomMargin = headerContent
-        ? parseFloat(
-            getComputedStyle(headerContent).getPropertyValue('padding-bottom')
-          )
-        : 0
+      const actionButtonsHeight = getCssValue(headerContent, 'height')
+      const actionButtonsBottomMargin = getCssValue(
+        headerContent,
+        'padding-bottom'
+      )
 
       const maxHeight = computeMaxHeight(toolbarProps)
 
@@ -222,32 +238,58 @@ const BottomSheet = memo(
         backdrop,
         maxHeight,
         innerContentHeight,
-        offset
-      })
-      const computedMediumHeight = computeMediumHeight({
-        backdrop,
-        maxHeight,
-        mediumHeight,
-        mediumHeightRatio,
-        innerContentHeight,
-        bottomSpacerHeight,
+        toolbarProps,
         offset
       })
       const minHeight = computeMinHeight({
         isClosable,
+        isOpenMin,
         headerRef,
         actionButtonsHeight,
         actionButtonsBottomMargin
       })
+      const computedMediumHeight =
+        isOpenMin && actionButtonsHeight > 0
+          ? minHeight + 1
+          : computeMediumHeight({
+              backdrop,
+              maxHeight,
+              mediumHeight,
+              mediumHeightRatio,
+              innerContentHeight,
+              bottomSpacerHeight,
+              offset
+            })
 
-      if (computedMediumHeight >= maxHeight) {
-        setIsTopPosition(true)
-      }
-      setPeekHeights([...new Set([minHeight, computedMediumHeight, maxHeight])])
+      const newPeekHeights = [
+        ...new Set([minHeight, computedMediumHeight, maxHeight])
+      ]
+
+      const hasPeekHeightsChanged =
+        peekHeights?.toString() !== newPeekHeights?.toString()
+
+      // lower the BottomSheet after a refresh if it was as top position and peek changed
+      const snapIndex =
+        hasPeekHeightsChanged && isTopPosition
+          ? currentIndex - 1 - (currentIndex - (newPeekHeights.length - 1))
+          : currentIndex
+
+      setCurrentIndex(snapIndex)
+      setPeekHeights(newPeekHeights)
+      prevInitPos.current = initPos
       setInitPos(computedMediumHeight)
+      setTopPosition({
+        snapIndex,
+        peekHeights: newPeekHeights,
+        isTopPosition,
+        setIsTopPosition
+      })
       // Used so that the BottomSheet can be opened to the top without stopping at the content height
       setBottomSpacerHeight(bottomSpacerHeight)
+
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [
+      // initPos is missing, because we need the previous value
       innerContentRef,
       toolbarProps,
       mediumHeightRatio,
@@ -256,12 +298,17 @@ const BottomSheet = memo(
       backdrop,
       isClosable,
       offset,
-      children // to recompute data if content changes
+      forceRender // to recompute data when content has changed
     ])
 
+    const { isLight } = useCozyTheme()
+
     useSetFlagshipUI(
-      { bottomTheme: 'dark' },
-      { bottomTheme: getFlagshipMetadata().immersive ? 'light' : 'dark' },
+      { bottomTheme: isLight ? 'dark' : 'light' },
+      {
+        bottomTheme:
+          getFlagshipMetadata().immersive || !isLight ? 'light' : 'dark'
+      },
       'cozy-ui/BottomSheet'
     )
 
@@ -322,6 +369,15 @@ const BottomSheet = memo(
           </div>
           <div style={{ height: bottomSpacerHeight }} />
         </MuiBottomSheet>
+        {showRenderSafer && (
+          <div style={styles.renderSafer}>
+            <Paper
+              className={stylescss['renderSaferAnim']}
+              elevation={0}
+              square
+            />
+          </div>
+        )}
         {!isBottomPosition && (
           <>
             <Fade in timeout={ANIMATION_DURATION}>
@@ -346,7 +402,7 @@ BottomSheet.defaultProps = {
   toolbarProps: {},
   backdrop: false,
   offset:
-    (getFlagshipMetadata().immersive && getFlagshipMetadata().navbarHeight) ?? 0
+    (getFlagshipMetadata().immersive && getFlagshipMetadata().navbarHeight) || 0
 }
 
 BottomSheet.propTypes = {
@@ -362,7 +418,9 @@ BottomSheet.propTypes = {
     /** Height in pixel of the middle snap point */
     mediumHeight: PropTypes.number,
     /** Height of the middle snap point, expressed as a percentage of the viewport height */
-    mediumHeightRatio: PropTypes.number
+    mediumHeightRatio: PropTypes.number,
+    /** To open the BottomSheet at the minimum height, if have an header */
+    isOpenMin: PropTypes.bool
   }),
   /** To add a backdrop */
   backdrop: PropTypes.bool,
@@ -375,11 +433,9 @@ BottomSheet.propTypes = {
 }
 
 const BottomSheetPortal = forwardRef(({ portalProps, ...props }, ref) => {
-  const cozyTheme = useCozyTheme()
+  const { variant } = useCozyTheme()
   const CozyThemeWrapper = portalProps?.disablePortal ? Fragment : CozyTheme
-  const wrapperProps = portalProps?.disablePortal
-    ? undefined
-    : { variant: cozyTheme }
+  const wrapperProps = portalProps?.disablePortal ? undefined : { variant }
 
   return (
     <Portal {...portalProps}>

@@ -12,7 +12,7 @@ import {
 } from 'cozy-ui/transpiled/react/Wizard'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Field from 'cozy-ui/transpiled/react/Field'
-import Button from 'cozy-ui/transpiled/react/Button'
+import Button from 'cozy-ui/transpiled/react/deprecated/Button'
 import PreviousIcon from 'cozy-ui/transpiled/react/Icons/Previous'
 import NextIcon from 'cozy-ui/transpiled/react/Icons/Next'
 

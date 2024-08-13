@@ -11,8 +11,8 @@ import mockApps from '../../mocks/apps'
 import en from '../locales/en'
 import { I18nContext } from '../../jestLib/I18n'
 import Tile, { TileTitle, TileSubtitle, TileFooter } from '../../Tile'
-import { BreakpointsProvider } from '../../hooks/useBreakpoints'
-import { I18n } from '../../I18n'
+import { BreakpointsProvider } from '../../providers/Breakpoints'
+import { I18n } from '../../providers/I18n'
 
 import { AppsSection } from './AppsSection'
 

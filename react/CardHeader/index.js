@@ -1,3 +1,3 @@
-import MuiCardHeader from '@mui/material/CardHeader'
+import MuiCardHeader from '@material-ui/core/CardHeader'
 
 export default MuiCardHeader

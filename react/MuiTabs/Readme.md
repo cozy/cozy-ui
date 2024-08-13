@@ -3,8 +3,8 @@ Content needs to be separated into sections and accessed via a single content ar
 ```jsx
 import { useState } from 'react'
 import { Tabs, Tab } from 'cozy-ui/transpiled/react/MuiTabs'
-import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider';
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import Divider from 'cozy-ui/transpiled/react/Divider';
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 
 function a11yProps(index) {
   return {

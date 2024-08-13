@@ -1,28 +1,30 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import flow from 'lodash/flow'
 
 import { useClient } from 'cozy-client'
 
 import withBreakpoints from '../../helpers/withBreakpoints'
 import { makeStyles } from '../../styles'
-import Button from '../../Button'
 import IconButton from '../../IconButton'
 import Icon from '../../Icon'
 import Typography from '../../Typography'
 import PreviousIcon from '../../Icons/Previous'
 import DownloadIcon from '../../Icons/Download'
+import { useI18n } from '../../providers/I18n'
+import MidEllipsis from '../../MidEllipsis'
 
-import { withViewerLocales } from '../hoc/withViewerLocales'
 import { downloadFile } from '../helpers'
 import { useEncrypted } from '../providers/EncryptedProvider'
+import { extractChildrenCompByName } from '../Footer/helpers'
+import { ToolbarFilePath } from './ToolbarFilePath'
+import PrintButton from './PrintButton'
 
 import styles from './styles.styl'
 
 const useClasses = makeStyles(theme => ({
   iconButton: {
-    [theme.breakpoints.down('lg')]: {
+    [theme.breakpoints.down('md')]: {
       marginLeft: '0.25rem'
     }
   }
@@ -34,14 +36,22 @@ const Toolbar = ({
   onMouseLeave,
   file,
   onClose,
-  t,
   toolbarRef,
-  breakpoints: { isDesktop }
+  breakpoints: { isDesktop },
+  children,
+  showFilePath
 }) => {
   const client = useClient()
   const classes = useClasses()
+  const { t } = useI18n()
 
   const { url } = useEncrypted()
+
+  const ToolbarButtons = extractChildrenCompByName({
+    children,
+    file,
+    name: 'ToolbarButtons'
+  })
 
   return (
     <div
@@ -55,30 +65,36 @@ const Toolbar = ({
     >
       {onClose && (
         <IconButton
-          size="medium"
-          onClick={onClose}
           className={cx(classes.iconButton, { 'u-white': isDesktop })}
+          onClick={onClose}
         >
           <Icon icon={PreviousIcon} />
         </IconButton>
       )}
-      <Typography
-        className="u-pl-half"
-        variant="h3"
-        color={isDesktop ? 'inherit' : 'textPrimary'}
-        noWrap
-      >
-        {file.name}
-      </Typography>
-      <div className="u-ml-auto u-ph-1">
+      <div className="u-pl-half u-ov-auto u-w-100">
+        <Typography
+          variant="h3"
+          color={isDesktop ? 'inherit' : 'textPrimary'}
+          noWrap
+        >
+          <MidEllipsis text={file.name} />
+        </Typography>
+        {showFilePath ? <ToolbarFilePath file={file} /> : null}
+      </div>
+
+      <div className="u-flex">
         {isDesktop && (
-          <Button
-            className="u-white"
-            icon={DownloadIcon}
-            label={t('Viewer.download')}
-            subtle
-            onClick={() => downloadFile({ client, file, url })}
-          />
+          <>
+            {ToolbarButtons}
+            <PrintButton file={file} />
+            <IconButton
+              className="u-white"
+              aria-label={t('Viewer.download')}
+              onClick={() => downloadFile({ client, file, url })}
+            >
+              <Icon icon={DownloadIcon} />
+            </IconButton>
+          </>
         )}
       </div>
     </div>
@@ -90,10 +106,8 @@ Toolbar.propTypes = {
   onMouseEnter: PropTypes.func.isRequired,
   onMouseLeave: PropTypes.func.isRequired,
   file: PropTypes.object.isRequired,
-  onClose: PropTypes.func
+  onClose: PropTypes.func,
+  showFilePath: PropTypes.bool
 }
 
-export default flow(
-  withBreakpoints(),
-  withViewerLocales
-)(Toolbar)
+export default withBreakpoints()(Toolbar)

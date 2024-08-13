@@ -1,3 +1,3 @@
-import Paper from '@mui/material/Paper'
+import Paper from '@material-ui/core/Paper'
 
 export default Paper

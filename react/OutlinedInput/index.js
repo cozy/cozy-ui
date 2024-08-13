@@ -1,3 +1,3 @@
-import MuiOutlinedInput from '@mui/material/OutlinedInput'
+import MuiOutlinedInput from '@material-ui/core/OutlinedInput'
 
 export default MuiOutlinedInput

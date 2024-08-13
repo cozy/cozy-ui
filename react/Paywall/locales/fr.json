@@ -1,0 +1,95 @@
+{
+  "action": {
+    "loading": "Chargement...",
+    "withoutIAP": "J'ai compris"
+  },
+  "onlyOfficePaywall": {
+    "premium": {
+      "title": "Augmentez votre offre",
+      "content": "Votre offre ne vous permet pas de **modifier vos documents en ligne**.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
+      "action": "Voir les offres"
+    },
+    "public": {
+      "title": "Information",
+      "content": "Vous ne pouvez pas éditer ce fichier en ligne. Merci de demander au propriétaire du document de mettre à jour son abonnement Cozy.",
+      "action": "J'ai compris"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité.",
+      "action": "J'ai compris"
+    }
+  },
+  "passwordSharingPaywall": {
+    "premium": {
+      "title": "Augmentez votre offre",
+      "content": "Votre offre ne vous permet pas de **partager vos mots de passe**.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
+      "action": "Voir les offres"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité.",
+      "action": "J'ai compris"
+    }
+  },
+  "maxAccountsByKonnectorPaywall": {
+    "premium": {
+      "title": "Augmentez votre offre",
+      "content": "Votre offre vous permet de connecter jusqu'à **%{smart_count} compte %{konnectorName}** dans votre Cozy.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy. |||| Votre offre vous permet de connecter jusqu'à **%{smart_count} comptes %{konnectorName}** dans votre Cozy.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
+      "action": "Voir les offres"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité.",
+      "action": "J'ai compris"
+    }
+  },
+  "maxAccountsPaywall": {
+    "premium": {
+      "title": "Augmentez votre offre",
+      "content": "Votre offre vous permet de connecter jusqu'à **%{smart_count} compte** dans votre Cozy.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy. |||| Votre offre vous permet de connecter jusqu'à **%{smart_count} comptes** dans votre Cozy.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
+      "action": "Voir les offres"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité.",
+      "action": "J'ai compris"
+    }
+  },
+  "maxPapersPaywall": {
+    "premium": {
+      "title": "Augmentez votre offre",
+      "content": "Votre offre vous permet d'ajouter manuellement jusqu'à **%{smart_count} papier**.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy. |||| Votre offre vous permet d'ajouter manuellement jusqu'à **%{smart_count} papiers**.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
+      "action": "Voir les offres"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité.",
+      "action": "J'ai compris"
+    }
+  },
+  "quotaPaywall": {
+    "premium": {
+      "title": "Augmentez votre offre",
+      "content": "Votre espace de stockage est plein.\n\nVeuillez supprimer des fichiers, vider votre corbeille ou changer d'offre avant d'importer de nouveaux fichiers.",
+      "action": "Voir les offres"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Votre espace de stockage est plein.\n\nVeuillez supprimer des fichiers, et vider votre corbeille avant d'importer de nouveaux fichiers.",
+      "action": "J'ai compris"
+    }
+  },
+  "maxDaysToCapturePaywall": {
+    "premium": {
+      "title": "Augmentez votre offre",
+      "content": "Vous avez atteint la limite de **%{smart_count} jour de trajet sauvegardé** inclus dans votre offre.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy. |||| Vous avez atteint la limite des **%{smart_count} jours de trajets sauvegardés** inclus dans votre offre.\n\nPour débloquer cette fonctionnalité, ou simplement nous soutenir, vous pouvez modifier l'offre de votre Cozy.",
+      "action": "Voir les offres"
+    },
+    "default": {
+      "title": "Information",
+      "content": "Votre offre actuelle ne vous permet pas de profiter de cette fonctionnalité.",
+      "action": "J'ai compris"
+    }
+  }
+}

@@ -11,10 +11,12 @@ module.exports = {
     'react-styleguidist.+\\.jsx?$': 'babel-jest',
     '^rsg-components(.*)$':
       '<rootDir>/node_modules/react-styleguidist/lib/client/rsg-components$1',
-    'react-pdf/dist/entry.webpack.js': 'react-pdf',
+    'react-pdf/dist/esm/entry.webpack': 'react-pdf',
     '^cozy-client$': 'cozy-client/dist/index'
   },
-  transformIgnorePatterns: ['node_modules/(?!(react-styleguidist)/)'],
+  transformIgnorePatterns: [
+    'node_modules/(?!(react-styleguidist|cozy-harvest-lib)/)'
+  ],
   testPathIgnorePatterns: ['/node_modules/', '/transpiled/', '/dist/'],
   transform: {
     '^.+\\.(ts|tsx|js|jsx)?$': 'babel-jest'

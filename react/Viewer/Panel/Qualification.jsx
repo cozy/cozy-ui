@@ -1,40 +1,28 @@
 import React, { useRef, useState, createRef, useMemo, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
-import { models } from 'cozy-client'
-
-import List from '../../MuiCozyTheme/List'
-import { withViewerLocales } from '../hoc/withViewerLocales'
 import {
+  isExpiringSoon,
   formatMetadataQualification,
-  knownDateMetadataNames,
-  knownInformationMetadataNames,
-  knownOtherMetadataNames
-} from '../helpers'
+  KNOWN_BILLS_ATTRIBUTES_NAMES,
+  getMetadataQualificationType
+} from 'cozy-client/dist/models/paper'
+
+import List from '../../List'
+import { withViewerLocales } from '../hoc/withViewerLocales'
 import ExpirationAlert from '../components/ExpirationAlert'
-import QualificationListItemContact from './QualificationListItemContact'
 import ActionMenuWrapper from './ActionMenuWrapper'
+import QualificationListItemContact from './QualificationListItemContact'
 import QualificationListItemDate from './QualificationListItemDate'
 import QualificationListItemInformation from './QualificationListItemInformation'
 import QualificationListItemOther from './QualificationListItemOther'
 
-const { isExpiringSoon } = models.paper
-
-const makeQualificationListItemComp = metadataName => {
-  if (knownDateMetadataNames.includes(metadataName)) {
-    return QualificationListItemDate
-  }
-
-  if (knownInformationMetadataNames.includes(metadataName)) {
-    return QualificationListItemInformation
-  }
-
-  if (knownOtherMetadataNames.includes(metadataName)) {
-    if (metadataName === 'contact') {
-      return QualificationListItemContact
-    }
-    return QualificationListItemOther
-  }
+const ComponentFromMetadataQualificationType = {
+  contact: QualificationListItemContact,
+  date: QualificationListItemDate,
+  information: QualificationListItemInformation,
+  other: QualificationListItemOther,
+  bills: QualificationListItemInformation
 }
 
 const isExpirationAlertHidden = file => {
@@ -61,15 +49,27 @@ const Qualification = ({ file }) => {
     })
   }
 
-  const formatedMetadataQualification = useMemo(() => {
+  const formattedMetadataQualification = useMemo(() => {
+    const relatedBills = file.bills?.data?.[0]
+
+    if (relatedBills) {
+      const formattedBillsMetadata = KNOWN_BILLS_ATTRIBUTES_NAMES.map(
+        attrName => ({ name: attrName, value: relatedBills[attrName] })
+      )
+
+      return formatMetadataQualification(metadata).concat(
+        formattedBillsMetadata
+      )
+    }
+
     return formatMetadataQualification(metadata)
-  }, [metadata])
+  }, [metadata, file.bills?.data])
 
   useEffect(() => {
-    actionBtnRef.current = formatedMetadataQualification.map(
+    actionBtnRef.current = formattedMetadataQualification.map(
       (_, idx) => actionBtnRef.current[idx] ?? createRef()
     )
-  }, [formatedMetadataQualification])
+  }, [formattedMetadataQualification])
 
   return (
     <>
@@ -77,16 +77,18 @@ const Qualification = ({ file }) => {
         <ExpirationAlert file={file} />
       )}
       <List className={'u-pv-1'}>
-        {formatedMetadataQualification.map((meta, idx) => {
+        {formattedMetadataQualification.map((meta, idx) => {
           const { name } = meta
-          const QualificationListItemComp = makeQualificationListItemComp(name)
+          const metadataQualificationType = getMetadataQualificationType(name)
+          const QualificationListItemComp =
+            ComponentFromMetadataQualificationType[metadataQualificationType]
 
           return (
             <QualificationListItemComp
               key={idx}
               file={file}
               ref={actionBtnRef.current[idx]}
-              formatedMetadataQualification={meta}
+              formattedMetadataQualification={meta}
               toggleActionsMenu={val => toggleActionsMenu(idx, name, val)}
             />
           )

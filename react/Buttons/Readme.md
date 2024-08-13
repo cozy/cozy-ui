@@ -1,21 +1,25 @@
-The `ref` is forwarded to the root element
+Buttons are a wrapper arround [MuiButton](https://mui.com/material-ui/react-button/) integrated with Cozy's design system
+
+The `Button` component will produce an HTML `<button>`. The React component accepts classic HTML attributes (i.e. `type`) through React props.
+
+By default the HTML `<button>` is rendered with `type="button"` attribute, so its click effect must be controlled by React (i.e. by using `onClick` event).
+
+If the button is located inside of a form, you can set the props `type="submit"` to the React component, so clicking on it would trigger the form's `onSubmit` event.
 
 ### Default
 
 ```jsx
 import Button from 'cozy-ui/transpiled/react/Buttons'
 import Stack from 'cozy-ui/transpiled/react/Stack'
-import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
-import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
 
 const variants = ['primary', 'secondary', 'ghost', 'text']
 const propsArr = [{}, { disabled: true }, { busy: true }]
 
 ;
-
 <Grid container>
   {propsArr.map(props =>
     <Grid item xs={12} sm={4} className="u-mb-1" key={JSON.stringify(props)}>
@@ -37,9 +41,8 @@ const propsArr = [{}, { disabled: true }, { busy: true }]
 ```jsx
 import Button from 'cozy-ui/transpiled/react/Buttons'
 import Stack from 'cozy-ui/transpiled/react/Stack'
-import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
-import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
 
 const variants = ['primary', 'secondary', 'ghost', 'text']
 const sizes = ['small', 'medium', 'large']
@@ -67,9 +70,8 @@ const sizes = ['small', 'medium', 'large']
 ```jsx
 import Button from 'cozy-ui/transpiled/react/Buttons'
 import Stack from 'cozy-ui/transpiled/react/Stack'
-import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
-import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
 import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 
@@ -117,9 +119,8 @@ const iconPositions = ['startIcon', 'endIcon']
 ```jsx
 import Button from 'cozy-ui/transpiled/react/Buttons'
 import Stack from 'cozy-ui/transpiled/react/Stack'
-import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
-import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
 import PlusIcon from 'cozy-ui/transpiled/react/Icons/Plus'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 
@@ -157,12 +158,11 @@ const sizes = ['small', 'medium', 'large']
 ```jsx
 import Button from 'cozy-ui/transpiled/react/Buttons'
 import Stack from 'cozy-ui/transpiled/react/Stack'
-import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
-import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
 
 const variants = ['primary', 'secondary', 'ghost', 'text']
-const colors = ['success', 'error', 'warning', 'info']
+const colors = ['default', 'inherit', 'primary', 'secondary', 'success', 'error', 'warning', 'info']
 
 ;
 
@@ -187,12 +187,11 @@ const colors = ['success', 'error', 'warning', 'info']
 ```jsx
 import Button from 'cozy-ui/transpiled/react/Buttons'
 import Stack from 'cozy-ui/transpiled/react/Stack'
-import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
-import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
 
 const variants = ['primary', 'secondary', 'ghost', 'text']
-const colors = ['success', 'error', 'warning', 'info']
+const colors = ['default', 'inherit', 'primary', 'secondary', 'success', 'error', 'warning', 'info']
 
 ;
 
@@ -217,12 +216,11 @@ const colors = ['success', 'error', 'warning', 'info']
 ```jsx
 import Button from 'cozy-ui/transpiled/react/Buttons'
 import Stack from 'cozy-ui/transpiled/react/Stack'
-import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 import Paper from 'cozy-ui/transpiled/react/Paper'
-import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
 
 const variants = ['primary', 'secondary', 'ghost', 'text']
-const colors = ['success', 'error', 'warning', 'info']
+const colors = ['default', 'inherit', 'primary', 'secondary', 'success', 'error', 'warning', 'info']
 
 ;
 

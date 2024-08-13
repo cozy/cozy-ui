@@ -1,7 +1,3 @@
-import MuiSelect from '@mui/material/Select'
-
-MuiSelect.defaultProps = {
-  variant: 'standard'
-}
+import MuiSelect from '@material-ui/core/Select'
 
 export default MuiSelect

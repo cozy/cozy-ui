@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Button from '../../Button'
+import Button from '../../deprecated/Button'
 import { FileDoctype } from '../../proptypes'
 
 import { withViewerLocales } from '../hoc/withViewerLocales'

@@ -8,9 +8,9 @@ const customStyles = () => ({
   qualifier: {
     height: '1.125rem', // compensation of the specific border size
     minWidth: '1.125rem',
-    backgroundColor: 'white',
-    color: 'var(--slateGrey)',
-    border: '1px solid var(--silver)'
+    backgroundColor: 'var(--paperBackgroundColor)',
+    color: 'var(--iconTextColor)',
+    border: '1px solid var(--borderMainColor)'
   }
 })
 

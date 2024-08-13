@@ -246,7 +246,7 @@ exports[`AppsSection component should be rendered correctly with apps list, subt
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
-            ISP
+            Mobile and Internet
           </SectionSubSubtitle>
         }
       />
@@ -587,7 +587,7 @@ exports[`AppsSection component should not render dropdown filter on mobile if na
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
-            ISP
+            Mobile and Internet
           </SectionSubSubtitle>
         }
       />
@@ -931,7 +931,7 @@ exports[`AppsSection component should not render dropdown filter on tablet if na
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
-            ISP
+            Mobile and Internet
           </SectionSubSubtitle>
         }
       />
@@ -1081,7 +1081,7 @@ exports[`AppsSection component should render dropdown filter on mobile if no nav
           "value": "konnectors",
         },
         Object {
-          "label": "ISP",
+          "label": "Mobile and Internet",
           "secondary": true,
           "type": "konnector",
           "value": "isp",
@@ -1340,7 +1340,7 @@ exports[`AppsSection component should render dropdown filter on mobile if no nav
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
-            ISP
+            Mobile and Internet
           </SectionSubSubtitle>
         }
       />
@@ -1482,7 +1482,7 @@ exports[`AppsSection component should render dropdown filter on tablet if no nav
           "value": "konnectors",
         },
         Object {
-          "label": "ISP",
+          "label": "Mobile and Internet",
           "secondary": true,
           "type": "konnector",
           "value": "isp",
@@ -1744,7 +1744,7 @@ exports[`AppsSection component should render dropdown filter on tablet if no nav
         onAppClick={[MockFunction]}
         subtitle={
           <SectionSubSubtitle>
-            ISP
+            Mobile and Internet
           </SectionSubSubtitle>
         }
       />

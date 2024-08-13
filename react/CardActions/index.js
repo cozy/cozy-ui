@@ -1,3 +1,3 @@
-import MuiCardActions from '@mui/material/CardActions'
+import MuiCardActions from '@material-ui/core/CardActions'
 
 export default MuiCardActions

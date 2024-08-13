@@ -1,9 +1,10 @@
 ```jsx
 import { useState } from 'react'
-import Button from 'cozy-ui/transpiled/react/Button'
+import Button from 'cozy-ui/transpiled/react/deprecated/Button'
 import useConfirmExit from 'cozy-ui/transpiled/react/hooks/useConfirmExit'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 
+;
 
 const NeedCloseConfirmation = () => {
     const { requestToLeave, exitConfirmationModal } = useConfirmExit({

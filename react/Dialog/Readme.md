@@ -8,21 +8,20 @@ will make sure that even your custom Dialogs will behave as CozyDialogs.
 ```jsx
 import Dialog, { DialogTitle, DialogActions } from 'cozy-ui/transpiled/react/Dialog'
 import { DialogBackButton, DialogCloseButton, useCozyDialog } from 'cozy-ui/transpiled/react/CozyDialogs'
-import useBreakpoints, {
-  BreakpointsProvider
-} from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
-import Alerter from 'cozy-ui/transpiled/react/Alerter'
+import useBreakpoints from 'cozy-ui/transpiled/react/providers/Breakpoints'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
+import Alerter from 'cozy-ui/transpiled/react/deprecated/Alerter'
 
-import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
-import Button from 'cozy-ui/transpiled/react/Button'
-import List from 'cozy-ui/transpiled/react/MuiCozyTheme/List'
-import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem'
-import ListItemIcon from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon'
+import Divider from 'cozy-ui/transpiled/react/Divider'
+import Button from 'cozy-ui/transpiled/react/deprecated/Button'
+import List from 'cozy-ui/transpiled/react/List'
+import ListItem from 'cozy-ui/transpiled/react/ListItem'
+import ListItemIcon from 'cozy-ui/transpiled/react/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
-import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemSecondaryAction'
+import ListItemSecondaryAction from 'cozy-ui/transpiled/react/ListItemSecondaryAction'
 import Icon from 'cozy-ui/transpiled/react/Icon'
-import Menu from 'cozy-ui/transpiled/react/MuiCozyTheme/Menus'
-import MenuItem from '@mui/material/MenuItem'
+import Menu from 'cozy-ui/transpiled/react/deprecated/Menus'
+import MenuItem from '@material-ui/core/MenuItem'
 import FileTypeFolderIcon from 'cozy-ui/transpiled/react/Icons/FileTypeFolder'
 import FileTypeText from 'cozy-ui/transpiled/react/Icons/FileTypeText'
 
@@ -134,9 +133,9 @@ const ExampleDialog = ({ open, onClose }) => {
   <button onClick={() => setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
   </button>
-  <BreakpointsProvider>
+  <DemoProvider>
     <Alerter />
     <ExampleDialog open={state.modalOpened} onClose={handleClose} />
-  </BreakpointsProvider>
+  </DemoProvider>
 </>
 ```

@@ -10,7 +10,7 @@
 import React from 'react'
 import { useKeyboardInfo } from './keyboard'
 import styles from './styles.styl'
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
 
 const TOP_BAR_HEIGHT = 48
 const BOTTOM_BAR_HEIGHT = 48

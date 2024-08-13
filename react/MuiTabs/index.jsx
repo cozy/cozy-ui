@@ -1,7 +1,7 @@
 import React from 'react'
-import MuiTabs from '@mui/material/Tabs'
-import Tab from '@mui/material/Tab'
-import useBreakpoints from '../hooks/useBreakpoints'
+import MuiTabs from '@material-ui/core/Tabs'
+import Tab from '@material-ui/core/Tab'
+import useBreakpoints from '../providers/Breakpoints'
 
 const Tabs = props => {
   const { isMobile } = useBreakpoints()

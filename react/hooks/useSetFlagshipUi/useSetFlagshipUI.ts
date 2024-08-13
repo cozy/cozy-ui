@@ -8,6 +8,8 @@ import { useWebviewIntent } from 'cozy-intent'
 import { FlagshipUI as IntentInterface } from 'cozy-intent/dist/api/models/applications'
 import { WebviewService } from 'cozy-intent/dist/api/services/WebviewService'
 
+import { setRsgFlagshipElements } from './helpers'
+
 export enum ThemeColor {
   Dark = 'dark',
   Light = 'light'
@@ -23,10 +25,12 @@ export const parseArg = (
   arg?: FlagshipUI,
   caller?: string
 ): void => {
-  if (!webviewIntent) return
-
-  const sanitized = isObject(arg) && pickBy(arg, identity)
+  const sanitized = isObject(arg) ? pickBy(arg, identity) : undefined
   const validUI = !isEmpty(sanitized) && sanitized
+
+  setRsgFlagshipElements(sanitized)
+
+  if (!webviewIntent) return
 
   validUI && webviewIntent.call('setFlagshipUI', validUI, caller)
 }

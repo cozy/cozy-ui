@@ -66,7 +66,7 @@ It gives access to the underlying `<input />` element, for example to give focus
 
 ```jsx
 import Field from 'cozy-ui/transpiled/react/Field'
-import Button from 'cozy-ui/transpiled/react/Button'
+import Button from 'cozy-ui/transpiled/react/deprecated/Button'
 
 class FieldWithFocus extends React.Component {
   constructor() {
@@ -169,15 +169,16 @@ const options = [
 
 ```jsx
 import Field from 'cozy-ui/transpiled/react/Field'
-import DemoProvider from 'cozy-ui/transpiled/react/ContactsListModal/DemoProvider'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import mockClient from 'cozy-ui/transpiled/react/ContactsListModal/mockClient'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 
 initialState = { selectedContact: null }
 
 ;
 
 <BreakpointsProvider>
-  <DemoProvider>
+  <DemoProvider client={mockClient}>
     <form>
       <Field
         label="Contact"
@@ -282,7 +283,7 @@ import Field from 'cozy-ui/transpiled/react/Field'
 
 ```jsx
 import Field from 'cozy-ui/transpiled/react/Field'
-import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons'
+import MuiButton from 'cozy-ui/transpiled/react/Button'
 
 ;
 

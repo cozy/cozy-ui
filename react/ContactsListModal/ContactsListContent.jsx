@@ -5,7 +5,9 @@ const { getDisplayName } = models.contact
 
 import ContactsList from '../ContactsList'
 import Spinner from '../Spinner'
+import { useI18n } from '../providers/I18n'
 import EmptyMessage from './EmptyMessage'
+import { withContactsListLocales } from './withContactsListLocales'
 
 const mkFilter = filterStr => contacts => {
   if (!filterStr) {
@@ -33,6 +35,8 @@ const ContactsListContent = ({
   onItemClick,
   dismissAction
 }) => {
+  const { t } = useI18n()
+
   const loading =
     (contacts.fetchStatus === 'loading' ||
       contacts.fetchStatus === 'pending') &&
@@ -40,6 +44,7 @@ const ContactsListContent = ({
 
   const filterContacts = mkFilter(filter)
   const filteredContacts = filterContacts(contacts.data)
+  const selfEmptyMessage = emptyMessage ?? t('emptyContact')
 
   const handleItemClick = contact => {
     if (!onItemClick) {
@@ -52,14 +57,14 @@ const ContactsListContent = ({
 
   if (loading) {
     return (
-      <div className="u-mv-2">
+      <div className="u-mv-2 u-ta-center">
         <Spinner size="xxlarge" />
       </div>
     )
   }
 
   if (filteredContacts.length === 0) {
-    return <EmptyMessage>{emptyMessage}</EmptyMessage>
+    return <EmptyMessage>{selfEmptyMessage}</EmptyMessage>
   }
 
   return (
@@ -67,4 +72,4 @@ const ContactsListContent = ({
   )
 }
 
-export default ContactsListContent
+export default withContactsListLocales(ContactsListContent)

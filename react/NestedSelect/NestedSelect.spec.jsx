@@ -1,95 +1,130 @@
 import React from 'react'
+import '@testing-library/jest-dom'
 import { render, fireEvent } from '@testing-library/react'
 
-import NestedSelect, { ItemRow } from './NestedSelect'
-import ListItem from '../MuiCozyTheme/ListItem'
-import { BreakpointsProvider } from '../hooks/useBreakpoints'
+import NestedSelect from './NestedSelect'
+import { BreakpointsProvider } from '../providers/Breakpoints'
 
 describe('NestedSelect', () => {
-  const options = {
+  const makeOption = text => ({
+    id: text,
+    key: text,
+    title: text
+  })
+  const makeOptions = itemSelected => ({
+    focusedId: itemSelected?.title,
     children: [
-      { title: 'A' },
-      { title: 'B', children: [{ title: 'B1' }, { title: 'B2' }] },
-      { title: 'C' }
+      makeOption('A'),
+      {
+        ...makeOption('B'),
+        children: [makeOption('B1'), makeOption('B2')]
+      },
+      makeOption('C')
     ]
-  }
+  })
 
-  const findSelectedRow = root => {
-    return root.findWhere(n => {
-      if (n.type() != ItemRow) {
+  const setup = ({
+    canSelectParent,
+    itemSelected,
+    searchOptions,
+    onSelect = jest.fn(),
+    onCancel = jest.fn()
+  } = {}) => {
+    const isSelected = item => {
+      if (!itemSelected) {
         return false
       }
-      return n.props().isSelected
-    })
-  }
-
-  const simulateClick = row =>
-    row
-      .find(ListItem)
-      .props()
-      .onClick()
-
-  const setup = ({ canSelectParent, itemSelected, searchOptions }) => {
-    // Very crude notion of parenting
-    const isParent = (item, childItem) => {
-      return childItem && childItem.title.includes(item.title)
+      return item.title === itemSelected.title
     }
 
-    const isSelected = (item, level) => {
-      if (level === 0 && isParent(item, itemSelected)) {
-        return true
-      } else if (itemSelected && itemSelected.title === item.title) {
-        return true
-      } else {
-        return false
-      }
-    }
+    const options = makeOptions(itemSelected)
 
-    const use = searchOptions ? render : mount
-    const root = use(
+    return render(
       <BreakpointsProvider>
         <NestedSelect
           canSelectParent={canSelectParent}
           options={options}
           isSelected={isSelected}
-          onSelect={jest.fn()}
-          onCancel={jest.fn()}
+          onSelect={onSelect}
+          onCancel={onCancel}
           searchOptions={searchOptions}
         />
       </BreakpointsProvider>
     )
-    return { root }
   }
 
-  describe('when selecting a normal category', () => {
-    it('should show only one selected item', () => {
-      const { root } = setup({
-        itemSelected: { title: 'B1' }
-      })
-      const selectedRow = findSelectedRow(root)
-      expect(selectedRow.length).toBe(1)
-      expect(selectedRow.text()).toBe('B')
-      simulateClick(selectedRow)
-      root.update()
+  describe('when no item is already selected', () => {
+    it('should show only children items after click on parent', () => {
+      const { queryByText } = setup()
+      const selectedRow = queryByText('B')
+      expect(selectedRow).toBeInTheDocument()
+      fireEvent.click(selectedRow)
 
-      const selectedRow2 = findSelectedRow(root)
-      expect(selectedRow2.length).toBe(1)
-      expect(selectedRow2.text()).toBe('B1')
+      const selectedRowB = queryByText('B')
+      const selectedRowB1 = queryByText('B1')
+      const selectedRowB2 = queryByText('B2')
+
+      expect(selectedRowB).toBeNull()
+      expect(selectedRowB1).toBeInTheDocument()
+      expect(selectedRowB2).toBeInTheDocument()
+    })
+
+    it('should show parent item & children items after click on parent', () => {
+      const { queryByText } = setup({ canSelectParent: true })
+      const selectedRow = queryByText('B')
+      expect(selectedRow).toBeInTheDocument()
+      fireEvent.click(selectedRow)
+
+      const selectedRowB = queryByText('B')
+      const selectedRowB1 = queryByText('B1')
+      const selectedRowB2 = queryByText('B2')
+      expect(selectedRowB).toBeInTheDocument()
+      expect(selectedRowB1).toBeInTheDocument()
+      expect(selectedRowB2).toBeInTheDocument()
     })
   })
 
-  describe('when allowing parent to be selected', () => {
-    it('should show a line for the parent inside the category', () => {
-      const { root } = setup({
-        itemSelected: { title: 'B1' },
+  describe('when item is already selected', () => {
+    it('should show the selected item', () => {
+      const { queryByText } = setup({ itemSelected: { title: 'B1' } })
+
+      const selectedRowB = queryByText('B')
+      const selectedRowB1 = queryByText('B1')
+      const selectedRowB2 = queryByText('B2')
+
+      expect(selectedRowB).toBeNull()
+      expect(selectedRowB1).toBeInTheDocument()
+      expect(selectedRowB2).toBeInTheDocument()
+    })
+    it('should show the selected item (with parent)', () => {
+      const { queryByText } = setup({
+        itemSelected: { title: 'B1', id: 'B1' },
         canSelectParent: true
       })
-      const selectedRow = findSelectedRow(root)
-      expect(selectedRow.length).toBe(1)
-      simulateClick(selectedRow)
-      root.update()
 
-      expect(root.find(ItemRow).length).toBe(3)
+      const selectedRowB = queryByText('B')
+      const selectedRowB1 = queryByText('B1')
+      const selectedRowB2 = queryByText('B2')
+
+      expect(selectedRowB).toBeInTheDocument()
+      expect(selectedRowB1).toBeInTheDocument()
+      expect(selectedRowB2).toBeInTheDocument()
+    })
+  })
+
+  describe('when clicking on an item', () => {
+    it("should call onSelect with the selected item (who doesn't have children)", () => {
+      const onSelect = jest.fn()
+      const { queryByText } = setup({ onSelect })
+      const selectedRowB = queryByText('B')
+      fireEvent.click(selectedRowB)
+
+      expect(onSelect).not.toHaveBeenCalled()
+
+      const selectedRowB1 = queryByText('B1')
+      fireEvent.click(selectedRowB1)
+
+      expect(onSelect).toHaveBeenCalledWith(makeOption('B1'))
     })
   })
 
@@ -102,12 +137,12 @@ describe('NestedSelect', () => {
           return []
         }
       }
-      const { root } = setup({
+      const { getByText, queryByPlaceholderText } = setup({
         searchOptions
       })
 
-      fireEvent.click(root.getByText('B'))
-      expect(root.queryByPlaceholderText('Placeholder Search')).toBeFalsy()
+      fireEvent.click(getByText('B'))
+      expect(queryByPlaceholderText('Placeholder Search')).toBeFalsy()
     })
 
     it('should return no data (onSearch return [])', () => {
@@ -118,14 +153,14 @@ describe('NestedSelect', () => {
           return []
         }
       }
-      const { root } = setup({
+      const { getByPlaceholderText, getByText } = setup({
         searchOptions
       })
-      const searchInput = root.getByPlaceholderText('Placeholder Search')
+      const searchInput = getByPlaceholderText('Placeholder Search')
       expect(searchInput).toBeTruthy()
 
       fireEvent.change(searchInput, { target: { value: 'cozy' } })
-      const noData = root.getByText('No Data Found')
+      const noData = getByText('No Data Found')
       expect(noData).toBeTruthy()
     })
 
@@ -143,20 +178,19 @@ describe('NestedSelect', () => {
           return data.filter(d => d.title.startsWith(value))
         }
       }
-      const { root } = setup({
-        itemSelected: { title: 'B1' },
+      const { getByPlaceholderText, queryByText } = setup({
         canSelectParent: true,
         searchOptions
       })
 
-      const searchInput = root.getByPlaceholderText('Placeholder Search')
+      const searchInput = getByPlaceholderText('Placeholder Search')
       expect(searchInput).toBeTruthy()
 
       fireEvent.change(searchInput, { target: { value: 'cozy' } })
 
-      expect(root.queryByText('cozy 1')).toBeTruthy()
-      expect(root.queryByText('cozy 1')).toBeTruthy()
-      expect(root.queryByText('anything')).toBeFalsy()
+      expect(queryByText('cozy 1')).toBeTruthy()
+      expect(queryByText('cozy 1')).toBeTruthy()
+      expect(queryByText('anything')).toBeFalsy()
     })
   })
 })

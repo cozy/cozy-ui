@@ -6,10 +6,11 @@ import IconButton from 'cozy-ui/transpiled/react/IconButton'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 
 // <-- only useful for the documentation
+import PeopleIcon from 'cozy-ui/transpiled/react/Icons/People'
 import TrashIcon from 'cozy-ui/transpiled/react/Icons/Trash'
 import RestoreIcon from 'cozy-ui/transpiled/react/Icons/Restore'
 import CrossIcon from 'cozy-ui/transpiled/react/Icons/Cross'
-import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Variants from 'cozy-ui/docs/components/Variants'
@@ -32,7 +33,7 @@ const initialVariants = [{ small: false, medium: true, large: false }]
                 disabled={Object.values(column)[1]}
                 size={Object.keys(variant).find(key => variant[key])}
               >
-                <Icon icon={TrashIcon}/>
+                <Icon icon={PeopleIcon}/>
               </IconButton>
               <IconButton
                 color="primary"
@@ -47,6 +48,13 @@ const initialVariants = [{ small: false, medium: true, large: false }]
                 size={Object.keys(variant).find(key => variant[key])}
               >
                 <Icon icon={CrossIcon}/>
+              </IconButton>
+              <IconButton
+                color="error"
+                disabled={Object.values(column)[1]}
+                size={Object.keys(variant).find(key => variant[key])}
+              >
+                <Icon icon={TrashIcon}/>
               </IconButton>
             </p>
           </Stack>

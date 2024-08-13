@@ -1,10 +1,25 @@
 import { createTheme } from '../styles'
-import { getCssVariableValue } from '../utils/color'
 import isTesting from '../helpers/isTesting'
+import { createNodeWithThemeCssVars } from '../utils/color'
+
+import { makeShadows } from './helpers'
 import { makePalette } from './makePalette'
 import { makeTypography } from './makeTypography'
-import { makeShadows } from './makeShadows'
-import { makeThemeOverrides } from './makeOverrides'
+import { makeLightNormalOverrides } from './overrides/makeLightNormalOverrides'
+import { makeLightInvertedOverrides } from './overrides/makeLightInvertedOverrides'
+import { makeDarkNormalOverrides } from './overrides/makeDarkNormalOverrides'
+import { makeDarkInvertedOverrides } from './overrides/makeDarkInvertedOverrides'
+
+const makeOverridesByTheme = theme => ({
+  light: {
+    normal: makeLightNormalOverrides(theme),
+    inverted: makeLightInvertedOverrides(theme)
+  },
+  dark: {
+    normal: makeDarkNormalOverrides(theme),
+    inverted: makeDarkInvertedOverrides(theme)
+  }
+})
 
 const themesCommonConfig = {
   shape: {
@@ -20,27 +35,30 @@ const themesCommonConfig = {
     }
   },
   zIndex: {
-    modal: getCssVariableValue('zIndex-modal')
+    modal: 'var(--zIndex-modal)'
   },
   textShadows: [
     'none',
     '0px 2px 8px rgba(29, 33, 42, 0.16), 0px 0px 1px rgba(29, 33, 42, 0.48)'
   ],
-  shadows: makeShadows(), // Shadow ar not linked to themes
   ...(isTesting() && { transitions: { create: () => 'none' } })
 }
 
-export const makeTheme = mode => {
-  const palette = makePalette(mode)
+export const makeTheme = (type, variant) => {
+  // to hold the values of css variables, recoverable by getCssVariableValue()
+  createNodeWithThemeCssVars(type, variant)
+
+  const palette = makePalette(type, variant)
   const theme = createTheme({
     ...themesCommonConfig,
     typography: makeTypography(palette),
+    shadows: makeShadows(type, variant),
     palette
   })
-  const components = makeThemeOverrides(theme)
+  const overrides = makeOverridesByTheme(theme)[type][variant]
 
   return {
     ...theme,
-    components
+    overrides
   }
 }

@@ -113,7 +113,7 @@ describe('PDFViewer', () => {
     })
 
     it('should render all the pages', () => {
-      const pages = component.find('Page')
+      const pages = component.find('ForwardRef(Page)')
       expect(pages.length).toEqual(MAX_PAGES)
     })
 
@@ -131,7 +131,7 @@ describe('PDFViewer', () => {
     })
 
     it('should render only the current page', () => {
-      const pages = component.find('Page')
+      const pages = component.find('ForwardRef(Page)')
       expect(pages.length).toEqual(1)
     })
 

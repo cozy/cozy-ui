@@ -4,18 +4,22 @@ import PropTypes from 'prop-types'
 import { models } from 'cozy-client'
 
 import Typography from '../../Typography'
-import { useI18n } from '../../I18n'
-import { formatLocallyDistanceToNowStrict } from '../../I18n/format'
+import { useI18n } from '../../providers/I18n'
 
-const { computeExpirationDate, isExpired } = models.paper
+const {
+  computeExpirationDate,
+  isExpired,
+  makeExpiredMessage,
+  makeExpiresInMessage
+} = models.paper
 
 const ExpirationAnnotation = ({ file }) => {
-  const { t } = useI18n()
+  const { lang } = useI18n()
 
   if (isExpired(file)) {
     return (
       <Typography component="span" variant="inherit" color="error">
-        {t('Viewer.panel.qualification.expired')}
+        {makeExpiredMessage({ lang })}
       </Typography>
     )
   }
@@ -24,9 +28,7 @@ const ExpirationAnnotation = ({ file }) => {
 
   return (
     <Typography component="span" variant="inherit" className="u-warning">
-      {t('Viewer.panel.qualification.expiresIn', {
-        duration: formatLocallyDistanceToNowStrict(expirationDate)
-      })}
+      {makeExpiresInMessage(expirationDate, { lang })}
     </Typography>
   )
 }

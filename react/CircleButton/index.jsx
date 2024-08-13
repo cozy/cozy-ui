@@ -6,6 +6,7 @@ import Box from '../Box'
 import IconButton from '../IconButton'
 import Typography from '../Typography'
 import { makeTypoColor, makeButtonShadow } from './helpers'
+import { getRandomUUID } from '../helpers/getRandomUUID'
 
 const useStyles = makeStyles(theme => ({
   iconButton: {
@@ -37,11 +38,16 @@ const CircleButton = ({
   variant = 'default',
   disabled,
   fullWidth = false,
+  'aria-label': ariaLabel,
   children,
-  size,
   ...props
 }) => {
   const styles = useStyles({ active: variant === 'active', disabled })
+  const uuid = getRandomUUID()
+
+  if (!ariaLabel && !label) {
+    console.warn(`The "aria-label" or "label" property must be filled in.`)
+  }
 
   return (
     <Box
@@ -56,7 +62,9 @@ const CircleButton = ({
       <IconButton
         className={styles.iconButton}
         disabled={disabled}
-        size={size}
+        {...(ariaLabel
+          ? { 'aria-label': ariaLabel }
+          : { 'aria-labelledby': uuid })}
         {...props}
       >
         {children}
@@ -68,6 +76,7 @@ const CircleButton = ({
           variant="caption"
           align="center"
           noWrap
+          {...(!ariaLabel && { id: uuid })}
         >
           {label}
         </Typography>
@@ -81,12 +90,7 @@ CircleButton.propTypes = {
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   variant: PropTypes.oneOf(['default', 'active']),
   disabled: PropTypes.bool,
-  fullWidth: PropTypes.bool,
-  size: PropTypes.string
-}
-
-CircleButton.defaultProps = {
-  size: 'large'
+  fullWidth: PropTypes.bool
 }
 
 export default CircleButton

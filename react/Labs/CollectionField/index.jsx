@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 
-import Button from '../../Button'
+import Button from '../../deprecated/Button'
 import { FieldContainer } from '../../Field'
 import Icon from '../../Icon'
 import Label from '../../Label'

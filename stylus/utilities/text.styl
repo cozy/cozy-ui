@@ -18,9 +18,7 @@ $breakword
     word-break break-word
 
 $ellipsis
-    white-space nowrap
-    overflow hidden
-    text-overflow ellipsis
+    ellipsis()
 
 spacellipsis()
     overflow hidden
@@ -42,7 +40,6 @@ $midellipsis
 
     > * // @stylint ignore
         display inline-block
-        max-width 50%
         overflow hidden
         white-space pre
 
@@ -59,14 +56,14 @@ $midellipsis
 
 $link
     &:link
-        color var(--linkColor) !important // @stylint ignore
-        text-decoration var(--linkTextDecoration) !important // @stylint ignore
+        color var(--primaryColor) !important // @stylint ignore
+        text-decoration none !important // @stylint ignore
 
     &:visited
     &:active
     &:hover
     &:focus
-        color var(--linkColorActive) !important // @stylint ignore
+        color var(--primaryColorDark) !important // @stylint ignore
 
 // @stylint off
 lh-tiny()

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js'
 import { Doughnut } from 'react-chartjs-2'
-import { useTheme } from '@mui/material'
+import { useTheme } from '@material-ui/core'
 import set from 'lodash/set'
 import cloneDeep from 'lodash/cloneDeep'
 
@@ -31,11 +31,11 @@ const useStyles = makeStyles(theme => ({
     borderRadius: '100%',
     zIndex: -1,
     backgroundColor: ({ single }) =>
-      !single && theme.palette.mode === 'dark'
+      !single && theme.palette.variant === 'inverted'
         ? theme.palette.primary.main
         : 'none',
     boxShadow: ({ single }) =>
-      !single && theme.palette.mode === 'dark'
+      !single && theme.palette.variant === 'inverted'
         ? `0 0 0 2px ${theme.palette.primary.main}`
         : 'none'
   },
@@ -55,7 +55,7 @@ const useStyles = makeStyles(theme => ({
   },
   typography: {
     color: ({ single }) =>
-      !single && theme.palette.mode === 'dark'
+      !single && theme.palette.variant === 'inverted'
         ? theme.palette.primary.contrastText
         : theme.palette.text.primary
   }

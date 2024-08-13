@@ -14,7 +14,7 @@ import CircularChart from 'cozy-ui/transpiled/react/CircularChart'
 import CircularChart from 'cozy-ui/transpiled/react/CircularChart'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Box from 'cozy-ui/transpiled/react/Box'
-import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import BikeIcon from 'cozy-ui/transpiled/react/Icons/Bike'
 

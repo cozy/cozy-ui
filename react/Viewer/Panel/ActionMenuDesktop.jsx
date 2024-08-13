@@ -5,9 +5,9 @@ import styles from './styles.styl'
 import Icon from '../../Icon'
 import Copy from '../../Icons/Copy'
 import Edit from '../../Icons/Rename'
-import ActionMenu, { ActionMenuItem } from '../../ActionMenu'
+import ActionMenu, { ActionMenuItem } from '../../deprecated/ActionMenu'
 import Typography from '../../Typography'
-import { useI18n } from '../../I18n'
+import { useI18n } from '../../providers/I18n'
 import AppLinker from '../../AppLinker'
 
 const ActionMenuDesktop = forwardRef(
@@ -25,15 +25,10 @@ const ActionMenuDesktop = forwardRef(
           <AppLinker app={{ slug: appSlug }} href={appLink}>
             {({ onClick, href }) => {
               return (
-                <a
-                  href={href}
-                  className={
-                    !appLink &&
-                    styles['ActionMenuDesktop-ActionMenu-link-disabled']
-                  }
-                  onClick={() => handleEdit(onClick)}
-                >
-                  <ActionMenuItem left={<Icon icon={Edit} />}>
+                <a href={href} onClick={() => handleEdit(onClick)}>
+                  <ActionMenuItem
+                    left={<Icon icon={Edit} color="var(--iconTextColor)" />}
+                  >
                     <Typography>
                       {t(`Viewer.panel.qualification.actions.edit`)}
                     </Typography>
@@ -43,7 +38,10 @@ const ActionMenuDesktop = forwardRef(
             }}
           </AppLinker>
         )}
-        <ActionMenuItem onClick={handleCopy} left={<Icon icon={Copy} />}>
+        <ActionMenuItem
+          onClick={handleCopy}
+          left={<Icon icon={Copy} color="var(--iconTextColor)" />}
+        >
           <Typography>
             {t(`Viewer.panel.qualification.actions.copy`)}
           </Typography>

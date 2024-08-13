@@ -5,15 +5,20 @@ import Dialog, { DialogTitle, DialogContent } from '../Dialog'
 import Icon from '../Icon'
 import IconButton from '../IconButton'
 import LeftIcon from '../Icons/Left'
-import { Media, Bd, Img } from '../Media'
+import { Media, Bd, Img } from '../deprecated/Media'
 
 import NestedSelect from './NestedSelect'
 import styles from './styles.styl'
+import List from '../List'
 
 const NestedSelectDialogHeader = ({ onClickBack, showBack, title }) => {
   const { dialogTitleProps } = useCozyDialog({
-    open: true
+    open: true,
+    onClose: true
   })
+
+  if (!title) return null
+
   return (
     <DialogTitle {...dialogTitleProps}>
       <Media>
@@ -24,28 +29,25 @@ const NestedSelectDialogHeader = ({ onClickBack, showBack, title }) => {
             </IconButton>
           </Img>
         )}
-        <Bd>{title}</Bd>
+        <Bd className="u-ellipsis">{title}</Bd>
       </Media>
     </DialogTitle>
   )
 }
 
 const NestedSelectDialogContent = ({ children }) => {
-  return <DialogContent className="u-p-0">{children}</DialogContent>
+  return (
+    <DialogContent className="u-p-0">
+      <List>{children}</List>
+    </DialogContent>
+  )
 }
 
 const NestedSelectModal = props => {
-  const { dialogProps } = useCozyDialog({
-    open: true,
-    align: 'top'
-  })
+  const { dialogProps } = useCozyDialog({ open: true })
+
   return (
-    <Dialog
-      {...dialogProps}
-      open={true}
-      title={props.title}
-      onClose={props.onClose}
-    >
+    <Dialog {...dialogProps} onClose={props.onClose}>
       <DialogCloseButton
         onClick={props.onClose}
         data-testid={`modal-close-button-nested-select`}

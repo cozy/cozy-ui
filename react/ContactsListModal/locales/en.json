@@ -4,5 +4,8 @@
   "newContact": "New contact",
   "coordinates": "Coordinates",
   "givenName": "Firstname",
-  "familyName": "Lastname"
+  "familyName": "Lastname",
+  "addContact": "Add a contact",
+  "searchContact": "Search a contact",
+  "emptyContact": "No contact"
 }

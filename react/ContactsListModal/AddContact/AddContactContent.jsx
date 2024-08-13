@@ -1,10 +1,11 @@
-import { Typography } from '@mui/material'
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Icon from '../../Icon'
 import PeopleIcon from '../../Icons/People'
-import { Media, Img, Bd } from '../../Media'
-import TextField from '../../MuiCozyTheme/TextField'
+import { Media, Img, Bd } from '../../deprecated/Media'
+import TextField from '../../TextField'
+import Typography from '../../Typography'
 import { withContactsListLocales } from '../withContactsListLocales'
 
 import styles from './styles.styl'
@@ -26,7 +27,8 @@ const AddContactContent = ({ t, setContactValues }) => {
           <TextField
             className="u-mt-1"
             variant="outlined"
-            fullWidth={true}
+            fullWidth
+            id={'givenName'}
             name="givenName"
             label={t('givenName')}
             onChange={handleChange}
@@ -38,7 +40,8 @@ const AddContactContent = ({ t, setContactValues }) => {
           <TextField
             className="u-mt-1"
             variant="outlined"
-            fullWidth={true}
+            fullWidth
+            id={'familyName'}
             name="familyName"
             label={t('familyName')}
             onChange={handleChange}
@@ -47,6 +50,11 @@ const AddContactContent = ({ t, setContactValues }) => {
       </Media>
     </>
   )
+}
+
+AddContactContent.propTypes = {
+  t: PropTypes.func,
+  setContactValues: PropTypes.func
 }
 
 export default withContactsListLocales(AddContactContent)

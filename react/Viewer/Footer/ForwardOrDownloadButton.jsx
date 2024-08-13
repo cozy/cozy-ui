@@ -7,14 +7,14 @@ import ForwardButton from './ForwardButton'
 import DownloadButton from './DownloadButton'
 import { shouldBeForwardButton } from './helpers'
 
-const ForwardOrDownloadButton = ({ file }) => {
+const ForwardOrDownloadButton = ({ file, ...props }) => {
   const client = useClient()
 
   const FileActionButton = shouldBeForwardButton(client)
     ? ForwardButton
     : DownloadButton
 
-  return <FileActionButton file={file} />
+  return <FileActionButton file={file} {...props} />
 }
 
 ForwardOrDownloadButton.propTypes = {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-import IntentIframe from '../IntentIframe'
+import IntentIframe, { iframeProps } from '../IntentIframe'
 import { DialogCloseButton } from '../CozyDialogs'
 import Dialog from '../Dialog'
 
@@ -22,12 +22,14 @@ const IntentDialogOpener = props => {
     onComplete,
     onDismiss,
     iframeProps,
-    ...dialogProps
+    Component,
+    ...componentProps
   } = props
   const [modalOpened, setModalOpened] = useState(false)
 
   const openModal = ev => {
     ev.preventDefault()
+    ev.stopPropagation()
     setModalOpened(true)
   }
   const closeModal = () => setModalOpened(false)
@@ -49,11 +51,11 @@ const IntentDialogOpener = props => {
 
   if (modalOpened) {
     elements.push(
-      <Dialog
+      <Component
         key="intent-modal"
         open={modalOpened}
         onClose={closable && handleDismiss}
-        {...dialogProps}
+        {...componentProps}
       >
         {closable && showCloseButton && (
           <DialogCloseButton onClick={handleDismiss} />
@@ -67,7 +69,7 @@ const IntentDialogOpener = props => {
           onTerminate={handleComplete}
           iframeProps={iframeProps}
         />
-      </Dialog>
+      </Component>
     )
   }
 
@@ -91,16 +93,16 @@ IntentDialogOpener.propTypes = {
   showCloseButton: PropTypes.bool.isRequired,
   /** Tag used to wrap children */
   tag: PropTypes.string.isRequired,
+  /** Component to be used instead of the dialog */
+  Component: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   /** Props to be passed to the iframe */
-  iframeProps: PropTypes.shape({
-    wrapperProps: PropTypes.object,
-    spinnerProps: PropTypes.object
-  })
+  iframeProps: iframeProps
 }
 
 IntentDialogOpener.defaultProps = {
   tag: 'span',
   closable: true,
+  Component: Dialog,
   showCloseButton: true
 }
 

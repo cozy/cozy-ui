@@ -2,7 +2,7 @@ import { isValidElement, Children, cloneElement } from 'react'
 import { saveFileWithCordova } from 'cozy-client/dist/models/fsnative'
 import { isIOS, isMobileApp } from 'cozy-device-helper'
 
-import Alerter from '../../Alerter'
+import Alerter from '../../deprecated/Alerter'
 
 export const shouldBeForwardButton = client => {
   const isDrive = client?.appMetadata?.slug === 'drive'
@@ -88,4 +88,19 @@ export const mapToAllChildren = (children, cb) => {
 
     return cb(child)
   })
+}
+
+export const extractChildrenCompByName = ({ children, file, name }) => {
+  const ChildrenComp =
+    Children.toArray(children).find(child => {
+      return child.type.name === name || child.type.displayName === name
+    }) || null
+
+  const ChildrenCompWithFile = isValidElement(ChildrenComp)
+    ? cloneElement(ChildrenComp, {
+        file
+      })
+    : null
+
+  return ChildrenCompWithFile
 }

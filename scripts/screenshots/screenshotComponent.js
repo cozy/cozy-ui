@@ -5,10 +5,16 @@ const rootDirectory = path.join(__dirname, '../')
 
 const formatViewport = viewport => `${viewport.width}x${viewport.height}`
 
-const defaultGetScreenshotName = ({ component, viewport, suffix, theme }) =>
-  `${component.testId}-${suffix ? `${suffix}-` : ''}${theme}-${formatViewport(
-    viewport
-  )}.png`
+const getDefaultScreenshotName = ({
+  component,
+  viewport,
+  suffix,
+  type,
+  variant
+}) =>
+  `${component.testId}-${
+    suffix ? `${suffix}-` : ''
+  }${type}-${variant}-${formatViewport(viewport)}.png`
 
 /**
  * Screenshot a component to the screenshot directory, taking care of
@@ -16,27 +22,30 @@ const defaultGetScreenshotName = ({ component, viewport, suffix, theme }) =>
  * component.
  */
 const screenshotComponent = async (page, options) => {
-  const { component, screenshotDir, viewport, theme } = options
+  const {
+    component,
+    screenshotDir,
+    viewport,
+    type,
+    variant,
+    componentConfig
+  } = options
   const { link, name } = component
 
-  // Need to use page.goto twice to set localStorage correctly
-  await page.goto(link, { waitUntil: 'load', timeout: 0 })
-  await page.evaluate(theme => {
-    localStorage.setItem('theme', theme)
-  }, theme)
-  await page.goto(link, { waitUntil: 'load', timeout: 0 })
-  await sleep(100)
+  await page.goto(link)
+  await sleep(200) // to be sure the page is entirely loaded
 
   const getScreenshotName =
-    options.getScreenshotName || defaultGetScreenshotName
+    options.getScreenshotName || getDefaultScreenshotName
 
   const screenshot = async suffix => {
     await page.screenshot({
       path: path.join(
         screenshotDir,
-        getScreenshotName({ component, viewport, suffix, theme })
+        getScreenshotName({ component, viewport, suffix, type, variant })
       ),
-      fullPage: true,
+      fullPage: componentConfig?.fullPage ?? true,
+      optimizeForSpeed: true,
       captureBeyondViewport: false
     })
   }
@@ -52,7 +61,9 @@ const screenshotComponent = async (page, options) => {
     await componentScript(page, screenshot)
   } else {
     console.log(
-      `Screenshotting ${name} for ${theme} theme at ${formatViewport(viewport)}`
+      `Screenshotting ${name} for ${type}-${variant} theme at ${formatViewport(
+        viewport
+      )}`
     )
     await screenshot()
   }

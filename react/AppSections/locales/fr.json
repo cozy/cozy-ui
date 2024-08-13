@@ -2,13 +2,15 @@
   "app_categories": {
     "all": "Toutes les catégories",
     "banking": "Banques",
+    "clouds": "Clouds et coffres",
     "cozy": "Les essentielles",
     "education": "Éducation",
     "energy": "Energie",
+    "finance": "Emploi et finance",
     "health": "Santé",
     "host_provider": "Hébergeur",
     "insurance": "Assurance",
-    "isp": "Internet",
+    "isp": "Mobile et Internet",
     "konnectors": "Services",
     "list_separator": ", ",
     "mes_infos": "Expérimentation MesInfos",
@@ -21,8 +23,10 @@
     "public_service": "Services publics",
     "shopping": "Shopping",
     "social": "Social",
+    "tech": "Tech",
     "telecom": "Mobile",
-    "transport": "Voyage et transport"
+    "transport": "Voyage et transport",
+    "pro": "Travail"
   },
   "sections": {
     "applications": "Applications",

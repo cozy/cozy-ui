@@ -1,0 +1,27 @@
+{
+  "cancel": "Cancel",
+  "allow": "Allow",
+  "allow-location-dialog": {
+    "title": "Allow access to your location",
+    "description": "Your Cozy needs to always be authorised to access your phone's location in order to memorise and help you analyse your movements, even when the app is not in use.\n\nIt will NEVER be passed on to anyone without your request.\n\nYou can deactivate this feature from the Coach CO2 app settings."
+  },
+  "install-flagship-app-dialog": {
+    "title": "Scan the QR Code",
+    "text": "or go directly to the <img src=%{iosIconSrc} /> <a href='%{iosUrl}' class='u-link' target='_blank' rel='noopener'>App Store</a><br>or <img src=%{androidIconSrc} /> <a href='%{androidUrl}' class='u-link' target='_blank' rel='noopener'>Play Store</a> to install the Cozy Cloud app",
+    "a11n": "Go to the Cozy Cloud application download page"
+  },
+  "authentification-dialog": {
+    "title": "Login",
+    "title-oidc": "Cozy Pass",
+    "subtitle": "For security, please confirm your identity",
+    "label": "Cozy password",
+    "label-oidc": "Cozy Pass password",
+    "abort": "Leave",
+    "unlock": "Unlock",
+    "forgotten-password": "I forgot my password",
+    "errors": {
+      "invalid_password": "Incorrect password, try again.",
+      "server_error": "Something went wrong with the server. Please, reload the page."
+    }
+  }
+}

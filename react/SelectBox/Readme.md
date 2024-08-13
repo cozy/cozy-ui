@@ -293,11 +293,9 @@ the options to be displayed on top of all the layers.
 ```jsx
 import { useState, useEffect } from 'react'
 import { Dialog } from 'cozy-ui/transpiled/react/CozyDialogs'
-import {
-  BreakpointsProvider
-} from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 
-import Button from 'cozy-ui/transpiled/react/Button'
+import Button from 'cozy-ui/transpiled/react/deprecated/Button'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 
 import SelectBox from 'cozy-ui/transpiled/react/SelectBox'
@@ -375,10 +373,10 @@ const ExampleDialog = ({ open, onClose }) => {
   <button onClick={() => setState({ modalOpened: !state.modalOpened })}>
     Toggle modal
   </button>
-  <BreakpointsProvider>
+  <DemoProvider>
     { state.modalOpened
       ? <ExampleDialog open={true} onClose={handleClose} />
       : null }
-  </BreakpointsProvider>
+  </DemoProvider>
 </>
 ```

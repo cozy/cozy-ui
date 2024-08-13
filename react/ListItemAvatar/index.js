@@ -1,3 +1,3 @@
-import ListItemAvatar from '@mui/material/ListItemAvatar'
+import ListItemAvatar from '@material-ui/core/ListItemAvatar'
 
 export default ListItemAvatar

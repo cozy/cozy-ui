@@ -5,8 +5,8 @@
     This file contains all needs for forms, inputs, labels...
 \*------------------------------------*/
 
-@require '../components/button'
 @require '../tools/mixins'
+@require '../settings/breakpoints'
 
 checkbox-size = rem(16)
 
@@ -16,7 +16,7 @@ $form
 
         a,
         a:visited
-            color            var(--dodgerBlue)
+            color            var(--primaryColor)
             text-decoration  none
 
         a:hover,
@@ -37,17 +37,17 @@ $form
     .coz-form-label // Deprecated
         display         block
         text-transform  uppercase
-        color           var(--coolGrey)
+        color           var(--secondaryTextColor)
         font-size       rem(12)
         padding         rem(9) 0
         margin-top      rem(16)
 
     .coz-form-label--error // Deprecated
         display  none
-        color    var(--pomegranate)
+        color    var(--errorColor)
 
     .coz-form-errors
-        color  var(--pomegranate)
+        color  var(--errorColor)
 
 $form-button
     .coz-form-controls
@@ -91,23 +91,23 @@ $form-text
         padding        rem(14) rem(12) rem(12) rem(14)
         box-sizing     border-box
         border-radius  rem(2)
-        background     var(--white)
-        border         rem(1) solid var(--dividerColor)
-        color          var(--black)
+        background     var(--paperBackgroundColor)
+        border         rem(1) solid var(--borderMainColor)
+        color          var(--primaryTextColor)
 
         &::placeholder
-            color      var(--coolGrey)
+            color      var(--secondaryTextColor)
             font-size  rem(16)
 
         &:focus
-            border      rem(1) solid var(--dodgerBlue)
+            border      rem(1) solid var(--primaryColor)
             outline     0
 
         &:hover
-            border  rem(1) solid var(--coolGrey)
+            border  rem(1) solid var(--hintTextColor)
 
         &.error
-            border      rem(1) solid var(--pomegranate)
+            border      rem(1) solid var(--errorColor)
 
 
 $form-textarea
@@ -116,23 +116,23 @@ $form-textarea
         padding        rem(14 12 12 14)
         box-sizing     border-box
         border-radius  rem(2)
-        background     var(--white)
-        border         rem(1) solid var(--dividerColor)
-        color          var(--black)
+        background     var(--paperBackgroundColor)
+        border         rem(1) solid var(--borderMainColor)
+        color          var(--primaryTextColor)
 
         &::placeholder
-            color      var(--coolGrey)
+            color      var(--secondaryTextColor)
             font-size  rem(16)
 
         &:focus
-            border      rem(1) solid var(--dodgerBlue)
+            border      rem(1) solid var(--primaryColor)
             outline     0
 
         &:hover
-            border  rem(1) solid var(--coolGrey)
+            border  rem(1) solid var(--hintTextColor)
 
         &.error
-            border      rem(1) solid var(--pomegranate)
+            border      rem(1) solid var(--errorColor)
 
 
 $form-select
@@ -141,9 +141,9 @@ $form-select
         padding              rem(12 12 14)
         border-radius        rem(4)
         box-sizing           border-box
-        background           var(--white)
-        border               rem(1) solid var(--dividerColor)
-        color                var(--black)
+        background           var(--paperBackgroundColor)
+        border               rem(1) solid var(--borderMainColor)
+        color                var(--primaryTextColor)
         appearance           none
         background-image     embedurl('../../assets/icons/ui/dropdown.svg')
         background-position  right rem(8) center
@@ -153,17 +153,17 @@ $form-select
             display  none
 
         &::placeholder
-            color      var(--slateGrey)
+            color      var(--secondaryTextColor)
             font-size  rem(17)
 
         &:focus
-            border      rem(1) solid var(--dodgerBlue)
+            border      rem(1) solid var(--primaryColor)
 
         &:hover
-            border  rem(1) solid var(--coolGrey)
+            border  rem(1) solid var(--hintTextColor)
 
         &.error
-            border      rem(1) solid var(--pomegranate)
+            border      rem(1) solid var(--errorColor)
             background  none
 
 
@@ -206,23 +206,23 @@ $form-progress
         margin         rem(8) 0
         width          100%
         height         rem(8)
-        color          var(--dodgerBlue)
-        background     var(--paleGrey)
+        color          var(--primaryColor)
+        background     var(--defaultBackgroundColor)
         border         0
         border-radius  rem(18)
 
         // chrome and safari
         &::-webkit-progress-bar
-            background     var(--paleGrey)
+            background     var(--defaultBackgroundColor)
             border-radius  rem(18)
 
         &::-webkit-progress-value
-            background     var(--charcoalGrey)
+            background     var(--dividerColor)
             border-radius  rem(18)
 
         // firefox
         &::-moz-progress-bar
-            background     var(--charcoalGrey)
+            background     var(--dividerColor)
             border-radius  rem(18)
 
 // New styles
@@ -234,7 +234,7 @@ $label
     line-height rem(16)
 
     &.is-error
-        color var(--pomegranate)
+        color var(--errorColor)
 
 $label--block
     display block
@@ -242,12 +242,12 @@ $label--block
 
 $input--disabled
     cursor not-allowed
-    background-color var(--paleGrey)
-    color var(--charcoalGrey)
+    background-color var(--actionColorDisabledBackground)
+    color var(--actionColorDisabled)
 
     &:hover
     &:focus
-        border rem(1) solid var(--dividerColor)
+        border rem(1) solid var(--borderMainColor)
 
 $input-text
     display inline-block
@@ -256,27 +256,27 @@ $input-text
     padding rem(13 16)
     box-sizing border-box
     border-radius rem(3)
-    background var(--white)
-    border rem(1) solid var(--dividerColor)
+    background var(--paperBackgroundColor)
+    border rem(1) solid var(--borderMainColor)
     font-size rem(16)
     line-height 1.25
-    color var(--charcoalGrey)
+    color var(--primaryTextColor)
     outline 0
 
     &::placeholder
-        color var(--coolGrey)
+        color var(--secondaryTextColor)
         font-size rem(16)
 
     &:hover
-        border rem(1) solid var(--coolGrey)
+        border rem(1) solid var(--hintTextColor)
 
     &:focus
-        border rem(1) solid var(--dodgerBlue)
+        border rem(1) solid var(--primaryColor)
         outline 0
 
     &.is-error
     &:not(:focus):invalid
-        border rem(1) solid var(--pomegranate)
+        border rem(1) solid var(--errorColor)
 
     &[aria-disabled=true]
     &[disabled]
@@ -333,12 +333,12 @@ $checkbox
 
         &::before
             transition box-shadow 350ms cubic-bezier(0, .89, .44, 1)
-            background-color var(--white)
-            box-shadow inset 0 0 0 rem(2) var(--silver)
+            background-color var(--paperBackgroundColor)
+            box-shadow inset 0 0 0 rem(2) var(--dividerColor)
             transform translateY(-50%)
 
         &:hover::before
-            box-shadow inset 0 0 0 rem(2) var(--dodgerBlue)
+            box-shadow inset 0 0 0 rem(2) var(--primaryColor)
 
         &::after
             background-image embedurl('../../assets/icons/illus/check-white.svg')
@@ -356,20 +356,20 @@ $checkbox
             cursor not-allowed
 
         :hover::before
-            box-shadow inset 0 0 0 rem(2) var(--silver)
+            box-shadow inset 0 0 0 rem(2) var(--dividerColor)
 
         ::before
-            background-color var(--paleGrey)
+            background-color var(--dividerColor)
 
     input
         visually-hide()
 
         &:focus + span::before
-            box-shadow inset 0 0 0 rem(2) var(--dodgerBlue)
+            box-shadow inset 0 0 0 rem(2) var(--primaryColor)
 
         &:checked
             & + span::before
-                box-shadow inset 0 0 0 checkbox-size var(--dodgerBlue)
+                box-shadow inset 0 0 0 checkbox-size var(--primaryColor)
 
             & + span::after
                 opacity 1
@@ -380,11 +380,11 @@ $checkbox
             transform translateY(-50%) scale(0)
 
     &.is-error span
-        color var(--pomegranate)
+        color var(--errorColor)
 
         &::before
-            box-shadow inset 0 0 0 rem(2) var(--pomegranate)
-            background-color var(--yourPink)
+            box-shadow inset 0 0 0 rem(2) var(--errorColor)
+            background-color var(--errorColorLight)
 
     &--noGutter span
             padding-left 0
@@ -399,8 +399,8 @@ $radio
 
         &::after
             content ''
-            background var(--white)
-            border rem(5) solid var(--dodgerBlue)
+            background var(--paperBackgroundColor)
+            border rem(5) solid var(--primaryColor)
             box-sizing border-box
             width rem(16)
             height rem(16)
@@ -485,15 +485,15 @@ $inputgroup
     border rem(1) solid var(--dividerColor)
     border-radius rem(2)
     &:hover
-        border rem(1) solid var(--coolGrey)
+        border rem(1) solid var(--borderMainColor)
 
 $inputgroup--focus
     &
     &:hover
-        border-color var(--dodgerBlue)
+        border-color var(--primaryColor)
 
 $inputgroup--error
-    border-color var(--pomegranate)
+    border-color var(--errorColor)
 
 $inputgroup--fullwidth
     max-width none

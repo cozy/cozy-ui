@@ -1,3 +1,3 @@
-import MuiMobileStepper from '@mui/material/MobileStepper'
+import MuiMobileStepper from '@material-ui/core/MobileStepper'
 
 export default MuiMobileStepper

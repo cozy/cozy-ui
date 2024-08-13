@@ -24,13 +24,14 @@ const getComponentNameFromTestId = testId => {
 const fetchAllComponents = async (page, args, config) => {
   const styleguideIndexURL = `${args.styleguideUrl}/index.html`
 
-  console.log(`Opening styleguide ${styleguideIndexURL}`)
+  console.log(`➡️ Opening styleguide ${styleguideIndexURL}`)
   await page.goto(styleguideIndexURL, {
     waitUntil: 'load',
     timeout: 0
   })
 
-  console.log('Extracting links')
+  console.log('➡️ Extracting links')
+
   // We want to take screenshot for individual example, so we :
   // - extract categories (link from the side menu with no ?id=)
   // - go to category's page
@@ -41,7 +42,9 @@ const fetchAllComponents = async (page, args, config) => {
     return Array.from(document.querySelectorAll(`${sidebarSelector} a`))
       .filter(v => !v.href.includes('?id='))
       .map(x => x.text)
+      .filter(x => x !== 'Cozy-ui documentation') // see section's name in styleguide.config.js
   })
+
   const sortedCategoriesNames = sortBy(
     categoriesName.map(catName => ({
       link: styleguideIndexURL + '#/' + catName,
@@ -49,8 +52,10 @@ const fetchAllComponents = async (page, args, config) => {
     })),
     x => x.name
   )
+
   const allLinks = []
   const parsedStyleguideURL = new URL(args.styleguideUrl)
+
   for (const cate of sortedCategoriesNames) {
     await page.goto(cate.link, { waitUntil: 'load', timeout: 0 })
     await sleep(100)
@@ -80,8 +85,10 @@ const fetchAllComponents = async (page, args, config) => {
                 : componentToolbarSelector
             } ${openIsolatedButtonSelector}`
           )
+
           return Array.from(isolateButtons).map(btn => {
             const testId = btn.dataset.testid.replace('-isolate-button', '')
+
             return {
               testId,
               link: btn.getAttribute('href')
@@ -100,6 +107,7 @@ const fetchAllComponents = async (page, args, config) => {
       }))
     )
   }
+
   return allLinks
 }
 

@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer'
 
 import { createMockClient } from 'cozy-client'
 
-import { BreakpointsProvider } from '../../hooks/useBreakpoints'
+import { BreakpointsProvider } from '../../providers/Breakpoints'
 
 import { TextViewer, isMarkdown } from './TextViewer'
 

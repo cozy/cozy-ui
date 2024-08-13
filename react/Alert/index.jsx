@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import merge from 'lodash/merge'
-import MuiAlert from '@mui/material/Alert'
+import MuiAlert from '@material-ui/lab/Alert'
 
 import { makeStyles } from '../styles'
 import Icon from '../Icon'
@@ -52,11 +52,13 @@ const Alert = forwardRef(
       square,
       action,
       variant,
+      style,
       children,
       ...props
     },
     ref
   ) => {
+    // as primary and secondary doesn't exist on Mui Alert, we force success severity for those
     const madeSeverity = ['primary', 'secondary'].includes(severity)
       ? 'success'
       : severity
@@ -64,13 +66,25 @@ const Alert = forwardRef(
     const iconSize = icon?.props?.size || DEFAULT_ICON_SIZE
     const styles = useStyles({ iconSize, block })
 
+    /*
+    When this component is the child of Snackbar, MUI injects a `style` prop
+    (https://github.com/mui/material-ui/blob/bda562b435a70e3e8f6d7fb04581c6816a5ba0c7/packages/material-ui/src/Snackbar/Snackbar.js#L235
+    =>
+    https://github.com/mui/material-ui/blob/1e80616d3dde536227af56d49f91b28f830bd33c/packages/mui-material/src/Grow/Grow.js #L193), our styles are overwritten.
+    */
+    const computedStyles = {
+      backgroundColor: color,
+      borderRadius: square && 0,
+      ...style
+    }
+
     return (
       <MuiAlert
         ref={ref}
-        style={{ backgroundColor: color, borderRadius: square && 0 }}
+        style={computedStyles}
         className={cx(
           className,
-          `cozyAlert-${severity}-${variant}`,
+          `cozyStyles-${severity}-${variant}`,
           { block },
           { action: Boolean(action) }
         )}
@@ -90,7 +104,18 @@ const Alert = forwardRef(
 
 Alert.displayName = 'Alert'
 
-Alert.propTypes = {
+/**
+ * @typedef {Object} AlertProps
+ * @property {string} className - Classname of the alert
+ * @property {React.FC<PropTypes.InferProps<typeof Icon.propTypes>>|false} icon - Icon component to display in the alert (or false to hide it)
+ * @property {'primary'|'secondary'|'success'|'error'|'warning'|'info'} severity - Severity of the alert (default: primary)
+ * @property {boolean} block - Block the alert to the full width of its container (default: false)
+ * @property {string} color - Background color of the alert
+ * @property {boolean} square - Square the alert corners (default: false)
+ * @property {'standard'|'outlined'|'filled'} variant - Variant of the alert (default: standard)
+ */
+
+export const AlertPropTypes = {
   className: PropTypes.string,
   icon: PropTypes.oneOfType([PropTypes.element, PropTypes.bool]),
   severity: PropTypes.oneOf([
@@ -107,11 +132,15 @@ Alert.propTypes = {
   variant: PropTypes.oneOf(['standard', 'outlined', 'filled'])
 }
 
-Alert.defaultProps = {
+export const AlertDefaultProps = {
   severity: 'primary',
   block: false,
   square: false,
   variant: 'standard'
 }
+
+Alert.propTypes = AlertPropTypes
+
+Alert.defaultProps = AlertDefaultProps
 
 export default Alert

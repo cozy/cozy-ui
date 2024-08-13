@@ -1,10 +1,10 @@
 import React from 'react'
-import { getFlagshipMetadata } from 'cozy-device-helper'
 
 import { ANIMATION_DURATION } from './constants'
 import { getSafeAreaValue } from '../helpers/getSafeArea'
+import { getFlagshipMetadata } from '../hooks/useSetFlagshipUi/helpers'
 
-export const computeMaxHeight = toolbarProps => {
+export const computeToolbarHeight = (toolbarProps = {}) => {
   const { ref, height } = toolbarProps
   let computedToolbarHeight = 1
 
@@ -14,7 +14,13 @@ export const computeMaxHeight = toolbarProps => {
     computedToolbarHeight = ref.current.offsetHeight
   }
 
-  return window.innerHeight - computedToolbarHeight
+  return computedToolbarHeight
+}
+
+export const computeMaxHeight = toolbarProps => {
+  const toolbarHeight = computeToolbarHeight(toolbarProps)
+
+  return window.innerHeight - toolbarHeight
 }
 
 export const computeMediumHeight = ({
@@ -49,11 +55,12 @@ export const computeMediumHeight = ({
 
 export const computeMinHeight = ({
   isClosable,
+  isOpenMin,
   headerRef,
   actionButtonsHeight,
   actionButtonsBottomMargin
 }) => {
-  if (isClosable) return 0
+  if (isClosable && !isOpenMin) return 0
 
   return (
     headerRef.current.offsetHeight +
@@ -78,10 +85,12 @@ export const makeOverridenChildren = (children, headerContentRef) => {
 
 export const setTopPosition = ({
   snapIndex,
-  maxHeightSnapIndex,
+  peekHeights,
   isTopPosition,
   setIsTopPosition
 }) => {
+  const maxHeightSnapIndex = peekHeights.length - 1
+
   if (snapIndex > maxHeightSnapIndex) {
     setIsTopPosition(true)
   }
@@ -125,14 +134,20 @@ export const computeBottomSpacer = ({
   backdrop,
   maxHeight,
   innerContentHeight,
+  toolbarProps,
   offset
 }) => {
-  // "maxHeight - innerContentHeight <= 0" happens for
-  // content longer than the window
-  if (maxHeight - innerContentHeight <= 0 || backdrop) {
-    return offset
+  // "maxHeight - innerContentHeight <= 0" happens for content longer than the available height
+  // such as height window or height window minus toolbar height
+  if (maxHeight - innerContentHeight <= 0) {
+    const toolbarHeight = computeToolbarHeight(toolbarProps)
+
+    return offset + toolbarHeight
   }
 
   // without backdrop, we want the bottomsheet to open to the top of the window
-  return maxHeight - innerContentHeight
+  return backdrop ? offset : maxHeight - innerContentHeight
 }
+
+export const getCssValue = (element, value) =>
+  element ? parseFloat(getComputedStyle(element).getPropertyValue(value)) : 0

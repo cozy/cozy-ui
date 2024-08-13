@@ -11,7 +11,7 @@ import CozyClient, {
 } from 'cozy-client'
 
 import BarContextProvider from '.'
-import I18n, { useI18n, translate } from '../I18n'
+import I18n, { useI18n, translate } from '../providers/I18n'
 
 const mockWebviewService = { foo: 'bar' }
 const mockVoidWebviewService = 'No context'

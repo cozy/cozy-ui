@@ -1,3 +1,3 @@
-import MuiToolbar from '@mui/material/Toolbar'
+import MuiToolbar from '@material-ui/core/Toolbar'
 
 export default MuiToolbar

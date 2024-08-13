@@ -1,3 +1,3 @@
-import MuiCardContent from '@mui/material/CardContent'
+import MuiCardContent from '@material-ui/core/CardContent'
 
 export default MuiCardContent

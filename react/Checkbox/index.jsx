@@ -2,8 +2,8 @@ import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
-import MUICheckbox from '@mui/material/Checkbox'
-import FormControlLabel from '@mui/material/FormControlLabel'
+import MUICheckbox from '@material-ui/core/Checkbox'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
 
 import createDepreciationLogger from '../helpers/createDepreciationLogger'
 
@@ -20,7 +20,6 @@ const DefaultCheckbox = ({ label, error, mixed, disabled, ...props }) => {
       color={error ? 'secondary' : 'primary'}
       indeterminate={mixed}
       disabled={disabled}
-      label={label}
       {...props}
     />
   )
@@ -43,14 +42,19 @@ const Checkbox = ({ className, label, onChange, children, ...props }) => {
           className
         )}
         label={label || children}
-        control={<DefaultCheckbox {...props} />}
+        control={<DefaultCheckbox {...props} label={label} />}
         onChange={onChange}
       />
     )
   }
 
   return (
-    <DefaultCheckbox className={className} onChange={onChange} {...props} />
+    <DefaultCheckbox
+      className={className}
+      onChange={onChange}
+      label={label}
+      {...props}
+    />
   )
 }
 

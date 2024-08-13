@@ -6,7 +6,7 @@ Read the original [Typography component](https://v4.mui.com/components/typograph
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
 import Stack from 'cozy-ui/transpiled/react/Stack'
-import Grid from 'cozy-ui/transpiled/react/MuiCozyTheme/Grid'
+import Grid from 'cozy-ui/transpiled/react/Grid'
 
 const variants = [
   'h1',
@@ -21,10 +21,7 @@ const variants = [
   'body2',
   'caption',
 ]
-const colors = ['initial', 'primary', 'secondary', 'primaryText', 'secondaryText', 'error']
-
-const makeStyles = color =>
-  color === 'initial' ? undefined : { color:  `var(--${color}Color)` }
+const colors = ['initial', 'inherit', 'primary', 'textPrimary', 'textSecondary', 'error']
 
 ;
 
@@ -35,7 +32,7 @@ const makeStyles = color =>
         <div>{color}</div>
         {variants.map(variant =>
           <div key={variant + color}>
-            <Typography style={makeStyles(color)} variant={variant}>{variant}</Typography>
+            <Typography variant={variant} color={color}>{variant}</Typography>
           </div>
         )}
       </Stack>

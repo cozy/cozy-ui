@@ -4,8 +4,8 @@ import CozyClient, { CozyProvider } from 'cozy-client'
 import { initQuery, receiveQueryResult } from 'cozy-client/dist/store'
 import { normalizeDoc } from 'cozy-stack-client'
 
-import { BreakpointsProvider } from '../../hooks/useBreakpoints'
-import { I18nContext } from '../../I18n'
+import { BreakpointsProvider } from '../../providers/Breakpoints'
+import { I18nContext } from '../../providers/I18n'
 
 /**
  * @typedef {object} CreateMockClientForDocParam

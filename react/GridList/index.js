@@ -1,12 +1,3 @@
-import React, { forwardRef } from 'react'
-import ImageList from '@mui/material/ImageList'
+import MuiGridList from '@material-ui/core/GridList'
 
-const GridList = forwardRef((props, ref) => {
-  console.warn('Deprecated, use ImageList instead')
-
-  return <ImageList ref={ref} {...props} />
-})
-
-GridList.displayName = 'GridList'
-
-export default GridList
+export default MuiGridList

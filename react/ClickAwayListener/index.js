@@ -1,3 +1,3 @@
-import MuiClickAwayListener from '@mui/material/ClickAwayListener'
+import MuiClickAwayListener from '@material-ui/core/ClickAwayListener'
 
 export default MuiClickAwayListener

@@ -5,9 +5,9 @@ import cx from 'classnames'
 import { BottomSheetItem } from '../BottomSheet'
 import Icon, { iconPropType } from '../Icon'
 import ListItemText from '../ListItemText'
-import List from '../MuiCozyTheme/List'
-import ListItem from '../MuiCozyTheme/ListItem'
-import ListItemIcon from '../MuiCozyTheme/ListItemIcon'
+import List from '../List'
+import ListItem from '../ListItem'
+import ListItemIcon from '../ListItemIcon'
 import Typography from '../Typography'
 
 const BottomSheetTitle = forwardRef(({ className, label, icon }, ref) => {

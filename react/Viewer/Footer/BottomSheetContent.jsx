@@ -3,10 +3,13 @@ import PropTypes from 'prop-types'
 
 import { BottomSheetItem } from '../../BottomSheet'
 
-import getPanelBlocks, { panelBlocksSpecs } from '../Panel/getPanelBlocks'
+import getPanelBlocks, { getPanelBlocksSpecs } from '../Panel/getPanelBlocks'
 
-const BottomSheetContent = ({ file }) => {
-  const panelBlocks = getPanelBlocks({ panelBlocksSpecs, file })
+const BottomSheetContent = ({ file, isPublic }) => {
+  const panelBlocks = getPanelBlocks({
+    panelBlocksSpecs: getPanelBlocksSpecs(isPublic),
+    file
+  })
 
   return panelBlocks.map((PanelBlock, index) => (
     <BottomSheetItem
@@ -21,7 +24,7 @@ const BottomSheetContent = ({ file }) => {
 
 BottomSheetContent.propTypes = {
   file: PropTypes.object.isRequired,
-  contactsFullname: PropTypes.string
+  isPublic: PropTypes.bool
 }
 
 export default BottomSheetContent

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Typography from '../Typography'
-import { translate } from '../I18n'
+import { translate } from '../providers/I18n'
 import withBreakpoints from '../helpers/withBreakpoints'
 
 import AppsSection from './components/AppsSection'
@@ -15,7 +15,7 @@ import * as catUtils from './categories'
 
 import styles from './Sections.styl'
 
-import withLocales from '../I18n/withLocales'
+import withLocales from '../providers/I18n/withLocales'
 import en from './locales/en.json'
 import fr from './locales/fr.json'
 
@@ -90,7 +90,8 @@ export class Sections extends Component {
       showTitles,
       showSubTitles,
       showSubSubTitles,
-      displaySpecificMaintenanceStyle
+      displaySpecificMaintenanceStyle,
+      componentsProps
     } = this.props
     const { isMobile, isTablet } = breakpoints
 
@@ -166,6 +167,7 @@ export class Sections extends Component {
                 return (
                   <AppsSection
                     key={cat.value}
+                    {...componentsProps?.appsSection}
                     appsList={konnectorGroups[cat.value]}
                     subtitle={
                       showSubSubTitles ? (
@@ -220,7 +222,16 @@ Sections.defaultProps = {
   showSubTitles: true,
 
   /** Whether to show sub sub titles (ex: Konnector category) */
-  showSubSubTitles: true
+  showSubSubTitles: true,
+
+  /* Props passed to components with the same name */
+  componentsProps: PropTypes.shape({
+    /** Props spread to AppsSection component */
+    appsSection: PropTypes.shape({
+      /** Props spread to onClick method of AppTile component */
+      disableClick: PropTypes.func
+    })
+  })
 }
 
 export const Untranslated = withBreakpoints()(Sections)

@@ -7,12 +7,12 @@ simply as a list with subheaders.
 import { useState } from 'react'
 import { Tabs, Tab } from 'cozy-ui/transpiled/react/MuiTabs'
 import Icon from 'cozy-ui/transpiled/react/Icon';
-import ListItem from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItem'
-import Divider from 'cozy-ui/transpiled/react/MuiCozyTheme/Divider'
-import ListItemIcon, {smallSize, mediumSize, largeSize} from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemIcon'
+import ListItem from 'cozy-ui/transpiled/react/ListItem'
+import Divider from 'cozy-ui/transpiled/react/Divider'
+import ListItemIcon, {smallSize, mediumSize, largeSize} from 'cozy-ui/transpiled/react/ListItemIcon'
 import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
-import ListItemSecondaryAction from 'cozy-ui/transpiled/react/MuiCozyTheme/ListItemSecondaryAction'
-import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints';
+import ListItemSecondaryAction from 'cozy-ui/transpiled/react/ListItemSecondaryAction'
+import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints';
 import NavigationList, {
   NavigationListSection,
   NavigationListHeader

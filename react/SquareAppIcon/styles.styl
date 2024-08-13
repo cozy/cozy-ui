@@ -9,10 +9,12 @@ $color = constants['color'] // hard-coded color, because the component is curren
 
 .SquareAppIcon-wrapper
     box-sizing border-box
-    background-color var(--paperBackgroundColor)
+    background-color var(--white) // we don't want to be theme responsive
     border-radius rem(12)
     height $iconSize
     width $iconSize
+    transition transform 300ms, border-radius 300ms
+
     +small-screen()
         height $mobileIconSize
         width $mobileIconSize
@@ -29,19 +31,100 @@ $color = constants['color'] // hard-coded color, because the component is curren
     svg, img
         width 100%
 
-.SquareAppIcon-wrapper-fx
-    background-color alpha($color, .32)
-    border 1px dashed var(--white)
-    background-color alpha($color, .48)
-
 .SquareAppIcon-wrapper-ghost
     .SquareAppIcon-icon-container
         mix-blend-mode screen
         svg, img
             filter saturate(0%)
+    .SquareAppIcon-icon-container-normal
+        mix-blend-mode luminosity
+        svg, img
+            opacity .5
 
 .SquareAppIcon-wrapper-maintenance
     .SquareAppIcon-icon-container
         mix-blend-mode luminosity
         svg, img
             opacity .5
+
+.SquareAppIcon-wrapper-loading
+    border-radius 50%
+    transform scale(0.875)
+    +small-screen()
+        transform scale(0.8334)
+
+.SquareAppIcon-spinner
+    margin 0 !important
+
+    svg
+        position absolute
+        height 100%
+        width 100%
+
+animation-duration = 1.50s
+icon-duration = 0.2s
+icon-start = 0.2s
+border-radius-start = 50%
+border-radius-end = rem(12)
+opacity-start = 0
+opacity-end = 1
+
+.onEnd
+    align-items center
+    border-radius border-radius-start
+    display flex
+    height 100%
+    opacity opacity-start
+    position absolute
+    width 100%
+    z-index 1
+
+    svg
+        fill transparent !important
+
+        path
+            animation-duration icon-duration !important
+
+        path:first-of-type
+            animation-delay icon-start !important
+
+        // The second path is a part of the cross,
+        // since it has its own hardcoded animation delay we need to add it again (.16s)
+        path+path
+            animation-delay icon-start + .16s !important
+
+        *
+            stroke var(--white) !important
+
+.onEnd.isFailed
+    --animationColor var(--errorColor)
+
+.onEnd.isSuccess
+    --animationColor var(--successColor)
+
+.isSuccess
+.isFailed
+    animation end-animation animation-duration forwards
+
+@keyframes end-animation {
+  0% {
+    background-color transparent
+    border-radius border-radius-start
+    opacity opacity-start
+  }
+  13.33% {
+    background-color var(--animationColor)
+    border-radius border-radius-end
+    opacity opacity-end
+  }
+  66.67% {
+    background-color var(--animationColor)
+    border-radius border-radius-end
+    opacity opacity-end
+  }
+  100% {
+    border-radius border-radius-end
+    opacity opacity-start
+    background-color transparent
+  }
+}

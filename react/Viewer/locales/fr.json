@@ -2,22 +2,22 @@
   "Viewer": {
     "actions": {
       "download": "Télécharger",
-      "forward": "Transférer"
+      "forward": "Envoyer"
     },
     "alert": {
       "preparing": "Preparation de vos fichiers…"
     },
     "close": "Fermer",
     "download": "Télécharger",
+    "complete": "Compléter le document",
+    "noImage": "Aucune image",
     "error": {
       "downloadFile": {
         "offline": "Vous devez être connecté pour télécharger ce fichier"
       },
       "generic": "Une erreur s'est produite lors de l'ouverture de ce fichier, veuillez réessayer.",
       "missing": "Le fichier est manquant",
-      "network": "Ce fichier n'a pas pu être chargé. Avez-vous une connexion internet qui fonctionne actuellement ?",
-      "noapp": "Aucune application de votre appareil ne peut ouvrir ce fichier avec le type mime : %{fileMime} ",
-      "offline": "Vous devez être connecté pour ouvrir ce fichier"
+      "network": "Ce fichier n'a pas pu être chargé. Avez-vous une connexion internet qui fonctionne actuellement ?"
     },
     "goto": "Ouvrir %{url}",
     "next": "Suivante",
@@ -35,51 +35,13 @@
         }
       },
       "qualification": {
-        "date": {
-          "title": {
-            "datetime": "Ajouté le",
-            "AObtentionDate": "Permis A, délivré le",
-            "BObtentionDate": "Permis B, délivré le",
-            "CObtentionDate": "Permis C, délivré le",
-            "DObtentionDate": "Permis D, délivré le",
-            "issueDate": "Délivré le",
-            "expirationDate": "Date d'expiration",
-            "referencedDate": "Date de référence",
-            "shootingDate": "Date de prise de vue",
-            "obtentionDate": "Date d'obtention",
-            "date": "Date du document"
-          }
-        },
-        "information": {
-          "title": {
-            "number": "Numéro du permis",
-            "cafFileNumber": "Numéro de dossier CAF",
-            "cardNumber": "Numéro de la carte d'identité",
-            "vinNumber": "Numéro de la carte grise (VIN)",
-            "ibanNumber": "Numéro d'IBAN",
-            "country": "Pays de délivrance",
-            "passportNumber": "Numéro du passeport",
-            "refTaxIncome": "Revenu fiscal de référence",
-            "noticePeriod": "Alerte d’expiration"
-          },
-          "day": "jour |||| jours"
-        },
-        "contact": "Titulaire",
-        "page": "Face du document",
-        "front": "Face avant",
-        "back": "Face arrière",
-        "qualification": "Qualification",
-        "noInfo": "Non renseigné(e)",
         "actions": {
           "copy": "Copier",
           "copyClipboard": "Copier dans le presse-papier",
           "edit": "Modifier"
-        },
-        "expired": "Expiré",
-        "expiresIn": "Expire dans %{duration}"
+        }
       },
       "expiration": {
-        "description": "Ce document expire dans %{duration}, pensez à le renouveler",
         "dismiss": "J'ai compris"
       },
       "title": "Informations utiles"

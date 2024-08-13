@@ -1,5 +1,4 @@
 @require '../settings/breakpoints'
-@require '../settings/z-index'
 @require '../settings/typography'
 @require '../tools/mixins'
 
@@ -21,7 +20,7 @@ $nav
 
 $nav-item
     position        relative
-    z-index         $app-index
+    z-index         var(--zIndex-app)
     height          rem(48)
     box-sizing      border-box
     cursor          pointer
@@ -29,13 +28,13 @@ $nav-item
     &:hover::before
         content        ''
         position       absolute
-        z-index        $below-index
+        z-index        var(--zIndex-below)
         border-radius  rem(0 3 3 0)
         top 0
         left 0
         right rem(16)
         bottom 0
-        background     rgba(0, 0, 0, .10)
+        background     var(--actionColorHover)
 
         // Prevent double tap on tablets
         @media (hover: none)
@@ -54,7 +53,7 @@ $nav-item
 $nav-item-icon
     display inline-block
     margin-right rem(11)
-    color var(--coolGrey)
+    color var(--actionColorActive)
     fill currentColor
 
     svg
@@ -64,7 +63,7 @@ $nav-item-icon
         color var(--primaryColor)
 
     :hover > &
-        color var(--navTextColor)
+        color var(--actionColorActive)
 
     +medium-screen()
         display block
@@ -88,7 +87,7 @@ $nav-link
     padding-right        rem(16)
     line-height          1.5
     text-decoration      none
-    color                var(--navTextColor)
+    color                var(--actionColorActive)
     height               100%
     align-items          center
     flex                 1
@@ -96,15 +95,12 @@ $nav-link
     background-position  rem(24) center
 
     &:visited
-        color  var(--navTextColor)
-
-    &:hover:not(.is-active)
-        color  var(--navTextHoverColor)
+        color  var(--actionColorActive)
 
     &.is-active
         box-shadow   inset rem(4) 0 0 0 var(--primaryColor)
         font-weight  bold
-        color  var(--navTextActiveColor)
+        color  var(--primaryTextColor)
 
         .c-nav-icon
             color var(--primaryColor)
@@ -124,12 +120,6 @@ $nav-link
             box-shadow   none
             font-weight  normal
 
-    // Prevent double tap on tablets
-    @media not all and (pointer: fine)
-        &:hover:not(.is-active)
-            color var(--navTextColor)
-
-
 $nav-item-secondary
     height auto
 
@@ -144,13 +134,13 @@ $nav-item-secondary
     &:hover::before
         content        ''
         position       absolute
-        z-index        $below-index
+        z-index        var(--zIndex-below)
         border-radius  rem(3 0 0 3)
         top 0
         right 0
         left rem(48)
         bottom 0
-        background     rgba(0, 0, 0, .10)
+        background     var(--actionColorHover)
 
         // Prevent double tap on tablets
         @media (hover: none)
@@ -162,16 +152,16 @@ $nav-link-secondary
     border-radius 4px 0 0 4px
     box-shadow none
     font-size $small-font-size
-    color var(--navTextColor)
+    color var(--actionColorActive)
     text-decoration none
     height auto
 
-    &:hover:not(.is-active)
-        color var(--navTextHoverColor)
-
     &.is-active
-        color white
-        border-right 1px solid var(--navTextColor)
-        background-color var(--navTextColor)
+        color var(--primaryContrastTextColor)
+        border-right 1px solid var(--actionColorActive)
+        background-color var(--actionColorActive)
 
-
+$nav-limiter
+    background transparent
+    border 0
+    cursor pointer

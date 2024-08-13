@@ -45,9 +45,9 @@ const initialVariants = [
       <StyledPaperExample elevation={0} square={variant.square} />
       <StyledPaperExample elevation={1} square={variant.square} />
       <StyledPaperExample elevation={4} square={variant.square} />
-      <StyledPaperExample elevation={12} square={variant.square} />
       <StyledPaperExample elevation={16} square={variant.square} />
       <StyledPaperExample elevation={24} square={variant.square} />
+      <StyledPaperExample elevation={25} square={variant.square} />
     </Stack>
   )
 }</Variants>

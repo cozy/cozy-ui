@@ -2,22 +2,22 @@
   "Viewer": {
     "actions": {
       "download": "Download",
-      "forward": "Forward"
+      "forward": "Send"
     },
     "alert": {
       "preparing": "Preparing your files…"
     },
     "close": "close",
     "download": "Download",
+    "complete": "Complete the document",
+    "noImage": "No image",
     "error": {
       "downloadFile": {
         "offline": "You should be connected to download this file"
       },
       "generic": "An error occurred when opening this file, please try again.",
       "missing": "This file is missing",
-      "network": "This file could not be loaded. Do you have a working internet connection right now?",
-      "noapp": "No application on your device can open this file with mime type: %{fileMime} ",
-      "offline": "You should be connected to open this file"
+      "network": "This file could not be loaded. Do you have a working internet connection right now?"
     },
     "goto": "Go to %{url}",
     "next": "Next",
@@ -35,51 +35,13 @@
         }
       },
       "qualification": {
-        "date": {
-          "title": {
-            "datetime": "Added on",
-            "AObtentionDate": "License A, delivered on",
-            "BObtentionDate": "License B, delivered on",
-            "CObtentionDate": "License C, delivered on",
-            "DObtentionDate": "License D, delivered on",
-            "issueDate": "Delivered on",
-            "expirationDate": "Expiration date",
-            "referencedDate": "Referenced date",
-            "shootingDate": "Shooting date",
-            "obtentionDate": "Date obtained",
-            "date": "Document date"
-          }
-        },
-        "information": {
-          "title": {
-            "number": "License number",
-            "cafFileNumber": "CAF file number",
-            "cardNumber": "National ID card number",
-            "vinNumber": "Vehicle registration number (VIN)",
-            "ibanNumber": "IBAN number",
-            "country": "Country of delivery",
-            "passportNumber": "Passport number",
-            "refTaxIncome": "Reference tax income",
-            "noticePeriod": "Expiration alert"
-          },
-          "day": "day |||| days"
-        },
-        "contact": "Owner",
-        "page": "Side of the document",
-        "front": "Front side",
-        "back": "Back side",
-        "qualification": "Qualification",
-        "noInfo": "No information",
         "actions": {
           "copy": "Copy",
           "copyClipboard": "Copy to clipboard",
           "edit": "Edit"
-        },
-        "expired": "Expired",
-        "expiresIn": "Expires in %{duration}"
+        }
       },
       "expiration": {
-        "description": "This document expires in %{duration}, consider renewing it",
         "dismiss": "I understood"
       },
       "title": "Useful information"

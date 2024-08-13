@@ -12,7 +12,7 @@ const BottomSheetItem = forwardRef(
     return (
       <Paper
         ref={ref}
-        elevation={disableElevation ? 0 : 0} // need to set correct shadow values before setting a real elevation value
+        elevation={disableElevation ? 0 : 25}
         square
         className={cx({ 'u-p-1': !disableGutters }, className)}
         {...props}

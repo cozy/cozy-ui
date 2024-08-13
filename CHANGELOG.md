@@ -1,3 +1,2473 @@
+# [111.5.0](https://github.com/cozy/cozy-ui/compare/v111.4.0...v111.5.0) (2024-08-13)
+
+
+### Features
+
+* Reuse travis again since we have build problem with GA ([ebcb925](https://github.com/cozy/cozy-ui/commit/ebcb925))
+
+# [111.4.0](https://github.com/cozy/cozy-ui/compare/v111.3.1...v111.4.0) (2024-08-12)
+
+
+### Features
+
+* Simplify CI ([4c4badd](https://github.com/cozy/cozy-ui/commit/4c4badd))
+
+## [111.3.1](https://github.com/cozy/cozy-ui/compare/v111.3.0...v111.3.1) (2024-08-12)
+
+
+### Bug Fixes
+
+* We moved unnecessarily `puppeteer` from devDep to dep ([cc024b9](https://github.com/cozy/cozy-ui/commit/cc024b9))
+
+# [111.3.0](https://github.com/cozy/cozy-ui/compare/v111.2.0...v111.3.0) (2024-08-07)
+
+
+### Features
+
+* **Buttons:** Support now `default, inherit, secondary` color for Text variant ([b9af84a](https://github.com/cozy/cozy-ui/commit/b9af84a))
+
+# [111.2.0](https://github.com/cozy/cozy-ui/compare/v111.1.1...v111.2.0) (2024-07-25)
+
+
+### Features
+
+* **CozyTheme:** Add `ignoreCozySettings` prop to bypass settings query ([e49a312](https://github.com/cozy/cozy-ui/commit/e49a312))
+
+## [111.1.1](https://github.com/cozy/cozy-ui/compare/v111.1.0...v111.1.1) (2024-07-18)
+
+
+### Bug Fixes
+
+* Replace commercial '&' by their equivalents ([4a679d1](https://github.com/cozy/cozy-ui/commit/4a679d1))
+
+# [111.1.0](https://github.com/cozy/cozy-ui/compare/v111.0.0...v111.1.0) (2024-07-17)
+
+
+### Features
+
+* **Layout:** Use var css instead of stylus var to set Main min-height on mobile ([633f4ad](https://github.com/cozy/cozy-ui/commit/633f4ad))
+* **Layout:** Use var css instead of stylus var to set Main min-height on mobile ([d717582](https://github.com/cozy/cozy-ui/commit/d717582))
+
+# [111.0.0](https://github.com/cozy/cozy-ui/compare/v110.8.2...v111.0.0) (2024-07-12)
+
+
+### Features
+
+* **ExpirationAlert:** Do not display expiration link for foreign file ([dfeaa6e](https://github.com/cozy/cozy-ui/commit/dfeaa6e))
+* Upgrade cozy-client to 48.8.0 ([03dbc6a](https://github.com/cozy/cozy-ui/commit/03dbc6a))
+
+
+### BREAKING CHANGES
+
+* you must have `cozy-client >= 48.8.0`
+
+## [110.8.2](https://github.com/cozy/cozy-ui/compare/v110.8.1...v110.8.2) (2024-07-11)
+
+
+### Bug Fixes
+
+* **ViewerControls:** children can contain undefined values ([506fd4c](https://github.com/cozy/cozy-ui/commit/506fd4c))
+
+## [110.8.1](https://github.com/cozy/cozy-ui/compare/v110.8.0...v110.8.1) (2024-07-10)
+
+
+### Bug Fixes
+
+* **PermissionDialog:** Show overflow icon on iOS ([f9f6073](https://github.com/cozy/cozy-ui/commit/f9f6073))
+
+# [110.8.0](https://github.com/cozy/cozy-ui/compare/v110.7.1...v110.8.0) (2024-07-09)
+
+
+### Features
+
+* **AlertProvider:** Add `duration` prop ([03b2f0e](https://github.com/cozy/cozy-ui/commit/03b2f0e))
+
+## [110.7.1](https://github.com/cozy/cozy-ui/compare/v110.7.0...v110.7.1) (2024-07-09)
+
+
+### Bug Fixes
+
+* **AlertProvider:** `filled` wasn't the default variant ([c4d545d](https://github.com/cozy/cozy-ui/commit/c4d545d))
+
+# [110.7.0](https://github.com/cozy/cozy-ui/compare/v110.6.0...v110.7.0) (2024-07-09)
+
+
+### Bug Fixes
+
+* **ActionsMenu/addImageToPdf:** Correct excessive weight when adding img ([ee7e46c](https://github.com/cozy/cozy-ui/commit/ee7e46c))
+
+
+### Features
+
+* **ActionsMenu/resizeImage:** Remove unnecessary param ([c6d06e8](https://github.com/cozy/cozy-ui/commit/c6d06e8))
+
+# [110.6.0](https://github.com/cozy/cozy-ui/compare/v110.5.0...v110.6.0) (2024-07-08)
+
+
+### Features
+
+* Add StarOutline icon ([831b793](https://github.com/cozy/cozy-ui/commit/831b793))
+
+# [110.5.0](https://github.com/cozy/cozy-ui/compare/v110.4.0...v110.5.0) (2024-07-04)
+
+
+### Features
+
+* **Backdrop:** Add `isOver` props ([67e6de7](https://github.com/cozy/cozy-ui/commit/67e6de7))
+* **Empty:** Add `componentsProps.icon/title/text/childrenContainer` props ([8d50ee6](https://github.com/cozy/cozy-ui/commit/8d50ee6))
+* **IntentDialogOpener:** Add `Component` prop to replace Dialog ([01a4499](https://github.com/cozy/cozy-ui/commit/01a4499))
+* **IntentIframe:** Add `iframeProps.setIsLoading` prop to wind it up ([bf0db3d](https://github.com/cozy/cozy-ui/commit/bf0db3d))
+* **IntentProvider:** Add provider to deal with intents ([b00b893](https://github.com/cozy/cozy-ui/commit/b00b893))
+* **Viewer:** Add BlankPaperViewer view and plug it to blank papers ([41ee4fe](https://github.com/cozy/cozy-ui/commit/41ee4fe))
+
+# [110.4.0](https://github.com/cozy/cozy-ui/compare/v110.3.0...v110.4.0) (2024-07-04)
+
+
+### Features
+
+* Add TextInfo icon ([25488eb](https://github.com/cozy/cozy-ui/commit/25488eb))
+
+# [110.3.0](https://github.com/cozy/cozy-ui/compare/v110.2.0...v110.3.0) (2024-07-01)
+
+
+### Features
+
+* **PermissionDialog:** Force icon background to be white ([8c46e64](https://github.com/cozy/cozy-ui/commit/8c46e64))
+* **SquareAppIcon:** Force icon background to be white ([1ca2ab7](https://github.com/cozy/cozy-ui/commit/1ca2ab7))
+
+# [110.2.0](https://github.com/cozy/cozy-ui/compare/v110.1.1...v110.2.0) (2024-06-28)
+
+
+### Features
+
+* Add new categories to appSections locales ([6830ab5](https://github.com/cozy/cozy-ui/commit/6830ab5))
+
+## [110.1.1](https://github.com/cozy/cozy-ui/compare/v110.1.0...v110.1.1) (2024-06-26)
+
+
+### Bug Fixes
+
+* **Viewer:** On mobile, background and color are now theme responsive ([9da97dc](https://github.com/cozy/cozy-ui/commit/9da97dc))
+
+# [110.1.0](https://github.com/cozy/cozy-ui/compare/v110.0.1...v110.1.0) (2024-06-24)
+
+
+### Bug Fixes
+
+* Correct status bar overlay for BottomSheet in flagship app ([cd2c0dc](https://github.com/cozy/cozy-ui/commit/cd2c0dc))
+* **Intent:** Colors for component to be more dark mode compliant ([2c0bd99](https://github.com/cozy/cozy-ui/commit/2c0bd99))
+
+
+### Features
+
+* Adapt setFlagshipUI to dark mode ([51019b4](https://github.com/cozy/cozy-ui/commit/51019b4))
+* **Modal:** Add theme responsive support ([2168457](https://github.com/cozy/cozy-ui/commit/2168457))
+* Remove class creation on body and fix layout ([afdedbe](https://github.com/cozy/cozy-ui/commit/afdedbe))
+
+## [110.0.1](https://github.com/cozy/cozy-ui/compare/v110.0.0...v110.0.1) (2024-06-19)
+
+
+### Bug Fixes
+
+* Print in Safari ([03bab6b](https://github.com/cozy/cozy-ui/commit/03bab6b))
+
+# [110.0.0](https://github.com/cozy/cozy-ui/compare/v109.2.0...v110.0.0) (2024-06-18)
+
+
+### Features
+
+* **CozyTheme:** Use `io.cozy.settings` to determine default type ([9c513d4](https://github.com/cozy/cozy-ui/commit/9c513d4))
+
+
+### BREAKING CHANGES
+
+* **CozyTheme:** To use `<CozyTheme>` properly, you must have permission in your app to get `io.cozy.settings` documents. The experience would be even better with realtime on this doctypes.
+
+# [109.2.0](https://github.com/cozy/cozy-ui/compare/v109.1.1...v109.2.0) (2024-06-17)
+
+
+### Features
+
+* Add Task icon ([2f9d2bc](https://github.com/cozy/cozy-ui/commit/2f9d2bc))
+
+## [109.1.1](https://github.com/cozy/cozy-ui/compare/v109.1.0...v109.1.1) (2024-06-10)
+
+
+### Bug Fixes
+
+* **Viewer:** Icon color wasn't correct on file options ([8575332](https://github.com/cozy/cozy-ui/commit/8575332))
+
+# [109.1.0](https://github.com/cozy/cozy-ui/compare/v109.0.2...v109.1.0) (2024-06-10)
+
+
+### Features
+
+* Add background color on `<body>` ([a2041f2](https://github.com/cozy/cozy-ui/commit/a2041f2))
+
+## [109.0.2](https://github.com/cozy/cozy-ui/compare/v109.0.1...v109.0.2) (2024-06-10)
+
+
+### Bug Fixes
+
+* **InfosBadge:** Color wasn't theme responsive ([c3cf75e](https://github.com/cozy/cozy-ui/commit/c3cf75e))
+
+## [109.0.1](https://github.com/cozy/cozy-ui/compare/v109.0.0...v109.0.1) (2024-06-06)
+
+
+### Bug Fixes
+
+* **ExpandedAttributes:** Use Client to get excluded metadata ([1b49153](https://github.com/cozy/cozy-ui/commit/1b49153))
+
+# [109.0.0](https://github.com/cozy/cozy-ui/compare/v108.1.0...v109.0.0) (2024-06-06)
+
+
+### Bug Fixes
+
+* **Viewer:** Add displayName static property to `BottomSheetHeader` ([2b6dc97](https://github.com/cozy/cozy-ui/commit/2b6dc97))
+
+
+### Features
+
+* Change translation of `confidentialNumber` ([73e89fe](https://github.com/cozy/cozy-ui/commit/73e89fe))
+* Upgrade cozy-sharing peerDeps ([9c2c839](https://github.com/cozy/cozy-ui/commit/9c2c839))
+
+
+### BREAKING CHANGES
+
+* you must have `cozy-sharing >= 14.1.0`
+
+# [108.1.0](https://github.com/cozy/cozy-ui/compare/v108.0.0...v108.1.0) (2024-06-06)
+
+
+### Features
+
+* Improve contacts list performances ([bc8bc84](https://github.com/cozy/cozy-ui/commit/bc8bc84))
+
+# [108.0.0](https://github.com/cozy/cozy-ui/compare/v107.4.1...v108.0.0) (2024-06-06)
+
+
+### Features
+
+* Add flag to activate dark mode ([5df55a8](https://github.com/cozy/cozy-ui/commit/5df55a8))
+
+
+### BREAKING CHANGES
+
+* you can now use safely `<meta name="color-scheme" content="light dark" />` in your app, and so replace `<meta name="color-scheme" content="only light" />` if necessary.
+The light mode is forced by an other way, you can use `ui.darkmode.enabled` flag to enable the dark mode if you want.
+
+## [107.4.1](https://github.com/cozy/cozy-ui/compare/v107.4.0...v107.4.1) (2024-06-05)
+
+
+### Bug Fixes
+
+* **AppsSection:** Change only ISP wording ([8542e61](https://github.com/cozy/cozy-ui/commit/8542e61))
+
+# [107.4.0](https://github.com/cozy/cozy-ui/compare/v107.3.0...v107.4.0) (2024-06-05)
+
+
+### Bug Fixes
+
+* **useSetFlagshipUi:** The navbar and statusbar height should be dynamic ([bb931d1](https://github.com/cozy/cozy-ui/commit/bb931d1))
+
+
+### Features
+
+* **BottomSheet:** Open BottomSheet at minimum height ([53e00bb](https://github.com/cozy/cozy-ui/commit/53e00bb))
+* **Viewer:** Open BottomSheet at minimum height in public view ([479f998](https://github.com/cozy/cozy-ui/commit/479f998))
+
+# [107.3.0](https://github.com/cozy/cozy-ui/compare/v107.2.0...v107.3.0) (2024-06-04)
+
+
+### Features
+
+* Remove jobs for argos on branch master ([a4512d1](https://github.com/cozy/cozy-ui/commit/a4512d1))
+
+# [107.2.0](https://github.com/cozy/cozy-ui/compare/v107.1.0...v107.2.0) (2024-05-29)
+
+
+### Features
+
+* **IconStack:** The `foregroundIcon` container is not useful ([1895af7](https://github.com/cozy/cozy-ui/commit/1895af7))
+
+# [107.1.0](https://github.com/cozy/cozy-ui/compare/v107.0.0...v107.1.0) (2024-05-29)
+
+
+### Features
+
+* Add new icons ListMin and MosaicMin ([0418a8f](https://github.com/cozy/cozy-ui/commit/0418a8f))
+
+# [107.0.0](https://github.com/cozy/cozy-ui/compare/v106.9.0...v107.0.0) (2024-05-29)
+
+
+### Bug Fixes
+
+* **Icon:** FileDuotone icon is now theme responsive ([582ced5](https://github.com/cozy/cozy-ui/commit/582ced5))
+
+
+### Features
+
+* **AppsSection:** Merge the ISP and telecom categories ([d5d4598](https://github.com/cozy/cozy-ui/commit/d5d4598))
+* **packages:** Upgrade cozy-client 46.10.0 to 47.6.0 ([74caa67](https://github.com/cozy/cozy-ui/commit/74caa67))
+* **Viewer:** Support for io.cozy.bills ([e3eeb6e](https://github.com/cozy/cozy-ui/commit/e3eeb6e))
+
+
+### BREAKING CHANGES
+
+* **packages:** you must have `cozy-client >= 47.6.0`
+
+# [106.9.0](https://github.com/cozy/cozy-ui/compare/v106.8.0...v106.9.0) (2024-05-28)
+
+
+### Features
+
+* **Viewer:** On public view, bottomSheet must be lowered ([277de56](https://github.com/cozy/cozy-ui/commit/277de56))
+
+# [106.8.0](https://github.com/cozy/cozy-ui/compare/v106.7.0...v106.8.0) (2024-05-23)
+
+
+### Features
+
+* Adjust colors for deprecated Infos and Alert components ([3e01fb9](https://github.com/cozy/cozy-ui/commit/3e01fb9))
+* **Icon:** Add Chess icon ([c833a8a](https://github.com/cozy/cozy-ui/commit/c833a8a))
+* **Theme:** Add `primaryBackground`, `secondaryBackground`, `successB.` ([49c12e1](https://github.com/cozy/cozy-ui/commit/49c12e1))
+
+# [106.7.0](https://github.com/cozy/cozy-ui/compare/v106.6.0...v106.7.0) (2024-05-21)
+
+
+### Features
+
+* **ListItem:** Default expanded attributes are chosen if prop undefined ([13e03e5](https://github.com/cozy/cozy-ui/commit/13e03e5))
+* **ListItem:** Exclude not expanded attributes from default ones ([105c8c4](https://github.com/cozy/cozy-ui/commit/105c8c4))
+
+# [106.6.0](https://github.com/cozy/cozy-ui/compare/v106.5.0...v106.6.0) (2024-05-16)
+
+
+### Features
+
+* Adjust style for old component Field and SelectBox ([0b4a907](https://github.com/cozy/cozy-ui/commit/0b4a907))
+
+# [106.5.0](https://github.com/cozy/cozy-ui/compare/v106.4.0...v106.5.0) (2024-05-16)
+
+
+### Features
+
+* Add description variant for SquareAppIcon ([379f150](https://github.com/cozy/cozy-ui/commit/379f150))
+* Simplify making a demo documentation ([229e462](https://github.com/cozy/cozy-ui/commit/229e462))
+
+# [106.4.0](https://github.com/cozy/cozy-ui/compare/v106.3.0...v106.4.0) (2024-05-15)
+
+
+### Features
+
+* **Flagship:** Mock getFlagshipMetadata if node_env = test ([5411534](https://github.com/cozy/cozy-ui/commit/5411534))
+
+# [106.3.0](https://github.com/cozy/cozy-ui/compare/v106.2.0...v106.3.0) (2024-05-15)
+
+
+### Features
+
+* **TextField:** Force left text alignment for input ([d3ff3c2](https://github.com/cozy/cozy-ui/commit/d3ff3c2))
+
+# [106.2.0](https://github.com/cozy/cozy-ui/compare/v106.1.1...v106.2.0) (2024-05-14)
+
+
+### Bug Fixes
+
+* **NestedSelect:** Search bar on desktop mode ([74938d9](https://github.com/cozy/cozy-ui/commit/74938d9))
+
+
+### Features
+
+* **ListItem/MenuItem:** Break word if text is too long ([6d87b42](https://github.com/cozy/cozy-ui/commit/6d87b42))
+
+## [106.1.1](https://github.com/cozy/cozy-ui/compare/v106.1.0...v106.1.1) (2024-05-14)
+
+
+### Bug Fixes
+
+* **ActionsMenuWrapper:** Spread ev on menu child clicks ([9b9a5ed](https://github.com/cozy/cozy-ui/commit/9b9a5ed))
+* **TextField:** Spread ev on MobileSelect item click ([49a71b0](https://github.com/cozy/cozy-ui/commit/49a71b0))
+
+# [106.1.0](https://github.com/cozy/cozy-ui/compare/v106.0.0...v106.1.0) (2024-05-07)
+
+
+### Features
+
+* Add uncloud icon ([2dbb1bf](https://github.com/cozy/cozy-ui/commit/2dbb1bf))
+
+# [106.0.0](https://github.com/cozy/cozy-ui/compare/v105.12.0...v106.0.0) (2024-04-25)
+
+
+### Features
+
+* Remove unused formatLocallyDistanceToNowStrict ([d9b09ca](https://github.com/cozy/cozy-ui/commit/d9b09ca))
+* Remove unused package mockdate ([7c123ea](https://github.com/cozy/cozy-ui/commit/7c123ea))
+* Update cozy-client ([09ee273](https://github.com/cozy/cozy-ui/commit/09ee273))
+* Use expiration date messages from cozy-client ([00cf70a](https://github.com/cozy/cozy-ui/commit/00cf70a))
+
+
+### BREAKING CHANGES
+
+* formatLocallyDistanceToNowStrict has been removed. Use 'date-fns/formatDistanceToNowStrict' instead.
+
+# [105.12.0](https://github.com/cozy/cozy-ui/compare/v105.11.0...v105.12.0) (2024-04-23)
+
+
+### Features
+
+* **ContactsListModal:** Add the contact prop to provide its own list ([8652fa6](https://github.com/cozy/cozy-ui/commit/8652fa6))
+* **ContactsListModal:** Split query to specific file ([b232fe0](https://github.com/cozy/cozy-ui/commit/b232fe0))
+
+# [105.11.0](https://github.com/cozy/cozy-ui/compare/v105.10.2...v105.11.0) (2024-04-19)
+
+
+### Features
+
+* **Icon:** Add Relationship icon ([06727bf](https://github.com/cozy/cozy-ui/commit/06727bf))
+
+## [105.10.2](https://github.com/cozy/cozy-ui/compare/v105.10.1...v105.10.2) (2024-04-18)
+
+
+### Bug Fixes
+
+* **MidEllipsis:** It should not trim strings ([311e92d](https://github.com/cozy/cozy-ui/commit/311e92d))
+
+## [105.10.1](https://github.com/cozy/cozy-ui/compare/v105.10.0...v105.10.1) (2024-04-18)
+
+
+### Bug Fixes
+
+* **TextField:** Props should not be overriden ([5636cf9](https://github.com/cozy/cozy-ui/commit/5636cf9))
+
+# [105.10.0](https://github.com/cozy/cozy-ui/compare/v105.9.1...v105.10.0) (2024-04-18)
+
+
+### Bug Fixes
+
+* **Dialog:** Set disableEnforceFocus to true ([969c848](https://github.com/cozy/cozy-ui/commit/969c848))
+* **TextField:** Force specific icon component for Select usage ([f14f998](https://github.com/cozy/cozy-ui/commit/f14f998))
+
+
+### Features
+
+* **TextField:** Use BottomDrawer on mobile for Select input ([20a0030](https://github.com/cozy/cozy-ui/commit/20a0030))
+
+## [105.9.1](https://github.com/cozy/cozy-ui/compare/v105.9.0...v105.9.1) (2024-04-16)
+
+
+### Bug Fixes
+
+* **MenuItem:** Remove maxWidth and add it on Menu instead ([291c8cd](https://github.com/cozy/cozy-ui/commit/291c8cd))
+
+# [105.9.0](https://github.com/cozy/cozy-ui/compare/v105.8.0...v105.9.0) (2024-04-11)
+
+
+### Features
+
+* Exclude shared drives dir from filepicker ([c29b26d](https://github.com/cozy/cozy-ui/commit/c29b26d))
+
+# [105.8.0](https://github.com/cozy/cozy-ui/compare/v105.7.0...v105.8.0) (2024-04-09)
+
+
+### Features
+
+* Add missing proptypes to NestedSelect ([c474ece](https://github.com/cozy/cozy-ui/commit/c474ece))
+* Open NestedSelect to a specific element ([8cf959e](https://github.com/cozy/cozy-ui/commit/8cf959e))
+* Remove useless code in NestedSelect ([b88450c](https://github.com/cozy/cozy-ui/commit/b88450c))
+
+# [105.7.0](https://github.com/cozy/cozy-ui/compare/v105.6.0...v105.7.0) (2024-04-09)
+
+
+### Bug Fixes
+
+* Add vertical scroll to sidebar when needed ([9e9e95c](https://github.com/cozy/cozy-ui/commit/9e9e95c))
+* update nav.styl after broken lint passed PR ([28333d8](https://github.com/cozy/cozy-ui/commit/28333d8))
+
+
+### Features
+
+* Add `<NavLimiter />` component ([8c7a14a](https://github.com/cozy/cozy-ui/commit/8c7a14a))
+* **ListItem:** Use cozy-client to make ExpandedAttributes label ([eb681e1](https://github.com/cozy/cozy-ui/commit/eb681e1))
+
+# [105.6.0](https://github.com/cozy/cozy-ui/compare/v105.5.0...v105.6.0) (2024-04-03)
+
+
+### Features
+
+* **ListItem:** Add licenseNumber and confidentialNumber in ExpandedAttr ([4de21ff](https://github.com/cozy/cozy-ui/commit/4de21ff))
+* Remove useless Viewer locales ([221a66f](https://github.com/cozy/cozy-ui/commit/221a66f))
+
+# [105.5.0](https://github.com/cozy/cozy-ui/compare/v105.4.0...v105.5.0) (2024-04-02)
+
+
+### Features
+
+* Update node-polyglot ([fb41dca](https://github.com/cozy/cozy-ui/commit/fb41dca))
+
+# [105.4.0](https://github.com/cozy/cozy-ui/compare/v105.3.1...v105.4.0) (2024-03-29)
+
+
+### Features
+
+* **Icons:** Add multiple icons for the new qualifications modal ([b5dca90](https://github.com/cozy/cozy-ui/commit/b5dca90))
+
+## [105.3.1](https://github.com/cozy/cozy-ui/compare/v105.3.0...v105.3.1) (2024-03-28)
+
+
+### Bug Fixes
+
+* Argos screenshots could not be validated ([4cc3a0d](https://github.com/cozy/cozy-ui/commit/4cc3a0d))
+
+# [105.3.0](https://github.com/cozy/cozy-ui/compare/v105.2.1...v105.3.0) (2024-03-27)
+
+
+### Features
+
+* **resizeImage:** Reduce quality for big image ([2b6cacf](https://github.com/cozy/cozy-ui/commit/2b6cacf))
+
+## [105.2.1](https://github.com/cozy/cozy-ui/compare/v105.2.0...v105.2.1) (2024-03-26)
+
+
+### Bug Fixes
+
+* **Viewer:** Remove WebviewIntentProvider ([edfdc1d](https://github.com/cozy/cozy-ui/commit/edfdc1d))
+
+# [105.2.0](https://github.com/cozy/cozy-ui/compare/v105.1.0...v105.2.0) (2024-03-21)
+
+
+### Features
+
+* **Viewer:** Refactor PrintButton and use `ActionsItems` ([8b7a068](https://github.com/cozy/cozy-ui/commit/8b7a068))
+
+# [105.1.0](https://github.com/cozy/cozy-ui/compare/v105.0.2...v105.1.0) (2024-03-21)
+
+
+### Bug Fixes
+
+* **NestedSelect:** Remove title attribute on modal ([de57aff](https://github.com/cozy/cozy-ui/commit/de57aff))
+
+
+### Features
+
+* **NestedSelect:** Add ellipsis on modal title ([341db5a](https://github.com/cozy/cozy-ui/commit/341db5a))
+
+## [105.0.2](https://github.com/cozy/cozy-ui/compare/v105.0.1...v105.0.2) (2024-03-20)
+
+
+### Bug Fixes
+
+* **Viewer:** Events must be limited on the image ([548994d](https://github.com/cozy/cozy-ui/commit/548994d))
+
+## [105.0.1](https://github.com/cozy/cozy-ui/compare/v105.0.0...v105.0.1) (2024-03-19)
+
+
+### Bug Fixes
+
+* **Viewer:** The Pinch event doesn't have a "tapCount" property ([8cde71d](https://github.com/cozy/cozy-ui/commit/8cde71d))
+
+# [105.0.0](https://github.com/cozy/cozy-ui/compare/v104.3.0...v105.0.0) (2024-03-16)
+
+
+### Features
+
+* Add all Table components from MUI ([5c6438f](https://github.com/cozy/cozy-ui/commit/5c6438f))
+
+
+### BREAKING CHANGES
+
+* `Table` component has been deprecated. Use codemods to deal with the change.
+
+```
+yarn global add @cozy/codemods
+yarn global add jscodeshift@0.13.1
+jscodeshift -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/transform-ui-deprecated-table.js src babel --ignore-pattern=src/targets/ --extensions js,jsx,tsx --parser tsx
+```
+
+# [104.3.0](https://github.com/cozy/cozy-ui/compare/v104.2.0...v104.3.0) (2024-03-13)
+
+
+### Features
+
+* Add Account illus ([72d249c](https://github.com/cozy/cozy-ui/commit/72d249c))
+* Add CreditCardLarge illus ([ee84462](https://github.com/cozy/cozy-ui/commit/ee84462))
+* Add PopInside icon ([69cd131](https://github.com/cozy/cozy-ui/commit/69cd131))
+
+# [104.2.0](https://github.com/cozy/cozy-ui/compare/v104.1.0...v104.2.0) (2024-03-12)
+
+
+### Bug Fixes
+
+* **Viewer:** Adjust toolbar spacing and button size ([6a2f8fe](https://github.com/cozy/cozy-ui/commit/6a2f8fe))
+
+
+### Features
+
+* **I18n:** Add useExtendI18n to be able to add locales to existing ones ([ad388b4](https://github.com/cozy/cozy-ui/commit/ad388b4))
+* **I18n:** Expose polyglot, so can be get with useI18n ([7770e7b](https://github.com/cozy/cozy-ui/commit/7770e7b))
+* Update cozy-client to 45.15.0 ([c5f2649](https://github.com/cozy/cozy-ui/commit/c5f2649))
+* **Viewer:** Add Print button, based on print action definition ([ba80052](https://github.com/cozy/cozy-ui/commit/ba80052))
+* **Viewer:** Add ToolbarButtons component ([e0b014c](https://github.com/cozy/cozy-ui/commit/e0b014c))
+* **Viewer:** Add variants on Download/Forward/Sharing buttons ([594b79a](https://github.com/cozy/cozy-ui/commit/594b79a))
+* **Viewer:** Add WebviewIntentProvider ([97f28ff](https://github.com/cozy/cozy-ui/commit/97f28ff))
+* **Viewer:** Expose Toolbarbutton, FooterActionsButtons and ForwardButton ([2b9130f](https://github.com/cozy/cozy-ui/commit/2b9130f))
+* **Viewer:** Modify default buttons on toolbar and footer ([d82013d](https://github.com/cozy/cozy-ui/commit/d82013d))
+* **Viewer:** Remove HOC for locals on no viewer DownloadButton ([edda4a9](https://github.com/cozy/cozy-ui/commit/edda4a9))
+* **Viewer:** Replace toolbar download button by icon button ([6f59eda](https://github.com/cozy/cozy-ui/commit/6f59eda))
+* **Viewer:** Use contact formatting from cozy-client ([eb9c596](https://github.com/cozy/cozy-ui/commit/eb9c596))
+* **Viewer:** Use date metadata qualification formatting from cozy-client ([14bc95d](https://github.com/cozy/cozy-ui/commit/14bc95d))
+* **Viewer:** Use formatMetadataQualification and METADATA_NAMES from ([450fb74](https://github.com/cozy/cozy-ui/commit/450fb74))
+* **Viewer:** Use getMetadataQualificationType from cozy-client ([ae133f4](https://github.com/cozy/cozy-ui/commit/ae133f4))
+* **Viewer:** Use information metadata qualification formatting from cozy-client ([1d106ef](https://github.com/cozy/cozy-ui/commit/1d106ef))
+* **Viewer:** Use other metadata qualification formatting from cozy-client ([98b6510](https://github.com/cozy/cozy-ui/commit/98b6510))
+* **Viewer:** Use useExtendI18n ([d93b97d](https://github.com/cozy/cozy-ui/commit/d93b97d))
+
+# [104.1.0](https://github.com/cozy/cozy-ui/compare/v104.0.0...v104.1.0) (2024-03-12)
+
+
+### Features
+
+* **ListItem:** Add locales for reference tax numbers ([a7d66d2](https://github.com/cozy/cozy-ui/commit/a7d66d2))
+
+# [104.0.0](https://github.com/cozy/cozy-ui/compare/v103.12.0...v104.0.0) (2024-03-12)
+
+
+### Bug Fixes
+
+* Color & square props are ignored ([c37ad2f](https://github.com/cozy/cozy-ui/commit/c37ad2f)), closes [/github.com/mui/material-ui/blob/bda562b435a70e3e8f6d7fb04581c6816a5ba0c7/packages/material-ui/src/Snackbar/Snackbar.js#L235](https://github.com//github.com/mui/material-ui/blob/bda562b435a70e3e8f6d7fb04581c6816a5ba0c7/packages/material-ui/src/Snackbar/Snackbar.js/issues/L235) [#L193](https://github.com/cozy/cozy-ui/issues/L193)
+
+
+### Features
+
+* Add typedef to Alert component ([16f2097](https://github.com/cozy/cozy-ui/commit/16f2097))
+* Improve AlertProvider ([723a627](https://github.com/cozy/cozy-ui/commit/723a627))
+* Replace ViewerSnackbarProvider by AlertProvider ([374537a](https://github.com/cozy/cozy-ui/commit/374537a))
+
+
+### BREAKING CHANGES
+
+* The `showAlert` function returned by the `useAlert` hook changes signature.
+
+Also, the `variant` was set to `filled`,
+it now takes the default value of `Alert`, i.e. `standard`.
+
+Before:
+```
+const { showAlert } = useAlert()
+showAlert(t('foo.bar'), 'error',)
+```
+
+Now:
+```
+const { showAlert } = useAlert()
+showAlert({ message: t('foo.bar'), severity: 'error' })
+```
+
+Its options now support Alert component props.
+Example:
+```
+showAlert({
+   message: t('foo.bar'),
+   severity: 'info',
+   icon: [secure],
+   color: 'blue',
+   square: true
+})
+```
+
+# [103.12.0](https://github.com/cozy/cozy-ui/compare/v103.11.1...v103.12.0) (2024-03-07)
+
+
+### Features
+
+* **viewer:** Remove useless locales ([476fe37](https://github.com/cozy/cozy-ui/commit/476fe37))
+* **viewer:** Use pinchend & tap events on mobile for download file ([8f4b2e7](https://github.com/cozy/cozy-ui/commit/8f4b2e7))
+
+## [103.11.1](https://github.com/cozy/cozy-ui/compare/v103.11.0...v103.11.1) (2024-03-05)
+
+
+### Bug Fixes
+
+* Use /medium for PDF thumbnails ([d117ee6](https://github.com/cozy/cozy-ui/commit/d117ee6))
+
+# [103.11.0](https://github.com/cozy/cozy-ui/compare/v103.10.0...v103.11.0) (2024-03-05)
+
+
+### Features
+
+* **ListItem:** Add `€` on net social amount and pay_sheet number values ([0c9f40f](https://github.com/cozy/cozy-ui/commit/0c9f40f))
+* **ListItem:** Add translated pay_sheet flexsearchProps ([e19aa0e](https://github.com/cozy/cozy-ui/commit/e19aa0e))
+* **ListItem:** Remove useless expanded attributes ([bd3dd4b](https://github.com/cozy/cozy-ui/commit/bd3dd4b)), closes [/github.com/cozy/mespapiers/blob/16c0b7bfc809518bd1e9fb2d54ad894ab77b74b0/src/helpers/migration/metadata.js#L17](https://github.com//github.com/cozy/mespapiers/blob/16c0b7bfc809518bd1e9fb2d54ad894ab77b74b0/src/helpers/migration/metadata.js/issues/L17)
+
+# [103.10.0](https://github.com/cozy/cozy-ui/compare/v103.9.0...v103.10.0) (2024-03-05)
+
+
+### Features
+
+* **Viewer:** Add `€` for net social amount and pay_sheet number value ([a8e6800](https://github.com/cozy/cozy-ui/commit/a8e6800))
+* **Viewer:** Add translate for reference tax number ([99da6d6](https://github.com/cozy/cozy-ui/commit/99da6d6))
+
+# [103.9.0](https://github.com/cozy/cozy-ui/compare/v103.8.2...v103.9.0) (2024-03-04)
+
+
+### Bug Fixes
+
+* **ListItem:** Remove `contentAuthor` metadata for expanded attributes ([9f26d7d](https://github.com/cozy/cozy-ui/commit/9f26d7d))
+
+
+### Features
+
+* **Viewer:** Replace `contentAuthor` by `employerName` info metadata ([abe1ab2](https://github.com/cozy/cozy-ui/commit/abe1ab2))
+
+## [103.8.2](https://github.com/cozy/cozy-ui/compare/v103.8.1...v103.8.2) (2024-02-29)
+
+
+### Bug Fixes
+
+* **Styles:** Remove import of stylus file with global class creation in it ([41808d7](https://github.com/cozy/cozy-ui/commit/41808d7))
+
+## [103.8.1](https://github.com/cozy/cozy-ui/compare/v103.8.0...v103.8.1) (2024-02-27)
+
+
+### Bug Fixes
+
+* The background of ListSubHeader should use the default background ([fa58546](https://github.com/cozy/cozy-ui/commit/fa58546))
+
+# [103.8.0](https://github.com/cozy/cozy-ui/compare/v103.7.0...v103.8.0) (2024-02-27)
+
+
+### Bug Fixes
+
+* **MidEllipsis:** Doesn't ellipsed anymore if not needed ([6830d0c](https://github.com/cozy/cozy-ui/commit/6830d0c))
+
+
+### Features
+
+* **MidEllipsis:** Remove react-middle-ellipsis lib and flag ([a75d1e8](https://github.com/cozy/cozy-ui/commit/a75d1e8))
+
+# [103.7.0](https://github.com/cozy/cozy-ui/compare/v103.6.2...v103.7.0) (2024-02-26)
+
+
+### Features
+
+* **ListItem:** Add `netSocialAmount` and `contentAuthor` metadata support ([d54faa6](https://github.com/cozy/cozy-ui/commit/d54faa6))
+* **Viewer:** Add `netSocialAmount` and `contentAuthor` metadata support ([63221f4](https://github.com/cozy/cozy-ui/commit/63221f4))
+
+## [103.6.2](https://github.com/cozy/cozy-ui/compare/v103.6.1...v103.6.2) (2024-02-20)
+
+
+### Bug Fixes
+
+* **Viewer:** All files have konnector block ([a62c95b](https://github.com/cozy/cozy-ui/commit/a62c95b)), closes [#2563](https://github.com/cozy/cozy-ui/issues/2563)
+
+## [103.6.1](https://github.com/cozy/cozy-ui/compare/v103.6.0...v103.6.1) (2024-02-19)
+
+
+### Bug Fixes
+
+* **CozyDialogs:** Divider for small dialog wasn't fullwidth ([594ec4e](https://github.com/cozy/cozy-ui/commit/594ec4e))
+
+# [103.6.0](https://github.com/cozy/cozy-ui/compare/v103.5.0...v103.6.0) (2024-02-15)
+
+
+### Features
+
+* Add new translations for fine amount ([d7e681c](https://github.com/cozy/cozy-ui/commit/d7e681c))
+
+# [103.5.0](https://github.com/cozy/cozy-ui/compare/v103.4.0...v103.5.0) (2024-02-15)
+
+
+### Features
+
+* **Snackbar:** Change position from `top` to `bottom` on desktop ([9278e06](https://github.com/cozy/cozy-ui/commit/9278e06))
+
+# [103.4.0](https://github.com/cozy/cozy-ui/compare/v103.3.1...v103.4.0) (2024-02-15)
+
+
+### Features
+
+* Add new translations for fidelity card number ([8288587](https://github.com/cozy/cozy-ui/commit/8288587))
+
+## [103.3.1](https://github.com/cozy/cozy-ui/compare/v103.3.0...v103.3.1) (2024-02-15)
+
+
+### Bug Fixes
+
+* **MidEllipsis:** Element width was incorrect on Safari ([e5d4b5a](https://github.com/cozy/cozy-ui/commit/e5d4b5a))
+
+# [103.3.0](https://github.com/cozy/cozy-ui/compare/v103.2.0...v103.3.0) (2024-02-15)
+
+
+### Features
+
+* **OutlinedInput:** Adjust styles according to specs ([ca960b2](https://github.com/cozy/cozy-ui/commit/ca960b2))
+* **ProgressionBanner:** Adjust background color ([d3b9c3e](https://github.com/cozy/cozy-ui/commit/d3b9c3e))
+* **Theme:** Adjust border opacity and contrastBackgroundColor ([346789c](https://github.com/cozy/cozy-ui/commit/346789c))
+* **Tile:** Adjust secondary background color ([6432d7a](https://github.com/cozy/cozy-ui/commit/6432d7a))
+
+# [103.2.0](https://github.com/cozy/cozy-ui/compare/v103.1.1...v103.2.0) (2024-02-13)
+
+
+### Features
+
+* **Viewer:** Changing the behavior of the edit action ([3308336](https://github.com/cozy/cozy-ui/commit/3308336))
+
+## [103.1.1](https://github.com/cozy/cozy-ui/compare/v103.1.0...v103.1.1) (2024-02-09)
+
+
+### Bug Fixes
+
+* Stop propagation of event ([167e50b](https://github.com/cozy/cozy-ui/commit/167e50b))
+
+# [103.1.0](https://github.com/cozy/cozy-ui/compare/v103.0.0...v103.1.0) (2024-02-07)
+
+
+### Bug Fixes
+
+* **Filename:** Adjust style and DOM structure ([7f000a6](https://github.com/cozy/cozy-ui/commit/7f000a6))
+
+
+### Features
+
+* **MidEllipsis:** Use `ui.midellipsis-lib.enabled` flag for better one ([b7b484e](https://github.com/cozy/cozy-ui/commit/b7b484e))
+* **Packages:** Add react-middle-ellipsis package ([a8991d9](https://github.com/cozy/cozy-ui/commit/a8991d9))
+
+# [103.0.0](https://github.com/cozy/cozy-ui/compare/v102.2.1...v103.0.0) (2024-02-06)
+
+
+### Features
+
+* Add Popover and Popper from Mui ([e24016c](https://github.com/cozy/cozy-ui/commit/e24016c))
+
+
+### BREAKING CHANGES
+
+* Replace old Popover by Mui Popover. If you are using `import Popover from 'cozy-ui/transpiled/react/Popover'` in your app, see Mui documentation for migration.
+
+## [102.2.1](https://github.com/cozy/cozy-ui/compare/v102.2.0...v102.2.1) (2024-01-31)
+
+
+### Bug Fixes
+
+* Use navigator.clipboard instead of copy-text-to-clipboard ([ae42cb9](https://github.com/cozy/cozy-ui/commit/ae42cb9))
+
+# [102.2.0](https://github.com/cozy/cozy-ui/compare/v102.1.1...v102.2.0) (2024-01-29)
+
+
+### Features
+
+* **Viewer:** Add isPublic prop for manage panel blocks displayed ([7f8668a](https://github.com/cozy/cozy-ui/commit/7f8668a))
+
+## [102.1.1](https://github.com/cozy/cozy-ui/compare/v102.1.0...v102.1.1) (2024-01-29)
+
+
+### Bug Fixes
+
+* **BottomSheet:** Default offset value wasn't good if flagship immersive [secure] ([b1551d2](https://github.com/cozy/cozy-ui/commit/b1551d2))
+
+# [102.1.0](https://github.com/cozy/cozy-ui/compare/v102.0.0...v102.1.0) (2024-01-25)
+
+
+### Features
+
+* **Action:** Print can now deal with multiple docs ([ee5695d](https://github.com/cozy/cozy-ui/commit/ee5695d))
+* Add pdf-lib package ([9b363e1](https://github.com/cozy/cozy-ui/commit/9b363e1))
+
+# [102.0.0](https://github.com/cozy/cozy-ui/compare/v101.2.0...v102.0.0) (2024-01-23)
+
+
+### Bug Fixes
+
+* **ActionsMenuItem:** Props `t`, `f`, `lang` was spread to DOM element ([3636fe3](https://github.com/cozy/cozy-ui/commit/3636fe3))
+* Func `getOnlyNeededActions` wasn't dealing with `divider` as `hr` ([ec4acf6](https://github.com/cozy/cozy-ui/commit/ec4acf6))
+
+
+### Features
+
+* **Actions:** Add `others` ([0186834](https://github.com/cozy/cozy-ui/commit/0186834))
+* **ActionsBar:** Add this new component ([d80e3cf](https://github.com/cozy/cozy-ui/commit/d80e3cf))
+* **ActionsItems:** Add `component` prop that manages the display ([db16d71](https://github.com/cozy/cozy-ui/commit/db16d71))
+* **ActionsItems:** Add `webviewIntent` in actions ([a64595b](https://github.com/cozy/cozy-ui/commit/a64595b))
+* **ActionsItems:** Spread the action to the displayed component ([a0a9aa4](https://github.com/cozy/cozy-ui/commit/a0a9aa4))
+* **ActionsMenu:** Replace `doc` prop by `docs` ([1049809](https://github.com/cozy/cozy-ui/commit/1049809))
+* **ActionsMenu:** Use own locales and add `getActionsI18n()` ([351595e](https://github.com/cozy/cozy-ui/commit/351595e))
+* **I18n:** Add `getI18n()` that work like `useI18n` but without React ([4b65a35](https://github.com/cozy/cozy-ui/commit/4b65a35))
+* **Icon:** Prop `icon` no longer required + can use Icon comp ([3bd5b9b](https://github.com/cozy/cozy-ui/commit/3bd5b9b))
+* **SelectionBar:** Deprecates the component ([6e72491](https://github.com/cozy/cozy-ui/commit/6e72491))
+
+
+### BREAKING CHANGES
+
+* **ActionsMenu:** When using ActionsMenu, we no longer imply we deal with one single document, but several documents. Who can do more can do less. Beside, `disabled` on actions is no longer a boolean but a function. So:
+- on `<ActionsMenu />` replace `doc` prop by `docs` and provide an array instead of object
+- on actions, `disabled` must be a func instead of a boolean
+
+# [101.2.0](https://github.com/cozy/cozy-ui/compare/v101.1.1...v101.2.0) (2024-01-19)
+
+
+### Bug Fixes
+
+* Translation into CoachCO2 paywall ([2efa596](https://github.com/cozy/cozy-ui/commit/2efa596))
+
+
+### Features
+
+* **ContactsList:** Show myself always at the top of the list ([c4bd940](https://github.com/cozy/cozy-ui/commit/c4bd940))
+
+## [101.1.1](https://github.com/cozy/cozy-ui/compare/v101.1.0...v101.1.1) (2024-01-11)
+
+
+### Bug Fixes
+
+* The createNodeWithThemeCssVars must return null in test env ([a1ec359](https://github.com/cozy/cozy-ui/commit/a1ec359))
+
+# [101.1.0](https://github.com/cozy/cozy-ui/compare/v101.0.0...v101.1.0) (2024-01-10)
+
+
+### Features
+
+* Add growth icon ([6b9605f](https://github.com/cozy/cozy-ui/commit/6b9605f))
+
+# [101.0.0](https://github.com/cozy/cozy-ui/compare/v100.2.0...v101.0.0) (2024-01-10)
+
+
+### Bug Fixes
+
+* **DeprecatedDivider:** Use responsive theme instead of light theme ([2c51cf6](https://github.com/cozy/cozy-ui/commit/2c51cf6))
+* **Theme:** Move global background-color and color from `body` to app node ([53a1b02](https://github.com/cozy/cozy-ui/commit/53a1b02))
+* **Theme:** Shadows are now relative to the theme ([8477d9c](https://github.com/cozy/cozy-ui/commit/8477d9c))
+
+
+### Features
+
+* Add dark mode ([cc1db83](https://github.com/cozy/cozy-ui/commit/cc1db83))
+* Add useMediaQuery hook ([f9edb8e](https://github.com/cozy/cozy-ui/commit/f9edb8e))
+* **CSS:** Rename CozyTheme--xxx classe into CozyTheme--light-xxx ([e3b98ff](https://github.com/cozy/cozy-ui/commit/e3b98ff))
+* Deal with useCozyTheme BC ([7a83553](https://github.com/cozy/cozy-ui/commit/7a83553))
+* **MuiCozyTheme:** Introduce `type` prop in addition to `variant` ([1d1f053](https://github.com/cozy/cozy-ui/commit/1d1f053))
+* Remove some css vars ([ffc71dc](https://github.com/cozy/cozy-ui/commit/ffc71dc))
+* Rename `theme` to `variant` when using `useCozyTheme` ([4a88038](https://github.com/cozy/cozy-ui/commit/4a88038))
+* **Theme:** Create specific node to hold theme css variables ([27f8995](https://github.com/cozy/cozy-ui/commit/27f8995))
+* Use dark mode in CozyTheme, docs and tests ([fe25d07](https://github.com/cozy/cozy-ui/commit/fe25d07))
+
+
+### BREAKING CHANGES
+
+* - Remove some css vars. You should use semantic var instead. List of removed css vars :
+
+```
+--invertedBackgroundColor
+--invertedContrastTextColor
+--spinnerColor
+--linkColor
+--linkTextDecoration
+--linkColorActive
+--invertedTabsActiveTextColor
+--invertedTabsInactiveTextColor
+--invertedTabsIndicatorColor
+--invertedTabsBackgroundColor
+--regularButtonPrimaryColor
+--regularButtonSecondaryColor
+--regularButtonActiveColor
+--regularButtonConstrastColor
+--secondaryButtonPrimaryColor
+--secondaryButtonSecondaryColor
+--secondaryButtonActiveColor
+--secondaryButtonContrastColor
+--dividerColor2
+--iconColor
+--textIconColor
+--actionMenuIconColor
+--neutralBackground
+--buttonTextTransform
+--buttonBorderRadius
+--alertErrorColor
+--alertErrorBackgroundColor
+--alertSuccessColor
+--alertSuccessBackgroundColor
+--alertInfoColor
+--alertInfoBackgroundColor
+```
+* - `useCozyTheme()` return now an object with `type` and `variant`. You must replace `const theme = useCozyTheme()` by `const { variant } = useCozyTheme()`
+- you can add `<meta name="color-scheme" content="only light" />` in your `index.ejs` app file to force Light Mode if Dark Mode not fully supported by your app.
+* **MuiCozyTheme:** You can't now longer rely on `theme.palette.type` to determine `normal` or `inverted` theme, you have to use `theme.palette.variant` instead.
+* **CSS:** if you want to get or override css var, you need to do it on new classes, see below:
+`CozyTheme--normal` -> `CozyTheme--light-normal`
+`CozyTheme--inverted` -> `CozyTheme--light-inverted`
+
+# [100.2.0](https://github.com/cozy/cozy-ui/compare/v100.1.0...v100.2.0) (2023-12-22)
+
+
+### Features
+
+* Add MaxDaysToCapturePaywall component ([8b6bce6](https://github.com/cozy/cozy-ui/commit/8b6bce6))
+
+# [100.1.0](https://github.com/cozy/cozy-ui/compare/v100.0.0...v100.1.0) (2023-12-18)
+
+
+### Features
+
+* **Icon:** Add support icon ([06eacfb](https://github.com/cozy/cozy-ui/commit/06eacfb))
+
+# [100.0.0](https://github.com/cozy/cozy-ui/compare/v99.0.4...v100.0.0) (2023-12-15)
+
+
+### Features
+
+* **Paywall:** Add IAP support ([7b54299](https://github.com/cozy/cozy-ui/commit/7b54299))
+* Remove useInstance helper ([01ec4de](https://github.com/cozy/cozy-ui/commit/01ec4de))
+* Update cozy-client from 45.0.0 to 45.1.0 ([8f5ce38](https://github.com/cozy/cozy-ui/commit/8f5ce38))
+
+
+### BREAKING CHANGES
+
+* **Paywall:** To check if IAP is available, you need to wrap your Paywall into a `WebviewContext` component
+```
+import { WebviewIntentProvider } from 'cozy-intent'
+
+<WebviewIntentProvider>
+  <Paywall />
+</WebviewIntentProvider>
+```
+* you must have
+
+## [99.0.4](https://github.com/cozy/cozy-ui/compare/v99.0.3...v99.0.4) (2023-12-14)
+
+
+### Bug Fixes
+
+* **BottomSheet:** Did not rerender correctly after a change to children ([4d97075](https://github.com/cozy/cozy-ui/commit/4d97075))
+* **NestedSelect:** Remove useless hack to force rerender when in BottomSheet ([0cbe62f](https://github.com/cozy/cozy-ui/commit/0cbe62f))
+
+## [99.0.3](https://github.com/cozy/cozy-ui/compare/v99.0.2...v99.0.3) (2023-12-13)
+
+
+### Bug Fixes
+
+* **Viewer:** Adjust style when no thumbnail but with bottomSheet ([06dcf25](https://github.com/cozy/cozy-ui/commit/06dcf25))
+
+## [99.0.2](https://github.com/cozy/cozy-ui/compare/v99.0.1...v99.0.2) (2023-12-12)
+
+
+### Bug Fixes
+
+* **Viewer:** Remove vertical scrollbar in info panel when not necessary ([86715e1](https://github.com/cozy/cozy-ui/commit/86715e1))
+
+## [99.0.1](https://github.com/cozy/cozy-ui/compare/v99.0.0...v99.0.1) (2023-12-12)
+
+
+### Bug Fixes
+
+* **Viewer:** InformationPanel doesn't use Drawer anymore ([10ad0c6](https://github.com/cozy/cozy-ui/commit/10ad0c6))
+
+# [99.0.0](https://github.com/cozy/cozy-ui/compare/v98.2.0...v99.0.0) (2023-12-12)
+
+
+### Features
+
+* Add `u-dc` utility css class to force `display: contents` ([700df67](https://github.com/cozy/cozy-ui/commit/700df67))
+* **CozyTheme:** Add ignoreItself prop (add `u-dc` css class) ([8c82390](https://github.com/cozy/cozy-ui/commit/8c82390))
+
+
+### BREAKING CHANGES
+
+* **CozyTheme:** `CozyTheme` use now `display: contents` by default so as not to change the style of the page, since it's just a wrapper that supports styles and nothing else. If this causes problems in the structure of your app, you can always revert to the previous state by setting `<CozyTheme ignoreItself={[secure]}>`.
+
+# [98.2.0](https://github.com/cozy/cozy-ui/compare/v98.1.1...v98.2.0) (2023-12-07)
+
+
+### Features
+
+* **ActionsMenu:** Add print action ([82d918d](https://github.com/cozy/cozy-ui/commit/82d918d))
+
+## [98.1.1](https://github.com/cozy/cozy-ui/compare/v98.1.0...v98.1.1) (2023-12-06)
+
+
+### Bug Fixes
+
+* Add default values if flagship var not set ([8c14961](https://github.com/cozy/cozy-ui/commit/8c14961))
+
+# [98.1.0](https://github.com/cozy/cozy-ui/compare/v98.0.0...v98.1.0) (2023-12-05)
+
+
+### Features
+
+* **NestedSelect:** A header can be passed for specifics option children ([ad4606d](https://github.com/cozy/cozy-ui/commit/ad4606d))
+* **NestedSelect:** Add `level` arg at option.childrenHeader function ([5c48e2b](https://github.com/cozy/cozy-ui/commit/5c48e2b))
+
+# [98.0.0](https://github.com/cozy/cozy-ui/compare/v97.2.1...v98.0.0) (2023-12-01)
+
+
+### Features
+
+* **ForwardButton:** Add `onClick` prop ([a35d3b1](https://github.com/cozy/cozy-ui/commit/a35d3b1))
+* Upgrade cozy-client to 45.0.0 ([eb1b99e](https://github.com/cozy/cozy-ui/commit/eb1b99e))
+
+
+### BREAKING CHANGES
+
+* you must have `cozy-client >= 45.0.0`
+
+## [97.2.1](https://github.com/cozy/cozy-ui/compare/v97.2.0...v97.2.1) (2023-11-30)
+
+
+### Bug Fixes
+
+* **Modals:** Use correct css var for zIndex ([b1317a3](https://github.com/cozy/cozy-ui/commit/b1317a3))
+* **MuiTheme:** Remove direct call to getCssVariableValue and use css var instead ([bc09ee7](https://github.com/cozy/cozy-ui/commit/bc09ee7))
+
+# [97.2.0](https://github.com/cozy/cozy-ui/compare/v97.1.0...v97.2.0) (2023-11-29)
+
+
+### Bug Fixes
+
+* **PointerAlert:** Reserve space for arrow ([3d7e4b4](https://github.com/cozy/cozy-ui/commit/3d7e4b4))
+
+
+### Features
+
+* **PointerAlert:** Make arrow position customisable ([2ed2cac](https://github.com/cozy/cozy-ui/commit/2ed2cac))
+
+# [97.1.0](https://github.com/cozy/cozy-ui/compare/v97.0.0...v97.1.0) (2023-11-28)
+
+
+### Bug Fixes
+
+* **Alert:** Adjust colors ([29a3b80](https://github.com/cozy/cozy-ui/commit/29a3b80))
+
+
+### Features
+
+* **MuiPalette:** Add `theme.palette.background.contrastOpacity` ([a09926b](https://github.com/cozy/cozy-ui/commit/a09926b))
+* **PointerAlert:** Add this new component based on Alert ([9d73f68](https://github.com/cozy/cozy-ui/commit/9d73f68))
+
+# [97.0.0](https://github.com/cozy/cozy-ui/compare/v96.2.0...v97.0.0) (2023-11-28)
+
+
+### Features
+
+* Change Secondary color values ([7085cdf](https://github.com/cozy/cozy-ui/commit/7085cdf))
+
+
+### BREAKING CHANGES
+
+* Secondary color was previously red like error color. You should not be very impacted by this change. Here's what you should be concerned about:
+- for `IconButton` and `Typography`: use `color="error"` instead of `color="secondary"`
+- for `Tabs` make sure you are using `indicatorColor="primary"` and `textColor="primary"`
+
+# [96.2.0](https://github.com/cozy/cozy-ui/compare/v96.1.1...v96.2.0) (2023-11-28)
+
+
+### Features
+
+* **NestedSelect:** Add `header` and `childrenHeader` props on `options` ([bf31c73](https://github.com/cozy/cozy-ui/commit/bf31c73))
+* **NestedSelect:** Title is no longer required ([6a776cf](https://github.com/cozy/cozy-ui/commit/6a776cf))
+
+## [96.1.1](https://github.com/cozy/cozy-ui/compare/v96.1.0...v96.1.1) (2023-11-27)
+
+
+### Bug Fixes
+
+* Improve IllustrationDialog layout in native ([2946e9d](https://github.com/cozy/cozy-ui/commit/2946e9d))
+
+# [96.1.0](https://github.com/cozy/cozy-ui/compare/v96.0.0...v96.1.0) (2023-11-24)
+
+
+### Features
+
+* Add TrashDuotone icon ([b3b26b5](https://github.com/cozy/cozy-ui/commit/b3b26b5))
+
+# [96.0.0](https://github.com/cozy/cozy-ui/compare/v95.11.1...v96.0.0) (2023-11-23)
+
+
+### Bug Fixes
+
+* **Body:** Use correct css var for color and bg color ([502234c](https://github.com/cozy/cozy-ui/commit/502234c))
+* **Checkbox:** Remove useless css properties for inverted theme ([57e3f10](https://github.com/cozy/cozy-ui/commit/57e3f10))
+* **FormLabel:** Remove useless css properties for inverted theme ([5014ba0](https://github.com/cozy/cozy-ui/commit/5014ba0))
+* **Nav:** Replace css var to be theme responsive ([580a1ca](https://github.com/cozy/cozy-ui/commit/580a1ca))
+* **Sidebar:** Use `defaultBackgroundColor` instead of `paleGrey bg color` ([2e3c378](https://github.com/cozy/cozy-ui/commit/2e3c378))
+* **Theme:** Replace `white` by theme.palette.common.white ([8e6e4ee](https://github.com/cozy/cozy-ui/commit/8e6e4ee))
+* **TooltIp:** Remove useless css properties ([7c62cd1](https://github.com/cozy/cozy-ui/commit/7c62cd1))
+
+
+### Features
+
+* Remove `navTextColor`, `navTextActiveColor`, `navTextHoverColor` ([e8aba76](https://github.com/cozy/cozy-ui/commit/e8aba76))
+* Remove palette.grey[0] from Mui palette ([9b8e53f](https://github.com/cozy/cozy-ui/commit/9b8e53f))
+
+
+### BREAKING CHANGES
+
+* You should replace css var like this :
+- `--navTextColor` -> `--actionColorActive`
+- `--navTextActiveColor` -> `--primaryTextColor`
+- `--navTextHoverColor` -> `--actionColorActive`
+* You must use `palette.common.white` instead of `palette.grey[0]`
+
+## [95.11.1](https://github.com/cozy/cozy-ui/compare/v95.11.0...v95.11.1) (2023-11-20)
+
+
+### Bug Fixes
+
+* **BottomSheet:** Did not compare peek heights correctly ([600c430](https://github.com/cozy/cozy-ui/commit/600c430))
+* **BottomSheet:** Did not set default currentIndex correctly ([e22c482](https://github.com/cozy/cozy-ui/commit/e22c482))
+* **BottomSheet:** Did not set topPosition and snapIndex correctly ([c23ee5a](https://github.com/cozy/cozy-ui/commit/c23ee5a))
+
+# [95.11.0](https://github.com/cozy/cozy-ui/compare/v95.10.0...v95.11.0) (2023-11-20)
+
+
+### Features
+
+* Add missing `bicNumber` attribute ([ed37277](https://github.com/cozy/cozy-ui/commit/ed37277))
+* Remove last occurence of `mespapiers.migrated.metadata` flag ([11c3147](https://github.com/cozy/cozy-ui/commit/11c3147))
+
+# [95.10.0](https://github.com/cozy/cozy-ui/compare/v95.9.0...v95.10.0) (2023-11-14)
+
+
+### Bug Fixes
+
+* **BottomSheet:** Content was not displayed correctly with toolbar ([97e3198](https://github.com/cozy/cozy-ui/commit/97e3198))
+
+
+### Features
+
+* **NestedSelect:** Add `componentsProps` prop to spread to bottomsheet ([11af87c](https://github.com/cozy/cozy-ui/commit/11af87c))
+
+# [95.9.0](https://github.com/cozy/cozy-ui/compare/v95.8.0...v95.9.0) (2023-11-13)
+
+
+### Features
+
+* Add content push to IllustrationDialog ([4880f78](https://github.com/cozy/cozy-ui/commit/4880f78))
+
+# [95.8.0](https://github.com/cozy/cozy-ui/compare/v95.7.0...v95.8.0) (2023-11-09)
+
+
+### Features
+
+* Add pro category to Sections translation ([485c7c4](https://github.com/cozy/cozy-ui/commit/485c7c4))
+
+# [95.7.0](https://github.com/cozy/cozy-ui/compare/v95.6.0...v95.7.0) (2023-11-07)
+
+
+### Features
+
+* Use the new onHide/onShowCross provided by cozy-interapp ([eb3ca57](https://github.com/cozy/cozy-ui/commit/eb3ca57))
+
+# [95.6.0](https://github.com/cozy/cozy-ui/compare/v95.5.0...v95.6.0) (2023-10-30)
+
+
+### Bug Fixes
+
+* Update AllowLocationDialog to fit Play Store needs ([3a00bd2](https://github.com/cozy/cozy-ui/commit/3a00bd2))
+
+
+### Features
+
+* **Empty:** Accept now <Icon />, <img> and <svg> as icon prop value ([d13cf26](https://github.com/cozy/cozy-ui/commit/d13cf26))
+
+# [95.5.0](https://github.com/cozy/cozy-ui/compare/v95.4.0...v95.5.0) (2023-10-24)
+
+
+### Features
+
+* **Empty:** Add centered props, max width and paddings ([8c03660](https://github.com/cozy/cozy-ui/commit/8c03660))
+
+# [95.4.0](https://github.com/cozy/cozy-ui/compare/v95.3.0...v95.4.0) (2023-10-23)
+
+
+### Bug Fixes
+
+* **ActionsMenu:** ActionsMenuMobileHeader was unnecessarily in DOM on desktop ([805a030](https://github.com/cozy/cozy-ui/commit/805a030))
+* **Menu, ActionsMenu:** The margins between elements were not as expected ([e021fdc](https://github.com/cozy/cozy-ui/commit/e021fdc))
+
+
+### Features
+
+* **ActionsMenuItem:** Add `cozyActionsMenuItem` class to be able to target it ([fcd6dfa](https://github.com/cozy/cozy-ui/commit/fcd6dfa))
+* **ListItem:** Add min heights ([ceaba86](https://github.com/cozy/cozy-ui/commit/ceaba86))
+* **ListItemIcon:** Add `cozyListItemIcon` class to be able to target it ([f0b218f](https://github.com/cozy/cozy-ui/commit/f0b218f))
+
+# [95.3.0](https://github.com/cozy/cozy-ui/compare/v95.2.0...v95.3.0) (2023-10-18)
+
+
+### Bug Fixes
+
+* **BottomSheet:** IsTopPosition wasn't set if condition [secure] ([4ae9ac0](https://github.com/cozy/cozy-ui/commit/4ae9ac0))
+
+
+### Features
+
+* **BottomSheet:** Add rerendering content compliancy ([c93efb2](https://github.com/cozy/cozy-ui/commit/c93efb2))
+* **NestedSelect:** Rerender BottomSheet if content change ([b26e6bd](https://github.com/cozy/cozy-ui/commit/b26e6bd))
+
+# [95.2.0](https://github.com/cozy/cozy-ui/compare/v95.1.0...v95.2.0) (2023-10-11)
+
+
+### Features
+
+* Add ListSkeleton and ListItemSkeleton components ([742ec65](https://github.com/cozy/cozy-ui/commit/742ec65))
+
+# [95.1.0](https://github.com/cozy/cozy-ui/compare/v95.0.0...v95.1.0) (2023-10-06)
+
+
+### Features
+
+* Add AllowLocationDialog in SpecificDialogs ([1843f63](https://github.com/cozy/cozy-ui/commit/1843f63))
+
+# [95.0.0](https://github.com/cozy/cozy-ui/compare/v94.1.0...v95.0.0) (2023-10-03)
+
+
+### Features
+
+* **Modal:** Re-export Modal component ([1ad81f6](https://github.com/cozy/cozy-ui/commit/1ad81f6))
+* **Viewer:** Use Modal by default instead Overlay in app ([7510557](https://github.com/cozy/cozy-ui/commit/7510557))
+
+
+### BREAKING CHANGES
+
+* **Viewer:** The Viewer is now wrapped with
+a Modal by default.
+You can remove the deprecated `Overlay` component
+(which wraps the `Viewer` component) from your applications.
+Or if you want to keep your implementation,
+please use the `disableModal` props
+on your `Viewer` components.
+
+# [94.1.0](https://github.com/cozy/cozy-ui/compare/v94.0.0...v94.1.0) (2023-10-02)
+
+
+### Features
+
+* **NestedSelect:** Add NestedSelectResponsive and BottomSheet ([d1659fe](https://github.com/cozy/cozy-ui/commit/d1659fe))
+
+# [94.0.0](https://github.com/cozy/cozy-ui/compare/v93.5.0...v94.0.0) (2023-10-02)
+
+
+### Bug Fixes
+
+* **ContactsList:** Center the spinner when fetching data ([52791a1](https://github.com/cozy/cozy-ui/commit/52791a1))
+* **ContactsList:** Remove padding on cells ([bb6c237](https://github.com/cozy/cozy-ui/commit/bb6c237))
+
+
+### Features
+
+* **ContactsListModal:** Use default text on search, add button, result ([652d52f](https://github.com/cozy/cozy-ui/commit/652d52f))
+* **getRandomUUID:** Returns something even without crypto API ([be65396](https://github.com/cozy/cozy-ui/commit/be65396))
+
+
+### BREAKING CHANGES
+
+* **ContactsListModal:** If you don't want any text in `ContactsListModal` for search input, add button and empty result, use respectively these props : `placeholder={[secure]}, addContactLabel={[secure]}, emptyMessage={[secure]}` instead of `undefined` values
+
+# [93.5.0](https://github.com/cozy/cozy-ui/compare/v93.4.0...v93.5.0) (2023-09-29)
+
+
+### Features
+
+* **Viewer:** On mobile, the title benefits well from the midEllipsis ([5bfd8b3](https://github.com/cozy/cozy-ui/commit/5bfd8b3))
+
+# [93.4.0](https://github.com/cozy/cozy-ui/compare/v93.3.0...v93.4.0) (2023-09-28)
+
+
+### Features
+
+* Add Alert provider ([ebccf42](https://github.com/cozy/cozy-ui/commit/ebccf42))
+
+# [93.3.0](https://github.com/cozy/cozy-ui/compare/v93.2.0...v93.3.0) (2023-09-28)
+
+
+### Features
+
+* **Icon:** Add LabelOutlined ([b0efd5a](https://github.com/cozy/cozy-ui/commit/b0efd5a))
+
+# [93.2.0](https://github.com/cozy/cozy-ui/compare/v93.1.1...v93.2.0) (2023-09-22)
+
+
+### Features
+
+* **NestedSelectModal:** The dialog must be centered ([6d4447f](https://github.com/cozy/cozy-ui/commit/6d4447f))
+
+## [93.1.1](https://github.com/cozy/cozy-ui/compare/v93.1.0...v93.1.1) (2023-09-18)
+
+
+### Bug Fixes
+
+* Cozy-bar elements must appairs above the UploadQueue ([b6a2c92](https://github.com/cozy/cozy-ui/commit/b6a2c92))
+* **z-index:** Remove comment that no longer makes sense ([a250037](https://github.com/cozy/cozy-ui/commit/a250037)), closes [/github.com/cozy/cozy-bar/blob/71a45f8e73601861f4e312e27bb9b5cc1b149f17/src/styles/bar.css#L5](https://github.com//github.com/cozy/cozy-bar/blob/71a45f8e73601861f4e312e27bb9b5cc1b149f17/src/styles/bar.css/issues/L5)
+
+# [93.1.0](https://github.com/cozy/cozy-ui/compare/v93.0.1...v93.1.0) (2023-09-15)
+
+
+### Features
+
+* **NestedSelect:** Manage ellipsis ([adbabc9](https://github.com/cozy/cozy-ui/commit/adbabc9))
+
+## [93.0.1](https://github.com/cozy/cozy-ui/compare/v93.0.0...v93.0.1) (2023-09-14)
+
+
+### Bug Fixes
+
+* **Checkbox:** Label wasn't spread to aria-label ([ffacda6](https://github.com/cozy/cozy-ui/commit/ffacda6))
+* **Dialog:** Remove usage of RemoveScroll ([0c4cf1e](https://github.com/cozy/cozy-ui/commit/0c4cf1e))
+* **TextField:** Remove error log because of wrong style override ([8c58b1f](https://github.com/cozy/cozy-ui/commit/8c58b1f))
+
+# [93.0.0](https://github.com/cozy/cozy-ui/compare/v92.4.0...v93.0.0) (2023-09-14)
+
+
+### Features
+
+* **CozyTheme:** Move it into providers folder ([c3cf47e](https://github.com/cozy/cozy-ui/commit/c3cf47e))
+* **I18n:** Move it into providers folder ([191f2d4](https://github.com/cozy/cozy-ui/commit/191f2d4))
+* **useBreakpoints:** Move it into providers folder ([4d5e882](https://github.com/cozy/cozy-ui/commit/4d5e882))
+
+
+### BREAKING CHANGES
+
+* **I18n:** `I18n` and relative tools has been moved. Use codemods to deal with the change.
+
+```
+yarn global add @cozy/codemods
+yarn global add jscodeshift@0.13.1
+jscodeshift -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/transform-ui-providers-imports.js src babel --ignore-pattern=src/targets/ --extensions js,jsx,tsx --parser tsx
+```
+* **useBreakpoints:** `useBreakpoints` has been moved. Use codemods to deal with the change.
+* **CozyTheme:** `CozyTheme` has been moved. Use codemods to deal with the change.
+
+# [92.4.0](https://github.com/cozy/cozy-ui/compare/v92.3.0...v92.4.0) (2023-09-13)
+
+
+### Features
+
+* Add cocktail, work and sport-bag icons ([62ee735](https://github.com/cozy/cozy-ui/commit/62ee735))
+
+# [92.3.0](https://github.com/cozy/cozy-ui/compare/v92.2.0...v92.3.0) (2023-09-12)
+
+
+### Features
+
+* Add BIC number attribute ([c5e94f6](https://github.com/cozy/cozy-ui/commit/c5e94f6))
+
+# [92.2.0](https://github.com/cozy/cozy-ui/compare/v92.1.0...v92.2.0) (2023-09-11)
+
+
+### Bug Fixes
+
+* Color of RightArrow icon ([ad5cc6b](https://github.com/cozy/cozy-ui/commit/ad5cc6b))
+* **ItemRow:** In ListItem, Icon & Radio should be wrap in ListItemIcon ([6aaa10a](https://github.com/cozy/cozy-ui/commit/6aaa10a))
+* The last ItemRow must not have a Divider ([0525a4c](https://github.com/cozy/cozy-ui/commit/0525a4c))
+
+
+### Features
+
+* Add multiple icons ([b7bf028](https://github.com/cozy/cozy-ui/commit/b7bf028))
+* **ItemRow:** Add information text ([7d3207c](https://github.com/cozy/cozy-ui/commit/7d3207c))
+* **ItemRow:** Add secondary actions ([2773d91](https://github.com/cozy/cozy-ui/commit/2773d91))
+* **NestedSelect:** Wrap NestedSelect with List component ([5773308](https://github.com/cozy/cozy-ui/commit/5773308))
+
+# [92.1.0](https://github.com/cozy/cozy-ui/compare/v92.0.1...v92.1.0) (2023-09-07)
+
+
+### Features
+
+* **CozyTheme:** Add error log if useCozyTheme is used outside provider ([889c92c](https://github.com/cozy/cozy-ui/commit/889c92c))
+
+## [92.0.1](https://github.com/cozy/cozy-ui/compare/v92.0.0...v92.0.1) (2023-08-31)
+
+
+### Bug Fixes
+
+* **Viewer:** Remove filename on path ending with slash ([ad8b88c](https://github.com/cozy/cozy-ui/commit/ad8b88c))
+
+# [92.0.0](https://github.com/cozy/cozy-ui/compare/v91.2.0...v92.0.0) (2023-08-28)
+
+
+### Features
+
+* **Viewer:** Display file path into the toolbar ([e76e2f7](https://github.com/cozy/cozy-ui/commit/e76e2f7))
+* **Viewer:** Move toolbarProps into componentsProps ([b0582da](https://github.com/cozy/cozy-ui/commit/b0582da))
+* **Viewer:** Remove onlyOfficeProps ([9983c4a](https://github.com/cozy/cozy-ui/commit/9983c4a))
+
+
+### BREAKING CHANGES
+
+* **Viewer:** The `toolbarProps` attribute from Viewer property has been moved into the `componentsProps` attribute. 
+
+You can use this codemods to migrate. **Don't forget to run js linter after the codemods.**
+
+The `--parser` option is essential to manage any TSX files in the project.
+
+```
+yarn global add @cozy/codemods
+yarn global add jscodeshift@0.13.1
+jscodeshift -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/transform-viewer-components-props.js src babel --ignore-pattern=src/targets/ --extensions js,jsx,tsx --parser tsx
+```
+
+You can do this manually by transferring the contents of `toolbarProps` to `componentsProps` under a `toolbarProps` property.
+* **Viewer:** The `onlyOfficeProps` attribute from Viewer property has been moved into the `componentsProps` attribute. 
+
+You have to move the contents of `onlyOfficeProps ` to `componentsProps` under a `OnlyOfficeViewer` property.
+
+# [91.2.0](https://github.com/cozy/cozy-ui/compare/v91.1.1...v91.2.0) (2023-08-24)
+
+
+### Features
+
+* **Section:** Add prop to manage click on AppTile ([ce9e6b9](https://github.com/cozy/cozy-ui/commit/ce9e6b9))
+
+## [91.1.1](https://github.com/cozy/cozy-ui/compare/v91.1.0...v91.1.1) (2023-08-24)
+
+
+### Bug Fixes
+
+* **TimelineItem:** Wasn't exporting correct MUI component ([b8bdfff](https://github.com/cozy/cozy-ui/commit/b8bdfff))
+
+# [91.1.0](https://github.com/cozy/cozy-ui/compare/v91.0.0...v91.1.0) (2023-08-24)
+
+
+### Features
+
+* Add components relative to Timeline ([c2203fc](https://github.com/cozy/cozy-ui/commit/c2203fc))
+
+# [91.0.0](https://github.com/cozy/cozy-ui/compare/v90.7.1...v91.0.0) (2023-08-16)
+
+
+### Features
+
+* **Avatar:** Remove z-index ([3d95434](https://github.com/cozy/cozy-ui/commit/3d95434))
+
+
+### BREAKING CHANGES
+
+* **Avatar:** if you encounter some z-index problem with Avatar component, you must have to set it manually. Previously it was
+set to `1`
+
+## [90.7.1](https://github.com/cozy/cozy-ui/compare/v90.7.0...v90.7.1) (2023-08-16)
+
+
+### Bug Fixes
+
+* **ContactsList:** Avatar is no longer above list subheader ([a3310d3](https://github.com/cozy/cozy-ui/commit/a3310d3))
+
+# [90.7.0](https://github.com/cozy/cozy-ui/compare/v90.6.0...v90.7.0) (2023-08-09)
+
+
+### Features
+
+* **ListItemFile:** Use Filename to show the primary text ([38c2bd2](https://github.com/cozy/cozy-ui/commit/38c2bd2))
+
+# [90.6.0](https://github.com/cozy/cozy-ui/compare/v90.5.0...v90.6.0) (2023-08-08)
+
+
+### Features
+
+* **Filename:** Add midEllipsis prop ([1f9df73](https://github.com/cozy/cozy-ui/commit/1f9df73))
+
+# [90.5.0](https://github.com/cozy/cozy-ui/compare/v90.4.0...v90.5.0) (2023-08-07)
+
+
+### Features
+
+* Add DemoProvider to simplify doc and tests ([73efeb4](https://github.com/cozy/cozy-ui/commit/73efeb4))
+* **useI18n:** Throw error if not used inside I18n provider ([a54de0f](https://github.com/cozy/cozy-ui/commit/a54de0f))
+
+# [90.4.0](https://github.com/cozy/cozy-ui/compare/v90.3.0...v90.4.0) (2023-08-07)
+
+
+### Features
+
+* **Paywall:** Allow to open premium on flagship when iap will be enabled ([b53abad](https://github.com/cozy/cozy-ui/commit/b53abad))
+
+# [90.3.0](https://github.com/cozy/cozy-ui/compare/v90.2.0...v90.3.0) (2023-08-02)
+
+
+### Features
+
+* **ActionsItems:** Add possibility to spread arg between onClick and actions ([ef54841](https://github.com/cozy/cozy-ui/commit/ef54841))
+
+# [90.2.0](https://github.com/cozy/cozy-ui/compare/v90.1.0...v90.2.0) (2023-07-31)
+
+
+### Bug Fixes
+
+* **Viewer:** Success alert for copied item is now with a success style ([f934e3c](https://github.com/cozy/cozy-ui/commit/f934e3c))
+
+
+### Features
+
+* Add copy-text-to-clipboard 3.2.0 package ([c79456f](https://github.com/cozy/cozy-ui/commit/c79456f))
+* Replace navigator.clipboard by copy-text-to-clipboard ([2884a37](https://github.com/cozy/cozy-ui/commit/2884a37))
+
+# [90.1.0](https://github.com/cozy/cozy-ui/compare/v90.0.0...v90.1.0) (2023-07-26)
+
+
+### Bug Fixes
+
+* **CozyTheme:** Set default variant to "normal" ([816034d](https://github.com/cozy/cozy-ui/commit/816034d))
+
+
+### Features
+
+* **ActionsMenu:** MakeActions() can now receive nullish actions ([de39ce7](https://github.com/cozy/cozy-ui/commit/de39ce7))
+
+# [90.0.0](https://github.com/cozy/cozy-ui/compare/v89.1.0...v90.0.0) (2023-07-20)
+
+
+### Features
+
+* Add ButtonBase component ([9e77485](https://github.com/cozy/cozy-ui/commit/9e77485))
+* Add QualificationGrid and QualificationItem components ([b773099](https://github.com/cozy/cozy-ui/commit/b773099))
+* Upgrade cozy-client from 35.2.0 to 38.11.1 ([d59b93b](https://github.com/cozy/cozy-ui/commit/d59b93b))
+
+
+### BREAKING CHANGES
+
+* you must have `cozy-client >= 38.11.1`
+
+# [89.1.0](https://github.com/cozy/cozy-ui/compare/v89.0.0...v89.1.0) (2023-07-18)
+
+
+### Features
+
+* **ListItemFile:** Show correct icon for notes ([ab03f13](https://github.com/cozy/cozy-ui/commit/ab03f13))
+
+# [89.0.0](https://github.com/cozy/cozy-ui/compare/v88.6.0...v89.0.0) (2023-07-13)
+
+
+### Bug Fixes
+
+* **Alerts:** Use correct CSS variable for z-index property ([efd32d1](https://github.com/cozy/cozy-ui/commit/efd32d1))
+
+
+### BREAKING CHANGES
+
+* **Alerts:** Rename `--zindex-alert` CSS variable to `--zIndex-alert`
+
+# [88.6.0](https://github.com/cozy/cozy-ui/compare/v88.5.0...v88.6.0) (2023-07-12)
+
+
+### Bug Fixes
+
+* **Paywall:** Improve wording to be more explicite ([d21b311](https://github.com/cozy/cozy-ui/commit/d21b311))
+* **Paywall:** Open the premium link in the current window ([95ac4b7](https://github.com/cozy/cozy-ui/commit/95ac4b7))
+
+
+### Features
+
+* Add QuotaPaywall ([1263285](https://github.com/cozy/cozy-ui/commit/1263285))
+* Update QuotaAlert design by exposing QuotaPaywall ([8a11f9b](https://github.com/cozy/cozy-ui/commit/8a11f9b))
+
+# [88.5.0](https://github.com/cozy/cozy-ui/compare/v88.4.0...v88.5.0) (2023-07-06)
+
+
+### Features
+
+* Add images to transpiled folder ([17c2440](https://github.com/cozy/cozy-ui/commit/17c2440)), closes [/github.com/babel/babel/issues/11394#issuecomment-649014113](https://github.com//github.com/babel/babel/issues/11394/issues/issuecomment-649014113)
+* Move InstallFlagshipAppDialog images from ./assets to ./icons folder ([e8100e9](https://github.com/cozy/cozy-ui/commit/e8100e9))
+
+
+### Reverts
+
+* Assets were not in the good directory ([aaf3fc3](https://github.com/cozy/cozy-ui/commit/aaf3fc3))
+
+# [88.4.0](https://github.com/cozy/cozy-ui/compare/v88.3.0...v88.4.0) (2023-07-06)
+
+
+### Features
+
+* **AuthentificationDialog:** Allow redirection after password reset ([0ba12cc](https://github.com/cozy/cozy-ui/commit/0ba12cc)), closes [cozy/cozy-stack#4040](https://github.com/cozy/cozy-stack/issues/4040)
+
+# [88.3.0](https://github.com/cozy/cozy-ui/compare/v88.2.1...v88.3.0) (2023-07-05)
+
+
+### Bug Fixes
+
+* **EyeClosed:** Remove withe stroke to adapt color change ([047cf55](https://github.com/cozy/cozy-ui/commit/047cf55))
+
+
+### Features
+
+* Add AuthentificationDialog ([52ee385](https://github.com/cozy/cozy-ui/commit/52ee385))
+* Add CozyAuthentification illustration ([a63249a](https://github.com/cozy/cozy-ui/commit/a63249a))
+* Add PasswordField ([4e2a854](https://github.com/cozy/cozy-ui/commit/4e2a854))
+* Add PermissionDialog ([cf85f4c](https://github.com/cozy/cozy-ui/commit/cf85f4c))
+
+## [88.2.1](https://github.com/cozy/cozy-ui/compare/v88.2.0...v88.2.1) (2023-07-05)
+
+
+### Bug Fixes
+
+* **InstallFlagshipAppDialog:** Assets were not in the good directory ([512bcef](https://github.com/cozy/cozy-ui/commit/512bcef))
+
+# [88.2.0](https://github.com/cozy/cozy-ui/compare/v88.1.1...v88.2.0) (2023-07-05)
+
+
+### Features
+
+* **InstallFlagshipAppDialog:** Add InstallFlagshipAppDialog new component ([6c984e9](https://github.com/cozy/cozy-ui/commit/6c984e9))
+
+## [88.1.1](https://github.com/cozy/cozy-ui/compare/v88.1.0...v88.1.1) (2023-06-30)
+
+
+### Bug Fixes
+
+* **Viewer:** Force style of ActionMenuDesktop ([3cf40c4](https://github.com/cozy/cozy-ui/commit/3cf40c4))
+
+# [88.1.0](https://github.com/cozy/cozy-ui/compare/v88.0.0...v88.1.0) (2023-06-29)
+
+
+### Bug Fixes
+
+* **css:** Add two missing z-index in CSS var ([f7ef7d4](https://github.com/cozy/cozy-ui/commit/f7ef7d4))
+* **css:** Avoid importing z-index.styl in each css of legacy component ([8bc65ee](https://github.com/cozy/cozy-ui/commit/8bc65ee))
+
+
+### Features
+
+* **css:** Use z-index from CSS var instead of stylus var ([bc2f05e](https://github.com/cozy/cozy-ui/commit/bc2f05e))
+* **Viewer:** Add missing translation ([58014bf](https://github.com/cozy/cozy-ui/commit/58014bf))
+
+# [88.0.0](https://github.com/cozy/cozy-ui/compare/v87.0.0...v88.0.0) (2023-06-28)
+
+
+### Features
+
+* **AccordionExpandIcon:** Moved to `./AccordionSummary` folder ([d58dd51](https://github.com/cozy/cozy-ui/commit/d58dd51))
+* Deprecation and fallback for some components in MuiCozyTheme ([c2f4acd](https://github.com/cozy/cozy-ui/commit/c2f4acd))
+* Move `MuiCozyTheme/MuiBreadcrumbs` in `/Breadcrumbs` ([1678047](https://github.com/cozy/cozy-ui/commit/1678047))
+* Move Breadcrumbs component into `./legacy` folder ([ffc9c9b](https://github.com/cozy/cozy-ui/commit/ffc9c9b))
+* Move components from `MuiCozyTheme` folder to `react` folder ([b9f5324](https://github.com/cozy/cozy-ui/commit/b9f5324))
+* Remove `MuiCozyTheme/Dialog` content ([549c20a](https://github.com/cozy/cozy-ui/commit/549c20a))
+
+
+### BREAKING CHANGES
+
+* We moved these components into `/react` folder.
+
+This is the list of impacted components: `MuiCozyTheme/Buttons`, `MuiCozyTheme/MuiBreadcrumbs`, `MuiCozyTheme/Dialog`, `MuiCozyTheme/Accordion`, `MuiCozyTheme/AccordionDetails`, `MuiCozyTheme/AccordionSummary`, `MuiCozyTheme/Divider`, `MuiCozyTheme/Grid`, `MuiCozyTheme/List`, `MuiCozyTheme/ListItem`, `MuiCozyTheme/ListItemIcon`, `MuiCozyTheme/ListItemSecondaryAction`, `MuiCozyTheme/ListSubheader`, `MuiCozyTheme/Menu`, `MuiCozyTheme/Switch`, `MuiCozyTheme/TextField`
+
+You can use this codemods to migrate: 
+
+```
+$ yarn global add @cozy/codemods
+$ jscodeshift -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/transform-ui-muicozytheme-imports.js src --parser babel --ignore-pattern=src/targets/ --extensions js,jsx
+```
+* you must replace `cozy-ui/transpiled/react/Breadcrumbs` by `cozy-ui/transpiled/react/legacy/Breadcrumbs`
+
+# [87.0.0](https://github.com/cozy/cozy-ui/compare/v86.3.0...v87.0.0) (2023-06-28)
+
+
+### Features
+
+* Deprecates some component ([85404bd](https://github.com/cozy/cozy-ui/commit/85404bd))
+
+
+### BREAKING CHANGES
+
+* This is the list of deprecated component
+`ActionMenu`, `Alerter`, `BottomDrawer`, `Button`, `ButtonAction`, `Chip`, `CompositeRow`, `GridItem`, `Infos`, `InfosCarrousel`, `InlineCard`, `IntentModal`, `IntentOpener`, `Media`, `Menus`, `Modal`, `NarrowContent`, `Overlay`, `PercentageBar`, `PercentageLine`, `PushClientButton`, `QuotaAlert`, `Radio`, `RaisedList`, `ViewStack`
+
+These components are now in a `deprecated` subfolder. Use this codemods to migrate: 
+
+```
+$ yarn global add @cozy/codemods
+$ jscodeshift -t $(yarn global dir)/node_modules/@cozy/codemods/src/transforms/transform-ui-deprecated-imports.js src --parser babel --ignore-pattern=src/targets/ --extensions js,jsx
+```
+
+# [86.3.0](https://github.com/cozy/cozy-ui/compare/v86.2.0...v86.3.0) (2023-06-27)
+
+
+### Features
+
+* **Paywall:** Add MaxPapersPaywall ([a9b744f](https://github.com/cozy/cozy-ui/commit/a9b744f))
+* **Paywall:** Change `I understood` in `I understand` ([ba43862](https://github.com/cozy/cozy-ui/commit/ba43862))
+
+# [86.2.0](https://github.com/cozy/cozy-ui/compare/v86.1.0...v86.2.0) (2023-06-21)
+
+
+### Features
+
+* Add "ArrowUp" UI Icon ([b0c3711](https://github.com/cozy/cozy-ui/commit/b0c3711))
+
+# [86.1.0](https://github.com/cozy/cozy-ui/compare/v86.0.0...v86.1.0) (2023-06-20)
+
+
+### Features
+
+* Remove `mespapiers.migrated.metadata` flag ([43bcc3e](https://github.com/cozy/cozy-ui/commit/43bcc3e))
+
+# [86.0.0](https://github.com/cozy/cozy-ui/compare/v85.9.0...v86.0.0) (2023-06-20)
+
+
+### Bug Fixes
+
+* **ActionsMenu:** Divider actions wasn't spreading ref ([15a9554](https://github.com/cozy/cozy-ui/commit/15a9554))
+* **ActionsMenu:** Now force autofocus on first item for better a11y ([4264903](https://github.com/cozy/cozy-ui/commit/4264903))
+* **ActionsMenu:** Now spread props first to avoid override ([c30e183](https://github.com/cozy/cozy-ui/commit/c30e183))
+* **ActionsMenu:** Prop `doc` was spread to ActionsMenuItem child ([a2160c1](https://github.com/cozy/cozy-ui/commit/a2160c1))
+* **Divider:** Ref wasn't spreaded ([8220dba](https://github.com/cozy/cozy-ui/commit/8220dba))
+* **I18n:** Translate() wasn't spreading ref ([b23c16f](https://github.com/cozy/cozy-ui/commit/b23c16f))
+* **I18n:** WithOnlyLocales wasn't spreading ref ([5ca4004](https://github.com/cozy/cozy-ui/commit/5ca4004))
+* **ListItem:** Remove autoFocus and set focus on mount in RenameInput ([04d9985](https://github.com/cozy/cozy-ui/commit/04d9985))
+
+
+### Features
+
+* **ActionsMenu:** Add possibility to spread props to ActionsItems ([20534cb](https://github.com/cozy/cozy-ui/commit/20534cb))
+* **ListItemContact:** Use new ActionsMenu to get better accessibility ([e77d043](https://github.com/cozy/cozy-ui/commit/e77d043))
+
+
+### BREAKING CHANGES
+
+* **ActionsMenu:** `ActionsItems` no longer support `isLast` and `setIsRenaming` props. You have to use `actionOptions` to pass them. You should not be worried about this BC, `ActionsItems` is generally not used directly in apps
+
+# [85.9.0](https://github.com/cozy/cozy-ui/compare/v85.8.1...v85.9.0) (2023-06-19)
+
+
+### Bug Fixes
+
+* **css:** Avoid importing palette.styl and utils.styl in each css of ([311644b](https://github.com/cozy/cozy-ui/commit/311644b))
+* **css:** Now import spaces stylus method from settings ([087245b](https://github.com/cozy/cozy-ui/commit/087245b))
+* Now remove useless import of display css utilities ([ee6553a](https://github.com/cozy/cozy-ui/commit/ee6553a))
+
+
+### Features
+
+* Remove direct import of palette.styl in legacy components ([95ac529](https://github.com/cozy/cozy-ui/commit/95ac529))
+
+## [85.8.1](https://github.com/cozy/cozy-ui/compare/v85.8.0...v85.8.1) (2023-06-16)
+
+
+### Bug Fixes
+
+* Change default wording for paywall ([87f2680](https://github.com/cozy/cozy-ui/commit/87f2680))
+
+# [85.8.0](https://github.com/cozy/cozy-ui/compare/v85.7.0...v85.8.0) (2023-06-15)
+
+
+### Bug Fixes
+
+* Linting format issue ([5b0c319](https://github.com/cozy/cozy-ui/commit/5b0c319))
+* **Viewer:** ContractType metadata must display default value ([b3c5ca8](https://github.com/cozy/cozy-ui/commit/b3c5ca8))
+
+
+### Features
+
+* Add MaxAccountByKonnectorPaywall ([16ea048](https://github.com/cozy/cozy-ui/commit/16ea048))
+* Add MaxAccountsPaywall ([b40765c](https://github.com/cozy/cozy-ui/commit/b40765c))
+* Add propTypes and jsDoc to Paywall ([f14d3d8](https://github.com/cozy/cozy-ui/commit/f14d3d8))
+
+# [85.7.0](https://github.com/cozy/cozy-ui/compare/v85.6.0...v85.7.0) (2023-06-05)
+
+
+### Features
+
+* Add withOnlyLocales HOC  ([f7fd728](https://github.com/cozy/cozy-ui/commit/f7fd728))
+
+# [85.6.0](https://github.com/cozy/cozy-ui/compare/v85.5.0...v85.6.0) (2023-06-01)
+
+
+### Bug Fixes
+
+* GetComponentName was crashing when using string arg ([df8647f](https://github.com/cozy/cozy-ui/commit/df8647f))
+
+
+### Features
+
+* Add Thumbnail component ([f060e70](https://github.com/cozy/cozy-ui/commit/f060e70))
+* Export shadows value in --shadowX css variables ([d7a0f04](https://github.com/cozy/cozy-ui/commit/d7a0f04))
+* **ListItemFile:** Use Thumbnail in ItemIcon ([03eb7f0](https://github.com/cozy/cozy-ui/commit/03eb7f0))
+
+# [85.5.0](https://github.com/cozy/cozy-ui/compare/v85.4.0...v85.5.0) (2023-05-30)
+
+
+### Features
+
+* Add InputBase component ([aef4a77](https://github.com/cozy/cozy-ui/commit/aef4a77))
+* Add SearchBar component ([a46e3ee](https://github.com/cozy/cozy-ui/commit/a46e3ee))
+
+# [85.4.0](https://github.com/cozy/cozy-ui/compare/v85.3.1...v85.4.0) (2023-05-30)
+
+
+### Features
+
+* **Viewer:** To be consistent with recent wording changes ([36d7d78](https://github.com/cozy/cozy-ui/commit/36d7d78))
+
+## [85.3.1](https://github.com/cozy/cozy-ui/compare/v85.3.0...v85.3.1) (2023-05-24)
+
+
+### Bug Fixes
+
+* **QualificationListItemDate:** Expiration annotation was shown not only on expiration date ([d29e263](https://github.com/cozy/cozy-ui/commit/d29e263))
+
+# [85.3.0](https://github.com/cozy/cozy-ui/compare/v85.2.0...v85.3.0) (2023-05-23)
+
+
+### Bug Fixes
+
+* **BottomSheetItem:** Use correct shadow value ([7779c1e](https://github.com/cozy/cozy-ui/commit/7779c1e))
+* **Shadows:** Adjust shadows value ([c5b4906](https://github.com/cozy/cozy-ui/commit/c5b4906))
+* **SquareAppIcon:** Use correct shadow value ([316d02d](https://github.com/cozy/cozy-ui/commit/316d02d))
+
+
+### Features
+
+* **Shadows:** Add shadow 25 ([a21ba12](https://github.com/cozy/cozy-ui/commit/a21ba12))
+* **Shadows:** Add shadow0 css variable ([43741b5](https://github.com/cozy/cozy-ui/commit/43741b5))
+
+# [85.2.0](https://github.com/cozy/cozy-ui/compare/v85.1.0...v85.2.0) (2023-05-23)
+
+
+### Bug Fixes
+
+* Remove usage of theme.mixin.gutters ([faa161d](https://github.com/cozy/cozy-ui/commit/faa161d))
+
+
+### Features
+
+* **MidEllipsis:** We can now spread any prop and ref to the first child ([8082cec](https://github.com/cozy/cozy-ui/commit/8082cec))
+* Move default props def from theme creation to components ([233ea87](https://github.com/cozy/cozy-ui/commit/233ea87))
+
+# [85.1.0](https://github.com/cozy/cozy-ui/compare/v85.0.2...v85.1.0) (2023-05-17)
+
+
+### Bug Fixes
+
+* FullScreenCozyDialog on flagship ([273db8e](https://github.com/cozy/cozy-ui/commit/273db8e))
+
+
+### Features
+
+* Add className in order to be able to target them ([8ead89c](https://github.com/cozy/cozy-ui/commit/8ead89c))
+
+## [85.0.2](https://github.com/cozy/cozy-ui/compare/v85.0.1...v85.0.2) (2023-05-17)
+
+
+### Bug Fixes
+
+* **Fab:** Hover background color is no longer transparent ([74b6f54](https://github.com/cozy/cozy-ui/commit/74b6f54))
+
+## [85.0.1](https://github.com/cozy/cozy-ui/compare/v85.0.0...v85.0.1) (2023-05-12)
+
+
+### Bug Fixes
+
+* show spinner when needed in squareappIcon ([0e92a42](https://github.com/cozy/cozy-ui/commit/0e92a42))
+
+# [85.0.0](https://github.com/cozy/cozy-ui/compare/v84.3.0...v85.0.0) (2023-05-12)
+
+
+### Bug Fixes
+
+* Update SquareAppIcon tests snapshots ([360d29a](https://github.com/cozy/cozy-ui/commit/360d29a))
+
+
+### Features
+
+* Apply shadow to SquareAppIcon title only on inverted theme ([8c16952](https://github.com/cozy/cozy-ui/commit/8c16952))
+* Blend ghost SquareAppIcon with `luminosity` in normal theme ([9374e9b](https://github.com/cozy/cozy-ui/commit/9374e9b))
+* Force `normal` theme on SquareAppIcon badge (except for ghost/add) ([c15ea7c](https://github.com/cozy/cozy-ui/commit/c15ea7c))
+* Make SquareAppIcon ghost and add variants adapt to CozyTheme ([43364e7](https://github.com/cozy/cozy-ui/commit/43364e7))
+* Make SquareAppIcon shortcut's letter always white ([317a2fd](https://github.com/cozy/cozy-ui/commit/317a2fd))
+* Make SquareAppIcon's title adapt to CozyTheme ([620623c](https://github.com/cozy/cozy-ui/commit/620623c))
+
+
+### BREAKING CHANGES
+
+* To keep previous SquareAppIcon render, you should
+display it inside of an inverted Cozy Theme
+```js
+import CozyTheme from 'cozy-ui/transpiled/react/CozyTheme'
+
+<CozyTheme variant="inverted">
+  <SquareAppIcon /* ... */ />
+</CozyTheme>
+```
+
+# [84.3.0](https://github.com/cozy/cozy-ui/compare/v84.2.0...v84.3.0) (2023-05-12)
+
+
+### Features
+
+* Use CSS vars for shadows ([13ef786](https://github.com/cozy/cozy-ui/commit/13ef786))
+
+# [84.2.0](https://github.com/cozy/cozy-ui/compare/v84.1.6...v84.2.0) (2023-05-11)
+
+
+### Features
+
+* **ExpandedAttributes:** Add support for CAF file number ([3166693](https://github.com/cozy/cozy-ui/commit/3166693))
+
+## [84.1.6](https://github.com/cozy/cozy-ui/compare/v84.1.5...v84.1.6) (2023-05-11)
+
+
+### Bug Fixes
+
+* **SelectionBar:** Mismatch between max action key ([7a66eda](https://github.com/cozy/cozy-ui/commit/7a66eda))
+
+## [84.1.5](https://github.com/cozy/cozy-ui/compare/v84.1.4...v84.1.5) (2023-05-11)
+
+
+### Bug Fixes
+
+* Apply flagship style to closebutton higher ([e11eb97](https://github.com/cozy/cozy-ui/commit/e11eb97))
+
+## [84.1.4](https://github.com/cozy/cozy-ui/compare/v84.1.3...v84.1.4) (2023-05-04)
+
+
+### Bug Fixes
+
+* **MenuItem:** Override `component` prop ([d816549](https://github.com/cozy/cozy-ui/commit/d816549))
+
+## [84.1.3](https://github.com/cozy/cozy-ui/compare/v84.1.2...v84.1.3) (2023-04-27)
+
+
+### Bug Fixes
+
+* **ActionsMenu actions:** Stop spreading `t`, `f`, `lang` into child ([4fa0cc0](https://github.com/cozy/cozy-ui/commit/4fa0cc0))
+* **ActionsMenuItem:** We used transpiled version of imports, and... ([233ae1f](https://github.com/cozy/cozy-ui/commit/233ae1f))
+* **ListItem:** Stop spreading `gutters` and `ellipsis` to children ([0de5e66](https://github.com/cozy/cozy-ui/commit/0de5e66))
+* **ListItemText:** DisplayName and forwardRef was missing ([a70322c](https://github.com/cozy/cozy-ui/commit/a70322c))
+
+## [84.1.2](https://github.com/cozy/cozy-ui/compare/v84.1.1...v84.1.2) (2023-04-27)
+
+
+### Bug Fixes
+
+* ActionsMenu target wasn't good in global import ([cac334a](https://github.com/cozy/cozy-ui/commit/cac334a))
+
+## [84.1.1](https://github.com/cozy/cozy-ui/compare/v84.1.0...v84.1.1) (2023-04-27)
+
+
+### Bug Fixes
+
+* use includes() not startsWith() in animation ([3c71bc6](https://github.com/cozy/cozy-ui/commit/3c71bc6))
+
+# [84.1.0](https://github.com/cozy/cozy-ui/compare/v84.0.0...v84.1.0) (2023-04-27)
+
+
+### Bug Fixes
+
+* **ActionsMenuWrapper:** Use now React.isValidElement on children and... ([68c5b60](https://github.com/cozy/cozy-ui/commit/68c5b60))
+* **ListItem:** LastChild should be undefined in some case without crash ([0686bb3](https://github.com/cozy/cozy-ui/commit/0686bb3))
+
+
+### Features
+
+* **ActionsItems:** Rename prop `isEnabled` in `disabled` ([f4bcb0f](https://github.com/cozy/cozy-ui/commit/f4bcb0f))
+* **ActionsMenuItem:** Force `ellipsis` [secure] on MenuItem and ListItem ([8a1725e](https://github.com/cozy/cozy-ui/commit/8a1725e))
+* **ActionsMenuItem:** Set `ellipsis` to [secure] for ListItem chlidren ([cacf53c](https://github.com/cozy/cozy-ui/commit/cacf53c))
+* **ListItem:** Add `ellipsis` prop to set ListItemText ellipsis ([135ef2a](https://github.com/cozy/cozy-ui/commit/135ef2a))
+* **MenuItem:** Change maxWidth and whiteSpace ([e845f10](https://github.com/cozy/cozy-ui/commit/e845f10))
+* **MenuItem:** Use ListItem from cozy-ui and not from Mui ([607315f](https://github.com/cozy/cozy-ui/commit/607315f))
+
+# [84.0.0](https://github.com/cozy/cozy-ui/compare/v83.4.0...v84.0.0) (2023-04-26)
+
+
+### Features
+
+* Add doc and adjust overrides for Menu from Mui. ([40b5f0d](https://github.com/cozy/cozy-ui/commit/40b5f0d))
+* Add new component ActionsMenu ([d1a57b1](https://github.com/cozy/cozy-ui/commit/d1a57b1))
+* Deprecates ActionMenu, use ActionsMenu instead ([c71f6d8](https://github.com/cozy/cozy-ui/commit/c71f6d8))
+* Remove old deprecated Menu ([36a4f6e](https://github.com/cozy/cozy-ui/commit/36a4f6e))
+* **Viewer:** Limit the average height of the BottomSheet ([ebd964f](https://github.com/cozy/cozy-ui/commit/ebd964f))
+
+
+### BREAKING CHANGES
+
+* You must replace `react/Menu` component by `react/ActionsMenu` or `react/MuiCozyTheme/Menu`. Since`react/Menu` has been depreciated for 3 years now, this should not be a problem.
+
+# [83.4.0](https://github.com/cozy/cozy-ui/compare/v83.3.0...v83.4.0) (2023-04-25)
+
+
+### Features
+
+* **ContactsList:** Adjust style after modification on ListItem ([6049a7b](https://github.com/cozy/cozy-ui/commit/6049a7b))
+* **FilePicker:** Adjust style after ListItem modifications ([fa3b646](https://github.com/cozy/cozy-ui/commit/fa3b646))
+* **List:** Update List, ListItem, ListItemText, ListSubheader, ListItemIcon ([3e64e8e](https://github.com/cozy/cozy-ui/commit/3e64e8e))
+* **NestedSelect:** Adjust style after ListItem modifications ([b951426](https://github.com/cozy/cozy-ui/commit/b951426))
+
+# [83.3.0](https://github.com/cozy/cozy-ui/compare/v83.2.0...v83.3.0) (2023-04-21)
+
+
+### Features
+
+* Add event listener on ref ([5fcc981](https://github.com/cozy/cozy-ui/commit/5fcc981))
+* Add ExtendableFab ([511b5fc](https://github.com/cozy/cozy-ui/commit/511b5fc))
+* Add useScroll hook to get scroll position from an element ([fdf2a74](https://github.com/cozy/cozy-ui/commit/fdf2a74))
+
+# [83.2.0](https://github.com/cozy/cozy-ui/compare/v83.1.1...v83.2.0) (2023-04-21)
+
+
+### Features
+
+* Add units on two attributes on ExpandedAttributes component ([5410558](https://github.com/cozy/cozy-ui/commit/5410558))
+
+## [83.1.1](https://github.com/cozy/cozy-ui/compare/v83.1.0...v83.1.1) (2023-04-21)
+
+
+### Bug Fixes
+
+* **SelectionBar:** Adapt max actions to wide device ([641f081](https://github.com/cozy/cozy-ui/commit/641f081))
+
+# [83.1.0](https://github.com/cozy/cozy-ui/compare/v83.0.0...v83.1.0) (2023-04-18)
+
+
+### Features
+
+* Add success/fail animations to SquareAppIcon ([abbb4ed](https://github.com/cozy/cozy-ui/commit/abbb4ed))
+
+# [83.0.0](https://github.com/cozy/cozy-ui/compare/v82.14.0...v83.0.0) (2023-04-17)
+
+
+### Features
+
+* Update react-pdf from 4.0.5 to 5.7.2 ([fe9608e](https://github.com/cozy/cozy-ui/commit/fe9608e))
+* **Viewer:** Navigate between pdf pages with keyboard ([d05f712](https://github.com/cozy/cozy-ui/commit/d05f712))
+
+
+### BREAKING CHANGES
+
+* This update requires the two changes above in your application if you use the `Viewer` to display PDF. You can find more detail in `Viewer` documentation : https://docs.cozy.io/cozy-ui/react/#!/Viewer
+
+Before :
+- react-pdf alias : `react-pdf/dist/entry.webpack.js`
+- public import for pdf worker : `react-pdf/dist/pdf.worker.entry.js`
+
+After :
+- react-pdf alias : `react-pdf/dist/esm/entry.webpack`
+- public import for pdf worker : `react-pdf/dist/esm/pdf.worker.entry`
+
+# [82.14.0](https://github.com/cozy/cozy-ui/compare/v82.13.0...v82.14.0) (2023-04-13)
+
+
+### Features
+
+* **TextField:** Update style and documentation ([8ff4ae0](https://github.com/cozy/cozy-ui/commit/8ff4ae0))
+
+# [82.13.0](https://github.com/cozy/cozy-ui/compare/v82.12.0...v82.13.0) (2023-04-12)
+
+
+### Bug Fixes
+
+* **SelectionBar:** Limit the number of actions displayed ([bdfd9dd](https://github.com/cozy/cozy-ui/commit/bdfd9dd))
+
+
+### Features
+
+* **SelectionBar:** Remove separator between count and actions ([2930d3d](https://github.com/cozy/cozy-ui/commit/2930d3d))
+
+# [82.12.0](https://github.com/cozy/cozy-ui/compare/v82.11.0...v82.12.0) (2023-04-06)
+
+
+### Features
+
+* Update Fab component ([cd4f0a6](https://github.com/cozy/cozy-ui/commit/cd4f0a6))
+
+# [82.11.0](https://github.com/cozy/cozy-ui/compare/v82.10.0...v82.11.0) (2023-04-05)
+
+
+### Features
+
+* **ExpandedAttributes:** Add some translated attributes as expanded ([866bb00](https://github.com/cozy/cozy-ui/commit/866bb00))
+
+# [82.10.0](https://github.com/cozy/cozy-ui/compare/v82.9.0...v82.10.0) (2023-04-04)
+
+
+### Features
+
+* Updated English translation for premium title in paywall ([578836e](https://github.com/cozy/cozy-ui/commit/578836e))
+
+# [82.9.0](https://github.com/cozy/cozy-ui/compare/v82.8.0...v82.9.0) (2023-04-03)
+
+
+### Bug Fixes
+
+* **helpers:** GetRandomUUID was called even if undefined ([749f79b](https://github.com/cozy/cozy-ui/commit/749f79b))
+* **ListItemContact:** DisplayName wasn't compliant with old contact app ([1cd6ffb](https://github.com/cozy/cozy-ui/commit/1cd6ffb))
+* **ListItemContact:** UseActions wasn't executed correctly in prod env ([8c06496](https://github.com/cozy/cozy-ui/commit/8c06496))
+* **Viewer:** Typo for contractType ([382bf2e](https://github.com/cozy/cozy-ui/commit/382bf2e))
+
+
+### Features
+
+* **ExpandedAttributes:** Add localized contact address support ([52fffe3](https://github.com/cozy/cozy-ui/commit/52fffe3))
+* **ExpandedAttributes:** Add support for residence_permit... ([90c3af0](https://github.com/cozy/cozy-ui/commit/90c3af0))
+* **ExpandedAttributes:** Remove driver license obtention date support ([3b7db1b](https://github.com/cozy/cozy-ui/commit/3b7db1b))
+* **Viewer:** Add locales for residence permit ([f410942](https://github.com/cozy/cozy-ui/commit/f410942))
+
+# [82.8.0](https://github.com/cozy/cozy-ui/compare/v82.7.0...v82.8.0) (2023-03-31)
+
+
+### Features
+
+* Use helper for get random UUID ([e659a9b](https://github.com/cozy/cozy-ui/commit/e659a9b))
+
+# [82.7.0](https://github.com/cozy/cozy-ui/compare/v82.6.1...v82.7.0) (2023-03-31)
+
+
+### Features
+
+* Add passwordSharingPaywall ([64a5fa4](https://github.com/cozy/cozy-ui/commit/64a5fa4))
+* Override TextField for improve accessibility ([85b32d1](https://github.com/cozy/cozy-ui/commit/85b32d1))
+
+## [82.6.1](https://github.com/cozy/cozy-ui/compare/v82.6.0...v82.6.1) (2023-03-31)
+
+
+### Bug Fixes
+
+* Detect flagship app on paywall ([593e135](https://github.com/cozy/cozy-ui/commit/593e135))
+
+# [82.6.0](https://github.com/cozy/cozy-ui/compare/v82.5.1...v82.6.0) (2023-03-30)
+
+
+### Bug Fixes
+
+* Improve accessibility colors ([ce9e6f6](https://github.com/cozy/cozy-ui/commit/ce9e6f6))
+
+
+### Features
+
+* Improve CircleButton accessibility ([7da40e0](https://github.com/cozy/cozy-ui/commit/7da40e0))
+* Improve ContactListModal components accessibility ([4806067](https://github.com/cozy/cozy-ui/commit/4806067))
+
+## [82.5.1](https://github.com/cozy/cozy-ui/compare/v82.5.0...v82.5.1) (2023-03-30)
+
+
+### Bug Fixes
+
+* **ExpandedAttributes:** Translated label was forgotten for flexsearch ([46491bc](https://github.com/cozy/cozy-ui/commit/46491bc))
+
+# [82.5.0](https://github.com/cozy/cozy-ui/compare/v82.4.0...v82.5.0) (2023-03-30)
+
+
+### Features
+
+* Update OnlyOffice paywall premium title ([1c62ee6](https://github.com/cozy/cozy-ui/commit/1c62ee6))
+
+# [82.4.0](https://github.com/cozy/cozy-ui/compare/v82.3.0...v82.4.0) (2023-03-30)
+
+
+### Features
+
+* Change OnlyOffice paywall action for mobile app ([c3b3406](https://github.com/cozy/cozy-ui/commit/c3b3406))
+* **ExpandedAttributes:** Change flexsearchProps translated keys ([4b8c4ee](https://github.com/cozy/cozy-ui/commit/4b8c4ee))
+* Update OnlyOffice paywall wording ([58af6d8](https://github.com/cozy/cozy-ui/commit/58af6d8))
+
+# [82.3.0](https://github.com/cozy/cozy-ui/compare/v82.2.0...v82.3.0) (2023-03-29)
+
+
+### Bug Fixes
+
+* **ExpandedAttributes:** Secondary font wasn't correct ([a9800df](https://github.com/cozy/cozy-ui/commit/a9800df))
+* **Filename:** Props `filename` was required ([910ff05](https://github.com/cozy/cozy-ui/commit/910ff05))
+
+
+### Features
+
+* **ExpandedAttributes:** Add some locales ([6fbcfe4](https://github.com/cozy/cozy-ui/commit/6fbcfe4))
+* **ExpandedAttributes:** Change supported attributes and modify logic ([238e359](https://github.com/cozy/cozy-ui/commit/238e359))
+
+# [82.2.0](https://github.com/cozy/cozy-ui/compare/v82.1.2...v82.2.0) (2023-03-27)
+
+
+### Features
+
+* Export Breadcrumbs from MUI ([3bf0588](https://github.com/cozy/cozy-ui/commit/3bf0588))
+
+## [82.1.2](https://github.com/cozy/cozy-ui/compare/v82.1.1...v82.1.2) (2023-03-24)
+
+
+### Bug Fixes
+
+* Missing Viewer translation keys ([0f79e7e](https://github.com/cozy/cozy-ui/commit/0f79e7e))
+
+## [82.1.1](https://github.com/cozy/cozy-ui/compare/v82.1.0...v82.1.1) (2023-03-23)
+
+
+### Bug Fixes
+
+* remove margin on sqAppIcon spinner ([6d74024](https://github.com/cozy/cozy-ui/commit/6d74024))
+
+# [82.1.0](https://github.com/cozy/cozy-ui/compare/v82.0.0...v82.1.0) (2023-03-23)
+
+
+### Bug Fixes
+
+* **ActionMenuItemWrapper:** Icon prop was required (now optional) ([58b98a6](https://github.com/cozy/cozy-ui/commit/58b98a6))
+* **ActionMenuWithClose:** Props wasn't propagated to ActionMenu ([0007d81](https://github.com/cozy/cozy-ui/commit/0007d81))
+* **ListItem:** ExpandedAttributes wasn't using correct local ([97c704a](https://github.com/cozy/cozy-ui/commit/97c704a))
+
+
+### Features
+
+* **ActionMenu:** Add some export to have better DX ([fda803a](https://github.com/cozy/cozy-ui/commit/fda803a))
+
+# [82.0.0](https://github.com/cozy/cozy-ui/compare/v81.9.0...v82.0.0) (2023-03-23)
+
+
+### Features
+
+* Move ActionsMenu from ListItemBase into ActionMenu folder ([02a91b9](https://github.com/cozy/cozy-ui/commit/02a91b9))
+
+
+### BREAKING CHANGES
+
+* `react/MuiCozyTheme/ListItem/ListItemBase/ActionsMenu` has been removed. You need to change some imports :
+- `cozy-ui/transpiled/react/MuiCozyTheme/ListItem/ListItemBase/ActionsMenu/ActionMenuItemWrapper` to `cozy-ui/transpiled/react/ActionMenu/ActionMenuItemWrapper`
+- `cozy-ui/transpiled/react/MuiCozyTheme/ListItem/ListItemBase/ActionsMenu/ActionMenuWithClose` to `cozy-ui/transpiled/react/ActionMenu/ActionMenuWithClose`
+- `cozy-ui/transpiled/react/MuiCozyTheme/ListItem/ListItemBase/ActionsMenu/ActionsItems` to `cozy-ui/transpiled/react/ActionMenu/Actions/ActionsItems`
+- `cozy-ui/transpiled/react/MuiCozyTheme/ListItem/ListItemBase/ActionsMenu/helpers` to `cozy-ui/transpiled/react/ActionMenu/Actions/helpers`
+- `cozy-ui/transpiled/react/MuiCozyTheme/ListItem/ListItemBase/ActionsMenu/Actions/*` to `cozy-ui/transpiled/react/ActionMenu/Actions/*`
+
+# [81.9.0](https://github.com/cozy/cozy-ui/compare/v81.8.0...v81.9.0) (2023-03-23)
+
+
+### Bug Fixes
+
+* **ListItemBase:** Clicking on actions wasn't toggling the menu ([3fbfa31](https://github.com/cozy/cozy-ui/commit/3fbfa31))
+
+
+### Features
+
+* Add ActionMenuItemWrapper for actions menus item ([068f247](https://github.com/cozy/cozy-ui/commit/068f247))
+* **ListItemContact:** Add action menu header ([633ecf8](https://github.com/cozy/cozy-ui/commit/633ecf8))
+* **ListItemContact:** Add default actions ([9164e87](https://github.com/cozy/cozy-ui/commit/9164e87))
+
+# [81.8.0](https://github.com/cozy/cozy-ui/compare/v81.7.0...v81.8.0) (2023-03-22)
+
+
+### Features
+
+* Fake commit to trigger CI deployment ([ea46474](https://github.com/cozy/cozy-ui/commit/ea46474))
+
+# [81.7.0](https://github.com/cozy/cozy-ui/compare/v81.6.1...v81.7.0) (2023-03-22)
+
+
+### Features
+
+* Fake commit to trigger CI deployment ([149531b](https://github.com/cozy/cozy-ui/commit/149531b))
+* **ListItem:** Add ExpandedAttributes comp ([93c0471](https://github.com/cozy/cozy-ui/commit/93c0471))
+* **ListItem:** Add ListItemBase and its logic ([fd094e0](https://github.com/cozy/cozy-ui/commit/fd094e0))
+* **ListItem:** Add ListItemContact based on ListItemBase ([8138158](https://github.com/cozy/cozy-ui/commit/8138158))
+* **ListItem:** Add ListItemDoc ([6972163](https://github.com/cozy/cozy-ui/commit/6972163))
+* **ListItem:** Add ListItemFile based on ListItemBase ([8ae5ce7](https://github.com/cozy/cozy-ui/commit/8ae5ce7))
+* **ListItem:** Add locales and hoc to use them ([d83876f](https://github.com/cozy/cozy-ui/commit/d83876f))
+* Some minors fixes after review ([31f4e55](https://github.com/cozy/cozy-ui/commit/31f4e55))
+
+## [81.6.1](https://github.com/cozy/cozy-ui/compare/v81.6.0...v81.6.1) (2023-03-21)
+
+
+### Bug Fixes
+
+* QualificationListItemInformation component ([2698d9f](https://github.com/cozy/cozy-ui/commit/2698d9f))
+
+# [81.6.0](https://github.com/cozy/cozy-ui/compare/v81.5.0...v81.6.0) (2023-03-17)
+
+
+### Features
+
+* Add a flag around the attribute migration feature... ([93790ce](https://github.com/cozy/cozy-ui/commit/93790ce))
+
+# [81.5.0](https://github.com/cozy/cozy-ui/compare/v81.4.0...v81.5.0) (2023-03-14)
+
+
+### Features
+
+* Add `loading` variant to SquareAppIcon ([f72b657](https://github.com/cozy/cozy-ui/commit/f72b657))
+
+# [81.4.0](https://github.com/cozy/cozy-ui/compare/v81.3.0...v81.4.0) (2023-03-13)
+
+
+### Bug Fixes
+
+* CI wasn't deploying during deploy job ([3b967ca](https://github.com/cozy/cozy-ui/commit/3b967ca))
+
+
+### Features
+
+* Add CozyUpgrade illustration ([25821e1](https://github.com/cozy/cozy-ui/commit/25821e1))
+* Add OnlyOfficePaywall ([ad344d5](https://github.com/cozy/cozy-ui/commit/ad344d5))
+* Add state on useInstance ([9aa68fc](https://github.com/cozy/cozy-ui/commit/9aa68fc))
+* Remove codemods, use theme from `@cozy/codemods` instead ([a6502e8](https://github.com/cozy/cozy-ui/commit/a6502e8))
+
+# [81.3.0](https://github.com/cozy/cozy-ui/compare/v81.2.1...v81.3.0) (2023-03-02)
+
+
+### Features
+
+* Add Mui Menu component ([2aa5f6b](https://github.com/cozy/cozy-ui/commit/2aa5f6b))
+
+## [81.2.1](https://github.com/cozy/cozy-ui/compare/v81.2.0...v81.2.1) (2023-02-22)
+
+
+### Bug Fixes
+
+* ImageViewer crashes when render are too fast ([c9e7698](https://github.com/cozy/cozy-ui/commit/c9e7698))
+
+# [81.2.0](https://github.com/cozy/cozy-ui/compare/v81.1.0...v81.2.0) (2023-02-20)
+
+
+### Features
+
+* add new icon cloud sync ([9af423e](https://github.com/cozy/cozy-ui/commit/9af423e))
+
+# [81.1.0](https://github.com/cozy/cozy-ui/compare/v81.0.0...v81.1.0) (2023-02-14)
+
+
+### Features
+
+* Use bare directories instead of index files in specifiers ([00dd09e](https://github.com/cozy/cozy-ui/commit/00dd09e))
+
+# [81.0.0](https://github.com/cozy/cozy-ui/compare/v80.3.0...v81.0.0) (2023-02-13)
+
+
+### Features
+
+* Upgrade cozy-client from 34.8.0 to 35.2.0 ([3d1c855](https://github.com/cozy/cozy-ui/commit/3d1c855))
+* **Viewer:** Add support of contract type in enhanced viewer ([69ca4c8](https://github.com/cozy/cozy-ui/commit/69ca4c8))
+
+
+### BREAKING CHANGES
+
+* you must have `cozy-client >= 35.2.0`
+
+# [80.3.0](https://github.com/cozy/cozy-ui/compare/v80.2.1...v80.3.0) (2023-02-13)
+
+
+### Features
+
+* Show CAF file number and reference tax income in the viewer ([1431b3d](https://github.com/cozy/cozy-ui/commit/1431b3d))
+
+## [80.2.1](https://github.com/cozy/cozy-ui/compare/v80.2.0...v80.2.1) (2023-02-02)
+
+
+### Bug Fixes
+
+* **format:** FormatLocallyDistanceToNowStrict wasn't returning correct ([4fb7425](https://github.com/cozy/cozy-ui/commit/4fb7425))
+
+# [80.2.0](https://github.com/cozy/cozy-ui/compare/v80.1.1...v80.2.0) (2023-02-01)
+
+
+### Bug Fixes
+
+* **Viewer:** Add default value to calc to avoid undefined ([fd13e45](https://github.com/cozy/cozy-ui/commit/fd13e45))
+
+
+### Features
+
+* **Viewer:** Add componentsProps and support OnlyOfficeViewer inside ([bf205e1](https://github.com/cozy/cozy-ui/commit/bf205e1))
+* **Viewer:** Display content top when file from konnector ([070ab58](https://github.com/cozy/cozy-ui/commit/070ab58))
+
+## [80.1.1](https://github.com/cozy/cozy-ui/compare/v80.1.0...v80.1.1) (2023-01-27)
+
+
+### Bug Fixes
+
+* Allow overriding `Alert` classes ([62f18bf](https://github.com/cozy/cozy-ui/commit/62f18bf))
+* Make sure the message fills all the width available inside `Alert` ([2f0a608](https://github.com/cozy/cozy-ui/commit/2f0a608))
+
 # [80.1.0](https://github.com/cozy/cozy-ui/compare/v80.0.2...v80.1.0) (2023-01-25)
 
 

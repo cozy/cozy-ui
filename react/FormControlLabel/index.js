@@ -1,3 +1,3 @@
-import MuiFormControlLabel from '@mui/material/FormControlLabel'
+import MuiFormControlLabel from '@material-ui/core/FormControlLabel'
 
 export default MuiFormControlLabel

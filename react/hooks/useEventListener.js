@@ -1,12 +1,14 @@
 import { useEffect } from 'react'
+import { unRef } from '../helpers/ref'
 
 const useEventListener = (element, event, cb) => {
   useEffect(() => {
-    if (element && event && cb) {
-      element.addEventListener(event, cb)
+    const currentElement = unRef(element)
+    if (currentElement && event && cb) {
+      currentElement.addEventListener(event, cb)
 
       return () => {
-        element.removeEventListener(event, cb)
+        currentElement.removeEventListener(event, cb)
       }
     }
   }, [event, cb, element])

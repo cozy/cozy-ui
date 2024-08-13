@@ -1,7 +1,3 @@
-import MuiFormControl from '@mui/material/FormControl'
-
-MuiFormControl.defaultProps = {
-  variant: 'standard'
-}
+import MuiFormControl from '@material-ui/core/FormControl'
 
 export default MuiFormControl

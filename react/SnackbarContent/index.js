@@ -1,3 +1,3 @@
-import MuiSnackbarContent from '@mui/material/SnackbarContent'
+import MuiSnackbarContent from '@material-ui/core/SnackbarContent'
 
 export default MuiSnackbarContent

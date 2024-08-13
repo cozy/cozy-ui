@@ -3,7 +3,7 @@ import cx from 'classnames/dedupe'
 
 import useCozyDialog from './useCozyDialog'
 import Dialog, { DialogTitle, DialogActions, DialogContent } from '../Dialog'
-import Divider from '../MuiCozyTheme/Divider'
+import Divider from '../Divider'
 
 import dialogPropTypes from './dialogPropTypes'
 import DialogBackButton from './DialogBackButton'
@@ -16,6 +16,7 @@ const FixedActionsDialog = props => {
     dialogTitleProps,
     fullScreen,
     id,
+    dividerProps,
     dialogActionsProps,
     dialogContentProps
   } = useCozyDialog({ ...props, isFluidTitle: true })
@@ -52,7 +53,7 @@ const FixedActionsDialog = props => {
           {content}
         </div>
       </DialogContent>
-      <Divider />
+      <Divider {...dividerProps} />
       {actions && (
         <DialogActions
           {...dialogActionsProps}

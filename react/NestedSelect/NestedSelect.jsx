@@ -1,10 +1,14 @@
-import React, { Component } from 'react'
+import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 import omit from 'lodash/omit'
+import cx from 'classnames'
 
+import List from '../List'
 import Input from '../Input'
 import Typography from '../Typography'
 import ItemRow from './ItemRow'
+import { makeHistory } from './helpers'
+import styles from './styles.styl'
 
 export { ItemRow }
 
@@ -14,199 +18,204 @@ export { ItemRow }
  * will show the children of the chosen option instead of selecting
  * the option.
  */
-class NestedSelect extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      history: [props.options],
-      searchValue: '',
-      searchResult: []
-    }
-  }
+const NestedSelect = ({
+  onSelect,
+  ContentComponent,
+  HeaderComponent,
+  canSelectParent,
+  isSelected,
+  title,
+  transformParentItem,
+  radioPosition,
+  ellipsis,
+  options,
+  searchOptions,
+  noDivider
+}) => {
+  const innerRef = useRef()
+  const [state, setState] = useState({
+    history: makeHistory(options, canSelectParent),
+    searchValue: '',
+    searchResult: []
+  })
 
-  componentWillUnmount() {
-    this.unmounted = true
-  }
+  const handleBack = () => {
+    const [item, ...newHistory] = state.history
 
-  resetHistory() {
-    if (this.unmounted) {
-      return
-    }
-    this.setState({ history: [this.props.options] })
-  }
+    setState(state => ({ ...state, history: newHistory }))
 
-  handleBack = () => {
-    const [item, ...newHistory] = this.state.history
-    this.setState({
-      history: newHistory
-    })
     return item
   }
 
-  handleNavToChildren = item => {
-    const newHistory = [item, ...this.state.history]
-    this.setState({
-      history: newHistory
-    })
+  const handleNavToChildren = item => {
+    const newHistory = [item, ...state.history]
+    setState(state => ({ ...state, history: newHistory }))
   }
 
-  handleSelect = item => {
-    this.props.onSelect(item)
-    // It is important to reset history if the NestedSelected is used
-    // multiple times in a row without being dismounted. For example
-    // if it displayed in Carousel that slides in the NestedSelect
-    // and slides it out on selection.
-    // But, we want in this case that the resetting does not happen
-    // while the animation is running.
-    // There is probably a better way to do this.
-    setTimeout(() => {
-      this.resetHistory()
-    }, 500)
+  const handleSelect = item => {
+    onSelect(item)
   }
 
-  handleClickItem = item => {
+  const handleClickItem = item => {
     if (item.children && item.children.length > 0) {
-      this.handleNavToChildren(item)
+      handleNavToChildren(item)
     } else {
-      this.handleSelect(item)
+      handleSelect(item)
     }
   }
 
-  render() {
-    const {
-      ContentComponent,
-      HeaderComponent,
-      canSelectParent,
-      isSelected,
-      title,
-      transformParentItem,
-      radioPosition
-    } = this.props
-    const { history, searchValue, searchResult } = this.state
-    const current = history[0]
-    const children = current.children || []
-    const level = history.length - 1
-    const isSelectedWithLevel = item => isSelected(item, level)
-    const parentItem = transformParentItem(omit(current, 'children'))
+  const onChange = ev => {
+    const onSearch = searchOptions?.onSearch
 
-    const searchOptions = this.props.searchOptions
-    const hasSearchResult = searchValue.length > 0
-
-    const onChange = ev => {
-      const onSearch = searchOptions && searchOptions.onSearch
-      if (onSearch) {
-        const searchValue = ev.target.value
-        const searchResult = onSearch(searchValue)
-        this.setState({ searchValue, searchResult })
-      }
+    if (onSearch) {
+      const searchValue = ev.target.value
+      const searchResult = onSearch(searchValue)
+      setState(state => ({ ...state, searchValue, searchResult }))
     }
+  }
 
-    return (
-      <>
-        {HeaderComponent ? (
-          <HeaderComponent
-            title={current.title || title}
-            showBack={history.length > 1}
-            onClickBack={this.handleBack}
+  const current = state.history[0]
+  const children = current.children || []
+  const level = state.history.length - 1
+  const parentItem = transformParentItem(omit(current, 'children'))
+
+  const hasSearchResult = state.searchValue?.length > 0
+  const isSelectedWithLevel = item => isSelected(item, level)
+  const currentTitle = current.title || title
+
+  return (
+    <span ref={innerRef}>
+      {HeaderComponent ? (
+        <HeaderComponent
+          title={currentTitle}
+          showBack={state.history.length > 1}
+          onClickBack={handleBack}
+        />
+      ) : null}
+      {level > 0
+        ? current.header
+          ? current.header
+          : typeof options.childrenHeader === 'function'
+          ? options.childrenHeader(level)
+          : options.childrenHeader
+        : options.header}
+      <ContentComponent>
+        {canSelectParent && level > 0 ? (
+          <ItemRow
+            radioPosition={radioPosition}
+            item={parentItem}
+            onClick={handleClickItem}
+            isSelected={isSelectedWithLevel(parentItem)}
+            ellipsis={ellipsis}
+            noDivider={noDivider}
           />
         ) : null}
-        <ContentComponent>
-          {canSelectParent && level > 0 ? (
-            <>
-              <ItemRow
-                radioPosition={radioPosition}
-                item={parentItem}
-                onClick={this.handleClickItem}
-                isSelected={isSelectedWithLevel(parentItem)}
-              />
-            </>
-          ) : null}
-          {searchOptions && level === 0 && (
-            <div className="u-mh-1 u-mb-half">
-              <Input
-                placeholder={searchOptions.placeholderSearch}
-                onChange={onChange}
-                value={searchValue}
-              />
-            </div>
-          )}
+        {searchOptions && level === 0 && (
+          <div
+            className={cx('u-ml-1 u-mb-half', {
+              'u-mr-1': currentTitle,
+              [styles['search-container--without-title']]: !currentTitle
+            })}
+          >
+            <Input
+              placeholder={searchOptions.placeholderSearch}
+              onChange={onChange}
+              value={state.searchValue}
+            />
+          </div>
+        )}
 
-          {hasSearchResult ? (
-            searchResult.length === 0 ? (
-              <Typography
-                variant="body1"
-                className="u-flex u-flex-justify-center u-mb-1 "
-              >
-                {searchOptions.noDataLabel}
-              </Typography>
-            ) : (
-              searchResult.map(item => (
-                <ItemRow
-                  radioPosition={radioPosition}
-                  key={item.key || item.title}
-                  item={item}
-                  onClick={this.handleClickItem}
-                  isSelected={isSelectedWithLevel(item)}
-                />
-              ))
-            )
+        {hasSearchResult ? (
+          state.searchResult.length === 0 ? (
+            <Typography
+              variant="body1"
+              className="u-flex u-flex-justify-center u-mb-1 "
+            >
+              {searchOptions.noDataLabel}
+            </Typography>
           ) : (
-            children.map(item => (
+            state.searchResult.map((item, index) => (
               <ItemRow
                 radioPosition={radioPosition}
                 key={item.key || item.title}
                 item={item}
-                onClick={this.handleClickItem}
+                onClick={handleClickItem}
                 isSelected={isSelectedWithLevel(item)}
+                isLast={index === state.searchResult.length - 1}
+                ellipsis={ellipsis}
+                noDivider={noDivider}
               />
             ))
-          )}
-        </ContentComponent>
-      </>
-    )
-  }
+          )
+        ) : (
+          children.map((item, index) => (
+            <ItemRow
+              radioPosition={radioPosition}
+              key={item.key || item.title}
+              item={item}
+              onClick={handleClickItem}
+              isSelected={isSelectedWithLevel(item)}
+              isLast={index === children.length - 1}
+              ellipsis={ellipsis}
+              noDivider={noDivider}
+            />
+          ))
+        )}
+      </ContentComponent>
+    </span>
+  )
 }
 
 NestedSelect.defaultProps = {
-  ContentComponent: 'div',
+  ContentComponent: List,
   HeaderComponent: null,
   transformParentItem: x => x,
   radioPosition: 'right'
 }
 
 const ItemPropType = PropTypes.shape({
+  /** Used to open NestedSelect on the element with this "id" value */
+  focusedId: PropTypes.string,
+  /** Header shown above options list */
+  header: PropTypes.node,
+  /** Icon shown on the left of the item */
   icon: PropTypes.element,
   /** Key used for the item, if not passed, title is used */
   key: PropTypes.string,
   /** Label used for the item */
-  title: PropTypes.node.isRequired,
+  title: PropTypes.node,
   /** Description of the item */
   description: PropTypes.node,
   /** Options below the current one */
-  children: PropTypes.array
+  children: PropTypes.array,
+  /** Additional information */
+  info: PropTypes.node,
+  /** Action displayed to the right of item */
+  action: PropTypes.shape({
+    /** Component to render */
+    Component: PropTypes.func,
+    /** Props to pass to the component */
+    props: PropTypes.object
+  })
 })
 
 NestedSelect.propTypes = {
-  /**
-   * Can be set to "right" or "left". Defaults to "right"
-   */
+  /** Can be set to "right" or "left". Defaults to "right" */
   radioPosition: PropTypes.oneOf(['left', 'right']),
 
-  /**
-   * The whole option item is passed to this function when selected
-   */
+  /** The whole option item is passed to this function when selected */
   onSelect: PropTypes.func.isRequired,
 
-  /**
-   * Determines if the row looks selected. The `option` is
-   * passed as an argument.
-   */
+  /** Determines if the row looks selected. The `option` is passed as an argument. */
   isSelected: PropTypes.func.isRequired,
 
-  /**
-   * Options that will be rendered as nested lists of choices
-   */
+  /** Options that will be rendered as nested lists of choices */
   options: PropTypes.shape({
+    /** Header shown above options list */
+    header: PropTypes.node,
+    /** Header shown above options list inside a children */
+    childrenHeader: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+    /** Array of options */
     children: PropTypes.arrayOf(ItemPropType)
   }),
 
@@ -236,7 +245,16 @@ NestedSelect.propTypes = {
     placeholderSearch: PropTypes.string.isRequired,
     noDataLabel: PropTypes.string.isRequired,
     onSearch: PropTypes.func.isRequired
-  })
+  }),
+
+  /** To manage ellipsis on ItemRow */
+  ellipsis: PropTypes.bool,
+
+  /** Remove dividers after each row */
+  noDivider: PropTypes.bool,
+
+  /** Component to wrap the content  */
+  ContentComponent: PropTypes.elementType
 }
 
 export default NestedSelect

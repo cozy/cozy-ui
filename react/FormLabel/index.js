@@ -1,3 +1,3 @@
-import MuiFormLabel from '@mui/material/FormLabel'
+import MuiFormLabel from '@material-ui/core/FormLabel'
 
 export default MuiFormLabel

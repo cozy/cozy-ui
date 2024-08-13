@@ -2,20 +2,14 @@ import React from 'react'
 import { render, waitFor } from '@testing-library/react'
 
 import { CozyProvider, createMockClient } from 'cozy-client'
-import { isMobileApp } from 'cozy-device-helper'
 import logger from 'cozy-logger'
 
-import { I18n } from '../../I18n'
+import { I18n } from '../../providers/I18n'
 
 import EncryptedProvider from '../providers/EncryptedProvider'
 import { PdfMobileViewer } from './PdfMobileViewer'
 
 logger.error = logger.warn = jest.fn()
-
-jest.mock('cozy-device-helper', () => ({
-  ...jest.requireActual('cozy-device-helper'),
-  isMobileApp: jest.fn()
-}))
 
 const client = createMockClient({})
 client.collection = jest.fn(() => ({
@@ -26,6 +20,9 @@ client.plugins.realtime = {
   unsubscribe: jest.fn(),
   unsubscribeAll: jest.fn()
 }
+jest.mock('../../providers/Alert', () => ({
+  useAlert: jest.fn().mockReturnValue({ showAlert: jest.fn() })
+}))
 
 const file = {
   _id: 'pdf',
@@ -33,7 +30,7 @@ const file = {
   name: 'Demo.pdf',
   mime: 'application/pdf',
   links: {
-    preview: 'https://viewerdemo.cozycloud.cc/IMG_0062.PNG'
+    medium: 'https://viewerdemo.cozycloud.cc/IMG_0062.PNG'
   }
 }
 
@@ -59,7 +56,7 @@ describe('PdfMobileViewer', () => {
     expect(getByRole('progressbar'))
   })
 
-  describe('errors if file as no preview or failed to download', () => {
+  describe('errors if file as no medium or failed to download', () => {
     let fileWithoutLinks = file
 
     beforeAll(() => {
@@ -67,27 +64,12 @@ describe('PdfMobileViewer', () => {
     })
 
     it('should show "download" button on browser', async () => {
-      isMobileApp.mockReturnValue(false)
-
       const { root } = setup({ file: fileWithoutLinks })
       const { getByText, queryByRole } = root
 
       await waitFor(() => {
         expect(queryByRole('progressbar')).toBeFalsy()
-        expect(getByText('Download'))
-        expect(getByText(file.name))
-      })
-    })
-
-    it('should show "open with" button on native app', async () => {
-      isMobileApp.mockReturnValue(true)
-
-      const { root } = setup({ file: fileWithoutLinks })
-      const { getByText, queryByRole } = root
-
-      await waitFor(() => {
-        expect(queryByRole('progressbar')).toBeFalsy()
-        expect(getByText('Viewer.openWith'))
+        expect(getByText('Viewer.download'))
         expect(getByText(file.name))
       })
     })

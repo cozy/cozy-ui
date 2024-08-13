@@ -1,3 +1,3 @@
-import MuiZoom from '@mui/material/Zoom'
+import MuiZoom from '@material-ui/core/Zoom'
 
 export default MuiZoom

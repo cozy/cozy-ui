@@ -1,3 +1,3 @@
-import MuiSvgIcon from '@mui/material/SvgIcon'
+import MuiSvgIcon from '@material-ui/core/SvgIcon'
 
 export default MuiSvgIcon

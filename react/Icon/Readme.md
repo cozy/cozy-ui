@@ -1,10 +1,47 @@
 Provides an easy way to use SVG icons included in Cozy-UI as well
 as your custom icons.
 
-⚠️ When using `Icon`, you can either give a React component or use the identifier
-of an already loaded one. `cozy-ui` is shipped with built-in icons, containing Illustrations and SVGr Icons that you can
-include via `Sprite`. See the example below for how to include `Sprite`.
-`Sprite` can for example be included in the main `Layout` of your application.
+The `icon` attribute can take an arbitrary React component, a SVG, SVGr, Sprite or Icon component. It is expected that
+this component print an `<svg>` tag and forwards any props to it. You MUST use svg-sprite-loader
+to load your SVG (either explicitly or, better, implicitly in your `webpack.config.js`). Do not put a `fill` property on your icon.
+
+Be aware that Icon forwards unknown props to the underlying `<svg />` element, such as onClick prop.
+
+```jsx
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import People from 'cozy-ui/transpiled/react/Icons/People'
+import Box from 'cozy-ui/transpiled/react/Box'
+const MyIcon = (props) => <svg {...props}><circle cx="8" cy="8" r="7" stroke="var(--primaryColor)" strokeWidth="2" /></svg>
+
+;
+
+<>
+  <Box display="flex" gridGap={5}>
+    <Icon icon="people" />
+    <Icon icon={People} />
+    <Icon icon={MyIcon} width={16} height={16} color="var(--paperBackgroundColor)"/>
+    <Icon icon={<Icon icon={People} />} />
+  </Box>
+</>
+
+```
+
+### Transform properties
+
+Use `spin` and `rotate` if you want you to turn your icons upside down 🙃.
+
+```jsx
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import SpinnerIcon from "cozy-ui/transpiled/react/Icons/Spinner"
+import RightIcon from "cozy-ui/transpiled/react/Icons/Right"
+
+;
+
+<div>
+  <Icon icon={SpinnerIcon} color='#0bda51' spin/>{'\u00A0'}
+  <Icon icon={RightIcon} color='#c30017' rotate={45}/>
+</div>
+```
 
 ### SVGr icons
 
@@ -22,7 +59,7 @@ import Album from 'cozy-ui/transpiled/react/Icons/Album'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Dialog from 'cozy-ui/transpiled/react/CozyDialogs/Dialog'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import cx from 'classnames'
 
 import { makeStyles } from 'cozy-ui/transpiled/react/styles'
@@ -32,12 +69,15 @@ import AlbumRemove from 'cozy-ui/transpiled/react/Icons/AlbumRemove'
 import Answer from 'cozy-ui/transpiled/react/Icons/Answer'
 import Apple from 'cozy-ui/transpiled/react/Icons/Apple'
 import Archive from 'cozy-ui/transpiled/react/Icons/Archive'
+import ArrowUp from 'cozy-ui/transpiled/react/Icons/ArrowUp'
 import Attachment from 'cozy-ui/transpiled/react/Icons/Attachment'
 import Attention from 'cozy-ui/transpiled/react/Icons/Attention'
+import BankCheck from 'cozy-ui/transpiled/react/Icons/BankCheck'
 import Bank from 'cozy-ui/transpiled/react/Icons/Bank'
 import Banking from 'cozy-ui/transpiled/react/Icons/Banking'
 import BankingAdd from 'cozy-ui/transpiled/react/Icons/BankingAdd'
 import Bell from 'cozy-ui/transpiled/react/Icons/Bell'
+import Benefit from 'cozy-ui/transpiled/react/Icons/Benefit'
 import Bike from 'cozy-ui/transpiled/react/Icons/Bike'
 import Bill from 'cozy-ui/transpiled/react/Icons/Bill'
 import Bottom from 'cozy-ui/transpiled/react/Icons/Bottom'
@@ -56,6 +96,7 @@ import Calendar from 'cozy-ui/transpiled/react/Icons/Calendar'
 import Camera from 'cozy-ui/transpiled/react/Icons/Camera'
 import Car from 'cozy-ui/transpiled/react/Icons/Car'
 import CarbonCopy from 'cozy-ui/transpiled/react/Icons/CarbonCopy'
+import CarPooling from 'cozy-ui/transpiled/react/Icons/Carpooling'
 import Categories from 'cozy-ui/transpiled/react/Icons/Categories'
 import Certified from 'cozy-ui/transpiled/react/Icons/Certified'
 import Check from 'cozy-ui/transpiled/react/Icons/Check'
@@ -63,12 +104,15 @@ import Checkbox from 'cozy-ui/transpiled/react/Icons/Checkbox'
 import CheckCircle from 'cozy-ui/transpiled/react/Icons/CheckCircle'
 import CheckList from 'cozy-ui/transpiled/react/Icons/CheckList'
 import CheckSquare from 'cozy-ui/transpiled/react/Icons/CheckSquare'
+import Chess from 'cozy-ui/transpiled/react/Icons/Chess'
+import Child from 'cozy-ui/transpiled/react/Icons/Child'
 import CircleFilled from 'cozy-ui/transpiled/react/Icons/CircleFilled'
 import Clock from 'cozy-ui/transpiled/react/Icons/Clock'
 import ClockOutline from 'cozy-ui/transpiled/react/Icons/ClockOutline'
 import Cloud from 'cozy-ui/transpiled/react/Icons/Cloud'
 import CloudHappy from 'cozy-ui/transpiled/react/Icons/CloudHappy'
 import Collect from 'cozy-ui/transpiled/react/Icons/Collect'
+import Cocktail from 'cozy-ui/transpiled/react/Icons/Cocktail'
 import Comment from 'cozy-ui/transpiled/react/Icons/Comment'
 import Company from 'cozy-ui/transpiled/react/Icons/Company'
 import Compare from 'cozy-ui/transpiled/react/Icons/Compare'
@@ -80,8 +124,8 @@ import Copy from 'cozy-ui/transpiled/react/Icons/Copy'
 import CozyCircle from 'cozy-ui/transpiled/react/Icons/CozyCircle'
 import CozyLaugh from 'cozy-ui/transpiled/react/Icons/CozyLaugh'
 import CozyLock from 'cozy-ui/transpiled/react/Icons/CozyLock'
-import CozyText from 'cozy-ui/transpiled/react/Icons/CozyText'
 import CozyRelease from 'cozy-ui/transpiled/react/Icons/CozyRelease'
+import CozyText from 'cozy-ui/transpiled/react/Icons/CozyText'
 import Credit from 'cozy-ui/transpiled/react/Icons/Credit'
 import CreditCard from 'cozy-ui/transpiled/react/Icons/CreditCard'
 import CreditCardAdd from 'cozy-ui/transpiled/react/Icons/CreditCardAdd'
@@ -89,6 +133,7 @@ import Crop from 'cozy-ui/transpiled/react/Icons/Crop'
 import Cross from 'cozy-ui/transpiled/react/Icons/Cross'
 import CrossCircle from 'cozy-ui/transpiled/react/Icons/CrossCircle'
 import CrossCircleOutline from 'cozy-ui/transpiled/react/Icons/CrossCircleOutline'
+import CrossMedium from 'cozy-ui/transpiled/react/Icons/CrossMedium'
 import CrossSmall from 'cozy-ui/transpiled/react/Icons/CrossSmall'
 import Cube from 'cozy-ui/transpiled/react/Icons/Cube'
 import Dash from 'cozy-ui/transpiled/react/Icons/Dash'
@@ -104,6 +149,9 @@ import Dropdown from 'cozy-ui/transpiled/react/Icons/Dropdown'
 import DropdownClose from 'cozy-ui/transpiled/react/Icons/DropdownClose'
 import DropdownOpen from 'cozy-ui/transpiled/react/Icons/DropdownOpen'
 import Dropup from 'cozy-ui/transpiled/react/Icons/Dropup'
+import ElectricBike from 'cozy-ui/transpiled/react/Icons/ElectricBike'
+import ElectricCar from 'cozy-ui/transpiled/react/Icons/ElectricCar'
+import ElectricScooter from 'cozy-ui/transpiled/react/Icons/ElectricScooter'
 import Email from 'cozy-ui/transpiled/react/Icons/Email'
 import EmailNotification from 'cozy-ui/transpiled/react/Icons/EmailNotification'
 import Eu from 'cozy-ui/transpiled/react/Icons/Eu'
@@ -132,10 +180,12 @@ import Forbidden from 'cozy-ui/transpiled/react/Icons/Forbidden'
 import FromUser from 'cozy-ui/transpiled/react/Icons/FromUser'
 import Gear from 'cozy-ui/transpiled/react/Icons/Gear'
 import Globe from 'cozy-ui/transpiled/react/Icons/Globe'
+import Gouv from 'cozy-ui/transpiled/react/Icons/Gouv'
 import GraphCircle from 'cozy-ui/transpiled/react/Icons/GraphCircle'
 import Grid from 'cozy-ui/transpiled/react/Icons/Grid'
 import GroupList from 'cozy-ui/transpiled/react/Icons/GroupList'
 import Groups from 'cozy-ui/transpiled/react/Icons/Groups'
+import Growth from 'cozy-ui/transpiled/react/Icons/Growth'
 import Hand from 'cozy-ui/transpiled/react/Icons/Hand'
 import Heart from 'cozy-ui/transpiled/react/Icons/Heart'
 import Help from 'cozy-ui/transpiled/react/Icons/Help'
@@ -146,13 +196,19 @@ import Hourglass from 'cozy-ui/transpiled/react/Icons/Hourglass'
 import Image from 'cozy-ui/transpiled/react/Icons/Image'
 import Info from 'cozy-ui/transpiled/react/Icons/Info'
 import InfoOutlined from 'cozy-ui/transpiled/react/Icons/InfoOutlined'
+import Justice from 'cozy-ui/transpiled/react/Icons/Justice'
 import Key from 'cozy-ui/transpiled/react/Icons/Key'
+import LabelOutlined from 'cozy-ui/transpiled/react/Icons/LabelOutlined'
+import Laudry from 'cozy-ui/transpiled/react/Icons/Laudry'
 import Laptop from 'cozy-ui/transpiled/react/Icons/Laptop'
 import Left from 'cozy-ui/transpiled/react/Icons/Left'
+import Library from 'cozy-ui/transpiled/react/Icons/Library'
 import Lightbulb from 'cozy-ui/transpiled/react/Icons/Lightbulb'
+import Lightning from 'cozy-ui/transpiled/react/Icons/Lightning'
 import Link from 'cozy-ui/transpiled/react/Icons/Link'
 import LinkOut from 'cozy-ui/transpiled/react/Icons/LinkOut'
 import List from 'cozy-ui/transpiled/react/Icons/List'
+import ListMin from 'cozy-ui/transpiled/react/Icons/ListMin'
 import Location from 'cozy-ui/transpiled/react/Icons/Location'
 import Lock from 'cozy-ui/transpiled/react/Icons/Lock'
 import LockScreen from 'cozy-ui/transpiled/react/Icons/LockScreen'
@@ -161,10 +217,13 @@ import MagicTrick from 'cozy-ui/transpiled/react/Icons/MagicTrick'
 import Magnet from 'cozy-ui/transpiled/react/Icons/Magnet'
 import Magnifier from 'cozy-ui/transpiled/react/Icons/Magnifier'
 import Merge from 'cozy-ui/transpiled/react/Icons/Merge'
+import Moped from 'cozy-ui/transpiled/react/Icons/Moped'
+import MosaicMin from 'cozy-ui/transpiled/react/Icons/MosaicMin'
+import Motorcycle from 'cozy-ui/transpiled/react/Icons/Motorcycle'
 import Mountain from 'cozy-ui/transpiled/react/Icons/Mountain'
+import Movement from 'cozy-ui/transpiled/react/Icons/Movement'
 import MovementIn from 'cozy-ui/transpiled/react/Icons/MovementIn'
 import MovementOut from 'cozy-ui/transpiled/react/Icons/MovementOut'
-import Movement from 'cozy-ui/transpiled/react/Icons/Movement'
 import Moveto from 'cozy-ui/transpiled/react/Icons/Moveto'
 import MultiFiles from 'cozy-ui/transpiled/react/Icons/MultiFiles'
 import Music from 'cozy-ui/transpiled/react/Icons/Music'
@@ -193,18 +252,21 @@ import Pin from 'cozy-ui/transpiled/react/Icons/Pin'
 import Plane from 'cozy-ui/transpiled/react/Icons/Plane'
 import Plus from 'cozy-ui/transpiled/react/Icons/Plus'
 import PlusSmall from 'cozy-ui/transpiled/react/Icons/PlusSmall'
+import PopInside from 'cozy-ui/transpiled/react/Icons/PopInside'
 import Previous from 'cozy-ui/transpiled/react/Icons/Previous'
 import Printer from 'cozy-ui/transpiled/react/Icons/Printer'
 import Qualify from 'cozy-ui/transpiled/react/Icons/Qualify'
 import RadioChecked from 'cozy-ui/transpiled/react/Icons/RadioChecked'
 import RadioUnchecked from 'cozy-ui/transpiled/react/Icons/RadioUnchecked'
 import Refresh from 'cozy-ui/transpiled/react/Icons/Refresh'
+import Relationship from 'cozy-ui/transpiled/react/Icons/Relationship'
+import Remboursement from 'cozy-ui/transpiled/react/Icons/Remboursement'
 import Rename from 'cozy-ui/transpiled/react/Icons/Rename'
 import Repare from 'cozy-ui/transpiled/react/Icons/Repare'
 import Reply from 'cozy-ui/transpiled/react/Icons/Reply'
 import Restaurant from 'cozy-ui/transpiled/react/Icons/Restaurant'
-import RestoreStraight from 'cozy-ui/transpiled/react/Icons/RestoreStraight'
 import Restore from 'cozy-ui/transpiled/react/Icons/Restore'
+import RestoreStraight from 'cozy-ui/transpiled/react/Icons/RestoreStraight'
 import Right from 'cozy-ui/transpiled/react/Icons/Right'
 import Rise from 'cozy-ui/transpiled/react/Icons/Rise'
 import RotateLeft from 'cozy-ui/transpiled/react/Icons/RotateLeft'
@@ -212,6 +274,7 @@ import RotateRight from 'cozy-ui/transpiled/react/Icons/RotateRight'
 import SadCozy from 'cozy-ui/transpiled/react/Icons/SadCozy'
 import Safe from 'cozy-ui/transpiled/react/Icons/Safe'
 import School from 'cozy-ui/transpiled/react/Icons/School'
+import Scooter from 'cozy-ui/transpiled/react/Icons/Scooter'
 import SelectAll from 'cozy-ui/transpiled/react/Icons/SelectAll'
 import Setting from 'cozy-ui/transpiled/react/Icons/Setting'
 import Share from 'cozy-ui/transpiled/react/Icons/Share'
@@ -220,22 +283,30 @@ import Shield from 'cozy-ui/transpiled/react/Icons/Shield'
 import Shop from 'cozy-ui/transpiled/react/Icons/Shop'
 import Sound from 'cozy-ui/transpiled/react/Icons/Sound'
 import Spinner from 'cozy-ui/transpiled/react/Icons/Spinner'
+import SportBag from 'cozy-ui/transpiled/react/Icons/SportBag'
 import Stack from 'cozy-ui/transpiled/react/Icons/Stack'
 import Star from 'cozy-ui/transpiled/react/Icons/Star'
+import StarOutline from 'cozy-ui/transpiled/react/Icons/StarOutline'
 import Stats from 'cozy-ui/transpiled/react/Icons/Stats'
 import Subway from 'cozy-ui/transpiled/react/Icons/Subway'
+import Support from 'cozy-ui/transpiled/react/Icons/Support'
 import Swap from 'cozy-ui/transpiled/react/Icons/Swap'
 import Sync from 'cozy-ui/transpiled/react/Icons/Sync'
 import SyncCozy from 'cozy-ui/transpiled/react/Icons/SyncCozy'
 import Tag from 'cozy-ui/transpiled/react/Icons/Tag'
 import Target from 'cozy-ui/transpiled/react/Icons/Target'
+import Task from 'cozy-ui/transpiled/react/Icons/Task'
 import Team from 'cozy-ui/transpiled/react/Icons/Team'
+import Telecom from 'cozy-ui/transpiled/react/Icons/Telecom'
 import Telephone from 'cozy-ui/transpiled/react/Icons/Telephone'
-import ToTheCloud from 'cozy-ui/transpiled/react/Icons/ToTheCloud'
+import TextInfo from 'cozy-ui/transpiled/react/Icons/TextInfo'
 import Top from 'cozy-ui/transpiled/react/Icons/Top'
+import ToTheCloud from 'cozy-ui/transpiled/react/Icons/ToTheCloud'
 import Train from 'cozy-ui/transpiled/react/Icons/Train'
+import Tram from 'cozy-ui/transpiled/react/Icons/Tram'
 import Trash from 'cozy-ui/transpiled/react/Icons/Trash'
 import Trophy from 'cozy-ui/transpiled/react/Icons/Trophy'
+import Uncloud from 'cozy-ui/transpiled/react/Icons/Uncloud'
 import Unknow from 'cozy-ui/transpiled/react/Icons/Unknow'
 import Unlink from 'cozy-ui/transpiled/react/Icons/Unlink'
 import Unlock from 'cozy-ui/transpiled/react/Icons/Unlock'
@@ -248,22 +319,27 @@ import WalletAdd from 'cozy-ui/transpiled/react/Icons/WalletAdd'
 import WalletNew from 'cozy-ui/transpiled/react/Icons/WalletNew'
 import Warn from 'cozy-ui/transpiled/react/Icons/Warn'
 import Warning from 'cozy-ui/transpiled/react/Icons/Warning'
+import Water from 'cozy-ui/transpiled/react/Icons/Water'
 import WarningCircle from 'cozy-ui/transpiled/react/Icons/WarningCircle'
+import Work from 'cozy-ui/transpiled/react/Icons/Work'
 import WrenchCircle from 'cozy-ui/transpiled/react/Icons/WrenchCircle'
 
 const icons = [
-  Album,
   AlbumAdd,
   AlbumRemove,
+  Album,
   Answer,
   Apple,
   Archive,
+  ArrowUp,
   Attachment,
   Attention,
+  BankCheck,
   Bank,
-  Banking,
   BankingAdd,
+  Banking,
   Bell,
+  Benefit,
   Bike,
   Bill,
   Bottom,
@@ -282,6 +358,7 @@ const icons = [
   Camera,
   Car,
   CarbonCopy,
+  CarPooling,
   Categories,
   Certified,
   Check,
@@ -289,12 +366,15 @@ const icons = [
   CheckCircle,
   CheckList,
   CheckSquare,
+  Chess,
+  Child,
   CircleFilled,
   Clock,
   ClockOutline,
   Cloud,
   CloudHappy,
   Collect,
+  Cocktail,
   Comment,
   Company,
   Compare,
@@ -306,16 +386,17 @@ const icons = [
   CozyCircle,
   CozyLaugh,
   CozyLock,
-  CozyText,
   CozyRelease,
+  CozyText,
   Credit,
   CreditCard,
   CreditCardAdd,
   Crop,
-  Cross,
-  CrossCircle,
   CrossCircleOutline,
+  CrossCircle,
+  CrossMedium,
   CrossSmall,
+  Cross,
   Cube,
   Dash,
   Dashboard,
@@ -326,24 +407,27 @@ const icons = [
   Down,
   Download,
   DrawingArrowUp,
-  Dropdown,
   DropdownClose,
   DropdownOpen,
+  Dropdown,
   Dropup,
-  Email,
+  ElectricBike,
+  ElectricCar,
+  ElectricScooter,
   EmailNotification,
+  Email,
   Eu,
   Euro,
   Exchange,
   Eye,
   EyeClosed,
   FaceId,
-  File,
   FileAdd,
   FileDuotone,
   FileNew,
   FileNone,
   FileOutline,
+  File,
   Filter,
   Fingerprint,
   Fitness,
@@ -358,10 +442,12 @@ const icons = [
   FromUser,
   Gear,
   Globe,
+  Gouv,
   GraphCircle,
   Grid,
   GroupList,
   Groups,
+  Growth,
   Hand,
   Heart,
   Help,
@@ -370,15 +456,21 @@ const icons = [
   Home,
   Hourglass,
   Image,
-  Info,
   InfoOutlined,
+  Info,
+  Justice,
   Key,
+  LabelOutlined,
+  Laudry,
   Laptop,
   Left,
+  Library,
   Lightbulb,
+  Lightning,
   Link,
   LinkOut,
   List,
+  ListMin,
   Location,
   Lock,
   LockScreen,
@@ -387,6 +479,9 @@ const icons = [
   Magnet,
   Magnifier,
   Merge,
+  Moped,
+  MosaicMin,
+  Motorcycle,
   Mountain,
   MovementIn,
   MovementOut,
@@ -411,26 +506,29 @@ const icons = [
   Percent,
   PercentCircle,
   PersonalData,
-  Phone,
   PhoneDownload,
   PhoneUpload,
+  Phone,
   PieChart,
   Pin,
   Plane,
-  Plus,
   PlusSmall,
+  Plus,
+  PopInside,
   Previous,
   Printer,
   Qualify,
   RadioChecked,
   RadioUnchecked,
   Refresh,
+  Relationship,
+  Remboursement,
   Rename,
   Repare,
   Reply,
   Restaurant,
-  RestoreStraight,
   Restore,
+  RestoreStraight,
   Right,
   Rise,
   RotateLeft,
@@ -438,6 +536,7 @@ const icons = [
   SadCozy,
   Safe,
   School,
+  Scooter,
   SelectAll,
   Setting,
   Share,
@@ -446,22 +545,30 @@ const icons = [
   Shop,
   Sound,
   Spinner,
+  SportBag,
   Stack,
   Star,
+  StarOutline,
   Stats,
   Subway,
+  Support,
   Swap,
   Sync,
   SyncCozy,
   Tag,
   Target,
+  Task,
   Team,
+  Telecom,
   Telephone,
-  ToTheCloud,
+  TextInfo,
   Top,
+  ToTheCloud,
   Train,
+  Tram,
   Trash,
   Trophy,
+  Uncloud,
   Unknow,
   Unlink,
   Unlock,
@@ -469,15 +576,17 @@ const icons = [
   Upload,
   Videos,
   Walk,
-  Wallet,
   WalletAdd,
   WalletNew,
+  Wallet,
   Warn,
-  Warning,
   WarningCircle,
-  WrenchCircle
+  Warning,
+  Water,
+  WrenchCircle,
+  Work
 ]
-
+const locale = {}
 const wrapperStyle = {
   fontSize: '2rem',
   display: 'grid',
@@ -514,7 +623,7 @@ const InfoModal = ({ icon }) => {
 
 const Example = () => {
   return (
-    <BreakpointsProvider>
+    <DemoProvider>
       <Typography component='p' variant='body1' className='u-mb-1'>
         Font size: <input type='range' min='8' max='48' value={state.size} onChange={handleInputRangeChange} /> {state.size}px
       </Typography>
@@ -533,7 +642,7 @@ const Example = () => {
         )}
       { state.selected ? <InfoModal icon={state.selected} /> : null }
       </div>
-    </BreakpointsProvider>
+    </DemoProvider>
   )
 }
 
@@ -548,14 +657,24 @@ const Example = () => {
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 
-import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
+import AccountIcon from 'cozy-ui/transpiled/react/Icons/Account'
+import BottomSelectIcon from 'cozy-ui/transpiled/react/Icons/BottomSelect'
+import CreditCardLargeIcon from 'cozy-ui/transpiled/react/Icons/CreditCardLarge'
+import CheckWhiteIcon from 'cozy-ui/transpiled/react/Icons/CheckWhite'
 import CloudBrokenIcon from 'cozy-ui/transpiled/react/Icons/CloudBroken'
+import CloudSync2 from 'cozy-ui/transpiled/react/Icons/CloudSync2'
+import ContactsIcon from 'cozy-ui/transpiled/react/Icons/Contacts'
+import CozyAuthentificationIcon from 'cozy-ui/transpiled/react/Icons/CozyAuthentification'
+import CozyIcon from 'cozy-ui/transpiled/react/Icons/Cozy'
 import CozyLogoIcon from 'cozy-ui/transpiled/react/Icons/CozyLogo'
+import CozyUpgradeIcon from 'cozy-ui/transpiled/react/Icons/CozyUpgrade'
+import DashWhiteIcon from 'cozy-ui/transpiled/react/Icons/DashWhite'
+import DeviceBrowserIcon from 'cozy-ui/transpiled/react/Icons/DeviceBrowser'
 import DeviceLaptopIcon from 'cozy-ui/transpiled/react/Icons/DeviceLaptop'
 import DevicePhoneIcon from 'cozy-ui/transpiled/react/Icons/DevicePhone'
 import DeviceTabletIcon from 'cozy-ui/transpiled/react/Icons/DeviceTablet'
-import DeviceBrowserIcon from 'cozy-ui/transpiled/react/Icons/DeviceBrowser'
 import FileTypeAudioIcon from 'cozy-ui/transpiled/react/Icons/FileTypeAudio'
+import FileTypeBankingAccountIcon from 'cozy-ui/transpiled/react/Icons/FileTypeBankingAccount'
 import FileTypeBinIcon from 'cozy-ui/transpiled/react/Icons/FileTypeBin'
 import FileTypeCodeIcon from 'cozy-ui/transpiled/react/Icons/FileTypeCode'
 import FileTypeFilesIcon from 'cozy-ui/transpiled/react/Icons/FileTypeFiles'
@@ -567,28 +686,34 @@ import FileTypeSlideIcon from 'cozy-ui/transpiled/react/Icons/FileTypeSlide'
 import FileTypeTextIcon from 'cozy-ui/transpiled/react/Icons/FileTypeText'
 import FileTypeVideoIcon from 'cozy-ui/transpiled/react/Icons/FileTypeVideo'
 import FileTypeZipIcon from 'cozy-ui/transpiled/react/Icons/FileTypeZip'
-import FileTypeBankingAccountIcon from 'cozy-ui/transpiled/react/Icons/FileTypeBankingAccount'
-import ContactsIcon from 'cozy-ui/transpiled/react/Icons/Contacts'
-import PapersIcon from 'cozy-ui/transpiled/react/Icons/Papers'
-import StoreIcon from 'cozy-ui/transpiled/react/Icons/Store'
 import ForbiddenSignIcon from 'cozy-ui/transpiled/react/Icons/ForbiddenSign'
 import GoogleIcon from 'cozy-ui/transpiled/react/Icons/Google'
-import LogoutLargeIcon from 'cozy-ui/transpiled/react/Icons/LogoutLarge'
-import TopSelectIcon from 'cozy-ui/transpiled/react/Icons/TopSelect'
-import BottomSelectIcon from 'cozy-ui/transpiled/react/Icons/BottomSelect'
-import CheckWhiteIcon from 'cozy-ui/transpiled/react/Icons/CheckWhite'
-import DashWhiteIcon from 'cozy-ui/transpiled/react/Icons/DashWhite'
 import KeychainIcon from 'cozy-ui/transpiled/react/Icons/Keychain'
+import LogoutLargeIcon from 'cozy-ui/transpiled/react/Icons/LogoutLarge'
+import PapersIcon from 'cozy-ui/transpiled/react/Icons/Papers'
+import StoreIcon from 'cozy-ui/transpiled/react/Icons/Store'
+import TopSelectIcon from 'cozy-ui/transpiled/react/Icons/TopSelect'
+import TrashDuotoneIcon from 'cozy-ui/transpiled/react/Icons/TrashDuotone'
 
 const icons = [
-  CozyIcon,
+  AccountIcon,
+  BottomSelectIcon,
+  CheckWhiteIcon,
   CloudBrokenIcon,
+  CloudSync2,
+  ContactsIcon,
+  CozyAuthentificationIcon,
+  CozyIcon,
   CozyLogoIcon,
+  CozyUpgradeIcon,
+  CreditCardLargeIcon,
+  DashWhiteIcon,
+  DeviceBrowserIcon,
   DeviceLaptopIcon,
   DevicePhoneIcon,
   DeviceTabletIcon,
-  DeviceBrowserIcon,
   FileTypeAudioIcon,
+  FileTypeBankingAccountIcon,
   FileTypeBinIcon,
   FileTypeCodeIcon,
   FileTypeFilesIcon,
@@ -600,18 +725,14 @@ const icons = [
   FileTypeTextIcon,
   FileTypeVideoIcon,
   FileTypeZipIcon,
-  FileTypeBankingAccountIcon,
-  ContactsIcon,
-  PapersIcon,
-  StoreIcon,
   ForbiddenSignIcon,
   GoogleIcon,
-  LogoutLargeIcon,
-  TopSelectIcon,
-  BottomSelectIcon,
-  CheckWhiteIcon,
-  DashWhiteIcon,
   KeychainIcon,
+  LogoutLargeIcon,
+  PapersIcon,
+  StoreIcon,
+  TopSelectIcon,
+  TrashDuotoneIcon
 ]
 
 const wrapperStyle = {
@@ -651,7 +772,7 @@ import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Sprite from 'cozy-ui/transpiled/react/Icon/Sprite'
 
-const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'device-phone', 'device-tablet', 'device-browser', 'file-type-audio', 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'file-type-banking-account' , 'forbidden-sign', 'google', 'logout-large', 'top-select', 'bottom-select', 'check-white', 'dash-white', 'keychain', 'contacts', 'papers', 'store']
+const availableIcons = ['account', 'bottom-select', 'check-white', 'cloud-broken', 'contacts', 'cozy-authentification', 'cozy-logo', 'cozy-upgrade', 'credit-card-large', 'dash-white', 'device-browser', 'device-laptop', 'device-phone', 'device-tablet', 'file-type-audio', 'file-type-banking-account' , 'file-type-bin', 'file-type-code', 'file-type-files', 'file-type-folder', 'file-type-image', 'file-type-note', 'file-type-pdf', 'file-type-sheet', 'file-type-slide', 'file-type-text', 'file-type-video', 'file-type-zip', 'forbidden-sign', 'google', 'keychain', 'logout-large', 'papers', 'store', 'top-select', 'trash-duotone', 'cozy']
 
 ;
 
@@ -671,10 +792,10 @@ const availableIcons = ['cozy', 'cloud-broken', 'cozy-logo', 'device-laptop', 'd
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Dialog from 'cozy-ui/transpiled/react/CozyDialogs/Dialog'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 import cx from 'classnames'
 
-import { makeStyles } from 'cozy-ui/transpiled/react/styles';
+import { makeStyles } from 'cozy-ui/transpiled/react/styles'
 import Accounts from 'cozy-ui/transpiled/react/Icons/Accounts'
 import Apps from 'cozy-ui/transpiled/react/Icons/Apps'
 import BankAccounts from 'cozy-ui/transpiled/react/Icons/BankAccounts'
@@ -722,7 +843,7 @@ import Triggers from 'cozy-ui/transpiled/react/Icons/Triggers'
 import Versioning from 'cozy-ui/transpiled/react/Icons/Versioning'
 
 const icons = [Accounts, Apps, BankAccounts, BankGroups, BankOperations, BankRecurrence, BillPermissions, BugReport, CalendarPermissions, Category, CertifiedPermissions, ConnectedClients, Consumption, ContactsAccounts, ContactsGroups, Contacts, Contract, Ecolyo, Energy, Energybreakdown, Fallback, Family, FilesPen, FilesVersions, Files, HomePermissions, Identities, KonnectorsResult, Konnectors, LocationPermissions, Notifications, Opinions, Passwords, Permissions, PhotosAlbum, PhotosSettings, Profile, SafePermissions, Settings, Sharings, Sinister, Tags,TaskToEffectuate, Triggers, Versioning]
-
+const locale = {}
 const wrapperStyle = {
   fontSize: '2rem',
   display: 'grid',
@@ -759,7 +880,7 @@ const InfoModal = ({ icon }) => {
 
 const Example = () => {
   return (
-    <BreakpointsProvider>
+    <DemoProvider>
       <Typography component='p' variant='body1' className='u-mb-1'>
         Font size: <input type='range' min='8' max='48' value={state.size} onChange={handleInputRangeChange} /> {state.size}px
       </Typography>
@@ -778,7 +899,7 @@ const Example = () => {
         )}
       { state.selected ? <InfoModal icon={state.selected} /> : null }
       </div>
-    </BreakpointsProvider>
+    </DemoProvider>
   )
 }
 
@@ -787,62 +908,12 @@ const Example = () => {
 <Example />
 ```
 
-### Transform properties
+### Available UI icons from Sprite
 
-Use `spin` and `rotate` if you want you to turn your icons upside down 🙃.
-
-```jsx
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import SpinnerIcon from "cozy-ui/transpiled/react/Icons/Spinner"
-import RightIcon from "cozy-ui/transpiled/react/Icons/Right"
-;
-<div>
-  <Icon icon={SpinnerIcon} color='#0bda51' spin/>{'\u00A0'}
-  <Icon icon={RightIcon} color='#c30017' rotate={45}/>
-</div>
-```
-
-### Custom icons
-
-The `icon` attribute can take a arbitrary React component. It is expected that
-this component print an `<svg>` tag and forwards any props to it.
-
-```jsx static
-const MyIcon = (props) => <svg {...props}>…</svg>;
-<Icon icon={myIcon} width={32} height={32} color="var(--errorColor)" />
-```
-
-You can also directly import an SVG to use it. You MUST use svg-sprite-loader
-to load your SVG (either explicitly or, better, implicitly in your `webpack.config.js`).
-
-⚠️ Do not put a `fill` property on your icon
-
-```jsx static
-import myIcon from 'my-icon.svg';
-<Icon icon={myIcon} width={32} height={32} color="var(--errorColor)" />
-```
-
-### Props forwarding
-
-Icon forwards unknown props to the underlying `<svg />` element.
-
-```jsx
-import Icon from 'cozy-ui/transpiled/react/Icon'
-import WarningIcon from "cozy-ui/transpiled/react/Icons/Warning"
-;
-<div>
-  <Icon
-    icon={WarningIcon}
-    width={32}
-    height={32}
-    color="var(--errorColor)"
-    onClick={() => alert('Be careful !')}
-  />
-  <span>← Click it</span>
-</div>
-```
-
-### Available UI icons
+When using `Icon`, you can either give a React component or use the identifier
+of an already loaded one. `cozy-ui` is shipped with built-in icons, containing Illustrations and SVGr Icons that you can
+include via `Sprite`.
+`Sprite` can for example be included in the main `Layout` of your application.
 
 ```jsx
 import Icon from 'cozy-ui/transpiled/react/Icon'
@@ -852,7 +923,7 @@ import Typography from 'cozy-ui/transpiled/react/Typography'
 
 const colors = ['#297EF2', '#08b442', '#B449E7', '#F52D2D', '#FF962F']
 let i = 0
-const availableIcons = ['album-add','album-remove','album','answer','apple','archive','attachment','attention','bank','banking-add','banking','bell','bike','bill','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-edge-chromium','browser-firefox','browser-ie','browser-opera','browser-safari','burger','bus','calendar','camera','car','carbonCopy','categories','certified','check-circle','check-list','check-square','check','checkbox','circle-filled','clock','clock-outline','cloud-happy','cloud','collect','comment','company','compare','compass','connector','contract','contrast','copy','cozy-circle','cozy-laugh', 'cozy-lock', 'cozy-text', 'cozy-release', 'credit-card-add','credit-card','credit','crop','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','debit','devices','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','email-notification','email','eu','euro','exchange','eye-closed','eye','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','fitness','flag-outlined','flag','flash-auto','flashlight','folder-add','folder-moveto','folder','forbidden','from-user','gear','globe','graph-circle','grid','group-list','groups','hand','heart','help','help-outlined','history','home','hourglass','image','info-outlined','info','key','laptop','left','lightbulb','link-out','link','list','location','lock', 'lock-screen', 'logout','magic-trick','magnet','magnifier','merge','mountain','movement-in','movement-out','mouvement','moveto','multi-files','music','new','next','note','notification-email','offline','online', 'openapp', 'openwith','palette','paper','paperplane','password','pen','people','percent-circle','percent','personal-data','phone-download','phone-upload','phone','pie-chart','pin','plane','plus-small','plus','previous','printer','qualify','radio-checked','radio-unchecked','refresh','repare','reply','restaurant','restore-straight','restore','right','rise','rotate-left','rotate-right','sad-cozy','safe','school','select-all','setting','share-circle','share','shield','shop','sound','spinner','stack','star','stats','subway', 'swap', 'sync-cozy','sync','tag','target','team','telephone','to-the-cloud','top','train','trash','trophy','unknow','unlink','unlock','up','upload','videos','walk','wallet-add','wallet-new','wallet','warn','warning-circle','warning','wrench-circle']
+const availableIcons = ['album-add','album-remove','album','answer','apple','archive','arrowUp','attachment','attention','bank-check','bank','banking-add','banking','bell','benefit','bike','bill','bottom','browser-brave','browser-chrome','browser-duckduckgo','browser-edge','browser-edge-chromium','browser-firefox','browser-ie','browser-opera','browser-safari','burger','bus','calendar','camera','car','carbonCopy','carpooling','categories','certified','check-circle','check-list','check-square','check','checkbox','chess','child','circle-filled','clock','clock-outline','cloud-happy','cloud','collect','cocktail','comment','company','compare','compass','connector','contract','contrast','copy','cozy-circle','cozy-laugh', 'cozy-lock', 'cozy-text', 'cozy-release', 'credit-card-add','credit-card','credit','crop','cross-circle-outline','cross-circle','cross-medium','cross-small','cross','cube','dash','dashboard','data-control','debit','devices','dots','down','download','drawing-arrow-up','dropdown-close','dropdown-open','dropdown','dropup','electric-bike','electric-car','electric-scooter','email-notification','email','eu','euro','exchange','eye-closed','eye','face-id','file-add','file-duotone','file-new','file-none','file-outline','file','filter','fingerprint','fitness','flag-outlined','flag','flash-auto','flashlight','folder-add','folder-moveto','folder','forbidden','from-user','gear','globe','gouv','graph-circle','grid','group-list','groups','growth','hand','heart','help','help-outlined','history','home','hourglass','image','info-outlined','info','justice','key','label-outlined','laudry','laptop','left','library','lightbulb','lightning','link-out','link','list','list-min','location','lock', 'lock-screen', 'logout','magic-trick','magnet','magnifier','merge','moped','mosaic-min','motorcycle','mountain','movement-in','movement-out','mouvement','moveto','multi-files','music','new','next','note','notification-email','offline','online', 'openapp', 'openwith','palette','paper','paperplane','password','pen','people','percent-circle','percent','personal-data','phone-download','phone-upload','phone','pie-chart','pin','plane','plus-small','plus', 'pop-inside', 'previous','printer','qualify','radio-checked','radio-unchecked','refresh','relationship','remboursement','rename','repare','reply','restaurant','restore-straight','restore','right','rise','rotate-left','rotate-right','sad-cozy','safe','school','scooter','select-all','setting','share-circle','share','shield','shop','sound','spinner','sport-bag','stack','star','star-outline','stats','subway', 'support', 'swap', 'sync-cozy','sync','tag','target','task','team','telecom','telephone','text-info','to-the-cloud','top','train','tram','trash','trophy', 'uncloud', 'unknow','unlink','unlock','up','upload','videos','walk','wallet-add','wallet-new','wallet','warn','warning-circle','warning','water','wrench-circle','work']
 ;
 <div style={{ fontSize: '2rem', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
   <Sprite />

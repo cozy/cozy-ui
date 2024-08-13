@@ -1,26 +1,39 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Icon from '../Icon'
 import RightIcon from '../Icons/Right'
 import ListItemText from '../ListItemText'
-import Divider from '../MuiCozyTheme/Divider'
-import ListItem from '../MuiCozyTheme/ListItem'
-import ListItemIcon from '../MuiCozyTheme/ListItemIcon'
+import Divider from '../Divider'
+import ListItem from '../ListItem'
+import ListItemIcon from '../ListItemIcon'
 import Radio from '../Radios'
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
+import Typography from '../Typography'
 
-const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
-  const { isMobile } = useBreakpoints()
+const infoStyle = { color: 'var(--secondaryTextColor)' }
+
+const ItemRow = ({
+  item,
+  onClick,
+  isSelected,
+  radioPosition,
+  isLast,
+  ellipsis,
+  noDivider
+}) => {
+  const { isDesktop } = useBreakpoints()
+
   return (
     <>
       <ListItem
-        className="u-pl-1 u-pr-1-half"
-        disableGutters
+        gutters={isDesktop ? 'double' : 'default'}
+        {...(ellipsis === false && { ellipsis: false })}
         button
         onClick={() => onClick(item)}
       >
         {radioPosition === 'left' && (
-          <ListItemIcon className="u-mr-0">
+          <ListItemIcon>
             <Radio
               readOnly
               name={item.title}
@@ -29,35 +42,55 @@ const ItemRow = ({ item, onClick, isSelected, radioPosition }) => {
             />
           </ListItemIcon>
         )}
-        {item.icon && (
-          <ListItemIcon
-            className={`${isMobile ? 'u-ml-half' : 'u-ml-1'} u-mr-1`}
-          >
-            {item.icon}
+        {item.icon && <ListItemIcon>{item.icon}</ListItemIcon>}
+        <ListItemText primary={item.title} secondary={item.description} />
+
+        {item.children && item.children.length > 0 && (
+          <ListItemIcon>
+            <Icon icon={RightIcon} color="var(--secondaryTextColor)" />
           </ListItemIcon>
         )}
-        <ListItemText
-          className="u-pv-0 u-ph-half"
-          primary={item.title}
-          secondary={item.description}
-        />
-
-        {item.children && item.children.length > 0 && <Icon icon={RightIcon} />}
 
         {radioPosition === 'right' &&
           !(item.children && item.children.length > 0) && (
-            <Radio
-              readOnly
-              edge="end"
-              name={item.title}
-              value={item.title}
-              checked={!!isSelected}
-            />
+            <div className="u-flex u-flex-items-center">
+              {!!item.info && (
+                <Typography style={infoStyle} variant="body2">
+                  {item.info}
+                </Typography>
+              )}
+              <ListItemIcon>
+                <Radio
+                  readOnly
+                  edge="end"
+                  name={item.title}
+                  value={item.title}
+                  checked={!!isSelected}
+                />
+              </ListItemIcon>
+            </div>
           )}
+
+        {radioPosition === 'right' && !!item.action && (
+          <Divider orientation="vertical" flexItem />
+        )}
+        {item.action
+          ? item.action.Component({ item, ...item.action.props })
+          : null}
       </ListItem>
-      <Divider />
+      {noDivider ? null : !isLast && <Divider />}
     </>
   )
+}
+
+ItemRow.propTypes = {
+  item: PropTypes.object.isRequired,
+  onClick: PropTypes.func.isRequired,
+  isSelected: PropTypes.bool.isRequired,
+  radioPosition: PropTypes.oneOf(['left', 'right']),
+  isLast: PropTypes.bool,
+  ellipsis: PropTypes.bool,
+  noDivider: PropTypes.bool
 }
 
 export default ItemRow

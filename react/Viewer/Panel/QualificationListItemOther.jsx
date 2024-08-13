@@ -1,47 +1,45 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 
-import { models } from 'cozy-client'
+import {
+  getTranslatedNameForOtherMetadata,
+  formatOtherMetadataValue
+} from 'cozy-client/dist/models/paper'
 
-import ListItem from '../../MuiCozyTheme/ListItem'
-import ListItemSecondaryAction from '../../MuiCozyTheme/ListItemSecondaryAction'
+import ListItem from '../../ListItem'
+import ListItemSecondaryAction from '../../ListItemSecondaryAction'
 import IconButton from '../../IconButton'
 import Icon from '../../Icon'
 import Dots from '../../Icons/Dots'
 import QualificationListItemText from './QualificationListItemText'
-import { useI18n } from '../../I18n'
+import { useI18n } from '../../providers/I18n'
 import MidEllipsis from '../../MidEllipsis'
 
-const {
-  document: {
-    locales: { getBoundT }
-  }
-} = models
-
 const QualificationListItemOther = forwardRef(
-  ({ formatedMetadataQualification, toggleActionsMenu }, ref) => {
-    const { t, lang } = useI18n()
-    const scannerT = getBoundT(lang)
-    const { name, value } = formatedMetadataQualification
+  ({ formattedMetadataQualification, toggleActionsMenu }, ref) => {
+    const { lang } = useI18n()
+    const { name, value } = formattedMetadataQualification
 
     if (!value) return null
 
-    const currentValueTranslated =
-      name === 'qualification'
-        ? scannerT(`Scan.items.${value}`)
-        : t(`Viewer.panel.qualification.${value}`)
+    const formattedTitle = getTranslatedNameForOtherMetadata(name, {
+      lang
+    })
+    const formattedValue = formatOtherMetadataValue(value, {
+      lang,
+      name
+    })
 
     return (
       <ListItem className={'u-pl-2 u-pr-3'}>
         <QualificationListItemText
-          primary={t(`Viewer.panel.qualification.${name}`)}
-          secondary={<MidEllipsis text={currentValueTranslated} />}
+          primary={formattedTitle}
+          secondary={<MidEllipsis text={formattedValue} />}
         />
         <ListItemSecondaryAction>
           <IconButton
             ref={ref}
-            onClick={() => toggleActionsMenu(currentValueTranslated)}
-            size="large"
+            onClick={() => toggleActionsMenu(formattedValue)}
           >
             <Icon icon={Dots} />
           </IconButton>
@@ -53,7 +51,7 @@ const QualificationListItemOther = forwardRef(
 QualificationListItemOther.displayName = 'QualificationListItemOther'
 
 QualificationListItemOther.propTypes = {
-  formatedMetadataQualification: PropTypes.shape({
+  formattedMetadataQualification: PropTypes.shape({
     name: PropTypes.string,
     value: PropTypes.string
   }).isRequired,

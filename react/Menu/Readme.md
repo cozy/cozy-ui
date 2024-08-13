@@ -1,104 +1,114 @@
-A menu to display choices to the user.
-
-**This component is deprecated, please use ActionMenu instead. See below for informations on how to migrate.**
-
-Pass data to the `MenuItem`s and use `onSelect` to handle user selecting
-an item in the `Menu`.
-
-`MenuItem`s can also have their own `onSelect`, in this case, the global
-`onSelect` will not be called. `MenuItem`s `onSelect` is not called if
-the item is `disabled`.
+Re-export of @material-ui. See [the official API](https://v4.mui.com/api/menu/).
 
 ```jsx
-import Menu, { MenuItem } from 'cozy-ui/transpiled/react/Menu';
-import Icon from 'cozy-ui/transpiled/react/Icon';
-import PaperplaneIcon from "cozy-ui/transpiled/react/Icons/Paperplane";
-const showItem = itemData => alert(JSON.stringify(itemData));
-const showWarning = itemData => alert(itemData + ' is disabled');
+import DropdownButton from 'cozy-ui/transpiled/react/DropdownButton'
+import Menu from 'cozy-ui/transpiled/react/Menu'
+import MenuItem from 'cozy-ui/transpiled/react/MenuItem'
+import List from 'cozy-ui/transpiled/react/List'
+import ListItemIcon from 'cozy-ui/transpiled/react/ListItemIcon'
+import ListItemText from 'cozy-ui/transpiled/react/ListItemText'
+import Icon from 'cozy-ui/transpiled/react/Icon'
+import IconButton from 'cozy-ui/transpiled/react/IconButton'
+import CopyIcon from 'cozy-ui/transpiled/react/Icons/Copy'
+import PenIcon from 'cozy-ui/transpiled/react/Icons/Pen'
+import TelephoneIcon from 'cozy-ui/transpiled/react/Icons/Telephone'
+import PeopleIcon from 'cozy-ui/transpiled/react/Icons/People'
+import DotsIcon from 'cozy-ui/transpiled/react/Icons/Dots'
+import AttachmentIcon from 'cozy-ui/transpiled/react/Icons/Attachment'
+import ContrastIcon from 'cozy-ui/transpiled/react/Icons/Contrast'
+import AttentionIcon from 'cozy-ui/transpiled/react/Icons/Attention'
+import Divider from 'cozy-ui/transpiled/react/Divider'
+import Typography from 'cozy-ui/transpiled/react/Typography'
 
-<Menu initialOpen={isTesting()} id='menu' label='Click me !' onSelect={ showItem } onSelectDisabled={ showWarning }>
-  <MenuItem data='hello'>Hello !</MenuItem>
-  <MenuItem disabled data='bonjour'>Bonjour !</MenuItem>
-  <hr />
-  <MenuItem icon={<Icon icon={PaperplaneIcon}/>} onSelect={x => alert('You clicked hola')} data='hola'>
-    <div>¡Hola!</div>
-    <div>¿Qué tal?</div>
-  </MenuItem>
-</Menu>
+initialState = { showMenu: isTesting() }
+
+const ref = React.useRef(null)
+
+const toggleMenu = () => setState(state => ({ showMenu: !state.showMenu }))
+const hideMenu = () => setState({ showMenu: false })
+
+;
+
+<>
+  <DropdownButton
+    ref={ref}
+    aria-controls="simple-menu"
+    aria-haspopup="true"
+    onClick={toggleMenu}
+  >
+    Show menu
+  </DropdownButton>
+  <Menu
+    open={state.showMenu}
+    anchorEl={ref.current}
+    getContentAnchorEl={null}
+    anchorOrigin={{
+      vertical: 'bottom',
+      horizontal: 'left'
+    }}
+    transformOrigin={{
+      vertical: 'top',
+      horizontal: 'left'
+    }}
+    keepMounted
+    onClose={hideMenu}
+  >
+    <MenuItem onClick={hideMenu}>
+      <ListItemIcon>
+        <Icon icon={PenIcon} />
+      </ListItemIcon>
+      <ListItemText primary="Modify" />
+      <ListItemIcon>
+        <Typography color='error'>
+          <Icon icon={AttentionIcon} />
+        </Typography>
+      </ListItemIcon>
+    </MenuItem>
+    <MenuItem onClick={hideMenu}>
+      <ListItemIcon>
+        <Icon icon={PeopleIcon} />
+      </ListItemIcon>
+      <ListItemText primary="People" />
+    </MenuItem>
+    <MenuItem onClick={hideMenu}>
+      <ListItemIcon>
+        <Icon icon={AttachmentIcon} />
+      </ListItemIcon>
+      <ListItemText primary="Attachment" />
+    </MenuItem>
+    <MenuItem onClick={hideMenu}>
+      <ListItemIcon>
+        <Icon icon={PeopleIcon} />
+      </ListItemIcon>
+      <ListItemText
+        primary="Item with a very long title to show how it should be displayed"
+        primaryTypographyProps={{ ellipsis: false }}
+      />
+    </MenuItem>
+    <MenuItem onClick={hideMenu}>
+      <ListItemText primary="Item without icon" />
+    </MenuItem>
+
+    <Divider className="u-mv-half" />
+
+    <MenuItem onClick={hideMenu}>
+      <ListItemIcon>
+        <Icon icon={TelephoneIcon} />
+      </ListItemIcon>
+      <ListItemText primary="Call" />
+    </MenuItem>
+    <MenuItem onClick={hideMenu}>
+      <ListItemIcon>
+        <Icon icon={ContrastIcon} />
+      </ListItemIcon>
+      <ListItemText primary="Contrast" />
+    </MenuItem>
+    <MenuItem onClick={hideMenu}>
+      <ListItemIcon>
+        <Icon icon={CopyIcon} />
+      </ListItemIcon>
+      <ListItemText primary="Copy" />
+    </MenuItem>
+  </Menu>
+</>
 ```
-
-Use the `position` attribute to put the menu to the right.
-
-```jsx
-import Menu, { MenuItem } from 'cozy-ui/transpiled/react/Menu';
-
-<Menu initialOpen={isTesting()} position='right' label='Click me !' onSelect={ itemData => alert(JSON.stringify(itemData)) }>
-  <MenuItem data='hello'>Hello !</MenuItem>
-  <MenuItem disabled data='bonjour'>Bonjour !</MenuItem>
-  <MenuItem data='hola'>¡Hola!</MenuItem>
-</Menu>
-```
-
-Use the `component` attribute if you want to use a custom component for the
-opener.
-
-```jsx
-import Menu, { MenuItem } from 'cozy-ui/transpiled/react/Menu';
-import Button from 'cozy-ui/transpiled/react/Button';
-
-<Menu initialOpen={isTesting()} component={<Button label="Greetings with custom component"/>} onSelect={ itemData => alert(JSON.stringify(itemData)) }>
-  <MenuItem data='hello'>Hello !</MenuItem>
-  <MenuItem disabled data='bonjour'>Bonjour !</MenuItem>
-  <MenuItem data='hola'>¡Hola!</MenuItem>
-</Menu>
-```
-
-### Migrating from Menu to ActionMenu
-
-#### 1. Replacing the Components
-
-`Menu` and `MenuItem` need to be replaced by `ActionMenu` and `ActionMenuItem` respectively.
-
-#### 2. Opening and closing the ActionMenu
-
-`Menu` had a built-in state and toggle button that need to be replaced. The most straightforward replacements are a `useState` hook and a `Button` component.
-
-#### 3. Handling clicks
-
-Clicks are now handled on the `ActionMenuItem` directly through the `onClick` prop. Unlike `Menu`, `ActionMenu` doesn't close itself after a click on an item, but you can change the opening state in the callback if you wish to do it.
-
-#### Putting it all together
-
-```jsx
-import ActionMenu, { ActionMenuItem } from 'cozy-ui/transpiled/react/ActionMenu';
-import Button from 'cozy-ui/transpiled/react/Button';
-
-initialState = { menuDisplayed: false };
-
-const showMenu = () => setState({ menuDisplayed: true });
-const hideMenu = () => setState({ menuDisplayed: false });
-
-const showItem = item => {
-  alert(item);
-  hideMenu();
-}
-
-<div>
-  <Button onClick={showMenu} label="Click me !" theme="secondary" subtle />
-  {state.menuDisplayed &&
-    <ActionMenu onClose={hideMenu}>
-      <ActionMenuItem onClick={() => showItem('Hello !')}>Hello !</ActionMenuItem>
-      <ActionMenuItem onClick={() => showItem('Bonjour !')}>Bonjour !</ActionMenuItem>
-      <ActionMenuItem onClick={() => showItem('¡Hola!')}>¡Hola!</ActionMenuItem>
-  </ActionMenu>}
-</div>
-```
-
-#### `position` and `popover`
-
-`ActionMenu` relies on the Material-UI [Popover](https://v3.material-ui.com/utils/popper/) component to handle both `position` and `popover`.
-
-* `position='left'` is now `placement='bottom-start'`, and is still the default behavior.
-* `position='right'` is now `placement='bottom-end'`.
-* All other Popover.js placement options are also supported
-* The Menu `popover` prop is now called `preventOverflow`

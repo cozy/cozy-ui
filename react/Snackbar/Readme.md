@@ -9,7 +9,7 @@ import Icon from 'cozy-ui/transpiled/react/Icon'
 import InfoIcon from 'cozy-ui/transpiled/react/Icons/Info'
 import {
   BreakpointsProvider
-} from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+} from 'cozy-ui/transpiled/react/providers/Breakpoints'
 
 initialState = { open: false }
 
@@ -49,13 +49,13 @@ import Button from 'cozy-ui/transpiled/react/Buttons'
 import Variants from 'cozy-ui/docs/components/Variants'
 import {
   BreakpointsProvider
-} from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+} from 'cozy-ui/transpiled/react/providers/Breakpoints'
 
 initialState = { open: isTesting() }
 
 const handleToggle = () => {setState(state => ({ open: !state.open }))}
 
-const initialVariants = [{ primary: true, secondary: true, success: false, error: false, warning: false, info: false }]
+const initialVariants = [{ primary: true, secondary: false, success: false, error: false, warning: false, info: false }]
 
 ;
 

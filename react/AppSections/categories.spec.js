@@ -110,7 +110,7 @@ describe('generateOptionsFromApps', () => {
         value: 'konnectors'
       },
       {
-        label: 'ISP',
+        label: 'Mobile and Internet',
         secondary: true,
         type: 'konnector',
         value: 'isp'
@@ -162,7 +162,7 @@ describe('generateOptionsFromApps', () => {
         value: 'konnectors'
       },
       {
-        label: 'ISP',
+        label: 'Mobile and Internet',
         secondary: true,
         type: 'konnector',
         value: 'isp'

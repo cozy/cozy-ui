@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
-import Button from '@mui/material/Button'
+import Button from '@material-ui/core/Button'
 
 import { makeStyles } from '../styles'
 import DropdownText from '../DropdownText'
@@ -67,7 +67,7 @@ DropdownButton.defaultProps = {
 }
 
 DropdownButton.propTypes = {
-  /** Weither there is a space between the label and the icon */
+  /** Whether there is a space between the label and the icon */
   spaceBetween: PropTypes.bool,
   /** Like variant from Typography component */
   textVariant: PropTypes.string,

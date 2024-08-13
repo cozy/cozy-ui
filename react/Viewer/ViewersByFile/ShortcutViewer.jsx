@@ -3,7 +3,7 @@ import { useClient, useFetchShortcut } from 'cozy-client'
 import get from 'lodash/get'
 
 import { withViewerLocales } from '../hoc/withViewerLocales'
-import { ButtonLink } from '../../Button'
+import { ButtonLink } from '../../deprecated/Button'
 import { FileDoctype } from '../../proptypes'
 import OpenwithIcon from '../../Icons/Openwith'
 

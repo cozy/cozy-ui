@@ -1,3 +1,3 @@
-import MuiRadioGroup from '@mui/material/RadioGroup'
+import MuiRadioGroup from '@material-ui/core/RadioGroup'
 
 export default MuiRadioGroup

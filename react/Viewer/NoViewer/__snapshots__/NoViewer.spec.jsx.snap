@@ -31,7 +31,7 @@ exports[`NoViewer should render the viewer 1`] = `
       notSupported.xyz
     </p>
     <button
-      class="styles__c-btn___-2Vnj styles__c-btn--center___16_Xh"
+      class="styles__c-btn___3kXsk styles__c-btn--center___Nny0n"
       type="submit"
     >
       <span>

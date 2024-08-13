@@ -1,0 +1,244 @@
+@require '../../tools/mixins'
+palette=json('../../theme/palette.json', { hash: true })
+
+// @stylint off
+/*
+    Theme
+
+    Semantic colors suitable for theming. We encourage users of cozy-ui to use semantic colors
+    instead of absolute colors to facilitate theming.
+
+    We try to use a naming schema that is close to what is use in [Material-UI React's theming](https://material-ui.com/customization/palette/#palette-colors).
+    It is possible that we have some discrepancies. If you see something that seems out
+    of the ordinary and where you think we could reduce the difference with MUI, please
+    do not hesitate to [open an issue](https://github.com/cozy/cozy-ui/issues/new).
+
+    Styleguide Settings.theme
+*/
+
+html,
+.CozyTheme--light-normal
+    /*
+    Primary colors
+
+    Stylus: primaryColorLightest     - #B3D3FF, CSS: var(--primaryColorLightest)
+    Stylus: primaryColorLight        - #5C9DF5, CSS: var(--primaryColorLight)
+    Stylus: primaryColor             - #297EF2, CSS: var(--primaryColor)
+    Stylus: primaryColorDark         - #0B61D6, CSS: var(--primaryColorDark)
+    Stylus: primaryContrastTextColor - #FFF, CSS: var(--primaryContrastTextColor)
+
+    Styleguide Settings.theme.primary
+    */
+    --primaryColorLightest palette.Primary['300']
+    --primaryColorLight palette.Primary['500']
+    --primaryColor palette.Primary['600']
+    --primaryColorDark palette.Primary['700']
+    --primaryContrastTextColor palette.Common['white']
+    --primaryBackground alpha(palette.Primary['600'], 0.12) // only for deprecated Info & Alerter
+
+    /*
+    Secondary colors
+
+    Stylus: secondaryColorLightest     - #DDE0E3, CSS: var(--secondaryColorLightest)
+    Stylus: secondaryColorLight        - #9DA2A6, CSS: var(--secondaryColorLight)
+    Stylus: secondaryColor             - #7C8086, CSS: var(--secondaryColor)
+    Stylus: secondaryColorDark         - #5D6169, CSS: var(--secondaryColorDark)
+    Stylus: secondaryContrastTextColor -  #FFF, CSS: var(--secondaryContrastTextColor)
+
+    Styleguide Settings.theme.secondary
+    */
+    --secondaryColorLightest palette.Grey['300']
+    --secondaryColorLight palette.Grey['500']
+    --secondaryColor palette.Grey['600']
+    --secondaryColorDark palette.Grey['700']
+    --secondaryContrastTextColor palette.Common['white']
+    --secondaryBackground alpha(palette.Grey['600'], 0.12) // only for deprecated Info & Alerter
+
+    /*
+    Background colors
+
+    Stylus: primaryBackgroundLight -  #F7FAFF, CSS: var(--primaryBackgroundLight)
+    Stylus: paperBackgroundColor -  #FFF, CSS: var(--paperBackgroundColor)
+    Stylus: defaultBackgroundColor -  #F4F5F6, CSS: var(--defaultBackgroundColor)
+    Stylus: contrastBackgroundColor -  #F5F5F6, CSS: var(--contrastBackgroundColor)
+
+    Styleguide Settings.theme.background
+    */
+    --primaryBackgroundLight palette.Primary['50']
+    --paperBackgroundColor palette.Common['white']
+    --defaultBackgroundColor palette.Grey['100']
+    --contrastBackgroundColor alpha(palette.Grey['900'], 0.048)
+
+    /*
+    Text colors
+
+    These colors use the alpha layer. Be careful to use the semantic variable.
+    Hexadecimal colors are here only as an example on a white background.
+
+    Stylus: primaryTextColor -  #383B43, CSS: var(--primaryTextColor)
+    Stylus: secondaryTextColor - #6F7177, CSS: var(--secondaryTextColor)
+    Stylus: disabledTextColor - #BEBFC1, CSS: var(--disabledTextColor)
+    Stylus: hintTextColor - #BEBFC1, CSS: var(--hintTextColor)
+    Stylus: iconTextColor - #66686D, CSS: var(--iconTextColor)
+
+    Styleguide Settings.theme.text
+    */
+    --primaryTextColor alpha(palette.Grey['900'], 0.9)
+    --secondaryTextColor alpha(palette.Grey['900'], 0.64)
+    --disabledTextColor alpha(palette.Grey['900'], 0.32)
+    --hintTextColor alpha(palette.Grey['900'], 0.32)
+    --iconTextColor alpha(palette.Grey['900'], 0.72)
+
+    /*
+    Action colors
+
+    These colors use the alpha layer. Be careful to use the semantic variable.
+    Hexadecimal colors are here only as an example on a white background.
+
+    Stylus: actionColorActive   - #8A8C90, CSS: var(--actionColorActive)
+    Stylus: actionColorHover   - #F7F7F7, CSS: var(--actionColorHover)
+    Stylus: actionColorSelected   - #EFEFF0, CSS: var(--actionColorSelected)
+    Stylus: actionColorDisabled   - #CFCFD1, CSS: var(--actionColorDisabled)
+    Stylus: actionColorDisabledBackground   - #E7E7E8, CSS: var(--actionColorDisabledBackground)
+    Stylus: actionColorFocus   - #E7E7E8, CSS: var(--actionColorFocus)
+    Stylus: actionColorGhost   - #EFEFF0, CSS: var(--actionColorGhost)
+    Stylus: actionColorHoverGhost   - #DFE0E0, CSS: var(--actionColorHoverGhost)
+
+    Styleguide Settings.theme.action
+    */
+    --actionColorActive alpha(palette.Grey['900'], 0.56)
+    --actionColorHover alpha(palette.Grey['900'], 0.04)
+    --actionColorSelected alpha(palette.Grey['900'], 0.08)
+    --actionColorDisabled alpha(palette.Grey['900'], 0.24)
+    --actionColorDisabledBackground alpha(palette.Grey['900'], 0.12)
+    --actionColorFocus alpha(palette.Grey['900'], 0.12)
+    --actionColorGhost alpha(palette.Grey['900'], 0.08)
+    --actionColorHoverGhost alpha(palette.Grey['900'], 0.16)
+
+    /*
+    Border colors
+
+    These colors use the alpha layer. Be careful to use the semantic variable.
+    Hexadecimal colors are here only as an example on a white background.
+
+    Stylus: borderMainColor - #DFE0E0, CSS: var(--borderMainColor)
+    Stylus: borderDisabledColor - #EFEFF0, CSS: var(--borderDisabledColor)
+    Stylus: borderGhostColor - #9D9EA1, CSS: var(--borderGhostColor)
+    Stylus: borderGhostDisabledColor - #DFE0E0, CSS: var(--borderGhostDisabledColor)
+
+    Styleguide Settings.theme.border
+    */
+    --borderMainColor alpha(palette.Grey['900'], 0.16)
+    --borderDisabledColor alpha(palette.Grey['900'], 0.08)
+    --borderGhostColor alpha(palette.Grey['900'], 0.48)
+    --borderGhostDisabledColor alpha(palette.Grey['900'], 0.16)
+
+    /*
+    Divider colors
+
+    These colors use the alpha layer. Be careful to use the semantic variable.
+    Hexadecimal colors are here only as an example on a white background.
+
+    Stylus: dividerColor - #E3E4E5, CSS: var(--dividerColor)
+
+    Styleguide Settings.theme.divider
+    */
+    --dividerColor alpha(palette.Grey['900'], 0.12)
+
+    /*
+    Success colors
+
+    Stylus: successColorLight        -  #38C949, CSS: var(--successColorLight)
+    Stylus: successColor             -  #09AB1B, CSS: var(--successColor)
+    Stylus: successColorDark         -  #018711, CSS: var(--successColorDark)
+    Stylus: successColorContrastText -  #FFF, CSS: var(--successColorContrastText)
+
+    Styleguide Settings.theme.success
+    */
+    --successColorLight palette.Success['500']
+    --successColor palette.Success['600']
+    --successColorDark palette.Success['700']
+    --successColorContrastText palette.Common['white']
+    --successBackground alpha(palette.Success['600'], 0.12) // only for deprecated Info & Alerter
+
+    /*
+    Warning colors
+
+    Stylus: warningColorLight        -  #EFA82F, CSS: var(--warningColorLight)
+    Stylus: warningColor             -  #CB8100, CSS: var(--warningColor)
+    Stylus: warningColorDark         -  #986100, CSS: var(--warningColorDark)
+    Stylus: warningColorContrastText -  #FFF, CSS: var(--warningColorContrastText)
+
+    Styleguide Settings.theme.warning
+    */
+    --warningColorLight palette.Warning['500']
+    --warningColor palette.Warning['600']
+    --warningColorDark palette.Warning['700']
+    --warningColorContrastText palette.Common['white']
+
+    /*
+    Error colors
+
+    Stylus: errorColorLightest     -  #FFECEC, CSS: var(--errorColorLightest)
+    Stylus: errorColorLight        -  #F96B6B, CSS: var(--errorColorLight)
+    Stylus: errorColor             -  #EA3F3F, CSS: var(--errorColor)
+    Stylus: errorColorDark         -  #D31F1F, CSS: var(--errorColorDark)
+    Stylus: errorBackground        -  #FFECEC, CSS: var(--errorBackground)
+    Stylus: errorColorContrastText -  #FFF, CSS: var(--errorColorContrastText)
+
+    Styleguide Settings.theme.error
+    */
+    --errorColorLightest palette.Error['100']
+    --errorColorLight palette.Error['500']
+    --errorColor palette.Error['600']
+    --errorColorDark palette.Error['700']
+    --errorBackground alpha(palette.Error['600'], 0.12)
+    --errorColorContrastText palette.Common['white']
+
+    /*
+    Info colors
+
+    Stylus: infoColorLight        -  #0EC4C7, CSS: var(--infoColorLight)
+    Stylus: infoColor             -  #009FA2, CSS: var(--infoColor)
+    Stylus: infoColorDark         -  #007578, CSS: var(--infoColorDark)
+    Stylus: infoColorContrastText -  #FFF, CSS: var(--infoColorContrastText)
+
+    Styleguide Settings.theme.info
+    */
+    --infoColorLight palette.Info['500']
+    --infoColor palette.Info['600']
+    --infoColorDark palette.Info['700']
+    --infoColorContrastText palette.Common['white']
+
+    /*
+    Shadow colors
+    */
+    $shadowColor = palette.Grey['900']
+    --shadow0 none
+    --shadow1 0px 2px 4px 0px alpha($shadowColor, 0.08), 0px 4px 16px 0px alpha($shadowColor, 0.06), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow2 0px 3px 5px 0px alpha($shadowColor, 0.09), 0px 4px 17px 0px alpha($shadowColor, 0.07), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow3 0px 3px 5px -1px alpha($shadowColor, 0.09), 0px 5px 19px 1px alpha($shadowColor, 0.08), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow4 0px 3px 6px -1px alpha($shadowColor, 0.1), 0px 5px 20px 1px alpha($shadowColor, 0.08), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow5 0px 4px 6px -1px alpha($shadowColor, 0.11), 0px 5px 22px 1px alpha($shadowColor, 0.09), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow6 0px 4px 7px -2px alpha($shadowColor, 0.11), 0px 6px 23px 2px alpha($shadowColor, 0.10), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow7 0px 5px 7px -2px alpha($shadowColor, 0.12), 0px 6px 24px 2px alpha($shadowColor, 0.11), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow8 0px 5px 8px -2px alpha($shadowColor, 0.13), 0px 6px 26px 2px alpha($shadowColor, 0.11), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow9 0px 5px 8px -3px alpha($shadowColor, 0.14), 0px 7px 27px 3px alpha($shadowColor, 0.12), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow10 0px 6px 9px -3px alpha($shadowColor, 0.14), 0px 7px 29px 3px alpha($shadowColor, 0.13), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow11 0px 6px 9px -3px alpha($shadowColor, 0.15), 0px 7px 30px 3px alpha($shadowColor, 0.14), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow12 0px 7px 10px -4px alpha($shadowColor, 0.16), 0px 8px 31px 4px alpha($shadowColor, 0.15), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow13 0px 7px 10px -4px alpha($shadowColor, 0.16), 0px 8px 33px 4px alpha($shadowColor, 0.15), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow14 0px 8px 11px -5px alpha($shadowColor, 0.17), 0px 9px 34px 5px alpha($shadowColor, 0.16), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow15 0px 8px 11px -5px alpha($shadowColor, 0.18), 0px 9px 35px 5px alpha($shadowColor, 0.17), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow16 0px 9px 12px -5px alpha($shadowColor, 0.18), 0px 9px 37px 5px alpha($shadowColor, 0.18), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow17 0px 9px 12px -6px alpha($shadowColor, 0.19), 0px 10px 38px 6px alpha($shadowColor, 0.19), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow18 0px 9px 13px -6px alpha($shadowColor, 0.2), 0px 10px 40px 6px alpha($shadowColor, 0.19), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow19 0px 10px 13px -6px alpha($shadowColor, 0.21), 0px 10px 41px 6px alpha($shadowColor, 0.2), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow20 0px 10px 14px -7px alpha($shadowColor, 0.21), 0px 11px 42px 7px alpha($shadowColor, 0.21), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow21 0px 11px 14px -7px alpha($shadowColor, 0.22), 0px 11px 44px 7px alpha($shadowColor, 0.22), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow22 0px 11px 15px -7px alpha($shadowColor, 0.23), 0px 11px 45px 7px alpha($shadowColor, 0.22), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow23 0px 12px 15px -8px alpha($shadowColor, 0.23), 0px 12px 47px 8px alpha($shadowColor, 0.23), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow24 0px 12px 16px -8px alpha($shadowColor, 0.24), 0px 12px 48px 8px alpha($shadowColor, 0.24), 0px 0px 0px 0.5px alpha($shadowColor, 0.12)
+    --shadow25 0px 1px 4px alpha($shadowColor, 0.04)
+
+// @stylint on

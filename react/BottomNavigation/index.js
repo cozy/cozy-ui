@@ -1,3 +1,3 @@
-import MuiBottomNavigation from '@mui/material/BottomNavigation'
+import MuiBottomNavigation from '@material-ui/core/BottomNavigation'
 
 export default MuiBottomNavigation

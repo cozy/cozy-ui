@@ -1,3 +1,3 @@
-import MuiFormHelperText from '@mui/material/FormHelperText'
+import MuiFormHelperText from '@material-ui/core/FormHelperText'
 
 export default MuiFormHelperText

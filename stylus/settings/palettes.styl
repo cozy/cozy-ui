@@ -1,0 +1,143 @@
+@require './themes/light-normal'
+@require './themes/light-inverted'
+@require './themes/dark-normal'
+@require './themes/dark-inverted'
+palette=json('../../theme/palette.json', { hash: true })
+
+// @stylint off
+/*------------------------------------*\
+  Palette
+  =====
+\*------------------------------------*/
+/*
+    Settings
+
+    Weight: -10
+
+    Styleguide Settings
+*/
+
+/*
+    Colors
+
+    Colors used in the user interface.
+
+    ℹ️  In general, you are advised to use [theme colors](#kssref-settings-theme) when
+    building your components: this will ensure your components react correctly when
+    changing the theme.
+
+    If you need to access an absolute color that is not semantic, you can use
+
+    ```
+    import palette from 'cozy-ui/transpiled/react/palette'
+    <div style={{ backgroundColor: palette.melon }} />
+    ```
+
+    Styleguide Settings.colors
+*/
+html
+    /*
+    Grey
+
+    Stylus: grey0        -  #FFFFFF, CSS: var(--grey0)
+    Stylus: grey50       -  #f9fafb, CSS: var(--grey50)
+    Stylus: grey100      -  #f4f5f6, CSS: var(--grey100)
+    Stylus: grey200      -  #eceff1, CSS: var(--grey200)
+    Stylus: grey300      -  #dde0e3, CSS: var(--grey300)
+    Stylus: grey400      -  #bfc3c7, CSS: var(--grey400)
+    Stylus: grey500      -  #9da2a6, CSS: var(--grey500)
+    Stylus: grey600      -  #7c8086, CSS: var(--grey600)
+    Stylus: grey700      -  #5d6169, CSS: var(--grey700)
+    Stylus: grey800      -  #3e424a, CSS: var(--grey800)
+    Stylus: grey900      -  #1d212a, CSS: var(--grey900)
+    Stylus: greyA100     -  #d3d6d8, CSS: var(--greyA100)
+    Stylus: greyA200     -  #a7abaf, CSS: var(--greyA200)
+    Stylus: greyA400     -  #2c3039, CSS: var(--greyA400)
+    Stylus: greyA700     -  #5d6169, CSS: var(--greyA700)
+    Stylus: white        -  #FFFFFF, CSS: var(--white)
+    Stylus: paleGrey     -  #F5F6F7, CSS: var(--paleGrey)
+    Stylus: silver       -  #D6D8Da, CSS: var(--silver)
+    Stylus: coolGrey     -  #95999D, CSS: var(--coolGrey)
+    Stylus: slateGrey    -  #5D6165, CSS: var(--slateGrey)
+    Stylus: charcoalGrey -  #32363F, CSS: var(--charcoalGrey)
+    Stylus: black        -  #000000, CSS: var(--black)
+
+    Styleguide Settings.colors.grey
+    */
+    --grey0         palette.Common['white']
+    --grey50        palette.Grey['50']
+    --grey100       palette.Grey['100']
+    --grey200       palette.Grey['200']
+    --grey300       palette.Grey['300']
+    --grey400       palette.Grey['400']
+    --grey500       palette.Grey['500']
+    --grey600       palette.Grey['600']
+    --grey700       palette.Grey['700']
+    --grey800       palette.Grey['800']
+    --grey900       palette.Grey['900']
+    --greyA100      palette.Grey['A100']
+    --greyA200      palette.Grey['A200']
+    --greyA400      palette.Grey['A400']
+    --greyA700      palette.Grey['A700']
+    --white         palette.Common['white']
+    --paleGrey      #F5F6F7
+    --silver        #D6D8Da
+    --coolGrey      #95999D
+    --slateGrey     #5D6165
+    --charcoalGrey  #32363F
+    --black         palette.Common['black']
+    --overlay       rgba(50, 54, 63, .5)
+
+    /*
+    Blue
+
+    Stylus: zircon       -  #F5FAFF, CSS: var(--zircon)
+    Stylus: dodgerBlue   -  #297EF2, CSS: var(--dodgerBlue)
+    Stylus: scienceBlue  -  #0B61D6, CSS: var(--scienceBlue)
+
+    Styleguide Settings.colors.blue
+    */
+    --zircon       #F5FAFF
+    --dodgerBlue   #297EF2
+    --scienceBlue  #0B61D6
+
+    /*
+    Green
+
+    Stylus: weirdGreen   - #40DE8E, CSS: var(--weirdGreen)
+    Stylus: emerald      - #35CE68, CSS: var(--emerald)
+    Stylus: malachite    - #08b442, CSS: var(--malachite)
+
+    Styleguide Settings.colors.green
+    */
+    --weirdGreen   #40DE8E
+    --emerald      #35CE68
+    --malachite    #08b442
+
+    /*
+    Orange
+
+    Stylus: mango         - #FF962F, CSS: var(--mango)
+
+    Styleguide Settings.colors.orange
+    */
+    --mango          #FF962F
+
+    /*
+    Red
+
+    Stylus: chablis      - #FFF2F2, CSS: var(--chablis)
+    Stylus: yourPink     - #FDCBCB, CSS: var(--yourPink)
+    Stylus: fuchsia      - #FC4C83, CSS: var(--fuchsia)
+    Stylus: pomegranate  - #F52D2D, CSS: var(--pomegranate)
+    Stylus: monza        - #DD0505, CSS: var(--monza)
+
+    Styleguide Settings.colors.red
+    */
+    --chablis      #FFF2F2
+    --yourPink     #FDCBCB
+    --fuchsia      #FC4C83
+    --pomegranate  #F52D2D
+    --monza        #DD0505
+
+// @stylint on

@@ -1,3 +1,3 @@
-import DialogActions from '@mui/material/DialogActions'
+import DialogActions from '@material-ui/core/DialogActions'
 
 export default DialogActions

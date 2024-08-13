@@ -1,5 +1,4 @@
 @require '../../stylus/components/forms'
-@require '../../stylus/settings/palette'
 @require '../../stylus/settings/breakpoints'
 @require '../../stylus/tools/mixins'
 
@@ -25,26 +24,27 @@
     align-items center
     padding rem(8)
     border-left rem(4) solid transparent
-    color var(--charcoalGrey)
+    color var(--primaryTextColor)
+    background-color var(--paperBackgroundColor)
     transition all .2s ease-out
     white-space normal /* otherwise the tick can be wrongly placed in Firefox */
 
     &:hover:not(.select-option--disabled)
-        background-color var(--paleGrey)
+        background-color var(--actionColorSelected)
         cursor pointer
 
         .select-option__actions
           opacity 1
 
 .select-option--focused:not(.select-option--disabled)
-    background-color var(--paleGrey)
+    background-color var(--actionColorHover)
 
 .select-option--selected
-    background-color var(--paleGrey)
+    background-color var(--actionColorSelected)
     border-left-color var(--primaryColor)
 
 .select-option--disabled
-    color var(--silver)
+    color var(--disabledTextColor)
     cursor not-allowed
 
 .select-option__checkbox
@@ -95,4 +95,4 @@
 .FixedGroup
     @extend .Group
     flex-shrink 0
-    border-top silver 1px solid
+    border-top 1px solid var(--borderMainColor)

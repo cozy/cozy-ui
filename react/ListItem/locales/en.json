@@ -1,0 +1,75 @@
+{
+  "common": {
+    "day": "%{smart_count} day |||| %{smart_count} days"
+  },
+  "ListItem": {
+    "attributes": {
+      "birthday": "Birthday",
+      "birthcity": "Birth city",
+      "address": "Address",
+      "email": "Email address",
+      "phone": "Phone number",
+      "company": "Company",
+      "jobTitle": "Job title",
+      "metadata": {
+        "datetime": "Added on",
+        "issueDate": "Delivered on",
+        "expirationDate": "Expiration date",
+        "referencedDate": "Referenced date",
+        "shootingDate": "Shooting date",
+        "obtentionDate": "Date obtained",
+        "date": "Document date",
+        "country": "Country of delivery",
+        "refTaxIncome": "Reference tax income",
+        "contractType": "Contract type",
+        "noticePeriod": "Expiration alert",
+        "cafFileNumber": "CAF file number",
+        "vinNumber": "Vehicle registration number (VIN)",
+        "cardNumber": "National ID card number",
+        "ibanNumber": "IBAN number",
+        "bicNumber": "BIC number",
+        "passportNumber": "Passport number",
+        "netSocialAmount": "Net social amount",
+        "vehicle": {
+          "licenseNumber": "Vehicle registration number",
+          "confidentialNumber": "Confidential vehicle registration code"
+        },
+        "number": {
+          "pay_sheet": "Gross remuneration",
+          "tax_return": "Reference tax number",
+          "tax_notice": "Reference tax number",
+          "real_estate_tax": "Reference tax number",
+          "tax_timetable": "Reference tax number",
+          "fine": "Amount of the fine",
+          "fidelity_card": "Card number",
+          "driver_license": "License number",
+          "caf": "CAF file number",
+          "payment_proof_family_allowance": "CAF file number",
+          "vehicle_registration": "Vehicle registration number (VIN)",
+          "national_id_card": "National ID card number",
+          "bank_details": "IBAN number",
+          "passport": "Passport number",
+          "residence_permit": "License number"
+        }
+      }
+    },
+    "file": {
+      "page": {
+        "back": "Back side",
+        "front": "Front side"
+      }
+    },
+    "snackbar": {
+      "copyToClipboard": {
+        "success": "Copied to clipboard",
+        "error": "Cannot copy to clipboard"
+      }
+    },
+    "renameModal": {
+      "title": "Rename",
+      "content": "You are about to change the file extension. Do you want to continue?",
+      "cancel": "Cancel",
+      "submit": "Continue"
+    }
+  }
+}

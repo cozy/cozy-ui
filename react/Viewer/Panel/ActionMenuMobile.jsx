@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import List from '../../MuiCozyTheme/List'
-import ListItem from '../../MuiCozyTheme/ListItem'
-import ListItemIcon from '../../MuiCozyTheme/ListItemIcon'
+import List from '../../List'
+import ListItem from '../../ListItem'
+import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
 import Icon from '../../Icon'
 import Copy from '../../Icons/Copy'
 import Edit from '../../Icons/Rename'
 import BottomSheet, { BottomSheetItem } from '../../BottomSheet'
-import { useI18n } from '../../I18n'
+import { useI18n } from '../../providers/I18n'
 import AppLinker from '../../AppLinker'
 
 const ActionMenuMobile = ({
@@ -35,7 +35,6 @@ const ActionMenuMobile = ({
                     component="a"
                     href={href}
                     onClick={() => handleEdit(onClick)}
-                    disabled={!appLink}
                   >
                     <ListItemIcon>
                       <Icon icon={Edit} />

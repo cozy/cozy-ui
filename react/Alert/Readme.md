@@ -17,6 +17,7 @@ const initialVariants = [{
   square: false,
   actionOne: false,
   actionTwo: false,
+  filled: false,
   close: false
 }]
 
@@ -26,6 +27,7 @@ const initialVariants = [{
   {variant => (
     <Alert
       color={variant.color ? "#EFA82D" : undefined}
+      variant={variant.filled ? 'filled' : undefined}
       block={variant.block}
       square={variant.square}
       icon={variant.noIcon ? false : variant.largeIcon ? <Icon icon={DeviceLaptopIcon} color="var(--errorColor)" size={32} /> : undefined}
@@ -81,7 +83,7 @@ const makeButtonColor = color => ['primary', 'secondary'].includes(color) ? unde
             )}
             onClose={variant.close ? () => {} : undefined}
           >
-            {variant.title && <AlertTitle>{color.toUpperCase()}</AlertTitle>}
+            {variant.title && <AlertTitle>{color}</AlertTitle>}
             This is a {color} alert
           </Alert>
         </div>
@@ -97,11 +99,16 @@ const makeButtonColor = color => ['primary', 'secondary'].includes(color) ? unde
             severity={color}
             block={variant.block}
             action={variant.close ? undefined : (
-              <Button variant="primary" size="small" color={makeButtonColor(color)} label="ACTION" />
+              <Button
+                variant='text'
+                style={{ color: `var(--${color}ContrastTextColor)` }}
+                size="small"
+                label="ACTION"
+              />
             )}
             onClose={variant.close ? () => {} : undefined}
           >
-            {variant.title && <AlertTitle>{color.toUpperCase()}</AlertTitle>}
+            {variant.title && <AlertTitle>{color}</AlertTitle>}
             This is a {color} alert
           </Alert>
         </div>
@@ -121,7 +128,7 @@ const makeButtonColor = color => ['primary', 'secondary'].includes(color) ? unde
             )}
             onClose={variant.close ? () => {} : undefined}
           >
-            {variant.title && <AlertTitle>{color.toUpperCase()}</AlertTitle>}
+            {variant.title && <AlertTitle>{color}</AlertTitle>}
             This is a {color} alert
           </Alert>
         </div>

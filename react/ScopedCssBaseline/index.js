@@ -1,3 +1,3 @@
-import MuiScopedCssBaseline from '@mui/material/ScopedCssBaseline'
+import MuiScopedCssBaseline from '@material-ui/core/ScopedCssBaseline'
 
 export default MuiScopedCssBaseline

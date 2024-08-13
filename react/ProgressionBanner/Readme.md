@@ -6,7 +6,7 @@ import ProgressionBanner from 'cozy-ui/transpiled/react/ProgressionBanner';
 import Icon from 'cozy-ui/transpiled/react/Icon';
 import CloudSync from 'cozy-ui/transpiled/react/Icons/CloudSync';
 import Variants from 'cozy-ui/docs/components/Variants';
-import MuiButton from 'cozy-ui/transpiled/react/MuiCozyTheme/Buttons';
+import MuiButton from 'cozy-ui/transpiled/react/Button';
 
 const { progression } = useProgression();
 

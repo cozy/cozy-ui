@@ -1,85 +1,72 @@
 import React from 'react'
 import { fireEvent, render } from '@testing-library/react'
-import DemoProvider from '../docs/DemoProvider'
 
-import QualificationListItemInformation, {
-  makeInformationValue
-} from './QualificationListItemInformation'
-import MidEllipsis from '../../MidEllipsis'
+import QualificationListItemInformation from './QualificationListItemInformation'
+
+jest.mock('../../providers/I18n', () => ({
+  useI18n: jest.fn(() => ({ t: x => x }))
+}))
 
 const setup = ({
-  formatedMetadataQualification = {},
+  formattedMetadataQualification = {},
   toggleActionsMenu = jest.fn()
 } = {}) => {
   return render(
-    <DemoProvider>
-      <QualificationListItemInformation
-        formatedMetadataQualification={formatedMetadataQualification}
-        toggleActionsMenu={toggleActionsMenu}
-      />
-    </DemoProvider>
+    <QualificationListItemInformation
+      formattedMetadataQualification={formattedMetadataQualification}
+      toggleActionsMenu={toggleActionsMenu}
+      file={{
+        metadata: { qualification: { label: 'label_of_qualification' } }
+      }}
+    />
   )
 }
 
 describe('QualificationListItemInformation', () => {
-  describe('formatedMetadataQualification', () => {
+  describe('formattedMetadataQualification', () => {
     it('should display default text if value is falsy', () => {
-      const formatedMetadataQualification = { name: 'country', value: '' }
-      const { getByText } = setup({ formatedMetadataQualification })
+      const formattedMetadataQualification = { name: 'country', value: '' }
+      const { getByText } = setup({ formattedMetadataQualification })
 
-      expect(getByText('Viewer.panel.qualification.noInfo'))
+      expect(getByText('No information'))
     })
-    it('should display current value if it is truthy', () => {
-      const formatedMetadataQualification = { name: 'country', value: 'Italie' }
+    it.only('should display current value if it is truthy', () => {
+      const formattedMetadataQualification = {
+        name: 'country',
+        value: 'Italie'
+      }
       const { queryByText } = setup({
-        formatedMetadataQualification
+        formattedMetadataQualification
       })
 
-      expect(queryByText('Viewer.panel.qualification.noInfo')).toBeNull()
+      expect(queryByText('No information')).toBeNull()
+      expect(queryByText('Italie')).toBeInTheDocument()
+    })
+    it('should display current value if it number type', () => {
+      const formattedMetadataQualification = { name: 'country', value: 0 }
+      const { queryByText } = setup({
+        formattedMetadataQualification
+      })
+
+      expect(queryByText('No information')).toBeNull()
+      expect(queryByText('0')).toBeInTheDocument()
     })
   })
   describe('toggleActionsMenu', () => {
     it('should call toggleActionsMenu with current value on click it', () => {
-      const formatedMetadataQualification = { name: 'country', value: 'Italie' }
+      const formattedMetadataQualification = {
+        name: 'country',
+        value: 'Italie'
+      }
       const toggleActionsMenu = jest.fn()
       const { getByTestId } = setup({
         toggleActionsMenu,
-        formatedMetadataQualification
+        formattedMetadataQualification
       })
       const toggleActionsMenuBtn = getByTestId('toggleActionsMenuBtn')
       fireEvent.click(toggleActionsMenuBtn)
 
       expect(toggleActionsMenu).toBeCalledWith('Italie')
-    })
-  })
-  describe('makeInformationValue', () => {
-    let mockT
-    beforeEach(() => {
-      mockT = jest.fn(key => key)
-    })
-    afterEach(() => {
-      mockT = jest.fn(key => key)
-    })
-
-    it('should return "MidEllipsis" component with the value', () => {
-      const res = makeInformationValue('metadataName', 'metadataValue', mockT)
-
-      expect(res).toEqual(<MidEllipsis text="metadataValue" />)
-    })
-    it('should return value with suffix locale', () => {
-      const res = makeInformationValue('noticePeriod', '88', mockT)
-
-      expect(res).toEqual('88 Viewer.panel.qualification.information.day')
-    })
-    it('should return "noInfo" value', () => {
-      const res = makeInformationValue('metadataName', '', mockT)
-
-      expect(res).toEqual('Viewer.panel.qualification.noInfo')
-    })
-    it('should return noInfo value with "noticePeriod" metadata name', () => {
-      const res = makeInformationValue('noticePeriod', '', mockT)
-
-      expect(res).toEqual('Viewer.panel.qualification.noInfo')
     })
   })
 })

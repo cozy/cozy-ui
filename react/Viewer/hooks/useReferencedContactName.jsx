@@ -1,10 +1,6 @@
-import { getReferencedBy, useQuery, models, isQueryLoading } from 'cozy-client'
+import { getReferencedBy, useQuery, isQueryLoading } from 'cozy-client'
 
 import { buildContactByIdsQuery } from '../queries'
-
-const {
-  contact: { getDisplayName }
-} = models
 
 const useReferencedContactName = file => {
   const contactIds = getReferencedBy(file, 'io.cozy.contacts').map(
@@ -25,11 +21,6 @@ const useReferencedContactName = file => {
     isContactByIdsQueryEnabled &&
     (isQueryLoading(contactsQueryResult) || contactsQueryResult.hasMore)
 
-  const contactName =
-    contacts && contacts.length > 0
-      ? contacts.map(contact => `${getDisplayName(contact)}`).join(', ')
-      : ''
-
-  return { contactName, isLoadingContacts }
+  return { contacts, isLoadingContacts }
 }
 export default useReferencedContactName

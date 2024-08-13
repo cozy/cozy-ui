@@ -1,37 +1,32 @@
-import memoize from 'lodash/memoize'
+const getThemeNodeClassName = (type, variant) => `CozyTheme--${type}-${variant}`
 
-const mockedGetCssVariableValue = () => '#fff'
+const getNodeWithThemeCssVars = (type, variant) => {
+  const className = getThemeNodeClassName(type, variant)
 
-const realGetCssVariableValue = memoize(variableName =>
-  window
-    .getComputedStyle(document.body)
-    .getPropertyValue(`--${variableName}`)
-    .trim()
-)
+  return document.getElementsByClassName(className)[0]
+}
 
-const realGetInvertedCssVariableValue = variableName => {
-  const className = 'CozyTheme--inverted'
-  let node = document.getElementsByClassName(className)[0]
+export const createNodeWithThemeCssVars = (type, variant) => {
+  if (process.env.NODE_ENV === 'test') return null
 
-  if (!node) {
-    node = document.createElement('div')
-    node.className = className
+  if (!getNodeWithThemeCssVars(type, variant)) {
+    const node = document.createElement('div')
+    node.className = getThemeNodeClassName(type, variant)
     node.style.display = 'none'
-    document.body.appendChild(node)
+    document.body.prepend(node)
   }
+}
+
+const realGetCssVariableValue = (varName, type, variant) => {
+  const node = getNodeWithThemeCssVars(type, variant)
 
   return window
     .getComputedStyle(node)
-    .getPropertyValue(`--${variableName}`)
+    .getPropertyValue(`--${varName}`)
     .trim()
 }
 
-export const getCssVariableValue =
+export const getCssVariableValue = (varName, type, variant) =>
   process.env.NODE_ENV === 'test'
-    ? mockedGetCssVariableValue
-    : realGetCssVariableValue
-
-export const getInvertedCssVariableValue =
-  process.env.NODE_ENV === 'test'
-    ? mockedGetCssVariableValue
-    : realGetInvertedCssVariableValue
+    ? '#fff'
+    : realGetCssVariableValue(varName, type, variant)

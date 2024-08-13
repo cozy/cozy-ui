@@ -66,12 +66,11 @@ class Viewer extends Component {
       currentFile,
       hasPrevious,
       hasNext,
-      toolbarProps,
       toolbarRef,
       showNavigation,
       renderFallbackExtraContent,
       validForPanel,
-      onlyOfficeProps,
+      children,
       componentsProps
     } = this.props
 
@@ -88,15 +87,15 @@ class Viewer extends Component {
           onPrevious={this.onPrevious}
           onNext={this.onNext}
           expanded={expanded}
-          toolbarProps={{ ...toolbarProps, toolbarRef }}
+          toolbarProps={{ ...componentsProps.toolbarProps, toolbarRef }}
           showNavigation={showNavigation}
           showInfoPanel={validForPanel}
         >
+          {children}
           <ViewerByFile
             file={currentFile}
             onClose={this.onClose}
             renderFallbackExtraContent={renderFallbackExtraContent}
-            onlyOfficeProps={onlyOfficeProps}
             componentsProps={componentsProps}
           />
         </ViewerControls>
@@ -114,19 +113,11 @@ Viewer.propTypes = {
   onCloseRequest: PropTypes.func,
   /** Called with (nextFile, nextIndex) when the user requests to navigate to another file */
   onChangeRequest: PropTypes.func,
-  toolbarProps: PropTypes.shape(toolbarPropsPropType),
   toolbarRef: PropTypes.object,
   /** Whether to show left and right arrows to navigate between files */
   showNavigation: PropTypes.bool,
   /** A render prop that is called when a file can't be displayed */
   renderFallbackExtraContent: PropTypes.func,
-  /** Used to open an Only Office file */
-  onlyOfficeProps: PropTypes.shape({
-    /** Whether Only Office is enabled on the server */
-    isEnabled: PropTypes.bool,
-    /** To open the Only Office file */
-    opener: PropTypes.func
-  }),
   validForPanel: PropTypes.bool,
   /* Props passed to components with the same name */
   componentsProps: PropTypes.shape({
@@ -136,7 +127,8 @@ Viewer.propTypes = {
       isEnabled: PropTypes.bool,
       /** To open the Only Office file */
       opener: PropTypes.func
-    })
+    }),
+    toolbarProps: PropTypes.shape(toolbarPropsPropType)
   })
 }
 

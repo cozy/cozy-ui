@@ -1,7 +1,5 @@
-import { getCssVariableValue } from '../utils/color'
-
 export const makeTypography = palette => ({
-  fontFamily: getCssVariableValue('primaryFont') || 'Lato',
+  fontFamily: 'var(--primaryFont)',
   h1: {
     fontSize: 48,
     fontWeight: 'bold',

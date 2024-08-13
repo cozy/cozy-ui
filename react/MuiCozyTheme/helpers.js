@@ -1,94 +1,51 @@
-import { alpha, lighten, darken } from '../styles'
+import { alpha } from '../styles'
+import { getCssVariableValue } from '../utils/color'
 
-export const makeAlertColor = (theme, color) => {
-  const themeColorByColor = {
-    primary: theme.palette[color].main,
-    secondary: theme.palette.text.primary,
-    success: theme.palette[color].main,
-    error: theme.palette[color].main,
-    warning: theme.palette[color].main,
-    info: theme.palette[color].main
-  }
+export const makeAlertBackgroundColor = ({ theme, severity }) => ({
+  standard: alpha(
+    theme.palette[severity].main,
+    theme.palette.background.contrastOpacity
+  ),
+  outlined: theme.palette[severity].main,
+  filled: theme.palette[severity].main
+})
 
+export const makeAlertColor = (theme, severity) => {
   // same approach as Mui, see https://github.com/mui/material-ui/blob/v4.x/packages/material-ui-lab/src/Alert/Alert.js#L28
   return {
     '&-standard': {
-      color: darken(themeColorByColor[color], 0.6),
-      backgroundColor: lighten(themeColorByColor[color], 0.9),
-      '& .MuiAlert-icon': {
-        color: themeColorByColor[color]
+      color: theme.palette.text.primary,
+      backgroundColor: makeAlertBackgroundColor({ theme, severity }).standard,
+      '& $icon': {
+        color:
+          severity === 'secondary'
+            ? theme.palette.text.primary
+            : theme.palette[severity].main
       },
-      '& .MuiAlert-action': {
+      '& $action': {
         '& button[title="Close"]': {
-          color: darken(themeColorByColor[color], 0.6)
+          color: theme.palette.text.secondary
         }
       }
     },
     '&-outlined': {
-      color: darken(themeColorByColor[color], 0.6),
-      border: `1px solid ${themeColorByColor[color]}`,
-      '& .MuiAlert-icon': {
-        color: themeColorByColor[color]
-      },
-      '& .MuiAlert-action': {
-        '& button[title="Close"]': {
-          color: darken(themeColorByColor[color], 0.6)
-        }
+      color: theme.palette.text.primary,
+      border: `1px solid ${
+        makeAlertBackgroundColor({ theme, severity }).outlined
+      }`,
+      '& $icon': {
+        color:
+          severity === 'secondary'
+            ? theme.palette.text.primary
+            : theme.palette[severity].main
       }
     },
     '&-filled': {
-      color: '#fff',
-      backgroundColor:
-        color === 'secondary'
-          ? theme.palette.grey[600]
-          : themeColorByColor[color],
-      '& .MuiAlert-action': {
+      color: theme.palette[severity].contrastText,
+      backgroundColor: makeAlertBackgroundColor({ theme, severity }).filled,
+      '& $action': {
         '& button[title="Close"]': {
-          color: '#fff'
-        }
-      }
-    }
-  }
-}
-
-export const makeAlertInvertedColor = (theme, color) => {
-  return {
-    '&-standard': {
-      color: theme.palette.primary.main,
-      backgroundColor: theme.palette.background.default,
-      '& .MuiAlert-icon': {
-        color: theme.palette[color].main
-      },
-      '& .MuiAlert-action': {
-        '& button[title="Close"]': {
-          color: theme.palette.primary.main
-        }
-      }
-    },
-    '&-outlined': {
-      color: theme.palette.primary.main,
-      border: `1px solid ${theme.palette.primary.main}`,
-      '& .MuiAlert-icon': {
-        color: theme.palette[color].main
-      },
-      '& .MuiAlert-action': {
-        '& button[title="Close"]': {
-          color: theme.palette.primary.main
-        }
-      }
-    },
-    '&-filled': {
-      color: theme.palette[color].contrastText,
-      backgroundColor:
-        color === 'secondary'
-          ? theme.palette.grey[200]
-          : theme.palette[color].main,
-      '& .MuiAlert-icon': {
-        color: theme.palette[color].contrastText
-      },
-      '& .MuiAlert-action': {
-        '& button[title="Close"]': {
-          color: theme.palette[color].contrastText
+          color: theme.palette[severity].contrastText
         }
       }
     }
@@ -101,7 +58,7 @@ export const makeChipStyleByColor = (theme, color) => ({
     color === 'primary'
       ? theme.palette.border.main
       : alpha(theme.palette[color].main, theme.palette.border.opacity),
-  '&.Mui-clickable, &.Mui-deletable': {
+  '&$clickable, &$deletable': {
     '&:hover, &:focus': {
       borderColor:
         color === 'primary'
@@ -113,13 +70,13 @@ export const makeChipStyleByColor = (theme, color) => ({
           : alpha(theme.palette[color].main, theme.palette.action.hoverOpacity)
     }
   },
-  '& .MuiChip-icon': {
+  '& $icon': {
     color:
       color === 'primary' ? theme.palette.text.icon : theme.palette[color].main,
     fill:
       color === 'primary' ? theme.palette.text.icon : theme.palette[color].main
   },
-  '& .MuiChip-deleteIcon': {
+  '& $deleteIcon': {
     color:
       color === 'primary'
         ? theme.palette.text.secondary
@@ -129,24 +86,24 @@ export const makeChipStyleByColor = (theme, color) => ({
         ? theme.palette.text.secondary
         : theme.palette[color].main
   },
-  '&.MuiChip-colorPrimary': {
+  '&$colorPrimary': {
     padding: '0 1px',
     color: theme.palette[color].contrastText,
     backgroundColor: theme.palette[color].main,
-    '& .MuiChip-icon, & .MuiChip-deleteIcon': {
+    '& $icon, & $deleteIcon': {
       color: theme.palette[color].contrastText,
       fill: theme.palette[color].contrastText
     },
-    '&.Mui-disabled': {
+    '&$disabled': {
       opacity: 1,
       color: theme.palette.text.disabled,
       backgroundColor: theme.palette.action.disabledBackground,
-      '& .MuiChip-icon, & .MuiChip-deleteIcon': {
+      '& $icon, & $deleteIcon': {
         color: theme.palette.text.disabled,
         fill: theme.palette.text.disabled
       }
     },
-    '&.Mui-clickable, &.Mui-deletable': {
+    '&$clickable, &$deletable': {
       '&:hover, &:focus': {
         backgroundColor: theme.palette[color].dark
       }
@@ -155,7 +112,7 @@ export const makeChipStyleByColor = (theme, color) => ({
   '&.ghost': {
     borderWidth: '1px',
     borderStyle: 'dashed',
-    '&:not(.Mui-disabled)': {
+    '&:not($disabled)': {
       color: theme.palette[color].main,
       borderColor: alpha(
         theme.palette[color].main,
@@ -165,12 +122,12 @@ export const makeChipStyleByColor = (theme, color) => ({
         theme.palette[color].main,
         theme.palette.action.ghostOpacity
       ),
-      '& .MuiChip-icon, & .MuiChip-deleteIcon': {
+      '& $icon, & $deleteIcon': {
         color: theme.palette[color].main,
         fill: theme.palette[color].main
       }
     },
-    '&.Mui-clickable, &.Mui-deletable': {
+    '&$clickable, &$deletable': {
       '&:hover, &:focus': {
         borderColor: alpha(
           theme.palette[color].main,
@@ -241,13 +198,19 @@ export const makeContainedButtonStyle = (theme, color) => ({
   }
 })
 
-export const addStyleOverrides = overrides => {
-  const components = {}
-  Object.entries(overrides)
-    .map(([key, value]) => ({
-      [key]: { styleOverrides: value }
-    }))
-    .forEach(value => Object.assign(components, value))
+/**
+ * @param {string} position one of `"top"` or `"bottom"`
+ * @returns {string} `var(--flagship-${position}-height, 0px)`
+ */
+export const getFlagshipCssVar = position =>
+  `var(--flagship-${position}-height, 0px)`
 
-  return components
-}
+/**
+ * @param {string} type - Type of the theme
+ * @param {string} variant - Variant of the theme
+ * @returns {array} Array of Mui shadows
+ */
+export const makeShadows = (type, variant) =>
+  [...Array(25)].map((_, index) =>
+    getCssVariableValue(`shadow${index}`, type, variant)
+  )

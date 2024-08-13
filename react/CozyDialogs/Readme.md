@@ -7,11 +7,12 @@ Will automatically:
 
 ### Usage
 
-* **Dialog** : default Cozy modal
-* **ConfirmDialog** : used for confirmation popups
-* **IllustrationDialog** : used for illustration as title
-* **FixedDialog** : default one but with both title/actions fixed
-* **FixedActionsDialog** : default one but with title fluid and actions fixed
+* **Dialog**: default Cozy modal
+* **ConfirmDialog**: used for confirmation popups
+* **IllustrationDialog**: used for illustration as title
+* **FixedDialog**: default one but with both title/actions fixed
+* **FixedActionsDialog**: default one but with title fluid and actions fixed
+* **PermissionDialog**: used to request permission
 
 ```bash
 import { Dialog } from  'cozy-ui/transpiled/react/CozyDialogs'
@@ -49,7 +50,7 @@ import Button from  'cozy-ui/transpiled/react/Buttons'
   * if defined and in mobile mode then the back button will trigger onBack() instead of onClose()
   * if not defined and in mobile mode then the back button will trigger onClose()
 
-Additionally, all the CozyDialogs support [MUI Dialog's props](https://v3.material-ui.com/api/dialog/).
+Additionally, all the CozyDialogs support [MUI Dialog's props](https://v4.mui.com/api/dialog/).
 
 ### Exemples
 
@@ -59,13 +60,14 @@ import {
   ConfirmDialog,
   IllustrationDialog,
   FixedDialog,
-  FixedActionsDialog
+  FixedActionsDialog,
+  PermissionDialog
 } from  'cozy-ui/transpiled/react/CozyDialogs'
 
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 
 import Button from 'cozy-ui/transpiled/react/Buttons'
-import Alerter from 'cozy-ui/transpiled/react/Alerter'
+import Alerter from 'cozy-ui/transpiled/react/deprecated/Alerter'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import Typography from 'cozy-ui/transpiled/react/Typography'
 import Variants from 'cozy-ui/docs/components/Variants'
@@ -77,6 +79,7 @@ import FormLabel from 'cozy-ui/transpiled/react/FormLabel'
 import BottomSheet, { BottomSheetItem } from 'cozy-ui/transpiled/react/BottomSheet'
 import Stack from 'cozy-ui/transpiled/react/Stack'
 
+import ToTheCloudIcon from 'cozy-ui/transpiled/react/Icons/ToTheCloud'
 import CloudIcon from "cozy-ui/transpiled/react/Icons/Cloud"
 import BackgroundImg from './background.png'
 
@@ -133,7 +136,8 @@ const dialogTitles = {
   IllustrationDialog: <Icon icon={CloudIcon} size="140" />,
   FixedDialog: 'Fixed Dialog',
   FixedActionsDialog: 'Fixed Actions Dialog',
-  Dialog: 'Dialog'
+  Dialog: 'Dialog',
+  PermissionDialog: 'Are you sure ?'
 }
 
 const dialogContents = {
@@ -141,7 +145,8 @@ const dialogContents = {
   IllustrationDialog: "An IllustrationDialog contains short content." + content.ada.short,
   FixedDialog: "A FixedDialog can contain very long content. Actions are at the bottom of the content are not visible to the user if she has not scrolled to the bottom. " + content.ada.long,
   FixedActionsDialog: "A FixedActionsDialog can contain very long content. Actions are visible even without scrolling. " + content.ada.long,
-  Dialog: "A normal Dialog should contain short content. " + content.ada.short
+  Dialog: "A normal Dialog should contain short content. " + content.ada.short,
+  PermissionDialog: "Content of a confirm dialog, precising what the actions will do, and asking the user if she is sure.",
 }
 
 const dialogActions = {
@@ -149,7 +154,8 @@ const dialogActions = {
   IllustrationDialog: <ExampleDialogActions />,
   FixedDialog: <ExampleDialogActions />,
   FixedActionsDialog: <ExampleDialogActions />,
-  Dialog: <ExampleDialogActions />
+  Dialog: <ExampleDialogActions />,
+  PermissionDialog: <ExampleDialogActions />,
 }
 
 const dialogs = [
@@ -157,7 +163,8 @@ const dialogs = [
   ConfirmDialog,
   IllustrationDialog,
   FixedDialog,
-  FixedActionsDialog
+  FixedActionsDialog,
+  PermissionDialog
 ]
 
 const StateRadio = ({ name, ...props }) => {
@@ -203,7 +210,7 @@ const initialVariants = [{
 
 ;
 
-<BreakpointsProvider>
+<DemoProvider>
   <Variants initialVariants={initialVariants}>
     {variant => (
       <>
@@ -273,82 +280,86 @@ const initialVariants = [{
           ))}
         </div>
 
-        <DialogComponent
-          size={DialogComponent !== ConfirmDialog ? state.size : undefined}
-          open={state.modalOpened}
-          onClose={variant.withCloseButton ? handleClose : undefined}
-          onBack={variant.withBackButton ? handleBack : undefined}
-          disableTitleAutoPadding={variant.disableTitleAutoPadding}
-          align={variant.alignTop ? 'top': 'middle'}
-          title={variant.hideTitle
-            ? undefined
-            : DialogComponent !== IllustrationDialog && variant.titleLong
-              ? `${dialogTitles[DialogComponent.name]} - ${content.ada.short}`
-              : dialogTitles[DialogComponent.name]
-          }
-          disableGutters={variant.disableGutters}
-          background={variant.withBackground ? `var(--paperBackgroundColor) repeat-x url(${BackgroundImg})` : undefined}
-          content={
-            <>
-              <Typography component="div" variant="body1">
-                { state.content == 'default'
-                  ? dialogContents[DialogComponent.name]
-                  : state.content == 'long'
-                    ? content.ada.long
-                    : content.ada.short
-                }
-                <Stack className="u-mt-1" spacing="s">
-                  <div>
-                    <Button label="Show an alert" onClick={() => Alerter.success('Hello', { duration: 100000 })}/>
-                  </div>
-                  <div>
-                    <Button label="Show inner bottom sheet" onClick={showBottomSheet}/>
-                  </div>
-                  <div>
-                    <Button label="Show inner confirm dialog" onClick={showSecondConfirmDialog}/>
-                  </div>
-                </Stack>
-              </Typography>
-
-              {state.secondConfirmDialogOpened && (
-                <ConfirmDialog open onClose={hideSecondConfirmDialog}
-                  title="This is a simple title"
-                  content="This is a simple content"
-                />
-              )}
-
-              {state.bottomSheetOpened && (
-                <BottomSheet backdrop onClose={hideBottomSheet}>
-                  <BottomSheetItem>
-                    <div className="u-mb-1">
-                      <Button label="Show inner confirm dialog" onClick={showBSConfirmDialog}/>
+        {state.modalOpened && (
+          <DialogComponent
+            open
+            size={DialogComponent !== ConfirmDialog ? state.size : undefined}
+            onClose={variant.withCloseButton ? handleClose : undefined}
+            onBack={variant.withBackButton ? handleBack : undefined}
+            disableTitleAutoPadding={variant.disableTitleAutoPadding}
+            align={variant.alignTop ? 'top': 'middle'}
+            title={variant.hideTitle
+              ? undefined
+              : DialogComponent !== IllustrationDialog && variant.titleLong
+                ? `${dialogTitles[DialogComponent.name]} - ${content.ada.short}`
+                : dialogTitles[DialogComponent.name]
+            }
+            disableGutters={variant.disableGutters}
+            background={variant.withBackground ? `var(--paperBackgroundColor) repeat-x url(${BackgroundImg})` : undefined}
+            icon={DialogComponent === PermissionDialog ? CloudIcon : undefined}
+            content={
+              <>
+                <Typography component="div" variant="body1">
+                  { state.content == 'default'
+                    ? dialogContents[DialogComponent.name]
+                    : state.content == 'long'
+                      ? content.ada.long
+                      : content.ada.short
+                  }
+                  <Stack className="u-mt-1" spacing="s">
+                    <div>
+                      <Button label="Show an alert" onClick={() => Alerter.success('Hello', { duration: 100000 })}/>
                     </div>
-                    {content.ada.long}
-                    {state.BSConfirmDialogOpened && (
-                      <ConfirmDialog open onClose={hideBSConfirmDialog}
-                        title="This is a simple title"
-                        content="This is a simple content"
-                      />
-                    )}
-                  </BottomSheetItem>
-                </BottomSheet>
-              )}
-            </>
-          }
-          actions={variant.showActions && dialogActions[DialogComponent.name]}
-          actionsLayout={variant.actionsLayoutColumn ? 'column' : 'row'}
-        />
+                    <div>
+                      <Button label="Show inner bottom sheet" onClick={showBottomSheet}/>
+                    </div>
+                    <div>
+                      <Button label="Show inner confirm dialog" onClick={showSecondConfirmDialog}/>
+                    </div>
+                  </Stack>
+                </Typography>
+
+                {state.secondConfirmDialogOpened && (
+                  <ConfirmDialog open onClose={hideSecondConfirmDialog}
+                    title="This is a simple title"
+                    content="This is a simple content"
+                  />
+                )}
+
+                {state.bottomSheetOpened && (
+                  <BottomSheet backdrop onClose={hideBottomSheet}>
+                    <BottomSheetItem>
+                      <div className="u-mb-1">
+                        <Button label="Show inner confirm dialog" onClick={showBSConfirmDialog}/>
+                      </div>
+                      {content.ada.long}
+                      {state.BSConfirmDialogOpened && (
+                        <ConfirmDialog open onClose={hideBSConfirmDialog}
+                          title="This is a simple title"
+                          content="This is a simple content"
+                        />
+                      )}
+                    </BottomSheetItem>
+                  </BottomSheet>
+                )}
+              </>
+            }
+            actions={variant.showActions && dialogActions[DialogComponent.name]}
+            actionsLayout={variant.actionsLayoutColumn ? 'column' : 'row'}
+          />
+        )}
       </>
     )}
   </Variants>
-</BreakpointsProvider>
+</DemoProvider>
 ```
 
 ### Dialogs with title button
 
 ```jsx
 import cx from 'classnames'
-import useBreakpoints, { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import useBreakpoints from 'cozy-ui/transpiled/react/providers/Breakpoints'
+import DemoProvider from 'cozy-ui/docs/components/DemoProvider'
 
 import { Dialog } from  'cozy-ui/transpiled/react/CozyDialogs'
 import Button from  'cozy-ui/transpiled/react/Buttons'
@@ -388,11 +399,11 @@ const Modal = () => {
 
 ;
 
-<BreakpointsProvider>
+<DemoProvider>
   <Button label="Open modal" onClick={() => setState({ showModal: true })}/>
 
   {state.showModal && (
     <Modal />
   )}
-</BreakpointsProvider>
+</DemoProvider>
 ```

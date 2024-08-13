@@ -1,3 +1,3 @@
-import MuiCircularProgress from '@mui/material/CircularProgress'
+import MuiCircularProgress from '@material-ui/core/CircularProgress'
 
 export default MuiCircularProgress

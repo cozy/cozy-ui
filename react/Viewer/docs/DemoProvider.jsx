@@ -1,9 +1,11 @@
 import React from 'react'
 
 import { CozyProvider } from 'cozy-client'
-import { BreakpointsProvider } from '../../hooks/useBreakpoints'
+import { BreakpointsProvider } from '../../providers/Breakpoints'
 
-import { I18nContext } from '../../I18n'
+import I18n from '../../providers/I18n'
+import { locales } from '../locales/index'
+import CloudWallpaper from 'cozy-ui/docs/cloud-wallpaper.jpg'
 
 const demoTextFileResponse = {
   text: () => new Promise(resolve => resolve('Hello World !'))
@@ -11,7 +13,7 @@ const demoTextFileResponse = {
 
 const demoFilesByClass = {
   pdf:
-    'https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/examples/learning/helloworld.pdf',
+    'https://raw.githubusercontent.com/rospdf/pdf-php/2ccf7591fc2f18e63342ebfedad7997b08c34ed2/readme.pdf',
   audio: 'https://viewerdemo.cozycloud.cc/Z.mp3',
   video: 'https://viewerdemo.cozycloud.cc/Nextcloud.mp4',
   text: 'https://viewerdemo.cozycloud.cc/notes.md'
@@ -38,8 +40,7 @@ const mockClient = {
         resolve({
           data: {
             links: {
-              large: 'https://viewerdemo.cozycloud.cc/IMG_0062.PNG',
-              preview: 'https://viewerdemo.cozycloud.cc/IMG_0062.PNG'
+              large: CloudWallpaper
             }
           }
         })
@@ -55,21 +56,32 @@ const mockClient = {
     subscribe: () => {},
     unsubscribe: () => {}
   },
-  getQueryFromState: () => {},
+  getQueryFromState: queryName => {
+    if (queryName === 'io.cozy.files/parent_folder') {
+      return {
+        data: {
+          _id: 'parent_id',
+          path: '/Parent'
+        }
+      }
+    }
+  },
   query: () => ({
     data: [{ attributes: { slug: 'mespapiers' }, links: { related: '' } }]
   }),
-  getInstanceOptions: () => ({ app: { slug: 'mespapiers' } })
+  getInstanceOptions: () => ({ app: { slug: 'mespapiers' }, subdomain: 'flat' })
 }
 
 class Wrapper extends React.Component {
   render() {
+    const lang = localStorage.getItem('lang') || 'en'
+
     return (
       <CozyProvider client={mockClient}>
         <BreakpointsProvider>
-          <I18nContext.Provider value={{ t: x => x, lang: 'en' }}>
+          <I18n dictRequire={lang => locales[lang]} lang={lang}>
             {this.props.children}
-          </I18nContext.Provider>
+          </I18n>
         </BreakpointsProvider>
       </CozyProvider>
     )

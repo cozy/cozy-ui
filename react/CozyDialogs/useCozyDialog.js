@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import cx from 'classnames'
 
-import useBreakpoints from '../hooks/useBreakpoints'
+import useBreakpoints from '../providers/Breakpoints'
 import { makeStyles } from '../styles'
 
 import DialogTransition from './DialogTransition'
@@ -70,15 +70,18 @@ const useCozyDialog = props => {
     ...componentsProps?.dialogTitle,
     id: `modal-title-${id}`,
     ref: titleRef,
-    className: cx(
-      {
-        'u-ellipsis': !isFluidTitle,
-        dialogTitleFluid: isFluidTitle,
-        dialogTitleWithClose: showCloseButton && !disableTitleAutoPadding,
-        dialogTitleWithBack: showBackButton && !disableTitleAutoPadding
-      },
-      componentsProps?.dialogTitle?.className
-    )
+    disableTypography: true,
+    className:
+      'cozyDialogTitle ' +
+      cx(
+        {
+          'u-ellipsis': !isFluidTitle,
+          dialogTitleFluid: isFluidTitle,
+          dialogTitleWithClose: showCloseButton && !disableTitleAutoPadding,
+          dialogTitleWithBack: showBackButton && !disableTitleAutoPadding
+        },
+        componentsProps?.dialogTitle?.className
+      )
   }
 
   const listItemClassName = 'listItem--dialog'
@@ -107,7 +110,8 @@ const useCozyDialog = props => {
       root: cx({
         disableGutters
       })
-    }
+    },
+    className: 'cozyDialogContent'
   }
 
   return {

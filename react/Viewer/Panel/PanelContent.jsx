@@ -7,15 +7,18 @@ import Paper from '../../Paper'
 import Typography from '../../Typography'
 import { withViewerLocales } from '../hoc/withViewerLocales'
 
-import getPanelBlocks, { panelBlocksSpecs } from './getPanelBlocks'
+import getPanelBlocks, { getPanelBlocksSpecs } from './getPanelBlocks'
 
-const PanelContent = ({ file, t }) => {
-  const panelBlocks = getPanelBlocks({ panelBlocksSpecs, file })
+const PanelContent = ({ file, isPublic, t }) => {
+  const panelBlocks = getPanelBlocks({
+    panelBlocksSpecs: getPanelBlocksSpecs(isPublic),
+    file
+  })
 
   return (
     <Stack spacing="s" className={cx('u-flex u-flex-column u-h-100')}>
       <Paper
-        className={'u-ph-2 u-flex u-flex-items-center u-h-3'}
+        className="u-flex u-flex-items-center u-h-3 u-ph-2 u-flex-shrink-0"
         elevation={2}
         square
       >
@@ -40,7 +43,8 @@ const PanelContent = ({ file, t }) => {
 }
 
 PanelContent.propTypes = {
-  file: PropTypes.object.isRequired
+  file: PropTypes.object.isRequired,
+  isPublic: PropTypes.bool
 }
 
 export default withViewerLocales(PanelContent)

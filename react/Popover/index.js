@@ -1,1 +1,3 @@
-export { default } from './Popover'
+import Popover from '@material-ui/core/Popover'
+
+export default Popover

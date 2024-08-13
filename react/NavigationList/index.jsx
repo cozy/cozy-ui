@@ -1,11 +1,11 @@
 import React from 'react'
 import cx from 'classnames'
-import List from '../MuiCozyTheme/List'
+import List from '../List'
 import Stack from '../Stack'
 import Card from '../Card'
 import Typography from '../Typography'
-import useBreakpoints from '../hooks/useBreakpoints'
-import ListSubheader from '../MuiCozyTheme/ListSubheader'
+import useBreakpoints from '../providers/Breakpoints'
+import ListSubheader from '../ListSubheader'
 import styles from './styles.styl'
 
 const NavigationList = ({ children, style, className }) => {

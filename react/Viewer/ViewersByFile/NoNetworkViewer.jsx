@@ -2,7 +2,7 @@ import React from 'react'
 
 import Icon from '../../Icon'
 import CloudBrokenIcon from '../../Icons/CloudBroken'
-import Button from '../../Button'
+import Button from '../../deprecated/Button'
 
 import { withViewerLocales } from '../hoc/withViewerLocales'
 

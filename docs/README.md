@@ -34,7 +34,7 @@ yarn add cozy-ui
 If you use the transpiled components (from `cozy-ui/transpiled/react`), you need to import the stylesheet (once):
 
 ```
-import Button from 'cozy-ui/transpiled/react/Button'
+import Button from 'cozy-ui/transpiled/react/deprecated/Button'
 import 'cozy-ui/transpiled/react/stylesheet.css'
 
 <Button />
@@ -77,6 +77,7 @@ First `nvm use` (to set node version as defined in .nvmrc) then `yarn install`
 It is convenient when modifying a component to use the styleguide site.
 
 ```bash
+yarn makeSpriteAndPalette # Create sprite and palette
 yarn start # Transpile the files in watch mode
 yarn build:css:all # Build CSS files needed by the documentation
 yarn start:doc # Run the styleguide in watch mode
@@ -89,9 +90,11 @@ If you want to add a new component, you must follow these steps:
 * Add the new component in `/react` folder with its `README.md` file
 * Expose it in the API by adding it in `react/index.js`
 * Add it in the documentation by modifying `docs/styleguide.config.js`
-* If necessary you can add snapshots for it by modifying `react/examples.spec.jsx` and updating them `yarn build && yarn test -u`
+* If necessary you can add snapshots for it by modifying `react/examples.spec.jsx` and updating them `yarn makeSpriteAndPalette && yarn build && yarn test -u`
 * Remember to propagate the possible `ref` with `React.forwardRef`. [See forwardRef documentation](https://en.reactjs.org/docs/forwarding-refs.html)
 * Try to think of ARIA attributes if you are coding new components
+
+Be careful to respect MUI API when creating a new component. See [our guidelines to create a new component](./guidelines.md#new-component).
 
 ### Rename/Move a component
 
@@ -102,7 +105,7 @@ When renaming or moving a Cozy-UI component, it may cause a breaking change. In 
 * Use material UI whenever possible
 * Override material UI components inside `makeOverrides.js` when necessary
 * Avoid stylus to style new components based on MUI and prefer `/helpers/makeStyles`
-* Use semantic variables for colors from `stylus/settings/palette.styl`, or color from `theme` objects in `makeStyles`
+* Use semantic variables for colors from `stylus/settings/palettes.styl`, or color from `theme` objects in `makeStyles`
 
 ### Add an icon
 
@@ -114,7 +117,7 @@ If you want to add a new icon to cozy-ui, you must follow these steps:
 * Generate the react component by running `yarn makeSvgr assets/icons/[ui || illus]/[new icon file name]`
 * Update the documentation by adding the new file in react/Icon/Readme.md. If it's an icon, add it in SVGr icons and Available UI icons sections, or in SVGr illustrations and Available illustrations sections if it's an illustration
 * Don't forget to check the icon's color on different theme (inverted, etc.)
-* Update the tests by running `yarn sprite && yarn build && yarn test -u`
+* Update the tests by running `yarn makeSpriteAndPalette && yarn build && yarn test -u`
 
 ### Develop inside an app
 
@@ -123,10 +126,10 @@ Then you need to link cozy-ui with `yarn link`. Since `cozy-ui` is transpiled, w
 
 ```bash
 cd cozy-ui
-yarn release # if first time
+yarn makeSpriteAndPalette # if first time
 yarn link
 yarn start # Launch transpilation
-yarn release # if you change icons or palette
+yarn makeSpriteAndPalette # if you change icons or palette
 ```
 
 Then in your application folder, you can link to your local Cozy UI.
@@ -149,10 +152,7 @@ you have deployed a version of the styleguidist containing your changes to your 
 Don't forget to change `USERNAME` by yours.
 
 ```bash
-yarn build
-yarn build:css:all
-yarn build:doc
-yarn deploy:doc --repo git@github.com:USERNAME/cozy-ui.git
+yarn build:all && yarn deploy:doc --repo git@github.com:USERNAME/cozy-ui.git
 ```
 
 ⚠️ If the `deploy:doc` failed, you need to checkout your dev branch by doing `git checkout -`
@@ -162,7 +162,7 @@ yarn deploy:doc --repo git@github.com:USERNAME/cozy-ui.git
 Be aware that snapshots in unit tests use the transpiled version of cozy-ui. Therefore if you make changes and need to update the snapshots, you need to transpile first.
 
 ```bash
-yarn build && yarn test -u
+yarn makeSpriteAndPalette && yarn build && yarn test -u
 ```
 
 We suggest to use `@testing-library/react` over `enzyme` for tests. We have
@@ -195,6 +195,7 @@ screenshots of your components (uses Puppeteer under the hood).
 
 ```bash
 yarn add cozy-ui # The rsg-screenshots binary is now installed
+yarn makeSpriteAndPalette
 yarn build:doc:react # Build our styleguide, the output directory is docs/react
 rsg-screenshots --screenshot-dir screenshots/ --styleguide-dir docs/react # Each component in the styleguide will be screenshotted and saved inside the screenshots/ directory
 ```

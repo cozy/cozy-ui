@@ -9,6 +9,7 @@ import FileImageLoader from 'cozy-ui/transpiled/react/FileImageLoader'
 import Icon from 'cozy-ui/transpiled/react/Icon'
 import FileDuotoneIcon from "cozy-ui/transpiled/react/Icons/FileDuotone"
 import BankIcon from "cozy-ui/transpiled/react/Icons/Bank"
+import CloudWallpaper from 'cozy-ui/docs/cloud-wallpaper.jpg'
 
 const file = {
   _id: 'image',
@@ -16,7 +17,7 @@ const file = {
   name: 'Demo.img',
   mime: 'application/jpeg',
   links: {
-    large: 'https://viewerdemo.cozycloud.cc/IMG_0062.PNG'
+    large: CloudWallpaper
   }
 }
 

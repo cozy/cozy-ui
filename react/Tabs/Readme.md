@@ -1,7 +1,7 @@
 ```jsx
 import Tabs from 'cozy-ui/transpiled/react/Tabs'
 import Tab from 'cozy-ui/transpiled/react/Tab'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Variants from 'cozy-ui/docs/components/Variants'
 
 initialState = { value: 0 }
@@ -18,12 +18,14 @@ const initialVariants = [{ narrowed: false, segmented: false }]
   <Variants initialVariants={initialVariants} screenshotAllVariants>
     {variant => (
       <Tabs
+        indicatorColor="primary"
+        textColor="primary"
         value={state.value}
         narrowed={variant.narrowed}
         segmented={variant.segmented}
         aria-label="simple tabs example"
-        onChange={handleChange}
         variant={variant.scrollable ? 'scrollable' : undefined}
+        onChange={handleChange}
       >
         <Tab label="Item One" id="simple-tab-0" aria-controls="simple-tabpanel-0" />
         <Tab label="Item Two" id="simple-tab-1" aria-controls="simple-tabpanel-1" />
@@ -41,7 +43,7 @@ const initialVariants = [{ narrowed: false, segmented: false }]
 ```jsx
 import Tabs from 'cozy-ui/transpiled/react/Tabs'
 import Tab from 'cozy-ui/transpiled/react/Tab'
-import { BreakpointsProvider } from 'cozy-ui/transpiled/react/hooks/useBreakpoints'
+import { BreakpointsProvider } from 'cozy-ui/transpiled/react/providers/Breakpoints'
 import Variants from 'cozy-ui/docs/components/Variants'
 
 initialState = { value: 0 }
@@ -61,10 +63,12 @@ const initialVariants = [{ standard: true, fullWidth: false, scrollable: false }
       <>
         <Tabs
           className="u-mb-2"
+          indicatorColor="primary"
+          textColor="primary"
           value={state.value}
           aria-label="simple tabs example"
-          onChange={handleChange}
           variant={Object.keys(variant).find(key => variant[key])}
+          onChange={handleChange}
         >
           <Tab label="Item One" id="simple-tab-0" aria-controls="simple-tabpanel-0" />
           <Tab label="Item Two" id="simple-tab-1" aria-controls="simple-tabpanel-1" />
@@ -77,9 +81,9 @@ const initialVariants = [{ standard: true, fullWidth: false, scrollable: false }
         <Tabs
           value={state.value}
           aria-label="simple tabs example"
-          onChange={handleChange}
           segmented
           variant={Object.keys(variant).find(key => variant[key])}
+          onChange={handleChange}
         >
           <Tab label="Item One" id="simple-tab-0" aria-controls="simple-tabpanel-0" />
           <Tab label="Item Two" id="simple-tab-1" aria-controls="simple-tabpanel-1" />

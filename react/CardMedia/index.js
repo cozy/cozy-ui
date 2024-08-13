@@ -1,3 +1,3 @@
-import MuiCardMedia from '@mui/material/CardMedia'
+import MuiCardMedia from '@material-ui/core/CardMedia'
 
 export default MuiCardMedia

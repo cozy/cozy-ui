@@ -1,3 +1,3 @@
-import MuiHidden from '@mui/material/Hidden'
+import MuiHidden from '@material-ui/core/Hidden'
 
 export default MuiHidden

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useTheme } from '@mui/material'
+import { useTheme } from '@material-ui/core'
 
 import { FileDoctype } from '../proptypes'
 
@@ -9,21 +9,24 @@ import Footer from './components/Footer'
 import PanelContent from './Panel/PanelContent'
 import FooterContent from './Footer/FooterContent'
 import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import { useCozyTheme } from '../providers/CozyTheme'
 
 const ViewerInformationsWrapper = ({
   currentFile,
   disableFooter,
   validForPanel,
   toolbarRef,
+  isPublic,
   children
 }) => {
   const theme = useTheme()
+  const { isLight } = useCozyTheme()
   const sidebar = document.querySelector('[class*="sidebar"]')
 
   useSetFlagshipUI(
     {
       bottomBackground: theme.palette.background.paper,
-      bottomTheme: 'dark'
+      bottomTheme: isLight ? 'dark' : 'light'
     },
     {
       bottomBackground: theme.palette.background[sidebar ? 'default' : 'paper']
@@ -34,14 +37,18 @@ const ViewerInformationsWrapper = ({
     <>
       {!disableFooter && (
         <Footer>
-          <FooterContent file={currentFile} toolbarRef={toolbarRef}>
+          <FooterContent
+            file={currentFile}
+            toolbarRef={toolbarRef}
+            isPublic={isPublic}
+          >
             {children}
           </FooterContent>
         </Footer>
       )}
       {validForPanel && (
         <InformationPanel>
-          <PanelContent file={currentFile} />
+          <PanelContent file={currentFile} isPublic={isPublic} />
         </InformationPanel>
       )}
     </>
@@ -53,6 +60,7 @@ ViewerInformationsWrapper.propTypes = {
   disableFooter: PropTypes.bool,
   validForPanel: PropTypes.bool,
   toolbarRef: PropTypes.object,
+  isPublic: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)

@@ -1,21 +1,33 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Table } from '../Table'
-import List from '../MuiCozyTheme/List'
-import ListSubheader from '../MuiCozyTheme/ListSubheader'
+import { useI18n } from '../providers/I18n'
+import { Table } from '../deprecated/Table'
+import List from '../List'
+import ListSubheader from '../ListSubheader'
 import { sortContacts, categorizeContacts, sortHeaders } from './helpers'
 import ContactRow from './ContactRow'
+import useBreakpoints from '../providers/Breakpoints'
+import withContactsListLocales from './locales/withContactsListLocales'
 
 const ContactsList = ({ contacts, onItemClick, ...rest }) => {
+  const { t } = useI18n()
   const sortedContacts = sortContacts(contacts)
-  const categorizedContacts = categorizeContacts(sortedContacts)
-  const sortedHeaders = sortHeaders(categorizedContacts)
+  const categorizedContacts = categorizeContacts(sortedContacts, t)
+  const sortedHeaders = sortHeaders(categorizedContacts, t)
+  const { isDesktop } = useBreakpoints()
 
   return (
     <Table {...rest}>
       {sortedHeaders.map(header => (
-        <List key={header} subheader={<ListSubheader>{header}</ListSubheader>}>
+        <List
+          key={header}
+          subheader={
+            <ListSubheader gutters={isDesktop ? 'double' : 'default'}>
+              {header}
+            </ListSubheader>
+          }
+        >
           {categorizedContacts[header].map((contact, index) => (
             <ContactRow
               key={contact._id}
@@ -36,4 +48,4 @@ ContactsList.propTypes = {
   onItemClick: PropTypes.func
 }
 
-export default ContactsList
+export default withContactsListLocales(ContactsList)

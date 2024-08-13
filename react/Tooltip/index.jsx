@@ -1,4 +1,4 @@
-import MUITooltip from '@mui/material/Tooltip'
+import MUITooltip from '@material-ui/core/Tooltip'
 
 MUITooltip.defaultProps = {
   arrow: true

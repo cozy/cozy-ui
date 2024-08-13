@@ -1,4 +1,3 @@
-@require '../settings/z-index'
 @require '../settings/breakpoints'
 @require '../objects/layouts'
 @require '../tools/mixins'
@@ -37,7 +36,7 @@ xxlarge-padding = rem(48)
 
 $modals
     position relative
-    z-index $modal-index
+    z-index var(--zIndex-modal)
 
 $modal-wrapper
     position fixed
@@ -65,8 +64,8 @@ $modal
     border-radius rem(8)
     max-height 100%
     max-width 100%
-    background-color var(--white)
-    color var(--charcoalGrey)
+    background-color var(--paperBackgroundColor)
+    color var(--primaryTextColor)
 
 for size in 'xsmall' 'small' 'medium' 'large' 'xlarge' 'xxlarge'
     $modal--{size}
@@ -159,7 +158,7 @@ $modal-header-app
     display flex
     align-items center
     font-size rem(20)
-    color var(--charcoalGrey)
+    color var(--primaryTextColor)
 
 $modal-header-app-editor
     font-weight normal
@@ -289,7 +288,7 @@ $modal--hidden
 $modal-back-button
     top rem(6)
     left rem(6)
-    color var(--coolGrey)
+    color var(--actionColorActive)
 
     +small-screen()
         top 0

@@ -2,13 +2,15 @@
   "app_categories": {
     "all": "All categories",
     "banking": "Banking",
+    "clouds": "Clouds and vaults",
     "cozy": "The essentials",
     "education": "Education",
     "energy": "Energy",
+    "finance": "Employment and finance",
     "health": "Health",
     "host_provider": "Host",
     "insurance": "Insurance",
-    "isp": "ISP",
+    "isp": "Mobile and Internet",
     "konnectors": "Services",
     "list_separator": ", ",
     "mes_infos": "MesInfos experimentation",
@@ -21,8 +23,10 @@
     "public_service": "Public services",
     "shopping": "Shopping",
     "social": "Social",
+    "tech": "Tech",
     "telecom": "Telecom",
-    "transport": "Transportation"
+    "transport": "Transportation",
+    "pro": "Work"
   },
   "sections": {
     "applications": "Applications",

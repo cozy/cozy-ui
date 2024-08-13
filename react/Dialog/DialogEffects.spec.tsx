@@ -1,12 +1,12 @@
 import '@testing-library/jest-dom'
 import React from 'react'
-import { Theme } from '@mui/material'
+import { Theme } from '@material-ui/core'
 import { render } from '@testing-library/react'
 
 import { WebviewIntentProvider, WebviewService } from 'cozy-intent'
 
 import Dialog from '.'
-import { BreakpointsProvider } from '../hooks/useBreakpoints'
+import DemoProvider from '../providers/DemoProvider'
 import { DOMStrings, makeOnMount, makeOnUnmount } from './DialogEffects'
 import { ThemeColor } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
 
@@ -28,6 +28,16 @@ const sidebar = document.createElement('div')
 const rootModal = document.createElement('div')
 const rootModalColor = 'rgba(29, 33, 42, 0.9)'
 rootModal.style.color = rootModalColor
+
+const Wrapper = ({ open, service }) => {
+  return (
+    <WebviewIntentProvider webviewService={service}>
+      <DemoProvider>
+        <Dialog open={open} />
+      </DemoProvider>
+    </WebviewIntentProvider>
+  )
+}
 
 it('should provide overlay UI when opened non-fullscreen', () => {
   expect(
@@ -151,7 +161,8 @@ it('should provide a strong reset when unmounting a Dialog in presence of a Side
   expect(
     makeOnUnmount({
       sidebar,
-      theme
+      theme,
+      isLight: true
     })
   ).toEqual({
     bottomBackground: theme.palette.background[DOMStrings.BackgroundDefault],
@@ -166,7 +177,8 @@ it('should provide a strong reset when unmounting a Dialog in presence of a Side
 it('should provide the default black on white UI when unmounting in simple contexts', () => {
   expect(
     makeOnUnmount({
-      theme
+      theme,
+      isLight: true
     })
   ).toEqual({
     bottomBackground: theme.palette.background[DOMStrings.BackgroundPaper],
@@ -197,7 +209,8 @@ it('should provide the default black on white UI with the Cozybar background on 
   expect(
     makeOnUnmount({
       cozybar,
-      theme
+      theme,
+      isLight: true
     })
   ).toEqual({
     bottomBackground: theme.palette.background[DOMStrings.BackgroundPaper],
@@ -215,7 +228,8 @@ it('should provide the inversed UI when Cozybar is not black on white, but white
   expect(
     makeOnUnmount({
       cozybar,
-      theme
+      theme,
+      isLight: true
     })
   ).toEqual({
     bottomBackground: theme.palette.background[DOMStrings.BackgroundPaper],
@@ -228,8 +242,11 @@ it('should provide the inversed UI when Cozybar is not black on white, but white
 })
 
 jest.mock('cozy-device-helper', () => ({
-  isFlagshipApp: (): boolean => true,
-  getFlagshipMetadata: (): Record<string, never> => ({})
+  isFlagshipApp: (): boolean => true
+}))
+jest.mock('../hooks/useSetFlagshipUi/helpers', () => ({
+  getFlagshipMetadata: (): Record<string, never> => ({}),
+  setRsgFlagshipElements: (): null => null
 }))
 
 const onOpenMountExpected = {
@@ -254,13 +271,7 @@ it('should emit onMount() immediately and onUnmount() when the whole tree is del
     call: (...args: unknown[]): void => caller(...args)
   } as WebviewService
 
-  const { unmount } = render(
-    <WebviewIntentProvider webviewService={service}>
-      <BreakpointsProvider>
-        <Dialog open />
-      </BreakpointsProvider>
-    </WebviewIntentProvider>
-  )
+  const { unmount } = render(<Wrapper service={service} open={true} />)
 
   expect(caller).toHaveBeenNthCalledWith(
     1,
@@ -285,13 +296,7 @@ it('should emit onMount() immediately and onUnmount() when Dialog is deleted fro
     call: (...args: unknown[]): void => caller(...args)
   } as WebviewService
 
-  const { rerender } = render(
-    <WebviewIntentProvider webviewService={service}>
-      <BreakpointsProvider>
-        <Dialog open />
-      </BreakpointsProvider>
-    </WebviewIntentProvider>
-  )
+  const { rerender } = render(<Wrapper service={service} open={true} />)
 
   expect(caller).toHaveBeenNthCalledWith(
     1,
@@ -319,22 +324,12 @@ it('should not emit onMount() if mounted as open:false, then emit onMount() on o
   } as WebviewService
 
   const { rerender, unmount } = render(
-    <WebviewIntentProvider webviewService={service}>
-      <BreakpointsProvider>
-        <Dialog open={false} />
-      </BreakpointsProvider>
-    </WebviewIntentProvider>
+    <Wrapper service={service} open={false} />
   )
 
   expect(caller).not.toHaveBeenCalled()
 
-  rerender(
-    <WebviewIntentProvider webviewService={service}>
-      <BreakpointsProvider>
-        <Dialog open={true} />
-      </BreakpointsProvider>
-    </WebviewIntentProvider>
-  )
+  rerender(<Wrapper service={service} open={true} />)
 
   expect(caller).toHaveBeenNthCalledWith(
     1,
@@ -343,13 +338,7 @@ it('should not emit onMount() if mounted as open:false, then emit onMount() on o
     'cozy-ui/Dialog (onOpenMount)'
   )
 
-  rerender(
-    <WebviewIntentProvider webviewService={service}>
-      <BreakpointsProvider>
-        <Dialog open={false} />
-      </BreakpointsProvider>
-    </WebviewIntentProvider>
-  )
+  rerender(<Wrapper service={service} open={false} />)
 
   expect(caller).toHaveBeenNthCalledWith(
     2,
@@ -358,13 +347,7 @@ it('should not emit onMount() if mounted as open:false, then emit onMount() on o
     'cozy-ui/Dialog (onOpenUnmount)'
   )
 
-  rerender(
-    <WebviewIntentProvider webviewService={service}>
-      <BreakpointsProvider>
-        <Dialog open={true} />
-      </BreakpointsProvider>
-    </WebviewIntentProvider>
-  )
+  rerender(<Wrapper service={service} open={true} />)
 
   expect(caller).toHaveBeenNthCalledWith(
     3,
@@ -394,13 +377,7 @@ it('when provided with a faulty <Dialog /> that has no open prop, it should emit
     call: (...args: unknown[]): void => caller(...args)
   } as WebviewService
 
-  const { unmount } = render(
-    <WebviewIntentProvider webviewService={service}>
-      <BreakpointsProvider>
-        <Dialog />
-      </BreakpointsProvider>
-    </WebviewIntentProvider>
-  )
+  const { unmount } = render(<Wrapper service={service} />)
 
   expect(caller).not.toHaveBeenCalled()
 
@@ -418,23 +395,11 @@ it('when provided with a faulty <Dialog /> that has no open prop, and then fixed
     call: (...args: unknown[]): void => caller(...args)
   } as WebviewService
 
-  const { rerender, unmount } = render(
-    <WebviewIntentProvider webviewService={service}>
-      <BreakpointsProvider>
-        <Dialog />
-      </BreakpointsProvider>
-    </WebviewIntentProvider>
-  )
+  const { rerender, unmount } = render(<Wrapper service={service} />)
 
   expect(caller).not.toHaveBeenCalled()
 
-  rerender(
-    <WebviewIntentProvider webviewService={service}>
-      <BreakpointsProvider>
-        <Dialog open />
-      </BreakpointsProvider>
-    </WebviewIntentProvider>
-  )
+  rerender(<Wrapper service={service} open={true} />)
 
   expect(caller).toHaveBeenNthCalledWith(
     1,
@@ -443,13 +408,7 @@ it('when provided with a faulty <Dialog /> that has no open prop, and then fixed
     'cozy-ui/Dialog (onOpenMount)'
   )
 
-  rerender(
-    <WebviewIntentProvider webviewService={service}>
-      <BreakpointsProvider>
-        <Dialog open={false} />
-      </BreakpointsProvider>
-    </WebviewIntentProvider>
-  )
+  rerender(<Wrapper service={service} open={false} />)
 
   expect(caller).toHaveBeenNthCalledWith(
     2,

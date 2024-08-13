@@ -4,7 +4,7 @@ import range from 'lodash/range'
 import format from 'date-fns/format'
 import cx from 'classnames'
 
-import { useI18n } from '../I18n'
+import { useI18n } from '../providers/I18n'
 import Icon from '../Icon'
 import LeftIcon from '../Icons/Left'
 import RightIcon from '../Icons/Right'

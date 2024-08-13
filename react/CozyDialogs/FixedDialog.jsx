@@ -3,7 +3,7 @@ import cx from 'classnames'
 
 import useCozyDialog from './useCozyDialog'
 import Dialog, { DialogTitle, DialogActions, DialogContent } from '../Dialog'
-import Divider from '../MuiCozyTheme/Divider'
+import Divider from '../Divider'
 
 import dialogPropTypes from './dialogPropTypes'
 import DialogBackButton from './DialogBackButton'
@@ -16,6 +16,7 @@ const FixedDialog = props => {
     dialogTitleProps,
     fullScreen,
     id,
+    dividerProps,
     dialogActionsProps,
     dialogContentProps
   } = useCozyDialog(props)
@@ -45,7 +46,7 @@ const FixedDialog = props => {
       {title && (
         <>
           <DialogTitle {...dialogTitleProps}>{title}</DialogTitle>
-          <Divider />
+          <Divider {...dividerProps} />
         </>
       )}
       <DialogContent {...dialogContentProps}>

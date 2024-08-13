@@ -6,16 +6,16 @@ import filesize from 'filesize'
 import { models } from 'cozy-client'
 
 import { makeStyles } from '../styles'
-import ListItem from '../MuiCozyTheme/ListItem'
-import ListItemIcon from '../MuiCozyTheme/ListItemIcon'
+import ListItem from '../ListItem'
+import ListItemIcon from '../ListItemIcon'
 import ListItemText from '../ListItemText'
-import Divider from '../MuiCozyTheme/Divider'
+import Divider from '../Divider'
 import Icon from '../Icon'
 import FileTypeText from '../Icons/FileTypeText'
 import FileTypeFolder from '../Icons/FileTypeFolder'
 import Checkbox from '../Checkbox'
 import Radio from '../Radios'
-import { useI18n } from '../I18n'
+import { useI18n } from '../providers/I18n'
 
 import { isValidFile, isValidFolder } from '../helpers/acceptedTypes'
 
@@ -32,9 +32,6 @@ const useStyles = makeStyles(() => ({
     alignSelf: 'auto',
     alignItems: 'center',
     marginLeft: '0.5rem'
-  },
-  listItemIcon: {
-    marginLeft: '1rem'
   }
 }))
 
@@ -65,8 +62,8 @@ const FilePickerBodyItem = ({
     <>
       <ListItem
         disabled={!hasChoice && isFile(item)}
+        size="small"
         button
-        className="u-p-0"
         data-testid="list-item"
       >
         <div
@@ -74,7 +71,7 @@ const FilePickerBodyItem = ({
           className={styles['filePickerBreadcrumb-wrapper']}
           onClick={handleListItemClick(item)}
         >
-          <ListItemIcon className={classes.listItemIcon}>
+          <ListItemIcon>
             <Icon
               icon={isDirectory(item) ? FileTypeFolder : FileTypeText}
               width="32"
@@ -95,7 +92,7 @@ const FilePickerBodyItem = ({
         )}
         <div
           data-testid="choice-onclick"
-          className="u-ph-1 u-pv-half u-h-2 u-flex u-flex-items-center"
+          className="u-pv-half u-h-2 u-flex u-flex-items-center"
           onClick={hasChoice ? handleChoiceClick(item) : undefined}
         >
           <Input

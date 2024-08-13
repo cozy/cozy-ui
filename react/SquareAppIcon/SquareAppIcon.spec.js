@@ -3,11 +3,11 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 
-import CozyClient, { CozyProvider } from 'cozy-client'
+import CozyClient from 'cozy-client'
 
 import Icon from '../Icon'
 import CozyIcon from '../Icons/Cozy'
-import MuiCozyTheme from '../MuiCozyTheme'
+import DemoProvider from '../providers/DemoProvider'
 import SquareAppIcon from '.'
 
 const appMock = {
@@ -18,11 +18,9 @@ const appMock = {
 const client = new CozyClient({})
 const Wrapper = props => {
   return (
-    <CozyProvider client={client}>
-      <MuiCozyTheme>
-        <SquareAppIcon {...props} />
-      </MuiCozyTheme>
-    </CozyProvider>
+    <DemoProvider client={client}>
+      <SquareAppIcon {...props} />
+    </DemoProvider>
   )
 }
 

@@ -1,18 +1,13 @@
 import React from 'react'
 import { UploadQueue, formatRemainingTime } from '.'
 import { render } from '@testing-library/react'
-import { useI18n } from '../I18n'
+import { useI18n } from '../providers/I18n'
 
-jest.mock('../I18n/withLocales', () =>
+jest.mock('../providers/I18n/withLocales', () =>
   jest.fn().mockImplementation(() => x => x)
 )
 
-jest.mock('../styles', () => ({
-  ...jest.requireActual('../styles'),
-  withStyles: jest.fn().mockImplementation(() => x => x)
-}))
-
-jest.mock('../I18n', () => ({
+jest.mock('../providers/I18n', () => ({
   translate: jest.fn().mockImplementation(() => x => x),
   useI18n: jest.fn(),
   DEFAULT_LANG: 'en'

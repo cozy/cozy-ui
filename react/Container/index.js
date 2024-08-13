@@ -1,3 +1,3 @@
-import MuiContainer from '@mui/material/Container'
+import MuiContainer from '@material-ui/core/Container'
 
 export default MuiContainer

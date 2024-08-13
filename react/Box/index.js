@@ -1,3 +1,3 @@
-import MuiBox from '@mui/material/Box'
+import MuiBox from '@material-ui/core/Box'
 
 export default MuiBox

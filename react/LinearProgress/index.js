@@ -1,3 +1,3 @@
-import MuiLinearProgress from '@mui/material/LinearProgress'
+import MuiLinearProgress from '@material-ui/core/LinearProgress'
 
 export default MuiLinearProgress

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './styles.styl'
 
 import cx from 'classnames'
-import { ModalHeader, ModalContent } from '../Modal'
+import { ModalHeader, ModalContent } from '../deprecated/Modal'
 
 export const IntentWrapper = ({
   children,

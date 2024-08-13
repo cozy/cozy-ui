@@ -1,6 +1,6 @@
-import React, { useEffect, useMemo } from 'react'
+import React, { forwardRef, useEffect, useMemo } from 'react'
 import cx from 'classnames'
-import MUIListItemText from '@mui/material/ListItemText'
+import MUIListItemText from '@material-ui/core/ListItemText'
 import once from 'lodash/once'
 
 const logDeprecatedWarning = once(() => {
@@ -22,7 +22,7 @@ const getTypographyProp = (props, className, ellipsis) => {
       }
 }
 
-const ListItemText = props => {
+const ListItemText = forwardRef((props, ref) => {
   const {
     primaryText,
     secondaryText,
@@ -68,6 +68,7 @@ const ListItemText = props => {
 
   return (
     <MUIListItemText
+      ref={ref}
       primary={primary}
       secondary={secondary}
       primaryTypographyProps={primaryTypographyProps}
@@ -75,7 +76,9 @@ const ListItemText = props => {
       {...rest}
     />
   )
-}
+})
+
+ListItemText.displayName = 'ListItemText'
 
 ListItemText.defaultProps = {
   ellipsis: true
