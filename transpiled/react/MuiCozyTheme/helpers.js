@@ -1,0 +1,179 @@
+import _toConsumableArray from "@babel/runtime/helpers/toConsumableArray";
+import { alpha } from "cozy-ui/transpiled/react/styles";
+import { getCssVariableValue } from "cozy-ui/transpiled/react/utils/color";
+export var makeAlertBackgroundColor = function makeAlertBackgroundColor(_ref) {
+  var theme = _ref.theme,
+      severity = _ref.severity;
+  return {
+    standard: alpha(theme.palette[severity].main, theme.palette.background.contrastOpacity),
+    outlined: theme.palette[severity].main,
+    filled: theme.palette[severity].main
+  };
+};
+export var makeAlertColor = function makeAlertColor(theme, severity) {
+  // same approach as Mui, see https://github.com/mui/material-ui/blob/v4.x/packages/material-ui-lab/src/Alert/Alert.js#L28
+  return {
+    '&-standard': {
+      color: theme.palette.text.primary,
+      backgroundColor: makeAlertBackgroundColor({
+        theme: theme,
+        severity: severity
+      }).standard,
+      '& $icon': {
+        color: severity === 'secondary' ? theme.palette.text.primary : theme.palette[severity].main
+      },
+      '& $action': {
+        '& button[title="Close"]': {
+          color: theme.palette.text.secondary
+        }
+      }
+    },
+    '&-outlined': {
+      color: theme.palette.text.primary,
+      border: "1px solid ".concat(makeAlertBackgroundColor({
+        theme: theme,
+        severity: severity
+      }).outlined),
+      '& $icon': {
+        color: severity === 'secondary' ? theme.palette.text.primary : theme.palette[severity].main
+      }
+    },
+    '&-filled': {
+      color: theme.palette[severity].contrastText,
+      backgroundColor: makeAlertBackgroundColor({
+        theme: theme,
+        severity: severity
+      }).filled,
+      '& $action': {
+        '& button[title="Close"]': {
+          color: theme.palette[severity].contrastText
+        }
+      }
+    }
+  };
+};
+export var makeChipStyleByColor = function makeChipStyleByColor(theme, color) {
+  return {
+    color: theme.palette.text[color] || theme.palette[color].main,
+    borderColor: color === 'primary' ? theme.palette.border.main : alpha(theme.palette[color].main, theme.palette.border.opacity),
+    '&$clickable, &$deletable': {
+      '&:hover, &:focus': {
+        borderColor: color === 'primary' ? theme.palette.border.main : alpha(theme.palette[color].main, theme.palette.border.opacity),
+        backgroundColor: color === 'primary' ? theme.palette.action.hover : alpha(theme.palette[color].main, theme.palette.action.hoverOpacity)
+      }
+    },
+    '& $icon': {
+      color: color === 'primary' ? theme.palette.text.icon : theme.palette[color].main,
+      fill: color === 'primary' ? theme.palette.text.icon : theme.palette[color].main
+    },
+    '& $deleteIcon': {
+      color: color === 'primary' ? theme.palette.text.secondary : theme.palette[color].main,
+      fill: color === 'primary' ? theme.palette.text.secondary : theme.palette[color].main
+    },
+    '&$colorPrimary': {
+      padding: '0 1px',
+      color: theme.palette[color].contrastText,
+      backgroundColor: theme.palette[color].main,
+      '& $icon, & $deleteIcon': {
+        color: theme.palette[color].contrastText,
+        fill: theme.palette[color].contrastText
+      },
+      '&$disabled': {
+        opacity: 1,
+        color: theme.palette.text.disabled,
+        backgroundColor: theme.palette.action.disabledBackground,
+        '& $icon, & $deleteIcon': {
+          color: theme.palette.text.disabled,
+          fill: theme.palette.text.disabled
+        }
+      },
+      '&$clickable, &$deletable': {
+        '&:hover, &:focus': {
+          backgroundColor: theme.palette[color].dark
+        }
+      }
+    },
+    '&.ghost': {
+      borderWidth: '1px',
+      borderStyle: 'dashed',
+      '&:not($disabled)': {
+        color: theme.palette[color].main,
+        borderColor: alpha(theme.palette[color].main, theme.palette.border.ghostOpacity),
+        backgroundColor: alpha(theme.palette[color].main, theme.palette.action.ghostOpacity),
+        '& $icon, & $deleteIcon': {
+          color: theme.palette[color].main,
+          fill: theme.palette[color].main
+        }
+      },
+      '&$clickable, &$deletable': {
+        '&:hover, &:focus': {
+          borderColor: alpha(theme.palette[color].main, theme.palette.border.ghostOpacity),
+          backgroundColor: alpha(theme.palette[color].main, theme.palette.action.hoverGhostOpacity)
+        }
+      }
+    }
+  };
+};
+export var makeSecondaryButtonStyle = function makeSecondaryButtonStyle(theme, color) {
+  return {
+    color: theme.palette[color].main,
+    borderColor: theme.palette[color].main,
+    '&:hover': {
+      backgroundColor: alpha(theme.palette[color].main, theme.palette.action.hoverOpacity),
+      '@media (hover: none)': {
+        backgroundColor: 'transparent'
+      }
+    },
+    '&.ghost': {
+      backgroundColor: alpha(theme.palette[color].main, theme.palette.action.ghostOpacity),
+      '&:hover': {
+        backgroundColor: alpha(theme.palette[color].main, theme.palette.action.hoverGhostOpacity),
+        '@media (hover: none)': {
+          backgroundColor: alpha(theme.palette[color].main, theme.palette.action.ghostOpacity)
+        }
+      }
+    }
+  };
+};
+export var makeTextButtonStyle = function makeTextButtonStyle(theme, color) {
+  return {
+    color: theme.palette[color].main,
+    '&:hover': {
+      backgroundColor: alpha(theme.palette[color].main, theme.palette.action.hoverOpacity),
+      '@media (hover: none)': {
+        backgroundColor: 'transparent'
+      }
+    }
+  };
+};
+export var makeContainedButtonStyle = function makeContainedButtonStyle(theme, color) {
+  return {
+    color: theme.palette[color].contrastText,
+    backgroundColor: theme.palette[color].main,
+    '&:hover': {
+      backgroundColor: theme.palette[color].dark,
+      '@media (hover: none)': {
+        backgroundColor: theme.palette[color].main
+      }
+    }
+  };
+};
+/**
+ * @param {string} position one of `"top"` or `"bottom"`
+ * @returns {string} `var(--flagship-${position}-height, 0px)`
+ */
+
+export var getFlagshipCssVar = function getFlagshipCssVar(position) {
+  return "var(--flagship-".concat(position, "-height, 0px)");
+};
+/**
+ * @param {string} type - Type of the theme
+ * @param {string} variant - Variant of the theme
+ * @returns {array} Array of Mui shadows
+ */
+
+export var makeShadows = function makeShadows(type, variant) {
+  return _toConsumableArray(Array(25)).map(function (_, index) {
+    return getCssVariableValue("shadow".concat(index), type, variant);
+  });
+};
