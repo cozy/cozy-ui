@@ -1,16 +1,16 @@
-import React, { useState, useEffect, forwardRef } from 'react'
 import PropTypes from 'prop-types'
+import React, { useState, useEffect, forwardRef } from 'react'
 
 import { useWebviewIntent } from 'cozy-intent'
 
-import Button from '../../Buttons'
-import IconButton from '../../IconButton'
-import Icon from '../../Icon'
+import { makeActions } from '../../ActionsMenu/Actions/helpers'
+import { print } from '../../ActionsMenu/Actions/print'
 import ActionsItems, {
   actionsItemsComponentPropTypes
 } from '../../ActionsMenu/ActionsItems'
-import { print } from '../../ActionsMenu/Actions/print'
-import { makeActions } from '../../ActionsMenu/Actions/helpers'
+import Button from '../../Buttons'
+import Icon from '../../Icon'
+import IconButton from '../../IconButton'
 
 const ActionComponent = forwardRef(({ action, variant, onClick }, ref) => {
   const { label, icon } = action

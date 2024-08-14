@@ -1,11 +1,11 @@
 import React, { forwardRef } from 'react'
 
-import EmailIcon from '../../Icons/Email'
 import { getActionsI18n } from './locales/withActionsLocales'
-import ActionsMenuItem from '../ActionsMenuItem'
-import ListItemIcon from '../../ListItemIcon'
 import Icon from '../../Icon'
+import EmailIcon from '../../Icons/Email'
+import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
+import ActionsMenuItem from '../ActionsMenuItem'
 
 export const emailTo = () => {
   const { t } = getActionsI18n()

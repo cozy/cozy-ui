@@ -1,3 +1,7 @@
+import Fade from '@material-ui/core/Fade'
+import Portal from '@material-ui/core/Portal'
+import { BottomSheet as MuiBottomSheet } from 'mui-bottom-sheet'
+import PropTypes from 'prop-types'
 import React, {
   useState,
   useEffect,
@@ -7,19 +11,10 @@ import React, {
   memo,
   Fragment
 } from 'react'
-import PropTypes from 'prop-types'
-import { BottomSheet as MuiBottomSheet } from 'mui-bottom-sheet'
 import { useMutationObserver, useTimeoutWhen } from 'rooks'
-import Fade from '@material-ui/core/Fade'
-import Portal from '@material-ui/core/Portal'
 
-import { getFlagshipMetadata } from '../hooks/useSetFlagshipUi/helpers'
-
-import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
-import CozyTheme, { useCozyTheme } from '../providers/CozyTheme'
-import Stack from '../Stack'
-import Paper from '../Paper'
 import BackdropOrFragment from './BackdropOrFragment'
+import { ANIMATION_DURATION } from './constants'
 import {
   computeMaxHeight,
   computeMediumHeight,
@@ -31,8 +26,12 @@ import {
   computeBottomSpacer,
   getCssValue
 } from './helpers'
-import { ANIMATION_DURATION } from './constants'
 import stylescss from './styles.styl'
+import Paper from '../Paper'
+import Stack from '../Stack'
+import { getFlagshipMetadata } from '../hooks/useSetFlagshipUi/helpers'
+import { useSetFlagshipUI } from '../hooks/useSetFlagshipUi/useSetFlagshipUI'
+import CozyTheme, { useCozyTheme } from '../providers/CozyTheme'
 
 const createContainerWrapperStyles = () => ({
   container: {

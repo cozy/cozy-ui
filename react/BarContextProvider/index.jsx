@@ -1,10 +1,11 @@
 import React from 'react'
-import { I18nContext } from '../providers/I18n'
-import { BreakpointsProvider } from '../providers/Breakpoints'
+import { Provider } from 'react-redux'
 
 import { CozyProvider } from 'cozy-client'
-import { Provider } from 'react-redux'
 import { WebviewIntentProvider } from 'cozy-intent'
+
+import { BreakpointsProvider } from '../providers/Breakpoints'
+import { I18nContext } from '../providers/I18n'
 
 const BarContextProvider = ({
   children,

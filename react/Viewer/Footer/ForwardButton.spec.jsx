@@ -1,12 +1,12 @@
-import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
+import React from 'react'
 
 import { getSharingLink } from 'cozy-client/dist/models/sharing'
 import { isMobileApp } from 'cozy-device-helper'
 
-import DemoProvider from '../docs/DemoProvider'
 import ForwardButton from './ForwardButton'
 import { exportFilesNative } from './helpers'
+import DemoProvider from '../docs/DemoProvider'
 
 jest.mock('cozy-device-helper')
 jest.mock('cozy-client/dist/models/sharing', () => ({

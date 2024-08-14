@@ -1,10 +1,10 @@
-import React from 'react'
 import cx from 'classnames'
-import Button from '../Button'
+import React from 'react'
+
 import styles from './styles.styl'
 import PreviousIcon from '../../Icons/Previous'
-
 import useBreakpoints from '../../providers/Breakpoints'
+import Button from '../Button'
 
 const DumbModalBackButton = props => {
   const { isMobile } = useBreakpoints()

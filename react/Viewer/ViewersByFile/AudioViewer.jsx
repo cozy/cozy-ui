@@ -1,12 +1,10 @@
 import React from 'react'
 
+import styles from './styles.styl'
 import Icon from '../../Icon'
 import FileTypeAudioIcon from '../../Icons/FileTypeAudio'
 import isTesting from '../../helpers/isTesting'
-
 import withFileUrl from '../hoc/withFileUrl'
-
-import styles from './styles.styl'
 
 const AudioViewer = ({ file, url }) => (
   <div className={styles['viewer-audioviewer']}>

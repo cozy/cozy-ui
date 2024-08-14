@@ -1,8 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
-import Typography from '../Typography'
+import PropTypes from 'prop-types'
+import React from 'react'
+
 import styles from './styles.styl'
+import Typography from '../Typography'
 
 const Tile = ({ children, className, tag: Tag, isSecondary, ...props }) => {
   return (

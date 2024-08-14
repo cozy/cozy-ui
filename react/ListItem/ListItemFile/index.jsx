@@ -1,15 +1,14 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 import { splitFilename } from 'cozy-client/dist/models/file'
 
-import Filename from '../../Filename'
-import FiletypePdfIcon from '../../Icons/FileTypePdf'
-
-import ListItemBase from '../ListItemBase'
 import ItemIcon from './ItemIcon'
 import PrimaryText from './PrimaryText'
 import SecondaryText from './SecondaryText'
+import Filename from '../../Filename'
+import FiletypePdfIcon from '../../Icons/FileTypePdf'
+import ListItemBase from '../ListItemBase'
 
 const ListItemFile = ({
   file,

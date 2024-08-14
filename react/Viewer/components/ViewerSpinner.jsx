@@ -1,7 +1,7 @@
 import React from 'react'
 
-import withBreakpoints from '../../helpers/withBreakpoints'
 import Spinner from '../../Spinner'
+import withBreakpoints from '../../helpers/withBreakpoints'
 
 const ViewerSpinner = ({ breakpoints: { isDesktop } }) => {
   return (

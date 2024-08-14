@@ -1,18 +1,18 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 import { useClient } from 'cozy-client'
+import { getSharingLink } from 'cozy-client/dist/models/sharing'
 import { isIOS, isMobileApp } from 'cozy-device-helper'
 
-import { useI18n } from '../../providers/I18n'
+import { exportFilesNative } from './helpers'
+import Button from '../../Buttons'
 import Icon from '../../Icon'
 import IconButton from '../../IconButton'
 import ReplyIcon from '../../Icons/Reply'
 import ShareIosIcon from '../../Icons/ShareIos'
-import Button from '../../Buttons'
 import Alerter from '../../deprecated/Alerter'
-import { exportFilesNative } from './helpers'
-import { getSharingLink } from 'cozy-client/dist/models/sharing'
+import { useI18n } from '../../providers/I18n'
 
 const ForwardIcon = isIOS() ? ShareIosIcon : ReplyIcon
 

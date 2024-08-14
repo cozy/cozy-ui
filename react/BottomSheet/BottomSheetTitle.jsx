@@ -1,13 +1,13 @@
-import React, { forwardRef } from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React, { forwardRef } from 'react'
 
 import { BottomSheetItem } from '../BottomSheet'
 import Icon, { iconPropType } from '../Icon'
-import ListItemText from '../ListItemText'
 import List from '../List'
 import ListItem from '../ListItem'
 import ListItemIcon from '../ListItemIcon'
+import ListItemText from '../ListItemText'
 import Typography from '../Typography'
 
 const BottomSheetTitle = forwardRef(({ className, label, icon }, ref) => {

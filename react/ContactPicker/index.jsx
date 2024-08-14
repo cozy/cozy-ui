@@ -1,11 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React from 'react'
+
 import { models } from 'cozy-client'
 const { getDisplayName } = models.contact
 
-import ContactsListModal from '../ContactsListModal'
 import styles from './styles.styl'
+import ContactsListModal from '../ContactsListModal'
 
 const SelectControl = props => {
   const { className, children, ...rest } = props

@@ -1,11 +1,10 @@
-import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-
-import Button from '../deprecated/Button'
-import { createUseI18n } from '../providers/I18n'
+import React, { memo } from 'react'
 
 import en from './locales/en.json'
 import fr from './locales/fr.json'
+import Button from '../deprecated/Button'
+import { createUseI18n } from '../providers/I18n'
 
 const locales = { en, fr }
 const useI18n = createUseI18n(locales)

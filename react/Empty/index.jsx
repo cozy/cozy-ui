@@ -1,11 +1,10 @@
-import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-
-import Icon, { iconPropType } from '../Icon'
-import Typography from '../Typography'
+import React from 'react'
 
 import styles from './styles.styl'
+import Icon, { iconPropType } from '../Icon'
+import Typography from '../Typography'
 
 export const Empty = ({
   icon,

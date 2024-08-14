@@ -1,5 +1,5 @@
-import React from 'react'
 import { shallow } from 'enzyme'
+import React from 'react'
 
 import { PdfJsViewer, MIN_SCALE, MAX_SCALE, MAX_PAGES } from './PdfJsViewer'
 
@@ -14,7 +14,7 @@ describe('PDFViewer', () => {
   }
   beforeEach(() => {
     component = shallow(
-      <PdfJsViewer url={'test'} file={{}} gestures={gesturesMock} t={x => x} />
+      <PdfJsViewer url="test" file={{}} gestures={gesturesMock} t={x => x} />
     )
   })
   afterEach(() => {

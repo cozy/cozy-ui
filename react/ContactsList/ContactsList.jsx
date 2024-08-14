@@ -1,14 +1,14 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
-import { useI18n } from '../providers/I18n'
-import { Table } from '../deprecated/Table'
+import ContactRow from './ContactRow'
+import { sortContacts, categorizeContacts, sortHeaders } from './helpers'
+import withContactsListLocales from './locales/withContactsListLocales'
 import List from '../List'
 import ListSubheader from '../ListSubheader'
-import { sortContacts, categorizeContacts, sortHeaders } from './helpers'
-import ContactRow from './ContactRow'
+import { Table } from '../deprecated/Table'
 import useBreakpoints from '../providers/Breakpoints'
-import withContactsListLocales from './locales/withContactsListLocales'
+import { useI18n } from '../providers/I18n'
 
 const ContactsList = ({ contacts, onItemClick, ...rest }) => {
   const { t } = useI18n()

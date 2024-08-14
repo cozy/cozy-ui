@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
-import styles from './styles.styl'
-import PropTypes from 'prop-types'
-
 import once from 'lodash/once'
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 
+import styles from './styles.styl'
 import IntentIframe from '../../IntentIframe'
-import Modal from '../Modal'
 import createDepreciationLogger from '../../helpers/createDepreciationLogger'
+import Modal from '../Modal'
 
 const logIntentModalDepecrated = createDepreciationLogger()
 

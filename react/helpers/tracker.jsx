@@ -1,6 +1,7 @@
 /* global __PIWIK_TRACKER_URL__ __PIWIK_SITEID__ __PIWIK_DIMENSION_ID_APP__ */
 /* global Piwik */
 import memoize from 'lodash/memoize'
+
 import { readCozyDataFromDOM } from './appDataset'
 
 // Think of these functions as a singleton class with only static methods.

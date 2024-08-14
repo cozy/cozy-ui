@@ -1,14 +1,13 @@
-import React from 'react'
 import cx from 'classnames'
+import React from 'react'
 
+import NestedSelect from './NestedSelect'
+import BottomSheet, { BottomSheetHeader, BottomSheetItem } from '../BottomSheet'
+import Divider from '../Divider'
 import Icon from '../Icon'
 import IconButton from '../IconButton'
 import ArrowUpIcon from '../Icons/ArrowUp'
-import BottomSheet, { BottomSheetHeader, BottomSheetItem } from '../BottomSheet'
 import Typography from '../Typography'
-import Divider from '../Divider'
-
-import NestedSelect from './NestedSelect'
 
 const HeaderComponent = ({ title, showBack, onClickBack }) => {
   if (!title) return null

@@ -1,7 +1,8 @@
-import React from 'react'
 import cx from 'classnames'
-import InlineCard from '../deprecated/InlineCard'
+import React from 'react'
+
 import styles from './styles.styl'
+import InlineCard from '../deprecated/InlineCard'
 
 const alphaRegexp = /^[a-z]$/i
 const numberRegexp = /^[0-9]$/

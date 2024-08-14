@@ -2,11 +2,10 @@ import React, { useMemo } from 'react'
 
 import { useClient, useQuery, models } from 'cozy-client'
 
-import Link from '../../Link'
 import AppLinker from '../../AppLinker'
 import FilePath from '../../FilePath'
+import Link from '../../Link'
 import useBreakpoints from '../../providers/Breakpoints'
-
 import {
   makeWebLink,
   normalizeAndSpreadAttributes,

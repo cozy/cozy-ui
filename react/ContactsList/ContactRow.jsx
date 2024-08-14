@@ -1,14 +1,14 @@
-import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 import { models } from 'cozy-client'
 
-import ListItem from '../ListItem'
-import ContactPhone from './Contacts/ContactPhone'
-import ContactIdentity from './Contacts/ContactIdentity'
 import ContactCozy from './Contacts/ContactCozy'
 import ContactEmail from './Contacts/ContactEmail'
+import ContactIdentity from './Contacts/ContactIdentity'
+import ContactPhone from './Contacts/ContactPhone'
+import ListItem from '../ListItem'
 import useBreakpoints from '../providers/Breakpoints'
 
 const { getPrimaryCozy, getPrimaryPhone, getPrimaryEmail } = models.contact

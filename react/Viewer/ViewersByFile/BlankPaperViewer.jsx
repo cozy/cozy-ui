@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
 
+import styles from './styles.styl'
+import Backdrop from '../../Backdrop'
 import Button from '../../Buttons'
 import Empty from '../../Empty'
-import Backdrop from '../../Backdrop'
 import IntentDialogOpener from '../../IntentDialogOpener'
-
 import IlluGenericNewPage from '../assets/IlluGenericNewPage.svg'
 import { withViewerLocales } from '../hoc/withViewerLocales'
-
-import styles from './styles.styl'
 
 const BlankPaperViewer = ({ file, t }) => {
   const [isLoading, setIsLoading] = useState(true)

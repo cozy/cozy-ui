@@ -1,6 +1,7 @@
 import React from 'react'
-import Link from '../Link'
+
 import FilePath from '../FilePath'
+import Link from '../Link'
 
 const FilePathLink = ({ children, ...props }) => (
   <Link color="textSecondary" underline="hover" {...props}>

@@ -1,9 +1,8 @@
-import React from 'react'
-import cx from 'classnames'
-import PropTypes from 'prop-types'
-
 import MUICheckbox from '@material-ui/core/Checkbox'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
+import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 import createDepreciationLogger from '../helpers/createDepreciationLogger'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import createDepreciationLogger from '../../helpers/createDepreciationLogger'
 import { QuotaPaywall } from '../../Paywall'
+import createDepreciationLogger from '../../helpers/createDepreciationLogger'
 
 const logDeprecatedComponent = createDepreciationLogger()
 

@@ -1,15 +1,14 @@
-import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
-
-import { IllustrationDialog } from '..'
-import { useI18n } from '../../providers/I18n'
-import Link from '../../Link'
-import Typography from '../../Typography'
+import React, { forwardRef } from 'react'
 
 import DefaultQRCode from './icons/QRCodeInstallFlagshipAppDialog.png'
 import appStoreIcon from './icons/appstore.png'
 import playStoreIcon from './icons/playstore.png'
 import withSpecificDialogsLocales from './withSpecificDialogsLocales'
+import { IllustrationDialog } from '..'
+import Link from '../../Link'
+import Typography from '../../Typography'
+import { useI18n } from '../../providers/I18n'
 
 const InstallFlagshipAppDialog = forwardRef(
   ({ onClose, playStoreUrl, appStoreUrl, QRCode }, ref) => {
@@ -24,7 +23,7 @@ const InstallFlagshipAppDialog = forwardRef(
         componentsProps={{ dialogTitle: { className: 'u-pt-2-half' } }}
         title={
           <Link
-            href={`https://cozy.io/download`}
+            href="https://cozy.io/download"
             target="_blank"
             rel="noopener noreferrer"
           >

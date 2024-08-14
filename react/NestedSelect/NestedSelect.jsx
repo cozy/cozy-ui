@@ -1,14 +1,14 @@
-import React, { useState, useRef } from 'react'
-import PropTypes from 'prop-types'
-import omit from 'lodash/omit'
 import cx from 'classnames'
+import omit from 'lodash/omit'
+import PropTypes from 'prop-types'
+import React, { useState, useRef } from 'react'
 
-import List from '../List'
-import Input from '../Input'
-import Typography from '../Typography'
 import ItemRow from './ItemRow'
 import { makeHistory } from './helpers'
 import styles from './styles.styl'
+import Input from '../Input'
+import List from '../List'
+import Typography from '../Typography'
 
 export { ItemRow }
 

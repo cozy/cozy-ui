@@ -1,9 +1,9 @@
-import React from 'react'
+import { useRadioGroup } from '@material-ui/core/RadioGroup'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-import styles from './styles.styl'
-import { useRadioGroup } from '@material-ui/core/RadioGroup'
+import React from 'react'
 
+import styles from './styles.styl'
 import createDepreciationLogger from '../../helpers/createDepreciationLogger'
 
 const logRadioDepecrated = createDepreciationLogger()

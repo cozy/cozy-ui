@@ -2,11 +2,11 @@ import React from 'react'
 
 import { generateWebLink, useClient } from 'cozy-client'
 
+import withActionsLocales from './locales/withActionsLocales'
+import PenIcon from '../../../Icons/Pen'
 import Link from '../../../Link'
 import { useI18n } from '../../../providers/I18n'
-import PenIcon from '../../../Icons/Pen'
 import ActionMenuItemWrapper from '../ActionMenuItemWrapper'
-import withActionsLocales from './locales/withActionsLocales'
 
 export const modify = () => {
   return {

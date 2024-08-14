@@ -1,15 +1,14 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-
-import ListItem from '../../ListItem'
-import ListItemText from '../../ListItemText'
-import ListItemIcon from '../../ListItemIcon'
-import Typography from '../../Typography'
-import Icon from '../../Icon'
-import CopyIcon from '../../Icons/Copy'
-import { useI18n } from '../../providers/I18n'
+import React from 'react'
 
 import { copyToClipboard } from './helpers'
+import Icon from '../../Icon'
+import CopyIcon from '../../Icons/Copy'
+import ListItem from '../../ListItem'
+import ListItemIcon from '../../ListItemIcon'
+import ListItemText from '../../ListItemText'
+import Typography from '../../Typography'
+import { useI18n } from '../../providers/I18n'
 
 const ExpandedAttribute = ({ label, value, setAlertProps }) => {
   const { t } = useI18n()

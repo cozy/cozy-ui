@@ -1,16 +1,15 @@
-import React, { useEffect, useReducer, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
+import React, { useEffect, useReducer, useRef, useState } from 'react'
 
 import { useClient } from 'cozy-client'
 import { splitFilename } from 'cozy-client/dist/models/file'
 
-import { makeStyles } from '../../../styles'
+import RenameDialog from './RenameDialog'
+import { renameFile } from './helpers'
 import Input from '../../../Input'
 import InputGroup from '../../../InputGroup'
 import Spinner from '../../../Spinner'
-
-import RenameDialog from './RenameDialog'
-import { renameFile } from './helpers'
+import { makeStyles } from '../../../styles'
 
 const KEYS = {
   ESCAPE: 'Escape',

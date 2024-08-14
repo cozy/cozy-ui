@@ -1,5 +1,5 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 import {
   computeExpirationDate,
@@ -10,7 +10,6 @@ import {
 
 import Typography from '../../Typography'
 import { useI18n } from '../../providers/I18n'
-
 import withListItemLocales from '../hoc/withListItemLocales'
 
 const ExpirationAnnotation = ({ file }) => {

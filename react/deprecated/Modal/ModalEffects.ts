@@ -6,8 +6,8 @@ import { Theme, useTheme } from '@material-ui/core'
 
 import { isFlagshipApp } from 'cozy-device-helper'
 
-import { useSetFlagshipUI } from '../../hooks/useSetFlagshipUi/useSetFlagshipUI'
 import { getFlagshipMetadata } from '../../hooks/useSetFlagshipUi/helpers'
+import { useSetFlagshipUI } from '../../hooks/useSetFlagshipUi/useSetFlagshipUI'
 import { useCozyTheme } from '../../providers/CozyTheme'
 
 const getTopBackground = (theme: Theme, cozyBar: Element | null): string =>
@@ -35,10 +35,10 @@ const useHook = (): void => {
   useSetFlagshipUI(
     {
       bottomBackground: theme.palette.background.paper,
-      // @ts-ignore
+      // @ts-expect-error
       bottomTheme: isLight ? 'dark' : 'light',
       topBackground: theme.palette.background.paper,
-      // @ts-ignore
+      // @ts-expect-error
       topTheme: isLight ? 'dark' : 'light'
     },
     {

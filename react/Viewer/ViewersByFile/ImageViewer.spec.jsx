@@ -1,13 +1,11 @@
-import React from 'react'
 import { render, waitFor } from '@testing-library/react'
-
-import { BreakpointsProvider } from '../../providers/Breakpoints'
-import { checkImageSource } from '../../FileImageLoader/checkImageSource'
-
-import DemoProvider from '../docs/DemoProvider'
-import EncryptedProvider from '../providers/EncryptedProvider'
+import React from 'react'
 
 import ImageViewer from './ImageViewer'
+import { checkImageSource } from '../../FileImageLoader/checkImageSource'
+import { BreakpointsProvider } from '../../providers/Breakpoints'
+import DemoProvider from '../docs/DemoProvider'
+import EncryptedProvider from '../providers/EncryptedProvider'
 
 jest.mock('../../FileImageLoader/checkImageSource', () => ({
   ...jest.requireActual('../../FileImageLoader/checkImageSource'),

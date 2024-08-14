@@ -1,15 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React from 'react'
 
+import styles from './styles.styl'
 import Icon from '../../Icon'
 import IconButton from '../../IconButton'
 import CrossIcon from '../../Icons/Cross'
 import Stack from '../../Stack'
 import Typography from '../../Typography'
 import createDepreciationLogger from '../../helpers/createDepreciationLogger'
-
-import styles from './styles.styl'
 
 export const Infos = ({
   description,
@@ -70,14 +69,8 @@ const InfosMigration = React.memo(function InfosMigration(props) {
     props.text ||
     props.title
   if (isUsingDeprecatedProps) {
-    const {
-      title,
-      text,
-      icon,
-      actionButton,
-      isImportant,
-      ...otherProps
-    } = props
+    const { title, text, icon, actionButton, isImportant, ...otherProps } =
+      props
     logInfosDepecrated(
       'The Infos component API has changed, using any of the following props is deprecated: title, text, icon, actionButton, isImportant'
     )

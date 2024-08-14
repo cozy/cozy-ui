@@ -1,12 +1,12 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
-import Menu from '../Menu'
-import useBreakpoints from '../providers/Breakpoints'
 import BottomSheet from '../BottomSheet'
-import isTesting from '../helpers/isTesting'
+import Menu from '../Menu'
 import Paper from '../Paper'
 import { useActionMenuEffects } from '../deprecated/ActionMenu/ActionMenuEffects'
+import isTesting from '../helpers/isTesting'
+import useBreakpoints from '../providers/Breakpoints'
 
 const ActionsMenuWrapper = ({
   children,

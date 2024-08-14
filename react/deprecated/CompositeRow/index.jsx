@@ -1,11 +1,10 @@
-import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-
-import { Media, Bd, Img } from '../Media'
-import Typography from '../../Typography'
+import React from 'react'
 
 import styles from './styles.styl'
+import Typography from '../../Typography'
+import { Media, Bd, Img } from '../Media'
 
 const denseStyle = { height: '48px' }
 

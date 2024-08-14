@@ -1,20 +1,20 @@
-import React, { Fragment, useCallback, memo } from 'react'
 import PropTypes from 'prop-types'
-
-import Typography from '../Typography'
-import Icon from '../Icon'
-import RightIcon from '../Icons/Right'
-import useBreakpoints from '../providers/Breakpoints'
+import React, { Fragment, useCallback, memo } from 'react'
 
 import styles from './styles.styl'
+import Icon from '../Icon'
+import RightIcon from '../Icons/Right'
+import Typography from '../Typography'
+import useBreakpoints from '../providers/Breakpoints'
 
 const FilePickerBreadcrumb = ({ path, onBreadcrumbClick }) => {
   const { isMobile } = useBreakpoints()
   const hasPath = path && path.length > 0
 
-  const navigateTo = useCallback(folder => () => onBreadcrumbClick(folder), [
-    onBreadcrumbClick
-  ])
+  const navigateTo = useCallback(
+    folder => () => onBreadcrumbClick(folder),
+    [onBreadcrumbClick]
+  )
 
   return (
     <Typography variant="h4" className="u-flex u-flex-items-center">

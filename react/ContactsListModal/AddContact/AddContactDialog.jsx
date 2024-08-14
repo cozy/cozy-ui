@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 
 import { useClient } from 'cozy-client'
 
-import { FixedDialog } from '../../CozyDialogs'
-import AddContactTitle from './AddContactTitle'
-import AddContactContent from './AddContactContent'
 import AddContactActions from './AddContactActions'
+import AddContactContent from './AddContactContent'
+import AddContactTitle from './AddContactTitle'
 import { handleSubmit } from './helpers'
+import { FixedDialog } from '../../CozyDialogs'
 
 const AddContactDialog = ({ onListClose, onCreate, onClose }) => {
   const [contactValues, setContactValues] = useState({})

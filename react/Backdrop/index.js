@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import MuiBackdrop from '@material-ui/core/Backdrop'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 import { makeStyles } from '../styles'
 

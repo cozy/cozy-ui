@@ -1,5 +1,5 @@
-import withLocales from '../providers/I18n/withLocales'
 import createDepreciationLogger from '../helpers/createDepreciationLogger'
+import withLocales from '../providers/I18n/withLocales'
 
 const logDeprecatedWithLocale = createDepreciationLogger()
 

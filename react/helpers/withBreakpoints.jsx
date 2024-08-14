@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
 import throttle from 'lodash/throttle'
 import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 
 import breakpoints, { getBreakpointsStatus } from './breakpoints'
 
@@ -25,40 +25,44 @@ import breakpoints, { getBreakpointsStatus } from './breakpoints'
  *
  *
  */
-const withBreakpoints = (bp = breakpoints) => Wrapped => {
-  class Aware extends Component {
-    constructor(props) {
-      super(props)
-      this.state = {
-        breakpoints: getBreakpointsStatus(bp)
+const withBreakpoints =
+  (bp = breakpoints) =>
+  Wrapped => {
+    class Aware extends Component {
+      constructor(props) {
+        super(props)
+        this.state = {
+          breakpoints: getBreakpointsStatus(bp)
+        }
+        this.checkBreakpoints = throttle(
+          () => {
+            this.setState({ breakpoints: getBreakpointsStatus(bp) })
+          },
+          100,
+          { trailing: true }
+        )
       }
-      this.checkBreakpoints = throttle(
-        () => {
-          this.setState({ breakpoints: getBreakpointsStatus(bp) })
-        },
-        100,
-        { trailing: true }
-      )
+
+      componentDidMount() {
+        window.addEventListener('resize', this.checkBreakpoints)
+      }
+
+      componentWillUnmount() {
+        window.removeEventListener('resize', this.checkBreakpoints)
+      }
+
+      render() {
+        const props = this.props
+        const { breakpoints } = this.state
+        return <Wrapped {...props} breakpoints={breakpoints} />
+      }
     }
 
-    componentDidMount() {
-      window.addEventListener('resize', this.checkBreakpoints)
-    }
-
-    componentWillUnmount() {
-      window.removeEventListener('resize', this.checkBreakpoints)
-    }
-
-    render() {
-      const props = this.props
-      const { breakpoints } = this.state
-      return <Wrapped {...props} breakpoints={breakpoints} />
-    }
+    Aware.displayName = `withBreakpoints(${
+      Wrapped.displayName || Wrapped.name
+    })`
+    return Aware
   }
-
-  Aware.displayName = `withBreakpoints(${Wrapped.displayName || Wrapped.name})`
-  return Aware
-}
 
 /**
  * PropTypes to use into the component Proptypes definition

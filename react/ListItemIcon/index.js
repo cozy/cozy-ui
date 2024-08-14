@@ -1,7 +1,6 @@
-import React, { forwardRef } from 'react'
 import MuiListItemIcon from '@material-ui/core/ListItemIcon'
-
 import cx from 'classnames'
+import React, { forwardRef } from 'react'
 
 export const smallSize = 16
 export const mediumSize = 24

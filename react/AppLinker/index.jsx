@@ -1,5 +1,5 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 import { withClient } from 'cozy-client'
 import {
@@ -14,13 +14,13 @@ import {
 import { WebviewContext } from 'cozy-intent'
 import logger from 'cozy-logger'
 
+import expiringMemoize from './expiringMemoize'
 import {
   generateUniversalLink,
   generateWebLink,
   getUniversalLinkDomain
 } from './native'
 import { NATIVE_APP_INFOS } from './native.config'
-import expiringMemoize from './expiringMemoize'
 
 const expirationDelay = 10 * 1000
 const memoizedCheckApp = expiringMemoize(
@@ -162,7 +162,7 @@ export class AppLinker extends React.Component {
     AppLinker.onAppSwitch(onAppSwitch)
     openDeeplinkOrRedirect(
       appInfo.uri + (nativePath === '/' ? '' : nativePath),
-      function() {
+      function () {
         window.location.href = href
       }
     )

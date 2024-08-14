@@ -69,22 +69,24 @@ export const makeDefaultExpandedAttributes = (doc, expandedAttributes) => {
     .filter(x => x)
 }
 
-export const copyToClipboard = ({ value, setAlertProps, t }) => async () => {
-  try {
-    await navigator.clipboard.writeText(value)
-    setAlertProps({
-      open: true,
-      severity: 'success',
-      message: t(`ListItem.snackbar.copyToClipboard.success`)
-    })
-  } catch (error) {
-    setAlertProps({
-      open: true,
-      severity: 'error',
-      message: t(`ListItem.snackbar.copyToClipboard.error`)
-    })
+export const copyToClipboard =
+  ({ value, setAlertProps, t }) =>
+  async () => {
+    try {
+      await navigator.clipboard.writeText(value)
+      setAlertProps({
+        open: true,
+        severity: 'success',
+        message: t(`ListItem.snackbar.copyToClipboard.success`)
+      })
+    } catch (error) {
+      setAlertProps({
+        open: true,
+        severity: 'error',
+        message: t(`ListItem.snackbar.copyToClipboard.error`)
+      })
+    }
   }
-}
 
 export const isDate = value => {
   if (!isNaN(value)) return false

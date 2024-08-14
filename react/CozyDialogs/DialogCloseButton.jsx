@@ -1,13 +1,12 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
-import IconButton from '../IconButton'
+import locales from './locales'
+import styles from './styles.styl'
 import Icon from '../Icon'
+import IconButton from '../IconButton'
 import CrossMediumIcon from '../Icons/CrossMedium'
 import { createUseI18n } from '../providers/I18n'
-
-import styles from './styles.styl'
-import locales from './locales'
 
 const useI18n = createUseI18n(locales)
 

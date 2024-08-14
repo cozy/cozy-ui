@@ -1,6 +1,6 @@
-import React from 'react'
 import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import React from 'react'
 
 import {
   isMobileApp,
@@ -19,7 +19,7 @@ const setup = ({ app, onAppSwitch }) => {
   return {
     user: userEvent.setup({ delay: null }),
     ...render(
-      <AppLinker onAppSwitch={onAppSwitch} href={'https://fake.link'} app={app}>
+      <AppLinker onAppSwitch={onAppSwitch} href="https://fake.link" app={app}>
         {({ onClick, href, name }) => (
           <div>
             <a href={href} onClick={onClick}>

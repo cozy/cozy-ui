@@ -1,6 +1,5 @@
-import { divider, emailTo, smsTo, call } from '../../ActionsMenu/Actions'
-
 import { makeOptionalActions } from './helpers'
+import { divider, emailTo, smsTo, call } from '../../ActionsMenu/Actions'
 
 describe('makeOptionalActions', () => {
   it('should return divider, call, smsTo, emailTo', () => {

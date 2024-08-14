@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { useI18n } from '../../../providers/I18n'
-import CommentIcon from '../../../Icons/Comment'
-import ActionMenuItemWrapper from '../ActionMenuItemWrapper'
 import withActionsLocales from './locales/withActionsLocales'
+import CommentIcon from '../../../Icons/Comment'
+import { useI18n } from '../../../providers/I18n'
+import ActionMenuItemWrapper from '../ActionMenuItemWrapper'
 
 export const smsTo = () => {
   return {

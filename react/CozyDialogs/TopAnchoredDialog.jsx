@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { withStyles } from '../styles'
 import Dialog from '../Dialog'
+import { withStyles } from '../styles'
 
 /**
  * A Dialog that will not be centered vertically. Useful when

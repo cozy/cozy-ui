@@ -1,5 +1,5 @@
-import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+import React, { forwardRef } from 'react'
 
 import ActionsMenuItem from './ActionsMenuItem'
 import Divider from '../Divider'

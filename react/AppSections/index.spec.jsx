@@ -2,13 +2,13 @@
 
 /* eslint-env jest */
 
-import React from 'react'
 import { shallow } from 'enzyme'
-import { Sections } from './Sections'
+import React from 'react'
 
-import mockApps from '../mocks/apps'
-import { I18nContext } from '../jestLib/I18n'
+import { Sections } from './Sections'
 import en from './locales/en.json'
+import { I18nContext } from '../jestLib/I18n'
+import mockApps from '../mocks/apps'
 
 const i18nContext = I18nContext({ locale: en })
 const tMock = i18nContext.t

@@ -2,9 +2,10 @@
 /* eslint-env jest */
 import React from 'react'
 
+import { isIOSApp } from 'cozy-device-helper'
+
 import { computedMenuListHeightStyles } from '../SelectBox'
 import { SelectBox } from '../SelectBox'
-import { isIOSApp } from 'cozy-device-helper'
 
 jest.mock('cozy-device-helper', () => ({
   ...jest.requireActual('cozy-device-helper'),

@@ -1,17 +1,15 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react'
 import PropTypes from 'prop-types'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 
 import { useClient } from 'cozy-client'
 
-import Spinner from '../../Spinner'
-import FileImageLoader from '../../FileImageLoader'
-
-import DownloadButton from '../NoViewer/DownloadButton'
-import NoViewer from '../NoViewer'
-
 import styles from './styles.styl'
+import FileImageLoader from '../../FileImageLoader'
+import Spinner from '../../Spinner'
 import { FileDoctype } from '../../proptypes'
 import { useAlert } from '../../providers/Alert'
+import NoViewer from '../NoViewer'
+import DownloadButton from '../NoViewer/DownloadButton'
 import { withViewerLocales } from '../hoc/withViewerLocales'
 
 export const PdfMobileViewer = ({ file, url, t, gestures }) => {

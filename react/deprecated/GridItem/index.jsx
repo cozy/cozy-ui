@@ -1,8 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
-import Grid from '../../Grid'
+import PropTypes from 'prop-types'
+import React from 'react'
+
 import styles from './styles.styl'
+import Grid from '../../Grid'
 
 const GridItem = ({ onClick, children }) => {
   return (

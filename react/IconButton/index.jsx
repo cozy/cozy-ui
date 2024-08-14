@@ -1,7 +1,7 @@
-import React, { forwardRef } from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
 import MuiIconButton from '@material-ui/core/IconButton'
+import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React, { forwardRef } from 'react'
 
 const muiSupportedColors = ['default', 'inherit', 'primary', 'secondary']
 

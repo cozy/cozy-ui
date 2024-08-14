@@ -1,7 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styles from './styles.styl'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React from 'react'
+
+import styles from './styles.styl'
 
 /**
  * Useful to align image/icon and content.

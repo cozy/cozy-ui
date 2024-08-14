@@ -1,4 +1,5 @@
 import memoize from 'lodash/memoize'
+
 import {
   readCozyDataFromDOM,
   readApplicationDataset,

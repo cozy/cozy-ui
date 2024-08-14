@@ -1,4 +1,5 @@
 import { PDFDocument } from 'pdf-lib'
+
 import { fetchBlobFileById } from 'cozy-client/dist/models/file'
 
 // Should guarantee good resolution for different uses (printing, downloading, etc.)

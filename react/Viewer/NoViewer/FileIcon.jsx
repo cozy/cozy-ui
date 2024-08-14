@@ -3,12 +3,12 @@ import React from 'react'
 import Icon from '../../Icon'
 import FileTypeBinIcon from '../../Icons/FileTypeBin'
 import FileTypeCodeIcon from '../../Icons/FileTypeCode'
+import FileTypeFilesIcon from '../../Icons/FileTypeFiles'
+import FileTypePdfIcon from '../../Icons/FileTypePdf'
 import FileTypeSheetIcon from '../../Icons/FileTypeSheet'
 import FileTypeSlideIcon from '../../Icons/FileTypeSlide'
 import FileTypeTextIcon from '../../Icons/FileTypeText'
 import FileTypeZipIcon from '../../Icons/FileTypeZip'
-import FileTypePdfIcon from '../../Icons/FileTypePdf'
-import FileTypeFilesIcon from '../../Icons/FileTypeFiles'
 
 const FileIcon = ({ type }) => {
   let icon

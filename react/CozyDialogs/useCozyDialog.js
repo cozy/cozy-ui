@@ -1,10 +1,9 @@
-import { useState } from 'react'
 import cx from 'classnames'
-
-import useBreakpoints from '../providers/Breakpoints'
-import { makeStyles } from '../styles'
+import { useState } from 'react'
 
 import DialogTransition from './DialogTransition'
+import useBreakpoints from '../providers/Breakpoints'
+import { makeStyles } from '../styles'
 
 let globalId = 0
 const modalSizes = ['small', 'medium', 'large']

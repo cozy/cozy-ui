@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import styles from './styles.styl'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+
+import styles from './styles.styl'
 
 export const Layout = ({ children, className, monoColumn, ...rest }) => {
   return (

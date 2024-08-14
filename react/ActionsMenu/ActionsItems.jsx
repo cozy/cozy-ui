@@ -1,11 +1,11 @@
-import React, { forwardRef, useMemo } from 'react'
 import PropTypes from 'prop-types'
+import React, { forwardRef, useMemo } from 'react'
 
 import { useClient } from 'cozy-client'
 import { useWebviewIntent } from 'cozy-intent'
 
-import { useI18n } from '../providers/I18n'
 import { getActionName, getOnlyNeededActions } from './Actions/helpers'
+import { useI18n } from '../providers/I18n'
 
 const ActionsItems = forwardRef(
   (
@@ -23,10 +23,10 @@ const ActionsItems = forwardRef(
     const webviewIntent = useWebviewIntent()
     const { t } = useI18n()
 
-    const cleanedActions = useMemo(() => getOnlyNeededActions(actions, docs), [
-      actions,
-      docs
-    ])
+    const cleanedActions = useMemo(
+      () => getOnlyNeededActions(actions, docs),
+      [actions, docs]
+    )
 
     return cleanedActions.map((actionObject, idx) => {
       const actionName = getActionName(actionObject)

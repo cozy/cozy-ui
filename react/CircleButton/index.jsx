@@ -1,12 +1,12 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
-import { makeStyles } from '../styles'
+import { makeTypoColor, makeButtonShadow } from './helpers'
 import Box from '../Box'
 import IconButton from '../IconButton'
 import Typography from '../Typography'
-import { makeTypoColor, makeButtonShadow } from './helpers'
 import { getRandomUUID } from '../helpers/getRandomUUID'
+import { makeStyles } from '../styles'
 
 const useStyles = makeStyles(theme => ({
   iconButton: {

@@ -1,5 +1,6 @@
-import { Component } from 'react'
 import PropTypes from 'prop-types'
+import { Component } from 'react'
+
 import { withClient } from 'cozy-client'
 import logger from 'cozy-logger'
 

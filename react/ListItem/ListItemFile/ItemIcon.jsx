@@ -1,15 +1,15 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 import { useClient } from 'cozy-client'
 import { isNote } from 'cozy-client/dist/models/file'
 
-import Icon from '../../Icon'
-import FiletypeTextIcon from '../../Icons/FileTypeText'
-import FiletypeNoteIcon from '../../Icons/FileTypeNote'
 import FileImageLoader from '../../FileImageLoader'
-import Thumbnail from '../../Thumbnail'
+import Icon from '../../Icon'
+import FiletypeNoteIcon from '../../Icons/FileTypeNote'
+import FiletypeTextIcon from '../../Icons/FileTypeText'
 import Skeleton from '../../Skeleton'
+import Thumbnail from '../../Thumbnail'
 
 const ItemIcon = ({ icon, file }) => {
   const client = useClient()

@@ -1,6 +1,7 @@
-import React from 'react'
-import Types from 'prop-types'
 import cx from 'classnames'
+import Types from 'prop-types'
+import React from 'react'
+
 import styles from './Figure.styl'
 
 /**

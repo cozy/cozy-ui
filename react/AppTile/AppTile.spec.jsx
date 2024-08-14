@@ -2,14 +2,14 @@
 
 /* eslint-env jest */
 
-import React from 'react'
 import { render } from '@testing-library/react'
+import React from 'react'
+
 import CozyClient, { CozyProvider } from 'cozy-client'
 
+import AppTile from '.'
 import en from '../AppSections/locales/en.json'
 import I18n from '../providers/I18n'
-
-import AppTile from '.'
 
 const appMock = {
   slug: 'test',

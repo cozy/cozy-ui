@@ -1,5 +1,5 @@
-import * as trackerFile from './tracker'
 import { resetCache } from './appDataset'
+import * as trackerFile from './tracker'
 
 window.__PIWIK_DIMENSION_ID_APP__ = 1234
 

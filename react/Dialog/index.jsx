@@ -1,8 +1,8 @@
-import React from 'react'
 import { default as MUIDialog } from '@material-ui/core/Dialog'
+import React from 'react'
 
-import { useCozyTheme } from '../providers/CozyTheme'
 import { useDialogEffects } from './DialogEffects'
+import { useCozyTheme } from '../providers/CozyTheme'
 
 const Dialog = props => {
   const { type, variant } = useCozyTheme()

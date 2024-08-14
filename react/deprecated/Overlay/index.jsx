@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
-import styles from './styles.styl'
 import cx from 'classnames'
 import omit from 'lodash/omit'
 import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 import { RemoveScroll } from 'react-remove-scroll'
+
+import styles from './styles.styl'
 
 const ESC_KEYCODE = 27
 

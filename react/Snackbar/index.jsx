@@ -1,5 +1,5 @@
-import React, { forwardRef } from 'react'
 import MuiSnackbar from '@material-ui/core/Snackbar'
+import React, { forwardRef } from 'react'
 
 const Snackbar = forwardRef(({ children, ...props }, ref) => {
   return (

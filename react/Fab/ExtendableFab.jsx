@@ -1,8 +1,8 @@
 import React from 'react'
 
+import Fab from '.'
 import Icon from '../Icon'
 import useScroll from '../hooks/useScroll'
-import Fab from '.'
 
 const ExtendableFab = ({
   label,

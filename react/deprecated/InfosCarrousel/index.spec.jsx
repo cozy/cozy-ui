@@ -2,12 +2,11 @@ import React from 'react'
 import { act } from 'react-dom/test-utils'
 import SwipeableViews from 'react-swipeable-views'
 
-import Button from '../Button'
-import IconButton from '../../IconButton'
-import Infos from '../Infos'
-import Typography from '../../Typography'
-
 import InfosCarrousel from '.'
+import IconButton from '../../IconButton'
+import Typography from '../../Typography'
+import Button from '../Button'
+import Infos from '../Infos'
 
 // This is necessary for tests to be predictable
 const swipeableProps = { disableLazyLoading: true }
@@ -39,10 +38,7 @@ const getArrowsDisabledProps = root =>
 
 const simulateSwipeToSlideIndex = (root, slideIndex) => {
   act(() => {
-    root
-      .find(SwipeableViews)
-      .props()
-      .onChangeIndex(slideIndex)
+    root.find(SwipeableViews).props().onChangeIndex(slideIndex)
   })
   root.update()
 }

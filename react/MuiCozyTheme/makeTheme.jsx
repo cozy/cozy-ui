@@ -1,14 +1,13 @@
-import { createTheme } from '../styles'
-import isTesting from '../helpers/isTesting'
-import { createNodeWithThemeCssVars } from '../utils/color'
-
 import { makeShadows } from './helpers'
 import { makePalette } from './makePalette'
 import { makeTypography } from './makeTypography'
-import { makeLightNormalOverrides } from './overrides/makeLightNormalOverrides'
-import { makeLightInvertedOverrides } from './overrides/makeLightInvertedOverrides'
-import { makeDarkNormalOverrides } from './overrides/makeDarkNormalOverrides'
 import { makeDarkInvertedOverrides } from './overrides/makeDarkInvertedOverrides'
+import { makeDarkNormalOverrides } from './overrides/makeDarkNormalOverrides'
+import { makeLightInvertedOverrides } from './overrides/makeLightInvertedOverrides'
+import { makeLightNormalOverrides } from './overrides/makeLightNormalOverrides'
+import isTesting from '../helpers/isTesting'
+import { createTheme } from '../styles'
+import { createNodeWithThemeCssVars } from '../utils/color'
 
 const makeOverridesByTheme = theme => ({
   light: {

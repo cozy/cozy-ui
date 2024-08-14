@@ -1,17 +1,16 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { Document, Page } from 'react-pdf'
 import cx from 'classnames'
-import throttle from 'lodash/throttle'
 import flow from 'lodash/flow'
-
-import ViewerSpinner from '../components/ViewerSpinner'
-import { withViewerLocales } from '../hoc/withViewerLocales'
-import withFileUrl from '../hoc/withFileUrl'
-import ToolbarButton from '../components/PdfToolbarButton'
-import NoViewer from '../NoViewer'
+import throttle from 'lodash/throttle'
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+import { Document, Page } from 'react-pdf'
 
 import styles from './styles.styl'
+import NoViewer from '../NoViewer'
+import ToolbarButton from '../components/PdfToolbarButton'
+import ViewerSpinner from '../components/ViewerSpinner'
+import withFileUrl from '../hoc/withFileUrl'
+import { withViewerLocales } from '../hoc/withViewerLocales'
 
 export const MIN_SCALE = 0.25
 export const MAX_SCALE = 3
@@ -208,7 +207,4 @@ PdfJsViewer.propTypes = {
   renderFallbackExtraContent: PropTypes.func
 }
 
-export default flow(
-  withFileUrl,
-  withViewerLocales
-)(PdfJsViewer)
+export default flow(withFileUrl, withViewerLocales)(PdfJsViewer)

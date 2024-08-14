@@ -1,11 +1,9 @@
-import React from 'react'
 import { render, waitFor } from '@testing-library/react'
-
-import { BreakpointsProvider } from '../../providers/Breakpoints'
-
-import DemoProvider from '../docs/DemoProvider'
+import React from 'react'
 
 import AudioViewer from './AudioViewer'
+import { BreakpointsProvider } from '../../providers/Breakpoints'
+import DemoProvider from '../docs/DemoProvider'
 
 const file = {
   _id: 'audio',

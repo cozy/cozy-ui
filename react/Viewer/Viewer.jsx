@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 
-import { FileDoctype } from '../proptypes'
-
-import ViewerControls from './components/ViewerControls'
-import ViewerByFile from './components/ViewerByFile'
 import { toolbarPropsPropType } from '.'
+import ViewerByFile from './components/ViewerByFile'
+import ViewerControls from './components/ViewerControls'
+import { FileDoctype } from '../proptypes'
 
 const KEY_CODE_LEFT = 37
 const KEY_CODE_RIGHT = 39

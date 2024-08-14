@@ -1,13 +1,13 @@
-import React from 'react'
 import cx from 'classnames'
-import PropTypes from 'prop-types'
 import assign from 'lodash/assign'
+import PropTypes from 'prop-types'
+import React from 'react'
 
+import { nameToColor } from './helpers'
 import styles from './styles.styl'
+import { createSizeStyle } from '../Circle'
 import Icon, { iconPropType } from '../Icon'
 import PeopleIcon from '../Icons/People'
-import { createSizeStyle } from '../Circle'
-import { nameToColor } from './helpers'
 
 const createBgColorStyle = ({ text, textId }) =>
   text ? { backgroundColor: `${nameToColor(textId || text)}` } : {}

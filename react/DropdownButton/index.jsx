@@ -1,9 +1,9 @@
-import React, { forwardRef } from 'react'
-import PropTypes from 'prop-types'
 import Button from '@material-ui/core/Button'
+import PropTypes from 'prop-types'
+import React, { forwardRef } from 'react'
 
-import { makeStyles } from '../styles'
 import DropdownText from '../DropdownText'
+import { makeStyles } from '../styles'
 
 const useStyles = makeStyles({
   root: {

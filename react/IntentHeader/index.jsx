@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styles from './styles.styl'
-
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React from 'react'
+
+import styles from './styles.styl'
 
 export const IntentHeader = ({ appName, appEditor, appIcon, className }) => (
   <div className={cx(styles['intentHeader'], className)}>

@@ -1,15 +1,14 @@
-import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
-
-import Button from '../../deprecated/Button'
-import { FieldContainer } from '../../Field'
-import Icon from '../../Icon'
-import Label from '../../Label'
-import CrossSmallIcon from '../../Icons/CrossSmall'
-import PlusIcon from '../../Icons/Plus'
-import Stack from '../../Stack'
+import React, { useRef } from 'react'
 
 import styles from './styles.styl'
+import { FieldContainer } from '../../Field'
+import Icon from '../../Icon'
+import CrossSmallIcon from '../../Icons/CrossSmall'
+import PlusIcon from '../../Icons/Plus'
+import Label from '../../Label'
+import Stack from '../../Stack'
+import Button from '../../deprecated/Button'
 
 /**
  * Handles a collection of form fields.

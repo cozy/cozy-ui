@@ -1,20 +1,19 @@
-import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
+import React, { useState, useRef } from 'react'
 
+import RenameInput from './Renaming/RenameInput'
 import ListItem from '..'
-import ListItemText from '../../ListItemText'
-import ListItemIcon from '../../ListItemIcon'
-import ListItemSecondaryAction from '../../ListItemSecondaryAction'
-import IconButton from '../../IconButton'
-import Icon from '../../Icon'
-import DotsIcon from '../../Icons/Dots'
-import Checkbox from '../../Checkbox'
 import ActionsMenu from '../../ActionsMenu'
 import ActionsMenuMobileHeader from '../../ActionsMenu/ActionsMenuMobileHeader'
-
-import withListItemLocales from '../hoc/withListItemLocales'
+import Checkbox from '../../Checkbox'
+import Icon from '../../Icon'
+import IconButton from '../../IconButton'
+import DotsIcon from '../../Icons/Dots'
+import ListItemIcon from '../../ListItemIcon'
+import ListItemSecondaryAction from '../../ListItemSecondaryAction'
+import ListItemText from '../../ListItemText'
 import ExpandedAttributes from '../ExpandedAttributes'
-import RenameInput from './Renaming/RenameInput'
+import withListItemLocales from '../hoc/withListItemLocales'
 
 const ListItemBase = ({
   doc,
