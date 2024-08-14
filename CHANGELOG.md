@@ -1,3 +1,17 @@
+# [111.6.0](https://github.com/cozy/cozy-ui/compare/v111.5.0...v111.6.0) (2024-08-14)
+
+
+### Bug Fixes
+
+* handle auto fixable lint errors ([ec1c677](https://github.com/cozy/cozy-ui/commit/ec1c677))
+* manually handle lint errors not auto fixable ([bf9df94](https://github.com/cozy/cozy-ui/commit/bf9df94))
+
+
+### Features
+
+* Prettier to 2.6 (current implicit version) ([0739fc7](https://github.com/cozy/cozy-ui/commit/0739fc7))
+* update lint config ([e9637af](https://github.com/cozy/cozy-ui/commit/e9637af))
+
 # [111.5.0](https://github.com/cozy/cozy-ui/compare/v111.4.0...v111.5.0) (2024-08-13)
 
 
