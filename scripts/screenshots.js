@@ -8,7 +8,7 @@ const { readConfig, parseViewportArgument } = require('./screenshots/helpers')
 
 let puppeteer
 try {
-  puppeteer = require('puppeteer')
+  puppeteer = require('puppeteer-core')
 } catch (e) {
   console.error(e)
   console.log(

@@ -19,9 +19,10 @@ remark -o --use remark-jscodeshift=allowNoLang:true,transform:\"codemods/transfo
 * Screenshot the new one inside screenshots
 * Run pixelmatch-server, which shows screenshots side by side like on Argos (you need the `pixelmatch` binary to be available)
 
+You have to change `executablePath` value of `prepareBrowser` function to match your OS configuration.
+
 ```bash
 # Screenshot all the components
-yarn add puppeteer@"21.11.0" -DE
 yarn build:all
 mkdir ./screenshots
 yarn screenshots
