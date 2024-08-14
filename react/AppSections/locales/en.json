@@ -26,10 +26,12 @@
     "tech": "Tech",
     "telecom": "Telecom",
     "transport": "Transportation",
-    "pro": "Work"
+    "pro": "Work",
+    "shortcuts": "Shortcuts"
   },
   "sections": {
     "applications": "Applications",
-    "konnectors": "Services"
+    "konnectors": "Services",
+    "shortcuts": "Shortcuts"
   }
 }

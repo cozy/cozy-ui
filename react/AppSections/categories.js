@@ -38,21 +38,37 @@ export const groupApps = apps => multiGroupBy(apps, getAppCategory)
  * Alphabetical sort on label except for
  *   - 'all' value always at the beginning
  *   - 'others' value always at the end
+ *   - 'cozy' value should be near the beginning, right after 'all'
+ *   - items of type 'file' should appear alphabetically between 'webapp' and 'konnector'
  *
  * @param  {CategoryOption} categoryA
  * @param  {CategoryOption} categoryB
  * @return {Number}
  */
 export const sorter = (categoryA, categoryB) => {
-  return (
-    (categoryA.value === 'all' && -1) ||
-    (categoryB.value === 'all' && 1) ||
-    (categoryA.value === 'others' && 1) ||
-    (categoryB.value === 'others' && -1) ||
-    (categoryA.value === 'cozy' && -1) ||
-    (categoryB.value === 'cozy' && 1) ||
-    categoryA.label.localeCompare(categoryB.label)
-  )
+  // Always keep 'all' at the beginning
+  if (categoryA.value === 'all') return -1
+  if (categoryB.value === 'all') return 1
+
+  // Always keep 'others' at the end
+  if (categoryA.value === 'others') return 1
+  if (categoryB.value === 'others') return -1
+
+  // Keep 'cozy' near the beginning, right after 'all'
+  if (categoryA.value === 'cozy') return -1
+  if (categoryB.value === 'cozy') return 1
+
+  // Sort by type order: webapp < file < konnector
+  const typeOrder = ['webapp', 'file', 'konnector']
+  const typeAIndex = typeOrder.indexOf(categoryA.type)
+  const typeBIndex = typeOrder.indexOf(categoryB.type)
+
+  if (typeAIndex !== typeBIndex) {
+    return typeAIndex - typeBIndex
+  }
+
+  // Alphabetical sort on label for the rest
+  return categoryA.label.localeCompare(categoryB.label)
 }
 
 export const addLabel = (cat, t) => ({
@@ -82,7 +98,7 @@ export const generateOptionsFromApps = (apps, options = {}) => {
       ]
     : []
 
-  for (const type of [APP_TYPE.WEBAPP, APP_TYPE.KONNECTOR]) {
+  for (const type of [APP_TYPE.WEBAPP, APP_TYPE.FILE, APP_TYPE.KONNECTOR]) {
     const catApps = groupApps(apps.filter(a => a.type === type))
     // Add an entry to filter by all konnectors
     if (type === APP_TYPE.KONNECTOR) {
@@ -93,11 +109,19 @@ export const generateOptionsFromApps = (apps, options = {}) => {
         })
       )
     }
+    if (type === APP_TYPE.FILE) {
+      allCategoryOptions.push(
+        addLabel({
+          value: 'shortcuts',
+          secondary: false
+        })
+      )
+    }
     const categoryOptions = Object.keys(catApps).map(cat => {
       return addLabel({
         value: cat,
         type: type,
-        secondary: type === APP_TYPE.KONNECTOR
+        secondary: type === APP_TYPE.KONNECTOR || type === APP_TYPE.FILE
       })
     })
 
