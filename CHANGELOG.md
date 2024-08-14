@@ -1,3 +1,10 @@
+# [111.7.0](https://github.com/cozy/cozy-ui/compare/v111.6.0...v111.7.0) (2024-08-14)
+
+
+### Features
+
+* handle shortcuttiles ([e5ff800](https://github.com/cozy/cozy-ui/commit/e5ff800))
+
 # [111.6.0](https://github.com/cozy/cozy-ui/compare/v111.5.0...v111.6.0) (2024-08-14)
 
 
