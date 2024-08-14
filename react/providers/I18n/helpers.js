@@ -1,6 +1,6 @@
-import { initTranslation } from './translation'
-import { initFormat } from './format'
 import { DEFAULT_LANG } from './'
+import { initFormat } from './format'
+import { initTranslation } from './translation'
 
 const getAppOrUiLang = defaultLang => {
   const appContainer = document.querySelector('[role=application]')

@@ -1,23 +1,19 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
-
-import Typography from '../Typography'
-import { translate } from '../providers/I18n'
-import withBreakpoints from '../helpers/withBreakpoints'
-
-import AppsSection from './components/AppsSection'
-import DropdownFilter from './components/DropdownFilter'
-
-import { APP_TYPE } from './constants'
-import * as searchUtils from './search'
-import * as catUtils from './categories'
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 
 import styles from './Sections.styl'
-
-import withLocales from '../providers/I18n/withLocales'
+import * as catUtils from './categories'
+import AppsSection from './components/AppsSection'
+import DropdownFilter from './components/DropdownFilter'
+import { APP_TYPE } from './constants'
 import en from './locales/en.json'
 import fr from './locales/fr.json'
+import * as searchUtils from './search'
+import Typography from '../Typography'
+import withBreakpoints from '../helpers/withBreakpoints'
+import { translate } from '../providers/I18n'
+import withLocales from '../providers/I18n/withLocales'
 
 const locales = {
   en,

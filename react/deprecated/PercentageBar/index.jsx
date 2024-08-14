@@ -1,7 +1,8 @@
-import React from 'react'
-import PercentageLine from '../PercentageLine'
-import styles from './styles.styl'
 import cx from 'classnames'
+import React from 'react'
+
+import styles from './styles.styl'
+import PercentageLine from '../PercentageLine'
 
 const PercentageBar = props => {
   const { value, color, className, ...rest } = props

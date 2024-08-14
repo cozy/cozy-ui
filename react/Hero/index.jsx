@@ -1,6 +1,7 @@
 import React from 'react'
-import BaseIcon from '../Icon'
+
 import styles from './styles.styl'
+import BaseIcon from '../Icon'
 import { mkComponent } from '../utils'
 
 // Cannot use mkComponent since it is not picked up by styleguidist

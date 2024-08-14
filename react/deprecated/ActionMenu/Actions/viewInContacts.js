@@ -2,11 +2,11 @@ import React from 'react'
 
 import { generateWebLink, useClient } from 'cozy-client'
 
+import withActionsLocales from './locales/withActionsLocales'
+import OpenappIcon from '../../../Icons/Openapp'
 import Link from '../../../Link'
 import { useI18n } from '../../../providers/I18n'
-import OpenappIcon from '../../../Icons/Openapp'
 import ActionMenuItemWrapper from '../ActionMenuItemWrapper'
-import withActionsLocales from './locales/withActionsLocales'
 
 export const viewInContacts = () => {
   return {

@@ -1,10 +1,10 @@
-import React, { forwardRef } from 'react'
-import PropTypes from 'prop-types'
-import omit from 'lodash/omit'
 import cx from 'classnames'
+import omit from 'lodash/omit'
+import PropTypes from 'prop-types'
+import React, { forwardRef } from 'react'
 
-import MenuItem from '../MenuItem'
 import ListItem from '../ListItem'
+import MenuItem from '../MenuItem'
 
 const cleanPropsForDOM = props => {
   const nonDOMProps = ['docs', 'action', 't', 'f', 'lang']

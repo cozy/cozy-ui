@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
 import cx from 'classnames'
-import styles from './styles.styl'
+import React, { Component } from 'react'
+
 import AnimatedContentHeader from './AnimatedContentHeader'
+import styles from './styles.styl'
 
 function _getChildrenToRender(children) {
   return React.Children.map(children, child =>

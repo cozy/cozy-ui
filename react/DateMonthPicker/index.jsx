@@ -1,15 +1,14 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
-import range from 'lodash/range'
-import format from 'date-fns/format'
 import cx from 'classnames'
+import format from 'date-fns/format'
+import range from 'lodash/range'
+import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 
-import { useI18n } from '../providers/I18n'
+import styles from './styles.styl'
 import Icon from '../Icon'
 import LeftIcon from '../Icons/Left'
 import RightIcon from '../Icons/Right'
-
-import styles from './styles.styl'
+import { useI18n } from '../providers/I18n'
 
 const MonthButton = ({ monthNum, onClick, isSelected }) => {
   const { f } = useI18n()
@@ -86,7 +85,7 @@ const DateMonthPicker = ({ initialValue, onSelect }) => {
   )
 }
 
-const dateMonthProp = function(props, propName, componentName) {
+const dateMonthProp = function (props, propName, componentName) {
   if (!/^[0-9]{4}-[0-9]{2}$/.test(props[propName])) {
     return new Error(
       'Invalid prop `' +

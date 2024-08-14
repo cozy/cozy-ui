@@ -2,8 +2,8 @@ import React from 'react'
 
 import { useQuery, isQueryLoading, hasQueryBeenLoaded } from 'cozy-client'
 
-import { buildSettingsInstanceQuery } from './queries'
 import DumbCozyTheme from './DumbCozyTheme'
+import { buildSettingsInstanceQuery } from './queries'
 
 const CozyThemeWithQuery = props => {
   const instanceQuery = buildSettingsInstanceQuery()

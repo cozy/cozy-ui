@@ -1,8 +1,8 @@
-import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+import React, { forwardRef } from 'react'
 
-import { makeStyles } from '../styles'
 import MuiCircularProgress from '../CircularProgress'
+import { makeStyles } from '../styles'
 
 const useStyles = makeStyles({
   root: {

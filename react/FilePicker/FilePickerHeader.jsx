@@ -1,18 +1,17 @@
-import React, { useCallback, memo } from 'react'
-import PropTypes from 'prop-types'
-import uniqBy from 'lodash/uniqBy'
 import get from 'lodash/get'
+import uniqBy from 'lodash/uniqBy'
+import PropTypes from 'prop-types'
+import React, { useCallback, memo } from 'react'
 
 import { useQuery, hasQueryBeenLoaded } from 'cozy-client'
 
-import useBreakpoints from '../providers/Breakpoints'
-import IconButton from '../IconButton'
-import Icon from '../Icon'
-import Previous from '../Icons/Previous'
-
+import { ROOT_DIR_ID } from '.'
 import FilePickerBreadcrumb from './FilePickerBreadcrumb'
 import { buildCurrentFolderQuery } from './queries'
-import { ROOT_DIR_ID } from '.'
+import Icon from '../Icon'
+import IconButton from '../IconButton'
+import Previous from '../Icons/Previous'
+import useBreakpoints from '../providers/Breakpoints'
 
 /**
  * @param {IOCozyFolder} displayedFolder - An io.cozy.files folder

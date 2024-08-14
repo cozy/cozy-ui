@@ -1,25 +1,23 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
 import filesize from 'filesize'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 import { models } from 'cozy-client'
 
-import { makeStyles } from '../styles'
+import styles from './styles.styl'
+import Checkbox from '../Checkbox'
+import Divider from '../Divider'
+import Icon from '../Icon'
+import FileTypeFolder from '../Icons/FileTypeFolder'
+import FileTypeText from '../Icons/FileTypeText'
 import ListItem from '../ListItem'
 import ListItemIcon from '../ListItemIcon'
 import ListItemText from '../ListItemText'
-import Divider from '../Divider'
-import Icon from '../Icon'
-import FileTypeText from '../Icons/FileTypeText'
-import FileTypeFolder from '../Icons/FileTypeFolder'
-import Checkbox from '../Checkbox'
 import Radio from '../Radios'
-import { useI18n } from '../providers/I18n'
-
 import { isValidFile, isValidFolder } from '../helpers/acceptedTypes'
-
-import styles from './styles.styl'
+import { useI18n } from '../providers/I18n'
+import { makeStyles } from '../styles'
 
 const {
   file: { isDirectory, isFile }

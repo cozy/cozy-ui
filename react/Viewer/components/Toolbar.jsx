@@ -1,26 +1,24 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 import { useClient } from 'cozy-client'
 
-import withBreakpoints from '../../helpers/withBreakpoints'
-import { makeStyles } from '../../styles'
-import IconButton from '../../IconButton'
+import PrintButton from './PrintButton'
+import { ToolbarFilePath } from './ToolbarFilePath'
+import styles from './styles.styl'
 import Icon from '../../Icon'
-import Typography from '../../Typography'
-import PreviousIcon from '../../Icons/Previous'
+import IconButton from '../../IconButton'
 import DownloadIcon from '../../Icons/Download'
-import { useI18n } from '../../providers/I18n'
+import PreviousIcon from '../../Icons/Previous'
 import MidEllipsis from '../../MidEllipsis'
-
+import Typography from '../../Typography'
+import withBreakpoints from '../../helpers/withBreakpoints'
+import { useI18n } from '../../providers/I18n'
+import { makeStyles } from '../../styles'
+import { extractChildrenCompByName } from '../Footer/helpers'
 import { downloadFile } from '../helpers'
 import { useEncrypted } from '../providers/EncryptedProvider'
-import { extractChildrenCompByName } from '../Footer/helpers'
-import { ToolbarFilePath } from './ToolbarFilePath'
-import PrintButton from './PrintButton'
-
-import styles from './styles.styl'
 
 const useClasses = makeStyles(theme => ({
   iconButton: {

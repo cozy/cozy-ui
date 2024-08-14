@@ -1,8 +1,8 @@
-import { useMemo } from 'react'
 import Polyglot from 'node-polyglot'
+import { useMemo } from 'react'
 
-import { initFormat } from './format'
 import { useI18n, DEFAULT_LANG } from '.'
+import { initFormat } from './format'
 
 const createUseI18n = locales => () => {
   const { lang } = useI18n() || { lang: DEFAULT_LANG }

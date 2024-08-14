@@ -1,20 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React from 'react'
 
-import createDepreciationLogger from '../../helpers/createDepreciationLogger'
-import useBreakpoints from '../../providers/Breakpoints'
-
-import ActionMenuWrapper from './ActionMenuWrapper'
+import { useActionMenuEffects } from './ActionMenuEffects'
 import { ActionMenuHeader } from './ActionMenuHeader'
 import { ActionMenuItem } from './ActionMenuItem'
-import { ActionMenuRadio } from './ActionMenuRadio'
-import { useActionMenuEffects } from './ActionMenuEffects'
 import ActionMenuItemWrapper from './ActionMenuItemWrapper'
+import { ActionMenuRadio } from './ActionMenuRadio'
 import ActionMenuWithClose from './ActionMenuWithClose'
+import ActionMenuWrapper from './ActionMenuWrapper'
 import ActionsItems from './Actions/ActionsItems'
-
 import styles from './styles.styl'
+import createDepreciationLogger from '../../helpers/createDepreciationLogger'
+import useBreakpoints from '../../providers/Breakpoints'
 
 const logDepecratedMenu = createDepreciationLogger()
 const logDepecratedPlacement = createDepreciationLogger()

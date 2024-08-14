@@ -1,5 +1,6 @@
-import usePeriodicRender from './usePeriodicRender'
 import { renderHook } from '@testing-library/react-hooks'
+
+import usePeriodicRender from './usePeriodicRender'
 
 async function wait(duration) {
   return new Promise(resolve => {

@@ -1,13 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
-
-import Icon from '../Icon'
-import Typography from '../Typography'
-import { translate } from '../providers/I18n'
-import SpinnerIcon from '../Icons/Spinner'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 import styles from './styles.styl'
+import Icon from '../Icon'
+import SpinnerIcon from '../Icons/Spinner'
+import Typography from '../Typography'
+import { translate } from '../providers/I18n'
 
 export const Spinner = ({
   t,

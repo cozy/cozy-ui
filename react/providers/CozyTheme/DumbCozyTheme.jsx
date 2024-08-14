@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 import flag from 'cozy-flags'
-import useMediaQuery from '../../hooks/useMediaQuery'
-import MuiCozyTheme from '../../MuiCozyTheme'
 
 import { CozyThemeContext } from './index'
+import MuiCozyTheme from '../../MuiCozyTheme'
+import useMediaQuery from '../../hooks/useMediaQuery'
 
 const DumbCozyTheme = ({
   variant,
@@ -45,9 +45,8 @@ const DumbCozyTheme = ({
       <MuiCozyTheme type={selfThemeType} variant={selfThemeVariant}>
         <div
           className={cx(className, {
-            [`CozyTheme--${selfThemeType}-${selfThemeVariant}`]: Boolean(
-              selfThemeVariant
-            ),
+            [`CozyTheme--${selfThemeType}-${selfThemeVariant}`]:
+              Boolean(selfThemeVariant),
             'u-dc': ignoreItself
           })}
         >

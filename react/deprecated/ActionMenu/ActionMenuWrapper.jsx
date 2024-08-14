@@ -1,10 +1,9 @@
 import React from 'react'
 
-import useBreakpoints from '../../providers/Breakpoints'
-import isTesting from '../../helpers/isTesting'
-import BottomSheet from '../../BottomSheet'
-
 import NotInlineWrapper from './NotInlineWrapper'
+import BottomSheet from '../../BottomSheet'
+import isTesting from '../../helpers/isTesting'
+import useBreakpoints from '../../providers/Breakpoints'
 
 /**
  * @deprecated This component is depreacated, please use [ActionsMenu](#/ActionsMenu) instead.

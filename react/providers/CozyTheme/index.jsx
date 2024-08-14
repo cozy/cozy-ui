@@ -1,11 +1,11 @@
-import React, { createContext, useContext } from 'react'
 import PropTypes from 'prop-types'
+import React, { createContext, useContext } from 'react'
 
 import log from 'cozy-logger'
 
-import { isRsg } from '../../hooks/useSetFlagshipUi/helpers'
 import CozyThemeWithQuery from './CozyThemeWithQuery'
 import DumbCozyTheme from './DumbCozyTheme'
+import { isRsg } from '../../hooks/useSetFlagshipUi/helpers'
 
 export const CozyThemeContext = createContext()
 

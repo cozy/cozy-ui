@@ -1,12 +1,11 @@
-import React from 'react'
 import cx from 'classnames'
-
-import Icon from '../../Icon'
-import CrossIcon from '../../Icons/Cross'
-import useBreakpoints from '../../providers/Breakpoints'
-import palette from '../../palette'
+import React from 'react'
 
 import styles from './styles.styl'
+import Icon from '../../Icon'
+import CrossIcon from '../../Icons/Cross'
+import palette from '../../palette'
+import useBreakpoints from '../../providers/Breakpoints'
 
 export const ModalCrossIcon = props => {
   const { isMobile } = useBreakpoints()

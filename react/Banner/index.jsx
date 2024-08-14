@@ -1,13 +1,12 @@
-import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-
-import Paper from '../Paper'
-import Grid from '../Grid'
-import Divider from '../Divider'
-import Typography from '../Typography'
+import React from 'react'
 
 import styles from './styles.styl'
+import Divider from '../Divider'
+import Grid from '../Grid'
+import Paper from '../Paper'
+import Typography from '../Typography'
 
 /**
  * A banner displays a prominent message and related optional actions.

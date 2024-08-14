@@ -1,15 +1,15 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
+import Divider from '../Divider'
 import Icon from '../Icon'
 import RightIcon from '../Icons/Right'
-import ListItemText from '../ListItemText'
-import Divider from '../Divider'
 import ListItem from '../ListItem'
 import ListItemIcon from '../ListItemIcon'
+import ListItemText from '../ListItemText'
 import Radio from '../Radios'
-import useBreakpoints from '../providers/Breakpoints'
 import Typography from '../Typography'
+import useBreakpoints from '../providers/Breakpoints'
 
 const infoStyle = { color: 'var(--secondaryTextColor)' }
 

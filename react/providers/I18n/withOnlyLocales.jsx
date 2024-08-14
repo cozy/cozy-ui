@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react'
+
 import { I18n, useI18n } from '.'
 
 /**
@@ -27,8 +28,9 @@ const withOnlyLocales = localesOrRequire => Component => {
     ...(Component.propTypes || {})
   }
 
-  Wrapped.displayName = `withOnlyLocales(${Component.displayName ||
-    Component.name})`
+  Wrapped.displayName = `withOnlyLocales(${
+    Component.displayName || Component.name
+  })`
 
   return Wrapped
 }

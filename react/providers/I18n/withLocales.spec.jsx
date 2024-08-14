@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { I18n } from '.'
 import withLocales from './withLocales'
 

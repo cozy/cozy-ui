@@ -1,15 +1,15 @@
-import React, { useMemo, useState } from 'react'
 import PropTypes from 'prop-types'
+import React, { useMemo, useState } from 'react'
 
-import PermissionDialog from '../PermissionDialog'
-import Buttons from '../../Buttons'
-import { useI18n } from '../../providers/I18n'
-import Typography from '../../Typography'
 import { useClient } from 'cozy-client'
-import CozyAuthentificationIcon from '../../Icons/CozyAuthentification'
-import PasswordField from '../../PasswordField'
 
 import withSpecificDialogsLocales from './withSpecificDialogsLocales'
+import Buttons from '../../Buttons'
+import CozyAuthentificationIcon from '../../Icons/CozyAuthentification'
+import PasswordField from '../../PasswordField'
+import Typography from '../../Typography'
+import { useI18n } from '../../providers/I18n'
+import PermissionDialog from '../PermissionDialog'
 
 /**
  * Dialog used to authenticate a user in the cozy system.

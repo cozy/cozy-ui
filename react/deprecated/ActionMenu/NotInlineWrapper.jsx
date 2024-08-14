@@ -1,6 +1,6 @@
+import ClickAwayListener from '@material-ui/core/ClickAwayListener'
 import React, { useState } from 'react'
 import { usePopper } from 'react-popper'
-import ClickAwayListener from '@material-ui/core/ClickAwayListener'
 
 const NotInlineWrapper = ({
   anchorElRef,

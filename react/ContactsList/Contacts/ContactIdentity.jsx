@@ -1,10 +1,11 @@
-import React from 'react'
-import { models } from 'cozy-client'
 import PropTypes from 'prop-types'
+import React from 'react'
 
+import { models } from 'cozy-client'
+
+import ContactName from './ContactName'
 import { Avatar } from '../../Avatar'
 import { TableCell } from '../../deprecated/Table'
-import ContactName from './ContactName'
 import styles from '../styles.styl'
 
 const { getDisplayName, getInitials } = models.contact
@@ -21,9 +22,7 @@ const ContactIdentity = ({ contact }) => {
   return (
     <TableCell
       data-testid="ContactIdentity" // used by a test in cozy-contacts
-      className={`${
-        styles['contact-identity']
-      } u-flex u-flex-items-center u-ellipsis u-p-0`}
+      className={`${styles['contact-identity']} u-flex u-flex-items-center u-ellipsis u-p-0`}
     >
       <Avatar text={getInitials(contact)} size="small" />
       <ContactName displayName={displayName} familyName={name.familyName} />

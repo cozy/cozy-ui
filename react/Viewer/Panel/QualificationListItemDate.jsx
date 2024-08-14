@@ -1,5 +1,5 @@
-import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+import React, { forwardRef } from 'react'
 
 import {
   isExpired,
@@ -8,15 +8,15 @@ import {
   formatDateMetadataValue
 } from 'cozy-client/dist/models/paper'
 
+import QualificationListItemText from './QualificationListItemText'
+import Icon from '../../Icon'
+import IconButton from '../../IconButton'
+import Dots from '../../Icons/Dots'
 import ListItem from '../../ListItem'
 import ListItemSecondaryAction from '../../ListItemSecondaryAction'
-import IconButton from '../../IconButton'
-import Icon from '../../Icon'
-import Dots from '../../Icons/Dots'
 import Typography from '../../Typography'
-import ExpirationAnnotation from '../components/ExpirationAnnotation'
-import QualificationListItemText from './QualificationListItemText'
 import { useI18n } from '../../providers/I18n'
+import ExpirationAnnotation from '../components/ExpirationAnnotation'
 
 const QualificationListItemDate = forwardRef(
   ({ file, formattedMetadataQualification, toggleActionsMenu }, ref) => {
@@ -30,7 +30,7 @@ const QualificationListItemDate = forwardRef(
     const isExpirationDate = name === 'expirationDate'
 
     return (
-      <ListItem className={'u-pl-2 u-pr-3'}>
+      <ListItem className="u-pl-2 u-pr-3">
         <QualificationListItemText
           primary={formattedTitle}
           secondary={

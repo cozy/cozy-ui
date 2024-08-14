@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
 import cx from 'classnames'
 import omit from 'lodash/omit'
 import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 
-import labelStyles from '../Label/styles.styl'
 import styles from './styles.styl'
-import Label from '../Label'
+import ContactPicker from '../ContactPicker'
 import Input from '../Input'
+import Label from '../Label'
+import labelStyles from '../Label/styles.styl'
 import SelectBox from '../SelectBox'
 import Textarea from '../Textarea'
-import ContactPicker from '../ContactPicker'
 
 /**
  * PropTypes to pass to Input but not to other components, like SelectBox
@@ -263,7 +263,7 @@ Field.propTypes = {
   name: PropTypes.string,
   type: PropTypes.oneOf(allowedTypes),
   // value should be an object for type=select and string for others
-  value: function(props, propName, componentName) {
+  value: function (props, propName, componentName) {
     // not a required props
     if (typeof props[propName] === 'undefined') return
     if (props.type === 'select' && typeof props[propName] !== 'object') {

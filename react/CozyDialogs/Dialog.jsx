@@ -1,13 +1,12 @@
-import React from 'react'
 import cx from 'classnames'
+import React from 'react'
 
+import DialogBackButton from './DialogBackButton'
+import DialogCloseButton from './DialogCloseButton'
+import dialogPropTypes from './dialogPropTypes'
 import useCozyDialog from './useCozyDialog'
 import MUIDialog, { DialogTitle, DialogActions, DialogContent } from '../Dialog'
 import Divider from '../Divider'
-
-import dialogPropTypes from './dialogPropTypes'
-import DialogBackButton from './DialogBackButton'
-import DialogCloseButton from './DialogCloseButton'
 
 const Dialog = props => {
   const { onClose, onBack, title, content, actions, actionsLayout } = props

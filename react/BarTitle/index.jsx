@@ -1,9 +1,8 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-
-import Typography from '../Typography'
+import React from 'react'
 
 import styles from './styles.styl'
+import Typography from '../Typography'
 
 const BarTitle = ({ noWrap, children }) => {
   return (

@@ -1,13 +1,13 @@
-import React, { useMemo } from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React, { useMemo } from 'react'
 
+import BottomSheetContent from './BottomSheetContent'
+import { extractChildrenCompByName } from './helpers'
 import BottomSheet, { BottomSheetHeader } from '../../BottomSheet'
 import { makeStyles } from '../../styles'
-import { isValidForPanel } from '../helpers'
 import PrintButton from '../components/PrintButton'
-import { extractChildrenCompByName } from './helpers'
-import BottomSheetContent from './BottomSheetContent'
+import { isValidForPanel } from '../helpers'
 
 const FooterButtons = ({
   file,

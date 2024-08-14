@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 
-import IntentModal from '../IntentModal'
 import createDepreciationLogger from '../../helpers/createDepreciationLogger'
+import IntentModal from '../IntentModal'
 
 const logIntentOpenerDepecrated = createDepreciationLogger()
 

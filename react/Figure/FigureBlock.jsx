@@ -1,9 +1,10 @@
-import React from 'react'
-import Types from 'prop-types'
 import classNames from 'classnames'
+import Types from 'prop-types'
+import React from 'react'
+
 import Figure from './Figure'
-import Typography from '../Typography'
 import styles from './FigureBlock.styl'
+import Typography from '../Typography'
 
 /**
  * Shows a `Figure` with a label, useful for important numbers.

@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
-import Icon from '../../Icon'
-import InputGroup from '../../InputGroup'
-import Input from '../../Input'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React, { useState } from 'react'
+
 import { getStrength } from './helpers'
 import styles from './styles.styl'
-import PropTypes from 'prop-types'
+import Icon from '../../Icon'
 import EyeIcon from '../../Icons/Eye'
 import EyeClosedIcon from '../../Icons/EyeClosed'
+import Input from '../../Input'
+import InputGroup from '../../InputGroup'
 
 const HideShowButton = props => {
   const { hidden, className, ...rest } = props

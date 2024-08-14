@@ -1,7 +1,7 @@
-import styles from './styles.styl'
-
-import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+
+import styles from './styles.styl'
 
 class Toggle extends Component {
   componentDidMount() {

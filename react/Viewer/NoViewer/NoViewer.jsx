@@ -1,9 +1,10 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-import FileIcon from './FileIcon'
+import React from 'react'
+
 import DownloadButton from './DownloadButton'
-import styles from '../ViewersByFile/styles.styl'
+import FileIcon from './FileIcon'
 import { FileDoctype } from '../../proptypes'
+import styles from '../ViewersByFile/styles.styl'
 
 const NoViewer = ({ file, url, renderFallbackExtraContent }) => (
   <div className={styles['viewer-noviewer']}>

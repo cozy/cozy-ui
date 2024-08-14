@@ -1,12 +1,11 @@
-import React from 'react'
 import cx from 'classnames/dedupe'
+import React from 'react'
 
-import useCozyDialog from './useCozyDialog'
-import Dialog, { DialogTitle, DialogActions, DialogContent } from '../Dialog'
-
-import dialogPropTypes from './dialogPropTypes'
 import DialogBackButton from './DialogBackButton'
 import DialogCloseButton from './DialogCloseButton'
+import dialogPropTypes from './dialogPropTypes'
+import useCozyDialog from './useCozyDialog'
+import Dialog, { DialogTitle, DialogActions, DialogContent } from '../Dialog'
 
 const IllustrationDialog = props => {
   const { onClose, onBack, title, content, actions, actionsLayout } = props

@@ -1,6 +1,7 @@
-import React, { forwardRef } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
+import React, { forwardRef } from 'react'
+
 import styles from './styles.styl'
 
 const Input = forwardRef((props, ref) => {

@@ -1,8 +1,8 @@
-import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
+import React from 'react'
 
-import DemoProvider from './docs/DemoProvider'
 import FilePickerFooter from './FilePickerFooter'
+import DemoProvider from './docs/DemoProvider'
 
 describe('FilePickerFooter components:', () => {
   const mockOnConfirm = jest.fn()

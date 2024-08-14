@@ -1,19 +1,19 @@
-import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
+import React, { forwardRef } from 'react'
 
 import { useAppLinkWithStoreFallback, useClient } from 'cozy-client'
 
+import ActionMenuDesktop from './ActionMenuDesktop'
+import ActionMenuMobile from './ActionMenuMobile'
+import { useAlert } from '../../providers/Alert'
 import useBreakpoints from '../../providers/Breakpoints'
 import { useI18n } from '../../providers/I18n'
-import { useAlert } from '../../providers/Alert'
 import {
   buildEditAttributePath,
   isEditableAttribute,
   getCurrentModel
 } from '../helpers'
 import useActionMenuContext from '../providers/ActionMenuProvider'
-import ActionMenuMobile from './ActionMenuMobile'
-import ActionMenuDesktop from './ActionMenuDesktop'
 
 const mespapiersAppSlug = 'mespapiers'
 

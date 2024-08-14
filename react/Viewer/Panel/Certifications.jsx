@@ -1,17 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import has from 'lodash/has'
+import PropTypes from 'prop-types'
+import React from 'react'
 
-import Typography from '../../Typography'
-import { Media, Img, Bd } from '../../deprecated/Media'
 import Icon, { iconPropType } from '../../Icon'
 import CarbonCopyIcon from '../../Icons/CarbonCopy'
 import SafeIcon from '../../Icons/Safe'
+import Typography from '../../Typography'
+import { Media, Img, Bd } from '../../deprecated/Media'
 import { withViewerLocales } from '../hoc/withViewerLocales'
 
 const Certification = ({ icon, title, caption }) => {
   return (
-    <div className={'u-ph-2 u-pv-1'}>
+    <div className="u-ph-2 u-pv-1">
       <Media className="u-mb-half" align="top">
         <Img className="u-mr-half">
           <Icon icon={icon} />

@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 
-import IntentIframe, { iframeProps } from '../IntentIframe'
 import { DialogCloseButton } from '../CozyDialogs'
 import Dialog from '../Dialog'
+import IntentIframe, { iframeProps } from '../IntentIframe'
 
 /**
  * Wrapper that adds an `onClick` handler to its children that opens a dialog

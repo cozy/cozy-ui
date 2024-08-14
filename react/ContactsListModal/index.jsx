@@ -1,9 +1,9 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
-import { withContactsListLocales } from './withContactsListLocales'
 import ContactsListModal from './ContactsListModal'
 import ContactsListModalWithQuery from './ContactsListModalWithQuery'
+import { withContactsListLocales } from './withContactsListLocales'
 
 const ContactsListModalWrapper = ({ contacts, ...props }) => {
   if (contacts) {

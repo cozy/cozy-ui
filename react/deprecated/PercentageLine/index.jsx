@@ -1,7 +1,8 @@
-import React from 'react'
 import cx from 'classnames'
-import styles from './PercentageLine.styl'
 import PropTypes from 'prop-types'
+import React from 'react'
+
+import styles from './PercentageLine.styl'
 
 /**
  * @deprecated Use [Progress](#/Progress)

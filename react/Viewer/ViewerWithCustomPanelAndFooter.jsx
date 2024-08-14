@@ -1,13 +1,11 @@
-import React, { createRef } from 'react'
 import cx from 'classnames'
+import React, { createRef } from 'react'
 
-import useBreakpoints from '../providers/Breakpoints'
-
-import InformationPanel from './components/InformationPanel'
-import Footer from './components/Footer'
 import Viewer from './Viewer'
-
+import Footer from './components/Footer'
+import InformationPanel from './components/InformationPanel'
 import styles from './styles.styl'
+import useBreakpoints from '../providers/Breakpoints'
 
 const ViewerWithCustomPanelAndFooter = props => {
   console.warn(

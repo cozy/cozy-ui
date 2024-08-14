@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import { render, fireEvent } from '@testing-library/react'
+import PropTypes from 'prop-types'
+import React, { useState } from 'react'
+
 import I18n, { useI18n, createUseI18n } from '.'
 
 const locales = { helloworld: 'Hello World !' }

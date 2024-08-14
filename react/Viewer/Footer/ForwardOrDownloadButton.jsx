@@ -1,10 +1,10 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 import { useClient } from 'cozy-client'
 
-import ForwardButton from './ForwardButton'
 import DownloadButton from './DownloadButton'
+import ForwardButton from './ForwardButton'
 import { shouldBeForwardButton } from './helpers'
 
 const ForwardOrDownloadButton = ({ file, ...props }) => {

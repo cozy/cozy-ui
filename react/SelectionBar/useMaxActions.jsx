@@ -1,9 +1,9 @@
-import { useState } from 'react'
 import throttle from 'lodash/throttle'
+import { useState } from 'react'
 
+import { computeMaxAction } from './helpers'
 import breakpointDefs, { getBreakpointsStatus } from '../helpers/breakpoints'
 import useEventListener from '../hooks/useEventListener'
-import { computeMaxAction } from './helpers'
 
 const huge = 1400
 const large = 1200

@@ -1,15 +1,15 @@
 import React, { forwardRef } from 'react'
 
-import logger from 'cozy-logger'
 import { fetchBlobFileById, isFile } from 'cozy-client/dist/models/file'
+import logger from 'cozy-logger'
 
 import { makeBase64FromFile, makePdfBlob } from './helpers'
-import PrinterIcon from '../../Icons/Printer'
 import { getActionsI18n } from './locales/withActionsLocales'
-import ActionsMenuItem from '../ActionsMenuItem'
-import ListItemIcon from '../../ListItemIcon'
 import Icon from '../../Icon'
+import PrinterIcon from '../../Icons/Printer'
+import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
+import ActionsMenuItem from '../ActionsMenuItem'
 
 export const print = () => {
   const { t } = getActionsI18n()

@@ -1,14 +1,14 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 import { useClient } from 'cozy-client'
 
-import { useI18n } from '../../providers/I18n'
+import Button from '../../Buttons'
 import Icon from '../../Icon'
 import IconButton from '../../IconButton'
 import DownloadIcon from '../../Icons/Download'
-import Button from '../../Buttons'
 import Alerter from '../../deprecated/Alerter'
+import { useI18n } from '../../providers/I18n'
 
 const DownloadButton = ({ file, variant }) => {
   const client = useClient()

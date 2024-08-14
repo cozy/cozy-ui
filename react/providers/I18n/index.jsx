@@ -4,11 +4,11 @@
 
 'use strict'
 
-import React, { Component, useContext } from 'react'
 import PropTypes from 'prop-types'
+import React, { Component, useContext } from 'react'
 
-import { initTranslation } from './translation'
 import { initFormat } from './format'
+import { initTranslation } from './translation'
 
 export const DEFAULT_LANG = 'en'
 

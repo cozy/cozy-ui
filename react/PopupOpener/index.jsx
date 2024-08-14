@@ -1,5 +1,5 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 // customized function to center a popup window
 // source https://stackoverflow.com/a/16861050

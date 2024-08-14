@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useState, useEffect } from 'react'
 import throttle from 'lodash/throttle'
+import React, { createContext, useContext, useState, useEffect } from 'react'
 
 import breakpointDefs, {
   getBreakpointsStatus as _getBreakpointsStatus

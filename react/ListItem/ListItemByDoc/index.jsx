@@ -1,9 +1,9 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
-import ListItemFile from '../ListItemFile'
-import ListItemContact from '../ListItemContact'
 import { makeDefaultExpandedAttributes } from '../ExpandedAttributes/helpers'
+import ListItemContact from '../ListItemContact'
+import ListItemFile from '../ListItemFile'
 
 const ListItemByDoc = ({
   doc,

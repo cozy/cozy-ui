@@ -1,7 +1,8 @@
-import React from 'react'
-import Stack from '../Stack'
 import cx from 'classnames'
+import React from 'react'
+
 import styles from './styles.styl'
+import Stack from '../Stack'
 
 export const OrderedList = props => {
   const { className, ...rest } = props

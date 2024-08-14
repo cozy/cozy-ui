@@ -1,6 +1,6 @@
-import { components } from 'react-select'
-import React from 'react'
 import groupBy from 'lodash/groupBy'
+import React from 'react'
+import { components } from 'react-select'
 
 import SelectBox from './SelectBox'
 import styles from './styles.styl'

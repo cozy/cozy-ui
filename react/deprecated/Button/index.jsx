@@ -1,12 +1,12 @@
-import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
+import React from 'react'
+
 import styles from './styles.styl'
 import Icon, { iconPropType } from '../../Icon'
-
 import SpinnerIcon from '../../Icons/Spinner'
 
-const btnClass = function(options) {
+const btnClass = function (options) {
   const { className, extension, size, theme, variant, round, align } = options
   return cx(
     styles['c-btn'],

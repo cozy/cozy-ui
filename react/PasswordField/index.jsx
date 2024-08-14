@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
 
-import TextField from '../TextField'
-import IconButton from '../IconButton'
-import Icon from '../Icon'
-import InputAdornment from '../InputAdornment'
-import EyeIcon from '../Icons/Eye'
-import EyeClosedIcon from '../Icons/EyeClosed'
-import { useI18n } from '../providers/I18n'
-import withOnlyLocales from '../providers/I18n/withOnlyLocales'
-
 import en from './locales/en.json'
 import fr from './locales/fr.json'
+import Icon from '../Icon'
+import IconButton from '../IconButton'
+import EyeIcon from '../Icons/Eye'
+import EyeClosedIcon from '../Icons/EyeClosed'
+import InputAdornment from '../InputAdornment'
+import TextField from '../TextField'
+import { useI18n } from '../providers/I18n'
+import withOnlyLocales from '../providers/I18n/withOnlyLocales'
 
 export const locales = {
   en,

@@ -1,14 +1,13 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { withClient } from 'cozy-client'
-import styles from './styles.styl'
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 
+import { withClient } from 'cozy-client'
+
+import styles from './styles.styl'
 import Icon, { iconPropType } from '../Icon'
 import CubeIcon from '../Icons/Cube'
-
 import palette from '../palette'
-
 import { AppDoctype } from '../proptypes'
 
 const DONE = 'done'

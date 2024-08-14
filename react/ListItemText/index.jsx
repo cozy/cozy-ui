@@ -1,7 +1,7 @@
-import React, { forwardRef, useEffect, useMemo } from 'react'
-import cx from 'classnames'
 import MUIListItemText from '@material-ui/core/ListItemText'
+import cx from 'classnames'
 import once from 'lodash/once'
+import React, { forwardRef, useEffect, useMemo } from 'react'
 
 const logDeprecatedWarning = once(() => {
   console.warn(

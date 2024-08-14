@@ -1,5 +1,5 @@
-import format from 'date-fns/format'
 import distanceInWordsToNow from 'date-fns/distance_in_words_to_now'
+import format from 'date-fns/format'
 
 import { DEFAULT_LANG } from '.'
 
@@ -27,13 +27,12 @@ export const provideDateFnsLocale = (userLang, defaultLang = DEFAULT_LANG) => {
   return locales[lang]
 }
 
-export const initFormat = (userLang, defaultLang = DEFAULT_LANG) => (
-  date,
-  formatStr
-) => {
-  const locale = provideDateFnsLocale(userLang, defaultLang)
-  return format(date, formatStr, { locale })
-}
+export const initFormat =
+  (userLang, defaultLang = DEFAULT_LANG) =>
+  (date, formatStr) => {
+    const locale = provideDateFnsLocale(userLang, defaultLang)
+    return format(date, formatStr, { locale })
+  }
 
 export const formatLocallyDistanceToNow = date =>
   distanceInWordsToNow(date, { locale: locales[lang] })

@@ -1,7 +1,7 @@
-import React, { forwardRef } from 'react'
-import PropTypes from 'prop-types'
-import merge from 'lodash/merge'
 import MuiListSubheader from '@material-ui/core/ListSubheader'
+import merge from 'lodash/merge'
+import PropTypes from 'prop-types'
+import React, { forwardRef } from 'react'
 
 import { makeStyles } from '../styles'
 

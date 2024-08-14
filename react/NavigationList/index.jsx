@@ -1,12 +1,13 @@
-import React from 'react'
 import cx from 'classnames'
-import List from '../List'
-import Stack from '../Stack'
+import React from 'react'
+
+import styles from './styles.styl'
 import Card from '../Card'
+import List from '../List'
+import ListSubheader from '../ListSubheader'
+import Stack from '../Stack'
 import Typography from '../Typography'
 import useBreakpoints from '../providers/Breakpoints'
-import ListSubheader from '../ListSubheader'
-import styles from './styles.styl'
 
 const NavigationList = ({ children, style, className }) => {
   const { isMobile } = useBreakpoints()

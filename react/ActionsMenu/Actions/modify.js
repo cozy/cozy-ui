@@ -2,12 +2,12 @@ import React, { forwardRef } from 'react'
 
 import { generateWebLink } from 'cozy-client'
 
-import ListItemIcon from '../../ListItemIcon'
-import ListItemText from '../../ListItemText'
+import { getActionsI18n } from './locales/withActionsLocales'
 import Icon from '../../Icon'
 import PenIcon from '../../Icons/Pen'
+import ListItemIcon from '../../ListItemIcon'
+import ListItemText from '../../ListItemText'
 import ActionsMenuItem from '../ActionsMenuItem'
-import { getActionsI18n } from './locales/withActionsLocales'
 
 export const modify = () => {
   const { t } = getActionsI18n()

@@ -1,12 +1,11 @@
-import React from 'react'
 import { shallow } from 'enzyme'
+import React from 'react'
 import renderer from 'react-test-renderer'
 
 import { createMockClient } from 'cozy-client'
 
-import { BreakpointsProvider } from '../../providers/Breakpoints'
-
 import { TextViewer, isMarkdown } from './TextViewer'
+import { BreakpointsProvider } from '../../providers/Breakpoints'
 
 const client = createMockClient({})
 
@@ -94,8 +93,7 @@ describe('TextViewer Component', () => {
     inst.setState({
       loading: false,
       isMarkdown: true,
-      text:
-        "It's very easy to make some words **bold** and other words *italic* with Markdown"
+      text: "It's very easy to make some words **bold** and other words *italic* with Markdown"
     })
     expect(comp.toJSON()).toMatchSnapshot()
   })

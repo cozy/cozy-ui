@@ -1,10 +1,10 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
-import { withStyles } from '../styles'
 import Banner from '../Banner'
 import { LinearProgress } from '../Progress'
 import Typography from '../Typography'
+import { withStyles } from '../styles'
 
 const progressHeight = '0.125rem'
 

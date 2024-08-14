@@ -1,8 +1,8 @@
 import React from 'react'
 
 import Dialog from '../../Dialog'
-import DialogTitle from '../../Dialog/DialogTitle'
 import DialogActions from '../../Dialog/DialogActions'
+import DialogTitle from '../../Dialog/DialogTitle'
 import createDepreciationLogger from '../../helpers/createDepreciationLogger'
 
 const logDepecratedExperimentalDialog = createDepreciationLogger()

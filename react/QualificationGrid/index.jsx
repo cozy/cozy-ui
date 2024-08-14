@@ -1,22 +1,21 @@
-import React, { Fragment, useState } from 'react'
 import PropTypes from 'prop-types'
+import React, { Fragment, useState } from 'react'
 
+import { getThemesList } from './helpers'
+import withLocales from './locales/withLocales'
 import Grid from '../Grid'
-import QualificationItem from '../QualificationItem'
-import { useI18n } from '../providers/I18n'
+import BankIcon from '../Icons/Bank'
+import BillIcon from '../Icons/Bill'
+import CarIcon from '../Icons/Car'
+import ChessIcon from '../Icons/Chess'
+import DotsIcon from '../Icons/Dots'
+import HeartIcon from '../Icons/Heart'
 import PeopleIcon from '../Icons/People'
 import TeamIcon from '../Icons/Team'
 import WorkIcon from '../Icons/Work'
-import ChessIcon from '../Icons/Chess'
-import HeartIcon from '../Icons/Heart'
 import HomeIcon from '../Icons/Home'
-import CarIcon from '../Icons/Car'
-import BankIcon from '../Icons/Bank'
-import BillIcon from '../Icons/Bill'
-import DotsIcon from '../Icons/Dots'
-
-import withLocales from './locales/withLocales'
-import { getThemesList } from './helpers'
+import QualificationItem from '../QualificationItem'
+import { useI18n } from '../providers/I18n'
 
 const IconByName = {
   people: PeopleIcon,

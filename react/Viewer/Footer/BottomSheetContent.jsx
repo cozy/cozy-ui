@@ -1,8 +1,7 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 import { BottomSheetItem } from '../../BottomSheet'
-
 import getPanelBlocks, { getPanelBlocksSpecs } from '../Panel/getPanelBlocks'
 
 const BottomSheetContent = ({ file, isPublic }) => {

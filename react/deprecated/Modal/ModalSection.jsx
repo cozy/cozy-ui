@@ -1,6 +1,7 @@
-import React from 'react'
-import styles from './styles.styl'
 import cx from 'classnames'
+import React from 'react'
+
+import styles from './styles.styl'
 
 const ModalSection = ({ children, className }) => (
   <div

@@ -1,19 +1,18 @@
-import React, { useEffect } from 'react'
-import PropTypes from 'prop-types'
 import { useTheme } from '@material-ui/core'
+import PropTypes from 'prop-types'
+import React, { useEffect } from 'react'
 
 import { useWebviewIntent } from 'cozy-intent'
 
-import { useI18n } from '../providers/I18n'
+import SelectionBarAction from './SelectionBarAction'
+import SelectionBarMore from './SelectionBarMore'
+import styles from './styles.styl'
+import useMaxActions from './useMaxActions'
 import Icon from '../Icon'
 import IconButton from '../IconButton'
 import CrossIcon from '../Icons/Cross'
 import useBreakpoints from '../providers/Breakpoints'
-
-import styles from './styles.styl'
-import SelectionBarAction from './SelectionBarAction'
-import SelectionBarMore from './SelectionBarMore'
-import useMaxActions from './useMaxActions'
+import { useI18n } from '../providers/I18n'
 
 /*
 

@@ -1,6 +1,6 @@
-import React, { forwardRef } from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React, { forwardRef } from 'react'
 
 import Paper from '../Paper'
 

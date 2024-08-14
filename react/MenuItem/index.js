@@ -1,5 +1,5 @@
-import React, { forwardRef } from 'react'
 import MuiMenuItem from '@material-ui/core/MenuItem'
+import React, { forwardRef } from 'react'
 
 import ListItem, { LitItemPropTypes } from '../ListItem'
 

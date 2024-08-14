@@ -1,10 +1,9 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-
-import List from '../List'
-import ListSubheader from '../ListSubheader'
+import React from 'react'
 
 import ListItemSkeleton from './ListItemSkeleton'
+import List from '../List'
+import ListSubheader from '../ListSubheader'
 
 const ListSkeleton = ({ count, hasSecondary, withSubheader, divider }) => {
   return (

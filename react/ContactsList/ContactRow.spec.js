@@ -1,10 +1,11 @@
-import React from 'react'
 import { mount } from 'enzyme'
-
-import { BreakpointsProvider } from '../providers/Breakpoints'
-import ContactRow from './ContactRow'
+import React from 'react'
 import renderer from 'react-test-renderer'
+
 import logger from 'cozy-logger'
+
+import ContactRow from './ContactRow'
+import { BreakpointsProvider } from '../providers/Breakpoints'
 
 logger.setLevel('error')
 

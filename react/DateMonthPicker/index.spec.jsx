@@ -1,11 +1,11 @@
 import { mount } from 'enzyme'
 import React from 'react'
-import DateMonthPicker from '.'
 import { act } from 'react-dom/test-utils'
 
-import I18n from '../providers/I18n'
+import DateMonthPicker from '.'
 import LeftIcon from '../Icons/Left'
 import RightIcon from '../Icons/Right'
+import I18n from '../providers/I18n'
 
 const findButtonWithLabel = (root, label) =>
   root.findWhere(n => n.type() == 'button' && n.props().children === label)

@@ -1,5 +1,5 @@
-import KonnectorBlock from 'cozy-harvest-lib/dist/components/KonnectorBlock'
 import { models } from 'cozy-client'
+import KonnectorBlock from 'cozy-harvest-lib/dist/components/KonnectorBlock'
 
 import Certifications from './Certifications'
 import Qualification from './Qualification'

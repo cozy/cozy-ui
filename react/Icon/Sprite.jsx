@@ -1,5 +1,6 @@
-import IconSprintContent from './icons-sprite'
 import React from 'react'
+
+import IconSprintContent from './icons-sprite'
 
 const displayNone = { display: 'none' }
 

@@ -1,10 +1,9 @@
-import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-
-import Typography from '../../Typography'
+import React from 'react'
 
 import styles from './styles.styl'
+import Typography from '../../Typography'
 
 /**
  * @description This component is composing `<Typography />` and has access to the same props

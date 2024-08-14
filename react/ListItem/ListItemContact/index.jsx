@@ -1,14 +1,13 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 import { getDisplayName } from 'cozy-client/dist/models/contact'
 
+import useActions from './useActions'
 import Filename from '../../Filename'
 import Icon from '../../Icon'
 import ContactsIcon from '../../Icons/Contacts'
-
 import ListItemBase from '../ListItemBase'
-import useActions from './useActions'
 
 const ListItemContact = ({
   contact,

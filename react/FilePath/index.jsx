@@ -1,6 +1,7 @@
 import React from 'react'
-import MidEllipsis from '../MidEllipsis'
+
 import styles from './styles.styl'
+import MidEllipsis from '../MidEllipsis'
 
 const FilePath = ({ children, className }) => (
   <MidEllipsis className={`${className} ${styles['c-file-path']}`}>

@@ -1,12 +1,10 @@
 import React from 'react'
 
+import styles from './styles.styl'
 import Icon from '../../Icon'
 import CloudBrokenIcon from '../../Icons/CloudBroken'
 import Button from '../../deprecated/Button'
-
 import { withViewerLocales } from '../hoc/withViewerLocales'
-
-import styles from './styles.styl'
 
 const NoNetworkViewer = ({ t, onReload }) => (
   <div className={styles['viewer-canceled']}>

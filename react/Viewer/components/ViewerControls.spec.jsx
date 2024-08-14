@@ -1,8 +1,8 @@
-import React from 'react'
 import { render, screen } from '@testing-library/react'
+import React from 'react'
 
-import ViewerControls from './ViewerControls'
 import ViewerByFile from './ViewerByFile'
+import ViewerControls from './ViewerControls'
 
 jest.mock('../ViewersByFile/AudioViewer', () => () => <div>AudioViewer</div>)
 jest.mock('../providers/EncryptedProvider', () => ({

@@ -1,5 +1,5 @@
-import React, { useRef, useState, createRef, useMemo, useEffect } from 'react'
 import PropTypes from 'prop-types'
+import React, { useRef, useState, createRef, useMemo, useEffect } from 'react'
 
 import {
   isExpiringSoon,
@@ -8,14 +8,14 @@ import {
   getMetadataQualificationType
 } from 'cozy-client/dist/models/paper'
 
-import List from '../../List'
-import { withViewerLocales } from '../hoc/withViewerLocales'
-import ExpirationAlert from '../components/ExpirationAlert'
 import ActionMenuWrapper from './ActionMenuWrapper'
 import QualificationListItemContact from './QualificationListItemContact'
 import QualificationListItemDate from './QualificationListItemDate'
 import QualificationListItemInformation from './QualificationListItemInformation'
 import QualificationListItemOther from './QualificationListItemOther'
+import List from '../../List'
+import ExpirationAlert from '../components/ExpirationAlert'
+import { withViewerLocales } from '../hoc/withViewerLocales'
 
 const ComponentFromMetadataQualificationType = {
   contact: QualificationListItemContact,
@@ -76,7 +76,7 @@ const Qualification = ({ file }) => {
       {isExpiringSoon(file) && !isExpirationAlertHidden(file) && (
         <ExpirationAlert file={file} />
       )}
-      <List className={'u-pv-1'}>
+      <List className="u-pv-1">
         {formattedMetadataQualification.map((meta, idx) => {
           const { name } = meta
           const metadataQualificationType = getMetadataQualificationType(name)

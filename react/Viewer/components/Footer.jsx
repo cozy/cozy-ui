@@ -1,8 +1,7 @@
 import React from 'react'
 
-import useBreakpoints from '../../providers/Breakpoints'
-
 import styles from './styles.styl'
+import useBreakpoints from '../../providers/Breakpoints'
 
 const Footer = ({ children }) => {
   const { isDesktop } = useBreakpoints()

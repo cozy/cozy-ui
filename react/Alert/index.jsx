@@ -1,15 +1,15 @@
-import React, { forwardRef } from 'react'
-import PropTypes from 'prop-types'
+import MuiAlert from '@material-ui/lab/Alert'
 import cx from 'classnames'
 import merge from 'lodash/merge'
-import MuiAlert from '@material-ui/lab/Alert'
+import PropTypes from 'prop-types'
+import React, { forwardRef } from 'react'
 
-import { makeStyles } from '../styles'
 import Icon from '../Icon'
 import CheckCircleIcon from '../Icons/CheckCircle'
+import InfoIcon from '../Icons/Info'
 import WarningIcon from '../Icons/Warning'
 import WarningCircleIcon from '../Icons/WarningCircle'
-import InfoIcon from '../Icons/Info'
+import { makeStyles } from '../styles'
 
 const DEFAULT_ICON_SIZE = 16
 

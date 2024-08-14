@@ -1,6 +1,7 @@
-import React from 'react'
-import { UploadQueue, formatRemainingTime } from '.'
 import { render } from '@testing-library/react'
+import React from 'react'
+
+import { UploadQueue, formatRemainingTime } from '.'
 import { useI18n } from '../providers/I18n'
 
 jest.mock('../providers/I18n/withLocales', () =>

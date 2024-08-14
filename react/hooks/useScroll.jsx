@@ -1,5 +1,5 @@
-import { useState } from 'react'
 import debounce from 'lodash/debounce'
+import { useState } from 'react'
 
 import useEventListener from './useEventListener'
 import { unRef } from '../helpers/ref'

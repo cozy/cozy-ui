@@ -3,11 +3,11 @@ import React from 'react'
 import { models } from 'cozy-client'
 const { getDisplayName } = models.contact
 
+import EmptyMessage from './EmptyMessage'
+import { withContactsListLocales } from './withContactsListLocales'
 import ContactsList from '../ContactsList'
 import Spinner from '../Spinner'
 import { useI18n } from '../providers/I18n'
-import EmptyMessage from './EmptyMessage'
-import { withContactsListLocales } from './withContactsListLocales'
 
 const mkFilter = filterStr => contacts => {
   if (!filterStr) {

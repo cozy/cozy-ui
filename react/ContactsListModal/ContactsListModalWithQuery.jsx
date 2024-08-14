@@ -1,10 +1,10 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 import { useQueryAll } from 'cozy-client'
 
-import { buildContactsQuery } from './queries'
 import ContactsListModal from './ContactsListModal'
+import { buildContactsQuery } from './queries'
 
 const ContactsListModalWithQuery = props => {
   const contactsQuery = buildContactsQuery()

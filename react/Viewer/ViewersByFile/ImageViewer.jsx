@@ -1,12 +1,10 @@
-import React, { Component } from 'react'
 import Hammer from 'hammerjs'
+import React, { Component } from 'react'
 
-import FileImageLoader from '../../FileImageLoader'
-
-import ViewerSpinner from '../components/ViewerSpinner'
 import NoNetworkViewer from './NoNetworkViewer'
-
 import styles from './styles.styl'
+import FileImageLoader from '../../FileImageLoader'
+import ViewerSpinner from '../components/ViewerSpinner'
 
 const MIN_SCALE = 1
 const MAX_SCALE = 6

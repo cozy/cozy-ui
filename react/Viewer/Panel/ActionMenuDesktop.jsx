@@ -1,14 +1,14 @@
-import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
-import styles from './styles.styl'
+import React, { forwardRef } from 'react'
 
+import styles from './styles.styl'
+import AppLinker from '../../AppLinker'
 import Icon from '../../Icon'
 import Copy from '../../Icons/Copy'
 import Edit from '../../Icons/Rename'
-import ActionMenu, { ActionMenuItem } from '../../deprecated/ActionMenu'
 import Typography from '../../Typography'
+import ActionMenu, { ActionMenuItem } from '../../deprecated/ActionMenu'
 import { useI18n } from '../../providers/I18n'
-import AppLinker from '../../AppLinker'
 
 const ActionMenuDesktop = forwardRef(
   ({ onClose, isEditable, actions, appLink, appSlug }, ref) => {

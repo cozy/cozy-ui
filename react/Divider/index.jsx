@@ -1,9 +1,8 @@
-import React, { forwardRef } from 'react'
 import MuiDivider from '@material-ui/core/Divider'
-
-import { withStyles } from '../styles'
+import React, { forwardRef } from 'react'
 
 import TextDivider from './TextDivider'
+import { withStyles } from '../styles'
 
 /**
  * @desc If this component is provided a string children, it will render a `<TextDivider>` component

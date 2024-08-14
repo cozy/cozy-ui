@@ -2,12 +2,12 @@ import React, { forwardRef } from 'react'
 
 import { generateWebLink } from 'cozy-client'
 
-import OpenappIcon from '../../Icons/Openapp'
 import { getActionsI18n } from './locales/withActionsLocales'
-import ActionsMenuItem from '../ActionsMenuItem'
-import ListItemIcon from '../../ListItemIcon'
 import Icon from '../../Icon'
+import OpenappIcon from '../../Icons/Openapp'
+import ListItemIcon from '../../ListItemIcon'
 import ListItemText from '../../ListItemText'
+import ActionsMenuItem from '../ActionsMenuItem'
 
 export const viewInContacts = () => {
   const { t } = getActionsI18n()

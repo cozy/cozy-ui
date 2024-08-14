@@ -1,12 +1,11 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
 
+import styles from './DropdownFilter.styl'
 import Icon from '../../Icon'
 import BottomIcon from '../../Icons/Bottom'
 import SelectBox from '../../SelectBox'
-
-import styles from './DropdownFilter.styl'
 
 const SmallArrow = () => (
   <Icon

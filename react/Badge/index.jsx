@@ -1,7 +1,7 @@
-import React from 'react'
+import MuiBadge from '@material-ui/core/Badge'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-import MuiBadge from '@material-ui/core/Badge'
+import React from 'react'
 
 const Badge = ({
   classes = {},

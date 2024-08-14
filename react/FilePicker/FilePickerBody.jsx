@@ -1,12 +1,12 @@
-import React, { useCallback } from 'react'
 import PropTypes from 'prop-types'
+import React, { useCallback } from 'react'
 
 import { models, useQuery } from 'cozy-client'
+
+import FilePickerBodyItem from './FilePickerBodyItem'
+import { buildContentFolderQuery } from './queries'
 import List from '../List'
 import LoadMore from '../LoadMore'
-
-import { buildContentFolderQuery } from './queries'
-import FilePickerBodyItem from './FilePickerBodyItem'
 import { isValidFile } from '../helpers/acceptedTypes'
 
 const {
@@ -22,10 +22,11 @@ const FilePickerBody = ({
   multiple
 }) => {
   const contentFolderQuery = buildContentFolderQuery(folderId)
-  const { data: contentFolder, hasMore, fetchMore } = useQuery(
-    contentFolderQuery.definition,
-    contentFolderQuery.options
-  )
+  const {
+    data: contentFolder,
+    hasMore,
+    fetchMore
+  } = useQuery(contentFolderQuery.definition, contentFolderQuery.options)
 
   const onCheck = useCallback(
     itemId => {
@@ -94,7 +95,7 @@ const FilePickerBody = ({
             />
           )
         })}
-      {hasMore && <LoadMore label={'loadMore'} fetchMore={fetchMore} />}
+      {hasMore && <LoadMore label="loadMore" fetchMore={fetchMore} />}
     </List>
   )
 }

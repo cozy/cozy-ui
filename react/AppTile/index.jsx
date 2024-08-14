@@ -1,7 +1,14 @@
+import cx from 'classnames'
+import PropTypes from 'prop-types'
 import React from 'react'
 
+import { APP_STATUS, getCurrentStatusLabel } from './helpers'
+import en from './locales/en.json'
+import fr from './locales/fr.json'
+import styles from './styles.styl'
 import AppIcon from '../AppIcon'
-import PropTypes from 'prop-types'
+import Icon from '../Icon'
+import WrenchCircleIcon from '../Icons/WrenchCircle'
 import Tile, {
   TileTitle,
   TileSubtitle,
@@ -9,18 +16,9 @@ import Tile, {
   TileIcon,
   TileDescription
 } from '../Tile'
-
-import { createUseI18n } from '../providers/I18n'
-import { AppDoctype } from '../proptypes'
-
-import { APP_STATUS, getCurrentStatusLabel } from './helpers'
-import styles from './styles.styl'
-import en from './locales/en.json'
-import fr from './locales/fr.json'
-import Icon from '../Icon'
-import WrenchCircleIcon from '../Icons/WrenchCircle'
 import palette from '../palette'
-import cx from 'classnames'
+import { AppDoctype } from '../proptypes'
+import { createUseI18n } from '../providers/I18n'
 
 const locales = { en, fr }
 
@@ -66,9 +64,8 @@ export const AppTile = ({
       type="button"
       onClick={onClick}
       className={cx({
-        [styles[
-          'AppTile-container-maintenance'
-        ]]: isInMaintenanceWithSpecificDisplay
+        [styles['AppTile-container-maintenance']]:
+          isInMaintenanceWithSpecificDisplay
       })}
       isSecondary={statusLabel === APP_STATUS.installed}
     >

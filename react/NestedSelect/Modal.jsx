@@ -1,15 +1,14 @@
 import React from 'react'
 
+import NestedSelect from './NestedSelect'
+import styles from './styles.styl'
 import { useCozyDialog, DialogCloseButton } from '../CozyDialogs'
 import Dialog, { DialogTitle, DialogContent } from '../Dialog'
 import Icon from '../Icon'
 import IconButton from '../IconButton'
 import LeftIcon from '../Icons/Left'
-import { Media, Bd, Img } from '../deprecated/Media'
-
-import NestedSelect from './NestedSelect'
-import styles from './styles.styl'
 import List from '../List'
+import { Media, Bd, Img } from '../deprecated/Media'
 
 const NestedSelectDialogHeader = ({ onClickBack, showBack, title }) => {
   const { dialogTitleProps } = useCozyDialog({
@@ -50,7 +49,7 @@ const NestedSelectModal = props => {
     <Dialog {...dialogProps} onClose={props.onClose}>
       <DialogCloseButton
         onClick={props.onClose}
-        data-testid={`modal-close-button-nested-select`}
+        data-testid="modal-close-button-nested-select"
       />
       <NestedSelect
         HeaderComponent={NestedSelectDialogHeader}

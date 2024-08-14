@@ -1,14 +1,13 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
+import styles from './styles.styl'
 import Circle from '../Circle'
 import Icon from '../Icon'
 import DownloadIcon from '../Icons/Download'
 import FileIcon from '../Icons/File'
-import { Media, Bd, Img } from '../deprecated/Media'
 import Typography from '../Typography'
-
-import styles from './styles.styl'
+import { Media, Bd, Img } from '../deprecated/Media'
 
 /**
  *

@@ -1,15 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
-import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js'
-import { Doughnut } from 'react-chartjs-2'
 import { useTheme } from '@material-ui/core'
-import set from 'lodash/set'
+import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js'
+import cx from 'classnames'
 import cloneDeep from 'lodash/cloneDeep'
+import set from 'lodash/set'
+import PropTypes from 'prop-types'
+import React from 'react'
+import { Doughnut } from 'react-chartjs-2'
 
-import { makeStyles } from '../styles'
 import Typography from '../Typography'
 import isTesting from '../helpers/isTesting'
+import { makeStyles } from '../styles'
 
 ChartJS.register(ArcElement, Tooltip)
 
