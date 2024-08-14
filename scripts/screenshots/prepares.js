@@ -33,7 +33,10 @@ const prepareFS = async options => {
  * Returns { browser, page }
  */
 const prepareBrowser = async (puppeteer, options) => {
-  const browser = await puppeteer.launch({ headless: 'new' })
+  const browser = await puppeteer.launch({
+    headless: 'new',
+    executablePath: `/usr/bin/google-chrome` // could be `/Applications/Chrome.app/Contents/MacOS/Chrome` on MacOS
+  })
   const page = await browser.newPage()
   // Put Argos in user agent
   await page.setUserAgent(
