@@ -1,3 +1,10 @@
+# [111.8.0](https://github.com/cozy/cozy-ui/compare/v111.7.0...v111.8.0) (2024-08-19)
+
+
+### Features
+
+* **MobileStepper:** Add cozy design to MUI export ([d6728f8](https://github.com/cozy/cozy-ui/commit/d6728f8))
+
 # [111.7.0](https://github.com/cozy/cozy-ui/compare/v111.6.0...v111.7.0) (2024-08-14)
 
 
