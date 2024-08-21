@@ -8,6 +8,19 @@ import SpinnerIcon from '../Icons/Spinner'
 import Typography from '../Typography'
 import { useI18n } from '../providers/I18n'
 
+/**
+ * @typedef SpinnerProps
+ * @property {string} [loadingType] - The type of loading.
+ * @property {boolean} [middle] - Whether to position the spinner in the middle.
+ * @property {boolean} [noMargin] - Whether to remove margin around the spinner.
+ * @property {string} [color] - The color of the spinner.
+ * @property {'tiny'|'small'|'medium'|'large'|'xlarge'|'xxlarge'} [size] - The size of the spinner.
+ * @property {string} [className] - The additional CSS class name for the spinner.
+ */
+
+/**
+ * @param {SpinnerProps} props
+ */
 export const Spinner = ({
   loadingType,
   middle,
