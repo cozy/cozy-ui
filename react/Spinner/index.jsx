@@ -6,10 +6,9 @@ import styles from './styles.styl'
 import Icon from '../Icon'
 import SpinnerIcon from '../Icons/Spinner'
 import Typography from '../Typography'
-import { translate } from '../providers/I18n'
+import { useI18n } from '../providers/I18n'
 
 export const Spinner = ({
-  t,
   loadingType,
   middle,
   noMargin,
@@ -17,6 +16,7 @@ export const Spinner = ({
   size,
   className
 }) => {
+  const { t } = useI18n()
   const realsizeMapping = {
     tiny: 8,
     small: 12,
@@ -73,4 +73,4 @@ Spinner.defaultProps = {
   className: ''
 }
 
-export default translate()(Spinner)
+export default Spinner
