@@ -8,6 +8,20 @@ import SpinnerIcon from '../Icons/Spinner'
 
 const CUSTOM_COLORS = ['success', 'error', 'warning', 'info']
 
+/**
+ * @typedef {object} DefaultButtonPropTypes
+ * @property {string} [variant] - The variant of the button ('contained', 'outlined', 'text').
+ * @property {string} [className] - Additional CSS class names for the button.
+ * @property {string} [color] - The color of the button ('default', 'inherit', 'primary', 'secondary', 'success', 'error', 'warning', 'info').
+ * @property {string} [label] - The label of the button.
+ * @property {boolean} [busy] - Whether the button is in a busy state.
+ * @property {boolean} [disabled] - Whether the button is disabled.
+ * @property {React.ReactNode} [endIcon] - The icon to display at the end of the button.
+ */
+
+/**
+ * @type React.ForwardRefRenderFunction<HTMLButtonElement, DefaultButtonPropTypes & MuiButton>
+ */
 const DefaultButton = forwardRef(
   (
     { variant, className, color, label, busy, disabled, endIcon, ...props },
@@ -50,6 +64,9 @@ DefaultButton.defaultProps = {
   color: 'primary'
 }
 
+/**
+ @type React.ForwardRefRenderFunction<HTMLButtonElement, DefaultButtonPropTypes & MuiButton>
+ */
 const Buttons = forwardRef(({ variant, className = '', ...props }, ref) => {
   switch (variant) {
     case 'ghost':
