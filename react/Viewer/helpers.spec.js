@@ -1,11 +1,9 @@
-import { createMockClient } from 'cozy-client'
 import {
   KNOWN_DATE_METADATA_NAMES,
   KNOWN_INFORMATION_METADATA_NAMES
 } from 'cozy-client/dist/models/paper'
 
 import {
-  downloadFile,
   getCurrentModel,
   buildEditAttributePath,
   isEditableAttribute,
@@ -13,29 +11,6 @@ import {
 } from './helpers'
 
 describe('helpers', () => {
-  describe('download', () => {
-    const client = new createMockClient({})
-    const mockDownload = jest.fn()
-    const mockForceFileDownload = jest.fn()
-    client.collection = jest.fn(() => ({
-      download: mockDownload,
-      forceFileDownload: mockForceFileDownload
-    }))
-
-    it('should call download when file is not encrypted', async () => {
-      const file = { name: 'toto.txt' }
-
-      await downloadFile({ client, file })
-      expect(mockDownload).toHaveBeenCalledWith(file)
-    })
-
-    it('should call forceFileDownload when file is encrypted', async () => {
-      const file = { name: 'encrypted-toto.txt', encrypted: true }
-      const url = 'blob:http://thedecryptedtoto'
-      await downloadFile({ client, file, url })
-      expect(mockForceFileDownload).toHaveBeenCalledWith(url, file.name)
-    })
-  })
   describe('getCurrentModel', () => {
     const expected = 'information'
     it.each([

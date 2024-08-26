@@ -2,6 +2,8 @@ import PropTypes from 'prop-types'
 import React, { useState, useEffect, useRef, useCallback } from 'react'
 
 import { useClient } from 'cozy-client'
+import { downloadFile } from 'cozy-client/dist/models/file'
+import { useWebviewIntent } from 'cozy-intent'
 
 import styles from './styles.styl'
 import FileImageLoader from '../../FileImageLoader'
@@ -19,6 +21,7 @@ export const PdfMobileViewer = ({ file, url, t, gestures }) => {
   const { showAlert } = useAlert()
 
   const client = useClient()
+  const webviewIntent = useWebviewIntent()
 
   const onImageError = () => {
     setLoading(false)
@@ -32,7 +35,7 @@ export const PdfMobileViewer = ({ file, url, t, gestures }) => {
   const handleOnClick = useCallback(
     async file => {
       try {
-        await client.collection('io.cozy.files').download(file)
+        await downloadFile({ client, file, webviewIntent })
       } catch (error) {
         showAlert({
           message: t('Viewer.error.generic'),
@@ -42,7 +45,7 @@ export const PdfMobileViewer = ({ file, url, t, gestures }) => {
         })
       }
     },
-    [client, showAlert, t]
+    [client, showAlert, t, webviewIntent]
   )
 
   useEffect(() => {

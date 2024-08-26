@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 import { useClient } from 'cozy-client'
+import { downloadFile } from 'cozy-client/dist/models/file'
+import { useWebviewIntent } from 'cozy-intent'
 
 import PrintButton from './PrintButton'
 import { ToolbarFilePath } from './ToolbarFilePath'
@@ -17,7 +19,6 @@ import withBreakpoints from '../../helpers/withBreakpoints'
 import { useI18n } from '../../providers/I18n'
 import { makeStyles } from '../../styles'
 import { extractChildrenCompByName } from '../Footer/helpers'
-import { downloadFile } from '../helpers'
 import { useEncrypted } from '../providers/EncryptedProvider'
 
 const useClasses = makeStyles(theme => ({
@@ -42,6 +43,7 @@ const Toolbar = ({
   const client = useClient()
   const classes = useClasses()
   const { t } = useI18n()
+  const webviewIntent = useWebviewIntent()
 
   const { url } = useEncrypted()
 
@@ -88,7 +90,7 @@ const Toolbar = ({
             <IconButton
               className="u-white"
               aria-label={t('Viewer.download')}
-              onClick={() => downloadFile({ client, file, url })}
+              onClick={() => downloadFile({ client, file, url, webviewIntent })}
             >
               <Icon icon={DownloadIcon} />
             </IconButton>
