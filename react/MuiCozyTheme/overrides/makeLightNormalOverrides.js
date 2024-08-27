@@ -818,10 +818,9 @@ export const makeLightNormalOverrides = theme => ({
       '&.block': {
         flexWrap: 'wrap',
         '& $action': {
-          display: 'block',
           width: '100%',
           paddingLeft: 0,
-          textAlign: 'right'
+          justifyContent: 'end'
         }
       }
     },
@@ -832,7 +831,7 @@ export const makeLightNormalOverrides = theme => ({
       flexWrap: 'wrap'
     },
     action: {
-      marginRight: '-6px'
+      marginRight: '-8px'
     }
   },
   MuiAlertTitle: {
