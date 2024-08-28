@@ -2,7 +2,10 @@ language: node_js
 dist: jammy
 cache:
   npm: false
-if: type NOT IN (pull_request)
+if: type NOT IN (pull_request) # we run CI only on branches, not PR
+branches:
+  except:
+    - /^\d+\.\d+\.\d+$/ # we don't want to run CI on tag after new publication
 env:
   global:
     - PR_TITLE=$(curl https://github.com/${TRAVIS_REPO_SLUG}/pull/${TRAVIS_PULL_REQUEST} 2> /dev/null | grep "title" | head -1)
