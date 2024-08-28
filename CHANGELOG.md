@@ -1,3 +1,10 @@
+## [111.8.1](https://github.com/cozy/cozy-ui/compare/v111.8.0...v111.8.1) (2024-08-28)
+
+
+### Bug Fixes
+
+* **Alert:** Right action margin wasn't correct ([2e462b3](https://github.com/cozy/cozy-ui/commit/2e462b3))
+
 # [111.8.0](https://github.com/cozy/cozy-ui/compare/v111.7.0...v111.8.0) (2024-08-19)
 
 
