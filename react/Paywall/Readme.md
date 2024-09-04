@@ -94,15 +94,15 @@ const makeClient = premiumLink =>
           }
         ]
       },
-      'io.cozy.settings/context': {
+      'io.cozy.settings/io.cozy.settings.context': {
         doctype: 'io.cozy.settings',
         definition: {
           doctype: 'io.cozy.settings',
-          id: 'io.cozy.settings/context'
+          id: 'io.cozy.settings/io.cozy.settings.context'
         },
         data: [
           {
-            id: 'io.cozy.settings/context',
+            id: 'io.cozy.settings/io.cozy.settings.context',
             attributes: {
               enable_premium_links: premiumLink,
               manager_url: 'http://mycozy.cloud',
