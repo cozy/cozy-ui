@@ -1,0 +1,14 @@
+name: "Cache Argos mobile"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Cache Argos mobile
+      id: cache-argos-mobile
+      uses: actions/cache@v3
+      env:
+        cache-name: cache-argos-mobile
+      with:
+        path: |
+          ${{ github.workspace }}/screenshots/reactMobile
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ github.run_id }}

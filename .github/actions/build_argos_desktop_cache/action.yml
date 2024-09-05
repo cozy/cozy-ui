@@ -1,0 +1,14 @@
+name: "Cache Argos desktop"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Cache Argos desktop
+      id: cache-argos-desktop
+      uses: actions/cache@v3
+      env:
+        cache-name: cache-argos-desktop
+      with:
+        path: |
+          ${{ github.workspace }}/screenshots/reactDesktop
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ github.run_id }}

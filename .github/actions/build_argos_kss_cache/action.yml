@@ -1,0 +1,14 @@
+name: "Cache Argos kss"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Cache Argos kss
+      id: cache-argos-kss
+      uses: actions/cache@v3
+      env:
+        cache-name: cache-argos-kss
+      with:
+        path: |
+          ${{ github.workspace }}/screenshots/kss
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ github.run_id }}

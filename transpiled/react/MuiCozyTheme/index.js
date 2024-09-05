@@ -3,7 +3,7 @@ import React from 'react';
 import { getTheme } from "cozy-ui/transpiled/react/MuiCozyTheme/theme";
 import { ThemeProvider } from "cozy-ui/transpiled/react/styles";
 console.log(' ');
-console.log('🔴 BUILDED FROM GA - should be wrong');
+console.log('🟢 BUILDED FROM GA WITH CACHE');
 console.log(' ');
 
 var MuiCozyTheme = function MuiCozyTheme(_ref) {

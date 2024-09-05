@@ -1,6 +1,7 @@
 node_modules
 package-lock.json
 build
+dist
 .changelog
 yarn-error.log
 coverage
@@ -19,6 +20,9 @@ Thumbs.db
 desktop.ini
 
 .cache
+transpiled
 
 # Generated files
+react/Icon/icons-sprite.js
+react/palette.js
 /screenshots
